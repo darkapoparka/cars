@@ -1,0 +1,7 @@
+{
+	"cars": "http://127.0.0.1:6790/bg/inventory",
+	"contact": "http://127.0.0.1:6790/bg/contact",
+	"contactUnchanged": false,
+	"contactPresentationUnchanged": true,
+	"contactComparisonNote": "All measured geometry, fonts, surfaces, links and images are identical. The baseline main.textContent includes a nonvisual Svelte template serialization removed during hydration."
+}

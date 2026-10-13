@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "dealer": "abcbulgaria-varna",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/app",
+    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
+    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+  },
+  "appDigest": "96e45d6b67f96e4b97d17bc1b08d5325d6058cf541d40fece510577fe60d1d77",
+  "provenance": {
+    "schemaVersion": 1,
+    "dealer": "abcbulgaria-varna",
+    "profile": "auto-best/src/lib/data/dealer-profile.json",
+    "profileSha256": "82b03723af5fd35ff59d2a593f4ce31852f9e5053eba6df2a89f1f14bf835f0c",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "vehicles": 1,
+    "currency": "EUR",
+    "observedAt": "2026-10-11T11:54:02.492Z",
+    "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-light.png",
+        "output": "public/dealer-app/logo-light-c29a3504e4102e980284.png",
+        "sha256": "c29a3504e4102e98028435449296f69561737f369eefee631e06d585117291b1",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-dark.png",
+        "output": "public/dealer-app/logo-dark-89526ddd40787bb0b94e.png",
+        "sha256": "89526ddd40787bb0b94eda0e70b72273ea3d6d7f7c460db8858eeaf77465e708",
+        "role": "logo-dark"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/31791195588891492-1.webp",
+        "output": "public/dealer-app/vehicle-9f587b7fe3c454b5bbad.webp",
+        "sha256": "9f587b7fe3c454b5bbad36ac16d91f23f39c345e2d9caa74761a56881a1fee23",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/31791195588891492-2.webp",
+        "output": "public/dealer-app/vehicle-5b20a057c56507bcafc9.webp",
+        "sha256": "5b20a057c56507bcafc91b710eee617f06cb121c348d30cb3a7971189efc97e3",
+        "role": "vehicle"
+      }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "renault-trafic-2002-31791195588891492",
+        "sourceValue": 294749,
+        "sourceUnit": "km",
+        "canonicalKm": 294749
+      }
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

@@ -1,0 +1,218 @@
+[
+	{
+		"locale": "bg",
+		"width": 320,
+		"route": "about",
+		"mobile": true,
+		"mobilePresentationMatches": true,
+		"desktopFrameMatches": null,
+		"desktopTitleMatches": null
+	},
+	{
+		"locale": "bg",
+		"width": 320,
+		"route": "contact",
+		"mobile": true,
+		"mobilePresentationMatches": true,
+		"desktopFrameMatches": null,
+		"desktopTitleMatches": null
+	},
+	{
+		"locale": "bg",
+		"width": 390,
+		"route": "about",
+		"mobile": true,
+		"mobilePresentationMatches": true,
+		"desktopFrameMatches": null,
+		"desktopTitleMatches": null
+	},
+	{
+		"locale": "bg",
+		"width": 390,
+		"route": "contact",
+		"mobile": true,
+		"mobilePresentationMatches": true,
+		"desktopFrameMatches": null,
+		"desktopTitleMatches": null
+	},
+	{
+		"locale": "bg",
+		"width": 768,
+		"route": "about",
+		"mobile": false,
+		"mobilePresentationMatches": null,
+		"desktopFrameMatches": true,
+		"desktopTitleMatches": true
+	},
+	{
+		"locale": "bg",
+		"width": 768,
+		"route": "contact",
+		"mobile": false,
+		"mobilePresentationMatches": null,
+		"desktopFrameMatches": true,
+		"desktopTitleMatches": true
+	},
+	{
+		"locale": "bg",
+		"width": 1024,
+		"route": "about",
+		"mobile": false,
+		"mobilePresentationMatches": null,
+		"desktopFrameMatches": true,
+		"desktopTitleMatches": true
+	},
+	{
+		"locale": "bg",
+		"width": 1024,
+		"route": "contact",
+		"mobile": false,
+		"mobilePresentationMatches": null,
+		"desktopFrameMatches": true,
+		"desktopTitleMatches": true
+	},
+	{
+		"locale": "bg",
+		"width": 1440,
+		"route": "about",
+		"mobile": false,
+		"mobilePresentationMatches": null,
+		"desktopFrameMatches": true,
+		"desktopTitleMatches": true
+	},
+	{
+		"locale": "bg",
+		"width": 1440,
+		"route": "contact",
+		"mobile": false,
+		"mobilePresentationMatches": null,
+		"desktopFrameMatches": true,
+		"desktopTitleMatches": true
+	},
+	{
+		"locale": "bg",
+		"width": 1920,
+		"route": "about",
+		"mobile": false,
+		"mobilePresentationMatches": null,
+		"desktopFrameMatches": true,
+		"desktopTitleMatches": true
+	},
+	{
+		"locale": "bg",
+		"width": 1920,
+		"route": "contact",
+		"mobile": false,
+		"mobilePresentationMatches": null,
+		"desktopFrameMatches": true,
+		"desktopTitleMatches": true
+	},
+	{
+		"locale": "en",
+		"width": 320,
+		"route": "about",
+		"mobile": true,
+		"mobilePresentationMatches": true,
+		"desktopFrameMatches": null,
+		"desktopTitleMatches": null
+	},
+	{
+		"locale": "en",
+		"width": 320,
+		"route": "contact",
+		"mobile": true,
+		"mobilePresentationMatches": true,
+		"desktopFrameMatches": null,
+		"desktopTitleMatches": null
+	},
+	{
+		"locale": "en",
+		"width": 390,
+		"route": "about",
+		"mobile": true,
+		"mobilePresentationMatches": true,
+		"desktopFrameMatches": null,
+		"desktopTitleMatches": null
+	},
+	{
+		"locale": "en",
+		"width": 390,
+		"route": "contact",
+		"mobile": true,
+		"mobilePresentationMatches": true,
+		"desktopFrameMatches": null,
+		"desktopTitleMatches": null
+	},
+	{
+		"locale": "en",
+		"width": 768,
+		"route": "about",
+		"mobile": false,
+		"mobilePresentationMatches": null,
+		"desktopFrameMatches": true,
+		"desktopTitleMatches": true
+	},
+	{
+		"locale": "en",
+		"width": 768,
+		"route": "contact",
+		"mobile": false,
+		"mobilePresentationMatches": null,
+		"desktopFrameMatches": true,
+		"desktopTitleMatches": true
+	},
+	{
+		"locale": "en",
+		"width": 1024,
+		"route": "about",
+		"mobile": false,
+		"mobilePresentationMatches": null,
+		"desktopFrameMatches": true,
+		"desktopTitleMatches": true
+	},
+	{
+		"locale": "en",
+		"width": 1024,
+		"route": "contact",
+		"mobile": false,
+		"mobilePresentationMatches": null,
+		"desktopFrameMatches": true,
+		"desktopTitleMatches": true
+	},
+	{
+		"locale": "en",
+		"width": 1440,
+		"route": "about",
+		"mobile": false,
+		"mobilePresentationMatches": null,
+		"desktopFrameMatches": true,
+		"desktopTitleMatches": true
+	},
+	{
+		"locale": "en",
+		"width": 1440,
+		"route": "contact",
+		"mobile": false,
+		"mobilePresentationMatches": null,
+		"desktopFrameMatches": true,
+		"desktopTitleMatches": true
+	},
+	{
+		"locale": "en",
+		"width": 1920,
+		"route": "about",
+		"mobile": false,
+		"mobilePresentationMatches": null,
+		"desktopFrameMatches": true,
+		"desktopTitleMatches": true
+	},
+	{
+		"locale": "en",
+		"width": 1920,
+		"route": "contact",
+		"mobile": false,
+		"mobilePresentationMatches": null,
+		"desktopFrameMatches": true,
+		"desktopTitleMatches": true
+	}
+]

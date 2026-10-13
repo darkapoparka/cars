@@ -1,0 +1,625 @@
+[
+  {
+    "category": "Модел",
+    "buttons": [
+      {
+        "rect": {
+          "height": 44,
+          "width": 177.671875,
+          "x": 246.5,
+          "y": 826
+        },
+        "text": "Изчисти всички филтри"
+      },
+      {
+        "rect": {
+          "height": 44,
+          "width": 197.140625,
+          "x": 981.359375,
+          "y": 826
+        },
+        "text": "Покажете 48 автомобила"
+      }
+    ],
+    "dialog": {
+      "height": 760,
+      "width": 980,
+      "x": 222.5,
+      "y": 120
+    },
+    "footer": {
+      "height": 64,
+      "width": 980,
+      "x": 222.5,
+      "y": 816
+    },
+    "images": [
+      {
+        "blend": "normal",
+        "loaded": true,
+        "src": "/reference-assets/brand-audi.png"
+      },
+      {
+        "blend": "normal",
+        "loaded": true,
+        "src": "/reference-assets/brand-bmw.png"
+      },
+      {
+        "blend": "normal",
+        "loaded": true,
+        "src": "/reference-assets/sell-brand-7.png"
+      },
+      {
+        "blend": "normal",
+        "loaded": true,
+        "src": "/reference-assets/brand-hyundai.png"
+      },
+      {
+        "blend": "normal",
+        "loaded": true,
+        "src": "/reference-assets/sell-brand-8.png"
+      },
+      {
+        "blend": "normal",
+        "loaded": true,
+        "src": "/reference-assets/brand-mercedes.png"
+      },
+      {
+        "blend": "normal",
+        "loaded": true,
+        "src": "/reference-assets/brand-nissan.png"
+      },
+      {
+        "blend": "normal",
+        "loaded": true,
+        "src": "/reference-assets/sell-brand-1.png"
+      }
+    ],
+    "overflow": -15,
+    "visibleSearches": 1,
+    "width": 1440
+  },
+  {
+    "category": "Бюджет",
+    "buttons": [
+      {
+        "rect": {
+          "height": 44,
+          "width": 177.671875,
+          "x": 246.5,
+          "y": 826
+        },
+        "text": "Изчисти всички филтри"
+      },
+      {
+        "rect": {
+          "height": 44,
+          "width": 197.140625,
+          "x": 981.359375,
+          "y": 826
+        },
+        "text": "Покажете 48 автомобила"
+      }
+    ],
+    "dialog": {
+      "height": 760,
+      "width": 980,
+      "x": 222.5,
+      "y": 120
+    },
+    "footer": {
+      "height": 64,
+      "width": 980,
+      "x": 222.5,
+      "y": 816
+    },
+    "images": [
+      {
+        "blend": "normal",
+        "loaded": true,
+        "src": "/reference-assets/loan-card.png"
+      }
+    ],
+    "overflow": -15,
+    "visibleSearches": 0,
+    "width": 1440
+  },
+  {
+    "category": "Тип купе",
+    "buttons": [
+      {
+        "rect": {
+          "height": 44,
+          "width": 177.671875,
+          "x": 246.5,
+          "y": 826
+        },
+        "text": "Изчисти всички филтри"
+      },
+      {
+        "rect": {
+          "height": 44,
+          "width": 197.140625,
+          "x": 981.359375,
+          "y": 826
+        },
+        "text": "Покажете 48 автомобила"
+      }
+    ],
+    "dialog": {
+      "height": 760,
+      "width": 980,
+      "x": 222.5,
+      "y": 120
+    },
+    "footer": {
+      "height": 64,
+      "width": 980,
+      "x": 222.5,
+      "y": 816
+    },
+    "images": [
+      {
+        "blend": "multiply",
+        "loaded": false,
+        "src": "/reference-assets/continuation/filter-body-0.png"
+      },
+      {
+        "blend": "multiply",
+        "loaded": false,
+        "src": "/reference-assets/continuation/filter-body-1.png"
+      },
+      {
+        "blend": "multiply",
+        "loaded": false,
+        "src": "/reference-assets/continuation/filter-body-2.png"
+      },
+      {
+        "blend": "multiply",
+        "loaded": false,
+        "src": "/reference-assets/continuation/filter-body-3.png"
+      },
+      {
+        "blend": "multiply",
+        "loaded": false,
+        "src": "/reference-assets/continuation/filter-body-4.png"
+      },
+      {
+        "blend": "multiply",
+        "loaded": false,
+        "src": "/reference-assets/continuation/filter-body-5.png"
+      },
+      {
+        "blend": "multiply",
+        "loaded": false,
+        "src": "/reference-assets/continuation/filter-body-6.png"
+      },
+      {
+        "blend": "multiply",
+        "loaded": false,
+        "src": "/reference-assets/continuation/filter-body-7.png"
+      },
+      {
+        "blend": "multiply",
+        "loaded": false,
+        "src": "/reference-assets/continuation/filter-body-8.png"
+      },
+      {
+        "blend": "multiply",
+        "loaded": false,
+        "src": "/reference-assets/continuation/filter-body-9.png"
+      },
+      {
+        "blend": "multiply",
+        "loaded": false,
+        "src": "/reference-assets/continuation/filter-body-10.png"
+      },
+      {
+        "blend": "multiply",
+        "loaded": false,
+        "src": "/reference-assets/continuation/filter-body-11.png"
+      },
+      {
+        "blend": "multiply",
+        "loaded": false,
+        "src": "/reference-assets/continuation/filter-body-12.png"
+      },
+      {
+        "blend": "multiply",
+        "loaded": false,
+        "src": "/reference-assets/continuation/filter-body-13.png"
+      }
+    ],
+    "overflow": -15,
+    "visibleSearches": 0,
+    "width": 1440
+  },
+  {
+    "category": "Модел",
+    "buttons": [
+      {
+        "rect": {
+          "height": 44,
+          "width": 88,
+          "x": 12,
+          "y": 794
+        },
+        "text": "Изчистете"
+      },
+      {
+        "rect": {
+          "height": 44,
+          "width": 270,
+          "x": 108,
+          "y": 794
+        },
+        "text": "Покажете 48 автомобила"
+      }
+    ],
+    "dialog": {
+      "height": 844,
+      "width": 390,
+      "x": 0,
+      "y": 0
+    },
+    "footer": {
+      "height": 56,
+      "width": 390,
+      "x": 0,
+      "y": 788
+    },
+    "images": [],
+    "overflow": 0,
+    "visibleSearches": 1,
+    "width": 390
+  },
+  {
+    "category": "Бюджет",
+    "buttons": [
+      {
+        "rect": {
+          "height": 44,
+          "width": 88,
+          "x": 12,
+          "y": 794
+        },
+        "text": "Изчистете"
+      },
+      {
+        "rect": {
+          "height": 44,
+          "width": 270,
+          "x": 108,
+          "y": 794
+        },
+        "text": "Покажете 48 автомобила"
+      }
+    ],
+    "dialog": {
+      "height": 844,
+      "width": 390,
+      "x": 0,
+      "y": 0
+    },
+    "footer": {
+      "height": 56,
+      "width": 390,
+      "x": 0,
+      "y": 788
+    },
+    "images": [
+      {
+        "blend": "normal",
+        "loaded": true,
+        "src": "/reference-assets/loan-card.png"
+      }
+    ],
+    "overflow": 0,
+    "visibleSearches": 0,
+    "width": 390
+  },
+  {
+    "category": "Тип купе",
+    "buttons": [
+      {
+        "rect": {
+          "height": 44,
+          "width": 88,
+          "x": 12,
+          "y": 794
+        },
+        "text": "Изчистете"
+      },
+      {
+        "rect": {
+          "height": 44,
+          "width": 270,
+          "x": 108,
+          "y": 794
+        },
+        "text": "Покажете 48 автомобила"
+      }
+    ],
+    "dialog": {
+      "height": 844,
+      "width": 390,
+      "x": 0,
+      "y": 0
+    },
+    "footer": {
+      "height": 56,
+      "width": 390,
+      "x": 0,
+      "y": 788
+    },
+    "images": [
+      {
+        "blend": "multiply",
+        "loaded": true,
+        "src": "/reference-assets/continuation/filter-body-0.png"
+      },
+      {
+        "blend": "multiply",
+        "loaded": true,
+        "src": "/reference-assets/continuation/filter-body-1.png"
+      },
+      {
+        "blend": "multiply",
+        "loaded": true,
+        "src": "/reference-assets/continuation/filter-body-2.png"
+      },
+      {
+        "blend": "multiply",
+        "loaded": true,
+        "src": "/reference-assets/continuation/filter-body-3.png"
+      },
+      {
+        "blend": "multiply",
+        "loaded": true,
+        "src": "/reference-assets/continuation/filter-body-4.png"
+      },
+      {
+        "blend": "multiply",
+        "loaded": true,
+        "src": "/reference-assets/continuation/filter-body-5.png"
+      },
+      {
+        "blend": "multiply",
+        "loaded": true,
+        "src": "/reference-assets/continuation/filter-body-6.png"
+      },
+      {
+        "blend": "multiply",
+        "loaded": true,
+        "src": "/reference-assets/continuation/filter-body-7.png"
+      },
+      {
+        "blend": "multiply",
+        "loaded": true,
+        "src": "/reference-assets/continuation/filter-body-8.png"
+      },
+      {
+        "blend": "multiply",
+        "loaded": true,
+        "src": "/reference-assets/continuation/filter-body-9.png"
+      },
+      {
+        "blend": "multiply",
+        "loaded": true,
+        "src": "/reference-assets/continuation/filter-body-10.png"
+      },
+      {
+        "blend": "multiply",
+        "loaded": true,
+        "src": "/reference-assets/continuation/filter-body-11.png"
+      },
+      {
+        "blend": "multiply",
+        "loaded": true,
+        "src": "/reference-assets/continuation/filter-body-12.png"
+      },
+      {
+        "blend": "multiply",
+        "loaded": true,
+        "src": "/reference-assets/continuation/filter-body-13.png"
+      }
+    ],
+    "overflow": 0,
+    "visibleSearches": 0,
+    "width": 390
+  },
+  {
+    "category": "Модел",
+    "buttons": [
+      {
+        "rect": {
+          "height": 44,
+          "width": 88,
+          "x": 12,
+          "y": 794
+        },
+        "text": "Изчистете"
+      },
+      {
+        "rect": {
+          "height": 44,
+          "width": 200,
+          "x": 108,
+          "y": 794
+        },
+        "text": "Покажете 48 автомобила"
+      }
+    ],
+    "dialog": {
+      "height": 844,
+      "width": 320,
+      "x": 0,
+      "y": 0
+    },
+    "footer": {
+      "height": 56,
+      "width": 320,
+      "x": 0,
+      "y": 788
+    },
+    "images": [],
+    "overflow": 0,
+    "visibleSearches": 1,
+    "width": 320
+  },
+  {
+    "category": "Бюджет",
+    "buttons": [
+      {
+        "rect": {
+          "height": 44,
+          "width": 88,
+          "x": 12,
+          "y": 794
+        },
+        "text": "Изчистете"
+      },
+      {
+        "rect": {
+          "height": 44,
+          "width": 200,
+          "x": 108,
+          "y": 794
+        },
+        "text": "Покажете 48 автомобила"
+      }
+    ],
+    "dialog": {
+      "height": 844,
+      "width": 320,
+      "x": 0,
+      "y": 0
+    },
+    "footer": {
+      "height": 56,
+      "width": 320,
+      "x": 0,
+      "y": 788
+    },
+    "images": [
+      {
+        "blend": "normal",
+        "loaded": true,
+        "src": "/reference-assets/loan-card.png"
+      }
+    ],
+    "overflow": 0,
+    "visibleSearches": 0,
+    "width": 320
+  },
+  {
+    "category": "Тип купе",
+    "buttons": [
+      {
+        "rect": {
+          "height": 44,
+          "width": 88,
+          "x": 12,
+          "y": 794
+        },
+        "text": "Изчистете"
+      },
+      {
+        "rect": {
+          "height": 44,
+          "width": 200,
+          "x": 108,
+          "y": 794
+        },
+        "text": "Покажете 48 автомобила"
+      }
+    ],
+    "dialog": {
+      "height": 844,
+      "width": 320,
+      "x": 0,
+      "y": 0
+    },
+    "footer": {
+      "height": 56,
+      "width": 320,
+      "x": 0,
+      "y": 788
+    },
+    "images": [
+      {
+        "blend": "multiply",
+        "loaded": true,
+        "src": "/reference-assets/continuation/filter-body-0.png"
+      },
+      {
+        "blend": "multiply",
+        "loaded": true,
+        "src": "/reference-assets/continuation/filter-body-1.png"
+      },
+      {
+        "blend": "multiply",
+        "loaded": true,
+        "src": "/reference-assets/continuation/filter-body-2.png"
+      },
+      {
+        "blend": "multiply",
+        "loaded": true,
+        "src": "/reference-assets/continuation/filter-body-3.png"
+      },
+      {
+        "blend": "multiply",
+        "loaded": true,
+        "src": "/reference-assets/continuation/filter-body-4.png"
+      },
+      {
+        "blend": "multiply",
+        "loaded": true,
+        "src": "/reference-assets/continuation/filter-body-5.png"
+      },
+      {
+        "blend": "multiply",
+        "loaded": true,
+        "src": "/reference-assets/continuation/filter-body-6.png"
+      },
+      {
+        "blend": "multiply",
+        "loaded": true,
+        "src": "/reference-assets/continuation/filter-body-7.png"
+      },
+      {
+        "blend": "multiply",
+        "loaded": true,
+        "src": "/reference-assets/continuation/filter-body-8.png"
+      },
+      {
+        "blend": "multiply",
+        "loaded": true,
+        "src": "/reference-assets/continuation/filter-body-9.png"
+      },
+      {
+        "blend": "multiply",
+        "loaded": true,
+        "src": "/reference-assets/continuation/filter-body-10.png"
+      },
+      {
+        "blend": "multiply",
+        "loaded": true,
+        "src": "/reference-assets/continuation/filter-body-11.png"
+      },
+      {
+        "blend": "multiply",
+        "loaded": true,
+        "src": "/reference-assets/continuation/filter-body-12.png"
+      },
+      {
+        "blend": "multiply",
+        "loaded": true,
+        "src": "/reference-assets/continuation/filter-body-13.png"
+      }
+    ],
+    "overflow": 0,
+    "visibleSearches": 0,
+    "width": 320
+  }
+]

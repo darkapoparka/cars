@@ -1,0 +1,37 @@
+{
+  "fetchedAt": "2026-10-11",
+  "sources": {
+    "dealerInventory": "https://elexiscars.mobile.bg/",
+    "dealerContact": "https://elexiscars.mobile.bg/contacts"
+  },
+  "count": 1,
+  "listings": [
+    {
+      "badge": "ОБЯВА",
+      "category": "Седан",
+      "color": "",
+      "displacement": "",
+      "euroStandard": "",
+      "features": [],
+      "fuel": "Дизелов",
+      "gearbox": "Автоматична",
+      "href": "https://elexiscars.mobile.bg/obiava-11791221331078489-bmw-640-d-mpack-xdrive",
+      "id": "11791221331078489",
+      "image": "/dealer-stock/11791221331078489-1.webp",
+      "location": "Варна",
+      "mileage": "213 700 км",
+      "mileageKnown": true,
+      "mileageValue": 213700,
+      "mileageUnit": "km",
+      "photoCount": "2",
+      "power": "313 к.с.",
+      "price": "20 000 €",
+      "priceBgn": "",
+      "production": "2017 г.",
+      "rawPriceText": "20 000 €",
+      "shortDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "title": "BMW 640",
+      "vat": ""
+    }
+  ]
+}

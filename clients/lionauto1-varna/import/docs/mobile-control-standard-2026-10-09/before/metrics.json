@@ -1,0 +1,1471 @@
+{
+  "base": "http://127.0.0.1:6791",
+  "capturedAt": "2026-10-09T13:53:51.043Z",
+  "source": "Actual rendered pages; no injected CSS",
+  "results": [
+    {
+      "locale": "bg",
+      "width": 390,
+      "errors": [],
+      "states": {
+        "home": {
+          "controls": [
+            {
+              "label": "Контакти",
+              "hit": [
+                44,
+                44
+              ],
+              "position": [
+                282,
+                6
+              ],
+              "paint": [
+                40,
+                40
+              ],
+              "background": "rgb(23, 25, 28)",
+              "border": "0px",
+              "shadow": "rgba(255, 255, 255, 0.22) 0px 0px 0px 1px inset",
+              "icon": [
+                18,
+                18
+              ],
+              "stroke": "2.35px",
+              "focusOutline": "3px",
+              "href": null,
+              "pressed": null,
+              "edgeHit": true
+            },
+            {
+              "label": "Карта",
+              "hit": [
+                44,
+                44
+              ],
+              "position": [
+                334,
+                6
+              ],
+              "paint": [
+                40,
+                40
+              ],
+              "background": "rgb(23, 25, 28)",
+              "border": "0px",
+              "shadow": "rgba(255, 255, 255, 0.22) 0px 0px 0px 1px inset",
+              "icon": [
+                18,
+                18
+              ],
+              "stroke": "2.35px",
+              "focusOutline": "3px",
+              "href": "https://www.google.com/maps/search/?api=1&query=%D0%B3%D1%80.%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%A1%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82%D1%81%D0%BA%D0%B8%20%D0%B3%D1%80%D0%B0%D0%B4%2C%20%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018",
+              "pressed": null,
+              "edgeHit": true
+            }
+          ],
+          "overflow": 0
+        },
+        "contact": {
+          "controls": [
+            {
+              "label": "Затвори",
+              "hit": [
+                44,
+                44
+              ],
+              "position": [
+                332,
+                662
+              ],
+              "paint": [
+                40,
+                40
+              ],
+              "background": "rgb(255, 255, 255)",
+              "border": "0px",
+              "shadow": "rgba(28, 28, 28, 0.12) 0px 0px 0px 1px inset",
+              "icon": [
+                20,
+                20
+              ],
+              "stroke": "2.25px",
+              "focusOutline": "3px",
+              "href": null,
+              "pressed": null,
+              "edgeHit": true
+            }
+          ],
+          "overflow": 0
+        },
+        "inventory": {
+          "controls": [
+            {
+              "label": "Филтри",
+              "hit": [
+                44,
+                44
+              ],
+              "position": [
+                284,
+                8
+              ],
+              "paint": [
+                44,
+                44
+              ],
+              "background": "rgb(255, 255, 255)",
+              "border": "0px",
+              "shadow": "rgba(28, 28, 28, 0.12) 0px 0px 0px 1px inset",
+              "icon": [
+                20,
+                20
+              ],
+              "stroke": "2px",
+              "focusOutline": "3px",
+              "href": null,
+              "pressed": null,
+              "edgeHit": true
+            },
+            {
+              "label": "Сортирай: Най-подходящи",
+              "hit": [
+                44,
+                44
+              ],
+              "position": [
+                332,
+                8
+              ],
+              "paint": [
+                44,
+                44
+              ],
+              "background": "rgb(255, 255, 255)",
+              "border": "0px",
+              "shadow": "rgba(28, 28, 28, 0.12) 0px 0px 0px 1px inset",
+              "icon": [
+                20,
+                20
+              ],
+              "stroke": "2px",
+              "focusOutline": "3px",
+              "href": null,
+              "pressed": null,
+              "edgeHit": true
+            }
+          ],
+          "overflow": 0
+        },
+        "sort": {
+          "controls": [
+            {
+              "label": "Затвори",
+              "hit": [
+                42,
+                42
+              ],
+              "position": [
+                332,
+                650
+              ],
+              "paint": [
+                42,
+                42
+              ],
+              "background": "rgb(255, 255, 255)",
+              "border": "0px",
+              "shadow": "none",
+              "icon": [
+                20,
+                20
+              ],
+              "stroke": "2.25px",
+              "focusOutline": "3px",
+              "href": null,
+              "pressed": null,
+              "edgeHit": true
+            }
+          ],
+          "overflow": 0
+        },
+        "filters": {
+          "controls": [
+            {
+              "label": "Затвори",
+              "hit": [
+                42,
+                42
+              ],
+              "position": [
+                332,
+                12
+              ],
+              "paint": [
+                42,
+                42
+              ],
+              "background": "rgb(255, 255, 255)",
+              "border": "0px",
+              "shadow": "none",
+              "icon": [
+                20,
+                20
+              ],
+              "stroke": "2.25px",
+              "focusOutline": "3px",
+              "href": null,
+              "pressed": null,
+              "edgeHit": true
+            }
+          ],
+          "overflow": 0
+        },
+        "pdp": {
+          "controls": [
+            {
+              "label": "Назад",
+              "hit": [
+                44,
+                44
+              ],
+              "position": [
+                14,
+                14
+              ],
+              "paint": [
+                36,
+                36
+              ],
+              "background": "rgba(255, 255, 255, 0.92)",
+              "border": "0px",
+              "shadow": "rgba(0, 0, 0, 0.1) 0px 2px 8px 0px",
+              "icon": [
+                20,
+                20
+              ],
+              "stroke": "2px",
+              "focusOutline": "3px",
+              "href": null,
+              "pressed": null,
+              "edgeHit": true
+            },
+            {
+              "label": "Сравни",
+              "hit": [
+                44,
+                44
+              ],
+              "position": [
+                236,
+                14
+              ],
+              "paint": [
+                36,
+                36
+              ],
+              "background": "rgba(255, 255, 255, 0.92)",
+              "border": "0px",
+              "shadow": "rgba(0, 0, 0, 0.1) 0px 2px 8px 0px",
+              "icon": [
+                18,
+                18
+              ],
+              "stroke": "2px",
+              "focusOutline": "3px",
+              "href": "/bg/compare",
+              "pressed": null,
+              "edgeHit": true
+            },
+            {
+              "label": "Запази",
+              "hit": [
+                44,
+                44
+              ],
+              "position": [
+                284,
+                14
+              ],
+              "paint": [
+                36,
+                36
+              ],
+              "background": "rgba(255, 255, 255, 0.92)",
+              "border": "0px",
+              "shadow": "rgba(0, 0, 0, 0.1) 0px 2px 8px 0px",
+              "icon": [
+                18,
+                18
+              ],
+              "stroke": "2px",
+              "focusOutline": "3px",
+              "href": null,
+              "pressed": "false",
+              "edgeHit": true
+            },
+            {
+              "label": "Сподели",
+              "hit": [
+                44,
+                44
+              ],
+              "position": [
+                332,
+                14
+              ],
+              "paint": [
+                36,
+                36
+              ],
+              "background": "rgba(255, 255, 255, 0.92)",
+              "border": "0px",
+              "shadow": "rgba(0, 0, 0, 0.1) 0px 2px 8px 0px",
+              "icon": [
+                18,
+                18
+              ],
+              "stroke": "2px",
+              "focusOutline": "3px",
+              "href": null,
+              "pressed": null,
+              "edgeHit": true
+            }
+          ],
+          "overflow": 0
+        },
+        "viewer": {
+          "controls": [
+            {
+              "label": "Затвори",
+              "hit": [
+                44,
+                44
+              ],
+              "position": [
+                332,
+                14
+              ],
+              "paint": [
+                44,
+                44
+              ],
+              "background": "rgba(255, 255, 255, 0.94)",
+              "border": "0px",
+              "shadow": "none",
+              "icon": [
+                24,
+                24
+              ],
+              "stroke": "2.35px",
+              "focusOutline": "3px",
+              "href": null,
+              "pressed": null,
+              "edgeHit": true
+            }
+          ],
+          "overflow": 0
+        }
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 320,
+      "errors": [],
+      "states": {
+        "home": {
+          "controls": [
+            {
+              "label": "Контакти",
+              "hit": [
+                44,
+                44
+              ],
+              "position": [
+                216,
+                6
+              ],
+              "paint": [
+                40,
+                40
+              ],
+              "background": "rgb(23, 25, 28)",
+              "border": "0px",
+              "shadow": "rgba(255, 255, 255, 0.22) 0px 0px 0px 1px inset",
+              "icon": [
+                18,
+                18
+              ],
+              "stroke": "2.35px",
+              "focusOutline": "3px",
+              "href": null,
+              "pressed": null,
+              "edgeHit": true
+            },
+            {
+              "label": "Карта",
+              "hit": [
+                44,
+                44
+              ],
+              "position": [
+                264,
+                6
+              ],
+              "paint": [
+                40,
+                40
+              ],
+              "background": "rgb(23, 25, 28)",
+              "border": "0px",
+              "shadow": "rgba(255, 255, 255, 0.22) 0px 0px 0px 1px inset",
+              "icon": [
+                18,
+                18
+              ],
+              "stroke": "2.35px",
+              "focusOutline": "3px",
+              "href": "https://www.google.com/maps/search/?api=1&query=%D0%B3%D1%80.%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%A1%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82%D1%81%D0%BA%D0%B8%20%D0%B3%D1%80%D0%B0%D0%B4%2C%20%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018",
+              "pressed": null,
+              "edgeHit": true
+            }
+          ],
+          "overflow": 0
+        },
+        "contact": {
+          "controls": [
+            {
+              "label": "Затвори",
+              "hit": [
+                44,
+                44
+              ],
+              "position": [
+                262,
+                662
+              ],
+              "paint": [
+                40,
+                40
+              ],
+              "background": "rgb(255, 255, 255)",
+              "border": "0px",
+              "shadow": "rgba(28, 28, 28, 0.12) 0px 0px 0px 1px inset",
+              "icon": [
+                20,
+                20
+              ],
+              "stroke": "2.25px",
+              "focusOutline": "3px",
+              "href": null,
+              "pressed": null,
+              "edgeHit": true
+            }
+          ],
+          "overflow": 0
+        },
+        "inventory": {
+          "controls": [
+            {
+              "label": "Филтри",
+              "hit": [
+                44,
+                44
+              ],
+              "position": [
+                214,
+                8
+              ],
+              "paint": [
+                44,
+                44
+              ],
+              "background": "rgb(255, 255, 255)",
+              "border": "0px",
+              "shadow": "rgba(28, 28, 28, 0.12) 0px 0px 0px 1px inset",
+              "icon": [
+                20,
+                20
+              ],
+              "stroke": "2px",
+              "focusOutline": "3px",
+              "href": null,
+              "pressed": null,
+              "edgeHit": true
+            },
+            {
+              "label": "Сортирай: Най-подходящи",
+              "hit": [
+                44,
+                44
+              ],
+              "position": [
+                262,
+                8
+              ],
+              "paint": [
+                44,
+                44
+              ],
+              "background": "rgb(255, 255, 255)",
+              "border": "0px",
+              "shadow": "rgba(28, 28, 28, 0.12) 0px 0px 0px 1px inset",
+              "icon": [
+                20,
+                20
+              ],
+              "stroke": "2px",
+              "focusOutline": "3px",
+              "href": null,
+              "pressed": null,
+              "edgeHit": true
+            }
+          ],
+          "overflow": 0
+        },
+        "sort": {
+          "controls": [
+            {
+              "label": "Затвори",
+              "hit": [
+                42,
+                42
+              ],
+              "position": [
+                262,
+                500
+              ],
+              "paint": [
+                42,
+                42
+              ],
+              "background": "rgb(255, 255, 255)",
+              "border": "0px",
+              "shadow": "none",
+              "icon": [
+                20,
+                20
+              ],
+              "stroke": "2.25px",
+              "focusOutline": "3px",
+              "href": null,
+              "pressed": null,
+              "edgeHit": true
+            }
+          ],
+          "overflow": 0
+        },
+        "filters": {
+          "controls": [
+            {
+              "label": "Затвори",
+              "hit": [
+                42,
+                42
+              ],
+              "position": [
+                262,
+                12
+              ],
+              "paint": [
+                42,
+                42
+              ],
+              "background": "rgb(255, 255, 255)",
+              "border": "0px",
+              "shadow": "none",
+              "icon": [
+                20,
+                20
+              ],
+              "stroke": "2.25px",
+              "focusOutline": "3px",
+              "href": null,
+              "pressed": null,
+              "edgeHit": true
+            }
+          ],
+          "overflow": 0
+        },
+        "pdp": {
+          "controls": [
+            {
+              "label": "Назад",
+              "hit": [
+                44,
+                44
+              ],
+              "position": [
+                14,
+                14
+              ],
+              "paint": [
+                36,
+                36
+              ],
+              "background": "rgba(255, 255, 255, 0.92)",
+              "border": "0px",
+              "shadow": "rgba(0, 0, 0, 0.1) 0px 2px 8px 0px",
+              "icon": [
+                20,
+                20
+              ],
+              "stroke": "2px",
+              "focusOutline": "3px",
+              "href": null,
+              "pressed": null,
+              "edgeHit": true
+            },
+            {
+              "label": "Сравни",
+              "hit": [
+                44,
+                44
+              ],
+              "position": [
+                166,
+                14
+              ],
+              "paint": [
+                36,
+                36
+              ],
+              "background": "rgba(255, 255, 255, 0.92)",
+              "border": "0px",
+              "shadow": "rgba(0, 0, 0, 0.1) 0px 2px 8px 0px",
+              "icon": [
+                18,
+                18
+              ],
+              "stroke": "2px",
+              "focusOutline": "3px",
+              "href": "/bg/compare",
+              "pressed": null,
+              "edgeHit": true
+            },
+            {
+              "label": "Запази",
+              "hit": [
+                44,
+                44
+              ],
+              "position": [
+                214,
+                14
+              ],
+              "paint": [
+                36,
+                36
+              ],
+              "background": "rgba(255, 255, 255, 0.92)",
+              "border": "0px",
+              "shadow": "rgba(0, 0, 0, 0.1) 0px 2px 8px 0px",
+              "icon": [
+                18,
+                18
+              ],
+              "stroke": "2px",
+              "focusOutline": "3px",
+              "href": null,
+              "pressed": "false",
+              "edgeHit": true
+            },
+            {
+              "label": "Сподели",
+              "hit": [
+                44,
+                44
+              ],
+              "position": [
+                262,
+                14
+              ],
+              "paint": [
+                36,
+                36
+              ],
+              "background": "rgba(255, 255, 255, 0.92)",
+              "border": "0px",
+              "shadow": "rgba(0, 0, 0, 0.1) 0px 2px 8px 0px",
+              "icon": [
+                18,
+                18
+              ],
+              "stroke": "2px",
+              "focusOutline": "3px",
+              "href": null,
+              "pressed": null,
+              "edgeHit": true
+            }
+          ],
+          "overflow": 0
+        },
+        "viewer": {
+          "controls": [
+            {
+              "label": "Затвори",
+              "hit": [
+                44,
+                44
+              ],
+              "position": [
+                262,
+                14
+              ],
+              "paint": [
+                44,
+                44
+              ],
+              "background": "rgba(255, 255, 255, 0.94)",
+              "border": "0px",
+              "shadow": "none",
+              "icon": [
+                24,
+                24
+              ],
+              "stroke": "2.35px",
+              "focusOutline": "3px",
+              "href": null,
+              "pressed": null,
+              "edgeHit": true
+            }
+          ],
+          "overflow": 0
+        }
+      }
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "errors": [],
+      "states": {
+        "home": {
+          "controls": [
+            {
+              "label": "Contact",
+              "hit": [
+                44,
+                44
+              ],
+              "position": [
+                282,
+                6
+              ],
+              "paint": [
+                40,
+                40
+              ],
+              "background": "rgb(23, 25, 28)",
+              "border": "0px",
+              "shadow": "rgba(255, 255, 255, 0.22) 0px 0px 0px 1px inset",
+              "icon": [
+                18,
+                18
+              ],
+              "stroke": "2.35px",
+              "focusOutline": "3px",
+              "href": null,
+              "pressed": null,
+              "edgeHit": true
+            },
+            {
+              "label": "Map",
+              "hit": [
+                44,
+                44
+              ],
+              "position": [
+                334,
+                6
+              ],
+              "paint": [
+                40,
+                40
+              ],
+              "background": "rgb(23, 25, 28)",
+              "border": "0px",
+              "shadow": "rgba(255, 255, 255, 0.22) 0px 0px 0px 1px inset",
+              "icon": [
+                18,
+                18
+              ],
+              "stroke": "2.35px",
+              "focusOutline": "3px",
+              "href": "https://www.google.com/maps/search/?api=1&query=%D0%B3%D1%80.%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%A1%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82%D1%81%D0%BA%D0%B8%20%D0%B3%D1%80%D0%B0%D0%B4%2C%20%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018",
+              "pressed": null,
+              "edgeHit": true
+            }
+          ],
+          "overflow": 0
+        },
+        "contact": {
+          "controls": [
+            {
+              "label": "Close",
+              "hit": [
+                44,
+                44
+              ],
+              "position": [
+                332,
+                662
+              ],
+              "paint": [
+                40,
+                40
+              ],
+              "background": "rgb(255, 255, 255)",
+              "border": "0px",
+              "shadow": "rgba(28, 28, 28, 0.12) 0px 0px 0px 1px inset",
+              "icon": [
+                20,
+                20
+              ],
+              "stroke": "2.25px",
+              "focusOutline": "3px",
+              "href": null,
+              "pressed": null,
+              "edgeHit": true
+            }
+          ],
+          "overflow": 0
+        },
+        "inventory": {
+          "controls": [
+            {
+              "label": "Filters",
+              "hit": [
+                44,
+                44
+              ],
+              "position": [
+                284,
+                8
+              ],
+              "paint": [
+                44,
+                44
+              ],
+              "background": "rgb(255, 255, 255)",
+              "border": "0px",
+              "shadow": "rgba(28, 28, 28, 0.12) 0px 0px 0px 1px inset",
+              "icon": [
+                20,
+                20
+              ],
+              "stroke": "2px",
+              "focusOutline": "3px",
+              "href": null,
+              "pressed": null,
+              "edgeHit": true
+            },
+            {
+              "label": "Sort: Best Match",
+              "hit": [
+                44,
+                44
+              ],
+              "position": [
+                332,
+                8
+              ],
+              "paint": [
+                44,
+                44
+              ],
+              "background": "rgb(255, 255, 255)",
+              "border": "0px",
+              "shadow": "rgba(28, 28, 28, 0.12) 0px 0px 0px 1px inset",
+              "icon": [
+                20,
+                20
+              ],
+              "stroke": "2px",
+              "focusOutline": "3px",
+              "href": null,
+              "pressed": null,
+              "edgeHit": true
+            }
+          ],
+          "overflow": 0
+        },
+        "sort": {
+          "controls": [
+            {
+              "label": "Close",
+              "hit": [
+                42,
+                42
+              ],
+              "position": [
+                332,
+                650
+              ],
+              "paint": [
+                42,
+                42
+              ],
+              "background": "rgb(255, 255, 255)",
+              "border": "0px",
+              "shadow": "none",
+              "icon": [
+                20,
+                20
+              ],
+              "stroke": "2.25px",
+              "focusOutline": "3px",
+              "href": null,
+              "pressed": null,
+              "edgeHit": true
+            }
+          ],
+          "overflow": 0
+        },
+        "filters": {
+          "controls": [
+            {
+              "label": "Close",
+              "hit": [
+                42,
+                42
+              ],
+              "position": [
+                332,
+                12
+              ],
+              "paint": [
+                42,
+                42
+              ],
+              "background": "rgb(255, 255, 255)",
+              "border": "0px",
+              "shadow": "none",
+              "icon": [
+                20,
+                20
+              ],
+              "stroke": "2.25px",
+              "focusOutline": "3px",
+              "href": null,
+              "pressed": null,
+              "edgeHit": true
+            }
+          ],
+          "overflow": 0
+        },
+        "pdp": {
+          "controls": [
+            {
+              "label": "Back",
+              "hit": [
+                44,
+                44
+              ],
+              "position": [
+                14,
+                14
+              ],
+              "paint": [
+                36,
+                36
+              ],
+              "background": "rgba(255, 255, 255, 0.92)",
+              "border": "0px",
+              "shadow": "rgba(0, 0, 0, 0.1) 0px 2px 8px 0px",
+              "icon": [
+                20,
+                20
+              ],
+              "stroke": "2px",
+              "focusOutline": "3px",
+              "href": null,
+              "pressed": null,
+              "edgeHit": true
+            },
+            {
+              "label": "Compare",
+              "hit": [
+                44,
+                44
+              ],
+              "position": [
+                236,
+                14
+              ],
+              "paint": [
+                36,
+                36
+              ],
+              "background": "rgba(255, 255, 255, 0.92)",
+              "border": "0px",
+              "shadow": "rgba(0, 0, 0, 0.1) 0px 2px 8px 0px",
+              "icon": [
+                18,
+                18
+              ],
+              "stroke": "2px",
+              "focusOutline": "3px",
+              "href": "/en/compare",
+              "pressed": null,
+              "edgeHit": true
+            },
+            {
+              "label": "Save",
+              "hit": [
+                44,
+                44
+              ],
+              "position": [
+                284,
+                14
+              ],
+              "paint": [
+                36,
+                36
+              ],
+              "background": "rgba(255, 255, 255, 0.92)",
+              "border": "0px",
+              "shadow": "rgba(0, 0, 0, 0.1) 0px 2px 8px 0px",
+              "icon": [
+                18,
+                18
+              ],
+              "stroke": "2px",
+              "focusOutline": "3px",
+              "href": null,
+              "pressed": "false",
+              "edgeHit": true
+            },
+            {
+              "label": "Share",
+              "hit": [
+                44,
+                44
+              ],
+              "position": [
+                332,
+                14
+              ],
+              "paint": [
+                36,
+                36
+              ],
+              "background": "rgba(255, 255, 255, 0.92)",
+              "border": "0px",
+              "shadow": "rgba(0, 0, 0, 0.1) 0px 2px 8px 0px",
+              "icon": [
+                18,
+                18
+              ],
+              "stroke": "2px",
+              "focusOutline": "3px",
+              "href": null,
+              "pressed": null,
+              "edgeHit": true
+            }
+          ],
+          "overflow": 0
+        },
+        "viewer": {
+          "controls": [
+            {
+              "label": "Close",
+              "hit": [
+                44,
+                44
+              ],
+              "position": [
+                332,
+                14
+              ],
+              "paint": [
+                44,
+                44
+              ],
+              "background": "rgba(255, 255, 255, 0.94)",
+              "border": "0px",
+              "shadow": "none",
+              "icon": [
+                24,
+                24
+              ],
+              "stroke": "2.35px",
+              "focusOutline": "3px",
+              "href": null,
+              "pressed": null,
+              "edgeHit": true
+            }
+          ],
+          "overflow": 0
+        }
+      }
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "errors": [],
+      "states": {
+        "home": {
+          "controls": [
+            {
+              "label": "Contact",
+              "hit": [
+                44,
+                44
+              ],
+              "position": [
+                216,
+                6
+              ],
+              "paint": [
+                40,
+                40
+              ],
+              "background": "rgb(23, 25, 28)",
+              "border": "0px",
+              "shadow": "rgba(255, 255, 255, 0.22) 0px 0px 0px 1px inset",
+              "icon": [
+                18,
+                18
+              ],
+              "stroke": "2.35px",
+              "focusOutline": "3px",
+              "href": null,
+              "pressed": null,
+              "edgeHit": true
+            },
+            {
+              "label": "Map",
+              "hit": [
+                44,
+                44
+              ],
+              "position": [
+                264,
+                6
+              ],
+              "paint": [
+                40,
+                40
+              ],
+              "background": "rgb(23, 25, 28)",
+              "border": "0px",
+              "shadow": "rgba(255, 255, 255, 0.22) 0px 0px 0px 1px inset",
+              "icon": [
+                18,
+                18
+              ],
+              "stroke": "2.35px",
+              "focusOutline": "3px",
+              "href": "https://www.google.com/maps/search/?api=1&query=%D0%B3%D1%80.%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%A1%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82%D1%81%D0%BA%D0%B8%20%D0%B3%D1%80%D0%B0%D0%B4%2C%20%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018",
+              "pressed": null,
+              "edgeHit": true
+            }
+          ],
+          "overflow": 0
+        },
+        "contact": {
+          "controls": [
+            {
+              "label": "Close",
+              "hit": [
+                44,
+                44
+              ],
+              "position": [
+                262,
+                662
+              ],
+              "paint": [
+                40,
+                40
+              ],
+              "background": "rgb(255, 255, 255)",
+              "border": "0px",
+              "shadow": "rgba(28, 28, 28, 0.12) 0px 0px 0px 1px inset",
+              "icon": [
+                20,
+                20
+              ],
+              "stroke": "2.25px",
+              "focusOutline": "3px",
+              "href": null,
+              "pressed": null,
+              "edgeHit": true
+            }
+          ],
+          "overflow": 0
+        },
+        "inventory": {
+          "controls": [
+            {
+              "label": "Filters",
+              "hit": [
+                44,
+                44
+              ],
+              "position": [
+                214,
+                8
+              ],
+              "paint": [
+                44,
+                44
+              ],
+              "background": "rgb(255, 255, 255)",
+              "border": "0px",
+              "shadow": "rgba(28, 28, 28, 0.12) 0px 0px 0px 1px inset",
+              "icon": [
+                20,
+                20
+              ],
+              "stroke": "2px",
+              "focusOutline": "3px",
+              "href": null,
+              "pressed": null,
+              "edgeHit": true
+            },
+            {
+              "label": "Sort: Best Match",
+              "hit": [
+                44,
+                44
+              ],
+              "position": [
+                262,
+                8
+              ],
+              "paint": [
+                44,
+                44
+              ],
+              "background": "rgb(255, 255, 255)",
+              "border": "0px",
+              "shadow": "rgba(28, 28, 28, 0.12) 0px 0px 0px 1px inset",
+              "icon": [
+                20,
+                20
+              ],
+              "stroke": "2px",
+              "focusOutline": "3px",
+              "href": null,
+              "pressed": null,
+              "edgeHit": true
+            }
+          ],
+          "overflow": 0
+        },
+        "sort": {
+          "controls": [
+            {
+              "label": "Close",
+              "hit": [
+                42,
+                42
+              ],
+              "position": [
+                262,
+                650
+              ],
+              "paint": [
+                42,
+                42
+              ],
+              "background": "rgb(255, 255, 255)",
+              "border": "0px",
+              "shadow": "none",
+              "icon": [
+                20,
+                20
+              ],
+              "stroke": "2.25px",
+              "focusOutline": "3px",
+              "href": null,
+              "pressed": null,
+              "edgeHit": true
+            }
+          ],
+          "overflow": 0
+        },
+        "filters": {
+          "controls": [
+            {
+              "label": "Close",
+              "hit": [
+                42,
+                42
+              ],
+              "position": [
+                262,
+                12
+              ],
+              "paint": [
+                42,
+                42
+              ],
+              "background": "rgb(255, 255, 255)",
+              "border": "0px",
+              "shadow": "none",
+              "icon": [
+                20,
+                20
+              ],
+              "stroke": "2.25px",
+              "focusOutline": "3px",
+              "href": null,
+              "pressed": null,
+              "edgeHit": true
+            }
+          ],
+          "overflow": 0
+        },
+        "pdp": {
+          "controls": [
+            {
+              "label": "Back",
+              "hit": [
+                44,
+                44
+              ],
+              "position": [
+                14,
+                14
+              ],
+              "paint": [
+                36,
+                36
+              ],
+              "background": "rgba(255, 255, 255, 0.92)",
+              "border": "0px",
+              "shadow": "rgba(0, 0, 0, 0.1) 0px 2px 8px 0px",
+              "icon": [
+                20,
+                20
+              ],
+              "stroke": "2px",
+              "focusOutline": "3px",
+              "href": null,
+              "pressed": null,
+              "edgeHit": true
+            },
+            {
+              "label": "Compare",
+              "hit": [
+                44,
+                44
+              ],
+              "position": [
+                166,
+                14
+              ],
+              "paint": [
+                36,
+                36
+              ],
+              "background": "rgba(255, 255, 255, 0.92)",
+              "border": "0px",
+              "shadow": "rgba(0, 0, 0, 0.1) 0px 2px 8px 0px",
+              "icon": [
+                18,
+                18
+              ],
+              "stroke": "2px",
+              "focusOutline": "3px",
+              "href": "/en/compare",
+              "pressed": null,
+              "edgeHit": true
+            },
+            {
+              "label": "Save",
+              "hit": [
+                44,
+                44
+              ],
+              "position": [
+                214,
+                14
+              ],
+              "paint": [
+                36,
+                36
+              ],
+              "background": "rgba(255, 255, 255, 0.92)",
+              "border": "0px",
+              "shadow": "rgba(0, 0, 0, 0.1) 0px 2px 8px 0px",
+              "icon": [
+                18,
+                18
+              ],
+              "stroke": "2px",
+              "focusOutline": "3px",
+              "href": null,
+              "pressed": "false",
+              "edgeHit": true
+            },
+            {
+              "label": "Share",
+              "hit": [
+                44,
+                44
+              ],
+              "position": [
+                262,
+                14
+              ],
+              "paint": [
+                36,
+                36
+              ],
+              "background": "rgba(255, 255, 255, 0.92)",
+              "border": "0px",
+              "shadow": "rgba(0, 0, 0, 0.1) 0px 2px 8px 0px",
+              "icon": [
+                18,
+                18
+              ],
+              "stroke": "2px",
+              "focusOutline": "3px",
+              "href": null,
+              "pressed": null,
+              "edgeHit": true
+            }
+          ],
+          "overflow": 0
+        },
+        "viewer": {
+          "controls": [
+            {
+              "label": "Close",
+              "hit": [
+                44,
+                44
+              ],
+              "position": [
+                262,
+                14
+              ],
+              "paint": [
+                44,
+                44
+              ],
+              "background": "rgba(255, 255, 255, 0.94)",
+              "border": "0px",
+              "shadow": "none",
+              "icon": [
+                24,
+                24
+              ],
+              "stroke": "2.35px",
+              "focusOutline": "3px",
+              "href": null,
+              "pressed": null,
+              "edgeHit": true
+            }
+          ],
+          "overflow": 0
+        }
+      }
+    }
+  ]
+}

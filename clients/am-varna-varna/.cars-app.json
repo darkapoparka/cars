@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "dealer": "am-varna-varna",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/app",
+    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
+    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+  },
+  "appDigest": "42c716ab0c8d8c9b77e12974b5bc40034c61475ab50d0edf7fec46ba000b39f9",
+  "provenance": {
+    "schemaVersion": 1,
+    "dealer": "am-varna-varna",
+    "profile": "auto-best/src/lib/data/dealer-profile.json",
+    "profileSha256": "8fef56125ff9176069a79e091500cd65c251246b9dfacc94d122199109ae4053",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "vehicles": 1,
+    "currency": "EUR",
+    "observedAt": "2026-10-11T11:47:29.142Z",
+    "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-light.png",
+        "output": "public/dealer-app/logo-light-11a4f802dc2725817c40.png",
+        "sha256": "11a4f802dc2725817c409f1b669446cc51763849e5a29467af7b951c01808ffa",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-dark.png",
+        "output": "public/dealer-app/logo-dark-d59b50fc0d4cfa2c0876.png",
+        "sha256": "d59b50fc0d4cfa2c087690718435559822221cd47900a480d7f9cc483d8e4245",
+        "role": "logo-dark"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/21765547669329836-1.webp",
+        "output": "public/dealer-app/vehicle-d2d12bdb9c3ae041181b.webp",
+        "sha256": "d2d12bdb9c3ae041181bbfaefff70bdca8c396d2058bcad84c7bbfc8dc780f24",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/21765547669329836-2.webp",
+        "output": "public/dealer-app/vehicle-fd054551b0c6ede6d48f.webp",
+        "sha256": "fd054551b0c6ede6d48feaa1cc0292b88dd4b054f8b5b7e03eb4e55d450be9ec",
+        "role": "vehicle"
+      }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "toyota-hilux-2024-21765547669329836",
+        "sourceValue": 32290,
+        "sourceUnit": "km",
+        "canonicalKm": 32290
+      }
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

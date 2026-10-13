@@ -1,0 +1,30 @@
+{
+  "sourceFiles": [
+    "src/lib/components/home/MobileServicesOverview.svelte",
+    "src/lib/components/home/Editorial.svelte"
+  ],
+  "responsiveCases": 28,
+  "mobileCases": 20,
+  "desktopCases": 8,
+  "liveCases": 4,
+  "services": {
+    "gapBefore": 23,
+    "gapAfter": 15,
+    "heightBefore": 127.609375,
+    "heightAfter": 119.609375,
+    "label": "Виж услугите"
+  },
+  "advice": {
+    "gapBefore": 29,
+    "gapAfter": 15,
+    "heightBefore": 285.5,
+    "heightAfter": 271.5
+  },
+  "cardRadius": "12px",
+  "dockRadius": "16px",
+  "check": "0 errors, 0 warnings",
+  "build": "passed",
+  "tokenPolicy": "passed",
+  "cssPolicy": "passed",
+  "liveOrigin": "http://127.0.0.1:6461"
+}

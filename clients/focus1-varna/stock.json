@@ -1,0 +1,201 @@
+{
+  "schemaVersion": 1,
+  "kind": "dated-listing-snapshot",
+  "candidate": true,
+  "observedAt": "2026-10-11T11:49:54.704Z",
+  "sourceProfile": "https://focus1.mobile.bg/",
+  "sourcePageVisibleListingCount": 10,
+  "sourceProfileCountObservedAt": "2026-10-11T11:49:54.631Z",
+  "profileCountIsAvailableStock": false,
+  "profileCountIsClassifiedOrdinaryRetail": false,
+  "liveInventory": false,
+  "mediaPermission": "unconfirmed",
+  "localMediaReady": true,
+  "records": [
+    {
+      "id": "11735043947455415",
+      "sourceId": "11735043947455415",
+      "title": "VW Golf",
+      "sourceTitleExact": "VW Golf 1.4 GTE Швейцария",
+      "make": "VW",
+      "model": "Golf",
+      "modelExtraction": "literal make/model prefix from exact primary advert title; canonical market normalization and trim not asserted",
+      "year": 2015,
+      "productionMonth": 5,
+      "currency": "EUR",
+      "sourcePriceText": "13 500 €",
+      "priceVatNotice": "Цената е с включено ДДС",
+      "sourceMileageText": "131000 км",
+      "fieldConflicts": [],
+      "body": "Хечбек",
+      "fuel": "Plug-in хибрид",
+      "transmission": "Автоматична",
+      "powerHp": 150,
+      "images": [
+        "/dealer-stock/11735043947455415-1.webp",
+        "/dealer-stock/11735043947455415-2.webp"
+      ],
+      "sourceUrl": "https://focus1.mobile.bg/obiava-11735043947455415-vw-golf-1-4-gte-shveytsariya",
+      "sourceHtmlSha256": "5ccbe62ff5fc0eef357ed9f804f92ecc521078be0627997294eedd747e8ce4c9",
+      "sourcePublicationText": "Редактирана в 12:41 часа на 16.09.2026 год.",
+      "observedAt": "2026-10-11T11:49:54.704Z",
+      "availability": "unconfirmed",
+      "availabilityConfirmed": false,
+      "partsListing": false,
+      "conditionMarker": null,
+      "conditionIndependentlyConfirmed": false,
+      "arrivalNotice": null,
+      "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "mediaState": "not-collected; reviewed rights/reuse or explicit illustration decision pending",
+      "mediaPermission": "Not independently established",
+      "telHrefCandidates": [
+        "0899811258"
+      ],
+      "visibleSellerContact": "Контакти с продавача автосалон Фокус 0899811258",
+      "sellerPhoneMatchesPrimary": true,
+      "telHrefMatchesPrimary": true,
+      "sampleRole": "dated published vehicle advert; dealer availability, condition and media reuse require confirmation",
+      "retailReadyForAssembly": false,
+      "sourcePhotoUrls": [
+        "https://mobistatic3.focus.bg/mobile/photosorg/415/1/big1/11735043947455415_WC.webp",
+        "https://mobistatic3.focus.bg/mobile/photosorg/415/1/big1/11735043947455415_Jx.webp",
+        "https://mobistatic3.focus.bg/mobile/photosorg/415/1/big1/11735043947455415_4u.webp",
+        "https://mobistatic3.focus.bg/mobile/photosorg/415/1/big1/11735043947455415_hi.webp",
+        "https://mobistatic3.focus.bg/mobile/photosorg/415/1/big1/11735043947455415_KA.webp",
+        "https://mobistatic3.focus.bg/mobile/photosorg/415/1/big1/11735043947455415_jg.webp",
+        "https://mobistatic3.focus.bg/mobile/photosorg/415/1/big1/11735043947455415_AE.webp",
+        "https://mobistatic3.focus.bg/mobile/photosorg/415/1/big1/11735043947455415_lk.webp",
+        "https://mobistatic3.focus.bg/mobile/photosorg/415/1/big1/11735043947455415_nX.webp",
+        "https://mobistatic3.focus.bg/mobile/photosorg/415/1/big1/11735043947455415_g6.webp",
+        "https://mobistatic3.focus.bg/mobile/photosorg/415/1/big1/11735043947455415_GG.webp",
+        "https://mobistatic3.focus.bg/mobile/photosorg/415/1/big/11735043947455415_Ft.webp"
+      ],
+      "sourcePhotoEvidence": {
+        "sourceId": "11735043947455415",
+        "sourceUrl": "https://focus1.mobile.bg/obiava-11735043947455415-vw-golf-1-4-gte-shveytsariya",
+        "observedAt": "2026-10-11T12:09:33.605Z",
+        "responseSha256": "83528336307f93ab1f150d8750806c88db867abc89ddd0e029297125a69b0075",
+        "association": "primary gallery URLs contain exact source listing ID",
+        "remoteBytesFetched": false
+      },
+      "sourceRecord": {
+        "id": "11735043947455415",
+        "sourceId": "11735043947455415",
+        "title": "VW Golf",
+        "sourceTitleExact": "VW Golf 1.4 GTE Швейцария",
+        "make": "VW",
+        "model": "Golf",
+        "modelExtraction": "literal make/model prefix from exact primary advert title; canonical market normalization and trim not asserted",
+        "year": 2015,
+        "productionMonth": 5,
+        "priceEur": 13500,
+        "currency": "EUR",
+        "sourcePriceText": "13 500 €",
+        "priceVatNotice": "Цената е с включено ДДС",
+        "mileageKm": 131000,
+        "sourceMileageText": "131000 км",
+        "fieldConflicts": [],
+        "body": "Хечбек",
+        "fuel": "Plug-in хибрид",
+        "transmission": "Автоматична",
+        "powerHp": 150,
+        "images": [
+          "/assets/vehicles/11735043947455415/1.webp",
+          "/assets/vehicles/11735043947455415/2.webp"
+        ],
+        "sourceUrl": "https://focus1.mobile.bg/obiava-11735043947455415-vw-golf-1-4-gte-shveytsariya",
+        "sourceHtmlSha256": "5ccbe62ff5fc0eef357ed9f804f92ecc521078be0627997294eedd747e8ce4c9",
+        "sourcePublicationText": "Редактирана в 12:41 часа на 16.09.2026 год.",
+        "observedAt": "2026-10-11T11:49:54.704Z",
+        "availability": "unconfirmed",
+        "availabilityConfirmed": false,
+        "partsListing": false,
+        "conditionMarker": null,
+        "conditionIndependentlyConfirmed": false,
+        "arrivalNotice": null,
+        "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+        "mediaState": "not-collected; reviewed rights/reuse or explicit illustration decision pending",
+        "mediaPermission": "Not independently established",
+        "telHrefCandidates": [
+          "0899811258"
+        ],
+        "visibleSellerContact": "Контакти с продавача автосалон Фокус 0899811258",
+        "sellerPhoneMatchesPrimary": true,
+        "telHrefMatchesPrimary": true,
+        "sampleRole": "dated published vehicle advert; dealer availability, condition and media reuse require confirmation",
+        "retailReadyForAssembly": false,
+        "sourcePhotoUrls": [
+          "https://mobistatic3.focus.bg/mobile/photosorg/415/1/big1/11735043947455415_WC.webp",
+          "https://mobistatic3.focus.bg/mobile/photosorg/415/1/big1/11735043947455415_Jx.webp",
+          "https://mobistatic3.focus.bg/mobile/photosorg/415/1/big1/11735043947455415_4u.webp",
+          "https://mobistatic3.focus.bg/mobile/photosorg/415/1/big1/11735043947455415_hi.webp",
+          "https://mobistatic3.focus.bg/mobile/photosorg/415/1/big1/11735043947455415_KA.webp",
+          "https://mobistatic3.focus.bg/mobile/photosorg/415/1/big1/11735043947455415_jg.webp",
+          "https://mobistatic3.focus.bg/mobile/photosorg/415/1/big1/11735043947455415_AE.webp",
+          "https://mobistatic3.focus.bg/mobile/photosorg/415/1/big1/11735043947455415_lk.webp",
+          "https://mobistatic3.focus.bg/mobile/photosorg/415/1/big1/11735043947455415_nX.webp",
+          "https://mobistatic3.focus.bg/mobile/photosorg/415/1/big1/11735043947455415_g6.webp",
+          "https://mobistatic3.focus.bg/mobile/photosorg/415/1/big1/11735043947455415_GG.webp",
+          "https://mobistatic3.focus.bg/mobile/photosorg/415/1/big/11735043947455415_Ft.webp"
+        ],
+        "sourcePhotoEvidence": {
+          "sourceId": "11735043947455415",
+          "sourceUrl": "https://focus1.mobile.bg/obiava-11735043947455415-vw-golf-1-4-gte-shveytsariya",
+          "observedAt": "2026-10-11T12:09:33.605Z",
+          "responseSha256": "83528336307f93ab1f150d8750806c88db867abc89ddd0e029297125a69b0075",
+          "association": "primary gallery URLs contain exact source listing ID",
+          "remoteBytesFetched": false
+        }
+      },
+      "priceAmount": 13500,
+      "mileageValue": 131000,
+      "mileageUnit": "km"
+    }
+  ],
+  "localMediaHydration": {
+    "candidateOnly": true,
+    "technicalRasterPresent": true,
+    "rightsApproved": false,
+    "availabilityConfirmed": false,
+    "assets": [
+      {
+        "publicPath": "/assets/vehicles/11735043947455415/1.webp",
+        "sourceUrl": "https://mobistatic3.focus.bg/mobile/photosorg/415/1/big1/11735043947455415_WC.webp",
+        "sha256": "6de24bcf128a7c365fe49cfaabc21d2a541207704598357b4283e62e2a9282ec",
+        "bytes": 128316,
+        "downloadObservedAt": "2026-10-11T12:20:39.021Z"
+      },
+      {
+        "publicPath": "/assets/vehicles/11735043947455415/2.webp",
+        "sourceUrl": "https://mobistatic3.focus.bg/mobile/photosorg/415/1/big1/11735043947455415_Jx.webp",
+        "sha256": "ca579d45ee6ef0de1cc50d3e8e3acc8c21d84a598b5e0e79ce95dbed016a25fa",
+        "bytes": 92712,
+        "downloadObservedAt": "2026-10-11T12:20:39.179Z"
+      }
+    ],
+    "sourceStockSha256": "a23006858cf5a86978025523afce0e474173d57ffe5ee74be8fdf14d23b5ff02"
+  },
+  "dealer": "focus1-varna",
+  "sourceKind": "dated-marketplace-listing-sample",
+  "sourceStock": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/focus1-varna/source/stock.json",
+    "sha256": "7fa64d7bb4c52cfbd475d1d97ef6ac869bd89c8b086549991386b694d973cfec"
+  },
+  "sourceRecordsUnchanged": true,
+  "mediaPathMappings": [
+    {
+      "sourcePublicPath": "/assets/vehicles/11735043947455415/1.webp",
+      "publicPath": "/dealer-stock/11735043947455415-1.webp",
+      "sha256": "6de24bcf128a7c365fe49cfaabc21d2a541207704598357b4283e62e2a9282ec",
+      "bytes": 128316,
+      "sourceId": "11735043947455415"
+    },
+    {
+      "sourcePublicPath": "/assets/vehicles/11735043947455415/2.webp",
+      "publicPath": "/dealer-stock/11735043947455415-2.webp",
+      "sha256": "ca579d45ee6ef0de1cc50d3e8e3acc8c21d84a598b5e0e79ce95dbed016a25fa",
+      "bytes": 92712,
+      "sourceId": "11735043947455415"
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "date": "2026-10-02",
+  "tool": "Built-in image_gen.imagegen through the imagegen skill; no CLI fallback.",
+  "purpose": "Decorative desktop Home body-type, brand, inventory and buying-advice section banner backgrounds.",
+  "constraints": "No text, identity, vehicles, UI or red lines. Keep the center quiet for existing live headings and actions.",
+  "delivery": "Full-frame WebP encoding using Sharp/libvips at quality 84 and effort 6. No crop, compositing or pixel retouching. Desktop CSS uses center/cover; media queries prevent use below 992px.",
+  "generatedSourceBackup": "Per-asset original PNG copies are preserved under the ignored runtime Home-banner work directories. Original generated images remain at the tool's default location.",
+  "assets": [
+    {
+      "name": "body",
+      "path": "static/assets/images/template/home-section-body-backdrop-v1.webp",
+      "prompt": "Use case: ads-marketing.\nAsset type: a finished raster background plate for an existing premium automotive website's shallow desktop section banner, Browse by body type. Landscape panoramic composition approximately 3:1, 3072 by 1024 if possible. The site centers white heading text and a white pill button on top inside a banner approximately 1360 by 164. BACKGROUND ONLY, not UI.\nPrimary request: a restrained black graphite background with sweeping satin-metal contours at the far left and far right, suggesting sculpted automotive bodywork without depicting a car or an identifiable part. Layer two or three broad, gently curved graphite surfaces with softly lit silver-grey edges, plus very fine sparse halftone dots fading toward the center. Clean, believable material, precision and quiet visual depth. This belongs to the same dark perforated graphite family as a companion brand-discovery banner, but use flowing contoured planes instead of prominent grille perforations.\nComposition: detail only in outer 22 percent at each side. The central 56 percent is nearly flat charcoal approximately #15181d, entirely empty and uniform for text and button. Texture and satin highlights stay visible within the middle vertical quarter when cropped into an 8:1 strip. Balanced visual weight at both edges, extremely low-contrast highlights and no highlight running across the center.\nPalette: neutral graphite black, charcoal and restrained silver-grey. No blue, no gold, no red line, no luminous colors.\nConstraints: no cars, wheels, car silhouettes, manufacturer logos, letters, numbers, people, road, buildings, icons, UI, buttons, border, frame, watermark, sci-fi panels, chrome tubes, concentric rings, streaks, smoke, light flares or neon. No bright or busy detail behind centered copy. One full-bleed background plate.",
+      "generatedSource": "exec-519963bd-ccb7-4e78-bcc4-c80dab21c7ac.png",
+      "width": 2172,
+      "height": 724,
+      "bytes": 45896,
+      "format": "WebP",
+      "runtimeStatus": "Superseded on 2026-10-03; retained as source provenance without runtime requests. Home section headers use the shared graphite-dot background recorded in home-shared-background-2026-10-03.json."
+    },
+    {
+      "name": "brands",
+      "path": "static/assets/images/template/home-section-brands-backdrop-v1.webp",
+      "prompt": "Use case: ads-marketing.\nAsset type: a finished raster background plate for an existing premium automotive website's shallow desktop section banner, Browse by brand. Generate landscape panoramic composition, approximately 3:1, 3072 by 1024 if possible. The site will center white text and a white pill button on top, in a banner about 1360 by 164; this is BACKGROUND ONLY, not a website mockup.\nPrimary request: refined black graphite automotive material texture with very subtle brushed-metal sculpting and precise fine circular perforations at the far left and far right. Small silver-grey dots dissolve gradually into a smooth, nearly flat center. At the outermost edges only, a softly lit curved graphite sheet suggests polished automotive craftsmanship, with understated satin highlights. Related to a dark automotive banner family with halftone dots.\nComposition: all meaningful texture contained at outer 22 percent on each side and inside the middle horizontal band. The central 56 percent is uninterrupted matte charcoal approximately #15181d, completely empty and uniform behind the title and button. Detail must remain visible when the image is cropped into an 8:1 strip across its center. Keep lighting physically believable, texture delicate, and visual weight balanced at both edges.\nPalette: neutral graphite black, dark charcoal, extremely restrained silver-grey highlights. No blue, no warm gold, no red line.\nConstraints: no cars, car parts, manufacturer logos, letters, numbers, icons, UI, buttons, frame, border, watermark, people, buildings, mountains, glossy sci-fi graphics, racing stripes, smoke, flares or neon. Do not add bright or busy detail near the center. One clean full-bleed background plate.",
+      "generatedSource": "exec-212c317c-f309-44fb-a7d6-87c466154817.png",
+      "width": 2172,
+      "height": 724,
+      "bytes": 87308,
+      "format": "WebP",
+      "runtimeStatus": "Superseded on 2026-10-03; retained as source provenance without runtime requests. Home section headers use the shared graphite-dot background recorded in home-shared-background-2026-10-03.json."
+    },
+    {
+      "name": "inventory",
+      "path": "static/assets/images/template/home-section-inventory-backdrop-v1.webp",
+      "prompt": "Use case: ads-marketing.\nAsset type: a raster background plate for the existing Home automobile-inventory section of a premium automotive website. Landscape panoramic 3:1, about 3072 by 1024. The site crops the middle of this image into an 8:1 banner, centers a white heading and button, and places its EXISTING realistic transparent SUV cutouts at the outer sides. BACKGROUND ONLY.\nPrimary request: a refined neutral black graphite material texture from a cohesive banner family featuring satin sculpted-metal contours and fine perforated dots. This inventory variant uses broad shallow brushed-graphite panels at the outermost left and right, softly receding toward the center, with very small, sparse, low-contrast silver-grey perforations near the upper outer edges. Understated precision and calm automotive craftsmanship. Preserve large quiet dark regions where the site's vehicles will be composited.\nComposition: detailed material only in the outermost 18 percent on each side. The central 64 percent is empty, nearly flat matte charcoal around #15181d. All highlights and useful texture fit across the middle vertical quarter so they remain visible after an 8:1 center crop. Keep the lower middle strip dark and plain for the existing wheels and shadows. Balanced visual weight at both edges. No horizontal streak or bright edge crossing behind the title.\nPalette: graphite black, charcoal, restrained dark silver-grey. Physically believable satin highlights, much darker than polished chrome. No blue, no warm gold, no red line.\nConstraints: no vehicles, car parts, wheel silhouettes, people, roads, logos, letters, numbers, icons, UI, buttons, framing, borders, watermark, concentric rings, neon, smoke or flares. One clean full-bleed background plate. Do not paint cars; the website already supplies the cars.",
+      "generatedSource": "exec-a67c7a5d-cdab-4496-8019-24c77867dc35.png",
+      "backupPath": "runtime/home-banner-backgrounds-extension-20261002/source-inventory.png",
+      "width": 2172,
+      "height": 724,
+      "bytes": 24984,
+      "format": "WebP",
+      "runtimeStatus": "Superseded on 2026-10-03; retained as source provenance without runtime requests. Home section headers use the shared graphite-dot background recorded in home-shared-background-2026-10-03.json."
+    },
+    {
+      "name": "guides",
+      "path": "static/assets/images/template/home-section-guides-backdrop-v1.webp",
+      "prompt": "Use case: ads-marketing.\nAsset type: a finished raster background plate for the Home buying-advice/blog section banner of a premium automotive website. Landscape panoramic 3:1, about 3072 by 1024. The website crops the central horizontal strip to about 1360 by 164, supplies centered white live text and a white button, and composites two existing realistic silver/white car cutouts at the sides. BACKGROUND ONLY, no cars painted in the asset.\nPrimary request: quiet graphite black with fine perforated-dot fields and a very subtle curved brushed-metal surface entering from each outer edge. A related companion to a black satin automotive body-type texture and a perforated graphite brand-discovery banner. This advice variant is lighter in detail: finer dots, flatter material planes, broader calm dark space. Elegant and believable, restrained studio material photography.\nComposition: the central 64 percent is empty, nearly flat charcoal #15181d, fully clear behind text/button. Patterns limited to the outermost 18 percent at each edge, fading smoothly into the center. A thin soft silver-grey reflection on an outer curved surface suggests automotive precision. Texture concentrated in the middle vertical quarter so it survives an 8:1 center crop. The lower middle strip stays nearly black for car wheels and shadows. Balanced left/right visual weight. No bright diagonal or horizontal edge across the text area.\nPalette: neutral graphite black, charcoal and exceptionally restrained satin dark-silver highlights. No blue, no gold, no red lines.\nConstraints: no people, vehicles, car parts, logo, letters, numbers, books, pens, papers, icons, UI, buttons, border, frame, watermark, smoke, neon, flares, glossy chrome tubes or sci-fi imagery. One full-bleed background plate, no website mockup.",
+      "generatedSource": "exec-8615bbb6-42eb-43ac-add9-5f0425f835bb.png",
+      "backupPath": "runtime/home-banner-backgrounds-extension-20261002/source-guides.png",
+      "width": 2172,
+      "height": 724,
+      "bytes": 82630,
+      "format": "WebP",
+      "runtimeStatus": "Superseded on 2026-10-03; retained as source provenance without runtime requests. Home section headers use the shared graphite-dot background recorded in home-shared-background-2026-10-03.json."
+    },
+    {
+      "name": "guides-editorial",
+      "path": "static/assets/images/template/home-section-guides-editorial-v2.webp",
+      "purpose": "Active Home advice banner; editorial flat lay replaces the repeated vehicle pair.",
+      "replaces": "home-section-guides-backdrop-v1.webp",
+      "prompt": "Use case: ads-marketing.\nAsset type: a finished raster background for a premium automotive website's Home buying-advice/blog section. One panoramic landscape plate, approximately 3:1. The existing website crops the central horizontal band to a very shallow 8:1 banner about 1360 by 164, and overlays centered live white heading text plus a white button. BACKGROUND ART ONLY.\nPrimary request: a restrained editorial flat lay on a matte graphite-black desk. At the far left, part of an open high-quality black linen notebook with off-white pages and one slim dark metal pen. At the far right, the edge of a neatly arranged off-white inspection checklist/document folder, with a few small empty square boxes and fine grey horizontal rules. These should suggest useful reading, research and a practical buyer's guide. Use physically believable paper edges, linen and satin metal with understated soft studio shadows. No car imagery.\nComposition: balanced but asymmetric editorial arrangements at the outermost 20 percent on each side. The central 60 percent is completely empty, smooth near-black graphite around #15181d, for centered title and button. Subjects must remain recognizable within the middle vertical third, because only this shallow horizontal band is visible after cropping; intentional partial objects entering from the far left/right edges, not large tall objects lost above/below the crop. Keep all notebook and paper edges outside the central title area. Straight overhead photography with calm precision, clean material detail, no scene perspective.\nPalette: neutral charcoal black, soft off-white paper and muted grey. Related to a family of black satin and brushed graphite automotive banners, but this one has an editorial reading/research identity. Small highlights only at outer edges; no red lines, blue tint, gold or neon.\nText: none. The checklist contains only restrained empty square boxes and straight blank rules, no words, letters, numbers, illegible filler, brands or logos. Notebook pages mostly blank with faint ruled lines.\nConstraints: no cars, car cutouts, wheels, vehicle silhouettes, people, hands, phones, screens, web mockups, interface elements, UI buttons, title text, watermark, border, framing, smoke, glossy sci-fi material or excessive objects. One polished full-bleed photographic banner plate, with uninterrupted dark central negative space.",
+      "generatedSource": "exec-55ba7fb9-47f4-4490-8d97-f102c6e05128.png",
+      "backupPath": "runtime/home-advice-banner-20261002/source-editorial.png",
+      "width": 2172,
+      "height": 724,
+      "bytes": 65284,
+      "format": "WebP",
+      "runtimeStatus": "Superseded; Home advice now uses the shared graphite-dot background. Retained as source provenance."
+    },
+    {
+      "name": "guides-notebook-cutout",
+      "date": "2026-10-03",
+      "path": "static/assets/images/template/home-section-guides-notebook-cutout-v3.webp",
+      "purpose": "Transparent side illustration generated for the Home buying-advice banner.",
+      "runtimeStatus": "Superseded; retained as source provenance without runtime requests.",
+      "prompt": "Use case: product-mockup.\nAsset type: one photorealistic editorial object cutout for a black automotive buying-advice banner. True transparent background, isolated subject only, landscape canvas about 3:2.\nSubject: a small open guide notebook with a black linen cover and off-white lightly ruled pages, accompanied by one slim dark satin-metal pen resting close beside it. No words or printed illustrations. No cars. Crisp believable binding, page edges, fabric and pen geometry.\nView and shape: photograph from a LOW front three-quarter angle, camera about 20 degrees above the horizontal plane, so the open book appears as a WIDE LOW HORIZONTAL SILHOUETTE, like a car seen from the side. Definitely NOT top-down or overhead. Position its long axis horizontally, with subtle perspective aimed toward the right. A black cover and page block define the edges clearly; the whole open notebook and whole pen are visible. A grounded premium studio product cutout, not an icon or cartoon.\nComposition: single centered object group with transparent clear space on all sides. Wide object group, approximately 2.2:1 visible width-to-height ratio. No crop, no part touching the image boundaries, no frame. A very soft tight neutral contact shadow immediately beneath the objects is allowed with preserved alpha; do not paint a desk, floor, wall or rectangular background.\nLighting/palette: restrained neutral studio highlights, black linen, dark satin metal, subdued off-white paper. Natural clean photographic detail, no glossy sci-fi look. No colored lighting, red accents, gold, neon or bright white glare.\nConstraints: actual alpha transparency outside the subject. No opaque backdrop, no dark rectangle, no gradients across the canvas, no text, logos, watermark, UI, people, hands, car imagery or extra props. Only this notebook-and-pen cutout.",
+      "generatedSource": "exec-ddfc7e2e-9dd0-4ddb-8627-d05c4efb8719.png",
+      "backupPath": "runtime/home-advice-cutouts-20261003/source-guides-notebook-cutout.png",
+      "width": 640,
+      "height": 291,
+      "alpha": true,
+      "visibleBounds": {
+        "left": 23,
+        "top": 74,
+        "right": 620,
+        "bottom": 238
+      },
+      "bytes": 20044,
+      "format": "WebP",
+      "delivery": "Full frame scaled to 640px width; WebP quality 84, alpha quality 100, effort 6. No crop, compositing or pixel retouching."
+    },
+    {
+      "name": "guides-checklist-cutout",
+      "date": "2026-10-03",
+      "path": "static/assets/images/template/home-section-guides-checklist-cutout-v3.webp",
+      "purpose": "Transparent side illustration generated for the Home buying-advice banner.",
+      "runtimeStatus": "Superseded; retained as source provenance without runtime requests.",
+      "prompt": "Use case: product-mockup.\nAsset type: one photorealistic inspection-checklist object cutout for a black automotive buying-advice banner. TRUE transparent background; isolated subject only; wide landscape canvas roughly 2:1.\nSubject: a thin dark charcoal clipboard with one clean off-white checklist sheet. The paper has just four small empty square checkboxes and thin straight blank horizontal rules. No words or numbers. A realistic simple dark satin-metal clip secures the sheet. No other objects.\nView and shape: the clipboard lies flat, photographed from a LOW front three-quarter studio angle with the camera only 20 degrees above its horizontal plane, so its silhouette is WIDE and LOW like a car viewed from the side. Its long axis reads left-to-right in the frame, subtly pointing toward the left. Do not show an upright portrait clipboard or a top-down overhead view. The entire clipboard, metal clip, paper edges and contact shadow are fully visible, with clear space around all sides. Target visible width-to-height ratio around 2.2:1.\nStyle: premium restrained product photography, believable matte paper and dark charcoal backing, thin crisp edges and neutral highlights. Pair visually with an open black linen notebook viewed from the same low angle. The off-white paper should be subdued, not bright white glare. A soft tight neutral contact shadow immediately beneath the clipboard is allowed with alpha, but no floor or desk plane.\nComposition: centered single object with generous alpha space. It will be rendered only around 230 by 115px beside a live heading, so keep geometry clean and readable at that size. No cropping, no object touching a canvas boundary.\nConstraints: true alpha outside the object. No opaque background or rectangle, no desk, no floor, no room, no gradient over the canvas, no text, brands, watermark, icons, vehicle imagery, people, hands, screens, red lines, colored accents, gold, neon or additional props. Output ONLY the complete low-angle clipboard-and-paper cutout.",
+      "generatedSource": "exec-7acb84fa-9d8e-4c7a-94c8-dfb2e5587277.png",
+      "backupPath": "runtime/home-advice-cutouts-20261003/source-guides-checklist-cutout.png",
+      "width": 640,
+      "height": 328,
+      "alpha": true,
+      "visibleBounds": {
+        "left": 21,
+        "top": 91,
+        "right": 615,
+        "bottom": 269
+      },
+      "bytes": 19458,
+      "format": "WebP",
+      "delivery": "Full frame scaled to 640px width; WebP quality 84, alpha quality 100, effort 6. No crop, compositing or pixel retouching."
+    }
+  ]
+}

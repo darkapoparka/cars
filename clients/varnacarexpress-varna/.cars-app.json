@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "dealer": "varnacarexpress-varna",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/app",
+    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
+    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+  },
+  "appDigest": "0711fb613c96773a6a86431fd155f24ced249bf0c6ad6fd56cd9065acc616bf8",
+  "provenance": {
+    "schemaVersion": 1,
+    "dealer": "varnacarexpress-varna",
+    "profile": "auto-best/src/lib/data/dealer-profile.json",
+    "profileSha256": "cb11bdf9964f1808af2ab99930f9d601cf922356c380e471b9f15825b12782f9",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "vehicles": 1,
+    "currency": "EUR",
+    "observedAt": "2026-10-11T11:49:53.799Z",
+    "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-light.png",
+        "output": "public/dealer-app/logo-light-f1714e4acb8801c6c817.png",
+        "sha256": "f1714e4acb8801c6c8172ef97c9600c5de25b345a72098aa2f8d3f83defdbcbc",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-dark.png",
+        "output": "public/dealer-app/logo-dark-0e07aafcdee6c20bc497.png",
+        "sha256": "0e07aafcdee6c20bc497f702e15083a8e2646224bf5b171667899b2325c1d131",
+        "role": "logo-dark"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/21791619772327999-1.webp",
+        "output": "public/dealer-app/vehicle-4a0100ac64621d6fe504.webp",
+        "sha256": "4a0100ac64621d6fe5046beb174d1c21943c64428dd64d489703821be19335ec",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/21791619772327999-2.webp",
+        "output": "public/dealer-app/vehicle-68bd69919b906c02931b.webp",
+        "sha256": "68bd69919b906c02931bf286f33629e9edfba130956b6beee02b6006443bfceb",
+        "role": "vehicle"
+      }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "kia-sportage-2013-21791619772327999",
+        "sourceValue": 124120,
+        "sourceUnit": "km",
+        "canonicalKm": 124120
+      }
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

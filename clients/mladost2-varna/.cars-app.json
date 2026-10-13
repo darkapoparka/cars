@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "dealer": "mladost2-varna",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/app",
+    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
+    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+  },
+  "appDigest": "eba74d624163eedf0ffb51577712c51429e3f4f2dac8b68c06211217f54678f5",
+  "provenance": {
+    "schemaVersion": 1,
+    "dealer": "mladost2-varna",
+    "profile": "auto-best/src/lib/data/dealer-profile.json",
+    "profileSha256": "e290a3107e9d7bd425853f42c29784dc81201484748bb00ac8c4444cccdbcb3a",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "vehicles": 1,
+    "currency": "EUR",
+    "observedAt": "2026-10-11T11:47:29.450Z",
+    "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-light.png",
+        "output": "public/dealer-app/logo-light-84ca167de34c2abde246.png",
+        "sha256": "84ca167de34c2abde246153001dd20343ea741b032b3683263cf9583e8174742",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-dark.png",
+        "output": "public/dealer-app/logo-dark-502524f439a7a6da3e79.png",
+        "sha256": "502524f439a7a6da3e7933dd994e449f4ba918054fceeb9a81a1b2bf8432e2c4",
+        "role": "logo-dark"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11780909059810932-2.webp",
+        "output": "public/dealer-app/vehicle-97e84c293644efcb9381.webp",
+        "sha256": "97e84c293644efcb9381eb8f86f1dd03f848f19fa6869b2d66c53869ec65cfe9",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11780909059810932-1.webp",
+        "output": "public/dealer-app/vehicle-025ab17183e937420d17.webp",
+        "sha256": "025ab17183e937420d1751f0a024a2b3acf65b106e1624376fb0f615e1512292",
+        "role": "vehicle"
+      }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "vw-jetta-2009-11780909059810932",
+        "sourceValue": 150000,
+        "sourceUnit": "km",
+        "canonicalKm": 150000
+      }
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

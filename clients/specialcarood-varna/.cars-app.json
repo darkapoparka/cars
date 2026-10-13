@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "dealer": "specialcarood-varna",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/app",
+    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
+    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+  },
+  "appDigest": "3ac27c4e947d8bd76e61937dcfd75acb4c8dea61025e20bbcf4684f77f30e05b",
+  "provenance": {
+    "schemaVersion": 1,
+    "dealer": "specialcarood-varna",
+    "profile": "auto-best/src/lib/data/dealer-profile.json",
+    "profileSha256": "5d81ecc92a6de69d7c55ac415b68cccff80ef1efe8e1e0556f7759efc0ca3c58",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "vehicles": 1,
+    "currency": "EUR",
+    "observedAt": "2026-10-11T11:54:05.356Z",
+    "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-light.png",
+        "output": "public/dealer-app/logo-light-5dc7f91faee34a214a23.png",
+        "sha256": "5dc7f91faee34a214a23158a6ce5163448a42eb7f08e00113e1fa5d828f49b24",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-dark.png",
+        "output": "public/dealer-app/logo-dark-e70870da81064d535682.png",
+        "sha256": "e70870da81064d535682018cfb9a74f292f0b7cdeecbafae4ad34fdc3b1802c9",
+        "role": "logo-dark"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/21791554713149733-1.webp",
+        "output": "public/dealer-app/vehicle-57a03296d5d35fea21b9.webp",
+        "sha256": "57a03296d5d35fea21b9cb831d55dc34ee702b64c25639ad8b47d2a8ff4c1225",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/21791554713149733-2.webp",
+        "output": "public/dealer-app/vehicle-5921a9a34c7c45d1f10b.webp",
+        "sha256": "5921a9a34c7c45d1f10b71dd5b79219f0b40f931e5c570e7c4ad28de7e98bc50",
+        "role": "vehicle"
+      }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "hyundai-ix35-2015-21791554713149733",
+        "sourceValue": 173000,
+        "sourceUnit": "km",
+        "canonicalKm": 173000
+      }
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "dealer": "unitrade-varna",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/app",
+    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
+    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+  },
+  "appDigest": "6f3581dd9815d757c0a54fb1a7989f65d217a3e4c08e4ce66d151a89e170531a",
+  "provenance": {
+    "schemaVersion": 1,
+    "dealer": "unitrade-varna",
+    "profile": "auto-best/src/lib/data/dealer-profile.json",
+    "profileSha256": "c0c722e76e2b6dcdaed98cdc72038ae5c80726f3b7e2a6a9b482a5f3b03c0bf3",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "vehicles": 1,
+    "currency": "EUR",
+    "observedAt": "2026-10-11T11:54:04.381Z",
+    "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-light.png",
+        "output": "public/dealer-app/logo-light-182a070f085c518e1de4.png",
+        "sha256": "182a070f085c518e1de4f60c072de18636ab2c361497a15f1a208a0a7f250b7f",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-dark.png",
+        "output": "public/dealer-app/logo-dark-abdd7dd05767eef6379a.png",
+        "sha256": "abdd7dd05767eef6379ac8ee834c1df2e25f2c0499e440fa5bbd1c920fd7e06d",
+        "role": "logo-dark"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/21767710555691116-2.webp",
+        "output": "public/dealer-app/vehicle-8bcc0fdc993c261193fc.webp",
+        "sha256": "8bcc0fdc993c261193fc855b9646b5748383eafcf26f10de22a80cd4e2d574fb",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/21767710555691116-1.webp",
+        "output": "public/dealer-app/vehicle-9a2e552f6951bb09eb41.webp",
+        "sha256": "9a2e552f6951bb09eb412bda04882c87c94bc2ffbc0607cd4f704a858f5d95c3",
+        "role": "vehicle"
+      }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "vw-tiguan-2017-21767710555691116",
+        "sourceValue": 198000,
+        "sourceUnit": "km",
+        "canonicalKm": 198000
+      }
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "dealer": "garage24-varna",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/app",
+    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
+    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+  },
+  "appDigest": "dd350fe391199a0815b6dbde3be6a8fa7822f5ce74c7e492ecc8bddda2ba907c",
+  "provenance": {
+    "schemaVersion": 1,
+    "dealer": "garage24-varna",
+    "profile": "auto-best/src/lib/data/dealer-profile.json",
+    "profileSha256": "b7283755e0c66fb950da5f2fb1d227da53a27b6ba99ec0c387e729c287b297cb",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "vehicles": 1,
+    "currency": "EUR",
+    "observedAt": "2026-10-11T11:49:53.965Z",
+    "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-light.png",
+        "output": "public/dealer-app/logo-light-d2f5d2c777ceb7fd4350.png",
+        "sha256": "d2f5d2c777ceb7fd435044a013fb1a9498454194eb3b3f51741847116a40540e",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-dark.png",
+        "output": "public/dealer-app/logo-dark-304d4054d0da6aa78e4b.png",
+        "sha256": "304d4054d0da6aa78e4bf7198e03faf761ed4a42cf869988f4c8d82e73b0d754",
+        "role": "logo-dark"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/21789110878202273-2.webp",
+        "output": "public/dealer-app/vehicle-5fdd07888dd04df62bee.webp",
+        "sha256": "5fdd07888dd04df62beed9af7a98fa3c9fdd376efde3eda7e7eca60a6a8f8119",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/21789110878202273-1.webp",
+        "output": "public/dealer-app/vehicle-4b01c4ea8314c74e5281.webp",
+        "sha256": "4b01c4ea8314c74e528195bc08bf60f0cc376c6f48a8b8080d89cb809be36f3f",
+        "role": "vehicle"
+      }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "ford-f150-2010-21789110878202273",
+        "sourceValue": 515000,
+        "sourceUnit": "km",
+        "canonicalKm": 515000
+      }
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

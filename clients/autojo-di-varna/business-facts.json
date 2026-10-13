@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "slug": "autojo-di-varna",
+  "dealerId": "autojo-di-varna",
+  "business": {
+    "schemaVersion": 1,
+    "slug": "autojo-di-varna",
+    "name": "АУТО ЖО-ДИ",
+    "shortName": "АУТО ЖО-ДИ",
+    "city": "Варна",
+    "country": "BG",
+    "countryCode": "BG",
+    "locale": "bg-BG",
+    "currency": "EUR",
+    "distanceUnit": "km",
+    "phone": "0898545465",
+    "phoneDisplay": "0898545465",
+    "phoneE164": "+359898545465",
+    "phones": [
+      "0898545465"
+    ],
+    "addressLine": "бул. Цар Освободител, 300 м. след светофара за Владиславово",
+    "address": "бул. Цар Освободител, 300 м. след светофара за Владиславово, Варна, България",
+    "hours": "Потвърдете работното време директно с автокъщата.",
+    "email": "",
+    "sourceUrl": "https://autojo-di.mobile.bg/",
+    "stockUrl": "https://autojo-di.mobile.bg/",
+    "contactSourceUrl": "https://autojo-di.mobile.bg/contacts",
+    "observedAt": "2026-10-11T11:54:04.865Z",
+    "inventoryNotice": "Датирана извадка от публични обяви, не складова система в реално време. Потвърдете цената, ДДС и наличността.",
+    "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+    "services": [],
+    "socialLinks": {},
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sourceFacts": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/autojo-di-varna/source/business-facts.json",
+    "sha256": "f42187b72b19344c40f3fd22e41c07bc4116cb84ef616d1f1babb990469edee0"
+  },
+  "originalBusinessLiteralsUnchanged": true
+}

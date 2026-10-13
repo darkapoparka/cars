@@ -1,0 +1,48 @@
+{
+	"baselineImportCommit": "60244f06ff9a2ab872eafebdb6f7b6dac5edd383",
+	"frozenPathCount": 1683,
+	"frozenManifestSha256": "4ec84a44d224a9ab628f78dd2e293155ede5dd491d01e70f0d4a1b2bbfc3db37",
+	"frozenManifest": "L:/CODEX/cars/templates/import/runtime/desktop-home-3d-tabs-2026-10-04/evidence/source-manifest.json",
+	"lockfile": {
+		"path": "package-lock.json",
+		"sha256": "aa596db7046c3f226ce50b488e283e30121eb49122d5006c60035ef57a952e1c"
+	},
+	"changedSource": [
+		{
+			"path": "src/lib/components/common/MobileModeTabs.svelte",
+			"sha256": "40104b7c710c106c5976618f1ae4090e62c6be989869ac7c54b3e15343293211"
+		},
+		{
+			"path": "src/lib/components/home/DesktopHomeHero.svelte",
+			"sha256": "8f85b073b91720bf241ba5fd5a1df650040320aa9d98c6b0c78668f362fce71b"
+		},
+		{
+			"path": "src/lib/content/home-discovery.ts",
+			"sha256": "e3e0b504dcd4637ec96acb07284a22da473c7b69741cf1b110c36e7b33cc6823"
+		},
+		{
+			"path": "src/lib/styles/tokens.css",
+			"sha256": "b276f0aae5ec66a62f2576242d657550e3af49680627e8022396e08d40728da1"
+		},
+		{
+			"path": "tests/desktop-search.e2e.ts",
+			"sha256": "ad690014c81297b2e4ce971ac6b4a88e08af841153bec997f9745437defd035d"
+		},
+		{
+			"path": "static/assets/daynight/home-modes/buy-3d-v1.webp",
+			"sha256": "a2a117603b0bf73a7183c42268d660f34dd00381abbc8023f250ae275e9c5296"
+		},
+		{
+			"path": "static/assets/daynight/home-modes/finance-3d-v1.webp",
+			"sha256": "c91a301997ead89242de32f370f8bf67d0a1618abfa8bd8fda311d5ff798fdf2"
+		},
+		{
+			"path": "static/assets/daynight/home-modes/sell-3d-v1.webp",
+			"sha256": "056967541f4a38154ae79e2c1f3bb0de375fd52d29057ba41b930bcaeee58d16"
+		},
+		{
+			"path": "static/assets/daynight/home-modes/import-3d-v1.webp",
+			"sha256": "1bee2c67dd908b8d7e20b5bf6f7e0b1dfc8c573d7ed0d75f337471e102ae7258"
+		}
+	]
+}

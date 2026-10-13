@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "dealer": "triumf-varna",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/app",
+    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
+    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+  },
+  "appDigest": "a674f904f686013bb4662bd11739f39696d28d173671e5adb1d48d45df792b76",
+  "provenance": {
+    "schemaVersion": 1,
+    "dealer": "triumf-varna",
+    "profile": "auto-best/src/lib/data/dealer-profile.json",
+    "profileSha256": "f0e840ff7431607cc0ebff0ba9010b8075eb4959b8940794c0b5ff14655c7fb0",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "vehicles": 1,
+    "currency": "EUR",
+    "observedAt": "2026-10-11T11:54:04.528Z",
+    "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-light.png",
+        "output": "public/dealer-app/logo-light-a9cf7f8d851e8905bbce.png",
+        "sha256": "a9cf7f8d851e8905bbce5f423feced2bbdc0909f233262bea35289a229889595",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-dark.png",
+        "output": "public/dealer-app/logo-dark-67730c5925f188741ae9.png",
+        "sha256": "67730c5925f188741ae97bc8124def9ec59221947ce4e4cec72f5b2265391dab",
+        "role": "logo-dark"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11786001673149613-1.webp",
+        "output": "public/dealer-app/vehicle-45e3a1807ff0215eef99.webp",
+        "sha256": "45e3a1807ff0215eef998eeb83b8b2cdbf2ef7dcd4bf4fa0de51c29bca5cfe30",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11786001673149613-2.webp",
+        "output": "public/dealer-app/vehicle-705e1b68673e675347af.webp",
+        "sha256": "705e1b68673e675347afd3680efb67b1c4956a72068d770d31ab5327e93c2f8b",
+        "role": "vehicle"
+      }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "vw-touran-2010-11786001673149613",
+        "sourceValue": 212000,
+        "sourceUnit": "km",
+        "canonicalKm": 212000
+      }
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

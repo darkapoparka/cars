@@ -1,0 +1,470 @@
+{
+  "before": {
+    "art": {
+      "bottom": 511.125,
+      "height": 80.953125,
+      "left": 159,
+      "right": 287,
+      "top": 430.171875,
+      "width": 128,
+      "x": 159,
+      "y": 430.171875
+    },
+    "card": {
+      "bottom": 531.828125,
+      "height": 122.34375,
+      "left": 12,
+      "right": 292,
+      "top": 409.484375,
+      "width": 280,
+      "x": 12,
+      "y": 409.484375
+    },
+    "cardOverflow": false,
+    "color": "rgb(255, 255, 255)",
+    "columns": "146px 132px",
+    "copy": {
+      "bottom": 530.828125,
+      "height": 120.34375,
+      "left": 13,
+      "right": 159,
+      "top": 410.484375,
+      "width": 146,
+      "x": 13,
+      "y": 410.484375
+    },
+    "cta": {
+      "bottom": 514.828125,
+      "height": 40,
+      "left": 25,
+      "right": 85.21875,
+      "top": 474.828125,
+      "width": 60.21875,
+      "x": 25,
+      "y": 474.828125
+    },
+    "currentSrc": "http://127.0.0.1:6461/assets/images/template/home-services-silver-v1.webp",
+    "detail": {
+      "client": 91,
+      "rect": {
+        "bottom": 466.828125,
+        "height": 17.15625,
+        "left": 25,
+        "right": 115.8125,
+        "top": 449.671875,
+        "width": 90.8125,
+        "x": 25,
+        "y": 449.671875
+      },
+      "rows": 0.9997814685314684,
+      "scroll": 91,
+      "size": "12px",
+      "text": "За вашата кола"
+    },
+    "href": "http://127.0.0.1:6461/bg/about-us#process",
+    "label": {
+      "client": 29,
+      "rect": {
+        "bottom": 503.921875,
+        "height": 18.1875,
+        "left": 31,
+        "right": 60.21875,
+        "top": 485.734375,
+        "width": 29.21875,
+        "x": 31,
+        "y": 485.734375
+      },
+      "rows": 0.9993131868131868,
+      "scroll": 29,
+      "size": "14px",
+      "text": "Виж"
+    },
+    "nestedActions": 0,
+    "padding": "0px 6px",
+    "pageOverflow": false,
+    "paint": "rgb(20, 23, 29)",
+    "paintedHeight": 28,
+    "radius": "6px",
+    "scrollY": 1392,
+    "viewport": {
+      "height": 884,
+      "width": 319
+    },
+    "weight": "500"
+  },
+  "after": {
+    "bg319": {
+      "art": {
+        "bottom": 511.125,
+        "height": 80.953125,
+        "left": 159,
+        "right": 287,
+        "top": 430.171875,
+        "width": 128,
+        "x": 159,
+        "y": 430.171875
+      },
+      "card": {
+        "bottom": 531.828125,
+        "height": 122.34375,
+        "left": 12,
+        "right": 292,
+        "top": 409.484375,
+        "width": 280,
+        "x": 12,
+        "y": 409.484375
+      },
+      "cardOverflow": false,
+      "color": "rgb(255, 255, 255)",
+      "columns": "146px 132px",
+      "copy": {
+        "bottom": 530.828125,
+        "height": 120.34375,
+        "left": 13,
+        "right": 159,
+        "top": 410.484375,
+        "width": 146,
+        "x": 13,
+        "y": 410.484375
+      },
+      "cta": {
+        "bottom": 514.828125,
+        "height": 40,
+        "left": 25,
+        "right": 85.21875,
+        "top": 474.828125,
+        "width": 60.21875,
+        "x": 25,
+        "y": 474.828125
+      },
+      "currentSrc": "http://127.0.0.1:6461/assets/images/template/home-services-silver-v1.webp",
+      "detail": {
+        "client": 91,
+        "rect": {
+          "bottom": 466.828125,
+          "height": 17.15625,
+          "left": 25,
+          "right": 115.8125,
+          "top": 449.671875,
+          "width": 90.8125,
+          "x": 25,
+          "y": 449.671875
+        },
+        "rows": 0.9997814685314684,
+        "scroll": 91,
+        "size": "12px",
+        "text": "За вашата кола"
+      },
+      "href": "http://127.0.0.1:6461/bg/about-us#process",
+      "label": {
+        "client": 29,
+        "rect": {
+          "bottom": 503.921875,
+          "height": 18.1875,
+          "left": 31,
+          "right": 60.21875,
+          "top": 485.734375,
+          "width": 29.21875,
+          "x": 31,
+          "y": 485.734375
+        },
+        "rows": 0.9993131868131868,
+        "scroll": 29,
+        "size": "14px",
+        "text": "Виж"
+      },
+      "nestedActions": 0,
+      "padding": "0px 6px",
+      "pageOverflow": false,
+      "paint": "rgb(20, 23, 29)",
+      "paintedHeight": 28,
+      "radius": "999px",
+      "scrollY": 1392,
+      "viewport": {
+        "height": 884,
+        "width": 319
+      },
+      "weight": "500"
+    },
+    "bg280": {
+      "art": {
+        "bottom": 514.671875,
+        "height": 80.953125,
+        "left": 120,
+        "right": 248,
+        "top": 433.71875,
+        "width": 128,
+        "x": 120,
+        "y": 433.71875
+      },
+      "card": {
+        "bottom": 544.96875,
+        "height": 141.53125,
+        "left": 12,
+        "right": 253,
+        "top": 403.4375,
+        "width": 241,
+        "x": 12,
+        "y": 403.4375
+      },
+      "cardOverflow": false,
+      "color": "rgb(255, 255, 255)",
+      "columns": "107px 132px",
+      "copy": {
+        "bottom": 543.96875,
+        "height": 139.53125,
+        "left": 13,
+        "right": 120,
+        "top": 404.4375,
+        "width": 107,
+        "x": 13,
+        "y": 404.4375
+      },
+      "cta": {
+        "bottom": 527.96875,
+        "height": 40,
+        "left": 25,
+        "right": 85.21875,
+        "top": 487.96875,
+        "width": 60.21875,
+        "x": 25,
+        "y": 487.96875
+      },
+      "currentSrc": "http://127.0.0.1:6461/assets/images/template/home-services-silver-v1.webp",
+      "detail": {
+        "client": 91,
+        "rect": {
+          "bottom": 479.96875,
+          "height": 17.15625,
+          "left": 25,
+          "right": 115.8125,
+          "top": 462.8125,
+          "width": 90.8125,
+          "x": 25,
+          "y": 462.8125
+        },
+        "rows": 0.9997814685314684,
+        "scroll": 91,
+        "size": "12px",
+        "text": "За вашата кола"
+      },
+      "href": "http://127.0.0.1:6461/bg/about-us#process",
+      "label": {
+        "client": 29,
+        "rect": {
+          "bottom": 517.0625,
+          "height": 18.1875,
+          "left": 31,
+          "right": 60.21875,
+          "top": 498.875,
+          "width": 29.21875,
+          "x": 31,
+          "y": 498.875
+        },
+        "rows": 0.9993131868131868,
+        "scroll": 29,
+        "size": "14px",
+        "text": "Виж"
+      },
+      "nestedActions": 0,
+      "padding": "0px 6px",
+      "pageOverflow": false,
+      "paint": "rgb(20, 23, 29)",
+      "paintedHeight": 28,
+      "radius": "999px",
+      "scrollY": 1757,
+      "viewport": {
+        "height": 844,
+        "width": 280
+      },
+      "weight": "500"
+    },
+    "bg320": {
+      "art": {
+        "bottom": 511.6875,
+        "height": 80.953125,
+        "left": 160,
+        "right": 288,
+        "top": 430.734375,
+        "width": 128,
+        "x": 160,
+        "y": 430.734375
+      },
+      "card": {
+        "bottom": 532.390625,
+        "height": 122.34375,
+        "left": 12,
+        "right": 293,
+        "top": 410.046875,
+        "width": 281,
+        "x": 12,
+        "y": 410.046875
+      },
+      "cardOverflow": false,
+      "color": "rgb(255, 255, 255)",
+      "columns": "147px 132px",
+      "copy": {
+        "bottom": 531.390625,
+        "height": 120.34375,
+        "left": 13,
+        "right": 160,
+        "top": 411.046875,
+        "width": 147,
+        "x": 13,
+        "y": 411.046875
+      },
+      "cta": {
+        "bottom": 515.390625,
+        "height": 40,
+        "left": 25,
+        "right": 85.21875,
+        "top": 475.390625,
+        "width": 60.21875,
+        "x": 25,
+        "y": 475.390625
+      },
+      "currentSrc": "http://127.0.0.1:6461/assets/images/template/home-services-silver-v1.webp",
+      "detail": {
+        "client": 91,
+        "rect": {
+          "bottom": 467.390625,
+          "height": 17.15625,
+          "left": 25,
+          "right": 115.8125,
+          "top": 450.234375,
+          "width": 90.8125,
+          "x": 25,
+          "y": 450.234375
+        },
+        "rows": 0.9997814685314684,
+        "scroll": 91,
+        "size": "12px",
+        "text": "За вашата кола"
+      },
+      "href": "http://127.0.0.1:6461/bg/about-us#process",
+      "label": {
+        "client": 29,
+        "rect": {
+          "bottom": 504.484375,
+          "height": 18.1875,
+          "left": 31,
+          "right": 60.21875,
+          "top": 486.296875,
+          "width": 29.21875,
+          "x": 31,
+          "y": 486.296875
+        },
+        "rows": 0.9993131868131868,
+        "scroll": 29,
+        "size": "14px",
+        "text": "Виж"
+      },
+      "nestedActions": 0,
+      "padding": "0px 6px",
+      "pageOverflow": false,
+      "paint": "rgb(20, 23, 29)",
+      "paintedHeight": 28,
+      "radius": "999px",
+      "scrollY": 1392,
+      "viewport": {
+        "height": 844,
+        "width": 320
+      },
+      "weight": "500"
+    },
+    "bg390": {
+      "art": {
+        "bottom": 524.953125,
+        "height": 80.953125,
+        "left": 226,
+        "right": 354,
+        "top": 444,
+        "width": 128,
+        "x": 226,
+        "y": 444
+      },
+      "card": {
+        "bottom": 548.28125,
+        "height": 127.609375,
+        "left": 12,
+        "right": 363,
+        "top": 420.671875,
+        "width": 351,
+        "x": 12,
+        "y": 420.671875
+      },
+      "cardOverflow": false,
+      "color": "rgb(255, 255, 255)",
+      "columns": "213px 136px",
+      "copy": {
+        "bottom": 547.28125,
+        "height": 125.609375,
+        "left": 13,
+        "right": 226,
+        "top": 421.671875,
+        "width": 213,
+        "x": 13,
+        "y": 421.671875
+      },
+      "cta": {
+        "bottom": 531.28125,
+        "height": 40,
+        "left": 25,
+        "right": 150.296875,
+        "top": 491.28125,
+        "width": 125.296875,
+        "x": 25,
+        "y": 491.28125
+      },
+      "currentSrc": "http://127.0.0.1:6461/assets/images/template/home-services-silver-v1.webp",
+      "detail": {
+        "client": 106,
+        "rect": {
+          "bottom": 483.28125,
+          "height": 20.015625,
+          "left": 25,
+          "right": 130.953125,
+          "top": 463.265625,
+          "width": 105.953125,
+          "x": 25,
+          "y": 463.265625
+        },
+        "rows": 0.9997814685314684,
+        "scroll": 106,
+        "size": "14px",
+        "text": "За вашата кола"
+      },
+      "href": "http://127.0.0.1:6461/bg/about-us#process",
+      "label": {
+        "client": 94,
+        "rect": {
+          "bottom": 520.375,
+          "height": 18.1875,
+          "left": 31,
+          "right": 125.296875,
+          "top": 502.1875,
+          "width": 94.296875,
+          "x": 31,
+          "y": 502.1875
+        },
+        "rows": 0.9993131868131868,
+        "scroll": 94,
+        "size": "14px",
+        "text": "Виж услугите"
+      },
+      "nestedActions": 0,
+      "padding": "0px 6px",
+      "pageOverflow": false,
+      "paint": "rgb(20, 23, 29)",
+      "paintedHeight": 28,
+      "radius": "999px",
+      "scrollY": 1396,
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "weight": "500"
+    }
+  },
+  "consoleErrors": []
+}

@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "dealer": "lionauto1-varna",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/app",
+    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
+    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+  },
+  "appDigest": "27b5b23ad6e1b6fc2090ce0fbfa1ed919ea717a56e9650912c6873827bb3f72d",
+  "provenance": {
+    "schemaVersion": 1,
+    "dealer": "lionauto1-varna",
+    "profile": "auto-best/src/lib/data/dealer-profile.json",
+    "profileSha256": "4e58f78269ec5bb4650850f4308da8125ccc6e12726d3600fc8d727faae39c1c",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "vehicles": 1,
+    "currency": "EUR",
+    "observedAt": "2026-10-11T11:49:52.313Z",
+    "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-light.png",
+        "output": "public/dealer-app/logo-light-624452e460276c4ac904.png",
+        "sha256": "624452e460276c4ac904f6123ba1fbd9866e6d88bc813ab59580b955ece34821",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-dark.png",
+        "output": "public/dealer-app/logo-dark-a3ef0cae8e06a1d70cc8.png",
+        "sha256": "a3ef0cae8e06a1d70cc843db1fe9a885ce10516300c127d0394c0d8102254039",
+        "role": "logo-dark"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11791531218122804-2.webp",
+        "output": "public/dealer-app/vehicle-32c857d433855be72a76.webp",
+        "sha256": "32c857d433855be72a76aa20fde7896a18ac6a0689e301eb5d90cc4862ec470b",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11791531218122804-1.webp",
+        "output": "public/dealer-app/vehicle-49c1ea1ad5c73e5658d3.webp",
+        "sha256": "49c1ea1ad5c73e5658d3e6c2364e91043e11a5d962d0663570daabab359f20fd",
+        "role": "vehicle"
+      }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "audi-a6-2012-11791531218122804",
+        "sourceValue": 280000,
+        "sourceUnit": "km",
+        "canonicalKm": 280000
+      }
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

@@ -1,0 +1,37 @@
+{
+  "fetchedAt": "2026-10-11",
+  "sources": {
+    "dealerInventory": "https://garage24.mobile.bg/",
+    "dealerContact": "https://garage24.mobile.bg/contacts"
+  },
+  "count": 1,
+  "listings": [
+    {
+      "badge": "ОБЯВА",
+      "category": "Пикап",
+      "color": "",
+      "displacement": "",
+      "euroStandard": "",
+      "features": [],
+      "fuel": "Бензинов",
+      "gearbox": "Автоматична",
+      "href": "https://garage24.mobile.bg/obiava-21789110878202273-ford-f150-5-4-v8-triton",
+      "id": "21789110878202273",
+      "image": "/dealer-stock/21789110878202273-1.webp",
+      "location": "Варна",
+      "mileage": "515 000 км",
+      "mileageKnown": true,
+      "mileageValue": 515000,
+      "mileageUnit": "km",
+      "photoCount": "2",
+      "power": "320 к.с.",
+      "price": "9 990 €",
+      "priceBgn": "",
+      "production": "2010 г.",
+      "rawPriceText": "9 990 €",
+      "shortDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "title": "Ford F150",
+      "vat": ""
+    }
+  ]
+}

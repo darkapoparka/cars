@@ -1,0 +1,37 @@
+{
+  "fetchedAt": "2026-10-11",
+  "sources": {
+    "dealerInventory": "https://triumf.mobile.bg/",
+    "dealerContact": "https://triumf.mobile.bg/contacts"
+  },
+  "count": 1,
+  "listings": [
+    {
+      "badge": "ОБЯВА",
+      "category": "Миниван",
+      "color": "",
+      "displacement": "",
+      "euroStandard": "",
+      "features": [],
+      "fuel": "Дизелов",
+      "gearbox": "Автоматична",
+      "href": "https://triumf.mobile.bg/obiava-11786001673149613-vw-touran-2-0tdi-170k-s-confort-line",
+      "id": "11786001673149613",
+      "image": "/dealer-stock/11786001673149613-1.webp",
+      "location": "Варна",
+      "mileage": "212 000 км",
+      "mileageKnown": true,
+      "mileageValue": 212000,
+      "mileageUnit": "km",
+      "photoCount": "2",
+      "power": "170 к.с.",
+      "price": "6 899 €",
+      "priceBgn": "",
+      "production": "2010 г.",
+      "rawPriceText": "6 899 €",
+      "shortDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "title": "VW Touran",
+      "vat": ""
+    }
+  ]
+}

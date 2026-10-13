@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-input-mapping",
+  "dealer": "unitrade-varna",
+  "inputs": {
+    "facts": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/unitrade-varna/facts.json",
+      "sha256": "70fce19b3c25f9a16776edcb403ce3cef536b7496b5d0056851693b16240f5ae"
+    },
+    "stock": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/unitrade-varna/stock.json",
+      "sha256": "66afef6bb614a267d1f3fc9a2b1ee290bee50c2bcf031c47f2e7d5ca4b973c0c"
+    },
+    "locale": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/unitrade-varna/locale.json",
+      "sha256": "9359610a9d4335f15acfd956222f3887405bbf7ba5e2007e37e18f45f67b9681"
+    },
+    "branding": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/unitrade-varna/branding.json",
+      "sha256": "0231925de6d126bde0f9f0bc733ee3bcee64c7493a10e6fee2bdc1dd1e5741e0"
+    }
+  },
+  "sources": [
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/unitrade-varna/identity-repository-corrected-additional100.json",
+      "sha256": "a2365d3620183eb5a44e6984581d7f5c5e476893c1be62da5c429598ea20a3be"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/unitrade-varna/facts.json",
+      "sha256": "70fce19b3c25f9a16776edcb403ce3cef536b7496b5d0056851693b16240f5ae"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/unitrade-varna/stock.json",
+      "sha256": "66afef6bb614a267d1f3fc9a2b1ee290bee50c2bcf031c47f2e7d5ca4b973c0c"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/unitrade-varna/locale.json",
+      "sha256": "9359610a9d4335f15acfd956222f3887405bbf7ba5e2007e37e18f45f67b9681"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/unitrade-varna/branding.json",
+      "sha256": "0231925de6d126bde0f9f0bc733ee3bcee64c7493a10e6fee2bdc1dd1e5741e0"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/unitrade-varna/media/21767710555691116-1.webp",
+      "sha256": "9a2e552f6951bb09eb412bda04882c87c94bc2ffbc0607cd4f704a858f5d95c3"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/unitrade-varna/media/21767710555691116-2.webp",
+      "sha256": "8bcc0fdc993c261193fc855b9646b5748383eafcf26f10de22a80cd4e2d574fb"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/unitrade-varna/copy-review-additional100.json",
+      "sha256": "1c5707fb81c376eda01abc4b3a5c7bad40c6be9aa71bfab1b58d7d6394fd4485"
+    }
+  ]
+}

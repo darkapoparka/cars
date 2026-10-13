@@ -1,0 +1,50 @@
+{
+  "mode": "dealer",
+  "id": "tonyem4m-varna",
+  "name": "Тони Ем",
+  "shortName": "Тони Ем",
+  "logo": {
+    "light": "/dealer-brand/v2-fec9d8e77eafb4ab/logo-on-light.webp",
+    "dark": "/dealer-brand/v2-fec9d8e77eafb4ab/logo-on-dark.webp",
+    "icon": "/dealer-brand/v2-fec9d8e77eafb4ab/app-icon.png"
+  },
+  "defaultLocale": "bg",
+  "enabledLocales": [
+    "en",
+    "bg"
+  ],
+  "welcomeEnabled": true,
+  "country": "BG",
+  "currency": "EUR",
+  "city": "Варна",
+  "address": "бул. Янош Хуняди 95 ( до Пароцентралата), Варна, България",
+  "phoneDisplay": "0889515000",
+  "phoneE164": "+359889515000",
+  "email": "",
+  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=%D0%A2%D0%BE%D0%BD%D0%B8%20%D0%95%D0%BC%2C%20%D0%B1%D1%83%D0%BB.%20%D0%AF%D0%BD%D0%BE%D1%88%20%D0%A5%D1%83%D0%BD%D1%8F%D0%B4%D0%B8%2095%20(%20%D0%B4%D0%BE%20%D0%9F%D0%B0%D1%80%D0%BE%D1%86%D0%B5%D0%BD%D1%82%D1%80%D0%B0%D0%BB%D0%B0%D1%82%D0%B0)%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
+  "website": "https://tonyem4m.mobile.bg/",
+  "whatsappUrl": "",
+  "socialLinks": [
+    {
+      "label": "Facebook",
+      "url": ""
+    },
+    {
+      "label": "Instagram",
+      "url": ""
+    },
+    {
+      "label": "Mobile.bg",
+      "url": ""
+    },
+    {
+      "label": "Cars.bg",
+      "url": ""
+    }
+  ],
+  "referenceClaimsApproved": false,
+  "services": [],
+  "observedAt": "2026-10-11T11:47:29.567Z",
+  "inventoryNotice": "Датирана извадка от публични обяви, не складова система в реално време. Потвърдете цената, ДДС и наличността.",
+  "previewNotice": "Independent design preview. No purchase, reservation or message is submitted by this website."
+}

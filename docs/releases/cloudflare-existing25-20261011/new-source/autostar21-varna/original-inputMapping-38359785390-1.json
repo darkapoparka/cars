@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-input-mapping",
+  "dealer": "autostar21-varna",
+  "inputs": {
+    "facts": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/autostar21-varna/facts.json",
+      "sha256": "8a222ae662b1d76613068906c9e85b54786303cdc19ee7a9b24066931ee328cb"
+    },
+    "stock": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/autostar21-varna/stock.json",
+      "sha256": "995fd17d7008762576878ba289b049ff897f0ddb579e101202e12871cacf0d59"
+    },
+    "locale": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/autostar21-varna/locale.json",
+      "sha256": "e74ca60bf745a153ab504dc9a254cbe49c9840ef6cc49aeb37f515da0f4e0521"
+    },
+    "branding": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/autostar21-varna/branding.json",
+      "sha256": "06e2568bc5eead00ca942a91a1f0a8fd1bc9bb96a9402098dd6bba9d493ab86a"
+    }
+  },
+  "sources": [
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/autostar21-varna/identity-repository-corrected-additional100.json",
+      "sha256": "362b316bd0d36697a768aa635994fda04489f00982464ce5811c7ee736193791"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/autostar21-varna/facts.json",
+      "sha256": "8a222ae662b1d76613068906c9e85b54786303cdc19ee7a9b24066931ee328cb"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/autostar21-varna/stock.json",
+      "sha256": "995fd17d7008762576878ba289b049ff897f0ddb579e101202e12871cacf0d59"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/autostar21-varna/locale.json",
+      "sha256": "e74ca60bf745a153ab504dc9a254cbe49c9840ef6cc49aeb37f515da0f4e0521"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/autostar21-varna/branding.json",
+      "sha256": "06e2568bc5eead00ca942a91a1f0a8fd1bc9bb96a9402098dd6bba9d493ab86a"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/autostar21-varna/media/11778841437368042-1.webp",
+      "sha256": "8096c0ceb96fb9b8e5c2ae086dfe2b0bcafeaf751c09d096b027fd42d862de4b"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/autostar21-varna/media/11778841437368042-2.webp",
+      "sha256": "5b08d328d835c9262fa9c86d4aa8009dec678cb9c1867db48a6f96f93c842abf"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/autostar21-varna/copy-review-additional100.json",
+      "sha256": "89f1983f8715919ac5e09b92a0fefb656f317adc29a1a93b9c62f68018f7db91"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+[
+  {
+    "key": "inspection",
+    "source": "C:/Users/radev/.codex/generated_images/01a0f637-14fa-7292-8291-55b0b4f0e12f/exec-a8ec8ace-4f63-4c74-9853-f256c900345d.png",
+    "destination": "static/assets/images/template/desktop-service-inspection-v1.webp",
+    "sourceDimensions": [
+      1536,
+      1024
+    ],
+    "dimensions": [
+      800,
+      533
+    ],
+    "hasAlpha": true,
+    "bytes": 75490,
+    "sourceSha256": "81d0fb852837433061637638148de4d15c7300abf6c6e4e785d8f2f2b79bdf88",
+    "sha256": "d6fe47e57bbad215c45a7c99e7573e998016b5e8002d8d4d62fa97dad72ebd69"
+  },
+  {
+    "key": "import",
+    "source": "C:/Users/radev/.codex/generated_images/01a0f637-14fa-7292-8291-55b0b4f0e12f/exec-d344fdd5-c29b-4d16-b270-ec2e4789ac93.png",
+    "destination": "static/assets/images/template/desktop-service-import-v1.webp",
+    "sourceDimensions": [
+      1536,
+      1024
+    ],
+    "dimensions": [
+      800,
+      533
+    ],
+    "hasAlpha": true,
+    "bytes": 77408,
+    "sourceSha256": "d4dc208edefb460ff5d48821e3eef94859f3e28175f343bfce3ba20ccb5ecfd3",
+    "sha256": "b271ea7e067bc0ccef04957f0642723c5a3611459e9ae1ca1a07cb055772d95f"
+  },
+  {
+    "key": "leasing",
+    "source": "C:/Users/radev/.codex/generated_images/01a0f637-14fa-7292-8291-55b0b4f0e12f/exec-3b36ad65-d594-43f4-870a-166becd42837.png",
+    "destination": "static/assets/images/template/desktop-service-leasing-v1.webp",
+    "sourceDimensions": [
+      1536,
+      1024
+    ],
+    "dimensions": [
+      800,
+      533
+    ],
+    "hasAlpha": true,
+    "bytes": 65262,
+    "sourceSha256": "a7c7817c9130655ca7ba99fbaba9b47cdd4db2d354fa43f159831cb4a9c96681",
+    "sha256": "cfb494994137da1bf621a39f13c8236a412e0a99c11b31762ac557b229472bbb"
+  },
+  {
+    "key": "trade-in",
+    "source": "C:/Users/radev/.codex/generated_images/01a0f637-14fa-7292-8291-55b0b4f0e12f/exec-8835e612-f958-45ac-ba08-90632c16dad7.png",
+    "destination": "static/assets/images/template/desktop-service-trade-in-v1.webp",
+    "sourceDimensions": [
+      1536,
+      1024
+    ],
+    "dimensions": [
+      800,
+      533
+    ],
+    "hasAlpha": true,
+    "bytes": 70328,
+    "sourceSha256": "8cc6bede1c5eab5cd1c67c41265a1874d7c59e6f43d9175de45981a620b7cf20",
+    "sha256": "f1e550020133d3dcd6c6d61825b31b4b23676fbec242aad04157c7de2c75ad48"
+  }
+]

@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "dealer": "richicar-varna",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/app",
+    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
+    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+  },
+  "appDigest": "0120adc269063c49b9ffee1f6c938194f38658f7c8274b1f755a93c93fa0a55b",
+  "provenance": {
+    "schemaVersion": 1,
+    "dealer": "richicar-varna",
+    "profile": "auto-best/src/lib/data/dealer-profile.json",
+    "profileSha256": "fd31fd4133041b47b8b23a7f6d44f4fa973ebf5d79abc5bf12790795cbcfbb73",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "vehicles": 1,
+    "currency": "EUR",
+    "observedAt": "2026-10-11T11:49:52.277Z",
+    "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-light.png",
+        "output": "public/dealer-app/logo-light-e17a5d05a17962fcc7f1.png",
+        "sha256": "e17a5d05a17962fcc7f1095914a85edf1ff75b9a13c662fbb77b72c8eeecb562",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-dark.png",
+        "output": "public/dealer-app/logo-dark-cb020a8f43d15992d62c.png",
+        "sha256": "cb020a8f43d15992d62c02ee3e1f487e899b62da60a12231f5b3fbdddc0d8bd3",
+        "role": "logo-dark"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11738763051346766-1.webp",
+        "output": "public/dealer-app/vehicle-906c26ea07ccda6d40e4.webp",
+        "sha256": "906c26ea07ccda6d40e4ced2d1a036356696d8e1f235975f3b91c9b256c4fd52",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11738763051346766-2.webp",
+        "output": "public/dealer-app/vehicle-26bb669e33742c9bdedd.webp",
+        "sha256": "26bb669e33742c9bdeddac055847e1d5f3ab399bff1449372e66515311de95d1",
+        "role": "vehicle"
+      }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "seat-leon-2014-11738763051346766",
+        "sourceValue": 215000,
+        "sourceUnit": "km",
+        "canonicalKm": 215000
+      }
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

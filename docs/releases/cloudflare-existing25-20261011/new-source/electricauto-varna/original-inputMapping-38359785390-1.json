@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-input-mapping",
+  "dealer": "electricauto-varna",
+  "inputs": {
+    "facts": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/electricauto-varna/facts.json",
+      "sha256": "ffb3ba62a325d32341f67505bd960dbf885abbc64a95ca7407b2ed9b850dcb4f"
+    },
+    "stock": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/electricauto-varna/stock.json",
+      "sha256": "7dd4df82e35bb3189a6f96acd5f1fb9d9c978ae4ac735dbb4bba5037aba0293b"
+    },
+    "locale": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/electricauto-varna/locale.json",
+      "sha256": "33a97fbd691dedffa3c7fd4bb601f63a6e0dd72bbbe2368dfaac4ae3f3d6495a"
+    },
+    "branding": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/electricauto-varna/branding.json",
+      "sha256": "d196bcc7fdaf61a3473c7abbc0735e8c883f41c7e9907a0fbe9a77d53dbd5942"
+    }
+  },
+  "sources": [
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/electricauto-varna/identity-repository-corrected-additional100.json",
+      "sha256": "c2897aff548fe51ac043976d80ed135d081aebee853fa22e6cd9dc5645f373da"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/electricauto-varna/facts.json",
+      "sha256": "ffb3ba62a325d32341f67505bd960dbf885abbc64a95ca7407b2ed9b850dcb4f"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/electricauto-varna/stock.json",
+      "sha256": "7dd4df82e35bb3189a6f96acd5f1fb9d9c978ae4ac735dbb4bba5037aba0293b"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/electricauto-varna/locale.json",
+      "sha256": "33a97fbd691dedffa3c7fd4bb601f63a6e0dd72bbbe2368dfaac4ae3f3d6495a"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/electricauto-varna/branding.json",
+      "sha256": "d196bcc7fdaf61a3473c7abbc0735e8c883f41c7e9907a0fbe9a77d53dbd5942"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/electricauto-varna/media/11743226761008533-1.webp",
+      "sha256": "818222f0ef548903dcf343287a278f24e7fdf6d10725082c64e417fe5243fad1"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/electricauto-varna/media/11743226761008533-2.webp",
+      "sha256": "b5c36af170d70b5404a86c0372c40bf4807857dbb919cce043e32436e07ca3c5"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/electricauto-varna/copy-review-additional100.json",
+      "sha256": "897e03ea4c6b14932d827d6a1ad49f310adfcbc18c783d9dcc3e8b85c9332b09"
+    }
+  ]
+}

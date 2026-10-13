@@ -1,0 +1,2159 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-source-proposal",
+  "mode": "new-approved",
+  "dealer": "wildivaka-varna",
+  "repository": "darkapoparka/cars-wildivaka-varna",
+  "canonicalSourceRepository": "darkapoparka/cars",
+  "baseCommit": "a1a6bdbffc2bf8258c633d472ebdb3ada7b4f7c1",
+  "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+  "approvedLockSha256": "ecdfaf9599fbcbeadebc24de3b9aa1c7615a9a49e29d338e5e9a23427d405e26",
+  "sourceReleases": {
+    "auto-best": {
+      "repository": "darkapoparka/cars",
+      "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+      "path": "templates/auto-best",
+      "tree": "5fb7a2164775050a47c1183371622295dbf63725",
+      "digest": "dcbc59990928884006652677d3529020df3844029993895a71e5f6818ba7363c"
+    },
+    "modern": {
+      "repository": "darkapoparka/cars",
+      "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+      "path": "templates/modern",
+      "tree": "3974380670eb388bb16182f94ade33be6d87b1c1",
+      "digest": "ba263aac8f1863d133807d3e1bf3597d125cf315a7e0deba3f6e419b52434c25"
+    },
+    "import": {
+      "repository": "darkapoparka/cars",
+      "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+      "path": "templates/import",
+      "tree": "6afc6901e2f95967fb7c72e9f75525d4d6fbf086",
+      "digest": "f98a0934cdcc5adbda393c14c02eb2adc0175344ab2ac3f913afe4b0603366e5"
+    },
+    "app": {
+      "repository": "darkapoparka/cars",
+      "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+      "path": "templates/app",
+      "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
+      "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+    },
+    "mobile": {
+      "repository": "darkapoparka/cars",
+      "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+      "path": "templates/mobile",
+      "tree": "2b02829e157071e305bfb2dff10ef18e85c8a35e",
+      "digest": "4e858bd9dbd3ef5b52cd904c4ed97bbfdc0f4cfe02b5a3840580f38026b867a0"
+    },
+    "karento-best": {
+      "repository": "darkapoparka/cars",
+      "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+      "path": "templates/karento-best",
+      "tree": "5f6eec8efb2f9e99819f7f0c2f743d18fff7b134",
+      "digest": "83056967764a686f3737d74b86c5db51c1385a50184853f50ec4ade80c1dd44f"
+    }
+  },
+  "branchAbsence": {
+    "digest": "95826c684f5bf6df99d0c27fa3a2059b63b4f4f894aae93acc4b3d301281fc38",
+    "branches": 158,
+    "absence": "normalized-dealer-folder-absent-on-current-origin-branches",
+    "leaseDigest": "7489684ff24d4aef265ded7dc2cebdd8e62c84fa6e8f48c71cfbc3c37937d94e",
+    "mainCommit": "b6040ffc0aedd5858b5d47ece5f3f78eac699584",
+    "eventCommit": "a1a6bdbffc2bf8258c633d472ebdb3ada7b4f7c1"
+  },
+  "currentInputLease": {
+    "eventCommit": "a1a6bdbffc2bf8258c633d472ebdb3ada7b4f7c1",
+    "mainCommit": "b6040ffc0aedd5858b5d47ece5f3f78eac699584",
+    "paths": 19,
+    "inputDigest": "5fb145f7ebb52290069727b328ec41e38cec00d137f597f1e24337810457e61f",
+    "registrySha256": "90739e3047b4d83d7aadf2d1d32e4ffe27f1252972b3b1668979032aa3e2e334",
+    "clientIndexSha256": "99162a457b8287642d004b511cbb49a967b166d68d47f4d356a88d2e273f9bf0",
+    "dealer": "wildivaka-varna",
+    "absence": "current-registry-and-index-identity-absent"
+  },
+  "applications": 6,
+  "write": true,
+  "published": false,
+  "hostedApproval": false,
+  "state": "personalized-source-proposal-needs-build-and-hosted-review",
+  "sourceQualification": {
+    "candidateLock": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/absent-retained-qualification-lock.json",
+      "sha256": "c28d29acdf39709d38737a972eeb2a1d000cfb1cd96de587c38effd764386ac1"
+    },
+    "qualification": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/wildivaka-varna/qualification-context-additional100.json",
+      "sha256": "bdad4a16d7b2983aca95419f1b665d3e22455878457d7276e384b9cf5608c3cc"
+    }
+  },
+  "qualificationOnly": true,
+  "nativeApproval": false,
+  "globalReleaseApproval": false,
+  "newerDevelopment": [
+    {
+      "key": "auto-best",
+      "developmentHead": "b6040ffc0aedd5858b5d47ece5f3f78eac699584",
+      "developmentTree": "334e309032baa560863c92cd2198d66177757093"
+    },
+    {
+      "key": "modern",
+      "developmentHead": "b6040ffc0aedd5858b5d47ece5f3f78eac699584",
+      "developmentTree": "956bf597fe5c03543e274d2921f3af41e5124404"
+    }
+  ],
+  "finalBranchAbsence": {
+    "digest": "2b1215943e9de63380daa435dbc470a4590182da9cee968bdecb3a8d09a9467d",
+    "branches": 160,
+    "absence": "normalized-dealer-folder-absent-on-current-origin-branches",
+    "leaseDigest": "da881c606c5bd7d4ce4465e98f39efcf4ff202ebd756132e6d774273383a199a",
+    "mainCommit": "33bf49541a30ad02950eeb4b61737833806fe8bc",
+    "eventCommit": "a1a6bdbffc2bf8258c633d472ebdb3ada7b4f7c1"
+  },
+  "finalInputLease": {
+    "eventCommit": "a1a6bdbffc2bf8258c633d472ebdb3ada7b4f7c1",
+    "mainCommit": "33bf49541a30ad02950eeb4b61737833806fe8bc",
+    "paths": 19,
+    "inputDigest": "5fb145f7ebb52290069727b328ec41e38cec00d137f597f1e24337810457e61f",
+    "registrySha256": "23a43da60d9631bb59446fc25f8e40cec8e0c683ff3d88c572d685869cc59789",
+    "clientIndexSha256": "c25264c2c51751c723769d6c2e6a866b9bb43fe8512b0798b262b70012f5291f",
+    "dealer": "wildivaka-varna",
+    "absence": "current-registry-and-index-identity-absent"
+  },
+  "baseRootTree": "77238b1ffafcc09731e9e66792c0257ce65c0e5a",
+  "preparedTree": "54ca2be0e9b43b30c9dfb7e327d72dacb9d7a2d1",
+  "request": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/parallel-batch3-remaining23-request.json",
+    "sha256": "dca5e42beb2e14ac556d1fb116d8d5097f07e399225e291969698924ca8f6a1b"
+  },
+  "inputs": {
+    "facts": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/wildivaka-varna/facts.json",
+      "sha256": "3142cfe035b6eb8b65b9d7b0090854adf3dd83ac0b6a74aeb0eddfcd43202504"
+    },
+    "stock": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/wildivaka-varna/stock.json",
+      "sha256": "ddccb72b5c798d9e3cb8cc29ffee26e7c3c2270305c689963b9ae69763d4eda8"
+    },
+    "locale": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/wildivaka-varna/locale.json",
+      "sha256": "1259c7c5ca04c1ff5477a2ed1ff12c5e0c46f4a6ebed99ab1749cd7751a73b65"
+    },
+    "branding": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/wildivaka-varna/branding.json",
+      "sha256": "b5f0f6ac91996879fd37096391b4b7da74dbf9ff849cff7c3930af951b2ed0a0"
+    }
+  },
+  "identityReview": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/wildivaka-varna/identity-repository-corrected-additional100.json",
+    "sha256": "057ef7e20e389f2b6339f2266e84115140f9c3fd2e8ea799dce28a8bb270f697"
+  },
+  "creationReceiptSha256": "fef1267363d34902e30fa78bb899f3c4eefc5675af52c1a5839b353fb65cc984",
+  "sourcePaths": 12864,
+  "reusedGitBlobs": 11493,
+  "uniqueBlobBytes": 26770918,
+  "patchSha256": "8c4d4840c4ea4eeda0acad6bfd64629d16b4b98556bb549bd877219dac409968",
+  "branding": {
+    "schemaVersion": 1,
+    "surfaceBindingsVersion": 1,
+    "dealer": "wildivaka-varna",
+    "policy": "template-default",
+    "packId": "6a32df4f42d9fcd5",
+    "publicBase": "/dealer-brand/v2-6a32df4f42d9fcd5",
+    "creationMethod": "image-generation-reviewed-surface-variants",
+    "generation": {
+      "tool": "image_gen",
+      "id": "exec-9902d485-7bd8-4fba-b25a-7bbd54474486",
+      "modelVersion": null,
+      "sourceSha256": "7282af24e2c48cd834c221aad4d488e20dc6de6d1469189e945ece79b77c89b6"
+    },
+    "approval": "independent-proposal-not-dealer-approved",
+    "nativeMaster": {
+      "width": 1496,
+      "height": 391,
+      "alphaSha256": "330dc92a651787b7ce0638bf6a447eb30479816348bf22cb71399081e0ed22ef"
+    },
+    "consumerReferences": [
+      {
+        "path": "app/lib/dealer.json",
+        "urls": [
+          "/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-light.webp",
+          "/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-dark.webp",
+          "/dealer-brand/v2-6a32df4f42d9fcd5/app-icon.png"
+        ]
+      },
+      {
+        "path": "auto-best/src/lib/config/brand.ts",
+        "urls": [
+          "/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-light.webp",
+          "/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-dark.webp"
+        ]
+      },
+      {
+        "path": "import/docs/desktop-hero-content-2026-10-02/charcoal-2026-10-03/after-matrix.json",
+        "urls": [
+          "/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-light.webp"
+        ]
+      },
+      {
+        "path": "import/docs/desktop-hero-content-2026-10-02/charcoal-2026-10-03/before-matrix.json",
+        "urls": [
+          "/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-light.webp"
+        ]
+      },
+      {
+        "path": "import/docs/desktop-home-entry-2026-10-03/after-matrix.json",
+        "urls": [
+          "/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-light.webp"
+        ]
+      },
+      {
+        "path": "import/docs/desktop-home-entry-2026-10-03/before-matrix.json",
+        "urls": [
+          "/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-light.webp"
+        ]
+      },
+      {
+        "path": "import/src/lib/components/home/HomeFiveFeaturedVehicles.svelte",
+        "urls": [
+          "/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-light.webp"
+        ]
+      },
+      {
+        "path": "import/src/lib/config/dealer.ts",
+        "urls": [
+          "/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-light.webp",
+          "/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-dark.webp"
+        ]
+      },
+      {
+        "path": "import/src/lib/content/sell-your-car.ts",
+        "urls": [
+          "/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-light.webp"
+        ]
+      },
+      {
+        "path": "import/src/lib/data/dealer-profile.json",
+        "urls": [
+          "/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-light.webp",
+          "/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-dark.webp"
+        ]
+      },
+      {
+        "path": "import/src/lib/server/auxero-listing-data.ts",
+        "urls": [
+          "/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-light.webp"
+        ]
+      },
+      {
+        "path": "import/src/lib/server/inventory-options.ts",
+        "urls": [
+          "/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-light.webp"
+        ]
+      },
+      {
+        "path": "import/src/routes/offer/+page.svelte",
+        "urls": [
+          "/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-light.webp"
+        ]
+      },
+      {
+        "path": "karento-best/src/lib/content.ts",
+        "urls": [
+          "/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-light.webp",
+          "/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-dark.webp"
+        ]
+      },
+      {
+        "path": "karento-best/src/lib/data/dealer-detail.ts",
+        "urls": [
+          "/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-light.webp"
+        ]
+      },
+      {
+        "path": "karento-best/src/lib/data/vehicle-detail.ts",
+        "urls": [
+          "/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-light.webp"
+        ]
+      },
+      {
+        "path": "mobile/src/lib/dealers.ts",
+        "urls": [
+          "/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-light.webp"
+        ]
+      },
+      {
+        "path": "mobile/src/lib/showroom-config.ts",
+        "urls": [
+          "/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-light.webp"
+        ]
+      },
+      {
+        "path": "modern/packages/internationalization/paths.test.ts",
+        "urls": [
+          "/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-light.webp"
+        ]
+      },
+      {
+        "path": "modern/packages/internationalization/proxy.test.ts",
+        "urls": [
+          "/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-light.webp"
+        ]
+      },
+      {
+        "path": "modern/packages/marketplace-domain/testing/dealer-profile.json",
+        "urls": [
+          "/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-light.webp",
+          "/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-dark.webp"
+        ]
+      },
+      {
+        "path": "modern/packages/marketplace-domain/testing/mock-data.ts",
+        "urls": [
+          "/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-light.webp"
+        ]
+      },
+      {
+        "path": "modern/packages/marketplace/lead-site.ts",
+        "urls": [
+          "/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-light.webp",
+          "/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-dark.webp"
+        ]
+      }
+    ],
+    "reviewedSurfaceVariants": {
+      "schemaVersion": 1,
+      "reviewed": true,
+      "reviewedAt": "2026-10-11T13:01:13.451Z",
+      "surfaces": {
+        "onLight": {
+          "schemaVersion": 1,
+          "assetPath": "branding/reviewed-surfaces/on-light.png",
+          "sha256": "1e11a39a387b141c0a8c0c631034e81f4e4520f61a91e9562a86e9685dfa4dab",
+          "generation": {
+            "tool": "image_gen",
+            "id": "exec-9902d485-7bd8-4fba-b25a-7bbd54474486",
+            "modelVersion": null
+          },
+          "sourceReference": "docs/releases/cloudflare-existing25-20261011/new-source/wildivaka-varna/source/generation-receipt.json#sha256=7b485518db3f0885bb8ce1e575d30ca0e93b199600491c90f17c5467b5c838b5; reviewed onLight PNG from exact accepted final logo manifest b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+          "width": 1496,
+          "height": 391,
+          "alphaSha256": "330dc92a651787b7ce0638bf6a447eb30479816348bf22cb71399081e0ed22ef"
+        },
+        "onDark": {
+          "schemaVersion": 1,
+          "assetPath": "branding/reviewed-surfaces/on-dark.png",
+          "sha256": "7ad9d6c55c29c9c8533e623752ad9bf06a66e3235f9b94c5597fbdf9073db5d1",
+          "generation": {
+            "tool": "image_gen",
+            "id": "exec-9902d485-7bd8-4fba-b25a-7bbd54474486",
+            "modelVersion": null
+          },
+          "sourceReference": "docs/releases/cloudflare-existing25-20261011/new-source/wildivaka-varna/source/generation-receipt.json#sha256=7b485518db3f0885bb8ce1e575d30ca0e93b199600491c90f17c5467b5c838b5; reviewed onDark PNG from exact accepted final logo manifest b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+          "width": 1496,
+          "height": 391,
+          "alphaSha256": "330dc92a651787b7ce0638bf6a447eb30479816348bf22cb71399081e0ed22ef"
+        },
+        "onAccent": {
+          "schemaVersion": 1,
+          "assetPath": "branding/reviewed-surfaces/on-accent.png",
+          "sha256": "7ad9d6c55c29c9c8533e623752ad9bf06a66e3235f9b94c5597fbdf9073db5d1",
+          "generation": {
+            "tool": "image_gen",
+            "id": "exec-9902d485-7bd8-4fba-b25a-7bbd54474486",
+            "modelVersion": null
+          },
+          "sourceReference": "docs/releases/cloudflare-existing25-20261011/new-source/wildivaka-varna/source/generation-receipt.json#sha256=7b485518db3f0885bb8ce1e575d30ca0e93b199600491c90f17c5467b5c838b5; reviewed onAccent PNG from exact accepted final logo manifest b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+          "width": 1496,
+          "height": 391,
+          "alphaSha256": "330dc92a651787b7ce0638bf6a447eb30479816348bf22cb71399081e0ed22ef"
+        }
+      }
+    },
+    "packInputs": [
+      {
+        "role": "master",
+        "path": "branding/generated-master.png",
+        "sha256": "1e11a39a387b141c0a8c0c631034e81f4e4520f61a91e9562a86e9685dfa4dab"
+      },
+      {
+        "role": "mark",
+        "path": "branding/generated-mark.png",
+        "sha256": "1e11a39a387b141c0a8c0c631034e81f4e4520f61a91e9562a86e9685dfa4dab"
+      },
+      {
+        "role": "onLight",
+        "path": "branding/reviewed-surfaces/on-light.png",
+        "sha256": "1e11a39a387b141c0a8c0c631034e81f4e4520f61a91e9562a86e9685dfa4dab"
+      },
+      {
+        "role": "onDark",
+        "path": "branding/reviewed-surfaces/on-dark.png",
+        "sha256": "7ad9d6c55c29c9c8533e623752ad9bf06a66e3235f9b94c5597fbdf9073db5d1"
+      },
+      {
+        "role": "onAccent",
+        "path": "branding/reviewed-surfaces/on-accent.png",
+        "sha256": "7ad9d6c55c29c9c8533e623752ad9bf06a66e3235f9b94c5597fbdf9073db5d1"
+      }
+    ],
+    "markSource": "full-reviewed-surface-logo-contained",
+    "monochromePairFromOneMaster": false,
+    "palette": {
+      "policy": "template-default",
+      "changes": [],
+      "checks": [
+        {
+          "path": "modern/packages/marketplace/lead-site.ts",
+          "field": "accent",
+          "value": "#30343b",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "modern/packages/marketplace/lead-site.ts",
+          "field": "desktopAccent",
+          "value": "#4b5057",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "import/src/lib/config/dealer.ts",
+          "field": "accent",
+          "value": "#17191c",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "import/src/lib/config/dealer.ts",
+          "field": "accentHover",
+          "value": "#34383d",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "import/src/lib/config/dealer.ts",
+          "field": "accentContrast",
+          "value": "#ffffff",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "auto-best/src/app.css",
+          "colorSequenceSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "auto-best/src/lib/components/company/service-entry.css",
+          "colorSequenceSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "auto-best/src/lib/styles/base.css",
+          "colorSequenceSha256": "f793008d18141ce1022c8eed84f15d8e865c1293766ffbe793e832467a185769",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "auto-best/src/lib/styles/composition.css",
+          "colorSequenceSha256": "aa7979163e6f713155383633b77bc2283f9e876e2f632c812ed361de6ff1e90a",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "auto-best/src/lib/styles/tokens.css",
+          "colorSequenceSha256": "58e4cd83a5c1e8361e8b4ee4a29cce9950d242d35d36f4b13929b1c1a484a673",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "auto-best/src/routes/about-us/about.css",
+          "colorSequenceSha256": "6aabc832ed8c9bca9c975f8149514b6ae34a13e008ba0063bf90fd1c1605760a",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "auto-best/src/routes/blog/blog.css",
+          "colorSequenceSha256": "c09646e25c4f818930112bd73dde84850e0d59b6365e7c3b0a1d9f869fa1dbe0",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "auto-best/src/routes/blog-detail/[id]/detail.css",
+          "colorSequenceSha256": "2095bbb096015bcbb8918d54ef9eb15572d7808ef832a1bd2f15bad6f932f548",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "auto-best/src/routes/cars/listing.css",
+          "colorSequenceSha256": "5fbd8faf27cfbea5473c52adb66b2b8308e8511dec9fc9868982205267240771",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "auto-best/src/routes/contact/contact.css",
+          "colorSequenceSha256": "54a34b2db6fd96d1c15ce43d590320a0f7493178b0e92d18ca98eb9fe2cd1061",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "auto-best/src/routes/listing-detail-v1/[id]/detail.css",
+          "colorSequenceSha256": "3cdedce011162177a7c82ef6552aa0f7f5409972adfe985a85835d0efe03c631",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "modern/apps/app/app/styles.css",
+          "colorSequenceSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "modern/apps/web/app/[locale]/components/boxcar-desktop-pages.module.css",
+          "colorSequenceSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "modern/apps/web/app/[locale]/components/dealer-desktop-footer.module.css",
+          "colorSequenceSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "modern/apps/web/app/[locale]/components/public-desktop-layout.module.css",
+          "colorSequenceSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "modern/apps/web/app/[locale]/components/public-editorial-article.module.css",
+          "colorSequenceSha256": "f54d4702686cac0de90573ce2b114c67dec84995270d11e9ae2dd5f5b9a33c4b",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "modern/apps/web/app/[locale]/desktop.css",
+          "colorSequenceSha256": "7085217488d7d470393956e5e9b81c6f8f379261f5420ef30c3f44de84deccc8",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "modern/apps/web/app/[locale]/imports/components/external-import-listings.module.css",
+          "colorSequenceSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "modern/apps/web/app/[locale]/lease/lease-desktop-controls.module.css",
+          "colorSequenceSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "modern/apps/web/app/[locale]/lease/lease-desktop-vehicle-picker.module.css",
+          "colorSequenceSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "modern/apps/web/app/[locale]/lease/lease-page.module.css",
+          "colorSequenceSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "modern/apps/web/app/[locale]/lease/lease-selected-vehicle.module.css",
+          "colorSequenceSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "modern/apps/web/app/[locale]/mobile-final-polish.css",
+          "colorSequenceSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "modern/apps/web/app/[locale]/services/services.module.css",
+          "colorSequenceSha256": "21367c9b1f2c78969badb72addce8b60def37a44084eb85955e70aa525d1e812",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "modern/apps/web/app/[locale]/styles.css",
+          "colorSequenceSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "modern/packages/analytics/provider.module.css",
+          "colorSequenceSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "modern/packages/design-system/styles/desktop-tokens.css",
+          "colorSequenceSha256": "5346d8a9a74c4ba2dd487a82f49508c17a33ddb364b1b52b0f8f5ae751fb6842",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "modern/packages/design-system/styles/globals.css",
+          "colorSequenceSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "modern/packages/design-system/styles/tokens.css",
+          "colorSequenceSha256": "e5d8675a6e33c3efc0cbaffc0e954b118ab5301f606f39bd0ad22b220de5aa83",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "modern/packages/marketplace-ui/components/dealer-desktop-discovery.module.css",
+          "colorSequenceSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "modern/packages/marketplace-ui/components/dealer-desktop-header.module.css",
+          "colorSequenceSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "modern/packages/marketplace-ui/components/dealer-desktop-hero.module.css",
+          "colorSequenceSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "modern/packages/marketplace-ui/components/dealer-desktop-logo.module.css",
+          "colorSequenceSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "modern/packages/marketplace-ui/components/dealer-desktop-toolbar.module.css",
+          "colorSequenceSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "modern/packages/marketplace-ui/components/dealer-hero-search.module.css",
+          "colorSequenceSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "modern/packages/marketplace-ui/components/dealer-inventory-search.module.css",
+          "colorSequenceSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "modern/packages/marketplace-ui/components/dealer-inventory.module.css",
+          "colorSequenceSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "modern/packages/marketplace-ui/components/desktop-action-panel.module.css",
+          "colorSequenceSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "modern/packages/marketplace-ui/components/desktop-banner-cars.module.css",
+          "colorSequenceSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "modern/packages/marketplace-ui/components/desktop-filter-controls.module.css",
+          "colorSequenceSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "modern/packages/marketplace-ui/components/desktop-full-filter-dialog.module.css",
+          "colorSequenceSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "modern/packages/marketplace-ui/components/desktop-overlay.module.css",
+          "colorSequenceSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "modern/packages/marketplace-ui/components/desktop-quick-filters.module.css",
+          "colorSequenceSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "modern/packages/marketplace-ui/components/desktop-saved-cars.module.css",
+          "colorSequenceSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "modern/packages/marketplace-ui/components/listing-detail-desktop.module.css",
+          "colorSequenceSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "modern/packages/marketplace-ui/components/marketplace-model-picker.module.css",
+          "colorSequenceSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "modern/packages/marketplace-ui/components/related-listing-card.module.css",
+          "colorSequenceSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "modern/packages/marketplace-ui/components/vehicle-card-desktop.module.css",
+          "colorSequenceSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "modern/packages/notifications/styles.css",
+          "colorSequenceSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "import/.template-ref/app.css",
+          "colorSequenceSha256": "f21f50a9156066890a3cc40db2b7b00c113a44964407355c27bad2aae66082d8",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "import/src/lib/components/account/dashlite-dashboard.css",
+          "colorSequenceSha256": "0a0c9fb7fe1c3d364917e01c43f5ba896c34a22616f55c738dffc2d4444ebafe",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "import/src/lib/styles/app.css",
+          "colorSequenceSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "import/src/lib/styles/daynight.css",
+          "colorSequenceSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "import/src/lib/styles/daynight.tailwind-entry.css",
+          "colorSequenceSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "import/src/lib/styles/daynight.tailwind.css",
+          "colorSequenceSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "import/src/lib/styles/desktop-filters.css",
+          "colorSequenceSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "import/src/lib/styles/fonts.css",
+          "colorSequenceSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "import/src/lib/styles/forms.css",
+          "colorSequenceSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "import/src/lib/styles/mobile-controls.css",
+          "colorSequenceSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "import/src/lib/styles/tokens.css",
+          "colorSequenceSha256": "289b308088070e841ab644fd7694999aacfdd9856bceec969b1c43d7ff1c7460",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "import/src/lib/styles/ui-theme.css",
+          "colorSequenceSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "import/src/routes/admin/shadcn.css",
+          "colorSequenceSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "import/src/routes/auxero-guards.css",
+          "colorSequenceSha256": "4d492a4fa85d2af4b616869f78c3c894f865b373739efd1f6290d1bbd3d2cc7e",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "app/app/app.css",
+          "colorSequenceSha256": "d0d4a54510aad45b11621862073833496919b2fc6e969a98f5ba71076d69358e",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "app/app/campaign-theme.stylex.ts",
+          "colorSequenceSha256": "fbfbec12ab67dca1ae445d5d09c84fd6e4c772d06919d9aff9bdb29b6bb228b2",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "app/app/tokens.stylex.ts",
+          "colorSequenceSha256": "61d0626e3edafbca2fe366198e8c2fbaae18927f5b449feac18ea5fa3b367b05",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "app/app/typography.stylex.ts",
+          "colorSequenceSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "app/components/action-button.stylex.ts",
+          "colorSequenceSha256": "329f275544b6ab67a39a87ebfafbd4b66c626f35c638d501d53083fbb47a8bd9",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "app/components/desktop-hero.stylex.ts",
+          "colorSequenceSha256": "5d35352642cfa4e37dd4bc823015258d62346a8a97dd9777c90154d35ea8b2a6",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "app/components/dock.stylex.ts",
+          "colorSequenceSha256": "0e038699d7d3615d342a7cb562e89ee9c85e290b720b102ff7bd773d6b3e6541",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "app/components/filters/filter-pane.stylex.ts",
+          "colorSequenceSha256": "a2835bbc7b8ed001dc7404ba7dbbb03947cb86b085ef26ebd45cde33ea9c0844",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "app/components/pill.stylex.ts",
+          "colorSequenceSha256": "cbab891c1f2e947be436439b9517ca959481fd91ff4804d60a8ddc4ef88ebc9d",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "app/components/search-field.stylex.ts",
+          "colorSequenceSha256": "d12b081f81b372e4ad61b5fe3cb283601f38959cdd25c07321da71a085997a51",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "mobile/src/app/globals.css",
+          "colorSequenceSha256": "5dbad926e0eaa5bb8921e2afbb965580f40bd8836094ea1b24196647c49aa307",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "mobile/src/components/desktop-model-options.stylex.ts",
+          "colorSequenceSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "mobile/src/components/make-picker.stylex.ts",
+          "colorSequenceSha256": "b04f5d49f7f9cf841b403bc7bf4974bc3d774bdffb79ca092839328ffd625acc",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "mobile/src/components/showroom-desktop-controls.stylex.ts",
+          "colorSequenceSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "mobile/src/components/showroom-desktop-filters.stylex.ts",
+          "colorSequenceSha256": "0c4f10cf57bb090be3213fef39839e8fa7d086aff79eb824cd29aeaa0b5df413",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "mobile/src/components/showroom-desktop-make-model.stylex.ts",
+          "colorSequenceSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "mobile/src/components/showroom-filter-sheet.stylex.ts",
+          "colorSequenceSha256": "8027fa691f9910d8c3ba3467a2593b15be0133bbf16b5b947fb15498a2550ea1",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "mobile/src/components/showroom-hero.stylex.ts",
+          "colorSequenceSha256": "8b35f9fb56b0b7475ae02c634b5a90a9d71b0a868463f565b6084e04a3946d54",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "mobile/src/components/showroom-model-options.stylex.ts",
+          "colorSequenceSha256": "5d35352642cfa4e37dd4bc823015258d62346a8a97dd9777c90154d35ea8b2a6",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "mobile/src/components/showroom-pages.stylex.ts",
+          "colorSequenceSha256": "0025de54e514ddfb6f2396029985f390eb925b3c584f69adbd990325de11aebf",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "mobile/src/components/showroom-service-detail.stylex.ts",
+          "colorSequenceSha256": "a6a722d0f9dd5e3b471113a6cde83cd784b0c7f0159beb208d8bbb226346ed0e",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "mobile/src/components/vehicle-detail-desktop.stylex.ts",
+          "colorSequenceSha256": "68be284b65ee517efbcecb6e773cd89f57ff03d222cd3967ccca7e730b45eff3",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "mobile/src/styles/control-tokens.stylex.ts",
+          "colorSequenceSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "mobile/src/styles/controls.stylex.ts",
+          "colorSequenceSha256": "1dfc15ec4dee57d36067e8fd8c3ba3c00d048c0c12e40674945370092d800164",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "mobile/src/styles/showroom-desktop-tokens.stylex.ts",
+          "colorSequenceSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "mobile/src/styles/tokens.stylex.ts",
+          "colorSequenceSha256": "1156b7344d5344352fb9efaa6df6a63e77b43999188136e6c5eadb634c829aa1",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "karento-best/provenance/frozen-best/src/lib/server/dealer-site.css",
+          "colorSequenceSha256": "1cdd6f969c3019dcff9588de70427479449278be0250abe98bc52d8bb0f873a2",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "karento-best/src/lib/styles/desktop-geometry.css",
+          "colorSequenceSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "karento-best/src/lib/styles/desktop-heroes.css",
+          "colorSequenceSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "karento-best/src/lib/styles/desktop-pages.css",
+          "colorSequenceSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "karento-best/src/lib/styles/desktop-typography.css",
+          "colorSequenceSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        },
+        {
+          "path": "karento-best/src/lib/styles/home-section-headings.css",
+          "colorSequenceSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+        }
+      ]
+    },
+    "assets": [
+      {
+        "key": "auto-best",
+        "path": "auto-best/static/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-light.png",
+        "sha256": "1e11a39a387b141c0a8c0c631034e81f4e4520f61a91e9562a86e9685dfa4dab"
+      },
+      {
+        "key": "auto-best",
+        "path": "auto-best/static/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-light.webp",
+        "sha256": "a620e73e9418dee5a8b859bda1049663bec9ab3da53f49c3bdec0d03ec844791"
+      },
+      {
+        "key": "auto-best",
+        "path": "auto-best/static/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-dark.png",
+        "sha256": "7ad9d6c55c29c9c8533e623752ad9bf06a66e3235f9b94c5597fbdf9073db5d1"
+      },
+      {
+        "key": "auto-best",
+        "path": "auto-best/static/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-dark.webp",
+        "sha256": "2c7f321b84f0dda2623a2ca93b2989dc5ccc174ea5f92be7027fda232a92eac4"
+      },
+      {
+        "key": "auto-best",
+        "path": "auto-best/static/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-accent.webp",
+        "sha256": "2c7f321b84f0dda2623a2ca93b2989dc5ccc174ea5f92be7027fda232a92eac4"
+      },
+      {
+        "key": "auto-best",
+        "path": "auto-best/static/dealer-brand/v2-6a32df4f42d9fcd5/mark-on-light.webp",
+        "sha256": "44ab483d6643421fc807d61c6ac45ff4a319d89546ce5657b1945df69c96fb88"
+      },
+      {
+        "key": "auto-best",
+        "path": "auto-best/static/dealer-brand/v2-6a32df4f42d9fcd5/mark-on-dark.webp",
+        "sha256": "54cd9c9626f5369a75208214023916664c40c9f01dc210f9b4255da47dfa174b"
+      },
+      {
+        "key": "auto-best",
+        "path": "auto-best/static/dealer-brand/v2-6a32df4f42d9fcd5/app-icon.png",
+        "sha256": "6601fe1d10a7589b77d82d8634ac5ad1349b66a8d915fe4d67efba17d794b8ff"
+      },
+      {
+        "key": "auto-best",
+        "path": "auto-best/static/dealer-brand/v2-6a32df4f42d9fcd5/apple-touch-icon.png",
+        "sha256": "631987cf2706198375c75fd7e1c2d55c7d223fee662b650fb22b493a590ed2b7"
+      },
+      {
+        "key": "auto-best",
+        "path": "auto-best/static/dealer-brand/v2-6a32df4f42d9fcd5/favicon.ico",
+        "sha256": "38b951d200202c8ca2645ba884a40cd34556aa97a7a64ffbbcc75a75b2bd24dc"
+      },
+      {
+        "key": "modern",
+        "path": "modern/apps/web/public/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-light.png",
+        "sha256": "1e11a39a387b141c0a8c0c631034e81f4e4520f61a91e9562a86e9685dfa4dab"
+      },
+      {
+        "key": "modern",
+        "path": "modern/apps/web/public/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-light.webp",
+        "sha256": "a620e73e9418dee5a8b859bda1049663bec9ab3da53f49c3bdec0d03ec844791"
+      },
+      {
+        "key": "modern",
+        "path": "modern/apps/web/public/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-dark.png",
+        "sha256": "7ad9d6c55c29c9c8533e623752ad9bf06a66e3235f9b94c5597fbdf9073db5d1"
+      },
+      {
+        "key": "modern",
+        "path": "modern/apps/web/public/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-dark.webp",
+        "sha256": "2c7f321b84f0dda2623a2ca93b2989dc5ccc174ea5f92be7027fda232a92eac4"
+      },
+      {
+        "key": "modern",
+        "path": "modern/apps/web/public/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-accent.webp",
+        "sha256": "2c7f321b84f0dda2623a2ca93b2989dc5ccc174ea5f92be7027fda232a92eac4"
+      },
+      {
+        "key": "modern",
+        "path": "modern/apps/web/public/dealer-brand/v2-6a32df4f42d9fcd5/mark-on-light.webp",
+        "sha256": "44ab483d6643421fc807d61c6ac45ff4a319d89546ce5657b1945df69c96fb88"
+      },
+      {
+        "key": "modern",
+        "path": "modern/apps/web/public/dealer-brand/v2-6a32df4f42d9fcd5/mark-on-dark.webp",
+        "sha256": "54cd9c9626f5369a75208214023916664c40c9f01dc210f9b4255da47dfa174b"
+      },
+      {
+        "key": "modern",
+        "path": "modern/apps/web/public/dealer-brand/v2-6a32df4f42d9fcd5/app-icon.png",
+        "sha256": "6601fe1d10a7589b77d82d8634ac5ad1349b66a8d915fe4d67efba17d794b8ff"
+      },
+      {
+        "key": "modern",
+        "path": "modern/apps/web/public/dealer-brand/v2-6a32df4f42d9fcd5/apple-touch-icon.png",
+        "sha256": "631987cf2706198375c75fd7e1c2d55c7d223fee662b650fb22b493a590ed2b7"
+      },
+      {
+        "key": "modern",
+        "path": "modern/apps/web/public/dealer-brand/v2-6a32df4f42d9fcd5/favicon.ico",
+        "sha256": "38b951d200202c8ca2645ba884a40cd34556aa97a7a64ffbbcc75a75b2bd24dc"
+      },
+      {
+        "key": "import",
+        "path": "import/static/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-light.png",
+        "sha256": "1e11a39a387b141c0a8c0c631034e81f4e4520f61a91e9562a86e9685dfa4dab"
+      },
+      {
+        "key": "import",
+        "path": "import/static/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-light.webp",
+        "sha256": "a620e73e9418dee5a8b859bda1049663bec9ab3da53f49c3bdec0d03ec844791"
+      },
+      {
+        "key": "import",
+        "path": "import/static/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-dark.png",
+        "sha256": "7ad9d6c55c29c9c8533e623752ad9bf06a66e3235f9b94c5597fbdf9073db5d1"
+      },
+      {
+        "key": "import",
+        "path": "import/static/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-dark.webp",
+        "sha256": "2c7f321b84f0dda2623a2ca93b2989dc5ccc174ea5f92be7027fda232a92eac4"
+      },
+      {
+        "key": "import",
+        "path": "import/static/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-accent.webp",
+        "sha256": "2c7f321b84f0dda2623a2ca93b2989dc5ccc174ea5f92be7027fda232a92eac4"
+      },
+      {
+        "key": "import",
+        "path": "import/static/dealer-brand/v2-6a32df4f42d9fcd5/mark-on-light.webp",
+        "sha256": "44ab483d6643421fc807d61c6ac45ff4a319d89546ce5657b1945df69c96fb88"
+      },
+      {
+        "key": "import",
+        "path": "import/static/dealer-brand/v2-6a32df4f42d9fcd5/mark-on-dark.webp",
+        "sha256": "54cd9c9626f5369a75208214023916664c40c9f01dc210f9b4255da47dfa174b"
+      },
+      {
+        "key": "import",
+        "path": "import/static/dealer-brand/v2-6a32df4f42d9fcd5/app-icon.png",
+        "sha256": "6601fe1d10a7589b77d82d8634ac5ad1349b66a8d915fe4d67efba17d794b8ff"
+      },
+      {
+        "key": "import",
+        "path": "import/static/dealer-brand/v2-6a32df4f42d9fcd5/apple-touch-icon.png",
+        "sha256": "631987cf2706198375c75fd7e1c2d55c7d223fee662b650fb22b493a590ed2b7"
+      },
+      {
+        "key": "import",
+        "path": "import/static/dealer-brand/v2-6a32df4f42d9fcd5/favicon.ico",
+        "sha256": "38b951d200202c8ca2645ba884a40cd34556aa97a7a64ffbbcc75a75b2bd24dc"
+      },
+      {
+        "key": "app",
+        "path": "app/public/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-light.png",
+        "sha256": "1e11a39a387b141c0a8c0c631034e81f4e4520f61a91e9562a86e9685dfa4dab"
+      },
+      {
+        "key": "app",
+        "path": "app/public/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-light.webp",
+        "sha256": "a620e73e9418dee5a8b859bda1049663bec9ab3da53f49c3bdec0d03ec844791"
+      },
+      {
+        "key": "app",
+        "path": "app/public/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-dark.png",
+        "sha256": "7ad9d6c55c29c9c8533e623752ad9bf06a66e3235f9b94c5597fbdf9073db5d1"
+      },
+      {
+        "key": "app",
+        "path": "app/public/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-dark.webp",
+        "sha256": "2c7f321b84f0dda2623a2ca93b2989dc5ccc174ea5f92be7027fda232a92eac4"
+      },
+      {
+        "key": "app",
+        "path": "app/public/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-accent.webp",
+        "sha256": "2c7f321b84f0dda2623a2ca93b2989dc5ccc174ea5f92be7027fda232a92eac4"
+      },
+      {
+        "key": "app",
+        "path": "app/public/dealer-brand/v2-6a32df4f42d9fcd5/mark-on-light.webp",
+        "sha256": "44ab483d6643421fc807d61c6ac45ff4a319d89546ce5657b1945df69c96fb88"
+      },
+      {
+        "key": "app",
+        "path": "app/public/dealer-brand/v2-6a32df4f42d9fcd5/mark-on-dark.webp",
+        "sha256": "54cd9c9626f5369a75208214023916664c40c9f01dc210f9b4255da47dfa174b"
+      },
+      {
+        "key": "app",
+        "path": "app/public/dealer-brand/v2-6a32df4f42d9fcd5/app-icon.png",
+        "sha256": "6601fe1d10a7589b77d82d8634ac5ad1349b66a8d915fe4d67efba17d794b8ff"
+      },
+      {
+        "key": "app",
+        "path": "app/public/dealer-brand/v2-6a32df4f42d9fcd5/apple-touch-icon.png",
+        "sha256": "631987cf2706198375c75fd7e1c2d55c7d223fee662b650fb22b493a590ed2b7"
+      },
+      {
+        "key": "app",
+        "path": "app/public/dealer-brand/v2-6a32df4f42d9fcd5/favicon.ico",
+        "sha256": "38b951d200202c8ca2645ba884a40cd34556aa97a7a64ffbbcc75a75b2bd24dc"
+      },
+      {
+        "key": "mobile",
+        "path": "mobile/public/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-light.png",
+        "sha256": "1e11a39a387b141c0a8c0c631034e81f4e4520f61a91e9562a86e9685dfa4dab"
+      },
+      {
+        "key": "mobile",
+        "path": "mobile/public/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-light.webp",
+        "sha256": "a620e73e9418dee5a8b859bda1049663bec9ab3da53f49c3bdec0d03ec844791"
+      },
+      {
+        "key": "mobile",
+        "path": "mobile/public/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-dark.png",
+        "sha256": "7ad9d6c55c29c9c8533e623752ad9bf06a66e3235f9b94c5597fbdf9073db5d1"
+      },
+      {
+        "key": "mobile",
+        "path": "mobile/public/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-dark.webp",
+        "sha256": "2c7f321b84f0dda2623a2ca93b2989dc5ccc174ea5f92be7027fda232a92eac4"
+      },
+      {
+        "key": "mobile",
+        "path": "mobile/public/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-accent.webp",
+        "sha256": "2c7f321b84f0dda2623a2ca93b2989dc5ccc174ea5f92be7027fda232a92eac4"
+      },
+      {
+        "key": "mobile",
+        "path": "mobile/public/dealer-brand/v2-6a32df4f42d9fcd5/mark-on-light.webp",
+        "sha256": "44ab483d6643421fc807d61c6ac45ff4a319d89546ce5657b1945df69c96fb88"
+      },
+      {
+        "key": "mobile",
+        "path": "mobile/public/dealer-brand/v2-6a32df4f42d9fcd5/mark-on-dark.webp",
+        "sha256": "54cd9c9626f5369a75208214023916664c40c9f01dc210f9b4255da47dfa174b"
+      },
+      {
+        "key": "mobile",
+        "path": "mobile/public/dealer-brand/v2-6a32df4f42d9fcd5/app-icon.png",
+        "sha256": "6601fe1d10a7589b77d82d8634ac5ad1349b66a8d915fe4d67efba17d794b8ff"
+      },
+      {
+        "key": "mobile",
+        "path": "mobile/public/dealer-brand/v2-6a32df4f42d9fcd5/apple-touch-icon.png",
+        "sha256": "631987cf2706198375c75fd7e1c2d55c7d223fee662b650fb22b493a590ed2b7"
+      },
+      {
+        "key": "mobile",
+        "path": "mobile/public/dealer-brand/v2-6a32df4f42d9fcd5/favicon.ico",
+        "sha256": "38b951d200202c8ca2645ba884a40cd34556aa97a7a64ffbbcc75a75b2bd24dc"
+      },
+      {
+        "key": "karento-best",
+        "path": "karento-best/static/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-light.png",
+        "sha256": "1e11a39a387b141c0a8c0c631034e81f4e4520f61a91e9562a86e9685dfa4dab"
+      },
+      {
+        "key": "karento-best",
+        "path": "karento-best/static/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-light.webp",
+        "sha256": "a620e73e9418dee5a8b859bda1049663bec9ab3da53f49c3bdec0d03ec844791"
+      },
+      {
+        "key": "karento-best",
+        "path": "karento-best/static/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-dark.png",
+        "sha256": "7ad9d6c55c29c9c8533e623752ad9bf06a66e3235f9b94c5597fbdf9073db5d1"
+      },
+      {
+        "key": "karento-best",
+        "path": "karento-best/static/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-dark.webp",
+        "sha256": "2c7f321b84f0dda2623a2ca93b2989dc5ccc174ea5f92be7027fda232a92eac4"
+      },
+      {
+        "key": "karento-best",
+        "path": "karento-best/static/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-accent.webp",
+        "sha256": "2c7f321b84f0dda2623a2ca93b2989dc5ccc174ea5f92be7027fda232a92eac4"
+      },
+      {
+        "key": "karento-best",
+        "path": "karento-best/static/dealer-brand/v2-6a32df4f42d9fcd5/mark-on-light.webp",
+        "sha256": "44ab483d6643421fc807d61c6ac45ff4a319d89546ce5657b1945df69c96fb88"
+      },
+      {
+        "key": "karento-best",
+        "path": "karento-best/static/dealer-brand/v2-6a32df4f42d9fcd5/mark-on-dark.webp",
+        "sha256": "54cd9c9626f5369a75208214023916664c40c9f01dc210f9b4255da47dfa174b"
+      },
+      {
+        "key": "karento-best",
+        "path": "karento-best/static/dealer-brand/v2-6a32df4f42d9fcd5/app-icon.png",
+        "sha256": "6601fe1d10a7589b77d82d8634ac5ad1349b66a8d915fe4d67efba17d794b8ff"
+      },
+      {
+        "key": "karento-best",
+        "path": "karento-best/static/dealer-brand/v2-6a32df4f42d9fcd5/apple-touch-icon.png",
+        "sha256": "631987cf2706198375c75fd7e1c2d55c7d223fee662b650fb22b493a590ed2b7"
+      },
+      {
+        "key": "karento-best",
+        "path": "karento-best/static/dealer-brand/v2-6a32df4f42d9fcd5/favicon.ico",
+        "sha256": "38b951d200202c8ca2645ba884a40cd34556aa97a7a64ffbbcc75a75b2bd24dc"
+      }
+    ],
+    "facts": {
+      "business-facts.json": "3142cfe035b6eb8b65b9d7b0090854adf3dd83ac0b6a74aeb0eddfcd43202504",
+      "stock.json": "ddccb72b5c798d9e3cb8cc29ffee26e7c3c2270305c689963b9ae69763d4eda8",
+      "locale.json": "1259c7c5ca04c1ff5477a2ed1ff12c5e0c46f4a6ebed99ab1749cd7751a73b65",
+      "auto-best/src/lib/data/dealer-profile.json": "ed37ece7f5291453e7439b6835a6ecce68929f20820553cdc32668068e8cee43"
+    },
+    "changes": [
+      {
+        "path": "auto-best/src/lib/config/brand.ts",
+        "before": "99c3997f2a67e2f4d8388b3b0351b420c73c66d427a34574144042a7b71783e0",
+        "after": "56b1ac22c51ed8281eeb4b41cc0a0f27e7e2412b895f19e4aebe1d59309c3b05"
+      },
+      {
+        "path": "auto-best/static/favicon.ico",
+        "before": "17479d0354ba5cede84e623dbb0ceb77b638784a9535ea829e5ac9969c5a94eb",
+        "after": "38b951d200202c8ca2645ba884a40cd34556aa97a7a64ffbbcc75a75b2bd24dc"
+      },
+      {
+        "path": "modern/apps/web/public/lead-logo.png",
+        "before": "e1ba7bdc914fce747c786761224e385afe6f53770da184f904dee624b1e30889",
+        "after": "1e11a39a387b141c0a8c0c631034e81f4e4520f61a91e9562a86e9685dfa4dab"
+      },
+      {
+        "path": "modern/packages/internationalization/paths.test.ts",
+        "before": "b064956301cc0380cd1788ecb6d39c817dc94f70743ffbfc57fbcfc6a586e241",
+        "after": "f81f07d4e534a82133cfdcc1d3420b6ad15060973f643d9fbd6727b2ef4760ba"
+      },
+      {
+        "path": "modern/packages/internationalization/proxy.test.ts",
+        "before": "568154b3d31c9f639eb74d53f469b68a427dc1cb5af1fd384a742cadcbe9356d",
+        "after": "d00834d54edd4e3fa523bdcc89f156ff0cf9e4d38de1409c7e9998bbf64f516c"
+      },
+      {
+        "path": "modern/packages/marketplace/lead-site.ts",
+        "before": "cb6361a16e44b63a30cdd8d42e87304d217e8787af00f7f6c90ab276bca9585b",
+        "after": "50abefe445ba0673eadc107f9c978260faee7d10c9402d612d633644d19f59c3"
+      },
+      {
+        "path": "modern/packages/marketplace-domain/testing/dealer-profile.json",
+        "before": "ed37ece7f5291453e7439b6835a6ecce68929f20820553cdc32668068e8cee43",
+        "after": "aaddb757619744ee9a3cf48f89d42a8b0312a48b53c9168ea117065b8b7ffe06"
+      },
+      {
+        "path": "modern/packages/marketplace-domain/testing/mock-data.ts",
+        "before": "7459a6eb044aa8f90b652811d820d1975ab5c53fedb3bdadaf100d4711fbe034",
+        "after": "028d83668a1cb6d5000ead01c8bb7eaea866d66f4e4876e528ec59dd6859ce08"
+      },
+      {
+        "path": "import/docs/desktop-hero-content-2026-10-02/charcoal-2026-10-03/after-matrix.json",
+        "before": "e3ef14876a61a3c9db8907a42d63d8b3f90b706cb403ff09d1afa2e590a25087",
+        "after": "fbc6004f509f60a2c43a66b0b4c55313686ff51c0e7b38d36cd9188772121ef9"
+      },
+      {
+        "path": "import/docs/desktop-hero-content-2026-10-02/charcoal-2026-10-03/before-matrix.json",
+        "before": "cb648effa70fedc548ef86126fb2a9e69e80158b36b45aa905a0f09e6a643643",
+        "after": "e9d9f9e620e4ee7edbd709b2e35f87159f96f414ebd0e96e7812b62d149ac367"
+      },
+      {
+        "path": "import/docs/desktop-home-entry-2026-10-03/after-matrix.json",
+        "before": "36bca5ec3eff85d47df69809ab5484fcf19928bade65108b1b1ce75d26ad0d83",
+        "after": "7e90f03ad29eaa260c5b547c4f2cfc317180a96ecaee98828a88894aaaa1b111"
+      },
+      {
+        "path": "import/docs/desktop-home-entry-2026-10-03/before-matrix.json",
+        "before": "0acdd39c14f7e9ed310b61ffba001cb801ad664cc4e267c41342ab21010f2f95",
+        "after": "e2b39ad92e85627e156bc5d9f26651d06d26f755c41688942fe41b5631d11136"
+      },
+      {
+        "path": "import/src/lib/components/home/HomeFiveFeaturedVehicles.svelte",
+        "before": "a6d0fc0482fc5b87215f68cd6c216e556b25ee72ba2aa8b15de9f893bec91fb4",
+        "after": "8a0def802619a30ee47d689b8ccb6f3fd6f88324fd9d8e9962205dd59c465a75"
+      },
+      {
+        "path": "import/src/lib/config/dealer.ts",
+        "before": "40011b7dd7af0a5e2aaa05542eb43aa788a41e30d5b2d0352e23267b56488f0a",
+        "after": "a00b3a5ad8c76fbeb9a35e666bf0eb29dc970f9eda9ec29ebc175b25c53d2e94"
+      },
+      {
+        "path": "import/src/lib/content/sell-your-car.ts",
+        "before": "a3685b87db737e06aabb37206322ca823926e11a871f9cdedf66591564ae21e6",
+        "after": "10a4ce3dcfffd14617e7273d7590d985c4f1c498598c15291e141690c2167292"
+      },
+      {
+        "path": "import/src/lib/data/dealer-profile.json",
+        "before": "ed37ece7f5291453e7439b6835a6ecce68929f20820553cdc32668068e8cee43",
+        "after": "aaddb757619744ee9a3cf48f89d42a8b0312a48b53c9168ea117065b8b7ffe06"
+      },
+      {
+        "path": "import/src/lib/server/auxero-listing-data.ts",
+        "before": "8dacf8d8aa8c6b3577b9dc4ba5188eea589333679fbd67ab8c82f278ed48c8be",
+        "after": "a74e664fb74b86e2d067f5dbbc6366bcbe6b73600a7be59bc58a211a6e9bcbf1"
+      },
+      {
+        "path": "import/src/lib/server/inventory-options.ts",
+        "before": "272fd75d8e423c6ec13d760893269332cac3a5bc700167ba373d6991cbcba683",
+        "after": "cf3936e5faf6650d50a28ed31a92e2e83cee31ce330364d16e5a7821bc17ae31"
+      },
+      {
+        "path": "import/src/routes/offer/+page.svelte",
+        "before": "4253f57a5b883ae9c9032b7f8ca01ef94e23f65759faf993af908ab03085b628",
+        "after": "21da477ab1066179fa57b7e4c3f93ce472a41d158a4c0dcf0a9d5fe6c7895d89"
+      },
+      {
+        "path": "app/lib/dealer.json",
+        "before": "f4e5cc49b71253a75fd17fb66d88f24999aa9304e36987eaf905aae6fee8784f",
+        "after": "31fa3ddf85f160a621ed768df7728ce5e04f5423d25ec6fb9feadcb38e5812f3"
+      },
+      {
+        "path": "mobile/src/components/Header.tsx",
+        "before": "c8b0e8dce4763a3afcbb87b8600e9ec327db5e3d4a3f234e901eb980764046f5",
+        "after": "1aa5cbae6c660817abbd42e2d037f4ceb081ab001db950ce5a87c068c43c7a71"
+      },
+      {
+        "path": "mobile/src/lib/dealers.ts",
+        "before": "67b46df158e540728b977c1533a7c6fc93230bb9297743288855b5f9c8920a42",
+        "after": "724c947c8f6aca3267da0d8f901a4d4ab47728552e062aaf573094457b42d448"
+      },
+      {
+        "path": "mobile/src/lib/showroom-config.ts",
+        "before": "060464da7b6e08db87aea1485b90a1ea1a3356e50750cc32cab00b12de5ecd9a",
+        "after": "77157a112589d86f1b296b19ae2f105ea19094de82abfaf2b9bff644a1bcc54b"
+      },
+      {
+        "path": "karento-best/src/lib/content.ts",
+        "before": "f431c320094ae0f5f6cca8f8bade78e213711bcd1bfc9d73d55f4bd021d02235",
+        "after": "f94560ef60b077d2aaba7719e2fc0c023afacb1ce51196d2808ff3862c9e2bb0"
+      },
+      {
+        "path": "karento-best/src/lib/data/dealer-detail.ts",
+        "before": "c9923804793b8a2402126eeaaece6cc74d4a081a43af7e0347b8641d449b37b4",
+        "after": "3be2ffa8e8b5e82b2ab4f7071f2d54be9d416506cff594392571bd8252a4b052"
+      },
+      {
+        "path": "karento-best/src/lib/data/vehicle-detail.ts",
+        "before": "efe903852e13b5ac938ac7752312c605a0523f39a494d9fcbd2d7ad51f82944f",
+        "after": "5beb9df54a6079eb78da031926fadb742c9cafc2d3b3785ab7fb0de1ef33036b"
+      },
+      {
+        "path": "auto-best/static/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-light.png",
+        "before": null,
+        "after": "1e11a39a387b141c0a8c0c631034e81f4e4520f61a91e9562a86e9685dfa4dab"
+      },
+      {
+        "path": "auto-best/static/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-light.webp",
+        "before": null,
+        "after": "a620e73e9418dee5a8b859bda1049663bec9ab3da53f49c3bdec0d03ec844791"
+      },
+      {
+        "path": "auto-best/static/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-dark.png",
+        "before": null,
+        "after": "7ad9d6c55c29c9c8533e623752ad9bf06a66e3235f9b94c5597fbdf9073db5d1"
+      },
+      {
+        "path": "auto-best/static/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-dark.webp",
+        "before": null,
+        "after": "2c7f321b84f0dda2623a2ca93b2989dc5ccc174ea5f92be7027fda232a92eac4"
+      },
+      {
+        "path": "auto-best/static/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-accent.webp",
+        "before": null,
+        "after": "2c7f321b84f0dda2623a2ca93b2989dc5ccc174ea5f92be7027fda232a92eac4"
+      },
+      {
+        "path": "auto-best/static/dealer-brand/v2-6a32df4f42d9fcd5/mark-on-light.webp",
+        "before": null,
+        "after": "44ab483d6643421fc807d61c6ac45ff4a319d89546ce5657b1945df69c96fb88"
+      },
+      {
+        "path": "auto-best/static/dealer-brand/v2-6a32df4f42d9fcd5/mark-on-dark.webp",
+        "before": null,
+        "after": "54cd9c9626f5369a75208214023916664c40c9f01dc210f9b4255da47dfa174b"
+      },
+      {
+        "path": "auto-best/static/dealer-brand/v2-6a32df4f42d9fcd5/app-icon.png",
+        "before": null,
+        "after": "6601fe1d10a7589b77d82d8634ac5ad1349b66a8d915fe4d67efba17d794b8ff"
+      },
+      {
+        "path": "auto-best/static/dealer-brand/v2-6a32df4f42d9fcd5/apple-touch-icon.png",
+        "before": null,
+        "after": "631987cf2706198375c75fd7e1c2d55c7d223fee662b650fb22b493a590ed2b7"
+      },
+      {
+        "path": "auto-best/static/dealer-brand/v2-6a32df4f42d9fcd5/favicon.ico",
+        "before": null,
+        "after": "38b951d200202c8ca2645ba884a40cd34556aa97a7a64ffbbcc75a75b2bd24dc"
+      },
+      {
+        "path": "auto-best/static/dealer-brand/logo-on-light.webp",
+        "before": null,
+        "after": "a620e73e9418dee5a8b859bda1049663bec9ab3da53f49c3bdec0d03ec844791"
+      },
+      {
+        "path": "auto-best/static/dealer-brand/logo-on-dark.webp",
+        "before": null,
+        "after": "2c7f321b84f0dda2623a2ca93b2989dc5ccc174ea5f92be7027fda232a92eac4"
+      },
+      {
+        "path": "auto-best/static/dealer-brand/logo-on-accent.webp",
+        "before": null,
+        "after": "2c7f321b84f0dda2623a2ca93b2989dc5ccc174ea5f92be7027fda232a92eac4"
+      },
+      {
+        "path": "auto-best/static/dealer-brand/mark-on-light.webp",
+        "before": null,
+        "after": "44ab483d6643421fc807d61c6ac45ff4a319d89546ce5657b1945df69c96fb88"
+      },
+      {
+        "path": "auto-best/static/dealer-brand/mark-on-dark.webp",
+        "before": null,
+        "after": "54cd9c9626f5369a75208214023916664c40c9f01dc210f9b4255da47dfa174b"
+      },
+      {
+        "path": "auto-best/static/dealer-brand/app-icon.png",
+        "before": null,
+        "after": "6601fe1d10a7589b77d82d8634ac5ad1349b66a8d915fe4d67efba17d794b8ff"
+      },
+      {
+        "path": "auto-best/static/dealer-brand/apple-touch-icon.png",
+        "before": null,
+        "after": "631987cf2706198375c75fd7e1c2d55c7d223fee662b650fb22b493a590ed2b7"
+      },
+      {
+        "path": "auto-best/static/dealer-brand/favicon.ico",
+        "before": null,
+        "after": "38b951d200202c8ca2645ba884a40cd34556aa97a7a64ffbbcc75a75b2bd24dc"
+      },
+      {
+        "path": "modern/apps/web/public/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-light.png",
+        "before": null,
+        "after": "1e11a39a387b141c0a8c0c631034e81f4e4520f61a91e9562a86e9685dfa4dab"
+      },
+      {
+        "path": "modern/apps/web/public/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-light.webp",
+        "before": null,
+        "after": "a620e73e9418dee5a8b859bda1049663bec9ab3da53f49c3bdec0d03ec844791"
+      },
+      {
+        "path": "modern/apps/web/public/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-dark.png",
+        "before": null,
+        "after": "7ad9d6c55c29c9c8533e623752ad9bf06a66e3235f9b94c5597fbdf9073db5d1"
+      },
+      {
+        "path": "modern/apps/web/public/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-dark.webp",
+        "before": null,
+        "after": "2c7f321b84f0dda2623a2ca93b2989dc5ccc174ea5f92be7027fda232a92eac4"
+      },
+      {
+        "path": "modern/apps/web/public/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-accent.webp",
+        "before": null,
+        "after": "2c7f321b84f0dda2623a2ca93b2989dc5ccc174ea5f92be7027fda232a92eac4"
+      },
+      {
+        "path": "modern/apps/web/public/dealer-brand/v2-6a32df4f42d9fcd5/mark-on-light.webp",
+        "before": null,
+        "after": "44ab483d6643421fc807d61c6ac45ff4a319d89546ce5657b1945df69c96fb88"
+      },
+      {
+        "path": "modern/apps/web/public/dealer-brand/v2-6a32df4f42d9fcd5/mark-on-dark.webp",
+        "before": null,
+        "after": "54cd9c9626f5369a75208214023916664c40c9f01dc210f9b4255da47dfa174b"
+      },
+      {
+        "path": "modern/apps/web/public/dealer-brand/v2-6a32df4f42d9fcd5/app-icon.png",
+        "before": null,
+        "after": "6601fe1d10a7589b77d82d8634ac5ad1349b66a8d915fe4d67efba17d794b8ff"
+      },
+      {
+        "path": "modern/apps/web/public/dealer-brand/v2-6a32df4f42d9fcd5/apple-touch-icon.png",
+        "before": null,
+        "after": "631987cf2706198375c75fd7e1c2d55c7d223fee662b650fb22b493a590ed2b7"
+      },
+      {
+        "path": "modern/apps/web/public/dealer-brand/v2-6a32df4f42d9fcd5/favicon.ico",
+        "before": null,
+        "after": "38b951d200202c8ca2645ba884a40cd34556aa97a7a64ffbbcc75a75b2bd24dc"
+      },
+      {
+        "path": "modern/apps/web/public/dealer-brand/logo-on-light.webp",
+        "before": null,
+        "after": "a620e73e9418dee5a8b859bda1049663bec9ab3da53f49c3bdec0d03ec844791"
+      },
+      {
+        "path": "modern/apps/web/public/dealer-brand/logo-on-dark.webp",
+        "before": null,
+        "after": "2c7f321b84f0dda2623a2ca93b2989dc5ccc174ea5f92be7027fda232a92eac4"
+      },
+      {
+        "path": "modern/apps/web/public/dealer-brand/logo-on-accent.webp",
+        "before": null,
+        "after": "2c7f321b84f0dda2623a2ca93b2989dc5ccc174ea5f92be7027fda232a92eac4"
+      },
+      {
+        "path": "modern/apps/web/public/dealer-brand/mark-on-light.webp",
+        "before": null,
+        "after": "44ab483d6643421fc807d61c6ac45ff4a319d89546ce5657b1945df69c96fb88"
+      },
+      {
+        "path": "modern/apps/web/public/dealer-brand/mark-on-dark.webp",
+        "before": null,
+        "after": "54cd9c9626f5369a75208214023916664c40c9f01dc210f9b4255da47dfa174b"
+      },
+      {
+        "path": "modern/apps/web/public/dealer-brand/app-icon.png",
+        "before": null,
+        "after": "6601fe1d10a7589b77d82d8634ac5ad1349b66a8d915fe4d67efba17d794b8ff"
+      },
+      {
+        "path": "modern/apps/web/public/dealer-brand/apple-touch-icon.png",
+        "before": null,
+        "after": "631987cf2706198375c75fd7e1c2d55c7d223fee662b650fb22b493a590ed2b7"
+      },
+      {
+        "path": "modern/apps/web/public/dealer-brand/favicon.ico",
+        "before": null,
+        "after": "38b951d200202c8ca2645ba884a40cd34556aa97a7a64ffbbcc75a75b2bd24dc"
+      },
+      {
+        "path": "import/static/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-light.png",
+        "before": null,
+        "after": "1e11a39a387b141c0a8c0c631034e81f4e4520f61a91e9562a86e9685dfa4dab"
+      },
+      {
+        "path": "import/static/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-light.webp",
+        "before": null,
+        "after": "a620e73e9418dee5a8b859bda1049663bec9ab3da53f49c3bdec0d03ec844791"
+      },
+      {
+        "path": "import/static/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-dark.png",
+        "before": null,
+        "after": "7ad9d6c55c29c9c8533e623752ad9bf06a66e3235f9b94c5597fbdf9073db5d1"
+      },
+      {
+        "path": "import/static/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-dark.webp",
+        "before": null,
+        "after": "2c7f321b84f0dda2623a2ca93b2989dc5ccc174ea5f92be7027fda232a92eac4"
+      },
+      {
+        "path": "import/static/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-accent.webp",
+        "before": null,
+        "after": "2c7f321b84f0dda2623a2ca93b2989dc5ccc174ea5f92be7027fda232a92eac4"
+      },
+      {
+        "path": "import/static/dealer-brand/v2-6a32df4f42d9fcd5/mark-on-light.webp",
+        "before": null,
+        "after": "44ab483d6643421fc807d61c6ac45ff4a319d89546ce5657b1945df69c96fb88"
+      },
+      {
+        "path": "import/static/dealer-brand/v2-6a32df4f42d9fcd5/mark-on-dark.webp",
+        "before": null,
+        "after": "54cd9c9626f5369a75208214023916664c40c9f01dc210f9b4255da47dfa174b"
+      },
+      {
+        "path": "import/static/dealer-brand/v2-6a32df4f42d9fcd5/app-icon.png",
+        "before": null,
+        "after": "6601fe1d10a7589b77d82d8634ac5ad1349b66a8d915fe4d67efba17d794b8ff"
+      },
+      {
+        "path": "import/static/dealer-brand/v2-6a32df4f42d9fcd5/apple-touch-icon.png",
+        "before": null,
+        "after": "631987cf2706198375c75fd7e1c2d55c7d223fee662b650fb22b493a590ed2b7"
+      },
+      {
+        "path": "import/static/dealer-brand/v2-6a32df4f42d9fcd5/favicon.ico",
+        "before": null,
+        "after": "38b951d200202c8ca2645ba884a40cd34556aa97a7a64ffbbcc75a75b2bd24dc"
+      },
+      {
+        "path": "import/static/dealer-brand/logo-on-light.webp",
+        "before": null,
+        "after": "a620e73e9418dee5a8b859bda1049663bec9ab3da53f49c3bdec0d03ec844791"
+      },
+      {
+        "path": "import/static/dealer-brand/logo-on-dark.webp",
+        "before": null,
+        "after": "2c7f321b84f0dda2623a2ca93b2989dc5ccc174ea5f92be7027fda232a92eac4"
+      },
+      {
+        "path": "import/static/dealer-brand/logo-on-accent.webp",
+        "before": null,
+        "after": "2c7f321b84f0dda2623a2ca93b2989dc5ccc174ea5f92be7027fda232a92eac4"
+      },
+      {
+        "path": "import/static/dealer-brand/mark-on-light.webp",
+        "before": null,
+        "after": "44ab483d6643421fc807d61c6ac45ff4a319d89546ce5657b1945df69c96fb88"
+      },
+      {
+        "path": "import/static/dealer-brand/mark-on-dark.webp",
+        "before": null,
+        "after": "54cd9c9626f5369a75208214023916664c40c9f01dc210f9b4255da47dfa174b"
+      },
+      {
+        "path": "import/static/dealer-brand/app-icon.png",
+        "before": null,
+        "after": "6601fe1d10a7589b77d82d8634ac5ad1349b66a8d915fe4d67efba17d794b8ff"
+      },
+      {
+        "path": "import/static/dealer-brand/apple-touch-icon.png",
+        "before": null,
+        "after": "631987cf2706198375c75fd7e1c2d55c7d223fee662b650fb22b493a590ed2b7"
+      },
+      {
+        "path": "import/static/dealer-brand/favicon.ico",
+        "before": null,
+        "after": "38b951d200202c8ca2645ba884a40cd34556aa97a7a64ffbbcc75a75b2bd24dc"
+      },
+      {
+        "path": "app/public/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-light.png",
+        "before": null,
+        "after": "1e11a39a387b141c0a8c0c631034e81f4e4520f61a91e9562a86e9685dfa4dab"
+      },
+      {
+        "path": "app/public/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-light.webp",
+        "before": null,
+        "after": "a620e73e9418dee5a8b859bda1049663bec9ab3da53f49c3bdec0d03ec844791"
+      },
+      {
+        "path": "app/public/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-dark.png",
+        "before": null,
+        "after": "7ad9d6c55c29c9c8533e623752ad9bf06a66e3235f9b94c5597fbdf9073db5d1"
+      },
+      {
+        "path": "app/public/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-dark.webp",
+        "before": null,
+        "after": "2c7f321b84f0dda2623a2ca93b2989dc5ccc174ea5f92be7027fda232a92eac4"
+      },
+      {
+        "path": "app/public/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-accent.webp",
+        "before": null,
+        "after": "2c7f321b84f0dda2623a2ca93b2989dc5ccc174ea5f92be7027fda232a92eac4"
+      },
+      {
+        "path": "app/public/dealer-brand/v2-6a32df4f42d9fcd5/mark-on-light.webp",
+        "before": null,
+        "after": "44ab483d6643421fc807d61c6ac45ff4a319d89546ce5657b1945df69c96fb88"
+      },
+      {
+        "path": "app/public/dealer-brand/v2-6a32df4f42d9fcd5/mark-on-dark.webp",
+        "before": null,
+        "after": "54cd9c9626f5369a75208214023916664c40c9f01dc210f9b4255da47dfa174b"
+      },
+      {
+        "path": "app/public/dealer-brand/v2-6a32df4f42d9fcd5/app-icon.png",
+        "before": null,
+        "after": "6601fe1d10a7589b77d82d8634ac5ad1349b66a8d915fe4d67efba17d794b8ff"
+      },
+      {
+        "path": "app/public/dealer-brand/v2-6a32df4f42d9fcd5/apple-touch-icon.png",
+        "before": null,
+        "after": "631987cf2706198375c75fd7e1c2d55c7d223fee662b650fb22b493a590ed2b7"
+      },
+      {
+        "path": "app/public/dealer-brand/v2-6a32df4f42d9fcd5/favicon.ico",
+        "before": null,
+        "after": "38b951d200202c8ca2645ba884a40cd34556aa97a7a64ffbbcc75a75b2bd24dc"
+      },
+      {
+        "path": "app/public/dealer-brand/logo-on-light.png",
+        "before": null,
+        "after": "1e11a39a387b141c0a8c0c631034e81f4e4520f61a91e9562a86e9685dfa4dab"
+      },
+      {
+        "path": "app/public/dealer-brand/logo-on-light.webp",
+        "before": null,
+        "after": "a620e73e9418dee5a8b859bda1049663bec9ab3da53f49c3bdec0d03ec844791"
+      },
+      {
+        "path": "app/public/dealer-brand/logo-on-dark.png",
+        "before": null,
+        "after": "7ad9d6c55c29c9c8533e623752ad9bf06a66e3235f9b94c5597fbdf9073db5d1"
+      },
+      {
+        "path": "app/public/dealer-brand/logo-on-dark.webp",
+        "before": null,
+        "after": "2c7f321b84f0dda2623a2ca93b2989dc5ccc174ea5f92be7027fda232a92eac4"
+      },
+      {
+        "path": "app/public/dealer-brand/logo-on-accent.webp",
+        "before": null,
+        "after": "2c7f321b84f0dda2623a2ca93b2989dc5ccc174ea5f92be7027fda232a92eac4"
+      },
+      {
+        "path": "app/public/dealer-brand/mark-on-light.webp",
+        "before": null,
+        "after": "44ab483d6643421fc807d61c6ac45ff4a319d89546ce5657b1945df69c96fb88"
+      },
+      {
+        "path": "app/public/dealer-brand/mark-on-dark.webp",
+        "before": null,
+        "after": "54cd9c9626f5369a75208214023916664c40c9f01dc210f9b4255da47dfa174b"
+      },
+      {
+        "path": "app/public/dealer-brand/app-icon.png",
+        "before": null,
+        "after": "6601fe1d10a7589b77d82d8634ac5ad1349b66a8d915fe4d67efba17d794b8ff"
+      },
+      {
+        "path": "app/public/dealer-brand/apple-touch-icon.png",
+        "before": null,
+        "after": "631987cf2706198375c75fd7e1c2d55c7d223fee662b650fb22b493a590ed2b7"
+      },
+      {
+        "path": "app/public/dealer-brand/favicon.ico",
+        "before": null,
+        "after": "38b951d200202c8ca2645ba884a40cd34556aa97a7a64ffbbcc75a75b2bd24dc"
+      },
+      {
+        "path": "mobile/public/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-light.png",
+        "before": null,
+        "after": "1e11a39a387b141c0a8c0c631034e81f4e4520f61a91e9562a86e9685dfa4dab"
+      },
+      {
+        "path": "mobile/public/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-light.webp",
+        "before": null,
+        "after": "a620e73e9418dee5a8b859bda1049663bec9ab3da53f49c3bdec0d03ec844791"
+      },
+      {
+        "path": "mobile/public/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-dark.png",
+        "before": null,
+        "after": "7ad9d6c55c29c9c8533e623752ad9bf06a66e3235f9b94c5597fbdf9073db5d1"
+      },
+      {
+        "path": "mobile/public/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-dark.webp",
+        "before": null,
+        "after": "2c7f321b84f0dda2623a2ca93b2989dc5ccc174ea5f92be7027fda232a92eac4"
+      },
+      {
+        "path": "mobile/public/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-accent.webp",
+        "before": null,
+        "after": "2c7f321b84f0dda2623a2ca93b2989dc5ccc174ea5f92be7027fda232a92eac4"
+      },
+      {
+        "path": "mobile/public/dealer-brand/v2-6a32df4f42d9fcd5/mark-on-light.webp",
+        "before": null,
+        "after": "44ab483d6643421fc807d61c6ac45ff4a319d89546ce5657b1945df69c96fb88"
+      },
+      {
+        "path": "mobile/public/dealer-brand/v2-6a32df4f42d9fcd5/mark-on-dark.webp",
+        "before": null,
+        "after": "54cd9c9626f5369a75208214023916664c40c9f01dc210f9b4255da47dfa174b"
+      },
+      {
+        "path": "mobile/public/dealer-brand/v2-6a32df4f42d9fcd5/app-icon.png",
+        "before": null,
+        "after": "6601fe1d10a7589b77d82d8634ac5ad1349b66a8d915fe4d67efba17d794b8ff"
+      },
+      {
+        "path": "mobile/public/dealer-brand/v2-6a32df4f42d9fcd5/apple-touch-icon.png",
+        "before": null,
+        "after": "631987cf2706198375c75fd7e1c2d55c7d223fee662b650fb22b493a590ed2b7"
+      },
+      {
+        "path": "mobile/public/dealer-brand/v2-6a32df4f42d9fcd5/favicon.ico",
+        "before": null,
+        "after": "38b951d200202c8ca2645ba884a40cd34556aa97a7a64ffbbcc75a75b2bd24dc"
+      },
+      {
+        "path": "mobile/public/dealer-brand/logo-on-light.webp",
+        "before": null,
+        "after": "a620e73e9418dee5a8b859bda1049663bec9ab3da53f49c3bdec0d03ec844791"
+      },
+      {
+        "path": "mobile/public/dealer-brand/logo-on-dark.webp",
+        "before": null,
+        "after": "2c7f321b84f0dda2623a2ca93b2989dc5ccc174ea5f92be7027fda232a92eac4"
+      },
+      {
+        "path": "mobile/public/dealer-brand/logo-on-accent.webp",
+        "before": null,
+        "after": "2c7f321b84f0dda2623a2ca93b2989dc5ccc174ea5f92be7027fda232a92eac4"
+      },
+      {
+        "path": "mobile/public/dealer-brand/mark-on-light.webp",
+        "before": null,
+        "after": "44ab483d6643421fc807d61c6ac45ff4a319d89546ce5657b1945df69c96fb88"
+      },
+      {
+        "path": "mobile/public/dealer-brand/mark-on-dark.webp",
+        "before": null,
+        "after": "54cd9c9626f5369a75208214023916664c40c9f01dc210f9b4255da47dfa174b"
+      },
+      {
+        "path": "mobile/public/dealer-brand/app-icon.png",
+        "before": null,
+        "after": "6601fe1d10a7589b77d82d8634ac5ad1349b66a8d915fe4d67efba17d794b8ff"
+      },
+      {
+        "path": "mobile/public/dealer-brand/apple-touch-icon.png",
+        "before": null,
+        "after": "631987cf2706198375c75fd7e1c2d55c7d223fee662b650fb22b493a590ed2b7"
+      },
+      {
+        "path": "mobile/public/dealer-brand/favicon.ico",
+        "before": null,
+        "after": "38b951d200202c8ca2645ba884a40cd34556aa97a7a64ffbbcc75a75b2bd24dc"
+      },
+      {
+        "path": "karento-best/static/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-light.png",
+        "before": null,
+        "after": "1e11a39a387b141c0a8c0c631034e81f4e4520f61a91e9562a86e9685dfa4dab"
+      },
+      {
+        "path": "karento-best/static/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-light.webp",
+        "before": null,
+        "after": "a620e73e9418dee5a8b859bda1049663bec9ab3da53f49c3bdec0d03ec844791"
+      },
+      {
+        "path": "karento-best/static/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-dark.png",
+        "before": null,
+        "after": "7ad9d6c55c29c9c8533e623752ad9bf06a66e3235f9b94c5597fbdf9073db5d1"
+      },
+      {
+        "path": "karento-best/static/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-dark.webp",
+        "before": null,
+        "after": "2c7f321b84f0dda2623a2ca93b2989dc5ccc174ea5f92be7027fda232a92eac4"
+      },
+      {
+        "path": "karento-best/static/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-accent.webp",
+        "before": null,
+        "after": "2c7f321b84f0dda2623a2ca93b2989dc5ccc174ea5f92be7027fda232a92eac4"
+      },
+      {
+        "path": "karento-best/static/dealer-brand/v2-6a32df4f42d9fcd5/mark-on-light.webp",
+        "before": null,
+        "after": "44ab483d6643421fc807d61c6ac45ff4a319d89546ce5657b1945df69c96fb88"
+      },
+      {
+        "path": "karento-best/static/dealer-brand/v2-6a32df4f42d9fcd5/mark-on-dark.webp",
+        "before": null,
+        "after": "54cd9c9626f5369a75208214023916664c40c9f01dc210f9b4255da47dfa174b"
+      },
+      {
+        "path": "karento-best/static/dealer-brand/v2-6a32df4f42d9fcd5/app-icon.png",
+        "before": null,
+        "after": "6601fe1d10a7589b77d82d8634ac5ad1349b66a8d915fe4d67efba17d794b8ff"
+      },
+      {
+        "path": "karento-best/static/dealer-brand/v2-6a32df4f42d9fcd5/apple-touch-icon.png",
+        "before": null,
+        "after": "631987cf2706198375c75fd7e1c2d55c7d223fee662b650fb22b493a590ed2b7"
+      },
+      {
+        "path": "karento-best/static/dealer-brand/v2-6a32df4f42d9fcd5/favicon.ico",
+        "before": null,
+        "after": "38b951d200202c8ca2645ba884a40cd34556aa97a7a64ffbbcc75a75b2bd24dc"
+      },
+      {
+        "path": "karento-best/static/dealer-brand/logo-on-light.webp",
+        "before": null,
+        "after": "a620e73e9418dee5a8b859bda1049663bec9ab3da53f49c3bdec0d03ec844791"
+      },
+      {
+        "path": "karento-best/static/dealer-brand/logo-on-dark.webp",
+        "before": null,
+        "after": "2c7f321b84f0dda2623a2ca93b2989dc5ccc174ea5f92be7027fda232a92eac4"
+      },
+      {
+        "path": "karento-best/static/dealer-brand/logo-on-accent.webp",
+        "before": null,
+        "after": "2c7f321b84f0dda2623a2ca93b2989dc5ccc174ea5f92be7027fda232a92eac4"
+      },
+      {
+        "path": "karento-best/static/dealer-brand/mark-on-light.webp",
+        "before": null,
+        "after": "44ab483d6643421fc807d61c6ac45ff4a319d89546ce5657b1945df69c96fb88"
+      },
+      {
+        "path": "karento-best/static/dealer-brand/mark-on-dark.webp",
+        "before": null,
+        "after": "54cd9c9626f5369a75208214023916664c40c9f01dc210f9b4255da47dfa174b"
+      },
+      {
+        "path": "karento-best/static/dealer-brand/app-icon.png",
+        "before": null,
+        "after": "6601fe1d10a7589b77d82d8634ac5ad1349b66a8d915fe4d67efba17d794b8ff"
+      },
+      {
+        "path": "karento-best/static/dealer-brand/apple-touch-icon.png",
+        "before": null,
+        "after": "631987cf2706198375c75fd7e1c2d55c7d223fee662b650fb22b493a590ed2b7"
+      },
+      {
+        "path": "karento-best/static/dealer-brand/favicon.ico",
+        "before": null,
+        "after": "38b951d200202c8ca2645ba884a40cd34556aa97a7a64ffbbcc75a75b2bd24dc"
+      },
+      {
+        "path": "branding/logo-on-light.png",
+        "before": null,
+        "after": "1e11a39a387b141c0a8c0c631034e81f4e4520f61a91e9562a86e9685dfa4dab"
+      },
+      {
+        "path": "branding/logo-on-dark.png",
+        "before": null,
+        "after": "7ad9d6c55c29c9c8533e623752ad9bf06a66e3235f9b94c5597fbdf9073db5d1"
+      },
+      {
+        "path": "assets/app-icon.png",
+        "before": null,
+        "after": "6601fe1d10a7589b77d82d8634ac5ad1349b66a8d915fe4d67efba17d794b8ff"
+      },
+      {
+        "path": "assets/favicon.ico",
+        "before": null,
+        "after": "38b951d200202c8ca2645ba884a40cd34556aa97a7a64ffbbcc75a75b2bd24dc"
+      },
+      {
+        "path": "branding/generated-master.png",
+        "before": null,
+        "after": "1e11a39a387b141c0a8c0c631034e81f4e4520f61a91e9562a86e9685dfa4dab"
+      },
+      {
+        "path": "branding/generated-mark.png",
+        "before": null,
+        "after": "1e11a39a387b141c0a8c0c631034e81f4e4520f61a91e9562a86e9685dfa4dab"
+      },
+      {
+        "path": "branding/logo-on-light.webp",
+        "before": null,
+        "after": "a620e73e9418dee5a8b859bda1049663bec9ab3da53f49c3bdec0d03ec844791"
+      },
+      {
+        "path": "branding/logo-on-dark.webp",
+        "before": null,
+        "after": "2c7f321b84f0dda2623a2ca93b2989dc5ccc174ea5f92be7027fda232a92eac4"
+      },
+      {
+        "path": "branding/logo-on-accent.webp",
+        "before": null,
+        "after": "2c7f321b84f0dda2623a2ca93b2989dc5ccc174ea5f92be7027fda232a92eac4"
+      },
+      {
+        "path": "branding/mark-on-light.webp",
+        "before": null,
+        "after": "44ab483d6643421fc807d61c6ac45ff4a319d89546ce5657b1945df69c96fb88"
+      },
+      {
+        "path": "branding/mark-on-dark.webp",
+        "before": null,
+        "after": "54cd9c9626f5369a75208214023916664c40c9f01dc210f9b4255da47dfa174b"
+      },
+      {
+        "path": "branding/app-icon.png",
+        "before": null,
+        "after": "6601fe1d10a7589b77d82d8634ac5ad1349b66a8d915fe4d67efba17d794b8ff"
+      },
+      {
+        "path": "branding/apple-touch-icon.png",
+        "before": null,
+        "after": "631987cf2706198375c75fd7e1c2d55c7d223fee662b650fb22b493a590ed2b7"
+      },
+      {
+        "path": "branding/favicon.ico",
+        "before": null,
+        "after": "38b951d200202c8ca2645ba884a40cd34556aa97a7a64ffbbcc75a75b2bd24dc"
+      },
+      {
+        "path": "branding/reviewed-surfaces/on-light.png",
+        "before": null,
+        "after": "1e11a39a387b141c0a8c0c631034e81f4e4520f61a91e9562a86e9685dfa4dab"
+      },
+      {
+        "path": "branding/reviewed-surfaces/on-dark.png",
+        "before": null,
+        "after": "7ad9d6c55c29c9c8533e623752ad9bf06a66e3235f9b94c5597fbdf9073db5d1"
+      },
+      {
+        "path": "branding/reviewed-surfaces/on-accent.png",
+        "before": null,
+        "after": "7ad9d6c55c29c9c8533e623752ad9bf06a66e3235f9b94c5597fbdf9073db5d1"
+      }
+    ],
+    "hostedQa": false
+  },
+  "nativeAdoptionSha256": "2a6d39f01a1540cfbb06e0098f0d4a39dc876980fe3a084b59b7463d52530cab",
+  "nativeQualification": {
+    "contextFileSha256": "bdad4a16d7b2983aca95419f1b665d3e22455878457d7276e384b9cf5608c3cc",
+    "qualificationLockSha256": "c28d29acdf39709d38737a972eeb2a1d000cfb1cd96de587c38effd764386ac1",
+    "receiptSha256": "2a6d39f01a1540cfbb06e0098f0d4a39dc876980fe3a084b59b7463d52530cab",
+    "nativeApproval": false,
+    "hostedApproval": false,
+    "globalReleaseApproval": false
+  },
+  "personalizationChanges": {
+    "auto-best": [
+      "src/lib/config/brand.ts",
+      "src/lib/config/locale.ts",
+      "localization/dealer.reviewed.json",
+      "src/lib/data/inventory.ts",
+      "src/lib/data/company.ts",
+      "src/lib/data/dealer-profile.json",
+      "src/lib/components/company/ShowroomMap.svelte (address adapter)",
+      "src/lib/components/company/DesktopShowroom.svelte (address adapter)",
+      "src/routes/listing-detail-v1/[id]/+page.svelte (dealer identity)"
+    ],
+    "modern": [
+      "packages/marketplace-domain/testing/mock-data.ts",
+      "packages/marketplace/content/inventory-copy.ts",
+      "packages/marketplace/lead-site.ts",
+      "packages/marketplace-domain/testing/dealer-profile.json",
+      "apps/web/app/[locale]/lease/lease-finance-policy.test.ts",
+      "apps/web/app/[locale]/sell/page.tsx",
+      "apps/web/app/api/ai/search/route.test.ts",
+      "apps/web/app/sitemap.test.ts",
+      "apps/web/lib/assisted-search.test.ts",
+      "apps/web/lib/public-app-url.test.ts",
+      "apps/web/lib/public-contact-readiness.test.ts",
+      "apps/web/lib/public-metadata.test.ts",
+      "apps/web/lib/public-support-submission.test.ts",
+      "packages/marketplace/directory.test.ts",
+      "packages/marketplace/inventory-csv.test.ts",
+      "packages/marketplace/listing-copy.test.ts",
+      "packages/marketplace/listing-core.test.ts",
+      "packages/marketplace/mock-directory.ts",
+      "packages/marketplace-ui/components/listing-detail-content.tsx",
+      "packages/marketplace-ui/lib/account-save-flow.test.ts",
+      "packages/marketplace-ui/lib/desktop-full-filter-policy.test.ts",
+      "packages/marketplace-ui/lib/listing-truth.ts",
+      "packages/marketplace-ui/lib/marketplace-control-copy.ts",
+      "packages/marketplace-ui/lib/marketplace-filter-config.ts",
+      "packages/marketplace-ui/lib/marketplace-filter-policy.test.ts",
+      "packages/marketplace-ui/lib/organization-directory-card-policy.test.ts",
+      "packages/marketplace-ui/lib/vehicle-card-view-policy.test.ts",
+      "packages/marketplace-ui/lib/vehicle-card-view-policy.ts",
+      "packages/marketplace/mock-directory.ts",
+      "apps/web/app/[locale]/sell/page.tsx",
+      "apps/web/app/[locale]/components/mobile-sell-vehicle-policy.ts"
+    ],
+    "import": [
+      "src/lib/data/daynight-listings.json",
+      "src/lib/data/daynight.ts",
+      "src/lib/config/dealer.ts",
+      "src/lib/config/dealer-copy.ts",
+      "src/lib/data/vehicles.ts",
+      "src/lib/data/dealers.ts",
+      "src/lib/data/agents.ts",
+      "src/lib/data/dealer-profile.json",
+      "src/lib/content/localized.ts",
+      "src/routes/offer/+page.svelte",
+      "src/lib/data/about-videos.ts",
+      "src/lib/auxero/home-five.ts",
+      "src/lib/content/extra-localized.ts",
+      "src/lib/auxero/reviews.ts",
+      "src/lib/data/blog.ts",
+      "src/lib/components/detail/AuxeroVehicleDetailStaticContent.svelte",
+      "src/lib/auxero/about.ts",
+      "src/lib/auxero/agent-detail.ts",
+      "src/lib/auxero/faqs.ts",
+      "src/lib/auxero/home-five.ts",
+      "src/lib/auxero/home-two.ts",
+      "src/lib/auxero/terms.ts",
+      "src/lib/components/account/AccountListingForm.svelte",
+      "src/lib/components/account/AccountMessagesMobilePage.svelte",
+      "src/lib/components/account/AccountProfileForm.svelte",
+      "src/lib/components/account/DashliteDashboardShell.svelte",
+      "src/lib/components/account/MobileAccountListings.svelte",
+      "src/lib/components/admin/AdminListingEditor.svelte",
+      "src/lib/components/admin/AdminShell.svelte",
+      "src/lib/components/agents/AgentDetailSidebar.svelte",
+      "src/lib/components/agents/AgentDetailTemplatePage.svelte",
+      "src/lib/components/agents/AgentsTemplatePage.svelte",
+      "src/lib/components/compare/AuxeroCompareTable.svelte",
+      "src/lib/components/compare/CompareTemplatePage.svelte",
+      "src/lib/components/forms/AuthModal.svelte",
+      "src/lib/components/home/HomeFiveModals.svelte",
+      "src/lib/components/home/clean/HeroClean.svelte",
+      "src/lib/components/home/clean/NewsSectionClean.svelte",
+      "src/lib/components/home1/Home1Hero.svelte",
+      "src/lib/components/layout/CleanSiteHeader.svelte",
+      "src/lib/components/layout/SiteFooter.svelte",
+      "src/lib/components/layout/SiteHeader.svelte",
+      "src/lib/content/contact.ts",
+      "src/lib/content/extra-localized.ts",
+      "src/lib/content/localized.ts",
+      "src/lib/content/sell-your-car.ts",
+      "src/lib/content/services.ts",
+      "src/lib/i18n/messages.ts",
+      "src/lib/i18n/native.ts",
+      "src/lib/server/account-dashboard-state.ts",
+      "src/lib/server/account-listings-state.ts",
+      "src/lib/server/account-message-state.ts",
+      "src/lib/server/account-users-state.ts",
+      "src/lib/server/admin-cms.ts",
+      "src/lib/server/admin-copilot.ts",
+      "src/lib/server/agents.ts",
+      "src/lib/server/api-auth.ts",
+      "src/lib/server/auth.ts",
+      "src/lib/server/auxero-account-data.ts",
+      "src/lib/server/auxero-home-data.ts",
+      "src/lib/server/auxero-listing-data.ts",
+      "src/lib/server/auxero-page.ts",
+      "src/lib/server/auxero-public-shell.ts",
+      "src/lib/server/auxero-support-data.ts",
+      "src/lib/server/auxero-template.ts",
+      "src/lib/server/cms-workflow.ts",
+      "src/lib/server/db.ts",
+      "src/lib/server/inventory-options.ts",
+      "src/routes/account/compare/+page.server.ts",
+      "src/routes/account/listings/new/+page.server.ts",
+      "src/routes/account/messages/+page.server.ts",
+      "src/routes/account/password/+page.server.ts",
+      "src/routes/admin/+page.svelte",
+      "src/routes/admin/agents/+page.svelte",
+      "src/routes/admin/agents/[slug]/+page.svelte",
+      "src/routes/admin/analytics/+page.svelte",
+      "src/routes/admin/copilot/+page.svelte",
+      "src/routes/admin/imports/+page.svelte",
+      "src/routes/admin/inquiries/+page.svelte",
+      "src/routes/admin/inventory/+page.svelte",
+      "src/routes/admin/inventory/edit/[id]/+page.svelte",
+      "src/routes/admin/inventory/new/+page.svelte",
+      "src/routes/admin/listings/[id]/+page.svelte",
+      "src/routes/admin/login/+page.server.ts",
+      "src/routes/admin/login/+page.svelte",
+      "src/routes/admin/messages/+page.server.ts",
+      "src/routes/admin/messages/+page.svelte",
+      "src/routes/admin/posts/+page.svelte",
+      "src/routes/admin/settings/+page.svelte",
+      "src/routes/admin/users/+page.svelte",
+      "src/routes/api/account/garage/+server.ts",
+      "src/routes/api/account/password/+server.ts",
+      "src/routes/api/account/profile/+server.ts",
+      "src/routes/api/agents/+server.ts",
+      "src/routes/api/auth/login/+server.ts",
+      "src/routes/api/auth/recovery/+server.ts",
+      "src/routes/api/auth/register/+server.ts",
+      "src/routes/api/inquiries/+server.ts",
+      "src/routes/api/inventory/listings/+server.ts",
+      "src/routes/api/inventory/submissions/+server.ts",
+      "src/routes/api/messages/+server.ts",
+      "src/routes/api/users/+server.ts",
+      "src/routes/compare-clean/+page.svelte",
+      "src/routes/home2/+page.svelte",
+      "src/lib/content/inventory-localized.ts",
+      "src/lib/components/home/HomeFiveHeader.svelte"
+    ]
+  },
+  "authoritativeFactsUnchanged": true,
+  "reviewed": false,
+  "buildApproval": false,
+  "privatePublishingMirror": {
+    "repository": "darkapoparka/cars-wildivaka-varna",
+    "state": "not-published-by-source-preparation"
+  },
+  "createdAt": "2026-10-13T08:00:24.412Z"
+}

@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "dealer": "elexiscars-varna",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/app",
+    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
+    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+  },
+  "appDigest": "326ddd8f4273be93b8e4ffeb86442b11d3d5f9332ecebb7ab89304cf47b8ebd2",
+  "provenance": {
+    "schemaVersion": 1,
+    "dealer": "elexiscars-varna",
+    "profile": "auto-best/src/lib/data/dealer-profile.json",
+    "profileSha256": "bb619034eb4dfcd5891889ef02267464eabd2b849b044c9070b645943d7d0d40",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "vehicles": 1,
+    "currency": "EUR",
+    "observedAt": "2026-10-11T11:49:52.911Z",
+    "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-light.png",
+        "output": "public/dealer-app/logo-light-b52669b78312f1f73fb3.png",
+        "sha256": "b52669b78312f1f73fb3dddc2eeae648a8db86e634f6c8a360521c10fd4559dd",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-dark.png",
+        "output": "public/dealer-app/logo-dark-8c2745881061b6eb184c.png",
+        "sha256": "8c2745881061b6eb184c844cc4f135603851e6f09211d0b42cc07ec40b564cf7",
+        "role": "logo-dark"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11791221331078489-2.webp",
+        "output": "public/dealer-app/vehicle-cf322ea827cf2702d80f.webp",
+        "sha256": "cf322ea827cf2702d80f39ff6e68dd726df2145a50132cd5041db88f89819b20",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11791221331078489-1.webp",
+        "output": "public/dealer-app/vehicle-8b036109270b57e64c65.webp",
+        "sha256": "8b036109270b57e64c65a2091d72ec2f1b33aa4dd3701759e22d318545d21313",
+        "role": "vehicle"
+      }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "bmw-640-2017-11791221331078489",
+        "sourceValue": 213700,
+        "sourceUnit": "km",
+        "canonicalKm": 213700
+      }
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

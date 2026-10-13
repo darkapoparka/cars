@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-input-mapping",
+  "dealer": "grand-auto-varna",
+  "inputs": {
+    "facts": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/grand-auto-varna/facts.json",
+      "sha256": "583f3e2a4e1621d63fba7dbd4f56dcd42616984203d7ddc831483a5925613c62"
+    },
+    "stock": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/grand-auto-varna/stock.json",
+      "sha256": "665e0f3e26aeb4d291b754484fbf5aeb89832a4e0abc4a3fc8847b6af7f129e8"
+    },
+    "locale": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/grand-auto-varna/locale.json",
+      "sha256": "0a7eca13f93889d3dd46947dcb53b26b145093b78d5d51808b4ebe918cfc9ef6"
+    },
+    "branding": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/grand-auto-varna/branding.json",
+      "sha256": "e8f2b60115eb8bf1875c674a67c65f2019a6341fec780990f26a86576787b9c0"
+    }
+  },
+  "sources": [
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/grand-auto-varna/identity-repository-corrected-additional100.json",
+      "sha256": "46e101a75f94576fb6fbf2ed720377c5ab1c398f477799f1e8e85707f26eaf5b"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/grand-auto-varna/facts.json",
+      "sha256": "583f3e2a4e1621d63fba7dbd4f56dcd42616984203d7ddc831483a5925613c62"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/grand-auto-varna/stock.json",
+      "sha256": "665e0f3e26aeb4d291b754484fbf5aeb89832a4e0abc4a3fc8847b6af7f129e8"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/grand-auto-varna/locale.json",
+      "sha256": "0a7eca13f93889d3dd46947dcb53b26b145093b78d5d51808b4ebe918cfc9ef6"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/grand-auto-varna/branding.json",
+      "sha256": "e8f2b60115eb8bf1875c674a67c65f2019a6341fec780990f26a86576787b9c0"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/grand-auto-varna/media/11782822293283975-1.webp",
+      "sha256": "e225f014380121aede5db424e7e4caa6d56c2e39a1c85a469fdd272b97b753ec"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/grand-auto-varna/media/11782822293283975-2.webp",
+      "sha256": "cd31771f0fe0449d1292fc7493d237efb3ad2be99611854c25167cb927bcc3a6"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/grand-auto-varna/copy-review-additional100.json",
+      "sha256": "ab171b130490c623cf7911c65da36357764a422c6b4365e3fd1f54e5a80f6941"
+    }
+  ]
+}

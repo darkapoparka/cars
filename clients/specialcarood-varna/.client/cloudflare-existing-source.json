@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "dealer": "specialcarood-varna",
+  "kind": "personalized-source-candidate-not-an-approved-release",
+  "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+  "candidateSourceDigest": "7ea4f00166b7a5cd70673a5c957aa029bea9b4f4623e63d411d63df4d3c83b91",
+  "qualificationContextPath": ".client/native-qualification-context.json",
+  "qualificationContextSha256": "c5546f091e0ba53ff1541ca390941f4f8baaa30408b06c76688d19296ed4153b",
+  "qualificationLockPath": ".client/native-qualification-lock.json",
+  "qualificationLockSha256": "c28d29acdf39709d38737a972eeb2a1d000cfb1cd96de587c38effd764386ac1",
+  "sourceDeltaReview": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
+    "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975",
+    "reviewedAt": "2026-10-11T21:04:02.173Z"
+  },
+  "nativeApproval": false,
+  "hostedApproval": false
+}

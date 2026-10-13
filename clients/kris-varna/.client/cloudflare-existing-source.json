@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "dealer": "kris-varna",
+  "kind": "personalized-source-candidate-not-an-approved-release",
+  "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+  "candidateSourceDigest": "66a8b495ef033d7847bfd9c45eebe142b3b3c91960f6877e23cbf971cb80098a",
+  "qualificationContextPath": ".client/native-qualification-context.json",
+  "qualificationContextSha256": "6a69b15900b92b143857cf821449b0d27cad414c5d7fa5f16f47ca809f4e2f3d",
+  "qualificationLockPath": ".client/native-qualification-lock.json",
+  "qualificationLockSha256": "c28d29acdf39709d38737a972eeb2a1d000cfb1cd96de587c38effd764386ac1",
+  "sourceDeltaReview": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
+    "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975",
+    "reviewedAt": "2026-10-11T21:04:02.173Z"
+  },
+  "nativeApproval": false,
+  "hostedApproval": false
+}

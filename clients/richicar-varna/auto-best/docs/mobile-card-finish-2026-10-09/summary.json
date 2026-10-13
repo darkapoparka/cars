@@ -1,0 +1,31 @@
+{
+  "copy": {
+    "bg": [
+      "Нашите услуги",
+      "За вашата кола",
+      "Виж всички"
+    ],
+    "en": [
+      "Our services",
+      "For your car",
+      "View all"
+    ]
+  },
+  "mobilePrice": {
+    "before": "24px/600",
+    "after": "20px/600",
+    "title": "16px/500"
+  },
+  "mobileCases": 40,
+  "desktopCases": 16,
+  "liveCases": 4,
+  "cardSmokeCases": 6,
+  "compilerCheck": "0 errors, 0 warnings",
+  "build": "passed",
+  "policyTests": 7,
+  "committedSource": {
+    "sourceFiles": 174,
+    "componentsCompiled": 98,
+    "errors": []
+  }
+}

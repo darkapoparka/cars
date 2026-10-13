@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "client": "bavaro-varna",
+  "templateKey": "mobile",
+  "templateVersion": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+  "createdAt": "2026-10-13T07:57:05.536Z",
+  "state": "personalized-needs-build",
+  "selectedHome": "main",
+  "availableHomes": [
+    {
+      "id": "main",
+      "route": "/"
+    }
+  ],
+  "offeredHomes": [],
+  "publicUrl": null,
+  "qa": {
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
+  },
+  "crm": {
+    "leadId": null,
+    "demoProjectId": null,
+    "registered": false
+  },
+  "templateSource": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/mobile",
+    "tree": "2b02829e157071e305bfb2dff10ef18e85c8a35e",
+    "digest": "4e858bd9dbd3ef5b52cd904c4ed97bbfdc0f4cfe02b5a3840580f38026b867a0",
+    "exportPolicy": "cars-source-v1"
+  },
+  "packaging": {
+    "version": "5",
+    "entry": "/variant-5/"
+  },
+  "workflowCommit": "a1a6bdbffc2bf8258c633d472ebdb3ada7b4f7c1",
+  "readyToPublish": false,
+  "hosting": {
+    "provider": "cloudflare",
+    "status": "not-deployed"
+  }
+}

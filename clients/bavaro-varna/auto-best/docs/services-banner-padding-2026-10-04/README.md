@@ -1,0 +1,5 @@
+# Services action padding — 4 October 2026
+
+The owner found the rounded services action's label too close to the edges. Its horizontal padding now uses the existing `--dn-space-3` (12px) token, replacing 6px. The shared pill radius, 28px painted height, medium text, full-card link and silver artwork stay the same. This is one CSS declaration in `MobileServicesOverview.svelte`; unrelated desktop/style/content drafts are preserved.
+
+Matched [before](before.jpg) and [after](after.jpg) screenshots use the original 355×884 viewport and 1401px scroll position. The card and illustration rectangles are identical. [Verification](verification.json) covers BG/EN at 280, 320 and 390px plus the native 355px view: action/supporting text stay on one line, the image stays 128px wide beside the copy, localized destinations remain correct, and there is no overflow or fresh-browser console error. CSS policy, tokens and a fresh production build passed. No full smoke suite, immutable release or dealer deployment is claimed.

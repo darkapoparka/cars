@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "dealer": "mgauto-varna",
+  "kind": "personalized-source-candidate-not-an-approved-release",
+  "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+  "candidateSourceDigest": "5588a894f56f864401b6be544025c94b661af59a666184ba609c551a470dadb3",
+  "qualificationContextPath": ".client/native-qualification-context.json",
+  "qualificationContextSha256": "41fbe04ba4b53f7e15432a8679be9d31ea04f0405e081fcae0c3af814d26855f",
+  "qualificationLockPath": ".client/native-qualification-lock.json",
+  "qualificationLockSha256": "c28d29acdf39709d38737a972eeb2a1d000cfb1cd96de587c38effd764386ac1",
+  "sourceDeltaReview": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
+    "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975",
+    "reviewedAt": "2026-10-11T21:04:02.173Z"
+  },
+  "nativeApproval": false,
+  "hostedApproval": false
+}

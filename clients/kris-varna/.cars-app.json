@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "dealer": "kris-varna",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/app",
+    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
+    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+  },
+  "appDigest": "50b4eff1289705502f303c43ca446aeaaed6b317c44c37e00572cdba5b2aa616",
+  "provenance": {
+    "schemaVersion": 1,
+    "dealer": "kris-varna",
+    "profile": "auto-best/src/lib/data/dealer-profile.json",
+    "profileSha256": "db248ca8f5a8fbb811fcacc61a15f5615e42d1467bcbfeb342eb16d971e82491",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "vehicles": 1,
+    "currency": "EUR",
+    "observedAt": "2026-10-11T11:49:54.429Z",
+    "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-light.png",
+        "output": "public/dealer-app/logo-light-14bc59680a55f36f0ef5.png",
+        "sha256": "14bc59680a55f36f0ef53c481b8785a84dcced03054b598bb8eacd1282c38877",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-dark.png",
+        "output": "public/dealer-app/logo-dark-53aca85aad73717d57fb.png",
+        "sha256": "53aca85aad73717d57fb47a741274bea22ac450fbce33ce9789f1c40b811d8bc",
+        "role": "logo-dark"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11789565203600472-2.webp",
+        "output": "public/dealer-app/vehicle-0f214ff98d5640b34284.webp",
+        "sha256": "0f214ff98d5640b34284478db9e7bbacb8c21146bda539dbef9eea5eeeb367b6",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11789565203600472-1.webp",
+        "output": "public/dealer-app/vehicle-4ad148373cb362222b7e.webp",
+        "sha256": "4ad148373cb362222b7e0ede6e86de0688eeda436a6f5ab6f30d21eec09bccff",
+        "role": "vehicle"
+      }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "scion-tc-2006-11789565203600472",
+        "sourceValue": 88550,
+        "sourceUnit": "km",
+        "canonicalKm": 88550
+      }
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

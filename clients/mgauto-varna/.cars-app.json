@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "dealer": "mgauto-varna",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/app",
+    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
+    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+  },
+  "appDigest": "04d35f87170beba4752a5f62220eefdef7a1c6797119a64ddb4868da7f4f5cfb",
+  "provenance": {
+    "schemaVersion": 1,
+    "dealer": "mgauto-varna",
+    "profile": "auto-best/src/lib/data/dealer-profile.json",
+    "profileSha256": "0f2f767a81df6e204938321a694df5fa8f857891fc0bca03f701c46be0240deb",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "vehicles": 1,
+    "currency": "EUR",
+    "observedAt": "2026-10-11T11:54:03.435Z",
+    "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-light.png",
+        "output": "public/dealer-app/logo-light-084603f53ba72df4bc28.png",
+        "sha256": "084603f53ba72df4bc28c17b33d22ff43c01dc903f5a79992dd8b8c00f996190",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-dark.png",
+        "output": "public/dealer-app/logo-dark-070dbab2c2d7c7527fbc.png",
+        "sha256": "070dbab2c2d7c7527fbc0c4606065eea213611475843c6ce839aa287b15df8d1",
+        "role": "logo-dark"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11730027667237293-2.webp",
+        "output": "public/dealer-app/vehicle-1a2887101365de827554.webp",
+        "sha256": "1a2887101365de827554138a1ba32dde7aa7416982661e519493203a1eafc549",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11730027667237293-1.webp",
+        "output": "public/dealer-app/vehicle-0ab8dc224055bf3dc319.webp",
+        "sha256": "0ab8dc224055bf3dc319ef6f9f10a753eb557ae61b0ac1091be647c9b2d2c74b",
+        "role": "vehicle"
+      }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "peugeot-2008-2018-11730027667237293",
+        "sourceValue": 38969,
+        "sourceUnit": "km",
+        "canonicalKm": 38969
+      }
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

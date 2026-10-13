@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "dealer": "electricauto-varna",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/app",
+    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
+    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+  },
+  "appDigest": "1a68c5e40fd2f78d7db9b5f58d3979f4318282458ae4c9343d1f8aa6af122efc",
+  "provenance": {
+    "schemaVersion": 1,
+    "dealer": "electricauto-varna",
+    "profile": "auto-best/src/lib/data/dealer-profile.json",
+    "profileSha256": "68eabc940e62ca0912b1895974c4e77b31ff7a030e18ef370283a2feff9d0615",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "vehicles": 1,
+    "currency": "EUR",
+    "observedAt": "2026-10-11T11:49:53.122Z",
+    "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-light.png",
+        "output": "public/dealer-app/logo-light-b9869448e2d0790bb353.png",
+        "sha256": "b9869448e2d0790bb353194b1ed75e3b888c08e719ff64c87548170d2092aa7e",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-dark.png",
+        "output": "public/dealer-app/logo-dark-6bc4776ef76e567ffad8.png",
+        "sha256": "6bc4776ef76e567ffad84c98fe95c49c7af6caae5448d1fa8d53dea9e5f67dc1",
+        "role": "logo-dark"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11743226761008533-1.webp",
+        "output": "public/dealer-app/vehicle-818222f0ef548903dcf3.webp",
+        "sha256": "818222f0ef548903dcf343287a278f24e7fdf6d10725082c64e417fe5243fad1",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11743226761008533-2.webp",
+        "output": "public/dealer-app/vehicle-b5c36af170d70b5404a8.webp",
+        "sha256": "b5c36af170d70b5404a86c0372c40bf4807857dbb919cce043e32436e07ca3c5",
+        "role": "vehicle"
+      }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "tesla-model-s-2018-11743226761008533",
+        "sourceValue": 133000,
+        "sourceUnit": "km",
+        "canonicalKm": 133000
+      }
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

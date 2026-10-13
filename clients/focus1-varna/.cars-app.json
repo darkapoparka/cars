@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "dealer": "focus1-varna",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/app",
+    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
+    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+  },
+  "appDigest": "db29996ee7aad347205800bb921c1fbbd4d335f7dab3725c5446c34008144115",
+  "provenance": {
+    "schemaVersion": 1,
+    "dealer": "focus1-varna",
+    "profile": "auto-best/src/lib/data/dealer-profile.json",
+    "profileSha256": "b670b21443b0bae35497fbfce41830ea7ee83d98e719ad542eb203ee349b049b",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "vehicles": 1,
+    "currency": "EUR",
+    "observedAt": "2026-10-11T11:49:54.704Z",
+    "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-light.png",
+        "output": "public/dealer-app/logo-light-8f7be63067c5741974b5.png",
+        "sha256": "8f7be63067c5741974b5938d58a17e2f91493c0cb3bec8e8d2745c6efc1b18fc",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-dark.png",
+        "output": "public/dealer-app/logo-dark-60a4dfd26c68c6836bcd.png",
+        "sha256": "60a4dfd26c68c6836bcdb7591b715bd88912c3d009de0a55b6e75f2c5cfac9b3",
+        "role": "logo-dark"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11735043947455415-2.webp",
+        "output": "public/dealer-app/vehicle-ca579d45ee6ef0de1cc5.webp",
+        "sha256": "ca579d45ee6ef0de1cc50d3e8e3acc8c21d84a598b5e0e79ce95dbed016a25fa",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11735043947455415-1.webp",
+        "output": "public/dealer-app/vehicle-6de24bcf128a7c365fe4.webp",
+        "sha256": "6de24bcf128a7c365fe49cfaabc21d2a541207704598357b4283e62e2a9282ec",
+        "role": "vehicle"
+      }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "vw-golf-2015-11735043947455415",
+        "sourceValue": 131000,
+        "sourceUnit": "km",
+        "canonicalKm": 131000
+      }
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

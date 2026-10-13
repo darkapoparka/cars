@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "dealer": "grand-auto-varna",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/app",
+    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
+    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+  },
+  "appDigest": "6854d65be54e5c09ca1b897034e904541ac6f7483df1087e8ee84610bf0eb49b",
+  "provenance": {
+    "schemaVersion": 1,
+    "dealer": "grand-auto-varna",
+    "profile": "auto-best/src/lib/data/dealer-profile.json",
+    "profileSha256": "96f31b5d86a98ed26c53459bee9c254f3966c77cf7ea9cdae6184a1fe06f5ea1",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "vehicles": 1,
+    "currency": "EUR",
+    "observedAt": "2026-10-11T11:54:02.600Z",
+    "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-light.png",
+        "output": "public/dealer-app/logo-light-e307c69d3e326439a89e.png",
+        "sha256": "e307c69d3e326439a89ef02a244c06fa3b22d6ef462d9df3746b297375dba4b9",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-dark.png",
+        "output": "public/dealer-app/logo-dark-e80123a8690c61007e90.png",
+        "sha256": "e80123a8690c61007e900035c1a2992a428dc6eb895df774189c1036b7e22797",
+        "role": "logo-dark"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11782822293283975-2.webp",
+        "output": "public/dealer-app/vehicle-cd31771f0fe0449d1292.webp",
+        "sha256": "cd31771f0fe0449d1292fc7493d237efb3ad2be99611854c25167cb927bcc3a6",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11782822293283975-1.webp",
+        "output": "public/dealer-app/vehicle-e225f014380121aede5d.webp",
+        "sha256": "e225f014380121aede5db424e7e4caa6d56c2e39a1c85a469fdd272b97b753ec",
+        "role": "vehicle"
+      }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "vw-jetta-2013-11782822293283975",
+        "sourceValue": 187000,
+        "sourceUnit": "km",
+        "canonicalKm": 187000
+      }
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}
