@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-input-mapping",
+  "dealer": "biemaauto-varna",
+  "inputs": {
+    "facts": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/biemaauto-varna/facts.json",
+      "sha256": "b5805dd6ddba20a4565cfe186e1f67814d1749c01ef3b9ad64f0c25cb6578cb1"
+    },
+    "stock": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/biemaauto-varna/stock.json",
+      "sha256": "e955cc94da408a0a0317c1a69782f2a4ca21a6e1a23475b84965bc1aef3b32d5"
+    },
+    "locale": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/biemaauto-varna/locale.json",
+      "sha256": "269d8206855348b5a64bede437cc1d725277893ed243ab5ff3f0e054b7913778"
+    },
+    "branding": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/biemaauto-varna/branding.json",
+      "sha256": "cf8277a4f75c5781b399ecfba7ef592b6dc9e17628896fe42d025ae68f37ff29"
+    }
+  },
+  "sources": [
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/biemaauto-varna/facts.json",
+      "sha256": "b5805dd6ddba20a4565cfe186e1f67814d1749c01ef3b9ad64f0c25cb6578cb1"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/biemaauto-varna/stock.json",
+      "sha256": "e955cc94da408a0a0317c1a69782f2a4ca21a6e1a23475b84965bc1aef3b32d5"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/biemaauto-varna/locale.json",
+      "sha256": "269d8206855348b5a64bede437cc1d725277893ed243ab5ff3f0e054b7913778"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/biemaauto-varna/branding.json",
+      "sha256": "cf8277a4f75c5781b399ecfba7ef592b6dc9e17628896fe42d025ae68f37ff29"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/biemaauto-varna/identity-repository-corrected-additional100.json",
+      "sha256": "897a00f8144e6062218e43d137e9489bb32b02253467670c76cc6bfcaf9b4962"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/biemaauto-varna/copy-review-additional100.json",
+      "sha256": "e4159af7095f2f4f24b62a056965fab304edf06874b9688e53c2ab7c0ae7dc66"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/biemaauto-varna/media/11789634848837677-1.webp",
+      "sha256": "13e48fb0f109dc0297c1190dc98f73afb317b1da69d6af2a55dec655a13bee3f"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/biemaauto-varna/media/11789634848837677-2.webp",
+      "sha256": "a3c7565dea5b89435dfbcf774721191ac4b084cd9d9a7bca4bbe14331778daaa"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/biemaauto-varna/branding/master.png",
+      "sha256": "dc84d9283929362bd17d0b765c1ab219eb3c093ccb52e4d3c05ada2ddfcb37ce"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/biemaauto-varna/branding/onLight.png",
+      "sha256": "dc84d9283929362bd17d0b765c1ab219eb3c093ccb52e4d3c05ada2ddfcb37ce"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/biemaauto-varna/branding/onDark.png",
+      "sha256": "8bdc2cbb881d25250f6e12b7147acb10f738247da498080ff6d182dbb01de986"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/biemaauto-varna/branding/onAccent.png",
+      "sha256": "8bdc2cbb881d25250f6e12b7147acb10f738247da498080ff6d182dbb01de986"
+    }
+  ]
+}
