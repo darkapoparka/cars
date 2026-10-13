@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "dealer": "biemaauto-varna",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/app",
+    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
+    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+  },
+  "appDigest": "e54c7baa81e8adacca525502dbc699bdd7c9b48e2ce93b24d3ea5cd4d1bd7d13",
+  "provenance": {
+    "schemaVersion": 1,
+    "dealer": "biemaauto-varna",
+    "profile": "auto-best/src/lib/data/dealer-profile.json",
+    "profileSha256": "c092be19a690488a38b1c36d8f5ce143ef28406931f437288267769941d8ca77",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "vehicles": 1,
+    "currency": "EUR",
+    "observedAt": "2026-10-11T11:47:28.898Z",
+    "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-light.png",
+        "output": "public/dealer-app/logo-light-dc84d9283929362bd17d.png",
+        "sha256": "dc84d9283929362bd17d0b765c1ab219eb3c093ccb52e4d3c05ada2ddfcb37ce",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-dark.png",
+        "output": "public/dealer-app/logo-dark-8bdc2cbb881d25250f6e.png",
+        "sha256": "8bdc2cbb881d25250f6e12b7147acb10f738247da498080ff6d182dbb01de986",
+        "role": "logo-dark"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11789634848837677-1.webp",
+        "output": "public/dealer-app/vehicle-13e48fb0f109dc0297c1.webp",
+        "sha256": "13e48fb0f109dc0297c1190dc98f73afb317b1da69d6af2a55dec655a13bee3f",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11789634848837677-2.webp",
+        "output": "public/dealer-app/vehicle-a3c7565dea5b89435dfb.webp",
+        "sha256": "a3c7565dea5b89435dfbcf774721191ac4b084cd9d9a7bca4bbe14331778daaa",
+        "role": "vehicle"
+      }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "mercedes-benz-cla-2022-11789634848837677",
+        "sourceValue": 189211,
+        "sourceUnit": "km",
+        "canonicalKm": 189211
+      }
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

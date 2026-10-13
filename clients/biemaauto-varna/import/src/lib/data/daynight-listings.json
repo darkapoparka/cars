@@ -1,0 +1,37 @@
+{
+  "fetchedAt": "2026-10-11",
+  "sources": {
+    "dealerInventory": "https://biemaauto.mobile.bg/",
+    "dealerContact": "https://biemaauto.mobile.bg/contacts"
+  },
+  "count": 1,
+  "listings": [
+    {
+      "badge": "ОБЯВА",
+      "category": "Комби",
+      "color": "",
+      "displacement": "",
+      "euroStandard": "",
+      "features": [],
+      "fuel": "Дизелов",
+      "gearbox": "Автоматична",
+      "href": "https://biemaauto.mobile.bg/obiava-11789634848837677-mercedes-benz-cla-180-cla180d",
+      "id": "11789634848837677",
+      "image": "/dealer-stock/11789634848837677-1.webp",
+      "location": "Варна",
+      "mileage": "189 211 км",
+      "mileageKnown": true,
+      "mileageValue": 189211,
+      "mileageUnit": "km",
+      "photoCount": "2",
+      "power": "115 к.с.",
+      "price": "18 500 €",
+      "priceBgn": "",
+      "production": "2022 г.",
+      "rawPriceText": "18 500 €",
+      "shortDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "title": "Mercedes-Benz CLA",
+      "vat": ""
+    }
+  ]
+}

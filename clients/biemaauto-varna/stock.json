@@ -1,0 +1,201 @@
+{
+  "schemaVersion": 1,
+  "kind": "dated-listing-snapshot",
+  "candidate": true,
+  "observedAt": "2026-10-11T11:47:28.898Z",
+  "sourceProfile": "https://biemaauto.mobile.bg/",
+  "sourcePageVisibleListingCount": 16,
+  "sourceProfileCountObservedAt": "2026-10-11T11:47:28.834Z",
+  "profileCountIsAvailableStock": false,
+  "profileCountIsClassifiedOrdinaryRetail": false,
+  "liveInventory": false,
+  "mediaPermission": "unconfirmed",
+  "localMediaReady": true,
+  "records": [
+    {
+      "id": "11789634848837677",
+      "sourceId": "11789634848837677",
+      "title": "Mercedes-Benz CLA",
+      "sourceTitleExact": "Mercedes-Benz CLA 180 CLA180d",
+      "make": "Mercedes-Benz",
+      "model": "CLA",
+      "modelExtraction": "literal make/model prefix from exact primary advert title; canonical market normalization and trim not asserted",
+      "year": 2022,
+      "productionMonth": 10,
+      "currency": "EUR",
+      "sourcePriceText": "18 500 €",
+      "priceVatNotice": "Не се начислява ДДС",
+      "sourceMileageText": "189211 км",
+      "fieldConflicts": [],
+      "body": "Комби",
+      "fuel": "Дизелов",
+      "transmission": "Автоматична",
+      "powerHp": 115,
+      "images": [
+        "/dealer-stock/11789634848837677-1.webp",
+        "/dealer-stock/11789634848837677-2.webp"
+      ],
+      "sourceUrl": "https://biemaauto.mobile.bg/obiava-11789634848837677-mercedes-benz-cla-180-cla180d",
+      "sourceHtmlSha256": "ebf3c63714bc0849de8128ea2b2442f76f0dd90d803bb0a67c8cba0460eb2050",
+      "sourcePublicationText": "Публикувана в 11:47 часа на 17.09.2026 год.",
+      "observedAt": "2026-10-11T11:47:28.898Z",
+      "availability": "unconfirmed",
+      "availabilityConfirmed": false,
+      "partsListing": false,
+      "conditionMarker": null,
+      "conditionIndependentlyConfirmed": false,
+      "arrivalNotice": null,
+      "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "mediaState": "not-collected; reviewed rights/reuse or explicit illustration decision pending",
+      "mediaPermission": "Not independently established",
+      "telHrefCandidates": [
+        "0878258953"
+      ],
+      "visibleSellerContact": "Контакти с продавача BIEMAAUТO 0878258953 0898670101",
+      "sellerPhoneMatchesPrimary": true,
+      "telHrefMatchesPrimary": true,
+      "sampleRole": "dated published vehicle advert; dealer availability, condition and media reuse require confirmation",
+      "retailReadyForAssembly": false,
+      "sourcePhotoUrls": [
+        "https://mobistatic1.focus.bg/mobile/photosorg/677/1/big1/11789634848837677_M4.webp",
+        "https://mobistatic1.focus.bg/mobile/photosorg/677/1/big1/11789634848837677_rM.webp",
+        "https://mobistatic1.focus.bg/mobile/photosorg/677/1/big1/11789634848837677_kS.webp",
+        "https://mobistatic1.focus.bg/mobile/photosorg/677/1/big1/11789634848837677_yn.webp",
+        "https://mobistatic1.focus.bg/mobile/photosorg/677/1/big1/11789634848837677_aS.webp",
+        "https://mobistatic1.focus.bg/mobile/photosorg/677/1/big1/11789634848837677_f4.webp",
+        "https://mobistatic1.focus.bg/mobile/photosorg/677/1/big1/11789634848837677_Yw.webp",
+        "https://mobistatic1.focus.bg/mobile/photosorg/677/1/big1/11789634848837677_ab.webp",
+        "https://mobistatic1.focus.bg/mobile/photosorg/677/1/big1/11789634848837677_ky.webp",
+        "https://mobistatic1.focus.bg/mobile/photosorg/677/1/big1/11789634848837677_GJ.webp",
+        "https://mobistatic1.focus.bg/mobile/photosorg/677/1/big1/11789634848837677_MW.webp",
+        "https://mobistatic1.focus.bg/mobile/photosorg/677/1/big1/11789634848837677_QT.webp"
+      ],
+      "sourcePhotoEvidence": {
+        "sourceId": "11789634848837677",
+        "sourceUrl": "https://biemaauto.mobile.bg/obiava-11789634848837677-mercedes-benz-cla-180-cla180d",
+        "observedAt": "2026-10-11T12:09:30.093Z",
+        "responseSha256": "fcc1e555fe392c5ce1222c5c3f478e8b29505a1fe00c18209f327184ded36710",
+        "association": "primary gallery URLs contain exact source listing ID",
+        "remoteBytesFetched": false
+      },
+      "sourceRecord": {
+        "id": "11789634848837677",
+        "sourceId": "11789634848837677",
+        "title": "Mercedes-Benz CLA",
+        "sourceTitleExact": "Mercedes-Benz CLA 180 CLA180d",
+        "make": "Mercedes-Benz",
+        "model": "CLA",
+        "modelExtraction": "literal make/model prefix from exact primary advert title; canonical market normalization and trim not asserted",
+        "year": 2022,
+        "productionMonth": 10,
+        "priceEur": 18500,
+        "currency": "EUR",
+        "sourcePriceText": "18 500 €",
+        "priceVatNotice": "Не се начислява ДДС",
+        "mileageKm": 189211,
+        "sourceMileageText": "189211 км",
+        "fieldConflicts": [],
+        "body": "Комби",
+        "fuel": "Дизелов",
+        "transmission": "Автоматична",
+        "powerHp": 115,
+        "images": [
+          "/assets/vehicles/11789634848837677/1.webp",
+          "/assets/vehicles/11789634848837677/2.webp"
+        ],
+        "sourceUrl": "https://biemaauto.mobile.bg/obiava-11789634848837677-mercedes-benz-cla-180-cla180d",
+        "sourceHtmlSha256": "ebf3c63714bc0849de8128ea2b2442f76f0dd90d803bb0a67c8cba0460eb2050",
+        "sourcePublicationText": "Публикувана в 11:47 часа на 17.09.2026 год.",
+        "observedAt": "2026-10-11T11:47:28.898Z",
+        "availability": "unconfirmed",
+        "availabilityConfirmed": false,
+        "partsListing": false,
+        "conditionMarker": null,
+        "conditionIndependentlyConfirmed": false,
+        "arrivalNotice": null,
+        "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+        "mediaState": "not-collected; reviewed rights/reuse or explicit illustration decision pending",
+        "mediaPermission": "Not independently established",
+        "telHrefCandidates": [
+          "0878258953"
+        ],
+        "visibleSellerContact": "Контакти с продавача BIEMAAUТO 0878258953 0898670101",
+        "sellerPhoneMatchesPrimary": true,
+        "telHrefMatchesPrimary": true,
+        "sampleRole": "dated published vehicle advert; dealer availability, condition and media reuse require confirmation",
+        "retailReadyForAssembly": false,
+        "sourcePhotoUrls": [
+          "https://mobistatic1.focus.bg/mobile/photosorg/677/1/big1/11789634848837677_M4.webp",
+          "https://mobistatic1.focus.bg/mobile/photosorg/677/1/big1/11789634848837677_rM.webp",
+          "https://mobistatic1.focus.bg/mobile/photosorg/677/1/big1/11789634848837677_kS.webp",
+          "https://mobistatic1.focus.bg/mobile/photosorg/677/1/big1/11789634848837677_yn.webp",
+          "https://mobistatic1.focus.bg/mobile/photosorg/677/1/big1/11789634848837677_aS.webp",
+          "https://mobistatic1.focus.bg/mobile/photosorg/677/1/big1/11789634848837677_f4.webp",
+          "https://mobistatic1.focus.bg/mobile/photosorg/677/1/big1/11789634848837677_Yw.webp",
+          "https://mobistatic1.focus.bg/mobile/photosorg/677/1/big1/11789634848837677_ab.webp",
+          "https://mobistatic1.focus.bg/mobile/photosorg/677/1/big1/11789634848837677_ky.webp",
+          "https://mobistatic1.focus.bg/mobile/photosorg/677/1/big1/11789634848837677_GJ.webp",
+          "https://mobistatic1.focus.bg/mobile/photosorg/677/1/big1/11789634848837677_MW.webp",
+          "https://mobistatic1.focus.bg/mobile/photosorg/677/1/big1/11789634848837677_QT.webp"
+        ],
+        "sourcePhotoEvidence": {
+          "sourceId": "11789634848837677",
+          "sourceUrl": "https://biemaauto.mobile.bg/obiava-11789634848837677-mercedes-benz-cla-180-cla180d",
+          "observedAt": "2026-10-11T12:09:30.093Z",
+          "responseSha256": "fcc1e555fe392c5ce1222c5c3f478e8b29505a1fe00c18209f327184ded36710",
+          "association": "primary gallery URLs contain exact source listing ID",
+          "remoteBytesFetched": false
+        }
+      },
+      "priceAmount": 18500,
+      "mileageValue": 189211,
+      "mileageUnit": "km"
+    }
+  ],
+  "localMediaHydration": {
+    "candidateOnly": true,
+    "technicalRasterPresent": true,
+    "rightsApproved": false,
+    "availabilityConfirmed": false,
+    "assets": [
+      {
+        "publicPath": "/assets/vehicles/11789634848837677/1.webp",
+        "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/677/1/big1/11789634848837677_M4.webp",
+        "sha256": "13e48fb0f109dc0297c1190dc98f73afb317b1da69d6af2a55dec655a13bee3f",
+        "bytes": 257638,
+        "downloadObservedAt": "2026-10-11T12:20:34.425Z"
+      },
+      {
+        "publicPath": "/assets/vehicles/11789634848837677/2.webp",
+        "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/677/1/big1/11789634848837677_rM.webp",
+        "sha256": "a3c7565dea5b89435dfbcf774721191ac4b084cd9d9a7bca4bbe14331778daaa",
+        "bytes": 230928,
+        "downloadObservedAt": "2026-10-11T12:20:34.629Z"
+      }
+    ],
+    "sourceStockSha256": "75f13072195972afee0aa6c989c897d2138bb4b46fa928aeccdb8ffed681c4f6"
+  },
+  "dealer": "biemaauto-varna",
+  "sourceKind": "dated-marketplace-listing-sample",
+  "sourceStock": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/biemaauto-varna/source/stock.json",
+    "sha256": "3f9e27bac29962d75e9ba8db3d88b1db1f981416621f50781fe118a98ed9ba7b"
+  },
+  "sourceRecordsUnchanged": true,
+  "mediaPathMappings": [
+    {
+      "sourcePublicPath": "/assets/vehicles/11789634848837677/1.webp",
+      "publicPath": "/dealer-stock/11789634848837677-1.webp",
+      "sha256": "13e48fb0f109dc0297c1190dc98f73afb317b1da69d6af2a55dec655a13bee3f",
+      "bytes": 257638,
+      "sourceId": "11789634848837677"
+    },
+    {
+      "sourcePublicPath": "/assets/vehicles/11789634848837677/2.webp",
+      "publicPath": "/dealer-stock/11789634848837677-2.webp",
+      "sha256": "a3c7565dea5b89435dfbcf774721191ac4b084cd9d9a7bca4bbe14331778daaa",
+      "bytes": 230928,
+      "sourceId": "11789634848837677"
+    }
+  ]
+}
