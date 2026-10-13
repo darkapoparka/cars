@@ -3,30 +3,18 @@
   "kind": "cars-qualified-private-source-export",
   "repository": "darkapoparka/cars",
   "reviewed": true,
-  "reviewedAt": "2026-10-12T18:08:45.505Z",
-  "sourceCommit": "415a5a9192f2a6aa90997c8e5b65399b84a83e74",
-  "runId": 38281667181,
+  "reviewedAt": "2026-10-13T03:06:00Z",
+  "sourceCommit": "af263d4fd625f4238fcd00b54d668a0b923e68be",
+  "runId": 38339275170,
   "attempt": 1,
   "applicationBuildsRepeated": 0,
   "sourcePreparationRepeated": false,
-  "packagingRevision": 4,
-  "previousFailedPackagingRun": 38290620928,
-  "purpose": "Retry failed private-source sealing after a reproduced sparse-checkout export-index failure was fixed with command-scoped Git configuration. Preserve canonical sparse checkout/index and all source admission gates. Reuse original successful native artifacts, locks and source trees; do not compile, deploy or regenerate dealers.",
+  "purpose": "Seal full Biema private source against the original successful seven native targets. Preserve the original admitted client tree, exact dependency locks and provenance; do not regenerate, recompile or upload a Worker. Batch3 owns the resulting dealer delivery.",
   "dealers": [
     {
-      "slug": "centralauto-varna",
-      "repository": "darkapoparka/cars-centralauto-varna",
-      "sourceTree": "6e62f26a7362e348b4debdf867b50c6e1352172f"
-    },
-    {
-      "slug": "kalchev-varna",
-      "repository": "darkapoparka/cars-kalchev-varna",
-      "sourceTree": "829cdaefd7247fb4f59de82ffb835a9700d3d0a7"
-    },
-    {
-      "slug": "sevicar-varna",
-      "repository": "darkapoparka/cars-sevicar-varna",
-      "sourceTree": "8919afe09fdb009514ca793c35502748613c7b88"
+      "slug": "biemaauto-varna",
+      "repository": "darkapoparka/cars-biemaauto-varna",
+      "sourceTree": "19b857227e7981f9fce11b0f7eef801a1c58d24a"
     }
   ]
 }
