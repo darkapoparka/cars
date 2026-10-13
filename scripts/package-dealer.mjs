@@ -1,4 +1,5 @@
 import {assertLeadBranding} from './publishing/lead-branding.mjs';
+import {assertRetainedDealerLogoSurfaces} from './publishing/logo-surface-bindings.mjs';
 import {applyAutoBestCardLayout} from './publishing/auto-best-card-layout.mjs';
 import { APP_PACKAGING_VERSION, baseNativeManifest, assertAppVariant, appendAppService } from './publishing/app-variant.mjs';
 import { assertCarsOwnedDealer } from './lib/dealer-source.mjs';
@@ -241,6 +242,7 @@ async function prepare({ root = ROOT, source, manifest, sourceCommit, guidance, 
     const bytes = Buffer.from(content);
     files.set(name, preserveExtraBytes(name) ? bytes : normalized(bytes));
   }
+  assertRetainedDealerLogoSurfaces(files,manifest);
   if (native) {
     if (nativeReleases) files = adoptNativeSource(files, baseNativeManifest(manifest), nativeReleases,{root});
     else { assertNativeAdoption(files, baseNativeManifest(manifest),{root}); files = applyNativeMounts(files, baseNativeManifest(manifest)); assertNativeAdoption(files, baseNativeManifest(manifest),{root}); }

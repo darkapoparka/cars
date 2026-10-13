@@ -10,6 +10,7 @@ import { applyRefreshAdapter } from '../lib/client-refresh-adapters.mjs';
 import {buildModernDealerInventoryCopy} from '../lib/modern-dealer-inventory-copy.mjs';
 import { restoreTemplatePalette, templatePaletteConfigPath } from '../lib/client-refresh-presentation.mjs';
 import { applyExtendedRefreshAdapter, sealExtendedVariant, EXTENDED_VARIANT_RECEIPTS, retainDealerVariantAssets } from '../lib/client-refresh-six.mjs';
+import {applyRetainedLogoSurfaceBindings,MOBILE_LOGO_HEADER} from '../publishing/logo-surface-bindings.mjs';
 import { validatePackagingManifest, packageRetainsPath } from '../package-dealer.mjs';
 import { applyMounts } from '../publishing/mounts.mjs';
 import { adoptNativeSource, adoptNativeQualification, applyNativeMounts } from '../publishing/native-mounts.mjs';
@@ -776,6 +777,13 @@ async function addNativeAdoption(plan, candidateDirectory, dealerRoot, lock, {ca
   addLegacyDetailUpgrade({files,dealerRoot,manifest:candidateManifest,pins:plan.pins,registeredAdoption});
   plan.manifest=candidateManifest;
   validatePackagingManifest(candidateManifest);
+  // Retained identity is bound before source seals, independently of presentation opt-in.
+  const retainedLogoFamilies=['modern','mobile'].filter(key=>plan.pins[key]);
+  const retainedLogoChanges=[];
+  if(candidateManifest.sourceOwnership!=='independent-repository' && candidateManifest.packaging.version===SIX_DESIGN_PACKAGING_CANDIDATE && retainedLogoFamilies.length && !files.has('.cars-branding.json')) {
+    const logoProfile=registeredAdoption?.profile ?? loadDealerProfile(dealerRoot,candidateManifest.slug);
+    if(logoProfile.logoContract)retainedLogoChanges.push(...applyRetainedLogoSurfaceBindings(files,logoProfile.logoContract,{families:retainedLogoFamilies}));
+  }
   if(plan.factualRefresh&&factualAppProvenance)sealAppDealerSource({files,manifest:candidateManifest,provenance:factualAppProvenance});
   const baseManifest = baseNativeManifest(candidateManifest);
   const selectedNative = baseManifest.variants.some(({key})=>plan.pins[key]);
@@ -814,6 +822,7 @@ async function addNativeAdoption(plan, candidateDirectory, dealerRoot, lock, {ca
         contentPaths:key==='mobile' ? ['mobile/src/lib/showroom-config.ts','mobile/src/lib/catalog.ts','mobile/src/lib/dealer-inventory.json','mobile/src/lib/dealers.ts'] :
           ['karento-best/src/lib/content.ts','karento-best/src/lib/data/vehicles.ts','karento-best/src/lib/data/vehicle-listing.ts','karento-best/src/lib/data/dealer-vehicles.json']
       });
+      if(key==='mobile'&&retainedLogoChanges.includes(MOBILE_LOGO_HEADER))adaptation.contentPaths=[...new Set([...adaptation.contentPaths,MOBILE_LOGO_HEADER])];
       sealExtendedVariant({files:adopted,key,manifest:candidateManifest,profile,adaptation});
     }
   }
