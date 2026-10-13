@@ -209,15 +209,20 @@
     },
     {
       "slug": "avtoborsa-mania",
-      "name": "╨É╨Æ╨ó╨₧╨æ╨₧╨á╨í╨É ╨£╨É╨¥╨ÿ╨»",
+      "name": "АВТОБОРСА МАНИЯ",
       "path": "clients/avtoborsa-mania",
       "variants": [
         "auto-best",
         "modern",
-        "carwow"
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
       ],
       "sourceState": "source-on-main",
-      "reviewState": "unknown"
+      "reviewState": "source-reviewed-native-pending",
+      "repository": "darkapoparka/cars-avtoborsa-mania",
+      "dealerId": "avtoborsa-mania"
     },
     {
       "slug": "car-finder-360",
@@ -271,15 +276,20 @@
     },
     {
       "slug": "chernomore-varna",
-      "name": "╨É╨▓╤é╨╛╤ü╨░╨╗╨╛╨╜ ╨º╨╡╤Ç╨╜╨╛ ╨╝╨╛╤Ç╨╡",
+      "name": "Черно море",
       "path": "clients/chernomore-varna",
       "variants": [
         "auto-best",
         "modern",
-        "carwow"
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
       ],
       "sourceState": "source-on-main",
-      "reviewState": "unknown"
+      "reviewState": "source-reviewed-native-pending",
+      "repository": "darkapoparka/cars-chernomore-varna",
+      "dealerId": "chernomore-varna"
     },
     {
       "slug": "danger-auto",
@@ -363,15 +373,20 @@
     },
     {
       "slug": "evrocar-varna-09",
-      "name": "evrocar-varna-09",
+      "name": "ЕВРОКАР ВАРНА 09",
       "path": "clients/evrocar-varna-09",
       "variants": [
         "auto-best",
         "modern",
-        "carwow"
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
       ],
       "sourceState": "source-on-main",
-      "reviewState": "unknown"
+      "reviewState": "source-reviewed-native-pending",
+      "repository": "darkapoparka/cars-evrocar-varna-09",
+      "dealerId": "evrocar-varna-09"
     },
     {
       "slug": "excellent-cars",
@@ -393,22 +408,32 @@
       "variants": [
         "auto-best",
         "modern",
-        "carwow"
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
       ],
       "sourceState": "source-on-main",
-      "reviewState": "unknown"
+      "reviewState": "source-reviewed-native-pending",
+      "repository": "darkapoparka/cars-exclusive-auto-varna",
+      "dealerId": "exclusive-auto-varna"
     },
     {
       "slug": "extra-car-sm",
-      "name": "╨ò╨Ü╨í╨ó╨á╨É ╨Ü╨É╨á-╨í╨£",
+      "name": "ЕКСТРА КАР-СМ",
       "path": "clients/extra-car-sm",
       "variants": [
         "auto-best",
         "modern",
-        "carwow"
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
       ],
       "sourceState": "source-on-main",
-      "reviewState": "unknown"
+      "reviewState": "source-reviewed-native-pending",
+      "repository": "darkapoparka/cars-extra-car-sm",
+      "dealerId": "extra-car-sm"
     },
     {
       "slug": "f1-auto-vratsa",
@@ -862,15 +887,20 @@
     },
     {
       "slug": "prestige-varna",
-      "name": "╨É╨▓╤é╨╛╤ü╨░╨╗╨╛╨╜ ╨ƒ╨á╨ò╨í╨ó╨ÿ╨û",
+      "name": "Автосалон ПРЕСТИЖ",
       "path": "clients/prestige-varna",
       "variants": [
         "auto-best",
         "modern",
-        "carwow"
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
       ],
       "sourceState": "source-on-main",
-      "reviewState": "unknown"
+      "reviewState": "source-reviewed-native-pending",
+      "repository": "darkapoparka/cars-prestige-varna",
+      "dealerId": "prestige-varna"
     },
     {
       "slug": "priselci",
@@ -900,15 +930,20 @@
     },
     {
       "slug": "rqs-auto-team",
-      "name": "rqs-auto-team",
+      "name": "R.Q.S. Auto – Team",
       "path": "clients/rqs-auto-team",
       "variants": [
         "auto-best",
         "modern",
-        "carwow"
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
       ],
       "sourceState": "source-on-main",
-      "reviewState": "unknown"
+      "reviewState": "source-reviewed-native-pending",
+      "repository": "darkapoparka/cars-rqs-auto-team",
+      "dealerId": "rqs-auto-team"
     },
     {
       "slug": "sevierville-import-truck-center",
@@ -936,15 +971,20 @@
     },
     {
       "slug": "sprint-auto-varna",
-      "name": "sprint-auto-varna",
+      "name": "Спринт ауто",
       "path": "clients/sprint-auto-varna",
       "variants": [
         "auto-best",
         "modern",
-        "carwow"
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
       ],
       "sourceState": "source-on-main",
-      "reviewState": "unknown"
+      "reviewState": "source-reviewed-native-pending",
+      "repository": "darkapoparka/cars-sprint-auto-varna",
+      "dealerId": "sprint-auto-varna"
     },
     {
       "slug": "stenli-car",
@@ -1001,15 +1041,20 @@
     },
     {
       "slug": "tesi-car-varna",
-      "name": "╨ó╨╡╤ü╨╕ ╨Ü╨░╤Ç",
+      "name": "Теси Кар",
       "path": "clients/tesi-car-varna",
       "variants": [
         "auto-best",
         "modern",
-        "carwow"
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
       ],
-      "sourceState": "source-present",
-      "reviewState": "unknown"
+      "sourceState": "source-on-main",
+      "reviewState": "source-reviewed-native-pending",
+      "repository": "darkapoparka/cars-tesi-car-varna",
+      "dealerId": "tesi-car-varna"
     },
     {
       "slug": "texas-drive-auto",

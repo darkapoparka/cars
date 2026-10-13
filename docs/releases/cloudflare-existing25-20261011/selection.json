@@ -877,6 +877,78 @@
       "sourceMode": "existing-migration",
       "workerName": "cars-sunny-varna",
       "publicOrigin": "https://cars-sunny-varna.darkapoparka1.workers.dev"
+    },
+    {
+      "slug": "chernomore-varna",
+      "dealerId": "chernomore-varna",
+      "proposedRepository": "darkapoparka/cars-chernomore-varna",
+      "sourceMode": "existing-migration",
+      "workerName": "cars-chernomore-varna",
+      "publicOrigin": "https://cars-chernomore-varna.darkapoparka1.workers.dev"
+    },
+    {
+      "slug": "exclusive-auto-varna",
+      "dealerId": "exclusive-auto-varna",
+      "proposedRepository": "darkapoparka/cars-exclusive-auto-varna",
+      "sourceMode": "existing-migration",
+      "workerName": "cars-exclusive-auto-varna",
+      "publicOrigin": "https://cars-exclusive-auto-varna.darkapoparka1.workers.dev"
+    },
+    {
+      "slug": "rqs-auto-team",
+      "dealerId": "rqs-auto-team",
+      "proposedRepository": "darkapoparka/cars-rqs-auto-team",
+      "sourceMode": "existing-migration",
+      "workerName": "cars-rqs-auto-team",
+      "publicOrigin": "https://cars-rqs-auto-team.darkapoparka1.workers.dev"
+    },
+    {
+      "slug": "prestige-varna",
+      "dealerId": "prestige-varna",
+      "proposedRepository": "darkapoparka/cars-prestige-varna",
+      "sourceMode": "existing-migration",
+      "workerName": "cars-prestige-varna",
+      "publicOrigin": "https://cars-prestige-varna.darkapoparka1.workers.dev"
+    },
+    {
+      "slug": "evrocar-varna-09",
+      "dealerId": "evrocar-varna-09",
+      "proposedRepository": "darkapoparka/cars-evrocar-varna-09",
+      "sourceMode": "existing-migration",
+      "workerName": "cars-evrocar-varna-09",
+      "publicOrigin": "https://cars-evrocar-varna-09.darkapoparka1.workers.dev"
+    },
+    {
+      "slug": "sprint-auto-varna",
+      "dealerId": "sprint-auto-varna",
+      "proposedRepository": "darkapoparka/cars-sprint-auto-varna",
+      "sourceMode": "existing-migration",
+      "workerName": "cars-sprint-auto-varna",
+      "publicOrigin": "https://cars-sprint-auto-varna.darkapoparka1.workers.dev"
+    },
+    {
+      "slug": "extra-car-sm",
+      "dealerId": "extra-car-sm",
+      "proposedRepository": "darkapoparka/cars-extra-car-sm",
+      "sourceMode": "existing-migration",
+      "workerName": "cars-extra-car-sm",
+      "publicOrigin": "https://cars-extra-car-sm.darkapoparka1.workers.dev"
+    },
+    {
+      "slug": "avtoborsa-mania",
+      "dealerId": "avtoborsa-mania",
+      "proposedRepository": "darkapoparka/cars-avtoborsa-mania",
+      "sourceMode": "existing-migration",
+      "workerName": "cars-avtoborsa-mania",
+      "publicOrigin": "https://cars-avtoborsa-mania.darkapoparka1.workers.dev"
+    },
+    {
+      "slug": "tesi-car-varna",
+      "dealerId": "tesi-car-varna",
+      "proposedRepository": "darkapoparka/cars-tesi-car-varna",
+      "sourceMode": "existing-migration",
+      "workerName": "cars-tesi-car-varna",
+      "publicOrigin": "https://cars-tesi-car-varna.darkapoparka1.workers.dev"
     }
   ],
   "workerIdentities": {
