@@ -1,8 +1,50 @@
 {
   "schemaVersion": 1,
-  "mode": "new-approved",
-  "newSourceRequest": {
-    "path": "docs/releases/cloudflare-existing25-20261011/new-source/parallel-batch3-remaining23-request.json",
-    "sha256": "dca5e42beb2e14ac556d1fb116d8d5097f07e399225e291969698924ca8f6a1b"
+  "mode": "existing-migration",
+  "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+  "approvedParentLockDigest": "ecdfaf9599fbcbeadebc24de3b9aa1c7615a9a49e29d338e5e9a23427d405e26",
+  "dealers": [
+    "car-point-trade-varna"
+  ],
+  "inputs": {
+    "car-point-trade-varna": {
+      "candidateLock": {
+        "path": "docs/releases/cloudflare-existing25-20261011/additional-existing-source/qualification-lock.json",
+        "sha256": "bad8bd73016939322a38197f2a258de068e37cc18173208b20fd5b3843ce9bfa"
+      },
+      "qualification": {
+        "path": "docs/releases/cloudflare-existing25-20261011/additional-existing-source/car-point-trade-varna/qualification-context.json",
+        "sha256": "9d0e0dfee13b175549d4f64f2ddf3e5c16530bd17947fca1642ee70d548b41b1"
+      },
+      "sourceDeltaReview": {
+        "path": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
+        "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975"
+      },
+      "branding": {
+        "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/car-point-trade-varna/branding.json",
+        "sha256": "df268b21463540d538e7733741dbda9494aca1eab51fdd4059d0d17d778e3129"
+      },
+      "modernCopyReview": {
+        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/car-point-trade-varna/modern-copy-review.json",
+        "sha256": "af575a23a2582d0db732f605ee7e38e7cc328e1c1137ea7773361a249a8b8c9e"
+      }
+    }
+  },
+  "reviewedAt": "2026-10-13T11:21:06.241Z",
+  "retryOf": {
+    "runId": 38307913573,
+    "onlyFailedSourceJobs": true,
+    "changedInputs": "Twenty exact disclosure companions and ten verified existing root configured origins; original stock/contacts/logos/template qualification/source pins unchanged"
+  },
+  "retryReview": {
+    "originalFailedRun": 38342681668,
+    "originalFailedSource": "0c41c599f14deeebf3b80d8c2c0857dcf09372e1",
+    "originalFailedJob": 115117819398,
+    "originalFailure": "Six-design delivery needs the exact registered repository and public origin",
+    "correctedPublishedHelper": "30c72cb88685ddc4e9ee603488c890c3f447188d",
+    "sourceInputsRetained": true,
+    "passedRowsRepeated": false,
+    "boundedCanary": true,
+    "reason": "Continue exactly the original failed legacy-origin row after the maintained recorded-identity correction. No registry/provider state is marked live by this source step. Subsequent preservation conflicts must remain held and reviewed from actual artifacts."
   }
 }

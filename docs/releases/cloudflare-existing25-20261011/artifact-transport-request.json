@@ -2,21 +2,21 @@
   "schemaVersion": 1,
   "kind": "cars-fleet-artifact-transport-request",
   "reviewed": true,
-  "reviewedAt": "2026-10-13T07:01:14.235Z",
+  "reviewedAt": "2026-10-13T11:21:45.864Z",
   "source": {
     "repository": "darkapoparka/cars",
     "workflowPath": ".github/workflows/qualified-private-source-export.yml",
-    "runId": 38355305379,
+    "runId": 38389187406,
     "runAttempt": 1,
-    "headSha": "fae042f745242eef336c160c06d7349c47906ce9",
+    "headSha": "258f648cb19f8484cbf501a14fef14f4f494890d",
     "event": "push",
     "ref": "refs/heads/main"
   },
   "artifact": {
-    "id": 11792307895,
-    "name": "private-source-package-kalo-0404-varna-38355305379-1",
-    "sizeInBytes": 908203899,
-    "sha256": "a20f19f31895462aa553186f0fc62ffff9d8094b10d64297a737c203af420f97"
+    "id": 11808930109,
+    "name": "private-source-package-eurocar6-varna-38389187406-1",
+    "sizeInBytes": 908151531,
+    "sha256": "ad9e9dcb1a76fa8a151c467b634f2b6d4988ad9d22f463aa2e510e07a9b0c7fe"
   },
   "chunkSizeBytes": 209715200
 }
