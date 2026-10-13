@@ -10,7 +10,12 @@ export const sha256=bytes=>createHash('sha256').update(bytes).digest('hex');
 export const json=file=>JSON.parse(fs.readFileSync(file,'utf8').replace(/^\uFEFF/,''));
 export function writeJson(file,value){fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,JSON.stringify(value,null,2)+'\n');}
 export function git(root,args,{input,env,encoding='utf8',allowFailure=false}={}){
- const r=spawnSync('git',['-C',root,...args],{input,encoding,env:{...process.env,...env},windowsHide:true,maxBuffer:256*1024*1024});
+ const network=['fetch','push','ls-remote'].includes(args[0]);
+ const github=network&&args.some(value=>/^https:\/\/github\.com\//.test(value));
+ // The Windows helper selector can open an unattended prompt. Use the existing
+ // Credential Manager for GitHub without changing stored or global settings.
+ const transport=github&&process.platform==='win32'?['-c','credential.helper=','-c','credential.helper=manager','-c','credential.https://github.com.helper=','-c','credential.https://github.com.helper=manager','-c','credential.interactive=never']:[];
+ const r=spawnSync('git',['-C',root,...transport,...args],{input,encoding,env:{...process.env,...(network?{GIT_TERMINAL_PROMPT:'0',GCM_INTERACTIVE:'never'}:{}),...env},windowsHide:true,maxBuffer:256*1024*1024});
  if(r.status!==0){if(allowFailure)return null;throw new Error(`git ${args[0]} failed: ${r.stderr?.toString()||r.error?.message||r.stdout}`);}
  return encoding?r.stdout.trimEnd():r.stdout;
 }

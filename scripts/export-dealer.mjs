@@ -109,8 +109,8 @@ export function verifyPackageTree({root=ROOT,packageTree}) {
   verifyPayload(meta,actual,meta.assetDelivery?.provider==='cloudflare'?readDocument('.cars-cloudflare.json'):undefined);
   return {...actual,tree,meta,manifest,io};
 }
-function remoteHead(root,url,branch) {
-  const text=git(root,['ls-remote',url,'refs/heads/'+branch]);return text ? text.split(/\s/)[0] : null;
+function remoteHead(root,url,branch,env) {
+  const text=git(root,['ls-remote',url,'refs/heads/'+branch],{env});return text ? text.split(/\s/)[0] : null;
 }
 function treeFiles(root,commit) {
   if (!commit) return new Map();
@@ -138,6 +138,47 @@ export function validateReview({review,remoteCommit,candidateDigest,changes}) {
   const dispositions = new Map((review.changes||[]).map(c=>[c.path,c]));
   for (const p of changes) {const d=dispositions.get(p);if(!d || !['canonical-source','packaging-layer','obsolete-generated-metadata'].includes(d.resolution) || !d.reason?.trim()) throw new Error('Missing reviewed disposition for '+p);}
 }
+// Receipts retain only these exact safe process settings, never arbitrary Git configuration.
+const RETAINED_GIT_PROCESS_CONFIG = new Map([
+  ['core.alternateRefsPrefixes','refs/heads/main'],
+  ['maintenance.auto','false'],
+  ['gc.auto','0'],
+  ['fetch.writeCommitGraph','false'],
+]);
+function processGitConfigCount() {
+  const value=process.env.GIT_CONFIG_COUNT ?? '0';
+  if (!/^\d+$/.test(value) || Number(value)>4096) throw new Error('Invalid Git process configuration count.');
+  return Number(value);
+}
+function retainedGitProcessConfig() {
+  const selected=new Map();
+  for(let index=0;index<processGitConfigCount();index++) {
+    const key=process.env['GIT_CONFIG_KEY_'+index];
+    if(RETAINED_GIT_PROCESS_CONFIG.has(key)) selected.set(key,process.env['GIT_CONFIG_VALUE_'+index]);
+  }
+  return Object.fromEntries([...selected].filter(([key,value])=>RETAINED_GIT_PROCESS_CONFIG.get(key)===value));
+}
+function restoredGitProcessEnvironment(receipt) {
+  const alternates=receipt.gitObjectAlternates;
+  if(alternates!==undefined&&(typeof alternates!=='string'||!alternates||alternates.length>32768||/[\r\n\0]/.test(alternates)))throw new Error('Invalid retained Git object-store context.');
+  const env=alternates?{GIT_ALTERNATE_OBJECT_DIRECTORIES:[alternates,process.env.GIT_ALTERNATE_OBJECT_DIRECTORIES].filter(Boolean).join(path.delimiter)}:{};
+  const config=receipt.gitProcessConfig;
+  if(config!==undefined) {
+    if(!config || typeof config!=='object' || Array.isArray(config) ||
+        Object.entries(config).some(([key,value])=>!RETAINED_GIT_PROCESS_CONFIG.has(key)||RETAINED_GIT_PROCESS_CONFIG.get(key)!==value)) {
+      throw new Error('Invalid retained Git process configuration.');
+    }
+    const entries=Object.entries(config),count=processGitConfigCount();
+    if(count+entries.length>4096)throw new Error('Invalid Git process configuration count.');
+    entries.forEach(([key,value],index)=>{
+      env['GIT_CONFIG_KEY_'+(count+index)]=key;
+      env['GIT_CONFIG_VALUE_'+(count+index)]=value;
+    });
+    env.GIT_CONFIG_COUNT=String(count+entries.length);
+  }
+  return Object.keys(env).length?env:undefined;
+}
+
 export function exportDealer({root=ROOT,slug,packageDir,packageTree,reviewFile,write=false,targetBranch,preservePrefixes=[]}) {
   assertCarsOwnedDealer(root, slug);
   const client=inside(root,'clients/'+slug,{mustExist:true});
@@ -178,6 +219,9 @@ export function exportDealer({root=ROOT,slug,packageDir,packageTree,reviewFile,w
   let unexpected=[];
   if(priorText){const prior=JSON.parse(priorText);if(prior.repository!==manifest.repository)throw new Error('Remote publishing metadata has another repository identity.');const managed=new Map(prior.files.map(f=>[f.path,f.blob]));unexpected=[...new Set([...remote.keys(),...managed.keys()])].filter(p=>p!=='.cars-publish.json'&&remote.get(p)!==managed.get(p)&&!inPreservedPrefix(p,envelope?.prefixes??[]));}
   const report={schemaVersion:1,slug,repository:manifest.repository,branch,defaultBranch,baseHead,targetHead,parent,sourceCommit:packageMeta.sourceCommit,candidateDigest:digest.digest,tree,changes,unexpectedRemoteChanges:unexpected,packageDirectory:directory,proposalDirectory:run,...(envelope?{publicationEnvelope:envelope,packagePayloadTree:payloadTree}:{}),...(treePackage?{packageTree:treePackage.tree,packageObject:packageTree,treeVerification:treePackage.io}:{}),...(packageMeta.assetDelivery?.provider === 'cloudflare' ? {provider:'cloudflare'} : {})};
+  if(process.env.GIT_ALTERNATE_OBJECT_DIRECTORIES)report.gitObjectAlternates=process.env.GIT_ALTERNATE_OBJECT_DIRECTORIES;
+  const gitProcessConfig=retainedGitProcessConfig();
+  if(Object.keys(gitProcessConfig).length)report.gitProcessConfig=gitProcessConfig;
   writeJson(path.join(run,'proposal.json'),report);
   if(!write)return report;
   if(!priorText||unexpected.length)validateReview({review:reviewFile?json(reviewFile):null,remoteCommit:parent,candidateDigest:digest.digest,changes:priorText?unexpected:changes});
@@ -192,13 +236,14 @@ export function exportDealer({root=ROOT,slug,packageDir,packageTree,reviewFile,w
 }
 export function pushExport({root=ROOT,receiptFile}) {
   const r=json(receiptFile),url='https://github.com/'+r.repository+'.git';
+  const env=restoredGitProcessEnvironment(r);
   assertCarsOwnedDealer(root, r.slug);
   const manifest=validateManifest(json(inside(root,'clients/'+r.slug+'/dealer.json',{mustExist:true})));
   if(manifest.repository!==r.repository)throw new Error('Receipt repository no longer matches canonical identity.');
-  if(remoteHead(root,url,r.branch)!==r.targetHead || remoteHead(root,url,r.defaultBranch)!==r.baseHead)throw new Error('Remote advanced after review. Re-export; never force-push.');
-  if(git(root,['rev-parse',r.commit+'^'])!==r.parent)throw new Error('Export does not preserve reviewed remote ancestry.');
-  git(root,['push',url,r.commit+':refs/heads/'+r.branch]);
-  if(remoteHead(root,url,r.branch)!==r.commit)throw new Error('Push did not verify.');
+  if(remoteHead(root,url,r.branch,env)!==r.targetHead || remoteHead(root,url,r.defaultBranch,env)!==r.baseHead)throw new Error('Remote advanced after review. Re-export; never force-push.');
+  if(git(root,['rev-parse',r.commit+'^'],{env})!==r.parent)throw new Error('Export does not preserve reviewed remote ancestry.');
+  git(root,['push',url,r.commit+':refs/heads/'+r.branch],{env});
+  if(remoteHead(root,url,r.branch,env)!==r.commit)throw new Error('Push did not verify.');
   return{repository:r.repository,branch:r.branch,commit:r.commit,trigger:r.provider === 'cloudflare' ? 'Cloudflare source delivered; deploy and verify this exact package separately.' : 'Git-to-Vercel only; inspect the deployment for this exact commit.'};
 }
 async function main() {
@@ -208,4 +253,3 @@ async function main() {
   console.log(JSON.stringify(result,null,2));
 }
 if(process.argv[1]&&path.resolve(process.argv[1])===import.meta.filename)main().catch(e=>{console.error(e.message);process.exitCode=1;});
-
