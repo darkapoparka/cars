@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-input-mapping",
+  "dealer": "kalo-0404-varna",
+  "inputs": {
+    "facts": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalo-0404-varna/facts.json",
+      "sha256": "fd363876bff1e40f1caf5567ef9ff182791d0c7c9dd7ec8facf9a85ab5c48ec5"
+    },
+    "stock": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalo-0404-varna/stock.json",
+      "sha256": "102704fd4b75e7ab160594ad8645cd9237a051f499fc850d0b68ed9dd774ce5e"
+    },
+    "locale": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalo-0404-varna/locale.json",
+      "sha256": "154adafaae19f8c568c069d291a20b66dc9dca962b348e7a54aebe0a4ff1d2a8"
+    },
+    "branding": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalo-0404-varna/branding.json",
+      "sha256": "0564ccda45e4cef906b8f7dd955a76255ca283db1b9e9e6501d526ac8261874b"
+    }
+  },
+  "sources": [
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalo-0404-varna/research-facts.json",
+      "sha256": "598cae92240e90b2ee49811a9a2788714eedf98c282d75b88eca9f3bc3c1f191"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalo-0404-varna/identity.json",
+      "sha256": "11a8ba109922a425c238bb37ee7929587533c06dc4761c25b67d163246d2204e"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalo-0404-varna/locale.json",
+      "sha256": "154adafaae19f8c568c069d291a20b66dc9dca962b348e7a54aebe0a4ff1d2a8"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalo-0404-varna/stock-research.json",
+      "sha256": "ed4e74cff042b7fbc149314fa1cbdd348b19446dfe1be8b6ed03484417c6125b"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalo-0404-varna/branding.json",
+      "sha256": "0564ccda45e4cef906b8f7dd955a76255ca283db1b9e9e6501d526ac8261874b"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalo-0404-varna/branding/generated-master.png",
+      "sha256": "e71569a722eeb2521a42c102aa6b417b6743a95379a1fb3fc5860f24853fb731"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalo-0404-varna/branding/on-accent.png",
+      "sha256": "ac540af37ea7e4c0a976d29e638d5e696fffeff1f1e2d821b2f64d9e891c8783"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalo-0404-varna/branding/on-dark.png",
+      "sha256": "ac540af37ea7e4c0a976d29e638d5e696fffeff1f1e2d821b2f64d9e891c8783"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalo-0404-varna/branding/on-light.png",
+      "sha256": "e71569a722eeb2521a42c102aa6b417b6743a95379a1fb3fc5860f24853fb731"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalo-0404-varna/generation-brief.json",
+      "sha256": "74cf7755d0e650f7e769f7edf6cd649cabdb74e5cd0dc25b6867d1879476c3c1"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalo-0404-varna/source-profile-reference.jpg",
+      "sha256": "7e959a511c2e6f8e52373deb94010486e4e95fdc73e1ac3de04d47c66ccbeb1d"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalo-0404-varna/media/demo-estate.webp",
+      "sha256": "d2d3deacbc9f566a22783f2a5eab6335473bf2e47c627261e8895dbff6fece70"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalo-0404-varna/media/demo-suv.webp",
+      "sha256": "5c0c6062ef8af622fd852a7a43b2dfc989d6836f1528698b51d88f9352640f2f"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalo-0404-varna/facts.json",
+      "sha256": "fd363876bff1e40f1caf5567ef9ff182791d0c7c9dd7ec8facf9a85ab5c48ec5"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalo-0404-varna/stock.json",
+      "sha256": "102704fd4b75e7ab160594ad8645cd9237a051f499fc850d0b68ed9dd774ce5e"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalo-0404-varna/reviewed-modern-inventory-copy.json",
+      "sha256": "b9701352c6763e393fd268c908e6e6a995916dcc25ccbb2903a0eb56410cec66"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalo-0404-varna/media-input-mapping.json",
+      "sha256": "b16a7a5101f2494b273c991499fe1520187f03723effd44552d0ce5a9d2572f0"
+    }
+  ]
+}

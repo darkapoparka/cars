@@ -1,0 +1,392 @@
+{
+  "schemaVersion": 1,
+  "slug": "part-mag-cars-varna",
+  "business": {
+    "slug": "part-mag-cars-varna",
+    "name": "Part Mag Cars",
+    "shortName": "Part Mag Cars",
+    "latinName": "Part Mag Cars",
+    "tagline": "Part Mag Cars · Варна",
+    "city": "Варна",
+    "region": "",
+    "country": "BG",
+    "countryCode": "BG",
+    "locale": "bg-BG",
+    "currency": "EUR",
+    "distanceUnit": "km",
+    "address": "гр. Варна, Варна, България",
+    "addressLine": "гр. Варна",
+    "phoneDisplay": "0899960605, 0897906712",
+    "phoneHref": "tel:+359899960605",
+    "phoneE164": "+359899960605",
+    "email": "",
+    "hours": "Потвърдете работното време директно с автокъщата.",
+    "website": "https://partmagcars.mobile.bg/",
+    "inventoryUrl": "https://partmagcars.mobile.bg/",
+    "contactUrl": "https://partmagcars.mobile.bg/contacts",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Part%20Mag%20Cars%2C%20%D0%B3%D1%80.%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
+    "mapsEmbedUrl": "https://maps.google.com/maps?q=Part%20Mag%20Cars%2C%20%D0%B3%D1%80.%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F&z=16&output=embed",
+    "accent": "#c40101",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png",
+    "socialLinks": {
+      "facebook": "",
+      "instagram": "",
+      "youtube": "",
+      "tiktok": ""
+    },
+    "services": [],
+    "inventoryNotice": "Показаните демонстрационни автомобили са илюстративни и не представляват наличности на автокъщата. За действителните оферти и наличности се свържете директно с нея.",
+    "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+    "observedAt": "2026-10-12T10:44:17.760Z",
+    "coordinates": null,
+    "raw": {
+      "schemaVersion": 1,
+      "slug": "part-mag-cars-varna",
+      "name": "Part Mag Cars",
+      "shortName": "Part Mag Cars",
+      "city": "Варна",
+      "country": "BG",
+      "countryCode": "BG",
+      "locale": "bg-BG",
+      "currency": "EUR",
+      "distanceUnit": "km",
+      "phone": "0899960605",
+      "phoneDisplay": "0899960605, 0897906712",
+      "phoneE164": "+359899960605",
+      "phones": [
+        "+359899960605",
+        "+359897906712"
+      ],
+      "addressLine": "гр. Варна",
+      "address": "гр. Варна, Варна, България",
+      "hours": "Потвърдете работното време директно с автокъщата.",
+      "email": "",
+      "sourceUrl": "https://partmagcars.mobile.bg/",
+      "stockUrl": "https://partmagcars.mobile.bg/",
+      "contactSourceUrl": "https://partmagcars.mobile.bg/contacts",
+      "observedAt": "2026-10-12T10:44:17.760Z",
+      "inventoryNotice": "Показаните демонстрационни автомобили са илюстративни и не представляват наличности на автокъщата. За действителните оферти и наличности се свържете директно с нея.",
+      "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+      "services": [],
+      "socialLinks": {},
+      "logo": "/dealer-brand/logo-on-light.png",
+      "logoLight": "/dealer-brand/logo-on-light.png",
+      "logoDark": "/dealer-brand/logo-on-dark.png",
+      "modernInventoryCopy": {
+        "part-mag-cars-varna-demo-estate": {
+          "sourceDescription": "Илюстративен демонстрационен автомобил с примерни характеристики и цена. Не е действителна оферта или наличност на автокъщата. Изображението е генерирана декоративна илюстрация.",
+          "en": {
+            "description": "Illustrative demo vehicle with example specifications and price. This is not a real offer or dealership stock. The image is generated decorative artwork.",
+            "imageAlts": [
+              "Generated white estate illustration; not dealer stock photography"
+            ]
+          },
+          "bg": {
+            "description": "Илюстративен демонстрационен автомобил с примерни характеристики и цена. Не е действителна оферта или наличност на автокъщата. Изображението е генерирана декоративна илюстрация.",
+            "imageAlts": [
+              "Генерирана илюстрация на бяло комби; не е снимка на наличен автомобил"
+            ]
+          }
+        },
+        "part-mag-cars-varna-demo-suv": {
+          "sourceDescription": "Илюстративен демонстрационен автомобил с примерни характеристики и цена. Не е действителна оферта или наличност на автокъщата. Изображението е генерирана декоративна илюстрация.",
+          "en": {
+            "description": "Illustrative demo vehicle with example specifications and price. This is not a real offer or dealership stock. The image is generated decorative artwork.",
+            "imageAlts": [
+              "Generated blue SUV illustration; not dealer stock photography"
+            ]
+          },
+          "bg": {
+            "description": "Илюстративен демонстрационен автомобил с примерни характеристики и цена. Не е действителна оферта или наличност на автокъщата. Изображението е генерирана декоративна илюстрация.",
+            "imageAlts": [
+              "Генерирана илюстрация на син SUV; не е снимка на наличен автомобил"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "listings": [
+    {
+      "id": "demo-estate",
+      "sourceId": "demo-estate",
+      "slug": "part-mag-cars-varna-demo-estate",
+      "title": "Demo Estate — illustration",
+      "make": "Demo",
+      "model": "Estate",
+      "trim": "",
+      "year": 2026,
+      "priceAmount": 23900,
+      "currency": "EUR",
+      "mileageValue": 12000,
+      "mileageUnit": "km",
+      "mileageOnRequest": false,
+      "body": "Estate",
+      "bodyType": "wagon",
+      "fuel": "Petrol",
+      "fuelType": "gasoline",
+      "transmission": "Automatic",
+      "transmissionType": "automatic",
+      "color": "White",
+      "powerHp": null,
+      "engine": "",
+      "drivetrain": "",
+      "features": [],
+      "images": [
+        "/dealer-stock/demo-estate.webp"
+      ],
+      "image": "/dealer-stock/demo-estate.webp",
+      "sourceUrl": "https://github.com/darkapoparka/cars/blob/b1f0f5609c7c249cfd0649c122849ff2cbb8dfde/templates/modern/apps/web/public/desktop-boxcars/page-banner-art-provenance.md",
+      "observedAt": "2026-10-12T11:35:26.653Z",
+      "availability": "Демонстрация; не е действителна оферта или наличен автомобил.",
+      "description": "Илюстративен демонстрационен автомобил с примерни характеристики и цена. Не е действителна оферта или наличност на автокъщата. Изображението е генерирана декоративна илюстрация.",
+      "condition": "used",
+      "location": "Варна",
+      "raw": {
+        "id": "demo-estate",
+        "slug": "part-mag-cars-varna-demo-estate",
+        "title": "Demo Estate — illustration",
+        "make": "Demo",
+        "model": "Estate",
+        "year": 2026,
+        "currency": "EUR",
+        "priceAmount": 23900,
+        "priceOnRequest": false,
+        "mileageValue": 12000,
+        "mileageUnit": "km",
+        "mileageOnRequest": false,
+        "body": "Estate",
+        "fuel": "Petrol",
+        "transmission": "Automatic",
+        "condition": "used",
+        "color": "White",
+        "description": "Илюстративен демонстрационен автомобил с примерни характеристики и цена. Не е действителна оферта или наличност на автокъщата. Изображението е генерирана декоративна илюстрация.",
+        "images": [
+          "/dealer-stock/demo-estate.webp"
+        ],
+        "observedAt": "2026-10-12T11:35:26.653Z",
+        "sourceUrl": "https://github.com/darkapoparka/cars/blob/b1f0f5609c7c249cfd0649c122849ff2cbb8dfde/templates/modern/apps/web/public/desktop-boxcars/page-banner-art-provenance.md",
+        "availability": "Демонстрация; не е действителна оферта или наличен автомобил.",
+        "dealerStock": false,
+        "illustrativeFacts": {
+          "year": true,
+          "price": true,
+          "mileage": true,
+          "fuel": true,
+          "transmission": true,
+          "makeAndModel": true,
+          "meaning": "Explicitly authored fictional demonstration values, not observed dealer or vehicle facts"
+        },
+        "mediaProvenance": {
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/modern/apps/web/public/desktop-boxcars/banner-estate-right.webp",
+          "gitBlob": "905e3d9153abe76f57798e19e839854eda4f9972",
+          "sha256": "d2d3deacbc9f566a22783f2a5eab6335473bf2e47c627261e8895dbff6fece70",
+          "generated": true,
+          "stockPhotography": false
+        }
+      }
+    },
+    {
+      "id": "demo-suv",
+      "sourceId": "demo-suv",
+      "slug": "part-mag-cars-varna-demo-suv",
+      "title": "Demo SUV — illustration",
+      "make": "Demo",
+      "model": "SUV",
+      "trim": "",
+      "year": 2026,
+      "priceAmount": 28900,
+      "currency": "EUR",
+      "mileageValue": 8000,
+      "mileageUnit": "km",
+      "mileageOnRequest": false,
+      "body": "SUV",
+      "bodyType": "suv",
+      "fuel": "Petrol",
+      "fuelType": "gasoline",
+      "transmission": "Automatic",
+      "transmissionType": "automatic",
+      "color": "Blue",
+      "powerHp": null,
+      "engine": "",
+      "drivetrain": "",
+      "features": [],
+      "images": [
+        "/dealer-stock/demo-suv.webp"
+      ],
+      "image": "/dealer-stock/demo-suv.webp",
+      "sourceUrl": "https://github.com/darkapoparka/cars/blob/b1f0f5609c7c249cfd0649c122849ff2cbb8dfde/templates/modern/apps/web/public/desktop-boxcars/page-banner-art-provenance.md",
+      "observedAt": "2026-10-12T11:35:26.653Z",
+      "availability": "Демонстрация; не е действителна оферта или наличен автомобил.",
+      "description": "Илюстративен демонстрационен автомобил с примерни характеристики и цена. Не е действителна оферта или наличност на автокъщата. Изображението е генерирана декоративна илюстрация.",
+      "condition": "used",
+      "location": "Варна",
+      "raw": {
+        "id": "demo-suv",
+        "slug": "part-mag-cars-varna-demo-suv",
+        "title": "Demo SUV — illustration",
+        "make": "Demo",
+        "model": "SUV",
+        "year": 2026,
+        "currency": "EUR",
+        "priceAmount": 28900,
+        "priceOnRequest": false,
+        "mileageValue": 8000,
+        "mileageUnit": "km",
+        "mileageOnRequest": false,
+        "body": "SUV",
+        "fuel": "Petrol",
+        "transmission": "Automatic",
+        "condition": "used",
+        "color": "Blue",
+        "description": "Илюстративен демонстрационен автомобил с примерни характеристики и цена. Не е действителна оферта или наличност на автокъщата. Изображението е генерирана декоративна илюстрация.",
+        "images": [
+          "/dealer-stock/demo-suv.webp"
+        ],
+        "observedAt": "2026-10-12T11:35:26.653Z",
+        "sourceUrl": "https://github.com/darkapoparka/cars/blob/b1f0f5609c7c249cfd0649c122849ff2cbb8dfde/templates/modern/apps/web/public/desktop-boxcars/page-banner-art-provenance.md",
+        "availability": "Демонстрация; не е действителна оферта или наличен автомобил.",
+        "dealerStock": false,
+        "illustrativeFacts": {
+          "year": true,
+          "price": true,
+          "mileage": true,
+          "fuel": true,
+          "transmission": true,
+          "makeAndModel": true,
+          "meaning": "Explicitly authored fictional demonstration values, not observed dealer or vehicle facts"
+        },
+        "mediaProvenance": {
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/modern/apps/web/public/desktop-boxcars/banner-suv-left.webp",
+          "gitBlob": "61aa0e5810cbdf0abd4d84349bbd7135cdd9700f",
+          "sha256": "5c0c6062ef8af622fd852a7a43b2dfc989d6836f1528698b51d88f9352640f2f",
+          "generated": true,
+          "stockPhotography": false
+        }
+      }
+    }
+  ],
+  "rawFacts": {
+    "schemaVersion": 1,
+    "slug": "part-mag-cars-varna",
+    "dealerId": "part-mag-cars-varna",
+    "business": {
+      "schemaVersion": 1,
+      "slug": "part-mag-cars-varna",
+      "name": "Part Mag Cars",
+      "shortName": "Part Mag Cars",
+      "city": "Варна",
+      "country": "BG",
+      "countryCode": "BG",
+      "locale": "bg-BG",
+      "currency": "EUR",
+      "distanceUnit": "km",
+      "phone": "0899960605",
+      "phoneDisplay": "0899960605, 0897906712",
+      "phoneE164": "+359899960605",
+      "phones": [
+        "+359899960605",
+        "+359897906712"
+      ],
+      "addressLine": "гр. Варна",
+      "address": "гр. Варна, Варна, България",
+      "hours": "Потвърдете работното време директно с автокъщата.",
+      "email": "",
+      "sourceUrl": "https://partmagcars.mobile.bg/",
+      "stockUrl": "https://partmagcars.mobile.bg/",
+      "contactSourceUrl": "https://partmagcars.mobile.bg/contacts",
+      "observedAt": "2026-10-12T10:44:17.760Z",
+      "inventoryNotice": "Показаните демонстрационни автомобили са илюстративни и не представляват наличности на автокъщата. За действителните оферти и наличности се свържете директно с нея.",
+      "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+      "services": [],
+      "socialLinks": {},
+      "logo": "/dealer-brand/logo-on-light.png",
+      "logoLight": "/dealer-brand/logo-on-light.png",
+      "logoDark": "/dealer-brand/logo-on-dark.png",
+      "modernInventoryCopy": {
+        "part-mag-cars-varna-demo-estate": {
+          "sourceDescription": "Илюстративен демонстрационен автомобил с примерни характеристики и цена. Не е действителна оферта или наличност на автокъщата. Изображението е генерирана декоративна илюстрация.",
+          "en": {
+            "description": "Illustrative demo vehicle with example specifications and price. This is not a real offer or dealership stock. The image is generated decorative artwork.",
+            "imageAlts": [
+              "Generated white estate illustration; not dealer stock photography"
+            ]
+          },
+          "bg": {
+            "description": "Илюстративен демонстрационен автомобил с примерни характеристики и цена. Не е действителна оферта или наличност на автокъщата. Изображението е генерирана декоративна илюстрация.",
+            "imageAlts": [
+              "Генерирана илюстрация на бяло комби; не е снимка на наличен автомобил"
+            ]
+          }
+        },
+        "part-mag-cars-varna-demo-suv": {
+          "sourceDescription": "Илюстративен демонстрационен автомобил с примерни характеристики и цена. Не е действителна оферта или наличност на автокъщата. Изображението е генерирана декоративна илюстрация.",
+          "en": {
+            "description": "Illustrative demo vehicle with example specifications and price. This is not a real offer or dealership stock. The image is generated decorative artwork.",
+            "imageAlts": [
+              "Generated blue SUV illustration; not dealer stock photography"
+            ]
+          },
+          "bg": {
+            "description": "Илюстративен демонстрационен автомобил с примерни характеристики и цена. Не е действителна оферта или наличност на автокъщата. Изображението е генерирана декоративна илюстрация.",
+            "imageAlts": [
+              "Генерирана илюстрация на син SUV; не е снимка на наличен автомобил"
+            ]
+          }
+        }
+      }
+    },
+    "research": {
+      "website": {
+        "status": "none-confirmed-in-bounded-check",
+        "url": null,
+        "notWebsiteGapProof": true
+      },
+      "publicIdentityKey": "mobile-profile:partmagcars.mobile.bg",
+      "profileAdvertCount": 4,
+      "availabilityConfirmed": false,
+      "legalEntityOwnershipVerified": false,
+      "addressExactness": "public-contact-as-published",
+      "caveats": [
+        "Mixed retail and parts profile: two 5 EUR parts adverts excluded from retail samples; VW Caddy and Ford Galaxy are ordinary retail adverts."
+      ],
+      "sourceProof": [
+        {
+          "url": "https://partmagcars.mobile.bg/",
+          "finalUrl": "https://partmagcars.mobile.bg/",
+          "observedAt": "2026-10-12T10:44:17.777Z",
+          "status": 200,
+          "bytes": 46990,
+          "sha256": "425c68379fc1a462bb600984a895578078020502d38cff093597f5d74f6f33ad"
+        },
+        {
+          "url": "https://partmagcars.mobile.bg/contacts",
+          "finalUrl": "https://partmagcars.mobile.bg/contacts",
+          "observedAt": "2026-10-12T10:44:17.760Z",
+          "status": 200,
+          "bytes": 42270,
+          "sha256": "291abda9fafaaa5c7edd7e4e1c3ecc05ee37d9e3145a12f8cdbca7320ee14e3c"
+        },
+        {
+          "url": "https://partmagcars.mobile.bg/about",
+          "finalUrl": "https://partmagcars.mobile.bg/about",
+          "observedAt": "2026-10-12T10:44:17.748Z",
+          "status": 200,
+          "bytes": 6123,
+          "sha256": "9d52c03b62b6b1d5533cf357661005dec985a8fab8b4248a548597688baffdb1"
+        }
+      ],
+      "sourceAction": "new-absent-cars-source-after-wrapper-identity-recheck",
+      "existingSourceTree": null,
+      "inventoryModeSelection": "illustrative-not-dealer-stock",
+      "productionAssetInputsComplete": false
+    }
+  },
+  "sourceCount": 2,
+  "stockKind": "illustrative-not-dealer-stock",
+  "logoContract": null
+}

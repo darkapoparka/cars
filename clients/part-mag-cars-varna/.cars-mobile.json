@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "format": "mobile-preview-v1",
+  "dealer": "part-mag-cars-varna",
+  "name": "Part Mag Cars",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/mobile",
+    "tree": "2b02829e157071e305bfb2dff10ef18e85c8a35e",
+    "digest": "4e858bd9dbd3ef5b52cd904c4ed97bbfdc0f4cfe02b5a3840580f38026b867a0"
+  },
+  "sourceDigest": "c6dbcd0560ecc8d3241720df9f82b63e5ec8d38985d15652d286bc819ea8b381",
+  "inventory": {
+    "mode": "illustrative-not-dealer-stock",
+    "count": 2,
+    "observedAt": "2026-10-12T10:44:17.760Z"
+  },
+  "personalization": {
+    "profileSha256": "30637cb0bbd73eca495da6b0224eb6120c5376953d7e79a91e42f15464b3383a",
+    "logoPaths": [
+      "/dealer-brand/logo-on-light.png",
+      "/dealer-brand/logo-on-dark.png"
+    ],
+    "mediaPaths": [
+      "/dealer-stock/demo-estate.webp",
+      "/dealer-stock/demo-suv.webp"
+    ],
+    "mediaMappings": [],
+    "contentPaths": [
+      "mobile/src/lib/showroom-config.ts",
+      "mobile/src/lib/catalog.ts",
+      "mobile/src/lib/dealers.ts",
+      "mobile/src/lib/dealer-inventory.json",
+      "mobile/src/lib/locale.ts",
+      "mobile/src/lib/search.ts",
+      "mobile/src/components/NativeDealerCards.tsx",
+      "mobile/src/components/DealerScreens.tsx",
+      "mobile/src/components/VehicleCard.tsx",
+      "mobile/src/components/ShowroomVehicleCard.tsx",
+      "mobile/src/components/VehicleSections.tsx",
+      "mobile/src/lib/mobile-mileage.ts",
+      "mobile/src/lib/types.ts",
+      "mobile/src/components/DesktopVehicleSummary.tsx",
+      "mobile/src/components/NativeCarPark.tsx",
+      "mobile/src/components/ShowroomFilterSheet.tsx",
+      "mobile/src/lib/vehicle-copy.ts"
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}
