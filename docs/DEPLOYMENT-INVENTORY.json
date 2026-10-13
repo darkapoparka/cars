@@ -16791,6 +16791,102 @@
         "provider": "cloudflare",
         "configuredPublicOrigin": "https://cars-kalo-0404-varna.darkapoparka1.workers.dev"
       }
+    },
+    {
+      "slug": "eurocar6-varna",
+      "dealerId": "eurocar6-varna",
+      "repository": "darkapoparka/cars-eurocar6-varna",
+      "sourceOwnership": "cars-canonical",
+      "canonicalSourceRepository": "darkapoparka/cars",
+      "variants": [
+        {
+          "key": "auto-best",
+          "entry": "/",
+          "base": ""
+        },
+        {
+          "key": "modern",
+          "entry": "/variant-2/cars",
+          "base": "/variant-2"
+        },
+        {
+          "key": "import",
+          "entry": "/variant-3/",
+          "base": "/variant-3"
+        },
+        {
+          "key": "app",
+          "entry": "/variant-4/",
+          "base": "/variant-4"
+        },
+        {
+          "key": "mobile",
+          "entry": "/variant-5/",
+          "base": "/variant-5"
+        },
+        {
+          "key": "karento-best",
+          "entry": "/variant-6/",
+          "base": "/variant-6"
+        }
+      ],
+      "cloudflare": {
+        "workerName": "cars-eurocar6-varna",
+        "publicOrigin": "https://cars-eurocar6-varna.darkapoparka1.workers.dev"
+      },
+      "delivery": {
+        "state": "not-deployed",
+        "provider": "cloudflare",
+        "configuredPublicOrigin": "https://cars-eurocar6-varna.darkapoparka1.workers.dev"
+      }
+    },
+    {
+      "slug": "miraj-auto-varna",
+      "dealerId": "miraj-auto-varna",
+      "repository": "darkapoparka/cars-miraj-auto-varna",
+      "sourceOwnership": "cars-canonical",
+      "canonicalSourceRepository": "darkapoparka/cars",
+      "variants": [
+        {
+          "key": "auto-best",
+          "entry": "/",
+          "base": ""
+        },
+        {
+          "key": "modern",
+          "entry": "/variant-2/cars",
+          "base": "/variant-2"
+        },
+        {
+          "key": "import",
+          "entry": "/variant-3/",
+          "base": "/variant-3"
+        },
+        {
+          "key": "app",
+          "entry": "/variant-4/",
+          "base": "/variant-4"
+        },
+        {
+          "key": "mobile",
+          "entry": "/variant-5/",
+          "base": "/variant-5"
+        },
+        {
+          "key": "karento-best",
+          "entry": "/variant-6/",
+          "base": "/variant-6"
+        }
+      ],
+      "cloudflare": {
+        "workerName": "cars-miraj-auto-varna",
+        "publicOrigin": "https://cars-miraj-auto-varna.darkapoparka1.workers.dev"
+      },
+      "delivery": {
+        "state": "not-deployed",
+        "provider": "cloudflare",
+        "configuredPublicOrigin": "https://cars-miraj-auto-varna.darkapoparka1.workers.dev"
+      }
     }
   ],
   "campaignCandidatesWithoutFolders": [

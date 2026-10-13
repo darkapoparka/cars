@@ -1470,6 +1470,18 @@
       "dealerId": "kalo-0404-varna",
       "repository": "darkapoparka/cars-kalo-0404-varna",
       "path": "clients/kalo-0404-varna"
+    },
+    {
+      "slug": "eurocar6-varna",
+      "dealerId": "eurocar6-varna",
+      "repository": "darkapoparka/cars-eurocar6-varna",
+      "path": "clients/eurocar6-varna"
+    },
+    {
+      "slug": "miraj-auto-varna",
+      "dealerId": "miraj-auto-varna",
+      "repository": "darkapoparka/cars-miraj-auto-varna",
+      "path": "clients/miraj-auto-varna"
     }
   ],
   "campaignCandidatesWithoutFolders": [

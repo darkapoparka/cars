@@ -365,6 +365,22 @@
       "sourceMode": "new-approved",
       "workerName": "cars-kalo-0404-varna",
       "publicOrigin": "https://cars-kalo-0404-varna.darkapoparka1.workers.dev"
+    },
+    {
+      "slug": "eurocar6-varna",
+      "dealerId": "eurocar6-varna",
+      "proposedRepository": "darkapoparka/cars-eurocar6-varna",
+      "sourceMode": "new-approved",
+      "workerName": "cars-eurocar6-varna",
+      "publicOrigin": "https://cars-eurocar6-varna.darkapoparka1.workers.dev"
+    },
+    {
+      "slug": "miraj-auto-varna",
+      "dealerId": "miraj-auto-varna",
+      "proposedRepository": "darkapoparka/cars-miraj-auto-varna",
+      "sourceMode": "new-approved",
+      "workerName": "cars-miraj-auto-varna",
+      "publicOrigin": "https://cars-miraj-auto-varna.darkapoparka1.workers.dev"
     }
   ],
   "workerIdentities": {

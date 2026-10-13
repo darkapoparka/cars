@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-source-publication",
+  "reviewed": true,
+  "reviewedAt": "2026-10-13T07:51:41.872Z",
+  "dealer": "eurocar6-varna",
+  "dealerId": "eurocar6-varna",
+  "repository": "darkapoparka/cars-eurocar6-varna",
+  "sourceOwnership": "cars-canonical",
+  "request": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/batch-2-recovery-wave02-10-request.json",
+    "sha256": "c4d350dd16a9495c5f8db496d1931baee099849105b427a2928a7d171bcd5b9f"
+  },
+  "preparation": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/eurocar6-varna/source-38355305369/source-preparation.json",
+    "sha256": "a677711d93be94366b9ace49bc5b479764ea9ad77d263be8562c5def0b021956"
+  },
+  "proposal": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/eurocar6-varna/source-38355305369/source-proposal.json",
+    "sha256": "3111e267c0107aaa5ce78b8de20f24fea838f6be4a6c30211bc58010c40e2305"
+  },
+  "inputMapping": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/eurocar6-varna/source-38355305369/input-mapping.json",
+    "sha256": "f0123efe163565238761538fbf31c5452d2992b47ca84f2e00a7e25be28ce070"
+  },
+  "sourcePublication": {
+    "repository": "darkapoparka/cars",
+    "commit": "b6040ffc0aedd5858b5d47ece5f3f78eac699584",
+    "sourceTree": "09c5fce8a66d5b16aa1d4398add5499e5e011b83",
+    "ref": "refs/heads/main",
+    "publishedAt": "2026-10-13T07:47:19.708Z",
+    "evidence": "https://github.com/darkapoparka/cars/commit/b6040ffc0aedd5858b5d47ece5f3f78eac699584"
+  }
+}

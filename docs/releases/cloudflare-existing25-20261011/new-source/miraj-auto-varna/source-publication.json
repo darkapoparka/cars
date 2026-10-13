@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-source-publication",
+  "reviewed": true,
+  "reviewedAt": "2026-10-13T07:51:41.872Z",
+  "dealer": "miraj-auto-varna",
+  "dealerId": "miraj-auto-varna",
+  "repository": "darkapoparka/cars-miraj-auto-varna",
+  "sourceOwnership": "cars-canonical",
+  "request": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/batch-2-recovery-wave02-10-request.json",
+    "sha256": "c4d350dd16a9495c5f8db496d1931baee099849105b427a2928a7d171bcd5b9f"
+  },
+  "preparation": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/miraj-auto-varna/source-38355305369/source-preparation.json",
+    "sha256": "3f09ff37e8e8d3c9c0397e31f628488c7085516465fbc861859ddfb97102502b"
+  },
+  "proposal": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/miraj-auto-varna/source-38355305369/source-proposal.json",
+    "sha256": "a898aadd709d5f4bad83a6e4dfe487f28b45a554f4098fbe9d5dc7926a23cece"
+  },
+  "inputMapping": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/miraj-auto-varna/source-38355305369/input-mapping.json",
+    "sha256": "67b294e62db364108b6c73b0cacf9a78c067564c3d1f827fb67f898d32f5fff6"
+  },
+  "sourcePublication": {
+    "repository": "darkapoparka/cars",
+    "commit": "b6040ffc0aedd5858b5d47ece5f3f78eac699584",
+    "sourceTree": "25ade3db125746f327b730ec33513019f23922e5",
+    "ref": "refs/heads/main",
+    "publishedAt": "2026-10-13T07:47:19.708Z",
+    "evidence": "https://github.com/darkapoparka/cars/commit/b6040ffc0aedd5858b5d47ece5f3f78eac699584"
+  }
+}
