@@ -84,7 +84,7 @@ export function BottomIcon({name,active}: {name:string;active:boolean}) {
 
 const s=stylex.create({
  tabs:{display:'grid',gridTemplateColumns:'repeat(4,minmax(0,1fr))',gap:{[media.mobile]:0,default:16}},
- tab:{display:{[media.mobile]:'flex',default:'block'},flexDirection:'column',alignItems:'center',justifyContent:'space-between',gap:{[media.mobile]:3,default:4},position:'relative',height:{[media.mobile]:'auto',default:104},minHeight:{[media.mobile]:76,default:104},padding:{[media.mobile]:'5px 2px 6px',default:0},minWidth:0,overflow:'hidden',color:$.ink,borderRadius:{[media.mobile]:0,default:16},borderWidth:{[media.mobile]:0,default:1},borderStyle:'solid',borderColor:'#eeeeef',backgroundColor:{[media.mobile]:'transparent',default:'#f4f4f5'}},
+ tab:{display:{[media.mobile]:'flex',default:'block'},flexDirection:'column',alignItems:'center',justifyContent:{[media.mobile]:'flex-start',default:'space-between'},gap:{[media.mobile]:6,default:4},position:'relative',height:{[media.mobile]:'auto',default:104},minHeight:{[media.mobile]:76,default:104},padding:{[media.mobile]:'6px 2px 8px',default:0},minWidth:0,overflow:'hidden',color:$.ink,borderRadius:{[media.mobile]:0,default:16},borderWidth:{[media.mobile]:0,default:1},borderStyle:'solid',borderColor:'#eeeeef',backgroundColor:{[media.mobile]:'transparent',default:'#f4f4f5'}},
  tabActive:{color:$.ink,backgroundColor:{[media.mobile]:'transparent',default:'#ececee'},borderColor:{[media.mobile]:'transparent',default:'#dedee1'},boxShadow:'none'},
  tabOnDarkActive:{backgroundColor:{[media.mobile]:'transparent',default:'#fff'},borderColor:{[media.mobile]:'transparent',default:'#fff'}},
  tabCompact:{aspectRatio:'auto',height:'auto',minHeight:{[media.mobile]:48,default:44},justifyContent:'center',padding:{[media.mobile]:'0 0 4px',default:0},borderWidth:0,borderRadius:{[media.mobile]:0,default:30},backgroundColor:'transparent',boxShadow:'none',overflow:'visible'},
@@ -94,7 +94,7 @@ const s=stylex.create({
  tabTitleCompactActive:{color:{[media.mobile]:$.ink,default:'#fff'},backgroundColor:{[media.mobile]:'transparent',default:$.ink}},
  tabTitleOnDark:{color:{[media.mobile]:$.ink,default:'#dddde1'},backgroundColor:{[media.mobile]:'transparent',default:'#343438'}},
  tabTitleOnDarkActive:{color:$.ink,backgroundColor:{[media.mobile]:'transparent',default:'#fff'}},
- tabArtworkBox:{position:{[media.mobile]:'relative',default:'absolute'},flexShrink:0,left:{[media.mobile]:'auto',default:'50%'},transform:{[media.mobile]:'translateY(-2px)',default:'translateX(-50%)'},bottom:{[media.mobile]:'auto',default:2},width:{[media.mobile]:64,default:'100%'},height:{[media.mobile]:42,default:'64%'},maxWidth:160},
+ tabArtworkBox:{position:{[media.mobile]:'relative',default:'absolute'},flexShrink:0,left:{[media.mobile]:'auto',default:'50%'},transform:{[media.mobile]:'none',default:'translateX(-50%)'},bottom:{[media.mobile]:'auto',default:2},width:{[media.mobile]:54,default:'100%'},height:{[media.mobile]:36,default:'64%'},maxWidth:160},
  tabArt:{objectFit:'contain'},
  tabDesktopArt:{display:{[media.mobile]:'none',default:'block'}},
  tabMobileArt:{display:{[media.mobile]:'block',default:'none'},width:'100%',height:'100%'},

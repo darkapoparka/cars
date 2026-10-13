@@ -81,7 +81,7 @@
         aria-label={locale.t("ui.featured-vehicle-grid.featured-vehicles")}
         {@attach focusableScroll}
       >
-        {#each mobileVehicles as card (card.title)}
+        {#each mobileVehicles as card, index (card.href.includes('?id=') ? card.href : index)}
           <VehicleGridCard {card} />
         {/each}
       </div>
