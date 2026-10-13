@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "slug": "multizaza-varna",
+  "dealerId": "multizaza-varna",
+  "business": {
+    "schemaVersion": 1,
+    "slug": "multizaza-varna",
+    "name": "Multi ZaZa",
+    "shortName": "Multi ZaZa",
+    "city": "Варна",
+    "country": "BG",
+    "countryCode": "BG",
+    "locale": "bg-BG",
+    "currency": "EUR",
+    "distanceUnit": "km",
+    "phone": "0887236046",
+    "phoneDisplay": "0887236046",
+    "phoneE164": "+359887236046",
+    "phones": [
+      "0887236046"
+    ],
+    "addressLine": "ул. Райко Жинзифов",
+    "address": "ул. Райко Жинзифов, Варна, България",
+    "hours": "Потвърдете работното време директно с автокъщата.",
+    "email": "",
+    "sourceUrl": "https://multizaza.mobile.bg/",
+    "stockUrl": "https://multizaza.mobile.bg/",
+    "contactSourceUrl": "https://multizaza.mobile.bg/contacts",
+    "observedAt": "2026-10-11T11:46:39.653Z",
+    "inventoryNotice": "Датирана извадка от публични обяви, не складова система в реално време. Потвърдете цената, ДДС и наличността.",
+    "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+    "services": [],
+    "socialLinks": {},
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sourceFacts": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/multizaza-varna/source/business-facts.json",
+    "sha256": "e0614065f6d616b421205e8aad340f99acbdf4c4b95cc0656ad43508fea7bdf8"
+  },
+  "originalBusinessLiteralsUnchanged": true
+}

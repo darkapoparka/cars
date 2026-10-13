@@ -1,0 +1,50 @@
+{
+  "mode": "dealer",
+  "id": "multizaza-varna",
+  "name": "Multi ZaZa",
+  "shortName": "Multi ZaZa",
+  "logo": {
+    "light": "/dealer-brand/v2-60dd0f6dac7692fc/logo-on-light.webp",
+    "dark": "/dealer-brand/v2-60dd0f6dac7692fc/logo-on-dark.webp",
+    "icon": "/dealer-brand/v2-60dd0f6dac7692fc/app-icon.png"
+  },
+  "defaultLocale": "bg",
+  "enabledLocales": [
+    "en",
+    "bg"
+  ],
+  "welcomeEnabled": true,
+  "country": "BG",
+  "currency": "EUR",
+  "city": "Варна",
+  "address": "ул. Райко Жинзифов, Варна, България",
+  "phoneDisplay": "0887236046",
+  "phoneE164": "+359887236046",
+  "email": "",
+  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Multi%20ZaZa%2C%20%D1%83%D0%BB.%20%D0%A0%D0%B0%D0%B9%D0%BA%D0%BE%20%D0%96%D0%B8%D0%BD%D0%B7%D0%B8%D1%84%D0%BE%D0%B2%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
+  "website": "https://multizaza.mobile.bg/",
+  "whatsappUrl": "",
+  "socialLinks": [
+    {
+      "label": "Facebook",
+      "url": ""
+    },
+    {
+      "label": "Instagram",
+      "url": ""
+    },
+    {
+      "label": "Mobile.bg",
+      "url": ""
+    },
+    {
+      "label": "Cars.bg",
+      "url": ""
+    }
+  ],
+  "referenceClaimsApproved": false,
+  "services": [],
+  "observedAt": "2026-10-11T11:46:39.781Z",
+  "inventoryNotice": "Датирана извадка от публични обяви, не складова система в реално време. Потвърдете цената, ДДС и наличността.",
+  "previewNotice": "Independent design preview. No purchase, reservation or message is submitted by this website."
+}

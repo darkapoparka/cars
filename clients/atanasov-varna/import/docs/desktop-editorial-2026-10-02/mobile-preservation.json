@@ -1,0 +1,1346 @@
+{
+	"comparison": "Live dev baseline versus frozen production after; line-height serialization within 0.001px is recorded separately.",
+	"rows": [
+		{
+			"name": "about",
+			"locale": "bg",
+			"width": 1440,
+			"mobile": false,
+			"elements": 40,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "about",
+			"locale": "bg",
+			"width": 320,
+			"mobile": true,
+			"elements": 49,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "article",
+			"locale": "bg",
+			"width": 320,
+			"mobile": true,
+			"elements": 26,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "blog",
+			"locale": "bg",
+			"width": 320,
+			"mobile": true,
+			"elements": 19,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "calculator",
+			"locale": "bg",
+			"width": 320,
+			"mobile": true,
+			"elements": 23,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "compare",
+			"locale": "bg",
+			"width": 320,
+			"mobile": true,
+			"elements": 17,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "compare-empty",
+			"locale": "bg",
+			"width": 320,
+			"mobile": true,
+			"elements": 10,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "contact",
+			"locale": "bg",
+			"width": 320,
+			"mobile": true,
+			"elements": 22,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "contact-vehicle",
+			"locale": "bg",
+			"width": 320,
+			"mobile": true,
+			"elements": 22,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "cookies",
+			"locale": "bg",
+			"width": 320,
+			"mobile": true,
+			"elements": 23,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "error",
+			"locale": "bg",
+			"width": 320,
+			"mobile": true,
+			"elements": 4,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "faq",
+			"locale": "bg",
+			"width": 320,
+			"mobile": true,
+			"elements": 31,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "favorites",
+			"locale": "bg",
+			"width": 320,
+			"mobile": true,
+			"elements": 9,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "financing",
+			"locale": "bg",
+			"width": 320,
+			"mobile": true,
+			"elements": 29,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "home",
+			"locale": "bg",
+			"width": 320,
+			"mobile": true,
+			"elements": 154,
+			"differences": [
+				{
+					"index": 72,
+					"tag": "IMG",
+					"text": "",
+					"properties": ["box"],
+					"before": {
+						"box": [2300.55, 331, 111.55, 27.88]
+					},
+					"after": {
+						"box": [2300.55, 331, 111.55, 29.41]
+					}
+				},
+				{
+					"index": 73,
+					"tag": "IMG",
+					"text": "",
+					"properties": ["box"],
+					"before": {
+						"box": [2241.13, 381.41, 110.19, 62]
+					},
+					"after": {
+						"box": [2241.13, 382.17, 110.19, 62]
+					}
+				},
+				{
+					"index": 74,
+					"tag": "IMG",
+					"text": "",
+					"properties": ["box"],
+					"before": {
+						"box": [2361.31, 381.41, 110.2, 62]
+					},
+					"after": {
+						"box": [2361.31, 382.17, 110.2, 62]
+					}
+				},
+				{
+					"index": 75,
+					"tag": "IMG",
+					"text": "",
+					"properties": ["box"],
+					"before": {
+						"box": [2241.13, 453.41, 110.19, 62]
+					},
+					"after": {
+						"box": [2241.13, 454.17, 110.19, 62]
+					}
+				},
+				{
+					"index": 76,
+					"tag": "IMG",
+					"text": "",
+					"properties": ["box"],
+					"before": {
+						"box": [2361.31, 453.41, 110.2, 62]
+					},
+					"after": {
+						"box": [2361.31, 454.17, 110.2, 62]
+					}
+				}
+			],
+			"productionLineHeightSerializationCount": 8
+		},
+		{
+			"name": "import",
+			"locale": "bg",
+			"width": 320,
+			"mobile": true,
+			"elements": 27,
+			"differences": [],
+			"productionLineHeightSerializationCount": 6
+		},
+		{
+			"name": "inventory",
+			"locale": "bg",
+			"width": 320,
+			"mobile": true,
+			"elements": 50,
+			"differences": [],
+			"productionLineHeightSerializationCount": 5
+		},
+		{
+			"name": "inventory-empty",
+			"locale": "bg",
+			"width": 320,
+			"mobile": true,
+			"elements": 17,
+			"differences": [],
+			"productionLineHeightSerializationCount": 6
+		},
+		{
+			"name": "inventory-selected",
+			"locale": "bg",
+			"width": 320,
+			"mobile": true,
+			"elements": 51,
+			"differences": [],
+			"productionLineHeightSerializationCount": 6
+		},
+		{
+			"name": "inventory-sidebar",
+			"locale": "bg",
+			"width": 320,
+			"mobile": true,
+			"elements": 50,
+			"differences": [],
+			"productionLineHeightSerializationCount": 5
+		},
+		{
+			"name": "locale",
+			"locale": "bg",
+			"width": 320,
+			"mobile": true,
+			"elements": 15,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "pdp",
+			"locale": "bg",
+			"width": 320,
+			"mobile": true,
+			"elements": 19,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "pdp-second",
+			"locale": "bg",
+			"width": 320,
+			"mobile": true,
+			"elements": 19,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "pdp-third",
+			"locale": "bg",
+			"width": 320,
+			"mobile": true,
+			"elements": 19,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "privacy",
+			"locale": "bg",
+			"width": 320,
+			"mobile": true,
+			"elements": 24,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "reviews",
+			"locale": "bg",
+			"width": 320,
+			"mobile": true,
+			"elements": 14,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "sell",
+			"locale": "bg",
+			"width": 320,
+			"mobile": true,
+			"elements": 23,
+			"differences": [
+				{
+					"index": 12,
+					"tag": "SECTION",
+					"text": "Продай колата си Заяви оценка VIN или данни · Снимки по желание Как ра",
+					"properties": ["box"],
+					"before": {
+						"box": [14, 255, 292, 540.25]
+					},
+					"after": {
+						"box": [14, 255, 292, 540.64]
+					}
+				},
+				{
+					"index": 13,
+					"tag": "IMG",
+					"text": "",
+					"properties": ["box"],
+					"before": {
+						"box": [14, 255, 292, 164.25]
+					},
+					"after": {
+						"box": [14, 255, 292, 164.64]
+					}
+				},
+				{
+					"index": 15,
+					"tag": "BUTTON",
+					"text": "Заяви оценка",
+					"properties": ["box"],
+					"before": {
+						"box": [30, 359.25, 167.61, 44]
+					},
+					"after": {
+						"box": [30, 359.64, 167.61, 44]
+					}
+				},
+				{
+					"index": 16,
+					"tag": "H2",
+					"text": "Как работи",
+					"properties": ["box"],
+					"before": {
+						"box": [30, 491.25, 260, 24]
+					},
+					"after": {
+						"box": [30, 491.64, 260, 24]
+					}
+				},
+				{
+					"index": 17,
+					"tag": "H3",
+					"text": "Разкажи за автомобила",
+					"properties": ["box"],
+					"before": {
+						"box": [66, 531.25, 224, 24]
+					},
+					"after": {
+						"box": [66, 531.64, 224, 24]
+					}
+				},
+				{
+					"index": 18,
+					"tag": "P",
+					"text": "VIN или марка, модел, година и пробег.",
+					"properties": ["box"],
+					"before": {
+						"box": [66, 559.25, 224, 40]
+					},
+					"after": {
+						"box": [66, 559.64, 224, 40]
+					}
+				},
+				{
+					"index": 19,
+					"tag": "H3",
+					"text": "Обсъдете го заедно",
+					"properties": ["box"],
+					"before": {
+						"box": [66, 611.25, 224, 24]
+					},
+					"after": {
+						"box": [66, 611.64, 224, 24]
+					}
+				},
+				{
+					"index": 20,
+					"tag": "P",
+					"text": "Уточняваме историята, състоянието и очакванията ти.",
+					"properties": ["box"],
+					"before": {
+						"box": [66, 639.25, 224, 60]
+					},
+					"after": {
+						"box": [66, 639.64, 224, 60]
+					}
+				},
+				{
+					"index": 21,
+					"tag": "H3",
+					"text": "Избери как да продадеш",
+					"properties": ["box"],
+					"before": {
+						"box": [66, 711.25, 224, 24]
+					},
+					"after": {
+						"box": [66, 711.64, 224, 24]
+					}
+				},
+				{
+					"index": 22,
+					"tag": "P",
+					"text": "Уговаряме оферта или план да намерим купувач.",
+					"properties": ["box"],
+					"before": {
+						"box": [66, 739.25, 224, 40]
+					},
+					"after": {
+						"box": [66, 739.64, 224, 40]
+					}
+				}
+			],
+			"productionLineHeightSerializationCount": 1
+		},
+		{
+			"name": "services",
+			"locale": "bg",
+			"width": 320,
+			"mobile": true,
+			"elements": 53,
+			"differences": [],
+			"productionLineHeightSerializationCount": 1
+		},
+		{
+			"name": "services-empty",
+			"locale": "bg",
+			"width": 320,
+			"mobile": true,
+			"elements": 25,
+			"differences": [],
+			"productionLineHeightSerializationCount": 1
+		},
+		{
+			"name": "services-selected",
+			"locale": "bg",
+			"width": 320,
+			"mobile": true,
+			"elements": 28,
+			"differences": [],
+			"productionLineHeightSerializationCount": 1
+		},
+		{
+			"name": "terms",
+			"locale": "bg",
+			"width": 320,
+			"mobile": true,
+			"elements": 32,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "about",
+			"locale": "bg",
+			"width": 390,
+			"mobile": true,
+			"elements": 49,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "article",
+			"locale": "bg",
+			"width": 390,
+			"mobile": true,
+			"elements": 26,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "blog",
+			"locale": "bg",
+			"width": 390,
+			"mobile": true,
+			"elements": 19,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "calculator",
+			"locale": "bg",
+			"width": 390,
+			"mobile": true,
+			"elements": 23,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "compare",
+			"locale": "bg",
+			"width": 390,
+			"mobile": true,
+			"elements": 17,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "compare-empty",
+			"locale": "bg",
+			"width": 390,
+			"mobile": true,
+			"elements": 10,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "contact",
+			"locale": "bg",
+			"width": 390,
+			"mobile": true,
+			"elements": 22,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "contact-vehicle",
+			"locale": "bg",
+			"width": 390,
+			"mobile": true,
+			"elements": 22,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "cookies",
+			"locale": "bg",
+			"width": 390,
+			"mobile": true,
+			"elements": 23,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "error",
+			"locale": "bg",
+			"width": 390,
+			"mobile": true,
+			"elements": 4,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "faq",
+			"locale": "bg",
+			"width": 390,
+			"mobile": true,
+			"elements": 31,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "favorites",
+			"locale": "bg",
+			"width": 390,
+			"mobile": true,
+			"elements": 9,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "financing",
+			"locale": "bg",
+			"width": 390,
+			"mobile": true,
+			"elements": 29,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "home",
+			"locale": "bg",
+			"width": 390,
+			"mobile": true,
+			"elements": 154,
+			"differences": [
+				{
+					"index": 72,
+					"tag": "IMG",
+					"text": "",
+					"properties": ["box"],
+					"before": {
+						"box": [2788.27, 331, 112, 28]
+					},
+					"after": {
+						"box": [2788.27, 331, 112, 29.52]
+					}
+				},
+				{
+					"index": 73,
+					"tag": "IMG",
+					"text": "",
+					"properties": ["box"],
+					"before": {
+						"box": [2700.38, 397.88, 138.89, 62]
+					},
+					"after": {
+						"box": [2700.38, 398.63, 138.89, 62]
+					}
+				},
+				{
+					"index": 74,
+					"tag": "IMG",
+					"text": "",
+					"properties": ["box"],
+					"before": {
+						"box": [2849.27, 397.88, 138.91, 62]
+					},
+					"after": {
+						"box": [2849.27, 398.63, 138.91, 62]
+					}
+				},
+				{
+					"index": 75,
+					"tag": "IMG",
+					"text": "",
+					"properties": ["box"],
+					"before": {
+						"box": [2700.38, 469.88, 138.89, 62]
+					},
+					"after": {
+						"box": [2700.38, 470.63, 138.89, 62]
+					}
+				},
+				{
+					"index": 76,
+					"tag": "IMG",
+					"text": "",
+					"properties": ["box"],
+					"before": {
+						"box": [2849.27, 469.88, 138.91, 62]
+					},
+					"after": {
+						"box": [2849.27, 470.63, 138.91, 62]
+					}
+				}
+			],
+			"productionLineHeightSerializationCount": 8
+		},
+		{
+			"name": "import",
+			"locale": "bg",
+			"width": 390,
+			"mobile": true,
+			"elements": 27,
+			"differences": [],
+			"productionLineHeightSerializationCount": 6
+		},
+		{
+			"name": "inventory",
+			"locale": "bg",
+			"width": 390,
+			"mobile": true,
+			"elements": 50,
+			"differences": [],
+			"productionLineHeightSerializationCount": 5
+		},
+		{
+			"name": "inventory-empty",
+			"locale": "bg",
+			"width": 390,
+			"mobile": true,
+			"elements": 17,
+			"differences": [],
+			"productionLineHeightSerializationCount": 6
+		},
+		{
+			"name": "inventory-selected",
+			"locale": "bg",
+			"width": 390,
+			"mobile": true,
+			"elements": 51,
+			"differences": [],
+			"productionLineHeightSerializationCount": 6
+		},
+		{
+			"name": "inventory-sidebar",
+			"locale": "bg",
+			"width": 390,
+			"mobile": true,
+			"elements": 50,
+			"differences": [],
+			"productionLineHeightSerializationCount": 5
+		},
+		{
+			"name": "locale",
+			"locale": "bg",
+			"width": 390,
+			"mobile": true,
+			"elements": 15,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "pdp",
+			"locale": "bg",
+			"width": 390,
+			"mobile": true,
+			"elements": 19,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "pdp-second",
+			"locale": "bg",
+			"width": 390,
+			"mobile": true,
+			"elements": 19,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "pdp-third",
+			"locale": "bg",
+			"width": 390,
+			"mobile": true,
+			"elements": 19,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "privacy",
+			"locale": "bg",
+			"width": 390,
+			"mobile": true,
+			"elements": 24,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "reviews",
+			"locale": "bg",
+			"width": 390,
+			"mobile": true,
+			"elements": 14,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "sell",
+			"locale": "bg",
+			"width": 390,
+			"mobile": true,
+			"elements": 23,
+			"differences": [],
+			"productionLineHeightSerializationCount": 1
+		},
+		{
+			"name": "services",
+			"locale": "bg",
+			"width": 390,
+			"mobile": true,
+			"elements": 53,
+			"differences": [],
+			"productionLineHeightSerializationCount": 1
+		},
+		{
+			"name": "services-empty",
+			"locale": "bg",
+			"width": 390,
+			"mobile": true,
+			"elements": 25,
+			"differences": [],
+			"productionLineHeightSerializationCount": 1
+		},
+		{
+			"name": "services-selected",
+			"locale": "bg",
+			"width": 390,
+			"mobile": true,
+			"elements": 28,
+			"differences": [],
+			"productionLineHeightSerializationCount": 1
+		},
+		{
+			"name": "terms",
+			"locale": "bg",
+			"width": 390,
+			"mobile": true,
+			"elements": 32,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "about",
+			"locale": "en",
+			"width": 1440,
+			"mobile": false,
+			"elements": 40,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "about",
+			"locale": "en",
+			"width": 320,
+			"mobile": true,
+			"elements": 49,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "article",
+			"locale": "en",
+			"width": 320,
+			"mobile": true,
+			"elements": 26,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "blog",
+			"locale": "en",
+			"width": 320,
+			"mobile": true,
+			"elements": 19,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "calculator",
+			"locale": "en",
+			"width": 320,
+			"mobile": true,
+			"elements": 23,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "compare",
+			"locale": "en",
+			"width": 320,
+			"mobile": true,
+			"elements": 17,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "compare-empty",
+			"locale": "en",
+			"width": 320,
+			"mobile": true,
+			"elements": 10,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "contact",
+			"locale": "en",
+			"width": 320,
+			"mobile": true,
+			"elements": 22,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "contact-vehicle",
+			"locale": "en",
+			"width": 320,
+			"mobile": true,
+			"elements": 22,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "cookies",
+			"locale": "en",
+			"width": 320,
+			"mobile": true,
+			"elements": 23,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "error",
+			"locale": "en",
+			"width": 320,
+			"mobile": true,
+			"elements": 4,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "faq",
+			"locale": "en",
+			"width": 320,
+			"mobile": true,
+			"elements": 31,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "favorites",
+			"locale": "en",
+			"width": 320,
+			"mobile": true,
+			"elements": 9,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "financing",
+			"locale": "en",
+			"width": 320,
+			"mobile": true,
+			"elements": 29,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "home",
+			"locale": "en",
+			"width": 320,
+			"mobile": true,
+			"elements": 154,
+			"differences": [],
+			"productionLineHeightSerializationCount": 8
+		},
+		{
+			"name": "import",
+			"locale": "en",
+			"width": 320,
+			"mobile": true,
+			"elements": 27,
+			"differences": [],
+			"productionLineHeightSerializationCount": 6
+		},
+		{
+			"name": "inventory",
+			"locale": "en",
+			"width": 320,
+			"mobile": true,
+			"elements": 50,
+			"differences": [],
+			"productionLineHeightSerializationCount": 5
+		},
+		{
+			"name": "inventory-empty",
+			"locale": "en",
+			"width": 320,
+			"mobile": true,
+			"elements": 17,
+			"differences": [],
+			"productionLineHeightSerializationCount": 6
+		},
+		{
+			"name": "inventory-selected",
+			"locale": "en",
+			"width": 320,
+			"mobile": true,
+			"elements": 51,
+			"differences": [],
+			"productionLineHeightSerializationCount": 6
+		},
+		{
+			"name": "inventory-sidebar",
+			"locale": "en",
+			"width": 320,
+			"mobile": true,
+			"elements": 50,
+			"differences": [],
+			"productionLineHeightSerializationCount": 5
+		},
+		{
+			"name": "locale",
+			"locale": "en",
+			"width": 320,
+			"mobile": true,
+			"elements": 15,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "pdp",
+			"locale": "en",
+			"width": 320,
+			"mobile": true,
+			"elements": 19,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "pdp-second",
+			"locale": "en",
+			"width": 320,
+			"mobile": true,
+			"elements": 19,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "pdp-third",
+			"locale": "en",
+			"width": 320,
+			"mobile": true,
+			"elements": 19,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "privacy",
+			"locale": "en",
+			"width": 320,
+			"mobile": true,
+			"elements": 24,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "reviews",
+			"locale": "en",
+			"width": 320,
+			"mobile": true,
+			"elements": 14,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "sell",
+			"locale": "en",
+			"width": 320,
+			"mobile": true,
+			"elements": 23,
+			"differences": [],
+			"productionLineHeightSerializationCount": 1
+		},
+		{
+			"name": "services",
+			"locale": "en",
+			"width": 320,
+			"mobile": true,
+			"elements": 53,
+			"differences": [],
+			"productionLineHeightSerializationCount": 1
+		},
+		{
+			"name": "services-empty",
+			"locale": "en",
+			"width": 320,
+			"mobile": true,
+			"elements": 25,
+			"differences": [],
+			"productionLineHeightSerializationCount": 1
+		},
+		{
+			"name": "services-selected",
+			"locale": "en",
+			"width": 320,
+			"mobile": true,
+			"elements": 28,
+			"differences": [],
+			"productionLineHeightSerializationCount": 1
+		},
+		{
+			"name": "terms",
+			"locale": "en",
+			"width": 320,
+			"mobile": true,
+			"elements": 32,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "about",
+			"locale": "en",
+			"width": 390,
+			"mobile": true,
+			"elements": 49,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "article",
+			"locale": "en",
+			"width": 390,
+			"mobile": true,
+			"elements": 26,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "blog",
+			"locale": "en",
+			"width": 390,
+			"mobile": true,
+			"elements": 19,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "calculator",
+			"locale": "en",
+			"width": 390,
+			"mobile": true,
+			"elements": 23,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "compare",
+			"locale": "en",
+			"width": 390,
+			"mobile": true,
+			"elements": 17,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "compare-empty",
+			"locale": "en",
+			"width": 390,
+			"mobile": true,
+			"elements": 10,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "contact",
+			"locale": "en",
+			"width": 390,
+			"mobile": true,
+			"elements": 22,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "contact-vehicle",
+			"locale": "en",
+			"width": 390,
+			"mobile": true,
+			"elements": 22,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "cookies",
+			"locale": "en",
+			"width": 390,
+			"mobile": true,
+			"elements": 23,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "error",
+			"locale": "en",
+			"width": 390,
+			"mobile": true,
+			"elements": 4,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "faq",
+			"locale": "en",
+			"width": 390,
+			"mobile": true,
+			"elements": 31,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "favorites",
+			"locale": "en",
+			"width": 390,
+			"mobile": true,
+			"elements": 9,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "financing",
+			"locale": "en",
+			"width": 390,
+			"mobile": true,
+			"elements": 29,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "home",
+			"locale": "en",
+			"width": 390,
+			"mobile": true,
+			"elements": 154,
+			"differences": [],
+			"productionLineHeightSerializationCount": 8
+		},
+		{
+			"name": "import",
+			"locale": "en",
+			"width": 390,
+			"mobile": true,
+			"elements": 27,
+			"differences": [],
+			"productionLineHeightSerializationCount": 6
+		},
+		{
+			"name": "inventory",
+			"locale": "en",
+			"width": 390,
+			"mobile": true,
+			"elements": 50,
+			"differences": [],
+			"productionLineHeightSerializationCount": 5
+		},
+		{
+			"name": "inventory-empty",
+			"locale": "en",
+			"width": 390,
+			"mobile": true,
+			"elements": 17,
+			"differences": [],
+			"productionLineHeightSerializationCount": 6
+		},
+		{
+			"name": "inventory-selected",
+			"locale": "en",
+			"width": 390,
+			"mobile": true,
+			"elements": 51,
+			"differences": [],
+			"productionLineHeightSerializationCount": 6
+		},
+		{
+			"name": "inventory-sidebar",
+			"locale": "en",
+			"width": 390,
+			"mobile": true,
+			"elements": 50,
+			"differences": [],
+			"productionLineHeightSerializationCount": 5
+		},
+		{
+			"name": "locale",
+			"locale": "en",
+			"width": 390,
+			"mobile": true,
+			"elements": 15,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "pdp",
+			"locale": "en",
+			"width": 390,
+			"mobile": true,
+			"elements": 19,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "pdp-second",
+			"locale": "en",
+			"width": 390,
+			"mobile": true,
+			"elements": 19,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "pdp-third",
+			"locale": "en",
+			"width": 390,
+			"mobile": true,
+			"elements": 19,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "privacy",
+			"locale": "en",
+			"width": 390,
+			"mobile": true,
+			"elements": 24,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "reviews",
+			"locale": "en",
+			"width": 390,
+			"mobile": true,
+			"elements": 14,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		},
+		{
+			"name": "sell",
+			"locale": "en",
+			"width": 390,
+			"mobile": true,
+			"elements": 23,
+			"differences": [],
+			"productionLineHeightSerializationCount": 1
+		},
+		{
+			"name": "services",
+			"locale": "en",
+			"width": 390,
+			"mobile": true,
+			"elements": 53,
+			"differences": [],
+			"productionLineHeightSerializationCount": 1
+		},
+		{
+			"name": "services-empty",
+			"locale": "en",
+			"width": 390,
+			"mobile": true,
+			"elements": 25,
+			"differences": [],
+			"productionLineHeightSerializationCount": 1
+		},
+		{
+			"name": "services-selected",
+			"locale": "en",
+			"width": 390,
+			"mobile": true,
+			"elements": 28,
+			"differences": [],
+			"productionLineHeightSerializationCount": 1
+		},
+		{
+			"name": "terms",
+			"locale": "en",
+			"width": 390,
+			"mobile": true,
+			"elements": 32,
+			"differences": [],
+			"productionLineHeightSerializationCount": 0
+		}
+	]
+}

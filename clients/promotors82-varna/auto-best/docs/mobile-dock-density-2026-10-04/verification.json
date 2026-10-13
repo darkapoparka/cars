@@ -1,0 +1,314 @@
+{
+  "recordedAt": "2026-10-04T05:39:23.416Z",
+  "baselineHead": "4739d82c0ba29fc8be63319a7e77c82201698ec5",
+  "reviewedHead": "387a172abbccb941f83fdf48f9afa845e7f5b27e",
+  "source": {
+    "src/lib/components/layout/Header.svelte": "d624f44384f307ce4293f0717db258beb59b445296af3ac366f11ebc3b769901",
+    "src/lib/styles/tokens.css": "4fccddd1f16d0c578a354603a8127774745e8a7013876b0f364fb24e0ceea605",
+    "src/lib/components/home/SearchBox.svelte": "f3a99c09b21c3c4f903f3afc96a1df9c25334f210fd4a7f6ddf82540f5fc5a64",
+    "scripts/mobile-polish-smoke.mjs": "01b9f4d59f16759a0d61b3dccdf4e949b9f640b26ea783e38ee0b9206f50579e"
+  },
+  "staticChecks": {
+    "cssPolicy": "passed",
+    "tokens": "passed",
+    "typography": "passed",
+    "svelte": {
+      "errors": 0,
+      "warnings": 0
+    },
+    "build": "passed",
+    "locales": "passed"
+  },
+  "before": {
+    "home": {
+      "canvas": 375,
+      "dock": {
+        "height": 61.59375,
+        "width": 351,
+        "x": 12,
+        "y": 774.40625
+      },
+      "height": 844,
+      "heroAction": "Виж всички (7)",
+      "scrollY": 0,
+      "url": "http://127.0.0.1:6461/bg",
+      "width": 390
+    },
+    "import": {
+      "active": "Внос",
+      "canvas": 390,
+      "dock": {
+        "height": 61.59375,
+        "width": 366,
+        "x": 12,
+        "y": 774.40625
+      },
+      "height": 844,
+      "scrollY": 0,
+      "url": "http://127.0.0.1:6461/bg/contact?topic=import",
+      "width": 390
+    }
+  },
+  "after": {
+    "home": {
+      "active": "Начало",
+      "canvas": 375,
+      "dock": {
+        "height": 52,
+        "radius": "16px",
+        "width": 351,
+        "x": 12,
+        "y": 784
+      },
+      "height": 844,
+      "heroAction": "Виж всички",
+      "mark": {
+        "color": "rgb(16, 17, 20)",
+        "height": "2px",
+        "radius": "0px",
+        "width": "12px"
+      },
+      "overflow": false,
+      "scrollY": 0,
+      "targets": [
+        {
+          "height": 46,
+          "name": "Начало",
+          "width": 66.59375
+        },
+        {
+          "height": 46,
+          "name": "Коли",
+          "width": 66.59375
+        },
+        {
+          "height": 46,
+          "name": "Продай",
+          "width": 66.609375
+        },
+        {
+          "height": 46,
+          "name": "Внос",
+          "width": 66.59375
+        },
+        {
+          "height": 46,
+          "name": "Меню",
+          "width": 66.59375
+        }
+      ],
+      "url": "http://127.0.0.1:6461/bg",
+      "width": 390
+    },
+    "import": {
+      "active": "Внос",
+      "canvas": 390,
+      "dock": {
+        "height": 52,
+        "radius": "16px",
+        "width": 366,
+        "x": 12,
+        "y": 784
+      },
+      "height": 844,
+      "mark": {
+        "color": "rgb(16, 17, 20)",
+        "height": "2px",
+        "radius": "0px",
+        "width": "12px"
+      },
+      "overflow": false,
+      "scrollY": 0,
+      "targets": [
+        {
+          "height": 46,
+          "name": "Начало",
+          "width": 69.59375
+        },
+        {
+          "height": 46,
+          "name": "Коли",
+          "width": 69.59375
+        },
+        {
+          "height": 46,
+          "name": "Продай",
+          "width": 69.609375
+        },
+        {
+          "height": 46,
+          "name": "Внос",
+          "width": 69.59375
+        },
+        {
+          "height": 46,
+          "name": "Меню",
+          "width": 69.59375
+        }
+      ],
+      "url": "http://127.0.0.1:6461/bg/contact?topic=import",
+      "width": 390
+    }
+  },
+  "reports": {
+    "mobile-polish-smoke": {
+      "generatedAt": "2026-10-04T05:33:32.770Z",
+      "base": "http://127.0.0.1:6469",
+      "results": [
+        {
+          "name": "bg mobile polish 320",
+          "passed": true,
+          "evidence": {
+            "locale": "bg",
+            "width": 320,
+            "passed": true
+          },
+          "durationMs": 28999
+        },
+        {
+          "name": "bg mobile polish 390",
+          "passed": true,
+          "evidence": {
+            "locale": "bg",
+            "width": 390,
+            "passed": true
+          },
+          "durationMs": 15619
+        },
+        {
+          "name": "bg mobile polish 430",
+          "passed": true,
+          "evidence": {
+            "locale": "bg",
+            "width": 430,
+            "passed": true
+          },
+          "durationMs": 14926
+        },
+        {
+          "name": "bg mobile polish 1440",
+          "passed": true,
+          "evidence": {
+            "locale": "bg",
+            "width": 1440,
+            "passed": true
+          },
+          "durationMs": 6810
+        },
+        {
+          "name": "en mobile polish 320",
+          "passed": true,
+          "evidence": {
+            "locale": "en",
+            "width": 320,
+            "passed": true
+          },
+          "durationMs": 13295
+        },
+        {
+          "name": "en mobile polish 390",
+          "passed": true,
+          "evidence": {
+            "locale": "en",
+            "width": 390,
+            "passed": true
+          },
+          "durationMs": 12235
+        },
+        {
+          "name": "en mobile polish 430",
+          "passed": true,
+          "evidence": {
+            "locale": "en",
+            "width": 430,
+            "passed": true
+          },
+          "durationMs": 11274
+        },
+        {
+          "name": "en mobile polish 1440",
+          "passed": true,
+          "evidence": {
+            "locale": "en",
+            "width": 1440,
+            "passed": true
+          },
+          "durationMs": 6294
+        }
+      ]
+    },
+    "mobile-final-smoke": {
+      "generatedAt": "2026-10-04T05:33:32.549Z",
+      "base": "http://127.0.0.1:6469",
+      "results": [
+        {
+          "name": "en 320: enlarged text, motion, focus and image loading",
+          "passed": true,
+          "evidence": {
+            "cards": 4,
+            "enlargedText": "200%",
+            "hiddenDock": "inert",
+            "reducedMotion": true
+          },
+          "durationMs": 10258
+        },
+        {
+          "name": "en 390: enlarged text, motion, focus and image loading",
+          "passed": true,
+          "evidence": {
+            "cards": 4,
+            "enlargedText": "200%",
+            "hiddenDock": "inert",
+            "reducedMotion": true
+          },
+          "durationMs": 7624
+        },
+        {
+          "name": "en 430: enlarged text, motion, focus and image loading",
+          "passed": true,
+          "evidence": {
+            "cards": 4,
+            "enlargedText": "200%",
+            "hiddenDock": "inert",
+            "reducedMotion": true
+          },
+          "durationMs": 6442
+        },
+        {
+          "name": "bg 320: enlarged text, motion, focus and image loading",
+          "passed": true,
+          "evidence": {
+            "cards": 4,
+            "enlargedText": "200%",
+            "hiddenDock": "inert",
+            "reducedMotion": true
+          },
+          "durationMs": 6817
+        },
+        {
+          "name": "bg 390: enlarged text, motion, focus and image loading",
+          "passed": true,
+          "evidence": {
+            "cards": 4,
+            "enlargedText": "200%",
+            "hiddenDock": "inert",
+            "reducedMotion": true
+          },
+          "durationMs": 5354
+        },
+        {
+          "name": "bg 430: enlarged text, motion, focus and image loading",
+          "passed": true,
+          "evidence": {
+            "cards": 4,
+            "enlargedText": "200%",
+            "hiddenDock": "inert",
+            "reducedMotion": true
+          },
+          "durationMs": 4448
+        }
+      ]
+    }
+  },
+  "scope": "Local shared working-tree verification; no template promotion or dealer deployment."
+}

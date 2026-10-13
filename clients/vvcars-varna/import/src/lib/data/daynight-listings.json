@@ -1,0 +1,37 @@
+{
+  "fetchedAt": "2026-10-11",
+  "sources": {
+    "dealerInventory": "https://vvcars.mobile.bg/",
+    "dealerContact": "https://vvcars.mobile.bg/contacts"
+  },
+  "count": 1,
+  "listings": [
+    {
+      "badge": "ОБЯВА",
+      "category": "Комби",
+      "color": "",
+      "displacement": "",
+      "euroStandard": "",
+      "features": [],
+      "fuel": "Дизелов",
+      "gearbox": "Автоматична",
+      "href": "https://vvcars.mobile.bg/obiava-11791631223924420-mercedes-benz-c-200-mild-hybrid-electric-vehicle-mhev",
+      "id": "11791631223924420",
+      "image": "/dealer-stock/11791631223924420-1.webp",
+      "location": "Варна",
+      "mileage": "227 000 км",
+      "mileageKnown": true,
+      "mileageValue": 227000,
+      "mileageUnit": "km",
+      "photoCount": "2",
+      "power": "163 к.с.",
+      "price": "21 799 €",
+      "priceBgn": "",
+      "production": "2023 г.",
+      "rawPriceText": "21 799 €",
+      "shortDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "title": "Mercedes-Benz C 200",
+      "vat": ""
+    }
+  ]
+}

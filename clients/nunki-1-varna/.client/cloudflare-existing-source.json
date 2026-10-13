@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "dealer": "nunki-1-varna",
+  "kind": "personalized-source-candidate-not-an-approved-release",
+  "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+  "candidateSourceDigest": "e184325f1b05f589ecfd987eee1f180a6d9e90afd884c4b21f673ce35f2f96cd",
+  "qualificationContextPath": ".client/native-qualification-context.json",
+  "qualificationContextSha256": "86c990f03a7daf9697c5b7091962351c4e5145c172ff7bb86502b9fb570a5628",
+  "qualificationLockPath": ".client/native-qualification-lock.json",
+  "qualificationLockSha256": "c28d29acdf39709d38737a972eeb2a1d000cfb1cd96de587c38effd764386ac1",
+  "sourceDeltaReview": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
+    "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975",
+    "reviewedAt": "2026-10-11T21:04:02.173Z"
+  },
+  "nativeApproval": false,
+  "hostedApproval": false
+}

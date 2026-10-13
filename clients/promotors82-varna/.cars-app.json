@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "dealer": "promotors82-varna",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/app",
+    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
+    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+  },
+  "appDigest": "246c306570b98f099075cd2f281d46e0293aa8e3248991ea36ed380de7690de7",
+  "provenance": {
+    "schemaVersion": 1,
+    "dealer": "promotors82-varna",
+    "profile": "auto-best/src/lib/data/dealer-profile.json",
+    "profileSha256": "dd41dcfcae32c85063c97cf2c010a831d8aa8cbfb640d2983951c5b1aafd9043",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "vehicles": 1,
+    "currency": "EUR",
+    "observedAt": "2026-10-11T11:46:40.929Z",
+    "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-light.png",
+        "output": "public/dealer-app/logo-light-9ee48df995e5a73eab4e.png",
+        "sha256": "9ee48df995e5a73eab4e365713c3277383340f049d6596abdbe709467eaedbfd",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-dark.png",
+        "output": "public/dealer-app/logo-dark-87ec21d158f1369327ca.png",
+        "sha256": "87ec21d158f1369327ca98e79b08c4fa1fc28f8f542b2723fe7b7042803c2e4f",
+        "role": "logo-dark"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11791111366122197-1.webp",
+        "output": "public/dealer-app/vehicle-6f9b5b729519c1496cf2.webp",
+        "sha256": "6f9b5b729519c1496cf23312eae2c01f8293d21cf5da7af7aeac826d2c7396e1",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11791111366122197-2.webp",
+        "output": "public/dealer-app/vehicle-024fabbf09632d6a4d68.webp",
+        "sha256": "024fabbf09632d6a4d687c29db4b99f7e2e66ab30f1567a8746d1033b7167422",
+        "role": "vehicle"
+      }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "mercedes-benz-c-350-2013-11791111366122197",
+        "sourceValue": 173000,
+        "sourceUnit": "km",
+        "canonicalKm": 173000
+      }
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

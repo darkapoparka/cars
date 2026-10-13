@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-input-mapping",
+  "dealer": "promotors82-varna",
+  "inputs": {
+    "facts": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/promotors82-varna/facts.json",
+      "sha256": "2adb13fdef36eaa1912868875f3f5d9bd89bbdcb185973bfee261902beacd757"
+    },
+    "stock": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/promotors82-varna/stock.json",
+      "sha256": "bd491aeca93ccbbe4b3bef31875c51dd8398fba50cdde3bac88d90c969690e86"
+    },
+    "locale": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/promotors82-varna/locale.json",
+      "sha256": "5fb156441915b77688372af5b61337e37d44f3879c457994e914d51b838af23f"
+    },
+    "branding": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/promotors82-varna/branding.json",
+      "sha256": "08aff74158dfe2724150fb33034df92228ed94a24d6742f2820abef3b4e7bcc2"
+    }
+  },
+  "sources": [
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/promotors82-varna/facts.json",
+      "sha256": "2adb13fdef36eaa1912868875f3f5d9bd89bbdcb185973bfee261902beacd757"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/promotors82-varna/stock.json",
+      "sha256": "bd491aeca93ccbbe4b3bef31875c51dd8398fba50cdde3bac88d90c969690e86"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/promotors82-varna/locale.json",
+      "sha256": "5fb156441915b77688372af5b61337e37d44f3879c457994e914d51b838af23f"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/promotors82-varna/branding.json",
+      "sha256": "08aff74158dfe2724150fb33034df92228ed94a24d6742f2820abef3b4e7bcc2"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/promotors82-varna/identity-repository-corrected-additional100.json",
+      "sha256": "88af8b4d103f8add96bd6b9db666ba864df0015836d0cffbc48588ddbffbdc5e"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/promotors82-varna/copy-review-additional100.json",
+      "sha256": "3b4940d81ff1fe965e648edec1f78042a7805318b11924e7d967748834f7cc85"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/promotors82-varna/media/11791111366122197-1.webp",
+      "sha256": "6f9b5b729519c1496cf23312eae2c01f8293d21cf5da7af7aeac826d2c7396e1"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/promotors82-varna/media/11791111366122197-2.webp",
+      "sha256": "024fabbf09632d6a4d687c29db4b99f7e2e66ab30f1567a8746d1033b7167422"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/promotors82-varna/branding/master.png",
+      "sha256": "9ee48df995e5a73eab4e365713c3277383340f049d6596abdbe709467eaedbfd"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/promotors82-varna/branding/onLight.png",
+      "sha256": "9ee48df995e5a73eab4e365713c3277383340f049d6596abdbe709467eaedbfd"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/promotors82-varna/branding/onDark.png",
+      "sha256": "87ec21d158f1369327ca98e79b08c4fa1fc28f8f542b2723fe7b7042803c2e4f"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/promotors82-varna/branding/onAccent.png",
+      "sha256": "87ec21d158f1369327ca98e79b08c4fa1fc28f8f542b2723fe7b7042803c2e4f"
+    }
+  ]
+}

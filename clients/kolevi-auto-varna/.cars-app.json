@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "dealer": "kolevi-auto-varna",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/app",
+    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
+    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+  },
+  "appDigest": "4d4e34fa6246d1532f3aa8cfdd6b0a1f8a0185801109bbff9701bc59308dd501",
+  "provenance": {
+    "schemaVersion": 1,
+    "dealer": "kolevi-auto-varna",
+    "profile": "auto-best/src/lib/data/dealer-profile.json",
+    "profileSha256": "115494f0f025478ac43f7ba1953cd800af7921d987924cb94195ff2b16f8e867",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "vehicles": 1,
+    "currency": "EUR",
+    "observedAt": "2026-10-11T11:46:40.584Z",
+    "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-light.png",
+        "output": "public/dealer-app/logo-light-1853d93ce6a076478d43.png",
+        "sha256": "1853d93ce6a076478d43e4e7a25588a81d3f100e2a03f6526fe46b24684f85c0",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-dark.png",
+        "output": "public/dealer-app/logo-dark-71f0d0f8855e9c963cb4.png",
+        "sha256": "71f0d0f8855e9c963cb4d165719d2efe1ecb946e68e7a33765a3094c89cdffa7",
+        "role": "logo-dark"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11789979969434970-2.webp",
+        "output": "public/dealer-app/vehicle-1fd504b5e1eff443234f.webp",
+        "sha256": "1fd504b5e1eff443234f84ab44349cac40eed75964ccf75656d769f489f50729",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11789979969434970-1.webp",
+        "output": "public/dealer-app/vehicle-19965d6b74dc664ead78.webp",
+        "sha256": "19965d6b74dc664ead78e552b8d07bc1b51f01869a2f47506d55a1d30d3110cc",
+        "role": "vehicle"
+      }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "skoda-octavia-2014-11789979969434970",
+        "sourceValue": 182500,
+        "sourceUnit": "km",
+        "canonicalKm": 182500
+      }
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

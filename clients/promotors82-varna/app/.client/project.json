@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "client": "promotors82-varna",
+  "templateKey": "app",
+  "templateVersion": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+  "createdAt": "2026-10-13T06:48:42.867Z",
+  "state": "personalized-needs-build",
+  "selectedHome": "main",
+  "availableHomes": [
+    {
+      "id": "main",
+      "route": "/"
+    }
+  ],
+  "offeredHomes": [],
+  "publicUrl": null,
+  "qa": {
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
+  },
+  "crm": {
+    "leadId": null,
+    "demoProjectId": null,
+    "registered": false
+  },
+  "templateSource": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/app",
+    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
+    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1",
+    "exportPolicy": "cars-source-v1"
+  },
+  "packaging": {
+    "version": "5",
+    "entry": "/variant-4/"
+  },
+  "workflowCommit": "fae042f745242eef336c160c06d7349c47906ce9",
+  "readyToPublish": false,
+  "hosting": {
+    "provider": "cloudflare",
+    "status": "not-deployed"
+  }
+}

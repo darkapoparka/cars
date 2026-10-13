@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "dealer": "multizaza-varna",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/app",
+    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
+    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+  },
+  "appDigest": "01981fedf91a38c567cab619520863f6e8b386a45536d3f01e8ac40997eed3cf",
+  "provenance": {
+    "schemaVersion": 1,
+    "dealer": "multizaza-varna",
+    "profile": "auto-best/src/lib/data/dealer-profile.json",
+    "profileSha256": "eca65714fff57d907f586376d581dc083c6963742ae84bafaced3a12cdd7e7b1",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "vehicles": 1,
+    "currency": "EUR",
+    "observedAt": "2026-10-11T11:46:39.781Z",
+    "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-light.png",
+        "output": "public/dealer-app/logo-light-8aeb43d522c43fe361b9.png",
+        "sha256": "8aeb43d522c43fe361b914f7dcc53bd84c6073d1804f7e83f31238888643a2ba",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-dark.png",
+        "output": "public/dealer-app/logo-dark-1d21c68f366987492999.png",
+        "sha256": "1d21c68f36698749299979cabf85cfda6d580ac20655120c526bf6ef7c678b64",
+        "role": "logo-dark"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11789398419243895-2.webp",
+        "output": "public/dealer-app/vehicle-f76cc5ad4de52f44b19f.webp",
+        "sha256": "f76cc5ad4de52f44b19f3a3d7fef836b93c801f1a3182959f3d41234136e1a71",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11789398419243895-1.webp",
+        "output": "public/dealer-app/vehicle-dfa1d7cdc583f49c4388.webp",
+        "sha256": "dfa1d7cdc583f49c4388d45bb44266ca72418ae02ab93488715f3f3a07f30f9e",
+        "role": "vehicle"
+      }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "bmw-730-2010-11789398419243895",
+        "sourceValue": 268000,
+        "sourceUnit": "km",
+        "canonicalKm": 268000
+      }
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

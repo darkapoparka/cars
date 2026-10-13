@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "dealer": "kalokars-varna",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/app",
+    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
+    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+  },
+  "appDigest": "9d9a1492fa5688d51dfeac3bc61c1033ce88a304278b298eb4536e8535e95fc3",
+  "provenance": {
+    "schemaVersion": 1,
+    "dealer": "kalokars-varna",
+    "profile": "auto-best/src/lib/data/dealer-profile.json",
+    "profileSha256": "22bf69af79e68845dd94e39adaad45c6f3b3e4ea735bc3c5681e47dfc9d5439f",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "vehicles": 1,
+    "currency": "EUR",
+    "observedAt": "2026-10-11T11:27:14.708Z",
+    "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-light.png",
+        "output": "public/dealer-app/logo-light-1eb7db7654b2b19d5dc4.png",
+        "sha256": "1eb7db7654b2b19d5dc4a0e0ce1ca4aff6f5e7dd83ff855f3223c25b9e94679c",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-dark.png",
+        "output": "public/dealer-app/logo-dark-c7d560a0a682cf94d30c.png",
+        "sha256": "c7d560a0a682cf94d30cf93ce0632e5404b2e50d1abe21be10d3f4c6b0aedf94",
+        "role": "logo-dark"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11787740471095305-1.webp",
+        "output": "public/dealer-app/vehicle-1887bafb0ba8ae5dbd46.webp",
+        "sha256": "1887bafb0ba8ae5dbd4693dd95f6ad33a6df9c0346204aca4a435f46008e888f",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11787740471095305-2.webp",
+        "output": "public/dealer-app/vehicle-d80f172ae39e5a4aea8c.webp",
+        "sha256": "d80f172ae39e5a4aea8c1cf63ae80bc18bb34c440da2692f11c3b75027e5c2c8",
+        "role": "vehicle"
+      }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "vw-touran-2011-11787740471095305",
+        "sourceValue": 191000,
+        "sourceUnit": "km",
+        "canonicalKm": 191000
+      }
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

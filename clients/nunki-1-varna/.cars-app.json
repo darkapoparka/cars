@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "dealer": "nunki-1-varna",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/app",
+    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
+    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+  },
+  "appDigest": "43a2e79f7b916d1f137aec50966ac5e9695ef9f4cc485afe88bf21bcbcadec97",
+  "provenance": {
+    "schemaVersion": 1,
+    "dealer": "nunki-1-varna",
+    "profile": "auto-best/src/lib/data/dealer-profile.json",
+    "profileSha256": "2d14a34debffd1acde89195a1358e31743ffc0fa1f24eae3ffe7452c65654141",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "vehicles": 1,
+    "currency": "EUR",
+    "observedAt": "2026-10-11T11:46:40.330Z",
+    "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-light.png",
+        "output": "public/dealer-app/logo-light-7d63c9b89ff48d739edf.png",
+        "sha256": "7d63c9b89ff48d739edfd56be6c1b6b3ad3a852264fd0ce24660b78ddb952913",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-dark.png",
+        "output": "public/dealer-app/logo-dark-95e55e2dac94113f0f9b.png",
+        "sha256": "95e55e2dac94113f0f9ba2be35a4414b81bee4397ca8655c50966f154a7baa22",
+        "role": "logo-dark"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/21765900702522886-2.webp",
+        "output": "public/dealer-app/vehicle-2910e41a1d1d895591b4.webp",
+        "sha256": "2910e41a1d1d895591b46712b6f77c15e0df2e2243db5157b64cd3154bae78b6",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/21765900702522886-1.webp",
+        "output": "public/dealer-app/vehicle-b97aabfbf580251b67ad.webp",
+        "sha256": "b97aabfbf580251b67ad8cb918afc1b7c96e3d810c6ac248b7c65d9ac81bba07",
+        "role": "vehicle"
+      }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "mini-countryman-2010-21765900702522886",
+        "sourceValue": 230000,
+        "sourceUnit": "km",
+        "canonicalKm": 230000
+      }
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

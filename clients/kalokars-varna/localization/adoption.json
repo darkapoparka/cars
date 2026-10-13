@@ -1,0 +1,1825 @@
+{
+  "schemaVersion": 2,
+  "kind": "cars-native-source-qualification",
+  "packagingVersion": "2",
+  "dealerId": "kalokars-varna",
+  "contractDigest": "14e6cc63d157e74caee0795f2155ec24b628bd6b7d850f3a2fd7040ec3fdfb13",
+  "context": {
+    "schemaVersion": 1,
+    "kind": "cars-native-source-qualification-context",
+    "id": "fleet-additional100-absent-b1f0f56",
+    "dealer": "kalokars-varna",
+    "scope": "new-dealer-source-proposal",
+    "sourceCommit": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "reviewed": true,
+    "reviewedAt": "2026-10-12T11:41:11.170Z",
+    "qualificationOnly": true,
+    "nativeApproval": false,
+    "hostedApproval": false,
+    "globalReleaseApproval": false,
+    "approvedLockSha256": "ecdfaf9599fbcbeadebc24de3b9aa1c7615a9a49e29d338e5e9a23427d405e26",
+    "candidateLockSha256": "c28d29acdf39709d38737a972eeb2a1d000cfb1cd96de587c38effd764386ac1",
+    "sourceDeltaReview": {
+      "reference": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
+      "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975",
+      "reviewedAt": "2026-10-11T21:04:02.173Z"
+    },
+    "pendingNativeChecks": [
+      "catalog-completeness",
+      "hardcoded-ui",
+      "native-routing",
+      "standalone-journeys",
+      "mounted-journeys",
+      "public-journeys",
+      "preferences-no-js",
+      "preferences-storage-disabled",
+      "preferences-races",
+      "request-isolation",
+      "security-write-blocking",
+      "assets-preserved"
+    ],
+    "pending": [
+      "Current-source native build, mounted/public hosted journeys and dealer/owner approval remain pending. This is not template promotion or hosted publication."
+    ]
+  },
+  "contextDigest": "f2b2483a1418d2577dffe3b8e4b3b22d2e0c54f84b16b5bf8bb007c55200b497",
+  "releases": {
+    "auto-best": {
+      "repository": "darkapoparka/cars",
+      "status": "qualification",
+      "commit": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+      "release": "auto-best-b1f0f56-source-qualification-2026-10-12",
+      "snapshotPath": "templates/auto-best",
+      "digest": "dcbc59990928884006652677d3529020df3844029993895a71e5f6818ba7363c",
+      "exportPolicy": "cars-source-v1",
+      "source": {
+        "repository": "darkapoparka/cars",
+        "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+        "path": "templates/auto-best",
+        "tree": "5fb7a2164775050a47c1183371622295dbf63725",
+        "digest": "dcbc59990928884006652677d3529020df3844029993895a71e5f6818ba7363c"
+      },
+      "runtime": {
+        "node": "22.20.0"
+      },
+      "modes": {
+        "standalone": "Recorded focused owner checks only; current complete acceptance pending.",
+        "mounted": "Priselci qualification pilot pending",
+        "dealer": "Reviewed Priselci-only source qualification; hosted pilot pending"
+      },
+      "qualification": {
+        "contextId": "fleet-additional100-absent-b1f0f56",
+        "sourceQA": {
+          "approvedRelease": {
+            "repository": "darkapoparka/cars",
+            "status": "approved",
+            "commit": "696230a404abd9b20b6f907b9cfb139175298c7a",
+            "release": "auto-best-696230a-native-qualified-2026-10-10",
+            "snapshotPath": "templates/auto-best",
+            "digest": "90f131aa0ead6ae4fcb06d30c054ca4d0c5d39097a2927cca8f298c7d2dfb3ca",
+            "exportPolicy": "cars-source-v1",
+            "observedUpstreamCommit": "1a32dc2b994d78c794e2d19bfd2d24c7adc48807",
+            "runtime": {
+              "node": "22.20.0"
+            },
+            "modes": {
+              "standalone": "Focused current owner receipts retained; see closure.",
+              "mounted": "pending exact representative six-family acceptance",
+              "dealer": "not deployed"
+            },
+            "qa": {
+              "evidence": "docs/releases/six-design-2026-10-10/native-execution/auto-best-696230a-release.json",
+              "verifiedAt": "2026-10-10T17:33:58.141Z",
+              "checks": [
+                {
+                  "name": "exact-source-and-mirror",
+                  "status": "passed",
+                  "evidence": [
+                    {
+                      "path": "docs/releases/six-design-2026-10-10/native/auto-best-696230a-closure.json",
+                      "sha256": "b9518e088dd884921b2653064cf89f6a20c78672ddd4c36d904899526bd78c97"
+                    }
+                  ],
+                  "evidenceSha256": "b9518e088dd884921b2653064cf89f6a20c78672ddd4c36d904899526bd78c97"
+                },
+                {
+                  "name": "matching-master-build",
+                  "status": "passed",
+                  "evidence": [
+                    {
+                      "path": "docs/releases/six-design-2026-10-10/native/auto-best-696230a-closure.json",
+                      "sha256": "b9518e088dd884921b2653064cf89f6a20c78672ddd4c36d904899526bd78c97"
+                    }
+                  ],
+                  "evidenceSha256": "b9518e088dd884921b2653064cf89f6a20c78672ddd4c36d904899526bd78c97"
+                },
+                {
+                  "name": "declared-catalog-parity",
+                  "status": "passed",
+                  "evidence": [
+                    {
+                      "path": "docs/releases/six-design-2026-10-10/native/auto-best-696230a-closure.json",
+                      "sha256": "b9518e088dd884921b2653064cf89f6a20c78672ddd4c36d904899526bd78c97"
+                    }
+                  ],
+                  "evidenceSha256": "b9518e088dd884921b2653064cf89f6a20c78672ddd4c36d904899526bd78c97"
+                },
+                {
+                  "name": "scoped-owner-standalone-delta",
+                  "status": "passed",
+                  "evidence": [
+                    {
+                      "path": "docs/releases/six-design-2026-10-10/native/auto-best-696230a-closure.json",
+                      "sha256": "b9518e088dd884921b2653064cf89f6a20c78672ddd4c36d904899526bd78c97"
+                    }
+                  ],
+                  "evidenceSha256": "b9518e088dd884921b2653064cf89f6a20c78672ddd4c36d904899526bd78c97"
+                },
+                {
+                  "name": "catalog-completeness",
+                  "status": "passed",
+                  "scope": "Exact selected catalog key parity in closure, fresh current-source catalog tests and EN/BG rendered journeys; key counts alone are not linguistic acceptance.",
+                  "evidence": [
+                    {
+                      "path": "docs/releases/six-design-2026-10-10/native-execution/auto-best-696230a-qualification.json",
+                      "sha256": "38f0a1c4f3e98d7f6af72ab59f692341a96f39e6cb3c7a5b7f1bd2958ff4a9bc"
+                    }
+                  ]
+                },
+                {
+                  "name": "hardcoded-ui",
+                  "status": "passed",
+                  "scope": "Fresh selected-source copy/native-source audit tests plus final owner changed-page acceptance from closure; bounded public journeys show both locales without runtime errors.",
+                  "evidence": [
+                    {
+                      "path": "docs/releases/six-design-2026-10-10/native-execution/auto-best-696230a-qualification.json",
+                      "sha256": "38f0a1c4f3e98d7f6af72ab59f692341a96f39e6cb3c7a5b7f1bd2958ff4a9bc"
+                    }
+                  ]
+                },
+                {
+                  "name": "native-routing",
+                  "status": "passed",
+                  "scope": "Fresh selected native routing/proxy/policy tests plus current public inventory, real detail, reload and contact routes in EN/BG.",
+                  "evidence": [
+                    {
+                      "path": "docs/releases/six-design-2026-10-10/native-execution/auto-best-696230a-qualification.json",
+                      "sha256": "38f0a1c4f3e98d7f6af72ab59f692341a96f39e6cb3c7a5b7f1bd2958ff4a9bc"
+                    }
+                  ]
+                },
+                {
+                  "name": "standalone-journeys",
+                  "status": "passed",
+                  "scope": "Six fresh public cases: EN/BG at 320, 390 and 1440; entry/inventory/real detail/reload/contact, locale, assets and overflow.",
+                  "evidence": [
+                    {
+                      "path": "docs/releases/six-design-2026-10-10/native-execution/auto-best-696230a-qualification.json",
+                      "sha256": "38f0a1c4f3e98d7f6af72ab59f692341a96f39e6cb3c7a5b7f1bd2958ff4a9bc"
+                    }
+                  ]
+                },
+                {
+                  "name": "mounted-journeys",
+                  "status": "passed",
+                  "scope": "Auto Best remains the root-mount family; current root-hosted routes pass. Existing zero-base routing contract retained. Complete newly assembled six-service dealer production build and branding remain mandatory pilot gates.",
+                  "evidence": [
+                    {
+                      "path": "docs/releases/six-design-2026-10-10/native-execution/auto-best-696230a-qualification.json",
+                      "sha256": "38f0a1c4f3e98d7f6af72ab59f692341a96f39e6cb3c7a5b7f1bd2958ff4a9bc"
+                    }
+                  ]
+                },
+                {
+                  "name": "public-journeys",
+                  "status": "passed",
+                  "scope": "Exact selected master source-to-mirror and READY receipt from closure plus six fresh current public browser cases; no claim of dealer publication.",
+                  "evidence": [
+                    {
+                      "path": "docs/releases/six-design-2026-10-10/native-execution/auto-best-696230a-qualification.json",
+                      "sha256": "38f0a1c4f3e98d7f6af72ab59f692341a96f39e6cb3c7a5b7f1bd2958ff4a9bc"
+                    }
+                  ]
+                },
+                {
+                  "name": "preferences-no-js",
+                  "status": "passed",
+                  "scope": "Fresh current native no-JS browser scenario plus current selected preference HTTP/form regression.",
+                  "evidence": [
+                    {
+                      "path": "docs/releases/six-design-2026-10-10/native-execution/auto-best-696230a-qualification.json",
+                      "sha256": "38f0a1c4f3e98d7f6af72ab59f692341a96f39e6cb3c7a5b7f1bd2958ff4a9bc"
+                    }
+                  ]
+                },
+                {
+                  "name": "preferences-storage-disabled",
+                  "status": "passed",
+                  "scope": "Fresh current storage-unavailable preference browser scenario, with fresh selected native policy tests.",
+                  "evidence": [
+                    {
+                      "path": "docs/releases/six-design-2026-10-10/native-execution/auto-best-696230a-qualification.json",
+                      "sha256": "38f0a1c4f3e98d7f6af72ab59f692341a96f39e6cb3c7a5b7f1bd2958ff4a9bc"
+                    }
+                  ]
+                },
+                {
+                  "name": "preferences-races",
+                  "status": "passed",
+                  "scope": "Preference component script and markup are byte-identical to the previously accepted race-tested source; new styling checked by current save/Escape/reopen tests and 39 selected native tests.",
+                  "evidence": [
+                    {
+                      "path": "docs/releases/six-design-2026-10-10/native-execution/auto-best-696230a-qualification.json",
+                      "sha256": "38f0a1c4f3e98d7f6af72ab59f692341a96f39e6cb3c7a5b7f1bd2958ff4a9bc"
+                    }
+                  ]
+                },
+                {
+                  "name": "request-isolation",
+                  "status": "passed",
+                  "scope": "Fresh selected native routing/preferences/proxy/security tests exercise request-owned state and accepted/rejected policy; current public EN/BG cases use separate browser contexts and current HTTP tests preserve cookie boundaries.",
+                  "evidence": [
+                    {
+                      "path": "docs/releases/six-design-2026-10-10/native-execution/auto-best-696230a-qualification.json",
+                      "sha256": "38f0a1c4f3e98d7f6af72ab59f692341a96f39e6cb3c7a5b7f1bd2958ff4a9bc"
+                    }
+                  ]
+                },
+                {
+                  "name": "security-write-blocking",
+                  "status": "passed",
+                  "scope": "Fresh native security/policy tests and 16 HTTP preference-only guard checks; browser audit intercepts non-read business requests. This does not claim a clean dependency vulnerability audit or submit any dealership enquiry.",
+                  "evidence": [
+                    {
+                      "path": "docs/releases/six-design-2026-10-10/native-execution/auto-best-696230a-qualification.json",
+                      "sha256": "38f0a1c4f3e98d7f6af72ab59f692341a96f39e6cb3c7a5b7f1bd2958ff4a9bc"
+                    }
+                  ]
+                },
+                {
+                  "name": "assets-preserved",
+                  "status": "passed",
+                  "scope": "Retained exact immutable asset/source/mirror hashes from closure; fresh public and mounted journeys have zero own-origin image/font/script/style failures, with actual generated shared switcher runtime. Dealer-specific logo/favicon/social acceptance is a separate mandatory complete pilot gate.",
+                  "evidence": [
+                    {
+                      "path": "docs/releases/six-design-2026-10-10/native-execution/auto-best-696230a-qualification.json",
+                      "sha256": "38f0a1c4f3e98d7f6af72ab59f692341a96f39e6cb3c7a5b7f1bd2958ff4a9bc"
+                    }
+                  ]
+                }
+              ],
+              "standalone": {
+                "mobile": true,
+                "desktop": true,
+                "scope": "Original owner focused UI/build/hosted checks; full native journeys remain pending."
+              },
+              "nativeLocalization": {
+                "schemaVersion": 1,
+                "adapter": "native-v1",
+                "repository": "darkapoparka/cars",
+                "commit": "696230a404abd9b20b6f907b9cfb139175298c7a",
+                "sourcePath": "templates/auto-best",
+                "sourceTree": "b07ff2273be554ef64a039ac8f4f023ae60a33ac",
+                "sourceDigest": "90f131aa0ead6ae4fcb06d30c054ca4d0c5d39097a2927cca8f298c7d2dfb3ca",
+                "verifiedAt": "2026-10-10T17:33:58.153Z",
+                "evidenceSha256": "38f0a1c4f3e98d7f6af72ab59f692341a96f39e6cb3c7a5b7f1bd2958ff4a9bc",
+                "locales": [
+                  "en",
+                  "bg"
+                ],
+                "widths": [
+                  320,
+                  390,
+                  1440
+                ],
+                "widthsMeaning": "Required acceptance widths; checks remain pending, not a new execution claim.",
+                "catalogs": [
+                  {
+                    "format": "typescript-pair",
+                    "path": "src/lib/locale/catalog.ts",
+                    "en": "en",
+                    "bg": "bg"
+                  }
+                ],
+                "deployment": {
+                  "id": "dpl_G1VGqetcp7n6phxTu2NPSLukiogZ",
+                  "projectId": "prj_4U4cBdkH0or7uKtFsLO3OkNSzXIX",
+                  "state": "READY",
+                  "sourceCommit": "696230a404abd9b20b6f907b9cfb139175298c7a",
+                  "publicAlias": "https://cars-template-auto-best.vercel.app/",
+                  "publishingRepository": "darkapoparka/cars-template-auto-best",
+                  "publishingCommit": "e91baa9c2247f17186dcf43b3b1c8bc83a0266c6",
+                  "sourceMapping": {
+                    "path": "docs/releases/six-design-2026-10-10/native/auto-best-696230a-closure.json",
+                    "sha256": "b9518e088dd884921b2653064cf89f6a20c78672ddd4c36d904899526bd78c97"
+                  }
+                },
+                "checks": [
+                  {
+                    "name": "catalog-completeness",
+                    "status": "passed",
+                    "scope": "Exact selected catalog key parity in closure, fresh current-source catalog tests and EN/BG rendered journeys; key counts alone are not linguistic acceptance.",
+                    "evidence": [
+                      {
+                        "path": "docs/releases/six-design-2026-10-10/native-execution/auto-best-696230a-qualification.json",
+                        "sha256": "38f0a1c4f3e98d7f6af72ab59f692341a96f39e6cb3c7a5b7f1bd2958ff4a9bc"
+                      }
+                    ],
+                    "evidenceSha256": "38f0a1c4f3e98d7f6af72ab59f692341a96f39e6cb3c7a5b7f1bd2958ff4a9bc"
+                  },
+                  {
+                    "name": "hardcoded-ui",
+                    "status": "passed",
+                    "scope": "Fresh selected-source copy/native-source audit tests plus final owner changed-page acceptance from closure; bounded public journeys show both locales without runtime errors.",
+                    "evidence": [
+                      {
+                        "path": "docs/releases/six-design-2026-10-10/native-execution/auto-best-696230a-qualification.json",
+                        "sha256": "38f0a1c4f3e98d7f6af72ab59f692341a96f39e6cb3c7a5b7f1bd2958ff4a9bc"
+                      }
+                    ],
+                    "evidenceSha256": "38f0a1c4f3e98d7f6af72ab59f692341a96f39e6cb3c7a5b7f1bd2958ff4a9bc"
+                  },
+                  {
+                    "name": "native-routing",
+                    "status": "passed",
+                    "scope": "Fresh selected native routing/proxy/policy tests plus current public inventory, real detail, reload and contact routes in EN/BG.",
+                    "evidence": [
+                      {
+                        "path": "docs/releases/six-design-2026-10-10/native-execution/auto-best-696230a-qualification.json",
+                        "sha256": "38f0a1c4f3e98d7f6af72ab59f692341a96f39e6cb3c7a5b7f1bd2958ff4a9bc"
+                      }
+                    ],
+                    "evidenceSha256": "38f0a1c4f3e98d7f6af72ab59f692341a96f39e6cb3c7a5b7f1bd2958ff4a9bc"
+                  },
+                  {
+                    "name": "standalone-journeys",
+                    "status": "passed",
+                    "scope": "Six fresh public cases: EN/BG at 320, 390 and 1440; entry/inventory/real detail/reload/contact, locale, assets and overflow.",
+                    "evidence": [
+                      {
+                        "path": "docs/releases/six-design-2026-10-10/native-execution/auto-best-696230a-qualification.json",
+                        "sha256": "38f0a1c4f3e98d7f6af72ab59f692341a96f39e6cb3c7a5b7f1bd2958ff4a9bc"
+                      }
+                    ],
+                    "evidenceSha256": "38f0a1c4f3e98d7f6af72ab59f692341a96f39e6cb3c7a5b7f1bd2958ff4a9bc"
+                  },
+                  {
+                    "name": "mounted-journeys",
+                    "status": "passed",
+                    "scope": "Auto Best remains the root-mount family; current root-hosted routes pass. Existing zero-base routing contract retained. Complete newly assembled six-service dealer production build and branding remain mandatory pilot gates.",
+                    "evidence": [
+                      {
+                        "path": "docs/releases/six-design-2026-10-10/native-execution/auto-best-696230a-qualification.json",
+                        "sha256": "38f0a1c4f3e98d7f6af72ab59f692341a96f39e6cb3c7a5b7f1bd2958ff4a9bc"
+                      }
+                    ],
+                    "evidenceSha256": "38f0a1c4f3e98d7f6af72ab59f692341a96f39e6cb3c7a5b7f1bd2958ff4a9bc"
+                  },
+                  {
+                    "name": "public-journeys",
+                    "status": "passed",
+                    "scope": "Exact selected master source-to-mirror and READY receipt from closure plus six fresh current public browser cases; no claim of dealer publication.",
+                    "evidence": [
+                      {
+                        "path": "docs/releases/six-design-2026-10-10/native-execution/auto-best-696230a-qualification.json",
+                        "sha256": "38f0a1c4f3e98d7f6af72ab59f692341a96f39e6cb3c7a5b7f1bd2958ff4a9bc"
+                      }
+                    ],
+                    "evidenceSha256": "38f0a1c4f3e98d7f6af72ab59f692341a96f39e6cb3c7a5b7f1bd2958ff4a9bc"
+                  },
+                  {
+                    "name": "preferences-no-js",
+                    "status": "passed",
+                    "scope": "Fresh current native no-JS browser scenario plus current selected preference HTTP/form regression.",
+                    "evidence": [
+                      {
+                        "path": "docs/releases/six-design-2026-10-10/native-execution/auto-best-696230a-qualification.json",
+                        "sha256": "38f0a1c4f3e98d7f6af72ab59f692341a96f39e6cb3c7a5b7f1bd2958ff4a9bc"
+                      }
+                    ],
+                    "evidenceSha256": "38f0a1c4f3e98d7f6af72ab59f692341a96f39e6cb3c7a5b7f1bd2958ff4a9bc"
+                  },
+                  {
+                    "name": "preferences-storage-disabled",
+                    "status": "passed",
+                    "scope": "Fresh current storage-unavailable preference browser scenario, with fresh selected native policy tests.",
+                    "evidence": [
+                      {
+                        "path": "docs/releases/six-design-2026-10-10/native-execution/auto-best-696230a-qualification.json",
+                        "sha256": "38f0a1c4f3e98d7f6af72ab59f692341a96f39e6cb3c7a5b7f1bd2958ff4a9bc"
+                      }
+                    ],
+                    "evidenceSha256": "38f0a1c4f3e98d7f6af72ab59f692341a96f39e6cb3c7a5b7f1bd2958ff4a9bc"
+                  },
+                  {
+                    "name": "preferences-races",
+                    "status": "passed",
+                    "scope": "Preference component script and markup are byte-identical to the previously accepted race-tested source; new styling checked by current save/Escape/reopen tests and 39 selected native tests.",
+                    "evidence": [
+                      {
+                        "path": "docs/releases/six-design-2026-10-10/native-execution/auto-best-696230a-qualification.json",
+                        "sha256": "38f0a1c4f3e98d7f6af72ab59f692341a96f39e6cb3c7a5b7f1bd2958ff4a9bc"
+                      }
+                    ],
+                    "evidenceSha256": "38f0a1c4f3e98d7f6af72ab59f692341a96f39e6cb3c7a5b7f1bd2958ff4a9bc"
+                  },
+                  {
+                    "name": "request-isolation",
+                    "status": "passed",
+                    "scope": "Fresh selected native routing/preferences/proxy/security tests exercise request-owned state and accepted/rejected policy; current public EN/BG cases use separate browser contexts and current HTTP tests preserve cookie boundaries.",
+                    "evidence": [
+                      {
+                        "path": "docs/releases/six-design-2026-10-10/native-execution/auto-best-696230a-qualification.json",
+                        "sha256": "38f0a1c4f3e98d7f6af72ab59f692341a96f39e6cb3c7a5b7f1bd2958ff4a9bc"
+                      }
+                    ],
+                    "evidenceSha256": "38f0a1c4f3e98d7f6af72ab59f692341a96f39e6cb3c7a5b7f1bd2958ff4a9bc"
+                  },
+                  {
+                    "name": "security-write-blocking",
+                    "status": "passed",
+                    "scope": "Fresh native security/policy tests and 16 HTTP preference-only guard checks; browser audit intercepts non-read business requests. This does not claim a clean dependency vulnerability audit or submit any dealership enquiry.",
+                    "evidence": [
+                      {
+                        "path": "docs/releases/six-design-2026-10-10/native-execution/auto-best-696230a-qualification.json",
+                        "sha256": "38f0a1c4f3e98d7f6af72ab59f692341a96f39e6cb3c7a5b7f1bd2958ff4a9bc"
+                      }
+                    ],
+                    "evidenceSha256": "38f0a1c4f3e98d7f6af72ab59f692341a96f39e6cb3c7a5b7f1bd2958ff4a9bc"
+                  },
+                  {
+                    "name": "assets-preserved",
+                    "status": "passed",
+                    "scope": "Retained exact immutable asset/source/mirror hashes from closure; fresh public and mounted journeys have zero own-origin image/font/script/style failures, with actual generated shared switcher runtime. Dealer-specific logo/favicon/social acceptance is a separate mandatory complete pilot gate.",
+                    "evidence": [
+                      {
+                        "path": "docs/releases/six-design-2026-10-10/native-execution/auto-best-696230a-qualification.json",
+                        "sha256": "38f0a1c4f3e98d7f6af72ab59f692341a96f39e6cb3c7a5b7f1bd2958ff4a9bc"
+                      }
+                    ],
+                    "evidenceSha256": "38f0a1c4f3e98d7f6af72ab59f692341a96f39e6cb3c7a5b7f1bd2958ff4a9bc"
+                  }
+                ],
+                "standalone": {
+                  "mobile": {
+                    "verified": true,
+                    "widths": [
+                      320,
+                      390
+                    ],
+                    "evidence": [
+                      {
+                        "path": "docs/releases/six-design-2026-10-10/native-execution/auto-best-current-journeys.json",
+                        "sha256": "a1bda1c76c283c038f7afbc203c132c2da796e78375e2d3036a2b3aa1c6e3062"
+                      }
+                    ]
+                  },
+                  "desktop": {
+                    "verified": true,
+                    "widths": [
+                      1440
+                    ],
+                    "evidence": [
+                      {
+                        "path": "docs/releases/six-design-2026-10-10/native-execution/auto-best-current-journeys.json",
+                        "sha256": "a1bda1c76c283c038f7afbc203c132c2da796e78375e2d3036a2b3aa1c6e3062"
+                      }
+                    ]
+                  }
+                },
+                "modes": {
+                  "standalone": "Passed exact-source native and current public browser checks.",
+                  "mounted": "Root family native contract retained; complete personalized six-service pilot still required."
+                },
+                "evidence": [
+                  {
+                    "path": "docs/releases/six-design-2026-10-10/native-execution/auto-best-696230a-qualification.json",
+                    "sha256": "38f0a1c4f3e98d7f6af72ab59f692341a96f39e6cb3c7a5b7f1bd2958ff4a9bc"
+                  }
+                ],
+                "notes": [
+                  "Source selection, native mounted qualification and complete personalized dealer publication are different gates.",
+                  "No dealer is refreshed or deployed by this selection.",
+                  "The isolated two-family fixture is not a six-service dealer pilot; full pilot compilation and metadata/branding checks are still required."
+                ]
+              }
+            },
+            "reason": "Reviewed immutable Cars template source; dealer adoption is explicit.",
+            "observedWorkingDigest": "ab83f2cef085900a3cadec24df13d2455a0a4bf0fb2ebef8a26711789219f439",
+            "baselineCarsCommit": "a2f2975a0aa362dce2c66472f202dd0548dc8b1b",
+            "reconciliationEvidence": "docs/WORKFLOW-MIGRATION-2026-09-12.md",
+            "source": {
+              "repository": "darkapoparka/cars",
+              "revision": "696230a404abd9b20b6f907b9cfb139175298c7a",
+              "path": "templates/auto-best",
+              "tree": "b07ff2273be554ef64a039ac8f4f023ae60a33ac",
+              "digest": "90f131aa0ead6ae4fcb06d30c054ca4d0c5d39097a2927cca8f298c7d2dfb3ca"
+            },
+            "legacySource": {
+              "repository": "darkapoparka/cars-template-auto-best",
+              "revision": "2f4c2fb8d7a926da74272f7ea7036cfefae6a5d2",
+              "path": "",
+              "tree": null,
+              "digest": "630ef7a807063600dfa518cf28ebe4a006ea36308bf0b358185b132eaacb1fbf",
+              "evidence": "docs/releases/fleet-2026-09-24/auto-best-release.json",
+              "nativeDeployment": {
+                "id": "dpl_GXXC1vmjWSfcLTJu7YXHijv7sfUf",
+                "projectId": "prj_4U4cBdkH0or7uKtFsLO3OkNSzXIX",
+                "state": "READY",
+                "sourceCommit": "2f4c2fb8d7a926da74272f7ea7036cfefae6a5d2",
+                "publicAlias": "https://cars-template-auto-best.vercel.app/"
+              }
+            }
+          },
+          "releaseSha256": "fb04fd0978d4aa143ef64de9ccaa9dd8fbc346ad2837ad850d482b76fe10de5c",
+          "reference": "docs/releases/six-design-2026-10-10/native-execution/auto-best-696230a-release.json",
+          "sha256": "aa1e593f7438210920ae7b2e0dae7a5ea9ffd116cd1a33d3e95f3056f0c88e0e",
+          "verifiedAt": "2026-10-10T17:33:58.141Z"
+        },
+        "sourceDeltaReview": {
+          "reference": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
+          "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975",
+          "reviewedAt": "2026-10-11T21:04:02.173Z"
+        },
+        "catalogs": [
+          {
+            "format": "typescript-pair",
+            "path": "src/lib/locale/catalog.ts",
+            "en": "en",
+            "bg": "bg"
+          }
+        ],
+        "pendingNativeChecks": [
+          "catalog-completeness",
+          "hardcoded-ui",
+          "native-routing",
+          "standalone-journeys",
+          "mounted-journeys",
+          "public-journeys",
+          "preferences-no-js",
+          "preferences-storage-disabled",
+          "preferences-races",
+          "request-isolation",
+          "security-write-blocking",
+          "assets-preserved"
+        ],
+        "sourceState": "published-final-owner-source"
+      }
+    },
+    "modern": {
+      "repository": "darkapoparka/cars",
+      "status": "qualification",
+      "commit": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+      "release": "modern-b1f0f56-source-qualification-2026-10-12",
+      "snapshotPath": "templates/modern",
+      "digest": "ba263aac8f1863d133807d3e1bf3597d125cf315a7e0deba3f6e419b52434c25",
+      "exportPolicy": "cars-source-v1",
+      "source": {
+        "repository": "darkapoparka/cars",
+        "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+        "path": "templates/modern",
+        "tree": "3974380670eb388bb16182f94ade33be6d87b1c1",
+        "digest": "ba263aac8f1863d133807d3e1bf3597d125cf315a7e0deba3f6e419b52434c25"
+      },
+      "runtime": {
+        "node": "22.x"
+      },
+      "modes": {
+        "standalone": "Recorded focused owner checks only; current complete acceptance pending.",
+        "mounted": "Priselci qualification pilot pending",
+        "dealer": "Reviewed Priselci-only source qualification; hosted pilot pending"
+      },
+      "qualification": {
+        "contextId": "fleet-additional100-absent-b1f0f56",
+        "sourceQA": {
+          "approvedRelease": {
+            "repository": "darkapoparka/cars",
+            "status": "approved",
+            "commit": "6f87470c1e3ec8ade7d9ecc07daf9ebe45cb9710",
+            "release": "modern-6f87470-native-qualified-2026-10-10",
+            "snapshotPath": "templates/modern",
+            "digest": "b035a849efb41d3ed18d97fcf3511850469162c0a990397b74be588179d43588",
+            "exportPolicy": "cars-source-v1",
+            "observedUpstreamCommit": "f64006130523375e440d48e4c4be6ec1b830d46a",
+            "runtime": {
+              "node": "22.x"
+            },
+            "modes": {
+              "standalone": "Focused current owner receipts retained; see closure.",
+              "mounted": "pending exact representative six-family acceptance",
+              "dealer": "not deployed"
+            },
+            "qa": {
+              "evidence": "docs/releases/six-design-2026-10-10/native-execution/modern-6f87470-release.json",
+              "verifiedAt": "2026-10-10T17:34:01.221Z",
+              "checks": [
+                {
+                  "name": "exact-source-and-mirror",
+                  "status": "passed",
+                  "evidence": [
+                    {
+                      "path": "docs/releases/six-design-2026-10-10/native/modern-6f87470-closure.json",
+                      "sha256": "4e6e3ba4e548f24456a10a4784a814abfc96a22f8058f1fc06b2ee65cb4c8600"
+                    }
+                  ],
+                  "evidenceSha256": "4e6e3ba4e548f24456a10a4784a814abfc96a22f8058f1fc06b2ee65cb4c8600"
+                },
+                {
+                  "name": "matching-master-build",
+                  "status": "passed",
+                  "evidence": [
+                    {
+                      "path": "docs/releases/six-design-2026-10-10/native/modern-6f87470-closure.json",
+                      "sha256": "4e6e3ba4e548f24456a10a4784a814abfc96a22f8058f1fc06b2ee65cb4c8600"
+                    }
+                  ],
+                  "evidenceSha256": "4e6e3ba4e548f24456a10a4784a814abfc96a22f8058f1fc06b2ee65cb4c8600"
+                },
+                {
+                  "name": "declared-catalog-parity",
+                  "status": "passed",
+                  "evidence": [
+                    {
+                      "path": "docs/releases/six-design-2026-10-10/native/modern-6f87470-closure.json",
+                      "sha256": "4e6e3ba4e548f24456a10a4784a814abfc96a22f8058f1fc06b2ee65cb4c8600"
+                    }
+                  ],
+                  "evidenceSha256": "4e6e3ba4e548f24456a10a4784a814abfc96a22f8058f1fc06b2ee65cb4c8600"
+                },
+                {
+                  "name": "scoped-owner-standalone-delta",
+                  "status": "passed",
+                  "evidence": [
+                    {
+                      "path": "docs/releases/six-design-2026-10-10/native/modern-6f87470-closure.json",
+                      "sha256": "4e6e3ba4e548f24456a10a4784a814abfc96a22f8058f1fc06b2ee65cb4c8600"
+                    }
+                  ],
+                  "evidenceSha256": "4e6e3ba4e548f24456a10a4784a814abfc96a22f8058f1fc06b2ee65cb4c8600"
+                },
+                {
+                  "name": "catalog-completeness",
+                  "status": "passed",
+                  "scope": "Exact selected catalog key parity in closure, fresh current-source catalog tests and EN/BG rendered journeys; key counts alone are not linguistic acceptance.",
+                  "evidence": [
+                    {
+                      "path": "docs/releases/six-design-2026-10-10/native-execution/modern-6f87470-qualification.json",
+                      "sha256": "486432fd73aabe67977a906983e3cc03cf5e408d57c939211ba365757977bd92"
+                    }
+                  ]
+                },
+                {
+                  "name": "hardcoded-ui",
+                  "status": "passed",
+                  "scope": "Fresh selected-source copy/native-source audit tests plus final owner changed-page acceptance from closure; bounded public journeys show both locales without runtime errors.",
+                  "evidence": [
+                    {
+                      "path": "docs/releases/six-design-2026-10-10/native-execution/modern-6f87470-qualification.json",
+                      "sha256": "486432fd73aabe67977a906983e3cc03cf5e408d57c939211ba365757977bd92"
+                    }
+                  ]
+                },
+                {
+                  "name": "native-routing",
+                  "status": "passed",
+                  "scope": "Fresh selected native routing/proxy/policy tests plus current public inventory, real detail, reload and contact routes in EN/BG.",
+                  "evidence": [
+                    {
+                      "path": "docs/releases/six-design-2026-10-10/native-execution/modern-6f87470-qualification.json",
+                      "sha256": "486432fd73aabe67977a906983e3cc03cf5e408d57c939211ba365757977bd92"
+                    }
+                  ]
+                },
+                {
+                  "name": "standalone-journeys",
+                  "status": "passed",
+                  "scope": "Six fresh public cases: EN/BG at 320, 390 and 1440; entry/inventory/real detail/reload/contact, locale, assets and overflow.",
+                  "evidence": [
+                    {
+                      "path": "docs/releases/six-design-2026-10-10/native-execution/modern-6f87470-qualification.json",
+                      "sha256": "486432fd73aabe67977a906983e3cc03cf5e408d57c939211ba365757977bd92"
+                    }
+                  ]
+                },
+                {
+                  "name": "mounted-journeys",
+                  "status": "passed",
+                  "scope": "Reused exact selected immutable mounted production compilation and fresh EN/BG journeys at 320/390/1440 with the actual shared publisher runtime. Complete personalized six-service production integration remains mandatory before dealer publication.",
+                  "evidence": [
+                    {
+                      "path": "docs/releases/six-design-2026-10-10/native-execution/modern-6f87470-qualification.json",
+                      "sha256": "486432fd73aabe67977a906983e3cc03cf5e408d57c939211ba365757977bd92"
+                    }
+                  ]
+                },
+                {
+                  "name": "public-journeys",
+                  "status": "passed",
+                  "scope": "Exact selected master source-to-mirror and READY receipt from closure plus six fresh current public browser cases; no claim of dealer publication.",
+                  "evidence": [
+                    {
+                      "path": "docs/releases/six-design-2026-10-10/native-execution/modern-6f87470-qualification.json",
+                      "sha256": "486432fd73aabe67977a906983e3cc03cf5e408d57c939211ba365757977bd92"
+                    }
+                  ]
+                },
+                {
+                  "name": "preferences-no-js",
+                  "status": "passed",
+                  "scope": "Fresh current native no-JS browser scenario plus current selected preference HTTP/form regression.",
+                  "evidence": [
+                    {
+                      "path": "docs/releases/six-design-2026-10-10/native-execution/modern-6f87470-qualification.json",
+                      "sha256": "486432fd73aabe67977a906983e3cc03cf5e408d57c939211ba365757977bd92"
+                    }
+                  ]
+                },
+                {
+                  "name": "preferences-storage-disabled",
+                  "status": "passed",
+                  "scope": "Fresh current storage-unavailable preference browser scenario, with fresh selected native policy tests.",
+                  "evidence": [
+                    {
+                      "path": "docs/releases/six-design-2026-10-10/native-execution/modern-6f87470-qualification.json",
+                      "sha256": "486432fd73aabe67977a906983e3cc03cf5e408d57c939211ba365757977bd92"
+                    }
+                  ]
+                },
+                {
+                  "name": "preferences-races",
+                  "status": "passed",
+                  "scope": "Fresh mounted 22-scenario native preference suite includes pending/dismiss/reopen transitions and current source preference policy tests.",
+                  "evidence": [
+                    {
+                      "path": "docs/releases/six-design-2026-10-10/native-execution/modern-6f87470-qualification.json",
+                      "sha256": "486432fd73aabe67977a906983e3cc03cf5e408d57c939211ba365757977bd92"
+                    }
+                  ]
+                },
+                {
+                  "name": "request-isolation",
+                  "status": "passed",
+                  "scope": "Fresh selected native routing/preferences/proxy/security tests exercise request-owned state and accepted/rejected policy; current public EN/BG cases use separate browser contexts and current HTTP tests preserve cookie boundaries.",
+                  "evidence": [
+                    {
+                      "path": "docs/releases/six-design-2026-10-10/native-execution/modern-6f87470-qualification.json",
+                      "sha256": "486432fd73aabe67977a906983e3cc03cf5e408d57c939211ba365757977bd92"
+                    }
+                  ]
+                },
+                {
+                  "name": "security-write-blocking",
+                  "status": "passed",
+                  "scope": "Fresh native security/policy tests and 16 HTTP preference-only guard checks; browser audit intercepts non-read business requests. This does not claim a clean dependency vulnerability audit or submit any dealership enquiry.",
+                  "evidence": [
+                    {
+                      "path": "docs/releases/six-design-2026-10-10/native-execution/modern-6f87470-qualification.json",
+                      "sha256": "486432fd73aabe67977a906983e3cc03cf5e408d57c939211ba365757977bd92"
+                    }
+                  ]
+                },
+                {
+                  "name": "assets-preserved",
+                  "status": "passed",
+                  "scope": "Retained exact immutable asset/source/mirror hashes from closure; fresh public and mounted journeys have zero own-origin image/font/script/style failures, with actual generated shared switcher runtime. Dealer-specific logo/favicon/social acceptance is a separate mandatory complete pilot gate.",
+                  "evidence": [
+                    {
+                      "path": "docs/releases/six-design-2026-10-10/native-execution/modern-6f87470-qualification.json",
+                      "sha256": "486432fd73aabe67977a906983e3cc03cf5e408d57c939211ba365757977bd92"
+                    }
+                  ]
+                }
+              ],
+              "standalone": {
+                "mobile": true,
+                "desktop": true,
+                "scope": "Original owner focused UI/build/hosted checks; full native journeys remain pending."
+              },
+              "nativeLocalization": {
+                "schemaVersion": 1,
+                "adapter": "native-v1",
+                "repository": "darkapoparka/cars",
+                "commit": "6f87470c1e3ec8ade7d9ecc07daf9ebe45cb9710",
+                "sourcePath": "templates/modern",
+                "sourceTree": "51d68e5dd6e3b305191df94e877403fd7b7414e1",
+                "sourceDigest": "b035a849efb41d3ed18d97fcf3511850469162c0a990397b74be588179d43588",
+                "verifiedAt": "2026-10-10T17:34:01.231Z",
+                "evidenceSha256": "486432fd73aabe67977a906983e3cc03cf5e408d57c939211ba365757977bd92",
+                "locales": [
+                  "en",
+                  "bg"
+                ],
+                "widths": [
+                  320,
+                  390,
+                  1440
+                ],
+                "widthsMeaning": "Required acceptance widths; checks remain pending, not a new execution claim.",
+                "catalogs": [
+                  {
+                    "format": "typescript-pair",
+                    "path": "packages/internationalization/preferences-messages.ts",
+                    "en": "en",
+                    "bg": "bg"
+                  },
+                  {
+                    "format": "typescript-pair",
+                    "path": "packages/internationalization/public-messages.ts",
+                    "en": "en",
+                    "bg": "bg"
+                  },
+                  {
+                    "format": "typescript-rows",
+                    "path": "packages/marketplace/content/inventory-copy.ts",
+                    "export": "inventoryCopy"
+                  },
+                  {
+                    "format": "typescript-locale-object",
+                    "path": "packages/marketplace-ui/lib/marketplace-control-copy.ts",
+                    "export": "copyByLanguage"
+                  }
+                ],
+                "deployment": {
+                  "id": "dpl_D384gvRsUcJLNC7TmvzH94TnnhUn",
+                  "projectId": "prj_A4DN3YbKHzofjvcbYOh3foMBCMpy",
+                  "state": "READY",
+                  "sourceCommit": "6f87470c1e3ec8ade7d9ecc07daf9ebe45cb9710",
+                  "publicAlias": "https://cars-template-modern.vercel.app/",
+                  "publishingRepository": "darkapoparka/cars-template-modern",
+                  "publishingCommit": "2e9cd2acf2dddb8bd96f0e9242200366b0522048",
+                  "sourceMapping": {
+                    "path": "docs/releases/six-design-2026-10-10/native/modern-6f87470-closure.json",
+                    "sha256": "4e6e3ba4e548f24456a10a4784a814abfc96a22f8058f1fc06b2ee65cb4c8600"
+                  }
+                },
+                "checks": [
+                  {
+                    "name": "catalog-completeness",
+                    "status": "passed",
+                    "scope": "Exact selected catalog key parity in closure, fresh current-source catalog tests and EN/BG rendered journeys; key counts alone are not linguistic acceptance.",
+                    "evidence": [
+                      {
+                        "path": "docs/releases/six-design-2026-10-10/native-execution/modern-6f87470-qualification.json",
+                        "sha256": "486432fd73aabe67977a906983e3cc03cf5e408d57c939211ba365757977bd92"
+                      }
+                    ],
+                    "evidenceSha256": "486432fd73aabe67977a906983e3cc03cf5e408d57c939211ba365757977bd92"
+                  },
+                  {
+                    "name": "hardcoded-ui",
+                    "status": "passed",
+                    "scope": "Fresh selected-source copy/native-source audit tests plus final owner changed-page acceptance from closure; bounded public journeys show both locales without runtime errors.",
+                    "evidence": [
+                      {
+                        "path": "docs/releases/six-design-2026-10-10/native-execution/modern-6f87470-qualification.json",
+                        "sha256": "486432fd73aabe67977a906983e3cc03cf5e408d57c939211ba365757977bd92"
+                      }
+                    ],
+                    "evidenceSha256": "486432fd73aabe67977a906983e3cc03cf5e408d57c939211ba365757977bd92"
+                  },
+                  {
+                    "name": "native-routing",
+                    "status": "passed",
+                    "scope": "Fresh selected native routing/proxy/policy tests plus current public inventory, real detail, reload and contact routes in EN/BG.",
+                    "evidence": [
+                      {
+                        "path": "docs/releases/six-design-2026-10-10/native-execution/modern-6f87470-qualification.json",
+                        "sha256": "486432fd73aabe67977a906983e3cc03cf5e408d57c939211ba365757977bd92"
+                      }
+                    ],
+                    "evidenceSha256": "486432fd73aabe67977a906983e3cc03cf5e408d57c939211ba365757977bd92"
+                  },
+                  {
+                    "name": "standalone-journeys",
+                    "status": "passed",
+                    "scope": "Six fresh public cases: EN/BG at 320, 390 and 1440; entry/inventory/real detail/reload/contact, locale, assets and overflow.",
+                    "evidence": [
+                      {
+                        "path": "docs/releases/six-design-2026-10-10/native-execution/modern-6f87470-qualification.json",
+                        "sha256": "486432fd73aabe67977a906983e3cc03cf5e408d57c939211ba365757977bd92"
+                      }
+                    ],
+                    "evidenceSha256": "486432fd73aabe67977a906983e3cc03cf5e408d57c939211ba365757977bd92"
+                  },
+                  {
+                    "name": "mounted-journeys",
+                    "status": "passed",
+                    "scope": "Reused exact selected immutable mounted production compilation and fresh EN/BG journeys at 320/390/1440 with the actual shared publisher runtime. Complete personalized six-service production integration remains mandatory before dealer publication.",
+                    "evidence": [
+                      {
+                        "path": "docs/releases/six-design-2026-10-10/native-execution/modern-6f87470-qualification.json",
+                        "sha256": "486432fd73aabe67977a906983e3cc03cf5e408d57c939211ba365757977bd92"
+                      }
+                    ],
+                    "evidenceSha256": "486432fd73aabe67977a906983e3cc03cf5e408d57c939211ba365757977bd92"
+                  },
+                  {
+                    "name": "public-journeys",
+                    "status": "passed",
+                    "scope": "Exact selected master source-to-mirror and READY receipt from closure plus six fresh current public browser cases; no claim of dealer publication.",
+                    "evidence": [
+                      {
+                        "path": "docs/releases/six-design-2026-10-10/native-execution/modern-6f87470-qualification.json",
+                        "sha256": "486432fd73aabe67977a906983e3cc03cf5e408d57c939211ba365757977bd92"
+                      }
+                    ],
+                    "evidenceSha256": "486432fd73aabe67977a906983e3cc03cf5e408d57c939211ba365757977bd92"
+                  },
+                  {
+                    "name": "preferences-no-js",
+                    "status": "passed",
+                    "scope": "Fresh current native no-JS browser scenario plus current selected preference HTTP/form regression.",
+                    "evidence": [
+                      {
+                        "path": "docs/releases/six-design-2026-10-10/native-execution/modern-6f87470-qualification.json",
+                        "sha256": "486432fd73aabe67977a906983e3cc03cf5e408d57c939211ba365757977bd92"
+                      }
+                    ],
+                    "evidenceSha256": "486432fd73aabe67977a906983e3cc03cf5e408d57c939211ba365757977bd92"
+                  },
+                  {
+                    "name": "preferences-storage-disabled",
+                    "status": "passed",
+                    "scope": "Fresh current storage-unavailable preference browser scenario, with fresh selected native policy tests.",
+                    "evidence": [
+                      {
+                        "path": "docs/releases/six-design-2026-10-10/native-execution/modern-6f87470-qualification.json",
+                        "sha256": "486432fd73aabe67977a906983e3cc03cf5e408d57c939211ba365757977bd92"
+                      }
+                    ],
+                    "evidenceSha256": "486432fd73aabe67977a906983e3cc03cf5e408d57c939211ba365757977bd92"
+                  },
+                  {
+                    "name": "preferences-races",
+                    "status": "passed",
+                    "scope": "Fresh mounted 22-scenario native preference suite includes pending/dismiss/reopen transitions and current source preference policy tests.",
+                    "evidence": [
+                      {
+                        "path": "docs/releases/six-design-2026-10-10/native-execution/modern-6f87470-qualification.json",
+                        "sha256": "486432fd73aabe67977a906983e3cc03cf5e408d57c939211ba365757977bd92"
+                      }
+                    ],
+                    "evidenceSha256": "486432fd73aabe67977a906983e3cc03cf5e408d57c939211ba365757977bd92"
+                  },
+                  {
+                    "name": "request-isolation",
+                    "status": "passed",
+                    "scope": "Fresh selected native routing/preferences/proxy/security tests exercise request-owned state and accepted/rejected policy; current public EN/BG cases use separate browser contexts and current HTTP tests preserve cookie boundaries.",
+                    "evidence": [
+                      {
+                        "path": "docs/releases/six-design-2026-10-10/native-execution/modern-6f87470-qualification.json",
+                        "sha256": "486432fd73aabe67977a906983e3cc03cf5e408d57c939211ba365757977bd92"
+                      }
+                    ],
+                    "evidenceSha256": "486432fd73aabe67977a906983e3cc03cf5e408d57c939211ba365757977bd92"
+                  },
+                  {
+                    "name": "security-write-blocking",
+                    "status": "passed",
+                    "scope": "Fresh native security/policy tests and 16 HTTP preference-only guard checks; browser audit intercepts non-read business requests. This does not claim a clean dependency vulnerability audit or submit any dealership enquiry.",
+                    "evidence": [
+                      {
+                        "path": "docs/releases/six-design-2026-10-10/native-execution/modern-6f87470-qualification.json",
+                        "sha256": "486432fd73aabe67977a906983e3cc03cf5e408d57c939211ba365757977bd92"
+                      }
+                    ],
+                    "evidenceSha256": "486432fd73aabe67977a906983e3cc03cf5e408d57c939211ba365757977bd92"
+                  },
+                  {
+                    "name": "assets-preserved",
+                    "status": "passed",
+                    "scope": "Retained exact immutable asset/source/mirror hashes from closure; fresh public and mounted journeys have zero own-origin image/font/script/style failures, with actual generated shared switcher runtime. Dealer-specific logo/favicon/social acceptance is a separate mandatory complete pilot gate.",
+                    "evidence": [
+                      {
+                        "path": "docs/releases/six-design-2026-10-10/native-execution/modern-6f87470-qualification.json",
+                        "sha256": "486432fd73aabe67977a906983e3cc03cf5e408d57c939211ba365757977bd92"
+                      }
+                    ],
+                    "evidenceSha256": "486432fd73aabe67977a906983e3cc03cf5e408d57c939211ba365757977bd92"
+                  }
+                ],
+                "standalone": {
+                  "mobile": {
+                    "verified": true,
+                    "widths": [
+                      320,
+                      390
+                    ],
+                    "evidence": [
+                      {
+                        "path": "docs/releases/six-design-2026-10-10/native-execution/modern-current-journeys.json",
+                        "sha256": "d365ef011fa43b02bd879b10d3a2a22bf2b0b44e7a2ce9f68cf020a17ff97ccb"
+                      }
+                    ]
+                  },
+                  "desktop": {
+                    "verified": true,
+                    "widths": [
+                      1440
+                    ],
+                    "evidence": [
+                      {
+                        "path": "docs/releases/six-design-2026-10-10/native-execution/modern-current-journeys.json",
+                        "sha256": "d365ef011fa43b02bd879b10d3a2a22bf2b0b44e7a2ce9f68cf020a17ff97ccb"
+                      }
+                    ]
+                  }
+                },
+                "modes": {
+                  "standalone": "Passed exact-source native and current public browser checks.",
+                  "mounted": "Passed exact selected mounted compilation and fresh current shared-runtime journeys; complete personalized six-service pilot still required."
+                },
+                "evidence": [
+                  {
+                    "path": "docs/releases/six-design-2026-10-10/native-execution/modern-6f87470-qualification.json",
+                    "sha256": "486432fd73aabe67977a906983e3cc03cf5e408d57c939211ba365757977bd92"
+                  }
+                ],
+                "notes": [
+                  "Source selection, native mounted qualification and complete personalized dealer publication are different gates.",
+                  "No dealer is refreshed or deployed by this selection.",
+                  "The isolated two-family fixture is not a six-service dealer pilot; full pilot compilation and metadata/branding checks are still required."
+                ]
+              }
+            },
+            "reason": "Reviewed immutable Cars template source; dealer adoption is explicit.",
+            "observedWorkingDigest": "146abad20859356a4058659ed0c2451d7f51181b08ef598136b058f7bbed305f",
+            "baselineCarsCommit": "a2f2975a0aa362dce2c66472f202dd0548dc8b1b",
+            "reconciliationEvidence": "docs/WORKFLOW-MIGRATION-2026-09-12.md",
+            "source": {
+              "repository": "darkapoparka/cars",
+              "revision": "6f87470c1e3ec8ade7d9ecc07daf9ebe45cb9710",
+              "path": "templates/modern",
+              "tree": "51d68e5dd6e3b305191df94e877403fd7b7414e1",
+              "digest": "b035a849efb41d3ed18d97fcf3511850469162c0a990397b74be588179d43588"
+            },
+            "legacySource": {
+              "repository": "darkapoparka/cars-template-modern",
+              "revision": "3f77bf25456a608bdaaab84cb60e97fccda063f2",
+              "path": "",
+              "tree": null,
+              "digest": "115a01de44984d280c7e5c9ceaca2599e9b23d95ec7bb879c741fcf2ce4f1265",
+              "evidence": "docs/releases/fleet-2026-09-24/modern-release.json",
+              "nativeDeployment": {
+                "id": "dpl_5LEeXtzPtrWyeKNExJcvbqzshCgx",
+                "projectId": "prj_A4DN3YbKHzofjvcbYOh3foMBCMpy",
+                "state": "READY",
+                "sourceCommit": "3f77bf25456a608bdaaab84cb60e97fccda063f2",
+                "publicAlias": "https://cars-template-modern.vercel.app/"
+              }
+            }
+          },
+          "releaseSha256": "d87c0276a4a340a39dc9c8322869d6e1fc3c2a1471d2a2b2cc6d09fa654fb900",
+          "reference": "docs/releases/six-design-2026-10-10/native-execution/modern-6f87470-release.json",
+          "sha256": "5017517697ec17dcefae2270e47c4fa93a46677e54fbce5f701a8b21be25d94c",
+          "verifiedAt": "2026-10-10T17:34:01.221Z"
+        },
+        "sourceDeltaReview": {
+          "reference": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
+          "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975",
+          "reviewedAt": "2026-10-11T21:04:02.173Z"
+        },
+        "catalogs": [
+          {
+            "format": "typescript-pair",
+            "path": "packages/internationalization/preferences-messages.ts",
+            "en": "en",
+            "bg": "bg"
+          },
+          {
+            "format": "typescript-pair",
+            "path": "packages/internationalization/public-messages.ts",
+            "en": "en",
+            "bg": "bg"
+          },
+          {
+            "format": "typescript-rows",
+            "path": "packages/marketplace/content/inventory-copy.ts",
+            "export": "inventoryCopy"
+          },
+          {
+            "format": "typescript-locale-object",
+            "path": "packages/marketplace-ui/lib/marketplace-control-copy.ts",
+            "export": "copyByLanguage"
+          }
+        ],
+        "pendingNativeChecks": [
+          "catalog-completeness",
+          "hardcoded-ui",
+          "native-routing",
+          "standalone-journeys",
+          "mounted-journeys",
+          "public-journeys",
+          "preferences-no-js",
+          "preferences-storage-disabled",
+          "preferences-races",
+          "request-isolation",
+          "security-write-blocking",
+          "assets-preserved"
+        ],
+        "sourceState": "published-final-owner-source"
+      }
+    },
+    "import": {
+      "repository": "darkapoparka/cars",
+      "status": "qualification",
+      "commit": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+      "release": "import-b1f0f56-source-qualification-2026-10-12",
+      "snapshotPath": "templates/import",
+      "digest": "f98a0934cdcc5adbda393c14c02eb2adc0175344ab2ac3f913afe4b0603366e5",
+      "exportPolicy": "cars-source-v1",
+      "source": {
+        "repository": "darkapoparka/cars",
+        "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+        "path": "templates/import",
+        "tree": "6afc6901e2f95967fb7c72e9f75525d4d6fbf086",
+        "digest": "f98a0934cdcc5adbda393c14c02eb2adc0175344ab2ac3f913afe4b0603366e5"
+      },
+      "runtime": {
+        "node": "24.21.0"
+      },
+      "modes": {
+        "standalone": "Recorded focused owner checks only; current complete acceptance pending.",
+        "mounted": "Priselci qualification pilot pending",
+        "dealer": "Reviewed Priselci-only source qualification; hosted pilot pending"
+      },
+      "qualification": {
+        "contextId": "fleet-additional100-absent-b1f0f56",
+        "sourceQA": {
+          "approvedRelease": {
+            "repository": "darkapoparka/cars",
+            "status": "approved",
+            "commit": "b9373e9ed5453bc7d208898ae140eae4d596a232",
+            "release": "import-b9373e9-native-qualified-2026-10-10",
+            "snapshotPath": "templates/import",
+            "digest": "eef4c3544b28bb3a62cad4c2a07e4ff64301fb4c9e9925ba002077bda7f63bd3",
+            "exportPolicy": "cars-source-v1",
+            "observedUpstreamCommit": "3c24db073b0b1a3bf26c64ed5336921117658e29",
+            "runtime": {
+              "node": "24.21.0"
+            },
+            "modes": {
+              "standalone": "Focused current owner receipts retained; see closure.",
+              "mounted": "pending exact representative six-family acceptance",
+              "dealer": "not deployed"
+            },
+            "qa": {
+              "evidence": "docs/releases/six-design-2026-10-10/native-execution/import-b9373e9-release.json",
+              "verifiedAt": "2026-10-10T17:34:09.318Z",
+              "checks": [
+                {
+                  "name": "exact-source-and-mirror",
+                  "status": "passed",
+                  "evidence": [
+                    {
+                      "path": "docs/releases/six-design-2026-10-10/native/import-b9373e9-closure.json",
+                      "sha256": "a63321f02e686aabc778f82c4d2a3e162df3773614e1d0341868eb42fc24576b"
+                    }
+                  ],
+                  "evidenceSha256": "a63321f02e686aabc778f82c4d2a3e162df3773614e1d0341868eb42fc24576b"
+                },
+                {
+                  "name": "matching-master-build",
+                  "status": "passed",
+                  "evidence": [
+                    {
+                      "path": "docs/releases/six-design-2026-10-10/native/import-b9373e9-closure.json",
+                      "sha256": "a63321f02e686aabc778f82c4d2a3e162df3773614e1d0341868eb42fc24576b"
+                    }
+                  ],
+                  "evidenceSha256": "a63321f02e686aabc778f82c4d2a3e162df3773614e1d0341868eb42fc24576b"
+                },
+                {
+                  "name": "declared-catalog-parity",
+                  "status": "passed",
+                  "evidence": [
+                    {
+                      "path": "docs/releases/six-design-2026-10-10/native/import-b9373e9-closure.json",
+                      "sha256": "a63321f02e686aabc778f82c4d2a3e162df3773614e1d0341868eb42fc24576b"
+                    }
+                  ],
+                  "evidenceSha256": "a63321f02e686aabc778f82c4d2a3e162df3773614e1d0341868eb42fc24576b"
+                },
+                {
+                  "name": "scoped-owner-standalone-delta",
+                  "status": "passed",
+                  "evidence": [
+                    {
+                      "path": "docs/releases/six-design-2026-10-10/native/import-b9373e9-closure.json",
+                      "sha256": "a63321f02e686aabc778f82c4d2a3e162df3773614e1d0341868eb42fc24576b"
+                    }
+                  ],
+                  "evidenceSha256": "a63321f02e686aabc778f82c4d2a3e162df3773614e1d0341868eb42fc24576b"
+                },
+                {
+                  "name": "catalog-completeness",
+                  "status": "passed",
+                  "scope": "Exact selected catalog key parity in closure, fresh current-source catalog tests and EN/BG rendered journeys; key counts alone are not linguistic acceptance.",
+                  "evidence": [
+                    {
+                      "path": "docs/releases/six-design-2026-10-10/native-execution/import-b9373e9-qualification.json",
+                      "sha256": "5012a5c08bb2efb69fb3d84eb9c3d5606745b01770e278d3cc5f6105dd42c1fc"
+                    }
+                  ]
+                },
+                {
+                  "name": "hardcoded-ui",
+                  "status": "passed",
+                  "scope": "Fresh selected-source copy/native-source audit tests plus final owner changed-page acceptance from closure; bounded public journeys show both locales without runtime errors.",
+                  "evidence": [
+                    {
+                      "path": "docs/releases/six-design-2026-10-10/native-execution/import-b9373e9-qualification.json",
+                      "sha256": "5012a5c08bb2efb69fb3d84eb9c3d5606745b01770e278d3cc5f6105dd42c1fc"
+                    }
+                  ]
+                },
+                {
+                  "name": "native-routing",
+                  "status": "passed",
+                  "scope": "Fresh selected native routing/proxy/policy tests plus current public inventory, real detail, reload and contact routes in EN/BG.",
+                  "evidence": [
+                    {
+                      "path": "docs/releases/six-design-2026-10-10/native-execution/import-b9373e9-qualification.json",
+                      "sha256": "5012a5c08bb2efb69fb3d84eb9c3d5606745b01770e278d3cc5f6105dd42c1fc"
+                    }
+                  ]
+                },
+                {
+                  "name": "standalone-journeys",
+                  "status": "passed",
+                  "scope": "Six fresh public cases: EN/BG at 320, 390 and 1440; entry/inventory/real detail/reload/contact, locale, assets and overflow.",
+                  "evidence": [
+                    {
+                      "path": "docs/releases/six-design-2026-10-10/native-execution/import-b9373e9-qualification.json",
+                      "sha256": "5012a5c08bb2efb69fb3d84eb9c3d5606745b01770e278d3cc5f6105dd42c1fc"
+                    }
+                  ]
+                },
+                {
+                  "name": "mounted-journeys",
+                  "status": "passed",
+                  "scope": "Reused exact selected immutable mounted production compilation and fresh EN/BG journeys at 320/390/1440 with the actual shared publisher runtime. Complete personalized six-service production integration remains mandatory before dealer publication.",
+                  "evidence": [
+                    {
+                      "path": "docs/releases/six-design-2026-10-10/native-execution/import-b9373e9-qualification.json",
+                      "sha256": "5012a5c08bb2efb69fb3d84eb9c3d5606745b01770e278d3cc5f6105dd42c1fc"
+                    }
+                  ]
+                },
+                {
+                  "name": "public-journeys",
+                  "status": "passed",
+                  "scope": "Exact selected master source-to-mirror and READY receipt from closure plus six fresh current public browser cases; no claim of dealer publication.",
+                  "evidence": [
+                    {
+                      "path": "docs/releases/six-design-2026-10-10/native-execution/import-b9373e9-qualification.json",
+                      "sha256": "5012a5c08bb2efb69fb3d84eb9c3d5606745b01770e278d3cc5f6105dd42c1fc"
+                    }
+                  ]
+                },
+                {
+                  "name": "preferences-no-js",
+                  "status": "passed",
+                  "scope": "Historical no-JS browser acceptance retained only for the byte-identical Import preference component, trigger, focus, policy and no-JS settings page; fresh selected preference HTTP/form and native policy tests passed.",
+                  "evidence": [
+                    {
+                      "path": "docs/releases/six-design-2026-10-10/native-execution/import-b9373e9-qualification.json",
+                      "sha256": "5012a5c08bb2efb69fb3d84eb9c3d5606745b01770e278d3cc5f6105dd42c1fc"
+                    }
+                  ]
+                },
+                {
+                  "name": "preferences-storage-disabled",
+                  "status": "passed",
+                  "scope": "Historical storage-disabled browser acceptance retained only for byte-identical preference consumers; fresh selected native/policy tests and public rendered journeys cover current release integration.",
+                  "evidence": [
+                    {
+                      "path": "docs/releases/six-design-2026-10-10/native-execution/import-b9373e9-qualification.json",
+                      "sha256": "5012a5c08bb2efb69fb3d84eb9c3d5606745b01770e278d3cc5f6105dd42c1fc"
+                    }
+                  ]
+                },
+                {
+                  "name": "preferences-races",
+                  "status": "passed",
+                  "scope": "Historical preference race acceptance retained only for byte-identical preference component, trigger, focus, policy and no-JS settings consumers; current native policy and HTTP regression passed.",
+                  "evidence": [
+                    {
+                      "path": "docs/releases/six-design-2026-10-10/native-execution/import-b9373e9-qualification.json",
+                      "sha256": "5012a5c08bb2efb69fb3d84eb9c3d5606745b01770e278d3cc5f6105dd42c1fc"
+                    }
+                  ]
+                },
+                {
+                  "name": "request-isolation",
+                  "status": "passed",
+                  "scope": "Fresh selected native routing/preferences/proxy/security tests exercise request-owned state and accepted/rejected policy; current public EN/BG cases use separate browser contexts and current HTTP tests preserve cookie boundaries.",
+                  "evidence": [
+                    {
+                      "path": "docs/releases/six-design-2026-10-10/native-execution/import-b9373e9-qualification.json",
+                      "sha256": "5012a5c08bb2efb69fb3d84eb9c3d5606745b01770e278d3cc5f6105dd42c1fc"
+                    }
+                  ]
+                },
+                {
+                  "name": "security-write-blocking",
+                  "status": "passed",
+                  "scope": "Fresh native security/policy tests and 16 HTTP preference-only guard checks; browser audit intercepts non-read business requests. This does not claim a clean dependency vulnerability audit or submit any dealership enquiry.",
+                  "evidence": [
+                    {
+                      "path": "docs/releases/six-design-2026-10-10/native-execution/import-b9373e9-qualification.json",
+                      "sha256": "5012a5c08bb2efb69fb3d84eb9c3d5606745b01770e278d3cc5f6105dd42c1fc"
+                    }
+                  ]
+                },
+                {
+                  "name": "assets-preserved",
+                  "status": "passed",
+                  "scope": "Retained exact immutable asset/source/mirror hashes from closure; fresh public and mounted journeys have zero own-origin image/font/script/style failures, with actual generated shared switcher runtime. Dealer-specific logo/favicon/social acceptance is a separate mandatory complete pilot gate.",
+                  "evidence": [
+                    {
+                      "path": "docs/releases/six-design-2026-10-10/native-execution/import-b9373e9-qualification.json",
+                      "sha256": "5012a5c08bb2efb69fb3d84eb9c3d5606745b01770e278d3cc5f6105dd42c1fc"
+                    }
+                  ]
+                }
+              ],
+              "standalone": {
+                "mobile": true,
+                "desktop": true,
+                "scope": "Original owner focused UI/build/hosted checks; full native journeys remain pending."
+              },
+              "nativeLocalization": {
+                "schemaVersion": 1,
+                "adapter": "native-v1",
+                "repository": "darkapoparka/cars",
+                "commit": "b9373e9ed5453bc7d208898ae140eae4d596a232",
+                "sourcePath": "templates/import",
+                "sourceTree": "b64c4a4939c4244ba3f408e5c0311c586a913e67",
+                "sourceDigest": "eef4c3544b28bb3a62cad4c2a07e4ff64301fb4c9e9925ba002077bda7f63bd3",
+                "verifiedAt": "2026-10-10T17:34:09.329Z",
+                "evidenceSha256": "5012a5c08bb2efb69fb3d84eb9c3d5606745b01770e278d3cc5f6105dd42c1fc",
+                "locales": [
+                  "en",
+                  "bg"
+                ],
+                "widths": [
+                  320,
+                  390,
+                  1440
+                ],
+                "widthsMeaning": "Required acceptance widths; checks remain pending, not a new execution claim.",
+                "catalogs": [
+                  {
+                    "format": "typescript-pair",
+                    "path": "src/lib/locale/messages.ts",
+                    "en": "en",
+                    "bg": "bg"
+                  },
+                  {
+                    "format": "typescript-pair",
+                    "path": "src/lib/i18n/native.ts",
+                    "en": "nativeEn",
+                    "bg": "nativeBg"
+                  },
+                  {
+                    "format": "typescript-pair",
+                    "path": "src/lib/content/localized.ts",
+                    "en": "contentEn",
+                    "bg": "contentBg"
+                  },
+                  {
+                    "format": "typescript-rows",
+                    "path": "src/lib/content/inventory-localized.ts",
+                    "export": "inventoryCopy"
+                  },
+                  {
+                    "format": "typescript-source-map",
+                    "path": "src/lib/content/extra-localized.ts",
+                    "export": "extraEnglish"
+                  }
+                ],
+                "deployment": {
+                  "id": "dpl_FVLe1Dr6vChJWkuJWSf5iwYpz4pN",
+                  "projectId": "prj_6oD4HMR2gOO5Qn6tZUviKNx8ugXv",
+                  "state": "READY",
+                  "sourceCommit": "b9373e9ed5453bc7d208898ae140eae4d596a232",
+                  "publicAlias": "https://cars-template-import.vercel.app/",
+                  "publishingRepository": "darkapoparka/cars-template-import",
+                  "publishingCommit": "63c8f720b8c2b61596ddcecf68d3fc56c714109c",
+                  "sourceMapping": {
+                    "path": "docs/releases/six-design-2026-10-10/native/import-b9373e9-closure.json",
+                    "sha256": "a63321f02e686aabc778f82c4d2a3e162df3773614e1d0341868eb42fc24576b"
+                  }
+                },
+                "checks": [
+                  {
+                    "name": "catalog-completeness",
+                    "status": "passed",
+                    "scope": "Exact selected catalog key parity in closure, fresh current-source catalog tests and EN/BG rendered journeys; key counts alone are not linguistic acceptance.",
+                    "evidence": [
+                      {
+                        "path": "docs/releases/six-design-2026-10-10/native-execution/import-b9373e9-qualification.json",
+                        "sha256": "5012a5c08bb2efb69fb3d84eb9c3d5606745b01770e278d3cc5f6105dd42c1fc"
+                      }
+                    ],
+                    "evidenceSha256": "5012a5c08bb2efb69fb3d84eb9c3d5606745b01770e278d3cc5f6105dd42c1fc"
+                  },
+                  {
+                    "name": "hardcoded-ui",
+                    "status": "passed",
+                    "scope": "Fresh selected-source copy/native-source audit tests plus final owner changed-page acceptance from closure; bounded public journeys show both locales without runtime errors.",
+                    "evidence": [
+                      {
+                        "path": "docs/releases/six-design-2026-10-10/native-execution/import-b9373e9-qualification.json",
+                        "sha256": "5012a5c08bb2efb69fb3d84eb9c3d5606745b01770e278d3cc5f6105dd42c1fc"
+                      }
+                    ],
+                    "evidenceSha256": "5012a5c08bb2efb69fb3d84eb9c3d5606745b01770e278d3cc5f6105dd42c1fc"
+                  },
+                  {
+                    "name": "native-routing",
+                    "status": "passed",
+                    "scope": "Fresh selected native routing/proxy/policy tests plus current public inventory, real detail, reload and contact routes in EN/BG.",
+                    "evidence": [
+                      {
+                        "path": "docs/releases/six-design-2026-10-10/native-execution/import-b9373e9-qualification.json",
+                        "sha256": "5012a5c08bb2efb69fb3d84eb9c3d5606745b01770e278d3cc5f6105dd42c1fc"
+                      }
+                    ],
+                    "evidenceSha256": "5012a5c08bb2efb69fb3d84eb9c3d5606745b01770e278d3cc5f6105dd42c1fc"
+                  },
+                  {
+                    "name": "standalone-journeys",
+                    "status": "passed",
+                    "scope": "Six fresh public cases: EN/BG at 320, 390 and 1440; entry/inventory/real detail/reload/contact, locale, assets and overflow.",
+                    "evidence": [
+                      {
+                        "path": "docs/releases/six-design-2026-10-10/native-execution/import-b9373e9-qualification.json",
+                        "sha256": "5012a5c08bb2efb69fb3d84eb9c3d5606745b01770e278d3cc5f6105dd42c1fc"
+                      }
+                    ],
+                    "evidenceSha256": "5012a5c08bb2efb69fb3d84eb9c3d5606745b01770e278d3cc5f6105dd42c1fc"
+                  },
+                  {
+                    "name": "mounted-journeys",
+                    "status": "passed",
+                    "scope": "Reused exact selected immutable mounted production compilation and fresh EN/BG journeys at 320/390/1440 with the actual shared publisher runtime. Complete personalized six-service production integration remains mandatory before dealer publication.",
+                    "evidence": [
+                      {
+                        "path": "docs/releases/six-design-2026-10-10/native-execution/import-b9373e9-qualification.json",
+                        "sha256": "5012a5c08bb2efb69fb3d84eb9c3d5606745b01770e278d3cc5f6105dd42c1fc"
+                      }
+                    ],
+                    "evidenceSha256": "5012a5c08bb2efb69fb3d84eb9c3d5606745b01770e278d3cc5f6105dd42c1fc"
+                  },
+                  {
+                    "name": "public-journeys",
+                    "status": "passed",
+                    "scope": "Exact selected master source-to-mirror and READY receipt from closure plus six fresh current public browser cases; no claim of dealer publication.",
+                    "evidence": [
+                      {
+                        "path": "docs/releases/six-design-2026-10-10/native-execution/import-b9373e9-qualification.json",
+                        "sha256": "5012a5c08bb2efb69fb3d84eb9c3d5606745b01770e278d3cc5f6105dd42c1fc"
+                      }
+                    ],
+                    "evidenceSha256": "5012a5c08bb2efb69fb3d84eb9c3d5606745b01770e278d3cc5f6105dd42c1fc"
+                  },
+                  {
+                    "name": "preferences-no-js",
+                    "status": "passed",
+                    "scope": "Historical no-JS browser acceptance retained only for the byte-identical Import preference component, trigger, focus, policy and no-JS settings page; fresh selected preference HTTP/form and native policy tests passed.",
+                    "evidence": [
+                      {
+                        "path": "docs/releases/six-design-2026-10-10/native-execution/import-b9373e9-qualification.json",
+                        "sha256": "5012a5c08bb2efb69fb3d84eb9c3d5606745b01770e278d3cc5f6105dd42c1fc"
+                      }
+                    ],
+                    "evidenceSha256": "5012a5c08bb2efb69fb3d84eb9c3d5606745b01770e278d3cc5f6105dd42c1fc"
+                  },
+                  {
+                    "name": "preferences-storage-disabled",
+                    "status": "passed",
+                    "scope": "Historical storage-disabled browser acceptance retained only for byte-identical preference consumers; fresh selected native/policy tests and public rendered journeys cover current release integration.",
+                    "evidence": [
+                      {
+                        "path": "docs/releases/six-design-2026-10-10/native-execution/import-b9373e9-qualification.json",
+                        "sha256": "5012a5c08bb2efb69fb3d84eb9c3d5606745b01770e278d3cc5f6105dd42c1fc"
+                      }
+                    ],
+                    "evidenceSha256": "5012a5c08bb2efb69fb3d84eb9c3d5606745b01770e278d3cc5f6105dd42c1fc"
+                  },
+                  {
+                    "name": "preferences-races",
+                    "status": "passed",
+                    "scope": "Historical preference race acceptance retained only for byte-identical preference component, trigger, focus, policy and no-JS settings consumers; current native policy and HTTP regression passed.",
+                    "evidence": [
+                      {
+                        "path": "docs/releases/six-design-2026-10-10/native-execution/import-b9373e9-qualification.json",
+                        "sha256": "5012a5c08bb2efb69fb3d84eb9c3d5606745b01770e278d3cc5f6105dd42c1fc"
+                      }
+                    ],
+                    "evidenceSha256": "5012a5c08bb2efb69fb3d84eb9c3d5606745b01770e278d3cc5f6105dd42c1fc"
+                  },
+                  {
+                    "name": "request-isolation",
+                    "status": "passed",
+                    "scope": "Fresh selected native routing/preferences/proxy/security tests exercise request-owned state and accepted/rejected policy; current public EN/BG cases use separate browser contexts and current HTTP tests preserve cookie boundaries.",
+                    "evidence": [
+                      {
+                        "path": "docs/releases/six-design-2026-10-10/native-execution/import-b9373e9-qualification.json",
+                        "sha256": "5012a5c08bb2efb69fb3d84eb9c3d5606745b01770e278d3cc5f6105dd42c1fc"
+                      }
+                    ],
+                    "evidenceSha256": "5012a5c08bb2efb69fb3d84eb9c3d5606745b01770e278d3cc5f6105dd42c1fc"
+                  },
+                  {
+                    "name": "security-write-blocking",
+                    "status": "passed",
+                    "scope": "Fresh native security/policy tests and 16 HTTP preference-only guard checks; browser audit intercepts non-read business requests. This does not claim a clean dependency vulnerability audit or submit any dealership enquiry.",
+                    "evidence": [
+                      {
+                        "path": "docs/releases/six-design-2026-10-10/native-execution/import-b9373e9-qualification.json",
+                        "sha256": "5012a5c08bb2efb69fb3d84eb9c3d5606745b01770e278d3cc5f6105dd42c1fc"
+                      }
+                    ],
+                    "evidenceSha256": "5012a5c08bb2efb69fb3d84eb9c3d5606745b01770e278d3cc5f6105dd42c1fc"
+                  },
+                  {
+                    "name": "assets-preserved",
+                    "status": "passed",
+                    "scope": "Retained exact immutable asset/source/mirror hashes from closure; fresh public and mounted journeys have zero own-origin image/font/script/style failures, with actual generated shared switcher runtime. Dealer-specific logo/favicon/social acceptance is a separate mandatory complete pilot gate.",
+                    "evidence": [
+                      {
+                        "path": "docs/releases/six-design-2026-10-10/native-execution/import-b9373e9-qualification.json",
+                        "sha256": "5012a5c08bb2efb69fb3d84eb9c3d5606745b01770e278d3cc5f6105dd42c1fc"
+                      }
+                    ],
+                    "evidenceSha256": "5012a5c08bb2efb69fb3d84eb9c3d5606745b01770e278d3cc5f6105dd42c1fc"
+                  }
+                ],
+                "standalone": {
+                  "mobile": {
+                    "verified": true,
+                    "widths": [
+                      320,
+                      390
+                    ],
+                    "evidence": [
+                      {
+                        "path": "docs/releases/six-design-2026-10-10/native-execution/import-current-journeys.json",
+                        "sha256": "e34e9253738217a9d5ef57743fc7c080aac1b4e6f7498b714978662b828bc5f6"
+                      }
+                    ]
+                  },
+                  "desktop": {
+                    "verified": true,
+                    "widths": [
+                      1440
+                    ],
+                    "evidence": [
+                      {
+                        "path": "docs/releases/six-design-2026-10-10/native-execution/import-current-journeys.json",
+                        "sha256": "e34e9253738217a9d5ef57743fc7c080aac1b4e6f7498b714978662b828bc5f6"
+                      }
+                    ]
+                  }
+                },
+                "modes": {
+                  "standalone": "Passed exact-source native and current public browser checks.",
+                  "mounted": "Passed exact selected mounted compilation and fresh current shared-runtime journeys; complete personalized six-service pilot still required."
+                },
+                "evidence": [
+                  {
+                    "path": "docs/releases/six-design-2026-10-10/native-execution/import-b9373e9-qualification.json",
+                    "sha256": "5012a5c08bb2efb69fb3d84eb9c3d5606745b01770e278d3cc5f6105dd42c1fc"
+                  }
+                ],
+                "notes": [
+                  "Source selection, native mounted qualification and complete personalized dealer publication are different gates.",
+                  "No dealer is refreshed or deployed by this selection.",
+                  "The isolated two-family fixture is not a six-service dealer pilot; full pilot compilation and metadata/branding checks are still required."
+                ]
+              }
+            },
+            "reason": "Reviewed immutable Cars template source; dealer adoption is explicit.",
+            "source": {
+              "repository": "darkapoparka/cars",
+              "revision": "b9373e9ed5453bc7d208898ae140eae4d596a232",
+              "path": "templates/import",
+              "tree": "b64c4a4939c4244ba3f408e5c0311c586a913e67",
+              "digest": "eef4c3544b28bb3a62cad4c2a07e4ff64301fb4c9e9925ba002077bda7f63bd3"
+            },
+            "legacySource": {
+              "repository": "darkapoparka/cars-template-import",
+              "revision": "c961de569012d04316f9da95f228d10622be87fe",
+              "path": "",
+              "tree": null,
+              "digest": "31e3b2bbecdf7c3b562ed71dd1fb942f2dba46b94e1dc80bfd1d5498760a1ce3",
+              "evidence": "docs/releases/fleet-2026-09-24/import-release.json",
+              "nativeDeployment": {
+                "id": "dpl_DMgCzaDRtNYwDzvLuHkEsKGQ9QLn",
+                "projectId": "prj_6oD4HMR2gOO5Qn6tZUviKNx8ugXv",
+                "state": "READY",
+                "sourceCommit": "c961de569012d04316f9da95f228d10622be87fe",
+                "publicAlias": "https://cars-template-import.vercel.app/"
+              }
+            }
+          },
+          "releaseSha256": "59574c885f7ea779c791e83389aa9f59be234fe2d8a7c7d2616f8c89cf946a89",
+          "reference": "docs/releases/six-design-2026-10-10/native-execution/import-b9373e9-release.json",
+          "sha256": "805aabac442322c36c5a65eafbedaff7ba3afb0d5989d686c7b0774a1f768f91",
+          "verifiedAt": "2026-10-10T17:34:09.318Z"
+        },
+        "sourceDeltaReview": {
+          "reference": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
+          "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975",
+          "reviewedAt": "2026-10-11T21:04:02.173Z"
+        },
+        "catalogs": [
+          {
+            "format": "typescript-pair",
+            "path": "src/lib/locale/messages.ts",
+            "en": "en",
+            "bg": "bg"
+          },
+          {
+            "format": "typescript-pair",
+            "path": "src/lib/i18n/native.ts",
+            "en": "nativeEn",
+            "bg": "nativeBg"
+          },
+          {
+            "format": "typescript-pair",
+            "path": "src/lib/content/localized.ts",
+            "en": "contentEn",
+            "bg": "contentBg"
+          },
+          {
+            "format": "typescript-rows",
+            "path": "src/lib/content/inventory-localized.ts",
+            "export": "inventoryCopy"
+          },
+          {
+            "format": "typescript-source-map",
+            "path": "src/lib/content/extra-localized.ts",
+            "export": "extraEnglish"
+          }
+        ],
+        "pendingNativeChecks": [
+          "catalog-completeness",
+          "hardcoded-ui",
+          "native-routing",
+          "standalone-journeys",
+          "mounted-journeys",
+          "public-journeys",
+          "preferences-no-js",
+          "preferences-storage-disabled",
+          "preferences-races",
+          "request-isolation",
+          "security-write-blocking",
+          "assets-preserved"
+        ],
+        "sourceState": "published-final-owner-source"
+      }
+    }
+  },
+  "catalogs": {
+    "auto-best": {
+      "catalogs": [
+        {
+          "descriptor": {
+            "format": "typescript-pair",
+            "path": "src/lib/locale/catalog.ts",
+            "en": "en",
+            "bg": "bg"
+          },
+          "keys": 1128,
+          "contentDigest": "648467d162e31b22ca3c2f9406464068a392bf736156418225a9e7768ddb4cb3"
+        }
+      ],
+      "declaredCatalogParityPassed": true,
+      "linguisticAcceptance": "requires-reviewed-evidence-not-key-counts"
+    },
+    "modern": {
+      "catalogs": [
+        {
+          "descriptor": {
+            "format": "typescript-pair",
+            "path": "packages/internationalization/preferences-messages.ts",
+            "en": "en",
+            "bg": "bg"
+          },
+          "keys": 26,
+          "contentDigest": "89d3278de72c828f268800cb538a436c2bfd8a7868b6e4c0044e989158d1a368"
+        },
+        {
+          "descriptor": {
+            "format": "typescript-pair",
+            "path": "packages/internationalization/public-messages.ts",
+            "en": "en",
+            "bg": "bg"
+          },
+          "keys": 27,
+          "contentDigest": "5bffa6e066509d415a0730f5b7c39d7b6d13ff563c8f447cde59c95fc3d86a8a"
+        },
+        {
+          "descriptor": {
+            "format": "typescript-rows",
+            "path": "packages/marketplace/content/inventory-copy.ts",
+            "export": "inventoryCopy"
+          },
+          "keys": 3,
+          "contentDigest": "99e55b809c497365b0f1f412eca62da8995e6aebb8738640748033ed2d305ba5"
+        },
+        {
+          "descriptor": {
+            "format": "typescript-locale-object",
+            "path": "packages/marketplace-ui/lib/marketplace-control-copy.ts",
+            "export": "copyByLanguage"
+          },
+          "keys": 118,
+          "contentDigest": "c0f9822da9bc3b6c01911e80b400d026d7f063581657196c12cece13820d0fc4"
+        }
+      ],
+      "declaredCatalogParityPassed": true,
+      "linguisticAcceptance": "requires-reviewed-evidence-not-key-counts"
+    },
+    "import": {
+      "catalogs": [
+        {
+          "descriptor": {
+            "format": "typescript-pair",
+            "path": "src/lib/locale/messages.ts",
+            "en": "en",
+            "bg": "bg"
+          },
+          "keys": 15,
+          "contentDigest": "06dead7dfa79c57f0872d960d112141262b5a5ca4998d76523cc6351d101ab6f"
+        },
+        {
+          "descriptor": {
+            "format": "typescript-pair",
+            "path": "src/lib/i18n/native.ts",
+            "en": "nativeEn",
+            "bg": "nativeBg"
+          },
+          "keys": 254,
+          "contentDigest": "7a41ec7694de1724d6eb5b9ace82207bf6e5f9046d56aebf537840deb926890b"
+        },
+        {
+          "descriptor": {
+            "format": "typescript-pair",
+            "path": "src/lib/content/localized.ts",
+            "en": "contentEn",
+            "bg": "contentBg"
+          },
+          "keys": 158,
+          "contentDigest": "23a5a4aafa4596cea0f5e27ab5c353523d9faaf37d025b8530b0e053a552e073"
+        },
+        {
+          "descriptor": {
+            "format": "typescript-rows",
+            "path": "src/lib/content/inventory-localized.ts",
+            "export": "inventoryCopy"
+          },
+          "keys": 121,
+          "contentDigest": "6acc3f541e3ad81cbf988ccfd2e8fa1e6e39255618e22811b7c002f3d8256d4b"
+        },
+        {
+          "descriptor": {
+            "format": "typescript-source-map",
+            "path": "src/lib/content/extra-localized.ts",
+            "export": "extraEnglish"
+          },
+          "keys": 93,
+          "contentDigest": "d60b5de04d38834bfcefaf9bec1d37769b704be2b1b0254c3b12388ce9340eb7"
+        }
+      ],
+      "declaredCatalogParityPassed": true,
+      "linguisticAcceptance": "requires-reviewed-evidence-not-key-counts"
+    }
+  },
+  "input": {
+    "digest": "5c121763d2ae4df3d603c66b3d3cd004553e92bcfc6654a07399dfbc9aca61a6",
+    "files": 9049
+  },
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "globalReleaseApproval": false,
+  "pendingNativeChecks": [
+    "catalog-completeness",
+    "hardcoded-ui",
+    "native-routing",
+    "standalone-journeys",
+    "mounted-journeys",
+    "public-journeys",
+    "preferences-no-js",
+    "preferences-storage-disabled",
+    "preferences-races",
+    "request-isolation",
+    "security-write-blocking",
+    "assets-preserved"
+  ],
+  "dealerAcceptance": "requires-current-source-build-and-hosted-native-journeys"
+}

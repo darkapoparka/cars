@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-input-mapping",
+  "dealer": "transcar-varna",
+  "inputs": {
+    "facts": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/transcar-varna/facts.json",
+      "sha256": "db75a18cff027a3c89e04ceb6b350c93cc296d2129592308bec45f92181a343c"
+    },
+    "stock": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/transcar-varna/stock.json",
+      "sha256": "2c2bf5a127b9e65a76164542b8d977728491bc310f45cfc92c51e59663fffb1b"
+    },
+    "locale": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/transcar-varna/locale.json",
+      "sha256": "7d2b95da58908f29fb0dd29f12a7f3bd7663f03bef8f460152fc225860887180"
+    },
+    "branding": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/transcar-varna/branding.json",
+      "sha256": "82d9f100a422dd3df54042663e22fbe5732bd15d4195c204ebcdd321626ff3e4"
+    }
+  },
+  "sources": [
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/transcar-varna/facts.json",
+      "sha256": "db75a18cff027a3c89e04ceb6b350c93cc296d2129592308bec45f92181a343c"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/transcar-varna/stock.json",
+      "sha256": "2c2bf5a127b9e65a76164542b8d977728491bc310f45cfc92c51e59663fffb1b"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/transcar-varna/locale.json",
+      "sha256": "7d2b95da58908f29fb0dd29f12a7f3bd7663f03bef8f460152fc225860887180"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/transcar-varna/branding.json",
+      "sha256": "82d9f100a422dd3df54042663e22fbe5732bd15d4195c204ebcdd321626ff3e4"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/transcar-varna/identity-repository-corrected-additional100.json",
+      "sha256": "299dd360aabd47b433cad3005713c0f2bbed7b567cafde9471c48877cc5c3102"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/transcar-varna/copy-review-additional100.json",
+      "sha256": "600531ed59ab63a42c82d2b5565b8f5a3d6f81e014212cbfee2d662160598de7"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/transcar-varna/media/11772031596218515-1.webp",
+      "sha256": "2c212f01fdb22444c6098e5bdfe6c67d528dfa1eeebe2c17dae0ea376f116aca"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/transcar-varna/media/11772031596218515-2.webp",
+      "sha256": "38e4bf34a754419b5bb4780c2f8c4bbdcf32928788c59e3096b581cb7a47ab6c"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/transcar-varna/branding/master.png",
+      "sha256": "0f2322641e39c93fa7a38ea6c4138dc6d096742b5847fe04857dc678b63249b9"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/transcar-varna/branding/onLight.png",
+      "sha256": "0f2322641e39c93fa7a38ea6c4138dc6d096742b5847fe04857dc678b63249b9"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/transcar-varna/branding/onDark.png",
+      "sha256": "312b7d8cc5e4c863c1415f9979ea2e12a204e0f4aaf3f0602afe1ad77acb2dfd"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/transcar-varna/branding/onAccent.png",
+      "sha256": "312b7d8cc5e4c863c1415f9979ea2e12a204e0f4aaf3f0602afe1ad77acb2dfd"
+    }
+  ]
+}

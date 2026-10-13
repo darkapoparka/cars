@@ -1,0 +1,37 @@
+{
+  "fetchedAt": "2026-10-11",
+  "sources": {
+    "dealerInventory": "https://transcar.mobile.bg/",
+    "dealerContact": "https://transcar.mobile.bg/contacts"
+  },
+  "count": 1,
+  "listings": [
+    {
+      "badge": "ОБЯВА",
+      "category": "Комби",
+      "color": "",
+      "displacement": "",
+      "euroStandard": "",
+      "features": [],
+      "fuel": "Дизелов",
+      "gearbox": "Ръчна",
+      "href": "https://transcar.mobile.bg/obiava-11772031596218515-vw-passat-2-0-tdi",
+      "id": "11772031596218515",
+      "image": "/dealer-stock/11772031596218515-1.webp",
+      "location": "Варна",
+      "mileage": "220 000 км",
+      "mileageKnown": true,
+      "mileageValue": 220000,
+      "mileageUnit": "km",
+      "photoCount": "2",
+      "power": "140 к.с.",
+      "price": "5 600 €",
+      "priceBgn": "",
+      "production": "2012 г.",
+      "rawPriceText": "5 600 €",
+      "shortDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "title": "VW Passat",
+      "vat": ""
+    }
+  ]
+}

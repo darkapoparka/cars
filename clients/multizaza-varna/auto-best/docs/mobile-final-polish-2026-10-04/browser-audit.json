@@ -1,0 +1,1254 @@
+{
+  "before": [
+    {
+      "label": "Import original 374",
+      "card": {
+        "bottom": 398,
+        "height": 198,
+        "top": 200,
+        "width": 350
+      },
+      "guide": {
+        "bottom": 492.1875,
+        "height": 82.1875,
+        "top": 410,
+        "width": 350
+      },
+      "landing": {
+        "bottom": 808,
+        "height": 808,
+        "top": 0,
+        "width": 374
+      },
+      "nav": {
+        "bottom": 884,
+        "display": "grid",
+        "height": 60.59375,
+        "top": 823.40625,
+        "width": 374
+      },
+      "overflow": false,
+      "paint": {
+        "bottom": "0px",
+        "height": "400px",
+        "image": "linear-gradient(rgb(244, 245, 247), color(srgb 0.956863 0.960784 0.968627 / 0.92) 40%), url(\"http://127.0.0.1:6461/assets/images/template/home-section-body-backdrop-v1.webp\")"
+      },
+      "scroll": [
+        0,
+        884
+      ],
+      "shellPadding": "76px",
+      "strip": 15.40625,
+      "url": "http://127.0.0.1:6461/bg/contact?topic=import",
+      "viewport": [
+        374,
+        884
+      ]
+    },
+    {
+      "label": "Import 320x844",
+      "card": {
+        "bottom": 398,
+        "height": 198,
+        "top": 200,
+        "width": 296
+      },
+      "guide": {
+        "bottom": 492.1875,
+        "height": 82.1875,
+        "top": 410,
+        "width": 296
+      },
+      "landing": {
+        "bottom": 768,
+        "height": 768,
+        "top": 0,
+        "width": 320
+      },
+      "nav": {
+        "bottom": 844,
+        "display": "grid",
+        "height": 60.59375,
+        "top": 783.40625,
+        "width": 320
+      },
+      "overflow": false,
+      "paint": {
+        "bottom": "0px",
+        "height": "400px",
+        "image": "linear-gradient(rgb(244, 245, 247), color(srgb 0.956863 0.960784 0.968627 / 0.92) 40%), url(\"http://127.0.0.1:6461/assets/images/template/home-section-body-backdrop-v1.webp\")"
+      },
+      "scroll": [
+        0,
+        844
+      ],
+      "shellPadding": "76px",
+      "strip": 15.40625,
+      "url": "http://127.0.0.1:6461/bg/contact?topic=import",
+      "viewport": [
+        320,
+        844
+      ]
+    },
+    {
+      "label": "Import 390x844",
+      "card": {
+        "bottom": 398,
+        "height": 198,
+        "top": 200,
+        "width": 366
+      },
+      "guide": {
+        "bottom": 492.1875,
+        "height": 82.1875,
+        "top": 410,
+        "width": 366
+      },
+      "landing": {
+        "bottom": 768,
+        "height": 768,
+        "top": 0,
+        "width": 390
+      },
+      "nav": {
+        "bottom": 844,
+        "display": "grid",
+        "height": 60.59375,
+        "top": 783.40625,
+        "width": 390
+      },
+      "overflow": false,
+      "paint": {
+        "bottom": "0px",
+        "height": "400px",
+        "image": "linear-gradient(rgb(244, 245, 247), color(srgb 0.956863 0.960784 0.968627 / 0.92) 40%), url(\"http://127.0.0.1:6461/assets/images/template/home-section-body-backdrop-v1.webp\")"
+      },
+      "scroll": [
+        0,
+        844
+      ],
+      "shellPadding": "76px",
+      "strip": 15.40625,
+      "url": "http://127.0.0.1:6461/bg/contact?topic=import",
+      "viewport": [
+        390,
+        844
+      ]
+    },
+    {
+      "label": "Import 430x932",
+      "card": {
+        "bottom": 398,
+        "height": 198,
+        "top": 200,
+        "width": 406
+      },
+      "guide": {
+        "bottom": 492.1875,
+        "height": 82.1875,
+        "top": 410,
+        "width": 406
+      },
+      "landing": {
+        "bottom": 856,
+        "height": 856,
+        "top": 0,
+        "width": 430
+      },
+      "nav": {
+        "bottom": 932,
+        "display": "grid",
+        "height": 60.59375,
+        "top": 871.40625,
+        "width": 430
+      },
+      "overflow": false,
+      "paint": {
+        "bottom": "0px",
+        "height": "400px",
+        "image": "linear-gradient(rgb(244, 245, 247), color(srgb 0.956863 0.960784 0.968627 / 0.92) 40%), url(\"http://127.0.0.1:6461/assets/images/template/home-section-body-backdrop-v1.webp\")"
+      },
+      "scroll": [
+        0,
+        932
+      ],
+      "shellPadding": "76px",
+      "strip": 15.40625,
+      "url": "http://127.0.0.1:6461/bg/contact?topic=import",
+      "viewport": [
+        430,
+        932
+      ]
+    },
+    {
+      "label": "Import 390x500",
+      "card": {
+        "bottom": 290,
+        "height": 198,
+        "top": 92,
+        "width": 351
+      },
+      "guide": {
+        "bottom": 384.1875,
+        "height": 82.1875,
+        "top": 302,
+        "width": 351
+      },
+      "landing": {
+        "bottom": 424.1875,
+        "height": 532.1875,
+        "top": -108,
+        "width": 375
+      },
+      "nav": {
+        "bottom": 500,
+        "display": "grid",
+        "height": 60.59375,
+        "top": 439.40625,
+        "width": 375
+      },
+      "overflow": false,
+      "paint": {
+        "bottom": "0px",
+        "height": "400px",
+        "image": "linear-gradient(rgb(244, 245, 247), color(srgb 0.956863 0.960784 0.968627 / 0.92) 40%), url(\"http://127.0.0.1:6461/assets/images/template/home-section-body-backdrop-v1.webp\")"
+      },
+      "scroll": [
+        108,
+        608
+      ],
+      "shellPadding": "76px",
+      "strip": 15.21875,
+      "url": "http://127.0.0.1:6461/bg/contact?topic=import",
+      "viewport": [
+        390,
+        500
+      ]
+    },
+    {
+      "label": "Sell original 374",
+      "card": {
+        "bottom": 398,
+        "height": 198,
+        "top": 200,
+        "width": 350
+      },
+      "guide": {
+        "bottom": 492.1875,
+        "height": 82.1875,
+        "top": 410,
+        "width": 350
+      },
+      "landing": {
+        "bottom": 808,
+        "height": 808,
+        "top": 0,
+        "width": 374
+      },
+      "nav": {
+        "bottom": 884,
+        "display": "grid",
+        "height": 60.59375,
+        "top": 823.40625,
+        "width": 374
+      },
+      "overflow": false,
+      "paint": {
+        "bottom": "0px",
+        "height": "400px",
+        "image": "linear-gradient(rgb(244, 245, 247), color(srgb 0.956863 0.960784 0.968627 / 0.92) 40%), url(\"http://127.0.0.1:6461/assets/images/template/home-section-body-backdrop-v1.webp\")"
+      },
+      "scroll": [
+        0,
+        884
+      ],
+      "shellPadding": "76px",
+      "strip": 15.40625,
+      "url": "http://127.0.0.1:6461/bg/contact?topic=trade-in",
+      "viewport": [
+        374,
+        884
+      ]
+    },
+    {
+      "label": "Sell desktop 1440",
+      "card": {
+        "bottom": 824.796875,
+        "height": 404.796875,
+        "top": 420,
+        "width": 560
+      },
+      "guide": {
+        "bottom": 0,
+        "height": 0,
+        "top": 0,
+        "width": 0
+      },
+      "landing": {
+        "bottom": 927.59375,
+        "height": 927.59375,
+        "top": 0,
+        "width": 1425
+      },
+      "nav": {
+        "bottom": 0,
+        "display": "none",
+        "height": 0,
+        "top": 0,
+        "width": 0
+      },
+      "overflow": false,
+      "paint": {
+        "bottom": "auto",
+        "height": "auto",
+        "image": "none"
+      },
+      "scroll": [
+        0,
+        1612
+      ],
+      "shellPadding": "0px",
+      "strip": 0,
+      "url": "http://127.0.0.1:6461/bg/contact?topic=trade-in",
+      "viewport": [
+        1440,
+        1000
+      ]
+    },
+    {
+      "label": "Import desktop 1440",
+      "card": {
+        "bottom": 662.796875,
+        "height": 242.796875,
+        "top": 420,
+        "width": 560
+      },
+      "guide": {
+        "bottom": 0,
+        "height": 0,
+        "top": 0,
+        "width": 0
+      },
+      "landing": {
+        "bottom": 765.59375,
+        "height": 765.59375,
+        "top": 0,
+        "width": 1425
+      },
+      "nav": {
+        "bottom": 0,
+        "display": "none",
+        "height": 0,
+        "top": 0,
+        "width": 0
+      },
+      "overflow": false,
+      "paint": {
+        "bottom": "auto",
+        "height": "auto",
+        "image": "none"
+      },
+      "scroll": [
+        0,
+        1450
+      ],
+      "shellPadding": "0px",
+      "strip": 0,
+      "url": "http://127.0.0.1:6461/bg/contact?topic=import",
+      "viewport": [
+        1440,
+        1000
+      ]
+    }
+  ],
+  "after": [
+    {
+      "label": "Import desktop 1440",
+      "card": {
+        "bottom": 662.796875,
+        "height": 242.796875,
+        "top": 420,
+        "width": 560
+      },
+      "guide": {
+        "bottom": 0,
+        "height": 0,
+        "top": 0,
+        "width": 0
+      },
+      "landing": {
+        "bottom": 765.59375,
+        "height": 765.59375,
+        "top": 0,
+        "width": 1425
+      },
+      "nav": {
+        "bottom": 0,
+        "display": "none",
+        "height": 0,
+        "top": 0,
+        "width": 0
+      },
+      "overflow": false,
+      "paint": {
+        "bottom": "auto",
+        "height": "auto",
+        "image": "none"
+      },
+      "scroll": [
+        0,
+        1450
+      ],
+      "shellPadding": "0px",
+      "strip": 0,
+      "url": "http://127.0.0.1:6461/bg/contact?topic=import",
+      "viewport": [
+        1440,
+        1000
+      ]
+    },
+    {
+      "label": "Sell desktop 1440",
+      "card": {
+        "bottom": 824.796875,
+        "height": 404.796875,
+        "top": 420,
+        "width": 560
+      },
+      "guide": {
+        "bottom": 0,
+        "height": 0,
+        "top": 0,
+        "width": 0
+      },
+      "landing": {
+        "bottom": 927.59375,
+        "height": 927.59375,
+        "top": 0,
+        "width": 1425
+      },
+      "nav": {
+        "bottom": 0,
+        "display": "none",
+        "height": 0,
+        "top": 0,
+        "width": 0
+      },
+      "overflow": false,
+      "paint": {
+        "bottom": "auto",
+        "height": "auto",
+        "image": "none"
+      },
+      "scroll": [
+        0,
+        1612
+      ],
+      "shellPadding": "0px",
+      "strip": 0,
+      "url": "http://127.0.0.1:6461/bg/contact?topic=trade-in",
+      "viewport": [
+        1440,
+        1000
+      ]
+    },
+    {
+      "label": "Sell original 374",
+      "card": {
+        "bottom": 398,
+        "height": 198,
+        "top": 200,
+        "width": 350
+      },
+      "guide": {
+        "bottom": 492.1875,
+        "height": 82.1875,
+        "top": 410,
+        "width": 350
+      },
+      "landing": {
+        "bottom": 884,
+        "height": 884,
+        "top": 0,
+        "width": 374
+      },
+      "nav": {
+        "bottom": 884,
+        "display": "grid",
+        "height": 60.59375,
+        "top": 823.40625,
+        "width": 374
+      },
+      "overflow": false,
+      "paint": {
+        "bottom": "0px",
+        "height": "400px",
+        "image": "linear-gradient(rgb(244, 245, 247), color(srgb 0.956863 0.960784 0.968627 / 0.92) 40%), url(\"http://127.0.0.1:6461/assets/images/template/home-section-body-backdrop-v1.webp\")"
+      },
+      "scroll": [
+        0,
+        884
+      ],
+      "shellPadding": "0px",
+      "strip": 0,
+      "url": "http://127.0.0.1:6461/bg/contact?topic=trade-in",
+      "viewport": [
+        374,
+        884
+      ]
+    },
+    {
+      "label": "Import original 374",
+      "card": {
+        "bottom": 398,
+        "height": 198,
+        "top": 200,
+        "width": 350
+      },
+      "guide": {
+        "bottom": 492.1875,
+        "height": 82.1875,
+        "top": 410,
+        "width": 350
+      },
+      "landing": {
+        "bottom": 884,
+        "height": 884,
+        "top": 0,
+        "width": 374
+      },
+      "nav": {
+        "bottom": 884,
+        "display": "grid",
+        "height": 60.59375,
+        "top": 823.40625,
+        "width": 374
+      },
+      "overflow": false,
+      "paint": {
+        "bottom": "0px",
+        "height": "400px",
+        "image": "linear-gradient(rgb(244, 245, 247), color(srgb 0.956863 0.960784 0.968627 / 0.92) 40%), url(\"http://127.0.0.1:6461/assets/images/template/home-section-body-backdrop-v1.webp\")"
+      },
+      "scroll": [
+        0,
+        884
+      ],
+      "shellPadding": "0px",
+      "strip": 0,
+      "url": "http://127.0.0.1:6461/bg/contact?topic=import",
+      "viewport": [
+        374,
+        884
+      ]
+    },
+    {
+      "label": "Import 320x844",
+      "card": {
+        "bottom": 398,
+        "height": 198,
+        "top": 200,
+        "width": 296
+      },
+      "guide": {
+        "bottom": 492.1875,
+        "height": 82.1875,
+        "top": 410,
+        "width": 296
+      },
+      "landing": {
+        "bottom": 844,
+        "height": 844,
+        "top": 0,
+        "width": 320
+      },
+      "nav": {
+        "bottom": 844,
+        "display": "grid",
+        "height": 60.59375,
+        "top": 783.40625,
+        "width": 320
+      },
+      "overflow": false,
+      "paint": {
+        "bottom": "0px",
+        "height": "400px",
+        "image": "linear-gradient(rgb(244, 245, 247), color(srgb 0.956863 0.960784 0.968627 / 0.92) 40%), url(\"http://127.0.0.1:6461/assets/images/template/home-section-body-backdrop-v1.webp\")"
+      },
+      "scroll": [
+        0,
+        844
+      ],
+      "shellPadding": "0px",
+      "strip": 0,
+      "url": "http://127.0.0.1:6461/bg/contact?topic=import",
+      "viewport": [
+        320,
+        844
+      ]
+    },
+    {
+      "label": "Import 390x844",
+      "card": {
+        "bottom": 398,
+        "height": 198,
+        "top": 200,
+        "width": 366
+      },
+      "guide": {
+        "bottom": 492.1875,
+        "height": 82.1875,
+        "top": 410,
+        "width": 366
+      },
+      "landing": {
+        "bottom": 844,
+        "height": 844,
+        "top": 0,
+        "width": 390
+      },
+      "nav": {
+        "bottom": 844,
+        "display": "grid",
+        "height": 60.59375,
+        "top": 783.40625,
+        "width": 390
+      },
+      "overflow": false,
+      "paint": {
+        "bottom": "0px",
+        "height": "400px",
+        "image": "linear-gradient(rgb(244, 245, 247), color(srgb 0.956863 0.960784 0.968627 / 0.92) 40%), url(\"http://127.0.0.1:6461/assets/images/template/home-section-body-backdrop-v1.webp\")"
+      },
+      "scroll": [
+        0,
+        844
+      ],
+      "shellPadding": "0px",
+      "strip": 0,
+      "url": "http://127.0.0.1:6461/bg/contact?topic=import",
+      "viewport": [
+        390,
+        844
+      ]
+    },
+    {
+      "label": "Import 430x932",
+      "card": {
+        "bottom": 398,
+        "height": 198,
+        "top": 200,
+        "width": 406
+      },
+      "guide": {
+        "bottom": 492.1875,
+        "height": 82.1875,
+        "top": 410,
+        "width": 406
+      },
+      "landing": {
+        "bottom": 932,
+        "height": 932,
+        "top": 0,
+        "width": 430
+      },
+      "nav": {
+        "bottom": 932,
+        "display": "grid",
+        "height": 60.59375,
+        "top": 871.40625,
+        "width": 430
+      },
+      "overflow": false,
+      "paint": {
+        "bottom": "0px",
+        "height": "400px",
+        "image": "linear-gradient(rgb(244, 245, 247), color(srgb 0.956863 0.960784 0.968627 / 0.92) 40%), url(\"http://127.0.0.1:6461/assets/images/template/home-section-body-backdrop-v1.webp\")"
+      },
+      "scroll": [
+        0,
+        932
+      ],
+      "shellPadding": "0px",
+      "strip": 0,
+      "url": "http://127.0.0.1:6461/bg/contact?topic=import",
+      "viewport": [
+        430,
+        932
+      ]
+    },
+    {
+      "label": "Import 390x500",
+      "card": {
+        "bottom": 290,
+        "height": 198,
+        "top": 92,
+        "width": 351
+      },
+      "guide": {
+        "bottom": 384.1875,
+        "height": 82.1875,
+        "top": 302,
+        "width": 351
+      },
+      "landing": {
+        "bottom": 500.1875,
+        "height": 608.1875,
+        "top": -108,
+        "width": 375
+      },
+      "nav": {
+        "bottom": 500,
+        "display": "grid",
+        "height": 60.59375,
+        "top": 439.40625,
+        "width": 375
+      },
+      "overflow": false,
+      "paint": {
+        "bottom": "0px",
+        "height": "400px",
+        "image": "linear-gradient(rgb(244, 245, 247), color(srgb 0.956863 0.960784 0.968627 / 0.92) 40%), url(\"http://127.0.0.1:6461/assets/images/template/home-section-body-backdrop-v1.webp\")"
+      },
+      "scroll": [
+        108,
+        608
+      ],
+      "shellPadding": "0px",
+      "strip": 0,
+      "url": "http://127.0.0.1:6461/bg/contact?topic=import",
+      "viewport": [
+        390,
+        500
+      ]
+    },
+    {
+      "label": "EN Import 390",
+      "card": {
+        "bottom": 398,
+        "height": 198,
+        "top": 200,
+        "width": 366
+      },
+      "guide": {
+        "bottom": 492.1875,
+        "height": 82.1875,
+        "top": 410,
+        "width": 366
+      },
+      "landing": {
+        "bottom": 844,
+        "height": 844,
+        "top": 0,
+        "width": 390
+      },
+      "nav": {
+        "bottom": 844,
+        "display": "grid",
+        "height": 60.59375,
+        "top": 783.40625,
+        "width": 390
+      },
+      "overflow": false,
+      "paint": {
+        "bottom": "0px",
+        "height": "400px",
+        "image": "linear-gradient(rgb(244, 245, 247), color(srgb 0.956863 0.960784 0.968627 / 0.92) 40%), url(\"http://127.0.0.1:6461/assets/images/template/home-section-body-backdrop-v1.webp\")"
+      },
+      "scroll": [
+        0,
+        844
+      ],
+      "shellPadding": "0px",
+      "strip": 0,
+      "url": "http://127.0.0.1:6461/en/contact?topic=import",
+      "viewport": [
+        390,
+        844
+      ]
+    },
+    {
+      "label": "EN Sell 390",
+      "card": {
+        "bottom": 398,
+        "height": 198,
+        "top": 200,
+        "width": 366
+      },
+      "guide": {
+        "bottom": 492.1875,
+        "height": 82.1875,
+        "top": 410,
+        "width": 366
+      },
+      "landing": {
+        "bottom": 844,
+        "height": 844,
+        "top": 0,
+        "width": 390
+      },
+      "nav": {
+        "bottom": 844,
+        "display": "grid",
+        "height": 60.59375,
+        "top": 783.40625,
+        "width": 390
+      },
+      "overflow": false,
+      "paint": {
+        "bottom": "0px",
+        "height": "400px",
+        "image": "linear-gradient(rgb(244, 245, 247), color(srgb 0.956863 0.960784 0.968627 / 0.92) 40%), url(\"http://127.0.0.1:6461/assets/images/template/home-section-body-backdrop-v1.webp\")"
+      },
+      "scroll": [
+        0,
+        844
+      ],
+      "shellPadding": "0px",
+      "strip": 0,
+      "url": "http://127.0.0.1:6461/en/contact?topic=trade-in",
+      "viewport": [
+        390,
+        844
+      ]
+    }
+  ],
+  "audit": [
+    {
+      "label": "BG Import guide 320",
+      "brokenImages": [],
+      "clippedControls": [],
+      "dockHidden": true,
+      "duplicateIds": [],
+      "font": "\"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+      "height": 844,
+      "openDialogs": [
+        {
+          "id": "import-info-dialog",
+          "overflow": false
+        }
+      ],
+      "overflow": false,
+      "scroll": 0,
+      "url": "http://127.0.0.1:6461/bg/contact?topic=import",
+      "width": 320
+    },
+    {
+      "label": "BG Import link editor 320",
+      "brokenImages": [],
+      "clippedControls": [],
+      "dockHidden": true,
+      "duplicateIds": [],
+      "font": "\"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+      "height": 844,
+      "openDialogs": [
+        {
+          "id": "import-service-field-dialog",
+          "overflow": false
+        }
+      ],
+      "overflow": false,
+      "scroll": 0,
+      "url": "http://127.0.0.1:6461/bg/contact?topic=import",
+      "width": 320
+    },
+    {
+      "label": "BG Import link editor short 320",
+      "brokenImages": [],
+      "clippedControls": [],
+      "dockHidden": true,
+      "duplicateIds": [],
+      "font": "\"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+      "height": 500,
+      "openDialogs": [
+        {
+          "id": "import-service-field-dialog",
+          "overflow": false
+        }
+      ],
+      "overflow": false,
+      "scroll": 0,
+      "url": "http://127.0.0.1:6461/bg/contact?topic=import",
+      "width": 320
+    },
+    {
+      "label": "BG Import criteria 320",
+      "brokenImages": [],
+      "clippedControls": [],
+      "dockHidden": true,
+      "duplicateIds": [],
+      "font": "\"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+      "height": 844,
+      "openDialogs": [
+        {
+          "id": "import-service-field-dialog",
+          "overflow": false
+        }
+      ],
+      "overflow": false,
+      "scroll": 0,
+      "url": "http://127.0.0.1:6461/bg/contact?topic=import",
+      "width": 320
+    },
+    {
+      "label": "BG Home top 320",
+      "brokenImages": [],
+      "clippedControls": [],
+      "dockHidden": false,
+      "duplicateIds": [],
+      "font": "\"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+      "height": 844,
+      "openDialogs": [],
+      "overflow": false,
+      "scroll": 0,
+      "url": "http://127.0.0.1:6461/bg",
+      "width": 320
+    },
+    {
+      "label": "BG Home bottom 320",
+      "brokenImages": [],
+      "clippedControls": [],
+      "dockHidden": true,
+      "duplicateIds": [],
+      "font": "\"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+      "height": 844,
+      "openDialogs": [],
+      "overflow": false,
+      "scroll": 1853,
+      "url": "http://127.0.0.1:6461/bg",
+      "width": 320
+    },
+    {
+      "label": "BG Inventory top 320",
+      "brokenImages": [],
+      "clippedControls": [],
+      "dockHidden": false,
+      "duplicateIds": [],
+      "font": "\"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+      "height": 844,
+      "openDialogs": [],
+      "overflow": false,
+      "scroll": 0,
+      "url": "http://127.0.0.1:6461/bg/listing-grid",
+      "width": 320
+    },
+    {
+      "label": "BG Inventory filters 320",
+      "brokenImages": [],
+      "clippedControls": [],
+      "dockHidden": true,
+      "duplicateIds": [],
+      "font": "\"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+      "height": 844,
+      "openDialogs": [
+        {
+          "id": "dn-listing-filter-dialog",
+          "overflow": false
+        }
+      ],
+      "overflow": false,
+      "scroll": 0,
+      "url": "http://127.0.0.1:6461/bg/listing-grid",
+      "width": 320
+    },
+    {
+      "label": "BG Vehicle detail top 320",
+      "brokenImages": [],
+      "clippedControls": [],
+      "dockHidden": true,
+      "duplicateIds": [],
+      "font": "\"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+      "height": 844,
+      "openDialogs": [],
+      "overflow": false,
+      "scroll": 0,
+      "url": "http://127.0.0.1:6461/bg/listing-detail-v1/1?return=%2Fbg%2Flisting-grid%23vehicle-1",
+      "width": 320
+    },
+    {
+      "label": "BG Vehicle detail bottom 320",
+      "brokenImages": [],
+      "clippedControls": [],
+      "dockHidden": true,
+      "duplicateIds": [],
+      "font": "\"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+      "height": 844,
+      "openDialogs": [],
+      "overflow": false,
+      "scroll": 679,
+      "url": "http://127.0.0.1:6461/bg/listing-detail-v1/1?return=%2Fbg%2Flisting-grid%23vehicle-1",
+      "width": 320
+    },
+    {
+      "label": "BG Contact top 320",
+      "brokenImages": [],
+      "clippedControls": [],
+      "dockHidden": false,
+      "duplicateIds": [],
+      "font": "\"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+      "height": 844,
+      "openDialogs": [],
+      "overflow": false,
+      "scroll": 0,
+      "url": "http://127.0.0.1:6461/bg/contact",
+      "width": 320
+    },
+    {
+      "label": "BG Contact bottom 320",
+      "brokenImages": [],
+      "clippedControls": [],
+      "dockHidden": false,
+      "duplicateIds": [],
+      "font": "\"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+      "height": 844,
+      "openDialogs": [],
+      "overflow": false,
+      "scroll": 258,
+      "url": "http://127.0.0.1:6461/bg/contact",
+      "width": 320
+    },
+    {
+      "label": "BG About top 320",
+      "brokenImages": [],
+      "clippedControls": [],
+      "dockHidden": false,
+      "duplicateIds": [],
+      "font": "\"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+      "height": 844,
+      "openDialogs": [],
+      "overflow": false,
+      "scroll": 0,
+      "url": "http://127.0.0.1:6461/bg/about-us",
+      "width": 320
+    },
+    {
+      "label": "BG Advice top 320",
+      "brokenImages": [],
+      "clippedControls": [],
+      "dockHidden": false,
+      "duplicateIds": [],
+      "font": "\"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+      "height": 844,
+      "openDialogs": [],
+      "overflow": false,
+      "scroll": 0,
+      "url": "http://127.0.0.1:6461/bg/blog",
+      "width": 320
+    },
+    {
+      "label": "BG Advice bottom 320",
+      "brokenImages": [],
+      "clippedControls": [],
+      "dockHidden": false,
+      "duplicateIds": [],
+      "font": "\"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+      "height": 844,
+      "openDialogs": [],
+      "overflow": false,
+      "scroll": 1363,
+      "url": "http://127.0.0.1:6461/bg/blog",
+      "width": 320
+    },
+    {
+      "label": "BG About footer stable 320",
+      "brokenImages": [],
+      "clippedControls": [],
+      "dockHidden": true,
+      "duplicateIds": [],
+      "font": "\"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+      "height": 844,
+      "openDialogs": [],
+      "overflow": false,
+      "scroll": 1323,
+      "url": "http://127.0.0.1:6461/bg/about-us",
+      "width": 320
+    },
+    {
+      "label": "BG Article 320",
+      "brokenImages": [],
+      "clippedControls": [],
+      "dockHidden": false,
+      "duplicateIds": [],
+      "font": "\"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+      "height": 844,
+      "openDialogs": [],
+      "overflow": false,
+      "scroll": 0,
+      "url": "http://127.0.0.1:6461/bg/blog-detail/1",
+      "width": 320
+    },
+    {
+      "label": "EN Home 320",
+      "brokenImages": [],
+      "clippedControls": [],
+      "dockHidden": false,
+      "duplicateIds": [],
+      "font": "\"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+      "height": 844,
+      "openDialogs": [],
+      "overflow": false,
+      "scroll": 0,
+      "url": "http://127.0.0.1:6461/en",
+      "width": 320
+    },
+    {
+      "label": "EN Inventory 320",
+      "brokenImages": [],
+      "clippedControls": [],
+      "dockHidden": false,
+      "duplicateIds": [],
+      "font": "\"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+      "height": 844,
+      "openDialogs": [],
+      "overflow": false,
+      "scroll": 0,
+      "url": "http://127.0.0.1:6461/en/listing-grid",
+      "width": 320
+    },
+    {
+      "label": "EN Import 320",
+      "brokenImages": [],
+      "clippedControls": [],
+      "dockHidden": false,
+      "duplicateIds": [],
+      "font": "\"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+      "height": 844,
+      "openDialogs": [],
+      "overflow": false,
+      "scroll": 0,
+      "url": "http://127.0.0.1:6461/en/contact?topic=import",
+      "width": 320
+    },
+    {
+      "label": "EN Sell 320",
+      "brokenImages": [],
+      "clippedControls": [],
+      "dockHidden": false,
+      "duplicateIds": [],
+      "font": "\"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+      "height": 844,
+      "openDialogs": [],
+      "overflow": false,
+      "scroll": 0,
+      "url": "http://127.0.0.1:6461/en/contact?topic=trade-in",
+      "width": 320
+    },
+    {
+      "label": "EN Menu 320",
+      "brokenImages": [],
+      "clippedControls": [],
+      "dockHidden": true,
+      "duplicateIds": [],
+      "font": "\"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+      "height": 844,
+      "openDialogs": [
+        {
+          "id": "dn-mobile-menu",
+          "overflow": false
+        }
+      ],
+      "overflow": false,
+      "scroll": 0,
+      "url": "http://127.0.0.1:6461/en/contact?topic=trade-in",
+      "width": 320
+    },
+    {
+      "label": "EN Home 390",
+      "brokenImages": [],
+      "clippedControls": [],
+      "dockHidden": false,
+      "duplicateIds": [],
+      "font": "\"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+      "height": 844,
+      "openDialogs": [],
+      "overflow": false,
+      "scroll": 0,
+      "url": "http://127.0.0.1:6461/en",
+      "width": 390
+    },
+    {
+      "label": "EN Inventory 390",
+      "brokenImages": [],
+      "clippedControls": [],
+      "dockHidden": false,
+      "duplicateIds": [],
+      "font": "\"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+      "height": 844,
+      "openDialogs": [],
+      "overflow": false,
+      "scroll": 0,
+      "url": "http://127.0.0.1:6461/en/listing-grid",
+      "width": 390
+    },
+    {
+      "label": "EN Contact 390",
+      "brokenImages": [],
+      "clippedControls": [],
+      "dockHidden": false,
+      "duplicateIds": [],
+      "font": "\"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+      "height": 844,
+      "openDialogs": [],
+      "overflow": false,
+      "scroll": 0,
+      "url": "http://127.0.0.1:6461/en/contact",
+      "width": 390
+    },
+    {
+      "label": "EN About 390",
+      "brokenImages": [],
+      "clippedControls": [],
+      "dockHidden": false,
+      "duplicateIds": [],
+      "font": "\"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+      "height": 844,
+      "openDialogs": [],
+      "overflow": false,
+      "scroll": 0,
+      "url": "http://127.0.0.1:6461/en/about-us",
+      "width": 390
+    },
+    {
+      "label": "EN Advice 390",
+      "brokenImages": [],
+      "clippedControls": [],
+      "dockHidden": false,
+      "duplicateIds": [],
+      "font": "\"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+      "height": 844,
+      "openDialogs": [],
+      "overflow": false,
+      "scroll": 0,
+      "url": "http://127.0.0.1:6461/en/blog",
+      "width": 390
+    },
+    {
+      "label": "EN Import 390",
+      "brokenImages": [],
+      "clippedControls": [],
+      "dockHidden": false,
+      "duplicateIds": [],
+      "font": "\"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+      "height": 844,
+      "openDialogs": [],
+      "overflow": false,
+      "scroll": 0,
+      "url": "http://127.0.0.1:6461/en/contact?topic=import",
+      "width": 390
+    },
+    {
+      "label": "EN Sell 390",
+      "brokenImages": [],
+      "clippedControls": [],
+      "dockHidden": false,
+      "duplicateIds": [],
+      "font": "\"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+      "height": 844,
+      "openDialogs": [],
+      "overflow": false,
+      "scroll": 0,
+      "url": "http://127.0.0.1:6461/en/contact?topic=trade-in",
+      "width": 390
+    }
+  ]
+}

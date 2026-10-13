@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "dealer": "eurocar6-varna",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/app",
+    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
+    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+  },
+  "appDigest": "997e7f518fc3899d021be301b8ed13237105e572ae9099bbd79af82bb2018283",
+  "provenance": {
+    "schemaVersion": 1,
+    "dealer": "eurocar6-varna",
+    "profile": "auto-best/src/lib/data/dealer-profile.json",
+    "profileSha256": "154af0413d261eb89df5016f87228f91f3667924a5a130891f3b60e49cc1271e",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "vehicles": 1,
+    "currency": "EUR",
+    "observedAt": "2026-10-11T11:27:14.708Z",
+    "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-light.png",
+        "output": "public/dealer-app/logo-light-3a23601a0566d93845c8.png",
+        "sha256": "3a23601a0566d93845c88afdbf6b51bc955ffece12c07a367296ec11bf32a5fa",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-dark.png",
+        "output": "public/dealer-app/logo-dark-e4784fca73906a935749.png",
+        "sha256": "e4784fca73906a935749b95554bc9390c17430e66e55b54cbe13de44872f5041",
+        "role": "logo-dark"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/21790941738758845-1.webp",
+        "output": "public/dealer-app/vehicle-3d3cfd774330f933f880.webp",
+        "sha256": "3d3cfd774330f933f8803ae3b090161a35795f520ecbbf42fc984988a40e4a08",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/21790941738758845-2.webp",
+        "output": "public/dealer-app/vehicle-6ca4873e0751ff4f54e0.webp",
+        "sha256": "6ca4873e0751ff4f54e0c0262b4ffbaded9ebcef3646e9c0df8aed7440c29b3e",
+        "role": "vehicle"
+      }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "mitsubishi-outlander-2014-21790941738758845",
+        "sourceValue": 181371,
+        "sourceUnit": "km",
+        "canonicalKm": 181371
+      }
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

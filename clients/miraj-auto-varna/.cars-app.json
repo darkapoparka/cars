@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "dealer": "miraj-auto-varna",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/app",
+    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
+    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+  },
+  "appDigest": "8238dbf00ccc957366f36d8c7aab87818c6dfd29b34343aa05385c1d906de093",
+  "provenance": {
+    "schemaVersion": 1,
+    "dealer": "miraj-auto-varna",
+    "profile": "auto-best/src/lib/data/dealer-profile.json",
+    "profileSha256": "f0dd944e2c10d816a1df6d71f0a56200cc0301c0565c585cd2e1545f168c772c",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "vehicles": 1,
+    "currency": "EUR",
+    "observedAt": "2026-10-11T11:27:14.626Z",
+    "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-light.png",
+        "output": "public/dealer-app/logo-light-580af9aeb3d1e34a522b.png",
+        "sha256": "580af9aeb3d1e34a522bbaa71172e4b567b24555f73b48391b89d3dacee2d3d2",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-dark.png",
+        "output": "public/dealer-app/logo-dark-1a07c370dcfebf3fb7e2.png",
+        "sha256": "1a07c370dcfebf3fb7e2365585310b12be4bea3189a7c0c8763941fd4878bd7f",
+        "role": "logo-dark"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/21791636012392100-1.webp",
+        "output": "public/dealer-app/vehicle-d6b54053212518882bba.webp",
+        "sha256": "d6b54053212518882bba58444db79c1ead84e39365f59d426fe3ac8413903134",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/21791636012392100-2.webp",
+        "output": "public/dealer-app/vehicle-86f2f5645420e6cc490c.webp",
+        "sha256": "86f2f5645420e6cc490cfa18a4cc9f8b4c1eb29e2083ca62834cfe375647380a",
+        "role": "vehicle"
+      }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "bmw-x1-2012-21791636012392100",
+        "sourceValue": 200000,
+        "sourceUnit": "km",
+        "canonicalKm": 200000
+      }
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

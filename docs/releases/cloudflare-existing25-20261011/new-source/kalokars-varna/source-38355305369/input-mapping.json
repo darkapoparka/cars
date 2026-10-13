@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-input-mapping",
+  "dealer": "kalokars-varna",
+  "inputs": {
+    "facts": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalokars-varna/facts.json",
+      "sha256": "957fed41e81507f60fcc2f9ccfe37911c4a56c7ffdadde70c3d7f50dbc3de564"
+    },
+    "stock": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalokars-varna/stock.json",
+      "sha256": "5c1bbe65ae52af62a062967c13e9ea23ac4fe5dc57252eba9f6f968bb737a78c"
+    },
+    "locale": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalokars-varna/locale.json",
+      "sha256": "d884903d966c4134aa00eab1e59558a6f5749ad05402d82ed076dece00fd4401"
+    },
+    "branding": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalokars-varna/branding.json",
+      "sha256": "2cb0f47cc217955e72a10625d42020aaba9d0f9bb6235a2abd66b2a6154aa665"
+    }
+  },
+  "sources": [
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalokars-varna/facts.json",
+      "sha256": "957fed41e81507f60fcc2f9ccfe37911c4a56c7ffdadde70c3d7f50dbc3de564"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalokars-varna/stock.json",
+      "sha256": "5c1bbe65ae52af62a062967c13e9ea23ac4fe5dc57252eba9f6f968bb737a78c"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalokars-varna/locale.json",
+      "sha256": "d884903d966c4134aa00eab1e59558a6f5749ad05402d82ed076dece00fd4401"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalokars-varna/branding.json",
+      "sha256": "2cb0f47cc217955e72a10625d42020aaba9d0f9bb6235a2abd66b2a6154aa665"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalokars-varna/identity-repository-corrected-additional100.json",
+      "sha256": "e171e314ab0e154e79a0519adad1dc465ccbb0b07a8f9711173bc3b03d4a9662"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalokars-varna/copy-review-additional100.json",
+      "sha256": "70177b121ebed8318a540315e013e4335cfc48144c98de611e1c3bbec460c5ef"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalokars-varna/media/11787740471095305-1.webp",
+      "sha256": "1887bafb0ba8ae5dbd4693dd95f6ad33a6df9c0346204aca4a435f46008e888f"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalokars-varna/media/11787740471095305-2.webp",
+      "sha256": "d80f172ae39e5a4aea8c1cf63ae80bc18bb34c440da2692f11c3b75027e5c2c8"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalokars-varna/branding/master.png",
+      "sha256": "1eb7db7654b2b19d5dc4a0e0ce1ca4aff6f5e7dd83ff855f3223c25b9e94679c"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalokars-varna/branding/onLight.png",
+      "sha256": "1eb7db7654b2b19d5dc4a0e0ce1ca4aff6f5e7dd83ff855f3223c25b9e94679c"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalokars-varna/branding/onDark.png",
+      "sha256": "c7d560a0a682cf94d30cf93ce0632e5404b2e50d1abe21be10d3f4c6b0aedf94"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalokars-varna/branding/onAccent.png",
+      "sha256": "c7d560a0a682cf94d30cf93ce0632e5404b2e50d1abe21be10d3f4c6b0aedf94"
+    }
+  ]
+}
