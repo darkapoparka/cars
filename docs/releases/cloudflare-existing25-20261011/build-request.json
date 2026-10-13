@@ -3,52 +3,283 @@
   "mode": "new-approved",
   "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
   "dealers": [
-    "eurocar6-varna",
-    "miraj-auto-varna"
+    "centralauto-varna",
+    "kalchev-varna",
+    "sevicar-varna"
   ],
+  "targets": [
+    "auto-best",
+    "modern",
+    "import",
+    "app",
+    "mobile",
+    "karento-best",
+    "router"
+  ],
+  "requestedAt": "2026-10-12T17:03:19.940Z",
+  "attempt": 4,
   "newSources": [
     {
-      "slug": "eurocar6-varna",
+      "slug": "centralauto-varna",
       "preparation": {
-        "path": "docs/releases/cloudflare-existing25-20261011/new-source/eurocar6-varna/source-38355305369/source-preparation.json",
-        "sha256": "a677711d93be94366b9ace49bc5b479764ea9ad77d263be8562c5def0b021956"
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/centralauto-varna/source-preparation-receipt.json",
+        "sha256": "a7d62f4d4af4df1b2289703c5e49f0e036aca335aabe07710ee340d3c851d72e"
       },
       "proposal": {
-        "path": "docs/releases/cloudflare-existing25-20261011/new-source/eurocar6-varna/source-38355305369/source-proposal.json",
-        "sha256": "3111e267c0107aaa5ce78b8de20f24fea838f6be4a6c30211bc58010c40e2305"
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/centralauto-varna/source-patch.json",
+        "sha256": "56357664562e827668f07d708658274738db65051cb56aa6cdf97f8d85febac9"
       },
       "inputMapping": {
-        "path": "docs/releases/cloudflare-existing25-20261011/new-source/eurocar6-varna/source-38355305369/input-mapping.json",
-        "sha256": "f0123efe163565238761538fbf31c5452d2992b47ca84f2e00a7e25be28ce070"
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/centralauto-varna/input-mapping.json",
+        "sha256": "c708e6079f44c9d2a3e411f1e4501b044c28982eafd65edbe229fa0bfe5c5942"
       },
       "publication": {
-        "path": "docs/releases/cloudflare-existing25-20261011/new-source/eurocar6-varna/source-publication.json",
-        "sha256": "41b15608b6511a060d4450123f539d9b087ce20591c08fb76ad19abb83565928"
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/centralauto-varna/source-publication.json",
+        "sha256": "a135801e577608dda5addf80bd9c666b72117f7218f7b0c2261f7b6154acf92b"
       }
     },
     {
-      "slug": "miraj-auto-varna",
+      "slug": "kalchev-varna",
       "preparation": {
-        "path": "docs/releases/cloudflare-existing25-20261011/new-source/miraj-auto-varna/source-38355305369/source-preparation.json",
-        "sha256": "3f09ff37e8e8d3c9c0397e31f628488c7085516465fbc861859ddfb97102502b"
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalchev-varna/source-preparation-receipt.json",
+        "sha256": "4cdc48a96d21a919df40d27a8df7d878b3b3b98aad7b884d422644776cfbb8fe"
       },
       "proposal": {
-        "path": "docs/releases/cloudflare-existing25-20261011/new-source/miraj-auto-varna/source-38355305369/source-proposal.json",
-        "sha256": "a898aadd709d5f4bad83a6e4dfe487f28b45a554f4098fbe9d5dc7926a23cece"
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalchev-varna/source-patch.json",
+        "sha256": "00fd8346a989e3f3bb756bc7689532b2d0ada704b25e860fa9ad26e40da06f48"
       },
       "inputMapping": {
-        "path": "docs/releases/cloudflare-existing25-20261011/new-source/miraj-auto-varna/source-38355305369/input-mapping.json",
-        "sha256": "67b294e62db364108b6c73b0cacf9a78c067564c3d1f827fb67f898d32f5fff6"
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalchev-varna/input-mapping.json",
+        "sha256": "061fdf1202437c105a40146df0c6eddef7790d957f82ae5e6ca0d9c114b9a328"
       },
       "publication": {
-        "path": "docs/releases/cloudflare-existing25-20261011/new-source/miraj-auto-varna/source-publication.json",
-        "sha256": "d8a518e19616b1eeda63001621dc8a3f77ea1cf176acd6501baee4311baf1778"
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalchev-varna/source-publication.json",
+        "sha256": "73224e29b36ecd7c85b9730d7bbae71733735f1a6714053469aa8658533ac2a2"
+      }
+    },
+    {
+      "slug": "sevicar-varna",
+      "preparation": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/sevicar-varna/source-preparation-receipt.json",
+        "sha256": "8acb11598e2181917fff268b3dc761ab9758eb58519694a38d5c59113d295002"
+      },
+      "proposal": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/sevicar-varna/source-patch.json",
+        "sha256": "aa267b70c7c5bf081f56396eba0ae84f83c51cf64df5428d28769e2c9ecc030c"
+      },
+      "inputMapping": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/sevicar-varna/input-mapping.json",
+        "sha256": "aad69fed7339a57ff3179eaef45e4eb942a566a85cc428ccfb97927b2c0439d6"
+      },
+      "publication": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/sevicar-varna/source-publication.json",
+        "sha256": "c4a699ea1e6e883f2bbffde935d7b5fb1130284ab2580a1f3010abe49efd1acb"
       }
     }
   ],
   "composition": {
     "reviewed": true,
-    "reviewedAt": "2026-10-13T07:51:41.872Z",
-    "reviewScope": "Only Eurocar6 and Miraj original successful38355305369/1 source trees, actually published atb6040ffc; original raw proposal/preparation/input-mapping bytes and factual contacts/stock/logo assets preserved. Exact current input blob identities match original source eventfae042f; no regeneration or passed source retry. Existing native workflow and original grants/private identities only. Registry/source admission is separate from compile, package, private and hosted acceptance."
+    "reviewedAt": "2026-10-13T08:28:57.315Z",
+    "reviewScope": "Apply only the already-reviewed additive faithful English illustrative-stock disclosure to Central/Kalchev/Sevicar Import source through the maintained source transformer. Compile exactly three changed Import targets; retain original38281667181/1 native bytes for all five unaffected apps plus router with truthful component provenance. Recompose complete six-app ASSETS-only Workers through the existing source boundary, including current font/static-asset routing. Preserve facts, stock, palettes, logos, original source proofs and current uploaded font-repair outputs. No source campaign, all-app rebuild, compiled hotpatch, provider retirement, private export or hosted acceptance is implied."
+  },
+  "componentRepair": {
+    "schemaVersion": 1,
+    "kind": "cars-existing-component-repair",
+    "reviewed": true,
+    "reviewedAt": "2026-10-13T08:28:57.314Z",
+    "dealers": [
+      {
+        "slug": "centralauto-varna",
+        "sourceTree": "6e62f26a7362e348b4debdf867b50c6e1352172f",
+        "rebuild": [
+          "import"
+        ],
+        "sourceChanges": [
+          {
+            "path": "import/src/lib/content/localized.ts",
+            "operation": "import-illustrative-stock-en-v1",
+            "beforeSha256": "1ee6c420e4ad1a620ca23e8e75f2781f29878c75f7628d132188385319ddccbf",
+            "afterSha256": "10f1e47e5482913954b565d56b0710ad7e4f48c9f199b70aae0cc0a5cd5ee169"
+          }
+        ],
+        "original": {
+          "runId": 38281667181,
+          "attempt": 1,
+          "sourceCommit": "415a5a9192f2a6aa90997c8e5b65399b84a83e74",
+          "artifacts": [
+            {
+              "id": 11761667112,
+              "name": "existing-cf-centralauto-varna-auto-best-38281667181-1",
+              "sizeInBytes": 22416360,
+              "sha256": "979fdb6e87ded0f4fc9c06350d6965bcfa4e68f294cfd2627ccdb9e292d74289"
+            },
+            {
+              "id": 11761836706,
+              "name": "existing-cf-centralauto-varna-modern-38281667181-1",
+              "sizeInBytes": 48765499,
+              "sha256": "8adb61a9d5b705eb0c15f5992721809fc534a614d13d31676633debaa426b12e"
+            },
+            {
+              "id": 11761711644,
+              "name": "existing-cf-centralauto-varna-import-38281667181-1",
+              "sizeInBytes": 98653741,
+              "sha256": "f0bff8dd995de15e1c9121a5b4b60e2322eb482d2b5e84159a984999e606d1d9"
+            },
+            {
+              "id": 11761104031,
+              "name": "existing-cf-centralauto-varna-app-38281667181-1",
+              "sizeInBytes": 166982764,
+              "sha256": "1267113b24af761964b1edca1d65a70a010ab0b7648224b499b1b3b5b3474a8e"
+            },
+            {
+              "id": 11760764442,
+              "name": "existing-cf-centralauto-varna-mobile-38281667181-1",
+              "sizeInBytes": 33411593,
+              "sha256": "b4486a2d8cb63f8ec55cf9d6a88e09cf88bb3f7ce9472a81cf2afc282632eb27"
+            },
+            {
+              "id": 11761911328,
+              "name": "existing-cf-centralauto-varna-karento-best-38281667181-1",
+              "sizeInBytes": 35414094,
+              "sha256": "a2ba9601d2edd4e746967afb92f46127d9cec3346fc47519136202184c915629"
+            },
+            {
+              "id": 11760978799,
+              "name": "existing-cf-centralauto-varna-router-38281667181-1",
+              "sizeInBytes": 244060,
+              "sha256": "5f6edadda1ad39cd0acfe1b126244bc16691cc250e431ba5dfc3d19748150a30"
+            }
+          ]
+        }
+      },
+      {
+        "slug": "kalchev-varna",
+        "sourceTree": "829cdaefd7247fb4f59de82ffb835a9700d3d0a7",
+        "rebuild": [
+          "import"
+        ],
+        "sourceChanges": [
+          {
+            "path": "import/src/lib/content/localized.ts",
+            "operation": "import-illustrative-stock-en-v1",
+            "beforeSha256": "4e0d6ebc1cbe98f099d43a8772055bde4eeb1bb1ad5136e8a585d38e10761215",
+            "afterSha256": "a11bd265c2f2a38d9a2197b909e70669ca3b2d958fccc16180349855e329357b"
+          }
+        ],
+        "original": {
+          "runId": 38281667181,
+          "attempt": 1,
+          "sourceCommit": "415a5a9192f2a6aa90997c8e5b65399b84a83e74",
+          "artifacts": [
+            {
+              "id": 11760779441,
+              "name": "existing-cf-kalchev-varna-auto-best-38281667181-1",
+              "sizeInBytes": 22096860,
+              "sha256": "5e883b73f86803790ce92bdc5b61095ee6498480f861532cb30fb276bd28d70f"
+            },
+            {
+              "id": 11761263617,
+              "name": "existing-cf-kalchev-varna-modern-38281667181-1",
+              "sizeInBytes": 48472072,
+              "sha256": "c71b69d0a0c1f707852644fd6d7198e48237a1c15ea5fc0da712ec6f75639d1e"
+            },
+            {
+              "id": 11760729480,
+              "name": "existing-cf-kalchev-varna-import-38281667181-1",
+              "sizeInBytes": 98399356,
+              "sha256": "6c17f697e16fe144705934a514ea57f34ba88ea1b98bdf302912099b778cbd61"
+            },
+            {
+              "id": 11761423103,
+              "name": "existing-cf-kalchev-varna-app-38281667181-1",
+              "sizeInBytes": 166702660,
+              "sha256": "4942baff594a0e11c8781a53e67bf6526c505db7e3a875014d36ad45bbfd5758"
+            },
+            {
+              "id": 11761008858,
+              "name": "existing-cf-kalchev-varna-mobile-38281667181-1",
+              "sizeInBytes": 33165005,
+              "sha256": "80ea6412ede652246e1e91d4fff26ed4c2e10ced17b9c694ab5cd37014a2eb7c"
+            },
+            {
+              "id": 11760809343,
+              "name": "existing-cf-kalchev-varna-karento-best-38281667181-1",
+              "sizeInBytes": 35167105,
+              "sha256": "8a52c59abc672b340c6b19411d9f21a92b07cc0f24e434178a461e9f4a88dd62"
+            },
+            {
+              "id": 11760539825,
+              "name": "existing-cf-kalchev-varna-router-38281667181-1",
+              "sizeInBytes": 244302,
+              "sha256": "637f09b489e3f4283f7c5d22141c4ebc268f8d6d0ba59efc17142cfa8ed202b4"
+            }
+          ]
+        }
+      },
+      {
+        "slug": "sevicar-varna",
+        "sourceTree": "8919afe09fdb009514ca793c35502748613c7b88",
+        "rebuild": [
+          "import"
+        ],
+        "sourceChanges": [
+          {
+            "path": "import/src/lib/content/localized.ts",
+            "operation": "import-illustrative-stock-en-v1",
+            "beforeSha256": "0cf21f2c368dd8fb6d0d2aad1e747710830a5c68c5368e58cc47794243b829c5",
+            "afterSha256": "2eb101b14016fd292a04cc474492208774d5ef5e4ecea0a86ec401e2dca989cc"
+          }
+        ],
+        "original": {
+          "runId": 38281667181,
+          "attempt": 1,
+          "sourceCommit": "415a5a9192f2a6aa90997c8e5b65399b84a83e74",
+          "artifacts": [
+            {
+              "id": 11761821506,
+              "name": "existing-cf-sevicar-varna-auto-best-38281667181-1",
+              "sizeInBytes": 22333315,
+              "sha256": "b0cd810bf242459aadae7a8b3241d3340abfd664caac755ea8a574062293070d"
+            },
+            {
+              "id": 11760999993,
+              "name": "existing-cf-sevicar-varna-modern-38281667181-1",
+              "sizeInBytes": 48697654,
+              "sha256": "84129cd804917e5589abbc4aceadc4732bb3d16c7cb69c85718a5cc97e1fa09d"
+            },
+            {
+              "id": 11760829573,
+              "name": "existing-cf-sevicar-varna-import-38281667181-1",
+              "sizeInBytes": 98616729,
+              "sha256": "f8f9b1a170f542c0824a9cc6faf53eef9eeec18b81b691f520882a20d37710d0"
+            },
+            {
+              "id": 11761717527,
+              "name": "existing-cf-sevicar-varna-app-38281667181-1",
+              "sizeInBytes": 166924879,
+              "sha256": "e17ba54836ef77c446824841fdf1693b7484c4d2a8fd29344ef322cb169f6e3c"
+            },
+            {
+              "id": 11761423559,
+              "name": "existing-cf-sevicar-varna-mobile-38281667181-1",
+              "sizeInBytes": 33378941,
+              "sha256": "3ac4854c2587477569ab98049633229250fc5ea5618cd736ffb51d5659d16573"
+            },
+            {
+              "id": 11761154047,
+              "name": "existing-cf-sevicar-varna-karento-best-38281667181-1",
+              "sizeInBytes": 35381685,
+              "sha256": "741a8b9157130476153e738d21973d48ba837a564d2555b9f89a0dcf8e3cf44b"
+            },
+            {
+              "id": 11762065401,
+              "name": "existing-cf-sevicar-varna-router-38281667181-1",
+              "sizeInBytes": 244129,
+              "sha256": "c1b264503b930be9cc79178ecf0f43cda2faa5b81dcd58f7a7ae59c394bcf931"
+            }
+          ]
+        }
+      }
+    ]
   }
 }

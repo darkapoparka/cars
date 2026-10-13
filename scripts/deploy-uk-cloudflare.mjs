@@ -40,6 +40,7 @@ function immutableJson(file,value) {
   fs.writeFileSync(file,encode(value),{flag:'wx'});
 }
 export async function hashArchive(file) {
+  if(Buffer.isBuffer(file))return {bytes:file.length,sha256:createHash('sha256').update(file).digest('hex')};
   const hash=createHash('sha256');let bytes=0;
   for await(const chunk of fs.createReadStream(file)){bytes+=chunk.length;hash.update(chunk);}
   return {bytes,sha256:hash.digest('hex')};
@@ -48,14 +49,15 @@ export async function hashArchive(file) {
 /** Read only small declared JSON receipts from a verified GitHub ZIP; never extract source. */
 export function readZipReceipt(archive,name) {
   if (!safeArtifactPath(name)) throw Error('Unsafe ZIP receipt path.');
-  const fd=fs.openSync(archive,'r');
+  const memory=Buffer.isBuffer(archive),fd=memory?null:fs.openSync(archive,'r');
   const read=(size,offset)=>{
+    if(memory){if(!Number.isSafeInteger(size)||!Number.isSafeInteger(offset)||size<0||offset<0||offset+size>archive.length)throw Error('Truncated ZIP receipt archive.');return archive.subarray(offset,offset+size);}
     const out=Buffer.alloc(size);
     if(fs.readSync(fd,out,0,size,offset)!==size)throw Error('Truncated ZIP receipt archive.');
     return out;
   };
   try {
-    const size=fs.fstatSync(fd).size;
+    const size=memory?archive.length:fs.fstatSync(fd).size;
     if(size<22||size>2*1024**3)throw Error('ZIP receipt archive size is unsupported.');
     const tail=read(Math.min(size,65557),Math.max(0,size-65557));
     let end=-1;
@@ -88,7 +90,7 @@ export function readZipReceipt(archive,name) {
     const bytes=chosen.method===0?compressed:inflateRawSync(compressed,{maxOutputLength:32*1024**2});
     if(bytes.length!==chosen.bytes)throw Error('ZIP receipt length differs.');
     return bytes;
-  } finally {fs.closeSync(fd);}
+  } finally {if(fd!==null)fs.closeSync(fd);}
 }
 
 export function validateRemoteBuild({run,artifact,summaryArtifact},input) {

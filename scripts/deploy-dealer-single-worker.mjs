@@ -112,12 +112,16 @@ export async function readSingletonRemoteMetadata(review,record,read=githubJson)
  return {run,artifact,sourceProof:{repository,commit:commit.sha,sourceTree,ref:'refs/heads/main',mainCommit:main.sha,mainReachable:true}};
 }
 
-export async function inspectFleetSingleton({reviewFile,mode='update-existing',root=ROOT,registry=json(path.join(root,'docs/DEPLOYMENT-INVENTORY.json')),readMetadata=readSingletonRemoteMetadata}={}) {
+export async function inspectFleetSingleton({reviewFile,mode='update-existing',root=ROOT,registry=json(path.join(root,'docs/DEPLOYMENT-INVENTORY.json')),readMetadata=readSingletonRemoteMetadata,originalArchiveBytes}={}) {
  const absolute=path.resolve(reviewFile),bytes=fs.readFileSync(absolute),review=JSON.parse(bytes);
  assert(review.schemaVersion===1&&typeof review.reviewed==='boolean'&&(!review.reviewed||Number.isFinite(Date.parse(review.reviewedAt)))&&review.accountId===SINGLETON_ACCOUNT&&
   hex40(review.sourceCommit)&&hex40(review.sourceTree)&&hex64(review.inputDigest)&&hex64(review.outputDigest)&&hex64(review.artifactDigest),'Explicit fleet review and exact source/artifact pins are required');
  deploymentMode(mode,review);
- for(const key of ['archive','directory'])assert(typeof review[key]==='string'&&path.isAbsolute(review[key]),'Use an exact absolute '+key+' path');
+ const archiveMode=review.archiveMode??'file';assert(['file','original-byte-buffer'].includes(archiveMode),'Unsupported original archive input mode');
+ const memory=archiveMode==='original-byte-buffer';
+ assert(memory?Buffer.isBuffer(originalArchiveBytes)&&review.archive===undefined:originalArchiveBytes===undefined,'Explicit original ZIP buffer mode must not substitute a file path or absent bytes');
+ const originalArchive=memory?originalArchiveBytes:review.archive;
+ for(const key of memory?['directory']:['archive','directory'])assert(typeof review[key]==='string'&&path.isAbsolute(review[key]),'Use an exact absolute '+key+' path');
  assert(review.archive!==review.directory,'Archive and extracted output must be distinct');
  const sealed=verifyFleetSingletonDirectory(review.directory),{receipt,delivery,inventory}=sealed;
  const registered=registeredCompositionIdentity(registry,review.client,{...review,variants:sealed.review.variants});
@@ -125,14 +129,14 @@ export async function inspectFleetSingleton({reviewFile,mode='update-existing',r
  for(const key of ['sourceCommit','sourceTree','inputDigest','sourceReleases','outputDigest','workerName','publicOrigin'])assert(canonical(review[key])===canonical(receipt[key]),'Approved singleton pin differs: '+key);
  assert(receipt.dealer===review.client&&String(receipt.runId)===String(review.runId)&&String(receipt.attempt)===String(review.attempt)&&inventory.digest===review.artifactDigest&&delivery.repository===review.repository,'Approved dealer/run/inventory differs');
  const remote=await readMetadata(review,registered.record);validateSingletonGitHubBuild(remote,review);
- const archive=await hashArchive(review.archive);assert(archive.bytes===remote.artifact.size_in_bytes&&'sha256:'+archive.sha256===remote.artifact.digest,'Original GitHub archive bytes differ');
- for(const name of ['artifact-manifest.json','single-worker-receipt.json','dealer-composition-review.json','delivery-receipt.json','wrangler.json'])assert(readZipReceipt(review.archive,name).equals(fs.readFileSync(inside(review.directory,name,{mustExist:true}))),'Extracted singleton receipt differs from original archive: '+name);
+ const archive=await hashArchive(originalArchive);assert(archive.bytes===remote.artifact.size_in_bytes&&'sha256:'+archive.sha256===remote.artifact.digest,'Original GitHub archive bytes differ');
+ for(const name of ['artifact-manifest.json','single-worker-receipt.json','dealer-composition-review.json','delivery-receipt.json','wrangler.json'])assert(readZipReceipt(originalArchive,name).equals(fs.readFileSync(inside(review.directory,name,{mustExist:true}))),'Extracted singleton receipt differs from original archive: '+name);
  const sourcePublication=validateSourcePublication(review.sourcePublication,remote.sourceProof,receipt,registered.record);
  if(mode==='create-singleton')validateAbsentSingletonTarget(review.providerSnapshot,receipt.workerName,receipt.publicOrigin);
  return {reviewFile:absolute,reviewSha256:sha256(bytes),review,sealed,remote,sourcePublication,plan:{schemaVersion:1,type:'cars-existing-fleet-single-worker-inspection',client:review.client,repository:review.repository,
   sourcePublication,privatePublishingMirror:{...(review.privatePublishingMirror??{repository:review.repository,state:'not-verified-by-this-bridge'}),verifiedByBridge:false},accountId:SINGLETON_ACCOUNT,workerName:receipt.workerName,publicOrigin:receipt.publicOrigin,
   sourceCommit:receipt.sourceCommit,sourceTree:receipt.sourceTree,inputDigest:receipt.inputDigest,sourceReleases:receipt.sourceReleases,runId:review.runId,attempt:review.attempt,artifactId:review.artifactId,
-  archiveDigest:review.archiveDigest,artifactDigest:inventory.digest,outputDigest:receipt.outputDigest,applicationCount:6,workerCount:1,serviceBindings:[],deploymentMode:mode,readyToDeploy:review.reviewed,
+  archiveMode,archiveDigest:review.archiveDigest,artifactDigest:inventory.digest,outputDigest:receipt.outputDigest,applicationCount:6,workerCount:1,serviceBindings:[],deploymentMode:mode,readyToDeploy:review.reviewed,
   deployments:0,hostedVerified:false,ownerAccepted:false}};
 }
 
@@ -178,8 +182,8 @@ export function localWrangler({toolPackage,accountId=SINGLETON_ACCOUNT}={}) {
  };
 }
 
-export async function runFleetSingletonDeployment({reviewFile,write=false,mode='update-existing',root=ROOT,registry,readMetadata,provider,toolPackage}={}) {
- const context=await inspectFleetSingleton({reviewFile,mode,root,registry,readMetadata});if(!write)return context.plan;
+export async function runFleetSingletonDeployment({reviewFile,write=false,mode='update-existing',root=ROOT,registry,readMetadata,provider,toolPackage,originalArchiveBytes}={}) {
+ const context=await inspectFleetSingleton({reviewFile,mode,root,registry,readMetadata,originalArchiveBytes});if(!write)return context.plan;
  assert(context.review.reviewed===true,'Upload requires explicit dated review of this exact sealed artifact');
  const review=context.review,uploader=provider??localWrangler({toolPackage});
  assert(uploader.tool?.version===SINGLETON_TOOLCHAIN.wrangler,'Uploader differs from qualified Wrangler');
@@ -197,6 +201,7 @@ export async function runFleetSingletonDeployment({reviewFile,write=false,mode='
   const fresh=validateBefore(await uploader.snapshot(review));
   if(creating)assert(absentTargetPins(fresh)===absentTargetPins(before),'Absent target/capacity changed before upload');
   else assert(fresh.versionId===before.versionId,'Public Worker advanced before upload');
+  if(review.archiveMode==='original-byte-buffer'){const original=await hashArchive(originalArchiveBytes);assert(original.bytes===context.remote.artifact.size_in_bytes&&'sha256:'+original.sha256===context.remote.artifact.digest,'Original GitHub archive bytes changed before upload');}
   const deployed=await uploader.upload(review,report);assert(uuid(deployed.version_id)&&deployed.worker_name===review.workerName,'Uploader returned another Worker/version');
   if(creating)assert(canonical(deployed.targets)===canonical([review.publicOrigin]),'New Worker upload exposed another target or origin');
   const after=validateCurrentSingletonTarget(await uploader.snapshot(review,{versionId:deployed.version_id}),review.workerName,{after:true,versionId:deployed.version_id});
