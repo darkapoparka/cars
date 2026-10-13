@@ -4,10 +4,8 @@
   "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
   "approvedParentLockDigest": "ecdfaf9599fbcbeadebc24de3b9aa1c7615a9a49e29d338e5e9a23427d405e26",
   "dealers": [
-    "exclusive-auto-varna",
     "chernomore-varna",
-    "europa-varna",
-    "sunny-varna",
+    "exclusive-auto-varna",
     "rqs-auto-team",
     "prestige-varna",
     "evrocar-varna-09",
@@ -191,50 +189,6 @@
       "branding": {
         "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/rqs-auto-team/branding.json",
         "sha256": "e3b57f0f548a1f7b0086baf1f8fe29a2e0387fff7ede62c13d2ead7fc19528f7"
-      }
-    },
-    "sunny-varna": {
-      "adoption": {
-        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/sunny-varna/reviewed-public-adoption.json",
-        "sha256": "41bddce41f152fde70a0194dd1fb15f7e27337d6ef575fafcf7ab23632c70136"
-      },
-      "candidateLock": {
-        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/sunny-varna/qualification-lock.json",
-        "sha256": "b68b52ece7b68b9e393fd1d62ff9c3025819ff576c664a71336318b549c558f3"
-      },
-      "qualification": {
-        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/sunny-varna/qualification-context.json",
-        "sha256": "f27af3fb84107c5ae85095261b6e5db2270d5ec5762e9d49c3b45c780494fd9e"
-      },
-      "sourceDeltaReview": {
-        "path": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
-        "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975"
-      },
-      "branding": {
-        "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/sunny-varna/branding.json",
-        "sha256": "f3b3761aacc500e73a8c1eee61428457256eb943e39238757f2c0f9d069add16"
-      }
-    },
-    "europa-varna": {
-      "adoption": {
-        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/europa-varna/reviewed-public-adoption.json",
-        "sha256": "3999bd90218621848698289db649fabc8d65d24c2d383e664c847dbbcbd2a9ad"
-      },
-      "candidateLock": {
-        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/europa-varna/qualification-lock.json",
-        "sha256": "842a092ead0a5c09ca8380e064f6da5344b572ee14759ce599c1dd6c3a23fd5e"
-      },
-      "qualification": {
-        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/europa-varna/qualification-context.json",
-        "sha256": "032616393dafbdd01190670020ce6ab5c13e17af8cb1efcdc4652b8f47152c36"
-      },
-      "sourceDeltaReview": {
-        "path": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
-        "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975"
-      },
-      "branding": {
-        "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/europa-varna/branding.json",
-        "sha256": "999cfdc870ef17f0ed9ba029fdd6d4b7fb2b868123f1fd5fe2ac80f3e83f9d10"
       }
     },
     "tesi-car-varna": {
