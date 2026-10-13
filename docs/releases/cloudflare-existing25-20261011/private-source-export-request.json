@@ -2,24 +2,23 @@
   "schemaVersion": 1,
   "kind": "cars-qualified-private-source-export",
   "repository": "darkapoparka/cars",
-  "reviewed": true,
-  "reviewedAt": "2026-10-13T06:09:35.036Z",
-  "sourceCommit": "cb66f8c6e2d33ae63810f370e836c1d3fe75b7ab",
-  "runId": 38353560944,
+  "sourceCommit": "f51d944d6abc0524924d1a36791d98b1ad023132",
+  "runId": 38367064895,
   "attempt": 1,
-  "applicationBuildsRepeated": 0,
-  "sourcePreparationRepeated": false,
-  "purpose": "Seal complete PartMag and Kalo private source against their ORIGINAL successful seven native targets in run38353560944. Reuse original retained canonical trees, dependency locks and provenance. No generation, intake, native rebuild or Worker upload. Batch4 retains private publication and exact granted upload ownership.",
+  "reviewed": true,
+  "originalBuildRequestBlob": "a5bba57dd1dfb748fc48881da719c9d1de6a8a72",
   "dealers": [
     {
-      "slug": "part-mag-cars-varna",
-      "repository": "darkapoparka/cars-part-mag-cars-varna",
-      "sourceTree": "073b7c20a60605874406368167b9766ca8a76d45"
+      "slug": "eurocar6-varna",
+      "repository": "darkapoparka/cars-eurocar6-varna",
+      "sourceTree": "09c5fce8a66d5b16aa1d4398add5499e5e011b83"
     },
     {
-      "slug": "kalo-0404-varna",
-      "repository": "darkapoparka/cars-kalo-0404-varna",
-      "sourceTree": "f68d4177b9a485cdd2c55523d2968ac94fa537ee"
+      "slug": "miraj-auto-varna",
+      "repository": "darkapoparka/cars-miraj-auto-varna",
+      "sourceTree": "25ade3db125746f327b730ec33513019f23922e5"
     }
-  ]
+  ],
+  "reviewedAt": "2026-10-13T11:11:11.523Z",
+  "reviewScope": "Only full private qualification/export of the two original successful38367064895 native sources. The immutable original build-event Git blob is explicit; unrelated first-three build dispatch advancement is distinguished from actual unchanged dealer/input leases. All seven original native receipts, source/input digests, exact trees, frozen dependency locks and private identities remain authoritative. Zero source intake, native app builds or provider writes; existing Batch2 ownership and isolated review holds retained."
 }
