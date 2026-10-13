@@ -853,6 +853,14 @@
       "sourceMode": "new-approved",
       "workerName": "cars-crazy-fox-motors-varna",
       "publicOrigin": "https://cars-crazy-fox-motors-varna.darkapoparka1.workers.dev"
+    },
+    {
+      "slug": "kapitol-varna",
+      "dealerId": "kapitol-varna",
+      "proposedRepository": "darkapoparka/cars-kapitol-varna",
+      "sourceMode": "existing-migration",
+      "workerName": "cars-kapitol-varna",
+      "publicOrigin": "https://cars-kapitol-varna.darkapoparka1.workers.dev"
     }
   ],
   "workerIdentities": {

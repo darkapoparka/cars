@@ -578,15 +578,20 @@
     },
     {
       "slug": "kapitol-varna",
-      "name": "╨Ü╨É╨ƒ╨ÿ╨ó╨₧╨¢",
+      "name": "Капитол",
       "path": "clients/kapitol-varna",
       "variants": [
         "auto-best",
         "modern",
-        "carwow"
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
       ],
       "sourceState": "source-on-main",
-      "reviewState": "unknown"
+      "reviewState": "source-reviewed-native-pending",
+      "repository": "darkapoparka/cars-kapitol-varna",
+      "dealerId": "kapitol-varna"
     },
     {
       "slug": "keen-auto-mall",

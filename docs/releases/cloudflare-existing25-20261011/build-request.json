@@ -1,54 +1,21 @@
 {
   "schemaVersion": 1,
-  "mode": "new-approved",
+  "mode": "existing-migration",
   "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
   "dealers": [
-    "tesla-varna",
-    "crazy-fox-motors-varna"
-  ],
-  "newSources": [
-    {
-      "slug": "tesla-varna",
-      "proposal": {
-        "path": "docs/releases/cloudflare-existing25-20261011/new-source/tesla-varna/original-proposal-38456219205-1.json",
-        "sha256": "98c4b49ee5257ae60a787395aec4d9a32fb75694b23a0145f7f0b7aacecbac4d"
-      },
-      "preparation": {
-        "path": "docs/releases/cloudflare-existing25-20261011/new-source/tesla-varna/original-preparation-38456219205-1.json",
-        "sha256": "e3725071505ba5b5ba3f1507a5ae092f2978ebd99a0a791a3d78f42b9c24cf7e"
-      },
-      "inputMapping": {
-        "path": "docs/releases/cloudflare-existing25-20261011/new-source/tesla-varna/original-inputMapping-38456219205-1.json",
-        "sha256": "b0020b23f12ad4cf330e4baa60e9c245818ff9bf01577d059f6469d466b04b7b"
-      },
-      "publication": {
-        "path": "docs/releases/cloudflare-existing25-20261011/new-source/tesla-varna/source-publication.json",
-        "sha256": "8e0b7f7155016bed6b6cc357d2a150c9c1ea265ceb512ac955255713d72c096d"
-      }
-    },
-    {
-      "slug": "crazy-fox-motors-varna",
-      "proposal": {
-        "path": "docs/releases/cloudflare-existing25-20261011/new-source/crazy-fox-motors-varna/original-proposal-38456219205-1.json",
-        "sha256": "7074037965c111230010e58eb735e6978451fa2349c06e03f6985e7e6edbd46f"
-      },
-      "preparation": {
-        "path": "docs/releases/cloudflare-existing25-20261011/new-source/crazy-fox-motors-varna/original-preparation-38456219205-1.json",
-        "sha256": "3eef9e04117f64a5a0adc9adc937d00a9e9bdf775eab5e3a430ab9c4fd4619d4"
-      },
-      "inputMapping": {
-        "path": "docs/releases/cloudflare-existing25-20261011/new-source/crazy-fox-motors-varna/original-inputMapping-38456219205-1.json",
-        "sha256": "391f3b3b1763e0afa8da2bd802b78e749d9ef38f1492ab2dace1c69ff6519ad8"
-      },
-      "publication": {
-        "path": "docs/releases/cloudflare-existing25-20261011/new-source/crazy-fox-motors-varna/source-publication.json",
-        "sha256": "7cb069580bba57acb83a4eb5df5f5cd0eddcd582e9a249b56d6bb210966e88f5"
-      }
-    }
+    "kapitol-varna"
   ],
   "composition": {
     "reviewed": true,
-    "reviewedAt": "2026-10-13T20:09:14.154Z",
-    "reviewScope": "First native builds of the original successful Tesla and Crazy Fox source38456219205 proposals. Reuse their exact client trees, factual inputs and reviewed rasters. Preserve Tesla stable identity and reviewed DreamCars77 trading name. No source generation or completed builds repeated."
-  }
+    "reviewedAt": "2026-10-13T22:09:45.809Z",
+    "reviewScope": "First native Cloudflare build for Kapitol's exact successful original source proposal; reuse reviewed factual inputs and raster branding, preserve the original source and all Vercel identities."
+  },
+  "sourcePublications": [
+    {
+      "dealer": "kapitol-varna",
+      "commit": "91cfa7af1092661cebad5f6261aea678302d5082",
+      "tree": "e1ce5554694fa7d584c82145f57910df396dfeb9",
+      "path": "docs/releases/cloudflare-existing25-20261011/registered-source/kapitol-varna/source-publication.json"
+    }
+  ]
 }

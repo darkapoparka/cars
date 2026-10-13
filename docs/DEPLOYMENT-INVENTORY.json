@@ -6743,41 +6743,104 @@
     },
     {
       "slug": "kapitol-varna",
-      "name": "╨Ü╨É╨ƒ╨ÿ╨ó╨₧╨¢",
+      "name": "Капитол",
       "localPath": "clients/kapitol-varna",
       "localPresent": true,
       "variants": [
         {
           "key": "auto-best",
-          "state": "in-progress",
+          "state": "source-reviewed",
           "qaRecorded": false,
-          "localPresent": false,
-          "entry": null,
+          "localPresent": true,
+          "entry": "/",
           "publicUrl": null,
-          "templateSource": null
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+            "path": "templates/auto-best",
+            "digest": "dcbc59990928884006652677d3529020df3844029993895a71e5f6818ba7363c",
+            "tree": "5fb7a2164775050a47c1183371622295dbf63725"
+          },
+          "base": ""
         },
         {
           "key": "modern",
-          "state": "in-progress",
+          "state": "source-reviewed",
           "qaRecorded": false,
-          "localPresent": false,
-          "entry": null,
+          "localPresent": true,
+          "entry": "/variant-2/cars",
           "publicUrl": null,
-          "templateSource": null
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+            "path": "templates/modern",
+            "digest": "ba263aac8f1863d133807d3e1bf3597d125cf315a7e0deba3f6e419b52434c25",
+            "tree": "3974380670eb388bb16182f94ade33be6d87b1c1"
+          },
+          "base": "/variant-2"
         },
         {
-          "key": "carwow",
-          "state": "in-progress",
-          "qaRecorded": false,
-          "localPresent": false,
-          "entry": null,
-          "publicUrl": null,
-          "templateSource": null
+          "key": "import",
+          "base": "/variant-3",
+          "entry": "/variant-3/",
+          "localPresent": true,
+          "state": "source-reviewed",
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+            "path": "templates/import",
+            "digest": "f98a0934cdcc5adbda393c14c02eb2adc0175344ab2ac3f913afe4b0603366e5",
+            "tree": "6afc6901e2f95967fb7c72e9f75525d4d6fbf086"
+          }
+        },
+        {
+          "key": "app",
+          "base": "/variant-4",
+          "entry": "/variant-4/",
+          "localPresent": true,
+          "state": "source-reviewed",
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+            "path": "templates/app",
+            "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1",
+            "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76"
+          }
+        },
+        {
+          "key": "mobile",
+          "base": "/variant-5",
+          "entry": "/variant-5/",
+          "localPresent": true,
+          "state": "source-reviewed",
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+            "path": "templates/mobile",
+            "digest": "4e858bd9dbd3ef5b52cd904c4ed97bbfdc0f4cfe02b5a3840580f38026b867a0",
+            "tree": "2b02829e157071e305bfb2dff10ef18e85c8a35e"
+          }
+        },
+        {
+          "key": "karento-best",
+          "base": "/variant-6",
+          "entry": "/variant-6/",
+          "localPresent": true,
+          "state": "source-reviewed",
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+            "path": "templates/karento-best",
+            "digest": "83056967764a686f3737d74b86c5db51c1385a50184853f50ec4ade80c1dd44f",
+            "tree": "5f6eec8efb2f9e99819f7f0c2f743d18fff7b134"
+          }
         }
       ],
       "branchSources": [],
       "delivery": {
-        "state": "source-review-required"
+        "state": "native-build-pending",
+        "provider": "cloudflare",
+        "configuredPublicOrigin": "https://cars-kapitol-varna.darkapoparka1.workers.dev"
       },
       "sourceHistory": [
         {
@@ -6806,14 +6869,38 @@
         }
       ],
       "canonicalSourceRef": "main",
-      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735",
+      "canonicalSourceCommit": "91cfa7af1092661cebad5f6261aea678302d5082",
       "evidence": {
         "source": {
           "state": "committed",
-          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+          "commit": "91cfa7af1092661cebad5f6261aea678302d5082",
+          "tree": "e1ce5554694fa7d584c82145f57910df396dfeb9",
+          "proof": "docs/releases/cloudflare-existing25-20261011/registered-source/kapitol-varna/source-publication.json"
         },
         "personalization": {
-          "state": "unknown"
+          "state": "reviewed-public-inputs",
+          "inputs": {
+            "adoption": {
+              "path": "docs/releases/cloudflare-existing25-20261011/registered-source/kapitol-varna/reviewed-public-adoption.json",
+              "sha256": "0d63e007e2a9fb65be8572c5a5bb0b590cf98df3ac0edc8c95bf7c5f95a241fb"
+            },
+            "candidateLock": {
+              "path": "docs/releases/cloudflare-existing25-20261011/registered-source/additional-new25-historical-qualification-lock.json",
+              "sha256": "89e11d6ae186b2f45439ba4bd4269a15d8fca8a9f732343aee01096be1229fa6"
+            },
+            "qualification": {
+              "path": "docs/releases/cloudflare-existing25-20261011/registered-source/kapitol-varna/qualification-context.json",
+              "sha256": "4b35d2235bfddb0a69086e59a244ea2b55bd874cedd24ed8bde4725c7f185f10"
+            },
+            "sourceDeltaReview": {
+              "path": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
+              "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975"
+            },
+            "branding": {
+              "path": "docs/releases/cloudflare-existing25-20261011/new-source/kapitol-varna/branding.json",
+              "sha256": "a002ea5f30285c4b7c8a7afce302d8a97ead7891b1995cc6c6aaa10b8f35f063"
+            }
+          }
         },
         "build": {
           "state": "unknown"
@@ -6830,8 +6917,15 @@
       },
       "id": null,
       "aliases": [],
-      "repository": null,
-      "packagingVersion": null
+      "repository": "darkapoparka/cars-kapitol-varna",
+      "packagingVersion": "5",
+      "dealerId": "kapitol-varna",
+      "sourceOwnership": "cars-canonical",
+      "canonicalSourceRepository": "darkapoparka/cars",
+      "cloudflare": {
+        "workerName": "cars-kapitol-varna",
+        "publicOrigin": "https://cars-kapitol-varna.darkapoparka1.workers.dev"
+      }
     },
     {
       "slug": "keen-auto-mall",
