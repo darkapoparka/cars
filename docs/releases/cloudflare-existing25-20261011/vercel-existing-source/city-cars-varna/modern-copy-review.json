@@ -1,0 +1,215 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-reviewed-modern-bilingual-copy-input",
+  "dealer": "city-cars-varna",
+  "sourceCommit": "0bfeae20203bec97b802f72c9d80878aa3ac6914",
+  "baselineTree": "be2774f69c79f54c6adc0c7553db3d8863c5514e",
+  "inputSha256": "2adc42d8abbd6b2537661eca98b514479e5808476a32fc8c9534cc2290480e76",
+  "modernInputRowsSha256": "ea99a6dfebdc5f2defa7fb324125810b39791b80b827195a161847bd1e7d3a61",
+  "listingCount": 8,
+  "reviewedGeneratorHelper": {
+    "path": "scripts/lib/modern-dealer-inventory-copy.mjs",
+    "sha256": "cbdbaa28dc07911cfe913b4e627671b6556fc25d3bfe59364e29c5ca5a29072b"
+  },
+  "review": {
+    "reviewedBy": "Fresh Batch1 exact retained disclosure review",
+    "reviewedAt": "2026-10-13T03:36:10.279Z",
+    "displayCopyOnly": true,
+    "exactSourceDescriptionKeys": true,
+    "listingFactsUnchanged": true,
+    "imageUrlsUnchanged": true,
+    "imageAltsPreserved": true,
+    "interpolationTokensUnchanged": true,
+    "scope": "Exact original dated disclaimers only. Preserve UK illustration warning, source-reported bodywork imperfections and Norfolk45,500/45,000 discrepancy; retain BG original disclaimer verbatim. No new marketing facts or changed stock/contacts/logos."
+  },
+  "profileInputs": [
+    {
+      "path": "dealer.json",
+      "bytes": 3922,
+      "sha256": "e4dcb0fccdd9870af64bf9c3a94c228b06afcf7f2565c70b5af6cf93fd877d67",
+      "gitBlob": "beb6c39e01538d134a2e297549dab2f8b287d229"
+    },
+    {
+      "path": "business-facts.json",
+      "bytes": 1937,
+      "sha256": "d58f62ebfcd33f50197c7e8ecc2852d666ea5191e62a89473852b7518a554bf6",
+      "gitBlob": "7f563d697f242edc58861e2e58a75b94f45dd274"
+    },
+    {
+      "path": "stock.json",
+      "bytes": 13625,
+      "sha256": "42b7e768aa7321c5813079f073192621942302f27217fa30c6221da1cb0eb4f1",
+      "gitBlob": "d653f2a68174a9550b29ac4d8be30111518aed9a"
+    }
+  ],
+  "reviewedCopy": {
+    "opel-zafira-2016-11791382885730376": {
+      "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "en": {
+        "description": "Dated snapshot of a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "Opel Zafira TOURER 2.0 CDTI 6+ 1 МЕСТА ЕВРО 6В - НОВ ВНОС",
+          "Opel Zafira TOURER 2.0 CDTI 6+ 1 МЕСТА ЕВРО 6В - НОВ ВНОС",
+          "Opel Zafira TOURER 2.0 CDTI 6+ 1 МЕСТА ЕВРО 6В - НОВ ВНОС",
+          "Opel Zafira TOURER 2.0 CDTI 6+ 1 МЕСТА ЕВРО 6В - НОВ ВНОС"
+        ]
+      },
+      "bg": {
+        "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+        "imageAlts": [
+          "Opel Zafira TOURER 2.0 CDTI 6+ 1 МЕСТА ЕВРО 6В - НОВ ВНОС",
+          "Opel Zafira TOURER 2.0 CDTI 6+ 1 МЕСТА ЕВРО 6В - НОВ ВНОС",
+          "Opel Zafira TOURER 2.0 CDTI 6+ 1 МЕСТА ЕВРО 6В - НОВ ВНОС",
+          "Opel Zafira TOURER 2.0 CDTI 6+ 1 МЕСТА ЕВРО 6В - НОВ ВНОС"
+        ]
+      }
+    },
+    "bmw-x3-2005-21791296931163018": {
+      "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "en": {
+        "description": "Dated snapshot of a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "BMW X3 2.0d X Drive M Pack нов внос",
+          "BMW X3 2.0d X Drive M Pack нов внос",
+          "BMW X3 2.0d X Drive M Pack нов внос",
+          "BMW X3 2.0d X Drive M Pack нов внос"
+        ]
+      },
+      "bg": {
+        "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+        "imageAlts": [
+          "BMW X3 2.0d X Drive M Pack нов внос",
+          "BMW X3 2.0d X Drive M Pack нов внос",
+          "BMW X3 2.0d X Drive M Pack нов внос",
+          "BMW X3 2.0d X Drive M Pack нов внос"
+        ]
+      }
+    },
+    "audi-a6-2007-11791295165673002": {
+      "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "en": {
+        "description": "Dated snapshot of a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "Audi A6 3.0 TDI Quatro НОВ ВНОС",
+          "Audi A6 3.0 TDI Quatro НОВ ВНОС",
+          "Audi A6 3.0 TDI Quatro НОВ ВНОС",
+          "Audi A6 3.0 TDI Quatro НОВ ВНОС"
+        ]
+      },
+      "bg": {
+        "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+        "imageAlts": [
+          "Audi A6 3.0 TDI Quatro НОВ ВНОС",
+          "Audi A6 3.0 TDI Quatro НОВ ВНОС",
+          "Audi A6 3.0 TDI Quatro НОВ ВНОС",
+          "Audi A6 3.0 TDI Quatro НОВ ВНОС"
+        ]
+      }
+    },
+    "mercedes-benz-c-320-2008-11790952448716027": {
+      "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "en": {
+        "description": "Dated snapshot of a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "Mercedes-Benz C 320 4MATIC AMG AVANTGARDE",
+          "Mercedes-Benz C 320 4MATIC AMG AVANTGARDE",
+          "Mercedes-Benz C 320 4MATIC AMG AVANTGARDE",
+          "Mercedes-Benz C 320 4MATIC AMG AVANTGARDE"
+        ]
+      },
+      "bg": {
+        "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+        "imageAlts": [
+          "Mercedes-Benz C 320 4MATIC AMG AVANTGARDE",
+          "Mercedes-Benz C 320 4MATIC AMG AVANTGARDE",
+          "Mercedes-Benz C 320 4MATIC AMG AVANTGARDE",
+          "Mercedes-Benz C 320 4MATIC AMG AVANTGARDE"
+        ]
+      }
+    },
+    "mini-one-2010-11790685723628799": {
+      "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "en": {
+        "description": "Dated snapshot of a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "Mini One 1.6i 2010 г. нов внос",
+          "Mini One 1.6i 2010 г. нов внос",
+          "Mini One 1.6i 2010 г. нов внос",
+          "Mini One 1.6i 2010 г. нов внос"
+        ]
+      },
+      "bg": {
+        "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+        "imageAlts": [
+          "Mini One 1.6i 2010 г. нов внос",
+          "Mini One 1.6i 2010 г. нов внос",
+          "Mini One 1.6i 2010 г. нов внос",
+          "Mini One 1.6i 2010 г. нов внос"
+        ]
+      }
+    },
+    "vw-touran-2006-11790421466350380": {
+      "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "en": {
+        "description": "Dated snapshot of a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "VW Touran 2.0 TDI 170 кс НОВ ВНОС",
+          "VW Touran 2.0 TDI 170 кс НОВ ВНОС",
+          "VW Touran 2.0 TDI 170 кс НОВ ВНОС",
+          "VW Touran 2.0 TDI 170 кс НОВ ВНОС"
+        ]
+      },
+      "bg": {
+        "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+        "imageAlts": [
+          "VW Touran 2.0 TDI 170 кс НОВ ВНОС",
+          "VW Touran 2.0 TDI 170 кс НОВ ВНОС",
+          "VW Touran 2.0 TDI 170 кс НОВ ВНОС",
+          "VW Touran 2.0 TDI 170 кс НОВ ВНОС"
+        ]
+      }
+    },
+    "vw-touran-2008-11790421108936976": {
+      "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "en": {
+        "description": "Dated snapshot of a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "VW Touran CROSS 2.0 TDI 6+ 1 МЕСТА НОВ ВНОС",
+          "VW Touran CROSS 2.0 TDI 6+ 1 МЕСТА НОВ ВНОС",
+          "VW Touran CROSS 2.0 TDI 6+ 1 МЕСТА НОВ ВНОС",
+          "VW Touran CROSS 2.0 TDI 6+ 1 МЕСТА НОВ ВНОС"
+        ]
+      },
+      "bg": {
+        "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+        "imageAlts": [
+          "VW Touran CROSS 2.0 TDI 6+ 1 МЕСТА НОВ ВНОС",
+          "VW Touran CROSS 2.0 TDI 6+ 1 МЕСТА НОВ ВНОС",
+          "VW Touran CROSS 2.0 TDI 6+ 1 МЕСТА НОВ ВНОС",
+          "VW Touran CROSS 2.0 TDI 6+ 1 МЕСТА НОВ ВНОС"
+        ]
+      }
+    },
+    "audi-a4-2008-11790415547111474": {
+      "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "en": {
+        "description": "Dated snapshot of a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "Audi A4 2.0 TDI S- LINE НОВ ВНОС",
+          "Audi A4 2.0 TDI S- LINE НОВ ВНОС",
+          "Audi A4 2.0 TDI S- LINE НОВ ВНОС",
+          "Audi A4 2.0 TDI S- LINE НОВ ВНОС"
+        ]
+      },
+      "bg": {
+        "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+        "imageAlts": [
+          "Audi A4 2.0 TDI S- LINE НОВ ВНОС",
+          "Audi A4 2.0 TDI S- LINE НОВ ВНОС",
+          "Audi A4 2.0 TDI S- LINE НОВ ВНОС",
+          "Audi A4 2.0 TDI S- LINE НОВ ВНОС"
+        ]
+      }
+    }
+  }
+}

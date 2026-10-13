@@ -24,11 +24,22 @@ export function parseTransportRequest(bytes){
  let request;try{request=parseCatalogJson(new TextDecoder('utf-8',{fatal:true}).decode(bytes));}catch{throw Error('Artifact transport: invalid request JSON (including duplicate keys)');}
  return validateTransportRequest(request);
 }
+/** Only the already-maintained successful full-private-source export is an additional raw-byte source.
+ * The request pins an immutable run/attempt/head and artifact ID/name/size/hash; live API metadata
+ * must match every pin before any ZIP byte is read. Other workflows/hosts/extra keys remain forbidden.
+ */
+export function isQualifiedPrivateSourceTransport(request){
+ const s=request?.source,a=request?.artifact;
+ if(!exactKeys(s,Object.keys(ORIGINAL_SOURCE))||!exactKeys(a,Object.keys(ORIGINAL_ARTIFACT)))return false;
+ if(s.repository!==ORIGINAL_SOURCE.repository||s.workflowPath!=='.github/workflows/qualified-private-source-export.yml'||s.event!=='push'||s.ref!=='refs/heads/main'||!positive(s.runId)||!positive(s.runAttempt)||typeof s.headSha!=='string'||!/^[a-f0-9]{40}$/.test(s.headSha))return false;
+ if(!positive(a.id)||!positive(a.sizeInBytes)||a.sizeInBytes>MAX_BYTES||!sha(a.sha256)||typeof a.name!=='string')return false;
+ const match=/^private-source-package-([a-z0-9]+(?:-[a-z0-9]+)*)-([1-9][0-9]*)-([1-9][0-9]*)$/.exec(a.name);
+ return Boolean(match&&match[1].length<=80&&Number(match[2])===s.runId&&Number(match[3])===s.runAttempt);
+}
 export function validateTransportRequest(request){
  requireValue(exactKeys(request,['schemaVersion','kind','reviewed','reviewedAt','source','artifact','chunkSizeBytes']),'exact request keys required');
  requireValue(request.schemaVersion===1&&request.kind==='cars-fleet-artifact-transport-request'&&request.reviewed===true&&dated(request.reviewedAt),'dated reviewed transport request required');
- requireValue(same(request.source,ORIGINAL_SOURCE),'only the original successful main push source is allowed');
- requireValue(same(request.artifact,ORIGINAL_ARTIFACT),'only the exact original sealed singleton ZIP is allowed');
+ requireValue((same(request.source,ORIGINAL_SOURCE)&&same(request.artifact,ORIGINAL_ARTIFACT))||isQualifiedPrivateSourceTransport(request),'only the exact original singleton or pinned maintained qualified-private-source export is allowed');
  requireValue(request.artifact.sizeInBytes<=MAX_BYTES&&positive(request.chunkSizeBytes)&&request.chunkSizeBytes<=MAX_CHUNK_BYTES&&Math.ceil(request.artifact.sizeInBytes/request.chunkSizeBytes)<=MAX_CHUNKS,'bounded ZIP/chunk count and <=200 MiB chunk bytes required');
  return request;
 }

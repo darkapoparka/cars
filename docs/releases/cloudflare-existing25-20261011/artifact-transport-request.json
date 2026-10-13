@@ -2,21 +2,21 @@
   "schemaVersion": 1,
   "kind": "cars-fleet-artifact-transport-request",
   "reviewed": true,
-  "reviewedAt": "2026-10-12T05:46:49Z",
+  "reviewedAt": "2026-10-13T03:36:10.279Z",
   "source": {
     "repository": "darkapoparka/cars",
-    "workflowPath": ".github/workflows/existing-fleet-cloudflare.yml",
-    "runId": 38208979137,
+    "workflowPath": ".github/workflows/qualified-private-source-export.yml",
+    "runId": 38340229345,
     "runAttempt": 1,
-    "headSha": "b9658dc0f9c5ffcd44c5409f6fd092e5c6210c2e",
+    "headSha": "30e82bf8de65b25ce34c860cf808899f5214fc0b",
     "event": "push",
     "ref": "refs/heads/main"
   },
   "artifact": {
-    "id": 11728636307,
-    "name": "existing-cf-single-worker-priselci-38208979137-1",
-    "sizeInBytes": 605904991,
-    "sha256": "de868cfa2cbabcf78571c869f58225ecb43832ce6c4293c277471e6901095930"
+    "id": 11785998133,
+    "name": "private-source-package-biemaauto-varna-38340229345-1",
+    "sizeInBytes": 908135914,
+    "sha256": "b52246c793d3fec3e40f119bf0da3cb26456a598fba0b403687ec87de17b013f"
   },
   "chunkSizeBytes": 209715200
 }

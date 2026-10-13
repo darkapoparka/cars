@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-reviewed-modern-bilingual-copy-input",
+  "dealer": "birmingham-trade-car-sales-grasmere",
+  "sourceCommit": "0bfeae20203bec97b802f72c9d80878aa3ac6914",
+  "baselineTree": "5da2025f2ece402f993559f609e7a4e12bff571c",
+  "inputSha256": "9b670dd438cb56cb201c473453704bfc15f3789efee61875b5127be3315d6264",
+  "modernInputRowsSha256": "7ac075f0ea7fdec860f16849192735358856ade0dc6f19fc8b1b9a152ae58b07",
+  "listingCount": 10,
+  "reviewedGeneratorHelper": {
+    "path": "scripts/lib/modern-dealer-inventory-copy.mjs",
+    "sha256": "cbdbaa28dc07911cfe913b4e627671b6556fc25d3bfe59364e29c5ca5a29072b"
+  },
+  "review": {
+    "reviewedBy": "Fresh Batch1 exact retained disclosure review",
+    "reviewedAt": "2026-10-13T03:36:10.279Z",
+    "displayCopyOnly": true,
+    "exactSourceDescriptionKeys": true,
+    "listingFactsUnchanged": true,
+    "imageUrlsUnchanged": true,
+    "imageAltsPreserved": true,
+    "interpolationTokensUnchanged": true,
+    "scope": "Exact original dated disclaimers only. Preserve UK illustration warning, source-reported bodywork imperfections and Norfolk45,500/45,000 discrepancy; retain BG original disclaimer verbatim. No new marketing facts or changed stock/contacts/logos."
+  },
+  "profileInputs": [
+    {
+      "path": "dealer.json",
+      "bytes": 4379,
+      "sha256": "24ca27b0c526f51eb76ff0bd220208acd199c2d3a7cbad2292584ab55c8c2367",
+      "gitBlob": "d3880404b0876d6d96e1cce8e93c017d8c2d0fb1"
+    },
+    {
+      "path": "business-facts.json",
+      "bytes": 10000,
+      "sha256": "d635920e40aae81f9844db156e345bfd0e4dbb3ed97279bffc43120ad38a1beb",
+      "gitBlob": "0fcce940792f5e28d08e8965bc8b706deb1e36c7"
+    },
+    {
+      "path": "stock.json",
+      "bytes": 16630,
+      "sha256": "99b6c0ccc0bc8e88b9699c7a11ff5d5bb12f770e4997df591d037a1063d972e1",
+      "gitBlob": "224f02f5c6015b4c77699443b08d4b975f0680dd"
+    }
+  ],
+  "reviewedCopy": {
+    "ford-transit-connect-2014-189038456623": {
+      "sourceDescription": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "en": {
+        "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+        "imageAlts": [
+          "2014 Ford Transit Connect 1.6 TDCi 115ps LWB 3 Seater PANEL VAN Diesel Manual"
+        ]
+      },
+      "bg": {
+        "description": "Илюстрация — не изобразява автомобила от обявата. Това са данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с търговеца.",
+        "imageAlts": [
+          "2014 Ford Transit Connect 1.6 TDCi 115ps LWB 3 Seater PANEL VAN Diesel Manual"
+        ]
+      }
+    },
+    "vauxhall-astra-2014-189026984290": {
+      "sourceDescription": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "en": {
+        "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+        "imageAlts": [
+          "2014 Vauxhall Astra 1.6i 16V Limited Edition 5dr HATCHBACK Petrol Manual"
+        ]
+      },
+      "bg": {
+        "description": "Илюстрация — не изобразява автомобила от обявата. Това са данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с търговеца.",
+        "imageAlts": [
+          "2014 Vauxhall Astra 1.6i 16V Limited Edition 5dr HATCHBACK Petrol Manual"
+        ]
+      }
+    },
+    "ford-mondeo-2016-189001222071": {
+      "sourceDescription": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "en": {
+        "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+        "imageAlts": [
+          "2016 Ford Mondeo 1.5 EcoBoost Titanium 5dr ESTATE Petrol Manual"
+        ]
+      },
+      "bg": {
+        "description": "Илюстрация — не изобразява автомобила от обявата. Това са данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с търговеца.",
+        "imageAlts": [
+          "2016 Ford Mondeo 1.5 EcoBoost Titanium 5dr ESTATE Petrol Manual"
+        ]
+      }
+    },
+    "mini-hatch-2014-189001115867": {
+      "sourceDescription": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "en": {
+        "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+        "imageAlts": [
+          "2014 MINI Hatch 1.5 Cooper 3dr HATCHBACK Petrol Manual"
+        ]
+      },
+      "bg": {
+        "description": "Илюстрация — не изобразява автомобила от обявата. Това са данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с търговеца.",
+        "imageAlts": [
+          "2014 MINI Hatch 1.5 Cooper 3dr HATCHBACK Petrol Manual"
+        ]
+      }
+    },
+    "ford-mondeo-2015-189001107042": {
+      "sourceDescription": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "en": {
+        "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+        "imageAlts": [
+          "2015 Ford Mondeo 1.6 TDCi ECOnetic Titanium 5dr HATCHBACK Diesel Manual"
+        ]
+      },
+      "bg": {
+        "description": "Илюстрация — не изобразява автомобила от обявата. Това са данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с търговеца.",
+        "imageAlts": [
+          "2015 Ford Mondeo 1.6 TDCi ECOnetic Titanium 5dr HATCHBACK Diesel Manual"
+        ]
+      }
+    },
+    "mercedes-benz-c-2007-188987508854": {
+      "sourceDescription": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "en": {
+        "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+        "imageAlts": [
+          "2007 Mercedes-Benz C Class C220 CDI Sport 4dr Auto SALOON Diesel Automatic"
+        ]
+      },
+      "bg": {
+        "description": "Илюстрация — не изобразява автомобила от обявата. Това са данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с търговеца.",
+        "imageAlts": [
+          "2007 Mercedes-Benz C Class C220 CDI Sport 4dr Auto SALOON Diesel Automatic"
+        ]
+      }
+    },
+    "chevrolet-captiva-2011-188945492227": {
+      "sourceDescription": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "en": {
+        "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+        "imageAlts": [
+          "2011 Chevrolet Captiva 2.0 VCDi LT 5dr FWD ESTATE Diesel Manual"
+        ]
+      },
+      "bg": {
+        "description": "Илюстрация — не изобразява автомобила от обявата. Това са данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с търговеца.",
+        "imageAlts": [
+          "2011 Chevrolet Captiva 2.0 VCDi LT 5dr FWD ESTATE Diesel Manual"
+        ]
+      }
+    },
+    "volkswagen-golf-2009-188941416002": {
+      "sourceDescription": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "en": {
+        "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+        "imageAlts": [
+          "2009 Volkswagen Golf Plus 1.6 TDI 105 SE 5dr DSG HATCHBACK Diesel Automatic"
+        ]
+      },
+      "bg": {
+        "description": "Илюстрация — не изобразява автомобила от обявата. Това са данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с търговеца.",
+        "imageAlts": [
+          "2009 Volkswagen Golf Plus 1.6 TDI 105 SE 5dr DSG HATCHBACK Diesel Automatic"
+        ]
+      }
+    },
+    "bmw-3-2007-188941382536": {
+      "sourceDescription": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "en": {
+        "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+        "imageAlts": [
+          "2007 BMW 3 Series 320i 2.0i Special Edition 2dr Coupe COUPE Petrol Manual"
+        ]
+      },
+      "bg": {
+        "description": "Илюстрация — не изобразява автомобила от обявата. Това са данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с търговеца.",
+        "imageAlts": [
+          "2007 BMW 3 Series 320i 2.0i Special Edition 2dr Coupe COUPE Petrol Manual"
+        ]
+      }
+    },
+    "volkswagen-golf-2008-188941314819": {
+      "sourceDescription": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "en": {
+        "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+        "imageAlts": [
+          "2008 Volkswagen Golf 1.6 Match FSI 5dr HATCHBACK Petrol Manual"
+        ]
+      },
+      "bg": {
+        "description": "Илюстрация — не изобразява автомобила от обявата. Това са данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с търговеца.",
+        "imageAlts": [
+          "2008 Volkswagen Golf 1.6 Match FSI 5dr HATCHBACK Petrol Manual"
+        ]
+      }
+    }
+  }
+}

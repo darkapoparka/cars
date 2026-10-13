@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-reviewed-modern-bilingual-copy-input",
+  "dealer": "north-norfolk-car-sales",
+  "sourceCommit": "0bfeae20203bec97b802f72c9d80878aa3ac6914",
+  "baselineTree": "c3770f86b6a3f7e036e057b25c3836db750a675c",
+  "inputSha256": "9890231cfae951e7ae46ac1ecb9bfc08804ffd42e884b7586f357bfe8595b625",
+  "modernInputRowsSha256": "932523af433685d67a52f75750c038f6e6b29124595065c70b9587455ee9a69a",
+  "listingCount": 2,
+  "reviewedGeneratorHelper": {
+    "path": "scripts/lib/modern-dealer-inventory-copy.mjs",
+    "sha256": "cbdbaa28dc07911cfe913b4e627671b6556fc25d3bfe59364e29c5ca5a29072b"
+  },
+  "review": {
+    "reviewedBy": "Fresh Batch1 exact retained disclosure review",
+    "reviewedAt": "2026-10-13T03:36:10.279Z",
+    "displayCopyOnly": true,
+    "exactSourceDescriptionKeys": true,
+    "listingFactsUnchanged": true,
+    "imageUrlsUnchanged": true,
+    "imageAltsPreserved": true,
+    "interpolationTokensUnchanged": true,
+    "scope": "Exact original dated disclaimers only. Preserve UK illustration warning, source-reported bodywork imperfections and Norfolk45,500/45,000 discrepancy; retain BG original disclaimer verbatim. No new marketing facts or changed stock/contacts/logos."
+  },
+  "profileInputs": [
+    {
+      "path": "dealer.json",
+      "bytes": 4327,
+      "sha256": "edf8ff3c6b676fde39d5512c753550f23da05532c02ce031be15ab975fe55dab",
+      "gitBlob": "a522dd6d4aa4dbca4ea35c6706966a4ed43e31b3"
+    },
+    {
+      "path": "business-facts.json",
+      "bytes": 8782,
+      "sha256": "7a1c5d7281ec894102e5efa70338609033181ae706c54eae35fee70f982d0826",
+      "gitBlob": "5bf8ff326b41b1bd1f57f23efa87ab6ab3567ff4"
+    },
+    {
+      "path": "stock.json",
+      "bytes": 3350,
+      "sha256": "e310adfc5caac3012068f2c367931608f4306d559b8feeb2b234bcbbfc3edeb4",
+      "gitBlob": "4bdd26161140b9e36a168b42d8f5972646c3e87c"
+    }
+  ],
+  "reviewedCopy": {
+    "peugeot-205-1991-1090": {
+      "sourceDescription": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "en": {
+        "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+        "imageAlts": [
+          "1991 Peugeot 205 1.9 GTI Phase 2"
+        ]
+      },
+      "bg": {
+        "description": "Илюстрация — не изобразява автомобила от обявата. Това са данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с търговеца.",
+        "imageAlts": [
+          "1991 Peugeot 205 1.9 GTI Phase 2"
+        ]
+      }
+    },
+    "peugeot-208-2018-1089": {
+      "sourceDescription": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer. The overview shows 45,500 miles; the prose rounds it to 45,000. This preview preserves the structured overview value.",
+      "en": {
+        "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer. The overview shows 45,500 miles; the prose rounds it to 45,000. This preview preserves the structured overview value.",
+        "imageAlts": [
+          "2018 Peugeot 208 GTI Prestige THP"
+        ]
+      },
+      "bg": {
+        "description": "Илюстрация — не изобразява автомобила от обявата. Това са данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с търговеца. В обобщението са посочени 45,500 мили, а в текста стойността е закръглена на 45,000. Този преглед запазва стойността от структурираното обобщение.",
+        "imageAlts": [
+          "2018 Peugeot 208 GTI Prestige THP"
+        ]
+      }
+    }
+  }
+}

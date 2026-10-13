@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-reviewed-modern-bilingual-copy-input",
+  "dealer": "nottingham-s-a-motors",
+  "sourceCommit": "0bfeae20203bec97b802f72c9d80878aa3ac6914",
+  "baselineTree": "387690be949e5cb0a8c4c6edd8c25f17786e5aa3",
+  "inputSha256": "f83d61470189a2c54aea731d90c502a674d428727d9078242635a8c0da7772a5",
+  "modernInputRowsSha256": "fab47ab04795d9f8661ef2e3a876587da9eb772d9d6f5a8b062629c8eb6d86f2",
+  "listingCount": 5,
+  "reviewedGeneratorHelper": {
+    "path": "scripts/lib/modern-dealer-inventory-copy.mjs",
+    "sha256": "cbdbaa28dc07911cfe913b4e627671b6556fc25d3bfe59364e29c5ca5a29072b"
+  },
+  "review": {
+    "reviewedBy": "Fresh Batch1 exact retained disclosure review",
+    "reviewedAt": "2026-10-13T03:36:10.279Z",
+    "displayCopyOnly": true,
+    "exactSourceDescriptionKeys": true,
+    "listingFactsUnchanged": true,
+    "imageUrlsUnchanged": true,
+    "imageAltsPreserved": true,
+    "interpolationTokensUnchanged": true,
+    "scope": "Exact original dated disclaimers only. Preserve UK illustration warning, source-reported bodywork imperfections and Norfolk45,500/45,000 discrepancy; retain BG original disclaimer verbatim. No new marketing facts or changed stock/contacts/logos."
+  },
+  "profileInputs": [
+    {
+      "path": "dealer.json",
+      "bytes": 4304,
+      "sha256": "0582f44d92e28b2aa9a2c603ea0c90c7cdf593f71ffb720ee4ecf2dbbf5f1ce3",
+      "gitBlob": "2322c21bc4f7d434a5caec7f1b2648377f1caa6a"
+    },
+    {
+      "path": "business-facts.json",
+      "bytes": 11244,
+      "sha256": "d22495074cc3add0e1a72c6fbfacc2d6c45298403402e328e76246e7aa6c8b92",
+      "gitBlob": "41e5efce13c7772f8703c5c48c174b588d4577c5"
+    },
+    {
+      "path": "stock.json",
+      "bytes": 8381,
+      "sha256": "252cf8728da512b2405690b26820c328a681e78b2db907852d02d933e038fc11",
+      "gitBlob": "1a31e61216e61d135fdbfe131c10c6e86c57e571"
+    }
+  ],
+  "reviewedCopy": {
+    "abarth-500-2014-880002442439": {
+      "sourceDescription": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "en": {
+        "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+        "imageAlts": [
+          "2014 Abarth 500 1.4 16V T-Jet 3dr HATCHBACK Petrol Manual"
+        ]
+      },
+      "bg": {
+        "description": "Илюстрация — не изобразява автомобила от обявата. Това са данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с търговеца.",
+        "imageAlts": [
+          "2014 Abarth 500 1.4 16V T-Jet 3dr HATCHBACK Petrol Manual"
+        ]
+      }
+    },
+    "jeep-wrangler-2008-178567084197": {
+      "sourceDescription": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "en": {
+        "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+        "imageAlts": [
+          "2008 Jeep Wrangler 2.8 CRD Sahara Unlimited 4dr CONVERTIBLE Diesel Manual"
+        ]
+      },
+      "bg": {
+        "description": "Илюстрация — не изобразява автомобила от обявата. Това са данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с търговеца.",
+        "imageAlts": [
+          "2008 Jeep Wrangler 2.8 CRD Sahara Unlimited 4dr CONVERTIBLE Diesel Manual"
+        ]
+      }
+    },
+    "renault-clio-2008-178557630733": {
+      "sourceDescription": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "en": {
+        "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+        "imageAlts": [
+          "2008 Renault Clio 1.2 16V Extreme 3dr HATCHBACK Petrol Manual"
+        ]
+      },
+      "bg": {
+        "description": "Илюстрация — не изобразява автомобила от обявата. Това са данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с търговеца.",
+        "imageAlts": [
+          "2008 Renault Clio 1.2 16V Extreme 3dr HATCHBACK Petrol Manual"
+        ]
+      }
+    },
+    "vauxhall-astra-2003-880001351998": {
+      "sourceDescription": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "en": {
+        "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+        "imageAlts": [
+          "2003 Vauxhall Astra 1.6i Envoy 5dr Auto HATCHBACK Petrol Automatic"
+        ]
+      },
+      "bg": {
+        "description": "Илюстрация — не изобразява автомобила от обявата. Това са данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с търговеца.",
+        "imageAlts": [
+          "2003 Vauxhall Astra 1.6i Envoy 5dr Auto HATCHBACK Petrol Automatic"
+        ]
+      }
+    },
+    "ford-fiesta-2018-178521890896": {
+      "sourceDescription": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "en": {
+        "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+        "imageAlts": [
+          "2018 Ford Fiesta 1.5 EcoBoost ST-2 3dr HATCHBACK Petrol Manual"
+        ]
+      },
+      "bg": {
+        "description": "Илюстрация — не изобразява автомобила от обявата. Това са данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с търговеца.",
+        "imageAlts": [
+          "2018 Ford Fiesta 1.5 EcoBoost ST-2 3dr HATCHBACK Petrol Manual"
+        ]
+      }
+    }
+  }
+}

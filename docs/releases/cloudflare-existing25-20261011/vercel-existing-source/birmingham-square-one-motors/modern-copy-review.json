@@ -1,0 +1,152 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-reviewed-modern-bilingual-copy-input",
+  "dealer": "birmingham-square-one-motors",
+  "sourceCommit": "0bfeae20203bec97b802f72c9d80878aa3ac6914",
+  "baselineTree": "396c9d0162f60ea92c536ec76d5c0c7708fb08d2",
+  "inputSha256": "b112ccb8758969b1e5be7078e5ca3b06fe3fdc9c6ca3c51493241d8d34c9c083",
+  "modernInputRowsSha256": "ff14fc219205d13c176bf25db7ae4acf84250a814922ea2fecb34377ab37037a",
+  "listingCount": 7,
+  "reviewedGeneratorHelper": {
+    "path": "scripts/lib/modern-dealer-inventory-copy.mjs",
+    "sha256": "cbdbaa28dc07911cfe913b4e627671b6556fc25d3bfe59364e29c5ca5a29072b"
+  },
+  "review": {
+    "reviewedBy": "Fresh Batch1 exact retained disclosure review",
+    "reviewedAt": "2026-10-13T03:36:10.279Z",
+    "displayCopyOnly": true,
+    "exactSourceDescriptionKeys": true,
+    "listingFactsUnchanged": true,
+    "imageUrlsUnchanged": true,
+    "imageAltsPreserved": true,
+    "interpolationTokensUnchanged": true,
+    "scope": "Exact original dated disclaimers only. Preserve UK illustration warning, source-reported bodywork imperfections and Norfolk45,500/45,000 discrepancy; retain BG original disclaimer verbatim. No new marketing facts or changed stock/contacts/logos."
+  },
+  "profileInputs": [
+    {
+      "path": "dealer.json",
+      "bytes": 4346,
+      "sha256": "eb31191d8b3e5a4b5f081166a11bbf0519edf7da7c4126581f89e89a2798030f",
+      "gitBlob": "ae3dd4fdb9d81fe9fa566c61bc26895852b78957"
+    },
+    {
+      "path": "business-facts.json",
+      "bytes": 10404,
+      "sha256": "6262810b268eb15f5fb1f0b41e188d1813c03ef25c246feb8fa3ec7e698e9f7e",
+      "gitBlob": "f566ad387f586f3fb6b4734daf29c284b3e02b71"
+    },
+    {
+      "path": "stock.json",
+      "bytes": 11390,
+      "sha256": "8c38328afa1e376c3f788235fced753f84985230024d3959138363c4da0d7670",
+      "gitBlob": "037e9bbfdcc1696a9bb966985b969ad0d71786fd"
+    }
+  ],
+  "reviewedCopy": {
+    "ford-fiesta-2015-at-sample-1": {
+      "sourceDescription": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "en": {
+        "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+        "imageAlts": [
+          "Ford Fiesta 1.25 Zetec Euro 6 5dr"
+        ]
+      },
+      "bg": {
+        "description": "Илюстрация — не изобразява автомобила от обявата. Това са данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с търговеца.",
+        "imageAlts": [
+          "Ford Fiesta 1.25 Zetec Euro 6 5dr"
+        ]
+      }
+    },
+    "volkswagen-golf-2013-at-sample-2": {
+      "sourceDescription": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "en": {
+        "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+        "imageAlts": [
+          "Volkswagen Golf 1.6 TDI BlueMotion Tech S Euro 5 (s/s) 5dr"
+        ]
+      },
+      "bg": {
+        "description": "Илюстрация — не изобразява автомобила от обявата. Това са данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с търговеца.",
+        "imageAlts": [
+          "Volkswagen Golf 1.6 TDI BlueMotion Tech S Euro 5 (s/s) 5dr"
+        ]
+      }
+    },
+    "ford-transit-2008-at-sample-3": {
+      "sourceDescription": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "en": {
+        "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+        "imageAlts": [
+          "Ford Transit 2.2 TDCi 280 Duratorq Tourneo Limited Minibus 5dr Diesel Manual L1 H1 (113 bhp)"
+        ]
+      },
+      "bg": {
+        "description": "Илюстрация — не изобразява автомобила от обявата. Това са данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с търговеца.",
+        "imageAlts": [
+          "Ford Transit 2.2 TDCi 280 Duratorq Tourneo Limited Minibus 5dr Diesel Manual L1 H1 (113 bhp)"
+        ]
+      }
+    },
+    "bmw-z4-2004-at-sample-4": {
+      "sourceDescription": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "en": {
+        "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+        "imageAlts": [
+          "BMW Z4 2.2i SE Auto Euro 3 2dr"
+        ]
+      },
+      "bg": {
+        "description": "Илюстрация — не изобразява автомобила от обявата. Това са данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с търговеца.",
+        "imageAlts": [
+          "BMW Z4 2.2i SE Auto Euro 3 2dr"
+        ]
+      }
+    },
+    "smart-fortwo-2009-at-sample-5": {
+      "sourceDescription": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "en": {
+        "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+        "imageAlts": [
+          "Smart Fortwo 0.8 CDI Pulse SoftTouch Euro 5 2dr"
+        ]
+      },
+      "bg": {
+        "description": "Илюстрация — не изобразява автомобила от обявата. Това са данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с търговеца.",
+        "imageAlts": [
+          "Smart Fortwo 0.8 CDI Pulse SoftTouch Euro 5 2dr"
+        ]
+      }
+    },
+    "volkswagen-caddy-maxi-2009-at-sample-6": {
+      "sourceDescription": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "en": {
+        "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+        "imageAlts": [
+          "Volkswagen Caddy Maxi 1.9 TDi Maxi FWD 5dr"
+        ]
+      },
+      "bg": {
+        "description": "Илюстрация — не изобразява автомобила от обявата. Това са данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с търговеца.",
+        "imageAlts": [
+          "Volkswagen Caddy Maxi 1.9 TDi Maxi FWD 5dr"
+        ]
+      }
+    },
+    "ford-transit-connect-2007-at-sample-7": {
+      "sourceDescription": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "en": {
+        "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+        "imageAlts": [
+          "Ford Transit Connect 1.8 TDCi T230 LX L3 H3 4dr"
+        ]
+      },
+      "bg": {
+        "description": "Илюстрация — не изобразява автомобила от обявата. Това са данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с търговеца.",
+        "imageAlts": [
+          "Ford Transit Connect 1.8 TDCi T230 LX L3 H3 4dr"
+        ]
+      }
+    }
+  }
+}

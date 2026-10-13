@@ -1,0 +1,215 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-reviewed-modern-bilingual-copy-input",
+  "dealer": "pm-select-automotive",
+  "sourceCommit": "0bfeae20203bec97b802f72c9d80878aa3ac6914",
+  "baselineTree": "cb0a44adc1cca3c6bda50173891662e5a8f54edb",
+  "inputSha256": "4b021d9230bb70b636254c9b46809670eb3ee7e21c5eb3950b1cf74efbc8434a",
+  "modernInputRowsSha256": "b593a09671cdd00ee44a364ec75c868eaa27cafdd8d728b772b29b7737238f57",
+  "listingCount": 8,
+  "reviewedGeneratorHelper": {
+    "path": "scripts/lib/modern-dealer-inventory-copy.mjs",
+    "sha256": "cbdbaa28dc07911cfe913b4e627671b6556fc25d3bfe59364e29c5ca5a29072b"
+  },
+  "review": {
+    "reviewedBy": "Fresh Batch1 exact retained disclosure review",
+    "reviewedAt": "2026-10-13T03:36:10.279Z",
+    "displayCopyOnly": true,
+    "exactSourceDescriptionKeys": true,
+    "listingFactsUnchanged": true,
+    "imageUrlsUnchanged": true,
+    "imageAltsPreserved": true,
+    "interpolationTokensUnchanged": true,
+    "scope": "Exact original dated disclaimers only. Preserve UK illustration warning, source-reported bodywork imperfections and Norfolk45,500/45,000 discrepancy; retain BG original disclaimer verbatim. No new marketing facts or changed stock/contacts/logos."
+  },
+  "profileInputs": [
+    {
+      "path": "dealer.json",
+      "bytes": 3942,
+      "sha256": "03a5b6ce86cab92b8bff8f6547e4fed774eaa45d72510df986f4ba2cf68faafe",
+      "gitBlob": "cea7f2d3a6696c846e646b9a7699fddf84a3c071"
+    },
+    {
+      "path": "business-facts.json",
+      "bytes": 1997,
+      "sha256": "ad16e7e2f9683457d00d10970e02f5b1fe097a07b989f216fd0fd74eb1f49102",
+      "gitBlob": "32ede23a6b48ca391037d76a047eeecde08812ea"
+    },
+    {
+      "path": "stock.json",
+      "bytes": 13963,
+      "sha256": "0b97933f9f3fdcad0d4518c091de67d9f5476e15aa2d35880beba5e4ae4708d0",
+      "gitBlob": "7ee6d49c8bda3090f76a2d9ee1b7988625535606"
+    }
+  ],
+  "reviewedCopy": {
+    "infiniti-fx-30-2010-21783597634982178": {
+      "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "en": {
+        "description": "Dated snapshot of a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "Infiniti Fx 30 3.0tdi лизинг/бартер",
+          "Infiniti Fx 30 3.0tdi лизинг/бартер",
+          "Infiniti Fx 30 3.0tdi лизинг/бартер",
+          "Infiniti Fx 30 3.0tdi лизинг/бартер"
+        ]
+      },
+      "bg": {
+        "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+        "imageAlts": [
+          "Infiniti Fx 30 3.0tdi лизинг/бартер",
+          "Infiniti Fx 30 3.0tdi лизинг/бартер",
+          "Infiniti Fx 30 3.0tdi лизинг/бартер",
+          "Infiniti Fx 30 3.0tdi лизинг/бартер"
+        ]
+      }
+    },
+    "mercedes-benz-cls-500-2005-11788776602444544": {
+      "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "en": {
+        "description": "Dated snapshot of a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "Mercedes-Benz CLS 500 ЛИЗИНГ/БАРТЕР",
+          "Mercedes-Benz CLS 500 ЛИЗИНГ/БАРТЕР",
+          "Mercedes-Benz CLS 500 ЛИЗИНГ/БАРТЕР",
+          "Mercedes-Benz CLS 500 ЛИЗИНГ/БАРТЕР"
+        ]
+      },
+      "bg": {
+        "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+        "imageAlts": [
+          "Mercedes-Benz CLS 500 ЛИЗИНГ/БАРТЕР",
+          "Mercedes-Benz CLS 500 ЛИЗИНГ/БАРТЕР",
+          "Mercedes-Benz CLS 500 ЛИЗИНГ/БАРТЕР",
+          "Mercedes-Benz CLS 500 ЛИЗИНГ/БАРТЕР"
+        ]
+      }
+    },
+    "mini-cooper-s-2011-11778481183815155": {
+      "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "en": {
+        "description": "Dated snapshot of a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "Mini Cooper s ALL4 HAMANN POP CORN 4X4 лизинг 2400 първоначална",
+          "Mini Cooper s ALL4 HAMANN POP CORN 4X4 лизинг 2400 първоначална",
+          "Mini Cooper s ALL4 HAMANN POP CORN 4X4 лизинг 2400 първоначална",
+          "Mini Cooper s ALL4 HAMANN POP CORN 4X4 лизинг 2400 първоначална"
+        ]
+      },
+      "bg": {
+        "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+        "imageAlts": [
+          "Mini Cooper s ALL4 HAMANN POP CORN 4X4 лизинг 2400 първоначална",
+          "Mini Cooper s ALL4 HAMANN POP CORN 4X4 лизинг 2400 първоначална",
+          "Mini Cooper s ALL4 HAMANN POP CORN 4X4 лизинг 2400 първоначална",
+          "Mini Cooper s ALL4 HAMANN POP CORN 4X4 лизинг 2400 първоначална"
+        ]
+      }
+    },
+    "mercedes-benz-c-300-2022-11791448820015715": {
+      "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "en": {
+        "description": "Dated snapshot of a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "Mercedes-Benz C 300 4-MATIC/360/AMG line лизинг с 9800 първоначална",
+          "Mercedes-Benz C 300 4-MATIC/360/AMG line лизинг с 9800 първоначална",
+          "Mercedes-Benz C 300 4-MATIC/360/AMG line лизинг с 9800 първоначална",
+          "Mercedes-Benz C 300 4-MATIC/360/AMG line лизинг с 9800 първоначална"
+        ]
+      },
+      "bg": {
+        "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+        "imageAlts": [
+          "Mercedes-Benz C 300 4-MATIC/360/AMG line лизинг с 9800 първоначална",
+          "Mercedes-Benz C 300 4-MATIC/360/AMG line лизинг с 9800 първоначална",
+          "Mercedes-Benz C 300 4-MATIC/360/AMG line лизинг с 9800 първоначална",
+          "Mercedes-Benz C 300 4-MATIC/360/AMG line лизинг с 9800 първоначална"
+        ]
+      }
+    },
+    "bmw-x6-2016-21788698028085342": {
+      "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "en": {
+        "description": "Dated snapshot of a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "BMW X6 ЛИЗИНГ ТОП ЦЕНА",
+          "BMW X6 ЛИЗИНГ ТОП ЦЕНА",
+          "BMW X6 ЛИЗИНГ ТОП ЦЕНА",
+          "BMW X6 ЛИЗИНГ ТОП ЦЕНА"
+        ]
+      },
+      "bg": {
+        "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+        "imageAlts": [
+          "BMW X6 ЛИЗИНГ ТОП ЦЕНА",
+          "BMW X6 ЛИЗИНГ ТОП ЦЕНА",
+          "BMW X6 ЛИЗИНГ ТОП ЦЕНА",
+          "BMW X6 ЛИЗИНГ ТОП ЦЕНА"
+        ]
+      }
+    },
+    "bmw-x6-2016-21788697561330482": {
+      "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "en": {
+        "description": "Dated snapshot of a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "BMW X6 Лизинг с 6800 първоначална FULL ТОП ЦЕНА",
+          "BMW X6 Лизинг с 6800 първоначална FULL ТОП ЦЕНА",
+          "BMW X6 Лизинг с 6800 първоначална FULL ТОП ЦЕНА",
+          "BMW X6 Лизинг с 6800 първоначална FULL ТОП ЦЕНА"
+        ]
+      },
+      "bg": {
+        "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+        "imageAlts": [
+          "BMW X6 Лизинг с 6800 първоначална FULL ТОП ЦЕНА",
+          "BMW X6 Лизинг с 6800 първоначална FULL ТОП ЦЕНА",
+          "BMW X6 Лизинг с 6800 първоначална FULL ТОП ЦЕНА",
+          "BMW X6 Лизинг с 6800 първоначална FULL ТОП ЦЕНА"
+        ]
+      }
+    },
+    "audi-a6-2014-11790688719193230": {
+      "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "en": {
+        "description": "Dated snapshot of a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "Audi A6 3.0BiTDI COMPETITION ЛИЗИНГ 6000 първоначална",
+          "Audi A6 3.0BiTDI COMPETITION ЛИЗИНГ 6000 първоначална",
+          "Audi A6 3.0BiTDI COMPETITION ЛИЗИНГ 6000 първоначална",
+          "Audi A6 3.0BiTDI COMPETITION ЛИЗИНГ 6000 първоначална"
+        ]
+      },
+      "bg": {
+        "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+        "imageAlts": [
+          "Audi A6 3.0BiTDI COMPETITION ЛИЗИНГ 6000 първоначална",
+          "Audi A6 3.0BiTDI COMPETITION ЛИЗИНГ 6000 първоначална",
+          "Audi A6 3.0BiTDI COMPETITION ЛИЗИНГ 6000 първоначална",
+          "Audi A6 3.0BiTDI COMPETITION ЛИЗИНГ 6000 първоначална"
+        ]
+      }
+    },
+    "mercedes-benz-s-350-2016-11790684148327126": {
+      "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "en": {
+        "description": "Dated snapshot of a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "Mercedes-Benz S 350 AMG LONG 300d HYBRID, 9000 първоначална вноска",
+          "Mercedes-Benz S 350 AMG LONG 300d HYBRID, 9000 първоначална вноска",
+          "Mercedes-Benz S 350 AMG LONG 300d HYBRID, 9000 първоначална вноска",
+          "Mercedes-Benz S 350 AMG LONG 300d HYBRID, 9000 първоначална вноска"
+        ]
+      },
+      "bg": {
+        "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+        "imageAlts": [
+          "Mercedes-Benz S 350 AMG LONG 300d HYBRID, 9000 първоначална вноска",
+          "Mercedes-Benz S 350 AMG LONG 300d HYBRID, 9000 първоначална вноска",
+          "Mercedes-Benz S 350 AMG LONG 300d HYBRID, 9000 първоначална вноска",
+          "Mercedes-Benz S 350 AMG LONG 300d HYBRID, 9000 първоначална вноска"
+        ]
+      }
+    }
+  }
+}
