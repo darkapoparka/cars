@@ -1446,6 +1446,12 @@
       ],
       "sourceState": "reviewed-source-proposal",
       "reviewState": "native-build-and-hosted-review-pending"
+    },
+    {
+      "slug": "biemaauto-varna",
+      "dealerId": "biemaauto-varna",
+      "path": "clients/biemaauto-varna",
+      "repository": "darkapoparka/cars-biemaauto-varna"
     }
   ],
   "campaignCandidatesWithoutFolders": [

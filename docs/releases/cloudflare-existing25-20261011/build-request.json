@@ -3,83 +3,31 @@
   "mode": "new-approved",
   "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
   "dealers": [
-    "centralauto-varna",
-    "kalchev-varna",
-    "sevicar-varna"
+    "biemaauto-varna"
   ],
-  "targets": [
-    "auto-best",
-    "modern",
-    "import",
-    "app",
-    "mobile",
-    "karento-best",
-    "router"
-  ],
-  "requestedAt": "2026-10-12T17:03:19.940Z",
-  "attempt": 4,
   "newSources": [
     {
-      "slug": "centralauto-varna",
+      "slug": "biemaauto-varna",
       "preparation": {
-        "path": "docs/releases/cloudflare-existing25-20261011/new-source/centralauto-varna/source-preparation-receipt.json",
-        "sha256": "a7d62f4d4af4df1b2289703c5e49f0e036aca335aabe07710ee340d3c851d72e"
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/biemaauto-varna/source-preparation.json",
+        "sha256": "455f259811f166ea26c49605bcc20fe54a35e5f99d96eaefd725f24c4d0ef815"
       },
       "proposal": {
-        "path": "docs/releases/cloudflare-existing25-20261011/new-source/centralauto-varna/source-patch.json",
-        "sha256": "56357664562e827668f07d708658274738db65051cb56aa6cdf97f8d85febac9"
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/biemaauto-varna/source-proposal.json",
+        "sha256": "c36741f4466b2eb089db8b110295244318e080a15e7ce36d471854c151af85c0"
       },
       "inputMapping": {
-        "path": "docs/releases/cloudflare-existing25-20261011/new-source/centralauto-varna/input-mapping.json",
-        "sha256": "c708e6079f44c9d2a3e411f1e4501b044c28982eafd65edbe229fa0bfe5c5942"
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/biemaauto-varna/input-mapping.json",
+        "sha256": "3222429eba1065692fa4a2776691a8301e3fe8c29789d57a10ac819b713c68ae"
       },
       "publication": {
-        "path": "docs/releases/cloudflare-existing25-20261011/new-source/centralauto-varna/source-publication.json",
-        "sha256": "a135801e577608dda5addf80bd9c666b72117f7218f7b0c2261f7b6154acf92b"
-      }
-    },
-    {
-      "slug": "kalchev-varna",
-      "preparation": {
-        "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalchev-varna/source-preparation-receipt.json",
-        "sha256": "4cdc48a96d21a919df40d27a8df7d878b3b3b98aad7b884d422644776cfbb8fe"
-      },
-      "proposal": {
-        "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalchev-varna/source-patch.json",
-        "sha256": "00fd8346a989e3f3bb756bc7689532b2d0ada704b25e860fa9ad26e40da06f48"
-      },
-      "inputMapping": {
-        "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalchev-varna/input-mapping.json",
-        "sha256": "061fdf1202437c105a40146df0c6eddef7790d957f82ae5e6ca0d9c114b9a328"
-      },
-      "publication": {
-        "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalchev-varna/source-publication.json",
-        "sha256": "73224e29b36ecd7c85b9730d7bbae71733735f1a6714053469aa8658533ac2a2"
-      }
-    },
-    {
-      "slug": "sevicar-varna",
-      "preparation": {
-        "path": "docs/releases/cloudflare-existing25-20261011/new-source/sevicar-varna/source-preparation-receipt.json",
-        "sha256": "8acb11598e2181917fff268b3dc761ab9758eb58519694a38d5c59113d295002"
-      },
-      "proposal": {
-        "path": "docs/releases/cloudflare-existing25-20261011/new-source/sevicar-varna/source-patch.json",
-        "sha256": "aa267b70c7c5bf081f56396eba0ae84f83c51cf64df5428d28769e2c9ecc030c"
-      },
-      "inputMapping": {
-        "path": "docs/releases/cloudflare-existing25-20261011/new-source/sevicar-varna/input-mapping.json",
-        "sha256": "aad69fed7339a57ff3179eaef45e4eb942a566a85cc428ccfb97927b2c0439d6"
-      },
-      "publication": {
-        "path": "docs/releases/cloudflare-existing25-20261011/new-source/sevicar-varna/source-publication.json",
-        "sha256": "c4a699ea1e6e883f2bbffde935d7b5fb1130284ab2580a1f3010abe49efd1acb"
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/biemaauto-varna/source-publication.json",
+        "sha256": "87cf8d392852c67a378f5a34f9606a0ba773aa429ab6b7e115d4c3f405abb521"
       }
     }
   ],
   "composition": {
     "reviewed": true,
-    "reviewedAt": "2026-10-12T16:36:02.956Z",
-    "reviewScope": "Compile the three actually published, hash-reviewed additional100 dealer trees into three self-contained six-application Workers. Original successful source preparation and exact six-template qualification pins are preserved. This authorizes bounded source/CI composition only, not global template promotion, provider deployment, Vercel changes or hosted acceptance. Each dealer requires all seven current-run internal compile artifacts and zero external design services."
+    "reviewedAt": "2026-10-12T23:39:16.098Z"
   }
 }

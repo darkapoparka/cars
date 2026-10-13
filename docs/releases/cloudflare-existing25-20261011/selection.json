@@ -333,6 +333,14 @@
       "workerName": "cars-sevicar-varna",
       "publicOrigin": "https://cars-sevicar-varna.darkapoparka1.workers.dev",
       "preserveVariant2": "modern"
+    },
+    {
+      "slug": "biemaauto-varna",
+      "dealerId": "biemaauto-varna",
+      "proposedRepository": "darkapoparka/cars-biemaauto-varna",
+      "sourceMode": "new-approved",
+      "workerName": "cars-biemaauto-varna",
+      "publicOrigin": "https://cars-biemaauto-varna.darkapoparka1.workers.dev"
     }
   ],
   "workerIdentities": {
