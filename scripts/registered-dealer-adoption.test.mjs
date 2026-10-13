@@ -181,3 +181,24 @@ test('registered WebP asset view retains authenticated originals and never relab
 test('registered WebP asset view preserves an independently authenticated original PNG at the legacy path',t=>{
  const f=fixture(t),webp=f.baseline.files.get('carwow/static/dealer/photo-123.webp'),png=f.baseline.files.get('auto-best/static/dealer/logo.png');f.personalization.facts.business.logo='/dealer/logo.webp';f.personalization.facts.business.logoDark='/dealer/logo.webp';f.personalization.media[0]={publicPath:'/dealer/logo.webp',sourcePath:'carwow/static/dealer/photo-123.webp',sha256:sha256(webp)};f.personalization.media.push({publicPath:'/branding/logo-on-light.png',sourcePath:'auto-best/static/dealer/logo.png',sha256:sha256(png)});f.receipt.personalization.sha256=sha256(enc(f.personalization));const p=f.plan(),run=path.join(f.root,'runtime','webp-original-png-view');fs.mkdirSync(run,{recursive:true});const view=materializeRegisteredAssetView(p,{runDirectory:run});assertRegisteredAssetView(p,view);const retained=fs.readFileSync(path.join(view,'branding/logo-on-light.png'));assert(retained.equals(png));assert(!retained.equals(webp));assert(fs.readFileSync(path.join(view,'dealer/logo.webp')).equals(webp));assertRegisteredAdoptionPlan(p);fs.appendFileSync(path.join(view,'branding/logo-on-light.png'),'changed');assert.throws(()=>assertRegisteredAssetView(p,view),/bytes changed/);
 });
+
+
+test('registered source declares only authenticated asset containers and the exact PNG alias',t=>{
+ const f=fixture(t),p=f.plan(),target=registeredAdoptionTarget(p,f.pins);
+ assert.deepEqual(target.extraAssets,['branding','dealer']);
+ assert.equal(target.shareIdentity.logo.sourcePath,'dealer/logo.png');
+ const run=path.join(f.root,'runtime','asset-container-pilot');fs.mkdirSync(run);
+ const view=materializeRegisteredAssetView(p,{runDirectory:run});
+ for(const root of target.extraAssets)assert(fs.statSync(path.join(view,root)).isDirectory());
+ assert(fs.readFileSync(path.join(view,target.shareIdentity.logo.sourcePath)).equals(f.baseline.files.get('auto-best/static/dealer/logo.png')));
+});
+
+test('registered WebP source declares its real container without inventing PNG or dealer-brand folders',t=>{
+ const f=fixture(t);f.personalization.facts.business.logo='/dealer/logo.webp';f.personalization.facts.business.logoDark='/dealer/logo.webp';f.personalization.media[0].publicPath='/dealer/logo.webp';f.receipt.personalization.sha256=sha256(enc(f.personalization));
+ const p=f.plan(),target=registeredAdoptionTarget(p,f.pins);
+ assert.deepEqual(target.extraAssets,['dealer']);assert.equal(target.shareIdentity.logo.sourcePath,'dealer/logo.webp');
+ const run=path.join(f.root,'runtime','webp-asset-container-pilot');fs.mkdirSync(run);
+ const view=materializeRegisteredAssetView(p,{runDirectory:run});
+ for(const root of target.extraAssets)assert(fs.statSync(path.join(view,root)).isDirectory());
+ assert.equal(fs.existsSync(path.join(view,'branding')),false);assert.equal(fs.existsSync(path.join(view,'dealer-brand')),false);
+});

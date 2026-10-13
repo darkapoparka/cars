@@ -215,7 +215,9 @@ export async function readRegisteredDealerAdoption({root=ROOT,pin,dealer,baselin
 
 export function registeredAdoptionTarget(plan,pins){assertRegisteredAdoptionPlan(plan,{dealerRoot:plans.get(plan)?.source});const next=structuredClone(plan.manifest);next.variants=planSixDesignSelection(next.variants).variants;next.packaging={version:'5'};next.language=next.localization.defaultLocale;next.branding={schemaVersion:1,required:true,policy:'template-default',contract:'.cars-branding.json',surfaceBindingsVersion:1};
  next.templateRevisions=Object.fromEntries(next.variants.map(({key})=>[key,pins[key]?.to]));next.templateSources=Object.fromEntries(next.variants.map(({key})=>[key,pins[key]?.targetSource]));assert(next.variants.every(({key})=>pins[key]?.targetSource),'all six reviewed target pins required');
- next.extraAssets=['branding','dealer-brand'];next.shareIdentity={name:plan.profile.business.name,description:plan.profile.business.previewNotice,publicOrigin:plan.identity.publicOrigin,logo:{sourcePath:plan.profile.logoContract.assets.onLight.publicPath.slice(1),sha256:plan.profile.logoContract.assets.onLight.sha256}};
+ const assetRoots=new Set([...plans.get(plan).assetBytes.keys()].map(name=>name.slice(1).split('/')[0]));
+ if(/\.png$/i.test(plan.profile.logoContract.assets.onLight.publicPath))assetRoots.add('branding');
+ next.extraAssets=[...assetRoots].sort();next.shareIdentity={name:plan.profile.business.name,description:plan.profile.business.previewNotice,publicOrigin:plan.identity.publicOrigin,logo:{sourcePath:plan.profile.logoContract.assets.onLight.publicPath.slice(1),sha256:plan.profile.logoContract.assets.onLight.sha256}};
  next.registeredSourceAdoption={receipt:{path:REGISTERED_ADOPTION_FILE,sha256:plan.receiptSha256},personalization:{path:REGISTERED_PROFILE_FILE,sha256:plan.personalizationSha256}};return validateManifest(next);
 }
 

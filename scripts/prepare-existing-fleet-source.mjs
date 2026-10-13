@@ -277,6 +277,7 @@ export function readBrandingInputs(root,record,slug){
 export function bindPreparedShareLogo(files,manifest,contract){
  const logo=files.get('branding/logo-on-light.png'),icon=files.get('branding/app-icon.png');
  assert(manifest.shareIdentity&&logo&&icon&&contract.reviewedSurfaceVariants?.surfaces.onLight.sha256===sha256(logo),'Prepared share identity needs the exact reviewed on-light logo and derived icon');
+ manifest.extraAssets=[...new Set([...(manifest.extraAssets??[]),'branding'])];
  manifest.shareIdentity={...manifest.shareIdentity,logo:{...(manifest.shareIdentity.logo??{}),sourcePath:'branding/logo-on-light.png',sha256:sha256(logo),faviconSourcePath:'branding/app-icon.png',faviconSha256:sha256(icon)}};
  return manifest.shareIdentity.logo;
 }

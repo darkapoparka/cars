@@ -29,5 +29,10 @@
         "sha256": "474407f0ffff40c30f94c5e936e86ec086c311b9424bfb1e1c4e892e2aecc0e9"
       }
     }
+  },
+  "reviewedRetry": {
+    "at": "2026-10-13T22:20:15.986Z",
+    "sourceRun": 38472857386,
+    "scope": "Retry only the failed Exclusive source proposal after declaring its actual authenticated asset containers. Preserve all factual inputs, target template pins and completed dealer source/build results."
   }
 }
