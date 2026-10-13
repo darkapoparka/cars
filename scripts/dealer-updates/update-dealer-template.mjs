@@ -782,7 +782,7 @@ async function addNativeAdoption(plan, candidateDirectory, dealerRoot, lock, {ca
   const retainedLogoChanges=[];
   if(candidateManifest.sourceOwnership!=='independent-repository' && candidateManifest.packaging.version===SIX_DESIGN_PACKAGING_CANDIDATE && retainedLogoFamilies.length && !files.has('.cars-branding.json')) {
     const logoProfile=registeredAdoption?.profile ?? loadDealerProfile(dealerRoot,candidateManifest.slug);
-    if(logoProfile.logoContract)retainedLogoChanges.push(...applyRetainedLogoSurfaceBindings(files,logoProfile.logoContract,{families:retainedLogoFamilies}));
+    if(logoProfile.logoContract)retainedLogoChanges.push(...applyRetainedLogoSurfaceBindings(files,logoProfile.logoContract,{families:retainedLogoFamilies,reviewedPinnedTemplateReplacement:registeredAdoption?.receipt.templateRefresh?.reviewed===true}));
   }
   if(plan.factualRefresh&&factualAppProvenance)sealAppDealerSource({files,manifest:candidateManifest,provenance:factualAppProvenance});
   const baseManifest = baseNativeManifest(candidateManifest);

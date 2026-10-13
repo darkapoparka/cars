@@ -73,7 +73,16 @@ export function applyLogoSurfaceBindings(files,value,options){
  }
  if(families.includes('mobile')){
   let mobile=get(draft,MOBILE_LOGO_HEADER);const newline=mobile.includes('\r\n')?'\r\n':'\n';
-  if(pair.retained&&mobile.includes('<picture'))assertRetainedMobile(draft,pair);
+  if(pair.retained&&mobile.includes('<picture')&&!options?.reviewedPinnedTemplateReplacement)assertRetainedMobile(draft,pair);
+  else if(mobile.includes('data-dealer-logo-surfaces')){
+   const pictures=[...mobile.matchAll(/<picture\b[^>]*>[\s\S]*?<\/picture>/g)].filter(match=>match[0].includes('src={showroom.logo}'));
+   if(pictures.length!==1||mobile.includes('brightness(0) invert(1)'))throw Error('Changed Mobile raster picture boundary');
+   const picture=pictures[0][0],sources=[...picture.matchAll(/<source\b/g)];
+   const selector=/srcSet=(?:"(?:\\.|[^"\\])*"|\{showroom\.logo\.replace\([^\r\n]*?\)\})/g,selected=[...picture.matchAll(selector)];
+   if(sources.length!==1||selected.length!==1||!picture.includes('{overHeroDesktop && !generatedDesktopLogo && <source media="(min-width: 1024px)"'))throw Error('Changed Mobile raster selection boundary');
+   const source=pair.retained?JSON.stringify(pair.onDark):'{showroom.logo.replace(/\\/logo-on-light\\.webp$/, "/logo-on-dark.webp")}';
+   mobile=once(mobile,picture,picture.replace(selector,'srcSet='+source),'Mobile current raster surface');
+  }
   else if(!mobile.includes('data-dealer-logo-surfaces')){
    mobile=once(mobile,"filter: { default: 'none', '@media (min-width: 1024px)': 'brightness(0) invert(1)' },","filter: 'none',",'Mobile unfiltered raster');
    mobile=mobile.replace('// Fallback for personalized artwork without its own light presentation.','// Select committed surface artwork; never manufacture a white logo with CSS.');
@@ -81,6 +90,12 @@ export function applyLogoSurfaceBindings(files,value,options){
    const image=mobile.slice(start,end+'              />'.length);
    const source=pair.retained?JSON.stringify(pair.onDark):'{showroom.logo.replace(/\\/logo-on-light\\.webp$/, "/logo-on-dark.webp")}';
    mobile=mobile.slice(0,start)+'              <picture data-dealer-logo-surfaces style={{display: "contents"}}>'+newline+'                {overHeroDesktop && !generatedDesktopLogo && <source media="(min-width: 1024px)" srcSet='+source+' />}'+newline+image+newline+'              </picture>'+mobile.slice(end+'              />'.length);
+  }
+  if(pair.retained&&options?.reviewedPinnedTemplateReplacement){
+   let config=get(draft,MOBILE_LOGO_CONFIG);const logos=[...config.matchAll(/^[ \t]*(?:logo|"logo"|'logo')[ \t]*:[ \t]*(["'])([^"'\r\n]+)\1[ \t]*,?[ \t]*$/gm)];
+   if(logos.length!==1)throw Error('Changed Mobile primary raster boundary');
+   config=once(config,logos[0][0],logos[0][0].replace(logos[0][1]+logos[0][2]+logos[0][1],JSON.stringify(pair.onLight)),'Mobile current light raster');
+   draft.set(MOBILE_LOGO_CONFIG,Buffer.from(config));changes.push(MOBILE_LOGO_CONFIG);
   }
   draft.set(MOBILE_LOGO_HEADER,Buffer.from(mobile));changes.push(MOBILE_LOGO_HEADER);
  }
@@ -116,7 +131,7 @@ function verifiedRetainedTuple(files,contract,families){
 /** Apply only the verified retained members; never generate or alter their bytes. */
 export function applyRetainedLogoSurfaceBindings(files,contract,options){
  const families=familiesFor(options),tuple=verifiedRetainedTuple(files,contract,families);
- return applyLogoSurfaceBindings(files,tuple,{families});
+ return applyLogoSurfaceBindings(files,tuple,{families,reviewedPinnedTemplateReplacement:options?.reviewedPinnedTemplateReplacement===true});
 }
 /** Read-only guard for raw or already mounted retained consumers. */
 export function assertRetainedLogoSurfaceBindings(files,contract,{mounts={},...options}={}){
@@ -138,3 +153,4 @@ export function assertRetainedDealerLogoSurfaces(files,manifest){
  try{return assertRetainedLogoSurfaceBindings(files,JSON.parse(get(files,'branding/logo-contract.json')),{families,mounts:Object.fromEntries(manifest.variants.map(({key,base})=>[key,base]))});}
  catch(error){throw Error('Retained logo surface check failed: '+error.message+'. Use the maintained dealer template refresh to bind retained logos before packaging.');}
 }
+
