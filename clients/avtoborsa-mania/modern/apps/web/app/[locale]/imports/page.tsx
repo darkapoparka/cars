@@ -5,22 +5,31 @@ import {
   AccordionTrigger,
 } from "@repo/design-system/components/ui/accordion";
 import { cn } from "@repo/design-system/lib/utils";
+import { leadSite } from "@repo/marketplace";
+import { publicSite } from "@repo/marketplace/site-config";
 import {
   getMobileQuickPillClassName,
-  marketplaceDiscoveryFrameClassName,
   mobileDealerContentClassName,
 } from "@repo/marketplace-ui";
+import { DealerDesktopHero } from "@repo/marketplace-ui/components/dealer-desktop-hero";
+import {
+  DesktopActionButton,
+  DesktopActionPanel,
+} from "@repo/marketplace-ui/components/desktop-action-panel";
 import { MobilePillRail } from "@repo/marketplace-ui/components/mobile-pill-rail";
+import Image from "@repo/marketplace-ui/components/public-image";
 import { getLocalizedPath, normalizeSeoLocale } from "@repo/seo/metadata";
 import { ArrowRight, Globe2, Search } from "lucide-react";
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
+import { isPublicContactSubmissionAvailable } from "@/lib/public-contact-readiness";
 import { getPublicExternalInventory } from "@/lib/public-external-inventory";
 import { createPublicLocalizedMetadata } from "@/lib/public-metadata";
+import { requirePublicSitePath } from "@/lib/public-site-access";
 import { getPublicWebBaseUrl } from "@/lib/public-url";
 import { MobileDealerServiceHero } from "../components/mobile-dealer-service-hero";
 import { MobileServiceHelp } from "../components/mobile-service-help";
+import desktopStyles from "../components/public-desktop-layout.module.css";
 import { PublicMarketplaceFrame } from "../components/public-marketplace-frame";
 import { ExternalImportListings } from "./components/external-import-listings";
 import { ImportRequestForm } from "./components/import-request-form";
@@ -90,8 +99,7 @@ const importFaqs = {
       question: "Какво означава доставка до България?",
     },
     {
-      answer:
-        "Не е нужен акаунт. Оставете телефон и екипът на Мания ще се свърже с вас, за да уточни следващата стъпка.",
+      answer: `Не е нужен акаунт. Оставете телефон и екипът на ${leadSite.shortName} ще се свърже с вас, за да уточни следващата стъпка.`,
       question: "Трябва ли да се регистрирам?",
     },
   ],
@@ -112,8 +120,7 @@ const importFaqs = {
       question: "What does delivery to Bulgaria mean?",
     },
     {
-      answer:
-        "No account is required. Leave a phone number and the Мания team will contact you about the next step.",
+      answer: `No account is required. Leave a phone number and the ${leadSite.shortName} team will contact you about the next step.`,
       question: "Do I need to register?",
     },
   ],
@@ -123,11 +130,27 @@ const pageCopy = {
   bg: {
     deliveryDestination: "България",
     deliveryPrefix: "Внос и доставка до ",
-    desktopDescription:
-      "Разгледайте актуални оферти от свързани източници или поставете линк към автомобил, който вече сте намерили.",
+    desktopFormDescription:
+      "Намерили сте автомобил? Поставете линка или изберете държава, за да разгледате оферти.",
     desktopTitle: "Реални обяви за внос",
     faqDescription: "Най-важното за заявката и доставката до България.",
     faqTitle: "Често задавани въпроси",
+    helpSteps: [
+      {
+        title: "Изберете автомобил",
+        description: "Изпратете линк към обява или посочете марка и модел.",
+      },
+      {
+        title: "Добавете изискванията",
+        description:
+          "Посочете държава, година, пробег и бюджет, когато са известни.",
+      },
+      {
+        title: "Уточнете офертата",
+        description:
+          "Обсъдете по телефона цената, срока и документите за конкретния автомобил.",
+      },
+    ],
     heroAlt: "Автомобил за международен внос",
     mobileTitle: "Внос на автомобил",
     routesLabel: "Бързи маршрути за внос",
@@ -135,17 +158,32 @@ const pageCopy = {
     sourceLabel: "Линк към обявата",
     sourcePlaceholder: "Поставете линк към обявата",
     sourcePlaceholderLong: "Поставете линк към конкретна обява",
-    submitLabel: "Изпратете линка",
+    submitLabel: "Продължете с този линк",
     submitText: "Поискай оферта",
   },
   en: {
     deliveryDestination: "Bulgaria",
     deliveryPrefix: "Import and delivery to ",
-    desktopDescription:
-      "Browse current offers from connected sources or paste a vehicle listing you have already found.",
+    desktopFormDescription:
+      "Already found a car? Paste its link, or choose a country to browse offers.",
     desktopTitle: "Real vehicles available for import",
     faqDescription: "The essentials about requests and delivery to Bulgaria.",
     faqTitle: "Frequently asked questions",
+    helpSteps: [
+      {
+        title: "Choose a vehicle",
+        description: "Send a listing link or share the make and model.",
+      },
+      {
+        title: "Add your requirements",
+        description: "Include the origin, year, mileage and budget when known.",
+      },
+      {
+        title: "Discuss the offer",
+        description:
+          "Discuss price, timing and documents for the specific vehicle by phone.",
+      },
+    ],
     heroAlt: "Vehicle prepared for international import",
     mobileTitle: "Import a vehicle",
     routesLabel: "Quick import routes",
@@ -153,7 +191,7 @@ const pageCopy = {
     sourceLabel: "Vehicle listing link",
     sourcePlaceholder: "Paste listing link",
     sourcePlaceholderLong: "Paste a specific listing link",
-    submitLabel: "Submit the link",
+    submitLabel: "Continue with this link",
     submitText: "Request a quote",
   },
 } as const;
@@ -186,17 +224,18 @@ export const generateMetadata = async ({
   return createPublicLocalizedMetadata({
     baseUrl: getPublicWebBaseUrl(),
     description: isBg
-      ? "Изпратете линк или данни за автомобил от чужбина. Мания ще уточни заявката за внос и доставка до България."
-      : "Send a listing link or vehicle details from abroad. Мания will discuss the import request and delivery to Bulgaria.",
+      ? `Изпратете линк или данни за автомобил от чужбина. ${leadSite.shortName} ще уточни заявката за внос и доставка до България.`
+      : `Send a listing link or vehicle details from abroad. ${leadSite.shortName} will discuss the import request and delivery to Bulgaria.`,
     locale,
     path,
     title: isBg
-      ? "Внос на автомобил по заявка | Мания"
-      : "Vehicle import request | Мания",
+      ? `Внос на автомобил по заявка | ${leadSite.shortName}`
+      : `Vehicle import request | ${leadSite.shortName}`,
   });
 };
 
 export default async function ImportsPage({ params, searchParams }: PageProps) {
+  requirePublicSitePath("/imports");
   const [{ locale }, query] = await Promise.all([params, searchParams]);
   const normalizedLocale = normalizeSeoLocale(locale);
   const text = pageCopy[normalizedLocale];
@@ -249,8 +288,10 @@ export default async function ImportsPage({ params, searchParams }: PageProps) {
         <MobileDealerServiceHero
           helpAction={
             <MobileServiceHelp
+              description={text.faqDescription}
               faqs={importFaqs[normalizedLocale]}
               locale={normalizedLocale}
+              steps={text.helpSteps}
               title={
                 normalizedLocale === "bg"
                   ? "Как работи вносът"
@@ -261,10 +302,10 @@ export default async function ImportsPage({ params, searchParams }: PageProps) {
           imageClassName="object-center"
           imageSrc="/images/services/import-shipping-yellow-v1.png"
           locale={normalizedLocale}
+          title={text.mobileTitle}
           tone="import"
         >
           <div className="h-full">
-            <h1 className="sr-only">{text.mobileTitle}</h1>
             <MobileImportSourceSearch
               actionHref={`${localize(path)}#import-request`}
               defaultOrigin={formOrigin}
@@ -277,7 +318,10 @@ export default async function ImportsPage({ params, searchParams }: PageProps) {
           </div>
         </MobileDealerServiceHero>
         <div
-          className={`${mobileDealerContentClassName} pb-3 lg:hidden`}
+          className={cn(
+            mobileDealerContentClassName,
+            "pt-2.5 pb-2.5 lg:hidden"
+          )}
           data-slot="mobile-dealer-content"
         >
           <section
@@ -290,7 +334,10 @@ export default async function ImportsPage({ params, searchParams }: PageProps) {
               {text.routesTitle}
             </h2>
             <nav aria-label={text.routesLabel}>
-              <MobilePillRail data-slot="import-country-rail">
+              <MobilePillRail
+                data-slot="import-country-rail"
+                label={text.routesLabel}
+              >
                 <div className="flex min-w-max gap-2">
                   {renderImportRouteLinks()}
                 </div>
@@ -299,90 +346,105 @@ export default async function ImportsPage({ params, searchParams }: PageProps) {
           </section>
         </div>
 
-        <div className={cn(marketplaceDiscoveryFrameClassName, "py-0 lg:py-9")}>
-          <section className="hidden border-border border-b pb-6 lg:block">
-            <h1 className="font-semibold text-page-title tracking-tight">
-              {text.desktopTitle}
-            </h1>
-            <p className="mt-2 max-w-3xl text-body text-muted-foreground">
-              {text.desktopDescription}
-            </p>
-            <search className="mt-5 block max-w-3xl">
-              <form
-                action={`${localize(path)}#import-request`}
-                className="flex h-12 items-center gap-2 rounded-xl bg-secondary p-1 pl-4 outline-none focus-within:ring-[3px] focus-within:ring-[var(--lead-site-accent-ring)]"
-                method="get"
+        <DealerDesktopHero
+          locale={normalizedLocale}
+          title={text.mobileTitle}
+          variant="service"
+        >
+          <div className={cn(desktopStyles.content, desktopStyles.heroContent)}>
+            <section className="hidden lg:block">
+              <DesktopActionPanel
+                className={desktopStyles.importPanel}
+                fitContent
               >
-                {formOrigin ? (
-                  <input name="origin" type="hidden" value={formOrigin} />
-                ) : null}
-                <Search
-                  aria-hidden="true"
-                  className="size-4 shrink-0 text-muted-foreground"
-                />
-                <label className="flex h-full min-w-0 flex-1 items-center">
-                  <span className="sr-only">{text.sourceLabel}</span>
-                  <input
-                    className="h-full min-w-0 flex-1 bg-transparent text-sm outline-none placeholder:text-muted-foreground"
-                    defaultValue={defaultSourceUrl}
-                    inputMode="url"
-                    maxLength={500}
-                    name="sourceUrl"
-                    placeholder={text.sourcePlaceholderLong}
-                    required
-                    type="url"
-                  />
-                </label>
-                <button
-                  className="inline-flex h-10 shrink-0 items-center gap-2 rounded-lg bg-[var(--lead-site-accent)] px-4 font-semibold text-sm text-white outline-none transition-colors hover:bg-[var(--lead-site-accent-hover)] focus-visible:ring-2 focus-visible:ring-[var(--lead-site-accent)] focus-visible:ring-offset-2"
-                  type="submit"
+                <div className={desktopStyles.importStart}>
+                  <h2>{text.sourceLabel}</h2>
+                  <p className="mb-4 max-w-4xl text-muted-foreground text-sm leading-6">
+                    {text.desktopFormDescription}
+                  </p>
+                  <search className="block">
+                    <form
+                      action={`${localize(path)}#import-request`}
+                      className="flex h-12 items-center gap-2 rounded-xl bg-secondary p-1 pl-4"
+                      method="get"
+                    >
+                      {formOrigin ? (
+                        <input name="origin" type="hidden" value={formOrigin} />
+                      ) : null}
+                      <Search
+                        aria-hidden="true"
+                        className="size-4 shrink-0 text-muted-foreground"
+                      />
+                      <label className="flex h-full min-w-0 flex-1 items-center">
+                        <span className="sr-only">{text.sourceLabel}</span>
+                        <input
+                          className="h-full min-w-0 flex-1 bg-transparent text-sm outline-none placeholder:text-muted-foreground"
+                          defaultValue={defaultSourceUrl}
+                          inputMode="url"
+                          maxLength={500}
+                          name="sourceUrl"
+                          placeholder={text.sourcePlaceholderLong}
+                          required
+                          type="url"
+                        />
+                      </label>
+                      <DesktopActionButton inset type="submit">
+                        {text.submitText}
+                        <ArrowRight aria-hidden="true" className="size-4" />
+                      </DesktopActionButton>
+                    </form>
+                  </search>
+                  <section
+                    aria-labelledby="desktop-import-routes-heading"
+                    className="hidden scroll-mt-24 lg:mt-5 lg:block"
+                    data-slot="desktop-import-routes"
+                  >
+                    <h2 className="sr-only" id="desktop-import-routes-heading">
+                      {text.routesTitle}
+                    </h2>
+                    <nav
+                      aria-label={text.routesLabel}
+                      className="no-scrollbar overflow-x-auto"
+                    >
+                      <div className="flex min-w-max gap-2">
+                        {renderImportRouteLinks()}
+                      </div>
+                    </nav>
+                  </section>
+                </div>
+                <div
+                  className={desktopStyles.serviceArtwork}
+                  data-slot="import-desktop-artwork"
                 >
-                  {text.submitText}
-                  <ArrowRight aria-hidden="true" className="size-4" />
-                </button>
-              </form>
-            </search>
-          </section>
-
-          <section
-            aria-labelledby="desktop-import-routes-heading"
-            className="hidden scroll-mt-24 lg:mt-5 lg:block"
-            data-slot="desktop-import-routes"
-          >
-            <h2 className="sr-only" id="desktop-import-routes-heading">
-              {text.routesTitle}
-            </h2>
-            <nav
-              aria-label={text.routesLabel}
-              className="no-scrollbar overflow-x-auto"
-            >
-              <div className="flex min-w-max gap-2">
-                {renderImportRouteLinks()}
-              </div>
-            </nav>
-          </section>
-
+                  <Image
+                    alt=""
+                    fill
+                    sizes="180px"
+                    src={
+                      publicSite.artwork.desktopServices?.imports ??
+                      publicSite.artwork.importHero
+                    }
+                  />
+                </div>
+              </DesktopActionPanel>
+            </section>
+          </div>
+        </DealerDesktopHero>
+        <div
+          className={cn(
+            "max-lg:mx-auto max-lg:px-3 sm:max-lg:px-4",
+            desktopStyles.content,
+            desktopStyles.serviceBody
+          )}
+        >
           {showImportRequest ? (
             <section
-              className="relative isolate mt-5 lg:mt-0 lg:min-h-[38rem] lg:overflow-hidden lg:rounded-xl lg:border lg:border-border lg:shadow-panel"
+              className="relative isolate mt-5 lg:mt-6"
               data-slot="imports-hero"
               id="import-request"
             >
-              <Image
-                alt={text.heroAlt}
-                className="hidden object-cover object-[72%_center] lg:block"
-                fill
-                priority
-                sizes="(min-width: 1792px) calc(100vw - 96px), (min-width: 1440px) 1360px, calc(100vw - 48px)"
-                src="/dealer/media-pending.svg"
-              />
               <div
-                aria-hidden="true"
-                className="absolute inset-0 hidden bg-black/10 lg:block"
-              />
-
-              <div
-                className="relative z-10 flex items-center justify-center lg:min-h-[38rem] lg:p-8"
+                className="relative flex items-center justify-center"
                 data-slot="imports-hero-content"
               >
                 <div className="w-full max-w-6xl scroll-mt-24">
@@ -391,6 +453,7 @@ export default async function ImportsPage({ params, searchParams }: PageProps) {
                     defaultSourceUrl={defaultSourceUrl}
                     locale={normalizedLocale}
                     privacyHref={localize("/legal/privacy")}
+                    submissionAvailable={isPublicContactSubmissionAvailable()}
                   />
                 </div>
               </div>
@@ -399,7 +462,10 @@ export default async function ImportsPage({ params, searchParams }: PageProps) {
 
           <section
             aria-labelledby="external-import-listings-heading"
-            className="-mx-3 bg-background px-4 pb-3 sm:-mx-4 sm:px-4 lg:mt-6 lg:bg-zinc-50 lg:px-4 lg:py-4"
+            className={cn(
+              "-mx-3 bg-background px-4 pb-3 sm:-mx-4 sm:px-4 lg:mx-0 lg:mt-8 lg:rounded-2xl lg:border lg:border-border lg:bg-card lg:p-6",
+              !showImportRequest && "max-lg:pt-0!"
+            )}
             data-slot="external-import-listings"
           >
             <ExternalImportListings

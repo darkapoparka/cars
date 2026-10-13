@@ -14,6 +14,7 @@ import {
   isoCountryCodeSchema,
   parseMarketplaceSearchParams,
 } from "@repo/marketplace";
+import { desktopOverlayStyles } from "@repo/marketplace-ui";
 import { log } from "@repo/observability/log";
 import { getLocalizedPath, normalizeSeoLocale } from "@repo/seo/metadata";
 import { ArrowLeftIcon, MessageSquareText } from "lucide-react";
@@ -256,7 +257,7 @@ const ContactSellerForm = ({
         <SelectTrigger className="w-full bg-control" id="intent">
           <SelectValue />
         </SelectTrigger>
-        <SelectContent>
+        <SelectContent className={desktopOverlayStyles.menu}>
           <SelectItem value="availability">{copy.availability}</SelectItem>
           <SelectItem value="test_drive">{copy.testDrive}</SelectItem>
           <SelectItem value="finance">{copy.finance}</SelectItem>
@@ -277,10 +278,7 @@ const ContactSellerForm = ({
         required
       />
     </div>
-    <p
-      className="text-muted-foreground text-xs leading-5"
-      id="contact-privacy-context"
-    >
+    <p className="text-meta text-muted-foreground" id="contact-privacy-context">
       {copy.privacyBefore}
       <Link
         className="font-medium text-foreground underline underline-offset-2"
@@ -360,7 +358,14 @@ const ContactListingPage = async ({
   )}${destinationQuery}`;
 
   return (
-    <PublicMarketplaceFrame activeMode="buy" locale={normalizedLocale}>
+    <PublicMarketplaceFrame
+      activeMode="buy"
+      desktopIntro={{
+        title: copy.title,
+        variant: "compact",
+      }}
+      locale={normalizedLocale}
+    >
       <main className="min-h-[calc(100vh-12rem)] bg-background px-4 py-8 lg:py-12">
         <div className="mx-auto max-w-2xl">
           <Button
@@ -375,12 +380,12 @@ const ContactListingPage = async ({
           </Button>
 
           <section className="rounded-2xl border border-border bg-card p-5 shadow-panel sm:p-8">
-            <div className="flex items-start gap-3">
+            <div className="flex items-start gap-3 lg:hidden">
               <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-control text-foreground">
                 <MessageSquareText aria-hidden="true" className="size-5" />
               </span>
               <div className="min-w-0">
-                <h1 className="font-semibold text-section-title tracking-tight">
+                <h1 className="font-semibold text-section-title tracking-heading">
                   {copy.title}
                 </h1>
                 <p className="mt-1 truncate text-muted-foreground text-sm">

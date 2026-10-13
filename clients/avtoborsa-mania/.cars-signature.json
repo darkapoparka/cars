@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "format": "signature-preview-v1",
+  "dealer": "avtoborsa-mania",
+  "name": "АВТОБОРСА МАНИЯ",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/karento-best",
+    "digest": "83056967764a686f3737d74b86c5db51c1385a50184853f50ec4ade80c1dd44f",
+    "tree": "5f6eec8efb2f9e99819f7f0c2f743d18fff7b134"
+  },
+  "sourceDigest": "8d9d57a153966f7d14b4e23cbaeaf9d61608e5d05d68fb66f99dbeb25fe40f97",
+  "inventory": {
+    "mode": "illustrative-not-dealer-stock",
+    "count": 7,
+    "observedAt": ""
+  },
+  "personalization": {
+    "profileSha256": "97ac5035064ceb74259b36c99f157a0ad73577fecdcf17f5ab5e23bf9381f8ed",
+    "logoPaths": [
+      "/registered-branding/onLight.png",
+      "/registered-branding/onDark.png"
+    ],
+    "mediaPaths": [
+      "/assets/images/lead/day-night-stock-04.webp",
+      "/assets/images/lead/day-night-stock-01.webp",
+      "/assets/images/lead/day-night-stock-06.webp",
+      "/assets/images/lead/day-night-stock-02.webp",
+      "/assets/images/lead/day-night-stock-03.webp"
+    ],
+    "mediaMappings": [],
+    "contentPaths": [
+      "karento-best/src/lib/content.ts",
+      "karento-best/src/lib/data/vehicles.ts",
+      "karento-best/src/lib/data/vehicle-listing.ts",
+      "karento-best/src/lib/data/dealer-vehicles.json",
+      "karento-best/src/lib/data/vehicle-detail.ts",
+      "karento-best/src/lib/data/dealer-detail.ts",
+      "karento-best/src/lib/pages/cars-details-3.svelte",
+      "karento-best/src/lib/components/vehicle-detail/VehicleReservationCard.svelte",
+      "karento-best/src/lib/components/vehicle-detail/VehicleDetailPanels.svelte",
+      "karento-best/src/lib/components/ServiceSpotCard.svelte",
+      "karento-best/src/lib/sections/HomeBrandLinks.svelte",
+      "karento-best/src/lib/i18n/catalogs/reference-home.ts",
+      "karento-best/src/lib/data/editorial.ts",
+      "karento-best/src/lib/data/home-stories.ts",
+      "karento-best/src/lib/cards/VehicleEditorialCard.svelte",
+      "karento-best/src/lib/cards/VehicleFeaturedCard.svelte",
+      "karento-best/src/lib/cards/VehicleGridCard.svelte",
+      "karento-best/src/lib/components/Footer.svelte",
+      "karento-best/src/lib/components/contact/ContactLocationCard.svelte",
+      "karento-best/src/lib/components/vehicle-detail/ReviewSummary.svelte",
+      "karento-best/src/lib/components/vehicle-detail/VehicleHeading.svelte",
+      "karento-best/src/lib/sections/CustomerReviewCarousel.svelte",
+      "karento-best/src/lib/sections/FeaturedVehicleCarousel.svelte",
+      "karento-best/src/lib/sections/FeaturedVehicleGrid.svelte",
+      "karento-best/src/lib/sections/MostSearchedVehicles.svelte",
+      "karento-best/src/lib/sections/PopularVehicleCarousel.svelte",
+      "karento-best/src/lib/sections/PopularVehicleGrid.svelte",
+      "karento-best/src/routes/2/discovery.ts",
+      "karento-best/src/routes/2/DiscoveryHome.svelte",
+      "karento-best/src/routes/2/DiscoverySearch.svelte"
+    ],
+    "nativeDealerFacts": true
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

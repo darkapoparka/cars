@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "dealer": "chernomore-varna",
+  "kind": "personalized-source-candidate-not-an-approved-release",
+  "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+  "candidateSourceDigest": "495cc0abc398630c98d9d181eb4c898519ba878461ba11b88d180d8f594a688b",
+  "qualificationContextPath": ".client/native-qualification-context.json",
+  "qualificationContextSha256": "b73b965dfd054c6aa0b6fe9b042a387faa1a391a8650ea24c32ea4656492fb19",
+  "qualificationLockPath": ".client/native-qualification-lock.json",
+  "qualificationLockSha256": "89e11d6ae186b2f45439ba4bd4269a15d8fca8a9f732343aee01096be1229fa6",
+  "sourceDeltaReview": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
+    "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975",
+    "reviewedAt": "2026-10-11T21:04:02.173Z"
+  },
+  "nativeApproval": false,
+  "hostedApproval": false
+}

@@ -1,0 +1,147 @@
+{
+  "schemaVersion": 1,
+  "slug": "chernomore-varna",
+  "dealerId": "chernomore-varna",
+  "repository": "darkapoparka/cars-chernomore-varna",
+  "defaultBranch": "main",
+  "variants": [
+    {
+      "key": "auto-best",
+      "base": "",
+      "entry": "/"
+    },
+    {
+      "key": "modern",
+      "base": "/variant-2",
+      "entry": "/variant-2/cars"
+    },
+    {
+      "key": "import",
+      "base": "/variant-3",
+      "entry": "/variant-3/"
+    },
+    {
+      "key": "app",
+      "base": "/variant-4",
+      "entry": "/variant-4/"
+    },
+    {
+      "key": "mobile",
+      "base": "/variant-5",
+      "entry": "/variant-5/"
+    },
+    {
+      "key": "karento-best",
+      "base": "/variant-6",
+      "entry": "/variant-6/"
+    }
+  ],
+  "extraAssets": [
+    "dealer-brand",
+    "branding"
+  ],
+  "packaging": {
+    "version": "5"
+  },
+  "templateRevisions": {
+    "auto-best": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "modern": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "import": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "app": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "mobile": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "karento-best": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+  },
+  "templateSources": {
+    "auto-best": {
+      "repository": "darkapoparka/cars",
+      "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+      "path": "templates/auto-best",
+      "digest": "dcbc59990928884006652677d3529020df3844029993895a71e5f6818ba7363c",
+      "tree": "5fb7a2164775050a47c1183371622295dbf63725"
+    },
+    "modern": {
+      "repository": "darkapoparka/cars",
+      "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+      "path": "templates/modern",
+      "digest": "ba263aac8f1863d133807d3e1bf3597d125cf315a7e0deba3f6e419b52434c25",
+      "tree": "3974380670eb388bb16182f94ade33be6d87b1c1"
+    },
+    "import": {
+      "repository": "darkapoparka/cars",
+      "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+      "path": "templates/import",
+      "digest": "f98a0934cdcc5adbda393c14c02eb2adc0175344ab2ac3f913afe4b0603366e5",
+      "tree": "6afc6901e2f95967fb7c72e9f75525d4d6fbf086"
+    },
+    "app": {
+      "repository": "darkapoparka/cars",
+      "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+      "path": "templates/app",
+      "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1",
+      "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76"
+    },
+    "mobile": {
+      "repository": "darkapoparka/cars",
+      "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+      "path": "templates/mobile",
+      "digest": "4e858bd9dbd3ef5b52cd904c4ed97bbfdc0f4cfe02b5a3840580f38026b867a0",
+      "tree": "2b02829e157071e305bfb2dff10ef18e85c8a35e"
+    },
+    "karento-best": {
+      "repository": "darkapoparka/cars",
+      "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+      "path": "templates/karento-best",
+      "digest": "83056967764a686f3737d74b86c5db51c1385a50184853f50ec4ade80c1dd44f",
+      "tree": "5f6eec8efb2f9e99819f7f0c2f743d18fff7b134"
+    }
+  },
+  "localization": {
+    "schemaVersion": 1,
+    "dealerId": "chernomore-varna",
+    "defaultLocale": "bg",
+    "enabledLocales": [
+      "bg",
+      "en"
+    ],
+    "dealerCountry": "BG",
+    "inventoryCurrency": "EUR"
+  },
+  "language": "bg",
+  "branding": {
+    "schemaVersion": 1,
+    "required": true,
+    "policy": "template-default",
+    "contract": ".cars-branding.json",
+    "surfaceBindingsVersion": 1
+  },
+  "shareIdentity": {
+    "name": "Черно море",
+    "description": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+    "publicOrigin": "https://cars-chernomore-varna.darkapoparka1.workers.dev",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "37a14cb576c390e023f27b4dd1fd21e16fb15ca80556ea69e730d6a776ea2a48",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "560bce0103af53d69c858f2a5dd4dae47c36e0220e3ea1c54dd90d477466ac13"
+    }
+  },
+  "registeredSourceAdoption": {
+    "receipt": {
+      "path": ".client/registered-source-adoption.json",
+      "sha256": "647e84e92537c5e582351952eae995eebbfd389e7a43a340c08eb63115993770"
+    },
+    "personalization": {
+      "path": ".client/registered-personalization.json",
+      "sha256": "4bd2e782c793078a0b82ccd841c3f7969ebb9e499873cd7179d5e54b1fb8a6ff"
+    }
+  },
+  "appVariant": {
+    "source": {
+      "repository": "darkapoparka/cars",
+      "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+      "path": "templates/app",
+      "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1",
+      "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76"
+    }
+  }
+}

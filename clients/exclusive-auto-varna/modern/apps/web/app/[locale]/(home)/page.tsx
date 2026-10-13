@@ -4,7 +4,10 @@ import {
   leadSite,
   parseMarketplaceSearchParams,
 } from "@repo/marketplace";
+import { getLeadCopy } from "@repo/marketplace/lead-copy";
+import { isDealershipSite } from "@repo/marketplace/site-config";
 import { MarketplaceShell } from "@repo/marketplace-ui";
+import { DealerDesktopDiscoveryContent } from "@repo/marketplace-ui/components/dealer-desktop-discovery-content";
 import { log } from "@repo/observability/log";
 import { getLocalizedPath, normalizeSeoLocale } from "@repo/seo/metadata";
 import type { Metadata } from "next";
@@ -12,8 +15,13 @@ import { redirect, unstable_rethrow } from "next/navigation";
 import { Suspense } from "react";
 import { getPublicAppBaseUrl } from "@/lib/public-app-url";
 import {
+  getDesktopContentCardTitle,
+  getPublicContentCards,
+} from "@/lib/public-content-data";
+import { getPublicInventorySearchListings } from "@/lib/public-inventory-search";
+import {
   getPublicMarketplaceListings,
-  getPublicVehicleTaxonomy,
+  getPublicVehicleTaxonomies,
   normalizePublicShowroomFilters,
   PUBLIC_LISTING_PAGE_SIZE,
 } from "@/lib/public-marketplace-data";
@@ -22,6 +30,7 @@ import {
   createPublicLocalizedMetadata,
   getPublicInventoryRobots,
 } from "@/lib/public-metadata";
+import { requirePublicSitePath } from "@/lib/public-site-access";
 import { getPublicWebBaseUrl } from "@/lib/public-url";
 import { Footer } from "../components/footer";
 import { InventoryUnavailable } from "../components/inventory-states";
@@ -45,14 +54,12 @@ export const generateMetadata = async ({
   return createPublicLocalizedMetadata({
     baseUrl: getPublicWebBaseUrl(),
     description: isBg
-      ? `Разгледайте актуалните автомобили на ${leadSite.name} в ${leadSite.city}.`
-      : `Browse current vehicles from ${leadSite.name} in ${leadSite.city}, ${leadSite.country}.`,
+      ? `Разгледайте актуалните автомобили на ${leadSite.name} в ${getLeadCopy(locale).city}.`
+      : `Browse current vehicles from ${leadSite.name} in ${getLeadCopy(locale).city}, ${getLeadCopy(locale).country}.`,
     locale,
     path: "/",
     robots: getPublicInventoryRobots(query),
-    title: isBg
-      ? `Автомобили от ${leadSite.name}`
-      : `Vehicles for sale at ${leadSite.name}`,
+    title: isBg ? "Автомобили" : "Vehicles for sale",
   });
 };
 
@@ -79,11 +86,12 @@ const MarketplaceResults = async ({ params, searchParams }: HomeProps) => {
     activeMode = filters.category === "lease" ? "lease" : "buy";
     const hasSearchCriteria = createMarketplaceSearchParams(filters).size > 0;
     const desktopSearchVariant =
-      !leadSite.staticDemoMode && hasSearchCriteria ? "results" : "discovery";
-    const [{ facets, listings, totalListings }, taxonomy] = await Promise.all([
-      getPublicMarketplaceListings(filters),
-      getPublicVehicleTaxonomy(filters.category),
-    ]);
+      !isDealershipSite && hasSearchCriteria ? "results" : "discovery";
+    const [{ facets, listings, totalListings }, taxonomyByCategory] =
+      await Promise.all([
+        getPublicMarketplaceListings(filters),
+        getPublicVehicleTaxonomies(),
+      ]);
     const pageRedirect = getMarketplacePageRedirect({
       basePath: getLocalizedPath(normalizeSeoLocale(locale), "/"),
       filters,
@@ -93,20 +101,51 @@ const MarketplaceResults = async ({ params, searchParams }: HomeProps) => {
     if (pageRedirect) {
       redirect(pageRedirect);
     }
-
     return (
       <>
         <MarketplaceShell
-          appBaseUrl={
-            leadSite.staticDemoMode ? undefined : getPublicAppBaseUrl()
-          }
+          appBaseUrl={isDealershipSite ? undefined : getPublicAppBaseUrl()}
           defaultViewMode="grid"
+          desktopDiscoverySlot={
+            isDealershipSite ? (
+              <DealerDesktopDiscoveryContent
+                articles={getPublicContentCards(normalizeSeoLocale(locale))
+                  .slice(0, 4)
+                  .map((item) => ({
+                    category: item.category,
+                    href: getLocalizedPath(
+                      normalizeSeoLocale(locale),
+                      `/${item.type === "article" ? "blog" : "guides"}/${item.slug}`
+                    ),
+                    image: item.desktopImage ?? item.image,
+                    meta: item.meta,
+                    shortTitle: getDesktopContentCardTitle(
+                      item,
+                      normalizeSeoLocale(locale)
+                    ),
+                    title: item.title,
+                  }))}
+                currentPath={getLocalizedPath(
+                  normalizeSeoLocale(locale),
+                  "/cars"
+                )}
+                listings={listings}
+                locale={locale}
+                totalListings={totalListings}
+              />
+            ) : undefined
+          }
           desktopSearchVariant={desktopSearchVariant}
           filters={filters}
           inventoryFacets={facets}
           listings={listings}
           locale={locale}
-          taxonomy={taxonomy}
+          searchListings={getPublicInventorySearchListings(
+            filters.category,
+            listings
+          )}
+          taxonomy={taxonomyByCategory[filters.category]}
+          taxonomyByCategory={taxonomyByCategory}
           totalListings={totalListings}
         />
         <Footer locale={locale} />
@@ -129,6 +168,7 @@ const MarketplaceResults = async ({ params, searchParams }: HomeProps) => {
 };
 
 const Home = ({ params, searchParams }: HomeProps) => {
+  requirePublicSitePath("/");
   return (
     <Suspense fallback={<PublicRouteLoading />}>
       <MarketplaceResults params={params} searchParams={searchParams} />

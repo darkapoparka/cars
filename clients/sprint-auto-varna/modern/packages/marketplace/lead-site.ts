@@ -1,22 +1,168 @@
-import { dealer, mapsEmbedUrl, mapsUrl } from './dealer-profile';
+import { carsLocale } from './cars-locale';
+import type {
+  PublicInventoryFilterLayout,
+  PublicSiteArtwork,
+  PublicSiteConfig,
+} from "@repo/marketplace-domain/site-config";
+import { inventoryCopy } from "./content/inventory-copy";
 
-type LeadSiteCurrency = 'AED' | 'BGN' | 'EUR' | 'USD';
-export interface LeadSiteConfig {
-  readonly accent:string; readonly address:string; readonly city:string;
-  readonly contactUrl:string; readonly country:string; readonly countryCode:string;
-  readonly currency:LeadSiteCurrency; readonly email:string; readonly heroPath:string;
-  readonly locale:string; readonly logoPath:string; readonly mapsEmbedUrl:string;
-  readonly mapsUrl:string; readonly name:string; readonly phoneDisplay:string;
-  readonly phoneHref:string; readonly shortName:string; readonly slug:string;
-  readonly socialLinks?:Partial<Record<'youtube'|'instagram'|'facebook'|'tiktok',string>>;
-  readonly staticDemoMode:boolean; readonly tagline:string;
+export type LeadSiteCurrency = "AED" | "BGN" | "EUR" | "USD";
+
+export interface LeadSiteCopy {
+  readonly address: string;
+  readonly city: string;
+  readonly country: string;
+  readonly tagline: string;
 }
 
-export const leadSite:LeadSiteConfig = {
-  accent:dealer.accent, address:dealer.address, city:dealer.city,
-  contactUrl:dealer.phoneHref, country:dealer.country, countryCode:'BG',
-  currency:'EUR', email:'', heroPath:dealer.hero, locale:'bg-BG',
-  logoPath:dealer.logo, mapsEmbedUrl, mapsUrl, name:dealer.name,
-  phoneDisplay:dealer.phone, phoneHref:dealer.phoneHref, shortName:dealer.shortName,
-  slug:dealer.slug, socialLinks:{}, staticDemoMode:true, tagline:dealer.tagline
+export type DealerInventoryCopy = Readonly<
+  Record<
+    string,
+    {
+      readonly sourceDescription?: string;
+      readonly bg: {
+        readonly description: string;
+        readonly imageAlts: readonly string[];
+      };
+      readonly en: {
+        readonly description: string;
+        readonly imageAlts: readonly string[];
+      };
+    }
+  >
+>;
+
+export interface LeadSiteConfig {
+  readonly accent: string;
+  readonly address: string;
+  readonly artwork?: Partial<PublicSiteArtwork>;
+  readonly city: string;
+  readonly colorMode?: "light";
+  readonly contactUrl: string;
+  readonly country: string;
+  readonly countryCode: string;
+  readonly currency: LeadSiteCurrency;
+  readonly desktopAccent?: string;
+  readonly desktopInventoryFilterLayout?: PublicInventoryFilterLayout;
+  /** Source-bound master identity; dealer adaptation changes the slug and disables it. */
+  readonly desktopPreviewIdentity?: {
+    readonly sourceSlug: string;
+    readonly label: string;
+    readonly wordmark: string;
+    readonly markArtwork?: string;
+    readonly copy: Readonly<Record<"bg" | "en", string>>;
+  };
+  readonly district: { readonly bg: string; readonly en: string };
+  readonly email: string;
+  readonly financingArtworkPath: string;
+  readonly heroPath: string;
+  readonly iconPath?: string;
+  readonly inventoryCategories?: readonly (
+    | "car"
+    | "truck"
+    | "van"
+    | "motorbike"
+  )[];
+  readonly inventoryCopy?: DealerInventoryCopy;
+  readonly locale: string;
+  readonly localizedCopy?: Readonly<Record<"bg" | "en", LeadSiteCopy>>;
+  readonly logoInversePath?: string;
+  readonly logoPath: string;
+  readonly logoOnLight: string;
+  readonly logoOnDark: string;
+  readonly logoOnAccent: string;
+  readonly mapsEmbedUrl: string;
+  readonly mapsUrl: string;
+  readonly mobileFinancingArtworkPath?: string;
+  readonly mobileShowroomArtworkPath?: string;
+  readonly name: string;
+  readonly phoneDisplay: string;
+  readonly phoneHref: string;
+  readonly publicDefaultLocale?: "bg" | "en";
+  readonly publicLocales?: readonly ("bg" | "en")[];
+  readonly sellCategoryAssets: Readonly<
+    Record<"car" | "motorbike" | "truck" | "van", string>
+  >;
+  readonly services?: Partial<PublicSiteConfig["services"]>;
+  readonly shortName: string;
+  readonly slug: string;
+  readonly socialLinks?: Partial<
+    Record<"youtube" | "instagram" | "facebook" | "tiktok", string>
+  >;
+  readonly staticDemoMode: boolean;
+  readonly tagline: string;
+  readonly websiteKind?: PublicSiteConfig["kind"];
+}
+
+// LEAD_SITE_CONFIG_START
+export const leadSite: LeadSiteConfig = {
+  websiteKind: "dealership",
+  publicLocales: carsLocale.enabledLocales,
+  publicDefaultLocale: carsLocale.defaultLocale,
+  inventoryCopy,
+  localizedCopy: {
+  "bg": {
+    "address": "Варна, Владислав Варненчик, бул. „Цар Освободител“, втората автокъща след Тилком и Италмодалуче посока Аксаково",
+    "city": "Варна",
+    "country": "България",
+    "tagline": "Спринт ауто — автомобили и съдействие в Варна."
+  },
+  "en": {
+    "address": "Varna, Vladislav Varnenchik, Tsar Osvoboditel, vtorata avtokashta sled Tilkom i Italmodaluche posoka Aksakovo",
+    "city": "Varna",
+    "country": "Bulgaria",
+    "tagline": "СПРИНТ — vehicles and dealer support in Varna."
+  }
+},
+  accent: "#30343b",
+  desktopAccent: "#4b5057",
+  desktopInventoryFilterLayout: "quick",
+  desktopPreviewIdentity: {
+    sourceSlug: "day-night-auto-group",
+    label: "Modern",
+    wordmark: "Modern",
+    markArtwork: "/images/brand/modern-logo-v2.webp",
+    copy: {
+      bg: "Открийте следващия си автомобил.",
+      en: "Find your next car.",
+    },
+  },
+  address: "Варна, Владислав Варненчик, бул. „Цар Освободител“, втората автокъща след Тилком и Италмодалуче посока Аксаково",
+  city: "Варна",
+  district: { bg: "Варна", en: "Varna" },
+  sellCategoryAssets: {
+    car: "/lead-sell-car-v1.png",
+    motorbike: "/lead-sell-motorcycle-v1.png",
+    truck: "/lead-sell-truck-v1.png",
+    van: "/lead-sell-van-v1.png",
+  },
+  financingArtworkPath: "/images/services/leasing-red-suv-v2.webp",
+  mobileFinancingArtworkPath: "/images/lease/mobile-pdp-finance-studio-v2.webp",
+  mobileShowroomArtworkPath:
+    "/images/lease/mobile-pdp-showroom-blue-hour-v1.webp",
+  contactUrl: "tel:+359888006224",
+  country: "Bulgaria",
+  countryCode: carsLocale.dealerCountry,
+  currency: carsLocale.inventoryCurrency,
+  email: "",
+  heroPath: "/lead-hero.jpg",
+  locale: "bg-BG",
+  logoPath: "/dealer-brand/v2-7a86e1262e7c5d63/logo-on-light.webp",
+  logoInversePath: "/dealer-brand/v2-7a86e1262e7c5d63/logo-on-dark.webp",
+  logoOnLight: "/registered-branding/onLight.png",
+  logoOnDark: "/registered-branding/onDark.png",
+  logoOnAccent: "/registered-branding/onLight.png",
+  mapsEmbedUrl:
+    "https://maps.google.com/maps?q=%D0%A1%D0%BF%D1%80%D0%B8%D0%BD%D1%82%20%D0%B0%D1%83%D1%82%D0%BE%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D1%81%D0%BB%D0%B0%D0%B2%20%D0%92%D0%B0%D1%80%D0%BD%D0%B5%D0%BD%D1%87%D0%B8%D0%BA%2C%20%D0%B1%D1%83%D0%BB.%20%E2%80%9E%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%E2%80%9C%2C%20%D0%B2%D1%82%D0%BE%D1%80%D0%B0%D1%82%D0%B0%20%D0%B0%D0%B2%D1%82%D0%BE%D0%BA%D1%8A%D1%89%D0%B0%20%D1%81%D0%BB%D0%B5%D0%B4%20%D0%A2%D0%B8%D0%BB%D0%BA%D0%BE%D0%BC%20%D0%B8%20%D0%98%D1%82%D0%B0%D0%BB%D0%BC%D0%BE%D0%B4%D0%B0%D0%BB%D1%83%D1%87%D0%B5%20%D0%BF%D0%BE%D1%81%D0%BE%D0%BA%D0%B0%20%D0%90%D0%BA%D1%81%D0%B0%D0%BA%D0%BE%D0%B2%D0%BE&z=16&output=embed",
+  mapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=%D0%A1%D0%BF%D1%80%D0%B8%D0%BD%D1%82%20%D0%B0%D1%83%D1%82%D0%BE%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D1%81%D0%BB%D0%B0%D0%B2%20%D0%92%D0%B0%D1%80%D0%BD%D0%B5%D0%BD%D1%87%D0%B8%D0%BA%2C%20%D0%B1%D1%83%D0%BB.%20%E2%80%9E%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%E2%80%9C%2C%20%D0%B2%D1%82%D0%BE%D1%80%D0%B0%D1%82%D0%B0%20%D0%B0%D0%B2%D1%82%D0%BE%D0%BA%D1%8A%D1%89%D0%B0%20%D1%81%D0%BB%D0%B5%D0%B4%20%D0%A2%D0%B8%D0%BB%D0%BA%D0%BE%D0%BC%20%D0%B8%20%D0%98%D1%82%D0%B0%D0%BB%D0%BC%D0%BE%D0%B4%D0%B0%D0%BB%D1%83%D1%87%D0%B5%20%D0%BF%D0%BE%D1%81%D0%BE%D0%BA%D0%B0%20%D0%90%D0%BA%D1%81%D0%B0%D0%BA%D0%BE%D0%B2%D0%BE",
+  name: "Спринт ауто",
+  phoneDisplay: "0888 006 224",
+  phoneHref: "tel:+359888006224",
+  shortName: "СПРИНТ",
+  slug: "sprint-auto-varna",
+  socialLinks: {},
+  staticDemoMode: true,
+  tagline: "Спринт ауто — автомобили и съдействие в Варна.",
 };
+// LEAD_SITE_CONFIG_END

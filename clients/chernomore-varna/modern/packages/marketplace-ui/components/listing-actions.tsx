@@ -10,33 +10,41 @@ import {
   isListingShareCancellation,
   shareListing,
 } from "../lib/listing-action-policy";
+import { mobileImageIconActionClassName } from "../lib/mobile-header-icon-action";
 
 interface ListingActionsProps {
+  readonly compactLabel?: boolean;
   readonly floating?: boolean;
+  readonly iconOnly?: boolean;
   readonly listingTitle: string;
   readonly listingUrl: string;
   readonly locale?: string;
   readonly saveHref?: string;
+  readonly showPrint?: boolean;
 }
 
 export const ListingActions = ({
   floating = false,
+  compactLabel = false,
+  iconOnly = false,
   listingTitle,
   listingUrl,
   locale,
   saveHref,
+  showPrint = true,
 }: ListingActionsProps) => {
   const copy = getListingActionCopy(locale);
+  const shortShareLabel = locale?.startsWith("bg") ? "Сподели" : "Share";
   const [sharePending, setSharePending] = useState(false);
   const [shareStatus, setShareStatus] = useState("");
   const actionClassName = cn(
-    floating
-      ? "size-11 rounded-full border border-border/70 bg-card/95 shadow-sm backdrop-blur"
-      : "size-10 rounded-lg"
+    floating ? mobileImageIconActionClassName : "size-10 rounded-lg"
   );
 
   const handleShare = async () => {
-    if (sharePending) return;
+    if (sharePending) {
+      return;
+    }
 
     setSharePending(true);
     setShareStatus(copy.shareStatus.pending);
@@ -68,7 +76,7 @@ export const ListingActions = ({
           </Link>
         </Button>
       ) : null}
-      {floating ? null : (
+      {floating || !showPrint ? null : (
         <Button
           aria-label={copy.print}
           className={actionClassName}
@@ -79,6 +87,7 @@ export const ListingActions = ({
           variant="secondary"
         >
           <Printer aria-hidden="true" className="size-4" />
+          <span className="hidden lg:inline">{copy.print}</span>
         </Button>
       )}
       <Button
@@ -88,6 +97,7 @@ export const ListingActions = ({
         disabled={sharePending}
         onClick={handleShare}
         size="icon"
+        title={iconOnly ? copy.share : undefined}
         type="button"
         variant="secondary"
       >
@@ -98,6 +108,11 @@ export const ListingActions = ({
           />
         ) : (
           <Share2 aria-hidden="true" className="size-4" />
+        )}
+        {floating || iconOnly ? null : (
+          <span className="hidden lg:inline">
+            {compactLabel ? shortShareLabel : copy.share}
+          </span>
         )}
       </Button>
       <span aria-live="polite" className="sr-only">

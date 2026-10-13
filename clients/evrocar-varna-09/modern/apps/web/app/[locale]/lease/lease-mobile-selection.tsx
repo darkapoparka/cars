@@ -1,11 +1,13 @@
 "use client";
 
 import { Button } from "@repo/design-system/components/ui/button";
+import { cn } from "@repo/design-system/lib/utils";
 import {
   fallbackVehicleTaxonomy,
   type MarketplaceSearchParams,
   parseMarketplaceSearchParams,
 } from "@repo/marketplace";
+import { publicSite } from "@repo/marketplace/site-config";
 import {
   getMarketplaceFilterSummary,
   getMobileQuickPillClassName,
@@ -15,6 +17,7 @@ import {
 } from "@repo/marketplace-ui";
 import { DealerUiIcon } from "@repo/marketplace-ui/components/dealer-ui-icon";
 import { MobilePillRail } from "@repo/marketplace-ui/components/mobile-pill-rail";
+import { mobileMarketplaceOverlayPrimaryActionClassName } from "@repo/marketplace-ui/lib/mobile-overlay-styles";
 import Link from "next/link";
 import { useState } from "react";
 import { MobileDealerServiceHero } from "../components/mobile-dealer-service-hero";
@@ -105,46 +108,54 @@ const LeaseQuickFilterRail = ({
   return (
     <fieldset
       aria-label={locale === "bg" ? "Филтри за автомобил" : "Vehicle filters"}
-      className="min-w-0"
+      className="flex min-w-0 items-center gap-2"
       data-slot="lease-quick-filters"
     >
-      <MobilePillRail className="flex gap-2" data-slot="lease-quick-rail">
-        <LeaseMobilePreferences locale={locale} {...preferences} />
-        <button
-          aria-haspopup="dialog"
-          className={getMobileQuickPillClassName(hasFilters)}
-          onClick={() => setFilterOpen(true)}
-          type="button"
+      <button
+        aria-haspopup="dialog"
+        className={getMobileQuickPillClassName(hasFilters)}
+        onClick={() => setFilterOpen(true)}
+        type="button"
+      >
+        <DealerUiIcon className="size-4" name="filters" />
+        {locale === "bg" ? "Филтри" : "Filters"}
+      </button>
+      <div className="min-w-0 flex-1">
+        <MobilePillRail
+          className="flex gap-2"
+          data-slot="lease-quick-rail"
+          label={locale === "bg" ? "Бързи филтри" : "Quick filters"}
         >
-          <DealerUiIcon className="size-4" name="filters" />
-          {locale === "bg" ? "Филтри" : "Filters"}
-        </button>
-        {leaseFilterKeys.map((key) => {
-          const summary = getMarketplaceFilterSummary(key, filters, locale);
-          return (
+          <LeaseMobilePreferences locale={locale} {...preferences} />
+          {leaseFilterKeys.map((key) => {
+            const summary = getMarketplaceFilterSummary(key, filters, locale);
+            return (
+              <button
+                aria-haspopup="dialog"
+                aria-label={
+                  summary ? `${labels[key]}: ${summary}` : labels[key]
+                }
+                className={getMobileQuickPillClassName(Boolean(summary))}
+                key={key}
+                onClick={() => setActiveFilter(key)}
+                type="button"
+              >
+                {summary ?? labels[key]}
+                <DealerUiIcon className="size-3.5" name="chevronDown" />
+              </button>
+            );
+          })}
+          {hasFilters ? (
             <button
-              aria-haspopup="dialog"
-              aria-label={summary ? `${labels[key]}: ${summary}` : labels[key]}
-              className={getMobileQuickPillClassName(Boolean(summary))}
-              key={key}
-              onClick={() => setActiveFilter(key)}
+              className="min-h-11 shrink-0 rounded-full px-3 font-medium text-meta text-zinc-600 focus-visible:outline-2 focus-visible:outline-ring"
+              onClick={() => setFilters(parseMarketplaceSearchParams())}
               type="button"
             >
-              {summary ?? labels[key]}
-              <DealerUiIcon className="size-3.5" name="chevronDown" />
+              {locale === "bg" ? "Нулирай" : "Reset"}
             </button>
-          );
-        })}
-        {hasFilters ? (
-          <button
-            className="min-h-11 shrink-0 rounded-full px-3 font-medium text-[14px] text-zinc-600 focus-visible:outline-2 focus-visible:outline-ring"
-            onClick={() => setFilters(parseMarketplaceSearchParams())}
-            type="button"
-          >
-            {locale === "bg" ? "Нулирай" : "Reset"}
-          </button>
-        ) : null}
-      </MobilePillRail>
+          ) : null}
+        </MobilePillRail>
+      </div>
     </fieldset>
   );
 };
@@ -185,8 +196,10 @@ export const LeaseMobileSelection = ({
       <MobileDealerServiceHero
         helpAction={<LeaseInformationDrawer faqs={faqs} locale={locale} />}
         imageClassName="object-center"
-        imageSrc="/images/lease/day-night-mobile-studio-v2.webp"
+        imageSrc={publicSite.artwork.financeHero}
         locale={locale}
+        title={locale === "bg" ? "Лизинг на автомобил" : "Vehicle financing"}
+        titleId="lease-mobile-title"
         tone="leasing"
       >
         <div className="h-full">
@@ -199,12 +212,9 @@ export const LeaseMobileSelection = ({
         </div>
       </MobileDealerServiceHero>
       <div
-        className={`${mobileDealerContentClassName} pb-6`}
+        className={cn(mobileDealerContentClassName, "pt-2.5 pb-6")}
         data-slot="mobile-dealer-content"
       >
-        <h1 className="sr-only" id="lease-mobile-title" tabIndex={-1}>
-          {locale === "bg" ? "Лизинг на автомобил" : "Vehicle financing"}
-        </h1>
         {
           <LeaseQuickFilterRail
             filters={filters}
@@ -218,7 +228,7 @@ export const LeaseMobileSelection = ({
 
         {selectedVehicle ? (
           <>
-            <div className="mt-3">
+            <div className="mt-2.5">
               <LeaseSelectedVehicle
                 locale={locale}
                 onClear={onClearVehicle}
@@ -227,7 +237,7 @@ export const LeaseMobileSelection = ({
             </div>
             <Button
               asChild
-              className="mt-3 h-12 w-full justify-between rounded-xl bg-[var(--lead-site-accent)] px-4 font-semibold text-[15px] text-white shadow-none hover:bg-[var(--lead-site-accent-hover)] active:bg-[var(--lead-site-accent-hover)]"
+              className={`${mobileMarketplaceOverlayPrimaryActionClassName} mt-3 justify-between`}
               data-slot="lease-finance-action"
             >
               <Link href={financeRequestHref}>
@@ -241,9 +251,12 @@ export const LeaseMobileSelection = ({
             </Button>
           </>
         ) : (
-          <div className="mt-3 grid gap-2" data-slot="lease-vehicle-inventory">
+          <div
+            className="mt-2.5 grid gap-2"
+            data-slot="lease-vehicle-inventory"
+          >
             {filtered.length ? (
-              filtered.map((vehicle) => (
+              filtered.map((vehicle, index) => (
                 <LeaseSelectedVehicle
                   key={vehicle.id}
                   locale={locale}
@@ -259,11 +272,12 @@ export const LeaseMobileSelection = ({
                         ?.focus({ preventScroll: true })
                     );
                   }}
+                  priority={index < 2}
                   vehicle={vehicle}
                 />
               ))
             ) : (
-              <output className="rounded-xl bg-white px-4 py-8 text-center text-[15px] text-zinc-600">
+              <output className="rounded-xl bg-white px-4 py-8 text-center text-body text-zinc-600">
                 {locale === "bg"
                   ? "Няма автомобили с тези критерии. Променете филтрите или търсенето."
                   : "No cars match these criteria. Adjust your filters or search."}

@@ -13,6 +13,14 @@ import {
   Truck,
   X,
 } from "lucide-react";
+import type { MouseEvent } from "react";
+import { getMarketplaceControlCopy } from "../lib/marketplace-control-copy";
+import { getMobileDiscoveryTitle } from "../lib/mobile-dealer-title";
+import {
+  mobileSearchIconClassName,
+  mobileSearchTriggerClassName,
+  mobileSearchTriggerLabelClassName,
+} from "../lib/mobile-form-control";
 import { mobileHeaderIconActionClassName } from "../lib/mobile-header-icon-action";
 import { getMobileQuickPillClassName } from "../lib/mobile-quick-pill";
 import { DealerMobileBrandBar } from "./dealer-mobile-brand-bar";
@@ -22,6 +30,16 @@ import {
   mobileDealerContentClassName,
 } from "./mobile-dealer-chrome";
 import { MobilePillRail } from "./mobile-pill-rail";
+
+// Safari does not focus pointer-activated buttons. Establish the actual
+// trigger before the overlay coordinator captures focus for dismissal.
+const openFromButton = (
+  event: MouseEvent<HTMLButtonElement>,
+  open: () => void
+) => {
+  event.currentTarget.focus({ preventScroll: true });
+  open();
+};
 
 const categoryIcons = {
   car: CarFront,
@@ -72,25 +90,12 @@ interface MobileQuickFilterItem {
 }
 
 interface MobileDealerQuickFiltersProps {
+  readonly isBg: boolean;
   readonly items: readonly MobileQuickFilterItem[];
 }
 
-const getMobileSearchText = (
-  discoverySummary: string,
-  filterCount: number,
-  isBg: boolean,
-  totalListings: number
-) => {
-  if (filterCount > 0) {
-    return discoverySummary;
-  }
-
-  if (isBg) {
-    return `Търси ${totalListings} ${totalListings === 1 ? "автомобил" : "автомобила"}`;
-  }
-
-  return `Search ${totalListings} ${totalListings === 1 ? "vehicle" : "vehicles"}`;
-};
+const getMobileSearchText = (isBg: boolean) =>
+  getMarketplaceControlCopy(isBg ? "bg" : "en").search.makeModelPlaceholder;
 
 const categoryLabels: Record<VehicleCategory, { bg: string; en: string }> = {
   car: { bg: "Коли", en: "Cars" },
@@ -149,38 +154,29 @@ const MobileSearchButton = ({
         : searchLabel
     }
     className={cn(
-      "flex min-w-0 items-center gap-2.5 text-left ring-1 ring-inset transition-colors focus-visible:z-10 focus-visible:outline-2 focus-visible:outline-offset-2",
+      mobileSearchTriggerClassName,
       onDark
         ? "bg-white ring-white/15 hover:bg-zinc-100 focus-visible:outline-[var(--lead-site-accent-bright)]"
         : "bg-zinc-100 ring-zinc-200/80 hover:bg-zinc-200 focus-visible:outline-ring",
-      isCompact
-        ? "h-11 flex-1 rounded-full px-3"
-        : "h-[52px] w-full rounded-full px-4"
+      isCompact ? "h-11 flex-1 px-3" : "w-full"
     )}
     data-slot="mobile-discovery-search"
-    onClick={onOpenSearch}
+    onClick={(event) => openFromButton(event, onOpenSearch)}
     type="button"
   >
     <Search
       aria-hidden="true"
-      className="size-[18px] shrink-0 text-zinc-600"
-      strokeWidth={2}
+      className={mobileSearchIconClassName}
+      strokeWidth={1.75}
     />
-    <span
-      className={cn(
-        "min-w-0 flex-1 truncate tabular-nums leading-5",
-        isCompact ? "text-[15px]" : "text-[16px]",
-        hasMakeModelSelection
-          ? "font-medium text-zinc-950"
-          : "font-normal text-zinc-600"
-      )}
-    >
+    <span className={mobileSearchTriggerLabelClassName}>
       {hasMakeModelSelection ? makeModelValue : searchLabel}
     </span>
     {isCompact ? null : (
       <ChevronRight
         aria-hidden="true"
-        className="size-5 shrink-0 text-zinc-950"
+        className={mobileSearchIconClassName}
+        strokeWidth={1.75}
       />
     )}
   </button>
@@ -222,7 +218,7 @@ const MobileCompactDiscoverySurface = ({
         aria-label={categoryLabel}
         className={mobileHeaderIconActionClassName}
         data-slot="mobile-discovery-category"
-        onClick={onOpenCategory}
+        onClick={(event) => openFromButton(event, onOpenCategory)}
         title={categoryLabels[category][isBg ? "bg" : "en"]}
         type="button"
       >
@@ -246,13 +242,13 @@ const MobileCompactDiscoverySurface = ({
         }`}
         className={mobileHeaderIconActionClassName}
         data-slot="mobile-discovery-filters"
-        onClick={onOpenFilters}
+        onClick={(event) => openFromButton(event, onOpenFilters)}
         title={getConditionsValue(filterCount, isBg)}
         type="button"
       >
         <DealerMobileHeaderIcon icon={SlidersHorizontal} kind="filters" />
         {filterCount > 0 ? (
-          <span className="absolute -top-1 -right-1 grid min-h-4 min-w-4 place-items-center rounded-full bg-[var(--lead-site-accent)] px-1 font-semibold text-[10px] text-white ring-2 ring-zinc-950">
+          <span className="absolute -top-1 -right-1 grid min-h-5 min-w-5 place-items-center rounded-full bg-brand px-1 font-semibold text-brand-foreground text-micro ring-2 ring-zinc-950">
             {filterCount}
           </span>
         ) : null}
@@ -263,23 +259,29 @@ const MobileCompactDiscoverySurface = ({
 
 export const MobileDealerQuickFilters = ({
   items,
+  isBg,
 }: MobileDealerQuickFiltersProps) => (
   <div
-    className={cn(mobileDealerContentClassName, "overflow-hidden pb-3")}
+    // The pill fill sits 2px inside its tap target; keep each visible gap at 12px.
+    className={cn(
+      mobileDealerContentClassName,
+      "overflow-hidden pt-2.5 pb-2.5"
+    )}
     data-slot="mobile-dealer-content"
   >
     <MobilePillRail
       className="flex items-center gap-2"
       data-slot="mobile-discovery-quick-rail"
+      label={isBg ? "Бързи филтри" : "Quick filters"}
     >
       {items.map((item) => (
         <button
           aria-haspopup={item.clearLabel ? undefined : "dialog"}
           aria-label={item.clearLabel}
           aria-pressed={item.active}
-          className={getMobileQuickPillClassName(item.active)}
+          className={cn("snap-start", getMobileQuickPillClassName(item.active))}
           key={item.id}
-          onClick={item.onClick}
+          onClick={(event) => openFromButton(event, item.onClick)}
           type="button"
         >
           <span className="max-w-36 truncate">{item.label}</span>
@@ -305,14 +307,12 @@ export const MobileDealerQuickFilters = ({
 export const MobileCompactSearchHeader = ({
   category,
   categoryLabel,
-  discoverySummary,
   filterCount,
   isBg,
   makeModelLabel,
   onOpenCategory,
   onOpenFilters,
   onOpenSearch,
-  totalListings,
   visible,
 }: MobileCompactSearchHeaderProps) => {
   if (!visible) {
@@ -320,7 +320,7 @@ export const MobileCompactSearchHeader = ({
   }
 
   return (
-    <div className="fixed inset-x-0 top-0 z-50 rounded-b-[18px] bg-zinc-950 px-3 pt-[max(0.75rem,env(safe-area-inset-top))] pb-2 text-white shadow-[0_3px_12px_rgba(0,0,0,0.16)] sm:px-4 lg:hidden">
+    <div className="fade-in-0 slide-in-from-top-2 fixed inset-x-0 top-0 z-50 animate-in rounded-b-[18px] bg-brand px-4 pt-[max(0.75rem,env(safe-area-inset-top))] pb-2 text-white shadow-[0_3px_12px_rgba(0,0,0,0.16)] duration-150 [--lead-site-accent-bright:white] motion-reduce:animate-none lg:hidden">
       <div className="mx-auto w-full max-w-lg">
         <MobileCompactDiscoverySurface
           category={category}
@@ -331,12 +331,7 @@ export const MobileCompactSearchHeader = ({
           onOpenCategory={onOpenCategory}
           onOpenFilters={onOpenFilters}
           onOpenSearch={onOpenSearch}
-          searchLabel={getMobileSearchText(
-            discoverySummary,
-            filterCount,
-            isBg,
-            totalListings
-          )}
+          searchLabel={getMobileSearchText(isBg)}
         />
       </div>
     </div>
@@ -346,7 +341,6 @@ export const MobileCompactSearchHeader = ({
 export const MobileDealerDiscoveryHeader = ({
   category,
   categoryLabel,
-  discoverySummary,
   filterCount,
   isBg,
   locale,
@@ -354,20 +348,14 @@ export const MobileDealerDiscoveryHeader = ({
   onOpenCategory,
   onOpenFilters,
   onOpenSearch,
-  totalListings,
 }: MobileDealerDiscoveryHeaderProps) => {
   const makeModelValue = getMakeModelValue(makeModelLabel, isBg);
   const hasMakeModelSelection =
     makeModelValue !== "Всички марки" && makeModelValue !== "All makes";
-  const searchLabel = getMobileSearchText(
-    discoverySummary,
-    filterCount,
-    isBg,
-    totalListings
-  );
+  const searchLabel = getMobileSearchText(isBg);
 
   return (
-    <div className="bg-zinc-950 text-white">
+    <div className="bg-brand text-white [--lead-site-accent-bright:white]">
       <MobileDealerChrome
         brandRow={
           <div className="grid h-11 grid-cols-[2.75rem_minmax(0,1fr)_2.75rem] items-center gap-3">
@@ -376,7 +364,7 @@ export const MobileDealerDiscoveryHeader = ({
               aria-label={categoryLabel}
               className={mobileHeaderIconActionClassName}
               data-slot="mobile-discovery-category"
-              onClick={onOpenCategory}
+              onClick={(event) => openFromButton(event, onOpenCategory)}
               title={categoryLabels[category][isBg ? "bg" : "en"]}
               type="button"
             >
@@ -392,19 +380,20 @@ export const MobileDealerDiscoveryHeader = ({
               }`}
               className={mobileHeaderIconActionClassName}
               data-slot="mobile-discovery-filters"
-              onClick={onOpenFilters}
+              onClick={(event) => openFromButton(event, onOpenFilters)}
               title={getConditionsValue(filterCount, isBg)}
               type="button"
             >
               <DealerMobileHeaderIcon icon={SlidersHorizontal} kind="filters" />
               {filterCount > 0 ? (
-                <span className="absolute -top-1 -right-1 grid min-h-4 min-w-4 place-items-center rounded-full bg-[var(--lead-site-accent)] px-1 font-semibold text-[10px] text-white ring-2 ring-zinc-950">
+                <span className="absolute -top-1 -right-1 grid min-h-5 min-w-5 place-items-center rounded-full bg-brand px-1 font-semibold text-brand-foreground text-micro ring-2 ring-zinc-950">
                   {filterCount}
                 </span>
               ) : null}
             </button>
           </div>
         }
+        title={getMobileDiscoveryTitle(category, isBg)}
       >
         <MobileSearchButton
           hasMakeModelSelection={hasMakeModelSelection}

@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "dealer": "tesi-car-varna",
+  "kind": "personalized-source-candidate-not-an-approved-release",
+  "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+  "candidateSourceDigest": "6c127d310d13703a27a483add9a7f0f2e7cefe41ef9e03a1fbda29f48c696668",
+  "qualificationContextPath": ".client/native-qualification-context.json",
+  "qualificationContextSha256": "dbc54f32b8442850584e9e10ccbce30a882738a03dec4ea83a5c8a356a87ad92",
+  "qualificationLockPath": ".client/native-qualification-lock.json",
+  "qualificationLockSha256": "6e4f9f9a08175786813758c4bdf82b63dc36ddc9b7d6c4eafa2223745b25e5bb",
+  "sourceDeltaReview": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
+    "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975",
+    "reviewedAt": "2026-10-11T21:04:02.173Z"
+  },
+  "nativeApproval": false,
+  "hostedApproval": false
+}

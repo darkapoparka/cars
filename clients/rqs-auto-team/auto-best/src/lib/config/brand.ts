@@ -1,15 +1,38 @@
-import { dealer } from '../data/dealer';
-
 export type BrandConfig = {
-  name:string; shortName:string; city:string; addressLine:string; address:string;
-  phone:string; phoneHref:`tel:${string}`; appointment:string; logo:`/${string}`;
-  youtubeUrl:string; instagramUrl:string; facebookUrl:string;
+  name: string;
+  shortName: string;
+  city: string;
+  showroomCoordinates: { latitude: number; longitude: number } | null;
+  addressLine: string;
+  address: string;
+  phone: string;
+  phoneHref: `tel:${string}`;
+  appointment: string;
+  logo: `/${string}`;
+  logoOnDark: `/${string}`;
+  youtubeUrl: `https://${string}` | '';
+  instagramUrl: `https://${string}` | '';
+  facebookUrl: `https://${string}` | '';
 };
 
-// Unknown social accounts are deliberately empty, not another business's accounts.
+const name = "R.Q.S. Auto – Team";
+const shortName = "R.Q.S.";
+const city = "Варна";
+const addressLine = "бул. „Цар Освободител“, Владислав Варненчик — уточнете точния вход";
+
 export const brand = {
-  name:dealer.name, shortName:dealer.shortName, city:dealer.city,
-  addressLine:dealer.addressLine, address:dealer.address,
-  phone:dealer.phone, phoneHref:dealer.phoneHref, appointment:dealer.hours,
-  logo:dealer.logo, youtubeUrl:'', instagramUrl:'', facebookUrl:''
+  name,
+  shortName,
+  city,
+  showroomCoordinates: null,
+  youtubeUrl: "",
+  instagramUrl: "",
+  facebookUrl: "",
+  phone: "0876 997 791",
+  phoneHref: "tel:+359876997791",
+  addressLine,
+  address: "бул. „Цар Освободител“, Владислав Варненчик, Варна — точният номер не е потвърден",
+  appointment: "Потвърдете работното време и огледа по телефона",
+  logo: "/registered-branding/onLight.png",
+  logoOnDark: "/registered-branding/onDark.png"
 } as const satisfies BrandConfig;

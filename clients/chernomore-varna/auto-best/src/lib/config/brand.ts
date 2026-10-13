@@ -1,11 +1,38 @@
-import dealer from '$data/dealer-stock.json';
-export type BrandConfig = { name: string; shortName: string; city: string; addressLine: string; address: string; phone: string; secondaryPhone: string; phoneHref: `tel:${string}`; appointment: string; logo: `/${string}`; logoLight: `/${string}`; youtubeUrl: string; instagramUrl: string; facebookUrl: string; marketplaceUrl: string; hours: string; };
-const socials = dealer.socialLinks as Partial<Record<'youtube' | 'instagram' | 'facebook', string>>;
-export const brand: BrandConfig = {
-  name: dealer.name, shortName: dealer.shortName, city: dealer.city,
-  addressLine: dealer.address, address: `${dealer.address}, ${dealer.city}`,
-  phone: dealer.phone, secondaryPhone: dealer.secondaryPhone, phoneHref: `tel:${dealer.phoneE164}`,
-  appointment: 'Потвърдете огледа по телефона', hours: dealer.hours,
-  logo: '/dealer/logo-dark.svg', logoLight: '/dealer/logo-light.svg', marketplaceUrl: dealer.profile,
-  youtubeUrl: socials.youtube ?? '', instagramUrl: socials.instagram ?? '', facebookUrl: socials.facebook ?? ''
+export type BrandConfig = {
+  name: string;
+  shortName: string;
+  city: string;
+  showroomCoordinates: { latitude: number; longitude: number } | null;
+  addressLine: string;
+  address: string;
+  phone: string;
+  phoneHref: `tel:${string}`;
+  appointment: string;
+  logo: `/${string}`;
+  logoOnDark: `/${string}`;
+  youtubeUrl: `https://${string}` | '';
+  instagramUrl: `https://${string}` | '';
+  facebookUrl: `https://${string}` | '';
 };
+
+const name = "Черно море";
+const shortName = "Черно море";
+const city = "Варна";
+const addressLine = "Кръстовището на бул. Цар Освободител и бул. Константин и Фружин";
+
+export const brand = {
+  name,
+  shortName,
+  city,
+  showroomCoordinates: null,
+  youtubeUrl: "",
+  instagramUrl: "",
+  facebookUrl: "",
+  phone: "0888596963, 052/560733",
+  phoneHref: "tel:+359888596963",
+  addressLine,
+  address: "Кръстовището на бул. Цар Освободител и бул. Константин и Фружин, Варна, България",
+  appointment: "Потвърдете работното време директно с автокъщата.",
+  logo: "/dealer-brand/v2-f00c3e454420a624/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-f00c3e454420a624/logo-on-dark.webp"
+} as const satisfies BrandConfig;

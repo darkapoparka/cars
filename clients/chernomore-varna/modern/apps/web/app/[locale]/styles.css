@@ -1,5 +1,56 @@
 @import "@repo/design-system/styles/globals.css";
+/* Desktop theme aliases, photography and controls share the 1024px boundary. */
+@import "./desktop.css";
 @source "../../../../packages/marketplace-ui/**/*.{ts,tsx}";
+
+:root[data-site-kind="dealership"] {
+  --canvas: oklch(0.945 0 0);
+  --foreground: var(--desktop-body-text);
+  --card-foreground: var(--foreground);
+  --muted-foreground: var(--desktop-muted-text);
+  --control: var(--desktop-canvas);
+  --control-hover: var(--desktop-control-neutral-hover);
+  --selected: var(--brand);
+  --selected-foreground: var(--brand-foreground);
+  --primary: var(--brand);
+  --primary-foreground: var(--brand-foreground);
+  --focus: var(--brand);
+  --ring: var(--brand);
+  --inverse: var(--desktop-body-text);
+}
+
+@media (min-width: 1024px) {
+  :root[data-site-kind="dealership"] {
+    --canvas: var(--desktop-canvas);
+    background: var(--desktop-surround);
+  }
+
+  :root[data-site-kind="dealership"] body {
+    position: relative;
+    width: 100%;
+    min-height: 100dvh;
+    margin: 0;
+  }
+
+  :root[data-site-kind="dealership"]
+    :is([data-slot="marketplace-main"], [data-slot="listing-detail"]) {
+    border-radius: 0;
+  }
+
+  :root[data-site-kind="dealership"] [data-slot="public-marketplace-frame"] {
+    border-radius: 0;
+  }
+}
+
+@layer base {
+  @media (min-width: 1024px) {
+    :root[data-site-kind="dealership"] body[data-scroll-locked] {
+      padding: 0 !important;
+      /* The root gutter owns scrollbar space, including nested overlays. */
+      margin-right: 0 !important;
+    }
+  }
+}
 
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -12,65 +63,11 @@
   }
 }
 
-html {
-  font-kerning: normal;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-}
-
-/*
- * Public mobile type scale
- *
- * Keep body text comfortably readable while making labels, metadata,
- * dialogs, cards and page titles feel like one deliberate system.
- */
-@media (max-width: 1023px) {
-  :root {
-    --text-micro: 0.6875rem;
-    --text-micro--line-height: 0.875rem;
-    --text-meta: 0.8125rem;
-    --text-meta--line-height: 1.125rem;
-    --text-compact-control: 0.9375rem;
-    --text-compact-control--line-height: 1.25rem;
-    --text-body: 1rem;
-    --text-body--line-height: 1.5rem;
-    --text-prose: 1rem;
-    --text-prose--line-height: 1.625rem;
-    --text-dialog-title: 1.25rem;
-    --text-dialog-title--line-height: 1.5rem;
-    --text-dialog-description: 0.875rem;
-    --text-dialog-description--line-height: 1.25rem;
-    --text-card-title: 1rem;
-    --text-card-title--line-height: 1.25rem;
-    --text-price: 1.25rem;
-    --text-price--line-height: 1.5rem;
-    --text-price-lg: 1.5rem;
-    --text-price-lg--line-height: 1.75rem;
-    --text-section-title: 1.375rem;
-    --text-section-title--line-height: 1.75rem;
-    --text-section-title-lg: 1.625rem;
-    --text-section-title-lg--line-height: 2rem;
-    --text-page-title: 1.75rem;
-    --text-page-title--line-height: 2rem;
-    --text-page-title-lg: 2rem;
-    --text-page-title-lg--line-height: 2.25rem;
-    --text-display: 2rem;
-    --text-display--line-height: 2.25rem;
-  }
-
-  [data-slot="dialog-content"][class*="h-[100dvh]"] [data-slot="dialog-title"] {
-    font-size: 1.125rem;
-    font-weight: 600;
-    line-height: 1.5rem;
-    letter-spacing: -0.01em;
-  }
-}
-
 /*
  * Dealer mobile polish
  *
  * Keep the existing visual language intact: white surfaces, zinc controls,
- * and the dealer red accent for selected states and conversion actions.
+ * and the configured dealer accent for selected states and conversion actions.
  */
 @media (max-width: 1023px) {
   /* The source/timestamp strip is desktop metadata, not mobile UI. */
@@ -90,14 +87,14 @@ html {
    * command surface directly instead of relying on an ancestor selector.
    */
   [data-slot="drawer-content"] [data-slot="command"] {
-    background: white;
+    background: var(--panel);
   }
 
   [data-slot="drawer-content"] [data-slot="command-input-wrapper"] {
     height: 52px;
     padding-inline: 1rem;
     margin: 0 0.75rem 0.5rem;
-    background: #f4f4f5;
+    background: var(--control);
     border: 0;
     border-radius: 9999px;
   }
@@ -105,65 +102,25 @@ html {
   [data-slot="drawer-content"] [data-slot="command-input-wrapper"] svg {
     width: 18px;
     height: 18px;
-    color: #71717a;
+    color: var(--muted-foreground);
     opacity: 1;
   }
 
   [data-slot="drawer-content"] [data-slot="command-input"] {
     height: 100%;
     padding-block: 0;
-    font-size: 16px;
-    color: #09090b;
+    font-size: var(--text-body);
+    line-height: var(--text-body--line-height);
+    color: var(--foreground);
     border-radius: 0;
   }
 
   [data-slot="drawer-content"] [data-slot="command-input"]::placeholder {
-    color: #71717a;
+    color: var(--muted-foreground);
   }
 
   [data-slot="drawer-content"] [data-slot="command-list"] {
     padding-top: 0.125rem;
-  }
-
-  /*
-   * Full-screen mobile filter overlays keep the header available, but the
-   * primary action now follows the content. This avoids a permanent CTA bar
-   * consuming usable viewport space and keeps short sheets feeling lighter.
-   */
-  [data-slot="dialog-content"][class*="h-[100dvh]"]:has(
-      > [data-slot="dialog-footer"]
-    ) {
-    display: block;
-    overflow-y: auto;
-    overscroll-behavior-y: contain;
-    scroll-padding-bottom: calc(1rem + env(safe-area-inset-bottom));
-  }
-
-  [data-slot="dialog-content"][class*="h-[100dvh]"]:has(
-      > [data-slot="dialog-footer"]
-    )
-    > [data-slot="dialog-header"] {
-    position: sticky;
-    top: 0;
-    z-index: 10;
-  }
-
-  [data-slot="dialog-content"][class*="h-[100dvh]"]:has(
-      > [data-slot="dialog-footer"]
-    )
-    > [data-slot="dialog-header"]
-    + div {
-    min-height: auto;
-    overflow: visible;
-  }
-
-  [data-slot="dialog-content"][class*="h-[100dvh]"]:has(
-      > [data-slot="dialog-footer"]
-    )
-    > [data-slot="dialog-footer"] {
-    padding-top: 0.75rem;
-    padding-bottom: calc(1rem + env(safe-area-inset-bottom));
-    margin-top: 0;
   }
 }
 

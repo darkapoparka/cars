@@ -1,22 +1,89 @@
+import { carsLocale } from './cars-locale';
+import type {
+  PublicInventoryFilterLayout,
+  PublicSiteArtwork,
+  PublicSiteConfig,
+} from "@repo/marketplace-domain/site-config";
+import { inventoryCopy } from "./content/inventory-copy";
+
 export type LeadSiteCurrency = "AED" | "BGN" | "EUR" | "USD";
+
+export interface LeadSiteCopy {
+  readonly address: string;
+  readonly city: string;
+  readonly country: string;
+  readonly tagline: string;
+}
+
+export type DealerInventoryCopy = Readonly<
+  Record<
+    string,
+    {
+      readonly sourceDescription?: string;
+      readonly bg: {
+        readonly description: string;
+        readonly imageAlts: readonly string[];
+      };
+      readonly en: {
+        readonly description: string;
+        readonly imageAlts: readonly string[];
+      };
+    }
+  >
+>;
 
 export interface LeadSiteConfig {
   readonly accent: string;
   readonly address: string;
+  readonly artwork?: Partial<PublicSiteArtwork>;
   readonly city: string;
+  readonly colorMode?: "light";
   readonly contactUrl: string;
   readonly country: string;
   readonly countryCode: string;
   readonly currency: LeadSiteCurrency;
+  readonly desktopAccent?: string;
+  readonly desktopInventoryFilterLayout?: PublicInventoryFilterLayout;
+  /** Source-bound master identity; dealer adaptation changes the slug and disables it. */
+  readonly desktopPreviewIdentity?: {
+    readonly sourceSlug: string;
+    readonly label: string;
+    readonly wordmark: string;
+    readonly markArtwork?: string;
+    readonly copy: Readonly<Record<"bg" | "en", string>>;
+  };
+  readonly district: { readonly bg: string; readonly en: string };
   readonly email: string;
+  readonly financingArtworkPath: string;
   readonly heroPath: string;
+  readonly iconPath?: string;
+  readonly inventoryCategories?: readonly (
+    | "car"
+    | "truck"
+    | "van"
+    | "motorbike"
+  )[];
+  readonly inventoryCopy?: DealerInventoryCopy;
   readonly locale: string;
+  readonly localizedCopy?: Readonly<Record<"bg" | "en", LeadSiteCopy>>;
+  readonly logoInversePath?: string;
   readonly logoPath: string;
+  readonly logoOnLight: string;
+  readonly logoOnDark: string;
+  readonly logoOnAccent: string;
   readonly mapsEmbedUrl: string;
   readonly mapsUrl: string;
+  readonly mobileFinancingArtworkPath?: string;
+  readonly mobileShowroomArtworkPath?: string;
   readonly name: string;
   readonly phoneDisplay: string;
   readonly phoneHref: string;
+  readonly publicDefaultLocale?: "bg" | "en";
+  readonly publicLocales?: readonly ("bg" | "en")[];
+  readonly sellCategoryAssets: Readonly<
+    Record<"car" | "motorbike" | "truck" | "van", string>
+  >;
+  readonly services?: Partial<PublicSiteConfig["services"]>;
   readonly shortName: string;
   readonly slug: string;
   readonly socialLinks?: Partial<
@@ -24,30 +91,78 @@ export interface LeadSiteConfig {
   >;
   readonly staticDemoMode: boolean;
   readonly tagline: string;
+  readonly websiteKind?: PublicSiteConfig["kind"];
 }
 
 // LEAD_SITE_CONFIG_START
 export const leadSite: LeadSiteConfig = {
-  accent: "#bd272c",
-  address: "\u0431\u0443\u043b. \u201e\u0426\u0430\u0440 \u041e\u0441\u0432\u043e\u0431\u043e\u0434\u0438\u0442\u0435\u043b\u201c, \u043f\u043e\u0441\u043e\u043a\u0430 \u0410\u043a\u0441\u0430\u043a\u043e\u0432\u043e, \u043f\u043e\u0441\u043b\u0435\u0434\u0435\u043d \u0432\u043b\u044f\u0432\u043e",
-  city: "\u0412\u0430\u0440\u043d\u0430",
+  websiteKind: "dealership",
+  publicLocales: carsLocale.enabledLocales,
+  publicDefaultLocale: carsLocale.defaultLocale,
+  inventoryCopy,
+  localizedCopy: {
+  "bg": {
+    "address": "бул. „Цар Освободител“, посока Аксаково, последен вляво",
+    "city": "Варна",
+    "country": "България",
+    "tagline": "Теси Кар — автомобили и съдействие в Варна."
+  },
+  "en": {
+    "address": "Tsar Osvoboditel, posoka Aksakovo, posleden vlyavo",
+    "city": "Varna",
+    "country": "Bulgaria",
+    "tagline": "Теси Кар — vehicles and dealer support in Varna."
+  }
+},
+  accent: "#30343b",
+  desktopAccent: "#4b5057",
+  desktopInventoryFilterLayout: "quick",
+  desktopPreviewIdentity: {
+    sourceSlug: "day-night-auto-group",
+    label: "Modern",
+    wordmark: "Modern",
+    markArtwork: "/images/brand/modern-logo-v2.webp",
+    copy: {
+      bg: "Открийте следващия си автомобил.",
+      en: "Find your next car.",
+    },
+  },
+  address: "бул. „Цар Освободител“, посока Аксаково, последен вляво",
+  city: "Варна",
+  district: { bg: "Варна", en: "Varna" },
+  sellCategoryAssets: {
+    car: "/lead-sell-car-v1.png",
+    motorbike: "/lead-sell-motorcycle-v1.png",
+    truck: "/lead-sell-truck-v1.png",
+    van: "/lead-sell-van-v1.png",
+  },
+  financingArtworkPath: "/images/services/leasing-red-suv-v2.webp",
+  mobileFinancingArtworkPath: "/images/lease/mobile-pdp-finance-studio-v2.webp",
+  mobileShowroomArtworkPath:
+    "/images/lease/mobile-pdp-showroom-blue-hour-v1.webp",
   contactUrl: "tel:+359898694330",
-  country: "\u0411\u044a\u043b\u0433\u0430\u0440\u0438\u044f",
-  countryCode: "BG",
-  currency: "EUR",
+  country: "Bulgaria",
+  countryCode: carsLocale.dealerCountry,
+  currency: carsLocale.inventoryCurrency,
   email: "",
-  heroPath: "/dealer/inventory/21783937913461083-1.webp",
+  heroPath: "/lead-hero.jpg",
   locale: "bg-BG",
-  logoPath: "/dealer/logo.png",
-  mapsEmbedUrl: "https://maps.google.com/maps?q=Tesi%20Car%20Varna%20Tsar%20Osvoboditel%20Aksakovo&output=embed",
-  mapsUrl: "https://www.google.com/maps/search/?api=1&query=Tesi%20Car%20Varna%20Tsar%20Osvoboditel%20Aksakovo",
-  name: "\u0422\u0435\u0441\u0438 \u041a\u0430\u0440",
+  logoPath: "/dealer-brand/v2-764c550082dcad97/logo-on-light.webp",
+  logoInversePath: "/dealer-brand/v2-764c550082dcad97/logo-on-dark.webp",
+  logoOnLight: "/registered-branding/onLight.png",
+  logoOnDark: "/registered-branding/onDark.png",
+  logoOnAccent: "/registered-branding/onLight.png",
+  mapsEmbedUrl:
+    "https://maps.google.com/maps?q=%D0%A2%D0%B5%D1%81%D0%B8%20%D0%9A%D0%B0%D1%80%2C%20%D0%B1%D1%83%D0%BB.%20%E2%80%9E%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%E2%80%9C%2C%20%D0%BF%D0%BE%D1%81%D0%BE%D0%BA%D0%B0%20%D0%90%D0%BA%D1%81%D0%B0%D0%BA%D0%BE%D0%B2%D0%BE%2C%20%D0%BF%D0%BE%D1%81%D0%BB%D0%B5%D0%B4%D0%B5%D0%BD%20%D0%B2%D0%BB%D1%8F%D0%B2%D0%BE&z=16&output=embed",
+  mapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=%D0%A2%D0%B5%D1%81%D0%B8%20%D0%9A%D0%B0%D1%80%2C%20%D0%B1%D1%83%D0%BB.%20%E2%80%9E%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%E2%80%9C%2C%20%D0%BF%D0%BE%D1%81%D0%BE%D0%BA%D0%B0%20%D0%90%D0%BA%D1%81%D0%B0%D0%BA%D0%BE%D0%B2%D0%BE%2C%20%D0%BF%D0%BE%D1%81%D0%BB%D0%B5%D0%B4%D0%B5%D0%BD%20%D0%B2%D0%BB%D1%8F%D0%B2%D0%BE",
+  name: "Теси Кар",
   phoneDisplay: "0898 694 330",
   phoneHref: "tel:+359898694330",
-  shortName: "\u0422\u0435\u0441\u0438 \u041a\u0430\u0440",
+  shortName: "Теси Кар",
   slug: "tesi-car-varna",
   socialLinks: {},
   staticDemoMode: true,
-  tagline: "\u0412\u043d\u043e\u0441 \u043e\u0442 \u0428\u0432\u0435\u0439\u0446\u0430\u0440\u0438\u044f, \u043b\u0438\u0437\u0438\u043d\u0433 \u043f\u043e \u0442\u0435\u043a\u0443\u0449\u0438\u0442\u0435 \u043e\u0431\u044f\u0432\u0438 \u0438 \u0441\u044a\u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0435 \u043f\u0440\u0438 \u0440\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044f \u0432\u044a\u0432 \u0412\u0430\u0440\u043d\u0430.",
+  tagline: "Теси Кар — автомобили и съдействие в Варна.",
 };
 // LEAD_SITE_CONFIG_END

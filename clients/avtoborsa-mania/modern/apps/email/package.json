@@ -13,9 +13,9 @@
     "@react-email/preview-server": "5.2.9",
     "@repo/email": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "@types/node": "25.3.5",
+    "@types/node": "22.20.2",
     "@types/react": "19.2.14",
-    "next": "16.2.11",
+    "next": "16.3.8",
     "react": "19.2.4",
     "react-email": "5.2.9",
     "typescript": "^5.9.3"

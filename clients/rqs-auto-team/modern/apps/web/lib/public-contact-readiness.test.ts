@@ -7,6 +7,34 @@ const deliveryProvider = {
 };
 
 describe("public contact readiness", () => {
+  it("allows an explicitly bound live dealer inbox without optional email", () => {
+    const inbox = {
+      databaseUrl: "postgresql://configured",
+      dealerOrgId: "dealer-a",
+      requestedDataMode: "database",
+    };
+    expect(
+      isPublicContactSubmissionAvailable({ ...inbox, nodeEnv: "development" })
+    ).toBe(true);
+    expect(
+      isPublicContactSubmissionAvailable({ ...inbox, nodeEnv: "production" })
+    ).toBe(false);
+    expect(
+      isPublicContactSubmissionAvailable({
+        ...inbox,
+        nodeEnv: "production",
+        redisUrl: "https://redis.daynightautogroup.bg",
+        redisToken: "redis-token-value",
+      })
+    ).toBe(true);
+    expect(
+      isPublicContactSubmissionAvailable({
+        ...inbox,
+        nodeEnv: "development",
+        skipEnvValidation: "true",
+      })
+    ).toBe(false);
+  });
   it("does not advertise a form without a complete delivery provider", () => {
     expect(isPublicContactSubmissionAvailable({ nodeEnv: "development" })).toBe(
       false
@@ -58,7 +86,7 @@ describe("public contact readiness", () => {
         nodeEnv: "production",
         redisToken: "redis-token-value",
         redisUrl: "https://redis.daynightautogroup.bg/path",
-        resendFrom: "Day & Night<hello@daynightautogroup.bg>",
+        resendFrom: "R.Q.S.<hello@daynightautogroup.bg>",
         resendToken: "wrong-token-value",
       })
     ).toBe(false);
@@ -88,7 +116,7 @@ describe("public contact readiness", () => {
       isPublicContactSubmissionAvailable({
         ...deliveryProvider,
         nodeEnv: "development",
-        resendFrom: "Day & Night Preview <hello@daynightautogroup.bg>",
+        resendFrom: "R.Q.S. Preview <hello@daynightautogroup.bg>",
       })
     ).toBe(false);
   });

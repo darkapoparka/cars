@@ -10,7 +10,7 @@ describe("public metadata contracts", () => {
     vi.unstubAllEnvs();
   });
 
-  it("uses the Day & Night hero for shared social metadata", () => {
+  it("uses the Мания hero for shared social metadata", () => {
     const metadata = createPublicLocalizedMetadata({
       baseUrl: "https://day-night.example",
       description: "Vehicle guides",
@@ -30,6 +30,25 @@ describe("public metadata contracts", () => {
     expect(metadata.twitter?.images).toEqual([
       { alt: "Vehicle guides", url: "/lead-hero.jpg" },
     ]);
+  });
+
+  it("advertises only languages served by the static showroom", () => {
+    const metadata = createPublicLocalizedMetadata({
+      baseUrl: "https://day-night.example",
+      locale: "en",
+      alternateLocales: ["bg", "en"],
+      path: "/guides",
+      title: "Guides",
+      description: "Guides",
+    });
+    expect(metadata.alternates?.canonical).toBe(
+      "https://day-night.example/en/guides"
+    );
+    expect(metadata.alternates?.languages).toEqual({
+      en: "https://day-night.example/en/guides",
+      "bg-BG": "https://day-night.example/bg/guides",
+      "x-default": "https://day-night.example/bg/guides",
+    });
   });
 
   it("uses a truthful route image for both social metadata families", () => {

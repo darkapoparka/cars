@@ -1,0 +1,28 @@
+[
+  {
+    "width": 320,
+    "height": 844,
+    "changedPixelsAbove16": 697,
+    "totalPixels": 270080,
+    "bounds": [
+      188,
+      255,
+      274,
+      293
+    ],
+    "differenceLocation": "Inside the second vehicle cutout image; UI outside this region has zero changed pixels above the threshold."
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "changedPixelsAbove16": 407,
+    "totalPixels": 329160,
+    "bounds": [
+      235,
+      251,
+      333,
+      295
+    ],
+    "differenceLocation": "Inside the second vehicle cutout image; UI outside this region has zero changed pixels above the threshold."
+  }
+]

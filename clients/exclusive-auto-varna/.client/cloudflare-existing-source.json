@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "dealer": "exclusive-auto-varna",
+  "kind": "personalized-source-candidate-not-an-approved-release",
+  "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+  "candidateSourceDigest": "3c73662c0202182edd68e62412783e38feefd1bf0b4a218ab39a30ca5b8d1a7d",
+  "qualificationContextPath": ".client/native-qualification-context.json",
+  "qualificationContextSha256": "ea058afee2c0ae0f36844c4468150d77f6398993a859fb7463f9e5ff61820d52",
+  "qualificationLockPath": ".client/native-qualification-lock.json",
+  "qualificationLockSha256": "1bb60d4b895366e954c613701d20aa9c54982b7395a6ec1593661cd45be62351",
+  "sourceDeltaReview": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
+    "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975",
+    "reviewedAt": "2026-10-11T21:04:02.173Z"
+  },
+  "nativeApproval": false,
+  "hostedApproval": false
+}

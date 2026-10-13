@@ -1,0 +1,45 @@
+{
+  "family": "Inter Variable",
+  "version": "4.1",
+  "source": "https://raw.githubusercontent.com/rsms/inter/v4.1/docs/font-files/InterVariable.woff2",
+  "file": "src/lib/styles/fonts/InterVariable-v4.1.woff2",
+  "license": "OFL-1.1",
+  "licenseUrl": "https://raw.githubusercontent.com/rsms/inter/v4.1/LICENSE.txt",
+  "axes": {
+    "wght": [
+      100,
+      900
+    ],
+    "opsz": [
+      14,
+      32
+    ]
+  },
+  "requiredLanguages": [
+    "en",
+    "bg"
+  ],
+  "coversBulgarianIGrave": true,
+  "localizedBulgarianAlternates": false,
+  "upstreamSha256": "693b77d4f32ee9b8bfc995589b5fad5e99adf2832738661f5402f9978429a8e3",
+  "upstreamBytes": 352240,
+  "bytes": 234852,
+  "sha256": "b13b7d28b8dac8d22e9d5411707ae293315c4fc31615b253914d06361947de90",
+  "subset": {
+    "unicodeRanges": [
+      "U+0000-024F",
+      "U+0300-036F",
+      "U+0400-052F",
+      "U+1E00-1EFF",
+      "U+2000-206F",
+      "U+20A0-20CF",
+      "U+2100-214F",
+      "U+2190-2199",
+      "U+2212-2212",
+      "U+2264-2265"
+    ],
+    "fontToolsVersion": "4.66.1",
+    "layoutFeatures": "*",
+    "missingRequiredCharacters": []
+  }
+}

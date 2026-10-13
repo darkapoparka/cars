@@ -1,61 +1,77 @@
 <script lang="ts">
+  import { getI18n } from '$lib/locale/context';
+  const i18n = getI18n();
+
   import BrowseAllCard from './BrowseAllCard.svelte';
-  import VehicleCutout from '$components/ui/VehicleCutout.svelte';
   import { resolve } from '$app/paths';
+  import Icon from '$components/ui/Icon.svelte';
+  import MobileActionIcon from '$components/layout/MobileActionIcon.svelte';
   import { editorial } from '$data/home';
+  import { leadSite } from '$config/lead-site';
+  import { imageSrcset } from '$data/responsive-images';
 </script>
 
-<section class="dn-editorial" aria-labelledby="editorial-title">
-  <div class="dn-editorial__banner">
-    <div class="dn-editorial__vehicle"><VehicleCutout vehicle="urus" framing="banner" /></div>
+<section class="dn-editorial dn-home-content-section" aria-labelledby="editorial-title">
+  <div class="dn-editorial__banner" style:--dn-editorial-banner={`url("${leadSite.artwork.editorialBanner}")`}>
     <div class="container">
-      <div class="dn-editorial__heading dn-home-section-heading dn-home-section-heading--banner">
+      <div class="dn-editorial__heading dn-home-section-heading dn-home-section-heading--branded dn-home-banner-frame dn-home-banner-copy">
         <h2 id="editorial-title" class="dn-home-section-title">
-          <span class="dn-heading-desktop">Полезно при избор на автомобил</span>
-          <span class="dn-heading-mobile">Полезно</span>
+          <span class="dn-heading-desktop">{i18n.t("m_7badc636af8e")}</span>
+          <span class="dn-heading-mobile">{i18n.t("m_5062eeb4b9d4")}</span>
         </h2>
-        <p>Практични насоки за оглед, покупка и внос на автомобил.</p>
-        <a class="dn-editorial__cta dn-home-section-action" href={resolve('/blog')}>Вижте всички статии</a>
+        
+        <a class="dn-editorial__cta dn-home-section-action" href={i18n.href(resolve('/blog'))} aria-label={i18n.t("m_e74ad5f53e46")}>{i18n.t("m_30a64216eaea")} <Icon name="arrow-right" size={18} /></a>
       </div>
     </div>
   </div>
 
   <div class="container">
-    <div class="dn-editorial__cards">
+    <div class="dn-editorial__cards dn-home-section-panel">
       <div class="dn-editorial__layout">
         {#each editorial as item (item.title)}
           <article class="dn-editorial-item">
-            <a class="dn-editorial-item__link" href={resolve(item.href as '/blog')} aria-label={item.title}>
+            <a class="dn-editorial-item__link" href={i18n.href(resolve(item.href as '/blog'))} aria-label={i18n.text(item.title)}>
               <span class="dn-editorial-item__media">
                 <img
                   src={item.image}
+                  srcset={imageSrcset(item.image)}
+                  sizes="(max-width: 767px) 260px, (max-width: 991px) 50vw, 33vw"
                   alt=""
                   loading="lazy"
                   decoding="async"
                   width="720"
                   height="440"
                 />
-                <span class="dn-editorial-item__badge">{item.meta}</span>
+                <span class="dn-editorial-item__badge">{i18n.text(item.meta)}</span>
               </span>
 
               <span class="dn-editorial-item__content">
-                <span class="dn-editorial-item__meta" aria-label="Категория">
-                  <span>{item.category}</span>
+                <span class="dn-editorial-item__meta" aria-label={i18n.t("m_292c06f0045a")}>
+                  <span>{i18n.text(item.category)}</span>
                 </span>
-                <h3>{item.title}</h3>
-                <span class="dn-editorial-item__summary">{item.text}</span>
+                <h3>{i18n.text(item.title)}</h3>
+                <span class="dn-editorial-item__summary">{i18n.text(item.text)}</span>
+                <span class="dn-editorial-item__action dn-article-action">
+                  {i18n.t('action.readArticle')}
+                  <Icon name="arrow-right" size={16} />
+                </span>
+                <span class="dn-editorial-item__mobile-footer">
+                  <span class="dn-editorial-item__mobile-action dn-compact-control dn-quick-pill">
+                    {i18n.t('home.editorial.read')}
+                    <MobileActionIcon name="arrow" size={15} />
+                  </span>
+                </span>
               </span>
             </a>
           </article>
         {/each}
-        <BrowseAllCard href="/blog" label="Още полезно" detail="Съвети за избор, оглед и внос" action="Прочети всички" />
+        <BrowseAllCard href="/blog" label={i18n.t("m_59c130d97440")} detail={i18n.t("m_268514fcb5da")} action={i18n.t("m_98172b05314e")} />
       </div>
     </div>
   </div>
 </section>
 
 <style>
-  .dn-editorial__vehicle { display: none; }
   .dn-editorial {
     padding: 80px 0 96px;
     background: #fff;
@@ -71,8 +87,8 @@
     overflow: hidden;
     margin: 0 12px;
     padding: 82px 0 0;
-    border-radius: 24px;
-    background-image: url('/dealer/media-pending.svg');
+    border-radius: var(--dn-radius-sheet);
+    background-image: var(--dn-editorial-banner);
     background-position: center 64%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -102,20 +118,14 @@
   .dn-editorial__heading h2 {
     margin: 0 0 14px;
     color: #fff;
-    font-size: 42px;
-    font-weight: 650;
-    line-height: 1.15;
-    letter-spacing: -0.03em;
+    font-size: var(--dn-text-section);
+    font-weight: var(--dn-weight-semibold);
+    line-height: var(--dn-leading-heading);
+    letter-spacing: var(--dn-tracking-heading);
     text-align: center;
   }
 
-  .dn-editorial__heading p {
-    margin: 0 0 26px;
-    color: rgba(255, 255, 255, 0.84);
-    font-size: var(--dn-text-lead);
-    line-height: var(--dn-leading-lead);
-    text-align: center;
-  }
+  
 
   .dn-editorial__cta {
     display: inline-flex;
@@ -124,11 +134,11 @@
     justify-content: center;
     padding: 0 28px;
     border-radius: var(--dn-radius-button);
-    background: #c40101;
+    background: var(--dn-red);
     color: #fff;
-    font-size: var(--dn-text-lead);
-    font-weight: 600;
-    line-height: 1.3;
+    font-size: var(--dn-cta-size);
+    font-weight: var(--dn-cta-weight);
+    line-height: var(--dn-leading-control);
     transition: background-color 0.3s ease;
   }
 
@@ -154,27 +164,38 @@
     min-width: 0;
     overflow: hidden;
     border: 0;
-    border-radius: 16px;
+    border-radius: var(--dn-radius-card);
     background: #fff;
     box-shadow: 0 2px 8px rgba(18, 25, 38, 0.08);
     transform: none;
     transition: box-shadow 180ms ease-out;
   }
 
-  .dn-editorial-item:hover,
   .dn-editorial-item:focus-within {
     box-shadow: var(--dn-card-hover-shadow);
   }
 
   .dn-editorial-item__link {
+    position: relative;
+    border-radius: inherit;
     display: block;
     height: 100%;
     color: inherit;
   }
 
   .dn-editorial-item__link:focus-visible {
-    outline: 3px solid rgba(196, 1, 1, 0.28);
+    outline: 3px solid var(--dn-focus);
     outline-offset: -3px;
+  }
+
+  .dn-editorial-item__link:focus-visible::after {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    border: 3px solid var(--dn-focus);
+    border-radius: inherit;
+    pointer-events: none;
+    content: '';
   }
 
   .dn-editorial-item__media {
@@ -183,7 +204,7 @@
     width: 100%;
     height: 220px;
     overflow: hidden;
-    border-radius: 15px 15px 0 0;
+    border-radius: var(--dn-radius-card-inset) var(--dn-radius-card-inset) 0 0;
     background: #eceff2;
   }
 
@@ -203,11 +224,11 @@
     align-items: center;
     padding: 6px 12px;
     border-radius: var(--dn-pill);
-    background: #c40101;
+    background: var(--dn-red);
     color: #fff;
     font-size: var(--dn-text-meta);
-    font-weight: 650;
-    line-height: 18px;
+    font-weight: var(--dn-weight-semibold);
+    line-height: var(--dn-leading-meta);
   }
 
   .dn-editorial-item__content {
@@ -226,23 +247,27 @@
     position: relative;
     color: #626a75;
     font-size: var(--dn-text-meta);
-    font-weight: 500;
-    line-height: 18px;
+    font-weight: var(--dn-weight-medium);
+    line-height: var(--dn-leading-meta);
   }
 
   .dn-editorial-item h3 {
     margin: 0 0 9px;
     color: #24272c;
-    font-size: 20px;
-    font-weight: 650;
-    line-height: 1.27;
-    letter-spacing: -0.02em;
+    font-size: var(--dn-text-card);
+    font-weight: var(--dn-weight-semibold);
+    line-height: var(--dn-leading-heading);
+    letter-spacing: var(--dn-tracking-heading);
     transition: color 180ms ease-out;
   }
 
-  .dn-editorial-item:hover h3,
   .dn-editorial-item:focus-within h3 {
-    color: #c40101;
+    color: var(--dn-red);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .dn-editorial-item:hover { box-shadow: var(--dn-card-hover-shadow); }
+    .dn-editorial-item:hover h3 { color: var(--dn-red); }
   }
 
   .dn-editorial-item__summary {
@@ -251,15 +276,18 @@
     overflow: hidden;
     color: #66707d;
     font-size: var(--dn-text-body);
-    font-weight: 400;
-    line-height: 1.5;
+    font-weight: var(--dn-weight-regular);
+    line-height: var(--dn-leading-body);
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     line-clamp: 2;
   }
 
+  .dn-editorial-item__action { display: none; }
+  .dn-editorial-item__mobile-footer { display: none; }
+
   @media (prefers-reduced-motion: reduce) {
-    .dn-editorial-item {
+    .dn-editorial-item, .dn-editorial-item h3 {
       transition: none;
     }
   }
@@ -286,7 +314,7 @@
       min-height: 0;
       margin: 0 8px;
       padding: 72px 20px 160px;
-      border-radius: 20px;
+      border-radius: var(--dn-radius-lg);
       background-attachment: scroll;
     }
 
@@ -307,14 +335,14 @@
 
   @media (max-width: 767px) {
     .dn-editorial {
-      padding: 24px 0 12px;
+      padding: var(--dn-space-5) 0 var(--dn-space-2);
       background: var(--dn-mobile-canvas);
     }
 
     .dn-editorial__banner {
       min-height: 0;
       margin: 0;
-      padding: 0 12px;
+      padding: 0;
       overflow: visible;
       border-radius: 0;
       background: none;
@@ -335,10 +363,10 @@
 
     .dn-editorial__heading h2 {
       margin: 0;
-      color: #171a20;
-      font-size: 22px;
-      font-weight: 700;
-      line-height: 1.15;
+      color: var(--dn-ink-strong);
+      font-size: var(--dn-text-subheading);
+      font-weight: var(--dn-weight-semibold);
+      line-height: var(--dn-leading-heading);
       text-align: left;
     }
 
@@ -350,28 +378,19 @@
       display: inline;
     }
 
-    .dn-editorial__heading p {
-      display: none;
-    }
+    
 
-    .dn-editorial__cta {
-      min-height: 44px;
-      padding: 0;
-      background: transparent;
-      color: #4f5661;
-      font-size: 14px;
-      font-weight: 650;
-    }
+    .dn-editorial__cta { display: none; }
 
     .dn-editorial__layout {
       display: grid;
-      grid-auto-columns: min(278px, calc(100vw - 78px));
+      grid-auto-columns: var(--dn-home-carousel-card-width);
       grid-auto-flow: column;
       grid-template-columns: none;
-      gap: 10px;
+      gap: var(--dn-home-carousel-gap);
       overflow-x: auto;
-      padding: 0 12px 4px;
-      scroll-padding-left: 12px;
+      padding: 0 0 4px;
+      scroll-padding-left: 0;
       scroll-snap-type: x proximity;
       scrollbar-width: none;
     }
@@ -391,29 +410,73 @@
 
     .dn-editorial-item {
       scroll-snap-align: start;
-      border-radius: 14px;
+      padding: calc(var(--dn-space-1) + var(--dn-space-half));
+      border-radius: var(--dn-radius-card);
       background: var(--dn-mobile-surface);
       box-shadow: none;
     }
 
     .dn-editorial-item__media {
+      flex-shrink: 0;
       height: auto;
       aspect-ratio: 16 / 9;
-      border-radius: 14px 14px 0 0;
+      border-radius: var(--dn-radius-card);
     }
 
     .dn-editorial-item__content {
-      padding: 14px 14px 16px;
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      /* The outer frame and action paint inset already supply 12px below the button. */
+      padding: var(--dn-space-3) var(--dn-space-3) var(--dn-space-half);
+    }
+
+    .dn-editorial-item__link {
+      display: flex;
+      flex-direction: column;
     }
 
     .dn-editorial-item h3 {
-      margin-bottom: 7px;
-      font-size: 17px;
+      min-block-size: calc(2em * var(--dn-leading-control));
+      margin-bottom: var(--dn-space-2);
+      font: var(--dn-mobile-card-title-font);
+      letter-spacing: var(--dn-tracking-normal);
+    }
+
+    .dn-editorial-item__meta {
+      margin-bottom: var(--dn-space-1);
+    }
+
+    .dn-editorial-item__meta span {
+      color: var(--dn-muted);
+      font: var(--dn-mobile-card-meta-font);
     }
 
     .dn-editorial-item__summary {
-      font-size: 14px;
-      line-height: 1.4;
+      display: none;
+    }
+
+    .dn-editorial-item__mobile-footer {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: auto;
+    }
+
+    .dn-editorial-item__mobile-action {
+      --dn-compact-control-surface: var(--dn-ink);
+      --dn-compact-control-ink: var(--dn-white);
+      --dn-compact-control-padding-inline: var(--dn-space-3);
+      --dn-compact-control-inset: calc(var(--dn-space-1) + var(--dn-space-half));
+      --dn-entry-action-height: var(--dn-control-height-compact);
+      --dn-entry-action-gap: var(--dn-space-1);
+      --dn-compact-control-font: var(--dn-weight-medium) var(--dn-text-meta) / var(--dn-leading-control) var(--dn-font);
+      max-width: 100%;
+      white-space: normal;
+    }
+
+    .dn-editorial-item__link:is(:hover, :focus-visible) .dn-editorial-item__mobile-action {
+      --dn-compact-control-surface: var(--dn-line-on-ink);
     }
   }
   @media (min-width: 992px) {
@@ -421,14 +484,26 @@
       padding-block: 32px;
     }
 
+    .dn-editorial-item__link { display: flex; flex-direction: column; }
+    .dn-editorial-item__media { flex-shrink: 0; height: 160px; }
+    .dn-editorial-item__badge { display: none; }
+    .dn-editorial-item__content { display: flex; flex: 1; flex-direction: column; padding: var(--dn-space-4); }
+    .dn-editorial-item__meta { margin-bottom: var(--dn-space-1); }
+    .dn-editorial-item h3 { margin-bottom: 6px; }
+    .dn-editorial-item__summary { margin-bottom: var(--dn-space-2); font-size: var(--dn-text-meta); line-height: var(--dn-leading-meta); }
+    .dn-editorial-item__action { display: inline-flex; }
+
     .dn-editorial__banner {
       width: min(var(--dn-content), calc(100% - 48px));
-      min-height: 184px;
+      min-height: 0;
       margin-inline: auto;
-      padding: 32px;
-      border-radius: 20px;
+      padding: 0;
+      border-radius: var(--dn-radius-lg) var(--dn-radius-lg) 0 0;
+      background: var(--dn-home-panel);
       background-attachment: scroll;
     }
+
+    .dn-editorial__banner::before { display: none; }
 
     .dn-editorial__banner > .container {
       width: 100%;
@@ -443,23 +518,16 @@
     }
 
     .dn-editorial__heading h2,
-    .dn-editorial__heading p {
-      margin: 0;
-      text-align: left;
-    }
+    
 
     .dn-editorial__heading h2 {
-      font-size: 32px;
+      font-size: var(--dn-text-section-compact);
+      color: var(--dn-ink-strong);
       text-align: left;
       margin: 0;
     }
 
-    .dn-editorial__heading p {
-      grid-column: 1;
-      margin: 0;
-      text-align: left;
-      font-size: 16px;
-    }
+    
 
     .dn-editorial__cta {
       min-height: 44px;
@@ -468,20 +536,13 @@
       padding-inline: 20px;
       background: #fff;
       color: #24272c;
-      font-size: 16px;
+      font-size: var(--dn-cta-size);
     }
 
     .dn-editorial__cta:hover,
     .dn-editorial__cta:focus-visible {
       background: #24272c;
       color: #fff;
-    }
-
-    .dn-editorial__cards {
-      margin: -24px 0 0;
-      padding: 24px;
-      border-radius: 16px;
-      background: #fff;
     }
 
     .dn-editorial__layout {
@@ -491,13 +552,6 @@
 
 
   @media (max-width: 767px) {
-    .dn-editorial__cta { display: none; }
-  }
-  @media (min-width: 992px) {
-    .dn-editorial__banner { background: #b80024; min-height: 234px; overflow: hidden; }
-    .dn-editorial__banner::before { display: none; }
-    .dn-editorial__heading { width: calc(100% - 310px); margin: 0; grid-template-columns: 1fr; gap: 10px; }
-    .dn-editorial__cta { grid-column: 1; grid-row: auto; justify-self: start; }
-    .dn-editorial__vehicle { display: block; position: absolute; right: -32px; bottom: 4px; width: 340px; height: 226px; pointer-events: none; }
+    .dn-editorial__cta, .dn-editorial-item__badge { display: none; }
   }
 </style>

@@ -7,27 +7,31 @@ import {
   formatMileage,
   formatMoney,
   getListingPath,
-  type VehicleListing,
 } from "@repo/marketplace";
-import { CarFront, Search, X } from "lucide-react";
-import Image from "next/image";
+import type { InventorySearchListing } from "@repo/marketplace/inventory-search";
+import { CarFront, Search } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
+import { rememberInventoryReturn } from "../lib/inventory-return";
 import {
   getMobileInventorySearchGroups,
   type MobileSearchItem,
 } from "../lib/inventory-search-suggestions";
 import { getMarketplaceControlCopy } from "../lib/marketplace-control-copy";
 import { getLocalizedPublicPath } from "../lib/public-path";
+import { isSearchComposition } from "../lib/search-keyboard";
 import {
   MobileMarketplaceOverlayCloseAction,
+  MobileMarketplaceOverlayField,
   MobileMarketplaceOverlayHeader,
   MobileMarketplaceOverlayShell,
+  mobileMarketplaceOverlayFieldRowClassName,
 } from "./mobile-marketplace-overlay";
+import Image from "./public-image";
 
 interface MobileInventorySearchProps {
   readonly isBg: boolean;
-  readonly listings: readonly VehicleListing[];
+  readonly listings: readonly InventorySearchListing[];
   readonly locale?: string;
   readonly onOpenChange: (open: boolean) => void;
   readonly onSearch: (query: string) => void;
@@ -60,13 +64,15 @@ export const MobileInventorySearch = ({
 
   const groups = useMemo(
     () =>
-      getMobileInventorySearchGroups({
-        isBg,
-        listings,
-        locale,
-        query: draft,
-      }),
-    [draft, isBg, listings, locale]
+      open
+        ? getMobileInventorySearchGroups({
+            isBg,
+            listings,
+            locale,
+            query: draft,
+          })
+        : [],
+    [draft, isBg, listings, locale, open]
   );
 
   const commitItem = (item: MobileSearchItem) => {
@@ -77,8 +83,10 @@ export const MobileInventorySearch = ({
     }
 
     if (item.kind === "listing") {
+      const href = getLocalizedPublicPath(locale, getListingPath(item.listing));
+      rememberInventoryReturn(href);
       onOpenChange(false);
-      router.push(getLocalizedPublicPath(locale, getListingPath(item.listing)));
+      router.push(href);
       return;
     }
 
@@ -104,12 +112,6 @@ export const MobileInventorySearch = ({
   return (
     <MobileMarketplaceOverlayShell
       contentDataSlot="mobile-inventory-search"
-      onOpenAutoFocus={(event) => {
-        event.preventDefault();
-        if (event.currentTarget instanceof HTMLElement) {
-          event.currentTarget.focus({ preventScroll: true });
-        }
-      }}
       onOpenChange={onOpenChange}
       open={open}
     >
@@ -122,61 +124,49 @@ export const MobileInventorySearch = ({
         rightAction={
           <MobileMarketplaceOverlayCloseAction ariaLabel={copy.actions.close} />
         }
-        title={isBg ? "Търсене" : "Search"}
+        title={copy.mobileTitles.search}
       />
 
       <div
-        className="shrink-0 px-3 pb-3"
+        className={mobileMarketplaceOverlayFieldRowClassName}
         data-slot="mobile-inventory-search-header"
       >
-        <label className="flex h-[52px] min-w-0 items-center gap-1 rounded-full bg-zinc-100 p-1 pl-3">
-          <Search
-            aria-hidden="true"
-            className="size-[18px] shrink-0 text-zinc-600"
-            strokeWidth={2}
-          />
-          <input
-            aria-label={copy.search.ariaLabel}
-            autoComplete="off"
-            autoFocus={false}
-            className="h-full min-w-0 flex-1 bg-transparent px-2 text-[16px] text-zinc-950 outline-none placeholder:text-zinc-600"
-            enterKeyHint="search"
-            inputMode="search"
-            name="q"
-            onChange={(event) => setDraft(event.target.value)}
-            onKeyDown={(event) => {
-              if (event.key === "Enter") {
-                event.preventDefault();
-                commitDraft();
-              }
-            }}
-            placeholder={isBg ? "Търси марка, модел…" : "Search make or model…"}
-            spellCheck={false}
-            type="search"
-            value={draft}
-          />
-          {draft.trim() ? (
-            <Button
-              aria-label={copy.actions.clear}
-              className="size-11 shrink-0 rounded-full bg-zinc-200 p-0 text-zinc-950 shadow-none hover:bg-zinc-300 active:bg-zinc-300"
-              onClick={() => setDraft("")}
-              size="icon"
-              title={copy.actions.clear}
-              type="button"
-              variant="ghost"
-            >
-              <X aria-hidden="true" className="size-4" />
-            </Button>
-          ) : null}
-        </label>
+        <MobileMarketplaceOverlayField
+          aria-label={copy.search.ariaLabel}
+          clearAction={{
+            label: copy.actions.clear,
+            onClear: () => setDraft(""),
+          }}
+          enterKeyHint="search"
+          icon={
+            <Search
+              aria-hidden="true"
+              className="size-[18px] shrink-0 text-zinc-600"
+              strokeWidth={2}
+            />
+          }
+          inputMode="search"
+          name="q"
+          onChange={(event) => setDraft(event.target.value)}
+          onKeyDown={(event) => {
+            if (event.key === "Enter" && !isSearchComposition(event)) {
+              event.preventDefault();
+              commitDraft();
+            }
+          }}
+          placeholder={copy.search.makeModelPlaceholder}
+          spellCheck={false}
+          type="search"
+          value={draft}
+        />
       </div>
 
       <div
-        className="no-scrollbar min-h-0 flex-1 overflow-y-auto overscroll-contain px-3 pb-[calc(1rem+env(safe-area-inset-bottom))]"
+        className="no-scrollbar min-h-0 flex-1 overflow-y-auto overscroll-contain px-4 pb-[calc(1rem+env(safe-area-inset-bottom))]"
         data-slot="mobile-inventory-search-scroll-body"
       >
         {groups.length === 0 ? (
-          <p className="px-3 py-8 text-center text-[15px] text-zinc-500">
+          <p className="px-3 py-8 text-center text-compact-control text-zinc-500">
             {isBg ? "Няма съвпадения в наличността." : "No matching vehicles."}
           </p>
         ) : (
@@ -190,11 +180,11 @@ export const MobileInventorySearch = ({
             >
               <h3 className="sr-only">{group.heading}</h3>
               {group.presentation === "chips" ? (
-                <ul className="no-scrollbar flex gap-2 overflow-x-auto px-1 pb-1">
+                <ul className="no-scrollbar -mx-1 flex gap-2 overflow-x-auto px-1 pb-1">
                   {group.items.map((item) => (
                     <li className="shrink-0" key={item.id}>
                       <Button
-                        className="h-11 rounded-full bg-zinc-100 px-3.5 font-medium text-[14px] text-zinc-950 shadow-none hover:bg-zinc-200"
+                        className="h-11 rounded-full bg-zinc-100 px-3.5 font-medium text-compact-control text-zinc-950 shadow-none hover:bg-zinc-200"
                         onClick={() => commitItem(item)}
                         type="button"
                         variant="secondary"
@@ -256,7 +246,7 @@ const SearchResultButton = ({
         <>
           {listingImage ? (
             <Image
-              alt={listingImage.alt}
+              alt=""
               className="h-14 w-[88px] shrink-0 rounded-lg object-cover"
               height={112}
               sizes="88px"
@@ -269,15 +259,15 @@ const SearchResultButton = ({
             </span>
           )}
           <span className="min-w-0">
-            <span className="block truncate font-semibold text-[15px] text-zinc-950">
+            <span className="block whitespace-normal break-words font-semibold text-card-title text-zinc-950 tracking-heading">
               {item.label}
             </span>
-            <span className="mt-1 flex min-w-0 items-center gap-2">
-              <span className="min-w-0 flex-1 truncate text-[13px] text-zinc-600">
-                {`${listing.spec.year} · ${formatMileage(listing.spec.mileageValue, locale)} · ${formatFuelType(listing.spec.fuelType, locale)}`}
-              </span>
-              <span className="shrink-0 whitespace-nowrap font-semibold text-[14px] text-zinc-950 tabular-nums">
+            <span className="mt-1 flex min-w-0 flex-col gap-1">
+              <span className="whitespace-normal break-words font-semibold text-meta text-zinc-950 tabular-nums">
                 {formatMoney(listing.price, isBg ? "bg" : "en")}
+              </span>
+              <span className="whitespace-normal break-words text-meta text-zinc-600">
+                {`${listing.spec.year} · ${formatMileage(listing.spec.mileageValue, locale)} · ${formatFuelType(listing.spec.fuelType, locale)}`}
               </span>
             </span>
           </span>
@@ -287,7 +277,7 @@ const SearchResultButton = ({
           <span className="grid size-9 shrink-0 place-items-center rounded-lg bg-zinc-100 text-zinc-600">
             <Search aria-hidden="true" className="size-4" />
           </span>
-          <span className="min-w-0 flex-1 truncate text-[15px] text-zinc-950">
+          <span className="min-w-0 flex-1 truncate text-compact-control text-zinc-950">
             {item.label}
           </span>
         </>

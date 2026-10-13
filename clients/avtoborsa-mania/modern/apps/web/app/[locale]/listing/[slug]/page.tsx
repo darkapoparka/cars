@@ -9,6 +9,8 @@ import {
   parseMarketplaceSearchParams,
   type VehicleListing,
 } from "@repo/marketplace";
+import { getLeadCopy } from "@repo/marketplace/lead-copy";
+import { isDealershipSite } from "@repo/marketplace/site-config";
 import { ListingDetail } from "@repo/marketplace-ui";
 import { log } from "@repo/observability/log";
 import { JsonLd } from "@repo/seo/json-ld";
@@ -32,6 +34,8 @@ import {
   createPublicLocalizedMetadata,
   getPublicInventoryRobots,
 } from "@/lib/public-metadata";
+import { requirePublicSitePath } from "@/lib/public-site-access";
+import { requirePublicInventoryScope } from "@/lib/public-site-binding";
 import {
   createListingBreadcrumbStructuredData,
   createOfferStructuredData,
@@ -61,7 +65,7 @@ const getAdvertisedPrice = (listing: VehicleListing) =>
 const getListingDescription = (listing: VehicleListing, locale: string) =>
   `${formatMoney(getAdvertisedPrice(listing), locale)} - ${listing.spec.year} ${
     listing.spec.make
-  } ${listing.spec.model} in ${listing.location.city}.`;
+  } ${listing.spec.model} ${locale === "bg" ? "в" : "in"} ${isDealershipSite ? getLeadCopy(locale).city : listing.location.city}.`;
 
 const getAbsoluteUrl = (path: string): string =>
   getCanonicalUrl(path, { baseUrl: getPublicWebBaseUrl() });
@@ -116,6 +120,7 @@ const getRelatedListings = async (
   }
 
   return getRelatedMarketplaceListings(listing, {
+    ...requirePublicInventoryScope(),
     destinationCountryCode,
   });
 };
@@ -171,6 +176,7 @@ export const generateMetadata = async ({
 };
 
 const ListingPage = async ({ params, searchParams }: ListingPageProps) => {
+  requirePublicSitePath("/listing");
   const { locale, slug } = await params;
   const normalizedLocale = normalizeSeoLocale(locale);
   const { deliverTo } = parseMarketplaceSearchParams(await searchParams);
@@ -230,12 +236,12 @@ const ListingPage = async ({ params, searchParams }: ListingPageProps) => {
     },
     categoryPath
   );
-  let contactHref: string | undefined = leadSite.staticDemoMode
+  let contactHref: string | undefined = isDealershipSite
     ? leadSite.contactUrl
     : undefined;
 
   if (
-    !leadSite.staticDemoMode &&
+    getCurrentPublicDataMode() === "database" &&
     persistedListing &&
     isPublicListingLeadSubmissionAvailable() &&
     hasRoutablePublicListingLeadDestination(persistedListing) &&
@@ -248,7 +254,8 @@ const ListingPage = async ({ params, searchParams }: ListingPageProps) => {
       `/listing/${slug}/contact`
     )}${deliverTo ? `?deliverTo=${encodeURIComponent(deliverTo)}` : ""}`;
   } else if (
-    !(leadSite.staticDemoMode || persistedListing) &&
+    getCurrentPublicDataMode() === "database" &&
+    !persistedListing &&
     listing.supply &&
     isPublicContactSubmissionAvailable()
   ) {
@@ -263,6 +270,7 @@ const ListingPage = async ({ params, searchParams }: ListingPageProps) => {
     <>
       <JsonLd
         code={createVehicleStructuredData({
+          locale: normalizedLocale,
           baseUrl: getPublicWebBaseUrl(),
           listing,
           listingUrl,

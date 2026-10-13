@@ -1,47 +1,570 @@
-import dealerPack from './dealer-stock.json';
-import type { MarketplaceSearchParams } from '../search';
-import type { BodyType, FuelType, Money, VehicleListing } from '../types';
+import type { MarketplaceSearchParams } from "../search";
+import type { Money, VehicleListing } from "../types";
 
-/** Dated publisher samples. Active means advertised, not independently confirmed stock. */
-export const mockListings: VehicleListing[] = dealerPack.vehicles.map((vehicle) => ({
-  id: vehicle.sourceId,
-  slug: vehicle.slug,
-  category: 'car',
-  dealerOrgId: 'dealer-exclusive-auto-varna',
-  status: 'active',
-  title: vehicle.title,
-  description: vehicle.description,
-  price: { amount: vehicle.priceEur, currency: 'EUR' },
-  priceType: 'fixed',
-  images: vehicle.gallery.map((url, index) => ({ url, alt: `${vehicle.title} — снимка ${index + 1}` })),
-  badges: ['used'],
-  location: { city: dealerPack.facts.city, country: dealerPack.facts.country },
-  features: vehicle.equipment.map((feature) => ({ bg: feature, en: feature })),
-  spec: {
-    make: vehicle.make,
-    model: vehicle.model,
-    trim: vehicle.trim,
-    year: vehicle.year,
-    bodyType: vehicle.body.toLowerCase() as BodyType,
-    fuelType: vehicle.fuelType as FuelType,
-    transmission: vehicle.transmission === 'Автоматична' ? 'automatic' : 'manual',
-    mileageValue: vehicle.mileageKm,
-    mileageUnit: 'km',
-    enginePowerHp: vehicle.powerHp,
-    colorExterior: vehicle.color
+export const mockListings: VehicleListing[] = [
+  {
+    "id": "am-1001",
+    "slug": "toyota-camry-hybrid-680634",
+    "category": "car",
+    "dealerOrgId": "dealer-exclusive-auto-varna",
+    "status": "active",
+    "title": "Toyota Camry 2.5 Hybrid Bisiness Edition",
+    "description": "2021 г., 162 050 км, 218 к.с. Цената е с включено ДДС. Състоянието и гаранционните условия се уточняват при оглед. Извадка от публична обява, наблюдавана на 09.09.2026 г.; наличността не е независимо потвърдена.",
+    "price": {
+      "amount": 19000,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/inventory/11755373421680634-1.webp",
+        "alt": "Toyota Camry 2.5 Hybrid Bisiness Edition"
+      },
+      {
+        "url": "/inventory/11755373421680634-2.webp",
+        "alt": "Toyota Camry 2.5 Hybrid Bisiness Edition"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Варна",
+      "region": "Варна",
+      "country": "България"
+    },
+    "features": [
+      {
+        "bg": "Парктроник",
+        "en": "Парктроник"
+      },
+      {
+        "bg": "Навигация",
+        "en": "Навигация"
+      },
+      {
+        "bg": "Подгряване на седалки",
+        "en": "Подгряване на седалки"
+      },
+      {
+        "bg": "Безключово палене",
+        "en": "Безключово палене"
+      }
+    ],
+    "spec": {
+      "make": "Toyota",
+      "model": "Camry",
+      "trim": "2.5 Hybrid Bisiness Edition",
+      "year": 2021,
+      "bodyType": "sedan",
+      "fuelType": "hybrid",
+      "transmission": "automatic",
+      "mileageValue": 162050,
+      "mileageUnit": "km",
+      "enginePowerHp": 218,
+      "colorExterior": "Черен"
+    },
+    "seller": {
+      "id": "dealer-exclusive-auto-varna",
+      "type": "dealer",
+      "displayName": "Exclusive Auto",
+      "verificationStatus": "unverified",
+      "city": "Варна",
+      "logoUrl": "/registered-branding/onLight.png"
+    },
+    "publishedAt": "2026-09-09T09:00:00.000Z",
+    "promoted": true
   },
-  seller: {
-    id: 'dealer-exclusive-auto-varna',
-    type: 'dealer',
-    displayName: dealerPack.facts.name,
-    verificationStatus: 'unverified',
-    city: dealerPack.facts.city,
-    logoUrl: '/brand/logo.png'
+  {
+    "id": "am-1010",
+    "slug": "suzuki-across-phev-882244",
+    "category": "car",
+    "dealerOrgId": "dealer-exclusive-auto-varna",
+    "status": "active",
+    "title": "Suzuki Across 2.5 P-HEV 306HP COMFORT+",
+    "description": "2021 г., 137 388 км, 306 к.с. Цената е с включено ДДС. При бартер цената се договаря. Оборудването и състоянието са по публикуваната обява. Извадка от публична обява, наблюдавана на 09.09.2026 г.; наличността не е независимо потвърдена.",
+    "price": {
+      "amount": 25000,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/inventory/21778616329882244-1.webp",
+        "alt": "Suzuki Across 2.5 P-HEV 306HP COMFORT+"
+      },
+      {
+        "url": "/inventory/21778616329882244-2.webp",
+        "alt": "Suzuki Across 2.5 P-HEV 306HP COMFORT+"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Варна",
+      "region": "Варна",
+      "country": "България"
+    },
+    "features": [
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Парктроник",
+        "en": "Парктроник"
+      },
+      {
+        "bg": "Подгряване на седалки",
+        "en": "Подгряване на седалки"
+      },
+      {
+        "bg": "Безключово палене",
+        "en": "Безключово палене"
+      }
+    ],
+    "spec": {
+      "make": "Suzuki",
+      "model": "Across",
+      "trim": "2.5 P-HEV 306HP COMFORT+",
+      "year": 2021,
+      "bodyType": "suv",
+      "fuelType": "hybrid",
+      "transmission": "automatic",
+      "mileageValue": 137388,
+      "mileageUnit": "km",
+      "enginePowerHp": 306,
+      "colorExterior": "Сив"
+    },
+    "seller": {
+      "id": "dealer-exclusive-auto-varna",
+      "type": "dealer",
+      "displayName": "Exclusive Auto",
+      "verificationStatus": "unverified",
+      "city": "Варна",
+      "logoUrl": "/registered-branding/onLight.png"
+    },
+    "publishedAt": "2026-09-09T09:00:00.000Z",
+    "promoted": true
   },
-  // Internal snapshot ordering only; this field is not the dealer's original publication date.
-  publishedAt: `${vehicle.observedAt}T00:00:00.000Z`,
-  promoted: false
-}));
+  {
+    "id": "am-1011",
+    "slug": "smart-forfour-eq-284627",
+    "category": "car",
+    "dealerOrgId": "dealer-exclusive-auto-varna",
+    "status": "active",
+    "title": "Smart Forfour EQ LED",
+    "description": "2021 г., 16 300 км, 82 к.с. Цената е с включено ДДС. Данните за батерията и сервизната история се потвърждават от продавача. Извадка от публична обява, наблюдавана на 09.09.2026 г.; наличността не е независимо потвърдена.",
+    "price": {
+      "amount": 11500,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/inventory/11748282363284627-1.webp",
+        "alt": "Smart Forfour EQ LED"
+      },
+      {
+        "url": "/inventory/11748282363284627-2.webp",
+        "alt": "Smart Forfour EQ LED"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Варна",
+      "region": "Варна",
+      "country": "България"
+    },
+    "features": [
+      {
+        "bg": "Парктроник",
+        "en": "Парктроник"
+      },
+      {
+        "bg": "Навигация",
+        "en": "Навигация"
+      },
+      {
+        "bg": "Безключово палене",
+        "en": "Безключово палене"
+      }
+    ],
+    "spec": {
+      "make": "Smart",
+      "model": "Forfour",
+      "trim": "EQ LED",
+      "year": 2021,
+      "bodyType": "hatchback",
+      "fuelType": "electric",
+      "transmission": "automatic",
+      "mileageValue": 16300,
+      "mileageUnit": "km",
+      "enginePowerHp": 82,
+      "colorExterior": "Черен"
+    },
+    "seller": {
+      "id": "dealer-exclusive-auto-varna",
+      "type": "dealer",
+      "displayName": "Exclusive Auto",
+      "verificationStatus": "unverified",
+      "city": "Варна",
+      "logoUrl": "/registered-branding/onLight.png"
+    },
+    "publishedAt": "2026-09-09T09:00:00.000Z",
+    "promoted": true
+  },
+  {
+    "id": "am-1012",
+    "slug": "mitsubishi-eclipse-cross-phev-494016",
+    "category": "car",
+    "dealerOrgId": "dealer-exclusive-auto-varna",
+    "status": "active",
+    "title": "Mitsubishi Eclipse Cross 2.4 4x4 Plug-in",
+    "description": "2022 г., 62 605 км, 188 к.с. Не се начислява ДДС. Продавачът посочва автомобил без панорамен таван. Гаранционните условия не са независимо проверени. Извадка от публична обява, наблюдавана на 09.09.2026 г.; наличността не е независимо потвърдена.",
+    "price": {
+      "amount": 23500,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/inventory/21766913531494016-1.webp",
+        "alt": "Mitsubishi Eclipse Cross 2.4 4x4 Plug-in"
+      },
+      {
+        "url": "/inventory/21766913531494016-2.webp",
+        "alt": "Mitsubishi Eclipse Cross 2.4 4x4 Plug-in"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Варна",
+      "region": "Варна",
+      "country": "България"
+    },
+    "features": [
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Парктроник",
+        "en": "Парктроник"
+      },
+      {
+        "bg": "Навигация",
+        "en": "Навигация"
+      },
+      {
+        "bg": "Подгряване на седалки",
+        "en": "Подгряване на седалки"
+      }
+    ],
+    "spec": {
+      "make": "Mitsubishi",
+      "model": "Eclipse Cross",
+      "trim": "2.4 4x4 Plug-in",
+      "year": 2022,
+      "bodyType": "suv",
+      "fuelType": "hybrid",
+      "transmission": "automatic",
+      "mileageValue": 62605,
+      "mileageUnit": "km",
+      "enginePowerHp": 188,
+      "colorExterior": "Бордо"
+    },
+    "seller": {
+      "id": "dealer-exclusive-auto-varna",
+      "type": "dealer",
+      "displayName": "Exclusive Auto",
+      "verificationStatus": "unverified",
+      "city": "Варна",
+      "logoUrl": "/registered-branding/onLight.png"
+    },
+    "publishedAt": "2026-09-09T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "am-1013",
+    "slug": "hyundai-santa-fe-crdi-616703",
+    "category": "car",
+    "dealerOrgId": "dealer-exclusive-auto-varna",
+    "status": "active",
+    "title": "Hyundai Santa Fe 2.2 CRDI 4x4 • 7 места",
+    "description": "2019 г., 118 346 км, 200 к.с. Не се начислява ДДС. В обявата са посочени 7 места и панорамен люк. Извадка от публична обява, наблюдавана на 09.09.2026 г.; наличността не е независимо потвърдена.",
+    "price": {
+      "amount": 19200,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/inventory/21761039729616703-1.webp",
+        "alt": "Hyundai Santa Fe 2.2 CRDI 4x4 • 7 места"
+      },
+      {
+        "url": "/inventory/21761039729616703-2.webp",
+        "alt": "Hyundai Santa Fe 2.2 CRDI 4x4 • 7 места"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Варна",
+      "region": "Варна",
+      "country": "България"
+    },
+    "features": [
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Панорамен покрив",
+        "en": "Панорамен покрив"
+      },
+      {
+        "bg": "Парктроник",
+        "en": "Парктроник"
+      },
+      {
+        "bg": "Навигация",
+        "en": "Навигация"
+      },
+      {
+        "bg": "Подгряване на седалки",
+        "en": "Подгряване на седалки"
+      },
+      {
+        "bg": "Безключово палене",
+        "en": "Безключово палене"
+      }
+    ],
+    "spec": {
+      "make": "Hyundai",
+      "model": "Santa Fe",
+      "trim": "2.2 CRDI 4x4 • 7 места",
+      "year": 2019,
+      "bodyType": "suv",
+      "fuelType": "diesel",
+      "transmission": "automatic",
+      "mileageValue": 118346,
+      "mileageUnit": "km",
+      "enginePowerHp": 200,
+      "colorExterior": "Тъмно син металик"
+    },
+    "seller": {
+      "id": "dealer-exclusive-auto-varna",
+      "type": "dealer",
+      "displayName": "Exclusive Auto",
+      "verificationStatus": "unverified",
+      "city": "Варна",
+      "logoUrl": "/registered-branding/onLight.png"
+    },
+    "publishedAt": "2026-09-09T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "am-1014",
+    "slug": "ds-7-crossback-phev-052853",
+    "category": "car",
+    "dealerOrgId": "dealer-exclusive-auto-varna",
+    "status": "active",
+    "title": "DS 7 Crossback 1.6 P-HEV 224 к.с.",
+    "description": "2021 г., 156 868 км, 224 к.с. Обявата посочва фактура с ДДС. При бартер цената се договаря. Подробното оборудване следва да се потвърди по автомобила. Извадка от публична обява, наблюдавана на 09.09.2026 г.; наличността не е независимо потвърдена.",
+    "price": {
+      "amount": 18900,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/inventory/6a57ac9bd26832c7c4052853-1.webp",
+        "alt": "DS 7 Crossback 1.6 P-HEV 224 к.с."
+      },
+      {
+        "url": "/inventory/6a57ac9bd26832c7c4052853-2.webp",
+        "alt": "DS 7 Crossback 1.6 P-HEV 224 к.с."
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Варна",
+      "region": "Варна",
+      "country": "България"
+    },
+    "spec": {
+      "make": "DS",
+      "model": "7 Crossback",
+      "trim": "1.6 P-HEV 224 к.с.",
+      "year": 2021,
+      "bodyType": "suv",
+      "fuelType": "hybrid",
+      "transmission": "automatic",
+      "mileageValue": 156868,
+      "mileageUnit": "km",
+      "enginePowerHp": 224,
+      "colorExterior": "Бял"
+    },
+    "seller": {
+      "id": "dealer-exclusive-auto-varna",
+      "type": "dealer",
+      "displayName": "Exclusive Auto",
+      "verificationStatus": "unverified",
+      "city": "Варна",
+      "logoUrl": "/registered-branding/onLight.png"
+    },
+    "publishedAt": "2026-09-09T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "am-1002",
+    "slug": "audi-a6-40-tdi-0bde93",
+    "category": "car",
+    "dealerOrgId": "dealer-exclusive-auto-varna",
+    "status": "active",
+    "title": "Audi A6 40 TDI",
+    "description": "2022 г., 192 298 км, 204 к.с. При бартер цената се договаря. Данъчните условия се уточняват с продавача. Данните са от обявата на същия продавач в Cars.bg. Извадка от публична обява, наблюдавана на 09.09.2026 г.; наличността не е независимо потвърдена.",
+    "price": {
+      "amount": 35000,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/inventory/69551c3403615d4d390bde93-1.webp",
+        "alt": "Audi A6 40 TDI"
+      },
+      {
+        "url": "/inventory/69551c3403615d4d390bde93-2.webp",
+        "alt": "Audi A6 40 TDI"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Варна",
+      "region": "Варна",
+      "country": "България"
+    },
+    "features": [
+      {
+        "bg": "Парктроник",
+        "en": "Парктроник"
+      },
+      {
+        "bg": "Подгряване на седалки",
+        "en": "Подгряване на седалки"
+      },
+      {
+        "bg": "Безключово палене",
+        "en": "Безключово палене"
+      }
+    ],
+    "spec": {
+      "make": "Audi",
+      "model": "A6",
+      "trim": "40 TDI",
+      "year": 2022,
+      "bodyType": "sedan",
+      "fuelType": "diesel",
+      "transmission": "automatic",
+      "mileageValue": 192298,
+      "mileageUnit": "km",
+      "enginePowerHp": 204,
+      "colorExterior": "Тъмно сив"
+    },
+    "seller": {
+      "id": "dealer-exclusive-auto-varna",
+      "type": "dealer",
+      "displayName": "Exclusive Auto",
+      "verificationStatus": "unverified",
+      "city": "Варна",
+      "logoUrl": "/registered-branding/onLight.png"
+    },
+    "publishedAt": "2026-09-09T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "am-1003",
+    "slug": "toyota-rav4-lpg-906960",
+    "category": "car",
+    "dealerOrgId": "dealer-exclusive-auto-varna",
+    "status": "active",
+    "title": "Toyota RAV4 2.0 16V • Газ",
+    "description": "2004 г., 260 362 км, 150 к.с. Не се начислява ДДС. Продавачът изрично посочва драскотини по броните; не е описан като без забележки. Извадка от публична обява, наблюдавана на 09.09.2026 г.; наличността не е независимо потвърдена.",
+    "price": {
+      "amount": 2700,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/inventory/21773847467906960-1.webp",
+        "alt": "Toyota RAV4 2.0 16V • Газ"
+      },
+      {
+        "url": "/inventory/21773847467906960-2.webp",
+        "alt": "Toyota RAV4 2.0 16V • Газ"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Варна",
+      "region": "Варна",
+      "country": "България"
+    },
+    "features": [
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Парктроник",
+        "en": "Парктроник"
+      },
+      {
+        "bg": "Навигация",
+        "en": "Навигация"
+      }
+    ],
+    "spec": {
+      "make": "Toyota",
+      "model": "RAV4",
+      "trim": "2.0 16V • Газ",
+      "year": 2004,
+      "bodyType": "suv",
+      "fuelType": "lpg",
+      "transmission": "manual",
+      "mileageValue": 260362,
+      "mileageUnit": "km",
+      "enginePowerHp": 150,
+      "colorExterior": "Светло сив"
+    },
+    "seller": {
+      "id": "dealer-exclusive-auto-varna",
+      "type": "dealer",
+      "displayName": "Exclusive Auto",
+      "verificationStatus": "unverified",
+      "city": "Варна",
+      "logoUrl": "/registered-branding/onLight.png"
+    },
+    "publishedAt": "2026-09-09T09:00:00.000Z",
+    "promoted": false
+  }
+];
 
 const matchesText = (listing: VehicleListing, query: string) => {
   const haystack = [
@@ -97,6 +620,13 @@ const createListingPredicates = (
     filters.mileageMax === undefined ||
     listing.spec.mileageValue <= filters.mileageMax,
   (listing) => !filters.fuel || listing.spec.fuelType === filters.fuel,
+  (listing) =>
+    filters.powerMin === undefined ||
+    (listing.spec.enginePowerHp !== undefined &&
+      listing.spec.enginePowerHp >= filters.powerMin),
+  (listing) =>
+    !filters.extra ||
+    Boolean(listing.features?.some((feature) => feature.en === filters.extra)),
   (listing) =>
     !filters.transmission || listing.spec.transmission === filters.transmission,
   (listing) => !filters.body || listing.spec.bodyType === filters.body,

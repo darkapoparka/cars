@@ -1,0 +1,631 @@
+{
+  "passed": true,
+  "cases": 12,
+  "base": "http://127.0.0.1:65428",
+  "adapter": false,
+  "output": "node_modules/.cache/auto-best-card-hero-review-20261009/production-build",
+  "rows": [
+    {
+      "locale": "en",
+      "width": 320,
+      "surface": "home",
+      "state": {
+        "overflow": -15,
+        "pdp": null,
+        "hero": null,
+        "cars": 0,
+        "heroModels": [],
+        "cards": [
+          {
+            "title": {
+              "size": 16,
+              "weight": 500
+            },
+            "price": {
+              "size": 24,
+              "weight": 600
+            }
+          },
+          {
+            "title": {
+              "size": 16,
+              "weight": 500
+            },
+            "price": {
+              "size": 24,
+              "weight": 600
+            }
+          },
+          {
+            "title": {
+              "size": 16,
+              "weight": 500
+            },
+            "price": {
+              "size": 24,
+              "weight": 600
+            }
+          },
+          {
+            "title": {
+              "size": 16,
+              "weight": 500
+            },
+            "price": {
+              "size": 24,
+              "weight": 600
+            }
+          }
+        ]
+      }
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "surface": "cars",
+      "state": {
+        "overflow": -15,
+        "pdp": null,
+        "hero": null,
+        "cars": 0,
+        "heroModels": [],
+        "cards": [
+          {
+            "title": {
+              "size": 16,
+              "weight": 500
+            },
+            "price": {
+              "size": 24,
+              "weight": 600
+            }
+          },
+          {
+            "title": {
+              "size": 16,
+              "weight": 500
+            },
+            "price": {
+              "size": 24,
+              "weight": 600
+            }
+          },
+          {
+            "title": {
+              "size": 16,
+              "weight": 500
+            },
+            "price": {
+              "size": 24,
+              "weight": 600
+            }
+          },
+          {
+            "title": {
+              "size": 16,
+              "weight": 500
+            },
+            "price": {
+              "size": 24,
+              "weight": 600
+            }
+          },
+          {
+            "title": {
+              "size": 16,
+              "weight": 500
+            },
+            "price": {
+              "size": 24,
+              "weight": 600
+            }
+          },
+          {
+            "title": {
+              "size": 16,
+              "weight": 500
+            },
+            "price": {
+              "size": 24,
+              "weight": 600
+            }
+          },
+          {
+            "title": {
+              "size": 16,
+              "weight": 500
+            },
+            "price": {
+              "size": 24,
+              "weight": 600
+            }
+          }
+        ]
+      }
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "surface": "pdp",
+      "state": {
+        "overflow": -15,
+        "pdp": {
+          "size": 24,
+          "weight": 600
+        },
+        "hero": null,
+        "cars": 0,
+        "heroModels": [],
+        "cards": []
+      }
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "surface": "home",
+      "state": {
+        "overflow": -15,
+        "pdp": null,
+        "hero": null,
+        "cars": 0,
+        "heroModels": [],
+        "cards": [
+          {
+            "title": {
+              "size": 16,
+              "weight": 500
+            },
+            "price": {
+              "size": 24,
+              "weight": 600
+            }
+          },
+          {
+            "title": {
+              "size": 16,
+              "weight": 500
+            },
+            "price": {
+              "size": 24,
+              "weight": 600
+            }
+          },
+          {
+            "title": {
+              "size": 16,
+              "weight": 500
+            },
+            "price": {
+              "size": 24,
+              "weight": 600
+            }
+          },
+          {
+            "title": {
+              "size": 16,
+              "weight": 500
+            },
+            "price": {
+              "size": 24,
+              "weight": 600
+            }
+          }
+        ]
+      }
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "surface": "cars",
+      "state": {
+        "overflow": -15,
+        "pdp": null,
+        "hero": null,
+        "cars": 0,
+        "heroModels": [],
+        "cards": [
+          {
+            "title": {
+              "size": 16,
+              "weight": 500
+            },
+            "price": {
+              "size": 24,
+              "weight": 600
+            }
+          },
+          {
+            "title": {
+              "size": 16,
+              "weight": 500
+            },
+            "price": {
+              "size": 24,
+              "weight": 600
+            }
+          },
+          {
+            "title": {
+              "size": 16,
+              "weight": 500
+            },
+            "price": {
+              "size": 24,
+              "weight": 600
+            }
+          },
+          {
+            "title": {
+              "size": 16,
+              "weight": 500
+            },
+            "price": {
+              "size": 24,
+              "weight": 600
+            }
+          },
+          {
+            "title": {
+              "size": 16,
+              "weight": 500
+            },
+            "price": {
+              "size": 24,
+              "weight": 600
+            }
+          },
+          {
+            "title": {
+              "size": 16,
+              "weight": 500
+            },
+            "price": {
+              "size": 24,
+              "weight": 600
+            }
+          },
+          {
+            "title": {
+              "size": 16,
+              "weight": 500
+            },
+            "price": {
+              "size": 24,
+              "weight": 600
+            }
+          }
+        ]
+      }
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "surface": "pdp",
+      "state": {
+        "overflow": -15,
+        "pdp": {
+          "size": 24,
+          "weight": 600
+        },
+        "hero": null,
+        "cars": 0,
+        "heroModels": [],
+        "cards": []
+      }
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "surface": "home",
+      "state": {
+        "overflow": -15,
+        "pdp": null,
+        "hero": "radial-gradient(at 50% 24%, rgb(32, 35, 41) 0%, rgb(21, 24, 29) 68%)",
+        "cars": 2,
+        "heroModels": [
+          "urus",
+          "urus"
+        ],
+        "cards": [
+          {
+            "title": {
+              "size": 20,
+              "weight": 500
+            },
+            "price": {
+              "size": 24,
+              "weight": 600
+            }
+          },
+          {
+            "title": {
+              "size": 20,
+              "weight": 500
+            },
+            "price": {
+              "size": 24,
+              "weight": 600
+            }
+          },
+          {
+            "title": {
+              "size": 20,
+              "weight": 500
+            },
+            "price": {
+              "size": 24,
+              "weight": 600
+            }
+          },
+          {
+            "title": {
+              "size": 20,
+              "weight": 500
+            },
+            "price": {
+              "size": 24,
+              "weight": 600
+            }
+          }
+        ]
+      }
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "surface": "cars",
+      "state": {
+        "overflow": -15,
+        "pdp": null,
+        "hero": "radial-gradient(at 50% 24%, rgb(32, 35, 41) 0%, rgb(21, 24, 29) 68%)",
+        "cars": 2,
+        "heroModels": [
+          "gclass",
+          "gclass"
+        ],
+        "cards": [
+          {
+            "title": {
+              "size": 20,
+              "weight": 500
+            },
+            "price": {
+              "size": 24,
+              "weight": 600
+            }
+          },
+          {
+            "title": {
+              "size": 20,
+              "weight": 500
+            },
+            "price": {
+              "size": 24,
+              "weight": 600
+            }
+          },
+          {
+            "title": {
+              "size": 20,
+              "weight": 500
+            },
+            "price": {
+              "size": 24,
+              "weight": 600
+            }
+          },
+          {
+            "title": {
+              "size": 20,
+              "weight": 500
+            },
+            "price": {
+              "size": 24,
+              "weight": 600
+            }
+          },
+          {
+            "title": {
+              "size": 20,
+              "weight": 500
+            },
+            "price": {
+              "size": 24,
+              "weight": 600
+            }
+          },
+          {
+            "title": {
+              "size": 20,
+              "weight": 500
+            },
+            "price": {
+              "size": 24,
+              "weight": 600
+            }
+          },
+          {
+            "title": {
+              "size": 20,
+              "weight": 500
+            },
+            "price": {
+              "size": 24,
+              "weight": 600
+            }
+          }
+        ]
+      }
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "surface": "pdp",
+      "state": {
+        "overflow": -15,
+        "pdp": {
+          "size": 32,
+          "weight": 600
+        },
+        "hero": null,
+        "cars": 0,
+        "heroModels": [],
+        "cards": []
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 390,
+      "surface": "home",
+      "state": {
+        "overflow": -15,
+        "pdp": null,
+        "hero": null,
+        "cars": 0,
+        "heroModels": [],
+        "cards": [
+          {
+            "title": {
+              "size": 16,
+              "weight": 500
+            },
+            "price": {
+              "size": 24,
+              "weight": 600
+            }
+          },
+          {
+            "title": {
+              "size": 16,
+              "weight": 500
+            },
+            "price": {
+              "size": 24,
+              "weight": 600
+            }
+          },
+          {
+            "title": {
+              "size": 16,
+              "weight": 500
+            },
+            "price": {
+              "size": 24,
+              "weight": 600
+            }
+          },
+          {
+            "title": {
+              "size": 16,
+              "weight": 500
+            },
+            "price": {
+              "size": 24,
+              "weight": 600
+            }
+          }
+        ]
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 390,
+      "surface": "cars",
+      "state": {
+        "overflow": -15,
+        "pdp": null,
+        "hero": null,
+        "cars": 0,
+        "heroModels": [],
+        "cards": [
+          {
+            "title": {
+              "size": 16,
+              "weight": 500
+            },
+            "price": {
+              "size": 24,
+              "weight": 600
+            }
+          },
+          {
+            "title": {
+              "size": 16,
+              "weight": 500
+            },
+            "price": {
+              "size": 24,
+              "weight": 600
+            }
+          },
+          {
+            "title": {
+              "size": 16,
+              "weight": 500
+            },
+            "price": {
+              "size": 24,
+              "weight": 600
+            }
+          },
+          {
+            "title": {
+              "size": 16,
+              "weight": 500
+            },
+            "price": {
+              "size": 24,
+              "weight": 600
+            }
+          },
+          {
+            "title": {
+              "size": 16,
+              "weight": 500
+            },
+            "price": {
+              "size": 24,
+              "weight": 600
+            }
+          },
+          {
+            "title": {
+              "size": 16,
+              "weight": 500
+            },
+            "price": {
+              "size": 24,
+              "weight": 600
+            }
+          },
+          {
+            "title": {
+              "size": 16,
+              "weight": 500
+            },
+            "price": {
+              "size": 24,
+              "weight": 600
+            }
+          }
+        ]
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 390,
+      "surface": "pdp",
+      "state": {
+        "overflow": -15,
+        "pdp": {
+          "size": 24,
+          "weight": 600
+        },
+        "hero": null,
+        "cars": 0,
+        "heroModels": [],
+        "cards": []
+      }
+    }
+  ]
+}

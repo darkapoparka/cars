@@ -3,6 +3,7 @@ import {
   leadSite,
   type VehicleCategory,
 } from "@repo/marketplace";
+import { getLeadCopy } from "@repo/marketplace/lead-copy";
 import type { Metadata } from "next";
 import {
   createPublicLocalizedMetadata,
@@ -43,13 +44,11 @@ export const createCategoryMetadata = ({
   return createPublicLocalizedMetadata({
     baseUrl: getPublicWebBaseUrl(),
     description: isBg
-      ? `Разгледайте актуалните ${subject.toLowerCase()} на ${leadSite.name} в ${leadSite.city}.`
-      : `Browse current ${subject.toLowerCase()} from ${leadSite.name} in ${leadSite.city}, ${leadSite.country}.`,
+      ? `Разгледайте актуалните ${subject.toLowerCase()} на ${leadSite.name} в ${getLeadCopy(locale).city}.`
+      : `Browse current ${subject.toLowerCase()} from ${leadSite.name} in ${getLeadCopy(locale).city}, ${getLeadCopy(locale).country}.`,
     locale,
     path: path ?? getVehicleCategory(category).path,
     robots: getPublicInventoryRobots(searchParams),
-    title: isBg
-      ? `${subject} от ${leadSite.name}`
-      : `${subject} at ${leadSite.name}`,
+    title: subject,
   });
 };

@@ -9,17 +9,19 @@ import {
   useState,
 } from "react";
 
-/** Preserve the page inset without sharply slicing partially visible pills. */
+/** Preserve the page inset and fade overflowing pills so horizontal scrolling reads intentionally. */
 export function MobilePillRail({
   children,
   className,
+  label,
   "data-slot": dataSlot,
 }: {
   children: ReactNode;
   className?: string;
+  label: string;
   "data-slot"?: string;
 }) {
-  const railRef = useRef<HTMLDivElement>(null);
+  const railRef = useRef<HTMLElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
   const [edges, setEdges] = useState({ left: false, right: false });
   const updateEdges = useCallback(() => {
@@ -51,18 +53,22 @@ export function MobilePillRail({
   }, [updateEdges]);
 
   return (
-    <div
-      className="min-w-0 overflow-x-auto overscroll-x-contain [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+    <section
+      aria-label={label}
+      className="min-w-0 snap-x snap-proximity overflow-x-auto overscroll-x-contain [scrollbar-width:none] focus-visible:outline-2 focus-visible:outline-ring focus-visible:-outline-offset-2 [&::-webkit-scrollbar]:hidden"
       data-slot={dataSlot}
       onScroll={updateEdges}
       ref={railRef}
       style={{
-        maskImage: `linear-gradient(to right, ${edges.left ? "transparent, black 12px" : "black 0px"}, ${edges.right ? "black calc(100% - 12px), transparent" : "black 100%"})`,
+        maskImage: `linear-gradient(to right, ${edges.left ? "transparent, black 28px" : "black 0px"}, ${edges.right ? "black calc(100% - 28px), transparent" : "black 100%"})`,
+        scrollPaddingInline: "12px",
       }}
+      // biome-ignore lint/a11y/noNoninteractiveTabindex: Safari needs a focus target for native keyboard scrolling.
+      tabIndex={0}
     >
       <div className={cn("flex w-max min-w-full", className)} ref={contentRef}>
         {children}
       </div>
-    </div>
+    </section>
   );
 }

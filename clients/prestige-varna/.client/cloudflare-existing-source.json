@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "dealer": "prestige-varna",
+  "kind": "personalized-source-candidate-not-an-approved-release",
+  "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+  "candidateSourceDigest": "e94a73e4ebb2dfe93bdd0ce94ddce51be81899b20f8debe162d37f76f0963bde",
+  "qualificationContextPath": ".client/native-qualification-context.json",
+  "qualificationContextSha256": "7a9053f23f587a124c196f7683a09c1f1fe3069864cf5adde51bd8176ffed20f",
+  "qualificationLockPath": ".client/native-qualification-lock.json",
+  "qualificationLockSha256": "376848240eb1c57f35eb3dc58b624781de28ac941b0e4c918fab8ab9351ba87d",
+  "sourceDeltaReview": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
+    "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975",
+    "reviewedAt": "2026-10-11T21:04:02.173Z"
+  },
+  "nativeApproval": false,
+  "hostedApproval": false
+}

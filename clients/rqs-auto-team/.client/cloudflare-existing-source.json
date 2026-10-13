@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "dealer": "rqs-auto-team",
+  "kind": "personalized-source-candidate-not-an-approved-release",
+  "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+  "candidateSourceDigest": "78ca3849190b7e5c6f429dac7da7d571a769d5f2c948f0168760743167c56caf",
+  "qualificationContextPath": ".client/native-qualification-context.json",
+  "qualificationContextSha256": "326c61dd8d3d234d99dbff92ca6ee94c6ad8c2a54b1527e90981d79c0e29e379",
+  "qualificationLockPath": ".client/native-qualification-lock.json",
+  "qualificationLockSha256": "cff948e487fd21acc392407bc225cc7924617426a30cf955e20c08d7ab3e6825",
+  "sourceDeltaReview": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
+    "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975",
+    "reviewedAt": "2026-10-11T21:04:02.173Z"
+  },
+  "nativeApproval": false,
+  "hostedApproval": false
+}

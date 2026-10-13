@@ -5,5 +5,5 @@ export interface FeaturedVideo {
   thumbnail: string;
 }
 
-// No dealer-specific video selection is approved for this demo.
+// Dealer builds add verified videos from their own channel here.
 export const featuredVideos: readonly FeaturedVideo[] = [];

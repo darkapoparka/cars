@@ -3,12 +3,17 @@
 import { Button } from "@repo/design-system/components/ui/button";
 import { cn } from "@repo/design-system/lib/utils";
 import { getListingPath } from "@repo/marketplace";
+import { localizeListingCopy } from "@repo/marketplace/listing-copy";
 import { Heart, Images } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { mobileVehicleCardMediaClassName } from "../lib/mobile-vehicle-card-layout";
+import { createDesktopSavedCar } from "../lib/desktop-saved-car";
 import { rememberInventoryReturn } from "../lib/inventory-return";
+import {
+  mobileVehicleCardClassName,
+  mobileVehicleCardImageSizes,
+  mobileVehicleCardMediaClassName,
+} from "../lib/mobile-vehicle-card-layout";
 import { getVehicleCardVariant } from "../lib/vehicle-card-policy";
 import type { VehicleCardProps } from "../lib/vehicle-card-types";
 import {
@@ -19,10 +24,13 @@ import {
   getVehicleCardViewListingLabel,
   vehicleCardPlaceholder,
 } from "../lib/vehicle-card-view-policy";
+import { DesktopSaveCarButton } from "./desktop-saved-cars";
+import Image from "./public-image";
 import {
   VehicleCardContent,
   VehicleCardMediaBadges,
 } from "./vehicle-card-content";
+import styles from "./vehicle-card-desktop.module.css";
 
 export type {
   VehicleCardPriceInsight,
@@ -31,10 +39,15 @@ export type {
 } from "../lib/vehicle-card-types";
 
 export const VehicleCard = ({
+  className,
+  compactDesktopGrid = false,
   density = "default",
+  desktopHeadingLevel = 2,
+  desktopImageSizes,
   desktopLayout = "list",
+  desktopSurface = "inventory",
   href,
-  listing,
+  listing: sourceListing,
   locale,
   presentation = "default",
   priceInsight,
@@ -44,9 +57,12 @@ export const VehicleCard = ({
   trustSignals = [],
   viewMode = "list",
 }: VehicleCardProps) => {
+  const listing = localizeListingCopy(sourceListing, locale);
   const [imageFailed, setImageFailed] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(!listing.images[0]?.url);
   const isGrid = viewMode === "grid";
+  const hasCompactDesktopGrid =
+    compactDesktopGrid && isGrid && presentation === "showroom";
   const isCompact = density === "compact";
   const variant = getVehicleCardVariant({ density, desktopLayout, viewMode });
   const isDesktopComparison = isCompact && desktopLayout === "grid";
@@ -58,23 +74,43 @@ export const VehicleCard = ({
       ? vehicleCardPlaceholder
       : primaryImage.url;
   const copy = getVehicleCardCopy(locale);
+  let imageSizes = getVehicleCardImageSizes(
+    isCompact,
+    isGrid,
+    isDesktopComparison
+  );
+  if (presentation === "showroom") {
+    imageSizes = `(max-width: 1023px) ${mobileVehicleCardImageSizes}, (max-width: 1199px) 45vw, 400px`;
+  }
+  if (desktopImageSizes) {
+    imageSizes = `(max-width: 1023px) ${mobileVehicleCardImageSizes}, ${desktopImageSizes}`;
+  }
 
   return (
     <article
       className={cn(
-        "group flex overflow-hidden rounded-xl border-0 bg-card p-0 **:data-[slot=vehicle-card-title]:line-clamp-2 lg:rounded-lg lg:border lg:border-border lg:**:data-[slot=vehicle-card-title]:line-clamp-1",
-        "lg:transition-colors lg:hover:border-foreground/30",
+        styles.card,
+        mobileVehicleCardClassName,
+        "group relative overflow-hidden rounded-xl border-0 bg-card p-0 lg:rounded-lg lg:border lg:border-border",
+        isDesktopComparison
+          ? "lg:**:data-[slot=vehicle-card-title]:line-clamp-2"
+          : "lg:**:data-[slot=vehicle-card-title]:line-clamp-1",
         variant === "compact-list" &&
           "lg:grid lg:grid-cols-[13rem_minmax(0,1fr)] lg:gap-0 xl:grid-cols-[15rem_minmax(0,1fr)]",
-        isDesktopComparison && "lg:flex lg:flex-col lg:gap-0"
+        isDesktopComparison && "lg:flex lg:flex-col lg:gap-0",
+        className
       )}
+      data-desktop-compact={hasCompactDesktopGrid}
+      data-desktop-surface={desktopSurface}
       data-presentation={presentation}
+      data-slot="vehicle-card"
+      data-view-mode={viewMode}
       onClickCapture={() => rememberInventoryReturn(listingHref)}
     >
       <div
         className={cn(
           mobileVehicleCardMediaClassName,
-          "lg:min-h-0 lg:w-full lg:max-w-none",
+          "lg:min-h-0 lg:w-full lg:min-w-0 lg:max-w-none",
           getVehicleCardMediaClassName(isCompact, isGrid, isDesktopComparison)
         )}
         data-slot="vehicle-card-media"
@@ -93,7 +129,7 @@ export const VehicleCard = ({
         >
           <Image
             alt={primaryImage?.alt ?? listing.title}
-            className="object-cover object-[center_85%] lg:object-[center_80%]"
+            className="object-cover object-[center_60%]"
             fill
             loading={priority ? "eager" : "lazy"}
             onError={() => {
@@ -102,20 +138,22 @@ export const VehicleCard = ({
             }}
             onLoad={() => setImageLoaded(true)}
             referrerPolicy="no-referrer"
-            sizes={getVehicleCardImageSizes(
-              isCompact,
-              isGrid,
-              isDesktopComparison
-            )}
+            sizes={imageSizes}
             src={imageSource}
             unoptimized={imageSource.startsWith("data:")}
           />
         </Link>
 
         <VehicleCardMediaBadges listing={listing} locale={locale} />
+        {presentation === "showroom" && !saveHref && (
+          <DesktopSaveCarButton
+            car={createDesktopSavedCar(listing, listingHref, locale)}
+            locale={locale}
+          />
+        )}
 
         {listing.images.length > 1 ? (
-          <span className="pointer-events-none absolute right-1.5 bottom-1.5 z-10 flex h-5 items-center gap-1 rounded-md bg-black/65 px-1.5 text-[11px] text-white lg:right-2 lg:bottom-2 lg:h-6 lg:px-2">
+          <span className="pointer-events-none absolute bottom-1.5 left-1.5 z-10 flex h-6 items-center gap-1 rounded-md bg-black/65 px-2 font-medium text-micro text-white lg:right-2 lg:bottom-2 lg:left-auto">
             <Images aria-hidden="true" className="size-3" />
             <span aria-hidden="true">{listing.images.length}</span>
             <span className="sr-only">
@@ -128,7 +166,7 @@ export const VehicleCard = ({
           <Button
             asChild
             className={cn(
-              "absolute top-1.5 right-1.5 z-20 size-8 rounded-lg border border-border/70 bg-card text-foreground shadow-sm after:absolute after:-inset-1.5 after:content-[''] hover:bg-accent lg:top-2 lg:right-2 lg:size-9 lg:after:inset-0",
+              "absolute right-1.5 bottom-1.5 z-20 size-9 rounded-lg border border-border/70 bg-card text-foreground shadow-sm after:absolute after:-inset-1 after:content-[''] hover:bg-accent lg:top-2 lg:right-2 lg:bottom-auto lg:size-9 lg:after:inset-0",
               isDesktopComparison &&
                 "lg:size-10 lg:rounded-full lg:border-0 lg:bg-transparent lg:text-white lg:shadow-none lg:hover:bg-black/15"
             )}
@@ -152,6 +190,8 @@ export const VehicleCard = ({
       </div>
 
       <VehicleCardContent
+        compactDesktopGrid={hasCompactDesktopGrid}
+        desktopHeadingLevel={desktopHeadingLevel}
         isDesktopComparison={isDesktopComparison}
         listing={listing}
         listingHref={listingHref}

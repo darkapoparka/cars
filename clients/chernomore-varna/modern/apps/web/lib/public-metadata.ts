@@ -1,7 +1,13 @@
+import { withBasePath } from "@repo/internationalization/paths";
 import { leadSite } from "@repo/marketplace";
+import { isDealershipSite } from "@repo/marketplace/site-config";
 import { createLocalizedMetadata as createSeoLocalizedMetadata } from "@repo/seo/metadata";
 import type { Metadata } from "next";
 import { getCurrentPublicDataMode } from "./public-data-policy";
+import {
+  getPublicLocales,
+  normalizePublicLocale,
+} from "./public-locale-policy";
 
 type PublicLocalizedMetadataInput = Parameters<
   typeof createSeoLocalizedMetadata
@@ -46,12 +52,23 @@ export const getPublicInventoryRobots = (
 export const createPublicLocalizedMetadata = (
   properties: PublicLocalizedMetadataInput
 ): Metadata => {
-  const defaultImage = leadSite.staticDemoMode
+  const defaultImage = isDealershipSite
     ? leadSite.heroPath
     : PUBLIC_SOCIAL_IMAGE_PATH;
-  const image = properties.image ?? defaultImage;
+  const image = withBasePath(properties.image ?? defaultImage);
+  const brandSuffix = [` | ${leadSite.name}`, ` | ${leadSite.shortName}`].find(
+    (suffix) => properties.title.endsWith(suffix)
+  );
+  const title = brandSuffix
+    ? properties.title.slice(0, -brandSuffix.length)
+    : properties.title;
   const metadata = createSeoLocalizedMetadata({
     ...properties,
+    title,
+    alternateLocales: (
+      properties.alternateLocales ?? getPublicLocales()
+    ).filter((locale) => getPublicLocales().includes(locale)),
+    locale: normalizePublicLocale(properties.locale),
     image,
     siteName: leadSite.name,
   });
@@ -62,7 +79,7 @@ export const createPublicLocalizedMetadata = (
       ...(metadata.twitter ?? {}),
       images:
         properties.twitter?.images ??
-        ([{ alt: properties.title, url: image }] satisfies NonNullable<
+        ([{ alt: title, url: image }] satisfies NonNullable<
           Metadata["twitter"]
         >["images"]),
     },

@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "dealer": "sprint-auto-varna",
+  "kind": "personalized-source-candidate-not-an-approved-release",
+  "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+  "candidateSourceDigest": "10f57f1cfd0c6af220a4aa0187775567f4cc9f86e97afdc60d7bd326d93aa0d1",
+  "qualificationContextPath": ".client/native-qualification-context.json",
+  "qualificationContextSha256": "169e510982bf5c47fc723171d8fd5c97a54d6a67c8a95361fa4db7455a727297",
+  "qualificationLockPath": ".client/native-qualification-lock.json",
+  "qualificationLockSha256": "6b0cdff2d587b1237315ce148721abdc6cbd167e175f585fe9d59ec860de477c",
+  "sourceDeltaReview": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
+    "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975",
+    "reviewedAt": "2026-10-11T21:04:02.173Z"
+  },
+  "nativeApproval": false,
+  "hostedApproval": false
+}

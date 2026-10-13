@@ -3,13 +3,20 @@
 import type { ListingViewMode } from "@repo/marketplace";
 import { useEffect, useRef, useState } from "react";
 
+import {
+  readLocalPreference,
+  writeLocalPreference,
+} from "../lib/browser-preferences";
+
 const listingViewPreferenceKey = "automarket:listing-view-mode";
 
-export const useMarketplaceListingViewMode = (defaultViewMode: ListingViewMode) => {
+export const useMarketplaceListingViewMode = (
+  defaultViewMode: ListingViewMode
+) => {
   const [viewMode, setViewMode] = useState<ListingViewMode>(defaultViewMode);
 
   useEffect(() => {
-    const storedPreference = window.localStorage.getItem(listingViewPreferenceKey);
+    const storedPreference = readLocalPreference(listingViewPreferenceKey);
     if (storedPreference === "grid" || storedPreference === "list") {
       setViewMode(storedPreference);
     }
@@ -17,7 +24,7 @@ export const useMarketplaceListingViewMode = (defaultViewMode: ListingViewMode) 
 
   const changeViewMode = (nextViewMode: ListingViewMode) => {
     setViewMode(nextViewMode);
-    window.localStorage.setItem(listingViewPreferenceKey, nextViewMode);
+    writeLocalPreference(listingViewPreferenceKey, nextViewMode);
   };
 
   return [viewMode, changeViewMode] as const;

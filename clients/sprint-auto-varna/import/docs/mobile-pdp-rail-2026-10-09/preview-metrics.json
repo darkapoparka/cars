@@ -1,0 +1,131 @@
+{
+  "previewOnly": true,
+  "results": [
+    {
+      "locale": "bg",
+      "variant": "Current",
+      "metrics": [
+        {
+          "text": "Инфо",
+          "weight": "400",
+          "height": 44
+        },
+        {
+          "text": "Данни",
+          "weight": "400",
+          "height": 44
+        },
+        {
+          "text": "Екстри",
+          "weight": "400",
+          "height": 44
+        }
+      ]
+    },
+    {
+      "locale": "bg",
+      "variant": "Subtle selected surface",
+      "metrics": [
+        {
+          "text": "Инфо",
+          "weight": "600",
+          "height": 44
+        },
+        {
+          "text": "Данни",
+          "weight": "400",
+          "height": 44
+        },
+        {
+          "text": "Екстри",
+          "weight": "400",
+          "height": 44
+        }
+      ]
+    },
+    {
+      "locale": "bg",
+      "variant": "Shadow on selection",
+      "metrics": [
+        {
+          "text": "Инфо",
+          "weight": "600",
+          "height": 44
+        },
+        {
+          "text": "Данни",
+          "weight": "400",
+          "height": 44
+        },
+        {
+          "text": "Екстри",
+          "weight": "400",
+          "height": 44
+        }
+      ]
+    },
+    {
+      "locale": "en",
+      "variant": "Current",
+      "metrics": [
+        {
+          "text": "Info",
+          "weight": "400",
+          "height": 44
+        },
+        {
+          "text": "Specs",
+          "weight": "400",
+          "height": 44
+        },
+        {
+          "text": "Features",
+          "weight": "400",
+          "height": 44
+        }
+      ]
+    },
+    {
+      "locale": "en",
+      "variant": "Subtle selected surface",
+      "metrics": [
+        {
+          "text": "Info",
+          "weight": "600",
+          "height": 44
+        },
+        {
+          "text": "Specs",
+          "weight": "400",
+          "height": 44
+        },
+        {
+          "text": "Extras",
+          "weight": "400",
+          "height": 44
+        }
+      ]
+    },
+    {
+      "locale": "en",
+      "variant": "Shadow on selection",
+      "metrics": [
+        {
+          "text": "Info",
+          "weight": "600",
+          "height": 44
+        },
+        {
+          "text": "Specs",
+          "weight": "400",
+          "height": 44
+        },
+        {
+          "text": "Extras",
+          "weight": "400",
+          "height": 44
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,221 @@
+{
+  "recordedAt": "2026-10-04T05:54:37.343Z",
+  "baselineHead": "379c87914effb4b7640f3ebd9fb3d5d09265500c",
+  "reviewedHead": "435aee897ac5952ce7c24a7427dcac5c584c9e8a",
+  "source": {
+    "path": "src/lib/components/home/SearchBox.svelte",
+    "sha256": "57eacc18851bb8173ae6c9dd237e29d325e32ff2cf07368fd9a0d787ab1d2835"
+  },
+  "before": {
+    "button": {
+      "arrowDy": 0,
+      "arrowWidth": 15,
+      "borderRadius": "999px",
+      "clipped": false,
+      "font": "500 16px / 20.8px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+      "gap": "8px",
+      "height": 44,
+      "href": "/bg/listing-grid",
+      "padding": "8px 20px",
+      "text": "Виж всички",
+      "width": 208,
+      "x": 48.5,
+      "y": 333
+    },
+    "lang": "bg",
+    "overflow": false,
+    "scrollY": 0,
+    "url": "http://127.0.0.1:6461/bg",
+    "viewport": {
+      "canvas": 305,
+      "height": 844,
+      "width": 320
+    }
+  },
+  "browser": {
+    "measurements": [
+      {
+        "button": {
+          "arrowDy": 0,
+          "arrowWidth": 15,
+          "borderRadius": "999px",
+          "clipped": false,
+          "font": "500 16px / 20.8px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+          "gap": "8px",
+          "height": 44,
+          "href": "/bg/listing-grid",
+          "padding": "8px 20px",
+          "text": "Виж всички",
+          "width": 155.921875,
+          "x": 74.53125,
+          "y": 333
+        },
+        "lang": "bg",
+        "overflow": false,
+        "scrollY": 0,
+        "url": "http://127.0.0.1:6461/bg",
+        "viewport": {
+          "canvas": 305,
+          "height": 844,
+          "width": 320
+        }
+      },
+      {
+        "button": {
+          "arrowDy": 0,
+          "arrowWidth": 15,
+          "borderRadius": "999px",
+          "clipped": false,
+          "font": "500 16px / 20.8px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+          "gap": "8px",
+          "height": 44,
+          "href": "/bg/listing-grid",
+          "padding": "8px 20px",
+          "text": "Виж всички",
+          "width": 155.921875,
+          "x": 109.53125,
+          "y": 333
+        },
+        "lang": "bg",
+        "overflow": false,
+        "scrollY": 0,
+        "url": "http://127.0.0.1:6461/bg",
+        "viewport": {
+          "canvas": 375,
+          "height": 844,
+          "width": 390
+        }
+      },
+      {
+        "button": {
+          "arrowDy": 0,
+          "arrowWidth": 15,
+          "borderRadius": "999px",
+          "clipped": false,
+          "font": "500 16px / 20.8px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+          "gap": "8px",
+          "height": 44,
+          "href": "/en/listing-grid",
+          "padding": "8px 20px",
+          "text": "View all",
+          "width": 121.640625,
+          "x": 126.671875,
+          "y": 333
+        },
+        "lang": "en",
+        "overflow": false,
+        "scrollY": 0,
+        "url": "http://127.0.0.1:6461/en",
+        "viewport": {
+          "canvas": 375,
+          "height": 844,
+          "width": 390
+        }
+      },
+      {
+        "button": {
+          "arrowDy": 0,
+          "arrowWidth": 15,
+          "borderRadius": "999px",
+          "clipped": false,
+          "font": "500 16px / 20.8px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+          "gap": "8px",
+          "height": 44,
+          "href": "/en/listing-grid",
+          "padding": "8px 20px",
+          "text": "View all",
+          "width": 121.640625,
+          "x": 91.671875,
+          "y": 333
+        },
+        "lang": "en",
+        "overflow": false,
+        "scrollY": 0,
+        "url": "http://127.0.0.1:6461/en",
+        "viewport": {
+          "canvas": 305,
+          "height": 844,
+          "width": 320
+        }
+      }
+    ],
+    "inventoryAction": {
+      "url": "http://127.0.0.1:6461/en/listing-grid",
+      "passed": true
+    }
+  },
+  "desktop": {
+    "desktopFormVisible": true,
+    "mobileActionVisible": false,
+    "overflow": false,
+    "url": "http://127.0.0.1:6461/bg",
+    "width": 1440
+  },
+  "reflow": {
+    "generatedAt": "2026-10-04T05:50:44.858Z",
+    "base": "http://127.0.0.1:6461",
+    "results": [
+      {
+        "name": "en 320 / reflow",
+        "passed": true,
+        "evidence": {
+          "normal": {
+            "pageOverflow": false,
+            "dialogOverflow": false,
+            "clipped": [],
+            "cardHeightSpread": 0
+          },
+          "spacing": {
+            "pageOverflow": false,
+            "dialogOverflow": false,
+            "clipped": [],
+            "cardHeightSpread": 0
+          },
+          "enlarged": {
+            "pageOverflow": false,
+            "dialogOverflow": false,
+            "clipped": [],
+            "cardHeightSpread": 0
+          }
+        },
+        "durationMs": 2212
+      },
+      {
+        "name": "bg 320 / reflow",
+        "passed": true,
+        "evidence": {
+          "normal": {
+            "pageOverflow": false,
+            "dialogOverflow": false,
+            "clipped": [],
+            "cardHeightSpread": 0
+          },
+          "spacing": {
+            "pageOverflow": false,
+            "dialogOverflow": false,
+            "clipped": [],
+            "cardHeightSpread": 0
+          },
+          "enlarged": {
+            "pageOverflow": false,
+            "dialogOverflow": false,
+            "clipped": [],
+            "cardHeightSpread": 0
+          }
+        },
+        "durationMs": 2408
+      }
+    ]
+  },
+  "checks": {
+    "cssPolicy": "passed",
+    "tokens": "passed",
+    "svelte": {
+      "errors": 0,
+      "warnings": 0
+    },
+    "productionBuild": "passed",
+    "localePrechecks": "passed"
+  },
+  "scope": "Local working-tree check; no template promotion or dealer deployment."
+}

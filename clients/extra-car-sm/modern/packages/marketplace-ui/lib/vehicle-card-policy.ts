@@ -1,4 +1,6 @@
 import {
+  type FuelType,
+  formatBodyType,
   formatFuelType,
   formatListingBadge,
   formatMileage,
@@ -22,9 +24,16 @@ export type VehicleCardSpecFactId =
   | "year";
 
 export interface VehicleCardSpecFact {
+  displayValue?: string;
   id: VehicleCardSpecFactId;
+  mobileDisplayValue?: string;
+  mobileMediumDisplayValue?: string;
   value: string;
 }
+
+type ShowroomVehicleCardSpecFact = Omit<VehicleCardSpecFact, "id"> & {
+  id: VehicleCardSpecFactId | "variant" | "body";
+};
 
 export interface VehicleCardBadgeCopy {
   featured: string;
@@ -46,9 +55,6 @@ interface VehicleCardVariantInput {
   viewMode: ListingViewMode;
 }
 
-const isBulgarianLocale = (locale?: string) =>
-  locale?.toLowerCase().startsWith("bg") ?? false;
-
 export const getVehicleCardVariant = ({
   density,
   desktopLayout,
@@ -65,7 +71,7 @@ export const getVehicleCardVariant = ({
 };
 
 export const getVehicleCardTitle = (
-  listing: VehicleListing,
+  listing: Pick<VehicleListing, "spec" | "title">,
   _variant: VehicleCardVariant
 ) => {
   const yearPrefix = `${listing.spec.year} `;
@@ -74,17 +80,71 @@ export const getVehicleCardTitle = (
     : listing.title;
 };
 
+/** Keep the actual brand separate without dropping any model or trim text. */
+export const getMobileVehicleCardHeading = (
+  listing: Pick<VehicleListing, "spec" | "title">
+) => {
+  const brand = listing.spec.make.trim();
+  const fullTitle = getVehicleCardTitle(listing, "comparison").trim();
+  const hasBrandPrefix =
+    brand &&
+    fullTitle.toLocaleLowerCase().startsWith(`${brand.toLocaleLowerCase()} `);
+  return {
+    brand,
+    fullTitle,
+    title: hasBrandPrefix ? fullTitle.slice(brand.length).trim() : fullTitle,
+  };
+};
+
+/** Split the actual listing title into a scannable model and variant; never invent stock details. */
+export const getShowroomVehicleHeading = (
+  listing: VehicleListing,
+  locale?: string
+) => {
+  const model = [listing.spec.make.trim(), listing.spec.model.trim()]
+    .filter(Boolean)
+    .join(" ");
+  const original = getVehicleCardTitle(listing, "comparison").trim();
+  const sameModel = original.toLocaleLowerCase() === model.toLocaleLowerCase();
+  let detail = sameModel ? "" : original;
+  for (const prefix of [model, listing.spec.make.trim()]) {
+    if (
+      !sameModel &&
+      prefix &&
+      original.toLocaleLowerCase().startsWith(`${prefix.toLocaleLowerCase()} `)
+    ) {
+      detail = original.slice(prefix.length).trim();
+      break;
+    }
+  }
+  const bodyType = formatBodyType(listing.spec.bodyType, locale);
+  return {
+    detail,
+    bodyType,
+    title: `${listing.spec.year} ${model || original}`,
+    subtitle: [detail, bodyType].filter(Boolean).join(" · "),
+  };
+};
+
 const compactTransmissionLabels = {
   automatic: { bg: "Автоматик", en: "Automatic" },
   manual: { bg: "Ръчна", en: "Manual" },
   semi_automatic: { bg: "Полуавтоматик", en: "Semi-auto" },
 } as const satisfies Record<Transmission, { bg: string; en: string }>;
 
+const compactFuelLabels: Partial<Record<FuelType, { bg: string; en: string }>> =
+  {
+    electric: { bg: "Електро", en: "Electric" },
+    plug_in_hybrid: { bg: "PHEV", en: "PHEV" },
+  };
+
 export const getVehicleCardSpecFacts = (
-  listing: VehicleListing,
+  listing: Pick<VehicleListing, "spec">,
   locale?: string
 ): VehicleCardSpecFact[] => {
   const language = locale?.toLowerCase().startsWith("bg") ? "bg" : "en";
+  const fuelValue = formatFuelType(listing.spec.fuelType, locale);
+  const fuelDisplayValue = compactFuelLabels[listing.spec.fuelType]?.[language];
 
   return (
     [
@@ -93,13 +153,47 @@ export const getVehicleCardSpecFacts = (
         id: "mileage",
         value: formatMileage(listing.spec.mileageValue, locale),
       },
-      { id: "fuel", value: formatFuelType(listing.spec.fuelType, locale) },
+      {
+        id: "fuel",
+        value: fuelValue,
+        ...(fuelDisplayValue && fuelDisplayValue !== fuelValue
+          ? { displayValue: fuelDisplayValue }
+          : {}),
+      },
       {
         id: "transmission",
         value: compactTransmissionLabels[listing.spec.transmission][language],
+        ...(listing.spec.transmission === "automatic"
+          ? { mobileDisplayValue: language === "bg" ? "Автом." : "Auto" }
+          : {}),
+        ...(listing.spec.transmission === "automatic" && language === "bg"
+          ? { mobileMediumDisplayValue: "Автомат" }
+          : {}),
+        ...(listing.spec.transmission === "semi_automatic" && language === "bg"
+          ? { displayValue: "Полуавт." }
+          : {}),
       },
     ] satisfies VehicleCardSpecFact[]
   ).filter((fact) => fact.value);
+};
+
+/** Desktop badges retain the complete variant and body style alongside the shared vehicle facts. */
+export const getShowroomVehicleCardSpecFacts = (
+  listing: VehicleListing,
+  locale?: string
+): ShowroomVehicleCardSpecFact[] => {
+  const heading = getShowroomVehicleHeading(listing, locale);
+  const facts = getVehicleCardSpecFacts(listing, locale);
+  return [
+    ...facts.filter((fact) => fact.id === "year"),
+    ...(
+      [
+        { id: "variant", value: heading.detail },
+        { id: "body", value: heading.bodyType },
+      ] satisfies ShowroomVehicleCardSpecFact[]
+    ).filter((fact) => fact.value),
+    ...facts.filter((fact) => fact.id !== "year"),
+  ];
 };
 
 export const getVehicleCardBadgeLabels = (
@@ -151,28 +245,9 @@ export const getVehicleCardPricePolicy = (
   };
 };
 
-const formatComparisonCardMoney = (money: Money, locale?: string) => {
-  const amount = new Intl.NumberFormat("en-US", {
-    maximumFractionDigits: 0,
-  })
-    .format(money.amount)
-    .replaceAll(",", "\u00A0");
-  let currency = money.currency;
-
-  if (money.currency === "BGN") {
-    currency = isBulgarianLocale(locale) ? "лв." : "BGN";
-  } else if (money.currency === "EUR") {
-    currency = "€";
-  }
-
-  return `${amount} ${currency}`;
-};
-
+/** Presentation changes geometry, never currency or locale formatting. */
 export const formatVehicleCardMoney = (
   money: Money,
-  variant: VehicleCardVariant,
+  _variant: VehicleCardVariant,
   locale?: string
-) =>
-  variant === "comparison"
-    ? formatComparisonCardMoney(money, locale)
-    : formatMoney(money, locale);
+) => formatMoney(money, locale);

@@ -1,0 +1,147 @@
+{
+  "schemaVersion": 1,
+  "slug": "exclusive-auto-varna",
+  "dealerId": "exclusive-auto-varna",
+  "repository": "darkapoparka/cars-exclusive-auto-varna",
+  "defaultBranch": "main",
+  "variants": [
+    {
+      "key": "auto-best",
+      "base": "",
+      "entry": "/"
+    },
+    {
+      "key": "modern",
+      "base": "/variant-2",
+      "entry": "/variant-2/cars"
+    },
+    {
+      "key": "import",
+      "base": "/variant-3",
+      "entry": "/variant-3/"
+    },
+    {
+      "key": "app",
+      "base": "/variant-4",
+      "entry": "/variant-4/"
+    },
+    {
+      "key": "mobile",
+      "base": "/variant-5",
+      "entry": "/variant-5/"
+    },
+    {
+      "key": "karento-best",
+      "base": "/variant-6",
+      "entry": "/variant-6/"
+    }
+  ],
+  "extraAssets": [
+    "registered-branding",
+    "branding"
+  ],
+  "packaging": {
+    "version": "5"
+  },
+  "templateRevisions": {
+    "auto-best": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "modern": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "import": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "app": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "mobile": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "karento-best": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+  },
+  "templateSources": {
+    "auto-best": {
+      "repository": "darkapoparka/cars",
+      "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+      "path": "templates/auto-best",
+      "digest": "dcbc59990928884006652677d3529020df3844029993895a71e5f6818ba7363c",
+      "tree": "5fb7a2164775050a47c1183371622295dbf63725"
+    },
+    "modern": {
+      "repository": "darkapoparka/cars",
+      "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+      "path": "templates/modern",
+      "digest": "ba263aac8f1863d133807d3e1bf3597d125cf315a7e0deba3f6e419b52434c25",
+      "tree": "3974380670eb388bb16182f94ade33be6d87b1c1"
+    },
+    "import": {
+      "repository": "darkapoparka/cars",
+      "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+      "path": "templates/import",
+      "digest": "f98a0934cdcc5adbda393c14c02eb2adc0175344ab2ac3f913afe4b0603366e5",
+      "tree": "6afc6901e2f95967fb7c72e9f75525d4d6fbf086"
+    },
+    "app": {
+      "repository": "darkapoparka/cars",
+      "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+      "path": "templates/app",
+      "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1",
+      "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76"
+    },
+    "mobile": {
+      "repository": "darkapoparka/cars",
+      "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+      "path": "templates/mobile",
+      "digest": "4e858bd9dbd3ef5b52cd904c4ed97bbfdc0f4cfe02b5a3840580f38026b867a0",
+      "tree": "2b02829e157071e305bfb2dff10ef18e85c8a35e"
+    },
+    "karento-best": {
+      "repository": "darkapoparka/cars",
+      "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+      "path": "templates/karento-best",
+      "digest": "83056967764a686f3737d74b86c5db51c1385a50184853f50ec4ade80c1dd44f",
+      "tree": "5f6eec8efb2f9e99819f7f0c2f743d18fff7b134"
+    }
+  },
+  "localization": {
+    "schemaVersion": 1,
+    "dealerId": "exclusive-auto-varna",
+    "defaultLocale": "bg",
+    "enabledLocales": [
+      "bg",
+      "en"
+    ],
+    "dealerCountry": "BG",
+    "inventoryCurrency": "EUR"
+  },
+  "language": "bg",
+  "branding": {
+    "schemaVersion": 1,
+    "required": true,
+    "policy": "template-default",
+    "contract": ".cars-branding.json",
+    "surfaceBindingsVersion": 1
+  },
+  "shareIdentity": {
+    "name": "Exclusive Auto",
+    "description": "Демонстрационен проект за обсъждане. Не е официалният сайт на автокъщата.",
+    "publicOrigin": "https://cars-exclusive-auto-varna.darkapoparka1.workers.dev",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "7156ec88a884e8d2f949721ac12bfb5daf2594c99b3ff3abd50154c9d9e8eea2",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "688a4b112ddcfe90e074d0f0fd699107843d64308f0443b80702ba4bb201aaed"
+    }
+  },
+  "registeredSourceAdoption": {
+    "receipt": {
+      "path": ".client/registered-source-adoption.json",
+      "sha256": "86a230ad368dd628634ff3d99a69e750765d7546a05cd3e731ff5f6c3644b00c"
+    },
+    "personalization": {
+      "path": ".client/registered-personalization.json",
+      "sha256": "feadf833cfcd3cde461f8ee944309e249d7bb79c206ab2113e8db88401373c35"
+    }
+  },
+  "appVariant": {
+    "source": {
+      "repository": "darkapoparka/cars",
+      "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+      "path": "templates/app",
+      "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1",
+      "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76"
+    }
+  }
+}

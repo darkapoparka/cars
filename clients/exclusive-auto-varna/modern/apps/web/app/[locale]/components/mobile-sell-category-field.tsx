@@ -36,11 +36,12 @@ export function MobileSellCategoryField({
   const triggerRef = useRef<HTMLButtonElement>(null);
   const selected =
     options.find((option) => option.value === value) ?? options[0];
-  const title =
+  const description =
     locale === "bg" ? "Изберете тип автомобил" : "Choose vehicle type";
+  const title = locale === "bg" ? "Тип" : "Type";
   return (
     <div className="grid gap-1.5">
-      <Label className="font-medium text-[13px]" htmlFor="mobile-sell-category">
+      <Label className="font-medium text-meta" htmlFor="mobile-sell-category">
         {label}
       </Label>
       <input name="category" type="hidden" value={value} />
@@ -57,7 +58,7 @@ export function MobileSellCategoryField({
       </button>
       <MobileMarketplaceOverlay
         contentDataSlot="mobile-sell-category-picker"
-        description={title}
+        description={description}
         leftAction={
           <MobileMarketplaceOverlayBackAction
             ariaLabel={locale === "bg" ? "Назад към формата" : "Back to form"}
@@ -87,7 +88,7 @@ export function MobileSellCategoryField({
         }
         title={title}
       >
-        <div className="grid gap-2 px-3 pb-4">
+        <div className="grid gap-2 px-4 pb-4">
           {options.map((option) => (
             <button
               aria-pressed={value === option.value}
@@ -105,10 +106,7 @@ export function MobileSellCategoryField({
               />
               <span className="flex-1">{option.label}</span>
               {value === option.value ? (
-                <DealerUiIcon
-                  className="size-5 text-[var(--lead-site-accent)]"
-                  name="check"
-                />
+                <DealerUiIcon className="size-5 text-brand-text" name="check" />
               ) : null}
             </button>
           ))}

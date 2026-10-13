@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "format": "mobile-preview-v1",
+  "dealer": "exclusive-auto-varna",
+  "name": "Exclusive Auto",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/mobile",
+    "digest": "4e858bd9dbd3ef5b52cd904c4ed97bbfdc0f4cfe02b5a3840580f38026b867a0",
+    "tree": "2b02829e157071e305bfb2dff10ef18e85c8a35e"
+  },
+  "sourceDigest": "6617c309f0f598b94a3d9de606f2314173339eed5157b3ed5b613fef18a7284b",
+  "inventory": {
+    "mode": "dated-listing-snapshot",
+    "count": 8,
+    "observedAt": "2026-09-09"
+  },
+  "personalization": {
+    "profileSha256": "87bc6819535133c8c8eb43f21b1c43895ceb1d3f7ebe53b496c81398e2499e20",
+    "logoPaths": [
+      "/registered-branding/onLight.png",
+      "/registered-branding/onDark.png"
+    ],
+    "mediaPaths": [
+      "/inventory/11755373421680634-1.webp",
+      "/inventory/11755373421680634-2.webp",
+      "/inventory/21778616329882244-1.webp",
+      "/inventory/21778616329882244-2.webp",
+      "/inventory/11748282363284627-1.webp",
+      "/inventory/11748282363284627-2.webp",
+      "/inventory/21766913531494016-1.webp",
+      "/inventory/21766913531494016-2.webp",
+      "/inventory/21761039729616703-1.webp",
+      "/inventory/21761039729616703-2.webp",
+      "/inventory/6a57ac9bd26832c7c4052853-1.webp",
+      "/inventory/6a57ac9bd26832c7c4052853-2.webp",
+      "/inventory/69551c3403615d4d390bde93-1.webp",
+      "/inventory/69551c3403615d4d390bde93-2.webp",
+      "/inventory/21773847467906960-1.webp",
+      "/inventory/21773847467906960-2.webp"
+    ],
+    "mediaMappings": [],
+    "contentPaths": [
+      "mobile/src/lib/showroom-config.ts",
+      "mobile/src/lib/catalog.ts",
+      "mobile/src/lib/dealers.ts",
+      "mobile/src/lib/dealer-inventory.json",
+      "mobile/src/lib/locale.ts",
+      "mobile/src/lib/search.ts",
+      "mobile/src/components/NativeDealerCards.tsx",
+      "mobile/src/components/DealerScreens.tsx",
+      "mobile/src/components/VehicleCard.tsx",
+      "mobile/src/components/ShowroomVehicleCard.tsx",
+      "mobile/src/components/VehicleSections.tsx",
+      "mobile/src/lib/mobile-mileage.ts",
+      "mobile/src/lib/types.ts",
+      "mobile/src/components/DesktopVehicleSummary.tsx",
+      "mobile/src/components/NativeCarPark.tsx",
+      "mobile/src/components/ShowroomFilterSheet.tsx",
+      "mobile/src/lib/vehicle-copy.ts",
+      "mobile/src/components/Header.tsx"
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

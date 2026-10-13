@@ -1,13 +1,19 @@
-import { leadSite } from "@repo/marketplace/lead-site";
 import { isExactRemoteHttpsDeploymentOrigin } from "@repo/next-config/environment-contract";
 import { z } from "zod";
+import { getCurrentPublicDataMode } from "../public-runtime";
+
+const dealerBindingPattern = /^[A-Za-z0-9_-]{1,128}$/;
 
 interface PublicContactEnvironment {
+  databaseUrl?: string;
+  dealerOrgId?: string;
   nodeEnv?: string;
   redisToken?: string;
   redisUrl?: string;
+  requestedDataMode?: string;
   resendFrom?: string;
   resendToken?: string;
+  skipEnvValidation?: string;
 }
 
 const runtimeSenderSchema = z.string().email();
@@ -52,19 +58,31 @@ const isRuntimeReadySender = (value?: string) => {
 export const isPublicContactSubmissionAvailable = (
   environment: PublicContactEnvironment = {
     nodeEnv: process.env.NODE_ENV,
+    databaseUrl: process.env.DATABASE_URL,
+    dealerOrgId: process.env.AUTOMARKET_DEALER_ORG_ID,
+    requestedDataMode: getCurrentPublicDataMode(),
+    skipEnvValidation: process.env.SKIP_ENV_VALIDATION,
     redisToken: process.env.UPSTASH_REDIS_REST_TOKEN,
     redisUrl: process.env.UPSTASH_REDIS_REST_URL,
     resendFrom: process.env.RESEND_FROM,
     resendToken: process.env.RESEND_TOKEN,
   }
 ) => {
-  if (leadSite.staticDemoMode) return false;
   const deliveryIsReady =
     isRuntimeReadySender(environment.resendFrom) &&
     hasValue(environment.resendToken, 12) &&
     environment.resendToken?.startsWith("re_");
 
-  if (!deliveryIsReady) {
+  const inboxIsReady =
+    environment.requestedDataMode === "database" &&
+    Boolean(environment.databaseUrl) &&
+    environment.skipEnvValidation !== "true" &&
+    Boolean(
+      environment.dealerOrgId &&
+        dealerBindingPattern.test(environment.dealerOrgId)
+    );
+
+  if (!(deliveryIsReady || inboxIsReady)) {
     return false;
   }
 

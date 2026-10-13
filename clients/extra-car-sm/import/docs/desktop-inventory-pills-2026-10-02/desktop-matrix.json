@@ -1,0 +1,1046 @@
+[
+  {
+    "allFilter": {
+      "height": 48,
+      "width": 186.21875,
+      "x": 283.390625,
+      "y": 426.546875
+    },
+    "fields": [
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Марка",
+        "width": 101.9375,
+        "x": 53.828125,
+        "y": 370.546875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Модел",
+        "width": 102.734375,
+        "x": 163.765625,
+        "y": 370.546875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Цена",
+        "width": 91.765625,
+        "x": 274.5,
+        "y": 370.546875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Пробег",
+        "width": 110.9375,
+        "x": 374.265625,
+        "y": 370.546875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Гориво",
+        "width": 107.5625,
+        "x": 493.203125,
+        "y": 370.546875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Купе",
+        "width": 90.390625,
+        "x": 608.765625,
+        "y": 370.546875
+      }
+    ],
+    "fieldsOutsideHero": 0,
+    "gridX": 32,
+    "hero": {
+      "height": 450,
+      "width": 753,
+      "x": 0,
+      "y": 112
+    },
+    "locale": "bg",
+    "overflow": false,
+    "overviewX": 32,
+    "sortClosed": true,
+    "sortTrigger": {
+      "height": 44,
+      "width": 177.140625,
+      "x": 391.65625,
+      "y": 586
+    },
+    "sortTriggers": 1,
+    "viewTarget": 44,
+    "visibleSortChoices": 0,
+    "width": 768,
+    "sortVisibilityMethod": "Playwright locator.isVisible"
+  },
+  {
+    "allFilter": {
+      "height": 48,
+      "width": 186.21875,
+      "x": 349.390625,
+      "y": 426.546875
+    },
+    "fields": [
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Марка",
+        "width": 101.9375,
+        "x": 119.828125,
+        "y": 370.546875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Модел",
+        "width": 102.734375,
+        "x": 229.765625,
+        "y": 370.546875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Цена",
+        "width": 91.765625,
+        "x": 340.5,
+        "y": 370.546875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Пробег",
+        "width": 110.9375,
+        "x": 440.265625,
+        "y": 370.546875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Гориво",
+        "width": 107.5625,
+        "x": 559.203125,
+        "y": 370.546875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Купе",
+        "width": 90.390625,
+        "x": 674.765625,
+        "y": 370.546875
+      }
+    ],
+    "fieldsOutsideHero": 0,
+    "gridX": 32,
+    "hero": {
+      "height": 450,
+      "width": 885,
+      "x": 0,
+      "y": 112
+    },
+    "locale": "bg",
+    "overflow": false,
+    "overviewX": 32,
+    "sortClosed": true,
+    "sortTrigger": {
+      "height": 44,
+      "width": 177.140625,
+      "x": 523.65625,
+      "y": 586
+    },
+    "sortTriggers": 1,
+    "viewTarget": 44,
+    "visibleSortChoices": 0,
+    "width": 900,
+    "sortVisibilityMethod": "Playwright locator.isVisible"
+  },
+  {
+    "allFilter": {
+      "height": 48,
+      "width": 186.21875,
+      "x": 738.046875,
+      "y": 373.546875
+    },
+    "fields": [
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Марка",
+        "width": 101.9375,
+        "x": 84.71875,
+        "y": 373.546875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Модел",
+        "width": 102.734375,
+        "x": 194.65625,
+        "y": 373.546875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Цена",
+        "width": 91.765625,
+        "x": 305.390625,
+        "y": 373.546875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Пробег",
+        "width": 110.9375,
+        "x": 405.15625,
+        "y": 373.546875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Гориво",
+        "width": 107.5625,
+        "x": 524.09375,
+        "y": 373.546875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Купе",
+        "width": 90.390625,
+        "x": 639.65625,
+        "y": 373.546875
+      }
+    ],
+    "fieldsOutsideHero": 0,
+    "gridX": 32,
+    "hero": {
+      "height": 400,
+      "width": 1009,
+      "x": 0,
+      "y": 112
+    },
+    "locale": "bg",
+    "overflow": false,
+    "overviewX": 32,
+    "sortClosed": true,
+    "sortTrigger": {
+      "height": 44,
+      "width": 177.140625,
+      "x": 647.65625,
+      "y": 536
+    },
+    "sortTriggers": 1,
+    "viewTarget": 44,
+    "visibleSortChoices": 0,
+    "width": 1024,
+    "sortVisibilityMethod": "Playwright locator.isVisible"
+  },
+  {
+    "allFilter": {
+      "height": 48,
+      "width": 186.21875,
+      "x": 866.046875,
+      "y": 328.890625
+    },
+    "fields": [
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Марка",
+        "width": 101.9375,
+        "x": 212.71875,
+        "y": 328.890625
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Модел",
+        "width": 102.734375,
+        "x": 322.65625,
+        "y": 328.890625
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Цена",
+        "width": 91.765625,
+        "x": 433.390625,
+        "y": 328.890625
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Пробег",
+        "width": 110.9375,
+        "x": 533.15625,
+        "y": 328.890625
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Гориво",
+        "width": 107.5625,
+        "x": 652.09375,
+        "y": 328.890625
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Купе",
+        "width": 90.390625,
+        "x": 767.65625,
+        "y": 328.890625
+      }
+    ],
+    "fieldsOutsideHero": 0,
+    "gridX": 32,
+    "hero": {
+      "height": 400,
+      "width": 1265,
+      "x": 0,
+      "y": 66
+    },
+    "locale": "bg",
+    "overflow": false,
+    "overviewX": 32,
+    "sortClosed": true,
+    "sortTrigger": {
+      "height": 44,
+      "width": 177.140625,
+      "x": 903.65625,
+      "y": 490
+    },
+    "sortTriggers": 1,
+    "viewTarget": 44,
+    "visibleSortChoices": 0,
+    "width": 1280,
+    "sortVisibilityMethod": "Playwright locator.isVisible"
+  },
+  {
+    "allFilter": {
+      "height": 48,
+      "width": 186.21875,
+      "x": 946.046875,
+      "y": 331.578125
+    },
+    "fields": [
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Марка",
+        "width": 101.9375,
+        "x": 292.71875,
+        "y": 331.578125
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Модел",
+        "width": 102.734375,
+        "x": 402.65625,
+        "y": 331.578125
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Цена",
+        "width": 91.765625,
+        "x": 513.390625,
+        "y": 331.578125
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Пробег",
+        "width": 110.9375,
+        "x": 613.15625,
+        "y": 331.578125
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Гориво",
+        "width": 107.5625,
+        "x": 732.09375,
+        "y": 331.578125
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Купе",
+        "width": 90.390625,
+        "x": 847.65625,
+        "y": 331.578125
+      }
+    ],
+    "fieldsOutsideHero": 0,
+    "gridX": 52.5,
+    "hero": {
+      "height": 400,
+      "width": 1425,
+      "x": 0,
+      "y": 66
+    },
+    "locale": "bg",
+    "overflow": false,
+    "overviewX": 52.5,
+    "sortClosed": true,
+    "sortTrigger": {
+      "height": 44,
+      "width": 177.140625,
+      "x": 1043.15625,
+      "y": 490
+    },
+    "sortTriggers": 1,
+    "viewTarget": 44,
+    "visibleSortChoices": 0,
+    "width": 1440,
+    "sortVisibilityMethod": "Playwright locator.isVisible"
+  },
+  {
+    "allFilter": {
+      "height": 48,
+      "width": 186.21875,
+      "x": 1186.046875,
+      "y": 332.03125
+    },
+    "fields": [
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Марка",
+        "width": 101.9375,
+        "x": 532.71875,
+        "y": 332.03125
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Модел",
+        "width": 102.734375,
+        "x": 642.65625,
+        "y": 332.03125
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Цена",
+        "width": 91.765625,
+        "x": 753.390625,
+        "y": 332.03125
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Пробег",
+        "width": 110.9375,
+        "x": 853.15625,
+        "y": 332.03125
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Гориво",
+        "width": 107.5625,
+        "x": 972.09375,
+        "y": 332.03125
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Купе",
+        "width": 90.390625,
+        "x": 1087.65625,
+        "y": 332.03125
+      }
+    ],
+    "fieldsOutsideHero": 0,
+    "gridX": 292.5,
+    "hero": {
+      "height": 400,
+      "width": 1905,
+      "x": 0,
+      "y": 66
+    },
+    "locale": "bg",
+    "overflow": false,
+    "overviewX": 292.5,
+    "sortClosed": true,
+    "sortTrigger": {
+      "height": 44,
+      "width": 177.140625,
+      "x": 1283.15625,
+      "y": 490
+    },
+    "sortTriggers": 1,
+    "viewTarget": 44,
+    "visibleSortChoices": 0,
+    "width": 1920,
+    "sortVisibilityMethod": "Playwright locator.isVisible"
+  },
+  {
+    "allFilter": {
+      "height": 48,
+      "width": 127.546875,
+      "x": 312.71875,
+      "y": 447.546875
+    },
+    "fields": [
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Make",
+        "width": 92.65625,
+        "x": 72.234375,
+        "y": 391.546875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Model",
+        "width": 98.84375,
+        "x": 172.890625,
+        "y": 391.546875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Price",
+        "width": 91.015625,
+        "x": 279.734375,
+        "y": 391.546875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Mileage",
+        "width": 111.1875,
+        "x": 378.75,
+        "y": 391.546875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Fuel",
+        "width": 84.140625,
+        "x": 497.9375,
+        "y": 391.546875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Body",
+        "width": 90.6875,
+        "x": 590.078125,
+        "y": 391.546875
+      }
+    ],
+    "fieldsOutsideHero": 0,
+    "gridX": 32,
+    "hero": {
+      "height": 450,
+      "width": 753,
+      "x": 0,
+      "y": 133
+    },
+    "locale": "en",
+    "overflow": false,
+    "overviewX": 32,
+    "sortClosed": true,
+    "sortTrigger": {
+      "height": 44,
+      "width": 139.6875,
+      "x": 448.421875,
+      "y": 607
+    },
+    "sortTriggers": 1,
+    "viewTarget": 44,
+    "visibleSortChoices": 0,
+    "width": 768,
+    "sortVisibilityMethod": "Playwright locator.isVisible"
+  },
+  {
+    "allFilter": {
+      "height": 48,
+      "width": 127.546875,
+      "x": 686.984375,
+      "y": 419.546875
+    },
+    "fields": [
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Make",
+        "width": 92.65625,
+        "x": 70.453125,
+        "y": 419.546875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Model",
+        "width": 98.84375,
+        "x": 171.109375,
+        "y": 419.546875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Price",
+        "width": 91.015625,
+        "x": 277.953125,
+        "y": 419.546875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Mileage",
+        "width": 111.1875,
+        "x": 376.96875,
+        "y": 419.546875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Fuel",
+        "width": 84.140625,
+        "x": 496.15625,
+        "y": 419.546875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Body",
+        "width": 90.6875,
+        "x": 588.296875,
+        "y": 419.546875
+      }
+    ],
+    "fieldsOutsideHero": 0,
+    "gridX": 32,
+    "hero": {
+      "height": 450,
+      "width": 885,
+      "x": 0,
+      "y": 133
+    },
+    "locale": "en",
+    "overflow": false,
+    "overviewX": 32,
+    "sortClosed": true,
+    "sortTrigger": {
+      "height": 44,
+      "width": 139.6875,
+      "x": 580.421875,
+      "y": 607
+    },
+    "sortTriggers": 1,
+    "viewTarget": 44,
+    "visibleSortChoices": 0,
+    "width": 900,
+    "sortVisibilityMethod": "Playwright locator.isVisible"
+  },
+  {
+    "allFilter": {
+      "height": 48,
+      "width": 127.546875,
+      "x": 748.984375,
+      "y": 394.546875
+    },
+    "fields": [
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Make",
+        "width": 92.65625,
+        "x": 132.453125,
+        "y": 394.546875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Model",
+        "width": 98.84375,
+        "x": 233.109375,
+        "y": 394.546875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Price",
+        "width": 91.015625,
+        "x": 339.953125,
+        "y": 394.546875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Mileage",
+        "width": 111.1875,
+        "x": 438.96875,
+        "y": 394.546875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Fuel",
+        "width": 84.140625,
+        "x": 558.15625,
+        "y": 394.546875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Body",
+        "width": 90.6875,
+        "x": 650.296875,
+        "y": 394.546875
+      }
+    ],
+    "fieldsOutsideHero": 0,
+    "gridX": 32,
+    "hero": {
+      "height": 400,
+      "width": 1009,
+      "x": 0,
+      "y": 133
+    },
+    "locale": "en",
+    "overflow": false,
+    "overviewX": 32,
+    "sortClosed": true,
+    "sortTrigger": {
+      "height": 44,
+      "width": 139.6875,
+      "x": 704.421875,
+      "y": 557
+    },
+    "sortTriggers": 1,
+    "viewTarget": 44,
+    "visibleSortChoices": 0,
+    "width": 1024,
+    "sortVisibilityMethod": "Playwright locator.isVisible"
+  },
+  {
+    "allFilter": {
+      "height": 48,
+      "width": 127.546875,
+      "x": 876.984375,
+      "y": 356.890625
+    },
+    "fields": [
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Make",
+        "width": 92.65625,
+        "x": 260.453125,
+        "y": 356.890625
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Model",
+        "width": 98.84375,
+        "x": 361.109375,
+        "y": 356.890625
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Price",
+        "width": 91.015625,
+        "x": 467.953125,
+        "y": 356.890625
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Mileage",
+        "width": 111.1875,
+        "x": 566.96875,
+        "y": 356.890625
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Fuel",
+        "width": 84.140625,
+        "x": 686.15625,
+        "y": 356.890625
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Body",
+        "width": 90.6875,
+        "x": 778.296875,
+        "y": 356.890625
+      }
+    ],
+    "fieldsOutsideHero": 0,
+    "gridX": 32,
+    "hero": {
+      "height": 400,
+      "width": 1265,
+      "x": 0,
+      "y": 94
+    },
+    "locale": "en",
+    "overflow": false,
+    "overviewX": 32,
+    "sortClosed": true,
+    "sortTrigger": {
+      "height": 44,
+      "width": 139.6875,
+      "x": 960.421875,
+      "y": 518
+    },
+    "sortTriggers": 1,
+    "viewTarget": 44,
+    "visibleSortChoices": 0,
+    "width": 1280,
+    "sortVisibilityMethod": "Playwright locator.isVisible"
+  },
+  {
+    "allFilter": {
+      "height": 48,
+      "width": 127.546875,
+      "x": 956.984375,
+      "y": 359.578125
+    },
+    "fields": [
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Make",
+        "width": 92.65625,
+        "x": 340.453125,
+        "y": 359.578125
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Model",
+        "width": 98.84375,
+        "x": 441.109375,
+        "y": 359.578125
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Price",
+        "width": 91.015625,
+        "x": 547.953125,
+        "y": 359.578125
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Mileage",
+        "width": 111.1875,
+        "x": 646.96875,
+        "y": 359.578125
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Fuel",
+        "width": 84.140625,
+        "x": 766.15625,
+        "y": 359.578125
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Body",
+        "width": 90.6875,
+        "x": 858.296875,
+        "y": 359.578125
+      }
+    ],
+    "fieldsOutsideHero": 0,
+    "gridX": 52.5,
+    "hero": {
+      "height": 400,
+      "width": 1425,
+      "x": 0,
+      "y": 94
+    },
+    "locale": "en",
+    "overflow": false,
+    "overviewX": 52.5,
+    "sortClosed": true,
+    "sortTrigger": {
+      "height": 44,
+      "width": 139.6875,
+      "x": 1099.921875,
+      "y": 518
+    },
+    "sortTriggers": 1,
+    "viewTarget": 44,
+    "visibleSortChoices": 0,
+    "width": 1440,
+    "sortVisibilityMethod": "Playwright locator.isVisible"
+  },
+  {
+    "allFilter": {
+      "height": 48,
+      "width": 127.546875,
+      "x": 1196.984375,
+      "y": 360.03125
+    },
+    "fields": [
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Make",
+        "width": 92.65625,
+        "x": 580.453125,
+        "y": 360.03125
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Model",
+        "width": 98.84375,
+        "x": 681.109375,
+        "y": 360.03125
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Price",
+        "width": 91.015625,
+        "x": 787.953125,
+        "y": 360.03125
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Mileage",
+        "width": 111.1875,
+        "x": 886.96875,
+        "y": 360.03125
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Fuel",
+        "width": 84.140625,
+        "x": 1006.15625,
+        "y": 360.03125
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "radius": 999,
+        "text": "Body",
+        "width": 90.6875,
+        "x": 1098.296875,
+        "y": 360.03125
+      }
+    ],
+    "fieldsOutsideHero": 0,
+    "gridX": 292.5,
+    "hero": {
+      "height": 400,
+      "width": 1905,
+      "x": 0,
+      "y": 94
+    },
+    "locale": "en",
+    "overflow": false,
+    "overviewX": 292.5,
+    "sortClosed": true,
+    "sortTrigger": {
+      "height": 44,
+      "width": 139.6875,
+      "x": 1339.921875,
+      "y": 518
+    },
+    "sortTriggers": 1,
+    "viewTarget": 44,
+    "visibleSortChoices": 0,
+    "width": 1920,
+    "sortVisibilityMethod": "Playwright locator.isVisible"
+  }
+]

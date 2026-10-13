@@ -1,25 +1,558 @@
-import dealer from '../dealer-stock.json';
 import type { MarketplaceSearchParams } from "../search";
 import type { Money, VehicleListing } from "../types";
 
-export const mockListings: VehicleListing[] = dealer.inventory.map((record) => {
-  if (!Number.isFinite(record.price) || record.price <= 0) throw new Error(`Missing advertised price: ${record.id}`);
-  const fuel: VehicleListing['spec']['fuelType'] = record.fuel === 'Бензин' ? 'gasoline' : record.fuel === 'Дизел' ? 'diesel' : record.fuel === 'Електрически' ? 'electric' : record.fuel === 'Plug-in хибрид' ? 'plug_in_hybrid' : record.fuel === 'Газ' ? 'lpg' : record.fuel === 'Хибрид' ? 'hybrid' : 'other';
-  const bodies: Record<string, VehicleListing['spec']['bodyType']> = {SUV:'suv',Sedan:'sedan',Wagon:'wagon',Hatchback:'hatchback',Coupe:'coupe',Minivan:'minibus',Convertible:'convertible'};
-  const state: Record<string,string> = { incoming:'Очакван внос', consignment:'Клиентски автомобил', advertised:'Обявен автомобил', 'status-unconfirmed':'Статус за потвърждение', appointment:'Оглед с уговорка' };
-  return {
-    id: record.id, slug: record.id, category: 'car', dealerOrgId: "dealer-avtoborsa-mania", status: 'active',
-    title: `${record.title} · ${state[record.sourceStatus] ?? 'Статус за потвърждение'}`,
-    description: `${record.note} ${record.taxNote}. Данните са наблюдавани на ${record.observedAt}; не са независимо проверена наличност.`,
-    sourceUrl: record.sourceUrl, price: { amount: record.price, currency: record.currency }, priceType: 'fixed',
-    images: record.gallery.length ? record.gallery.map((url) => ({url,alt:record.title})) : [{url:record.image,alt:'Снимките на автомобила очакват одобрение за демото'}],
-    badges: ['used'], location: {city:dealer.city,country:'България'},
-    features: record.features.map((label)=>({bg:label,en:label})),
-    spec: {make:record.make,model:record.model,year:record.year,bodyType:bodies[record.body] ?? 'other',fuelType:fuel,transmission:record.transmission === 'Ръчна' ? 'manual' : 'automatic',mileageValue:record.mileage,mileageUnit:'km',enginePowerHp:record.powerHp,colorExterior:record.color},
-    seller: {id: "dealer-avtoborsa-mania",type:'dealer',displayName:dealer.name,verificationStatus:'unverified',city:dealer.city,logoUrl:'/dealer/logo-dark.svg'},
-    publishedAt: `${record.observedAt}T00:00:00.000Z`, promoted:false
-  };
-});
+export const mockListings: VehicleListing[] = [
+  {
+    "id": "am-1001",
+    "slug": "audi-2024-template-demo-auto-best-1",
+    "category": "car",
+    "dealerOrgId": "dealer-avtoborsa-mania",
+    "status": "active",
+    "title": "Audi RS 6 Avant",
+    "description": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата. Illustrative template vehicles, not this dealership’s stock.",
+    "price": {
+      "amount": 68804,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/assets/images/lead/day-night-stock-04.webp",
+        "alt": "Audi RS 6 Avant"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Варна",
+      "region": "Варна",
+      "country": "Bulgaria"
+    },
+    "features": [
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "360° камера",
+        "en": "360° камера"
+      },
+      {
+        "bg": "Панорамен покрив",
+        "en": "Панорамен покрив"
+      },
+      {
+        "bg": "Подгряване на седалки",
+        "en": "Подгряване на седалки"
+      },
+      {
+        "bg": "Навигация",
+        "en": "Навигация"
+      },
+      {
+        "bg": "Парктроник",
+        "en": "Парктроник"
+      },
+      {
+        "bg": "Безключов достъп",
+        "en": "Безключов достъп"
+      },
+      {
+        "bg": "Адаптивен круиз контрол",
+        "en": "Адаптивен круиз контрол"
+      }
+    ],
+    "spec": {
+      "make": "Audi",
+      "model": "Audi RS 6 Avant",
+      "year": 2024,
+      "bodyType": "wagon",
+      "fuelType": "gasoline",
+      "transmission": "automatic",
+      "mileageValue": 99701,
+      "mileageUnit": "km"
+    },
+    "seller": {
+      "id": "dealer-avtoborsa-mania",
+      "type": "dealer",
+      "displayName": "АВТОБОРСА МАНИЯ",
+      "verificationStatus": "unverified",
+      "city": "Варна",
+      "logoUrl": "/registered-branding/onLight.png"
+    },
+    "publishedAt": "2026-01-01T09:00:00.000Z",
+    "promoted": true
+  },
+  {
+    "id": "am-1010",
+    "slug": "mercedes-benz-2021-template-demo-auto-best-2",
+    "category": "car",
+    "dealerOrgId": "dealer-avtoborsa-mania",
+    "status": "active",
+    "title": "Mercedes-Benz GLE Coupé",
+    "description": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата. Illustrative template vehicles, not this dealership’s stock.",
+    "price": {
+      "amount": 55403,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/assets/images/lead/day-night-stock-01.webp",
+        "alt": "Mercedes-Benz GLE Coupé"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Варна",
+      "region": "Варна",
+      "country": "Bulgaria"
+    },
+    "features": [
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "360° камера",
+        "en": "360° камера"
+      },
+      {
+        "bg": "Панорамен покрив",
+        "en": "Панорамен покрив"
+      },
+      {
+        "bg": "Подгряване на седалки",
+        "en": "Подгряване на седалки"
+      },
+      {
+        "bg": "Навигация",
+        "en": "Навигация"
+      },
+      {
+        "bg": "Парктроник",
+        "en": "Парктроник"
+      },
+      {
+        "bg": "Безключов достъп",
+        "en": "Безключов достъп"
+      },
+      {
+        "bg": "Адаптивен круиз контрол",
+        "en": "Адаптивен круиз контрол"
+      }
+    ],
+    "spec": {
+      "make": "Mercedes-Benz",
+      "model": "Mercedes-Benz GLE Coupé",
+      "year": 2021,
+      "bodyType": "suv",
+      "fuelType": "diesel",
+      "transmission": "automatic",
+      "mileageValue": 96865,
+      "mileageUnit": "km"
+    },
+    "seller": {
+      "id": "dealer-avtoborsa-mania",
+      "type": "dealer",
+      "displayName": "АВТОБОРСА МАНИЯ",
+      "verificationStatus": "unverified",
+      "city": "Варна",
+      "logoUrl": "/registered-branding/onLight.png"
+    },
+    "publishedAt": "2026-01-01T09:00:00.000Z",
+    "promoted": true
+  },
+  {
+    "id": "am-1011",
+    "slug": "audi-2021-template-demo-auto-best-3",
+    "category": "car",
+    "dealerOrgId": "dealer-avtoborsa-mania",
+    "status": "active",
+    "title": "Audi RS Q8",
+    "description": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата. Illustrative template vehicles, not this dealership’s stock.",
+    "price": {
+      "amount": 57480,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/assets/images/lead/day-night-stock-06.webp",
+        "alt": "Audi RS Q8"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Варна",
+      "region": "Варна",
+      "country": "Bulgaria"
+    },
+    "features": [
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "360° камера",
+        "en": "360° камера"
+      },
+      {
+        "bg": "Панорамен покрив",
+        "en": "Панорамен покрив"
+      },
+      {
+        "bg": "Подгряване на седалки",
+        "en": "Подгряване на седалки"
+      },
+      {
+        "bg": "Навигация",
+        "en": "Навигация"
+      },
+      {
+        "bg": "Парктроник",
+        "en": "Парктроник"
+      },
+      {
+        "bg": "Безключов достъп",
+        "en": "Безключов достъп"
+      },
+      {
+        "bg": "Адаптивен круиз контрол",
+        "en": "Адаптивен круиз контрол"
+      }
+    ],
+    "spec": {
+      "make": "Audi",
+      "model": "Audi RS Q8",
+      "year": 2021,
+      "bodyType": "suv",
+      "fuelType": "gasoline",
+      "transmission": "automatic",
+      "mileageValue": 94709,
+      "mileageUnit": "km"
+    },
+    "seller": {
+      "id": "dealer-avtoborsa-mania",
+      "type": "dealer",
+      "displayName": "АВТОБОРСА МАНИЯ",
+      "verificationStatus": "unverified",
+      "city": "Варна",
+      "logoUrl": "/registered-branding/onLight.png"
+    },
+    "publishedAt": "2026-01-01T09:00:00.000Z",
+    "promoted": true
+  },
+  {
+    "id": "am-1012",
+    "slug": "bmw-2021-template-demo-auto-best-4",
+    "category": "car",
+    "dealerOrgId": "dealer-avtoborsa-mania",
+    "status": "active",
+    "title": "BMW X6 M Sport",
+    "description": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата. Illustrative template vehicles, not this dealership’s stock.",
+    "price": {
+      "amount": 54223,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/assets/images/lead/day-night-stock-02.webp",
+        "alt": "BMW X6 M Sport"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Варна",
+      "region": "Варна",
+      "country": "Bulgaria"
+    },
+    "features": [
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "360° камера",
+        "en": "360° камера"
+      },
+      {
+        "bg": "Панорамен покрив",
+        "en": "Панорамен покрив"
+      },
+      {
+        "bg": "Подгряване на седалки",
+        "en": "Подгряване на седалки"
+      },
+      {
+        "bg": "Навигация",
+        "en": "Навигация"
+      },
+      {
+        "bg": "Парктроник",
+        "en": "Парктроник"
+      },
+      {
+        "bg": "Безключов достъп",
+        "en": "Безключов достъп"
+      }
+    ],
+    "spec": {
+      "make": "BMW",
+      "model": "BMW X6 M Sport",
+      "year": 2021,
+      "bodyType": "suv",
+      "fuelType": "diesel",
+      "transmission": "automatic",
+      "mileageValue": 62485,
+      "mileageUnit": "km"
+    },
+    "seller": {
+      "id": "dealer-avtoborsa-mania",
+      "type": "dealer",
+      "displayName": "АВТОБОРСА МАНИЯ",
+      "verificationStatus": "unverified",
+      "city": "Варна",
+      "logoUrl": "/registered-branding/onLight.png"
+    },
+    "publishedAt": "2026-01-01T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "am-1013",
+    "slug": "mercedes-benz-2020-template-demo-auto-best-6",
+    "category": "car",
+    "dealerOrgId": "dealer-avtoborsa-mania",
+    "status": "active",
+    "title": "Mercedes-AMG GT 4-Door",
+    "description": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата. Illustrative template vehicles, not this dealership’s stock.",
+    "price": {
+      "amount": 61069,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/assets/images/lead/day-night-stock-03.webp",
+        "alt": "Mercedes-AMG GT 4-Door"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Варна",
+      "region": "Варна",
+      "country": "Bulgaria"
+    },
+    "features": [
+      {
+        "bg": "360° камера",
+        "en": "360° камера"
+      },
+      {
+        "bg": "Панорамен покрив",
+        "en": "Панорамен покрив"
+      },
+      {
+        "bg": "Подгряване на седалки",
+        "en": "Подгряване на седалки"
+      },
+      {
+        "bg": "Навигация",
+        "en": "Навигация"
+      },
+      {
+        "bg": "Парктроник",
+        "en": "Парктроник"
+      },
+      {
+        "bg": "Безключов достъп",
+        "en": "Безключов достъп"
+      }
+    ],
+    "spec": {
+      "make": "Mercedes-Benz",
+      "model": "Mercedes-AMG GT 4-Door",
+      "year": 2020,
+      "bodyType": "other",
+      "fuelType": "gasoline",
+      "transmission": "automatic",
+      "mileageValue": 72812,
+      "mileageUnit": "km"
+    },
+    "seller": {
+      "id": "dealer-avtoborsa-mania",
+      "type": "dealer",
+      "displayName": "АВТОБОРСА МАНИЯ",
+      "verificationStatus": "unverified",
+      "city": "Варна",
+      "logoUrl": "/registered-branding/onLight.png"
+    },
+    "publishedAt": "2026-01-01T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "am-1014",
+    "slug": "bmw-2020-template-demo-auto-best-7",
+    "category": "car",
+    "dealerOrgId": "dealer-avtoborsa-mania",
+    "status": "active",
+    "title": "BMW X6 xDrive",
+    "description": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата. Illustrative template vehicles, not this dealership’s stock.",
+    "price": {
+      "amount": 85635,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/assets/images/lead/day-night-stock-02.webp",
+        "alt": "BMW X6 xDrive"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Варна",
+      "region": "Варна",
+      "country": "Bulgaria"
+    },
+    "features": [
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "360° камера",
+        "en": "360° камера"
+      },
+      {
+        "bg": "Панорамен покрив",
+        "en": "Панорамен покрив"
+      },
+      {
+        "bg": "Подгряване на седалки",
+        "en": "Подгряване на седалки"
+      },
+      {
+        "bg": "Навигация",
+        "en": "Навигация"
+      },
+      {
+        "bg": "Парктроник",
+        "en": "Парктроник"
+      },
+      {
+        "bg": "Безключов достъп",
+        "en": "Безключов достъп"
+      }
+    ],
+    "spec": {
+      "make": "BMW",
+      "model": "BMW X6 xDrive",
+      "year": 2020,
+      "bodyType": "suv",
+      "fuelType": "diesel",
+      "transmission": "automatic",
+      "mileageValue": 76346,
+      "mileageUnit": "km"
+    },
+    "seller": {
+      "id": "dealer-avtoborsa-mania",
+      "type": "dealer",
+      "displayName": "АВТОБОРСА МАНИЯ",
+      "verificationStatus": "unverified",
+      "city": "Варна",
+      "logoUrl": "/registered-branding/onLight.png"
+    },
+    "publishedAt": "2026-01-01T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "am-1002",
+    "slug": "mercedes-benz-2023-template-demo-auto-best-8",
+    "category": "car",
+    "dealerOrgId": "dealer-avtoborsa-mania",
+    "status": "active",
+    "title": "Mercedes-AMG GT Coupé",
+    "description": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата. Illustrative template vehicles, not this dealership’s stock.",
+    "price": {
+      "amount": 51365,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/assets/images/lead/day-night-stock-03.webp",
+        "alt": "Mercedes-AMG GT Coupé"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Варна",
+      "region": "Варна",
+      "country": "Bulgaria"
+    },
+    "features": [
+      {
+        "bg": "360° камера",
+        "en": "360° камера"
+      },
+      {
+        "bg": "Панорамен покрив",
+        "en": "Панорамен покрив"
+      },
+      {
+        "bg": "Подгряване на седалки",
+        "en": "Подгряване на седалки"
+      },
+      {
+        "bg": "Навигация",
+        "en": "Навигация"
+      },
+      {
+        "bg": "Парктроник",
+        "en": "Парктроник"
+      },
+      {
+        "bg": "Безключов достъп",
+        "en": "Безключов достъп"
+      }
+    ],
+    "spec": {
+      "make": "Mercedes-Benz",
+      "model": "Mercedes-AMG GT Coupé",
+      "year": 2023,
+      "bodyType": "coupe",
+      "fuelType": "gasoline",
+      "transmission": "automatic",
+      "mileageValue": 49584,
+      "mileageUnit": "km"
+    },
+    "seller": {
+      "id": "dealer-avtoborsa-mania",
+      "type": "dealer",
+      "displayName": "АВТОБОРСА МАНИЯ",
+      "verificationStatus": "unverified",
+      "city": "Варна",
+      "logoUrl": "/registered-branding/onLight.png"
+    },
+    "publishedAt": "2026-01-01T09:00:00.000Z",
+    "promoted": false
+  }
+];
 
 const matchesText = (listing: VehicleListing, query: string) => {
   const haystack = [
@@ -76,6 +609,13 @@ const createListingPredicates = (
     listing.spec.mileageValue <= filters.mileageMax,
   (listing) => !filters.fuel || listing.spec.fuelType === filters.fuel,
   (listing) =>
+    filters.powerMin === undefined ||
+    (listing.spec.enginePowerHp !== undefined &&
+      listing.spec.enginePowerHp >= filters.powerMin),
+  (listing) =>
+    !filters.extra ||
+    Boolean(listing.features?.some((feature) => feature.en === filters.extra)),
+  (listing) =>
     !filters.transmission || listing.spec.transmission === filters.transmission,
   (listing) => !filters.body || listing.spec.bodyType === filters.body,
   (listing) => !filters.seller || listing.seller.type === filters.seller,
@@ -102,7 +642,9 @@ export const getMockListings = (filters: MarketplaceSearchParams) => {
     .sort(listingComparators[filters.sort]);
 };
 
-const legacyListingSlugAliases: Readonly<Record<string, string>> = {};
+const legacyListingSlugAliases: Readonly<Record<string, string>> = {
+  "audi-q5-45-tfsi-quattro-stara-zagora-2021": "bmw-m4-competition-sofia-2021",
+};
 
 export const getMockListingBySlug = (slug: string) => {
   const resolvedSlug = legacyListingSlugAliases[slug] ?? slug;
@@ -134,7 +676,7 @@ export const getMockRelatedListings = (source: VehicleListing, limit = 3) =>
     .slice(0, limit)
     .map(({ listing }) => listing);
 
-export const mockSavedListingIds: string[] = [];
+export const mockSavedListingIds = ["am-1001", "am-1003", "am-1008"];
 
 export const getMockSavedListings = () =>
   mockListings.filter((listing) => mockSavedListingIds.includes(listing.id));
@@ -149,9 +691,54 @@ export interface MockSavedSearch {
   title: string;
 }
 
-export const mockSavedSearches: MockSavedSearch[] = [];
+export const mockSavedSearches: MockSavedSearch[] = [
+  {
+    id: "saved-search-premium-suv",
+    title: "Premium SUVs under 100k",
+    description: "BMW, Audi, and Toyota SUVs with verified sellers.",
+    filters: {
+      body: "suv",
+      category: "car",
+      priceMax: 100_000,
+      seller: "dealer",
+    },
+    cadence: "daily",
+    newMatches: 3,
+    lastRunAt: "2026-06-06T07:00:00.000Z",
+  },
+  {
+    id: "saved-search-lease-ev",
+    title: "Lease-ready EVs",
+    description: "Electric lease offers with automatic transmission.",
+    filters: {
+      category: "lease",
+      fuel: "electric",
+      transmission: "automatic",
+    },
+    cadence: "instant",
+    newMatches: 1,
+    lastRunAt: "2026-06-07T06:30:00.000Z",
+  },
+  {
+    id: "saved-search-family-varna",
+    title: "Family cars near Varna",
+    description: "Low-mileage vehicles in Varna and nearby coastal cities.",
+    filters: {
+      category: "car",
+      location: "Varna",
+      mileageMax: 90_000,
+    },
+    cadence: "weekly",
+    newMatches: 0,
+    lastRunAt: "2026-06-03T08:00:00.000Z",
+  },
+];
 
-const sellerListingStatuses: Record<string, VehicleListing["status"]> = {};
+const sellerListingStatuses: Record<string, VehicleListing["status"]> = {
+  "am-1001": "active",
+  "am-1003": "pending_review",
+  "am-1007": "draft",
+};
 
 export const getMockSellerListings = () =>
   mockListings
@@ -180,7 +767,48 @@ export interface MockDealerLead {
   status: "new" | "contacted" | "qualified" | "closed";
 }
 
-export const mockDealerLeads: MockDealerLead[] = [];
+export const mockDealerLeads: MockDealerLead[] = [
+  {
+    buyerName: "Nikolay Petrov",
+    id: "lead-1001",
+    intent: "finance",
+    listingId: "am-1001",
+    listingTitle: "2020 BMW X5 M50d",
+    receivedAt: "2026-06-07T07:30:00.000Z",
+    source: "listing",
+    status: "new",
+  },
+  {
+    buyerName: "Elena Dimitrova",
+    id: "lead-1002",
+    intent: "test_drive",
+    listingId: "am-1003",
+    listingTitle: "2022 Mercedes-Benz GLE 53 AMG Coupe",
+    receivedAt: "2026-06-06T15:20:00.000Z",
+    source: "saved_search",
+    status: "contacted",
+  },
+  {
+    buyerName: "Martin Georgiev",
+    id: "lead-1003",
+    intent: "availability",
+    listingId: "am-1008",
+    listingTitle: "2020 Mercedes-Benz AMG GT 43",
+    receivedAt: "2026-06-05T12:10:00.000Z",
+    source: "dealer_profile",
+    status: "qualified",
+  },
+  {
+    buyerName: "Iva Marinova",
+    id: "lead-1004",
+    intent: "trade_in",
+    listingId: "am-1005",
+    listingTitle: "2018 Mercedes-Benz V 250d VIP Business",
+    receivedAt: "2026-06-04T09:45:00.000Z",
+    source: "listing",
+    status: "closed",
+  },
+];
 
 export const getMockDealerStats = () => {
   const inventory = getMockDealerInventory();
@@ -218,7 +846,64 @@ export interface MockModerationReport {
   status: "new" | "reviewing" | "resolved" | "dismissed";
 }
 
-export const mockModerationReports: MockModerationReport[] = [];
+export const mockModerationReports: MockModerationReport[] = [
+  {
+    id: "report-1001",
+    listingId: "am-1003",
+    listingTitle: "2022 Mercedes-Benz GLE 53 AMG Coupe",
+    reason: "incorrect_details",
+    details:
+      "Buyer says lease terms in the message thread do not match the listing price.",
+    reporter: "Elena Dimitrova",
+    source: "buyer_report",
+    status: "new",
+    severity: "high",
+    flags: ["Lease price mismatch", "Recent edit", "High intent lead"],
+    createdAt: "2026-06-07T09:20:00.000Z",
+  },
+  {
+    id: "report-1002",
+    listingId: "am-1006",
+    listingTitle: "2021 Range Rover Sport SVR",
+    reason: "duplicate",
+    details:
+      "System found matching photos and mileage on another active dealer listing.",
+    reporter: "System",
+    source: "system_flag",
+    status: "reviewing",
+    severity: "medium",
+    flags: ["Photo reuse", "Similar VIN pattern"],
+    createdAt: "2026-06-07T06:45:00.000Z",
+  },
+  {
+    id: "report-1003",
+    listingId: "am-1002",
+    listingTitle: "2021 Mercedes-Benz GLE 400d Coupe",
+    reason: "seller_behavior",
+    details:
+      "Reporter says seller asked to move payment to an unverified channel.",
+    reporter: "Nikolay Petrov",
+    source: "buyer_report",
+    status: "new",
+    severity: "high",
+    flags: ["Payment risk", "Private seller"],
+    createdAt: "2026-06-06T17:30:00.000Z",
+  },
+  {
+    id: "report-1004",
+    listingId: "am-1008",
+    listingTitle: "2020 Mercedes-Benz AMG GT 43",
+    reason: "prohibited_content",
+    details:
+      "Admin review flagged promotional copy that may overstate warranty coverage.",
+    reporter: "Admin review",
+    source: "admin_review",
+    status: "dismissed",
+    severity: "low",
+    flags: ["Copy review"],
+    createdAt: "2026-06-05T12:10:00.000Z",
+  },
+];
 
 export interface MockTrustReview {
   city: string;
@@ -232,7 +917,52 @@ export interface MockTrustReview {
   submittedAt: string;
 }
 
-export const mockTrustReviews: MockTrustReview[] = [];
+export const mockTrustReviews: MockTrustReview[] = [
+  {
+    entityId: "dealer-black-sea-ev",
+    entityName: "Black Sea EV",
+    entityType: "dealer",
+    city: "Varna",
+    status: "pending",
+    riskLevel: "medium",
+    linkedListings: 1,
+    documents: ["Business registration", "VAT certificate", "Dealer address"],
+    submittedAt: "2026-06-07T08:00:00.000Z",
+  },
+  {
+    entityId: "seller-124",
+    entityName: "Private seller",
+    entityType: "seller",
+    city: "Plovdiv",
+    status: "pending",
+    riskLevel: "high",
+    linkedListings: 1,
+    documents: ["ID check", "Phone verification"],
+    submittedAt: "2026-06-06T16:15:00.000Z",
+  },
+  {
+    entityId: "dealer-trakia-auto",
+    entityName: "Trakia Auto",
+    entityType: "dealer",
+    city: "Stara Zagora",
+    status: "verified",
+    riskLevel: "low",
+    linkedListings: 1,
+    documents: ["Business registration", "Dealer address"],
+    submittedAt: "2026-06-05T10:30:00.000Z",
+  },
+  {
+    entityId: "seller-882",
+    entityName: "Private seller",
+    entityType: "seller",
+    city: "Varna",
+    status: "verified",
+    riskLevel: "low",
+    linkedListings: 1,
+    documents: ["ID check", "Phone verification"],
+    submittedAt: "2026-06-04T14:40:00.000Z",
+  },
+];
 
 export interface MockAuditLogEntry {
   action: string;
@@ -244,7 +974,35 @@ export interface MockAuditLogEntry {
   note: string;
 }
 
-export const mockAuditLog: MockAuditLogEntry[] = [];
+export const mockAuditLog: MockAuditLogEntry[] = [
+  {
+    id: "audit-1001",
+    actor: "Admin",
+    action: "report.opened",
+    entityType: "report",
+    entityId: "report-1001",
+    note: "Moved Tesla lease report to new queue.",
+    createdAt: "2026-06-07T09:25:00.000Z",
+  },
+  {
+    id: "audit-1002",
+    actor: "System",
+    action: "listing.flagged",
+    entityType: "listing",
+    entityId: "am-1006",
+    note: "Duplicate image match over threshold.",
+    createdAt: "2026-06-07T06:45:00.000Z",
+  },
+  {
+    id: "audit-1003",
+    actor: "Trust ops",
+    action: "dealer.verified",
+    entityType: "dealer",
+    entityId: "dealer-trakia-auto",
+    note: "Business registry and address checks passed.",
+    createdAt: "2026-06-06T11:15:00.000Z",
+  },
+];
 
 export const getMockAdminStats = () => {
   const openReports = mockModerationReports.filter(
@@ -360,7 +1118,44 @@ export interface MockActivePromotion {
   status: "scheduled" | "active" | "ended";
 }
 
-export const mockActivePromotions: MockActivePromotion[] = [];
+export const mockActivePromotions: MockActivePromotion[] = [
+  {
+    id: "promotion-1001",
+    listingId: "am-1001",
+    productId: "promo-search-top-7",
+    status: "active",
+    startsAt: "2026-06-05T08:00:00.000Z",
+    endsAt: "2026-06-12T08:00:00.000Z",
+    spend: { amount: 39, currency: "EUR" },
+    impressions: 4200,
+    clicks: 184,
+    leads: 8,
+  },
+  {
+    id: "promotion-1002",
+    listingId: "am-1003",
+    productId: "promo-lease-partner-30",
+    status: "active",
+    startsAt: "2026-06-01T08:00:00.000Z",
+    endsAt: "2026-07-01T08:00:00.000Z",
+    spend: { amount: 149, currency: "EUR" },
+    impressions: 6100,
+    clicks: 246,
+    leads: 12,
+  },
+  {
+    id: "promotion-1003",
+    listingId: "am-1008",
+    productId: "promo-category-featured-14",
+    status: "scheduled",
+    startsAt: "2026-06-10T08:00:00.000Z",
+    endsAt: "2026-06-24T08:00:00.000Z",
+    spend: { amount: 79, currency: "EUR" },
+    impressions: 0,
+    clicks: 0,
+    leads: 0,
+  },
+];
 
 export interface MockDealerBillingAccount {
   currentPlanId: string;

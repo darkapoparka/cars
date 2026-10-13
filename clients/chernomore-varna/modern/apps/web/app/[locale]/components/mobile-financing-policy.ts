@@ -1,3 +1,5 @@
+import { leadSite } from "@repo/marketplace";
+
 export interface FinancingRequest {
   deposit?: string;
   term: string;
@@ -7,8 +9,12 @@ export interface FinancingRequest {
 export const financingRequestCopy = {
   bg: {
     call: "Обадете се",
+    callTitle: "Обсъдете лизинг",
+    callDescription:
+      "Използвайте тези данни при разговора. Ще уточним наличността и индивидуалните условия по телефона.",
     close: "Затворете",
     deposit: "Първоначална вноска",
+    depositShortLabel: "Вноска",
     description: "Оставете данни и ще уточним индивидуалните условия.",
     email: "Имейл (по желание)",
     emailPlaceholder: "name@email.com",
@@ -22,16 +28,19 @@ export const financingRequestCopy = {
     send: "Изпратете заявка",
     sending: "Изпращане…",
     success: "Заявката е изпратена",
-    successBody:
-      "Екипът на Черно море ще се свърже с вас за конкретните условия.",
+    successBody: `Екипът на ${leadSite.shortName} ще се свърже с вас за конкретните условия.`,
     term: "Срок",
     title: "Заявка за финансиране",
     vehicle: "Избран автомобил",
   },
   en: {
     call: "Call us",
+    callTitle: "Discuss financing",
+    callDescription:
+      "Use these details when you call. We will confirm availability and individual terms by phone.",
     close: "Close",
     deposit: "Initial payment",
+    depositShortLabel: "Deposit",
     description: "Leave your details and we will confirm the individual terms.",
     email: "Email (optional)",
     emailPlaceholder: "name@email.com",
@@ -45,7 +54,7 @@ export const financingRequestCopy = {
     send: "Send request",
     sending: "Sending…",
     success: "Request sent",
-    successBody: "The Черно море team will contact you to confirm the terms.",
+    successBody: `The ${leadSite.shortName} team will contact you to confirm the terms.`,
     term: "Term",
     title: "Financing request",
     vehicle: "Selected vehicle",
@@ -112,6 +121,7 @@ export const parseFinancingRequestHref = (
   }
 
   if (
+    url.origin !== new URL(baseHref).origin ||
     !url.pathname.endsWith("/contact") ||
     url.searchParams.get("intent") !== "leasing"
   ) {
@@ -125,5 +135,10 @@ export const parseFinancingRequestHref = (
     deposit && ["flexible", "10", "20", "30"].includes(deposit)
       ? { deposit }
       : {};
-  return vehicle && term ? { term, vehicle, ...preference } : null;
+  return vehicle &&
+    vehicle.length <= 200 &&
+    term &&
+    financingTermOptions.some((value) => value === term)
+    ? { term, vehicle, ...preference }
+    : null;
 };

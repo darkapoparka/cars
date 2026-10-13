@@ -1,8 +1,16 @@
 import { Button } from "@repo/design-system/components/ui/button";
-import { formatMoney, leadSite, type VehicleListing } from "@repo/marketplace";
+import {
+  formatMoney,
+  getListingPath,
+  leadSite,
+  type VehicleListing,
+} from "@repo/marketplace";
+import { isDealershipSite } from "@repo/marketplace/site-config";
 import { ArrowLeft, ArrowUpRight, MapPin, ShieldCheck } from "lucide-react";
 import Link from "next/link";
+import { createDesktopSavedCar } from "../lib/desktop-saved-car";
 import { getListingDetailCopy } from "../lib/listing-detail-policy";
+import { formatListingMonthlyEstimate } from "../lib/listing-financing";
 import {
   formatTruthDateTime,
   formatVehicleLocation,
@@ -17,8 +25,12 @@ import {
   type ListingOrganizationRole,
 } from "../lib/listing-truth";
 import { getLocalizedMarketplaceCityName } from "../lib/marketplace-control-copy";
+import { mobileImageIconActionClassName } from "../lib/mobile-header-icon-action";
 import { getLocalizedPublicPath } from "../lib/public-path";
+import { getShowroomVehicleHeading } from "../lib/vehicle-card-policy";
+import { DesktopSaveCarButton } from "./desktop-saved-cars";
 import { ListingActions } from "./listing-actions";
+import { ListingBackLink } from "./listing-back-link";
 
 export const DesktopListingSummaryHeader = ({
   backHref,
@@ -36,6 +48,43 @@ export const DesktopListingSummaryHeader = ({
   const copy = getListingDetailCopy(locale);
   const physicalLocation = getPhysicalVehicleLocation(listing);
 
+  if (isDealershipSite) {
+    return (
+      <div className="hidden lg:block" data-slot="listing-summary-header">
+        <div data-slot="listing-utility-row">
+          <ListingBackLink data-slot="listing-desktop-back" href={backHref}>
+            <ArrowLeft aria-hidden size={18} />
+            {copy.backToSearch}
+          </ListingBackLink>
+        </div>
+        <header data-slot="listing-title-panel">
+          <div>
+            <h1>{listing.title}</h1>
+            <p>{getShowroomVehicleHeading(listing, locale).subtitle}</p>
+          </div>
+          <div data-slot="listing-title-actions">
+            <DesktopSaveCarButton
+              car={createDesktopSavedCar(
+                listing,
+                getLocalizedPublicPath(locale, getListingPath(listing)),
+                locale
+              )}
+              locale={locale}
+              showTooltip
+            />
+            <ListingActions
+              iconOnly
+              listingTitle={listing.title}
+              listingUrl={listingUrl}
+              locale={locale}
+              showPrint={false}
+            />
+          </div>
+        </header>
+      </div>
+    );
+  }
+
   return (
     <header
       className="mb-4 hidden min-h-20 flex-wrap items-center gap-4 rounded-xl border border-border bg-card px-4 py-3 lg:flex"
@@ -46,13 +95,13 @@ export const DesktopListingSummaryHeader = ({
         className="h-10 shrink-0 gap-1.5 rounded-lg px-3 text-foreground shadow-none"
         variant="secondary"
       >
-        <Link href={backHref}>
+        <ListingBackLink href={backHref}>
           <ArrowLeft aria-hidden="true" className="size-4" />
           {copy.backToSearch}
-        </Link>
+        </ListingBackLink>
       </Button>
       <div className="min-w-0 flex-1 basis-72">
-        <h1 className="text-pretty break-words font-semibold text-page-title tracking-tight">
+        <h1 className="text-pretty break-words font-semibold text-page-title tracking-heading lg:text-page-title-lg">
           {listing.title}
         </h1>
         <div className="mt-1.5 flex flex-wrap items-center gap-x-4 gap-y-1 text-meta text-muted-foreground">
@@ -60,7 +109,10 @@ export const DesktopListingSummaryHeader = ({
             <MapPin aria-hidden="true" className="size-3.5" />
             {formatVehicleLocation(physicalLocation, locale)}
           </span>
-          <span>Ref {listing.id.toUpperCase()}</span>
+          <span>
+            {locale?.startsWith("bg") ? "Реф." : "Ref"}{" "}
+            {listing.id.toUpperCase()}
+          </span>
         </div>
       </div>
       <ListingActions
@@ -89,17 +141,20 @@ export const MobileListingGalleryActions = ({
   const copy = getListingDetailCopy(locale);
 
   return (
-    <div className="absolute inset-x-0 top-0 z-20 flex items-center justify-between px-3 pt-[calc(0.75rem+env(safe-area-inset-top))] pb-3 lg:hidden min-[360px]:px-4 min-[360px]:pt-[calc(1rem+env(safe-area-inset-top))] min-[360px]:pb-4">
+    <div
+      className="absolute inset-x-0 top-0 z-20 flex items-center justify-between px-4 pt-[max(0.75rem,env(safe-area-inset-top))] pb-3 lg:hidden"
+      data-slot="listing-mobile-gallery-actions"
+    >
       <Button
         aria-label={copy.backToSearch}
         asChild
-        className="size-11 rounded-full border border-border/70 bg-card/95 shadow-sm backdrop-blur"
+        className={mobileImageIconActionClassName}
         size="icon"
         variant="secondary"
       >
-        <Link href={backHref}>
+        <ListingBackLink href={backHref}>
           <ArrowLeft aria-hidden="true" className="size-5" />
-        </Link>
+        </ListingBackLink>
       </Button>
       <ListingActions
         floating
@@ -142,42 +197,38 @@ export const MobileListingSummary = ({
     listing,
     sellerOrganizationRole
   );
-  const showSellerIdentity = !leadSite.staticDemoMode;
+  const showSellerIdentity = !isDealershipSite;
+  const monthlyAmount = formatListingMonthlyEstimate(
+    listing.monthlyEstimate,
+    locale
+  );
 
   return (
-    <section className="pt-5 pb-3 lg:hidden" data-slot="listing-mobile-summary">
-      <div className="flex min-w-0 flex-col items-start gap-1 min-[360px]:flex-row min-[360px]:items-end min-[360px]:justify-between min-[360px]:gap-4">
-        <p className="min-w-0 break-words font-semibold text-price-lg tabular-nums tracking-tight">
-          {formatMoney(primaryPrice, locale)}
-        </p>
-        {listing.monthlyEstimate ? (
-          <p className="text-meta text-muted-foreground tabular-nums min-[360px]:shrink-0">
-            ~{formatMoney(listing.monthlyEstimate, locale)}/{copy.month}
+    <section className="pt-4 pb-1 lg:hidden" data-slot="listing-mobile-summary">
+      <div className="border-zinc-200 border-b pb-3">
+        <div className="flex min-w-0 items-baseline justify-between gap-2">
+          <p className="min-w-0 break-words font-semibold text-price tabular-nums tracking-heading lg:text-price-lg">
+            {formatMoney(primaryPrice, locale)}
+          </p>
+          {monthlyAmount ? (
+            <p className="shrink-0 whitespace-nowrap text-right text-meta text-zinc-600 tabular-nums">
+              ~{monthlyAmount}
+              {locale?.startsWith("bg") ? "/мес." : "/mo"}
+            </p>
+          ) : null}
+        </div>
+        {approximatePrice ? (
+          <p className="mt-1 text-meta text-muted-foreground">
+            ≈ {formatMoney(approximatePrice, locale)} ·{" "}
+            {copy.approximateConversion}
+            {conversionTime ? ` ${copy.conversionAt} ${conversionTime}` : ""}
           </p>
         ) : null}
       </div>
-      {approximatePrice ? (
-        <p className="mt-1 text-meta text-muted-foreground">
-          ≈ {formatMoney(approximatePrice, locale)} ·{" "}
-          {copy.approximateConversion}
-          {conversionTime ? ` ${copy.conversionAt} ${conversionTime}` : ""}
-        </p>
-      ) : null}
 
-      <h1 className="mt-3 text-pretty break-words font-semibold text-section-title">
+      <h1 className="mt-3 text-pretty break-words font-semibold text-section-title text-zinc-950 tracking-heading">
         {listing.title}
       </h1>
-      {listing.category === "car" ? (
-        <Link
-          className="mt-3 inline-flex min-h-11 items-center gap-2 rounded-xl bg-zinc-100 px-4 font-medium text-[14px] text-zinc-900 transition-colors hover:bg-zinc-200 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2"
-          href={`${getLocalizedPublicPath(locale, "/lease")}?vehicle=${encodeURIComponent(listing.id)}`}
-        >
-          {locale?.startsWith("bg")
-            ? "Запитване за лизинг"
-            : "Financing enquiry"}
-          <ArrowUpRight aria-hidden="true" className="size-4" />
-        </Link>
-      ) : null}
       {showPhysicalLocation ? (
         <p className="mt-2 text-meta text-muted-foreground">
           {formatVehicleLocation(physicalLocation, locale)}

@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "dealer": "chernomore-varna",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/app",
+    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1",
+    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76"
+  },
+  "appDigest": "591338b82f0e03244b02b6ce8c4c0759081ddf516d6020ef78ba6e2b5f6e35eb",
+  "provenance": {
+    "schemaVersion": 1,
+    "dealer": "chernomore-varna",
+    "profile": "auto-best/src/lib/data/dealer-profile.json",
+    "profileSha256": "897e052f0e086ff00bd40dfc60bb1443151d4cef1aa4c3997cede4475bef8d2d",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "vehicles": 2,
+    "currency": "EUR",
+    "observedAt": "2026-10-12T12:05:57.074Z, 2026-10-12T12:05:57.075Z",
+    "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-light.png",
+        "output": "public/dealer-app/logo-light-37a14cb576c390e023f2.png",
+        "sha256": "37a14cb576c390e023f27b4dd1fd21e16fb15ca80556ea69e730d6a776ea2a48",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-dark.png",
+        "output": "public/dealer-app/logo-dark-55c47593f8e9972aade7.png",
+        "sha256": "55c47593f8e9972aade71878cad7c29a2f23af582c5625a731162419deb48066",
+        "role": "logo-dark"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/21771946973449498-1.webp",
+        "output": "public/dealer-app/vehicle-67dbce48d2d5d8884180.webp",
+        "sha256": "67dbce48d2d5d888418025f7acdb35a17b33bf7143a23d10531f10d5f8b7887a",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/21771946973449498-2.webp",
+        "output": "public/dealer-app/vehicle-de8063c17612d20d9797.webp",
+        "sha256": "de8063c17612d20d97979c801a8e324dbb08658d9766313414fb4fb9e25f831b",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11779358576885782-1.webp",
+        "output": "public/dealer-app/vehicle-b357bf8fe9988a191168.webp",
+        "sha256": "b357bf8fe9988a1911687af7e49d3c221094e10b318455ace11c6581a038d658",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11779358576885782-2.webp",
+        "output": "public/dealer-app/vehicle-bed431e8c84368d08d25.webp",
+        "sha256": "bed431e8c84368d08d250c5768095ca9769f69ab40c93d3a2415460f92bfb3d6",
+        "role": "vehicle"
+      }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "chernomore-varna-21771946973449498",
+        "sourceValue": 150000,
+        "sourceUnit": "km",
+        "canonicalKm": 150000
+      },
+      {
+        "slug": "chernomore-varna-11779358576885782",
+        "sourceValue": 199000,
+        "sourceUnit": "km",
+        "canonicalKm": 199000
+      }
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-13T23:03:31.652Z"
+}

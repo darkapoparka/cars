@@ -1,31 +1,46 @@
 <script lang="ts">
-  import { resolve } from '$app/paths';
-  import { bodyTypes } from '$data/home';
+  import { specificationLabel } from '$lib/i18n/presentation';
+  import { getI18n } from '$lib/locale/context';
+  const i18n = getI18n();
 
-  const mobileBodyTypes = new Set<string>(bodyTypes.filter(item => item.count > 0).slice(0, 3).map(item => item.query));
+  import { resolve } from '$app/paths';
+  import Icon from '$components/ui/Icon.svelte';
+  import DiscoveryAllTile from './DiscoveryAllTile.svelte';
+  import { bodyTypes, desktopBodyTypes } from '$data/home';
+
+  const mobileBodyTypes = new Set<string>(
+    [...bodyTypes.filter((item) => item.count > 0), ...bodyTypes.filter((item) => item.count <= 0)]
+      .slice(0, 3)
+      .map((item) => item.query)
+  );
+  const mobileArtworkWidth: Record<string, number> = {
+    SUV: 94,
+    Wagon: 100,
+    Coupe: 98
+  };
   let expanded = $state(false);
 </script>
 
-<section class="dn-section dn-body-types" aria-labelledby="body-types-title">
+<section class="dn-section dn-body-types dn-home-content-section" aria-labelledby="body-types-title">
   <div class="container dn-body-types__panel">
-    <div class="dn-section-heading dn-body-types__heading dn-home-section-heading dn-home-section-heading--branded dn-home-section-heading--red dn-home-banner-frame dn-home-banner-copy dn-home-section-heading--compact">
+    <div class="dn-section-heading dn-body-types__heading dn-home-section-heading dn-home-section-heading--branded dn-home-banner-frame dn-home-banner-copy">
       <h2 id="body-types-title" class="dn-home-section-title">
-        <span class="dn-heading-desktop">Изберете по тип купе</span>
-        <span class="dn-heading-mobile">По тип купе</span>
+        <span class="dn-heading-desktop">{i18n.t("m_555a44ad25a6")}</span>
+        <span class="dn-heading-mobile">{i18n.t("m_ef0ecd6a2ade")}</span>
       </h2>
-      <a class="dn-body-types__all dn-home-section-action" href={resolve('/listing-grid')}>
-        <span class="dn-heading-desktop">Вижте всички автомобили</span>
-        <span class="dn-heading-mobile">Всички</span>
+      <a class="dn-body-types__all dn-home-section-action" href={i18n.href(resolve('/cars'))} aria-label={i18n.t("m_7d6647b063a2")}>
+        <span class="dn-heading-desktop dn-home-action-label">{i18n.t("m_30a64216eaea")} <Icon name="arrow-right" size={18} /></span>
       </a>
     </div>
 
-    <div class="dn-body-types__viewport">
-      <div class="dn-body-types__rail" id="body-types-grid" aria-label="Автомобили по тип купе">
-        {#each bodyTypes as item (item.query)}
-          <a class="dn-body-type" class:dn-body-type--additional={!mobileBodyTypes.has(item.query)} class:dn-body-type--secondary={!expanded && !mobileBodyTypes.has(item.query)} data-stock-count={item.count} href={resolve(`/listing-grid?body=${encodeURIComponent(item.query)}`)}>
+    <div class="dn-body-types__viewport dn-home-section-panel">
+      <div class="dn-body-types__rail" id="body-types-grid" aria-label={i18n.t("m_b94720bac36c")}>
+        {#each desktopBodyTypes as item (item.query)}
+          <a class="dn-body-type" class:dn-body-type--desktop-only={item.count === 0} class:dn-body-type--additional={!mobileBodyTypes.has(item.query)} class:dn-body-type--secondary={!expanded && !mobileBodyTypes.has(item.query)} data-stock-count={item.count} href={i18n.href(resolve(`/cars?body=${encodeURIComponent(item.query)}`))}>
             <span class="dn-body-type__image">
               <span class="dn-body-type__frame"
                 style:--body-aspect={`${item.bounds[2] - item.bounds[0]} / ${item.bounds[3] - item.bounds[1]}`}
+                style:--body-optical-width={`${mobileArtworkWidth[item.query] ?? 100}%`}
                 style:--body-image-width={`${item.width / (item.bounds[2] - item.bounds[0]) * 100}%`}
                 style:--body-image-left={`${-item.bounds[0] / (item.bounds[2] - item.bounds[0]) * 100}%`}
                 style:--body-image-top={`${-item.bounds[1] / (item.bounds[3] - item.bounds[1]) * 100}%`}>
@@ -40,17 +55,16 @@
               </span>
             </span>
             <span class="dn-body-type__content">
-              <strong class="dn-body-type__title">{item.label}</strong>
-              <small class="dn-body-type__subtitle">{item.count} {item.count === 1 ? 'автомобил' : 'автомобила'}</small>
+              <strong class="dn-body-type__title">{specificationLabel(item.label, i18n.locale)}</strong>
+              <small class="dn-body-type__subtitle">{item.count} {item.count === 1 ? i18n.t("m_2b2961a431b2") : i18n.t("m_1f58b1e965af")}</small>
             </span>
           </a>
         {/each}
-        <button class="dn-discovery-toggle" aria-expanded={expanded} aria-controls="body-types-grid" onclick={() => expanded = !expanded}>
-          <span class="dn-discovery-toggle__icon" aria-hidden="true">
-            <svg class:expanded width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
-          </span>
-          <strong>{expanded ? 'Покажи по-малко' : 'Всички типове'}</strong>
-        </button>
+        <DiscoveryAllTile
+          {expanded}
+          controls="body-types-grid"
+          ontoggle={bodyTypes.length > mobileBodyTypes.size ? () => expanded = !expanded : undefined}
+        />
       </div>
     </div>
   </div>
@@ -58,31 +72,6 @@
 
 <style>
   .dn-body-type__frame { display: contents; }
-  .dn-discovery-toggle { display: none; }
-  @media (max-width: 767px) {
-    .dn-body-type--additional { order: 2; }
-    .dn-discovery-toggle {
-      display: grid;
-      order: 1;
-      grid-template-rows: 78px auto;
-      min-height: 126px;
-      min-width: 0;
-      padding: 8px 12px 12px;
-      border: 0;
-      border-radius: 14px;
-      background: var(--dn-mobile-surface);
-      color: var(--dn-ink);
-      text-align: left;
-      font: inherit;
-      cursor: pointer;
-    }
-    .dn-discovery-toggle__icon { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; color: var(--dn-muted); }
-    .dn-discovery-toggle__icon svg { padding: 8px; border-radius: 50%; background: var(--dn-mobile-canvas); color: var(--dn-red); }
-    .dn-discovery-toggle__icon svg.expanded { transform: rotate(180deg); }
-    .dn-discovery-toggle strong { align-self: end; font-size: 15px; line-height: 20px; font-weight: 700; }
-    .dn-discovery-toggle:hover { background: var(--dn-surface); }
-    .dn-discovery-toggle:focus-visible { outline: 3px solid var(--dn-focus); outline-offset: 3px; }
-  }
 
   .dn-body-types__heading {
     justify-content: center;
@@ -123,7 +112,7 @@
     min-width: 0;
     padding: 12px 12px 14px;
     border: 0;
-    border-radius: 16px;
+    border-radius: var(--dn-radius-card);
     background: #f3f4f6;
     color: #24272c;
     text-align: center;
@@ -141,7 +130,7 @@
   }
 
   .dn-body-type:focus-visible {
-    outline: 3px solid rgba(196, 1, 1, 0.28);
+    outline: 3px solid var(--dn-focus);
     outline-offset: 2px;
   }
 
@@ -179,16 +168,16 @@
   .dn-body-type__title {
     margin-bottom: 5px;
     color: #24272c;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 20px;
+    font-size: var(--dn-text-body);
+    font-weight: var(--dn-weight-semibold);
+    line-height: var(--dn-leading-meta);
     transition: color 160ms ease-out;
   }
 
   .dn-body-type__subtitle {
     color: #696665;
     font-size: var(--dn-text-meta);
-    font-weight: 400;
+    font-weight: var(--dn-weight-regular);
     line-height: var(--dn-leading-meta);
   }
 
@@ -201,12 +190,15 @@
   @media (min-width: 992px) {
     .dn-body-types__panel {
       padding: 0;
-      border-radius: 20px;
+      border-radius: var(--dn-radius-lg);
       background: var(--dn-home-panel);
     }
 
     .dn-body-type {
-      background: #fff;
+      padding: var(--dn-space-4);
+      border: 0;
+      background: var(--dn-surface-subtle);
+      box-shadow: none;
     }
 
     .dn-body-types {
@@ -220,15 +212,7 @@
     }
 
     .dn-body-types__heading h2 {
-      font-size: 28px;
-    }
-
-    .dn-body-types__viewport {
-      position: relative;
-      margin: calc(-1 * var(--dn-home-banner-overlap)) 0 0;
-      padding: 24px;
-      border-radius: var(--dn-radius);
-      background: var(--dn-home-panel);
+      font-size: var(--dn-text-heading);
     }
 
     .dn-body-types__rail {
@@ -238,21 +222,33 @@
       gap: 16px;
     }
 
-    .dn-body-type__image,
-    .dn-body-type__image img {
-      height: 120px;
-    }
-
     .dn-body-type__image {
-      margin-bottom: 8px;
+      height: 108px;
+      margin-bottom: var(--dn-space-2);
+      overflow: visible;
+    }
+
+    .dn-body-type__frame {
+      position: relative;
+      display: block;
+      width: min(100%, 210px);
+      aspect-ratio: var(--body-aspect);
     }
 
     .dn-body-type__image img {
-      width: min(100%, 224px);
+      position: absolute;
+      width: var(--body-image-width);
+      max-width: none;
+      height: auto;
+      left: var(--body-image-left);
+      top: var(--body-image-top);
       padding: 0;
     }
 
-    .dn-body-type__title { font-size: 18px; line-height: 24px; }
+    .dn-body-type:hover,
+    .dn-body-type:focus-visible { background: var(--dn-surface-raised); box-shadow: var(--dn-card-hover-shadow); }
+
+    .dn-body-type__title { font-size: var(--dn-text-lead); line-height: var(--dn-leading-body); }
 
     .dn-body-type__subtitle {
       display: none;
@@ -268,7 +264,7 @@
 
   @media (max-width: 767px) {
     .dn-body-types {
-      padding: 24px 0 12px;
+      padding: var(--dn-space-5) 0 var(--dn-space-2);
       background: var(--dn-mobile-canvas);
     }
 
@@ -276,16 +272,16 @@
       min-height: 44px;
       align-items: center;
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: flex-start;
       gap: 16px;
       margin-bottom: 8px;
       text-align: left;
     }
 
     .dn-body-types__heading h2 {
-      font-size: 22px;
-      font-weight: 700;
-      line-height: 1.15;
+      font-size: var(--dn-text-subheading);
+      font-weight: var(--dn-weight-semibold);
+      line-height: var(--dn-leading-heading);
     }
 
     .dn-heading-desktop {
@@ -297,12 +293,7 @@
     }
 
     .dn-body-types__all {
-      display: inline-flex;
-      min-height: 44px;
-      align-items: center;
-      color: var(--dn-muted);
-      font-size: 14px;
-      font-weight: 600;
+      display: none;
     }
 
     .dn-body-types__viewport {
@@ -315,23 +306,24 @@
       grid-auto-flow: row;
       grid-auto-columns: auto;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 10px;
+      gap: var(--dn-space-2);
     }
 
     .dn-body-type {
       display: grid;
-      min-height: 126px;
+      min-height: var(--dn-discovery-tile-height);
       grid-template-columns: 1fr;
-      grid-template-rows: 78px auto;
-      padding: 8px 12px 12px;
-      border-radius: 14px;
+      grid-template-rows: var(--dn-discovery-media-height) auto;
+      gap: var(--dn-space-2);
+      padding: var(--dn-discovery-tile-padding);
+      border-radius: var(--dn-radius-mobile-card);
       background: var(--dn-mobile-surface);
       text-align: left;
     }
 
     .dn-body-type__image {
       position: relative;
-      height: 78px;
+      height: var(--dn-discovery-media-height);
       width: 100%;
       margin: 0;
       overflow: hidden;
@@ -340,10 +332,11 @@
     .dn-body-type__frame {
       display: block;
       position: absolute;
-      width: 100%;
+      width: min(var(--body-optical-width, 100%), calc(var(--dn-discovery-media-height) * (var(--body-aspect))));
       aspect-ratio: var(--body-aspect);
-      left: 0;
-      bottom: 12px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
     }
 
     .dn-body-type__image img {
@@ -359,20 +352,25 @@
     .dn-body-type__content {
       display: flex;
       align-items: end;
-      justify-content: space-between;
+      justify-content: center;
       padding: 0;
+      text-align: center;
     }
 
     .dn-body-type__title {
       margin: 0;
-      font-size: 15px;
-      font-weight: 700;
+      width: 100%;
+      font: var(--dn-discovery-label-font);
+      text-align: center;
     }
 
     .dn-body-type__subtitle {
       display: none;
     }
 
-    .dn-body-type--secondary { display: none; }
+    .dn-body-type--additional { order: 2; }
+
+    .dn-body-type--secondary,
+    .dn-body-type--desktop-only { display: none; }
   }
 </style>

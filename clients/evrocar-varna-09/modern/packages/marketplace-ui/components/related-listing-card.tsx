@@ -1,11 +1,13 @@
+import { cn } from "@repo/design-system/lib/utils";
 import {
   formatFuelType,
   formatMileage,
   formatMoney,
   type VehicleListing,
 } from "@repo/marketplace";
+import { localizeListingCopy } from "@repo/marketplace/listing-copy";
+import { isDealershipSite } from "@repo/marketplace/site-config";
 import { Car, MapPin, Truck } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import {
   formatVehicleLocation,
@@ -15,6 +17,9 @@ import {
   getPrimaryListingPrice,
   getSourceLabel,
 } from "../lib/listing-truth";
+import Image from "./public-image";
+import styles from "./related-listing-card.module.css";
+import { VehicleCard } from "./vehicle-card";
 
 interface RelatedListingCardProps {
   readonly href: string;
@@ -22,17 +27,33 @@ interface RelatedListingCardProps {
   readonly locale?: string;
 }
 
-export const RelatedListingCard = ({
+const DesktopRelatedListingCard = ({
   href,
-  listing,
+  listing: sourceListing,
   locale,
 }: RelatedListingCardProps) => {
+  const listing = localizeListingCopy(sourceListing, locale);
   const isBg = locale?.toLowerCase().startsWith("bg") ?? false;
   const primaryImage = listing.images[0];
   const primaryPrice = getPrimaryListingPrice(listing);
   const approximatePrice = getApproximateConvertedPrice(listing);
   const physicalLocation = getPhysicalVehicleLocation(listing);
   const deliveryTruth = getDeliveryTruth(listing, locale);
+
+  if (isDealershipSite) {
+    return (
+      <VehicleCard
+        desktopHeadingLevel={3}
+        desktopImageSizes="(max-width: 1199px) calc((100vw - 126px) / 3), (max-width: 1399px) calc((100vw - 148px) / 4), 313px"
+        desktopLayout="grid"
+        href={href}
+        listing={listing}
+        locale={locale}
+        presentation="showroom"
+        viewMode="grid"
+      />
+    );
+  }
 
   return (
     <article className="overflow-hidden rounded-lg border border-border bg-card">
@@ -58,28 +79,28 @@ export const RelatedListingCard = ({
           )}
         </div>
         <div className="p-3">
-          <p className="font-semibold text-lg">
+          <p className="font-semibold text-price tracking-heading">
             {formatMoney(primaryPrice, locale)}
           </p>
           {approximatePrice ? (
-            <p className="text-muted-foreground text-xs">
+            <p className="text-meta text-muted-foreground">
               ≈ {formatMoney(approximatePrice, locale)}
             </p>
           ) : null}
-          <h3 className="mt-1 line-clamp-2 font-medium text-sm">
+          <h3 className="mt-1 line-clamp-2 font-semibold text-card-title tracking-heading">
             {listing.title}
           </h3>
-          <p className="mt-2 text-muted-foreground text-xs">
+          <p className="mt-2 text-meta text-muted-foreground">
             {formatMileage(listing.spec.mileageValue, locale)} ·{" "}
             {formatFuelType(listing.spec.fuelType, locale)}
           </p>
-          <p className="mt-2 flex items-center gap-1.5 text-muted-foreground text-xs">
+          <p className="mt-2 flex items-center gap-1.5 text-meta text-muted-foreground">
             <MapPin aria-hidden="true" className="size-3.5" />
             {isBg ? "Автомобил в" : "Vehicle in"}{" "}
             {formatVehicleLocation(physicalLocation, locale)}
           </p>
           {deliveryTruth ? (
-            <p className="mt-1.5 flex items-center gap-1.5 text-muted-foreground text-xs">
+            <p className="mt-1.5 flex items-center gap-1.5 text-meta text-muted-foreground">
               <Truck aria-hidden="true" className="size-3.5" />
               {deliveryTruth.label}
             </p>
@@ -94,3 +115,37 @@ export const RelatedListingCard = ({
     </article>
   );
 };
+
+export const RelatedListingCard = ({
+  href,
+  listing,
+  locale,
+}: RelatedListingCardProps) => (
+  <>
+    <div
+      className={cn(
+        styles.mobileCard,
+        "min-w-0 snap-start overflow-hidden rounded-2xl bg-zinc-100 lg:hidden"
+      )}
+      data-slot="listing-related-card"
+    >
+      <VehicleCard
+        density="compact"
+        desktopHeadingLevel={3}
+        desktopLayout="grid"
+        href={href}
+        listing={listing}
+        locale={locale}
+        presentation="discovery"
+        viewMode="grid"
+      />
+    </div>
+    <div className="hidden lg:contents">
+      <DesktopRelatedListingCard
+        href={href}
+        listing={listing}
+        locale={locale}
+      />
+    </div>
+  </>
+);

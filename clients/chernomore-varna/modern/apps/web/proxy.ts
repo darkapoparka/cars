@@ -1,9 +1,4 @@
-import {
-  getLocaleCookieOptions,
-  internationalizationMiddleware,
-  LOCALE_COOKIE_NAME,
-} from "@repo/internationalization/proxy";
-import { leadSite } from "@repo/marketplace/lead-site";
+import { createLocaleRequestHandler } from "@repo/internationalization/request";
 import { SecurityRequestDeniedError, secure } from "@repo/security";
 import {
   createPublicNoseconeOptions,
@@ -13,8 +8,13 @@ import {
 import { createNEMO } from "@rescale/nemo";
 import { type NextProxy, type NextRequest, NextResponse } from "next/server";
 import { env } from "@/env";
-import { shouldFailClosedOnProtectionError } from "@/lib/public-proxy-policy";
+import { localeConfiguration } from "@/lib/locale-configuration";
+import {
+  isPublicDemoRequestAllowed,
+  shouldFailClosedOnProtectionError,
+} from "@/lib/public-proxy-policy";
 import { getCanonicalTaxonomyPathname } from "@/lib/public-route-normalization";
+import { isStaticPublicPreview } from "./public-runtime";
 
 export const config = {
   // matcher tells Next.js which routes to run the middleware on. This runs the
@@ -88,6 +88,9 @@ const arcjetMiddleware = async (request: NextRequest) => {
 };
 
 // Compose non-Clerk middleware with Nemo
+const internationalizationMiddleware =
+  createLocaleRequestHandler(localeConfiguration);
+
 const composedMiddleware = createNEMO(
   {},
   {
@@ -95,51 +98,23 @@ const composedMiddleware = createNEMO(
   }
 );
 
-const createBulgarianLeadSiteRedirect = (
-  request: NextRequest,
-  headersResponse: Response
-) => {
-  const isEnglishLeadSitePath =
-    leadSite.staticDemoMode &&
-    (request.nextUrl.pathname === "/en" ||
-      request.nextUrl.pathname.startsWith("/en/"));
-
-  if (
-    !isEnglishLeadSitePath ||
-    (request.method !== "GET" && request.method !== "HEAD")
-  ) {
-    return;
-  }
-
-  const bulgarianUrl = request.nextUrl.clone();
-  bulgarianUrl.pathname = request.nextUrl.pathname.slice(3) || "/";
-  const redirectResponse = NextResponse.redirect(bulgarianUrl, 308);
-  redirectResponse.cookies.set(
-    LOCALE_COOKIE_NAME,
-    "bg",
-    getLocaleCookieOptions()
-  );
-
-  for (const [key, value] of headersResponse.headers) {
-    if (key !== "x-middleware-next") {
-      redirectResponse.headers.set(key, value);
-    }
-  }
-
-  return redirectResponse;
-};
-
 const publicProxy: NextProxy = async (request, event) => {
   const headersResponse = await securityHeaders();
-  const bulgarianLeadSiteRedirect = createBulgarianLeadSiteRedirect(
-    request,
-    headersResponse
-  );
-
-  if (bulgarianLeadSiteRedirect) {
-    return bulgarianLeadSiteRedirect;
+  if (
+    isStaticPublicPreview() &&
+    !isPublicDemoRequestAllowed(request.method, request.nextUrl.pathname)
+  ) {
+    const blocked = NextResponse.json(
+      { error: "public_demo_read_only" },
+      { status: 403, headers: { "cache-control": "private, no-store" } }
+    );
+    for (const [key, value] of headersResponse.headers) {
+      if (key !== "x-middleware-next") {
+        blocked.headers.set(key, value);
+      }
+    }
+    return blocked;
   }
-
   const canonicalTaxonomyPathname = getCanonicalTaxonomyPathname(
     request.nextUrl.pathname
   );

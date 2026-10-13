@@ -1,9 +1,10 @@
 <script lang="ts">
-  let { artwork }: { artwork: { src: string; width: number; height: number; crop: readonly [number, number, number, number] } } = $props();
+  import { imageSrcset } from '$data/responsive-images';
+  let { artwork, priority = false, sizes = '100vw' }: { artwork: { src: string; width: number; height: number; crop: readonly [number, number, number, number] }; priority?: boolean; sizes?: string } = $props();
 </script>
 
 <span class="dn-artwork-region" style:aspect-ratio={`${artwork.crop[2]} / ${artwork.crop[3]}`}>
-  <picture><source media="(max-width: 767px)" srcset={artwork.src} /><img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="" width={artwork.width} height={artwork.height} decoding="async"
+  <picture><source media="(max-width: 767px)" srcset={imageSrcset(artwork.src) ?? artwork.src} {sizes} /><img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="" width={artwork.width} height={artwork.height} loading={priority ? 'eager' : 'lazy'} fetchpriority={priority ? 'high' : 'auto'} decoding="async"
     style:width={`${artwork.width / artwork.crop[2] * 100}%`}
     style:left={`${-artwork.crop[0] / artwork.crop[2] * 100}%`}
     style:top={`${-artwork.crop[1] / artwork.crop[3] * 100}%`} /></picture>

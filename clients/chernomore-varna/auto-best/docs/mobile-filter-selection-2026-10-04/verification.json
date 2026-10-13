@@ -1,0 +1,273 @@
+{
+  "date": "2026-10-04",
+  "baselineHead": "38c9df1b76e8466659831a2b9409b02beee390ce",
+  "reviewedHead": "ec7416402eee62fc555ed19b6934505c5e930662",
+  "sourceHashes": {
+    "src/lib/components/listing/QuickFilterSheet.svelte": "cc6fb01b01bddb70016015a85df033b44beb030d22f97c21995715f4c7675ac3",
+    "src/lib/styles/tokens.css": "fde8daf8ac261cf2e553129ddba62fbef3babd10d3e46afce35fb6beb581ee84"
+  },
+  "scope": "Mobile quick-filter selection palette with existing approved radio geometry",
+  "sourceChecks": {
+    "svelteErrors": 0,
+    "svelteWarnings": 0,
+    "cssPolicy": "passed",
+    "tokens": "passed",
+    "typography": "passed",
+    "pinnedVisualSystem": "passed",
+    "locales": "passed",
+    "productionBuild": "passed on Node 22.20.0",
+    "diffCheck": "passed"
+  },
+  "measurements": [
+    {
+      "borderColor": "rgb(196, 1, 1)",
+      "borderWidth": "2px",
+      "dialogRect": {
+        "bottom": 844,
+        "height": 600,
+        "left": 0,
+        "right": 320,
+        "top": 244,
+        "width": 320,
+        "x": 0,
+        "y": 244
+      },
+      "dotBackground": "rgb(196, 1, 1)",
+      "dotSize": [
+        "8px",
+        "8px"
+      ],
+      "focusVisible": false,
+      "overflow": false,
+      "phase": "before",
+      "radioRect": {
+        "bottom": 456,
+        "height": 20,
+        "left": 268,
+        "right": 288,
+        "top": 436,
+        "width": 20,
+        "x": 268,
+        "y": 436
+      },
+      "rowBackground": "rgb(241, 243, 245)",
+      "rowFont": "500 16px / 20.8px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+      "rowRect": {
+        "bottom": 468,
+        "height": 44,
+        "left": 16,
+        "right": 304,
+        "top": 424,
+        "width": 288,
+        "x": 16,
+        "y": 424
+      },
+      "unselectedBackground": "rgb(241, 243, 245)",
+      "value": "Audi",
+      "viewport": {
+        "height": 844,
+        "width": 320
+      }
+    },
+    {
+      "borderColor": "rgb(23, 26, 32)",
+      "borderWidth": "2px",
+      "dialogRect": {
+        "bottom": 844,
+        "height": 600,
+        "left": 0,
+        "right": 320,
+        "top": 244,
+        "width": 320,
+        "x": 0,
+        "y": 244
+      },
+      "dotBackground": "rgb(23, 26, 32)",
+      "dotSize": [
+        "8px",
+        "8px"
+      ],
+      "focusVisible": false,
+      "overflow": false,
+      "phase": "after",
+      "radioRect": {
+        "bottom": 456,
+        "height": 20,
+        "left": 268,
+        "right": 288,
+        "top": 436,
+        "width": 20,
+        "x": 268,
+        "y": 436
+      },
+      "rowBackground": "color(srgb 0.90902 0.910196 0.912549)",
+      "rowFont": "500 16px / 20.8px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+      "rowRect": {
+        "bottom": 468,
+        "height": 44,
+        "left": 16,
+        "right": 304,
+        "top": 424,
+        "width": 288,
+        "x": 16,
+        "y": 424
+      },
+      "unselectedBackground": "rgb(241, 243, 245)",
+      "value": "Audi",
+      "viewport": {
+        "height": 844,
+        "width": 320
+      }
+    },
+    {
+      "borderColor": "rgb(23, 26, 32)",
+      "borderWidth": "2px",
+      "dialogRect": {
+        "bottom": 844,
+        "height": 600,
+        "left": 0,
+        "right": 390,
+        "top": 244,
+        "width": 390,
+        "x": 0,
+        "y": 244
+      },
+      "dotBackground": "rgb(23, 26, 32)",
+      "dotSize": [
+        "8px",
+        "8px"
+      ],
+      "focusVisible": false,
+      "overflow": false,
+      "phase": "after-bg-390",
+      "radioRect": {
+        "bottom": 456,
+        "height": 20,
+        "left": 338,
+        "right": 358,
+        "top": 436,
+        "width": 20,
+        "x": 338,
+        "y": 436
+      },
+      "rowBackground": "color(srgb 0.90902 0.910196 0.912549)",
+      "rowFont": "500 16px / 20.8px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+      "rowRect": {
+        "bottom": 468,
+        "height": 44,
+        "left": 16,
+        "right": 374,
+        "top": 424,
+        "width": 358,
+        "x": 16,
+        "y": 424
+      },
+      "unselectedBackground": "rgb(241, 243, 245)",
+      "value": "Audi",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    {
+      "borderColor": "rgb(23, 26, 32)",
+      "dotSize": [
+        "8px",
+        "8px"
+      ],
+      "overflow": false,
+      "phase": "final-bg-320",
+      "radioRect": {
+        "bottom": 456,
+        "height": 20,
+        "left": 268,
+        "right": 288,
+        "top": 436,
+        "width": 20,
+        "x": 268,
+        "y": 436
+      },
+      "rowBackground": "color(srgb 0.90902 0.910196 0.912549)",
+      "rowRect": {
+        "bottom": 468,
+        "height": 44,
+        "left": 16,
+        "right": 304,
+        "top": 424,
+        "width": 288,
+        "x": 16,
+        "y": 424
+      },
+      "viewport": {
+        "height": 844,
+        "width": 320
+      }
+    }
+  ],
+  "checks": [
+    {
+      "case": "en-320-apply",
+      "passed": true
+    },
+    {
+      "case": "en-320-clear",
+      "passed": true
+    },
+    {
+      "case": "en-390-keyboard",
+      "passed": true
+    },
+    {
+      "case": "en-390-native-checkbox",
+      "passed": true,
+      "measurement": {
+        "accent": "rgb(23, 26, 32)",
+        "appearance": "auto",
+        "checked": true,
+        "row": "color(srgb 0.90902 0.910196 0.912549)",
+        "size": [
+          20,
+          20
+        ]
+      }
+    },
+    {
+      "applyBackground": "rgb(196, 1, 1)",
+      "case": "desktop-1440-preserved",
+      "overflow": false,
+      "radioAccent": "auto",
+      "viewport": [
+        1440,
+        900
+      ],
+      "passed": true
+    }
+  ],
+  "resetComparison": {
+    "sourceCommit": "0e51167ab632f877a97693498572fd2ce287ead0",
+    "viewport": [
+      320,
+      844
+    ],
+    "accessibleLabel": "Изчисти",
+    "title": "Изчисти",
+    "hitArea": [
+      44,
+      44
+    ],
+    "svg": true,
+    "clearRestoredSevenResultCount": true,
+    "before": "before-reset-bg-320.jpg",
+    "after": "after-reset-bg-320.jpg"
+  },
+  "console": "Final 320px BG comparison tab reported no error logs",
+  "dev": {
+    "origin": "http://127.0.0.1:6461",
+    "pid": 32428,
+    "http200": [
+      "/bg",
+      "/bg/listing-grid"
+    ]
+  },
+  "publication": "Source polish only; no dealer deployment or template release selection"
+}

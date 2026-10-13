@@ -173,8 +173,6 @@ export interface VehicleFeature {
 }
 
 export interface VehicleListing {
-  /** Original public advertisement, not a live stock feed. */
-  sourceUrl?: string;
   badges: ListingBadge[];
   category: VehicleCategory;
   dealerOrgId?: string;

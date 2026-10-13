@@ -1,8 +1,9 @@
-export const locales = ["en", "bg"] as const;
+import { carsLocale } from './cars-locale';
+export const locales = carsLocale.enabledLocales;
 
 export type Locale = (typeof locales)[number];
 
-export const defaultLocale = "bg" satisfies Locale;
+export const defaultLocale = carsLocale.defaultLocale satisfies Locale;
 
 export const marketplaceLocales = locales;
 

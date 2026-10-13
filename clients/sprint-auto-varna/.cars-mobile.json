@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "format": "mobile-preview-v1",
+  "dealer": "sprint-auto-varna",
+  "name": "Спринт ауто",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/mobile",
+    "digest": "4e858bd9dbd3ef5b52cd904c4ed97bbfdc0f4cfe02b5a3840580f38026b867a0",
+    "tree": "2b02829e157071e305bfb2dff10ef18e85c8a35e"
+  },
+  "sourceDigest": "9390c413e69837103e4030364d195da787e673223b7f9785a4aaa322bcd34b37",
+  "inventory": {
+    "mode": "illustrative-not-dealer-stock",
+    "count": 7,
+    "observedAt": ""
+  },
+  "personalization": {
+    "profileSha256": "f667f6b758422dc3b680b715c72d403e4bf2fc83365b62102ddbc9df65dd8ea0",
+    "logoPaths": [
+      "/registered-branding/onLight.png",
+      "/registered-branding/onDark.png"
+    ],
+    "mediaPaths": [
+      "/assets/images/lead/day-night-stock-04.webp",
+      "/assets/images/lead/day-night-stock-01.webp",
+      "/assets/images/lead/day-night-stock-06.webp",
+      "/assets/images/lead/day-night-stock-02.webp",
+      "/assets/images/lead/day-night-stock-03.webp"
+    ],
+    "mediaMappings": [],
+    "contentPaths": [
+      "mobile/src/lib/showroom-config.ts",
+      "mobile/src/lib/catalog.ts",
+      "mobile/src/lib/dealers.ts",
+      "mobile/src/lib/dealer-inventory.json",
+      "mobile/src/lib/locale.ts",
+      "mobile/src/lib/search.ts",
+      "mobile/src/components/NativeDealerCards.tsx",
+      "mobile/src/components/DealerScreens.tsx",
+      "mobile/src/components/VehicleCard.tsx",
+      "mobile/src/components/ShowroomVehicleCard.tsx",
+      "mobile/src/components/VehicleSections.tsx",
+      "mobile/src/lib/mobile-mileage.ts",
+      "mobile/src/lib/types.ts",
+      "mobile/src/components/DesktopVehicleSummary.tsx",
+      "mobile/src/components/NativeCarPark.tsx",
+      "mobile/src/components/ShowroomFilterSheet.tsx",
+      "mobile/src/lib/vehicle-copy.ts",
+      "mobile/src/components/Header.tsx"
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "dealer": "avtoborsa-mania",
+  "kind": "personalized-source-candidate-not-an-approved-release",
+  "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+  "candidateSourceDigest": "3638b32c8e4c37dd0bc5cb57a11f42839673b08b9ff6ce36567581fd425758f3",
+  "qualificationContextPath": ".client/native-qualification-context.json",
+  "qualificationContextSha256": "85a6f9bd169c248b91aecea08eb20ff019657e9021b94e19bf703ad8b3fd6b08",
+  "qualificationLockPath": ".client/native-qualification-lock.json",
+  "qualificationLockSha256": "94f1fd50092671ce568b5f7872d91ae3233403a3079a40ce6190f0d47f095cd5",
+  "sourceDeltaReview": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
+    "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975",
+    "reviewedAt": "2026-10-11T21:04:02.173Z"
+  },
+  "nativeApproval": false,
+  "hostedApproval": false
+}
