@@ -1,0 +1,817 @@
+[
+  {
+    "width": 320,
+    "measurements": [
+      {
+        "selector": ".dn-mobile-services__card",
+        "text": "Всички услуги За вашата кола Виж услугите Виж",
+        "box": {
+          "x": 12,
+          "y": 314.515625,
+          "width": 296,
+          "height": 122.34375,
+          "bottom": 436.859375
+        },
+        "radius": "12px",
+        "padding": "0px",
+        "gap": "normal",
+        "align": "center",
+        "minHeight": "116px",
+        "paint": {
+          "background": "rgba(0, 0, 0, 0)",
+          "inset": "auto",
+          "radius": "0px"
+        },
+        "font": "450 16px / 24px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "selector": ".dn-mobile-services__copy",
+        "text": "Всички услуги За вашата кола Виж услугите Виж",
+        "box": {
+          "x": 13,
+          "y": 315.515625,
+          "width": 162,
+          "height": 120.34375,
+          "bottom": 435.859375
+        },
+        "radius": "0px",
+        "padding": "16px 0px 16px 12px",
+        "gap": "4px",
+        "align": "flex-start",
+        "minHeight": "auto",
+        "paint": {
+          "background": "rgba(0, 0, 0, 0)",
+          "inset": "auto",
+          "radius": "0px"
+        },
+        "font": "450 16px / 24px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "selector": ".dn-mobile-services__copy strong",
+        "text": "Всички услуги",
+        "box": {
+          "x": 25,
+          "y": 331.515625,
+          "width": 111.4375,
+          "height": 19.1875,
+          "bottom": 350.703125
+        },
+        "radius": "0px",
+        "padding": "0px",
+        "gap": "normal",
+        "align": "normal",
+        "minHeight": "auto",
+        "paint": {
+          "background": "rgba(0, 0, 0, 0)",
+          "inset": "auto",
+          "radius": "0px"
+        },
+        "font": "600 16px / 19.2px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "selector": ".dn-mobile-services__copy small",
+        "text": "За вашата кола",
+        "box": {
+          "x": 25,
+          "y": 354.703125,
+          "width": 90.8125,
+          "height": 17.15625,
+          "bottom": 371.859375
+        },
+        "radius": "0px",
+        "padding": "0px",
+        "gap": "normal",
+        "align": "normal",
+        "minHeight": "auto",
+        "paint": {
+          "background": "rgba(0, 0, 0, 0)",
+          "inset": "auto",
+          "radius": "0px"
+        },
+        "font": "450 12px / 17.16px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "selector": ".dn-mobile-services__cta",
+        "text": "Виж услугите Виж",
+        "box": {
+          "x": 25,
+          "y": 379.859375,
+          "width": 72.21875,
+          "height": 40,
+          "bottom": 419.859375
+        },
+        "radius": "999px",
+        "padding": "0px 12px",
+        "gap": "4px",
+        "align": "center",
+        "minHeight": "40px",
+        "paint": {
+          "background": "rgb(20, 23, 29)",
+          "inset": "6px 0px",
+          "radius": "999px"
+        },
+        "font": "500 14px / 18.2px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "selector": ".dn-mobile-services__art",
+        "text": "",
+        "box": {
+          "x": 175,
+          "y": 319.203125,
+          "width": 132,
+          "height": 112.953125,
+          "bottom": 432.15625
+        },
+        "radius": "0px",
+        "padding": "16px 4px 16px 0px",
+        "gap": "normal",
+        "align": "normal",
+        "minHeight": "auto",
+        "paint": {
+          "background": "rgba(0, 0, 0, 0)",
+          "inset": "auto",
+          "radius": "0px"
+        },
+        "font": "450 16px / 24px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "selector": ".dn-mobile-services__art img",
+        "text": "",
+        "box": {
+          "x": 168.359375,
+          "y": 329.265625,
+          "width": 139.890625,
+          "height": 93.1875,
+          "bottom": 422.453125
+        },
+        "radius": "0px",
+        "padding": "0px",
+        "gap": "normal",
+        "align": "normal",
+        "minHeight": "0px",
+        "paint": {
+          "background": "rgba(0, 0, 0, 0)",
+          "inset": "auto",
+          "radius": "0px"
+        },
+        "font": "450 16px / 24px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "selector": ".dn-mobile-bottom-nav",
+        "text": "Начало  Коли  Продай  Внос  Меню",
+        "box": {
+          "x": 12,
+          "y": 844,
+          "width": 296,
+          "height": 52,
+          "bottom": 896
+        },
+        "radius": "16px",
+        "padding": "2px 8px",
+        "gap": "normal",
+        "align": "normal",
+        "minHeight": "52px",
+        "paint": {
+          "background": "rgba(0, 0, 0, 0)",
+          "inset": "auto",
+          "radius": "0px"
+        },
+        "font": "450 16px / 24px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "selector": ".dn-mobile-core-card",
+        "text": "Коли 7 примерни",
+        "box": {
+          "x": 12,
+          "y": -1421,
+          "width": 140,
+          "height": 161.609375,
+          "bottom": -1259.390625
+        },
+        "radius": "12px",
+        "padding": "8px",
+        "gap": "4px",
+        "align": "normal",
+        "minHeight": "148px",
+        "paint": {
+          "background": "rgba(0, 0, 0, 0)",
+          "inset": "auto",
+          "radius": "0px"
+        },
+        "font": "450 16px / 24px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "selector": ".dn-mobile-core-card",
+        "text": "Продай Бърза оценка",
+        "box": {
+          "x": 168,
+          "y": -1421,
+          "width": 140,
+          "height": 161.609375,
+          "bottom": -1259.390625
+        },
+        "radius": "12px",
+        "padding": "8px",
+        "gap": "4px",
+        "align": "normal",
+        "minHeight": "148px",
+        "paint": {
+          "background": "rgba(0, 0, 0, 0)",
+          "inset": "auto",
+          "radius": "0px"
+        },
+        "font": "450 16px / 24px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "selector": ".dn-mobile-core-card",
+        "text": "Внос По заявка",
+        "box": {
+          "x": 12,
+          "y": -1243.390625,
+          "width": 140,
+          "height": 161.609375,
+          "bottom": -1081.78125
+        },
+        "radius": "12px",
+        "padding": "8px",
+        "gap": "4px",
+        "align": "normal",
+        "minHeight": "148px",
+        "paint": {
+          "background": "rgba(0, 0, 0, 0)",
+          "inset": "auto",
+          "radius": "0px"
+        },
+        "font": "450 16px / 24px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "selector": ".dn-mobile-core-card",
+        "text": "Лизинг Гъвкав план",
+        "box": {
+          "x": 168,
+          "y": -1243.390625,
+          "width": 140,
+          "height": 161.609375,
+          "bottom": -1081.78125
+        },
+        "radius": "12px",
+        "padding": "8px",
+        "gap": "4px",
+        "align": "normal",
+        "minHeight": "148px",
+        "paint": {
+          "background": "rgba(0, 0, 0, 0)",
+          "inset": "auto",
+          "radius": "0px"
+        },
+        "font": "450 16px / 24px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "width": 390,
+    "measurements": [
+      {
+        "selector": ".dn-mobile-services__card",
+        "text": "Всички услуги За вашата кола Виж услугите Виж",
+        "box": {
+          "x": 12,
+          "y": 311.765625,
+          "width": 366,
+          "height": 127.609375,
+          "bottom": 439.375
+        },
+        "radius": "12px",
+        "padding": "0px",
+        "gap": "normal",
+        "align": "center",
+        "minHeight": "116px",
+        "paint": {
+          "background": "rgba(0, 0, 0, 0)",
+          "inset": "auto",
+          "radius": "0px"
+        },
+        "font": "450 16px / 24px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "selector": ".dn-mobile-services__copy",
+        "text": "Всички услуги За вашата кола Виж услугите Виж",
+        "box": {
+          "x": 13,
+          "y": 312.765625,
+          "width": 228,
+          "height": 125.609375,
+          "bottom": 438.375
+        },
+        "radius": "0px",
+        "padding": "16px 0px 16px 12px",
+        "gap": "4px",
+        "align": "flex-start",
+        "minHeight": "auto",
+        "paint": {
+          "background": "rgba(0, 0, 0, 0)",
+          "inset": "auto",
+          "radius": "0px"
+        },
+        "font": "450 16px / 24px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "selector": ".dn-mobile-services__copy strong",
+        "text": "Всички услуги",
+        "box": {
+          "x": 25,
+          "y": 328.765625,
+          "width": 124.59375,
+          "height": 21.59375,
+          "bottom": 350.359375
+        },
+        "radius": "0px",
+        "padding": "0px",
+        "gap": "normal",
+        "align": "normal",
+        "minHeight": "auto",
+        "paint": {
+          "background": "rgba(0, 0, 0, 0)",
+          "inset": "auto",
+          "radius": "0px"
+        },
+        "font": "600 18px / 21.6px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "selector": ".dn-mobile-services__copy small",
+        "text": "За вашата кола",
+        "box": {
+          "x": 25,
+          "y": 354.359375,
+          "width": 105.953125,
+          "height": 20.015625,
+          "bottom": 374.375
+        },
+        "radius": "0px",
+        "padding": "0px",
+        "gap": "normal",
+        "align": "normal",
+        "minHeight": "auto",
+        "paint": {
+          "background": "rgba(0, 0, 0, 0)",
+          "inset": "auto",
+          "radius": "0px"
+        },
+        "font": "450 14px / 20.02px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "selector": ".dn-mobile-services__cta",
+        "text": "Виж услугите Виж",
+        "box": {
+          "x": 25,
+          "y": 382.375,
+          "width": 137.296875,
+          "height": 40,
+          "bottom": 422.375
+        },
+        "radius": "999px",
+        "padding": "0px 12px",
+        "gap": "4px",
+        "align": "center",
+        "minHeight": "40px",
+        "paint": {
+          "background": "rgb(20, 23, 29)",
+          "inset": "6px 0px",
+          "radius": "999px"
+        },
+        "font": "500 14px / 18.2px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "selector": ".dn-mobile-services__art",
+        "text": "",
+        "box": {
+          "x": 241,
+          "y": 319.09375,
+          "width": 136,
+          "height": 112.953125,
+          "bottom": 432.046875
+        },
+        "radius": "0px",
+        "padding": "16px 8px 16px 0px",
+        "gap": "normal",
+        "align": "normal",
+        "minHeight": "auto",
+        "paint": {
+          "background": "rgba(0, 0, 0, 0)",
+          "inset": "auto",
+          "radius": "0px"
+        },
+        "font": "450 16px / 24px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "selector": ".dn-mobile-services__art img",
+        "text": "",
+        "box": {
+          "x": 234.359375,
+          "y": 329.15625,
+          "width": 139.890625,
+          "height": 93.1875,
+          "bottom": 422.34375
+        },
+        "radius": "0px",
+        "padding": "0px",
+        "gap": "normal",
+        "align": "normal",
+        "minHeight": "0px",
+        "paint": {
+          "background": "rgba(0, 0, 0, 0)",
+          "inset": "auto",
+          "radius": "0px"
+        },
+        "font": "450 16px / 24px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "selector": ".dn-mobile-bottom-nav",
+        "text": "Начало  Коли  Продай  Внос  Меню",
+        "box": {
+          "x": 12,
+          "y": 844,
+          "width": 366,
+          "height": 52,
+          "bottom": 896
+        },
+        "radius": "16px",
+        "padding": "2px 8px",
+        "gap": "normal",
+        "align": "normal",
+        "minHeight": "52px",
+        "paint": {
+          "background": "rgba(0, 0, 0, 0)",
+          "inset": "auto",
+          "radius": "0px"
+        },
+        "font": "450 16px / 24px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "selector": ".dn-mobile-core-card",
+        "text": "Коли 7 примерни",
+        "box": {
+          "x": 12,
+          "y": -1453,
+          "width": 175,
+          "height": 161.609375,
+          "bottom": -1291.390625
+        },
+        "radius": "12px",
+        "padding": "8px",
+        "gap": "4px",
+        "align": "normal",
+        "minHeight": "148px",
+        "paint": {
+          "background": "rgba(0, 0, 0, 0)",
+          "inset": "auto",
+          "radius": "0px"
+        },
+        "font": "450 16px / 24px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "selector": ".dn-mobile-core-card",
+        "text": "Продай Бърза оценка",
+        "box": {
+          "x": 203,
+          "y": -1453,
+          "width": 175,
+          "height": 161.609375,
+          "bottom": -1291.390625
+        },
+        "radius": "12px",
+        "padding": "8px",
+        "gap": "4px",
+        "align": "normal",
+        "minHeight": "148px",
+        "paint": {
+          "background": "rgba(0, 0, 0, 0)",
+          "inset": "auto",
+          "radius": "0px"
+        },
+        "font": "450 16px / 24px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "selector": ".dn-mobile-core-card",
+        "text": "Внос По заявка",
+        "box": {
+          "x": 12,
+          "y": -1275.390625,
+          "width": 175,
+          "height": 161.609375,
+          "bottom": -1113.78125
+        },
+        "radius": "12px",
+        "padding": "8px",
+        "gap": "4px",
+        "align": "normal",
+        "minHeight": "148px",
+        "paint": {
+          "background": "rgba(0, 0, 0, 0)",
+          "inset": "auto",
+          "radius": "0px"
+        },
+        "font": "450 16px / 24px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "selector": ".dn-mobile-core-card",
+        "text": "Лизинг Гъвкав план",
+        "box": {
+          "x": 203,
+          "y": -1275.390625,
+          "width": 175,
+          "height": 161.609375,
+          "bottom": -1113.78125
+        },
+        "radius": "12px",
+        "padding": "8px",
+        "gap": "4px",
+        "align": "normal",
+        "minHeight": "148px",
+        "paint": {
+          "background": "rgba(0, 0, 0, 0)",
+          "inset": "auto",
+          "radius": "0px"
+        },
+        "font": "450 16px / 24px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "width": 440,
+    "measurements": [
+      {
+        "selector": ".dn-mobile-services__card",
+        "text": "Всички услуги За вашата кола Виж услугите Виж",
+        "box": {
+          "x": 12,
+          "y": 311.765625,
+          "width": 416,
+          "height": 127.609375,
+          "bottom": 439.375
+        },
+        "radius": "12px",
+        "padding": "0px",
+        "gap": "normal",
+        "align": "center",
+        "minHeight": "116px",
+        "paint": {
+          "background": "rgba(0, 0, 0, 0)",
+          "inset": "auto",
+          "radius": "0px"
+        },
+        "font": "450 16px / 24px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "selector": ".dn-mobile-services__copy",
+        "text": "Всички услуги За вашата кола Виж услугите Виж",
+        "box": {
+          "x": 13,
+          "y": 312.765625,
+          "width": 278,
+          "height": 125.609375,
+          "bottom": 438.375
+        },
+        "radius": "0px",
+        "padding": "16px 0px 16px 12px",
+        "gap": "4px",
+        "align": "flex-start",
+        "minHeight": "auto",
+        "paint": {
+          "background": "rgba(0, 0, 0, 0)",
+          "inset": "auto",
+          "radius": "0px"
+        },
+        "font": "450 16px / 24px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "selector": ".dn-mobile-services__copy strong",
+        "text": "Всички услуги",
+        "box": {
+          "x": 25,
+          "y": 328.765625,
+          "width": 124.59375,
+          "height": 21.59375,
+          "bottom": 350.359375
+        },
+        "radius": "0px",
+        "padding": "0px",
+        "gap": "normal",
+        "align": "normal",
+        "minHeight": "auto",
+        "paint": {
+          "background": "rgba(0, 0, 0, 0)",
+          "inset": "auto",
+          "radius": "0px"
+        },
+        "font": "600 18px / 21.6px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "selector": ".dn-mobile-services__copy small",
+        "text": "За вашата кола",
+        "box": {
+          "x": 25,
+          "y": 354.359375,
+          "width": 105.953125,
+          "height": 20.015625,
+          "bottom": 374.375
+        },
+        "radius": "0px",
+        "padding": "0px",
+        "gap": "normal",
+        "align": "normal",
+        "minHeight": "auto",
+        "paint": {
+          "background": "rgba(0, 0, 0, 0)",
+          "inset": "auto",
+          "radius": "0px"
+        },
+        "font": "450 14px / 20.02px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "selector": ".dn-mobile-services__cta",
+        "text": "Виж услугите Виж",
+        "box": {
+          "x": 25,
+          "y": 382.375,
+          "width": 137.296875,
+          "height": 40,
+          "bottom": 422.375
+        },
+        "radius": "999px",
+        "padding": "0px 12px",
+        "gap": "4px",
+        "align": "center",
+        "minHeight": "40px",
+        "paint": {
+          "background": "rgb(20, 23, 29)",
+          "inset": "6px 0px",
+          "radius": "999px"
+        },
+        "font": "500 14px / 18.2px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "selector": ".dn-mobile-services__art",
+        "text": "",
+        "box": {
+          "x": 291,
+          "y": 319.09375,
+          "width": 136,
+          "height": 112.953125,
+          "bottom": 432.046875
+        },
+        "radius": "0px",
+        "padding": "16px 8px 16px 0px",
+        "gap": "normal",
+        "align": "normal",
+        "minHeight": "auto",
+        "paint": {
+          "background": "rgba(0, 0, 0, 0)",
+          "inset": "auto",
+          "radius": "0px"
+        },
+        "font": "450 16px / 24px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "selector": ".dn-mobile-services__art img",
+        "text": "",
+        "box": {
+          "x": 284.359375,
+          "y": 329.15625,
+          "width": 139.890625,
+          "height": 93.1875,
+          "bottom": 422.34375
+        },
+        "radius": "0px",
+        "padding": "0px",
+        "gap": "normal",
+        "align": "normal",
+        "minHeight": "0px",
+        "paint": {
+          "background": "rgba(0, 0, 0, 0)",
+          "inset": "auto",
+          "radius": "0px"
+        },
+        "font": "450 16px / 24px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "selector": ".dn-mobile-bottom-nav",
+        "text": "Начало  Коли  Продай  Внос  Меню",
+        "box": {
+          "x": 12,
+          "y": 844,
+          "width": 416,
+          "height": 52,
+          "bottom": 896
+        },
+        "radius": "16px",
+        "padding": "2px 8px",
+        "gap": "normal",
+        "align": "normal",
+        "minHeight": "52px",
+        "paint": {
+          "background": "rgba(0, 0, 0, 0)",
+          "inset": "auto",
+          "radius": "0px"
+        },
+        "font": "450 16px / 24px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "selector": ".dn-mobile-core-card",
+        "text": "Коли 7 примерни",
+        "box": {
+          "x": 12,
+          "y": -1453,
+          "width": 200,
+          "height": 161.609375,
+          "bottom": -1291.390625
+        },
+        "radius": "12px",
+        "padding": "8px",
+        "gap": "4px",
+        "align": "normal",
+        "minHeight": "148px",
+        "paint": {
+          "background": "rgba(0, 0, 0, 0)",
+          "inset": "auto",
+          "radius": "0px"
+        },
+        "font": "450 16px / 24px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "selector": ".dn-mobile-core-card",
+        "text": "Продай Бърза оценка",
+        "box": {
+          "x": 228,
+          "y": -1453,
+          "width": 200,
+          "height": 161.609375,
+          "bottom": -1291.390625
+        },
+        "radius": "12px",
+        "padding": "8px",
+        "gap": "4px",
+        "align": "normal",
+        "minHeight": "148px",
+        "paint": {
+          "background": "rgba(0, 0, 0, 0)",
+          "inset": "auto",
+          "radius": "0px"
+        },
+        "font": "450 16px / 24px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "selector": ".dn-mobile-core-card",
+        "text": "Внос По заявка",
+        "box": {
+          "x": 12,
+          "y": -1275.390625,
+          "width": 200,
+          "height": 161.609375,
+          "bottom": -1113.78125
+        },
+        "radius": "12px",
+        "padding": "8px",
+        "gap": "4px",
+        "align": "normal",
+        "minHeight": "148px",
+        "paint": {
+          "background": "rgba(0, 0, 0, 0)",
+          "inset": "auto",
+          "radius": "0px"
+        },
+        "font": "450 16px / 24px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "selector": ".dn-mobile-core-card",
+        "text": "Лизинг Гъвкав план",
+        "box": {
+          "x": 228,
+          "y": -1275.390625,
+          "width": 200,
+          "height": 161.609375,
+          "bottom": -1113.78125
+        },
+        "radius": "12px",
+        "padding": "8px",
+        "gap": "4px",
+        "align": "normal",
+        "minHeight": "148px",
+        "paint": {
+          "background": "rgba(0, 0, 0, 0)",
+          "inset": "auto",
+          "radius": "0px"
+        },
+        "font": "450 16px / 24px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "width": 1440,
+    "measurements": [],
+    "errors": []
+  }
+]

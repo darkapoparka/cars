@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "dealer": "fusion-auto-varna",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/app",
+    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
+    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+  },
+  "appDigest": "46f40c74ac2f6467becabe1b02bdba17b1762aec231f61c8cc04b36f6df3742b",
+  "provenance": {
+    "schemaVersion": 1,
+    "dealer": "fusion-auto-varna",
+    "profile": "auto-best/src/lib/data/dealer-profile.json",
+    "profileSha256": "7bc11e889c3a7ae6501564cf3d75de9dfe96e06ca88bb0af9058d349a583b4e6",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "vehicles": 2,
+    "currency": "EUR",
+    "observedAt": "2026-10-12T12:05:57.080Z",
+    "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-light.png",
+        "output": "public/dealer-app/logo-light-85f89e989c74b709d56d.png",
+        "sha256": "85f89e989c74b709d56d399c5b91275dccf41470c7e4925b889608cf9164beb7",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-dark.png",
+        "output": "public/dealer-app/logo-dark-37a69c7739ee9de85b7f.png",
+        "sha256": "37a69c7739ee9de85b7fce8da0b28f15e74a25355d30775d8a283ed136e9b01e",
+        "role": "logo-dark"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11790662447767037-1.webp",
+        "output": "public/dealer-app/vehicle-684880cd11fa3955df0d.webp",
+        "sha256": "684880cd11fa3955df0d2c135623cef0a9f6f67b1a5e260d9fbabbdc212d583f",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11790662447767037-2.webp",
+        "output": "public/dealer-app/vehicle-005db4106a617371b098.webp",
+        "sha256": "005db4106a617371b098e8df88c4a75f386a53765eddd9f2d9b2b3ca81a84014",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/21780841001174707-1.webp",
+        "output": "public/dealer-app/vehicle-a6442d0f4ba409cb1ca1.webp",
+        "sha256": "a6442d0f4ba409cb1ca15a15bf214173107eedae96681464daad929e29be0aac",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/21780841001174707-2.webp",
+        "output": "public/dealer-app/vehicle-ad72b9cb4fb5e4a68530.webp",
+        "sha256": "ad72b9cb4fb5e4a685301be39d69718f3c6eb7bbb36cbcdfaa845364140bdca0",
+        "role": "vehicle"
+      }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "fusion-auto-varna-11790662447767037",
+        "sourceValue": 350000,
+        "sourceUnit": "km",
+        "canonicalKm": 350000
+      },
+      {
+        "slug": "fusion-auto-varna-21780841001174707",
+        "sourceValue": 189000,
+        "sourceUnit": "km",
+        "canonicalKm": 189000
+      }
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

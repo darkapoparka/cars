@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-public-stock-research-not-production-input",
+  "dealer": "dein-auto-varna",
+  "observedAt": "2026-10-12T10:44:18.112Z",
+  "sourceUrl": "https://deinauto.mobile.bg/",
+  "profileAdvertCount": 2,
+  "profileCountIsAvailability": false,
+  "sampledAdvertUrls": [
+    "https://deinauto.mobile.bg/obiava-11786124378124232-vw-passat",
+    "https://deinauto.mobile.bg/obiava-11790325495830727-audi-a5-45-tdi-quattro"
+  ],
+  "rawPriceLabels": [
+    "20 500 €",
+    "21 500 €"
+  ],
+  "retainedFirstAdvertExcerpt": "1 - 2 от общо 2 обяви на \"ДайнАуто\" - Автомобили и Джипове VW Passat 20 500 € Цената е с включено ДДС НОВА ОБЯВА обл. Варна, гр. Варна юни 2023 г. 80 700 км Черен Дизелов 150 к.с. Евро 6 2000 куб.см Автоматична Комби Юни 2023, Комби, Употребяван автомобил, Дизел, 80 700км, Автоматични скорости, 150к. с. , EURO 6, 2000см3, 4/5 врати, Черен Колата е внесена от Германия. Реални км. Обслужена е преди 4000 км. 2 ключа. Всичко работи. Без нотариални такси. Особености - 360 camera \\ Задна камера, 4(5) Врати, Auto Start Stop function, Apple C",
+  "partsIgnored": null,
+  "availabilityConfirmed": false,
+  "mediaReusePermission": "unknown",
+  "sourcePhotosFetched": false,
+  "selectedCreationStockMode": "illustrative-not-dealer-stock",
+  "nextInput": "Use approved template illustrative vehicle assets with same honest demo disclosure across all six. Do not republish these dealer advert photos or claim these prices/availability in demo inventory.",
+  "productionStockReady": false
+}

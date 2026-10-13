@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "dealer": "nordic-auto-varna",
+  "kind": "dated-listing-snapshot",
+  "records": [
+    {
+      "title": "Mercedes-Benz ML 350 D",
+      "make": "Mercedes-Benz",
+      "model": "ML",
+      "year": 2010,
+      "priceAmount": 8000,
+      "mileageValue": 230000,
+      "body": "SUV",
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "color": "Black",
+      "description": "Mercedes-Benz ML 350 D от датирана публична обява. Продавачът посочва лек удар отзад, видим на снимките. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+      "id": "21783932906160618",
+      "slug": "nordic-auto-varna-21783932906160618",
+      "currency": "EUR",
+      "priceOnRequest": false,
+      "mileageOnRequest": false,
+      "mileageUnit": "km",
+      "condition": "used",
+      "images": [
+        "/dealer-stock/21783932906160618-1.webp",
+        "/dealer-stock/21783932906160618-2.webp"
+      ],
+      "sourceUrl": "https://nordicautos11.mobile.bg/obiava-21783932906160618-mercedes-benz-ml-350-d",
+      "observedAt": "2026-10-12T11:43:24.376Z",
+      "availability": "Датирана обява; потвърдете цената и наличността директно с автокъщата.",
+      "sourceProof": {
+        "sha256": "573438554b7392a97cbb0a54e054ed1547239b3604e1b55b70f748aa7c678658",
+        "originalPhotoBytesUnchanged": true,
+        "watermarksPreserved": true
+      }
+    },
+    {
+      "title": "BMW X5 3.0d",
+      "make": "BMW",
+      "model": "X5",
+      "year": 2015,
+      "priceAmount": 23000,
+      "mileageValue": 260000,
+      "body": "SUV",
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "color": "Grey",
+      "description": "BMW X5 3.0d от датирана публична обява. Потвърдете цената и наличността директно с автокъщата.",
+      "id": "21788770224128681",
+      "slug": "nordic-auto-varna-21788770224128681",
+      "currency": "EUR",
+      "priceOnRequest": false,
+      "mileageOnRequest": false,
+      "mileageUnit": "km",
+      "condition": "used",
+      "images": [
+        "/dealer-stock/21788770224128681-1.webp",
+        "/dealer-stock/21788770224128681-2.webp"
+      ],
+      "sourceUrl": "https://nordicautos11.mobile.bg/obiava-21788770224128681-bmw-x5-3-0d-pano-head-up-matrix-7-mestna",
+      "observedAt": "2026-10-12T11:43:24.376Z",
+      "availability": "Датирана обява; потвърдете цената и наличността директно с автокъщата.",
+      "sourceProof": {
+        "sha256": "de425be3fe2750fabb71e7ee3218758639e5d21b161b10d71bc563559c386d77",
+        "originalPhotoBytesUnchanged": true,
+        "watermarksPreserved": true
+      }
+    }
+  ],
+  "disclosure": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+  "disclosureEn": "Dated listing samples; confirm price and availability directly with the dealership.",
+  "availabilityConfirmed": false,
+  "completeInventory": false
+}

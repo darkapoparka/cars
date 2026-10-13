@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "dealer": "watt-a-car-varna",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/app",
+    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
+    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+  },
+  "appDigest": "311063e2a3e20baa0e30e01b7cdd1d6230528dfefaaa42c325c0f4bc66272e11",
+  "provenance": {
+    "schemaVersion": 1,
+    "dealer": "watt-a-car-varna",
+    "profile": "auto-best/src/lib/data/dealer-profile.json",
+    "profileSha256": "43967c2f244f29e4b2b37e1418f1062a98bf7b8a5cee9ba0b300a62cb1028919",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "vehicles": 2,
+    "currency": "EUR",
+    "observedAt": "2026-10-12T11:35:26.649Z",
+    "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-light.png",
+        "output": "public/dealer-app/logo-light-8997206a075a88bcb47d.png",
+        "sha256": "8997206a075a88bcb47dea84d9f99afc08c7167ba35b9f33fff1f537fd34e355",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-dark.png",
+        "output": "public/dealer-app/logo-dark-7290161a14f303c9b4b1.png",
+        "sha256": "7290161a14f303c9b4b1e0aeb1957e923a4a876cb2a726cf470dcab726bcf978",
+        "role": "logo-dark"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/demo-estate.webp",
+        "output": "public/dealer-app/vehicle-d2d3deacbc9f566a2278.webp",
+        "sha256": "d2d3deacbc9f566a22783f2a5eab6335473bf2e47c627261e8895dbff6fece70",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/demo-suv.webp",
+        "output": "public/dealer-app/vehicle-5c0c6062ef8af622fd85.webp",
+        "sha256": "5c0c6062ef8af622fd852a7a43b2dfc989d6836f1528698b51d88f9352640f2f",
+        "role": "vehicle"
+      }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "watt-a-car-varna-demo-estate",
+        "sourceValue": 12000,
+        "sourceUnit": "km",
+        "canonicalKm": 12000
+      },
+      {
+        "slug": "watt-a-car-varna-demo-suv",
+        "sourceValue": 8000,
+        "sourceUnit": "km",
+        "canonicalKm": 8000
+      }
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

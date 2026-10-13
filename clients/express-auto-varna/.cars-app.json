@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "dealer": "express-auto-varna",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/app",
+    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
+    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+  },
+  "appDigest": "67cd6329fa13a311ef95c766edd95ec9a8f87eaca10f91af6d87ddfb41845203",
+  "provenance": {
+    "schemaVersion": 1,
+    "dealer": "express-auto-varna",
+    "profile": "auto-best/src/lib/data/dealer-profile.json",
+    "profileSha256": "0a55f1daf496332359fab9a9e59a89c9747386264bd96437a7494c0074261c1e",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "vehicles": 2,
+    "currency": "EUR",
+    "observedAt": "2026-10-12T12:05:57.077Z, 2026-10-12T12:05:57.078Z",
+    "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-light.png",
+        "output": "public/dealer-app/logo-light-c310125ec1256911dc98.png",
+        "sha256": "c310125ec1256911dc98b235f26fec1fd184e35e357f680510221cec3e925909",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-dark.png",
+        "output": "public/dealer-app/logo-dark-5812ea851c71c8bba60e.png",
+        "sha256": "5812ea851c71c8bba60eacf166a3b05717c5a9dee2ead61aca9cc9a284100c10",
+        "role": "logo-dark"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11791655661973701-1.webp",
+        "output": "public/dealer-app/vehicle-2cbcb392ff5f9dd00b84.webp",
+        "sha256": "2cbcb392ff5f9dd00b84fa8334d299046d053b3a720df70f15b189ee5111df8e",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11791655661973701-2.webp",
+        "output": "public/dealer-app/vehicle-7c8353bd60519dd54b3b.webp",
+        "sha256": "7c8353bd60519dd54b3bb6dc5ed982239c9903dd1af97b8f6280517fee680adb",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11791655386104961-1.webp",
+        "output": "public/dealer-app/vehicle-d34c1281d9bd5ed4c9b1.webp",
+        "sha256": "d34c1281d9bd5ed4c9b19929441b442b1bb257dc25f78bd26ccf1545d7d90d1d",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11791655386104961-2.webp",
+        "output": "public/dealer-app/vehicle-cc6e73f793ad33814172.webp",
+        "sha256": "cc6e73f793ad3381417265e7af7fe4bff83a49c99cc91125e2fa7b346782832e",
+        "role": "vehicle"
+      }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "express-auto-varna-11791655661973701",
+        "sourceValue": 168000,
+        "sourceUnit": "km",
+        "canonicalKm": 168000
+      },
+      {
+        "slug": "express-auto-varna-11791655386104961",
+        "sourceValue": 126000,
+        "sourceUnit": "km",
+        "canonicalKm": 126000
+      }
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

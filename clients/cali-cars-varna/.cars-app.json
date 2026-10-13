@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "dealer": "cali-cars-varna",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/app",
+    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
+    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+  },
+  "appDigest": "4cdbea4a7314133c55b5a57fab0d17d2c80da06ddcb593c30ddc5ef7f7204318",
+  "provenance": {
+    "schemaVersion": 1,
+    "dealer": "cali-cars-varna",
+    "profile": "auto-best/src/lib/data/dealer-profile.json",
+    "profileSha256": "196635c2afd25a3dbf8e44b751b3e3c05793785f5f2ff53123fe9bc54fa96410",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "vehicles": 2,
+    "currency": "EUR",
+    "observedAt": "2026-10-12T11:43:24.373Z, 2026-10-12T11:43:24.375Z",
+    "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-light.png",
+        "output": "public/dealer-app/logo-light-4a4ac8cc28617c03dfd3.png",
+        "sha256": "4a4ac8cc28617c03dfd33479321ec59bcc622641321594e74d084eb9b8055447",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-dark.png",
+        "output": "public/dealer-app/logo-dark-b8da799984f60b0c2bac.png",
+        "sha256": "b8da799984f60b0c2bace01d3e092bc29d2bf5a111da55ef94734d100df28663",
+        "role": "logo-dark"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/21785846592411235-1.webp",
+        "output": "public/dealer-app/vehicle-79e6362dceae1835dae6.webp",
+        "sha256": "79e6362dceae1835dae634436a35cc512ba7355c0acf3939e312edf6e655edf1",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/21785846592411235-2.webp",
+        "output": "public/dealer-app/vehicle-8ff484528bd0f5179baa.webp",
+        "sha256": "8ff484528bd0f5179baa96bab2362d26e56d52d368ffcbca89439fb2d42b2503",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/21753383277707999-1.webp",
+        "output": "public/dealer-app/vehicle-62eeed842964cbf19b3c.webp",
+        "sha256": "62eeed842964cbf19b3c971e2a52abaa88d0b455764919d20d38c296d9ea4144",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/21753383277707999-2.webp",
+        "output": "public/dealer-app/vehicle-82adac3444eea403545a.webp",
+        "sha256": "82adac3444eea403545a02f96a4ab3076170aa4459aba13f77caef8f737cc1d7",
+        "role": "vehicle"
+      }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "cali-cars-varna-21785846592411235",
+        "sourceValue": 180000,
+        "sourceUnit": "km",
+        "canonicalKm": 180000
+      },
+      {
+        "slug": "cali-cars-varna-21753383277707999",
+        "sourceValue": 147000,
+        "sourceUnit": "km",
+        "canonicalKm": 147000
+      }
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

@@ -1,0 +1,375 @@
+{
+  "schemaVersion": 1,
+  "slug": "cali-cars-varna",
+  "business": {
+    "slug": "cali-cars-varna",
+    "name": "Cali Cars",
+    "shortName": "Cali Cars",
+    "latinName": "Cali Cars",
+    "tagline": "Cali Cars · Варна",
+    "city": "Варна",
+    "region": "",
+    "country": "BG",
+    "countryCode": "BG",
+    "locale": "bg-BG",
+    "currency": "EUR",
+    "distanceUnit": "km",
+    "address": "Мест. Боровец Север 2029, Варна, България",
+    "addressLine": "Мест. Боровец Север 2029",
+    "phoneDisplay": "0877064339",
+    "phoneHref": "tel:+359877064339",
+    "phoneE164": "+359877064339",
+    "email": "",
+    "hours": "Потвърдете работното време директно с автокъщата.",
+    "website": "https://calicars.mobile.bg/",
+    "inventoryUrl": "https://calicars.mobile.bg/",
+    "contactUrl": "https://calicars.mobile.bg/contacts",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Cali%20Cars%2C%20%D0%9C%D0%B5%D1%81%D1%82.%20%D0%91%D0%BE%D1%80%D0%BE%D0%B2%D0%B5%D1%86%20%D0%A1%D0%B5%D0%B2%D0%B5%D1%80%202029%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
+    "mapsEmbedUrl": "https://maps.google.com/maps?q=Cali%20Cars%2C%20%D0%9C%D0%B5%D1%81%D1%82.%20%D0%91%D0%BE%D1%80%D0%BE%D0%B2%D0%B5%D1%86%20%D0%A1%D0%B5%D0%B2%D0%B5%D1%80%202029%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F&z=16&output=embed",
+    "accent": "#c40101",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png",
+    "socialLinks": {
+      "facebook": "",
+      "instagram": "",
+      "youtube": "",
+      "tiktok": ""
+    },
+    "services": [],
+    "inventoryNotice": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+    "observedAt": "2026-10-12T10:44:18.001Z",
+    "coordinates": null,
+    "raw": {
+      "schemaVersion": 1,
+      "slug": "cali-cars-varna",
+      "name": "Cali Cars",
+      "shortName": "Cali Cars",
+      "city": "Варна",
+      "country": "BG",
+      "countryCode": "BG",
+      "locale": "bg-BG",
+      "currency": "EUR",
+      "distanceUnit": "km",
+      "phone": "0877064339",
+      "phoneDisplay": "0877064339",
+      "phoneE164": "+359877064339",
+      "phones": [
+        "+359877064339"
+      ],
+      "addressLine": "Мест. Боровец Север 2029",
+      "address": "Мест. Боровец Север 2029, Варна, България",
+      "hours": "Потвърдете работното време директно с автокъщата.",
+      "email": "",
+      "sourceUrl": "https://calicars.mobile.bg/",
+      "stockUrl": "https://calicars.mobile.bg/",
+      "contactSourceUrl": "https://calicars.mobile.bg/contacts",
+      "observedAt": "2026-10-12T10:44:18.001Z",
+      "inventoryNotice": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+      "services": [],
+      "socialLinks": {},
+      "logo": "/dealer-brand/logo-on-light.png",
+      "logoLight": "/dealer-brand/logo-on-light.png",
+      "logoDark": "/dealer-brand/logo-on-dark.png",
+      "modernInventoryCopy": {
+        "cali-cars-varna-21785846592411235": {
+          "sourceDescription": "BMW X4 M40i xDrive от датирана публична обява. Потвърдете цената и наличността директно с автокъщата.",
+          "en": {
+            "description": "BMW X4 M40i xDrive from a dated public advert. Confirm price and availability directly with the dealership.",
+            "imageAlts": [
+              "BMW X4 M40i xDrive — dated public advert photo 1",
+              "BMW X4 M40i xDrive — dated public advert photo 2"
+            ]
+          },
+          "bg": {
+            "description": "BMW X4 M40i xDrive от датирана публична обява. Потвърдете цената и наличността директно с автокъщата.",
+            "imageAlts": [
+              "BMW X4 M40i xDrive — снимка от датирана публична обява 1",
+              "BMW X4 M40i xDrive — снимка от датирана публична обява 2"
+            ]
+          }
+        },
+        "cali-cars-varna-21753383277707999": {
+          "sourceDescription": "Mercedes-Benz GLC 300 4Matic от датирана публична обява. Потвърдете цената и наличността директно с автокъщата.",
+          "en": {
+            "description": "Mercedes-Benz GLC 300 4Matic from a dated public advert. Confirm price and availability directly with the dealership.",
+            "imageAlts": [
+              "Mercedes-Benz GLC 300 4Matic — dated public advert photo 1",
+              "Mercedes-Benz GLC 300 4Matic — dated public advert photo 2"
+            ]
+          },
+          "bg": {
+            "description": "Mercedes-Benz GLC 300 4Matic от датирана публична обява. Потвърдете цената и наличността директно с автокъщата.",
+            "imageAlts": [
+              "Mercedes-Benz GLC 300 4Matic — снимка от датирана публична обява 1",
+              "Mercedes-Benz GLC 300 4Matic — снимка от датирана публична обява 2"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "listings": [
+    {
+      "id": "21785846592411235",
+      "sourceId": "21785846592411235",
+      "slug": "cali-cars-varna-21785846592411235",
+      "title": "BMW X4 M40i xDrive",
+      "make": "BMW",
+      "model": "X4",
+      "trim": "",
+      "year": 2017,
+      "priceAmount": 19500,
+      "currency": "EUR",
+      "mileageValue": 180000,
+      "mileageUnit": "km",
+      "mileageOnRequest": false,
+      "body": "SUV",
+      "bodyType": "suv",
+      "fuel": "Petrol",
+      "fuelType": "gasoline",
+      "transmission": "Automatic",
+      "transmissionType": "automatic",
+      "color": "",
+      "powerHp": null,
+      "engine": "",
+      "drivetrain": "",
+      "features": [],
+      "images": [
+        "/dealer-stock/21785846592411235-1.webp",
+        "/dealer-stock/21785846592411235-2.webp"
+      ],
+      "image": "/dealer-stock/21785846592411235-1.webp",
+      "sourceUrl": "https://calicars.mobile.bg/obiava-21785846592411235-bmw-x4-x4-m40i-xdrive",
+      "observedAt": "2026-10-12T11:43:24.373Z",
+      "availability": "Датирана обява; потвърдете цената и наличността директно с автокъщата.",
+      "description": "BMW X4 M40i xDrive от датирана публична обява. Потвърдете цената и наличността директно с автокъщата.",
+      "condition": "used",
+      "location": "Варна",
+      "raw": {
+        "title": "BMW X4 M40i xDrive",
+        "make": "BMW",
+        "model": "X4",
+        "year": 2017,
+        "priceAmount": 19500,
+        "mileageValue": 180000,
+        "body": "SUV",
+        "fuel": "Petrol",
+        "transmission": "Automatic",
+        "description": "BMW X4 M40i xDrive от датирана публична обява. Потвърдете цената и наличността директно с автокъщата.",
+        "id": "21785846592411235",
+        "slug": "cali-cars-varna-21785846592411235",
+        "currency": "EUR",
+        "priceOnRequest": false,
+        "mileageOnRequest": false,
+        "mileageUnit": "km",
+        "condition": "used",
+        "images": [
+          "/dealer-stock/21785846592411235-1.webp",
+          "/dealer-stock/21785846592411235-2.webp"
+        ],
+        "sourceUrl": "https://calicars.mobile.bg/obiava-21785846592411235-bmw-x4-x4-m40i-xdrive",
+        "observedAt": "2026-10-12T11:43:24.373Z",
+        "availability": "Датирана обява; потвърдете цената и наличността директно с автокъщата.",
+        "sourceProof": {
+          "sha256": "689f97253513bf7402463a7590f69ba5bd4f70be36149231d4ad453397628737",
+          "originalPhotoBytesUnchanged": true,
+          "watermarksPreserved": true
+        }
+      }
+    },
+    {
+      "id": "21753383277707999",
+      "sourceId": "21753383277707999",
+      "slug": "cali-cars-varna-21753383277707999",
+      "title": "Mercedes-Benz GLC 300 4Matic",
+      "make": "Mercedes-Benz",
+      "model": "GLC",
+      "trim": "",
+      "year": 2019,
+      "priceAmount": 22000,
+      "currency": "EUR",
+      "mileageValue": 147000,
+      "mileageUnit": "km",
+      "mileageOnRequest": false,
+      "body": "SUV",
+      "bodyType": "suv",
+      "fuel": "Petrol",
+      "fuelType": "gasoline",
+      "transmission": "Automatic",
+      "transmissionType": "automatic",
+      "color": "Blue",
+      "powerHp": null,
+      "engine": "",
+      "drivetrain": "",
+      "features": [],
+      "images": [
+        "/dealer-stock/21753383277707999-1.webp",
+        "/dealer-stock/21753383277707999-2.webp"
+      ],
+      "image": "/dealer-stock/21753383277707999-1.webp",
+      "sourceUrl": "https://calicars.mobile.bg/obiava-21753383277707999-mercedes-benz-glc-300-4matic-360cam-9g-tronic",
+      "observedAt": "2026-10-12T11:43:24.375Z",
+      "availability": "Датирана обява; потвърдете цената и наличността директно с автокъщата.",
+      "description": "Mercedes-Benz GLC 300 4Matic от датирана публична обява. Потвърдете цената и наличността директно с автокъщата.",
+      "condition": "used",
+      "location": "Варна",
+      "raw": {
+        "title": "Mercedes-Benz GLC 300 4Matic",
+        "make": "Mercedes-Benz",
+        "model": "GLC",
+        "year": 2019,
+        "priceAmount": 22000,
+        "mileageValue": 147000,
+        "body": "SUV",
+        "fuel": "Petrol",
+        "transmission": "Automatic",
+        "color": "Blue",
+        "description": "Mercedes-Benz GLC 300 4Matic от датирана публична обява. Потвърдете цената и наличността директно с автокъщата.",
+        "id": "21753383277707999",
+        "slug": "cali-cars-varna-21753383277707999",
+        "currency": "EUR",
+        "priceOnRequest": false,
+        "mileageOnRequest": false,
+        "mileageUnit": "km",
+        "condition": "used",
+        "images": [
+          "/dealer-stock/21753383277707999-1.webp",
+          "/dealer-stock/21753383277707999-2.webp"
+        ],
+        "sourceUrl": "https://calicars.mobile.bg/obiava-21753383277707999-mercedes-benz-glc-300-4matic-360cam-9g-tronic",
+        "observedAt": "2026-10-12T11:43:24.375Z",
+        "availability": "Датирана обява; потвърдете цената и наличността директно с автокъщата.",
+        "sourceProof": {
+          "sha256": "692cf52880277976b3da63e1d6b5de796fe44d4a41e3c3988d50c0adec651f9b",
+          "originalPhotoBytesUnchanged": true,
+          "watermarksPreserved": true
+        }
+      }
+    }
+  ],
+  "rawFacts": {
+    "schemaVersion": 1,
+    "slug": "cali-cars-varna",
+    "dealerId": "cali-cars-varna",
+    "business": {
+      "schemaVersion": 1,
+      "slug": "cali-cars-varna",
+      "name": "Cali Cars",
+      "shortName": "Cali Cars",
+      "city": "Варна",
+      "country": "BG",
+      "countryCode": "BG",
+      "locale": "bg-BG",
+      "currency": "EUR",
+      "distanceUnit": "km",
+      "phone": "0877064339",
+      "phoneDisplay": "0877064339",
+      "phoneE164": "+359877064339",
+      "phones": [
+        "+359877064339"
+      ],
+      "addressLine": "Мест. Боровец Север 2029",
+      "address": "Мест. Боровец Север 2029, Варна, България",
+      "hours": "Потвърдете работното време директно с автокъщата.",
+      "email": "",
+      "sourceUrl": "https://calicars.mobile.bg/",
+      "stockUrl": "https://calicars.mobile.bg/",
+      "contactSourceUrl": "https://calicars.mobile.bg/contacts",
+      "observedAt": "2026-10-12T10:44:18.001Z",
+      "inventoryNotice": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+      "services": [],
+      "socialLinks": {},
+      "logo": "/dealer-brand/logo-on-light.png",
+      "logoLight": "/dealer-brand/logo-on-light.png",
+      "logoDark": "/dealer-brand/logo-on-dark.png",
+      "modernInventoryCopy": {
+        "cali-cars-varna-21785846592411235": {
+          "sourceDescription": "BMW X4 M40i xDrive от датирана публична обява. Потвърдете цената и наличността директно с автокъщата.",
+          "en": {
+            "description": "BMW X4 M40i xDrive from a dated public advert. Confirm price and availability directly with the dealership.",
+            "imageAlts": [
+              "BMW X4 M40i xDrive — dated public advert photo 1",
+              "BMW X4 M40i xDrive — dated public advert photo 2"
+            ]
+          },
+          "bg": {
+            "description": "BMW X4 M40i xDrive от датирана публична обява. Потвърдете цената и наличността директно с автокъщата.",
+            "imageAlts": [
+              "BMW X4 M40i xDrive — снимка от датирана публична обява 1",
+              "BMW X4 M40i xDrive — снимка от датирана публична обява 2"
+            ]
+          }
+        },
+        "cali-cars-varna-21753383277707999": {
+          "sourceDescription": "Mercedes-Benz GLC 300 4Matic от датирана публична обява. Потвърдете цената и наличността директно с автокъщата.",
+          "en": {
+            "description": "Mercedes-Benz GLC 300 4Matic from a dated public advert. Confirm price and availability directly with the dealership.",
+            "imageAlts": [
+              "Mercedes-Benz GLC 300 4Matic — dated public advert photo 1",
+              "Mercedes-Benz GLC 300 4Matic — dated public advert photo 2"
+            ]
+          },
+          "bg": {
+            "description": "Mercedes-Benz GLC 300 4Matic от датирана публична обява. Потвърдете цената и наличността директно с автокъщата.",
+            "imageAlts": [
+              "Mercedes-Benz GLC 300 4Matic — снимка от датирана публична обява 1",
+              "Mercedes-Benz GLC 300 4Matic — снимка от датирана публична обява 2"
+            ]
+          }
+        }
+      }
+    },
+    "research": {
+      "website": {
+        "status": "none-confirmed-in-bounded-check",
+        "url": null,
+        "notWebsiteGapProof": true
+      },
+      "publicIdentityKey": "mobile-profile:calicars.mobile.bg",
+      "profileAdvertCount": 2,
+      "availabilityConfirmed": false,
+      "legalEntityOwnershipVerified": false,
+      "addressExactness": "public-contact-as-published",
+      "caveats": [],
+      "sourceProof": [
+        {
+          "url": "https://calicars.mobile.bg/",
+          "finalUrl": "https://calicars.mobile.bg/",
+          "observedAt": "2026-10-12T10:44:18.019Z",
+          "status": 200,
+          "bytes": 42845,
+          "sha256": "d68b8bc46fe0afbc2ee83a79557742e43b285df20cd2a8627bcdb7b87ad26b9f"
+        },
+        {
+          "url": "https://calicars.mobile.bg/contacts",
+          "finalUrl": "https://calicars.mobile.bg/contacts",
+          "observedAt": "2026-10-12T10:44:18.001Z",
+          "status": 200,
+          "bytes": 41851,
+          "sha256": "d9698a7d0ac9607d1fcad4e543604ac44a1a0cc1e2fd2c63a2f804cbe7a8f9a9"
+        },
+        {
+          "url": "https://calicars.mobile.bg/about",
+          "finalUrl": "https://calicars.mobile.bg/about",
+          "observedAt": "2026-10-12T10:44:17.994Z",
+          "status": 200,
+          "bytes": 6075,
+          "sha256": "a85012135140519cd8a700d378cf9eaa546d07ff53f90b1e44d1d56868bad6da"
+        }
+      ],
+      "sourceAction": "new-absent-cars-source-after-wrapper-identity-recheck",
+      "existingSourceTree": null,
+      "inventoryModeSelection": "dated-listing-snapshot",
+      "productionAssetInputsComplete": true,
+      "stockSnapshotScope": "Two retained public adverts, not a complete/live inventory",
+      "stockMediaAuthority": "Owner-authorized public dated demo scope; original source bytes and watermarks retained"
+    }
+  },
+  "sourceCount": 2,
+  "stockKind": "dated-listing-snapshot",
+  "logoContract": null
+}

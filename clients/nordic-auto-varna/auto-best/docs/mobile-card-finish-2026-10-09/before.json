@@ -1,0 +1,3554 @@
+{
+  "phase": "before",
+  "base": "http://127.0.0.1:6461",
+  "results": [
+    {
+      "id": "bg-320-1-home",
+      "passed": true,
+      "geometry": {
+        "cards": [
+          {
+            "radius": "12px",
+            "price": "68 804 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "55 403 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "57 480 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "54 223 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          }
+        ],
+        "service": {
+          "title": "Всички услуги",
+          "detail": "За вашата кола",
+          "action": "Виж услугите",
+          "labelFits": true,
+          "oneLine": "nowrap",
+          "href": "/bg/about-us#process",
+          "radius": "12px"
+        },
+        "overflow": false
+      },
+      "desktopPreserved": false
+    },
+    {
+      "id": "bg-320-1-cars",
+      "passed": true,
+      "geometry": {
+        "cards": [
+          {
+            "radius": "12px",
+            "price": "68 804 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "55 403 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "57 480 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "54 223 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "61 069 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "85 635 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "51 365 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          }
+        ],
+        "service": null,
+        "overflow": false
+      },
+      "desktopPreserved": false
+    },
+    {
+      "id": "bg-320-2-home",
+      "passed": true,
+      "geometry": {
+        "cards": [
+          {
+            "radius": "12px",
+            "price": "68 804 €",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "55 403 €",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "57 480 €",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "54 223 €",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          }
+        ],
+        "service": {
+          "title": "Всички услуги",
+          "detail": "За вашата кола",
+          "action": "Виж услугите",
+          "labelFits": true,
+          "oneLine": "nowrap",
+          "href": "/bg/about-us#process",
+          "radius": "12px"
+        },
+        "overflow": false
+      },
+      "desktopPreserved": false
+    },
+    {
+      "id": "bg-320-2-cars",
+      "passed": true,
+      "geometry": {
+        "cards": [
+          {
+            "radius": "12px",
+            "price": "68 804 €",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "55 403 €",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "57 480 €",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "54 223 €",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "61 069 €",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "85 635 €",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "51 365 €",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          }
+        ],
+        "service": null,
+        "overflow": false
+      },
+      "desktopPreserved": false
+    },
+    {
+      "id": "bg-360-1-home",
+      "passed": true,
+      "geometry": {
+        "cards": [
+          {
+            "radius": "12px",
+            "price": "68 804 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "55 403 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "57 480 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "54 223 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          }
+        ],
+        "service": {
+          "title": "Всички услуги",
+          "detail": "За вашата кола",
+          "action": "Виж услугите",
+          "labelFits": true,
+          "oneLine": "nowrap",
+          "href": "/bg/about-us#process",
+          "radius": "12px"
+        },
+        "overflow": false
+      },
+      "desktopPreserved": false
+    },
+    {
+      "id": "bg-360-1-cars",
+      "passed": true,
+      "geometry": {
+        "cards": [
+          {
+            "radius": "12px",
+            "price": "68 804 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "55 403 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "57 480 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "54 223 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "61 069 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "85 635 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "51 365 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          }
+        ],
+        "service": null,
+        "overflow": false
+      },
+      "desktopPreserved": false
+    },
+    {
+      "id": "bg-360-2-home",
+      "passed": true,
+      "geometry": {
+        "cards": [
+          {
+            "radius": "12px",
+            "price": "68 804 €",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "55 403 €",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "57 480 €",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "54 223 €",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          }
+        ],
+        "service": {
+          "title": "Всички услуги",
+          "detail": "За вашата кола",
+          "action": "Виж услугите",
+          "labelFits": true,
+          "oneLine": "nowrap",
+          "href": "/bg/about-us#process",
+          "radius": "12px"
+        },
+        "overflow": false
+      },
+      "desktopPreserved": false
+    },
+    {
+      "id": "bg-360-2-cars",
+      "passed": true,
+      "geometry": {
+        "cards": [
+          {
+            "radius": "12px",
+            "price": "68 804 €",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "55 403 €",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "57 480 €",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "54 223 €",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "61 069 €",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "85 635 €",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "51 365 €",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          }
+        ],
+        "service": null,
+        "overflow": false
+      },
+      "desktopPreserved": false
+    },
+    {
+      "id": "bg-390-1-home",
+      "passed": true,
+      "geometry": {
+        "cards": [
+          {
+            "radius": "12px",
+            "price": "68 804 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "55 403 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "57 480 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "54 223 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          }
+        ],
+        "service": {
+          "title": "Всички услуги",
+          "detail": "За вашата кола",
+          "action": "Виж услугите",
+          "labelFits": true,
+          "oneLine": "nowrap",
+          "href": "/bg/about-us#process",
+          "radius": "12px"
+        },
+        "overflow": false
+      },
+      "desktopPreserved": false
+    },
+    {
+      "id": "bg-390-1-cars",
+      "passed": true,
+      "geometry": {
+        "cards": [
+          {
+            "radius": "12px",
+            "price": "68 804 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "55 403 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "57 480 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "54 223 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "61 069 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "85 635 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "51 365 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          }
+        ],
+        "service": null,
+        "overflow": false
+      },
+      "desktopPreserved": false
+    },
+    {
+      "id": "bg-390-2-home",
+      "passed": true,
+      "geometry": {
+        "cards": [
+          {
+            "radius": "12px",
+            "price": "68 804 €",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "55 403 €",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "57 480 €",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "54 223 €",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          }
+        ],
+        "service": {
+          "title": "Всички услуги",
+          "detail": "За вашата кола",
+          "action": "Виж услугите",
+          "labelFits": true,
+          "oneLine": "nowrap",
+          "href": "/bg/about-us#process",
+          "radius": "12px"
+        },
+        "overflow": false
+      },
+      "desktopPreserved": false
+    },
+    {
+      "id": "bg-390-2-cars",
+      "passed": true,
+      "geometry": {
+        "cards": [
+          {
+            "radius": "12px",
+            "price": "68 804 €",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "55 403 €",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "57 480 €",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "54 223 €",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "61 069 €",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "85 635 €",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "51 365 €",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          }
+        ],
+        "service": null,
+        "overflow": false
+      },
+      "desktopPreserved": false
+    },
+    {
+      "id": "bg-430-1-home",
+      "passed": true,
+      "geometry": {
+        "cards": [
+          {
+            "radius": "12px",
+            "price": "68 804 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "55 403 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "57 480 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "54 223 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          }
+        ],
+        "service": {
+          "title": "Всички услуги",
+          "detail": "За вашата кола",
+          "action": "Виж услугите",
+          "labelFits": true,
+          "oneLine": "nowrap",
+          "href": "/bg/about-us#process",
+          "radius": "12px"
+        },
+        "overflow": false
+      },
+      "desktopPreserved": false
+    },
+    {
+      "id": "bg-430-1-cars",
+      "passed": true,
+      "geometry": {
+        "cards": [
+          {
+            "radius": "12px",
+            "price": "68 804 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "55 403 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "57 480 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "54 223 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "61 069 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "85 635 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "51 365 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          }
+        ],
+        "service": null,
+        "overflow": false
+      },
+      "desktopPreserved": false
+    },
+    {
+      "id": "bg-430-2-home",
+      "passed": true,
+      "geometry": {
+        "cards": [
+          {
+            "radius": "12px",
+            "price": "68 804 €",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "55 403 €",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "57 480 €",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "54 223 €",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          }
+        ],
+        "service": {
+          "title": "Всички услуги",
+          "detail": "За вашата кола",
+          "action": "Виж услугите",
+          "labelFits": true,
+          "oneLine": "nowrap",
+          "href": "/bg/about-us#process",
+          "radius": "12px"
+        },
+        "overflow": false
+      },
+      "desktopPreserved": false
+    },
+    {
+      "id": "bg-430-2-cars",
+      "passed": true,
+      "geometry": {
+        "cards": [
+          {
+            "radius": "12px",
+            "price": "68 804 €",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "55 403 €",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "57 480 €",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "54 223 €",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "61 069 €",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "85 635 €",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "51 365 €",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          }
+        ],
+        "service": null,
+        "overflow": false
+      },
+      "desktopPreserved": false
+    },
+    {
+      "id": "bg-767-1-home",
+      "passed": true,
+      "geometry": {
+        "cards": [
+          {
+            "radius": "12px",
+            "price": "68 804 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "55 403 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "57 480 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "54 223 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          }
+        ],
+        "service": {
+          "title": "Всички услуги",
+          "detail": "За вашата кола",
+          "action": "Виж услугите",
+          "labelFits": true,
+          "oneLine": "nowrap",
+          "href": "/bg/about-us#process",
+          "radius": "12px"
+        },
+        "overflow": false
+      },
+      "desktopPreserved": false
+    },
+    {
+      "id": "bg-767-1-cars",
+      "passed": true,
+      "geometry": {
+        "cards": [
+          {
+            "radius": "12px",
+            "price": "68 804 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "55 403 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "57 480 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "54 223 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "61 069 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "85 635 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "51 365 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          }
+        ],
+        "service": null,
+        "overflow": false
+      },
+      "desktopPreserved": false
+    },
+    {
+      "id": "bg-767-2-home",
+      "passed": true,
+      "geometry": {
+        "cards": [
+          {
+            "radius": "12px",
+            "price": "68 804 €",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "55 403 €",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "57 480 €",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "54 223 €",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          }
+        ],
+        "service": {
+          "title": "Всички услуги",
+          "detail": "За вашата кола",
+          "action": "Виж услугите",
+          "labelFits": true,
+          "oneLine": "nowrap",
+          "href": "/bg/about-us#process",
+          "radius": "12px"
+        },
+        "overflow": false
+      },
+      "desktopPreserved": false
+    },
+    {
+      "id": "bg-767-2-cars",
+      "passed": true,
+      "geometry": {
+        "cards": [
+          {
+            "radius": "12px",
+            "price": "68 804 €",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "55 403 €",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "57 480 €",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "54 223 €",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "61 069 €",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "85 635 €",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "51 365 €",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          }
+        ],
+        "service": null,
+        "overflow": false
+      },
+      "desktopPreserved": false
+    },
+    {
+      "id": "bg-768-1-home",
+      "passed": true,
+      "geometry": {
+        "cards": [
+          {
+            "radius": "16px",
+            "price": "68 804 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "16px",
+            "price": "55 403 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "16px",
+            "price": "57 480 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "16px",
+            "price": "54 223 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          }
+        ],
+        "service": null,
+        "overflow": false
+      },
+      "desktopPreserved": false
+    },
+    {
+      "id": "bg-768-1-cars",
+      "passed": true,
+      "geometry": {
+        "cards": [
+          {
+            "radius": "16px",
+            "price": "68 804 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "16px",
+            "price": "55 403 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "16px",
+            "price": "57 480 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "16px",
+            "price": "54 223 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "16px",
+            "price": "61 069 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "16px",
+            "price": "85 635 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "16px",
+            "price": "51 365 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          }
+        ],
+        "service": null,
+        "overflow": false
+      },
+      "desktopPreserved": false
+    },
+    {
+      "id": "bg-992-1-home",
+      "passed": true,
+      "geometry": {
+        "cards": [
+          {
+            "radius": "16px",
+            "price": "68 804 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "16px",
+            "price": "55 403 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "16px",
+            "price": "57 480 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "16px",
+            "price": "54 223 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          }
+        ],
+        "service": null,
+        "overflow": false
+      },
+      "desktopPreserved": false
+    },
+    {
+      "id": "bg-992-1-cars",
+      "passed": true,
+      "geometry": {
+        "cards": [
+          {
+            "radius": "20px",
+            "price": "68 804 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "20px",
+            "price": "55 403 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "20px",
+            "price": "57 480 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "20px",
+            "price": "54 223 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "20px",
+            "price": "61 069 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "20px",
+            "price": "85 635 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "20px",
+            "price": "51 365 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          }
+        ],
+        "service": null,
+        "overflow": false
+      },
+      "desktopPreserved": false
+    },
+    {
+      "id": "bg-1440-1-home",
+      "passed": true,
+      "geometry": {
+        "cards": [
+          {
+            "radius": "16px",
+            "price": "68 804 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "16px",
+            "price": "55 403 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "16px",
+            "price": "57 480 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "16px",
+            "price": "54 223 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          }
+        ],
+        "service": null,
+        "overflow": false
+      },
+      "desktopPreserved": false
+    },
+    {
+      "id": "bg-1440-1-cars",
+      "passed": true,
+      "geometry": {
+        "cards": [
+          {
+            "radius": "20px",
+            "price": "68 804 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "20px",
+            "price": "55 403 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "20px",
+            "price": "57 480 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "20px",
+            "price": "54 223 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "20px",
+            "price": "61 069 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "20px",
+            "price": "85 635 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "20px",
+            "price": "51 365 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          }
+        ],
+        "service": null,
+        "overflow": false
+      },
+      "desktopPreserved": false
+    },
+    {
+      "id": "bg-1920-1-home",
+      "passed": true,
+      "geometry": {
+        "cards": [
+          {
+            "radius": "16px",
+            "price": "68 804 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "16px",
+            "price": "55 403 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "16px",
+            "price": "57 480 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "16px",
+            "price": "54 223 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          }
+        ],
+        "service": null,
+        "overflow": false
+      },
+      "desktopPreserved": false
+    },
+    {
+      "id": "bg-1920-1-cars",
+      "passed": true,
+      "geometry": {
+        "cards": [
+          {
+            "radius": "20px",
+            "price": "68 804 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "20px",
+            "price": "55 403 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "20px",
+            "price": "57 480 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "20px",
+            "price": "54 223 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "20px",
+            "price": "61 069 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "20px",
+            "price": "85 635 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "20px",
+            "price": "51 365 €",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          }
+        ],
+        "service": null,
+        "overflow": false
+      },
+      "desktopPreserved": false
+    },
+    {
+      "id": "en-320-1-home",
+      "passed": true,
+      "geometry": {
+        "cards": [
+          {
+            "radius": "12px",
+            "price": "€68,804",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€55,403",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€57,480",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€54,223",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          }
+        ],
+        "service": {
+          "title": "All services",
+          "detail": "For your car",
+          "action": "See services",
+          "labelFits": true,
+          "oneLine": "nowrap",
+          "href": "/en/about-us#process",
+          "radius": "12px"
+        },
+        "overflow": false
+      },
+      "desktopPreserved": false
+    },
+    {
+      "id": "en-320-1-cars",
+      "passed": true,
+      "geometry": {
+        "cards": [
+          {
+            "radius": "12px",
+            "price": "€68,804",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€55,403",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€57,480",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€54,223",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€61,069",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€85,635",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€51,365",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          }
+        ],
+        "service": null,
+        "overflow": false
+      },
+      "desktopPreserved": false
+    },
+    {
+      "id": "en-320-2-home",
+      "passed": true,
+      "geometry": {
+        "cards": [
+          {
+            "radius": "12px",
+            "price": "€68,804",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€55,403",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€57,480",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€54,223",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          }
+        ],
+        "service": {
+          "title": "All services",
+          "detail": "For your car",
+          "action": "See services",
+          "labelFits": true,
+          "oneLine": "nowrap",
+          "href": "/en/about-us#process",
+          "radius": "12px"
+        },
+        "overflow": false
+      },
+      "desktopPreserved": false
+    },
+    {
+      "id": "en-320-2-cars",
+      "passed": true,
+      "geometry": {
+        "cards": [
+          {
+            "radius": "12px",
+            "price": "€68,804",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€55,403",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€57,480",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€54,223",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€61,069",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€85,635",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€51,365",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          }
+        ],
+        "service": null,
+        "overflow": false
+      },
+      "desktopPreserved": false
+    },
+    {
+      "id": "en-360-1-home",
+      "passed": true,
+      "geometry": {
+        "cards": [
+          {
+            "radius": "12px",
+            "price": "€68,804",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€55,403",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€57,480",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€54,223",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          }
+        ],
+        "service": {
+          "title": "All services",
+          "detail": "For your car",
+          "action": "See services",
+          "labelFits": true,
+          "oneLine": "nowrap",
+          "href": "/en/about-us#process",
+          "radius": "12px"
+        },
+        "overflow": false
+      },
+      "desktopPreserved": false
+    },
+    {
+      "id": "en-360-1-cars",
+      "passed": true,
+      "geometry": {
+        "cards": [
+          {
+            "radius": "12px",
+            "price": "€68,804",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€55,403",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€57,480",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€54,223",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€61,069",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€85,635",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€51,365",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          }
+        ],
+        "service": null,
+        "overflow": false
+      },
+      "desktopPreserved": false
+    },
+    {
+      "id": "en-360-2-home",
+      "passed": true,
+      "geometry": {
+        "cards": [
+          {
+            "radius": "12px",
+            "price": "€68,804",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€55,403",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€57,480",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€54,223",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          }
+        ],
+        "service": {
+          "title": "All services",
+          "detail": "For your car",
+          "action": "See services",
+          "labelFits": true,
+          "oneLine": "nowrap",
+          "href": "/en/about-us#process",
+          "radius": "12px"
+        },
+        "overflow": false
+      },
+      "desktopPreserved": false
+    },
+    {
+      "id": "en-360-2-cars",
+      "passed": true,
+      "geometry": {
+        "cards": [
+          {
+            "radius": "12px",
+            "price": "€68,804",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€55,403",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€57,480",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€54,223",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€61,069",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€85,635",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€51,365",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          }
+        ],
+        "service": null,
+        "overflow": false
+      },
+      "desktopPreserved": false
+    },
+    {
+      "id": "en-390-1-home",
+      "passed": true,
+      "geometry": {
+        "cards": [
+          {
+            "radius": "12px",
+            "price": "€68,804",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€55,403",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€57,480",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€54,223",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          }
+        ],
+        "service": {
+          "title": "All services",
+          "detail": "For your car",
+          "action": "See services",
+          "labelFits": true,
+          "oneLine": "nowrap",
+          "href": "/en/about-us#process",
+          "radius": "12px"
+        },
+        "overflow": false
+      },
+      "desktopPreserved": false
+    },
+    {
+      "id": "en-390-1-cars",
+      "passed": true,
+      "geometry": {
+        "cards": [
+          {
+            "radius": "12px",
+            "price": "€68,804",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€55,403",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€57,480",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€54,223",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€61,069",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€85,635",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€51,365",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          }
+        ],
+        "service": null,
+        "overflow": false
+      },
+      "desktopPreserved": false
+    },
+    {
+      "id": "en-390-2-home",
+      "passed": true,
+      "geometry": {
+        "cards": [
+          {
+            "radius": "12px",
+            "price": "€68,804",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€55,403",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€57,480",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€54,223",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          }
+        ],
+        "service": {
+          "title": "All services",
+          "detail": "For your car",
+          "action": "See services",
+          "labelFits": true,
+          "oneLine": "nowrap",
+          "href": "/en/about-us#process",
+          "radius": "12px"
+        },
+        "overflow": false
+      },
+      "desktopPreserved": false
+    },
+    {
+      "id": "en-390-2-cars",
+      "passed": true,
+      "geometry": {
+        "cards": [
+          {
+            "radius": "12px",
+            "price": "€68,804",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€55,403",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€57,480",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€54,223",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€61,069",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€85,635",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€51,365",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          }
+        ],
+        "service": null,
+        "overflow": false
+      },
+      "desktopPreserved": false
+    },
+    {
+      "id": "en-430-1-home",
+      "passed": true,
+      "geometry": {
+        "cards": [
+          {
+            "radius": "12px",
+            "price": "€68,804",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€55,403",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€57,480",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€54,223",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          }
+        ],
+        "service": {
+          "title": "All services",
+          "detail": "For your car",
+          "action": "See services",
+          "labelFits": true,
+          "oneLine": "nowrap",
+          "href": "/en/about-us#process",
+          "radius": "12px"
+        },
+        "overflow": false
+      },
+      "desktopPreserved": false
+    },
+    {
+      "id": "en-430-1-cars",
+      "passed": true,
+      "geometry": {
+        "cards": [
+          {
+            "radius": "12px",
+            "price": "€68,804",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€55,403",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€57,480",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€54,223",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€61,069",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€85,635",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€51,365",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          }
+        ],
+        "service": null,
+        "overflow": false
+      },
+      "desktopPreserved": false
+    },
+    {
+      "id": "en-430-2-home",
+      "passed": true,
+      "geometry": {
+        "cards": [
+          {
+            "radius": "12px",
+            "price": "€68,804",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€55,403",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€57,480",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€54,223",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          }
+        ],
+        "service": {
+          "title": "All services",
+          "detail": "For your car",
+          "action": "See services",
+          "labelFits": true,
+          "oneLine": "nowrap",
+          "href": "/en/about-us#process",
+          "radius": "12px"
+        },
+        "overflow": false
+      },
+      "desktopPreserved": false
+    },
+    {
+      "id": "en-430-2-cars",
+      "passed": true,
+      "geometry": {
+        "cards": [
+          {
+            "radius": "12px",
+            "price": "€68,804",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€55,403",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€57,480",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€54,223",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€61,069",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€85,635",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€51,365",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          }
+        ],
+        "service": null,
+        "overflow": false
+      },
+      "desktopPreserved": false
+    },
+    {
+      "id": "en-767-1-home",
+      "passed": true,
+      "geometry": {
+        "cards": [
+          {
+            "radius": "12px",
+            "price": "€68,804",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€55,403",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€57,480",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€54,223",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          }
+        ],
+        "service": {
+          "title": "All services",
+          "detail": "For your car",
+          "action": "See services",
+          "labelFits": true,
+          "oneLine": "nowrap",
+          "href": "/en/about-us#process",
+          "radius": "12px"
+        },
+        "overflow": false
+      },
+      "desktopPreserved": false
+    },
+    {
+      "id": "en-767-1-cars",
+      "passed": true,
+      "geometry": {
+        "cards": [
+          {
+            "radius": "12px",
+            "price": "€68,804",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€55,403",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€57,480",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€54,223",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€61,069",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€85,635",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€51,365",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "16px",
+            "overflow": false,
+            "priceFits": true
+          }
+        ],
+        "service": null,
+        "overflow": false
+      },
+      "desktopPreserved": false
+    },
+    {
+      "id": "en-767-2-home",
+      "passed": true,
+      "geometry": {
+        "cards": [
+          {
+            "radius": "12px",
+            "price": "€68,804",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€55,403",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€57,480",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€54,223",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          }
+        ],
+        "service": {
+          "title": "All services",
+          "detail": "For your car",
+          "action": "See services",
+          "labelFits": true,
+          "oneLine": "nowrap",
+          "href": "/en/about-us#process",
+          "radius": "12px"
+        },
+        "overflow": false
+      },
+      "desktopPreserved": false
+    },
+    {
+      "id": "en-767-2-cars",
+      "passed": true,
+      "geometry": {
+        "cards": [
+          {
+            "radius": "12px",
+            "price": "€68,804",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€55,403",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€57,480",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€54,223",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€61,069",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€85,635",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "12px",
+            "price": "€51,365",
+            "priceSize": "48px",
+            "priceWeight": "600",
+            "titleSize": "32px",
+            "overflow": false,
+            "priceFits": true
+          }
+        ],
+        "service": null,
+        "overflow": false
+      },
+      "desktopPreserved": false
+    },
+    {
+      "id": "en-768-1-home",
+      "passed": true,
+      "geometry": {
+        "cards": [
+          {
+            "radius": "16px",
+            "price": "€68,804",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "16px",
+            "price": "€55,403",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "16px",
+            "price": "€57,480",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "16px",
+            "price": "€54,223",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          }
+        ],
+        "service": null,
+        "overflow": false
+      },
+      "desktopPreserved": false
+    },
+    {
+      "id": "en-768-1-cars",
+      "passed": true,
+      "geometry": {
+        "cards": [
+          {
+            "radius": "16px",
+            "price": "€68,804",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "16px",
+            "price": "€55,403",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "16px",
+            "price": "€57,480",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "16px",
+            "price": "€54,223",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "16px",
+            "price": "€61,069",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "16px",
+            "price": "€85,635",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "16px",
+            "price": "€51,365",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          }
+        ],
+        "service": null,
+        "overflow": false
+      },
+      "desktopPreserved": false
+    },
+    {
+      "id": "en-992-1-home",
+      "passed": true,
+      "geometry": {
+        "cards": [
+          {
+            "radius": "16px",
+            "price": "€68,804",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "16px",
+            "price": "€55,403",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "16px",
+            "price": "€57,480",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "16px",
+            "price": "€54,223",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          }
+        ],
+        "service": null,
+        "overflow": false
+      },
+      "desktopPreserved": false
+    },
+    {
+      "id": "en-992-1-cars",
+      "passed": true,
+      "geometry": {
+        "cards": [
+          {
+            "radius": "20px",
+            "price": "€68,804",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "20px",
+            "price": "€55,403",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "20px",
+            "price": "€57,480",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "20px",
+            "price": "€54,223",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "20px",
+            "price": "€61,069",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "20px",
+            "price": "€85,635",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "20px",
+            "price": "€51,365",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          }
+        ],
+        "service": null,
+        "overflow": false
+      },
+      "desktopPreserved": false
+    },
+    {
+      "id": "en-1440-1-home",
+      "passed": true,
+      "geometry": {
+        "cards": [
+          {
+            "radius": "16px",
+            "price": "€68,804",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "16px",
+            "price": "€55,403",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "16px",
+            "price": "€57,480",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "16px",
+            "price": "€54,223",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          }
+        ],
+        "service": null,
+        "overflow": false
+      },
+      "desktopPreserved": false
+    },
+    {
+      "id": "en-1440-1-cars",
+      "passed": true,
+      "geometry": {
+        "cards": [
+          {
+            "radius": "20px",
+            "price": "€68,804",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "20px",
+            "price": "€55,403",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "20px",
+            "price": "€57,480",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "20px",
+            "price": "€54,223",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "20px",
+            "price": "€61,069",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "20px",
+            "price": "€85,635",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "20px",
+            "price": "€51,365",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          }
+        ],
+        "service": null,
+        "overflow": false
+      },
+      "desktopPreserved": false
+    },
+    {
+      "id": "en-1920-1-home",
+      "passed": true,
+      "geometry": {
+        "cards": [
+          {
+            "radius": "16px",
+            "price": "€68,804",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "16px",
+            "price": "€55,403",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "16px",
+            "price": "€57,480",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "16px",
+            "price": "€54,223",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          }
+        ],
+        "service": null,
+        "overflow": false
+      },
+      "desktopPreserved": false
+    },
+    {
+      "id": "en-1920-1-cars",
+      "passed": true,
+      "geometry": {
+        "cards": [
+          {
+            "radius": "20px",
+            "price": "€68,804",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "20px",
+            "price": "€55,403",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "20px",
+            "price": "€57,480",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "20px",
+            "price": "€54,223",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "20px",
+            "price": "€61,069",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "20px",
+            "price": "€85,635",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          },
+          {
+            "radius": "20px",
+            "price": "€51,365",
+            "priceSize": "24px",
+            "priceWeight": "600",
+            "titleSize": "20px",
+            "overflow": false,
+            "priceFits": true
+          }
+        ],
+        "service": null,
+        "overflow": false
+      },
+      "desktopPreserved": false
+    }
+  ]
+}

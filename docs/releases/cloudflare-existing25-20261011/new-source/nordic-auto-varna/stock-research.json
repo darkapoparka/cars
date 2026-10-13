@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-public-stock-research-not-production-input",
+  "dealer": "nordic-auto-varna",
+  "observedAt": "2026-10-12T10:44:18.067Z",
+  "sourceUrl": "https://nordicautos11.mobile.bg/",
+  "profileAdvertCount": 2,
+  "profileCountIsAvailability": false,
+  "sampledAdvertUrls": [
+    "https://nordicautos11.mobile.bg/obiava-21783932906160618-mercedes-benz-ml-350-d",
+    "https://nordicautos11.mobile.bg/obiava-21788770224128681-bmw-x5-3-0d-pano-head-up-matrix-7-mestna"
+  ],
+  "rawPriceLabels": [
+    "8 000 €",
+    "23 000 €"
+  ],
+  "retainedFirstAdvertExcerpt": "1 - 2 от общо 2 обяви на \"Nordic Auto\" - Автомобили и Джипове Mercedes-Benz ML 350 D 8 000 € Не се начислява ДДС обл. Варна, гр. Варна септември 2010 г. 230 000 км Черен Дизелов 231 к.с. Евро 5 3000 куб.см Автоматична Джип Автомобилът е личен, внесен от Дания. Закупен е от първи собственик, не е каран в България повече от месец. Разполага с пълна сервизна история! Два чифта гуми. Изключително добре запазен и поддържам автомобил! Леко чукнат отзад, вижда се на снимките. Повече детайли и 12 снимки Добави в бележника Маркирай обявата ",
+  "partsIgnored": null,
+  "availabilityConfirmed": false,
+  "mediaReusePermission": "unknown",
+  "sourcePhotosFetched": false,
+  "selectedCreationStockMode": "illustrative-not-dealer-stock",
+  "nextInput": "Use approved template illustrative vehicle assets with same honest demo disclosure across all six. Do not republish these dealer advert photos or claim these prices/availability in demo inventory.",
+  "productionStockReady": false
+}

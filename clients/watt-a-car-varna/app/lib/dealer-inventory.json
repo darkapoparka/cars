@@ -1,0 +1,78 @@
+[
+  {
+    "slug": "watt-a-car-varna-demo-estate",
+    "make": "Demo",
+    "model": "Estate",
+    "trim": "",
+    "year": 2026,
+    "price": 23900,
+    "priceOnRequest": false,
+    "monthly": 0,
+    "image": "/dealer-app/vehicle-d2d3deacbc9f566a2278.webp",
+    "images": [
+      "/dealer-app/vehicle-d2d3deacbc9f566a2278.webp"
+    ],
+    "mileage": 12000,
+    "mileageOnRequest": false,
+    "fuel": "Petrol",
+    "transmission": "Automatic",
+    "body": "Other",
+    "specifications": "",
+    "sourceUrl": "https://github.com/darkapoparka/cars/blob/b1f0f5609c7c249cfd0649c122849ff2cbb8dfde/templates/modern/apps/web/public/desktop-boxcars/page-banner-art-provenance.md",
+    "observedAt": "2026-10-12T11:35:26.649Z",
+    "optionsType": "",
+    "engineType": "",
+    "location": "Варна",
+    "badges": [],
+    "imagePlaceholder": false,
+    "proposalBenefits": [
+      "Warranty option",
+      "Finance option"
+    ],
+    "power": "Not published",
+    "engine": "Not published",
+    "warranty": "Confirm with seller",
+    "condition": "Confirm with seller",
+    "highlights": [],
+    "color": "White",
+    "featureLabels": []
+  },
+  {
+    "slug": "watt-a-car-varna-demo-suv",
+    "make": "Demo",
+    "model": "SUV",
+    "trim": "",
+    "year": 2026,
+    "price": 28900,
+    "priceOnRequest": false,
+    "monthly": 0,
+    "image": "/dealer-app/vehicle-5c0c6062ef8af622fd85.webp",
+    "images": [
+      "/dealer-app/vehicle-5c0c6062ef8af622fd85.webp"
+    ],
+    "mileage": 8000,
+    "mileageOnRequest": false,
+    "fuel": "Petrol",
+    "transmission": "Automatic",
+    "body": "SUV",
+    "specifications": "",
+    "sourceUrl": "https://github.com/darkapoparka/cars/blob/b1f0f5609c7c249cfd0649c122849ff2cbb8dfde/templates/modern/apps/web/public/desktop-boxcars/page-banner-art-provenance.md",
+    "observedAt": "2026-10-12T11:35:26.649Z",
+    "optionsType": "",
+    "engineType": "",
+    "location": "Варна",
+    "badges": [],
+    "imagePlaceholder": false,
+    "proposalBenefits": [
+      "Warranty option",
+      "Finance option"
+    ],
+    "power": "Not published",
+    "engine": "Not published",
+    "warranty": "Confirm with seller",
+    "condition": "Confirm with seller",
+    "highlights": [],
+    "color": "Blue",
+    "featureLabels": []
+  }
+]

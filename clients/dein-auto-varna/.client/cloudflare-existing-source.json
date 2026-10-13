@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "dealer": "dein-auto-varna",
+  "kind": "personalized-source-candidate-not-an-approved-release",
+  "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+  "candidateSourceDigest": "f76b01672cfa0600134707e1164e5a8f0617ce1933e04b066a31f23a321315e8",
+  "qualificationContextPath": ".client/native-qualification-context.json",
+  "qualificationContextSha256": "34b6b7bcb772c4fde071aa0aacd5c80b47dfca3ff30b77afb300fc2a3b4bbe3d",
+  "qualificationLockPath": ".client/native-qualification-lock.json",
+  "qualificationLockSha256": "8825ea96b08eac6f5cceb9969364ad3b4625307814688c4884062ca9d52be97a",
+  "sourceDeltaReview": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
+    "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975",
+    "reviewedAt": "2026-10-11T21:04:02.173Z"
+  },
+  "nativeApproval": false,
+  "hostedApproval": false
+}

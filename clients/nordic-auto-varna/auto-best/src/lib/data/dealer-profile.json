@@ -1,0 +1,379 @@
+{
+  "schemaVersion": 1,
+  "slug": "nordic-auto-varna",
+  "business": {
+    "slug": "nordic-auto-varna",
+    "name": "Nordic Auto",
+    "shortName": "Nordic Auto",
+    "latinName": "Nordic Auto",
+    "tagline": "Nordic Auto · Варна",
+    "city": "Варна",
+    "region": "",
+    "country": "BG",
+    "countryCode": "BG",
+    "locale": "bg-BG",
+    "currency": "EUR",
+    "distanceUnit": "km",
+    "address": "гр. Варна, Център, Варна, България",
+    "addressLine": "гр. Варна, Център",
+    "phoneDisplay": "0892453350",
+    "phoneHref": "tel:+359892453350",
+    "phoneE164": "+359892453350",
+    "email": "",
+    "hours": "Потвърдете работното време директно с автокъщата.",
+    "website": "https://nordicautos11.mobile.bg/",
+    "inventoryUrl": "https://nordicautos11.mobile.bg/",
+    "contactUrl": "https://nordicautos11.mobile.bg/contacts",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Nordic%20Auto%2C%20%D0%B3%D1%80.%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%A6%D0%B5%D0%BD%D1%82%D1%8A%D1%80%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
+    "mapsEmbedUrl": "https://maps.google.com/maps?q=Nordic%20Auto%2C%20%D0%B3%D1%80.%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%A6%D0%B5%D0%BD%D1%82%D1%8A%D1%80%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F&z=16&output=embed",
+    "accent": "#c40101",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png",
+    "socialLinks": {
+      "facebook": "",
+      "instagram": "",
+      "youtube": "",
+      "tiktok": ""
+    },
+    "services": [],
+    "inventoryNotice": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+    "observedAt": "2026-10-12T10:44:18.051Z",
+    "coordinates": null,
+    "raw": {
+      "schemaVersion": 1,
+      "slug": "nordic-auto-varna",
+      "name": "Nordic Auto",
+      "shortName": "Nordic Auto",
+      "city": "Варна",
+      "country": "BG",
+      "countryCode": "BG",
+      "locale": "bg-BG",
+      "currency": "EUR",
+      "distanceUnit": "km",
+      "phone": "0892453350",
+      "phoneDisplay": "0892453350",
+      "phoneE164": "+359892453350",
+      "phones": [
+        "+359892453350"
+      ],
+      "addressLine": "гр. Варна, Център",
+      "address": "гр. Варна, Център, Варна, България",
+      "hours": "Потвърдете работното време директно с автокъщата.",
+      "email": "",
+      "sourceUrl": "https://nordicautos11.mobile.bg/",
+      "stockUrl": "https://nordicautos11.mobile.bg/",
+      "contactSourceUrl": "https://nordicautos11.mobile.bg/contacts",
+      "observedAt": "2026-10-12T10:44:18.051Z",
+      "inventoryNotice": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+      "services": [],
+      "socialLinks": {},
+      "logo": "/dealer-brand/logo-on-light.png",
+      "logoLight": "/dealer-brand/logo-on-light.png",
+      "logoDark": "/dealer-brand/logo-on-dark.png",
+      "modernInventoryCopy": {
+        "nordic-auto-varna-21783932906160618": {
+          "sourceDescription": "Mercedes-Benz ML 350 D от датирана публична обява. Продавачът посочва лек удар отзад, видим на снимките. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+          "en": {
+            "description": "Mercedes-Benz ML 350 D from a dated public advert. The seller reports minor rear damage visible in the photos. Confirm condition, price and availability directly with the dealership.",
+            "imageAlts": [
+              "Mercedes-Benz ML 350 D — dated public advert photo 1",
+              "Mercedes-Benz ML 350 D — dated public advert photo 2"
+            ]
+          },
+          "bg": {
+            "description": "Mercedes-Benz ML 350 D от датирана публична обява. Продавачът посочва лек удар отзад, видим на снимките. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+            "imageAlts": [
+              "Mercedes-Benz ML 350 D — снимка от датирана публична обява 1",
+              "Mercedes-Benz ML 350 D — снимка от датирана публична обява 2"
+            ]
+          }
+        },
+        "nordic-auto-varna-21788770224128681": {
+          "sourceDescription": "BMW X5 3.0d от датирана публична обява. Потвърдете цената и наличността директно с автокъщата.",
+          "en": {
+            "description": "BMW X5 3.0d from a dated public advert. Confirm price and availability directly with the dealership.",
+            "imageAlts": [
+              "BMW X5 3.0d — dated public advert photo 1",
+              "BMW X5 3.0d — dated public advert photo 2"
+            ]
+          },
+          "bg": {
+            "description": "BMW X5 3.0d от датирана публична обява. Потвърдете цената и наличността директно с автокъщата.",
+            "imageAlts": [
+              "BMW X5 3.0d — снимка от датирана публична обява 1",
+              "BMW X5 3.0d — снимка от датирана публична обява 2"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "listings": [
+    {
+      "id": "21783932906160618",
+      "sourceId": "21783932906160618",
+      "slug": "nordic-auto-varna-21783932906160618",
+      "title": "Mercedes-Benz ML 350 D",
+      "make": "Mercedes-Benz",
+      "model": "ML",
+      "trim": "",
+      "year": 2010,
+      "priceAmount": 8000,
+      "currency": "EUR",
+      "mileageValue": 230000,
+      "mileageUnit": "km",
+      "mileageOnRequest": false,
+      "body": "SUV",
+      "bodyType": "suv",
+      "fuel": "Diesel",
+      "fuelType": "diesel",
+      "transmission": "Automatic",
+      "transmissionType": "automatic",
+      "color": "Black",
+      "powerHp": null,
+      "engine": "",
+      "drivetrain": "",
+      "features": [],
+      "images": [
+        "/dealer-stock/21783932906160618-1.webp",
+        "/dealer-stock/21783932906160618-2.webp"
+      ],
+      "image": "/dealer-stock/21783932906160618-1.webp",
+      "sourceUrl": "https://nordicautos11.mobile.bg/obiava-21783932906160618-mercedes-benz-ml-350-d",
+      "observedAt": "2026-10-12T11:43:24.376Z",
+      "availability": "Датирана обява; потвърдете цената и наличността директно с автокъщата.",
+      "description": "Mercedes-Benz ML 350 D от датирана публична обява. Продавачът посочва лек удар отзад, видим на снимките. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+      "condition": "used",
+      "location": "Варна",
+      "raw": {
+        "title": "Mercedes-Benz ML 350 D",
+        "make": "Mercedes-Benz",
+        "model": "ML",
+        "year": 2010,
+        "priceAmount": 8000,
+        "mileageValue": 230000,
+        "body": "SUV",
+        "fuel": "Diesel",
+        "transmission": "Automatic",
+        "color": "Black",
+        "description": "Mercedes-Benz ML 350 D от датирана публична обява. Продавачът посочва лек удар отзад, видим на снимките. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+        "id": "21783932906160618",
+        "slug": "nordic-auto-varna-21783932906160618",
+        "currency": "EUR",
+        "priceOnRequest": false,
+        "mileageOnRequest": false,
+        "mileageUnit": "km",
+        "condition": "used",
+        "images": [
+          "/dealer-stock/21783932906160618-1.webp",
+          "/dealer-stock/21783932906160618-2.webp"
+        ],
+        "sourceUrl": "https://nordicautos11.mobile.bg/obiava-21783932906160618-mercedes-benz-ml-350-d",
+        "observedAt": "2026-10-12T11:43:24.376Z",
+        "availability": "Датирана обява; потвърдете цената и наличността директно с автокъщата.",
+        "sourceProof": {
+          "sha256": "573438554b7392a97cbb0a54e054ed1547239b3604e1b55b70f748aa7c678658",
+          "originalPhotoBytesUnchanged": true,
+          "watermarksPreserved": true
+        }
+      }
+    },
+    {
+      "id": "21788770224128681",
+      "sourceId": "21788770224128681",
+      "slug": "nordic-auto-varna-21788770224128681",
+      "title": "BMW X5 3.0d",
+      "make": "BMW",
+      "model": "X5",
+      "trim": "",
+      "year": 2015,
+      "priceAmount": 23000,
+      "currency": "EUR",
+      "mileageValue": 260000,
+      "mileageUnit": "km",
+      "mileageOnRequest": false,
+      "body": "SUV",
+      "bodyType": "suv",
+      "fuel": "Diesel",
+      "fuelType": "diesel",
+      "transmission": "Automatic",
+      "transmissionType": "automatic",
+      "color": "Grey",
+      "powerHp": null,
+      "engine": "",
+      "drivetrain": "",
+      "features": [],
+      "images": [
+        "/dealer-stock/21788770224128681-1.webp",
+        "/dealer-stock/21788770224128681-2.webp"
+      ],
+      "image": "/dealer-stock/21788770224128681-1.webp",
+      "sourceUrl": "https://nordicautos11.mobile.bg/obiava-21788770224128681-bmw-x5-3-0d-pano-head-up-matrix-7-mestna",
+      "observedAt": "2026-10-12T11:43:24.376Z",
+      "availability": "Датирана обява; потвърдете цената и наличността директно с автокъщата.",
+      "description": "BMW X5 3.0d от датирана публична обява. Потвърдете цената и наличността директно с автокъщата.",
+      "condition": "used",
+      "location": "Варна",
+      "raw": {
+        "title": "BMW X5 3.0d",
+        "make": "BMW",
+        "model": "X5",
+        "year": 2015,
+        "priceAmount": 23000,
+        "mileageValue": 260000,
+        "body": "SUV",
+        "fuel": "Diesel",
+        "transmission": "Automatic",
+        "color": "Grey",
+        "description": "BMW X5 3.0d от датирана публична обява. Потвърдете цената и наличността директно с автокъщата.",
+        "id": "21788770224128681",
+        "slug": "nordic-auto-varna-21788770224128681",
+        "currency": "EUR",
+        "priceOnRequest": false,
+        "mileageOnRequest": false,
+        "mileageUnit": "km",
+        "condition": "used",
+        "images": [
+          "/dealer-stock/21788770224128681-1.webp",
+          "/dealer-stock/21788770224128681-2.webp"
+        ],
+        "sourceUrl": "https://nordicautos11.mobile.bg/obiava-21788770224128681-bmw-x5-3-0d-pano-head-up-matrix-7-mestna",
+        "observedAt": "2026-10-12T11:43:24.376Z",
+        "availability": "Датирана обява; потвърдете цената и наличността директно с автокъщата.",
+        "sourceProof": {
+          "sha256": "de425be3fe2750fabb71e7ee3218758639e5d21b161b10d71bc563559c386d77",
+          "originalPhotoBytesUnchanged": true,
+          "watermarksPreserved": true
+        }
+      }
+    }
+  ],
+  "rawFacts": {
+    "schemaVersion": 1,
+    "slug": "nordic-auto-varna",
+    "dealerId": "nordic-auto-varna",
+    "business": {
+      "schemaVersion": 1,
+      "slug": "nordic-auto-varna",
+      "name": "Nordic Auto",
+      "shortName": "Nordic Auto",
+      "city": "Варна",
+      "country": "BG",
+      "countryCode": "BG",
+      "locale": "bg-BG",
+      "currency": "EUR",
+      "distanceUnit": "km",
+      "phone": "0892453350",
+      "phoneDisplay": "0892453350",
+      "phoneE164": "+359892453350",
+      "phones": [
+        "+359892453350"
+      ],
+      "addressLine": "гр. Варна, Център",
+      "address": "гр. Варна, Център, Варна, България",
+      "hours": "Потвърдете работното време директно с автокъщата.",
+      "email": "",
+      "sourceUrl": "https://nordicautos11.mobile.bg/",
+      "stockUrl": "https://nordicautos11.mobile.bg/",
+      "contactSourceUrl": "https://nordicautos11.mobile.bg/contacts",
+      "observedAt": "2026-10-12T10:44:18.051Z",
+      "inventoryNotice": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+      "services": [],
+      "socialLinks": {},
+      "logo": "/dealer-brand/logo-on-light.png",
+      "logoLight": "/dealer-brand/logo-on-light.png",
+      "logoDark": "/dealer-brand/logo-on-dark.png",
+      "modernInventoryCopy": {
+        "nordic-auto-varna-21783932906160618": {
+          "sourceDescription": "Mercedes-Benz ML 350 D от датирана публична обява. Продавачът посочва лек удар отзад, видим на снимките. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+          "en": {
+            "description": "Mercedes-Benz ML 350 D from a dated public advert. The seller reports minor rear damage visible in the photos. Confirm condition, price and availability directly with the dealership.",
+            "imageAlts": [
+              "Mercedes-Benz ML 350 D — dated public advert photo 1",
+              "Mercedes-Benz ML 350 D — dated public advert photo 2"
+            ]
+          },
+          "bg": {
+            "description": "Mercedes-Benz ML 350 D от датирана публична обява. Продавачът посочва лек удар отзад, видим на снимките. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+            "imageAlts": [
+              "Mercedes-Benz ML 350 D — снимка от датирана публична обява 1",
+              "Mercedes-Benz ML 350 D — снимка от датирана публична обява 2"
+            ]
+          }
+        },
+        "nordic-auto-varna-21788770224128681": {
+          "sourceDescription": "BMW X5 3.0d от датирана публична обява. Потвърдете цената и наличността директно с автокъщата.",
+          "en": {
+            "description": "BMW X5 3.0d from a dated public advert. Confirm price and availability directly with the dealership.",
+            "imageAlts": [
+              "BMW X5 3.0d — dated public advert photo 1",
+              "BMW X5 3.0d — dated public advert photo 2"
+            ]
+          },
+          "bg": {
+            "description": "BMW X5 3.0d от датирана публична обява. Потвърдете цената и наличността директно с автокъщата.",
+            "imageAlts": [
+              "BMW X5 3.0d — снимка от датирана публична обява 1",
+              "BMW X5 3.0d — снимка от датирана публична обява 2"
+            ]
+          }
+        }
+      }
+    },
+    "research": {
+      "website": {
+        "status": "none-confirmed-in-bounded-check",
+        "url": null,
+        "notWebsiteGapProof": true
+      },
+      "publicIdentityKey": "mobile-profile:nordicautos11.mobile.bg",
+      "profileAdvertCount": 2,
+      "availabilityConfirmed": false,
+      "legalEntityOwnershipVerified": false,
+      "addressExactness": "street-unknown",
+      "caveats": [
+        "Contact street is '-' and remains unknown; use Varna/Centre only.",
+        "Sample Mercedes advert describes body damage; do not claim accident-free condition."
+      ],
+      "sourceProof": [
+        {
+          "url": "https://nordicautos11.mobile.bg/",
+          "finalUrl": "https://nordicautos11.mobile.bg/",
+          "observedAt": "2026-10-12T10:44:18.067Z",
+          "status": 200,
+          "bytes": 39562,
+          "sha256": "b346977bef85e706cfe4052c8b21acb081ca86406dcadeab5f61f060e6f97577"
+        },
+        {
+          "url": "https://nordicautos11.mobile.bg/contacts",
+          "finalUrl": "https://nordicautos11.mobile.bg/contacts",
+          "observedAt": "2026-10-12T10:44:18.051Z",
+          "status": 200,
+          "bytes": 41851,
+          "sha256": "ef7504c0a593fcc7ebcadbb7fda4785a31dcb8e48d4ef9a8573add0071cb175d"
+        },
+        {
+          "url": "https://nordicautos11.mobile.bg/about",
+          "finalUrl": "https://nordicautos11.mobile.bg/about",
+          "observedAt": "2026-10-12T10:44:18.037Z",
+          "status": 200,
+          "bytes": 6127,
+          "sha256": "9676c59ff8e648a46ae926d397b4d7f4b905dc9a0a0d0c4b3a70ac9af15ab1a6"
+        }
+      ],
+      "sourceAction": "new-absent-cars-source-after-wrapper-identity-recheck",
+      "existingSourceTree": null,
+      "inventoryModeSelection": "dated-listing-snapshot",
+      "productionAssetInputsComplete": true,
+      "stockSnapshotScope": "Two retained public adverts, not a complete/live inventory",
+      "stockMediaAuthority": "Owner-authorized public dated demo scope; original source bytes and watermarks retained"
+    }
+  },
+  "sourceCount": 2,
+  "stockKind": "dated-listing-snapshot",
+  "logoContract": null
+}

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "client": "balkan-car-varna",
+  "templateKey": "modern",
+  "templateVersion": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+  "createdAt": "2026-10-13T00:14:10.539Z",
+  "state": "personalized-needs-build",
+  "selectedHome": "main",
+  "availableHomes": [
+    {
+      "id": "main",
+      "route": "/cars"
+    }
+  ],
+  "offeredHomes": [],
+  "publicUrl": null,
+  "qa": {
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
+  },
+  "crm": {
+    "leadId": null,
+    "demoProjectId": null,
+    "registered": false
+  },
+  "templateSource": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/modern",
+    "tree": "3974380670eb388bb16182f94ade33be6d87b1c1",
+    "digest": "ba263aac8f1863d133807d3e1bf3597d125cf315a7e0deba3f6e419b52434c25",
+    "exportPolicy": "cars-source-v1"
+  },
+  "packaging": {
+    "version": "5",
+    "entry": "/variant-2/cars"
+  },
+  "workflowCommit": "05417119815993a1839eaf3b85d7c710512107dd",
+  "readyToPublish": false,
+  "hosting": {
+    "provider": "cloudflare",
+    "status": "not-deployed"
+  }
+}

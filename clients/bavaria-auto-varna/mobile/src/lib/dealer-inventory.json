@@ -1,0 +1,76 @@
+[
+  {
+    "id": "11789996935203115",
+    "make": "Volkswagen",
+    "model": "Touran",
+    "variant": "",
+    "price": 3790,
+    "sample": false,
+    "year": 2010,
+    "registration": "2010",
+    "mileage": 160000,
+    "mileageKnown": true,
+    "mileageOnRequest": false,
+    "power": 0,
+    "fuel": "LPG",
+    "transmission": "Manual",
+    "body": "Van",
+    "color": "",
+    "seats": 0,
+    "doors": 0,
+    "dealer": "Бавария",
+    "location": "Варна",
+    "rating": 0,
+    "reviews": 0,
+    "country": "BG",
+    "images": [
+      "/dealer-stock/11789996935203115-1.webp",
+      "/dealer-stock/11789996935203115-2.webp"
+    ],
+    "category": "car",
+    "features": [],
+    "attributes": {
+      "description": "VW Touran 1.6 LPG/Petrol от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.\nДатирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "availability": "Датирана обява; потвърдете цената и наличността директно с автокъщата.",
+      "source": "https://bavaria.mobile.bg/obiava-11789996935203115-vw-touran-1-6-gaz-benzin",
+      "observedAt": "2026-10-12T12:05:57.082Z"
+    }
+  },
+  {
+    "id": "11787839012622133",
+    "make": "Dacia",
+    "model": "Lodgy",
+    "variant": "",
+    "price": 6699,
+    "sample": false,
+    "year": 2016,
+    "registration": "2016",
+    "mileage": 199000,
+    "mileageKnown": true,
+    "mileageOnRequest": false,
+    "power": 0,
+    "fuel": "Diesel",
+    "transmission": "Manual",
+    "body": "MPV",
+    "color": "",
+    "seats": 0,
+    "doors": 0,
+    "dealer": "Бавария",
+    "location": "Варна",
+    "rating": 0,
+    "reviews": 0,
+    "country": "BG",
+    "images": [
+      "/dealer-stock/11787839012622133-1.webp",
+      "/dealer-stock/11787839012622133-2.webp"
+    ],
+    "category": "car",
+    "features": [],
+    "attributes": {
+      "description": "Dacia Lodgy 1.5 dCi от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.\nДатирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "availability": "Датирана обява; потвърдете цената и наличността директно с автокъщата.",
+      "source": "https://bavaria.mobile.bg/obiava-11787839012622133-dacia-lodgy-1-5-dci-6-1-mecta",
+      "observedAt": "2026-10-12T12:05:57.082Z"
+    }
+  }
+]

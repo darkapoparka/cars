@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "dealer": "dein-auto-varna",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/app",
+    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
+    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+  },
+  "appDigest": "241b18d1d1b4fc4271b81edf595d9516d991c53fd9b1e6466491a41be06ae0b0",
+  "provenance": {
+    "schemaVersion": 1,
+    "dealer": "dein-auto-varna",
+    "profile": "auto-best/src/lib/data/dealer-profile.json",
+    "profileSha256": "13e839a60af3bf66e4001ebf192370c0cb9962c9fd41293ea2b97ebe036b0fae",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "vehicles": 2,
+    "currency": "EUR",
+    "observedAt": "2026-10-12T11:55:24.091Z, 2026-10-12T11:55:24.093Z",
+    "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-light.png",
+        "output": "public/dealer-app/logo-light-38fbcae8eeaea71464cc.png",
+        "sha256": "38fbcae8eeaea71464cc390c4148ab653f115b610e3ccda9922033bc456d30ec",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-dark.png",
+        "output": "public/dealer-app/logo-dark-4903cf8d51a3b2ae0721.png",
+        "sha256": "4903cf8d51a3b2ae07212922bca2f62a5c9fb278a5e14b3caad913aefde1f711",
+        "role": "logo-dark"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11786124378124232-2.webp",
+        "output": "public/dealer-app/vehicle-09e4a651cf7b7c52029f.webp",
+        "sha256": "09e4a651cf7b7c52029f711c994eab0823af452b97df8a14448f71e4f488ebbf",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11786124378124232-1.webp",
+        "output": "public/dealer-app/vehicle-8fd9be0d0630884ab7de.webp",
+        "sha256": "8fd9be0d0630884ab7de0f09a0777faec82875fac7559110d94ec5b2d4ef7c16",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11790325495830727-2.webp",
+        "output": "public/dealer-app/vehicle-6880a0c720a35e1bece8.webp",
+        "sha256": "6880a0c720a35e1bece8a67d43f2b73d927ed990cf7b28b1755ba5a3d50613fc",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11790325495830727-1.webp",
+        "output": "public/dealer-app/vehicle-cada6a92aa81825fa544.webp",
+        "sha256": "cada6a92aa81825fa544f80a18e0f98cd0b46ca5ec6ad4604eeb0fd3944ea7b4",
+        "role": "vehicle"
+      }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "dein-auto-varna-11786124378124232",
+        "sourceValue": 80700,
+        "sourceUnit": "km",
+        "canonicalKm": 80700
+      },
+      {
+        "slug": "dein-auto-varna-11790325495830727",
+        "sourceValue": 119715,
+        "sourceUnit": "km",
+        "canonicalKm": 119715
+      }
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

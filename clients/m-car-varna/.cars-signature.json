@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "format": "signature-preview-v1",
+  "dealer": "m-car-varna",
+  "name": "M Car Varna",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/karento-best",
+    "tree": "5f6eec8efb2f9e99819f7f0c2f743d18fff7b134",
+    "digest": "83056967764a686f3737d74b86c5db51c1385a50184853f50ec4ade80c1dd44f"
+  },
+  "sourceDigest": "d176c1d79c3850fcd4d5d7d99d45196e13ac465578a58893cf3ae2972e310060",
+  "inventory": {
+    "mode": "dated-listing-snapshot",
+    "count": 2,
+    "observedAt": "2026-10-12T10:44:18.497Z"
+  },
+  "personalization": {
+    "profileSha256": "2c8cf8b729a7160355a07f26f849e117e1b273c9a003d7028aeafa1f346ac256",
+    "logoPaths": [
+      "/dealer-brand/logo-on-light.png",
+      "/dealer-brand/logo-on-dark.png"
+    ],
+    "mediaPaths": [
+      "/dealer-stock/11791525148007826-1.webp",
+      "/dealer-stock/11791525148007826-2.webp",
+      "/dealer-stock/11791452660881854-1.webp",
+      "/dealer-stock/11791452660881854-2.webp"
+    ],
+    "mediaMappings": [],
+    "contentPaths": [
+      "karento-best/src/lib/content.ts",
+      "karento-best/src/lib/data/vehicles.ts",
+      "karento-best/src/lib/data/vehicle-listing.ts",
+      "karento-best/src/lib/data/dealer-vehicles.json",
+      "karento-best/src/lib/data/vehicle-detail.ts",
+      "karento-best/src/lib/data/dealer-detail.ts",
+      "karento-best/src/lib/pages/cars-details-3.svelte",
+      "karento-best/src/lib/components/vehicle-detail/VehicleReservationCard.svelte",
+      "karento-best/src/lib/components/vehicle-detail/VehicleDetailPanels.svelte",
+      "karento-best/src/lib/components/ServiceSpotCard.svelte",
+      "karento-best/src/lib/sections/HomeBrandLinks.svelte",
+      "karento-best/src/lib/i18n/catalogs/reference-home.ts",
+      "karento-best/src/lib/data/editorial.ts",
+      "karento-best/src/lib/data/home-stories.ts",
+      "karento-best/src/lib/cards/VehicleEditorialCard.svelte",
+      "karento-best/src/lib/cards/VehicleFeaturedCard.svelte",
+      "karento-best/src/lib/cards/VehicleGridCard.svelte",
+      "karento-best/src/lib/components/Footer.svelte",
+      "karento-best/src/lib/components/contact/ContactLocationCard.svelte",
+      "karento-best/src/lib/components/vehicle-detail/ReviewSummary.svelte",
+      "karento-best/src/lib/components/vehicle-detail/VehicleHeading.svelte",
+      "karento-best/src/lib/sections/CustomerReviewCarousel.svelte",
+      "karento-best/src/lib/sections/FeaturedVehicleCarousel.svelte",
+      "karento-best/src/lib/sections/FeaturedVehicleGrid.svelte",
+      "karento-best/src/lib/sections/MostSearchedVehicles.svelte",
+      "karento-best/src/lib/sections/PopularVehicleCarousel.svelte",
+      "karento-best/src/lib/sections/PopularVehicleGrid.svelte",
+      "karento-best/src/routes/2/discovery.ts",
+      "karento-best/src/routes/2/DiscoveryHome.svelte",
+      "karento-best/src/routes/2/DiscoverySearch.svelte"
+    ],
+    "nativeDealerFacts": true
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

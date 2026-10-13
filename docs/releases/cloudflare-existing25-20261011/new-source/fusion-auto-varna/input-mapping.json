@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-input-mapping",
+  "dealer": "fusion-auto-varna",
+  "inputs": {
+    "facts": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/fusion-auto-varna/facts.json",
+      "sha256": "3d9a68f5d3ac89c830b76032d9546276d3a39d8978459131dc0a9abc0f84f73c"
+    },
+    "stock": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/fusion-auto-varna/stock.json",
+      "sha256": "976c8b54168954b7b13c4d6434bb36752c126bb47269ce694d11705ab6a0db8d"
+    },
+    "locale": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/fusion-auto-varna/locale.json",
+      "sha256": "74e73d3be9778761e7d4a8ae486364d79203e84aa5a90de307bf5bf3fc6f744a"
+    },
+    "branding": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/fusion-auto-varna/branding.json",
+      "sha256": "e9975b6b4c7b678bc2de58d185bd44994ad70eca10e6e5eb3b88a094881b40fd"
+    }
+  },
+  "sources": [
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/fusion-auto-varna/research-facts.json",
+      "sha256": "33b2f15385033625f75259df1674dc8e55495d8a47f20adf54b0d54a3bff8ecb"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/fusion-auto-varna/identity.json",
+      "sha256": "6ed015a5295cf8c4254a8f5b13ae748a6c11d919b428af1490019eac0f8c7316"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/fusion-auto-varna/locale.json",
+      "sha256": "74e73d3be9778761e7d4a8ae486364d79203e84aa5a90de307bf5bf3fc6f744a"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/fusion-auto-varna/stock-research.json",
+      "sha256": "8b39ceb230c2e34c1345a3464ab50cec917b6ecfe875deba2043b511423d1f77"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/fusion-auto-varna/branding.json",
+      "sha256": "e9975b6b4c7b678bc2de58d185bd44994ad70eca10e6e5eb3b88a094881b40fd"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/fusion-auto-varna/branding/generated-master.png",
+      "sha256": "85f89e989c74b709d56d399c5b91275dccf41470c7e4925b889608cf9164beb7"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/fusion-auto-varna/branding/on-accent.png",
+      "sha256": "37a69c7739ee9de85b7fce8da0b28f15e74a25355d30775d8a283ed136e9b01e"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/fusion-auto-varna/branding/on-dark.png",
+      "sha256": "37a69c7739ee9de85b7fce8da0b28f15e74a25355d30775d8a283ed136e9b01e"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/fusion-auto-varna/branding/on-light.png",
+      "sha256": "85f89e989c74b709d56d399c5b91275dccf41470c7e4925b889608cf9164beb7"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/fusion-auto-varna/branding/original-logo-reference.webp",
+      "sha256": "684880cd11fa3955df0d2c135623cef0a9f6f67b1a5e260d9fbabbdc212d583f"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/fusion-auto-varna/facts.json",
+      "sha256": "3d9a68f5d3ac89c830b76032d9546276d3a39d8978459131dc0a9abc0f84f73c"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/fusion-auto-varna/generation-brief.json",
+      "sha256": "ee5e342cd37e015c36f3b75e8a0b65a16c786125e65b51cb0ca6f9ab39a1855e"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/fusion-auto-varna/media-input-mapping.json",
+      "sha256": "39d4831f211656a7e447f4ef7216e489500f061a50387308638489b77a03594e"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/fusion-auto-varna/media/11790662447767037-1.webp",
+      "sha256": "684880cd11fa3955df0d2c135623cef0a9f6f67b1a5e260d9fbabbdc212d583f"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/fusion-auto-varna/media/11790662447767037-2.webp",
+      "sha256": "005db4106a617371b098e8df88c4a75f386a53765eddd9f2d9b2b3ca81a84014"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/fusion-auto-varna/media/21780841001174707-1.webp",
+      "sha256": "a6442d0f4ba409cb1ca15a15bf214173107eedae96681464daad929e29be0aac"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/fusion-auto-varna/media/21780841001174707-2.webp",
+      "sha256": "ad72b9cb4fb5e4a685301be39d69718f3c6eb7bbb36cbcdfaa845364140bdca0"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/fusion-auto-varna/reviewed-modern-inventory-copy.json",
+      "sha256": "f0fcc17d890b0694216b5cd09b13529531a206ef9e01c51789ac3bf45724115c"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/fusion-auto-varna/stock.json",
+      "sha256": "976c8b54168954b7b13c4d6434bb36752c126bb47269ce694d11705ab6a0db8d"
+    }
+  ]
+}

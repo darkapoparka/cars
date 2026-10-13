@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "dealer": "technocar-varna",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/app",
+    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
+    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+  },
+  "appDigest": "94f66138adc06a13e5ad630f86cd1543b24b58cafb1e7c934d42e01480e5c4a0",
+  "provenance": {
+    "schemaVersion": 1,
+    "dealer": "technocar-varna",
+    "profile": "auto-best/src/lib/data/dealer-profile.json",
+    "profileSha256": "a2f9c5970063302019eb43cf56b08b48d58b8c4e60d5ab5acb77d6b7059cc893",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "vehicles": 2,
+    "currency": "EUR",
+    "observedAt": "2026-10-12T12:12:21.636Z, 2026-10-12T12:12:21.637Z",
+    "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-light.png",
+        "output": "public/dealer-app/logo-light-a0a14262f575539348ba.png",
+        "sha256": "a0a14262f575539348ba5ebf8aff9c6e5528562fe5c3e0316bbd47d6e41f30a8",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-dark.png",
+        "output": "public/dealer-app/logo-dark-cfda73bcabd82edcd988.png",
+        "sha256": "cfda73bcabd82edcd988885cf956ba2426a105a00ff46ddaf482dc6f4cc470fd",
+        "role": "logo-dark"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/21789131552465526-2.webp",
+        "output": "public/dealer-app/vehicle-5798e9223c1c7b44faf6.webp",
+        "sha256": "5798e9223c1c7b44faf61a468508a24cda785877c90217d9326db55034c9b733",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/21789131552465526-1.webp",
+        "output": "public/dealer-app/vehicle-41912ccccef24a435841.webp",
+        "sha256": "41912ccccef24a435841c16fb4aba4b31f3bbf3701a1b1b46d513d8be71ed0c5",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/21787826931085094-2.webp",
+        "output": "public/dealer-app/vehicle-c8bc359821502f156b26.webp",
+        "sha256": "c8bc359821502f156b26c4e5a2d70fe1f3323d41f8b82cab7b28cb914ed20f60",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/21787826931085094-1.webp",
+        "output": "public/dealer-app/vehicle-bd872c56b0dfea076111.webp",
+        "sha256": "bd872c56b0dfea0761112b8b64a13452ebd3c21d1b9f0557cb9e1aa3cf270406",
+        "role": "vehicle"
+      }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "technocar-varna-21789131552465526",
+        "sourceValue": 97835,
+        "sourceUnit": "km",
+        "canonicalKm": 97835
+      },
+      {
+        "slug": "technocar-varna-21787826931085094",
+        "sourceValue": 61100,
+        "sourceUnit": "km",
+        "canonicalKm": 61100
+      }
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

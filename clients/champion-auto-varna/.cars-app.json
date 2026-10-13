@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "dealer": "champion-auto-varna",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/app",
+    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
+    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+  },
+  "appDigest": "5754a5861d19bf0357a40bec758553c14b6c78f9439e020a56af14c5e882b7aa",
+  "provenance": {
+    "schemaVersion": 1,
+    "dealer": "champion-auto-varna",
+    "profile": "auto-best/src/lib/data/dealer-profile.json",
+    "profileSha256": "807b2f25f38934c41082ef3b49d0f8f09bcb356e4107229bcb259e22b050a607",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "vehicles": 2,
+    "currency": "EUR",
+    "observedAt": "2026-10-12T11:55:24.097Z, 2026-10-12T11:55:24.098Z",
+    "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-light.png",
+        "output": "public/dealer-app/logo-light-b9851baf9794595a1f61.png",
+        "sha256": "b9851baf9794595a1f616593c2a41152f406d2b439d4c11cb492bc3ed373f17f",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-dark.png",
+        "output": "public/dealer-app/logo-dark-2347ffe2ae9d86740218.png",
+        "sha256": "2347ffe2ae9d867402185132ad8e0f61be28e15785089f31427fffab511f31fa",
+        "role": "logo-dark"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/21791746826227790-2.webp",
+        "output": "public/dealer-app/vehicle-936a61e0db51d9a28909.webp",
+        "sha256": "936a61e0db51d9a289099ddc17b567e8adbf3840de295f3e334f5014ef54cc30",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/21791746826227790-1.webp",
+        "output": "public/dealer-app/vehicle-76fb984478a731b7d6fe.webp",
+        "sha256": "76fb984478a731b7d6fe0b2930f6dfd3dc170b6cd2b41be3da151964f8bdd6ab",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11760906472084145-1.webp",
+        "output": "public/dealer-app/vehicle-c86118f14a96c6e8877b.webp",
+        "sha256": "c86118f14a96c6e8877b9e31668e2842a17853e9a696ad01b1083e36660025af",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11760906472084145-2.webp",
+        "output": "public/dealer-app/vehicle-d5ba92219ca67602e55f.webp",
+        "sha256": "d5ba92219ca67602e55f105868576e3285a837c2fbc9ae79b0d5965a05d21425",
+        "role": "vehicle"
+      }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "champion-auto-varna-21791746826227790",
+        "sourceValue": 179000,
+        "sourceUnit": "km",
+        "canonicalKm": 179000
+      },
+      {
+        "slug": "champion-auto-varna-11760906472084145",
+        "sourceValue": 79999,
+        "sourceUnit": "km",
+        "canonicalKm": 79999
+      }
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

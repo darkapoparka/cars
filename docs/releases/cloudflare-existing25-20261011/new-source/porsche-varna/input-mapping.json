@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-input-mapping",
+  "dealer": "porsche-varna",
+  "inputs": {
+    "facts": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/porsche-varna/facts.json",
+      "sha256": "f9d098de7d7365298ff4b292fe8e4858a4f07487d2f0245f97814921e0b8df68"
+    },
+    "stock": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/porsche-varna/stock.json",
+      "sha256": "356ecf324e335ffe414290c314bde3ca4a66240d1482fe05495b2e5046677611"
+    },
+    "locale": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/porsche-varna/locale.json",
+      "sha256": "4260e65b89a1a13c921dbe8c0579348aaade9a577057737fc8217217c82b2e04"
+    },
+    "branding": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/porsche-varna/branding.json",
+      "sha256": "2ebd703021042501de32cb69b0c7acec29b38fdc6b87925346a00bde37d3ab92"
+    }
+  },
+  "sources": [
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/porsche-varna/research-facts.json",
+      "sha256": "f9fcbb7493eb86adcc07e7fa15addacded6a4b053e87069e0982d32ab5d68509"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/porsche-varna/identity.json",
+      "sha256": "e65b7ae7d7e8d4bf8a5b4e6ca8f6196a921c9be960acc125478f803ba1d822b6"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/porsche-varna/locale.json",
+      "sha256": "4260e65b89a1a13c921dbe8c0579348aaade9a577057737fc8217217c82b2e04"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/porsche-varna/stock-research.json",
+      "sha256": "747cf28059e55719addc16e951dbe30ed3ebf5fc4f510b4ea0fb07327b7aec3c"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/porsche-varna/branding.json",
+      "sha256": "2ebd703021042501de32cb69b0c7acec29b38fdc6b87925346a00bde37d3ab92"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/porsche-varna/branding/generated-master.png",
+      "sha256": "7db4942522b37ec8a938c5678bb87fabc637d9eecfb929249ce23bacaa919bd6"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/porsche-varna/branding/on-accent.png",
+      "sha256": "7b50ee8969423bb9c0b906087ef8d3483718df671dd161122e2de87ded945bb3"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/porsche-varna/branding/on-dark.png",
+      "sha256": "7b50ee8969423bb9c0b906087ef8d3483718df671dd161122e2de87ded945bb3"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/porsche-varna/branding/on-light.png",
+      "sha256": "7db4942522b37ec8a938c5678bb87fabc637d9eecfb929249ce23bacaa919bd6"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/porsche-varna/facts.json",
+      "sha256": "f9d098de7d7365298ff4b292fe8e4858a4f07487d2f0245f97814921e0b8df68"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/porsche-varna/generation-brief.json",
+      "sha256": "7e34c32f86472994285b718e852591a9faeae5047f8db72aacaf58ce8d4929b8"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/porsche-varna/media-input-mapping.json",
+      "sha256": "23b8ae8a5f90517f3097a27dc71f0d28f7fd57b6fcb40541cb023f608c1a8afe"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/porsche-varna/media/11790324799720879-1.webp",
+      "sha256": "d46ecb3234d7c7548408ba541189692a1ec1a8368bc266aa797cd65a21116cfa"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/porsche-varna/media/11790324799720879-2.webp",
+      "sha256": "242a4de64f0724592c981661b3a1a4dab0bdecb792219544d6553a11e2720eb0"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/porsche-varna/media/11790354686274560-1.webp",
+      "sha256": "9706f0a2b4c9c2bee59be9012874bbbe37ff998f2abef711d39d23fa44bcf6a1"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/porsche-varna/media/11790354686274560-2.webp",
+      "sha256": "73115047858aeec19177a33a8cf7b877be738b6046ec051d4a0102d16f9901b3"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/porsche-varna/reviewed-modern-inventory-copy.json",
+      "sha256": "87d7e39bfc863ba1c4f02b069486dc3973dbd4f9c6aacdcc0905b3b03ef780a3"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/porsche-varna/stock.json",
+      "sha256": "356ecf324e335ffe414290c314bde3ca4a66240d1482fe05495b2e5046677611"
+    }
+  ]
+}

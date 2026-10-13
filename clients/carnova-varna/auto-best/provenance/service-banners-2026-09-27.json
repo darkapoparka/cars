@@ -1,0 +1,26 @@
+{
+  "generatedAt": "2026-09-27",
+  "tool": "built-in image_gen",
+  "modelVersion": "Not exposed by the tool; no specific 2.5 version claimed",
+  "transparentBackground": true,
+  "processing": "Proportionally resized to 1200px wide and encoded as WebP quality 90 with alpha quality 100; no generative changes outside image_gen.",
+  "purpose": "Decorative service illustration, not dealer stock or dealer facilities",
+  "assets": [
+    {
+      "file": "static/assets/images/template/service-sell-v2.webp",
+      "prompt": "Use case: ads-marketing. Create a production website illustration asset for the Sell / Trade-in banner of an automotive dealer template. Transparent background, landscape composition approximately 3:1. A photorealistic graphite-grey modern European executive estate car in a front three-quarter view pointing slightly left, complete vehicle with all wheels and mirrors visible. Beside the car, a single realistic black and satin-metal key fob in the lower-left foreground, modest scale, visually associated with selling a vehicle. Car occupies most of composition, key occupies no more than 20% width. Restrained high-end studio photography with soft daylight reflections, crisp readable vehicle silhouette and details that work at 150px wide. Short subtle contact shadows only, fully transparent surrounding canvas. Tight composition with about 5% clear space around subject on all sides. No cash, coins, hands, people, extra vehicles, pedestal, arrows, labels, slogans, license-plate text, brand logos, watermark, decorative gradients or background scenery. This is reusable illustrative artwork, not a photograph of actual dealer stock. Keep natural materials and proportions; no cartoon or toy effect.",
+      "sha256": "c6368b23831a28b284860ee630b14537dd2075afce3543c0afd7647b52d30140",
+      "width": 1200,
+      "height": 400,
+      "bytes": 98806
+    },
+    {
+      "file": "static/assets/images/template/service-import-v2.webp",
+      "prompt": "Use case: ads-marketing. Create a production website illustration asset for the Import a Car service of an automotive dealer. Transparent background, landscape approximately 3:1. Photorealistic premium automotive studio style, restrained graphite, silver and neutral black materials. A realistic graphite car transporter with a short open double-deck trailer carrying three silver modern European cars, shown in a clear front three-quarter view pointing left. A single silver executive sedan is parked just ahead and slightly to the right, forming one coherent grounded scene. Keep the scene simple and readable at 150px wide: foreground sedan dominant, transporter secondary behind and left, no container ship or extra logistics props. Entire objects and wheels visible, sensible real-world proportions, clean silhouette, soft daylight reflections matching high-end catalog photography, subtle short contact shadows, transparent surrounding canvas with approximately 5% margin. No background, horizon, road, sea, sky, text, arrows, brand marks, plate lettering, watermark, cash, flags, people, cartoon, toy or isometric rendering. Reusable illustrative artwork, not a claim about real inventory or an actual dealer facility.",
+      "sha256": "fc357ec27ddceba8ca3f2649ed648f3a5c979dcb167ea1165208c79d6d852091",
+      "width": 1200,
+      "height": 400,
+      "bytes": 130578
+    }
+  ]
+}

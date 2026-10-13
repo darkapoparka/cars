@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "slug": "valkov-cars-varna",
+  "dealerId": "valkov-cars-varna",
+  "business": {
+    "schemaVersion": 1,
+    "slug": "valkov-cars-varna",
+    "name": "ВЪЛКОВ КАРС",
+    "shortName": "ВЪЛКОВ КАРС",
+    "city": "Варна",
+    "country": "BG",
+    "countryCode": "BG",
+    "locale": "bg-BG",
+    "currency": "EUR",
+    "distanceUnit": "km",
+    "phone": "0898685288",
+    "phoneDisplay": "0898685288",
+    "phoneE164": "+359898685288",
+    "phones": [
+      "+359898685288"
+    ],
+    "addressLine": "бул. Цар Освободител, Преди изхода от града 500 м в ляво",
+    "address": "бул. Цар Освободител, Преди изхода от града 500 м в ляво, Варна, България",
+    "hours": "Потвърдете работното време директно с автокъщата.",
+    "email": "",
+    "sourceUrl": "https://valkovcars.mobile.bg/",
+    "stockUrl": "https://valkovcars.mobile.bg/",
+    "contactSourceUrl": "https://valkovcars.mobile.bg/contacts",
+    "observedAt": "2026-10-12T10:44:17.940Z",
+    "inventoryNotice": "Показаните демонстрационни автомобили са илюстративни и не представляват наличности на автокъщата. За действителните оферти и наличности се свържете директно с нея.",
+    "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+    "services": [],
+    "socialLinks": {},
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "research": {
+    "website": {
+      "status": "none-confirmed-in-bounded-check",
+      "url": null,
+      "notWebsiteGapProof": true
+    },
+    "publicIdentityKey": "mobile-profile:valkovcars.mobile.bg",
+    "profileAdvertCount": 3,
+    "availabilityConfirmed": false,
+    "legalEntityOwnershipVerified": false,
+    "addressExactness": "public-contact-as-published",
+    "caveats": [],
+    "sourceProof": [
+      {
+        "url": "https://valkovcars.mobile.bg/",
+        "finalUrl": "https://valkovcars.mobile.bg/",
+        "observedAt": "2026-10-12T10:44:17.955Z",
+        "status": 200,
+        "bytes": 46418,
+        "sha256": "ee6d4397077ba99cab5903f11a3247645f61fde6283888b30d70d7ea841a3dcd"
+      },
+      {
+        "url": "https://valkovcars.mobile.bg/contacts",
+        "finalUrl": "https://valkovcars.mobile.bg/contacts",
+        "observedAt": "2026-10-12T10:44:17.940Z",
+        "status": 200,
+        "bytes": 42026,
+        "sha256": "25cc809e767218846af580ac347d3597e2f0ffd71d2127e7d8b03883b2c1b23b"
+      },
+      {
+        "url": "https://valkovcars.mobile.bg/about",
+        "finalUrl": "https://valkovcars.mobile.bg/about",
+        "observedAt": "2026-10-12T10:44:17.936Z",
+        "status": 200,
+        "bytes": 6112,
+        "sha256": "e36447b32dadcaeea7226f7d9f8258dbcd3a8389dbdf2c48bc4a2f27fe5b1883"
+      }
+    ],
+    "sourceAction": "new-absent-cars-source-after-wrapper-identity-recheck",
+    "existingSourceTree": null,
+    "inventoryModeSelection": "illustrative-not-dealer-stock",
+    "productionAssetInputsComplete": false
+  }
+}

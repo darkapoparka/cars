@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "dealer": "monarh-varna",
+  "kind": "personalized-source-candidate-not-an-approved-release",
+  "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+  "candidateSourceDigest": "5aeb85f0f6388aa2de4fce58bd22a6952accd18875bc4e612dc107e82935706d",
+  "qualificationContextPath": ".client/native-qualification-context.json",
+  "qualificationContextSha256": "c9b770fbe68e89269b3283b698ea49c1041eb65569a735234df8b5bb57afee12",
+  "qualificationLockPath": ".client/native-qualification-lock.json",
+  "qualificationLockSha256": "8825ea96b08eac6f5cceb9969364ad3b4625307814688c4884062ca9d52be97a",
+  "sourceDeltaReview": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
+    "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975",
+    "reviewedAt": "2026-10-11T21:04:02.173Z"
+  },
+  "nativeApproval": false,
+  "hostedApproval": false
+}

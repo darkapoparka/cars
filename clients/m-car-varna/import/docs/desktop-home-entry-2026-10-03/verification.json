@@ -1,0 +1,145 @@
+{
+  "node": "24.21.0",
+  "retainedLock": "aa596db7046c3f226ce50b488e283e30121eb49122d5006c60035ef57a952e1c",
+  "sourcePaths": 1670,
+  "gates": [
+    {
+      "name": "check",
+      "command": [
+        "L:/Toolchains/Node/24.21.0/node.exe",
+        "L:/Toolchains/Node/24.21.0/node_modules/npm/bin/npm-cli.js",
+        "run",
+        "check"
+      ],
+      "started": "2026-10-03T00:53:16.202Z",
+      "completed": "2026-10-03T00:53:38.185Z",
+      "exitCode": 0,
+      "log": "L:\\CODEX\\cars\\templates\\import\\runtime\\desktop-final-polish-2026-10-03\\qa/runtime/home-entry-check.log",
+      "logSha256": "03d97cfa4a9ef86ca411d25f6228bcae22460142d1a8a747a9d966445cf03229"
+    },
+    {
+      "name": "lint",
+      "command": [
+        "L:/Toolchains/Node/24.21.0/node.exe",
+        "node_modules/eslint/bin/eslint.js",
+        "src/lib/components/common/MobileModeTabs.svelte",
+        "src/lib/components/home/DesktopHomeHero.svelte",
+        "src/lib/components/home/HomePage.svelte",
+        "src/lib/content/home-discovery.ts",
+        "src/lib/server/home.ts"
+      ],
+      "started": "2026-10-03T00:53:38.187Z",
+      "completed": "2026-10-03T00:53:58.956Z",
+      "exitCode": 0,
+      "log": "L:\\CODEX\\cars\\templates\\import\\runtime\\desktop-final-polish-2026-10-03\\qa/runtime/home-entry-lint.log",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "architecture",
+      "command": [
+        "L:/Toolchains/Node/24.21.0/node.exe",
+        "L:/Toolchains/Node/24.21.0/node_modules/npm/bin/npm-cli.js",
+        "run",
+        "check:architecture"
+      ],
+      "started": "2026-10-03T00:53:58.957Z",
+      "completed": "2026-10-03T00:54:00.364Z",
+      "exitCode": 0,
+      "log": "L:\\CODEX\\cars\\templates\\import\\runtime\\desktop-final-polish-2026-10-03\\qa/runtime/home-entry-architecture.log",
+      "logSha256": "f153ca4e2ca9b6b71ae622dc6c3d96cd08f8f9eff45a7f6791ae81213b51c491"
+    },
+    {
+      "name": "assets",
+      "command": [
+        "L:/Toolchains/Node/24.21.0/node.exe",
+        "L:/Toolchains/Node/24.21.0/node_modules/npm/bin/npm-cli.js",
+        "run",
+        "check:assets"
+      ],
+      "started": "2026-10-03T00:54:00.365Z",
+      "completed": "2026-10-03T00:54:01.001Z",
+      "exitCode": 0,
+      "log": "L:\\CODEX\\cars\\templates\\import\\runtime\\desktop-final-polish-2026-10-03\\qa/runtime/home-entry-assets.log",
+      "logSha256": "b98cbb4d013072e79e1bd8765db3905ed8c6f5fae74e56356eca4fd5a28ef995"
+    },
+    {
+      "name": "unit",
+      "command": [
+        "L:/Toolchains/Node/24.21.0/node.exe",
+        "L:/Toolchains/Node/24.21.0/node_modules/npm/bin/npm-cli.js",
+        "run",
+        "test:unit",
+        "--",
+        "--run",
+        "--maxWorkers=1"
+      ],
+      "started": "2026-10-03T00:55:43.195Z",
+      "completed": "2026-10-03T00:55:55.464Z",
+      "exitCode": 0,
+      "log": "L:\\CODEX\\cars\\templates\\import\\runtime\\desktop-final-polish-2026-10-03\\qa/runtime/home-entry-unit.log",
+      "logSha256": "855e1a058e1973a78e9abdb4eaaf8f4d6f63500c6eb8e54bd6d8e23cda827208"
+    },
+    {
+      "name": "build",
+      "command": [
+        "L:/Toolchains/Node/24.21.0/node.exe",
+        "L:/Toolchains/Node/24.21.0/node_modules/npm/bin/npm-cli.js",
+        "run",
+        "build"
+      ],
+      "started": "2026-10-03T01:18:13.774Z",
+      "completed": "2026-10-03T01:22:49.075Z",
+      "exitCode": 0,
+      "log": "L:\\CODEX\\cars\\templates\\import\\runtime\\desktop-final-polish-2026-10-03\\qa/runtime/home-entry-build.log",
+      "logSha256": "8f9fd12c662f3fff35a8dc999947eb451504e2fcfc73fa0962b26d06187c6946"
+    }
+  ],
+  "browser": {
+    "suites": [
+      "desktop-page-patterns",
+      "typography-contact",
+      "storefront-controls",
+      "desktop-search"
+    ],
+    "started": "2026-10-03T01:28:07.034Z",
+    "completed": "2026-10-03T01:29:18.696Z",
+    "exitCode": 0,
+    "stats": {
+      "startTime": "2026-10-03T01:28:08.294Z",
+      "duration": 70361.375,
+      "expected": 29,
+      "skipped": 19,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "log": "L:\\CODEX\\cars\\templates\\import\\runtime\\desktop-final-polish-2026-10-03\\qa/runtime/home-entry-browser-corrected.log",
+    "logSha256": "bc7e7f1d41dd4d60bfa80eb0bccdcd51b8bda6e41e08c8de77f74593b586fdba"
+  },
+  "initialBrowser": {
+    "suites": [
+      "desktop-page-patterns",
+      "typography-contact",
+      "storefront-controls",
+      "desktop-search"
+    ],
+    "started": "2026-10-03T01:23:46.559Z",
+    "completed": "2026-10-03T01:25:52.756Z",
+    "exitCode": 1,
+    "stats": {
+      "startTime": "2026-10-03T01:23:49.412Z",
+      "duration": 123095.105,
+      "expected": 28,
+      "skipped": 19,
+      "unexpected": 1,
+      "flaky": 0
+    },
+    "log": "L:\\CODEX\\cars\\templates\\import\\runtime\\desktop-final-polish-2026-10-03\\qa/runtime/home-entry-browser.log",
+    "logSha256": "ffc669dcc59d4df1b02ec64ca7137403634e604483b7ce2516bd4d73ab4e9108"
+  },
+  "notes": [
+    "The initial unit worker failed with native allocation exhaustion after 122 tests; all 124 passed with a 512 MiB worker heap limit. No tests were skipped for recovery.",
+    "The initial browser journey expected the intentionally removed SUV quick link. The existing test retains its BMW search assertions and now verifies four newest cars and native View all navigation. All four existing suites then passed with zero retries.",
+    "Only the browser test changed after the production build. All application source files and the retained lock match the built snapshot.",
+    "Mobile computed line height differs by 0.0001px between unminified dev CSS and production CSS; geometry is exact. One baseline Home probe sampled the footer observer before five bottom-nav controls reappeared; its full-page screenshot is byte-identical to the production result. The 320px BG Home baseline used a fallback for one stock image; production loaded the same configured source photo. This asset loading state is preserved separately in the raw comparison."
+  ]
+}

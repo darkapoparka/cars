@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "dealer": "fusion-auto-varna",
+  "kind": "dated-listing-snapshot",
+  "records": [
+    {
+      "title": "Audi A7 Bi-TDI S-Line",
+      "make": "Audi",
+      "model": "A7",
+      "year": 2015,
+      "priceAmount": 17500,
+      "mileageValue": 350000,
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "body": "Hatchback",
+      "description": "Audi A7 Bi-TDI S-Line от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+      "sourceFieldProof": {
+        "source": "https://fusionauto.mobile.bg/obiava-11790662447767037-audi-a7-bi-tdi-facelift-s-line-smeneni-verigi",
+        "year": "Дата на производство юни 2015",
+        "price": "17 500 €,",
+        "mileage": "Пробег [км] 350000 км",
+        "fuel": "Двигател Дизелов",
+        "transmission": "Скоростна кутия Автоматична",
+        "body": "Категория Хечбек"
+      },
+      "sourceCaveats": [
+        " Напълно реални доказуеми километри, без удари "
+      ],
+      "id": "11790662447767037",
+      "slug": "fusion-auto-varna-11790662447767037",
+      "currency": "EUR",
+      "priceOnRequest": false,
+      "mileageOnRequest": false,
+      "mileageUnit": "km",
+      "condition": "used",
+      "images": [
+        "/dealer-stock/11790662447767037-1.webp",
+        "/dealer-stock/11790662447767037-2.webp"
+      ],
+      "sourceUrl": "https://fusionauto.mobile.bg/obiava-11790662447767037-audi-a7-bi-tdi-facelift-s-line-smeneni-verigi",
+      "observedAt": "2026-10-12T12:05:57.080Z",
+      "availability": "Датирана обява; потвърдете цената и наличността директно с автокъщата.",
+      "sourceProof": {
+        "sha256": "801ba26fe36a8765d7adcf1bc1b36688ae185dff95ca4cc8611a2de7a0938367",
+        "originalPhotoBytesUnchanged": true,
+        "watermarksPreserved": true
+      }
+    },
+    {
+      "title": "Mercedes-Benz G 500 LPG",
+      "make": "Mercedes-Benz",
+      "model": "G",
+      "year": 2008,
+      "priceAmount": 36000,
+      "mileageValue": 189000,
+      "fuel": "Petrol",
+      "transmission": "Automatic",
+      "body": "SUV",
+      "description": "Mercedes-Benz G 500 LPG от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+      "sourceFieldProof": {
+        "source": "https://fusionauto.mobile.bg/obiava-21780841001174707-mercedes-benz-g-500-lpg-amg-optic-facelift-306",
+        "year": "Дата на производство септември 2008",
+        "price": "36 000 €,",
+        "mileage": "Пробег [км] 189000 км",
+        "fuel": "Двигател Бензинов",
+        "transmission": "Скоростна кутия Автоматична",
+        "body": "Категория Джип"
+      },
+      "sourceCaveats": [],
+      "id": "21780841001174707",
+      "slug": "fusion-auto-varna-21780841001174707",
+      "currency": "EUR",
+      "priceOnRequest": false,
+      "mileageOnRequest": false,
+      "mileageUnit": "km",
+      "condition": "used",
+      "images": [
+        "/dealer-stock/21780841001174707-1.webp",
+        "/dealer-stock/21780841001174707-2.webp"
+      ],
+      "sourceUrl": "https://fusionauto.mobile.bg/obiava-21780841001174707-mercedes-benz-g-500-lpg-amg-optic-facelift-306",
+      "observedAt": "2026-10-12T12:05:57.080Z",
+      "availability": "Датирана обява; потвърдете цената и наличността директно с автокъщата.",
+      "sourceProof": {
+        "sha256": "68bbcf7bf74d358e40c5454530ac4c6ed284e47a89d3689ea8bd84cd83ca169f",
+        "originalPhotoBytesUnchanged": true,
+        "watermarksPreserved": true
+      }
+    }
+  ],
+  "disclosure": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+  "disclosureEn": "Dated listing samples; confirm price and availability directly with the dealership.",
+  "availabilityConfirmed": false,
+  "completeInventory": false
+}

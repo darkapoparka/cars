@@ -1,0 +1,40 @@
+# 11 — Cleanup and decommission ledger
+
+## Rule
+
+Deletion requires proof of reachability and ownership, not a naming preference or one grep. Preserve licences, provenance, approved assets and the existing uncommitted mobile work. Do not delete features to hide a visual inconsistency without a product decision.
+
+| ID  | Candidate / current owner                                                    | Disposition                                                        | Required evidence before deletion or change                                                                                  |
+| --- | ---------------------------------------------------------------------------- | ------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------- |
+| C01 | `src/routes/auxero-guards.css`                                               | Retire in route-owned slices                                       | Each selector’s supported consumer migrated; hard reload and cross-family navigation remain correct                          |
+| C02 | `static/assets/app.css` and vendor widget CSS                                | Remove from migrated routes first; eventually retire unused assets | Network/build proof that no retained page or raw-template path depends on them                                               |
+| C03 | `AuxeroRuntimeScripts.svelte` and inline runtime generation                  | Retire as native widgets replace it                                | Gallery, menus, forms, carousels and navigation do not require replay/polling; listeners clean up                            |
+| C04 | `server/auxero-template.ts`, `auxero-*-data.ts`, `.template-ref`             | Quarantine, then retire runtime imports                            | All retained public/account/admin/template routes classified and migrated or explicitly removed; globs and packaging checked |
+| C05 | `/home-clean`, `/home1`, `/home1-tabs`, `/home2`, `/compare-clean`, `/offer` | Product/release disposition required                               | Decide supported versus deliberate preview versus removal; navigation/sitemap/direct URLs/redirects verified                 |
+| C06 | `HomeFive*`, `Home1*`, home2 and related legacy naming                       | Consolidate by actual consumer migration                           | Do not bulk rename for cosmetic neutrality; source diff remains reviewable and behaviour preserved                           |
+| C07 | Repeated desktop/mobile card/facet/form implementations                      | Consolidate contracts, not necessarily all markup                  | Facts, query/validation and primitive behaviour shared; viewport-specific layout remains intentional                         |
+| C08 | `@tabler/icons-svelte`                                                       | Strong removal candidate                                           | Zero source importers observed; also check scripts/config/code generation and a clean build                                  |
+| C09 | Hugeicons pair versus Lucide                                                 | Review the one Hugeicons consumer                                  | Visual/semantic parity and bundle evidence; do not replace logos or art with generic glyphs                                  |
+| C10 | Unused generated `components/ui/*`                                           | Prune only proven-unreachable modules                              | Resolve barrels, internal imports, route roots, tests and component generators; no broad library replacement                 |
+| C11 | Duplicate Tailwind entry points and admin token aliases                      | One utility entry; temporary alias bridge                          | Admin/account/public routes retain expected resets/theme inheritance; remove values duplicated across roots                  |
+| C12 | Undefined `--bc-brand` references and near-duplicate token aliases           | Fix references; simplify adopted roles                             | Scan declarations/references/fallbacks plus computed values in portal/inverse/admin scopes                                   |
+| C13 | `@fontsource-variable/geist` and local Sofia font families                   | Deliberate scope decision                                          | Identify actual admin/public consumers and licences; do not silently change storefront typography                            |
+| C14 | PNG/JPG source variants and large cutouts                                    | Optimize active derivatives, archive unused masters                | Source/CSS/template/manifest/packaging references, visual quality and provenance checked                                     |
+| C15 | `.audit`, `.codex-artifacts`, historical docs and unusual root output files  | Inventory/retention policy, not automatic deletion                 | Check Git tracking and owner value; move or ignore generated noise without erasing historical evidence                       |
+| C16 | `.daynight-cms` and local upload outputs                                     | Keep out of release copies; demo-only persistence boundary         | No inspection or deletion of private records as a cleanup shortcut; live data migration needs separate authorization         |
+| C17 | Static fixture/domain coupling in `data/vehicles.ts` and public adapters     | Separate normalization/fixtures during migration                   | One canonical type/publication rule, data fixtures retained, no silent listing loss                                          |
+| C18 | Duplicated finance and number formatting                                     | Consolidate into tested domain/locale functions                    | Card/detail/calculator results agree under the same assumptions; missing data stays explicit                                 |
+| C19 | Historical query aliases/view modes                                          | Keep at boundary, then retire only by decision                     | Existing shared URLs and packaging behaviour known; canonical serialization and redirect tests exist                         |
+| C20 | Formatting debt and unused `_active` binding                                 | Small separately reviewed cleanup                                  | Only authorized paths touched; no whole-repository reformat mixed into visual migration                                      |
+
+## Reachability workflow
+
+Start with route entry points, imports and dynamic imports. Include `import.meta.glob`, raw template lists, CSS `url()`, source-generated HTML, JSON asset manifests and package/config scripts. Trace which routes actually load each CSS/runtime family. Treat root-level experimental routes as reachable even when the navigation does not advertise them.
+
+Use tooling to generate candidates, then manually review ambiguous cases. A dependency listed as a devDependency may still participate in a build; a package with zero source importers may be a build tool. Conversely, a file with imports can be part of an unreachable subgraph. Do not reduce this to a single regex count.
+
+For each removal record: owner, last consumers, replacement/redirect, tests, source revision, asset/provenance handling and rollback. Remove in small coherent groups so a regression can be localized. Re-run relevant type/build/browser tests and inspect the diff before widening the deletion scope.
+
+## Completion target
+
+No supported migrated public route depends on the old HTML renderer, body-script replay or global guard sheet. No retained account/admin feature relies on a demo-only persistence/security model while labelled live. Remaining demo/compatibility code has explicit owners and gates; otherwise it is removed from runtime with provenance preserved. The ledger is evidence of deliberate reduction, not an instruction to empty every old folder immediately.

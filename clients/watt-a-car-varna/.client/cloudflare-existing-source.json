@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "dealer": "watt-a-car-varna",
+  "kind": "personalized-source-candidate-not-an-approved-release",
+  "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+  "candidateSourceDigest": "f7660fe53576e8246df01ae7243a56d874dd85fd6af55d8f1155a2bbf72769dd",
+  "qualificationContextPath": ".client/native-qualification-context.json",
+  "qualificationContextSha256": "a71ad6273086e0bfbe673e8d56095cf17d3081f1ea90468f18692becac01e222",
+  "qualificationLockPath": ".client/native-qualification-lock.json",
+  "qualificationLockSha256": "8825ea96b08eac6f5cceb9969364ad3b4625307814688c4884062ca9d52be97a",
+  "sourceDeltaReview": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
+    "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975",
+    "reviewedAt": "2026-10-11T21:04:02.173Z"
+  },
+  "nativeApproval": false,
+  "hostedApproval": false
+}

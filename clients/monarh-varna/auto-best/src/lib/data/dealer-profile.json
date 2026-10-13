@@ -1,0 +1,397 @@
+{
+  "schemaVersion": 1,
+  "slug": "monarh-varna",
+  "business": {
+    "slug": "monarh-varna",
+    "name": "Монарх",
+    "shortName": "Монарх",
+    "latinName": "Монарх",
+    "tagline": "Монарх · Варна",
+    "city": "Варна",
+    "region": "",
+    "country": "BG",
+    "countryCode": "BG",
+    "locale": "bg-BG",
+    "currency": "EUR",
+    "distanceUnit": "km",
+    "address": "Бул. Цар Освободител, Варна, България",
+    "addressLine": "Бул. Цар Освободител",
+    "phoneDisplay": "0877277258\r\n0877796170",
+    "phoneHref": "tel:+359877277258",
+    "phoneE164": "+359877277258",
+    "email": "monarh@mail.bg",
+    "hours": "Потвърдете работното време директно с автокъщата.",
+    "website": "https://monarh.mobile.bg/",
+    "inventoryUrl": "https://monarh.mobile.bg/",
+    "contactUrl": "https://monarh.mobile.bg/contacts",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=%D0%9C%D0%BE%D0%BD%D0%B0%D1%80%D1%85%2C%20%D0%91%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
+    "mapsEmbedUrl": "https://maps.google.com/maps?q=%D0%9C%D0%BE%D0%BD%D0%B0%D1%80%D1%85%2C%20%D0%91%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F&z=16&output=embed",
+    "accent": "#c40101",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png",
+    "socialLinks": {
+      "facebook": "",
+      "instagram": "",
+      "youtube": "",
+      "tiktok": ""
+    },
+    "services": [],
+    "inventoryNotice": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+    "observedAt": "2026-10-12T10:44:18.890Z",
+    "coordinates": null,
+    "raw": {
+      "schemaVersion": 1,
+      "slug": "monarh-varna",
+      "name": "Монарх",
+      "shortName": "Монарх",
+      "city": "Варна",
+      "country": "BG",
+      "countryCode": "BG",
+      "locale": "bg-BG",
+      "currency": "EUR",
+      "distanceUnit": "km",
+      "phone": "0877277258",
+      "phoneDisplay": "0877277258\r\n0877796170",
+      "phoneE164": "+359877277258",
+      "phones": [
+        "+359877277258",
+        "+359877796170"
+      ],
+      "addressLine": "Бул. Цар Освободител",
+      "address": "Бул. Цар Освободител, Варна, България",
+      "hours": "Потвърдете работното време директно с автокъщата.",
+      "email": "monarh@mail.bg",
+      "sourceUrl": "https://monarh.mobile.bg/",
+      "stockUrl": "https://monarh.mobile.bg/",
+      "contactSourceUrl": "https://monarh.mobile.bg/contacts",
+      "observedAt": "2026-10-12T10:44:18.890Z",
+      "inventoryNotice": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+      "services": [],
+      "socialLinks": {},
+      "logo": "/dealer-brand/logo-on-light.png",
+      "logoLight": "/dealer-brand/logo-on-light.png",
+      "logoDark": "/dealer-brand/logo-on-dark.png",
+      "modernInventoryCopy": {
+        "monarh-varna-21789634036820538": {
+          "sourceDescription": "Isuzu TFS от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+          "en": {
+            "description": "Isuzu TFS from a dated public advert. Confirm condition, price and availability directly with the dealership.",
+            "imageAlts": [
+              "Isuzu TFS — dated public advert photo 1",
+              "Isuzu TFS — dated public advert photo 2"
+            ]
+          },
+          "bg": {
+            "description": "Isuzu TFS от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+            "imageAlts": [
+              "Isuzu TFS — снимка от датирана публична обява 1",
+              "Isuzu TFS — снимка от датирана публична обява 2"
+            ]
+          }
+        },
+        "monarh-varna-11772882774601045": {
+          "sourceDescription": "SEAT Toledo от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+          "en": {
+            "description": "SEAT Toledo from a dated public advert. Confirm condition, price and availability directly with the dealership.",
+            "imageAlts": [
+              "SEAT Toledo — dated public advert photo 1",
+              "SEAT Toledo — dated public advert photo 2"
+            ]
+          },
+          "bg": {
+            "description": "SEAT Toledo от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+            "imageAlts": [
+              "SEAT Toledo — снимка от датирана публична обява 1",
+              "SEAT Toledo — снимка от датирана публична обява 2"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "listings": [
+    {
+      "id": "21789634036820538",
+      "sourceId": "21789634036820538",
+      "slug": "monarh-varna-21789634036820538",
+      "title": "Isuzu TFS",
+      "make": "Isuzu",
+      "model": "TFS",
+      "trim": "",
+      "year": 2009,
+      "priceAmount": 8700,
+      "currency": "EUR",
+      "mileageValue": 251000,
+      "mileageUnit": "km",
+      "mileageOnRequest": false,
+      "body": "Pickup",
+      "bodyType": "pickup",
+      "fuel": "Diesel",
+      "fuelType": "diesel",
+      "transmission": "Automatic",
+      "transmissionType": "automatic",
+      "color": "",
+      "powerHp": null,
+      "engine": "",
+      "drivetrain": "",
+      "features": [],
+      "images": [
+        "/dealer-stock/21789634036820538-1.webp",
+        "/dealer-stock/21789634036820538-2.webp"
+      ],
+      "image": "/dealer-stock/21789634036820538-1.webp",
+      "sourceUrl": "https://monarh.mobile.bg/obiava-21789634036820538-isuzu-tfs",
+      "observedAt": "2026-10-12T12:05:57.083Z",
+      "availability": "Датирана обява; потвърдете цената и наличността директно с автокъщата.",
+      "description": "Isuzu TFS от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+      "condition": "used",
+      "location": "Варна",
+      "raw": {
+        "title": "Isuzu TFS",
+        "make": "Isuzu",
+        "model": "TFS",
+        "year": 2009,
+        "priceAmount": 8700,
+        "mileageValue": 251000,
+        "fuel": "Diesel",
+        "transmission": "Automatic",
+        "body": "Pickup",
+        "description": "Isuzu TFS от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+        "sourceFieldProof": {
+          "source": "https://monarh.mobile.bg/obiava-21789634036820538-isuzu-tfs",
+          "year": "Дата на производство август 2009",
+          "price": "8 700 €,",
+          "mileage": "Пробег [км] 251000 км",
+          "fuel": "Двигател Дизелов",
+          "transmission": "Скоростна кутия Автоматична",
+          "body": "Категория Пикап"
+        },
+        "sourceCaveats": [],
+        "id": "21789634036820538",
+        "slug": "monarh-varna-21789634036820538",
+        "currency": "EUR",
+        "priceOnRequest": false,
+        "mileageOnRequest": false,
+        "mileageUnit": "km",
+        "condition": "used",
+        "images": [
+          "/dealer-stock/21789634036820538-1.webp",
+          "/dealer-stock/21789634036820538-2.webp"
+        ],
+        "sourceUrl": "https://monarh.mobile.bg/obiava-21789634036820538-isuzu-tfs",
+        "observedAt": "2026-10-12T12:05:57.083Z",
+        "availability": "Датирана обява; потвърдете цената и наличността директно с автокъщата.",
+        "sourceProof": {
+          "sha256": "27ae86b430af8f4ec4e96f3f6dd0608eea84a968a0db8f7e4cf83c8bdc676aa7",
+          "originalPhotoBytesUnchanged": true,
+          "watermarksPreserved": true
+        }
+      }
+    },
+    {
+      "id": "11772882774601045",
+      "sourceId": "11772882774601045",
+      "slug": "monarh-varna-11772882774601045",
+      "title": "SEAT Toledo",
+      "make": "SEAT",
+      "model": "Toledo",
+      "trim": "",
+      "year": 2006,
+      "priceAmount": 4800,
+      "currency": "EUR",
+      "mileageValue": 199000,
+      "mileageUnit": "km",
+      "mileageOnRequest": false,
+      "body": "Hatchback",
+      "bodyType": "hatchback",
+      "fuel": "Petrol",
+      "fuelType": "gasoline",
+      "transmission": "Automatic",
+      "transmissionType": "automatic",
+      "color": "",
+      "powerHp": null,
+      "engine": "",
+      "drivetrain": "",
+      "features": [],
+      "images": [
+        "/dealer-stock/11772882774601045-1.webp",
+        "/dealer-stock/11772882774601045-2.webp"
+      ],
+      "image": "/dealer-stock/11772882774601045-1.webp",
+      "sourceUrl": "https://monarh.mobile.bg/obiava-11772882774601045-seat-toledo",
+      "observedAt": "2026-10-12T12:05:57.084Z",
+      "availability": "Датирана обява; потвърдете цената и наличността директно с автокъщата.",
+      "description": "SEAT Toledo от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+      "condition": "used",
+      "location": "Варна",
+      "raw": {
+        "title": "SEAT Toledo",
+        "make": "SEAT",
+        "model": "Toledo",
+        "year": 2006,
+        "priceAmount": 4800,
+        "mileageValue": 199000,
+        "fuel": "Petrol",
+        "transmission": "Automatic",
+        "body": "Hatchback",
+        "description": "SEAT Toledo от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+        "sourceFieldProof": {
+          "source": "https://monarh.mobile.bg/obiava-11772882774601045-seat-toledo",
+          "year": "Дата на производство юли 2006",
+          "price": "4 800 €,",
+          "mileage": "Пробег [км] 199000 км",
+          "fuel": "Двигател Бензинов",
+          "transmission": "Скоростна кутия Автоматична",
+          "body": "Категория Хечбек"
+        },
+        "sourceCaveats": [],
+        "id": "11772882774601045",
+        "slug": "monarh-varna-11772882774601045",
+        "currency": "EUR",
+        "priceOnRequest": false,
+        "mileageOnRequest": false,
+        "mileageUnit": "km",
+        "condition": "used",
+        "images": [
+          "/dealer-stock/11772882774601045-1.webp",
+          "/dealer-stock/11772882774601045-2.webp"
+        ],
+        "sourceUrl": "https://monarh.mobile.bg/obiava-11772882774601045-seat-toledo",
+        "observedAt": "2026-10-12T12:05:57.084Z",
+        "availability": "Датирана обява; потвърдете цената и наличността директно с автокъщата.",
+        "sourceProof": {
+          "sha256": "cc624245ecf6e49abd4d0745a2be0bfe250d1ba7eb3f7293fd9419303f078f9b",
+          "originalPhotoBytesUnchanged": true,
+          "watermarksPreserved": true
+        }
+      }
+    }
+  ],
+  "rawFacts": {
+    "schemaVersion": 1,
+    "slug": "monarh-varna",
+    "dealerId": "monarh-varna",
+    "business": {
+      "schemaVersion": 1,
+      "slug": "monarh-varna",
+      "name": "Монарх",
+      "shortName": "Монарх",
+      "city": "Варна",
+      "country": "BG",
+      "countryCode": "BG",
+      "locale": "bg-BG",
+      "currency": "EUR",
+      "distanceUnit": "km",
+      "phone": "0877277258",
+      "phoneDisplay": "0877277258\r\n0877796170",
+      "phoneE164": "+359877277258",
+      "phones": [
+        "+359877277258",
+        "+359877796170"
+      ],
+      "addressLine": "Бул. Цар Освободител",
+      "address": "Бул. Цар Освободител, Варна, България",
+      "hours": "Потвърдете работното време директно с автокъщата.",
+      "email": "monarh@mail.bg",
+      "sourceUrl": "https://monarh.mobile.bg/",
+      "stockUrl": "https://monarh.mobile.bg/",
+      "contactSourceUrl": "https://monarh.mobile.bg/contacts",
+      "observedAt": "2026-10-12T10:44:18.890Z",
+      "inventoryNotice": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+      "services": [],
+      "socialLinks": {},
+      "logo": "/dealer-brand/logo-on-light.png",
+      "logoLight": "/dealer-brand/logo-on-light.png",
+      "logoDark": "/dealer-brand/logo-on-dark.png",
+      "modernInventoryCopy": {
+        "monarh-varna-21789634036820538": {
+          "sourceDescription": "Isuzu TFS от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+          "en": {
+            "description": "Isuzu TFS from a dated public advert. Confirm condition, price and availability directly with the dealership.",
+            "imageAlts": [
+              "Isuzu TFS — dated public advert photo 1",
+              "Isuzu TFS — dated public advert photo 2"
+            ]
+          },
+          "bg": {
+            "description": "Isuzu TFS от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+            "imageAlts": [
+              "Isuzu TFS — снимка от датирана публична обява 1",
+              "Isuzu TFS — снимка от датирана публична обява 2"
+            ]
+          }
+        },
+        "monarh-varna-11772882774601045": {
+          "sourceDescription": "SEAT Toledo от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+          "en": {
+            "description": "SEAT Toledo from a dated public advert. Confirm condition, price and availability directly with the dealership.",
+            "imageAlts": [
+              "SEAT Toledo — dated public advert photo 1",
+              "SEAT Toledo — dated public advert photo 2"
+            ]
+          },
+          "bg": {
+            "description": "SEAT Toledo от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+            "imageAlts": [
+              "SEAT Toledo — снимка от датирана публична обява 1",
+              "SEAT Toledo — снимка от датирана публична обява 2"
+            ]
+          }
+        }
+      }
+    },
+    "research": {
+      "website": {
+        "status": "confirmed-primary-own-site",
+        "url": "https://monarh.bg/",
+        "phone": "+359877277258",
+        "email": "monarh@mail.bg"
+      },
+      "publicIdentityKey": "mobile-profile:monarh.mobile.bg",
+      "profileAdvertCount": 19,
+      "availabilityConfirmed": false,
+      "legalEntityOwnershipVerified": false,
+      "addressExactness": "public-contact-as-published",
+      "caveats": [],
+      "sourceProof": [
+        {
+          "url": "https://monarh.mobile.bg/",
+          "finalUrl": "https://monarh.mobile.bg/",
+          "observedAt": "2026-10-12T10:44:18.942Z",
+          "status": 200,
+          "bytes": 89389,
+          "sha256": "e336c283141653ab062da4d188f08cc220021d4f689372ff23f1ee5396189faf"
+        },
+        {
+          "url": "https://monarh.mobile.bg/contacts",
+          "finalUrl": "https://monarh.mobile.bg/contacts",
+          "observedAt": "2026-10-12T10:44:18.890Z",
+          "status": 200,
+          "bytes": 44948,
+          "sha256": "190b1ace289a909c0a1dff04b5b2a9b1355d927b704b97440dcbc33f26c96203"
+        },
+        {
+          "url": "https://monarh.mobile.bg/about",
+          "finalUrl": "https://monarh.mobile.bg/about",
+          "observedAt": "2026-10-12T10:44:18.879Z",
+          "status": 200,
+          "bytes": 7444,
+          "sha256": "1e74ceaefeaa53645b5f6dd9f6be1603404e64a638898dc83d6dfc51ee1d3a75"
+        }
+      ],
+      "sourceAction": "new-absent-cars-source-after-wrapper-identity-recheck",
+      "existingSourceTree": null,
+      "inventoryModeSelection": "dated-listing-snapshot",
+      "productionAssetInputsComplete": true,
+      "stockSnapshotScope": "Two retained public adverts, not a complete/live inventory",
+      "stockMediaAuthority": "Owner-authorized public dated demo scope; original source bytes and watermarks retained"
+    }
+  },
+  "sourceCount": 2,
+  "stockKind": "dated-listing-snapshot",
+  "logoContract": null
+}

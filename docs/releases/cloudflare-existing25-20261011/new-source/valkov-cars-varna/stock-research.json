@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-public-stock-research-not-production-input",
+  "dealer": "valkov-cars-varna",
+  "observedAt": "2026-10-12T10:44:17.955Z",
+  "sourceUrl": "https://valkovcars.mobile.bg/",
+  "profileAdvertCount": 3,
+  "profileCountIsAvailability": false,
+  "sampledAdvertUrls": [
+    "https://valkovcars.mobile.bg/obiava-11770728962537417-volvo-v60-2-0-d3",
+    "https://valkovcars.mobile.bg/obiava-11772080668154587-bmw-320-2-0xdrive-luxury",
+    "https://valkovcars.mobile.bg/obiava-11766164687866246-skoda-octavia-2-0tdi-dsg-4x4"
+  ],
+  "rawPriceLabels": [
+    "10 300 €",
+    "7 300 €",
+    "5 499 €"
+  ],
+  "retainedFirstAdvertExcerpt": "1 - 3 от общо 3 обяви на \"ВЪЛКОВ КАРС\" - Автомобили и Джипове Volvo V60 2.0 D3 10 300 € Цената е с включено ДДС обл. Варна, гр. Варна декември 2020 г. 290 000 км Черен Дизелов 150 к.с. Евро 6 2000 куб.см Автоматична Комби Внос от северна Италия. Евро 6D. Автомобилът е в перфектно състояние както вън така и отвътре. Перфектна работа на двигателя и скоростната кутия, стегната ходова част. Предлагаме проба или преглед в доверен на вас сервиз. Автокъща Вълков Карс предлага на своите клиенти , съдействие за регистрация в Кат Варна или издава",
+  "partsIgnored": null,
+  "availabilityConfirmed": false,
+  "mediaReusePermission": "unknown",
+  "sourcePhotosFetched": false,
+  "selectedCreationStockMode": "illustrative-not-dealer-stock",
+  "nextInput": "Use approved template illustrative vehicle assets with same honest demo disclosure across all six. Do not republish these dealer advert photos or claim these prices/availability in demo inventory.",
+  "productionStockReady": false
+}

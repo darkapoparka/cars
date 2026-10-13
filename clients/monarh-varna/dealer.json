@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 1,
+  "slug": "monarh-varna",
+  "dealerId": "monarh-varna",
+  "repository": "darkapoparka/cars-monarh-varna",
+  "defaultBranch": "main",
+  "variants": [
+    {
+      "key": "auto-best",
+      "entry": "/",
+      "base": ""
+    },
+    {
+      "key": "modern",
+      "entry": "/variant-2/cars",
+      "base": "/variant-2"
+    },
+    {
+      "key": "import",
+      "entry": "/variant-3/",
+      "base": "/variant-3"
+    },
+    {
+      "key": "app",
+      "entry": "/variant-4/",
+      "base": "/variant-4"
+    },
+    {
+      "key": "mobile",
+      "entry": "/variant-5/",
+      "base": "/variant-5"
+    },
+    {
+      "key": "karento-best",
+      "entry": "/variant-6/",
+      "base": "/variant-6"
+    }
+  ],
+  "extraAssets": [
+    "dealer-stock",
+    "dealer-brand",
+    "branding",
+    "assets"
+  ],
+  "packaging": {
+    "version": "5"
+  },
+  "branding": {
+    "schemaVersion": 1,
+    "required": true,
+    "policy": "template-default",
+    "contract": ".cars-branding.json",
+    "surfaceBindingsVersion": 1
+  },
+  "localization": {
+    "schemaVersion": 1,
+    "dealerId": "monarh-varna",
+    "defaultLocale": "bg",
+    "enabledLocales": [
+      "bg",
+      "en"
+    ],
+    "dealerCountry": "BG",
+    "inventoryCurrency": "EUR"
+  },
+  "templateRevisions": {
+    "auto-best": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "modern": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "import": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "app": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "mobile": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "karento-best": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+  },
+  "templateSources": {
+    "auto-best": {
+      "repository": "darkapoparka/cars",
+      "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+      "path": "templates/auto-best",
+      "tree": "5fb7a2164775050a47c1183371622295dbf63725",
+      "digest": "dcbc59990928884006652677d3529020df3844029993895a71e5f6818ba7363c"
+    },
+    "modern": {
+      "repository": "darkapoparka/cars",
+      "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+      "path": "templates/modern",
+      "tree": "3974380670eb388bb16182f94ade33be6d87b1c1",
+      "digest": "ba263aac8f1863d133807d3e1bf3597d125cf315a7e0deba3f6e419b52434c25"
+    },
+    "import": {
+      "repository": "darkapoparka/cars",
+      "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+      "path": "templates/import",
+      "tree": "6afc6901e2f95967fb7c72e9f75525d4d6fbf086",
+      "digest": "f98a0934cdcc5adbda393c14c02eb2adc0175344ab2ac3f913afe4b0603366e5"
+    },
+    "app": {
+      "repository": "darkapoparka/cars",
+      "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+      "path": "templates/app",
+      "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
+      "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+    },
+    "mobile": {
+      "repository": "darkapoparka/cars",
+      "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+      "path": "templates/mobile",
+      "tree": "2b02829e157071e305bfb2dff10ef18e85c8a35e",
+      "digest": "4e858bd9dbd3ef5b52cd904c4ed97bbfdc0f4cfe02b5a3840580f38026b867a0"
+    },
+    "karento-best": {
+      "repository": "darkapoparka/cars",
+      "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+      "path": "templates/karento-best",
+      "tree": "5f6eec8efb2f9e99819f7f0c2f743d18fff7b134",
+      "digest": "83056967764a686f3737d74b86c5db51c1385a50184853f50ec4ade80c1dd44f"
+    }
+  },
+  "cloudflare": {
+    "workerPrefix": "cars-monarh-varna"
+  },
+  "shareIdentity": {
+    "name": "Монарх",
+    "publicOrigin": "https://cars-monarh-varna.darkapoparka1.workers.dev",
+    "description": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация. Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "e558720ed1b30f9b3fb1bb7f9a81b4312bdd38900424db4c6063fc17baf07748",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "b5107a91f909a052422722f594273b8d994463f6a6ba8ad9f6c6a613ab723114"
+    }
+  }
+}

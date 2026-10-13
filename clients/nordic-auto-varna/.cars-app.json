@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "dealer": "nordic-auto-varna",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/app",
+    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
+    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+  },
+  "appDigest": "5a74311e068dadf6749b782ef15fcade35ce818fe82460852416b6e7b029f27c",
+  "provenance": {
+    "schemaVersion": 1,
+    "dealer": "nordic-auto-varna",
+    "profile": "auto-best/src/lib/data/dealer-profile.json",
+    "profileSha256": "91d8dc6cfca321bb55c4719c3ae0ec91972fcd57cbe4c471f0287bfab183042a",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "vehicles": 2,
+    "currency": "EUR",
+    "observedAt": "2026-10-12T11:43:24.376Z",
+    "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-light.png",
+        "output": "public/dealer-app/logo-light-5cd0386ec99f3dc2914e.png",
+        "sha256": "5cd0386ec99f3dc2914ecd62c9b49f32a0dd3192ef26ce11ccb2fee7f4f2ab57",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-dark.png",
+        "output": "public/dealer-app/logo-dark-c368d7b8088a9baa2d21.png",
+        "sha256": "c368d7b8088a9baa2d21459e416b016b206fc7ce9ec652d420cc339e3c0bf067",
+        "role": "logo-dark"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/21783932906160618-1.webp",
+        "output": "public/dealer-app/vehicle-e7f23c098d85de29793d.webp",
+        "sha256": "e7f23c098d85de29793d4d42a9f5e0802438e5bbbc491f70963d9c00d17cdf3a",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/21783932906160618-2.webp",
+        "output": "public/dealer-app/vehicle-ec4d642f02724a41154b.webp",
+        "sha256": "ec4d642f02724a41154bf7cb5152ba839abec6abc825777da8a8348279541f07",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/21788770224128681-2.webp",
+        "output": "public/dealer-app/vehicle-081eb07b9a812d9e3573.webp",
+        "sha256": "081eb07b9a812d9e35731767db0fe649e9129e8b4a8ee47a31211d28f9bb847e",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/21788770224128681-1.webp",
+        "output": "public/dealer-app/vehicle-bc038defd925d00a486e.webp",
+        "sha256": "bc038defd925d00a486eb344c803906a0905dfbc60510e12075da31772346b01",
+        "role": "vehicle"
+      }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "nordic-auto-varna-21783932906160618",
+        "sourceValue": 230000,
+        "sourceUnit": "km",
+        "canonicalKm": 230000
+      },
+      {
+        "slug": "nordic-auto-varna-21788770224128681",
+        "sourceValue": 260000,
+        "sourceUnit": "km",
+        "canonicalKm": 260000
+      }
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

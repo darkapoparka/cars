@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "slug": "champion-auto-varna",
+  "dealerId": "champion-auto-varna",
+  "business": {
+    "schemaVersion": 1,
+    "slug": "champion-auto-varna",
+    "name": "Сhampion Auto",
+    "shortName": "Сhampion Auto",
+    "city": "Варна",
+    "country": "BG",
+    "countryCode": "BG",
+    "locale": "bg-BG",
+    "currency": "EUR",
+    "distanceUnit": "km",
+    "phone": "0899736225",
+    "phoneDisplay": "0899736225",
+    "phoneE164": "+359899736225",
+    "phones": [
+      "+359899736225"
+    ],
+    "addressLine": "бул. Цар Освободител 210, до изхода на КАТ",
+    "address": "бул. Цар Освободител 210, до изхода на КАТ, Варна, България",
+    "hours": "Потвърдете работното време директно с автокъщата.",
+    "email": "",
+    "sourceUrl": "https://champion.mobile.bg/",
+    "stockUrl": "https://champion.mobile.bg/",
+    "contactSourceUrl": "https://champion.mobile.bg/contacts",
+    "observedAt": "2026-10-12T10:44:18.457Z",
+    "inventoryNotice": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+    "services": [],
+    "socialLinks": {},
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png",
+    "modernInventoryCopy": {
+      "champion-auto-varna-21791746826227790": {
+        "sourceDescription": "BMW X6 от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+        "en": {
+          "description": "BMW X6 from a dated public advert. Confirm condition, price and availability directly with the dealership.",
+          "imageAlts": [
+            "BMW X6 — dated public advert photo 1",
+            "BMW X6 — dated public advert photo 2"
+          ]
+        },
+        "bg": {
+          "description": "BMW X6 от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+          "imageAlts": [
+            "BMW X6 — снимка от датирана публична обява 1",
+            "BMW X6 — снимка от датирана публична обява 2"
+          ]
+        }
+      },
+      "champion-auto-varna-11760906472084145": {
+        "sourceDescription": "Mercedes-Benz CLA 250 от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+        "en": {
+          "description": "Mercedes-Benz CLA 250 from a dated public advert. Confirm condition, price and availability directly with the dealership.",
+          "imageAlts": [
+            "Mercedes-Benz CLA 250 — dated public advert photo 1",
+            "Mercedes-Benz CLA 250 — dated public advert photo 2"
+          ]
+        },
+        "bg": {
+          "description": "Mercedes-Benz CLA 250 от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+          "imageAlts": [
+            "Mercedes-Benz CLA 250 — снимка от датирана публична обява 1",
+            "Mercedes-Benz CLA 250 — снимка от датирана публична обява 2"
+          ]
+        }
+      }
+    }
+  },
+  "research": {
+    "website": {
+      "status": "reported-in-primary-advert",
+      "url": "https://www.shampionauto.bg/",
+      "confirmedBy": "https://champion.mobile.bg/",
+      "note": "Primary stock adverts name shampionauto.bg; site was not reachable in bounded check. Do not claim a website gap."
+    },
+    "publicIdentityKey": "mobile-profile:champion.mobile.bg",
+    "profileAdvertCount": 54,
+    "availabilityConfirmed": false,
+    "legalEntityOwnershipVerified": false,
+    "addressExactness": "public-contact-as-published",
+    "caveats": [
+      "Distinct public profile/phone from registered Champion Auto Pro; legal entity ownership has not been audited.",
+      "Contact page says Tsar Osvoboditel 210; advert copy mentions 204. Primary contact location retained; no exact location guarantee."
+    ],
+    "sourceProof": [
+      {
+        "url": "https://champion.mobile.bg/",
+        "finalUrl": "https://champion.mobile.bg/",
+        "observedAt": "2026-10-12T10:44:18.606Z",
+        "status": 200,
+        "bytes": 218560,
+        "sha256": "74247b4532d6a86109b65a16d0950fb9e0658ed55d6a7dc67c394584de519a76"
+      },
+      {
+        "url": "https://champion.mobile.bg/contacts",
+        "finalUrl": "https://champion.mobile.bg/contacts",
+        "observedAt": "2026-10-12T10:44:18.457Z",
+        "status": 200,
+        "bytes": 42456,
+        "sha256": "3dd28ab631fbb21e99eed0a16893010219b257c0b9c8887c2604d95beb9bd16e"
+      },
+      {
+        "url": "https://champion.mobile.bg/about",
+        "finalUrl": "https://champion.mobile.bg/about",
+        "observedAt": "2026-10-12T10:44:18.443Z",
+        "status": 200,
+        "bytes": 8424,
+        "sha256": "a8bba560ae566e498a4e6783c5162a7b968dce1a78cf7b6ecd989a959856c7a6"
+      }
+    ],
+    "sourceAction": "new-absent-cars-source-after-wrapper-identity-recheck",
+    "existingSourceTree": null,
+    "inventoryModeSelection": "dated-listing-snapshot",
+    "productionAssetInputsComplete": true,
+    "stockSnapshotScope": "Two retained public adverts, not a complete/live inventory",
+    "stockMediaAuthority": "Owner-authorized public dated demo scope; original source bytes and watermarks retained"
+  }
+}

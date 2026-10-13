@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-input-mapping",
+  "dealer": "balkan-car-varna",
+  "inputs": {
+    "facts": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/balkan-car-varna/facts.json",
+      "sha256": "fd0a51177431089d3f75da0809ebf37ec3903427ceffae41e21500cab86825fc"
+    },
+    "stock": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/balkan-car-varna/stock.json",
+      "sha256": "91944d91c600f6c57fb7036dc26167076dc9757b986e801cc5e72fe7fa704f7b"
+    },
+    "locale": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/balkan-car-varna/locale.json",
+      "sha256": "34fe08bbd70b7f50adb0c3d1848c683ec98c1b805d9c90037290e938912db29f"
+    },
+    "branding": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/balkan-car-varna/branding.json",
+      "sha256": "79243fe5cdd4b5de8058e4214892d7d51fb7ff20370f549903f7796711a4db18"
+    }
+  },
+  "sources": [
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/balkan-car-varna/research-facts.json",
+      "sha256": "c3974d7281445d2c8cbe43e5cd6302a95bc87b078caaf1601e6965bd45797c58"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/balkan-car-varna/identity.json",
+      "sha256": "fb477c98349e6e604324fb02e8c8fa2335a19b677e6d17011f1b34e8dd69f9bc"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/balkan-car-varna/locale.json",
+      "sha256": "34fe08bbd70b7f50adb0c3d1848c683ec98c1b805d9c90037290e938912db29f"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/balkan-car-varna/stock-research.json",
+      "sha256": "0d7d365b492c8cb968e0c968fcf4ab7a9e7e7fca85e7346a351fa78db80192dd"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/balkan-car-varna/branding.json",
+      "sha256": "79243fe5cdd4b5de8058e4214892d7d51fb7ff20370f549903f7796711a4db18"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/balkan-car-varna/branding/generated-master.png",
+      "sha256": "8c7026d37b9f1db860f2b22fec6dd836e6a92a2aa5416c75f474d59f38161508"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/balkan-car-varna/branding/on-accent.png",
+      "sha256": "ba4c6e73b601dfbc4c810508eb26828ac49aacdf61c0eff3dc42b8c5fb831e1e"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/balkan-car-varna/branding/on-dark.png",
+      "sha256": "ba4c6e73b601dfbc4c810508eb26828ac49aacdf61c0eff3dc42b8c5fb831e1e"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/balkan-car-varna/branding/on-light.png",
+      "sha256": "8c7026d37b9f1db860f2b22fec6dd836e6a92a2aa5416c75f474d59f38161508"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/balkan-car-varna/branding/original-logo-reference.pic",
+      "sha256": "a6b1f4389784ad64d3aac8b6c86f92ce435595ca531ec11e01dcd5bf9fe309fc"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/balkan-car-varna/facts.json",
+      "sha256": "fd0a51177431089d3f75da0809ebf37ec3903427ceffae41e21500cab86825fc"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/balkan-car-varna/generation-brief.json",
+      "sha256": "428b6f255acbef881569a9fe6295bcaf47853fe8cf43b5eb3b015602058ac730"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/balkan-car-varna/media-input-mapping.json",
+      "sha256": "40104749e8bf2f040b91c24a7a7eddbe083711cc4d1b008d2bd2cf7e0f1e31ec"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/balkan-car-varna/media/11775920728897115-1.webp",
+      "sha256": "f4b4fb8f8e06fd30b863c5e28806c908cefd07295245e25915d7cc9502f6f3ea"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/balkan-car-varna/media/11775920728897115-2.webp",
+      "sha256": "7c0f251908ed69b04b1482fdb20c6c8ed22cc20434c9a1fb4dbeaa1c36002f6a"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/balkan-car-varna/media/21790309618806312-1.webp",
+      "sha256": "4fbaa230a99f48673acb603a508054600115f2bdd4913bbab6f8d52762772c59"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/balkan-car-varna/media/21790309618806312-2.webp",
+      "sha256": "481ab9665152903e769fb71a355236fc9027da093fc13a40defa77d8a899dc5f"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/balkan-car-varna/reviewed-modern-inventory-copy.json",
+      "sha256": "8743ff65fa3f227fcc6b4043ee38d1a0bf1f21d8a99c8c26dcb8dec939bb83d8"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/balkan-car-varna/stock.json",
+      "sha256": "91944d91c600f6c57fb7036dc26167076dc9757b986e801cc5e72fe7fa704f7b"
+    }
+  ]
+}

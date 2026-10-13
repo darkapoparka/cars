@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-public-stock-research-not-production-input",
+  "dealer": "vaen-cars-varna",
+  "observedAt": "2026-10-12T10:44:19.724Z",
+  "sourceUrl": "https://vaencars.mobile.bg/",
+  "profileAdvertCount": 14,
+  "profileCountIsAvailability": false,
+  "sampledAdvertUrls": [
+    "https://vaencars.mobile.bg/obiava-11790770761188035-mg-s6-luxury-awd",
+    "https://vaencars.mobile.bg/obiava-11790767561385627-mg-s6-luxury-long-range",
+    "https://vaencars.mobile.bg/obiava-11790764224477564-mg-s5-luxury-long-range",
+    "https://vaencars.mobile.bg/obiava-11788956083092359-tesla-model-3-performance-awd",
+    "https://vaencars.mobile.bg/obiava-11785773982347509-byd-sealion-7-design-awd"
+  ],
+  "rawPriceLabels": [
+    "46 990 €",
+    "42 990 €",
+    "34 990 €",
+    "32 990 €",
+    "49 800 €"
+  ],
+  "retainedFirstAdvertExcerpt": "1 - 14 от общо 14 обяви на \"VAEN CARS\" - Автомобили и Джипове Mg S6 Luxury AWD 46 990 € Цената е с включено ДДС Намира се в Нидерландия август 2026 г. 20 км Металик Електрически 361 к.с. Евро 6 77 kWh Автоматична Джип ⚡ MG S6 EV Luxury AWD Long Range | 2026 | Само 20 км | Фабрично нов автомобил! Наличен за предварителна поръчка при наш партньор в западна Европа. Очаквана доставка - началото на декември! ✅ Европейски автомобил ✅ Фабрично нов ✅ Фабрична гаранция 7 години или 150 000км ✅ 77 Kwh NCM батерия ✅ Пробег 20 км ✅ Мощност 361 к. с",
+  "partsIgnored": null,
+  "availabilityConfirmed": false,
+  "mediaReusePermission": "unknown",
+  "sourcePhotosFetched": false,
+  "selectedCreationStockMode": "illustrative-not-dealer-stock",
+  "nextInput": "Use approved template illustrative vehicle assets with same honest demo disclosure across all six. Do not republish these dealer advert photos or claim these prices/availability in demo inventory.",
+  "productionStockReady": false
+}

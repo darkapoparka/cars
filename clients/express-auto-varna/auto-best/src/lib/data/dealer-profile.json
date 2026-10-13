@@ -1,0 +1,393 @@
+{
+  "schemaVersion": 1,
+  "slug": "express-auto-varna",
+  "business": {
+    "slug": "express-auto-varna",
+    "name": "ЕКСПРЕС АУТО",
+    "shortName": "ЕКСПРЕС АУТО",
+    "latinName": "ЕКСПРЕС АУТО",
+    "tagline": "ЕКСПРЕС АУТО · Варна",
+    "city": "Варна",
+    "region": "",
+    "country": "BG",
+    "countryCode": "BG",
+    "locale": "bg-BG",
+    "currency": "EUR",
+    "distanceUnit": "km",
+    "address": "бул.Цар Освободител 311, Варна, България",
+    "addressLine": "бул.Цар Освободител 311",
+    "phoneDisplay": "0888885453",
+    "phoneHref": "tel:+359888885453",
+    "phoneE164": "+359888885453",
+    "email": "",
+    "hours": "Потвърдете работното време директно с автокъщата.",
+    "website": "https://express_auto.mobile.bg/",
+    "inventoryUrl": "https://express_auto.mobile.bg/",
+    "contactUrl": "https://express_auto.mobile.bg/contacts",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=%D0%95%D0%9A%D0%A1%D0%9F%D0%A0%D0%95%D0%A1%20%D0%90%D0%A3%D0%A2%D0%9E%2C%20%D0%B1%D1%83%D0%BB.%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20311%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
+    "mapsEmbedUrl": "https://maps.google.com/maps?q=%D0%95%D0%9A%D0%A1%D0%9F%D0%A0%D0%95%D0%A1%20%D0%90%D0%A3%D0%A2%D0%9E%2C%20%D0%B1%D1%83%D0%BB.%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20311%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F&z=16&output=embed",
+    "accent": "#c40101",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png",
+    "socialLinks": {
+      "facebook": "",
+      "instagram": "",
+      "youtube": "",
+      "tiktok": ""
+    },
+    "services": [],
+    "inventoryNotice": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+    "observedAt": "2026-10-12T10:44:18.814Z",
+    "coordinates": null,
+    "raw": {
+      "schemaVersion": 1,
+      "slug": "express-auto-varna",
+      "name": "ЕКСПРЕС АУТО",
+      "shortName": "ЕКСПРЕС АУТО",
+      "city": "Варна",
+      "country": "BG",
+      "countryCode": "BG",
+      "locale": "bg-BG",
+      "currency": "EUR",
+      "distanceUnit": "km",
+      "phone": "0888885453",
+      "phoneDisplay": "0888885453",
+      "phoneE164": "+359888885453",
+      "phones": [
+        "+359888885453"
+      ],
+      "addressLine": "бул.Цар Освободител 311",
+      "address": "бул.Цар Освободител 311, Варна, България",
+      "hours": "Потвърдете работното време директно с автокъщата.",
+      "email": "",
+      "sourceUrl": "https://express_auto.mobile.bg/",
+      "stockUrl": "https://express_auto.mobile.bg/",
+      "contactSourceUrl": "https://express_auto.mobile.bg/contacts",
+      "observedAt": "2026-10-12T10:44:18.814Z",
+      "inventoryNotice": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+      "services": [],
+      "socialLinks": {},
+      "logo": "/dealer-brand/logo-on-light.png",
+      "logoLight": "/dealer-brand/logo-on-light.png",
+      "logoDark": "/dealer-brand/logo-on-dark.png",
+      "modernInventoryCopy": {
+        "express-auto-varna-11791655661973701": {
+          "sourceDescription": "Nissan Note 1.4 от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+          "en": {
+            "description": "Nissan Note 1.4 from a dated public advert. Confirm condition, price and availability directly with the dealership.",
+            "imageAlts": [
+              "Nissan Note 1.4 — dated public advert photo 1",
+              "Nissan Note 1.4 — dated public advert photo 2"
+            ]
+          },
+          "bg": {
+            "description": "Nissan Note 1.4 от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+            "imageAlts": [
+              "Nissan Note 1.4 — снимка от датирана публична обява 1",
+              "Nissan Note 1.4 — снимка от датирана публична обява 2"
+            ]
+          }
+        },
+        "express-auto-varna-11791655386104961": {
+          "sourceDescription": "Hyundai Ioniq Plug-in Hybrid от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+          "en": {
+            "description": "Hyundai Ioniq Plug-in Hybrid from a dated public advert. Confirm condition, price and availability directly with the dealership.",
+            "imageAlts": [
+              "Hyundai Ioniq Plug-in Hybrid — dated public advert photo 1",
+              "Hyundai Ioniq Plug-in Hybrid — dated public advert photo 2"
+            ]
+          },
+          "bg": {
+            "description": "Hyundai Ioniq Plug-in Hybrid от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+            "imageAlts": [
+              "Hyundai Ioniq Plug-in Hybrid — снимка от датирана публична обява 1",
+              "Hyundai Ioniq Plug-in Hybrid — снимка от датирана публична обява 2"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "listings": [
+    {
+      "id": "11791655661973701",
+      "sourceId": "11791655661973701",
+      "slug": "express-auto-varna-11791655661973701",
+      "title": "Nissan Note 1.4",
+      "make": "Nissan",
+      "model": "Note",
+      "trim": "",
+      "year": 2011,
+      "priceAmount": 3390,
+      "currency": "EUR",
+      "mileageValue": 168000,
+      "mileageUnit": "km",
+      "mileageOnRequest": false,
+      "body": "Hatchback",
+      "bodyType": "hatchback",
+      "fuel": "Petrol",
+      "fuelType": "gasoline",
+      "transmission": "Manual",
+      "transmissionType": "manual",
+      "color": "",
+      "powerHp": null,
+      "engine": "",
+      "drivetrain": "",
+      "features": [],
+      "images": [
+        "/dealer-stock/11791655661973701-1.webp",
+        "/dealer-stock/11791655661973701-2.webp"
+      ],
+      "image": "/dealer-stock/11791655661973701-1.webp",
+      "sourceUrl": "https://express_auto.mobile.bg/obiava-11791655661973701-nissan-note-1-4i",
+      "observedAt": "2026-10-12T12:05:57.077Z",
+      "availability": "Датирана обява; потвърдете цената и наличността директно с автокъщата.",
+      "description": "Nissan Note 1.4 от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+      "condition": "used",
+      "location": "Варна",
+      "raw": {
+        "title": "Nissan Note 1.4",
+        "make": "Nissan",
+        "model": "Note",
+        "year": 2011,
+        "priceAmount": 3390,
+        "mileageValue": 168000,
+        "fuel": "Petrol",
+        "transmission": "Manual",
+        "body": "Hatchback",
+        "description": "Nissan Note 1.4 от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+        "sourceFieldProof": {
+          "source": "https://express_auto.mobile.bg/obiava-11791655661973701-nissan-note-1-4i",
+          "year": "Дата на производство септември 2011",
+          "price": "3 390 €,",
+          "mileage": "Пробег [км] 168000 км",
+          "fuel": "Двигател Бензинов",
+          "transmission": "Скоростна кутия Ръчна",
+          "body": "Категория Хечбек"
+        },
+        "sourceCaveats": [],
+        "id": "11791655661973701",
+        "slug": "express-auto-varna-11791655661973701",
+        "currency": "EUR",
+        "priceOnRequest": false,
+        "mileageOnRequest": false,
+        "mileageUnit": "km",
+        "condition": "used",
+        "images": [
+          "/dealer-stock/11791655661973701-1.webp",
+          "/dealer-stock/11791655661973701-2.webp"
+        ],
+        "sourceUrl": "https://express_auto.mobile.bg/obiava-11791655661973701-nissan-note-1-4i",
+        "observedAt": "2026-10-12T12:05:57.077Z",
+        "availability": "Датирана обява; потвърдете цената и наличността директно с автокъщата.",
+        "sourceProof": {
+          "sha256": "165d5dfb3b91f1fe7711960e3f53c19758cd380b71279ed4d161749b47488d44",
+          "originalPhotoBytesUnchanged": true,
+          "watermarksPreserved": true
+        }
+      }
+    },
+    {
+      "id": "11791655386104961",
+      "sourceId": "11791655386104961",
+      "slug": "express-auto-varna-11791655386104961",
+      "title": "Hyundai Ioniq Plug-in Hybrid",
+      "make": "Hyundai",
+      "model": "Ioniq",
+      "trim": "",
+      "year": 2017,
+      "priceAmount": 14999,
+      "currency": "EUR",
+      "mileageValue": 126000,
+      "mileageUnit": "km",
+      "mileageOnRequest": false,
+      "body": "Hatchback",
+      "bodyType": "hatchback",
+      "fuel": "Plug-in Hybrid",
+      "fuelType": "hybrid",
+      "transmission": "Automatic",
+      "transmissionType": "automatic",
+      "color": "",
+      "powerHp": null,
+      "engine": "",
+      "drivetrain": "",
+      "features": [],
+      "images": [
+        "/dealer-stock/11791655386104961-1.webp",
+        "/dealer-stock/11791655386104961-2.webp"
+      ],
+      "image": "/dealer-stock/11791655386104961-1.webp",
+      "sourceUrl": "https://express_auto.mobile.bg/obiava-11791655386104961-hyundai-ioniq-pehv",
+      "observedAt": "2026-10-12T12:05:57.078Z",
+      "availability": "Датирана обява; потвърдете цената и наличността директно с автокъщата.",
+      "description": "Hyundai Ioniq Plug-in Hybrid от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+      "condition": "used",
+      "location": "Варна",
+      "raw": {
+        "title": "Hyundai Ioniq Plug-in Hybrid",
+        "make": "Hyundai",
+        "model": "Ioniq",
+        "year": 2017,
+        "priceAmount": 14999,
+        "mileageValue": 126000,
+        "fuel": "Plug-in Hybrid",
+        "transmission": "Automatic",
+        "body": "Hatchback",
+        "description": "Hyundai Ioniq Plug-in Hybrid от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+        "sourceFieldProof": {
+          "source": "https://express_auto.mobile.bg/obiava-11791655386104961-hyundai-ioniq-pehv",
+          "year": "Дата на производство октомври 2017",
+          "price": "14 999 €,",
+          "mileage": "Пробег [км] 126000 км",
+          "fuel": "Двигател Plug-in хибрид",
+          "transmission": "Скоростна кутия Автоматична",
+          "body": "Категория Хечбек"
+        },
+        "sourceCaveats": [],
+        "id": "11791655386104961",
+        "slug": "express-auto-varna-11791655386104961",
+        "currency": "EUR",
+        "priceOnRequest": false,
+        "mileageOnRequest": false,
+        "mileageUnit": "km",
+        "condition": "used",
+        "images": [
+          "/dealer-stock/11791655386104961-1.webp",
+          "/dealer-stock/11791655386104961-2.webp"
+        ],
+        "sourceUrl": "https://express_auto.mobile.bg/obiava-11791655386104961-hyundai-ioniq-pehv",
+        "observedAt": "2026-10-12T12:05:57.078Z",
+        "availability": "Датирана обява; потвърдете цената и наличността директно с автокъщата.",
+        "sourceProof": {
+          "sha256": "9c91aea52052ade14476a8157fb40764293fa2d87d94fc590bca77fb5056c7f2",
+          "originalPhotoBytesUnchanged": true,
+          "watermarksPreserved": true
+        }
+      }
+    }
+  ],
+  "rawFacts": {
+    "schemaVersion": 1,
+    "slug": "express-auto-varna",
+    "dealerId": "express-auto-varna",
+    "business": {
+      "schemaVersion": 1,
+      "slug": "express-auto-varna",
+      "name": "ЕКСПРЕС АУТО",
+      "shortName": "ЕКСПРЕС АУТО",
+      "city": "Варна",
+      "country": "BG",
+      "countryCode": "BG",
+      "locale": "bg-BG",
+      "currency": "EUR",
+      "distanceUnit": "km",
+      "phone": "0888885453",
+      "phoneDisplay": "0888885453",
+      "phoneE164": "+359888885453",
+      "phones": [
+        "+359888885453"
+      ],
+      "addressLine": "бул.Цар Освободител 311",
+      "address": "бул.Цар Освободител 311, Варна, България",
+      "hours": "Потвърдете работното време директно с автокъщата.",
+      "email": "",
+      "sourceUrl": "https://express_auto.mobile.bg/",
+      "stockUrl": "https://express_auto.mobile.bg/",
+      "contactSourceUrl": "https://express_auto.mobile.bg/contacts",
+      "observedAt": "2026-10-12T10:44:18.814Z",
+      "inventoryNotice": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+      "services": [],
+      "socialLinks": {},
+      "logo": "/dealer-brand/logo-on-light.png",
+      "logoLight": "/dealer-brand/logo-on-light.png",
+      "logoDark": "/dealer-brand/logo-on-dark.png",
+      "modernInventoryCopy": {
+        "express-auto-varna-11791655661973701": {
+          "sourceDescription": "Nissan Note 1.4 от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+          "en": {
+            "description": "Nissan Note 1.4 from a dated public advert. Confirm condition, price and availability directly with the dealership.",
+            "imageAlts": [
+              "Nissan Note 1.4 — dated public advert photo 1",
+              "Nissan Note 1.4 — dated public advert photo 2"
+            ]
+          },
+          "bg": {
+            "description": "Nissan Note 1.4 от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+            "imageAlts": [
+              "Nissan Note 1.4 — снимка от датирана публична обява 1",
+              "Nissan Note 1.4 — снимка от датирана публична обява 2"
+            ]
+          }
+        },
+        "express-auto-varna-11791655386104961": {
+          "sourceDescription": "Hyundai Ioniq Plug-in Hybrid от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+          "en": {
+            "description": "Hyundai Ioniq Plug-in Hybrid from a dated public advert. Confirm condition, price and availability directly with the dealership.",
+            "imageAlts": [
+              "Hyundai Ioniq Plug-in Hybrid — dated public advert photo 1",
+              "Hyundai Ioniq Plug-in Hybrid — dated public advert photo 2"
+            ]
+          },
+          "bg": {
+            "description": "Hyundai Ioniq Plug-in Hybrid от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+            "imageAlts": [
+              "Hyundai Ioniq Plug-in Hybrid — снимка от датирана публична обява 1",
+              "Hyundai Ioniq Plug-in Hybrid — снимка от датирана публична обява 2"
+            ]
+          }
+        }
+      }
+    },
+    "research": {
+      "website": {
+        "status": "workbook-reported-not-confirmed",
+        "url": "https://autoexpress.bg/"
+      },
+      "publicIdentityKey": "mobile-profile:express_auto.mobile.bg",
+      "profileAdvertCount": 26,
+      "availabilityConfirmed": false,
+      "legalEntityOwnershipVerified": false,
+      "addressExactness": "public-contact-as-published",
+      "caveats": [],
+      "sourceProof": [
+        {
+          "url": "https://express_auto.mobile.bg/",
+          "finalUrl": "https://express_auto.mobile.bg/",
+          "observedAt": "2026-10-12T10:44:18.898Z",
+          "status": 200,
+          "bytes": 115710,
+          "sha256": "29212074e759bafc8f25ed7f9572d2d7cebccc611b390f301ff77b30a2663676"
+        },
+        {
+          "url": "https://express_auto.mobile.bg/contacts",
+          "finalUrl": "https://express_auto.mobile.bg/contacts",
+          "observedAt": "2026-10-12T10:44:18.814Z",
+          "status": 200,
+          "bytes": 44830,
+          "sha256": "82a90a01808359ad662cb5ea47d07779eab27e6832d4da5d8abdcd961ff08b0f"
+        },
+        {
+          "url": "https://express_auto.mobile.bg/about",
+          "finalUrl": "https://express_auto.mobile.bg/about",
+          "observedAt": "2026-10-12T10:44:18.802Z",
+          "status": 200,
+          "bytes": 6125,
+          "sha256": "290a1f66c0ab55f1ebea808aa2d78cb4397dd55d25516dbdf8ec5978497eca1c"
+        }
+      ],
+      "sourceAction": "new-absent-cars-source-after-wrapper-identity-recheck",
+      "existingSourceTree": null,
+      "inventoryModeSelection": "dated-listing-snapshot",
+      "productionAssetInputsComplete": true,
+      "stockSnapshotScope": "Two retained public adverts, not a complete/live inventory",
+      "stockMediaAuthority": "Owner-authorized public dated demo scope; original source bytes and watermarks retained"
+    }
+  },
+  "sourceCount": 2,
+  "stockKind": "dated-listing-snapshot",
+  "logoContract": null
+}

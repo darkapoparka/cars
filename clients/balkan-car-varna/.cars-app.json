@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "dealer": "balkan-car-varna",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/app",
+    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
+    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+  },
+  "appDigest": "8d1ff1786c0b2a6251cf7fbe8484aa17a0d4e7277c3c7f7055f615d03412a3b1",
+  "provenance": {
+    "schemaVersion": 1,
+    "dealer": "balkan-car-varna",
+    "profile": "auto-best/src/lib/data/dealer-profile.json",
+    "profileSha256": "7db0f25902c2ab12384a1d77d684b2d4676ba24289d810348d3b10d19bc38bbe",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "vehicles": 2,
+    "currency": "EUR",
+    "observedAt": "2026-10-12T12:12:21.628Z, 2026-10-12T12:12:21.629Z",
+    "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-light.png",
+        "output": "public/dealer-app/logo-light-8c7026d37b9f1db860f2.png",
+        "sha256": "8c7026d37b9f1db860f2b22fec6dd836e6a92a2aa5416c75f474d59f38161508",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-dark.png",
+        "output": "public/dealer-app/logo-dark-ba4c6e73b601dfbc4c81.png",
+        "sha256": "ba4c6e73b601dfbc4c810508eb26828ac49aacdf61c0eff3dc42b8c5fb831e1e",
+        "role": "logo-dark"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11775920728897115-2.webp",
+        "output": "public/dealer-app/vehicle-7c0f251908ed69b04b14.webp",
+        "sha256": "7c0f251908ed69b04b1482fdb20c6c8ed22cc20434c9a1fb4dbeaa1c36002f6a",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11775920728897115-1.webp",
+        "output": "public/dealer-app/vehicle-f4b4fb8f8e06fd30b863.webp",
+        "sha256": "f4b4fb8f8e06fd30b863c5e28806c908cefd07295245e25915d7cc9502f6f3ea",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/21790309618806312-2.webp",
+        "output": "public/dealer-app/vehicle-481ab9665152903e769f.webp",
+        "sha256": "481ab9665152903e769fb71a355236fc9027da093fc13a40defa77d8a899dc5f",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/21790309618806312-1.webp",
+        "output": "public/dealer-app/vehicle-4fbaa230a99f48673acb.webp",
+        "sha256": "4fbaa230a99f48673acb603a508054600115f2bdd4913bbab6f8d52762772c59",
+        "role": "vehicle"
+      }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "balkan-car-varna-11775920728897115",
+        "sourceValue": 178000,
+        "sourceUnit": "km",
+        "canonicalKm": 178000
+      },
+      {
+        "slug": "balkan-car-varna-21790309618806312",
+        "sourceValue": 129680,
+        "sourceUnit": "km",
+        "canonicalKm": 129680
+      }
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

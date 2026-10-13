@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "dealer": "dein-auto-varna",
+  "kind": "dated-listing-snapshot",
+  "records": [
+    {
+      "title": "VW Passat",
+      "make": "Volkswagen",
+      "model": "Passat",
+      "year": 2023,
+      "priceAmount": 20500,
+      "mileageValue": 80700,
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "body": "Estate",
+      "description": "VW Passat от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+      "sourceFieldProof": {
+        "source": "https://deinauto.mobile.bg/obiava-11786124378124232-vw-passat",
+        "year": "Дата на производство юни 2023",
+        "price": "20 500 €",
+        "mileage": "Пробег [км] 80700 км",
+        "fuel": "Двигател Дизелов",
+        "transmission": "Скоростна кутия Автоматична",
+        "body": "Категория Комби"
+      },
+      "sourceCaveats": [],
+      "id": "11786124378124232",
+      "slug": "dein-auto-varna-11786124378124232",
+      "currency": "EUR",
+      "priceOnRequest": false,
+      "mileageOnRequest": false,
+      "mileageUnit": "km",
+      "condition": "used",
+      "images": [
+        "/dealer-stock/11786124378124232-1.webp",
+        "/dealer-stock/11786124378124232-2.webp"
+      ],
+      "sourceUrl": "https://deinauto.mobile.bg/obiava-11786124378124232-vw-passat",
+      "observedAt": "2026-10-12T11:55:24.091Z",
+      "availability": "Датирана обява; потвърдете цената и наличността директно с автокъщата.",
+      "sourceProof": {
+        "sha256": "e772f70c1e2ebf9a78bad67b6bcf7103063fe2277b336eb75d1685d865f4e45b",
+        "originalPhotoBytesUnchanged": true,
+        "watermarksPreserved": true
+      }
+    },
+    {
+      "title": "Audi A5 45 TDI quattro",
+      "make": "Audi",
+      "model": "A5",
+      "year": 2019,
+      "priceAmount": 21500,
+      "mileageValue": 119715,
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "body": "Sedan",
+      "description": "Audi A5 45 TDI quattro от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+      "sourceFieldProof": {
+        "source": "https://deinauto.mobile.bg/obiava-11790325495830727-audi-a5-45-tdi-quattro",
+        "year": "Дата на производство септември 2019",
+        "price": "21 500 €",
+        "mileage": "Пробег [км] 119715 км",
+        "fuel": "Двигател Дизелов",
+        "transmission": "Скоростна кутия Автоматична",
+        "body": "Категория Седан"
+      },
+      "sourceCaveats": [],
+      "id": "11790325495830727",
+      "slug": "dein-auto-varna-11790325495830727",
+      "currency": "EUR",
+      "priceOnRequest": false,
+      "mileageOnRequest": false,
+      "mileageUnit": "km",
+      "condition": "used",
+      "images": [
+        "/dealer-stock/11790325495830727-1.webp",
+        "/dealer-stock/11790325495830727-2.webp"
+      ],
+      "sourceUrl": "https://deinauto.mobile.bg/obiava-11790325495830727-audi-a5-45-tdi-quattro",
+      "observedAt": "2026-10-12T11:55:24.093Z",
+      "availability": "Датирана обява; потвърдете цената и наличността директно с автокъщата.",
+      "sourceProof": {
+        "sha256": "8f4405874865b8a9b85752c582d50822ba0b5dd3752c95efa684821d7006c1d7",
+        "originalPhotoBytesUnchanged": true,
+        "watermarksPreserved": true
+      }
+    }
+  ],
+  "disclosure": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+  "disclosureEn": "Dated listing samples; confirm price and availability directly with the dealership.",
+  "availabilityConfirmed": false,
+  "completeInventory": false
+}

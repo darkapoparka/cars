@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-public-stock-research-not-production-input",
+  "dealer": "technocar-varna",
+  "observedAt": "2026-10-12T10:44:19.187Z",
+  "sourceUrl": "https://technocar.mobile.bg/",
+  "profileAdvertCount": 8,
+  "profileCountIsAvailability": false,
+  "sampledAdvertUrls": [
+    "https://technocar.mobile.bg/obiava-21789131552465526-hyundai-tucson-1-6-t-gdi-mhev-exclusive",
+    "https://technocar.mobile.bg/obiava-21787826931085094-hyundai-kona-exclusive-1-6t-gdi",
+    "https://technocar.mobile.bg/obiava-11786000951438351-hyundai-i30-1-6-gdi",
+    "https://technocar.mobile.bg/obiava-11782224846422577-hyundai-ioniq-6-77kwh-premium-awd",
+    "https://technocar.mobile.bg/obiava-11773323268437844-hyundai-i10-1-2-premium"
+  ],
+  "rawPriceLabels": [
+    "24 900 €",
+    "17 000 €",
+    "8 500 €",
+    "47 900 €",
+    "17 900 €"
+  ],
+  "retainedFirstAdvertExcerpt": "1 - 8 от общо 8 обяви на \"ТЕХНОКАР ЕООД ОТОРИЗИРАН ДИЛЪР НА НОВИ И ВТОРА РЪКА АВТОМОБИЛИ ОТ МАРКАТА ХЮНДАЙ\" - Автомобили и Джипове Hyundai Tucson 1.6 Т-GDI МHEV Exclusive 24 900 € Цената е с включено ДДС обл. Варна, гр. Варна март 2022 г. 97 835 км Червен Бензинов 150 к.с. Евро 6 1600 куб.см Автоматична Джип Автомобила е в отлично техническо състояние. Фабрична гаранция до 03. 2027г. Обслужен преди 6000км. Ниво на оборудване Ексклузив. Лизинг през ОТП -ДСК. Каско, ГО, Винетка. За повече информация на посочените телофони и в шоурума на Х",
+  "partsIgnored": null,
+  "availabilityConfirmed": false,
+  "mediaReusePermission": "unknown",
+  "sourcePhotosFetched": false,
+  "selectedCreationStockMode": "illustrative-not-dealer-stock",
+  "nextInput": "Use approved template illustrative vehicle assets with same honest demo disclosure across all six. Do not republish these dealer advert photos or claim these prices/availability in demo inventory.",
+  "productionStockReady": false
+}

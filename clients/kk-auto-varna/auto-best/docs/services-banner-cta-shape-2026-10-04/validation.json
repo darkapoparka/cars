@@ -1,0 +1,21 @@
+{
+  "generatedAt": "2026-10-04T02:44:04.332Z",
+  "node": "v22.20.0",
+  "head": "6c92fdc2758d5d5b985a9c8a9004c7bb969d313a",
+  "sourceSha256": "fb47a332fe02e7d122e3c7fa719297f5d8ca0edbe99c17ec0e3b1ccc584cea87",
+  "checks": {
+    "cssPolicy": "passed",
+    "tokens": "passed",
+    "typographyAndVisualPins": "passed",
+    "svelte": {
+      "errors": 0,
+      "warnings": 1,
+      "warning": "Existing DesktopFacetMenu.svelte:48 noninteractive div event listeners"
+    },
+    "productionBuild": "passed",
+    "nativeMobileCases": 11,
+    "desktopHiddenCases": 2,
+    "consoleErrors": 0
+  },
+  "localOnly": true
+}

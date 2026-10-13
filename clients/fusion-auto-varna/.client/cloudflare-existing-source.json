@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "dealer": "fusion-auto-varna",
+  "kind": "personalized-source-candidate-not-an-approved-release",
+  "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+  "candidateSourceDigest": "3a4597125e4f092b043c36928f3cda02ea432845fccbf7560c2f1ea390ca1be8",
+  "qualificationContextPath": ".client/native-qualification-context.json",
+  "qualificationContextSha256": "1c0c0f0718651e91f78bb1346c365360fc538fc6fa2a8df4e166cd5b8286b3ba",
+  "qualificationLockPath": ".client/native-qualification-lock.json",
+  "qualificationLockSha256": "8825ea96b08eac6f5cceb9969364ad3b4625307814688c4884062ca9d52be97a",
+  "sourceDeltaReview": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
+    "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975",
+    "reviewedAt": "2026-10-11T21:04:02.173Z"
+  },
+  "nativeApproval": false,
+  "hostedApproval": false
+}

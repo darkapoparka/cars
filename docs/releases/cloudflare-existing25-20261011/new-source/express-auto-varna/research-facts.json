@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "slug": "express-auto-varna",
+  "dealerId": "express-auto-varna",
+  "business": {
+    "schemaVersion": 1,
+    "slug": "express-auto-varna",
+    "name": "ЕКСПРЕС АУТО",
+    "shortName": "ЕКСПРЕС АУТО",
+    "city": "Варна",
+    "country": "BG",
+    "countryCode": "BG",
+    "locale": "bg-BG",
+    "currency": "EUR",
+    "distanceUnit": "km",
+    "phone": "0888885453",
+    "phoneDisplay": "0888885453",
+    "phoneE164": "+359888885453",
+    "phones": [
+      "+359888885453"
+    ],
+    "addressLine": "бул.Цар Освободител 311",
+    "address": "бул.Цар Освободител 311, Варна, България",
+    "hours": "Потвърдете работното време директно с автокъщата.",
+    "email": "",
+    "sourceUrl": "https://express_auto.mobile.bg/",
+    "stockUrl": "https://express_auto.mobile.bg/",
+    "contactSourceUrl": "https://express_auto.mobile.bg/contacts",
+    "observedAt": "2026-10-12T10:44:18.814Z",
+    "inventoryNotice": "Показаните демонстрационни автомобили са илюстративни и не представляват наличности на автокъщата. За действителните оферти и наличности се свържете директно с нея.",
+    "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+    "services": [],
+    "socialLinks": {},
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "research": {
+    "website": {
+      "status": "workbook-reported-not-confirmed",
+      "url": "https://autoexpress.bg/"
+    },
+    "publicIdentityKey": "mobile-profile:express_auto.mobile.bg",
+    "profileAdvertCount": 26,
+    "availabilityConfirmed": false,
+    "legalEntityOwnershipVerified": false,
+    "addressExactness": "public-contact-as-published",
+    "caveats": [],
+    "sourceProof": [
+      {
+        "url": "https://express_auto.mobile.bg/",
+        "finalUrl": "https://express_auto.mobile.bg/",
+        "observedAt": "2026-10-12T10:44:18.898Z",
+        "status": 200,
+        "bytes": 115710,
+        "sha256": "29212074e759bafc8f25ed7f9572d2d7cebccc611b390f301ff77b30a2663676"
+      },
+      {
+        "url": "https://express_auto.mobile.bg/contacts",
+        "finalUrl": "https://express_auto.mobile.bg/contacts",
+        "observedAt": "2026-10-12T10:44:18.814Z",
+        "status": 200,
+        "bytes": 44830,
+        "sha256": "82a90a01808359ad662cb5ea47d07779eab27e6832d4da5d8abdcd961ff08b0f"
+      },
+      {
+        "url": "https://express_auto.mobile.bg/about",
+        "finalUrl": "https://express_auto.mobile.bg/about",
+        "observedAt": "2026-10-12T10:44:18.802Z",
+        "status": 200,
+        "bytes": 6125,
+        "sha256": "290a1f66c0ab55f1ebea808aa2d78cb4397dd55d25516dbdf8ec5978497eca1c"
+      }
+    ],
+    "sourceAction": "new-absent-cars-source-after-wrapper-identity-recheck",
+    "existingSourceTree": null,
+    "inventoryModeSelection": "illustrative-not-dealer-stock",
+    "productionAssetInputsComplete": false
+  }
+}

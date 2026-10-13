@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "dealer": "vaen-cars-varna",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/app",
+    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
+    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+  },
+  "appDigest": "04b1cc82232a07748630afdf24571bf5a0230c5be0d59024bec13e3613993dab",
+  "provenance": {
+    "schemaVersion": 1,
+    "dealer": "vaen-cars-varna",
+    "profile": "auto-best/src/lib/data/dealer-profile.json",
+    "profileSha256": "08ab8ee7710945773e2efbc8521dee9f296b7b8eebf026744b85434cf6fab7d6",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "vehicles": 2,
+    "currency": "EUR",
+    "observedAt": "2026-10-12T12:12:21.631Z, 2026-10-12T12:12:21.632Z",
+    "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-light.png",
+        "output": "public/dealer-app/logo-light-fdb33ab53d48292b9bfe.png",
+        "sha256": "fdb33ab53d48292b9bfec1e728a642fa1321d379698c0b476ce87c6bb8b76f00",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-dark.png",
+        "output": "public/dealer-app/logo-dark-3200403710f8edf9d31d.png",
+        "sha256": "3200403710f8edf9d31df7c60fb5c44a35d09050b2a54d506916a9ef4ebe9830",
+        "role": "logo-dark"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11790770761188035-1.webp",
+        "output": "public/dealer-app/vehicle-c0c2dafce4195afc79fe.webp",
+        "sha256": "c0c2dafce4195afc79feebaa50ad45040931600d9318f0a25b143bd4fbbedaa4",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11790770761188035-2.webp",
+        "output": "public/dealer-app/vehicle-28812e99e9832a23db82.webp",
+        "sha256": "28812e99e9832a23db82e98ea3408f9362851256c62cad37af296cebae1a9466",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11790767561385627-2.webp",
+        "output": "public/dealer-app/vehicle-28812e99e9832a23db82.webp",
+        "sha256": "28812e99e9832a23db82e98ea3408f9362851256c62cad37af296cebae1a9466",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11790767561385627-1.webp",
+        "output": "public/dealer-app/vehicle-c0c2dafce4195afc79fe.webp",
+        "sha256": "c0c2dafce4195afc79feebaa50ad45040931600d9318f0a25b143bd4fbbedaa4",
+        "role": "vehicle"
+      }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "vaen-cars-varna-11790770761188035",
+        "sourceValue": 20,
+        "sourceUnit": "km",
+        "canonicalKm": 20
+      },
+      {
+        "slug": "vaen-cars-varna-11790767561385627",
+        "sourceValue": 20,
+        "sourceUnit": "km",
+        "canonicalKm": 20
+      }
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

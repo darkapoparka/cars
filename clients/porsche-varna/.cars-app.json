@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "dealer": "porsche-varna",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/app",
+    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
+    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+  },
+  "appDigest": "8e424359d4af90784749cb25b077b52930007b258c1c70cd5cefe1babe4ff414",
+  "provenance": {
+    "schemaVersion": 1,
+    "dealer": "porsche-varna",
+    "profile": "auto-best/src/lib/data/dealer-profile.json",
+    "profileSha256": "1c72e82d371942e63333deba447d7e4efee6f8c522889125d438aa76e7382ca3",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "vehicles": 2,
+    "currency": "EUR",
+    "observedAt": "2026-10-12T12:12:21.638Z",
+    "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-light.png",
+        "output": "public/dealer-app/logo-light-7db4942522b37ec8a938.png",
+        "sha256": "7db4942522b37ec8a938c5678bb87fabc637d9eecfb929249ce23bacaa919bd6",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-dark.png",
+        "output": "public/dealer-app/logo-dark-7b50ee8969423bb9c0b9.png",
+        "sha256": "7b50ee8969423bb9c0b906087ef8d3483718df671dd161122e2de87ded945bb3",
+        "role": "logo-dark"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11790354686274560-1.webp",
+        "output": "public/dealer-app/vehicle-9706f0a2b4c9c2bee59b.webp",
+        "sha256": "9706f0a2b4c9c2bee59be9012874bbbe37ff998f2abef711d39d23fa44bcf6a1",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11790354686274560-2.webp",
+        "output": "public/dealer-app/vehicle-73115047858aeec19177.webp",
+        "sha256": "73115047858aeec19177a33a8cf7b877be738b6046ec051d4a0102d16f9901b3",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11790324799720879-1.webp",
+        "output": "public/dealer-app/vehicle-d46ecb3234d7c7548408.webp",
+        "sha256": "d46ecb3234d7c7548408ba541189692a1ec1a8368bc266aa797cd65a21116cfa",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11790324799720879-2.webp",
+        "output": "public/dealer-app/vehicle-242a4de64f0724592c98.webp",
+        "sha256": "242a4de64f0724592c981661b3a1a4dab0bdecb792219544d6553a11e2720eb0",
+        "role": "vehicle"
+      }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "porsche-varna-11790354686274560",
+        "sourceValue": 3000,
+        "sourceUnit": "km",
+        "canonicalKm": 3000
+      },
+      {
+        "slug": "porsche-varna-11790324799720879",
+        "sourceValue": 58000,
+        "sourceUnit": "km",
+        "canonicalKm": 58000
+      }
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

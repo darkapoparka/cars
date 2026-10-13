@@ -1,0 +1,24 @@
+{
+  "created": "2026-10-08T03:28:59.753Z",
+  "method": "OpenAI image_gen; transparent_background true",
+  "purpose": "Decorative calculator and vehicle key illustration for the mobile vehicle detail finance trigger",
+  "source": {
+    "path": "C:/Users/radev/.codex/generated_images/01a1184a-6cd9-7552-a8f5-4d3cd8138e5b/exec-dec6d794-e175-4d2a-8b8c-8b4b1857bcc4.png",
+    "sha256": "b2664f729ebdfe1c24bb5da7156b1ca13bf29b1210d55d1b186da1b9c72516d3",
+    "bytes": 1864922,
+    "width": 1254,
+    "height": 1254,
+    "hasAlpha": true
+  },
+  "delivery": {
+    "path": "static/assets/images/template/pdp-finance-calculator-key-v1.webp",
+    "sha256": "00659355fe2f9d4a8117147ee096f9c6c559e3ecbdd88ae42e913c9d9ef48b0c",
+    "bytes": 23188,
+    "width": 320,
+    "height": 320,
+    "hasAlpha": true
+  },
+  "conversion": "Resize the complete square canvas to 320px and encode WebP. No cropping, recoloring, text, logos or invented financial terms.",
+  "prompt": "Create one premium automotive finance illustration for a small mobile website card, isolated on a fully transparent background. This is an asset, not a screenshot or a UI mockup. A sculptural matte charcoal pocket calculator with softly rounded corners and subtly raised silver-grey round keys, a clean blank dark display with only one understated pale reflection, paired with one elegant unbranded black car key fob lying diagonally beside it. Three-quarter studio product render, objects form a compact harmonious silhouette, realistic refined materials with soft highlights, approachable rounded geometry, subtle natural contact shadow only. Mostly graphite, black, silver and warm neutral grey; a tiny deep burgundy detail on just one key. No text, no numbers, no labels, no logos, no money, no coins, no percentage symbols, no badges, no outer card, no background panel or scenery. Make both objects legible at about 90px display size, fill the square canvas with generous but modest clean transparent margins, retain the entire silhouette and shadow. Sophisticated restrained art direction suitable beside an Inter typeface and a charcoal/grey automotive site; no cartoon face, no neon, no glossy toy look.",
+  "status": "Local source candidate; no deployment or template promotion"
+}
