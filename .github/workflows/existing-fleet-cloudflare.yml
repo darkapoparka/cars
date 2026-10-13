@@ -20,6 +20,7 @@ jobs:
     outputs:
       matrix: ${{ steps.matrix.outputs.matrix }}
       dealers: ${{ steps.matrix.outputs.dealers }}
+      compile_required: ${{ steps.matrix.outputs.compile_required }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
@@ -42,8 +43,10 @@ jobs:
       - id: matrix
         run: |
           node scripts/build-existing-fleet-cloudflare.mjs matrix >> "$GITHUB_OUTPUT"
-          node --input-type=module -e 'import fs from "node:fs";import {componentRepairRow} from "./scripts/lib/fleet-component-repairs.mjs";const r=JSON.parse(fs.readFileSync("./docs/releases/cloudflare-existing25-20261011/build-request.json"));console.log("dealers="+JSON.stringify({include:r.dealers.map(slug=>{const row=componentRepairRow(r,slug);return {slug,originalRunId:row?.original.runId??0,originalAttempt:row?.original.attempt??0};})}));' >> "$GITHUB_OUTPUT"
+          node --input-type=module -e 'import fs from "node:fs";import {componentDownloadPlan} from "./scripts/lib/fleet-component-repairs.mjs";const r=JSON.parse(fs.readFileSync("./docs/releases/cloudflare-existing25-20261011/build-request.json"));console.log("dealers="+JSON.stringify({include:r.dealers.map(slug=>componentDownloadPlan(r,slug,{runId:process.env.GITHUB_RUN_ID,attempt:process.env.GITHUB_RUN_ATTEMPT}))}));' >> "$GITHUB_OUTPUT"
+          node --input-type=module -e 'import fs from "node:fs";import {buildMatrix} from "./scripts/build-existing-fleet-cloudflare.mjs";const r=JSON.parse(fs.readFileSync("./docs/releases/cloudflare-existing25-20261011/build-request.json"));console.log("compile_required="+(buildMatrix(r).include.length>0));' >> "$GITHUB_OUTPUT"
   compile:
+    if: needs.plan.outputs.compile_required == 'true'
     needs: plan
     name: ${{ matrix.slug }} / ${{ matrix.key }}
     runs-on: ubuntu-24.04
@@ -110,6 +113,7 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 30
     strategy:
+      fail-fast: false
       max-parallel: 3
       matrix: ${{ fromJSON(needs.plan.outputs.dealers) }}
     steps:
@@ -127,13 +131,23 @@ jobs:
             /docs/releases/cloudflare-existing25-20261011/selection.json
             /docs/releases/cloudflare-existing25-20261011/build-request.json
             /docs/releases/**/*.json
+            /docs/releases/cloudflare-existing25-20261011/new-source/${{ matrix.slug }}/
             /clients/${{ matrix.slug }}/
             /clients/index.json
             /templates.lock.json
       - uses: actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0
+        if: matrix.retainedRunId == 0
         with:
           pattern: existing-cf-${{ matrix.slug }}-*-${{ github.run_id }}-${{ github.run_attempt }}
-          path: runtime/existing-fleet-single-worker/${{ github.run_id }}-${{ github.run_attempt }}/${{ matrix.slug }}/inputs
+          path: runtime/existing-fleet-single-worker/${{ github.run_id }}-${{ github.run_attempt }}/${{ matrix.slug }}/inputs/${{ matrix.singleArtifactDirectory }}
+      - name: Retain passed changed compilations from their original failed-delivery run
+        if: matrix.retainedRunId != 0
+        uses: actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ matrix.retainedRunId }}
+          artifact-ids: ${{ matrix.retainedArtifactIds }}
+          path: runtime/existing-fleet-single-worker/${{ github.run_id }}-${{ github.run_attempt }}/${{ matrix.slug }}/inputs/${{ matrix.singleArtifactDirectory }}
       - name: Reuse the exact original passed native artifacts without relabeling
         if: matrix.originalRunId != 0
         uses: actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0

@@ -205,5 +205,43 @@
         }
       }
     ]
+  },
+  "componentAssembly": {
+    "schemaVersion": 1,
+    "kind": "cars-retained-component-assembly",
+    "sourceCommit": "431dbb491a511dd825fff8c163f729c792817305",
+    "runId": 38361455250,
+    "attempt": 1,
+    "requestSha256": "a36116a1aa9dc0e20899f24cd936c23670cdbdc265e007726331808ef7d9746c",
+    "planJobId": 115176387587,
+    "artifacts": [
+      {
+        "dealer": "biemaauto-varna",
+        "key": "modern",
+        "id": 11794883253,
+        "jobId": 115176525029,
+        "name": "existing-cf-biemaauto-varna-modern-38361455250-1",
+        "sizeInBytes": 49214993,
+        "sha256": "b8481b17c0bbea3c171c30b4ace56e88536bb2b5b5517adf7536f1124f906686"
+      },
+      {
+        "dealer": "auto-insurance-import-varna",
+        "key": "import",
+        "id": 11794668726,
+        "jobId": 115176525065,
+        "name": "existing-cf-auto-insurance-import-varna-import-38361455250-1",
+        "sizeInBytes": 100112264,
+        "sha256": "639efa3bf43d444d108ce673e46a3ac8b877e678a8a4e14f2a14028086575560"
+      },
+      {
+        "dealer": "auto-insurance-import-varna",
+        "key": "modern",
+        "id": 11794549197,
+        "jobId": 115176525248,
+        "name": "existing-cf-auto-insurance-import-varna-modern-38361455250-1",
+        "sizeInBytes": 50310822,
+        "sha256": "b75e44d16265c38d9b37c7d5219fe6efff365b7278e0fc0f19b6fd4aa6b0d289"
+      }
+    ]
   }
 }

@@ -18,7 +18,7 @@ import {registeredCompositionIdentity} from './package-dealer-single-worker.mjs'
 import {assertExtendedVariantSources,applySixVariantMounts,sealSixVariantBuild} from './publishing/six-variant.mjs';
 import {bindModernMobileWordmarkLogo,repairModernDarkDiscoverySource} from './lib/client-logo-contract.mjs';
 import {repairImportDealerDisclosureCatalog} from './lib/import-dealer-inventory-copy.mjs';
-import {componentRepairRow,applyReviewedComponentRepairs,componentSourceRows} from './lib/fleet-component-repairs.mjs';
+import {componentRepairRow,componentAssemblyRow,applyReviewedComponentRepairs,componentSourceRows} from './lib/fleet-component-repairs.mjs';
 import {applyDealerPresentation} from './publishing/dealer-presentation.mjs';
 import {applyAutoBestCardLayout} from './publishing/auto-best-card-layout.mjs';
 import {applyOptionalContactFallback} from './publishing/dealer-contact-fallback.mjs';
@@ -75,7 +75,7 @@ export function buildMatrix(request,leads=selection(),inventory=registry()) {
  const keys=request.targets??Object.keys(NODES);
  if(!Array.isArray(keys)||keys.length!==7||new Set(keys).size!==7||keys.some(k=>!Object.hasOwn(NODES,k)))throw Error('Exactly seven Cloudflare targets are required for one Worker');
  if(fleetSourceMode(request)==='new-approved')for(const slug of request.dealers)newSourceRow(request,slug,leads,inventory);
- return {include:request.dealers.flatMap(slug=>{selectedDealer(slug,leads,inventory);const repair=componentRepairRow(request,slug);return keys.filter(key=>!repair||repair.rebuild.includes(key)).map(key=>({slug,key,node:NODES[key]}));})};
+ return {include:request.dealers.flatMap(slug=>{selectedDealer(slug,leads,inventory);const repair=componentRepairRow(request,slug);if(componentAssemblyRow(request,slug))return [];return keys.filter(key=>!repair||repair.rebuild.includes(key)).map(key=>({slug,key,node:NODES[key]}));})};
 }
 function committedBytes(root,name,commit,digest,maxBytes=2*1024**2){
  requireNew(safeArtifactPath(name)&&hex40(commit)&&hex64(digest),'invalid historical byte lease');
@@ -323,6 +323,7 @@ export async function compile(slug,key){
  selectedDealer(slug);if(!Object.hasOwn(NODES,key))throw Error('Unknown family');const sha=exactCi(key);
  const normalRequest=read(path.join(ROOT,'docs/releases/cloudflare-existing25-20261011/build-request.json')),diagnosticPath=path.join(ROOT,'docs/releases/cloudflare-existing25-20261011/modern-diagnostic-request.json'),diagnosticRequest=process.env.GITHUB_WORKFLOW_REF==='darkapoparka/cars/.github/workflows/modern-native-diagnostic.yml@refs/heads/main'&&fs.existsSync(diagnosticPath)?read(diagnosticPath):undefined,{request,diagnostic}=selectModernNativeQueryDiagnostic(normalRequest,diagnosticRequest,{workflowRef:process.env.GITHUB_WORKFLOW_REF,dealer:slug,family:key});
  if(fleetSourceMode(request)==='new-approved'){buildMatrix(request);requireNew(request.dealers.includes(slug),'dealer is outside the exact build request');}
+ if(componentAssemblyRow(request,slug))throw Error('Passed repaired component must be retained; compilation is forbidden in assembly recovery');
  if(request.componentRepair&&!componentRepairRow(request,slug).rebuild.includes(key))throw Error('Passed original component must be reused, not compiled again');
  const area=path.join(ROOT,'runtime/existing-fleet-cloudflare',slug,key);if(fs.existsSync(area))throw Error('Build attempt exists');fs.mkdirSync(path.join(area,'receipts'),{recursive:true});
  const artifact=path.join(area,'artifact');fs.mkdirSync(artifact);const result={schemaVersion:1,dealer:slug,key,sourceCommit:sha,runId:process.env.GITHUB_RUN_ID,attempt:process.env.GITHUB_RUN_ATTEMPT,node:process.version,...(diagnostic?{diagnostic}:{}),startedAt:new Date().toISOString(),status:'running',compiled:false,hosted:false};
