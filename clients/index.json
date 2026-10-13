@@ -1482,6 +1482,54 @@
       "dealerId": "miraj-auto-varna",
       "repository": "darkapoparka/cars-miraj-auto-varna",
       "path": "clients/miraj-auto-varna"
+    },
+    {
+      "slug": "vvcars-varna",
+      "dealerId": "vvcars-varna",
+      "repository": "darkapoparka/cars-vvcars-varna",
+      "path": "clients/vvcars-varna"
+    },
+    {
+      "slug": "kalokars-varna",
+      "dealerId": "kalokars-varna",
+      "repository": "darkapoparka/cars-kalokars-varna",
+      "path": "clients/kalokars-varna"
+    },
+    {
+      "slug": "nunki-1-varna",
+      "dealerId": "nunki-1-varna",
+      "repository": "darkapoparka/cars-nunki-1-varna",
+      "path": "clients/nunki-1-varna"
+    },
+    {
+      "slug": "atanasov-varna",
+      "dealerId": "atanasov-varna",
+      "repository": "darkapoparka/cars-atanasov-varna",
+      "path": "clients/atanasov-varna"
+    },
+    {
+      "slug": "multizaza-varna",
+      "dealerId": "multizaza-varna",
+      "repository": "darkapoparka/cars-multizaza-varna",
+      "path": "clients/multizaza-varna"
+    },
+    {
+      "slug": "kolevi-auto-varna",
+      "dealerId": "kolevi-auto-varna",
+      "repository": "darkapoparka/cars-kolevi-auto-varna",
+      "path": "clients/kolevi-auto-varna"
+    },
+    {
+      "slug": "transcar-varna",
+      "dealerId": "transcar-varna",
+      "repository": "darkapoparka/cars-transcar-varna",
+      "path": "clients/transcar-varna"
+    },
+    {
+      "slug": "promotors82-varna",
+      "dealerId": "promotors82-varna",
+      "repository": "darkapoparka/cars-promotors82-varna",
+      "path": "clients/promotors82-varna"
     }
   ],
   "campaignCandidatesWithoutFolders": [

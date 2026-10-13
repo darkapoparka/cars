@@ -381,6 +381,70 @@
       "sourceMode": "new-approved",
       "workerName": "cars-miraj-auto-varna",
       "publicOrigin": "https://cars-miraj-auto-varna.darkapoparka1.workers.dev"
+    },
+    {
+      "slug": "vvcars-varna",
+      "dealerId": "vvcars-varna",
+      "proposedRepository": "darkapoparka/cars-vvcars-varna",
+      "sourceMode": "new-approved",
+      "workerName": "cars-vvcars-varna",
+      "publicOrigin": "https://cars-vvcars-varna.darkapoparka1.workers.dev"
+    },
+    {
+      "slug": "kalokars-varna",
+      "dealerId": "kalokars-varna",
+      "proposedRepository": "darkapoparka/cars-kalokars-varna",
+      "sourceMode": "new-approved",
+      "workerName": "cars-kalokars-varna",
+      "publicOrigin": "https://cars-kalokars-varna.darkapoparka1.workers.dev"
+    },
+    {
+      "slug": "nunki-1-varna",
+      "dealerId": "nunki-1-varna",
+      "proposedRepository": "darkapoparka/cars-nunki-1-varna",
+      "sourceMode": "new-approved",
+      "workerName": "cars-nunki-1-varna",
+      "publicOrigin": "https://cars-nunki-1-varna.darkapoparka1.workers.dev"
+    },
+    {
+      "slug": "atanasov-varna",
+      "dealerId": "atanasov-varna",
+      "proposedRepository": "darkapoparka/cars-atanasov-varna",
+      "sourceMode": "new-approved",
+      "workerName": "cars-atanasov-varna",
+      "publicOrigin": "https://cars-atanasov-varna.darkapoparka1.workers.dev"
+    },
+    {
+      "slug": "multizaza-varna",
+      "dealerId": "multizaza-varna",
+      "proposedRepository": "darkapoparka/cars-multizaza-varna",
+      "sourceMode": "new-approved",
+      "workerName": "cars-multizaza-varna",
+      "publicOrigin": "https://cars-multizaza-varna.darkapoparka1.workers.dev"
+    },
+    {
+      "slug": "kolevi-auto-varna",
+      "dealerId": "kolevi-auto-varna",
+      "proposedRepository": "darkapoparka/cars-kolevi-auto-varna",
+      "sourceMode": "new-approved",
+      "workerName": "cars-kolevi-auto-varna",
+      "publicOrigin": "https://cars-kolevi-auto-varna.darkapoparka1.workers.dev"
+    },
+    {
+      "slug": "transcar-varna",
+      "dealerId": "transcar-varna",
+      "proposedRepository": "darkapoparka/cars-transcar-varna",
+      "sourceMode": "new-approved",
+      "workerName": "cars-transcar-varna",
+      "publicOrigin": "https://cars-transcar-varna.darkapoparka1.workers.dev"
+    },
+    {
+      "slug": "promotors82-varna",
+      "dealerId": "promotors82-varna",
+      "proposedRepository": "darkapoparka/cars-promotors82-varna",
+      "sourceMode": "new-approved",
+      "workerName": "cars-promotors82-varna",
+      "publicOrigin": "https://cars-promotors82-varna.darkapoparka1.workers.dev"
     }
   ],
   "workerIdentities": {

@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-source-publication",
+  "reviewed": true,
+  "reviewedAt": "2026-10-13T14:15:52.717Z",
+  "dealer": "atanasov-varna",
+  "dealerId": "atanasov-varna",
+  "repository": "darkapoparka/cars-atanasov-varna",
+  "sourceOwnership": "cars-canonical",
+  "request": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/batch-2-recovery-wave02-10-request.json",
+    "sha256": "c4d350dd16a9495c5f8db496d1931baee099849105b427a2928a7d171bcd5b9f"
+  },
+  "preparation": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/atanasov-varna/source-38355305369/source-preparation.json",
+    "sha256": "4d7c8358682e0187ede28d1b7d84e25f6defacab14fd6f3dfe841e739dede1c9"
+  },
+  "proposal": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/atanasov-varna/source-38355305369/source-proposal.json",
+    "sha256": "f4d019ca4487730098a3c6d8a44d520857885139f9d4569916b83708c8791c77"
+  },
+  "inputMapping": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/atanasov-varna/source-38355305369/input-mapping.json",
+    "sha256": "d7e034df52e2069db55119da7417f121e5b4b6e837d05c82e5efec79dd3df1b8"
+  },
+  "sourcePublication": {
+    "repository": "darkapoparka/cars",
+    "commit": "b6040ffc0aedd5858b5d47ece5f3f78eac699584",
+    "sourceTree": "9059ec42960d46819103ff620d8e71b553006379",
+    "ref": "refs/heads/main",
+    "publishedAt": "2026-10-13T07:47:19.708Z",
+    "evidence": "https://github.com/darkapoparka/cars/commit/b6040ffc0aedd5858b5d47ece5f3f78eac699584"
+  }
+}
