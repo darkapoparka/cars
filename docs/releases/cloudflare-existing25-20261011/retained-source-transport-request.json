@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-retained-source-object-transport",
+  "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+  "sourceBuildRepeated": false,
+  "dealers": [
+    {
+      "dealer": "kapitol-varna",
+      "run": {
+        "id": 38467175198,
+        "attempt": 1,
+        "sourceCommit": "3dcedf690f945266eaae07a04ac0779b09e30637"
+      },
+      "artifact": {
+        "id": 11850861008,
+        "name": "existing-cf-source-kapitol-varna-38467175198-1",
+        "bytes": 1459068703,
+        "digest": "sha256:272032f52ffb62cf154cff2d6762c49fb6014b0e52a8cd65a98e195d082de003"
+      }
+    }
+  ]
+}

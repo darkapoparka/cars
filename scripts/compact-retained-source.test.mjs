@@ -1,0 +1,5 @@
+import test from'node:test';import assert from'node:assert/strict';import{planRetainedSourceBlobs}from'./compact-retained-source.mjs';const one='a'.repeat(40),two='b'.repeat(40),a='1'.repeat(64),b='2'.repeat(64),change=(id,d)=>({afterBlob:id,afterSha256:d,blob:'blobs/'+d+'.json'});
+test('existing Git assets become references while new personalized source stays in the transport',()=>{const rows=planRetainedSourceBlobs({changes:[change(one,a),change(two,b),change(one,a),{afterBlob:null}]},new Set([one]));assert.deepEqual(rows,[{sha256:a,blob:one,reused:true},{sha256:b,blob:two,reused:false}]);});
+test('one source digest cannot represent conflicting Git objects',()=>{assert.throws(()=>planRetainedSourceBlobs({changes:[change(one,a),change(two,a)]},new Set()),/one exact Git blob/);});
+test('an unpinned blob cannot be silently treated as an existing asset',()=>{assert.equal(planRetainedSourceBlobs({changes:[change(one,a)]},new Set())[0].reused,false);});
+test('malformed blob paths fail before transport',()=>{assert.throws(()=>planRetainedSourceBlobs({changes:[{...change(one,a),blob:'../other.json'}]},new Set()));});
