@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "dealer": "crazy-fox-motors-varna",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/app",
+    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
+    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+  },
+  "appDigest": "26e211d0dab693f9e33fd86ca07b0809725027a57d468856556657c975b98352",
+  "provenance": {
+    "schemaVersion": 1,
+    "dealer": "crazy-fox-motors-varna",
+    "profile": "auto-best/src/lib/data/dealer-profile.json",
+    "profileSha256": "e995fc7bb4e20b4ee12ac865462946c5ea8aeaf24c601c78d17724942291b225",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "vehicles": 2,
+    "currency": "EUR",
+    "observedAt": "2026-10-12T11:43:24.368Z, 2026-10-12T11:43:24.369Z",
+    "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-light.png",
+        "output": "public/dealer-app/logo-light-2b4e267997a335cda250.png",
+        "sha256": "2b4e267997a335cda25048f49a61834ad3da44ab78b781f3aacad207db375dd6",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-dark.png",
+        "output": "public/dealer-app/logo-dark-93d1577a7d6223c64902.png",
+        "sha256": "93d1577a7d6223c64902e02fbb13a3188e8d1563cd0e96ee2a28639c6345a962",
+        "role": "logo-dark"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11782980086929422-2.webp",
+        "output": "public/dealer-app/vehicle-3015d36b8afe48102145.webp",
+        "sha256": "3015d36b8afe481021453ea53923b28b03b5cbf076a273638b5939d6e5a8a5ea",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11782980086929422-1.webp",
+        "output": "public/dealer-app/vehicle-7b6a036988c56c140d98.webp",
+        "sha256": "7b6a036988c56c140d98df746017292f7a65763b54aa28b215a4f40a625d3c3a",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11782978114796435-1.webp",
+        "output": "public/dealer-app/vehicle-86a362035f7fdcd109e4.webp",
+        "sha256": "86a362035f7fdcd109e449abfcfc6980e1d623026e9ab5bcd4e14de608437549",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11782978114796435-2.webp",
+        "output": "public/dealer-app/vehicle-dcfa2f8e0ff5b53149da.webp",
+        "sha256": "dcfa2f8e0ff5b53149dade9c2b0621bd3a4023f4ad8419b74a9e7c2df569f9df",
+        "role": "vehicle"
+      }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "crazy-fox-motors-varna-11782980086929422",
+        "sourceValue": 171081,
+        "sourceUnit": "km",
+        "canonicalKm": 171081
+      },
+      {
+        "slug": "crazy-fox-motors-varna-11782978114796435",
+        "sourceValue": 11900,
+        "sourceUnit": "km",
+        "canonicalKm": 11900
+      }
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

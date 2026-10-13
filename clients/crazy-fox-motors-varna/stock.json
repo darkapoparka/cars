@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "dealer": "crazy-fox-motors-varna",
+  "kind": "dated-listing-snapshot",
+  "records": [
+    {
+      "title": "Toyota Avensis 2.2 D-CAT",
+      "make": "Toyota",
+      "model": "Avensis",
+      "year": 2009,
+      "priceAmount": 5499,
+      "mileageValue": 171081,
+      "body": "Estate",
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "color": "Light grey",
+      "description": "Toyota Avensis 2.2 D-CAT от датирана публична обява. Потвърдете цената и наличността директно с автокъщата.",
+      "id": "11782980086929422",
+      "slug": "crazy-fox-motors-varna-11782980086929422",
+      "currency": "EUR",
+      "priceOnRequest": false,
+      "mileageOnRequest": false,
+      "mileageUnit": "km",
+      "condition": "used",
+      "images": [
+        "/dealer-stock/11782980086929422-1.webp",
+        "/dealer-stock/11782980086929422-2.webp"
+      ],
+      "sourceUrl": "https://crazyfoxmotors.mobile.bg/obiava-11782980086929422-toyota-avensis-2-2d-cat-150k-s",
+      "observedAt": "2026-10-12T11:43:24.368Z",
+      "availability": "Датирана обява; потвърдете цената и наличността директно с автокъщата.",
+      "sourceProof": {
+        "sha256": "95501b16ca5325bc0a80cfbc46b43a63917e4146ada4ebd136e47ea5c21c8247",
+        "originalPhotoBytesUnchanged": true,
+        "watermarksPreserved": true
+      }
+    },
+    {
+      "title": "Porsche 911 992 Turbo S",
+      "make": "Porsche",
+      "model": "911",
+      "year": 2023,
+      "priceAmount": 199999,
+      "mileageValue": 11900,
+      "body": "Coupe",
+      "fuel": "Petrol",
+      "transmission": "Automatic",
+      "color": "Light blue",
+      "description": "Porsche 911 992 Turbo S от датирана публична обява; публикуваната цена е без ДДС. Потвърдете цената и наличността директно с автокъщата.",
+      "id": "11782978114796435",
+      "slug": "crazy-fox-motors-varna-11782978114796435",
+      "currency": "EUR",
+      "priceOnRequest": false,
+      "mileageOnRequest": false,
+      "mileageUnit": "km",
+      "condition": "used",
+      "images": [
+        "/dealer-stock/11782978114796435-1.webp",
+        "/dealer-stock/11782978114796435-2.webp"
+      ],
+      "sourceUrl": "https://crazyfoxmotors.mobile.bg/obiava-11782978114796435-porsche-911-992-turbo-s",
+      "observedAt": "2026-10-12T11:43:24.369Z",
+      "availability": "Датирана обява; потвърдете цената и наличността директно с автокъщата.",
+      "sourceProof": {
+        "sha256": "9022686b175ae1357a5be47b4f40e66a13076247524e9483021558f4e32a90e1",
+        "originalPhotoBytesUnchanged": true,
+        "watermarksPreserved": true
+      }
+    }
+  ],
+  "disclosure": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+  "disclosureEn": "Dated listing samples; confirm price and availability directly with the dealership.",
+  "availabilityConfirmed": false,
+  "completeInventory": false
+}

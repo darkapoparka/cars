@@ -1,0 +1,16 @@
+export const dealerCopy = {
+  "bg": {
+    "appointment": "Потвърдете работното време директно с автокъщата.",
+    "city": "Варна",
+    "country": "България",
+    "address": "ул. Прилеп 87, Варна, България",
+    "tagline": "CrazyFoxMotors — автомобили и съдействие в Варна."
+  },
+  "en": {
+    "appointment": "Viewings by appointment. Please call before visiting.",
+    "city": "Varna",
+    "country": "Bulgaria",
+    "address": "Prilep 87, Varna, Balgariya",
+    "tagline": "CrazyFoxMotors — vehicles and dealer support in Varna."
+  }
+} as const;

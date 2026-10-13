@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-input-mapping",
+  "dealer": "crazy-fox-motors-varna",
+  "inputs": {
+    "branding": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/crazy-fox-motors-varna/branding.json",
+      "sha256": "71a26b80a7937e7b604858c387fa2b3c876075afb12e7dc5375612df6526b007"
+    },
+    "facts": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/crazy-fox-motors-varna/facts.json",
+      "sha256": "e7f718e4e626e3a04851d62805a1e862a783eec3cab63ed130d99f695cd60ccd"
+    },
+    "locale": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/crazy-fox-motors-varna/locale.json",
+      "sha256": "ea0a5e637b02783a70284a86adcc833912c26ebcb763b1908a09e54df03c5ac7"
+    },
+    "stock": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/crazy-fox-motors-varna/stock.json",
+      "sha256": "8bd1181b67bf548ebd758020644a5fc15834291fae94e6a16aaed98c300ce686"
+    }
+  },
+  "sources": [
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/crazy-fox-motors-varna/identity-review-cars-repository.json",
+      "sha256": "ae06e304b765c75c3da1a1f872411f7fe1b9d608f0236675b71f8909afba2339"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/crazy-fox-motors-varna/branding.json",
+      "sha256": "71a26b80a7937e7b604858c387fa2b3c876075afb12e7dc5375612df6526b007"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/crazy-fox-motors-varna/facts.json",
+      "sha256": "e7f718e4e626e3a04851d62805a1e862a783eec3cab63ed130d99f695cd60ccd"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/crazy-fox-motors-varna/locale.json",
+      "sha256": "ea0a5e637b02783a70284a86adcc833912c26ebcb763b1908a09e54df03c5ac7"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/crazy-fox-motors-varna/stock.json",
+      "sha256": "8bd1181b67bf548ebd758020644a5fc15834291fae94e6a16aaed98c300ce686"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/crazy-fox-motors-varna/media/11782980086929422-1.webp",
+      "sha256": "7b6a036988c56c140d98df746017292f7a65763b54aa28b215a4f40a625d3c3a"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/crazy-fox-motors-varna/media/11782980086929422-2.webp",
+      "sha256": "3015d36b8afe481021453ea53923b28b03b5cbf076a273638b5939d6e5a8a5ea"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/crazy-fox-motors-varna/media/11782978114796435-1.webp",
+      "sha256": "86a362035f7fdcd109e449abfcfc6980e1d623026e9ab5bcd4e14de608437549"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/crazy-fox-motors-varna/media/11782978114796435-2.webp",
+      "sha256": "dcfa2f8e0ff5b53149dade9c2b0621bd3a4023f4ad8419b74a9e7c2df569f9df"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/crazy-fox-motors-varna/reviewed-new-source-companion-copy.json",
+      "sha256": "3e03dac14fd8295f1bd2faa131c9107b443008b2872e3256e4843ab510da2902"
+    }
+  ]
+}
