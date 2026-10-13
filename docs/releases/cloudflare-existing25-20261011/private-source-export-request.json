@@ -3,18 +3,18 @@
   "kind": "cars-qualified-private-source-export",
   "repository": "darkapoparka/cars",
   "reviewed": true,
-  "reviewedAt": "2026-10-13T03:06:00Z",
-  "sourceCommit": "af263d4fd625f4238fcd00b54d668a0b923e68be",
-  "runId": 38339275170,
+  "reviewedAt": "2026-10-13T03:32:00Z",
+  "sourceCommit": "d72589eaa3b1e3396ba3765a5b32b0a72d3de92c",
+  "runId": 38341478999,
   "attempt": 1,
   "applicationBuildsRepeated": 0,
   "sourcePreparationRepeated": false,
-  "purpose": "Seal full Biema private source against the original successful seven native targets. Preserve the original admitted client tree, exact dependency locks and provenance; do not regenerate, recompile or upload a Worker. Batch3 owns the resulting dealer delivery.",
+  "purpose": "Seal full Auto Insurance Import private source against its original successful seven native targets. Preserve original source tree, exact dependency locks and provenance; no generation, native rebuild or Worker upload. Batch4 owns private publication and its granted qualified singleton upload/live checks.",
   "dealers": [
     {
-      "slug": "biemaauto-varna",
-      "repository": "darkapoparka/cars-biemaauto-varna",
-      "sourceTree": "19b857227e7981f9fce11b0f7eef801a1c58d24a"
+      "slug": "auto-insurance-import-varna",
+      "repository": "darkapoparka/cars-auto-insurance-import-varna",
+      "sourceTree": "248f96bda97c22ca503154f93d4cdddc972bacd9"
     }
   ]
 }
