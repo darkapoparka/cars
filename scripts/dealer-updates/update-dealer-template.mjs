@@ -1011,7 +1011,7 @@ async function runPlan(values) {
   const lock = JSON.parse(lockBytes.toString('utf8').replace(/^\uFEFF/, ''));
   const selection = updateSelection(manifest,{designSet:values['design-set'],variants:values.variants});
   const qualification=loadQualification({carsRoot,dealer:manifest.slug,lockFile,lockBytes,lock,requested:values.qualification});
-  const pins = selectPinnedRevisions(manifest, lock,{targetVariants:selection.targetVariants,keys:selection.selectedKeys,qualification:qualification?.context,root:carsRoot});
+  const pins = selectPinnedRevisions(manifest, lock,{targetVariants:selection.targetVariants,keys:selection.selectedKeys,qualification:qualification?.context,root:carsRoot,sourceReplacement:registeredAdoption?.receipt.templateRefresh?.unversionedBaseline===true});
   assertUpgradeSourceAdmission({manifest,qualification:qualification?.context,registeredAdoption,dealerRoot});
   const refreshFacts=values['refresh-facts']===true;assertFactualRefreshAdmission({enabled:refreshFacts,designSet:values['design-set'],selectedKeys:selection.selectedKeys,qualification:qualification?.context,registeredAdoption,manifest});
   if(Boolean(values['modern-copy-review'])!==Boolean(values['modern-copy-review-sha256']))throw new Error('Modern copy review requires its exact path/hash');

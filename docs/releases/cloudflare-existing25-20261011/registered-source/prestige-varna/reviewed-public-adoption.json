@@ -119,5 +119,26 @@
   },
   "nativeApproval": false,
   "hostedApproval": false,
-  "globalReleaseApproval": false
+  "globalReleaseApproval": false,
+  "templateRefresh": {
+    "schemaVersion": 1,
+    "kind": "cars-owner-directed-pinned-template-refresh",
+    "reviewed": true,
+    "reviewedAt": "2026-10-13T19:14:36.469Z",
+    "dealer": "prestige-varna",
+    "baseline": {
+      "commit": "1e8dd75243b8e47f22583444ea43d4f23ea173fa",
+      "tree": "0857553d20a7de35171cd5347ca4e60a4356300a"
+    },
+    "families": [
+      "auto-best",
+      "modern",
+      "import",
+      "app",
+      "mobile",
+      "karento-best"
+    ],
+    "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "preserveOriginalSourceInGit": true
+  }
 }

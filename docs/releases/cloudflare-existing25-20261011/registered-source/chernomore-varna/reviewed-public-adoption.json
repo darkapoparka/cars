@@ -119,5 +119,26 @@
   },
   "nativeApproval": false,
   "hostedApproval": false,
-  "globalReleaseApproval": false
+  "globalReleaseApproval": false,
+  "templateRefresh": {
+    "schemaVersion": 1,
+    "kind": "cars-owner-directed-pinned-template-refresh",
+    "reviewed": true,
+    "reviewedAt": "2026-10-13T19:14:36.469Z",
+    "dealer": "chernomore-varna",
+    "baseline": {
+      "commit": "952ab9cb2fb26cd20f40b21646ebebfde112da14",
+      "tree": "3fc884818d7f079b6b60f290fd98856e78b3785d"
+    },
+    "families": [
+      "auto-best",
+      "modern",
+      "import",
+      "app",
+      "mobile",
+      "karento-best"
+    ],
+    "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "preserveOriginalSourceInGit": true
+  }
 }

@@ -119,5 +119,26 @@
   },
   "nativeApproval": false,
   "hostedApproval": false,
-  "globalReleaseApproval": false
+  "globalReleaseApproval": false,
+  "templateRefresh": {
+    "schemaVersion": 1,
+    "kind": "cars-owner-directed-pinned-template-refresh",
+    "reviewed": true,
+    "reviewedAt": "2026-10-13T19:14:36.469Z",
+    "dealer": "avtoborsa-mania",
+    "baseline": {
+      "commit": "1e8dd75243b8e47f22583444ea43d4f23ea173fa",
+      "tree": "8936f5923c7b5349565ddd21b650244c57dc26eb"
+    },
+    "families": [
+      "auto-best",
+      "modern",
+      "import",
+      "app",
+      "mobile",
+      "karento-best"
+    ],
+    "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "preserveOriginalSourceInGit": true
+  }
 }

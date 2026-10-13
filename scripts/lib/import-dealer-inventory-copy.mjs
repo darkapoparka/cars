@@ -10,6 +10,14 @@ const known=new Map([[datedBg,{bg:datedBg,en:datedSnapshotEn}],[datedEn,{bg:date
 // Review SHA256: 441c1e23539fa1db7e52b0a47dc9aa205481df9f50083603a9938dc003ec06b9
 // Additional exact seven native-dealer terms reviewed by root; no feed values change.
 const scalarTerms=new Map([
+  ["color:Тъмно син металик",{"bg":"Тъмно син металик","en":"Dark metallic blue"}],
+  ["feature:360° камера",{"bg":"360° камера","en":"360° camera"}],
+  ["feature:4x4",{"bg":"4x4","en":"4x4"}],
+  ["feature:Адаптивен круиз контрол",{"bg":"Адаптивен круиз контрол","en":"Adaptive cruise control"}],
+  ["feature:Безключово палене",{"bg":"Безключово палене","en":"Keyless start"}],
+  ["feature:Навигация",{"bg":"Навигация","en":"Navigation"}],
+  ["feature:Панорамен покрив",{"bg":"Панорамен покрив","en":"Panoramic sunroof"}],
+  ["feature:Парктроник",{"bg":"Парктроник","en":"Parking sensors"}],
   ["color:Light grey",{"bg":"Светло сив","en":"Light grey"}],
   ["color:Light blue",{"bg":"Светло син","en":"Light blue"}],
   ["feature:Apple CarPlay / Android Auto",{"bg":"Apple CarPlay / Android Auto","en":"Apple CarPlay / Android Auto"}],

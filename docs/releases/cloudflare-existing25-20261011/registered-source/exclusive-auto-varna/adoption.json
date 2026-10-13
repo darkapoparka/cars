@@ -119,5 +119,26 @@
   },
   "nativeApproval": false,
   "hostedApproval": false,
-  "globalReleaseApproval": false
+  "globalReleaseApproval": false,
+  "templateRefresh": {
+    "schemaVersion": 1,
+    "kind": "cars-owner-directed-pinned-template-refresh",
+    "reviewed": true,
+    "reviewedAt": "2026-10-13T19:14:36.469Z",
+    "dealer": "exclusive-auto-varna",
+    "baseline": {
+      "commit": "3bad29b9fd42caded2bf63fecba352bf8598644e",
+      "tree": "9ac7f9c753d171bc5be9563f3e16746119f97d71"
+    },
+    "families": [
+      "auto-best",
+      "modern",
+      "import",
+      "app",
+      "mobile",
+      "karento-best"
+    ],
+    "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "preserveOriginalSourceInGit": true
+  }
 }

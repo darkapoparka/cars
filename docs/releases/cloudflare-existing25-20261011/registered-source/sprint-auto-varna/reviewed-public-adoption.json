@@ -107,5 +107,26 @@
   },
   "nativeApproval": false,
   "hostedApproval": false,
-  "globalReleaseApproval": false
+  "globalReleaseApproval": false,
+  "templateRefresh": {
+    "schemaVersion": 1,
+    "kind": "cars-owner-directed-pinned-template-refresh",
+    "reviewed": true,
+    "reviewedAt": "2026-10-13T19:14:36.469Z",
+    "dealer": "sprint-auto-varna",
+    "baseline": {
+      "commit": "1e8dd75243b8e47f22583444ea43d4f23ea173fa",
+      "tree": "31ae342604129f53894241fc51b025f85a7387bd"
+    },
+    "families": [
+      "auto-best",
+      "modern",
+      "import",
+      "app",
+      "mobile",
+      "karento-best"
+    ],
+    "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "preserveOriginalSourceInGit": true
+  }
 }
