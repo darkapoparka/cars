@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-registered-dealer-source-adoption",
+  "dealer": "sunny-varna",
+  "reviewed": true,
+  "reviewedAt": "2026-10-13T17:45:17.735Z",
+  "canonicalSourceRepository": "darkapoparka/cars",
+  "baseline": {
+    "commit": "1e8dd75243b8e47f22583444ea43d4f23ea173fa",
+    "tree": "9f3b6f9554a672205c310244f1872839efdaca98"
+  },
+  "identity": {
+    "dealerId": "sunny-varna",
+    "repository": "darkapoparka/cars-sunny-varna",
+    "workerName": "cars-sunny-varna",
+    "publicOrigin": "https://cars-sunny-varna.darkapoparka1.workers.dev",
+    "sources": [
+      {
+        "url": "https://sunny.mobile.bg/",
+        "observedAt": "2026-09-09"
+      }
+    ]
+  },
+  "layout": {
+    "kind": "raw-unmounted-applications",
+    "reviewed": true,
+    "proofs": [
+      {
+        "path": "auto-best/svelte.config.js",
+        "sha256": "12c428bb7348c6beb2af9f896b9d4607510b2e3a8bb22b6b68a9ad2fd809fe69"
+      },
+      {
+        "path": "carwow/svelte.config.js",
+        "sha256": "6f9f2e467afe235ca6bdcf14bdef6260b0b7060d92aa311dbff09445e0912bc8"
+      },
+      {
+        "path": "modern/apps/web/next.config.ts",
+        "sha256": "dd47e165bfbfae56740a33cff2e3d5ba2a4b62ef490731586c02de9aedd54476"
+      }
+    ]
+  },
+  "variants": [
+    {
+      "key": "auto-best",
+      "base": "",
+      "entry": "/"
+    },
+    {
+      "key": "modern",
+      "base": "/variant-2",
+      "entry": "/variant-2/cars"
+    },
+    {
+      "key": "carwow",
+      "base": "/variant-3",
+      "entry": "/variant-3/"
+    }
+  ],
+  "applications": {
+    "auto-best": "5a8949c2c4c3d1c23604970c0616edbb5d5839dc",
+    "carwow": "d35ddcbad8660a10325d8016c6cfa51c6ebfe8bd",
+    "modern": "946945677c022746927bdd0c8a27039c5126b162"
+  },
+  "templateSources": {
+    "auto-best": {
+      "repository": "darkapoparka/cars",
+      "revision": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+      "path": "templates/auto-best",
+      "tree": "97833980ab127f6de8f675ac1a188e4b7f717976"
+    },
+    "carwow": {
+      "repository": "darkapoparka/cars",
+      "revision": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+      "path": "templates/carwow",
+      "tree": "d4a08817e87cf84d08c4db1c08a515937245f2dd"
+    },
+    "modern": {
+      "repository": "darkapoparka/cars",
+      "revision": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+      "path": "templates/modern",
+      "tree": "66bfb8196bbce18832ada6b34b02dda97baba25b"
+    }
+  },
+  "provenance": {
+    "auto-best": {
+      "metadata": {
+        "path": "auto-best/.client/project.json",
+        "sha256": "7ed32881b0795c37de7876bba6b0c4dfe4cf55ad6aa9930122220dcb2911e0b5"
+      }
+    },
+    "carwow": {
+      "metadata": {
+        "path": "carwow/.client/project.json",
+        "sha256": "1617b138fe240e037d5af169d4dbd97c6f17b59700c036ac9c2ed6fbf81b3f42"
+      }
+    },
+    "modern": {
+      "metadata": {
+        "path": "modern/.client/project.json",
+        "sha256": "120225f2705739ebaa705f2d63de4b827357e1e072ec8c08700af7fae0c0ef59"
+      }
+    }
+  },
+  "personalization": {
+    "path": "docs/releases/cloudflare-existing25-20261011/registered-source/sunny-varna/reviewed-personalization.json",
+    "sha256": "1fad635d83db697422d8a26643e26f5bf87c1c94c3f87b194df4103a4c68830e"
+  },
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "globalReleaseApproval": false
+}

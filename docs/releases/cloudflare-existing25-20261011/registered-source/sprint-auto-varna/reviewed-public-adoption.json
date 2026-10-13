@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-registered-dealer-source-adoption",
+  "dealer": "sprint-auto-varna",
+  "reviewed": true,
+  "reviewedAt": "2026-10-13T17:45:17.735Z",
+  "canonicalSourceRepository": "darkapoparka/cars",
+  "baseline": {
+    "commit": "1e8dd75243b8e47f22583444ea43d4f23ea173fa",
+    "tree": "31ae342604129f53894241fc51b025f85a7387bd"
+  },
+  "identity": {
+    "dealerId": "sprint-auto-varna",
+    "repository": "darkapoparka/cars-sprint-auto-varna",
+    "workerName": "cars-sprint-auto-varna",
+    "publicOrigin": "https://cars-sprint-auto-varna.darkapoparka1.workers.dev",
+    "sources": [
+      {
+        "url": "https://sprint.mobile.bg/",
+        "observedAt": "2026-09-09"
+      }
+    ]
+  },
+  "layout": {
+    "kind": "raw-unmounted-applications",
+    "reviewed": true,
+    "proofs": [
+      {
+        "path": "auto-best/svelte.config.js",
+        "sha256": "12c428bb7348c6beb2af9f896b9d4607510b2e3a8bb22b6b68a9ad2fd809fe69"
+      },
+      {
+        "path": "carwow/svelte.config.js",
+        "sha256": "6f9f2e467afe235ca6bdcf14bdef6260b0b7060d92aa311dbff09445e0912bc8"
+      },
+      {
+        "path": "modern/apps/web/next.config.ts",
+        "sha256": "dd47e165bfbfae56740a33cff2e3d5ba2a4b62ef490731586c02de9aedd54476"
+      }
+    ]
+  },
+  "variants": [
+    {
+      "key": "auto-best",
+      "base": "",
+      "entry": "/"
+    },
+    {
+      "key": "modern",
+      "base": "/variant-2",
+      "entry": "/variant-2/cars"
+    },
+    {
+      "key": "carwow",
+      "base": "/variant-3",
+      "entry": "/variant-3/"
+    }
+  ],
+  "applications": {
+    "auto-best": "08e490347326e5366d8269d9e2d848ce188123c9",
+    "carwow": "98f7c7fb28586abe9ff7682c4f7155cef4d8639d",
+    "modern": "9d0edff0a3fd9a687726573857b1058868b63eb8"
+  },
+  "templateSources": {
+    "auto-best": {
+      "repository": "darkapoparka/cars",
+      "revision": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+      "path": "templates/auto-best",
+      "tree": "97833980ab127f6de8f675ac1a188e4b7f717976"
+    },
+    "carwow": {
+      "repository": "darkapoparka/cars",
+      "revision": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+      "path": "templates/carwow",
+      "tree": "d4a08817e87cf84d08c4db1c08a515937245f2dd"
+    },
+    "modern": {
+      "repository": "darkapoparka/cars",
+      "revision": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+      "path": "templates/modern",
+      "tree": "66bfb8196bbce18832ada6b34b02dda97baba25b"
+    }
+  },
+  "provenance": {
+    "auto-best": {
+      "metadata": {
+        "path": "auto-best/.client/project.json",
+        "sha256": "2660c175080e262a5b9f04411f530b638d15f5cbb80f31e5b7d613adc4f49857"
+      }
+    },
+    "carwow": {
+      "metadata": {
+        "path": "carwow/.client/project.json",
+        "sha256": "60922ab9839285766ee518f1c423a4024725fd20c3c943942e04e12cce2e618c"
+      }
+    },
+    "modern": {
+      "metadata": {
+        "path": "modern/.client/project.json",
+        "sha256": "aafb813e59b24687d67ee584afc56c48ab2e2528e51e1371a202d24f3c0f899a"
+      }
+    }
+  },
+  "personalization": {
+    "path": "docs/releases/cloudflare-existing25-20261011/registered-source/sprint-auto-varna/reviewed-personalization.json",
+    "sha256": "776dacd449b669006a435a643a322c783b1eeb30f8f401aaa2d338a2e541d38a"
+  },
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "globalReleaseApproval": false
+}

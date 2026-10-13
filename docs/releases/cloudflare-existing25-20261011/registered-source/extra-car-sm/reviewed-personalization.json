@@ -1,0 +1,706 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-registered-dealer-derived-inputs",
+  "dealer": "extra-car-sm",
+  "reviewed": true,
+  "reviewedAt": "2026-10-13T17:45:17.735Z",
+  "facts": {
+    "business": {
+      "name": "ЕКСТРА КАР-СМ",
+      "shortName": "ЕКСТРА КАР-СМ",
+      "city": "Варна",
+      "countryCode": "BG",
+      "currency": "EUR",
+      "distanceUnit": "km",
+      "phone": "0899 968 555",
+      "phoneDisplay": "0899 968 555",
+      "phoneE164": "+359899968555",
+      "secondaryPhone": "+359895762645",
+      "address": "бул. Цар Освободител, преди светофара за Джъмбо, район Владислав Варненчик",
+      "addressLine": "бул. Цар Освободител, преди светофара за Джъмбо, район Владислав Варненчик",
+      "hours": "Не е публикувано работно време. Потвърдете часа и точния вход по телефона.",
+      "email": "",
+      "website": "",
+      "sourceUrl": "https://extracar-sm.mobile.bg/",
+      "observedAt": "2026-09-09",
+      "services": [],
+      "socialLinks": {},
+      "inventoryNotice": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата. Illustrative template vehicles, not this dealership’s stock.",
+      "previewNotice": "Независим демонстрационен преглед; формите не изпращат съобщения и не създават резервации. Independent demonstration: forms do not send enquiries or create reservations.",
+      "logo": "/registered-branding/onLight.png",
+      "logoLight": "/registered-branding/onLight.png",
+      "logoDark": "/registered-branding/onDark.png"
+    },
+    "retainedSourceInventory": {
+      "renderAsDealerStock": false,
+      "records": [
+        {
+          "id": "11788792065814371",
+          "sourceUrl": "https://extracar-sm.mobile.bg/obiava-11788792065814371-audi-a3-1-8t-dsg",
+          "title": "Audi A3 1.8T DSG Cabriolet",
+          "make": "Audi",
+          "model": "A3",
+          "price": 6500,
+          "currency": "EUR",
+          "year": 2010,
+          "productionMonth": 2,
+          "mileage": 254000,
+          "mileageUnit": "km",
+          "fuel": "Бензин",
+          "transmission": "Автоматик",
+          "powerHp": 160,
+          "color": "Черен",
+          "body": "Convertible",
+          "sourceStatus": "advertised",
+          "availabilityIndependentlyVerified": false,
+          "note": "Нов внос според каталога. Пробегът, състоянието на покрива и наличността се потвърждават с продавача.",
+          "taxNote": "Не се начислява ДДС",
+          "sourcePhotoCount": 17,
+          "features": [
+            "Парктроник",
+            "Подгряване на седалки"
+          ],
+          "image": "/dealer/media-pending.svg",
+          "gallery": [],
+          "observedAt": "2026-09-09",
+          "evidenceLevel": "catalogue; detail fetch returned cache miss"
+        },
+        {
+          "id": "11788363976985162",
+          "sourceUrl": "https://extracar-sm.mobile.bg/obiava-11788363976985162-audi-a4-2-0tdi-navi-bixenon",
+          "title": "Audi A4 2.0 TDI Navi Bi-Xenon",
+          "make": "Audi",
+          "model": "A4",
+          "price": 6450,
+          "currency": "EUR",
+          "year": 2011,
+          "productionMonth": 4,
+          "mileage": 187000,
+          "mileageUnit": "km",
+          "fuel": "Дизел",
+          "transmission": "Ръчна",
+          "powerHp": 143,
+          "color": "Черен",
+          "body": "Wagon",
+          "sourceStatus": "advertised",
+          "availabilityIndependentlyVerified": false,
+          "note": "Каталогът посочва комби, навигация и парктроник. Данните не са независима проверка на автомобила.",
+          "taxNote": "Не се начислява ДДС",
+          "sourcePhotoCount": 17,
+          "features": [
+            "Навигация",
+            "Парктроник",
+            "Подгряване на седалки"
+          ],
+          "image": "/dealer/media-pending.svg",
+          "gallery": [],
+          "observedAt": "2026-09-09",
+          "evidenceLevel": "catalogue; detail fetch returned cache miss"
+        },
+        {
+          "id": "21788196540941958",
+          "sourceUrl": "https://extracar-sm.mobile.bg/obiava-21788196540941958-volvo-xc60-2-0d-4h4",
+          "title": "Volvo XC60 2.0D 4x4",
+          "make": "Volvo",
+          "model": "XC60",
+          "price": 8800,
+          "currency": "EUR",
+          "year": 2011,
+          "productionMonth": 4,
+          "mileage": 205000,
+          "mileageUnit": "km",
+          "fuel": "Дизел",
+          "transmission": "Ръчна",
+          "powerHp": 150,
+          "color": "Кафяв",
+          "body": "SUV",
+          "sourceStatus": "advertised",
+          "availabilityIndependentlyVerified": false,
+          "note": "Заглавието и списъкът с оборудване посочват 4x4. Потвърдете конфигурацията, документите и наличността преди оглед.",
+          "taxNote": "Не се начислява ДДС",
+          "sourcePhotoCount": 17,
+          "features": [
+            "4x4",
+            "Навигация",
+            "Парктроник"
+          ],
+          "image": "/dealer/media-pending.svg",
+          "gallery": [],
+          "observedAt": "2026-09-09",
+          "evidenceLevel": "catalogue; detail fetch returned cache miss"
+        },
+        {
+          "id": "11786100332051604",
+          "sourceUrl": "https://extracar-sm.mobile.bg/obiava-11786100332051604-hyundai-sonata-2-0lpi",
+          "title": "Hyundai Sonata 2.0 LPI",
+          "make": "Hyundai",
+          "model": "Sonata",
+          "price": 21880,
+          "currency": "EUR",
+          "year": 2023,
+          "productionMonth": 4,
+          "mileage": 1600,
+          "mileageUnit": "km",
+          "fuel": "Газ",
+          "transmission": "Автоматик",
+          "powerHp": 150,
+          "color": "Тъмносив",
+          "body": "Sedan",
+          "sourceStatus": "advertised",
+          "availabilityIndependentlyVerified": false,
+          "note": "Обявен като внос от Южна Корея. Горивото е газ/LPI, не хибрид. Посочените 1 600 км са данни от продавача и подлежат на проверка.",
+          "taxNote": "Цената е с включено ДДС",
+          "sourcePhotoCount": 17,
+          "features": [
+            "Парктроник",
+            "Подгряване на седалки"
+          ],
+          "image": "/dealer/media-pending.svg",
+          "gallery": [],
+          "observedAt": "2026-09-09",
+          "evidenceLevel": "catalogue; detail opened"
+        },
+        {
+          "id": "21787329200557580",
+          "sourceUrl": "https://extracar-sm.mobile.bg/obiava-21787329200557580-honda-cr-v-2-2ictdi-avtomatik-4h4",
+          "title": "Honda CR-V 2.2 i-CTDi Automatic 4x4",
+          "make": "Honda",
+          "model": "CR-V",
+          "price": 8700,
+          "currency": "EUR",
+          "year": 2010,
+          "productionMonth": 2,
+          "mileage": 208000,
+          "mileageUnit": "km",
+          "fuel": "Дизел",
+          "transmission": "Автоматик",
+          "powerHp": 150,
+          "color": "Светлосив",
+          "body": "SUV",
+          "sourceStatus": "advertised",
+          "availabilityIndependentlyVerified": false,
+          "note": "Посочен е внос от Швейцария. Проверете конкретната конфигурация и историята по оригиналните документи.",
+          "taxNote": "Не се начислява ДДС",
+          "sourcePhotoCount": 17,
+          "features": [
+            "4x4"
+          ],
+          "image": "/dealer/media-pending.svg",
+          "gallery": [],
+          "observedAt": "2026-09-09",
+          "evidenceLevel": "catalogue; detail fetch returned cache miss"
+        },
+        {
+          "id": "11769887495015815",
+          "sourceUrl": "https://extracar-sm.mobile.bg/obiava-11769887495015815-audi-a5-2-0tdi-quattro-190-k-s-realni-kilometri",
+          "title": "Audi A5 2.0 TDI quattro",
+          "make": "Audi",
+          "model": "A5",
+          "price": 10999,
+          "currency": "EUR",
+          "year": 2014,
+          "productionMonth": 9,
+          "mileage": 190638,
+          "mileageUnit": "km",
+          "fuel": "Дизел",
+          "transmission": "Автоматик",
+          "powerHp": 190,
+          "color": "Черен",
+          "body": "Sedan",
+          "sourceStatus": "advertised",
+          "availabilityIndependentlyVerified": false,
+          "note": "Каталогът и детайлът посочват 190 638 км и еднаква цена. Твърдението за реални километри остава твърдение на продавача, не независима проверка.",
+          "taxNote": "Цената е с включено ДДС",
+          "sourcePhotoCount": 17,
+          "features": [
+            "4x4",
+            "Навигация",
+            "Парктроник",
+            "Подгряване на седалки",
+            "Панорамен покрив"
+          ],
+          "image": "/dealer/media-pending.svg",
+          "gallery": [],
+          "observedAt": "2026-09-09",
+          "evidenceLevel": "catalogue; detail opened"
+        },
+        {
+          "id": "11774727827454099",
+          "sourceUrl": "https://extracar-sm.mobile.bg/obiava-11774727827454099-audi-a4-2-0tdi-vizh-videoto",
+          "title": "Audi A4 2.0 TDI Automatic",
+          "make": "Audi",
+          "model": "A4",
+          "price": 8990,
+          "currency": "EUR",
+          "year": 2013,
+          "productionMonth": 8,
+          "mileage": 212578,
+          "mileageUnit": "km",
+          "fuel": "Дизел",
+          "transmission": "Автоматик",
+          "powerHp": 143,
+          "color": "Светлосив",
+          "body": "Sedan",
+          "sourceStatus": "advertised",
+          "availabilityIndependentlyVerified": false,
+          "note": "Обявеният пробег е 212 578 км. Оригиналната обява съдържа видео връзка; видеото не е прехвърлено или представено като одобрено демо съдържание.",
+          "taxNote": "Цената е с включено ДДС",
+          "sourcePhotoCount": 17,
+          "features": [
+            "Навигация",
+            "Парктроник",
+            "Подгряване на седалки",
+            "Панорамен покрив"
+          ],
+          "image": "/dealer/media-pending.svg",
+          "gallery": [],
+          "observedAt": "2026-09-09",
+          "evidenceLevel": "catalogue; detail opened"
+        },
+        {
+          "id": "11781545331884927",
+          "sourceUrl": "https://extracar-sm.mobile.bg/obiava-11781545331884927-mercedes-benz-e-220-avantgarde",
+          "title": "Mercedes-Benz E 220 Avantgarde",
+          "make": "Mercedes-Benz",
+          "model": "E-Class",
+          "price": 8950,
+          "currency": "EUR",
+          "year": 2009,
+          "productionMonth": 11,
+          "mileage": 200000,
+          "mileageUnit": "km",
+          "fuel": "Дизел",
+          "transmission": "Автоматик",
+          "powerHp": 170,
+          "color": "Тъмносив",
+          "body": "Sedan",
+          "sourceStatus": "advertised",
+          "availabilityIndependentlyVerified": false,
+          "note": "Нов внос според каталога. Потвърдете наличността, сервизната история и оборудването с продавача.",
+          "taxNote": "Не се начислява ДДС",
+          "sourcePhotoCount": 17,
+          "features": [
+            "Навигация",
+            "Парктроник"
+          ],
+          "image": "/dealer/media-pending.svg",
+          "gallery": [],
+          "observedAt": "2026-09-09",
+          "evidenceLevel": "catalogue; detail fetch returned cache miss"
+        }
+      ]
+    }
+  },
+  "stock": {
+    "kind": "illustrative-not-dealer-stock",
+    "mode": "template-demo",
+    "previewOnly": true,
+    "actualDealerAvailability": false,
+    "disclosure": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата. Illustrative template vehicles, not this dealership’s stock.",
+    "templateDemo": {
+      "source": {
+        "repository": "darkapoparka/cars",
+        "revision": "696230a404abd9b20b6f907b9cfb139175298c7a",
+        "path": "templates/auto-best",
+        "tree": "b07ff2273be554ef64a039ac8f4f023ae60a33ac",
+        "digest": "90f131aa0ead6ae4fcb06d30c054ca4d0c5d39097a2927cca8f298c7d2dfb3ca"
+      },
+      "catalog": {
+        "path": "src/lib/data/inventory.ts",
+        "bytes": 6637,
+        "sha256": "0dec534dede184737e172f5e349817b38d0ea80231ba50f4f070dbebeaa7c998",
+        "gitBlob": "38f7dd8325a9f2555285d3e85638bc392b0c75f0"
+      },
+      "bindings": {
+        "path": "src/lib/config/lead-site.ts",
+        "bytes": 14890,
+        "sha256": "ef5cf928b5a8df3dce50b693f1086409dd7ace82c643316f62e8ccf02c07a38b",
+        "gitBlob": "c16a74c574019e534825016d3d404b01806d684d"
+      }
+    },
+    "listings": [
+      {
+        "id": "template-demo-auto-best-1",
+        "type": "car",
+        "image": "/assets/images/lead/day-night-stock-04.webp",
+        "category": "Комби",
+        "body": "Wagon",
+        "make": "Audi",
+        "title": "Audi RS 6 Avant",
+        "cardNote": {
+          "bg": "Панорамен покрив",
+          "en": "Panoramic roof"
+        },
+        "yearNumber": 2024,
+        "mileageKm": 99701,
+        "fuel": "Бензин",
+        "transmission": "Автоматик",
+        "equipment": [
+          "4x4",
+          "360° камера",
+          "Панорамен покрив",
+          "Подгряване на седалки",
+          "Навигация",
+          "Парктроник",
+          "Безключов достъп",
+          "Адаптивен круиз контрол"
+        ],
+        "condition": "used",
+        "priceEur": 68804,
+        "sourceUrl": "",
+        "year": 2024,
+        "currency": "EUR",
+        "priceAmount": 68804,
+        "images": [
+          "/assets/images/lead/day-night-stock-04.webp"
+        ],
+        "availability": "illustrative-not-dealer-stock",
+        "verification": "sample",
+        "sourceRecord": {
+          "sourceId": "1",
+          "catalogPath": "src/lib/data/inventory.ts",
+          "catalogSha256": "0dec534dede184737e172f5e349817b38d0ea80231ba50f4f070dbebeaa7c998"
+        }
+      },
+      {
+        "id": "template-demo-auto-best-2",
+        "type": "car",
+        "image": "/assets/images/lead/day-night-stock-01.webp",
+        "category": "SUV купе",
+        "body": "SUV",
+        "make": "Mercedes-Benz",
+        "title": "Mercedes-Benz GLE Coupé",
+        "cardNote": {
+          "bg": "360° камера",
+          "en": "360° camera"
+        },
+        "yearNumber": 2021,
+        "mileageKm": 96865,
+        "fuel": "Дизел",
+        "transmission": "Автоматик",
+        "equipment": [
+          "4x4",
+          "360° камера",
+          "Панорамен покрив",
+          "Подгряване на седалки",
+          "Навигация",
+          "Парктроник",
+          "Безключов достъп",
+          "Адаптивен круиз контрол"
+        ],
+        "condition": "used",
+        "priceEur": 55403,
+        "sourceUrl": "",
+        "year": 2021,
+        "currency": "EUR",
+        "priceAmount": 55403,
+        "images": [
+          "/assets/images/lead/day-night-stock-01.webp"
+        ],
+        "availability": "illustrative-not-dealer-stock",
+        "verification": "sample",
+        "sourceRecord": {
+          "sourceId": "2",
+          "catalogPath": "src/lib/data/inventory.ts",
+          "catalogSha256": "0dec534dede184737e172f5e349817b38d0ea80231ba50f4f070dbebeaa7c998"
+        }
+      },
+      {
+        "id": "template-demo-auto-best-3",
+        "type": "car",
+        "image": "/assets/images/lead/day-night-stock-06.webp",
+        "category": "SUV",
+        "body": "SUV",
+        "make": "Audi",
+        "title": "Audi RS Q8",
+        "cardNote": {
+          "bg": "Адаптивен круиз",
+          "en": "Adaptive cruise"
+        },
+        "yearNumber": 2021,
+        "mileageKm": 94709,
+        "fuel": "Бензин",
+        "transmission": "Автоматик",
+        "equipment": [
+          "4x4",
+          "360° камера",
+          "Панорамен покрив",
+          "Подгряване на седалки",
+          "Навигация",
+          "Парктроник",
+          "Безключов достъп",
+          "Адаптивен круиз контрол"
+        ],
+        "condition": "used",
+        "priceEur": 57480,
+        "sourceUrl": "",
+        "year": 2021,
+        "currency": "EUR",
+        "priceAmount": 57480,
+        "images": [
+          "/assets/images/lead/day-night-stock-06.webp"
+        ],
+        "availability": "illustrative-not-dealer-stock",
+        "verification": "sample",
+        "sourceRecord": {
+          "sourceId": "3",
+          "catalogPath": "src/lib/data/inventory.ts",
+          "catalogSha256": "0dec534dede184737e172f5e349817b38d0ea80231ba50f4f070dbebeaa7c998"
+        }
+      },
+      {
+        "id": "template-demo-auto-best-4",
+        "type": "car",
+        "image": "/assets/images/lead/day-night-stock-02.webp",
+        "category": "SUV купе",
+        "body": "SUV",
+        "make": "BMW",
+        "title": "BMW X6 M Sport",
+        "cardNote": {
+          "bg": "Безключов достъп",
+          "en": "Keyless entry"
+        },
+        "yearNumber": 2021,
+        "mileageKm": 62485,
+        "fuel": "Дизел",
+        "transmission": "Автоматик",
+        "equipment": [
+          "4x4",
+          "360° камера",
+          "Панорамен покрив",
+          "Подгряване на седалки",
+          "Навигация",
+          "Парктроник",
+          "Безключов достъп"
+        ],
+        "condition": "used",
+        "priceEur": 54223,
+        "sourceUrl": "",
+        "year": 2021,
+        "currency": "EUR",
+        "priceAmount": 54223,
+        "images": [
+          "/assets/images/lead/day-night-stock-02.webp"
+        ],
+        "availability": "illustrative-not-dealer-stock",
+        "verification": "sample",
+        "sourceRecord": {
+          "sourceId": "4",
+          "catalogPath": "src/lib/data/inventory.ts",
+          "catalogSha256": "0dec534dede184737e172f5e349817b38d0ea80231ba50f4f070dbebeaa7c998"
+        }
+      },
+      {
+        "id": "template-demo-auto-best-6",
+        "type": "car",
+        "image": "/assets/images/lead/day-night-stock-03.webp",
+        "category": "Спортбек",
+        "body": "Sportback",
+        "make": "Mercedes-Benz",
+        "cardBrand": "Mercedes-AMG",
+        "title": "Mercedes-AMG GT 4-Door",
+        "cardNote": {
+          "bg": "Навигация",
+          "en": "Navigation"
+        },
+        "yearNumber": 2020,
+        "mileageKm": 72812,
+        "fuel": "Бензин",
+        "transmission": "Автоматик",
+        "equipment": [
+          "360° камера",
+          "Панорамен покрив",
+          "Подгряване на седалки",
+          "Навигация",
+          "Парктроник",
+          "Безключов достъп"
+        ],
+        "condition": "used",
+        "priceEur": 61069,
+        "sourceUrl": "",
+        "year": 2020,
+        "currency": "EUR",
+        "priceAmount": 61069,
+        "images": [
+          "/assets/images/lead/day-night-stock-03.webp"
+        ],
+        "availability": "illustrative-not-dealer-stock",
+        "verification": "sample",
+        "sourceRecord": {
+          "sourceId": "6",
+          "catalogPath": "src/lib/data/inventory.ts",
+          "catalogSha256": "0dec534dede184737e172f5e349817b38d0ea80231ba50f4f070dbebeaa7c998"
+        }
+      },
+      {
+        "id": "template-demo-auto-best-7",
+        "type": "car",
+        "image": "/assets/images/lead/day-night-stock-02.webp",
+        "category": "SUV купе",
+        "body": "SUV",
+        "make": "BMW",
+        "title": "BMW X6 xDrive",
+        "cardNote": {
+          "bg": "4×4 задвижване",
+          "en": "All-wheel drive"
+        },
+        "yearNumber": 2020,
+        "mileageKm": 76346,
+        "fuel": "Дизел",
+        "transmission": "Автоматик",
+        "equipment": [
+          "4x4",
+          "360° камера",
+          "Панорамен покрив",
+          "Подгряване на седалки",
+          "Навигация",
+          "Парктроник",
+          "Безключов достъп"
+        ],
+        "condition": "used",
+        "priceEur": 85635,
+        "sourceUrl": "",
+        "year": 2020,
+        "currency": "EUR",
+        "priceAmount": 85635,
+        "images": [
+          "/assets/images/lead/day-night-stock-02.webp"
+        ],
+        "availability": "illustrative-not-dealer-stock",
+        "verification": "sample",
+        "sourceRecord": {
+          "sourceId": "7",
+          "catalogPath": "src/lib/data/inventory.ts",
+          "catalogSha256": "0dec534dede184737e172f5e349817b38d0ea80231ba50f4f070dbebeaa7c998"
+        }
+      },
+      {
+        "id": "template-demo-auto-best-8",
+        "type": "car",
+        "image": "/assets/images/lead/day-night-stock-03.webp",
+        "category": "Купе",
+        "body": "Coupe",
+        "make": "Mercedes-Benz",
+        "cardBrand": "Mercedes-AMG",
+        "title": "Mercedes-AMG GT Coupé",
+        "cardNote": {
+          "bg": "Парктроник",
+          "en": "Parking sensors"
+        },
+        "yearNumber": 2023,
+        "mileageKm": 49584,
+        "fuel": "Бензин",
+        "transmission": "Автоматик",
+        "equipment": [
+          "360° камера",
+          "Панорамен покрив",
+          "Подгряване на седалки",
+          "Навигация",
+          "Парктроник",
+          "Безключов достъп"
+        ],
+        "condition": "used",
+        "priceEur": 51365,
+        "sourceUrl": "",
+        "year": 2023,
+        "currency": "EUR",
+        "priceAmount": 51365,
+        "images": [
+          "/assets/images/lead/day-night-stock-03.webp"
+        ],
+        "availability": "illustrative-not-dealer-stock",
+        "verification": "sample",
+        "sourceRecord": {
+          "sourceId": "8",
+          "catalogPath": "src/lib/data/inventory.ts",
+          "catalogSha256": "0dec534dede184737e172f5e349817b38d0ea80231ba50f4f070dbebeaa7c998"
+        }
+      }
+    ]
+  },
+  "locale": {
+    "schemaVersion": 1,
+    "dealerId": "extra-car-sm",
+    "defaultLocale": "bg",
+    "enabledLocales": [
+      "bg",
+      "en"
+    ],
+    "dealerCountry": "BG",
+    "inventoryCurrency": "EUR"
+  },
+  "sourceEvidence": [
+    {
+      "path": "business-facts.json",
+      "sha256": "8b0dfd330d13d77123b8381d3351fac5fe85f10a5ddbc508b43b6bba51895cff"
+    }
+  ],
+  "media": [
+    {
+      "publicPath": "/assets/images/lead/day-night-stock-04.webp",
+      "sourceKind": "immutable-template-demo",
+      "templatePath": "static/assets/images/lead/day-night-stock-04.webp",
+      "sha256": "945e6864218ab3bd5fbd415336b212ecfde645685033f8506836f906885d447c",
+      "gitBlob": "1c6c6013a571a0b298326abc567c38b6cca295d9",
+      "bytes": 182452
+    },
+    {
+      "publicPath": "/assets/images/lead/day-night-stock-01.webp",
+      "sourceKind": "immutable-template-demo",
+      "templatePath": "static/assets/images/lead/day-night-stock-01.webp",
+      "sha256": "17689ab880bf47de81ef467c34d639223f39f0c1ebe68c90d0aaf70e3dcc6333",
+      "gitBlob": "6be96162cbd13cf4d28c8964fd1d4643b983a0a5",
+      "bytes": 278312
+    },
+    {
+      "publicPath": "/assets/images/lead/day-night-stock-06.webp",
+      "sourceKind": "immutable-template-demo",
+      "templatePath": "static/assets/images/lead/day-night-stock-06.webp",
+      "sha256": "d644dec8e1ef280a702dccac267a2367f0ab823e40373e1299b156e7723b3b1f",
+      "gitBlob": "72b9b750b5ea060afba8a0154a5d073a65a26d60",
+      "bytes": 207938
+    },
+    {
+      "publicPath": "/assets/images/lead/day-night-stock-02.webp",
+      "sourceKind": "immutable-template-demo",
+      "templatePath": "static/assets/images/lead/day-night-stock-02.webp",
+      "sha256": "40d22530c50efb7d486f12b394dbaebb821e368352492954966e19ba84910b7f",
+      "gitBlob": "27b081781754820e9a09144188064a565cca2edc",
+      "bytes": 248390
+    },
+    {
+      "publicPath": "/assets/images/lead/day-night-stock-03.webp",
+      "sourceKind": "immutable-template-demo",
+      "templatePath": "static/assets/images/lead/day-night-stock-03.webp",
+      "sha256": "a63e64bbdfcd7627da5e97e2a355efa7a6192d939d0cdeecc8f9b55a4dd25930",
+      "gitBlob": "912eb1214ca162697b7fb06f65e2ad18ce55f074",
+      "bytes": 181070
+    },
+    {
+      "publicPath": "/registered-branding/onLight.png",
+      "sourceKind": "published-branding-input",
+      "inputPath": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/extra-car-sm/branding/onLight.png",
+      "sha256": "f26e72ce5c6263862ec529c09dfe12e042a9097f3c46feb76d79ba197572e2eb",
+      "surface": "onLight"
+    },
+    {
+      "publicPath": "/registered-branding/onDark.png",
+      "sourceKind": "published-branding-input",
+      "inputPath": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/extra-car-sm/branding/onDark.png",
+      "sha256": "8f6a32af4c4cfb8aa99bbea3cce35b6820a08559e8478af485f88c1436b1c981",
+      "surface": "onDark"
+    },
+    {
+      "publicPath": "/registered-branding/onAccent.png",
+      "sourceKind": "published-branding-input",
+      "inputPath": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/extra-car-sm/branding/onAccent.png",
+      "sha256": "8f6a32af4c4cfb8aa99bbea3cce35b6820a08559e8478af485f88c1436b1c981",
+      "surface": "onAccent"
+    }
+  ],
+  "publishedBranding": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/extra-car-sm/branding.json",
+    "sha256": "c418f8871dea4e713af6afbd7e286f72e0b7068606a108ac2efed268422db1d2",
+    "sourceCommit": "27378380ee5d7341012da90e821426b3756f9a1e"
+  }
+}

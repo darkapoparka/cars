@@ -1,0 +1,632 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-registered-dealer-derived-inputs",
+  "dealer": "rqs-auto-team",
+  "reviewed": true,
+  "reviewedAt": "2026-10-13T17:45:17.735Z",
+  "facts": {
+    "business": {
+      "name": "R.Q.S. Auto – Team",
+      "shortName": "R.Q.S.",
+      "city": "Варна",
+      "countryCode": "BG",
+      "currency": "EUR",
+      "distanceUnit": "km",
+      "phone": "0876 997 791",
+      "phoneDisplay": "0876 997 791",
+      "phoneE164": "+359876997791",
+      "secondaryPhone": "",
+      "address": "бул. „Цар Освободител“, Владислав Варненчик, Варна — точният номер не е потвърден",
+      "addressLine": "бул. „Цар Освободител“, Владислав Варненчик — уточнете точния вход",
+      "hours": "Потвърдете работното време и огледа по телефона",
+      "email": "",
+      "website": "",
+      "sourceUrl": "https://rqsautoteam.mobile.bg/",
+      "observedAt": "2026-09-09",
+      "services": [],
+      "socialLinks": {},
+      "inventoryNotice": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата. Illustrative template vehicles, not this dealership’s stock.",
+      "previewNotice": "Независим демонстрационен преглед; формите не изпращат съобщения и не създават резервации. Independent demonstration: forms do not send enquiries or create reservations.",
+      "logo": "/registered-branding/onLight.png",
+      "logoLight": "/registered-branding/onLight.png",
+      "logoDark": "/registered-branding/onDark.png"
+    },
+    "retainedSourceInventory": {
+      "renderAsDealerStock": false,
+      "records": [
+        {
+          "originalTuple": [
+            "toyota-auris-hybrid-2017",
+            "Toyota",
+            "Auris SW 1.8 Hybrid",
+            2017,
+            "февруари 2017 г.",
+            202500,
+            10200,
+            "Хибрид",
+            "Автоматик",
+            "Wagon",
+            "Комби",
+            "Бял",
+            99,
+            1800,
+            "11724246018394817",
+            "https://rqsautoteam.mobile.bg/obiava-11724246018394817-toyota-auris-sw-restyling-1-8-full-hybrid-hev-e-cvt-active",
+            "Индивидуална обява: структурирани 99 к.с. и 1800 см³; описанието отделно посочва 136 к.с. и 1798 см³. Конфликтът не е разрешен."
+          ],
+          "originalSourcePath": "carwow/src/lib/data/dealer.ts"
+        },
+        {
+          "originalTuple": [
+            "honda-civic-elegance-2018",
+            "Honda",
+            "Civic 1.6 i-DTEC Elegance Navi",
+            2018,
+            "декември 2018 г.",
+            110000,
+            13700,
+            "Дизел",
+            "Ръчна",
+            "Hatchback",
+            "Хечбек",
+            "Светло сив",
+            120,
+            1600,
+            "11752568346883957",
+            "https://rqsautoteam.mobile.bg/obiava-11752568346883957-honda-civic-1-6-i-dtec-120kc-5vr-elegance-navi",
+            "Продавачът изрично посочва клиентски автомобил. Това не е потвърждение, че автомобилът е собственост на автокъщата."
+          ],
+          "originalSourcePath": "carwow/src/lib/data/dealer.ts"
+        },
+        {
+          "originalTuple": [
+            "renault-megane-2018",
+            "Renault",
+            "Megane",
+            2018,
+            "май 2018 г.",
+            244200,
+            7500,
+            "Дизел",
+            "Ръчна",
+            "Wagon",
+            "Комби",
+            "Тъмно сив",
+            110,
+            1500,
+            "",
+            "",
+            ""
+          ],
+          "originalSourcePath": "carwow/src/lib/data/dealer.ts"
+        },
+        {
+          "originalTuple": [
+            "kia-sportage-2016",
+            "Kia",
+            "Sportage 1.7 CRDi Class Premium",
+            2016,
+            "март 2016 г.",
+            162000,
+            11400,
+            "Дизел",
+            "Ръчна",
+            "SUV",
+            "Джип",
+            "Тъмно сив",
+            116,
+            1700,
+            "",
+            "",
+            ""
+          ],
+          "originalSourcePath": "carwow/src/lib/data/dealer.ts"
+        },
+        {
+          "originalTuple": [
+            "citroen-c1-2012",
+            "Citroen",
+            "C1 1.0 VTi Automatic AirDream",
+            2012,
+            "юни 2012 г.",
+            59900,
+            6200,
+            "Бензин",
+            "Автоматик",
+            "Hatchback",
+            "Хечбек",
+            "Светло син",
+            69,
+            998,
+            "",
+            "",
+            ""
+          ],
+          "originalSourcePath": "carwow/src/lib/data/dealer.ts"
+        },
+        {
+          "originalTuple": [
+            "honda-civic-elegance-2016",
+            "Honda",
+            "Civic 1.6 i-DTEC Elegance",
+            2016,
+            "септември 2016 г.",
+            189700,
+            8900,
+            "Дизел",
+            "Ръчна",
+            "Hatchback",
+            "Хечбек",
+            "Перла",
+            120,
+            1600,
+            "",
+            "",
+            ""
+          ],
+          "originalSourcePath": "carwow/src/lib/data/dealer.ts"
+        },
+        {
+          "originalTuple": [
+            "hyundai-santa-fe-2017",
+            "Hyundai",
+            "Santa Fe 2.2 CRDi 4WD",
+            2017,
+            "ноември 2017 г.",
+            166000,
+            15900,
+            "Дизел",
+            "Автоматик",
+            "SUV",
+            "Джип",
+            "Тъмно сив",
+            200,
+            2200,
+            "",
+            "",
+            ""
+          ],
+          "originalSourcePath": "carwow/src/lib/data/dealer.ts"
+        },
+        {
+          "originalTuple": [
+            "seat-ateca-2018",
+            "Seat",
+            "Ateca 1.6 TDI Business DSG",
+            2018,
+            "октомври 2018 г.",
+            213000,
+            14300,
+            "Дизел",
+            "Автоматик",
+            "SUV",
+            "Джип",
+            "Черен",
+            115,
+            1600,
+            "",
+            "",
+            "Каталожната карта показва 115 к.с., а описанието 116 к.с.; не е независимо разрешено."
+          ],
+          "originalSourcePath": "carwow/src/lib/data/dealer.ts"
+        }
+      ]
+    }
+  },
+  "stock": {
+    "kind": "illustrative-not-dealer-stock",
+    "mode": "template-demo",
+    "previewOnly": true,
+    "actualDealerAvailability": false,
+    "disclosure": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата. Illustrative template vehicles, not this dealership’s stock.",
+    "templateDemo": {
+      "source": {
+        "repository": "darkapoparka/cars",
+        "revision": "696230a404abd9b20b6f907b9cfb139175298c7a",
+        "path": "templates/auto-best",
+        "tree": "b07ff2273be554ef64a039ac8f4f023ae60a33ac",
+        "digest": "90f131aa0ead6ae4fcb06d30c054ca4d0c5d39097a2927cca8f298c7d2dfb3ca"
+      },
+      "catalog": {
+        "path": "src/lib/data/inventory.ts",
+        "bytes": 6637,
+        "sha256": "0dec534dede184737e172f5e349817b38d0ea80231ba50f4f070dbebeaa7c998",
+        "gitBlob": "38f7dd8325a9f2555285d3e85638bc392b0c75f0"
+      },
+      "bindings": {
+        "path": "src/lib/config/lead-site.ts",
+        "bytes": 14890,
+        "sha256": "ef5cf928b5a8df3dce50b693f1086409dd7ace82c643316f62e8ccf02c07a38b",
+        "gitBlob": "c16a74c574019e534825016d3d404b01806d684d"
+      }
+    },
+    "listings": [
+      {
+        "id": "template-demo-auto-best-1",
+        "type": "car",
+        "image": "/assets/images/lead/day-night-stock-04.webp",
+        "category": "Комби",
+        "body": "Wagon",
+        "make": "Audi",
+        "title": "Audi RS 6 Avant",
+        "cardNote": {
+          "bg": "Панорамен покрив",
+          "en": "Panoramic roof"
+        },
+        "yearNumber": 2024,
+        "mileageKm": 99701,
+        "fuel": "Бензин",
+        "transmission": "Автоматик",
+        "equipment": [
+          "4x4",
+          "360° камера",
+          "Панорамен покрив",
+          "Подгряване на седалки",
+          "Навигация",
+          "Парктроник",
+          "Безключов достъп",
+          "Адаптивен круиз контрол"
+        ],
+        "condition": "used",
+        "priceEur": 68804,
+        "sourceUrl": "",
+        "year": 2024,
+        "currency": "EUR",
+        "priceAmount": 68804,
+        "images": [
+          "/assets/images/lead/day-night-stock-04.webp"
+        ],
+        "availability": "illustrative-not-dealer-stock",
+        "verification": "sample",
+        "sourceRecord": {
+          "sourceId": "1",
+          "catalogPath": "src/lib/data/inventory.ts",
+          "catalogSha256": "0dec534dede184737e172f5e349817b38d0ea80231ba50f4f070dbebeaa7c998"
+        }
+      },
+      {
+        "id": "template-demo-auto-best-2",
+        "type": "car",
+        "image": "/assets/images/lead/day-night-stock-01.webp",
+        "category": "SUV купе",
+        "body": "SUV",
+        "make": "Mercedes-Benz",
+        "title": "Mercedes-Benz GLE Coupé",
+        "cardNote": {
+          "bg": "360° камера",
+          "en": "360° camera"
+        },
+        "yearNumber": 2021,
+        "mileageKm": 96865,
+        "fuel": "Дизел",
+        "transmission": "Автоматик",
+        "equipment": [
+          "4x4",
+          "360° камера",
+          "Панорамен покрив",
+          "Подгряване на седалки",
+          "Навигация",
+          "Парктроник",
+          "Безключов достъп",
+          "Адаптивен круиз контрол"
+        ],
+        "condition": "used",
+        "priceEur": 55403,
+        "sourceUrl": "",
+        "year": 2021,
+        "currency": "EUR",
+        "priceAmount": 55403,
+        "images": [
+          "/assets/images/lead/day-night-stock-01.webp"
+        ],
+        "availability": "illustrative-not-dealer-stock",
+        "verification": "sample",
+        "sourceRecord": {
+          "sourceId": "2",
+          "catalogPath": "src/lib/data/inventory.ts",
+          "catalogSha256": "0dec534dede184737e172f5e349817b38d0ea80231ba50f4f070dbebeaa7c998"
+        }
+      },
+      {
+        "id": "template-demo-auto-best-3",
+        "type": "car",
+        "image": "/assets/images/lead/day-night-stock-06.webp",
+        "category": "SUV",
+        "body": "SUV",
+        "make": "Audi",
+        "title": "Audi RS Q8",
+        "cardNote": {
+          "bg": "Адаптивен круиз",
+          "en": "Adaptive cruise"
+        },
+        "yearNumber": 2021,
+        "mileageKm": 94709,
+        "fuel": "Бензин",
+        "transmission": "Автоматик",
+        "equipment": [
+          "4x4",
+          "360° камера",
+          "Панорамен покрив",
+          "Подгряване на седалки",
+          "Навигация",
+          "Парктроник",
+          "Безключов достъп",
+          "Адаптивен круиз контрол"
+        ],
+        "condition": "used",
+        "priceEur": 57480,
+        "sourceUrl": "",
+        "year": 2021,
+        "currency": "EUR",
+        "priceAmount": 57480,
+        "images": [
+          "/assets/images/lead/day-night-stock-06.webp"
+        ],
+        "availability": "illustrative-not-dealer-stock",
+        "verification": "sample",
+        "sourceRecord": {
+          "sourceId": "3",
+          "catalogPath": "src/lib/data/inventory.ts",
+          "catalogSha256": "0dec534dede184737e172f5e349817b38d0ea80231ba50f4f070dbebeaa7c998"
+        }
+      },
+      {
+        "id": "template-demo-auto-best-4",
+        "type": "car",
+        "image": "/assets/images/lead/day-night-stock-02.webp",
+        "category": "SUV купе",
+        "body": "SUV",
+        "make": "BMW",
+        "title": "BMW X6 M Sport",
+        "cardNote": {
+          "bg": "Безключов достъп",
+          "en": "Keyless entry"
+        },
+        "yearNumber": 2021,
+        "mileageKm": 62485,
+        "fuel": "Дизел",
+        "transmission": "Автоматик",
+        "equipment": [
+          "4x4",
+          "360° камера",
+          "Панорамен покрив",
+          "Подгряване на седалки",
+          "Навигация",
+          "Парктроник",
+          "Безключов достъп"
+        ],
+        "condition": "used",
+        "priceEur": 54223,
+        "sourceUrl": "",
+        "year": 2021,
+        "currency": "EUR",
+        "priceAmount": 54223,
+        "images": [
+          "/assets/images/lead/day-night-stock-02.webp"
+        ],
+        "availability": "illustrative-not-dealer-stock",
+        "verification": "sample",
+        "sourceRecord": {
+          "sourceId": "4",
+          "catalogPath": "src/lib/data/inventory.ts",
+          "catalogSha256": "0dec534dede184737e172f5e349817b38d0ea80231ba50f4f070dbebeaa7c998"
+        }
+      },
+      {
+        "id": "template-demo-auto-best-6",
+        "type": "car",
+        "image": "/assets/images/lead/day-night-stock-03.webp",
+        "category": "Спортбек",
+        "body": "Sportback",
+        "make": "Mercedes-Benz",
+        "cardBrand": "Mercedes-AMG",
+        "title": "Mercedes-AMG GT 4-Door",
+        "cardNote": {
+          "bg": "Навигация",
+          "en": "Navigation"
+        },
+        "yearNumber": 2020,
+        "mileageKm": 72812,
+        "fuel": "Бензин",
+        "transmission": "Автоматик",
+        "equipment": [
+          "360° камера",
+          "Панорамен покрив",
+          "Подгряване на седалки",
+          "Навигация",
+          "Парктроник",
+          "Безключов достъп"
+        ],
+        "condition": "used",
+        "priceEur": 61069,
+        "sourceUrl": "",
+        "year": 2020,
+        "currency": "EUR",
+        "priceAmount": 61069,
+        "images": [
+          "/assets/images/lead/day-night-stock-03.webp"
+        ],
+        "availability": "illustrative-not-dealer-stock",
+        "verification": "sample",
+        "sourceRecord": {
+          "sourceId": "6",
+          "catalogPath": "src/lib/data/inventory.ts",
+          "catalogSha256": "0dec534dede184737e172f5e349817b38d0ea80231ba50f4f070dbebeaa7c998"
+        }
+      },
+      {
+        "id": "template-demo-auto-best-7",
+        "type": "car",
+        "image": "/assets/images/lead/day-night-stock-02.webp",
+        "category": "SUV купе",
+        "body": "SUV",
+        "make": "BMW",
+        "title": "BMW X6 xDrive",
+        "cardNote": {
+          "bg": "4×4 задвижване",
+          "en": "All-wheel drive"
+        },
+        "yearNumber": 2020,
+        "mileageKm": 76346,
+        "fuel": "Дизел",
+        "transmission": "Автоматик",
+        "equipment": [
+          "4x4",
+          "360° камера",
+          "Панорамен покрив",
+          "Подгряване на седалки",
+          "Навигация",
+          "Парктроник",
+          "Безключов достъп"
+        ],
+        "condition": "used",
+        "priceEur": 85635,
+        "sourceUrl": "",
+        "year": 2020,
+        "currency": "EUR",
+        "priceAmount": 85635,
+        "images": [
+          "/assets/images/lead/day-night-stock-02.webp"
+        ],
+        "availability": "illustrative-not-dealer-stock",
+        "verification": "sample",
+        "sourceRecord": {
+          "sourceId": "7",
+          "catalogPath": "src/lib/data/inventory.ts",
+          "catalogSha256": "0dec534dede184737e172f5e349817b38d0ea80231ba50f4f070dbebeaa7c998"
+        }
+      },
+      {
+        "id": "template-demo-auto-best-8",
+        "type": "car",
+        "image": "/assets/images/lead/day-night-stock-03.webp",
+        "category": "Купе",
+        "body": "Coupe",
+        "make": "Mercedes-Benz",
+        "cardBrand": "Mercedes-AMG",
+        "title": "Mercedes-AMG GT Coupé",
+        "cardNote": {
+          "bg": "Парктроник",
+          "en": "Parking sensors"
+        },
+        "yearNumber": 2023,
+        "mileageKm": 49584,
+        "fuel": "Бензин",
+        "transmission": "Автоматик",
+        "equipment": [
+          "360° камера",
+          "Панорамен покрив",
+          "Подгряване на седалки",
+          "Навигация",
+          "Парктроник",
+          "Безключов достъп"
+        ],
+        "condition": "used",
+        "priceEur": 51365,
+        "sourceUrl": "",
+        "year": 2023,
+        "currency": "EUR",
+        "priceAmount": 51365,
+        "images": [
+          "/assets/images/lead/day-night-stock-03.webp"
+        ],
+        "availability": "illustrative-not-dealer-stock",
+        "verification": "sample",
+        "sourceRecord": {
+          "sourceId": "8",
+          "catalogPath": "src/lib/data/inventory.ts",
+          "catalogSha256": "0dec534dede184737e172f5e349817b38d0ea80231ba50f4f070dbebeaa7c998"
+        }
+      }
+    ]
+  },
+  "locale": {
+    "schemaVersion": 1,
+    "dealerId": "rqs-auto-team",
+    "defaultLocale": "bg",
+    "enabledLocales": [
+      "bg",
+      "en"
+    ],
+    "dealerCountry": "BG",
+    "inventoryCurrency": "EUR"
+  },
+  "sourceEvidence": [
+    {
+      "path": "carwow/src/lib/data/dealer.ts",
+      "sha256": "013eb6068a1ab56ef3ba45e177b536c9df0e6165d7d56dbd0cf3e2e12fcf0c09"
+    },
+    {
+      "path": "RESEARCH-2026-09-09.md",
+      "sha256": "c90d2fb94c340142cba2ce06761eddc36a98a96115df432c3c186b8807ea585e"
+    }
+  ],
+  "media": [
+    {
+      "publicPath": "/assets/images/lead/day-night-stock-04.webp",
+      "sourceKind": "immutable-template-demo",
+      "templatePath": "static/assets/images/lead/day-night-stock-04.webp",
+      "sha256": "945e6864218ab3bd5fbd415336b212ecfde645685033f8506836f906885d447c",
+      "gitBlob": "1c6c6013a571a0b298326abc567c38b6cca295d9",
+      "bytes": 182452
+    },
+    {
+      "publicPath": "/assets/images/lead/day-night-stock-01.webp",
+      "sourceKind": "immutable-template-demo",
+      "templatePath": "static/assets/images/lead/day-night-stock-01.webp",
+      "sha256": "17689ab880bf47de81ef467c34d639223f39f0c1ebe68c90d0aaf70e3dcc6333",
+      "gitBlob": "6be96162cbd13cf4d28c8964fd1d4643b983a0a5",
+      "bytes": 278312
+    },
+    {
+      "publicPath": "/assets/images/lead/day-night-stock-06.webp",
+      "sourceKind": "immutable-template-demo",
+      "templatePath": "static/assets/images/lead/day-night-stock-06.webp",
+      "sha256": "d644dec8e1ef280a702dccac267a2367f0ab823e40373e1299b156e7723b3b1f",
+      "gitBlob": "72b9b750b5ea060afba8a0154a5d073a65a26d60",
+      "bytes": 207938
+    },
+    {
+      "publicPath": "/assets/images/lead/day-night-stock-02.webp",
+      "sourceKind": "immutable-template-demo",
+      "templatePath": "static/assets/images/lead/day-night-stock-02.webp",
+      "sha256": "40d22530c50efb7d486f12b394dbaebb821e368352492954966e19ba84910b7f",
+      "gitBlob": "27b081781754820e9a09144188064a565cca2edc",
+      "bytes": 248390
+    },
+    {
+      "publicPath": "/assets/images/lead/day-night-stock-03.webp",
+      "sourceKind": "immutable-template-demo",
+      "templatePath": "static/assets/images/lead/day-night-stock-03.webp",
+      "sha256": "a63e64bbdfcd7627da5e97e2a355efa7a6192d939d0cdeecc8f9b55a4dd25930",
+      "gitBlob": "912eb1214ca162697b7fb06f65e2ad18ce55f074",
+      "bytes": 181070
+    },
+    {
+      "publicPath": "/registered-branding/onLight.png",
+      "sourceKind": "published-branding-input",
+      "inputPath": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/rqs-auto-team/branding/onLight.png",
+      "sha256": "4630c3916c61ca85a52d7c1d5b98fb16d20359fc6d1867cdcad8e32ef30191a1",
+      "surface": "onLight"
+    },
+    {
+      "publicPath": "/registered-branding/onDark.png",
+      "sourceKind": "published-branding-input",
+      "inputPath": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/rqs-auto-team/branding/onDark.png",
+      "sha256": "31d5bb8d860747f723ebaa42e243ef740f06e45364bcc85bbfe866e13db6335a",
+      "surface": "onDark"
+    },
+    {
+      "publicPath": "/registered-branding/onAccent.png",
+      "sourceKind": "published-branding-input",
+      "inputPath": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/rqs-auto-team/branding/onAccent.png",
+      "sha256": "31d5bb8d860747f723ebaa42e243ef740f06e45364bcc85bbfe866e13db6335a",
+      "surface": "onAccent"
+    }
+  ],
+  "publishedBranding": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/rqs-auto-team/branding.json",
+    "sha256": "e3b57f0f548a1f7b0086baf1f8fe29a2e0387fff7ede62c13d2ead7fc19528f7",
+    "sourceCommit": "27378380ee5d7341012da90e821426b3756f9a1e"
+  }
+}

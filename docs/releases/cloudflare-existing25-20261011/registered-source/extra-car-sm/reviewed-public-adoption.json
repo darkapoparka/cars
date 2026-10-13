@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-registered-dealer-source-adoption",
+  "dealer": "extra-car-sm",
+  "reviewed": true,
+  "reviewedAt": "2026-10-13T17:45:17.735Z",
+  "canonicalSourceRepository": "darkapoparka/cars",
+  "baseline": {
+    "commit": "1e8dd75243b8e47f22583444ea43d4f23ea173fa",
+    "tree": "fb6826c0c17ae4340c05efb39f6b1c54a7aa0bb3"
+  },
+  "identity": {
+    "dealerId": "extra-car-sm",
+    "repository": "darkapoparka/cars-extra-car-sm",
+    "workerName": "cars-extra-car-sm",
+    "publicOrigin": "https://cars-extra-car-sm.darkapoparka1.workers.dev",
+    "sources": [
+      {
+        "url": "https://extracar-sm.mobile.bg/",
+        "observedAt": "2026-09-09"
+      }
+    ]
+  },
+  "layout": {
+    "kind": "raw-unmounted-applications",
+    "reviewed": true,
+    "proofs": [
+      {
+        "path": "auto-best/svelte.config.js",
+        "sha256": "12c428bb7348c6beb2af9f896b9d4607510b2e3a8bb22b6b68a9ad2fd809fe69"
+      },
+      {
+        "path": "carwow/svelte.config.js",
+        "sha256": "6f9f2e467afe235ca6bdcf14bdef6260b0b7060d92aa311dbff09445e0912bc8"
+      },
+      {
+        "path": "modern/apps/web/next.config.ts",
+        "sha256": "dd47e165bfbfae56740a33cff2e3d5ba2a4b62ef490731586c02de9aedd54476"
+      }
+    ]
+  },
+  "variants": [
+    {
+      "key": "auto-best",
+      "base": "",
+      "entry": "/"
+    },
+    {
+      "key": "modern",
+      "base": "/variant-2",
+      "entry": "/variant-2/cars"
+    },
+    {
+      "key": "carwow",
+      "base": "/variant-3",
+      "entry": "/variant-3/"
+    }
+  ],
+  "applications": {
+    "auto-best": "361a4c2f2e9a54d2350a8170a9bdc44b4d6ffeda",
+    "carwow": "d25ae0595a6ea5870958f99ddb5e27a84babe16e",
+    "modern": "7a3d91bb4c46c10d3d66d9178199a8d5679dea29"
+  },
+  "templateSources": {
+    "auto-best": {
+      "repository": "darkapoparka/cars",
+      "revision": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+      "path": "templates/auto-best",
+      "tree": "97833980ab127f6de8f675ac1a188e4b7f717976"
+    },
+    "carwow": {
+      "repository": "darkapoparka/cars",
+      "revision": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+      "path": "templates/carwow",
+      "tree": "d4a08817e87cf84d08c4db1c08a515937245f2dd"
+    },
+    "modern": {
+      "repository": "darkapoparka/cars",
+      "revision": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+      "path": "templates/modern",
+      "tree": "66bfb8196bbce18832ada6b34b02dda97baba25b"
+    }
+  },
+  "provenance": {
+    "auto-best": {
+      "metadata": {
+        "path": "auto-best/.client/project.json",
+        "sha256": "522551d4481061eef90aa9ab21a608387738960f2da55d0130ab7289790d92b5"
+      },
+      "copyReceipt": {
+        "path": "auto-best/.template/source-manifest.json",
+        "sha256": "170efcc9cd0fc6763706a5d69edd53ee970e31280c9aee8871c7e8d61431294b"
+      }
+    },
+    "carwow": {
+      "metadata": {
+        "path": "carwow/.client/project.json",
+        "sha256": "b2608799745690ef4955a564cc609bd02ad9eb2a914f0cffe4b9099ecdfa794f"
+      },
+      "copyReceipt": {
+        "path": "carwow/.template/source-manifest.json",
+        "sha256": "04d8b78666b0eae0454d81cabb8f10c935a6eaff2c00293ee38b3c8f8e2ddbed"
+      }
+    },
+    "modern": {
+      "metadata": {
+        "path": "modern/.client/project.json",
+        "sha256": "af2edea1e3eaec5a0457740828a51e76f38e9ec3e91a910c2f0fa9e67d8057f9"
+      },
+      "copyReceipt": {
+        "path": "modern/.template/source-manifest.json",
+        "sha256": "925b0f64041e7c0ccd38f853a84ad0d9b0c250cd97abd80b79043b26d3cd216b"
+      }
+    }
+  },
+  "personalization": {
+    "path": "docs/releases/cloudflare-existing25-20261011/registered-source/extra-car-sm/reviewed-personalization.json",
+    "sha256": "35b21373ec4e6fd22cd581576bc7ed2dd38988c473d36f23978ebb8cd06f8ebf"
+  },
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "globalReleaseApproval": false
+}

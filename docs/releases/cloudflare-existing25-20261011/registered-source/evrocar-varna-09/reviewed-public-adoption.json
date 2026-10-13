@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-registered-dealer-source-adoption",
+  "dealer": "evrocar-varna-09",
+  "reviewed": true,
+  "reviewedAt": "2026-10-13T17:45:17.735Z",
+  "canonicalSourceRepository": "darkapoparka/cars",
+  "baseline": {
+    "commit": "1e8dd75243b8e47f22583444ea43d4f23ea173fa",
+    "tree": "54bc528a25ee67c8411abc41a642d7b531786124"
+  },
+  "identity": {
+    "dealerId": "evrocar-varna-09",
+    "repository": "darkapoparka/cars-evrocar-varna-09",
+    "workerName": "cars-evrocar-varna-09",
+    "publicOrigin": "https://cars-evrocar-varna-09.darkapoparka1.workers.dev",
+    "sources": [
+      {
+        "url": "https://evrocarvarna09.mobile.bg/",
+        "observedAt": "2026-09-09"
+      }
+    ]
+  },
+  "layout": {
+    "kind": "raw-unmounted-applications",
+    "reviewed": true,
+    "proofs": [
+      {
+        "path": "auto-best/svelte.config.js",
+        "sha256": "12c428bb7348c6beb2af9f896b9d4607510b2e3a8bb22b6b68a9ad2fd809fe69"
+      },
+      {
+        "path": "carwow/svelte.config.js",
+        "sha256": "6f9f2e467afe235ca6bdcf14bdef6260b0b7060d92aa311dbff09445e0912bc8"
+      },
+      {
+        "path": "modern/apps/web/next.config.ts",
+        "sha256": "dd47e165bfbfae56740a33cff2e3d5ba2a4b62ef490731586c02de9aedd54476"
+      }
+    ]
+  },
+  "variants": [
+    {
+      "key": "auto-best",
+      "base": "",
+      "entry": "/"
+    },
+    {
+      "key": "modern",
+      "base": "/variant-2",
+      "entry": "/variant-2/cars"
+    },
+    {
+      "key": "carwow",
+      "base": "/variant-3",
+      "entry": "/variant-3/"
+    }
+  ],
+  "applications": {
+    "auto-best": "a77d55f4a422c070d062a5f99750785d5d18220f",
+    "carwow": "1652903d7aff5a041a577603aff2f16bb835ff8f",
+    "modern": "f2e166516228bd6ea441100d2aa79984fa92d0c8"
+  },
+  "templateSources": {
+    "auto-best": {
+      "repository": "darkapoparka/cars",
+      "revision": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+      "path": "templates/auto-best",
+      "tree": "97833980ab127f6de8f675ac1a188e4b7f717976"
+    },
+    "carwow": {
+      "repository": "darkapoparka/cars",
+      "revision": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+      "path": "templates/carwow",
+      "tree": "d4a08817e87cf84d08c4db1c08a515937245f2dd"
+    },
+    "modern": {
+      "repository": "darkapoparka/cars",
+      "revision": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+      "path": "templates/modern",
+      "tree": "66bfb8196bbce18832ada6b34b02dda97baba25b"
+    }
+  },
+  "provenance": {
+    "auto-best": {
+      "metadata": {
+        "path": "auto-best/.client/project.json",
+        "sha256": "787b3ecfaa0357069d1f1f41bb07a04a5597b0f553201711e7213a23eccd9808"
+      }
+    },
+    "carwow": {
+      "metadata": {
+        "path": "carwow/.client/project.json",
+        "sha256": "8faf6e5ec879170f3345411d19b857e203d83bb054e2011baf308539a916a365"
+      }
+    },
+    "modern": {
+      "metadata": {
+        "path": "modern/.client/project.json",
+        "sha256": "74b9b18ac2a6fc011f035780346397d4c46508695d4a69a13451ea796bffc054"
+      }
+    }
+  },
+  "personalization": {
+    "path": "docs/releases/cloudflare-existing25-20261011/registered-source/evrocar-varna-09/reviewed-personalization.json",
+    "sha256": "c4d7517b5fa46d71d9c65d0b3e6d93fed22f9dc3ca9aa75b8e8f490356dad744"
+  },
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "globalReleaseApproval": false
+}

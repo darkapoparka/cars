@@ -6,7 +6,15 @@
   "dealers": [
     "kapitol-varna",
     "chernomore-varna",
-    "exclusive-auto-varna"
+    "exclusive-auto-varna",
+    "avtoborsa-mania",
+    "extra-car-sm",
+    "sprint-auto-varna",
+    "evrocar-varna-09",
+    "prestige-varna",
+    "rqs-auto-team",
+    "sunny-varna",
+    "europa-varna"
   ],
   "inputs": {
     "kapitol-varna": {
@@ -85,6 +93,214 @@
       "resolutions": {
         "path": "docs/releases/cloudflare-existing25-20261011/registered-source/exclusive-auto-varna/reviewed-template-resolutions-20261013.json",
         "sha256": "9b383525654993c96a8fd4348ae4c12889a0e55818ca3d353ba97046a94afbcf"
+      }
+    },
+    "avtoborsa-mania": {
+      "adoption": {
+        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/avtoborsa-mania/reviewed-public-adoption.json",
+        "sha256": "b910442608171dde6a948e8bfac73109d5d1ba12a8265a98dccc48fad760d401"
+      },
+      "candidateLock": {
+        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/parallel-retained-eight-qualification-lock.json",
+        "sha256": "1bb60d4b895366e954c613701d20aa9c54982b7395a6ec1593661cd45be62351"
+      },
+      "qualification": {
+        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/avtoborsa-mania/qualification-context.json",
+        "sha256": "a2f11b7ce16be02f01dae39ad368c726ff2ee5c01dd3ae1a27f078074d47be2c"
+      },
+      "sourceDeltaReview": {
+        "path": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
+        "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975"
+      },
+      "branding": {
+        "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/avtoborsa-mania/branding.json",
+        "sha256": "5a5293c369c0ccb82f9429cc18850a80a6c0cdfb3fe4529d127fcc42a6263c73"
+      },
+      "resolutions": {
+        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/parallel-retained-eight-template-resolutions.json",
+        "sha256": "e48bc08d2a6d1537807f122f3d7e2bcda284e2eef532ac45e2e73437ee42b0ea"
+      }
+    },
+    "extra-car-sm": {
+      "adoption": {
+        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/extra-car-sm/reviewed-public-adoption.json",
+        "sha256": "c9766ed9fba571b06174f20d17562ad954d6d72dc3ca314dfedab83f16bb30d8"
+      },
+      "candidateLock": {
+        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/parallel-retained-eight-qualification-lock.json",
+        "sha256": "1bb60d4b895366e954c613701d20aa9c54982b7395a6ec1593661cd45be62351"
+      },
+      "qualification": {
+        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/extra-car-sm/qualification-context.json",
+        "sha256": "43be43ad8007b6206717f6f36ea9b1a3b7a235eca39607f06a1c206775f01bf4"
+      },
+      "sourceDeltaReview": {
+        "path": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
+        "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975"
+      },
+      "branding": {
+        "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/extra-car-sm/branding.json",
+        "sha256": "c418f8871dea4e713af6afbd7e286f72e0b7068606a108ac2efed268422db1d2"
+      },
+      "resolutions": {
+        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/parallel-retained-eight-template-resolutions.json",
+        "sha256": "e48bc08d2a6d1537807f122f3d7e2bcda284e2eef532ac45e2e73437ee42b0ea"
+      }
+    },
+    "sprint-auto-varna": {
+      "adoption": {
+        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/sprint-auto-varna/reviewed-public-adoption.json",
+        "sha256": "5233e11e11bb0ef009f3e9ed527ca155fcbb6f322c08cbd81b47690efcc4501a"
+      },
+      "candidateLock": {
+        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/parallel-retained-eight-qualification-lock.json",
+        "sha256": "1bb60d4b895366e954c613701d20aa9c54982b7395a6ec1593661cd45be62351"
+      },
+      "qualification": {
+        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/sprint-auto-varna/qualification-context.json",
+        "sha256": "e607a73d7ca760076779964fca73ed9684eb079347c70574526a1940094d9b88"
+      },
+      "sourceDeltaReview": {
+        "path": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
+        "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975"
+      },
+      "branding": {
+        "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/sprint-auto-varna/branding.json",
+        "sha256": "ee60745d6a1cacfbc7ce086e692778b9442aa47c679cf457fb5b7ae9ade43edc"
+      },
+      "resolutions": {
+        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/parallel-retained-eight-template-resolutions.json",
+        "sha256": "e48bc08d2a6d1537807f122f3d7e2bcda284e2eef532ac45e2e73437ee42b0ea"
+      }
+    },
+    "evrocar-varna-09": {
+      "adoption": {
+        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/evrocar-varna-09/reviewed-public-adoption.json",
+        "sha256": "31bb9b9a06a51687cf7061b95ecbe4296c92bf03355169049f06da969d1e77bf"
+      },
+      "candidateLock": {
+        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/parallel-retained-eight-qualification-lock.json",
+        "sha256": "1bb60d4b895366e954c613701d20aa9c54982b7395a6ec1593661cd45be62351"
+      },
+      "qualification": {
+        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/evrocar-varna-09/qualification-context.json",
+        "sha256": "6dcc689e6f2379f662b96e5481eddc1f7909f08cb72e7b94d3b8ae7cad4fb6c9"
+      },
+      "sourceDeltaReview": {
+        "path": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
+        "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975"
+      },
+      "branding": {
+        "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/evrocar-varna-09/branding.json",
+        "sha256": "756686f708936f186cbb46979439d4555842f15d1a886da1b55414cbe2361cb4"
+      },
+      "resolutions": {
+        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/parallel-retained-eight-template-resolutions.json",
+        "sha256": "e48bc08d2a6d1537807f122f3d7e2bcda284e2eef532ac45e2e73437ee42b0ea"
+      }
+    },
+    "prestige-varna": {
+      "adoption": {
+        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/prestige-varna/reviewed-public-adoption.json",
+        "sha256": "ee7954aa8ab2ba8da1422a9729a90a755de79bf6d034a952e50b62255acc5912"
+      },
+      "candidateLock": {
+        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/parallel-retained-eight-qualification-lock.json",
+        "sha256": "1bb60d4b895366e954c613701d20aa9c54982b7395a6ec1593661cd45be62351"
+      },
+      "qualification": {
+        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/prestige-varna/qualification-context.json",
+        "sha256": "5a08f365d1dd3858135eeeab8b5d65d43d06f3ba0e264aaa93b8159355066f24"
+      },
+      "sourceDeltaReview": {
+        "path": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
+        "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975"
+      },
+      "branding": {
+        "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/prestige-varna/branding.json",
+        "sha256": "9925069e86b0455a87742a8f6af224f5a111de498fe821016a6f2994a18b70c9"
+      },
+      "resolutions": {
+        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/parallel-retained-eight-template-resolutions.json",
+        "sha256": "e48bc08d2a6d1537807f122f3d7e2bcda284e2eef532ac45e2e73437ee42b0ea"
+      }
+    },
+    "rqs-auto-team": {
+      "adoption": {
+        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/rqs-auto-team/reviewed-public-adoption.json",
+        "sha256": "6d522c2be332ee5df5d1c931e2ee914a404e920a8c7b460e0f3de29fa3e1b2af"
+      },
+      "candidateLock": {
+        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/parallel-retained-eight-qualification-lock.json",
+        "sha256": "1bb60d4b895366e954c613701d20aa9c54982b7395a6ec1593661cd45be62351"
+      },
+      "qualification": {
+        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/rqs-auto-team/qualification-context.json",
+        "sha256": "c6425524a67b2ad0bea93d161069c33ca6f274ad38f9f14596776b2ce214c538"
+      },
+      "sourceDeltaReview": {
+        "path": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
+        "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975"
+      },
+      "branding": {
+        "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/rqs-auto-team/branding.json",
+        "sha256": "e3b57f0f548a1f7b0086baf1f8fe29a2e0387fff7ede62c13d2ead7fc19528f7"
+      },
+      "resolutions": {
+        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/parallel-retained-eight-template-resolutions.json",
+        "sha256": "e48bc08d2a6d1537807f122f3d7e2bcda284e2eef532ac45e2e73437ee42b0ea"
+      }
+    },
+    "sunny-varna": {
+      "adoption": {
+        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/sunny-varna/reviewed-public-adoption.json",
+        "sha256": "f82bffc707e2c96d730da0fd1074e10fe199f2b4c1034c0bf1d22aaa58521e69"
+      },
+      "candidateLock": {
+        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/parallel-retained-eight-qualification-lock.json",
+        "sha256": "1bb60d4b895366e954c613701d20aa9c54982b7395a6ec1593661cd45be62351"
+      },
+      "qualification": {
+        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/sunny-varna/qualification-context.json",
+        "sha256": "1cec1bedd013dbc72c0c19653e8652ec1625d7ddfe688e8f5e982d5d4baae2c8"
+      },
+      "sourceDeltaReview": {
+        "path": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
+        "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975"
+      },
+      "branding": {
+        "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/sunny-varna/branding.json",
+        "sha256": "f3b3761aacc500e73a8c1eee61428457256eb943e39238757f2c0f9d069add16"
+      },
+      "resolutions": {
+        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/parallel-retained-eight-template-resolutions.json",
+        "sha256": "e48bc08d2a6d1537807f122f3d7e2bcda284e2eef532ac45e2e73437ee42b0ea"
+      }
+    },
+    "europa-varna": {
+      "adoption": {
+        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/europa-varna/reviewed-public-adoption.json",
+        "sha256": "14af343fb639528348bc7c7c5a03918501df5f78b17b0d5ece7c35a0eca7ef4f"
+      },
+      "candidateLock": {
+        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/parallel-retained-eight-qualification-lock.json",
+        "sha256": "1bb60d4b895366e954c613701d20aa9c54982b7395a6ec1593661cd45be62351"
+      },
+      "qualification": {
+        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/europa-varna/qualification-context.json",
+        "sha256": "3a606d18f4a12172c329a77df0ca70110a96914f9966a89414b9d3b1570b1d63"
+      },
+      "sourceDeltaReview": {
+        "path": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
+        "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975"
+      },
+      "branding": {
+        "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/europa-varna/branding.json",
+        "sha256": "999cfdc870ef17f0ed9ba029fdd6d4b7fb2b868123f1fd5fe2ac80f3e83f9d10"
+      },
+      "resolutions": {
+        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/parallel-retained-eight-template-resolutions.json",
+        "sha256": "e48bc08d2a6d1537807f122f3d7e2bcda284e2eef532ac45e2e73437ee42b0ea"
       }
     }
   }

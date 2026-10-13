@@ -1,0 +1,695 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-registered-dealer-derived-inputs",
+  "dealer": "avtoborsa-mania",
+  "reviewed": true,
+  "reviewedAt": "2026-10-13T17:45:17.735Z",
+  "facts": {
+    "business": {
+      "name": "АВТОБОРСА МАНИЯ",
+      "shortName": "Мания",
+      "city": "Варна",
+      "countryCode": "BG",
+      "currency": "EUR",
+      "distanceUnit": "km",
+      "phone": "0899 874 488",
+      "phoneDisplay": "0899 874 488",
+      "phoneE164": "+359899874488",
+      "secondaryPhone": "",
+      "address": "бул. Цар Освободител, район Владислав Варненчик",
+      "addressLine": "бул. Цар Освободител, район Владислав Варненчик",
+      "hours": "Не е публикувано работно време. Потвърдете удобния час и точния вход по телефона.",
+      "email": "",
+      "website": "",
+      "sourceUrl": "https://mania.mobile.bg/",
+      "observedAt": "2026-09-09",
+      "services": [],
+      "socialLinks": {},
+      "inventoryNotice": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата. Illustrative template vehicles, not this dealership’s stock.",
+      "previewNotice": "Независим демонстрационен преглед; формите не изпращат съобщения и не създават резервации. Independent demonstration: forms do not send enquiries or create reservations.",
+      "logo": "/registered-branding/onLight.png",
+      "logoLight": "/registered-branding/onLight.png",
+      "logoDark": "/registered-branding/onDark.png"
+    },
+    "retainedSourceInventory": {
+      "renderAsDealerStock": false,
+      "records": [
+        {
+          "id": "11787641411878847",
+          "sourceUrl": "https://mania.mobile.bg/obiava-11787641411878847-kia-sportage-2-0crdi-gt-line-4x4-185-k-c",
+          "title": "Kia Sportage 2.0 CRDi GT Line 4x4",
+          "make": "Kia",
+          "model": "Sportage",
+          "price": 13600,
+          "currency": "EUR",
+          "year": 2016,
+          "productionMonth": 12,
+          "mileage": 170000,
+          "mileageUnit": "km",
+          "fuel": "Дизел",
+          "transmission": "Автоматик",
+          "powerHp": 185,
+          "color": "Черен",
+          "body": "SUV",
+          "sourceStatus": "advertised",
+          "availabilityIndependentlyVerified": false,
+          "note": "Обявен като внос от Северна Италия. Историята, техническото състояние и наличността се проверяват с продавача.",
+          "taxNote": "Не се начислява ДДС",
+          "sourcePhotoCount": 16,
+          "features": [
+            "4x4",
+            "Навигация",
+            "Парктроник",
+            "Подгряване на седалки"
+          ],
+          "image": "/dealer/media-pending.svg",
+          "gallery": [],
+          "observedAt": "2026-09-09",
+          "evidenceLevel": "catalogue; fresh web detail fetch returned cache miss"
+        },
+        {
+          "id": "11783751179713495",
+          "sourceUrl": "https://mania.mobile.bg/obiava-11783751179713495-vw-touran-1-4-tsi-metan",
+          "title": "Volkswagen Touran 1.4 TSI Метан",
+          "make": "Volkswagen",
+          "model": "Touran",
+          "price": 6999,
+          "currency": "EUR",
+          "year": 2014,
+          "productionMonth": 12,
+          "mileage": 178000,
+          "mileageUnit": "km",
+          "fuel": "Бензин",
+          "transmission": "Ръчна",
+          "powerHp": 150,
+          "color": "Сив",
+          "body": "Minivan",
+          "sourceStatus": "advertised",
+          "availabilityIndependentlyVerified": false,
+          "note": "Заглавието и оборудването посочват метанова уредба; основното поле за гориво е бензин. Проверете уредбата и документите.",
+          "taxNote": "Не се начислява ДДС",
+          "sourcePhotoCount": 15,
+          "features": [
+            "Навигация",
+            "Парктроник"
+          ],
+          "image": "/dealer/media-pending.svg",
+          "gallery": [],
+          "observedAt": "2026-09-09",
+          "evidenceLevel": "catalogue; fresh web detail fetch returned cache miss"
+        },
+        {
+          "id": "21786173277274131",
+          "sourceUrl": "https://mania.mobile.bg/obiava-21786173277274131-volvo-xc90-2-5-d5-awd-185k-c",
+          "title": "Volvo XC90 D5 AWD 185 к.с.",
+          "make": "Volvo",
+          "model": "XC90",
+          "price": 7800,
+          "currency": "EUR",
+          "year": 2008,
+          "productionMonth": 12,
+          "mileage": 178000,
+          "mileageUnit": "km",
+          "fuel": "Дизел",
+          "transmission": "Автоматик",
+          "powerHp": 185,
+          "color": "Черен",
+          "body": "SUV",
+          "sourceStatus": "advertised",
+          "availabilityIndependentlyVerified": false,
+          "note": "Каталогът и отвореният детайл съвпадат за цена и пробег. Заглавието посочва 2.5 D5; потвърдете работния обем по документите.",
+          "taxNote": "Не се начислява ДДС",
+          "sourcePhotoCount": 16,
+          "features": [
+            "4x4",
+            "Парктроник"
+          ],
+          "image": "/dealer/media-pending.svg",
+          "gallery": [],
+          "observedAt": "2026-09-09",
+          "evidenceLevel": "catalogue; public detail opened"
+        },
+        {
+          "id": "11787388233434121",
+          "sourceUrl": "https://mania.mobile.bg/obiava-11787388233434121-vw-golf-1-4-i-dsg-highline",
+          "title": "Volkswagen Golf 1.4 DSG Highline",
+          "make": "Volkswagen",
+          "model": "Golf",
+          "price": 6500,
+          "currency": "EUR",
+          "year": 2012,
+          "productionMonth": 12,
+          "mileage": 176000,
+          "mileageUnit": "km",
+          "fuel": "Бензин",
+          "transmission": "Автоматик",
+          "powerHp": 122,
+          "color": "Сив",
+          "body": "Hatchback",
+          "sourceStatus": "advertised",
+          "availabilityIndependentlyVerified": false,
+          "note": "Обявен като нов внос. Данните са от каталога; потвърдете сервизната история и наличността преди оглед.",
+          "taxNote": "Не се начислява ДДС",
+          "sourcePhotoCount": 15,
+          "features": [],
+          "image": "/dealer/media-pending.svg",
+          "gallery": [],
+          "observedAt": "2026-09-09",
+          "evidenceLevel": "catalogue; fresh web detail fetch returned cache miss"
+        },
+        {
+          "id": "11782368842399105",
+          "sourceUrl": "https://mania.mobile.bg/obiava-11782368842399105-vw-golf-1-6tdi-dsg-rline",
+          "title": "Volkswagen Golf 1.6 TDI DSG R-Line",
+          "make": "Volkswagen",
+          "model": "Golf",
+          "price": 6700,
+          "currency": "EUR",
+          "year": 2010,
+          "productionMonth": 12,
+          "mileage": 168000,
+          "mileageUnit": "km",
+          "fuel": "Дизел",
+          "transmission": "Автоматик",
+          "powerHp": 105,
+          "color": "Сив",
+          "body": "Hatchback",
+          "sourceStatus": "advertised",
+          "availabilityIndependentlyVerified": false,
+          "note": "Обявен като нов внос. Текущите каталожни данни не са независима проверка на състоянието.",
+          "taxNote": "Не се начислява ДДС",
+          "sourcePhotoCount": 15,
+          "features": [
+            "Парктроник"
+          ],
+          "image": "/dealer/media-pending.svg",
+          "gallery": [],
+          "observedAt": "2026-09-09",
+          "evidenceLevel": "catalogue; public detail opened"
+        },
+        {
+          "id": "11774978200172595",
+          "sourceUrl": "https://mania.mobile.bg/obiava-11774978200172595-audi-a3-1-6-tdi",
+          "title": "Audi A3 1.6 TDI",
+          "make": "Audi",
+          "model": "A3",
+          "price": 7300,
+          "currency": "EUR",
+          "year": 2013,
+          "productionMonth": 12,
+          "mileage": 176000,
+          "mileageUnit": "km",
+          "fuel": "Дизел",
+          "transmission": "Ръчна",
+          "powerHp": 105,
+          "color": "Черен",
+          "body": "Hatchback",
+          "sourceStatus": "advertised",
+          "availabilityIndependentlyVerified": false,
+          "note": "Каталогът посочва нов внос, навигация и панорамен люк. Оборудването и наличността се потвърждават при разговор и оглед.",
+          "taxNote": "Не се начислява ДДС",
+          "sourcePhotoCount": 15,
+          "features": [
+            "Навигация",
+            "Парктроник",
+            "Панорамен покрив"
+          ],
+          "image": "/dealer/media-pending.svg",
+          "gallery": [],
+          "observedAt": "2026-09-09",
+          "evidenceLevel": "catalogue; fresh web detail fetch returned cache miss"
+        },
+        {
+          "id": "21761238663604222",
+          "sourceUrl": "https://mania.mobile.bg/obiava-21761238663604222-mitsubishi-asx-1-6-i",
+          "title": "Mitsubishi ASX 1.6i",
+          "make": "Mitsubishi",
+          "model": "ASX",
+          "price": 6999,
+          "currency": "EUR",
+          "year": 2010,
+          "productionMonth": 12,
+          "mileage": 150000,
+          "mileageUnit": "km",
+          "fuel": "Бензин",
+          "transmission": "Ръчна",
+          "powerHp": 116,
+          "color": "Сив",
+          "body": "SUV",
+          "sourceStatus": "advertised",
+          "availabilityIndependentlyVerified": false,
+          "note": "Обявен като нов внос от Северна Италия. Данните за автомобила и наличността се потвърждават с продавача.",
+          "taxNote": "Не се начислява ДДС",
+          "sourcePhotoCount": 15,
+          "features": [
+            "Парктроник"
+          ],
+          "image": "/dealer/media-pending.svg",
+          "gallery": [],
+          "observedAt": "2026-09-09",
+          "evidenceLevel": "catalogue; fresh web detail fetch returned cache miss"
+        },
+        {
+          "id": "11762350327710907",
+          "sourceUrl": "https://mania.mobile.bg/obiava-11762350327710907-opel-insignia-2-0cdti",
+          "title": "Opel Insignia 2.0 CDTI",
+          "make": "Opel",
+          "model": "Insignia",
+          "price": 4700,
+          "currency": "EUR",
+          "year": 2011,
+          "productionMonth": 12,
+          "mileage": 175000,
+          "mileageUnit": "km",
+          "fuel": "Дизел",
+          "transmission": "Ръчна",
+          "powerHp": 130,
+          "color": "Сив",
+          "body": "Sedan",
+          "sourceStatus": "advertised",
+          "availabilityIndependentlyVerified": false,
+          "note": "Обявен като нов внос. Посочените цена и технически данни са от публичния каталог, а не независима проверка.",
+          "taxNote": "Не се начислява ДДС",
+          "sourcePhotoCount": 15,
+          "features": [],
+          "image": "/dealer/media-pending.svg",
+          "gallery": [],
+          "observedAt": "2026-09-09",
+          "evidenceLevel": "catalogue; fresh web detail fetch returned cache miss"
+        }
+      ]
+    }
+  },
+  "stock": {
+    "kind": "illustrative-not-dealer-stock",
+    "mode": "template-demo",
+    "previewOnly": true,
+    "actualDealerAvailability": false,
+    "disclosure": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата. Illustrative template vehicles, not this dealership’s stock.",
+    "templateDemo": {
+      "source": {
+        "repository": "darkapoparka/cars",
+        "revision": "696230a404abd9b20b6f907b9cfb139175298c7a",
+        "path": "templates/auto-best",
+        "tree": "b07ff2273be554ef64a039ac8f4f023ae60a33ac",
+        "digest": "90f131aa0ead6ae4fcb06d30c054ca4d0c5d39097a2927cca8f298c7d2dfb3ca"
+      },
+      "catalog": {
+        "path": "src/lib/data/inventory.ts",
+        "bytes": 6637,
+        "sha256": "0dec534dede184737e172f5e349817b38d0ea80231ba50f4f070dbebeaa7c998",
+        "gitBlob": "38f7dd8325a9f2555285d3e85638bc392b0c75f0"
+      },
+      "bindings": {
+        "path": "src/lib/config/lead-site.ts",
+        "bytes": 14890,
+        "sha256": "ef5cf928b5a8df3dce50b693f1086409dd7ace82c643316f62e8ccf02c07a38b",
+        "gitBlob": "c16a74c574019e534825016d3d404b01806d684d"
+      }
+    },
+    "listings": [
+      {
+        "id": "template-demo-auto-best-1",
+        "type": "car",
+        "image": "/assets/images/lead/day-night-stock-04.webp",
+        "category": "Комби",
+        "body": "Wagon",
+        "make": "Audi",
+        "title": "Audi RS 6 Avant",
+        "cardNote": {
+          "bg": "Панорамен покрив",
+          "en": "Panoramic roof"
+        },
+        "yearNumber": 2024,
+        "mileageKm": 99701,
+        "fuel": "Бензин",
+        "transmission": "Автоматик",
+        "equipment": [
+          "4x4",
+          "360° камера",
+          "Панорамен покрив",
+          "Подгряване на седалки",
+          "Навигация",
+          "Парктроник",
+          "Безключов достъп",
+          "Адаптивен круиз контрол"
+        ],
+        "condition": "used",
+        "priceEur": 68804,
+        "sourceUrl": "",
+        "year": 2024,
+        "currency": "EUR",
+        "priceAmount": 68804,
+        "images": [
+          "/assets/images/lead/day-night-stock-04.webp"
+        ],
+        "availability": "illustrative-not-dealer-stock",
+        "verification": "sample",
+        "sourceRecord": {
+          "sourceId": "1",
+          "catalogPath": "src/lib/data/inventory.ts",
+          "catalogSha256": "0dec534dede184737e172f5e349817b38d0ea80231ba50f4f070dbebeaa7c998"
+        }
+      },
+      {
+        "id": "template-demo-auto-best-2",
+        "type": "car",
+        "image": "/assets/images/lead/day-night-stock-01.webp",
+        "category": "SUV купе",
+        "body": "SUV",
+        "make": "Mercedes-Benz",
+        "title": "Mercedes-Benz GLE Coupé",
+        "cardNote": {
+          "bg": "360° камера",
+          "en": "360° camera"
+        },
+        "yearNumber": 2021,
+        "mileageKm": 96865,
+        "fuel": "Дизел",
+        "transmission": "Автоматик",
+        "equipment": [
+          "4x4",
+          "360° камера",
+          "Панорамен покрив",
+          "Подгряване на седалки",
+          "Навигация",
+          "Парктроник",
+          "Безключов достъп",
+          "Адаптивен круиз контрол"
+        ],
+        "condition": "used",
+        "priceEur": 55403,
+        "sourceUrl": "",
+        "year": 2021,
+        "currency": "EUR",
+        "priceAmount": 55403,
+        "images": [
+          "/assets/images/lead/day-night-stock-01.webp"
+        ],
+        "availability": "illustrative-not-dealer-stock",
+        "verification": "sample",
+        "sourceRecord": {
+          "sourceId": "2",
+          "catalogPath": "src/lib/data/inventory.ts",
+          "catalogSha256": "0dec534dede184737e172f5e349817b38d0ea80231ba50f4f070dbebeaa7c998"
+        }
+      },
+      {
+        "id": "template-demo-auto-best-3",
+        "type": "car",
+        "image": "/assets/images/lead/day-night-stock-06.webp",
+        "category": "SUV",
+        "body": "SUV",
+        "make": "Audi",
+        "title": "Audi RS Q8",
+        "cardNote": {
+          "bg": "Адаптивен круиз",
+          "en": "Adaptive cruise"
+        },
+        "yearNumber": 2021,
+        "mileageKm": 94709,
+        "fuel": "Бензин",
+        "transmission": "Автоматик",
+        "equipment": [
+          "4x4",
+          "360° камера",
+          "Панорамен покрив",
+          "Подгряване на седалки",
+          "Навигация",
+          "Парктроник",
+          "Безключов достъп",
+          "Адаптивен круиз контрол"
+        ],
+        "condition": "used",
+        "priceEur": 57480,
+        "sourceUrl": "",
+        "year": 2021,
+        "currency": "EUR",
+        "priceAmount": 57480,
+        "images": [
+          "/assets/images/lead/day-night-stock-06.webp"
+        ],
+        "availability": "illustrative-not-dealer-stock",
+        "verification": "sample",
+        "sourceRecord": {
+          "sourceId": "3",
+          "catalogPath": "src/lib/data/inventory.ts",
+          "catalogSha256": "0dec534dede184737e172f5e349817b38d0ea80231ba50f4f070dbebeaa7c998"
+        }
+      },
+      {
+        "id": "template-demo-auto-best-4",
+        "type": "car",
+        "image": "/assets/images/lead/day-night-stock-02.webp",
+        "category": "SUV купе",
+        "body": "SUV",
+        "make": "BMW",
+        "title": "BMW X6 M Sport",
+        "cardNote": {
+          "bg": "Безключов достъп",
+          "en": "Keyless entry"
+        },
+        "yearNumber": 2021,
+        "mileageKm": 62485,
+        "fuel": "Дизел",
+        "transmission": "Автоматик",
+        "equipment": [
+          "4x4",
+          "360° камера",
+          "Панорамен покрив",
+          "Подгряване на седалки",
+          "Навигация",
+          "Парктроник",
+          "Безключов достъп"
+        ],
+        "condition": "used",
+        "priceEur": 54223,
+        "sourceUrl": "",
+        "year": 2021,
+        "currency": "EUR",
+        "priceAmount": 54223,
+        "images": [
+          "/assets/images/lead/day-night-stock-02.webp"
+        ],
+        "availability": "illustrative-not-dealer-stock",
+        "verification": "sample",
+        "sourceRecord": {
+          "sourceId": "4",
+          "catalogPath": "src/lib/data/inventory.ts",
+          "catalogSha256": "0dec534dede184737e172f5e349817b38d0ea80231ba50f4f070dbebeaa7c998"
+        }
+      },
+      {
+        "id": "template-demo-auto-best-6",
+        "type": "car",
+        "image": "/assets/images/lead/day-night-stock-03.webp",
+        "category": "Спортбек",
+        "body": "Sportback",
+        "make": "Mercedes-Benz",
+        "cardBrand": "Mercedes-AMG",
+        "title": "Mercedes-AMG GT 4-Door",
+        "cardNote": {
+          "bg": "Навигация",
+          "en": "Navigation"
+        },
+        "yearNumber": 2020,
+        "mileageKm": 72812,
+        "fuel": "Бензин",
+        "transmission": "Автоматик",
+        "equipment": [
+          "360° камера",
+          "Панорамен покрив",
+          "Подгряване на седалки",
+          "Навигация",
+          "Парктроник",
+          "Безключов достъп"
+        ],
+        "condition": "used",
+        "priceEur": 61069,
+        "sourceUrl": "",
+        "year": 2020,
+        "currency": "EUR",
+        "priceAmount": 61069,
+        "images": [
+          "/assets/images/lead/day-night-stock-03.webp"
+        ],
+        "availability": "illustrative-not-dealer-stock",
+        "verification": "sample",
+        "sourceRecord": {
+          "sourceId": "6",
+          "catalogPath": "src/lib/data/inventory.ts",
+          "catalogSha256": "0dec534dede184737e172f5e349817b38d0ea80231ba50f4f070dbebeaa7c998"
+        }
+      },
+      {
+        "id": "template-demo-auto-best-7",
+        "type": "car",
+        "image": "/assets/images/lead/day-night-stock-02.webp",
+        "category": "SUV купе",
+        "body": "SUV",
+        "make": "BMW",
+        "title": "BMW X6 xDrive",
+        "cardNote": {
+          "bg": "4×4 задвижване",
+          "en": "All-wheel drive"
+        },
+        "yearNumber": 2020,
+        "mileageKm": 76346,
+        "fuel": "Дизел",
+        "transmission": "Автоматик",
+        "equipment": [
+          "4x4",
+          "360° камера",
+          "Панорамен покрив",
+          "Подгряване на седалки",
+          "Навигация",
+          "Парктроник",
+          "Безключов достъп"
+        ],
+        "condition": "used",
+        "priceEur": 85635,
+        "sourceUrl": "",
+        "year": 2020,
+        "currency": "EUR",
+        "priceAmount": 85635,
+        "images": [
+          "/assets/images/lead/day-night-stock-02.webp"
+        ],
+        "availability": "illustrative-not-dealer-stock",
+        "verification": "sample",
+        "sourceRecord": {
+          "sourceId": "7",
+          "catalogPath": "src/lib/data/inventory.ts",
+          "catalogSha256": "0dec534dede184737e172f5e349817b38d0ea80231ba50f4f070dbebeaa7c998"
+        }
+      },
+      {
+        "id": "template-demo-auto-best-8",
+        "type": "car",
+        "image": "/assets/images/lead/day-night-stock-03.webp",
+        "category": "Купе",
+        "body": "Coupe",
+        "make": "Mercedes-Benz",
+        "cardBrand": "Mercedes-AMG",
+        "title": "Mercedes-AMG GT Coupé",
+        "cardNote": {
+          "bg": "Парктроник",
+          "en": "Parking sensors"
+        },
+        "yearNumber": 2023,
+        "mileageKm": 49584,
+        "fuel": "Бензин",
+        "transmission": "Автоматик",
+        "equipment": [
+          "360° камера",
+          "Панорамен покрив",
+          "Подгряване на седалки",
+          "Навигация",
+          "Парктроник",
+          "Безключов достъп"
+        ],
+        "condition": "used",
+        "priceEur": 51365,
+        "sourceUrl": "",
+        "year": 2023,
+        "currency": "EUR",
+        "priceAmount": 51365,
+        "images": [
+          "/assets/images/lead/day-night-stock-03.webp"
+        ],
+        "availability": "illustrative-not-dealer-stock",
+        "verification": "sample",
+        "sourceRecord": {
+          "sourceId": "8",
+          "catalogPath": "src/lib/data/inventory.ts",
+          "catalogSha256": "0dec534dede184737e172f5e349817b38d0ea80231ba50f4f070dbebeaa7c998"
+        }
+      }
+    ]
+  },
+  "locale": {
+    "schemaVersion": 1,
+    "dealerId": "avtoborsa-mania",
+    "defaultLocale": "bg",
+    "enabledLocales": [
+      "bg",
+      "en"
+    ],
+    "dealerCountry": "BG",
+    "inventoryCurrency": "EUR"
+  },
+  "sourceEvidence": [
+    {
+      "path": "business-facts.json",
+      "sha256": "002917a4442c14e5636160e406d483c8afe32ab9190bfbd151d13aa81c8fa962"
+    }
+  ],
+  "media": [
+    {
+      "publicPath": "/assets/images/lead/day-night-stock-04.webp",
+      "sourceKind": "immutable-template-demo",
+      "templatePath": "static/assets/images/lead/day-night-stock-04.webp",
+      "sha256": "945e6864218ab3bd5fbd415336b212ecfde645685033f8506836f906885d447c",
+      "gitBlob": "1c6c6013a571a0b298326abc567c38b6cca295d9",
+      "bytes": 182452
+    },
+    {
+      "publicPath": "/assets/images/lead/day-night-stock-01.webp",
+      "sourceKind": "immutable-template-demo",
+      "templatePath": "static/assets/images/lead/day-night-stock-01.webp",
+      "sha256": "17689ab880bf47de81ef467c34d639223f39f0c1ebe68c90d0aaf70e3dcc6333",
+      "gitBlob": "6be96162cbd13cf4d28c8964fd1d4643b983a0a5",
+      "bytes": 278312
+    },
+    {
+      "publicPath": "/assets/images/lead/day-night-stock-06.webp",
+      "sourceKind": "immutable-template-demo",
+      "templatePath": "static/assets/images/lead/day-night-stock-06.webp",
+      "sha256": "d644dec8e1ef280a702dccac267a2367f0ab823e40373e1299b156e7723b3b1f",
+      "gitBlob": "72b9b750b5ea060afba8a0154a5d073a65a26d60",
+      "bytes": 207938
+    },
+    {
+      "publicPath": "/assets/images/lead/day-night-stock-02.webp",
+      "sourceKind": "immutable-template-demo",
+      "templatePath": "static/assets/images/lead/day-night-stock-02.webp",
+      "sha256": "40d22530c50efb7d486f12b394dbaebb821e368352492954966e19ba84910b7f",
+      "gitBlob": "27b081781754820e9a09144188064a565cca2edc",
+      "bytes": 248390
+    },
+    {
+      "publicPath": "/assets/images/lead/day-night-stock-03.webp",
+      "sourceKind": "immutable-template-demo",
+      "templatePath": "static/assets/images/lead/day-night-stock-03.webp",
+      "sha256": "a63e64bbdfcd7627da5e97e2a355efa7a6192d939d0cdeecc8f9b55a4dd25930",
+      "gitBlob": "912eb1214ca162697b7fb06f65e2ad18ce55f074",
+      "bytes": 181070
+    },
+    {
+      "publicPath": "/registered-branding/onLight.png",
+      "sourceKind": "published-branding-input",
+      "inputPath": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/avtoborsa-mania/branding/onLight.png",
+      "sha256": "ba9ab3bbc61eeb37c104f67c91f7053d1082c09986743ee321290cc78f7c9c8c",
+      "surface": "onLight"
+    },
+    {
+      "publicPath": "/registered-branding/onDark.png",
+      "sourceKind": "published-branding-input",
+      "inputPath": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/avtoborsa-mania/branding/onDark.png",
+      "sha256": "bd1ef8ee76b34205066c715ac50aea0d0d39a9d826df2fa013c9ea07de496d2f",
+      "surface": "onDark"
+    },
+    {
+      "publicPath": "/registered-branding/onAccent.png",
+      "sourceKind": "published-branding-input",
+      "inputPath": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/avtoborsa-mania/branding/onAccent.png",
+      "sha256": "bd1ef8ee76b34205066c715ac50aea0d0d39a9d826df2fa013c9ea07de496d2f",
+      "surface": "onAccent"
+    }
+  ],
+  "publishedBranding": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/avtoborsa-mania/branding.json",
+    "sha256": "5a5293c369c0ccb82f9429cc18850a80a6c0cdfb3fe4529d127fcc42a6263c73",
+    "sourceCommit": "27378380ee5d7341012da90e821426b3756f9a1e"
+  }
+}
