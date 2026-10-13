@@ -1,0 +1,1016 @@
+{
+  "schemaVersion": 1,
+  "slug": "sunny-varna",
+  "business": {
+    "slug": "sunny-varna",
+    "name": "СЪНИ",
+    "shortName": "СЪНИ",
+    "latinName": "СЪНИ",
+    "tagline": "СЪНИ · Варна",
+    "city": "Варна",
+    "region": "",
+    "country": "Bulgaria",
+    "countryCode": "BG",
+    "locale": "bg-BG",
+    "currency": "EUR",
+    "distanceUnit": "km",
+    "address": "бул. „Цар Освободител“ 256, Кайсиева градина, Варна",
+    "addressLine": "бул. „Цар Освободител“ 256, Кайсиева градина",
+    "phoneDisplay": "0898 644 464",
+    "phoneHref": "tel:+359898644464",
+    "phoneE164": "+359898644464",
+    "email": "",
+    "hours": "Всеки ден 08:00–19:00 — потвърдете преди посещение",
+    "website": "https://sunny.mobile.bg/",
+    "inventoryUrl": "",
+    "contactUrl": "",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=%D0%A1%D0%AA%D0%9D%D0%98%2C%20%D0%B1%D1%83%D0%BB.%20%E2%80%9E%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%E2%80%9C%20256%2C%20%D0%9A%D0%B0%D0%B9%D1%81%D0%B8%D0%B5%D0%B2%D0%B0%20%D0%B3%D1%80%D0%B0%D0%B4%D0%B8%D0%BD%D0%B0%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0",
+    "mapsEmbedUrl": "https://maps.google.com/maps?q=%D0%A1%D0%AA%D0%9D%D0%98%2C%20%D0%B1%D1%83%D0%BB.%20%E2%80%9E%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%E2%80%9C%20256%2C%20%D0%9A%D0%B0%D0%B9%D1%81%D0%B8%D0%B5%D0%B2%D0%B0%20%D0%B3%D1%80%D0%B0%D0%B4%D0%B8%D0%BD%D0%B0%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0&z=16&output=embed",
+    "accent": "#c40101",
+    "logo": "/registered-branding/onLight.png",
+    "logoLight": "/registered-branding/onLight.png",
+    "logoDark": "/registered-branding/onDark.png",
+    "socialLinks": {
+      "facebook": "",
+      "instagram": "",
+      "youtube": "",
+      "tiktok": ""
+    },
+    "services": [],
+    "inventoryNotice": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата. Illustrative template vehicles, not this dealership’s stock.",
+    "previewNotice": "Независим демонстрационен преглед; формите не изпращат съобщения и не създават резервации. Independent demonstration: forms do not send enquiries or create reservations.",
+    "observedAt": "",
+    "coordinates": null,
+    "raw": {
+      "name": "СЪНИ",
+      "shortName": "СЪНИ",
+      "city": "Варна",
+      "countryCode": "BG",
+      "currency": "EUR",
+      "distanceUnit": "km",
+      "phone": "0898 644 464",
+      "phoneDisplay": "0898 644 464",
+      "phoneE164": "+359898644464",
+      "secondaryPhone": "+359893430054",
+      "address": "бул. „Цар Освободител“ 256, Кайсиева градина, Варна",
+      "addressLine": "бул. „Цар Освободител“ 256, Кайсиева градина",
+      "hours": "Всеки ден 08:00–19:00 — потвърдете преди посещение",
+      "email": "",
+      "website": "",
+      "sourceUrl": "https://sunny.mobile.bg/",
+      "observedAt": "2026-09-09",
+      "services": [],
+      "socialLinks": {},
+      "inventoryNotice": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата. Illustrative template vehicles, not this dealership’s stock.",
+      "previewNotice": "Независим демонстрационен преглед; формите не изпращат съобщения и не създават резервации. Independent demonstration: forms do not send enquiries or create reservations.",
+      "logo": "/registered-branding/onLight.png",
+      "logoLight": "/registered-branding/onLight.png",
+      "logoDark": "/registered-branding/onDark.png"
+    }
+  },
+  "listings": [
+    {
+      "id": "template-demo-auto-best-1",
+      "sourceId": "template-demo-auto-best-1",
+      "slug": "audi-2024-template-demo-auto-best-1",
+      "title": "Audi RS 6 Avant",
+      "make": "Audi",
+      "model": "Audi RS 6 Avant",
+      "trim": "",
+      "year": 2024,
+      "priceAmount": 68804,
+      "currency": "EUR",
+      "mileageValue": 99701,
+      "mileageUnit": "km",
+      "mileageOnRequest": false,
+      "body": "Wagon",
+      "bodyType": "wagon",
+      "fuel": "Бензин",
+      "fuelType": "gasoline",
+      "transmission": "Автоматик",
+      "transmissionType": "automatic",
+      "color": "",
+      "powerHp": null,
+      "engine": "",
+      "drivetrain": "",
+      "features": [
+        "4x4",
+        "360° камера",
+        "Панорамен покрив",
+        "Подгряване на седалки",
+        "Навигация",
+        "Парктроник",
+        "Безключов достъп",
+        "Адаптивен круиз контрол"
+      ],
+      "images": [
+        "/assets/images/lead/day-night-stock-04.webp"
+      ],
+      "image": "/assets/images/lead/day-night-stock-04.webp",
+      "sourceUrl": "",
+      "observedAt": "",
+      "availability": "illustrative-not-dealer-stock",
+      "description": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата. Illustrative template vehicles, not this dealership’s stock.",
+      "condition": "used",
+      "location": "Варна",
+      "raw": {
+        "id": "template-demo-auto-best-1",
+        "type": "car",
+        "image": "/assets/images/lead/day-night-stock-04.webp",
+        "category": "Комби",
+        "body": "Wagon",
+        "make": "Audi",
+        "title": "Audi RS 6 Avant",
+        "cardNote": {
+          "bg": "Панорамен покрив",
+          "en": "Panoramic roof"
+        },
+        "yearNumber": 2024,
+        "mileageKm": 99701,
+        "fuel": "Бензин",
+        "transmission": "Автоматик",
+        "equipment": [
+          "4x4",
+          "360° камера",
+          "Панорамен покрив",
+          "Подгряване на седалки",
+          "Навигация",
+          "Парктроник",
+          "Безключов достъп",
+          "Адаптивен круиз контрол"
+        ],
+        "condition": "used",
+        "priceEur": 68804,
+        "sourceUrl": "",
+        "year": 2024,
+        "currency": "EUR",
+        "priceAmount": 68804,
+        "images": [
+          "/assets/images/lead/day-night-stock-04.webp"
+        ],
+        "availability": "illustrative-not-dealer-stock",
+        "verification": "sample",
+        "sourceRecord": {
+          "sourceId": "1",
+          "catalogPath": "src/lib/data/inventory.ts",
+          "catalogSha256": "0dec534dede184737e172f5e349817b38d0ea80231ba50f4f070dbebeaa7c998"
+        }
+      }
+    },
+    {
+      "id": "template-demo-auto-best-2",
+      "sourceId": "template-demo-auto-best-2",
+      "slug": "mercedes-benz-2021-template-demo-auto-best-2",
+      "title": "Mercedes-Benz GLE Coupé",
+      "make": "Mercedes-Benz",
+      "model": "Mercedes-Benz GLE Coupé",
+      "trim": "",
+      "year": 2021,
+      "priceAmount": 55403,
+      "currency": "EUR",
+      "mileageValue": 96865,
+      "mileageUnit": "km",
+      "mileageOnRequest": false,
+      "body": "SUV",
+      "bodyType": "suv",
+      "fuel": "Дизел",
+      "fuelType": "diesel",
+      "transmission": "Автоматик",
+      "transmissionType": "automatic",
+      "color": "",
+      "powerHp": null,
+      "engine": "",
+      "drivetrain": "",
+      "features": [
+        "4x4",
+        "360° камера",
+        "Панорамен покрив",
+        "Подгряване на седалки",
+        "Навигация",
+        "Парктроник",
+        "Безключов достъп",
+        "Адаптивен круиз контрол"
+      ],
+      "images": [
+        "/assets/images/lead/day-night-stock-01.webp"
+      ],
+      "image": "/assets/images/lead/day-night-stock-01.webp",
+      "sourceUrl": "",
+      "observedAt": "",
+      "availability": "illustrative-not-dealer-stock",
+      "description": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата. Illustrative template vehicles, not this dealership’s stock.",
+      "condition": "used",
+      "location": "Варна",
+      "raw": {
+        "id": "template-demo-auto-best-2",
+        "type": "car",
+        "image": "/assets/images/lead/day-night-stock-01.webp",
+        "category": "SUV купе",
+        "body": "SUV",
+        "make": "Mercedes-Benz",
+        "title": "Mercedes-Benz GLE Coupé",
+        "cardNote": {
+          "bg": "360° камера",
+          "en": "360° camera"
+        },
+        "yearNumber": 2021,
+        "mileageKm": 96865,
+        "fuel": "Дизел",
+        "transmission": "Автоматик",
+        "equipment": [
+          "4x4",
+          "360° камера",
+          "Панорамен покрив",
+          "Подгряване на седалки",
+          "Навигация",
+          "Парктроник",
+          "Безключов достъп",
+          "Адаптивен круиз контрол"
+        ],
+        "condition": "used",
+        "priceEur": 55403,
+        "sourceUrl": "",
+        "year": 2021,
+        "currency": "EUR",
+        "priceAmount": 55403,
+        "images": [
+          "/assets/images/lead/day-night-stock-01.webp"
+        ],
+        "availability": "illustrative-not-dealer-stock",
+        "verification": "sample",
+        "sourceRecord": {
+          "sourceId": "2",
+          "catalogPath": "src/lib/data/inventory.ts",
+          "catalogSha256": "0dec534dede184737e172f5e349817b38d0ea80231ba50f4f070dbebeaa7c998"
+        }
+      }
+    },
+    {
+      "id": "template-demo-auto-best-3",
+      "sourceId": "template-demo-auto-best-3",
+      "slug": "audi-2021-template-demo-auto-best-3",
+      "title": "Audi RS Q8",
+      "make": "Audi",
+      "model": "Audi RS Q8",
+      "trim": "",
+      "year": 2021,
+      "priceAmount": 57480,
+      "currency": "EUR",
+      "mileageValue": 94709,
+      "mileageUnit": "km",
+      "mileageOnRequest": false,
+      "body": "SUV",
+      "bodyType": "suv",
+      "fuel": "Бензин",
+      "fuelType": "gasoline",
+      "transmission": "Автоматик",
+      "transmissionType": "automatic",
+      "color": "",
+      "powerHp": null,
+      "engine": "",
+      "drivetrain": "",
+      "features": [
+        "4x4",
+        "360° камера",
+        "Панорамен покрив",
+        "Подгряване на седалки",
+        "Навигация",
+        "Парктроник",
+        "Безключов достъп",
+        "Адаптивен круиз контрол"
+      ],
+      "images": [
+        "/assets/images/lead/day-night-stock-06.webp"
+      ],
+      "image": "/assets/images/lead/day-night-stock-06.webp",
+      "sourceUrl": "",
+      "observedAt": "",
+      "availability": "illustrative-not-dealer-stock",
+      "description": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата. Illustrative template vehicles, not this dealership’s stock.",
+      "condition": "used",
+      "location": "Варна",
+      "raw": {
+        "id": "template-demo-auto-best-3",
+        "type": "car",
+        "image": "/assets/images/lead/day-night-stock-06.webp",
+        "category": "SUV",
+        "body": "SUV",
+        "make": "Audi",
+        "title": "Audi RS Q8",
+        "cardNote": {
+          "bg": "Адаптивен круиз",
+          "en": "Adaptive cruise"
+        },
+        "yearNumber": 2021,
+        "mileageKm": 94709,
+        "fuel": "Бензин",
+        "transmission": "Автоматик",
+        "equipment": [
+          "4x4",
+          "360° камера",
+          "Панорамен покрив",
+          "Подгряване на седалки",
+          "Навигация",
+          "Парктроник",
+          "Безключов достъп",
+          "Адаптивен круиз контрол"
+        ],
+        "condition": "used",
+        "priceEur": 57480,
+        "sourceUrl": "",
+        "year": 2021,
+        "currency": "EUR",
+        "priceAmount": 57480,
+        "images": [
+          "/assets/images/lead/day-night-stock-06.webp"
+        ],
+        "availability": "illustrative-not-dealer-stock",
+        "verification": "sample",
+        "sourceRecord": {
+          "sourceId": "3",
+          "catalogPath": "src/lib/data/inventory.ts",
+          "catalogSha256": "0dec534dede184737e172f5e349817b38d0ea80231ba50f4f070dbebeaa7c998"
+        }
+      }
+    },
+    {
+      "id": "template-demo-auto-best-4",
+      "sourceId": "template-demo-auto-best-4",
+      "slug": "bmw-2021-template-demo-auto-best-4",
+      "title": "BMW X6 M Sport",
+      "make": "BMW",
+      "model": "BMW X6 M Sport",
+      "trim": "",
+      "year": 2021,
+      "priceAmount": 54223,
+      "currency": "EUR",
+      "mileageValue": 62485,
+      "mileageUnit": "km",
+      "mileageOnRequest": false,
+      "body": "SUV",
+      "bodyType": "suv",
+      "fuel": "Дизел",
+      "fuelType": "diesel",
+      "transmission": "Автоматик",
+      "transmissionType": "automatic",
+      "color": "",
+      "powerHp": null,
+      "engine": "",
+      "drivetrain": "",
+      "features": [
+        "4x4",
+        "360° камера",
+        "Панорамен покрив",
+        "Подгряване на седалки",
+        "Навигация",
+        "Парктроник",
+        "Безключов достъп"
+      ],
+      "images": [
+        "/assets/images/lead/day-night-stock-02.webp"
+      ],
+      "image": "/assets/images/lead/day-night-stock-02.webp",
+      "sourceUrl": "",
+      "observedAt": "",
+      "availability": "illustrative-not-dealer-stock",
+      "description": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата. Illustrative template vehicles, not this dealership’s stock.",
+      "condition": "used",
+      "location": "Варна",
+      "raw": {
+        "id": "template-demo-auto-best-4",
+        "type": "car",
+        "image": "/assets/images/lead/day-night-stock-02.webp",
+        "category": "SUV купе",
+        "body": "SUV",
+        "make": "BMW",
+        "title": "BMW X6 M Sport",
+        "cardNote": {
+          "bg": "Безключов достъп",
+          "en": "Keyless entry"
+        },
+        "yearNumber": 2021,
+        "mileageKm": 62485,
+        "fuel": "Дизел",
+        "transmission": "Автоматик",
+        "equipment": [
+          "4x4",
+          "360° камера",
+          "Панорамен покрив",
+          "Подгряване на седалки",
+          "Навигация",
+          "Парктроник",
+          "Безключов достъп"
+        ],
+        "condition": "used",
+        "priceEur": 54223,
+        "sourceUrl": "",
+        "year": 2021,
+        "currency": "EUR",
+        "priceAmount": 54223,
+        "images": [
+          "/assets/images/lead/day-night-stock-02.webp"
+        ],
+        "availability": "illustrative-not-dealer-stock",
+        "verification": "sample",
+        "sourceRecord": {
+          "sourceId": "4",
+          "catalogPath": "src/lib/data/inventory.ts",
+          "catalogSha256": "0dec534dede184737e172f5e349817b38d0ea80231ba50f4f070dbebeaa7c998"
+        }
+      }
+    },
+    {
+      "id": "template-demo-auto-best-6",
+      "sourceId": "template-demo-auto-best-6",
+      "slug": "mercedes-benz-2020-template-demo-auto-best-6",
+      "title": "Mercedes-AMG GT 4-Door",
+      "make": "Mercedes-Benz",
+      "model": "Mercedes-AMG GT 4-Door",
+      "trim": "",
+      "year": 2020,
+      "priceAmount": 61069,
+      "currency": "EUR",
+      "mileageValue": 72812,
+      "mileageUnit": "km",
+      "mileageOnRequest": false,
+      "body": "Sportback",
+      "bodyType": "other",
+      "fuel": "Бензин",
+      "fuelType": "gasoline",
+      "transmission": "Автоматик",
+      "transmissionType": "automatic",
+      "color": "",
+      "powerHp": null,
+      "engine": "",
+      "drivetrain": "",
+      "features": [
+        "360° камера",
+        "Панорамен покрив",
+        "Подгряване на седалки",
+        "Навигация",
+        "Парктроник",
+        "Безключов достъп"
+      ],
+      "images": [
+        "/assets/images/lead/day-night-stock-03.webp"
+      ],
+      "image": "/assets/images/lead/day-night-stock-03.webp",
+      "sourceUrl": "",
+      "observedAt": "",
+      "availability": "illustrative-not-dealer-stock",
+      "description": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата. Illustrative template vehicles, not this dealership’s stock.",
+      "condition": "used",
+      "location": "Варна",
+      "raw": {
+        "id": "template-demo-auto-best-6",
+        "type": "car",
+        "image": "/assets/images/lead/day-night-stock-03.webp",
+        "category": "Спортбек",
+        "body": "Sportback",
+        "make": "Mercedes-Benz",
+        "cardBrand": "Mercedes-AMG",
+        "title": "Mercedes-AMG GT 4-Door",
+        "cardNote": {
+          "bg": "Навигация",
+          "en": "Navigation"
+        },
+        "yearNumber": 2020,
+        "mileageKm": 72812,
+        "fuel": "Бензин",
+        "transmission": "Автоматик",
+        "equipment": [
+          "360° камера",
+          "Панорамен покрив",
+          "Подгряване на седалки",
+          "Навигация",
+          "Парктроник",
+          "Безключов достъп"
+        ],
+        "condition": "used",
+        "priceEur": 61069,
+        "sourceUrl": "",
+        "year": 2020,
+        "currency": "EUR",
+        "priceAmount": 61069,
+        "images": [
+          "/assets/images/lead/day-night-stock-03.webp"
+        ],
+        "availability": "illustrative-not-dealer-stock",
+        "verification": "sample",
+        "sourceRecord": {
+          "sourceId": "6",
+          "catalogPath": "src/lib/data/inventory.ts",
+          "catalogSha256": "0dec534dede184737e172f5e349817b38d0ea80231ba50f4f070dbebeaa7c998"
+        }
+      }
+    },
+    {
+      "id": "template-demo-auto-best-7",
+      "sourceId": "template-demo-auto-best-7",
+      "slug": "bmw-2020-template-demo-auto-best-7",
+      "title": "BMW X6 xDrive",
+      "make": "BMW",
+      "model": "BMW X6 xDrive",
+      "trim": "",
+      "year": 2020,
+      "priceAmount": 85635,
+      "currency": "EUR",
+      "mileageValue": 76346,
+      "mileageUnit": "km",
+      "mileageOnRequest": false,
+      "body": "SUV",
+      "bodyType": "suv",
+      "fuel": "Дизел",
+      "fuelType": "diesel",
+      "transmission": "Автоматик",
+      "transmissionType": "automatic",
+      "color": "",
+      "powerHp": null,
+      "engine": "",
+      "drivetrain": "",
+      "features": [
+        "4x4",
+        "360° камера",
+        "Панорамен покрив",
+        "Подгряване на седалки",
+        "Навигация",
+        "Парктроник",
+        "Безключов достъп"
+      ],
+      "images": [
+        "/assets/images/lead/day-night-stock-02.webp"
+      ],
+      "image": "/assets/images/lead/day-night-stock-02.webp",
+      "sourceUrl": "",
+      "observedAt": "",
+      "availability": "illustrative-not-dealer-stock",
+      "description": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата. Illustrative template vehicles, not this dealership’s stock.",
+      "condition": "used",
+      "location": "Варна",
+      "raw": {
+        "id": "template-demo-auto-best-7",
+        "type": "car",
+        "image": "/assets/images/lead/day-night-stock-02.webp",
+        "category": "SUV купе",
+        "body": "SUV",
+        "make": "BMW",
+        "title": "BMW X6 xDrive",
+        "cardNote": {
+          "bg": "4×4 задвижване",
+          "en": "All-wheel drive"
+        },
+        "yearNumber": 2020,
+        "mileageKm": 76346,
+        "fuel": "Дизел",
+        "transmission": "Автоматик",
+        "equipment": [
+          "4x4",
+          "360° камера",
+          "Панорамен покрив",
+          "Подгряване на седалки",
+          "Навигация",
+          "Парктроник",
+          "Безключов достъп"
+        ],
+        "condition": "used",
+        "priceEur": 85635,
+        "sourceUrl": "",
+        "year": 2020,
+        "currency": "EUR",
+        "priceAmount": 85635,
+        "images": [
+          "/assets/images/lead/day-night-stock-02.webp"
+        ],
+        "availability": "illustrative-not-dealer-stock",
+        "verification": "sample",
+        "sourceRecord": {
+          "sourceId": "7",
+          "catalogPath": "src/lib/data/inventory.ts",
+          "catalogSha256": "0dec534dede184737e172f5e349817b38d0ea80231ba50f4f070dbebeaa7c998"
+        }
+      }
+    },
+    {
+      "id": "template-demo-auto-best-8",
+      "sourceId": "template-demo-auto-best-8",
+      "slug": "mercedes-benz-2023-template-demo-auto-best-8",
+      "title": "Mercedes-AMG GT Coupé",
+      "make": "Mercedes-Benz",
+      "model": "Mercedes-AMG GT Coupé",
+      "trim": "",
+      "year": 2023,
+      "priceAmount": 51365,
+      "currency": "EUR",
+      "mileageValue": 49584,
+      "mileageUnit": "km",
+      "mileageOnRequest": false,
+      "body": "Coupe",
+      "bodyType": "coupe",
+      "fuel": "Бензин",
+      "fuelType": "gasoline",
+      "transmission": "Автоматик",
+      "transmissionType": "automatic",
+      "color": "",
+      "powerHp": null,
+      "engine": "",
+      "drivetrain": "",
+      "features": [
+        "360° камера",
+        "Панорамен покрив",
+        "Подгряване на седалки",
+        "Навигация",
+        "Парктроник",
+        "Безключов достъп"
+      ],
+      "images": [
+        "/assets/images/lead/day-night-stock-03.webp"
+      ],
+      "image": "/assets/images/lead/day-night-stock-03.webp",
+      "sourceUrl": "",
+      "observedAt": "",
+      "availability": "illustrative-not-dealer-stock",
+      "description": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата. Illustrative template vehicles, not this dealership’s stock.",
+      "condition": "used",
+      "location": "Варна",
+      "raw": {
+        "id": "template-demo-auto-best-8",
+        "type": "car",
+        "image": "/assets/images/lead/day-night-stock-03.webp",
+        "category": "Купе",
+        "body": "Coupe",
+        "make": "Mercedes-Benz",
+        "cardBrand": "Mercedes-AMG",
+        "title": "Mercedes-AMG GT Coupé",
+        "cardNote": {
+          "bg": "Парктроник",
+          "en": "Parking sensors"
+        },
+        "yearNumber": 2023,
+        "mileageKm": 49584,
+        "fuel": "Бензин",
+        "transmission": "Автоматик",
+        "equipment": [
+          "360° камера",
+          "Панорамен покрив",
+          "Подгряване на седалки",
+          "Навигация",
+          "Парктроник",
+          "Безключов достъп"
+        ],
+        "condition": "used",
+        "priceEur": 51365,
+        "sourceUrl": "",
+        "year": 2023,
+        "currency": "EUR",
+        "priceAmount": 51365,
+        "images": [
+          "/assets/images/lead/day-night-stock-03.webp"
+        ],
+        "availability": "illustrative-not-dealer-stock",
+        "verification": "sample",
+        "sourceRecord": {
+          "sourceId": "8",
+          "catalogPath": "src/lib/data/inventory.ts",
+          "catalogSha256": "0dec534dede184737e172f5e349817b38d0ea80231ba50f4f070dbebeaa7c998"
+        }
+      }
+    }
+  ],
+  "rawFacts": {
+    "business": {
+      "name": "СЪНИ",
+      "shortName": "СЪНИ",
+      "city": "Варна",
+      "countryCode": "BG",
+      "currency": "EUR",
+      "distanceUnit": "km",
+      "phone": "0898 644 464",
+      "phoneDisplay": "0898 644 464",
+      "phoneE164": "+359898644464",
+      "secondaryPhone": "+359893430054",
+      "address": "бул. „Цар Освободител“ 256, Кайсиева градина, Варна",
+      "addressLine": "бул. „Цар Освободител“ 256, Кайсиева градина",
+      "hours": "Всеки ден 08:00–19:00 — потвърдете преди посещение",
+      "email": "",
+      "website": "",
+      "sourceUrl": "https://sunny.mobile.bg/",
+      "observedAt": "2026-09-09",
+      "services": [],
+      "socialLinks": {},
+      "inventoryNotice": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата. Illustrative template vehicles, not this dealership’s stock.",
+      "previewNotice": "Независим демонстрационен преглед; формите не изпращат съобщения и не създават резервации. Independent demonstration: forms do not send enquiries or create reservations.",
+      "logo": "/registered-branding/onLight.png",
+      "logoLight": "/registered-branding/onLight.png",
+      "logoDark": "/registered-branding/onDark.png"
+    },
+    "retainedSourceInventory": {
+      "renderAsDealerStock": false,
+      "records": [
+        {
+          "id": 1,
+          "sourceId": "11785246205747169",
+          "slug": "vw-beetle-gaz-benzin",
+          "title": "VW Beetle 1.6 Газ/Бензин",
+          "make": "VW",
+          "model": "Beetle 1.6 Газ/Бензин",
+          "year": 2004,
+          "date": "април 2004 г.",
+          "mileageKm": 230000,
+          "priceEur": 1699,
+          "fuel": "Бензин / Газ",
+          "transmission": "Ръчна",
+          "body": "Hatchback",
+          "bodyBg": "Хечбек",
+          "color": "Черен",
+          "powerHp": 102,
+          "engineCc": 1600,
+          "features": [],
+          "sourceNote": "Индивидуална обява; структурираното гориво е бензин, заглавието и описанието посочват газ/бензин."
+        },
+        {
+          "id": 2,
+          "sourceId": "21742745404828023",
+          "slug": "suzuki-grand-vitara-4x4-diesel",
+          "title": "Suzuki Grand Vitara 4x4",
+          "make": "Suzuki",
+          "model": "Grand Vitara 4x4",
+          "year": 2009,
+          "date": "април 2009 г.",
+          "mileageKm": 203000,
+          "priceEur": 6390,
+          "fuel": "Дизел",
+          "transmission": "Ръчна",
+          "body": "SUV",
+          "bodyBg": "Джип",
+          "color": "Бял",
+          "powerHp": 131,
+          "engineCc": 1900,
+          "features": [
+            "4x4",
+            "Навигация"
+          ],
+          "sourceNote": "Данни от каталожната карта; индивидуалната страница не бе достъпна."
+        },
+        {
+          "id": 3,
+          "sourceId": "11753359500914380",
+          "slug": "smart-fortwo-eq-executive",
+          "title": "Smart Fortwo EQ Executive",
+          "make": "Smart",
+          "model": "Fortwo EQ Executive",
+          "year": 2021,
+          "date": "юли 2021 г.",
+          "mileageKm": 105000,
+          "priceEur": 12500,
+          "fuel": "Електрически",
+          "transmission": "Автоматик",
+          "body": "Hatchback",
+          "bodyBg": "Хечбек",
+          "color": "Бордо",
+          "powerHp": 82,
+          "engineCc": null,
+          "features": [
+            "Навигация",
+            "Парктроник",
+            "Подгряване на седалки"
+          ],
+          "sourceNote": "Индивидуална обява. Посочените 18 kWh / 150 км са твърдения в обявата, не измерен капацитет или пробег."
+        },
+        {
+          "id": 4,
+          "sourceId": "21742571140983319",
+          "slug": "peugeot-4007-4x4-7-mestna",
+          "title": "Peugeot 4007 4x4 7 места",
+          "make": "Peugeot",
+          "model": "4007 4x4 7 места",
+          "year": 2010,
+          "date": "юни 2010 г.",
+          "mileageKm": 201000,
+          "priceEur": 6544,
+          "fuel": "Дизел",
+          "transmission": "Ръчна",
+          "body": "SUV",
+          "bodyBg": "Джип",
+          "color": "Черен",
+          "powerHp": 156,
+          "engineCc": 2200,
+          "features": [
+            "4x4",
+            "Навигация",
+            "Парктроник",
+            "Подгряване на седалки"
+          ],
+          "sourceNote": "Данни от каталожната карта; индивидуалната страница не бе достъпна."
+        },
+        {
+          "id": 5,
+          "sourceId": "11756481171645307",
+          "slug": "peugeot-2008-suv",
+          "title": "Peugeot 2008 SUV",
+          "make": "Peugeot",
+          "model": "2008 SUV",
+          "year": 2016,
+          "date": "юли 2016 г.",
+          "mileageKm": 170000,
+          "priceEur": 8589,
+          "fuel": "Бензин",
+          "transmission": "Ръчна",
+          "body": "SUV",
+          "bodyBg": "Джип",
+          "color": "Графит",
+          "powerHp": 90,
+          "engineCc": 1200,
+          "features": [
+            "Навигация",
+            "Парктроник"
+          ],
+          "sourceNote": "Данни от каталожната карта; индивидуалната страница не бе достъпна."
+        },
+        {
+          "id": 6,
+          "sourceId": "11767106522243743",
+          "slug": "opel-meriva-automatic",
+          "title": "Opel Meriva Automatic",
+          "make": "Opel",
+          "model": "Meriva Automatic",
+          "year": 2014,
+          "date": "август 2014 г.",
+          "mileageKm": 180000,
+          "priceEur": 7668.87,
+          "fuel": "Дизел",
+          "transmission": "Автоматик",
+          "body": "Hatchback",
+          "bodyBg": "Хечбек",
+          "color": "Тъмно сив",
+          "powerHp": 110,
+          "engineCc": 1700,
+          "features": [
+            "Навигация",
+            "Парктроник",
+            "Подгряване на седалки"
+          ],
+          "sourceNote": "Каталожната категория Хечбек е запазена, без преоценка на купето. Индивидуалната страница не бе достъпна."
+        },
+        {
+          "id": 7,
+          "sourceId": "21758614493706426",
+          "slug": "opel-antara-4x4-cosmo",
+          "title": "Opel Antara 4x4 Cosmo",
+          "make": "Opel",
+          "model": "Antara 4x4 Cosmo",
+          "year": 2013,
+          "date": "юли 2013 г.",
+          "mileageKm": 181000,
+          "priceEur": 7618,
+          "fuel": "Дизел",
+          "transmission": "Автоматик",
+          "body": "SUV",
+          "bodyBg": "Джип",
+          "color": "Перла",
+          "powerHp": 184,
+          "engineCc": 2200,
+          "features": [
+            "4x4",
+            "Навигация",
+            "Парктроник",
+            "Подгряване на седалки"
+          ],
+          "sourceNote": "Данни от каталожната карта; индивидуалната страница не бе достъпна."
+        },
+        {
+          "id": 8,
+          "sourceId": "21742139197389610",
+          "slug": "mitsubishi-outlander-facelift",
+          "title": "Mitsubishi Outlander Facelift",
+          "make": "Mitsubishi",
+          "model": "Outlander Facelift",
+          "year": 2011,
+          "date": "юни 2011 г.",
+          "mileageKm": 175000,
+          "priceEur": 7925,
+          "fuel": "Дизел",
+          "transmission": "Ръчна",
+          "body": "SUV",
+          "bodyBg": "Джип",
+          "color": "Бронз",
+          "powerHp": 177,
+          "engineCc": 2200,
+          "features": [
+            "Парктроник"
+          ],
+          "sourceNote": "Данни от каталожната карта; индивидуалната страница върна грешка при декодиране."
+        }
+      ]
+    }
+  },
+  "sourceCount": 7,
+  "stockKind": "illustrative-not-dealer-stock",
+  "logoContract": null,
+  "reviewedModernCopy": {
+    "audi-2024-template-demo-auto-best-1": {
+      "sourceDescription": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата. Illustrative template vehicles, not this dealership’s stock.",
+      "en": {
+        "description": "Illustrative template vehicles, not this dealership’s stock.",
+        "imageAlts": [
+          "Audi RS 6 Avant"
+        ]
+      },
+      "bg": {
+        "description": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата.",
+        "imageAlts": [
+          "Audi RS 6 Avant"
+        ]
+      }
+    },
+    "mercedes-benz-2021-template-demo-auto-best-2": {
+      "sourceDescription": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата. Illustrative template vehicles, not this dealership’s stock.",
+      "en": {
+        "description": "Illustrative template vehicles, not this dealership’s stock.",
+        "imageAlts": [
+          "Mercedes-Benz GLE Coupé"
+        ]
+      },
+      "bg": {
+        "description": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата.",
+        "imageAlts": [
+          "Mercedes-Benz GLE Coupé"
+        ]
+      }
+    },
+    "audi-2021-template-demo-auto-best-3": {
+      "sourceDescription": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата. Illustrative template vehicles, not this dealership’s stock.",
+      "en": {
+        "description": "Illustrative template vehicles, not this dealership’s stock.",
+        "imageAlts": [
+          "Audi RS Q8"
+        ]
+      },
+      "bg": {
+        "description": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата.",
+        "imageAlts": [
+          "Audi RS Q8"
+        ]
+      }
+    },
+    "bmw-2021-template-demo-auto-best-4": {
+      "sourceDescription": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата. Illustrative template vehicles, not this dealership’s stock.",
+      "en": {
+        "description": "Illustrative template vehicles, not this dealership’s stock.",
+        "imageAlts": [
+          "BMW X6 M Sport"
+        ]
+      },
+      "bg": {
+        "description": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата.",
+        "imageAlts": [
+          "BMW X6 M Sport"
+        ]
+      }
+    },
+    "mercedes-benz-2020-template-demo-auto-best-6": {
+      "sourceDescription": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата. Illustrative template vehicles, not this dealership’s stock.",
+      "en": {
+        "description": "Illustrative template vehicles, not this dealership’s stock.",
+        "imageAlts": [
+          "Mercedes-AMG GT 4-Door"
+        ]
+      },
+      "bg": {
+        "description": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата.",
+        "imageAlts": [
+          "Mercedes-AMG GT 4-Door"
+        ]
+      }
+    },
+    "bmw-2020-template-demo-auto-best-7": {
+      "sourceDescription": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата. Illustrative template vehicles, not this dealership’s stock.",
+      "en": {
+        "description": "Illustrative template vehicles, not this dealership’s stock.",
+        "imageAlts": [
+          "BMW X6 xDrive"
+        ]
+      },
+      "bg": {
+        "description": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата.",
+        "imageAlts": [
+          "BMW X6 xDrive"
+        ]
+      }
+    },
+    "mercedes-benz-2023-template-demo-auto-best-8": {
+      "sourceDescription": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата. Illustrative template vehicles, not this dealership’s stock.",
+      "en": {
+        "description": "Illustrative template vehicles, not this dealership’s stock.",
+        "imageAlts": [
+          "Mercedes-AMG GT Coupé"
+        ]
+      },
+      "bg": {
+        "description": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата.",
+        "imageAlts": [
+          "Mercedes-AMG GT Coupé"
+        ]
+      }
+    }
+  }
+}

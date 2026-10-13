@@ -1,8 +1,15 @@
-export const SEO_LOCALES = ["en", "bg"] as const;
+import {
+  defaultLocale,
+  locales,
+  normalizeLocale,
+} from "@repo/internationalization/config";
+import { localizedPath, withBasePath } from "@repo/internationalization/paths";
+
+export const SEO_LOCALES = locales;
 
 export type SeoLocale = (typeof SEO_LOCALES)[number];
 
-export const DEFAULT_SEO_LOCALE: SeoLocale = "en";
+export const DEFAULT_SEO_LOCALE: SeoLocale = defaultLocale;
 
 export const SEO_LANGUAGE_TAGS: Record<SeoLocale, string> = {
   bg: "bg-BG",
@@ -27,8 +34,6 @@ interface LanguageAlternatesOptions extends CanonicalUrlOptions {
   readonly locales?: readonly SeoLocale[];
 }
 
-const LOCALE_SEPARATOR = /[-_]/;
-
 const ensureLeadingSlash = (path: string): string => {
   const normalizedPath = path.trim();
 
@@ -49,28 +54,14 @@ const parseHttpUrl = (value: string | URL): URL => {
   return url;
 };
 
-export const normalizeSeoLocale = (locale: string): SeoLocale => {
-  const normalizedLocale = locale
-    .trim()
-    .toLowerCase()
-    .split(LOCALE_SEPARATOR)[0];
-
-  return normalizedLocale === "bg" ? "bg" : DEFAULT_SEO_LOCALE;
-};
+export const normalizeSeoLocale = (locale: string): SeoLocale =>
+  normalizeLocale(locale);
 
 export const getLocalizedPath = (
   locale: SeoLocale,
   path: string,
-  { defaultLocale = DEFAULT_SEO_LOCALE }: LocalizedPathOptions = {}
-): string => {
-  const normalizedPath = ensureLeadingSlash(path);
-
-  if (locale === defaultLocale) {
-    return normalizedPath;
-  }
-
-  return `/${locale}${normalizedPath === "/" ? "" : normalizedPath}`;
-};
+  _options: LocalizedPathOptions = {}
+): string => localizedPath(locale, path);
 
 export const getCanonicalBaseUrl = (value: string | URL): URL => {
   const url = parseHttpUrl(value);
@@ -86,7 +77,10 @@ export const getCanonicalUrl = (
   path: string,
   { baseUrl }: CanonicalUrlOptions
 ): string =>
-  new URL(ensureLeadingSlash(path), getCanonicalBaseUrl(baseUrl)).toString();
+  new URL(
+    withBasePath(ensureLeadingSlash(path)),
+    getCanonicalBaseUrl(baseUrl)
+  ).toString();
 
 export const getLanguageAlternates = (
   path: string,
@@ -108,7 +102,13 @@ export const getLanguageAlternates = (
   return {
     ...languages,
     "x-default": getCanonicalUrl(
-      getLocalizedPath(defaultLocale, path, { defaultLocale }),
+      getLocalizedPath(
+        locales.includes(defaultLocale)
+          ? defaultLocale
+          : (locales[0] ?? defaultLocale),
+        path,
+        { defaultLocale }
+      ),
       { baseUrl }
     ),
   };

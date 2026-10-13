@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-reviewed-registered-source-publication",
+  "dealer": "europa-varna",
+  "canonicalRepository": "darkapoparka/cars",
+  "reviewed": true,
+  "reviewedAt": "2026-10-13T23:04:27.833Z",
+  "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+  "originalSource": {
+    "commit": "92e3945a7aa752de68bb8d8f8035e044a513bea6",
+    "tree": "d5943d303cf5c816e837cdc9f6143b7b2a889266"
+  },
+  "preparedTree": "e3d33e58eade1baf75cfb91b3cf09eb6d0d792c6",
+  "sourceArtifact": {
+    "id": 11855658629,
+    "name": "existing-cf-source-europa-varna-38479417179-1",
+    "bytes": 1457245761,
+    "digest": "sha256:52100e415ccc39bf9e6cd89884d20fc74871acd40411fd51d5a108551f89aecf"
+  },
+  "originalSourceRun": {
+    "id": 38479417179,
+    "attempt": 1,
+    "sourceCommit": "92e3945a7aa752de68bb8d8f8035e044a513bea6"
+  },
+  "sourceMember": {
+    "planJobId": 115578051578,
+    "sourceJobId": 115579593933
+  },
+  "transportArtifact": {
+    "id": 11857209069,
+    "digest": "sha256:49267487dc6b3343ca99475f751dd2f2f3c3b22a8eccc664ef1b8fbe8acb214e",
+    "bytes": 4024359
+  },
+  "transportRun": {
+    "id": 38480947961,
+    "attempt": 1,
+    "sourceCommit": "6c4609d628b6b6d13b93211334c6ffa5044dd565"
+  },
+  "inputs": {
+    "adoption": {
+      "path": "docs/releases/cloudflare-existing25-20261011/registered-source/europa-varna/reviewed-public-adoption.json",
+      "sha256": "3999bd90218621848698289db649fabc8d65d24c2d383e664c847dbbcbd2a9ad"
+    },
+    "candidateLock": {
+      "path": "docs/releases/cloudflare-existing25-20261011/registered-source/europa-varna/qualification-lock.json",
+      "sha256": "842a092ead0a5c09ca8380e064f6da5344b572ee14759ce599c1dd6c3a23fd5e"
+    },
+    "qualification": {
+      "path": "docs/releases/cloudflare-existing25-20261011/registered-source/europa-varna/qualification-context.json",
+      "sha256": "032616393dafbdd01190670020ce6ab5c13e17af8cb1efcdc4652b8f47152c36"
+    },
+    "sourceDeltaReview": {
+      "path": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
+      "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975"
+    },
+    "branding": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/europa-varna/branding.json",
+      "sha256": "999cfdc870ef17f0ed9ba029fdd6d4b7fb2b868123f1fd5fe2ac80f3e83f9d10"
+    }
+  },
+  "originalArchiveSha256Verified": true,
+  "sourceApplicationBuildRepeated": false,
+  "authoritativeFactsUnchanged": true,
+  "originalSourcePreservedInGit": true,
+  "privateMirrorPublished": false,
+  "nativeApproval": false,
+  "hostedApproval": false
+}

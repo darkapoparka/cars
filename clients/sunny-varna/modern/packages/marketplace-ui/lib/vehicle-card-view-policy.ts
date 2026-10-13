@@ -1,14 +1,15 @@
 import { formatPriceType, type VehicleListing } from "@repo/marketplace";
 import {
   formatVehicleLocation,
-  getDeliveryTruth,
+  type getDeliveryTruth,
   getFreshnessLabel,
   getListingSellerRole,
   getListingSellerRoleLabel,
-  getPhysicalVehicleLocation,
+  type getPhysicalVehicleLocation,
   getSourceLabel,
   type ListingOrganizationRole,
 } from "./listing-truth";
+import { mobileVehicleCardImageSizes } from "./mobile-vehicle-card-layout";
 import {
   formatVehicleCardMoney,
   type VehicleCardPricePolicy,
@@ -93,8 +94,8 @@ const locationLabelsBg: Record<string, string> = {
   Plovdiv: "Пловдив",
   Romania: "Румъния",
   Ruse: "Русе",
-  Sofia: "София",
-  "Sofia City": "София-град",
+  Варна: "Варна",
+  "Варна City": "Варна-град",
   "Stara Zagora": "Стара Загора",
   Varna: "Варна",
 };
@@ -111,10 +112,15 @@ export const isBulgarianVehicleCardLocale = (locale?: string) =>
 export const getVehicleCardCopy = (locale?: string) =>
   cardCopy[isBulgarianVehicleCardLocale(locale) ? "bg" : "en"];
 
-export const getVehicleCardViewListingLabel = (title: string, locale?: string) =>
-  isBulgarianVehicleCardLocale(locale) ? `Виж ${title}` : `View ${title}`;
+export const getVehicleCardViewListingLabel = (
+  title: string,
+  locale?: string
+) => (isBulgarianVehicleCardLocale(locale) ? `Виж ${title}` : `View ${title}`);
 
-export const getVehicleCardSaveListingLabel = (title: string, locale?: string) =>
+export const getVehicleCardSaveListingLabel = (
+  title: string,
+  locale?: string
+) =>
   isBulgarianVehicleCardLocale(locale)
     ? `Отвори профила, за да запазиш ${title}`
     : `Open your account to save ${title}`;
@@ -123,7 +129,9 @@ export const getLocalizedVehicleCardLocationPart = (
   value: string,
   locale?: string
 ) =>
-  isBulgarianVehicleCardLocale(locale) ? (locationLabelsBg[value] ?? value) : value;
+  isBulgarianVehicleCardLocale(locale)
+    ? (locationLabelsBg[value] ?? value)
+    : value;
 
 export const formatLocalizedVehicleCardLocation = (
   location: ReturnType<typeof getPhysicalVehicleLocation>,
@@ -165,7 +173,10 @@ export const getLocalizedVehicleCardDeliveryLabel = (
   }
 
   const destination = deliveryTruth.destinationLabel
-    ? getLocalizedVehicleCardLocationPart(deliveryTruth.destinationLabel, locale)
+    ? getLocalizedVehicleCardLocationPart(
+        deliveryTruth.destinationLabel,
+        locale
+      )
     : undefined;
   const subject = destination ? `Доставка до ${destination}` : "Доставка";
   const statusLabels: Record<typeof deliveryTruth.status, string> = {
@@ -294,14 +305,14 @@ export const getVehicleCardImageSizes = (
   isDesktopGrid: boolean
 ) => {
   if (isDesktopGrid) {
-    return "(max-width: 1023px) 240px, (max-width: 1279px) 33vw, 25vw";
+    return `(max-width: 1023px) ${mobileVehicleCardImageSizes}, (max-width: 1279px) 33vw, 25vw`;
   }
   if (isCompact) {
     return isGrid
-      ? "(max-width: 1023px) 240px, (max-width: 1280px) 28vw, 20vw"
-      : "(max-width: 1023px) 240px, (max-width: 1280px) 13rem, 15rem";
+      ? `(max-width: 1023px) ${mobileVehicleCardImageSizes}, (max-width: 1280px) 28vw, 20vw`
+      : `(max-width: 1023px) ${mobileVehicleCardImageSizes}, (max-width: 1280px) 13rem, 15rem`;
   }
   return isGrid
-    ? "(max-width: 1023px) 240px, 25vw"
-    : "(max-width: 1023px) 240px, 50vw";
+    ? `(max-width: 1023px) ${mobileVehicleCardImageSizes}, 25vw`
+    : `(max-width: 1023px) ${mobileVehicleCardImageSizes}, 50vw`;
 };

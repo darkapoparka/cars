@@ -1,80 +1,73 @@
 "use client";
-
+import { normalizeLocale } from "@repo/internationalization/config";
+import { localizedPath, withBasePath } from "@repo/internationalization/paths";
 import { usePathname, useSearchParams } from "next/navigation";
 import { type ReactNode, Suspense } from "react";
-import { getLocaleSwitchTarget } from "../lib/public-path";
+import { useLocalePreferences } from "./locale-preferences";
 
-interface MarketplaceLocaleSwitchLinkProps {
+interface Props {
+  readonly beforeOpen?: () => void;
   readonly children: ReactNode;
   readonly className?: string;
   readonly label: string;
   readonly locale?: string;
 }
-
-interface ResolvedLocaleSwitchLinkProps
-  extends MarketplaceLocaleSwitchLinkProps {
-  readonly targetLocale: "bg" | "en";
-  readonly targetPath: string;
-}
-
-const ResolvedLocaleSwitchLink = ({
-  children,
-  className,
-  label,
-  targetLocale,
-  targetPath,
-}: ResolvedLocaleSwitchLinkProps) => {
-  const searchParams = useSearchParams();
-  const query = searchParams.toString();
-  const href = query ? `${targetPath}?${query}` : targetPath;
-
-  return (
-    <a
-      aria-label={label}
-      className={className}
-      href={href}
-      hrefLang={targetLocale}
-      title={label}
-    >
-      {children}
-    </a>
-  );
-};
-
-export const MarketplaceLocaleSwitchLink = ({
+function ResolvedPreferenceLink({
   children,
   className,
   label,
   locale,
-}: MarketplaceLocaleSwitchLinkProps) => {
+  beforeOpen,
+}: Props) {
+  const preferences = useLocalePreferences();
   const pathname = usePathname();
-  const { locale: targetLocale, path: targetPath } = getLocaleSwitchTarget(
-    locale,
-    pathname
-  );
-  const fallback = (
+  const search = useSearchParams().toString();
+  const current = withBasePath(pathname) + (search ? `?${search}` : "");
+  const href =
+    withBasePath(localizedPath(locale, "/locale-settings")) +
+    "?returnTo=" +
+    encodeURIComponent(current);
+  return (
     <a
       aria-label={label}
       className={className}
-      href={targetPath}
-      hrefLang={targetLocale}
-      title={label}
+      data-locale-trigger
+      href={withBasePath(href)}
+      onClick={(event) => {
+        if (
+          preferences &&
+          !event.metaKey &&
+          !event.ctrlKey &&
+          !event.shiftKey &&
+          !event.altKey &&
+          event.button === 0
+        ) {
+          event.preventDefault();
+          beforeOpen?.();
+          preferences.open();
+        }
+      }}
     >
       {children}
     </a>
   );
-
+}
+export function MarketplaceLocaleSwitchLink(props: Props) {
+  const fallback = (
+    <a
+      aria-label={props.label}
+      className={props.className}
+      data-locale-trigger
+      href={withBasePath(
+        localizedPath(normalizeLocale(props.locale), "/locale-settings")
+      )}
+    >
+      {props.children}
+    </a>
+  );
   return (
     <Suspense fallback={fallback}>
-      <ResolvedLocaleSwitchLink
-        className={className}
-        label={label}
-        locale={locale}
-        targetLocale={targetLocale}
-        targetPath={targetPath}
-      >
-        {children}
-      </ResolvedLocaleSwitchLink>
+      <ResolvedPreferenceLink {...props} />
     </Suspense>
   );
-};
+}

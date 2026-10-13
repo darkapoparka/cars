@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "dealer": "sunny-varna",
+  "kind": "personalized-source-candidate-not-an-approved-release",
+  "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+  "candidateSourceDigest": "84444438ea61ad0178b653442091bfa7bef951362bbaf6a92aabc51f18671a1c",
+  "qualificationContextPath": ".client/native-qualification-context.json",
+  "qualificationContextSha256": "f27af3fb84107c5ae85095261b6e5db2270d5ec5762e9d49c3b45c780494fd9e",
+  "qualificationLockPath": ".client/native-qualification-lock.json",
+  "qualificationLockSha256": "b68b52ece7b68b9e393fd1d62ff9c3025819ff576c664a71336318b549c558f3",
+  "sourceDeltaReview": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
+    "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975",
+    "reviewedAt": "2026-10-11T21:04:02.173Z"
+  },
+  "nativeApproval": false,
+  "hostedApproval": false
+}

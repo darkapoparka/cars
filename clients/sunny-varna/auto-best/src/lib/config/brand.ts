@@ -1,15 +1,38 @@
-import { dealer } from '../data/dealer';
-
 export type BrandConfig = {
-  name:string; shortName:string; city:string; addressLine:string; address:string;
-  phone:string; phoneHref:`tel:${string}`; appointment:string; logo:`/${string}`;
-  youtubeUrl:string; instagramUrl:string; facebookUrl:string;
+  name: string;
+  shortName: string;
+  city: string;
+  showroomCoordinates: { latitude: number; longitude: number } | null;
+  addressLine: string;
+  address: string;
+  phone: string;
+  phoneHref: `tel:${string}`;
+  appointment: string;
+  logo: `/${string}`;
+  logoOnDark: `/${string}`;
+  youtubeUrl: `https://${string}` | '';
+  instagramUrl: `https://${string}` | '';
+  facebookUrl: `https://${string}` | '';
 };
 
-// Unknown social accounts are deliberately empty, not another business's accounts.
+const name = "СЪНИ";
+const shortName = "СЪНИ";
+const city = "Варна";
+const addressLine = "бул. „Цар Освободител“ 256, Кайсиева градина";
+
 export const brand = {
-  name:dealer.name, shortName:dealer.shortName, city:dealer.city,
-  addressLine:dealer.addressLine, address:dealer.address,
-  phone:dealer.phone, phoneHref:dealer.phoneHref, appointment:dealer.hours,
-  logo:dealer.logo, youtubeUrl:'', instagramUrl:'', facebookUrl:''
+  name,
+  shortName,
+  city,
+  showroomCoordinates: null,
+  youtubeUrl: "",
+  instagramUrl: "",
+  facebookUrl: "",
+  phone: "0898 644 464",
+  phoneHref: "tel:+359898644464",
+  addressLine,
+  address: "бул. „Цар Освободител“ 256, Кайсиева градина, Варна",
+  appointment: "Всеки ден 08:00–19:00 — потвърдете преди посещение",
+  logo: "/registered-branding/onLight.png",
+  logoOnDark: "/registered-branding/onDark.png"
 } as const satisfies BrandConfig;

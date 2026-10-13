@@ -1,12 +1,16 @@
 "use client";
+import { cn } from "@repo/design-system/lib/utils";
+import { publicSite } from "@repo/marketplace/site-config";
 
-import {
-  getMobileQuickPillClassName,
-  mobileDealerContentClassName,
-} from "@repo/marketplace-ui";
+import { mobileDealerContentClassName } from "@repo/marketplace-ui";
 import { DealerUiIcon } from "@repo/marketplace-ui/components/dealer-ui-icon";
+import {
+  mobileSearchIconClassName,
+  mobileSearchTriggerClassName,
+  mobileSearchTriggerLabelClassName,
+} from "@repo/marketplace-ui/lib/mobile-form-control";
 import { ScanLine } from "lucide-react";
-import type { ReactNode } from "react";
+import type { MouseEventHandler, ReactNode } from "react";
 import { MobileDealerServiceHero } from "./mobile-dealer-service-hero";
 import { mobileSellVehicleCopy } from "./mobile-sell-vehicle-policy";
 import { MobileServiceHelpButton } from "./mobile-service-help";
@@ -17,13 +21,15 @@ export const MobileSellVehicleHero = ({
   onOpenDetails,
   onOpenInfo,
   onOpenVin,
+  ready,
   vin,
 }: {
   inventoryShelf: ReactNode;
   locale: "bg" | "en";
-  onOpenDetails: () => void;
-  onOpenInfo: () => void;
-  onOpenVin: () => void;
+  onOpenDetails: MouseEventHandler<HTMLButtonElement>;
+  onOpenInfo: MouseEventHandler<HTMLButtonElement>;
+  onOpenVin: MouseEventHandler<HTMLButtonElement>;
+  ready: boolean;
   vin: string;
 }) => {
   const content = mobileSellVehicleCopy[locale];
@@ -33,56 +39,57 @@ export const MobileSellVehicleHero = ({
       <MobileDealerServiceHero
         helpAction={
           <MobileServiceHelpButton
+            disabled={!ready}
             onClick={onOpenInfo}
             title={content.howTitle}
           />
         }
-        imageSrc="/images/sell/day-night-mobile-studio-v1.png"
+        imageSrc={publicSite.artwork.sellHero}
         locale={locale}
+        title={content.title}
         tone="sell"
       >
         <div className="h-full">
           <button
             aria-haspopup="dialog"
-            aria-label={
-              locale === "bg" ? "Въведете VIN номер" : "Enter VIN number"
-            }
-            className="flex h-[52px] w-full items-center gap-2 rounded-full bg-white px-4 text-left text-zinc-950 focus-visible:outline-2 focus-visible:outline-zinc-900 focus-visible:outline-offset-2 active:bg-zinc-100"
+            aria-label={content.vinEntry}
+            className={`${mobileSearchTriggerClassName} bg-white ring-black/5 focus-visible:outline-ring active:bg-zinc-100`}
             data-slot="mobile-sell-vin-entry"
+            disabled={!ready}
             onClick={onOpenVin}
             type="button"
           >
             <ScanLine
               aria-hidden="true"
-              className="size-[18px] shrink-0 text-zinc-500"
+              className={mobileSearchIconClassName}
+              strokeWidth={1.75}
             />
-            <span
-              className={`min-w-0 flex-1 truncate text-[16px] ${vin ? "text-zinc-950" : "text-zinc-500"}`}
-            >
-              {vin || content.vin}
+            <span className={mobileSearchTriggerLabelClassName}>
+              {vin || content.vinEntry}
             </span>
-            <DealerUiIcon className="size-5 shrink-0" name="chevronRight" />
+            <DealerUiIcon
+              className={mobileSearchIconClassName}
+              name="chevronRight"
+            />
           </button>
         </div>
       </MobileDealerServiceHero>
       <div
-        className={`${mobileDealerContentClassName} pb-3`}
+        className={cn(mobileDealerContentClassName, "pt-2 pb-2")}
         data-slot="mobile-dealer-content"
       >
-        <h1 className="sr-only">{content.title}</h1>
         <button
           aria-haspopup="dialog"
-          className={getMobileQuickPillClassName(true, "mx-auto flex w-fit")}
+          aria-label={content.noVin}
+          className="group mx-auto flex min-h-11 items-center rounded-full px-1 font-medium text-compact-control focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 disabled:opacity-60"
           data-slot="mobile-sell-manual-entry"
-          onClick={() => onOpenDetails()}
+          disabled={!ready}
+          onClick={onOpenDetails}
           type="button"
         >
-          <span>
-            {locale === "bg"
-              ? "Без VIN? Въведете данни"
-              : "No VIN? Enter details"}
+          <span className="inline-flex h-9 items-center rounded-full bg-zinc-950 px-4 text-white transition-colors group-hover:bg-zinc-800 group-active:bg-zinc-700">
+            {content.noVinLabel}
           </span>
-          <DealerUiIcon className="size-4 shrink-0" name="arrowRight" />
         </button>
       </div>
       {inventoryShelf}

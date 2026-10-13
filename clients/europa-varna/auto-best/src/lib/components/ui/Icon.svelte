@@ -16,6 +16,7 @@
     | 'message'
     | 'phone'
     | 'search'
+    | 'share'
     | 'car'
     | 'tag'
     | 'transmission'
@@ -41,6 +42,7 @@
   stroke-linecap="round"
   stroke-linejoin="round"
   aria-hidden="true"
+  focusable="false"
 >
   {#if name === 'adjustments'}
     <path d="M4 3v5.5M4 13.5V21M12 3v1.5M12 9.5V21M20 3v9.5M20 17.5V21" />
@@ -66,6 +68,11 @@
   {:else if name === 'search'}
     <circle cx="10.75" cy="10.75" r="7.25" />
     <path d="m16.1 16.1l4.4 4.4" />
+  {:else if name === 'share'}
+    <circle cx="18" cy="5" r="2.5" />
+    <circle cx="6" cy="12" r="2.5" />
+    <circle cx="18" cy="19" r="2.5" />
+    <path d="M8.2 10.7l7.6 -4.4M8.2 13.3l7.6 4.4" />
   {:else if name === 'home'}
     <path d="M3 11.5L12 4l9 7.5" />
     <path d="M5.5 10v10h13V10M9.5 20v-6h5v6" />
