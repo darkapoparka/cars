@@ -5,31 +5,59 @@
   "sourceBuildRepeated": false,
   "dealers": [
     {
-      "dealer": "europa-varna",
+      "dealer": "chernomore-varna",
       "run": {
-        "id": 38479417179,
+        "id": 38480947962,
         "attempt": 1,
-        "sourceCommit": "92e3945a7aa752de68bb8d8f8035e044a513bea6"
+        "sourceCommit": "6c4609d628b6b6d13b93211334c6ffa5044dd565"
       },
       "artifact": {
-        "id": 11855658629,
-        "name": "existing-cf-source-europa-varna-38479417179-1",
-        "bytes": 1457245761,
-        "digest": "sha256:52100e415ccc39bf9e6cd89884d20fc74871acd40411fd51d5a108551f89aecf"
+        "id": 11857630887,
+        "name": "existing-cf-source-chernomore-varna-38480947962-1",
+        "bytes": 1459171266,
+        "digest": "sha256:e1011448c97d0bb107659bb8337450519422b8e090408242ec8c57e96de391e5"
       }
     },
     {
-      "dealer": "sunny-varna",
+      "dealer": "exclusive-auto-varna",
       "run": {
-        "id": 38479417179,
+        "id": 38480947962,
         "attempt": 1,
-        "sourceCommit": "92e3945a7aa752de68bb8d8f8035e044a513bea6"
+        "sourceCommit": "6c4609d628b6b6d13b93211334c6ffa5044dd565"
       },
       "artifact": {
-        "id": 11856088963,
-        "name": "existing-cf-source-sunny-varna-38479417179-1",
-        "bytes": 1456936071,
-        "digest": "sha256:08000ffc5b130800c8354b8913e166fab463d3e40932b99b38133fd1b98a7dbd"
+        "id": 11858430608,
+        "name": "existing-cf-source-exclusive-auto-varna-38480947962-1",
+        "bytes": 1461747849,
+        "digest": "sha256:db8a5f6428517537a69914cf45d22115bdda936af3674e85cea0473f49c241de"
+      }
+    },
+    {
+      "dealer": "rqs-auto-team",
+      "run": {
+        "id": 38480947962,
+        "attempt": 1,
+        "sourceCommit": "6c4609d628b6b6d13b93211334c6ffa5044dd565"
+      },
+      "artifact": {
+        "id": 11858315663,
+        "name": "existing-cf-source-rqs-auto-team-38480947962-1",
+        "bytes": 1457131665,
+        "digest": "sha256:8aa92a3125ff29613778b05f69187efa8e2b984a18458184dfdf05fb5453c79b"
+      }
+    },
+    {
+      "dealer": "prestige-varna",
+      "run": {
+        "id": 38480947962,
+        "attempt": 1,
+        "sourceCommit": "6c4609d628b6b6d13b93211334c6ffa5044dd565"
+      },
+      "artifact": {
+        "id": 11857966211,
+        "name": "existing-cf-source-prestige-varna-38480947962-1",
+        "bytes": 1457320710,
+        "digest": "sha256:2d004dea9c868cd886fe3dde5625e3c3ba3c8970ee2cfae74c28a351ce2fcb04"
       }
     }
   ]
