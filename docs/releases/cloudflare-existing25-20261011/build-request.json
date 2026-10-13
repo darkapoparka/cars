@@ -3,245 +3,52 @@
   "mode": "new-approved",
   "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
   "dealers": [
-    "biemaauto-varna",
-    "auto-insurance-import-varna"
+    "eurocar6-varna",
+    "miraj-auto-varna"
   ],
   "newSources": [
     {
-      "slug": "biemaauto-varna",
+      "slug": "eurocar6-varna",
       "preparation": {
-        "path": "docs/releases/cloudflare-existing25-20261011/new-source/biemaauto-varna/source-preparation.json",
-        "sha256": "455f259811f166ea26c49605bcc20fe54a35e5f99d96eaefd725f24c4d0ef815"
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/eurocar6-varna/source-38355305369/source-preparation.json",
+        "sha256": "a677711d93be94366b9ace49bc5b479764ea9ad77d263be8562c5def0b021956"
       },
       "proposal": {
-        "path": "docs/releases/cloudflare-existing25-20261011/new-source/biemaauto-varna/source-proposal.json",
-        "sha256": "c36741f4466b2eb089db8b110295244318e080a15e7ce36d471854c151af85c0"
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/eurocar6-varna/source-38355305369/source-proposal.json",
+        "sha256": "3111e267c0107aaa5ce78b8de20f24fea838f6be4a6c30211bc58010c40e2305"
       },
       "inputMapping": {
-        "path": "docs/releases/cloudflare-existing25-20261011/new-source/biemaauto-varna/input-mapping.json",
-        "sha256": "3222429eba1065692fa4a2776691a8301e3fe8c29789d57a10ac819b713c68ae"
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/eurocar6-varna/source-38355305369/input-mapping.json",
+        "sha256": "f0123efe163565238761538fbf31c5452d2992b47ca84f2e00a7e25be28ce070"
       },
       "publication": {
-        "path": "docs/releases/cloudflare-existing25-20261011/new-source/biemaauto-varna/source-publication.json",
-        "sha256": "87cf8d392852c67a378f5a34f9606a0ba773aa429ab6b7e115d4c3f405abb521"
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/eurocar6-varna/source-publication.json",
+        "sha256": "41b15608b6511a060d4450123f539d9b087ce20591c08fb76ad19abb83565928"
       }
     },
     {
-      "slug": "auto-insurance-import-varna",
+      "slug": "miraj-auto-varna",
       "preparation": {
-        "path": "docs/releases/cloudflare-existing25-20261011/new-source/auto-insurance-import-varna/source-preparation.json",
-        "sha256": "21da96346759caa46ef648678155d95c077bbd884717d73a07d932272de964ba"
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/miraj-auto-varna/source-38355305369/source-preparation.json",
+        "sha256": "3f09ff37e8e8d3c9c0397e31f628488c7085516465fbc861859ddfb97102502b"
       },
       "proposal": {
-        "path": "docs/releases/cloudflare-existing25-20261011/new-source/auto-insurance-import-varna/source-proposal.json",
-        "sha256": "371cfaa4724cbe03d000925db02d84f515e79638cd3456adddc1a646f08c2a46"
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/miraj-auto-varna/source-38355305369/source-proposal.json",
+        "sha256": "a898aadd709d5f4bad83a6e4dfe487f28b45a554f4098fbe9d5dc7926a23cece"
       },
       "inputMapping": {
-        "path": "docs/releases/cloudflare-existing25-20261011/new-source/auto-insurance-import-varna/input-mapping.json",
-        "sha256": "e4fd0bc837455bd673d86c5a425732af4c9fc1fab9bc8d550f9a32240314a79b"
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/miraj-auto-varna/source-38355305369/input-mapping.json",
+        "sha256": "67b294e62db364108b6c73b0cacf9a78c067564c3d1f827fb67f898d32f5fff6"
       },
       "publication": {
-        "path": "docs/releases/cloudflare-existing25-20261011/new-source/auto-insurance-import-varna/source-publication.json",
-        "sha256": "a24b8c8fc8815a24a7d9773036f5ce2ca5f0370a6620e7562c57900f86ab97a1"
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/miraj-auto-varna/source-publication.json",
+        "sha256": "d8a518e19616b1eeda63001621dc8a3f77ea1cf176acd6501baee4311baf1778"
       }
     }
   ],
   "composition": {
     "reviewed": true,
-    "reviewedAt": "2026-10-13T06:36:16.952Z",
-    "reviewScope": "Exact specialist Modern dark discovery two-file source repair for Biema and AutoInsurance plus faithful AutoInsurance Import English stock disclosure. Compile only changed Modern/Import native components. Retain all original six-app source facts, variants, logos, palettes and unaffected original component bytes; reuse requires live immutable original metadata, whole-artifact verification and exact actual prepared native family source equality. No App mapping reversal, artwork regeneration, original run relabeling or per-design services."
-  },
-  "componentRepair": {
-    "schemaVersion": 1,
-    "kind": "cars-existing-component-repair",
-    "reviewed": true,
-    "reviewedAt": "2026-10-13T06:15:43.470Z",
-    "dealers": [
-      {
-        "slug": "biemaauto-varna",
-        "sourceTree": "19b857227e7981f9fce11b0f7eef801a1c58d24a",
-        "rebuild": [
-          "modern"
-        ],
-        "sourceChanges": [
-          {
-            "path": "modern/packages/marketplace-ui/components/dealer-mobile-brand-bar.tsx",
-            "beforeSha256": "1c998e9fb24930fdd14ff2453f62ec32a42b30e0ef8b311ab22c7217e1cd4948",
-            "afterSha256": "1ccaac2d0758b9cee14dc250a77e602f08b3227961cc098969d99f94434a661d",
-            "operation": "modern-dark-discovery-v1"
-          },
-          {
-            "path": "modern/packages/marketplace-ui/components/mobile-dealer-discovery-header.tsx",
-            "beforeSha256": "6b737fa77db6f3d24f5f64c38dbdba42c2a6dcf4e1f6200915e1cc800a5fe322",
-            "afterSha256": "18a13c6a31966cbb5be290c7ccedb4316e2e57f5a99f2b450a55fc281e537529",
-            "operation": "modern-dark-discovery-v1"
-          }
-        ],
-        "original": {
-          "runId": 38339275170,
-          "attempt": 1,
-          "sourceCommit": "af263d4fd625f4238fcd00b54d668a0b923e68be",
-          "artifacts": [
-            {
-              "id": 11786657173,
-              "name": "existing-cf-biemaauto-varna-auto-best-38339275170-1",
-              "sizeInBytes": 22311364,
-              "sha256": "da7d5a053b65b6e2a6c6899c4e0ded324805b9dfb3f77e2b8db860350407d6dd"
-            },
-            {
-              "id": 11786597240,
-              "name": "existing-cf-biemaauto-varna-mobile-38339275170-1",
-              "sizeInBytes": 33359860,
-              "sha256": "d33c929b4c4d4c2411e8bdd3461f802f3068f1446df7c1264381bcaf76ec901a"
-            },
-            {
-              "id": 11786377323,
-              "name": "existing-cf-biemaauto-varna-router-38339275170-1",
-              "sizeInBytes": 244064,
-              "sha256": "afc4aae6edb51b75faa36c4d627644c4e101badcae3c941302748c61ed66eaa8"
-            },
-            {
-              "id": 11785807007,
-              "name": "existing-cf-biemaauto-varna-app-38339275170-1",
-              "sizeInBytes": 166910194,
-              "sha256": "4e86600eb8a93882e6b949c9dd65530dd2facb968bd81e35bf2923bdb6d9834a"
-            },
-            {
-              "id": 11785787070,
-              "name": "existing-cf-biemaauto-varna-modern-38339275170-1",
-              "sizeInBytes": 48680720,
-              "sha256": "ebacd018f69de6b24e47b12fb0f16e8ccd730a43b784b620144eab241286a2d0"
-            },
-            {
-              "id": 11785783012,
-              "name": "existing-cf-biemaauto-varna-import-38339275170-1",
-              "sizeInBytes": 98595803,
-              "sha256": "ea53936b92e815340f25c29db5c92e5290d051aabe13aa221741d12add6d52c6"
-            },
-            {
-              "id": 11785603507,
-              "name": "existing-cf-biemaauto-varna-karento-best-38339275170-1",
-              "sizeInBytes": 35674688,
-              "sha256": "5c27fb289b4a4031f6a592cceef501dc929abedf4990660704c194167f09efd8"
-            }
-          ]
-        }
-      },
-      {
-        "slug": "auto-insurance-import-varna",
-        "sourceTree": "248f96bda97c22ca503154f93d4cdddc972bacd9",
-        "rebuild": [
-          "modern",
-          "import"
-        ],
-        "sourceChanges": [
-          {
-            "path": "import/src/lib/content/localized.ts",
-            "beforeSha256": "5aa1d50e33ebb93b8669c30c1e5b74eda82e95823d1cff8c0acdee19c530d332",
-            "afterSha256": "09455769c4837185b199b02181072814b4d2f5e149c180922d6a3c834d1948d1",
-            "operation": "import-illustrative-stock-en-v1"
-          },
-          {
-            "path": "modern/packages/marketplace-ui/components/dealer-mobile-brand-bar.tsx",
-            "beforeSha256": "1c998e9fb24930fdd14ff2453f62ec32a42b30e0ef8b311ab22c7217e1cd4948",
-            "afterSha256": "1ccaac2d0758b9cee14dc250a77e602f08b3227961cc098969d99f94434a661d",
-            "operation": "modern-dark-discovery-v1"
-          },
-          {
-            "path": "modern/packages/marketplace-ui/components/mobile-dealer-discovery-header.tsx",
-            "beforeSha256": "6b737fa77db6f3d24f5f64c38dbdba42c2a6dcf4e1f6200915e1cc800a5fe322",
-            "afterSha256": "18a13c6a31966cbb5be290c7ccedb4316e2e57f5a99f2b450a55fc281e537529",
-            "operation": "modern-dark-discovery-v1"
-          }
-        ],
-        "original": {
-          "runId": 38341478999,
-          "attempt": 1,
-          "sourceCommit": "d72589eaa3b1e3396ba3765a5b32b0a72d3de92c",
-          "artifacts": [
-            {
-              "id": 11787495658,
-              "name": "existing-cf-auto-insurance-import-varna-modern-38341478999-1",
-              "sizeInBytes": 49775996,
-              "sha256": "24e2701d197cbe2a17766d382cee47a57bd3d68164faf412d1aea36cb67697fe"
-            },
-            {
-              "id": 11787106811,
-              "name": "existing-cf-auto-insurance-import-varna-auto-best-38341478999-1",
-              "sizeInBytes": 23343878,
-              "sha256": "11738ac958ada3644439ed98bddae7155b0e03fbb332389e5ac94752cc7e88ef"
-            },
-            {
-              "id": 11786877392,
-              "name": "existing-cf-auto-insurance-import-varna-app-38341478999-1",
-              "sizeInBytes": 168201287,
-              "sha256": "b0858f5bee4172fc842a9504f2fbe3c677a41235b9a279c5c678044664e8c08d"
-            },
-            {
-              "id": 11786827624,
-              "name": "existing-cf-auto-insurance-import-varna-import-38341478999-1",
-              "sizeInBytes": 99576202,
-              "sha256": "7fa63de1bd9e84b1175b914433e9a8c244f30802d3a339110363c2ec6be3397b"
-            },
-            {
-              "id": 11786369324,
-              "name": "existing-cf-auto-insurance-import-varna-karento-best-38341478999-1",
-              "sizeInBytes": 36656802,
-              "sha256": "8e8051bdc4577a43d52f42e82bff6cea4fa53ec5c16449ec274b710844e9124b"
-            },
-            {
-              "id": 11786334804,
-              "name": "existing-cf-auto-insurance-import-varna-mobile-38341478999-1",
-              "sizeInBytes": 34339522,
-              "sha256": "10e281f90aee63ad3a4f631e9a6ba0aa327fd342959df204bb8e0713710ea41c"
-            },
-            {
-              "id": 11786094710,
-              "name": "existing-cf-auto-insurance-import-varna-router-38341478999-1",
-              "sizeInBytes": 244317,
-              "sha256": "9e5307e5eed4b51f24e1d49deacf318a64520b0333b74da9049f1113cc3dfdc6"
-            }
-          ]
-        }
-      }
-    ]
-  },
-  "componentAssembly": {
-    "schemaVersion": 1,
-    "kind": "cars-retained-component-assembly",
-    "sourceCommit": "431dbb491a511dd825fff8c163f729c792817305",
-    "runId": 38361455250,
-    "attempt": 1,
-    "requestSha256": "a36116a1aa9dc0e20899f24cd936c23670cdbdc265e007726331808ef7d9746c",
-    "planJobId": 115176387587,
-    "artifacts": [
-      {
-        "dealer": "biemaauto-varna",
-        "key": "modern",
-        "id": 11794883253,
-        "jobId": 115176525029,
-        "name": "existing-cf-biemaauto-varna-modern-38361455250-1",
-        "sizeInBytes": 49214993,
-        "sha256": "b8481b17c0bbea3c171c30b4ace56e88536bb2b5b5517adf7536f1124f906686"
-      },
-      {
-        "dealer": "auto-insurance-import-varna",
-        "key": "import",
-        "id": 11794668726,
-        "jobId": 115176525065,
-        "name": "existing-cf-auto-insurance-import-varna-import-38361455250-1",
-        "sizeInBytes": 100112264,
-        "sha256": "639efa3bf43d444d108ce673e46a3ac8b877e678a8a4e14f2a14028086575560"
-      },
-      {
-        "dealer": "auto-insurance-import-varna",
-        "key": "modern",
-        "id": 11794549197,
-        "jobId": 115176525248,
-        "name": "existing-cf-auto-insurance-import-varna-modern-38361455250-1",
-        "sizeInBytes": 50310822,
-        "sha256": "b75e44d16265c38d9b37c7d5219fe6efff365b7278e0fc0f19b6fd4aa6b0d289"
-      }
-    ]
+    "reviewedAt": "2026-10-13T07:51:41.872Z",
+    "reviewScope": "Only Eurocar6 and Miraj original successful38355305369/1 source trees, actually published atb6040ffc; original raw proposal/preparation/input-mapping bytes and factual contacts/stock/logo assets preserved. Exact current input blob identities match original source eventfae042f; no regeneration or passed source retry. Existing native workflow and original grants/private identities only. Registry/source admission is separate from compile, package, private and hosted acceptance."
   }
 }
