@@ -421,3 +421,25 @@ export function repairImportDealerInventoryCatalog({source,feed,listingSlugs,rev
  return{source:after,added,listingCount:feed.listings.length,listingFactsUnchanged:true,nativeApproval:false,hostedApproval:false};
 }
 
+/** The exact illustrative-stock disclosure used by maintained dealer facts.
+ * Add only its faithful English editorial translation; unknown copy still fails
+ * in contentText. Dated stock, preview wording and factual data are untouched. */
+export function repairImportDealerDisclosureCatalog(source) {
+  if (typeof source !== 'string') throw new Error('Import editorial source must be text');
+  const marker = 'const generatedDealerEnglish =';
+  const start = source.indexOf(marker);
+  if (start < 0 || source.indexOf(marker, start + marker.length) >= 0)
+    throw new Error('Exactly one generated Import editorial dictionary is required');
+  const end = source.indexOf('\n};', start);
+  if (end < 0) throw new Error('Import editorial dictionary boundary is missing');
+  const block = source.slice(start, end);
+  const anchor = "\t\t\t'Информация за автокъщата': 'Dealer information',";
+  const addition = "\n\t\t\t\"Показаните демонстрационни автомобили са илюстративни и не представляват наличности на автокъщата. За действителните оферти и наличности се свържете директно с нея.\":\n\t\t\t\t\"The demo vehicles shown are illustrative and are not dealership stock. Contact the dealership directly for actual offers and availability.\",";
+  if (block.includes(addition)) return {source, added: false};
+  if (block.includes("Показаните демонстрационни автомобили са илюстративни и не представляват наличности на автокъщата. За действителните оферти и наличности се свържете директно с нея."))
+    throw new Error('Conflicting illustrative-stock English translation');
+  if (block.split(anchor).length !== 2)
+    throw new Error('Import dealer information anchor must occur exactly once');
+  const next = source.slice(0, start) + block.replace(anchor, anchor + addition) + source.slice(end);
+  return {source: next, added: true};
+}

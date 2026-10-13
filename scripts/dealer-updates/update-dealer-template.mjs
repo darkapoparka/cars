@@ -223,11 +223,21 @@ function splitPrefixedTrees(files, keys) {
 
 export function registeredDeliveryOrigin(record, manifest) {
   if (!record || record.repository !== manifest.repository) throw new Error('Six-design delivery needs the exact registered repository and public origin');
-  const value = record.delivery?.url || (record.delivery?.provider === 'cloudflare' ? record.delivery.configuredPublicOrigin : null);
+  const retained = record.hostingIdentity?.cloudflare;
+  const configured = record.delivery?.configuredPublicOrigin;
+  const workerName = record.repository.split('/')[1];
+  const legacyIdentity = record.sourceOwnership === 'cars-canonical' &&
+    record.canonicalSourceRepository === 'darkapoparka/cars' &&
+    record.delivery?.state === 'unknown' && record.delivery?.provider == null &&
+    retained?.workerName === workerName && retained?.publicOrigin === configured &&
+    configured === 'https://' + workerName + '.darkapoparka1.workers.dev' &&
+    /^[a-f0-9]{64}$/.test(retained.sourceSnapshotSha256 ?? '') &&
+    Number.isFinite(Date.parse(retained.resourcePresentAt ?? ''));
+  const value = record.delivery?.url || (record.delivery?.provider === 'cloudflare' ? record.delivery.configuredPublicOrigin : null) || (legacyIdentity ? configured : null);
   if (!value) throw new Error('Six-design delivery needs the exact registered repository and public origin');
   const origin = new URL(value);
   if (origin.protocol !== 'https:' || origin.username || origin.password || origin.pathname !== '/' || origin.search || origin.hash) throw new Error('The registered dealer delivery must be a complete HTTPS origin');
-  if (record.delivery?.provider === 'cloudflare' && origin.origin !== manifest.shareIdentity?.publicOrigin) throw new Error('Configured Cloudflare origin differs from the retained dealer identity');
+  if ((record.delivery?.provider === 'cloudflare' || (legacyIdentity && manifest.shareIdentity?.publicOrigin)) && origin.origin !== manifest.shareIdentity?.publicOrigin) throw new Error('Configured Cloudflare origin differs from the retained dealer identity');
   return origin;
 }
 

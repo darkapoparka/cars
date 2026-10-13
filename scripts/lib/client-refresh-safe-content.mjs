@@ -1,3 +1,4 @@
+import {repairImportDealerDisclosureCatalog} from './import-dealer-inventory-copy.mjs';
 import fs from 'node:fs';
 import { createHash } from 'node:crypto';
 import path from 'node:path';
@@ -270,6 +271,14 @@ export function applyImportSafeContent({ candidate, profile }) {
   const b = profile.business;
   const english = isEnglish(profile);
   const editorialFiles = [];
+  const disclosureFile = path.join(candidate, 'src/lib/content/localized.ts');
+  if (fs.existsSync(disclosureFile)) {
+    const disclosure = repairImportDealerDisclosureCatalog(read(disclosureFile));
+    if (disclosure.added) {
+      write(disclosureFile, disclosure.source);
+      editorialFiles.push('src/lib/content/localized.ts');
+    }
+  }
   const offerFile = path.join(candidate, 'src/routes/offer/+page.svelte');
   if (fs.existsSync(offerFile)) {
     fs.writeFileSync(offerFile, personalizeImportOfferCopy(read(offerFile), profile));

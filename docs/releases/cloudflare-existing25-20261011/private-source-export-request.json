@@ -3,18 +3,23 @@
   "kind": "cars-qualified-private-source-export",
   "repository": "darkapoparka/cars",
   "reviewed": true,
-  "reviewedAt": "2026-10-13T03:32:00Z",
-  "sourceCommit": "d72589eaa3b1e3396ba3765a5b32b0a72d3de92c",
-  "runId": 38341478999,
+  "reviewedAt": "2026-10-13T06:09:35.036Z",
+  "sourceCommit": "cb66f8c6e2d33ae63810f370e836c1d3fe75b7ab",
+  "runId": 38353560944,
   "attempt": 1,
   "applicationBuildsRepeated": 0,
   "sourcePreparationRepeated": false,
-  "purpose": "Seal full Auto Insurance Import private source against its original successful seven native targets. Preserve original source tree, exact dependency locks and provenance; no generation, native rebuild or Worker upload. Batch4 owns private publication and its granted qualified singleton upload/live checks.",
+  "purpose": "Seal complete PartMag and Kalo private source against their ORIGINAL successful seven native targets in run38353560944. Reuse original retained canonical trees, dependency locks and provenance. No generation, intake, native rebuild or Worker upload. Batch4 retains private publication and exact granted upload ownership.",
   "dealers": [
     {
-      "slug": "auto-insurance-import-varna",
-      "repository": "darkapoparka/cars-auto-insurance-import-varna",
-      "sourceTree": "248f96bda97c22ca503154f93d4cdddc972bacd9"
+      "slug": "part-mag-cars-varna",
+      "repository": "darkapoparka/cars-part-mag-cars-varna",
+      "sourceTree": "073b7c20a60605874406368167b9766ca8a76d45"
+    },
+    {
+      "slug": "kalo-0404-varna",
+      "repository": "darkapoparka/cars-kalo-0404-varna",
+      "sourceTree": "f68d4177b9a485cdd2c55523d2968ac94fa537ee"
     }
   ]
 }
