@@ -1452,6 +1452,12 @@
       "dealerId": "biemaauto-varna",
       "path": "clients/biemaauto-varna",
       "repository": "darkapoparka/cars-biemaauto-varna"
+    },
+    {
+      "slug": "auto-insurance-import-varna",
+      "dealerId": "auto-insurance-import-varna",
+      "repository": "darkapoparka/cars-auto-insurance-import-varna",
+      "path": "clients/auto-insurance-import-varna"
     }
   ],
   "campaignCandidatesWithoutFolders": [

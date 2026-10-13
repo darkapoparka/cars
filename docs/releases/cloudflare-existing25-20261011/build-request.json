@@ -3,31 +3,32 @@
   "mode": "new-approved",
   "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
   "dealers": [
-    "biemaauto-varna"
+    "auto-insurance-import-varna"
   ],
   "newSources": [
     {
-      "slug": "biemaauto-varna",
+      "slug": "auto-insurance-import-varna",
       "preparation": {
-        "path": "docs/releases/cloudflare-existing25-20261011/new-source/biemaauto-varna/source-preparation.json",
-        "sha256": "455f259811f166ea26c49605bcc20fe54a35e5f99d96eaefd725f24c4d0ef815"
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/auto-insurance-import-varna/source-preparation.json",
+        "sha256": "21da96346759caa46ef648678155d95c077bbd884717d73a07d932272de964ba"
       },
       "proposal": {
-        "path": "docs/releases/cloudflare-existing25-20261011/new-source/biemaauto-varna/source-proposal.json",
-        "sha256": "c36741f4466b2eb089db8b110295244318e080a15e7ce36d471854c151af85c0"
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/auto-insurance-import-varna/source-proposal.json",
+        "sha256": "371cfaa4724cbe03d000925db02d84f515e79638cd3456adddc1a646f08c2a46"
       },
       "inputMapping": {
-        "path": "docs/releases/cloudflare-existing25-20261011/new-source/biemaauto-varna/input-mapping.json",
-        "sha256": "3222429eba1065692fa4a2776691a8301e3fe8c29789d57a10ac819b713c68ae"
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/auto-insurance-import-varna/input-mapping.json",
+        "sha256": "e4fd0bc837455bd673d86c5a425732af4c9fc1fab9bc8d550f9a32240314a79b"
       },
       "publication": {
-        "path": "docs/releases/cloudflare-existing25-20261011/new-source/biemaauto-varna/source-publication.json",
-        "sha256": "87cf8d392852c67a378f5a34f9606a0ba773aa429ab6b7e115d4c3f405abb521"
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/auto-insurance-import-varna/source-publication.json",
+        "sha256": "a24b8c8fc8815a24a7d9773036f5ce2ca5f0370a6620e7562c57900f86ab97a1"
       }
     }
   ],
   "composition": {
     "reviewed": true,
-    "reviewedAt": "2026-10-12T23:39:16.098Z"
+    "reviewedAt": "2026-10-13T03:11:39.869Z",
+    "reviewScope": "Build original published Auto Insurance Import six designs plus internal router without repeated generation/intake. Original reviewed stock, raster logos, identity and six native source pins remain unchanged. Batch4 owns qualified singleton upload and live acceptance."
   }
 }

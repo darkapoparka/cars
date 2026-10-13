@@ -341,6 +341,14 @@
       "sourceMode": "new-approved",
       "workerName": "cars-biemaauto-varna",
       "publicOrigin": "https://cars-biemaauto-varna.darkapoparka1.workers.dev"
+    },
+    {
+      "slug": "auto-insurance-import-varna",
+      "dealerId": "auto-insurance-import-varna",
+      "proposedRepository": "darkapoparka/cars-auto-insurance-import-varna",
+      "sourceMode": "new-approved",
+      "workerName": "cars-auto-insurance-import-varna",
+      "publicOrigin": "https://cars-auto-insurance-import-varna.darkapoparka1.workers.dev"
     }
   ],
   "workerIdentities": {
