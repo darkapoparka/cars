@@ -31,8 +31,8 @@
     }
   },
   "reviewedRetry": {
-    "at": "2026-10-13T22:20:15.986Z",
-    "sourceRun": 38472857386,
-    "scope": "Retry only the failed Exclusive source proposal after declaring its actual authenticated asset containers. Preserve all factual inputs, target template pins and completed dealer source/build results."
+    "at": "2026-10-13T22:34:30.415Z",
+    "sourceRun": 38477110493,
+    "scope": "Retry only Exclusive after the source integration test's bounded mount fixture stops reading the now-migrated Kapitol checkout. Preserve actual adoption receipts and strict original-byte validation."
   }
 }
