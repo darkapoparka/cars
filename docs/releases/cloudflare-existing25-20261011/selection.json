@@ -781,6 +781,62 @@
       "sourceMode": "new-approved",
       "workerName": "cars-specialcarood-varna",
       "publicOrigin": "https://cars-specialcarood-varna.darkapoparka1.workers.dev"
+    },
+    {
+      "slug": "ecodrive-varna",
+      "dealerId": "ecodrive-varna",
+      "proposedRepository": "darkapoparka/cars-ecodrive-varna",
+      "sourceMode": "new-approved",
+      "workerName": "cars-ecodrive-varna",
+      "publicOrigin": "https://cars-ecodrive-varna.darkapoparka1.workers.dev"
+    },
+    {
+      "slug": "vichenca-varna",
+      "dealerId": "vichenca-varna",
+      "proposedRepository": "darkapoparka/cars-vichenca-varna",
+      "sourceMode": "new-approved",
+      "workerName": "cars-vichenca-varna",
+      "publicOrigin": "https://cars-vichenca-varna.darkapoparka1.workers.dev"
+    },
+    {
+      "slug": "autobora-varna",
+      "dealerId": "autobora-varna",
+      "proposedRepository": "darkapoparka/cars-autobora-varna",
+      "sourceMode": "new-approved",
+      "workerName": "cars-autobora-varna",
+      "publicOrigin": "https://cars-autobora-varna.darkapoparka1.workers.dev"
+    },
+    {
+      "slug": "stefancar-varna",
+      "dealerId": "stefancar-varna",
+      "proposedRepository": "darkapoparka/cars-stefancar-varna",
+      "sourceMode": "new-approved",
+      "workerName": "cars-stefancar-varna",
+      "publicOrigin": "https://cars-stefancar-varna.darkapoparka1.workers.dev"
+    },
+    {
+      "slug": "elegantcar-varna",
+      "dealerId": "elegantcar-varna",
+      "proposedRepository": "darkapoparka/cars-elegantcar-varna",
+      "sourceMode": "new-approved",
+      "workerName": "cars-elegantcar-varna",
+      "publicOrigin": "https://cars-elegantcar-varna.darkapoparka1.workers.dev"
+    },
+    {
+      "slug": "stadiona-varna",
+      "dealerId": "stadiona-varna",
+      "proposedRepository": "darkapoparka/cars-stadiona-varna",
+      "sourceMode": "new-approved",
+      "workerName": "cars-stadiona-varna",
+      "publicOrigin": "https://cars-stadiona-varna.darkapoparka1.workers.dev"
+    },
+    {
+      "slug": "xcar-varna",
+      "dealerId": "xcar-varna",
+      "proposedRepository": "darkapoparka/cars-xcar-varna",
+      "sourceMode": "new-approved",
+      "workerName": "cars-xcar-varna",
+      "publicOrigin": "https://cars-xcar-varna.darkapoparka1.workers.dev"
     }
   ],
   "workerIdentities": {

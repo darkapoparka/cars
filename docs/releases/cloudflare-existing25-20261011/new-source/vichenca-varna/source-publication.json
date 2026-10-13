@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-source-publication",
+  "reviewed": true,
+  "reviewedAt": "2026-10-13T17:10:12.937Z",
+  "dealer": "vichenca-varna",
+  "dealerId": "vichenca-varna",
+  "repository": "darkapoparka/cars-vichenca-varna",
+  "sourceOwnership": "cars-canonical",
+  "request": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/parallel-batch2-wave03-seven-request-20261013.json",
+    "sha256": "2f68125d3fc677b1b8910a39a6199750456dfb65e464118d5c59d6f7a4f46d44"
+  },
+  "proposal": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/vichenca-varna/original-proposal-38428463020-1.json",
+    "sha256": "bfc942a3c4d5c3dc9ccd641cbd9eac8e85bcb21d6be96ff941a98839e2da8dc9"
+  },
+  "preparation": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/vichenca-varna/original-preparation-38428463020-1.json",
+    "sha256": "ad8b9c05bece11e41c87f3449e40ad4a2a05a16f19b3d5dede0d8538fb045240"
+  },
+  "inputMapping": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/vichenca-varna/original-inputMapping-38428463020-1.json",
+    "sha256": "150139ac0db3fffa49886d9ca05f451aad541088c5af021e23f6d36e15d28550"
+  },
+  "sourcePublication": {
+    "repository": "darkapoparka/cars",
+    "commit": "12736d9ff66d2e1b77be51429bb888b18b3278d5",
+    "sourceTree": "43d38f98ccfebdf6dbda083c1c5903c2e0b75a5f",
+    "ref": "refs/heads/main",
+    "publishedAt": "2026-10-13T17:09:04.287Z",
+    "evidence": "https://github.com/darkapoparka/cars/commit/12736d9ff66d2e1b77be51429bb888b18b3278d5"
+  }
+}

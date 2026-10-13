@@ -1782,6 +1782,48 @@
       "dealerId": "specialcarood-varna",
       "repository": "darkapoparka/cars-specialcarood-varna",
       "path": "clients/specialcarood-varna"
+    },
+    {
+      "slug": "ecodrive-varna",
+      "dealerId": "ecodrive-varna",
+      "repository": "darkapoparka/cars-ecodrive-varna",
+      "path": "clients/ecodrive-varna"
+    },
+    {
+      "slug": "vichenca-varna",
+      "dealerId": "vichenca-varna",
+      "repository": "darkapoparka/cars-vichenca-varna",
+      "path": "clients/vichenca-varna"
+    },
+    {
+      "slug": "autobora-varna",
+      "dealerId": "autobora-varna",
+      "repository": "darkapoparka/cars-autobora-varna",
+      "path": "clients/autobora-varna"
+    },
+    {
+      "slug": "stefancar-varna",
+      "dealerId": "stefancar-varna",
+      "repository": "darkapoparka/cars-stefancar-varna",
+      "path": "clients/stefancar-varna"
+    },
+    {
+      "slug": "elegantcar-varna",
+      "dealerId": "elegantcar-varna",
+      "repository": "darkapoparka/cars-elegantcar-varna",
+      "path": "clients/elegantcar-varna"
+    },
+    {
+      "slug": "stadiona-varna",
+      "dealerId": "stadiona-varna",
+      "repository": "darkapoparka/cars-stadiona-varna",
+      "path": "clients/stadiona-varna"
+    },
+    {
+      "slug": "xcar-varna",
+      "dealerId": "xcar-varna",
+      "repository": "darkapoparka/cars-xcar-varna",
+      "path": "clients/xcar-varna"
     }
   ],
   "campaignCandidatesWithoutFolders": [

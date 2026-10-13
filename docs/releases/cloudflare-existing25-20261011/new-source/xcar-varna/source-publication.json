@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-source-publication",
+  "reviewed": true,
+  "reviewedAt": "2026-10-13T17:10:12.937Z",
+  "dealer": "xcar-varna",
+  "dealerId": "xcar-varna",
+  "repository": "darkapoparka/cars-xcar-varna",
+  "sourceOwnership": "cars-canonical",
+  "request": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/parallel-batch2-wave03-seven-request-20261013.json",
+    "sha256": "2f68125d3fc677b1b8910a39a6199750456dfb65e464118d5c59d6f7a4f46d44"
+  },
+  "proposal": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/xcar-varna/original-proposal-38428463020-1.json",
+    "sha256": "5a723ca899b350cafd47422424a3a45251d35bef5aa8616d6f248ac9ada884d8"
+  },
+  "preparation": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/xcar-varna/original-preparation-38428463020-1.json",
+    "sha256": "173cc35df23a184101b3c1e38228d2a120d1ab77684fad06b02dd6f0edfe8b5a"
+  },
+  "inputMapping": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/xcar-varna/original-inputMapping-38428463020-1.json",
+    "sha256": "52f143a98edb0da8614fd88bce909179fea7e7015650f0e71c2d5f7a27c9a3ea"
+  },
+  "sourcePublication": {
+    "repository": "darkapoparka/cars",
+    "commit": "12736d9ff66d2e1b77be51429bb888b18b3278d5",
+    "sourceTree": "ea4d760a039a2e2085a3078094b66a3b57167ba5",
+    "ref": "refs/heads/main",
+    "publishedAt": "2026-10-13T17:09:04.287Z",
+    "evidence": "https://github.com/darkapoparka/cars/commit/12736d9ff66d2e1b77be51429bb888b18b3278d5"
+  }
+}
