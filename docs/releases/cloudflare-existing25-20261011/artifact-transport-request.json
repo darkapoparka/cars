@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "kind": "cars-fleet-artifact-transport-request",
   "reviewed": true,
-  "reviewedAt": "2026-10-13T11:21:45.864Z",
+  "reviewedAt": "2026-10-13T11:44:30Z",
   "source": {
     "repository": "darkapoparka/cars",
     "workflowPath": ".github/workflows/qualified-private-source-export.yml",
@@ -13,10 +13,10 @@
     "ref": "refs/heads/main"
   },
   "artifact": {
-    "id": 11808930109,
-    "name": "private-source-package-eurocar6-varna-38389187406-1",
-    "sizeInBytes": 908151531,
-    "sha256": "ad9e9dcb1a76fa8a151c467b634f2b6d4988ad9d22f463aa2e510e07a9b0c7fe"
+    "id": 11808021008,
+    "name": "private-source-package-miraj-auto-varna-38389187406-1",
+    "sizeInBytes": 908291657,
+    "sha256": "d14665145b32f6dfeffb57934e4865b8bf6abb6f68a3e299ec2669b14835a100"
   },
   "chunkSizeBytes": 209715200
 }
