@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-10T15:08:58.524Z",
+  "updatedAt": "2026-10-13T23:06:16.803Z",
   "githubOwner": "darkapoparka",
   "vercelTeam": "tyj5",
   "model": "One canonical dealer folder and publishing repository; deployment provider and actual variants are declared per dealer.",
@@ -4354,41 +4354,112 @@
     },
     {
       "slug": "europa-varna",
-      "name": "europa-varna",
+      "name": "Европа",
       "localPath": "clients/europa-varna",
       "localPresent": true,
       "variants": [
         {
           "key": "auto-best",
-          "state": "implemented-unverified",
+          "state": "source-reviewed",
           "qaRecorded": false,
-          "localPresent": false,
-          "entry": null,
+          "localPresent": true,
+          "entry": "/",
           "publicUrl": null,
-          "templateSource": null
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+            "path": "templates/auto-best",
+            "digest": "dcbc59990928884006652677d3529020df3844029993895a71e5f6818ba7363c",
+            "tree": "5fb7a2164775050a47c1183371622295dbf63725"
+          },
+          "base": ""
         },
         {
           "key": "modern",
-          "state": "implemented-unverified",
+          "state": "source-reviewed",
           "qaRecorded": false,
-          "localPresent": false,
-          "entry": null,
+          "localPresent": true,
+          "entry": "/variant-2/cars",
           "publicUrl": null,
-          "templateSource": null
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+            "path": "templates/modern",
+            "digest": "ba263aac8f1863d133807d3e1bf3597d125cf315a7e0deba3f6e419b52434c25",
+            "tree": "3974380670eb388bb16182f94ade33be6d87b1c1"
+          },
+          "base": "/variant-2"
         },
         {
-          "key": "carwow",
-          "state": "implemented-unverified",
+          "key": "import",
+          "base": "/variant-3",
+          "entry": "/variant-3/",
+          "localPresent": true,
+          "state": "source-reviewed",
           "qaRecorded": false,
-          "localPresent": false,
-          "entry": null,
           "publicUrl": null,
-          "templateSource": null
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+            "path": "templates/import",
+            "digest": "f98a0934cdcc5adbda393c14c02eb2adc0175344ab2ac3f913afe4b0603366e5",
+            "tree": "6afc6901e2f95967fb7c72e9f75525d4d6fbf086"
+          }
+        },
+        {
+          "key": "app",
+          "base": "/variant-4",
+          "entry": "/variant-4/",
+          "localPresent": true,
+          "state": "source-reviewed",
+          "qaRecorded": false,
+          "publicUrl": null,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+            "path": "templates/app",
+            "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1",
+            "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76"
+          }
+        },
+        {
+          "key": "mobile",
+          "base": "/variant-5",
+          "entry": "/variant-5/",
+          "localPresent": true,
+          "state": "source-reviewed",
+          "qaRecorded": false,
+          "publicUrl": null,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+            "path": "templates/mobile",
+            "digest": "4e858bd9dbd3ef5b52cd904c4ed97bbfdc0f4cfe02b5a3840580f38026b867a0",
+            "tree": "2b02829e157071e305bfb2dff10ef18e85c8a35e"
+          }
+        },
+        {
+          "key": "karento-best",
+          "base": "/variant-6",
+          "entry": "/variant-6/",
+          "localPresent": true,
+          "state": "source-reviewed",
+          "qaRecorded": false,
+          "publicUrl": null,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+            "path": "templates/karento-best",
+            "digest": "83056967764a686f3737d74b86c5db51c1385a50184853f50ec4ade80c1dd44f",
+            "tree": "5f6eec8efb2f9e99819f7f0c2f743d18fff7b134"
+          }
         }
       ],
       "branchSources": [],
       "delivery": {
-        "state": "source-review-required"
+        "state": "native-build-pending",
+        "provider": "cloudflare",
+        "configuredPublicOrigin": "https://cars-europa-varna.darkapoparka1.workers.dev"
       },
       "sourceHistory": [
         {
@@ -4417,14 +4488,38 @@
         }
       ],
       "canonicalSourceRef": "main",
-      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735",
+      "canonicalSourceCommit": "8d98ac339016eaa1d1c0e351aa1614ab58db8416",
       "evidence": {
         "source": {
           "state": "committed",
-          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+          "commit": "8d98ac339016eaa1d1c0e351aa1614ab58db8416",
+          "tree": "e3d33e58eade1baf75cfb91b3cf09eb6d0d792c6",
+          "proof": "docs/releases/cloudflare-existing25-20261011/registered-source/europa-varna/source-publication.json"
         },
         "personalization": {
-          "state": "unknown"
+          "state": "reviewed-public-inputs",
+          "inputs": {
+            "adoption": {
+              "path": "docs/releases/cloudflare-existing25-20261011/registered-source/europa-varna/reviewed-public-adoption.json",
+              "sha256": "3999bd90218621848698289db649fabc8d65d24c2d383e664c847dbbcbd2a9ad"
+            },
+            "candidateLock": {
+              "path": "docs/releases/cloudflare-existing25-20261011/registered-source/europa-varna/qualification-lock.json",
+              "sha256": "842a092ead0a5c09ca8380e064f6da5344b572ee14759ce599c1dd6c3a23fd5e"
+            },
+            "qualification": {
+              "path": "docs/releases/cloudflare-existing25-20261011/registered-source/europa-varna/qualification-context.json",
+              "sha256": "032616393dafbdd01190670020ce6ab5c13e17af8cb1efcdc4652b8f47152c36"
+            },
+            "sourceDeltaReview": {
+              "path": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
+              "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975"
+            },
+            "branding": {
+              "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/europa-varna/branding.json",
+              "sha256": "999cfdc870ef17f0ed9ba029fdd6d4b7fb2b868123f1fd5fe2ac80f3e83f9d10"
+            }
+          }
         },
         "build": {
           "state": "unknown"
@@ -4441,8 +4536,15 @@
       },
       "id": null,
       "aliases": [],
-      "repository": null,
-      "packagingVersion": null
+      "repository": "darkapoparka/cars-europa-varna",
+      "packagingVersion": "5",
+      "dealerId": "europa-varna",
+      "sourceOwnership": "cars-canonical",
+      "canonicalSourceRepository": "darkapoparka/cars",
+      "cloudflare": {
+        "workerName": "cars-europa-varna",
+        "publicOrigin": "https://cars-europa-varna.darkapoparka1.workers.dev"
+      }
     },
     {
       "slug": "evrocar-varna-09",
@@ -10879,41 +10981,112 @@
     },
     {
       "slug": "sunny-varna",
-      "name": "sunny-varna",
+      "name": "СЪНИ",
       "localPath": "clients/sunny-varna",
       "localPresent": true,
       "variants": [
         {
           "key": "auto-best",
-          "state": "implemented-unverified",
+          "state": "source-reviewed",
           "qaRecorded": false,
-          "localPresent": false,
-          "entry": null,
+          "localPresent": true,
+          "entry": "/",
           "publicUrl": null,
-          "templateSource": null
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+            "path": "templates/auto-best",
+            "digest": "dcbc59990928884006652677d3529020df3844029993895a71e5f6818ba7363c",
+            "tree": "5fb7a2164775050a47c1183371622295dbf63725"
+          },
+          "base": ""
         },
         {
           "key": "modern",
-          "state": "implemented-unverified",
+          "state": "source-reviewed",
           "qaRecorded": false,
-          "localPresent": false,
-          "entry": null,
+          "localPresent": true,
+          "entry": "/variant-2/cars",
           "publicUrl": null,
-          "templateSource": null
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+            "path": "templates/modern",
+            "digest": "ba263aac8f1863d133807d3e1bf3597d125cf315a7e0deba3f6e419b52434c25",
+            "tree": "3974380670eb388bb16182f94ade33be6d87b1c1"
+          },
+          "base": "/variant-2"
         },
         {
-          "key": "carwow",
-          "state": "implemented-unverified",
+          "key": "import",
+          "base": "/variant-3",
+          "entry": "/variant-3/",
+          "localPresent": true,
+          "state": "source-reviewed",
           "qaRecorded": false,
-          "localPresent": false,
-          "entry": null,
           "publicUrl": null,
-          "templateSource": null
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+            "path": "templates/import",
+            "digest": "f98a0934cdcc5adbda393c14c02eb2adc0175344ab2ac3f913afe4b0603366e5",
+            "tree": "6afc6901e2f95967fb7c72e9f75525d4d6fbf086"
+          }
+        },
+        {
+          "key": "app",
+          "base": "/variant-4",
+          "entry": "/variant-4/",
+          "localPresent": true,
+          "state": "source-reviewed",
+          "qaRecorded": false,
+          "publicUrl": null,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+            "path": "templates/app",
+            "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1",
+            "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76"
+          }
+        },
+        {
+          "key": "mobile",
+          "base": "/variant-5",
+          "entry": "/variant-5/",
+          "localPresent": true,
+          "state": "source-reviewed",
+          "qaRecorded": false,
+          "publicUrl": null,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+            "path": "templates/mobile",
+            "digest": "4e858bd9dbd3ef5b52cd904c4ed97bbfdc0f4cfe02b5a3840580f38026b867a0",
+            "tree": "2b02829e157071e305bfb2dff10ef18e85c8a35e"
+          }
+        },
+        {
+          "key": "karento-best",
+          "base": "/variant-6",
+          "entry": "/variant-6/",
+          "localPresent": true,
+          "state": "source-reviewed",
+          "qaRecorded": false,
+          "publicUrl": null,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+            "path": "templates/karento-best",
+            "digest": "83056967764a686f3737d74b86c5db51c1385a50184853f50ec4ade80c1dd44f",
+            "tree": "5f6eec8efb2f9e99819f7f0c2f743d18fff7b134"
+          }
         }
       ],
       "branchSources": [],
       "delivery": {
-        "state": "source-review-required"
+        "state": "native-build-pending",
+        "provider": "cloudflare",
+        "configuredPublicOrigin": "https://cars-sunny-varna.darkapoparka1.workers.dev"
       },
       "sourceHistory": [
         {
@@ -10942,14 +11115,38 @@
         }
       ],
       "canonicalSourceRef": "main",
-      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735",
+      "canonicalSourceCommit": "8d98ac339016eaa1d1c0e351aa1614ab58db8416",
       "evidence": {
         "source": {
           "state": "committed",
-          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+          "commit": "8d98ac339016eaa1d1c0e351aa1614ab58db8416",
+          "tree": "9a237c6cbd904b3bbd6f6158e3e8f94e886b03f0",
+          "proof": "docs/releases/cloudflare-existing25-20261011/registered-source/sunny-varna/source-publication.json"
         },
         "personalization": {
-          "state": "unknown"
+          "state": "reviewed-public-inputs",
+          "inputs": {
+            "adoption": {
+              "path": "docs/releases/cloudflare-existing25-20261011/registered-source/sunny-varna/reviewed-public-adoption.json",
+              "sha256": "41bddce41f152fde70a0194dd1fb15f7e27337d6ef575fafcf7ab23632c70136"
+            },
+            "candidateLock": {
+              "path": "docs/releases/cloudflare-existing25-20261011/registered-source/sunny-varna/qualification-lock.json",
+              "sha256": "b68b52ece7b68b9e393fd1d62ff9c3025819ff576c664a71336318b549c558f3"
+            },
+            "qualification": {
+              "path": "docs/releases/cloudflare-existing25-20261011/registered-source/sunny-varna/qualification-context.json",
+              "sha256": "f27af3fb84107c5ae85095261b6e5db2270d5ec5762e9d49c3b45c780494fd9e"
+            },
+            "sourceDeltaReview": {
+              "path": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
+              "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975"
+            },
+            "branding": {
+              "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/sunny-varna/branding.json",
+              "sha256": "f3b3761aacc500e73a8c1eee61428457256eb943e39238757f2c0f9d069add16"
+            }
+          }
         },
         "build": {
           "state": "unknown"
@@ -10966,8 +11163,15 @@
       },
       "id": null,
       "aliases": [],
-      "repository": null,
-      "packagingVersion": null
+      "repository": "darkapoparka/cars-sunny-varna",
+      "packagingVersion": "5",
+      "dealerId": "sunny-varna",
+      "sourceOwnership": "cars-canonical",
+      "canonicalSourceRepository": "darkapoparka/cars",
+      "cloudflare": {
+        "workerName": "cars-sunny-varna",
+        "publicOrigin": "https://cars-sunny-varna.darkapoparka1.workers.dev"
+      }
     },
     {
       "slug": "swiss-auto-43",

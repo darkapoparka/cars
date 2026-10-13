@@ -346,15 +346,20 @@
     },
     {
       "slug": "europa-varna",
-      "name": "europa-varna",
+      "name": "Европа",
       "path": "clients/europa-varna",
       "variants": [
         "auto-best",
         "modern",
-        "carwow"
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
       ],
       "sourceState": "source-on-main",
-      "reviewState": "unknown"
+      "reviewState": "source-reviewed-native-pending",
+      "repository": "darkapoparka/cars-europa-varna",
+      "dealerId": "europa-varna"
     },
     {
       "slug": "evrocar-varna-09",
@@ -967,15 +972,20 @@
     },
     {
       "slug": "sunny-varna",
-      "name": "sunny-varna",
+      "name": "СЪНИ",
       "path": "clients/sunny-varna",
       "variants": [
         "auto-best",
         "modern",
-        "carwow"
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
       ],
       "sourceState": "source-on-main",
-      "reviewState": "unknown"
+      "reviewState": "source-reviewed-native-pending",
+      "repository": "darkapoparka/cars-sunny-varna",
+      "dealerId": "sunny-varna"
     },
     {
       "slug": "swiss-auto-43",

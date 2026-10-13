@@ -861,6 +861,22 @@
       "sourceMode": "existing-migration",
       "workerName": "cars-kapitol-varna",
       "publicOrigin": "https://cars-kapitol-varna.darkapoparka1.workers.dev"
+    },
+    {
+      "slug": "europa-varna",
+      "dealerId": "europa-varna",
+      "proposedRepository": "darkapoparka/cars-europa-varna",
+      "sourceMode": "existing-migration",
+      "workerName": "cars-europa-varna",
+      "publicOrigin": "https://cars-europa-varna.darkapoparka1.workers.dev"
+    },
+    {
+      "slug": "sunny-varna",
+      "dealerId": "sunny-varna",
+      "proposedRepository": "darkapoparka/cars-sunny-varna",
+      "sourceMode": "existing-migration",
+      "workerName": "cars-sunny-varna",
+      "publicOrigin": "https://cars-sunny-varna.darkapoparka1.workers.dev"
     }
   ],
   "workerIdentities": {

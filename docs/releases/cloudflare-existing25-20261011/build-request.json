@@ -3,19 +3,26 @@
   "mode": "existing-migration",
   "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
   "dealers": [
-    "kapitol-varna"
+    "europa-varna",
+    "sunny-varna"
   ],
   "composition": {
     "reviewed": true,
-    "reviewedAt": "2026-10-13T22:09:45.809Z",
-    "reviewScope": "First native Cloudflare build for Kapitol's exact successful original source proposal; reuse reviewed factual inputs and raster branding, preserve the original source and all Vercel identities."
+    "reviewedAt": "2026-10-13T23:06:16.804Z",
+    "reviewScope": "Build the exact two successful original source proposals using reviewed factual inputs and raster branding; preserve existing Vercel identities."
   },
   "sourcePublications": [
     {
-      "dealer": "kapitol-varna",
-      "commit": "91cfa7af1092661cebad5f6261aea678302d5082",
-      "tree": "e1ce5554694fa7d584c82145f57910df396dfeb9",
-      "path": "docs/releases/cloudflare-existing25-20261011/registered-source/kapitol-varna/source-publication.json"
+      "dealer": "europa-varna",
+      "commit": "8d98ac339016eaa1d1c0e351aa1614ab58db8416",
+      "tree": "e3d33e58eade1baf75cfb91b3cf09eb6d0d792c6",
+      "path": "docs/releases/cloudflare-existing25-20261011/registered-source/europa-varna/source-publication.json"
+    },
+    {
+      "dealer": "sunny-varna",
+      "commit": "8d98ac339016eaa1d1c0e351aa1614ab58db8416",
+      "tree": "9a237c6cbd904b3bbd6f6158e3e8f94e886b03f0",
+      "path": "docs/releases/cloudflare-existing25-20261011/registered-source/sunny-varna/source-publication.json"
     }
   ]
 }
