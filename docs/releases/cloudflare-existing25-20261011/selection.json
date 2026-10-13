@@ -837,6 +837,22 @@
       "sourceMode": "new-approved",
       "workerName": "cars-xcar-varna",
       "publicOrigin": "https://cars-xcar-varna.darkapoparka1.workers.dev"
+    },
+    {
+      "slug": "tesla-varna",
+      "dealerId": "tesla-varna",
+      "proposedRepository": "darkapoparka/cars-tesla-varna",
+      "sourceMode": "new-approved",
+      "workerName": "cars-tesla-varna",
+      "publicOrigin": "https://cars-tesla-varna.darkapoparka1.workers.dev"
+    },
+    {
+      "slug": "crazy-fox-motors-varna",
+      "dealerId": "crazy-fox-motors-varna",
+      "proposedRepository": "darkapoparka/cars-crazy-fox-motors-varna",
+      "sourceMode": "new-approved",
+      "workerName": "cars-crazy-fox-motors-varna",
+      "publicOrigin": "https://cars-crazy-fox-motors-varna.darkapoparka1.workers.dev"
     }
   ],
   "workerIdentities": {

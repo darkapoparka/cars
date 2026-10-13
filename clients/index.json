@@ -1824,6 +1824,18 @@
       "dealerId": "xcar-varna",
       "repository": "darkapoparka/cars-xcar-varna",
       "path": "clients/xcar-varna"
+    },
+    {
+      "slug": "tesla-varna",
+      "dealerId": "tesla-varna",
+      "repository": "darkapoparka/cars-tesla-varna",
+      "path": "clients/tesla-varna"
+    },
+    {
+      "slug": "crazy-fox-motors-varna",
+      "dealerId": "crazy-fox-motors-varna",
+      "repository": "darkapoparka/cars-crazy-fox-motors-varna",
+      "path": "clients/crazy-fox-motors-varna"
     }
   ],
   "campaignCandidatesWithoutFolders": [
