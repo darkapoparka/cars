@@ -19,6 +19,13 @@ jobs:
       matrix: ${{ steps.plan.outputs.matrix }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          filter: blob:none
+          fetch-depth: 1
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            scripts/split-retained-uk-archive.mjs
+            docs/releases/cloudflare-existing25-20261011/retained-uk-split-request.json
       - uses: actions/setup-node@v4
         with:
           node-version: 26.10.0
@@ -33,6 +40,13 @@ jobs:
       matrix: ${{ fromJSON(needs.plan.outputs.matrix) }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          filter: blob:none
+          fetch-depth: 1
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            scripts/split-retained-uk-archive.mjs
+            docs/releases/cloudflare-existing25-20261011/retained-uk-split-request.json
       - uses: actions/setup-node@v4
         with:
           node-version: 26.10.0
