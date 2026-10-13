@@ -364,7 +364,7 @@ export function planDealerUpgrade({ dealerRoot, lock, oldBases, newBases, target
   const manifestBytes = registeredAdoption ? null : fs.readFileSync(manifestFile);
   const manifest = registeredAdoption ? registeredAdoption.manifest : JSON.parse(manifestBytes.toString('utf8').replace(/^\uFEFF/, ''));
   const pins = selectPinnedRevisions(manifest, lock, { targetVariants: targetManifest?.variants || manifest.variants, keys: selectedKeys, qualification, root,sourceReplacement:registeredAdoption?.receipt.templateRefresh?.unversionedBaseline===true });
-  if(registeredAdoption?.receipt.templateRefresh){const r=registeredAdoption.receipt.templateRefresh;const families=['auto-best','modern','import','app','mobile','karento-best'];if(r.schemaVersion!==1||r.kind!=='cars-owner-directed-pinned-template-refresh'||r.reviewed!==true||!Number.isFinite(Date.parse(r.reviewedAt))||r.dealer!==manifest.slug||JSON.stringify(r.baseline)!==JSON.stringify(registeredAdoption.baseline)||JSON.stringify(r.families)!==JSON.stringify(families)||!Object.values(pins).every(p=>p.targetSource.revision===r.sourceRevision)||!r.preserveOriginalSourceInGit)throw Error('Exact owner-directed registered template refresh required');}
+  assertRegisteredTemplateRefresh(registeredAdoption,pins,manifest);
   const candidate = new Map(), changes = [], conflicts = [], perDesign = {};
   for (const key of Object.keys(pins)) {
     if ((!oldBases?.[key] && pins[key].from !== null) || !newBases?.[key]) throw new Error(`Missing exact old/new template trees for ${key}`);
@@ -869,3 +869,5 @@ export function rollbackUpgrade({ source, receiptPath }) {
   } finally { fs.rmdirSync(lock); }
 }
 
+
+export function assertRegisteredTemplateRefresh(registeredAdoption,pins,manifest=registeredAdoption?.manifest){if(!registeredAdoption?.receipt.templateRefresh)return null;const r=registeredAdoption.receipt.templateRefresh;const families=['auto-best','modern','import','app','mobile','karento-best'];if(r.schemaVersion!==1||r.kind!=='cars-owner-directed-pinned-template-refresh'||r.reviewed!==true||!Number.isFinite(Date.parse(r.reviewedAt))||r.dealer!==manifest.slug||JSON.stringify(r.baseline)!==JSON.stringify(registeredAdoption.receipt.baseline)||JSON.stringify(r.families)!==JSON.stringify(families)||!Object.values(pins).every(p=>p.targetSource.revision===r.sourceRevision)||r.preserveOriginalSourceInGit!==true)throw Error('Exact owner-directed registered template refresh required');return registeredAdoption.receipt.templateRefresh;}

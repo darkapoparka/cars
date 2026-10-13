@@ -14,7 +14,8 @@
     "evrocar-varna-09",
     "sprint-auto-varna",
     "extra-car-sm",
-    "avtoborsa-mania"
+    "avtoborsa-mania",
+    "tesi-car-varna"
   ],
   "inputs": {
     "kapitol-varna": {
@@ -257,6 +258,20 @@
       "branding": {
         "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/europa-varna/branding.json",
         "sha256": "999cfdc870ef17f0ed9ba029fdd6d4b7fb2b868123f1fd5fe2ac80f3e83f9d10"
+      }
+    },
+    "tesi-car-varna": {
+      "adoption": {
+        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/tesi-car-varna/adoption.json",
+        "sha256": "f716ca6df9e683338248c9f89ef7909f1b4ba5928f351a0c5cb123198d0f9e06"
+      },
+      "candidateLock": {
+        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/tesi-car-varna/qualification-lock.json",
+        "sha256": "6e4f9f9a08175786813758c4bdf82b63dc36ddc9b7d6c4eafa2223745b25e5bb"
+      },
+      "qualification": {
+        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/tesi-car-varna/qualification.json",
+        "sha256": "dbc54f32b8442850584e9e10ccbce30a882738a03dec4ea83a5c8a356a87ad92"
       }
     }
   }

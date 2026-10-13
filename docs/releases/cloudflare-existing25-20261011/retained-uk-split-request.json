@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-retained-uk-archive-transport",
+  "sourceBuildRepeated": false,
+  "maximumPartBytes": 367001600,
+  "compositionRun": {
+    "id": 38446834569,
+    "attempt": 1,
+    "sourceCommit": "d02783d4c6abc70959de3341bd4e0a0033f4c4e4",
+    "status": "completed",
+    "conclusion": "success"
+  },
+  "dealers": [
+    {
+      "dealer": "north-norfolk-car-sales",
+      "artifact": {
+        "id": 11839475408,
+        "name": "retained-uk-single-worker-north-norfolk-car-sales-38446834569-1",
+        "bytes": 917292752,
+        "digest": "sha256:85dea133973dd0ef3daaee631cde84ccfe8ddd6ef0a198787bc629c6e177d55a",
+        "sourceCommit": "d02783d4c6abc70959de3341bd4e0a0033f4c4e4"
+      }
+    },
+    {
+      "dealer": "nottingham-s-a-motors",
+      "artifact": {
+        "id": 11838970825,
+        "name": "retained-uk-single-worker-nottingham-s-a-motors-38446834569-1",
+        "bytes": 917837503,
+        "digest": "sha256:54a1320b9d7ce8820e9dc5f669b7f7e3a64cdf091360fa0837745b19104bbb29",
+        "sourceCommit": "d02783d4c6abc70959de3341bd4e0a0033f4c4e4"
+      }
+    },
+    {
+      "dealer": "bradford-cherry-tree-cars",
+      "artifact": {
+        "id": 11838791466,
+        "name": "retained-uk-single-worker-bradford-cherry-tree-cars-38446834569-1",
+        "bytes": 918974128,
+        "digest": "sha256:40ebde03548ebd5edd45c610d4ade0dc83eb36b90e23f6a7578c25027d5e0cd4",
+        "sourceCommit": "d02783d4c6abc70959de3341bd4e0a0033f4c4e4"
+      }
+    },
+    {
+      "dealer": "dewsbury-car-market-yorkshire",
+      "artifact": {
+        "id": 11838423510,
+        "name": "retained-uk-single-worker-dewsbury-car-market-yorkshire-38446834569-1",
+        "bytes": 919153092,
+        "digest": "sha256:20154f0da66e8fec0032efe14c965aa1dc53b8b1c395e3efc9f187c93665a494",
+        "sourceCommit": "d02783d4c6abc70959de3341bd4e0a0033f4c4e4"
+      }
+    },
+    {
+      "dealer": "stockton-norton-grange-trade-cars",
+      "artifact": {
+        "id": 11838103626,
+        "name": "retained-uk-single-worker-stockton-norton-grange-trade-cars-38446834569-1",
+        "bytes": 918110617,
+        "digest": "sha256:21a73d17e8012519d9ca795297fbbb5563bc26f68222fdfe7b7a823d78f7a9fc",
+        "sourceCommit": "d02783d4c6abc70959de3341bd4e0a0033f4c4e4"
+      }
+    }
+  ]
+}

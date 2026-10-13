@@ -1,0 +1,60 @@
+name: Transport retained UK deployment archives
+on:
+  push:
+    branches: [main]
+    paths:
+      - docs/releases/cloudflare-existing25-20261011/retained-uk-split-request.json
+      - scripts/split-retained-uk-archive.mjs
+      - .github/workflows/transport-retained-uk-cloudflare.yml
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: retained-uk-archive-transport
+  cancel-in-progress: false
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.plan.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 26.10.0
+      - id: plan
+        run: echo "matrix=$(node scripts/split-retained-uk-archive.mjs matrix)" >> "$GITHUB_OUTPUT"
+  split:
+    needs: plan
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix: ${{ fromJSON(needs.plan.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 26.10.0
+      - id: split
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node scripts/split-retained-uk-archive.mjs split ${{ matrix.dealer }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: retained-uk-archive-${{ matrix.dealer }}-part-1-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ steps.split.outputs.part1 }}
+          compression-level: 0
+          retention-days: 7
+      - uses: actions/upload-artifact@v4
+        with:
+          name: retained-uk-archive-${{ matrix.dealer }}-part-2-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ steps.split.outputs.part2 }}
+          compression-level: 0
+          retention-days: 7
+      - uses: actions/upload-artifact@v4
+        with:
+          name: retained-uk-archive-${{ matrix.dealer }}-part-3-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ steps.split.outputs.part3 }}
+          compression-level: 0
+          retention-days: 7
