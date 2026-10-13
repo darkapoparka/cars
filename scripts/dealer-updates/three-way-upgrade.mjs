@@ -434,7 +434,7 @@ export function planRegisteredPinnedTemplateRefresh({newBase,dealer}){
  if(!target.has('package.json'))throw Error('Pinned template replacement needs its exact application package');
  for(const name of [...new Set([...original.keys(),...target.keys()])].sort()){
   const before=original.get(name)??null,after=target.get(name)??null;
-  if(!same(name,before,after))changes.push(record(name,'reviewed-pinned-template-replacement',before,after,{originalSourceRetainedInGit:true}));
+  if(before===null||after===null||!before.equals(after))changes.push(record(name,'reviewed-pinned-template-replacement',before,after,{originalSourceRetainedInGit:true}));
  }
  return{schemaVersion:1,mode:'reviewed-pinned-template-replacement',candidate,changes,conflicts:[],ready:true,summary:{examined:new Set([...original.keys(),...target.keys()]).size,changed:changes.length,conflicts:0,autoMerged:0,dealerOnly:0,templateOnly:changes.length}};
 }
