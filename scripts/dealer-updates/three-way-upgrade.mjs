@@ -1,4 +1,24 @@
 import crypto from 'node:crypto';
+
+// A reviewed full template replacement rebinds the current raster afterward.
+// Obsolete derived logo seals must not survive that replacement; facts do.
+export function clearReplacedProfileLogoContracts(files,{enabled=false}={}){
+  if(!enabled)return [];
+  if(!(files instanceof Map))throw Error('Exact candidate files required');
+  const hash=bytes=>crypto.createHash('sha256').update(bytes).digest('hex');
+  const paths=['auto-best/src/lib/data/dealer-profile.json','import/src/lib/data/dealer-profile.json','modern/packages/marketplace-domain/testing/dealer-profile.json'],changes=[];
+  for(const name of paths){
+    if(!files.has(name))continue;
+    const before=Buffer.from(files.get(name)),profile=JSON.parse(before.toString('utf8'));
+    if(profile.logoContract==null)continue;
+    const prior=JSON.stringify(profile.logoContract);
+    profile.logoContract=null;
+    const after=Buffer.from(JSON.stringify(profile,null,2)+'\n');
+    files.set(name,after);
+    changes.push({path:name,beforeSha256:hash(before),afterSha256:hash(after),obsoleteLogoContractSha256:hash(Buffer.from(prior)),factualFieldsUnchanged:true});
+  }
+  return changes;
+}
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';

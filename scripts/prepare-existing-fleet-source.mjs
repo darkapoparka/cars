@@ -20,6 +20,7 @@ import {artifactInventory} from './lib/uk-cloudflare-artifacts.mjs';
 import {planSixDesignSelection} from './lib/six-design-release.mjs';
 import {loadDealerProfile} from './lib/client-refresh-normalize.mjs';
 import {isRegisteredPublishedMaterializationPath} from './lib/registered-reviewed-public-inputs.mjs';
+import {clearReplacedProfileLogoContracts} from './dealer-updates/three-way-upgrade.mjs';
 import {validateRegisteredSourceRequest,readRegisteredInput,readRegisteredDealerAdoption,assertRegisteredMountOwnership,REGISTERED_ADOPTION_FILE,REGISTERED_PROFILE_FILE,REGISTERED_INPUT_ROOT} from './registered-dealer-adoption.mjs';
 
 export const SOURCE_CAMPAIGN='docs/releases/cloudflare-existing25-20261011';
@@ -272,6 +273,7 @@ export function readBrandingInputs(root,record,slug){
  const originalSha=record.generation.sourceFileSha256??record.generation.sourceSha256;assert(hex64(originalSha)&&(!record.generation.sourceFileSha256||!record.generation.sourceSha256||record.generation.sourceFileSha256===record.generation.sourceSha256),'Original ImageGen source hash is required and must agree');
  return {master,generation:{...record.generation,sourceFileSha256:originalSha},reviewedSurfaces:{schemaVersion:1,reviewed:true,reviewedAt:record.reviewedAt,surfaces}};
 }
+/** A full reviewed template replacement discards obsolete derived logo seals, while current reviewed raster binding remains authoritative. */
 export function bindPreparedShareLogo(files,manifest,contract){
  const logo=files.get('branding/logo-on-light.png'),icon=files.get('branding/app-icon.png');
  assert(manifest.shareIdentity&&logo&&icon&&contract.reviewedSurfaceVariants?.surfaces.onLight.sha256===sha256(logo),'Prepared share identity needs the exact reviewed on-light logo and derived icon');
@@ -323,6 +325,7 @@ export async function prepareExistingFleetSource({slug,root=ROOT,env=process.env
  assert(manifest.slug===slug&&manifest.repository===(registeredAdoption?.identity.repository??registry.dealers.find(r=>r.slug===slug).repository),'Prepared dealer identity differs');
  const factualRefresh=registeredAdoption?null:assertSourceFactualRefresh({metadata,review,manifest,profile:loadDealerProfile(source,slug)});
  // Retain previous branding proof as baseline evidence; the new pack gets its own seal.
+ const replacedProfileLogoContracts=clearReplacedProfileLogoContracts(files,{enabled:registeredAdoption?.receipt.templateRefresh?.reviewed===true});
  const previousBrandingDigest=files.has('.cars-branding.json')?sha256(files.get('.cars-branding.json')):null;files.delete('.cars-branding.json');manifest.branding={...(manifest.branding??{}),required:true,surfaceBindingsVersion:1};
  const require=createRequire(toolPackage),sharp=require('sharp');assert(sharp.versions.sharp==='0.35.5','Source raster toolchain differs');
  const templates=new Map(),readTemplate=(locator,name,optional)=>{const key=locator.path.slice('templates/'.length),id=key+'@'+locator.revision;if(!templates.has(id))templates.set(id,readPinnedTemplateTree({key,repositoryPath:root,source:locator}).tree);const bytes=templates.get(id).get(name);if(!bytes&&optional)return null;assert(bytes,'Missing exact palette source '+key+'/'+name);return bytes.toString('utf8');};
@@ -346,3 +349,4 @@ export async function prepareExistingFleetSource({slug,root=ROOT,env=process.env
 // the source proposal helpers from this module as its maintained shared seam.
 async function runSourceCli(){const [command,slug]=process.argv.slice(2);if(command==='matrix'){const request=strictJson(fs.readFileSync(path.join(ROOT,SOURCE_CAMPAIGN,'source-request.json')));console.log('matrix='+JSON.stringify(await sourceMatrix(request,{root:ROOT,leads:json(path.join(ROOT,SOURCE_CAMPAIGN,'selection.json')).leads,registry:json(path.join(ROOT,'docs/DEPLOYMENT-INVENTORY.json'))})));}else{assert(command==='prepare'&&slug&&process.argv.length===4,'Use matrix | prepare SLUG (main source CI only)');console.log(JSON.stringify(await prepareFleetSource({slug}),null,2));}}
 if(process.argv[1]&&import.meta.url===pathToFileURL(path.resolve(process.argv[1])).href)runSourceCli().catch(error=>{console.error(error.message);process.exitCode=1;});
+
