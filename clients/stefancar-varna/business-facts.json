@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "slug": "stefancar-varna",
+  "dealerId": "stefancar-varna",
+  "business": {
+    "schemaVersion": 1,
+    "slug": "stefancar-varna",
+    "name": "СТЕФАН КАР -внос и продажба на автомобили",
+    "shortName": "СТЕФАН КАР",
+    "city": "Варна",
+    "country": "BG",
+    "countryCode": "BG",
+    "locale": "bg-BG",
+    "currency": "EUR",
+    "distanceUnit": "km",
+    "phone": "0888229977",
+    "phoneDisplay": "0888229977",
+    "phoneE164": "+359888229977",
+    "phones": [
+      "0888229977"
+    ],
+    "addressLine": "бул. Цар Освободител 500 метра след метро",
+    "address": "бул. Цар Освободител 500 метра след метро, Варна, България",
+    "hours": "Потвърдете работното време директно с автокъщата.",
+    "email": "",
+    "sourceUrl": "https://stefancar.mobile.bg/",
+    "stockUrl": "https://stefancar.mobile.bg/",
+    "contactSourceUrl": "https://stefancar.mobile.bg/contacts",
+    "observedAt": "2026-10-11T11:47:27.689Z",
+    "inventoryNotice": "Датирана извадка от публични обяви, не складова система в реално време. Потвърдете цената, ДДС и наличността.",
+    "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+    "services": [],
+    "socialLinks": {},
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sourceFacts": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/stefancar-varna/source/business-facts.json",
+    "sha256": "eb18653b7c93c6c617db319e0d93b9cdb467e6a300b1eb0f45677da42cf3921b"
+  },
+  "originalBusinessLiteralsUnchanged": true
+}

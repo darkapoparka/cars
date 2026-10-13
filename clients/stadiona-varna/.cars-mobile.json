@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "format": "mobile-preview-v1",
+  "dealer": "stadiona-varna",
+  "name": "Автосалон СТАДИОНА",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/mobile",
+    "tree": "2b02829e157071e305bfb2dff10ef18e85c8a35e",
+    "digest": "4e858bd9dbd3ef5b52cd904c4ed97bbfdc0f4cfe02b5a3840580f38026b867a0"
+  },
+  "sourceDigest": "3500299103d9892f53cb2ce8ef9551178c0cf71ca2840c4c5e01b2c1b4e20b27",
+  "inventory": {
+    "mode": "dated-listing-snapshot",
+    "count": 1,
+    "observedAt": "2026-10-11T11:47:28.399Z"
+  },
+  "personalization": {
+    "profileSha256": "b04995b2e0bebcad423042a8e9d9a8b3d65a429e04f0efee3010b8ba6225fafc",
+    "logoPaths": [
+      "/dealer-brand/logo-on-light.png",
+      "/dealer-brand/logo-on-dark.png"
+    ],
+    "mediaPaths": [
+      "/dealer-stock/11791629866548922-1.webp",
+      "/dealer-stock/11791629866548922-2.webp"
+    ],
+    "mediaMappings": [],
+    "contentPaths": [
+      "mobile/src/lib/showroom-config.ts",
+      "mobile/src/lib/catalog.ts",
+      "mobile/src/lib/dealers.ts",
+      "mobile/src/lib/dealer-inventory.json",
+      "mobile/src/lib/locale.ts",
+      "mobile/src/lib/search.ts",
+      "mobile/src/components/NativeDealerCards.tsx",
+      "mobile/src/components/DealerScreens.tsx",
+      "mobile/src/components/VehicleCard.tsx",
+      "mobile/src/components/ShowroomVehicleCard.tsx",
+      "mobile/src/components/VehicleSections.tsx",
+      "mobile/src/lib/mobile-mileage.ts",
+      "mobile/src/lib/types.ts",
+      "mobile/src/components/DesktopVehicleSummary.tsx",
+      "mobile/src/components/NativeCarPark.tsx",
+      "mobile/src/components/ShowroomFilterSheet.tsx",
+      "mobile/src/lib/vehicle-copy.ts"
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

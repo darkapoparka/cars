@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "dealer": "stadiona-varna",
+  "kind": "personalized-source-candidate-not-an-approved-release",
+  "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+  "candidateSourceDigest": "12a2700a5b46d5adf47df14ea997b5ec0f2b6d9565c5d382d62fd19ccbe9efcf",
+  "qualificationContextPath": ".client/native-qualification-context.json",
+  "qualificationContextSha256": "904d0b148e3f03394c225337fd71854da12130883ec888aa84e16b704c2cf8a3",
+  "qualificationLockPath": ".client/native-qualification-lock.json",
+  "qualificationLockSha256": "c28d29acdf39709d38737a972eeb2a1d000cfb1cd96de587c38effd764386ac1",
+  "sourceDeltaReview": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
+    "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975",
+    "reviewedAt": "2026-10-11T21:04:02.173Z"
+  },
+  "nativeApproval": false,
+  "hostedApproval": false
+}

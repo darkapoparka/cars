@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "dealer": "stadiona-varna",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/app",
+    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
+    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+  },
+  "appDigest": "118f064e3eefc237aed74e02fffd4a2556d209530ae9a583adfe2fad9293bc68",
+  "provenance": {
+    "schemaVersion": 1,
+    "dealer": "stadiona-varna",
+    "profile": "auto-best/src/lib/data/dealer-profile.json",
+    "profileSha256": "118b43724289900fcf071c101eb763c2875b1fda1f505981509f19ef296eb7f1",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "vehicles": 1,
+    "currency": "EUR",
+    "observedAt": "2026-10-11T11:47:28.548Z",
+    "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-light.png",
+        "output": "public/dealer-app/logo-light-20c50858a0f35fd03e78.png",
+        "sha256": "20c50858a0f35fd03e78dd0beac3a9803723a3a338f1c42f305e2a816a455c2a",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-dark.png",
+        "output": "public/dealer-app/logo-dark-2ada326d4d5db4f3ac97.png",
+        "sha256": "2ada326d4d5db4f3ac974fbeba903673194dfc87a86407c055b64e772b117baf",
+        "role": "logo-dark"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11791629866548922-2.webp",
+        "output": "public/dealer-app/vehicle-fa36167509c2856696c5.webp",
+        "sha256": "fa36167509c2856696c54437988696cf2be937ce8af75f0c1dd6d72ed16de85e",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11791629866548922-1.webp",
+        "output": "public/dealer-app/vehicle-9cf954c0b2718f418e1a.webp",
+        "sha256": "9cf954c0b2718f418e1af13de17b93435eb6127f7e8ddb83f34cd62b806b6321",
+        "role": "vehicle"
+      }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "bmw-3gt-2016-11791629866548922",
+        "sourceValue": 217000,
+        "sourceUnit": "km",
+        "canonicalKm": 217000
+      }
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

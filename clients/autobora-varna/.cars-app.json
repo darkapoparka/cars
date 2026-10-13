@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "dealer": "autobora-varna",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/app",
+    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
+    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+  },
+  "appDigest": "95ede6a26bf10443c804d2ed98f88958bff42599421da2f9898e6c898f334f6e",
+  "provenance": {
+    "schemaVersion": 1,
+    "dealer": "autobora-varna",
+    "profile": "auto-best/src/lib/data/dealer-profile.json",
+    "profileSha256": "56ff3011e8a36b6f80e6d9f6e66fcb9272aa743f04b1490b0925ffe51e31da05",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "vehicles": 1,
+    "currency": "EUR",
+    "observedAt": "2026-10-11T11:47:27.231Z",
+    "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-light.png",
+        "output": "public/dealer-app/logo-light-583a675da68f8746992c.png",
+        "sha256": "583a675da68f8746992c8f0a88992d31cbb8d14feb1abbaf3c673cb326423624",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-dark.png",
+        "output": "public/dealer-app/logo-dark-9091f5f12676cf8f22c1.png",
+        "sha256": "9091f5f12676cf8f22c155296a795f08dd80af750ccef7240b530ff104b5eb9a",
+        "role": "logo-dark"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11738733943918557-2.webp",
+        "output": "public/dealer-app/vehicle-633157a5c228a339b918.webp",
+        "sha256": "633157a5c228a339b9181edb9d23d16770f2445e44a28ea25f7a446a0f63c4bc",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11738733943918557-1.webp",
+        "output": "public/dealer-app/vehicle-11f8fc1dd1dc91cca7e3.webp",
+        "sha256": "11f8fc1dd1dc91cca7e36e0c623a62d66d2f001fd356e2aeda730955c39da384",
+        "role": "vehicle"
+      }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "vw-golf-2017-11738733943918557",
+        "sourceValue": 50000,
+        "sourceUnit": "km",
+        "canonicalKm": 50000
+      }
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

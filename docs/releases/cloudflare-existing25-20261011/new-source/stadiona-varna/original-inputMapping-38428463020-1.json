@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-input-mapping",
+  "dealer": "stadiona-varna",
+  "inputs": {
+    "facts": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/stadiona-varna/facts.json",
+      "sha256": "8c4e2a77ab92b9dc8d6a6f3b7672bac67b4bc60de845aa7cc4aecdb4c87d5b45"
+    },
+    "stock": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/stadiona-varna/stock.json",
+      "sha256": "9e4a7e8bd4e3bc96b826d621c4e62f6cd47a359837699db8f37ab9372edcc0c4"
+    },
+    "locale": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/stadiona-varna/locale.json",
+      "sha256": "524721f23b20da9a75f22e276fce07cba83be2cedb77a01f9d34853a983c148d"
+    },
+    "branding": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/stadiona-varna/branding.json",
+      "sha256": "9814b69374d8cf5f5667c48040d19e3919f573087fea5937254feeeae57b92b8"
+    }
+  },
+  "sources": [
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/stadiona-varna/identity-repository-corrected-additional100.json",
+      "sha256": "255d48d648902d2a9aa77908421aaf1576e493012404d4e98def8065623ce0d4"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/stadiona-varna/facts.json",
+      "sha256": "8c4e2a77ab92b9dc8d6a6f3b7672bac67b4bc60de845aa7cc4aecdb4c87d5b45"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/stadiona-varna/stock.json",
+      "sha256": "9e4a7e8bd4e3bc96b826d621c4e62f6cd47a359837699db8f37ab9372edcc0c4"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/stadiona-varna/locale.json",
+      "sha256": "524721f23b20da9a75f22e276fce07cba83be2cedb77a01f9d34853a983c148d"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/stadiona-varna/branding.json",
+      "sha256": "9814b69374d8cf5f5667c48040d19e3919f573087fea5937254feeeae57b92b8"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/stadiona-varna/media/11791629866548922-1.webp",
+      "sha256": "9cf954c0b2718f418e1af13de17b93435eb6127f7e8ddb83f34cd62b806b6321"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/stadiona-varna/media/11791629866548922-2.webp",
+      "sha256": "fa36167509c2856696c54437988696cf2be937ce8af75f0c1dd6d72ed16de85e"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/stadiona-varna/copy-review-additional100.json",
+      "sha256": "1ad046915dcd040bbe28f398bc67bbd363d5fdf4f271b5898947cc83878b84ba"
+    }
+  ]
+}

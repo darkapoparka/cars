@@ -1,0 +1,834 @@
+[
+  {
+    "locale": "en",
+    "width": 768,
+    "surface": "grid",
+    "state": {
+      "geometry": {
+        "visual": {
+          "x": 0,
+          "y": 0,
+          "width": 362,
+          "height": 241.33
+        },
+        "content": {
+          "x": 0,
+          "y": 241.33,
+          "width": 362,
+          "height": 169.41
+        },
+        "make": {
+          "x": 16,
+          "y": 257.33,
+          "width": 330,
+          "height": 20.02
+        },
+        "name": {
+          "x": 16,
+          "y": 279.34,
+          "width": 330,
+          "height": 28.59
+        },
+        "amount": {
+          "x": 16,
+          "y": 349.94,
+          "width": 330,
+          "height": 42.8
+        },
+        "specs": {
+          "x": 16,
+          "y": 319.94,
+          "width": 330,
+          "height": 30
+        },
+        "mobile-meta": null
+      },
+      "firstCard": {
+        "x": 0,
+        "y": 0,
+        "width": 362,
+        "height": 410.73
+      }
+    }
+  },
+  {
+    "locale": "en",
+    "width": 768,
+    "surface": "home",
+    "state": {
+      "geometry": {
+        "visual": {
+          "x": 0,
+          "y": 0,
+          "width": 341,
+          "height": 227.33
+        },
+        "content": {
+          "x": 0,
+          "y": 227.33,
+          "width": 341,
+          "height": 169.41
+        },
+        "make": {
+          "x": 16,
+          "y": 243.33,
+          "width": 309,
+          "height": 20.02
+        },
+        "name": {
+          "x": 16,
+          "y": 265.34,
+          "width": 309,
+          "height": 28.59
+        },
+        "amount": {
+          "x": 16,
+          "y": 335.94,
+          "width": 309,
+          "height": 42.8
+        },
+        "specs": {
+          "x": 16,
+          "y": 305.94,
+          "width": 309,
+          "height": 30
+        },
+        "mobile-meta": null
+      },
+      "firstCard": {
+        "x": 0,
+        "y": 0,
+        "width": 341,
+        "height": 396.73
+      }
+    }
+  },
+  {
+    "locale": "en",
+    "width": 992,
+    "surface": "grid",
+    "state": {
+      "geometry": {
+        "visual": {
+          "x": 0,
+          "y": 0,
+          "width": 297.66,
+          "height": 198.44
+        },
+        "content": {
+          "x": 0,
+          "y": 198.44,
+          "width": 297.66,
+          "height": 164.81
+        },
+        "make": {
+          "x": 16,
+          "y": 214.44,
+          "width": 265.66,
+          "height": 20.02
+        },
+        "name": {
+          "x": 16,
+          "y": 236.45,
+          "width": 265.66,
+          "height": 28
+        },
+        "amount": {
+          "x": 16,
+          "y": 306.45,
+          "width": 265.66,
+          "height": 40.8
+        },
+        "specs": {
+          "x": 16,
+          "y": 276.45,
+          "width": 265.66,
+          "height": 30
+        },
+        "mobile-meta": null
+      },
+      "firstCard": {
+        "x": 0,
+        "y": 0,
+        "width": 297.66,
+        "height": 363.25
+      }
+    }
+  },
+  {
+    "locale": "en",
+    "width": 992,
+    "surface": "home",
+    "state": {
+      "geometry": {
+        "visual": {
+          "x": 0,
+          "y": 0,
+          "width": 428.5,
+          "height": 285.66
+        },
+        "content": {
+          "x": 0,
+          "y": 285.66,
+          "width": 428.5,
+          "height": 174.81
+        },
+        "make": {
+          "x": 20,
+          "y": 305.66,
+          "width": 388.5,
+          "height": 20.02
+        },
+        "name": {
+          "x": 20,
+          "y": 327.67,
+          "width": 388.5,
+          "height": 28
+        },
+        "amount": {
+          "x": 20,
+          "y": 397.67,
+          "width": 388.5,
+          "height": 42.8
+        },
+        "specs": {
+          "x": 20,
+          "y": 355.67,
+          "width": 388.5,
+          "height": 42
+        },
+        "mobile-meta": null
+      },
+      "firstCard": {
+        "x": 0,
+        "y": 0,
+        "width": 428.5,
+        "height": 460.47
+      }
+    }
+  },
+  {
+    "locale": "en",
+    "width": 1280,
+    "surface": "grid",
+    "state": {
+      "geometry": {
+        "visual": {
+          "x": 0,
+          "y": 0,
+          "width": 289.25,
+          "height": 192.83
+        },
+        "content": {
+          "x": 0,
+          "y": 192.83,
+          "width": 289.25,
+          "height": 164.81
+        },
+        "make": {
+          "x": 16,
+          "y": 208.83,
+          "width": 257.25,
+          "height": 20.02
+        },
+        "name": {
+          "x": 16,
+          "y": 230.84,
+          "width": 257.25,
+          "height": 28
+        },
+        "amount": {
+          "x": 16,
+          "y": 300.84,
+          "width": 257.25,
+          "height": 40.8
+        },
+        "specs": {
+          "x": 16,
+          "y": 270.84,
+          "width": 257.25,
+          "height": 30
+        },
+        "mobile-meta": null
+      },
+      "firstCard": {
+        "x": 0,
+        "y": 0,
+        "width": 289.25,
+        "height": 357.64
+      }
+    }
+  },
+  {
+    "locale": "en",
+    "width": 1280,
+    "surface": "home",
+    "state": {
+      "geometry": {
+        "visual": {
+          "x": 0,
+          "y": 0,
+          "width": 274.25,
+          "height": 182.83
+        },
+        "content": {
+          "x": 0,
+          "y": 182.83,
+          "width": 274.25,
+          "height": 174.81
+        },
+        "make": {
+          "x": 20,
+          "y": 202.83,
+          "width": 234.25,
+          "height": 20.02
+        },
+        "name": {
+          "x": 20,
+          "y": 224.84,
+          "width": 234.25,
+          "height": 28
+        },
+        "amount": {
+          "x": 20,
+          "y": 294.84,
+          "width": 234.25,
+          "height": 42.8
+        },
+        "specs": {
+          "x": 20,
+          "y": 252.84,
+          "width": 234.25,
+          "height": 42
+        },
+        "mobile-meta": null
+      },
+      "firstCard": {
+        "x": 0,
+        "y": 0,
+        "width": 274.25,
+        "height": 357.64
+      }
+    }
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "surface": "grid",
+    "state": {
+      "geometry": {
+        "visual": {
+          "x": 0,
+          "y": 0,
+          "width": 259.19,
+          "height": 172.78
+        },
+        "content": {
+          "x": 0,
+          "y": 172.78,
+          "width": 259.19,
+          "height": 164.83
+        },
+        "make": {
+          "x": 16,
+          "y": 188.78,
+          "width": 227.19,
+          "height": 20.02
+        },
+        "name": {
+          "x": 16,
+          "y": 210.8,
+          "width": 227.19,
+          "height": 28
+        },
+        "amount": {
+          "x": 16,
+          "y": 280.8,
+          "width": 227.19,
+          "height": 40.8
+        },
+        "specs": {
+          "x": 16,
+          "y": 250.8,
+          "width": 227.19,
+          "height": 30
+        },
+        "mobile-meta": null
+      },
+      "firstCard": {
+        "x": 0,
+        "y": 0,
+        "width": 259.19,
+        "height": 337.61
+      }
+    }
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "surface": "home",
+    "state": {
+      "geometry": {
+        "visual": {
+          "x": 0,
+          "y": 0,
+          "width": 310,
+          "height": 206.66
+        },
+        "content": {
+          "x": 0,
+          "y": 206.66,
+          "width": 310,
+          "height": 174.81
+        },
+        "make": {
+          "x": 20,
+          "y": 226.66,
+          "width": 270,
+          "height": 20.02
+        },
+        "name": {
+          "x": 20,
+          "y": 248.67,
+          "width": 270,
+          "height": 28
+        },
+        "amount": {
+          "x": 20,
+          "y": 318.67,
+          "width": 270,
+          "height": 42.8
+        },
+        "specs": {
+          "x": 20,
+          "y": 276.67,
+          "width": 270,
+          "height": 42
+        },
+        "mobile-meta": null
+      },
+      "firstCard": {
+        "x": 0,
+        "y": 0,
+        "width": 310,
+        "height": 381.47
+      }
+    }
+  },
+  {
+    "locale": "bg",
+    "width": 768,
+    "surface": "grid",
+    "state": {
+      "geometry": {
+        "visual": {
+          "x": 0,
+          "y": 0,
+          "width": 362,
+          "height": 241.33
+        },
+        "content": {
+          "x": 0,
+          "y": 241.33,
+          "width": 362,
+          "height": 169.41
+        },
+        "make": {
+          "x": 16,
+          "y": 257.33,
+          "width": 330,
+          "height": 20.02
+        },
+        "name": {
+          "x": 16,
+          "y": 279.34,
+          "width": 330,
+          "height": 28.59
+        },
+        "amount": {
+          "x": 16,
+          "y": 349.94,
+          "width": 330,
+          "height": 42.8
+        },
+        "specs": {
+          "x": 16,
+          "y": 319.94,
+          "width": 330,
+          "height": 30
+        },
+        "mobile-meta": null
+      },
+      "firstCard": {
+        "x": 0,
+        "y": 0,
+        "width": 362,
+        "height": 410.73
+      }
+    }
+  },
+  {
+    "locale": "bg",
+    "width": 768,
+    "surface": "home",
+    "state": {
+      "geometry": {
+        "visual": {
+          "x": 0,
+          "y": 0,
+          "width": 341,
+          "height": 227.33
+        },
+        "content": {
+          "x": 0,
+          "y": 227.33,
+          "width": 341,
+          "height": 169.41
+        },
+        "make": {
+          "x": 16,
+          "y": 243.33,
+          "width": 309,
+          "height": 20.02
+        },
+        "name": {
+          "x": 16,
+          "y": 265.34,
+          "width": 309,
+          "height": 28.59
+        },
+        "amount": {
+          "x": 16,
+          "y": 335.94,
+          "width": 309,
+          "height": 42.8
+        },
+        "specs": {
+          "x": 16,
+          "y": 305.94,
+          "width": 309,
+          "height": 30
+        },
+        "mobile-meta": null
+      },
+      "firstCard": {
+        "x": 0,
+        "y": 0,
+        "width": 341,
+        "height": 396.73
+      }
+    }
+  },
+  {
+    "locale": "bg",
+    "width": 992,
+    "surface": "grid",
+    "state": {
+      "geometry": {
+        "visual": {
+          "x": 0,
+          "y": 0,
+          "width": 297.66,
+          "height": 198.44
+        },
+        "content": {
+          "x": 0,
+          "y": 198.44,
+          "width": 297.66,
+          "height": 164.81
+        },
+        "make": {
+          "x": 16,
+          "y": 214.44,
+          "width": 265.66,
+          "height": 20.02
+        },
+        "name": {
+          "x": 16,
+          "y": 236.45,
+          "width": 265.66,
+          "height": 28
+        },
+        "amount": {
+          "x": 16,
+          "y": 306.45,
+          "width": 265.66,
+          "height": 40.8
+        },
+        "specs": {
+          "x": 16,
+          "y": 276.45,
+          "width": 265.66,
+          "height": 30
+        },
+        "mobile-meta": null
+      },
+      "firstCard": {
+        "x": 0,
+        "y": 0,
+        "width": 297.66,
+        "height": 363.25
+      }
+    }
+  },
+  {
+    "locale": "bg",
+    "width": 992,
+    "surface": "home",
+    "state": {
+      "geometry": {
+        "visual": {
+          "x": 0,
+          "y": 0,
+          "width": 428.5,
+          "height": 285.66
+        },
+        "content": {
+          "x": 0,
+          "y": 285.66,
+          "width": 428.5,
+          "height": 174.81
+        },
+        "make": {
+          "x": 20,
+          "y": 305.66,
+          "width": 388.5,
+          "height": 20.02
+        },
+        "name": {
+          "x": 20,
+          "y": 327.67,
+          "width": 388.5,
+          "height": 28
+        },
+        "amount": {
+          "x": 20,
+          "y": 397.67,
+          "width": 388.5,
+          "height": 42.8
+        },
+        "specs": {
+          "x": 20,
+          "y": 355.67,
+          "width": 388.5,
+          "height": 42
+        },
+        "mobile-meta": null
+      },
+      "firstCard": {
+        "x": 0,
+        "y": 0,
+        "width": 428.5,
+        "height": 460.47
+      }
+    }
+  },
+  {
+    "locale": "bg",
+    "width": 1280,
+    "surface": "grid",
+    "state": {
+      "geometry": {
+        "visual": {
+          "x": 0,
+          "y": 0,
+          "width": 289.25,
+          "height": 192.83
+        },
+        "content": {
+          "x": 0,
+          "y": 192.83,
+          "width": 289.25,
+          "height": 164.81
+        },
+        "make": {
+          "x": 16,
+          "y": 208.83,
+          "width": 257.25,
+          "height": 20.02
+        },
+        "name": {
+          "x": 16,
+          "y": 230.84,
+          "width": 257.25,
+          "height": 28
+        },
+        "amount": {
+          "x": 16,
+          "y": 300.84,
+          "width": 257.25,
+          "height": 40.8
+        },
+        "specs": {
+          "x": 16,
+          "y": 270.84,
+          "width": 257.25,
+          "height": 30
+        },
+        "mobile-meta": null
+      },
+      "firstCard": {
+        "x": 0,
+        "y": 0,
+        "width": 289.25,
+        "height": 357.64
+      }
+    }
+  },
+  {
+    "locale": "bg",
+    "width": 1280,
+    "surface": "home",
+    "state": {
+      "geometry": {
+        "visual": {
+          "x": 0,
+          "y": 0,
+          "width": 274.25,
+          "height": 182.83
+        },
+        "content": {
+          "x": 0,
+          "y": 182.83,
+          "width": 274.25,
+          "height": 174.81
+        },
+        "make": {
+          "x": 20,
+          "y": 202.83,
+          "width": 234.25,
+          "height": 20.02
+        },
+        "name": {
+          "x": 20,
+          "y": 224.84,
+          "width": 234.25,
+          "height": 28
+        },
+        "amount": {
+          "x": 20,
+          "y": 294.84,
+          "width": 234.25,
+          "height": 42.8
+        },
+        "specs": {
+          "x": 20,
+          "y": 252.84,
+          "width": 234.25,
+          "height": 42
+        },
+        "mobile-meta": null
+      },
+      "firstCard": {
+        "x": 0,
+        "y": 0,
+        "width": 274.25,
+        "height": 357.64
+      }
+    }
+  },
+  {
+    "locale": "bg",
+    "width": 1440,
+    "surface": "grid",
+    "state": {
+      "geometry": {
+        "visual": {
+          "x": 0,
+          "y": 0,
+          "width": 259.19,
+          "height": 172.78
+        },
+        "content": {
+          "x": 0,
+          "y": 172.78,
+          "width": 259.19,
+          "height": 164.83
+        },
+        "make": {
+          "x": 16,
+          "y": 188.78,
+          "width": 227.19,
+          "height": 20.02
+        },
+        "name": {
+          "x": 16,
+          "y": 210.8,
+          "width": 227.19,
+          "height": 28
+        },
+        "amount": {
+          "x": 16,
+          "y": 280.8,
+          "width": 227.19,
+          "height": 40.8
+        },
+        "specs": {
+          "x": 16,
+          "y": 250.8,
+          "width": 227.19,
+          "height": 30
+        },
+        "mobile-meta": null
+      },
+      "firstCard": {
+        "x": 0,
+        "y": 0,
+        "width": 259.19,
+        "height": 337.61
+      }
+    }
+  },
+  {
+    "locale": "bg",
+    "width": 1440,
+    "surface": "home",
+    "state": {
+      "geometry": {
+        "visual": {
+          "x": 0,
+          "y": 0,
+          "width": 310,
+          "height": 206.66
+        },
+        "content": {
+          "x": 0,
+          "y": 206.66,
+          "width": 310,
+          "height": 174.81
+        },
+        "make": {
+          "x": 20,
+          "y": 226.66,
+          "width": 270,
+          "height": 20.02
+        },
+        "name": {
+          "x": 20,
+          "y": 248.67,
+          "width": 270,
+          "height": 28
+        },
+        "amount": {
+          "x": 20,
+          "y": 318.67,
+          "width": 270,
+          "height": 42.8
+        },
+        "specs": {
+          "x": 20,
+          "y": 276.67,
+          "width": 270,
+          "height": 42
+        },
+        "mobile-meta": null
+      },
+      "firstCard": {
+        "x": 0,
+        "y": 0,
+        "width": 310,
+        "height": 381.47
+      }
+    }
+  }
+]

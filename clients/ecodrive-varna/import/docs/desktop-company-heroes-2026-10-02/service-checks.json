@@ -1,0 +1,246 @@
+[
+	{
+		"width": 1440,
+		"cards": [
+			{
+				"position": "50% 50%",
+				"ready": true,
+				"src": "http://127.0.0.1:6790/assets/daynight/services/desktop/sourcing-reference-v4.webp",
+				"width": 315,
+				"x": 52.5
+			},
+			{
+				"position": "50% 50%",
+				"ready": true,
+				"src": "http://127.0.0.1:6790/assets/daynight/services/desktop/inspection-reference-v4.webp",
+				"width": 315,
+				"x": 387.5
+			},
+			{
+				"position": "50% 50%",
+				"ready": true,
+				"src": "http://127.0.0.1:6790/assets/daynight/services/desktop/selling-reference-v4.webp",
+				"width": 315,
+				"x": 722.5
+			},
+			{
+				"position": "50% 50%",
+				"ready": true,
+				"src": "http://127.0.0.1:6790/assets/daynight/services/desktop/documents-reference-v4.webp",
+				"width": 315,
+				"x": 1057.5
+			},
+			{
+				"position": "50% 100%",
+				"ready": true,
+				"src": "http://127.0.0.1:6790/assets/daynight/services/desktop/viewing-reference-v4.webp",
+				"width": 315,
+				"x": 52.5
+			},
+			{
+				"position": "50% 50%",
+				"ready": true,
+				"src": "http://127.0.0.1:6790/assets/daynight/services/desktop/comparison-reference-v4.webp",
+				"width": 315,
+				"x": 387.5
+			}
+		],
+		"noOverflow": true
+	},
+	{
+		"width": 1024,
+		"cards": [
+			{
+				"position": "50% 50%",
+				"src": "http://127.0.0.1:6790/assets/daynight/services/desktop/sourcing-reference-v4.webp",
+				"titleOverflow": null,
+				"width": 221.25,
+				"x": 32
+			},
+			{
+				"position": "50% 50%",
+				"src": "http://127.0.0.1:6790/assets/daynight/services/desktop/inspection-reference-v4.webp",
+				"titleOverflow": null,
+				"width": 221.25,
+				"x": 273.25
+			},
+			{
+				"position": "50% 50%",
+				"src": "http://127.0.0.1:6790/assets/daynight/services/desktop/selling-reference-v4.webp",
+				"titleOverflow": null,
+				"width": 221.25,
+				"x": 514.5
+			},
+			{
+				"position": "50% 50%",
+				"src": "http://127.0.0.1:6790/assets/daynight/services/desktop/documents-reference-v4.webp",
+				"titleOverflow": null,
+				"width": 221.25,
+				"x": 755.75
+			},
+			{
+				"position": "50% 100%",
+				"src": "http://127.0.0.1:6790/assets/daynight/services/desktop/viewing-reference-v4.webp",
+				"titleOverflow": null,
+				"width": 221.25,
+				"x": 32
+			},
+			{
+				"position": "50% 50%",
+				"src": "http://127.0.0.1:6790/assets/daynight/services/desktop/comparison-reference-v4.webp",
+				"titleOverflow": null,
+				"width": 221.25,
+				"x": 273.25
+			}
+		],
+		"heroHeight": 400,
+		"noOverflow": true
+	},
+	{
+		"width": 768,
+		"cards": [
+			{
+				"position": "50% 50%",
+				"src": "http://127.0.0.1:6790/assets/daynight/services/desktop/sourcing-reference-v4.webp",
+				"titleOverflow": null,
+				"width": 334.5,
+				"x": 32
+			},
+			{
+				"position": "50% 50%",
+				"src": "http://127.0.0.1:6790/assets/daynight/services/desktop/inspection-reference-v4.webp",
+				"titleOverflow": null,
+				"width": 334.5,
+				"x": 386.5
+			},
+			{
+				"position": "50% 50%",
+				"src": "http://127.0.0.1:6790/assets/daynight/services/desktop/selling-reference-v4.webp",
+				"titleOverflow": null,
+				"width": 334.5,
+				"x": 32
+			},
+			{
+				"position": "50% 50%",
+				"src": "http://127.0.0.1:6790/assets/daynight/services/desktop/documents-reference-v4.webp",
+				"titleOverflow": null,
+				"width": 334.5,
+				"x": 386.5
+			},
+			{
+				"position": "50% 100%",
+				"src": "http://127.0.0.1:6790/assets/daynight/services/desktop/viewing-reference-v4.webp",
+				"titleOverflow": null,
+				"width": 334.5,
+				"x": 32
+			},
+			{
+				"position": "50% 50%",
+				"src": "http://127.0.0.1:6790/assets/daynight/services/desktop/comparison-reference-v4.webp",
+				"titleOverflow": null,
+				"width": 334.5,
+				"x": 386.5
+			}
+		],
+		"heroHeight": 450,
+		"noOverflow": true
+	},
+	{
+		"width": 390,
+		"cards": [
+			{
+				"position": "50% 50%",
+				"src": "http://127.0.0.1:6790/assets/daynight/delivery/services/premium-cars-banner-generated-400.webp",
+				"titleOverflow": null,
+				"width": 362,
+				"x": 14
+			},
+			{
+				"position": "50% 50%",
+				"src": "http://127.0.0.1:6790/assets/daynight/delivery/services/evaluate-link-service-400.webp",
+				"titleOverflow": null,
+				"width": 362,
+				"x": 14
+			},
+			{
+				"position": "50% 50%",
+				"src": "http://127.0.0.1:6790/assets/daynight/delivery/services/sell-car-service-400.webp",
+				"titleOverflow": null,
+				"width": 362,
+				"x": 14
+			},
+			{
+				"position": "50% 50%",
+				"src": "http://127.0.0.1:6790/assets/daynight/delivery/services/footer-premium-request-v2-400.webp",
+				"titleOverflow": null,
+				"width": 362,
+				"x": 14
+			},
+			{
+				"position": "50% 50%",
+				"src": "http://127.0.0.1:6790/assets/daynight/delivery/services/home-05-showroom-exterior-400.webp",
+				"titleOverflow": null,
+				"width": 362,
+				"x": 14
+			},
+			{
+				"position": "50% 50%",
+				"src": "http://127.0.0.1:6790/assets/daynight/delivery/services/premium-cars-banner-v2-400.webp",
+				"titleOverflow": null,
+				"width": 362,
+				"x": 14
+			}
+		],
+		"heroHeight": 0,
+		"noOverflow": true
+	},
+	{
+		"width": 320,
+		"cards": [
+			{
+				"position": "50% 50%",
+				"src": "http://127.0.0.1:6790/assets/daynight/delivery/services/premium-cars-banner-generated-400.webp",
+				"titleOverflow": null,
+				"width": 292,
+				"x": 14
+			},
+			{
+				"position": "50% 50%",
+				"src": "http://127.0.0.1:6790/assets/daynight/delivery/services/evaluate-link-service-400.webp",
+				"titleOverflow": null,
+				"width": 292,
+				"x": 14
+			},
+			{
+				"position": "50% 50%",
+				"src": "http://127.0.0.1:6790/assets/daynight/delivery/services/sell-car-service-400.webp",
+				"titleOverflow": null,
+				"width": 292,
+				"x": 14
+			},
+			{
+				"position": "50% 50%",
+				"src": "http://127.0.0.1:6790/assets/daynight/delivery/services/footer-premium-request-v2-400.webp",
+				"titleOverflow": null,
+				"width": 292,
+				"x": 14
+			},
+			{
+				"position": "50% 50%",
+				"src": "http://127.0.0.1:6790/assets/daynight/delivery/services/home-05-showroom-exterior-400.webp",
+				"titleOverflow": null,
+				"width": 292,
+				"x": 14
+			},
+			{
+				"position": "50% 50%",
+				"src": "http://127.0.0.1:6790/assets/daynight/delivery/services/premium-cars-banner-v2-400.webp",
+				"titleOverflow": null,
+				"width": 292,
+				"x": 14
+			}
+		],
+		"heroHeight": 0,
+		"noOverflow": true
+	}
+]

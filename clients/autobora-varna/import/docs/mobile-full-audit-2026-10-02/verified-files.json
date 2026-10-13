@@ -1,0 +1,154 @@
+[
+	{
+		"path": "scripts/prepare-service-images.mjs",
+		"sha256": "889a15da778d8abc214671353abd4c8480af1dac26598fcf729e9894886a9556"
+	},
+	{
+		"path": "src/lib/data/service-image-delivery.json",
+		"sha256": "6f9cfba1e50bdbabe49d297a4ed10b6da6cee07f93052b31d803ad1117efac6b"
+	},
+	{
+		"path": "src/lib/utils/image-delivery.ts",
+		"sha256": "4ff9abeb2052b7d1b3b0aedaa7d4541b49856b5dcbb0c6dba5d7ed806471cda6"
+	},
+	{
+		"path": "src/lib/utils/vehicle-images.ts",
+		"sha256": "f8b6f1ace8ef5114c1cb5d5be1e5980a9bc4202bc50b3d9707f0bc47c5d68902"
+	},
+	{
+		"path": "src/lib/components/common/MobilePageHero.svelte",
+		"sha256": "63d9f7ea7e0510e106a4acc11e2002a4e188c3bdc0e55a6f3444481e93cc471c"
+	},
+	{
+		"path": "src/lib/components/common/PageIntro.svelte",
+		"sha256": "72dec88432b388b87d19632783675cef797ec97ef264996ffcc0c61382a08142"
+	},
+	{
+		"path": "src/lib/components/contact/ContactMobilePage.svelte",
+		"sha256": "b7276baa343ece34ffe4d615930effab88e489882a0bdee451b23c93af05fe51"
+	},
+	{
+		"path": "src/lib/components/services/ServiceCard.svelte",
+		"sha256": "324e21b7c28d0a11616bda541e1855e9f913cf01e9ae7f45522b94c05468afe4"
+	},
+	{
+		"path": "src/lib/components/layout/MobileBottomNav.svelte",
+		"sha256": "ed9afc95f53654053d4eadaf458a9434f3776c6e2c43375389ead335b5620002"
+	},
+	{
+		"path": "src/routes/(site)/compare/+page.svelte",
+		"sha256": "8cdb4f8bb4e623b480a13fc81522aea0b62d8a11949dde04e5aa35bb7f939600"
+	},
+	{
+		"path": "src/routes/+layout.svelte",
+		"sha256": "97fd43d7fde8072b536b5b215379f83e43cc76c1da3357b50f40cd8350333892"
+	},
+	{
+		"path": "tests/forms-and-detail.e2e.ts",
+		"sha256": "5037ccb5dc5b72a892a9a3407e4093ac6a337a6346841a14d022ac24b10cdbc4"
+	},
+	{
+		"path": "tests/localization.e2e.ts",
+		"sha256": "1c5b8f83c09da8a6e22a1a8d7e4389cf99df4b9b72c20e71257877357e803fcc"
+	},
+	{
+		"path": "tests/mobile-final.e2e.ts",
+		"sha256": "506d993742e866f81b64a05da8926118b065337407b9519a50ca94dfb1c36bdc"
+	},
+	{
+		"path": "tests/mobile-secondary.e2e.ts",
+		"sha256": "a7faf9d37a84a95cf82a8e751baa4dec963a2edf71e5a3f7151be86b2e90b8fc"
+	},
+	{
+		"path": "tests/style-parity.e2e.ts",
+		"sha256": "02b792f8cfd92314ef1f3db174f51d4b2128b10be25e9447d7b0cf3e3164b785"
+	},
+	{
+		"path": "tests/typography-contact.e2e.ts",
+		"sha256": "1922efcb7164632f0b958713c9ebefea71231149f451ea32892022f049cf4189"
+	},
+	{
+		"path": "static/assets/daynight/delivery/services/premium-cars-banner-generated-400.webp",
+		"sha256": "c10c3b7810afb772ddeb9805961636a0a4ffa80e7215a2339fbb5311f350d3e9"
+	},
+	{
+		"path": "static/assets/daynight/delivery/services/premium-cars-banner-generated-800.webp",
+		"sha256": "99e103b0d3e56e06a9bf3cbf108bd15295c93223d4192b721cf8616f2d0353c2"
+	},
+	{
+		"path": "static/assets/daynight/delivery/services/premium-cars-banner-generated-1200.webp",
+		"sha256": "bd99167eb474e32b788ea3c7e392ce9f4dfedd33909fb756effd0af48ea5aa2d"
+	},
+	{
+		"path": "static/assets/daynight/delivery/services/evaluate-link-service-400.webp",
+		"sha256": "c9ee219195a552765996fec120c2d3fc036a88a5fe7460dfa5d328de1b2febc4"
+	},
+	{
+		"path": "static/assets/daynight/delivery/services/evaluate-link-service-800.webp",
+		"sha256": "8e0f5978a2ebd6fb5c03f2e7406a2016a43305377c444f87c0793ad9c6f4e78e"
+	},
+	{
+		"path": "static/assets/daynight/delivery/services/evaluate-link-service-1200.webp",
+		"sha256": "3bde4e671fcad256b3962804f2065b421a5937bd2e045a64b83139ffea8cc784"
+	},
+	{
+		"path": "static/assets/daynight/delivery/services/sell-car-service-400.webp",
+		"sha256": "b5decb6cc7fde27ae311a6c5cd058b0b63bbcbd6f7d53c0cc14e8d27caf9d802"
+	},
+	{
+		"path": "static/assets/daynight/delivery/services/sell-car-service-800.webp",
+		"sha256": "6de4b25a2a01c15bbd84e90eaf025bfcfac4c57aac549c6e2fd8b1959a33a0ba"
+	},
+	{
+		"path": "static/assets/daynight/delivery/services/sell-car-service-1200.webp",
+		"sha256": "1a35271201001d0dfdd540f177a3ce21735f838fb57fad5f21891e1a22df3463"
+	},
+	{
+		"path": "static/assets/daynight/delivery/services/footer-premium-request-v2-400.webp",
+		"sha256": "479f0adb8e3bca2230c62cc77b3f742cf3fd90db298cf666634a3decb7d728eb"
+	},
+	{
+		"path": "static/assets/daynight/delivery/services/footer-premium-request-v2-800.webp",
+		"sha256": "03c006ffa8767b0a7dade9c1baabdc2de1c016a99f84261e58d4668a8fb6cb13"
+	},
+	{
+		"path": "static/assets/daynight/delivery/services/footer-premium-request-v2-1200.webp",
+		"sha256": "de53203feac30ffd164839dc0b588995e28b0792965989575e035f5da1c2b060"
+	},
+	{
+		"path": "static/assets/daynight/delivery/services/home-05-showroom-exterior-400.webp",
+		"sha256": "7f70d0406f12b493190678e4c8680086fac63c102f75dc9102429d5228205c89"
+	},
+	{
+		"path": "static/assets/daynight/delivery/services/home-05-showroom-exterior-800.webp",
+		"sha256": "b433ccb853b7b2abdd75eeda86dc8f0b13c77ac5ff4cd6f761da105f04673eb5"
+	},
+	{
+		"path": "static/assets/daynight/delivery/services/home-05-showroom-exterior-1200.webp",
+		"sha256": "3612f72d7f6190ef20a543d8f218ddecd0b665c9268f0234801e32ef9e604be1"
+	},
+	{
+		"path": "static/assets/daynight/delivery/services/premium-cars-banner-v2-400.webp",
+		"sha256": "016fbe01d1589379ce865ef2dc498d9b7227abd7b1f9a935a316edaf8c2032fa"
+	},
+	{
+		"path": "static/assets/daynight/delivery/services/premium-cars-banner-v2-800.webp",
+		"sha256": "eaea9328aef6dd37b706d48a15b960a7562f6e4da8a8c2aa41c08b756115b83f"
+	},
+	{
+		"path": "static/assets/daynight/delivery/services/premium-cars-banner-v2-1200.webp",
+		"sha256": "47657780470c4d9713dcb48c27fa35eabbfa09be46da1f2ba6a2eeb8b430d91e"
+	},
+	{
+		"path": "static/assets/daynight/delivery/services/proof-studio-import-handoff-400.webp",
+		"sha256": "33ac415bb7e98b8a49bb28f9a6c79955254aac713c1cf7707ab1e241cd2ae609"
+	},
+	{
+		"path": "static/assets/daynight/delivery/services/proof-studio-import-handoff-800.webp",
+		"sha256": "9dcc15cc73ab45d3fe3658ef9b3b7886c6c7bb20257a8244eb8e87de4179cb8a"
+	},
+	{
+		"path": "static/assets/daynight/delivery/services/proof-studio-import-handoff-1200.webp",
+		"sha256": "f7a808160b62b269d048aa57f9a4193142043522401fc94ce062f1fd9076ec8c"
+	}
+]

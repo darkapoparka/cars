@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "dealer": "xcar-varna",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/app",
+    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
+    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+  },
+  "appDigest": "941ab76ecf749ea4740d7c40745e25d5c8778058cd5696a5151700d27b010600",
+  "provenance": {
+    "schemaVersion": 1,
+    "dealer": "xcar-varna",
+    "profile": "auto-best/src/lib/data/dealer-profile.json",
+    "profileSha256": "475e6c5ce1d8643abaabbe894350648ed518382977bdecef54736cbf02e6d6a4",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "vehicles": 1,
+    "currency": "EUR",
+    "observedAt": "2026-10-11T11:47:28.687Z",
+    "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-light.png",
+        "output": "public/dealer-app/logo-light-103577be4a3b2ecd3f53.png",
+        "sha256": "103577be4a3b2ecd3f5399d9c5ca66e5f32edcea774f276541553b2ad7be3706",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-dark.png",
+        "output": "public/dealer-app/logo-dark-38650c18c58ef940bce8.png",
+        "sha256": "38650c18c58ef940bce8f59580972f0701b687a7bccc407649e42756bf8c4b1f",
+        "role": "logo-dark"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11790197858680969-1.webp",
+        "output": "public/dealer-app/vehicle-5a4e8eb8f5c426bd4ca3.webp",
+        "sha256": "5a4e8eb8f5c426bd4ca38a58e69755f58883a74a6d0962ac6e7e3a875ae5f6ac",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11790197858680969-2.webp",
+        "output": "public/dealer-app/vehicle-8d8744b5ab86227f350f.webp",
+        "sha256": "8d8744b5ab86227f350f84f9c64ecadd533a60bf1786841f2103c74d85d89793",
+        "role": "vehicle"
+      }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "mercedes-benz-c-200-2010-11790197858680969",
+        "sourceValue": 231000,
+        "sourceUnit": "km",
+        "canonicalKm": 231000
+      }
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

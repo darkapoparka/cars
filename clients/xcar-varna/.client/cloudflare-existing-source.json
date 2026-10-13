@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "dealer": "xcar-varna",
+  "kind": "personalized-source-candidate-not-an-approved-release",
+  "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+  "candidateSourceDigest": "46b0ef30ca1924ac6cfdedc3e8dc3bdf454ef2b6f8ef8224ada0c5118633ab4d",
+  "qualificationContextPath": ".client/native-qualification-context.json",
+  "qualificationContextSha256": "7089af14fbc8c0da7cff206b33b2f29432d0941c4a2ea59c1c6f686e743328ba",
+  "qualificationLockPath": ".client/native-qualification-lock.json",
+  "qualificationLockSha256": "c28d29acdf39709d38737a972eeb2a1d000cfb1cd96de587c38effd764386ac1",
+  "sourceDeltaReview": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
+    "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975",
+    "reviewedAt": "2026-10-11T21:04:02.173Z"
+  },
+  "nativeApproval": false,
+  "hostedApproval": false
+}

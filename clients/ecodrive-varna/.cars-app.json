@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "dealer": "ecodrive-varna",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/app",
+    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
+    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+  },
+  "appDigest": "527dd8625ccf2260961e337ba1ecb6a516041f140d286ffdbf82607e8f6e90f5",
+  "provenance": {
+    "schemaVersion": 1,
+    "dealer": "ecodrive-varna",
+    "profile": "auto-best/src/lib/data/dealer-profile.json",
+    "profileSha256": "bee4f7170f233699f65dcaea3896694b776af58a522a76cad9cc584e824b73b1",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "vehicles": 1,
+    "currency": "EUR",
+    "observedAt": "2026-10-11T11:46:40.975Z",
+    "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-light.png",
+        "output": "public/dealer-app/logo-light-5447506893b7edd82b33.png",
+        "sha256": "5447506893b7edd82b335d71dd5237555c33c17835c7eed4be55518500da9223",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-dark.png",
+        "output": "public/dealer-app/logo-dark-030b780a4a9868753ad7.png",
+        "sha256": "030b780a4a9868753ad7977489a522e83f1b80fee3dfe9189b620667290d4ee1",
+        "role": "logo-dark"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/31791553971693975-1.webp",
+        "output": "public/dealer-app/vehicle-43a8d3132296cce4eb55.webp",
+        "sha256": "43a8d3132296cce4eb55d49a4c18225a52409ef0f0499ec3dbfaa5913edb3060",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/31791553971693975-2.webp",
+        "output": "public/dealer-app/vehicle-1483773abc19b8b7ba7c.webp",
+        "sha256": "1483773abc19b8b7ba7c74f4c1d933bd359161766da3b57e1d4a4ef274ac04ef",
+        "role": "vehicle"
+      }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "fiat-scudo-2022-31791553971693975",
+        "sourceValue": 38122,
+        "sourceUnit": "km",
+        "canonicalKm": 38122
+      }
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "dealer": "vichenca-varna",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/app",
+    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
+    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+  },
+  "appDigest": "35a0c06ef95b3a2243834eade806de67d436eff37869c88ef698efb5918315dd",
+  "provenance": {
+    "schemaVersion": 1,
+    "dealer": "vichenca-varna",
+    "profile": "auto-best/src/lib/data/dealer-profile.json",
+    "profileSha256": "7dd8f020c99c87b834d280ec3a141ccac23f564dd5db7ea94e6491924fc00c32",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "vehicles": 1,
+    "currency": "EUR",
+    "observedAt": "2026-10-11T11:47:26.709Z",
+    "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-light.png",
+        "output": "public/dealer-app/logo-light-04579478cd8e57419075.png",
+        "sha256": "04579478cd8e574190751e7b355e1cf558edfd9909f35c892d6f1eed78d8b6c7",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-dark.png",
+        "output": "public/dealer-app/logo-dark-e83a22d309360d91ca17.png",
+        "sha256": "e83a22d309360d91ca17f6101d6d0aaaa53ddb2c1ada0c1424b78491505b9cd7",
+        "role": "logo-dark"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11790920424243530-2.webp",
+        "output": "public/dealer-app/vehicle-067f22b58d88b0d3093b.webp",
+        "sha256": "067f22b58d88b0d3093b7cfc26d2d5ba95b09d2b16f4a94b1fc0800196152eb9",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11790920424243530-1.webp",
+        "output": "public/dealer-app/vehicle-7088e48ff2b9f3e14340.webp",
+        "sha256": "7088e48ff2b9f3e14340da4502dc4f2417d0f3fbb3b5e02c6be5cc719d6cca55",
+        "role": "vehicle"
+      }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "bmw-740-2011-11790920424243530",
+        "sourceValue": 222000,
+        "sourceUnit": "km",
+        "canonicalKm": 222000
+      }
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

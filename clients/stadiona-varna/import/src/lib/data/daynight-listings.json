@@ -1,0 +1,37 @@
+{
+  "fetchedAt": "2026-10-11",
+  "sources": {
+    "dealerInventory": "https://stadiona.mobile.bg/",
+    "dealerContact": "https://stadiona.mobile.bg/contacts"
+  },
+  "count": 1,
+  "listings": [
+    {
+      "badge": "ОБЯВА",
+      "category": "Джип",
+      "color": "",
+      "displacement": "",
+      "euroStandard": "",
+      "features": [],
+      "fuel": "Дизелов",
+      "gearbox": "Автоматична",
+      "href": "https://stadiona.mobile.bg/obiava-11791629866548922-bmw-3gt-2-0d-luxury-line-xdrive-automatic",
+      "id": "11791629866548922",
+      "image": "/dealer-stock/11791629866548922-1.webp",
+      "location": "Варна",
+      "mileage": "217 000 км",
+      "mileageKnown": true,
+      "mileageValue": 217000,
+      "mileageUnit": "km",
+      "photoCount": "2",
+      "power": "190 к.с.",
+      "price": "15 499 €",
+      "priceBgn": "",
+      "production": "2016 г.",
+      "rawPriceText": "15 499 €",
+      "shortDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "title": "BMW 3gt",
+      "vat": ""
+    }
+  ]
+}
