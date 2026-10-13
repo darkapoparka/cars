@@ -11,6 +11,7 @@ const known=new Map([[datedBg,{bg:datedBg,en:datedSnapshotEn}],[datedEn,{bg:date
 // Additional exact seven native-dealer terms reviewed by root; no feed values change.
 const scalarTerms=new Map([
   ["color:Light grey",{"bg":"Светло сив","en":"Light grey"}],
+  ["color:Light blue",{"bg":"Светло син","en":"Light blue"}],
   ["feature:Apple CarPlay / Android Auto",{"bg":"Apple CarPlay / Android Auto","en":"Apple CarPlay / Android Auto"}],
   ["feature:Bluetooth",{"bg":"Bluetooth","en":"Bluetooth"}],
   ["feature:ISOFIX",{"bg":"ISOFIX","en":"ISOFIX"}],
