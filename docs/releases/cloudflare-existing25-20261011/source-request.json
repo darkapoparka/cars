@@ -29,6 +29,10 @@
       "branding": {
         "path": "docs/releases/cloudflare-existing25-20261011/new-source/kapitol-varna/branding.json",
         "sha256": "a002ea5f30285c4b7c8a7afce302d8a97ead7891b1995cc6c6aaa10b8f35f063"
+      },
+      "resolutions": {
+        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/kapitol-varna/reviewed-template-resolutions-20261013.json",
+        "sha256": "e48bc08d2a6d1537807f122f3d7e2bcda284e2eef532ac45e2e73437ee42b0ea"
       }
     },
     "chernomore-varna": {
@@ -51,6 +55,10 @@
       "branding": {
         "path": "docs/releases/cloudflare-existing25-20261011/new-source/chernomore-varna/branding.json",
         "sha256": "da3564594450abef915255c220fd87cf149914aa98fb40fa58961664bf366c35"
+      },
+      "resolutions": {
+        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/chernomore-varna/reviewed-template-resolutions-20261013.json",
+        "sha256": "e48bc08d2a6d1537807f122f3d7e2bcda284e2eef532ac45e2e73437ee42b0ea"
       }
     },
     "exclusive-auto-varna": {
@@ -73,6 +81,10 @@
       "branding": {
         "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/exclusive-auto-varna/branding.json",
         "sha256": "474407f0ffff40c30f94c5e936e86ec086c311b9424bfb1e1c4e892e2aecc0e9"
+      },
+      "resolutions": {
+        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/exclusive-auto-varna/reviewed-template-resolutions-20261013.json",
+        "sha256": "9b383525654993c96a8fd4348ae4c12889a0e55818ca3d353ba97046a94afbcf"
       }
     }
   }
