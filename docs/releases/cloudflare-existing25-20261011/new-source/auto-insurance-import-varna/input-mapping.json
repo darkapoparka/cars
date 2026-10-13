@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-input-mapping",
+  "dealer": "auto-insurance-import-varna",
+  "inputs": {
+    "facts": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/auto-insurance-import-varna/facts.json",
+      "sha256": "97b50c8b87e058475c3639d9de9242be918c9001035d16fa91c068980f058bcd"
+    },
+    "stock": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/auto-insurance-import-varna/stock.json",
+      "sha256": "095a04c484cb6e18892314af1085325a9a41325fc6011bbdf5fe48516fd02e06"
+    },
+    "locale": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/auto-insurance-import-varna/locale.json",
+      "sha256": "b681d31ffd322ee7d1bf8b59925cb4b47922fdcebbd1f190452503a3c41edb29"
+    },
+    "branding": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/auto-insurance-import-varna/branding.json",
+      "sha256": "510c6bbf85543434383d628e39f71ff86106d6bbd13e1347b0d2c4235028a47f"
+    }
+  },
+  "sources": [
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/auto-insurance-import-varna/research-facts.json",
+      "sha256": "579c25fc0aea75744ef1a9440fea5ff5e0166a78b1f99d1cc02f88a739e791eb"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/auto-insurance-import-varna/identity.json",
+      "sha256": "723adc82a8ba95f51f4b75dbfc6ac0d50a97933dc8ca608c39dd9267c530e6ad"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/auto-insurance-import-varna/locale.json",
+      "sha256": "b681d31ffd322ee7d1bf8b59925cb4b47922fdcebbd1f190452503a3c41edb29"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/auto-insurance-import-varna/stock-research.json",
+      "sha256": "ff2b89225f94cd5fd361ee193dfc5442f7a63f4e37830f0a569250e419933874"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/auto-insurance-import-varna/branding.json",
+      "sha256": "510c6bbf85543434383d628e39f71ff86106d6bbd13e1347b0d2c4235028a47f"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/auto-insurance-import-varna/branding/generated-master.png",
+      "sha256": "1404b0caa34da7d2708fe8bafe0ac6c43a8d5b029a9a41fb2f09b627458b6f10"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/auto-insurance-import-varna/branding/on-accent.png",
+      "sha256": "7a7b630e06fc31867d6abdc5e834080857d89e568580b5d213ae0659dbecfaa4"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/auto-insurance-import-varna/branding/on-dark.png",
+      "sha256": "7a7b630e06fc31867d6abdc5e834080857d89e568580b5d213ae0659dbecfaa4"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/auto-insurance-import-varna/branding/on-light.png",
+      "sha256": "1404b0caa34da7d2708fe8bafe0ac6c43a8d5b029a9a41fb2f09b627458b6f10"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/auto-insurance-import-varna/generation-brief.json",
+      "sha256": "7c581d568575f195e71f378fa4a6064a518e012d228312be5822a5d8e0bc1ced"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/auto-insurance-import-varna/source-profile-reference.jpg",
+      "sha256": "df20daa37bc5fdf631e598a6047a5adf1a06ab8023c54b5ac403b3989be62490"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/auto-insurance-import-varna/media/demo-estate.webp",
+      "sha256": "d2d3deacbc9f566a22783f2a5eab6335473bf2e47c627261e8895dbff6fece70"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/auto-insurance-import-varna/media/demo-suv.webp",
+      "sha256": "5c0c6062ef8af622fd852a7a43b2dfc989d6836f1528698b51d88f9352640f2f"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/auto-insurance-import-varna/facts.json",
+      "sha256": "97b50c8b87e058475c3639d9de9242be918c9001035d16fa91c068980f058bcd"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/auto-insurance-import-varna/stock.json",
+      "sha256": "095a04c484cb6e18892314af1085325a9a41325fc6011bbdf5fe48516fd02e06"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/auto-insurance-import-varna/reviewed-modern-inventory-copy.json",
+      "sha256": "13970e17c81946a364451a02b4c11df583788624b0b6a388a75f99aefcb53e6a"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/auto-insurance-import-varna/media-input-mapping.json",
+      "sha256": "4f7bf949bcc8e09cf8a028bb959a0d1ea365165207a2278d98e5b6e54dc9e80d"
+    }
+  ]
+}
