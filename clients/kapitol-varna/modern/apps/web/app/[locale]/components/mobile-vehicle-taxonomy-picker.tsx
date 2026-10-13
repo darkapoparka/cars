@@ -14,10 +14,13 @@ import {
   MobileMarketplaceOverlayBackAction,
   MobileMarketplaceOverlayCloseAction,
   MobileMarketplaceOverlayHeader,
+  MobileMarketplaceOverlayIconAction,
   MobileMarketplaceOverlayShell,
+  mobileMarketplaceOverlayFieldClassName,
+  mobileMarketplaceOverlayInputClassName,
 } from "@repo/marketplace-ui/components/mobile-marketplace-overlay";
 import { getMobileChoiceClassName } from "@repo/marketplace-ui/lib/mobile-form-control";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import {
   canUseCustomVehicleTaxonomyValue,
   getVehicleTaxonomyOptions,
@@ -54,11 +57,12 @@ export const MobileVehicleTaxonomyPicker = ({
   const backToFormLabel =
     locale === "bg" ? "Назад към формата" : "Back to form";
   const [keyboardNavigation, setKeyboardNavigation] = useState(false);
+  const searchRef = useRef<HTMLInputElement>(null);
   const options = getVehicleTaxonomyOptions(kind, make);
   const selectedValue = kind === "make" ? make : model;
   const trimmedQuery = query.trim();
   const canUseCustomValue = canUseCustomVehicleTaxonomyValue(query, options);
-  const pickerTitle = kind === "make" ? text.makeTitle : make;
+  const pickerTitle = kind === "make" ? text.makeTitle : text.modelTitle;
   const pickerDescription =
     kind === "make" ? text.makeDescription : text.modelDescription;
   const searchPlaceholder =
@@ -69,14 +73,8 @@ export const MobileVehicleTaxonomyPicker = ({
     <MobileMarketplaceOverlayShell
       contentDataSlot="mobile-vehicle-taxonomy-picker"
       onCloseAutoFocus={onCloseAutoFocus}
-      onOpenAutoFocus={(event) => {
-        event.preventDefault();
+      onOpenAutoFocus={() => {
         setKeyboardNavigation(false);
-        document
-          .querySelector<HTMLElement>(
-            '[data-slot="mobile-vehicle-taxonomy-picker"]'
-          )
-          ?.focus({ preventScroll: true });
       }}
       onOpenChange={(nextOpen) => {
         if (!nextOpen) {
@@ -100,7 +98,7 @@ export const MobileVehicleTaxonomyPicker = ({
       />
 
       <Command
-        className="min-h-0 flex-1 rounded-none bg-white [&_[data-slot=command-input-wrapper]]:mx-3 [&_[data-slot=command-input-wrapper]]:mb-2 [&_[data-slot=command-input-wrapper]]:h-[52px] [&_[data-slot=command-input-wrapper]]:rounded-full [&_[data-slot=command-input-wrapper]]:border-0 [&_[data-slot=command-input-wrapper]]:bg-zinc-100 [&_[data-slot=command-input-wrapper]]:px-3.5 [&_[data-slot=command-input-wrapper]]:focus-within:ring-2 [&_[data-slot=command-input-wrapper]]:focus-within:ring-zinc-300 [&_[data-slot=command-input-wrapper]_svg]:size-[18px] [&_[data-slot=command-input-wrapper]_svg]:text-zinc-500"
+        className="min-h-0 flex-1 rounded-none bg-white"
         key={kind === "make" ? "make" : `model-${make}`}
         onKeyDownCapture={(event) => {
           if (
@@ -116,17 +114,35 @@ export const MobileVehicleTaxonomyPicker = ({
         <CommandInput
           aria-label={searchPlaceholder}
           autoFocus={keyboardNavigation}
-          className="h-[52px] py-0 text-[16px] text-zinc-950 placeholder:text-zinc-500"
+          className={cn(mobileMarketplaceOverlayInputClassName, "py-0")}
+          endAdornment={
+            query ? (
+              <MobileMarketplaceOverlayIconAction
+                ariaLabel={text.clear}
+                onClick={() => {
+                  onQueryChange("");
+                  searchRef.current?.focus({ preventScroll: true });
+                }}
+              >
+                <DealerUiIcon className="size-[18px]" name="close" />
+              </MobileMarketplaceOverlayIconAction>
+            ) : null
+          }
           onValueChange={onQueryChange}
           placeholder={searchPlaceholder}
+          ref={searchRef}
           value={query}
+          wrapperClassName={cn(
+            mobileMarketplaceOverlayFieldClassName,
+            "mx-4 mb-3 shrink-0 border-0 [&>svg]:size-[18px] [&>svg]:text-zinc-600 [&>svg]:opacity-100"
+          )}
         />
-        <CommandList className="no-scrollbar max-h-none flex-1 overscroll-contain px-3 pb-[calc(1rem+env(safe-area-inset-bottom))] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-          <CommandEmpty className="px-4 py-10 text-[15px] text-zinc-500">
+        <CommandList className="no-scrollbar max-h-none flex-1 overscroll-contain px-4 pb-[calc(1rem+env(safe-area-inset-bottom))] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          <CommandEmpty className="px-4 py-10 text-compact-control text-zinc-500">
             {text.noMatch}
           </CommandEmpty>
           <CommandGroup
-            className="p-0 [&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:py-2 [&_[cmdk-group-heading]]:text-[12px] [&_[cmdk-group-heading]]:text-zinc-500 [&_[cmdk-group-items]]:grid [&_[cmdk-group-items]]:gap-2"
+            className="p-0 [&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:py-2 [&_[cmdk-group-heading]]:text-micro [&_[cmdk-group-heading]]:text-zinc-500 [&_[cmdk-group-items]]:grid [&_[cmdk-group-items]]:gap-2"
             heading={groupHeading}
           >
             {canUseCustomValue ? (
@@ -168,7 +184,7 @@ export const MobileVehicleTaxonomyPicker = ({
                   <span className="min-w-0 flex-1 truncate">{option}</span>
                   {selected ? (
                     <DealerUiIcon
-                      className="size-5 text-[var(--lead-site-accent)]"
+                      className="size-5 text-brand-text"
                       name="check"
                     />
                   ) : null}

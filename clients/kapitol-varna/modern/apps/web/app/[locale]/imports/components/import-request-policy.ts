@@ -1,4 +1,7 @@
-import { mobileResponsiveFormFocusClassName } from "@repo/marketplace-ui/lib/mobile-form-control";
+import {
+  mobileResponsiveFormFocusClassName,
+  mobileResponsiveFormTextClassName,
+} from "@repo/marketplace-ui/lib/mobile-form-control";
 export const importRequestOrigins = [
   { code: "CN", bg: "Китай", en: "China" },
   { code: "DE", bg: "Германия", en: "Germany" },
@@ -7,15 +10,27 @@ export const importRequestOrigins = [
   { code: "KR", bg: "Южна Корея", en: "South Korea" },
 ] as const;
 
-export const importRequestInputClassName = `h-12 rounded-xl border-transparent bg-zinc-100 text-base shadow-none lg:h-11 lg:rounded-lg lg:bg-secondary ${mobileResponsiveFormFocusClassName}`;
+export const importRequestInputClassName = `h-12 rounded-xl border-transparent bg-zinc-100 text-base shadow-none lg:h-11 lg:rounded-lg lg:bg-secondary ${mobileResponsiveFormTextClassName} ${mobileResponsiveFormFocusClassName}`;
 
 export const importRequestSelectClassName =
   "h-11 w-full rounded-lg border border-transparent bg-secondary px-3 text-sm outline-none transition-shadow focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50";
 
 export const importRequestCopy = {
   bg: {
+    callPreparation:
+      "Подгответе данните по-долу за разговора. Ще уточним транспорта и следващата стъпка по телефона.",
+    callReview: "Прегледайте данните и се обадете, за да обсъдим вноса.",
+    attachedDescription:
+      "Линкът е добавен. Оставете контакт, за да уточним заявката.",
+    attachedLink: "Добавен линк",
+    editLink: "Промени",
+    additionalDetails: "Допълнителни данни (по избор)",
+    vehicleRequirement:
+      "Добавете линк или изберете марка и модел. Останалите данни са по избор.",
+    requiredMake: "Марка *",
+    requiredModel: "Модел *",
     budget: "Бюджет (по избор) ",
-    budgetPlaceholder: "напр. до 50 000 €",
+    budgetPlaceholder: "напр. до {budget}",
     email: "Имейл (по избор)",
     emailPlaceholder: "name@example.com",
     errorTitle: "Заявката не е изпратена",
@@ -51,8 +66,20 @@ export const importRequestCopy = {
     year: "Година (по избор)",
   },
   en: {
+    callPreparation:
+      "Prepare the details below for your call. We will discuss transport and the next step by phone.",
+    callReview: "Review your details, then call us to discuss the import.",
+    attachedDescription:
+      "Link attached. Leave your contact details to discuss the request.",
+    attachedLink: "Attached link",
+    editLink: "Edit",
+    additionalDetails: "Additional details (optional)",
+    vehicleRequirement:
+      "Add a listing link or choose a make and model. The remaining details are optional.",
+    requiredMake: "Make *",
+    requiredModel: "Model *",
     budget: "Budget (optional)",
-    budgetPlaceholder: "e.g. up to €50,000",
+    budgetPlaceholder: "e.g. up to {budget}",
     email: "Email (optional)",
     emailPlaceholder: "name@example.com",
     errorTitle: "Your request was not sent",

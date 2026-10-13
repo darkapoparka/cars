@@ -1,7 +1,32 @@
-# КАПИТОЛ / modern
+# Modern automotive template
 
-Actual independent master source, state **in-progress; runtime-unverified**. Use the retained lockfile/runtime and commands in `../REVIEW.md`. Primary inventory imports this dealer’s eight-record source snapshot; EUR, kilometres, source-status notes and original ad links are preserved.
+**Working branch: `main`.** Coordinate overlapping files and shared Git/build writes; independent files may be edited concurrently. Read [AGENTS.md](AGENTS.md) before starting; temporary branches/worktrees require an explicit request and a completed integration/cleanup handoff.
 
-Source-informed outlined logo proposals and local icon/OG exports are integrated. They are not approved dealer originals. Real vehicle photos are not integrated because source-specific reuse remains unresolved. Supporting-page acceptance and full runtime/browser QA remain outstanding.
+Canonical standalone master: **`darkapoparka/cars-template-modern`**. This repository is a reusable dealership design, not a dealer-specific project and not evidence that any sample business data is current.
 
-See `../VERIFICATION.json`, `../ASSET-CHECKS.json`, `../CLIENT.md` and `.client/project.json`. No public deployment or working message-delivery service is claimed.
+**AI/agent entry point:** read `AGENTS.md`, then `TEMPLATE.md`, `docs/LEAD-BUILD.md`, and `docs/QA.md` before editing.
+
+## Portfolio role
+- Template key: `modern`
+- Role: **core**
+- Design position: premium minimal / inventory-first showroom
+- Standard dealer offer: `auto-best + carwow + modern`
+- Import is Design 2 in the intentional Import trio; it does not add a fourth design.
+
+## Rule of ownership
+Improve this repository only when the task is a **shared template improvement**. For a **lead build**, use canonical Cars clients/<slug>/ through its approved-release clone workflow; never personalize this master.
+
+## Quick start
+`corepack enable && pnpm install --frozen-lockfile && pnpm --filter @repo/database build`
+
+Preview command: `pnpm --filter web exec next dev -H 127.0.0.1 -p 6462`
+
+Entry route: `/cars`
+
+See `TEMPLATE.md` for template-specific boundaries and `docs/LEAD-BUILD.md` for the complete lead workflow. Historical pre-split root docs are preserved under `docs/legacy/from-cars-2026-09-10/` for provenance only; they do not override the current instructions.
+
+Current cross-repository ownership, approved releases, dealer-copy workflow and standalone/mounted limits: [Cars integration](docs/CARS-INTEGRATION.md).
+
+## Current refactor program
+
+The source refactor has been implemented. Start with [implementation status](refactor/IMPLEMENTATION_STATUS.md), [verification evidence](refactor/evidence/IMPLEMENTATION.md) and [site/admin configuration](docs/SITE-CONFIGURATION.md). The original plan remains in [refactor/README.md](refactor/README.md). Owner visual acceptance, live integration and Cars-mounted release qualification remain separate; do not restart completed source work.

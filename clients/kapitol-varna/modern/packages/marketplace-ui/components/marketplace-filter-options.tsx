@@ -3,11 +3,12 @@
 import { Button } from "@repo/design-system/components/ui/button";
 import { cn } from "@repo/design-system/lib/utils";
 import {
-  formatBodyType,
   type FuelType,
+  formatBodyType,
   type MarketplaceSearchParams,
   type Transmission,
 } from "@repo/marketplace";
+import { publicCountryOptions } from "../lib/listing-truth";
 import {
   getLocalizedMarketplaceCityName,
   getLocalizedMarketplaceCountryName,
@@ -26,12 +27,11 @@ import {
   marketplaceYearPresets,
   marketplaceYearRange,
 } from "../lib/marketplace-filter-config";
-import { publicCountryOptions } from "../lib/listing-truth";
-import { NumericRangeFilter } from "./numeric-range-filter";
 import {
   marketplaceOptionButtonClassName,
   marketplaceSelectedOptionButtonClassName,
 } from "./marketplace-model-picker-options";
+import { NumericRangeFilter } from "./numeric-range-filter";
 
 export const MarketplaceOptionGrid = ({
   onSelect,
@@ -42,7 +42,10 @@ export const MarketplaceOptionGrid = ({
   options: [string, string][];
   selected?: string;
 }) => (
-  <div className="grid grid-cols-2 gap-2 p-4">
+  <div
+    className="grid grid-cols-2 gap-2 p-4"
+    data-slot="marketplace-option-grid"
+  >
     {options.map(([value, label]) => (
       <Button
         aria-pressed={selected === value}
@@ -74,7 +77,10 @@ export const MarketplaceCountryOptionGrid = ({
   const copy = getMarketplaceControlCopy(locale);
 
   return (
-    <div className="grid grid-cols-2 gap-2 p-4">
+    <div
+      className="grid grid-cols-2 gap-2 p-4"
+      data-slot="marketplace-country-option-grid"
+    >
       <Button
         aria-pressed={!selected}
         className={cn(
@@ -112,9 +118,14 @@ interface NumericFilterSubviewProps {
   draft: MarketplaceSearchParams;
   locale?: string;
   setDraft: (draft: MarketplaceSearchParams) => void;
+  showSummaryLabel?: boolean;
 }
 
-const PriceFilterSubview = ({ draft, locale, setDraft }: NumericFilterSubviewProps) => {
+const PriceFilterSubview = ({
+  draft,
+  locale,
+  setDraft,
+}: NumericFilterSubviewProps) => {
   const copy = getMarketplaceControlCopy(locale);
   const isBg = isBulgarianMarketplaceLocale(locale);
   const numberFormatter = new Intl.NumberFormat(isBg ? "bg-BG" : "en-US");
@@ -130,16 +141,20 @@ const PriceFilterSubview = ({ draft, locale, setDraft }: NumericFilterSubviewPro
   return (
     <NumericRangeFilter
       className="p-4"
-      formatValue={(nextValue) => `${numberFormatter.format(nextValue)} ${currencyLabel}`}
-      label={isBg ? "Избран диапазон" : "Selected range"}
+      formatValue={(nextValue) =>
+        `${numberFormatter.format(nextValue)} ${currencyLabel}`
+      }
+      label=""
       maximumLabel={copy.options.maximum}
       maximumPrefix={isBg ? "До" : "Up to"}
       minimumLabel={copy.options.minimum}
       onValueChange={([priceMin, priceMax]) =>
         setDraft({
           ...draft,
-          priceMax: priceMax === marketplacePriceRange[1] ? undefined : priceMax,
-          priceMin: priceMin === marketplacePriceRange[0] ? undefined : priceMin,
+          priceMax:
+            priceMax === marketplacePriceRange[1] ? undefined : priceMax,
+          priceMin:
+            priceMin === marketplacePriceRange[0] ? undefined : priceMin,
         })
       }
       presets={marketplacePricePresets.map((presetMaximum) => ({
@@ -155,7 +170,11 @@ const PriceFilterSubview = ({ draft, locale, setDraft }: NumericFilterSubviewPro
   );
 };
 
-const YearFilterSubview = ({ draft, locale, setDraft }: NumericFilterSubviewProps) => {
+const YearFilterSubview = ({
+  draft,
+  locale,
+  setDraft,
+}: NumericFilterSubviewProps) => {
   const copy = getMarketplaceControlCopy(locale);
   const isBg = isBulgarianMarketplaceLocale(locale);
   const value = [
@@ -167,7 +186,7 @@ const YearFilterSubview = ({ draft, locale, setDraft }: NumericFilterSubviewProp
     <NumericRangeFilter
       className="p-4"
       formatValue={(nextValue) => nextValue.toString()}
-      label={isBg ? "Избран диапазон" : "Selected range"}
+      label=""
       maximumLabel={copy.options.maximum}
       maximumPrefix={isBg ? "До" : "Up to"}
       minimumLabel={copy.options.minimum}
@@ -191,7 +210,12 @@ const YearFilterSubview = ({ draft, locale, setDraft }: NumericFilterSubviewProp
   );
 };
 
-const MileageFilterSubview = ({ draft, locale, setDraft }: NumericFilterSubviewProps) => {
+const MileageFilterSubview = ({
+  draft,
+  locale,
+  setDraft,
+  showSummaryLabel = true,
+}: NumericFilterSubviewProps) => {
   const copy = getMarketplaceControlCopy(locale);
   const isBg = isBulgarianMarketplaceLocale(locale);
   const numberFormatter = new Intl.NumberFormat(isBg ? "bg-BG" : "en-US");
@@ -199,6 +223,7 @@ const MileageFilterSubview = ({ draft, locale, setDraft }: NumericFilterSubviewP
     marketplaceMileageRange[0],
     draft.mileageMax ?? marketplaceMileageRange[1],
   ] as const;
+  const summaryLabel = isBg ? "Избрана стойност" : "Selected value";
 
   return (
     <NumericRangeFilter
@@ -206,8 +231,8 @@ const MileageFilterSubview = ({ draft, locale, setDraft }: NumericFilterSubviewP
       formatValue={(nextValue) =>
         `${numberFormatter.format(nextValue)} ${isBg ? "км" : "km"}`
       }
-      label={isBg ? "Избрана стойност" : "Selected value"}
-      maximumLabel={copy.options.maximumMileage}
+      label={showSummaryLabel ? summaryLabel : ""}
+      maximumLabel={copy.options.maximum}
       maximumOnly
       maximumPrefix={isBg ? "До" : "Up to"}
       minimumLabel={copy.options.minimum}
@@ -235,26 +260,40 @@ const NumericFilterSubview = ({
   draft,
   locale,
   setDraft,
+  showSummaryLabel,
   view,
 }: NumericFilterSubviewProps & { view: "mileage" | "price" | "year" }) => {
   if (view === "price") {
-    return <PriceFilterSubview draft={draft} locale={locale} setDraft={setDraft} />;
+    return (
+      <PriceFilterSubview draft={draft} locale={locale} setDraft={setDraft} />
+    );
   }
   if (view === "year") {
-    return <YearFilterSubview draft={draft} locale={locale} setDraft={setDraft} />;
+    return (
+      <YearFilterSubview draft={draft} locale={locale} setDraft={setDraft} />
+    );
   }
-  return <MileageFilterSubview draft={draft} locale={locale} setDraft={setDraft} />;
+  return (
+    <MileageFilterSubview
+      draft={draft}
+      locale={locale}
+      setDraft={setDraft}
+      showSummaryLabel={showSummaryLabel}
+    />
+  );
 };
 
 export const MarketplaceFilterSubview = ({
   draft,
   locale,
   setDraft,
+  showSummaryLabel,
   view,
 }: {
   draft: MarketplaceSearchParams;
   locale?: string;
   setDraft: (draft: MarketplaceSearchParams) => void;
+  showSummaryLabel?: boolean;
   view: MarketplaceFilterView;
 }) => {
   const copy = getMarketplaceControlCopy(locale);
@@ -309,6 +348,7 @@ export const MarketplaceFilterSubview = ({
         draft={draft}
         locale={locale}
         setDraft={setDraft}
+        showSummaryLabel={showSummaryLabel}
         view={view}
       />
     );

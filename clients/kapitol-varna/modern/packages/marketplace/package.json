@@ -27,7 +27,14 @@
     "./registry": "./registry.ts",
     "./routes": "./routes.ts",
     "./search-params": "./search-params.ts",
-    "./types": "./types.ts"
+    "./types": "./types.ts",
+    "./inventory-search": "./inventory-search.ts",
+    "./inventory-presentation": "./inventory-presentation.ts",
+    "./site-config": "./site-config.ts",
+    "./public-images": "./public-images.ts",
+    "./lead-workflow": "./lead-workflow.ts",
+    "./lead-copy": "./lead-copy.ts",
+    "./listing-copy": "./listing-copy.ts"
   },
   "scripts": {
     "clean": "git clean -xdf .cache .turbo dist node_modules",
@@ -39,7 +46,7 @@
   },
   "devDependencies": {
     "@repo/typescript-config": "workspace:*",
-    "@types/node": "25.3.5",
+    "@types/node": "22.20.2",
     "typescript": "^5.9.3",
     "vitest": "^4.0.18"
   }

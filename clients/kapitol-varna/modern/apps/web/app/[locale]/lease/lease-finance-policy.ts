@@ -3,6 +3,7 @@ import {
   getIsoCountryName,
   leadSite,
   type MarketplaceSearchParams,
+  type Money,
   type VehicleListing,
 } from "@repo/marketplace";
 
@@ -18,14 +19,46 @@ export interface FinancingVehicleOption {
   imageAlt: string;
   imageUrl: string;
   mileageLabel: string;
+  monthlyEstimate?: Money;
   monthlyLabel?: string;
   priceAmount: number;
+  priceCurrency: Money["currency"];
   priceLabel: string;
   title: string;
   transmissionLabel: string;
   year: number;
   yearLabel: string;
 }
+
+const searchWhitespace = /\s+/u;
+
+export const searchLeaseVehicles = (
+  vehicles: FinancingVehicleOption[],
+  query: string,
+  locale: "bg" | "en"
+) => {
+  const terms = query.trim().toLocaleLowerCase(locale).split(searchWhitespace);
+  return vehicles.filter((vehicle) =>
+    terms.every((term) =>
+      vehicle.title.toLocaleLowerCase(locale).includes(term)
+    )
+  );
+};
+
+/** Principal only: interest, fees and lender approval belong to the offer. */
+export const getLeasePrincipal = (price: number, deposit: string) => {
+  if (
+    !(["10", "20", "30"].includes(deposit) && Number.isFinite(price)) ||
+    price < 0
+  ) {
+    return null;
+  }
+  const initialPayment = Math.round(price * Number(deposit)) / 100;
+  return {
+    initialPayment,
+    amountToFinance: Math.round((price - initialPayment) * 100) / 100,
+  };
+};
 
 export const matchesLeaseVehicleFilters = (
   vehicle: FinancingVehicleOption,
@@ -81,7 +114,7 @@ export const leaseSelectorCopy = {
   bg: {
     clearSelection: "Премахнете избора",
     depositLabel: "Предпочитана първоначална вноска",
-    depositShortLabel: "Вноска",
+    depositShortLabel: "Първоначална вноска",
     depositOptions: [
       { label: "Ще уточним", value: "flexible" },
       { label: "10%", value: "10" },

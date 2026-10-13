@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "dealer": "kapitol-varna",
+  "kind": "dated-listing-snapshot",
+  "records": [
+    {
+      "title": "Mercedes-Benz GLB 200 D AMG Line",
+      "make": "Mercedes-Benz",
+      "model": "GLB",
+      "year": 2025,
+      "priceAmount": 29790,
+      "mileageValue": 186000,
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "body": "SUV",
+      "description": "Mercedes-Benz GLB 200 D AMG Line от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+      "sourceFieldProof": {
+        "source": "https://kapitol.mobile.bg/obiava-21791385455711977-mercedes-benz-glb-200-d-amg-line-night-pack-8-dct-150",
+        "year": "Дата на производство януари 2025",
+        "price": "29 790 €",
+        "mileage": "Пробег [км] 186000 км",
+        "fuel": "Двигател Дизелов",
+        "transmission": "Скоростна кутия Автоматична",
+        "body": "Категория Джип"
+      },
+      "sourceCaveats": [],
+      "id": "21791385455711977",
+      "slug": "kapitol-varna-21791385455711977",
+      "currency": "EUR",
+      "priceOnRequest": false,
+      "mileageOnRequest": false,
+      "mileageUnit": "km",
+      "condition": "used",
+      "images": [
+        "/dealer-stock/21791385455711977-1.webp",
+        "/dealer-stock/21791385455711977-2.webp"
+      ],
+      "sourceUrl": "https://kapitol.mobile.bg/obiava-21791385455711977-mercedes-benz-glb-200-d-amg-line-night-pack-8-dct-150",
+      "observedAt": "2026-10-12T11:55:24.101Z",
+      "availability": "Датирана обява; потвърдете цената и наличността директно с автокъщата.",
+      "sourceProof": {
+        "sha256": "d6bf991d86a81d4fd9ff4d737207410adfd220bfffe306bd0b17842a95ce2a20",
+        "originalPhotoBytesUnchanged": true,
+        "watermarksPreserved": true
+      }
+    },
+    {
+      "title": "Kia Sportage HEV 1.6 T-GDI",
+      "make": "Kia",
+      "model": "Sportage",
+      "year": 2023,
+      "priceAmount": 19000,
+      "mileageValue": 195000,
+      "fuel": "Hybrid",
+      "transmission": "Automatic",
+      "body": "SUV",
+      "description": "Kia Sportage HEV 1.6 T-GDI от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+      "sourceFieldProof": {
+        "source": "https://kapitol.mobile.bg/obiava-21791028313582431-kia-sportage-hev-1-6-t-gdi-active-230",
+        "year": "Дата на производство февруари 2023",
+        "price": "19 000 €",
+        "mileage": "Пробег [км] 195000 км",
+        "fuel": "Двигател Хибриден",
+        "transmission": "Скоростна кутия Автоматична",
+        "body": "Категория Джип"
+      },
+      "sourceCaveats": [],
+      "id": "21791028313582431",
+      "slug": "kapitol-varna-21791028313582431",
+      "currency": "EUR",
+      "priceOnRequest": false,
+      "mileageOnRequest": false,
+      "mileageUnit": "km",
+      "condition": "used",
+      "images": [
+        "/dealer-stock/21791028313582431-1.webp",
+        "/dealer-stock/21791028313582431-2.webp"
+      ],
+      "sourceUrl": "https://kapitol.mobile.bg/obiava-21791028313582431-kia-sportage-hev-1-6-t-gdi-active-230",
+      "observedAt": "2026-10-12T11:55:24.101Z",
+      "availability": "Датирана обява; потвърдете цената и наличността директно с автокъщата.",
+      "sourceProof": {
+        "sha256": "d483663a46fc1db448330ad65179f2a2df847fd62869506f04c0c3691adf0f1e",
+        "originalPhotoBytesUnchanged": true,
+        "watermarksPreserved": true
+      }
+    }
+  ],
+  "disclosure": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+  "disclosureEn": "Dated listing samples; confirm price and availability directly with the dealership.",
+  "availabilityConfirmed": false,
+  "completeInventory": false
+}
