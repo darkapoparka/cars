@@ -47,17 +47,73 @@
       }
     },
     {
-      "dealer": "prestige-varna",
+      "dealer": "evrocar-varna-09",
       "run": {
         "id": 38480947962,
         "attempt": 1,
         "sourceCommit": "6c4609d628b6b6d13b93211334c6ffa5044dd565"
       },
       "artifact": {
-        "id": 11857966211,
-        "name": "existing-cf-source-prestige-varna-38480947962-1",
-        "bytes": 1457320710,
-        "digest": "sha256:2d004dea9c868cd886fe3dde5625e3c3ba3c8970ee2cfae74c28a351ce2fcb04"
+        "id": 11857566926,
+        "name": "existing-cf-source-evrocar-varna-09-38480947962-1",
+        "bytes": 1457164046,
+        "digest": "sha256:c414b0f34588e4c84495ceb171773e813dfb699f711fdb93708064464caabf4a"
+      }
+    },
+    {
+      "dealer": "sprint-auto-varna",
+      "run": {
+        "id": 38480947962,
+        "attempt": 1,
+        "sourceCommit": "6c4609d628b6b6d13b93211334c6ffa5044dd565"
+      },
+      "artifact": {
+        "id": 11858491581,
+        "name": "existing-cf-source-sprint-auto-varna-38480947962-1",
+        "bytes": 1457136061,
+        "digest": "sha256:835a074099fd7defbfb570ac98665e9c56a0fa836644d6190170f526b9e03c96"
+      }
+    },
+    {
+      "dealer": "extra-car-sm",
+      "run": {
+        "id": 38480947962,
+        "attempt": 1,
+        "sourceCommit": "6c4609d628b6b6d13b93211334c6ffa5044dd565"
+      },
+      "artifact": {
+        "id": 11858071747,
+        "name": "existing-cf-source-extra-car-sm-38480947962-1",
+        "bytes": 1457338901,
+        "digest": "sha256:86b0dcf454adbdbfd586d914af0ac69a55e1a90a4089ba8e2735c8487c0b7a0a"
+      }
+    },
+    {
+      "dealer": "avtoborsa-mania",
+      "run": {
+        "id": 38480947962,
+        "attempt": 1,
+        "sourceCommit": "6c4609d628b6b6d13b93211334c6ffa5044dd565"
+      },
+      "artifact": {
+        "id": 11858421599,
+        "name": "existing-cf-source-avtoborsa-mania-38480947962-1",
+        "bytes": 1457449008,
+        "digest": "sha256:c40bfc781f75ca9d7df09555d7a73ef72fbe87c7f757e54678c606623c6cde60"
+      }
+    },
+    {
+      "dealer": "tesi-car-varna",
+      "run": {
+        "id": 38480947962,
+        "attempt": 1,
+        "sourceCommit": "6c4609d628b6b6d13b93211334c6ffa5044dd565"
+      },
+      "artifact": {
+        "id": 11857432917,
+        "name": "existing-cf-source-tesi-car-varna-38480947962-1",
+        "bytes": 1452312420,
+        "digest": "sha256:a1341e4865b5213ee1c68a94bcc769c5e7e4acc9b29da75d182dd8136d65aba1"
       }
     }
   ]

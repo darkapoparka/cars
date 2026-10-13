@@ -5,6 +5,8 @@ on:
     paths:
       - docs/releases/cloudflare-existing25-20261011/retained-source-transport-request.json
       - scripts/compact-retained-source.mjs
+      - scripts/ranged-retained-zip.mjs
+      - scripts/ranged-retained-zip.test.mjs
       - .github/workflows/transport-retained-source.yml
 permissions:
   contents: read
@@ -25,10 +27,15 @@ jobs:
           sparse-checkout-cone-mode: false
           sparse-checkout: |
             scripts/compact-retained-source.mjs
+            scripts/compact-retained-source.test.mjs
+            scripts/ranged-retained-zip.mjs
+            scripts/ranged-retained-zip.test.mjs
             docs/releases/cloudflare-existing25-20261011/retained-source-transport-request.json
       - uses: actions/setup-node@v4
         with:
           node-version: 26.10.0
+      - name: Check bounded source transport and ZIP range validation
+        run: node --test scripts/compact-retained-source.test.mjs scripts/ranged-retained-zip.test.mjs
       - id: plan
         run: echo "matrix=$(node scripts/compact-retained-source.mjs matrix)" >> "$GITHUB_OUTPUT"
   compact:
@@ -46,6 +53,9 @@ jobs:
           sparse-checkout-cone-mode: false
           sparse-checkout: |
             scripts/compact-retained-source.mjs
+            scripts/compact-retained-source.test.mjs
+            scripts/ranged-retained-zip.mjs
+            scripts/ranged-retained-zip.test.mjs
             docs/releases/cloudflare-existing25-20261011/retained-source-transport-request.json
       - uses: actions/setup-node@v4
         with:
