@@ -281,5 +281,43 @@
         }
       }
     ]
+  },
+  "componentAssembly": {
+    "schemaVersion": 1,
+    "kind": "cars-retained-component-assembly",
+    "sourceCommit": "354bb988ef9f086cd6142b3be3f590190b3e2eaa",
+    "runId": 38370000271,
+    "attempt": 1,
+    "requestSha256": "f1cae0528fdbf89db7a22e2eadc17a87c88490b017669bb6d081f9f67d3e1935",
+    "planJobId": 115204332873,
+    "artifacts": [
+      {
+        "dealer": "centralauto-varna",
+        "key": "import",
+        "id": 11798698089,
+        "jobId": 115204489703,
+        "name": "existing-cf-centralauto-varna-import-38370000271-1",
+        "sizeInBytes": 99190386,
+        "sha256": "4dbfdb2f2f9bcf23c49fa237d27c340f3f1804ab7e3a6d89abff60f8500786e3"
+      },
+      {
+        "dealer": "kalchev-varna",
+        "key": "import",
+        "id": 11798643181,
+        "jobId": 115204489671,
+        "name": "existing-cf-kalchev-varna-import-38370000271-1",
+        "sizeInBytes": 98936214,
+        "sha256": "8de7a795b8d972f89e78f50b0ef2ea9c45b0faf8279c553e98f31e110bbfd5ad"
+      },
+      {
+        "dealer": "sevicar-varna",
+        "key": "import",
+        "id": 11797959868,
+        "jobId": 115204489591,
+        "name": "existing-cf-sevicar-varna-import-38370000271-1",
+        "sizeInBytes": 99153561,
+        "sha256": "e87364ef76d8cf4afca2609518e044ac56555e567959a41a112bb42a638ee1b1"
+      }
+    ]
   }
 }

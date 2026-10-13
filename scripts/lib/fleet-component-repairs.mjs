@@ -2,6 +2,7 @@
  * Cars six-app compiler/composer. No source generation, deploy, approval or edits
  * to an original compiled artifact. Every reused member keeps its original run. */
 import {createHash} from 'node:crypto';
+import {SIGNATURE_FONT_FILES} from '../publishing/signature-font-assets.mjs';
 const hash=x=>createHash('sha256').update(x).digest('hex');
 const canonical=x=>JSON.stringify(x,(_k,v)=>v&&typeof v==='object'&&!Array.isArray(v)?Object.fromEntries(Object.entries(v).sort(([a],[b])=>a.localeCompare(b))):v);
 const same=(a,b)=>canonical(a)===canonical(b);
@@ -106,6 +107,31 @@ export function verifyOriginalComponentMetadata(row,run,artifacts){
 /** Compare current prepared family bytes against the original receipt before
  * accepting reuse. Packaging-only root helpers are not compiled family source;
  * their current identity is separately carried by the assembly commit. */
+
+/** Nine reviewed static fonts may be missing from a legacy Signature native
+ * artifact. Runtime source is still exact. The current verified Import source
+ * and its sealed compiled assets supply those same bytes during composition. */
+export function signatureStaticFontCompletion(actual,current,importRows){
+ if(same(actual,current))return null;
+ const targets=SIGNATURE_FONT_FILES.map(name=>'karento-best/static/assets/fonts/sofia-sans/'+name).sort();
+ must(current.length===actual.length+targets.length,'Unexpected Signature source delta; only nine missing static fonts are admissible');
+ const old=new Map(actual.map(r=>[r.path,r.sha256])),now=new Map(current.map(r=>[r.path,r.sha256])),source=new Map(importRows.map(r=>[r.path,r.sha256]));
+ must(actual.every(r=>now.get(r.path)===r.sha256),'Existing Signature application/static source changed');
+ const added=current.filter(r=>!old.has(r.path));must(same(added.map(r=>r.path).sort(),targets),'Unexpected Signature source additions');
+ const rows=added.map(r=>{const name=r.path.slice(r.path.lastIndexOf('/')+1),sourcePath='import/static/fonts/sofia-sans/'+name;must(hex(r.sha256,64)&&source.get(sourcePath)===r.sha256,'Signature static font is not the exact current Import source font');return {sourcePath,targetPath:r.path,sha256:r.sha256};});
+ return {schemaVersion:1,kind:'cars-signature-static-font-completion',sourceFamily:'import',targetFamily:'karento-best',sourceFamilyDigest:hash(canonical(importRows)),compiledFamilyDigest:hash(canonical(actual)),preparedFamilyDigest:hash(canonical(current)),compiledSourceFiles:actual.length,preparedSourceFiles:current.length,scriptOrStyleBytesChanged:false,files:rows};
+}
+export function assertSignatureStaticFontCompletion(value,members){
+ if(value===undefined||value===null)return null;
+ must(value.schemaVersion===1&&value.kind==='cars-signature-static-font-completion'&&value.sourceFamily==='import'&&value.targetFamily==='karento-best'&&value.scriptOrStyleBytesChanged===false,'Invalid static font completion kind');
+ must(Array.isArray(value.files)&&value.files.length===SIGNATURE_FONT_FILES.length,'Exactly nine reviewed Signature font additions required');
+ const names=value.files.map(r=>r.targetPath?.slice(r.targetPath.lastIndexOf('/')+1));must(same([...names].sort(),[...SIGNATURE_FONT_FILES].sort()),'Static font names differ');
+ for(const [i,r]of value.files.entries())must(same(Object.keys(r).sort(),['sha256','sourcePath','targetPath'])&&r.sourcePath==='import/static/fonts/sofia-sans/'+names[i]&&r.targetPath==='karento-best/static/assets/fonts/sofia-sans/'+names[i]&&hex(r.sha256,64),'Static font source/target/hash differs');
+ must(hex(value.sourceFamilyDigest,64)&&hex(value.compiledFamilyDigest,64)&&hex(value.preparedFamilyDigest,64)&&positive(value.compiledSourceFiles)&&value.preparedSourceFiles===value.compiledSourceFiles+9,'Static font family digest/count differs');
+ if(members)must(members['karento-best']?.mode==='reused'&&members['karento-best'].familySourceDigest===value.compiledFamilyDigest&&members['karento-best'].sourceFiles===value.compiledSourceFiles&&members.import?.familySourceDigest===value.sourceFamilyDigest,'Static font completion does not match verified original native families');
+ return value;
+}
+
 export function createComponentReuseProof({request,slug,context,prepared,inputs,originalMetadata,retainedMetadata=null}){
  const row=componentRepairRow(request,slug);must(row,'reviewed repair required');
  const retained=componentAssemblyRow(request,slug),compiledContext=componentCompileContext(retained,context);
@@ -114,18 +140,20 @@ export function createComponentReuseProof({request,slug,context,prepared,inputs,
  must(context.sourceCommit!==row.original.sourceCommit&&Number(context.runId)!==row.original.runId,'new assembly cannot impersonate original run');
  must(prepared.sourceTree===row.sourceTree&&prepared.componentRepair?.requestSha256===hash(canonical(request.componentRepair))&&same(prepared.componentRepair.sourceChanges,row.sourceChanges),'new prepared source repair proof differs');
  must(originalMetadata?.originalRunPassed===true&&originalMetadata.originalArtifactsUnexpired===true&&originalMetadata.metadataSha256===hash(canonical(row.original)),'original donor metadata was not verified');
- const members={};
+ const members={};let staticAssetCompletion=null;
  for(const key of REPAIR_KEYS){
   const input=inputs[key],fresh=row.rebuild.includes(key);must(input?.deploy&&input.source&&input.inventory,'seven exact source/deploy/inventory receipts required');
   const expected=fresh?compiledContext:{sourceCommit:row.original.sourceCommit,runId:row.original.runId,attempt:row.original.attempt};
   for(const name of ['sourceCommit','runId','attempt'])must(String(input.deploy[name])===String(expected[name]),'component original/new identity differs: '+key+'/'+name);
   must(input.source.sourceCommit===input.deploy.sourceCommit&&input.source.sourceTree===row.sourceTree&&input.deploy.sourceTree===row.sourceTree&&input.source.inputDigest===prepared.inputDigest,'retained canonical source authority differs: '+key);
   const actual=componentSourceRows(input.source.targetBeforeDependencies,key),current=componentSourceRows(prepared.familyBeforeDependencies[key],key);
-  must(same(actual,current),(fresh?'rebuilt':'reused')+' native family source changed unexpectedly: '+key);
+  if(!fresh&&key==='karento-best'&&!same(actual,current))staticAssetCompletion=signatureStaticFontCompletion(actual,current,componentSourceRows(prepared.familyBeforeDependencies.import,'import'));
+  else must(same(actual,current),(fresh?'rebuilt':'reused')+' native family source changed unexpectedly: '+key);
   if(fresh)must(same(input.source.componentRepair,prepared.componentRepair),'fresh compile did not apply the exact reviewed source repairs');
-  members[key]={mode:fresh?(retained?'rebuilt-retained':'rebuilt'):'reused',sourceCommit:input.deploy.sourceCommit,runId:Number(input.deploy.runId),attempt:Number(input.deploy.attempt),artifactDigest:input.inventory.digest,compiledDigest:input.deploy.compiledDigest,familySourceDigest:hash(canonical(current)),sourceFiles:current.length};
+  members[key]={mode:fresh?(retained?'rebuilt-retained':'rebuilt'):'reused',sourceCommit:input.deploy.sourceCommit,runId:Number(input.deploy.runId),attempt:Number(input.deploy.attempt),artifactDigest:input.inventory.digest,compiledDigest:input.deploy.compiledDigest,familySourceDigest:hash(canonical(actual)),sourceFiles:actual.length};
  }
- const proof={schemaVersion:1,kind:'cars-verified-component-reuse',dealer:slug,sourceTree:row.sourceTree,inputDigest:prepared.inputDigest,assembly:{sourceCommit:context.sourceCommit,runId:Number(context.runId),attempt:Number(context.attempt)},requestSha256:hash(canonical(request.componentRepair)),reviewedAt:request.componentRepair.reviewedAt,row,originalMetadata,...(retained?{retainedCompilation:retained,retainedMetadata}:{}),sourceRepairs:prepared.componentRepair,members,rebuiltFamilies:[...row.rebuild],reusedFamilies:REPAIR_KEYS.filter(k=>!row.rebuild.includes(k)),unaffectedFamilySourceVerified:true,originalCompiledBytesUnchanged:true};
+ assertSignatureStaticFontCompletion(staticAssetCompletion,members);
+ const proof={schemaVersion:1,kind:'cars-verified-component-reuse',dealer:slug,sourceTree:row.sourceTree,inputDigest:prepared.inputDigest,assembly:{sourceCommit:context.sourceCommit,runId:Number(context.runId),attempt:Number(context.attempt)},requestSha256:hash(canonical(request.componentRepair)),reviewedAt:request.componentRepair.reviewedAt,row,originalMetadata,...(retained?{retainedCompilation:retained,retainedMetadata}:{}),sourceRepairs:prepared.componentRepair,members,...(staticAssetCompletion?{staticAssetCompletion}:{}),rebuiltFamilies:[...row.rebuild],reusedFamilies:REPAIR_KEYS.filter(k=>!row.rebuild.includes(k)),unaffectedFamilySourceVerified:true,originalCompiledBytesUnchanged:true};
  return {...proof,seal:hash(canonical(proof))};
 }
 export function assertComponentReuseProof(proof,deployments){
@@ -147,6 +175,7 @@ export function assertComponentReuseProof(proof,deployments){
   for(const name of ['sourceCommit','runId','attempt'])must(String(member[name])===String(expected[name])&&String(deploy[name])===String(expected[name]),'mixed or relabeled source/run: '+key+'/'+name);
   must(deploy.sourceTree===proof.sourceTree&&deploy.inputDigest===proof.inputDigest&&deploy.compiledDigest===member.compiledDigest,'component compiled/source proof differs: '+key);
  }
+ assertSignatureStaticFontCompletion(proof.staticAssetCompletion,proof.members);
  return proof;
 }
 export function componentAssemblyIdentity(router,proof){

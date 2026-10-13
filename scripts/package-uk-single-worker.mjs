@@ -1,4 +1,4 @@
-import {assertComponentReuseProof,componentAssemblyIdentity,componentSourceDigest} from './lib/fleet-component-repairs.mjs';
+import {assertComponentReuseProof,componentAssemblyIdentity,componentSourceDigest,assertSignatureStaticFontCompletion} from './lib/fleet-component-repairs.mjs';
 // One public origin and one Worker per dealer. Provider-only composition of six verified builds.
 // Each Next/Vite application receives its own framework global registry; this is not a security sandbox.
 import fs from 'node:fs';import path from 'node:path';import {createHash} from 'node:crypto';import {gzipSync} from 'node:zlib';
@@ -123,6 +123,21 @@ export function inspectSingleWorkerInputs({inputs,expectedDealer,componentReuse=
  }
  return {inspected,identity,inputKind};
 }
+
+export function materializeSignatureStaticFontCompletion(inspected,completion,copy,{importMount,signatureMount}={}){
+ if(!completion)return [];
+ assertSignatureStaticFontCompletion(completion);
+ assert(['/variant-2','/variant-3'].includes(importMount)&&signatureMount==='/variant-6','Exact frozen Import and Signature mounts required for static font completion');
+ const native=inspected.import;assert(native?.deploy&&native?.directory&&typeof copy==='function','Verified Import native artifact and normal copy boundary required');
+ // Verify the complete set first; never rewrite a compiled artifact or source file.
+ const selected=completion.files.map(row=>{const relative=row.sourcePath.slice('import/static/'.length),sourcePath=native.deploy.assetPath+importMount+'/'+relative;
+  const pin=native.deploy.compiledFiles.find(f=>f.path===sourcePath);assert(pin&&pin.sha256===row.sha256&&pin.bytes>=64&&pin.bytes<=1024*1024,'Original compiled Import font pin differs');
+  const from=inside(native.directory,sourcePath,{mustExist:true}),st=fs.lstatSync(from),bytes=fs.readFileSync(from);assert(st.isFile()&&!st.isSymbolicLink()&&bytes.length===pin.bytes&&hash(bytes)===pin.sha256&&bytes.subarray(0,4).toString()==='wOF2','Original compiled Import font bytes differ');
+  return {from,path:'public'+signatureMount+'/'+row.targetPath.slice('karento-best/static/'.length),sourcePath,sourceKey:'import',afterSha256:row.sha256,bytes:bytes.length,method:'Complete nine existing Signature static font URLs from exact sealed Import WOFF2 bytes; no native module/source modification'};});
+ for(const row of selected)copy(row.from,row.path);
+ return selected.map(({from,...row})=>row);
+}
+
 export function packageUkSingleWorker({inputs,destination,expectedDealer,esbuild,componentReuse=null}){
  assert(!fs.existsSync(destination),'Exact dealer and a fresh derived destination required');
  assert(esbuild&&typeof esbuild.transformSync==='function','Reviewed existing esbuild required');
@@ -150,6 +165,7 @@ export function packageUkSingleWorker({inputs,destination,expectedDealer,esbuild
   }else{const source='compiled/'+key+'/.cars-cloudflare/worker/index.js';assert(inspected[key].inventory.files.some(f=>f.path===source),'Missing verified standalone Svelte module');const before=fs.readFileSync(path.join(directory,source)),after=Buffer.from(esbuild.transformSync(key==='import'?importSource(before.toString('utf8')):before.toString('utf8'),{format:'esm',target:'es2022',minify:true,keepNames:true,legalComments:'inline'}).code),out='server/'+key+'/index.mjs';fs.mkdirSync(path.dirname(path.join(base,out)),{recursive:true});fs.writeFileSync(path.join(base,out),after,{flag:'wx'});changes.push({path:out,sourcePath:source,beforeSha256:hash(before),afterSha256:hash(after),method:key==='import'?(inputKind==='uk'?'Verified raster surface bindings and versioned asset namespace; ES module minification':'Retained fleet logo bindings and versioned asset namespace; ES module minification'):'ES module minification only, names retained'});}
   const assets=path.join(directory,deploy.assetPath);for(const name of walk(assets)){if(name==='_headers'){headers.push(fs.readFileSync(path.join(assets,name),'utf8'));continue;}if(name==='.assetsignore'||name==='.vite'||name.startsWith('.vite/')||name==='vinext-client-entry-manifest.json')continue;if(key==='import'&&/\.[cm]?js$/.test(name)){const original=fs.readFileSync(path.join(assets,name)),branded=Buffer.from(importSource(original.toString('utf8'))),target='public/'+importName(name);fs.mkdirSync(path.dirname(path.join(base,target)),{recursive:true});fs.writeFileSync(path.join(base,target),branded,{flag:'wx'});if(!original.equals(branded))changes.push({path:target,beforeSha256:hash(original),afterSha256:hash(branded),method:inputKind==='uk'?'Bind exact dark-on-light and white-on-dark Import logo slots with new immutable asset namespace':'Preserve fleet logo slots with new immutable asset namespace'});}else copy(path.join(assets,name),'public/'+(key==='import'?importName(name):name));}
  }
+ changes.push(...materializeSignatureStaticFontCompletion(inspected,componentReuse?.staticAssetCompletion,copy,{importMount,signatureMount:variants.find(row=>row.key==='karento-best').base}));
  fs.writeFileSync(base+'/public/.assetsignore','.vite\n**/.vite\n');fs.writeFileSync(base+'/public/_headers','/*\n  X-Robots-Tag: noindex, nofollow\n\n'+headers.join('\n\n')+'\n');fs.writeFileSync(base+'/server/worker.mjs',singleWorkerSource(freeStaticExperiment));
  if(freeStaticExperiment)fs.copyFileSync(new URL('./lib/modern-free-static-runtime.mjs',import.meta.url),base+'/server/modern-free-static-runtime.mjs');
  const config={name:identity.workerName,main:'server/worker.mjs',base_dir:'server',compatibility_date:'2026-10-10',compatibility_flags:['nodejs_compat'],workers_dev:true,preview_urls:false,no_bundle:true,find_additional_modules:true,rules:[{type:'ESModule',globs:['**/*.js','**/*.mjs'],fallthrough:true},{type:'CompiledWasm',globs:['**/*.wasm'],fallthrough:true}],observability:{enabled:true},assets:{directory:'./public',binding:'ASSETS',run_worker_first:false}};
