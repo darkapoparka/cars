@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "key": "import",
+  "status": "finalized-source-checkpoint",
+  "verifiedAt": "2026-10-14T14:30:05.010Z",
+  "source": {
+    "repository": "darkapoparka/cars",
+    "branch": "main",
+    "commit": "cacbe3df997d00370f32263e45e4de9d6588da0f",
+    "sourcePath": "templates/import",
+    "sourceTree": "8603eb2cd55b5f7b319a517fa1824987b49f4cd2",
+    "sourceDigest": "275e09dc9ad5bb7edf034529a03a4acc03543cc9befb6d92b76054d46def64d9",
+    "digestPolicy": "cars-source-v1",
+    "retainedFileCount": 3443
+  },
+  "finalFrontend": {
+    "pdpTabs": "Original underline tabs on white; gray rail preview removed",
+    "tabTextPx": 18,
+    "tabTapHeightPx": 44,
+    "activeTabWeight": 600,
+    "inactiveTabWeight": 400,
+    "activeUnderlinePx": 3,
+    "reading": "Native document scrolling with the tab row sticky below the utility bar",
+    "drawer": "Free grip dragging up and down, with pointer and keyboard controls",
+    "utilityControls": "40px visible circles, 20px glyphs, 44px native tap targets",
+    "localeCopy": "Dealer configuration supplies public identity; localized vehicle titles are shared across public views"
+  },
+  "validation": {
+    "runtime": "Node 24.21.0",
+    "svelteCheck": {
+      "files": 2203,
+      "errors": 0,
+      "warnings": 0
+    },
+    "unitTests": {
+      "files": 28,
+      "passed": 193
+    },
+    "architecture": "passed",
+    "localImageSignatures": 1013,
+    "lint": "passed",
+    "format": "passed",
+    "mobileLabels": {
+      "locales": [
+        "bg",
+        "en"
+      ],
+      "widths": [
+        320,
+        390
+      ],
+      "result": "passed"
+    },
+    "nativePdpScrolling": "passed",
+    "pointerAndKeyboardTabs": "passed",
+    "freeGripDragging": "passed",
+    "desktopPreservation": "passed"
+  },
+  "committedEvidence": [
+    "templates/import/docs/final-template-audit-2026-10-14-01a139e0/audit.json",
+    "templates/import/docs/mobile-pdp-scroll-2026-10-14-01a139e0/receipt.json",
+    "templates/import/docs/mobile-pdp-controls-2026-10-14-01a139e0/receipt.json"
+  ],
+  "rollout": {
+    "selectedSourceCommit": "cacbe3df997d00370f32263e45e4de9d6588da0f",
+    "existingClientsUpdated": false,
+    "templatesLockChanged": false,
+    "hostedQualification": "Pending for this exact source before release-lock promotion and client adoption"
+  }
+}
