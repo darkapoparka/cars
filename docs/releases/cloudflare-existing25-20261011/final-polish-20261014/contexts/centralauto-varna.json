@@ -6,21 +6,21 @@
   "scope": "existing-dealer-pilot",
   "sourceCommit": "097805706654b327a2b8327a7c1670da3a5f67ae",
   "reviewed": true,
-  "reviewedAt": "2026-10-14T17:32:01.216Z",
+  "reviewedAt": "2026-10-14T17:54:24.318Z",
   "qualificationOnly": true,
   "approved": false,
   "nativeApproval": false,
   "hostedApproval": false,
   "globalReleaseApproval": false,
   "approvedLockSha256": "ecdfaf9599fbcbeadebc24de3b9aa1c7615a9a49e29d338e5e9a23427d405e26",
-  "candidateLockSha256": "557002f15998f7033c72b20266e6d983dfc3591893769c0c61eb27a9282230cd",
+  "candidateLockSha256": "122df9b3a2256d5e80d96b1fc9412dd4bfcd0e62142c554e08d5d26108c9666c",
   "sourceDeltaReview": {
     "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
-    "sha256": "b1e99f8d975db062ef532a5c9953c52e84beb5f8118ea2c036524598be88aa6f",
-    "reviewedAt": "2026-10-14T17:32:01.216Z"
+    "sha256": "50be9e8065ca67248b9d65304b3c52085acccd0d21c498d9ed6ee07e955163cd",
+    "reviewedAt": "2026-10-14T17:54:24.318Z"
   },
   "sourceReview": {
     "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-review.json",
-    "sha256": "640c3aafc46ca69394aa2be9d146780167e2c03c47e9633573369facbac2a2e2"
+    "sha256": "bacbd04864e34efad936318d3b09741ddc40153bb3d95a3982d216df84d628cf"
   }
 }

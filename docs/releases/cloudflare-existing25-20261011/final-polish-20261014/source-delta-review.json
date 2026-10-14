@@ -4,20 +4,25 @@
   "sourceCommit": "097805706654b327a2b8327a7c1670da3a5f67ae",
   "parentCommit": "64829e356956c309deb3f4b0f441969133d15041",
   "reviewed": true,
-  "reviewedAt": "2026-10-14T17:32:01.216Z",
+  "reviewedAt": "2026-10-14T17:54:24.318Z",
   "qualificationOnly": true,
   "nativeApproval": false,
   "hostedApproval": false,
   "globalReleaseApproval": false,
   "sourceReview": {
     "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-review.json",
-    "sha256": "640c3aafc46ca69394aa2be9d146780167e2c03c47e9633573369facbac2a2e2"
+    "sha256": "bacbd04864e34efad936318d3b09741ddc40153bb3d95a3982d216df84d628cf"
   },
   "checks": [
     {
       "name": "immutable-six-template-tree-and-blob-fingerprints",
       "status": "passed",
       "evidenceSha256": "0db7fbcd2bb71fe4ff29770fff12b08275b99f207c2226361e9ab211fe59ace7"
+    },
+    {
+      "name": "modern-reviewed-mobile-child-logo-binding-regressions",
+      "status": "passed",
+      "evidenceSha256": "9779737678730e4bf48dbbbd14cc2d25d6b87114a0e9c382aa188cb2d6215cf9"
     }
   ],
   "pendingNativeChecks": [

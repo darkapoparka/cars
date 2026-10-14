@@ -3,7 +3,7 @@
   "kind": "cars-six-template-source-checkpoint-review",
   "sourceCommit": "097805706654b327a2b8327a7c1670da3a5f67ae",
   "reviewed": true,
-  "reviewedAt": "2026-10-14T17:32:01.216Z",
+  "reviewedAt": "2026-10-14T17:54:24.318Z",
   "selectedSources": {
     "auto-best": {
       "repository": "darkapoparka/cars",
@@ -74,7 +74,9 @@
     "968a69ff57710218f303c02b20db39cfe6f57d7e",
     "7fb8078aadc89e697ab4116e37fe62497761255d",
     "097805706654b327a2b8327a7c1670da3a5f67ae",
-    "461d1dd3006669a629881cb4eafb2fa2fe4430a0"
+    "461d1dd3006669a629881cb4eafb2fa2fe4430a0",
+    "c2b6e43907d0694cb1e93c9064fb6a19fd0ab72e",
+    "b4324671155e07a771eab57648085fb28b93cda1"
   ],
   "sourceOnly": true,
   "nativeApproval": false,
@@ -100,5 +102,9 @@
       "centralauto-varna"
     ],
     "vercel": "Independent exact publishing-source reconciliation and preview lane pending; preserve all25 existing project identities."
+  },
+  "sourceRepairEvidence": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/modern-logo-source-repair-evidence.json",
+    "sha256": "9779737678730e4bf48dbbbd14cc2d25d6b87114a0e9c382aa188cb2d6215cf9"
   }
 }
