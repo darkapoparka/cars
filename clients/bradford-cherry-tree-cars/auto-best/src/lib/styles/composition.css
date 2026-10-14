@@ -388,6 +388,7 @@
   .dn-app-shell .dn-about-hero.dn-route-hero { background: var(--dn-theme-contact-surface); }
   .dn-app-shell .dn-blog-hero.dn-route-hero { background: var(--dn-theme-blog-hero-surface); color: #202329; }
   .dn-app-shell .dn-contact-hero:not(.dn-contact-hero--general) { background: var(--dn-workflow-canvas); color: #fff; }
+  .dn-app-shell .dn-contact-hero--workflow:not(.dn-contact-hero--import) { background: var(--dn-ink-deep); }
   .dn-app-shell .dn-blog-hero :is(h1, p) { color: #202329; }
   .dn-app-shell .dn-contact-hero:not(.dn-contact-hero--general) :is(h1, p) { color: #fff; }
 }

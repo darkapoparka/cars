@@ -2,16 +2,16 @@
   "schemaVersion": 1,
   "dealer": "bradford-cherry-tree-cars",
   "kind": "personalized-source-candidate-not-an-approved-release",
-  "sourceRevision": "097805706654b327a2b8327a7c1670da3a5f67ae",
-  "candidateSourceDigest": "fb897d7e77c7aabdc86d8470d4bb864e9affe6b393ada3b395307d991e197a0e",
+  "sourceRevision": "7d4557f3074b32e3f57af28b89906754b73fb9cd",
+  "candidateSourceDigest": "13968191b11d51e4e4ca6e3b8ebfc91cf2188d15eaa980d0555767a9b471cedd",
   "qualificationContextPath": ".client/native-qualification-context.json",
-  "qualificationContextSha256": "144d3fa1380212967dd0644b6ec601b7bc83e06ef561a9ebce4f1c5b1881f977",
+  "qualificationContextSha256": "85c07f8b32370a984e4a4700dc12fe5f0f2f9454dddeb1fb7dd9de8708ba7ca3",
   "qualificationLockPath": ".client/native-qualification-lock.json",
-  "qualificationLockSha256": "23622acb9fbaa5cb78379d6a080170f99dadb4703ff7b8ccba3d21a2b41e8786",
+  "qualificationLockSha256": "4ceb9b3085d3dae4c415229d134ef33905e352f499ae2e1126bd85e318d648d8",
   "sourceDeltaReview": {
     "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
-    "sha256": "8fac7527b396f75ff6647a724ce7a2152bb13ff514efe6480b7c322f66fc195f",
-    "reviewedAt": "2026-10-14T18:24:47.957Z"
+    "sha256": "6b5c5b82e91fc569139af5a84db9dbe34fde1f0e91fa28d55939a53d55c72ec5",
+    "reviewedAt": "2026-10-14T21:53:12.292Z"
   },
   "nativeApproval": false,
   "hostedApproval": false

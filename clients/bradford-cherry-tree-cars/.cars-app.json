@@ -3,7 +3,7 @@
   "dealer": "bradford-cherry-tree-cars",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "097805706654b327a2b8327a7c1670da3a5f67ae",
+    "revision": "7d4557f3074b32e3f57af28b89906754b73fb9cd",
     "path": "templates/app",
     "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
     "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
@@ -151,5 +151,5 @@
   },
   "needsDealerQA": true,
   "readyToPublish": false,
-  "refreshedAt": "2026-10-14T21:17:45.318Z"
+  "refreshedAt": "2026-10-14T22:47:32.073Z"
 }
