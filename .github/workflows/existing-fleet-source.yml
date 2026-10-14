@@ -5,6 +5,7 @@ on:
     paths: [docs/releases/cloudflare-existing25-20261011/source-request.json]
 permissions:
   contents: read
+  actions: read
 defaults:
   run:
     shell: bash
@@ -265,7 +266,64 @@ jobs:
         with:
           node-version: '26.10.0'
           package-manager-cache: false
+      - name: Reuse the authenticated unchanged shared-code checkpoint
+        id: shared_checkpoint
+        env:
+          CARS_CHECKPOINT_TOKEN: ${{ github.token }}
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          import assert from 'node:assert/strict';
+          import {createHash} from 'node:crypto';
+          import {execFileSync} from 'node:child_process';
+          const reviewedWorkflowSha256 = '1b8a498d0a019b96050c464e9a914b1f85d80ab67cbaa3649c7faa206a150342';
+          const base='144169aa68bc22aac577ae5042245f0e2b8ff584',workflow='.github/workflows/existing-fleet-source.yml',runId=38620387848,jobId=116046077657;
+          const fullStep='Run the required executable workflow integration checkpoint once';
+          let reuse=false,reason='Unchanged shared-code checkpoint proof unavailable';
+          try {
+            assert.equal(process.env.GITHUB_REPOSITORY,'darkapoparka/cars');
+            assert.equal(process.env.GITHUB_REF,'refs/heads/main');
+            assert(/^[a-f0-9]{40}$/.test(process.env.GITHUB_SHA||''));
+            const env={...process.env,GIT_NO_LAZY_FETCH:'1',GIT_OPTIONAL_LOCKS:'0',GIT_TERMINAL_PROMPT:'0'};
+            const git=args=>execFileSync('git',args,{env,encoding:'utf8',maxBuffer:64*1024**2,timeout:30000}).trimEnd();
+            git(['merge-base','--is-ancestor',base,process.env.GITHUB_SHA]);
+            const object=(revision,name)=>git(['rev-parse',revision+':'+name]);
+            for(const name of ['scripts','templates','templates.lock.json','templates/import/package-lock.json','docs/DEPLOYMENT-INVENTORY.json','clients/index.json','clients/README.md'])assert.equal(object(process.env.GITHUB_SHA,name),object(base,name),'Shared code/configuration changed: '+name);
+            const listing=(revision,name='')=>git(['ls-tree','-z',name?revision+':'+name:revision]).split('\0').filter(Boolean);
+            const protect=(name,except)=>assert.deepEqual(listing(process.env.GITHUB_SHA,name).filter(row=>!except.includes(row.split('\t')[1])),listing(base,name).filter(row=>!except.includes(row.split('\t')[1])),'Other root/workflow configuration changed: '+name);
+            protect('',['clients','docs','leads','.github']);
+            protect('.github',['workflows']);
+            protect('.github/workflows',['existing-fleet-source.yml']);
+            assert.equal(object(base,workflow),'15502c9cfff84ca2ab23ddc4e82dde9a2bbbd6cb');
+            const workflowBytes=execFileSync('git',['show',process.env.GITHUB_SHA+':'+workflow],{env,encoding:'utf8',maxBuffer:64*1024**2,timeout:30000});
+            assert.equal(fs.readFileSync(workflow,'utf8'),workflowBytes,'Workflow checkout differs from its pinned blob');
+            const seals=[...workflowBytes.matchAll(/^          const reviewedWorkflowSha256 = '[a-f0-9]{64}';$/gm)];assert.equal(seals.length,1,'Reviewed workflow self seal is ambiguous');
+            const normalized=workflowBytes.replace(/^          const reviewedWorkflowSha256 = '[a-f0-9]{64}';$/m,"          const reviewedWorkflowSha256 = 'REVIEWED_SELF_SHA256';");
+            assert.equal(createHash('sha256').update(normalized).digest('hex'),reviewedWorkflowSha256,'Source workflow differs from the narrowly reviewed reuse change');
+            const changed=git(['diff','--no-renames','--name-only','-z',base,process.env.GITHUB_SHA,'--']).split('\0').filter(Boolean);
+            assert(changed.length<=500000,'Changed input inventory exceeds its bounded read');
+            for(const name of changed){
+              assert(!/[\\:\u0000-\u001f\u007f]/.test(name)&&name.split('/').every(part=>part&&part!=='.'&&part!=='..'),'Unsafe changed input path');
+              assert(name===workflow||/^clients\/[a-z0-9]+(?:-[a-z0-9]+)*\/.+$/.test(name)||/^docs\/releases\/.+\.json$/.test(name)||/^docs\/logo-polish-2026-10-14\/.+\.(?:json|png|webp|ico)$/.test(name)||/^leads\/.+\.(?:json|md)$/.test(name),'Change lies outside dealer/source input data: '+name);
+            }
+            const get=async route=>{const response=await fetch('https://api.github.com/repos/darkapoparka/cars/'+route,{headers:{Authorization:'Bearer '+process.env.CARS_CHECKPOINT_TOKEN,Accept:'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'},signal:AbortSignal.timeout(20000)});assert(response.ok,'Authenticated checkpoint proof unavailable');return response.json();};
+            const [run,jobs]=await Promise.all([get('actions/runs/'+runId+'/attempts/1'),get('actions/runs/'+runId+'/attempts/1/jobs?per_page=100')]);
+            assert(run.id===runId&&run.run_attempt===1&&run.repository?.full_name==='darkapoparka/cars'&&run.head_repository?.full_name==='darkapoparka/cars'&&run.head_sha===base&&run.head_branch==='main'&&run.path===workflow&&run.workflow_id===381165184&&run.event==='push'&&run.status==='completed','Prior run identity changed');
+            assert(jobs.total_count<=100&&Array.isArray(jobs.jobs),'Checkpoint job proof is incomplete');
+            const plan=jobs.jobs.find(job=>job.id===jobId);
+            assert(plan?.run_id===runId&&plan.run_attempt===1&&plan.name==='plan'&&plan.status==='completed'&&plan.conclusion==='success','Exact prior plan did not succeed');
+            const full=plan.steps?.find(step=>step.number===7&&step.name===fullStep);
+            assert(full?.status==='completed'&&full.conclusion==='success','Exact prior full checkpoint did not succeed');
+            const age=Date.now()-Date.parse(plan.completed_at);assert(Number.isFinite(age)&&age>=0&&age<=24*60*60*1000,'Checkpoint proof is stale');
+            reuse=true;reason='Authenticated unchanged shared-code checkpoint reused; changed dealer/source fixture data is not covered by that suite result';
+          } catch(error) { reason='Full shared-code checkpoint required: '+error.message; }
+          fs.appendFileSync(process.env.GITHUB_OUTPUT,'reuse='+reuse+'\n');
+          const evidence={scope:'shared-code-only',reuse,priorRun:runId,priorAttempt:1,priorPlanJob:jobId,priorHead:base,currentHead:process.env.GITHUB_SHA,changedDealerFixtureDataTested:false,reason};
+          console.log(JSON.stringify(evidence));
+          if(process.env.GITHUB_STEP_SUMMARY)fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY,'### Shared-code integration checkpoint\n\n'+reason+'\n\nFresh source matrix, dealer preservation, branding, native qualification and patch validation run for this request.\n');
+          NODE
       - name: Install one lock-pinned compiler and test runtime
+        if: steps.shared_checkpoint.outputs.reuse != 'true'
         run: |
           npm ci --prefix templates/import --include=dev --ignore-scripts --no-audit --no-fund
           node --input-type=module <<'NODE'
@@ -286,6 +344,7 @@ jobs:
           console.log(JSON.stringify({runtime:'one-import-lock-install',svelte:require('svelte/package.json').version,sharp:require('sharp').versions.sharp}));
           NODE
       - name: Install the pinned Worker stream-test runtime outside template dependencies
+        if: steps.shared_checkpoint.outputs.reuse != 'true'
         run: |
           stream_test_root="$RUNNER_TEMP/cars-stream-test-runtime"
           [[ ! -e "$stream_test_root" ]]
@@ -306,6 +365,7 @@ jobs:
           NODE
           printf 'CARS_MINIFLARE_RESOLVE_FROM=%s/package.json\n' "$stream_test_root" >> "$GITHUB_ENV"
       - name: Hydrate bounded historical text and icon test objects through the maintained source reader
+        if: steps.shared_checkpoint.outputs.reuse != 'true'
         run: |
           node --input-type=module <<'NODE'
           import fs from 'node:fs';
@@ -335,6 +395,7 @@ jobs:
           console.log(JSON.stringify({commits:commits.length,uniqueTestObjects:entries.size,...prefetchPinnedSourceBlobs({repositoryPath:root,entries:[...entries.values()],env:{...process.env,CARS_SOURCE_BATCH_PREFETCH:'1'}})}));
           NODE
       - name: Run the required executable workflow integration checkpoint once
+        if: steps.shared_checkpoint.outputs.reuse != 'true'
         run: |
           mkdir -p runtime audits/2026-09-06
           node scripts/check-workflow.mjs

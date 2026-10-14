@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "resolutions": {
+    "auto-best/localization/generated-manifest.json": "template",
+    "modern/packages/marketplace-ui/components/dealer-mobile-brand-bar.tsx": "template",
+    "modern/packages/marketplace/lead-site.ts": "template",
+    "import/src/lib/i18n/messages.ts": "template",
+    "app/components/ReferenceUI.tsx": "template",
+    "app/lib/dealer-inventory.json": "template"
+  }
+}

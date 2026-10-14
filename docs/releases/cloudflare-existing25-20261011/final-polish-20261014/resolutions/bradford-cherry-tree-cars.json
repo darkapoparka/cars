@@ -26,5 +26,69 @@
     "karento-best/src/lib/content.ts": "template",
     "karento-best/src/lib/data/dealer-detail.ts": "template",
     "karento-best/src/lib/data/vehicle-detail.ts": "template"
+  },
+  "factualConsumerResolutions": {
+    "schemaVersion": 1,
+    "kind": "cars-factual-consumer-template-resolutions",
+    "reviewed": true,
+    "dealer": "bradford-cherry-tree-cars",
+    "baseline": {
+      "commit": "144169aa68bc22aac577ae5042245f0e2b8ff584",
+      "tree": "bbc1eee9a19839606981351b584cd2fbb18d9763"
+    },
+    "targetSources": {
+      "auto-best": {
+        "repository": "darkapoparka/cars",
+        "revision": "097805706654b327a2b8327a7c1670da3a5f67ae",
+        "path": "templates/auto-best",
+        "digest": "27fb1af88f96f79a6214cc598b3e69205b0717231893c7dd0f2e9c247dc06c5a",
+        "tree": "5c53a96513296bd62c4cfd050f620021e2f6fce0"
+      },
+      "modern": {
+        "repository": "darkapoparka/cars",
+        "revision": "097805706654b327a2b8327a7c1670da3a5f67ae",
+        "path": "templates/modern",
+        "digest": "30e1a99f857cc25e4d78c9459cfb4394a9f70c5b114196a5ca6325ff38823b4b",
+        "tree": "01eac7390fa6ba951d4b8d4c26159a9be150f6c8"
+      },
+      "import": {
+        "repository": "darkapoparka/cars",
+        "revision": "097805706654b327a2b8327a7c1670da3a5f67ae",
+        "path": "templates/import",
+        "digest": "c7d6c93214e859aa2747af8f5e068b6a0b8ca095d6328c807728a4d531d688f8",
+        "tree": "d841ddfe5bec918bf6b2c19fd6971fecd6b8e54d"
+      },
+      "app": {
+        "repository": "darkapoparka/cars",
+        "revision": "097805706654b327a2b8327a7c1670da3a5f67ae",
+        "path": "templates/app",
+        "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+        "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
+      },
+      "mobile": {
+        "repository": "darkapoparka/cars",
+        "revision": "097805706654b327a2b8327a7c1670da3a5f67ae",
+        "path": "templates/mobile",
+        "digest": "f5a3e541a7c648a4c2899ad3893e22a3806027a9f66d95fa4e8c74b2226635b6",
+        "tree": "792bfdd1d8eb22aabd90c7e3a0c0779a6c1c36f3"
+      },
+      "karento-best": {
+        "repository": "darkapoparka/cars",
+        "revision": "097805706654b327a2b8327a7c1670da3a5f67ae",
+        "path": "templates/karento-best",
+        "digest": "be17ef365e3272753df6e50826b139a45bfc32b8fef54ddcb86d977ad16280a9",
+        "tree": "8c5ac869c7fd15e19a80c660343fc64b20a2bad9"
+      }
+    },
+    "paths": [
+      {
+        "path": "import/src/lib/config/dealer.ts",
+        "choice": "template",
+        "originalSha256": "aa1c0fa092d92fc0854e327415ec137729806d02ee65c346f85e3740a9217478",
+        "oldSha256": "71535b2e19e083ec0592769227b07121ae63de21df74c586cfa20284f9f002cf",
+        "targetSha256": "38cb99ebc64fe1801d52706c94a37969194093748369893f082c0bfa07bfc92d",
+        "mergedSha256": "aa1c0fa092d92fc0854e327415ec137729806d02ee65c346f85e3740a9217478"
+      }
+    ]
   }
 }
