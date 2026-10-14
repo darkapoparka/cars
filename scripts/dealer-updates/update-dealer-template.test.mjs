@@ -8,7 +8,7 @@ import { fileURLToPath } from 'node:url';
 import test from 'node:test';
 import { fingerprint } from '../lib/workflow.mjs';
 import { applyMounts } from '../publishing/mounts.mjs';
-import { targetManifestForUpgrade, assertUpgradeSourceAdmission, personalizeRegisteredCandidate, assertFactualRefreshAdmission, assertFactualRefreshCandidate, writeFactualRefreshMismatchReview, assertFactualRefreshReplay, assertRegisteredPersonalizationPreservation, planReviewedRegisteredConsumerResolutions, deriveRegisteredConsumerTargets, applyReviewedFactualConsumerResolutions } from './update-dealer-template.mjs';
+import { targetManifestForUpgrade, assertUpgradeSourceAdmission, personalizeRegisteredCandidate, assertFactualRefreshAdmission, assertFactualRefreshCandidate, writeFactualRefreshMismatchReview, assertFactualRefreshReplay, assertRegisteredPersonalizationPreservation, planReviewedRegisteredConsumerResolutions, deriveRegisteredConsumerTargets, applyReviewedFactualConsumerResolutions, modernCopyProfileInputPaths } from './update-dealer-template.mjs';
 import {planThreeWayUpgrade,materializeUpgradeCandidate} from './three-way-upgrade.mjs';
 
 const wrapper = fileURLToPath(new URL('./update-dealer-template.mjs', import.meta.url));
@@ -523,4 +523,30 @@ test('factual mismatch plan evidence records four raw byte leases and refuses wi
  }finally{
   const resolved=fs.realpathSync(root);assert.equal(path.dirname(resolved),tempParent);assert(path.basename(resolved).startsWith('cars-factual-mismatch-'));fs.rmSync(resolved,{recursive:true,force:true});
  }
+});
+
+function modernCopyCarrierArea(t){
+ const directory=fs.mkdtempSync(path.join(os.tmpdir(),'cars-modern-copy-carrier-'));
+ t.after(()=>{const exact=fs.realpathSync(directory),relative=path.relative(fs.realpathSync(os.tmpdir()),exact);assert(relative.startsWith('cars-modern-copy-carrier-')&&!relative.includes(path.sep)&&!path.isAbsolute(relative));fs.rmSync(exact,{recursive:true,force:true});});
+ const put=(name,value)=>{const file=path.join(directory,name);fs.mkdirSync(path.dirname(file),{recursive:true});const bytes=Buffer.from(JSON.stringify(value,null,2)+'\n');fs.writeFileSync(file,bytes);return createHash('sha256').update(bytes).digest('hex');};
+ put('dealer.json',{slug:'carrier-fixture'});return {directory,put};
+}
+test('Modern copy carrier preserves the ordinary three-file inventory and admits exact facts.vehicles',t=>{
+ const f=modernCopyCarrierArea(t),read=()=>modernCopyProfileInputPaths({dealerRoot:f.directory,dealer:'carrier-fixture'});
+ f.put('business-facts.json',{business:{name:'Fixture'},vehicles:[{id:'1',title:'Original vehicle'}]});assert.deepEqual(read(),['business-facts.json','dealer.json']);
+ f.put('stock.json',[{id:'1'}]);assert.deepEqual(read(),['business-facts.json','dealer.json','stock.json']);assert.notDeepEqual(read(),['business-facts.json','dealer.json']);
+});
+test('Modern copy carrier refuses absent, empty and arbitrary alternative stock carriers',t=>{
+ const f=modernCopyCarrierArea(t),read=()=>modernCopyProfileInputPaths({dealerRoot:f.directory,dealer:'carrier-fixture'});assert.throws(read,/Exact original Modern factual/);
+ f.put('business-facts.json',{vehicles:[]});assert.throws(read,/Exact original Modern factual/);f.put('business-facts.json',{listings:[{id:'1'}]});assert.throws(read,/Exact original Modern factual/);
+ f.put('normalized-inventory.json',[{id:'1'}]);assert.throws(read,/Exact original Modern factual/);
+});
+test('Modern copy carrier reuses sealed registered inputs and refuses changed original factual bytes',t=>{
+ const f=modernCopyCarrierArea(t),dealer='carrier-fixture',dealerId='bg-varna-carrier-fixture',repository='darkapoparka/cars-carrier-fixture',sourcePath='research/original-stock.json',sourceUrl='https://example.invalid/advert/1';
+ const sourceSha=f.put(sourcePath,{listings:[{id:'original-1',sourceUrl}]});
+ const input={schemaVersion:1,kind:'cars-registered-dealer-derived-inputs',dealer,reviewed:true,reviewedAt:'2026-10-14T00:00:00Z',facts:{business:{name:'Fixture',countryCode:'BG',currency:'EUR'}},stock:{mode:'retained-dealer-source',listings:[{id:'original-1',sourceUrl,sourceRecord:{path:sourcePath,sha256:sourceSha,id:'original-1'}}]},locale:{schemaVersion:1,dealerId,defaultLocale:'bg',enabledLocales:['bg','en'],dealerCountry:'BG',inventoryCurrency:'EUR'},sourceEvidence:[{path:sourcePath,sha256:sourceSha}]};
+ const inputSha=f.put('.client/registered-personalization.json',input),receipt={schemaVersion:1,kind:'cars-registered-dealer-source-adoption',dealer,reviewed:true,reviewedAt:'2026-10-14T00:00:00Z',identity:{dealerId,repository},personalization:{sha256:inputSha},nativeApproval:false,hostedApproval:false,globalReleaseApproval:false},receiptSha=f.put('.client/registered-source-adoption.json',receipt);
+ f.put('dealer.json',{slug:dealer,dealerId,repository,registeredSourceAdoption:{receipt:{path:'.client/registered-source-adoption.json',sha256:receiptSha},personalization:{path:'.client/registered-personalization.json',sha256:inputSha}}});
+ const read=()=>modernCopyProfileInputPaths({dealerRoot:f.directory,dealer});assert.deepEqual(read(),['.client/registered-personalization.json','.client/registered-source-adoption.json','dealer.json',sourcePath]);
+ fs.appendFileSync(path.join(f.directory,sourcePath),' ');assert.throws(read,/original factual proof bytes changed/);
 });

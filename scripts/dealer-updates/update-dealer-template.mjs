@@ -5,7 +5,7 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 import { createRequire } from 'node:module';
 import { fingerprint, filesAt, git, normalized } from '../lib/workflow.mjs';
 import { planSixDesignSelection, SIX_DESIGN_PACKAGING_CANDIDATE } from '../lib/six-design-release.mjs';
-import { loadDealerProfile } from '../lib/client-refresh-normalize.mjs';
+import { loadDealerProfile, readRegisteredPersonalization } from '../lib/client-refresh-normalize.mjs';
 import {loadReviewedSharingAsset} from '../lib/client-logo-contract.mjs';
 import { applyRefreshAdapter } from '../lib/client-refresh-adapters.mjs';
 import {buildModernDealerInventoryCopy} from '../lib/modern-dealer-inventory-copy.mjs';
@@ -561,12 +561,28 @@ export function assertReviewedModernCopy({profile,value}) {
   for(const row of rows)for(const locale of ['en','bg'])if(JSON.stringify(copy[row.slug][locale].imageAlts)!==JSON.stringify(row.images.map(x=>x.alt)))throw Error('Reviewed Modern copy changed factual image alts: '+row.slug);
   return {rows:rows.length,modernInputRowsSha256:value.modernInputRowsSha256,reviewedCopySha256:sha256(JSON.stringify(copy))};
 }
+/** Preserve the exact original stock carrier rather than manufacturing stock.json. */
+export function modernCopyProfileInputPaths({dealerRoot,dealer}) {
+  const factsFile=path.join(dealerRoot,'business-facts.json'),stockFile=path.join(dealerRoot,'stock.json');
+  if(fs.existsSync(factsFile)&&fs.existsSync(stockFile))return ['business-facts.json','dealer.json','stock.json'];
+  const registered=readRegisteredPersonalization(dealerRoot,dealer);
+  if(registered){
+    const binding=readJson(path.join(dealerRoot,'dealer.json')).registeredSourceAdoption;
+    return [...new Set(['dealer.json',binding.receipt.path,binding.personalization.path,...registered.sourceEvidence.map(row=>row.path)])].sort();
+  }
+  if(!fs.existsSync(stockFile)&&fs.existsSync(factsFile)){
+    const facts=readJson(factsFile);
+    if(Array.isArray(facts.vehicles)&&facts.vehicles.length>0&&facts.vehicles.length<=400)return ['business-facts.json','dealer.json'];
+  }
+  throw Error('Exact original Modern factual input inventory required');
+}
+
 export function loadModernCopyReview({carsRoot,dealerRoot,dealer,pin}) {
   const artifact=qualificationArtifact(carsRoot,pin.path),relative=path.relative(carsRoot,artifact.file).replaceAll('\\','/');
   if(relative!=='docs/releases/cloudflare-existing25-20261011/vercel-existing-source/'+dealer+'/modern-copy-review.json'||!/^[a-f0-9]{64}$/.test(pin.sha256??'')||artifact.sha256!==pin.sha256)throw Error('Exact bounded dealer Modern copy path/hash required');
   const value=artifact.value,profile=loadDealerProfile(dealerRoot,dealer);assertReviewedModernCopy({profile,value});
   if(git(carsRoot,['--no-lazy-fetch','rev-parse',value.sourceCommit+':clients/'+dealer])!==value.baselineTree)throw Error('Reviewed Modern copy immutable client tree differs');
-  if(!Array.isArray(value.profileInputs)||JSON.stringify(value.profileInputs.map(x=>x.path).sort())!==JSON.stringify(['business-facts.json','dealer.json','stock.json']))throw Error('Exact original Modern factual input inventory required');
+  if(!Array.isArray(value.profileInputs)||JSON.stringify(value.profileInputs.map(x=>x.path).sort())!==JSON.stringify(modernCopyProfileInputPaths({dealerRoot,dealer})))throw Error('Exact original Modern factual input inventory required');
   for(const row of value.profileInputs){
     const file=path.join(dealerRoot,row.path),stat=fs.lstatSync(file),bytes=fs.readFileSync(file);
     if(!stat.isFile()||stat.isSymbolicLink()||!samePath(fs.realpathSync(file),file)||bytes.length!==row.bytes||sha256(bytes)!==row.sha256||crypto.createHash('sha1').update('blob '+bytes.length+'\0').update(bytes).digest('hex')!==row.gitBlob||git(carsRoot,['--no-lazy-fetch','rev-parse',value.sourceCommit+':clients/'+dealer+'/'+row.path])!==row.gitBlob)throw Error('Reviewed Modern source facts changed: '+row.path);
