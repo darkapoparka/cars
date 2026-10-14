@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-native-source-qualification-context",
+  "id": "fleet-final-polish-20261014",
+  "dealer": "chernomore-varna",
+  "scope": "existing-dealer-pilot",
+  "sourceCommit": "097805706654b327a2b8327a7c1670da3a5f67ae",
+  "reviewed": true,
+  "reviewedAt": "2026-10-14T18:24:47.957Z",
+  "qualificationOnly": true,
+  "approved": false,
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "globalReleaseApproval": false,
+  "approvedLockSha256": "ecdfaf9599fbcbeadebc24de3b9aa1c7615a9a49e29d338e5e9a23427d405e26",
+  "candidateLockSha256": "23622acb9fbaa5cb78379d6a080170f99dadb4703ff7b8ccba3d21a2b41e8786",
+  "sourceDeltaReview": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
+    "sha256": "8fac7527b396f75ff6647a724ce7a2152bb13ff514efe6480b7c322f66fc195f",
+    "reviewedAt": "2026-10-14T18:24:47.957Z"
+  },
+  "sourceReview": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-review.json",
+    "sha256": "37bd96e608c3b68c7e5d592892ecbf9f61d62410f72b364157fc43e53ba33aff"
+  }
+}
