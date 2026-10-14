@@ -8,11 +8,19 @@ import {spawnSync,execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
 import {packageDealer,committedDealerInputs} from './package-dealer.mjs';
 import {packageFiles,verifyPackage,verifyPackageTree,exportDealer,pushExport,publicationEnvelope,validateReview,assertVercelQualificationExport} from './export-dealer.mjs';
-import {resolveDealerPresentationVersion} from './publishing/dealer-presentation.mjs';
+import {DEALER_PRESENTATION_VERSION,resolveDealerPresentationVersion} from './publishing/dealer-presentation.mjs';
 import {writePackageObjectPack,installPackageObjectPack} from './lib/git-object-transport.mjs';
 
 export const VERCEL_REQUEST='docs/releases/vercel-presentation-20261011/request.json';
 export const VERCEL_KEYS=['auto-best','modern','import','app','mobile','karento-best'];
+/** The authorized refresh opts into shared presentation only after validating
+ * the unchanged committed source; historical manifest bytes remain the source. */
+export function vercelRefreshPresentationManifest(sourceManifest){
+ const manifest=structuredClone(sourceManifest);
+ assert(manifest.presentation===undefined||(manifest.presentation&&typeof manifest.presentation==='object'&&!Array.isArray(manifest.presentation)),'Invalid dealer presentation policy');
+ manifest.presentation={...manifest.presentation,version:resolveDealerPresentationVersion(manifest.presentation?.version??DEALER_PRESENTATION_VERSION)};
+ return manifest;
+}
 const hash=b=>createHash('sha256').update(b).digest('hex');
 const oid=v=>/^[a-f0-9]{40}$/.test(v||'');
 const digest=v=>/^[a-f0-9]{64}$/.test(v||'');
@@ -109,8 +117,9 @@ async function prepareRefresh(root,request,row,area){
  if(!independent)git(root,['merge-base','--is-ancestor',row.sourceCommit,process.env.GITHUB_SHA]);else assert.equal(git(sourceRoot,['rev-parse','HEAD']),row.sourceCommit);
  const sourceTree=git(sourceRoot,['rev-parse',row.sourceCommit+(prefix?':'+prefix:'^{tree}')]);assert.equal(sourceTree,row.sourceTree,'Prepared raw source tree changed');
  const review=pin(root,row.sourceReview).value;assert.equal(review.dealer,row.slug);assert.equal(review.preparedTree,row.sourceTree);assert.equal(review.canonicalSourceRepository,row.sourceRepository);
- const manifest=readJson(path.join(source,'dealer.json'));assertVercelSourceBinding(manifest,row,request);
- const {canonicalFiles}=await committedDealerInputs({root:sourceRoot,source,manifest,sourceCommit:row.sourceCommit,prefix});
+ const sourceManifest=readJson(path.join(source,'dealer.json'));assertVercelSourceBinding(sourceManifest,row,request);
+ const {canonicalFiles}=await committedDealerInputs({root:sourceRoot,source,manifest:sourceManifest,sourceCommit:row.sourceCommit,prefix});
+ const manifest=vercelRefreshPresentationManifest(sourceManifest);
  let nativeQualification;
  if(request.stage==='qualification-preview'){const context=pin(root,row.qualification).value;assert.equal(context.candidateLockSha256,request.templateLock.sha256);nativeQualification={context,targetBranch:row.targetBranch};}
  const pack=path.join(area,'package');await packageDealer({root,source,destination:pack,manifest,sourceCommit:row.sourceCommit,canonicalFiles,provider:'vercel',...(nativeQualification?{nativeQualification}: {})});

@@ -1,5 +1,5 @@
 import test from 'node:test';import assert from 'node:assert/strict';
-import {validateVercelRefreshRequest,vercelRefreshMatrix,assertVercelSourceBinding,VERCEL_KEYS} from './prepare-vercel-presentation-release.mjs';
+import {validateVercelRefreshRequest,vercelRefreshMatrix,assertVercelSourceBinding,vercelRefreshPresentationManifest,VERCEL_KEYS} from './prepare-vercel-presentation-release.mjs';
 function fixture(){
  const rows=Array.from({length:25},(_,i)=>({slug:i===0?'f1rst-motors':i===24?'al-reef-used-cars':'dealer-'+i,repository:'darkapoparka/cars-fixture'+i,origin:'https://cars-fixture'+i+'.vercel.app',projectId:'prj_fixture'+i}));
  const registry={dealers:rows.map((r,i)=>({slug:r.slug,repository:r.repository,delivery:{projectId:r.projectId},...(i===24?{sourceOwnership:'independent-repository',canonicalSourceRepository:r.repository,localPath:null}: {})}))};
@@ -31,4 +31,15 @@ test('stale four-design canonical source and changed template locators are refus
  const f=fixture(),row=f.request.dealers[0],manifest={slug:row.slug,repository:row.repository,packaging:{version:'5'},shareIdentity:{publicOrigin:row.publicOrigin},variants:VERCEL_KEYS.map(key=>({key})),templateSources:f.request.templateSources};assertVercelSourceBinding(manifest,row,f.request);
  assert.throws(()=>assertVercelSourceBinding({...manifest,packaging:{version:'3'},variants:manifest.variants.slice(0,4)},row,f.request));
  const changed=structuredClone(manifest);changed.templateSources.modern.tree='d'.repeat(40);assert.throws(()=>assertVercelSourceBinding(changed,row,f.request),/template drift/);
+});
+test('authorized refresh applies current presentation after preserving source manifest bytes',()=>{
+ const f=fixture(),row=f.request.dealers[0],source={slug:row.slug,repository:row.repository,packaging:{version:'5'},shareIdentity:{publicOrigin:row.publicOrigin},variants:VERCEL_KEYS.map(key=>({key})),templateSources:f.request.templateSources},before=JSON.stringify(source);
+ const derived=vercelRefreshPresentationManifest(source);
+ assert.equal(derived.presentation.version,'template-palette-services-v2');assert.equal(JSON.stringify(source),before);
+ const {presentation,...rest}=derived;assert.deepEqual(rest,source);assertVercelSourceBinding(derived,row,f.request);
+});
+test('reviewed historical presentation maps to current policy and unknown policy still refuses',()=>{
+ const source={slug:'f1rst-motors',presentation:{version:'neutral-services-v1',note:'preserved'}};
+ assert.deepEqual(vercelRefreshPresentationManifest(source).presentation,{version:'template-palette-services-v2',note:'preserved'});assert.equal(source.presentation.version,'neutral-services-v1');
+ for(const presentation of [null,[],{version:'invented'}])assert.throws(()=>vercelRefreshPresentationManifest({slug:source.slug,presentation}));
 });
