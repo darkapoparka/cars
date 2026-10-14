@@ -12,7 +12,7 @@ import { applyMounts } from './publishing/mounts.mjs';
 import { git, gitFiles } from './lib/workflow.mjs';
 import { dealerGuidance } from './lib/dealer-guidance.mjs';
 import { assertLegacyLocaleCompatible } from './lib/dealer-locale.mjs';
-import { NATIVE_PACKAGING_VERSION, assertNativeAdoption } from './lib/native-localization.mjs';
+import { NATIVE_PACKAGING_VERSION, assertNativeAdoption, assertNativeQualification } from './lib/native-localization.mjs';
 import { adoptNativeSource, applyNativeMounts } from './publishing/native-mounts.mjs';
 import { applySharedMedia } from './publishing/shared-media.mjs';
 import { applyVercelAssets } from './publishing/vercel-asset-plan.mjs';
@@ -220,7 +220,7 @@ function fallbackGuidance(manifest, provider) {
   return `# ${manifest.slug} dealer package\n\nThis repository is a derived deployment package. Canonical dealer source lives under clients/${manifest.slug} in the Cars repository. Read dealer.json and .cars-package.json for identity and provenance. Make source changes in Cars and regenerate the package; do not silently edit generated mounting code or template masters.\n\nAll ${manifest.variants.length} designs share one Vercel project. Preserve retained lockfiles, source layouts, licensing and provenance. Run each app's documented checks and test every mounted entry, inventory, detail, contact and enquiry destination at 390 and 1440 px. Check the design switcher at 320 px, including Escape and focus return. A build is not public-preview proof. Publishing does not authorize outreach.\n`;
 }
 
-async function prepare({ root = ROOT, source, manifest, sourceCommit, guidance, canonicalFiles, nativeReleases, provider = 'vercel', cloudflareLocks }) {
+async function prepare({ root = ROOT, source, manifest, sourceCommit, guidance, canonicalFiles, nativeReleases, nativeQualification, provider = 'vercel', cloudflareLocks }) {
   manifest = structuredClone(manifest);
   validatePackagingManifest(manifest);
   if (!['vercel', 'cloudflare'].includes(provider)) throw new Error('Unsupported publishing provider');
@@ -244,8 +244,13 @@ async function prepare({ root = ROOT, source, manifest, sourceCommit, guidance, 
     files.set(name, preserveExtraBytes(name) ? bytes : normalized(bytes));
   }
   assertRetainedDealerLogoSurfaces(files,manifest);
+  const qualification = nativeQualification ? vercelPreviewQualification(files, manifest, nativeQualification, {root,sourceCommit,provider,nativeReleases}) : undefined;
   if (native) {
-    if (nativeReleases) files = adoptNativeSource(files, baseNativeManifest(manifest), nativeReleases,{root});
+    if (nativeQualification) {
+      files = applyNativeMounts(files, baseNativeManifest(manifest));
+      assertNativeQualification(files, baseNativeManifest(manifest), nativeQualification.context, {root});
+    }
+    else if (nativeReleases) files = adoptNativeSource(files, baseNativeManifest(manifest), nativeReleases,{root});
     else { assertNativeAdoption(files, baseNativeManifest(manifest),{root}); files = applyNativeMounts(files, baseNativeManifest(manifest)); assertNativeAdoption(files, baseNativeManifest(manifest),{root}); }
     assertAppVariant(files, manifest);
     if (manifest.packaging.version === SIX_PACKAGING_VERSION) {
@@ -320,7 +325,7 @@ async function prepare({ root = ROOT, source, manifest, sourceCommit, guidance, 
   sealSixVariantBuild(files, manifest, { provider });
   const payload = hashes();
   const payloadDigest = sha256(JSON.stringify(payload));
-  files.set('.cars-package.json', Buffer.from(json({ schemaVersion: 1, manifest, sourceCommit, packagingVersion: manifest.packaging.version, assetDelivery, payloadDigest, payload })));
+  files.set('.cars-package.json', Buffer.from(json({ schemaVersion: 1, manifest, sourceCommit, packagingVersion: manifest.packaging.version, assetDelivery, ...(qualification ? {qualification} : {}), payloadDigest, payload })));
   const digest = sha256(JSON.stringify(hashes()));
   return { resolvedSource, files, digest, inputDigest, manifestInput, manifest, assetDelivery, packagingVersion: manifest.packaging.version };
 }
@@ -334,6 +339,25 @@ async function validateDestination(source, destination) {
   const realParent = await fs.realpath(existing);
   if (path.normalize(realParent).toLowerCase() !== path.normalize(existing).toLowerCase()) throw new Error('Package destination parent uses a symlink or junction; use its real path');
   return resolved;
+}
+
+/** Explicit Vercel preview admission; ordinary packaging keeps approved-native guards. */
+export function vercelPreviewQualification(files, manifest, qualification, {root=ROOT,sourceCommit,provider='vercel',nativeReleases}={}) {
+  if (provider !== 'vercel' || !nativePackaging(manifest.packaging?.version) || nativeReleases ||
+      !qualification || JSON.stringify(Object.keys(qualification).sort()) !== '["context","targetBranch"]' ||
+      !/^[a-f0-9]{40}$/.test(sourceCommit || '') ||
+      !/^codex\/[a-z0-9][a-z0-9/-]*$/.test(qualification.targetBranch || '') || qualification.targetBranch.includes('..')) {
+    throw new Error('Vercel qualification requires explicit native source and its exact codex preview branch');
+  }
+  const receipt = assertNativeQualification(files, baseNativeManifest(manifest), qualification.context, {root});
+  const origin = manifest.shareIdentity?.publicOrigin;
+  if (typeof origin !== 'string' || new URL(origin).origin !== origin.replace(/\/$/, '')) throw new Error('Exact dealer public origin required');
+  return {schemaVersion:1,kind:'cars-vercel-native-source-qualification',provider:'vercel',dealer:manifest.slug,
+    repository:manifest.repository,publicOrigin:origin,sourceCommit,targetBranch:qualification.targetBranch,
+    production:false,nativeApproval:false,hostedApproval:false,globalReleaseApproval:false,
+    contextId:qualification.context.id,contextDigest:receipt.contextDigest,templateSourceCommit:qualification.context.sourceCommit,
+    candidateLockSha256:qualification.context.candidateLockSha256,sourceDeltaReview:structuredClone(qualification.context.sourceDeltaReview),
+    nativeInput:structuredClone(receipt.input),pendingNativeChecks:structuredClone(receipt.pendingNativeChecks)};
 }
 
 /** Prepare source without writing, staging, changing refs, or starting a runtime. */
