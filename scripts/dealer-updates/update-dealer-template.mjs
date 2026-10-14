@@ -65,7 +65,7 @@ function parseCommand(argv) {
   const [action, ...rest] = argv;
   if (!['plan', 'install', 'rollback'].includes(action)) throw new Error(`Unknown action: ${action}\n${updateDealerTemplateUsage}`);
   const allowed = {
-    plan: new Set(['dealer-root', 'cars-root', 'template-root', 'lock-file', 'run-dir', 'candidate-dir', 'resolutions-file', 'asset-pool', 'candidate-asset-pool', 'design-set', 'variants', 'template-palette', 'qualification', 'registered-adoption', 'registered-adoption-sha256', 'refresh-facts', 'modern-copy-review', 'modern-copy-review-sha256']),
+    plan: new Set(['dealer-root', 'cars-root', 'template-root', 'lock-file', 'run-dir', 'candidate-dir', 'resolutions-file', 'asset-pool', 'candidate-asset-pool', 'design-set', 'variants', 'template-palette', 'qualification', 'registered-adoption', 'registered-adoption-sha256', 'refresh-facts', 'modern-copy-review', 'modern-copy-review-sha256', 'target-branding', 'target-branding-sha256']),
     install: new Set(['run-dir']),
     rollback: new Set(['run-dir', 'dealer-root'])
   }[action];
@@ -656,6 +656,29 @@ async function personalizePinnedTargetBases({pins,newBases,dealerRoot,manifest,p
     targetSources:Object.fromEntries(keys.map(key=>[key,renderPins(pins[key].targetSource)])),consumerPaths:[...consumerPaths].sort(),...(appNoticeProof?{appInventoryNoticePreservation:appNoticeProof}:{}),...(modernCopyReview?{modernCopyReview:{path:modernCopyReview.path,sha256:modernCopyReview.sha256,modernInputRowsSha256:modernCopyReview.value.modernInputRowsSha256}}:{})}};
 }
 
+/** Align reviewed logo consumers on the fresh factual target before preservation.
+ * The dealer tree is never modified and arbitrary custom paths still use three-way merge. */
+export async function brandFactualTargetBases({newBases,manifest,proof,brandingPin,applyBranding}) {
+  const keys=['auto-best','modern','import','app','mobile','karento-best'];
+  if(!(typeof applyBranding==='function')||!brandingPin||!/^[a-f0-9]{64}$/.test(brandingPin.sha256||'')||proof?.dealer!==manifest.slug||JSON.stringify(Object.keys(newBases).sort())!==JSON.stringify([...keys].sort()))throw Error('Exact reviewed factual target branding required');
+  const files=new Map();for(const key of keys)addPrefixedTree(files,key,newBases[key]);const before=new Map(files);
+  const contract=await applyBranding(files,manifest);
+  if(!contract||!/^[a-f0-9]{16}$/.test(contract.packId||'')||contract.publicBase!=='/dealer-brand/v2-'+contract.packId)throw Error('Reviewed target branding contract differs');
+  const consumers=new Set(proof.consumerPaths);
+  for(const [name,bytes]of before)if(!files.has(name))throw Error('Reviewed target branding removed source: '+name);
+  for(const [name,bytes]of files){const key=name.split('/')[0];if(!keys.includes(key))continue;if(!Buffer.isBuffer(bytes))throw Error('Reviewed target branding bytes required');if(!before.get(name)?.equals(bytes))consumers.add(name);}
+  const split=splitPrefixedTrees(files,keys);for(const key of keys)newBases[key]=split[key];
+  return {...proof,consumerPaths:[...consumers].sort(),targetBranding:{schemaVersion:1,stage:'reviewed-logo-pack-on-factual-target-before-preservation-merge',input:brandingPin,packId:contract.packId,publicBase:contract.publicBase,dealerSourceChanged:false}};
+}
+async function applyReviewedFactualTargetBranding({factual,newBases,manifest,carsRoot,pins,brandingPin}) {
+  if(!brandingPin)return;
+  const input=qualificationArtifact(carsRoot,brandingPin.path);if(input.sha256!==brandingPin.sha256)throw Error('Reviewed target branding input changed');
+  const {readBrandingInputs}=await import('../prepare-existing-fleet-source.mjs'),{applyLeadBranding}=await import('../publishing/lead-branding.mjs');
+  const options=readBrandingInputs(carsRoot,input.value,manifest.slug),sharp=createRequire(path.join(carsRoot,'runtime/source-preparation-tools/package.json'))('sharp');if(sharp.versions.sharp!=='0.35.5')throw Error('Target raster toolchain differs');
+  const templates=new Map(),readTemplate=(source,name,optional)=>{const key=source.path.slice('templates/'.length);if(!templates.has(key))templates.set(key,readPinnedTemplateTree({key,repositoryPath:carsRoot,source:pins[key].targetSource}).tree);const bytes=templates.get(key).get(name);if(!bytes&&optional)return null;if(!bytes)throw Error('Missing exact target palette '+key+'/'+name);return bytes.toString('utf8');};
+  factual.proof=await brandFactualTargetBases({newBases,manifest,proof:factual.proof,brandingPin,applyBranding:(files,target)=>applyLeadBranding(files,target,{...options,sharp,readTemplate})});
+}
+
 /** A reviewed dealer resolution cannot retain stale facts and receive a new profile seal. */
 export function assertFactualRefreshCandidate({candidate,newBases,proof}) {
   const keys=['auto-best','modern','import','app','mobile','karento-best'];
@@ -1016,6 +1039,7 @@ async function validatePinnedBaseEvidence(metadata, manifest, lock, paths) {
   const appInventoryNoticeReview=readAppInventoryNoticeReview(noticeResolutionBytes);
   if(appInventoryNoticeReview!=null&&(!refreshFacts||!metadata.selection?.templatePalette||metadata.registeredAdoption))throw Error('Saved App notice review requires ordinary qualified six-family factual preparation');
   const factual=refreshFacts?await personalizeFactualTargetBases({pins:metadata.pins,newBases,dealerRoot:metadata.dealerRoot,manifest:metadata.targetManifest,modernCopyReview,appInventoryNoticeReview,carsRoot:metadata.carsRoot}):null;
+  if(metadata.targetBranding){if(!refreshFacts||!metadata.selection?.templatePalette||metadata.registeredAdoption||!metadata.qualification)throw Error('Saved target branding requires ordinary qualified factual preparation');await applyReviewedFactualTargetBranding({factual,newBases,manifest:metadata.targetManifest,carsRoot:metadata.carsRoot,pins:metadata.pins,brandingPin:metadata.targetBranding});}
   const extendedAdaptations=factual?.adaptations??await personalizeAddedBases({pins:metadata.pins,newBases,dealerRoot:metadata.dealerRoot,manifest});
   const targetManifest = metadata.targetManifest;
   validatePackagingManifest(targetManifest);
@@ -1122,6 +1146,9 @@ async function runPlan(values) {
   if(Boolean(values['modern-copy-review'])!==Boolean(values['modern-copy-review-sha256']))throw new Error('Modern copy review requires its exact path/hash');
   if(values['modern-copy-review']&&(!refreshFacts||values['template-palette']!==true||registeredAdoption||!qualification))throw new Error('Modern copy review requires ordinary qualified six-family factual preparation and native template palette');
   const modernCopyReview=values['modern-copy-review']?loadModernCopyReview({carsRoot,dealerRoot,dealer:manifest.slug,pin:{path:values['modern-copy-review'],sha256:values['modern-copy-review-sha256']}}):null;
+  if(Boolean(values['target-branding'])!==Boolean(values['target-branding-sha256']))throw Error('Target branding requires its exact path/hash');
+  if(values['target-branding']&&(!refreshFacts||values['template-palette']!==true||registeredAdoption||!qualification))throw Error('Target branding requires ordinary qualified six-family factual preparation');
+  const targetBranding=values['target-branding']?{path:values['target-branding'],sha256:values['target-branding-sha256']}:null;
   const targetManifest = targetManifestForUpgrade({ dealerRoot, manifest, pins,targetVariants:selection.targetVariants,carsRoot,registeredAdoption });
   const resolutionBytes = values['resolutions-file'] ? fs.readFileSync(path.resolve(values['resolutions-file'])) : null;
   const resolutions = parseResolutions(resolutionBytes, pins);
@@ -1165,6 +1192,7 @@ async function runPlan(values) {
   const templatePalette=values['template-palette'] === true;
   const templatePaletteConfigs=pinnedPaletteConfigs(newBases,pins,templatePalette);
   const factual=refreshFacts?await personalizeFactualTargetBases({pins,newBases,dealerRoot,manifest:targetManifest,modernCopyReview,appInventoryNoticeReview,carsRoot}):null;
+  if(targetBranding)await applyReviewedFactualTargetBranding({factual,newBases,manifest:targetManifest,carsRoot,pins,brandingPin:targetBranding});
   const extendedAdaptations=factual?.adaptations??await personalizeAddedBases({pins,newBases,dealerRoot,manifest,registeredAdoption});
 
   const adapted = await adaptPinnedBases({ keys: Object.keys(pins), oldBases, newBases, manifest, targetManifest,registeredAdoption });
@@ -1211,6 +1239,7 @@ async function runPlan(values) {
     targetManifestSha256: sha256(Buffer.from(JSON.stringify(adapted.targetManifest))),
     resolutionsSha256: resolutionBytes ? sha256(resolutionBytes) : null,
     sourceBeforeSha256,
+    targetBranding,
     modernCopyReview:modernCopyReview?{path:modernCopyReview.path,sha256:modernCopyReview.sha256}:null,
     runDirectory,
     pins: renderPins(pins),

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "resolutions": {
+    "auto-best/localization/common.json": "template",
+    "auto-best/localization/generated-manifest.json": "template",
+    "auto-best/src/lib/components/vehicles/VehicleCard.svelte": "template",
+    "auto-best/src/lib/config/brand.ts": "template",
+    "auto-best/src/lib/config/locale.ts": "template",
+    "auto-best/src/lib/data/company.ts": "template",
+    "modern/apps/web/app/[locale]/layout.tsx": "template",
+    "modern/apps/web/app/[locale]/sell/page.tsx": "template",
+    "modern/packages/marketplace-domain/testing/mock-data.ts": "template",
+    "modern/packages/marketplace-ui/components/dealer-mobile-brand-bar.tsx": "template",
+    "modern/packages/marketplace/content/inventory-copy.ts": "template",
+    "modern/packages/marketplace/lead-site.ts": "template",
+    "modern/packages/marketplace/mock-directory.ts": "template",
+    "import/src/lib/auxero/home-five.ts": "template",
+    "import/src/lib/components/detail/AuxeroVehicleMobilePdp.svelte": "template",
+    "import/src/lib/content/extra-localized.ts": "template",
+    "import/src/lib/i18n/messages.ts": "template",
+    "import/src/routes/offer/+page.svelte": "template",
+    "app/components/VehicleCard.tsx": "template",
+    "app/components/VehicleDetailClient.tsx": "template",
+    "app/lib/dealer.json": "template",
+    "mobile/src/lib/dealer-inventory.json": "template",
+    "karento-best/src/lib/content.ts": "template",
+    "karento-best/src/lib/data/dealer-detail.ts": "template",
+    "karento-best/src/lib/data/vehicle-detail.ts": "template"
+  }
+}

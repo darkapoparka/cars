@@ -9,7 +9,7 @@ import test from 'node:test';
 import { fingerprint } from '../lib/workflow.mjs';
 import {loadDealerProfile} from '../lib/client-refresh-normalize.mjs';
 import { applyMounts } from '../publishing/mounts.mjs';
-import { targetManifestForUpgrade, assertUpgradeSourceAdmission, personalizeRegisteredCandidate, assertFactualRefreshAdmission, assertFactualRefreshCandidate, writeFactualRefreshMismatchReview, assertFactualRefreshReplay, assertRegisteredPersonalizationPreservation, planReviewedRegisteredConsumerResolutions, deriveRegisteredConsumerTargets, applyReviewedFactualConsumerResolutions, modernCopyProfileInputPaths, modernCopyReviewSource, loadModernCopyReview } from './update-dealer-template.mjs';
+import { targetManifestForUpgrade, assertUpgradeSourceAdmission, personalizeRegisteredCandidate, assertFactualRefreshAdmission, assertFactualRefreshCandidate, writeFactualRefreshMismatchReview, assertFactualRefreshReplay, assertRegisteredPersonalizationPreservation, planReviewedRegisteredConsumerResolutions, deriveRegisteredConsumerTargets, applyReviewedFactualConsumerResolutions, modernCopyProfileInputPaths, modernCopyReviewSource, loadModernCopyReview, brandFactualTargetBases } from './update-dealer-template.mjs';
 import {planThreeWayUpgrade,materializeUpgradeCandidate} from './three-way-upgrade.mjs';
 
 const wrapper = fileURLToPath(new URL('./update-dealer-template.mjs', import.meta.url));
@@ -587,4 +587,35 @@ test('Independent Modern copy source binds the actual own commit tree and refuse
  const read=value=>{const b=Buffer.from(JSON.stringify(value));fs.writeFileSync(file,b);return ()=>loadModernCopyReview({carsRoot,dealerRoot:f.directory,dealer,pin:{path:p,sha256:digest(b)}});};
  assert.equal(read(review)().value.baselineTree,baselineTree);assert.throws(read({...review,baselineTree:'a'.repeat(40)}),/immutable client tree differs/);
  fs.appendFileSync(path.join(f.directory,'stock.json'),' ');assert.throws(read(review),/source facts changed/);
+});
+
+test('reviewed target branding removes matching logo-only merge collisions and retains paid edits',async()=>{
+ const f=factualProofFixture(),name='app/lib/dealer.json',asset='auto-best/static/dealer-brand/logo.webp',selected=Buffer.from([0,1,8,9]);
+ f.newBases.app.set('lib/dealer.json',Buffer.from('{"name":"Retained dealer","logo":"/dealer-app/logo-old.webp"}\n'));
+ f.newBases['auto-best'].set('static/dealer-brand/logo.webp',Buffer.from([0,1,2,3]));
+ const dealer=new Map(f.candidate);dealer.set(name,Buffer.from('{"name":"Retained dealer","logo":"/dealer-brand/v2-aaaaaaaaaaaaaaaa/logo-on-light.webp"}\n'));dealer.set(asset,selected);dealer.set('app/src/paid-feature.ts',Buffer.from('export const paid = true;\n'));
+ const oldBase=new Map(f.candidate);oldBase.set(asset,Buffer.from([0,4,5,6]));const fresh=new Map();for(const [key,rows]of Object.entries(f.newBases))for(const [p,b]of rows)fresh.set(key+'/'+p,b);
+ const refused=planThreeWayUpgrade({oldBase,newBase:fresh,dealer});assert.equal(refused.ready,false);assert(refused.conflicts.some(r=>r.path===name));assert(refused.conflicts.some(r=>r.path===asset));
+ const originalDealer=new Map(dealer),proof=await brandFactualTargetBases({...f,manifest:{slug:'retained'},brandingPin:{path:'docs/releases/branding.json',sha256:'c'.repeat(64)},applyBranding:async files=>{files.set(name,dealer.get(name));files.set(asset,selected);return{packId:'aaaaaaaaaaaaaaaa',publicBase:'/dealer-brand/v2-aaaaaaaaaaaaaaaa'};}});
+ const aligned=new Map();for(const [key,rows]of Object.entries(f.newBases))for(const [p,b]of rows)aligned.set(key+'/'+p,b);
+ const merged=planThreeWayUpgrade({oldBase,newBase:aligned,dealer});assert.equal(merged.ready,true);assert(merged.candidate.get('app/src/paid-feature.ts').equals(dealer.get('app/src/paid-feature.ts')));assert.deepEqual(dealer,originalDealer);
+ const sealed=assertFactualRefreshCandidate({candidate:merged.candidate,newBases:f.newBases,proof});assert(sealed.consumerHashes.some(r=>r.path===name));assert(sealed.consumerHashes.some(r=>r.path===asset));assert.equal(proof.targetBranding.stage,'reviewed-logo-pack-on-factual-target-before-preservation-merge');
+});
+test('reviewed target branding does not auto-resolve custom facts or custom presentation',async()=>{
+ const f=factualProofFixture(),name='app/lib/dealer.json';f.newBases.app.set('lib/dealer.json',Buffer.from('{"name":"Retained dealer","logo":"legacy"}\n'));
+ const dealer=new Map(f.candidate);dealer.set(name,Buffer.from('{"name":"Retained dealer","logo":"selected","customPaid":true}\n'));dealer.set('mobile/src/current-facts.json',Buffer.from('{"price":44111,"id":"retained-stock"}\n'));
+ const proof=await brandFactualTargetBases({...f,manifest:{slug:'retained'},brandingPin:{path:'docs/releases/branding.json',sha256:'c'.repeat(64)},applyBranding:async files=>{files.set(name,Buffer.from('{"name":"Retained dealer","logo":"selected"}\n'));return{packId:'aaaaaaaaaaaaaaaa',publicBase:'/dealer-brand/v2-aaaaaaaaaaaaaaaa'};}});
+ const fresh=new Map();for(const [key,rows]of Object.entries(f.newBases))for(const [p,b]of rows)fresh.set(key+'/'+p,b);const merged=planThreeWayUpgrade({oldBase:new Map(f.candidate),newBase:fresh,dealer});assert.equal(merged.ready,false);assert(merged.conflicts.some(r=>r.path===name));
+ assert.throws(()=>assertFactualRefreshCandidate({candidate:dealer,newBases:f.newBases,proof}),/differs after preservation/);
+});
+test('reviewed target branding refuses source deletions, invalid pack identity and missing input seals',async()=>{
+ const options=()=>({...factualProofFixture(),manifest:{slug:'retained'},brandingPin:{path:'docs/releases/branding.json',sha256:'c'.repeat(64)}});
+ await assert.rejects(()=>brandFactualTargetBases({...options(),applyBranding:async files=>{files.delete('app/src/current-facts.json');return{packId:'aaaaaaaaaaaaaaaa',publicBase:'/dealer-brand/v2-aaaaaaaaaaaaaaaa'};}}),/removed source/);
+ await assert.rejects(()=>brandFactualTargetBases({...options(),applyBranding:async()=>({packId:'aaaaaaaaaaaaaaaa',publicBase:'/wrong'})}),/contract differs/);
+ await assert.rejects(()=>brandFactualTargetBases({...options(),brandingPin:{sha256:'bad'},applyBranding:async()=>{throw Error('Must never be called');}}),/Exact reviewed/);
+});
+test('factual source preparation forwards the exact selected branding pin while registered adoption stays unchanged',async()=>{
+ const {sourcePreparationPlanArgs}=await import('../prepare-existing-fleet-source.mjs');const input={source:'dealer',root:'cars',lockFile:'lock',qualificationFile:'qualification',runDirectory:'run',assetPool:'pool',brandingPin:{path:'docs/releases/selected-branding.json',sha256:'c'.repeat(64)}};
+ const args=sourcePreparationPlanArgs(input);assert.equal(args[args.indexOf('--target-branding')+1],input.brandingPin.path);assert.equal(args[args.indexOf('--target-branding-sha256')+1],input.brandingPin.sha256);assert(args.includes('--refresh-facts'));
+ const registered=sourcePreparationPlanArgs({...input,registeredAdoptionPin:{path:'adoption',sha256:'d'.repeat(64)}});assert(!registered.includes('--target-branding'));assert(!registered.includes('--refresh-facts'));
 });

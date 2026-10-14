@@ -1,77 +1,28 @@
 {
   "schemaVersion": 1,
   "mode": "existing-migration",
-  "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+  "sourceRevision": "7d4557f3074b32e3f57af28b89906754b73fb9cd",
   "dealers": [
-    "chernomore-varna",
-    "exclusive-auto-varna",
-    "rqs-auto-team",
-    "prestige-varna",
-    "evrocar-varna-09",
-    "sprint-auto-varna",
-    "extra-car-sm",
-    "avtoborsa-mania",
-    "tesi-car-varna"
+    "bradford-cherry-tree-cars"
+  ],
+  "targets": [
+    "auto-best",
+    "modern",
+    "import",
+    "app",
+    "mobile",
+    "karento-best",
+    "router"
   ],
   "composition": {
     "reviewed": true,
-    "reviewedAt": "2026-10-13T23:38:19.856Z",
-    "reviewScope": "Build the final nine successful original source proposals using the approved factual inputs and raster branding; preserve existing Vercel and private publishing identities."
-  },
-  "sourcePublications": [
-    {
-      "dealer": "chernomore-varna",
-      "commit": "bf229eeb71be77ee883c78f4ea29a0ba6bcd8b8b",
-      "tree": "cb31732e89799898db3717570d69652791ad83fb",
-      "path": "docs/releases/cloudflare-existing25-20261011/registered-source/chernomore-varna/source-publication.json"
-    },
-    {
-      "dealer": "exclusive-auto-varna",
-      "commit": "bf229eeb71be77ee883c78f4ea29a0ba6bcd8b8b",
-      "tree": "767f7fa65abf61b22a490cfece851235ce713c44",
-      "path": "docs/releases/cloudflare-existing25-20261011/registered-source/exclusive-auto-varna/source-publication.json"
-    },
-    {
-      "dealer": "rqs-auto-team",
-      "commit": "bf229eeb71be77ee883c78f4ea29a0ba6bcd8b8b",
-      "tree": "8c713f3bc796b2290bc9fa69cf139add4ccca0b3",
-      "path": "docs/releases/cloudflare-existing25-20261011/registered-source/rqs-auto-team/source-publication.json"
-    },
-    {
-      "dealer": "prestige-varna",
-      "commit": "bf229eeb71be77ee883c78f4ea29a0ba6bcd8b8b",
-      "tree": "0bbdb0de563474b8255832a2a3014ca817202356",
-      "path": "docs/releases/cloudflare-existing25-20261011/registered-source/prestige-varna/source-publication.json"
-    },
-    {
-      "dealer": "evrocar-varna-09",
-      "commit": "bf229eeb71be77ee883c78f4ea29a0ba6bcd8b8b",
-      "tree": "e4ad7dd944e327bf943fb34c2c7e7dc0aa375e16",
-      "path": "docs/releases/cloudflare-existing25-20261011/registered-source/evrocar-varna-09/source-publication.json"
-    },
-    {
-      "dealer": "sprint-auto-varna",
-      "commit": "bf229eeb71be77ee883c78f4ea29a0ba6bcd8b8b",
-      "tree": "30539af117415ea78bc692132169999a4b5e6a18",
-      "path": "docs/releases/cloudflare-existing25-20261011/registered-source/sprint-auto-varna/source-publication.json"
-    },
-    {
-      "dealer": "extra-car-sm",
-      "commit": "bf229eeb71be77ee883c78f4ea29a0ba6bcd8b8b",
-      "tree": "ef9ef5dda367e773f4fc926b6839e4036ae2c9e0",
-      "path": "docs/releases/cloudflare-existing25-20261011/registered-source/extra-car-sm/source-publication.json"
-    },
-    {
-      "dealer": "avtoborsa-mania",
-      "commit": "bf229eeb71be77ee883c78f4ea29a0ba6bcd8b8b",
-      "tree": "323640df9d333e8be52f7e3786e79c36cc636e64",
-      "path": "docs/releases/cloudflare-existing25-20261011/registered-source/avtoborsa-mania/source-publication.json"
-    },
-    {
-      "dealer": "tesi-car-varna",
-      "commit": "bf229eeb71be77ee883c78f4ea29a0ba6bcd8b8b",
-      "tree": "d4d008456eed1e3e8add7c916bb21ea933b8032a",
-      "path": "docs/releases/cloudflare-existing25-20261011/registered-source/tesi-car-varna/source-publication.json"
+    "reviewedAt": "2026-10-14T22:45:55.098Z",
+    "reviewScope": "Build the authorized Bradford Cloudflare production pilot from its freshly admitted six-design prepared client tree at exact final template revision7d4557. Preserve the existing Worker, canonical hostname, UK default, route lease and ASSETS-only binding. Complete the maintained seven native targets once, deploy the existing Worker and verify the representative hosted production pilot.",
+    "canonicalCompositions": {
+      "bradford-cherry-tree-cars": {
+        "canonicalOrigin": "https://bradford-cherry-tree-cars.webpreviews.site",
+        "ukDefault": true
+      }
     }
-  ]
+  }
 }
