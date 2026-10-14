@@ -1,5 +1,6 @@
 import { assertCarsOwnedDealer } from './lib/dealer-source.mjs';
 import fs from 'node:fs';
+import {assertVercelProductionWaveMember} from './lib/vercel-production-wave.mjs';
 import path from 'node:path';
 import {ROOT,args,json,writeJson,git,inside,filesAt,sha256,normalized,validateManifest} from './lib/workflow.mjs';
 
@@ -37,6 +38,7 @@ export function assertVercelReviewedAutoSuccessor(pilot, {meta, manifest} = {}) 
 }
 
 export function assertVercelProductionPilot(pilot, {meta, manifest} = {}) {
+  if(pilot?.kind==='cars-owner-authorized-vercel-main-production-wave-member'){assertVercelProductionWaveMember(pilot,{meta,manifest});return;}
   if(pilot?.reviewedSuccessor?.scope==='owner-reviewed-auto-best-ui-source-successor'){assertVercelReviewedAutoSuccessor(pilot,{meta,manifest});return;}
   const match=(actual,expected)=>requireVercelQualificationExport(actual===expected,'exact F1rst MAIN production-pilot proof required');
   match(pilot?.schemaVersion,1);match(pilot?.kind,'cars-owner-authorized-f1rst-main-production-pilot');
@@ -56,7 +58,7 @@ export function assertVercelProductionPilot(pilot, {meta, manifest} = {}) {
   for(const field of ['ownerAuthorizedMain','otherFiveTemplateTreesUnchanged','stockAndFactsUnchanged','productionBuildPending'])match(pilot[field],true);match(pilot.hostedApproval,false);
 }
 /** Ordinary provisional export still requires its exact reviewed preview branch.
- * MAIN is an opt-in only for the one exact owner-authorized production pilot. */
+ * MAIN requires an explicit exact pilot or qualified bounded production wave. */
 export function assertVercelQualificationExport(meta, {branch, manifest, productionPilot} = {}) {
   if (meta.qualification === undefined) {if(productionPilot!==undefined)throw new Error('Production pilot requires its actual provisional source envelope');return;}
   const proof = meta.qualification;

@@ -2,6 +2,7 @@
  * package/export, exact private leases. No local fleet copy or new provider ID.
  */
 import fs from 'node:fs';
+import {assertVercelProductionWave,vercelProductionWaveMember} from './lib/vercel-production-wave.mjs';
 import path from 'node:path';
 import assert from 'node:assert/strict';
 import {spawnSync,execFileSync} from 'node:child_process';
@@ -30,7 +31,7 @@ const git=(root,args,options={})=>execFileSync('git',['-c','core.sparseCheckout=
 const readJson=p=>JSON.parse(fs.readFileSync(p,'utf8').replace(/^\uFEFF/,''));
 function pin(root,p){assert(p&&safe(p.path)&&p.path.startsWith('docs/releases/')&&digest(p.sha256),'Exact reviewed release input pin required');const bytes=fs.readFileSync(path.join(root,p.path));assert.equal(hash(bytes),p.sha256,'Reviewed release input changed');return {bytes,value:JSON.parse(bytes)};}
 
-export function validateVercelRefreshRequest(request,{cohort,registry}={}){
+export function validateVercelRefreshRequest(request,{cohort,registry,productionWave}={}){
  assert(request?.schemaVersion===2&&request.kind==='cars-existing-vercel-refresh','Explicit existing Vercel refresh request required');
  assert(['proposal','publish'].includes(request.action)&&['qualification-preview','approved-production'].includes(request.stage),'Unknown Vercel action or stage');
  if(request.publicationTransport!==undefined)assert(request.publicationTransport==='existing-local-publisher'&&request.action==='proposal','Local publication transport emits a proposal only; use the maintained local publisher for the reviewed private push');
@@ -39,7 +40,8 @@ export function validateVercelRefreshRequest(request,{cohort,registry}={}){
  assert(Array.isArray(request.dealers)&&request.dealers.length>0&&request.dealers.length<=25&&new Set(request.dealers.map(r=>r.slug)).size===request.dealers.length,'Invalid bounded Vercel wave');
  assert(JSON.stringify(Object.keys(request.templateSources||{}).sort())===JSON.stringify([...VERCEL_KEYS].sort()),'Exactly six selected template sources required');
  for(const [key,s]of Object.entries(request.templateSources))assert(s.repository==='darkapoparka/cars'&&oid(s.revision)&&s.path==='templates/'+key&&oid(s.tree)&&digest(s.digest),'Invalid immutable template source '+key);
- if(request.stage==='qualification-preview')assert(request.dealers.length===1&&request.dealers[0].slug==='f1rst-motors','The first combined Vercel qualification pilot is the existing F1rst project');
+ if(request.productionWave!==undefined){assert(productionWave&&safe(request.productionWave.path)&&digest(request.productionWave.sha256),'Exact qualified production wave pin required');assertVercelProductionWave(productionWave,{cohort,request});}else assert(productionWave===undefined,'Unpinned production wave is refused');
+ if(request.stage==='qualification-preview'&&!productionWave)assert(request.dealers.length===1&&request.dealers[0].slug==='f1rst-motors','The first combined Vercel qualification pilot is the existing F1rst project');
  for(const row of request.dealers){
   const prior=cohort.rows.find(r=>r.slug===row.slug),registered=registry?.dealers?.find(r=>r.slug===row.slug);
   assert(prior&&registered,'Dealer outside exact existing cohort or registry');
@@ -109,7 +111,7 @@ function independentProposal({root,manifest,row,packageTree,reviewFile,write=fal
  return {...proposal,tree:finalTree,commit,published:true,trigger:'Git-to-Vercel for the existing independent project; hosted checks pending'};
 }
 async function prepareRefresh(root,request,row,area){
- const cohort=pin(root,request.previousDelivery).value,registry=readJson(path.join(root,'docs/DEPLOYMENT-INVENTORY.json'));validateVercelRefreshRequest(request,{cohort,registry});
+ const cohort=pin(root,request.previousDelivery).value,registry=readJson(path.join(root,'docs/DEPLOYMENT-INVENTORY.json')),productionWave=request.productionWave?pin(root,request.productionWave).value:undefined;validateVercelRefreshRequest(request,{cohort,registry,productionWave});
  assert.equal(git(root,['rev-parse','HEAD']),process.env.GITHUB_SHA);git(root,['merge-base','--is-ancestor',request.toolingSourceCommit,process.env.GITHUB_SHA]);
  const toolingTree=git(root,['rev-parse',request.toolingSourceCommit+':scripts']);assert.equal(git(root,['rev-parse',process.env.GITHUB_SHA+':scripts']),toolingTree,'Tooling changed after frozen checkpoint');
  const lock=pin(root,request.templateLock).value;for(const key of VERCEL_KEYS){assert.deepEqual(lock.templates[key].source,request.templateSources[key]);assert.equal(lock.templates[key].commit,request.templateSources[key].revision);}
@@ -132,7 +134,7 @@ async function prepareRefresh(root,request,row,area){
   const output=path.join(area,'artifact');fs.mkdirSync(output);const packageCommit=git(sourceRoot,['-c','user.name=Cars release','-c','user.email=41898282+github-actions[bot]@users.noreply.github.com','commit-tree',packageTree,'-p',row.sourceCommit],{input:'Transport exact reviewed Vercel package for '+row.slug+'\n'});
   const sourcePaths=independent?[...VERCEL_KEYS,'branding','localization']:['clients/'+row.slug,'scripts'];
   const objectTransport=writePackageObjectPack({root:sourceRoot,sourceCommit:row.sourceCommit,sourcePaths,packageTree,packageCommit,destination:output+'/package.objects.pack'});
-  const receipt={schemaVersion:1,kind:'existing-dealer-vercel-refresh-package',slug:row.slug,repository:row.repository,projectId:row.projectId,publicOrigin:row.publicOrigin,stage:request.stage,publicationTransport:request.publicationTransport,sourceOwnership:row.sourceOwnership,sourceCommit:row.sourceCommit,sourceTree,toolingSourceCommit:request.toolingSourceCommit,templateSources:request.templateSources,packageTree,packageCommit,packageDigest:verified.digest,objectTransport,serviceCount:6,presentation,qualification:meta.qualification??null,privateMain:row.privateMain,privateTarget:row.privateTarget,targetBranch:row.targetBranch,privateLeaseVerification:'Required in the maintained local publisher before its reviewed export/push',compiled:false,published:false,hostedApproval:false};
+  const receipt={schemaVersion:1,kind:'existing-dealer-vercel-refresh-package',slug:row.slug,repository:row.repository,projectId:row.projectId,publicOrigin:row.publicOrigin,stage:request.stage,publicationTransport:request.publicationTransport,sourceOwnership:row.sourceOwnership,sourceCommit:row.sourceCommit,sourceTree,toolingSourceCommit:request.toolingSourceCommit,templateSources:request.templateSources,packageTree,packageCommit,packageDigest:verified.digest,objectTransport,serviceCount:6,presentation,qualification:meta.qualification??null,...(productionWave?{productionWave:vercelProductionWaveMember(productionWave,row.slug)}:{}),privateMain:row.privateMain,privateTarget:row.privateTarget,targetBranch:row.targetBranch,privateLeaseVerification:'Required in the maintained local publisher before its reviewed export/push',compiled:false,published:false,hostedApproval:false};
   fs.writeFileSync(output+'/package.json',encode(receipt));console.log(JSON.stringify({slug:row.slug,action:'proposal',stage:request.stage,publicationTransport:request.publicationTransport,packageTree,packageDigest:verified.digest,packBytes:objectTransport.packBytes,published:false,providerIdentityChanged:false}));return;
  }
  configurePrivateGit();assert.equal(remoteHead(sourceRoot,row.repository,'main'),row.privateMain);assert.equal(remoteHead(sourceRoot,row.repository,row.targetBranch),row.privateTarget);
@@ -162,7 +164,7 @@ async function main(){
  const root=process.cwd(),[mode,slug,key]=process.argv.slice(2),request=readJson(path.join(root,VERCEL_REQUEST));
  assert(process.env.GITHUB_ACTIONS==='true'&&process.env.GITHUB_REPOSITORY==='darkapoparka/cars'&&process.env.GITHUB_REF==='refs/heads/main','Only the committed existing Cars main CI request is allowed');
  assert.equal(git(root,['rev-parse','HEAD']),process.env.GITHUB_SHA);
- if(mode==='matrix'){const inputs=request.schemaVersion===2?{cohort:pin(root,request.previousDelivery).value,registry:readJson(path.join(root,'docs/DEPLOYMENT-INVENTORY.json'))}:undefined;console.log('dealers='+JSON.stringify(vercelRefreshMatrix(request,inputs)));console.log('legacy_native='+(request.schemaVersion===2?'false':'true'));console.log('pilots='+JSON.stringify({include:request.schemaVersion===2?[]:['promosale-varna','navara-car'].flatMap(slug=>Object.entries({'auto-best':'22.23.2',modern:'22.23.2',import:'24.21.0',app:'22.23.2',mobile:'22.23.2','karento-best':'24.21.0'}).map(([key,node])=>({slug,key,node})))}));return;}
+ if(mode==='matrix'){const inputs=request.schemaVersion===2?{cohort:pin(root,request.previousDelivery).value,registry:readJson(path.join(root,'docs/DEPLOYMENT-INVENTORY.json')),productionWave:request.productionWave?pin(root,request.productionWave).value:undefined}:undefined;console.log('dealers='+JSON.stringify(vercelRefreshMatrix(request,inputs)));console.log('legacy_native='+(request.schemaVersion===2?'false':'true'));console.log('pilots='+JSON.stringify({include:request.schemaVersion===2?[]:['promosale-varna','navara-car'].flatMap(slug=>Object.entries({'auto-best':'22.23.2',modern:'22.23.2',import:'24.21.0',app:'22.23.2',mobile:'22.23.2','karento-best':'24.21.0'}).map(([key,node])=>({slug,key,node})))}));return;}
  const row=request.dealers.find(d=>d.slug===slug);assert(row,'Dealer outside committed request');const area=path.join(root,'runtime/vercel-presentation',slug);fs.mkdirSync(area,{recursive:true});
  diagnosticScope={area,slug,mode};
  if(mode==='prepare'){assert.equal(process.version,'v22.23.2');if(request.schemaVersion===2)await prepareRefresh(root,request,row,area);else await historicalPrepare(root,request,slug,area);}
