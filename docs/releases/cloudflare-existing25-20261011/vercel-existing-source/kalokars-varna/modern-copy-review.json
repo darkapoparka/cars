@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-reviewed-modern-bilingual-copy-input",
+  "dealer": "kalokars-varna",
+  "sourceCommit": "d9594c2979f668831b78609e4e990640259aee81",
+  "baselineTree": "befce0efd7736f9e5cdd299a049187fba1798a0a",
+  "inputSha256": "256ab2a58e0a951fb9c76004c6b937ebe2c4c2218caf4586cc03b5dc5ffd23ac",
+  "modernInputRowsSha256": "7becce584e4503bd3e641bcad4f353d67ab3e934838dad7bcf3e110f3efe6b37",
+  "listingCount": 1,
+  "profileInputs": [
+    {
+      "path": "dealer.json",
+      "gitBlob": "5f2f393d110d463cdc7ee1f412e0636b8ddc94a0",
+      "sha256": "bde1af46ec667b0c69d3d4c2ae317ccf3c94471bddd3a8c923ff7f188f6b1d43",
+      "bytes": 4376
+    },
+    {
+      "path": "business-facts.json",
+      "gitBlob": "117591109524300f67719da44b1dfdfffae3b89d",
+      "sha256": "957fed41e81507f60fcc2f9ccfe37911c4a56c7ffdadde70c3d7f50dbc3de564",
+      "bytes": 2063
+    },
+    {
+      "path": "stock.json",
+      "gitBlob": "5d3039e19f475244fae8b3617e29cd57d54409a1",
+      "sha256": "5c1bbe65ae52af62a062967c13e9ea23ac4fe5dc57252eba9f6f968bb737a78c",
+      "bytes": 8956
+    }
+  ],
+  "reviewedGeneratorHelper": {
+    "path": "scripts/lib/modern-dealer-inventory-copy.mjs",
+    "sha256": "cbdbaa28dc07911cfe913b4e627671b6556fc25d3bfe59364e29c5ca5a29072b",
+    "sourceCommit": "14d86f67c160699c18a6ec5658197cc4d9011e0b"
+  },
+  "review": {
+    "displayCopyOnly": true,
+    "exactSourceDescriptionKeys": true,
+    "listingFactsUnchanged": true,
+    "imageUrlsUnchanged": true,
+    "imageAltsPreserved": true,
+    "interpolationTokensUnchanged": true,
+    "reviewedBy": "Codex, authorized final-template rollout",
+    "reviewedAt": "2026-10-14T20:04:09.124Z",
+    "notes": "Reuse exact existing native or reviewed registered companions for every actual current row; no new translation/factual source edits."
+  },
+  "reviewedCopy": {
+    "vw-touran-2011-11787740471095305": {
+      "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "en": {
+        "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "VW Touran 7 места",
+          "VW Touran 7 места"
+        ]
+      },
+      "bg": {
+        "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+        "imageAlts": [
+          "VW Touran 7 места",
+          "VW Touran 7 места"
+        ]
+      }
+    }
+  }
+}

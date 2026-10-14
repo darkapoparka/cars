@@ -2,51 +2,52 @@
   "schemaVersion": 1,
   "kind": "cars-reviewed-modern-bilingual-copy-input",
   "dealer": "prime-auto-varna",
-  "sourceCommit": "0bfeae20203bec97b802f72c9d80878aa3ac6914",
+  "sourceCommit": "d9594c2979f668831b78609e4e990640259aee81",
   "baselineTree": "2729137fdc945f9c957035bfd49d5ebe3c851d50",
-  "inputSha256": "85c26d0f36874cf4674ef4f2bd9b500c1dd1689d25f50c5f5ee1346ce62f68a6",
+  "inputSha256": "04bb73b7bb92d445b021010664090d8da4766af930f5ef1f8e09628d231254b1",
   "modernInputRowsSha256": "ab1a1423c068975b804117d54c4c9faa8fd57ba723931a5725600e94eba32153",
   "listingCount": 8,
+  "profileInputs": [
+    {
+      "path": "dealer.json",
+      "gitBlob": "47acbe8080c4d0662b48b70dcc19c38cf5e59a02",
+      "sha256": "3e5e4edbb7977b614c674f58b23ae1e6b48dc70eb72e4788adc91a4a6941fa96",
+      "bytes": 3926
+    },
+    {
+      "path": "business-facts.json",
+      "gitBlob": "4d2a9ef4d650635d78c5729809645a7606d3a7b9",
+      "sha256": "c912b77919b0db2d9d4f337d2ebd7a7fc6dce8c579097644fea1560529cdc309",
+      "bytes": 1961
+    },
+    {
+      "path": "stock.json",
+      "gitBlob": "5fd68c18dc88115579b93e496cb0a1adf5f19f0d",
+      "sha256": "f2320b508ffa7b86ce2559bbd639d117d1cc1e31eb8bf55172f7bdd39dd8675b",
+      "bytes": 13652
+    }
+  ],
   "reviewedGeneratorHelper": {
     "path": "scripts/lib/modern-dealer-inventory-copy.mjs",
-    "sha256": "cbdbaa28dc07911cfe913b4e627671b6556fc25d3bfe59364e29c5ca5a29072b"
+    "sha256": "cbdbaa28dc07911cfe913b4e627671b6556fc25d3bfe59364e29c5ca5a29072b",
+    "sourceCommit": "14d86f67c160699c18a6ec5658197cc4d9011e0b"
   },
   "review": {
-    "reviewedBy": "Fresh Batch1 exact retained disclosure review",
-    "reviewedAt": "2026-10-13T03:36:10.279Z",
     "displayCopyOnly": true,
     "exactSourceDescriptionKeys": true,
     "listingFactsUnchanged": true,
     "imageUrlsUnchanged": true,
     "imageAltsPreserved": true,
     "interpolationTokensUnchanged": true,
-    "scope": "Exact original dated disclaimers only. Preserve UK illustration warning, source-reported bodywork imperfections and Norfolk45,500/45,000 discrepancy; retain BG original disclaimer verbatim. No new marketing facts or changed stock/contacts/logos."
+    "reviewedBy": "Codex, authorized final-template rollout",
+    "reviewedAt": "2026-10-14T20:04:09.110Z",
+    "notes": "Reuse exact existing native or reviewed registered companions for every actual current row; no new translation/factual source edits."
   },
-  "profileInputs": [
-    {
-      "path": "dealer.json",
-      "bytes": 3926,
-      "sha256": "3e5e4edbb7977b614c674f58b23ae1e6b48dc70eb72e4788adc91a4a6941fa96",
-      "gitBlob": "47acbe8080c4d0662b48b70dcc19c38cf5e59a02"
-    },
-    {
-      "path": "business-facts.json",
-      "bytes": 1961,
-      "sha256": "c912b77919b0db2d9d4f337d2ebd7a7fc6dce8c579097644fea1560529cdc309",
-      "gitBlob": "4d2a9ef4d650635d78c5729809645a7606d3a7b9"
-    },
-    {
-      "path": "stock.json",
-      "bytes": 13652,
-      "sha256": "f2320b508ffa7b86ce2559bbd639d117d1cc1e31eb8bf55172f7bdd39dd8675b",
-      "gitBlob": "5fd68c18dc88115579b93e496cb0a1adf5f19f0d"
-    }
-  ],
   "reviewedCopy": {
     "vw-polo-2013-11789057604356727": {
       "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
       "en": {
-        "description": "Dated snapshot of a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
         "imageAlts": [
           "VW Polo 1.4TSI GTI DSG Euro-5",
           "VW Polo 1.4TSI GTI DSG Euro-5",
@@ -67,7 +68,7 @@
     "vw-touran-2017-11727598230994767": {
       "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
       "en": {
-        "description": "Dated snapshot of a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
         "imageAlts": [
           "VW Touran 1.4TSI Automat 135900km Euro-6",
           "VW Touran 1.4TSI Automat 135900km Euro-6",
@@ -88,7 +89,7 @@
     "mercedes-benz-c-300-2013-11785245881133037": {
       "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
       "en": {
-        "description": "Dated snapshot of a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
         "imageAlts": [
           "Mercedes-Benz C 300 CDI 4-Matic FaceLift",
           "Mercedes-Benz C 300 CDI 4-Matic FaceLift",
@@ -109,7 +110,7 @@
     "mercedes-benz-c-200-2015-11759398098504216": {
       "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
       "en": {
-        "description": "Dated snapshot of a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
         "imageAlts": [
           "Mercedes-Benz C 200 AMG Distronic Android Euro-6",
           "Mercedes-Benz C 200 AMG Distronic Android Euro-6",
@@ -130,7 +131,7 @@
     "bmw-316-2013-11791461227440727": {
       "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
       "en": {
-        "description": "Dated snapshot of a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
         "imageAlts": [
           "BMW 316 2.0d F30 * BiXenon * Сменена Верига*",
           "BMW 316 2.0d F30 * BiXenon * Сменена Верига*",
@@ -151,7 +152,7 @@
     "peugeot-2008-2015-11791389088202604": {
       "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
       "en": {
-        "description": "Dated snapshot of a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
         "imageAlts": [
           "Peugeot 2008 1.6HDi ALLURE EURO-5",
           "Peugeot 2008 1.6HDi ALLURE EURO-5",
@@ -172,7 +173,7 @@
     "peugeot-308-2013-11775554915564927": {
       "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
       "en": {
-        "description": "Dated snapshot of a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
         "imageAlts": [
           "Peugeot 308 1.6 Allure, Масаж, Камера, FullLed 96500km",
           "Peugeot 308 1.6 Allure, Масаж, Камера, FullLed 96500km",
@@ -193,7 +194,7 @@
     "nissan-patrol-1992-21782065548423198": {
       "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
       "en": {
-        "description": "Dated snapshot of a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
         "imageAlts": [
           "Nissan Patrol Y60 GR 2.8TD 116к.с.",
           "Nissan Patrol Y60 GR 2.8TD 116к.с.",

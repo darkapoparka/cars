@@ -2,46 +2,47 @@
   "schemaVersion": 1,
   "kind": "cars-reviewed-modern-bilingual-copy-input",
   "dealer": "dewsbury-car-market-yorkshire",
-  "sourceCommit": "0bfeae20203bec97b802f72c9d80878aa3ac6914",
+  "sourceCommit": "d9594c2979f668831b78609e4e990640259aee81",
   "baselineTree": "750e85a682ff384713ed8d5003ba3b9bbd8bab42",
-  "inputSha256": "3d09a6b0a2da690c5865e716d7b76ef71406e7692f268e93fcf3557344774808",
+  "inputSha256": "802506b774fbbf1f391a34039b9d880264217de5c8712e1c014a191185c28e09",
   "modernInputRowsSha256": "62775e8365f5c281c686d52586b35607de6bc072305eec5c4842d200303077d8",
   "listingCount": 6,
+  "profileInputs": [
+    {
+      "path": "dealer.json",
+      "gitBlob": "0408e03abd0f457941bc081162fdff6fac53c89f",
+      "sha256": "ce20523d1b7c26dd2507c5e6e6a63c0a0f5b693096e38b601e03669a53791f5b",
+      "bytes": 4354
+    },
+    {
+      "path": "business-facts.json",
+      "gitBlob": "015dd00038f1749aa673454fab652c1b0bdf24ed",
+      "sha256": "396d2662b93082a13548ec910805dbde26523418ed5f9464236169b1a78625c1",
+      "bytes": 11724
+    },
+    {
+      "path": "stock.json",
+      "gitBlob": "cafc2a6ce8f5230b157941fdc5a1737127bafde7",
+      "sha256": "ce0055cf316d5d130b441172cb465776ef566e930ea488ee33958bf058462e1a",
+      "bytes": 10070
+    }
+  ],
   "reviewedGeneratorHelper": {
     "path": "scripts/lib/modern-dealer-inventory-copy.mjs",
-    "sha256": "cbdbaa28dc07911cfe913b4e627671b6556fc25d3bfe59364e29c5ca5a29072b"
+    "sha256": "cbdbaa28dc07911cfe913b4e627671b6556fc25d3bfe59364e29c5ca5a29072b",
+    "sourceCommit": "14d86f67c160699c18a6ec5658197cc4d9011e0b"
   },
   "review": {
-    "reviewedBy": "Fresh Batch1 exact retained disclosure review",
-    "reviewedAt": "2026-10-13T03:36:10.279Z",
     "displayCopyOnly": true,
     "exactSourceDescriptionKeys": true,
     "listingFactsUnchanged": true,
     "imageUrlsUnchanged": true,
     "imageAltsPreserved": true,
     "interpolationTokensUnchanged": true,
-    "scope": "Exact original dated disclaimers only. Preserve UK illustration warning, source-reported bodywork imperfections and Norfolk45,500/45,000 discrepancy; retain BG original disclaimer verbatim. No new marketing facts or changed stock/contacts/logos."
+    "reviewedBy": "Codex, authorized final-template rollout",
+    "reviewedAt": "2026-10-14T20:04:09.099Z",
+    "notes": "Reuse exact existing native or reviewed registered companions for every actual current row; no new translation/factual source edits."
   },
-  "profileInputs": [
-    {
-      "path": "dealer.json",
-      "bytes": 4354,
-      "sha256": "ce20523d1b7c26dd2507c5e6e6a63c0a0f5b693096e38b601e03669a53791f5b",
-      "gitBlob": "0408e03abd0f457941bc081162fdff6fac53c89f"
-    },
-    {
-      "path": "business-facts.json",
-      "bytes": 11724,
-      "sha256": "396d2662b93082a13548ec910805dbde26523418ed5f9464236169b1a78625c1",
-      "gitBlob": "015dd00038f1749aa673454fab652c1b0bdf24ed"
-    },
-    {
-      "path": "stock.json",
-      "bytes": 10070,
-      "sha256": "ce0055cf316d5d130b441172cb465776ef566e930ea488ee33958bf058462e1a",
-      "gitBlob": "cafc2a6ce8f5230b157941fdc5a1737127bafde7"
-    }
-  ],
   "reviewedCopy": {
     "nissan-gt-r-2010-at-sample-1": {
       "sourceDescription": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
@@ -52,7 +53,7 @@
         ]
       },
       "bg": {
-        "description": "Илюстрация — не изобразява автомобила от обявата. Това са данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с търговеца.",
+        "description": "Илюстрация — не показва обявения автомобил. Това са датирани данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с автокъщата.",
         "imageAlts": [
           "Nissan Gt-R 3.8 V6 Black Edition Auto 4WD Euro 4 2dr"
         ]
@@ -67,7 +68,7 @@
         ]
       },
       "bg": {
-        "description": "Илюстрация — не изобразява автомобила от обявата. Това са данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с търговеца.",
+        "description": "Илюстрация — не показва обявения автомобил. Това са датирани данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с автокъщата.",
         "imageAlts": [
           "Audi A6 Saloon 2.0 TDI 40 S line S Tronic quattro Euro 6 (s/s) 4dr"
         ]
@@ -82,7 +83,7 @@
         ]
       },
       "bg": {
-        "description": "Илюстрация — не изобразява автомобила от обявата. Това са данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с търговеца.",
+        "description": "Илюстрация — не показва обявения автомобил. Това са датирани данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с автокъщата.",
         "imageAlts": [
           "Land Rover Range Rover Velar 2.0 D180 R-Dynamic S Auto 4WD Euro 6 (s/s) 5dr"
         ]
@@ -97,7 +98,7 @@
         ]
       },
       "bg": {
-        "description": "Илюстрация — не изобразява автомобила от обявата. Това са данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с търговеца.",
+        "description": "Илюстрация — не показва обявения автомобил. Това са датирани данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с автокъщата.",
         "imageAlts": [
           "Mercedes-Benz GLC 2.0 GLC250 AMG Line (Premium Plus) G-Tronic+ 4MATIC Euro 6 (s/s) 5dr"
         ]
@@ -112,7 +113,7 @@
         ]
       },
       "bg": {
-        "description": "Илюстрация — не изобразява автомобила от обявата. Това са данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с търговеца.",
+        "description": "Илюстрация — не показва обявения автомобил. Това са датирани данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с автокъщата.",
         "imageAlts": [
           "Volkswagen Golf 2.0 TSI BlueMotion Tech R 4Motion Euro 6 (s/s) 5dr"
         ]
@@ -127,7 +128,7 @@
         ]
       },
       "bg": {
-        "description": "Илюстрация — не изобразява автомобила от обявата. Това са данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с търговеца.",
+        "description": "Илюстрация — не показва обявения автомобил. Това са датирани данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с автокъщата.",
         "imageAlts": [
           "Mercedes-Benz Citan 1.5 109 CDI BlueEfficiency L2 Euro 6 (s/s) 5dr"
         ]

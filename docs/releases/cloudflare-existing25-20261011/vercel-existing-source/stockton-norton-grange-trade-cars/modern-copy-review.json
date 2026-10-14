@@ -2,46 +2,47 @@
   "schemaVersion": 1,
   "kind": "cars-reviewed-modern-bilingual-copy-input",
   "dealer": "stockton-norton-grange-trade-cars",
-  "sourceCommit": "0bfeae20203bec97b802f72c9d80878aa3ac6914",
+  "sourceCommit": "d9594c2979f668831b78609e4e990640259aee81",
   "baselineTree": "a6e1b2dface50cb5d818a8505d93c08b5fdae549",
-  "inputSha256": "dc1b3bd508a9a9ee58d844aff31de69c7269b99754289fe242078ce077560767",
+  "inputSha256": "5eaa8e1d8ae860435686dcef0e9bcc10182535656bff88c486f177299d7a0fde",
   "modernInputRowsSha256": "2e5195fa5e00c09a5e8921c1719bacedf2546d533b34e8cb3036adf02d555ca6",
   "listingCount": 10,
+  "profileInputs": [
+    {
+      "path": "dealer.json",
+      "gitBlob": "19654c73c6bfa24850fe6de54d3c6630cb534cab",
+      "sha256": "496073b10c56f0013b18a126c30538068b598330523187b78e55a2d289cbe9c2",
+      "bytes": 4378
+    },
+    {
+      "path": "business-facts.json",
+      "gitBlob": "2a2aa79bf6d1e47f4a7e2d8cb75bc469bd24f246",
+      "sha256": "8b3a2b7b3b5e6c73cb0981c75bced570c80f0addddf9a62ba7c7b90d7d319eb0",
+      "bytes": 10250
+    },
+    {
+      "path": "stock.json",
+      "gitBlob": "6606a8743f7371a81369d7215d9dc80acd2a53e1",
+      "sha256": "42f3fe39210c49dc4047aef525d7c4c08c12daaf6b95be5f80c3ca5324bd2aba",
+      "bytes": 16533
+    }
+  ],
   "reviewedGeneratorHelper": {
     "path": "scripts/lib/modern-dealer-inventory-copy.mjs",
-    "sha256": "cbdbaa28dc07911cfe913b4e627671b6556fc25d3bfe59364e29c5ca5a29072b"
+    "sha256": "cbdbaa28dc07911cfe913b4e627671b6556fc25d3bfe59364e29c5ca5a29072b",
+    "sourceCommit": "14d86f67c160699c18a6ec5658197cc4d9011e0b"
   },
   "review": {
-    "reviewedBy": "Fresh Batch1 exact retained disclosure review",
-    "reviewedAt": "2026-10-13T03:36:10.279Z",
     "displayCopyOnly": true,
     "exactSourceDescriptionKeys": true,
     "listingFactsUnchanged": true,
     "imageUrlsUnchanged": true,
     "imageAltsPreserved": true,
     "interpolationTokensUnchanged": true,
-    "scope": "Exact original dated disclaimers only. Preserve UK illustration warning, source-reported bodywork imperfections and Norfolk45,500/45,000 discrepancy; retain BG original disclaimer verbatim. No new marketing facts or changed stock/contacts/logos."
+    "reviewedBy": "Codex, authorized final-template rollout",
+    "reviewedAt": "2026-10-14T20:04:09.105Z",
+    "notes": "Reuse exact existing native or reviewed registered companions for every actual current row; no new translation/factual source edits."
   },
-  "profileInputs": [
-    {
-      "path": "dealer.json",
-      "bytes": 4378,
-      "sha256": "496073b10c56f0013b18a126c30538068b598330523187b78e55a2d289cbe9c2",
-      "gitBlob": "19654c73c6bfa24850fe6de54d3c6630cb534cab"
-    },
-    {
-      "path": "business-facts.json",
-      "bytes": 10250,
-      "sha256": "8b3a2b7b3b5e6c73cb0981c75bced570c80f0addddf9a62ba7c7b90d7d319eb0",
-      "gitBlob": "2a2aa79bf6d1e47f4a7e2d8cb75bc469bd24f246"
-    },
-    {
-      "path": "stock.json",
-      "bytes": 16533,
-      "sha256": "42f3fe39210c49dc4047aef525d7c4c08c12daaf6b95be5f80c3ca5324bd2aba",
-      "gitBlob": "6606a8743f7371a81369d7215d9dc80acd2a53e1"
-    }
-  ],
   "reviewedCopy": {
     "peugeot-208-2016-820214219013": {
       "sourceDescription": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
@@ -52,7 +53,7 @@
         ]
       },
       "bg": {
-        "description": "Илюстрация — не изобразява автомобила от обявата. Това са данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с търговеца.",
+        "description": "Илюстрация — не показва обявения автомобил. Това са датирани данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с автокъщата.",
         "imageAlts": [
           "2016 Peugeot 208 1.6 BlueHDi Active 5dr HATCHBACK Diesel Manual"
         ]
@@ -67,7 +68,7 @@
         ]
       },
       "bg": {
-        "description": "Илюстрация — не изобразява автомобила от обявата. Това са данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с търговеца.",
+        "description": "Илюстрация — не показва обявения автомобил. Това са датирани данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с автокъщата.",
         "imageAlts": [
           "2016 Ford Grand C-Max 1.5 TDCi Titanium 5dr MPV Diesel Manual"
         ]
@@ -82,7 +83,7 @@
         ]
       },
       "bg": {
-        "description": "Илюстрация — не изобразява автомобила от обявата. Това са данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с търговеца.",
+        "description": "Илюстрация — не показва обявения автомобил. Това са датирани данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с автокъщата.",
         "imageAlts": [
           "2016 Ford Focus 1.5 TDCi 120 Titanium 5dr HATCHBACK Diesel Manual"
         ]
@@ -97,7 +98,7 @@
         ]
       },
       "bg": {
-        "description": "Илюстрация — не изобразява автомобила от обявата. Това са данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с търговеца.",
+        "description": "Илюстрация — не показва обявения автомобил. Това са датирани данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с автокъщата.",
         "imageAlts": [
           "2017 Nissan Qashqai 1.5 dCi N-Vision 5dr HATCHBACK Diesel Manual"
         ]
@@ -112,7 +113,7 @@
         ]
       },
       "bg": {
-        "description": "Илюстрация — не изобразява автомобила от обявата. Това са данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с търговеца.",
+        "description": "Илюстрация — не показва обявения автомобил. Това са датирани данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с автокъщата.",
         "imageAlts": [
           "2017 Vauxhall Corsa 1.4 SRi Vx-line 3dr HATCHBACK Petrol Manual"
         ]
@@ -127,7 +128,7 @@
         ]
       },
       "bg": {
-        "description": "Илюстрация — не изобразява автомобила от обявата. Това са данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с търговеца.",
+        "description": "Илюстрация — не показва обявения автомобил. Това са датирани данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с автокъщата.",
         "imageAlts": [
           "2013 Audi A1 1.4 TFSI Sport 5dr HATCHBACK Petrol Manual"
         ]
@@ -142,7 +143,7 @@
         ]
       },
       "bg": {
-        "description": "Илюстрация — не изобразява автомобила от обявата. Това са данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с търговеца.",
+        "description": "Илюстрация — не показва обявения автомобил. Това са датирани данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с автокъщата.",
         "imageAlts": [
           "2018 Nissan Qashqai 1.5 dCi 115 N-Connecta 5dr HATCHBACK Diesel Manual"
         ]
@@ -157,7 +158,7 @@
         ]
       },
       "bg": {
-        "description": "Илюстрация — не изобразява автомобила от обявата. Това са данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с търговеца.",
+        "description": "Илюстрация — не показва обявения автомобил. Това са датирани данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с автокъщата.",
         "imageAlts": [
           "2014 Ford Fiesta 1.25 82 Zetec 3dr HATCHBACK Petrol Manual"
         ]
@@ -172,7 +173,7 @@
         ]
       },
       "bg": {
-        "description": "Илюстрация — не изобразява автомобила от обявата. Това са данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с търговеца.",
+        "description": "Илюстрация — не показва обявения автомобил. Това са датирани данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с автокъщата.",
         "imageAlts": [
           "2017 Nissan Juke 1.5 dCi N-Connecta 5dr HATCHBACK Diesel Manual"
         ]
@@ -187,7 +188,7 @@
         ]
       },
       "bg": {
-        "description": "Илюстрация — не изобразява автомобила от обявата. Това са данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с търговеца.",
+        "description": "Илюстрация — не показва обявения автомобил. Това са датирани данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с автокъщата.",
         "imageAlts": [
           "2015 Nissan Juke 1.5 dCi Acenta Premium 5dr HATCHBACK Diesel Manual"
         ]

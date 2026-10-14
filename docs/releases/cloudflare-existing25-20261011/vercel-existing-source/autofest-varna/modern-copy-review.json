@@ -2,51 +2,52 @@
   "schemaVersion": 1,
   "kind": "cars-reviewed-modern-bilingual-copy-input",
   "dealer": "autofest-varna",
-  "sourceCommit": "0bfeae20203bec97b802f72c9d80878aa3ac6914",
+  "sourceCommit": "d9594c2979f668831b78609e4e990640259aee81",
   "baselineTree": "fe66d1ea7edb8ced1b6ccfd1d6dad631612e9950",
-  "inputSha256": "e2c9b188bc03c3a77d46e0424d72cdfbf0dd95c131404b680e07311f8cee8a74",
+  "inputSha256": "21fe65c39e5b2cd7e0c90e3b4ffc7e04b1bad615c437cca33f869c60ca381efc",
   "modernInputRowsSha256": "bdb137e7331a16edfc131407d4d1745f45608b15ffd47a7a0871b0a871476f03",
   "listingCount": 8,
+  "profileInputs": [
+    {
+      "path": "dealer.json",
+      "gitBlob": "2ad7fd8f73821229be2edc7878cc638a0b6d3b63",
+      "sha256": "88299f2556c6462946731033db6e818ff32695a13c28cf608be905aa998e6165",
+      "bytes": 3919
+    },
+    {
+      "path": "business-facts.json",
+      "gitBlob": "7dd3e934e7c0fa963c9d386ef905558f09bb1cdf",
+      "sha256": "94bb6ee6b117d494b1e8fcffa1c4de77ad989a8bf99ccd536fe233ce467d6ce0",
+      "bytes": 2049
+    },
+    {
+      "path": "stock.json",
+      "gitBlob": "6e152cef2c4681b9631695868629247f5953a58b",
+      "sha256": "25c48ee095aadb5400d8344847869356491c91812f2c086877adbdecebf46be5",
+      "bytes": 13578
+    }
+  ],
   "reviewedGeneratorHelper": {
     "path": "scripts/lib/modern-dealer-inventory-copy.mjs",
-    "sha256": "cbdbaa28dc07911cfe913b4e627671b6556fc25d3bfe59364e29c5ca5a29072b"
+    "sha256": "cbdbaa28dc07911cfe913b4e627671b6556fc25d3bfe59364e29c5ca5a29072b",
+    "sourceCommit": "14d86f67c160699c18a6ec5658197cc4d9011e0b"
   },
   "review": {
-    "reviewedBy": "Fresh Batch1 exact retained disclosure review",
-    "reviewedAt": "2026-10-13T03:36:10.279Z",
     "displayCopyOnly": true,
     "exactSourceDescriptionKeys": true,
     "listingFactsUnchanged": true,
     "imageUrlsUnchanged": true,
     "imageAltsPreserved": true,
     "interpolationTokensUnchanged": true,
-    "scope": "Exact original dated disclaimers only. Preserve UK illustration warning, source-reported bodywork imperfections and Norfolk45,500/45,000 discrepancy; retain BG original disclaimer verbatim. No new marketing facts or changed stock/contacts/logos."
+    "reviewedBy": "Codex, authorized final-template rollout",
+    "reviewedAt": "2026-10-14T20:04:09.113Z",
+    "notes": "Reuse exact existing native or reviewed registered companions for every actual current row; no new translation/factual source edits."
   },
-  "profileInputs": [
-    {
-      "path": "dealer.json",
-      "bytes": 3919,
-      "sha256": "88299f2556c6462946731033db6e818ff32695a13c28cf608be905aa998e6165",
-      "gitBlob": "2ad7fd8f73821229be2edc7878cc638a0b6d3b63"
-    },
-    {
-      "path": "business-facts.json",
-      "bytes": 2049,
-      "sha256": "94bb6ee6b117d494b1e8fcffa1c4de77ad989a8bf99ccd536fe233ce467d6ce0",
-      "gitBlob": "7dd3e934e7c0fa963c9d386ef905558f09bb1cdf"
-    },
-    {
-      "path": "stock.json",
-      "bytes": 13578,
-      "sha256": "25c48ee095aadb5400d8344847869356491c91812f2c086877adbdecebf46be5",
-      "gitBlob": "6e152cef2c4681b9631695868629247f5953a58b"
-    }
-  ],
   "reviewedCopy": {
     "honda-cr-v-2018-21791561972367404": {
       "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
       "en": {
-        "description": "Dated snapshot of a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
         "imageAlts": [
           "Honda Cr-v 2.0i 4x4 АВТОМАТ Г.ИНЖЕКЦИОН",
           "Honda Cr-v 2.0i 4x4 АВТОМАТ Г.ИНЖЕКЦИОН",
@@ -67,7 +68,7 @@
     "seat-ateca-2019-21785142785989074": {
       "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
       "en": {
-        "description": "Dated snapshot of a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
         "imageAlts": [
           "Seat Ateca FR 2.0 TDI 4x4 АВТОМАТИК 360-КАМЕРА LED NAVI",
           "Seat Ateca FR 2.0 TDI 4x4 АВТОМАТИК 360-КАМЕРА LED NAVI",
@@ -88,7 +89,7 @@
     "audi-a4-2012-11780325425358655": {
       "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
       "en": {
-        "description": "Dated snapshot of a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
         "imageAlts": [
           "Audi A4 2.0TDI FACELIFT BiXenon ЕВРО-5В",
           "Audi A4 2.0TDI FACELIFT BiXenon ЕВРО-5В",
@@ -109,7 +110,7 @@
     "audi-a4-2014-11761146192856132": {
       "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
       "en": {
-        "description": "Dated snapshot of a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
         "imageAlts": [
           "Audi A4 2.0TDI FACELIFT НАВИ БИ-КСЕНОН",
           "Audi A4 2.0TDI FACELIFT НАВИ БИ-КСЕНОН",
@@ -130,7 +131,7 @@
     "audi-q3-2015-21784645887752101": {
       "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
       "en": {
-        "description": "Dated snapshot of a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
         "imageAlts": [
           "Audi Q3 2.0 TDI BIXENON LED NAVI СЕРВИЗНА ИСТОРИЯ",
           "Audi Q3 2.0 TDI BIXENON LED NAVI СЕРВИЗНА ИСТОРИЯ",
@@ -151,7 +152,7 @@
     "audi-q5-2017-21774286824949260": {
       "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
       "en": {
-        "description": "Dated snapshot of a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
         "imageAlts": [
           "Audi Q5 2.0TDI SLINE DIGITAL ЕВРО-6В",
           "Audi Q5 2.0TDI SLINE DIGITAL ЕВРО-6В",
@@ -172,7 +173,7 @@
     "kia-soul-2014-11771069281557713": {
       "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
       "en": {
-        "description": "Dated snapshot of a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
         "imageAlts": [
           "Kia Soul 1.6i АВТОМАТИК 4-ЗИМНИ ГУМИ+ ДЖАНТИ",
           "Kia Soul 1.6i АВТОМАТИК 4-ЗИМНИ ГУМИ+ ДЖАНТИ",
@@ -193,7 +194,7 @@
     "kia-sportage-2015-21777861065408895": {
       "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
       "en": {
-        "description": "Dated snapshot of a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
         "imageAlts": [
           "Kia Sportage 1.6i LED КАМЕРА NAVI ПОДГРЕВ НОВИ ЗИМНИ ГУМИ",
           "Kia Sportage 1.6i LED КАМЕРА NAVI ПОДГРЕВ НОВИ ЗИМНИ ГУМИ",

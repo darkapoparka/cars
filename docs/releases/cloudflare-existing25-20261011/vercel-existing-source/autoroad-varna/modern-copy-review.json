@@ -2,51 +2,52 @@
   "schemaVersion": 1,
   "kind": "cars-reviewed-modern-bilingual-copy-input",
   "dealer": "autoroad-varna",
-  "sourceCommit": "0bfeae20203bec97b802f72c9d80878aa3ac6914",
+  "sourceCommit": "d9594c2979f668831b78609e4e990640259aee81",
   "baselineTree": "48e866055081e4bc11e67106b1f9cd100d556019",
-  "inputSha256": "04be2d3233ae706949c461ae59545266af7cd6d6b0ae0a31cc7365446a7744c1",
+  "inputSha256": "3668e4e49309f28b2f4f8b55e48063fe9e335c15dbb16b8f412c0b2e2f931d72",
   "modernInputRowsSha256": "c99d8d5d11cf08c107450a16313d8f8388a79df85fcc819b4d6f8ee59d5a1625",
   "listingCount": 8,
+  "profileInputs": [
+    {
+      "path": "dealer.json",
+      "gitBlob": "595f44135ce351352cc39f1d1b93a25b66f3b6ef",
+      "sha256": "e32521e2d2e12ee371ef3bc8646bdcd9456231917e0c3435e97055773767be3e",
+      "bytes": 3919
+    },
+    {
+      "path": "business-facts.json",
+      "gitBlob": "bbc6f7f7e5f60475079d852b807feed6ff4cd388",
+      "sha256": "e7b14b85322921db202f5116f0959c5535e9ea9c2f6cb9fdcdf7112676672728",
+      "bytes": 2212
+    },
+    {
+      "path": "stock.json",
+      "gitBlob": "1ae20216bf65491301e32646796f3e1de03da0c6",
+      "sha256": "7aa1dcf994d5bcb613cd297f323bae5ad36711af834f32e4108d191b0674a4f5",
+      "bytes": 13939
+    }
+  ],
   "reviewedGeneratorHelper": {
     "path": "scripts/lib/modern-dealer-inventory-copy.mjs",
-    "sha256": "cbdbaa28dc07911cfe913b4e627671b6556fc25d3bfe59364e29c5ca5a29072b"
+    "sha256": "cbdbaa28dc07911cfe913b4e627671b6556fc25d3bfe59364e29c5ca5a29072b",
+    "sourceCommit": "14d86f67c160699c18a6ec5658197cc4d9011e0b"
   },
   "review": {
-    "reviewedBy": "Fresh Batch1 exact retained disclosure review",
-    "reviewedAt": "2026-10-13T03:36:10.279Z",
     "displayCopyOnly": true,
     "exactSourceDescriptionKeys": true,
     "listingFactsUnchanged": true,
     "imageUrlsUnchanged": true,
     "imageAltsPreserved": true,
     "interpolationTokensUnchanged": true,
-    "scope": "Exact original dated disclaimers only. Preserve UK illustration warning, source-reported bodywork imperfections and Norfolk45,500/45,000 discrepancy; retain BG original disclaimer verbatim. No new marketing facts or changed stock/contacts/logos."
+    "reviewedBy": "Codex, authorized final-template rollout",
+    "reviewedAt": "2026-10-14T20:04:09.112Z",
+    "notes": "Reuse exact existing native or reviewed registered companions for every actual current row; no new translation/factual source edits."
   },
-  "profileInputs": [
-    {
-      "path": "dealer.json",
-      "bytes": 3919,
-      "sha256": "e32521e2d2e12ee371ef3bc8646bdcd9456231917e0c3435e97055773767be3e",
-      "gitBlob": "595f44135ce351352cc39f1d1b93a25b66f3b6ef"
-    },
-    {
-      "path": "business-facts.json",
-      "bytes": 2212,
-      "sha256": "e7b14b85322921db202f5116f0959c5535e9ea9c2f6cb9fdcdf7112676672728",
-      "gitBlob": "bbc6f7f7e5f60475079d852b807feed6ff4cd388"
-    },
-    {
-      "path": "stock.json",
-      "bytes": 13939,
-      "sha256": "7aa1dcf994d5bcb613cd297f323bae5ad36711af834f32e4108d191b0674a4f5",
-      "gitBlob": "1ae20216bf65491301e32646796f3e1de03da0c6"
-    }
-  ],
   "reviewedCopy": {
     "peugeot-5008-2021-11764083375105654": {
       "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
       "en": {
-        "description": "Dated snapshot of a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
         "imageAlts": [
           "Peugeot 5008 1.5 HDI -LED-KEYLESS-DISTRONIK-DIGITAL-LANE ASSIST",
           "Peugeot 5008 1.5 HDI -LED-KEYLESS-DISTRONIK-DIGITAL-LANE ASSIST",
@@ -67,7 +68,7 @@
     "renault-megane-2023-11791216679127136": {
       "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
       "en": {
-        "description": "Dated snapshot of a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
         "imageAlts": [
           "Renault Megane E-TECH-EV 60-220K.S. Equilibre optimum charge",
           "Renault Megane E-TECH-EV 60-220K.S. Equilibre optimum charge",
@@ -88,7 +89,7 @@
     "skoda-karoq-2020-21791195488121434": {
       "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
       "en": {
-        "description": "Dated snapshot of a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
         "imageAlts": [
           "Skoda Karoq 1.6 TDI-DSG-KAMERA-LED-FACE",
           "Skoda Karoq 1.6 TDI-DSG-KAMERA-LED-FACE",
@@ -109,7 +110,7 @@
     "skoda-karoq-2022-21778683919459620": {
       "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
       "en": {
-        "description": "Dated snapshot of a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
         "imageAlts": [
           "Skoda Karoq 2.0 TDI -AVTOMAT-4x4-KEYLESS-DISTRONIK-DIGITAL",
           "Skoda Karoq 2.0 TDI -AVTOMAT-4x4-KEYLESS-DISTRONIK-DIGITAL",
@@ -130,7 +131,7 @@
     "mercedes-benz-cla-200-2022-11785948289956075": {
       "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
       "en": {
-        "description": "Dated snapshot of a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
         "imageAlts": [
           "Mercedes-Benz CLA 200 AMG-PANORAM-PODGREV-AMBIENT-MEMORI",
           "Mercedes-Benz CLA 200 AMG-PANORAM-PODGREV-AMBIENT-MEMORI",
@@ -151,7 +152,7 @@
     "audi-q4-2022-21781865867073187": {
       "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
       "en": {
-        "description": "Dated snapshot of a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
         "imageAlts": [
           "Audi Q4 SPORTBACK E-TRON 82KWH 40 S LINE-PANORAMA-AMBIENT",
           "Audi Q4 SPORTBACK E-TRON 82KWH 40 S LINE-PANORAMA-AMBIENT",
@@ -172,7 +173,7 @@
     "lotus-eletre-2024-11781957951294075": {
       "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
       "en": {
-        "description": "Dated snapshot of a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
         "imageAlts": [
           "Lotus Eletre 112 KW-612 K.S.-AKEBONO EDITION",
           "Lotus Eletre 112 KW-612 K.S.-AKEBONO EDITION",
@@ -193,7 +194,7 @@
     "vw-id-4-2021-11789287072800457": {
       "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
       "en": {
-        "description": "Dated snapshot of a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
         "imageAlts": [
           "VW ID.4 Pro-82kWh-AMBIENT LIGHT-LED-SOH-91.36%",
           "VW ID.4 Pro-82kWh-AMBIENT LIGHT-LED-SOH-91.36%",

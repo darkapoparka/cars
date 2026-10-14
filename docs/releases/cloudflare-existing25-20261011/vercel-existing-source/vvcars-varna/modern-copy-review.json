@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-reviewed-modern-bilingual-copy-input",
+  "dealer": "vvcars-varna",
+  "sourceCommit": "d9594c2979f668831b78609e4e990640259aee81",
+  "baselineTree": "2236af197d850c24e4bc85daa38f13746a3af50b",
+  "inputSha256": "939e59e82a7ab7336973926185b1982934c28abb5f6fe4329c0b74981b6c3e8a",
+  "modernInputRowsSha256": "4b8b6a6e865b144d139a3905b23274f8fb98447b0c012655dc0123229b647907",
+  "listingCount": 1,
+  "profileInputs": [
+    {
+      "path": "dealer.json",
+      "gitBlob": "30db71e34e4b62dcf8d143880068406f03478c47",
+      "sha256": "3c303c1694665a9c0d69daaca749bc708b30a1d41354387409a9c0291536a204",
+      "bytes": 4354
+    },
+    {
+      "path": "business-facts.json",
+      "gitBlob": "d608f62a64773d57fc402ee0de20204a6a5f3abe",
+      "sha256": "7655c675b5093abec275b5f38c1812f9b27c15b4a844a828382abef7503da470",
+      "bytes": 2043
+    },
+    {
+      "path": "stock.json",
+      "gitBlob": "264f8fbbdf55dc42f0c38621495d183920a9dc29",
+      "sha256": "92dc64d07a7b6b9d0d4972c56827e59cdb5dfba70428562266cb5b31910c4504",
+      "bytes": 10532
+    }
+  ],
+  "reviewedGeneratorHelper": {
+    "path": "scripts/lib/modern-dealer-inventory-copy.mjs",
+    "sha256": "cbdbaa28dc07911cfe913b4e627671b6556fc25d3bfe59364e29c5ca5a29072b",
+    "sourceCommit": "14d86f67c160699c18a6ec5658197cc4d9011e0b"
+  },
+  "review": {
+    "displayCopyOnly": true,
+    "exactSourceDescriptionKeys": true,
+    "listingFactsUnchanged": true,
+    "imageUrlsUnchanged": true,
+    "imageAltsPreserved": true,
+    "interpolationTokensUnchanged": true,
+    "reviewedBy": "Codex, authorized final-template rollout",
+    "reviewedAt": "2026-10-14T20:04:09.127Z",
+    "notes": "Reuse exact existing native or reviewed registered companions for every actual current row; no new translation/factual source edits."
+  },
+  "reviewedCopy": {
+    "mercedes-benz-c-200-2023-11791631223924420": {
+      "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "en": {
+        "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "Mercedes-Benz C 200",
+          "Mercedes-Benz C 200"
+        ]
+      },
+      "bg": {
+        "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+        "imageAlts": [
+          "Mercedes-Benz C 200",
+          "Mercedes-Benz C 200"
+        ]
+      }
+    }
+  }
+}

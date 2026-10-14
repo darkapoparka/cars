@@ -2,51 +2,52 @@
   "schemaVersion": 1,
   "kind": "cars-reviewed-modern-bilingual-copy-input",
   "dealer": "dream-drive-varna",
-  "sourceCommit": "0bfeae20203bec97b802f72c9d80878aa3ac6914",
+  "sourceCommit": "d9594c2979f668831b78609e4e990640259aee81",
   "baselineTree": "91faab897f8fb64bbcdc982ca9c2efc6659f56d0",
-  "inputSha256": "a4f6f8d52db42563688271c42051143f45473af2abbe5d15f3b261211f8062e0",
+  "inputSha256": "d3fa958f12590548c3fc2ddc0ed0fd845535fae06b57a56c331f742512fcabce",
   "modernInputRowsSha256": "37512b622d68f32773dd807198b1aeb08d6098934cbf5d8ed1ef1e5cab0c5623",
   "listingCount": 8,
+  "profileInputs": [
+    {
+      "path": "dealer.json",
+      "gitBlob": "e9027af8fabb05101e67161e4a4bc57bbf8acc71",
+      "sha256": "a9926291d5c814f6ce954289ee816de17df53f1155d882fb8b4b21340103b23d",
+      "bytes": 3930
+    },
+    {
+      "path": "business-facts.json",
+      "gitBlob": "9a9fa79d4e562846db67dd8a2e2727e108e78b36",
+      "sha256": "e98afd7192b9825a88f00269ff8fb261b5b0ad45cf3ca4ccdb4fd18d32cd6972",
+      "bytes": 1964
+    },
+    {
+      "path": "stock.json",
+      "gitBlob": "bb3e9794945ef58a4ca728d3cf2dafb5dd59ff3f",
+      "sha256": "12bdc6d0afd07415f1095c845071fdacd551847747faec71ae794775acfd3287",
+      "bytes": 13430
+    }
+  ],
   "reviewedGeneratorHelper": {
     "path": "scripts/lib/modern-dealer-inventory-copy.mjs",
-    "sha256": "cbdbaa28dc07911cfe913b4e627671b6556fc25d3bfe59364e29c5ca5a29072b"
+    "sha256": "cbdbaa28dc07911cfe913b4e627671b6556fc25d3bfe59364e29c5ca5a29072b",
+    "sourceCommit": "14d86f67c160699c18a6ec5658197cc4d9011e0b"
   },
   "review": {
-    "reviewedBy": "Fresh Batch1 exact retained disclosure review",
-    "reviewedAt": "2026-10-13T03:36:10.279Z",
     "displayCopyOnly": true,
     "exactSourceDescriptionKeys": true,
     "listingFactsUnchanged": true,
     "imageUrlsUnchanged": true,
     "imageAltsPreserved": true,
     "interpolationTokensUnchanged": true,
-    "scope": "Exact original dated disclaimers only. Preserve UK illustration warning, source-reported bodywork imperfections and Norfolk45,500/45,000 discrepancy; retain BG original disclaimer verbatim. No new marketing facts or changed stock/contacts/logos."
+    "reviewedBy": "Codex, authorized final-template rollout",
+    "reviewedAt": "2026-10-14T20:04:09.110Z",
+    "notes": "Reuse exact existing native or reviewed registered companions for every actual current row; no new translation/factual source edits."
   },
-  "profileInputs": [
-    {
-      "path": "dealer.json",
-      "bytes": 3930,
-      "sha256": "a9926291d5c814f6ce954289ee816de17df53f1155d882fb8b4b21340103b23d",
-      "gitBlob": "e9027af8fabb05101e67161e4a4bc57bbf8acc71"
-    },
-    {
-      "path": "business-facts.json",
-      "bytes": 1964,
-      "sha256": "e98afd7192b9825a88f00269ff8fb261b5b0ad45cf3ca4ccdb4fd18d32cd6972",
-      "gitBlob": "9a9fa79d4e562846db67dd8a2e2727e108e78b36"
-    },
-    {
-      "path": "stock.json",
-      "bytes": 13430,
-      "sha256": "12bdc6d0afd07415f1095c845071fdacd551847747faec71ae794775acfd3287",
-      "gitBlob": "bb3e9794945ef58a4ca728d3cf2dafb5dd59ff3f"
-    }
-  ],
   "reviewedCopy": {
     "vw-golf-2013-11790190994561881": {
       "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
       "en": {
-        "description": "Dated snapshot of a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
         "imageAlts": [
           "VW Golf 2.0 TDI 150 4Motion",
           "VW Golf 2.0 TDI 150 4Motion",
@@ -67,7 +68,7 @@
     "audi-a4-2010-11791398612800365": {
       "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
       "en": {
-        "description": "Dated snapshot of a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
         "imageAlts": [
           "Audi A4 2.0 TDI S LINE LED NAVI",
           "Audi A4 2.0 TDI S LINE LED NAVI",
@@ -88,7 +89,7 @@
     "vw-passat-2016-11789907842576383": {
       "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
       "en": {
-        "description": "Dated snapshot of a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
         "imageAlts": [
           "VW Passat 2.0 TDI ALLTRACK DIGITAL",
           "VW Passat 2.0 TDI ALLTRACK DIGITAL",
@@ -109,7 +110,7 @@
     "toyota-yaris-2008-11789911583559651": {
       "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
       "en": {
-        "description": "Dated snapshot of a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
         "imageAlts": [
           "Toyota Yaris 1.3vvti",
           "Toyota Yaris 1.3vvti",
@@ -130,7 +131,7 @@
     "suzuki-vitara-2017-21789906623508409": {
       "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
       "en": {
-        "description": "Dated snapshot of a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
         "imageAlts": [
           "Suzuki Vitara 1.6DDIS 120кс 4x4",
           "Suzuki Vitara 1.6DDIS 120кс 4x4",
@@ -151,7 +152,7 @@
     "suzuki-sx4-2010-11789907068377884": {
       "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
       "en": {
-        "description": "Dated snapshot of a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
         "imageAlts": [
           "Suzuki SX4 1.6i 120кс 4x4 160.000 КМ",
           "Suzuki SX4 1.6i 120кс 4x4 160.000 КМ",
@@ -172,7 +173,7 @@
     "renault-megane-2011-11789910526546898": {
       "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
       "en": {
-        "description": "Dated snapshot of a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
         "imageAlts": [
           "Renault Megane 1.9 DCI GT LINE 230.000 КМ",
           "Renault Megane 1.9 DCI GT LINE 230.000 КМ",
@@ -193,7 +194,7 @@
     "peugeot-3008-2017-11789909936155141": {
       "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
       "en": {
-        "description": "Dated snapshot of a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
         "imageAlts": [
           "Peugeot 3008 1.6HDI 120кс АВТОМАТИК",
           "Peugeot 3008 1.6HDI 120кс АВТОМАТИК",
