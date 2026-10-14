@@ -352,10 +352,13 @@ test('Modern refresh preserves the approved hero while retaining stable fixture 
   assert.match(leadSite, /name: "Навара кар"/);
   assert.match(leadSite, /heroPath: "\/lead-hero\.jpg"/);
   const mobileBrand = fs.readFileSync(path.join(root, 'packages/marketplace-ui/components/dealer-mobile-brand-bar.tsx'), 'utf8');
-  assert.match(mobileBrand, /const useOnLight = wordmarkTone === "dark" \|\| \(wordmarkTone === "original" && light\)/);
-  assert.match(mobileBrand, /const logoSource = useOnLight \? leadSite\.logoOnLight : leadSite\.logoOnDark/);
-  assert.match(mobileBrand, /src=\{logoSource\}/);
-  assert.doesNotMatch(mobileBrand, /clipPath|brightness-0|\binvert\b/);
+  assert.match(mobileBrand, /const onDarkSurface =\s*wordmarkTone === "light" \|\| \(wordmarkTone === "original" && !clean\)/);
+  assert.match(mobileBrand, /const logoSrc = onDarkSurface\s*\? leadSite\.logoOnDark\s*:\s*leadSite\.logoOnLight/);
+  assert.match(mobileBrand, /src=\{logoSrc\}/);
+  assert.match(mobileBrand, /light && "h-10 bg-black px-2\.5"/);
+  assert.match(mobileBrand, /publicSite\.identity\.desktopPreview/);
+  assert.match(mobileBrand, /<DealerDesktopLogo/);
+  assert.doesNotMatch(mobileBrand, /logoInversePath|clipPath|brightness-0|\binvert\b/);
   const masthead = fs.readFileSync(path.join(root, 'packages/marketplace-ui/components/marketplace-masthead.tsx'), 'utf8');
   assert.doesNotMatch(masthead, /Студентски град|Studentski grad/);
   fs.rmSync(root, { recursive: true, force: true });
@@ -488,3 +491,4 @@ test('Import refresh retains the approved structural hero and replaces sample st
   assert.doesNotMatch(heroSource, /Day Night Auto%20Plovdiv|0877733110/);
   fs.rmSync(root, { recursive: true, force: true });
 });
+

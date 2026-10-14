@@ -45,6 +45,26 @@ export function stripModernAlternateWordmark(text) {
   return next;
 }
 
+/** Exact reviewed 0978057 mobile child: its painted surface owns the raster choice.
+ * Bind only that child; parent badges, SVG preview, layout and event handlers stay intact. */
+export function bindReviewedModernMobileSurfaceLogo(text) {
+  const marker='function DealerMobileWordmark(',start=text.indexOf(marker);
+  if(start<0)return null;
+  const end=text.indexOf('export const DealerMobileBrandBar',start);
+  if(end<0)throw Error('Missing Modern mobile wordmark parent boundary');
+  const child=text.slice(start,end);
+  if(!child.includes('const onDarkSurface =')&&!child.includes('src={logoSrc}'))return null;
+  if(start!==text.lastIndexOf(marker))throw Error('Ambiguous reviewed Modern mobile child');
+  const childHash=sha256(Buffer.from(child.replaceAll('\r\n','\n')));
+  if(!["238aff6824604d1f1a9c308b5b9bc11ab1fd2731f4f4346d3d66708f61c1a605","b2efd4cc8841c954c10037ab9692f27438b24499ffe885bbe838cd95f7e068fe"].includes(childHash))throw Error('Unknown reviewed Modern mobile surface child');
+  const parent=text.slice(end),calls=[...parent.matchAll(/<DealerMobileWordmark\b[^>]*\/>/g)];
+  if(calls.length!==1||calls[0][0]!=='<DealerMobileWordmark clean={clean} wordmarkTone={wordmarkTone} />')throw Error('Unknown reviewed Modern mobile surface call');
+  if(childHash==="b2efd4cc8841c954c10037ab9692f27438b24499ffe885bbe838cd95f7e068fe")return text;
+  const eol=child.includes('\r\n')?'\r\n':'\n',before="  const logoSrc = onDarkSurface\n    ? (leadSite.logoInversePath ?? leadSite.logoPath)\n    : leadSite.logoPath;".replaceAll('\n',eol),after="  const logoSrc = onDarkSurface\n    ? leadSite.logoOnDark\n    : leadSite.logoOnLight;".replaceAll('\n',eol);
+  if(!child.includes(before))throw Error('Unknown reviewed Modern mobile surface binding');
+  return text.slice(0,start)+child.replace(before,after)+parent;
+}
+
 /** Bind the parent-selected dealer logo into the extracted mobile child. */
 export function bindModernMobileWordmarkLogo(text) {
   const marker = 'function DealerMobileWordmark(';
@@ -132,6 +152,8 @@ export function applyDealerLogoContract({ key, oldVariant, candidate, profile })
       return text;
     });
     edit('packages/marketplace-ui/components/dealer-mobile-brand-bar.tsx', text => {
+      const reviewedSurface=bindReviewedModernMobileSurfaceLogo(text);
+      if(reviewedSurface!==null)return reviewedSurface;
       const source = 'wordmarkTone === "light" ? leadSite.logoOnDark : wordmarkTone === "dark" || light ? leadSite.logoOnLight : leadSite.logoOnDark';
       text = text.replace(/,\r?\n\s*light && "h-10 bg-black px-2\.5"/, '');
       const clippedPrimary = /src=\{leadSite\.logoPath\}(?:\s*style=\{[\s\S]*?\r?\n\s*\})?/;
@@ -221,3 +243,4 @@ export function repairModernDarkDiscoverySource(name, source) {
   if (sha256(next) !== fix.afterSha256) throw new Error('Modern mobile source repair differs from the reviewed result');
   return {source: next, changed: true};
 }
+

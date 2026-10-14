@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
-import { stripModernAlternateWordmark, normalizeModernFinancingLogo, bindModernMobileWordmarkLogo, applyDealerLogoContract, loadLogoContract } from './lib/client-logo-contract.mjs';
+import { stripModernAlternateWordmark, bindReviewedModernMobileSurfaceLogo, normalizeModernFinancingLogo, bindModernMobileWordmarkLogo, applyDealerLogoContract, loadLogoContract } from './lib/client-logo-contract.mjs';
 
 test('Modern logo normalization removes the complete alternate wordmark JSX expression', () => {
   const source = `<span className="relative">
@@ -198,5 +198,59 @@ test('Registered PNG logo replacement detaches immutable candidate aliases and p
   for(const asset of Object.values(assets))assert.deepEqual(fs.readFileSync(path.join(candidate,'static',asset.publicPath.slice(1))),fs.readFileSync(path.join(view,asset.publicPath.slice(1))));
   assert.deepEqual(fs.readFileSync(alias),fs.readFileSync(path.join(view,assets.onLight.publicPath.slice(1))));
   assert.match(fs.readFileSync(path.join(candidate,'src/lib/config/brand.ts'),'utf8'),/dealer-brand\/onLight\.png/);
+});
+
+
+const reviewedModernBarPath=new URL('../templates/modern/packages/marketplace-ui/components/dealer-mobile-brand-bar.tsx',import.meta.url);
+const reviewedModernBar=()=>{const raw=fs.readFileSync(reviewedModernBarPath),lf=Buffer.from(raw.toString('utf8').replaceAll('\r\n','\n'));assert.equal(createHash('sha1').update('blob '+lf.length+'\0').update(lf).digest('hex'),'4b59b7e49a0e114c31fef81ab758082a9a15e220','Fixture must use the actual immutable097 reviewed bar');return lf.toString('utf8');};
+const reviewedNativeLogoBlock="  const logoSrc = onDarkSurface\n    ? (leadSite.logoInversePath ?? leadSite.logoPath)\n    : leadSite.logoPath;",reviewedBoundLogoBlock="  const logoSrc = onDarkSurface\n    ? leadSite.logoOnDark\n    : leadSite.logoOnLight;";
+
+test('reviewed Modern child binds real painted surfaces without repainting its native badge, SVG preview or parent layout',()=>{
+ const source=reviewedModernBar(),result=bindReviewedModernMobileSurfaceLogo(source);
+ assert.equal(result,source.replace(reviewedNativeLogoBlock,reviewedBoundLogoBlock));
+ assert.ok(result.includes('light && "h-10 bg-black px-2.5"'));assert.ok(result.includes('<DealerDesktopLogo'));assert.ok(result.includes('publicSite.identity.desktopPreview'));
+ assert.ok(result.includes('leadingAction ??'));assert.ok(result.includes('trailingAction ??'));assert.ok(result.includes('onClick={onNavigate}'));
+ const segment=result.slice(result.indexOf('  const onDarkSurface ='),result.indexOf('\n  return (',result.indexOf('  const onDarkSurface ='))),select=new Function('wordmarkTone','clean','leadSite',segment+'\nreturn logoSrc;'),logos={logoOnDark:'/selected-dark.webp',logoOnLight:'/selected-light.webp'};
+ for(const [tone,clean,expected]of [['original',false,logos.logoOnDark],['original',true,logos.logoOnLight],['light',false,logos.logoOnDark],['light',true,logos.logoOnDark],['dark',false,logos.logoOnLight],['dark',true,logos.logoOnLight]])assert.equal(select(tone,clean,logos),expected);
+ assert.equal(bindReviewedModernMobileSurfaceLogo(result),result);
+ const crlf=source.replaceAll('\n','\r\n'),adapted=bindReviewedModernMobileSurfaceLogo(crlf);
+ assert.equal(adapted,crlf.replace(reviewedNativeLogoBlock.replaceAll('\n','\r\n'),reviewedBoundLogoBlock.replaceAll('\n','\r\n')));assert.equal(bindReviewedModernMobileSurfaceLogo(adapted),adapted);
+ // Independent SVG/toolbar composition belongs to the parent and is retained byte for byte.
+ const svgParent=source+'\nexport const ExtraToolbar=()=> <svg><defs><clipPath id="icon"><path d="M0 0h2v2H0z"/></clipPath></defs><path clipPath="url(#icon)" /></svg>;\n';
+ assert.equal(bindReviewedModernMobileSurfaceLogo(svgParent),svgParent.replace(reviewedNativeLogoBlock,reviewedBoundLogoBlock));
+});
+
+test('reviewed Modern child refuses changed surface rules, bindings, signatures and calls',()=>{
+ const source=reviewedModernBar();
+ for(const changed of [source.replace('wordmarkTone === "light" || (wordmarkTone === "original" && !clean)','wordmarkTone === "dark" || clean'),source.replace('src={logoSrc}','src={unreviewedLogo}'),source.replace('  clean: boolean;','  clean: string;'),source.replace('<DealerMobileWordmark clean={clean} wordmarkTone={wordmarkTone} />','<DealerMobileWordmark clean={!clean} wordmarkTone={wordmarkTone} />'),source+source])assert.throws(()=>bindReviewedModernMobileSurfaceLogo(changed),/Unknown reviewed|Ambiguous reviewed/);
+ assert.equal(bindReviewedModernMobileSurfaceLogo(extractedMobileWordmark),null);
+});
+
+function modernSurfaceFixture(t,mobileSource){
+ const parent=fs.realpathSync(os.tmpdir()),root=fs.mkdtempSync(path.join(parent,'cars-modern-reviewed-logo-'));t.after(()=>{const resolved=fs.realpathSync(root);assert.equal(path.dirname(resolved),parent);assert(path.basename(resolved).startsWith('cars-modern-reviewed-logo-'));fs.rmSync(resolved,{recursive:true});});
+ const candidate=path.join(root,'candidate'),write=(name,text)=>{const file=path.join(root,name);fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,text);};
+ const png=Buffer.from([137,80,78,71,13,10,26,10]),assets={};
+ for(const surface of ['onLight','onDark','onAccent']){const publicPath='/dealer-brand/'+surface+'.png';write(publicPath.slice(1),Buffer.concat([png,Buffer.from(surface)]));assets[surface]={publicPath};}
+ write('candidate/packages/marketplace/lead-site.ts','interface LeadSite { readonly logoPath: string; }\nexport const leadSite={\n  logoPath: "/old.png",\n};\n');
+ write('candidate/packages/marketplace-ui/components/dealer-mobile-brand-bar.tsx',mobileSource);
+ write('candidate/packages/marketplace-ui/components/listing-detail-content.tsx','import { ListingFinanceCard } from "./listing-finance-card";\nconst card=<ListingFinanceCard artwork={leadSite.financingArtworkPath} />;\n');
+ write('candidate/packages/marketplace-ui/components/seller-identity-card.tsx','const photo=leadSite.logoPath; const palette="#f44336";\n');
+ write('candidate/apps/web/lib/public-marketplace-data.ts','const photo=leadSite.logoPath;\n');
+ write('candidate/apps/web/app/[locale]/layout.tsx','const icon={type: "image/png", url: leadSite.logoPath};\n');
+ return {root,candidate,assets,apply:()=>applyDealerLogoContract({key:'modern',oldVariant:path.join(root,'modern'),candidate,profile:{logoContract:{assets}}})};
+}
+test('real reviewed Modern refresh keeps all five explicit logo roles and byte-identical second application',t=>{
+ const source=reviewedModernBar(),f=modernSurfaceFixture(t,source);f.apply();
+ const read=name=>fs.readFileSync(path.join(f.candidate,name),'utf8'),bar=read('packages/marketplace-ui/components/dealer-mobile-brand-bar.tsx');
+ assert.equal(bar,source.replace(reviewedNativeLogoBlock,reviewedBoundLogoBlock));
+ const config=read('packages/marketplace/lead-site.ts');for(const [field,surface]of [['logoPath','onDark'],['logoOnLight','onLight'],['logoOnDark','onDark'],['logoOnAccent','onAccent']])assert.ok(config.includes(field+': "'+f.assets[surface].publicPath+'"'));
+ assert.equal(read('packages/marketplace-ui/components/seller-identity-card.tsx'),'const photo=leadSite.logoOnLight; const palette="#f44336";\n');assert.equal(read('apps/web/lib/public-marketplace-data.ts'),'const photo=leadSite.logoOnLight;\n');assert.equal(read('apps/web/app/[locale]/layout.tsx'),'const icon={type: "image/webp", url: leadSite.logoOnLight};\n');
+ assert.equal(read('packages/marketplace-ui/components/listing-detail-content.tsx'),'import { ListingFinanceCard } from "./listing-finance-card";\nconst card=<ListingFinanceCard artwork={leadSite.financingArtworkPath} />;\n');
+ const names=['packages/marketplace/lead-site.ts','packages/marketplace-ui/components/dealer-mobile-brand-bar.tsx','packages/marketplace-ui/components/listing-detail-content.tsx','packages/marketplace-ui/components/seller-identity-card.tsx','apps/web/lib/public-marketplace-data.ts','apps/web/app/[locale]/layout.tsx','apps/web/public/lead-logo.png',...Object.values(f.assets).map(x=>'apps/web/public'+x.publicPath)],before=names.map(name=>fs.readFileSync(path.join(f.candidate,name)));f.apply();for(const [i,name]of names.entries())assert.deepEqual(fs.readFileSync(path.join(f.candidate,name)),before[i]);
+});
+
+test('legacy inline Modern refresh retains its prior explicit light/dark declarations and clipping correction',t=>{
+ const inline='export const DealerMobileBrandBar=({tone,wordmarkTone})=>{\n  const light = tone === "light";\n  const clean = tone === "clean";\n return <span><Image src={leadSite.logoPath} /></span>;\n};\n',f=modernSurfaceFixture(t,inline);f.apply();const bar=fs.readFileSync(path.join(f.candidate,'packages/marketplace-ui/components/dealer-mobile-brand-bar.tsx'),'utf8');
+ assert.match(bar,/const useOnLight = wordmarkTone === "dark" \|\| \(wordmarkTone === "original" && light\)/);assert.match(bar,/const logoSource = useOnLight \? leadSite\.logoOnLight : leadSite\.logoOnDark/);assert.match(bar,/src=\{logoSource\}/);assert.doesNotMatch(bar,/clipPath|brightness-0|\binvert\b/);f.apply();assert.equal(fs.readFileSync(path.join(f.candidate,'packages/marketplace-ui/components/dealer-mobile-brand-bar.tsx'),'utf8'),bar);
 });
 
