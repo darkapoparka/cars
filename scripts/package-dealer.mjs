@@ -133,7 +133,7 @@ export async function collectSource(source, manifest) {
 }
 
 // Use the same inclusion rules for both trees: a deleted tracked file is drift too.
-function retainedAtCommit(relative, manifest) {
+export function retainedAtCommit(relative, manifest) {
   const parts = relative.split('/');
   if (parts.some((name, index) => omitted(name, parts.slice(0, index + 1).join('/')))) return false;
   const first = parts[0];
