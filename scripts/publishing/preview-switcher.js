@@ -85,8 +85,14 @@
       }
       const mount = config.variants.find(({base}) => base && (location.pathname === base || location.pathname.startsWith(`${base}/`)))?.base || '';
       const selectedFamily = config.variants.find(choice => choice.base === mount)?.key;
+      const adminPreview = globalThis.__CARS_ADMIN_NAVIGATION__?.previewUrl;
       const resolveLanguage = () => {
         if (!config.localization) return config.language || 'en';
+        if (adminPreview) {
+          const preview = new URL(adminPreview);
+          const locale = preview.pathname.split('/').find(part => part === 'en' || part === 'bg') || preview.searchParams.get('lang');
+          if (config.localization.enabledLocales.includes(locale)) return locale;
+        }
         const requested = selectedFamily === 'mobile' || selectedFamily === 'karento-best'
           ? new URLSearchParams(location.search).get('lang')
           : location.pathname.slice(mount.length).split('/')[1];
@@ -104,12 +110,14 @@
         design: 'Дизайн', title: 'Изберете дизайн',
         current: 'Текущ', open: 'Отвори', view: 'Виж', close: 'Затворете избора на дизайн', home: 'Начало', homeChoices: 'Варианти на началната страница',
         admin: 'Админ панел',
-        adminLabel: 'Админ панел — демо, отваря се в нов раздел'
+        adminLabel: 'Админ панел — демо, отваря се в нов раздел',
+        loading: 'Зарежда се', stillLoading: 'Все още се зарежда', retry: 'Опитай отново'
       } : {
         design: 'Design', title: 'Choose a design',
         current: 'Current', open: 'Open', view: 'View', close: 'Close design selector', home: 'Home', homeChoices: 'Homepage layouts',
         admin: 'Admin dashboard',
-        adminLabel: 'Admin dashboard — demo, opens in a new tab'
+        adminLabel: 'Admin dashboard — demo, opens in a new tab',
+        loading: 'Loading', stillLoading: 'Still loading', retry: 'Try again'
       };
       let copy = copyFor(language);
       const designCopyFor = {
@@ -133,9 +141,10 @@
         const tail = entry.pathname.slice(choice.base.length);
         return `${choice.base}/${config.language}${tail === '/' ? '' : tail}${entry.search}${entry.hash}`;
       };
+      const publicEntry = destination => adminPreview ? new URL(destination, new URL(adminPreview).origin).href : destination;
       const choicesFor = () => config.variants.map(choice => ({...choice,
-        entry: localizedEntry(choice, choice.entry),
-        ...(choice.homes ? {homes: choice.homes.map(home => ({...home, entry: localizedEntry(choice, home.entry)}))} : {})
+        entry: publicEntry(localizedEntry(choice, choice.entry)),
+        ...(choice.homes ? {homes: choice.homes.map(home => ({...home, entry: publicEntry(localizedEntry(choice, home.entry))}))} : {})
       }));
       const isCurrentHome = home => location.pathname.replace(/\/$/, '') === new URL(home.entry, location.origin).pathname.replace(/\/$/, '');
       let choices = choicesFor();
@@ -177,6 +186,9 @@
         .admin-icon svg{width:21px;height:21px}.admin strong{display:block;font-size:14px}
         .arrow{font-size:17px;color:#3157d8}
         .fab:focus-visible,.close:focus-visible,.design:focus-visible,.home-choice:focus-visible,.admin:focus-visible{outline:3px solid #5b8def;outline-offset:3px}
+        .navigation{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);display:flex;align-items:center;gap:10px;width:max-content;max-width:calc(100vw - 32px);padding:13px 16px;border:1px solid #e2e5e9;border-radius:14px;background:#fff;color:#25282c;box-shadow:0 8px 32px #0003;pointer-events:auto;font-size:14px;line-height:20px}
+        .navigation-spinner{flex:none;width:18px;height:18px;border:2px solid #dfe3e7;border-top-color:#25282c;border-radius:50%;animation:cars-navigation-spin .75s linear infinite}.navigation-label{min-width:0;overflow-wrap:anywhere}.navigation-retry{flex:none;color:#3157d8;text-underline-offset:3px;min-height:44px;display:flex;align-items:center}.navigation-retry:focus-visible{outline:3px solid #5b8def;outline-offset:3px}a[aria-busy="true"]{cursor:progress}
+        @keyframes cars-navigation-spin{to{transform:rotate(360deg)}}@media(prefers-reduced-motion:reduce){.navigation-spinner{animation:none;border-style:dotted}}
         @media(min-width:992px){:host,:host([data-active-key="app"]),:host([data-active-key="mobile"]){right:24px;bottom:96px}.backdrop{display:none}.sheet{position:absolute;left:auto;right:0;bottom:70px;width:374px;max-height:calc(100dvh - 130px);padding:16px;border:1px solid #e2e5e9;border-radius:20px;box-shadow:0 18px 56px rgba(0,0,0,.22)}.handle{display:none}.header{margin-bottom:12px}}
       </style>
       <div class="backdrop" hidden></div>
@@ -184,6 +196,7 @@
         <span class="fab-artwork" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M10 9v12"/></svg></span>
         <span class="fab-label" aria-hidden="true"></span><span class="count" aria-hidden="true"></span>
       </button>
+      <div class="navigation" hidden><span class="navigation-spinner" aria-hidden="true"></span><span class="navigation-label" role="status" aria-live="polite" aria-atomic="true"></span><a class="navigation-retry" hidden></a></div>
       <section class="sheet" id="choices" role="dialog" aria-modal="true" aria-labelledby="selector-title" hidden>
         <div class="handle" aria-hidden="true"></div>
         <header class="header"><h2 class="heading" id="selector-title"></h2>
@@ -359,6 +372,7 @@
         if (!mobile() && !panel.hidden && !event.composedPath().includes(host)) close();
       });
       document.addEventListener('keydown', event => {
+        if (event.key === 'Escape') resetNavigation();
         if (panel.hidden) return;
         if (event.key === 'Escape') { event.preventDefault(); event.stopImmediatePropagation(); close(true); return; }
         if (event.key !== 'Tab' || !mobile()) return;
@@ -367,13 +381,107 @@
         if (event.shiftKey && shadow.activeElement === first) { event.preventDefault(); last.focus(); }
         else if (!event.shiftKey && shadow.activeElement === last) { event.preventDefault(); first.focus(); }
       }, true);
-      grid.querySelectorAll('a').forEach(link => link.addEventListener('click', event => {
-        if (event.button === 0 && !event.ctrlKey && !event.metaKey && !event.shiftKey && !event.altKey) {
-          event.preventDefault();
-          location.assign(link.href);
+      const navigation = shadow.querySelector('.navigation');
+      const navigationLabel = shadow.querySelector('.navigation-label');
+      const navigationRetry = shadow.querySelector('.navigation-retry');
+      const navigationStorageKey = 'cars-preview-navigation:v1';
+      const currentHref = () => new URL(location.pathname + location.search + (location.hash || ''), location.origin).href;
+      let pendingLink, navigationTimer, incomingNavigation, readyObserver, finishingIncoming = false;
+      let navigationAttempt = 0;
+      const clearNavigationIntent = () => { try { sessionStorage.removeItem(navigationStorageKey); } catch {} };
+      const revealDestination = () => {
+        clearTimeout(globalThis.__carsPreviewPendingTimer);
+        document.documentElement.removeAttribute?.('data-cars-preview-pending');
+      };
+      const resetNavigation = (preserveIntent = false) => {
+        navigationAttempt++;
+        clearTimeout(navigationTimer);
+        readyObserver?.disconnect();
+        readyObserver = undefined;
+        incomingNavigation = undefined;
+        finishingIncoming = false;
+        revealDestination();
+        if (!preserveIntent) clearNavigationIntent();
+        pendingLink?.removeAttribute('aria-busy');
+        pendingLink = undefined;
+        navigation.hidden = true;
+        navigationLabel.textContent = '';
+        navigationRetry.hidden = true;
+      };
+      const showNavigation = (destination, name, startedAt = Date.now()) => {
+        const attempt = navigationAttempt;
+        navigationLabel.textContent = `${copy.loading} ${name}…`;
+        navigationRetry.href = destination;
+        navigationRetry.dataset.loadingName = name;
+        navigationRetry.textContent = copy.retry;
+        navigationRetry.setAttribute('aria-label', `${copy.retry}: ${name}`);
+        navigation.hidden = false;
+        navigationTimer = setTimeout(() => {
+          if (attempt !== navigationAttempt) return;
+          revealDestination();
+          navigationLabel.textContent = `${copy.stillLoading} ${name}…`;
+          pendingLink?.removeAttribute('aria-busy');
+          navigationRetry.hidden = false;
+        }, Math.max(0, 12000 - (Date.now() - startedAt)));
+      };
+      const restoreIncomingNavigation = () => {
+        let pending;
+        try { pending = JSON.parse(sessionStorage.getItem(navigationStorageKey) || 'null'); } catch {}
+        const age = Date.now() - pending?.startedAt;
+        if (choices[active]?.key !== 'karento-best' || pending?.target !== currentHref() || !Number.isFinite(age) || age < 0 || age >= 30000 || typeof pending.name !== 'string' || pending.name.length > 160) {
+          clearNavigationIntent(); revealDestination(); return;
         }
-      }));
+        incomingNavigation = pending;
+        showNavigation(pending.target, pending.name, pending.startedAt);
+        const finishWhenReady = () => {
+          if (!incomingNavigation || finishingIncoming || document.body.dataset.karentoReady !== 'true') return;
+          finishingIncoming = true;
+          Promise.resolve(document.fonts?.ready).catch(() => {}).then(() => {
+            const finish = () => { if (incomingNavigation === pending) resetNavigation(); };
+            if (globalThis.requestAnimationFrame) requestAnimationFrame(() => requestAnimationFrame(finish));
+            else finish();
+          });
+        };
+        if (typeof MutationObserver !== 'undefined') {
+          readyObserver = new MutationObserver(finishWhenReady);
+          readyObserver.observe(document.body, {attributes:true,attributeFilter:['data-karento-ready']});
+        }
+        finishWhenReady();
+      };
+      // Delegate so the shared dashboard tabs receive the same feedback as designs.
+      shadow.addEventListener('click', event => {
+        const link = event.composedPath().find(element => element.tagName?.toLowerCase() === 'a');
+        if (!link || event.defaultPrevented || event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey
+          || (link.getAttribute('target') && link.getAttribute('target') !== '_self') || link.getAttribute('download') !== null) return;
+        const destination = new URL(link.href, location.origin);
+        if (!['http:', 'https:'].includes(destination.protocol)) return;
+        event.preventDefault();
+        if (pendingLink === link && navigationRetry.hidden) return;
+        resetNavigation();
+        if (link !== navigationRetry && destination.href === currentHref()) { close(true); return; }
+        const name = link.dataset.loadingName || link.getAttribute('aria-label')?.replace(/^(Open|Отвори)\s+/, '') || link.textContent.trim();
+        const destinationHref = destination.href;
+        pendingLink = link;
+        pendingLink.setAttribute('aria-busy', 'true');
+        const signature = choices.find(choice => choice.key === 'karento-best');
+        if (signature?.base && destination.origin === location.origin && (destination.pathname === signature.base || destination.pathname.startsWith(signature.base + '/'))) {
+          try { sessionStorage.setItem(navigationStorageKey, JSON.stringify({target:destinationHref,name,startedAt:Date.now()})); } catch {}
+        }
+        showNavigation(destinationHref, name);
+        close();
+        const attempt = navigationAttempt;
+        const navigate = () => {
+          if (attempt !== navigationAttempt || pendingLink !== link) return;
+          try { location.assign(destinationHref); } catch { resetNavigation(); }
+        };
+        // Give the status a paint opportunity before starting a full document load.
+        if (globalThis.requestAnimationFrame) requestAnimationFrame(() => requestAnimationFrame(navigate));
+        else navigate();
+      });
+      globalThis.addEventListener?.('pagehide', () => resetNavigation(true));
+      globalThis.addEventListener?.('pageshow', event => { if (event?.persisted) resetNavigation(); });
       document.body.append(host);
+      restoreIncomingNavigation();
     
   };
   // New packages serve their own reviewed selector, without fetching a second

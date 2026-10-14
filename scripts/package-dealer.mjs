@@ -20,6 +20,7 @@ import {writeDerivedFile} from './lib/derived-assets.mjs';
 import {assertSixDesignSelection} from './lib/six-design-release.mjs';
 import {SIX_PACKAGING_VERSION,assertExtendedVariantSources,applySixVariantMounts,sealSixVariantBuild} from './publishing/six-variant.mjs';
 import {LEGACY_DETAIL_FILE,legacyDetailArtifact,legacyDetailRedirects} from './publishing/legacy-detail-routes.mjs';
+import {appendProposalIntroduction} from './publishing/proposal-introduction.mjs';
 import {appLocalePreferenceRedirects} from './lib/vercel-app-locale-preference.mjs';
 
 export const PACKAGING_VERSION = '1';
@@ -287,7 +288,10 @@ async function prepare({ root = ROOT, source, manifest, sourceCommit, guidance, 
   }
   const switcher = await fs.readFile(new URL('./publishing/preview-switcher.js', import.meta.url), 'utf8');
   const nativeMessages = native ? JSON.parse(await fs.readFile(new URL('./publishing/switcher-messages.json', import.meta.url), 'utf8')) : undefined;
-  files.set('auto-best/static/preview-switcher.js', Buffer.from(switcher.replace('__CARS_SWITCHER_CONFIG__', () => JSON.stringify(switcherConfiguration(manifest, nativeMessages, files)).replace(/</g, '\\u003c'))));
+  const selector = switcher.replace('__CARS_SWITCHER_CONFIG__', () => JSON.stringify(switcherConfiguration(manifest, nativeMessages, files)).replace(/</g, '\\u003c'));
+  files.set('auto-best/static/preview-switcher.js', Buffer.from(manifest.packaging.version === SIX_PACKAGING_VERSION
+    ? appendProposalIntroduction(selector, {dealerId:manifest.dealerId || manifest.slug, dealerName:manifest.shareIdentity?.name || manifest.slug})
+    : selector));
   files.set('dealer.json', Buffer.from(json(manifest)));
   if (guidance !== undefined && (typeof guidance !== 'string' || !guidance.trim())) throw new Error('guidance must be nonempty portable Markdown');
   if (guidance !== undefined || !files.has('AGENTS.md')) files.set('AGENTS.md', Buffer.from(guidance ?? fallbackGuidance(manifest, provider)));
