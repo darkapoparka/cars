@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-reviewed-existing-source-two-leaf-successor",
+  "dealer": "f1rst-motors",
+  "repository": "darkapoparka/cars-f1rstmotors",
+  "canonicalSourceRepository": "darkapoparka/cars",
+  "canonicalBaseline": {
+    "commit": "3e7002fb71f38c3c99bc35e8ba8b9fb9730c8447",
+    "tree": "4bf06e41365c440f74754a787063b4ff35c6f343"
+  },
+  "preparedTree": "947f66ca0c9bc86c5b94eae1d0aed1e7b78d3cfd",
+  "sourceRevision": "7d4557f3074b32e3f57af28b89906754b73fb9cd",
+  "stockRows": 10,
+  "authoritativeFactsUnchanged": true,
+  "allRasterAssetBytesUnchanged": true,
+  "otherFiveTemplateTreesUnchanged": true,
+  "changedAutoLeaves": [
+    {
+      "path": "auto-best/src/lib/components/home/BodyTypes.svelte",
+      "beforeBlob": "eb87d14dd507e6de91a4a42bf38541f3d4c1a7b1",
+      "afterBlob": "a188dac11b4cc0ad668ba811a3eb2730c6b3ded7"
+    },
+    {
+      "path": "auto-best/src/lib/styles/composition.css",
+      "beforeBlob": "a6a11ebd16d3ce400583402558197f0a8708a0df",
+      "afterBlob": "e5c2fa6c5eaa0f881381a83d59a710a6d6af9634"
+    }
+  ],
+  "pathsChanged": 11,
+  "uniqueBlobBytes": 309003,
+  "brandingPackId": "1cc6f1fb3927da42",
+  "nativeInput": {
+    "digest": "68cc34d7b99cc5356ee7494ff77ce27c47674c00d0369f93e02d572be73b9622",
+    "files": 9169
+  },
+  "qualificationContextSha256": "f4634d5f8efb686a60433e0821295c1c8bba68f13e55d5d8b37ce899283d4358",
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "globalReleaseApproval": false,
+  "originalSixDesignReadyDeployment": "dpl_DMWq9arGWLk3wxSqzhSyzSvsu5pa",
+  "sourceOnly": true,
+  "published": false,
+  "priorFullSourceReceipt": {
+    "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/f1rst-motors/source-preparation-receipt.json",
+    "sha256": "ae60cc4d5b75296da7356a6066a757ee6eb675daae62a40cdfebf9193bb9d47f"
+  },
+  "actualPreparation": {
+    "localExecution": "session68648, exit0",
+    "native": "PASS",
+    "app": "PASS",
+    "extended": "PASS",
+    "branding": "PASS",
+    "sourcePatch": "PASS",
+    "sourceAssetsCopied": false,
+    "exactCurrentPathLeases": true,
+    "duplicateLegacyAliasRasterBytesRetained": true
+  },
+  "reviewed": true
+}

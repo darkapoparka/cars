@@ -3,17 +3,17 @@
   "dealer": "f1rst-motors",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "097805706654b327a2b8327a7c1670da3a5f67ae",
+    "revision": "7d4557f3074b32e3f57af28b89906754b73fb9cd",
     "path": "templates/app",
-    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
-    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291",
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1"
   },
   "appDigest": "e52bb6301fd19b49fa99ef488c27c817f81291a84108c39516e62c0e5bae0d40",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "f1rst-motors",
     "profile": "auto-best/src/lib/data/dealer-profile.json",
-    "profileSha256": "cf067e64d441bc8c9c5978d048fdbe9f27ed5dfacf73a05dcccd4aed9b7a5a7f",
+    "profileSha256": "7a7fd2b40d266de1233aa3132d0e3241a12888410ce8df6765f0620e843908eb",
     "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
     "vehicles": 10,
     "currency": "AED",
@@ -150,6 +150,5 @@
     ]
   },
   "needsDealerQA": true,
-  "readyToPublish": false,
-  "refreshedAt": "2026-10-14T20:30:58.200Z"
+  "readyToPublish": false
 }
