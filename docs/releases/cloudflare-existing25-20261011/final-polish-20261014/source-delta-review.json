@@ -4,14 +4,14 @@
   "sourceCommit": "097805706654b327a2b8327a7c1670da3a5f67ae",
   "parentCommit": "64829e356956c309deb3f4b0f441969133d15041",
   "reviewed": true,
-  "reviewedAt": "2026-10-14T17:54:24.318Z",
+  "reviewedAt": "2026-10-14T18:24:47.957Z",
   "qualificationOnly": true,
   "nativeApproval": false,
   "hostedApproval": false,
   "globalReleaseApproval": false,
   "sourceReview": {
     "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-review.json",
-    "sha256": "bacbd04864e34efad936318d3b09741ddc40153bb3d95a3982d216df84d628cf"
+    "sha256": "37bd96e608c3b68c7e5d592892ecbf9f61d62410f72b364157fc43e53ba33aff"
   },
   "checks": [
     {
@@ -22,7 +22,12 @@
     {
       "name": "modern-reviewed-mobile-child-logo-binding-regressions",
       "status": "passed",
-      "evidenceSha256": "9779737678730e4bf48dbbbd14cc2d25d6b87114a0e9c382aa188cb2d6215cf9"
+      "evidenceSha256": "4f589f41609cbb06fe3d980e0e45f1ef58a731c16fde94c034039e653212cf5f"
+    },
+    {
+      "name": "standalone-origin-and-faithful-dated-inventory-copy-regressions",
+      "status": "passed",
+      "evidenceSha256": "a019be4077b12dc2bde2e9b8e23ba8038608af0b9c1b97b234a4f3c2b20258ae"
     }
   ],
   "pendingNativeChecks": [

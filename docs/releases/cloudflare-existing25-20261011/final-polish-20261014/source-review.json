@@ -3,7 +3,7 @@
   "kind": "cars-six-template-source-checkpoint-review",
   "sourceCommit": "097805706654b327a2b8327a7c1670da3a5f67ae",
   "reviewed": true,
-  "reviewedAt": "2026-10-14T17:54:24.318Z",
+  "reviewedAt": "2026-10-14T18:24:47.957Z",
   "selectedSources": {
     "auto-best": {
       "repository": "darkapoparka/cars",
@@ -76,7 +76,9 @@
     "097805706654b327a2b8327a7c1670da3a5f67ae",
     "461d1dd3006669a629881cb4eafb2fa2fe4430a0",
     "c2b6e43907d0694cb1e93c9064fb6a19fd0ab72e",
-    "b4324671155e07a771eab57648085fb28b93cda1"
+    "b4324671155e07a771eab57648085fb28b93cda1",
+    "5152e0e541b5f6d49b94851d37ab780d6f25b489",
+    "a37b7c7aa64f4a6b10011895e1163896d15abda0"
   ],
   "sourceOnly": true,
   "nativeApproval": false,
@@ -105,6 +107,10 @@
   },
   "sourceRepairEvidence": {
     "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/modern-logo-source-repair-evidence.json",
-    "sha256": "9779737678730e4bf48dbbbd14cc2d25d6b87114a0e9c382aa188cb2d6215cf9"
+    "sha256": "4f589f41609cbb06fe3d980e0e45f1ef58a731c16fde94c034039e653212cf5f"
+  },
+  "sourcePilotAdmissionEvidence": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-pilot-admission-repair-evidence.json",
+    "sha256": "a019be4077b12dc2bde2e9b8e23ba8038608af0b9c1b97b234a4f3c2b20258ae"
   }
 }
