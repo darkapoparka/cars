@@ -17,7 +17,14 @@ function derivedProfileLogoRows(files,publicBase,originalFiles=files){
   const original=JSON.parse(read(originalFiles,name)),assets=profile.logoContract?.assets;
   if(!original.logoContract?.assets||!profile.business||!assets||Array.isArray(assets))throw Error('Malformed derived profile logo contract: '+name);
   const bindings={};for(const [surface,tone]of [['onLight','on-light'],['onDark','on-dark'],['onAccent','on-accent']]){
-   const prior=assets[surface];if(!prior||typeof prior.publicPath!=='string'||!/^\/[A-Za-z0-9/._-]+$/.test(prior.publicPath)||prior.publicPath.includes('..')||!/^[a-f0-9]{64}$/.test(prior.sha256)||!Number.isSafeInteger(prior.bytes)||prior.bytes<1)throw Error('Malformed derived profile logo surface: '+name+'/'+surface);
+   const prior=assets[surface];if(!prior||typeof prior.publicPath!=='string'||!/^\/[A-Za-z0-9/._-]+$/.test(prior.publicPath)||prior.publicPath.includes('..')||!/^[a-f0-9]{64}$/.test(prior.sha256))throw Error('Malformed derived profile logo surface: '+name+'/'+surface);
+   let priorBytesValid=Number.isSafeInteger(prior.bytes)&&prior.bytes>=1;
+   if(!Object.hasOwn(prior,'bytes')){
+    // Older published contracts omitted bytes; admit only their exact retained raster.
+    const recorded=original.logoContract.assets[surface],retained=originalFiles.get(PUBLIC_ROOTS[key]+prior.publicPath.slice(1));
+    priorBytesValid=!!recorded&&!Object.hasOwn(recorded,'bytes')&&recorded.publicPath===prior.publicPath&&recorded.sha256===prior.sha256&&Buffer.isBuffer(retained)&&retained.length>0&&sha(retained)===prior.sha256;
+   }
+   if(!priorBytesValid)throw Error('Malformed derived profile logo surface: '+name+'/'+surface);
    const publicPath=publicBase+'/logo-'+tone+'.webp',physicalPath=PUBLIC_ROOTS[key]+publicPath.slice(1),bytes=files.get(physicalPath);if(!Buffer.isBuffer(bytes)||bytes.length<1)throw Error('Missing final profile logo asset: '+physicalPath);
    bindings[surface]={publicPath,sha256:sha(bytes),bytes:bytes.length};profile.logoContract.assets[surface]={...prior,...bindings[surface]};
   }
@@ -212,4 +219,5 @@ export function assertLeadBranding(files,manifest){
  for(const row of contract.derivedProfileLogoBindings||[])if(!Object.values(PROFILE_LOGO_CONSUMERS).includes(row.path)||row.factualFieldsUnchanged!==true||!files.has(row.path)||sha(files.get(row.path))!==row.afterSha256)throw Error('Derived profile branding proof changed: '+row.path);
  for(const [name,wanted]of Object.entries(contract.facts))if(sha(files.get(name))!==wanted)throw Error('Factual source changed since branding: '+name);return contract;
 }
+
 

@@ -5,6 +5,7 @@ import os from 'node:os';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
 import { resolveBrandingSharp, verifyLeadBranding } from './verify-lead-branding.mjs';
+import {rebindDerivedProfileLogoContracts,assertDerivedProfileLogoContracts,PUBLIC_ROOTS} from './publishing/lead-branding.mjs';
 
 const sharp = resolveBrandingSharp();
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
@@ -68,3 +69,24 @@ test('integrated release checks every family copy and detects a wrong dark logo'
   fs.writeFileSync(path.join(root, roots.mobile, 'dealer-brand/logo.png'), 'wrong logo');
   await assert.rejects(verifyLeadBranding({ client: root, sharp, integrated: true }), /differ in mobile/);
 }));
+
+function derivedProfileLegacyRasterFixture(){
+ const files=new Map(),base='/dealer-brand/v2-0123456789abcdef',old=Buffer.from('exact retained legacy raster'),legacySha=sha(old);
+ for(const [key,name]of Object.entries({'auto-best':'auto-best/src/lib/data/dealer-profile.json',import:'import/src/lib/data/dealer-profile.json',modern:'modern/packages/marketplace-domain/testing/dealer-profile.json'})){
+  const profile={schemaVersion:1,business:{name:'Retained business',phone:'+441234567890',logo:'/dealer-brand/logo.webp',logoLight:'/dealer-brand/logo.webp',logoDark:'/dealer-brand/logo.webp'},listings:[{id:'retained-stock',askingPrice:4299,description:'Retained dated inventory'}],custom:{paid:'preserved'},logoContract:{schemaVersion:1,dealerId:'retained',provenance:{dealerApproval:false},assets:Object.fromEntries(['onLight','onDark','onAccent'].map(surface=>[surface,{publicPath:'/dealer-brand/logo.webp',sha256:legacySha,width:1024,height:341,background:'opaque_white'}]))}};
+  files.set(name,Buffer.from(JSON.stringify(profile,null,2)+'\n'));files.set(PUBLIC_ROOTS[key]+'dealer-brand/logo.webp',old);
+  for(const tone of ['on-light','on-dark','on-accent'])files.set(PUBLIC_ROOTS[key]+base.slice(1)+'/logo-'+tone+'.webp',Buffer.from('reviewed final raster '+key+'/'+tone));
+ }
+ return{files,base,legacySha};
+}
+test('derived profile legacy missing bytes requires the exact retained raster and preserves facts across all three profiles',()=>{
+ const {files,base}=derivedProfileLegacyRasterFixture(),before=new Map(files),rows=rebindDerivedProfileLogoContracts(files,base);
+ assert.equal(rows.length,3);for(const row of rows){const original=JSON.parse(before.get(row.path)),after=JSON.parse(files.get(row.path));assert.deepEqual(after.listings,original.listings);assert.deepEqual(after.custom,original.custom);assert.deepEqual(after.logoContract.provenance,original.logoContract.provenance);for(const surface of ['onLight','onDark','onAccent'])assert(Number.isSafeInteger(after.logoContract.assets[surface].bytes)&&after.logoContract.assets[surface].bytes>0);assert.equal(after.business.name,original.business.name);assert.equal(after.business.phone,original.business.phone);assert.equal(after.business.logo,base+'/logo-on-light.webp');assert.equal(after.business.logoDark,base+'/logo-on-dark.webp');}
+ assertDerivedProfileLogoContracts(files,base);const once=new Map(files);rebindDerivedProfileLogoContracts(files,base);for(const [name,bytes]of once)assert(files.get(name).equals(bytes),'Second application changed '+name);
+});
+test('derived profile malformed present bytes and missing or hash-mismatched legacy rasters refuse atomically',()=>{
+ for(const mutate of [f=>{const p='auto-best/src/lib/data/dealer-profile.json',x=JSON.parse(f.files.get(p));x.logoContract.assets.onDark.bytes=0;f.files.set(p,Buffer.from(JSON.stringify(x)));},f=>{const p='auto-best/src/lib/data/dealer-profile.json',x=JSON.parse(f.files.get(p));x.logoContract.assets.onDark.bytes=null;f.files.set(p,Buffer.from(JSON.stringify(x)));},f=>f.files.delete('auto-best/static/dealer-brand/logo.webp'),f=>f.files.set('auto-best/static/dealer-brand/logo.webp',Buffer.from('foreign raster'))]){
+  const f=derivedProfileLegacyRasterFixture();mutate(f);const before=new Map(f.files);assert.throws(()=>rebindDerivedProfileLogoContracts(f.files,f.base),/Malformed derived profile logo surface/);assert.deepEqual([...f.files.keys()],[...before.keys()]);for(const [name,bytes]of before)assert(f.files.get(name).equals(bytes),'Refusal changed '+name);
+ }
+});
+

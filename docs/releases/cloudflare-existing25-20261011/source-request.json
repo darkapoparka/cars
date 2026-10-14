@@ -1,38 +1,11 @@
 {
   "schemaVersion": 1,
   "dealers": [
-    "bradford-cherry-tree-cars",
-    "f1rst-motors"
+    "bradford-cherry-tree-cars"
   ],
   "sourceRevision": "097805706654b327a2b8327a7c1670da3a5f67ae",
   "approvedParentLockDigest": "ecdfaf9599fbcbeadebc24de3b9aa1c7615a9a49e29d338e5e9a23427d405e26",
   "inputs": {
-    "f1rst-motors": {
-      "candidateLock": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/candidate-lock.json",
-        "sha256": "23622acb9fbaa5cb78379d6a080170f99dadb4703ff7b8ccba3d21a2b41e8786"
-      },
-      "qualification": {
-        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/f1rst-motors/qualification-context.json",
-        "sha256": "502a30d1e87870f852301660eaa675e6477aadb2a882c745594f67d0ac10c855"
-      },
-      "sourceDeltaReview": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
-        "sha256": "8fac7527b396f75ff6647a724ce7a2152bb13ff514efe6480b7c322f66fc195f"
-      },
-      "branding": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-branding/f1rst-motors.json",
-        "sha256": "166a82212bb9deacae16f29d90b80ab31ba53c7e4968693c7156c7f7b625ad11"
-      },
-      "modernCopyReview": {
-        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/f1rst-motors/modern-copy-review.json",
-        "sha256": "b15aea3726c5b9a7fac4a59a9e887fc17f06ee1eb6dd375d467a3ad0f360c579"
-      },
-      "resolutions": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/resolutions/f1rst-motors.json",
-        "sha256": "55a043b523d8510519cca5b9d8ca3d93fa44614d9b30fdb098ac194ba332e86f"
-      }
-    },
     "bradford-cherry-tree-cars": {
       "candidateLock": {
         "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/candidate-lock.json",
