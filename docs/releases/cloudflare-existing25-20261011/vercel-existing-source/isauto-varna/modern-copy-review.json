@@ -2,15 +2,15 @@
   "schemaVersion": 1,
   "kind": "cars-reviewed-modern-bilingual-copy-input",
   "dealer": "isauto-varna",
-  "sourceCommit": "bf6303bbde4268c649efb91df2b04ad3240b347b",
-  "baselineTree": "c8213447847493fa90b054e39c31c44f2e88b156",
-  "inputSha256": "7d31ef3e6450352ec8db6779b77db0748d9036608d47f647a9ac081a28ad0c49",
+  "sourceCommit": "2f7937757b84d6737a912b92908ff6ba2584cf5f",
+  "baselineTree": "0a4ace4582b4a811d0ce8440d2d0a3aba615d1ce",
+  "inputSha256": "3a859232ed20d7ae0e4bb1ab0017e0a43b8d8c43c3cd424a3a7e254655db1dc7",
   "modernInputRowsSha256": "50bb0984fbd03f31da05103e66a40181694781ea342d70d96b2cfc7cc7e58370",
   "profileInputs": [
     {
       "path": "dealer.json",
-      "gitBlob": "80a68b1addfbe2cbf891298f05d89c0e50571ccd",
-      "sha256": "38af5759f4fc5bca0b23df161ec49686c78b3439655dfd4e13e0d0030bb19489",
+      "gitBlob": "6c2f5d346d23aed7b97d40d816d0109f1680737c",
+      "sha256": "bb05802ba0db418048d29139905eed028cdca6ad96f626b8b0f72201bf768d44",
       "bytes": 4574
     },
     {
@@ -20,26 +20,32 @@
       "bytes": 6950
     }
   ],
+  "listingCount": 6,
   "reviewedGeneratorHelper": {
     "path": "scripts/lib/modern-dealer-inventory-copy.mjs",
-    "sha256": "cbdbaa28dc07911cfe913b4e627671b6556fc25d3bfe59364e29c5ca5a29072b"
+    "sha256": "cbdbaa28dc07911cfe913b4e627671b6556fc25d3bfe59364e29c5ca5a29072b",
+    "sourceCommit": "14d86f67c160699c18a6ec5658197cc4d9011e0b"
   },
-  "listingCount": 6,
   "review": {
     "displayCopyOnly": true,
+    "sourceDatesPreserved": true,
+    "vehicleFactsPreserved": true,
+    "sourceDescriptionKeysUnchanged": true,
+    "sourceImageUrlsUnchanged": true,
+    "originalImageAltsPreserved": true,
+    "stockAvailabilityNotInvented": true,
     "exactSourceDescriptionKeys": true,
     "listingFactsUnchanged": true,
     "imageUrlsUnchanged": true,
     "imageAltsPreserved": true,
     "interpolationTokensUnchanged": true,
-    "reviewedBy": "root",
-    "notes": "Translate exact snapshot descriptions and preserve owner vehicle names, facts, dated availability and form disclosure."
+    "reviewedBy": "Codex, authorized final-template rollout"
   },
   "reviewedCopy": {
     "audi-r8-2021-is-1001": {
       "sourceDescription": "Датирана извадка от публичните обяви към 16.09.2026 г.; потвърдете цената и наличността директно с IS AUTO Varna.",
       "en": {
-        "description": "Dated sample of public listings as of 16.09.2026; confirm price and availability directly with IS AUTO Varna.",
+        "description": "Dated public listing sample as of 16 September 2026; confirm price and availability directly with IS AUTO Varna.",
         "imageAlts": [
           "Audi R8 Performance V10"
         ]
@@ -54,7 +60,7 @@
     "audi-q7-2022-is-1002": {
       "sourceDescription": "Датирана извадка от публичните обяви към 16.09.2026 г.; потвърдете цената и наличността директно с IS AUTO Varna.",
       "en": {
-        "description": "Dated sample of public listings as of 16.09.2026; confirm price and availability directly with IS AUTO Varna.",
+        "description": "Dated public listing sample as of 16 September 2026; confirm price and availability directly with IS AUTO Varna.",
         "imageAlts": [
           "Audi Q7 50 TDI"
         ]
@@ -69,7 +75,7 @@
     "bmw-m5-2018-is-1003": {
       "sourceDescription": "Датирана извадка от публичните обяви към 16.09.2026 г.; потвърдете цената и наличността директно с IS AUTO Varna.",
       "en": {
-        "description": "Dated sample of public listings as of 16.09.2026; confirm price and availability directly with IS AUTO Varna.",
+        "description": "Dated public listing sample as of 16 September 2026; confirm price and availability directly with IS AUTO Varna.",
         "imageAlts": [
           "BMW M5"
         ]
@@ -84,7 +90,7 @@
     "bmw-x5-2014-is-1004": {
       "sourceDescription": "Датирана извадка от публичните обяви към 16.09.2026 г.; потвърдете цената и наличността директно с IS AUTO Varna.",
       "en": {
-        "description": "Dated sample of public listings as of 16.09.2026; confirm price and availability directly with IS AUTO Varna.",
+        "description": "Dated public listing sample as of 16 September 2026; confirm price and availability directly with IS AUTO Varna.",
         "imageAlts": [
           "BMW X5 xDrive"
         ]
@@ -99,7 +105,7 @@
     "bmw-750-2019-is-1005": {
       "sourceDescription": "Датирана извадка от публичните обяви към 16.09.2026 г.; потвърдете цената и наличността директно с IS AUTO Varna.",
       "en": {
-        "description": "Dated sample of public listings as of 16.09.2026; confirm price and availability directly with IS AUTO Varna.",
+        "description": "Dated public listing sample as of 16 September 2026; confirm price and availability directly with IS AUTO Varna.",
         "imageAlts": [
           "BMW 750 M Performance"
         ]
@@ -114,7 +120,7 @@
     "audi-a5-sportback-2018-is-1006": {
       "sourceDescription": "Датирана извадка от публичните обяви към 16.09.2026 г.; потвърдете цената и наличността директно с IS AUTO Varna.",
       "en": {
-        "description": "Dated sample of public listings as of 16.09.2026; confirm price and availability directly with IS AUTO Varna.",
+        "description": "Dated public listing sample as of 16 September 2026; confirm price and availability directly with IS AUTO Varna.",
         "imageAlts": [
           "Audi A5 Sportback 2.0 TDI"
         ]
@@ -126,10 +132,5 @@
         ]
       }
     }
-  },
-  "canonicalSourcePublished": false,
-  "currentSourceQualification": false,
-  "nativeApproval": false,
-  "hostedApproval": false,
-  "globalReleaseApproval": false
+  }
 }

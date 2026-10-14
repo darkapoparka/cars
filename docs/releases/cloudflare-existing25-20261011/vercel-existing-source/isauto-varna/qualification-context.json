@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-native-source-qualification-context",
+  "id": "fleet-final-polish-20261014",
+  "dealer": "isauto-varna",
+  "scope": "existing-dealer-pilot",
+  "sourceCommit": "7d4557f3074b32e3f57af28b89906754b73fb9cd",
+  "reviewed": true,
+  "reviewedAt": "2026-10-14T21:53:12.292Z",
+  "qualificationOnly": true,
+  "approved": false,
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "globalReleaseApproval": false,
+  "approvedLockSha256": "ecdfaf9599fbcbeadebc24de3b9aa1c7615a9a49e29d338e5e9a23427d405e26",
+  "candidateLockSha256": "4ceb9b3085d3dae4c415229d134ef33905e352f499ae2e1126bd85e318d648d8",
+  "sourceDeltaReview": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
+    "sha256": "6b5c5b82e91fc569139af5a84db9dbe34fde1f0e91fa28d55939a53d55c72ec5",
+    "reviewedAt": "2026-10-14T21:53:12.292Z"
+  },
+  "sourceReview": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-review.json",
+    "sha256": "febeb101b4c30ead5ce4aeef737f7e55fe33990fc06cfb1a8af74d673991e2cf"
+  }
+}
