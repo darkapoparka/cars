@@ -21,7 +21,7 @@ export function ServiceTabs({active,compact=false,onDark=false}: {active:Service
 
   return <nav aria-label={tx("Car services")} {...stylex.props(s.tabs)}>{showroom.services.map(tab => <Link key={tab.key} href={tab.href} aria-label={tx(tab.key === 'finance' ? 'Finance navigation' : tab.label)} aria-current={active===tab.key?'page':undefined} {...stylex.props(s.tab,active===tab.key&&s.tabActive,onDark&&active===tab.key&&s.tabOnDarkActive,compact&&s.tabCompact)}>
     <span {...stylex.props(s.tabTitle,t.navigation,active===tab.key&&s.tabTitleActive,compact&&s.tabTitleCompact,compact&&active===tab.key&&s.tabTitleCompactActive,compact&&onDark&&s.tabTitleOnDark,compact&&onDark&&active===tab.key&&s.tabTitleOnDarkActive)}>{tx(tab.key === 'finance' ? 'Finance navigation' : tab.label)}</span>
-    {!compact ? <span aria-hidden="true" {...stylex.props(s.tabArtworkBox)}><ServiceTabArtwork image={tab.image} mobileImage={tab.mobileTabImage} mobileViewBox={tab.mobileTabViewBox} service={tab.key}/></span> : null}
+    {!compact ? <span aria-hidden="true" {...stylex.props(s.tabArtworkBox)}><ServiceTabArtwork image={tab.image} mobileImage={tab.mobileTabImage} mobileViewBox={tab.mobileTabViewBox}/></span> : null}
     {active===tab.key?<span aria-hidden="true" {...stylex.props(s.tabIndicator,compact&&s.tabIndicatorCompact)}/>:null}
   </Link>)}</nav>;
 }
@@ -30,13 +30,13 @@ export function ShowroomPromotion() {
   return <DealerHomeBanner/>;
 }
 
-function ServiceTabArtwork({image, mobileImage, mobileViewBox, service}: {image: string; mobileImage: string; mobileViewBox: string; service: ServiceKey}) {
+function ServiceTabArtwork({image, mobileImage, mobileViewBox}: {image: string; mobileImage: string; mobileViewBox: string}) {
   const common = {alt: '', fill: true, sizes: '(max-width: 767px) 90px, 160px'};
   const {props: desktop} = getImageProps({...common, src: assetPath(image)});
   const {props: mobile} = getImageProps({alt: '', src: assetPath(mobileImage), width: 96, height: 64});
   // Frame the painted artwork, not each file's unequal transparent margins.
   // The 1536 x 1024 source coordinate system also fits the proportional WebP.
-  return <><img {...desktop} alt="" {...stylex.props(s.tabArt,s.tabDesktopArt)}/><svg viewBox={mobileViewBox} preserveAspectRatio="xMidYMax meet" aria-hidden="true" focusable="false" {...stylex.props(s.tabMobileArt,service==='buy'&&s.tabMobileBuy)}><image href={mobile.src} width={1536} height={1024}/></svg></>;
+  return <><img {...desktop} alt="" {...stylex.props(s.tabArt,s.tabDesktopArt)}/><svg viewBox={mobileViewBox} preserveAspectRatio="xMidYMax meet" aria-hidden="true" focusable="false" {...stylex.props(s.tabMobileArt)}><image href={mobile.src} width={1536} height={1024}/></svg></>;
 }
 
 export function BrandEmblem({make,plain=false}: {make: string;plain?: boolean}) {
@@ -84,21 +84,20 @@ export function BottomIcon({name,active}: {name:string;active:boolean}) {
 
 const s=stylex.create({
  tabs:{display:'grid',gridTemplateColumns:'repeat(4,minmax(0,1fr))',gap:{[media.mobile]:0,default:16}},
- tab:{display:{[media.mobile]:'flex',default:'block'},flexDirection:'column',alignItems:'center',justifyContent:{[media.mobile]:'flex-start',default:'space-between'},gap:{[media.mobile]:6,default:4},position:'relative',height:{[media.mobile]:'auto',default:104},minHeight:{[media.mobile]:76,default:104},padding:{[media.mobile]:'6px 2px 8px',default:0},minWidth:0,overflow:'hidden',color:$.ink,borderRadius:{[media.mobile]:0,default:16},borderWidth:{[media.mobile]:0,default:1},borderStyle:'solid',borderColor:'#eeeeef',backgroundColor:{[media.mobile]:'transparent',default:'#f4f4f5'}},
+ tab:{display:{[media.mobile]:'flex',default:'block'},flexDirection:'column',alignItems:'center',justifyContent:{[media.mobile]:'flex-start',default:'space-between'},gap:{[media.mobile]:2,default:4},position:'relative',height:{[media.mobile]:'auto',default:104},minHeight:{[media.mobile]:68,default:104},padding:{[media.mobile]:'2px 2px 12px',default:0},minWidth:0,overflow:'hidden',color:$.ink,borderRadius:{[media.mobile]:0,default:16},borderWidth:{[media.mobile]:0,default:1},borderStyle:'solid',borderColor:'#eeeeef',backgroundColor:{[media.mobile]:'transparent',default:'#f4f4f5'}},
  tabActive:{color:$.ink,backgroundColor:{[media.mobile]:'transparent',default:'#ececee'},borderColor:{[media.mobile]:'transparent',default:'#dedee1'},boxShadow:'none'},
  tabOnDarkActive:{backgroundColor:{[media.mobile]:'transparent',default:'#fff'},borderColor:{[media.mobile]:'transparent',default:'#fff'}},
  tabCompact:{aspectRatio:'auto',height:'auto',minHeight:{[media.mobile]:48,default:44},justifyContent:'center',padding:{[media.mobile]:'0 0 4px',default:0},borderWidth:0,borderRadius:{[media.mobile]:0,default:30},backgroundColor:'transparent',boxShadow:'none',overflow:'visible'},
- tabIndicator:{position:'absolute',bottom:0,left:{[media.mobile]:0,default:'calc(50% - 10px)'},width:{[media.mobile]:'100%',default:20},height:3,borderTopLeftRadius:3,borderTopRightRadius:3,backgroundColor:$.ink},
+ tabIndicator:{position:'absolute',bottom:0,left:{[media.mobile]:8,default:'calc(50% - 10px)'},width:{[media.mobile]:'calc(100% - 16px)',default:20},height:{[media.mobile]:2,default:3},borderTopLeftRadius:3,borderTopRightRadius:3,borderBottomLeftRadius:{[media.mobile]:2,default:0},borderBottomRightRadius:{[media.mobile]:2,default:0},backgroundColor:$.ink},
  tabIndicatorCompact:{display:{[media.mobile]:'block',default:'none'}},
  tabTitleCompact:{position:'static',display:'grid',placeItems:'center',width:'100%',minHeight:32,padding:'6px 2px',whiteSpace:'normal',borderRadius:{[media.mobile]:0,default:30},backgroundColor:{[media.mobile]:'transparent',default:'#f4f4f5'}},
  tabTitleCompactActive:{color:{[media.mobile]:$.ink,default:'#fff'},backgroundColor:{[media.mobile]:'transparent',default:$.ink}},
  tabTitleOnDark:{color:{[media.mobile]:$.ink,default:'#dddde1'},backgroundColor:{[media.mobile]:'transparent',default:'#343438'}},
  tabTitleOnDarkActive:{color:$.ink,backgroundColor:{[media.mobile]:'transparent',default:'#fff'}},
- tabArtworkBox:{position:{[media.mobile]:'relative',default:'absolute'},flexShrink:0,left:{[media.mobile]:'auto',default:'50%'},transform:{[media.mobile]:'none',default:'translateX(-50%)'},bottom:{[media.mobile]:'auto',default:2},width:{[media.mobile]:54,default:'100%'},height:{[media.mobile]:36,default:'64%'},maxWidth:160},
+ tabArtworkBox:{position:{[media.mobile]:'relative',default:'absolute'},flexShrink:0,left:{[media.mobile]:'auto',default:'50%'},transform:{[media.mobile]:'none',default:'translateX(-50%)'},bottom:{[media.mobile]:'auto',default:2},width:{[media.mobile]:48,default:'100%'},height:{[media.mobile]:32,default:'64%'},maxWidth:160},
  tabArt:{objectFit:'contain'},
  tabDesktopArt:{display:{[media.mobile]:'none',default:'block'}},
  tabMobileArt:{display:{[media.mobile]:'block',default:'none'},width:'100%',height:'100%'},
- tabMobileBuy:{transform:{[media.mobile]:'scale(.86)',default:'none'},transformOrigin:'center bottom'},
  tabTitle:{position:{[media.mobile]:'static',default:'absolute'},top:16,left:0,right:0,maxWidth:'100%',textAlign:'center',zIndex:1,whiteSpace:'pre-line',overflowWrap:'anywhere',letterSpacing:0},
  tabTitleActive:{fontWeight:{[media.mobile]:500,default:400}},
  sectionTitle:{fontSize:{[media.mobile]:18,default:25},fontWeight:{[media.mobile]:600,default:500},lineHeight:1.35,color:$.text},
