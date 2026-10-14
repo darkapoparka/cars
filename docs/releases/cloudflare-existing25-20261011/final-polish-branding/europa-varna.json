@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "dealer": "europa-varna",
+  "reviewed": true,
+  "reviewedAt": "2026-10-14T11:56:24.553Z",
+  "sourceMode": "retained-or-mixed-raster",
+  "master": {
+    "path": "docs/logo-polish-2026-10-14/live-assets/6562632d23318a443cdb9e0f88ecd4ea87eb2f5fce49f4c6d5ac428ce8b71614.png",
+    "sha256": "6562632d23318a443cdb9e0f88ecd4ea87eb2f5fce49f4c6d5ac428ce8b71614"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/logo-polish-2026-10-14/live-assets/6562632d23318a443cdb9e0f88ecd4ea87eb2f5fce49f4c6d5ac428ce8b71614.png",
+      "sha256": "6562632d23318a443cdb9e0f88ecd4ea87eb2f5fce49f4c6d5ac428ce8b71614",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/6562632d23318a443cdb9e0f88ecd4ea87eb2f5fce49f4c6d5ac428ce8b71614.png",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/6562632d23318a443cdb9e0f88ecd4ea87eb2f5fce49f4c6d5ac428ce8b71614.png",
+        "sha256": "6562632d23318a443cdb9e0f88ecd4ea87eb2f5fce49f4c6d5ac428ce8b71614",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    },
+    "onDark": {
+      "path": "docs/logo-polish-2026-10-14/final-raster-inputs/e9db6e49b37bf8df9dac6dc1ae0a8a0ae25884730fc6c231c957146822a1072a.png",
+      "sha256": "e9db6e49b37bf8df9dac6dc1ae0a8a0ae25884730fc6c231c957146822a1072a",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/3ab54d1ad53d5d75b5dd0726932c894284806a21cf62ce97e03b34ccb4d8b3a4.webp",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/3ab54d1ad53d5d75b5dd0726932c894284806a21cf62ce97e03b34ccb4d8b3a4.webp",
+        "sha256": "3ab54d1ad53d5d75b5dd0726932c894284806a21cf62ce97e03b34ccb4d8b3a4",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    },
+    "onAccent": {
+      "path": "docs/logo-polish-2026-10-14/final-raster-inputs/2f3945c2e16b9e00640bf1224f726002cd9f7119e50066d5b921783f46a4f645.png",
+      "sha256": "2f3945c2e16b9e00640bf1224f726002cd9f7119e50066d5b921783f46a4f645",
+      "sourceReference": "L:/CODEX/cars/leads/branding/fleet-20261011/evropavarna-varna/dealer-brand/logo-on-accent.webp",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:/CODEX/cars/leads/branding/fleet-20261011/evropavarna-varna/dealer-brand/logo-on-accent.webp",
+        "sha256": "3fa777d96823e1e3b3192fe3e4d7d266ca834f2c760c0e7f03cde709cc83c6be",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    }
+  },
+  "publicSlug": "evropavarna-varna"
+}
