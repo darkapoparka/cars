@@ -31,6 +31,14 @@
     "mobile/src/lib/showroom-config.ts": "template",
     "karento-best/src/lib/content.ts": "template",
     "karento-best/src/lib/data/dealer-detail.ts": "template",
-    "karento-best/src/lib/data/vehicle-detail.ts": "template"
+    "karento-best/src/lib/data/vehicle-detail.ts": "template",
+    "auto-best/static/dealer-brand/app-icon.png": "template",
+    "auto-best/static/favicon.ico": "template",
+    "modern/apps/web/public/dealer-brand/app-icon.png": "template",
+    "modern/apps/web/public/lead-logo.png": "template",
+    "import/static/dealer-brand/app-icon.png": "template",
+    "app/public/dealer-brand/app-icon.png": "template",
+    "mobile/public/dealer-brand/app-icon.png": "template",
+    "karento-best/static/dealer-brand/app-icon.png": "template"
   }
 }

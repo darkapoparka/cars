@@ -25,6 +25,27 @@
     "mobile/src/lib/dealer-inventory.json": "template",
     "karento-best/src/lib/content.ts": "template",
     "karento-best/src/lib/data/dealer-detail.ts": "template",
-    "karento-best/src/lib/data/vehicle-detail.ts": "template"
+    "karento-best/src/lib/data/vehicle-detail.ts": "template",
+    "auto-best/src/lib/data/dealer-profile.json": "template",
+    "auto-best/static/dealer-brand/app-icon.png": "template",
+    "auto-best/static/dealer-brand/logo.webp": "template",
+    "auto-best/static/favicon.ico": "template",
+    "modern/apps/web/public/dealer-brand/app-icon.png": "template",
+    "modern/apps/web/public/dealer-brand/logo.webp": "template",
+    "modern/apps/web/public/lead-logo.png": "template",
+    "modern/packages/marketplace-domain/testing/dealer-profile.json": "template",
+    "import/src/lib/config/dealer.ts": "template",
+    "import/src/lib/data/dealer-profile.json": "template",
+    "import/static/dealer-brand/app-icon.png": "template",
+    "import/static/dealer-brand/logo.webp": "template",
+    "app/public/dealer-app/logo-dark-a4c81c76ad62d0916a42.webp": "template",
+    "app/public/dealer-app/logo-light-a4c81c76ad62d0916a42.webp": "template",
+    "app/public/dealer-brand/app-icon.png": "template",
+    "mobile/public/dealer-brand/app-icon.png": "template",
+    "mobile/public/dealer-brand/logo.webp": "template",
+    "mobile/src/lib/dealers.ts": "template",
+    "mobile/src/lib/showroom-config.ts": "template",
+    "karento-best/static/dealer-brand/app-icon.png": "template",
+    "karento-best/static/dealer-brand/logo.webp": "template"
   }
 }
