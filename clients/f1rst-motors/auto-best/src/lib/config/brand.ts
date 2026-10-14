@@ -33,6 +33,6 @@ export const brand = {
   addressLine,
   address: "Danube Building - 409 Sheikh Zayed Rd - Al Quoz - Al Quoz 1 - Dubai, UAE",
   appointment: "Mon-Thu 10:00-21:00; Friday 14:00-21:00; Saturday 10:00-21:00; Sunday Closed",
-  logo: "/dealer-brand/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/logo-on-dark.webp"
+  logo: "/dealer-brand/v2-1cc6f1fb3927da42/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-1cc6f1fb3927da42/logo-on-dark.webp"
 } as const satisfies BrandConfig;

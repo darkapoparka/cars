@@ -114,8 +114,8 @@ export const leadSite: LeadSiteConfig = {
     "tagline": "F1rst Motors — vehicles and dealer support in Dubai."
   }
 },
-  accent: "#30343b",
-  desktopAccent: "#4b5057",
+  accent: "#09090b",
+  desktopAccent: "#09090b",
   desktopInventoryFilterLayout: "quick",
   desktopPreviewIdentity: {
     sourceSlug: "day-night-auto-group",
@@ -147,11 +147,11 @@ export const leadSite: LeadSiteConfig = {
   email: "info@f1rstmotors.com",
   heroPath: "/lead-hero.jpg",
   locale: "en-AE",
-  logoPath: "/dealer-brand/logo-on-light.webp",
-  logoInversePath: "/dealer-brand/logo-on-dark.webp",
-  logoOnLight: "/dealer-brand/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/logo-on-dark.webp",
-  logoOnAccent: "/dealer-brand/logo-on-accent.webp",
+  logoPath: "/dealer-brand/v2-1cc6f1fb3927da42/logo-on-light.webp",
+  logoInversePath: "/dealer-brand/v2-1cc6f1fb3927da42/logo-on-dark.webp",
+  logoOnLight: "/dealer-brand/v2-1cc6f1fb3927da42/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-1cc6f1fb3927da42/logo-on-dark.webp",
+  logoOnAccent: "/dealer-brand/v2-1cc6f1fb3927da42/logo-on-dark.webp",
   mapsEmbedUrl:
     "https://maps.google.com/maps?q=F1rst%20Motors%2C%20Danube%20Building%20-%20409%20Sheikh%20Zayed%20Rd%20-%20Al%20Quoz%20-%20Al%20Quoz%201%20-%20Dubai%2C%20UAE&z=16&output=embed",
   mapsUrl:

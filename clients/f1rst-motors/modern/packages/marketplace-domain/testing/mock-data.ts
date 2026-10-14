@@ -45,7 +45,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "F1rst Motors",
       "verificationStatus": "unverified",
       "city": "Dubai",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-1cc6f1fb3927da42/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": true
@@ -93,7 +93,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "F1rst Motors",
       "verificationStatus": "unverified",
       "city": "Dubai",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-1cc6f1fb3927da42/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": true
@@ -141,7 +141,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "F1rst Motors",
       "verificationStatus": "unverified",
       "city": "Dubai",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-1cc6f1fb3927da42/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": true
@@ -189,7 +189,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "F1rst Motors",
       "verificationStatus": "unverified",
       "city": "Dubai",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-1cc6f1fb3927da42/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": false
@@ -237,7 +237,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "F1rst Motors",
       "verificationStatus": "unverified",
       "city": "Dubai",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-1cc6f1fb3927da42/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": false
@@ -285,7 +285,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "F1rst Motors",
       "verificationStatus": "unverified",
       "city": "Dubai",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-1cc6f1fb3927da42/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": false
@@ -333,7 +333,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "F1rst Motors",
       "verificationStatus": "unverified",
       "city": "Dubai",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-1cc6f1fb3927da42/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": false
@@ -381,7 +381,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "F1rst Motors",
       "verificationStatus": "unverified",
       "city": "Dubai",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-1cc6f1fb3927da42/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": false
@@ -429,7 +429,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "F1rst Motors",
       "verificationStatus": "unverified",
       "city": "Dubai",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-1cc6f1fb3927da42/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": false
@@ -477,7 +477,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "F1rst Motors",
       "verificationStatus": "unverified",
       "city": "Dubai",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-1cc6f1fb3927da42/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": false

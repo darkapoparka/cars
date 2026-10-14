@@ -145,7 +145,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "F1rst Motors",
   "location": "Danube Building - 409 Sheikh Zayed Rd - Al Quoz - Al Quoz 1 - Dubai, UAE",
-  "avatar": "/dealer-brand/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-1cc6f1fb3927da42/logo-on-light.webp",
   "mobile": "+971 4 320 1030",
   "email": "info@f1rstmotors.com",
   "whatsapp": "",
