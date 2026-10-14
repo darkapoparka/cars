@@ -32,7 +32,7 @@ import {
 import { readPinnedTemplateTree } from './pinned-template-source.mjs';
 import { baseNativeManifest, APP_PACKAGING_VERSION, assertAppVariant } from '../publishing/app-variant.mjs';
 import {prepareAppDealer,sealAppDealerSource} from '../lib/app-dealer-adapter.mjs';
-import { buildLegacyDetailRouteMap, legacyDetailArtifact, LEGACY_DETAIL_FILE } from '../publishing/legacy-detail-routes.mjs';
+import { buildLegacyDetailRouteMap, legacyDetailArtifact, assertRetainedLegacyDetailTargets, LEGACY_DETAIL_FILE } from '../publishing/legacy-detail-routes.mjs';
 import {readRegisteredDealerAdoption,assertRegisteredAdoptionPlan,registeredAdoptionTarget,materializeRegisteredAssetView,assertRegisteredAssetView,assertRegisteredCandidateDirectory,assertRegisteredMountOwnership} from '../registered-dealer-adoption.mjs';
 
 const TEMPLATE_KEYS = ['auto-best', 'modern', 'carwow', 'import', 'app', 'mobile', 'karento-best'];
@@ -738,6 +738,12 @@ export function addLegacyDetailUpgrade({ files, dealerRoot, manifest, pins, regi
     return null;
   }
   const profile=loadDealerProfile(dealerRoot,manifest.slug);
+  if (!migration && manifest.legacyDetailRoutes) {
+    if (JSON.stringify(original.legacyDetailRoutes) !== JSON.stringify(manifest.legacyDetailRoutes)) throw new Error('Retained legacy detail reference changed during template refresh');
+    const retained=legacyDetailArtifact(files,manifest);
+    assertRetainedLegacyDetailTargets({artifact:retained,profile,manifest});
+    return {entries:retained.entries.length,retired:retained.retired.length,reference:manifest.legacyDetailRoutes,retained:true};
+  }
   const mapping=buildLegacyDetailRouteMap({dealerRoot,profile,manifest});
   manifest.legacyDetailRoutes=mapping.reference;
   files.set(LEGACY_DETAIL_FILE,mapping.bytes);
