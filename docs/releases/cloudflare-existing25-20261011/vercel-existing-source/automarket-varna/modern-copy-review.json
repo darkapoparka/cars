@@ -2,28 +2,28 @@
   "schemaVersion": 1,
   "kind": "cars-reviewed-modern-bilingual-copy-input",
   "dealer": "automarket-varna",
-  "sourceCommit": "bf6303bbde4268c649efb91df2b04ad3240b347b",
-  "baselineTree": "1189684887970e7e22603506a2ffb3beb9a214c0",
-  "inputSha256": "41ed49f3128228b2991e0864e9f0aa1f633313ca42f06668d33046fbf133ea81",
+  "sourceCommit": "2f7937757b84d6737a912b92908ff6ba2584cf5f",
+  "baselineTree": "49719606838902b9914e935bf7fa23e4d5f22800",
+  "inputSha256": "6805d74dcce802086ed2fd914d6ac661ddabcf501e4c1c093b58f60f48fc530f",
   "modernInputRowsSha256": "5f1653a229811ce9ef24d2f279d61e607551c90a4bc563c720242458bd30f489",
   "profileInputs": [
     {
       "path": "dealer.json",
-      "gitBlob": "c630fc4443242e318748d85284a5ceb2eedfe681",
-      "sha256": "4cb94956abcda595297527cbad51ae923f647fa14792e9171313b572010e4d65",
-      "bytes": 4678
+      "bytes": 4678,
+      "sha256": "2935a01e57bc0dfba3e0b3965508eec3f1c1d6556a55992b0f3fbddc90812e6c",
+      "gitBlob": "19eb99bb7bb8e9e8689a587ffa6a209e0695fb47"
     },
     {
       "path": "business-facts.json",
-      "gitBlob": "7a9348c3b3d25218049fb3f388040df2a3155d99",
+      "bytes": 2875,
       "sha256": "667991a1972639097d0163a0d83f0f5e52ef561acba179a9c315d5616fd2000b",
-      "bytes": 2875
+      "gitBlob": "7a9348c3b3d25218049fb3f388040df2a3155d99"
     },
     {
       "path": "stock.json",
-      "gitBlob": "1ce5764e86abe6758458611ffb7c043a7e2d73c6",
+      "bytes": 45933,
       "sha256": "af1588be452528199e31fe64ac4c2d68c20391080a9134f71c0e92b7df683b2a",
-      "bytes": 45933
+      "gitBlob": "1ce5764e86abe6758458611ffb7c043a7e2d73c6"
     }
   ],
   "reviewedGeneratorHelper": {

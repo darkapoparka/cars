@@ -2,28 +2,28 @@
   "schemaVersion": 1,
   "kind": "cars-reviewed-modern-bilingual-copy-input",
   "dealer": "champion-auto-pro",
-  "sourceCommit": "bf6303bbde4268c649efb91df2b04ad3240b347b",
-  "baselineTree": "118f51395d890326e666d62616da3fdc14604faf",
-  "inputSha256": "b8325c3224a99c26296339b631edc995cd9384cd578d04b8197ea5dc75cf72a3",
+  "sourceCommit": "2f7937757b84d6737a912b92908ff6ba2584cf5f",
+  "baselineTree": "7e79b24b503aaa79518ee1483ebf2932e2bf88e5",
+  "inputSha256": "cc16523c0f7cf2a436473f21c5b45d7d154571369e31a3ed8b3347af728ee090",
   "modernInputRowsSha256": "897b2e5581cec827b3e8707c033a2f593db0ecbf0c9fe6ae196a73cdbd6589ac",
   "profileInputs": [
     {
       "path": "dealer.json",
-      "gitBlob": "911786d6ff36e7fe2bd0669f61960acb576a7f40",
-      "sha256": "12ca0f4904af117618beda64ced632f9cf191b2cfc497450c3737ffde74f9dda",
-      "bytes": 3023
+      "bytes": 4818,
+      "sha256": "39e0f9204ae7acdbb4369ccd4c20f1630cb31822eb1daa654df33bf8300c146a",
+      "gitBlob": "ee8d6c2c01772c377e0ec69f685dd183afdcc80e"
     },
     {
       "path": "business-facts.json",
-      "gitBlob": "96287fdc7b9ed20ed376f0372aed881d30b13004",
+      "bytes": 1961,
       "sha256": "27194b0014465ef1d7ac7b45d9bbf84c00a60a5ddb27bdeb2efa2d94a69b9e25",
-      "bytes": 1961
+      "gitBlob": "96287fdc7b9ed20ed376f0372aed881d30b13004"
     },
     {
       "path": "stock.json",
-      "gitBlob": "329fdeec7e9b780dee0ba34d855e9d9744b11385",
+      "bytes": 18948,
       "sha256": "f28a8dcf20b9406869b7d9d268edc49491443fc94a3fc11d12c9137ae1883190",
-      "bytes": 18948
+      "gitBlob": "329fdeec7e9b780dee0ba34d855e9d9744b11385"
     }
   ],
   "reviewedGeneratorHelper": {

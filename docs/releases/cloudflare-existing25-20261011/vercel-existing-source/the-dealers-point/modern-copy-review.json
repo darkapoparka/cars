@@ -2,28 +2,28 @@
   "schemaVersion": 1,
   "kind": "cars-reviewed-modern-bilingual-copy-input",
   "dealer": "the-dealers-point",
-  "sourceCommit": "bf6303bbde4268c649efb91df2b04ad3240b347b",
-  "baselineTree": "1eed6abaf535d42d7863da7eb4647e0bc4e049b1",
-  "inputSha256": "bca6e4873b63ac5964c3a1d7fedb0839456dfaa8074fd61190156997f648b2ab",
+  "sourceCommit": "2f7937757b84d6737a912b92908ff6ba2584cf5f",
+  "baselineTree": "19a38f7df6626d1629d4d443bda51449ac7ff628",
+  "inputSha256": "ae754015bbc8c60317694f5712cfb8aa9568aa534bfa64c0accff00402406bb3",
   "modernInputRowsSha256": "dcb8c59bd152f77564b11d009401305e54a4c8f0c26986686846d3e9071a9edb",
   "profileInputs": [
     {
       "path": "dealer.json",
-      "gitBlob": "27d735cdc168b4484b6fde982a1b571870ded123",
-      "sha256": "8204fe81abf4e520a344987425cf66eee1a6e4e28f12958927c797ce5ed14a23",
-      "bytes": 3009
+      "bytes": 4539,
+      "sha256": "28f6fc8457085c730111e3a589afcf81e647a2cda0e5e220ee43f0d70ac7a936",
+      "gitBlob": "c6b367c030b94bb947b803d4b4cd175db5aefb2a"
     },
     {
       "path": "business-facts.json",
-      "gitBlob": "13ef06a6b3d80ad6b2c844770c75a1b23db2e980",
+      "bytes": 1007,
       "sha256": "bec946d2d99f801d830cb4888f1d3d1c6fdef2d56f876d1aa5a454bf07a42da6",
-      "bytes": 1007
+      "gitBlob": "13ef06a6b3d80ad6b2c844770c75a1b23db2e980"
     },
     {
       "path": "stock.json",
-      "gitBlob": "8bce0a1e35c1786f356608d657eb1ef057927fcb",
+      "bytes": 4257,
       "sha256": "903a70d1a7cdfcb6ded2af1ca0ada2614a2166138721d678c235a4427b4a29c6",
-      "bytes": 4257
+      "gitBlob": "8bce0a1e35c1786f356608d657eb1ef057927fcb"
     }
   ],
   "reviewedGeneratorHelper": {

@@ -2,28 +2,28 @@
   "schemaVersion": 1,
   "kind": "cars-reviewed-modern-bilingual-copy-input",
   "dealer": "elit-auto-import",
-  "sourceCommit": "bf6303bbde4268c649efb91df2b04ad3240b347b",
-  "baselineTree": "554ec09ef3cf15ffc319ddf3a721d9267d197974",
-  "inputSha256": "a8273e74fb9dfebc1e0ebee2bf26bc36870dd4e9d614694297f1e081398bb6ec",
+  "sourceCommit": "2f7937757b84d6737a912b92908ff6ba2584cf5f",
+  "baselineTree": "18b313cb8d190fb47f7e0bfc1bf779bae5964e51",
+  "inputSha256": "655a5e449f82459303ba017bbc0262c0f22a851a65bc2786691252b576a0af09",
   "modernInputRowsSha256": "365d595e5e1fbff936782fb28d8d0a98ef053594a7d180462424dea02d73f980",
   "profileInputs": [
     {
       "path": "dealer.json",
-      "gitBlob": "4432cebc4057557a67ed21ec1bb68417ebe9af44",
-      "sha256": "a9cff0b4fe829b6350d37f3e47629ad448fea93e1814906720b964dccf7b6be5",
-      "bytes": 3018
+      "bytes": 4818,
+      "sha256": "0029358ad52561a31954341ba0ed47c94b8fd85c24efa71ad59dd9cc46580fd2",
+      "gitBlob": "38c95c25dbbdaa3a7f7988a3952fee6ad6d09ec3"
     },
     {
       "path": "business-facts.json",
-      "gitBlob": "f4d1e4e6baa421652e8fc33300d4bf299ed01d7f",
+      "bytes": 2692,
       "sha256": "6e2f43919319ca6a53282693cb723c659884a587488ccf616773c8678e9fb92a",
-      "bytes": 2692
+      "gitBlob": "f4d1e4e6baa421652e8fc33300d4bf299ed01d7f"
     },
     {
       "path": "stock.json",
-      "gitBlob": "b2d7847cbbdbf226624f108aa63a272a103744b8",
+      "bytes": 57074,
       "sha256": "f77c080e5603716548e87b8283ff4d016c7ad316bbe01da27b61fa1088225c4d",
-      "bytes": 57074
+      "gitBlob": "b2d7847cbbdbf226624f108aa63a272a103744b8"
     }
   ],
   "reviewedGeneratorHelper": {

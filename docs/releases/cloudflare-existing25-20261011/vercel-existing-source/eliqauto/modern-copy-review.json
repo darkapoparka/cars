@@ -2,28 +2,28 @@
   "schemaVersion": 1,
   "kind": "cars-reviewed-modern-bilingual-copy-input",
   "dealer": "eliqauto",
-  "sourceCommit": "bf6303bbde4268c649efb91df2b04ad3240b347b",
-  "baselineTree": "96661e391c0567acbe595b204fba2eb62d9a6481",
-  "inputSha256": "44161a1f341600ffe27133b0c92c2f741df6c8373a1740d22460281450fd6564",
+  "sourceCommit": "2f7937757b84d6737a912b92908ff6ba2584cf5f",
+  "baselineTree": "48b584c1d656dac3a434a28be1b2129b1b940334",
+  "inputSha256": "ed3faef90dbd6304270b7e6e38fca1761b431e3c6cde65e72b47c40d5a0981e3",
   "modernInputRowsSha256": "a0d586c5c1e42c02980272b7b581d25fe98057add54ea0c8d7b8bc2373734969",
   "profileInputs": [
     {
       "path": "dealer.json",
-      "gitBlob": "7ea85bc9e2c099e45d551f8b38016b44a5feb39b",
-      "sha256": "b98f1f2987ba3a49af1da805b8e8e98204a112d2df1ead6f65c997b934dc3f47",
-      "bytes": 2968
+      "bytes": 4544,
+      "sha256": "cdd18135b35c50add7875f3201b60eddc968068d65bcee6b5ea56a6bd3dc3378",
+      "gitBlob": "8c2a65e83ae6206c6655780127597eb33f720ff1"
     },
     {
       "path": "business-facts.json",
-      "gitBlob": "06ddd5c1aa509cca1ead2c163de033394d0eb02b",
+      "bytes": 1953,
       "sha256": "cec24c6ef05bf0ea8197c34bafd1a78856d67b5f3bfb0c2047a29ca78c29b4fe",
-      "bytes": 1953
+      "gitBlob": "06ddd5c1aa509cca1ead2c163de033394d0eb02b"
     },
     {
       "path": "stock.json",
-      "gitBlob": "8397f8867398ca1a2792382bd997a5695d98bd8a",
+      "bytes": 26745,
       "sha256": "18587563a24e6b863cf316506018af835d34080659d774f0991468ae03096b69",
-      "bytes": 26745
+      "gitBlob": "8397f8867398ca1a2792382bd997a5695d98bd8a"
     }
   ],
   "reviewedGeneratorHelper": {

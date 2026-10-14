@@ -2,28 +2,28 @@
   "schemaVersion": 1,
   "kind": "cars-reviewed-modern-bilingual-copy-input",
   "dealer": "avangard-auto",
-  "sourceCommit": "bf6303bbde4268c649efb91df2b04ad3240b347b",
-  "baselineTree": "f55198fec4630c0e654f3570b51d881bcb71cfaf",
-  "inputSha256": "ef7391aca48d6fc330027ad88109792be1ef0a2b6edc1643c8a44149780b57ad",
+  "sourceCommit": "2f7937757b84d6737a912b92908ff6ba2584cf5f",
+  "baselineTree": "e69ec6a738703654f922fc4b2bf6ab37e6eac786",
+  "inputSha256": "4664102efe2c9d9a205940821a9b80b2484d7a9e2cfe30e229520cddde008594",
   "modernInputRowsSha256": "52c530792386a266f680e9eee2814e73493015054082067945454994fb2d8d71",
   "profileInputs": [
     {
       "path": "dealer.json",
-      "gitBlob": "6181f3c767aea978217bfd3b4279e9df91eced40",
-      "sha256": "660d169ed252dcc2bc18eff195ba64b2f68b94439cc54464da3d032cbb78fe9c",
-      "bytes": 4651
+      "bytes": 4651,
+      "sha256": "f32b0fc189cfbcad35e39075d336e57d6db076f1651d69de40db60ba5603a20e",
+      "gitBlob": "ee43e24f91fb63568c90b82087a37b60668b3377"
     },
     {
       "path": "business-facts.json",
-      "gitBlob": "e61a442f98e76bc2c5e05374511cff487e6e5f6c",
+      "bytes": 2053,
       "sha256": "5b37111bd21f16111d4000e46ac7a22bc6cbe02a3ab01ffe410028cddd030cfb",
-      "bytes": 2053
+      "gitBlob": "e61a442f98e76bc2c5e05374511cff487e6e5f6c"
     },
     {
       "path": "stock.json",
-      "gitBlob": "c50ded4438ba442645d20ed5dd759876e31a6358",
+      "bytes": 51903,
       "sha256": "17ac651d1751b2468768fa99222492060e12f7acc80a4f7d0878ef865f1ab6a9",
-      "bytes": 51903
+      "gitBlob": "c50ded4438ba442645d20ed5dd759876e31a6358"
     }
   ],
   "reviewedGeneratorHelper": {

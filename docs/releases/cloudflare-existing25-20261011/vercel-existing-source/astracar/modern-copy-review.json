@@ -2,28 +2,28 @@
   "schemaVersion": 1,
   "kind": "cars-reviewed-modern-bilingual-copy-input",
   "dealer": "astracar",
-  "sourceCommit": "bf6303bbde4268c649efb91df2b04ad3240b347b",
-  "baselineTree": "41ecd4eb1e29282a555027ffe75100a461101138",
-  "inputSha256": "987080a499da544f5248dd4ccfb409ac27405e7ab2dad82455b2518590958444",
+  "sourceCommit": "2f7937757b84d6737a912b92908ff6ba2584cf5f",
+  "baselineTree": "2796a57a4e682d18b4680130ce5c1c78ca446669",
+  "inputSha256": "5b789c2ab1e002d6618fa0ea350fda5d631028b3d8e662258b25ebde487b5007",
   "modernInputRowsSha256": "cc084c30be94f3756734df627ed91cbc540f7e1e0a3be46ae51e9ff3b788222b",
   "profileInputs": [
     {
       "path": "dealer.json",
-      "gitBlob": "25b47e7553a575fd9e068457452dc43c89889f9d",
-      "sha256": "01720d3c45bc966febc8d1962f41f2124396c30ce7fe6963bc013324f3b8620e",
-      "bytes": 2982
+      "bytes": 4769,
+      "sha256": "4b2dfa8aea672f8b3387d3fa9fe648451dcccbabe19501166a132a1200557589",
+      "gitBlob": "4e8792ae011ec661f3713f6b21eca0d8bb4650ab"
     },
     {
       "path": "business-facts.json",
-      "gitBlob": "432396bb92082c7af3d5ffcddc91d223a670dbd9",
+      "bytes": 2567,
       "sha256": "ebd6234d021866b6c99f357ae8bc00d661241930e616669991840c8466ce49d9",
-      "bytes": 2567
+      "gitBlob": "432396bb92082c7af3d5ffcddc91d223a670dbd9"
     },
     {
       "path": "stock.json",
-      "gitBlob": "b38008beff24bfbc79fc79e795b26db8d823879b",
+      "bytes": 44992,
       "sha256": "2d3647fc171d742305000ed3a13425c571371df782de07208b52f89ff8092c1d",
-      "bytes": 44992
+      "gitBlob": "b38008beff24bfbc79fc79e795b26db8d823879b"
     }
   ],
   "reviewedGeneratorHelper": {

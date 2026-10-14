@@ -2,28 +2,28 @@
   "schemaVersion": 1,
   "kind": "cars-reviewed-modern-bilingual-copy-input",
   "dealer": "kg-team-auto",
-  "sourceCommit": "bf6303bbde4268c649efb91df2b04ad3240b347b",
-  "baselineTree": "408eecbf05b75998c5f727f23ae1bb1043b76f8b",
-  "inputSha256": "acf6111d6c90eec620a5a521c2e4c158ad969f06f3780e909f89b3e6d67e3d5b",
+  "sourceCommit": "2f7937757b84d6737a912b92908ff6ba2584cf5f",
+  "baselineTree": "7e17eae40771a94658dd42564c63320fb0ba1ff0",
+  "inputSha256": "3c2ad1967e9db2b864c3b571afde0ed0312e3e323fe4358c6c61c6b40ca94744",
   "modernInputRowsSha256": "e19bfc3150506deb18d385a77eaff1e2370a8308e219ce565f5cc9d348c3372b",
   "profileInputs": [
     {
       "path": "dealer.json",
-      "gitBlob": "a8a6fcfaa62839a754a6dd9e12330220341e5191",
-      "sha256": "90d1caa0cf64957d24a949239d0c70d8dc5efd8c5149a3d6ff2f4325cffcee19",
-      "bytes": 3006
+      "bytes": 4503,
+      "sha256": "0a1030abecd020afa91804ce97285e5ac9f16c6ee2cc2a25c3ba2bf5a24a4adf",
+      "gitBlob": "85fd472e22b1869e2779ef7fd357bdac3097f39d"
     },
     {
       "path": "business-facts.json",
-      "gitBlob": "b8bcae8f5d850d20161a4a19445322a8342751eb",
+      "bytes": 1320,
       "sha256": "5c7077e4cda4277900193d583b8841c795ad13f19dd68a36240a9637f2d18429",
-      "bytes": 1320
+      "gitBlob": "b8bcae8f5d850d20161a4a19445322a8342751eb"
     },
     {
       "path": "stock.json",
-      "gitBlob": "965683d2c72820538cf3934f87c08f295cfc37ce",
+      "bytes": 8146,
       "sha256": "b3761a6bca10bdd2c5de0346f06609ed95eec2ee227059ded318ce6ae0cab3ea",
-      "bytes": 8146
+      "gitBlob": "965683d2c72820538cf3934f87c08f295cfc37ce"
     }
   ],
   "reviewedGeneratorHelper": {

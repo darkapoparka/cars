@@ -2,28 +2,28 @@
   "schemaVersion": 1,
   "kind": "cars-reviewed-modern-bilingual-copy-input",
   "dealer": "autolife",
-  "sourceCommit": "bf6303bbde4268c649efb91df2b04ad3240b347b",
-  "baselineTree": "e181cf2579e12edeb166cd9765605ae87c92ead7",
-  "inputSha256": "fe03564e3fbe035a23302d3433ca766099db022fc616303840fe7f2814926b9a",
+  "sourceCommit": "2f7937757b84d6737a912b92908ff6ba2584cf5f",
+  "baselineTree": "c0cbbe9441011ae1170822b4838c0e14cdb7cf80",
+  "inputSha256": "c4e4d362b1fe48dcb2c464e433aea4ac0b770fd6dddecafd7e1d5b33e11abcc3",
   "modernInputRowsSha256": "04813d7d9e578a17412e0707cb0a3bc33f7c6b9a95a0e9f24ac115556a4152fe",
   "profileInputs": [
     {
       "path": "dealer.json",
-      "gitBlob": "430370f0ffa5a90ab3870a42755f54de91df3de1",
-      "sha256": "db83009cba1cc2ea5ef921c13df15177bdfb6f4436b6f95b774b31dada1b9117",
-      "bytes": 2982
+      "bytes": 4769,
+      "sha256": "2f0e2dfa0f58440903d31d05b97faac1cf3a1377f87c03d95bb61e68261c6a78",
+      "gitBlob": "b94c63d9be82d1f9d561cde9a529c834495c8467"
     },
     {
       "path": "business-facts.json",
-      "gitBlob": "373550c3a78c701c5e23706bdfd2dfc3cdad3608",
+      "bytes": 2130,
       "sha256": "ac2147f6780b92ce0cf05dcde0da5bc359b90408ad5faeb4ee9eee00b80b0148",
-      "bytes": 2130
+      "gitBlob": "373550c3a78c701c5e23706bdfd2dfc3cdad3608"
     },
     {
       "path": "stock.json",
-      "gitBlob": "38fd7923553c30049e07cb2697471dc718edbb90",
+      "bytes": 42884,
       "sha256": "6bc8ef1c523424d5f7688a804ad22c3ec5bee116ac0155e417e2696d2430fd15",
-      "bytes": 42884
+      "gitBlob": "38fd7923553c30049e07cb2697471dc718edbb90"
     }
   ],
   "reviewedGeneratorHelper": {

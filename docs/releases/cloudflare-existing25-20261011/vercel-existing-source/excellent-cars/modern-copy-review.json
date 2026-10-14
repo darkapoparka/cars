@@ -2,28 +2,28 @@
   "schemaVersion": 1,
   "kind": "cars-reviewed-modern-bilingual-copy-input",
   "dealer": "excellent-cars",
-  "sourceCommit": "bf6303bbde4268c649efb91df2b04ad3240b347b",
-  "baselineTree": "6011d35697dcb55e891f20e220ac49c4bf84a310",
-  "inputSha256": "21e8a35b8619fc6a5643a07f0886af28cd3ce11421373d86b6a9ff7f1625b42f",
+  "sourceCommit": "2f7937757b84d6737a912b92908ff6ba2584cf5f",
+  "baselineTree": "c557a9112aba07e0f3c52ce362b655e50b24a77f",
+  "inputSha256": "178a29143b5b18c35448be8991b276abac3289ca88bae7f3cf6194da63399291",
   "modernInputRowsSha256": "222612418594200d6800c67a80f6285e7777946d969b90d8e779e81179a9b1b7",
   "profileInputs": [
     {
       "path": "dealer.json",
-      "gitBlob": "5bafb7beb4f0c8a925a6dc3fc846e28d8abbc34c",
-      "sha256": "1b4792b084ea8cc38b304cd6ea1b805a7fe36ab6d20a2a77c364d98d0464f484",
-      "bytes": 3002
+      "bytes": 4575,
+      "sha256": "1f3de6de71b2f58a3a4624f433583573dde59182fb3fe0c3964c4eb56dc65ea7",
+      "gitBlob": "63ea7c9268849bfe170620f7af70a8a45475c2c6"
     },
     {
       "path": "business-facts.json",
-      "gitBlob": "15faba4bb65370a8daf7f76c9859bad9fb61304a",
+      "bytes": 2804,
       "sha256": "8f62b65a56000d84c7dd1dc8f68e3fef81a76a9f33a704f0ddb80cbd4e8e98a2",
-      "bytes": 2804
+      "gitBlob": "15faba4bb65370a8daf7f76c9859bad9fb61304a"
     },
     {
       "path": "stock.json",
-      "gitBlob": "430dbf3a1bce25b5ee8903df839f470f3bc3d8f1",
+      "bytes": 22474,
       "sha256": "fed4f16e1cbb6fb7f138910a20e3e77b9c0da3d94bd31f780abaa1e22743a599",
-      "bytes": 22474
+      "gitBlob": "430dbf3a1bce25b5ee8903df839f470f3bc3d8f1"
     }
   ],
   "reviewedGeneratorHelper": {

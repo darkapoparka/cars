@@ -2,28 +2,28 @@
   "schemaVersion": 1,
   "kind": "cars-reviewed-modern-bilingual-copy-input",
   "dealer": "perfect-auto-varna",
-  "sourceCommit": "bf6303bbde4268c649efb91df2b04ad3240b347b",
-  "baselineTree": "d4f04fcd2b9f36cdf175b90b047e1e36f4ed0880",
-  "inputSha256": "f628d5337da4b027793c5e2b0620a46ed54ed62f4dfaa05ea079c94a21965574",
+  "sourceCommit": "2f7937757b84d6737a912b92908ff6ba2584cf5f",
+  "baselineTree": "455f93e3af0920bf43ef2d122dba7c4dce15496d",
+  "inputSha256": "b0aa8a803df09cd000b0a983bf6fc952bdeaa9655d61c7ae10c1469c5520567d",
   "modernInputRowsSha256": "4b7797a6c4d8cfb20e67a829089030697d1203a8f1bcd0b9639dfc7dbd0307d3",
   "profileInputs": [
     {
       "path": "dealer.json",
-      "gitBlob": "c3dec4d7f86733b87fd14368ec42b5e147a45d68",
-      "sha256": "8ec5e3e96e099a97cd28382f38c961a9981561e8b98c31d9847a055e6c95ccaf",
-      "bytes": 4664
+      "bytes": 4664,
+      "sha256": "91bc15a343c7ce4357fe0e46a918681bd933a8a05c52b1e3c2499ba84217aeb4",
+      "gitBlob": "1f79ca8cd109dea38fe47cd47526d8dabca5f694"
     },
     {
       "path": "business-facts.json",
-      "gitBlob": "1f9b529347d118e140050eef510e849a534d17be",
+      "bytes": 2516,
       "sha256": "b11b9597c077d31641680c244b246a93adddd103de025f922e2a916bbd2068a1",
-      "bytes": 2516
+      "gitBlob": "1f9b529347d118e140050eef510e849a534d17be"
     },
     {
       "path": "stock.json",
-      "gitBlob": "268884b4463c8a0e19191f5782d225d1d5bfb77e",
+      "bytes": 6871,
       "sha256": "b6f1085b8585594456ed33bfdd758192cc3ca702e7790ea1d86169e52a725bf6",
-      "bytes": 6871
+      "gitBlob": "268884b4463c8a0e19191f5782d225d1d5bfb77e"
     }
   ],
   "reviewedGeneratorHelper": {

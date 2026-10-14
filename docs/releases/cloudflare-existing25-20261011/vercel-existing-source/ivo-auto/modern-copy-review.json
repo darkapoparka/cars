@@ -2,28 +2,28 @@
   "schemaVersion": 1,
   "kind": "cars-reviewed-modern-bilingual-copy-input",
   "dealer": "ivo-auto",
-  "sourceCommit": "bf6303bbde4268c649efb91df2b04ad3240b347b",
-  "baselineTree": "69b8d9a5ca62d9c053f7834499040a06f3d1a473",
-  "inputSha256": "501740e7f3a2fd2dd47b298c04b0c3859007ad638d944b47b8f61853532aaca9",
+  "sourceCommit": "2f7937757b84d6737a912b92908ff6ba2584cf5f",
+  "baselineTree": "1c9f9fdb147ca102faf2b9acfae3d9db46ac65b5",
+  "inputSha256": "82c0ae41bcf81c51f334a93353547c75bb1aa8e77fec9a0c31c333b3c1b678f3",
   "modernInputRowsSha256": "797d88b53f88c097c9d77f91bdbc170e411494f1e4d7783d1a041428d832f4a6",
   "profileInputs": [
     {
       "path": "dealer.json",
-      "gitBlob": "671e41375f96a95ba6167c0c6fd9dddfca2c0fcf",
-      "sha256": "ac6a8b7d78b177263cb66e85eb1be9c1ab117ad15aa9e04692650208901911f2",
-      "bytes": 2980
+      "bytes": 4552,
+      "sha256": "853206ca77780e4730f418659bd1cd126f88c792c17bd5b7d20cc6dd9dc88f65",
+      "gitBlob": "4f63f6446954973fdcef515d8b4954ea9c43afd8"
     },
     {
       "path": "business-facts.json",
-      "gitBlob": "93678529b5b09bc5b69ee627bae4c3cfcd8a714d",
+      "bytes": 2534,
       "sha256": "b47e80422cc76f13a503dd47341a9ac9800aeb821c0629f53943539fd85b4bc9",
-      "bytes": 2534
+      "gitBlob": "93678529b5b09bc5b69ee627bae4c3cfcd8a714d"
     },
     {
       "path": "stock.json",
-      "gitBlob": "2a1670fe6bec6d13ef05357a7b4514af65984fea",
+      "bytes": 18543,
       "sha256": "7b4d7b205a7934b1c5a63f088f2050660082d2474dff558c99fc0394db41621c",
-      "bytes": 18543
+      "gitBlob": "2a1670fe6bec6d13ef05357a7b4514af65984fea"
     }
   ],
   "reviewedGeneratorHelper": {

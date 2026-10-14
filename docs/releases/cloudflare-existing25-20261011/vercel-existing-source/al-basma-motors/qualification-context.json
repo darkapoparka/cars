@@ -1,54 +1,26 @@
 {
   "schemaVersion": 1,
   "kind": "cars-native-source-qualification-context",
-  "id": "vercel-al-basma-motors-b1f-source-qualification",
+  "id": "fleet-final-polish-20261014",
   "dealer": "al-basma-motors",
   "scope": "existing-dealer-pilot",
-  "sourceCommit": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
-  "draft": false,
-  "publishable": false,
+  "sourceCommit": "097805706654b327a2b8327a7c1670da3a5f67ae",
   "reviewed": true,
-  "reviewedAt": "2026-10-12T02:03:21.830Z",
+  "reviewedAt": "2026-10-14T18:24:47.957Z",
   "qualificationOnly": true,
   "approved": false,
   "nativeApproval": false,
   "hostedApproval": false,
   "globalReleaseApproval": false,
-  "allSixFrozen": true,
   "approvedLockSha256": "ecdfaf9599fbcbeadebc24de3b9aa1c7615a9a49e29d338e5e9a23427d405e26",
-  "candidateLockSha256": "514a658fc544d6d26ea3bc70618d6659a9866be3292135b92d13a5aabfb8cdf0",
+  "candidateLockSha256": "23622acb9fbaa5cb78379d6a080170f99dadb4703ff7b8ccba3d21a2b41e8786",
   "sourceDeltaReview": {
-    "reference": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
-    "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975",
-    "reviewedAt": "2026-10-11T21:04:02.173Z"
+    "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
+    "sha256": "8fac7527b396f75ff6647a724ce7a2152bb13ff514efe6480b7c322f66fc195f",
+    "reviewedAt": "2026-10-14T18:24:47.957Z"
   },
   "sourceReview": {
-    "reference": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-review.json",
-    "sha256": "888477e39e4dbc3dd15badbf09f66138e2b5ba624ef7b525bea6a7d9905e02f4"
-  },
-  "pending": [
-    "Exact immutable published template pins and original approved QA parent chain were reviewed. Own current factual consumer choices, preservation conflicts and prepared-source artifacts remain pending.",
-    "No native, hosted, global release or owner acceptance; source candidate only."
-  ],
-  "pendingNativeChecks": [
-    "catalog-completeness",
-    "hardcoded-ui",
-    "native-routing",
-    "standalone-journeys",
-    "mounted-journeys",
-    "public-journeys",
-    "preferences-no-js",
-    "preferences-storage-disabled",
-    "preferences-races",
-    "request-isolation",
-    "security-write-blocking",
-    "assets-preserved"
-  ],
-  "sourceOnlyReview": {
-    "baselineCommit": "bf6303bbde4268c649efb91df2b04ad3240b347b",
-    "baselineClientTree": "7094a2b2cfe73e49701819ca8ac983468106cf7a",
-    "scope": "Exact published b1f source tuples and original approved QA parent chain only; individual dealer preservation choices, candidate QA, native/hosted/global/owner acceptance remain pending.",
-    "preservationChoicesPending": true,
-    "canonicalSourcePublicationPending": true
+    "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-review.json",
+    "sha256": "37bd96e608c3b68c7e5d592892ecbf9f61d62410f72b364157fc43e53ba33aff"
   }
 }

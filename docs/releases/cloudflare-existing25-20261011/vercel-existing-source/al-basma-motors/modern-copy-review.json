@@ -2,28 +2,28 @@
   "schemaVersion": 1,
   "kind": "cars-reviewed-modern-bilingual-copy-input",
   "dealer": "al-basma-motors",
-  "sourceCommit": "bf6303bbde4268c649efb91df2b04ad3240b347b",
-  "baselineTree": "7094a2b2cfe73e49701819ca8ac983468106cf7a",
-  "inputSha256": "cb237e32747406c4b4d77316006ee4f0f457608e1c9aa8a00bb27baa0d693a29",
+  "sourceCommit": "2f7937757b84d6737a912b92908ff6ba2584cf5f",
+  "baselineTree": "f359568ed525643fb663ebcc4b9aca58782701b7",
+  "inputSha256": "9f33b57827d2dd37c4e997ae70d882c469623e2d48ea79854a4ad71541e06f4f",
   "modernInputRowsSha256": "9a43a9035323ee48e10cb0ab6edfab41d39b1411384d1771d7ac798de8b52d85",
   "profileInputs": [
     {
       "path": "dealer.json",
-      "gitBlob": "005df28e18141cf0a60be848dfc440c5e16d91ef",
-      "sha256": "d8dda1ab4396c91c48faee0624a2f92e7886d416f6f659428d30859054318bc1",
-      "bytes": 3021
+      "bytes": 4722,
+      "sha256": "f28371001db6521f95d72e56c52dfbd2f644b9b789aaad95e5aca8a85cd5b315",
+      "gitBlob": "2c33d9e6bc256f9de6760b143a5779dff35a3b2d"
     },
     {
       "path": "business-facts.json",
-      "gitBlob": "cb37418b10890b6cce849874ada1b9dd5a93c554",
+      "bytes": 1770,
       "sha256": "e2cf73560b9dedba628b324ff5b285d947f3cc1592f82c3b1096f158f0b80332",
-      "bytes": 1770
+      "gitBlob": "cb37418b10890b6cce849874ada1b9dd5a93c554"
     },
     {
       "path": "stock.json",
-      "gitBlob": "bfd7139cba85e569d3124b15ec656ef6b49fcfa3",
+      "bytes": 27583,
       "sha256": "96825b011b59132b7dc4108f834a0fb57ac0cba0248c19c397935d8c18ad26de",
-      "bytes": 27583
+      "gitBlob": "bfd7139cba85e569d3124b15ec656ef6b49fcfa3"
     }
   ],
   "reviewedGeneratorHelper": {
