@@ -23,7 +23,7 @@ const factKeys: Record<string, string> = {
 function factOverflow(element: HTMLElement) {
   return (element.scrollLeft > 1 ? 1 : 0) | (element.scrollLeft + element.clientWidth < element.scrollWidth - 1 ? 2 : 0);
 }
-function VehicleCard({vehicle, showDiscount = false, desktopTile = false, imagePriority = false, headingLevel = 3, finance, importListing, onRemoveSaved}: {vehicle: Vehicle; showDiscount?: boolean; desktopTile?: boolean; imagePriority?: boolean; headingLevel?: 2 | 3; finance?: {monthly: number; onCalculate: () => void}; importListing?: {country: string; onEnquire: () => void}; onRemoveSaved?: (event: MouseEvent<HTMLButtonElement>) => void}) {
+function VehicleCard({vehicle, showDiscount = false, desktopTile = false, mobileFlat = false, imagePriority = false, headingLevel = 3, finance, importListing, onRemoveSaved}: {vehicle: Vehicle; showDiscount?: boolean; desktopTile?: boolean; mobileFlat?: boolean; imagePriority?: boolean; headingLevel?: 2 | 3; finance?: {monthly: number; onCalculate: () => void}; importListing?: {country: string; onEnquire: () => void}; onRemoveSaved?: (event: MouseEvent<HTMLButtonElement>) => void}) {
   const tx = useCopy();
   const Heading = headingLevel === 2 ? 'h2' : 'h3';
   const factRow = useRef<HTMLDivElement>(null);
@@ -60,7 +60,7 @@ function VehicleCard({vehicle, showDiscount = false, desktopTile = false, imageP
     <div {...stylex.props(s.priceRow)}><strong {...stylex.props(s.price, vehicle.priceOnRequest && s.priceOnRequest)}>{vehicle.priceOnRequest ? tx('Price on request') : <><CurrencyLabel size={18} />{tx(formatPrice(vehicle.price))}</>}</strong>{showDiscount && discount > 0 ? <span {...stylex.props(s.discount)}>{tx(formatPrice(discount))} {tx(" OFF")}</span> : null}</div>
     {!finance && hasPublishedMonthlyPayment(vehicle) ? <p {...stylex.props(s.monthly)}><span {...stylex.props(s.monthlyPrice)}><span {...stylex.props(s.srOnly)}><CurrencyLabel size={11}/></span>{tx(formatPrice(vehicle.monthly))}{tx("/mo*")}</span><span {...stylex.props(s.monthlyNote)}>{tx("est.")}</span></p> : null}
   </>;
-  return <article aria-label={tx(`${vehicle.year} ${displayMake(vehicle.make)} ${vehicle.model}`)} data-desktop-tile={desktopTile || undefined} data-price={vehicle.price} data-mileage={vehicle.mileage} data-monthly={vehicle.monthly} {...stylex.props(s.card)}>
+  return <article aria-label={tx(`${vehicle.year} ${displayMake(vehicle.make)} ${vehicle.model}`)} data-desktop-tile={desktopTile || undefined} data-price={vehicle.price} data-mileage={vehicle.mileage} data-monthly={vehicle.monthly} {...stylex.props(s.card, mobileFlat && s.mobileFlatCard)}>
     <div {...stylex.props(s.main, desktopTile && s.tileMain)}>
       {importListing ? <button type="button" aria-haspopup="dialog" aria-label={importAction} onClick={importListing.onEnquire} {...stylex.props(s.photo,desktopTile && s.tilePhoto,s.importAction)}>{photo}</button> : <Link href={href} aria-label={tx(`View ${vehicle.year} ${displayMake(vehicle.make)} ${vehicle.model}`)} {...stylex.props(s.photo,desktopTile && s.tilePhoto)}>{photo}</Link>}
       <div {...stylex.props(s.info, desktopTile && s.tileInfo)}>
@@ -78,6 +78,7 @@ export default memo(VehicleCard);
 
 const s = stylex.create({
   card: {position: 'relative', minWidth: 0, overflow: 'hidden', borderColor: $.surfaceBorder, borderStyle: 'solid', borderWidth: 1, borderRadius: 17, backgroundColor: $.surface, boxShadow: $.shadowSoft},
+  mobileFlatCard: {boxShadow: {[media.mobile]: 'none', default: $.shadowSoft}},
   main: {position: 'relative', display: 'grid', gridTemplateColumns: {[media.mobile]: '44% minmax(0,1fr)', default: 'minmax(140px,39%) minmax(0,1fr)'}, gap: {[media.mobile]: 8, default: 10}, padding: {[media.mobile]: 8, default: 12}},
   photo: {position: 'relative', alignSelf: 'stretch', display: 'block', overflow: 'hidden', borderRadius: 10},
   tileMain: {gridTemplateColumns: {[media.mobile]: '44% minmax(0,1fr)', [media.desktop]: 'minmax(0,1fr)', default: 'minmax(140px,39%) minmax(0,1fr)'}, gap: {[media.mobile]: 8, [media.desktop]: 0, default: 10}, padding: {[media.mobile]: 8, [media.desktop]: 0, default: 12}},
