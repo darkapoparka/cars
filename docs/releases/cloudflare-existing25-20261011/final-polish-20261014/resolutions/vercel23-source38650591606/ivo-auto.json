@@ -38,6 +38,7 @@
     "karento-best/src/lib/data/vehicle-detail.ts": "template",
     "karento-best/src/lib/sections/FeaturedVehicleGrid.svelte": "template",
     "karento-best/static/dealer-brand/logo-on-dark.webp": "template",
-    "karento-best/static/dealer-brand/logo-on-light.webp": "template"
+    "karento-best/static/dealer-brand/logo-on-light.webp": "template",
+    "auto-best/src/lib/data/company.ts": "template"
   }
 }

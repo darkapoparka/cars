@@ -42,6 +42,7 @@
     "karento-best/src/lib/data/dealer-detail.ts": "template",
     "karento-best/src/lib/data/vehicle-detail.ts": "template",
     "karento-best/static/dealer-brand/logo-on-dark.png": "template",
-    "karento-best/static/dealer-brand/logo-on-light.png": "template"
+    "karento-best/static/dealer-brand/logo-on-light.png": "template",
+    "auto-best/src/lib/data/company.ts": "template"
   }
 }
