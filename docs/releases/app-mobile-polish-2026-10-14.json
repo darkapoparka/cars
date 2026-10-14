@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "key": "app",
+  "release": "app-mobile-polish-2026-10-14",
+  "status": "standalone-published",
+  "approved": false,
+  "repository": "darkapoparka/cars",
+  "commit": "d4653d41428f948083ec382bf914b008a8c4f116",
+  "sourcePath": "templates/app",
+  "sourceTree": "c8dba3cc97abdd8fe7aebe24da79853704291119",
+  "sourceDigest": "2983c07ee46215f834b30ec7950929db1acf119ec12143668e67d33fe956f06e",
+  "exportPolicy": "cars-source-v1",
+  "verifiedAt": "2026-10-14T12:39:02Z",
+  "runtime": {
+    "localNode": "22.20.0",
+    "declaredNode": ">=22.20.0 <23",
+    "vercelNode": "22.x",
+    "next": "16.3.8"
+  },
+  "checks": [
+    {
+      "name": "full-eslint-and-typescript",
+      "status": "passed"
+    },
+    {
+      "name": "local-regression-tests",
+      "status": "passed",
+      "count": 149
+    },
+    {
+      "name": "exact-Cars-App-quality-workflow",
+      "status": "passed",
+      "runId": 38562212649,
+      "url": "https://github.com/darkapoparka/cars/actions/runs/38562212649",
+      "scope": [
+        "npm run check",
+        "production build",
+        "production dependency audit",
+        "browser journeys",
+        "production routes in both journeys"
+      ]
+    },
+    {
+      "name": "frozen-source-fingerprint",
+      "status": "passed",
+      "files": 1684,
+      "sourceTree": "c8dba3cc97abdd8fe7aebe24da79853704291119",
+      "sourceDigest": "2983c07ee46215f834b30ec7950929db1acf119ec12143668e67d33fe956f06e",
+      "method": "Closed frozen Git tree inventory; each source byte identity checked against the frozen Git blob SHA. Existing bytes reused; four unrelated working-file differences read from immutable blobs."
+    },
+    {
+      "name": "vercel-production-build-and-alias",
+      "status": "passed",
+      "deploymentId": "dpl_4d8vWGmoawoRo8uT2xSeGLHtpywB",
+      "mirrorCommit": "76c4619d25133f13298b7880ea6ab6d5f20102ad"
+    },
+    {
+      "name": "live-focused-mobile-and-desktop",
+      "status": "passed",
+      "scope": "EN Sell 390; EN service enquiry/draft 320; BG service enquiry 320 and desktop 1440; EN desktop Home four cards with 16:9 photos. Centered short mobile headers, 44px controls, no dealer-name row, 8px plain benefit gaps and clear How it works outline. Back retained entered car details."
+    }
+  ],
+  "standalone": {
+    "mobile": {
+      "verified": true,
+      "widths": [
+        320,
+        390
+      ],
+      "locales": [
+        "en",
+        "bg"
+      ]
+    },
+    "desktop": {
+      "verified": true,
+      "widths": [
+        1440
+      ]
+    },
+    "published": true
+  },
+  "modes": {
+    "standalone": "Published and verified on the existing Vercel App template identity.",
+    "mounted": "Requires exact refreshed dealer package and combined hosted pilot in the rollout chat."
+  },
+  "deployment": {
+    "provider": "vercel",
+    "teamId": "team_RTNXBnClGWDdcYFFUW0BnqvJ",
+    "projectId": "prj_TnD7adaf0u3zjwhmV2xRxx9mWkOu",
+    "project": "cars-template-app",
+    "deploymentId": "dpl_4d8vWGmoawoRo8uT2xSeGLHtpywB",
+    "readyState": "READY",
+    "target": "production",
+    "url": "https://cars-template-app.vercel.app",
+    "immutableUrl": "https://cars-template-pd0lfk0cg-tyj5.vercel.app",
+    "repository": "darkapoparka/cars-template-app",
+    "commit": "76c4619d25133f13298b7880ea6ab6d5f20102ad"
+  },
+  "releaseSelection": {
+    "written": false,
+    "currentApprovedAppCommit": "4e184777567849a2c5b4a9e4a3e652252179c29c",
+    "reason": "Owner scoped this chat to the standalone template. The rollout chat owns the refreshed combined pilot and maintained template lock approval; this document is a exact-source handoff, not a fabricated global fleet approval.",
+    "nextAction": "Use this frozen App source in the maintained qualification candidate, verify the combined hosted dealer pilot, then approve/select the release through scripts/template-release.mjs. Do not use a loose working-tree snapshot or silently reuse the old App pin."
+  },
+  "scope": {
+    "dealerUpdates": false,
+    "providerIdentityPreserved": true,
+    "sharedIndexLockPreserved": true,
+    "localMainHeadMoved": false,
+    "unrelatedWorkingChangesPreserved": true
+  },
+  "localEvidence": "templates/app/runtime/mobile-spacing-20261014",
+  "retainedFinalCaptures": [
+    "hosted-sell-390.jpg",
+    "hosted-enquiry-320.jpg",
+    "center-header-before-320.jpg",
+    "center-header-after-320.jpg"
+  ]
+}
