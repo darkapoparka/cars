@@ -1,6 +1,8 @@
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import path from 'node:path';
-import {sha256} from './lib/workflow.mjs';
-import {validateSingletonGitHubBuild,validateSourcePublication,validateCurrentSingletonTarget,validateAbsentSingletonTarget,validateWranglerAbsentTarget,inspectFleetSingleton,runFleetSingletonDeployment,parseDeploymentArgs} from './deploy-dealer-single-worker.mjs';
+import {sha256,filesAt} from './lib/workflow.mjs';
+import {artifactInventory} from './lib/uk-cloudflare-artifacts.mjs';
+import {createCanonicalComposition,canonicalCompositionEntry,CANONICAL_ORIGINAL_WORKER_PATH} from './publishing/canonical-origin-wrapper.mjs';
+import {validateSingletonGitHubBuild,validateSourcePublication,validateCurrentSingletonTarget,validateAbsentSingletonTarget,validateWranglerAbsentTarget,inspectFleetSingleton,runFleetSingletonDeployment,parseDeploymentArgs,canonicalExposureDigests,validateCanonicalExposureLease,readCanonicalExposureSnapshot,CANONICAL_EXPOSURE_ZONE,CANONICAL_EXPOSURE_KIND} from './deploy-dealer-single-worker.mjs';
 import {SINGLETON_ACCOUNT} from './assemble-existing-fleet-single-worker.mjs';
 import {tinyArea,writeTinySingleton,writeFixture,tinyZip} from './test-fixtures/fleet-single-worker.mjs';
 const oldVersion='11111111-1111-4111-8111-111111111111',newVersion='22222222-2222-4222-8222-222222222222';
@@ -186,3 +188,157 @@ test('changed original ZIP buffer between inspection and upload is refused witho
 
 import {hashArchive,readZipReceipt} from './deploy-uk-cloudflare.mjs';
 test('bounded ZIP parser and whole-byte hash agree between file and memory inputs',async t=>{const f=fixture(t),b=fs.readFileSync(f.archive);assert.deepEqual(await hashArchive(b),await hashArchive(f.archive));for(const n of ['artifact-manifest.json','single-worker-receipt.json','dealer-composition-review.json','delivery-receipt.json','wrangler.json'])assert(readZipReceipt(b,n).equals(readZipReceipt(f.archive,n)));assert.throws(()=>readZipReceipt(b.subarray(0,21),'artifact-manifest.json'),/size|directory|ZIP/);assert.throws(()=>readZipReceipt(b,'../escape.json'),/Unsafe/);});
+
+function resealCanonicalFixture(f) {
+ const files=filesAt(f.directory,{filter:()=>true}).filter(name=>!['artifact-manifest.json','single-worker-receipt.json','dealer-composition-review.json','delivery-receipt.json'].includes(name)).map(name=>{const bytes=fs.readFileSync(path.join(f.directory,name));return {path:name,bytes:bytes.length,sha256:sha256(bytes)};});
+ f.receipt.files=files;f.receipt.outputDigest=sha256(JSON.stringify(files));f.receipt.serverBytes=files.filter(row=>row.path.startsWith('server/')).reduce((sum,row)=>sum+row.bytes,0);f.receipt.assetFiles=files.filter(row=>row.path.startsWith('public/')).length;
+ f.composition.outputDigest=f.receipt.outputDigest;f.delivery.outputDigest=f.receipt.outputDigest;
+ for(const [name,value] of [['single-worker-receipt.json',f.receipt],['dealer-composition-review.json',f.composition],['delivery-receipt.json',f.delivery]])writeFixture(path.join(f.directory,name),value);
+ f.inventory=artifactInventory(f.directory,{kind:f.delivery.kind,dealer:f.client,status:'passed'});
+ const zip=tinyZip(f.directory);writeFixture(f.archive,zip);Object.assign(f.review,{artifactDigest:f.inventory.digest,outputDigest:f.receipt.outputDigest,archiveDigest:'sha256:'+sha256(zip),archiveBytes:zip.length});
+ Object.assign(f.remote.artifact,{digest:f.review.archiveDigest,size_in_bytes:zip.length});writeFixture(f.reviewFile,f.review);
+}
+function canonicalFixture(t,{wrapped=true}={}) {
+ const f=fixture(t),canonicalOrigin='https://navara-car.webpreviews.site';
+ if(wrapped){
+  const composition=createCanonicalComposition({canonicalOrigin,ukDefault:false},{providerOrigin:f.publicOrigin,toolRevision:f.receipt.sourceCommit,variants:f.composition.variants});
+  writeFixture(path.join(f.directory,CANONICAL_ORIGINAL_WORKER_PATH),fs.readFileSync(path.join(f.directory,'server/worker.mjs')));
+  writeFixture(path.join(f.directory,'server/worker.mjs'),canonicalCompositionEntry(composition));
+  for(const value of [f.receipt,f.composition,f.delivery,f.review])value.canonicalComposition=composition;
+  resealCanonicalFixture(f);
+ }
+ const route={id:'a'.repeat(32),pattern:'navara-car.webpreviews.site/*',script:f.workerName};
+ const endpoints={zoneRoutes:'/zones/'+CANONICAL_EXPOSURE_ZONE+'/workers/routes',workerDomains:'/accounts/'+SINGLETON_ACCOUNT+'/workers/domains',scriptSubdomain:'/accounts/'+SINGLETON_ACCOUNT+'/workers/scripts/'+f.workerName+'/subdomain'};
+ const sample={kind:'cars-live-canonical-exposure-read',evidence:'authenticated-cloudflare-connector',accountId:SINGLETON_ACCOUNT,workerName:f.workerName,zoneId:CANONICAL_EXPOSURE_ZONE,observedAt:new Date().toISOString(),
+  zoneRoutes:{endpoint:endpoints.zoneRoutes,success:true,status:200,complete:true,totalCount:1,result:[route]},
+  workerDomains:{endpoint:endpoints.workerDomains,success:true,status:200,complete:true,totalCount:0,result:[]},
+  scriptSubdomain:{endpoint:endpoints.scriptSubdomain,success:true,status:200,result:{enabled:true,previews_enabled:false}}};
+ const digests=canonicalExposureDigests(sample),lease={schemaVersion:1,kind:CANONICAL_EXPOSURE_KIND,dealer:f.client,reviewed:true,reviewedAt:new Date().toISOString(),accountId:SINGLETON_ACCOUNT,workerName:f.workerName,providerOrigin:f.publicOrigin,canonicalOrigin,zoneId:CANONICAL_EXPOSURE_ZONE,routeId:route.id,proofs:Object.fromEntries(Object.keys(endpoints).map(kind=>[kind,{endpoint:endpoints[kind],sha256:digests[kind]}]))};
+ f.snapshot={...f.snapshot,routes:[route],handlers:['fetch'],bindings:[{name:'ASSETS',type:'assets'}]};
+ f.review.providerSnapshot=f.snapshot;f.review.canonicalExposure=lease;writeFixture(f.reviewFile,f.review);
+ return {...f,lease,sample,route,endpoints};
+}
+function canonicalProvider(f,{snapshotChange,upload}={}) {
+ return {tool:{version:'4.149.0',authentication:'fixture-no-credentials'},snapshot:async(_review,{versionId}={})=>{
+  const value=versionId?{...f.snapshot,versionId,versionTraffic:[{version_id:versionId,percentage:100}],deploymentId:'fixture-deployment'}:f.snapshot;
+  return snapshotChange?snapshotChange(value,versionId):value;
+ },upload:upload??(async()=>({worker_name:f.workerName,version_id:newVersion}))};
+}
+const freshCanonicalRead=f=>async request=>({...structuredClone(f.sample),requestId:request.requestId,observedAt:new Date().toISOString()});
+
+test('canonical lease rejects an unwrapped seal and explicit review/lease tuple mismatches before upload',async t=>{
+ const raw=canonicalFixture(t,{wrapped:false});await assert.rejects(inspectFleetSingleton(raw.options),/matching sealed canonical wrapper composition/);
+ for(const mode of ['missing-review','review-canonical','lease-canonical','unsealed-worker']){
+  const f=canonicalFixture(t);
+  if(mode==='missing-review')delete f.review.canonicalComposition;
+  if(mode==='review-canonical')f.review.canonicalComposition={...f.review.canonicalComposition,canonicalOrigin:'https://other.webpreviews.site'};
+  if(mode==='lease-canonical')f.review.canonicalExposure={...f.lease,canonicalOrigin:'https://other.webpreviews.site'};
+  if(mode==='unsealed-worker')fs.appendFileSync(path.join(f.directory,'server/worker.mjs'),'// changed');
+  writeFixture(f.reviewFile,f.review);let uploads=0;
+  await assert.rejects(runFleetSingletonDeployment({...f.options,write:true,readExposure:freshCanonicalRead(f),provider:canonicalProvider(f,{upload:async()=>{uploads++;return {worker_name:f.workerName,version_id:newVersion};}})}),/canonical composition|matching sealed|bytes differ/);
+  assert.equal(uploads,0);assert.equal(fs.existsSync(path.join(f.root,'runtime/dealer-single-worker-deployments')),false);
+ }
+});
+test('sealed canonical wrapper remains exact in both original ZIP bytes and extracted directory',async t=>{
+ const f=canonicalFixture(t),context=await inspectFleetSingleton(f.options);
+ assert.deepEqual(context.plan.canonicalComposition,f.receipt.canonicalComposition);assert.notEqual(context.plan.publicOrigin,context.plan.canonicalComposition.canonicalOrigin);
+ fs.appendFileSync(path.join(f.directory,CANONICAL_ORIGINAL_WORKER_PATH),'// changed original');
+ await assert.rejects(inspectFleetSingleton(f.options),/bytes differ/);
+});
+
+
+test('canonical hostname updates refuse the default CLI and any missing live exposure reader',async t=>{
+ const f=canonicalFixture(t);
+ await assert.rejects(runFleetSingletonDeployment(f.options),/live authenticated readExposure callback.*default CLI/);
+ await assert.rejects(runFleetSingletonDeployment({...f.options,write:true,provider:canonicalProvider(f)}),/live authenticated readExposure callback/);
+ assert.equal(fs.existsSync(path.join(f.root,'runtime/dealer-single-worker-deployments')),false);
+});
+
+test('canonical lease is bounded to the exact existing reviewed account, Worker and zone hostname',t=>{
+ const f=canonicalFixture(t);assert.equal(validateCanonicalExposureLease(f.lease,f.review).routeId,f.route.id);
+ for(const change of [{dealer:'other'},{workerName:'cars-other'},{providerOrigin:'https://other.workers.dev'},{accountId:'b'.repeat(32)},{zoneId:'b'.repeat(32)},{reviewed:false},{reviewedAt:new Date(Date.now()+60000).toISOString()},{routeId:'wrong'},
+  {canonicalOrigin:'https://navara-car.webpreviews.site/path'},{canonicalOrigin:'https://user:secret@navara-car.webpreviews.site'},{canonicalOrigin:'http://navara-car.webpreviews.site'},{canonicalOrigin:'https://*.webpreviews.site'},{canonicalOrigin:'https://foreign.example'}]){
+  assert.throws(()=>validateCanonicalExposureLease({...f.lease,...change},f.review),/Canonical exposure/);
+ }
+ const changed=structuredClone(f.lease);changed.proofs.zoneRoutes.endpoint='/zones/foreign/workers/routes';
+ assert.throws(()=>validateCanonicalExposureLease(changed,f.review),/endpoint/);
+});
+
+test('one canonical in-place update authenticates every exposure stage and retains its proof',async t=>{
+ const f=canonicalFixture(t),phases=[];let uploads=0;
+ const readExposure=async request=>{phases.push(request);assert.deepEqual(request.endpoints,f.endpoints);return {...structuredClone(f.sample),requestId:request.requestId,observedAt:new Date().toISOString()};};
+ const result=await runFleetSingletonDeployment({...f.options,write:true,readExposure,provider:canonicalProvider(f,{upload:async()=>{uploads++;return{worker_name:f.workerName,version_id:newVersion};}})});
+ assert.equal(uploads,1);assert.deepEqual(phases.map(x=>x.stage),['before','locked','after']);
+ assert.equal(new Set(phases.map(x=>x.requestId)).size,3);
+ assert.equal(phases[0].expectedVersionId,oldVersion);assert.equal(phases[2].expectedVersionId,newVersion);
+ assert.equal(result.versionId,newVersion);assert.equal(result.exposurePreservation.canonicalOrigin,f.lease.canonicalOrigin);
+ assert.deepEqual(result.exposurePreservation.before.proofDigests,result.exposurePreservation.after.proofDigests);
+ assert.deepEqual(result.rollback.routes,[f.route]);assert.equal(result.hostedVerified,false);assert.equal(result.ownerAccepted,false);
+});
+
+test('canonical exposure reader rejects cached observations and incomplete or failed authenticated GETs before upload',async t=>{
+ for(const mode of ['cached','replay','future','unverified','wrong-worker','failed','partial','endpoint']){
+  const f=canonicalFixture(t);let uploads=0;
+  const readExposure=async request=>{const value={...structuredClone(f.sample),requestId:request.requestId,observedAt:new Date().toISOString()};
+   if(mode==='cached')value.observedAt=new Date(Date.parse(request.notBefore)-1).toISOString();
+   if(mode==='replay')value.requestId='previous-read';
+   if(mode==='future')value.observedAt=new Date(Date.now()+60000).toISOString();
+   if(mode==='unverified')value.evidence='cached-review';
+   if(mode==='wrong-worker')value.workerName='cars-other';
+   if(mode==='failed')value.zoneRoutes.success=false;
+   if(mode==='partial')value.workerDomains.totalCount=1;
+   if(mode==='endpoint')value.zoneRoutes.endpoint='/zones/foreign/workers/routes';return value;};
+  await assert.rejects(runFleetSingletonDeployment({...f.options,write:true,readExposure,provider:canonicalProvider(f,{upload:async()=>{uploads++;throw Error('must not upload');}})}),/Canonical exposure/);
+  assert.equal(uploads,0);
+ }
+});
+
+test('canonical route, domain and subdomain drift refuses upload and post-upload drift keeps reconciliation evidence',async t=>{
+ for(const phase of ['before','locked','after'])for(const mode of ['route','domain','preview']){
+  const f=canonicalFixture(t);let uploads=0;
+  const readExposure=async request=>{const value={...structuredClone(f.sample),requestId:request.requestId,observedAt:new Date().toISOString()};
+   if(request.stage===phase){
+    if(mode==='route')value.zoneRoutes.result[0].script='cars-foreign';
+    if(mode==='domain'){value.workerDomains.result=[{id:'b'.repeat(32),hostname:'navara-car.webpreviews.site',service:'cars-foreign',zone_id:CANONICAL_EXPOSURE_ZONE,environment:'production',cert_id:'fixture-cert',enabled:true,previews_enabled:false}];value.workerDomains.totalCount=1;}
+    if(mode==='preview')value.scriptSubdomain.result.previews_enabled=true;
+   }return value;};
+  await assert.rejects(runFleetSingletonDeployment({...f.options,write:true,readExposure,provider:canonicalProvider(f,{upload:async()=>{uploads++;return{worker_name:f.workerName,version_id:newVersion};}})}),/Canonical exposure/);
+  assert.equal(uploads,phase==='after'?1:0);
+  if(phase!=='before'){const reports=path.join(f.root,'runtime/dealer-single-worker-deployments'),dir=fs.readdirSync(reports).find(n=>n.startsWith(f.client));assert(fs.existsSync(path.join(reports,dir,'needs-reconciliation.json')));assert(!fs.existsSync(path.join(reports,dir,'deployment.json')));}
+ }
+});
+
+test('a reviewed exposure hash cannot authorize wildcard, conflicting or foreign ownership',async t=>{
+ for(const mode of ['wildcard','foreign','duplicate','domain','disabled']){
+  const f=canonicalFixture(t),value=structuredClone(f.sample);
+  if(mode==='wildcard')value.zoneRoutes.result[0].pattern='*.webpreviews.site/*';
+  if(mode==='foreign')value.zoneRoutes.result[0].script='cars-foreign';
+  if(mode==='duplicate'){value.zoneRoutes.result.push({...f.route,id:'b'.repeat(32),script:'cars-foreign'});value.zoneRoutes.totalCount=2;}
+  if(mode==='domain'){value.workerDomains.result=[{id:'b'.repeat(32),hostname:'foreign.webpreviews.site',service:f.workerName,zone_id:CANONICAL_EXPOSURE_ZONE,environment:'production',cert_id:'fixture-cert',enabled:true,previews_enabled:false}];value.workerDomains.totalCount=1;}
+  if(mode==='disabled')value.scriptSubdomain.result.enabled=false;
+  if(mode==='wildcard'){assert.throws(()=>canonicalExposureDigests(value),/unreviewed route/);continue;}
+  const digests=canonicalExposureDigests(value);for(const key of Object.keys(digests))f.lease.proofs[key].sha256=digests[key];
+  writeFixture(f.reviewFile,f.review);
+  await assert.rejects(runFleetSingletonDeployment({...f.options,write:true,readExposure:async request=>({...value,requestId:request.requestId,observedAt:new Date().toISOString()}),provider:canonicalProvider(f)}),/Canonical exposure/);
+ }
+});
+
+test('canonical snapshots cannot be fabricated or restamped and still require fetch-only ASSETS-only singleton resources',async t=>{
+ const f=canonicalFixture(t),snapshot=await readCanonicalExposureSnapshot({snapshot:f.snapshot,review:f.review,readExposure:freshCanonicalRead(f),stage:'before',notBefore:new Date().toISOString()});
+ assert.equal(validateCurrentSingletonTarget(snapshot,f.workerName,{canonicalExposure:f.lease}).versionId,oldVersion);
+ assert.throws(()=>validateCurrentSingletonTarget({...snapshot,checkedAt:new Date().toISOString()},f.workerName,{canonicalExposure:f.lease}),/unmodified live-reader/);
+ for(const change of [{handlers:['fetch','scheduled']},{bindings:[{name:'ASSETS',type:'assets'},{name:'CARS_APP',type:'service',service:f.workerName+'-app'}]},{bindings:[{name:'DB',type:'d1',id:'foreign'}]}]){
+  const altered=await readCanonicalExposureSnapshot({snapshot:{...f.snapshot,...change},review:f.review,readExposure:freshCanonicalRead(f),stage:'before',notBefore:new Date().toISOString()});
+  assert.throws(()=>validateCurrentSingletonTarget(altered,f.workerName,{canonicalExposure:f.lease}),/fetch-only.*ASSETS-only/);
+ }
+ assert.throws(()=>validateCurrentSingletonTarget(snapshot,f.workerName),/routes\/resources/);
+});
+
+test('canonical lease cannot authorize Worker creation and exposure preservation never waives active-version checks',async t=>{
+ const f=canonicalFixture(t);f.review.deploymentMode='create-singleton';writeFixture(f.reviewFile,f.review);
+ await assert.rejects(runFleetSingletonDeployment({...f.options,mode:'create-singleton'}),/existing Workers only/);
+ const g=canonicalFixture(t);let reads=0,uploads=0;
+ const provider=canonicalProvider(g,{snapshotChange:value=>++reads===2?{...value,versionId:newVersion,versionTraffic:[{version_id:newVersion,percentage:100}]}:value,upload:async()=>{uploads++;throw Error('must not upload');}});
+ await assert.rejects(runFleetSingletonDeployment({...g.options,write:true,readExposure:freshCanonicalRead(g),provider}),/advanced before upload/);assert.equal(uploads,0);
+ const h=canonicalFixture(t);await assert.rejects(runFleetSingletonDeployment({...h.options,write:true,readExposure:freshCanonicalRead(h),provider:canonicalProvider(h,{snapshotChange:value=>({...value,versionTraffic:[{version_id:value.versionId,percentage:50}]})})}),/active/);
+});

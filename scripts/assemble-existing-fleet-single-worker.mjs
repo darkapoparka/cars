@@ -10,6 +10,7 @@ import {ROOT,json,sha256,normalized,filesAt,inside,git,writeJson} from './lib/wo
 import {artifactInventory,validateFileInventory} from './lib/uk-cloudflare-artifacts.mjs';
 import {COMPOSITION_KEYS,registeredCompositionIdentity,reviewedRouterVariants,runDealerSingleWorker} from './package-dealer-single-worker.mjs';
 import {inspectSingleWorkerInputs,singleWorkerSource} from './package-uk-single-worker.mjs';
+import {createCanonicalComposition,validateCanonicalComposition,canonicalCompositionEntry,CANONICAL_ORIGINAL_WORKER_PATH} from './publishing/canonical-origin-wrapper.mjs';
 import {validateModernStaticManifest} from './lib/modern-free-static-runtime.mjs';
 import {collectSource} from './package-dealer.mjs';
 import {buildMatrix,selectedDealer,prepareExistingFleetSourcePackage} from './build-existing-fleet-cloudflare.mjs';
@@ -68,7 +69,7 @@ function sealedModernStaticManifest({rows,receipt,review,modernStatic}) {
  return manifest;
 }
 
-export function validateFleetSingleton({inventory,receipt,review,delivery,config,entry,modernStatic=null}) {
+export function validateFleetSingleton({inventory,receipt,review,delivery,config,entry,modernStatic=null,originalEntry=null}) {
  assert(inventory.kind===SINGLETON_KIND&&inventory.status==='passed'&&receipt.schemaVersion===1&&receipt.type==='cars-existing-fleet-single-worker-provider-package'&&
   inventory.dealer===receipt.dealer&&receipt.workerCount===1&&receipt.applicationCount===6&&receipt.accountId===SINGLETON_ACCOUNT&&receipt.hostedVerified===false&&
   receipt.sourceApplicationBytesChanged===false&&receipt.compiledApplicationBytesChanged===true&&hex40(receipt.sourceCommit)&&hex40(receipt.sourceTree)&&hex64(receipt.inputDigest)&&
@@ -104,7 +105,17 @@ export function validateFleetSingleton({inventory,receipt,review,delivery,config
  const server=rows.filter(r=>r.path.startsWith('server/')),assets=rows.filter(r=>r.path.startsWith('public/'));
  assert(server.reduce((s,r)=>s+r.bytes,0)===receipt.serverBytes&&receipt.serverBytes<64*1024**2&&assets.length===receipt.assetFiles&&assets.length<20000&&assets.every(r=>r.bytes<=25*1024**2),'Singleton exceeds current account Worker/assets limits');
  const staticManifest=sealedModernStaticManifest({rows,receipt,review,modernStatic});
- assert(entry===singleWorkerSource(staticManifest),'Singleton entry is not the six in-process design router');
+ const composition=receipt.canonicalComposition??null;
+ assert(canonical(review.canonicalComposition??null)===canonical(composition)&&canonical(delivery.canonicalComposition??null)===canonical(composition),'Singleton canonical composition differs across sealed receipts');
+ const originalRows=rows.filter(row=>row.path===CANONICAL_ORIGINAL_WORKER_PATH);
+ if(composition){
+  validateCanonicalComposition(composition,{providerOrigin:receipt.publicOrigin,toolRevision:receipt.sourceCommit,variants:review.variants});
+  assert(typeof originalEntry==='string'&&originalEntry===singleWorkerSource(staticManifest)&&originalRows.length===1&&originalRows[0].bytes===Buffer.byteLength(originalEntry)&&originalRows[0].sha256===sha256(originalEntry),'Canonical original is not the sealed six in-process router');
+  assert(entry===canonicalCompositionEntry(composition)&&sha256(entry)===composition.wrapperSha256,'Singleton canonical wrapper differs from the exact reviewed v2 generator');
+ }else{
+  assert(originalEntry===null&&originalRows.length===0,'Unmarked canonical original router');
+  assert(entry===singleWorkerSource(staticManifest),'Singleton entry is not the six in-process design router');
+ }
  assertSingletonConfig(config,receipt.workerName,staticManifest);
  return {inventory,receipt,review,delivery,config};
 }
@@ -112,7 +123,7 @@ export function validateFleetSingleton({inventory,receipt,review,delivery,config
 export function verifyFleetSingletonDirectory(directory) {
  const inventory=verifySingletonInventory(directory),read=name=>json(inside(directory,name,{mustExist:true}));
  const modernStatic=inventory.files.some(row=>row.path==='server/modern/cars-free-services.json')?{manifestBytes:fs.readFileSync(inside(directory,'server/modern/cars-free-services.json',{mustExist:true})),runtimeBytes:fs.readFileSync(inside(directory,'server/modern-free-static-runtime.mjs',{mustExist:true}))}:null;
- return validateFleetSingleton({inventory,receipt:read('single-worker-receipt.json'),review:read('dealer-composition-review.json'),delivery:read('delivery-receipt.json'),config:read('wrangler.json'),entry:fs.readFileSync(inside(directory,'server/worker.mjs',{mustExist:true}),'utf8'),modernStatic});
+ return validateFleetSingleton({inventory,receipt:read('single-worker-receipt.json'),review:read('dealer-composition-review.json'),delivery:read('delivery-receipt.json'),config:read('wrangler.json'),entry:fs.readFileSync(inside(directory,'server/worker.mjs',{mustExist:true}),'utf8'),modernStatic,originalEntry:inventory.files.some(row=>row.path===CANONICAL_ORIGINAL_WORKER_PATH)?fs.readFileSync(inside(directory,CANONICAL_ORIGINAL_WORKER_PATH,{mustExist:true}),'utf8'):null});
 }
 
 export function assertCiContext({env=process.env,platform=process.platform,version=process.version,root=ROOT,gitRead=git}={}) {
@@ -153,9 +164,12 @@ export function createCiCompositionReview({slug,inputs,inspected,identity,reques
  assert(request.composition?.reviewed===true&&Number.isFinite(Date.parse(request.composition.reviewedAt)),'Explicit dated source/composition review is required');
  validateCiSourceIdentity(identity,sourceIdentity);
  const record=registry.dealers?.find(r=>r.slug===slug),variants=reviewedRouterVariants(inputs.router,inspected.router.deploy);
+ const selections=request.composition.canonicalCompositions;
+ if(selections!==undefined)assert(selections&&typeof selections==='object'&&!Array.isArray(selections)&&Object.keys(selections).every(dealer=>request.dealers?.includes(dealer)),'Canonical compositions must name only explicitly requested dealers');
+ const canonicalComposition=selections&&Object.hasOwn(selections,slug)?createCanonicalComposition(selections[slug],{providerOrigin:identity.publicOrigin,toolRevision:identity.sourceCommit,variants}):null;
  const review={schemaVersion:1,client:slug,repository:record?.repository,sourceRepository:'darkapoparka/cars',reviewed:true,reviewedAt:request.composition.reviewedAt,
   reviewScope:'Exact committed source and CI provider composition; hosting/owner acceptance are separate',publicOrigin:identity.publicOrigin,workerName:identity.workerName,variants,
-  inputs:Object.fromEntries(COMPOSITION_KEYS.map(k=>[k,{directory:inputs[k],artifactDigest:inspected[k].inventory.digest,compiledDigest:inspected[k].deploy.compiledDigest}])),...(componentReuse?{componentReuse}:{} )};
+  inputs:Object.fromEntries(COMPOSITION_KEYS.map(k=>[k,{directory:inputs[k],artifactDigest:inspected[k].inventory.digest,compiledDigest:inspected[k].deploy.compiledDigest}])),...(canonicalComposition?{canonicalComposition}:{}),...(componentReuse?{componentReuse}:{} )};
  registeredCompositionIdentity(registry,slug,review);
  assert(record?.sourceOwnership!=='independent-repository','Independent dealer requires own reviewed CI source');
  return review;
@@ -217,7 +231,7 @@ export async function assembleFleetCi({slug,inputRoot,destination,toolPackage,ro
  const delivery={schemaVersion:1,kind:SINGLETON_KIND,status:'passed',dealer:slug,repository:review.repository,sourceRepository:review.sourceRepository,
   accountId:SINGLETON_ACCOUNT,workerName:identity.workerName,publicOrigin:identity.publicOrigin,...expected,runId:context.runId,attempt:context.attempt,
   artifactName:singletonArtifactName(slug,context.runId,context.attempt),inputs:receipt.artifacts,outputDigest:receipt.outputDigest,node:process.version,...tool,
-  compiled:true,credentialsIncluded:false,deploymentPerformed:false,hostedVerified:false,ownerAccepted:false,...(componentReuse?{componentReuse}:{} )};
+  compiled:true,credentialsIncluded:false,deploymentPerformed:false,hostedVerified:false,ownerAccepted:false,...(review.canonicalComposition?{canonicalComposition:review.canonicalComposition}:{}),...(componentReuse?{componentReuse}:{} )};
  writeJson(path.join(out,'delivery-receipt.json'),delivery);
  artifactInventory(out,{kind:SINGLETON_KIND,dealer:slug,status:'passed'});const sealed=verifyFleetSingletonDirectory(out);
  return {dealer:slug,workerName:identity.workerName,workerCount:1,applicationCount:6,serviceBindings:[],artifactName:delivery.artifactName,artifactDigest:sealed.inventory.digest,
@@ -229,3 +243,4 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(path.resolve(process.argv[1]
   console.log(JSON.stringify(await assembleFleetCi({slug,inputRoot:path.resolve(inputRoot),destination:path.resolve(destination),toolPackage:path.resolve(toolPackage)}),null,2));
  }catch(error){console.error(error.message);process.exitCode=1;}
 }
+

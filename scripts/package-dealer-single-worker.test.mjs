@@ -8,7 +8,7 @@ import {artifactInventory} from './lib/uk-cloudflare-artifacts.mjs';
 import {planSixDesignSelection} from './lib/six-design-release.mjs';
 import {COMPOSITION_KEYS,parseCompositionArgs,planDealerSingleWorker,runDealerSingleWorker,resolveExistingEsbuild} from './package-dealer-single-worker.mjs';
 
-const ROOT=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..'),runtime=path.join(ROOT,'runtime');
+const ROOT=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..'),runtime=process.env.CARS_SINGLE_WORKER_TEST_RUNTIME?path.resolve(process.env.CARS_SINGLE_WORKER_TEST_RUNTIME):path.join(ROOT,'runtime');
 const hash=b=>createHash('sha256').update(b).digest('hex');
 const write=(file,value)=>{fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,typeof value==='string'?value:JSON.stringify(value,null,2)+'\n');};
 const read=file=>JSON.parse(fs.readFileSync(file,'utf8'));
@@ -116,3 +116,22 @@ test('CLI rejects ambiguous duplicate and missing arguments',()=>{
  assert.deepEqual(parseCompositionArgs(['--client','priselci','--inputs','review.json','--out','runtime/output']),{write:false,client:'priselci',inputs:'review.json',out:'runtime/output'});
  for(const argv of [[],['--client','priselci'],['--client','priselci','--client','other'],['--deploy']])assert.throws(()=>parseCompositionArgs(argv));
 });
+
+import {createCanonicalComposition,canonicalCompositionEntry,CANONICAL_ORIGINAL_WORKER_PATH} from './publishing/canonical-origin-wrapper.mjs';
+
+test('the maintained composer forwards and seals only the explicitly reviewed canonical tuple',t=>{
+ const f=fixture(t),composition=createCanonicalComposition({canonicalOrigin:'https://reviewed-priselci.webpreviews.site',ukDefault:false},{providerOrigin:f.review.publicOrigin,toolRevision:'4'.repeat(40),variants:f.review.variants});
+ f.review.canonicalComposition=composition;f.writeReview();
+ const proposal=runDealerSingleWorker(options(f));assert.deepEqual(proposal.canonicalComposition,composition);
+ const esbuild=resolveExistingEsbuild(ROOT),result=runDealerSingleWorker({...options(f),write:true,resolveEsbuild:()=>esbuild}),receipt=read(path.join(f.out,'single-worker-receipt.json'));
+ assert.deepEqual(result.canonicalComposition,composition);assert.deepEqual(receipt.canonicalComposition,composition);
+ assert.equal(fs.readFileSync(path.join(f.out,'server/worker.mjs'),'utf8'),canonicalCompositionEntry(composition));
+ assert.ok(fs.readFileSync(path.join(f.out,CANONICAL_ORIGINAL_WORKER_PATH),'utf8').includes('router.fetch(request,bindings)'));
+});
+test('reviewed canonical provider, source tool revision or wrapper digest cannot relabel composed input',t=>{
+ for(const change of [{providerOrigin:'https://cars-foreign.darkapoparka1.workers.dev'},{toolRevision:'a'.repeat(40)},{wrapperSha256:'0'.repeat(64)}]){
+  const f=fixture(t);f.review.canonicalComposition={...createCanonicalComposition({canonicalOrigin:'https://reviewed-priselci.webpreviews.site',ukDefault:false},{providerOrigin:f.review.publicOrigin,toolRevision:'4'.repeat(40),variants:f.review.variants}),...change};f.writeReview();
+  assert.throws(()=>planDealerSingleWorker(options(f)),/Canonical|canonical/);assert.equal(fs.existsSync(f.out),false);
+ }
+});
+

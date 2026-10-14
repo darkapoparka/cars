@@ -92,3 +92,38 @@ test('ordinary singleton keeps byte-identical dispatch and refuses unmarked rese
  const root=tinyArea(t),f=writeTinySingleton(path.join(root,'runtime/output'));assert.equal(fs.readFileSync(path.join(f.directory,'server/worker.mjs'),'utf8'),singleWorkerSource());assert.equal(verifyFleetSingletonDirectory(f.directory).config.assets.run_worker_first,false);
  writeFixture(path.join(f.directory,'public/_cars/private/modern/'+('9'.repeat(64))+'.html'),'unmarked');resealStaticSingleton(f);assert.throws(()=>verifyFleetSingletonDirectory(f.directory),/Unmarked/);
 });
+
+import {createCanonicalComposition,canonicalCompositionEntry,CANONICAL_ORIGINAL_WORKER_PATH} from './publishing/canonical-origin-wrapper.mjs';
+
+function wrappedTinySingleton(t){
+ const f=writeTinySingleton(path.join(tinyArea(t),'runtime/output'));
+ const composition=createCanonicalComposition({canonicalOrigin:'https://explicit-reviewed.webpreviews.site',ukDefault:false},{providerOrigin:f.publicOrigin,toolRevision:f.receipt.sourceCommit,variants:f.composition.variants});
+ writeFixture(path.join(f.directory,CANONICAL_ORIGINAL_WORKER_PATH),fs.readFileSync(path.join(f.directory,'server/worker.mjs')));
+ writeFixture(path.join(f.directory,'server/worker.mjs'),canonicalCompositionEntry(composition));
+ for(const receipt of [f.receipt,f.composition,f.delivery])receipt.canonicalComposition=composition;
+ resealStaticSingleton(f);return f;
+}
+test('canonical wrapper v2, exact original router and one tuple across sealed receipts are required',t=>{
+ const f=wrappedTinySingleton(t),sealed=verifyFleetSingletonDirectory(f.directory);
+ assert.deepEqual(sealed.receipt.canonicalComposition,sealed.delivery.canonicalComposition);
+ assert.equal(sealed.receipt.publicOrigin,f.publicOrigin);assert.notEqual(sealed.receipt.publicOrigin,sealed.receipt.canonicalComposition.canonicalOrigin);
+ assert(sealed.inventory.files.some(row=>row.path===CANONICAL_ORIGINAL_WORKER_PATH));
+ for(const mode of ['wrapper','original','tuple','missing-marker','tool-revision']){
+  const g=wrappedTinySingleton(t);
+  if(mode==='wrapper')writeFixture(path.join(g.directory,'server/worker.mjs'),singleWorkerSource());
+  if(mode==='original')writeFixture(path.join(g.directory,CANONICAL_ORIGINAL_WORKER_PATH),'export default {};');
+  if(mode==='tuple')g.delivery.canonicalComposition={...g.delivery.canonicalComposition,canonicalOrigin:'https://foreign.webpreviews.site'};
+  if(mode==='missing-marker')for(const value of [g.receipt,g.composition,g.delivery])delete value.canonicalComposition;
+  if(mode==='tool-revision')for(const value of [g.receipt,g.composition,g.delivery])value.canonicalComposition={...value.canonicalComposition,toolRevision:'a'.repeat(40)};
+  resealStaticSingleton(g);assert.throws(()=>verifyFleetSingletonDirectory(g.directory),/canonical|Canonical|original router|tool revision/);
+ }
+});
+test('CI canonical origin comes only from an explicit reviewed per-dealer composition selection',t=>{
+ const root=tinyArea(t),inputs=writeTinyNativeInputs(path.join(root,'runtime/inputs')),{inspected,identity}=inspectSingleWorkerInputs({inputs,expectedDealer:'navara-car'}),f=writeTinySingleton(path.join(root,'runtime/unused'));
+ const args={slug:f.client,inputs,inspected,identity,registry:f.registry,sourceIdentity:{sourceCommit:identity.sourceCommit,sourceTree:identity.sourceTree,inputDigest:identity.inputDigest,sourceReleases:identity.sourceReleases}};
+ const request={dealers:[f.client],composition:{reviewed:true,reviewedAt:'2026-10-14T08:00:00Z',canonicalCompositions:{[f.client]:{canonicalOrigin:'https://deliberately-different.webpreviews.site',ukDefault:false}}}};
+ const review=createCiCompositionReview({...args,request});assert.equal(review.canonicalComposition.canonicalOrigin,'https://deliberately-different.webpreviews.site');assert.equal(review.canonicalComposition.toolRevision,identity.sourceCommit);
+ for(const canonicalCompositions of [{foreign:{canonicalOrigin:'https://foreign.webpreviews.site',ukDefault:false}},{[f.client]:{canonicalOrigin:'https://*.webpreviews.site',ukDefault:false}},{[f.client]:{canonicalOrigin:'https://dealer.example',ukDefault:false}},{[f.client]:{canonicalOrigin:'https://exact.webpreviews.site'}}])assert.throws(()=>createCiCompositionReview({...args,request:{...request,composition:{...request.composition,canonicalCompositions}}}),/Canonical|canonical|fields/);
+ const plain=createCiCompositionReview({...args,request:{composition:{reviewed:true,reviewedAt:request.composition.reviewedAt}}});assert.equal(plain.canonicalComposition,undefined);
+});
+
