@@ -219,7 +219,8 @@ test('canonical wrapper and raw six router enter the file seal before outputDige
 });
 
 test('stream-safe canonical v2 rewrites metadata and Location while preserving React scripts and non-HTML bytes',async t=>{
- const {Miniflare,convertV4MiniflareOptions}=require('miniflare'),provider='https://cars-stream.darkapoparka1.workers.dev',canonical='https://explicit-stream.webpreviews.site';
+ const miniflareRequire=createRequire(process.env.CARS_MINIFLARE_RESOLVE_FROM||import.meta.url);
+ const {Miniflare,convertV4MiniflareOptions}=miniflareRequire('miniflare'),provider='https://cars-stream.darkapoparka1.workers.dev',canonical='https://explicit-stream.webpreviews.site';
  const flight='self.__next_f.push([1,'+JSON.stringify('0:T'+Buffer.byteLength(provider).toString(16)+','+provider+' /same-length-prefixed-payload')+']);';
  const html='<html><head><link rel="canonical" href="'+provider+'/en"><meta property="og:url" content="'+provider+'/en"></head><body><script>'+flight+'</script><script type="application/ld+json">'+JSON.stringify({url:provider+'/en'})+'</script></body></html>';
  const source='export default {async fetch(request){const path=new URL(request.url).pathname;if(path==="/redirect")return new Response(null,{status:302,headers:{location:'+JSON.stringify(provider+'/en')+'}});const value=path==="/rsc"?'+JSON.stringify(flight)+':'+JSON.stringify(html)+';const body=new ReadableStream({start(c){const bytes=new TextEncoder().encode(value),middle=Math.floor(bytes.length/2);c.enqueue(bytes.slice(0,middle));c.enqueue(bytes.slice(middle));c.close();}});return new Response(body,{headers:{"content-type":path==="/rsc"?"text/x-component":"text/html; charset=utf-8","etag":"original","content-length":String(new TextEncoder().encode(value).length)}});}};';
@@ -231,5 +232,18 @@ test('stream-safe canonical v2 rewrites metadata and Location while preserving R
  const redirect=await mf.dispatchFetch(canonical+'/redirect',{redirect:'manual'});assert.equal(redirect.headers.get('location'),canonical+'/en');
  const script=await mf.dispatchFetch(canonical+'/.well-known/cars-origin-v2.js');assert.equal(script.status,200);assert.ok((await script.text()).includes('application/ld+json'));
  const head=await mf.dispatchFetch(canonical+'/.well-known/cars-origin-v2.js',{method:'HEAD'});assert.equal(await head.text(),'');
+});
+
+
+test('source CI installs a separate exact Worker runtime before the mandatory stream test checkpoint',()=>{
+ const yaml=fs.readFileSync(new URL('../.github/workflows/existing-fleet-source.yml',import.meta.url),'utf8'),plan=yaml.split('  prepare_source:')[0];
+ assert.match(plan,/stream_test_root="\$RUNNER_TEMP\/cars-stream-test-runtime"/);
+ assert.match(plan,/npm install --prefix "\$stream_test_root" --save-exact --no-audit --no-fund miniflare@5\.20261006\.1-alpha/);
+ assert.match(plan,/CARS_MINIFLARE_RESOLVE_FROM=.*stream_test_root/);
+ assert.match(plan,/workerd:'1\.20261006\.1'/);
+ assert.ok(plan.indexOf('miniflare@5.20261006.1-alpha')<plan.indexOf('node --test scripts/*.test.mjs'));
+ assert.match(plan,/CARS_ESBUILD_RESOLVE_FROM: \$\{\{ github\.workspace \}\}\/templates\/import\/package\.json/);
+ assert.doesNotMatch(plan,/npm install .*--prefix templates\/import.*miniflare/);
+ assert.match(plan,/node --test scripts\/\*\.test\.mjs/);assert.doesNotMatch(plan,/skip.*stream|stream.*skip/i);
 });
 

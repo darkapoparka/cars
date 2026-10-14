@@ -285,6 +285,26 @@ jobs:
           }
           console.log(JSON.stringify({runtime:'one-import-lock-install',svelte:require('svelte/package.json').version,sharp:require('sharp').versions.sharp}));
           NODE
+      - name: Install the pinned Worker stream-test runtime outside template dependencies
+        run: |
+          stream_test_root="$RUNNER_TEMP/cars-stream-test-runtime"
+          [[ ! -e "$stream_test_root" ]]
+          mkdir -p "$stream_test_root"
+          printf '{"private":true}\n' > "$stream_test_root/package.json"
+          npm install --prefix "$stream_test_root" --save-exact --no-audit --no-fund miniflare@5.20261006.1-alpha
+          CARS_MINIFLARE_RESOLVE_FROM="$stream_test_root/package.json" node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          import assert from 'node:assert/strict';
+          import {createRequire} from 'node:module';
+          const require=createRequire(process.env.CARS_MINIFLARE_RESOLVE_FROM);
+          for(const [name,version]of Object.entries({miniflare:'5.20261006.1-alpha',workerd:'1.20261006.1'})){
+            assert.equal(JSON.parse(fs.readFileSync(require.resolve(name+'/package.json'))).version,version);
+          }
+          assert.equal(typeof require('miniflare').Miniflare,'function');
+          assert.equal(typeof require('miniflare').convertV4MiniflareOptions,'function');
+          console.log(JSON.stringify({runtime:'separate-pinned-worker-stream-tests',miniflare:'5.20261006.1-alpha',workerd:'1.20261006.1'}));
+          NODE
+          printf 'CARS_MINIFLARE_RESOLVE_FROM=%s/package.json\n' "$stream_test_root" >> "$GITHUB_ENV"
       - name: Hydrate bounded historical text and icon test objects through the maintained source reader
         run: |
           node --input-type=module <<'NODE'
@@ -400,3 +420,4 @@ jobs:
             runtime/new-dealer-source/${{ github.run_id }}-${{ github.run_attempt }}/${{ matrix.slug }}/failure.json
           if-no-files-found: warn
           retention-days: 7
+
