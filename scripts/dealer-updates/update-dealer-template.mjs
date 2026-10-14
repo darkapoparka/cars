@@ -577,15 +577,29 @@ export function modernCopyProfileInputPaths({dealerRoot,dealer}) {
   throw Error('Exact original Modern factual input inventory required');
 }
 
+/** The registered independent source proves its own Git root and immutable
+ * tree. Ordinary Cars-owned review paths retain their exact original scope. */
+export function modernCopyReviewSource({carsRoot,dealerRoot,dealer,value}) {
+  const manifest=readJson(path.join(dealerRoot,'dealer.json'));
+  if(manifest.sourceOwnership!=='independent-repository'){
+    if(value.sourceRepository!==undefined&&value.sourceRepository!=='darkapoparka/cars'||value.sourcePrefix!==undefined&&value.sourcePrefix!=='clients/'+dealer)throw Error('Modern copy source ownership differs');
+    return {root:carsRoot,prefix:'clients/'+dealer};
+  }
+  if(dealer!=='al-reef-used-cars'||manifest.slug!==dealer||manifest.repository!=='darkapoparka/cars-alreefusedcars'||value.sourceRepository!==manifest.repository||value.sourcePrefix!=='')throw Error('Exact registered independent Modern copy source required');
+  if(!samePath(git(dealerRoot,['--no-lazy-fetch','rev-parse','--show-toplevel']),fs.realpathSync(dealerRoot))||git(dealerRoot,['remote','get-url','origin']).replace(/\.git$/,'')!=='https://github.com/'+manifest.repository)throw Error('Independent Modern copy Git root or origin differs');
+  return {root:dealerRoot,prefix:''};
+}
+
 export function loadModernCopyReview({carsRoot,dealerRoot,dealer,pin}) {
   const artifact=qualificationArtifact(carsRoot,pin.path),relative=path.relative(carsRoot,artifact.file).replaceAll('\\','/');
   if(relative!=='docs/releases/cloudflare-existing25-20261011/vercel-existing-source/'+dealer+'/modern-copy-review.json'||!/^[a-f0-9]{64}$/.test(pin.sha256??'')||artifact.sha256!==pin.sha256)throw Error('Exact bounded dealer Modern copy path/hash required');
   const value=artifact.value,profile=loadDealerProfile(dealerRoot,dealer);assertReviewedModernCopy({profile,value});
-  if(git(carsRoot,['--no-lazy-fetch','rev-parse',value.sourceCommit+':clients/'+dealer])!==value.baselineTree)throw Error('Reviewed Modern copy immutable client tree differs');
+  const source=modernCopyReviewSource({carsRoot,dealerRoot,dealer,value});
+  if(git(source.root,['--no-lazy-fetch','rev-parse',source.prefix?value.sourceCommit+':'+source.prefix:value.sourceCommit+'^{tree}'])!==value.baselineTree)throw Error('Reviewed Modern copy immutable client tree differs');
   if(!Array.isArray(value.profileInputs)||JSON.stringify(value.profileInputs.map(x=>x.path).sort())!==JSON.stringify(modernCopyProfileInputPaths({dealerRoot,dealer})))throw Error('Exact original Modern factual input inventory required');
   for(const row of value.profileInputs){
     const file=path.join(dealerRoot,row.path),stat=fs.lstatSync(file),bytes=fs.readFileSync(file);
-    if(!stat.isFile()||stat.isSymbolicLink()||!samePath(fs.realpathSync(file),file)||bytes.length!==row.bytes||sha256(bytes)!==row.sha256||crypto.createHash('sha1').update('blob '+bytes.length+'\0').update(bytes).digest('hex')!==row.gitBlob||git(carsRoot,['--no-lazy-fetch','rev-parse',value.sourceCommit+':clients/'+dealer+'/'+row.path])!==row.gitBlob)throw Error('Reviewed Modern source facts changed: '+row.path);
+    if(!stat.isFile()||stat.isSymbolicLink()||!samePath(fs.realpathSync(file),file)||bytes.length!==row.bytes||sha256(bytes)!==row.sha256||crypto.createHash('sha1').update('blob '+bytes.length+'\0').update(bytes).digest('hex')!==row.gitBlob||git(source.root,['--no-lazy-fetch','rev-parse',value.sourceCommit+':'+(source.prefix?source.prefix+'/':'')+row.path])!==row.gitBlob)throw Error('Reviewed Modern source facts changed: '+row.path);
   }
   return {...artifact,path:relative};
 }

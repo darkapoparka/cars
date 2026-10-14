@@ -7,8 +7,9 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import test from 'node:test';
 import { fingerprint } from '../lib/workflow.mjs';
+import {loadDealerProfile} from '../lib/client-refresh-normalize.mjs';
 import { applyMounts } from '../publishing/mounts.mjs';
-import { targetManifestForUpgrade, assertUpgradeSourceAdmission, personalizeRegisteredCandidate, assertFactualRefreshAdmission, assertFactualRefreshCandidate, writeFactualRefreshMismatchReview, assertFactualRefreshReplay, assertRegisteredPersonalizationPreservation, planReviewedRegisteredConsumerResolutions, deriveRegisteredConsumerTargets, applyReviewedFactualConsumerResolutions, modernCopyProfileInputPaths } from './update-dealer-template.mjs';
+import { targetManifestForUpgrade, assertUpgradeSourceAdmission, personalizeRegisteredCandidate, assertFactualRefreshAdmission, assertFactualRefreshCandidate, writeFactualRefreshMismatchReview, assertFactualRefreshReplay, assertRegisteredPersonalizationPreservation, planReviewedRegisteredConsumerResolutions, deriveRegisteredConsumerTargets, applyReviewedFactualConsumerResolutions, modernCopyProfileInputPaths, modernCopyReviewSource, loadModernCopyReview } from './update-dealer-template.mjs';
 import {planThreeWayUpgrade,materializeUpgradeCandidate} from './three-way-upgrade.mjs';
 
 const wrapper = fileURLToPath(new URL('./update-dealer-template.mjs', import.meta.url));
@@ -549,4 +550,41 @@ test('Modern copy carrier reuses sealed registered inputs and refuses changed or
  f.put('dealer.json',{slug:dealer,dealerId,repository,registeredSourceAdoption:{receipt:{path:'.client/registered-source-adoption.json',sha256:receiptSha},personalization:{path:'.client/registered-personalization.json',sha256:inputSha}}});
  const read=()=>modernCopyProfileInputPaths({dealerRoot:f.directory,dealer});assert.deepEqual(read(),['.client/registered-personalization.json','.client/registered-source-adoption.json','dealer.json',sourcePath]);
  fs.appendFileSync(path.join(f.directory,sourcePath),' ');assert.throws(read,/original factual proof bytes changed/);
+});
+
+test('Independent Modern copy source keeps ordinary Cars-owned scope and rejects ownership relabeling',t=>{
+ const f=modernCopyCarrierArea(t),carsRoot=path.join(f.directory,'cars'),dealer='carrier-fixture';
+ assert.deepEqual(modernCopyReviewSource({carsRoot,dealerRoot:f.directory,dealer,value:{}}),{root:carsRoot,prefix:'clients/'+dealer});
+ assert.throws(()=>modernCopyReviewSource({carsRoot,dealerRoot:f.directory,dealer,value:{sourceRepository:'darkapoparka/cars-alreefusedcars',sourcePrefix:''}}),/ownership differs/);
+});
+test('Independent Modern copy source admits only Al Reef own Git root and exact private origin',t=>{
+ const f=modernCopyCarrierArea(t),dealer='al-reef-used-cars',repository='darkapoparka/cars-alreefusedcars';
+ f.put('dealer.json',{slug:dealer,repository,sourceOwnership:'independent-repository'});runGit(f.directory,['init']);runGit(f.directory,['remote','add','origin','https://github.com/'+repository+'.git']);
+ const args={carsRoot:path.join(f.directory,'cars'),dealerRoot:f.directory,dealer,value:{sourceRepository:repository,sourcePrefix:''}};
+ assert.deepEqual(modernCopyReviewSource(args),{root:f.directory,prefix:''});
+ assert.throws(()=>modernCopyReviewSource({...args,value:{...args.value,sourcePrefix:'clients/'+dealer}}),/Exact registered independent/);
+ assert.throws(()=>modernCopyReviewSource({...args,value:{...args.value,sourceRepository:'darkapoparka/cars'}}),/Exact registered independent/);
+ assert.throws(()=>modernCopyReviewSource({...args,dealer:'another-dealer'}),/Exact registered independent/);
+ runGit(f.directory,['remote','set-url','origin','https://github.com/darkapoparka/cars']);assert.throws(()=>modernCopyReviewSource(args),/Git root or origin differs/);
+});
+test('Independent Modern copy source refuses a nested directory and another independent dealer',t=>{
+ const f=modernCopyCarrierArea(t),dealer='al-reef-used-cars',repository='darkapoparka/cars-alreefusedcars';
+ runGit(f.directory,['init']);runGit(f.directory,['remote','add','origin','https://github.com/'+repository]);
+ const nested=path.join(f.directory,'nested');fs.mkdirSync(nested);fs.writeFileSync(path.join(nested,'dealer.json'),JSON.stringify({slug:dealer,repository,sourceOwnership:'independent-repository'}));
+ assert.throws(()=>modernCopyReviewSource({carsRoot:f.directory,dealerRoot:nested,dealer,value:{sourceRepository:repository,sourcePrefix:''}}),/Git root or origin differs/);
+ f.put('dealer.json',{slug:'other-dealer',repository:'darkapoparka/cars-other',sourceOwnership:'independent-repository'});
+ assert.throws(()=>modernCopyReviewSource({carsRoot:f.directory,dealerRoot:f.directory,dealer:'other-dealer',value:{sourceRepository:'darkapoparka/cars-other',sourcePrefix:''}}),/Exact registered independent/);
+});
+
+test('Independent Modern copy source binds the actual own commit tree and refuses tree or factual byte drift',t=>{
+ const f=modernCopyCarrierArea(t),dealer='al-reef-used-cars',repository='darkapoparka/cars-alreefusedcars',digest=b=>createHash('sha256').update(b).digest('hex'),gitBlob=b=>createHash('sha1').update('blob '+b.length+'\0').update(b).digest('hex');
+ f.put('dealer.json',{slug:dealer,repository,sourceOwnership:'independent-repository'});f.put('business-facts.json',{name:'Al Reef',city:'Sharjah',countryCode:'AE',currency:'AED',inventoryNotice:'Illustrative demo inventory.'});f.put('stock.json',{listings:[{id:'demo-1',title:'Audi A4',make:'Audi',model:'A4',description:'Illustrative demo inventory.',image:'/dealer-inventory/demo-1.webp'}]});
+ runGit(f.directory,['init']);runGit(f.directory,['remote','add','origin','https://github.com/'+repository]);runGit(f.directory,['add','dealer.json','business-facts.json','stock.json']);runGit(f.directory,['commit','-m','Exact original independent factual fixture']);
+ const sourceCommit=runGit(f.directory,['rev-parse','HEAD']).trim(),baselineTree=runGit(f.directory,['rev-parse','HEAD^{tree}']).trim(),profile=loadDealerProfile(f.directory,dealer),inputRows=profile.listings.map(row=>({slug:row.slug,description:row.description||profile.business.inventoryNotice,images:row.images.map(url=>({url,alt:row.title}))})),profileInputs=['business-facts.json','dealer.json','stock.json'].map(p=>{const b=fs.readFileSync(path.join(f.directory,p));return {path:p,gitBlob:gitBlob(b),sha256:digest(b),bytes:b.length};});
+ const reviewedCopy=Object.fromEntries(inputRows.map(row=>[row.slug,{sourceDescription:row.description,en:{description:row.description,imageAlts:row.images.map(r=>r.alt)},bg:{description:'Илюстративни примерни автомобили.',imageAlts:row.images.map(r=>r.alt)}}]));
+ const review={schemaVersion:1,kind:'cars-reviewed-modern-bilingual-copy-input',dealer,sourceRepository:repository,sourcePrefix:'',sourceCommit,baselineTree,inputSha256:digest(JSON.stringify(profileInputs)),modernInputRowsSha256:digest(JSON.stringify(inputRows)),profileInputs,listingCount:inputRows.length,reviewedGeneratorHelper:{path:'scripts/lib/modern-dealer-inventory-copy.mjs',sha256:'cbdbaa28dc07911cfe913b4e627671b6556fc25d3bfe59364e29c5ca5a29072b'},review:{displayCopyOnly:true,exactSourceDescriptionKeys:true,listingFactsUnchanged:true,imageUrlsUnchanged:true,imageAltsPreserved:true,interpolationTokensUnchanged:true,reviewedBy:'Focused source admission test'},reviewedCopy};
+ const carsRoot=path.join(f.directory,'cars'),p='docs/releases/cloudflare-existing25-20261011/vercel-existing-source/'+dealer+'/modern-copy-review.json',file=path.join(carsRoot,p);fs.mkdirSync(path.dirname(file),{recursive:true});
+ const read=value=>{const b=Buffer.from(JSON.stringify(value));fs.writeFileSync(file,b);return ()=>loadModernCopyReview({carsRoot,dealerRoot:f.directory,dealer,pin:{path:p,sha256:digest(b)}});};
+ assert.equal(read(review)().value.baselineTree,baselineTree);assert.throws(read({...review,baselineTree:'a'.repeat(40)}),/immutable client tree differs/);
+ fs.appendFileSync(path.join(f.directory,'stock.json'),' ');assert.throws(read(review),/source facts changed/);
 });
