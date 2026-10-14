@@ -1,22 +1,83 @@
 {
-  "schemaVersion": 1,
-  "request": "shared-presentation-vercel-ten-05",
-  "sourceDonor": "ec9505086e465b37f185c65e02e1aa05c7f3e33a",
-  "sourceIntegration": "ea861de6cd8e09fb5a6bce738fb66f4da672a8bc",
-  "triggerNote": "Verified source-bound Git object transport reuses committed assets; all source and package seals remain enforced. No dealer source changes.",
-  "pilots": ["promosale-varna", "navara-car"],
-  "scope": "Package all ten existing six-design dealers; compile two opposite-order pilots. Provider publication remains a separate explicit export/push and hosted verification step.",
-  "templateRevisions": {"auto-best":"696230a404abd9b20b6f907b9cfb139175298c7a","modern":"6f87470c1e3ec8ade7d9ecc07daf9ebe45cb9710","import":"b9373e9ed5453bc7d208898ae140eae4d596a232","app":"4e184777567849a2c5b4a9e4a3e652252179c29c","mobile":"8a97176e3adfbd95dce69b3096abc84e3eecd9c8","karento-best":"cc130e432a41a3a60cc80bc2b3461c6416893b4a"},
+  "schemaVersion": 2,
+  "kind": "cars-existing-vercel-refresh",
+  "action": "proposal",
+  "stage": "qualification-preview",
+  "publicationTransport": "existing-local-publisher",
+  "toolingSourceCommit": "3e7002fb71f38c3c99bc35e8ba8b9fb9730c8447",
+  "templateLock": {
+    "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/candidate-lock.json",
+    "sha256": "23622acb9fbaa5cb78379d6a080170f99dadb4703ff7b8ccba3d21a2b41e8786"
+  },
+  "templateSources": {
+    "auto-best": {
+      "repository": "darkapoparka/cars",
+      "revision": "097805706654b327a2b8327a7c1670da3a5f67ae",
+      "path": "templates/auto-best",
+      "tree": "5c53a96513296bd62c4cfd050f620021e2f6fce0",
+      "digest": "27fb1af88f96f79a6214cc598b3e69205b0717231893c7dd0f2e9c247dc06c5a"
+    },
+    "modern": {
+      "repository": "darkapoparka/cars",
+      "revision": "097805706654b327a2b8327a7c1670da3a5f67ae",
+      "path": "templates/modern",
+      "tree": "01eac7390fa6ba951d4b8d4c26159a9be150f6c8",
+      "digest": "30e1a99f857cc25e4d78c9459cfb4394a9f70c5b114196a5ca6325ff38823b4b"
+    },
+    "import": {
+      "repository": "darkapoparka/cars",
+      "revision": "097805706654b327a2b8327a7c1670da3a5f67ae",
+      "path": "templates/import",
+      "tree": "d841ddfe5bec918bf6b2c19fd6971fecd6b8e54d",
+      "digest": "c7d6c93214e859aa2747af8f5e068b6a0b8ca095d6328c807728a4d531d688f8"
+    },
+    "app": {
+      "repository": "darkapoparka/cars",
+      "revision": "097805706654b327a2b8327a7c1670da3a5f67ae",
+      "path": "templates/app",
+      "tree": "7f3d3ffa40546635377e6c5225194fe06fead291",
+      "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1"
+    },
+    "mobile": {
+      "repository": "darkapoparka/cars",
+      "revision": "097805706654b327a2b8327a7c1670da3a5f67ae",
+      "path": "templates/mobile",
+      "tree": "792bfdd1d8eb22aabd90c7e3a0c0779a6c1c36f3",
+      "digest": "f5a3e541a7c648a4c2899ad3893e22a3806027a9f66d95fa4e8c74b2226635b6"
+    },
+    "karento-best": {
+      "repository": "darkapoparka/cars",
+      "revision": "097805706654b327a2b8327a7c1670da3a5f67ae",
+      "path": "templates/karento-best",
+      "tree": "8c5ac869c7fd15e19a80c660343fc64b20a2bad9",
+      "digest": "be17ef365e3272753df6e50826b139a45bfc32b8fef54ddcb86d977ad16280a9"
+    }
+  },
+  "previousDelivery": {
+    "path": "docs/releases/vercel-presentation-20261011/prior-25-delivery.json",
+    "sha256": "c50dde1d239985dac13065aff940aba6ffc58ff75032220fd428199460dbc61d"
+  },
   "dealers": [
-    {"slug":"navara-car","repository":"darkapoparka/cars-navaracar","projectId":"prj_WIHXMoyCM4BIwvUsrbTosvNXYXwr","projectName":"cars-navaracar","publicOrigin":"https://cars-navaracar.vercel.app"},
-    {"slug":"day-and-night-auto-group","repository":"darkapoparka/day-and-night-autodeal","projectId":"prj_enD9orrI6rwguMMtDlS0IP6RAXjr","projectName":"day-and-night-a","publicOrigin":"https://day-and-night-a.vercel.app"},
-    {"slug":"promosale-varna","repository":"darkapoparka/cars-promosalevarna","projectId":"prj_yjXIu0an7sqCiY26hKWgOGUl5hbY","projectName":"cars-promosalevarna","publicOrigin":"https://cars-promosalevarna.vercel.app"},
-    {"slug":"priselci","repository":"darkapoparka/cars-priselci","projectId":"prj_GwnlfPmyImlJuiocl77NWplzvTTb","projectName":"cars-priselci","publicOrigin":"https://cars-priselci.vercel.app"},
-    {"slug":"isauto-varna","repository":"darkapoparka/cars-isautovarna","projectId":"prj_8k5z9l4jyDCcoEfaaLBiyH1GbRVv","projectName":"cars-isautovarna","publicOrigin":"https://cars-isautovarna.vercel.app"},
-    {"slug":"automarket-varna","repository":"darkapoparka/cars-automarketvarna","projectId":"prj_5H4OESlQ0KpNM5mJvbIEmlUgaMcP","projectName":"cars-automarketvarna","publicOrigin":"https://cars-automarketvarna.vercel.app"},
-    {"slug":"outletcars-varna","repository":"darkapoparka/cars-outletcarsvarna","projectId":"prj_1KYEEcbBwAd5iCtAvDGM59INQLe7","projectName":"cars-outletcarsvarna","publicOrigin":"https://cars-outletcarsvarna.vercel.app"},
-    {"slug":"perfect-auto-varna","repository":"darkapoparka/cars-perfectauto","projectId":"prj_sqN8Xc2fs7g2Y2pSs0qeSeYJgVZR","projectName":"cars-perfectauto","publicOrigin":"https://cars-perfectauto.vercel.app"},
-    {"slug":"avangard-auto","repository":"darkapoparka/cars-avangardauto","projectId":"prj_QqFCB2Zllc60dfPVIo6aJ8P4wlKc","projectName":"cars-avangardauto","publicOrigin":"https://cars-avangardauto.vercel.app"},
-    {"slug":"legend-auto","repository":"darkapoparka/cars-legendauto","projectId":"prj_kdnDQxZaPh8xgKBiIXyb9uODrXZw","projectName":"cars-legendauto","publicOrigin":"https://cars-legendauto.vercel.app"}
+    {
+      "slug": "f1rst-motors",
+      "repository": "darkapoparka/cars-f1rstmotors",
+      "projectId": "prj_mavqUXCj6hSEg8EvBJW8G3XJlihm",
+      "publicOrigin": "https://cars-f1rstmotors.vercel.app",
+      "sourceOwnership": "cars-owned",
+      "sourceRepository": "darkapoparka/cars",
+      "sourceCommit": "3e7002fb71f38c3c99bc35e8ba8b9fb9730c8447",
+      "sourceTree": "4bf06e41365c440f74754a787063b4ff35c6f343",
+      "sourceReview": {
+        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/f1rst-motors/source-preparation-receipt.json",
+        "sha256": "ae60cc4d5b75296da7356a6066a757ee6eb675daae62a40cdfebf9193bb9d47f"
+      },
+      "privateMain": "6e0184b856858fa4f9d0b158f64b4edef44f0e83",
+      "privateTarget": null,
+      "targetBranch": "codex/fleet-final-polish-20261014",
+      "qualification": {
+        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/f1rst-motors/qualification-context.json",
+        "sha256": "502a30d1e87870f852301660eaa675e6477aadb2a882c745594f67d0ac10c855"
+      }
+    }
   ]
 }
