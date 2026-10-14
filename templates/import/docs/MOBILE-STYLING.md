@@ -147,8 +147,11 @@ Icon-only pills extend the target on all four sides. `MobileIconAction` retains
 its native 44px box around the 40px painted circle.
 
 Page utility bars use `.mobile-utility-bar`: 44px visible circles with 22px icons
-for Cars Filter/Sort, PDP Back/Compare/Save/Share and
-the photo-viewer Close action. Use 14px edge gutters, an 8px top inset plus the
+for Cars Filter/Sort. PDP Back/Compare/Save/Share and photo-viewer Close use the
+same compact role as the shared appbar: 40px visible circles, 20px glyphs and
+44px native tap areas. This follows the owner's 14 October request to match
+Home and the other route headers; consume the existing mobile control tokens.
+Use 14px edge gutters, an 8px top inset plus the
 safe area, and 8px action gaps (4px below 375px). Dark and image-overlay tones
 retain the contrast needed by their backgrounds. Sheet controls keep their
 compact role. Quick filters in the separate row remain 40px high.

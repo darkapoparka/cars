@@ -1,0 +1,96 @@
+{
+  "date": "2026-10-14",
+  "owner": "01a139e0-e0ce-72e3-a440-17e25ad8c553",
+  "source": {
+    "checkout": "L:/CODEX/cars/templates/import",
+    "branch": "main",
+    "head": "3bc5a0ea33969f18ccc34d5e4b0e8cab1513e6a2",
+    "state": "Local uncommitted frontend changes",
+    "baselineHashes": {
+      "src/lib/components/detail/AuxeroVehicleMobilePdp.svelte": "421E1CABE3CF111920DE5E4D7DA1DBE1A58A290CBA85154E2F23C7ED13423586",
+      "docs/MOBILE-STYLING.md": "4221BE6209302279B0EA4FBFAA7E317D5E87B889B5420D92DB8F37F70FE277C8"
+    },
+    "currentHashes": {
+      "src/lib/components/detail/AuxeroVehicleMobilePdp.svelte": "8BAAD753BC59441A38D3F71D8E6B3DB655D0CE6105AA876CD6E588827EBD6779",
+      "docs/MOBILE-STYLING.md": "B0AF99E35555FA940324EA617A75FC656A5B2D024D252C5D9ED742BC69105E81"
+    },
+    "hashAlgorithm": "SHA256"
+  },
+  "preview": {
+    "origin": "http://127.0.0.1:6790",
+    "vehicle": "21764342419542174",
+    "runtime": "Reused the existing preview and stable dependencies"
+  },
+  "cause": "The PDP and viewer inherited the larger mobile-utility-bar scale: 44px painted circles and 22px glyphs. MobileAppbar already overrides it to the shared compact 40px/20px role.",
+  "change": "The PDP topbar and photo viewer now use the same existing compact control tokens as Home/Services. Their native 44px targets and toolbar geometry are retained.",
+  "referenceMeasurements": [
+    {
+      "route": "/bg",
+      "circle": 40,
+      "glyph": 20,
+      "target": 44
+    },
+    {
+      "route": "/bg/services",
+      "circle": 40,
+      "glyph": 20,
+      "target": 44
+    }
+  ],
+  "before": {
+    "circle": 44,
+    "glyph": 22,
+    "target": 44
+  },
+  "after": {
+    "circle": 40,
+    "glyph": 20,
+    "target": 44
+  },
+  "captures": [
+    {
+      "locale": "bg",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "before": "before-bg-390.jpg",
+      "after": "after-bg-390.jpg",
+      "decodedPixelsBelowHeader": "Identical below y=72; zero channel differences"
+    },
+    {
+      "locale": "en",
+      "viewport": {
+        "width": 320,
+        "height": 844
+      },
+      "before": "before-en-320.jpg",
+      "after": "after-en-320.jpg",
+      "decodedPixelsBelowHeader": "Identical below y=72; zero channel differences"
+    }
+  ],
+  "checks": {
+    "nativeBrowser": [
+      "BG and EN at 320px and 390px: all four top controls paint at 40px/20px inside 44px targets; no horizontal overflow.",
+      "Photo viewer opens, Close paints at 40px/20px inside a 44px target, and Escape dismisses it.",
+      "A 40px free grip drag retains the selected panel position.",
+      "Native content scrolling pins the tabs at 60px and keeps the compact opaque header.",
+      "At 1440px the phone composition is hidden and the desktop BMW detail composition renders."
+    ],
+    "existingTests": {
+      "command": "playwright test tests/mobile-final.e2e.ts --grep \"vehicle toolbar remains keyboard\" --project=mobile --workers=1 --reporter=line",
+      "result": "2 passed"
+    },
+    "code": [
+      "Scoped Prettier, ESLint and git diff --check passed.",
+      "Svelte autofixer reports the existing locale-aware goto alias advisory; no new compiler issues.",
+      "No TypeScript or interaction implementation changed, so the full type check and prior broad gesture tests were not repeated."
+    ]
+  },
+  "preservation": [
+    "Only the PDP CSS and its authoritative sizing reference were edited.",
+    "Kept the existing dirty Home, appbar, global control styles and other concurrent work.",
+    "Retained exactly four captures for this sizing comparison; prior gesture/audit evidence remains referenced.",
+    "No dependency installation, repository copies, production build, Git index writes, commit or deployment."
+  ]
+}
