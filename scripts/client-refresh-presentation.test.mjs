@@ -280,3 +280,15 @@ test('Modern assigned directory initializes with actual scattered native IDs and
   write(root,relative,drift); assert.throws(()=>refreshAdapterInternals.patchModernAssignedDirectory(root,profile),/export shape changed/); assert.equal(fs.readFileSync(path.join(root,relative),'utf8'),drift);
   assert.deepEqual(refreshAdapterInternals.patchModernAssignedDirectory(path.join(root,'absent'),profile),[]);
 });
+
+test('factual About services are explicitly dealer owned and retain supplied text', () => {
+  const business = { name: 'Recorded dealer', city: 'Dubai', locale: 'en-AE', previewNotice: 'Supplied notice', services: [{ title: 'Dealer service', description: 'Recorded service terms' }], hours: 'By appointment' };
+  const source = refreshAdapterInternals.autoBestCompany({ business });
+  assert.match(source, /export const companyServicesCopyOwner = 'dealer' as const;/);
+  const start = source.indexOf('export const companyServices: CompanyService[] = ') + 'export const companyServices: CompanyService[] = '.length;
+  const rows = JSON.parse(source.slice(start, source.indexOf(';\nexport const contactTopics', start)));
+  assert.equal(rows[0].title, 'Dealer service');
+  assert.equal(rows[0].description, 'Recorded service terms');
+  assert.equal(rows[0].cta, 'Ask the dealer');
+  assert.deepEqual(business.services, [{ title: 'Dealer service', description: 'Recorded service terms' }]);
+});

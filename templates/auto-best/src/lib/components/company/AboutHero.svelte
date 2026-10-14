@@ -25,11 +25,7 @@
   {/if}
   <div class="container dn-about-hero__content dn-route-hero__layout">
     <div class="dn-about-hero__copy dn-route-hero__copy">
-      <span class="dn-company-hero__eyebrow">{i18n.t("m_b4b580a9ad8c")}</span>
-      <h1 id="about-title">
-        <span class="dn-company-hero__title-line">{i18n.t('about.hero.intro')}</span>
-        <span class="dn-company-hero__title-line">{brand.name}</span>
-      </h1>
+      <h1 id="about-title">{i18n.t("m_b4b580a9ad8c")}</h1>
     </div>
     <a class="dn-about-button dn-about-button--primary dn-route-hero__control" href={i18n.href(resolve('/cars'))}>
       <span>{i18n.t("m_9304497d3f4b")}</span>

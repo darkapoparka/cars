@@ -587,6 +587,7 @@ export function resolveImportUrl(value: string | null): string | null {
   }
 }
 
+export const companyServicesCopyOwner = 'dealer' as const;
 export const companyServices: CompanyService[] = ${JSON.stringify(services, null, 2)};
 export const contactTopics: ContactTopic[] = ${JSON.stringify(topics, null, 2)};
 export const resolveContactTopic = (value: string | null) =>
