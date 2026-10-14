@@ -150,9 +150,10 @@ test('new envelope rejects physical aliases, duplicate JSON keys, inventory drif
  f.write('docs/DEPLOYMENT-INVENTORY.json',{...f.registry,aliases:{[f.slug]:'preserved'}});await assert.rejects(()=>resolveSourceRequest(f.request,{root:f.root}),/bytes changed/);f.write('docs/DEPLOYMENT-INVENTORY.json',f.registry);
  const branding=f.write(f.prefix+'/branding.json',{master:{path:f.prefix+'/*.png',sha256:'d'.repeat(64)}}),nested=structuredClone(f.nested);nested.dealers[0].inputs.branding=branding;const request={...f.request,newSourceRequest:f.write(f.request.newSourceRequest.path,nested)};await assert.rejects(()=>sourceMatrix(request,{root:f.root}),/exact literals/);
 });
-test('legacy source matrix remains unchanged and new bootstrap pins the event and rejects detached, shallow and credentialed CI',async()=>{
+test('legacy source matrix remains unchanged and new bootstrap pins the event and rejects detached, shallow and credentialed CI',async t=>{
  const slug='priselci',request={schemaVersion:1,sourceRevision:'a'.repeat(40),approvedParentLockDigest:'b'.repeat(64),dealers:[slug],inputs:{[slug]:Object.fromEntries(['candidateLock','qualification','sourceDeltaReview','branding'].map(k=>[k,{path:SOURCE_CAMPAIGN+'/'+k+'.json',sha256:'c'.repeat(64)}]))}},leads=[{slug,proposedRepository:'darkapoparka/cars-priselci'}],registry={dealers:[{slug,repository:leads[0].proposedRepository}]};
- assert.equal(sourceRequestMode(request),'existing-migration');assert.deepEqual(await sourceMatrix(request,{leads,registry}),{include:[{slug}]});assert.deepEqual(await sourceMatrix({...request,mode:'existing-migration'},{leads,registry}),{include:[{slug}]});
+ const root=tinyArea(t),branding=Buffer.from(JSON.stringify({master:{path:'clients/'+slug+'/branding/master.png',sha256:'d'.repeat(64)},surfaces:{onLight:{path:SOURCE_CAMPAIGN+'/branding/light.png',sha256:'e'.repeat(64)}}}));writeFixture(path.join(root,request.inputs[slug].branding.path),branding);request.inputs[slug].branding.sha256=sha256(branding);
+ assert.equal(sourceRequestMode(request),'existing-migration');assert.deepEqual(await sourceMatrix(request,{root,leads,registry}),{include:[{slug}]});assert.deepEqual(await sourceMatrix({...request,mode:'existing-migration'},{root,leads,registry}),{include:[{slug}]});
  const env={GITHUB_ACTIONS:'true',GITHUB_EVENT_NAME:'push',GITHUB_REPOSITORY:'darkapoparka/cars',GITHUB_REF:'refs/heads/main',GITHUB_SHA:'a'.repeat(40),GITHUB_RUN_ID:'123',GITHUB_RUN_ATTEMPT:'1'},responses={'rev-parse HEAD':env.GITHUB_SHA,'remote get-url origin':'https://github.com/darkapoparka/cars.git','branch --show-current':'main','rev-parse --is-shallow-repository':'false','ls-remote --exit-code origin refs/heads/main':env.GITHUB_SHA+'\trefs/heads/main'},checkCi=options=>sourceCiContext({...options,platform:'linux',version:'v26.10.0'}),readGit=(_root,args)=>responses[args.join(' ')];
  assert.equal(assertNewSourceBootstrap({env,readGit,checkCi}).commit,env.GITHUB_SHA);for(const [key,value]of [['branch --show-current',''],['rev-parse --is-shallow-repository','true']])assert.throws(()=>assertNewSourceBootstrap({env,readGit:(_r,args)=>args.join(' ')===key?value:readGit(_r,args),checkCi}),/actual main|event SHA/);assert.throws(()=>assertNewSourceBootstrap({env:{...env,CF_API_TOKEN:'fixture-only'},readGit,checkCi}),/credentials/);
 });
@@ -189,4 +190,23 @@ test('immutable bootstrap does not reject unrelated main publication or perform 
  const env={GITHUB_ACTIONS:'true',GITHUB_EVENT_NAME:'push',GITHUB_REPOSITORY:'darkapoparka/cars',GITHUB_REF:'refs/heads/main',GITHUB_SHA:'a'.repeat(40),GITHUB_RUN_ID:'123',GITHUB_RUN_ATTEMPT:'1'};
  const readGit=(_root,args)=>{if(args[0]==='ls-remote')throw Error('bootstrap must delegate live input leases');return {'rev-parse HEAD':env.GITHUB_SHA,'remote get-url origin':'https://github.com/darkapoparka/cars.git','branch --show-current':'main','rev-parse --is-shallow-repository':'false'}[args.join(' ')];};
  assert.equal(assertNewSourceBootstrap({env,readGit,checkCi:o=>sourceCiContext({...o,platform:'linux',version:'v26.10.0'})}).commit,env.GITHUB_SHA);
+});
+
+function sparseBrandingMatrixFixture(t){
+ const root=tinyArea(t),slug='priselci',leads=[{slug,proposedRepository:'darkapoparka/cars-priselci'}],registry={dealers:[{slug,repository:leads[0].proposedRepository}]};
+ const request={schemaVersion:1,sourceRevision:'a'.repeat(40),approvedParentLockDigest:'b'.repeat(64),dealers:[slug],inputs:{[slug]:Object.fromEntries(['candidateLock','qualification','sourceDeltaReview','branding'].map(k=>[k,{path:SOURCE_CAMPAIGN+'/'+k+'.json',sha256:'c'.repeat(64)}]))}};
+ const pin=name=>({path:'docs/logo-polish-2026-10-14/final-raster-inputs/'+name,sha256:'d'.repeat(64)}),record={sourceMode:'retained-or-mixed-raster',master:pin('light.png'),mark:pin('mark.png'),surfaces:{onLight:pin('light.png'),onDark:pin('dark.png'),onAccent:pin('accent.png')},assets:{'app-icon.png':pin('icon.png'),'favicon.ico':pin('favicon.ico')}};
+ const write=value=>{const bytes=Buffer.from(JSON.stringify(value));writeFixture(path.join(root,request.inputs[slug].branding.path),bytes);request.inputs[slug].branding.sha256=sha256(bytes);};write(record);return {root,slug,leads,registry,request,record,write};
+}
+test('existing source matrix checks out each exact reviewed master, mark, surface and icon once',async t=>{
+ const f=sparseBrandingMatrixFixture(t),matrix=await sourceMatrix(f.request,f),paths=matrix.include[0].sourceInputs.split('\n');
+ assert.deepEqual(matrix.include,[{slug:f.slug,sourceInputs:['accent.png','dark.png','favicon.ico','icon.png','light.png','mark.png'].map(n=>'/docs/logo-polish-2026-10-14/final-raster-inputs/'+n).join('\n')}]);
+ assert.equal(paths.length,new Set(paths).size);assert(paths.every(p=>!p.endsWith('/')));assert.deepEqual(await sourceMatrix({...f.request,mode:'existing-migration'},f),matrix);
+});
+test('existing branding sparse inputs reject patterns, escapes, wrong hashes and conflicting role pins',async t=>{
+ const f=sparseBrandingMatrixFixture(t);
+ for(const path of ['docs/logo-polish-2026-10-14/*.png','docs/logo-polish-2026-10-14/a\nb.png','docs/logo-polish-2026-10-14/../outside.png','/docs/logo-polish-2026-10-14/a.png','C:/logo.png','docs/logo-polish-2026-10-14/a[1].png','other/logo.png']){const record=structuredClone(f.record);record.master.path=path;f.write(record);await assert.rejects(()=>sourceMatrix(f.request,f),/literal|boundary|pin/);}
+ const badHash=structuredClone(f.record);badHash.mark.sha256='no';f.write(badHash);await assert.rejects(()=>sourceMatrix(f.request,f),/hash-pinned/);
+ const conflict=structuredClone(f.record);conflict.surfaces.onLight.sha256='e'.repeat(64);f.write(conflict);await assert.rejects(()=>sourceMatrix(f.request,f),/Conflicting/);
+ f.write(f.record);f.request.inputs[f.slug].branding.sha256='f'.repeat(64);await assert.rejects(()=>sourceMatrix(f.request,f),/JSON bytes changed/);
 });

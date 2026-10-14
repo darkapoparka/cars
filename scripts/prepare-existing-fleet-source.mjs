@@ -64,11 +64,31 @@ export function newSourceQualificationCheckoutPins(request){
  const qualification=request.qualification;
  return qualification?[qualification.candidateLock,...Object.values(qualification.contexts)]:[];
 }
+/** Add only exact reviewed raster pins outside the source job's existing checkout. */
+function brandingSparseCheckoutPaths(root,pin,slug){
+ assert(pin&&safeName(pin.path)&&/^[a-zA-Z0-9._/-]+$/.test(pin.path)&&pin.path.startsWith(SOURCE_CAMPAIGN+'/')&&pin.path.endsWith('.json')&&hex64(pin.sha256),'Exact bounded branding JSON pin required for sparse checkout');
+ const bytes=fs.readFileSync(inside(root,pin.path,{mustExist:true}));assert(bytes.length<=2*1024**2&&sha256(bytes)===pin.sha256,'Branding sparse input JSON bytes changed');
+ const record=strictJson(bytes),retainedAllowed=record?.sourceMode==='retained-or-mixed-raster';
+ for(const group of [record.surfaces,record.assets])assert(group===undefined||(group&&typeof group==='object'&&!Array.isArray(group)),'Branding sparse roles require objects');
+ const pins=[record.master,record.mark,...Object.values(record.surfaces??{}),...Object.values(record.assets??{})].filter(Boolean);
+ assert(pins.length<=16,'Branding sparse pin inventory exceeds its bound');const paths=new Map();
+ for(const p of pins){
+  assert(p&&safeName(p.path)&&/^[a-zA-Z0-9._/-]+$/.test(p.path)&&hex64(p.sha256),'Branding sparse paths must be exact hash-pinned literals');
+  assert(p.path.startsWith(SOURCE_CAMPAIGN+'/')||p.path.startsWith('clients/'+slug+'/branding/')||(retainedAllowed&&p.path.startsWith('docs/logo-polish-2026-10-14/')),'Branding sparse path is outside its reviewed source boundary');
+  assert(!paths.has(p.path)||paths.get(p.path)===p.sha256,'Conflicting branding sparse path hashes');paths.set(p.path,p.sha256);
+ }
+ return [...paths.keys()].filter(p=>!p.startsWith('docs/releases/')&&!p.startsWith('clients/'+slug+'/')).sort();
+}
 export async function sourceMatrix(request,options={}){
  const resolved=await resolveSourceRequest(request,options);
- if(resolved.mode==='existing-migration')return {include:resolved.dealers.map(slug=>({slug}))};
+ if(resolved.mode==='existing-migration'){
+  const matrix={include:resolved.dealers.map(slug=>{
+   const paths=brandingSparseCheckoutPaths(options.root??ROOT,request.inputs[slug].branding,slug),sourceInputs=paths.map(p=>'/'+p).join('\n');
+   assert(Buffer.byteLength(sourceInputs)<=32768,'Per-dealer branding sparse input list exceeds the matrix byte limit');return {slug,...(paths.length?{sourceInputs}:{})};
+  })};assert(Buffer.byteLength(JSON.stringify(matrix))<=450*1024,'Existing source matrix exceeds the bounded CI output limit');return matrix;
+ }
  if(resolved.mode==='registered-adoption'){const matrix={include:resolved.dealers.map(slug=>{
-  const receipt=resolved.receipts.find(r=>r.dealer===slug),paths=[...Object.values(request.inputs[slug]).map(p=>p.path),receipt.personalization.path,'clients/index.json','templates.lock.json'];
+  const receipt=resolved.receipts.find(r=>r.dealer===slug),paths=[...Object.values(request.inputs[slug]).map(p=>p.path),receipt.personalization.path,'clients/index.json','templates.lock.json',...brandingSparseCheckoutPaths(options.root??ROOT,request.inputs[slug].branding,slug)];
   assert(paths.every(p=>safeName(p)&&/^[a-zA-Z0-9._/-]+$/.test(p)),'Registered source sparse paths must be exact literals');const sourceInputs=[...new Set(paths)].sort().map(p=>'/'+p).join('\n');assert(Buffer.byteLength(sourceInputs)<=32768,'Registered input matrix exceeds its bound');return {slug,mode:resolved.mode,sourceInputs};
  })};assert(Buffer.byteLength(JSON.stringify(matrix))<=450*1024,'Registered source matrix exceeds the bounded CI output limit');return matrix;}
  const {readNewSourceInput,readNewSourceQualification}=await import('./prepare-new-dealer-source.mjs');
