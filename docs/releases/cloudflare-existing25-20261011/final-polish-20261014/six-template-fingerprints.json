@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "kind": "cars-immutable-six-template-fingerprints",
-  "commit": "097805706654b327a2b8327a7c1670da3a5f67ae",
+  "commit": "7d4557f3074b32e3f57af28b89906754b73fb9cd",
   "exportPolicy": "cars-source-v1",
   "policySha256": "1fce87ab9fd1640c2b90245206d2e5c53491268aeeed8ffcc2b3a311827cdf29",
   "finalFrozen": true,
@@ -10,15 +10,15 @@
   "sources": {
     "auto-best": {
       "repository": "darkapoparka/cars",
-      "revision": "097805706654b327a2b8327a7c1670da3a5f67ae",
+      "revision": "7d4557f3074b32e3f57af28b89906754b73fb9cd",
       "path": "templates/auto-best",
-      "tree": "5c53a96513296bd62c4cfd050f620021e2f6fce0",
-      "digest": "27fb1af88f96f79a6214cc598b3e69205b0717231893c7dd0f2e9c247dc06c5a",
+      "tree": "0fd8e81b7ea998227b8a5a067b04f318015bff84",
+      "digest": "451141c1787f5ea293a60170ca9f894c35ebd3324e0a6ff09b00b959f2812176",
       "files": 1621
     },
     "modern": {
       "repository": "darkapoparka/cars",
-      "revision": "097805706654b327a2b8327a7c1670da3a5f67ae",
+      "revision": "7d4557f3074b32e3f57af28b89906754b73fb9cd",
       "path": "templates/modern",
       "tree": "01eac7390fa6ba951d4b8d4c26159a9be150f6c8",
       "digest": "30e1a99f857cc25e4d78c9459cfb4394a9f70c5b114196a5ca6325ff38823b4b",
@@ -26,7 +26,7 @@
     },
     "import": {
       "repository": "darkapoparka/cars",
-      "revision": "097805706654b327a2b8327a7c1670da3a5f67ae",
+      "revision": "7d4557f3074b32e3f57af28b89906754b73fb9cd",
       "path": "templates/import",
       "tree": "d841ddfe5bec918bf6b2c19fd6971fecd6b8e54d",
       "digest": "c7d6c93214e859aa2747af8f5e068b6a0b8ca095d6328c807728a4d531d688f8",
@@ -34,7 +34,7 @@
     },
     "app": {
       "repository": "darkapoparka/cars",
-      "revision": "097805706654b327a2b8327a7c1670da3a5f67ae",
+      "revision": "7d4557f3074b32e3f57af28b89906754b73fb9cd",
       "path": "templates/app",
       "tree": "7f3d3ffa40546635377e6c5225194fe06fead291",
       "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
@@ -42,7 +42,7 @@
     },
     "mobile": {
       "repository": "darkapoparka/cars",
-      "revision": "097805706654b327a2b8327a7c1670da3a5f67ae",
+      "revision": "7d4557f3074b32e3f57af28b89906754b73fb9cd",
       "path": "templates/mobile",
       "tree": "792bfdd1d8eb22aabd90c7e3a0c0779a6c1c36f3",
       "digest": "f5a3e541a7c648a4c2899ad3893e22a3806027a9f66d95fa4e8c74b2226635b6",
@@ -50,7 +50,7 @@
     },
     "karento-best": {
       "repository": "darkapoparka/cars",
-      "revision": "097805706654b327a2b8327a7c1670da3a5f67ae",
+      "revision": "7d4557f3074b32e3f57af28b89906754b73fb9cd",
       "path": "templates/karento-best",
       "tree": "8c5ac869c7fd15e19a80c660343fc64b20a2bad9",
       "digest": "be17ef365e3272753df6e50826b139a45bfc32b8fef54ddcb86d977ad16280a9",
@@ -65,6 +65,38 @@
     "gitDownloads": 0,
     "sourceExports": 0,
     "assetArchives": 0,
-    "treeObjectsCryptographicallyVerified": true
+    "treeObjectsCryptographicallyVerified": true,
+    "baselineCommit": "097805706654b327a2b8327a7c1670da3a5f67ae",
+    "baselineFingerprintSha256": "0db7fbcd2bb71fe4ff29770fff12b08275b99f207c2226361e9ab211fe59ace7",
+    "sourceTreeProofSha256": "ca75593497f887ca438f0ba8bb695b3cdb465cb5b8ed3b6edc1682ad6aed0e27",
+    "templatesTree": "cb3e8fec457dbeaca4efbc5e1b29474c5665b3e6",
+    "scopedSuccessor": {
+      "changedFamily": "auto-best",
+      "changedLeaves": [
+        {
+          "path": "src/lib/components/home/BodyTypes.svelte",
+          "baseBlob": "eb87d14dd507e6de91a4a42bf38541f3d4c1a7b1",
+          "blob": "a188dac11b4cc0ad668ba811a3eb2730c6b3ded7",
+          "sha256": "1ac14bf8ba4cca4150d62968959ef44c8559ad2abf7823980b7b020f1b450587"
+        },
+        {
+          "path": "src/lib/styles/composition.css",
+          "baseBlob": "a6a11ebd16d3ce400583402558197f0a8708a0df",
+          "blob": "e5c2fa6c5eaa0f881381a83d59a710a6d6af9634",
+          "sha256": "1870a9b9737c72042995dc60f074bb258615c2b74aee7e754619b2812acce5df"
+        }
+      ],
+      "unchangedFamilies": [
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "focusProofSha256": "b72a9340bbdfdf5d7078073a40557b0b7c1aabd60d5012ac3ff84c9c65f867bc",
+      "newApiBlobDownloads": 0,
+      "newGitDownloads": 0,
+      "sourceExports": 0
+    }
   }
 }

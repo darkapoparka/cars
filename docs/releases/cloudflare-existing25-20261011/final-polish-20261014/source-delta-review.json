@@ -1,23 +1,23 @@
 {
   "schemaVersion": 1,
   "kind": "cars-source-delta-review",
-  "sourceCommit": "097805706654b327a2b8327a7c1670da3a5f67ae",
-  "parentCommit": "64829e356956c309deb3f4b0f441969133d15041",
+  "sourceCommit": "7d4557f3074b32e3f57af28b89906754b73fb9cd",
+  "parentCommit": "097805706654b327a2b8327a7c1670da3a5f67ae",
   "reviewed": true,
-  "reviewedAt": "2026-10-14T18:24:47.957Z",
+  "reviewedAt": "2026-10-14T21:53:12.292Z",
   "qualificationOnly": true,
   "nativeApproval": false,
   "hostedApproval": false,
   "globalReleaseApproval": false,
   "sourceReview": {
     "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-review.json",
-    "sha256": "37bd96e608c3b68c7e5d592892ecbf9f61d62410f72b364157fc43e53ba33aff"
+    "sha256": "febeb101b4c30ead5ce4aeef737f7e55fe33990fc06cfb1a8af74d673991e2cf"
   },
   "checks": [
     {
       "name": "immutable-six-template-tree-and-blob-fingerprints",
       "status": "passed",
-      "evidenceSha256": "0db7fbcd2bb71fe4ff29770fff12b08275b99f207c2226361e9ab211fe59ace7"
+      "evidenceSha256": "aad790a2aa603ac0f621393d02c0ae0771229a614b995c8c6e03fc35a07b4553"
     },
     {
       "name": "modern-reviewed-mobile-child-logo-binding-regressions",
@@ -28,6 +28,12 @@
       "name": "standalone-origin-and-faithful-dated-inventory-copy-regressions",
       "status": "passed",
       "evidenceSha256": "a019be4077b12dc2bde2e9b8e23ba8038608af0b9c1b97b234a4f3c2b20258ae"
+    },
+    {
+      "name": "auto-best-two-leaf-mobile-category-and-sell-contrast-source-delta",
+      "status": "passed",
+      "evidenceSha256": "b72a9340bbdfdf5d7078073a40557b0b7c1aabd60d5012ac3ff84c9c65f867bc",
+      "scope": "Focused candidate 320/390 rendering and Svelte compiler/autofixer; successor hosted verification pending."
     }
   ],
   "pendingNativeChecks": [
@@ -43,5 +49,6 @@
     "request-isolation",
     "security-write-blocking",
     "assets-preserved"
-  ]
+  ],
+  "parentMeaning": "Reviewed template source baseline; not a claim of immediate Git parent."
 }
