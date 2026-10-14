@@ -1,3 +1,4 @@
+import {assertCloudflareNativeSourceExport} from './lib/cloudflare-native-source-qualification.mjs';
 import { assertCarsOwnedDealer } from './lib/dealer-source.mjs';
 import fs from 'node:fs';
 import {assertVercelProductionWaveMember} from './lib/vercel-production-wave.mjs';
@@ -60,6 +61,7 @@ export function assertVercelProductionPilot(pilot, {meta, manifest} = {}) {
 /** Ordinary provisional export still requires its exact reviewed preview branch.
  * MAIN requires an explicit exact pilot or qualified bounded production wave. */
 export function assertVercelQualificationExport(meta, {branch, manifest, productionPilot} = {}) {
+  if(meta?.qualification?.kind==='cars-cloudflare-native-source-qualification')return assertCloudflareNativeSourceExport(meta,{branch,manifest,productionPilot});
   if (meta.qualification === undefined) {if(productionPilot!==undefined)throw new Error('Production pilot requires its actual provisional source envelope');return;}
   const proof = meta.qualification;
   requireVercelQualificationExport(proof.schemaVersion === 1 && proof.kind === 'cars-vercel-native-source-qualification' &&
@@ -309,3 +311,4 @@ async function main() {
   console.log(JSON.stringify(result,null,2));
 }
 if(process.argv[1]&&path.resolve(process.argv[1])===import.meta.filename)main().catch(e=>{console.error(e.message);process.exitCode=1;});
+

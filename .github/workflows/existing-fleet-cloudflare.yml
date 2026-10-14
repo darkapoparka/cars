@@ -40,7 +40,7 @@ jobs:
         with:
           node-version: '26.10.0'
           package-manager-cache: false
-      - run: node --test scripts/fleet-component-repairs.test.mjs scripts/existing-fleet-cloudflare.test.mjs scripts/assemble-existing-fleet-single-worker.test.mjs scripts/deploy-dealer-single-worker.test.mjs scripts/client-logo-contract.test.mjs scripts/dealer-reference-package.test.mjs scripts/modern-demo-database.test.mjs scripts/dealer-presentation.test.mjs scripts/existing-wave-registry.test.mjs scripts/dealer-contact-fallback.test.mjs
+      - run: node --test scripts/fleet-component-repairs.test.mjs scripts/existing-fleet-cloudflare.test.mjs scripts/assemble-existing-fleet-single-worker.test.mjs scripts/deploy-dealer-single-worker.test.mjs scripts/client-logo-contract.test.mjs scripts/dealer-reference-package.test.mjs scripts/modern-demo-database.test.mjs scripts/dealer-presentation.test.mjs scripts/existing-wave-registry.test.mjs scripts/dealer-contact-fallback.test.mjs scripts/emit-existing-fleet-cloudflare-source.test.mjs scripts/cloudflare-native-source-qualification.test.mjs
       - id: matrix
         run: |
           node scripts/build-existing-fleet-cloudflare.mjs matrix >> "$GITHUB_OUTPUT"
@@ -161,8 +161,7 @@ jobs:
         with:
           node-version: '26.10.0'
           package-manager-cache: false
-      - name: Install the existing pinned source-verification tooling only for component reuse
-        if: matrix.originalRunId != 0
+      - name: Install pinned source-verification and source-package tooling
         run: |
           mkdir -p runtime/varna-tools
           printf '{"private":true}\n' > runtime/varna-tools/package.json
@@ -202,6 +201,23 @@ jobs:
           if-no-files-found: error
           compression-level: 6
           retention-days: 7
+      - name: Emit the maintained frozen source package for private MAIN
+        env:
+          DEALER_SLUG: ${{ matrix.slug }}
+          GIT_NO_LAZY_FETCH: '1'
+          NODE_OPTIONS: --max-old-space-size=4608
+        run: |
+          area="runtime/existing-fleet-single-worker/$GITHUB_RUN_ID-$GITHUB_RUN_ATTEMPT/$DEALER_SLUG"
+          node scripts/emit-existing-fleet-cloudflare-source.mjs "$DEALER_SLUG" "$area/inputs" "$area/output" "$area/source-transport"
+      - name: Retain compact private MAIN source objects
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: existing-cf-source-package-${{ matrix.slug }}-${{ github.run_id }}-${{ github.run_attempt }}
+          path: runtime/existing-fleet-single-worker/${{ github.run_id }}-${{ github.run_attempt }}/${{ matrix.slug }}/source-transport/artifact/
+          include-hidden-files: true
+          if-no-files-found: error
+          compression-level: 1
+          retention-days: 7
       - name: Retain compact composition and dry-run evidence
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
@@ -214,3 +230,4 @@ jobs:
             runtime/existing-fleet-component-proof/${{ github.run_id }}-${{ github.run_attempt }}/${{ matrix.slug }}/receipts/source.json
           if-no-files-found: warn
           retention-days: 7
+
