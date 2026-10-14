@@ -3,6 +3,14 @@ export const referenceHomeEn = {
   "referenceHome.services.sell": "Sell",
   "referenceHome.services.buy": "Buy",
   "referenceHome.services.lease": "Lease",
+  "referenceHome.services.importDetails":
+    "Share your preferred vehicle, budget and destination. Ask about sourcing, delivery and the documents you may need.",
+  "referenceHome.services.sellDetails":
+    "Share your vehicle's make, model, year, mileage and condition. Ask about selling or trade-in options.",
+  "referenceHome.services.buyDetails":
+    "Tell us your budget, preferred vehicle and the features that matter to you. Ask about available options and viewing a car.",
+  "referenceHome.services.leaseDetails":
+    "Tell us your preferred vehicle, budget and term. Ask about leasing options, costs and conditions.",
   "referenceHome.services.previewDescription":
     "Explore sample vehicle services and discuss what you need.",
   "referenceHome.testimonials.previewLabel": "Sample testimonials",
@@ -78,6 +86,14 @@ export const referenceHomeBg = {
   "referenceHome.services.sell": "Продажба",
   "referenceHome.services.buy": "Покупка",
   "referenceHome.services.lease": "Лизинг",
+  "referenceHome.services.importDetails":
+    "Споделете предпочитания автомобил, бюджета и крайната дестинация. Попитайте за намиране, доставка и необходимите документи.",
+  "referenceHome.services.sellDetails":
+    "Споделете марката, модела, годината, пробега и състоянието на автомобила. Попитайте за продажба или замяна.",
+  "referenceHome.services.buyDetails":
+    "Кажете ни бюджета, предпочитания автомобил и важните за вас характеристики. Попитайте за налични варианти и оглед.",
+  "referenceHome.services.leaseDetails":
+    "Кажете ни предпочитания автомобил, бюджета и срока. Попитайте за варианти за лизинг, разходи и условия.",
   "referenceHome.services.previewDescription":
     "Разгледайте примерните автомобилни услуги и обсъдете от какво имате нужда.",
   "referenceHome.testimonials.previewLabel": "Примерни отзиви",
