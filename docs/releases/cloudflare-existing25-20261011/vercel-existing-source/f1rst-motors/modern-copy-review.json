@@ -2,17 +2,17 @@
   "schemaVersion": 1,
   "kind": "cars-reviewed-modern-bilingual-copy-input",
   "dealer": "f1rst-motors",
-  "sourceCommit": "e983829ef6654d9fbd2bda54948c4e39ee327e57",
-  "baselineTree": "54ea34d21cde6045601fcef47df245e02dbbbb2f",
-  "inputSha256": "0285e66c650c63bf733f5c9ab0bc15198a58a17a76a07270999b15c54eaab9a8",
+  "sourceCommit": "3e7002fb71f38c3c99bc35e8ba8b9fb9730c8447",
+  "baselineTree": "4bf06e41365c440f74754a787063b4ff35c6f343",
+  "inputSha256": "84b1a21258d2cc23d2956d60df88e8316a9ff9292d3c832e9c54aea42126e9c8",
   "modernInputRowsSha256": "d9255b69f7fa5c5bf2cfa0650d038174eefd94f52292fcdacd2ea3de26e3ec99",
   "listingCount": 10,
   "profileInputs": [
     {
       "path": "dealer.json",
-      "gitBlob": "1fd08f83e4c203baf1d16f179f7e9aa491216f4d",
-      "sha256": "29d88a1148cbb537b8954d277ebee72f89449a7523e568641d1e57f00f549bb7",
-      "bytes": 4584
+      "gitBlob": "94b7aee4c6b8b94d258bdad08ebdb8472266ccb4",
+      "sha256": "62c5388a6096ea78d608acbf11beeb18adb82e28b78e74d5cd8e551b4f015b06",
+      "bytes": 4797
     },
     {
       "path": "business-facts.json",
