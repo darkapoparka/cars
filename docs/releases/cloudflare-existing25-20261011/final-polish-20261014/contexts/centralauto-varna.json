@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-native-source-qualification-context",
+  "id": "fleet-final-polish-20261014",
+  "dealer": "centralauto-varna",
+  "scope": "existing-dealer-pilot",
+  "sourceCommit": "097805706654b327a2b8327a7c1670da3a5f67ae",
+  "reviewed": true,
+  "reviewedAt": "2026-10-14T17:32:01.216Z",
+  "qualificationOnly": true,
+  "approved": false,
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "globalReleaseApproval": false,
+  "approvedLockSha256": "ecdfaf9599fbcbeadebc24de3b9aa1c7615a9a49e29d338e5e9a23427d405e26",
+  "candidateLockSha256": "557002f15998f7033c72b20266e6d983dfc3591893769c0c61eb27a9282230cd",
+  "sourceDeltaReview": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
+    "sha256": "b1e99f8d975db062ef532a5c9953c52e84beb5f8118ea2c036524598be88aa6f",
+    "reviewedAt": "2026-10-14T17:32:01.216Z"
+  },
+  "sourceReview": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-review.json",
+    "sha256": "640c3aafc46ca69394aa2be9d146780167e2c03c47e9633573369facbac2a2e2"
+  }
+}
