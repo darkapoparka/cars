@@ -3,7 +3,7 @@ import Image from "./public-image";
 
 const artworkPaths = {
   car: "/images/services/header-system-car-v3.webp",
-  bike: "/images/services/header-system-bike-v3.webp",
+  bike: "/images/services/header-system-bike-v4.webp",
   truck: "/images/services/header-system-truck-v3.webp",
   van: "/images/services/header-system-van-v3.webp",
   guides: "/images/services/header-system-guides-v3.webp",
@@ -44,6 +44,10 @@ export function DealerMobileHeaderIcon({
     name === "car"
       ? "size-9 select-none object-contain"
       : "size-[34px] select-none object-contain";
+  const utilityArtworkClassName =
+    name === "guides"
+      ? "size-8 select-none object-contain"
+      : "size-7 select-none object-contain";
   return (
     <span
       aria-hidden="true"
@@ -59,7 +63,7 @@ export function DealerMobileHeaderIcon({
         className={
           kind === "category"
             ? categoryArtworkClassName
-            : "size-7 select-none object-contain"
+            : utilityArtworkClassName
         }
         draggable={false}
         height={36}
