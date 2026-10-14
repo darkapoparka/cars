@@ -10,7 +10,7 @@ import {pathToFileURL} from 'node:url';
 import {ROOT,git,json,sha256,inside,filesAt,fingerprint} from './lib/workflow.mjs';
 import {readRepositoryTreeMap,readPinnedTemplateTree} from './dealer-updates/pinned-template-source.mjs';
 import {packageRetainsPath,collectSource} from './package-dealer.mjs';
-import {applyLeadBranding,assertLeadBranding,rebindDerivedProfileLogoContracts,captureBrandConsumers} from './publishing/lead-branding.mjs';
+import {applyLeadBranding,assertLeadBranding,rebindDerivedProfileLogoContracts,captureBrandConsumers,reviewedRasterProvenance} from './publishing/lead-branding.mjs';
 import {baseNativeManifest,assertAppVariant} from './publishing/app-variant.mjs';
 import {assertExtendedVariantSources} from './publishing/six-variant.mjs';
 import {ADOPTION_FILE,assertNativeQualification,sealNativeQualification,validateNativeQualificationContext,parseCatalogJson} from './lib/native-localization.mjs';
@@ -265,11 +265,14 @@ export function sourceCiContext({root=ROOT,env=process.env,platform=process.plat
 }
 function pinnedInput(root,row){const file=inside(root,row.path,{mustExist:true}),bytes=fs.readFileSync(file);assert(sha256(bytes)===row.sha256,'Reviewed source input bytes changed: '+row.path);return {file,bytes,value:JSON.parse(bytes.toString('utf8'))};}
 export function readBrandingInputs(root,record,slug){
- assert(record?.schemaVersion===1&&record.dealer===slug&&record.reviewed===true&&Number.isFinite(Date.parse(record.reviewedAt))&&record.generation?.tool==='image_gen'&&typeof record.generation.generationId==='string'&&record.generation.generationId.trim(),'Exact reviewed ImageGen branding input required');
- const png=row=>{assert(row&&safeName(row.path)&&hex64(row.sha256)&&(row.path.startsWith(SOURCE_CAMPAIGN+'/')||row.path.startsWith('clients/'+slug+'/branding/')),'Bounded hash-pinned dealer PNG required');const bytes=fs.readFileSync(inside(root,row.path,{mustExist:true}));assert(sha256(bytes)===row.sha256,'Reviewed branding PNG bytes differ');return bytes;};
+ const retainedAllowed=record?.sourceMode==='retained-or-mixed-raster';
+ assert(record?.schemaVersion===1&&record.dealer===slug&&record.reviewed===true&&Number.isFinite(Date.parse(record.reviewedAt))&&(retainedAllowed||(record.generation?.tool==='image_gen'&&typeof record.generation.generationId==='string'&&record.generation.generationId.trim())),'Exact reviewed ImageGen branding input required');
+ const png=row=>{assert(row&&safeName(row.path)&&hex64(row.sha256)&&(row.path.startsWith(SOURCE_CAMPAIGN+'/')||row.path.startsWith('clients/'+slug+'/branding/')||(retainedAllowed&&row.path.startsWith('docs/logo-polish-2026-10-14/'))),'Bounded hash-pinned dealer PNG required');const bytes=fs.readFileSync(inside(root,row.path,{mustExist:true}));assert(sha256(bytes)===row.sha256,'Reviewed branding PNG bytes differ');return bytes;};
  assert(same(Object.keys(record.surfaces??{}).sort(),['onAccent','onDark','onLight']),'Exactly three reviewed ImageGen surfaces required');
+ if(retainedAllowed&&record.generation!==undefined)throw Error('Mixed raster record requires role-specific provenance');
  const surfaces=Object.fromEntries(Object.entries(record.surfaces).map(([name,row])=>[name,{...row,png:png(row)}]));
  const master={png:png(record.master),sha256:record.master.sha256};if(record.mark){master.markPng=png(record.mark);master.markSha256=record.mark.sha256;}
+ if(retainedAllowed){for(const row of Object.values(surfaces))reviewedRasterProvenance(row,{retainedAllowed:true});const assets=Object.fromEntries(Object.entries(record.assets??{}).map(([name,row])=>[name,{...row,bytes:png(row)}]));for(const row of Object.values(assets))reviewedRasterProvenance(row,{retainedAllowed:true});return {master,reviewedSurfaces:{schemaVersion:1,reviewed:true,reviewedAt:record.reviewedAt,sourceMode:record.sourceMode,surfaces,...(Object.keys(assets).length?{assets}:{})}};}
  const originalSha=record.generation.sourceFileSha256??record.generation.sourceSha256;assert(hex64(originalSha)&&(!record.generation.sourceFileSha256||!record.generation.sourceSha256||record.generation.sourceFileSha256===record.generation.sourceSha256),'Original ImageGen source hash is required and must agree');
  return {master,generation:{...record.generation,sourceFileSha256:originalSha},reviewedSurfaces:{schemaVersion:1,reviewed:true,reviewedAt:record.reviewedAt,surfaces}};
 }
@@ -350,4 +353,5 @@ export async function prepareExistingFleetSource({slug,root=ROOT,env=process.env
 // the source proposal helpers from this module as its maintained shared seam.
 async function runSourceCli(){const [command,slug]=process.argv.slice(2);if(command==='matrix'){const request=strictJson(fs.readFileSync(path.join(ROOT,SOURCE_CAMPAIGN,'source-request.json')));console.log('matrix='+JSON.stringify(await sourceMatrix(request,{root:ROOT,leads:json(path.join(ROOT,SOURCE_CAMPAIGN,'selection.json')).leads,registry:json(path.join(ROOT,'docs/DEPLOYMENT-INVENTORY.json'))})));}else{assert(command==='prepare'&&slug&&process.argv.length===4,'Use matrix | prepare SLUG (main source CI only)');console.log(JSON.stringify(await prepareFleetSource({slug}),null,2));}}
 if(process.argv[1]&&import.meta.url===pathToFileURL(path.resolve(process.argv[1])).href)runSourceCli().catch(error=>{console.error(error.message);process.exitCode=1;});
+
 

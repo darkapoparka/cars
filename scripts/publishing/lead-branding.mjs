@@ -74,6 +74,14 @@ function reviewedGeneration(value){
   (value.modelVersion!==undefined&&value.modelVersion!==null&&(typeof value.modelVersion!=='string'||!value.modelVersion.trim())))throw Error('Reviewed surface requires actual ImageGen generation provenance');
  return {tool:value.tool,id:value.generationId,modelVersion:value.modelVersion??null};
 }
+export function reviewedRasterProvenance(input,{retainedAllowed=false}={}){
+ if(input?.generation!==undefined&&input.generation!==null){if(input.retainedSource!==undefined)throw Error('A raster cannot be both generated and retained');return {generation:reviewedGeneration(input.generation)};}
+ const source=input?.retainedSource;
+ if(!retainedAllowed||source?.kind!=='retained-reviewed-raster'||!validHash(source.sha256)||!validHash(source.reviewSha256)||typeof source.reviewReference!=='string')throw Error('Reviewed surface requires actual ImageGen generation provenance or explicit retained raster proof');
+ reviewSourceReference(source.reference);reviewSourceReference(source.reviewReference);
+ return {retainedSource:{kind:source.kind,reference:source.reference,sha256:source.sha256,reviewReference:source.reviewReference,reviewSha256:source.reviewSha256}};
+}
+const REVIEWED_ASSET_NAMES=new Set(['mark-on-light.webp','mark-on-dark.webp','app-icon.png','apple-touch-icon.png','favicon.ico']);
 function reviewSourceReference(value){if(typeof value!=='string'||!value.trim()||value.length>2048||/[\x00-\x1f]/.test(value))throw Error('Reviewed surface source reference is required');return value;}
 function assertSurfaceReview(value){
  if(value?.schemaVersion!==1||value.reviewed!==true||typeof value.reviewedAt!=='string'||!/^\d{4}-\d{2}-\d{2}T/.test(value.reviewedAt)||!Number.isFinite(Date.parse(value.reviewedAt)))throw Error('Dated explicit surface review is required');
@@ -92,6 +100,9 @@ async function transparentPng(bytes,wanted,sharp,label,mark=false){
 }
 async function reviewedRasterPack(master,reviewedSurfaces,sharp){
  assertSurfaceReview(reviewedSurfaces);
+ const retainedAllowed=reviewedSurfaces.sourceMode==='retained-or-mixed-raster';
+ if(reviewedSurfaces.sourceMode!==undefined&&!retainedAllowed)throw Error('Unknown reviewed raster source mode');
+ const sourceNames=retainedAllowed?{master:'branding/reviewed-master.png',mark:'branding/reviewed-mark.png'}:{master:'branding/generated-master.png',mark:'branding/generated-mark.png'};
  const masterPng=Buffer.isBuffer(master.png)?Buffer.from(master.png):Buffer.from(master.png||'','base64');
  const nativeMaster=await transparentPng(masterPng,master.sha256,sharp,'Generated master');
  const suppliedMark=master.markPng!==undefined;
@@ -99,11 +110,11 @@ async function reviewedRasterPack(master,reviewedSurfaces,sharp){
  const inputs=[],assets=new Map(),surfaces={};
  for(const [name,tone]of Object.entries(SURFACE_NAMES)){
   const input=reviewedSurfaces.surfaces[name],png=Buffer.isBuffer(input?.png)?Buffer.from(input.png):null;
-  const generation=reviewedGeneration(input?.generation),sourceReference=reviewSourceReference(input?.sourceReference);
+  const provenance=reviewedRasterProvenance(input,{retainedAllowed}),sourceReference=reviewSourceReference(input?.sourceReference);
   const metadata=await transparentPng(png,input?.sha256,sharp,'Reviewed '+name);
   const assetPath='branding/reviewed-surfaces/'+tone+'.png';
-  inputs.push({name,png,assetPath,sha256:input.sha256,generation,sourceReference,...metadata});
-  surfaces[name]={schemaVersion:1,assetPath,sha256:input.sha256,generation,sourceReference,...metadata};
+  inputs.push({name,png,assetPath,sha256:input.sha256,...provenance,sourceReference,...metadata});
+  surfaces[name]={schemaVersion:1,assetPath,sha256:input.sha256,...provenance,sourceReference,...metadata};
   if(name!=='onAccent')assets.set('logo-'+tone+'.png',png);
   assets.set('logo-'+tone+'.webp',await sharp(png).webp({lossless:true,effort:6}).toBuffer());
  }
@@ -118,15 +129,25 @@ async function reviewedRasterPack(master,reviewedSurfaces,sharp){
  const icon=await sharp(assets.get('mark-on-light.webp')).resize(512,512,{fit:'contain',background:'#00000000'}).png().toBuffer();
  assets.set('app-icon.png',icon);assets.set('apple-touch-icon.png',await sharp(icon).resize(180,180).png().toBuffer());
  assets.set('favicon.ico',iconFile(await Promise.all([16,32,48].map(async size=>({size,bytes:await sharp(icon).resize(size,size).png().toBuffer()})))));
- const packInputs=[{role:'master',path:'branding/generated-master.png',sha256:sha(masterPng)},{role:'mark',path:'branding/generated-mark.png',sha256:sha(markPng)},...inputs.map(row=>({role:row.name,path:row.assetPath,sha256:row.sha256}))];
- return {assets,masterPng,markPng,nativeMaster,packInputs,reviewedInputs:inputs,
-  packId:sha(JSON.stringify(packInputs)).slice(0,16),reviewedSurfaceVariants:{schemaVersion:1,reviewed:true,reviewedAt:reviewedSurfaces.reviewedAt,surfaces},
-  markSource:suppliedMark?'generated-mark-colors-preserved':'full-reviewed-surface-logo-contained'};
+ const reviewedAssets=[];
+ for(const [name,input]of Object.entries(reviewedSurfaces.assets??{})){
+  if(!retainedAllowed||!REVIEWED_ASSET_NAMES.has(name)||!Buffer.isBuffer(input?.bytes)||!validHash(input.sha256)||sha(input.bytes)!==input.sha256)throw Error('Invalid reviewed supplemental branding asset');
+  const provenance=reviewedRasterProvenance(input,{retainedAllowed:true}),sourceReference=reviewSourceReference(input.sourceReference);
+  if(name==='favicon.ico'){if(input.bytes.length<22||input.bytes.readUInt16LE(0)!==0||input.bytes.readUInt16LE(2)!==1||input.bytes.readUInt16LE(4)<1)throw Error('Reviewed favicon must contain ICO bytes');}
+  else{const metadata=await sharp(input.bytes).metadata(),format=name.endsWith('.webp')?'webp':'png';if(metadata.format!==format||!metadata.hasAlpha||(metadata.pages&&metadata.pages!==1)||Math.min(metadata.width,metadata.height)<12)throw Error('Reviewed supplemental asset format or alpha changed');}
+  const assetPath='branding/reviewed-assets/'+name;assets.set(name,Buffer.from(input.bytes));reviewedAssets.push({name,assetPath,sha256:input.sha256,...provenance,sourceReference,bytes:Buffer.from(input.bytes)});
+ }
+ const packInputs=[{role:'master',path:sourceNames.master,sha256:sha(masterPng)},{role:'mark',path:sourceNames.mark,sha256:sha(markPng)},...inputs.map(row=>({role:row.name,path:row.assetPath,sha256:row.sha256})),...reviewedAssets.map(row=>({role:'asset:'+row.name,path:row.assetPath,sha256:row.sha256}))];
+ return {assets,masterPng,markPng,nativeMaster,packInputs,sourceNames,reviewedAssets,reviewedInputs:inputs,
+  packId:sha(JSON.stringify(packInputs)).slice(0,16),reviewedSurfaceVariants:{schemaVersion:1,reviewed:true,reviewedAt:reviewedSurfaces.reviewedAt,...(retainedAllowed?{sourceMode:reviewedSurfaces.sourceMode}:{}),surfaces},
+  markSource:suppliedMark?(retainedAllowed?'reviewed-mark-colors-preserved':'generated-mark-colors-preserved'):'full-reviewed-surface-logo-contained'};
 }
 const LEGACY_LOGO = /^\/(?:dealer-brand\/logo[^/]*\.(?:webp|png)|dealer-app\/logo[^/]*\.(?:webp|png)|branding\/logo-on-(?:light|dark|accent)\.(?:webp|png)|lead-logo(?:-inverse|-dark|-white)?\.png|brand\/daynight-wordmark\.svg)$/;
 function toneFor(path){return /(?:on-dark|on-accent|logo-dark|inverse|white)/.test(path)?'on-dark':'on-light';}
 export async function applyLeadBranding(files,manifest,{master,sharp,readTemplate,generation,reviewedSurfaces}){
- if(!(files instanceof Map)||!master||generation?.tool!=='image_gen'||!generation.generationId||manifest.packaging?.version!=='5')throw Error('A sourced image-generation master and six-design manifest are required');
+ const retainedAllowed=reviewedSurfaces?.sourceMode==='retained-or-mixed-raster';
+ if(!(files instanceof Map)||!master||manifest.packaging?.version!=='5'||(!retainedAllowed&&(generation?.tool!=='image_gen'||!generation.generationId)))throw Error('A sourced image-generation master and six-design manifest are required');
+ if(retainedAllowed&&generation!==undefined)throw Error('Mixed raster inputs require role-specific provenance instead of one shared generation');
  if(files.has('.cars-branding.json'))throw Error('Branding contract already exists; review an explicit refresh instead of applying twice');
  const usesReviewedSurfaces=reviewedSurfaces!==undefined;
  const targetFiles=files;files=new Map(files);
@@ -146,14 +167,15 @@ export async function applyLeadBranding(files,manifest,{master,sharp,readTemplat
  const appFile='app/lib/dealer.json';if(files.has(appFile)){const app=JSON.parse(read(files,appFile));app.logo={...app.logo,light:publicBase+'/logo-on-light.webp',dark:publicBase+'/logo-on-dark.webp',icon:publicBase+'/app-icon.png'};files.set(appFile,encode(app));}
  const modern='modern/packages/marketplace/lead-site.ts';let modernText=read(files,modern);modernText=modernText.replace(/(^\s*logoPath:\s*)["'][^"']+["']/m,(_,prefix)=>prefix+JSON.stringify(publicBase+'/logo-on-light.webp'));files.set(modern,Buffer.from(modernText));
  for(const name of ['branding/logo-on-light.png','branding/logo-on-dark.png','assets/app-icon.png','assets/favicon.ico']){const prior=original.get(name);if(prior)files.set('branding/retained-originals/'+sha(prior).slice(0,16)+'-'+name.split('/').pop(),prior);files.set(name,name.endsWith('.ico')?pack.assets.get('favicon.ico'):name.includes('app-icon')?pack.assets.get('app-icon.png'):pack.assets.get(name.split('/').pop()));}
- files.set('branding/generated-master.png',pack.masterPng);files.set('branding/generated-mark.png',pack.markPng);for(const [name,bytes]of pack.assets)files.set('branding/'+name,bytes);
+ files.set(pack.sourceNames?.master??'branding/generated-master.png',pack.masterPng);files.set(pack.sourceNames?.mark??'branding/generated-mark.png',pack.markPng);for(const [name,bytes]of pack.assets)files.set('branding/'+name,bytes);
  for(const input of pack.reviewedInputs||[])files.set(input.assetPath,input.png);
+ for(const input of pack.reviewedAssets||[])files.set(input.assetPath,input.bytes);
  const derivedProfileLogoBindings=rebindDerivedProfileLogoContracts(files,publicBase,{originalFiles:original});
  for(const row of derivedProfileLogoBindings)if(Object.hasOwn(facts,row.path))facts[row.path]=row.afterSha256;
  for(const [name,wanted]of Object.entries(facts))if(sha(files.get(name))!==wanted)throw Error('Branding changed dealer facts: '+name);
  const changes=[...files].filter(([name,bytes])=>!original.has(name)||!Buffer.from(original.get(name)).equals(Buffer.from(bytes))).map(([name,bytes])=>({path:name,before:original.has(name)?sha(original.get(name)):null,after:sha(bytes)}));
- const contract={schemaVersion:BRANDING_SCHEMA,surfaceBindingsVersion,dealer:manifest.slug,policy:'template-default',packId,publicBase,creationMethod:usesReviewedSurfaces?'image-generation-reviewed-surface-variants':'image-generation-derived-raster',generation:{tool:generation.tool,id:generation.generationId,modelVersion:generation.modelVersion??null,sourceSha256:generation.sourceFileSha256},approval:'independent-proposal-not-dealer-approved',nativeMaster:pack.nativeMaster,consumerReferences:captureBrandConsumers(files,publicBase),...(usesReviewedSurfaces?{reviewedSurfaceVariants:pack.reviewedSurfaceVariants,packInputs:pack.packInputs,markSource:pack.markSource}: {alphaSha256:pack.alphaSha256}),monochromePairFromOneMaster:!usesReviewedSurfaces,palette,assets:publicPaths,facts,changes,...(derivedProfileLogoBindings.length?{derivedProfileLogoBindings}:{}),hostedQa:false};
- files.set('.cars-branding.json',encode(contract));files.set('branding/brand-policy.json',encode({schemaVersion:1,palettePolicy:'template-default',heroOverride:false,bannerOverride:false,sectionOverride:false,dealerAccentForUi:false,logoSurfacePolicy:'explicit-light-dark',packId,source:'generated-master.png',approval:contract.approval}));assertLeadBranding(files,manifest);for(const [name,bytes]of files)targetFiles.set(name,bytes);return contract;
+ const contract={schemaVersion:BRANDING_SCHEMA,surfaceBindingsVersion,dealer:manifest.slug,policy:'template-default',packId,publicBase,creationMethod:retainedAllowed?'reviewed-raster-surface-variants':usesReviewedSurfaces?'image-generation-reviewed-surface-variants':'image-generation-derived-raster',...(retainedAllowed?{}:{generation:{tool:generation.tool,id:generation.generationId,modelVersion:generation.modelVersion??null,sourceSha256:generation.sourceFileSha256}}),approval:'independent-proposal-not-dealer-approved',nativeMaster:pack.nativeMaster,consumerReferences:captureBrandConsumers(files,publicBase),...(usesReviewedSurfaces?{reviewedSurfaceVariants:pack.reviewedSurfaceVariants,packInputs:pack.packInputs,markSource:pack.markSource,...(pack.reviewedAssets?.length?{reviewedAssets:pack.reviewedAssets.map(({bytes,...proof})=>proof)}:{})}: {alphaSha256:pack.alphaSha256}),monochromePairFromOneMaster:!usesReviewedSurfaces,palette,assets:publicPaths,facts,changes,...(derivedProfileLogoBindings.length?{derivedProfileLogoBindings}:{}),hostedQa:false};
+ files.set('.cars-branding.json',encode(contract));files.set('branding/brand-policy.json',encode({schemaVersion:1,palettePolicy:'template-default',heroOverride:false,bannerOverride:false,sectionOverride:false,dealerAccentForUi:false,logoSurfacePolicy:'explicit-light-dark',packId,source:pack.sourceNames?.master.split('/').at(-1)??'generated-master.png',approval:contract.approval}));assertLeadBranding(files,manifest);for(const [name,bytes]of files)targetFiles.set(name,bytes);return contract;
 }
 export function captureBrandConsumers(files,publicBase){
  const consumers=[],names=['logo-on-light.webp','logo-on-dark.webp','logo-on-accent.webp','app-icon.png'];
@@ -162,16 +184,20 @@ export function captureBrandConsumers(files,publicBase){
 }
 
 export function assertLeadBranding(files,manifest){
- const contract=JSON.parse(read(files,'.cars-branding.json')),reviewed=contract.creationMethod==='image-generation-reviewed-surface-variants';if(contract.schemaVersion!==BRANDING_SCHEMA||contract.dealer!==manifest.slug||contract.policy!=='template-default'||contract.monochromePairFromOneMaster!==!reviewed||!Array.isArray(contract.assets)||contract.assets.length!==Object.keys(PUBLIC_ROOTS).length*10)throw Error('Missing or invalid six-family branding contract');
+ const contract=JSON.parse(read(files,'.cars-branding.json')),retainedAllowed=contract.creationMethod==='reviewed-raster-surface-variants',reviewed=retainedAllowed||contract.creationMethod==='image-generation-reviewed-surface-variants';if(contract.schemaVersion!==BRANDING_SCHEMA||contract.dealer!==manifest.slug||contract.policy!=='template-default'||contract.monochromePairFromOneMaster!==!reviewed||!Array.isArray(contract.assets)||contract.assets.length!==Object.keys(PUBLIC_ROOTS).length*10)throw Error('Missing or invalid six-family branding contract');
  if(reviewed){
   const review=contract.reviewedSurfaceVariants;assertSurfaceReview(review);
-  const expectedInputs=[{role:'master',path:'branding/generated-master.png'},{role:'mark',path:'branding/generated-mark.png'},...Object.entries(SURFACE_NAMES).map(([role,tone])=>({role,path:'branding/reviewed-surfaces/'+tone+'.png'}))];
+  if(retainedAllowed&&review.sourceMode!=='retained-or-mixed-raster')throw Error('Reviewed retained raster mode changed');
+  if(retainedAllowed&&contract.generation!==undefined)throw Error('Retained pack must not claim one shared generation');
+  const expectedInputs=[{role:'master',path:retainedAllowed?'branding/reviewed-master.png':'branding/generated-master.png'},{role:'mark',path:retainedAllowed?'branding/reviewed-mark.png':'branding/generated-mark.png'},...Object.entries(SURFACE_NAMES).map(([role,tone])=>({role,path:'branding/reviewed-surfaces/'+tone+'.png'}))];
+  const supplemental=contract.reviewedAssets??[];if(!Array.isArray(supplemental)||(!retainedAllowed&&supplemental.length)||new Set(supplemental.map(row=>row.name)).size!==supplemental.length)throw Error('Invalid supplemental branding proof');
+  for(const row of supplemental){if(!REVIEWED_ASSET_NAMES.has(row.name)||row.assetPath!=='branding/reviewed-assets/'+row.name)throw Error('Unsafe supplemental branding proof');expectedInputs.push({role:'asset:'+row.name,path:row.assetPath});reviewedRasterProvenance({...row,generation:row.generation?{tool:row.generation.tool,generationId:row.generation.id,modelVersion:row.generation.modelVersion}:undefined},{retainedAllowed:true});reviewSourceReference(row.sourceReference);for(const root of Object.values(PUBLIC_ROOTS))if(sha(files.get(root+contract.publicBase.slice(1)+'/'+row.name)||Buffer.alloc(0))!==row.sha256)throw Error('Reviewed supplemental asset changed: '+row.name);}
   if(!Array.isArray(contract.packInputs)||contract.packInputs.length!==expectedInputs.length||contract.packId!==sha(JSON.stringify(contract.packInputs)).slice(0,16))throw Error('Reviewed surface content identity changed');
   for(const [index,expected]of expectedInputs.entries()){const row=contract.packInputs[index];if(row.role!==expected.role||row.path!==expected.path||!validHash(row.sha256)||!files.has(row.path)||sha(files.get(row.path))!==row.sha256)throw Error('Reviewed branding source missing or changed: '+expected.role);}
-  for(const [name,tone]of Object.entries(SURFACE_NAMES)){const row=review.surfaces[name],input=contract.packInputs.find(row=>row.role===name);if(row.assetPath!=='branding/reviewed-surfaces/'+tone+'.png'||row.sha256!==input.sha256||!validHash(row.alphaSha256))throw Error('Reviewed surface proof changed: '+name);reviewSourceReference(row.sourceReference);reviewedGeneration({tool:row.generation?.tool,generationId:row.generation?.id,modelVersion:row.generation?.modelVersion});
+  for(const [name,tone]of Object.entries(SURFACE_NAMES)){const row=review.surfaces[name],input=contract.packInputs.find(row=>row.role===name);if(row.assetPath!=='branding/reviewed-surfaces/'+tone+'.png'||row.sha256!==input.sha256||!validHash(row.alphaSha256))throw Error('Reviewed surface proof changed: '+name);reviewSourceReference(row.sourceReference);reviewedRasterProvenance({...row,generation:row.generation?{tool:row.generation.tool,generationId:row.generation.id,modelVersion:row.generation.modelVersion}:undefined},{retainedAllowed});
    if(name!=='onAccent')for(const root of Object.values(PUBLIC_ROOTS))if(sha(files.get(root+contract.publicBase.slice(1)+'/logo-'+tone+'.png')||Buffer.alloc(0))!==row.sha256)throw Error('Reviewed surface RGB source changed: '+name);
   }
-  if(!['generated-mark-colors-preserved','full-reviewed-surface-logo-contained'].includes(contract.markSource))throw Error('Missing reviewed mark derivation');
+  if(!(retainedAllowed?['reviewed-mark-colors-preserved','full-reviewed-surface-logo-contained']:['generated-mark-colors-preserved','full-reviewed-surface-logo-contained']).includes(contract.markSource))throw Error('Missing reviewed mark derivation');
  }
  if(contract.publicBase!=='/dealer-brand/v2-'+contract.packId||!Array.isArray(contract.consumerReferences)||!contract.consumerReferences.length)throw Error('Unversioned or unbound logo consumers');
  const assetNames=['logo-on-light.png','logo-on-light.webp','mark-on-light.webp','logo-on-dark.png','logo-on-dark.webp','mark-on-dark.webp','logo-on-accent.webp','app-icon.png','apple-touch-icon.png','favicon.ico'];const expected=new Set(Object.entries(PUBLIC_ROOTS).flatMap(([key,prefix])=>assetNames.map(name=>key+':'+prefix+contract.publicBase.slice(1)+'/'+name)));const actual=new Set(contract.assets.map(row=>row.key+':'+row.path));if(actual.size!==expected.size||[...expected].some(key=>!actual.has(key)))throw Error('Incomplete or duplicated family logo assets');
@@ -186,3 +212,4 @@ export function assertLeadBranding(files,manifest){
  for(const row of contract.derivedProfileLogoBindings||[])if(!Object.values(PROFILE_LOGO_CONSUMERS).includes(row.path)||row.factualFieldsUnchanged!==true||!files.has(row.path)||sha(files.get(row.path))!==row.afterSha256)throw Error('Derived profile branding proof changed: '+row.path);
  for(const [name,wanted]of Object.entries(contract.facts))if(sha(files.get(name))!==wanted)throw Error('Factual source changed since branding: '+name);return contract;
 }
+
