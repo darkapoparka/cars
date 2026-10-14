@@ -468,3 +468,29 @@ test('ordinary clean factual choice rejects overlapping conflict decisions inste
  const f=ordinaryFactualConsumerFixture();f.plan.changes[0].kind='resolved-manual';assert.throws(()=>applyReviewedFactualConsumerResolutions(f),/cannot overlap/);assert(f.plan.candidate.get(f.name).equals(f.merged));
  const other=ordinaryFactualConsumerFixture();assert.doesNotThrow(()=>applyReviewedFactualConsumerResolutions({...other,resolutions:{'import/src/paid.ts':Buffer.from('another reviewed manual choice')}}));assert(other.plan.candidate.get('import/src/paid.ts').equals(other.original.get('import/src/paid.ts')));
 });
+
+function pairedOrdinaryFactualConsumerFixture(){
+ const f=ordinaryFactualConsumerFixture(),name='import/src/lib/config/site.ts';
+ const current=Buffer.from("export const favicon='/dealer-brand/app-icon.png';\n"),old=Buffer.from("export const favicon='/brand/import-template-icon-v1.png';\n"),target=Buffer.from(old),merged=Buffer.from(current);
+ f.original.set(name,current);f.oldBases.import.set('src/lib/config/site.ts',old);f.newBases.import.set('src/lib/config/site.ts',target);f.plan.candidate.set(name,merged);f.factualProof.consumerPaths.push(name);f.factualProof.consumerPaths.sort();
+ f.review.paths.push({path:name,choice:'template',originalSha256:f.digest(current),oldSha256:f.digest(old),targetSha256:f.digest(target),mergedSha256:f.digest(merged)});
+ return {...f,site:{name,current,old,target,merged}};
+}
+
+test('ordinary paired factual choice restores both exact reviewed Import consumers and preserves unrelated source',()=>{
+ const f=pairedOrdinaryFactualConsumerFixture(),proof=applyReviewedFactualConsumerResolutions(f);
+ assert(f.plan.candidate.get(f.name).equals(f.target));assert(f.plan.candidate.get(f.site.name).equals(f.site.target));assert(f.original.get(f.site.name).equals(f.site.current));assert(f.plan.candidate.get('import/src/paid.ts').equals(f.original.get('import/src/paid.ts')));
+ assert.deepEqual(proof.paths,f.review.paths);assert.equal(f.plan.changes.filter(x=>x.kind==='reviewed-factual-template').length,2);assert.equal(assertFactualRefreshCandidate({candidate:f.plan.candidate,newBases:f.newBases,proof:f.proof}).consumerHashes.length,8);
+ const defaultFixture=pairedOrdinaryFactualConsumerFixture();assert.equal(applyReviewedFactualConsumerResolutions({...defaultFixture,review:null}),null);assert(defaultFixture.plan.candidate.get(defaultFixture.site.name).equals(defaultFixture.site.merged));
+});
+
+test('ordinary paired factual choice refuses either changed site lease, overlap or missing consumer atomically',()=>{
+ const mutations=['originalSha256','oldSha256','targetSha256','mergedSha256'].map(key=>f=>{f.review.paths[1][key]='0'.repeat(64);});
+ mutations.push(f=>{f.resolutions={[f.site.name]:'template'};},f=>{f.plan.conflicts=[{path:f.site.name}];},f=>{f.factualProof.consumerPaths=f.factualProof.consumerPaths.filter(x=>x!==f.site.name);});
+ for(const mutate of mutations){const f=pairedOrdinaryFactualConsumerFixture();mutate(f);assert.throws(()=>applyReviewedFactualConsumerResolutions(f));assert(f.plan.candidate.get(f.name).equals(f.merged));assert(f.plan.candidate.get(f.site.name).equals(f.site.merged));assert.equal(f.plan.changes[0].kind,'auto-merged');}
+});
+
+test('ordinary paired factual choice keeps the exact ordered two-path whitelist and rejects unknown or site-only scope',()=>{
+ for(const mutate of [f=>{f.review.paths.reverse();},f=>{f.review.paths=f.review.paths.slice(1);},f=>{f.review.paths[1].path='import/src/paid.ts';},f=>{f.review.paths[1].path='../outside';},f=>{f.review.paths.push({...f.review.paths[1]});}]){const f=pairedOrdinaryFactualConsumerFixture();mutate(f);assert.throws(()=>applyReviewedFactualConsumerResolutions(f));assert(f.plan.candidate.get(f.name).equals(f.merged));assert(f.plan.candidate.get(f.site.name).equals(f.site.merged));}
+});
+

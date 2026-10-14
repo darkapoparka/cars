@@ -88,6 +88,14 @@
         "oldSha256": "71535b2e19e083ec0592769227b07121ae63de21df74c586cfa20284f9f002cf",
         "targetSha256": "38cb99ebc64fe1801d52706c94a37969194093748369893f082c0bfa07bfc92d",
         "mergedSha256": "aa1c0fa092d92fc0854e327415ec137729806d02ee65c346f85e3740a9217478"
+      },
+      {
+        "path": "import/src/lib/config/site.ts",
+        "choice": "template",
+        "originalSha256": "98558fa560cd29eb06af4d4c1e5b78880ac4ca88e96b16edaa39c844242f1676",
+        "oldSha256": "13c22a45540715ccc6a1891423b774a456a285c820177f4e3cbc87bb3cd113b1",
+        "targetSha256": "0409563c475b4dbb16d004268308e093aa685dcbe745db699cc3627f4fb50526",
+        "mergedSha256": "98558fa560cd29eb06af4d4c1e5b78880ac4ca88e96b16edaa39c844242f1676"
       }
     ]
   }

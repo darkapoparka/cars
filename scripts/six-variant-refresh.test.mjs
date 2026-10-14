@@ -491,9 +491,16 @@ test('an explicit illustrative pack remains illustrative in the native English a
 test('six migration records exact preserved Carwow links and a Signature-only refresh preserves that artifact',t=>{
   const x=extendedFixture(t,'karento-best'),old=manifestFor('modern'),nextManifest=manifestFor('modern',true);
   fs.writeFileSync(path.join(x.client,'dealer.json'),JSON.stringify(old));
-  for(const relative of ['business-facts.json','stock.json','carwow/src/lib/data/daynight-current-inventory.ts','carwow/src/lib/data/daynight-vehicles.ts']){
+  const historical=JSON.parse(fs.readFileSync(new URL('./fixtures/legacy-detail-promosale.json',import.meta.url)));
+  const retainedInputs=new Map([
+    ['business-facts.json',JSON.stringify(historical.profile.rawFacts)],
+    ['stock.json',JSON.stringify(historical.profile.listings)],
+    ['carwow/src/lib/data/daynight-current-inventory.ts',historical.inventory],
+    ['carwow/src/lib/data/daynight-vehicles.ts',historical.vehicles]
+  ]);
+  for(const [relative,bytes] of retainedInputs){
     const destination=path.join(x.client,relative);fs.mkdirSync(path.dirname(destination),{recursive:true});
-    fs.copyFileSync(path.join('clients/promosale-varna',relative),destination);
+    fs.writeFileSync(destination,bytes);
   }
   const files=new Map([['dealer.json',Buffer.from(JSON.stringify(nextManifest))]]);
   const result=addLegacyDetailUpgrade({files,dealerRoot:x.client,manifest:nextManifest,pins:{import:{}}});

@@ -2,7 +2,8 @@
   "schemaVersion": 1,
   "dealers": [
     "centralauto-varna",
-    "f1rst-motors"
+    "f1rst-motors",
+    "bradford-cherry-tree-cars"
   ],
   "sourceRevision": "097805706654b327a2b8327a7c1670da3a5f67ae",
   "approvedParentLockDigest": "ecdfaf9599fbcbeadebc24de3b9aa1c7615a9a49e29d338e5e9a23427d405e26",
@@ -57,6 +58,28 @@
       "resolutions": {
         "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/resolutions/f1rst-motors.json",
         "sha256": "55a043b523d8510519cca5b9d8ca3d93fa44614d9b30fdb098ac194ba332e86f"
+      }
+    },
+    "bradford-cherry-tree-cars": {
+      "candidateLock": {
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/candidate-lock.json",
+        "sha256": "23622acb9fbaa5cb78379d6a080170f99dadb4703ff7b8ccba3d21a2b41e8786"
+      },
+      "qualification": {
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/contexts/bradford-cherry-tree-cars.json",
+        "sha256": "144d3fa1380212967dd0644b6ec601b7bc83e06ef561a9ebce4f1c5b1881f977"
+      },
+      "sourceDeltaReview": {
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
+        "sha256": "8fac7527b396f75ff6647a724ce7a2152bb13ff514efe6480b7c322f66fc195f"
+      },
+      "branding": {
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-branding/bradford-cherry-tree-cars.json",
+        "sha256": "66a7d03899c857cf393559abe6edac398d64e557539a2f3ba2ac00408de4a646"
+      },
+      "resolutions": {
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/resolutions/bradford-cherry-tree-cars.json",
+        "sha256": "cce4396262cd4eec3ac941737aa3e720ec02b6085e5eb231e4afea43d7a1f787"
       }
     }
   }

@@ -380,25 +380,30 @@ export function applyReviewedFactualConsumerResolutions({plan,original,oldBases,
   const exact=(value,keys)=>value&&typeof value==='object'&&!Array.isArray(value)&&JSON.stringify(Object.keys(value).sort())===JSON.stringify([...keys].sort());
   const equal=(a,b)=>JSON.stringify(a)===JSON.stringify(b);
   const keys=['auto-best','modern','import','app','mobile','karento-best'];
-  const pathname='import/src/lib/config/dealer.ts',relative='src/lib/config/dealer.ts';
+  const dealerPath='import/src/lib/config/dealer.ts',sitePath='import/src/lib/config/site.ts';
+  const paths=review.paths?.length===2?[dealerPath,sitePath]:[dealerPath];
   assertFactualRefreshAdmission({enabled:refreshFacts,designSet,selectedKeys,qualification,registeredAdoption,manifest});
   if(refreshFacts!==true||templatePalette!==true||registeredAdoption||!plan?.ready||!(plan.candidate instanceof Map)||!(original instanceof Map))throw new Error('Reviewed factual consumers require a ready ordinary six-family factual refresh with selected template palettes');
   if(!exact(review,['schemaVersion','kind','reviewed','dealer','baseline','targetSources','paths'])||review.schemaVersion!==1||review.kind!=='cars-factual-consumer-template-resolutions'||review.reviewed!==true||review.dealer!==manifest.slug||
      !exact(review.baseline,['commit','tree'])||!Object.values(review.baseline).every(value=>/^[a-f0-9]{40}$/.test(value))||!equal(review.baseline,baseline)||
-     factualProof?.stage!=='preservation-merge-before-native-catalogs-and-branding'||!Array.isArray(factualProof.consumerPaths)||!factualProof.consumerPaths.includes(pathname)||
+     factualProof?.stage!=='preservation-merge-before-native-catalogs-and-branding'||!Array.isArray(factualProof.consumerPaths)||paths.some(name=>!factualProof.consumerPaths.includes(name))||
      !exact(review.targetSources,keys)||!equal(review.targetSources,factualProof.targetSources)||!equal(review.targetSources,Object.fromEntries(keys.map(key=>[key,renderPins(plan.pins?.[key]?.targetSource)])))||
-     !Array.isArray(review.paths)||review.paths.length!==1)throw new Error('Invalid reviewed factual consumer identity, baseline, pins or scope');
-  if(Object.hasOwn(resolutions,pathname)||plan.changes.some(row=>row.path===pathname&&row.kind?.startsWith('resolved-')))throw new Error('Reviewed clean factual choice cannot overlap an existing conflict decision');
-  const item=review.paths[0];
-  if(!exact(item,['path','choice','originalSha256','oldSha256','targetSha256','mergedSha256'])||item.path!==pathname||item.choice!=='template'||Object.entries(item).some(([key,value])=>key.endsWith('Sha256')&&!/^[a-f0-9]{64}$/.test(value)))throw new Error('Reviewed factual consumer must name only the exact Import dealer config with four byte leases');
-  const current=original.get(pathname),old=oldBases?.import?.get(relative),target=newBases?.import?.get(relative),merged=plan.candidate.get(pathname);
-  const text=bytes=>Buffer.isBuffer(bytes)&&!bytes.includes(0)&&Buffer.from(bytes.toString('utf8')).equals(bytes);
-  if(![current,old,target,merged].every(text)||merged.equals(target)||plan.conflicts?.some(row=>row.path===pathname)||
-     sha256(current)!==item.originalSha256||sha256(old)!==item.oldSha256||sha256(target)!==item.targetSha256||sha256(merged)!==item.mergedSha256)throw new Error('Reviewed factual consumer bytes changed, are not clean UTF-8, or are not a clean target difference');
-  // All validation precedes changes; retain every other candidate and conflict decision.
-  const change={path:pathname,kind:'reviewed-factual-template',beforeSha256:sha256(current),afterSha256:sha256(target),diff:unifiedDiff(current,target,[`dealer/${pathname}`,`candidate/${pathname}`])};
-  plan.candidate.set(pathname,Buffer.from(target));
-  plan.changes=[...plan.changes.filter(row=>row.path!==pathname),change].sort((a,b)=>a.path.localeCompare(b.path));
+     !Array.isArray(review.paths)||!equal(review.paths.map(item=>item?.path),paths))throw new Error('Invalid reviewed factual consumer identity, baseline, pins or scope');
+  const checked=[];
+  for(const item of review.paths){
+    const pathname=item.path,relative=pathname.slice('import/'.length);
+    if(Object.hasOwn(resolutions,pathname)||plan.changes.some(row=>row.path===pathname&&row.kind?.startsWith('resolved-')))throw new Error('Reviewed clean factual choice cannot overlap an existing conflict decision');
+    if(!exact(item,['path','choice','originalSha256','oldSha256','targetSha256','mergedSha256'])||item.choice!=='template'||Object.entries(item).some(([key,value])=>key.endsWith('Sha256')&&!/^[a-f0-9]{64}$/.test(value)))throw new Error('Reviewed factual consumer must name only the exact Import dealer config or paired site config with four byte leases');
+    const current=original.get(pathname),old=oldBases?.import?.get(relative),target=newBases?.import?.get(relative),merged=plan.candidate.get(pathname);
+    const text=bytes=>Buffer.isBuffer(bytes)&&!bytes.includes(0)&&Buffer.from(bytes.toString('utf8')).equals(bytes);
+    if(![current,old,target,merged].every(text)||merged.equals(target)||plan.conflicts?.some(row=>row.path===pathname)||
+       sha256(current)!==item.originalSha256||sha256(old)!==item.oldSha256||sha256(target)!==item.targetSha256||sha256(merged)!==item.mergedSha256)throw new Error('Reviewed factual consumer bytes changed, are not clean UTF-8, or are not a clean target difference');
+    checked.push({pathname,current,target});
+  }
+  // Validate every paired lease before changing either candidate or review record.
+  const changes=checked.map(({pathname,current,target})=>({path:pathname,kind:'reviewed-factual-template',beforeSha256:sha256(current),afterSha256:sha256(target),diff:unifiedDiff(current,target,[`dealer/${pathname}`,`candidate/${pathname}`])}));
+  for(const {pathname,target}of checked)plan.candidate.set(pathname,Buffer.from(target));
+  plan.changes=[...plan.changes.filter(row=>!paths.includes(row.path)),...changes].sort((a,b)=>a.path.localeCompare(b.path));
   plan.summary={...plan.summary,changed:plan.changes.length,autoMerged:plan.changes.filter(row=>row.kind==='auto-merged').length,dealerOnly:plan.changes.filter(row=>row.kind==='dealer-only').length,templateOnly:plan.changes.filter(row=>row.kind==='template-only').length};
   const proof={schemaVersion:1,stage:factualProof.stage,mode:'explicit-reviewed-ordinary-factual-template-consumer',dealer:manifest.slug,baseline:structuredClone(baseline),targetSources:structuredClone(review.targetSources),qualificationSha256:sha256(Buffer.from(JSON.stringify(qualification))),reviewSha256:sha256(Buffer.from(JSON.stringify(review))),paths:structuredClone(review.paths)};
   plan.factualConsumerResolutions=proof;return proof;
@@ -443,7 +448,9 @@ function factualConsumerBaseline({review,carsRoot,dealerRoot,dealer}) {
 function applyFactualReviewToPlan({plan,dealerRoot,carsRoot,manifest,qualification,selection,registeredAdoption,refreshFacts,templatePalette,factualProof,oldBases,newBases,review,resolutions}) {
   if(!review)return null;
   const baseline=factualConsumerBaseline({review,carsRoot,dealerRoot,dealer:manifest.slug});
-  const original=new Map([['import/src/lib/config/dealer.ts',fs.readFileSync(path.join(dealerRoot,'import/src/lib/config/dealer.ts'))]]);
+  const allowed=new Set(['import/src/lib/config/dealer.ts','import/src/lib/config/site.ts']);
+  if(!Array.isArray(review.paths)||review.paths.some(item=>!allowed.has(item?.path)))throw Error('Invalid reviewed factual consumer input scope');
+  const original=new Map(review.paths.map(({path:name})=>[name,fs.readFileSync(path.join(dealerRoot,name))]));
   return applyReviewedFactualConsumerResolutions({plan,original,oldBases,newBases,review,manifest,qualification,designSet:selection.designSet,selectedKeys:selection.selectedKeys,registeredAdoption,refreshFacts,templatePalette,factualProof,baseline,resolutions});
 }
 
