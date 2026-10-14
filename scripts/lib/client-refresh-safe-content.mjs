@@ -267,10 +267,26 @@ export const daynightFaqGroups: readonly FaqGroup[] = ${JSON.stringify(faqGroups
   ];
 }
 
+function bindImportDatedInventoryNotice({ candidate, profile }) {
+  const notice = profile.business.inventoryNotice;
+  const dated = typeof notice === 'string' && notice.match(/^Представителни обяви към (\d{2}\.\d{2}\.\d{4}) г\. Потвърдете наличността и условията по телефона\.$/u);
+  if (!dated) return [];
+  const name = 'src/lib/content/extra-localized.ts';
+  const file = path.join(candidate, name);
+  const catalog = readTypeScriptCatalog(read(file), 'extraEnglish');
+  if (Object.hasOwn(catalog, notice)) {
+    if (typeof catalog[notice] !== 'string' || !catalog[notice].trim()) throw new Error('Import dated inventory disclosure requires an English catalog value');
+    return [];
+  }
+  write(file, `export const extraEnglish = ${JSON.stringify({ ...catalog, [notice]: `Representative listings as of ${dated[1]}. Confirm availability and terms by phone.` }, null, 2)} as const;\n`);
+  return [name];
+}
+
 export function applyImportSafeContent({ candidate, profile }) {
   const b = profile.business;
   const english = isEnglish(profile);
   const editorialFiles = [];
+  editorialFiles.push(...bindImportDatedInventoryNotice({ candidate, profile }));
   const disclosureFile = path.join(candidate, 'src/lib/content/localized.ts');
   if (fs.existsSync(disclosureFile)) {
     const disclosure = repairImportDealerDisclosureCatalog(read(disclosureFile));
@@ -368,12 +384,12 @@ export function getPostBySlug(slug: string) { return posts.find((post) => post.s
     }
   }
 
-  return [
+  return [...new Set([
     ...editorialFiles,
     'src/lib/auxero/reviews.ts',
     'src/lib/data/blog.ts',
     'src/lib/components/detail/AuxeroVehicleDetailStaticContent.svelte'
-  ];
+  ])];
 }
 
 // Known S1 proposal copy only; control, composition and recorded identity stay outside these boundaries.

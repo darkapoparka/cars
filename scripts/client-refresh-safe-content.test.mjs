@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
+import { stripTypeScriptTypes } from 'node:module';
 import { applyCarwowSafeContent, applyImportSafeContent, personalizeImportOfferCopy, personalizeModernSellCopy, personalizeModernMobileSellCopy, applyModernSafeContent } from './lib/client-refresh-safe-content.mjs';
 import { runInNewContext } from 'node:vm';
 import { readTypeScriptCatalog } from './lib/catalog-literal.mjs';
@@ -267,4 +268,40 @@ test('Modern sell preserves the maintained GB miles placeholder pair through str
  for(const bad of [miles.replace('62,000 mi','62,000 km'),miles.replace('62 000 mi','62001 mi'),miles.replace('Our team will contact you','Guaranteed valuation')])assert.throws(()=>personalizeModernSellCopy(bad,p),/mileage copy pair changed|unreviewed copy or factual shape/);
  assert.throws(()=>personalizeModernSellCopy(miles,profile('BG')),/unreviewed copy or factual shape/);
  assert.throws(()=>personalizeModernSellCopy(miles,{business:{...p.business,distanceUnit:'km'}}),/unreviewed copy or factual shape/);
+});
+
+function importNativeCopy(candidate) {
+ const source=fs.readFileSync(path.join(import.meta.dirname,'../templates/import/src/lib/content/localized.ts'),'utf8').replace(/^import .*;\r?\n/gm,'').replace(/^export /gm,'');
+ const extraEnglish=readTypeScriptCatalog(fs.readFileSync(path.join(candidate,'src/lib/content/extra-localized.ts'),'utf8'),'extraEnglish');
+ return new Function('extraEnglish','site',stripTypeScriptTypes(source)+'\nreturn {contentText,localizedCopy};')(extraEnglish,{identity:{displayName:'Fixture Auto'}});
+}
+
+test('Import dated dealer disclosures render through the strict native EN/BG editorial boundary',t=>{
+ const {candidate}=importEditorialFixture(t),dealer=profile('BG');
+ for(const date of ['10.09.2026','14.10.2026']){
+  dealer.business.inventoryNotice=`Представителни обяви към ${date} г. Потвърдете наличността и условията по телефона.`;
+  const before=JSON.stringify(dealer);
+  const changed=applyImportSafeContent({candidate,profile:dealer});
+  assert(changed.includes('src/lib/content/extra-localized.ts'));
+  assert.equal(new Set(changed).size,changed.length);
+  const posts=readTypeScriptCatalog(fs.readFileSync(path.join(candidate,'src/lib/data/blog.ts'),'utf8'),'posts');
+  const native=importNativeCopy(candidate);
+  assert.equal(native.localizedCopy(posts,'en')[0].excerpt,`Representative listings as of ${date}. Confirm availability and terms by phone.`);
+  assert.equal(native.localizedCopy(posts,'bg')[0].excerpt,dealer.business.inventoryNotice);
+  assert.equal(posts[0].date,dealer.business.observedAt);
+  assert.equal(JSON.stringify(dealer),before);
+  assert.equal(native.contentText('en','Запазен текст'),'Retained text');
+ }
+ const catalog=fs.readFileSync(path.join(candidate,'src/lib/content/extra-localized.ts'),'utf8');
+ applyImportSafeContent({candidate,profile:dealer});
+ assert.equal(fs.readFileSync(path.join(candidate,'src/lib/content/extra-localized.ts'),'utf8'),catalog);
+});
+
+test('Import unknown inventory copy retains the strict missing-English error',t=>{
+ const {candidate}=importEditorialFixture(t),dealer=profile('BG');
+ dealer.business.inventoryNotice='Представителни обяви към неизвестна дата. Потвърдете гаранцията по телефона.';
+ applyImportSafeContent({candidate,profile:dealer});
+ const native=importNativeCopy(candidate);
+ assert.throws(()=>native.contentText('en',dealer.business.inventoryNotice),/Missing English editorial catalog entry/);
+ assert.equal(native.contentText('bg',dealer.business.inventoryNotice),dealer.business.inventoryNotice);
 });

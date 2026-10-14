@@ -24,6 +24,7 @@ import {applyDealerPresentation} from './publishing/dealer-presentation.mjs';
 import {applyAutoBestCardLayout} from './publishing/auto-best-card-layout.mjs';
 import {applyOptionalContactFallback} from './publishing/dealer-contact-fallback.mjs';
 import {applyDealerShare} from './publishing/dealer-share.mjs';
+import {appendProposalIntroduction} from './publishing/proposal-introduction.mjs';
 import {assertLeadBranding} from './publishing/lead-branding.mjs';
 import {PUBLIC_ROOTS,familyRetention} from './publishing/vercel-asset-plan.mjs';
 import {applyCloudflareProvider} from './publishing/cloudflare-provider.mjs';
@@ -293,7 +294,7 @@ export async function prepareExistingFleetSourcePackage(slug,key,sha,area,reques
  await applyDealerShare(files,manifest,{sharp,typescript});
  const config=switcherConfiguration(manifest,read(path.join(ROOT,'scripts/publishing/switcher-messages.json')),files);
  const switcher=fs.readFileSync(path.join(ROOT,'scripts/publishing/preview-switcher.js'),'utf8').replace('__CARS_SWITCHER_CONFIG__',()=>JSON.stringify(config).replace(/</g,'\\u003c'));
- files.set('auto-best/static/preview-switcher.js',Buffer.from(switcher));files.set('dealer.json',encode(manifest));
+ files.set('auto-best/static/preview-switcher.js',Buffer.from(appendProposalIntroduction(switcher,{dealerId:manifest.dealerId||manifest.slug,dealerName:manifest.shareIdentity?.name||manifest.slug})));files.set('dealer.json',encode(manifest));
  const {completeSignatureFontAssets}=await import('./publishing/signature-font-assets.mjs');
  completeSignatureFontAssets(files);
  const pruned=pruneReviewedAssets(files);files=pruned.files;
