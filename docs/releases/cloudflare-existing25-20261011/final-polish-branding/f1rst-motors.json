@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "dealer": "f1rst-motors",
+  "reviewed": true,
+  "reviewedAt": "2026-10-14T11:31:43.352Z",
+  "sourceMode": "retained-or-mixed-raster",
+  "master": {
+    "path": "docs/logo-polish-2026-10-14/parallel/vercel/f1rst-motors/logo-on-light.png",
+    "sha256": "463ae7eb249fb95c18239c6cfd4cd2c950fa10f799f018585058c00f369ddb65"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/logo-polish-2026-10-14/parallel/vercel/f1rst-motors/logo-on-light.png",
+      "sha256": "463ae7eb249fb95c18239c6cfd4cd2c950fa10f799f018585058c00f369ddb65",
+      "sourceReference": "L:\\CODEX\\cars\\docs\\logo-polish-2026-10-14\\parallel\\vercel\\f1rst-motors\\logo-on-light.png",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:\\CODEX\\cars\\docs\\logo-polish-2026-10-14\\live-assets\\833105e3bee3f1f81afa6ce7ebbfa4e4e2b2d51fa5e72efc28335d74b3d5f624.webp",
+        "sha256": "833105e3bee3f1f81afa6ce7ebbfa4e4e2b2d51fa5e72efc28335d74b3d5f624",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    },
+    "onDark": {
+      "path": "docs/logo-polish-2026-10-14/parallel/vercel/f1rst-motors/logo-on-dark.png",
+      "sha256": "23b1d4c2af23f051e651a494fa162c7bfc6f5185dca08b0e46475de8f38b1488",
+      "sourceReference": "C:/Users/radev/.codex/generated_images/01a139b5-1690-76b0-8f3b-f1c9ee2d72db/exec-cf2cd28a-ea49-4e72-bbd3-b95db12d0e30.png",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-cf2cd28a-ea49-4e72-bbd3-b95db12d0e30",
+        "modelVersion": null
+      }
+    },
+    "onAccent": {
+      "path": "docs/logo-polish-2026-10-14/parallel/vercel/f1rst-motors/logo-on-accent.png",
+      "sha256": "f93f6eeacd2c085ce7f215a55a1c5832494b75102bc761d87246ece8b75d5307",
+      "sourceReference": "L:\\CODEX\\cars\\docs\\logo-polish-2026-10-14\\parallel\\vercel\\f1rst-motors\\logo-on-accent.png",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:/CODEX/cars/clients/f1rst-motors/dealer-brand/logo-on-accent.webp",
+        "sha256": "fa265cd54c49a56be62284c02a85ef2400c67321641c66a3849295966f4bc6e1",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    }
+  }
+}

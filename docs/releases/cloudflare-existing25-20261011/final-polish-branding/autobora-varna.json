@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "dealer": "autobora-varna",
+  "reviewed": true,
+  "reviewedAt": "2026-10-14T11:56:24.553Z",
+  "sourceMode": "retained-or-mixed-raster",
+  "master": {
+    "path": "docs/logo-polish-2026-10-14/final-raster-inputs/64085d5e05866877544e492de1daaeb214c05b9b7bee29ee7de899f0e3d84809.png",
+    "sha256": "64085d5e05866877544e492de1daaeb214c05b9b7bee29ee7de899f0e3d84809"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/logo-polish-2026-10-14/final-raster-inputs/64085d5e05866877544e492de1daaeb214c05b9b7bee29ee7de899f0e3d84809.png",
+      "sha256": "64085d5e05866877544e492de1daaeb214c05b9b7bee29ee7de899f0e3d84809",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/d7f796fbfdd91d14ee4e28492d9daf4bcf181bfad1f925f7879d7fd89e0d1f00.webp",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/d7f796fbfdd91d14ee4e28492d9daf4bcf181bfad1f925f7879d7fd89e0d1f00.webp",
+        "sha256": "d7f796fbfdd91d14ee4e28492d9daf4bcf181bfad1f925f7879d7fd89e0d1f00",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    },
+    "onDark": {
+      "path": "docs/logo-polish-2026-10-14/final-raster-inputs/69811667cf1eaaf5b435c3c3b33a7eb5f0452bcdd8a3af1856753b592e0ab7fe.png",
+      "sha256": "69811667cf1eaaf5b435c3c3b33a7eb5f0452bcdd8a3af1856753b592e0ab7fe",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/cfcd061ee322184f16bef03ba36c1b403a51364c3414c26bf5731fa04ed7c454.webp",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/cfcd061ee322184f16bef03ba36c1b403a51364c3414c26bf5731fa04ed7c454.webp",
+        "sha256": "cfcd061ee322184f16bef03ba36c1b403a51364c3414c26bf5731fa04ed7c454",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    },
+    "onAccent": {
+      "path": "docs/logo-polish-2026-10-14/final-raster-inputs/0950ead619599e5dc44199f77b4285664d7b56312fab8322b4eb1df5dc1f8111.png",
+      "sha256": "0950ead619599e5dc44199f77b4285664d7b56312fab8322b4eb1df5dc1f8111",
+      "sourceReference": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/autobora-varna/dealer-brand/logo-on-accent.webp",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/autobora-varna/dealer-brand/logo-on-accent.webp",
+        "sha256": "bf912aca24b4e8bf51cf309af7c47d34d94d902521851c6182a41dafb40cbaf9",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    }
+  }
+}

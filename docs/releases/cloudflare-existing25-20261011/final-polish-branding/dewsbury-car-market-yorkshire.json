@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "dealer": "dewsbury-car-market-yorkshire",
+  "reviewed": true,
+  "reviewedAt": "2026-10-14T11:56:24.553Z",
+  "sourceMode": "retained-or-mixed-raster",
+  "master": {
+    "path": "docs/logo-polish-2026-10-14/parallel/cf-first50/dewsbury-car-market-yorkshire/logo-on-light.png",
+    "sha256": "25af96b5692d27aeb35d763f7086f629bbb8255a5dc4d422dc5d3b6d51561915"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/logo-polish-2026-10-14/parallel/cf-first50/dewsbury-car-market-yorkshire/logo-on-light.png",
+      "sha256": "25af96b5692d27aeb35d763f7086f629bbb8255a5dc4d422dc5d3b6d51561915",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/parallel/cf-first50/dewsbury-car-market-yorkshire/logo-on-light.png",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f16edd4b-1341-44fc-8e3b-a3603977082e",
+        "modelVersion": null
+      }
+    },
+    "onDark": {
+      "path": "docs/logo-polish-2026-10-14/parallel/cf-first50/dewsbury-car-market-yorkshire/logo-on-dark.png",
+      "sha256": "e493232cd3b49fca68d643ada3b655c603b6582b0c94d442d96dc5bbd2a9c736",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/parallel/cf-first50/dewsbury-car-market-yorkshire/logo-on-dark.png",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-531d17a3-1d2b-4214-ab2b-f5559c6c8dfb",
+        "modelVersion": null
+      }
+    },
+    "onAccent": {
+      "path": "docs/logo-polish-2026-10-14/parallel/cf-first50/dewsbury-car-market-yorkshire/logo-on-dark.png",
+      "sha256": "e493232cd3b49fca68d643ada3b655c603b6582b0c94d442d96dc5bbd2a9c736",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/parallel/cf-first50/dewsbury-car-market-yorkshire/logo-on-dark.png",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-531d17a3-1d2b-4214-ab2b-f5559c6c8dfb",
+        "modelVersion": null
+      }
+    }
+  }
+}

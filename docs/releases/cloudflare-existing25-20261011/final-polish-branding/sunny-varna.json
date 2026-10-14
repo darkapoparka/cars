@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "dealer": "sunny-varna",
+  "reviewed": true,
+  "reviewedAt": "2026-10-14T11:56:24.553Z",
+  "sourceMode": "retained-or-mixed-raster",
+  "master": {
+    "path": "docs/logo-polish-2026-10-14/live-assets/0012f9264cad31ab1dcad9b76fc6e5997a94d249f660bb2beef19272859d33d2.png",
+    "sha256": "0012f9264cad31ab1dcad9b76fc6e5997a94d249f660bb2beef19272859d33d2"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/logo-polish-2026-10-14/live-assets/0012f9264cad31ab1dcad9b76fc6e5997a94d249f660bb2beef19272859d33d2.png",
+      "sha256": "0012f9264cad31ab1dcad9b76fc6e5997a94d249f660bb2beef19272859d33d2",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/0012f9264cad31ab1dcad9b76fc6e5997a94d249f660bb2beef19272859d33d2.png",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/0012f9264cad31ab1dcad9b76fc6e5997a94d249f660bb2beef19272859d33d2.png",
+        "sha256": "0012f9264cad31ab1dcad9b76fc6e5997a94d249f660bb2beef19272859d33d2",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    },
+    "onDark": {
+      "path": "docs/logo-polish-2026-10-14/final-raster-inputs/6ec47739dd54f1d7d0d2f8e383660b2a3b95a3740a6070ee0541d3e59fc35c86.png",
+      "sha256": "6ec47739dd54f1d7d0d2f8e383660b2a3b95a3740a6070ee0541d3e59fc35c86",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/0704e43cd5b99f752a0e27544eb7f17e2dae222a4737145ae69cc03b0da0bccc.webp",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/0704e43cd5b99f752a0e27544eb7f17e2dae222a4737145ae69cc03b0da0bccc.webp",
+        "sha256": "0704e43cd5b99f752a0e27544eb7f17e2dae222a4737145ae69cc03b0da0bccc",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    },
+    "onAccent": {
+      "path": "docs/logo-polish-2026-10-14/final-raster-inputs/9cff03d62ce66ca0661f9e4e90598fabf436cb9522232c11351b5f6edd8758a2.png",
+      "sha256": "9cff03d62ce66ca0661f9e4e90598fabf436cb9522232c11351b5f6edd8758a2",
+      "sourceReference": "L:/CODEX/cars/leads/branding/fleet-20261011/sunny-varna/dealer-brand/logo-on-accent.webp",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:/CODEX/cars/leads/branding/fleet-20261011/sunny-varna/dealer-brand/logo-on-accent.webp",
+        "sha256": "a0760bc05c136c0eb4faa69accfd9958110bc697e0ac5e665692399186f91cfa",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    }
+  }
+}

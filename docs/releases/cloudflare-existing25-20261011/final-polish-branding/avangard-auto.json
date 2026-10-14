@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "dealer": "avangard-auto",
+  "reviewed": true,
+  "reviewedAt": "2026-10-14T11:31:43.352Z",
+  "sourceMode": "retained-or-mixed-raster",
+  "master": {
+    "path": "docs/logo-polish-2026-10-14/parallel/vercel/avangard-auto/logo-on-light.png",
+    "sha256": "0ea4ea69ddd9b75d4bb6fc01602649f85ad7a78189fb6f3dcee66f2b9a4adfbf"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/logo-polish-2026-10-14/parallel/vercel/avangard-auto/logo-on-light.png",
+      "sha256": "0ea4ea69ddd9b75d4bb6fc01602649f85ad7a78189fb6f3dcee66f2b9a4adfbf",
+      "sourceReference": "L:\\CODEX\\cars\\docs\\logo-polish-2026-10-14\\parallel\\vercel\\avangard-auto\\logo-on-light.png",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:\\CODEX\\cars\\docs\\logo-polish-2026-10-14\\live-assets\\50aaaad8c8bd39738a9c0c9214de09779cac4883f9f0857771e05e012a8d3c98.webp",
+        "sha256": "50aaaad8c8bd39738a9c0c9214de09779cac4883f9f0857771e05e012a8d3c98",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    },
+    "onDark": {
+      "path": "docs/logo-polish-2026-10-14/parallel/vercel/avangard-auto/logo-on-dark.png",
+      "sha256": "7fdb315b040c1bbb16e8afc56c8ab7e875ce3d448bc50a311ca2bab9be0fd4ec",
+      "sourceReference": "C:\\Users\\radev\\.codex\\generated_images\\01a13a10-d6a7-7ae1-9379-360e66482a5d\\exec-2972b498-2d20-4097-a5f8-94a26ff5feb9.png",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-2972b498-2d20-4097-a5f8-94a26ff5feb9",
+        "modelVersion": null
+      }
+    },
+    "onAccent": {
+      "path": "docs/logo-polish-2026-10-14/parallel/vercel/avangard-auto/logo-on-accent.png",
+      "sha256": "e5f5db343d6a77ad158b2308011885dd28506d4b5769289f446eea99065ab0ed",
+      "sourceReference": "L:\\CODEX\\cars\\docs\\logo-polish-2026-10-14\\parallel\\vercel\\avangard-auto\\logo-on-accent.png",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:/CODEX/cars/clients/avangard-auto/dealer-brand/logo-on-accent-20260919.webp",
+        "sha256": "6beab5401bdf7dbcc693e599735ff6e5cbbe99f9e55f08a0cd1257d160d9fc8a",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    }
+  }
+}

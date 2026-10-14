@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "dealer": "extra-car-sm",
+  "reviewed": true,
+  "reviewedAt": "2026-10-14T11:56:24.553Z",
+  "sourceMode": "retained-or-mixed-raster",
+  "master": {
+    "path": "docs/logo-polish-2026-10-14/parallel/cf-first50/extra-car-sm/logo-on-light.png",
+    "sha256": "de5e495108fd8c4c3bb5f397e17c93df6480f089418fba6d7e34e1409bb6e7d9"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/logo-polish-2026-10-14/parallel/cf-first50/extra-car-sm/logo-on-light.png",
+      "sha256": "de5e495108fd8c4c3bb5f397e17c93df6480f089418fba6d7e34e1409bb6e7d9",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/parallel/cf-first50/extra-car-sm/logo-on-light.png",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-45193b19-980c-4a13-8810-3078113a51c0",
+        "modelVersion": null
+      }
+    },
+    "onDark": {
+      "path": "docs/logo-polish-2026-10-14/parallel/cf-first50/extra-car-sm/logo-on-dark.png",
+      "sha256": "870c02914f00662c91589b7e2769d2f62396417404f4212e399a3a98cc4afeab",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/parallel/cf-first50/extra-car-sm/logo-on-dark.png",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-45193b19-980c-4a13-8810-3078113a51c0",
+        "modelVersion": null
+      }
+    },
+    "onAccent": {
+      "path": "docs/logo-polish-2026-10-14/parallel/cf-first50/extra-car-sm/logo-on-dark.png",
+      "sha256": "870c02914f00662c91589b7e2769d2f62396417404f4212e399a3a98cc4afeab",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/parallel/cf-first50/extra-car-sm/logo-on-dark.png",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-45193b19-980c-4a13-8810-3078113a51c0",
+        "modelVersion": null
+      }
+    }
+  }
+}

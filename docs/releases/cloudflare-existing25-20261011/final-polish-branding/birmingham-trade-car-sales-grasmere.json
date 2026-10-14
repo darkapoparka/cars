@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "dealer": "birmingham-trade-car-sales-grasmere",
+  "reviewed": true,
+  "reviewedAt": "2026-10-14T11:56:24.553Z",
+  "sourceMode": "retained-or-mixed-raster",
+  "master": {
+    "path": "docs/logo-polish-2026-10-14/final-raster-inputs/7d54619bd5c2882f8234b6f0ce638320e224f3691e61fe0adccbcb25265852f8.png",
+    "sha256": "7d54619bd5c2882f8234b6f0ce638320e224f3691e61fe0adccbcb25265852f8"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/logo-polish-2026-10-14/final-raster-inputs/7d54619bd5c2882f8234b6f0ce638320e224f3691e61fe0adccbcb25265852f8.png",
+      "sha256": "7d54619bd5c2882f8234b6f0ce638320e224f3691e61fe0adccbcb25265852f8",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/1786b58acf80bfcaf3ef7e186e1567cb8026f60fa4fdfa0dee13b3ffb4509abd.webp",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/1786b58acf80bfcaf3ef7e186e1567cb8026f60fa4fdfa0dee13b3ffb4509abd.webp",
+        "sha256": "1786b58acf80bfcaf3ef7e186e1567cb8026f60fa4fdfa0dee13b3ffb4509abd",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    },
+    "onDark": {
+      "path": "docs/logo-polish-2026-10-14/final-raster-inputs/a4f5e0a3a79084dc5d386d0c2770fbd5220aaddf6d01a3ef760b823fd786103f.png",
+      "sha256": "a4f5e0a3a79084dc5d386d0c2770fbd5220aaddf6d01a3ef760b823fd786103f",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/566203a774ab9cde2dce74f5e6677db5cd1239a697d5efe8b421182dcc218e77.webp",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/566203a774ab9cde2dce74f5e6677db5cd1239a697d5efe8b421182dcc218e77.webp",
+        "sha256": "566203a774ab9cde2dce74f5e6677db5cd1239a697d5efe8b421182dcc218e77",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    },
+    "onAccent": {
+      "path": "docs/logo-polish-2026-10-14/final-raster-inputs/a4f5e0a3a79084dc5d386d0c2770fbd5220aaddf6d01a3ef760b823fd786103f.png",
+      "sha256": "a4f5e0a3a79084dc5d386d0c2770fbd5220aaddf6d01a3ef760b823fd786103f",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/566203a774ab9cde2dce74f5e6677db5cd1239a697d5efe8b421182dcc218e77.webp",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/566203a774ab9cde2dce74f5e6677db5cd1239a697d5efe8b421182dcc218e77.webp",
+        "sha256": "566203a774ab9cde2dce74f5e6677db5cd1239a697d5efe8b421182dcc218e77",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    }
+  }
+}

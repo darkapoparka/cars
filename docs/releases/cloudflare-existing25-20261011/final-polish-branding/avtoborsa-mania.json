@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "dealer": "avtoborsa-mania",
+  "reviewed": true,
+  "reviewedAt": "2026-10-14T11:56:24.553Z",
+  "sourceMode": "retained-or-mixed-raster",
+  "master": {
+    "path": "docs/logo-polish-2026-10-14/live-assets/ba9ab3bbc61eeb37c104f67c91f7053d1082c09986743ee321290cc78f7c9c8c.png",
+    "sha256": "ba9ab3bbc61eeb37c104f67c91f7053d1082c09986743ee321290cc78f7c9c8c"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/logo-polish-2026-10-14/live-assets/ba9ab3bbc61eeb37c104f67c91f7053d1082c09986743ee321290cc78f7c9c8c.png",
+      "sha256": "ba9ab3bbc61eeb37c104f67c91f7053d1082c09986743ee321290cc78f7c9c8c",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/ba9ab3bbc61eeb37c104f67c91f7053d1082c09986743ee321290cc78f7c9c8c.png",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/ba9ab3bbc61eeb37c104f67c91f7053d1082c09986743ee321290cc78f7c9c8c.png",
+        "sha256": "ba9ab3bbc61eeb37c104f67c91f7053d1082c09986743ee321290cc78f7c9c8c",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    },
+    "onDark": {
+      "path": "docs/logo-polish-2026-10-14/final-raster-inputs/e9ebf1b2fe82f88191cba04fe3da4ba59f5e66c7ac514ba6c0056fa1084f359a.png",
+      "sha256": "e9ebf1b2fe82f88191cba04fe3da4ba59f5e66c7ac514ba6c0056fa1084f359a",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/6e7484d6480bc471daaa74c7bdab39f289f967601ffa91be8b6306fa65be60fc.webp",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/6e7484d6480bc471daaa74c7bdab39f289f967601ffa91be8b6306fa65be60fc.webp",
+        "sha256": "6e7484d6480bc471daaa74c7bdab39f289f967601ffa91be8b6306fa65be60fc",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    },
+    "onAccent": {
+      "path": "docs/logo-polish-2026-10-14/final-raster-inputs/074c9bfb257cab0fa56ae931f107804d49ebb563365b0ad504ec53c063eb2b96.png",
+      "sha256": "074c9bfb257cab0fa56ae931f107804d49ebb563365b0ad504ec53c063eb2b96",
+      "sourceReference": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/avtoborsa-mania/dealer-brand/logo-on-accent.webp",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/avtoborsa-mania/dealer-brand/logo-on-accent.webp",
+        "sha256": "0d93603146c796bf0b7f4861559b4b7905789f4738610005c504c36bb0a72bfa",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    }
+  }
+}

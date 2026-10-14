@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "dealer": "elit-auto-import",
+  "reviewed": true,
+  "reviewedAt": "2026-10-14T11:31:43.352Z",
+  "sourceMode": "retained-or-mixed-raster",
+  "master": {
+    "path": "docs/logo-polish-2026-10-14/parallel/vercel/elit-auto-import/logo-on-light.png",
+    "sha256": "1a23cb423a60e0d27e2273ccfd7285812e2687767b2c91e225c11d5add5c8530"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/logo-polish-2026-10-14/parallel/vercel/elit-auto-import/logo-on-light.png",
+      "sha256": "1a23cb423a60e0d27e2273ccfd7285812e2687767b2c91e225c11d5add5c8530",
+      "sourceReference": "L:\\CODEX\\cars\\docs\\logo-polish-2026-10-14\\parallel\\vercel\\elit-auto-import\\logo-on-light.png",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:\\CODEX\\cars\\docs\\logo-polish-2026-10-14\\live-assets\\90d3eb315513dab8694368a50c0361475e00711552b442c0182eae9305298896.webp",
+        "sha256": "90d3eb315513dab8694368a50c0361475e00711552b442c0182eae9305298896",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    },
+    "onDark": {
+      "path": "docs/logo-polish-2026-10-14/parallel/vercel/elit-auto-import/logo-on-dark.png",
+      "sha256": "af6252dd84bdf01c5997a248d5d9aaafd17cb398968bd147fbd9fc9d1551bc84",
+      "sourceReference": "C:\\Users\\radev\\.codex\\generated_images\\01a13a10-d6a7-7ae1-9379-360e66482a5d\\exec-99169229-0db8-4c25-8288-38b8b375b145.png",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-99169229-0db8-4c25-8288-38b8b375b145",
+        "modelVersion": null
+      }
+    },
+    "onAccent": {
+      "path": "docs/logo-polish-2026-10-14/parallel/vercel/elit-auto-import/logo-on-accent.png",
+      "sha256": "a6856c346c81239579d82c51dbc35de3eb0647c8dcbf1d46235e74077d61054d",
+      "sourceReference": "L:\\CODEX\\cars\\docs\\logo-polish-2026-10-14\\parallel\\vercel\\elit-auto-import\\logo-on-accent.png",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:/CODEX/cars/clients/elit-auto-import/dealer-brand/logo-on-accent.webp",
+        "sha256": "446c360686e82b67643f306af33fa61b1abda775e08e730b342c230f0431917c",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    }
+  }
+}

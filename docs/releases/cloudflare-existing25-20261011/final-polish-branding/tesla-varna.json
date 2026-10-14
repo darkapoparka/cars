@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "dealer": "tesla-varna",
+  "reviewed": true,
+  "reviewedAt": "2026-10-14T11:56:24.553Z",
+  "sourceMode": "retained-or-mixed-raster",
+  "master": {
+    "path": "docs/logo-polish-2026-10-14/final-raster-inputs/8aa8b3f31c12e1acdb2fce3639c4584c375b10cfce025c7f4185ddce6967e420.png",
+    "sha256": "8aa8b3f31c12e1acdb2fce3639c4584c375b10cfce025c7f4185ddce6967e420"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/logo-polish-2026-10-14/final-raster-inputs/8aa8b3f31c12e1acdb2fce3639c4584c375b10cfce025c7f4185ddce6967e420.png",
+      "sha256": "8aa8b3f31c12e1acdb2fce3639c4584c375b10cfce025c7f4185ddce6967e420",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/08fa28bd112b2450dcbf81befe86dab4fb6fddf9ec9ce031a8870154d0716c78.webp",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/08fa28bd112b2450dcbf81befe86dab4fb6fddf9ec9ce031a8870154d0716c78.webp",
+        "sha256": "08fa28bd112b2450dcbf81befe86dab4fb6fddf9ec9ce031a8870154d0716c78",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    },
+    "onDark": {
+      "path": "docs/logo-polish-2026-10-14/final-raster-inputs/31b951fb468cd776bf499271933acaa04596ca038d782e5742f57ea9d98474c4.png",
+      "sha256": "31b951fb468cd776bf499271933acaa04596ca038d782e5742f57ea9d98474c4",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/2b9c444e5e36d965f4b91a16527b20e4778b2f0ef2e2f7f2be2e0c6047e7b933.webp",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/2b9c444e5e36d965f4b91a16527b20e4778b2f0ef2e2f7f2be2e0c6047e7b933.webp",
+        "sha256": "2b9c444e5e36d965f4b91a16527b20e4778b2f0ef2e2f7f2be2e0c6047e7b933",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    },
+    "onAccent": {
+      "path": "docs/logo-polish-2026-10-14/final-raster-inputs/363485ea134734a1e54bcfa6718dd6acfde0d66255f021aa23d39f952abb557d.png",
+      "sha256": "363485ea134734a1e54bcfa6718dd6acfde0d66255f021aa23d39f952abb557d",
+      "sourceReference": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-polish-stage/tesla-varna/dealer-brand/logo-on-accent.webp",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-polish-stage/tesla-varna/dealer-brand/logo-on-accent.webp",
+        "sha256": "97f7e9a5839674b8d7f90e661891f2530ecf43fbbbedf8eaaa5bdfe15ee42569",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    }
+  }
+}

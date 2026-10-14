@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "dealer": "pm-select-automotive",
+  "reviewed": true,
+  "reviewedAt": "2026-10-14T11:56:24.553Z",
+  "sourceMode": "retained-or-mixed-raster",
+  "master": {
+    "path": "docs/logo-polish-2026-10-14/parallel/cf-first50/pm-select-automotive/logo-on-light.png",
+    "sha256": "1539da85567db5470a30c8770498aaa318f1f0d555ff3b507cb8ea7aa3846946"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/logo-polish-2026-10-14/parallel/cf-first50/pm-select-automotive/logo-on-light.png",
+      "sha256": "1539da85567db5470a30c8770498aaa318f1f0d555ff3b507cb8ea7aa3846946",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/parallel/cf-first50/pm-select-automotive/logo-on-light.png",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c0afd92d-70ff-4d67-a142-fdedda5d2e9c",
+        "modelVersion": null
+      }
+    },
+    "onDark": {
+      "path": "docs/logo-polish-2026-10-14/parallel/cf-first50/pm-select-automotive/logo-on-dark.png",
+      "sha256": "12c32a4bdfa75121d15008878b1241ae045e8e1be338b2454b558783d1c78d1d",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/parallel/cf-first50/pm-select-automotive/logo-on-dark.png",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c0afd92d-70ff-4d67-a142-fdedda5d2e9c",
+        "modelVersion": null
+      }
+    },
+    "onAccent": {
+      "path": "docs/logo-polish-2026-10-14/parallel/cf-first50/pm-select-automotive/logo-on-dark.png",
+      "sha256": "12c32a4bdfa75121d15008878b1241ae045e8e1be338b2454b558783d1c78d1d",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/parallel/cf-first50/pm-select-automotive/logo-on-dark.png",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c0afd92d-70ff-4d67-a142-fdedda5d2e9c",
+        "modelVersion": null
+      }
+    }
+  }
+}

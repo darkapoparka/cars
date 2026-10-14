@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-reef-used-cars",
+  "reviewed": true,
+  "reviewedAt": "2026-10-14T11:31:43.352Z",
+  "sourceMode": "retained-or-mixed-raster",
+  "master": {
+    "path": "docs/logo-polish-2026-10-14/parallel/vercel/al-reef-used-cars/logo-on-light.png",
+    "sha256": "df706cdd6438ef325951cceebd163bbe7fee24244d5fbb43cf87d953fe5cd227"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/logo-polish-2026-10-14/parallel/vercel/al-reef-used-cars/logo-on-light.png",
+      "sha256": "df706cdd6438ef325951cceebd163bbe7fee24244d5fbb43cf87d953fe5cd227",
+      "sourceReference": "L:\\CODEX\\cars\\docs\\logo-polish-2026-10-14\\parallel\\vercel\\al-reef-used-cars\\logo-on-light.png",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:\\CODEX\\cars\\docs\\logo-polish-2026-10-14\\live-assets\\2a8695cf6159293c018f5e00b45390e38f0ef52e381720aa8f6f3943a87e22dc.webp",
+        "sha256": "2a8695cf6159293c018f5e00b45390e38f0ef52e381720aa8f6f3943a87e22dc",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    },
+    "onDark": {
+      "path": "docs/logo-polish-2026-10-14/parallel/vercel/al-reef-used-cars/logo-on-dark.png",
+      "sha256": "af8563bc6d12fdcef8920f0bc69cc3edc85b4dfa3228bee277721ab960ee531a",
+      "sourceReference": "L:\\CODEX\\cars\\docs\\logo-polish-2026-10-14\\parallel\\vercel\\al-reef-used-cars\\logo-on-dark.png",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:\\CODEX\\cars\\docs\\logo-polish-2026-10-14\\live-assets\\16c528b0d29df891ac3f80e23546ab5eb2af92b001e83962a92e18f24fe25905.webp",
+        "sha256": "16c528b0d29df891ac3f80e23546ab5eb2af92b001e83962a92e18f24fe25905",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    },
+    "onAccent": {
+      "path": "docs/logo-polish-2026-10-14/parallel/vercel/al-reef-used-cars/logo-on-dark.png",
+      "sha256": "af8563bc6d12fdcef8920f0bc69cc3edc85b4dfa3228bee277721ab960ee531a",
+      "sourceReference": "L:\\CODEX\\cars\\docs\\logo-polish-2026-10-14\\parallel\\vercel\\al-reef-used-cars\\logo-on-dark.png",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:/CODEX/cars/clients/al-reef-used-cars/dealer-brand/logo-on-accent-v2.webp",
+        "sha256": "16c528b0d29df891ac3f80e23546ab5eb2af92b001e83962a92e18f24fe25905",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    }
+  }
+}

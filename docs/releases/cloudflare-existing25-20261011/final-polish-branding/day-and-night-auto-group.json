@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "dealer": "day-and-night-auto-group",
+  "reviewed": true,
+  "reviewedAt": "2026-10-14T11:31:43.352Z",
+  "sourceMode": "retained-or-mixed-raster",
+  "master": {
+    "path": "docs/logo-polish-2026-10-14/parallel/vercel/day-and-night-auto-group/logo-on-light.png",
+    "sha256": "b9faac487d5408022de7c56b12696eed8d387975e6095fe7d301dc362d6ce921"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/logo-polish-2026-10-14/parallel/vercel/day-and-night-auto-group/logo-on-light.png",
+      "sha256": "b9faac487d5408022de7c56b12696eed8d387975e6095fe7d301dc362d6ce921",
+      "sourceReference": "L:\\CODEX\\cars\\docs\\logo-polish-2026-10-14\\parallel\\vercel\\day-and-night-auto-group\\logo-on-light.png",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:\\CODEX\\cars\\docs\\logo-polish-2026-10-14\\live-assets\\04bf9a0cd31cd72992a8ad4687292554121f7aab84c9195dc971efebd4119e2f.webp",
+        "sha256": "04bf9a0cd31cd72992a8ad4687292554121f7aab84c9195dc971efebd4119e2f",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    },
+    "onDark": {
+      "path": "docs/logo-polish-2026-10-14/parallel/vercel/day-and-night-auto-group/logo-on-dark.png",
+      "sha256": "2a48a9be4d59766f185a3a9730eaf7321f372475013141c7ec98c22a60d3d212",
+      "sourceReference": "C:\\Users\\radev\\.codex\\generated_images\\01a13a10-d6a7-7ae1-9379-360e66482a5d\\exec-8ead6065-f3fa-4dfe-b364-5c61a14864e0.png",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-8ead6065-f3fa-4dfe-b364-5c61a14864e0",
+        "modelVersion": null
+      }
+    },
+    "onAccent": {
+      "path": "docs/logo-polish-2026-10-14/parallel/vercel/day-and-night-auto-group/logo-on-accent.png",
+      "sha256": "adbe2bfb6542c4cf5e7db28c3a80e8fadc64b8d635d54ba341e12b6287d200da",
+      "sourceReference": "L:\\CODEX\\cars\\docs\\logo-polish-2026-10-14\\parallel\\vercel\\day-and-night-auto-group\\logo-on-accent.png",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:/CODEX/cars/clients/day-and-night-auto-group/dealer-brand/logo-on-accent.webp",
+        "sha256": "6d130eedafa3938bcae1221474ab6c84c72df4b7c673f6416714d3911f77b22a",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    }
+  }
+}

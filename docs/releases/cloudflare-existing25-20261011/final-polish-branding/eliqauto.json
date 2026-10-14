@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "dealer": "eliqauto",
+  "reviewed": true,
+  "reviewedAt": "2026-10-14T11:31:43.352Z",
+  "sourceMode": "retained-or-mixed-raster",
+  "master": {
+    "path": "docs/logo-polish-2026-10-14/parallel/vercel/eliqauto/logo-on-light.png",
+    "sha256": "a0a5bf8a228cdc15788078beb66c4cb90480947eed041b9ee137a9c4611bfaf6"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/logo-polish-2026-10-14/parallel/vercel/eliqauto/logo-on-light.png",
+      "sha256": "a0a5bf8a228cdc15788078beb66c4cb90480947eed041b9ee137a9c4611bfaf6",
+      "sourceReference": "L:\\CODEX\\cars\\docs\\logo-polish-2026-10-14\\parallel\\vercel\\eliqauto\\logo-on-light.png",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:\\CODEX\\cars\\docs\\logo-polish-2026-10-14\\live-assets\\47a1af7c61fb7a84c18b8717c25486b41811ab2556860dc27a6731ec6c0aba38.webp",
+        "sha256": "47a1af7c61fb7a84c18b8717c25486b41811ab2556860dc27a6731ec6c0aba38",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    },
+    "onDark": {
+      "path": "docs/logo-polish-2026-10-14/parallel/vercel/eliqauto/logo-on-dark.png",
+      "sha256": "d4999779eebc429c27008fa2f0a540e1ede250a4bbf0c3c5bb9ea2150bb1488e",
+      "sourceReference": "C:\\Users\\radev\\.codex\\generated_images\\01a13a10-d6a7-7ae1-9379-360e66482a5d\\exec-50eede61-a061-4ab1-8f5e-31ba5e209e59.png",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-50eede61-a061-4ab1-8f5e-31ba5e209e59",
+        "modelVersion": null
+      }
+    },
+    "onAccent": {
+      "path": "docs/logo-polish-2026-10-14/parallel/vercel/eliqauto/logo-on-accent.png",
+      "sha256": "135afd4b7440fc12bcf7004b021d94218d4d3ca83b3b781bca7ed17024b06d13",
+      "sourceReference": "L:\\CODEX\\cars\\docs\\logo-polish-2026-10-14\\parallel\\vercel\\eliqauto\\logo-on-accent.png",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:/CODEX/cars/clients/eliqauto/dealer-brand/logo-on-accent-20260919.webp",
+        "sha256": "06958c8a062054447f6632b2f3cdf5ac94158942cfb945104dd2ec66fb46a9fc",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    }
+  }
+}

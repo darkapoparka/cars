@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "dealer": "rqs-auto-team",
+  "reviewed": true,
+  "reviewedAt": "2026-10-14T11:56:24.553Z",
+  "sourceMode": "retained-or-mixed-raster",
+  "master": {
+    "path": "docs/logo-polish-2026-10-14/live-assets/4630c3916c61ca85a52d7c1d5b98fb16d20359fc6d1867cdcad8e32ef30191a1.png",
+    "sha256": "4630c3916c61ca85a52d7c1d5b98fb16d20359fc6d1867cdcad8e32ef30191a1"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/logo-polish-2026-10-14/live-assets/4630c3916c61ca85a52d7c1d5b98fb16d20359fc6d1867cdcad8e32ef30191a1.png",
+      "sha256": "4630c3916c61ca85a52d7c1d5b98fb16d20359fc6d1867cdcad8e32ef30191a1",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/4630c3916c61ca85a52d7c1d5b98fb16d20359fc6d1867cdcad8e32ef30191a1.png",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/4630c3916c61ca85a52d7c1d5b98fb16d20359fc6d1867cdcad8e32ef30191a1.png",
+        "sha256": "4630c3916c61ca85a52d7c1d5b98fb16d20359fc6d1867cdcad8e32ef30191a1",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    },
+    "onDark": {
+      "path": "docs/logo-polish-2026-10-14/final-raster-inputs/d200804d821203413ea5dcf12f72c9c72708fa9a01f4c50f217dfa7198dd32d1.png",
+      "sha256": "d200804d821203413ea5dcf12f72c9c72708fa9a01f4c50f217dfa7198dd32d1",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/de835ba0883e553d8e0751cbdc8ac598ebd8cc12db2289ec034bb7cea84bdf8a.webp",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/de835ba0883e553d8e0751cbdc8ac598ebd8cc12db2289ec034bb7cea84bdf8a.webp",
+        "sha256": "de835ba0883e553d8e0751cbdc8ac598ebd8cc12db2289ec034bb7cea84bdf8a",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    },
+    "onAccent": {
+      "path": "docs/logo-polish-2026-10-14/final-raster-inputs/8714c999a0d75e0a4c3ab334dc4d2941e8e332816a6902a84e808130bf378b98.png",
+      "sha256": "8714c999a0d75e0a4c3ab334dc4d2941e8e332816a6902a84e808130bf378b98",
+      "sourceReference": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-polish-stage/rqs-auto-team/dealer-brand/logo-on-accent.webp",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-polish-stage/rqs-auto-team/dealer-brand/logo-on-accent.webp",
+        "sha256": "6dcb17ab5725aa2c37b6fa4edbb3534f9dac8142f4d9465a45c6742c5e7b2b47",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    }
+  }
+}

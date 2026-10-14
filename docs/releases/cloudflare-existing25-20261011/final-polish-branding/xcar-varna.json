@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "dealer": "xcar-varna",
+  "reviewed": true,
+  "reviewedAt": "2026-10-14T11:56:24.553Z",
+  "sourceMode": "retained-or-mixed-raster",
+  "master": {
+    "path": "docs/logo-polish-2026-10-14/final-raster-inputs/6ad83c8518d1cbb739f33c4123ba48c7e3da1edacf8eadb2e9070161dd8bf657.png",
+    "sha256": "6ad83c8518d1cbb739f33c4123ba48c7e3da1edacf8eadb2e9070161dd8bf657"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/logo-polish-2026-10-14/final-raster-inputs/6ad83c8518d1cbb739f33c4123ba48c7e3da1edacf8eadb2e9070161dd8bf657.png",
+      "sha256": "6ad83c8518d1cbb739f33c4123ba48c7e3da1edacf8eadb2e9070161dd8bf657",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/461929e2f27cd1260abd889867d78d7d6876368bf3a1f614cf52e4b96a0ba53b.webp",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/461929e2f27cd1260abd889867d78d7d6876368bf3a1f614cf52e4b96a0ba53b.webp",
+        "sha256": "461929e2f27cd1260abd889867d78d7d6876368bf3a1f614cf52e4b96a0ba53b",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    },
+    "onDark": {
+      "path": "docs/logo-polish-2026-10-14/final-raster-inputs/444e73c9c382ae1d1b6409c0de2facbc1037f3bbc7597378d5600433116b6342.png",
+      "sha256": "444e73c9c382ae1d1b6409c0de2facbc1037f3bbc7597378d5600433116b6342",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/5f3738793f901afbbaebfd336b9b030826233d121c4b3f78ed81d4973663e1da.webp",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/5f3738793f901afbbaebfd336b9b030826233d121c4b3f78ed81d4973663e1da.webp",
+        "sha256": "5f3738793f901afbbaebfd336b9b030826233d121c4b3f78ed81d4973663e1da",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    },
+    "onAccent": {
+      "path": "docs/logo-polish-2026-10-14/final-raster-inputs/a9bedcb90a9b9d67762580365f27d5a550879dfed90e4a48f8847a7a2edd2077.png",
+      "sha256": "a9bedcb90a9b9d67762580365f27d5a550879dfed90e4a48f8847a7a2edd2077",
+      "sourceReference": "L:/CODEX/cars/leads/branding/fleet-20261011/xcar-varna/dealer-brand/logo-on-accent.webp",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:/CODEX/cars/leads/branding/fleet-20261011/xcar-varna/dealer-brand/logo-on-accent.webp",
+        "sha256": "20dfa0dcfbbfb2e625e844bed09a379c5ff3f9620488c63a5e5210835488997a",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    }
+  }
+}

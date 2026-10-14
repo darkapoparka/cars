@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "dealer": "birmingham-square-one-motors",
+  "reviewed": true,
+  "reviewedAt": "2026-10-14T11:56:24.553Z",
+  "sourceMode": "retained-or-mixed-raster",
+  "master": {
+    "path": "docs/logo-polish-2026-10-14/final-raster-inputs/1dca9911f305930ea819e0e619f8053e9ddd645c595849d7b619fc5c3019a2d9.png",
+    "sha256": "1dca9911f305930ea819e0e619f8053e9ddd645c595849d7b619fc5c3019a2d9"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/logo-polish-2026-10-14/final-raster-inputs/1dca9911f305930ea819e0e619f8053e9ddd645c595849d7b619fc5c3019a2d9.png",
+      "sha256": "1dca9911f305930ea819e0e619f8053e9ddd645c595849d7b619fc5c3019a2d9",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/9a56a237f6645b97aab08c9117fdf968b8b39b46104af3fcb4c1b553ec68cafe.webp",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/9a56a237f6645b97aab08c9117fdf968b8b39b46104af3fcb4c1b553ec68cafe.webp",
+        "sha256": "9a56a237f6645b97aab08c9117fdf968b8b39b46104af3fcb4c1b553ec68cafe",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    },
+    "onDark": {
+      "path": "docs/logo-polish-2026-10-14/final-raster-inputs/d412fec1bac3929349503b4fce69cbf6f0b2530481c56b1ea3f64c2d340a2198.png",
+      "sha256": "d412fec1bac3929349503b4fce69cbf6f0b2530481c56b1ea3f64c2d340a2198",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/e7f53a1e1f406459fb23abe03808a8af5a8c1340a82f65a25134982a4054e018.webp",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/e7f53a1e1f406459fb23abe03808a8af5a8c1340a82f65a25134982a4054e018.webp",
+        "sha256": "e7f53a1e1f406459fb23abe03808a8af5a8c1340a82f65a25134982a4054e018",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    },
+    "onAccent": {
+      "path": "docs/logo-polish-2026-10-14/final-raster-inputs/d412fec1bac3929349503b4fce69cbf6f0b2530481c56b1ea3f64c2d340a2198.png",
+      "sha256": "d412fec1bac3929349503b4fce69cbf6f0b2530481c56b1ea3f64c2d340a2198",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/e7f53a1e1f406459fb23abe03808a8af5a8c1340a82f65a25134982a4054e018.webp",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/e7f53a1e1f406459fb23abe03808a8af5a8c1340a82f65a25134982a4054e018.webp",
+        "sha256": "e7f53a1e1f406459fb23abe03808a8af5a8c1340a82f65a25134982a4054e018",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    }
+  }
+}

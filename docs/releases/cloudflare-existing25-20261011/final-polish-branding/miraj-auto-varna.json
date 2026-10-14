@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "dealer": "miraj-auto-varna",
+  "reviewed": true,
+  "reviewedAt": "2026-10-14T11:56:24.553Z",
+  "sourceMode": "retained-or-mixed-raster",
+  "master": {
+    "path": "docs/logo-polish-2026-10-14/final-raster-inputs/b24d329bab1071d250f17cdf9e26ad441fc7e132c838e6355fc6acfa326a6061.png",
+    "sha256": "b24d329bab1071d250f17cdf9e26ad441fc7e132c838e6355fc6acfa326a6061"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/logo-polish-2026-10-14/final-raster-inputs/b24d329bab1071d250f17cdf9e26ad441fc7e132c838e6355fc6acfa326a6061.png",
+      "sha256": "b24d329bab1071d250f17cdf9e26ad441fc7e132c838e6355fc6acfa326a6061",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/8bdf4368f92c135a6f596c47890f7ccf697dbad90e4a51ffee8cb7a8a250a58e.webp",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/8bdf4368f92c135a6f596c47890f7ccf697dbad90e4a51ffee8cb7a8a250a58e.webp",
+        "sha256": "8bdf4368f92c135a6f596c47890f7ccf697dbad90e4a51ffee8cb7a8a250a58e",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    },
+    "onDark": {
+      "path": "docs/logo-polish-2026-10-14/final-raster-inputs/1f6f5dae545950a4105ff08010b9239a934baa5d086b8c9d91624551518e73eb.png",
+      "sha256": "1f6f5dae545950a4105ff08010b9239a934baa5d086b8c9d91624551518e73eb",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/6720d627da87e4871e8f5545e98a2380b79e8ecc38fc2adebfa7ce3ab584fa1a.webp",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/6720d627da87e4871e8f5545e98a2380b79e8ecc38fc2adebfa7ce3ab584fa1a.webp",
+        "sha256": "6720d627da87e4871e8f5545e98a2380b79e8ecc38fc2adebfa7ce3ab584fa1a",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    },
+    "onAccent": {
+      "path": "docs/logo-polish-2026-10-14/final-raster-inputs/acae04ab4597ee263bc3c559477c140b155cd3384cd4ccdef4f72c92cc5385ad.png",
+      "sha256": "acae04ab4597ee263bc3c559477c140b155cd3384cd4ccdef4f72c92cc5385ad",
+      "sourceReference": "L:/CODEX/cars/leads/branding/fleet-20261011/miraj-auto-varna/dealer-brand/logo-on-accent.webp",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:/CODEX/cars/leads/branding/fleet-20261011/miraj-auto-varna/dealer-brand/logo-on-accent.webp",
+        "sha256": "5566e0075b76f0488e1fdc0e247fce4fd9573914ca33c4303a73f41345919866",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    }
+  }
+}

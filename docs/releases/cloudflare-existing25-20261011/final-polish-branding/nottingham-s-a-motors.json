@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "dealer": "nottingham-s-a-motors",
+  "reviewed": true,
+  "reviewedAt": "2026-10-14T11:56:24.553Z",
+  "sourceMode": "retained-or-mixed-raster",
+  "master": {
+    "path": "docs/logo-polish-2026-10-14/parallel/cf-first50/nottingham-s-a-motors/logo-on-light.png",
+    "sha256": "53105fddae0daec0a5c4b74b91ea0dc58f58e4378ca7cf8f13f4cf0af4592739"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/logo-polish-2026-10-14/parallel/cf-first50/nottingham-s-a-motors/logo-on-light.png",
+      "sha256": "53105fddae0daec0a5c4b74b91ea0dc58f58e4378ca7cf8f13f4cf0af4592739",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/parallel/cf-first50/nottingham-s-a-motors/logo-on-light.png",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c46abff5-1b18-4a68-a0fe-47cd12a2684d",
+        "modelVersion": null
+      }
+    },
+    "onDark": {
+      "path": "docs/logo-polish-2026-10-14/parallel/cf-first50/nottingham-s-a-motors/logo-on-dark.png",
+      "sha256": "c7b797695b6fb31f21b8d0ee2547b74492b9b946e95ba1ed3daa38748bc96df7",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/parallel/cf-first50/nottingham-s-a-motors/logo-on-dark.png",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c46abff5-1b18-4a68-a0fe-47cd12a2684d",
+        "modelVersion": null
+      }
+    },
+    "onAccent": {
+      "path": "docs/logo-polish-2026-10-14/parallel/cf-first50/nottingham-s-a-motors/logo-on-dark.png",
+      "sha256": "c7b797695b6fb31f21b8d0ee2547b74492b9b946e95ba1ed3daa38748bc96df7",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/parallel/cf-first50/nottingham-s-a-motors/logo-on-dark.png",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c46abff5-1b18-4a68-a0fe-47cd12a2684d",
+        "modelVersion": null
+      }
+    }
+  }
+}
