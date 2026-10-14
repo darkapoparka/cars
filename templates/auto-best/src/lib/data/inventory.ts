@@ -6,6 +6,11 @@ export const vehicleTypes = ['car', 'motorbike', 'van', 'truck'] as const;
 export type VehicleType = typeof vehicleTypes[number];
 
 export type VehicleCondition = 'new' | 'used';
+export type VehicleImage = {
+  image: string;
+  category: 'exterior' | 'interior';
+  caption?: Partial<Record<Locale, string>>;
+};
 export type VehicleEquipment =
   | '4x4'
   | '360° камера'
@@ -22,6 +27,7 @@ export type Vehicle = {
   verification: 'sample' | 'verified';
   evidenceUrl?: string;
   image: string;
+  photos?: readonly VehicleImage[];
   category: string;
   body: string;
   make: string;
