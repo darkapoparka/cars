@@ -2,16 +2,17 @@
   "schemaVersion": 1,
   "kind": "cars-reviewed-modern-bilingual-copy-input",
   "dealer": "f1rst-motors",
-  "sourceCommit": "bf6303bbde4268c649efb91df2b04ad3240b347b",
-  "baselineTree": "a8bb47ebc204c05545c43073ab16d7d5191a01be",
-  "inputSha256": "626b14b19c1be2a92f98361fc9e093e6048d604d7e50da6eeba0e175d72d97d2",
-  "modernInputRowsSha256": "f40f2ab5749cc36ca24d78ba305ffd1ba7ef19f9551136df5a743ecbca3c5086",
+  "sourceCommit": "e983829ef6654d9fbd2bda54948c4e39ee327e57",
+  "baselineTree": "54ea34d21cde6045601fcef47df245e02dbbbb2f",
+  "inputSha256": "0285e66c650c63bf733f5c9ab0bc15198a58a17a76a07270999b15c54eaab9a8",
+  "modernInputRowsSha256": "d9255b69f7fa5c5bf2cfa0650d038174eefd94f52292fcdacd2ea3de26e3ec99",
+  "listingCount": 10,
   "profileInputs": [
     {
       "path": "dealer.json",
-      "gitBlob": "1d576e9e67ce354f6182bd8e0f2374d393f386ef",
-      "sha256": "c3ff38ef45e3961ed13c690d3eacf1bd64aa285d693d84ecebba524e096640cc",
-      "bytes": 2986
+      "gitBlob": "1fd08f83e4c203baf1d16f179f7e9aa491216f4d",
+      "sha256": "29d88a1148cbb537b8954d277ebee72f89449a7523e568641d1e57f00f549bb7",
+      "bytes": 4584
     },
     {
       "path": "business-facts.json",
@@ -21,16 +22,16 @@
     },
     {
       "path": "stock.json",
-      "gitBlob": "8e2a10cbfddd495a89b926760947a67ce6bf4482",
-      "sha256": "1a7e4dd6e4dd199eeb30b696379a9eed2da00b5aa1cfa77dfa8100ec67b20af7",
-      "bytes": 4969
+      "gitBlob": "bc911835a3019febe54af666cafb0612eaefee61",
+      "sha256": "8cfc6432f715461c3a307324556b587417776f53faef7cc4e80c4e8a144cc14a",
+      "bytes": 4978
     }
   ],
   "reviewedGeneratorHelper": {
     "path": "scripts/lib/modern-dealer-inventory-copy.mjs",
-    "sha256": "cbdbaa28dc07911cfe913b4e627671b6556fc25d3bfe59364e29c5ca5a29072b"
+    "sha256": "cbdbaa28dc07911cfe913b4e627671b6556fc25d3bfe59364e29c5ca5a29072b",
+    "sourceCommit": "14d86f67c160699c18a6ec5658197cc4d9011e0b"
   },
-  "listingCount": 10,
   "review": {
     "displayCopyOnly": true,
     "exactSourceDescriptionKeys": true,
@@ -39,7 +40,8 @@
     "imageAltsPreserved": true,
     "interpolationTokensUnchanged": true,
     "reviewedBy": "root",
-    "notes": "Translate exact snapshot descriptions and preserve owner vehicle names, facts, dated availability and form disclosure."
+    "notes": "Translate exact snapshot descriptions and preserve owner vehicle names, facts, dated availability and form disclosure.",
+    "reviewedAt": "2026-10-14T18:57:01.003Z"
   },
   "reviewedCopy": {
     "koenigsegg-jesko-attack-2023-1": {

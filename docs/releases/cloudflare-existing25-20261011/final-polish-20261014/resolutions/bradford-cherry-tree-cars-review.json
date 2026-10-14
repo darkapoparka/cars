@@ -1,0 +1,600 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-reviewed-bradford-preservation-conflict-resolutions",
+  "dealer": "bradford-cherry-tree-cars",
+  "repository": "darkapoparka/cars-uk-bradford-cherry-tree-cars",
+  "reviewed": true,
+  "reviewedBy": "Authorized rollout integration review of authenticated original plan and pinned current factual target",
+  "targetPath": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/resolutions/bradford-cherry-tree-cars.json",
+  "candidateFile": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/bradford-cherry-tree-cars-resolutions.json",
+  "sourceRun": {
+    "id": 38615100916,
+    "attempt": 1,
+    "head": "be6fda7ea0e1d0d114ffe7b327567cbe9120618d",
+    "jobId": 116030616023
+  },
+  "artifact": {
+    "id": 11920676165,
+    "name": "existing-cf-source-evidence-bradford-cherry-tree-cars-38615100916-1",
+    "bytes": 779547,
+    "digest": "sha256:1e1f707a486c3021180466cf04022102004a9364ebb942b12aee79e77084301a",
+    "wholeArchiveSha256Verified": true,
+    "diskArchiveCopies": 0
+  },
+  "originalPlan": {
+    "reviewSha256": "05e6be667a9173067a7788225a09e9b48567dad75261ad05a0aa99a02b5cdcb1",
+    "runSha256": "29319428a5d98f1007cb578b99b2f80175d271d430c8645a3ece4313209749a7",
+    "sourceBeforeSha256": "3f9042acd1b6b51b6eed5d228036a8e2c5c2625c596937729aadd75f35ee96a5",
+    "lockSha256": "23622acb9fbaa5cb78379d6a080170f99dadb4703ff7b8ccba3d21a2b41e8786",
+    "targetManifestSha256": "c62f82d9a1644033eaeb39d9cdf48e2d8a04933800fa3ed208c3dd7fb88efbaa",
+    "baseAdapter": "cars-package-v2-native-mounts->cars-package-v2-native-mounts",
+    "summary": {
+      "designs": 6,
+      "examined": 12865,
+      "changed": 307,
+      "conflicts": 25,
+      "autoMerged": 23,
+      "templateOnly": 283
+    }
+  },
+  "baseline": {
+    "commit": "be6fda7ea0e1d0d114ffe7b327567cbe9120618d",
+    "path": "clients/bradford-cherry-tree-cars",
+    "tree": "bbc1eee9a19839606981351b584cd2fbb18d9763",
+    "stockBlob": "afefe4a692bcf99ce2ff24aaf0368d3c6d8c53f7",
+    "businessFactsBlob": "f4922a86b4d80b9ed8ab0d42374278180635571b"
+  },
+  "pins": {
+    "auto-best": {
+      "repository": "darkapoparka/cars",
+      "from": "696230a404abd9b20b6f907b9cfb139175298c7a",
+      "to": "097805706654b327a2b8327a7c1670da3a5f67ae",
+      "digest": "27fb1af88f96f79a6214cc598b3e69205b0717231893c7dd0f2e9c247dc06c5a",
+      "fromSource": {
+        "repository": "darkapoparka/cars",
+        "revision": "696230a404abd9b20b6f907b9cfb139175298c7a",
+        "path": "templates/auto-best",
+        "digest": "90f131aa0ead6ae4fcb06d30c054ca4d0c5d39097a2927cca8f298c7d2dfb3ca",
+        "tree": "b07ff2273be554ef64a039ac8f4f023ae60a33ac"
+      },
+      "snapshotPath": "templates/auto-best",
+      "targetSource": {
+        "repository": "darkapoparka/cars",
+        "revision": "097805706654b327a2b8327a7c1670da3a5f67ae",
+        "path": "templates/auto-best",
+        "digest": "27fb1af88f96f79a6214cc598b3e69205b0717231893c7dd0f2e9c247dc06c5a",
+        "tree": "5c53a96513296bd62c4cfd050f620021e2f6fce0"
+      }
+    },
+    "modern": {
+      "repository": "darkapoparka/cars",
+      "from": "6f87470c1e3ec8ade7d9ecc07daf9ebe45cb9710",
+      "to": "097805706654b327a2b8327a7c1670da3a5f67ae",
+      "digest": "30e1a99f857cc25e4d78c9459cfb4394a9f70c5b114196a5ca6325ff38823b4b",
+      "fromSource": {
+        "repository": "darkapoparka/cars",
+        "revision": "6f87470c1e3ec8ade7d9ecc07daf9ebe45cb9710",
+        "path": "templates/modern",
+        "digest": "b035a849efb41d3ed18d97fcf3511850469162c0a990397b74be588179d43588",
+        "tree": "51d68e5dd6e3b305191df94e877403fd7b7414e1"
+      },
+      "snapshotPath": "templates/modern",
+      "targetSource": {
+        "repository": "darkapoparka/cars",
+        "revision": "097805706654b327a2b8327a7c1670da3a5f67ae",
+        "path": "templates/modern",
+        "digest": "30e1a99f857cc25e4d78c9459cfb4394a9f70c5b114196a5ca6325ff38823b4b",
+        "tree": "01eac7390fa6ba951d4b8d4c26159a9be150f6c8"
+      }
+    },
+    "import": {
+      "repository": "darkapoparka/cars",
+      "from": "b9373e9ed5453bc7d208898ae140eae4d596a232",
+      "to": "097805706654b327a2b8327a7c1670da3a5f67ae",
+      "digest": "c7d6c93214e859aa2747af8f5e068b6a0b8ca095d6328c807728a4d531d688f8",
+      "fromSource": {
+        "repository": "darkapoparka/cars",
+        "revision": "b9373e9ed5453bc7d208898ae140eae4d596a232",
+        "path": "templates/import",
+        "digest": "eef4c3544b28bb3a62cad4c2a07e4ff64301fb4c9e9925ba002077bda7f63bd3",
+        "tree": "b64c4a4939c4244ba3f408e5c0311c586a913e67"
+      },
+      "snapshotPath": "templates/import",
+      "targetSource": {
+        "repository": "darkapoparka/cars",
+        "revision": "097805706654b327a2b8327a7c1670da3a5f67ae",
+        "path": "templates/import",
+        "digest": "c7d6c93214e859aa2747af8f5e068b6a0b8ca095d6328c807728a4d531d688f8",
+        "tree": "d841ddfe5bec918bf6b2c19fd6971fecd6b8e54d"
+      }
+    },
+    "app": {
+      "repository": "darkapoparka/cars",
+      "from": "4e184777567849a2c5b4a9e4a3e652252179c29c",
+      "to": "097805706654b327a2b8327a7c1670da3a5f67ae",
+      "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+      "fromSource": {
+        "repository": "darkapoparka/cars",
+        "revision": "4e184777567849a2c5b4a9e4a3e652252179c29c",
+        "path": "templates/app",
+        "digest": "fad0067e48d7bd7e1c5177c5e91e2bc5767352e2c16621cb458d18a081f7c541",
+        "tree": "749512ff762c25272d1474225ff653dd4c88f0fe"
+      },
+      "snapshotPath": "templates/app",
+      "targetSource": {
+        "repository": "darkapoparka/cars",
+        "revision": "097805706654b327a2b8327a7c1670da3a5f67ae",
+        "path": "templates/app",
+        "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+        "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
+      }
+    },
+    "mobile": {
+      "repository": "darkapoparka/cars",
+      "from": "8a97176e3adfbd95dce69b3096abc84e3eecd9c8",
+      "to": "097805706654b327a2b8327a7c1670da3a5f67ae",
+      "digest": "f5a3e541a7c648a4c2899ad3893e22a3806027a9f66d95fa4e8c74b2226635b6",
+      "fromSource": {
+        "repository": "darkapoparka/cars",
+        "revision": "8a97176e3adfbd95dce69b3096abc84e3eecd9c8",
+        "path": "templates/mobile",
+        "digest": "cc126a7c38634c7601ef8c617411d6938d7c9b6efc7b319e87c2c6efc99d8b6d",
+        "tree": "9a4db757e788ee236712b8eac25956a6a8a61d0b"
+      },
+      "snapshotPath": "templates/mobile",
+      "targetSource": {
+        "repository": "darkapoparka/cars",
+        "revision": "097805706654b327a2b8327a7c1670da3a5f67ae",
+        "path": "templates/mobile",
+        "digest": "f5a3e541a7c648a4c2899ad3893e22a3806027a9f66d95fa4e8c74b2226635b6",
+        "tree": "792bfdd1d8eb22aabd90c7e3a0c0779a6c1c36f3"
+      }
+    },
+    "karento-best": {
+      "repository": "darkapoparka/cars",
+      "from": "cc130e432a41a3a60cc80bc2b3461c6416893b4a",
+      "to": "097805706654b327a2b8327a7c1670da3a5f67ae",
+      "digest": "be17ef365e3272753df6e50826b139a45bfc32b8fef54ddcb86d977ad16280a9",
+      "fromSource": {
+        "repository": "darkapoparka/cars",
+        "revision": "cc130e432a41a3a60cc80bc2b3461c6416893b4a",
+        "path": "templates/karento-best",
+        "digest": "bf8c6628be5f28b7e3358b121b7cf9e236d36a2fc0138bf640d72113c7e17f30",
+        "tree": "c661129affb32649c8fcecea097fc9a6487783d0"
+      },
+      "snapshotPath": "templates/karento-best",
+      "targetSource": {
+        "repository": "darkapoparka/cars",
+        "revision": "097805706654b327a2b8327a7c1670da3a5f67ae",
+        "path": "templates/karento-best",
+        "digest": "be17ef365e3272753df6e50826b139a45bfc32b8fef54ddcb86d977ad16280a9",
+        "tree": "8c5ac869c7fd15e19a80c660343fc64b20a2bad9"
+      }
+    }
+  },
+  "selection": {
+    "designSet": "six",
+    "selectedKeys": null,
+    "templatePalette": true,
+    "refreshFacts": true
+  },
+  "decisions": [
+    {
+      "path": "auto-best/localization/common.json",
+      "action": "template",
+      "meaning": "Exact freshly personalized pinned target, not unpersonalized template defaults",
+      "kind": "text-merge-conflict",
+      "oldSha256": "0d332e050638c8555dfcb6e22ed83eb1eaee839c961d94a2359aec082f75b88a",
+      "targetSha256": "2ab2ca27066bc4dfc84506e7fea708edcddd47682a71c9dbf25c522bb4cfdfb3",
+      "originalSha256": "d92c219797a35eb09ca23705e3dafada887db998ed6076c2ab7403d355c7a1ea",
+      "reason": "Use current personalized native catalog with the new hero-preview keys and truthful miles presentation; retain the dated-stock facts, with native catalog sealing required after preparation."
+    },
+    {
+      "path": "auto-best/localization/generated-manifest.json",
+      "action": "template",
+      "meaning": "Exact freshly personalized pinned target, not unpersonalized template defaults",
+      "kind": "text-merge-conflict",
+      "oldSha256": "39bff43fdd1b129a989a9c282d9a88e65a29025bf6c6c7cb8fe3b20c5b0aff7e",
+      "targetSha256": "945c41620acb436a6d3b106aa98ca3ab2507049d50725904a913e29c6def9540",
+      "originalSha256": "0a4b5913b59648b217b6e278a88ccc9c1463ccce1f687e750aaf3550d2aa2ad8",
+      "reason": "Use the refreshed catalog generation record; its old message count and catalog hashes describe the superseded source. Native generation/resealing remains mandatory."
+    },
+    {
+      "path": "auto-best/src/lib/components/vehicles/VehicleCard.svelte",
+      "action": "template",
+      "meaning": "Exact freshly personalized pinned target, not unpersonalized template defaults",
+      "kind": "text-merge-conflict",
+      "oldSha256": "99b7270b7398e8b53497a66bb375ab71098dd32d33cec5d4ab4af95c497c18e6",
+      "targetSha256": "afaa639c42e87cc0041bbffbc5d8a90fbcd5da475062ce2ed30c23622309d2f8",
+      "originalSha256": "c86e43e8c831dfaefb92938efec78963a81263dfd08a6f2a8db8ea697165489a",
+      "reason": "Take the frozen card polish including the year class, retaining adapter-personalized vehicle fields and correct unit handling."
+    },
+    {
+      "path": "auto-best/src/lib/config/brand.ts",
+      "action": "template",
+      "meaning": "Exact freshly personalized pinned target, not unpersonalized template defaults",
+      "kind": "text-merge-conflict",
+      "oldSha256": "c33d55035b2dfd6c8245cd8c713930ca204636718c574694ea81166324936513",
+      "targetSha256": "b120b2ecfad0fcea3273768e9cb80bb180fe3764f6cc362ba35fe56ebef25023",
+      "originalSha256": "3b02975f81f9c7aa80ccfcf91eaf7f7b75fe8d1f461756f3acd82094b019f1b0",
+      "reason": "Take the current factual brand adapter: unresolved premises remain null and unverified social links remain empty; retain dealer name/locale and selected native palette."
+    },
+    {
+      "path": "auto-best/src/lib/config/locale.ts",
+      "action": "template",
+      "meaning": "Exact freshly personalized pinned target, not unpersonalized template defaults",
+      "kind": "text-merge-conflict",
+      "oldSha256": "d59514c8c3b1654eceddd4949b478f76208ad5f06210483fae4e753c67e59bbc",
+      "targetSha256": "582253864a90f1ae4280b8bb5b0c6cbf8c5c78c2447e147a3d29114da3f523ac",
+      "originalSha256": "5d608f03f594cc0b073f97581c7a9cc8daafe5d3a9904de0973be8368879a45c",
+      "reason": "Keep both native locales and add the shortened address/appointment fields from the retained current Bradford city/visit facts."
+    },
+    {
+      "path": "auto-best/src/lib/data/company.ts",
+      "action": "template",
+      "meaning": "Exact freshly personalized pinned target, not unpersonalized template defaults",
+      "kind": "text-merge-conflict",
+      "oldSha256": "9268960e586cf3bfc17e8c1905b01442e6535ce3d9a8c15fd33d4f8c8072b235",
+      "targetSha256": "eb7e6ab8ab0ffb2d2775a1598709cae7d27b821d8904c47260ab925266d237cb",
+      "originalSha256": "4e4b35b7ce3ca7f11d519369785367e80e58166485a90d04dcf99c7fa1cf2e49",
+      "reason": "Unresolved showroom coordinates must remain null; do not retain the old generated zero-coordinate marker."
+    },
+    {
+      "path": "modern/apps/web/app/[locale]/layout.tsx",
+      "action": "template",
+      "meaning": "Exact freshly personalized pinned target, not unpersonalized template defaults",
+      "kind": "text-merge-conflict",
+      "oldSha256": "b53faf7d803b2e6230527daad52ae3758c21719357c6e11d29e86f6ef129e151",
+      "targetSha256": "fc5f21626f52f307a3df4ab5c43160e4260a1a0e3dbedcc43132affd030e5091",
+      "originalSha256": "5d1e10fd25e138c6e1d72b48139544a8d7adf238bb72d5b606b2195064577e24",
+      "reason": "Take the frozen layout and its explicit raster surface binding; the independently pinned new branding step binds the five logo/icon roles before sealing."
+    },
+    {
+      "path": "modern/apps/web/app/[locale]/sell/page.tsx",
+      "action": "template",
+      "meaning": "Exact freshly personalized pinned target, not unpersonalized template defaults",
+      "kind": "text-merge-conflict",
+      "oldSha256": "aad9bf22efccd393853a9822da7521649aec078f262864249f5d5280d7bf31c6",
+      "targetSha256": "2856d21a41807ef34063abe5babd4e5b011898eefc4d917ce0205db382cb6ece",
+      "originalSha256": "1ebdce86756f311af9cf7a662d49a22b037b6d7720129b8300150c499f62a094",
+      "reason": "Use the current bilingual safe copy; Bradford has no verified appraisal, trade-in or exact showroom claim."
+    },
+    {
+      "path": "modern/packages/marketplace-domain/testing/mock-data.ts",
+      "action": "template",
+      "meaning": "Exact freshly personalized pinned target, not unpersonalized template defaults",
+      "kind": "text-merge-conflict",
+      "oldSha256": "79b66fa97eec941313f651ca5e8b7df20f47c419627cd7d99bc74ad944067b08",
+      "targetSha256": "1b4c05de73db47cd3c3cbf1b7d99336da23c49a4464608c4eca70ffa1f108e7c",
+      "originalSha256": "c82de8941761f0e29851dffce3425b1e1d8ff41ff7c35bfceb14564bf9e023f1",
+      "reason": "Use the complete current eight-row personalized stock output as one coherent JSON array, rather than line-merging duplicated/offset prior fixture rows. Preserve source slugs, prices, illustration URLs, date, original mileage and Mini condition note."
+    },
+    {
+      "path": "modern/packages/marketplace-ui/components/dealer-mobile-brand-bar.tsx",
+      "action": "template",
+      "meaning": "Exact freshly personalized pinned target, not unpersonalized template defaults",
+      "kind": "text-merge-conflict",
+      "oldSha256": "1c998e9fb24930fdd14ff2453f62ec32a42b30e0ef8b311ab22c7217e1cd4948",
+      "targetSha256": "74734fe1ac136069ad5a36d232b6798f43f4ef30d4e2f0bc323ff917e16965eb",
+      "originalSha256": "1df8ff76eff562bd35a4c6edd791ddf41b48ab224ff4c3e52d71e22787f64d89",
+      "reason": "Take the exact reviewed frozen child, its new width and onDarkSurface raster selector; preserve native tone/clean/badge behavior and apply reviewed branding before seal."
+    },
+    {
+      "path": "modern/packages/marketplace/content/inventory-copy.ts",
+      "action": "template",
+      "meaning": "Exact freshly personalized pinned target, not unpersonalized template defaults",
+      "kind": "text-merge-conflict",
+      "oldSha256": "264518d0b1caf2abfcd39a101cc85aecbab1dc1a603ee1ff1a1bd61f467694dc",
+      "targetSha256": "d24b7d980d01ca0e679cb0e6d6cca76ad47453a59c2d74f95ab9fcfcb1d98efe",
+      "originalSha256": "009b917c1877f93130057cdc75dbd9e7f4d17e0018d62650d76a8847d92d0839",
+      "reason": "Use the exact eight current Bradford companion rows with the newly reviewed EN/BG descriptions; discard stale Sofia sample keys absent from the actual current stock."
+    },
+    {
+      "path": "modern/packages/marketplace/lead-site.ts",
+      "action": "template",
+      "meaning": "Exact freshly personalized pinned target, not unpersonalized template defaults",
+      "kind": "text-merge-conflict",
+      "oldSha256": "73ad0bd6f878913e7d1d19bd5e0c43e9f46137c536dea4d0b2007c35b778567e",
+      "targetSha256": "26ed846bbfe6c243b0a5b2f4f6ff886382537038088a98b8c500f12af8151490",
+      "originalSha256": "ea053c4a4737b9f046193846f809c2ff38c3b85ee5925f07ce1329067dea2d81",
+      "reason": "Take current truthful Bradford GB country/address/tagline and approved native palette; discard inherited Bulgarian premises and unverified financing claims."
+    },
+    {
+      "path": "modern/packages/marketplace/mock-directory.ts",
+      "action": "template",
+      "meaning": "Exact freshly personalized pinned target, not unpersonalized template defaults",
+      "kind": "text-merge-conflict",
+      "oldSha256": "135749d7f51fa38282f952223984947ba5a54d1fd574b2f1294b2baeb73906c7",
+      "targetSha256": "5c1a9cb1ea4e3577c19d852e9c15d3d0a74f168f40ad37cc94cc5e69b1c03370",
+      "originalSha256": "5d01cf9c1d12c63fefa2a0840a83a78959db94051408a63068c0e8fa492a75f0",
+      "reason": "Use the current exact assigned-dealer directory with the authentic representative stock; discard unrelated inherited marketplace/demo directory rows."
+    },
+    {
+      "path": "import/src/lib/auxero/home-five.ts",
+      "action": "template",
+      "meaning": "Exact freshly personalized pinned target, not unpersonalized template defaults",
+      "kind": "text-merge-conflict",
+      "oldSha256": "1117a3a345856d9188b078bb279a5ca6075b7baffdadb623f73cb6d2a019e0ea",
+      "targetSha256": "bbf5315fbc0c585f967b86178f9cae9c8258482827ae0cd1862adfbda04a01dd",
+      "originalSha256": "38348a2b96b07265c03daf99f835605a6ddfcec569c2300957470dd74356f0eb",
+      "reason": "Use current maintained safe-content output and frozen source additions. Any layout example review is explicitly fictional and grants no verified customer/testimonial claim."
+    },
+    {
+      "path": "import/src/lib/components/detail/AuxeroVehicleMobilePdp.svelte",
+      "action": "template",
+      "meaning": "Exact freshly personalized pinned target, not unpersonalized template defaults",
+      "kind": "text-merge-conflict",
+      "oldSha256": "9a827a86f34cf57426b71ee1cddaf1d44a63bbc1cbc7315450ac47e2ce01bcc7",
+      "targetSha256": "06140cb0c21186ffd55e0afc96f25f1b5bec7bbeb3b065d00200246bb8a82a6c",
+      "originalSha256": "aac3c0f143937bc22d42a614eeae2f5d9f264c86ba38a0525939b5e0d8f4be86",
+      "reason": "Take the frozen PDP composition and current drawer/actions. The existing UK no-phone adapter remains applied and empty contact destinations stay factual."
+    },
+    {
+      "path": "import/src/lib/content/extra-localized.ts",
+      "action": "template",
+      "meaning": "Exact freshly personalized pinned target, not unpersonalized template defaults",
+      "kind": "text-merge-conflict",
+      "oldSha256": "548a63433a75c4c79d16387d52662a40684dbe9f8996d1d5f87d3512351a4238",
+      "targetSha256": "72ab3deb459abd30bf63c562a423027e4ead1e63cb56549e70761b518e3fb615",
+      "originalSha256": "baf3d97bafae3c9a8d3b2ac4d96558f4a6beccae1a942fbb3ad95e0e7095e354",
+      "reason": "Use the complete current reviewed bilingual editorial catalog, including new native controls and exact dealer-safe copy; no mixed partial dictionary merge."
+    },
+    {
+      "path": "import/src/lib/i18n/messages.ts",
+      "action": "template",
+      "meaning": "Exact freshly personalized pinned target, not unpersonalized template defaults",
+      "kind": "text-merge-conflict",
+      "oldSha256": "eda3f06cff9425ff457219bed46e60a49b9c079c1890f5eeea94305c7b3e12c0",
+      "targetSha256": "901259c6a611b1a3f205a767741bf932c673d86559b2ed672638ba257f53dffd",
+      "originalSha256": "c953da2865f6a0f51e57fb7c499072567edb1de1b82635414dda95863a7fd23e",
+      "reason": "Use current native identity bindings through site.identity.displayName, preserving the source bilingual catalog and its native controls."
+    },
+    {
+      "path": "import/src/routes/offer/+page.svelte",
+      "action": "template",
+      "meaning": "Exact freshly personalized pinned target, not unpersonalized template defaults",
+      "kind": "text-merge-conflict",
+      "oldSha256": "6630a3cce03901d03cc389e03cab2ed75826e7136fca159aa0c8486eb80c454e",
+      "targetSha256": "49bfc987fe9be05e82022caadbb9d3878a2b37b6e3377342811d71c186215d83",
+      "originalSha256": "f9fdd7f291031a30ae0aefb149c1f60be3a9584e934fd71356d4e7718f0d7677",
+      "reason": "Use the new quote-safe EN/BG offerCopy bindings with the actual eight dated illustrated listings and honest preview/contact state."
+    },
+    {
+      "path": "app/components/VehicleCard.tsx",
+      "action": "template",
+      "meaning": "Exact freshly personalized pinned target, not unpersonalized template defaults",
+      "kind": "text-merge-conflict",
+      "oldSha256": "8fd8e9bf5ffe78bc0ee11b0cf2bac8fb1846e1d6ffd6f6766b3f9e8a115e0f16",
+      "targetSha256": "1e45c5a27e8ab11629ee77698076006ccde5955f275a9720eb245928692a7ec0",
+      "originalSha256": "05f444f9e2a9c37a6369a15023529bf3e7dc8305b02abdef3594f8fb9d6abb0a",
+      "reason": "Take the approved new card composition. Illustration source and disclosure remain in current dealer inventory/config and accessible image text."
+    },
+    {
+      "path": "app/components/VehicleDetailClient.tsx",
+      "action": "template",
+      "meaning": "Exact freshly personalized pinned target, not unpersonalized template defaults",
+      "kind": "text-merge-conflict",
+      "oldSha256": "369dc48a5d914046451035a826436a5a22799403c4d2e8198a99c485b8b42752",
+      "targetSha256": "9c2980394c1a98892f6b254c38cc3eb4990fd2e7a5924f7980c9285cbc86afc9",
+      "originalSha256": "7393063e3640d042494176bce52f17c8daa24ba2292fd7929216460b323b3107",
+      "reason": "Take the approved new close/back behavior and image composition, retaining generated illustration alt text and dealer inventory disclosure."
+    },
+    {
+      "path": "app/lib/dealer.json",
+      "action": "template",
+      "meaning": "Exact freshly personalized pinned target, not unpersonalized template defaults",
+      "kind": "text-merge-conflict",
+      "oldSha256": "8cfacc81e43c902961a41d9dbd6bfdb7d5e1ba333ef5d3f7c081764b939e99b4",
+      "targetSha256": "3aa0a7cce5f3acee5a4d23d62980f98f52060afde9176104a031e55152766904",
+      "originalSha256": "623e6a776c8718bfabaaef6e4270bd80031e1227c20660760ddf9ffda324dcb1",
+      "reason": "Use current exact Bradford dealer configuration, new welcome/social controls and referenceClaimsApproved=false; no unsupported social destination or claim is added."
+    },
+    {
+      "path": "mobile/src/lib/dealer-inventory.json",
+      "action": "template",
+      "meaning": "Exact freshly personalized pinned target, not unpersonalized template defaults",
+      "kind": "dealer-added-vs-template-added",
+      "oldSha256": null,
+      "targetSha256": "fd84a215364a1e95eb4e60b9ffed81145a992168fc887f21d9fb3032276e2776",
+      "originalSha256": "28b18cb53fc425341e126184e813db4728bfa9ca88fadb27c0e3a2c5cc74766d",
+      "reason": "Use current eight-row generated stock with explicit mileageKnown/mileageOnRequest fields, keeping original IDs, dated descriptions, currency, mileage source and illustration media."
+    },
+    {
+      "path": "karento-best/src/lib/content.ts",
+      "action": "template",
+      "meaning": "Exact freshly personalized pinned target, not unpersonalized template defaults",
+      "kind": "text-merge-conflict",
+      "oldSha256": "2235a5964b99a759c068b17967ac38ae70169a7c3308b7990062791bcb0b0b59",
+      "targetSha256": "dcb8520653a34d8dcf4350b1bbd25796127e6def8e83571977fd1ffb8f0510da",
+      "originalSha256": "941f9c019a853c9c2c1afae5f7c9d30ee9f4659c760bc22812f080bb7233e20f",
+      "reason": "Use current frozen content structure and dealer identity; the pinned new branding application supplies the reviewed favicon/icon roles before seal."
+    },
+    {
+      "path": "karento-best/src/lib/data/dealer-detail.ts",
+      "action": "template",
+      "meaning": "Exact freshly personalized pinned target, not unpersonalized template defaults",
+      "kind": "dealer-added-vs-template-added",
+      "oldSha256": null,
+      "targetSha256": "95a145d7c5ce364270fbf8f04d45f52ebe27af2ee2809ab1f2ab4ac0e207f8c9",
+      "originalSha256": "3c2418757040d873f68620f881c19da9433551e3a72ee81abc505fc1c2750b2a",
+      "reason": "Use current per-vehicle factual details including source year/mileage and absence of unverified stock/finance claims; retain all eight original listing IDs."
+    },
+    {
+      "path": "karento-best/src/lib/data/vehicle-detail.ts",
+      "action": "template",
+      "meaning": "Exact freshly personalized pinned target, not unpersonalized template defaults",
+      "kind": "text-merge-conflict",
+      "oldSha256": "443e3946d36fda9397049ae193da1192a15844e438526194be81a90acc7958a4",
+      "targetSha256": "68b32996678d2ff9447b8825ab47375122b66b4116ca86cea5ef2a8901c4badd",
+      "originalSha256": "c60504b13ef6366cccdd69ea99dfff8a2c45d74f12cbe883b035d5b6d68a3517",
+      "reason": "Use refreshed detail shape including year/calendar fact from the actual first Bradford listing, preserving truthful disclosures and selected composition."
+    }
+  ],
+  "validation": {
+    "paths": 25,
+    "scope": "Only exact original unresolved conflict paths",
+    "parseResolutions": "Current maintained input contract schemaVersion1/resolutions path-to-template object",
+    "factualConsumerGuard": "Unchanged and required on next preparation; no custom factual consumer exception or broad fallback",
+    "stockAndFactsWrites": 0,
+    "fullSuiteRepeated": false,
+    "existingCheckpoint": {
+      "runId": 38615100916,
+      "attempt": 1,
+      "tests": 1294,
+      "passed": 1280,
+      "failed": 0,
+      "skipped": 14
+    },
+    "resolvedPreviewProof": [
+      {
+        "path": "auto-best/localization/common.json",
+        "mergedTargetPreviewSha256": "a71920dc6e68dd1411330502339652fcaecfe8b9c3388931dbf92acf27d1057b",
+        "exactPersonalizedTarget": false,
+        "unresolvedMarkers": false
+      },
+      {
+        "path": "auto-best/localization/generated-manifest.json",
+        "mergedTargetPreviewSha256": "2761b153ce75775b0e61dae56c90fc8bd38963ef4d3bafc3c09695735b8466bf",
+        "exactPersonalizedTarget": false,
+        "unresolvedMarkers": false
+      },
+      {
+        "path": "auto-best/src/lib/components/vehicles/VehicleCard.svelte",
+        "mergedTargetPreviewSha256": "afaa639c42e87cc0041bbffbc5d8a90fbcd5da475062ce2ed30c23622309d2f8",
+        "exactPersonalizedTarget": true,
+        "unresolvedMarkers": false
+      },
+      {
+        "path": "auto-best/src/lib/config/brand.ts",
+        "mergedTargetPreviewSha256": "d754f256fa9c46254842deb26da7b93703e0a727ea84a0a010f51dd3d742745e",
+        "exactPersonalizedTarget": false,
+        "unresolvedMarkers": false
+      },
+      {
+        "path": "auto-best/src/lib/config/locale.ts",
+        "mergedTargetPreviewSha256": "582253864a90f1ae4280b8bb5b0c6cbf8c5c78c2447e147a3d29114da3f523ac",
+        "exactPersonalizedTarget": true,
+        "unresolvedMarkers": false
+      },
+      {
+        "path": "auto-best/src/lib/data/company.ts",
+        "mergedTargetPreviewSha256": "eb7e6ab8ab0ffb2d2775a1598709cae7d27b821d8904c47260ab925266d237cb",
+        "exactPersonalizedTarget": true,
+        "unresolvedMarkers": false
+      },
+      {
+        "path": "modern/apps/web/app/[locale]/layout.tsx",
+        "mergedTargetPreviewSha256": "cbfca1806eba4e3cf3a454e6e213783dd380494684769e201c4efdb6de49a611",
+        "exactPersonalizedTarget": false,
+        "unresolvedMarkers": false
+      },
+      {
+        "path": "modern/apps/web/app/[locale]/sell/page.tsx",
+        "mergedTargetPreviewSha256": "2856d21a41807ef34063abe5babd4e5b011898eefc4d917ce0205db382cb6ece",
+        "exactPersonalizedTarget": true,
+        "unresolvedMarkers": false
+      },
+      {
+        "path": "modern/packages/marketplace-domain/testing/mock-data.ts",
+        "mergedTargetPreviewSha256": "1b4c05de73db47cd3c3cbf1b7d99336da23c49a4464608c4eca70ffa1f108e7c",
+        "exactPersonalizedTarget": true,
+        "unresolvedMarkers": false
+      },
+      {
+        "path": "modern/packages/marketplace-ui/components/dealer-mobile-brand-bar.tsx",
+        "mergedTargetPreviewSha256": "745014558c021704ec1a3ab7eeebc4e961cf86f80b3c93db892b82f1e8ee0385",
+        "exactPersonalizedTarget": false,
+        "unresolvedMarkers": false
+      },
+      {
+        "path": "modern/packages/marketplace/content/inventory-copy.ts",
+        "mergedTargetPreviewSha256": "d24b7d980d01ca0e679cb0e6d6cca76ad47453a59c2d74f95ab9fcfcb1d98efe",
+        "exactPersonalizedTarget": true,
+        "unresolvedMarkers": false
+      },
+      {
+        "path": "modern/packages/marketplace/lead-site.ts",
+        "mergedTargetPreviewSha256": "26ed846bbfe6c243b0a5b2f4f6ff886382537038088a98b8c500f12af8151490",
+        "exactPersonalizedTarget": true,
+        "unresolvedMarkers": false
+      },
+      {
+        "path": "modern/packages/marketplace/mock-directory.ts",
+        "mergedTargetPreviewSha256": "5c1a9cb1ea4e3577c19d852e9c15d3d0a74f168f40ad37cc94cc5e69b1c03370",
+        "exactPersonalizedTarget": true,
+        "unresolvedMarkers": false
+      },
+      {
+        "path": "import/src/lib/auxero/home-five.ts",
+        "mergedTargetPreviewSha256": "4c596a4e6352a85e49fdf7ba1df0633d622ca5c64542e66e707fbcc0875f9156",
+        "exactPersonalizedTarget": false,
+        "unresolvedMarkers": false
+      },
+      {
+        "path": "import/src/lib/components/detail/AuxeroVehicleMobilePdp.svelte",
+        "mergedTargetPreviewSha256": "06140cb0c21186ffd55e0afc96f25f1b5bec7bbeb3b065d00200246bb8a82a6c",
+        "exactPersonalizedTarget": true,
+        "unresolvedMarkers": false
+      },
+      {
+        "path": "import/src/lib/content/extra-localized.ts",
+        "mergedTargetPreviewSha256": "72ab3deb459abd30bf63c562a423027e4ead1e63cb56549e70761b518e3fb615",
+        "exactPersonalizedTarget": true,
+        "unresolvedMarkers": false
+      },
+      {
+        "path": "import/src/lib/i18n/messages.ts",
+        "mergedTargetPreviewSha256": "901259c6a611b1a3f205a767741bf932c673d86559b2ed672638ba257f53dffd",
+        "exactPersonalizedTarget": true,
+        "unresolvedMarkers": false
+      },
+      {
+        "path": "import/src/routes/offer/+page.svelte",
+        "mergedTargetPreviewSha256": "49bfc987fe9be05e82022caadbb9d3878a2b37b6e3377342811d71c186215d83",
+        "exactPersonalizedTarget": true,
+        "unresolvedMarkers": false
+      },
+      {
+        "path": "app/components/VehicleCard.tsx",
+        "mergedTargetPreviewSha256": "1e45c5a27e8ab11629ee77698076006ccde5955f275a9720eb245928692a7ec0",
+        "exactPersonalizedTarget": true,
+        "unresolvedMarkers": false
+      },
+      {
+        "path": "app/components/VehicleDetailClient.tsx",
+        "mergedTargetPreviewSha256": "9c2980394c1a98892f6b254c38cc3eb4990fd2e7a5924f7980c9285cbc86afc9",
+        "exactPersonalizedTarget": true,
+        "unresolvedMarkers": false
+      },
+      {
+        "path": "app/lib/dealer.json",
+        "mergedTargetPreviewSha256": "3aa0a7cce5f3acee5a4d23d62980f98f52060afde9176104a031e55152766904",
+        "exactPersonalizedTarget": true,
+        "unresolvedMarkers": false
+      },
+      {
+        "path": "karento-best/src/lib/content.ts",
+        "mergedTargetPreviewSha256": "dcb8520653a34d8dcf4350b1bbd25796127e6def8e83571977fd1ffb8f0510da",
+        "exactPersonalizedTarget": true,
+        "unresolvedMarkers": false
+      },
+      {
+        "path": "karento-best/src/lib/data/vehicle-detail.ts",
+        "mergedTargetPreviewSha256": "68b32996678d2ff9447b8825ab47375122b66b4116ca86cea5ef2a8901c4badd",
+        "exactPersonalizedTarget": true,
+        "unresolvedMarkers": false
+      }
+    ]
+  },
+  "publicationRequirements": [
+    "Re-read actual current Bradford client tree; require exact unchanged bbc1eee9a19839606981351b584cd2fbb18d9763 and source facts/stock blobs.",
+    "Require unchanged exact six target locators at frozen097 and the reviewed original old-source locators.",
+    "Commit this compact resolutions input, pin its actual raw file SHA256 in Bradford source-request.inputs.resolutions, and retain this original authenticated-plan proof in source review.",
+    "Run maintained qualified --refresh-facts source preparation and preserve all existing factual/native/branding gates. No resolution grants native/hosted or release approval.",
+    "Do not mutate private publishing repositories or provider identities during this canonical source proposal."
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "globalReleaseApproval": false,
+  "published": false
+}
