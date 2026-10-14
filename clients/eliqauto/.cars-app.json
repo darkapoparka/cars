@@ -3,17 +3,17 @@
   "dealer": "eliqauto",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
     "path": "templates/app",
-    "digest": "3344230cf8de012eb9c2daf1c962c4a3f189960b52f2026e1d049f2a6eae26ad",
-    "tree": "cd17d913dd597bf7dfb3e2244c2a3a2914ab3080"
+    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1",
+    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76"
   },
-  "appDigest": "5b9c897b7b12a8d516477d1a1ac0c2258bf78f1c9318e4f34b717e02d70aa348",
+  "appDigest": "c208c4b24423a60664b1d6cb32029a4b8e8e149bb1149d0b1961afa9bb8e3998",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "eliqauto",
     "profile": "auto-best/src/lib/data/dealer-profile.json",
-    "profileSha256": "1824750b4ad559a474472d1f40829c5283b852d223aafda3f9e2187253376cac",
+    "profileSha256": "4ea62e7fa6cd20277de80824b2ae9ef79abf085157320387310aa46970b6144d",
     "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
     "vehicles": 16,
     "currency": "EUR",
@@ -595,13 +595,106 @@
         "sha256": "3149dfa5da8e8c96c6e18f818931b2f048dd8e25732c5d78794606b03c4fe2c2",
         "role": "vehicle"
       }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "2014-11779989521200947",
+        "sourceValue": 172000,
+        "sourceUnit": "km",
+        "canonicalKm": 172000
+      },
+      {
+        "slug": "2017-11780007305121982",
+        "sourceValue": 163000,
+        "sourceUnit": "km",
+        "canonicalKm": 163000
+      },
+      {
+        "slug": "2009-11780175636720970",
+        "sourceValue": 180000,
+        "sourceUnit": "km",
+        "canonicalKm": 180000
+      },
+      {
+        "slug": "2014-11780176585830804",
+        "sourceValue": 180000,
+        "sourceUnit": "km",
+        "canonicalKm": 180000
+      },
+      {
+        "slug": "2019-11780177315125298",
+        "sourceValue": 177000,
+        "sourceUnit": "km",
+        "canonicalKm": 177000
+      },
+      {
+        "slug": "2022-11780254722465322",
+        "sourceValue": 80000,
+        "sourceUnit": "km",
+        "canonicalKm": 80000
+      },
+      {
+        "slug": "2020-11780906851194765",
+        "sourceValue": 158000,
+        "sourceUnit": "km",
+        "canonicalKm": 158000
+      },
+      {
+        "slug": "2023-11780907716855488",
+        "sourceValue": 72000,
+        "sourceUnit": "km",
+        "canonicalKm": 72000
+      },
+      {
+        "slug": "2018-11780909888518340",
+        "sourceValue": 200000,
+        "sourceUnit": "km",
+        "canonicalKm": 200000
+      },
+      {
+        "slug": "2021-11781187597210481",
+        "sourceValue": 78000,
+        "sourceUnit": "km",
+        "canonicalKm": 78000
+      },
+      {
+        "slug": "2020-11781207164422554",
+        "sourceValue": 135000,
+        "sourceUnit": "km",
+        "canonicalKm": 135000
+      },
+      {
+        "slug": "2020-11781211980587571",
+        "sourceValue": 87000,
+        "sourceUnit": "km",
+        "canonicalKm": 87000
+      },
+      {
+        "slug": "2020-11781244995278530",
+        "sourceValue": 164000,
+        "sourceUnit": "km",
+        "canonicalKm": 164000
+      },
+      {
+        "slug": "2017-11781281410239020",
+        "sourceValue": 170000,
+        "sourceUnit": "km",
+        "canonicalKm": 170000
+      },
+      {
+        "slug": "2021-11781294210212810",
+        "sourceValue": 146000,
+        "sourceUnit": "km",
+        "canonicalKm": 146000
+      },
+      {
+        "slug": "2012-11781346026930952",
+        "sourceValue": 170000,
+        "sourceUnit": "km",
+        "canonicalKm": 170000
+      }
     ]
   },
-  "baseDeployment": {
-    "id": "dpl_FTp9vzenc2QGBADMH7QMfMmVuTqG",
-    "url": "https://cars-eliqauto.vercel.app/",
-    "checkedAt": "2026-09-28T02:25:40.550Z"
-  },
-  "baseReceiptSha256": "689792ea008b9504cf5574bd0487d8106861d1925bf0fbf19cbf97f4ce7de54d",
-  "refreshedAt": "2026-09-30T11:14:46.043Z"
+  "needsDealerQA": true,
+  "readyToPublish": false
 }

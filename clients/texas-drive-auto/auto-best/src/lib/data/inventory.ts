@@ -1,6 +1,5 @@
 import { formatPrice, localeContract, type Locale } from '$lib/locale/core';
 import { templateText } from '$lib/locale/messages';
-import { leadSite } from '$config/lead-site';
 
 export const vehicleTypes = ['car', 'motorbike', 'van', 'truck'] as const;
 export type VehicleType = typeof vehicleTypes[number];
@@ -27,11 +26,16 @@ export type Vehicle = {
   make: string;
   /** Optional manufacturer sub-brand used by compact card identity. */
   cardBrand?: string;
+  /** Seller-supplied highlight by locale; import/condition claims require record-specific evidence. */
+  cardNote?: Partial<Record<Locale, string>>;
   title: string;
   year: string;
   yearNumber: number;
   mileage: string;
   mileageKm: number;
+  mileageKnown?: boolean;
+  mileageValue?: number;
+  mileageUnit?: 'km' | 'mi';
   fuel: string;
   transmission: string;
   equipment: readonly VehicleEquipment[];
@@ -43,7 +47,8 @@ export type Vehicle = {
 export const featuredVehicles: Vehicle[] = [
   {
     "id": 1,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://www.texasdriveauto.com/details/used-2008-acura-tl/127361913",
     "image": "/stock/127361913-1.webp",
     "category": "Sedan",
@@ -54,17 +59,20 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2008,
     "mileage": "176,729 mi",
     "mileageKm": 284418,
+    "mileageKnown": true,
+    "mileageValue": 176729,
+    "mileageUnit": "mi",
     "fuel": "Gasoline",
     "transmission": "Automatic 5-Speed",
     "equipment": [],
     "condition": "used",
     "priceEur": 4500,
-    "href": "/listing-detail-v1/1",
-    "type": "car"
+    "href": "/listing-detail-v1/1"
   },
   {
     "id": 2,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://www.texasdriveauto.com/details/used-2012-audi-q5/128538336",
     "image": "/media/photo-unavailable.svg",
     "category": "SUV",
@@ -75,17 +83,20 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2012,
     "mileage": "104,710 mi",
     "mileageKm": 168514,
+    "mileageKnown": true,
+    "mileageValue": 104710,
+    "mileageUnit": "mi",
     "fuel": "Not published",
     "transmission": "Automatic 8-Speed",
     "equipment": [],
     "condition": "used",
     "priceEur": 6500,
-    "href": "/listing-detail-v1/2",
-    "type": "car"
+    "href": "/listing-detail-v1/2"
   },
   {
     "id": 3,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://www.texasdriveauto.com/details/used-2013-audi-q5/127361925",
     "image": "/stock/127361925-1.webp",
     "category": "SUV",
@@ -96,17 +107,20 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2013,
     "mileage": "114,512 mi",
     "mileageKm": 184289,
+    "mileageKnown": true,
+    "mileageValue": 114512,
+    "mileageUnit": "mi",
     "fuel": "Flex Fuel",
     "transmission": "Automatic 8-Speed",
     "equipment": [],
     "condition": "used",
     "priceEur": 6990,
-    "href": "/listing-detail-v1/3",
-    "type": "car"
+    "href": "/listing-detail-v1/3"
   },
   {
     "id": 4,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://www.texasdriveauto.com/details/used-2018-audi-a4/127361924",
     "image": "/media/photo-unavailable.svg",
     "category": "Sedan",
@@ -117,17 +131,20 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2018,
     "mileage": "128,956 mi",
     "mileageKm": 207535,
+    "mileageKnown": true,
+    "mileageValue": 128956,
+    "mileageUnit": "mi",
     "fuel": "Not published",
     "transmission": "Automatic 7-Speed",
     "equipment": [],
     "condition": "used",
     "priceEur": 8990,
-    "href": "/listing-detail-v1/4",
-    "type": "car"
+    "href": "/listing-detail-v1/4"
   },
   {
     "id": 5,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://www.texasdriveauto.com/details/used-2014-bmw-x5/127361904",
     "image": "/stock/127361904-1.webp",
     "category": "SUV",
@@ -138,17 +155,20 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2014,
     "mileage": "177,873 mi",
     "mileageKm": 286259,
+    "mileageKnown": true,
+    "mileageValue": 177873,
+    "mileageUnit": "mi",
     "fuel": "Not published",
     "transmission": "Automatic 8-Speed",
     "equipment": [],
     "condition": "used",
     "priceEur": 7990,
-    "href": "/listing-detail-v1/5",
-    "type": "car"
+    "href": "/listing-detail-v1/5"
   },
   {
     "id": 6,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://www.texasdriveauto.com/details/used-2014-buick-enclave/127361891",
     "image": "/media/photo-unavailable.svg",
     "category": "Crossover",
@@ -159,17 +179,20 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2014,
     "mileage": "162,632 mi",
     "mileageKm": 261731,
+    "mileageKnown": true,
+    "mileageValue": 162632,
+    "mileageUnit": "mi",
     "fuel": "Not published",
     "transmission": "Automatic 6-Speed",
     "equipment": [],
     "condition": "used",
     "priceEur": 6990,
-    "href": "/listing-detail-v1/6",
-    "type": "car"
+    "href": "/listing-detail-v1/6"
   },
   {
     "id": 7,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://www.texasdriveauto.com/details/used-2007-cadillac-cts/127361933",
     "image": "/media/photo-unavailable.svg",
     "category": "Sedan",
@@ -180,17 +203,20 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2007,
     "mileage": "119,529 mi",
     "mileageKm": 192363,
+    "mileageKnown": true,
+    "mileageValue": 119529,
+    "mileageUnit": "mi",
     "fuel": "Not published",
     "transmission": "Automatic 5-Speed",
     "equipment": [],
     "condition": "used",
     "priceEur": 4990,
-    "href": "/listing-detail-v1/7",
-    "type": "car"
+    "href": "/listing-detail-v1/7"
   },
   {
     "id": 8,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://www.texasdriveauto.com/details/used-2018-cadillac-escalade/127361883",
     "image": "/media/photo-unavailable.svg",
     "category": "SUV",
@@ -201,18 +227,23 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2018,
     "mileage": "99,315 mi",
     "mileageKm": 159832,
+    "mileageKnown": true,
+    "mileageValue": 99315,
+    "mileageUnit": "mi",
     "fuel": "Not published",
     "transmission": "Automatic 10-Speed",
     "equipment": [],
     "condition": "used",
     "priceEur": 15990,
-    "href": "/listing-detail-v1/8",
-    "type": "car"
+    "href": "/listing-detail-v1/8"
   }
 ];
 
-export const formatVehiclePrice = (amount: number, locale: Locale = localeContract.defaultLocale) => amount > 0 ? formatPrice(amount, locale) : templateText(locale, 'Price on request');
+export const formatVehiclePrice = (
+  amount: number,
+  locale: Locale = localeContract.defaultLocale
+) => amount > 0 ? formatPrice(amount, locale) : templateText(locale, 'Price on request');
 
 /** Allow a currency line break while preserving the locale's grouped digits. */
 export const formatVehiclePriceLabel = (amount: number, locale: Locale = localeContract.defaultLocale) =>
-  formatVehiclePrice(amount, locale).replace(/([A-Z]{3})\s+/u, '$1 ').replace(/\s+([A-Z]{3})$/u, ' $1');
+  formatVehiclePrice(amount, locale).replace(/([A-Z]{3}|\p{Sc})\s+/u, '$1 ').replace(/\s+([A-Z]{3}|\p{Sc})$/u, ' $1');

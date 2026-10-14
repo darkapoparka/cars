@@ -1,6 +1,5 @@
 import { formatPrice, localeContract, type Locale } from '$lib/locale/core';
 import { templateText } from '$lib/locale/messages';
-import { leadSite } from '$config/lead-site';
 
 export const vehicleTypes = ['car', 'motorbike', 'van', 'truck'] as const;
 export type VehicleType = typeof vehicleTypes[number];
@@ -34,6 +33,9 @@ export type Vehicle = {
   yearNumber: number;
   mileage: string;
   mileageKm: number;
+  mileageKnown?: boolean;
+  mileageValue?: number;
+  mileageUnit?: 'km' | 'mi';
   fuel: string;
   transmission: string;
   equipment: readonly VehicleEquipment[];
@@ -42,16 +44,11 @@ export type Vehicle = {
   href: `/listing-detail-v1/${number}`;
 };
 
-// Equipment facets are limited to recurring features published in Day & Night's
-// current adverts for these model families (daynight.mobile.bg, checked 2026-08-30).
-
-
-// Imported master fixtures are not VIN-verified stock. Preserve source media;
-// client promotion requires replacing and verifying each record, including reused photos.
 export const featuredVehicles: Vehicle[] = [
   {
     "id": 1,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://www.isauto.net/avtomobili-i-djipove/audi-r8-perfomance-v10-bang-olufsen-audi-keramik-carbon-10",
     "image": "/dealer/inventory-1.webp",
     "category": "Купе",
@@ -62,17 +59,20 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2021,
     "mileage": "75 000 км",
     "mileageKm": 75000,
+    "mileageKnown": true,
+    "mileageValue": 75000,
+    "mileageUnit": "km",
     "fuel": "Бензин",
     "transmission": "Автоматик",
     "equipment": [],
     "condition": "used",
     "priceEur": 148224,
-    "href": "/listing-detail-v1/1",
-    "type": "car"
+    "href": "/listing-detail-v1/1"
   },
   {
     "id": 2,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://www.isauto.net/avtomobili-i-djipove/audi-q7-50tdi-virtual-podgrev-4-zoni-kamera360-9",
     "image": "/dealer/inventory-2.webp",
     "category": "SUV",
@@ -83,17 +83,20 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2022,
     "mileage": "57 500 км",
     "mileageKm": 57500,
+    "mileageKnown": true,
+    "mileageValue": 57500,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Автоматик",
     "equipment": [],
     "condition": "used",
     "priceEur": 67439,
-    "href": "/listing-detail-v1/2",
-    "type": "car"
+    "href": "/listing-detail-v1/2"
   },
   {
     "id": 3,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://www.isauto.net/avtomobili-i-djipove/bmw-m5-keramika-xdrive-m-sport-bowers-wilk-adaptiveled-8",
     "image": "/dealer/inventory-3.webp",
     "category": "Седан",
@@ -104,17 +107,20 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2018,
     "mileage": "61 000 км",
     "mileageKm": 61000,
+    "mileageKnown": true,
+    "mileageValue": 61000,
+    "mileageUnit": "km",
     "fuel": "Бензин",
     "transmission": "Автоматик",
     "equipment": [],
     "condition": "used",
     "priceEur": 71530,
-    "href": "/listing-detail-v1/3",
-    "type": "car"
+    "href": "/listing-detail-v1/3"
   },
   {
     "id": 4,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://www.isauto.net/avtomobili-i-djipove/bmw-x5-xdrive-sport-podgrev-panorama-6-1-7",
     "image": "/dealer/inventory-4.webp",
     "category": "SUV",
@@ -125,17 +131,20 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2014,
     "mileage": "196 000 км",
     "mileageKm": 196000,
+    "mileageKnown": true,
+    "mileageValue": 196000,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Автоматик",
     "equipment": [],
     "condition": "used",
     "priceEur": 24491,
-    "href": "/listing-detail-v1/4",
-    "type": "car"
+    "href": "/listing-detail-v1/4"
   },
   {
     "id": 5,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://www.isauto.net/avtomobili-i-djipove/bmw-750-m-perfomance-laser-alkantar-virtual-harman-kardon-3",
     "image": "/dealer/inventory-5.webp",
     "category": "Седан",
@@ -146,17 +155,20 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2019,
     "mileage": "167 000 км",
     "mileageKm": 167000,
+    "mileageKnown": true,
+    "mileageValue": 167000,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Автоматик",
     "equipment": [],
     "condition": "used",
     "priceEur": 61304,
-    "href": "/listing-detail-v1/5",
-    "type": "car"
+    "href": "/listing-detail-v1/5"
   },
   {
     "id": 6,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://www.isauto.net/avtomobili-i-djipove/audi-a5-sportback-2-0tdi-sline-ambient-virtual-podgrev-pdc-f1-745",
     "image": "/dealer/inventory-6.webp",
     "category": "Хечбек",
@@ -167,17 +179,22 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2018,
     "mileage": "175 000 км",
     "mileageKm": 175000,
+    "mileageKnown": true,
+    "mileageValue": 175000,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Автоматик",
     "equipment": [],
     "condition": "used",
     "priceEur": 19900,
-    "href": "/listing-detail-v1/6",
-    "type": "car"
+    "href": "/listing-detail-v1/6"
   }
 ];
 
-export const formatVehiclePrice = (amount: number, locale: Locale = localeContract.defaultLocale) => amount > 0 ? formatPrice(amount, locale) : templateText(locale, 'Price on request');
+export const formatVehiclePrice = (
+  amount: number,
+  locale: Locale = localeContract.defaultLocale
+) => amount > 0 ? formatPrice(amount, locale) : templateText(locale, 'Price on request');
 
 /** Allow a currency line break while preserving the locale's grouped digits. */
 export const formatVehiclePriceLabel = (amount: number, locale: Locale = localeContract.defaultLocale) =>

@@ -1,23 +1,21 @@
 'use client';
+import {displayMake} from '@/lib/inventory-labels';
+import {hasPublishedMileage} from '@/lib/vehicle-values';
 import {assetPath} from '@/lib/paths';
 import {useCopy} from '@/lib/locale';
-import Image from '@/components/AppImage';
 
 import {useState,type ReactNode} from 'react';
 import {dealer,isDealer} from '@/lib/dealer-config';
 import {currency} from '@/lib/currency';
 import Link from '@/components/AppLink';
 import * as stylex from '@stylexjs/stylex';
-import {CarFront, Check, ChevronRight, Info, Music2, ShieldCheck} from 'lucide-react';
-import {showroom} from '@/lib/showroom';
-import ReferenceVideo from '@/components/ReferenceVideo';
+import {CarFront, Check, ChevronRight, ClipboardCheck, History, Info, Music2, ShieldCheck} from 'lucide-react';
 import StructuralSummary from '@/components/StructuralSummary';
 import ReferenceInfoSheet from '@/components/ReferenceInfoSheet';
 import type {ReferenceVehicleDetail} from '@/lib/reference-types';
-import VehicleServiceHistory from '@/components/VehicleServiceHistory';
+import {getVehicleServiceHistory} from '@/lib/vehicle-service-history';
+import VehicleRecordsSheet from '@/components/VehicleRecordsSheet';
 import VehicleFinanceSection from '@/components/VehicleFinanceSection';
-import OwnershipPanel from '@/components/OwnershipPanel';
-import VehicleVisitBanner from '@/components/VehicleVisitBanner';
 import {formatPrice, type Vehicle} from '@/lib/data';
 import {media,tokens as $} from '@/app/tokens.stylex';
 
@@ -34,35 +32,37 @@ function OverviewRow({icon, title, copy, information = false}: {icon: ReactNode;
 
   return <div {...stylex.props(s.overviewRow)}><span aria-hidden="true" {...stylex.props(s.overviewIcon)}>{icon}</span><div {...stylex.props(s.rowCopy)}><h3 {...stylex.props(s.rowTitle)}>{tx(title)}{information ? <Info size={15} aria-hidden="true"/> : null}</h3>{copy ? <p {...stylex.props(s.rowText)}>{tx(copy)}</p> : null}</div></div>;
 }
-function RecordRow({id,title,status,request,onRequest}: {id:string;title:string;status:string;request:string;onRequest:()=>void}) {
+function RecordRow({id,title,status,icon,onOpen,open}: {id:string;title:string;status:string;icon:ReactNode;onOpen:()=>void;open:boolean}) {
   const tx=useCopy();
   return <section id={id} {...stylex.props(s.recordSection)}>
-    <h2><button type="button" onClick={onRequest} aria-label={`${tx(title)} — ${tx(request)}`} aria-describedby={`${id}-status`} {...stylex.props(s.recordRow)}>
-      <span {...stylex.props(s.recordTitle)}>{tx(title)}</span>
-      <span id={`${id}-status`} {...stylex.props(s.recordStatus)}>{tx(status)}</span>
-      <ChevronRight size={16} aria-hidden="true"/>
+    <h2><button type="button" onClick={onOpen} aria-haspopup="dialog" aria-expanded={open} aria-describedby={`${id}-status`} {...stylex.props(s.recordRow)}>
+      <span aria-hidden="true" {...stylex.props(s.recordIcon)}>{icon}</span>
+      <span {...stylex.props(s.rowCopy)}><span {...stylex.props(s.recordTitle)}>{tx(title)}</span><span id={`${id}-status`} {...stylex.props(s.recordStatus)}>{tx(status)}</span></span>
+      <ChevronRight size={20} aria-hidden="true"/>
     </button></h2>
   </section>;
 }
-function SpecGrid({vehicle,reference,onInformation}: {vehicle: Vehicle;reference?:ReferenceVehicleDetail;onInformation:(title:string,description:string)=>void}) {
+export function VehicleSpecifications({vehicle,reference,compact=false}: {vehicle: Vehicle;reference?:ReferenceVehicleDetail;compact?:boolean}) {
   const tx = useCopy();
+  const [information,setInformation]=useState<{title:string;description:string}|null>(null);
 
-  const fallback=dealer.referenceClaimsApproved&&!isDealer&&vehicle.slug==='2024-toyota-fortuner-exr'?fortunerSpecs:[['Engine',vehicle.engine],['Transmission',vehicle.transmission],['Body Type',vehicle.body],['Fuel Type',vehicle.fuel],['Color',vehicle.color],['Distance driven',`${formatPrice(vehicle.mileage)} ${tx('km')}`]] as const;
+  const fallback=dealer.referenceClaimsApproved&&!isDealer&&vehicle.slug==='2024-toyota-fortuner-exr'?fortunerSpecs:[['Engine',vehicle.engine],['Transmission',vehicle.transmission],['Body Type',vehicle.body],['Fuel Type',vehicle.fuel],['Color',vehicle.color],['Distance driven',hasPublishedMileage(vehicle)?`${formatPrice(vehicle.mileage)} ${tx('km')}`:tx('Mileage on request')]] as const;
   const entries=reference?.specifications.length?reference.specifications.filter(spec=>!['odometerReading','specs','vin'].includes(spec.key)).map(spec=>({label:spec.label,value:spec.value,description:spec.description})):fallback.map(([label,value])=>({label,value,description:undefined}));
-  return <section aria-label={tx('Specifications')} {...stylex.props(s.specCard)}>
+  return <><section data-vehicle-specifications aria-label={tx('Specifications')} {...stylex.props(s.specCard,compact?s.sidebarSpecs:s.contentSpecs)}>
     <h2 {...stylex.props(s.sectionHeading)}>{tx('Specifications')}</h2>
-    <dl {...stylex.props(s.specGrid)}>{entries.map(({label,value,description})=><div key={label} {...stylex.props(s.spec)}>
+    <dl {...stylex.props(s.specGrid,compact&&s.sidebarSpecGrid)}>{entries.map(({label,value,description})=><div key={label} {...stylex.props(s.spec)}>
       <dt {...stylex.props(s.specLabel)}>{tx(label==='Transmission'?'Gearbox':label)}</dt>
-      <dd {...stylex.props(s.specValue)}><span>{tx(value)}</span>{description?<button type="button" aria-label={tx('About '+label)} onClick={()=>onInformation(label,description)} {...stylex.props(s.specInfo)}><Info size={16} aria-hidden="true"/></button>:null}</dd>
+      <dd {...stylex.props(s.specValue)}><span>{tx(value)}</span>{description?<button type="button" aria-label={tx('About '+label)} onClick={()=>setInformation({title:label,description})} {...stylex.props(s.specInfo)}><Info size={16} aria-hidden="true"/></button>:null}</dd>
     </div>)}</dl>
-  </section>;
+  </section>{information?<ReferenceInfoSheet title={tx(information.title)} description={tx(information.description)} onClose={()=>setInformation(null)}/>:null}</>;
 }
-export default function VehicleBelowFold({vehicle, onLogin,reference,equipment}: {vehicle: Vehicle; onLogin: () => void;reference?:ReferenceVehicleDetail;equipment?:readonly string[]}) {
+export default function VehicleBelowFold({vehicle, onLogin,reference,equipment}: {vehicle: Vehicle; onLogin: (intent?:'condition'|'service-history') => void;reference?:ReferenceVehicleDetail;equipment?:readonly string[]}) {
   const tx = useCopy();
 
   const fortuner = Boolean(dealer.referenceClaimsApproved && !isDealer && vehicle.slug === '2024-toyota-fortuner-exr');
-  const [information,setInformation]=useState<{title:string;description:string}|null>(null);
+  const [record,setRecord]=useState<'condition'|'service-history'|null>(null);
   const hasDetails=Boolean(reference)||fortuner;
+  const serviceHistory=getVehicleServiceHistory(vehicle.slug,reference?.serviceRecords);
   const comparison=reference?.priceComparison??(fortuner?{cars24Price:94099,marketPrice:104000,newCarPrice:127000,totalSavings:9901}:undefined);
   const comparedPrices=comparison?[['Showroom price',comparison.cars24Price,72],['Market price',comparison.marketPrice,93],...(comparison.newCarPrice?[['New car price',comparison.newCarPrice,150]]:[])]:[];
   const structural=Boolean(reference?.structuralClear&&reference.vin);
@@ -70,7 +70,7 @@ export default function VehicleBelowFold({vehicle, onLogin,reference,equipment}:
   const previewFeatures = (equipment?.length ? equipment : reference?.topFeatures.length ? reference.topFeatures : fortuner ? ['Fog Light Front','Cruise Control','Parking Sensors Rear'] : vehicle.highlights).slice(0,3);
   return <>
     <section id="overview" aria-label={tx('Overview')} {...stylex.props(s.overview)}>
-      <SpecGrid vehicle={vehicle} reference={reference} onInformation={(title,description)=>setInformation({title,description})}/>
+      <VehicleSpecifications vehicle={vehicle} reference={reference}/>
       {reference?.highlights.length || fortuner ? <div {...stylex.props(s.overviewDetails)}>
       {reference?.highlights.length?reference.highlights.map(item=>{const Icon=overviewIcons[item.key]??CarFront;return <OverviewRow key={item.key} icon={<Icon size={21}/>} title={tx(item.title)} copy={tx(item.description)} information={item.key==='convenienceFee'}/>;}):<>
       {fortuner ? <OverviewRow icon={<CarFront size={20}/>} title={tx('Great condition')} copy={tx('Car has low imperfections')}/> : null}
@@ -79,7 +79,7 @@ export default function VehicleBelowFold({vehicle, onLogin,reference,equipment}:
       {fortuner ? <OverviewRow icon={<Music2 size={22}/>} title={tx("Apple play")} copy={tx("Enjoy your drive with apple play")} /> : null}
       </>}
       </div> : null}
-      {comparison ? <section aria-labelledby="price-comparison" {...stylex.props(s.comparison)}><div {...stylex.props(s.dividerHeading)}><i {...stylex.props(s.dividerLine)} /><h2 id="price-comparison" {...stylex.props(s.comparisonHeading)}>{tx("Understanding Price Comparison")}</h2><i {...stylex.props(s.dividerLine)} /></div><div {...stylex.props(s.comparisonGraphic)}><span {...stylex.props(s.savings)}>{tx(currency.code)} {tx(formatPrice(comparison.totalSavings))} {tx(" Savings")}</span><span {...stylex.props(s.savingsStripe)} /><img src={assetPath("/reference-assets/continuation/comparison-car.png")} width={450} height={210} alt={tx("Vehicle price comparison")} {...stylex.props(s.comparisonCar)} /><div {...stylex.props(s.comparisonRows)}>{comparedPrices.map(([label, value, length], index) => <div key={label} {...stylex.props(s.comparisonRow)}><span>{tx(label)}</span><i style={{width: Number(length)}} {...stylex.props(s.comparisonLine, index === 0 && s.primaryLine)} /><strong {...stylex.props(s.comparisonValue, index === 0 && s.primaryValue)}>{tx(currency.code)} {tx(formatPrice(Number(value)))}</strong></div>)}</div></div></section> : null}
+      {comparison ? <section aria-labelledby="price-comparison" {...stylex.props(s.comparison)}><div {...stylex.props(s.dividerHeading)}><h2 id="price-comparison" {...stylex.props(s.comparisonHeading)}>{tx("Understanding Price Comparison")}</h2></div><div {...stylex.props(s.comparisonGraphic)}><span {...stylex.props(s.savings)}>{tx(currency.code)} {tx(formatPrice(comparison.totalSavings))} {tx(" Savings")}</span><span {...stylex.props(s.savingsStripe)} /><img src={assetPath("/reference-assets/continuation/comparison-car.png")} width={450} height={210} alt={tx("Vehicle price comparison")} {...stylex.props(s.comparisonCar)} /><div {...stylex.props(s.comparisonRows)}>{comparedPrices.map(([label, value, length], index) => <div key={label} {...stylex.props(s.comparisonRow)}><span>{tx(label)}</span><i style={{width: Number(length)}} {...stylex.props(s.comparisonLine, index === 0 && s.primaryLine)} /><strong {...stylex.props(s.comparisonValue, index === 0 && s.primaryValue)}>{tx(currency.code)} {tx(formatPrice(Number(value)))}</strong></div>)}</div></div></section> : null}
     </section>
     {structural?<StructuralSummary vin={reference!.vin!}/>:null}
     <section id="features" aria-label={tx('Features')} {...stylex.props(s.features,structural&&s.featuresAfterSummary)}>
@@ -87,34 +87,30 @@ export default function VehicleBelowFold({vehicle, onLogin,reference,equipment}:
       <ul {...stylex.props(s.featureHighlights)}>{previewFeatures.map(feature=><li key={feature} {...stylex.props(s.featureItem)}><span aria-hidden="true" {...stylex.props(s.featureCheck)}><Check size={12} strokeWidth={2.5}/></span>{tx(feature)}</li>)}</ul>
       <Link href={`/cars/${vehicle.slug}/features`} {...stylex.props(s.allFeatures)}>{tx('View all features')}<ChevronRight size={18} aria-hidden="true"/></Link>
     </section>
-    {hasDetails ? <><section id="condition" {...stylex.props(s.card,s.condition)}><h2 {...stylex.props(s.sectionHeading)}>{tx("Car Condition")}</h2>
-      {reference?.inspection.length || fortuner ? <><div {...stylex.props(s.inspectionCard)}><ReferenceVideo src="/reference-assets/final-pass/inspection.mp4" poster="/reference-assets/continuation/inspection-poster.png" label={tx("inspection video")} posterHasButton ratio="1.64"/></div><Link href={`/cars/${vehicle.slug}/inspection`} {...stylex.props(s.action)}>{tx("VIEW FULL REPORT")}<ChevronRight size={18} aria-hidden="true"/></Link><h3 {...stylex.props(s.tourHeading)}>{tx("Start Video tour")}</h3><button type="button" onClick={onLogin} aria-label={tx("Book a virtual test drive")} {...stylex.props(s.tour)}><Image sizes="(max-width: 1099px) 100vw, 860px" src={showroom.artwork.detail.videoTour} alt={tx("Ask for a video tour: a closer look at the car with guidance from the showroom.")} width={1212} height={681} {...stylex.props(s.image)} /></button></> : <><p {...stylex.props(s.sectionText)}>{tx("An inspection report is not available for this car. Ask the dealer for its current condition.")}</p><button type="button" onClick={onLogin} {...stylex.props(s.action)}>{tx("Request vehicle information")}<ChevronRight size={18} aria-hidden="true"/></button></>}
-    </section>
-    <VehicleServiceHistory records={reference?.serviceRecords} due={reference?reference.serviceDue??null:undefined}/><VehicleFinanceSection vehicle={vehicle} onLogin={onLogin}/></> : <div {...stylex.props(s.recordGroup)}>
-      <RecordRow id="condition" title="Car Condition" status="No report" request="Request vehicle information" onRequest={onLogin}/>
-      <RecordRow id="service-history" title="Service History" status="No records" request="Request service history" onRequest={onLogin}/>
-    </div>}
-    <div {...stylex.props(s.promotions)}><VehicleVisitBanner/><OwnershipPanel compact/></div>
-    {information?<ReferenceInfoSheet title={tx(information.title)} description={tx(information.description)} onClose={()=>setInformation(null)}/>:null}
+    <div {...stylex.props(s.recordGroup)}>
+      {reference?.inspection.length?<RecordRow id="condition" title="Inspection report" status="View inspection report" icon={<CarFront size={21}/>} open={record==='condition'} onOpen={()=>setRecord('condition')}/>:null}
+      <RecordRow id="service-history" title="Service History" status={serviceHistory.isSample?'Sample records':serviceHistory.records.length?'View service records':'No records'} icon={serviceHistory.records.length&&!serviceHistory.isSample?<ClipboardCheck size={21}/>:<History size={21}/>} open={record==='service-history'} onOpen={()=>setRecord('service-history')}/>
+    </div>
+    {hasDetails?<VehicleFinanceSection vehicle={vehicle} onLogin={onLogin}/>:null}
+    {record?<VehicleRecordsSheet kind={record} vehicleTitle={`${vehicle.year} ${displayMake(vehicle.make)} ${vehicle.model}`} reference={reference} serviceHistory={serviceHistory} onClose={()=>setRecord(null)} onRequest={()=>{setRecord(null);onLogin(record);}}/>:null}
   </>;
 }
 const s=stylex.create({
-overview: {scrollMarginTop: 152, marginTop: 16},
-card: {padding: 16, borderColor: $.line, borderStyle: 'solid', borderWidth: 1, borderRadius: $.radiusMd, backgroundColor: $.surface},
+overview: {scrollMarginTop: 152, marginTop: {[media.desktop]:0,default:16}},
 overviewDetails: {marginTop: 12, padding: 16, borderRadius: $.radiusMd, backgroundColor: $.surfaceAlt},
-promotions: {marginTop: 24},
 overviewRow: {display: 'grid', gridTemplateColumns: '38px minmax(0,1fr)', alignItems: 'center', gap: 12, minHeight: 58, paddingBlock: 8},
 overviewIcon: {display: 'grid', placeItems: 'center', width: 38, height: 38, color: $.ink, borderRadius: '50%', backgroundColor: $.surfaceAlt},
 rowCopy: {minWidth: 0},
-rowTitle: {display: 'flex', alignItems: 'center', gap: 8, color: $.ink, fontFamily: $.fontSans, fontSize: 15, fontWeight: 500, lineHeight: '22px'},
-rowText: {marginTop: 3, color: $.muted, fontFamily: $.fontSans, fontSize: 13, fontWeight: 400, lineHeight: '19px'},
+rowTitle: {display: 'flex', alignItems: 'center', gap: 8, color: $.ink, fontFamily: $.fontSans, fontSize: {[media.desktop]: $.desktopTextSize, default: 15}, fontWeight: 500, lineHeight: {[media.desktop]: '24px', default: '22px'}},
+rowText: {marginTop: 3, color: $.muted, fontFamily: $.fontSans, fontSize: {[media.desktop]: $.desktopSupportSize, default: 13}, fontWeight: 400, lineHeight: {[media.desktop]: '20px', default: '19px'}},
 specCard: {padding: {[media.mobile]: 12, default: 16}, borderRadius: $.radiusMd, backgroundColor: $.surfaceAlt},
-specGrid: {display: 'grid', gridTemplateColumns: 'repeat(2,minmax(0,1fr))', gap: {[media.mobile]: 6, default: 8}, margin: '10px 0 0', padding: 0},
+contentSpecs: {display:'block'},
+sidebarSpecs: {marginTop:22,padding:'20px 0 0',borderRadius:0,backgroundColor:'transparent'},
+sidebarSpecGrid: {gridTemplateColumns:'repeat(2,minmax(0,1fr))'},
+specGrid: {display: 'grid', gridTemplateColumns: {[media.desktop]: 'repeat(3,minmax(0,1fr))', default: 'repeat(auto-fit,minmax(min(100%,max(9em,calc(50% - 4px))),1fr))'}, gap: {[media.mobile]: 6, default: 8}, margin: '10px 0 0', padding: 0, fontSize: 14},
 spec: {display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: 4, minWidth: 0, minHeight: {[media.mobile]: 56, default: 68}, padding: {[media.mobile]: 8, default: 12}, borderRadius: $.radiusSm, backgroundColor: $.surface},
-specLabel: {color: $.muted, fontFamily: $.fontSans, fontSize: {[media.mobile]: 12, default: 13}, fontWeight: 400, lineHeight: {[media.mobile]: '16px', default: '18px'}},
-image: {display: 'block', width: '100%', height: 'auto'},
+specLabel: {color: $.muted, fontFamily: $.fontSans, fontSize: {[media.mobile]: 12, [media.desktop]: $.desktopSupportSize, default: 13}, fontWeight: 400, lineHeight: {[media.mobile]: '16px', [media.desktop]: '20px', default: '18px'}},
 dividerHeading: {display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 10, color: '#202024', fontSize: 14, fontWeight: 500, lineHeight: '22px'},
-dividerLine: {flexGrow: 1, height: 1, backgroundColor: '#e7e7e7'},
 comparison: {marginTop: 20, paddingBottom: 18},
 comparisonHeading: {fontSize: 14, fontWeight: 600, lineHeight: '22px'},
 comparisonGraphic: {position: 'relative', minHeight: 226, marginTop: 18},
@@ -123,28 +119,23 @@ savingsStripe: {position: 'absolute', top: 34, left: '50%', width: 24, height: 1
 comparisonCar: {position: 'absolute', top: 48, left: '31%', width: 152, height: 71, objectFit: 'contain'},
 comparisonRows: {position: 'absolute', top: 122, left: 25, right: 25},
 comparisonRow: {display: 'flex', alignItems: 'center', gap: 8, position: 'relative', minHeight: 30, color: '#535353', fontSize: 14, lineHeight: '20px'},
-comparisonLine: {position: 'absolute', left: 96, top: 17, height: 3, borderTopColor: '#a9a9a9', borderTopStyle: 'dashed', borderTopWidth: 2},
-primaryLine: {borderTopColor: '#f77400'},
-comparisonValue: {marginLeft: 'auto', color: '#202024', fontSize: 11, fontWeight: 500},
+comparisonLine: {position: 'absolute', left: 96, top: 17, height: 3,},
+primaryLine: {},
+comparisonValue: {marginLeft: 'auto', color: '#202024', fontSize: {[media.desktop]: $.desktopLabelSize, default: 11}, fontWeight: 500},
 primaryValue: {color: '#f17400'},
 featuresAfterSummary:{marginTop:16},
-specValue:{display:'flex',alignItems:'center',justifyContent:'space-between',gap:4,minWidth:0,margin:0,color:$.ink,fontFamily:$.fontSans,fontSize:{[media.mobile]:14,default:15},fontWeight:600,lineHeight:{[media.mobile]:'20px',default:'22px'},overflowWrap:'anywhere'},
+specValue:{display:'flex',alignItems:'center',justifyContent:'space-between',gap:4,minWidth:0,margin:0,color:$.ink,fontFamily:$.fontSans,fontSize:{[media.mobile]:14,[media.desktop]:$.desktopTextSize,default:15},fontWeight:600,lineHeight:{[media.mobile]:'20px',[media.desktop]:'24px',default:'22px'},overflowWrap:'anywhere'},
 specInfo:{display:'grid',placeItems:'center',flexShrink:0,width:44,height:44,padding:0,color:$.ink,borderWidth:0,borderRadius:'50%',backgroundColor:$.surfaceAlt,cursor:'pointer'},
 features: {scrollMarginTop: 152, marginTop: 16, padding: 16, borderRadius: $.radiusMd, backgroundColor: $.surfaceAlt},
-allFeatures: {display:'flex',alignItems:'center',justifyContent:'center',gap:8,width:'100%',minHeight:44,marginTop:12,padding:'10px 12px',color:$.ink,fontFamily:$.fontSans,fontSize:14,fontWeight:600,lineHeight:'20px',borderRadius:$.radiusSm,backgroundColor:{default:$.line,':hover':'#dcdce0'},outlineOffset:3},
-sectionHeading: {color: $.ink, fontFamily: $.fontSans, fontSize: 18, fontWeight: 600, lineHeight: '26px'},
-sectionText: {marginTop: 8, color: $.muted, fontFamily: $.fontSans, fontSize: 14, fontWeight: 400, lineHeight: '21px'},
+allFeatures: {display:'flex',alignItems:'center',justifyContent:'center',gap:8,width:'100%',minHeight:44,marginTop:12,padding:'10px 12px',color:$.ink,fontFamily:$.fontSans,fontSize:14,fontWeight:500,lineHeight:'20px',borderWidth:1,borderStyle:'solid',borderColor:$.controlBorder,borderRadius:$.radiusPill,backgroundColor:{default:$.surface,':hover':$.rail},outlineOffset:3},
+sectionHeading: {color: $.ink, fontFamily: $.fontSans, fontSize: 18, fontWeight: 600, lineHeight: '26px', overflowWrap: 'anywhere'},
 featureHighlights: {display: 'grid', gridTemplateColumns: {[media.mobile]:'1fr',default:'repeat(2,minmax(0,1fr))'}, gap: 8, margin: '12px 0 0', padding: 0, listStyle:'none', color: $.ink, fontFamily: $.fontSans, fontSize: 14, lineHeight: '21px'},
 featureItem: {display: 'flex', alignItems: 'center', gap: 10, minWidth: 0, minHeight: 44, padding: '10px 12px', borderRadius: $.radiusSm, backgroundColor: $.surface, overflowWrap: 'anywhere'},
 featureCheck: {display: 'grid', placeItems: 'center', flexShrink: 0, width: 18, height: 18, color: $.surface, borderRadius: '50%', backgroundColor: $.ink},
-action: {display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 8, width: '100%', minHeight: 44, marginTop: 12, padding: '10px 12px', color: $.ink, fontFamily: $.fontSans, fontSize: 14, fontWeight: 500, lineHeight: '21px', textAlign: 'left', borderWidth: 0, borderRadius: 12, backgroundColor: $.surface, cursor: 'pointer'},
-condition: {scrollMarginTop: 152, marginTop: 16},
-inspectionCard: {marginTop: 18, overflow: 'hidden', borderRadius: 10, backgroundColor: '#fff', boxShadow: '0 8px 15px rgba(0,0,0,.12)'},
-tourHeading: {marginTop: 17, color: '#202024', fontSize: 20, fontWeight: 600, lineHeight: '27px'},
-tour: {display: 'block', width: '100%', marginTop: 13, padding: 0, overflow: 'hidden', borderWidth: 0, borderRadius: 14, backgroundColor: '#fff', cursor: 'pointer'},
-recordGroup: {marginTop:24,overflow:'hidden',borderColor:$.line,borderStyle:'solid',borderWidth:1,borderRadius:$.radiusMd,backgroundColor:$.surface},
-recordSection: {scrollMarginTop:152,borderBottomColor:$.line,borderBottomStyle:'solid',borderBottomWidth:{default:1,':last-child':0}},
-recordRow: {display:'grid',gridTemplateColumns:'minmax(0,1fr) auto 16px',alignItems:'center',gap:8,width:'100%',minHeight:56,padding:'10px 12px',textAlign:'left',color:$.ink,borderWidth:0,backgroundColor:{default:$.surface,':hover':$.surfaceAlt},outlineOffset:-3,cursor:'pointer'},
-recordTitle: {fontFamily:$.fontSans,fontSize:16,fontWeight:500,lineHeight:'22px'},
-recordStatus: {color:$.muted,fontFamily:$.fontSans,fontSize:13,fontWeight:400,lineHeight:'18px'}
+recordGroup: {display:'grid',gap:8,marginTop:24},
+recordSection: {scrollMarginTop:152},
+recordRow: {display:'grid',gridTemplateColumns:'36px minmax(0,1fr) 20px',alignItems:'center',gap:12,width:'100%',minHeight:72,padding:12,textAlign:'left',color:$.ink,borderColor:$.line,borderStyle:'solid',borderWidth:1,borderRadius:$.radiusMd,backgroundColor:{default:$.surfaceAlt,':hover':$.line},outlineOffset:3,cursor:'pointer'},
+recordIcon: {display:'grid',placeItems:'center',width:36,height:36,borderRadius:'50%',backgroundColor:$.surface},
+recordTitle: {display:'block',fontFamily:$.fontSans,fontSize:16,fontWeight:500,lineHeight:'22px'},
+recordStatus: {display:'block',marginTop:2,color:$.muted,fontFamily:$.fontSans,fontSize:{[media.desktop]:$.desktopSupportSize,default:13},fontWeight:400,lineHeight:{[media.desktop]:'20px',default:'18px'}}
 });

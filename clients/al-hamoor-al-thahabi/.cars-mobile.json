@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "format": "mobile-preview-v1",
+  "dealer": "al-hamoor-al-thahabi",
+  "name": "Al Hamoor Al Thahabi Used Cars",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/mobile",
+    "digest": "4e858bd9dbd3ef5b52cd904c4ed97bbfdc0f4cfe02b5a3840580f38026b867a0",
+    "tree": "2b02829e157071e305bfb2dff10ef18e85c8a35e"
+  },
+  "sourceDigest": "7f3c62ae2842c2217419c1b33a03c38e3bb347811a5b6f917d417df965b9812b",
+  "inventory": {
+    "mode": "dated-listing-snapshot",
+    "count": 8,
+    "observedAt": "2026-09-09"
+  },
+  "personalization": {
+    "profileSha256": "0f3e1ae21307d103974d832bd8dff175317b42f45713387f1c9a1c4f7ba5f9ca",
+    "logoPaths": [
+      "/dealer-brand/logo-on-light.webp",
+      "/dealer-brand/logo-on-dark.webp"
+    ],
+    "mediaPaths": [
+      "/dealer/inventory/965722-1.webp",
+      "/dealer/inventory/965722-2.webp",
+      "/dealer/inventory/965722-3.webp",
+      "/dealer/inventory/965722-4.webp",
+      "/dealer/inventory/1005647-1.webp",
+      "/dealer/inventory/1005647-2.webp",
+      "/dealer/inventory/1005647-3.webp",
+      "/dealer/inventory/1005647-4.webp",
+      "/dealer/inventory/1010924-1.webp",
+      "/dealer/inventory/1010924-2.webp",
+      "/dealer/inventory/1010924-3.webp",
+      "/dealer/inventory/1010924-4.webp",
+      "/dealer/inventory/1018774-1.webp",
+      "/dealer/inventory/1018774-2.webp",
+      "/dealer/inventory/1018774-3.webp",
+      "/dealer/inventory/1018774-4.webp",
+      "/dealer/inventory/916417-1.webp",
+      "/dealer/inventory/916417-2.webp",
+      "/dealer/inventory/916417-3.webp",
+      "/dealer/inventory/916417-4.webp",
+      "/dealer/inventory/906007-1.webp",
+      "/dealer/inventory/906007-2.webp",
+      "/dealer/inventory/906007-3.webp",
+      "/dealer/inventory/906007-4.webp",
+      "/dealer/inventory/1017078-1.webp",
+      "/dealer/inventory/1017078-2.webp",
+      "/dealer/inventory/1017078-3.webp",
+      "/dealer/inventory/1017078-4.webp",
+      "/dealer/inventory/969234-1.webp",
+      "/dealer/inventory/969234-2.webp",
+      "/dealer/inventory/969234-3.webp",
+      "/dealer/inventory/969234-4.webp"
+    ],
+    "mediaMappings": [],
+    "contentPaths": [
+      "mobile/src/lib/showroom-config.ts",
+      "mobile/src/lib/catalog.ts",
+      "mobile/src/lib/dealers.ts",
+      "mobile/src/lib/dealer-inventory.json",
+      "mobile/src/lib/locale.ts",
+      "mobile/src/lib/search.ts",
+      "mobile/src/components/NativeDealerCards.tsx",
+      "mobile/src/components/DealerScreens.tsx",
+      "mobile/src/components/VehicleCard.tsx",
+      "mobile/src/components/ShowroomVehicleCard.tsx",
+      "mobile/src/components/VehicleSections.tsx",
+      "mobile/src/lib/mobile-mileage.ts",
+      "mobile/src/lib/types.ts",
+      "mobile/src/components/DesktopVehicleSummary.tsx",
+      "mobile/src/components/NativeCarPark.tsx",
+      "mobile/src/components/ShowroomFilterSheet.tsx",
+      "mobile/src/lib/vehicle-copy.ts"
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

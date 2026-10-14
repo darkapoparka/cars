@@ -47,7 +47,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "АСКО 96",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-7282df2f20025b9b/logo-on-light.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": true
@@ -109,7 +109,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "АСКО 96",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-7282df2f20025b9b/logo-on-light.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": true
@@ -171,7 +171,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "АСКО 96",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-7282df2f20025b9b/logo-on-light.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": true
@@ -233,7 +233,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "АСКО 96",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-7282df2f20025b9b/logo-on-light.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false
@@ -295,7 +295,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "АСКО 96",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-7282df2f20025b9b/logo-on-light.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false
@@ -357,7 +357,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "АСКО 96",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-7282df2f20025b9b/logo-on-light.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false
@@ -418,7 +418,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "АСКО 96",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-7282df2f20025b9b/logo-on-light.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false
@@ -480,7 +480,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "АСКО 96",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-7282df2f20025b9b/logo-on-light.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false
@@ -530,7 +530,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "АСКО 96",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-7282df2f20025b9b/logo-on-light.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false
@@ -580,7 +580,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "АСКО 96",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-7282df2f20025b9b/logo-on-light.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false
@@ -642,7 +642,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "АСКО 96",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-7282df2f20025b9b/logo-on-light.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false
@@ -704,7 +704,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "АСКО 96",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-7282df2f20025b9b/logo-on-light.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false
@@ -766,7 +766,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "АСКО 96",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-7282df2f20025b9b/logo-on-light.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false
@@ -828,7 +828,119 @@ export const mockListings: VehicleListing[] = [
       "displayName": "АСКО 96",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-7282df2f20025b9b/logo-on-light.webp"
+    },
+    "publishedAt": "2026-09-06T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "dealer-f946e6e781d2ff17ae6e8d66",
+    "slug": "bmw-x3-40d-2022-21786540153108868",
+    "category": "car",
+    "dealerOrgId": "dealer-asko-96",
+    "status": "active",
+    "title": "BMW X3 М40D",
+    "description": "BMW X3 М40D, 2022 г., дизел, 90 800 км. За актуална наличност, оборудване и условия се свържете с АСКО 96.",
+    "price": {
+      "amount": 43900,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/assets/asko96/vehicle-15-1.webp",
+        "alt": "BMW X3 М40D"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "София",
+      "region": "София",
+      "country": "България"
+    },
+    "spec": {
+      "make": "BMW",
+      "model": "X3 М40D",
+      "year": 2022,
+      "bodyType": "suv",
+      "fuelType": "diesel",
+      "transmission": "automatic",
+      "mileageValue": 90800,
+      "mileageUnit": "km",
+      "enginePowerHp": 340,
+      "colorExterior": "Черен"
+    },
+    "seller": {
+      "id": "dealer-asko-96",
+      "type": "dealer",
+      "displayName": "АСКО 96",
+      "verificationStatus": "unverified",
+      "city": "София",
+      "logoUrl": "/dealer-brand/v2-7282df2f20025b9b/logo-on-light.webp"
+    },
+    "publishedAt": "2026-09-06T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "dealer-def8b533621088299aeb0432",
+    "slug": "bmw-550-m-2013-11786173977658651",
+    "category": "car",
+    "dealerOrgId": "dealer-asko-96",
+    "status": "active",
+    "title": "BMW 550 M",
+    "description": "BMW 550 M, 2013 г., дизел, 184 120 км. За актуална наличност, оборудване и условия се свържете с АСКО 96.",
+    "price": {
+      "amount": 17500,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/assets/asko96/vehicle-16-1.webp",
+        "alt": "BMW 550 M"
+      },
+      {
+        "url": "/assets/asko96/vehicle-16-2.webp",
+        "alt": "BMW 550 M"
+      },
+      {
+        "url": "/assets/asko96/vehicle-16-3.webp",
+        "alt": "BMW 550 M"
+      },
+      {
+        "url": "/assets/asko96/vehicle-16-4.webp",
+        "alt": "BMW 550 M"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "София",
+      "region": "София",
+      "country": "България"
+    },
+    "spec": {
+      "make": "BMW",
+      "model": "550 M",
+      "year": 2013,
+      "bodyType": "sedan",
+      "fuelType": "diesel",
+      "transmission": "automatic",
+      "mileageValue": 184120,
+      "mileageUnit": "km",
+      "enginePowerHp": 381,
+      "colorExterior": "Черен"
+    },
+    "seller": {
+      "id": "dealer-asko-96",
+      "type": "dealer",
+      "displayName": "АСКО 96",
+      "verificationStatus": "unverified",
+      "city": "София",
+      "logoUrl": "/dealer-brand/v2-7282df2f20025b9b/logo-on-light.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false

@@ -1401,6 +1401,206 @@ export const mockListings: VehicleListing[] = [
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
+  },
+  {
+    "id": "dealer-fd2448d92abec601379fd0e7",
+    "slug": "mercedes-benz-glc-2-2cdi-170hp-4-matic-autonatic-navi-2016-21784142258144582",
+    "category": "car",
+    "dealerOrgId": "dealer-automarket-varna",
+    "status": "active",
+    "title": "Mercedes-Benz GLC 2.2CDI 170HP 4-Matic Autonatic Navi",
+    "description": "Mercedes-Benz GLC 2.2CDI 170HP 4-Matic Autonatic Navi, 2016 г., 165 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.",
+    "price": {
+      "amount": 21999,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/assets/automarket/vehicle-15-1.webp",
+        "alt": "Mercedes-Benz GLC 2.2CDI 170HP 4-Matic Autonatic Navi"
+      },
+      {
+        "url": "/assets/automarket/vehicle-15-2.webp",
+        "alt": "Mercedes-Benz GLC 2.2CDI 170HP 4-Matic Autonatic Navi"
+      },
+      {
+        "url": "/assets/automarket/vehicle-15-3.webp",
+        "alt": "Mercedes-Benz GLC 2.2CDI 170HP 4-Matic Autonatic Navi"
+      },
+      {
+        "url": "/assets/automarket/vehicle-15-4.webp",
+        "alt": "Mercedes-Benz GLC 2.2CDI 170HP 4-Matic Autonatic Navi"
+      },
+      {
+        "url": "/assets/automarket/vehicle-15-5.webp",
+        "alt": "Mercedes-Benz GLC 2.2CDI 170HP 4-Matic Autonatic Navi"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Варна",
+      "region": "Варна",
+      "country": "България"
+    },
+    "features": [
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "LED фарове",
+        "en": "LED фарове"
+      },
+      {
+        "bg": "Steptronic",
+        "en": "Steptronic"
+      },
+      {
+        "bg": "Tiptronic",
+        "en": "Tiptronic"
+      },
+      {
+        "bg": "USB",
+        "en": "USB"
+      },
+      {
+        "bg": "audio\\video",
+        "en": "audio\\video"
+      }
+    ],
+    "spec": {
+      "make": "Mercedes-Benz",
+      "model": "GLC 2.2CDI 170HP 4-Matic Autonatic Navi",
+      "year": 2016,
+      "bodyType": "suv",
+      "fuelType": "diesel",
+      "transmission": "automatic",
+      "mileageValue": 165000,
+      "mileageUnit": "km",
+      "enginePowerHp": 170,
+      "colorExterior": "Бял"
+    },
+    "seller": {
+      "id": "dealer-automarket-varna",
+      "type": "dealer",
+      "displayName": "Аутомаркет Варна",
+      "verificationStatus": "unverified",
+      "city": "Варна",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
+    },
+    "publishedAt": "2026-09-07T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "dealer-408e6f731ef5793d8b166a63",
+    "slug": "audi-a4-allroad-3-0tdi-272hp-automatic-quattro-digital-2016-11750340593495216",
+    "category": "car",
+    "dealerOrgId": "dealer-automarket-varna",
+    "status": "active",
+    "title": "Audi A4 Allroad 3.0TDI 272HP AUTOMATIC QUATTRO DIGITAL",
+    "description": "Audi A4 Allroad 3.0TDI 272HP AUTOMATIC QUATTRO DIGITAL, 2016 г., 218 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.",
+    "price": {
+      "amount": 15999,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/assets/automarket/vehicle-16-1.webp",
+        "alt": "Audi A4 Allroad 3.0TDI 272HP AUTOMATIC QUATTRO DIGITAL"
+      },
+      {
+        "url": "/assets/automarket/vehicle-16-2.webp",
+        "alt": "Audi A4 Allroad 3.0TDI 272HP AUTOMATIC QUATTRO DIGITAL"
+      },
+      {
+        "url": "/assets/automarket/vehicle-16-3.webp",
+        "alt": "Audi A4 Allroad 3.0TDI 272HP AUTOMATIC QUATTRO DIGITAL"
+      },
+      {
+        "url": "/assets/automarket/vehicle-16-4.webp",
+        "alt": "Audi A4 Allroad 3.0TDI 272HP AUTOMATIC QUATTRO DIGITAL"
+      },
+      {
+        "url": "/assets/automarket/vehicle-16-5.webp",
+        "alt": "Audi A4 Allroad 3.0TDI 272HP AUTOMATIC QUATTRO DIGITAL"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Варна",
+      "region": "Варна",
+      "country": "България"
+    },
+    "features": [
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "LED фарове",
+        "en": "LED фарове"
+      },
+      {
+        "bg": "Steptronic",
+        "en": "Steptronic"
+      },
+      {
+        "bg": "Tiptronic",
+        "en": "Tiptronic"
+      },
+      {
+        "bg": "USB",
+        "en": "USB"
+      }
+    ],
+    "spec": {
+      "make": "Audi",
+      "model": "A4 Allroad 3.0TDI 272HP AUTOMATIC QUATTRO DIGITAL",
+      "year": 2016,
+      "bodyType": "wagon",
+      "fuelType": "diesel",
+      "transmission": "automatic",
+      "mileageValue": 218000,
+      "mileageUnit": "km",
+      "enginePowerHp": 272,
+      "colorExterior": "Черен"
+    },
+    "seller": {
+      "id": "dealer-automarket-varna",
+      "type": "dealer",
+      "displayName": "Аутомаркет Варна",
+      "verificationStatus": "unverified",
+      "city": "Варна",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
+    },
+    "publishedAt": "2026-09-07T09:00:00.000Z",
+    "promoted": false
   }
 ];
 

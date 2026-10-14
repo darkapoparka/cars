@@ -1,0 +1,22 @@
+{
+  "generatedAt": "2026-10-04T02:05:37.143Z",
+  "node": "v22.20.0",
+  "head": "6c92fdc2758d5d5b985a9c8a9004c7bb969d313a",
+  "command": "npm run validate",
+  "exitCode": 0,
+  "svelteErrors": 0,
+  "svelteWarnings": 0,
+  "productionBuildPassed": true,
+  "finalCompactCssInBuild": true,
+  "mobilePolishStatus": "stopped-before-first-result",
+  "reflowCases": 2,
+  "nativeCases": 10,
+  "nativeWidths": [
+    280,
+    300,
+    320,
+    349,
+    390
+  ],
+  "localOnly": true
+}

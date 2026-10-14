@@ -26,6 +26,7 @@ import {
 import { log } from "@repo/observability/log";
 import { cache } from "react";
 import { getCurrentPublicDataMode } from "./public-data-policy";
+import { buildPublicInventoryTaxonomy } from "./public-inventory-taxonomy";
 
 export const PUBLIC_LISTING_PAGE_SIZE = 24;
 
@@ -96,11 +97,7 @@ const getDemoListings = (
       (categoryCountMap.get(listing.category) ?? 0) + 1
     );
   }
-  const filtered = getMockListings({ ...filters, page: 1 })
-    .map(withLeadSiteDemoIdentity)
-    .map(
-      (listing) => withDemoDestination(listing, filters.deliverTo) ?? listing
-    );
+  const filtered = getMockListings({ ...filters, page: 1 });
   const modelCountListings = getMockListings({
     ...filters,
     derivative: undefined,
@@ -136,7 +133,12 @@ const getDemoListings = (
       ),
       status: "exact",
     },
-    listings: filtered.slice(offset, offset + PUBLIC_LISTING_PAGE_SIZE),
+    listings: filtered
+      .slice(offset, offset + PUBLIC_LISTING_PAGE_SIZE)
+      .map(withLeadSiteDemoIdentity)
+      .map(
+        (listing) => withDemoDestination(listing, filters.deliverTo) ?? listing
+      ),
     totalListings: filtered.length,
   };
 };
@@ -331,12 +333,21 @@ export const getPublicVehicleTaxonomy = cache(
     );
 
     if (requireDatabaseOrDemo() === "demo") {
-      return fallback;
+      return fallback.length
+        ? fallback
+        : buildPublicInventoryTaxonomy(getDemoTaxonomy(category));
     }
 
     try {
       const taxonomy = await getVehicleTaxonomyOptions(category);
-      return taxonomy.length > 0 ? taxonomy : fallback;
+      if (taxonomy.length > 0) {
+        return taxonomy;
+      }
+      return fallback.length
+        ? fallback
+        : buildPublicInventoryTaxonomy(
+            await getPublicMakeModelTaxonomy(category)
+          );
     } catch (error) {
       log.warn("Vehicle taxonomy query failed; using curated fallback.", {
         error,
@@ -345,6 +356,18 @@ export const getPublicVehicleTaxonomy = cache(
     }
   }
 );
+
+/** The full filter draft can change category before navigation applies it. */
+export const getPublicVehicleTaxonomies = cache(async () => {
+  const [car, truck, motorbike, van, lease] = await Promise.all([
+    getPublicVehicleTaxonomy("car"),
+    getPublicVehicleTaxonomy("truck"),
+    getPublicVehicleTaxonomy("motorbike"),
+    getPublicVehicleTaxonomy("van"),
+    getPublicVehicleTaxonomy("lease"),
+  ]);
+  return { car, truck, motorbike, van, lease };
+});
 
 export const getPublicMakeModelTaxonomy = cache(
   async (category: VehicleCategory = "car"): Promise<PublicMakeModelPair[]> => {
@@ -388,13 +411,13 @@ const isChineseCollectionListing = (listing: VehicleListing) =>
 
 export const getChineseEvHybridCollection = async (page: number) => {
   if (requireDatabaseOrDemo() === "demo") {
-    const matches = mockListings
-      .filter(isChineseCollectionListing)
-      .map(withLeadSiteDemoIdentity);
+    const matches = mockListings.filter(isChineseCollectionListing);
     const offset = (page - 1) * PUBLIC_LISTING_PAGE_SIZE;
 
     return {
-      listings: matches.slice(offset, offset + PUBLIC_LISTING_PAGE_SIZE),
+      listings: matches
+        .slice(offset, offset + PUBLIC_LISTING_PAGE_SIZE)
+        .map(withLeadSiteDemoIdentity),
       totalListings: matches.length,
     };
   }

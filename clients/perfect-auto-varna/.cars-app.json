@@ -3,17 +3,17 @@
   "dealer": "perfect-auto-varna",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "4e184777567849a2c5b4a9e4a3e652252179c29c",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
     "path": "templates/app",
-    "digest": "fad0067e48d7bd7e1c5177c5e91e2bc5767352e2c16621cb458d18a081f7c541",
-    "tree": "749512ff762c25272d1474225ff653dd4c88f0fe"
+    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1",
+    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76"
   },
-  "appDigest": "f2fd451e34433b69aff623db7bef6bfd4256afc6f4d7eefd1176e80cf7f51a1d",
+  "appDigest": "2c0afabf06873134b0082532c715ecde5204ea444b62817fee24f84c12a99cbe",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "perfect-auto-varna",
     "profile": "auto-best/src/lib/data/dealer-profile.json",
-    "profileSha256": "5a0493840c03e28c2aaa8e117ff9a1c1aaa6223f3f460c0b241d66f32b108e56",
+    "profileSha256": "3293bd90aae1e0878b408c9773e92819fb306cf6b4232a20898c8e0529c0cd8f",
     "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
     "vehicles": 6,
     "currency": "EUR",
@@ -211,13 +211,47 @@
         "sha256": "010b9724f866f9c7d16cb1a22885ad3ea13de909932534e37332834b0112fb15",
         "role": "vehicle"
       }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "mercedes-benz-ml-320-cdi-2006-21788859055085650",
+        "sourceValue": 249000,
+        "sourceUnit": "km",
+        "canonicalKm": 249000
+      },
+      {
+        "slug": "mercedes-benz-g-350-4-matic-facelift-bluetec-full-2015-21788174780697334",
+        "sourceValue": 151000,
+        "sourceUnit": "km",
+        "canonicalKm": 151000
+      },
+      {
+        "slug": "audi-q7-50-tdi-facelift-quattro-s-line-maxton-full-rs-2022-21788174574608668",
+        "sourceValue": 136000,
+        "sourceUnit": "km",
+        "canonicalKm": 136000
+      },
+      {
+        "slug": "lexus-nx-450-full-mark-lev-head-u-2026-21787209952978104",
+        "sourceValue": 0,
+        "sourceUnit": "km",
+        "canonicalKm": 0
+      },
+      {
+        "slug": "bmw-x6-30d-xdrive-swarovski-m-packet-maxton-2022-21787209746596224",
+        "sourceValue": 138000,
+        "sourceUnit": "km",
+        "canonicalKm": 138000
+      },
+      {
+        "slug": "ford-mustang-2016-11786890129374054",
+        "sourceValue": 48000,
+        "sourceUnit": "km",
+        "canonicalKm": 48000
+      }
     ]
   },
-  "baseDeployment": {
-    "id": "dpl_4iBrGLpUYiSLvDFBEKG5GfHjPhwU",
-    "url": "https://cars-perfectauto.vercel.app/",
-    "checkedAt": "2026-09-28T02:25:54.067Z"
-  },
-  "baseReceiptSha256": "97f1214e914fcfc93d2ba18f429a8f487d3f2d549ccdda9985b54d90ec414445",
-  "refreshedAt": "2026-10-10T23:10:07.371Z"
+  "needsDealerQA": true,
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-13T03:01:39.497Z"
 }

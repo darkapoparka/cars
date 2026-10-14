@@ -27,9 +27,9 @@
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Al+Hamoor+Al+Thahabi+Souk+Al+Haraj+353+Sharjah",
     "mapsEmbedUrl": "https://maps.google.com/maps?q=Al+Hamoor+Al+Thahabi+Souk+Al+Haraj+353+Sharjah&output=embed",
     "accent": "#c13f38",
-    "logo": "/dealer-brand/logo-on-light.webp",
-    "logoLight": "/dealer-brand/logo-on-light.webp",
-    "logoDark": "/dealer-brand/logo-on-dark.webp",
+    "logo": "/dealer-brand/v2-16cb6c74cf4375bc/logo-on-light.webp",
+    "logoLight": "/dealer-brand/v2-16cb6c74cf4375bc/logo-on-light.webp",
+    "logoDark": "/dealer-brand/v2-16cb6c74cf4375bc/logo-on-dark.webp",
     "socialLinks": {
       "facebook": "",
       "instagram": "",
@@ -116,6 +116,7 @@
       "currency": "AED",
       "mileageValue": 22000,
       "mileageUnit": "km",
+      "mileageOnRequest": false,
       "body": "Sedan",
       "bodyType": "sedan",
       "fuel": "Petrol",
@@ -196,6 +197,7 @@
       "currency": "AED",
       "mileageValue": 56000,
       "mileageUnit": "km",
+      "mileageOnRequest": false,
       "body": "SUV/Crossover",
       "bodyType": "suv",
       "fuel": "Petrol",
@@ -276,6 +278,7 @@
       "currency": "AED",
       "mileageValue": 212000,
       "mileageUnit": "km",
+      "mileageOnRequest": false,
       "body": "SUV/Crossover",
       "bodyType": "suv",
       "fuel": "Petrol",
@@ -356,6 +359,7 @@
       "currency": "AED",
       "mileageValue": 95000,
       "mileageUnit": "km",
+      "mileageOnRequest": false,
       "body": "Sedan",
       "bodyType": "sedan",
       "fuel": "Petrol",
@@ -436,6 +440,7 @@
       "currency": "AED",
       "mileageValue": 121000,
       "mileageUnit": "km",
+      "mileageOnRequest": false,
       "body": "SUV/Crossover",
       "bodyType": "suv",
       "fuel": "Petrol",
@@ -516,6 +521,7 @@
       "currency": "AED",
       "mileageValue": 106000,
       "mileageUnit": "km",
+      "mileageOnRequest": false,
       "body": "SUV/Crossover",
       "bodyType": "suv",
       "fuel": "Petrol",
@@ -596,6 +602,7 @@
       "currency": "AED",
       "mileageValue": 185000,
       "mileageUnit": "km",
+      "mileageOnRequest": false,
       "body": "Sedan",
       "bodyType": "sedan",
       "fuel": "Petrol",
@@ -676,6 +683,7 @@
       "currency": "AED",
       "mileageValue": 116000,
       "mileageUnit": "km",
+      "mileageOnRequest": false,
       "body": "Sedan",
       "bodyType": "sedan",
       "fuel": "Petrol",
@@ -801,6 +809,7 @@
     ]
   },
   "sourceCount": 8,
+  "stockKind": "",
   "logoContract": {
     "schemaVersion": 1,
     "dealer": "al-hamoor-al-thahabi",
@@ -809,19 +818,19 @@
     "originalSha256": "6918488ad30a9d46195974ebe1b83fe56abc9de2d61151c22ade131019023b97",
     "assets": {
       "onLight": {
-        "publicPath": "/dealer-brand/logo-on-light.webp",
-        "sha256": "3a945d87e9198790cc0cc15256bbfdec992a95c0d7df6a2edbc31f1f0ebe07e9",
-        "bytes": 147022
+        "publicPath": "/dealer-brand/v2-16cb6c74cf4375bc/logo-on-light.webp",
+        "sha256": "643709b8fcc2872b40a0e08b550bd88cacb5f6bd6aec2504dbbc67f55252aaf0",
+        "bytes": 224892
       },
       "onDark": {
-        "publicPath": "/dealer-brand/logo-on-dark.webp",
-        "sha256": "3ae4cc8473042f99c7765d9eff354cf32a9456e032d86fd569613a7d3b727516",
-        "bytes": 146756
+        "publicPath": "/dealer-brand/v2-16cb6c74cf4375bc/logo-on-dark.webp",
+        "sha256": "3708cb93366efc0223514bf7f3cb3658b412220088babe615718ceee64869114",
+        "bytes": 69946
       },
       "onAccent": {
-        "publicPath": "/dealer-brand/logo-on-accent.webp",
-        "sha256": "4da527b2b824355184a81691f25b19771d9368f31f4f4c5047436bbf3372f3d5",
-        "bytes": 102912
+        "publicPath": "/dealer-brand/v2-16cb6c74cf4375bc/logo-on-accent.webp",
+        "sha256": "3708cb93366efc0223514bf7f3cb3658b412220088babe615718ceee64869114",
+        "bytes": 69946
       }
     },
     "preparedAt": "2026-09-19T04:48:58.575Z",

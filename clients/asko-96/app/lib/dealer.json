@@ -4,15 +4,16 @@
   "name": "АСКО 96",
   "shortName": "АСКО 96",
   "logo": {
-    "light": "/dealer-app/logo-light-d4ada78e14c425468dd1.webp",
-    "dark": "/dealer-app/logo-dark-71a4ab99b7d35b9b758b.webp",
-    "icon": "/dealer-app/icon.png"
+    "light": "/dealer-brand/v2-7282df2f20025b9b/logo-on-light.webp",
+    "dark": "/dealer-brand/v2-7282df2f20025b9b/logo-on-dark.webp",
+    "icon": "/dealer-brand/v2-7282df2f20025b9b/app-icon.png"
   },
   "defaultLocale": "bg",
   "enabledLocales": [
     "en",
     "bg"
   ],
+  "welcomeEnabled": true,
   "country": "BG",
   "currency": "EUR",
   "city": "София",
@@ -23,6 +24,29 @@
   "mapsUrl": "https://www.google.com/maps/search/?api=1&query=%D0%90%D0%A1%D0%9A%D0%9E%2096%2C%20%D0%91%D0%BE%D1%82%D0%B5%D0%B2%D0%B3%D1%80%D0%B0%D0%B4%D1%81%D0%BA%D0%BE%20%D1%88%D0%BE%D1%81%D0%B5%20300%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F",
   "website": "https://asko96.bg/",
   "whatsappUrl": "",
+  "socialLinks": [
+    {
+      "label": "Facebook",
+      "url": "https://www.facebook.com/p/Asko96-100050328800477/"
+    },
+    {
+      "label": "Instagram",
+      "url": ""
+    },
+    {
+      "label": "Mobile.bg",
+      "url": ""
+    },
+    {
+      "label": "Cars.bg",
+      "url": ""
+    },
+    {
+      "label": "YouTube",
+      "url": "https://www.youtube.com/@asko96bulgaria"
+    }
+  ],
+  "referenceClaimsApproved": false,
   "services": [
     "Продажба на автомобили",
     "Замяна и изкупуване",

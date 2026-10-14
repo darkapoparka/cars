@@ -3,17 +3,17 @@
   "dealer": "avangard-auto",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "4e184777567849a2c5b4a9e4a3e652252179c29c",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
     "path": "templates/app",
-    "digest": "fad0067e48d7bd7e1c5177c5e91e2bc5767352e2c16621cb458d18a081f7c541",
-    "tree": "749512ff762c25272d1474225ff653dd4c88f0fe"
+    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1",
+    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76"
   },
-  "appDigest": "835d086f0e872044a857d471ccdf779ca2c8109f10c5a61d98a5945a278f236d",
+  "appDigest": "e5dd10f943f2440a49e7422158a8c1dbfe5c077f3b9477c55c2244f85d1f3fbb",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "avangard-auto",
     "profile": "auto-best/src/lib/data/dealer-profile.json",
-    "profileSha256": "11ee6e28d42ca4e07d9a02f3f95e2a98c271490b6b7a3e4bd60add4a5c9ca4cb",
+    "profileSha256": "ab425aa3efb4114e2d4e33639a0946137f4210ea566d46d9e47ec76be5e3e01a",
     "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
     "vehicles": 16,
     "currency": "EUR",
@@ -415,13 +415,107 @@
         "sha256": "b98ce8e817d7c63fb3875c0c4d9832ac4dae10b5195d89f6201804ed27bc9eb6",
         "role": "vehicle"
       }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "vw-passat-alltrack-2018-11785010475119627",
+        "sourceValue": 220000,
+        "sourceUnit": "km",
+        "canonicalKm": 220000
+      },
+      {
+        "slug": "volvo-xc40-2-0d-2019-21783748809976935",
+        "sourceValue": 166000,
+        "sourceUnit": "km",
+        "canonicalKm": 166000
+      },
+      {
+        "slug": "volvo-xc40-t5-inscription-2019-21766322242220471",
+        "sourceValue": 278000,
+        "sourceUnit": "km",
+        "canonicalKm": 278000
+      },
+      {
+        "slug": "peugeot-208-1-6hdi-2016-11782450720679744",
+        "sourceValue": 214000,
+        "sourceUnit": "km",
+        "canonicalKm": 214000
+      },
+      {
+        "slug": "peugeot-2008-1-6hdi-2013-11782462832415648",
+        "sourceValue": 216000,
+        "sourceUnit": "km",
+        "canonicalKm": 216000
+      },
+      {
+        "slug": "nissan-qashqai-1-5dci-2018-21776284342452600",
+        "sourceValue": 175000,
+        "sourceUnit": "km",
+        "canonicalKm": 175000
+      },
+      {
+        "slug": "mitsubishi-outlander-2-2di-d-2014-21773782041228539",
+        "sourceValue": 167000,
+        "sourceUnit": "km",
+        "canonicalKm": 167000
+      },
+      {
+        "slug": "kia-sportage-1-7crdi-2014-21760385289842805",
+        "sourceValue": 179000,
+        "sourceUnit": "km",
+        "canonicalKm": 179000
+      },
+      {
+        "slug": "bmw-x1-2-0d-2016-21785012088488667",
+        "sourceValue": 138000,
+        "sourceUnit": "km",
+        "canonicalKm": 138000
+      },
+      {
+        "slug": "bmw-x1-2-0d-2010-21746821020349714",
+        "sourceValue": 187000,
+        "sourceUnit": "km",
+        "canonicalKm": 187000
+      },
+      {
+        "slug": "bmw-320-i-2013-11754080933689299",
+        "sourceValue": 187000,
+        "sourceUnit": "km",
+        "canonicalKm": 187000
+      },
+      {
+        "slug": "audi-sq5-3-0v6t-zf-2018-21779794798955793",
+        "sourceValue": 197000,
+        "sourceUnit": "km",
+        "canonicalKm": 197000
+      },
+      {
+        "slug": "audi-q7-premium-plus-2017-21786111867697018",
+        "sourceValue": 255000,
+        "sourceUnit": "km",
+        "canonicalKm": 255000
+      },
+      {
+        "slug": "audi-q5-sq5-3-0v6t-2018-21779802183945718",
+        "sourceValue": 197000,
+        "sourceUnit": "km",
+        "canonicalKm": 197000
+      },
+      {
+        "slug": "audi-q5-premium-plus-2018-21762503862293800",
+        "sourceValue": 206000,
+        "sourceUnit": "km",
+        "canonicalKm": 206000
+      },
+      {
+        "slug": "audi-a4-2-0tdi-2011-11787435697096424",
+        "sourceValue": 202000,
+        "sourceUnit": "km",
+        "canonicalKm": 202000
+      }
     ]
   },
-  "baseDeployment": {
-    "id": "dpl_7s84Qfrw75fathkXc7FK6mCchjZU",
-    "url": "https://cars-avangardauto.vercel.app/",
-    "checkedAt": "2026-09-28T02:25:34.538Z"
-  },
-  "baseReceiptSha256": "a1ccdc99352e85ec9d6a401f6c8e4313d6860c5cb596676cfcbb8c0f3e076a03",
-  "refreshedAt": "2026-10-10T23:10:21.447Z"
+  "needsDealerQA": true,
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-13T03:38:04.853Z"
 }

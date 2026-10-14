@@ -959,6 +959,144 @@ export const mockListings: VehicleListing[] = [
     },
     "publishedAt": "2026-01-01T09:00:00.000Z",
     "promoted": false
+  },
+  {
+    "id": "dealer-c21e3b90dee30a3e6cf3f857",
+    "slug": "2021-11781294210212810",
+    "category": "car",
+    "dealerOrgId": "dealer-eliqauto",
+    "status": "active",
+    "title": "BMW 330 I XDRIVE M PACK FACELIFT LED NAVI ЛИЗИНГ 100%",
+    "description": "2021 BMW 330 with M-Pack, xDrive, facelift. 258 hp, petrol, automatic transmission.",
+    "price": {
+      "amount": 29660,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/assets/eliqauto/cars/11781294210212810/img-01.webp",
+        "alt": "BMW 330 I XDRIVE M PACK FACELIFT LED NAVI ЛИЗИНГ 100%"
+      },
+      {
+        "url": "/assets/eliqauto/cars/11781294210212810/img-02.webp",
+        "alt": "BMW 330 I XDRIVE M PACK FACELIFT LED NAVI ЛИЗИНГ 100%"
+      },
+      {
+        "url": "/assets/eliqauto/cars/11781294210212810/img-03.webp",
+        "alt": "BMW 330 I XDRIVE M PACK FACELIFT LED NAVI ЛИЗИНГ 100%"
+      },
+      {
+        "url": "/assets/eliqauto/cars/11781294210212810/img-04.webp",
+        "alt": "BMW 330 I XDRIVE M PACK FACELIFT LED NAVI ЛИЗИНГ 100%"
+      },
+      {
+        "url": "/assets/eliqauto/cars/11781294210212810/img-05.webp",
+        "alt": "BMW 330 I XDRIVE M PACK FACELIFT LED NAVI ЛИЗИНГ 100%"
+      },
+      {
+        "url": "/assets/eliqauto/cars/11781294210212810/img-06.webp",
+        "alt": "BMW 330 I XDRIVE M PACK FACELIFT LED NAVI ЛИЗИНГ 100%"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Пазарджик",
+      "region": "Пазарджик",
+      "country": "Bulgaria"
+    },
+    "spec": {
+      "make": "BMW",
+      "model": "BMW 330 I XDRIVE M PACK FACELIFT LED NAVI ЛИЗИНГ 100%",
+      "year": 2021,
+      "bodyType": "sedan",
+      "fuelType": "gasoline",
+      "transmission": "automatic",
+      "mileageValue": 146000,
+      "mileageUnit": "km",
+      "colorExterior": "Сив"
+    },
+    "seller": {
+      "id": "dealer-eliqauto",
+      "type": "dealer",
+      "displayName": "ELIQ AUTO",
+      "verificationStatus": "unverified",
+      "city": "Пазарджик",
+      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+    },
+    "publishedAt": "2026-01-01T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "dealer-b37e44ee43cf50cb56b52cc1",
+    "slug": "2012-11781346026930952",
+    "category": "car",
+    "dealerOrgId": "dealer-eliqauto",
+    "status": "active",
+    "title": "Audi A6 3.0TDI QUATTRO FULL RS6 PACK LED NAVI ЛИЗИНГ 100%",
+    "description": "2012 Audi A6 with quattro, RS6 pack. 245 hp, diesel, automatic transmission.",
+    "price": {
+      "amount": 15880,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/assets/eliqauto/cars/11781346026930952/img-01.webp",
+        "alt": "Audi A6 3.0TDI QUATTRO FULL RS6 PACK LED NAVI ЛИЗИНГ 100%"
+      },
+      {
+        "url": "/assets/eliqauto/cars/11781346026930952/img-02.webp",
+        "alt": "Audi A6 3.0TDI QUATTRO FULL RS6 PACK LED NAVI ЛИЗИНГ 100%"
+      },
+      {
+        "url": "/assets/eliqauto/cars/11781346026930952/img-03.webp",
+        "alt": "Audi A6 3.0TDI QUATTRO FULL RS6 PACK LED NAVI ЛИЗИНГ 100%"
+      },
+      {
+        "url": "/assets/eliqauto/cars/11781346026930952/img-04.webp",
+        "alt": "Audi A6 3.0TDI QUATTRO FULL RS6 PACK LED NAVI ЛИЗИНГ 100%"
+      },
+      {
+        "url": "/assets/eliqauto/cars/11781346026930952/img-05.webp",
+        "alt": "Audi A6 3.0TDI QUATTRO FULL RS6 PACK LED NAVI ЛИЗИНГ 100%"
+      },
+      {
+        "url": "/assets/eliqauto/cars/11781346026930952/img-06.webp",
+        "alt": "Audi A6 3.0TDI QUATTRO FULL RS6 PACK LED NAVI ЛИЗИНГ 100%"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Пазарджик",
+      "region": "Пазарджик",
+      "country": "Bulgaria"
+    },
+    "spec": {
+      "make": "Audi",
+      "model": "Audi A6 3.0TDI QUATTRO FULL RS6 PACK LED NAVI ЛИЗИНГ 100%",
+      "year": 2012,
+      "bodyType": "sedan",
+      "fuelType": "diesel",
+      "transmission": "automatic",
+      "mileageValue": 170000,
+      "mileageUnit": "km",
+      "colorExterior": "Тъмно син мет."
+    },
+    "seller": {
+      "id": "dealer-eliqauto",
+      "type": "dealer",
+      "displayName": "ELIQ AUTO",
+      "verificationStatus": "unverified",
+      "city": "Пазарджик",
+      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+    },
+    "publishedAt": "2026-01-01T09:00:00.000Z",
+    "promoted": false
   }
 ];
 

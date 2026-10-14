@@ -1,6 +1,5 @@
 import { formatPrice, localeContract, type Locale } from '$lib/locale/core';
 import { templateText } from '$lib/locale/messages';
-import { leadSite } from '$config/lead-site';
 
 export const vehicleTypes = ['car', 'motorbike', 'van', 'truck'] as const;
 export type VehicleType = typeof vehicleTypes[number];
@@ -27,11 +26,16 @@ export type Vehicle = {
   make: string;
   /** Optional manufacturer sub-brand used by compact card identity. */
   cardBrand?: string;
+  /** Seller-supplied highlight by locale; import/condition claims require record-specific evidence. */
+  cardNote?: Partial<Record<Locale, string>>;
   title: string;
   year: string;
   yearNumber: number;
   mileage: string;
   mileageKm: number;
+  mileageKnown?: boolean;
+  mileageValue?: number;
+  mileageUnit?: 'km' | 'mi';
   fuel: string;
   transmission: string;
   equipment: readonly VehicleEquipment[];
@@ -43,7 +47,8 @@ export type Vehicle = {
 export const featuredVehicles: Vehicle[] = [
   {
     "id": 1,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://excellent.mobile.bg/obiava-21781257688134220-mercedes-benz-gle-350-amg-designo-360cam-serv-ist-ambient-diss-har",
     "image": "/assets/excellent/vehicle-01-1.webp",
     "category": "SUV",
@@ -54,6 +59,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2016,
     "mileage": "179 000 км",
     "mileageKm": 179000,
+    "mileageKnown": true,
+    "mileageValue": 179000,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Автоматик",
     "equipment": [
@@ -65,12 +73,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 32900,
-    "href": "/listing-detail-v1/1",
-    "type": "car"
+    "href": "/listing-detail-v1/1"
   },
   {
     "id": 2,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://excellent.mobile.bg/obiava-11785932596351376-vw-passat-2-0tdi-highline-bluemotion-led-automat",
     "image": "/assets/excellent/vehicle-02-1.webp",
     "category": "Sedan",
@@ -81,6 +89,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2011,
     "mileage": "212 000 км",
     "mileageKm": 212000,
+    "mileageKnown": true,
+    "mileageValue": 212000,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Автоматик",
     "equipment": [
@@ -91,12 +102,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 10500,
-    "href": "/listing-detail-v1/2",
-    "type": "car"
+    "href": "/listing-detail-v1/2"
   },
   {
     "id": 3,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://excellent.mobile.bg/obiava-11788181514006324-skoda-octavia-2-0tdi-4x4-digital",
     "image": "/assets/excellent/vehicle-03-1.webp",
     "category": "Wagon",
@@ -107,6 +118,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2022,
     "mileage": "180 000 км",
     "mileageKm": 180000,
+    "mileageKnown": true,
+    "mileageValue": 180000,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Автоматик",
     "equipment": [
@@ -117,12 +131,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 17900,
-    "href": "/listing-detail-v1/3",
-    "type": "car"
+    "href": "/listing-detail-v1/3"
   },
   {
     "id": 4,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://excellent.mobile.bg/obiava-11786795820524833-cupra-born-restyling-58kw-67000km",
     "image": "/assets/excellent/vehicle-04-1.webp",
     "category": "Hatchback",
@@ -133,6 +147,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2022,
     "mileage": "67 000 км",
     "mileageKm": 67000,
+    "mileageKnown": true,
+    "mileageValue": 67000,
+    "mileageUnit": "km",
     "fuel": "Електрически",
     "transmission": "Автоматик",
     "equipment": [
@@ -142,12 +159,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 22900,
-    "href": "/listing-detail-v1/4",
-    "type": "car"
+    "href": "/listing-detail-v1/4"
   },
   {
     "id": 5,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://excellent.mobile.bg/obiava-21786794971218528-hyundai-kona-1-6hev-n-line-40000km",
     "image": "/assets/excellent/vehicle-05-1.webp",
     "category": "SUV",
@@ -158,6 +175,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2020,
     "mileage": "40 000 км",
     "mileageKm": 40000,
+    "mileageKnown": true,
+    "mileageValue": 40000,
+    "mileageUnit": "km",
     "fuel": "Хибрид",
     "transmission": "Автоматик",
     "equipment": [
@@ -167,12 +187,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 17900,
-    "href": "/listing-detail-v1/5",
-    "type": "car"
+    "href": "/listing-detail-v1/5"
   },
   {
     "id": 6,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://excellent.mobile.bg/obiava-21786455005208728-kia-sportage-1-6d-automat",
     "image": "/assets/excellent/vehicle-06-1.webp",
     "category": "SUV",
@@ -183,6 +203,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2017,
     "mileage": "180 000 км",
     "mileageKm": 180000,
+    "mileageKnown": true,
+    "mileageValue": 180000,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Автоматик",
     "equipment": [
@@ -193,12 +216,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 10900,
-    "href": "/listing-detail-v1/6",
-    "type": "car"
+    "href": "/listing-detail-v1/6"
   },
   {
     "id": 7,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://excellent.mobile.bg/obiava-21786453972789852-vw-tiguan-2-0tdi-4motion-swiss",
     "image": "/assets/excellent/vehicle-07-1.webp",
     "category": "SUV",
@@ -209,6 +232,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2017,
     "mileage": "199 000 км",
     "mileageKm": 199000,
+    "mileageKnown": true,
+    "mileageValue": 199000,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Автоматик",
     "equipment": [
@@ -220,12 +246,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 16990,
-    "href": "/listing-detail-v1/7",
-    "type": "car"
+    "href": "/listing-detail-v1/7"
   },
   {
     "id": 8,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://excellent.mobile.bg/obiava-21786451392501339-land-rover-range-rover-evoque-hybrid-nardo-grey-125000km",
     "image": "/assets/excellent/vehicle-08-1.webp",
     "category": "SUV",
@@ -236,6 +262,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2022,
     "mileage": "125 000 км",
     "mileageKm": 125000,
+    "mileageKnown": true,
+    "mileageValue": 125000,
+    "mileageUnit": "km",
     "fuel": "Хибрид",
     "transmission": "Автоматик",
     "equipment": [
@@ -246,12 +275,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 25000,
-    "href": "/listing-detail-v1/8",
-    "type": "car"
+    "href": "/listing-detail-v1/8"
   },
   {
     "id": 9,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://excellent.mobile.bg/obiava-21773151499854810-audi-q2-2-0tfsi-quattro-s-line-digital-line-assist",
     "image": "/assets/excellent/vehicle-09-1.webp",
     "category": "SUV",
@@ -262,6 +291,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2018,
     "mileage": "133 000 км",
     "mileageKm": 133000,
+    "mileageKnown": true,
+    "mileageValue": 133000,
+    "mileageUnit": "km",
     "fuel": "Бензин",
     "transmission": "Автоматик",
     "equipment": [
@@ -273,12 +305,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 16900,
-    "href": "/listing-detail-v1/9",
-    "type": "car"
+    "href": "/listing-detail-v1/9"
   },
   {
     "id": 10,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://excellent.mobile.bg/obiava-11768639133016485-dodge-challenger-5-7hemi-srt",
     "image": "/assets/excellent/vehicle-10-1.webp",
     "category": "Coupe",
@@ -289,6 +321,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2014,
     "mileage": "65 000 км",
     "mileageKm": 65000,
+    "mileageKnown": true,
+    "mileageValue": 65000,
+    "mileageUnit": "km",
     "fuel": "Бензин",
     "transmission": "Автоматик",
     "equipment": [
@@ -299,12 +334,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 21500,
-    "href": "/listing-detail-v1/10",
-    "type": "car"
+    "href": "/listing-detail-v1/10"
   },
   {
     "id": 11,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://excellent.mobile.bg/obiava-21775914499512125-vw-t-cross-1-5i-automat-48000km",
     "image": "/assets/excellent/vehicle-11-1.webp",
     "category": "SUV",
@@ -315,6 +350,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2023,
     "mileage": "48 000 км",
     "mileageKm": 48000,
+    "mileageKnown": true,
+    "mileageValue": 48000,
+    "mileageUnit": "km",
     "fuel": "Бензин",
     "transmission": "Автоматик",
     "equipment": [
@@ -325,12 +363,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 21990,
-    "href": "/listing-detail-v1/11",
-    "type": "car"
+    "href": "/listing-detail-v1/11"
   },
   {
     "id": 12,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://excellent.mobile.bg/obiava-21785575816054903-kia-niro-plug-in-hybrid",
     "image": "/assets/excellent/vehicle-12-1.webp",
     "category": "Hatchback",
@@ -341,6 +379,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2019,
     "mileage": "118 000 км",
     "mileageKm": 118000,
+    "mileageKnown": true,
+    "mileageValue": 118000,
+    "mileageUnit": "km",
     "fuel": "Електрически",
     "transmission": "Автоматик",
     "equipment": [
@@ -351,12 +392,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 16990,
-    "href": "/listing-detail-v1/12",
-    "type": "car"
+    "href": "/listing-detail-v1/12"
   },
   {
     "id": 13,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://excellent.mobile.bg/obiava-21773150110056507-bmw-x3-2-0d-xdrive-m-pack",
     "image": "/assets/excellent/vehicle-13-1.webp",
     "category": "SUV",
@@ -367,6 +408,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2014,
     "mileage": "188 000 км",
     "mileageKm": 188000,
+    "mileageKnown": true,
+    "mileageValue": 188000,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Автоматик",
     "equipment": [
@@ -377,12 +421,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 12000,
-    "href": "/listing-detail-v1/13",
-    "type": "car"
+    "href": "/listing-detail-v1/13"
   },
   {
     "id": 14,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://excellent.mobile.bg/obiava-21785323501482685-nissan-juke-1-6t-nismo-alcantara",
     "image": "/assets/excellent/vehicle-14-1.webp",
     "category": "SUV",
@@ -393,6 +437,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2014,
     "mileage": "186 000 км",
     "mileageKm": 186000,
+    "mileageKnown": true,
+    "mileageValue": 186000,
+    "mileageUnit": "km",
     "fuel": "Бензин",
     "transmission": "Автоматик",
     "equipment": [
@@ -404,12 +451,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 9500,
-    "href": "/listing-detail-v1/14",
-    "type": "car"
+    "href": "/listing-detail-v1/14"
   },
   {
     "id": 15,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://excellent.mobile.bg/obiava-11778320754806394-peugeot-308-1-6gt-205h-p-panorama-massage",
     "image": "/assets/excellent/vehicle-15-1.webp",
     "category": "Hatchback",
@@ -420,6 +467,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2016,
     "mileage": "130 000 км",
     "mileageKm": 130000,
+    "mileageKnown": true,
+    "mileageValue": 130000,
+    "mileageUnit": "km",
     "fuel": "Бензин",
     "transmission": "Ръчна",
     "equipment": [
@@ -430,12 +480,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 9200,
-    "href": "/listing-detail-v1/15",
-    "type": "car"
+    "href": "/listing-detail-v1/15"
   },
   {
     "id": 16,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://excellent.mobile.bg/obiava-21781781688732220-mazda-cx-5-2-5i-4x4-automat-skyactiv",
     "image": "/assets/excellent/vehicle-16-1.webp",
     "category": "SUV",
@@ -446,6 +496,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2015,
     "mileage": "192 000 км",
     "mileageKm": 192000,
+    "mileageKnown": true,
+    "mileageValue": 192000,
+    "mileageUnit": "km",
     "fuel": "Бензин",
     "transmission": "Автоматик",
     "equipment": [
@@ -457,13 +510,15 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 14990,
-    "href": "/listing-detail-v1/16",
-    "type": "car"
+    "href": "/listing-detail-v1/16"
   }
 ];
 
-export const formatVehiclePrice = (amount: number, locale: Locale = localeContract.defaultLocale) => amount > 0 ? formatPrice(amount, locale) : templateText(locale, 'Price on request');
+export const formatVehiclePrice = (
+  amount: number,
+  locale: Locale = localeContract.defaultLocale
+) => amount > 0 ? formatPrice(amount, locale) : templateText(locale, 'Price on request');
 
 /** Allow a currency line break while preserving the locale's grouped digits. */
 export const formatVehiclePriceLabel = (amount: number, locale: Locale = localeContract.defaultLocale) =>
-  formatVehiclePrice(amount, locale).replace(/([A-Z]{3})\s+/u, '$1 ').replace(/\s+([A-Z]{3})$/u, ' $1');
+  formatVehiclePrice(amount, locale).replace(/([A-Z]{3}|\p{Sc})\s+/u, '$1 ').replace(/\s+([A-Z]{3}|\p{Sc})$/u, ' $1');

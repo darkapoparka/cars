@@ -4,15 +4,16 @@
   "name": "Аутолайф",
   "shortName": "Аутолайф",
   "logo": {
-    "light": "/dealer-app/logo-light-39e499a64ac1cf2ced3a.webp",
-    "dark": "/dealer-app/logo-dark-fe6ee08d283060f362df.webp",
-    "icon": "/dealer-app/icon.png"
+    "light": "/dealer-brand/v2-a9172326b4d82ce4/logo-on-light.webp",
+    "dark": "/dealer-brand/v2-a9172326b4d82ce4/logo-on-dark.webp",
+    "icon": "/dealer-brand/v2-a9172326b4d82ce4/app-icon.png"
   },
   "defaultLocale": "bg",
   "enabledLocales": [
     "en",
     "bg"
   ],
+  "welcomeEnabled": true,
   "country": "BG",
   "currency": "EUR",
   "city": "Варна",
@@ -23,6 +24,25 @@
   "mapsUrl": "https://www.google.com/maps/search/?api=1&query=43.22861,27.8253778",
   "website": "https://autolife.mobile.bg/",
   "whatsappUrl": "",
+  "socialLinks": [
+    {
+      "label": "Facebook",
+      "url": ""
+    },
+    {
+      "label": "Instagram",
+      "url": ""
+    },
+    {
+      "label": "Mobile.bg",
+      "url": ""
+    },
+    {
+      "label": "Cars.bg",
+      "url": ""
+    }
+  ],
+  "referenceClaimsApproved": false,
   "services": [
     "Продажба на автомобили",
     "Лизинг е отбелязан в обявите; доставчик и условия не са потвърдени"

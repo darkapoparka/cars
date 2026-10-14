@@ -23,13 +23,17 @@ export const dealerLocalizedText = {
     "city": "Varna",
     "addressLine": "302 Tsar Osvoboditel Blvd. / Izgi Europe Motor car wash",
     "address": "302 Tsar Osvoboditel Blvd. / Izgi Europe Motor car wash, Varna",
-    "appointment": "Monday–Friday: 09:30–18:00; Saturday: 10:00–15:00; Sunday: closed"
+    "appointment": "Monday–Friday: 09:30–18:00; Saturday: 10:00–15:00; Sunday: closed",
+    "addressShort": "302 Tsar Osvoboditel Blvd. / Izgi Europe Motor car wash",
+    "appointmentShort": "Monday–Friday: 09:30–18:00; Saturday: 10:00–15:00; Sunday: closed"
   },
   "bg": {
     "city": "Варна",
     "addressLine": "бул. „Цар Освободител“ 302 / Автомивка Izgi Europe Motor",
     "address": "бул. „Цар Освободител“ 302 / Автомивка Izgi Europe Motor",
-    "appointment": "Понеделник – петък: 09:30–18:00; Събота: 10:00–15:00; Неделя: почивен ден"
+    "appointment": "Понеделник – петък: 09:30–18:00; Събота: 10:00–15:00; Неделя: почивен ден",
+    "addressShort": "бул. „Цар Освободител“ 302 / Автомивка Izgi Europe Motor",
+    "appointmentShort": "Понеделник – петък: 09:30–18:00; Събота: 10:00–15:00; Неделя: почивен ден"
   }
 } as const;
 

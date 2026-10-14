@@ -1,52 +1,65 @@
 'use client';
 
-import {useCopy} from '@/lib/locale';
-import Link from '@/components/AppLink';
-import Image from '@/components/AppImage';
-import {ArrowRight} from 'lucide-react';
+import type {ReactNode} from 'react';
 import * as stylex from '@stylexjs/stylex';
-import {campaignTokens as campaign} from '@/app/campaign-theme.stylex';
-import ShowroomBannerFrame from '@/components/ShowroomBannerFrame';
+import {desktopHero, geometry} from '@/components/desktop-hero.stylex';
+import {useCopy} from '@/lib/locale';
 import {showroom} from '@/lib/showroom';
+import {assetPath} from '@/lib/paths';
 import {media, tokens as $} from '@/app/tokens.stylex';
 
 type Props = {
   title: string;
-  mobileTitle?: string;
-  description: string;
-  mobileDescription?: string;
-  action: string;
-  mobileAction?: string;
-  image: string;
-  colourful?: boolean;
-} & ({href: string; onClick?: never} | {href?: never; onClick: () => void});
+  description?: string;
+  control?: ReactNode;
+  compact?: boolean;
+};
 
-/** Shared content-sized composition for every showroom hero and artwork theme. */
-export default function ShowroomBanner({title, mobileTitle, description, mobileDescription, action, mobileAction, image, href, onClick, colourful = false}: Props) {
+/** Every desktop journey shares the same heading, control and supporting-note space. */
+export default function ShowroomBanner({title, description, control, compact = false}: Props) {
   const tx = useCopy();
 
-  return <ShowroomBannerFrame><section data-showroom-banner {...stylex.props(s.banner, colourful && s.colourful)}>
-    {!colourful && image !== showroom.promotion.image ? <Image src={showroom.promotion.image} alt={tx("")} width={1774} height={887} sizes="(max-width: 767px) 100vw, 600px" priority {...stylex.props(s.image)} /> : null}
-    <Image src={image} alt={tx("")} width={1774} height={887} sizes="(max-width: 767px) 100vw, 600px" priority {...stylex.props(s.image, colourful && s.colourImage)} />
-    <div {...stylex.props(s.copy)}>
-      <h1 {...stylex.props(s.title)}><span {...stylex.props(Boolean(mobileTitle) && s.desktopCopy)}>{tx(title)}</span>{mobileTitle ? <span {...stylex.props(s.mobileCopy)}>{tx(mobileTitle)}</span> : null}</h1>
-      <p {...stylex.props(s.description, colourful && s.colourDescription)}><span {...stylex.props(Boolean(mobileDescription) && s.desktopCopy)}>{tx(description)}</span>{mobileDescription ? <span {...stylex.props(s.mobileCopy)}>{tx(mobileDescription)}</span> : null}</p>
-      {href ? <Link href={href} aria-label={tx(action)} {...stylex.props(s.action, colourful && s.colourAction)}><span {...stylex.props(Boolean(mobileAction) && s.desktopCopy)}>{tx(action)}</span>{mobileAction ? <span {...stylex.props(s.mobileCopy)}>{tx(mobileAction)}</span> : null}<ArrowRight size={16} aria-hidden="true" /></Link> : <button type="button" onClick={onClick} aria-label={tx(action)} {...stylex.props(s.action, colourful && s.colourAction)}><span {...stylex.props(Boolean(mobileAction) && s.desktopCopy)}>{tx(action)}</span>{mobileAction ? <span {...stylex.props(s.mobileCopy)}>{tx(mobileAction)}</span> : null}<ArrowRight size={16} aria-hidden="true" /></button>}
-    </div>
-  </section></ShowroomBannerFrame>;
+  return <div {...stylex.props(s.frame)}>
+    <section data-showroom-banner aria-label={tx(title)} {...stylex.props(s.banner, compact && s.compactBanner)}>
+      <div aria-hidden="true" {...stylex.props(s.backdrop(`url("${assetPath(showroom.desktopHeroArtwork)}")`))}/>
+      <div aria-hidden="true" {...stylex.props(s.shade)}/>
+      <div {...stylex.props(s.content, desktopHero.container)}>
+        <div data-hero-heading {...stylex.props(s.heading)}>
+          <h1 {...stylex.props(s.title)}>{tx(title)}</h1>
+          {description ? <p {...stylex.props(s.description)}>{tx(description)}</p> : null}
+        </div>
+        {control != null ? <div data-hero-control {...stylex.props(s.control)}>{control}</div> : null}
+      </div>
+    </section>
+  </div>;
+}
+
+/** Reserve the desktop hero before client-only search state is available. */
+export function ShowroomBannerSkeleton(props: Omit<Props, 'control'>) {
+  return <ShowroomBanner {...props} control={<div aria-hidden="true" {...stylex.props(s.placeholder)}/>}/>;
 }
 
 const s = stylex.create({
-  colourful: {color: '#fff', backgroundColor: campaign.surface},
-  colourImage: {width: {[media.mobile]: '100%', default: 'auto'}, height: '100%', objectFit: 'cover', objectPosition: 'right center', maskImage: 'linear-gradient(to right,transparent,#000 8%),linear-gradient(to bottom,transparent 15%,#000 50%)'},
-  colourDescription: {color: campaign.muted, maxWidth: {[media.mobile]: '65%', default: 280}},
-  colourAction: {color: campaign.actionText, backgroundColor: '#fff'},
-  banner: {position: 'relative', isolation: 'isolate', display: 'flex', alignItems: 'center', minHeight: {[media.mobile]: 0, [media.tablet]: 276, default: 300}, padding: {[media.mobile]: $.bannerPadding, [media.tablet]: 28, default: '32px 40px'}, overflow: 'hidden', color: $.ink, backgroundColor: $.bannerSurface},
-  copy: {position: 'relative', zIndex: 1, width: {[media.mobile]: '100%', default: '65%'}, minWidth: 0},
-  image: {position: 'absolute', right: 0, bottom: 0, width: {[media.mobile]: '92%', default: 'auto'}, maxWidth: 'none', height: {[media.mobile]: 'auto', default: '100%'}, pointerEvents: 'none', maskImage: 'linear-gradient(to right,transparent,#000 22%),linear-gradient(to bottom,transparent,#000 20%)', maskComposite: 'intersect'},
-  title: {maxWidth: '100%', fontSize: {[media.mobile]: $.bannerTitleSize, [media.tablet]: 28, default: 36}, fontWeight: 600, lineHeight: {[media.mobile]: $.bannerTitleLineHeight, default: 1.2}, letterSpacing: '-.02em', textWrap: 'pretty'},
-  description: {minHeight: {[media.mobile]: 0, default: 46}, maxWidth: {[media.mobile]: '65%', default: 280}, marginTop: {[media.mobile]: 6, default: 12}, fontSize: {[media.mobile]: $.bannerCopySize, default: 16}, fontWeight: 400, lineHeight: {[media.mobile]: $.bannerCopyLineHeight, default: 1.45}, whiteSpace: 'pre-line', color: $.bannerMuted},
-  action: {display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 6, minHeight: $.controlHeight, marginTop: {[media.mobile]: 12, default: 16}, paddingInline: {[media.mobile]: 12, default: 18}, color: '#fff', fontSize: {[media.mobile]: $.bannerCopySize, default: 14}, fontWeight: 600, whiteSpace: 'nowrap', borderWidth: 0, borderRadius: 30, backgroundColor: $.ink, cursor: 'pointer', outlineColor: '#fff'},
-  desktopCopy: {display: {[media.mobile]: 'none', default: 'inline'}},
-  mobileCopy: {display: {[media.mobile]: 'inline', default: 'none'}},
+  frame: {display: {[media.desktop]: 'block', default: 'none'}, maxWidth: $.content, marginInline: 'auto', padding: '16px 28px 20px'},
+  banner: {
+    display: {[media.desktop]: 'block', default: 'none'},
+    position: 'relative',
+    isolation: 'isolate',
+    minHeight: geometry.height,
+    padding: '80px 28px 60px',
+    overflow: 'hidden',
+    borderRadius: 24,
+    color: '#fff',
+    backgroundColor: '#202023',
+    fontFamily: $.fontSans,
+  },
+  compactBanner: {display: {[media.desktop]: 'grid', default: 'none'}, alignItems: 'center', minHeight: 240, padding: '56px 28px'},
+  backdrop: (image: string) => ({position: 'absolute', inset: 0, backgroundImage: image, backgroundSize: 'cover', backgroundPosition: 'right 58%', pointerEvents: 'none'}),
+  shade: {position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(180deg, #202023 0%, rgba(32,32,35,.15) 32%, rgba(32,32,35,.1) 100%), linear-gradient(90deg, rgba(17,18,20,.45) 0%, rgba(17,18,20,.35) 65%, rgba(17,18,20,.08) 100%)', pointerEvents: 'none'},
+  content: {position: 'relative'},
+  heading: {minHeight: 56, textAlign: 'center'},
+  title: {margin: 0, fontSize: 48, fontWeight: 600, lineHeight: '56px', letterSpacing: '-.025em', textWrap: 'balance'},
+  description: {marginTop: 10, fontSize: 16, lineHeight: '24px', color: '#eeeef0'},
+  control: {minHeight: 112, marginTop: 24, textAlign: 'left'},
+  placeholder: {minHeight: geometry.barHeight, borderRadius: 9999, backgroundColor: '#fff'},
 });

@@ -2,7 +2,7 @@ export type BrandConfig = {
   name: string;
   shortName: string;
   city: string;
-  showroomCoordinates: { latitude: number; longitude: number };
+  showroomCoordinates: { latitude: number; longitude: number } | null;
   addressLine: string;
   address: string;
   phone: string;
@@ -24,7 +24,7 @@ export const brand = {
   name,
   shortName,
   city,
-  showroomCoordinates: {"latitude":0,"longitude":0},
+  showroomCoordinates: null,
   youtubeUrl: "https://www.youtube.com/channel/UCGXhr1QYqALiBBQpBYZtpmw",
   instagramUrl: "",
   facebookUrl: "",

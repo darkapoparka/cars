@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-basma-motors",
+  "family": "import",
+  "base": "/variant-3",
+  "defaultLocale": "en",
+  "source": {
+    "inventory": {
+      "path": "carwow/src/lib/data/daynight-current-inventory.ts",
+      "sha256": "71fb8d79805ff438c8705a9f991d22d7475ab4302e2d571fb3a36b9cb25c10a1"
+    },
+    "vehicles": {
+      "path": "carwow/src/lib/data/daynight-vehicles.ts",
+      "sha256": "05e43f7f003828e800fe9fa1ece354d2503b4920280c34020863a7cf52b62329"
+    },
+    "routeFactorySha256": "094d5128ad5e689e41486a228b1de6d11c54efbe051ce0e75c0170709d8571c9"
+  },
+  "profileSha256": "599cf751558952428e3f27e3214f35c611458b343f452af95e7490cc2153e1fe",
+  "entries": [
+    {
+      "sourceId": "cmtl6wllu000up1mcmlq0al57",
+      "slug": "lexus-ct200h-platinum-q0al57",
+      "targetId": "cmtl6wllu000up1mcmlq0al57"
+    },
+    {
+      "sourceId": "cmtl6pxpd000qp1mcvd0b9ktz",
+      "slug": "lexus-is300-platinum-0b9ktz",
+      "targetId": "cmtl6pxpd000qp1mcvd0b9ktz"
+    },
+    {
+      "sourceId": "cmqev42oy00i8p13h9qatx95x",
+      "slug": "lexus-rc-f-atx95x",
+      "targetId": "cmqev42oy00i8p13h9qatx95x"
+    },
+    {
+      "sourceId": "cmtfwz86o011dp1we5d9fkdvp",
+      "slug": "lexus-is350-f-sport-9fkdvp",
+      "targetId": "cmtfwz86o011dp1we5d9fkdvp"
+    },
+    {
+      "sourceId": "cmte58re000ykp1we0fkcsw8e",
+      "slug": "lexus-gs250-platinum-kcsw8e",
+      "targetId": "cmte58re000ykp1we0fkcsw8e"
+    },
+    {
+      "sourceId": "cmtb7oa3k00rsp1weiw6cwm9m",
+      "slug": "lexus-rc350-f-sport-6cwm9m",
+      "targetId": "cmtb7oa3k00rsp1weiw6cwm9m"
+    },
+    {
+      "sourceId": "cmt6yyshu00ljp1wewaxpucal",
+      "slug": "lexus-es350-f-sport-xpucal",
+      "targetId": "cmt6yyshu00ljp1wewaxpucal"
+    },
+    {
+      "sourceId": "cmt4d2ajl00gsp1wehldp9v1e",
+      "slug": "lexus-lx570-signature-dp9v1e",
+      "targetId": "cmt4d2ajl00gsp1wehldp9v1e"
+    },
+    {
+      "sourceId": "cmt4czt2400gqp1weg7ck3qba",
+      "slug": "lexus-tx350-platinum-ck3qba",
+      "targetId": "cmt4czt2400gqp1weg7ck3qba"
+    },
+    {
+      "sourceId": "cms38d0r90058p1a10q2alud6",
+      "slug": "lexus-rx350-premier-2alud6",
+      "targetId": "cms38d0r90058p1a10q2alud6"
+    }
+  ],
+  "retired": []
+}

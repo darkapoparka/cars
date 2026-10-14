@@ -1,200 +1,372 @@
 import type { DealerInventoryCopy } from "../lead-site";
-/** Reviewed text for the existing sample stock only. */
+/** Dealer-owned display copy from the exact personalized listing set. */
 export const inventoryCopy = {
-  "bmw-x5-m50d-sofia-2020": {
-    sourceDescription:
-      "Примерна обява за BMW X5 M50d с 360 камери, панорама, HUD и обдухване. Снимката е илюстративна; наличност и условия се потвърждават с автокъщата.",
-    bg: {
-      description:
-        "Примерна обява за BMW X5 M50d с 360 камери, панорама, HUD и обдухване. Снимката е илюстративна; наличност и условия се потвърждават с автокъщата.",
-      imageAlts: ["Черен BMW X5 SUV"],
+  "ford-focus-1-6d-115hp-2014-11785576029711434": {
+    "sourceDescription": "Ford Focus 1.6D 115HP, 2014 г., 249 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.",
+    "en": {
+      "description": "Ford Focus 1.6D 115HP, 2014, 249 000 km. Representative listing as of 07.09.2026. Confirm availability and terms with Automarket Varna.",
+      "imageAlts": [
+        "Ford Focus 1.6D 115HP",
+        "Ford Focus 1.6D 115HP",
+        "Ford Focus 1.6D 115HP",
+        "Ford Focus 1.6D 115HP",
+        "Ford Focus 1.6D 115HP"
+      ]
     },
-    en: {
-      description:
-        "Sample listing for a BMW X5 M50d with 360-degree cameras, panoramic roof, head-up display and ventilated seats. The image is illustrative; availability and terms must be confirmed with the dealership.",
-      imageAlts: ["Black BMW X5 SUV"],
-    },
+    "bg": {
+      "description": "Ford Focus 1.6D 115HP, 2014 г., 249 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.",
+      "imageAlts": [
+        "Ford Focus 1.6D 115HP",
+        "Ford Focus 1.6D 115HP",
+        "Ford Focus 1.6D 115HP",
+        "Ford Focus 1.6D 115HP",
+        "Ford Focus 1.6D 115HP"
+      ]
+    }
   },
-  "mercedes-benz-gls-400d-4matic-amg-sofia-2021": {
-    sourceDescription:
-      "GLS 400d 4MATIC AMG Line с Burmester и панорама. Голям семеен SUV от Аутомаркет - наличен за оглед в Варна.",
-    bg: {
-      description:
-        "GLS 400d 4MATIC AMG Line с Burmester и панорама. Голям семеен SUV от {shortName} - наличен за оглед в {city}.",
-      imageAlts: ["Mercedes-Benz GLS 4MATIC AMG SUV"],
+  "opel-astra-1-4i-90hp-2006-11714813323555032": {
+    "sourceDescription": "Opel Astra 1.4i 90HP, 2006 г., 208 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.",
+    "en": {
+      "description": "Opel Astra 1.4i 90HP, 2006, 208 000 km. Representative listing as of 07.09.2026. Confirm availability and terms with Automarket Varna.",
+      "imageAlts": [
+        "Opel Astra 1.4i 90HP",
+        "Opel Astra 1.4i 90HP",
+        "Opel Astra 1.4i 90HP",
+        "Opel Astra 1.4i 90HP",
+        "Opel Astra 1.4i 90HP"
+      ]
     },
-    en: {
-      description:
-        "GLS 400d 4MATIC AMG Line with Burmester audio and a panoramic roof. A large family SUV from {shortName}, available to view in {city}.",
-      imageAlts: ["Mercedes-Benz GLS 4MATIC AMG SUV"],
-    },
+    "bg": {
+      "description": "Opel Astra 1.4i 90HP, 2006 г., 208 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.",
+      "imageAlts": [
+        "Opel Astra 1.4i 90HP",
+        "Opel Astra 1.4i 90HP",
+        "Opel Astra 1.4i 90HP",
+        "Opel Astra 1.4i 90HP",
+        "Opel Astra 1.4i 90HP"
+      ]
+    }
   },
-  "bmw-750e-xdrive-m-sport-sofia-2024": {
-    sourceDescription:
-      "Очакван внос: 7 Series plug-in hybrid с M Sport. Нисък пробег - Аутомаркет организира доставка и оглед в Варна.",
-    bg: {
-      description:
-        "Очакван внос: 7 Series plug-in hybrid с M Sport. Нисък пробег - {shortName} организира доставка и оглед в {city}.",
-      imageAlts: ["BMW 7 Series"],
+  "opel-corsa-1-2i-80hp-gpl-2009-11776340911802527": {
+    "sourceDescription": "Opel Corsa 1.2i 80HP GPL, 2009 г., 165 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.",
+    "en": {
+      "description": "Opel Corsa 1.2i 80HP GPL, 2009, 165 000 km. Representative listing as of 07.09.2026. Confirm availability and terms with Automarket Varna.",
+      "imageAlts": [
+        "Opel Corsa 1.2i 80HP GPL",
+        "Opel Corsa 1.2i 80HP GPL",
+        "Opel Corsa 1.2i 80HP GPL",
+        "Opel Corsa 1.2i 80HP GPL",
+        "Opel Corsa 1.2i 80HP GPL"
+      ]
     },
-    en: {
-      description:
-        "Expected import: 7 Series plug-in hybrid with M Sport. Low mileage; {shortName} arranges delivery and viewing in {city}.",
-      imageAlts: ["BMW 7 Series"],
-    },
+    "bg": {
+      "description": "Opel Corsa 1.2i 80HP GPL, 2009 г., 165 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.",
+      "imageAlts": [
+        "Opel Corsa 1.2i 80HP GPL",
+        "Opel Corsa 1.2i 80HP GPL",
+        "Opel Corsa 1.2i 80HP GPL",
+        "Opel Corsa 1.2i 80HP GPL",
+        "Opel Corsa 1.2i 80HP GPL"
+      ]
+    }
   },
-  "mercedes-benz-e-63-s-amg-sofia-2021": {
-    sourceDescription:
-      "E 63 S AMG facelift с 360, HUD и Burmester. Спортна лимузина от Аутомаркет Варна.",
-    bg: {
-      description:
-        "E 63 S AMG facelift с 360, HUD и Burmester. Спортна лимузина от {dealer}.",
-      imageAlts: ["Mercedes-Benz E-Class седан"],
+  "ford-fiesta-1-25i-82hp-face-lift-2012-11749035353735625": {
+    "sourceDescription": "Ford Fiesta 1.25i 82HP FACE LIFT, 2012 г., 227 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.",
+    "en": {
+      "description": "Ford Fiesta 1.25i 82HP FACE LIFT, 2012, 227 000 km. Representative listing as of 07.09.2026. Confirm availability and terms with Automarket Varna.",
+      "imageAlts": [
+        "Ford Fiesta 1.25i 82HP FACE LIFT",
+        "Ford Fiesta 1.25i 82HP FACE LIFT",
+        "Ford Fiesta 1.25i 82HP FACE LIFT",
+        "Ford Fiesta 1.25i 82HP FACE LIFT",
+        "Ford Fiesta 1.25i 82HP FACE LIFT"
+      ]
     },
-    en: {
-      description:
-        "Facelift E 63 S AMG with 360-degree cameras, head-up display and Burmester audio. A sports saloon from {dealer}.",
-      imageAlts: ["Mercedes-Benz E-Class saloon"],
-    },
+    "bg": {
+      "description": "Ford Fiesta 1.25i 82HP FACE LIFT, 2012 г., 227 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.",
+      "imageAlts": [
+        "Ford Fiesta 1.25i 82HP FACE LIFT",
+        "Ford Fiesta 1.25i 82HP FACE LIFT",
+        "Ford Fiesta 1.25i 82HP FACE LIFT",
+        "Ford Fiesta 1.25i 82HP FACE LIFT",
+        "Ford Fiesta 1.25i 82HP FACE LIFT"
+      ]
+    }
   },
-  "mercedes-benz-cls-400d-4matic-sofia-2020": {
-    sourceDescription:
-      "CLS 400d 4MATIC AMG Line Designo с 360 камери. Елегантно купе-седан от Аутомаркет в Варна.",
-    bg: {
-      description:
-        "CLS 400d 4MATIC AMG Line Designo с 360 камери. Елегантно купе-седан от {shortName} в {city}.",
-      imageAlts: ["Mercedes CLS"],
+  "honda-jazz-1-4-i-vtec-99hp-face-lift-2009-11646385836417474": {
+    "sourceDescription": "Honda Jazz 1.4 I-VTEC 99HP FACE LIFT, 2009 г., 197 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.",
+    "en": {
+      "description": "Honda Jazz 1.4 I-VTEC 99HP FACE LIFT, 2009, 197 000 km. Representative listing as of 07.09.2026. Confirm availability and terms with Automarket Varna.",
+      "imageAlts": [
+        "Honda Jazz 1.4 I-VTEC 99HP FACE LIFT",
+        "Honda Jazz 1.4 I-VTEC 99HP FACE LIFT",
+        "Honda Jazz 1.4 I-VTEC 99HP FACE LIFT",
+        "Honda Jazz 1.4 I-VTEC 99HP FACE LIFT",
+        "Honda Jazz 1.4 I-VTEC 99HP FACE LIFT"
+      ]
     },
-    en: {
-      description:
-        "CLS 400d 4MATIC AMG Line Designo with 360-degree cameras. An elegant four-door coupe from {shortName} in {city}.",
-      imageAlts: ["Mercedes CLS"],
-    },
+    "bg": {
+      "description": "Honda Jazz 1.4 I-VTEC 99HP FACE LIFT, 2009 г., 197 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.",
+      "imageAlts": [
+        "Honda Jazz 1.4 I-VTEC 99HP FACE LIFT",
+        "Honda Jazz 1.4 I-VTEC 99HP FACE LIFT",
+        "Honda Jazz 1.4 I-VTEC 99HP FACE LIFT",
+        "Honda Jazz 1.4 I-VTEC 99HP FACE LIFT",
+        "Honda Jazz 1.4 I-VTEC 99HP FACE LIFT"
+      ]
+    }
   },
-  "audi-q8-50-tdi-quattro-s-line-sofia-2021": {
-    sourceDescription:
-      "Очакван внос: Q8 50 TDI quattro S line Plus. Купе-SUV с quattro за клиенти на Аутомаркет.",
-    bg: {
-      description:
-        "Очакван внос: Q8 50 TDI quattro S line Plus. Купе-SUV с quattro за клиенти на {shortName}.",
-      imageAlts: ["Audi Q8"],
+  "opel-meriva-1-4-turbo-120hp-gpl-2012-11730904111658789": {
+    "sourceDescription": "Opel Meriva 1.4 TURBO 120HP GPL, 2012 г., 156 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.",
+    "en": {
+      "description": "Opel Meriva 1.4 TURBO 120HP GPL, 2012, 156 000 km. Representative listing as of 07.09.2026. Confirm availability and terms with Automarket Varna.",
+      "imageAlts": [
+        "Opel Meriva 1.4 TURBO 120HP GPL",
+        "Opel Meriva 1.4 TURBO 120HP GPL",
+        "Opel Meriva 1.4 TURBO 120HP GPL",
+        "Opel Meriva 1.4 TURBO 120HP GPL",
+        "Opel Meriva 1.4 TURBO 120HP GPL"
+      ]
     },
-    en: {
-      description:
-        "Expected import: Q8 50 TDI quattro S line Plus. A coupe-SUV with quattro for {shortName} customers.",
-      imageAlts: ["Audi Q8"],
-    },
+    "bg": {
+      "description": "Opel Meriva 1.4 TURBO 120HP GPL, 2012 г., 156 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.",
+      "imageAlts": [
+        "Opel Meriva 1.4 TURBO 120HP GPL",
+        "Opel Meriva 1.4 TURBO 120HP GPL",
+        "Opel Meriva 1.4 TURBO 120HP GPL",
+        "Opel Meriva 1.4 TURBO 120HP GPL",
+        "Opel Meriva 1.4 TURBO 120HP GPL"
+      ]
+    }
   },
-  "mercedes-benz-gle-400d-coupe-sofia-2021": {
-    sourceDescription:
-      "GLE 400d Coupe 4MATIC AMG с 360 и Burmester. Наличен при Аутомаркет Варна - Варна.",
-    bg: {
-      description:
-        "GLE 400d Coupe 4MATIC AMG с 360 и Burmester. Наличен при {dealer} - {city}.",
-      imageAlts: ["Черен Mercedes-Benz GLE SUV"],
+  "vw-golf-1-6tdi-105hp-dsg-2010-11664339654646848": {
+    "sourceDescription": "VW Golf 1.6TDI 105HP DSG, 2010 г., 213 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.",
+    "en": {
+      "description": "VW Golf 1.6TDI 105HP DSG, 2010, 213 000 km. Representative listing as of 07.09.2026. Confirm availability and terms with Automarket Varna.",
+      "imageAlts": [
+        "VW Golf 1.6TDI 105HP DSG",
+        "VW Golf 1.6TDI 105HP DSG",
+        "VW Golf 1.6TDI 105HP DSG",
+        "VW Golf 1.6TDI 105HP DSG",
+        "VW Golf 1.6TDI 105HP DSG"
+      ]
     },
-    en: {
-      description:
-        "GLE 400d Coupe 4MATIC AMG with 360-degree cameras and Burmester audio. Available from {dealer} in {city}.",
-      imageAlts: ["Black Mercedes-Benz GLE SUV"],
-    },
+    "bg": {
+      "description": "VW Golf 1.6TDI 105HP DSG, 2010 г., 213 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.",
+      "imageAlts": [
+        "VW Golf 1.6TDI 105HP DSG",
+        "VW Golf 1.6TDI 105HP DSG",
+        "VW Golf 1.6TDI 105HP DSG",
+        "VW Golf 1.6TDI 105HP DSG",
+        "VW Golf 1.6TDI 105HP DSG"
+      ]
+    }
   },
-  "mercedes-benz-gle-53-amg-coupe-sofia-2022": {
-    sourceDescription:
-      "Очакван внос: GLE 53 AMG Coupe Night Pack. Аутомаркет предлага собствен лизинг след оглед.",
-    bg: {
-      description:
-        "Очакван внос: GLE 53 AMG Coupe Night Pack. {shortName} предлага собствен лизинг след оглед.",
-      imageAlts: ["Бял Mercedes-Benz GLE AMG SUV"],
+  "nissan-qashqai-1-6i-117hp-face-lift-2011-21702843989932817": {
+    "sourceDescription": "Nissan Qashqai 1.6i 117HP FACE LIFT, 2011 г., 223 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.",
+    "en": {
+      "description": "Nissan Qashqai 1.6i 117HP FACE LIFT, 2011, 223 000 km. Representative listing as of 07.09.2026. Confirm availability and terms with Automarket Varna.",
+      "imageAlts": [
+        "Nissan Qashqai 1.6i 117HP FACE LIFT",
+        "Nissan Qashqai 1.6i 117HP FACE LIFT",
+        "Nissan Qashqai 1.6i 117HP FACE LIFT",
+        "Nissan Qashqai 1.6i 117HP FACE LIFT",
+        "Nissan Qashqai 1.6i 117HP FACE LIFT"
+      ]
     },
-    en: {
-      description:
-        "Expected import: GLE 53 AMG Coupe Night Pack. {shortName} offers in-house leasing after a viewing.",
-      imageAlts: ["White Mercedes-Benz GLE AMG SUV"],
-    },
+    "bg": {
+      "description": "Nissan Qashqai 1.6i 117HP FACE LIFT, 2011 г., 223 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.",
+      "imageAlts": [
+        "Nissan Qashqai 1.6i 117HP FACE LIFT",
+        "Nissan Qashqai 1.6i 117HP FACE LIFT",
+        "Nissan Qashqai 1.6i 117HP FACE LIFT",
+        "Nissan Qashqai 1.6i 117HP FACE LIFT",
+        "Nissan Qashqai 1.6i 117HP FACE LIFT"
+      ]
+    }
   },
-  "mercedes-benz-s-350d-long-amg-sofia-2019": {
-    sourceDescription:
-      "S 350d Long с S63 AMG оптика и пакет за шофьор. Представителна лимузина от Аутомаркет.",
-    bg: {
-      description:
-        "S 350d Long с S63 AMG оптика и пакет за шофьор. Представителна лимузина от {shortName}.",
-      imageAlts: ["Mercedes-Benz S-Class седан"],
+  "dacia-duster-1-5dci-110hp-awd-e5a-2011-21777122320477562": {
+    "sourceDescription": "Dacia Duster 1.5DCI 110HP AWD E5A, 2011 г., 232 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.",
+    "en": {
+      "description": "Dacia Duster 1.5DCI 110HP AWD E5A, 2011, 232 000 km. Representative listing as of 07.09.2026. Confirm availability and terms with Automarket Varna.",
+      "imageAlts": [
+        "Dacia Duster 1.5DCI 110HP AWD E5A",
+        "Dacia Duster 1.5DCI 110HP AWD E5A",
+        "Dacia Duster 1.5DCI 110HP AWD E5A",
+        "Dacia Duster 1.5DCI 110HP AWD E5A",
+        "Dacia Duster 1.5DCI 110HP AWD E5A"
+      ]
     },
-    en: {
-      description:
-        "S 350d Long with S63 AMG styling and a chauffeur package. An executive saloon from {shortName}.",
-      imageAlts: ["Mercedes-Benz S-Class saloon"],
-    },
+    "bg": {
+      "description": "Dacia Duster 1.5DCI 110HP AWD E5A, 2011 г., 232 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.",
+      "imageAlts": [
+        "Dacia Duster 1.5DCI 110HP AWD E5A",
+        "Dacia Duster 1.5DCI 110HP AWD E5A",
+        "Dacia Duster 1.5DCI 110HP AWD E5A",
+        "Dacia Duster 1.5DCI 110HP AWD E5A",
+        "Dacia Duster 1.5DCI 110HP AWD E5A"
+      ]
+    }
   },
-  "mercedes-benz-v-250d-vip-business-sofia-2018": {
-    sourceDescription:
-      "V 250d VIP Business с TV, обдухване и подгряване. Бизнес ван от Аутомаркет Варна.",
-    bg: {
-      description:
-        "V 250d VIP Business с TV, обдухване и подгряване. Бизнес ван от {dealer}.",
-      imageAlts: ["V-Class ван"],
+  "mazda-cx-3-1-5d-skyactiv-105hp-awd-auto-2016-21777123440688076": {
+    "sourceDescription": "Mazda CX-3 1.5D SKYACTIV 105HP AWD AUTO, 2016 г., 155 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.",
+    "en": {
+      "description": "Mazda CX-3 1.5D SKYACTIV 105HP AWD AUTO, 2016, 155 000 km. Representative listing as of 07.09.2026. Confirm availability and terms with Automarket Varna.",
+      "imageAlts": [
+        "Mazda CX-3 1.5D SKYACTIV 105HP AWD AUTO",
+        "Mazda CX-3 1.5D SKYACTIV 105HP AWD AUTO",
+        "Mazda CX-3 1.5D SKYACTIV 105HP AWD AUTO",
+        "Mazda CX-3 1.5D SKYACTIV 105HP AWD AUTO",
+        "Mazda CX-3 1.5D SKYACTIV 105HP AWD AUTO"
+      ]
     },
-    en: {
-      description:
-        "V 250d VIP Business with TV, ventilated and heated seats. A business van from {dealer}.",
-      imageAlts: ["V-Class van"],
-    },
+    "bg": {
+      "description": "Mazda CX-3 1.5D SKYACTIV 105HP AWD AUTO, 2016 г., 155 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.",
+      "imageAlts": [
+        "Mazda CX-3 1.5D SKYACTIV 105HP AWD AUTO",
+        "Mazda CX-3 1.5D SKYACTIV 105HP AWD AUTO",
+        "Mazda CX-3 1.5D SKYACTIV 105HP AWD AUTO",
+        "Mazda CX-3 1.5D SKYACTIV 105HP AWD AUTO",
+        "Mazda CX-3 1.5D SKYACTIV 105HP AWD AUTO"
+      ]
+    }
   },
-  "range-rover-sport-svr-sofia-2021": {
-    sourceDescription:
-      "Range Rover Sport SVR 600 к.с. с панорама, 360 и Meridian. Висок клас SUV от Аутомаркет.",
-    bg: {
-      description:
-        "Range Rover Sport SVR 600 к.с. с панорама, 360 и Meridian. Висок клас SUV от {shortName}.",
-      imageAlts: ["Range Rover Sport"],
+  "vw-passat-2-0tdi-190hp-4-motion-keyless-go-automatic-2016-11764611602990623": {
+    "sourceDescription": "VW Passat 2.0TDI 190HP 4-Motion Keyless Go Automatic, 2016 г., 207 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.",
+    "en": {
+      "description": "VW Passat 2.0TDI 190HP 4-Motion Keyless Go Automatic, 2016, 207 000 km. Representative listing as of 07.09.2026. Confirm availability and terms with Automarket Varna.",
+      "imageAlts": [
+        "VW Passat 2.0TDI 190HP 4-Motion Keyless Go Automatic",
+        "VW Passat 2.0TDI 190HP 4-Motion Keyless Go Automatic",
+        "VW Passat 2.0TDI 190HP 4-Motion Keyless Go Automatic",
+        "VW Passat 2.0TDI 190HP 4-Motion Keyless Go Automatic",
+        "VW Passat 2.0TDI 190HP 4-Motion Keyless Go Automatic"
+      ]
     },
-    en: {
-      description:
-        "Range Rover Sport SVR, 600 hp, with a panoramic roof, 360-degree cameras and Meridian audio. A premium SUV from {shortName}.",
-      imageAlts: ["Range Rover Sport"],
-    },
+    "bg": {
+      "description": "VW Passat 2.0TDI 190HP 4-Motion Keyless Go Automatic, 2016 г., 207 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.",
+      "imageAlts": [
+        "VW Passat 2.0TDI 190HP 4-Motion Keyless Go Automatic",
+        "VW Passat 2.0TDI 190HP 4-Motion Keyless Go Automatic",
+        "VW Passat 2.0TDI 190HP 4-Motion Keyless Go Automatic",
+        "VW Passat 2.0TDI 190HP 4-Motion Keyless Go Automatic",
+        "VW Passat 2.0TDI 190HP 4-Motion Keyless Go Automatic"
+      ]
+    }
   },
-  "bmw-430i-xdrive-gran-coupe-sofia-2023": {
-    sourceDescription:
-      "430i xDrive Gran Coupe M Sport с digital кокпит и Harman Kardon. Аутомаркет, Варна.",
-    bg: {
-      description:
-        "430i xDrive Gran Coupe M Sport с digital кокпит и Harman Kardon. {shortName}, {city}.",
-      imageAlts: ["BMW 4 Series"],
+  "suzuki-swift-1-2-hybrid-83hp-automatic-2021-11770373711900410": {
+    "sourceDescription": "Suzuki Swift 1.2 HYBRID 83HP AUTOMATIC, 2021 г., 39 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.",
+    "en": {
+      "description": "Suzuki Swift 1.2 HYBRID 83HP AUTOMATIC, 2021, 39 000 km. Representative listing as of 07.09.2026. Confirm availability and terms with Automarket Varna.",
+      "imageAlts": [
+        "Suzuki Swift 1.2 HYBRID 83HP AUTOMATIC",
+        "Suzuki Swift 1.2 HYBRID 83HP AUTOMATIC",
+        "Suzuki Swift 1.2 HYBRID 83HP AUTOMATIC",
+        "Suzuki Swift 1.2 HYBRID 83HP AUTOMATIC",
+        "Suzuki Swift 1.2 HYBRID 83HP AUTOMATIC"
+      ]
     },
-    en: {
-      description:
-        "430i xDrive Gran Coupe M Sport with a digital cockpit and Harman Kardon audio. {shortName}, {city}.",
-      imageAlts: ["BMW 4 Series"],
-    },
+    "bg": {
+      "description": "Suzuki Swift 1.2 HYBRID 83HP AUTOMATIC, 2021 г., 39 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.",
+      "imageAlts": [
+        "Suzuki Swift 1.2 HYBRID 83HP AUTOMATIC",
+        "Suzuki Swift 1.2 HYBRID 83HP AUTOMATIC",
+        "Suzuki Swift 1.2 HYBRID 83HP AUTOMATIC",
+        "Suzuki Swift 1.2 HYBRID 83HP AUTOMATIC",
+        "Suzuki Swift 1.2 HYBRID 83HP AUTOMATIC"
+      ]
+    }
   },
-  "bmw-m4-competition-sofia-2021": {
-    sourceDescription:
-      "BMW M4 Competition с M пакет, спортен салон и digital кокпит. Купе от портфолиото на Аутомаркет Варна.",
-    bg: {
-      description:
-        "BMW M4 Competition с M пакет, спортен салон и digital кокпит. Купе от портфолиото на {dealer}.",
-      imageAlts: ["Червено BMW M4 Competition пред модерен шоурум"],
+  "bmw-x3-2-0-x-drive-184hp-2014-21732197261233954": {
+    "sourceDescription": "BMW X3 2.0 X-Drive 184HP, 2014 г., 249 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.",
+    "en": {
+      "description": "BMW X3 2.0 X-Drive 184HP, 2014, 249 000 km. Representative listing as of 07.09.2026. Confirm availability and terms with Automarket Varna.",
+      "imageAlts": [
+        "BMW X3 2.0 X-Drive 184HP",
+        "BMW X3 2.0 X-Drive 184HP",
+        "BMW X3 2.0 X-Drive 184HP",
+        "BMW X3 2.0 X-Drive 184HP",
+        "BMW X3 2.0 X-Drive 184HP"
+      ]
     },
-    en: {
-      description:
-        "BMW M4 Competition with M package, sports interior and digital cockpit. A coupe from the {dealer} collection.",
-      imageAlts: ["Red BMW M4 Competition in front of a modern showroom"],
-    },
+    "bg": {
+      "description": "BMW X3 2.0 X-Drive 184HP, 2014 г., 249 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.",
+      "imageAlts": [
+        "BMW X3 2.0 X-Drive 184HP",
+        "BMW X3 2.0 X-Drive 184HP",
+        "BMW X3 2.0 X-Drive 184HP",
+        "BMW X3 2.0 X-Drive 184HP",
+        "BMW X3 2.0 X-Drive 184HP"
+      ]
+    }
   },
-  "bmw-x5-xdrive40d-berlin-2022": {
-    sourceDescription:
-      "Крос-бордер демо наличност с оторизирани медии и право на доставка. Финалният транспорт, данъци и регистрация се уточняват с оферта от Аутомаркет.",
-    bg: {
-      description:
-        "Крос-бордер демо наличност с оторизирани медии и право на доставка. Финалният транспорт, данъци и регистрация се уточняват с оферта от {shortName}.",
-      imageAlts: ["Черен BMW X5 SUV в градска среда"],
+  "vw-tiguan-2-0tdi-200hp-allspace-4-motion-2023-21781689983828599": {
+    "sourceDescription": "VW Tiguan 2.0TDI 200HP ALLSPACE 4-Motion, 2023 г., 147 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.",
+    "en": {
+      "description": "VW Tiguan 2.0TDI 200HP ALLSPACE 4-Motion, 2023, 147 000 km. Representative listing as of 07.09.2026. Confirm availability and terms with Automarket Varna.",
+      "imageAlts": [
+        "VW Tiguan 2.0TDI 200HP ALLSPACE 4-Motion",
+        "VW Tiguan 2.0TDI 200HP ALLSPACE 4-Motion",
+        "VW Tiguan 2.0TDI 200HP ALLSPACE 4-Motion",
+        "VW Tiguan 2.0TDI 200HP ALLSPACE 4-Motion",
+        "VW Tiguan 2.0TDI 200HP ALLSPACE 4-Motion"
+      ]
     },
-    en: {
-      description:
-        "Cross-border demo inventory with authorized images and delivery rights. Final transport, tax and registration costs are confirmed in a quote from {shortName}.",
-      imageAlts: ["Black BMW X5 SUV in an urban setting"],
-    },
+    "bg": {
+      "description": "VW Tiguan 2.0TDI 200HP ALLSPACE 4-Motion, 2023 г., 147 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.",
+      "imageAlts": [
+        "VW Tiguan 2.0TDI 200HP ALLSPACE 4-Motion",
+        "VW Tiguan 2.0TDI 200HP ALLSPACE 4-Motion",
+        "VW Tiguan 2.0TDI 200HP ALLSPACE 4-Motion",
+        "VW Tiguan 2.0TDI 200HP ALLSPACE 4-Motion",
+        "VW Tiguan 2.0TDI 200HP ALLSPACE 4-Motion"
+      ]
+    }
   },
+  "mercedes-benz-glc-2-2cdi-170hp-4-matic-autonatic-navi-2016-21784142258144582": {
+    "sourceDescription": "Mercedes-Benz GLC 2.2CDI 170HP 4-Matic Autonatic Navi, 2016 г., 165 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.",
+    "en": {
+      "description": "Mercedes-Benz GLC 2.2CDI 170HP 4-Matic Autonatic Navi, 2016, 165 000 km. Representative listing as of 07.09.2026. Confirm availability and terms with Automarket Varna.",
+      "imageAlts": [
+        "Mercedes-Benz GLC 2.2CDI 170HP 4-Matic Autonatic Navi",
+        "Mercedes-Benz GLC 2.2CDI 170HP 4-Matic Autonatic Navi",
+        "Mercedes-Benz GLC 2.2CDI 170HP 4-Matic Autonatic Navi",
+        "Mercedes-Benz GLC 2.2CDI 170HP 4-Matic Autonatic Navi",
+        "Mercedes-Benz GLC 2.2CDI 170HP 4-Matic Autonatic Navi"
+      ]
+    },
+    "bg": {
+      "description": "Mercedes-Benz GLC 2.2CDI 170HP 4-Matic Autonatic Navi, 2016 г., 165 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.",
+      "imageAlts": [
+        "Mercedes-Benz GLC 2.2CDI 170HP 4-Matic Autonatic Navi",
+        "Mercedes-Benz GLC 2.2CDI 170HP 4-Matic Autonatic Navi",
+        "Mercedes-Benz GLC 2.2CDI 170HP 4-Matic Autonatic Navi",
+        "Mercedes-Benz GLC 2.2CDI 170HP 4-Matic Autonatic Navi",
+        "Mercedes-Benz GLC 2.2CDI 170HP 4-Matic Autonatic Navi"
+      ]
+    }
+  },
+  "audi-a4-allroad-3-0tdi-272hp-automatic-quattro-digital-2016-11750340593495216": {
+    "sourceDescription": "Audi A4 Allroad 3.0TDI 272HP AUTOMATIC QUATTRO DIGITAL, 2016 г., 218 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.",
+    "en": {
+      "description": "Audi A4 Allroad 3.0TDI 272HP AUTOMATIC QUATTRO DIGITAL, 2016, 218 000 km. Representative listing as of 07.09.2026. Confirm availability and terms with Automarket Varna.",
+      "imageAlts": [
+        "Audi A4 Allroad 3.0TDI 272HP AUTOMATIC QUATTRO DIGITAL",
+        "Audi A4 Allroad 3.0TDI 272HP AUTOMATIC QUATTRO DIGITAL",
+        "Audi A4 Allroad 3.0TDI 272HP AUTOMATIC QUATTRO DIGITAL",
+        "Audi A4 Allroad 3.0TDI 272HP AUTOMATIC QUATTRO DIGITAL",
+        "Audi A4 Allroad 3.0TDI 272HP AUTOMATIC QUATTRO DIGITAL"
+      ]
+    },
+    "bg": {
+      "description": "Audi A4 Allroad 3.0TDI 272HP AUTOMATIC QUATTRO DIGITAL, 2016 г., 218 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.",
+      "imageAlts": [
+        "Audi A4 Allroad 3.0TDI 272HP AUTOMATIC QUATTRO DIGITAL",
+        "Audi A4 Allroad 3.0TDI 272HP AUTOMATIC QUATTRO DIGITAL",
+        "Audi A4 Allroad 3.0TDI 272HP AUTOMATIC QUATTRO DIGITAL",
+        "Audi A4 Allroad 3.0TDI 272HP AUTOMATIC QUATTRO DIGITAL",
+        "Audi A4 Allroad 3.0TDI 272HP AUTOMATIC QUATTRO DIGITAL"
+      ]
+    }
+  }
 } satisfies DealerInventoryCopy;

@@ -6,7 +6,11 @@
   import { resolve } from '$app/paths';
   import VehicleCard from '$components/vehicles/VehicleCard.svelte';
   import Icon from '$components/ui/Icon.svelte';
-  import { activeFilterCount, listingHiddenFields, listingFilterOptions, type ListingFilters } from '$data/listing';
+  import { tick } from 'svelte';
+  import { activeFilterCount, listingHiddenFields, type ListingFilters } from '$data/listing';
+  import { cleanListingFormData, listingDraftFromFilters } from '$data/listing-draft';
+  import ListingChoicePicker from './ListingChoicePicker.svelte';
+  import DesktopAppliedListingFilters from './DesktopAppliedListingFilters.svelte';
   import type { Vehicle } from '$data/inventory';
 
   let { filters, vehicles, draftFilters, openFilters, filtersOpen }: {
@@ -17,6 +21,8 @@
     filtersOpen: boolean;
   } = $props();
   let activeCount = $derived(activeFilterCount(draftFilters));
+  let sortDraft = $derived(listingDraftFromFilters(filters));
+  let sortForm = $state<HTMLFormElement>();
   const compactSortLabels = {
     default: 'Препоръчани',
     newest: 'Най-нови',
@@ -27,10 +33,8 @@
 
   const hiddenFields = (filters: ListingFilters) => listingHiddenFields(filters, ['sort']);
 
-  const submitSort = (event: Event) => {
-    const select = event.currentTarget as HTMLSelectElement;
-    select.form?.requestSubmit();
-  };
+  // Browse with radio arrows; submit only after an explicit menu choice.
+  const submitSort = async () => { await tick(); sortForm?.requestSubmit(); };
 </script>
 
 <section class="dn-listing-results" data-slot="listing-results" aria-labelledby="listing-results-title">
@@ -42,18 +46,13 @@
           <Icon name="adjustments" size={18} /><span>{i18n.t("m_546ebb8eb993")}</span>
           {#if activeCount}<span class="dn-listing-results__filter-count">{activeCount}</span>{/if}
         </button>
-      <form class="dn-listing-sort" method="GET" action={i18n.href(resolve('/listing-grid'))}>
+        <DesktopAppliedListingFilters {filters} />
+      <form bind:this={sortForm} class="dn-listing-sort" method="GET" action={i18n.href(resolve('/cars'))} onformdata={event => cleanListingFormData(event.formData)}>
         {#each hiddenFields(filters) as [name, value], index (`${name}-${value}-${index}`)}
           <input type="hidden" {name} {value} />
         {/each}
-        <label class="dn-sr-only" for="listing-sort">{i18n.t("m_bec69036aa27")}</label>
         <span class="dn-listing-sort__icon" aria-hidden="true"></span>
-        <select {@attach i18n.validation} id="listing-sort" name="sort" onchange={submitSort} aria-label={i18n.t("m_c7d3914bb4d7")}>
-          {#each listingFilterOptions.sorts as [value, label] (value)}
-            <option value={value === 'default' ? '' : value} selected={filters.sort === value}>{i18n.text(label)}</option>
-          {/each}
-        </select>
-        <span class="dn-listing-sort__value" aria-hidden="true">{i18n.text(compactSortLabels[filters.sort])}</span>
+        <ListingChoicePicker field="sort" bind:draft={sortDraft} label={i18n.t('m_c7d3914bb4d7')} displayValue={i18n.text(compactSortLabels[sortDraft.sort])} showLabel={false} compact oncommit={submitSort} />
         <button class="dn-sr-only" type="submit">{i18n.t("m_323ef154f92d")}</button>
       </form>
       </div>
@@ -69,7 +68,7 @@
       <div class="dn-listing-empty">
         <h3>{i18n.t("m_255ca3bfe9fc")}</h3>
         <p>{i18n.t("m_87a5974db52e")}</p>
-        <a class="dn-button dn-button--dark" href={i18n.href(resolve('/listing-grid'))}>{i18n.t("m_3294551fa1d9")}</a>
+        <a class="dn-button dn-button--dark" href={i18n.href(resolve('/cars'))}>{i18n.t("m_3294551fa1d9")}</a>
       </div>
     {/if}
   </div>
@@ -100,7 +99,7 @@
   }
 
   @media (min-width: 992px) {
-    .dn-listing-results { background: var(--dn-surface-canvas); }
+    .dn-listing-results { padding-top: var(--dn-space-4); background: var(--dn-surface-canvas); }
   }
 
   .dn-listing-results__heading {
@@ -110,29 +109,22 @@
     margin: 0 0 20px;
   }
 
-  .dn-listing-sort__value {
-    position: absolute;
-    z-index: 2;
-    right: 36px;
-    left: 42px;
-    overflow: hidden;
-    color: #202329;
-    font-size: var(--dn-text-meta);
-    font-weight: var(--dn-weight-medium);
-    line-height: var(--dn-leading-meta);
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    pointer-events: none;
+  @media (min-width: 992px) {
+    .dn-listing-results__heading { min-height: var(--dn-control-height-default); margin-bottom: var(--dn-space-4); }
+    .dn-listing-results__tools { display: flex; width: 100%; min-width: 0; gap: var(--dn-space-2); padding: 0; border: 0; background: transparent; box-shadow: none; }
+    .dn-listing-results__filters { flex: none; background: var(--dn-ink); }
+    .dn-listing-results__filters:hover { background: var(--dn-ink-hover); }
+    .dn-listing-results__tools .dn-listing-sort { margin-left: auto; border: 1px solid var(--dn-line); }
   }
 
   .dn-listing-sort {
     position: relative;
     display: inline-flex;
-    width: 208px;
-    min-width: 208px;
+    width: max-content;
+    min-width: 0;
     height: 44px;
     min-height: 44px;
-    flex: 0 0 208px;
+    flex: 0 0 auto;
     align-items: center;
     padding: 0;
     border: 0;
@@ -145,20 +137,6 @@
   .dn-listing-sort:hover,
   .dn-listing-sort:focus-within {
     background: var(--dn-surface-subtle);
-  }
-
-  .dn-listing-sort::after {
-    position: absolute;
-    top: 50%;
-    right: 16px;
-    z-index: 2;
-    width: 7px;
-    height: 7px;
-    border-right: 1.5px solid #4d5562;
-    border-bottom: 1.5px solid #4d5562;
-    content: '';
-    pointer-events: none;
-    transform: translateY(-70%) rotate(45deg);
   }
 
   .dn-listing-sort__icon {
@@ -175,38 +153,17 @@
     pointer-events: none;
   }
 
-  .dn-listing-sort select {
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    height: 44px;
-    padding: 0 38px 0 42px;
-    border: 0;
-    border-radius: inherit;
-    outline: 0;
-    background: transparent;
-    color: transparent;
-    overflow: hidden;
-    font-size: var(--dn-text-meta);
-    font-weight: var(--dn-weight-medium);
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    appearance: none;
-    cursor: pointer;
-  }
-
-  .dn-listing-sort select:focus-visible {
-    outline: 2px solid var(--dn-red);
-    outline-offset: 2px;
-  }
-
-  .dn-listing-sort select option { color: #202329; }
+  .dn-listing-sort :global(.dn-identity-field.compact .dn-identity-trigger) { height: 44px; padding: 0 14px 0 38px; border: 0; border-radius: var(--dn-pill); background: transparent; }
 
   .dn-listing-results__grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 20px;
     align-items: stretch;
+  }
+
+  @media (min-width: 1360px) {
+    .dn-listing-results__grid { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px; }
   }
 
   .dn-listing-empty {
@@ -216,7 +173,7 @@
     align-content: center;
     gap: 10px;
     padding: 44px;
-    border-radius: 20px;
+    border-radius: var(--dn-radius-content-card);
     background: #fff;
     text-align: center;
   }
@@ -261,29 +218,13 @@
       border-radius: var(--dn-pill);
     }
 
-    .dn-listing-sort::after {
-      right: 13px;
-    }
-
     .dn-listing-sort__icon {
       left: 12px;
     }
 
-    .dn-listing-sort select {
-      height: 44px;
-      padding: 0 30px 0 36px;
-      font-size: var(--dn-control-size);
-      color: transparent;
-    }
 
-    .dn-listing-sort select option {
-      color: #202329;
-    }
 
-    .dn-listing-sort__value {
-      right: 28px;
-      left: 36px;
-    }
+
 
     .dn-listing-results__grid {
       grid-template-columns: minmax(0, 1fr);

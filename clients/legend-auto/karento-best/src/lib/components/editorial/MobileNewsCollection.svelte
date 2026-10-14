@@ -2,6 +2,7 @@
 
 <script lang="ts">
   import { useLocale } from "#lib/i18n/context.svelte.ts";
+  import { dealer } from "#lib/content.ts";
   const locale = useLocale();
   import ResponsiveCollection from "#lib/components/ResponsiveCollection.svelte";
   import MobileSectionHeading from "#lib/components/mobile/MobileSectionHeading.svelte";
@@ -22,6 +23,9 @@
   <div class="container">
     <MobileSectionHeading
       title={locale.t("referenceHome.news.title")}
+      description={dealer.businessPreview && !dealer.news
+        ? locale.t("editorial.list.sampleSummary")
+        : undefined}
       actionLabel={locale.t("referenceHome.news.viewMore")}
       actionHref="/news"
     />
@@ -51,7 +55,7 @@
                 >{locale.date(item.date)} · {locale.text(item.readTime)}</p
               >
             </div>
-            <h4>{locale.text(item.title)}</h4>
+            <h4>{locale.text(item.mobileTitle ?? item.title)}</h4>
             <div class="news-author-row">
               <div class="news-author">
                 <img
@@ -216,10 +220,13 @@
   }
 
   @media (max-width: 767.98px) {
+    :global(.news-collection.mobile-rail > .mobile-news-card) {
+      flex-basis: calc(100% - var(--karento-space-3));
+    }
     h4 {
-      font-size: var(--karento-type-compact-card-size);
-      font-weight: var(--karento-type-compact-card-weight);
-      line-height: var(--karento-type-compact-card-leading);
+      font-size: var(--karento-type-card-size);
+      font-weight: var(--karento-type-card-weight);
+      line-height: var(--karento-type-card-leading);
     }
     .news-category,
     .news-meta {

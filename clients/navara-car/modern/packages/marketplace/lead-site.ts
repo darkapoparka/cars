@@ -147,11 +147,11 @@ export const leadSite: LeadSiteConfig = {
   email: "",
   heroPath: "/lead-hero.jpg",
   locale: "bg-BG",
-  logoPath: "/dealer-brand/v2-472ca9a8fa8072b4/logo-on-light.webp",
-  logoInversePath: "/dealer-brand/v2-472ca9a8fa8072b4/logo-on-dark.webp",
-  logoOnLight: "/dealer-brand/v2-472ca9a8fa8072b4/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/v2-472ca9a8fa8072b4/logo-on-dark.webp",
-  logoOnAccent: "/dealer-brand/v2-472ca9a8fa8072b4/logo-on-dark.webp",
+  logoPath: "/dealer-brand/v2-24f1fab0fc40d49e/logo-on-light.webp",
+  logoInversePath: "/dealer-brand/v2-24f1fab0fc40d49e/logo-on-dark.webp",
+  logoOnLight: "/dealer-brand/v2-24f1fab0fc40d49e/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-24f1fab0fc40d49e/logo-on-dark.webp",
+  logoOnAccent: "/dealer-brand/v2-24f1fab0fc40d49e/logo-on-accent.webp",
   mapsEmbedUrl:
     "https://maps.google.com/maps?q=%D0%9D%D0%B0%D0%B2%D0%B0%D1%80%D0%B0%20%D0%BA%D0%B0%D1%80%2C%20%D0%B1%D1%83%D0%BB.%20%E2%80%9E%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%E2%80%9C%2C%20%D0%9A%D0%B0%D0%B9%D1%81%D0%B8%D0%B5%D0%B2%D0%B0%20%D0%B3%D1%80%D0%B0%D0%B4%D0%B8%D0%BD%D0%B0%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0&z=16&output=embed",
   mapsUrl:

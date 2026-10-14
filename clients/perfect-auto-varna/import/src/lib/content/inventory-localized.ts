@@ -477,6 +477,28 @@ export const inventoryCopy = {
 		bg: 'Автомобилът е с пълна сервизна история в Порше. Може да се провери във всяко представителство на марката. Sport Chrono пакет. Абсолютно автентичен вид както е излезнал от завода. Регистриран с каско, гражданска, данък, винетка. Без бартер. Само сериозни обаждания.',
 		en: 'Full Porsche service history. Can be checked at any dealership for the brand. Sport Chrono package. Entirely original factory appearance. Registered, with comprehensive insurance, third-party liability insurance, tax and vignette. No trade-ins. Serious inquiries only.'
 	}
+,
+	"dealerStock_0352f3d7d9b63e7adac852dc19430ee88e35ed192dad6e5ca97ef4bda202381d": {
+		"bg": "Публикувана обява на Перфект Ауто към 10.09.2026 г.",
+		"en": "Published listing from PERFECT AUTO as of 10.09.2026."
+	},
+	"dealerStock_e8b8a518e15b0fc1c361f1691b4a21d156427eaa36fce311b8a0a970af578dba": {
+		"bg": "Лизинг",
+		"en": "Leasing"
+	},
+	"dealerStock_48b06561777df6aac3646cf2f92b50a3b3f1254254853f01b5b267433e95211c": {
+		"bg": "Бартер",
+		"en": "Part exchange"
+	},
+	"dealerStock_4a8f03be7e6cce181554ba97c33f1f2cc39b2379236345618c909014ac72eda3": {
+		"bg": "Тъмно сив",
+		"en": "Dark grey"
+	},
+	"dealerStock_29b9069a05d909c05a05c472016f50133a6b890319bfe56c254872697b600452": {
+		"bg": "Тъмно зелен",
+		"en": "Dark green"
+	}
+
 } satisfies Record<string, Record<Locale, string>>;
 export const inventorySourceKeys: Readonly<Record<string, keyof typeof inventoryCopy>> = {
 	'4(5) Врати': 'term0',
@@ -630,6 +652,13 @@ export const inventorySourceKeys: Readonly<Record<string, keyof typeof inventory
 		'description30',
 	'Автомобилът е с пълна сервизна история в Порше. Може да се провери във всяко представителство на марката. Sport Chrono пакет. Абсолютно автентичен вид както е излезнал от завода. Регистриран с каско, гражданска, данък, винетка. Без бартер. Само сериозни обаждания.':
 		'description31'
+,
+	"Публикувана обява на Перфект Ауто към 10.09.2026 г.": "dealerStock_0352f3d7d9b63e7adac852dc19430ee88e35ed192dad6e5ca97ef4bda202381d",
+	"Лизинг": "dealerStock_e8b8a518e15b0fc1c361f1691b4a21d156427eaa36fce311b8a0a970af578dba",
+	"Бартер": "dealerStock_48b06561777df6aac3646cf2f92b50a3b3f1254254853f01b5b267433e95211c",
+	"Тъмно сив": "dealerStock_4a8f03be7e6cce181554ba97c33f1f2cc39b2379236345618c909014ac72eda3",
+	"Т.зелен": "dealerStock_29b9069a05d909c05a05c472016f50133a6b890319bfe56c254872697b600452"
+
 };
 export function inventoryText(locale: Locale, value: string): string {
 	const key = inventorySourceKeys[value];

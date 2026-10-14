@@ -1,37 +1,31 @@
 <script lang="ts">
   import { useLocale } from "#lib/i18n/context.svelte.ts";
   import { usePreview } from "#lib/preview.svelte.ts";
-  import { dealer } from "#lib/content.ts";
 
   const locale = useLocale();
   const preview = usePreview();
-  const links = $derived(
-    [
-      {
-        href: "/2",
-        label: locale.t("navigation.home"),
-        path: "M3 10 12 3l9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1Z",
-      },
-      {
-        href: "/vehicles",
-        label: locale.t("navigation.vehicles"),
-        path: "m5 7 2-4h10l2 4M3 10l2-3h14l2 3v8H3Zm0 8v3m18-3v3M6 13h2m8 0h2",
-      },
-      {
-        href: "/services",
-        label: locale.t("navigation.services"),
-        path: "M14 3a6 6 0 0 0-7 8L3 15a3 3 0 0 0 4 4l4-4a6 6 0 0 0 8-7l-4 4-3-3 4-4Z",
-      },
-      {
-        href: "/shop",
-        label: locale.t("navigation.shop"),
-        path: "M4 8h16l1 13H3ZM8 8V6a4 4 0 0 1 8 0v2",
-      },
-    ].filter(
-      (link) =>
-        !dealer.businessPreview || ["/2", "/vehicles"].includes(link.href),
-    ),
-  );
+  const links = $derived([
+    {
+      href: "/2",
+      label: locale.t("navigation.home"),
+      path: "M3 10 12 3l9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1Z",
+    },
+    {
+      href: "/vehicles",
+      label: locale.t("navigation.vehicles"),
+      path: "m5 7 2-4h10l2 4M3 10l2-3h14l2 3v8H3Zm0 8v3m18-3v3M6 13h2m8 0h2",
+    },
+    {
+      href: "/services",
+      label: locale.t("navigation.services"),
+      path: "M14 3a6 6 0 0 0-7 8L3 15a3 3 0 0 0 4 4l4-4a6 6 0 0 0 8-7l-4 4-3-3 4-4Z",
+    },
+    {
+      href: "/shop",
+      label: locale.t("navigation.shop"),
+      path: "M4 8h16l1 13H3ZM8 8V6a4 4 0 0 1 8 0v2",
+    },
+  ]);
 </script>
 
 {#snippet icon(path: string)}

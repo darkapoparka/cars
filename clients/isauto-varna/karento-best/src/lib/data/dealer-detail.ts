@@ -34,6 +34,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Petrol",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.gasoline"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2021",
+        "labelKey": "vehicle.field.year"
       }
     ],
     "gallery": {
@@ -120,6 +126,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2022",
+        "labelKey": "vehicle.field.year"
       }
     ],
     "gallery": {
@@ -206,6 +218,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Petrol",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.gasoline"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2018",
+        "labelKey": "vehicle.field.year"
       }
     ],
     "gallery": {
@@ -292,6 +310,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2014",
+        "labelKey": "vehicle.field.year"
       }
     ],
     "gallery": {
@@ -378,6 +402,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2019",
+        "labelKey": "vehicle.field.year"
       }
     ],
     "gallery": {
@@ -464,6 +494,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2018",
+        "labelKey": "vehicle.field.year"
       }
     ],
     "gallery": {

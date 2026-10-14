@@ -68,9 +68,9 @@ export interface LeadSiteConfig {
   readonly localizedCopy?: Readonly<Record<"bg" | "en", LeadSiteCopy>>;
   readonly logoInversePath?: string;
   readonly logoPath: string;
-  readonly logoOnAccent: string;
-  readonly logoOnDark: string;
   readonly logoOnLight: string;
+  readonly logoOnDark: string;
+  readonly logoOnAccent: string;
   readonly mapsEmbedUrl: string;
   readonly mapsUrl: string;
   readonly mobileFinancingArtworkPath?: string;
@@ -114,7 +114,7 @@ export const leadSite: LeadSiteConfig = {
     "tagline": "AVANGARD AUTO — vehicles and dealer support in Varna."
   }
 },
-  accent: "#252a30",
+  accent: "#30343b",
   desktopAccent: "#4b5057",
   desktopInventoryFilterLayout: "quick",
   desktopPreviewIdentity: {
@@ -147,7 +147,10 @@ export const leadSite: LeadSiteConfig = {
   email: "",
   heroPath: "/lead-hero.jpg",
   locale: "bg-BG",
-  logoPath: "/dealer-brand/logo-on-light-20260919.webp",
+  logoPath: "/dealer-brand/logo-on-dark-20260919.webp",
+  logoOnLight: "/dealer-brand/logo-on-light-20260919.webp",
+  logoOnDark: "/dealer-brand/logo-on-dark-20260919.webp",
+  logoOnAccent: "/dealer-brand/logo-on-accent-20260919.webp",
   mapsEmbedUrl:
     "https://maps.google.com/maps?q=AVANGARD%20AUTO%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F&output=embed",
   mapsUrl:
@@ -160,9 +163,5 @@ export const leadSite: LeadSiteConfig = {
   socialLinks: {"facebook":"https://www.facebook.com/avangardautovarna/","instagram":"https://www.instagram.com/avangard_auto_varna/"},
   staticDemoMode: true,
   tagline: "AVANGARD AUTO — автомобили и съдействие в Варна.",
-  logoOnLight: "/dealer-brand/logo-on-light-20260919.webp",
-  logoOnDark: "/dealer-brand/logo-on-dark-20260919.webp",
-  logoOnAccent: "/dealer-brand/logo-on-accent-20260919.webp",
-  logoInversePath: "/dealer-brand/logo-on-dark-20260919.webp"
 };
 // LEAD_SITE_CONFIG_END

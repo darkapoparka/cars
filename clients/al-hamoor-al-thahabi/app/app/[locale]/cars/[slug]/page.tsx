@@ -1,3 +1,4 @@
+import {displayMake} from '@/lib/inventory-labels';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import VehicleDetailClient from '@/components/VehicleDetailClient';
@@ -11,7 +12,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const vehicle = getVehicle(slug);
-  return { title: vehicle ? `${vehicle.year} ${vehicle.make} ${vehicle.model}` : 'Vehicle' };
+  return { title: vehicle ? `${vehicle.year} ${displayMake(vehicle.make)} ${vehicle.model}` : 'Vehicle' };
 }
 
 export default async function VehicleDetailPage({ params }: { params: Promise<{ slug: string }> }) {

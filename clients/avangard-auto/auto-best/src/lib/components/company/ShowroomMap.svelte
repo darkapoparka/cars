@@ -6,7 +6,7 @@
 
   const i18n = getI18n();
   const address = $derived(i18n.dealer('address'));
-  const coordinates = `${brand.showroomCoordinates.latitude},${brand.showroomCoordinates.longitude}`;
+  const coordinates = "бул. Цар Освободител 289, Варна";
   const openMapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(coordinates)}`;
   const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(coordinates)}`;
   const mapUrl = $derived(`https://maps.google.com/maps?q=${encodeURIComponent(coordinates)}&z=16&hl=${i18n.locale}&output=embed`);

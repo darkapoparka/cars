@@ -36,6 +36,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "valueKey": "fuel.diesel"
       },
       {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2014",
+        "labelKey": "vehicle.field.year"
+      },
+      {
         "id": "lit",
         "icon": "/assets/imgs/page/car/lit.svg",
         "value": "115 hp",
@@ -201,6 +207,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "valueKey": "fuel.gasoline"
       },
       {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2006",
+        "labelKey": "vehicle.field.year"
+      },
+      {
         "id": "lit",
         "icon": "/assets/imgs/page/car/lit.svg",
         "value": "90 hp",
@@ -361,6 +373,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "valueKey": "fuel.gasoline"
       },
       {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2009",
+        "labelKey": "vehicle.field.year"
+      },
+      {
         "id": "lit",
         "icon": "/assets/imgs/page/car/lit.svg",
         "value": "80 hp",
@@ -516,6 +534,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Petrol",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.gasoline"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2012",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -675,6 +699,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "valueKey": "fuel.gasoline"
       },
       {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2009",
+        "labelKey": "vehicle.field.year"
+      },
+      {
         "id": "lit",
         "icon": "/assets/imgs/page/car/lit.svg",
         "value": "99 hp",
@@ -825,6 +855,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Petrol",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.gasoline"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2012",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -982,6 +1018,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2010",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -1148,6 +1190,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "valueKey": "fuel.gasoline"
       },
       {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2011",
+        "labelKey": "vehicle.field.year"
+      },
+      {
         "id": "lit",
         "icon": "/assets/imgs/page/car/lit.svg",
         "value": "117 hp",
@@ -1312,6 +1360,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "valueKey": "fuel.diesel"
       },
       {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2011",
+        "labelKey": "vehicle.field.year"
+      },
+      {
         "id": "lit",
         "icon": "/assets/imgs/page/car/lit.svg",
         "value": "110 hp",
@@ -1472,6 +1526,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2016",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -1651,6 +1711,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2016",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -1833,6 +1899,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "valueKey": "fuel.gasoline"
       },
       {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2021",
+        "labelKey": "vehicle.field.year"
+      },
+      {
         "id": "lit",
         "icon": "/assets/imgs/page/car/lit.svg",
         "value": "83 hp",
@@ -2003,6 +2075,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2014",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -2187,6 +2265,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "valueKey": "fuel.diesel"
       },
       {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2023",
+        "labelKey": "vehicle.field.year"
+      },
+      {
         "id": "lit",
         "icon": "/assets/imgs/page/car/lit.svg",
         "value": "200 hp",
@@ -2365,6 +2449,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2016",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -2548,6 +2638,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2016",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",

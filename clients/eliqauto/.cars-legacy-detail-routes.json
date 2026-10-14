@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "dealer": "eliqauto",
+  "family": "import",
+  "base": "/variant-3",
+  "defaultLocale": "bg",
+  "source": {
+    "inventory": {
+      "path": "carwow/src/lib/data/daynight-current-inventory.ts",
+      "sha256": "5ed9f9ad8a1230efcc73fd3a1a21bf1a039de7dc790e610dc2ef50d89d00989f"
+    },
+    "vehicles": {
+      "path": "carwow/src/lib/data/daynight-vehicles.ts",
+      "sha256": "1ed43132a2b71b76aaa9bb0324052b5281be9f97c0714dc3a7b783112ddbeafc"
+    },
+    "routeFactorySha256": "094d5128ad5e689e41486a228b1de6d11c54efbe051ce0e75c0170709d8571c9"
+  },
+  "profileSha256": "dc6c992530140ef3939800d66391e35e01f11d350c796610a1114e4aa985ea3a",
+  "entries": [
+    {
+      "sourceId": "11779989521200947",
+      "slug": "audi-a5-200947",
+      "targetId": "11779989521200947"
+    },
+    {
+      "sourceId": "11780007305121982",
+      "slug": "bmw-750-121982",
+      "targetId": "11780007305121982"
+    },
+    {
+      "sourceId": "11780175636720970",
+      "slug": "mercedes-benz-s-500-720970",
+      "targetId": "11780175636720970"
+    },
+    {
+      "sourceId": "11780176585830804",
+      "slug": "mercedes-benz-cla-830804",
+      "targetId": "11780176585830804"
+    },
+    {
+      "sourceId": "11780177315125298",
+      "slug": "mercedes-benz-s-560-125298",
+      "targetId": "11780177315125298"
+    },
+    {
+      "sourceId": "11780254722465322",
+      "slug": "mercedes-benz-s-400-465322",
+      "targetId": "11780254722465322"
+    },
+    {
+      "sourceId": "11780906851194765",
+      "slug": "audi-a8-194765",
+      "targetId": "11780906851194765"
+    },
+    {
+      "sourceId": "11780907716855488",
+      "slug": "mercedes-benz-gls-450-855488",
+      "targetId": "11780907716855488"
+    },
+    {
+      "sourceId": "11780909888518340",
+      "slug": "mercedes-benz-e-220-518340",
+      "targetId": "11780909888518340"
+    },
+    {
+      "sourceId": "11781187597210481",
+      "slug": "mercedes-benz-gls-450-210481",
+      "targetId": "11781187597210481"
+    },
+    {
+      "sourceId": "11781207164422554",
+      "slug": "mercedes-benz-amg-gt-422554",
+      "targetId": "11781207164422554"
+    },
+    {
+      "sourceId": "11781211980587571",
+      "slug": "bmw-750-587571",
+      "targetId": "11781211980587571"
+    },
+    {
+      "sourceId": "11781244995278530",
+      "slug": "audi-a8-278530",
+      "targetId": "11781244995278530"
+    },
+    {
+      "sourceId": "11781281410239020",
+      "slug": "mercedes-benz-c-239020",
+      "targetId": "11781281410239020"
+    },
+    {
+      "sourceId": "11781294210212810",
+      "slug": "bmw-330-212810",
+      "targetId": "11781294210212810"
+    },
+    {
+      "sourceId": "11781346026930952",
+      "slug": "audi-a6-930952",
+      "targetId": "11781346026930952"
+    }
+  ],
+  "retired": []
+}

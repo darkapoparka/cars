@@ -23,13 +23,17 @@ export const dealerLocalizedText = {
     "city": "Dubai",
     "addressLine": "Plot No. 364-0442, Al Quoz Industrial Area 1",
     "address": "Plot No. 364-0442, Al Quoz Industrial Area 1, Dubai, UAE",
-    "appointment": "Contact the dealership before visiting."
+    "appointment": "Contact the dealership before visiting.",
+    "addressShort": "Plot No. 364-0442, Al Quoz Industrial Area 1",
+    "appointmentShort": "Contact the dealership before visiting."
   },
   "bg": {
     "city": "Дубай",
     "addressLine": "Plot No. 364-0442, Al Quoz индустриална зона 1",
     "address": "Plot No. 364-0442, Al Quoz индустриална зона 1, Dubai, ОАЕ",
-    "appointment": "Свържете се с автокъщата преди посещение."
+    "appointment": "Свържете се с автокъщата преди посещение.",
+    "addressShort": "Plot No. 364-0442, Al Quoz индустриална зона 1",
+    "appointmentShort": "Свържете се с автокъщата преди посещение."
   }
 } as const;
 

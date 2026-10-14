@@ -7,36 +7,55 @@ import {
   type ListingViewMode,
   type MarketplaceSearchParams,
   type VehicleListing,
+  type VehicleTaxonomyMakeOption,
 } from "@repo/marketplace";
+import type { PublicInventoryFilterLayout } from "@repo/marketplace/inventory-presentation";
+import type { InventorySearchListing } from "@repo/marketplace/inventory-search";
 import { isDealershipSite } from "@repo/marketplace/site-config";
 import { useEffect } from "react";
 import { getAccountListingSaveFlowHref } from "../lib/account-save-flow";
-import { readInventoryReturn } from "../lib/inventory-return";
+import { takeInventoryReturnScrollY } from "../lib/inventory-return";
 import {
   getMarketplaceListingGridClassName,
   getMarketplaceResultsSectionClassName,
   shouldHideDesktopResultSummary,
 } from "../lib/marketplace-results-policy";
 import { getLocalizedPublicPath } from "../lib/public-path";
+import { DealerHeroSearch } from "./dealer-hero-search";
 import dealerStyles from "./dealer-inventory.module.css";
-import { DealerInventorySummary } from "./dealer-inventory-summary";
+import { DealerInventoryFilters } from "./dealer-inventory-filters";
 import { ResultToolbar } from "./desktop-marketplace-controls";
 import { MarketplacePagination } from "./marketplace-pagination";
 import { MarketplaceResultsEmptyState } from "./marketplace-results-empty-state";
 import { VehicleCard } from "./vehicle-card";
+
+// Dealer grid: frame gutters, panel padding, sidebar, grid gaps and card borders.
+const dealerImageSizes = {
+  sidebar:
+    "(max-width: 1279px) calc((100vw - 412px) / 2), (max-width: 1494px) calc((100vw - 470px) / 3), 337px",
+  quick:
+    "(max-width: 1199px) calc((100vw - 166px) / 3), (max-width: 1399px) calc((100vw - 184px) / 4), (max-width: 1494px) calc((100vw - 202px) / 5), 256px",
+  list: "272px",
+} as const;
 
 export const MarketplaceResults = ({
   activeFilterCount,
   appBaseUrl,
   currentPath,
   desktopSearchVariant,
+  desktopFilterLayout,
   filters,
   hideDesktop = false,
   isBg,
   listings,
   locale,
+  searchListings,
+  taxonomy,
+  taxonomyByCategory,
   onChooseCategory,
   onApply,
+  onClearFilters,
+  onDesktopFilterLayoutChange,
   onOpenFilters,
   onViewModeChange,
   totalListings,
@@ -46,13 +65,21 @@ export const MarketplaceResults = ({
   appBaseUrl: string;
   currentPath: string;
   desktopSearchVariant: "discovery" | "results";
+  desktopFilterLayout: PublicInventoryFilterLayout;
   filters: MarketplaceSearchParams;
   hideDesktop?: boolean;
   isBg: boolean;
   listings: VehicleListing[];
   locale?: string;
+  searchListings?: readonly InventorySearchListing[];
+  taxonomy?: VehicleTaxonomyMakeOption[];
+  taxonomyByCategory?: Partial<
+    Record<MarketplaceSearchParams["category"], VehicleTaxonomyMakeOption[]>
+  >;
   onChooseCategory: () => void;
   onApply: (updates: Partial<MarketplaceSearchParams>) => void;
+  onClearFilters: () => void;
+  onDesktopFilterLayoutChange: (layout: PublicInventoryFilterLayout) => void;
   onOpenFilters: () => void;
   onViewModeChange: (viewMode: ListingViewMode) => void;
   totalListings: number;
@@ -62,13 +89,12 @@ export const MarketplaceResults = ({
   const singularLabel = isBg ? "автомобил" : "vehicle";
   const pluralLabel = isBg ? "автомобила" : "vehicles";
   useEffect(() => {
-    const saved = readInventoryReturn();
-    if (saved?.href !== location.pathname + location.search) {
-      return;
-    }
-    const frame = requestAnimationFrame(() =>
-      window.scrollTo(0, saved.scrollY)
-    );
+    const frame = requestAnimationFrame(() => {
+      const scrollY = takeInventoryReturnScrollY();
+      if (scrollY !== null) {
+        window.scrollTo(0, scrollY);
+      }
+    });
     return () => cancelAnimationFrame(frame);
   }, []);
   const useDiscoveryInventoryGrid =
@@ -87,7 +113,39 @@ export const MarketplaceResults = ({
         hideDesktop && "lg:hidden"
       )}
       data-desktop-hidden={hideDesktop}
+      data-filter-layout={isDealershipSite ? desktopFilterLayout : undefined}
+      data-slot={isDealershipSite ? "dealer-inventory-panel" : undefined}
     >
+      {isDealershipSite && !hideDesktop ? (
+        <DealerInventoryFilters
+          filters={filters}
+          layout={desktopFilterLayout}
+          locale={locale}
+          onApply={onApply}
+          onClearFilters={onClearFilters}
+          onLayoutChange={onDesktopFilterLayoutChange}
+          onViewModeChange={onViewModeChange}
+          totalListings={totalListings}
+          viewMode={viewMode}
+        />
+      ) : null}
+      {isDealershipSite && !hideDesktop && (
+        <aside
+          className={dealerStyles.sidebar}
+          data-slot="dealer-inventory-sidebar"
+          hidden={desktopFilterLayout !== "sidebar"}
+        >
+          <DealerHeroSearch
+            compact
+            filters={filters}
+            key={JSON.stringify(filters)}
+            locale={locale}
+            searchListings={searchListings}
+            taxonomy={taxonomy}
+            taxonomyByCategory={taxonomyByCategory}
+          />
+        </aside>
+      )}
       <div className="min-w-0">
         <p
           aria-live="polite"
@@ -98,17 +156,6 @@ export const MarketplaceResults = ({
         >
           {totalListings} {totalListings === 1 ? singularLabel : pluralLabel}
         </p>
-        {isDealershipSite && (
-          <DealerInventorySummary
-            filters={filters}
-            locale={locale}
-            onApply={onApply}
-            onOpenFilters={onOpenFilters}
-            onViewModeChange={onViewModeChange}
-            totalListings={totalListings}
-            viewMode={viewMode}
-          />
-        )}
         <div className={isDealershipSite ? "lg:hidden" : undefined}>
           <ResultToolbar
             filters={filters}
@@ -140,7 +187,15 @@ export const MarketplaceResults = ({
             >
               {listings.map((listing, index) => (
                 <VehicleCard
+                  compactDesktopGrid={isDealershipSite}
                   density="compact"
+                  desktopImageSizes={
+                    isDealershipSite
+                      ? dealerImageSizes[
+                          viewMode === "list" ? "list" : desktopFilterLayout
+                        ]
+                      : undefined
+                  }
                   desktopLayout={viewMode}
                   href={buildMarketplaceSearchHref(
                     { deliverTo: filters.deliverTo },
@@ -150,7 +205,7 @@ export const MarketplaceResults = ({
                   listing={listing}
                   locale={locale}
                   presentation={
-                    isDealershipSite ? "discovery" : regularPresentation
+                    isDealershipSite ? "showroom" : regularPresentation
                   }
                   priority={index < priorityListingCount}
                   saveHref={getAccountListingSaveFlowHref(appBaseUrl, listing)}

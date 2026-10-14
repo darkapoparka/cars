@@ -24,6 +24,8 @@ export type Vehicle = {
   year: number;
   registration: string;
   mileage: number;
+  mileageKnown?: boolean;
+  mileageOnRequest?: boolean;
   power: number;
   fuel: string;
   transmission: string;

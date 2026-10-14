@@ -1,6 +1,8 @@
 /* Shared mobile controls and selection surfaces for Home, Cars and Import. */
 @media (max-width: 767.98px) {
 	:root {
+		/* Native tap feedback uses the controls' own pressed states. */
+		-webkit-tap-highlight-color: transparent;
 		--bc-mobile-choice-row-height: calc(var(--bc-control-height-standard) + var(--bc-space-3));
 		--bc-mobile-choice-mark-size: 18px;
 		--bc-mobile-choice-divider: color-mix(in srgb, var(--bc-border) 55%, transparent);

@@ -1,200 +1,340 @@
 import type { DealerInventoryCopy } from "../lead-site";
-/** Reviewed text for the existing sample stock only. */
+/** Dealer-owned display copy from the exact personalized listing set. */
 export const inventoryCopy = {
-  "bmw-x5-m50d-sofia-2020": {
-    sourceDescription:
-      "Примерна обява за BMW X5 M50d с 360 камери, панорама, HUD и обдухване. Снимката е илюстративна; наличност и условия се потвърждават с автокъщата.",
-    bg: {
-      description:
-        "Примерна обява за BMW X5 M50d с 360 камери, панорама, HUD и обдухване. Снимката е илюстративна; наличност и условия се потвърждават с автокъщата.",
-      imageAlts: ["Черен BMW X5 SUV"],
+  "bmw-x4-2-0d-190-2017-21769682585171886": {
+    "sourceDescription": "BMW X4 2.0D-190 M PACKET FULL MCAR VARNA, 2017 г., 190 000 км. Публикувана обява на Аутолайф. Потвърдете наличността, оборудването и цената по телефона.",
+    "en": {
+      "description": "BMW X4 2.0D-190 M PACKET FULL MCAR VARNA, 2017, 190 000 km. Published listing from AUTOLIFE. Confirm availability, equipment and price by phone.",
+      "imageAlts": [
+        "BMW X4 2.0D-190",
+        "BMW X4 2.0D-190",
+        "BMW X4 2.0D-190",
+        "BMW X4 2.0D-190"
+      ]
     },
-    en: {
-      description:
-        "Sample listing for a BMW X5 M50d with 360-degree cameras, panoramic roof, head-up display and ventilated seats. The image is illustrative; availability and terms must be confirmed with the dealership.",
-      imageAlts: ["Black BMW X5 SUV"],
-    },
+    "bg": {
+      "description": "BMW X4 2.0D-190 M PACKET FULL MCAR VARNA, 2017 г., 190 000 км. Публикувана обява на Аутолайф. Потвърдете наличността, оборудването и цената по телефона.",
+      "imageAlts": [
+        "BMW X4 2.0D-190",
+        "BMW X4 2.0D-190",
+        "BMW X4 2.0D-190",
+        "BMW X4 2.0D-190"
+      ]
+    }
   },
-  "mercedes-benz-gls-400d-4matic-amg-sofia-2021": {
-    sourceDescription:
-      "GLS 400d 4MATIC AMG Line с Burmester и панорама. Голям семеен SUV от Аутолайф - наличен за оглед в Варна.",
-    bg: {
-      description:
-        "GLS 400d 4MATIC AMG Line с Burmester и панорама. Голям семеен SUV от {shortName} - наличен за оглед в {city}.",
-      imageAlts: ["Mercedes-Benz GLS 4MATIC AMG SUV"],
+  "seat-alhambra-2-0tdi-150-2015-11770980926901387": {
+    "sourceDescription": "Seat Alhambra 2.0TDI-150 KOJA NAVI CAMERA PANORAMA DSG DISTR EL., 2015 г., 244 000 км. Публикувана обява на Аутолайф. Потвърдете наличността, оборудването и цената по телефона.",
+    "en": {
+      "description": "Seat Alhambra 2.0TDI-150 KOJA NAVI CAMERA PANORAMA DSG DISTR EL., 2015, 244 000 km. Published listing from AUTOLIFE. Confirm availability, equipment and price by phone.",
+      "imageAlts": [
+        "Seat Alhambra 2.0TDI-150",
+        "Seat Alhambra 2.0TDI-150",
+        "Seat Alhambra 2.0TDI-150",
+        "Seat Alhambra 2.0TDI-150"
+      ]
     },
-    en: {
-      description:
-        "GLS 400d 4MATIC AMG Line with Burmester audio and a panoramic roof. A large family SUV from {shortName}, available to view in {city}.",
-      imageAlts: ["Mercedes-Benz GLS 4MATIC AMG SUV"],
-    },
+    "bg": {
+      "description": "Seat Alhambra 2.0TDI-150 KOJA NAVI CAMERA PANORAMA DSG DISTR EL., 2015 г., 244 000 км. Публикувана обява на Аутолайф. Потвърдете наличността, оборудването и цената по телефона.",
+      "imageAlts": [
+        "Seat Alhambra 2.0TDI-150",
+        "Seat Alhambra 2.0TDI-150",
+        "Seat Alhambra 2.0TDI-150",
+        "Seat Alhambra 2.0TDI-150"
+      ]
+    }
   },
-  "bmw-750e-xdrive-m-sport-sofia-2024": {
-    sourceDescription:
-      "Очакван внос: 7 Series plug-in hybrid с M Sport. Нисък пробег - Аутолайф организира доставка и оглед в Варна.",
-    bg: {
-      description:
-        "Очакван внос: 7 Series plug-in hybrid с M Sport. Нисък пробег - {shortName} организира доставка и оглед в {city}.",
-      imageAlts: ["BMW 7 Series"],
+  "ford-ka-2018-11741772051965725": {
+    "sourceDescription": "Ford Ka + 1.5DURATORQ ACTIVE EURO6D, 2018 г., 119 000 км. Публикувана обява на Аутолайф. Потвърдете наличността, оборудването и цената по телефона.",
+    "en": {
+      "description": "Ford Ka + 1.5DURATORQ ACTIVE EURO6D, 2018, 119 000 km. Published listing from AUTOLIFE. Confirm availability, equipment and price by phone.",
+      "imageAlts": [
+        "Ford Ka +",
+        "Ford Ka +",
+        "Ford Ka +",
+        "Ford Ka +"
+      ]
     },
-    en: {
-      description:
-        "Expected import: 7 Series plug-in hybrid with M Sport. Low mileage; {shortName} arranges delivery and viewing in {city}.",
-      imageAlts: ["BMW 7 Series"],
-    },
+    "bg": {
+      "description": "Ford Ka + 1.5DURATORQ ACTIVE EURO6D, 2018 г., 119 000 км. Публикувана обява на Аутолайф. Потвърдете наличността, оборудването и цената по телефона.",
+      "imageAlts": [
+        "Ford Ka +",
+        "Ford Ka +",
+        "Ford Ka +",
+        "Ford Ka +"
+      ]
+    }
   },
-  "mercedes-benz-e-63-s-amg-sofia-2021": {
-    sourceDescription:
-      "E 63 S AMG facelift с 360, HUD и Burmester. Спортна лимузина от Аутолайф.",
-    bg: {
-      description:
-        "E 63 S AMG facelift с 360, HUD и Burmester. Спортна лимузина от {dealer}.",
-      imageAlts: ["Mercedes-Benz E-Class седан"],
+  "vw-golf-1-6tdi-2010-11751025134623319": {
+    "sourceDescription": "VW Golf 1.6TDI BLUEMOTION, 2010 г., 250 000 км. Публикувана обява на Аутолайф. Потвърдете наличността, оборудването и цената по телефона.",
+    "en": {
+      "description": "VW Golf 1.6TDI BLUEMOTION, 2010, 250 000 km. Published listing from AUTOLIFE. Confirm availability, equipment and price by phone.",
+      "imageAlts": [
+        "VW Golf 1.6TDI",
+        "VW Golf 1.6TDI",
+        "VW Golf 1.6TDI",
+        "VW Golf 1.6TDI"
+      ]
     },
-    en: {
-      description:
-        "Facelift E 63 S AMG with 360-degree cameras, head-up display and Burmester audio. A sports saloon from {dealer}.",
-      imageAlts: ["Mercedes-Benz E-Class saloon"],
-    },
+    "bg": {
+      "description": "VW Golf 1.6TDI BLUEMOTION, 2010 г., 250 000 км. Публикувана обява на Аутолайф. Потвърдете наличността, оборудването и цената по телефона.",
+      "imageAlts": [
+        "VW Golf 1.6TDI",
+        "VW Golf 1.6TDI",
+        "VW Golf 1.6TDI",
+        "VW Golf 1.6TDI"
+      ]
+    }
   },
-  "mercedes-benz-cls-400d-4matic-sofia-2020": {
-    sourceDescription:
-      "CLS 400d 4MATIC AMG Line Designo с 360 камери. Елегантно купе-седан от Аутолайф в Варна.",
-    bg: {
-      description:
-        "CLS 400d 4MATIC AMG Line Designo с 360 камери. Елегантно купе-седан от {shortName} в {city}.",
-      imageAlts: ["Mercedes CLS"],
+  "seat-altea-facelift-2010-11768209424885033": {
+    "sourceDescription": "Seat Altea FACELIFT B/GPL, 2010 г., 242 000 км. Публикувана обява на Аутолайф. Потвърдете наличността, оборудването и цената по телефона.",
+    "en": {
+      "description": "Seat Altea FACELIFT B/GPL, 2010, 242 000 km. Published listing from AUTOLIFE. Confirm availability, equipment and price by phone.",
+      "imageAlts": [
+        "Seat Altea FACELIFT",
+        "Seat Altea FACELIFT",
+        "Seat Altea FACELIFT",
+        "Seat Altea FACELIFT"
+      ]
     },
-    en: {
-      description:
-        "CLS 400d 4MATIC AMG Line Designo with 360-degree cameras. An elegant four-door coupe from {shortName} in {city}.",
-      imageAlts: ["Mercedes CLS"],
-    },
+    "bg": {
+      "description": "Seat Altea FACELIFT B/GPL, 2010 г., 242 000 км. Публикувана обява на Аутолайф. Потвърдете наличността, оборудването и цената по телефона.",
+      "imageAlts": [
+        "Seat Altea FACELIFT",
+        "Seat Altea FACELIFT",
+        "Seat Altea FACELIFT",
+        "Seat Altea FACELIFT"
+      ]
+    }
   },
-  "audi-q8-50-tdi-quattro-s-line-sofia-2021": {
-    sourceDescription:
-      "Очакван внос: Q8 50 TDI quattro S line Plus. Купе-SUV с quattro за клиенти на Аутолайф.",
-    bg: {
-      description:
-        "Очакван внос: Q8 50 TDI quattro S line Plus. Купе-SUV с quattro за клиенти на {shortName}.",
-      imageAlts: ["Audi Q8"],
+  "audi-a4-sline-2021-11762785459915323": {
+    "sourceDescription": "Audi A4 Sline 4x4 DISTR DIGITAL MATRIX KEY LESS BLIND SPOT, 2021 г., 186 000 км. Публикувана обява на Аутолайф. Потвърдете наличността, оборудването и цената по телефона.",
+    "en": {
+      "description": "Audi A4 Sline 4x4 DISTR DIGITAL MATRIX KEY LESS BLIND SPOT, 2021, 186 000 km. Published listing from AUTOLIFE. Confirm availability, equipment and price by phone.",
+      "imageAlts": [
+        "Audi A4 Sline",
+        "Audi A4 Sline",
+        "Audi A4 Sline",
+        "Audi A4 Sline"
+      ]
     },
-    en: {
-      description:
-        "Expected import: Q8 50 TDI quattro S line Plus. A coupe-SUV with quattro for {shortName} customers.",
-      imageAlts: ["Audi Q8"],
-    },
+    "bg": {
+      "description": "Audi A4 Sline 4x4 DISTR DIGITAL MATRIX KEY LESS BLIND SPOT, 2021 г., 186 000 км. Публикувана обява на Аутолайф. Потвърдете наличността, оборудването и цената по телефона.",
+      "imageAlts": [
+        "Audi A4 Sline",
+        "Audi A4 Sline",
+        "Audi A4 Sline",
+        "Audi A4 Sline"
+      ]
+    }
   },
-  "mercedes-benz-gle-400d-coupe-sofia-2021": {
-    sourceDescription:
-      "GLE 400d Coupe 4MATIC AMG с 360 и Burmester. Наличен при Аутолайф - Варна.",
-    bg: {
-      description:
-        "GLE 400d Coupe 4MATIC AMG с 360 и Burmester. Наличен при {dealer} - {city}.",
-      imageAlts: ["Черен Mercedes-Benz GLE SUV"],
+  "citroen-c5-2-2-2008-11752841612433166": {
+    "sourceDescription": "Citroen C5 2.2 HDI 170 FULL, 2008 г., 217 000 км. Публикувана обява на Аутолайф. Потвърдете наличността, оборудването и цената по телефона.",
+    "en": {
+      "description": "Citroen C5 2.2 HDI 170 FULL, 2008, 217 000 km. Published listing from AUTOLIFE. Confirm availability, equipment and price by phone.",
+      "imageAlts": [
+        "Citroen C5 2.2",
+        "Citroen C5 2.2",
+        "Citroen C5 2.2",
+        "Citroen C5 2.2"
+      ]
     },
-    en: {
-      description:
-        "GLE 400d Coupe 4MATIC AMG with 360-degree cameras and Burmester audio. Available from {dealer} in {city}.",
-      imageAlts: ["Black Mercedes-Benz GLE SUV"],
-    },
+    "bg": {
+      "description": "Citroen C5 2.2 HDI 170 FULL, 2008 г., 217 000 км. Публикувана обява на Аутолайф. Потвърдете наличността, оборудването и цената по телефона.",
+      "imageAlts": [
+        "Citroen C5 2.2",
+        "Citroen C5 2.2",
+        "Citroen C5 2.2",
+        "Citroen C5 2.2"
+      ]
+    }
   },
-  "mercedes-benz-gle-53-amg-coupe-sofia-2022": {
-    sourceDescription:
-      "Очакван внос: GLE 53 AMG Coupe Night Pack. Аутолайф предлага собствен лизинг след оглед.",
-    bg: {
-      description:
-        "Очакван внос: GLE 53 AMG Coupe Night Pack. {shortName} предлага собствен лизинг след оглед.",
-      imageAlts: ["Бял Mercedes-Benz GLE AMG SUV"],
+  "audi-q5-2-0tdi-170-2009-21756807262024883": {
+    "sourceDescription": "Audi Q5 2.0TDI-170 PANORAMA, 2009 г., 224 000 км. Публикувана обява на Аутолайф. Потвърдете наличността, оборудването и цената по телефона.",
+    "en": {
+      "description": "Audi Q5 2.0TDI-170 PANORAMA, 2009, 224 000 km. Published listing from AUTOLIFE. Confirm availability, equipment and price by phone.",
+      "imageAlts": [
+        "Audi Q5 2.0TDI-170",
+        "Audi Q5 2.0TDI-170",
+        "Audi Q5 2.0TDI-170",
+        "Audi Q5 2.0TDI-170"
+      ]
     },
-    en: {
-      description:
-        "Expected import: GLE 53 AMG Coupe Night Pack. {shortName} offers in-house leasing after a viewing.",
-      imageAlts: ["White Mercedes-Benz GLE AMG SUV"],
-    },
+    "bg": {
+      "description": "Audi Q5 2.0TDI-170 PANORAMA, 2009 г., 224 000 км. Публикувана обява на Аутолайф. Потвърдете наличността, оборудването и цената по телефона.",
+      "imageAlts": [
+        "Audi Q5 2.0TDI-170",
+        "Audi Q5 2.0TDI-170",
+        "Audi Q5 2.0TDI-170",
+        "Audi Q5 2.0TDI-170"
+      ]
+    }
   },
-  "mercedes-benz-s-350d-long-amg-sofia-2019": {
-    sourceDescription:
-      "S 350d Long с S63 AMG оптика и пакет за шофьор. Представителна лимузина от Аутолайф.",
-    bg: {
-      description:
-        "S 350d Long с S63 AMG оптика и пакет за шофьор. Представителна лимузина от {shortName}.",
-      imageAlts: ["Mercedes-Benz S-Class седан"],
+  "vw-touran-2-0tdi-150-2021-11768636298551646": {
+    "sourceDescription": "VW Touran 2.0TDI-150 DISTR. CAMERA DSG, 2021 г., 145 000 км. Публикувана обява на Аутолайф. Потвърдете наличността, оборудването и цената по телефона.",
+    "en": {
+      "description": "VW Touran 2.0TDI-150 DISTR. CAMERA DSG, 2021, 145 000 km. Published listing from AUTOLIFE. Confirm availability, equipment and price by phone.",
+      "imageAlts": [
+        "VW Touran 2.0TDI-150",
+        "VW Touran 2.0TDI-150",
+        "VW Touran 2.0TDI-150",
+        "VW Touran 2.0TDI-150"
+      ]
     },
-    en: {
-      description:
-        "S 350d Long with S63 AMG styling and a chauffeur package. An executive saloon from {shortName}.",
-      imageAlts: ["Mercedes-Benz S-Class saloon"],
-    },
+    "bg": {
+      "description": "VW Touran 2.0TDI-150 DISTR. CAMERA DSG, 2021 г., 145 000 км. Публикувана обява на Аутолайф. Потвърдете наличността, оборудването и цената по телефона.",
+      "imageAlts": [
+        "VW Touran 2.0TDI-150",
+        "VW Touran 2.0TDI-150",
+        "VW Touran 2.0TDI-150",
+        "VW Touran 2.0TDI-150"
+      ]
+    }
   },
-  "mercedes-benz-v-250d-vip-business-sofia-2018": {
-    sourceDescription:
-      "V 250d VIP Business с TV, обдухване и подгряване. Бизнес ван от Аутолайф.",
-    bg: {
-      description:
-        "V 250d VIP Business с TV, обдухване и подгряване. Бизнес ван от {dealer}.",
-      imageAlts: ["V-Class ван"],
+  "mercedes-benz-gle-coupe-2017-21774977517199416": {
+    "sourceDescription": "Mercedes-Benz GLE Coupe 350CDI AMG DISTR. PANO CAMERA HARMAN/KARDON, 2017 г., 189 000 км. Публикувана обява на Аутолайф. Потвърдете наличността, оборудването и цената по телефона.",
+    "en": {
+      "description": "Mercedes-Benz GLE Coupe 350CDI AMG DISTR. PANO CAMERA HARMAN/KARDON, 2017, 189 000 km. Published listing from AUTOLIFE. Confirm availability, equipment and price by phone.",
+      "imageAlts": [
+        "Mercedes-Benz GLE Coupe",
+        "Mercedes-Benz GLE Coupe",
+        "Mercedes-Benz GLE Coupe",
+        "Mercedes-Benz GLE Coupe"
+      ]
     },
-    en: {
-      description:
-        "V 250d VIP Business with TV, ventilated and heated seats. A business van from {dealer}.",
-      imageAlts: ["V-Class van"],
-    },
+    "bg": {
+      "description": "Mercedes-Benz GLE Coupe 350CDI AMG DISTR. PANO CAMERA HARMAN/KARDON, 2017 г., 189 000 км. Публикувана обява на Аутолайф. Потвърдете наличността, оборудването и цената по телефона.",
+      "imageAlts": [
+        "Mercedes-Benz GLE Coupe",
+        "Mercedes-Benz GLE Coupe",
+        "Mercedes-Benz GLE Coupe",
+        "Mercedes-Benz GLE Coupe"
+      ]
+    }
   },
-  "range-rover-sport-svr-sofia-2021": {
-    sourceDescription:
-      "Range Rover Sport SVR 600 к.с. с панорама, 360 и Meridian. Висок клас SUV от Аутолайф.",
-    bg: {
-      description:
-        "Range Rover Sport SVR 600 к.с. с панорама, 360 и Meridian. Висок клас SUV от {shortName}.",
-      imageAlts: ["Range Rover Sport"],
+  "bmw-x1-2-0d-150-2016-21776689748685033": {
+    "sourceDescription": "BMW X1 2.0D-150 X-DRIVE, 2016 г., 250 000 км. Публикувана обява на Аутолайф. Потвърдете наличността, оборудването и цената по телефона.",
+    "en": {
+      "description": "BMW X1 2.0D-150 X-DRIVE, 2016, 250 000 km. Published listing from AUTOLIFE. Confirm availability, equipment and price by phone.",
+      "imageAlts": [
+        "BMW X1 2.0D-150",
+        "BMW X1 2.0D-150",
+        "BMW X1 2.0D-150",
+        "BMW X1 2.0D-150"
+      ]
     },
-    en: {
-      description:
-        "Range Rover Sport SVR, 600 hp, with a panoramic roof, 360-degree cameras and Meridian audio. A premium SUV from {shortName}.",
-      imageAlts: ["Range Rover Sport"],
-    },
+    "bg": {
+      "description": "BMW X1 2.0D-150 X-DRIVE, 2016 г., 250 000 км. Публикувана обява на Аутолайф. Потвърдете наличността, оборудването и цената по телефона.",
+      "imageAlts": [
+        "BMW X1 2.0D-150",
+        "BMW X1 2.0D-150",
+        "BMW X1 2.0D-150",
+        "BMW X1 2.0D-150"
+      ]
+    }
   },
-  "bmw-430i-xdrive-gran-coupe-sofia-2023": {
-    sourceDescription:
-      "430i xDrive Gran Coupe M Sport с digital кокпит и Harman Kardon. Аутолайф, Варна.",
-    bg: {
-      description:
-        "430i xDrive Gran Coupe M Sport с digital кокпит и Harman Kardon. {shortName}, {city}.",
-      imageAlts: ["BMW 4 Series"],
+  "peugeot-508-active-2019-11776774936356749": {
+    "sourceDescription": "Peugeot 508 ACTIVE BLUEHDI 130 S&S EAT8, 2019 г., 175 000 км. Публикувана обява на Аутолайф. Потвърдете наличността, оборудването и цената по телефона.",
+    "en": {
+      "description": "Peugeot 508 ACTIVE BLUEHDI 130 S&S EAT8, 2019, 175 000 km. Published listing from AUTOLIFE. Confirm availability, equipment and price by phone.",
+      "imageAlts": [
+        "Peugeot 508 ACTIVE",
+        "Peugeot 508 ACTIVE",
+        "Peugeot 508 ACTIVE",
+        "Peugeot 508 ACTIVE"
+      ]
     },
-    en: {
-      description:
-        "430i xDrive Gran Coupe M Sport with a digital cockpit and Harman Kardon audio. {shortName}, {city}.",
-      imageAlts: ["BMW 4 Series"],
-    },
+    "bg": {
+      "description": "Peugeot 508 ACTIVE BLUEHDI 130 S&S EAT8, 2019 г., 175 000 км. Публикувана обява на Аутолайф. Потвърдете наличността, оборудването и цената по телефона.",
+      "imageAlts": [
+        "Peugeot 508 ACTIVE",
+        "Peugeot 508 ACTIVE",
+        "Peugeot 508 ACTIVE",
+        "Peugeot 508 ACTIVE"
+      ]
+    }
   },
-  "bmw-m4-competition-sofia-2021": {
-    sourceDescription:
-      "BMW M4 Competition с M пакет, спортен салон и digital кокпит. Купе от портфолиото на Аутолайф.",
-    bg: {
-      description:
-        "BMW M4 Competition с M пакет, спортен салон и digital кокпит. Купе от портфолиото на {dealer}.",
-      imageAlts: ["Червено BMW M4 Competition пред модерен шоурум"],
+  "vw-tiguan-facelift-2019-21778149802063175": {
+    "sourceDescription": "VW Tiguan FACELIFT 2.0TDI-150 DSG NAVI CAMERA DISTR CAR PLAY, 2019 г., 214 000 км. Публикувана обява на Аутолайф. Потвърдете наличността, оборудването и цената по телефона.",
+    "en": {
+      "description": "VW Tiguan FACELIFT 2.0TDI-150 DSG NAVI CAMERA DISTR CAR PLAY, 2019, 214 000 km. Published listing from AUTOLIFE. Confirm availability, equipment and price by phone.",
+      "imageAlts": [
+        "VW Tiguan FACELIFT",
+        "VW Tiguan FACELIFT",
+        "VW Tiguan FACELIFT",
+        "VW Tiguan FACELIFT"
+      ]
     },
-    en: {
-      description:
-        "BMW M4 Competition with M package, sports interior and digital cockpit. A coupe from the {dealer} collection.",
-      imageAlts: ["Red BMW M4 Competition in front of a modern showroom"],
-    },
+    "bg": {
+      "description": "VW Tiguan FACELIFT 2.0TDI-150 DSG NAVI CAMERA DISTR CAR PLAY, 2019 г., 214 000 км. Публикувана обява на Аутолайф. Потвърдете наличността, оборудването и цената по телефона.",
+      "imageAlts": [
+        "VW Tiguan FACELIFT",
+        "VW Tiguan FACELIFT",
+        "VW Tiguan FACELIFT",
+        "VW Tiguan FACELIFT"
+      ]
+    }
   },
-  "bmw-x5-xdrive40d-berlin-2022": {
-    sourceDescription:
-      "Крос-бордер демо наличност с оторизирани медии и право на доставка. Финалният транспорт, данъци и регистрация се уточняват с оферта от Аутолайф.",
-    bg: {
-      description:
-        "Крос-бордер демо наличност с оторизирани медии и право на доставка. Финалният транспорт, данъци и регистрация се уточняват с оферта от {shortName}.",
-      imageAlts: ["Черен BMW X5 SUV в градска среда"],
+  "volvo-s60-2007-11778155314388381": {
+    "sourceDescription": "Volvo S60 НАПЪЛНО СЕРВИЗИРАН, 2007 г., 470 000 км. Публикувана обява на Аутолайф. Потвърдете наличността, оборудването и цената по телефона.",
+    "en": {
+      "description": "Volvo S60 НАПЪЛНО СЕРВИЗИРАН, 2007, 470 000 km. Published listing from AUTOLIFE. Confirm availability, equipment and price by phone.",
+      "imageAlts": [
+        "Volvo S60 НАПЪЛНО",
+        "Volvo S60 НАПЪЛНО",
+        "Volvo S60 НАПЪЛНО",
+        "Volvo S60 НАПЪЛНО"
+      ]
     },
-    en: {
-      description:
-        "Cross-border demo inventory with authorized images and delivery rights. Final transport, tax and registration costs are confirmed in a quote from {shortName}.",
-      imageAlts: ["Black BMW X5 SUV in an urban setting"],
-    },
+    "bg": {
+      "description": "Volvo S60 НАПЪЛНО СЕРВИЗИРАН, 2007 г., 470 000 км. Публикувана обява на Аутолайф. Потвърдете наличността, оборудването и цената по телефона.",
+      "imageAlts": [
+        "Volvo S60 НАПЪЛНО",
+        "Volvo S60 НАПЪЛНО",
+        "Volvo S60 НАПЪЛНО",
+        "Volvo S60 НАПЪЛНО"
+      ]
+    }
   },
+  "vw-passat-2-0tdi-140-2012-11787391986129616": {
+    "sourceDescription": "VW Passat 2.0TDI-140, 2012 г., 237 000 км. Публикувана обява на Аутолайф. Потвърдете наличността, оборудването и цената по телефона.",
+    "en": {
+      "description": "VW Passat 2.0TDI-140, 2012, 237 000 km. Published listing from AUTOLIFE. Confirm availability, equipment and price by phone.",
+      "imageAlts": [
+        "VW Passat 2.0TDI-140",
+        "VW Passat 2.0TDI-140",
+        "VW Passat 2.0TDI-140",
+        "VW Passat 2.0TDI-140"
+      ]
+    },
+    "bg": {
+      "description": "VW Passat 2.0TDI-140, 2012 г., 237 000 км. Публикувана обява на Аутолайф. Потвърдете наличността, оборудването и цената по телефона.",
+      "imageAlts": [
+        "VW Passat 2.0TDI-140",
+        "VW Passat 2.0TDI-140",
+        "VW Passat 2.0TDI-140",
+        "VW Passat 2.0TDI-140"
+      ]
+    }
+  },
+  "vw-polo-1-6-2020-11779369221509132": {
+    "sourceDescription": "VW Polo 1.6 TDI HIGHLINE DSG NAVI CAR PLAY ANDROID AUTO, 2020 г., 140 000 км. Публикувана обява на Аутолайф. Потвърдете наличността, оборудването и цената по телефона.",
+    "en": {
+      "description": "VW Polo 1.6 TDI HIGHLINE DSG NAVI CAR PLAY ANDROID AUTO, 2020, 140 000 km. Published listing from AUTOLIFE. Confirm availability, equipment and price by phone.",
+      "imageAlts": [
+        "VW Polo 1.6",
+        "VW Polo 1.6",
+        "VW Polo 1.6",
+        "VW Polo 1.6"
+      ]
+    },
+    "bg": {
+      "description": "VW Polo 1.6 TDI HIGHLINE DSG NAVI CAR PLAY ANDROID AUTO, 2020 г., 140 000 км. Публикувана обява на Аутолайф. Потвърдете наличността, оборудването и цената по телефона.",
+      "imageAlts": [
+        "VW Polo 1.6",
+        "VW Polo 1.6",
+        "VW Polo 1.6",
+        "VW Polo 1.6"
+      ]
+    }
+  }
 } satisfies DealerInventoryCopy;

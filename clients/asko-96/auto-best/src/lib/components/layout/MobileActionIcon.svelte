@@ -1,15 +1,15 @@
 <script lang="ts">
-  import { hugeiconsMobile, type MobileIconName } from './hugeicons-mobile';
-  let { name, size = 24 }: { name: MobileIconName; size?: number } = $props();
+  import { fluentMobile, type MobileIconName, type MobileIconDefinition } from './fluent-mobile';
+  let { name, size = 24, active = false }: { name: MobileIconName; size?: number; active?: boolean } = $props();
+  const icon: MobileIconDefinition = $derived(fluentMobile[name]);
 </script>
 
-<svg class="dn-icon" data-icon-family="hugeicons-rounded" width={size} height={size} viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
-  {#each hugeiconsMobile[name] as [tag, attributes]}
-    <svelte:element this={tag} {...attributes} />
+<svg class="dn-icon" data-icon-family="fluent-system-regular" data-icon-name={icon.symbol} data-icon-state="regular" data-icon-active={active} width={size} height={size} viewBox={icon.viewBox} fill="currentColor" aria-hidden="true" focusable="false">
+  {#each icon.paths as path}
+    <path d={path.d} fill-rule={path.fillRule} clip-rule={path.clipRule} />
   {/each}
 </svg>
 
 <style>
-  .dn-icon { display: block; flex: 0 0 auto; }
-  .dn-icon :global(*) { stroke-width: 1.8; }
+  .dn-icon { display: block; flex: 0 0 auto; fill: currentColor; stroke: none; }
 </style>

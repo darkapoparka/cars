@@ -1,4 +1,4 @@
-import type {Vehicle} from './data';
+import type {Vehicle} from './vehicle';
 
 // Captured public reference data; not a live inventory feed. Sources are recorded in reference/.
 export const capturedVehicles: Vehicle[] = [

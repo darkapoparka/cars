@@ -3,17 +3,17 @@
   "dealer": "texas-drive-auto",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
     "path": "templates/app",
-    "digest": "3344230cf8de012eb9c2daf1c962c4a3f189960b52f2026e1d049f2a6eae26ad",
-    "tree": "cd17d913dd597bf7dfb3e2244c2a3a2914ab3080"
+    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1",
+    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76"
   },
-  "appDigest": "e9d38e7d8c00d2d1c227d099cc6f411a74e724069c79aeac7af72bc8d5bb7a51",
+  "appDigest": "ee5b170f0d0b76e254d9f3c1209a90156df8fe0af3edc8e47ff88928303291e5",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "texas-drive-auto",
     "profile": "auto-best/src/lib/data/dealer-profile.json",
-    "profileSha256": "ca2c48e43258c8352b56de916a6c42f80a1570c530cc90812334b1202404a2d3",
+    "profileSha256": "d3b1f0853eb2319d2083208f80ff775925d0cf743705f959cb28881f805b5da1",
     "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
     "vehicles": 8,
     "currency": "USD",
@@ -38,21 +38,9 @@
         "role": "vehicle"
       },
       {
-        "source": "auto-best/static/media/photo-unavailable.svg",
-        "output": "public/dealer-app/vehicle-7ee2ac8fa3d2d3331bee.svg",
-        "sha256": "7ee2ac8fa3d2d3331bee51d3e6f081e206e5ffe425e0ecba38ad9b15f1867a38",
-        "role": "vehicle"
-      },
-      {
         "source": "auto-best/static/stock/127361925-1.webp",
         "output": "public/dealer-app/vehicle-9630e81b8a4369995908.webp",
         "sha256": "9630e81b8a4369995908baaa021da911f5e5f96bbd4ba3b8fde5d1cfc1206ae3",
-        "role": "vehicle"
-      },
-      {
-        "source": "auto-best/static/media/photo-unavailable.svg",
-        "output": "public/dealer-app/vehicle-7ee2ac8fa3d2d3331bee.svg",
-        "sha256": "7ee2ac8fa3d2d3331bee51d3e6f081e206e5ffe425e0ecba38ad9b15f1867a38",
         "role": "vehicle"
       },
       {
@@ -60,32 +48,60 @@
         "output": "public/dealer-app/vehicle-2fd83adf01279e6745b4.webp",
         "sha256": "2fd83adf01279e6745b4f33373cab57b1ed2be7517298dabd6e13dece38929ea",
         "role": "vehicle"
+      }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "acura-tl-2008-127361913",
+        "sourceValue": 176729,
+        "sourceUnit": "mi",
+        "canonicalKm": 284418
       },
       {
-        "source": "auto-best/static/media/photo-unavailable.svg",
-        "output": "public/dealer-app/vehicle-7ee2ac8fa3d2d3331bee.svg",
-        "sha256": "7ee2ac8fa3d2d3331bee51d3e6f081e206e5ffe425e0ecba38ad9b15f1867a38",
-        "role": "vehicle"
+        "slug": "audi-q5-2012-128538336",
+        "sourceValue": 104710,
+        "sourceUnit": "mi",
+        "canonicalKm": 168514
       },
       {
-        "source": "auto-best/static/media/photo-unavailable.svg",
-        "output": "public/dealer-app/vehicle-7ee2ac8fa3d2d3331bee.svg",
-        "sha256": "7ee2ac8fa3d2d3331bee51d3e6f081e206e5ffe425e0ecba38ad9b15f1867a38",
-        "role": "vehicle"
+        "slug": "audi-q5-2013-127361925",
+        "sourceValue": 114512,
+        "sourceUnit": "mi",
+        "canonicalKm": 184289
       },
       {
-        "source": "auto-best/static/media/photo-unavailable.svg",
-        "output": "public/dealer-app/vehicle-7ee2ac8fa3d2d3331bee.svg",
-        "sha256": "7ee2ac8fa3d2d3331bee51d3e6f081e206e5ffe425e0ecba38ad9b15f1867a38",
-        "role": "vehicle"
+        "slug": "audi-a4-2018-127361924",
+        "sourceValue": 128956,
+        "sourceUnit": "mi",
+        "canonicalKm": 207535
+      },
+      {
+        "slug": "bmw-x5-2014-127361904",
+        "sourceValue": 177873,
+        "sourceUnit": "mi",
+        "canonicalKm": 286259
+      },
+      {
+        "slug": "buick-enclave-2014-127361891",
+        "sourceValue": 162632,
+        "sourceUnit": "mi",
+        "canonicalKm": 261731
+      },
+      {
+        "slug": "cadillac-cts-2007-127361933",
+        "sourceValue": 119529,
+        "sourceUnit": "mi",
+        "canonicalKm": 192363
+      },
+      {
+        "slug": "cadillac-escalade-2018-127361883",
+        "sourceValue": 99315,
+        "sourceUnit": "mi",
+        "canonicalKm": 159832
       }
     ]
   },
-  "baseDeployment": {
-    "id": "dpl_D67pGtc2zoA8WLqQNb4PbgChSbQY",
-    "url": "https://cars-texasdriveauto.vercel.app/",
-    "checkedAt": "2026-09-28T02:25:55.611Z"
-  },
-  "baseReceiptSha256": "70d8d9dadf066744c51045a6266b889467a28c7a15cdbdab39310e855b64a3b6",
-  "refreshedAt": "2026-09-30T11:49:56.623Z"
+  "needsDealerQA": true,
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-13T02:33:30.671Z"
 }

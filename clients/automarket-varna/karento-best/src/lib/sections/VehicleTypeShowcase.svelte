@@ -2,6 +2,7 @@
 
 <script lang="ts">
   import { useLocale } from "#lib/i18n/context.svelte.ts";
+  import { dealer } from "#lib/content.ts";
   const locale = useLocale();
   import "#lib/styles/home-section-headings.css";
   import { MediaQuery } from "svelte/reactivity";
@@ -84,13 +85,21 @@
       height: 117,
     },
   ] as const satisfies readonly MobileBodyType[]);
+  const displayedBodyTypes = $derived(
+    bodyTypes.map((type) => ({
+      ...type,
+      count: dealer.businessPreview
+        ? locale.t("reference.bodyTypes.browse")
+        : type.count,
+    })),
+  );
 </script>
 
 {#if phone.current}
   <section class="section-box background-body py-96 desktop-collection-section">
     <div class="container">
       <MobileBodyTypeRail
-        items={bodyTypes}
+        items={displayedBodyTypes}
         layout={mobileLayout}
         actionLabel={locale.t("action.viewMore")}
         actionHref="/vehicles"
@@ -149,8 +158,8 @@
               <a class="card-title desktop-type-compact-card" href={locale.href("/vehicles")} aria-label={locale.t("ui.vehicle-type-showcase.suv")}>{locale.t("ui.vehicle-type-showcase.suv")}</a>
               <div class="card-meta">
                 <div class="meta-links"
-                  ><a href={locale.href("/vehicles")} aria-label={locale.count(24)}
-                    >{phone.current ? "24" : "24 Vehicles"}</a
+                  ><a href={locale.href("/vehicles")} aria-label={dealer.businessPreview ? locale.t("reference.bodyTypes.browse") : locale.count(24)}
+                    >{dealer.businessPreview ? locale.t("reference.bodyTypes.browse") : locale.count(24)}</a
                   ></div
                 >
                 <div class="card-button">
@@ -193,8 +202,8 @@
               >
               <div class="card-meta">
                 <div class="meta-links"
-                  ><a href={locale.href("/vehicles")} aria-label={locale.count(16)}
-                    >{phone.current ? "16" : "16 Vehicles"}</a
+                  ><a href={locale.href("/vehicles")} aria-label={dealer.businessPreview ? locale.t("reference.bodyTypes.browse") : locale.count(16)}
+                    >{dealer.businessPreview ? locale.t("reference.bodyTypes.browse") : locale.count(16)}</a
                   ></div
                 >
                 <div class="card-button">
@@ -236,8 +245,8 @@
               >
               <div class="card-meta">
                 <div class="meta-links"
-                  ><a href={locale.href("/vehicles")} aria-label={locale.count(150)}
-                    >{phone.current ? "150" : "150 Vehicles"}</a
+                  ><a href={locale.href("/vehicles")} aria-label={dealer.businessPreview ? locale.t("reference.bodyTypes.browse") : locale.count(150)}
+                    >{dealer.businessPreview ? locale.t("reference.bodyTypes.browse") : locale.count(150)}</a
                   ></div
                 >
                 <div class="card-button">
@@ -280,8 +289,8 @@
               >
               <div class="card-meta">
                 <div class="meta-links"
-                  ><a href={locale.href("/vehicles")} aria-label={locale.count(25)}
-                    >{phone.current ? "25" : "25 Vehicles"}</a
+                  ><a href={locale.href("/vehicles")} aria-label={dealer.businessPreview ? locale.t("reference.bodyTypes.browse") : locale.count(25)}
+                    >{dealer.businessPreview ? locale.t("reference.bodyTypes.browse") : locale.count(25)}</a
                   ></div
                 >
                 <div class="card-button">
@@ -324,8 +333,8 @@
               >
               <div class="card-meta">
                 <div class="meta-links"
-                  ><a href={locale.href("/vehicles")} aria-label={locale.count(56)}
-                    >{phone.current ? "56" : "56 Vehicles"}</a
+                  ><a href={locale.href("/vehicles")} aria-label={dealer.businessPreview ? locale.t("reference.bodyTypes.browse") : locale.count(56)}
+                    >{dealer.businessPreview ? locale.t("reference.bodyTypes.browse") : locale.count(56)}</a
                   ></div
                 >
                 <div class="card-button">
@@ -367,8 +376,8 @@
               >
               <div class="card-meta">
                 <div class="meta-links"
-                  ><a href={locale.href("/vehicles")} aria-label={locale.count(25)}
-                    >{phone.current ? "25" : "25 Vehicles"}</a
+                  ><a href={locale.href("/vehicles")} aria-label={dealer.businessPreview ? locale.t("reference.bodyTypes.browse") : locale.count(25)}
+                    >{dealer.businessPreview ? locale.t("reference.bodyTypes.browse") : locale.count(25)}</a
                   ></div
                 >
                 <div class="card-button">
@@ -411,8 +420,8 @@
               >
               <div class="card-meta">
                 <div class="meta-links"
-                  ><a href={locale.href("/vehicles")} aria-label={locale.count(125)}
-                    >{phone.current ? "125" : "125 Vehicles"}</a
+                  ><a href={locale.href("/vehicles")} aria-label={dealer.businessPreview ? locale.t("reference.bodyTypes.browse") : locale.count(125)}
+                    >{dealer.businessPreview ? locale.t("reference.bodyTypes.browse") : locale.count(125)}</a
                   ></div
                 >
                 <div class="card-button">

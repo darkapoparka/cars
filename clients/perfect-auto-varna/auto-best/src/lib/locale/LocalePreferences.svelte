@@ -41,7 +41,11 @@
     invalidateRequest();
     firstVisit = first; error = false; locale = i18n.locale; country = i18n.state.country;
     opener = target ?? (document.activeElement instanceof HTMLElement ? document.activeElement : null);
-    await tick(); if (!dialog.open) dialog.showModal();
+    await tick();
+    if (!dialog.open) {
+      dialog.showModal();
+      dialog.querySelector<HTMLElement>('#cars-locale-title')?.focus({ preventScroll: true });
+    }
   }
   function close() {
     dialog.close();
@@ -98,7 +102,7 @@
   <header class="cars-locale-header">
   <button type="button" class="cars-locale-close dn-icon-button" aria-label={i18n.t('locale.close')} onclick={() => submit('dismiss')}>{#if mobile.current}<MobileActionIcon name="close" />{:else}<Icon name="x" size={18} />{/if}</button>
   <p class="cars-locale-eyebrow">{localeContract.dealerName}</p>
-  <h2 id="cars-locale-title">{i18n.t(firstVisit ? 'locale.welcome' : 'locale.title')}</h2>
+  <h2 id="cars-locale-title" tabindex="-1">{i18n.t(firstVisit ? 'locale.welcome' : 'locale.title')}</h2>
   </header>
   <div class="cars-locale-content">
   <p id="cars-locale-description">{i18n.t('locale.description')}</p>
@@ -123,6 +127,7 @@
   </div>
 </dialog>
 <style>
+  #cars-locale-title:focus { outline: none; }
   .cars-locale-header, .cars-locale-content { display: contents; }
   .cars-locale-dialog{box-sizing:border-box;width:min(480px,calc(100vw - 24px));max-width:calc(100vw - 24px);max-height:calc(100dvh - 32px - env(safe-area-inset-top) - env(safe-area-inset-bottom));overflow-y:auto;margin:auto;padding:28px 24px 24px;border:1px solid #dce1e6;border-radius:var(--dn-radius-lg);background:#fff;color:#16202c;font:inherit;box-shadow:0 24px 80px #0005;overscroll-behavior:contain;z-index:2147483000}
   .cars-locale-dialog::backdrop{background:#10202b99;backdrop-filter:blur(3px)}.cars-locale-dialog h2{margin:8px 32px 12px 0;font-size:var(--dn-text-subheading);line-height:var(--dn-leading-heading);font-weight:var(--dn-weight-bold)}.cars-locale-dialog p{font-size:var(--dn-text-meta);line-height:var(--dn-leading-body);margin:12px 0}.cars-locale-dialog .cars-locale-eyebrow{font-size:var(--dn-locale-eyebrow);letter-spacing:var(--dn-locale-tracking);text-transform:uppercase;margin:0;color:#647180}.cars-locale-close{position:absolute;top:12px;right:12px;border:0;border-radius:var(--dn-radius-circle);background:transparent;color:inherit;cursor:pointer}

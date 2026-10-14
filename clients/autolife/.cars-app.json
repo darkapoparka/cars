@@ -3,17 +3,17 @@
   "dealer": "autolife",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
     "path": "templates/app",
-    "digest": "3344230cf8de012eb9c2daf1c962c4a3f189960b52f2026e1d049f2a6eae26ad",
-    "tree": "cd17d913dd597bf7dfb3e2244c2a3a2914ab3080"
+    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1",
+    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76"
   },
-  "appDigest": "91b1205833a0bc852beda0b39c8cfb4041afc0fb75df64901ba72bd48556f47b",
+  "appDigest": "c8110f6d2752c1b82d271b632a560099d1dae30e3a64ef49947b0d5da9b9a032",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "autolife",
     "profile": "auto-best/src/lib/data/dealer-profile.json",
-    "profileSha256": "57115973aeb8f4a6dab52f89a5a22c49d0721cbf9f92bcf2712ffc7691bb6391",
+    "profileSha256": "4a8b83df4f8ac22d7142a8c4a8828c8b4c8e818f1fcdbf2a193f15828fe1b552",
     "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
     "vehicles": 16,
     "currency": "EUR",
@@ -415,13 +415,169 @@
         "sha256": "f3bfcb73687107f6a6b5c26279cfc8c5a2356cf4dc805a20f0615a35dcb6cc6f",
         "role": "vehicle"
       }
-    ]
+    ],
+    "mileageFacts": [
+      {
+        "slug": "bmw-x4-2-0d-190-2017-21769682585171886",
+        "sourceValue": 190000,
+        "sourceUnit": "km",
+        "canonicalKm": 190000
+      },
+      {
+        "slug": "seat-alhambra-2-0tdi-150-2015-11770980926901387",
+        "sourceValue": 244000,
+        "sourceUnit": "km",
+        "canonicalKm": 244000
+      },
+      {
+        "slug": "ford-ka-2018-11741772051965725",
+        "sourceValue": 119000,
+        "sourceUnit": "km",
+        "canonicalKm": 119000
+      },
+      {
+        "slug": "vw-golf-1-6tdi-2010-11751025134623319",
+        "sourceValue": 250000,
+        "sourceUnit": "km",
+        "canonicalKm": 250000
+      },
+      {
+        "slug": "seat-altea-facelift-2010-11768209424885033",
+        "sourceValue": 242000,
+        "sourceUnit": "km",
+        "canonicalKm": 242000
+      },
+      {
+        "slug": "audi-a4-sline-2021-11762785459915323",
+        "sourceValue": 186000,
+        "sourceUnit": "km",
+        "canonicalKm": 186000
+      },
+      {
+        "slug": "citroen-c5-2-2-2008-11752841612433166",
+        "sourceValue": 217000,
+        "sourceUnit": "km",
+        "canonicalKm": 217000
+      },
+      {
+        "slug": "audi-q5-2-0tdi-170-2009-21756807262024883",
+        "sourceValue": 224000,
+        "sourceUnit": "km",
+        "canonicalKm": 224000
+      },
+      {
+        "slug": "vw-touran-2-0tdi-150-2021-11768636298551646",
+        "sourceValue": 145000,
+        "sourceUnit": "km",
+        "canonicalKm": 145000
+      },
+      {
+        "slug": "mercedes-benz-gle-coupe-2017-21774977517199416",
+        "sourceValue": 189000,
+        "sourceUnit": "km",
+        "canonicalKm": 189000
+      },
+      {
+        "slug": "bmw-x1-2-0d-150-2016-21776689748685033",
+        "sourceValue": 250000,
+        "sourceUnit": "km",
+        "canonicalKm": 250000
+      },
+      {
+        "slug": "peugeot-508-active-2019-11776774936356749",
+        "sourceValue": 175000,
+        "sourceUnit": "km",
+        "canonicalKm": 175000
+      },
+      {
+        "slug": "vw-tiguan-facelift-2019-21778149802063175",
+        "sourceValue": 214000,
+        "sourceUnit": "km",
+        "canonicalKm": 214000
+      },
+      {
+        "slug": "volvo-s60-2007-11778155314388381",
+        "sourceValue": 470000,
+        "sourceUnit": "km",
+        "canonicalKm": 470000
+      },
+      {
+        "slug": "vw-passat-2-0tdi-140-2012-11787391986129616",
+        "sourceValue": 237000,
+        "sourceUnit": "km",
+        "canonicalKm": 237000
+      },
+      {
+        "slug": "vw-polo-1-6-2020-11779369221509132",
+        "sourceValue": 140000,
+        "sourceUnit": "km",
+        "canonicalKm": 140000
+      }
+    ],
+    "inventoryNoticePreservation": {
+      "schemaVersion": 1,
+      "kind": "cars-current-app-inventory-notice-preservation",
+      "dealer": "autolife",
+      "baseline": {
+        "commit": "935a5054dc76f950c5de433a7b64d9fe6a06f4bf",
+        "tree": "e181cf2579e12edeb166cd9765605ae87c92ead7"
+      },
+      "path": "app/lib/dealer.json",
+      "reviewSha256": "03aa6f911e72037731701127f370687fdb5af4f9a6678c95ef1274e84adaf931",
+      "currentConfigSha256": "a88c6098a186933dc933706cafcac39bb449f3943d811cd4ad184bbd65c43186",
+      "currentNoticeSha256": "930e2f71ca0269d56eb42579409ae630e1d8802e7af4a34d32c0accaa0bf2d6a",
+      "profileSha256": "4a8b83df4f8ac22d7142a8c4a8828c8b4c8e818f1fcdbf2a193f15828fe1b552",
+      "unmodifiedTargetConfigSha256": "c1f5bf69ff3e56c9c71c70b4341d872ce62f96063c2379a4ccbea579ccd84673",
+      "targetConfigSha256": "b1010d51136b2dc3e6af3cd5650f0b33c271ec515536444e8c4e74bf8b1429ad",
+      "targetSources": {
+        "auto-best": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/auto-best",
+          "digest": "dcbc59990928884006652677d3529020df3844029993895a71e5f6818ba7363c",
+          "tree": "5fb7a2164775050a47c1183371622295dbf63725"
+        },
+        "modern": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/modern",
+          "digest": "ba263aac8f1863d133807d3e1bf3597d125cf315a7e0deba3f6e419b52434c25",
+          "tree": "3974380670eb388bb16182f94ade33be6d87b1c1"
+        },
+        "import": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/import",
+          "digest": "f98a0934cdcc5adbda393c14c02eb2adc0175344ab2ac3f913afe4b0603366e5",
+          "tree": "6afc6901e2f95967fb7c72e9f75525d4d6fbf086"
+        },
+        "app": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/app",
+          "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1",
+          "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76"
+        },
+        "mobile": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/mobile",
+          "digest": "4e858bd9dbd3ef5b52cd904c4ed97bbfdc0f4cfe02b5a3840580f38026b867a0",
+          "tree": "2b02829e157071e305bfb2dff10ef18e85c8a35e"
+        },
+        "karento-best": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/karento-best",
+          "digest": "83056967764a686f3737d74b86c5db51c1385a50184853f50ec4ade80c1dd44f",
+          "tree": "5f6eec8efb2f9e99819f7f0c2f743d18fff7b134"
+        }
+      },
+      "allOtherConfigFieldsUnchanged": true,
+      "sourceFactsUnchanged": true
+    }
   },
-  "baseDeployment": {
-    "id": "dpl_2gpitkS2aLMhBe4eg3AeTcoGCQkU",
-    "url": "https://cars-autolife.vercel.app/",
-    "checkedAt": "2026-09-28T02:25:34.259Z"
-  },
-  "baseReceiptSha256": "43a0780b7bace8a5e13cc257d5ebef60e3b2d3a92a5ceee9fdded89036762b24",
-  "refreshedAt": "2026-09-30T10:53:47.688Z"
+  "needsDealerQA": true,
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-13T02:37:12.762Z"
 }

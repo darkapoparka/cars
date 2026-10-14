@@ -13,7 +13,7 @@ app.html
       Footer
 ```
 
-`src/app.html` supplies the document language, viewport and icon. `src/routes/+layout.svelte` imports the self-hosted Onest font and `src/app.css`, computes canonical/noindex metadata, and renders the shared shell. `SiteShell.svelte` supplies the skip link, header, main landmark and footer. The layout chooses footer variants by route.
+`src/app.html` supplies the document language, viewport and icon. `src/routes/+layout.svelte` imports `src/app.css`, computes canonical/noindex metadata, and renders the shared shell. The shared CSS tokens register the locally bundled Inter v4.1 variable font. `SiteShell.svelte` supplies the skip link, header, main landmark and footer. The layout chooses footer variants by route.
 
 Each route owns its page composition and `<svelte:head>` metadata. Its `+page.ts`, where present, resolves URL state into typed page data. The first response contains server-rendered content; SvelteKit navigation updates the route without rebuilding a separate application shell. See [SvelteKit loading](https://svelte.dev/docs/kit/load) for framework behavior.
 
@@ -41,7 +41,7 @@ Aliases are configured in `svelte.config.js`: `$components` maps to components, 
 Inventory follows this path:
 
 ```text
-GET /listing-grid?...
+GET /cars?...
   +page.ts
     parseListingFilters(url.searchParams)
     filterListingVehicles(records, filters)
@@ -72,13 +72,13 @@ The finance calculator divides remaining principal by a selected term; it is not
 
 ## CSS and media
 
-Global imports are ordered `tokens.css`, `base.css`, `navigation.css`, `composition.css`. Component `<style>` blocks own internals; route CSS owns layout and route-scoped adaptations. The cascade is part of the existing implementation, not a new theme framework. [Styling](docs/STYLING.md) explains its actual values and responsive patterns.
+Global imports are ordered `tokens.css`, `base.css`, `composition.css`. Component `<style>` blocks own internals; route CSS owns layout and route-scoped adaptations. The cascade is part of the existing implementation, not a new theme framework. [Styling](docs/STYLING.md) explains its actual values and responsive patterns.
 
 Static media is referenced by public paths. Artwork helpers render existing crop/bounds data; they do not generate images. Decorative cutouts, stock photographs and text-bearing campaign banners have different roles. [Assets](ASSET_PROVENANCE.md) explains their origin and treatment.
 
 ## Server and build boundary
 
-`src/hooks.server.ts` handles the explicit legacy redirect set and response headers. `robots.txt` and `sitemap.xml` are route handlers. `template.ts` determines indexability. Build output is produced by the Vercel adapter selected in `svelte.config.js`; configuration details belong in [Deployment](docs/DEPLOYMENT.md).
+`src/hooks.server.ts` composes security, request-local locale resolution and the read-only/legacy-route handlers. `src/lib/server/security.ts` applies the shared headers to normal responses, locale redirects, preference responses and rejected writes without mutating immutable responses. `robots.txt` and `sitemap.xml` are route handlers. `template.ts` determines indexability. Build output is produced by the Vercel adapter selected in `svelte.config.js`; configuration details belong in [Deployment](docs/DEPLOYMENT.md).
 
 ## Extending the template
 
@@ -91,3 +91,11 @@ For a new article or vehicle, extend its typed records. For a new page, add a ro
 The pure portable policy lives in `src/lib/locale/policy.ts`; explicit dealer configuration lives in `src/lib/config/locale.ts`. `src/hooks.ts` performs URL-only rerouting, while `locale/server.ts` resolves request locals before the existing read-only application handler. `+layout.server.ts` passes that state into the native Svelte context. No mutable visitor-global locale store or rendered-text replacement is used.
 
 Common, template and dealer-owned catalog inputs generate typed messages and a source/hash manifest. Ambiguous aliases are excluded; contextual field titles use explicit keys. Preferences have a same-origin bounded server endpoint and an SSR form. The endpoint sets preference cookies only; business operations remain disabled. See [Localization](docs/localization/README.md) and [coverage](docs/localization/COVERAGE.md) for contracts and evidence.
+
+## Enquiry resources and formatting ownership
+
+Enquiry components own draft state and presentation. `ui/enquiry-photos.ts` owns file validation and object-URL allocation/release; `ui/enquiry-share.ts` reports native browser handoff outcomes without submitting leads. Use the existing overlay scroll owner and release resources on close/destruction. Keep share calls inside the initiating user gesture.
+
+`locale/formatters.ts` caches only immutable formatter instances for validated dealer locales, never visitor preferences or rendered values. `data/demo-content.ts` owns explicitly labelled sample team and partner records; the unused vehicle-showcase helper was retired.
+
+These contracts are covered by `check:domain`, enquiry-resource and overlay tests. See the [architecture/code-quality verification record](docs/ARCHITECTURE-QUALITY-2026-10-07.md) for the preserved visual contract and rollout boundaries.

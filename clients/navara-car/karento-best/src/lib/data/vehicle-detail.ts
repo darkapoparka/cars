@@ -158,7 +158,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "Навара кар",
   "location": "бул. „Цар Освободител“, Кайсиева градина, Варна",
-  "avatar": "/dealer-brand/v2-472ca9a8fa8072b4/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-24f1fab0fc40d49e/logo-on-light.webp",
   "mobile": "0899 192 300",
   "email": "",
   "whatsapp": "",

@@ -278,7 +278,7 @@ const s = stylex.create({
     paddingInline: { default: 12, '@media (max-width: 699px)': 0 },
   },
   pillsRail: {
-    minHeight: { default: 52, '@media (min-width: 1024px)': 44 },
+    minHeight: { default: 52, '@media (max-width: 699px)': 48, '@media (min-width: 1024px)': 44 },
     marginTop: { default: 8, '@media (min-width: 1024px)': 0 },
     gap: { default: 0, '@media (min-width: 1024px)': 8 },
     flexShrink: 0,
@@ -288,7 +288,15 @@ const s = stylex.create({
     flexGrow: { default: 1, '@media (min-width: 1024px)': 0 },
     flexShrink: { default: 1, '@media (min-width: 1024px)': 0 },
     flexBasis: { default: 0, '@media (min-width: 1024px)': 'auto' },
-    minHeight: { default: 52, '@media (min-width: 1024px)': 44 },
+    minHeight: { default: 52, '@media (max-width: 699px)': 48, '@media (min-width: 1024px)': 44 },
+    backgroundColor: {
+      default: 'transparent',
+      ':active': colors.controlSurface,
+      '@media (max-width: 699px)': {
+        default: 'transparent',
+        ':active': colors.stripe,
+      },
+    },
     paddingInline: { default: 8, '@media (min-width: 1024px)': 0 },
     paddingBlock: { default: 10, '@media (min-width: 1024px)': 0 },
     fontSize: { default: 16, '@media (min-width: 1024px)': 14 },
@@ -317,6 +325,7 @@ const s = stylex.create({
   },
   sidebarRail: {
     flexDirection: { default: 'row', '@media (min-width: 1024px)': 'column' },
+    minHeight: { default: 52, '@media (max-width: 699px)': 48 },
     gap: {
       default: 0,
       '@media (max-width: 699px)': 8,
@@ -361,6 +370,14 @@ const s = stylex.create({
     },
   },
   sidebarTab: {
+    backgroundColor: {
+      default: 'transparent',
+      ':active': colors.controlSurface,
+      '@media (max-width: 699px)': {
+        default: 'transparent',
+        ':active': colors.stripe,
+      },
+    },
     minWidth: { default: 72, '@media (max-width: 699px)': 48 },
     lineHeight: { default: '22px', '@media (max-width: 699px)': '24px' },
     outlineColor: {
@@ -390,6 +407,7 @@ const s = stylex.create({
     },
     minHeight: {
       default: 52,
+      '@media (max-width: 699px)': 48,
       '@media (min-width: 700px)': 56,
       '@media (min-width: 1024px)': 44,
     },
@@ -424,6 +442,7 @@ const s = stylex.create({
       default: 'transparent',
       ':active': {
         default: colors.controlSurface,
+        '@media (max-width: 699px)': colors.stripe,
         '@media (min-width: 700px)': colors.activeSurface,
         '@media (min-width: 1024px)': colors.background,
       },

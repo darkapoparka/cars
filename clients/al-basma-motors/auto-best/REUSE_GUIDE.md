@@ -54,6 +54,8 @@ Start with verified business name, usable logo, phone, location and destinations
 
 Update both textual address and `showroomCoordinates`; changing only the address will not move the map pin. Set the actual social profiles and review all displayed video records. A new YouTube channel URL does not replace the inherited thumbnail/video selection.
 
+General Contact uses the configured Facebook, YouTube and Instagram URLs in one white desktop panel below the visit card. Its title sits above three bordered profile cards, with round brand icons and labels underneath. In preview mode, empty URLs display labelled, noninteractive sample profiles. Published mode omits them; with no configured profiles, the entire panel is omitted. Keep real dealer destinations in `brand.ts`. The hero, About visit panel and mobile social controls continue to show only configured profiles.
+
 ## Inventory
 
 Replace sample records with the client inventory. Keep stable positive numeric IDs, correct title/make/body, numeric year/mileage/price and appropriate photos. The application derives formatted values and detail URLs. Use only equipment supported by the record; the source template equipment array is not a specification for every client vehicle.
@@ -63,6 +65,14 @@ Review `listingFilterOptions` after changing inventory: some versions derive cho
 In the standalone baseline, the inventory mapper currently marks all output records as sample and derives model options from titles. Supporting verified records or explicit models requires changing that mapper/domain boundary intentionally; changing only `verifiedInventory` does not do it.
 
 ## Images and generated banners
+
+### Home section background choices
+
+`leadSite.artwork.homeSectionBanner` in `src/lib/config/lead-site.ts` selects a reusable Home banner style. The owner-selected default for Auto Best lead/client builds is Nürburgring (`variant: 'circuit'`), with `mobile: 'featured'` applying a compact version to the mobile Featured Cars heading. Use this default for new personalizations and requested client refreshes unless the dealer brief selects another style. Set `mobile: 'none'` to retain plain mobile headings. The other mobile section headings keep their existing presentation.
+
+The five retained choices are `motorsport`, `kerb`, `circuit`, `headlights` and `taillights`. Their desktop and mobile asset paths are owned by `homeSectionBannerAssets` and `homeSectionBannerMobileAssets` in the same config; choosing a style requires no component changes. All four desktop Home section headers share the chosen style. Kerbs use photographed painted-concrete corners at their natural proportions, with each side taken from its own edge of the paired image. Both sweep inward over the retained asphalt material. The `circuit` choice now pairs the admired asphalt/left kerb with an exact reflected counterpart on the right. The map is omitted from the final presentation; its [public-domain Nordschleife source](provenance/nordschleife.md) remains retained. Kerbs and Circuit use proportional 960px mobile encodings; the other three choices reuse their existing plates. [Polish provenance and checks](provenance/home-section-polish-2026-10-09.md) record the selected assets.
+
+During client review, phone visitors open **Menu → Банери / Banner preview**, a centered pill below Contact. It opens a separate modal with five labeled thumbnail choices, keeping the menu layout fixed. Closing the modal returns focus to its pill; choosing a style closes both dialogs and opens Home at the Featured Cars banner, including when choosing from another route. The URL retains the selected `banner` value for refreshing or sharing. This chooser is available on ordinary preview pages without needing a special link. A desktop selector appears on explicit review links such as `/bg?banner=kerb#featured-title` or `/en?banner=kerb#featured-title` while `template.mode` is `preview`, including built previews. Development also provides the selector for local comparisons. A published production site uses its configured style, ignores review overrides and omits both choosers. Before copying or publishing, choose the client's variant and mobile placement, then inspect the actual crop and live heading/button contrast at 320/390px and 992/1440px. These illustrations contain no dealer identity or embedded text.
 
 Store runtime images under `static/` and use public `/assets/...` paths. Update the source dimensions and any crop/bounds metadata when replacing artwork. Photography and cutouts use different framing; substituting one for the other can change the composition even when the CSS is untouched.
 

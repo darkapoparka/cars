@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "format": "mobile-preview-v1",
+  "dealer": "the-dealers-point",
+  "name": "The Dealers Point",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/mobile",
+    "digest": "4e858bd9dbd3ef5b52cd904c4ed97bbfdc0f4cfe02b5a3840580f38026b867a0",
+    "tree": "2b02829e157071e305bfb2dff10ef18e85c8a35e"
+  },
+  "sourceDigest": "087a4b49a3f7d37ff7af523a754b6ef98bde17e79f2af8bef9a7edb34017d59a",
+  "inventory": {
+    "mode": "dated-listing-snapshot",
+    "count": 10,
+    "observedAt": "2026-09-09"
+  },
+  "personalization": {
+    "profileSha256": "ddf9249df4908bb8bbdb2390ad00dfc8b0d799c261571f29b9fabe2d98fa6cec",
+    "logoPaths": [
+      "/dealer-brand/logo-on-light.webp",
+      "/dealer-brand/logo-on-dark.webp"
+    ],
+    "mediaPaths": [
+      "/dealer/stock/1.svg",
+      "/dealer/stock/2.svg",
+      "/dealer/stock/3.svg",
+      "/dealer/stock/4.svg",
+      "/dealer/stock/5.svg",
+      "/dealer/stock/6.svg",
+      "/dealer/stock/7.svg",
+      "/dealer/stock/8.svg",
+      "/dealer/stock/9.svg",
+      "/dealer/stock/10.svg"
+    ],
+    "mediaMappings": [],
+    "contentPaths": [
+      "mobile/src/lib/showroom-config.ts",
+      "mobile/src/lib/catalog.ts",
+      "mobile/src/lib/dealers.ts",
+      "mobile/src/lib/dealer-inventory.json",
+      "mobile/src/lib/locale.ts",
+      "mobile/src/lib/search.ts",
+      "mobile/src/components/NativeDealerCards.tsx",
+      "mobile/src/components/DealerScreens.tsx",
+      "mobile/src/components/VehicleCard.tsx",
+      "mobile/src/components/ShowroomVehicleCard.tsx",
+      "mobile/src/components/VehicleSections.tsx",
+      "mobile/src/lib/mobile-mileage.ts",
+      "mobile/src/lib/types.ts",
+      "mobile/src/components/DesktopVehicleSummary.tsx",
+      "mobile/src/components/NativeCarPark.tsx",
+      "mobile/src/components/ShowroomFilterSheet.tsx",
+      "mobile/src/lib/vehicle-copy.ts"
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

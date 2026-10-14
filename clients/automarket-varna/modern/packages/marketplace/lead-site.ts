@@ -68,9 +68,9 @@ export interface LeadSiteConfig {
   readonly localizedCopy?: Readonly<Record<"bg" | "en", LeadSiteCopy>>;
   readonly logoInversePath?: string;
   readonly logoPath: string;
-  readonly logoOnAccent: string;
-  readonly logoOnDark: string;
   readonly logoOnLight: string;
+  readonly logoOnDark: string;
+  readonly logoOnAccent: string;
   readonly mapsEmbedUrl: string;
   readonly mapsUrl: string;
   readonly mobileFinancingArtworkPath?: string;
@@ -114,7 +114,7 @@ export const leadSite: LeadSiteConfig = {
     "tagline": "AUTOMARKET — vehicles and dealer support in Varna."
   }
 },
-  accent: "#a50f15",
+  accent: "#30343b",
   desktopAccent: "#4b5057",
   desktopInventoryFilterLayout: "quick",
   desktopPreviewIdentity: {
@@ -147,7 +147,10 @@ export const leadSite: LeadSiteConfig = {
   email: "",
   heroPath: "/lead-hero.jpg",
   locale: "bg-BG",
-  logoPath: "/dealer-brand/logo-on-light.webp",
+  logoPath: "/dealer-brand/logo-on-dark.webp",
+  logoOnLight: "/dealer-brand/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/logo-on-dark.webp",
+  logoOnAccent: "/dealer-brand/logo-on-accent.webp",
   mapsEmbedUrl:
     "https://maps.google.com/maps?q=%D0%90%D1%83%D1%82%D0%BE%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20%D0%94%D0%BE%D0%BC%20%D0%BD%D0%B0%20%D0%9A%D0%B0%D0%BC%D0%B8%D0%BE%D0%BD%D0%B0&output=embed",
   mapsUrl:
@@ -160,9 +163,5 @@ export const leadSite: LeadSiteConfig = {
   socialLinks: {},
   staticDemoMode: true,
   tagline: "Аутомаркет Варна — автомобили и съдействие в Варна.",
-  logoOnLight: "/dealer-brand/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/logo-on-dark.webp",
-  logoOnAccent: "/dealer-brand/logo-on-accent.webp",
-  logoInversePath: "/dealer-brand/logo-on-dark.webp"
 };
 // LEAD_SITE_CONFIG_END

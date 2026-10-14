@@ -1,6 +1,5 @@
 import { formatPrice, localeContract, type Locale } from '$lib/locale/core';
 import { templateText } from '$lib/locale/messages';
-import { leadSite } from '$config/lead-site';
 
 export const vehicleTypes = ['car', 'motorbike', 'van', 'truck'] as const;
 export type VehicleType = typeof vehicleTypes[number];
@@ -27,11 +26,16 @@ export type Vehicle = {
   make: string;
   /** Optional manufacturer sub-brand used by compact card identity. */
   cardBrand?: string;
+  /** Seller-supplied highlight by locale; import/condition claims require record-specific evidence. */
+  cardNote?: Partial<Record<Locale, string>>;
   title: string;
   year: string;
   yearNumber: number;
   mileage: string;
   mileageKm: number;
+  mileageKnown?: boolean;
+  mileageValue?: number;
+  mileageUnit?: 'km' | 'mi';
   fuel: string;
   transmission: string;
   equipment: readonly VehicleEquipment[];
@@ -43,7 +47,8 @@ export type Vehicle = {
 export const featuredVehicles: Vehicle[] = [
   {
     "id": 1,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://autolife.mobile.bg/obiava-21769682585171886-bmw-x4-2-0d-190-m-packet-full-mcar-varna",
     "image": "/assets/autolife/vehicle-01-1.webp",
     "category": "SUV",
@@ -54,6 +59,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2017,
     "mileage": "190 000 км",
     "mileageKm": 190000,
+    "mileageKnown": true,
+    "mileageValue": 190000,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Автоматик",
     "equipment": [
@@ -62,12 +70,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 20500,
-    "href": "/listing-detail-v1/1",
-    "type": "car"
+    "href": "/listing-detail-v1/1"
   },
   {
     "id": 2,
-    "verification": "verified",
+    "type": "van",
+    "verification": "sample",
     "evidenceUrl": "https://autolife.mobile.bg/obiava-11770980926901387-seat-alhambra-2-0tdi-150-koja-navi-camera-panorama-dsg-distr-el",
     "image": "/assets/autolife/vehicle-02-1.webp",
     "category": "Van",
@@ -78,6 +86,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2015,
     "mileage": "244 000 км",
     "mileageKm": 244000,
+    "mileageKnown": true,
+    "mileageValue": 244000,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Автоматик",
     "equipment": [
@@ -85,12 +96,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 11999,
-    "href": "/listing-detail-v1/2",
-    "type": "car"
+    "href": "/listing-detail-v1/2"
   },
   {
     "id": 3,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://autolife.mobile.bg/obiava-11741772051965725-ford-ka-1-5duratorq-active-euro6d",
     "image": "/assets/autolife/vehicle-03-1.webp",
     "category": "SUV",
@@ -101,6 +112,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2018,
     "mileage": "119 000 км",
     "mileageKm": 119000,
+    "mileageKnown": true,
+    "mileageValue": 119000,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Ръчна",
     "equipment": [
@@ -109,12 +123,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 6999,
-    "href": "/listing-detail-v1/3",
-    "type": "car"
+    "href": "/listing-detail-v1/3"
   },
   {
     "id": 4,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://autolife.mobile.bg/obiava-11751025134623319-vw-golf-1-6tdi-bluemotion",
     "image": "/assets/autolife/vehicle-04-1.webp",
     "category": "Hatchback",
@@ -125,6 +139,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2010,
     "mileage": "250 000 км",
     "mileageKm": 250000,
+    "mileageKnown": true,
+    "mileageValue": 250000,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Ръчна",
     "equipment": [
@@ -132,12 +149,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 4500,
-    "href": "/listing-detail-v1/4",
-    "type": "car"
+    "href": "/listing-detail-v1/4"
   },
   {
     "id": 5,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://autolife.mobile.bg/obiava-11768209424885033-seat-altea-facelift-b-gpl",
     "image": "/assets/autolife/vehicle-05-1.webp",
     "category": "Hatchback",
@@ -148,6 +165,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2010,
     "mileage": "242 000 км",
     "mileageKm": 242000,
+    "mileageKnown": true,
+    "mileageValue": 242000,
+    "mileageUnit": "km",
     "fuel": "Бензин",
     "transmission": "Ръчна",
     "equipment": [
@@ -155,12 +175,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 3999,
-    "href": "/listing-detail-v1/5",
-    "type": "car"
+    "href": "/listing-detail-v1/5"
   },
   {
     "id": 6,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://autolife.mobile.bg/obiava-11762785459915323-audi-a4-sline-4x4-distr-digital-matrix-key-less-blind-spot",
     "image": "/assets/autolife/vehicle-06-1.webp",
     "category": "Wagon",
@@ -171,6 +191,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2021,
     "mileage": "186 000 км",
     "mileageKm": 186000,
+    "mileageKnown": true,
+    "mileageValue": 186000,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Автоматик",
     "equipment": [
@@ -179,12 +202,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 20500,
-    "href": "/listing-detail-v1/6",
-    "type": "car"
+    "href": "/listing-detail-v1/6"
   },
   {
     "id": 7,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://autolife.mobile.bg/obiava-11752841612433166-citroen-c5-2-2-hdi-170-full",
     "image": "/assets/autolife/vehicle-07-1.webp",
     "category": "Sedan",
@@ -195,6 +218,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2008,
     "mileage": "217 000 км",
     "mileageKm": 217000,
+    "mileageKnown": true,
+    "mileageValue": 217000,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Ръчна",
     "equipment": [
@@ -204,12 +230,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 3700,
-    "href": "/listing-detail-v1/7",
-    "type": "car"
+    "href": "/listing-detail-v1/7"
   },
   {
     "id": 8,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://autolife.mobile.bg/obiava-21756807262024883-audi-q5-2-0tdi-170-panorama",
     "image": "/assets/autolife/vehicle-08-1.webp",
     "category": "SUV",
@@ -220,6 +246,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2009,
     "mileage": "224 000 км",
     "mileageKm": 224000,
+    "mileageKnown": true,
+    "mileageValue": 224000,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Автоматик",
     "equipment": [
@@ -230,12 +259,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 7999,
-    "href": "/listing-detail-v1/8",
-    "type": "car"
+    "href": "/listing-detail-v1/8"
   },
   {
     "id": 9,
-    "verification": "verified",
+    "type": "van",
+    "verification": "sample",
     "evidenceUrl": "https://autolife.mobile.bg/obiava-11768636298551646-vw-touran-2-0tdi-150-distr-camera-dsg",
     "image": "/assets/autolife/vehicle-09-1.webp",
     "category": "Van",
@@ -246,6 +275,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2021,
     "mileage": "145 000 км",
     "mileageKm": 145000,
+    "mileageKnown": true,
+    "mileageValue": 145000,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Автоматик",
     "equipment": [
@@ -255,12 +287,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 13999,
-    "href": "/listing-detail-v1/9",
-    "type": "car"
+    "href": "/listing-detail-v1/9"
   },
   {
     "id": 10,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://autolife.mobile.bg/obiava-21774977517199416-mercedes-benz-gle-coupe-350cdi-amg-distr-pano-camera-harman-kardon",
     "image": "/assets/autolife/vehicle-10-1.webp",
     "category": "SUV",
@@ -271,6 +303,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2017,
     "mileage": "189 000 км",
     "mileageKm": 189000,
+    "mileageKnown": true,
+    "mileageValue": 189000,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Автоматик",
     "equipment": [
@@ -279,12 +314,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 34500,
-    "href": "/listing-detail-v1/10",
-    "type": "car"
+    "href": "/listing-detail-v1/10"
   },
   {
     "id": 11,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://autolife.mobile.bg/obiava-21776689748685033-bmw-x1-2-0d-150-x-drive",
     "image": "/assets/autolife/vehicle-11-1.webp",
     "category": "SUV",
@@ -295,6 +330,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2016,
     "mileage": "250 000 км",
     "mileageKm": 250000,
+    "mileageKnown": true,
+    "mileageValue": 250000,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Ръчна",
     "equipment": [
@@ -304,12 +342,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 11500,
-    "href": "/listing-detail-v1/11",
-    "type": "car"
+    "href": "/listing-detail-v1/11"
   },
   {
     "id": 12,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://autolife.mobile.bg/obiava-11776774936356749-peugeot-508-active-bluehdi-130-s-s-eat8",
     "image": "/assets/autolife/vehicle-12-1.webp",
     "category": "Hatchback",
@@ -320,6 +358,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2019,
     "mileage": "175 000 км",
     "mileageKm": 175000,
+    "mileageKnown": true,
+    "mileageValue": 175000,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Автоматик",
     "equipment": [
@@ -328,12 +369,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 12300,
-    "href": "/listing-detail-v1/12",
-    "type": "car"
+    "href": "/listing-detail-v1/12"
   },
   {
     "id": 13,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://autolife.mobile.bg/obiava-21778149802063175-vw-tiguan-facelift-2-0tdi-150-dsg-navi-camera-distr-car-play",
     "image": "/assets/autolife/vehicle-13-1.webp",
     "category": "SUV",
@@ -344,6 +385,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2019,
     "mileage": "214 000 км",
     "mileageKm": 214000,
+    "mileageKnown": true,
+    "mileageValue": 214000,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Автоматик",
     "equipment": [
@@ -353,12 +397,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 14999,
-    "href": "/listing-detail-v1/13",
-    "type": "car"
+    "href": "/listing-detail-v1/13"
   },
   {
     "id": 14,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://autolife.mobile.bg/obiava-11778155314388381-volvo-s60-napalno-serviziran",
     "image": "/assets/autolife/vehicle-14-1.webp",
     "category": "Sedan",
@@ -369,17 +413,20 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2007,
     "mileage": "470 000 км",
     "mileageKm": 470000,
+    "mileageKnown": true,
+    "mileageValue": 470000,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Автоматик",
     "equipment": [],
     "condition": "used",
     "priceEur": 2500,
-    "href": "/listing-detail-v1/14",
-    "type": "car"
+    "href": "/listing-detail-v1/14"
   },
   {
     "id": 15,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://autolife.mobile.bg/obiava-11787391986129616-vw-passat-2-0tdi-140",
     "image": "/assets/autolife/vehicle-15-1.webp",
     "category": "Wagon",
@@ -390,6 +437,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2012,
     "mileage": "237 000 км",
     "mileageKm": 237000,
+    "mileageKnown": true,
+    "mileageValue": 237000,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Ръчна",
     "equipment": [
@@ -398,12 +448,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 6300,
-    "href": "/listing-detail-v1/15",
-    "type": "car"
+    "href": "/listing-detail-v1/15"
   },
   {
     "id": 16,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://autolife.mobile.bg/obiava-11779369221509132-vw-polo-1-6-tdi-highline-dsg-navi-car-play-android-auto",
     "image": "/assets/autolife/vehicle-16-1.webp",
     "category": "Hatchback",
@@ -414,6 +464,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2020,
     "mileage": "140 000 км",
     "mileageKm": 140000,
+    "mileageKnown": true,
+    "mileageValue": 140000,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Автоматик",
     "equipment": [
@@ -422,13 +475,15 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 9999,
-    "href": "/listing-detail-v1/16",
-    "type": "car"
+    "href": "/listing-detail-v1/16"
   }
 ];
 
-export const formatVehiclePrice = (amount: number, locale: Locale = localeContract.defaultLocale) => amount > 0 ? formatPrice(amount, locale) : templateText(locale, 'Price on request');
+export const formatVehiclePrice = (
+  amount: number,
+  locale: Locale = localeContract.defaultLocale
+) => amount > 0 ? formatPrice(amount, locale) : templateText(locale, 'Price on request');
 
 /** Allow a currency line break while preserving the locale's grouped digits. */
 export const formatVehiclePriceLabel = (amount: number, locale: Locale = localeContract.defaultLocale) =>
-  formatVehiclePrice(amount, locale).replace(/([A-Z]{3})\s+/u, '$1 ').replace(/\s+([A-Z]{3})$/u, ' $1');
+  formatVehiclePrice(amount, locale).replace(/([A-Z]{3}|\p{Sc})\s+/u, '$1 ').replace(/\s+([A-Z]{3}|\p{Sc})$/u, ' $1');

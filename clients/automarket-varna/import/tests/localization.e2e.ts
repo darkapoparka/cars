@@ -2,7 +2,20 @@ import feed from '../src/lib/data/daynight-listings.json' with { type: 'json' };
 import { site } from '../src/lib/config/site';
 import { promptVersion } from './locale-fixture';
 import { test, expect } from '@playwright/test';
+const hostedQa = process.env.CARS_HOSTED_QA_PROFILE
+  ? await import('../../../scripts/lib/hosted-native-qa.mjs') : null;
 const mount = process.env.LOCALE_FIXTURE_BASE ?? '';
+const hosted = hostedQa?.readHostedProfile('import') ?? null;
+const hostedBoundaries = new WeakMap();
+test.beforeEach(async ({ context }, info) => {
+  if (!hosted) return;
+  hostedQa!.validateHelperTarget(hosted, info.project.use.baseURL as string, mount, process.env.CARS_HOSTED_QA_IMPORT_OUTPUT ?? '');
+  const blocked = await hostedQa!.guardHostedContext(context, hosted);
+  hostedBoundaries.set(context, blocked);
+});
+test.afterEach(async ({ context }) => {
+  if (hosted) hostedQa!.assertBoundary(hostedBoundaries.get(context) ?? []);
+});
 const route = (locale: string, path = '') => mount + '/' + locale + path;
 const routes = [
 	'',
@@ -201,6 +214,7 @@ test('no JavaScript preferences and contact are native forms', async ({ browser 
 		javaScriptEnabled: false,
 		viewport: { width: 390, height: 844 }
 	});
+	const blocked = hosted ? await hostedQa!.guardHostedContext(context, hosted) : [];
 	const page = await context.newPage();
 	const origin = info.project.use.baseURL as string;
 	await page.goto(
@@ -217,6 +231,7 @@ test('no JavaScript preferences and contact are native forms', async ({ browser 
 	await expect(page.locator('html')).toHaveAttribute('lang', 'bg');
 	await expect(page.locator('noscript form')).toBeVisible();
 	await context.close();
+	if (hosted) hostedQa!.assertBoundary(blocked);
 });
 test('explicit URL works with blocked storage and conflicting preferences', async ({
 	page,

@@ -2,22 +2,22 @@
   "schemaVersion": 1,
   "dealer": "ivo-auto",
   "profile": "auto-best/src/lib/data/dealer-profile.json",
-  "profileSha256": "48acb84eda6a8689d24ca7a223c33b8c14f81297775651b36fdbd2c46c21f14c",
-  "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+  "profileSha256": "eee23fcf2cd4caf579bcbcd1d3f15186f80263acb44a7661bdcf49f88b3b28b1",
+  "logoPolicy": "Restore exact retained gold raster identity and existing gold icon; no new identity was generated. Preserve factual proposal provenance and template UI palettes.",
   "vehicles": 16,
   "currency": "EUR",
   "observedAt": "2026-09-07",
   "assets": [
     {
       "source": "auto-best/static/dealer-brand/logo-on-light.webp",
-      "output": "public/dealer-app/logo-light-ea0c2b4430439ec6481a.webp",
-      "sha256": "ea0c2b4430439ec6481a659aa6ed8783d1a0747681c168fdfd64555114c3a68f",
+      "output": "public/dealer-app/logo-light-e7dd0d595525f68b2888.webp",
+      "sha256": "e7dd0d595525f68b288822a880877aa54937cfc587e7cbb5bd5017688bcda3d8",
       "role": "logo-light"
     },
     {
       "source": "auto-best/static/dealer-brand/logo-on-dark.webp",
-      "output": "public/dealer-app/logo-dark-e94bd3eeba6185ba97f0.webp",
-      "sha256": "e94bd3eeba6185ba97f0d8e32a2b03f2ef6b324e3b24d9e51a3c5fe62ce2873f",
+      "output": "public/dealer-app/logo-dark-d63b81a67bc64a321601.webp",
+      "sha256": "d63b81a67bc64a32160173fd991166cbeec5c4a455049e8e1c54c7ed4ac0e7c0",
       "role": "logo-dark"
     },
     {
@@ -403,6 +403,110 @@
       "output": "public/dealer-app/vehicle-685d6003f8c6dc12fe7b.webp",
       "sha256": "685d6003f8c6dc12fe7b36ea950e52260af0ae2a5fe53bbb860e061e1e809baf",
       "role": "vehicle"
+    },
+    {
+      "source": "assets/branding/icon.png",
+      "output": "public/dealer-app/icon.png",
+      "sha256": "b669b8f70e01795346da8f70ef186e849943c04b277c95eb922366d905a868e1",
+      "role": "logo-icon"
+    }
+  ],
+  "mileageFacts": [
+    {
+      "slug": "rolls-royce-ghost-2011-11786049135297264",
+      "sourceValue": 66000,
+      "sourceUnit": "km",
+      "canonicalKm": 66000
+    },
+    {
+      "slug": "audi-a4-s-line-4x4-2-0t-2008-11784822971964926",
+      "sourceValue": 195000,
+      "sourceUnit": "km",
+      "canonicalKm": 195000
+    },
+    {
+      "slug": "porsche-panamera-turbo-4-8i-2010-11775231551222536",
+      "sourceValue": 145000,
+      "sourceUnit": "km",
+      "canonicalKm": 145000
+    },
+    {
+      "slug": "dodge-durango-3-6-face-lift-6-1-2015-21784804233950248",
+      "sourceValue": 202000,
+      "sourceUnit": "km",
+      "canonicalKm": 202000
+    },
+    {
+      "slug": "bmw-520-m-digital-2018-11784710943679925",
+      "sourceValue": 165000,
+      "sourceUnit": "km",
+      "canonicalKm": 165000
+    },
+    {
+      "slug": "vw-touran-1-6tdi-6-1-2012-11780924566736048",
+      "sourceValue": 210000,
+      "sourceUnit": "km",
+      "canonicalKm": 210000
+    },
+    {
+      "slug": "vw-cc-2-0i-2013-11778070752693531",
+      "sourceValue": 214000,
+      "sourceUnit": "km",
+      "canonicalKm": 214000
+    },
+    {
+      "slug": "bmw-x5-4-0d-face-lift-8-2011-21779453321117197",
+      "sourceValue": 196000,
+      "sourceUnit": "km",
+      "canonicalKm": 196000
+    },
+    {
+      "slug": "bmw-x5-3-0d-face-lift-2005-21779444147151936",
+      "sourceValue": 195000,
+      "sourceUnit": "km",
+      "canonicalKm": 195000
+    },
+    {
+      "slug": "bmw-418-d-m-2017-11780659371731573",
+      "sourceValue": 149000,
+      "sourceUnit": "km",
+      "canonicalKm": 149000
+    },
+    {
+      "slug": "subaru-b9-tribeca-3-0-2006-21781871293573646",
+      "sourceValue": 170000,
+      "sourceUnit": "km",
+      "canonicalKm": 170000
+    },
+    {
+      "slug": "mercedes-benz-ml-250-amg-2014-21762959348847465",
+      "sourceValue": 130000,
+      "sourceUnit": "km",
+      "canonicalKm": 130000
+    },
+    {
+      "slug": "mercedes-benz-s-500-4matic-2007-11774893593485843",
+      "sourceValue": 290000,
+      "sourceUnit": "km",
+      "canonicalKm": 290000
+    },
+    {
+      "slug": "bmw-730-d-m-2010-11756369185395904",
+      "sourceValue": 214000,
+      "sourceUnit": "km",
+      "canonicalKm": 214000
+    },
+    {
+      "slug": "bmw-m5-2008-11775822194120541",
+      "sourceValue": 218000,
+      "sourceUnit": "km",
+      "canonicalKm": 218000
+    },
+    {
+      "slug": "audi-a8-full-led-2013-11769186790854071",
+      "sourceValue": 215000,
+      "sourceUnit": "km",
+      "canonicalKm": 215000
     }
   ]
 }

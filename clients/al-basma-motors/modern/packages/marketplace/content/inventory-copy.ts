@@ -1,200 +1,214 @@
 import type { DealerInventoryCopy } from "../lead-site";
-/** Reviewed text for the existing sample stock only. */
+/** Dealer-owned display copy from the exact personalized listing set. */
 export const inventoryCopy = {
-  "bmw-x5-m50d-sofia-2020": {
-    sourceDescription:
-      "Примерна обява за BMW X5 M50d с 360 камери, панорама, HUD и обдухване. Снимката е илюстративна; наличност и условия се потвърждават с автокъщата.",
-    bg: {
-      description:
-        "Примерна обява за BMW X5 M50d с 360 камери, панорама, HUD и обдухване. Снимката е илюстративна; наличност и условия се потвърждават с автокъщата.",
-      imageAlts: ["Черен BMW X5 SUV"],
+  "lexus-ct200h-2018-1": {
+    "sourceDescription": "Independent, unpublished design concept. Dated listing samples, not a live stock feed. Confirm price, specifications and availability directly with the showroom. Forms only prepare drafts; nothing is delivered.",
+    "en": {
+      "description": "Independent design preview. Dated listing samples, not a live stock feed. Confirm price, specifications and availability directly with the showroom. Forms only prepare drafts; nothing is delivered.",
+      "imageAlts": [
+        "Lexus CT200h Platinum",
+        "Lexus CT200h Platinum",
+        "Lexus CT200h Platinum",
+        "Lexus CT200h Platinum"
+      ]
     },
-    en: {
-      description:
-        "Sample listing for a BMW X5 M50d with 360-degree cameras, panoramic roof, head-up display and ventilated seats. The image is illustrative; availability and terms must be confirmed with the dealership.",
-      imageAlts: ["Black BMW X5 SUV"],
-    },
+    "bg": {
+      "description": "Независим демонстрационен дизайн. Датирани примерни обяви, а не актуална наличност. Потвърдете цената, характеристиките и наличността директно с шоурума. Формите подготвят само чернови; нищо не се изпраща.",
+      "imageAlts": [
+        "Lexus CT200h Platinum",
+        "Lexus CT200h Platinum",
+        "Lexus CT200h Platinum",
+        "Lexus CT200h Platinum"
+      ]
+    }
   },
-  "mercedes-benz-gls-400d-4matic-amg-sofia-2021": {
-    sourceDescription:
-      "GLS 400d 4MATIC AMG Line с Burmester и панорама. Голям семеен SUV от Al Basma - наличен за оглед в Sharjah.",
-    bg: {
-      description:
-        "GLS 400d 4MATIC AMG Line с Burmester и панорама. Голям семеен SUV от {shortName} - наличен за оглед в {city}.",
-      imageAlts: ["Mercedes-Benz GLS 4MATIC AMG SUV"],
+  "lexus-is300-2023-2": {
+    "sourceDescription": "Independent, unpublished design concept. Dated listing samples, not a live stock feed. Confirm price, specifications and availability directly with the showroom. Forms only prepare drafts; nothing is delivered.",
+    "en": {
+      "description": "Independent design preview. Dated listing samples, not a live stock feed. Confirm price, specifications and availability directly with the showroom. Forms only prepare drafts; nothing is delivered.",
+      "imageAlts": [
+        "Lexus IS300 Platinum",
+        "Lexus IS300 Platinum",
+        "Lexus IS300 Platinum",
+        "Lexus IS300 Platinum"
+      ]
     },
-    en: {
-      description:
-        "GLS 400d 4MATIC AMG Line with Burmester audio and a panoramic roof. A large family SUV from {shortName}, available to view in {city}.",
-      imageAlts: ["Mercedes-Benz GLS 4MATIC AMG SUV"],
-    },
+    "bg": {
+      "description": "Независим демонстрационен дизайн. Датирани примерни обяви, а не актуална наличност. Потвърдете цената, характеристиките и наличността директно с шоурума. Формите подготвят само чернови; нищо не се изпраща.",
+      "imageAlts": [
+        "Lexus IS300 Platinum",
+        "Lexus IS300 Platinum",
+        "Lexus IS300 Platinum",
+        "Lexus IS300 Platinum"
+      ]
+    }
   },
-  "bmw-750e-xdrive-m-sport-sofia-2024": {
-    sourceDescription:
-      "Очакван внос: 7 Series plug-in hybrid с M Sport. Нисък пробег - Al Basma организира доставка и оглед в Sharjah.",
-    bg: {
-      description:
-        "Очакван внос: 7 Series plug-in hybrid с M Sport. Нисък пробег - {shortName} организира доставка и оглед в {city}.",
-      imageAlts: ["BMW 7 Series"],
+  "lexus-rc-f-2020-3": {
+    "sourceDescription": "Independent, unpublished design concept. Dated listing samples, not a live stock feed. Confirm price, specifications and availability directly with the showroom. Forms only prepare drafts; nothing is delivered.",
+    "en": {
+      "description": "Independent design preview. Dated listing samples, not a live stock feed. Confirm price, specifications and availability directly with the showroom. Forms only prepare drafts; nothing is delivered.",
+      "imageAlts": [
+        "Lexus RC-F",
+        "Lexus RC-F",
+        "Lexus RC-F",
+        "Lexus RC-F"
+      ]
     },
-    en: {
-      description:
-        "Expected import: 7 Series plug-in hybrid with M Sport. Low mileage; {shortName} arranges delivery and viewing in {city}.",
-      imageAlts: ["BMW 7 Series"],
-    },
+    "bg": {
+      "description": "Независим демонстрационен дизайн. Датирани примерни обяви, а не актуална наличност. Потвърдете цената, характеристиките и наличността директно с шоурума. Формите подготвят само чернови; нищо не се изпраща.",
+      "imageAlts": [
+        "Lexus RC-F",
+        "Lexus RC-F",
+        "Lexus RC-F",
+        "Lexus RC-F"
+      ]
+    }
   },
-  "mercedes-benz-e-63-s-amg-sofia-2021": {
-    sourceDescription:
-      "E 63 S AMG facelift с 360, HUD и Burmester. Спортна лимузина от Al Basma Motors.",
-    bg: {
-      description:
-        "E 63 S AMG facelift с 360, HUD и Burmester. Спортна лимузина от {dealer}.",
-      imageAlts: ["Mercedes-Benz E-Class седан"],
+  "lexus-is350-2024-4": {
+    "sourceDescription": "Independent, unpublished design concept. Dated listing samples, not a live stock feed. Confirm price, specifications and availability directly with the showroom. Forms only prepare drafts; nothing is delivered.",
+    "en": {
+      "description": "Independent design preview. Dated listing samples, not a live stock feed. Confirm price, specifications and availability directly with the showroom. Forms only prepare drafts; nothing is delivered.",
+      "imageAlts": [
+        "Lexus IS350 F-Sport",
+        "Lexus IS350 F-Sport",
+        "Lexus IS350 F-Sport",
+        "Lexus IS350 F-Sport"
+      ]
     },
-    en: {
-      description:
-        "Facelift E 63 S AMG with 360-degree cameras, head-up display and Burmester audio. A sports saloon from {dealer}.",
-      imageAlts: ["Mercedes-Benz E-Class saloon"],
-    },
+    "bg": {
+      "description": "Независим демонстрационен дизайн. Датирани примерни обяви, а не актуална наличност. Потвърдете цената, характеристиките и наличността директно с шоурума. Формите подготвят само чернови; нищо не се изпраща.",
+      "imageAlts": [
+        "Lexus IS350 F-Sport",
+        "Lexus IS350 F-Sport",
+        "Lexus IS350 F-Sport",
+        "Lexus IS350 F-Sport"
+      ]
+    }
   },
-  "mercedes-benz-cls-400d-4matic-sofia-2020": {
-    sourceDescription:
-      "CLS 400d 4MATIC AMG Line Designo с 360 камери. Елегантно купе-седан от Al Basma в Sharjah.",
-    bg: {
-      description:
-        "CLS 400d 4MATIC AMG Line Designo с 360 камери. Елегантно купе-седан от {shortName} в {city}.",
-      imageAlts: ["Mercedes CLS"],
+  "lexus-gs250-2015-5": {
+    "sourceDescription": "Independent, unpublished design concept. Dated listing samples, not a live stock feed. Confirm price, specifications and availability directly with the showroom. Forms only prepare drafts; nothing is delivered.",
+    "en": {
+      "description": "Independent design preview. Dated listing samples, not a live stock feed. Confirm price, specifications and availability directly with the showroom. Forms only prepare drafts; nothing is delivered.",
+      "imageAlts": [
+        "Lexus GS250 Platinum",
+        "Lexus GS250 Platinum",
+        "Lexus GS250 Platinum",
+        "Lexus GS250 Platinum"
+      ]
     },
-    en: {
-      description:
-        "CLS 400d 4MATIC AMG Line Designo with 360-degree cameras. An elegant four-door coupe from {shortName} in {city}.",
-      imageAlts: ["Mercedes CLS"],
-    },
+    "bg": {
+      "description": "Независим демонстрационен дизайн. Датирани примерни обяви, а не актуална наличност. Потвърдете цената, характеристиките и наличността директно с шоурума. Формите подготвят само чернови; нищо не се изпраща.",
+      "imageAlts": [
+        "Lexus GS250 Platinum",
+        "Lexus GS250 Platinum",
+        "Lexus GS250 Platinum",
+        "Lexus GS250 Platinum"
+      ]
+    }
   },
-  "audi-q8-50-tdi-quattro-s-line-sofia-2021": {
-    sourceDescription:
-      "Очакван внос: Q8 50 TDI quattro S line Plus. Купе-SUV с quattro за клиенти на Al Basma.",
-    bg: {
-      description:
-        "Очакван внос: Q8 50 TDI quattro S line Plus. Купе-SUV с quattro за клиенти на {shortName}.",
-      imageAlts: ["Audi Q8"],
+  "lexus-rc350-2021-6": {
+    "sourceDescription": "Independent, unpublished design concept. Dated listing samples, not a live stock feed. Confirm price, specifications and availability directly with the showroom. Forms only prepare drafts; nothing is delivered.",
+    "en": {
+      "description": "Independent design preview. Dated listing samples, not a live stock feed. Confirm price, specifications and availability directly with the showroom. Forms only prepare drafts; nothing is delivered.",
+      "imageAlts": [
+        "Lexus RC350 F-Sport",
+        "Lexus RC350 F-Sport",
+        "Lexus RC350 F-Sport",
+        "Lexus RC350 F-Sport"
+      ]
     },
-    en: {
-      description:
-        "Expected import: Q8 50 TDI quattro S line Plus. A coupe-SUV with quattro for {shortName} customers.",
-      imageAlts: ["Audi Q8"],
-    },
+    "bg": {
+      "description": "Независим демонстрационен дизайн. Датирани примерни обяви, а не актуална наличност. Потвърдете цената, характеристиките и наличността директно с шоурума. Формите подготвят само чернови; нищо не се изпраща.",
+      "imageAlts": [
+        "Lexus RC350 F-Sport",
+        "Lexus RC350 F-Sport",
+        "Lexus RC350 F-Sport",
+        "Lexus RC350 F-Sport"
+      ]
+    }
   },
-  "mercedes-benz-gle-400d-coupe-sofia-2021": {
-    sourceDescription:
-      "GLE 400d Coupe 4MATIC AMG с 360 и Burmester. Наличен при Al Basma Motors - Sharjah.",
-    bg: {
-      description:
-        "GLE 400d Coupe 4MATIC AMG с 360 и Burmester. Наличен при {dealer} - {city}.",
-      imageAlts: ["Черен Mercedes-Benz GLE SUV"],
+  "lexus-es350-2023-7": {
+    "sourceDescription": "Independent, unpublished design concept. Dated listing samples, not a live stock feed. Confirm price, specifications and availability directly with the showroom. Forms only prepare drafts; nothing is delivered.",
+    "en": {
+      "description": "Independent design preview. Dated listing samples, not a live stock feed. Confirm price, specifications and availability directly with the showroom. Forms only prepare drafts; nothing is delivered.",
+      "imageAlts": [
+        "Lexus ES350 F-Sport",
+        "Lexus ES350 F-Sport",
+        "Lexus ES350 F-Sport",
+        "Lexus ES350 F-Sport"
+      ]
     },
-    en: {
-      description:
-        "GLE 400d Coupe 4MATIC AMG with 360-degree cameras and Burmester audio. Available from {dealer} in {city}.",
-      imageAlts: ["Black Mercedes-Benz GLE SUV"],
-    },
+    "bg": {
+      "description": "Независим демонстрационен дизайн. Датирани примерни обяви, а не актуална наличност. Потвърдете цената, характеристиките и наличността директно с шоурума. Формите подготвят само чернови; нищо не се изпраща.",
+      "imageAlts": [
+        "Lexus ES350 F-Sport",
+        "Lexus ES350 F-Sport",
+        "Lexus ES350 F-Sport",
+        "Lexus ES350 F-Sport"
+      ]
+    }
   },
-  "mercedes-benz-gle-53-amg-coupe-sofia-2022": {
-    sourceDescription:
-      "Очакван внос: GLE 53 AMG Coupe Night Pack. Al Basma предлага собствен лизинг след оглед.",
-    bg: {
-      description:
-        "Очакван внос: GLE 53 AMG Coupe Night Pack. {shortName} предлага собствен лизинг след оглед.",
-      imageAlts: ["Бял Mercedes-Benz GLE AMG SUV"],
+  "lexus-lx570-2016-8": {
+    "sourceDescription": "Independent, unpublished design concept. Dated listing samples, not a live stock feed. Confirm price, specifications and availability directly with the showroom. Forms only prepare drafts; nothing is delivered.",
+    "en": {
+      "description": "Independent design preview. Dated listing samples, not a live stock feed. Confirm price, specifications and availability directly with the showroom. Forms only prepare drafts; nothing is delivered.",
+      "imageAlts": [
+        "Lexus LX570 Signature",
+        "Lexus LX570 Signature",
+        "Lexus LX570 Signature",
+        "Lexus LX570 Signature"
+      ]
     },
-    en: {
-      description:
-        "Expected import: GLE 53 AMG Coupe Night Pack. {shortName} offers in-house leasing after a viewing.",
-      imageAlts: ["White Mercedes-Benz GLE AMG SUV"],
-    },
+    "bg": {
+      "description": "Независим демонстрационен дизайн. Датирани примерни обяви, а не актуална наличност. Потвърдете цената, характеристиките и наличността директно с шоурума. Формите подготвят само чернови; нищо не се изпраща.",
+      "imageAlts": [
+        "Lexus LX570 Signature",
+        "Lexus LX570 Signature",
+        "Lexus LX570 Signature",
+        "Lexus LX570 Signature"
+      ]
+    }
   },
-  "mercedes-benz-s-350d-long-amg-sofia-2019": {
-    sourceDescription:
-      "S 350d Long с S63 AMG оптика и пакет за шофьор. Представителна лимузина от Al Basma.",
-    bg: {
-      description:
-        "S 350d Long с S63 AMG оптика и пакет за шофьор. Представителна лимузина от {shortName}.",
-      imageAlts: ["Mercedes-Benz S-Class седан"],
+  "lexus-tx350-2024-9": {
+    "sourceDescription": "Independent, unpublished design concept. Dated listing samples, not a live stock feed. Confirm price, specifications and availability directly with the showroom. Forms only prepare drafts; nothing is delivered.",
+    "en": {
+      "description": "Independent design preview. Dated listing samples, not a live stock feed. Confirm price, specifications and availability directly with the showroom. Forms only prepare drafts; nothing is delivered.",
+      "imageAlts": [
+        "Lexus TX350 Platinum",
+        "Lexus TX350 Platinum",
+        "Lexus TX350 Platinum",
+        "Lexus TX350 Platinum"
+      ]
     },
-    en: {
-      description:
-        "S 350d Long with S63 AMG styling and a chauffeur package. An executive saloon from {shortName}.",
-      imageAlts: ["Mercedes-Benz S-Class saloon"],
-    },
+    "bg": {
+      "description": "Независим демонстрационен дизайн. Датирани примерни обяви, а не актуална наличност. Потвърдете цената, характеристиките и наличността директно с шоурума. Формите подготвят само чернови; нищо не се изпраща.",
+      "imageAlts": [
+        "Lexus TX350 Platinum",
+        "Lexus TX350 Platinum",
+        "Lexus TX350 Platinum",
+        "Lexus TX350 Platinum"
+      ]
+    }
   },
-  "mercedes-benz-v-250d-vip-business-sofia-2018": {
-    sourceDescription:
-      "V 250d VIP Business с TV, обдухване и подгряване. Бизнес ван от Al Basma Motors.",
-    bg: {
-      description:
-        "V 250d VIP Business с TV, обдухване и подгряване. Бизнес ван от {dealer}.",
-      imageAlts: ["V-Class ван"],
+  "lexus-rx350-2024-10": {
+    "sourceDescription": "Independent, unpublished design concept. Dated listing samples, not a live stock feed. Confirm price, specifications and availability directly with the showroom. Forms only prepare drafts; nothing is delivered.",
+    "en": {
+      "description": "Independent design preview. Dated listing samples, not a live stock feed. Confirm price, specifications and availability directly with the showroom. Forms only prepare drafts; nothing is delivered.",
+      "imageAlts": [
+        "Lexus RX350 Premier",
+        "Lexus RX350 Premier",
+        "Lexus RX350 Premier",
+        "Lexus RX350 Premier"
+      ]
     },
-    en: {
-      description:
-        "V 250d VIP Business with TV, ventilated and heated seats. A business van from {dealer}.",
-      imageAlts: ["V-Class van"],
-    },
-  },
-  "range-rover-sport-svr-sofia-2021": {
-    sourceDescription:
-      "Range Rover Sport SVR 600 к.с. с панорама, 360 и Meridian. Висок клас SUV от Al Basma.",
-    bg: {
-      description:
-        "Range Rover Sport SVR 600 к.с. с панорама, 360 и Meridian. Висок клас SUV от {shortName}.",
-      imageAlts: ["Range Rover Sport"],
-    },
-    en: {
-      description:
-        "Range Rover Sport SVR, 600 hp, with a panoramic roof, 360-degree cameras and Meridian audio. A premium SUV from {shortName}.",
-      imageAlts: ["Range Rover Sport"],
-    },
-  },
-  "bmw-430i-xdrive-gran-coupe-sofia-2023": {
-    sourceDescription:
-      "430i xDrive Gran Coupe M Sport с digital кокпит и Harman Kardon. Al Basma, Sharjah.",
-    bg: {
-      description:
-        "430i xDrive Gran Coupe M Sport с digital кокпит и Harman Kardon. {shortName}, {city}.",
-      imageAlts: ["BMW 4 Series"],
-    },
-    en: {
-      description:
-        "430i xDrive Gran Coupe M Sport with a digital cockpit and Harman Kardon audio. {shortName}, {city}.",
-      imageAlts: ["BMW 4 Series"],
-    },
-  },
-  "bmw-m4-competition-sofia-2021": {
-    sourceDescription:
-      "BMW M4 Competition с M пакет, спортен салон и digital кокпит. Купе от портфолиото на Al Basma Motors.",
-    bg: {
-      description:
-        "BMW M4 Competition с M пакет, спортен салон и digital кокпит. Купе от портфолиото на {dealer}.",
-      imageAlts: ["Червено BMW M4 Competition пред модерен шоурум"],
-    },
-    en: {
-      description:
-        "BMW M4 Competition with M package, sports interior and digital cockpit. A coupe from the {dealer} collection.",
-      imageAlts: ["Red BMW M4 Competition in front of a modern showroom"],
-    },
-  },
-  "bmw-x5-xdrive40d-berlin-2022": {
-    sourceDescription:
-      "Крос-бордер демо наличност с оторизирани медии и право на доставка. Финалният транспорт, данъци и регистрация се уточняват с оферта от Al Basma.",
-    bg: {
-      description:
-        "Крос-бордер демо наличност с оторизирани медии и право на доставка. Финалният транспорт, данъци и регистрация се уточняват с оферта от {shortName}.",
-      imageAlts: ["Черен BMW X5 SUV в градска среда"],
-    },
-    en: {
-      description:
-        "Cross-border demo inventory with authorized images and delivery rights. Final transport, tax and registration costs are confirmed in a quote from {shortName}.",
-      imageAlts: ["Black BMW X5 SUV in an urban setting"],
-    },
-  },
+    "bg": {
+      "description": "Независим демонстрационен дизайн. Датирани примерни обяви, а не актуална наличност. Потвърдете цената, характеристиките и наличността директно с шоурума. Формите подготвят само чернови; нищо не се изпраща.",
+      "imageAlts": [
+        "Lexus RX350 Premier",
+        "Lexus RX350 Premier",
+        "Lexus RX350 Premier",
+        "Lexus RX350 Premier"
+      ]
+    }
+  }
 } satisfies DealerInventoryCopy;

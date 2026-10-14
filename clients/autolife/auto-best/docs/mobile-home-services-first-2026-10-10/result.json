@@ -1,0 +1,94 @@
+{
+  "checks": [
+    {
+      "width": 390,
+      "overflow": false,
+      "services": {
+        "x": 0,
+        "y": 1852.46875,
+        "width": 390,
+        "height": 135.609375,
+        "bottom": 1988.078125
+      },
+      "advice": {
+        "x": 0,
+        "y": 1988.078125,
+        "width": 390,
+        "height": 355.5,
+        "bottom": 2343.578125
+      },
+      "serviceLink": "/bg/about-us#process",
+      "adviceLink": "/bg/blog-detail/1",
+      "serviceAction": "Виж всички",
+      "adviceAction": "Прочети",
+      "locale": "bg"
+    },
+    {
+      "width": 320,
+      "overflow": false,
+      "services": {
+        "x": 0,
+        "y": 1837.84375,
+        "width": 320,
+        "height": 132,
+        "bottom": 1969.84375
+      },
+      "advice": {
+        "x": 0,
+        "y": 1969.84375,
+        "width": 320,
+        "height": 340.875,
+        "bottom": 2310.71875
+      },
+      "serviceLink": "/bg/about-us#process",
+      "adviceLink": "/bg/blog-detail/1",
+      "serviceAction": "Виж всички",
+      "adviceAction": "Прочети",
+      "locale": "bg",
+      "linksChecked": true
+    },
+    {
+      "width": 320,
+      "overflow": false,
+      "services": {
+        "x": 0,
+        "y": 1837.84375,
+        "width": 320,
+        "height": 132,
+        "bottom": 1969.84375
+      },
+      "advice": {
+        "x": 0,
+        "y": 1969.84375,
+        "width": 320,
+        "height": 340.875,
+        "bottom": 2310.71875
+      },
+      "serviceLink": "/en/about-us#process",
+      "adviceLink": "/en/blog-detail/1",
+      "serviceAction": "View all",
+      "adviceAction": "Read",
+      "locale": "en",
+      "linksChecked": true
+    },
+    {
+      "width": 1440,
+      "overflow": false,
+      "services": null,
+      "advice": {
+        "x": 0,
+        "y": 2949.46875,
+        "width": 1425,
+        "height": 566.03125,
+        "bottom": 3515.5
+      },
+      "serviceLink": "/bg/about-us#process",
+      "adviceLink": "/bg/blog-detail/1",
+      "serviceAction": "Виж всички",
+      "adviceAction": "Прочети",
+      "locale": "bg"
+    }
+  ],
+  "desktopMatches": true,
+  "pageErrors": []
+}

@@ -733,34 +733,30 @@ export const homeFiveHeaderDataForLocale = (
 export const homeFiveHeaderData: HomeFiveHeaderData = homeFiveHeaderDataForLocale('en');
 
 export const homeFiveReviewItems: HomeFiveReview[] = [
-	{
-		name: 'Aleksandar Vytev',
-		role: 'Клиент на Аутомаркет',
-		roleKind: 'customer',
-		avatar: '/assets/images/avatar/avatar-1.webp',
-		rating: 5,
-		excerpt:
-			'Историята, транспортът и регистрацията бяха обяснени ясно. Спокойно и прозрачно предаване.',
-		text: 'Екипът ми обясни историята на автомобила, транспорта и стъпките по регистрацията, преди да поема ангажимент. Предаването беше спокойно и прозрачно.'
-	},
-	{
-		name: 'Krasimir Georgiev',
-		role: 'Клиент с внос',
-		roleKind: 'import',
-		avatar: '/assets/images/avatar/avatar-2.webp',
-		rating: 4,
-		excerpt: 'Ясни снимки, документи, пробег и разходи. Практичен разговор преди доставката.',
-		text: 'Аутомаркет запазиха разговора практичен: снимки, документи, пробег и разходите, които имат значение преди доставка.'
-	},
-	{
-		name: 'Iliyan Petrov',
-		role: 'Продава клиентски автомобил',
-		roleKind: 'sale',
-		avatar: '/assets/images/avatar/avatar-3.webp',
-		rating: 5,
-		excerpt: 'Получих ясна обратна връзка за цената, документите и представянето на автомобила.',
-		text: 'Изпратих данните за колата и получих ясна обратна връзка за цената, документите и най-добрия начин да представя автомобила.'
-	}
+  {
+    "avatar": "",
+    "name": "№ 1",
+    "role": "Демо профил",
+    "roleKind": "customer",
+    "excerpt": "Демонстрационен пример, а не потвърден клиентски отзив.",
+    "text": "Измислен пример за оформлението на отзив. Не описва реален клиент, покупка или доставка."
+  },
+  {
+    "avatar": "",
+    "name": "№ 2",
+    "role": "Демо профил",
+    "roleKind": "customer",
+    "excerpt": "Демонстрационен пример, а не потвърден клиентски отзив.",
+    "text": "Измислен пример за оформлението на отзив. Не описва реален клиент, покупка или доставка."
+  },
+  {
+    "avatar": "",
+    "name": "№ 3",
+    "role": "Демо профил",
+    "roleKind": "customer",
+    "excerpt": "Демонстрационен пример, а не потвърден клиентски отзив.",
+    "text": "Измислен пример за оформлението на отзив. Не описва реален клиент, покупка или доставка."
+  }
 ];
 
 export const homeFiveNewsPostsFromPosts = (posts: BlogPost[]): HomeFiveNewsPost[] =>

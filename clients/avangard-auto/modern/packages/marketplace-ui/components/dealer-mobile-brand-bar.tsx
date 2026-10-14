@@ -16,11 +16,11 @@ type WordmarkTone = "original" | "light" | "dark";
 function DealerMobileWordmark({
   clean,
   wordmarkTone,
-  light,
+  logoSource,
 }: {
   clean: boolean;
-  light: boolean;
   wordmarkTone: WordmarkTone;
+  readonly logoSource: string;
 }) {
   if (publicSite.identity.desktopPreview) {
     return (
@@ -35,9 +35,15 @@ function DealerMobileWordmark({
   }
   return (
     <span className="relative block aspect-[1780/512] w-[144px] max-w-[48vw]">
-      <Image alt={leadSite.name} className="h-full w-full object-contain" height={512}
-        priority sizes="(max-width: 1023px) 144px, 0px" width={1780}
-        src={wordmarkTone === "dark" || (wordmarkTone === "original" && light) ? leadSite.logoOnLight : leadSite.logoOnDark} />
+      <Image
+        alt={leadSite.name}
+        className="h-full w-full object-contain"
+        height={512}
+        priority
+        sizes="(max-width: 1023px) 144px, 0px"
+        src={logoSource}
+        width={1780}
+      />
     </span>
   );
 }
@@ -61,6 +67,8 @@ export const DealerMobileBrandBar = ({
 }) => {
   const light = tone === "light";
   const clean = tone === "clean";
+  const useOnLight = wordmarkTone === "dark" || (wordmarkTone === "original" && light);
+  const logoSource = useOnLight ? leadSite.logoOnLight : leadSite.logoOnDark;
 
   return (
     <div
@@ -89,13 +97,12 @@ export const DealerMobileBrandBar = ({
       <Link
         aria-label={isBg ? "Начало" : "Home"}
         className={cn(
-          "mx-auto flex min-h-11 min-w-0 items-center rounded-lg focus-visible:outline-2 focus-visible:outline-[var(--lead-site-accent-bright)] focus-visible:outline-offset-2",
-          light && "h-10"
+          "mx-auto flex min-h-11 min-w-0 items-center rounded-lg focus-visible:outline-2 focus-visible:outline-[var(--lead-site-accent-bright)] focus-visible:outline-offset-2"
         )}
         href={getLocalizedPublicPath(locale, "/")}
         onClick={onNavigate}
       >
-        <DealerMobileWordmark clean={clean} light={light} wordmarkTone={wordmarkTone} />
+        <DealerMobileWordmark clean={clean} wordmarkTone={wordmarkTone} logoSource={logoSource} />
       </Link>
 
       {clean

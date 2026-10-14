@@ -3,17 +3,17 @@
   "dealer": "asko-96",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
     "path": "templates/app",
-    "digest": "3344230cf8de012eb9c2daf1c962c4a3f189960b52f2026e1d049f2a6eae26ad",
-    "tree": "cd17d913dd597bf7dfb3e2244c2a3a2914ab3080"
+    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1",
+    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76"
   },
-  "appDigest": "2a5c43e3dd49feefcac186d2b5333d3722630b800dacd5a31ada64fc6ecad700",
+  "appDigest": "261ca855e01ccacab6c8582919d97e0c6573860cae479e8c589204f68729e68f",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "asko-96",
     "profile": "auto-best/src/lib/data/dealer-profile.json",
-    "profileSha256": "17766d70ee12aa528edf2a173ba8f10665b4b099c8477e258e8e71a16c0b4e0f",
+    "profileSha256": "08eec1f96ba8d8105cae51f627d38f74c6f1fc577fb2770985483bf98dffb5e7",
     "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
     "vehicles": 16,
     "currency": "EUR",
@@ -343,13 +343,169 @@
         "sha256": "ddd15d6e7415701ece97982311f6400e0b214b9366eadac9736aea4bbb176e5a",
         "role": "vehicle"
       }
-    ]
+    ],
+    "mileageFacts": [
+      {
+        "slug": "toyota-rav4-hybrid-2024-21788444587626928",
+        "sourceValue": 14000,
+        "sourceUnit": "km",
+        "canonicalKm": 14000
+      },
+      {
+        "slug": "audi-a7-s-line-2011-11788418194310981",
+        "sourceValue": 211000,
+        "sourceUnit": "km",
+        "canonicalKm": 211000
+      },
+      {
+        "slug": "mercedes-benz-glc-coupe-350amg-2018-21788361724092359",
+        "sourceValue": 179200,
+        "sourceUnit": "km",
+        "canonicalKm": 179200
+      },
+      {
+        "slug": "mercedes-benz-gls-400-amg-2020-21788340495159936",
+        "sourceValue": 135141,
+        "sourceUnit": "km",
+        "canonicalKm": 135141
+      },
+      {
+        "slug": "mini-countryman-all4-2014-11788268077076934",
+        "sourceValue": 205000,
+        "sourceUnit": "km",
+        "canonicalKm": 205000
+      },
+      {
+        "slug": "audi-sq7-ful-led-2018-21787916905998235",
+        "sourceValue": 170000,
+        "sourceUnit": "km",
+        "canonicalKm": 170000
+      },
+      {
+        "slug": "citroen-c5x-plug-in-2022-11787665314733489",
+        "sourceValue": 162000,
+        "sourceUnit": "km",
+        "canonicalKm": 162000
+      },
+      {
+        "slug": "audi-a5-s-line-plus-2012-11787664720233597",
+        "sourceValue": 230000,
+        "sourceUnit": "km",
+        "canonicalKm": 230000
+      },
+      {
+        "slug": "mercedes-benz-e-220-amg-2016-11787318670316786",
+        "sourceValue": 195530,
+        "sourceUnit": "km",
+        "canonicalKm": 195530
+      },
+      {
+        "slug": "mercedes-benz-s-680-l-2024-11787292903991160",
+        "sourceValue": 140000,
+        "sourceUnit": "km",
+        "canonicalKm": 140000
+      },
+      {
+        "slug": "mercedes-benz-s-500-l-2015-11787147161945133",
+        "sourceValue": 173291,
+        "sourceUnit": "km",
+        "canonicalKm": 173291
+      },
+      {
+        "slug": "mini-countryman-sd-2018-21787145927135700",
+        "sourceValue": 190582,
+        "sourceUnit": "km",
+        "canonicalKm": 190582
+      },
+      {
+        "slug": "porsche-cayenne-s-2018-21786786821064251",
+        "sourceValue": 165009,
+        "sourceUnit": "km",
+        "canonicalKm": 165009
+      },
+      {
+        "slug": "jeep-compass-4x4-2019-21786778589147860",
+        "sourceValue": 181889,
+        "sourceUnit": "km",
+        "canonicalKm": 181889
+      },
+      {
+        "slug": "bmw-x3-40d-2022-21786540153108868",
+        "sourceValue": 90800,
+        "sourceUnit": "km",
+        "canonicalKm": 90800
+      },
+      {
+        "slug": "bmw-550-m-2013-11786173977658651",
+        "sourceValue": 184120,
+        "sourceUnit": "km",
+        "canonicalKm": 184120
+      }
+    ],
+    "inventoryNoticePreservation": {
+      "schemaVersion": 1,
+      "kind": "cars-current-app-inventory-notice-preservation",
+      "dealer": "asko-96",
+      "baseline": {
+        "commit": "935a5054dc76f950c5de433a7b64d9fe6a06f4bf",
+        "tree": "2cfa66d8df46f12a72cb6dbbc1b2492d9799af01"
+      },
+      "path": "app/lib/dealer.json",
+      "reviewSha256": "1180ca83f39f24412258da6bb6405f249a7624056885be2ae1da6021d3f1ac8a",
+      "currentConfigSha256": "cc2a0e266e9c0c835b15fd48f8b86e7e4d6343ae8457134e23814bc90dacbb70",
+      "currentNoticeSha256": "930e2f71ca0269d56eb42579409ae630e1d8802e7af4a34d32c0accaa0bf2d6a",
+      "profileSha256": "08eec1f96ba8d8105cae51f627d38f74c6f1fc577fb2770985483bf98dffb5e7",
+      "unmodifiedTargetConfigSha256": "73ebea0b68f1bc2f0bf9bc9fb379ae7fd7373e8772eda6e172828def602ba90b",
+      "targetConfigSha256": "b98bfb3b98845059e08ffa91509d0d2c292e8d7b0ed020feea606cb06bd8b2fa",
+      "targetSources": {
+        "auto-best": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/auto-best",
+          "digest": "dcbc59990928884006652677d3529020df3844029993895a71e5f6818ba7363c",
+          "tree": "5fb7a2164775050a47c1183371622295dbf63725"
+        },
+        "modern": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/modern",
+          "digest": "ba263aac8f1863d133807d3e1bf3597d125cf315a7e0deba3f6e419b52434c25",
+          "tree": "3974380670eb388bb16182f94ade33be6d87b1c1"
+        },
+        "import": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/import",
+          "digest": "f98a0934cdcc5adbda393c14c02eb2adc0175344ab2ac3f913afe4b0603366e5",
+          "tree": "6afc6901e2f95967fb7c72e9f75525d4d6fbf086"
+        },
+        "app": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/app",
+          "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1",
+          "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76"
+        },
+        "mobile": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/mobile",
+          "digest": "4e858bd9dbd3ef5b52cd904c4ed97bbfdc0f4cfe02b5a3840580f38026b867a0",
+          "tree": "2b02829e157071e305bfb2dff10ef18e85c8a35e"
+        },
+        "karento-best": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/karento-best",
+          "digest": "83056967764a686f3737d74b86c5db51c1385a50184853f50ec4ade80c1dd44f",
+          "tree": "5f6eec8efb2f9e99819f7f0c2f743d18fff7b134"
+        }
+      },
+      "allOtherConfigFieldsUnchanged": true,
+      "sourceFactsUnchanged": true
+    }
   },
-  "baseDeployment": {
-    "id": "dpl_HmpGwQ9oBYVBehyUFKyv9ofSRJCm",
-    "url": "https://cars-asko96.vercel.app/",
-    "checkedAt": "2026-09-28T02:25:28.352Z"
-  },
-  "baseReceiptSha256": "74618e80a33853742885299f147e7a57062cb61527aec89e65ee53610ad7f693",
-  "refreshedAt": "2026-09-30T10:15:51.717Z"
+  "needsDealerQA": true,
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-13T02:14:40.826Z"
 }

@@ -68,9 +68,9 @@ export interface LeadSiteConfig {
   readonly localizedCopy?: Readonly<Record<"bg" | "en", LeadSiteCopy>>;
   readonly logoInversePath?: string;
   readonly logoPath: string;
-  readonly logoOnAccent: string;
-  readonly logoOnDark: string;
   readonly logoOnLight: string;
+  readonly logoOnDark: string;
+  readonly logoOnAccent: string;
   readonly mapsEmbedUrl: string;
   readonly mapsUrl: string;
   readonly mobileFinancingArtworkPath?: string;
@@ -114,7 +114,7 @@ export const leadSite: LeadSiteConfig = {
     "tagline": "IS AUTO Varna — vehicles and dealer support in Varna."
   }
 },
-  accent: "#d71920",
+  accent: "#30343b",
   desktopAccent: "#4b5057",
   desktopInventoryFilterLayout: "quick",
   desktopPreviewIdentity: {
@@ -147,7 +147,10 @@ export const leadSite: LeadSiteConfig = {
   email: "varna@isauto.net",
   heroPath: "/lead-hero.jpg",
   locale: "bg-BG",
-  logoPath: "/dealer-brand/logo-on-light-20260919.webp",
+  logoPath: "/dealer-brand/logo-on-dark-20260919.webp",
+  logoOnLight: "/dealer-brand/logo-on-light-20260919.webp",
+  logoOnDark: "/dealer-brand/logo-on-dark-20260919.webp",
+  logoOnAccent: "/dealer-brand/logo-on-accent-20260919.webp",
   mapsEmbedUrl:
     "https://maps.google.com/maps?q=IS%20AUTO%20Varna%2C%20%D0%91%D0%B8%D0%B7%D0%BD%D0%B5%D1%81%20%D0%BF%D0%B0%D1%80%D0%BA%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D1%81%D0%B3%D1%80%D0%B0%D0%B4%D0%B0%20B6%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F&z=16&output=embed",
   mapsUrl:
@@ -160,9 +163,5 @@ export const leadSite: LeadSiteConfig = {
   socialLinks: {"facebook":"https://www.facebook.com/isauto1","instagram":"https://www.instagram.com/is__auto/?hl=bg"},
   staticDemoMode: true,
   tagline: "IS AUTO Varna — автомобили и съдействие в Варна.",
-  logoOnLight: "/dealer-brand/logo-on-light-20260919.webp",
-  logoOnDark: "/dealer-brand/logo-on-dark-20260919.webp",
-  logoOnAccent: "/dealer-brand/logo-on-accent-20260919.webp",
-  logoInversePath: "/dealer-brand/logo-on-dark-20260919.webp"
 };
 // LEAD_SITE_CONFIG_END

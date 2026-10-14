@@ -1,4 +1,4 @@
-import type {Vehicle} from './data';
+import type {Vehicle} from './vehicle';
 // Captured from the same Fortuner detail response used by the native comparison.
 export const capturedRelatedVehicles: Vehicle[] = [
   {

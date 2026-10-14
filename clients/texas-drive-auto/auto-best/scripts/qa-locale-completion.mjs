@@ -3,6 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import assert from 'node:assert/strict';
 import { chromium } from 'playwright';
+import { fillServiceEntry, serviceAction } from './service-entry-fixture.mjs';
 import { translatedEnglishPatterns } from './locale-copy-audit.mjs';
 const root=path.resolve(import.meta.dirname,'..'),base=new URL(process.env.BASE_URL||process.env.DEALER_BASE_URL);
 const out=process.env.LOCALE_QA_OUT||path.join(root,'artifacts/localization/completion');fs.mkdirSync(out,{recursive:true});
@@ -43,16 +44,11 @@ try {for(const locale of ['en','bg'])for(const width of widths)for(const kind of
   const entry=page.locator('.dn-service-entry:visible').first();await entry.waitFor();
   if(kind==='import'){
    await entry.locator('.dn-service-entry__choices button').nth(1).click();
-   await entry.locator('[name=brief]').fill('QA vehicle criteria');
-   await entry.locator('[name=budget]').fill('40000');
-   await entry.locator('[name=year]').fill('2020');
+   await fillServiceEntry(page,{brief:'QA vehicle criteria',budget:'40000',year:'2020'});
   }else{
-   await entry.locator('[name=make]').fill('QA Demo');
-   await entry.locator('[name=model]').fill('QA Model');
-   await entry.locator('[name=year]').fill('2020');
-   await entry.locator('[name=mileage]').fill('85000');
+   await fillServiceEntry(page,{make:'QA Demo',model:'QA Model',year:'2020',mileage:'85000'});
   }
-  await entry.locator('button[type=submit]').click();
+  await serviceAction(page).click();
   const dialog=page.locator(kind==='sell'?'dialog.dn-tradein-dialog[open]':'dialog.dn-enquiry[open]');await dialog.waitFor({state:'visible'});
   const next=dialog.locator(kind==='sell'?'footer .dn-tradein-primary':'footer .dn-enquiry-primary');
   await snapshot('contact-step',dialog);

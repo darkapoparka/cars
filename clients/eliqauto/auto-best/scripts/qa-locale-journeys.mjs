@@ -14,6 +14,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import assert from 'node:assert/strict';
 import { chromium } from 'playwright';
+import { serviceAction } from './service-entry-fixture.mjs';
 
 const root = path.resolve(import.meta.dirname, '..');
 const base = new URL(process.env.DEALER_BASE_URL || process.env.BASE_URL);
@@ -338,6 +339,10 @@ async function autoJourney(s,kind) {
   }
   const entry=p.locator('.dn-service-entry:visible').first();
   await entry.waitFor();
+  if (await entry.locator('.dn-service-entry__field').count()) {
+    await mobileAutoJourney(s, kind, entry, ref);
+    return;
+  }
 
   if(kind==='sell') {
     await check(s,'inline listing reference custom invalid URL/VIN error',ref,async d=>{
@@ -409,6 +414,50 @@ async function autoJourney(s,kind) {
     });
   }
 }
+async function mobileAutoJourney(s, kind, entry, refs) {
+  const p = s.page, editor = p.locator('.dn-service-editor[open]');
+  const save = () => editor.locator('.dn-service-editor__save').click();
+  await entry.locator('.dn-service-entry__field').click();
+  if (kind === 'sell') {
+    await check(s, 'mobile editor required fields and localized validation', refs, async d => {
+      await save(); d.invalid = await invalid(s, editor.locator('[name=make]'));
+      d.copy = await copyCheck(s, editor); d.fit = await fit(p, editor);
+    });
+    await check(s, 'mobile editor invalid year and mileage / no send', refs, async d => {
+      await editor.locator('[name=make]').fill('QA Demo'); await editor.locator('[name=model]').fill('QA Model');
+      const year = editor.locator('[name=year]'), mileage = editor.locator('[name=mileage]');
+      await year.fill('0000'); await save(); d.year = await invalid(s, year);
+      await year.fill('2020'); await mileage.fill('-1'); await save(); d.mileage = await invalid(s, mileage);
+      await mileage.fill('80000'); await noSuccess(s);
+    });
+  } else {
+    await check(s, 'mobile listing editor invalid URL and localized error', refs, async d => {
+      await editor.locator('[name=reference]').fill('QA_INVALID_REFERENCE'); await save();
+      d.error = await alertText(s, editor); d.copy = await copyCheck(s, editor); d.fit = await fit(p, editor);
+      await editor.locator('.dn-service-editor__cancel').click();
+    });
+    await check(s, 'mobile criteria editor negative budget validation', refs, async d => {
+      await entry.locator('.dn-service-entry__choices button').nth(1).click();
+      await editor.locator('[name=make]').fill('QA Demo'); await editor.locator('[name=model]').fill('QA Model');
+      const budget = editor.locator('[name=budget]'); await budget.fill('-1'); await save();
+      d.error = await invalid(s, budget); d.copy = await copyCheck(s, editor); await budget.fill('40000'); await noSuccess(s);
+    });
+    await check(s, 'mobile criteria editor invalid year validation', refs, async d => {
+      const year = editor.locator('[name=year]'); await year.fill('0000'); await save();
+      d.error = await invalid(s, year); await year.fill('2020');
+    });
+  }
+  await check(s, 'saved mobile entry opens request dialog / keyboard and Escape', refs, async d => {
+    await save(); await editor.waitFor({ state: 'hidden' });
+    assert.match(await entry.locator('.dn-service-entry__field').innerText(), /QA Demo QA Model/);
+    const trigger = serviceAction(p); await trigger.click();
+    const dialog = p.locator(kind === 'sell' ? '.dn-tradein-dialog[open]' : '.dn-enquiry[open]');
+    await dialog.waitFor(); d.fit = await fit(p, dialog); d.copy = await copyCheck(s, dialog); d.trace = await trap(p, dialog);
+    await noSuccess(s); await p.keyboard.press('Escape'); await dialog.waitFor({ state: 'hidden' });
+    assert(await trigger.evaluate(button => button === document.activeElement));
+  });
+}
+
 async function carJourney(s,kind) {
   const p=s.page,ref=kind==='sell'?sources.carSell:sources.carImport,mobile=s.width<992;
   await check(s,'entry and explicit demo notice',ref,async d=>{await dismissedSetup(s,kind==='sell'?'/sell-your-car':'/contact?intent=import');d.notice=await notice(s);d.copy=await copyCheck(s);d.fit=await noOverflow(p);});
@@ -486,7 +535,7 @@ async function finance(s) {
   if(!auto&&s.width<992){skip(s,'detail calculator numeric validation','Carwow DesktopDetailFinanceCalculator is desktop-only; mobile financing information fallback asserted above.');return;}
   if(!await check(s,'open real detail calculator',refs,async d=>{
     await go(s,auto?'/listing-detail-v1/1':'/inventory/audi-rs-6-avant-demo-1');
-    if(auto&&s.width<992){await p.locator('.dn-detail-finance-trigger:visible').click();await p.locator('#dn-detail-finance-dialog[open]').waitFor();}
+    if(auto&&s.width<992){await p.locator('button[aria-controls="dn-detail-finance-dialog"]:visible').click();await p.locator('#dn-detail-finance-dialog[open]').waitFor();}
     else if(auto)await p.locator('.dn-detail-finance-inline').scrollIntoViewIfNeeded();
     else await p.locator('.financing-calculator').scrollIntoViewIfNeeded();
     d.copy=await copyCheck(s,auto?p.locator(s.width<992?'#dn-detail-finance-dialog':'.dn-detail-finance-inline'):p.locator('.financing-calculator'));
@@ -496,7 +545,7 @@ async function finance(s) {
   const input=calc.locator(auto?'input[type=number]':'[name=deposit]');
   const output=calc.locator(auto?'.dn-finance-calculator__result':'.font-weight-600');
   await check(s,'changing deposit updates configured-currency estimate',refs,async d=>{
-    d.before=await output.allTextContents();await input.fill('10000');await p.waitForFunction(({selector,before})=>JSON.stringify([...document.querySelectorAll(selector)].map(e=>e.textContent))!==JSON.stringify(before),{selector:calcSelector+(auto?' .dn-finance-calculator__result':' .font-weight-600'),before:d.before});d.after=await output.allTextContents();assert.notDeepEqual(d.before,d.after);assert(d.after.join(' ').includes(inventoryCurrency));assert(!/\bBGN\b|\bAED\b/.test(d.after.join(' ')));
+    d.before=await output.allTextContents();await input.fill('10000');await p.waitForFunction(({selector,before})=>JSON.stringify([...document.querySelectorAll(selector)].map(e=>e.textContent))!==JSON.stringify(before),{selector:calcSelector+(auto?' .dn-finance-calculator__result':' .font-weight-600'),before:d.before});d.after=await output.allTextContents();assert.notDeepEqual(d.before,d.after);assert(d.after.join(' ').includes(auto ? '€' : inventoryCurrency));assert(!/\bBGN\b|\bAED\b/.test(d.after.join(' ')));
   });
   await check(s,'negative finance input rejected / localized error / reset',refs,async d=>{
     await input.fill('-1');if(auto)d.error=await invalid(s,input);else d.error=await alertText(s,calc);
@@ -515,7 +564,7 @@ async function menusAndFilter(s) {
   }
   await check(s,'one inventory filter dialog / copy / viewport',sources.filters,async d=>{
     if(await prefs(p).isVisible())await dismiss(s);
-    await go(s,s.design==='auto-best'?'/listing-grid':s.design==='carwow'?'/inventory':'/cars');
+    await go(s,s.design==='auto-best'?'/cars':s.design==='carwow'?'/inventory':'/cars');
     let trigger;
     if(s.design==='auto-best')trigger=p.locator('[aria-controls="dn-listing-filter-dialog"]:visible').first();
     else if(s.design==='carwow')trigger=p.locator(s.width<992?'.mobile-inventory-quick button:visible':'.inventory-filter-triggers button:visible').first();

@@ -1,0 +1,31 @@
+import { createContext } from "svelte";
+export type PreviewRole = "guest" | "owner" | "member";
+export class PreviewState {
+  readonly actionFeedback = new WeakMap<HTMLElement, symbol>();
+  role = $state<PreviewRole>("guest");
+  panels = $state<Record<string, string | null | undefined>>({});
+  drawer = $state(false);
+  mobile = $state(false);
+  accountHref = $derived(
+    this.role === "owner"
+      ? "/dashboard"
+      : this.role === "member"
+        ? "/account"
+        : "/login",
+  );
+  setRole(role: PreviewRole) {
+    this.role = role;
+    try {
+      sessionStorage.setItem("karento-best-demo-area", role);
+    } catch {
+      /* Browser storage is optional for this preview. */
+    }
+  }
+}
+const [getPreview, setPreview] = createContext<PreviewState>();
+export function createPreview() {
+  return setPreview(new PreviewState());
+}
+export function usePreview(): PreviewState {
+  return getPreview();
+}

@@ -3,17 +3,17 @@
   "dealer": "isauto-varna",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "4e184777567849a2c5b4a9e4a3e652252179c29c",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
     "path": "templates/app",
-    "digest": "fad0067e48d7bd7e1c5177c5e91e2bc5767352e2c16621cb458d18a081f7c541",
-    "tree": "749512ff762c25272d1474225ff653dd4c88f0fe"
+    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1",
+    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76"
   },
-  "appDigest": "00787550609ae98a55a2b7a87f3ec5b21ad8e1e6e2f3fb497e8101a872a418b5",
+  "appDigest": "eb152f8ca4222dd54cd0385ef182ce04425abec5526a57423d914674e4c8c16a",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "isauto-varna",
     "profile": "auto-best/src/lib/data/dealer-profile.json",
-    "profileSha256": "4f3caa9ec6eaf4fd2c4b04d7c915d22dd5846ae5f437c643c71117167db7ec25",
+    "profileSha256": "1139d203176cb173bac97f23d0ce36a6527be80d392b5a4109fe5f61bbb06b71",
     "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
     "vehicles": 6,
     "currency": "EUR",
@@ -67,13 +67,47 @@
         "sha256": "e480519d71d40fd0495ee6c70b82d595faa3eb56981fba9f9c238fa535fdf04c",
         "role": "vehicle"
       }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "audi-r8-2021-is-1001",
+        "sourceValue": 75000,
+        "sourceUnit": "km",
+        "canonicalKm": 75000
+      },
+      {
+        "slug": "audi-q7-2022-is-1002",
+        "sourceValue": 57500,
+        "sourceUnit": "km",
+        "canonicalKm": 57500
+      },
+      {
+        "slug": "bmw-m5-2018-is-1003",
+        "sourceValue": 61000,
+        "sourceUnit": "km",
+        "canonicalKm": 61000
+      },
+      {
+        "slug": "bmw-x5-2014-is-1004",
+        "sourceValue": 196000,
+        "sourceUnit": "km",
+        "canonicalKm": 196000
+      },
+      {
+        "slug": "bmw-750-2019-is-1005",
+        "sourceValue": 167000,
+        "sourceUnit": "km",
+        "canonicalKm": 167000
+      },
+      {
+        "slug": "audi-a5-sportback-2018-is-1006",
+        "sourceValue": 175000,
+        "sourceUnit": "km",
+        "canonicalKm": 175000
+      }
     ]
   },
-  "baseDeployment": {
-    "id": "dpl_9zhikwXLRYiettS1ERL7geEVQxCb",
-    "url": "https://cars-isautovarna.vercel.app/",
-    "checkedAt": "2026-09-28T02:25:47.067Z"
-  },
-  "baseReceiptSha256": "671171c7aad775d85967f555701c5859d93e28d2a80fca7975c078bc21fef86c",
-  "refreshedAt": "2026-10-10T23:08:04.445Z"
+  "needsDealerQA": true,
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-13T01:56:46.967Z"
 }

@@ -10,7 +10,7 @@
     "digest": "83056967764a686f3737d74b86c5db51c1385a50184853f50ec4ade80c1dd44f",
     "tree": "5f6eec8efb2f9e99819f7f0c2f743d18fff7b134"
   },
-  "sourceDigest": "7a9b68bbf269e92666419e3b29b1d1a9078e2abe65f5940b146a3dc57c869d31",
+  "sourceDigest": "5a9a48157202edf27a99a62ca1d72a29196d7d8705d9a612bfeab794dae9343e",
   "inventory": {
     "mode": "dated-listing-snapshot",
     "count": 40,
@@ -261,5 +261,81 @@
     "nativeDealerFacts": true
   },
   "needsDealerQA": true,
-  "readyToPublish": false
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-13T02:58:30.951Z",
+  "ownerLogoRestoration": {
+    "kind": "exact-historical-assets-and-logo-url-bindings",
+    "sourceCommit": "7a6fb02db18c90390748d7fe234a03021b560510",
+    "sourceHistory": "3d6225f0a57f3bcc59763b464a4fd448d5f0e3a6",
+    "previousReceiptSha256": "729c384b7b286d96a0dbb27b5fea862e5f9d8825c58b5034177bec287c2adc5f",
+    "beforeDigest": "7a9b68bbf269e92666419e3b29b1d1a9078e2abe65f5940b146a3dc57c869d31",
+    "afterDigest": "5a9a48157202edf27a99a62ca1d72a29196d7d8705d9a612bfeab794dae9343e",
+    "changes": [
+      {
+        "path": "karento-best/src/lib/content.ts",
+        "beforeSha256": "badfa08da4541d8e8fdbdd2fce3ca9f1964d7a9ff28b6dd87101b3e1fa63cdd9",
+        "afterSha256": "900278f92755be4486f4324f2ecf960c8d331b7629548ecca4ee6d6a1c328a98"
+      },
+      {
+        "path": "karento-best/src/lib/data/dealer-detail.ts",
+        "beforeSha256": "fd5b7befd2b7d81136cdc64d0bfbe58ea4c13358c9d2b70a1bd7739d42ecce20",
+        "afterSha256": "125ab43543f4f957f4f981723aa0f2beb0fe040807b6131780d0bd49c32be872"
+      },
+      {
+        "path": "karento-best/src/lib/data/vehicle-detail.ts",
+        "beforeSha256": "a37923cbd19c6e998ddec4073d06754086ad07265795b2427a0eeeb29d8670db",
+        "afterSha256": "0096e3dd1f527d6f405422e17af022250a5619310aac6670e0dd99c3606ff00b"
+      },
+      {
+        "path": "karento-best/static/dealer-brand/v2-b57f86f52179d675/logo-on-light.webp",
+        "beforeSha256": null,
+        "afterSha256": "04bf9a0cd31cd72992a8ad4687292554121f7aab84c9195dc971efebd4119e2f"
+      },
+      {
+        "path": "karento-best/static/dealer-brand/v2-b57f86f52179d675/logo-on-light.png",
+        "beforeSha256": null,
+        "afterSha256": "b9faac487d5408022de7c56b12696eed8d387975e6095fe7d301dc362d6ce921"
+      },
+      {
+        "path": "karento-best/static/dealer-brand/v2-b57f86f52179d675/mark-on-light.webp",
+        "beforeSha256": null,
+        "afterSha256": "9f32656b21a0c0230aa18cfbe7e004668a3bcfdef10083ce70977ad17266cf35"
+      },
+      {
+        "path": "karento-best/static/dealer-brand/v2-b57f86f52179d675/logo-on-dark.webp",
+        "beforeSha256": null,
+        "afterSha256": "019719775d6f0bc08136bfc8140dc725c12abd39915276fe43abab29da145e51"
+      },
+      {
+        "path": "karento-best/static/dealer-brand/v2-b57f86f52179d675/logo-on-dark.png",
+        "beforeSha256": null,
+        "afterSha256": "f315518d82fc7a888a17e9b4ecd30582c9f6202424a8e799ff57e83ede195693"
+      },
+      {
+        "path": "karento-best/static/dealer-brand/v2-b57f86f52179d675/mark-on-dark.webp",
+        "beforeSha256": null,
+        "afterSha256": "035c7b6e839d0cca7c932594d57eeef88e6839f311b90e40227973bdce16184f"
+      },
+      {
+        "path": "karento-best/static/dealer-brand/v2-b57f86f52179d675/logo-on-accent.webp",
+        "beforeSha256": null,
+        "afterSha256": "6d130eedafa3938bcae1221474ab6c84c72df4b7c673f6416714d3911f77b22a"
+      },
+      {
+        "path": "karento-best/static/dealer-brand/v2-b57f86f52179d675/app-icon.png",
+        "beforeSha256": null,
+        "afterSha256": "b3c948d8925f8e5f6b4a533fedd7ebd2de94213d3fe7c54b8fbb106bfffc7d69"
+      },
+      {
+        "path": "karento-best/static/dealer-brand/v2-b57f86f52179d675/apple-touch-icon.png",
+        "beforeSha256": null,
+        "afterSha256": "2ebeb86d3fc9806464b82c358b9fd5a8a794a1390496d0c48f7773e05696f8bc"
+      },
+      {
+        "path": "karento-best/static/dealer-brand/v2-b57f86f52179d675/favicon.ico",
+        "beforeSha256": null,
+        "afterSha256": "f96e50bc721189ee40713b0d59a6d79322ea7ed515882fa945ac852136b58621"
+      }
+    ]
+  }
 }

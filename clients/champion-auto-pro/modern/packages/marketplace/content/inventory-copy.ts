@@ -1,200 +1,334 @@
 import type { DealerInventoryCopy } from "../lead-site";
-/** Reviewed text for the existing sample stock only. */
+/** Dealer-owned display copy from the exact personalized listing set. */
 export const inventoryCopy = {
-  "bmw-x5-m50d-sofia-2020": {
-    sourceDescription:
-      "Примерна обява за BMW X5 M50d с 360 камери, панорама, HUD и обдухване. Снимката е илюстративна; наличност и условия се потвърждават с автокъщата.",
-    bg: {
-      description:
-        "Примерна обява за BMW X5 M50d с 360 камери, панорама, HUD и обдухване. Снимката е илюстративна; наличност и условия се потвърждават с автокъщата.",
-      imageAlts: ["Черен BMW X5 SUV"],
+  "bmw-ix-40xdrive-2022-11787294758482309": {
+    "sourceDescription": "BMW iX 40Xdrive, 2022 г., електрически, 28 000 км. Публикувана обява към 07.09.2026. Наличност, оборудване и условия се потвърждават с Champion Auto Pro.",
+    "en": {
+      "description": "BMW iX 40Xdrive, 2022, electric, 28 000 km. Published listing as of 07.09.2026. Confirm availability, equipment and terms with Champion Auto Pro.",
+      "imageAlts": [
+        "BMW iX 40Xdrive",
+        "BMW iX 40Xdrive",
+        "BMW iX 40Xdrive",
+        "BMW iX 40Xdrive"
+      ]
     },
-    en: {
-      description:
-        "Sample listing for a BMW X5 M50d with 360-degree cameras, panoramic roof, head-up display and ventilated seats. The image is illustrative; availability and terms must be confirmed with the dealership.",
-      imageAlts: ["Black BMW X5 SUV"],
-    },
+    "bg": {
+      "description": "BMW iX 40Xdrive, 2022 г., електрически, 28 000 км. Публикувана обява към 07.09.2026. Наличност, оборудване и условия се потвърждават с Champion Auto Pro.",
+      "imageAlts": [
+        "BMW iX 40Xdrive",
+        "BMW iX 40Xdrive",
+        "BMW iX 40Xdrive",
+        "BMW iX 40Xdrive"
+      ]
+    }
   },
-  "mercedes-benz-gls-400d-4matic-amg-sofia-2021": {
-    sourceDescription:
-      "GLS 400d 4MATIC AMG Line с Burmester и панорама. Голям семеен SUV от Champion Auto Pro - наличен за оглед в Варна.",
-    bg: {
-      description:
-        "GLS 400d 4MATIC AMG Line с Burmester и панорама. Голям семеен SUV от {shortName} - наличен за оглед в {city}.",
-      imageAlts: ["Mercedes-Benz GLS 4MATIC AMG SUV"],
+  "audi-a6-50tdi-quattro-2019-11787311251312869": {
+    "sourceDescription": "Audi A6 50TDI Quattro, 2019 г., дизел, 176 000 км. Публикувана обява към 07.09.2026. Наличност, оборудване и условия се потвърждават с Champion Auto Pro.",
+    "en": {
+      "description": "Audi A6 50TDI Quattro, 2019, diesel, 176 000 km. Published listing as of 07.09.2026. Confirm availability, equipment and terms with Champion Auto Pro.",
+      "imageAlts": [
+        "Audi A6 50TDI Quattro",
+        "Audi A6 50TDI Quattro",
+        "Audi A6 50TDI Quattro",
+        "Audi A6 50TDI Quattro"
+      ]
     },
-    en: {
-      description:
-        "GLS 400d 4MATIC AMG Line with Burmester audio and a panoramic roof. A large family SUV from {shortName}, available to view in {city}.",
-      imageAlts: ["Mercedes-Benz GLS 4MATIC AMG SUV"],
-    },
+    "bg": {
+      "description": "Audi A6 50TDI Quattro, 2019 г., дизел, 176 000 км. Публикувана обява към 07.09.2026. Наличност, оборудване и условия се потвърждават с Champion Auto Pro.",
+      "imageAlts": [
+        "Audi A6 50TDI Quattro",
+        "Audi A6 50TDI Quattro",
+        "Audi A6 50TDI Quattro",
+        "Audi A6 50TDI Quattro"
+      ]
+    }
   },
-  "bmw-750e-xdrive-m-sport-sofia-2024": {
-    sourceDescription:
-      "Очакван внос: 7 Series plug-in hybrid с M Sport. Нисък пробег - Champion Auto Pro организира доставка и оглед в Варна.",
-    bg: {
-      description:
-        "Очакван внос: 7 Series plug-in hybrid с M Sport. Нисък пробег - {shortName} организира доставка и оглед в {city}.",
-      imageAlts: ["BMW 7 Series"],
+  "smart-forfour-22kw-26000-2021-11784794853353090": {
+    "sourceDescription": "Smart Forfour 22kw.-26000км., 2021 г., електрически, 26 000 км. Публикувана обява към 07.09.2026. Наличност, оборудване и условия се потвърждават с Champion Auto Pro.",
+    "en": {
+      "description": "Smart Forfour 22kw.-26000км., 2021, electric, 26 000 km. Published listing as of 07.09.2026. Confirm availability, equipment and terms with Champion Auto Pro.",
+      "imageAlts": [
+        "Smart Forfour 22kw.-26000км.",
+        "Smart Forfour 22kw.-26000км.",
+        "Smart Forfour 22kw.-26000км.",
+        "Smart Forfour 22kw.-26000км."
+      ]
     },
-    en: {
-      description:
-        "Expected import: 7 Series plug-in hybrid with M Sport. Low mileage; {shortName} arranges delivery and viewing in {city}.",
-      imageAlts: ["BMW 7 Series"],
-    },
+    "bg": {
+      "description": "Smart Forfour 22kw.-26000км., 2021 г., електрически, 26 000 км. Публикувана обява към 07.09.2026. Наличност, оборудване и условия се потвърждават с Champion Auto Pro.",
+      "imageAlts": [
+        "Smart Forfour 22kw.-26000км.",
+        "Smart Forfour 22kw.-26000км.",
+        "Smart Forfour 22kw.-26000км.",
+        "Smart Forfour 22kw.-26000км."
+      ]
+    }
   },
-  "mercedes-benz-e-63-s-amg-sofia-2021": {
-    sourceDescription:
-      "E 63 S AMG facelift с 360, HUD и Burmester. Спортна лимузина от Champion Auto Pro.",
-    bg: {
-      description:
-        "E 63 S AMG facelift с 360, HUD и Burmester. Спортна лимузина от {dealer}.",
-      imageAlts: ["Mercedes-Benz E-Class седан"],
+  "mercedes-benz-s-500-amg-packet-63-long-2014-11784640487309304": {
+    "sourceDescription": "Mercedes-Benz S 500 AMG Packet 63 Long, 2014 г., бензин, 265 000 км. Публикувана обява към 07.09.2026. Наличност, оборудване и условия се потвърждават с Champion Auto Pro.",
+    "en": {
+      "description": "Mercedes-Benz S 500 AMG Packet 63 Long, 2014, petrol, 265 000 km. Published listing as of 07.09.2026. Confirm availability, equipment and terms with Champion Auto Pro.",
+      "imageAlts": [
+        "Mercedes-Benz S 500 AMG Packet 63 Long",
+        "Mercedes-Benz S 500 AMG Packet 63 Long",
+        "Mercedes-Benz S 500 AMG Packet 63 Long",
+        "Mercedes-Benz S 500 AMG Packet 63 Long"
+      ]
     },
-    en: {
-      description:
-        "Facelift E 63 S AMG with 360-degree cameras, head-up display and Burmester audio. A sports saloon from {dealer}.",
-      imageAlts: ["Mercedes-Benz E-Class saloon"],
-    },
+    "bg": {
+      "description": "Mercedes-Benz S 500 AMG Packet 63 Long, 2014 г., бензин, 265 000 км. Публикувана обява към 07.09.2026. Наличност, оборудване и условия се потвърждават с Champion Auto Pro.",
+      "imageAlts": [
+        "Mercedes-Benz S 500 AMG Packet 63 Long",
+        "Mercedes-Benz S 500 AMG Packet 63 Long",
+        "Mercedes-Benz S 500 AMG Packet 63 Long",
+        "Mercedes-Benz S 500 AMG Packet 63 Long"
+      ]
+    }
   },
-  "mercedes-benz-cls-400d-4matic-sofia-2020": {
-    sourceDescription:
-      "CLS 400d 4MATIC AMG Line Designo с 360 камери. Елегантно купе-седан от Champion Auto Pro в Варна.",
-    bg: {
-      description:
-        "CLS 400d 4MATIC AMG Line Designo с 360 камери. Елегантно купе-седан от {shortName} в {city}.",
-      imageAlts: ["Mercedes CLS"],
+  "mercedes-benz-s-400-long-full-2023-11771862221224289": {
+    "sourceDescription": "Mercedes-Benz S 400 LONG-FULL, 2023 г., дизел, 73 000 км. Публикувана обява към 07.09.2026. Наличност, оборудване и условия се потвърждават с Champion Auto Pro.",
+    "en": {
+      "description": "Mercedes-Benz S 400 LONG-FULL, 2023, diesel, 73 000 km. Published listing as of 07.09.2026. Confirm availability, equipment and terms with Champion Auto Pro.",
+      "imageAlts": [
+        "Mercedes-Benz S 400 LONG-FULL",
+        "Mercedes-Benz S 400 LONG-FULL",
+        "Mercedes-Benz S 400 LONG-FULL",
+        "Mercedes-Benz S 400 LONG-FULL"
+      ]
     },
-    en: {
-      description:
-        "CLS 400d 4MATIC AMG Line Designo with 360-degree cameras. An elegant four-door coupe from {shortName} in {city}.",
-      imageAlts: ["Mercedes CLS"],
-    },
+    "bg": {
+      "description": "Mercedes-Benz S 400 LONG-FULL, 2023 г., дизел, 73 000 км. Публикувана обява към 07.09.2026. Наличност, оборудване и условия се потвърждават с Champion Auto Pro.",
+      "imageAlts": [
+        "Mercedes-Benz S 400 LONG-FULL",
+        "Mercedes-Benz S 400 LONG-FULL",
+        "Mercedes-Benz S 400 LONG-FULL",
+        "Mercedes-Benz S 400 LONG-FULL"
+      ]
+    }
   },
-  "audi-q8-50-tdi-quattro-s-line-sofia-2021": {
-    sourceDescription:
-      "Очакван внос: Q8 50 TDI quattro S line Plus. Купе-SUV с quattro за клиенти на Champion Auto Pro.",
-    bg: {
-      description:
-        "Очакван внос: Q8 50 TDI quattro S line Plus. Купе-SUV с quattro за клиенти на {shortName}.",
-      imageAlts: ["Audi Q8"],
+  "mercedes-benz-ml-350-amg-packet-2012-21784732491989700": {
+    "sourceDescription": "Mercedes-Benz ML 350 AMG Packet, 2012 г., дизел, 185 000 км. Публикувана обява към 07.09.2026. Наличност, оборудване и условия се потвърждават с Champion Auto Pro.",
+    "en": {
+      "description": "Mercedes-Benz ML 350 AMG Packet, 2012, diesel, 185 000 km. Published listing as of 07.09.2026. Confirm availability, equipment and terms with Champion Auto Pro.",
+      "imageAlts": [
+        "Mercedes-Benz ML 350 AMG Packet",
+        "Mercedes-Benz ML 350 AMG Packet",
+        "Mercedes-Benz ML 350 AMG Packet",
+        "Mercedes-Benz ML 350 AMG Packet"
+      ]
     },
-    en: {
-      description:
-        "Expected import: Q8 50 TDI quattro S line Plus. A coupe-SUV with quattro for {shortName} customers.",
-      imageAlts: ["Audi Q8"],
-    },
+    "bg": {
+      "description": "Mercedes-Benz ML 350 AMG Packet, 2012 г., дизел, 185 000 км. Публикувана обява към 07.09.2026. Наличност, оборудване и условия се потвърждават с Champion Auto Pro.",
+      "imageAlts": [
+        "Mercedes-Benz ML 350 AMG Packet",
+        "Mercedes-Benz ML 350 AMG Packet",
+        "Mercedes-Benz ML 350 AMG Packet",
+        "Mercedes-Benz ML 350 AMG Packet"
+      ]
+    }
   },
-  "mercedes-benz-gle-400d-coupe-sofia-2021": {
-    sourceDescription:
-      "GLE 400d Coupe 4MATIC AMG с 360 и Burmester. Наличен при Champion Auto Pro - Варна.",
-    bg: {
-      description:
-        "GLE 400d Coupe 4MATIC AMG с 360 и Burmester. Наличен при {dealer} - {city}.",
-      imageAlts: ["Черен Mercedes-Benz GLE SUV"],
+  "audi-a7-s-line-full-2020-11784720940119234": {
+    "sourceDescription": "Audi A7 S-Line FULL, 2020 г., дизел, 108 000 км. Публикувана обява към 07.09.2026. Наличност, оборудване и условия се потвърждават с Champion Auto Pro.",
+    "en": {
+      "description": "Audi A7 S-Line FULL, 2020, diesel, 108 000 km. Published listing as of 07.09.2026. Confirm availability, equipment and terms with Champion Auto Pro.",
+      "imageAlts": [
+        "Audi A7 S-Line FULL",
+        "Audi A7 S-Line FULL",
+        "Audi A7 S-Line FULL",
+        "Audi A7 S-Line FULL"
+      ]
     },
-    en: {
-      description:
-        "GLE 400d Coupe 4MATIC AMG with 360-degree cameras and Burmester audio. Available from {dealer} in {city}.",
-      imageAlts: ["Black Mercedes-Benz GLE SUV"],
-    },
+    "bg": {
+      "description": "Audi A7 S-Line FULL, 2020 г., дизел, 108 000 км. Публикувана обява към 07.09.2026. Наличност, оборудване и условия се потвърждават с Champion Auto Pro.",
+      "imageAlts": [
+        "Audi A7 S-Line FULL",
+        "Audi A7 S-Line FULL",
+        "Audi A7 S-Line FULL",
+        "Audi A7 S-Line FULL"
+      ]
+    }
   },
-  "mercedes-benz-gle-53-amg-coupe-sofia-2022": {
-    sourceDescription:
-      "Очакван внос: GLE 53 AMG Coupe Night Pack. Champion Auto Pro предлага собствен лизинг след оглед.",
-    bg: {
-      description:
-        "Очакван внос: GLE 53 AMG Coupe Night Pack. {shortName} предлага собствен лизинг след оглед.",
-      imageAlts: ["Бял Mercedes-Benz GLE AMG SUV"],
+  "mercedes-benz-b-200-amg-line-2020-11783584641538327": {
+    "sourceDescription": "Mercedes-Benz B 200 AMG Line, 2020 г., дизел, 95 000 км. Публикувана обява към 07.09.2026. Наличност, оборудване и условия се потвърждават с Champion Auto Pro.",
+    "en": {
+      "description": "Mercedes-Benz B 200 AMG Line, 2020, diesel, 95 000 km. Published listing as of 07.09.2026. Confirm availability, equipment and terms with Champion Auto Pro.",
+      "imageAlts": [
+        "Mercedes-Benz B 200 AMG Line",
+        "Mercedes-Benz B 200 AMG Line",
+        "Mercedes-Benz B 200 AMG Line",
+        "Mercedes-Benz B 200 AMG Line"
+      ]
     },
-    en: {
-      description:
-        "Expected import: GLE 53 AMG Coupe Night Pack. {shortName} offers in-house leasing after a viewing.",
-      imageAlts: ["White Mercedes-Benz GLE AMG SUV"],
-    },
+    "bg": {
+      "description": "Mercedes-Benz B 200 AMG Line, 2020 г., дизел, 95 000 км. Публикувана обява към 07.09.2026. Наличност, оборудване и условия се потвърждават с Champion Auto Pro.",
+      "imageAlts": [
+        "Mercedes-Benz B 200 AMG Line",
+        "Mercedes-Benz B 200 AMG Line",
+        "Mercedes-Benz B 200 AMG Line",
+        "Mercedes-Benz B 200 AMG Line"
+      ]
+    }
   },
-  "mercedes-benz-s-350d-long-amg-sofia-2019": {
-    sourceDescription:
-      "S 350d Long с S63 AMG оптика и пакет за шофьор. Представителна лимузина от Champion Auto Pro.",
-    bg: {
-      description:
-        "S 350d Long с S63 AMG оптика и пакет за шофьор. Представителна лимузина от {shortName}.",
-      imageAlts: ["Mercedes-Benz S-Class седан"],
+  "audi-sq7-s-line-2017-21778484741555035": {
+    "sourceDescription": "Audi SQ7 S-Line, 2017 г., дизел, 230 000 км. Публикувана обява към 07.09.2026. Наличност, оборудване и условия се потвърждават с Champion Auto Pro.",
+    "en": {
+      "description": "Audi SQ7 S-Line, 2017, diesel, 230 000 km. Published listing as of 07.09.2026. Confirm availability, equipment and terms with Champion Auto Pro.",
+      "imageAlts": [
+        "Audi SQ7 S-Line",
+        "Audi SQ7 S-Line",
+        "Audi SQ7 S-Line",
+        "Audi SQ7 S-Line"
+      ]
     },
-    en: {
-      description:
-        "S 350d Long with S63 AMG styling and a chauffeur package. An executive saloon from {shortName}.",
-      imageAlts: ["Mercedes-Benz S-Class saloon"],
-    },
+    "bg": {
+      "description": "Audi SQ7 S-Line, 2017 г., дизел, 230 000 км. Публикувана обява към 07.09.2026. Наличност, оборудване и условия се потвърждават с Champion Auto Pro.",
+      "imageAlts": [
+        "Audi SQ7 S-Line",
+        "Audi SQ7 S-Line",
+        "Audi SQ7 S-Line",
+        "Audi SQ7 S-Line"
+      ]
+    }
   },
-  "mercedes-benz-v-250d-vip-business-sofia-2018": {
-    sourceDescription:
-      "V 250d VIP Business с TV, обдухване и подгряване. Бизнес ван от Champion Auto Pro.",
-    bg: {
-      description:
-        "V 250d VIP Business с TV, обдухване и подгряване. Бизнес ван от {dealer}.",
-      imageAlts: ["V-Class ван"],
+  "audi-rs5-2-9tfsi-v6-quattro-2020-11758265694582686": {
+    "sourceDescription": "Audi Rs5 2.9TFSI V6 Quattro, 2020 г., бензин, 182 000 км. Публикувана обява към 07.09.2026. Наличност, оборудване и условия се потвърждават с Champion Auto Pro.",
+    "en": {
+      "description": "Audi Rs5 2.9TFSI V6 Quattro, 2020, petrol, 182 000 km. Published listing as of 07.09.2026. Confirm availability, equipment and terms with Champion Auto Pro.",
+      "imageAlts": [
+        "Audi Rs5 2.9TFSI V6 Quattro",
+        "Audi Rs5 2.9TFSI V6 Quattro",
+        "Audi Rs5 2.9TFSI V6 Quattro",
+        "Audi Rs5 2.9TFSI V6 Quattro"
+      ]
     },
-    en: {
-      description:
-        "V 250d VIP Business with TV, ventilated and heated seats. A business van from {dealer}.",
-      imageAlts: ["V-Class van"],
-    },
+    "bg": {
+      "description": "Audi Rs5 2.9TFSI V6 Quattro, 2020 г., бензин, 182 000 км. Публикувана обява към 07.09.2026. Наличност, оборудване и условия се потвърждават с Champion Auto Pro.",
+      "imageAlts": [
+        "Audi Rs5 2.9TFSI V6 Quattro",
+        "Audi Rs5 2.9TFSI V6 Quattro",
+        "Audi Rs5 2.9TFSI V6 Quattro",
+        "Audi Rs5 2.9TFSI V6 Quattro"
+      ]
+    }
   },
-  "range-rover-sport-svr-sofia-2021": {
-    sourceDescription:
-      "Range Rover Sport SVR 600 к.с. с панорама, 360 и Meridian. Висок клас SUV от Champion Auto Pro.",
-    bg: {
-      description:
-        "Range Rover Sport SVR 600 к.с. с панорама, 360 и Meridian. Висок клас SUV от {shortName}.",
-      imageAlts: ["Range Rover Sport"],
+  "audi-e-tron-2-x-s-line-2021-11773307576284789": {
+    "sourceDescription": "Audi E-Tron 2 X S-Line, 2021 г., електрически, 72 000 км. Публикувана обява към 07.09.2026. Наличност, оборудване и условия се потвърждават с Champion Auto Pro.",
+    "en": {
+      "description": "Audi E-Tron 2 X S-Line, 2021, electric, 72 000 km. Published listing as of 07.09.2026. Confirm availability, equipment and terms with Champion Auto Pro.",
+      "imageAlts": [
+        "Audi E-Tron 2 X S-Line",
+        "Audi E-Tron 2 X S-Line",
+        "Audi E-Tron 2 X S-Line",
+        "Audi E-Tron 2 X S-Line"
+      ]
     },
-    en: {
-      description:
-        "Range Rover Sport SVR, 600 hp, with a panoramic roof, 360-degree cameras and Meridian audio. A premium SUV from {shortName}.",
-      imageAlts: ["Range Rover Sport"],
-    },
+    "bg": {
+      "description": "Audi E-Tron 2 X S-Line, 2021 г., електрически, 72 000 км. Публикувана обява към 07.09.2026. Наличност, оборудване и условия се потвърждават с Champion Auto Pro.",
+      "imageAlts": [
+        "Audi E-Tron 2 X S-Line",
+        "Audi E-Tron 2 X S-Line",
+        "Audi E-Tron 2 X S-Line",
+        "Audi E-Tron 2 X S-Line"
+      ]
+    }
   },
-  "bmw-430i-xdrive-gran-coupe-sofia-2023": {
-    sourceDescription:
-      "430i xDrive Gran Coupe M Sport с digital кокпит и Harman Kardon. Champion Auto Pro, Варна.",
-    bg: {
-      description:
-        "430i xDrive Gran Coupe M Sport с digital кокпит и Harman Kardon. {shortName}, {city}.",
-      imageAlts: ["BMW 4 Series"],
+  "vw-id-5-pro-82kw-2023-11787215050268120": {
+    "sourceDescription": "VW ID.5 PRO 82kw, 2023 г., електрически, 104 000 км. Публикувана обява към 07.09.2026. Наличност, оборудване и условия се потвърждават с Champion Auto Pro.",
+    "en": {
+      "description": "VW ID.5 PRO 82kw, 2023, electric, 104 000 km. Published listing as of 07.09.2026. Confirm availability, equipment and terms with Champion Auto Pro.",
+      "imageAlts": [
+        "VW ID.5 PRO 82kw",
+        "VW ID.5 PRO 82kw",
+        "VW ID.5 PRO 82kw",
+        "VW ID.5 PRO 82kw"
+      ]
     },
-    en: {
-      description:
-        "430i xDrive Gran Coupe M Sport with a digital cockpit and Harman Kardon audio. {shortName}, {city}.",
-      imageAlts: ["BMW 4 Series"],
-    },
+    "bg": {
+      "description": "VW ID.5 PRO 82kw, 2023 г., електрически, 104 000 км. Публикувана обява към 07.09.2026. Наличност, оборудване и условия се потвърждават с Champion Auto Pro.",
+      "imageAlts": [
+        "VW ID.5 PRO 82kw",
+        "VW ID.5 PRO 82kw",
+        "VW ID.5 PRO 82kw",
+        "VW ID.5 PRO 82kw"
+      ]
+    }
   },
-  "bmw-m4-competition-sofia-2021": {
-    sourceDescription:
-      "BMW M4 Competition с M пакет, спортен салон и digital кокпит. Купе от портфолиото на Champion Auto Pro.",
-    bg: {
-      description:
-        "BMW M4 Competition с M пакет, спортен салон и digital кокпит. Купе от портфолиото на {dealer}.",
-      imageAlts: ["Червено BMW M4 Competition пред модерен шоурум"],
+  "toyota-highlander-60000km-prins-2019-21787142969943440": {
+    "sourceDescription": "Toyota Highlander 60000km Газ Prins, 2019 г., бензин, 60 000 км. Публикувана обява към 07.09.2026. Наличност, оборудване и условия се потвърждават с Champion Auto Pro.",
+    "en": {
+      "description": "Toyota Highlander 60000km Газ Prins, 2019, petrol, 60 000 km. Published listing as of 07.09.2026. Confirm availability, equipment and terms with Champion Auto Pro.",
+      "imageAlts": [
+        "Toyota Highlander 60000km Газ Prins",
+        "Toyota Highlander 60000km Газ Prins",
+        "Toyota Highlander 60000km Газ Prins",
+        "Toyota Highlander 60000km Газ Prins"
+      ]
     },
-    en: {
-      description:
-        "BMW M4 Competition with M package, sports interior and digital cockpit. A coupe from the {dealer} collection.",
-      imageAlts: ["Red BMW M4 Competition in front of a modern showroom"],
-    },
+    "bg": {
+      "description": "Toyota Highlander 60000km Газ Prins, 2019 г., бензин, 60 000 км. Публикувана обява към 07.09.2026. Наличност, оборудване и условия се потвърждават с Champion Auto Pro.",
+      "imageAlts": [
+        "Toyota Highlander 60000km Газ Prins",
+        "Toyota Highlander 60000km Газ Prins",
+        "Toyota Highlander 60000km Газ Prins",
+        "Toyota Highlander 60000km Газ Prins"
+      ]
+    }
   },
-  "bmw-x5-xdrive40d-berlin-2022": {
-    sourceDescription:
-      "Крос-бордер демо наличност с оторизирани медии и право на доставка. Финалният транспорт, данъци и регистрация се уточняват с оферта от Champion Auto Pro.",
-    bg: {
-      description:
-        "Крос-бордер демо наличност с оторизирани медии и право на доставка. Финалният транспорт, данъци и регистрация се уточняват с оферта от {shortName}.",
-      imageAlts: ["Черен BMW X5 SUV в градска среда"],
+  "mercedes-benz-eqe-300-2023-21787197677876419": {
+    "sourceDescription": "Mercedes-Benz EQE 300, 2023 г., електрически, 47 000 км. Публикувана обява към 07.09.2026. Наличност, оборудване и условия се потвърждават с Champion Auto Pro.",
+    "en": {
+      "description": "Mercedes-Benz EQE 300, 2023, electric, 47 000 km. Published listing as of 07.09.2026. Confirm availability, equipment and terms with Champion Auto Pro.",
+      "imageAlts": [
+        "Mercedes-Benz EQE 300"
+      ]
     },
-    en: {
-      description:
-        "Cross-border demo inventory with authorized images and delivery rights. Final transport, tax and registration costs are confirmed in a quote from {shortName}.",
-      imageAlts: ["Black BMW X5 SUV in an urban setting"],
-    },
+    "bg": {
+      "description": "Mercedes-Benz EQE 300, 2023 г., електрически, 47 000 км. Публикувана обява към 07.09.2026. Наличност, оборудване и условия се потвърждават с Champion Auto Pro.",
+      "imageAlts": [
+        "Mercedes-Benz EQE 300"
+      ]
+    }
   },
+  "mercedes-benz-eqc-400-2021-21787200936302723": {
+    "sourceDescription": "Mercedes-Benz EQC 400, 2021 г., електрически, 68 900 км. Публикувана обява към 07.09.2026. Наличност, оборудване и условия се потвърждават с Champion Auto Pro.",
+    "en": {
+      "description": "Mercedes-Benz EQC 400, 2021, electric, 68 900 km. Published listing as of 07.09.2026. Confirm availability, equipment and terms with Champion Auto Pro.",
+      "imageAlts": [
+        "Mercedes-Benz EQC 400",
+        "Mercedes-Benz EQC 400",
+        "Mercedes-Benz EQC 400",
+        "Mercedes-Benz EQC 400"
+      ]
+    },
+    "bg": {
+      "description": "Mercedes-Benz EQC 400, 2021 г., електрически, 68 900 км. Публикувана обява към 07.09.2026. Наличност, оборудване и условия се потвърждават с Champion Auto Pro.",
+      "imageAlts": [
+        "Mercedes-Benz EQC 400",
+        "Mercedes-Benz EQC 400",
+        "Mercedes-Benz EQC 400",
+        "Mercedes-Benz EQC 400"
+      ]
+    }
+  },
+  "renault-captur-2015-11786100747512292": {
+    "sourceDescription": "Renault Captur, 2015 г., дизел, 55 000 км. Публикувана обява към 07.09.2026. Наличност, оборудване и условия се потвърждават с Champion Auto Pro.",
+    "en": {
+      "description": "Renault Captur, 2015, diesel, 55 000 km. Published listing as of 07.09.2026. Confirm availability, equipment and terms with Champion Auto Pro.",
+      "imageAlts": [
+        "Renault Captur",
+        "Renault Captur",
+        "Renault Captur",
+        "Renault Captur"
+      ]
+    },
+    "bg": {
+      "description": "Renault Captur, 2015 г., дизел, 55 000 км. Публикувана обява към 07.09.2026. Наличност, оборудване и условия се потвърждават с Champion Auto Pro.",
+      "imageAlts": [
+        "Renault Captur",
+        "Renault Captur",
+        "Renault Captur",
+        "Renault Captur"
+      ]
+    }
+  }
 } satisfies DealerInventoryCopy;

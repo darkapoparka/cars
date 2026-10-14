@@ -24,7 +24,7 @@
         : i18n.t("m_5cb8caa2c3fe")}
     </p>
     <div class="dn-error__actions">
-      <a class="dn-error__primary" href={i18n.href(resolve('/listing-grid'))}>{i18n.t("m_c2eca604aa18")}</a>
+      <a class="dn-error__primary" href={i18n.href(resolve('/cars'))}>{i18n.t("m_c2eca604aa18")}</a>
       <a class="dn-error__secondary" href={i18n.href(resolve('/contact'))}>{i18n.t("m_d7def4b82f7c")}</a>
     </div>
   </div>

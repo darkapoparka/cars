@@ -8,7 +8,7 @@
     "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1",
     "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76"
   },
-  "appDigest": "6de3f730ca9f2c80bbe1d975d451503904c2968e7fed062c5760bf0dc5b82a1b",
+  "appDigest": "f88599fc2d69db445672e76126e5265e1edd5657aa6b9a729ad28d666aba6526",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "navara-car",
@@ -199,5 +199,70 @@
   },
   "needsDealerQA": true,
   "readyToPublish": false,
-  "refreshedAt": "2026-10-12T00:32:34.973Z"
+  "refreshedAt": "2026-10-13T02:56:18.363Z",
+  "ownerLogoRestoration": {
+    "kind": "exact-historical-assets-and-logo-url-bindings",
+    "sourceCommit": "9fa56a227811fd89774793c395c65e01fed746c8",
+    "sourceHistory": "e28713a76f90ad163538c79f483911caa099e6f0",
+    "previousReceiptSha256": "714f9e863d4002bcf4066211b802c58bbd11585ed8f896cd22de11c1a8fd347b",
+    "beforeDigest": "6de3f730ca9f2c80bbe1d975d451503904c2968e7fed062c5760bf0dc5b82a1b",
+    "afterDigest": "f88599fc2d69db445672e76126e5265e1edd5657aa6b9a729ad28d666aba6526",
+    "changes": [
+      {
+        "path": "app/lib/dealer.json",
+        "beforeSha256": "6efd15229e545cf5072437fc00ff7700c4f40aded5204bd77ff5689f2abe6438",
+        "afterSha256": "d3188d98d493cdbbed681e48016f7f153abf5fb6c51cc3996cff8239160e898e"
+      },
+      {
+        "path": "app/public/dealer-brand/v2-24f1fab0fc40d49e/logo-on-light.webp",
+        "beforeSha256": null,
+        "afterSha256": "59bf693ac7938da19bad1ff965c84f57d47879457d2832580521e18f98620293"
+      },
+      {
+        "path": "app/public/dealer-brand/v2-24f1fab0fc40d49e/logo-on-light.png",
+        "beforeSha256": null,
+        "afterSha256": "19ed96b7278b011e2ef6f3a910879420005d442225d33c51c08e63826bc6060c"
+      },
+      {
+        "path": "app/public/dealer-brand/v2-24f1fab0fc40d49e/mark-on-light.webp",
+        "beforeSha256": null,
+        "afterSha256": "756d69ce122daa5e88975b0d0744363b05f8f36dbdfcecf92059411e3530e56f"
+      },
+      {
+        "path": "app/public/dealer-brand/v2-24f1fab0fc40d49e/logo-on-dark.webp",
+        "beforeSha256": null,
+        "afterSha256": "c2736c32f1b7151c1206fd2708c96bea6536650a7ff4cbcf699850c801be588f"
+      },
+      {
+        "path": "app/public/dealer-brand/v2-24f1fab0fc40d49e/logo-on-dark.png",
+        "beforeSha256": null,
+        "afterSha256": "b040031e611284f07cc80244ad96b9c459e84b51d1228864d849b44b507d077e"
+      },
+      {
+        "path": "app/public/dealer-brand/v2-24f1fab0fc40d49e/mark-on-dark.webp",
+        "beforeSha256": null,
+        "afterSha256": "2c3297c7c169551791aa6f5584b0a76a405946fd2643a2c1b60c01bdb5d2bb5b"
+      },
+      {
+        "path": "app/public/dealer-brand/v2-24f1fab0fc40d49e/logo-on-accent.webp",
+        "beforeSha256": null,
+        "afterSha256": "dececeb17ebbf45f8d5c756f02e7f0b9433328b83d4235a204e1388f13fac7d9"
+      },
+      {
+        "path": "app/public/dealer-brand/v2-24f1fab0fc40d49e/app-icon.png",
+        "beforeSha256": null,
+        "afterSha256": "110bccca7e35cfb553e37753ff9568d438730bbaefd1754a0bc9a9947ce615ca"
+      },
+      {
+        "path": "app/public/dealer-brand/v2-24f1fab0fc40d49e/apple-touch-icon.png",
+        "beforeSha256": null,
+        "afterSha256": "aa04893fb8a17f80d5dbb42ec3630030c2c9230ebb971c0dedb54990087455eb"
+      },
+      {
+        "path": "app/public/dealer-brand/v2-24f1fab0fc40d49e/favicon.ico",
+        "beforeSha256": null,
+        "afterSha256": "89fc3ea9bea9c015b5e65f532aff44e5c94f66499f724798e251fc6bf50f6b14"
+      }
+    ]
+  }
 }

@@ -1,200 +1,340 @@
 import type { DealerInventoryCopy } from "../lead-site";
-/** Reviewed text for the existing sample stock only. */
+/** Dealer-owned display copy from the exact personalized listing set. */
 export const inventoryCopy = {
-  "bmw-x5-m50d-sofia-2020": {
-    sourceDescription:
-      "Примерна обява за BMW X5 M50d с 360 камери, панорама, HUD и обдухване. Снимката е илюстративна; наличност и условия се потвърждават с автокъщата.",
-    bg: {
-      description:
-        "Примерна обява за BMW X5 M50d с 360 камери, панорама, HUD и обдухване. Снимката е илюстративна; наличност и условия се потвърждават с автокъщата.",
-      imageAlts: ["Черен BMW X5 SUV"],
+  "vw-passat-alltrack-2018-11785010475119627": {
+    "sourceDescription": "VW Passat Alltrack, юли 2018 г.  220 000 км Тъмно сив Дизелов 190 к.с. Евро 6 2000 куб.см Автоматична Комби. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.",
+    "en": {
+      "description": "VW Passat Alltrack, July 2018  220 000 km Dark grey Diesel 190 hp Euro 6 2000 cc Automatic Wagon. Advertised by AVANGARD AUTO. Confirm availability and terms by phone before visiting.",
+      "imageAlts": [
+        "VW Passat Alltrack",
+        "VW Passat Alltrack",
+        "VW Passat Alltrack",
+        "VW Passat Alltrack"
+      ]
     },
-    en: {
-      description:
-        "Sample listing for a BMW X5 M50d with 360-degree cameras, panoramic roof, head-up display and ventilated seats. The image is illustrative; availability and terms must be confirmed with the dealership.",
-      imageAlts: ["Black BMW X5 SUV"],
-    },
+    "bg": {
+      "description": "VW Passat Alltrack, юли 2018 г.  220 000 км Тъмно сив Дизелов 190 к.с. Евро 6 2000 куб.см Автоматична Комби. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.",
+      "imageAlts": [
+        "VW Passat Alltrack",
+        "VW Passat Alltrack",
+        "VW Passat Alltrack",
+        "VW Passat Alltrack"
+      ]
+    }
   },
-  "mercedes-benz-gls-400d-4matic-amg-sofia-2021": {
-    sourceDescription:
-      "GLS 400d 4MATIC AMG Line с Burmester и панорама. Голям семеен SUV от AVANGARD AUTO - наличен за оглед в Варна.",
-    bg: {
-      description:
-        "GLS 400d 4MATIC AMG Line с Burmester и панорама. Голям семеен SUV от {shortName} - наличен за оглед в {city}.",
-      imageAlts: ["Mercedes-Benz GLS 4MATIC AMG SUV"],
+  "volvo-xc40-2-0d-2019-21783748809976935": {
+    "sourceDescription": "Volvo XC40 2.0D, октомври 2019 г.  166 000 км Сив Дизелов 150 к.с. Евро 6 2000 куб.см Автоматична Джип. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.",
+    "en": {
+      "description": "Volvo XC40 2.0D, October 2019  166 000 km Grey Diesel 150 hp Euro 6 2000 cc Automatic SUV. Advertised by AVANGARD AUTO. Confirm availability and terms by phone before visiting.",
+      "imageAlts": [
+        "Volvo XC40 2.0D",
+        "Volvo XC40 2.0D",
+        "Volvo XC40 2.0D",
+        "Volvo XC40 2.0D"
+      ]
     },
-    en: {
-      description:
-        "GLS 400d 4MATIC AMG Line with Burmester audio and a panoramic roof. A large family SUV from {shortName}, available to view in {city}.",
-      imageAlts: ["Mercedes-Benz GLS 4MATIC AMG SUV"],
-    },
+    "bg": {
+      "description": "Volvo XC40 2.0D, октомври 2019 г.  166 000 км Сив Дизелов 150 к.с. Евро 6 2000 куб.см Автоматична Джип. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.",
+      "imageAlts": [
+        "Volvo XC40 2.0D",
+        "Volvo XC40 2.0D",
+        "Volvo XC40 2.0D",
+        "Volvo XC40 2.0D"
+      ]
+    }
   },
-  "bmw-750e-xdrive-m-sport-sofia-2024": {
-    sourceDescription:
-      "Очакван внос: 7 Series plug-in hybrid с M Sport. Нисък пробег - AVANGARD AUTO организира доставка и оглед в Варна.",
-    bg: {
-      description:
-        "Очакван внос: 7 Series plug-in hybrid с M Sport. Нисък пробег - {shortName} организира доставка и оглед в {city}.",
-      imageAlts: ["BMW 7 Series"],
+  "volvo-xc40-t5-inscription-2019-21766322242220471": {
+    "sourceDescription": "Volvo XC40 T5 inscription, юни 2019 г.  278 000 км Сив Бензинов 248 к.с. Евро 6 2000 куб.см Автоматична Джип. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.",
+    "en": {
+      "description": "Volvo XC40 T5 inscription, June 2019  278 000 km Grey Petrol 248 hp Euro 6 2000 cc Automatic SUV. Advertised by AVANGARD AUTO. Confirm availability and terms by phone before visiting.",
+      "imageAlts": [
+        "Volvo XC40 T5 inscription",
+        "Volvo XC40 T5 inscription",
+        "Volvo XC40 T5 inscription",
+        "Volvo XC40 T5 inscription"
+      ]
     },
-    en: {
-      description:
-        "Expected import: 7 Series plug-in hybrid with M Sport. Low mileage; {shortName} arranges delivery and viewing in {city}.",
-      imageAlts: ["BMW 7 Series"],
-    },
+    "bg": {
+      "description": "Volvo XC40 T5 inscription, юни 2019 г.  278 000 км Сив Бензинов 248 к.с. Евро 6 2000 куб.см Автоматична Джип. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.",
+      "imageAlts": [
+        "Volvo XC40 T5 inscription",
+        "Volvo XC40 T5 inscription",
+        "Volvo XC40 T5 inscription",
+        "Volvo XC40 T5 inscription"
+      ]
+    }
   },
-  "mercedes-benz-e-63-s-amg-sofia-2021": {
-    sourceDescription:
-      "E 63 S AMG facelift с 360, HUD и Burmester. Спортна лимузина от AVANGARD AUTO.",
-    bg: {
-      description:
-        "E 63 S AMG facelift с 360, HUD и Burmester. Спортна лимузина от {dealer}.",
-      imageAlts: ["Mercedes-Benz E-Class седан"],
+  "peugeot-208-1-6hdi-2016-11782450720679744": {
+    "sourceDescription": "Peugeot 208 1.6HDI, юли 2016 г.  214 000 км Бял Дизелов 75 к.с. Евро 6 1600 куб.см Ръчна Хечбек. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.",
+    "en": {
+      "description": "Peugeot 208 1.6HDI, July 2016  214 000 km White Diesel 75 hp Euro 6 1600 cc Manual Hatchback. Advertised by AVANGARD AUTO. Confirm availability and terms by phone before visiting.",
+      "imageAlts": [
+        "Peugeot 208 1.6HDI",
+        "Peugeot 208 1.6HDI",
+        "Peugeot 208 1.6HDI",
+        "Peugeot 208 1.6HDI"
+      ]
     },
-    en: {
-      description:
-        "Facelift E 63 S AMG with 360-degree cameras, head-up display and Burmester audio. A sports saloon from {dealer}.",
-      imageAlts: ["Mercedes-Benz E-Class saloon"],
-    },
+    "bg": {
+      "description": "Peugeot 208 1.6HDI, юли 2016 г.  214 000 км Бял Дизелов 75 к.с. Евро 6 1600 куб.см Ръчна Хечбек. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.",
+      "imageAlts": [
+        "Peugeot 208 1.6HDI",
+        "Peugeot 208 1.6HDI",
+        "Peugeot 208 1.6HDI",
+        "Peugeot 208 1.6HDI"
+      ]
+    }
   },
-  "mercedes-benz-cls-400d-4matic-sofia-2020": {
-    sourceDescription:
-      "CLS 400d 4MATIC AMG Line Designo с 360 камери. Елегантно купе-седан от AVANGARD AUTO в Варна.",
-    bg: {
-      description:
-        "CLS 400d 4MATIC AMG Line Designo с 360 камери. Елегантно купе-седан от {shortName} в {city}.",
-      imageAlts: ["Mercedes CLS"],
+  "peugeot-2008-1-6hdi-2013-11782462832415648": {
+    "sourceDescription": "Peugeot 2008 1.6HDI, ноември 2013 г.  216 000 км Бял Дизелов 92 к.с. Евро 5 1600 куб.см Ръчна Хечбек. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.",
+    "en": {
+      "description": "Peugeot 2008 1.6HDI, November 2013  216 000 km White Diesel 92 hp Euro 5 1600 cc Manual Hatchback. Advertised by AVANGARD AUTO. Confirm availability and terms by phone before visiting.",
+      "imageAlts": [
+        "Peugeot 2008 1.6HDI",
+        "Peugeot 2008 1.6HDI",
+        "Peugeot 2008 1.6HDI",
+        "Peugeot 2008 1.6HDI"
+      ]
     },
-    en: {
-      description:
-        "CLS 400d 4MATIC AMG Line Designo with 360-degree cameras. An elegant four-door coupe from {shortName} in {city}.",
-      imageAlts: ["Mercedes CLS"],
-    },
+    "bg": {
+      "description": "Peugeot 2008 1.6HDI, ноември 2013 г.  216 000 км Бял Дизелов 92 к.с. Евро 5 1600 куб.см Ръчна Хечбек. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.",
+      "imageAlts": [
+        "Peugeot 2008 1.6HDI",
+        "Peugeot 2008 1.6HDI",
+        "Peugeot 2008 1.6HDI",
+        "Peugeot 2008 1.6HDI"
+      ]
+    }
   },
-  "audi-q8-50-tdi-quattro-s-line-sofia-2021": {
-    sourceDescription:
-      "Очакван внос: Q8 50 TDI quattro S line Plus. Купе-SUV с quattro за клиенти на AVANGARD AUTO.",
-    bg: {
-      description:
-        "Очакван внос: Q8 50 TDI quattro S line Plus. Купе-SUV с quattro за клиенти на {shortName}.",
-      imageAlts: ["Audi Q8"],
+  "nissan-qashqai-1-5dci-2018-21776284342452600": {
+    "sourceDescription": "Nissan Qashqai 1.5dCi, юли 2018 г.  175 000 км Бял Дизелов 110 к.с. Евро 6 1500 куб.см Ръчна Джип. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.",
+    "en": {
+      "description": "Nissan Qashqai 1.5dCi, July 2018  175 000 km White Diesel 110 hp Euro 6 1500 cc Manual SUV. Advertised by AVANGARD AUTO. Confirm availability and terms by phone before visiting.",
+      "imageAlts": [
+        "Nissan Qashqai 1.5dCi",
+        "Nissan Qashqai 1.5dCi",
+        "Nissan Qashqai 1.5dCi",
+        "Nissan Qashqai 1.5dCi"
+      ]
     },
-    en: {
-      description:
-        "Expected import: Q8 50 TDI quattro S line Plus. A coupe-SUV with quattro for {shortName} customers.",
-      imageAlts: ["Audi Q8"],
-    },
+    "bg": {
+      "description": "Nissan Qashqai 1.5dCi, юли 2018 г.  175 000 км Бял Дизелов 110 к.с. Евро 6 1500 куб.см Ръчна Джип. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.",
+      "imageAlts": [
+        "Nissan Qashqai 1.5dCi",
+        "Nissan Qashqai 1.5dCi",
+        "Nissan Qashqai 1.5dCi",
+        "Nissan Qashqai 1.5dCi"
+      ]
+    }
   },
-  "mercedes-benz-gle-400d-coupe-sofia-2021": {
-    sourceDescription:
-      "GLE 400d Coupe 4MATIC AMG с 360 и Burmester. Наличен при AVANGARD AUTO - Варна.",
-    bg: {
-      description:
-        "GLE 400d Coupe 4MATIC AMG с 360 и Burmester. Наличен при {dealer} - {city}.",
-      imageAlts: ["Черен Mercedes-Benz GLE SUV"],
+  "mitsubishi-outlander-2-2di-d-2014-21773782041228539": {
+    "sourceDescription": "Mitsubishi Outlander 2.2DI-D, септември 2014 г.  167 000 км Бял Дизелов 150 к.с. Евро 5 2200 куб.см Ръчна Джип. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.",
+    "en": {
+      "description": "Mitsubishi Outlander 2.2DI-D, September 2014  167 000 km White Diesel 150 hp Euro 5 2200 cc Manual SUV. Advertised by AVANGARD AUTO. Confirm availability and terms by phone before visiting.",
+      "imageAlts": [
+        "Mitsubishi Outlander 2.2DI-D",
+        "Mitsubishi Outlander 2.2DI-D",
+        "Mitsubishi Outlander 2.2DI-D",
+        "Mitsubishi Outlander 2.2DI-D"
+      ]
     },
-    en: {
-      description:
-        "GLE 400d Coupe 4MATIC AMG with 360-degree cameras and Burmester audio. Available from {dealer} in {city}.",
-      imageAlts: ["Black Mercedes-Benz GLE SUV"],
-    },
+    "bg": {
+      "description": "Mitsubishi Outlander 2.2DI-D, септември 2014 г.  167 000 км Бял Дизелов 150 к.с. Евро 5 2200 куб.см Ръчна Джип. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.",
+      "imageAlts": [
+        "Mitsubishi Outlander 2.2DI-D",
+        "Mitsubishi Outlander 2.2DI-D",
+        "Mitsubishi Outlander 2.2DI-D",
+        "Mitsubishi Outlander 2.2DI-D"
+      ]
+    }
   },
-  "mercedes-benz-gle-53-amg-coupe-sofia-2022": {
-    sourceDescription:
-      "Очакван внос: GLE 53 AMG Coupe Night Pack. AVANGARD AUTO предлага собствен лизинг след оглед.",
-    bg: {
-      description:
-        "Очакван внос: GLE 53 AMG Coupe Night Pack. {shortName} предлага собствен лизинг след оглед.",
-      imageAlts: ["Бял Mercedes-Benz GLE AMG SUV"],
+  "kia-sportage-1-7crdi-2014-21760385289842805": {
+    "sourceDescription": "Kia Sportage 1.7CRDI, юли 2014 г.  179 000 км Светло сив Дизелов 116 к.с. Евро 5 1700 куб.см Ръчна Джип. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.",
+    "en": {
+      "description": "Kia Sportage 1.7CRDI, July 2014  179 000 km Light grey Diesel 116 hp Euro 5 1700 cc Manual SUV. Advertised by AVANGARD AUTO. Confirm availability and terms by phone before visiting.",
+      "imageAlts": [
+        "Kia Sportage 1.7CRDI",
+        "Kia Sportage 1.7CRDI",
+        "Kia Sportage 1.7CRDI",
+        "Kia Sportage 1.7CRDI"
+      ]
     },
-    en: {
-      description:
-        "Expected import: GLE 53 AMG Coupe Night Pack. {shortName} offers in-house leasing after a viewing.",
-      imageAlts: ["White Mercedes-Benz GLE AMG SUV"],
-    },
+    "bg": {
+      "description": "Kia Sportage 1.7CRDI, юли 2014 г.  179 000 км Светло сив Дизелов 116 к.с. Евро 5 1700 куб.см Ръчна Джип. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.",
+      "imageAlts": [
+        "Kia Sportage 1.7CRDI",
+        "Kia Sportage 1.7CRDI",
+        "Kia Sportage 1.7CRDI",
+        "Kia Sportage 1.7CRDI"
+      ]
+    }
   },
-  "mercedes-benz-s-350d-long-amg-sofia-2019": {
-    sourceDescription:
-      "S 350d Long с S63 AMG оптика и пакет за шофьор. Представителна лимузина от AVANGARD AUTO.",
-    bg: {
-      description:
-        "S 350d Long с S63 AMG оптика и пакет за шофьор. Представителна лимузина от {shortName}.",
-      imageAlts: ["Mercedes-Benz S-Class седан"],
+  "bmw-x1-2-0d-2016-21785012088488667": {
+    "sourceDescription": "BMW X1 2.0D, август 2016 г.  138 000 км Тъмно сив Дизелов 150 к.с. Евро 6 2000 куб.см Автоматична Джип. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.",
+    "en": {
+      "description": "BMW X1 2.0D, August 2016  138 000 km Dark grey Diesel 150 hp Euro 6 2000 cc Automatic SUV. Advertised by AVANGARD AUTO. Confirm availability and terms by phone before visiting.",
+      "imageAlts": [
+        "BMW X1 2.0D",
+        "BMW X1 2.0D",
+        "BMW X1 2.0D",
+        "BMW X1 2.0D"
+      ]
     },
-    en: {
-      description:
-        "S 350d Long with S63 AMG styling and a chauffeur package. An executive saloon from {shortName}.",
-      imageAlts: ["Mercedes-Benz S-Class saloon"],
-    },
+    "bg": {
+      "description": "BMW X1 2.0D, август 2016 г.  138 000 км Тъмно сив Дизелов 150 к.с. Евро 6 2000 куб.см Автоматична Джип. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.",
+      "imageAlts": [
+        "BMW X1 2.0D",
+        "BMW X1 2.0D",
+        "BMW X1 2.0D",
+        "BMW X1 2.0D"
+      ]
+    }
   },
-  "mercedes-benz-v-250d-vip-business-sofia-2018": {
-    sourceDescription:
-      "V 250d VIP Business с TV, обдухване и подгряване. Бизнес ван от AVANGARD AUTO.",
-    bg: {
-      description:
-        "V 250d VIP Business с TV, обдухване и подгряване. Бизнес ван от {dealer}.",
-      imageAlts: ["V-Class ван"],
+  "bmw-x1-2-0d-2010-21746821020349714": {
+    "sourceDescription": "BMW X1 2.0D, септември 2010 г.  187 000 км Светло сив Дизелов 177 к.с. 2000 куб.см Ръчна Джип. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.",
+    "en": {
+      "description": "BMW X1 2.0D, September 2010  187 000 km Light grey Diesel 177 hp 2000 cc Manual SUV. Advertised by AVANGARD AUTO. Confirm availability and terms by phone before visiting.",
+      "imageAlts": [
+        "BMW X1 2.0D",
+        "BMW X1 2.0D",
+        "BMW X1 2.0D",
+        "BMW X1 2.0D"
+      ]
     },
-    en: {
-      description:
-        "V 250d VIP Business with TV, ventilated and heated seats. A business van from {dealer}.",
-      imageAlts: ["V-Class van"],
-    },
+    "bg": {
+      "description": "BMW X1 2.0D, септември 2010 г.  187 000 км Светло сив Дизелов 177 к.с. 2000 куб.см Ръчна Джип. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.",
+      "imageAlts": [
+        "BMW X1 2.0D",
+        "BMW X1 2.0D",
+        "BMW X1 2.0D",
+        "BMW X1 2.0D"
+      ]
+    }
   },
-  "range-rover-sport-svr-sofia-2021": {
-    sourceDescription:
-      "Range Rover Sport SVR 600 к.с. с панорама, 360 и Meridian. Висок клас SUV от AVANGARD AUTO.",
-    bg: {
-      description:
-        "Range Rover Sport SVR 600 к.с. с панорама, 360 и Meridian. Висок клас SUV от {shortName}.",
-      imageAlts: ["Range Rover Sport"],
+  "bmw-320-i-2013-11754080933689299": {
+    "sourceDescription": "BMW 320 i, юли 2013 г.  187 000 км Тъмно син мет. Бензинов 184 к.с. 2000 куб.см Ръчна Комби. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.",
+    "en": {
+      "description": "BMW 320 i, July 2013  187 000 km Dark blue metallic Petrol 184 hp 2000 cc Manual Wagon. Advertised by AVANGARD AUTO. Confirm availability and terms by phone before visiting.",
+      "imageAlts": [
+        "BMW 320 i",
+        "BMW 320 i",
+        "BMW 320 i",
+        "BMW 320 i"
+      ]
     },
-    en: {
-      description:
-        "Range Rover Sport SVR, 600 hp, with a panoramic roof, 360-degree cameras and Meridian audio. A premium SUV from {shortName}.",
-      imageAlts: ["Range Rover Sport"],
-    },
+    "bg": {
+      "description": "BMW 320 i, юли 2013 г.  187 000 км Тъмно син мет. Бензинов 184 к.с. 2000 куб.см Ръчна Комби. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.",
+      "imageAlts": [
+        "BMW 320 i",
+        "BMW 320 i",
+        "BMW 320 i",
+        "BMW 320 i"
+      ]
+    }
   },
-  "bmw-430i-xdrive-gran-coupe-sofia-2023": {
-    sourceDescription:
-      "430i xDrive Gran Coupe M Sport с digital кокпит и Harman Kardon. AVANGARD AUTO, Варна.",
-    bg: {
-      description:
-        "430i xDrive Gran Coupe M Sport с digital кокпит и Harman Kardon. {shortName}, {city}.",
-      imageAlts: ["BMW 4 Series"],
+  "audi-sq5-3-0v6t-zf-2018-21779794798955793": {
+    "sourceDescription": "Audi SQ5 3.0V6T ZF, май 2018 г.  197 000 км Сив Бензинов 354 к.с. Евро 6 3000 куб.см Автоматична Джип. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.",
+    "en": {
+      "description": "Audi SQ5 3.0V6T ZF, May 2018  197 000 km Grey Petrol 354 hp Euro 6 3000 cc Automatic SUV. Advertised by AVANGARD AUTO. Confirm availability and terms by phone before visiting.",
+      "imageAlts": [
+        "Audi SQ5 3.0V6T ZF",
+        "Audi SQ5 3.0V6T ZF",
+        "Audi SQ5 3.0V6T ZF",
+        "Audi SQ5 3.0V6T ZF"
+      ]
     },
-    en: {
-      description:
-        "430i xDrive Gran Coupe M Sport with a digital cockpit and Harman Kardon audio. {shortName}, {city}.",
-      imageAlts: ["BMW 4 Series"],
-    },
+    "bg": {
+      "description": "Audi SQ5 3.0V6T ZF, май 2018 г.  197 000 км Сив Бензинов 354 к.с. Евро 6 3000 куб.см Автоматична Джип. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.",
+      "imageAlts": [
+        "Audi SQ5 3.0V6T ZF",
+        "Audi SQ5 3.0V6T ZF",
+        "Audi SQ5 3.0V6T ZF",
+        "Audi SQ5 3.0V6T ZF"
+      ]
+    }
   },
-  "bmw-m4-competition-sofia-2021": {
-    sourceDescription:
-      "BMW M4 Competition с M пакет, спортен салон и digital кокпит. Купе от портфолиото на AVANGARD AUTO.",
-    bg: {
-      description:
-        "BMW M4 Competition с M пакет, спортен салон и digital кокпит. Купе от портфолиото на {dealer}.",
-      imageAlts: ["Червено BMW M4 Competition пред модерен шоурум"],
+  "audi-q7-premium-plus-2017-21786111867697018": {
+    "sourceDescription": "Audi Q7 Premium Plus, април 2017 г.  255 000 км Тъмно сив Бензинов 333 к.с. Евро 6 3000 куб.см Автоматична Джип. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.",
+    "en": {
+      "description": "Audi Q7 Premium Plus, April 2017  255 000 km Dark grey Petrol 333 hp Euro 6 3000 cc Automatic SUV. Advertised by AVANGARD AUTO. Confirm availability and terms by phone before visiting.",
+      "imageAlts": [
+        "Audi Q7 Premium Plus",
+        "Audi Q7 Premium Plus",
+        "Audi Q7 Premium Plus",
+        "Audi Q7 Premium Plus"
+      ]
     },
-    en: {
-      description:
-        "BMW M4 Competition with M package, sports interior and digital cockpit. A coupe from the {dealer} collection.",
-      imageAlts: ["Red BMW M4 Competition in front of a modern showroom"],
-    },
+    "bg": {
+      "description": "Audi Q7 Premium Plus, април 2017 г.  255 000 км Тъмно сив Бензинов 333 к.с. Евро 6 3000 куб.см Автоматична Джип. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.",
+      "imageAlts": [
+        "Audi Q7 Premium Plus",
+        "Audi Q7 Premium Plus",
+        "Audi Q7 Premium Plus",
+        "Audi Q7 Premium Plus"
+      ]
+    }
   },
-  "bmw-x5-xdrive40d-berlin-2022": {
-    sourceDescription:
-      "Крос-бордер демо наличност с оторизирани медии и право на доставка. Финалният транспорт, данъци и регистрация се уточняват с оферта от AVANGARD AUTO.",
-    bg: {
-      description:
-        "Крос-бордер демо наличност с оторизирани медии и право на доставка. Финалният транспорт, данъци и регистрация се уточняват с оферта от {shortName}.",
-      imageAlts: ["Черен BMW X5 SUV в градска среда"],
+  "audi-q5-sq5-3-0v6t-2018-21779802183945718": {
+    "sourceDescription": "Audi Q5 SQ5 3.0V6T, май 2018 г.  197 000 км Сив Бензинов 354 к.с. Евро 6 3000 куб.см Автоматична Джип. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.",
+    "en": {
+      "description": "Audi Q5 SQ5 3.0V6T, May 2018  197 000 km Grey Petrol 354 hp Euro 6 3000 cc Automatic SUV. Advertised by AVANGARD AUTO. Confirm availability and terms by phone before visiting.",
+      "imageAlts": [
+        "Audi Q5 SQ5 3.0V6T",
+        "Audi Q5 SQ5 3.0V6T",
+        "Audi Q5 SQ5 3.0V6T",
+        "Audi Q5 SQ5 3.0V6T"
+      ]
     },
-    en: {
-      description:
-        "Cross-border demo inventory with authorized images and delivery rights. Final transport, tax and registration costs are confirmed in a quote from {shortName}.",
-      imageAlts: ["Black BMW X5 SUV in an urban setting"],
-    },
+    "bg": {
+      "description": "Audi Q5 SQ5 3.0V6T, май 2018 г.  197 000 км Сив Бензинов 354 к.с. Евро 6 3000 куб.см Автоматична Джип. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.",
+      "imageAlts": [
+        "Audi Q5 SQ5 3.0V6T",
+        "Audi Q5 SQ5 3.0V6T",
+        "Audi Q5 SQ5 3.0V6T",
+        "Audi Q5 SQ5 3.0V6T"
+      ]
+    }
   },
+  "audi-q5-premium-plus-2018-21762503862293800": {
+    "sourceDescription": "Audi Q5 Premium Plus, март 2018 г.  206 000 км Светло сив Бензинов 252 к.с. Евро 6 2000 куб.см Автоматична Джип. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.",
+    "en": {
+      "description": "Audi Q5 Premium Plus, March 2018  206 000 km Light grey Petrol 252 hp Euro 6 2000 cc Automatic SUV. Advertised by AVANGARD AUTO. Confirm availability and terms by phone before visiting.",
+      "imageAlts": [
+        "Audi Q5 Premium Plus",
+        "Audi Q5 Premium Plus",
+        "Audi Q5 Premium Plus",
+        "Audi Q5 Premium Plus"
+      ]
+    },
+    "bg": {
+      "description": "Audi Q5 Premium Plus, март 2018 г.  206 000 км Светло сив Бензинов 252 к.с. Евро 6 2000 куб.см Автоматична Джип. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.",
+      "imageAlts": [
+        "Audi Q5 Premium Plus",
+        "Audi Q5 Premium Plus",
+        "Audi Q5 Premium Plus",
+        "Audi Q5 Premium Plus"
+      ]
+    }
+  },
+  "audi-a4-2-0tdi-2011-11787435697096424": {
+    "sourceDescription": "Audi A4 2.0TDI, юли 2011 г.  202 000 км Бял Дизелов 143 к.с. 2000 куб.см Автоматична Комби. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.",
+    "en": {
+      "description": "Audi A4 2.0TDI, July 2011  202 000 km White Diesel 143 hp 2000 cc Automatic Wagon. Advertised by AVANGARD AUTO. Confirm availability and terms by phone before visiting.",
+      "imageAlts": [
+        "Audi A4 2.0TDI",
+        "Audi A4 2.0TDI",
+        "Audi A4 2.0TDI",
+        "Audi A4 2.0TDI"
+      ]
+    },
+    "bg": {
+      "description": "Audi A4 2.0TDI, юли 2011 г.  202 000 км Бял Дизелов 143 к.с. 2000 куб.см Автоматична Комби. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.",
+      "imageAlts": [
+        "Audi A4 2.0TDI",
+        "Audi A4 2.0TDI",
+        "Audi A4 2.0TDI",
+        "Audi A4 2.0TDI"
+      ]
+    }
+  }
 } satisfies DealerInventoryCopy;

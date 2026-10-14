@@ -4,15 +4,16 @@
   "name": "Al Basma Motors",
   "shortName": "Al Basma Motors",
   "logo": {
-    "light": "/dealer-app/logo-light-a711de145806bfc28cb9.webp",
-    "dark": "/dealer-app/logo-dark-4003fd1022280c2c8475.webp",
-    "icon": "/dealer-app/icon.png"
+    "light": "/dealer-brand/v2-c59edf3c3ce6c1f7/logo-on-light.webp",
+    "dark": "/dealer-brand/v2-c59edf3c3ce6c1f7/logo-on-dark.webp",
+    "icon": "/dealer-brand/v2-c59edf3c3ce6c1f7/app-icon.png"
   },
   "defaultLocale": "en",
   "enabledLocales": [
     "en",
     "bg"
   ],
+  "welcomeEnabled": true,
   "country": "AE",
   "currency": "AED",
   "city": "Sharjah",
@@ -23,6 +24,25 @@
   "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Showroom%2061%2C%20Souq%20Al%20Haraj%2C%20Sharjah%2C%20UAE",
   "website": "https://albasmamotors.com/",
   "whatsappUrl": "",
+  "socialLinks": [
+    {
+      "label": "Facebook",
+      "url": "https://www.facebook.com/albasmamotors"
+    },
+    {
+      "label": "Instagram",
+      "url": "https://www.instagram.com/albasmamotors"
+    },
+    {
+      "label": "Mobile.bg",
+      "url": ""
+    },
+    {
+      "label": "Cars.bg",
+      "url": ""
+    }
+  ],
+  "referenceClaimsApproved": false,
   "services": [
     "Vehicle sales",
     "Showroom enquiries",

@@ -118,6 +118,12 @@ export const referenceSpecifications: readonly DetailSpecification[] = [
     "valueKey": "fuel.electric"
   },
   {
+    "id": "year",
+    "icon": "/assets/imgs/template/icons/calendar.svg",
+    "value": "2024",
+    "labelKey": "vehicle.field.year"
+  },
+  {
     "id": "lit",
     "icon": "/assets/imgs/page/car/lit.svg",
     "value": "282 hp",

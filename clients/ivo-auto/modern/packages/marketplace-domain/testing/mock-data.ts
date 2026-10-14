@@ -916,6 +916,136 @@ export const mockListings: VehicleListing[] = [
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
+  },
+  {
+    "id": "dealer-99f797064013100abe90d1be",
+    "slug": "bmw-m5-2008-11775822194120541",
+    "category": "car",
+    "dealerOrgId": "dealer-ivo-auto",
+    "status": "active",
+    "title": "BMW M5",
+    "description": "BMW M5, 2008 г., 218 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+    "price": {
+      "amount": 30000,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/assets/ivo-auto/vehicle-15-1.webp",
+        "alt": "BMW M5"
+      },
+      {
+        "url": "/assets/ivo-auto/vehicle-15-2.webp",
+        "alt": "BMW M5"
+      },
+      {
+        "url": "/assets/ivo-auto/vehicle-15-3.webp",
+        "alt": "BMW M5"
+      },
+      {
+        "url": "/assets/ivo-auto/vehicle-15-4.webp",
+        "alt": "BMW M5"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Варна",
+      "region": "Варна",
+      "country": "България"
+    },
+    "spec": {
+      "make": "BMW",
+      "model": "M5",
+      "year": 2008,
+      "bodyType": "sedan",
+      "fuelType": "gasoline",
+      "transmission": "automatic",
+      "mileageValue": 218000,
+      "mileageUnit": "km",
+      "enginePowerHp": 507,
+      "colorExterior": "Tъмно син"
+    },
+    "seller": {
+      "id": "dealer-ivo-auto",
+      "type": "dealer",
+      "displayName": "Иво Ауто",
+      "verificationStatus": "unverified",
+      "city": "Варна",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
+    },
+    "publishedAt": "2026-09-07T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "dealer-af082ddf200b19e84347cf1c",
+    "slug": "audi-a8-full-led-2013-11769186790854071",
+    "category": "car",
+    "dealerOrgId": "dealer-ivo-auto",
+    "status": "active",
+    "title": "Audi A8 Full Led",
+    "description": "Audi A8 Full Led, 2013 г., 215 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+    "price": {
+      "amount": 15500,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/assets/ivo-auto/vehicle-16-1.webp",
+        "alt": "Audi A8 Full Led"
+      },
+      {
+        "url": "/assets/ivo-auto/vehicle-16-2.webp",
+        "alt": "Audi A8 Full Led"
+      },
+      {
+        "url": "/assets/ivo-auto/vehicle-16-3.webp",
+        "alt": "Audi A8 Full Led"
+      },
+      {
+        "url": "/assets/ivo-auto/vehicle-16-4.webp",
+        "alt": "Audi A8 Full Led"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Варна",
+      "region": "Варна",
+      "country": "България"
+    },
+    "features": [
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      }
+    ],
+    "spec": {
+      "make": "Audi",
+      "model": "A8 Full Led",
+      "year": 2013,
+      "bodyType": "sedan",
+      "fuelType": "diesel",
+      "transmission": "automatic",
+      "mileageValue": 215000,
+      "mileageUnit": "km",
+      "enginePowerHp": 250,
+      "colorExterior": "Tъмно син"
+    },
+    "seller": {
+      "id": "dealer-ivo-auto",
+      "type": "dealer",
+      "displayName": "Иво Ауто",
+      "verificationStatus": "unverified",
+      "city": "Варна",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
+    },
+    "publishedAt": "2026-09-07T09:00:00.000Z",
+    "promoted": false
   }
 ];
 

@@ -7,7 +7,7 @@ Pages are defined under [src/routes](../src/routes). There is one homepage compo
 | URL | Source directory | Purpose |
 | --- | --- | --- |
 | `/` | `src/routes` | Homepage and discovery |
-| `/listing-grid` | `src/routes/listing-grid` | Inventory search, filters and sorting |
+| `/cars` | `src/routes/cars` | Inventory search, filters and sorting |
 | `/listing-detail-v1/[id]` | `src/routes/listing-detail-v1/[id]` | One known vehicle |
 | `/about-us` | `src/routes/about-us` | Company and services |
 | `/contact` | `src/routes/contact` | General or topic-specific contact |
@@ -20,7 +20,7 @@ The current fixtures provide vehicle IDs 1–8 and article IDs 1–9. These are 
 
 ## Inventory parameters
 
-All parameters belong to `/listing-grid`. Values are parsed by `data/listing.ts`.
+All parameters belong to `/cars`. Values are parsed by `data/listing.ts`.
 
 | Parameter | Meaning / example |
 | --- | --- |
@@ -41,9 +41,9 @@ All parameters belong to `/listing-grid`. Values are parsed by `data/listing.ts`
 `newest` sorts by vehicle year, not by the date an advert was imported. `default` sorts by vehicle ID. Empty bounds mean no constraint; `price_max=0` is a real zero limit rather than an empty filter.
 
 ```text
-/listing-grid?make=BMW&sort=price-asc
-/listing-grid?body=Wagon&price_max=80000
-/listing-grid?equipment=4x4&equipment=Навигация
+/cars?make=BMW&sort=price-asc
+/cars?body=Wagon&price_max=80000
+/cars?equipment=4x4&equipment=Навигация
 ```
 
 Use `URLSearchParams` when building links so spaces, Unicode and repeated values are encoded correctly. Changing make clears its dependent model. Form controls preserve unrelated applied parameters.
@@ -55,11 +55,13 @@ The committed standalone baseline has no exclusive-price-bound parameter. Its mi
 Vehicle cards can carry the original inventory URL plus a `#vehicle-<id>` anchor as the `return` value. Article cards similarly preserve the blog filters and an `#article-<id>` anchor. The detail loader returns a confined `returnTo` destination for its back links.
 
 ```text
-/listing-detail-v1/4?return=%2Flisting-grid%3Fmake%3DBMW%23vehicle-4
+/listing-detail-v1/4?return=%2Fcars%3Fmake%3DBMW%23vehicle-4
 /blog-detail/2?return=%2Fblog%3Fcategory%3D%D0%92%D0%BD%D0%BE%D1%81%23article-2
 ```
 
-An external, protocol-relative or unrelated return path falls back to `/listing-grid` or `/blog`. This behavior lives in `data/journeys.ts`, not in separate per-card string handling.
+An external, protocol-relative or unrelated return path falls back to `/cars` or `/blog`. This behavior lives in `data/journeys.ts`, not in separate per-card string handling.
+
+Saved vehicle detail URLs whose `return` still points to `/listing-grid` map to `/cars`, retaining their language, filters and vehicle anchor.
 
 ## Contact topics
 
@@ -95,8 +97,9 @@ The hook in [hooks.server.ts](../src/hooks.server.ts) emits HTTP 308 redirects a
 | --- | --- |
 | `/home02` through `/home10` | `/` |
 | `/blog-grid` | `/blog` |
-| `/listing-grid2`, `/listing-list` | `/listing-grid` |
-| `/listing-grid-map`, `/listing-list-map` | `/listing-grid` |
+| `/listing-grid` | `/cars` |
+| `/listing-grid2`, `/listing-list` | `/cars` |
+| `/listing-grid-map`, `/listing-list-map` | `/cars` |
 | `/listing-detail-v2/<id>` through `/listing-detail-v5/<id>` | `/listing-detail-v1/<id>` for an existing record |
 | `/faq` | `/contact` |
 

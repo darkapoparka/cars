@@ -6,6 +6,24 @@ import {
 } from './vehicle-card-labels';
 
 describe('compact vehicle card labels', () => {
+	it('keeps missing dealer facts compact without inventing specifications', () => {
+		for (const value of [
+			'',
+			'Not published',
+			' Unknown ',
+			'Not available',
+			'N/A',
+			'Не е публикувано',
+			'Няма данни'
+		]) {
+			expect(compactCardFuel(value)).toBe('N/A');
+			expect(compactCardTransmission(value)).toBe('N/A');
+			for (const locale of ['bg', 'en'] as const) {
+				expect(compactCardMileage(value, locale)).toBe('N/A');
+			}
+		}
+	});
+
 	it('shortens petrol and LPG combinations without rewriting other fuels', () => {
 		for (const value of [
 			'Бензин/LPG',

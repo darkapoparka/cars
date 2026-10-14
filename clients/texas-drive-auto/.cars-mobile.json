@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "format": "mobile-preview-v1",
+  "dealer": "texas-drive-auto",
+  "name": "Texas Drive Auto",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/mobile",
+    "digest": "4e858bd9dbd3ef5b52cd904c4ed97bbfdc0f4cfe02b5a3840580f38026b867a0",
+    "tree": "2b02829e157071e305bfb2dff10ef18e85c8a35e"
+  },
+  "sourceDigest": "14f510fdd65e1c1287b29331b66acf5f5570d06b910adacdc0690559035a0181",
+  "inventory": {
+    "mode": "dated-listing-snapshot",
+    "count": 8,
+    "observedAt": "2026-09-09"
+  },
+  "personalization": {
+    "profileSha256": "6382896cdd8ab91e5b98e373d83cc0d075ba932a98c2023830aff3206cb5ed53",
+    "logoPaths": [
+      "/dealer-brand/logo-on-light.webp",
+      "/dealer-brand/logo-on-dark.webp"
+    ],
+    "mediaPaths": [
+      "/stock/127361913-1.webp",
+      "/media/photo-unavailable.svg",
+      "/stock/127361925-1.webp",
+      "/stock/127361904-1.webp"
+    ],
+    "mediaMappings": [],
+    "contentPaths": [
+      "mobile/src/lib/showroom-config.ts",
+      "mobile/src/lib/catalog.ts",
+      "mobile/src/lib/dealers.ts",
+      "mobile/src/lib/dealer-inventory.json",
+      "mobile/src/lib/locale.ts",
+      "mobile/src/lib/search.ts",
+      "mobile/src/components/NativeDealerCards.tsx",
+      "mobile/src/components/DealerScreens.tsx",
+      "mobile/src/components/VehicleCard.tsx",
+      "mobile/src/components/ShowroomVehicleCard.tsx",
+      "mobile/src/components/VehicleSections.tsx",
+      "mobile/src/lib/mobile-mileage.ts",
+      "mobile/src/lib/types.ts",
+      "mobile/src/components/DesktopVehicleSummary.tsx",
+      "mobile/src/components/NativeCarPark.tsx",
+      "mobile/src/components/ShowroomFilterSheet.tsx",
+      "mobile/src/lib/vehicle-copy.ts"
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

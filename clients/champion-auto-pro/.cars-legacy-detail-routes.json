@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "dealer": "champion-auto-pro",
+  "family": "import",
+  "base": "/variant-3",
+  "defaultLocale": "bg",
+  "source": {
+    "inventory": {
+      "path": "carwow/src/lib/data/daynight-current-inventory.ts",
+      "sha256": "9ea9bf86eaae3cbdbd8129f2047ab98191bef81641bb71ca09164d59693e06df"
+    },
+    "vehicles": {
+      "path": "carwow/src/lib/data/daynight-vehicles.ts",
+      "sha256": "58507cc762f0d0763f6d521a86d8474729fd6cf112b7dd072170f350a2c11d84"
+    },
+    "routeFactorySha256": "094d5128ad5e689e41486a228b1de6d11c54efbe051ce0e75c0170709d8571c9"
+  },
+  "profileSha256": "e41b9261f3f94fcb3f91ae791eb6fb86dca9d5d6bb9c62224b07a2a3a2d7fbac",
+  "entries": [
+    {
+      "sourceId": "11787294758482309",
+      "slug": "bmw-ix-482309",
+      "targetId": "11787294758482309"
+    },
+    {
+      "sourceId": "11787311251312869",
+      "slug": "audi-a6-312869",
+      "targetId": "11787311251312869"
+    },
+    {
+      "sourceId": "11784794853353090",
+      "slug": "smart-forfour-22kw-26000-353090",
+      "targetId": "11784794853353090"
+    },
+    {
+      "sourceId": "11784640487309304",
+      "slug": "mercedes-benz-s-500-amg-309304",
+      "targetId": "11784640487309304"
+    },
+    {
+      "sourceId": "11771862221224289",
+      "slug": "mercedes-benz-s-400-224289",
+      "targetId": "11771862221224289"
+    },
+    {
+      "sourceId": "21784732491989700",
+      "slug": "mercedes-benz-ml-989700",
+      "targetId": "21784732491989700"
+    },
+    {
+      "sourceId": "11784720940119234",
+      "slug": "audi-a7-119234",
+      "targetId": "11784720940119234"
+    },
+    {
+      "sourceId": "11783584641538327",
+      "slug": "mercedes-benz-b-538327",
+      "targetId": "11783584641538327"
+    },
+    {
+      "sourceId": "21778484741555035",
+      "slug": "audi-sq7-555035",
+      "targetId": "21778484741555035"
+    },
+    {
+      "sourceId": "11758265694582686",
+      "slug": "audi-rs5-582686",
+      "targetId": "11758265694582686"
+    },
+    {
+      "sourceId": "11773307576284789",
+      "slug": "audi-e-tron-284789",
+      "targetId": "11773307576284789"
+    },
+    {
+      "sourceId": "11787215050268120",
+      "slug": "vw-id-5-pro-268120",
+      "targetId": "11787215050268120"
+    },
+    {
+      "sourceId": "21787142969943440",
+      "slug": "toyota-highlander-60000km-943440",
+      "targetId": "21787142969943440"
+    },
+    {
+      "sourceId": "21787197677876419",
+      "slug": "mercedes-benz-eqe-876419",
+      "targetId": "21787197677876419"
+    },
+    {
+      "sourceId": "21787200936302723",
+      "slug": "mercedes-benz-eqc-302723",
+      "targetId": "21787200936302723"
+    },
+    {
+      "sourceId": "11786100747512292",
+      "slug": "renault-captur-512292",
+      "targetId": "11786100747512292"
+    }
+  ],
+  "retired": []
+}

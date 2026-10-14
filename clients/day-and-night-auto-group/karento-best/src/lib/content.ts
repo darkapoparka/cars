@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "Day & Night Auto Group",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-5451a2d8ee3a85cd/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-5451a2d8ee3a85cd/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-5451a2d8ee3a85cd/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-b57f86f52179d675/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-b57f86f52179d675/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-b57f86f52179d675/logo-on-dark.webp",
     "alt": "Day & Night Auto Group",
-    "favicon": "/dealer-brand/v2-5451a2d8ee3a85cd/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-b57f86f52179d675/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

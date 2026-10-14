@@ -1,0 +1,12 @@
+{
+  "runtime": "Node 22.20.0",
+  "validate": true,
+  "svelte": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "productionBuild": "passed",
+  "mobilePolishCases": 8,
+  "narrowHomeReflowCases": 2,
+  "scope": "Local working checkout; pre-existing desktop/content drafts remain outside the scoped change."
+}

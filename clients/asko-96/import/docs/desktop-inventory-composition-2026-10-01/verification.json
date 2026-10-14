@@ -1,0 +1,200 @@
+{
+  "scope": "Import desktop inventory composition: connected filters and results, one View menu; mobile components and shared styles unchanged",
+  "created": "2026-10-01T20:13:38.000Z",
+  "runtime": "Node 24.21.0",
+  "sourceFiles": [
+    {
+      "path": "src/lib/components/inventory/InventoryToolbar.svelte",
+      "sha256": "91d9c85fbc25434e063bdf1a8f3879c4d2723f96e6c0ba38dee9904a928322da",
+      "matchesVerifiedSnapshot": true
+    },
+    {
+      "path": "src/lib/components/inventory/InventoryDisplayControls.svelte",
+      "sha256": "122c3df314b598ade2be521dc693a990e51ef05cdfcec86242700b6cdd12b206",
+      "matchesVerifiedSnapshot": true
+    },
+    {
+      "path": "src/lib/components/inventory/InventoryPage.svelte",
+      "sha256": "97b624992722261d429f3949d299f1552ba4904900925cd7a33b06c9b1641358",
+      "matchesVerifiedSnapshot": true
+    },
+    {
+      "path": "tests/inventory.e2e.ts",
+      "sha256": "0ef9dc2158088dd8e379c5437044a5b26d475f6f7a7e8eb964ef3f5e87bf0811",
+      "matchesVerifiedSnapshot": true
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "sha256": "5701ed739b597de483c3850e3ad88ab20c716746f077a565c1305dc0d00211be",
+      "matchesVerifiedSnapshot": true
+    }
+  ],
+  "buildSnapshot": {
+    "head": "e16ff634a1e4c919452357a077b4336008a79509",
+    "digest": "97852f5b260188c3ac77d61b14f4c48e5e73313933b94aa7b1690e4668780007",
+    "files": 2029
+  },
+  "checks": [
+    {
+      "name": "check",
+      "exit": 0,
+      "seconds": 77
+    },
+    {
+      "name": "format",
+      "exit": 0,
+      "seconds": 10
+    },
+    {
+      "name": "lint",
+      "exit": 0,
+      "seconds": 106
+    },
+    {
+      "name": "architecture",
+      "exit": 0,
+      "seconds": 1
+    },
+    {
+      "name": "build",
+      "exit": 0,
+      "seconds": 50
+    }
+  ],
+  "browser": {
+    "passed": 26,
+    "skipped": 22,
+    "suites": [
+      "inventory.e2e.ts",
+      "filter-inputs.e2e.ts",
+      "desktop-search.e2e.ts"
+    ],
+    "projects": [
+      "desktop",
+      "mobile"
+    ],
+    "baseUrl": "http://127.0.0.1:6832",
+    "target": "Frozen production preview"
+  },
+  "desktopLayout": {
+    "cases": 10,
+    "locales": [
+      "bg",
+      "en"
+    ],
+    "widths": [
+      768,
+      900,
+      1024,
+      1280,
+      1440,
+      1920
+    ],
+    "filtersAlignWithCards": true,
+    "noLabelClipping": true,
+    "noOverflow": true
+  },
+  "interactions": {
+    "filter": {
+      "url": "http://127.0.0.1:6790/bg/inventory?sort=best-match&view=4&keyword=&brand=BMW",
+      "count": "15 автомобила"
+    },
+    "sort": {
+      "url": "http://127.0.0.1:6790/bg/inventory?view=4&keyword=&brand=BMW&sort=lowest-price",
+      "selected": "sort"
+    },
+    "sidebar": {
+      "overflow": false,
+      "sidebarVisible": true,
+      "sort": "lowest-price",
+      "url": "http://127.0.0.1:6790/bg/inventory?keyword=&brand=BMW&sort=lowest-price&layout=dashboard",
+      "viewMenuClosed": true
+    },
+    "sticky": {
+      "position": "sticky",
+      "scrollY": 1204,
+      "top": 0
+    },
+    "console": []
+  },
+  "mobile": [
+    {
+      "viewportWidth": 320,
+      "imageWidth": 320,
+      "imageHeight": 844,
+      "changedPixels": 0,
+      "pixelIdentical": true,
+      "maxChannelDelta": 0,
+      "changeBounds": null
+    },
+    {
+      "viewportWidth": 390,
+      "imageWidth": 390,
+      "imageHeight": 844,
+      "changedPixels": 95,
+      "pixelIdentical": false,
+      "maxChannelDelta": 2,
+      "changeBounds": {
+        "left": 104,
+        "top": 200,
+        "right": 143,
+        "bottom": 255
+      }
+    }
+  ],
+  "mobileViewports": [
+    {
+      "desktopHidden": true,
+      "height": 844,
+      "overflow": false,
+      "scrollY": 0,
+      "width": 390
+    },
+    {
+      "desktopHidden": true,
+      "height": 844,
+      "overflow": false,
+      "scrollY": 0,
+      "width": 320
+    }
+  ],
+  "mobileComparisonNote": "320px is pixel-identical. At 390px, 95 pixels differ by at most 2/255 per color channel within the first car photo (x104-143, y200-255); text, controls and page geometry are unchanged. This comparison is not claimed to be pixel-identical at 390px.",
+  "screenshots": [
+    {
+      "name": "before-1440.jpg",
+      "width": 1425,
+      "height": 990
+    },
+    {
+      "name": "after-1440.jpg",
+      "width": 1425,
+      "height": 990
+    },
+    {
+      "name": "before-1024.jpg",
+      "width": 1009,
+      "height": 985
+    },
+    {
+      "name": "after-1024.jpg",
+      "width": 1009,
+      "height": 985
+    },
+    {
+      "name": "sidebar-after-1440.jpg",
+      "width": 1425,
+      "height": 990
+    },
+    {
+      "name": "filtered-after-1440.jpg",
+      "width": 1425,
+      "height": 990
+    },
+    {
+      "name": "view-menu-1440.jpg",
+      "width": 1425,
+      "height": 990
+    }
+  ],
+  "boundary": "Local source and browser verification; no template promotion or dealer deployment"
+}

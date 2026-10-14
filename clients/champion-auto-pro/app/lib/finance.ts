@@ -6,7 +6,14 @@ export function estimateFinance(price: number, deposit: number, annualRate: numb
   const principal = Math.max(0, price - deposit);
   const months = Math.max(1, Math.round(years * 12));
   const rate = annualRate / 1200;
+  // log1p/expm1 preserve the denominator when a positive rate is too small for
+  // 1 + rate to differ from 1. Divide the rate first to avoid numerator overflow.
   const monthly = principal === 0 ? 0 : rate === 0 ? principal / months
-    : principal * rate / (1 - Math.pow(1 + rate, -months));
-  return {principal, months, monthly, total: monthly * months + Math.min(price, deposit), interest: monthly * months - principal};
+    : principal * (rate / -Math.expm1(-months * Math.log1p(rate)));
+  const total = monthly * months + Math.min(price, deposit);
+  const interest = monthly * months - principal;
+  if (![months, monthly, total, interest].every(Number.isFinite)) {
+    throw new RangeError('Finance inputs exceed the supported numeric range.');
+  }
+  return {principal, months, monthly, total, interest};
 }

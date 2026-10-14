@@ -68,9 +68,9 @@ export interface LeadSiteConfig {
   readonly localizedCopy?: Readonly<Record<"bg" | "en", LeadSiteCopy>>;
   readonly logoInversePath?: string;
   readonly logoPath: string;
-  readonly logoOnAccent: string;
-  readonly logoOnDark: string;
   readonly logoOnLight: string;
+  readonly logoOnDark: string;
+  readonly logoOnAccent: string;
   readonly mapsEmbedUrl: string;
   readonly mapsUrl: string;
   readonly mobileFinancingArtworkPath?: string;
@@ -114,7 +114,7 @@ export const leadSite: LeadSiteConfig = {
     "tagline": "PERFECT AUTO — vehicles and dealer support in Varna."
   }
 },
-  accent: "#a50f15",
+  accent: "#30343b",
   desktopAccent: "#4b5057",
   desktopInventoryFilterLayout: "quick",
   desktopPreviewIdentity: {
@@ -147,7 +147,10 @@ export const leadSite: LeadSiteConfig = {
   email: "",
   heroPath: "/lead-hero.jpg",
   locale: "bg-BG",
-  logoPath: "/dealer-brand/logo-on-light.webp",
+  logoPath: "/dealer-brand/logo-on-dark.webp",
+  logoOnLight: "/dealer-brand/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/logo-on-dark.webp",
+  logoOnAccent: "/dealer-brand/logo-on-accent.webp",
   mapsEmbedUrl:
     "https://maps.google.com/maps?q=бул.%20Цар%20Освободител%20110,%20кв.%20Победа%20Варна&output=embed",
   mapsUrl:
@@ -160,9 +163,5 @@ export const leadSite: LeadSiteConfig = {
   socialLinks: {},
   staticDemoMode: true,
   tagline: "Перфект Ауто — автомобили и съдействие в Варна.",
-  logoOnLight: "/dealer-brand/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/logo-on-dark.webp",
-  logoOnAccent: "/dealer-brand/logo-on-accent.webp",
-  logoInversePath: "/dealer-brand/logo-on-dark.webp"
 };
 // LEAD_SITE_CONFIG_END

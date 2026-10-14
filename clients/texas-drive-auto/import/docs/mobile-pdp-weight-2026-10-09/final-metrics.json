@@ -1,0 +1,215 @@
+{
+  "source": "actual canonical dev rendering; no injected styles",
+  "results": [
+    {
+      "locale": "en",
+      "width": 390,
+      "height": 844,
+      "metrics": {
+        "overflow": 0,
+        "cta": [
+          {
+            "label": "Inquire",
+            "width": 177.5,
+            "height": 44,
+            "size": "17px",
+            "weight": "400",
+            "lineHeight": "22.95px",
+            "scrollWidth": 178,
+            "clientWidth": 178
+          },
+          {
+            "label": "Call",
+            "width": 177.5,
+            "height": 44,
+            "size": "17px",
+            "weight": "400",
+            "lineHeight": "22.95px",
+            "scrollWidth": 176,
+            "clientWidth": 176
+          }
+        ]
+      },
+      "errors": []
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "height": 844,
+      "metrics": {
+        "overflow": 0,
+        "cta": [
+          {
+            "label": "Inquire",
+            "width": 142.5,
+            "height": 44,
+            "size": "17px",
+            "weight": "400",
+            "lineHeight": "22.95px",
+            "scrollWidth": 143,
+            "clientWidth": 143
+          },
+          {
+            "label": "Call",
+            "width": 142.5,
+            "height": 44,
+            "size": "17px",
+            "weight": "400",
+            "lineHeight": "22.95px",
+            "scrollWidth": 141,
+            "clientWidth": 141
+          }
+        ]
+      },
+      "errors": []
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "height": 540,
+      "metrics": {
+        "overflow": 0,
+        "cta": [
+          {
+            "label": "Inquire",
+            "width": 142.5,
+            "height": 44,
+            "size": "17px",
+            "weight": "400",
+            "lineHeight": "22.95px",
+            "scrollWidth": 143,
+            "clientWidth": 143
+          },
+          {
+            "label": "Call",
+            "width": 142.5,
+            "height": 44,
+            "size": "17px",
+            "weight": "400",
+            "lineHeight": "22.95px",
+            "scrollWidth": 141,
+            "clientWidth": 141
+          }
+        ]
+      },
+      "errors": []
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "height": 1000,
+      "metrics": {
+        "overflow": -15,
+        "cta": []
+      },
+      "errors": [],
+      "desktopIdentical": true
+    },
+    {
+      "locale": "bg",
+      "width": 390,
+      "height": 844,
+      "metrics": {
+        "overflow": 0,
+        "cta": [
+          {
+            "label": "Запитване",
+            "width": 177.5,
+            "height": 44,
+            "size": "17px",
+            "weight": "400",
+            "lineHeight": "22.95px",
+            "scrollWidth": 178,
+            "clientWidth": 178
+          },
+          {
+            "label": "Обади се",
+            "width": 177.5,
+            "height": 44,
+            "size": "17px",
+            "weight": "400",
+            "lineHeight": "22.95px",
+            "scrollWidth": 176,
+            "clientWidth": 176
+          }
+        ]
+      },
+      "errors": []
+    },
+    {
+      "locale": "bg",
+      "width": 320,
+      "height": 844,
+      "metrics": {
+        "overflow": 0,
+        "cta": [
+          {
+            "label": "Запитване",
+            "width": 142.5,
+            "height": 44,
+            "size": "17px",
+            "weight": "400",
+            "lineHeight": "22.95px",
+            "scrollWidth": 143,
+            "clientWidth": 143
+          },
+          {
+            "label": "Обади се",
+            "width": 142.5,
+            "height": 44,
+            "size": "17px",
+            "weight": "400",
+            "lineHeight": "22.95px",
+            "scrollWidth": 141,
+            "clientWidth": 141
+          }
+        ]
+      },
+      "errors": []
+    },
+    {
+      "locale": "bg",
+      "width": 320,
+      "height": 540,
+      "metrics": {
+        "overflow": 0,
+        "cta": [
+          {
+            "label": "Запитване",
+            "width": 142.5,
+            "height": 44,
+            "size": "17px",
+            "weight": "400",
+            "lineHeight": "22.95px",
+            "scrollWidth": 143,
+            "clientWidth": 143
+          },
+          {
+            "label": "Обади се",
+            "width": 142.5,
+            "height": 44,
+            "size": "17px",
+            "weight": "400",
+            "lineHeight": "22.95px",
+            "scrollWidth": 141,
+            "clientWidth": 141
+          }
+        ]
+      },
+      "errors": []
+    },
+    {
+      "locale": "bg",
+      "width": 1440,
+      "height": 1000,
+      "metrics": {
+        "overflow": -15,
+        "cta": []
+      },
+      "errors": [],
+      "desktopIdentical": true
+    }
+  ],
+  "beforeSha256": "e2dc5cb91cd1f5dba7534ea8d1510f86b33abe0f319c7228e41233f9e50b5361",
+  "afterSha256": "7871a3613029ca04c1e02dda0dca166a883d3bf15b80e3e0d9b3c747b613714d"
+}

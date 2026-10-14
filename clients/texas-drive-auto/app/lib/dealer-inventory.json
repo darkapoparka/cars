@@ -12,8 +12,8 @@
     "images": [
       "/dealer-app/vehicle-f05bafa591d1c7addbbc.webp"
     ],
-    "mileage": 0,
-    "mileageOnRequest": true,
+    "mileage": 284418,
+    "mileageOnRequest": false,
     "fuel": "Petrol",
     "transmission": "Automatic",
     "body": "Sedan",
@@ -24,6 +24,11 @@
     "engineType": "3.2L V6",
     "location": "Dallas",
     "badges": [],
+    "imagePlaceholder": false,
+    "proposalBenefits": [
+      "Warranty option",
+      "Finance option"
+    ],
     "power": "Not published",
     "engine": "3.2L V6",
     "warranty": "Confirm with seller",
@@ -41,12 +46,12 @@
     "price": 6500,
     "priceOnRequest": false,
     "monthly": 0,
-    "image": "/dealer-app/vehicle-7ee2ac8fa3d2d3331bee.svg",
+    "image": "/cutouts/buy-sedan-v1.png",
     "images": [
-      "/dealer-app/vehicle-7ee2ac8fa3d2d3331bee.svg"
+      "/cutouts/buy-sedan-v1.png"
     ],
-    "mileage": 0,
-    "mileageOnRequest": true,
+    "mileage": 168514,
+    "mileageOnRequest": false,
     "fuel": "Not published",
     "transmission": "Automatic",
     "body": "SUV",
@@ -57,6 +62,11 @@
     "engineType": "2.0L Turbo I4",
     "location": "Dallas",
     "badges": [],
+    "imagePlaceholder": true,
+    "proposalBenefits": [
+      "Warranty option",
+      "Finance option"
+    ],
     "power": "Not published",
     "engine": "2.0L Turbo I4",
     "warranty": "Confirm with seller",
@@ -78,8 +88,8 @@
     "images": [
       "/dealer-app/vehicle-9630e81b8a4369995908.webp"
     ],
-    "mileage": 0,
-    "mileageOnRequest": true,
+    "mileage": 184289,
+    "mileageOnRequest": false,
     "fuel": "Not published",
     "transmission": "Automatic",
     "body": "SUV",
@@ -90,6 +100,11 @@
     "engineType": "2.0L Flex Fuel Turbo I4",
     "location": "Dallas",
     "badges": [],
+    "imagePlaceholder": false,
+    "proposalBenefits": [
+      "Warranty option",
+      "Finance option"
+    ],
     "power": "Not published",
     "engine": "2.0L Flex Fuel Turbo I4",
     "warranty": "Confirm with seller",
@@ -107,12 +122,12 @@
     "price": 8990,
     "priceOnRequest": false,
     "monthly": 0,
-    "image": "/dealer-app/vehicle-7ee2ac8fa3d2d3331bee.svg",
+    "image": "/cutouts/buy-sedan-v1.png",
     "images": [
-      "/dealer-app/vehicle-7ee2ac8fa3d2d3331bee.svg"
+      "/cutouts/buy-sedan-v1.png"
     ],
-    "mileage": 0,
-    "mileageOnRequest": true,
+    "mileage": 207535,
+    "mileageOnRequest": false,
     "fuel": "Not published",
     "transmission": "Automatic",
     "body": "Sedan",
@@ -123,6 +138,11 @@
     "engineType": "2.0L",
     "location": "Dallas",
     "badges": [],
+    "imagePlaceholder": true,
+    "proposalBenefits": [
+      "Warranty option",
+      "Finance option"
+    ],
     "power": "Not published",
     "engine": "2.0L",
     "warranty": "Confirm with seller",
@@ -144,8 +164,8 @@
     "images": [
       "/dealer-app/vehicle-2fd83adf01279e6745b4.webp"
     ],
-    "mileage": 0,
-    "mileageOnRequest": true,
+    "mileage": 286259,
+    "mileageOnRequest": false,
     "fuel": "Not published",
     "transmission": "Automatic",
     "body": "SUV",
@@ -156,6 +176,11 @@
     "engineType": "3.0L Twin Turbo I6",
     "location": "Dallas",
     "badges": [],
+    "imagePlaceholder": false,
+    "proposalBenefits": [
+      "Warranty option",
+      "Finance option"
+    ],
     "power": "Not published",
     "engine": "3.0L Twin Turbo I6",
     "warranty": "Confirm with seller",
@@ -173,12 +198,12 @@
     "price": 6990,
     "priceOnRequest": false,
     "monthly": 0,
-    "image": "/dealer-app/vehicle-7ee2ac8fa3d2d3331bee.svg",
+    "image": "/cutouts/buy-sedan-v1.png",
     "images": [
-      "/dealer-app/vehicle-7ee2ac8fa3d2d3331bee.svg"
+      "/cutouts/buy-sedan-v1.png"
     ],
-    "mileage": 0,
-    "mileageOnRequest": true,
+    "mileage": 261731,
+    "mileageOnRequest": false,
     "fuel": "Not published",
     "transmission": "Automatic",
     "body": "Other",
@@ -189,6 +214,11 @@
     "engineType": "3.6L V6",
     "location": "Dallas",
     "badges": [],
+    "imagePlaceholder": true,
+    "proposalBenefits": [
+      "Warranty option",
+      "Finance option"
+    ],
     "power": "Not published",
     "engine": "3.6L V6",
     "warranty": "Confirm with seller",
@@ -206,12 +236,12 @@
     "price": 4990,
     "priceOnRequest": false,
     "monthly": 0,
-    "image": "/dealer-app/vehicle-7ee2ac8fa3d2d3331bee.svg",
+    "image": "/cutouts/buy-sedan-v1.png",
     "images": [
-      "/dealer-app/vehicle-7ee2ac8fa3d2d3331bee.svg"
+      "/cutouts/buy-sedan-v1.png"
     ],
-    "mileage": 0,
-    "mileageOnRequest": true,
+    "mileage": 192363,
+    "mileageOnRequest": false,
     "fuel": "Not published",
     "transmission": "Automatic",
     "body": "Sedan",
@@ -222,6 +252,11 @@
     "engineType": "3.6L V6",
     "location": "Dallas",
     "badges": [],
+    "imagePlaceholder": true,
+    "proposalBenefits": [
+      "Warranty option",
+      "Finance option"
+    ],
     "power": "Not published",
     "engine": "3.6L V6",
     "warranty": "Confirm with seller",
@@ -239,12 +274,12 @@
     "price": 15990,
     "priceOnRequest": false,
     "monthly": 0,
-    "image": "/dealer-app/vehicle-7ee2ac8fa3d2d3331bee.svg",
+    "image": "/cutouts/buy-sedan-v1.png",
     "images": [
-      "/dealer-app/vehicle-7ee2ac8fa3d2d3331bee.svg"
+      "/cutouts/buy-sedan-v1.png"
     ],
-    "mileage": 0,
-    "mileageOnRequest": true,
+    "mileage": 159832,
+    "mileageOnRequest": false,
     "fuel": "Not published",
     "transmission": "Automatic",
     "body": "SUV",
@@ -255,6 +290,11 @@
     "engineType": "6.2L V8",
     "location": "Dallas",
     "badges": [],
+    "imagePlaceholder": true,
+    "proposalBenefits": [
+      "Warranty option",
+      "Finance option"
+    ],
     "power": "Not published",
     "engine": "6.2L V8",
     "warranty": "Confirm with seller",

@@ -4,15 +4,16 @@
   "name": "Champion Auto Pro",
   "shortName": "Champion Auto Pro",
   "logo": {
-    "light": "/dealer-app/logo-light-9428f263c0b35870c755.webp",
-    "dark": "/dealer-app/logo-dark-9f36412a10624c47f271.webp",
-    "icon": "/dealer-app/icon.png"
+    "light": "/dealer-brand/v2-3aed802078180a78/logo-on-light.webp",
+    "dark": "/dealer-brand/v2-3aed802078180a78/logo-on-dark.webp",
+    "icon": "/dealer-brand/v2-3aed802078180a78/app-icon.png"
   },
   "defaultLocale": "bg",
   "enabledLocales": [
     "en",
     "bg"
   ],
+  "welcomeEnabled": true,
   "country": "BG",
   "currency": "EUR",
   "city": "Варна",
@@ -23,6 +24,25 @@
   "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Champion%20Auto%20Pro%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20302%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0",
   "website": "https://championautopro.mobile.bg/",
   "whatsappUrl": "",
+  "socialLinks": [
+    {
+      "label": "Facebook",
+      "url": ""
+    },
+    {
+      "label": "Instagram",
+      "url": ""
+    },
+    {
+      "label": "Mobile.bg",
+      "url": ""
+    },
+    {
+      "label": "Cars.bg",
+      "url": ""
+    }
+  ],
+  "referenceClaimsApproved": false,
   "services": [
     "Продажба на автомобили",
     "Бартер и изкупуване",

@@ -11,6 +11,15 @@ type BrandArtwork = {
 
 /** Preserve the original detailed badges; supplementary artwork covers real stock. */
 const logos: Record<string, BrandArtwork> = {
+  dacia: {src: "/brands/approved/dacia.webp"},
+  renault: {src: "/brands/approved/renault.webp"},
+  seat: {src: "/brands/approved/seat.webp"},
+  "koenigsegg": {src: "/brands/approved/koenigsegg.webp", sourceSize: [120, 120], symbolViewBox: "0 0 120 120"},
+  "bugatti": {src: "/brands/approved/bugatti.webp", sourceSize: [120, 120], symbolViewBox: "0 0 120 120"},
+  "porsche": {src: "/brands/approved/porsche.webp", sourceSize: [120, 120], symbolViewBox: "0 0 120 120"},
+  "ferrari": {src: "/brands/approved/ferrari.webp", sourceSize: [120, 120], symbolViewBox: "0 0 120 120"},
+  "aston martin": {src: "/brands/approved/aston-martin.webp", sourceSize: [120, 120], symbolViewBox: "0 0 120 120"},
+  "lamborghini": {src: "/brands/approved/lamborghini.webp", sourceSize: [120, 120], symbolViewBox: "0 0 120 120"},
   audi: {src: '/reference-assets/brand-audi.png', presentation: 'framed', sourceSize: [210, 192], frameViewBox: '9 0 192 192', plainSymbolViewBox: '21 65 168 62'},
   bmw: {src: '/reference-assets/brand-bmw.png', presentation: 'framed', sourceSize: [210, 192], frameViewBox: '9 0 192 192', plainSymbolViewBox: '39 30 133 132'},
   chevrolet: {src: '/reference-assets/brand-chevrolet.png', presentation: 'framed', sourceSize: [249, 216], frameViewBox: '28.5 12 192 192', plainSymbolViewBox: '50 81 147 51'},
@@ -39,5 +48,7 @@ const logos: Record<string, BrandArtwork> = {
 };
 
 export function brandLogo(make: string): BrandArtwork | undefined {
-  return logos[make.trim().toLowerCase()];
+  const key = make.trim().toLowerCase().replace(/\s+/g, ' ');
+  const aliases: Record<string, string> = {'landrover': 'land rover', 'land-rover': 'land rover', 'land_rover': 'land rover', 'vw': 'volkswagen', 'mercedes': 'mercedes-benz', 'aston-martin': 'aston martin'};
+  return logos[aliases[key] ?? key];
 }

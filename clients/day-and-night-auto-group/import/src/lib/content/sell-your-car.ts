@@ -76,7 +76,7 @@ export const sellCarMobileCopy: AuxeroSellCarMobileCopy = {
 	formEyebrow: 'Бърза заявка',
 	formTitle: 'Попълни за минута',
 	logoAlt: daynightBrand.name,
-	logoSrc: "/dealer-brand/v2-5451a2d8ee3a85cd/logo-on-light.webp",
+	logoSrc: "/dealer-brand/v2-b57f86f52179d675/logo-on-light.webp",
 	messageLabel: 'Пиши ни',
 	statusMessage: 'Заявката е подготвена. Обади се или пиши, за да я финализираме веднага.',
 	stepsTitle: 'Как работи',

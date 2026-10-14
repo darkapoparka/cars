@@ -3,17 +3,17 @@
   "dealer": "astracar",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
     "path": "templates/app",
-    "digest": "3344230cf8de012eb9c2daf1c962c4a3f189960b52f2026e1d049f2a6eae26ad",
-    "tree": "cd17d913dd597bf7dfb3e2244c2a3a2914ab3080"
+    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1",
+    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76"
   },
-  "appDigest": "ac7167ee73eb6b5e46f200b6ebc308bb2e932946ee36e5f940ca9ab3bbebdcc8",
+  "appDigest": "2a1fe8f199106d776abaaeed4b39ea001514483fb3ea175011c0a3943503650b",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "astracar",
     "profile": "auto-best/src/lib/data/dealer-profile.json",
-    "profileSha256": "c8049a2b8c0e4d2f3dea4bf713dad237a8e657c09c40b9d5e75ce2cc58dc7ec9",
+    "profileSha256": "fe087fdec9912fcbf2004200d73752e9e219e775d49e2f14c72fef19a7265a5f",
     "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
     "vehicles": 15,
     "currency": "EUR",
@@ -481,13 +481,163 @@
         "sha256": "1c7135cf290a1f814829674df0591109a4dc28c1670fa22c36d295118cea7edb",
         "role": "vehicle"
       }
-    ]
+    ],
+    "mileageFacts": [
+      {
+        "slug": "mini-cooper-1-6d-euro4-2009-11747499643415236",
+        "sourceValue": 143100,
+        "sourceUnit": "km",
+        "canonicalKm": 143100
+      },
+      {
+        "slug": "renault-captur-0-9t-euro6b-2017-21755975324167565",
+        "sourceValue": 127663,
+        "sourceUnit": "km",
+        "canonicalKm": 127663
+      },
+      {
+        "slug": "bmw-535-xdrive-full-eu5b-2012-11737822623289964",
+        "sourceValue": 177390,
+        "sourceUnit": "km",
+        "canonicalKm": 177390
+      },
+      {
+        "slug": "audi-a3-2-0tdi-s-line-quattro-2006-11763446260159317",
+        "sourceValue": 181000,
+        "sourceUnit": "km",
+        "canonicalKm": 181000
+      },
+      {
+        "slug": "audi-a5-2-0tfsi-euro5b-2010-11752951085157214",
+        "sourceValue": 165170,
+        "sourceUnit": "km",
+        "canonicalKm": 165170
+      },
+      {
+        "slug": "fiat-punto-1-4i-evo-euro4-2010-11762018600091690",
+        "sourceValue": 139800,
+        "sourceUnit": "km",
+        "canonicalKm": 139800
+      },
+      {
+        "slug": "audi-a3-1-6tdi-eu5b-sportbag-2015-11755359473275644",
+        "sourceValue": 162148,
+        "sourceUnit": "km",
+        "canonicalKm": 162148
+      },
+      {
+        "slug": "mini-cooper-1-6d-euro5-2010-11766248164423161",
+        "sourceValue": 150052,
+        "sourceUnit": "km",
+        "canonicalKm": 150052
+      },
+      {
+        "slug": "audi-a6-2-0tdi-euro5b-2014-11780761931333448",
+        "sourceValue": 159400,
+        "sourceUnit": "km",
+        "canonicalKm": 159400
+      },
+      {
+        "slug": "bmw-x7-3-0d-xdrive-eu6d-2020-21780733368439452",
+        "sourceValue": 190000,
+        "sourceUnit": "km",
+        "canonicalKm": 190000
+      },
+      {
+        "slug": "citroen-c3-1-2i-euro5b-2013-11773504878088103",
+        "sourceValue": 136574,
+        "sourceUnit": "km",
+        "canonicalKm": 136574
+      },
+      {
+        "slug": "hyundai-ix35-1-6gdi-euro5-2012-21783183116609383",
+        "sourceValue": 56178,
+        "sourceUnit": "km",
+        "canonicalKm": 56178
+      },
+      {
+        "slug": "mercedes-benz-ml-350-3-0cdi-premium-eu6-2010-21783791992541606",
+        "sourceValue": 182887,
+        "sourceUnit": "km",
+        "canonicalKm": 182887
+      },
+      {
+        "slug": "peugeot-2008-1-2-puretech-eu6d-2022-11782577422662538",
+        "sourceValue": 36216,
+        "sourceUnit": "km",
+        "canonicalKm": 36216
+      },
+      {
+        "slug": "citroen-jumpy-1-6hdi-l2h1eu6b-2017-11782575631736534",
+        "sourceValue": 186586,
+        "sourceUnit": "km",
+        "canonicalKm": 186586
+      }
+    ],
+    "inventoryNoticePreservation": {
+      "schemaVersion": 1,
+      "kind": "cars-current-app-inventory-notice-preservation",
+      "dealer": "astracar",
+      "baseline": {
+        "commit": "9298ab0ed3a6774da9935de44dc224db789caee2",
+        "tree": "41ecd4eb1e29282a555027ffe75100a461101138"
+      },
+      "path": "app/lib/dealer.json",
+      "reviewSha256": "64a4094115202c874a0e72b12b37a98cc59fac55cce89bf489fad5743875f385",
+      "currentConfigSha256": "6071cf800f2caea3d406c36c7e6f185376add9507cb6fa9d3bb93785487c74d2",
+      "currentNoticeSha256": "930e2f71ca0269d56eb42579409ae630e1d8802e7af4a34d32c0accaa0bf2d6a",
+      "profileSha256": "fe087fdec9912fcbf2004200d73752e9e219e775d49e2f14c72fef19a7265a5f",
+      "unmodifiedTargetConfigSha256": "65069c3356de2a055674c0f4448c9abfe2654d51f1ede7ed097d3d730c666632",
+      "targetConfigSha256": "4cd979ca6f3e35e6eb7e28d0cdd54387716064019c73cd927993ef726ecbe915",
+      "targetSources": {
+        "auto-best": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/auto-best",
+          "digest": "dcbc59990928884006652677d3529020df3844029993895a71e5f6818ba7363c",
+          "tree": "5fb7a2164775050a47c1183371622295dbf63725"
+        },
+        "modern": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/modern",
+          "digest": "ba263aac8f1863d133807d3e1bf3597d125cf315a7e0deba3f6e419b52434c25",
+          "tree": "3974380670eb388bb16182f94ade33be6d87b1c1"
+        },
+        "import": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/import",
+          "digest": "f98a0934cdcc5adbda393c14c02eb2adc0175344ab2ac3f913afe4b0603366e5",
+          "tree": "6afc6901e2f95967fb7c72e9f75525d4d6fbf086"
+        },
+        "app": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/app",
+          "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1",
+          "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76"
+        },
+        "mobile": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/mobile",
+          "digest": "4e858bd9dbd3ef5b52cd904c4ed97bbfdc0f4cfe02b5a3840580f38026b867a0",
+          "tree": "2b02829e157071e305bfb2dff10ef18e85c8a35e"
+        },
+        "karento-best": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/karento-best",
+          "digest": "83056967764a686f3737d74b86c5db51c1385a50184853f50ec4ade80c1dd44f",
+          "tree": "5f6eec8efb2f9e99819f7f0c2f743d18fff7b134"
+        }
+      },
+      "allOtherConfigFieldsUnchanged": true,
+      "sourceFactsUnchanged": true
+    }
   },
-  "baseDeployment": {
-    "id": "dpl_F4jfs8d3GbA3kbVQmHxMESo3y1ob",
-    "url": "https://cars-astracar.vercel.app/",
-    "checkedAt": "2026-09-28T02:25:40.614Z"
-  },
-  "baseReceiptSha256": "7062159caf6ad3581f87dd8b135349c12bf54b8bab838a6db607cda0f6cb7593",
-  "refreshedAt": "2026-09-30T10:50:03.250Z"
+  "needsDealerQA": true,
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-12T22:38:32.326Z"
 }

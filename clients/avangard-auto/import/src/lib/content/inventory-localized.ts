@@ -477,6 +477,124 @@ export const inventoryCopy = {
 		bg: 'Автомобилът е с пълна сервизна история в Порше. Може да се провери във всяко представителство на марката. Sport Chrono пакет. Абсолютно автентичен вид както е излезнал от завода. Регистриран с каско, гражданска, данък, винетка. Без бартер. Само сериозни обаждания.',
 		en: 'Full Porsche service history. Can be checked at any dealership for the brand. Sport Chrono package. Entirely original factory appearance. Registered, with comprehensive insurance, third-party liability insurance, tax and vignette. No trade-ins. Serious inquiries only.'
 	}
+,
+	"dealerStock_09b2e4c92d9cfd19b588e9ec7d7c4e1853507d08031b0a0740db113a243b5408": {
+		"bg": "VW Passat Alltrack, юли 2018 г.  220 000 км Тъмно сив Дизелов 190 к.с. Евро 6 2000 куб.см Автоматична Комби. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.",
+		"en": "VW Passat Alltrack, July 2018  220 000 km Dark grey Diesel 190 hp Euro 6 2000 cc Automatic Wagon. Advertised by AVANGARD AUTO. Confirm availability and terms by phone before visiting."
+	},
+	"dealerStock_a361d0a678da8d08851a6de6afed2cc99e145a910b1d5408495969c8b433ca16": {
+		"bg": "Bluetooth / handsfree система",
+		"en": "Bluetooth / hands-free system"
+	},
+	"dealerStock_0184fe75300fc233b182c53220cc314715a7247d92f167e8a0a6335f4391b6cb": {
+		"bg": "Аудио / видео",
+		"en": "Audio / video"
+	},
+	"dealerStock_f258769daf4cedc0e0f4ac711c2fe5090299dd941db55faefab350b88ca23ab1": {
+		"bg": "IN / AUX изводи",
+		"en": "IN / AUX inputs"
+	},
+	"dealerStock_e8b8a518e15b0fc1c361f1691b4a21d156427eaa36fce311b8a0a970af578dba": {
+		"bg": "Лизинг",
+		"en": "Leasing"
+	},
+	"dealerStock_6902ccf063b8ae1e654b8e7fcdf65de868c983239c35e8ecebcf5104aeaeccbc": {
+		"bg": "Хладилна жабка",
+		"en": "Cooled glove box"
+	},
+	"dealerStock_face6e65612345eb250f66b01026f922473cba534b057a49297a63e6d634117c": {
+		"bg": "Тъмно сив",
+		"en": "Dark grey"
+	},
+	"dealerStock_6d97612f31a384b607b39f15a98b3c85e6c35274648624c558f90dc9fa87a9d0": {
+		"bg": "Volvo XC40 2.0D, октомври 2019 г.  166 000 км Сив Дизелов 150 к.с. Евро 6 2000 куб.см Автоматична Джип. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.",
+		"en": "Volvo XC40 2.0D, October 2019  166 000 km Grey Diesel 150 hp Euro 6 2000 cc Automatic SUV. Advertised by AVANGARD AUTO. Confirm availability and terms by phone before visiting."
+	},
+	"dealerStock_d04158cef66af6e9e3f19f4ce98231c23c015950501b3f5dbb03611b9cab275b": {
+		"bg": "360 камера / задна камера",
+		"en": "360 camera / rear camera"
+	},
+	"dealerStock_15efd18be97adefc249b427de222f57b2f37be8cc147cbbe33ab4b30fec567fb": {
+		"bg": "Volvo XC40 T5 inscription, юни 2019 г.  278 000 км Сив Бензинов 248 к.с. Евро 6 2000 куб.см Автоматична Джип. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.",
+		"en": "Volvo XC40 T5 inscription, June 2019  278 000 km Grey Petrol 248 hp Euro 6 2000 cc Automatic SUV. Advertised by AVANGARD AUTO. Confirm availability and terms by phone before visiting."
+	},
+	"dealerStock_6e6c280e9623093cd1633e5d0c6a87eb298b3264443fe9e868238fb954ed0dbb": {
+		"bg": "Apple CarPlay / Android Auto",
+		"en": "Apple CarPlay / Android Auto"
+	},
+	"dealerStock_3cbf88a01df92ab7d4d0b1d33897c59f7821373a7d6a23e4da701e92bb6d002b": {
+		"bg": "Peugeot 208 1.6HDI, юли 2016 г.  214 000 км Бял Дизелов 75 к.с. Евро 6 1600 куб.см Ръчна Хечбек. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.",
+		"en": "Peugeot 208 1.6HDI, July 2016  214 000 km White Diesel 75 hp Euro 6 1600 cc Manual Hatchback. Advertised by AVANGARD AUTO. Confirm availability and terms by phone before visiting."
+	},
+	"dealerStock_c78cd581da3aa4de35d6919238c4713939f3b2cac47dd3159756d967f6fd7011": {
+		"bg": "Климатик",
+		"en": "Air conditioning"
+	},
+	"dealerStock_487e6c55fa0535b0324cf6c8de5b0b5574de9a3daeda429b0cc61949fed761d5": {
+		"bg": "Peugeot 2008 1.6HDI, ноември 2013 г.  216 000 км Бял Дизелов 92 к.с. Евро 5 1600 куб.см Ръчна Хечбек. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.",
+		"en": "Peugeot 2008 1.6HDI, November 2013  216 000 km White Diesel 92 hp Euro 5 1600 cc Manual Hatchback. Advertised by AVANGARD AUTO. Confirm availability and terms by phone before visiting."
+	},
+	"dealerStock_c4045a30245c8ebd3b80bc8022ab5d2eea0166991eab3c303c5f1e60ff606b8f": {
+		"bg": "Nissan Qashqai 1.5dCi, юли 2018 г.  175 000 км Бял Дизелов 110 к.с. Евро 6 1500 куб.см Ръчна Джип. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.",
+		"en": "Nissan Qashqai 1.5dCi, July 2018  175 000 km White Diesel 110 hp Euro 6 1500 cc Manual SUV. Advertised by AVANGARD AUTO. Confirm availability and terms by phone before visiting."
+	},
+	"dealerStock_7addfe9fbb823faeb33bf39048dcd1014511f84655cb11a048d572a5e061bed8": {
+		"bg": "Mitsubishi Outlander 2.2DI-D, септември 2014 г.  167 000 км Бял Дизелов 150 к.с. Евро 5 2200 куб.см Ръчна Джип. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.",
+		"en": "Mitsubishi Outlander 2.2DI-D, September 2014  167 000 km White Diesel 150 hp Euro 5 2200 cc Manual SUV. Advertised by AVANGARD AUTO. Confirm availability and terms by phone before visiting."
+	},
+	"dealerStock_ba2b55d3060af1a5811593126f5f1330750210a7ff28e8a11687f6474a2b45d3": {
+		"bg": "Kia Sportage 1.7CRDI, юли 2014 г.  179 000 км Светло сив Дизелов 116 к.с. Евро 5 1700 куб.см Ръчна Джип. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.",
+		"en": "Kia Sportage 1.7CRDI, July 2014  179 000 km Light grey Diesel 116 hp Euro 5 1700 cc Manual SUV. Advertised by AVANGARD AUTO. Confirm availability and terms by phone before visiting."
+	},
+	"dealerStock_74baff4ad4c971bc53a224947de050acfb57dd1b287e6edd7dbc26bd869a10b3": {
+		"bg": "Светло сив",
+		"en": "Light grey"
+	},
+	"dealerStock_4b1bc2071c085da922b2444a15547e9dae7ae922ff46eb87f68c1d3f2b46c39c": {
+		"bg": "BMW X1 2.0D, август 2016 г.  138 000 км Тъмно сив Дизелов 150 к.с. Евро 6 2000 куб.см Автоматична Джип. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.",
+		"en": "BMW X1 2.0D, August 2016  138 000 km Dark grey Diesel 150 hp Euro 6 2000 cc Automatic SUV. Advertised by AVANGARD AUTO. Confirm availability and terms by phone before visiting."
+	},
+	"dealerStock_6ee2574365d5efa67125d97f2dfa70556c41165bf529336bcc8aa787990d420a": {
+		"bg": "BMW X1 2.0D, септември 2010 г.  187 000 км Светло сив Дизелов 177 к.с. 2000 куб.см Ръчна Джип. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.",
+		"en": "BMW X1 2.0D, September 2010  187 000 km Light grey Diesel 177 hp 2000 cc Manual SUV. Advertised by AVANGARD AUTO. Confirm availability and terms by phone before visiting."
+	},
+	"dealerStock_2573a428508a9131b304cdc4c41407bcb5e20d875cd70ba6aa5526e0da9a4e5c": {
+		"bg": "BMW 320 i, юли 2013 г.  187 000 км Тъмно син мет. Бензинов 184 к.с. 2000 куб.см Ръчна Комби. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.",
+		"en": "BMW 320 i, July 2013  187 000 km Dark blue metallic Petrol 184 hp 2000 cc Manual Wagon. Advertised by AVANGARD AUTO. Confirm availability and terms by phone before visiting."
+	},
+	"dealerStock_bc7fc2270ec67fd6895276eb16ba99c9fdae9fcb5ba4afc2a6219b8719bcf589": {
+		"bg": "Тъмно син металик",
+		"en": "Dark blue metallic"
+	},
+	"dealerStock_5e2ab851f81ebcba28eaa11986a4dc045d54a927f448423812891695f7f6db8e": {
+		"bg": "Audi SQ5 3.0V6T ZF, май 2018 г.  197 000 км Сив Бензинов 354 к.с. Евро 6 3000 куб.см Автоматична Джип. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.",
+		"en": "Audi SQ5 3.0V6T ZF, May 2018  197 000 km Grey Petrol 354 hp Euro 6 3000 cc Automatic SUV. Advertised by AVANGARD AUTO. Confirm availability and terms by phone before visiting."
+	},
+	"dealerStock_2fa7c8de831a2febb1dd4d325ada35d2afa5aa085ad14c18fa892bf5af8d808d": {
+		"bg": "Тунинг",
+		"en": "Tuning"
+	},
+	"dealerStock_2bd9452247cdeebf0e34dee07fefc904b29071ff0ae65355e36e4592ef7213b1": {
+		"bg": "Audi Q7 Premium Plus, април 2017 г.  255 000 км Тъмно сив Бензинов 333 к.с. Евро 6 3000 куб.см Автоматична Джип. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.",
+		"en": "Audi Q7 Premium Plus, April 2017  255 000 km Dark grey Petrol 333 hp Euro 6 3000 cc Automatic SUV. Advertised by AVANGARD AUTO. Confirm availability and terms by phone before visiting."
+	},
+	"dealerStock_a90e27e8a954cb9aa9346dd7de6d53f18ac43cf66860a9accd92dab4d340b8b5": {
+		"bg": "Audi Q5 SQ5 3.0V6T, май 2018 г.  197 000 км Сив Бензинов 354 к.с. Евро 6 3000 куб.см Автоматична Джип. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.",
+		"en": "Audi Q5 SQ5 3.0V6T, May 2018  197 000 km Grey Petrol 354 hp Euro 6 3000 cc Automatic SUV. Advertised by AVANGARD AUTO. Confirm availability and terms by phone before visiting."
+	},
+	"dealerStock_f12463b8eef8a5af45f2314797798187b631b49d1432c73e12b9c75144d3a04a": {
+		"bg": "Audi Q5 Premium Plus, март 2018 г.  206 000 км Светло сив Бензинов 252 к.с. Евро 6 2000 куб.см Автоматична Джип. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.",
+		"en": "Audi Q5 Premium Plus, March 2018  206 000 km Light grey Petrol 252 hp Euro 6 2000 cc Automatic SUV. Advertised by AVANGARD AUTO. Confirm availability and terms by phone before visiting."
+	},
+	"dealerStock_48b06561777df6aac3646cf2f92b50a3b3f1254254853f01b5b267433e95211c": {
+		"bg": "Бартер",
+		"en": "Part exchange"
+	},
+	"dealerStock_9b762dd8217e87ec4abe93b9ec1a68c0c90e9800b422ebe64a186311d01792b4": {
+		"bg": "Audi A4 2.0TDI, юли 2011 г.  202 000 км Бял Дизелов 143 к.с. 2000 куб.см Автоматична Комби. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.",
+		"en": "Audi A4 2.0TDI, July 2011  202 000 km White Diesel 143 hp 2000 cc Automatic Wagon. Advertised by AVANGARD AUTO. Confirm availability and terms by phone before visiting."
+	}
+
 } satisfies Record<string, Record<Locale, string>>;
 export const inventorySourceKeys: Readonly<Record<string, keyof typeof inventoryCopy>> = {
 	'4(5) Врати': 'term0',
@@ -630,6 +748,37 @@ export const inventorySourceKeys: Readonly<Record<string, keyof typeof inventory
 		'description30',
 	'Автомобилът е с пълна сервизна история в Порше. Може да се провери във всяко представителство на марката. Sport Chrono пакет. Абсолютно автентичен вид както е излезнал от завода. Регистриран с каско, гражданска, данък, винетка. Без бартер. Само сериозни обаждания.':
 		'description31'
+,
+	"VW Passat Alltrack, юли 2018 г.  220 000 км Тъмно сив Дизелов 190 к.с. Евро 6 2000 куб.см Автоматична Комби. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.": "dealerStock_09b2e4c92d9cfd19b588e9ec7d7c4e1853507d08031b0a0740db113a243b5408",
+	"Bluetooth \\ handsfree система": "dealerStock_a361d0a678da8d08851a6de6afed2cc99e145a910b1d5408495969c8b433ca16",
+	"audio\\video": "dealerStock_0184fe75300fc233b182c53220cc314715a7247d92f167e8a0a6335f4391b6cb",
+	"IN\\AUX изводи": "dealerStock_f258769daf4cedc0e0f4ac711c2fe5090299dd941db55faefab350b88ca23ab1",
+	"Лизинг": "dealerStock_e8b8a518e15b0fc1c361f1691b4a21d156427eaa36fce311b8a0a970af578dba",
+	"Хладилна жабка": "dealerStock_6902ccf063b8ae1e654b8e7fcdf65de868c983239c35e8ecebcf5104aeaeccbc",
+	"Тъмно Сив": "dealerStock_face6e65612345eb250f66b01026f922473cba534b057a49297a63e6d634117c",
+	"Volvo XC40 2.0D, октомври 2019 г.  166 000 км Сив Дизелов 150 к.с. Евро 6 2000 куб.см Автоматична Джип. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.": "dealerStock_6d97612f31a384b607b39f15a98b3c85e6c35274648624c558f90dc9fa87a9d0",
+	"360 camera \\ Задна камера": "dealerStock_d04158cef66af6e9e3f19f4ce98231c23c015950501b3f5dbb03611b9cab275b",
+	"Volvo XC40 T5 inscription, юни 2019 г.  278 000 км Сив Бензинов 248 к.с. Евро 6 2000 куб.см Автоматична Джип. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.": "dealerStock_15efd18be97adefc249b427de222f57b2f37be8cc147cbbe33ab4b30fec567fb",
+	"Apple CarPlay \\ Android Auto": "dealerStock_6e6c280e9623093cd1633e5d0c6a87eb298b3264443fe9e868238fb954ed0dbb",
+	"Peugeot 208 1.6HDI, юли 2016 г.  214 000 км Бял Дизелов 75 к.с. Евро 6 1600 куб.см Ръчна Хечбек. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.": "dealerStock_3cbf88a01df92ab7d4d0b1d33897c59f7821373a7d6a23e4da701e92bb6d002b",
+	"Климатик": "dealerStock_c78cd581da3aa4de35d6919238c4713939f3b2cac47dd3159756d967f6fd7011",
+	"Peugeot 2008 1.6HDI, ноември 2013 г.  216 000 км Бял Дизелов 92 к.с. Евро 5 1600 куб.см Ръчна Хечбек. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.": "dealerStock_487e6c55fa0535b0324cf6c8de5b0b5574de9a3daeda429b0cc61949fed761d5",
+	"Nissan Qashqai 1.5dCi, юли 2018 г.  175 000 км Бял Дизелов 110 к.с. Евро 6 1500 куб.см Ръчна Джип. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.": "dealerStock_c4045a30245c8ebd3b80bc8022ab5d2eea0166991eab3c303c5f1e60ff606b8f",
+	"Mitsubishi Outlander 2.2DI-D, септември 2014 г.  167 000 км Бял Дизелов 150 к.с. Евро 5 2200 куб.см Ръчна Джип. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.": "dealerStock_7addfe9fbb823faeb33bf39048dcd1014511f84655cb11a048d572a5e061bed8",
+	"Kia Sportage 1.7CRDI, юли 2014 г.  179 000 км Светло сив Дизелов 116 к.с. Евро 5 1700 куб.см Ръчна Джип. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.": "dealerStock_ba2b55d3060af1a5811593126f5f1330750210a7ff28e8a11687f6474a2b45d3",
+	"Светло Сив": "dealerStock_74baff4ad4c971bc53a224947de050acfb57dd1b287e6edd7dbc26bd869a10b3",
+	"BMW X1 2.0D, август 2016 г.  138 000 км Тъмно сив Дизелов 150 к.с. Евро 6 2000 куб.см Автоматична Джип. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.": "dealerStock_4b1bc2071c085da922b2444a15547e9dae7ae922ff46eb87f68c1d3f2b46c39c",
+	"BMW X1 2.0D, септември 2010 г.  187 000 км Светло сив Дизелов 177 к.с. 2000 куб.см Ръчна Джип. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.": "dealerStock_6ee2574365d5efa67125d97f2dfa70556c41165bf529336bcc8aa787990d420a",
+	"BMW 320 i, юли 2013 г.  187 000 км Тъмно син мет. Бензинов 184 к.с. 2000 куб.см Ръчна Комби. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.": "dealerStock_2573a428508a9131b304cdc4c41407bcb5e20d875cd70ba6aa5526e0da9a4e5c",
+	"Тъмно Син Мет.": "dealerStock_bc7fc2270ec67fd6895276eb16ba99c9fdae9fcb5ba4afc2a6219b8719bcf589",
+	"Audi SQ5 3.0V6T ZF, май 2018 г.  197 000 км Сив Бензинов 354 к.с. Евро 6 3000 куб.см Автоматична Джип. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.": "dealerStock_5e2ab851f81ebcba28eaa11986a4dc045d54a927f448423812891695f7f6db8e",
+	"Тунинг": "dealerStock_2fa7c8de831a2febb1dd4d325ada35d2afa5aa085ad14c18fa892bf5af8d808d",
+	"Audi Q7 Premium Plus, април 2017 г.  255 000 км Тъмно сив Бензинов 333 к.с. Евро 6 3000 куб.см Автоматична Джип. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.": "dealerStock_2bd9452247cdeebf0e34dee07fefc904b29071ff0ae65355e36e4592ef7213b1",
+	"Audi Q5 SQ5 3.0V6T, май 2018 г.  197 000 км Сив Бензинов 354 к.с. Евро 6 3000 куб.см Автоматична Джип. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.": "dealerStock_a90e27e8a954cb9aa9346dd7de6d53f18ac43cf66860a9accd92dab4d340b8b5",
+	"Audi Q5 Premium Plus, март 2018 г.  206 000 км Светло сив Бензинов 252 к.с. Евро 6 2000 куб.см Автоматична Джип. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.": "dealerStock_f12463b8eef8a5af45f2314797798187b631b49d1432c73e12b9c75144d3a04a",
+	"Бартер": "dealerStock_48b06561777df6aac3646cf2f92b50a3b3f1254254853f01b5b267433e95211c",
+	"Audi A4 2.0TDI, юли 2011 г.  202 000 км Бял Дизелов 143 к.с. 2000 куб.см Автоматична Комби. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.": "dealerStock_9b762dd8217e87ec4abe93b9ec1a68c0c90e9800b422ebe64a186311d01792b4"
+
 };
 export function inventoryText(locale: Locale, value: string): string {
 	const key = inventorySourceKeys[value];

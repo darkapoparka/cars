@@ -30,38 +30,36 @@ export const companyServices: CompanyService[] = [
 export const contactTopics: ContactTopic[] = [
   {
     "id": "general",
-    "label": "Общ въпрос",
-    "title": "Разговор с екипа",
-    "description": "For availability, next steps or any other question about {dealerName}."
+    "label": "General question",
+    "title": "Contact the dealer",
+    "description": "Contact {dealerName} to confirm availability, details, and the next step."
   },
   {
     "id": "inspection",
-    "label": "Оглед",
-    "title": "Viewing in {dealerCity}",
-    "description": "Уговорете посещение предварително, за да подготвим конкретния автомобил и да отделим нужното време."
+    "label": "Viewing",
+    "title": "Оглед в {dealerCity}",
+    "description": "Contact {dealerName} to confirm availability, details, and the next step."
   },
   {
     "id": "import",
-    "label": "Внос",
-    "title": "Внос по заявка",
-    "description": "Изпратете обява или задайте марка, модел, година и бюджет. След това уточняваме следващите стъпки с вас.",
-    "mobileDescription": "Изпратете обява или задайте модел и бюджет."
+    "label": "Import",
+    "title": "Import enquiry demo",
+    "description": "Contact {dealerName} to confirm availability, details, and the next step."
   },
   {
     "id": "leasing",
-    "label": "Лизинг",
-    "title": "Собствен лизинг",
-    "description": "Получете актуални условия според избрания автомобил и конкретната сделка."
+    "label": "Financing",
+    "title": "Finance demo",
+    "description": "Contact {dealerName} to confirm availability, details, and the next step."
   },
   {
     "id": "trade-in",
-    "label": "Бартер",
-    "title": "Бартер и оценка",
-    "description": "Разкажете ни за автомобила, който искате да предложите, и поискайте индивидуална оценка.",
-    "mobileDescription": "Поискайте оценка за продажба или бартер."
+    "label": "Trade-in",
+    "title": "Trade-in enquiry demo",
+    "description": "Contact {dealerName} to confirm availability, details, and the next step."
   }
 ];
 export const resolveContactTopic = (value: string | null) =>
   contactTopics.find((topic) => topic.id === value) ?? contactTopics[0];
-export const showroomCoordinates = {"latitude":0,"longitude":0} as const;
+export const showroomCoordinates = null;
 export const dealerAddress = brand.address;

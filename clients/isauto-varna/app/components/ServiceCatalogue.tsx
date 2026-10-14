@@ -52,7 +52,7 @@ export default function ServiceCatalogue({searchState}: {searchState: ServiceSea
       </div>
       <div {...stylex.props(s.cardBody, s.compactBody)}>
         <div {...stylex.props(s.cardHeading, s.compactHeading)}><h2 {...stylex.props(t.heading, s.title, s.compactTitle)}>{tx(option.label)}</h2><span {...stylex.props(s.arrow, s.compactArrow)}><ArrowRight size={20} aria-hidden="true"/></span></div>
-        <ul {...stylex.props(s.checks, s.compactChecks)}>{option.checks.map(check => <li key={check} {...stylex.props(t.body, s.check, s.compactCheck)}><span aria-hidden="true" {...stylex.props(s.icon, s.compactIcon)}><Check size={12} strokeWidth={2.25}/></span>{tx(check)}</li>)}</ul>
+        <ul {...stylex.props(s.checks, s.compactChecks)}>{option.checks.map(check => <li key={check} {...stylex.props(t.body, s.check, s.compactCheck)}><span aria-hidden="true" {...stylex.props(s.icon, s.compactIcon)}><Check size={14} strokeWidth={1.8}/></span>{tx(check)}</li>)}</ul>
       </div>
     </button>)}</div> : <div {...stylex.props(s.empty)}><p {...stylex.props(t.title)}>{tx('No matching services.')}</p><button type="button" onClick={() => clear('all')} {...stylex.props(s.reset, t.control)}>{tx('Show all services')}<ArrowRight size={18} aria-hidden="true"/></button></div>}
     {selection ? <ServiceDetailsSheet key={selection.service?.id || 'service-enquiry'} {...selection} onClose={() => setSelection(null)}/> : null}
@@ -73,7 +73,7 @@ const s = stylex.create({
   arrow: {display: 'grid', placeItems: 'center', flexShrink: 0, width: {[media.desktop]: 28, default: 40}, height: {[media.desktop]: 28, default: 40}, borderRadius: '50%', backgroundColor: '#fff'},
   checks: {display: 'grid', gap: {[media.desktop]: 6, default: 8}, margin: {[media.desktop]: '8px 0 0', default: '10px 0 0'}, padding: 0, listStyle: 'none'},
   check: {display: 'flex', alignItems: 'center', gap: 8, color: $.muted, fontSize: {[media.mobile]: 15, [media.desktop]: 14, default: 16}, lineHeight: {[media.mobile]: '22px', [media.desktop]: '20px', default: '24px'}},
-  icon: {display: 'grid', placeItems: 'center', flexShrink: 0, width: 18, height: 18, borderRadius: '50%', borderWidth: 1, borderStyle: 'solid', borderColor: '#dedee3', backgroundColor: '#fff', color: $.muted},
+  icon: {display: 'grid', placeItems: 'center', flexShrink: 0, width: 14, height: 14, color: $.muted},
   compactCard: {flexDirection: {[media.mobile]: 'row', default: 'column'}, alignItems: {[media.mobile]: 'center', default: 'stretch'}, gap: {[media.mobile]: 12, default: 0}, padding: {[media.mobile]: 12, default: 0}},
   compactArtwork: {flexShrink: 0, width: {[media.mobile]: 88, default: 'auto'}, height: {[media.mobile]: 88, default: 'auto'}, overflow: {[media.mobile]: 'hidden', default: 'visible'}, borderRadius: {[media.mobile]: 14, default: 0}},
   compactImage: {height: {[media.mobile]: '100%', [media.desktop]: 120, default: 'auto'}, aspectRatio: {[media.mobile]: '1 / 1', [media.desktop]: 'auto', default: '2 / 1'}},
@@ -83,7 +83,7 @@ const s = stylex.create({
   compactArrow: {width: {[media.mobile]: 20, [media.desktop]: 28, default: 40}, height: {[media.mobile]: 24, [media.desktop]: 28, default: 40}, backgroundColor: {[media.mobile]: 'transparent', default: '#fff'}},
   compactChecks: {gap: {[media.mobile]: 4, [media.desktop]: 6, default: 8}, margin: {[media.mobile]: '6px 0 0', [media.desktop]: '8px 0 0', default: '10px 0 0'}},
   compactCheck: {gap: {[media.mobile]: 6, default: 8}, alignItems: {[media.mobile]: 'flex-start', default: 'center'}, fontSize: {[media.mobile]: 13, [media.desktop]: 14, default: 16}, lineHeight: {[media.mobile]: '18px', [media.desktop]: '20px', default: '24px'}},
-  compactIcon: {width: {[media.mobile]: 14, default: 18}, height: {[media.mobile]: 14, default: 18}, marginTop: {[media.mobile]: 2, default: 0}},
+  compactIcon: {marginTop: {[media.mobile]: 2, default: 0}},
   empty: {display: 'grid', justifyItems: 'start', alignContent: 'center', gap: 16, minHeight: 220, marginTop: {[media.mobile]: $.mobilePillGap, default: 14}, padding: 24, borderRadius: 20, backgroundColor: $.surfaceAlt},
   reset: {display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 8, minHeight: 44, padding: '10px 18px', color: $.ink, borderWidth: 0, borderRadius: 30, backgroundColor: '#fff', cursor: 'pointer'},
   srOnly: {position: 'absolute', width: 1, height: 1, padding: 0, margin: -1, overflow: 'hidden', clipPath: 'inset(50%)', whiteSpace: 'nowrap'},

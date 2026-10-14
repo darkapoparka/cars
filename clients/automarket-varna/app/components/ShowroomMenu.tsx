@@ -48,11 +48,11 @@ function MenuRow({href, icon, title, compact, alternative, onNavigate}: {href: s
 const s = stylex.create({
   section: {marginBottom: $.mobileSectionGap},
   sectionTitle: {margin: 0, paddingBottom: 8, paddingInline: 2, color: $.muted},
-  list: {display: {[media.mobile]: 'flex', default: 'block'}, flexDirection: 'column', gap: 0, padding: 0, backgroundColor: {[media.mobile]: $.surface, default: 'transparent'}, borderColor: {[media.mobile]: $.surfaceBorder, default: $.line}, borderStyle: 'solid', borderWidth: 1, borderRadius: $.radiusMd, overflow: 'hidden'},
+  list: {display: {[media.mobile]: 'flex', default: 'block'}, flexDirection: 'column', gap: 0, padding: 0, backgroundColor: $.surfaceAlt, borderWidth: 0, borderRadius: $.radiusMd, overflow: 'hidden'},
   alternativeList: {backgroundColor: $.surfaceAlt},
   alternativeRow: {backgroundColor: {default: $.surfaceAlt, ':hover': $.line, ':active': $.line}},
   row: {display: 'grid', gridTemplateColumns: '32px minmax(0,1fr) 16px', alignItems: 'center', gap: 12, minHeight: 56, paddingBlock: 10, paddingInline: 12, color: $.ink, textAlign: 'left',
-    borderRadius: 0, borderBottomWidth: {[media.mobile]: {default: 1, ':last-child': 0}, default: 0}, borderBottomStyle: 'solid', borderBottomColor: $.line, backgroundColor: {default: $.surface, ':hover': $.surfaceAlt, ':active': {default: $.rail, [media.mobile]: $.line}},
+    borderRadius: 0, borderBottomWidth: {[media.mobile]: {default: 1, ':last-child': 0}, default: 0}, borderBottomStyle: 'solid', borderBottomColor: $.line, backgroundColor: {default: $.surfaceAlt, ':hover': $.line, ':active': $.line},
     outlineOffset: -3, outlineWidth: 2, outlineStyle: {default: 'none', ':focus-visible': 'solid'}, outlineColor: $.ink},
   icon: {display: 'grid', placeItems: 'center', width: 32, height: 32, borderRadius: 10, backgroundColor: {[media.mobile]: 'transparent', default: $.surfaceAlt}},
   label: {minWidth: 0, overflowWrap: 'anywhere'},

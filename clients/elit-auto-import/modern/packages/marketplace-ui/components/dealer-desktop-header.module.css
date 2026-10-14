@@ -1,154 +1,169 @@
-﻿.header {
+.header {
   display: none;
 }
 
 @media (min-width: 1024px) {
   .header {
-    --desktop-header-height: 4.5rem;
     position: relative;
-    z-index: 40;
+    z-index: var(--desktop-layer-header);
     display: block;
     width: 100%;
-    color: var(--inverse-foreground);
-    background: var(--inverse);
-    border-bottom: 0;
+    color: var(--foreground);
+    background: var(--panel);
   }
-
-  .header:has(
-      [aria-controls="dealer-desktop-locale-menu"][aria-expanded="true"]
-    ) {
-    z-index: 45;
-  }
-
   .nav {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
-    gap: clamp(0.75rem, 1.5vw, 1.5rem);
+    grid-template-columns: minmax(max-content, 1fr) auto minmax(
+        max-content,
+        1fr
+      );
+    gap: calc(var(--spacing) * 8);
     align-items: center;
-    width: min(
-      calc(100% - (2 * var(--layout-gutter))),
-      var(--layout-content-max)
-    );
+    width: var(--desktop-frame-width);
+    max-width: var(--desktop-showroom-max);
     min-height: var(--desktop-header-height);
     margin-inline: auto;
   }
-
   .brand {
     position: relative;
     display: block;
     justify-self: start;
-    width: clamp(9.5rem, 11vw, 11rem);
-    height: 2.5rem;
+    width: calc(var(--spacing) * 40);
+    height: calc(var(--spacing) * 12);
     border-radius: var(--radius-sm);
   }
-
+  .logo {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: left;
+  }
   .segments {
     display: flex;
-    gap: 0.375rem;
+    gap: calc(var(--spacing) * 8);
     align-items: center;
     justify-content: center;
-    justify-self: center;
-    min-height: var(--desktop-header-height);
   }
-
-  .segments a {
+  .segments :is(a, .moreTrigger) {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-height: var(--control-height-lg);
-    padding-inline: 0.9375rem;
-    font-size: var(--text-meta);
+    min-height: calc(var(--spacing) * 12);
+    padding-inline: 0;
+    font-size: calc(var(--spacing) * 3.75);
     font-weight: var(--font-weight-medium);
-    color: var(--inverse-muted);
-    border: 1px solid transparent;
-    border-radius: var(--radius-pill);
-    transition:
-      color var(--duration-interaction),
-      background-color var(--duration-interaction),
-      border-color var(--duration-interaction),
-      box-shadow var(--duration-interaction);
+    line-height: calc(var(--spacing) * 6);
+    color: var(--muted-foreground);
+    white-space: nowrap;
+    transition: color var(--duration-interaction);
   }
-
-  .segments a:hover {
-    color: var(--inverse-foreground);
-    background: color-mix(in srgb, var(--inverse-control) 82%, transparent);
+  .segments :is(a, .moreTrigger):hover,
+  .segments a[aria-current="page"],
+  .moreTrigger[data-current="true"] {
+    color: var(--foreground);
   }
-
-  .segments a[aria-current="page"] {
-    font-weight: var(--font-weight-semibold);
-    color: var(--inverse-foreground);
-    background: color-mix(in srgb, var(--inverse-foreground) 8%, transparent);
-    border-color: var(--inverse-border);
-    box-shadow: none;
+  .moreTrigger {
+    gap: calc(var(--spacing) * 1.5);
+    padding: 0;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
   }
-
+  .moreMenu {
+    min-width: calc(var(--spacing) * 40);
+    padding: calc(var(--spacing) * 1.5);
+    background: var(--panel);
+    border: var(--desktop-border-width) solid var(--border);
+    border-radius: calc(var(--spacing) * 3);
+    box-shadow: var(--desktop-surface-shadow);
+  }
+  .moreItem {
+    gap: calc(var(--spacing) * 3);
+    min-height: calc(var(--spacing) * 11);
+    padding-inline: calc(var(--spacing) * 3);
+    font-size: var(--text-desktop-control);
+    color: var(--foreground);
+    cursor: pointer;
+    border-radius: calc(var(--spacing) * 1.5);
+  }
+  .moreItem[data-highlighted],
+  .moreItem[aria-current="page"] {
+    color: var(--brand-text);
+    background: var(--control);
+  }
+  .moreTrigger:focus-visible {
+    outline: var(--desktop-focus-width) solid var(--ring);
+    outline-offset: var(--desktop-focus-offset);
+  }
   .contact {
-    display: flex;
-    gap: 0.375rem;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(max-content, 1fr));
+    gap: calc(var(--spacing) * 3);
     align-items: center;
     justify-content: flex-end;
     justify-self: end;
     min-width: 0;
   }
-
-  .contact a {
+  .contact .action {
     display: inline-flex;
-    gap: 0.5rem;
+    gap: calc(var(--spacing) * 2);
     align-items: center;
     justify-content: center;
-    min-height: var(--control-height-lg);
-    padding-inline: 0.75rem;
-    font-size: var(--text-meta);
-    font-weight: var(--font-weight-medium);
+    min-width: calc(var(--spacing) * 34);
+    height: calc(var(--spacing) * 11);
+    min-height: calc(var(--spacing) * 11);
+    padding: 0 calc(var(--spacing) * 5);
+    font-size: var(--text-compact-control);
+    font-weight: var(--font-weight-normal);
+    line-height: calc(var(--spacing) * 6);
+    color: var(--foreground);
     white-space: nowrap;
+    cursor: pointer;
+    background: var(--control);
+    border: 0;
     border-radius: var(--radius-pill);
     transition:
       color var(--duration-interaction),
-      background-color var(--duration-interaction),
-      border-color var(--duration-interaction);
+      background-color var(--duration-interaction);
   }
-
-  .contact a:hover {
-    background: var(--inverse-control);
+  .contact .action:hover {
+    color: var(--foreground);
+    background: var(--desktop-control-neutral-hover);
   }
-
-  .contact .showroom {
-    padding-inline: 1rem;
-    color: var(--inverse-foreground);
-    background: transparent;
-    border: 1px solid var(--inverse-border);
+  .contact .primaryAction {
+    color: var(--brand-foreground);
+    background: var(--brand);
   }
-
-  .contact .showroom:hover {
-    background: var(--inverse-control);
-    border-color: color-mix(
-      in srgb,
-      var(--inverse-foreground) 45%,
-      transparent
-    );
+  .contact .primaryAction:hover {
+    color: var(--brand-hover-foreground);
+    background: var(--lead-site-accent-hover);
   }
-
-  .header a:focus-visible {
-    outline: 2px solid var(--inverse-foreground);
-    outline-offset: 3px;
+  .contact .primaryAction:active {
+    color: var(--brand-active-foreground);
+    background: var(--lead-site-accent-active);
+  }
+  .header a:focus-visible,
+  .contact .action:focus-visible {
+    outline: var(--desktop-focus-width) solid var(--ring);
+    outline-offset: var(--desktop-focus-offset);
   }
 }
 
-@media (min-width: 1024px) and (max-width: 1199px) {
+@media (min-width: 1024px) and (max-width: 1279px) {
   .nav {
-    gap: 0.75rem;
+    gap: calc(var(--spacing) * 6);
   }
-
   .brand {
-    width: 9rem;
+    width: calc(var(--spacing) * 35);
   }
-
-  .segments a,
-  .contact a {
-    padding-inline: 0.625rem;
+  .segments {
+    gap: calc(var(--spacing) * 6);
   }
-
-  .contact a[href^="tel:"] span {
-    display: none;
+  .segments :is(a, .moreTrigger) {
+    padding-inline: 0;
+  }
+  .contact {
+    gap: calc(var(--spacing) * 2);
   }
 }

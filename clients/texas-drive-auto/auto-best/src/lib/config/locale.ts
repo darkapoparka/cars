@@ -23,13 +23,17 @@ export const dealerLocalizedText = {
     "city": "Dallas",
     "addressLine": "10511 Olympic Drive, Dallas, TX 75220",
     "address": "10511 Olympic Drive, Dallas, TX 75220",
-    "appointment": "Monday–Saturday 10 AM–6 PM; Sunday closed"
+    "appointment": "Monday–Saturday 10 AM–6 PM; Sunday closed",
+    "addressShort": "10511 Olympic Drive, Dallas, TX 75220",
+    "appointmentShort": "Monday–Saturday 10 AM–6 PM; Sunday closed"
   },
   "bg": {
     "city": "Далас",
     "addressLine": "10511 Olympic Drive, Dallas, TX 75220",
     "address": "10511 Olympic Drive, Dallas, TX 75220",
-    "appointment": "Понеделник–събота 10:00–18:00; неделя почивен ден"
+    "appointment": "Понеделник–събота 10:00–18:00; неделя почивен ден",
+    "addressShort": "10511 Olympic Drive, Dallas, TX 75220",
+    "appointmentShort": "Понеделник–събота 10:00–18:00; неделя почивен ден"
   }
 } as const;
 

@@ -1,200 +1,316 @@
 import type { DealerInventoryCopy } from "../lead-site";
-/** Reviewed text for the existing sample stock only. */
+/** Dealer-owned display copy from the exact personalized listing set. */
 export const inventoryCopy = {
-  "bmw-x5-m50d-sofia-2020": {
-    sourceDescription:
-      "Примерна обява за BMW X5 M50d с 360 камери, панорама, HUD и обдухване. Снимката е илюстративна; наличност и условия се потвърждават с автокъщата.",
-    bg: {
-      description:
-        "Примерна обява за BMW X5 M50d с 360 камери, панорама, HUD и обдухване. Снимката е илюстративна; наличност и условия се потвърждават с автокъщата.",
-      imageAlts: ["Черен BMW X5 SUV"],
+  "toyota-rav4-hybrid-2024-21788444587626928": {
+    "sourceDescription": "Toyota Rav4 HYBRID, 2024 г., хибрид, 14 000 км. За актуална наличност, оборудване и условия се свържете с АСКО 96.",
+    "en": {
+      "description": "Toyota Rav4 HYBRID, 2024, hybrid, 14 000 km. Contact ASKO96 for current availability, equipment and terms.",
+      "imageAlts": [
+        "Toyota Rav4 HYBRID"
+      ]
     },
-    en: {
-      description:
-        "Sample listing for a BMW X5 M50d with 360-degree cameras, panoramic roof, head-up display and ventilated seats. The image is illustrative; availability and terms must be confirmed with the dealership.",
-      imageAlts: ["Black BMW X5 SUV"],
-    },
+    "bg": {
+      "description": "Toyota Rav4 HYBRID, 2024 г., хибрид, 14 000 км. За актуална наличност, оборудване и условия се свържете с АСКО 96.",
+      "imageAlts": [
+        "Toyota Rav4 HYBRID"
+      ]
+    }
   },
-  "mercedes-benz-gls-400d-4matic-amg-sofia-2021": {
-    sourceDescription:
-      "GLS 400d 4MATIC AMG Line с Burmester и панорама. Голям семеен SUV от АСКО 96 - наличен за оглед в София.",
-    bg: {
-      description:
-        "GLS 400d 4MATIC AMG Line с Burmester и панорама. Голям семеен SUV от {shortName} - наличен за оглед в {city}.",
-      imageAlts: ["Mercedes-Benz GLS 4MATIC AMG SUV"],
+  "audi-a7-s-line-2011-11788418194310981": {
+    "sourceDescription": "Audi A7 S-LINE, 2011 г., бензин, 211 000 км. За актуална наличност, оборудване и условия се свържете с АСКО 96.",
+    "en": {
+      "description": "Audi A7 S-LINE, 2011, petrol, 211 000 km. Contact ASKO96 for current availability, equipment and terms.",
+      "imageAlts": [
+        "Audi A7 S-LINE",
+        "Audi A7 S-LINE",
+        "Audi A7 S-LINE",
+        "Audi A7 S-LINE"
+      ]
     },
-    en: {
-      description:
-        "GLS 400d 4MATIC AMG Line with Burmester audio and a panoramic roof. A large family SUV from {shortName}, available to view in {city}.",
-      imageAlts: ["Mercedes-Benz GLS 4MATIC AMG SUV"],
-    },
+    "bg": {
+      "description": "Audi A7 S-LINE, 2011 г., бензин, 211 000 км. За актуална наличност, оборудване и условия се свържете с АСКО 96.",
+      "imageAlts": [
+        "Audi A7 S-LINE",
+        "Audi A7 S-LINE",
+        "Audi A7 S-LINE",
+        "Audi A7 S-LINE"
+      ]
+    }
   },
-  "bmw-750e-xdrive-m-sport-sofia-2024": {
-    sourceDescription:
-      "Очакван внос: 7 Series plug-in hybrid с M Sport. Нисък пробег - АСКО 96 организира доставка и оглед в София.",
-    bg: {
-      description:
-        "Очакван внос: 7 Series plug-in hybrid с M Sport. Нисък пробег - {shortName} организира доставка и оглед в {city}.",
-      imageAlts: ["BMW 7 Series"],
+  "mercedes-benz-glc-coupe-350amg-2018-21788361724092359": {
+    "sourceDescription": "Mercedes-Benz GLC Coupe 350AMG, 2018 г., дизел, 179 200 км. За актуална наличност, оборудване и условия се свържете с АСКО 96.",
+    "en": {
+      "description": "Mercedes-Benz GLC Coupe 350AMG, 2018, diesel, 179 200 km. Contact ASKO96 for current availability, equipment and terms.",
+      "imageAlts": [
+        "Mercedes-Benz GLC Coupe 350AMG",
+        "Mercedes-Benz GLC Coupe 350AMG",
+        "Mercedes-Benz GLC Coupe 350AMG",
+        "Mercedes-Benz GLC Coupe 350AMG"
+      ]
     },
-    en: {
-      description:
-        "Expected import: 7 Series plug-in hybrid with M Sport. Low mileage; {shortName} arranges delivery and viewing in {city}.",
-      imageAlts: ["BMW 7 Series"],
-    },
+    "bg": {
+      "description": "Mercedes-Benz GLC Coupe 350AMG, 2018 г., дизел, 179 200 км. За актуална наличност, оборудване и условия се свържете с АСКО 96.",
+      "imageAlts": [
+        "Mercedes-Benz GLC Coupe 350AMG",
+        "Mercedes-Benz GLC Coupe 350AMG",
+        "Mercedes-Benz GLC Coupe 350AMG",
+        "Mercedes-Benz GLC Coupe 350AMG"
+      ]
+    }
   },
-  "mercedes-benz-e-63-s-amg-sofia-2021": {
-    sourceDescription:
-      "E 63 S AMG facelift с 360, HUD и Burmester. Спортна лимузина от АСКО 96.",
-    bg: {
-      description:
-        "E 63 S AMG facelift с 360, HUD и Burmester. Спортна лимузина от {dealer}.",
-      imageAlts: ["Mercedes-Benz E-Class седан"],
+  "mercedes-benz-gls-400-amg-2020-21788340495159936": {
+    "sourceDescription": "Mercedes-Benz GLS 400 AMG, 2020 г., дизел, 135 141 км. За актуална наличност, оборудване и условия се свържете с АСКО 96.",
+    "en": {
+      "description": "Mercedes-Benz GLS 400 AMG, 2020, diesel, 135 141 km. Contact ASKO96 for current availability, equipment and terms.",
+      "imageAlts": [
+        "Mercedes-Benz GLS 400 AMG",
+        "Mercedes-Benz GLS 400 AMG",
+        "Mercedes-Benz GLS 400 AMG",
+        "Mercedes-Benz GLS 400 AMG"
+      ]
     },
-    en: {
-      description:
-        "Facelift E 63 S AMG with 360-degree cameras, head-up display and Burmester audio. A sports saloon from {dealer}.",
-      imageAlts: ["Mercedes-Benz E-Class saloon"],
-    },
+    "bg": {
+      "description": "Mercedes-Benz GLS 400 AMG, 2020 г., дизел, 135 141 км. За актуална наличност, оборудване и условия се свържете с АСКО 96.",
+      "imageAlts": [
+        "Mercedes-Benz GLS 400 AMG",
+        "Mercedes-Benz GLS 400 AMG",
+        "Mercedes-Benz GLS 400 AMG",
+        "Mercedes-Benz GLS 400 AMG"
+      ]
+    }
   },
-  "mercedes-benz-cls-400d-4matic-sofia-2020": {
-    sourceDescription:
-      "CLS 400d 4MATIC AMG Line Designo с 360 камери. Елегантно купе-седан от АСКО 96 в София.",
-    bg: {
-      description:
-        "CLS 400d 4MATIC AMG Line Designo с 360 камери. Елегантно купе-седан от {shortName} в {city}.",
-      imageAlts: ["Mercedes CLS"],
+  "mini-countryman-all4-2014-11788268077076934": {
+    "sourceDescription": "Mini Countryman ALL4, 2014 г., бензин, 205 000 км. За актуална наличност, оборудване и условия се свържете с АСКО 96.",
+    "en": {
+      "description": "Mini Countryman ALL4, 2014, petrol, 205 000 km. Contact ASKO96 for current availability, equipment and terms.",
+      "imageAlts": [
+        "Mini Countryman ALL4",
+        "Mini Countryman ALL4",
+        "Mini Countryman ALL4",
+        "Mini Countryman ALL4"
+      ]
     },
-    en: {
-      description:
-        "CLS 400d 4MATIC AMG Line Designo with 360-degree cameras. An elegant four-door coupe from {shortName} in {city}.",
-      imageAlts: ["Mercedes CLS"],
-    },
+    "bg": {
+      "description": "Mini Countryman ALL4, 2014 г., бензин, 205 000 км. За актуална наличност, оборудване и условия се свържете с АСКО 96.",
+      "imageAlts": [
+        "Mini Countryman ALL4",
+        "Mini Countryman ALL4",
+        "Mini Countryman ALL4",
+        "Mini Countryman ALL4"
+      ]
+    }
   },
-  "audi-q8-50-tdi-quattro-s-line-sofia-2021": {
-    sourceDescription:
-      "Очакван внос: Q8 50 TDI quattro S line Plus. Купе-SUV с quattro за клиенти на АСКО 96.",
-    bg: {
-      description:
-        "Очакван внос: Q8 50 TDI quattro S line Plus. Купе-SUV с quattro за клиенти на {shortName}.",
-      imageAlts: ["Audi Q8"],
+  "audi-sq7-ful-led-2018-21787916905998235": {
+    "sourceDescription": "Audi SQ7 FUL LED, 2018 г., дизел, 170 000 км. За актуална наличност, оборудване и условия се свържете с АСКО 96.",
+    "en": {
+      "description": "Audi SQ7 FUL LED, 2018, diesel, 170 000 km. Contact ASKO96 for current availability, equipment and terms.",
+      "imageAlts": [
+        "Audi SQ7 FUL LED",
+        "Audi SQ7 FUL LED",
+        "Audi SQ7 FUL LED",
+        "Audi SQ7 FUL LED"
+      ]
     },
-    en: {
-      description:
-        "Expected import: Q8 50 TDI quattro S line Plus. A coupe-SUV with quattro for {shortName} customers.",
-      imageAlts: ["Audi Q8"],
-    },
+    "bg": {
+      "description": "Audi SQ7 FUL LED, 2018 г., дизел, 170 000 км. За актуална наличност, оборудване и условия се свържете с АСКО 96.",
+      "imageAlts": [
+        "Audi SQ7 FUL LED",
+        "Audi SQ7 FUL LED",
+        "Audi SQ7 FUL LED",
+        "Audi SQ7 FUL LED"
+      ]
+    }
   },
-  "mercedes-benz-gle-400d-coupe-sofia-2021": {
-    sourceDescription:
-      "GLE 400d Coupe 4MATIC AMG с 360 и Burmester. Наличен при АСКО 96 - София.",
-    bg: {
-      description:
-        "GLE 400d Coupe 4MATIC AMG с 360 и Burmester. Наличен при {dealer} - {city}.",
-      imageAlts: ["Черен Mercedes-Benz GLE SUV"],
+  "citroen-c5x-plug-in-2022-11787665314733489": {
+    "sourceDescription": "Citroen C5X PLUG IN, 2022 г., електрически, 162 000 км. За актуална наличност, оборудване и условия се свържете с АСКО 96.",
+    "en": {
+      "description": "Citroen C5X PLUG IN, 2022, electric, 162 000 km. Contact ASKO96 for current availability, equipment and terms.",
+      "imageAlts": [
+        "Citroen C5X PLUG IN",
+        "Citroen C5X PLUG IN",
+        "Citroen C5X PLUG IN",
+        "Citroen C5X PLUG IN"
+      ]
     },
-    en: {
-      description:
-        "GLE 400d Coupe 4MATIC AMG with 360-degree cameras and Burmester audio. Available from {dealer} in {city}.",
-      imageAlts: ["Black Mercedes-Benz GLE SUV"],
-    },
+    "bg": {
+      "description": "Citroen C5X PLUG IN, 2022 г., електрически, 162 000 км. За актуална наличност, оборудване и условия се свържете с АСКО 96.",
+      "imageAlts": [
+        "Citroen C5X PLUG IN",
+        "Citroen C5X PLUG IN",
+        "Citroen C5X PLUG IN",
+        "Citroen C5X PLUG IN"
+      ]
+    }
   },
-  "mercedes-benz-gle-53-amg-coupe-sofia-2022": {
-    sourceDescription:
-      "Очакван внос: GLE 53 AMG Coupe Night Pack. АСКО 96 предлага собствен лизинг след оглед.",
-    bg: {
-      description:
-        "Очакван внос: GLE 53 AMG Coupe Night Pack. {shortName} предлага собствен лизинг след оглед.",
-      imageAlts: ["Бял Mercedes-Benz GLE AMG SUV"],
+  "audi-a5-s-line-plus-2012-11787664720233597": {
+    "sourceDescription": "Audi A5 S-LINE PLUS, 2012 г., дизел, 230 000 км. За актуална наличност, оборудване и условия се свържете с АСКО 96.",
+    "en": {
+      "description": "Audi A5 S-LINE PLUS, 2012, diesel, 230 000 km. Contact ASKO96 for current availability, equipment and terms.",
+      "imageAlts": [
+        "Audi A5 S-LINE PLUS",
+        "Audi A5 S-LINE PLUS",
+        "Audi A5 S-LINE PLUS",
+        "Audi A5 S-LINE PLUS"
+      ]
     },
-    en: {
-      description:
-        "Expected import: GLE 53 AMG Coupe Night Pack. {shortName} offers in-house leasing after a viewing.",
-      imageAlts: ["White Mercedes-Benz GLE AMG SUV"],
-    },
+    "bg": {
+      "description": "Audi A5 S-LINE PLUS, 2012 г., дизел, 230 000 км. За актуална наличност, оборудване и условия се свържете с АСКО 96.",
+      "imageAlts": [
+        "Audi A5 S-LINE PLUS",
+        "Audi A5 S-LINE PLUS",
+        "Audi A5 S-LINE PLUS",
+        "Audi A5 S-LINE PLUS"
+      ]
+    }
   },
-  "mercedes-benz-s-350d-long-amg-sofia-2019": {
-    sourceDescription:
-      "S 350d Long с S63 AMG оптика и пакет за шофьор. Представителна лимузина от АСКО 96.",
-    bg: {
-      description:
-        "S 350d Long с S63 AMG оптика и пакет за шофьор. Представителна лимузина от {shortName}.",
-      imageAlts: ["Mercedes-Benz S-Class седан"],
+  "mercedes-benz-e-220-amg-2016-11787318670316786": {
+    "sourceDescription": "Mercedes-Benz E 220 AMG, 2016 г., дизел, 195 530 км. За актуална наличност, оборудване и условия се свържете с АСКО 96.",
+    "en": {
+      "description": "Mercedes-Benz E 220 AMG, 2016, diesel, 195 530 km. Contact ASKO96 for current availability, equipment and terms.",
+      "imageAlts": [
+        "Mercedes-Benz E 220 AMG"
+      ]
     },
-    en: {
-      description:
-        "S 350d Long with S63 AMG styling and a chauffeur package. An executive saloon from {shortName}.",
-      imageAlts: ["Mercedes-Benz S-Class saloon"],
-    },
+    "bg": {
+      "description": "Mercedes-Benz E 220 AMG, 2016 г., дизел, 195 530 км. За актуална наличност, оборудване и условия се свържете с АСКО 96.",
+      "imageAlts": [
+        "Mercedes-Benz E 220 AMG"
+      ]
+    }
   },
-  "mercedes-benz-v-250d-vip-business-sofia-2018": {
-    sourceDescription:
-      "V 250d VIP Business с TV, обдухване и подгряване. Бизнес ван от АСКО 96.",
-    bg: {
-      description:
-        "V 250d VIP Business с TV, обдухване и подгряване. Бизнес ван от {dealer}.",
-      imageAlts: ["V-Class ван"],
+  "mercedes-benz-s-680-l-2024-11787292903991160": {
+    "sourceDescription": "Mercedes-Benz S 680 L, 2024 г., бензин, 140 000 км. За актуална наличност, оборудване и условия се свържете с АСКО 96.",
+    "en": {
+      "description": "Mercedes-Benz S 680 L, 2024, petrol, 140 000 km. Contact ASKO96 for current availability, equipment and terms.",
+      "imageAlts": [
+        "Mercedes-Benz S 680 L"
+      ]
     },
-    en: {
-      description:
-        "V 250d VIP Business with TV, ventilated and heated seats. A business van from {dealer}.",
-      imageAlts: ["V-Class van"],
-    },
+    "bg": {
+      "description": "Mercedes-Benz S 680 L, 2024 г., бензин, 140 000 км. За актуална наличност, оборудване и условия се свържете с АСКО 96.",
+      "imageAlts": [
+        "Mercedes-Benz S 680 L"
+      ]
+    }
   },
-  "range-rover-sport-svr-sofia-2021": {
-    sourceDescription:
-      "Range Rover Sport SVR 600 к.с. с панорама, 360 и Meridian. Висок клас SUV от АСКО 96.",
-    bg: {
-      description:
-        "Range Rover Sport SVR 600 к.с. с панорама, 360 и Meridian. Висок клас SUV от {shortName}.",
-      imageAlts: ["Range Rover Sport"],
+  "mercedes-benz-s-500-l-2015-11787147161945133": {
+    "sourceDescription": "Mercedes-Benz S 500 L, 2015 г., бензин, 173 291 км. За актуална наличност, оборудване и условия се свържете с АСКО 96.",
+    "en": {
+      "description": "Mercedes-Benz S 500 L, 2015, petrol, 173 291 km. Contact ASKO96 for current availability, equipment and terms.",
+      "imageAlts": [
+        "Mercedes-Benz S 500 L",
+        "Mercedes-Benz S 500 L",
+        "Mercedes-Benz S 500 L",
+        "Mercedes-Benz S 500 L"
+      ]
     },
-    en: {
-      description:
-        "Range Rover Sport SVR, 600 hp, with a panoramic roof, 360-degree cameras and Meridian audio. A premium SUV from {shortName}.",
-      imageAlts: ["Range Rover Sport"],
-    },
+    "bg": {
+      "description": "Mercedes-Benz S 500 L, 2015 г., бензин, 173 291 км. За актуална наличност, оборудване и условия се свържете с АСКО 96.",
+      "imageAlts": [
+        "Mercedes-Benz S 500 L",
+        "Mercedes-Benz S 500 L",
+        "Mercedes-Benz S 500 L",
+        "Mercedes-Benz S 500 L"
+      ]
+    }
   },
-  "bmw-430i-xdrive-gran-coupe-sofia-2023": {
-    sourceDescription:
-      "430i xDrive Gran Coupe M Sport с digital кокпит и Harman Kardon. АСКО 96, София.",
-    bg: {
-      description:
-        "430i xDrive Gran Coupe M Sport с digital кокпит и Harman Kardon. {shortName}, {city}.",
-      imageAlts: ["BMW 4 Series"],
+  "mini-countryman-sd-2018-21787145927135700": {
+    "sourceDescription": "Mini Countryman SD, 2018 г., дизел, 190 582 км. За актуална наличност, оборудване и условия се свържете с АСКО 96.",
+    "en": {
+      "description": "Mini Countryman SD, 2018, diesel, 190 582 km. Contact ASKO96 for current availability, equipment and terms.",
+      "imageAlts": [
+        "Mini Countryman SD",
+        "Mini Countryman SD",
+        "Mini Countryman SD",
+        "Mini Countryman SD"
+      ]
     },
-    en: {
-      description:
-        "430i xDrive Gran Coupe M Sport with a digital cockpit and Harman Kardon audio. {shortName}, {city}.",
-      imageAlts: ["BMW 4 Series"],
-    },
+    "bg": {
+      "description": "Mini Countryman SD, 2018 г., дизел, 190 582 км. За актуална наличност, оборудване и условия се свържете с АСКО 96.",
+      "imageAlts": [
+        "Mini Countryman SD",
+        "Mini Countryman SD",
+        "Mini Countryman SD",
+        "Mini Countryman SD"
+      ]
+    }
   },
-  "bmw-m4-competition-sofia-2021": {
-    sourceDescription:
-      "BMW M4 Competition с M пакет, спортен салон и digital кокпит. Купе от портфолиото на АСКО 96.",
-    bg: {
-      description:
-        "BMW M4 Competition с M пакет, спортен салон и digital кокпит. Купе от портфолиото на {dealer}.",
-      imageAlts: ["Червено BMW M4 Competition пред модерен шоурум"],
+  "porsche-cayenne-s-2018-21786786821064251": {
+    "sourceDescription": "Porsche Cayenne S, 2018 г., бензин, 165 009 км. За актуална наличност, оборудване и условия се свържете с АСКО 96.",
+    "en": {
+      "description": "Porsche Cayenne S, 2018, petrol, 165 009 km. Contact ASKO96 for current availability, equipment and terms.",
+      "imageAlts": [
+        "Porsche Cayenne S",
+        "Porsche Cayenne S",
+        "Porsche Cayenne S",
+        "Porsche Cayenne S"
+      ]
     },
-    en: {
-      description:
-        "BMW M4 Competition with M package, sports interior and digital cockpit. A coupe from the {dealer} collection.",
-      imageAlts: ["Red BMW M4 Competition in front of a modern showroom"],
-    },
+    "bg": {
+      "description": "Porsche Cayenne S, 2018 г., бензин, 165 009 км. За актуална наличност, оборудване и условия се свържете с АСКО 96.",
+      "imageAlts": [
+        "Porsche Cayenne S",
+        "Porsche Cayenne S",
+        "Porsche Cayenne S",
+        "Porsche Cayenne S"
+      ]
+    }
   },
-  "bmw-x5-xdrive40d-berlin-2022": {
-    sourceDescription:
-      "Крос-бордер демо наличност с оторизирани медии и право на доставка. Финалният транспорт, данъци и регистрация се уточняват с оферта от АСКО 96.",
-    bg: {
-      description:
-        "Крос-бордер демо наличност с оторизирани медии и право на доставка. Финалният транспорт, данъци и регистрация се уточняват с оферта от {shortName}.",
-      imageAlts: ["Черен BMW X5 SUV в градска среда"],
+  "jeep-compass-4x4-2019-21786778589147860": {
+    "sourceDescription": "Jeep Compass 4x4, 2019 г., дизел, 181 889 км. За актуална наличност, оборудване и условия се свържете с АСКО 96.",
+    "en": {
+      "description": "Jeep Compass 4x4, 2019, diesel, 181 889 km. Contact ASKO96 for current availability, equipment and terms.",
+      "imageAlts": [
+        "Jeep Compass 4x4",
+        "Jeep Compass 4x4",
+        "Jeep Compass 4x4",
+        "Jeep Compass 4x4"
+      ]
     },
-    en: {
-      description:
-        "Cross-border demo inventory with authorized images and delivery rights. Final transport, tax and registration costs are confirmed in a quote from {shortName}.",
-      imageAlts: ["Black BMW X5 SUV in an urban setting"],
-    },
+    "bg": {
+      "description": "Jeep Compass 4x4, 2019 г., дизел, 181 889 км. За актуална наличност, оборудване и условия се свържете с АСКО 96.",
+      "imageAlts": [
+        "Jeep Compass 4x4",
+        "Jeep Compass 4x4",
+        "Jeep Compass 4x4",
+        "Jeep Compass 4x4"
+      ]
+    }
   },
+  "bmw-x3-40d-2022-21786540153108868": {
+    "sourceDescription": "BMW X3 М40D, 2022 г., дизел, 90 800 км. За актуална наличност, оборудване и условия се свържете с АСКО 96.",
+    "en": {
+      "description": "BMW X3 М40D, 2022, diesel, 90 800 km. Contact ASKO96 for current availability, equipment and terms.",
+      "imageAlts": [
+        "BMW X3 М40D"
+      ]
+    },
+    "bg": {
+      "description": "BMW X3 М40D, 2022 г., дизел, 90 800 км. За актуална наличност, оборудване и условия се свържете с АСКО 96.",
+      "imageAlts": [
+        "BMW X3 М40D"
+      ]
+    }
+  },
+  "bmw-550-m-2013-11786173977658651": {
+    "sourceDescription": "BMW 550 M, 2013 г., дизел, 184 120 км. За актуална наличност, оборудване и условия се свържете с АСКО 96.",
+    "en": {
+      "description": "BMW 550 M, 2013, diesel, 184 120 km. Contact ASKO96 for current availability, equipment and terms.",
+      "imageAlts": [
+        "BMW 550 M",
+        "BMW 550 M",
+        "BMW 550 M",
+        "BMW 550 M"
+      ]
+    },
+    "bg": {
+      "description": "BMW 550 M, 2013 г., дизел, 184 120 км. За актуална наличност, оборудване и условия се свържете с АСКО 96.",
+      "imageAlts": [
+        "BMW 550 M",
+        "BMW 550 M",
+        "BMW 550 M",
+        "BMW 550 M"
+      ]
+    }
+  }
 } satisfies DealerInventoryCopy;

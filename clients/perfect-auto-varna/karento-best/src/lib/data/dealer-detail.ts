@@ -36,6 +36,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "valueKey": "fuel.diesel"
       },
       {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2006",
+        "labelKey": "vehicle.field.year"
+      },
+      {
         "id": "lit",
         "icon": "/assets/imgs/page/car/lit.svg",
         "value": "224 hp",
@@ -162,6 +168,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2015",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -297,6 +309,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2022",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -436,6 +454,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "valueKey": "fuel.hybrid"
       },
       {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2026",
+        "labelKey": "vehicle.field.year"
+      },
+      {
         "id": "lit",
         "icon": "/assets/imgs/page/car/lit.svg",
         "value": "304 hp",
@@ -573,6 +597,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "valueKey": "fuel.diesel"
       },
       {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2022",
+        "labelKey": "vehicle.field.year"
+      },
+      {
         "id": "lit",
         "icon": "/assets/imgs/page/car/lit.svg",
         "value": "286 hp",
@@ -707,6 +737,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Petrol",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.gasoline"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2016",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",

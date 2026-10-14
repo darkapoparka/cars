@@ -5,12 +5,12 @@
   "name": "LEGEND AUTO",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "cc130e432a41a3a60cc80bc2b3461c6416893b4a",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
     "path": "templates/karento-best",
-    "digest": "bf8c6628be5f28b7e3358b121b7cf9e236d36a2fc0138bf640d72113c7e17f30",
-    "tree": "c661129affb32649c8fcecea097fc9a6487783d0"
+    "digest": "83056967764a686f3737d74b86c5db51c1385a50184853f50ec4ade80c1dd44f",
+    "tree": "5f6eec8efb2f9e99819f7f0c2f743d18fff7b134"
   },
-  "sourceDigest": "d78bb087cc84d3b048d9b67c1d671dd251b3dd5fc585d7ea2038d04623786950",
+  "sourceDigest": "c74884ee1270f6b23585bdc9b5b475822f8ee85790da9240689783054c5de6e4",
   "inventory": {
     "mode": "dated-listing-snapshot",
     "count": 14,
@@ -105,6 +105,9 @@
       "karento-best/src/lib/pages/cars-details-3.svelte",
       "karento-best/src/lib/components/vehicle-detail/VehicleReservationCard.svelte",
       "karento-best/src/lib/components/vehicle-detail/VehicleDetailPanels.svelte",
+      "karento-best/src/lib/components/ServiceSpotCard.svelte",
+      "karento-best/src/lib/sections/HomeBrandLinks.svelte",
+      "karento-best/src/lib/i18n/catalogs/reference-home.ts",
       "karento-best/src/lib/data/editorial.ts",
       "karento-best/src/lib/data/home-stories.ts",
       "karento-best/src/lib/cards/VehicleEditorialCard.svelte",

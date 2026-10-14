@@ -23,13 +23,17 @@ export const dealerLocalizedText = {
     "city": "Sofia",
     "addressLine": "300 Botevgradsko Shose Blvd.",
     "address": "300 Botevgradsko Shose Blvd., Sofia",
-    "appointment": "Monday–Friday: 09:00–18:30; Saturday: 10:00–16:00; Sunday: closed"
+    "appointment": "Monday–Friday: 09:00–18:30; Saturday: 10:00–16:00; Sunday: closed",
+    "addressShort": "300 Botevgradsko Shose Blvd.",
+    "appointmentShort": "Monday–Friday: 09:00–18:30; Saturday: 10:00–16:00; Sunday: closed"
   },
   "bg": {
     "city": "София",
     "addressLine": "бул. „Ботевградско шосе“ 300",
     "address": "бул. „Ботевградско шосе“ 300",
-    "appointment": "Понеделник – петък: 09:00–18:30; Събота: 10:00–16:00; Неделя: почивен ден"
+    "appointment": "Понеделник – петък: 09:00–18:30; Събота: 10:00–16:00; Неделя: почивен ден",
+    "addressShort": "бул. „Ботевградско шосе“ 300",
+    "appointmentShort": "Понеделник – петък: 09:00–18:30; Събота: 10:00–16:00; Неделя: почивен ден"
   }
 } as const;
 

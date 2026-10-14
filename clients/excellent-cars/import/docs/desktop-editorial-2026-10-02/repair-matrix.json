@@ -1,0 +1,1460 @@
+[
+	{
+		"name": "home",
+		"locale": "bg",
+		"width": 1920,
+		"mobile": false,
+		"status": 200,
+		"url": "http://127.0.0.1:6792/bg",
+		"errors": [],
+		"title": "Day Night Auto Group — Автомобили и внос по заявка",
+		"h1": "Купи автомобил",
+		"overflow": -15,
+		"brokenImages": [],
+		"headings": [
+			{
+				"tag": "H1",
+				"text": "Купи автомобил",
+				"href": null,
+				"src": null,
+				"box": [802.3, 126, 300.39, 49.27],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"44px",
+					"600",
+					"49.28px"
+				],
+				"color": "rgb(255, 255, 255)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(255, 255, 255)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Най-нови автомобили",
+				"href": null,
+				"src": null,
+				"box": [292.5, 526, 1320, 36.39],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"28px",
+					"600",
+					"36.4px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Mercedes-Benz GLA 45 AMG 4M AMG Night Package",
+				"href": null,
+				"src": null,
+				"box": [309.5, 797.02, 281, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X3 30e xDrive",
+				"href": null,
+				"src": null,
+				"box": [644.5, 797.02, 281, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW M3 V8 M DCT",
+				"href": null,
+				"src": null,
+				"box": [979.5, 797.02, 281, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW M3 Cabrio M DCT",
+				"href": null,
+				"src": null,
+				"box": [1314.5, 797.02, 281, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H3",
+				"text": "Продай колата си",
+				"href": null,
+				"src": null,
+				"box": [316.5, 1128.59, 294.5, 43.69],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"38px",
+					"600",
+					"43.7px"
+				],
+				"color": "rgb(255, 255, 255)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(255, 255, 255)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H3",
+				"text": "Автомобил на лизинг",
+				"href": null,
+				"src": null,
+				"box": [988.5, 1128.59, 351.44, 43.69],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"38px",
+					"600",
+					"43.7px"
+				],
+				"color": "rgb(255, 255, 255)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(255, 255, 255)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Разгледай по марка",
+				"href": null,
+				"src": null,
+				"box": [292.5, 1428.59, 1320, 36.39],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"28px",
+					"600",
+					"36.4px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Разгледай по тип",
+				"href": null,
+				"src": null,
+				"box": [292.5, 1939.98, 1320, 36.39],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"28px",
+					"600",
+					"36.4px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Day Night Auto Group в YouTube",
+				"href": null,
+				"src": null,
+				"box": [751.44, 2523.38, 402.11, 33.59],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"28px",
+					"600",
+					"33.6px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "10px"
+			},
+			{
+				"tag": "H2",
+				"text": "Клиентски отзиви",
+				"href": null,
+				"src": null,
+				"box": [292.5, 2883.47, 1320, 36.39],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"28px",
+					"600",
+					"36.4px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Полезно за автомобила",
+				"href": null,
+				"src": null,
+				"box": [292.5, 3309.86, 1320, 36.39],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"28px",
+					"600",
+					"36.4px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H3",
+				"text": "Какво проверява DAY NIGHT AUTO GROUP преди внос на автомобил от Европа",
+				"href": null,
+				"src": null,
+				"box": [313.5, 3601.11, 384.66, 50],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"20px",
+					"600",
+					"25px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H3",
+				"text": "Какво означава „готов за регистрация“",
+				"href": null,
+				"src": null,
+				"box": [760.16, 3601.11, 384.67, 50],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"20px",
+					"600",
+					"25px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H3",
+				"text": "Как DAY NIGHT AUTO GROUP преглежда клиентски автомобил",
+				"href": null,
+				"src": null,
+				"box": [1206.83, 3601.11, 384.66, 50],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"20px",
+					"600",
+					"25px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			}
+		]
+	},
+	{
+		"name": "home",
+		"locale": "bg",
+		"width": 320,
+		"mobile": true,
+		"status": 200,
+		"url": "http://127.0.0.1:6792/bg",
+		"errors": [],
+		"title": "Day Night Auto Group — Автомобили и внос по заявка",
+		"h1": "Купи автомобил",
+		"overflow": 0,
+		"brokenImages": [],
+		"headings": [
+			{
+				"tag": "H1",
+				"text": "Купи автомобил",
+				"href": null,
+				"src": null,
+				"box": [15, 91.8, 1, 86.38],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"40px",
+					"600",
+					"43.2px"
+				],
+				"color": "rgb(255, 255, 255)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(255, 255, 255)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Марки",
+				"href": null,
+				"src": null,
+				"box": [14, 597.94, 292, 33.59],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"28px",
+					"600",
+					"33.6px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Типове",
+				"href": null,
+				"src": null,
+				"box": [14, 1149.53, 292, 33.59],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"28px",
+					"600",
+					"33.6px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Day Night Auto Group в YouTube",
+				"href": null,
+				"src": null,
+				"box": [29, 1836.13, 221.11, 21.59],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"21.6px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "6px"
+			},
+			{
+				"tag": "H2",
+				"text": "Клиентски отзиви",
+				"href": null,
+				"src": null,
+				"box": [14, 2064.39, 292, 33.59],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"28px",
+					"600",
+					"33.6px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H3",
+				"text": "Запази консултация",
+				"href": null,
+				"src": null,
+				"box": [30, 2437.56, 177.95, 23],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"20px",
+					"600",
+					"23px"
+				],
+				"color": "rgb(255, 255, 255)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(255, 255, 255)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Полезно за автомобила",
+				"href": null,
+				"src": null,
+				"box": [14, 2605.81, 292, 33.59],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"28px",
+					"600",
+					"33.6px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H3",
+				"text": "Какво проверява DAY NIGHT AUTO GROUP преди внос на автомобил от Европа",
+				"href": null,
+				"src": null,
+				"box": [29, 2840, 226.95, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"17px",
+					"600",
+					"22px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H3",
+				"text": "Какво означава „готов за регистрация“",
+				"href": null,
+				"src": null,
+				"box": [297.95, 2840, 226.95, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"17px",
+					"600",
+					"22px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H3",
+				"text": "Как DAY NIGHT AUTO GROUP преглежда клиентски автомобил",
+				"href": null,
+				"src": null,
+				"box": [566.91, 2840, 226.95, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"17px",
+					"600",
+					"22px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			}
+		]
+	},
+	{
+		"name": "home",
+		"locale": "bg",
+		"width": 390,
+		"mobile": true,
+		"status": 200,
+		"url": "http://127.0.0.1:6792/bg",
+		"errors": [],
+		"title": "Day Night Auto Group — Автомобили и внос по заявка",
+		"h1": "Купи автомобил",
+		"overflow": 0,
+		"brokenImages": [],
+		"headings": [
+			{
+				"tag": "H1",
+				"text": "Купи автомобил",
+				"href": null,
+				"src": null,
+				"box": [15, 91.8, 1, 86.38],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"40px",
+					"600",
+					"43.2px"
+				],
+				"color": "rgb(255, 255, 255)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(255, 255, 255)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Марки",
+				"href": null,
+				"src": null,
+				"box": [14, 630.73, 362, 33.59],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"28px",
+					"600",
+					"33.6px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Типове",
+				"href": null,
+				"src": null,
+				"box": [14, 1182.33, 362, 33.59],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"28px",
+					"600",
+					"33.6px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Day Night Auto Group в YouTube",
+				"href": null,
+				"src": null,
+				"box": [29, 1868.92, 221.11, 21.59],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"21.6px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "6px"
+			},
+			{
+				"tag": "H2",
+				"text": "Клиентски отзиви",
+				"href": null,
+				"src": null,
+				"box": [14, 2131.84, 362, 33.59],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"28px",
+					"600",
+					"33.6px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H3",
+				"text": "Запази консултация",
+				"href": null,
+				"src": null,
+				"box": [30, 2455.42, 201.27, 26.02],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"22.62px",
+					"600",
+					"26.013px"
+				],
+				"color": "rgb(255, 255, 255)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(255, 255, 255)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Полезно за автомобила",
+				"href": null,
+				"src": null,
+				"box": [14, 2663.05, 362, 33.59],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"28px",
+					"600",
+					"33.6px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H3",
+				"text": "Какво проверява DAY NIGHT AUTO GROUP преди внос на автомобил от Европа",
+				"href": null,
+				"src": null,
+				"box": [29, 2931.88, 288.55, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"17px",
+					"600",
+					"22px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H3",
+				"text": "Какво означава „готов за регистрация“",
+				"href": null,
+				"src": null,
+				"box": [359.55, 2931.88, 288.55, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"17px",
+					"600",
+					"22px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H3",
+				"text": "Как DAY NIGHT AUTO GROUP преглежда клиентски автомобил",
+				"href": null,
+				"src": null,
+				"box": [690.09, 2931.88, 288.55, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"17px",
+					"600",
+					"22px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			}
+		]
+	},
+	{
+		"name": "home",
+		"locale": "en",
+		"width": 1920,
+		"mobile": false,
+		"status": 200,
+		"url": "http://127.0.0.1:6792/en",
+		"errors": [],
+		"title": "Day Night Auto Group — Cars and vehicle sourcing",
+		"h1": "Buy a car",
+		"overflow": -15,
+		"brokenImages": [],
+		"headings": [
+			{
+				"tag": "H1",
+				"text": "Buy a car",
+				"href": null,
+				"src": null,
+				"box": [875.27, 126, 154.45, 49.27],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"44px",
+					"600",
+					"49.28px"
+				],
+				"color": "rgb(255, 255, 255)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(255, 255, 255)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Newest Vehicles",
+				"href": null,
+				"src": null,
+				"box": [292.5, 526, 1320, 36.39],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"28px",
+					"600",
+					"36.4px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Mercedes-Benz GLA 45 AMG 4M AMG Night Package",
+				"href": null,
+				"src": null,
+				"box": [309.5, 797.02, 281, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X3 30e xDrive",
+				"href": null,
+				"src": null,
+				"box": [644.5, 797.02, 281, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW M3 V8 M DCT",
+				"href": null,
+				"src": null,
+				"box": [979.5, 797.02, 281, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW M3 Cabrio M DCT",
+				"href": null,
+				"src": null,
+				"box": [1314.5, 797.02, 281, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H3",
+				"text": "Sell your car",
+				"href": null,
+				"src": null,
+				"box": [316.5, 1128.59, 188.67, 43.69],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"38px",
+					"600",
+					"43.7px"
+				],
+				"color": "rgb(255, 255, 255)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(255, 255, 255)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H3",
+				"text": "Finance your next car",
+				"href": null,
+				"src": null,
+				"box": [988.5, 1128.59, 332.36, 43.69],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"38px",
+					"600",
+					"43.7px"
+				],
+				"color": "rgb(255, 255, 255)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(255, 255, 255)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Browse by make",
+				"href": null,
+				"src": null,
+				"box": [292.5, 1428.59, 1320, 36.39],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"28px",
+					"600",
+					"36.4px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Browse by type",
+				"href": null,
+				"src": null,
+				"box": [292.5, 1939.98, 1320, 36.39],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"28px",
+					"600",
+					"36.4px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Day Night Auto Group on YouTube",
+				"href": null,
+				"src": null,
+				"box": [744.39, 2523.38, 416.22, 33.59],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"28px",
+					"600",
+					"33.6px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "10px"
+			},
+			{
+				"tag": "H2",
+				"text": "Customer reviews",
+				"href": null,
+				"src": null,
+				"box": [292.5, 2883.47, 1320, 36.39],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"28px",
+					"600",
+					"36.4px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Guides and advice",
+				"href": null,
+				"src": null,
+				"box": [292.5, 3283.86, 1320, 36.39],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"28px",
+					"600",
+					"36.4px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H3",
+				"text": "What DAY NIGHT AUTO GROUP checks before importing a car from Europe",
+				"href": null,
+				"src": null,
+				"box": [313.5, 3575.11, 384.66, 50],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"20px",
+					"600",
+					"25px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H3",
+				"text": "What does “ready for registration” mean?",
+				"href": null,
+				"src": null,
+				"box": [760.16, 3575.11, 384.67, 50],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"20px",
+					"600",
+					"25px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H3",
+				"text": "How DAY NIGHT AUTO GROUP reviews a customer car",
+				"href": null,
+				"src": null,
+				"box": [1206.83, 3575.11, 384.66, 50],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"20px",
+					"600",
+					"25px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			}
+		]
+	},
+	{
+		"name": "home",
+		"locale": "en",
+		"width": 320,
+		"mobile": true,
+		"status": 200,
+		"url": "http://127.0.0.1:6792/en",
+		"errors": [],
+		"title": "Day Night Auto Group — Cars and vehicle sourcing",
+		"h1": "Buy a car",
+		"overflow": 0,
+		"brokenImages": [],
+		"headings": [
+			{
+				"tag": "H1",
+				"text": "Buy a car",
+				"href": null,
+				"src": null,
+				"box": [15, 91.8, 1, 129.56],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"40px",
+					"600",
+					"43.2px"
+				],
+				"color": "rgb(255, 255, 255)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(255, 255, 255)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Browse by make",
+				"href": null,
+				"src": null,
+				"box": [14, 597.94, 292, 33.59],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"28px",
+					"600",
+					"33.6px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Browse by type",
+				"href": null,
+				"src": null,
+				"box": [14, 1149.53, 292, 33.59],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"28px",
+					"600",
+					"33.6px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Day Night Auto Group on YouTube",
+				"href": null,
+				"src": null,
+				"box": [29, 1836.13, 228.06, 21.59],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"21.6px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "6px"
+			},
+			{
+				"tag": "H2",
+				"text": "Customer reviews",
+				"href": null,
+				"src": null,
+				"box": [14, 2064.39, 292, 33.59],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"28px",
+					"600",
+					"33.6px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H3",
+				"text": "Meet our team",
+				"href": null,
+				"src": null,
+				"box": [30, 2387.97, 119.63, 23],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"20px",
+					"600",
+					"23px"
+				],
+				"color": "rgb(255, 255, 255)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(255, 255, 255)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Guides and advice",
+				"href": null,
+				"src": null,
+				"box": [14, 2556.22, 292, 33.59],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"28px",
+					"600",
+					"33.6px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H3",
+				"text": "What DAY NIGHT AUTO GROUP checks before importing a car from Europe",
+				"href": null,
+				"src": null,
+				"box": [29, 2790.41, 226.95, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"17px",
+					"600",
+					"22px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H3",
+				"text": "What does “ready for registration” mean?",
+				"href": null,
+				"src": null,
+				"box": [297.95, 2790.41, 226.95, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"17px",
+					"600",
+					"22px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H3",
+				"text": "How DAY NIGHT AUTO GROUP reviews a customer car",
+				"href": null,
+				"src": null,
+				"box": [566.91, 2790.41, 226.95, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"17px",
+					"600",
+					"22px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			}
+		]
+	},
+	{
+		"name": "home",
+		"locale": "en",
+		"width": 390,
+		"mobile": true,
+		"status": 200,
+		"url": "http://127.0.0.1:6792/en",
+		"errors": [],
+		"title": "Day Night Auto Group — Cars and vehicle sourcing",
+		"h1": "Buy a car",
+		"overflow": 0,
+		"brokenImages": [],
+		"headings": [
+			{
+				"tag": "H1",
+				"text": "Buy a car",
+				"href": null,
+				"src": null,
+				"box": [15, 91.8, 1, 129.56],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"40px",
+					"600",
+					"43.2px"
+				],
+				"color": "rgb(255, 255, 255)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(255, 255, 255)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Browse by make",
+				"href": null,
+				"src": null,
+				"box": [14, 630.73, 362, 33.59],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"28px",
+					"600",
+					"33.6px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Browse by type",
+				"href": null,
+				"src": null,
+				"box": [14, 1182.33, 362, 33.59],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"28px",
+					"600",
+					"33.6px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Day Night Auto Group on YouTube",
+				"href": null,
+				"src": null,
+				"box": [29, 1868.92, 228.06, 21.59],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"21.6px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "6px"
+			},
+			{
+				"tag": "H2",
+				"text": "Customer reviews",
+				"href": null,
+				"src": null,
+				"box": [14, 2131.84, 362, 33.59],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"28px",
+					"600",
+					"33.6px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H3",
+				"text": "Meet our team",
+				"href": null,
+				"src": null,
+				"box": [30, 2430.63, 135.3, 26.02],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"22.62px",
+					"600",
+					"26.013px"
+				],
+				"color": "rgb(255, 255, 255)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(255, 255, 255)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Guides and advice",
+				"href": null,
+				"src": null,
+				"box": [14, 2638.25, 362, 33.59],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"28px",
+					"600",
+					"33.6px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H3",
+				"text": "What DAY NIGHT AUTO GROUP checks before importing a car from Europe",
+				"href": null,
+				"src": null,
+				"box": [29, 2907.08, 288.55, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"17px",
+					"600",
+					"22px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H3",
+				"text": "What does “ready for registration” mean?",
+				"href": null,
+				"src": null,
+				"box": [359.55, 2907.08, 288.55, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"17px",
+					"600",
+					"22px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H3",
+				"text": "How DAY NIGHT AUTO GROUP reviews a customer car",
+				"href": null,
+				"src": null,
+				"box": [690.09, 2907.08, 288.55, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"17px",
+					"600",
+					"22px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			}
+		]
+	}
+]

@@ -1,3 +1,12 @@
+/* Pinned official Inter v4.1; Vite bundles this local file with a content hash. */
+@font-face {
+  font-family: 'Inter Variable';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('./fonts/InterVariable-v4.1.woff2') format('woff2');
+}
+
 :root {
   /* Foundation colors and semantic surface roles. */
   --dn-focus: #0b57d0;
@@ -55,6 +64,8 @@
   --dn-space-8: 32px;
   --dn-control-height-compact: 40px;
   --dn-control-height-default: 44px;
+  --dn-control-height-entry-mobile: 48px;
+  --dn-control-height-prominent: 52px;
   --dn-control-height-editor: var(--dn-control-height-default);
   --dn-compact-control-visual-height: var(--dn-control-height-compact);
   --dn-compact-control-inset: calc((var(--dn-control-height-default) - var(--dn-compact-control-visual-height)) / 2);
@@ -65,9 +76,11 @@
   /* Responsive shell aliases. */
   --dn-mobile-canvas: var(--dn-surface-canvas);
   --dn-mobile-surface: var(--dn-surface-raised);
-  /* Page clearance includes the fixed bar and separation from page actions. */
-  --dn-mobile-nav-height: calc(var(--dn-mobile-nav-bar-height) + 16px);
-  --dn-mobile-nav-bar-height: max(60px, calc(24px + 0.975rem + 12px));
+  /* Page clearance includes the dock, its offset and separation from page actions. */
+  --dn-mobile-nav-gutter: var(--dn-space-3);
+  --dn-mobile-nav-offset: var(--dn-space-2);
+  --dn-mobile-nav-height: calc(var(--dn-mobile-nav-bar-height) + var(--dn-mobile-nav-offset) + var(--dn-space-4));
+  --dn-mobile-nav-bar-height: max(52px, calc(24px + 0.975rem + 8px));
   --dn-mobile-detail-bar-height: max(60px, calc(2.75rem + 16px));
   --dn-mobile-page-end: var(--dn-space-4);
   --dn-radius-control: 12px;
@@ -75,6 +88,25 @@
   --dn-radius-sm: 10px;
   --dn-radius: 16px;
   --dn-radius-lg: 20px;
+  --dn-radius-sheet: 24px;
+  /* Corner roles retain the reviewed desktop geometry. */
+  --dn-radius-focus: 2px;
+  --dn-radius-badge: 4px;
+  --dn-radius-media: 8px;
+  --dn-radius-compact: 14px;
+  --dn-radius-panel: 18px;
+  --dn-radius-dialog: 22px;
+  --dn-radius-footer: 40px;
+  --dn-radius-circle: 50%;
+  --dn-radius-locale-control: 0.65rem;
+  --dn-radius-card: var(--dn-radius);
+  --dn-radius-card-inset: calc(var(--dn-radius-card) - 1px);
+  --dn-radius-mobile-card: 12px;
+  --dn-radius-entry-card: var(--dn-radius-lg);
+  --dn-radius-content-card: var(--dn-radius-lg);
+  --dn-radius-service-card: var(--dn-radius-sheet);
+  --dn-radius-discovery-card: var(--dn-radius-compact);
+  --dn-radius-showroom: var(--dn-radius-panel);
   --dn-route-hero-compact: 520px;
   --dn-mobile-entry-hero-height: 252px;
   --dn-route-hero-controls: 560px;
@@ -86,6 +118,7 @@
   --dn-radius-button: var(--dn-pill);
   --dn-shadow: 0 18px 50px rgba(16, 24, 40, 0.14);
   --dn-card-shadow: 0 2px 10px rgb(32 35 41 / 7%);
+  --dn-card-shadow-subtle: 0 2px 12px rgb(20 23 29 / 3%);
   --dn-card-hover-shadow: 0 8px 20px rgb(32 35 41 / 10%);
   --dn-content: 1360px;
   --dn-menu-content: 1320px;
@@ -109,7 +142,7 @@
   --dn-home-search-muted: #d4d8df;
   --dn-home-cta-gap: var(--dn-space-4);
   /* Foundation typography. */
-  --dn-font: 'Onest Variable', "Segoe UI", Arial, sans-serif;
+  --dn-font: 'Inter Variable', "Segoe UI", Arial, sans-serif;
   --dn-text-caption: 0.75rem;
   --dn-text-badge: var(--dn-text-meta);
   --dn-text-meta: 0.875rem;
@@ -145,9 +178,11 @@
   --dn-control-size: var(--dn-text-body);
   --dn-control-weight: var(--dn-weight-medium);
   --dn-control-font: var(--dn-control-weight) var(--dn-control-size) / var(--dn-leading-control) var(--dn-font);
-  --dn-body-font: var(--dn-weight-regular) var(--dn-text-body) / var(--dn-leading-body) var(--dn-font);
+  --dn-body-font: var(--dn-weight-ui) var(--dn-text-body) / var(--dn-leading-body) var(--dn-font);
+  --dn-field-font: var(--dn-weight-ui) var(--dn-text-body) / var(--dn-leading-control) var(--dn-font);
+  --dn-field-label-font: var(--dn-weight-ui) var(--dn-text-meta) / var(--dn-leading-meta) var(--dn-font);
   --dn-tab-font: var(--dn-weight-medium) var(--dn-text-body) / var(--dn-leading-control) var(--dn-font);
-  --dn-entry-font: var(--dn-weight-regular) var(--dn-text-lead) / var(--dn-leading-control) var(--dn-font);
+  --dn-entry-font: var(--dn-weight-ui) var(--dn-text-lead) / var(--dn-leading-control) var(--dn-font);
   --dn-cta-size: var(--dn-text-lead);
   --dn-cta-weight: var(--dn-weight-medium);
   --dn-cta-leading: var(--dn-leading-control);
@@ -155,9 +190,33 @@
   --dn-cta-font: var(--dn-cta-weight) var(--dn-cta-size) / var(--dn-cta-leading) var(--dn-font);
   --dn-compact-control-font: var(--dn-control-font);
 
+  /* Mobile card hierarchy: quiet identity, readable metadata, emphasized price. */
+  --dn-mobile-card-title-font: var(--dn-weight-medium) var(--dn-text-body) / var(--dn-leading-control) var(--dn-font);
+  --dn-mobile-card-meta-font: var(--dn-weight-regular) var(--dn-text-caption) / var(--dn-leading-meta) var(--dn-font);
+  --dn-mobile-card-spec-font: var(--dn-weight-medium) var(--dn-text-caption) / var(--dn-leading-badge) var(--dn-font);
+  --dn-mobile-card-price-font: var(--dn-weight-semibold) var(--dn-text-card) / var(--dn-leading-heading) var(--dn-font);
+  --dn-mobile-card-price-compact-font: var(--dn-weight-semibold) var(--dn-text-lead) / var(--dn-leading-heading) var(--dn-font);
+  --dn-mobile-listing-photo-max-width: 156px;
+  --dn-mobile-listing-photo-min-height: 88px;
+
+  /* Mobile body-style and brand tiles share media and label geometry. */
+  --dn-discovery-label-font: var(--dn-weight-semibold) var(--dn-text-body) / var(--dn-leading-control) var(--dn-font);
+  --dn-discovery-tile-height: 116px;
+  --dn-discovery-media-height: 64px;
+  --dn-discovery-tile-padding: var(--dn-space-2) var(--dn-space-2) var(--dn-space-3);
+
   /* Mobile overlays use the default frame; desktop overlays can opt into the expanded editor frame. */
   --dn-selection-surface: color-mix(in srgb, var(--dn-red) 4%, var(--dn-white));
   --dn-selection-line: color-mix(in srgb, var(--dn-red) 28%, var(--dn-white));
+  --dn-mobile-selection-surface: var(--dn-home-panel);
+  --dn-mobile-selection-line: var(--dn-line-strong);
+  --dn-mobile-filter-selection-surface: var(--dn-home-panel);
+  --dn-mobile-filter-selection-ink: var(--dn-ink);
+  --dn-mobile-filter-control-surface: var(--dn-home-panel);
+  --dn-mobile-filter-control-inset: var(--dn-space-half);
+  --dn-mobile-filter-control-height: var(--dn-control-height-entry-mobile);
+  --dn-mobile-filter-control-gap: var(--dn-space-1);
+  --dn-mobile-selection-accent: var(--dn-ink-strong);
   --dn-overlay-header-padding: max(var(--dn-space-3), env(safe-area-inset-top)) var(--dn-space-4) var(--dn-space-3);
   --dn-overlay-gutter: var(--dn-space-4);
   --dn-overlay-gap: var(--dn-space-2);
@@ -165,9 +224,17 @@
   --dn-overlay-control-height-compact: var(--dn-control-height-default);
   --dn-overlay-control-height-expanded: var(--dn-control-height-editor);
   --dn-overlay-control-height: var(--dn-overlay-control-height-compact);
+  --dn-overlay-header-icon-size: var(--dn-space-6);
+  --dn-overlay-title-font: var(--dn-weight-semibold) var(--dn-text-card) / var(--dn-leading-heading) var(--dn-font);
+  --dn-overlay-row-height: var(--dn-mobile-filter-control-height);
   --dn-overlay-field-font: var(--dn-entry-font);
   --dn-overlay-option-font: var(--dn-control-font);
-  --dn-overlay-action-font: var(--dn-cta-font);
+  --dn-overlay-value-font: var(--dn-weight-regular) var(--dn-text-meta) / var(--dn-leading-control) var(--dn-font);
+  --dn-overlay-action-font: var(--dn-overlay-secondary-font);
+  --dn-overlay-action-height: var(--dn-control-hit-height);
+  --dn-overlay-action-inset: var(--dn-space-1);
+  --dn-overlay-action-gap: var(--dn-space-2);
+  --dn-overlay-secondary-font: var(--dn-weight-medium) var(--dn-text-meta) / var(--dn-leading-control) var(--dn-font);
 
   /* Shared entry and segmented-control aliases. */
   --dn-entry-stack-gap: var(--dn-space-4);
@@ -175,6 +242,10 @@
   --dn-entry-height: var(--dn-control-height-editor);
   --dn-entry-surface: var(--dn-home-panel);
   --dn-entry-line: var(--dn-line-strong);
+  --dn-entry-prominent-font: var(--dn-weight-regular) var(--dn-text-body) / var(--dn-leading-control) var(--dn-font);
+  --dn-entry-prominent-surface: var(--dn-home-panel);
+  --dn-entry-prominent-ink: var(--dn-ink);
+  --dn-entry-prominent-muted: var(--dn-muted);
   --dn-control-hit-height: var(--dn-control-height-default);
   --dn-segment-height: var(--dn-control-height-compact);
   --dn-entry-action-height: var(--dn-control-height-default);
@@ -183,9 +254,10 @@
   --dn-compact-control-padding-inline: var(--dn-space-4);
   --dn-entry-action-padding-inline: var(--dn-space-5);
   --dn-control-icon-size: 18px;
+  --dn-mobile-header-icon-size: var(--dn-space-5);
   --dn-entry-action-icon-size: 15px;
   --dn-entry-segment-width: min(240px, calc(100% - var(--dn-space-6)));
-  --dn-entry-action-width: min(11.25rem, 100%);
+  --dn-entry-action-width: min(13rem, 100%);
   --dn-segment-surface: var(--dn-home-panel);
   --dn-segment-selected: var(--dn-surface-raised);
 }
@@ -202,4 +274,10 @@
   --dn-locale-leading-prose: 1.6;
   --dn-locale-tracking: 0.06em;
   --dn-weight-bold: 700;
+}
+
+/* Resolve action defaults where the dealer's accent is applied. */
+.dn-app-shell {
+  --dn-primary-action-surface: var(--dn-red);
+  --dn-primary-action-surface-hover: var(--dn-red-hover);
 }

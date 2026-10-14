@@ -97,7 +97,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Астракар",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-18b42df68fbfdecf/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": true
@@ -197,7 +197,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Астракар",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-18b42df68fbfdecf/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": true
@@ -297,7 +297,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Астракар",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-18b42df68fbfdecf/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": true
@@ -397,7 +397,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Астракар",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-18b42df68fbfdecf/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -497,7 +497,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Астракар",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-18b42df68fbfdecf/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -597,7 +597,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Астракар",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-18b42df68fbfdecf/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -697,7 +697,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Астракар",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-18b42df68fbfdecf/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -797,7 +797,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Астракар",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-18b42df68fbfdecf/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -897,7 +897,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Астракар",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-18b42df68fbfdecf/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -997,7 +997,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Астракар",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-18b42df68fbfdecf/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -1097,7 +1097,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Астракар",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-18b42df68fbfdecf/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -1197,7 +1197,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Астракар",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-18b42df68fbfdecf/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -1297,7 +1297,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Астракар",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-18b42df68fbfdecf/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -1397,7 +1397,107 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Астракар",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-18b42df68fbfdecf/logo-on-light.webp"
+    },
+    "publishedAt": "2026-09-07T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "dealer-919fa8ad9a1c687c16ac5f9b",
+    "slug": "citroen-jumpy-1-6hdi-l2h1eu6b-2017-11782575631736534",
+    "category": "van",
+    "dealerOrgId": "dealer-astracar",
+    "status": "active",
+    "title": "Citroen Jumpy 1.6HDI L2H1EU6B",
+    "description": "Citroen Jumpy 1.6HDI L2H1EU6B, 2017 г., дизел, 186 586 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона.",
+    "price": {
+      "amount": 8500,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/assets/astracar/vehicle-15-1.webp",
+        "alt": "Citroen Jumpy 1.6HDI L2H1EU6B"
+      },
+      {
+        "url": "/assets/astracar/vehicle-15-2.webp",
+        "alt": "Citroen Jumpy 1.6HDI L2H1EU6B"
+      },
+      {
+        "url": "/assets/astracar/vehicle-15-3.webp",
+        "alt": "Citroen Jumpy 1.6HDI L2H1EU6B"
+      },
+      {
+        "url": "/assets/astracar/vehicle-15-4.webp",
+        "alt": "Citroen Jumpy 1.6HDI L2H1EU6B"
+      },
+      {
+        "url": "/assets/astracar/vehicle-15-5.webp",
+        "alt": "Citroen Jumpy 1.6HDI L2H1EU6B"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Варна",
+      "region": "Варна",
+      "country": "България"
+    },
+    "features": [
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "Apple CarPlay \\ Android Auto",
+        "en": "Apple CarPlay \\ Android Auto"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "Buy back",
+        "en": "Buy back"
+      },
+      {
+        "bg": "USB",
+        "en": "USB"
+      },
+      {
+        "bg": "audio\\video",
+        "en": "audio\\video"
+      },
+      {
+        "bg": "IN\\AUX изводи",
+        "en": "IN\\AUX изводи"
+      }
+    ],
+    "spec": {
+      "make": "Citroen",
+      "model": "Jumpy 1.6HDI L2H1EU6B",
+      "year": 2017,
+      "bodyType": "van",
+      "fuelType": "diesel",
+      "transmission": "manual",
+      "mileageValue": 186586,
+      "mileageUnit": "km",
+      "enginePowerHp": 116,
+      "colorExterior": "Бял"
+    },
+    "seller": {
+      "id": "dealer-astracar",
+      "type": "dealer",
+      "displayName": "Астракар",
+      "verificationStatus": "unverified",
+      "city": "Варна",
+      "logoUrl": "/dealer-brand/v2-18b42df68fbfdecf/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false

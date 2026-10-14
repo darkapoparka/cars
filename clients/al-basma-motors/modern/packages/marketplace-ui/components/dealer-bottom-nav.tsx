@@ -45,6 +45,7 @@ import { getLocalizedPublicPath } from "../lib/public-path";
 import { DealerBottomNavIcon } from "./dealer-bottom-nav-icon";
 import { DealerMobileBrandBar } from "./dealer-mobile-brand-bar";
 import { DealerSocialLinks } from "./dealer-social-links";
+import { LanguageFlag } from "./language-flag";
 import { useLocalePreferences } from "./locale-preferences";
 import type { MarketplaceMode } from "./marketplace-masthead";
 import { mobileMarketplaceDrawerIconActionClassName } from "./mobile-marketplace-drawer";
@@ -63,6 +64,32 @@ const getLocaleSettingsHref = (locale?: string, returnTo?: string) =>
       returnTo ?? getLocalizedPublicPath(locale, "/cars")
     )}`
   );
+
+const getSecondaryMenuItems = (locale?: string) => {
+  const isBg = locale?.startsWith("bg");
+  return [
+    {
+      href: getLocalizedPublicPath(locale, "/services"),
+      icon: Building2,
+      label: isBg ? "Всички услуги" : "All services",
+    },
+    {
+      href: getLocalizedPublicPath(locale, "/cars"),
+      icon: CarFront,
+      label: isBg ? "Всички автомобили" : "All vehicles",
+    },
+    {
+      href: getLocalizedPublicPath(locale, "/guides"),
+      icon: BookOpenText,
+      label: isBg ? "Съвети за покупка" : "Buying guides",
+    },
+    {
+      href: getLocalizedPublicPath(locale, "/contact"),
+      icon: Building2,
+      label: isBg ? "За нас и контакти" : "About and contact",
+    },
+  ];
+};
 
 export const DealerBottomNav = ({
   activeMode,
@@ -116,23 +143,7 @@ export const DealerBottomNav = ({
     isPublicSitePathEnabled(item.href, publicSite)
   );
   const menuLabel = isBg ? "Меню" : "Menu";
-  const secondaryMenuItems = [
-    {
-      href: getLocalizedPublicPath(locale, "/cars"),
-      icon: CarFront,
-      label: isBg ? "Всички автомобили" : "All vehicles",
-    },
-    {
-      href: getLocalizedPublicPath(locale, "/guides"),
-      icon: BookOpenText,
-      label: isBg ? "Съвети за покупка" : "Buying guides",
-    },
-    {
-      href: getLocalizedPublicPath(locale, "/contact"),
-      icon: Building2,
-      label: isBg ? "За нас и контакти" : "About and contact",
-    },
-  ];
+  const secondaryMenuItems = getSecondaryMenuItems(locale);
 
   return (
     <>
@@ -313,7 +324,7 @@ export const DealerBottomNav = ({
                 })}
             </nav>
             <a
-              className="mt-4 flex min-h-11 items-center rounded-xl border px-4 font-medium"
+              className="mt-4 flex min-h-11 items-center gap-2 rounded-xl border px-4 font-medium"
               data-locale-trigger
               href={localeSettingsHref}
               onClick={(event) => {
@@ -330,6 +341,7 @@ export const DealerBottomNav = ({
                 }
               }}
             >
+              <LanguageFlag locale={isBg ? "bg" : "en"} />
               {isBg ? "Държава и език" : "Country and language"}
             </a>
             <DealerSocialLinks isBg={isBg} links={leadSite.socialLinks} />

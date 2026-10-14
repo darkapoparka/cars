@@ -43,6 +43,7 @@
             <div class="karento-process-image">
               <img
                 src={step.image}
+                style:object-position={step.imagePosition ?? "center"}
                 alt=""
                 width="1672"
                 height="941"
@@ -151,18 +152,25 @@
 
     .karento-process-step {
       text-align: left;
+      padding: var(--karento-space-3);
+      border: 1px solid var(--bs-border-color);
+      border-radius: var(--karento-radius-card);
+      background: var(--bs-background-card);
     }
 
     .karento-process-step-link {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+      grid-template-columns: calc(var(--karento-space-8) * 2) minmax(0, 1fr);
       align-items: center;
       gap: var(--karento-space-3);
       min-height: var(--karento-touch-target);
     }
 
     .karento-process-image {
-      align-self: stretch;
+      align-self: center;
+      height: calc(var(--karento-space-8) * 2);
+      border-radius: var(--karento-radius-media);
+      overflow: hidden;
     }
 
     .karento-process-image img {
@@ -186,6 +194,8 @@
       width: var(--karento-space-6);
       height: var(--karento-space-6);
       border-radius: var(--karento-space-1);
+      background: var(--bs-neutral-0);
+      color: var(--bs-neutral-1000);
       font-size: var(--karento-type-badge-size);
       font-weight: var(--karento-type-badge-weight);
       line-height: var(--karento-type-badge-leading);
@@ -204,6 +214,9 @@
       font-size: var(--karento-type-body-small-size);
       font-weight: var(--karento-type-body-small-weight);
       line-height: var(--karento-type-body-small-leading);
+    }
+    .karento-process-description-line {
+      display: inline;
     }
   }
 </style>

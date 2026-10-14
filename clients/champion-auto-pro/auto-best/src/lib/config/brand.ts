@@ -2,7 +2,7 @@ export type BrandConfig = {
   name: string;
   shortName: string;
   city: string;
-  showroomCoordinates: { latitude: number; longitude: number };
+  showroomCoordinates: { latitude: number; longitude: number } | null;
   addressLine: string;
   address: string;
   phone: string;
@@ -24,7 +24,7 @@ export const brand = {
   name,
   shortName,
   city,
-  showroomCoordinates: {"latitude":0,"longitude":0},
+  showroomCoordinates: null,
   youtubeUrl: "",
   instagramUrl: "",
   facebookUrl: "",
@@ -33,6 +33,6 @@ export const brand = {
   addressLine,
   address: "бул. „Цар Освободител“ 302 / Автомивка Izgi Europe Motor",
   appointment: "Понеделник – петък: 09:30–18:00; Събота: 10:00–15:00; Неделя: почивен ден",
-  logo: "/dealer-brand/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/logo-on-dark.webp"
+  logo: "/dealer-brand/v2-3aed802078180a78/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-3aed802078180a78/logo-on-dark.webp"
 } as const satisfies BrandConfig;

@@ -3,17 +3,17 @@
   "dealer": "automarket-varna",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "4e184777567849a2c5b4a9e4a3e652252179c29c",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
     "path": "templates/app",
-    "digest": "fad0067e48d7bd7e1c5177c5e91e2bc5767352e2c16621cb458d18a081f7c541",
-    "tree": "749512ff762c25272d1474225ff653dd4c88f0fe"
+    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1",
+    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76"
   },
-  "appDigest": "465d4354d924fb365f038be450037d26853fed6915df571c91aa757ea16c3b51",
+  "appDigest": "baedfe19f7d1faa5f2b0c150ba43b002ed179063f2a591dd6a6ca4e2d8263d43",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "automarket-varna",
     "profile": "auto-best/src/lib/data/dealer-profile.json",
-    "profileSha256": "b2fc7d4ffd1ada7b72502cd1148598b2ef87762f4e82bf383856069d0a9f8e07",
+    "profileSha256": "fcdf5c67a6a67581abd65427525c1b89b612a0dc6926331cecda12a168325c33",
     "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
     "vehicles": 16,
     "currency": "EUR",
@@ -511,13 +511,107 @@
         "sha256": "733f9aa142df21aa2e6241f7045de7c40ae2fed8aaabe606dad81c897d8ec800",
         "role": "vehicle"
       }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "ford-focus-1-6d-115hp-2014-11785576029711434",
+        "sourceValue": 249000,
+        "sourceUnit": "km",
+        "canonicalKm": 249000
+      },
+      {
+        "slug": "opel-astra-1-4i-90hp-2006-11714813323555032",
+        "sourceValue": 208000,
+        "sourceUnit": "km",
+        "canonicalKm": 208000
+      },
+      {
+        "slug": "opel-corsa-1-2i-80hp-gpl-2009-11776340911802527",
+        "sourceValue": 165000,
+        "sourceUnit": "km",
+        "canonicalKm": 165000
+      },
+      {
+        "slug": "ford-fiesta-1-25i-82hp-face-lift-2012-11749035353735625",
+        "sourceValue": 227000,
+        "sourceUnit": "km",
+        "canonicalKm": 227000
+      },
+      {
+        "slug": "honda-jazz-1-4-i-vtec-99hp-face-lift-2009-11646385836417474",
+        "sourceValue": 197000,
+        "sourceUnit": "km",
+        "canonicalKm": 197000
+      },
+      {
+        "slug": "opel-meriva-1-4-turbo-120hp-gpl-2012-11730904111658789",
+        "sourceValue": 156000,
+        "sourceUnit": "km",
+        "canonicalKm": 156000
+      },
+      {
+        "slug": "vw-golf-1-6tdi-105hp-dsg-2010-11664339654646848",
+        "sourceValue": 213000,
+        "sourceUnit": "km",
+        "canonicalKm": 213000
+      },
+      {
+        "slug": "nissan-qashqai-1-6i-117hp-face-lift-2011-21702843989932817",
+        "sourceValue": 223000,
+        "sourceUnit": "km",
+        "canonicalKm": 223000
+      },
+      {
+        "slug": "dacia-duster-1-5dci-110hp-awd-e5a-2011-21777122320477562",
+        "sourceValue": 232000,
+        "sourceUnit": "km",
+        "canonicalKm": 232000
+      },
+      {
+        "slug": "mazda-cx-3-1-5d-skyactiv-105hp-awd-auto-2016-21777123440688076",
+        "sourceValue": 155000,
+        "sourceUnit": "km",
+        "canonicalKm": 155000
+      },
+      {
+        "slug": "vw-passat-2-0tdi-190hp-4-motion-keyless-go-automatic-2016-11764611602990623",
+        "sourceValue": 207000,
+        "sourceUnit": "km",
+        "canonicalKm": 207000
+      },
+      {
+        "slug": "suzuki-swift-1-2-hybrid-83hp-automatic-2021-11770373711900410",
+        "sourceValue": 39000,
+        "sourceUnit": "km",
+        "canonicalKm": 39000
+      },
+      {
+        "slug": "bmw-x3-2-0-x-drive-184hp-2014-21732197261233954",
+        "sourceValue": 249000,
+        "sourceUnit": "km",
+        "canonicalKm": 249000
+      },
+      {
+        "slug": "vw-tiguan-2-0tdi-200hp-allspace-4-motion-2023-21781689983828599",
+        "sourceValue": 147000,
+        "sourceUnit": "km",
+        "canonicalKm": 147000
+      },
+      {
+        "slug": "mercedes-benz-glc-2-2cdi-170hp-4-matic-autonatic-navi-2016-21784142258144582",
+        "sourceValue": 165000,
+        "sourceUnit": "km",
+        "canonicalKm": 165000
+      },
+      {
+        "slug": "audi-a4-allroad-3-0tdi-272hp-automatic-quattro-digital-2016-11750340593495216",
+        "sourceValue": 218000,
+        "sourceUnit": "km",
+        "canonicalKm": 218000
+      }
     ]
   },
-  "baseDeployment": {
-    "id": "dpl_41ARd2kvvPZEHiBhGpZjJwsmeunX",
-    "url": "https://cars-automarketvarna.vercel.app/",
-    "checkedAt": "2026-09-28T02:25:33.921Z"
-  },
-  "baseReceiptSha256": "a5f7a1893fbf792083f55f37c7778ff1dc8486707407e977b6fdf4d6b872f5f4",
-  "refreshedAt": "2026-10-10T23:08:21.151Z"
+  "needsDealerQA": true,
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-13T02:50:38.277Z"
 }

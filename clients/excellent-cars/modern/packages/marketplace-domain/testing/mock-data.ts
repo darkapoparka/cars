@@ -1128,6 +1128,170 @@ export const mockListings: VehicleListing[] = [
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
+  },
+  {
+    "id": "dealer-e7306cfeba24d8d2f238507f",
+    "slug": "peugeot-308-1-6gt-205h-p-2016-11778320754806394",
+    "category": "car",
+    "dealerOrgId": "dealer-excellent-cars",
+    "status": "active",
+    "title": "Peugeot 308 1.6GT  205h.p",
+    "description": "Peugeot 308 1.6GT  205h.p, 2016 г., бензин, 130 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars.",
+    "price": {
+      "amount": 9200,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/assets/excellent/vehicle-15-1.webp",
+        "alt": "Peugeot 308 1.6GT  205h.p"
+      },
+      {
+        "url": "/assets/excellent/vehicle-15-2.webp",
+        "alt": "Peugeot 308 1.6GT  205h.p"
+      },
+      {
+        "url": "/assets/excellent/vehicle-15-3.webp",
+        "alt": "Peugeot 308 1.6GT  205h.p"
+      },
+      {
+        "url": "/assets/excellent/vehicle-15-4.webp",
+        "alt": "Peugeot 308 1.6GT  205h.p"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Варна",
+      "region": "Варна",
+      "country": "България"
+    },
+    "features": [
+      {
+        "bg": "Подгряване на седалки",
+        "en": "Подгряване на седалки"
+      },
+      {
+        "bg": "Навигация",
+        "en": "Навигация"
+      },
+      {
+        "bg": "Парктроник",
+        "en": "Парктроник"
+      },
+      {
+        "bg": "Безключов достъп",
+        "en": "Безключов достъп"
+      }
+    ],
+    "spec": {
+      "make": "Peugeot",
+      "model": "308 1.6GT  205h.p",
+      "year": 2016,
+      "bodyType": "hatchback",
+      "fuelType": "gasoline",
+      "transmission": "manual",
+      "mileageValue": 130000,
+      "mileageUnit": "km",
+      "enginePowerHp": 205,
+      "colorExterior": "Бял"
+    },
+    "seller": {
+      "id": "dealer-excellent-cars",
+      "type": "dealer",
+      "displayName": "Excellent Cars",
+      "verificationStatus": "unverified",
+      "city": "Варна",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
+    },
+    "publishedAt": "2026-09-07T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "dealer-a196b0e6d217271a0ba738e0",
+    "slug": "mazda-cx-5-2-5i-4x4-2015-21781781688732220",
+    "category": "car",
+    "dealerOrgId": "dealer-excellent-cars",
+    "status": "active",
+    "title": "Mazda CX-5 2.5i  4x4",
+    "description": "Mazda CX-5 2.5i  4x4, 2015 г., бензин, 192 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars.",
+    "price": {
+      "amount": 14990,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/assets/excellent/vehicle-16-1.webp",
+        "alt": "Mazda CX-5 2.5i  4x4"
+      },
+      {
+        "url": "/assets/excellent/vehicle-16-2.webp",
+        "alt": "Mazda CX-5 2.5i  4x4"
+      },
+      {
+        "url": "/assets/excellent/vehicle-16-3.webp",
+        "alt": "Mazda CX-5 2.5i  4x4"
+      },
+      {
+        "url": "/assets/excellent/vehicle-16-4.webp",
+        "alt": "Mazda CX-5 2.5i  4x4"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Варна",
+      "region": "Варна",
+      "country": "България"
+    },
+    "features": [
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Подгряване на седалки",
+        "en": "Подгряване на седалки"
+      },
+      {
+        "bg": "Навигация",
+        "en": "Навигация"
+      },
+      {
+        "bg": "Парктроник",
+        "en": "Парктроник"
+      },
+      {
+        "bg": "Безключов достъп",
+        "en": "Безключов достъп"
+      }
+    ],
+    "spec": {
+      "make": "Mazda",
+      "model": "CX-5 2.5i  4x4",
+      "year": 2015,
+      "bodyType": "suv",
+      "fuelType": "gasoline",
+      "transmission": "automatic",
+      "mileageValue": 192000,
+      "mileageUnit": "km",
+      "enginePowerHp": 190,
+      "colorExterior": "Бордо"
+    },
+    "seller": {
+      "id": "dealer-excellent-cars",
+      "type": "dealer",
+      "displayName": "Excellent Cars",
+      "verificationStatus": "unverified",
+      "city": "Варна",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
+    },
+    "publishedAt": "2026-09-07T09:00:00.000Z",
+    "promoted": false
   }
 ];
 
