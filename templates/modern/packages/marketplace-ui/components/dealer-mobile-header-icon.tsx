@@ -1,10 +1,4 @@
-import {
-  Bike,
-  BusFront,
-  ChevronDown,
-  type LucideIcon,
-  Truck,
-} from "lucide-react";
+import { Bike, BusFront, type LucideIcon, Truck } from "lucide-react";
 import Image from "./public-image";
 
 const artworkPaths = {
@@ -46,6 +40,10 @@ export function DealerMobileHeaderIcon({
     | "phone";
 }) {
   const name = kind === "category" ? categoryIconName(icon) : kind;
+  const categoryArtworkClassName =
+    name === "car"
+      ? "size-9 select-none object-contain"
+      : "size-[34px] select-none object-contain";
   return (
     <span
       aria-hidden="true"
@@ -56,11 +54,11 @@ export function DealerMobileHeaderIcon({
     >
       <Image
         alt=""
-        // All nine assets share one normalized slot. Vehicle artwork clears
-        // the fixed chevron through one shared 2px lift, never per-icon nudges.
+        // The car's shorter cutout needs the full inner frame to balance the
+        // taller utility artwork. Keep every icon centred in its header slot.
         className={
           kind === "category"
-            ? "size-7 -translate-y-0.5 select-none object-contain"
+            ? categoryArtworkClassName
             : "size-7 select-none object-contain"
         }
         draggable={false}
@@ -72,12 +70,6 @@ export function DealerMobileHeaderIcon({
         unoptimized
         width={36}
       />
-      {kind === "category" ? (
-        <ChevronDown
-          className="absolute -bottom-0.5 left-1/2 size-2.5 -translate-x-1/2"
-          strokeWidth={2}
-        />
-      ) : null}
     </span>
   );
 }

@@ -252,7 +252,7 @@ export const DealerBottomNav = ({
             >
               <a
                 aria-label={`${isBg ? "Обадете се на" : "Call"} ${leadSite.phoneDisplay}`}
-                className="flex min-h-12 min-w-0 items-center justify-center gap-1.5 rounded-xl bg-zinc-950 px-2 py-3 text-white transition-colors hover:bg-zinc-800 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 active:bg-zinc-800"
+                className="flex min-h-12 min-w-0 items-center justify-center gap-1.5 rounded-xl bg-primary px-2 py-3 text-primary-foreground transition-colors hover:bg-[var(--primary-hover)] hover:text-[var(--primary-hover-foreground)] focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 active:bg-[var(--primary-active)] active:text-[var(--primary-active-foreground)]"
                 href={withBasePath(leadSite.phoneHref)}
                 onClick={() => setMenuOpen(false)}
               >
@@ -271,7 +271,7 @@ export const DealerBottomNav = ({
                     ? `Отворете картата: ${getLeadCopy(locale).address}`
                     : "Open showroom map"
                 }
-                className="flex min-h-12 min-w-0 items-center justify-center gap-1.5 rounded-xl bg-zinc-950 px-2 py-3 text-white transition-colors hover:bg-zinc-800 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 active:bg-zinc-800"
+                className="flex min-h-12 min-w-0 items-center justify-center gap-1.5 rounded-xl bg-primary px-2 py-3 text-primary-foreground transition-colors hover:bg-[var(--primary-hover)] hover:text-[var(--primary-hover-foreground)] focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 active:bg-[var(--primary-active)] active:text-[var(--primary-active-foreground)]"
                 href={withBasePath(leadSite.mapsUrl)}
                 onClick={() => setMenuOpen(false)}
                 rel="noreferrer"
