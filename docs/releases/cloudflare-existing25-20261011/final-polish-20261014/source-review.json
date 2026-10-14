@@ -1,21 +1,21 @@
 {
   "schemaVersion": 1,
   "kind": "cars-six-template-source-checkpoint-review",
-  "sourceCommit": "7d4557f3074b32e3f57af28b89906754b73fb9cd",
+  "sourceCommit": "ab532f180e9ed1f0abbcfb55ca17c3e27b325d0e",
   "reviewed": true,
-  "reviewedAt": "2026-10-14T21:53:12.292Z",
+  "reviewedAt": "2026-10-14T23:31:22.718Z",
   "selectedSources": {
     "auto-best": {
       "repository": "darkapoparka/cars",
-      "revision": "7d4557f3074b32e3f57af28b89906754b73fb9cd",
+      "revision": "ab532f180e9ed1f0abbcfb55ca17c3e27b325d0e",
       "path": "templates/auto-best",
-      "tree": "0fd8e81b7ea998227b8a5a067b04f318015bff84",
-      "digest": "451141c1787f5ea293a60170ca9f894c35ebd3324e0a6ff09b00b959f2812176",
+      "tree": "465389f178f435a2dc0799e46d51301a99934124",
+      "digest": "2bdfc1655af6e0abf5ebe348728452a7075121fb22f9de89bd70f9aa19225c7d",
       "files": 1621
     },
     "modern": {
       "repository": "darkapoparka/cars",
-      "revision": "7d4557f3074b32e3f57af28b89906754b73fb9cd",
+      "revision": "ab532f180e9ed1f0abbcfb55ca17c3e27b325d0e",
       "path": "templates/modern",
       "tree": "01eac7390fa6ba951d4b8d4c26159a9be150f6c8",
       "digest": "30e1a99f857cc25e4d78c9459cfb4394a9f70c5b114196a5ca6325ff38823b4b",
@@ -23,7 +23,7 @@
     },
     "import": {
       "repository": "darkapoparka/cars",
-      "revision": "7d4557f3074b32e3f57af28b89906754b73fb9cd",
+      "revision": "ab532f180e9ed1f0abbcfb55ca17c3e27b325d0e",
       "path": "templates/import",
       "tree": "d841ddfe5bec918bf6b2c19fd6971fecd6b8e54d",
       "digest": "c7d6c93214e859aa2747af8f5e068b6a0b8ca095d6328c807728a4d531d688f8",
@@ -31,7 +31,7 @@
     },
     "app": {
       "repository": "darkapoparka/cars",
-      "revision": "7d4557f3074b32e3f57af28b89906754b73fb9cd",
+      "revision": "ab532f180e9ed1f0abbcfb55ca17c3e27b325d0e",
       "path": "templates/app",
       "tree": "7f3d3ffa40546635377e6c5225194fe06fead291",
       "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
@@ -39,7 +39,7 @@
     },
     "mobile": {
       "repository": "darkapoparka/cars",
-      "revision": "7d4557f3074b32e3f57af28b89906754b73fb9cd",
+      "revision": "ab532f180e9ed1f0abbcfb55ca17c3e27b325d0e",
       "path": "templates/mobile",
       "tree": "792bfdd1d8eb22aabd90c7e3a0c0779a6c1c36f3",
       "digest": "f5a3e541a7c648a4c2899ad3893e22a3806027a9f66d95fa4e8c74b2226635b6",
@@ -47,7 +47,7 @@
     },
     "karento-best": {
       "repository": "darkapoparka/cars",
-      "revision": "7d4557f3074b32e3f57af28b89906754b73fb9cd",
+      "revision": "ab532f180e9ed1f0abbcfb55ca17c3e27b325d0e",
       "path": "templates/karento-best",
       "tree": "8c5ac869c7fd15e19a80c660343fc64b20a2bad9",
       "digest": "be17ef365e3272753df6e50826b139a45bfc32b8fef54ddcb86d977ad16280a9",
@@ -79,7 +79,8 @@
     "b4324671155e07a771eab57648085fb28b93cda1",
     "5152e0e541b5f6d49b94851d37ab780d6f25b489",
     "a37b7c7aa64f4a6b10011895e1163896d15abda0",
-    "7d4557f3074b32e3f57af28b89906754b73fb9cd"
+    "7d4557f3074b32e3f57af28b89906754b73fb9cd",
+    "ab532f180e9ed1f0abbcfb55ca17c3e27b325d0e"
   ],
   "sourceOnly": true,
   "nativeApproval": false,
@@ -141,5 +142,47 @@
     ],
     "focusedMobileEvidenceSha256": "b72a9340bbdfdf5d7078073a40557b0b7c1aabd60d5012ac3ff84c9c65f867bc",
     "scope": "Source review and focused 320/390 candidate validation only; final native package and hosted successor checks remain required."
+  },
+  "companyAboutSuccessor": {
+    "schemaVersion": 1,
+    "kind": "cars-about-contact-immutable-successor-proof",
+    "revision": "ab532f180e9ed1f0abbcfb55ca17c3e27b325d0e",
+    "priorRevision": "7d4557f3074b32e3f57af28b89906754b73fb9cd",
+    "commitTree": "aeb0e8ce84095425d8da1c27e117678b5ffceef0",
+    "templatesTree": "75fcd6ffcf277c5f4c338d526fa0ba7c4f39bb7c",
+    "changedLeaves": [
+      {
+        "path": "templates/auto-best/src/lib/components/company/AboutProcess.svelte",
+        "baseBlob": "484fce2fe0da7c07b9a59c6b230b3f2b6a1d7f51",
+        "blob": "4aa8e4598a521746954c479a81c4d371a06647f9",
+        "sha256": "f51de533bdc4d649917121b23b55b10cd47e355b1fc09e9baca1ee850332bb17"
+      },
+      {
+        "path": "templates/auto-best/src/lib/components/company/AboutHero.svelte",
+        "baseBlob": "208c8be30157232a8a62b7779888e7639c94debe",
+        "blob": "6ba5abda25b4bbd9f34c32f8990724d4bbd49a34",
+        "sha256": "efca934e0bf10c522cd3f0de7d185a07533fc0f383eeaf4ec700d600a52339d3"
+      },
+      {
+        "path": "templates/auto-best/src/lib/components/company/ContactHero.svelte",
+        "baseBlob": "573af1e1f7460d0a8b6855c12cb72e4f9ca72105",
+        "blob": "8048832682156959882b0fb072a3f43a10d6b3a6",
+        "sha256": "2836a73ef0f282a83e7b1a6eb50086fd9f0aa8a2fd16a8da439bd10a9f9e31c0"
+      },
+      {
+        "path": "templates/auto-best/src/lib/data/company.ts",
+        "baseBlob": "a28ff646a486b2709a569d844c864cd56007e697",
+        "blob": "704655a9b96e98385085e362e54c3b07ca54a799",
+        "sha256": "984ec2787878eaf6ec02993497d5cb365f38e9d447b47aaf6cad0f02f768f71f"
+      }
+    ],
+    "sourcePatchSha256": "8c17b19d64a70a2e4347360785845df53b3946a13de9cabb8ec9bc14b5f0b2e4",
+    "focusedEvidenceSha256": "52b78c040a945fd36add14df7abb005ae2e650729732fc417a44685f1179c26f",
+    "oldSixFingerprintsReproduced": true,
+    "unchangedFiveTreesAndDigests": true,
+    "sourceExports": 0,
+    "assetCopies": 0,
+    "hostedAcceptance": false,
+    "scope": "Actual strict AboutProcess SSR EN/BG and focused title overlay/compile evidence; full hosted pilot remains required."
   }
 }
