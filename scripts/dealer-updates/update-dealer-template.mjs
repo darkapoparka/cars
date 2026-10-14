@@ -234,11 +234,30 @@ export function registeredDeliveryOrigin(record, manifest) {
     configured === 'https://' + workerName + '.darkapoparka1.workers.dev' &&
     /^[a-f0-9]{64}$/.test(retained.sourceSnapshotSha256 ?? '') &&
     Number.isFinite(Date.parse(retained.resourcePresentAt ?? ''));
-  const value = record.delivery?.url || (record.delivery?.provider === 'cloudflare' ? record.delivery.configuredPublicOrigin : null) || (legacyIdentity ? configured : null);
+  const sourceProof = record.evidence?.source;
+  const proposalRoot = 'docs/releases/cloudflare-existing25-20261011/new-source/' + record.slug + '/';
+  const verifiedSourceIdentity = typeof record.slug === 'string' &&
+    /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(record.slug) && record.slug === manifest.slug &&
+    typeof workerName === 'string' && /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(workerName) &&
+    record.sourceOwnership === 'cars-canonical' &&
+    record.canonicalSourceRepository === 'darkapoparka/cars' &&
+    record.delivery?.state === 'source-adoption-awaiting-publication-proof' &&
+    record.delivery?.provider == null && record.delivery?.url == null &&
+    sourceProof?.state === 'verified-source-proposal' &&
+    /^[a-f0-9]{40}$/.test(record.canonicalSourceTree ?? '') &&
+    sourceProof.tree === record.canonicalSourceTree &&
+    sourceProof.preparation === proposalRoot + 'source-preparation-receipt.json' &&
+    sourceProof.proposal === proposalRoot + 'source-patch.json' &&
+    sourceProof.inputMapping === proposalRoot + 'input-mapping.json' &&
+    record.cloudflare?.workerName === workerName &&
+    record.cloudflare?.publicOrigin === 'https://' + workerName + '.darkapoparka1.workers.dev' &&
+    manifest.cloudflare?.workerPrefix === workerName &&
+    manifest.shareIdentity?.publicOrigin === record.cloudflare.publicOrigin;
+  const value = record.delivery?.url || (record.delivery?.provider === 'cloudflare' ? record.delivery.configuredPublicOrigin : null) || (legacyIdentity ? configured : null) || (verifiedSourceIdentity ? record.cloudflare.publicOrigin : null);
   if (!value) throw new Error('Six-design delivery needs the exact registered repository and public origin');
   const origin = new URL(value);
   if (origin.protocol !== 'https:' || origin.username || origin.password || origin.pathname !== '/' || origin.search || origin.hash) throw new Error('The registered dealer delivery must be a complete HTTPS origin');
-  if ((record.delivery?.provider === 'cloudflare' || (legacyIdentity && manifest.shareIdentity?.publicOrigin)) && origin.origin !== manifest.shareIdentity?.publicOrigin) throw new Error('Configured Cloudflare origin differs from the retained dealer identity');
+  if ((record.delivery?.provider === 'cloudflare' || verifiedSourceIdentity || (legacyIdentity && manifest.shareIdentity?.publicOrigin)) && origin.origin !== manifest.shareIdentity?.publicOrigin) throw new Error('Configured Cloudflare origin differs from the retained dealer identity');
   return origin;
 }
 

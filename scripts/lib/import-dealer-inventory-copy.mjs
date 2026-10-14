@@ -5,7 +5,13 @@ const datedEn='Dated listing samples; confirm price and availability directly wi
 const datedSnapshotEn='Dated listing snapshot; confirm the price and availability directly with the dealership.';
 const alReefEn='Illustrative demo inventory and sample AED prices — not verified Al Reef stock. Contact the showroom for current vehicles.';
 const alReefBg='Илюстративни автомобили и примерни цени в AED — не са потвърдени наличности на Al Reef. Свържете се с шоурума за актуалните автомобили.';
-const known=new Map([[datedBg,{bg:datedBg,en:datedSnapshotEn}],[datedEn,{bg:datedBg,en:datedEn}],[alReefEn,{bg:alReefBg,en:alReefEn}],[alReefBg,{bg:alReefBg,en:alReefEn}]]);
+// Exact dated illustration descriptions retained in the reviewed Bradford stock snapshot.
+// Companion translations preserve the observed date and the Mini bodywork caveat.
+const bradfordIllustrationEn="Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.";
+const bradfordIllustrationBg="Илюстрация — не показва обявения автомобил. Това са датирани данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с автокъщата.";
+const bradfordBodyworkEn="Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer. The source advert reports cosmetic imperfections to the bodywork.";
+const bradfordBodyworkBg="Илюстрация — не показва обявения автомобил. Това са датирани данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с автокъщата. В оригиналната обява са посочени козметични дефекти по каросерията.";
+const known=new Map([[datedBg,{bg:datedBg,en:datedSnapshotEn}],[datedEn,{bg:datedBg,en:datedEn}],[alReefEn,{bg:alReefBg,en:alReefEn}],[alReefBg,{bg:alReefBg,en:alReefEn}],[bradfordIllustrationEn,{en:bradfordIllustrationEn,bg:bradfordIllustrationBg}],[bradfordBodyworkEn,{en:bradfordBodyworkEn,bg:bradfordBodyworkBg}]]);
 // Root reviewed exact51 scalar source keys; raw inventory values stay unchanged.
 // Review SHA256: 441c1e23539fa1db7e52b0a47dc9aa205481df9f50083603a9938dc003ec06b9
 // Additional exact seven native-dealer terms reviewed by root; no feed values change.
@@ -451,3 +457,4 @@ export function repairImportDealerDisclosureCatalog(source) {
   const next = source.slice(0, start) + block.replace(anchor, anchor + addition) + source.slice(end);
   return {source: next, added: true};
 }
+

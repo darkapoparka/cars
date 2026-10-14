@@ -5,6 +5,9 @@ import path from 'node:path';
 import vm from 'node:vm';
 import {createHash} from 'node:crypto';
 import {buildModernDealerInventoryCopy} from './lib/modern-dealer-inventory-copy.mjs';
+import {execFileSync} from 'node:child_process';
+import {repairImportDealerInventoryCatalog} from './lib/import-dealer-inventory-copy.mjs';
+import {readTypeScriptCatalog} from './lib/catalog-literal.mjs';
 import {vercelConfiguration} from './package-dealer.mjs';
 
 const sha256 = value => createHash('sha256').update(value).digest('hex');
@@ -84,3 +87,47 @@ test('maintained Vercel envelope dispatches bare Mobile and App while preserving
     assert.equal(Object.keys(out.services).length,6);
   }
 });
+
+test('Bradford immutable eight-listing descriptions retain dates and the Mini bodywork caveat in both native companions',()=>{
+  const stockBytes=execFileSync('git',['cat-file','blob','afefe4a692bcf99ce2ff24aaf0368d3c6d8c53f7'],{cwd:path.resolve(import.meta.dirname,'..'),env:{...process.env,GIT_NO_LAZY_FETCH:'1',GIT_TERMINAL_PROMPT:'0'}});
+  assert.equal(createHash('sha1').update('blob '+stockBytes.length+'\0').update(stockBytes).digest('hex'),'afefe4a692bcf99ce2ff24aaf0368d3c6d8c53f7');
+  const stock=JSON.parse(stockBytes),before=JSON.stringify(stock);
+  assert.equal(stock.kind,'dated-listing-snapshot');assert.equal(stock.observedAt,'2026-10-10');assert.equal(stock.records.length,8);
+  const modernRows=stock.records.map(row=>({slug:row.slug,description:row.description,images:row.images.map(url=>({url,alt:row.title}))}));
+  const copy=buildModernDealerInventoryCopy(modernRows);
+  for(const row of modernRows){
+    assert.equal(copy[row.slug].sourceDescription,row.description);
+    assert.equal(copy[row.slug].en.description,row.description);
+    assert.match(copy[row.slug].bg.description,/10 октомври 2026 г\./);
+    assert.match(copy[row.slug].bg.description,/Илюстрация — не показва обявения автомобил/);
+    assert.match(copy[row.slug].bg.description,/оригиналната обява, цената, състоянието и наличността/);
+    assert.deepEqual(copy[row.slug].en.imageAlts,row.images.map(image=>image.alt));
+    assert.deepEqual(copy[row.slug].bg.imageAlts,row.images.map(image=>image.alt));
+    const bodywork=row.slug==='mini-hatchback-2014-20562332';
+    assert.equal(/cosmetic imperfections/.test(copy[row.slug].en.description),bodywork);
+    assert.equal(/козметични дефекти по каросерията/.test(copy[row.slug].bg.description),bodywork);
+  }
+  const source='export const inventoryCopy = { retained: {bg:"Запазен текст",en:"Retained text"} } as const;\nexport const inventorySourceKeys = {"retained":"retained"} as const;\n';
+  const feed={listings:stock.records.map(row=>({id:row.id,shortDescription:row.description,color:'',features:row.features,sourceUrl:row.sourceUrl,price:row.price,images:row.images}))};
+  const beforeFeed=JSON.stringify(feed),listingSlugs=stock.records.map(row=>row.slug);
+  const imported=repairImportDealerInventoryCatalog({source,feed,listingSlugs}),catalog=readTypeScriptCatalog(imported.source,'inventoryCopy'),keys=readTypeScriptCatalog(imported.source,'inventorySourceKeys');
+  assert.equal(imported.listingFactsUnchanged,true);assert.equal(imported.nativeApproval,false);assert.equal(imported.hostedApproval,false);
+  assert.equal(imported.added.filter(row=>row.kind==='description').length,2);
+  assert.deepEqual({...catalog.retained},{bg:'Запазен текст',en:'Retained text'});assert.equal(keys.retained,'retained');
+  for(const row of modernRows)assert.deepEqual({...catalog[keys[row.description]]},{bg:copy[row.slug].bg.description,en:row.description});
+  assert.equal(repairImportDealerInventoryCatalog({source:imported.source,feed,listingSlugs}).source,imported.source);
+  assert.equal(JSON.stringify(feed),beforeFeed);assert.equal(JSON.stringify(stock),before);
+});
+
+test('Bradford companions keep refusing unreviewed dates, condition claims and arbitrary descriptions',()=>{
+  const source='export const inventoryCopy = {} as const;\nexport const inventorySourceKeys = {} as const;\n';
+  const stock=JSON.parse(execFileSync('git',['cat-file','blob','afefe4a692bcf99ce2ff24aaf0368d3c6d8c53f7'],{cwd:path.resolve(import.meta.dirname,'..'),env:{...process.env,GIT_NO_LAZY_FETCH:'1',GIT_TERMINAL_PROMPT:'0'}})),row=stock.records[0];
+  for(const description of [row.description.replace('10 October','11 October'),row.description+' Excellent condition.',row.description+' {stockCount}','Unknown inventory description']){
+    const listing={slug:row.slug,description,images:[{url:row.images[0],alt:row.title}]},before=JSON.stringify(listing);
+    assert.throws(()=>buildModernDealerInventoryCopy([listing]),/requires explicit reviewed EN\/BG copy/);
+    const feed={listings:[{shortDescription:description,color:'',features:[]}]};
+    assert.throws(()=>repairImportDealerInventoryCatalog({source,feed,listingSlugs:[row.slug]}),/missing description requires explicit reviewed EN\/BG copy/);
+    assert.equal(JSON.stringify(listing),before);
+  }
+});
+
