@@ -1,0 +1,196 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-reviewed-modern-bilingual-copy-input",
+  "dealer": "exclusive-auto-varna",
+  "sourceCommit": "d9594c2979f668831b78609e4e990640259aee81",
+  "baselineTree": "767f7fa65abf61b22a490cfece851235ce713c44",
+  "inputSha256": "63f29e8a236424e68901daa803281147805022a1ccd728d889dd48ca3b0b5faa",
+  "modernInputRowsSha256": "4d7e5744176e0d4216e4ce3f62bda0aad8e6421ff5c557dd1c5745b90710db0d",
+  "listingCount": 8,
+  "profileInputs": [
+    {
+      "path": "dealer.json",
+      "gitBlob": "b327e7ed49570e4f000da4d3c92401963127ec5e",
+      "sha256": "8f3df3ce450f54af804d185157f78be294a057c03f5a0f1574ef37e179486b69",
+      "bytes": 4790
+    },
+    {
+      "path": ".client/registered-source-adoption.json",
+      "gitBlob": "e34b4b1e5295f86738d8a3660cc84989036d96fa",
+      "sha256": "86a230ad368dd628634ff3d99a69e750765d7546a05cd3e731ff5f6c3644b00c",
+      "bytes": 4469
+    },
+    {
+      "path": ".client/registered-personalization.json",
+      "gitBlob": "c0196f454284cb053ebe00c57d59eac1f0131081",
+      "sha256": "feadf833cfcd3cde461f8ee944309e249d7bb79c206ab2113e8db88401373c35",
+      "bytes": 41054
+    },
+    {
+      "path": "business-facts.json",
+      "gitBlob": "fbac2198cdd54f744be69150e5ab9a3add1883e5",
+      "sha256": "8419c2a56afa82733bcea4604ca07ba12a0f8033dcae10816357f65e0f072873",
+      "bytes": 1732
+    },
+    {
+      "path": "carwow/src/lib/data/dealer-stock.json",
+      "gitBlob": "a34ffe656434d939e0f3b7d7cc99ab48992764e0",
+      "sha256": "80f793fd788cfc01d5cffcd876e7e0ad340deb339f23a7ba2f022995167d8b86",
+      "bytes": 17820
+    }
+  ],
+  "reviewedGeneratorHelper": {
+    "path": "scripts/lib/modern-dealer-inventory-copy.mjs",
+    "sha256": "cbdbaa28dc07911cfe913b4e627671b6556fc25d3bfe59364e29c5ca5a29072b",
+    "sourceCommit": "14d86f67c160699c18a6ec5658197cc4d9011e0b"
+  },
+  "review": {
+    "displayCopyOnly": true,
+    "exactSourceDescriptionKeys": true,
+    "listingFactsUnchanged": true,
+    "imageUrlsUnchanged": true,
+    "imageAltsPreserved": true,
+    "interpolationTokensUnchanged": true,
+    "reviewedBy": "Codex, authorized final-template rollout",
+    "reviewedAt": "2026-10-14T20:04:09.136Z",
+    "notes": "Reuse exact existing native or reviewed registered companions for every actual current row; no new translation/factual source edits."
+  },
+  "reviewedCopy": {
+    "toyota-camry-hybrid-680634": {
+      "sourceDescription": "2021 г., 162 050 км, 218 к.с. Цената е с включено ДДС. Състоянието и гаранционните условия се уточняват при оглед. Извадка от публична обява, наблюдавана на 09.09.2026 г.; наличността не е независимо потвърдена.",
+      "en": {
+        "description": "2021, 162,050 km, 218 hp. VAT is included in the price. Condition and warranty terms must be confirmed during inspection. Sample from a public listing observed on 9 September 2026; availability has not been independently confirmed.",
+        "imageAlts": [
+          "Toyota Camry 2.5 Hybrid Bisiness Edition",
+          "Toyota Camry 2.5 Hybrid Bisiness Edition"
+        ]
+      },
+      "bg": {
+        "description": "2021 г., 162 050 км, 218 к.с. Цената е с включено ДДС. Състоянието и гаранционните условия се уточняват при оглед. Извадка от публична обява, наблюдавана на 09.09.2026 г.; наличността не е независимо потвърдена.",
+        "imageAlts": [
+          "Toyota Camry 2.5 Hybrid Bisiness Edition",
+          "Toyota Camry 2.5 Hybrid Bisiness Edition"
+        ]
+      }
+    },
+    "suzuki-across-phev-882244": {
+      "sourceDescription": "2021 г., 137 388 км, 306 к.с. Цената е с включено ДДС. При бартер цената се договаря. Оборудването и състоянието са по публикуваната обява. Извадка от публична обява, наблюдавана на 09.09.2026 г.; наличността не е независимо потвърдена.",
+      "en": {
+        "description": "2021, 137,388 km, 306 hp. VAT is included in the price. The price is negotiable for a trade-in. Equipment and condition are as stated in the published listing. Sample from a public listing observed on 9 September 2026; availability has not been independently confirmed.",
+        "imageAlts": [
+          "Suzuki Across 2.5 P-HEV 306HP COMFORT+",
+          "Suzuki Across 2.5 P-HEV 306HP COMFORT+"
+        ]
+      },
+      "bg": {
+        "description": "2021 г., 137 388 км, 306 к.с. Цената е с включено ДДС. При бартер цената се договаря. Оборудването и състоянието са по публикуваната обява. Извадка от публична обява, наблюдавана на 09.09.2026 г.; наличността не е независимо потвърдена.",
+        "imageAlts": [
+          "Suzuki Across 2.5 P-HEV 306HP COMFORT+",
+          "Suzuki Across 2.5 P-HEV 306HP COMFORT+"
+        ]
+      }
+    },
+    "smart-forfour-eq-284627": {
+      "sourceDescription": "2021 г., 16 300 км, 82 к.с. Цената е с включено ДДС. Данните за батерията и сервизната история се потвърждават от продавача. Извадка от публична обява, наблюдавана на 09.09.2026 г.; наличността не е независимо потвърдена.",
+      "en": {
+        "description": "2021, 16,300 km, 82 hp. VAT is included in the price. Confirm battery information and service history with the seller. Sample from a public listing observed on 9 September 2026; availability has not been independently confirmed.",
+        "imageAlts": [
+          "Smart Forfour EQ LED",
+          "Smart Forfour EQ LED"
+        ]
+      },
+      "bg": {
+        "description": "2021 г., 16 300 км, 82 к.с. Цената е с включено ДДС. Данните за батерията и сервизната история се потвърждават от продавача. Извадка от публична обява, наблюдавана на 09.09.2026 г.; наличността не е независимо потвърдена.",
+        "imageAlts": [
+          "Smart Forfour EQ LED",
+          "Smart Forfour EQ LED"
+        ]
+      }
+    },
+    "mitsubishi-eclipse-cross-phev-494016": {
+      "sourceDescription": "2022 г., 62 605 км, 188 к.с. Не се начислява ДДС. Продавачът посочва автомобил без панорамен таван. Гаранционните условия не са независимо проверени. Извадка от публична обява, наблюдавана на 09.09.2026 г.; наличността не е независимо потвърдена.",
+      "en": {
+        "description": "2022, 62,605 km, 188 hp. VAT is not charged. The seller states that the vehicle has no panoramic roof. Warranty terms have not been independently verified. Sample from a public listing observed on 9 September 2026; availability has not been independently confirmed.",
+        "imageAlts": [
+          "Mitsubishi Eclipse Cross 2.4 4x4 Plug-in",
+          "Mitsubishi Eclipse Cross 2.4 4x4 Plug-in"
+        ]
+      },
+      "bg": {
+        "description": "2022 г., 62 605 км, 188 к.с. Не се начислява ДДС. Продавачът посочва автомобил без панорамен таван. Гаранционните условия не са независимо проверени. Извадка от публична обява, наблюдавана на 09.09.2026 г.; наличността не е независимо потвърдена.",
+        "imageAlts": [
+          "Mitsubishi Eclipse Cross 2.4 4x4 Plug-in",
+          "Mitsubishi Eclipse Cross 2.4 4x4 Plug-in"
+        ]
+      }
+    },
+    "hyundai-santa-fe-crdi-616703": {
+      "sourceDescription": "2019 г., 118 346 км, 200 к.с. Не се начислява ДДС. В обявата са посочени 7 места и панорамен люк. Извадка от публична обява, наблюдавана на 09.09.2026 г.; наличността не е независимо потвърдена.",
+      "en": {
+        "description": "2019, 118,346 km, 200 hp. VAT is not charged. The listing states seven seats and a panoramic sunroof. Sample from a public listing observed on 9 September 2026; availability has not been independently confirmed.",
+        "imageAlts": [
+          "Hyundai Santa Fe 2.2 CRDI 4x4 • 7 места",
+          "Hyundai Santa Fe 2.2 CRDI 4x4 • 7 места"
+        ]
+      },
+      "bg": {
+        "description": "2019 г., 118 346 км, 200 к.с. Не се начислява ДДС. В обявата са посочени 7 места и панорамен люк. Извадка от публична обява, наблюдавана на 09.09.2026 г.; наличността не е независимо потвърдена.",
+        "imageAlts": [
+          "Hyundai Santa Fe 2.2 CRDI 4x4 • 7 места",
+          "Hyundai Santa Fe 2.2 CRDI 4x4 • 7 места"
+        ]
+      }
+    },
+    "ds-7-crossback-phev-052853": {
+      "sourceDescription": "2021 г., 156 868 км, 224 к.с. Обявата посочва фактура с ДДС. При бартер цената се договаря. Подробното оборудване следва да се потвърди по автомобила. Извадка от публична обява, наблюдавана на 09.09.2026 г.; наличността не е независимо потвърдена.",
+      "en": {
+        "description": "2021, 156,868 km, 224 hp. The listing states an invoice with VAT. The price is negotiable for a trade-in. Confirm the detailed equipment on the vehicle. Sample from a public listing observed on 9 September 2026; availability has not been independently confirmed.",
+        "imageAlts": [
+          "DS 7 Crossback 1.6 P-HEV 224 к.с.",
+          "DS 7 Crossback 1.6 P-HEV 224 к.с."
+        ]
+      },
+      "bg": {
+        "description": "2021 г., 156 868 км, 224 к.с. Обявата посочва фактура с ДДС. При бартер цената се договаря. Подробното оборудване следва да се потвърди по автомобила. Извадка от публична обява, наблюдавана на 09.09.2026 г.; наличността не е независимо потвърдена.",
+        "imageAlts": [
+          "DS 7 Crossback 1.6 P-HEV 224 к.с.",
+          "DS 7 Crossback 1.6 P-HEV 224 к.с."
+        ]
+      }
+    },
+    "audi-a6-40-tdi-0bde93": {
+      "sourceDescription": "2022 г., 192 298 км, 204 к.с. При бартер цената се договаря. Данъчните условия се уточняват с продавача. Данните са от обявата на същия продавач в Cars.bg. Извадка от публична обява, наблюдавана на 09.09.2026 г.; наличността не е независимо потвърдена.",
+      "en": {
+        "description": "2022, 192,298 km, 204 hp. The price is negotiable for a trade-in. Confirm tax terms with the seller. These details come from the same seller’s Cars.bg listing. Sample from a public listing observed on 9 September 2026; availability has not been independently confirmed.",
+        "imageAlts": [
+          "Audi A6 40 TDI",
+          "Audi A6 40 TDI"
+        ]
+      },
+      "bg": {
+        "description": "2022 г., 192 298 км, 204 к.с. При бартер цената се договаря. Данъчните условия се уточняват с продавача. Данните са от обявата на същия продавач в Cars.bg. Извадка от публична обява, наблюдавана на 09.09.2026 г.; наличността не е независимо потвърдена.",
+        "imageAlts": [
+          "Audi A6 40 TDI",
+          "Audi A6 40 TDI"
+        ]
+      }
+    },
+    "toyota-rav4-lpg-906960": {
+      "sourceDescription": "2004 г., 260 362 км, 150 к.с. Не се начислява ДДС. Продавачът изрично посочва драскотини по броните; не е описан като без забележки. Извадка от публична обява, наблюдавана на 09.09.2026 г.; наличността не е независимо потвърдена.",
+      "en": {
+        "description": "2004, 260,362 km, 150 hp. VAT is not charged. The seller explicitly states scratches on the bumpers; it is not described as free of defects. Sample from a public listing observed on 9 September 2026; availability has not been independently confirmed.",
+        "imageAlts": [
+          "Toyota RAV4 2.0 16V • Газ",
+          "Toyota RAV4 2.0 16V • Газ"
+        ]
+      },
+      "bg": {
+        "description": "2004 г., 260 362 км, 150 к.с. Не се начислява ДДС. Продавачът изрично посочва драскотини по броните; не е описан като без забележки. Извадка от публична обява, наблюдавана на 09.09.2026 г.; наличността не е независимо потвърдена.",
+        "imageAlts": [
+          "Toyota RAV4 2.0 16V • Газ",
+          "Toyota RAV4 2.0 16V • Газ"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-reviewed-modern-bilingual-copy-input",
+  "dealer": "biemaauto-varna",
+  "sourceCommit": "d9594c2979f668831b78609e4e990640259aee81",
+  "baselineTree": "19b857227e7981f9fce11b0f7eef801a1c58d24a",
+  "inputSha256": "be0e37259b67689db07f6e319ed606d2a0d5245e833becbea350cb34c0e81e52",
+  "modernInputRowsSha256": "a4099f662b7fc2ec92791072a33417f4636f6f30f91efb7a3299ae659ae934e3",
+  "listingCount": 1,
+  "profileInputs": [
+    {
+      "path": "dealer.json",
+      "gitBlob": "669fb56277d1d59ac6a2077d3e7c5a113d9e6df8",
+      "sha256": "ed32dcba07015d3ff0377d154d189214e33d58e72bbeca03ff8479706cba927d",
+      "bytes": 4375
+    },
+    {
+      "path": "business-facts.json",
+      "gitBlob": "66c8895e7afc21b94a598a68f598cc77fc6f2557",
+      "sha256": "b5805dd6ddba20a4565cfe186e1f67814d1749c01ef3b9ad64f0c25cb6578cb1",
+      "bytes": 2076
+    },
+    {
+      "path": "stock.json",
+      "gitBlob": "c45b837b9b618b0079e1946d7366441c08a58fb8",
+      "sha256": "e955cc94da408a0a0317c1a69782f2a4ca21a6e1a23475b84965bc1aef3b32d5",
+      "bytes": 10379
+    }
+  ],
+  "reviewedGeneratorHelper": {
+    "path": "scripts/lib/modern-dealer-inventory-copy.mjs",
+    "sha256": "cbdbaa28dc07911cfe913b4e627671b6556fc25d3bfe59364e29c5ca5a29072b",
+    "sourceCommit": "14d86f67c160699c18a6ec5658197cc4d9011e0b"
+  },
+  "review": {
+    "displayCopyOnly": true,
+    "exactSourceDescriptionKeys": true,
+    "listingFactsUnchanged": true,
+    "imageUrlsUnchanged": true,
+    "imageAltsPreserved": true,
+    "interpolationTokensUnchanged": true,
+    "reviewedBy": "Codex, authorized final-template rollout",
+    "reviewedAt": "2026-10-14T20:04:09.132Z",
+    "notes": "Reuse exact existing native or reviewed registered companions for every actual current row; no new translation/factual source edits."
+  },
+  "reviewedCopy": {
+    "mercedes-benz-cla-2022-11789634848837677": {
+      "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "en": {
+        "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "Mercedes-Benz CLA",
+          "Mercedes-Benz CLA"
+        ]
+      },
+      "bg": {
+        "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+        "imageAlts": [
+          "Mercedes-Benz CLA",
+          "Mercedes-Benz CLA"
+        ]
+      }
+    }
+  }
+}

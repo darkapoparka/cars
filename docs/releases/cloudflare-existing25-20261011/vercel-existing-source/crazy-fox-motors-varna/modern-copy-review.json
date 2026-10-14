@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-reviewed-modern-bilingual-copy-input",
+  "dealer": "crazy-fox-motors-varna",
+  "sourceCommit": "d9594c2979f668831b78609e4e990640259aee81",
+  "baselineTree": "6269fc6dd34a1ba2a1ff577f90cb40f882b9a9f4",
+  "inputSha256": "77b172bdaf68b0a7b0a9f7147533b8a188a2119204a4f272fe5edc2256946e1f",
+  "modernInputRowsSha256": "f625df9d914fa74071863c628700b9125566559114ae79ab1cb7b652d938a764",
+  "listingCount": 2,
+  "profileInputs": [
+    {
+      "path": "dealer.json",
+      "gitBlob": "fa6206555174a76db82db817a9a5d651d1d77d2f",
+      "sha256": "aae21f10b2c328a31042d91bfffd055222c99321dcdf85f69a22cffa1a91afd3",
+      "bytes": 4372
+    },
+    {
+      "path": "business-facts.json",
+      "gitBlob": "f1205e021e018b28fbf389219e819013b95d9bb3",
+      "sha256": "e7f718e4e626e3a04851d62805a1e862a783eec3cab63ed130d99f695cd60ccd",
+      "bytes": 5726
+    },
+    {
+      "path": "stock.json",
+      "gitBlob": "c08e1793daf2aeb7d2e77c33d246b78a8ae5545e",
+      "sha256": "8bd1181b67bf548ebd758020644a5fc15834291fae94e6a16aaed98c300ce686",
+      "bytes": 3239
+    }
+  ],
+  "reviewedGeneratorHelper": {
+    "path": "scripts/lib/modern-dealer-inventory-copy.mjs",
+    "sha256": "cbdbaa28dc07911cfe913b4e627671b6556fc25d3bfe59364e29c5ca5a29072b",
+    "sourceCommit": "14d86f67c160699c18a6ec5658197cc4d9011e0b"
+  },
+  "review": {
+    "displayCopyOnly": true,
+    "exactSourceDescriptionKeys": true,
+    "listingFactsUnchanged": true,
+    "imageUrlsUnchanged": true,
+    "imageAltsPreserved": true,
+    "interpolationTokensUnchanged": true,
+    "reviewedBy": "Codex, authorized final-template rollout",
+    "reviewedAt": "2026-10-14T20:04:09.146Z",
+    "notes": "Reuse exact existing native or reviewed registered companions for every actual current row; no new translation/factual source edits."
+  },
+  "reviewedCopy": {
+    "crazy-fox-motors-varna-11782980086929422": {
+      "sourceDescription": "Toyota Avensis 2.2 D-CAT от датирана публична обява. Потвърдете цената и наличността директно с автокъщата.",
+      "en": {
+        "description": "Toyota Avensis 2.2 D-CAT from a dated public advert. Confirm price and availability directly with the dealership.",
+        "imageAlts": [
+          "Toyota Avensis 2.2 D-CAT",
+          "Toyota Avensis 2.2 D-CAT"
+        ]
+      },
+      "bg": {
+        "description": "Toyota Avensis 2.2 D-CAT от датирана публична обява. Потвърдете цената и наличността директно с автокъщата.",
+        "imageAlts": [
+          "Toyota Avensis 2.2 D-CAT",
+          "Toyota Avensis 2.2 D-CAT"
+        ]
+      }
+    },
+    "crazy-fox-motors-varna-11782978114796435": {
+      "sourceDescription": "Porsche 911 992 Turbo S от датирана публична обява; публикуваната цена е без ДДС. Потвърдете цената и наличността директно с автокъщата.",
+      "en": {
+        "description": "Porsche 911 992 Turbo S from a dated public advert; the published price excludes VAT. Confirm price and availability directly with the dealership.",
+        "imageAlts": [
+          "Porsche 911 992 Turbo S",
+          "Porsche 911 992 Turbo S"
+        ]
+      },
+      "bg": {
+        "description": "Porsche 911 992 Turbo S от датирана публична обява; публикуваната цена е без ДДС. Потвърдете цената и наличността директно с автокъщата.",
+        "imageAlts": [
+          "Porsche 911 992 Turbo S",
+          "Porsche 911 992 Turbo S"
+        ]
+      }
+    }
+  }
+}

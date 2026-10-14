@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-reviewed-modern-bilingual-copy-input",
+  "dealer": "autobora-varna",
+  "sourceCommit": "d9594c2979f668831b78609e4e990640259aee81",
+  "baselineTree": "f0a6fb56c1309c1e0993e723f7f6592b40c7f031",
+  "inputSha256": "01e1f90b50da8b1bf14033754af730054a94af80a656b935f8fa06b569b5d4e2",
+  "modernInputRowsSha256": "e0eddf906b6aacd2f84537adaa0f4f289d4d0c8903203dd6bc883c0540fc3c5e",
+  "listingCount": 1,
+  "profileInputs": [
+    {
+      "path": "dealer.json",
+      "gitBlob": "778c0e967f3bd69b95e1fede9e94121e0c85609a",
+      "sha256": "e683a35165582d3cd14ae64d49cad7c2b1b2385a7e05beec63786d5588490988",
+      "bytes": 4376
+    },
+    {
+      "path": "business-facts.json",
+      "gitBlob": "ddd7ad96c531c9b13239b53c4535b1568e0fb252",
+      "sha256": "fe65e350e32d0ce3ab6777bed8dd9d4d2e6b6f16dce5637707ffcac34efb449d",
+      "bytes": 2001
+    },
+    {
+      "path": "stock.json",
+      "gitBlob": "dc7d6f69128b7028deb0f7df477d141efd6cba22",
+      "sha256": "6abfaccfb093f81349924217850e21bfbfbc2f9182900e99f8a5fd3bb3b99f43",
+      "bytes": 10312
+    }
+  ],
+  "reviewedGeneratorHelper": {
+    "path": "scripts/lib/modern-dealer-inventory-copy.mjs",
+    "sha256": "cbdbaa28dc07911cfe913b4e627671b6556fc25d3bfe59364e29c5ca5a29072b",
+    "sourceCommit": "14d86f67c160699c18a6ec5658197cc4d9011e0b"
+  },
+  "review": {
+    "displayCopyOnly": true,
+    "exactSourceDescriptionKeys": true,
+    "listingFactsUnchanged": true,
+    "imageUrlsUnchanged": true,
+    "imageAltsPreserved": true,
+    "interpolationTokensUnchanged": true,
+    "reviewedBy": "Codex, authorized final-template rollout",
+    "reviewedAt": "2026-10-14T20:04:09.131Z",
+    "notes": "Reuse exact existing native or reviewed registered companions for every actual current row; no new translation/factual source edits."
+  },
+  "reviewedCopy": {
+    "vw-golf-2017-11738733943918557": {
+      "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "en": {
+        "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "VW Golf",
+          "VW Golf"
+        ]
+      },
+      "bg": {
+        "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+        "imageAlts": [
+          "VW Golf",
+          "VW Golf"
+        ]
+      }
+    }
+  }
+}

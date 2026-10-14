@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-reviewed-modern-bilingual-copy-input",
+  "dealer": "kalo-0404-varna",
+  "sourceCommit": "d9594c2979f668831b78609e4e990640259aee81",
+  "baselineTree": "f68d4177b9a485cdd2c55523d2968ac94fa537ee",
+  "inputSha256": "3a12bc0655713a4cb97b02795747cbb33996b827e5c6c6cd9b07d1fd05ea72f1",
+  "modernInputRowsSha256": "c51818dd99fcb2e2b7c90a1faabea011de3c180b4ae7f7c1e5d450b34e05c6bb",
+  "listingCount": 2,
+  "profileInputs": [
+    {
+      "path": "dealer.json",
+      "gitBlob": "642792208a16c6df9da2cd42056f0f53cd41307f",
+      "sha256": "1843cb17a0012b4d138068533dc499a57b244045e84324246b603adcbb1d41c6",
+      "bytes": 4485
+    },
+    {
+      "path": "business-facts.json",
+      "gitBlob": "49418f5faa5751125d0512da577e4470e66b2bec",
+      "sha256": "fd363876bff1e40f1caf5567ef9ff182791d0c7c9dd7ec8facf9a85ab5c48ec5",
+      "bytes": 5835
+    },
+    {
+      "path": "stock.json",
+      "gitBlob": "ede283576e1ed5e1777f81abb98502fcdabea616",
+      "sha256": "102704fd4b75e7ab160594ad8645cd9237a051f499fc850d0b68ed9dd774ce5e",
+      "bytes": 4759
+    }
+  ],
+  "reviewedGeneratorHelper": {
+    "path": "scripts/lib/modern-dealer-inventory-copy.mjs",
+    "sha256": "cbdbaa28dc07911cfe913b4e627671b6556fc25d3bfe59364e29c5ca5a29072b",
+    "sourceCommit": "14d86f67c160699c18a6ec5658197cc4d9011e0b"
+  },
+  "review": {
+    "displayCopyOnly": true,
+    "exactSourceDescriptionKeys": true,
+    "listingFactsUnchanged": true,
+    "imageUrlsUnchanged": true,
+    "imageAltsPreserved": true,
+    "interpolationTokensUnchanged": true,
+    "reviewedBy": "Codex, authorized final-template rollout",
+    "reviewedAt": "2026-10-14T20:04:09.145Z",
+    "notes": "Reuse exact existing native or reviewed registered companions for every actual current row; no new translation/factual source edits."
+  },
+  "reviewedCopy": {
+    "kalo-0404-varna-demo-estate": {
+      "sourceDescription": "Илюстративен демонстрационен автомобил с примерни характеристики и цена. Не е действителна оферта или наличност на автокъщата. Изображението е генерирана декоративна илюстрация.",
+      "en": {
+        "description": "Illustrative demo vehicle with example specifications and price. This is not a real offer or dealership stock. The image is generated decorative artwork.",
+        "imageAlts": [
+          "Demo Estate — illustration"
+        ]
+      },
+      "bg": {
+        "description": "Илюстративен демонстрационен автомобил с примерни характеристики и цена. Не е действителна оферта или наличност на автокъщата. Изображението е генерирана декоративна илюстрация.",
+        "imageAlts": [
+          "Demo Estate — illustration"
+        ]
+      }
+    },
+    "kalo-0404-varna-demo-suv": {
+      "sourceDescription": "Илюстративен демонстрационен автомобил с примерни характеристики и цена. Не е действителна оферта или наличност на автокъщата. Изображението е генерирана декоративна илюстрация.",
+      "en": {
+        "description": "Illustrative demo vehicle with example specifications and price. This is not a real offer or dealership stock. The image is generated decorative artwork.",
+        "imageAlts": [
+          "Demo SUV — illustration"
+        ]
+      },
+      "bg": {
+        "description": "Илюстративен демонстрационен автомобил с примерни характеристики и цена. Не е действителна оферта или наличност на автокъщата. Изображението е генерирана декоративна илюстрация.",
+        "imageAlts": [
+          "Demo SUV — illustration"
+        ]
+      }
+    }
+  }
+}

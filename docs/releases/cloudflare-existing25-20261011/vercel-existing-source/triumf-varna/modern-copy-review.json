@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-reviewed-modern-bilingual-copy-input",
+  "dealer": "triumf-varna",
+  "sourceCommit": "d9594c2979f668831b78609e4e990640259aee81",
+  "baselineTree": "670338a1e9dda7e4bb7041b6b953b82dd7e23124",
+  "inputSha256": "a53f874ef325dd4a44119e6f38ead12a24dd25f7d81e45fb1a1b7f3cd8214ec1",
+  "modernInputRowsSha256": "1a8df9946630658b5451e4f5c7d5903f320cfd8bc600389731615e2ae2b5af8a",
+  "listingCount": 1,
+  "profileInputs": [
+    {
+      "path": "dealer.json",
+      "gitBlob": "480fa22f203cf79e5c9d5f189784f03c8d8f03ee",
+      "sha256": "1fc66ceec2dd7c09e1b5af0b9c810efd7e0645de8a4eebfa6c51e8ace0143512",
+      "bytes": 4359
+    },
+    {
+      "path": "business-facts.json",
+      "gitBlob": "de6920fb1af200941175266efcbbf9c31b44336f",
+      "sha256": "d46b726efa45ec49ca3af79b74a48441e877dff55ccc355e5a6235c2c923c874",
+      "bytes": 1837
+    },
+    {
+      "path": "stock.json",
+      "gitBlob": "ec4afe60a1d718ba27bf98d607b58f36cb15d125",
+      "sha256": "be217a5475c852603ba231464f2881f79cdede036b9d84733bbecf69f70f8ad2",
+      "bytes": 10189
+    }
+  ],
+  "reviewedGeneratorHelper": {
+    "path": "scripts/lib/modern-dealer-inventory-copy.mjs",
+    "sha256": "cbdbaa28dc07911cfe913b4e627671b6556fc25d3bfe59364e29c5ca5a29072b",
+    "sourceCommit": "14d86f67c160699c18a6ec5658197cc4d9011e0b"
+  },
+  "review": {
+    "displayCopyOnly": true,
+    "exactSourceDescriptionKeys": true,
+    "listingFactsUnchanged": true,
+    "imageUrlsUnchanged": true,
+    "imageAltsPreserved": true,
+    "interpolationTokensUnchanged": true,
+    "reviewedBy": "Codex, authorized final-template rollout",
+    "reviewedAt": "2026-10-14T20:04:09.143Z",
+    "notes": "Reuse exact existing native or reviewed registered companions for every actual current row; no new translation/factual source edits."
+  },
+  "reviewedCopy": {
+    "vw-touran-2010-11786001673149613": {
+      "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "en": {
+        "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "VW Touran",
+          "VW Touran"
+        ]
+      },
+      "bg": {
+        "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+        "imageAlts": [
+          "VW Touran",
+          "VW Touran"
+        ]
+      }
+    }
+  }
+}

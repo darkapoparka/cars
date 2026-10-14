@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-reviewed-modern-bilingual-copy-input",
+  "dealer": "abcbulgaria-varna",
+  "sourceCommit": "d9594c2979f668831b78609e4e990640259aee81",
+  "baselineTree": "45a466675869d37c5d50583b36c920705c11ee29",
+  "inputSha256": "fa777a7d8bec5c90e0e89b3aae62f2156067a45370de8a1639a5d22c502ca984",
+  "modernInputRowsSha256": "3314a793a9a5b5746904a968aa6c2e7aae820c539f54c09f38fe63e438611957",
+  "listingCount": 1,
+  "profileInputs": [
+    {
+      "path": "dealer.json",
+      "gitBlob": "a428f9e466fe4717acd234fef97eb328da54af1a",
+      "sha256": "51457285f486f76c80d4986ee81175e57aa19107265e244fce25f5cf30137463",
+      "bytes": 4409
+    },
+    {
+      "path": "business-facts.json",
+      "gitBlob": "2fe152104dffd5444f202f7266a942aa3398f588",
+      "sha256": "fc451eb5d54c0bc72320b0f00a17b4aac087bb26d115fb9c6815122ca49b2e7b",
+      "bytes": 1870
+    },
+    {
+      "path": "stock.json",
+      "gitBlob": "b9abe69a4b2fde81c6ee847459a0afa2c24d9b73",
+      "sha256": "44e84dae2faa849122cbd6cc447966375a3cd524883d48375ef26bd6748f031e",
+      "bytes": 9736
+    }
+  ],
+  "reviewedGeneratorHelper": {
+    "path": "scripts/lib/modern-dealer-inventory-copy.mjs",
+    "sha256": "cbdbaa28dc07911cfe913b4e627671b6556fc25d3bfe59364e29c5ca5a29072b",
+    "sourceCommit": "14d86f67c160699c18a6ec5658197cc4d9011e0b"
+  },
+  "review": {
+    "displayCopyOnly": true,
+    "exactSourceDescriptionKeys": true,
+    "listingFactsUnchanged": true,
+    "imageUrlsUnchanged": true,
+    "imageAltsPreserved": true,
+    "interpolationTokensUnchanged": true,
+    "reviewedBy": "Codex, authorized final-template rollout",
+    "reviewedAt": "2026-10-14T20:04:09.141Z",
+    "notes": "Reuse exact existing native or reviewed registered companions for every actual current row; no new translation/factual source edits."
+  },
+  "reviewedCopy": {
+    "renault-trafic-2002-31791195588891492": {
+      "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "en": {
+        "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "Renault Trafic",
+          "Renault Trafic"
+        ]
+      },
+      "bg": {
+        "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+        "imageAlts": [
+          "Renault Trafic",
+          "Renault Trafic"
+        ]
+      }
+    }
+  }
+}
