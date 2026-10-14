@@ -16,7 +16,7 @@
   } = $props();
   const i18n = getI18n();
   const desktop = new MediaQuery('(min-width: 992px)', false);
-  const coordinates = `${brand.showroomCoordinates.latitude},${brand.showroomCoordinates.longitude}`;
+  const coordinates = "бул. Янош Хуняди 518, срещу КАТ Варна, Варна, България, Варна";
   const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(coordinates)}`;
   const mapUrl = $derived(`https://maps.google.com/maps?q=${coordinates}&z=16&hl=${i18n.locale}&output=embed`);
 </script>

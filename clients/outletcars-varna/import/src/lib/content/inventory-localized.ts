@@ -477,6 +477,64 @@ export const inventoryCopy = {
 		bg: 'Автомобилът е с пълна сервизна история в Порше. Може да се провери във всяко представителство на марката. Sport Chrono пакет. Абсолютно автентичен вид както е излезнал от завода. Регистриран с каско, гражданска, данък, винетка. Без бартер. Само сериозни обаждания.',
 		en: 'Full Porsche service history. Can be checked at any dealership for the brand. Sport Chrono package. Entirely original factory appearance. Registered, with comprehensive insurance, third-party liability insurance, tax and vignette. No trade-ins. Serious inquiries only.'
 	}
+,
+	"dealerStock_a0832b399f2c889f4f53539116767296f69ca7560bf758f6a68667085e19bb18": {
+		"bg": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+		"en": "Dated listing snapshot; confirm the price and availability directly with the dealership."
+	},
+	"dealerStock_d04158cef66af6e9e3f19f4ce98231c23c015950501b3f5dbb03611b9cab275b": {
+		"bg": "360 камера / задна камера",
+		"en": "360 camera / rear camera"
+	},
+	"dealerStock_a361d0a678da8d08851a6de6afed2cc99e145a910b1d5408495969c8b433ca16": {
+		"bg": "Bluetooth / handsfree система",
+		"en": "Bluetooth / hands-free system"
+	},
+	"dealerStock_73550b5bf27360e0294a55212cc910228b75393999750841a8559399fe2ca18c": {
+		"bg": "Безключово палене",
+		"en": "Keyless start"
+	},
+	"dealerStock_807390969be88c1246f3a1ae037a0dd286508d417aaf0e025ec64891502845a5": {
+		"bg": "Бързи / бавни скорости",
+		"en": "High / low range gears"
+	},
+	"dealerStock_e8b8a518e15b0fc1c361f1691b4a21d156427eaa36fce311b8a0a970af578dba": {
+		"bg": "Лизинг",
+		"en": "Leasing"
+	},
+	"dealerStock_a5f88de5a473a2b747f8c4685b672d9c59138b6db95e6b08a8baca3faf2bc13d": {
+		"bg": "Термопомпа",
+		"en": "Heat pump"
+	},
+	"dealerStock_6e6c280e9623093cd1633e5d0c6a87eb298b3264443fe9e868238fb954ed0dbb": {
+		"bg": "Apple CarPlay / Android Auto",
+		"en": "Apple CarPlay / Android Auto"
+	},
+	"dealerStock_0184fe75300fc233b182c53220cc314715a7247d92f167e8a0a6335f4391b6cb": {
+		"bg": "Аудио / видео",
+		"en": "Audio / video"
+	},
+	"dealerStock_f258769daf4cedc0e0f4ac711c2fe5090299dd941db55faefab350b88ca23ab1": {
+		"bg": "IN / AUX изводи",
+		"en": "IN / AUX inputs"
+	},
+	"dealerStock_c78cd581da3aa4de35d6919238c4713939f3b2cac47dd3159756d967f6fd7011": {
+		"bg": "Климатик",
+		"en": "Air conditioning"
+	},
+	"dealerStock_1c34a1f2204b465e3163c845d707a8e778fd454b80f1b0faf5ce09dd10b82a6b": {
+		"bg": "Светло сив",
+		"en": "Light grey"
+	},
+	"dealerStock_3d96c249155b3ea1aedba5e6897000211a0680d2fa4f745edb3014f74eb2096d": {
+		"bg": "Тъмно син",
+		"en": "Dark blue"
+	},
+	"dealerStock_cf84999173a681fc2fad0fdf1c83390587a272e61c50e9242a6d6b2fcb81b71c": {
+		"bg": "Велурен салон",
+		"en": "Velour interior"
+	}
+
 } satisfies Record<string, Record<Locale, string>>;
 export const inventorySourceKeys: Readonly<Record<string, keyof typeof inventoryCopy>> = {
 	'4(5) Врати': 'term0',
@@ -630,6 +688,22 @@ export const inventorySourceKeys: Readonly<Record<string, keyof typeof inventory
 		'description30',
 	'Автомобилът е с пълна сервизна история в Порше. Може да се провери във всяко представителство на марката. Sport Chrono пакет. Абсолютно автентичен вид както е излезнал от завода. Регистриран с каско, гражданска, данък, винетка. Без бартер. Само сериозни обаждания.':
 		'description31'
+,
+	"Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.": "dealerStock_a0832b399f2c889f4f53539116767296f69ca7560bf758f6a68667085e19bb18",
+	"360 camera \\ Задна камера": "dealerStock_d04158cef66af6e9e3f19f4ce98231c23c015950501b3f5dbb03611b9cab275b",
+	"Bluetooth \\ handsfree система": "dealerStock_a361d0a678da8d08851a6de6afed2cc99e145a910b1d5408495969c8b433ca16",
+	"Безключово палене ": "dealerStock_73550b5bf27360e0294a55212cc910228b75393999750841a8559399fe2ca18c",
+	"Бързи \\ бавни скорости": "dealerStock_807390969be88c1246f3a1ae037a0dd286508d417aaf0e025ec64891502845a5",
+	"Лизинг": "dealerStock_e8b8a518e15b0fc1c361f1691b4a21d156427eaa36fce311b8a0a970af578dba",
+	"Термопомпа": "dealerStock_a5f88de5a473a2b747f8c4685b672d9c59138b6db95e6b08a8baca3faf2bc13d",
+	"Apple CarPlay \\ Android Auto": "dealerStock_6e6c280e9623093cd1633e5d0c6a87eb298b3264443fe9e868238fb954ed0dbb",
+	"audio\\video": "dealerStock_0184fe75300fc233b182c53220cc314715a7247d92f167e8a0a6335f4391b6cb",
+	"IN\\AUX изводи": "dealerStock_f258769daf4cedc0e0f4ac711c2fe5090299dd941db55faefab350b88ca23ab1",
+	"Климатик": "dealerStock_c78cd581da3aa4de35d6919238c4713939f3b2cac47dd3159756d967f6fd7011",
+	"Светло сив": "dealerStock_1c34a1f2204b465e3163c845d707a8e778fd454b80f1b0faf5ce09dd10b82a6b",
+	"Tъмно син": "dealerStock_3d96c249155b3ea1aedba5e6897000211a0680d2fa4f745edb3014f74eb2096d",
+	"Велурен салон": "dealerStock_cf84999173a681fc2fad0fdf1c83390587a272e61c50e9242a6d6b2fcb81b71c"
+
 };
 export function inventoryText(locale: Locale, value: string): string {
 	const key = inventorySourceKeys[value];

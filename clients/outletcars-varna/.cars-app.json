@@ -3,17 +3,17 @@
   "dealer": "outletcars-varna",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "4e184777567849a2c5b4a9e4a3e652252179c29c",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
     "path": "templates/app",
-    "digest": "fad0067e48d7bd7e1c5177c5e91e2bc5767352e2c16621cb458d18a081f7c541",
-    "tree": "749512ff762c25272d1474225ff653dd4c88f0fe"
+    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1",
+    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76"
   },
-  "appDigest": "f1606e7a2afb6a3fa842e4513d38bc4610f57a090c0ff82c4e5c81a25517246a",
+  "appDigest": "83b57a1887ab55eed31a3cdfdc4619e46580c32cf7c33397e33586e6dd9c0cc2",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "outletcars-varna",
     "profile": "auto-best/src/lib/data/dealer-profile.json",
-    "profileSha256": "77ccbfe2d45bd58ea26ac39702198e760952d51f730128b0eeeafec8ff4e6b20",
+    "profileSha256": "a1d44719a45486f40d2a43c97892877635cafc351a83dc40ea7bd92c98c5b8f8",
     "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
     "vehicles": 8,
     "currency": "EUR",
@@ -175,13 +175,59 @@
         "sha256": "6d616a0ca898bc97c52aa85b0c85889a80779fc6a722db741782e697b58d2810",
         "role": "vehicle"
       }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "audi-q5-mild-hybrid-s-line-quattro-1-2021-21780566866553359",
+        "sourceValue": 80037,
+        "sourceUnit": "km",
+        "canonicalKm": 80037
+      },
+      {
+        "slug": "citroen-c3-1-2-100hp-03-2027-2025-11780668057655036",
+        "sourceValue": 34393,
+        "sourceUnit": "km",
+        "canonicalKm": 34393
+      },
+      {
+        "slug": "opel-corsa-edition-2024-11778766828983143",
+        "sourceValue": 73085,
+        "sourceUnit": "km",
+        "canonicalKm": 73085
+      },
+      {
+        "slug": "vw-tiguan-1-5tsi-150hp-04-2028-2023-21779776692067869",
+        "sourceValue": 97608,
+        "sourceUnit": "km",
+        "canonicalKm": 97608
+      },
+      {
+        "slug": "vw-arteon-r-line-04-2028-2023-11782296205813235",
+        "sourceValue": 115387,
+        "sourceUnit": "km",
+        "canonicalKm": 115387
+      },
+      {
+        "slug": "peugeot-2008-gt-2024-11782392995192464",
+        "sourceValue": 75424,
+        "sourceUnit": "km",
+        "canonicalKm": 75424
+      },
+      {
+        "slug": "audi-q7-4-2-tdi-v8-340-800-nm-2010-21786715209008072",
+        "sourceValue": 315000,
+        "sourceUnit": "km",
+        "canonicalKm": 315000
+      },
+      {
+        "slug": "vw-arteon-r-line-2023-11785245019997658",
+        "sourceValue": 89543,
+        "sourceUnit": "km",
+        "canonicalKm": 89543
+      }
     ]
   },
-  "baseDeployment": {
-    "id": "dpl_6WjTF38FuGYSB6T6wyHe62jd9qJZ",
-    "url": "https://cars-outletcarsvarna.vercel.app/",
-    "checkedAt": "2026-09-28T02:25:51.980Z"
-  },
-  "baseReceiptSha256": "bd82be5178ad21fbb47d9168e5cfd5bb7806a6d88193046c2358126d621a3a3f",
-  "refreshedAt": "2026-10-10T23:12:42.006Z"
+  "needsDealerQA": true,
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-13T02:54:44.239Z"
 }

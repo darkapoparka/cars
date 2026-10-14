@@ -23,13 +23,17 @@ export const dealerLocalizedText = {
     "city": "Plovdiv",
     "addressLine": "South Industrial Zone, Ring Road opposite Chiirite Hotel",
     "address": "South Industrial Zone, Ring Road opposite Chiirite Hotel, Plovdiv",
-    "appointment": "Opening hours are not published. Confirm by phone before visiting."
+    "appointment": "Opening hours are not published. Confirm by phone before visiting.",
+    "addressShort": "South Industrial Zone, Ring Road opposite Chiirite Hotel",
+    "appointmentShort": "Opening hours are not published. Confirm by phone before visiting."
   },
   "bg": {
     "city": "Пловдив",
     "addressLine": "Индустриална зона – Юг, Околовръстен път срещу хотел Чиирите",
     "address": "Индустриална зона – Юг, Околовръстен път срещу хотел Чиирите",
-    "appointment": "Работното време не е публикувано. Потвърдете по телефона преди посещение."
+    "appointment": "Работното време не е публикувано. Потвърдете по телефона преди посещение.",
+    "addressShort": "Индустриална зона – Юг, Околовръстен път срещу хотел Чиирите",
+    "appointmentShort": "Работното време не е публикувано. Потвърдете по телефона преди посещение."
   }
 } as const;
 

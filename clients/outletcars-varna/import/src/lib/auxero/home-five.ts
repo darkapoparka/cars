@@ -420,7 +420,7 @@ const inventoryMegaMenu: HomeFiveHeaderInventoryMegaMenu = {
 			]
 		},
 		{
-			title: 'OUTLETCARS.BG — Варна Support',
+			title: 'OUTLETCARS.BG Support',
 			links: [
 				{ href: '/services', label: 'Import & Buying Services' },
 				{ href: '/calculator', label: 'Import Cost Calculator' },
@@ -433,7 +433,7 @@ const inventoryMegaMenu: HomeFiveHeaderInventoryMegaMenu = {
 		copy: 'Filter by body, fuel, price, and mileage before you book a viewing.',
 		ctaHref: '/inventory',
 		ctaLabel: 'View All Inventory',
-		title: `${inventoryVehicles.length} vehicles in the OUTLETCARS.BG — Варна stock feed`
+		title: `${inventoryVehicles.length} vehicles in the OUTLETCARS.BG stock feed`
 	}
 };
 
@@ -456,7 +456,7 @@ const aboutMegaMenu: HomeFiveHeaderContainerMenu = {
 		{ href: '/agents', label: 'Meet Our Consultants' },
 		{ href: '/reviews', label: 'Client Reviews' },
 		{ href: '/faqs', label: 'Frequently Asked Questions' },
-		{ href: '/blog', label: 'OUTLETCARS.BG — Варна Notes' },
+		{ href: '/blog', label: 'OUTLETCARS.BG Notes' },
 		{ href: '/contact', label: 'Visit The Office' }
 	]
 };
@@ -520,7 +520,7 @@ const inventoryMegaMenuForLocale = (locale: Locale): HomeFiveHeaderInventoryMega
 				]
 			},
 			{
-				title: locale === 'bg' ? 'Съдействие от OUTLETCARS.BG — Варна' : 'OUTLETCARS.BG — Варна Support',
+				title: locale === 'bg' ? 'Съдействие от OUTLETCARS.BG' : 'OUTLETCARS.BG Support',
 				links: [
 					{
 						href: '/services',
@@ -551,7 +551,7 @@ const inventoryMegaMenuForLocale = (locale: Locale): HomeFiveHeaderInventoryMega
 			title:
 				locale === 'bg'
 					? `${inventoryVehicles.length} автомобила в наличност`
-					: `${inventoryVehicles.length} vehicles in the OUTLETCARS.BG — Варна stock feed`
+					: `${inventoryVehicles.length} vehicles in the OUTLETCARS.BG stock feed`
 		}
 	};
 };
@@ -580,7 +580,7 @@ const aboutMegaMenuForLocale = (locale: Locale): HomeFiveHeaderContainerMenu => 
 					{ href: '/agents', label: 'Нашите консултанти' },
 					{ href: '/reviews', label: 'Отзиви от клиенти' },
 					{ href: '/faqs', label: 'Често задавани въпроси' },
-					{ href: '/blog', label: 'Съвети от OUTLETCARS.BG — Варна' },
+					{ href: '/blog', label: 'Съвети от OUTLETCARS.BG' },
 					{ href: '/contact', label: 'Посети офиса' }
 				]
 			: aboutMegaMenu.links
@@ -733,34 +733,30 @@ export const homeFiveHeaderDataForLocale = (
 export const homeFiveHeaderData: HomeFiveHeaderData = homeFiveHeaderDataForLocale('en');
 
 export const homeFiveReviewItems: HomeFiveReview[] = [
-	{
-		name: 'Aleksandar Vytev',
-		role: 'Клиент на OUTLETCARS.BG — Варна',
-		roleKind: 'customer',
-		avatar: '/assets/images/avatar/avatar-1.webp',
-		rating: 5,
-		excerpt:
-			'Историята, транспортът и регистрацията бяха обяснени ясно. Спокойно и прозрачно предаване.',
-		text: 'Екипът ми обясни историята на автомобила, транспорта и стъпките по регистрацията, преди да поема ангажимент. Предаването беше спокойно и прозрачно.'
-	},
-	{
-		name: 'Krasimir Georgiev',
-		role: 'Клиент с внос',
-		roleKind: 'import',
-		avatar: '/assets/images/avatar/avatar-2.webp',
-		rating: 4,
-		excerpt: 'Ясни снимки, документи, пробег и разходи. Практичен разговор преди доставката.',
-		text: 'OUTLETCARS.BG — Варна запазиха разговора практичен: снимки, документи, пробег и разходите, които имат значение преди доставка.'
-	},
-	{
-		name: 'Iliyan Petrov',
-		role: 'Продава клиентски автомобил',
-		roleKind: 'sale',
-		avatar: '/assets/images/avatar/avatar-3.webp',
-		rating: 5,
-		excerpt: 'Получих ясна обратна връзка за цената, документите и представянето на автомобила.',
-		text: 'Изпратих данните за колата и получих ясна обратна връзка за цената, документите и най-добрия начин да представя автомобила.'
-	}
+  {
+    "avatar": "",
+    "name": "№ 1",
+    "role": "Демо профил",
+    "roleKind": "customer",
+    "excerpt": "Демонстрационен пример, а не потвърден клиентски отзив.",
+    "text": "Измислен пример за оформлението на отзив. Не описва реален клиент, покупка или доставка."
+  },
+  {
+    "avatar": "",
+    "name": "№ 2",
+    "role": "Демо профил",
+    "roleKind": "customer",
+    "excerpt": "Демонстрационен пример, а не потвърден клиентски отзив.",
+    "text": "Измислен пример за оформлението на отзив. Не описва реален клиент, покупка или доставка."
+  },
+  {
+    "avatar": "",
+    "name": "№ 3",
+    "role": "Демо профил",
+    "roleKind": "customer",
+    "excerpt": "Демонстрационен пример, а не потвърден клиентски отзив.",
+    "text": "Измислен пример за оформлението на отзив. Не описва реален клиент, покупка или доставка."
+  }
 ];
 
 export const homeFiveNewsPostsFromPosts = (posts: BlogPost[]): HomeFiveNewsPost[] =>
@@ -808,12 +804,12 @@ export const homeFiveFooterData: HomeFiveFooterData = {
 	},
 	quickLinks: [
 		{ href: '/about', label: 'About Us' },
-		{ href: '/inventory?view=4', label: 'Buying With OUTLETCARS.BG — Варна' },
+		{ href: '/inventory?view=4', label: 'Buying With OUTLETCARS.BG' },
 		{ href: '/sell-your-car', label: 'Sell Your Car' },
 		{ href: '/services', label: 'Services' },
 		{ href: '/faqs', label: 'FAQ' },
 		{ href: '/blog', label: 'News' },
-		{ href: '/contact', label: 'Contact OUTLETCARS.BG — Варна' }
+		{ href: '/contact', label: 'Contact OUTLETCARS.BG' }
 	],
 	socialLinks: [
 		{ href: daynightContact.facebookHref, icon: 'facebook', label: 'Facebook' },
@@ -852,12 +848,12 @@ export const homeFiveFooterDataForLocale = (locale: Locale): HomeFiveFooterData 
 		],
 		quickLinks: [
 			{ href: '/about', label: 'За нас' },
-			{ href: '/inventory?view=4', label: 'Покупка с OUTLETCARS.BG — Варна' },
+			{ href: '/inventory?view=4', label: 'Покупка с OUTLETCARS.BG' },
 			{ href: '/sell-your-car', label: 'Продай автомобила си' },
 			{ href: '/services', label: 'Услуги' },
 			{ href: '/faqs', label: 'FAQ' },
 			{ href: '/blog', label: 'Новини' },
-			{ href: '/contact', label: 'Контакт с OUTLETCARS.BG — Варна' }
+			{ href: '/contact', label: 'Контакт с OUTLETCARS.BG' }
 		],
 		socialLinks: [
 			{ href: daynightContact.facebookHref, icon: 'facebook', label: 'Facebook' },
@@ -1239,7 +1235,7 @@ const heroActionsForLocale = (locale: Locale): HomeFiveHeroAction[] =>
 					drawerKicker: 'Подбрани автомобили',
 					drawerTitle: 'Изпрати линк за проверка',
 					helper:
-						'Постави линк към обява от Европа или VIN. OUTLETCARS.BG — Варна ще провери история, снимки, пробег и ориентировъчна крайна цена.',
+						'Постави линк към обява от Европа или VIN. OUTLETCARS.BG ще провери история, снимки, пробег и ориентировъчна крайна цена.',
 					inputName: 'vehicle',
 					label: 'Внос',
 					mobileHeading: 'Внеси автомобил от Европа.',
@@ -1288,7 +1284,7 @@ const heroActionsForLocale = (locale: Locale): HomeFiveHeroAction[] =>
 					drawerKicker: 'Import from Europe',
 					drawerTitle: 'Send a listing link',
 					helper:
-						'Paste a European listing URL or VIN. OUTLETCARS.BG — Варна will review history, photos, mileage, and estimated landed cost.',
+						'Paste a European listing URL or VIN. OUTLETCARS.BG will review history, photos, mileage, and estimated landed cost.',
 					inputName: 'vehicle',
 					label: 'Import',
 					mobileHeading: 'Import from Europe.',

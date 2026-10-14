@@ -3,17 +3,17 @@
   "dealer": "kg-team-auto",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
     "path": "templates/app",
-    "digest": "3344230cf8de012eb9c2daf1c962c4a3f189960b52f2026e1d049f2a6eae26ad",
-    "tree": "cd17d913dd597bf7dfb3e2244c2a3a2914ab3080"
+    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1",
+    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76"
   },
-  "appDigest": "e74544bf5e170ce85ae9db2826f56ed03649c37410514b0099e1a7cc1e6d7283",
+  "appDigest": "8d9938717e6766dfba408c5fdea3a0280d71d8177a6cf924597276581a178c81",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "kg-team-auto",
     "profile": "auto-best/src/lib/data/dealer-profile.json",
-    "profileSha256": "af3861bc349ab7c1e696f4302f3c0bb7030d1bc10bb6986209eb4eed3786479e",
+    "profileSha256": "b3904a87fd78ebde2b0e52cb4456e0c548e29adb2fae2c8470323a9b810ef1cd",
     "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
     "vehicles": 10,
     "currency": "EUR",
@@ -211,13 +211,129 @@
         "sha256": "cf2a86f32a3c849b5c6a5d49e3eed88703b93dfca5febc474906a9f29c750a93",
         "role": "vehicle"
       }
-    ]
+    ],
+    "mileageFacts": [
+      {
+        "slug": "toyota-yaris-1-33i-116000km-6-speed-swiss-edition-2014-11783754278742708",
+        "sourceValue": 116000,
+        "sourceUnit": "km",
+        "canonicalKm": 116000
+      },
+      {
+        "slug": "nissan-qashqai-2-0i-131000km-automatic-2014-21785829117309786",
+        "sourceValue": 131000,
+        "sourceUnit": "km",
+        "canonicalKm": 131000
+      },
+      {
+        "slug": "mitsubishi-colt-1-5-i-swiss-2007-11678716951277480",
+        "sourceValue": 189000,
+        "sourceUnit": "km",
+        "canonicalKm": 189000
+      },
+      {
+        "slug": "mini-cooper-1-6i-153000km-euro-5-75ps-2013-11773570472954394",
+        "sourceValue": 153000,
+        "sourceUnit": "km",
+        "canonicalKm": 153000
+      },
+      {
+        "slug": "honda-jazz-1-4-si-automatic-sport-edition-2013-11780222156478967",
+        "sourceValue": 145000,
+        "sourceUnit": "km",
+        "canonicalKm": 145000
+      },
+      {
+        "slug": "honda-cr-v-2-2-i-ctdi-177000km-executiv-2009-21788253346975689",
+        "sourceValue": 177000,
+        "sourceUnit": "km",
+        "canonicalKm": 177000
+      },
+      {
+        "slug": "vw-golf-vi-tdi-swiss-edition-6-speed-4x4-2013-11782979504874945",
+        "sourceValue": 197000,
+        "sourceUnit": "km",
+        "canonicalKm": 197000
+      },
+      {
+        "slug": "toyota-auris-1-8-hsd-181000km-euro5-2011-11778753257201470",
+        "sourceValue": 181000,
+        "sourceUnit": "km",
+        "canonicalKm": 181000
+      },
+      {
+        "slug": "suzuki-swift-1-3i-151000km-swiss-edition-2010-11777536762184091",
+        "sourceValue": 151000,
+        "sourceUnit": "km",
+        "canonicalKm": 151000
+      },
+      {
+        "slug": "subaru-impreza-2-0i-swiss-edition-2007-11701247770704576",
+        "sourceValue": 207000,
+        "sourceUnit": "km",
+        "canonicalKm": 207000
+      }
+    ],
+    "manufacturerArtworkRepair": {
+      "sourceRepository": "darkapoparka/cars-f1rstmotors",
+      "sourceCommit": "e01e5aed41d1aa86b43a4af75ef7fcb49e5e1c33",
+      "template": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+      "assets": [
+        {
+          "make": "koenigsegg",
+          "target": "app/public/brands/approved/koenigsegg.webp",
+          "templatePath": "templates/auto-best/static/assets/images/makes/koenigsegg.webp",
+          "template": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "sha256": "b47642f7fad39261c7438625b0935a96d6650fe5d847ba2056b96b398c6b64d9",
+          "bytes": 4370
+        },
+        {
+          "make": "bugatti",
+          "target": "app/public/brands/approved/bugatti.webp",
+          "templatePath": "templates/auto-best/static/assets/images/makes/bugatti.webp",
+          "template": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "sha256": "89447a433945e489bce3ab24c362028716fed932ce2645e9f08b0dd3fbad65a7",
+          "bytes": 3998
+        },
+        {
+          "make": "porsche",
+          "target": "app/public/brands/approved/porsche.webp",
+          "templatePath": "templates/auto-best/static/assets/images/makes/porsche.webp",
+          "template": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "sha256": "d2f6da6c989574f3abaaa540107d78f2a8f2e0b7b1e60d94737c6371c8f4e3a8",
+          "bytes": 5746
+        },
+        {
+          "make": "ferrari",
+          "target": "app/public/brands/approved/ferrari.webp",
+          "templatePath": "templates/auto-best/static/assets/images/makes/ferrari.webp",
+          "template": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "sha256": "405eec6203242b140dcd0346ae8b27353bf8295f04782ab3ffc1afef78e69b51",
+          "bytes": 4954
+        },
+        {
+          "make": "aston-martin",
+          "target": "app/public/brands/approved/aston-martin.webp",
+          "templatePath": "templates/auto-best/static/assets/images/makes/aston-martin.webp",
+          "template": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "sha256": "432b2e3cdfd6fd6a4ae424c0c880419e452b5f9747d75d480717e7a03262eb56",
+          "bytes": 2722
+        },
+        {
+          "make": "lamborghini",
+          "target": "app/public/brands/approved/lamborghini.webp",
+          "templatePath": "templates/auto-best/static/assets/images/makes/lamborghini.webp",
+          "template": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "sha256": "a0b0f7d584904ec7bf69641e77c09f5bb16988d77ba71440602374ac50a8959e",
+          "bytes": 4642
+        }
+      ],
+      "missing": [
+        "Mini",
+        "Subaru"
+      ]
+    }
   },
-  "baseDeployment": {
-    "id": "dpl_6tNQfw2DGGTiw1mBVAHJnkG9vUaA",
-    "url": "https://cars-kgteamauto.vercel.app/",
-    "checkedAt": "2026-09-28T02:25:47.563Z"
-  },
-  "baseReceiptSha256": "e70b22af98343e60a12b411742aae1ccaced9d79c4743a98e982fa0a9a0731eb",
-  "refreshedAt": "2026-09-30T11:32:47.443Z"
+  "needsDealerQA": true,
+  "readyToPublish": false
 }

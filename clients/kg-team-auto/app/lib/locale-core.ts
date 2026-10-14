@@ -1,7 +1,7 @@
 import en from './locales/en.json';
 import bg from './locales/bg.json';
 import type {AppLocale} from './dealer-config';
-export const isAppLocale = (value: unknown): value is AppLocale => value === 'en' || value === 'bg';
+export {isAppLocale} from './locale-policy';
 export type Copy = <T>(value: T) => T;
 const catalogs: Record<AppLocale, Record<string, string>> = {en, bg};
 const decode = (text: string) => text.replaceAll('&amp;', '&').replaceAll('&apos;', "'").replaceAll('&#39;', "'").replaceAll('&quot;', '"').replaceAll('&nbsp;', ' ');

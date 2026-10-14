@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "dealer": "kg-team-auto",
+  "family": "import",
+  "base": "/variant-3",
+  "defaultLocale": "bg",
+  "source": {
+    "inventory": {
+      "path": "carwow/src/lib/data/daynight-current-inventory.ts",
+      "sha256": "b1545396f2700f40d073cf0f0db28a05c3bf154440a29b72d3971cecb1924c7f"
+    },
+    "vehicles": {
+      "path": "carwow/src/lib/data/daynight-vehicles.ts",
+      "sha256": "15c496b4b91b27453d22ea96d73626cd4c6cc58948d7bef7c10330101a3840ef"
+    },
+    "routeFactorySha256": "094d5128ad5e689e41486a228b1de6d11c54efbe051ce0e75c0170709d8571c9"
+  },
+  "profileSha256": "7980124d0be47bed088012a14252fcef8d7dfd04ebdfc1d42534e2cc00a5d325",
+  "entries": [
+    {
+      "sourceId": "11783754278742708",
+      "slug": "toyota-yaris-1-33i-742708",
+      "targetId": "11783754278742708"
+    },
+    {
+      "sourceId": "21785829117309786",
+      "slug": "nissan-qashqai-2-0i-309786",
+      "targetId": "21785829117309786"
+    },
+    {
+      "sourceId": "11678716951277480",
+      "slug": "mitsubishi-colt-1-5-277480",
+      "targetId": "11678716951277480"
+    },
+    {
+      "sourceId": "11773570472954394",
+      "slug": "mini-cooper-1-6i-954394",
+      "targetId": "11773570472954394"
+    },
+    {
+      "sourceId": "11780222156478967",
+      "slug": "honda-jazz-1-4-si-478967",
+      "targetId": "11780222156478967"
+    },
+    {
+      "sourceId": "21788253346975689",
+      "slug": "honda-cr-v-2-2-975689",
+      "targetId": "21788253346975689"
+    },
+    {
+      "sourceId": "11782979504874945",
+      "slug": "vw-golf-vi-tdi-874945",
+      "targetId": "11782979504874945"
+    },
+    {
+      "sourceId": "11778753257201470",
+      "slug": "toyota-auris-1-8-201470",
+      "targetId": "11778753257201470"
+    },
+    {
+      "sourceId": "11777536762184091",
+      "slug": "suzuki-swift-1-3i-184091",
+      "targetId": "11777536762184091"
+    },
+    {
+      "sourceId": "11701247770704576",
+      "slug": "subaru-impreza-2-0i-704576",
+      "targetId": "11701247770704576"
+    }
+  ],
+  "retired": []
+}

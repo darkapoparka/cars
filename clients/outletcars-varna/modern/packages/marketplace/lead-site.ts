@@ -114,7 +114,7 @@ export const leadSite: LeadSiteConfig = {
     "tagline": "OUTLETCARS.BG — vehicles and dealer support in Varna."
   }
 },
-  accent: "#c40101",
+  accent: "#30343b",
   desktopAccent: "#4b5057",
   desktopInventoryFilterLayout: "quick",
   desktopPreviewIdentity: {
@@ -127,7 +127,7 @@ export const leadSite: LeadSiteConfig = {
       en: "Find your next car.",
     },
   },
-  address: "ул. „Атанас Манчев“ 18, Варна",
+  address: "бул. Янош Хуняди 518, срещу КАТ Варна, Варна, България",
   city: "Варна",
   district: { bg: "Варна", en: "Varna" },
   sellCategoryAssets: {
@@ -141,7 +141,7 @@ export const leadSite: LeadSiteConfig = {
   mobileShowroomArtworkPath:
     "/images/lease/mobile-pdp-showroom-blue-hour-v1.webp",
   contactUrl: "tel:+359898921010",
-  country: "България",
+  country: "BG",
   countryCode: carsLocale.dealerCountry,
   currency: carsLocale.inventoryCurrency,
   email: "",
@@ -162,6 +162,6 @@ export const leadSite: LeadSiteConfig = {
   slug: "outletcars-varna",
   socialLinks: {},
   staticDemoMode: true,
-  tagline: "Премиум автомобили, внос и собствен лизинг в Варна.",
+  tagline: "OUTLETCARS.BG — Варна — автомобили и съдействие в Варна.",
 };
 // LEAD_SITE_CONFIG_END
