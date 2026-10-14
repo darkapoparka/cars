@@ -1,7 +1,11 @@
 import fs from "node:fs";
 import path from "node:path";
+const hostedQa = process.env.CARS_HOSTED_QA_PROFILE
+  ? await import('../../../../scripts/lib/hosted-native-qa.mjs') : null;
 
 export { default as assert } from "node:assert/strict";
+export const assertBoundary = blocked => hostedQa?.assertBoundary(blocked);
+export const hostedProfile = hostedQa?.readHostedProfile('modern') ?? null;
 export const origin = new URL(
   process.env.LOCALE_QA_ORIGIN ?? "http://127.0.0.1:6494"
 );
@@ -10,7 +14,7 @@ if (!["", "/variant-2"].includes(mount)) {
   throw new Error("Unsupported native Modern mount");
 }
 if (
-  !["localhost", "127.0.0.1", "cars-template-modern.vercel.app"].includes(
+  !hostedProfile && !["localhost", "127.0.0.1", "cars-template-modern.vercel.app"].includes(
     origin.hostname
   )
 ) {
@@ -18,10 +22,11 @@ if (
     "QA is limited to loopback or the existing template production alias"
   );
 }
-export const output = path.resolve(
+export const output = hostedProfile ? path.resolve(process.env.LOCALE_QA_OUT ?? hostedProfile.output) : path.resolve(
   "../../.codex-artifacts/localization-resume-20260920",
   process.env.LOCALE_QA_RUN ?? "browser"
 );
+hostedQa?.validateHelperTarget(hostedProfile, origin, mount, output);
 fs.mkdirSync(output, { recursive: true });
 export const results = [];
 export const url = (pathname) => origin.origin + mount + pathname;
@@ -105,6 +110,7 @@ export async function blockBusinessWrites(
   context,
   { preferences = true } = {}
 ) {
+  if (hostedProfile) return hostedQa.guardHostedContext(context, hostedProfile, { preferences });
   const allowedPostPaths = [
     `${mount}/api/ai/search`,
     ...(preferences ? [`${mount}/api/preferences`] : []),

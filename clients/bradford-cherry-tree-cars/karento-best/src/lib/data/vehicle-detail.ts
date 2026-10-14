@@ -116,6 +116,12 @@ export const referenceSpecifications: readonly DetailSpecification[] = [
     "value": "Petrol",
     "labelKey": "vehicle.field.fuel",
     "valueKey": "fuel.gasoline"
+  },
+  {
+    "id": "year",
+    "icon": "/assets/imgs/template/icons/calendar.svg",
+    "value": "2008",
+    "labelKey": "vehicle.field.year"
   }
 ];
 
@@ -141,7 +147,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "Cherry Tree Cars Ltd",
   "location": "",
-  "avatar": "/dealer-brand/logo.webp",
+  "avatar": "/dealer-brand/v2-c4d01a5862dcc9e1/logo-on-light.webp",
   "mobile": "",
   "email": "",
   "whatsapp": "",

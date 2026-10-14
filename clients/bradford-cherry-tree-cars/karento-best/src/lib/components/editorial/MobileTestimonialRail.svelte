@@ -34,6 +34,13 @@
     >
       {#each items as item (item.id)}
         <article class="mobile-testimonial-card">
+          <span
+            class="testimonial-rating"
+            role="img"
+            aria-label={locale.t("referenceHome.testimonials.stars", {
+              rating: locale.number(item.rating),
+            })}>{"★".repeat(item.rating)}</span
+          >
           <h4>{locale.text(item.title)}</h4>
           <p class="testimonial-quote">{locale.text(item.quote)}</p>
           <footer>
@@ -49,13 +56,6 @@
               <strong>{item.author}</strong>
               <small>{item.location}</small>
             </div>
-            <span
-              class="testimonial-rating"
-              role="img"
-              aria-label={locale.t("referenceHome.testimonials.stars", {
-                rating: locale.number(item.rating),
-              })}>{"★".repeat(item.rating)}</span
-            >
           </footer>
         </article>
       {/each}
@@ -115,7 +115,6 @@
     color: var(--bs-neutral-600);
   }
   .testimonial-rating {
-    grid-column: 1 / -1;
     letter-spacing: 0.15em;
     line-height: 1;
   }

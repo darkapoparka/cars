@@ -35,7 +35,7 @@
     /* Anchor the scene's floor instead of recropping the cars to the hero height. */
     img {
       position: absolute;
-      top: calc(100% - 50px);
+      top: calc(100% - var(--dn-space-4));
       left: 50%;
       width: max(100%, 1200px);
       max-width: none;

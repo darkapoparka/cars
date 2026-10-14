@@ -1,7 +1,37 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import assert from 'node:assert/strict';
+// BEGIN native HTTP family contract
+const readonlyProbeContracts = Object.freeze({
+  '': Object.freeze({ family: 'auto-best', status: 403 }),
+  '/variant-2': Object.freeze({ family: 'modern', status: 403 }),
+  '/variant-3': Object.freeze({ family: 'import', status: 405 })
+});
+const readonlyProbeContract = mount => {
+  assert.ok(Object.hasOwn(readonlyProbeContracts, mount), 'Unknown native HTTP family mount');
+  return readonlyProbeContracts[mount];
+};
+const validateQaMounts = mounts => {
+  assert.ok(Array.isArray(mounts) && mounts.length > 0 && mounts.length <= 3 && new Set(mounts).size === mounts.length, 'Native HTTP mounts must be unique known families');
+  for (const mount of mounts) readonlyProbeContract(mount);
+  return mounts;
+};
+const assertReadonlyProbe = (mount, response) => {
+  const contract = readonlyProbeContract(mount);
+  assert.equal(response.status, contract.status, 'Native HTTP write denial differs from its exact family contract');
+  assert.equal(response.headers.has('location'), false, 'Read-only probe must not redirect');
+  assert.equal(response.headers.has('set-cookie'), false, 'Read-only probe must not set cookies');
+  const allow = response.headers.get('allow');
+  if (contract.family === 'import') {
+    assert.ok(allow, 'GET-only Import route must advertise Allow for405');
+    const methods = allow.split(',').map(method => method.trim().toUpperCase());
+    assert.ok(methods.includes('GET') && new Set(methods).size === methods.length && methods.every(method => ['GET', 'HEAD', 'OPTIONS'].includes(method)), 'GET-only Import route must not advertise a write method');
+  }
+  return { publicWriteFamily: contract.family, publicWriteStatus: response.status, publicWriteAllow: allow };
+};
+// END native HTTP family contract
 const base = process.env.DEALER_BASE_URL || process.env.BASE_URL;
+const mounts = validateQaMounts(process.env.LOCALE_QA_MOUNTS?.split(',') ?? ['']);
 const out = process.env.LOCALE_QA_OUT || path.resolve(import.meta.dirname, '../runtime/phase2/http-' + Date.now());
 fs.mkdirSync(out, { recursive: true });
 const results = [];
@@ -11,7 +41,7 @@ const record = async (name, action) => {
   catch (error) { results.push({ name, pass: false, error: error.message }); console.error('FAIL ' + name + ': ' + error.message); }
   fs.writeFileSync(path.join(out, 'RESULTS.json'), JSON.stringify({ checkedAt: new Date().toISOString(), base, scope: 'HTTP language precedence, mounted redirects, cache isolation, unsupported locales, write guards and preference security.', results }, null, 2));
 };
-for (const mount of (process.env.LOCALE_QA_MOUNTS?.split(',') ?? [''])) {
+for (const mount of mounts) {
   await record(`${mount || 'auto-best'} old deep link negotiates once and retains its query`, async () => {
     const route = mount === '/variant-3' ? '/contact?intent=import&probe=keep' : '/contact?topic=trade-in&probe=keep';
     const response = await request(mount + route, { headers: { cookie: 'cars_locale=bg', 'accept-language': 'en' } });
@@ -36,8 +66,8 @@ for (const mount of (process.env.LOCALE_QA_MOUNTS?.split(',') ?? [''])) {
   await record(`${mount || 'auto-best'} Arabic is unavailable and writes stay blocked`, async () => {
     const arabic = await request(`${mount}/ar/contact`); assert.equal(arabic.status, 404);
     const write = await request(`${mount}/api/_locale_readonly_probe`, { method: 'POST', headers: { origin: new URL(base).origin, 'content-type': 'application/json' }, body: '{}' });
-    assert.equal(write.status, 403); // Existing demo handlers deliberately return Forbidden, not Method Not Allowed.
-    return { arabicStatus: arabic.status, publicWriteStatus: write.status };
+    const writeDenial = assertReadonlyProbe(mount, write);
+    return { arabicStatus: arabic.status, ...writeDenial };
   });
 }
 await record('Negotiation handles malformed cookies and quality-weighted language preferences', async () => {

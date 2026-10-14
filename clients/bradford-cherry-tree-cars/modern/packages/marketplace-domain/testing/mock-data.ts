@@ -49,7 +49,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Cherry Tree Cars Ltd",
       "verificationStatus": "unverified",
       "city": "Bradford, West Yorkshire",
-      "logoUrl": "/dealer-brand/logo.webp"
+      "logoUrl": "/dealer-brand/v2-c4d01a5862dcc9e1/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": true
@@ -100,7 +100,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Cherry Tree Cars Ltd",
       "verificationStatus": "unverified",
       "city": "Bradford, West Yorkshire",
-      "logoUrl": "/dealer-brand/logo.webp"
+      "logoUrl": "/dealer-brand/v2-c4d01a5862dcc9e1/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": true
@@ -151,7 +151,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Cherry Tree Cars Ltd",
       "verificationStatus": "unverified",
       "city": "Bradford, West Yorkshire",
-      "logoUrl": "/dealer-brand/logo.webp"
+      "logoUrl": "/dealer-brand/v2-c4d01a5862dcc9e1/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": true
@@ -202,7 +202,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Cherry Tree Cars Ltd",
       "verificationStatus": "unverified",
       "city": "Bradford, West Yorkshire",
-      "logoUrl": "/dealer-brand/logo.webp"
+      "logoUrl": "/dealer-brand/v2-c4d01a5862dcc9e1/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -253,7 +253,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Cherry Tree Cars Ltd",
       "verificationStatus": "unverified",
       "city": "Bradford, West Yorkshire",
-      "logoUrl": "/dealer-brand/logo.webp"
+      "logoUrl": "/dealer-brand/v2-c4d01a5862dcc9e1/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -304,7 +304,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Cherry Tree Cars Ltd",
       "verificationStatus": "unverified",
       "city": "Bradford, West Yorkshire",
-      "logoUrl": "/dealer-brand/logo.webp"
+      "logoUrl": "/dealer-brand/v2-c4d01a5862dcc9e1/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -355,7 +355,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Cherry Tree Cars Ltd",
       "verificationStatus": "unverified",
       "city": "Bradford, West Yorkshire",
-      "logoUrl": "/dealer-brand/logo.webp"
+      "logoUrl": "/dealer-brand/v2-c4d01a5862dcc9e1/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -406,313 +406,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Cherry Tree Cars Ltd",
       "verificationStatus": "unverified",
       "city": "Bradford, West Yorkshire",
-      "logoUrl": "/dealer-brand/logo.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1004",
-    "slug": "chrysler-sebring-2008-20722137",
-    "category": "car",
-    "dealerOrgId": "dealer-bradford-cherry-tree-cars",
-    "status": "active",
-    "title": "Chrysler Sebring 2.4 Limited Saloon 4dr Petrol Automatic (211 g/km, 167 bhp)",
-    "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
-    "price": {
-      "amount": 1499,
-      "currency": "GBP"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer-stock/sedan.webp",
-        "alt": "Chrysler Sebring 2.4 Limited Saloon 4dr Petrol Automatic (211 g/km, 167 bhp)"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Bradford, West Yorkshire",
-      "region": "Bradford, West Yorkshire",
-      "country": "United Kingdom"
-    },
-    "spec": {
-      "make": "Chrysler",
-      "model": "Sebring",
-      "trim": "2.4 Limited Saloon 4dr Petrol Automatic (211 g/km, 167 bhp)",
-      "year": 2008,
-      "bodyType": "other",
-      "fuelType": "gasoline",
-      "transmission": "automatic",
-      "mileageValue": 160934,
-      "mileageUnit": "km",
-      "mileageSourceValue": 100000,
-      "mileageSourceUnit": "mi"
-    },
-    "seller": {
-      "id": "dealer-bradford-cherry-tree-cars",
-      "type": "dealer",
-      "displayName": "Cherry Tree Cars Ltd",
-      "verificationStatus": "unverified",
-      "city": "Bradford, West Yorkshire",
-      "logoUrl": "/dealer-brand/logo.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1005",
-    "slug": "land-rover-discovery-sport-2018-21144493",
-    "category": "car",
-    "dealerOrgId": "dealer-bradford-cherry-tree-cars",
-    "status": "active",
-    "title": "Land Rover Discovery Sport 2.0 TD4 HSE Black SUV 5dr Diesel Auto 4WD Euro 6 (s/s) (180 ps)",
-    "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
-    "price": {
-      "amount": 7499,
-      "currency": "GBP"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer-stock/suv.webp",
-        "alt": "Land Rover Discovery Sport 2.0 TD4 HSE Black SUV 5dr Diesel Auto 4WD Euro 6 (s/s) (180 ps)"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Bradford, West Yorkshire",
-      "region": "Bradford, West Yorkshire",
-      "country": "United Kingdom"
-    },
-    "spec": {
-      "make": "Land Rover",
-      "model": "Discovery Sport",
-      "trim": "2.0 TD4 HSE Black SUV 5dr Diesel Auto 4WD Euro 6 (s/s) (180 ps)",
-      "year": 2018,
-      "bodyType": "suv",
-      "fuelType": "diesel",
-      "transmission": "automatic",
-      "mileageValue": 172200,
-      "mileageUnit": "km",
-      "mileageSourceValue": 107000,
-      "mileageSourceUnit": "mi"
-    },
-    "seller": {
-      "id": "dealer-bradford-cherry-tree-cars",
-      "type": "dealer",
-      "displayName": "Cherry Tree Cars Ltd",
-      "verificationStatus": "unverified",
-      "city": "Bradford, West Yorkshire",
-      "logoUrl": "/dealer-brand/logo.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1006",
-    "slug": "mercedes-benz-r-class-2007-20977893",
-    "category": "car",
-    "dealerOrgId": "dealer-bradford-cherry-tree-cars",
-    "status": "active",
-    "title": "Mercedes-Benz R-Class 3.0 R320 CDI SE L MPV 5dr Diesel 7G-Tronic (246 g/km, 221 bhp)",
-    "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
-    "price": {
-      "amount": 2699,
-      "currency": "GBP"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer-stock/van.webp",
-        "alt": "Mercedes-Benz R-Class 3.0 R320 CDI SE L MPV 5dr Diesel 7G-Tronic (246 g/km, 221 bhp)"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Bradford, West Yorkshire",
-      "region": "Bradford, West Yorkshire",
-      "country": "United Kingdom"
-    },
-    "spec": {
-      "make": "Mercedes-Benz",
-      "model": "R-Class",
-      "trim": "3.0 R320 CDI SE L MPV 5dr Diesel 7G-Tronic (246 g/km, 221 bhp)",
-      "year": 2007,
-      "bodyType": "other",
-      "fuelType": "diesel",
-      "transmission": "automatic",
-      "mileageValue": 156106,
-      "mileageUnit": "km",
-      "mileageSourceValue": 97000,
-      "mileageSourceUnit": "mi"
-    },
-    "seller": {
-      "id": "dealer-bradford-cherry-tree-cars",
-      "type": "dealer",
-      "displayName": "Cherry Tree Cars Ltd",
-      "verificationStatus": "unverified",
-      "city": "Bradford, West Yorkshire",
-      "logoUrl": "/dealer-brand/logo.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1007",
-    "slug": "audi-a4-2009-21086505",
-    "category": "car",
-    "dealerOrgId": "dealer-bradford-cherry-tree-cars",
-    "status": "active",
-    "title": "Audi A4 3.0 TDI SE Estate 5dr Diesel S Tronic quattro Euro 4 (240 ps)",
-    "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
-    "price": {
-      "amount": 3299,
-      "currency": "GBP"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer-stock/wagon.webp",
-        "alt": "Audi A4 3.0 TDI SE Estate 5dr Diesel S Tronic quattro Euro 4 (240 ps)"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Bradford, West Yorkshire",
-      "region": "Bradford, West Yorkshire",
-      "country": "United Kingdom"
-    },
-    "spec": {
-      "make": "Audi",
-      "model": "A4",
-      "trim": "3.0 TDI SE Estate 5dr Diesel S Tronic quattro Euro 4 (240 ps)",
-      "year": 2009,
-      "bodyType": "wagon",
-      "fuelType": "diesel",
-      "transmission": "automatic",
-      "mileageValue": 241402,
-      "mileageUnit": "km",
-      "mileageSourceValue": 150000,
-      "mileageSourceUnit": "mi"
-    },
-    "seller": {
-      "id": "dealer-bradford-cherry-tree-cars",
-      "type": "dealer",
-      "displayName": "Cherry Tree Cars Ltd",
-      "verificationStatus": "unverified",
-      "city": "Bradford, West Yorkshire",
-      "logoUrl": "/dealer-brand/logo.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1008",
-    "slug": "renault-megane-2011-20877963",
-    "category": "car",
-    "dealerOrgId": "dealer-bradford-cherry-tree-cars",
-    "status": "active",
-    "title": "Renault Megane 1.5 dCi Expression Hatchback 5dr Diesel Manual Euro 5 (110 ps)",
-    "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
-    "price": {
-      "amount": 1499,
-      "currency": "GBP"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer-stock/hatchback.webp",
-        "alt": "Renault Megane 1.5 dCi Expression Hatchback 5dr Diesel Manual Euro 5 (110 ps)"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Bradford, West Yorkshire",
-      "region": "Bradford, West Yorkshire",
-      "country": "United Kingdom"
-    },
-    "spec": {
-      "make": "Renault",
-      "model": "Megane",
-      "trim": "1.5 dCi Expression Hatchback 5dr Diesel Manual Euro 5 (110 ps)",
-      "year": 2011,
-      "bodyType": "hatchback",
-      "fuelType": "diesel",
-      "transmission": "manual",
-      "mileageValue": 115873,
-      "mileageUnit": "km",
-      "mileageSourceValue": 72000,
-      "mileageSourceUnit": "mi"
-    },
-    "seller": {
-      "id": "dealer-bradford-cherry-tree-cars",
-      "type": "dealer",
-      "displayName": "Cherry Tree Cars Ltd",
-      "verificationStatus": "unverified",
-      "city": "Bradford, West Yorkshire",
-      "logoUrl": "/dealer-brand/logo.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1009",
-    "slug": "hyundai-santa-fe-2013-21180529",
-    "category": "car",
-    "dealerOrgId": "dealer-bradford-cherry-tree-cars",
-    "status": "active",
-    "title": "Hyundai Santa Fe 2.2 CRDi Premium SE SUV 5dr Diesel Auto 4WD Euro 5 (7 seat) (194 bhp)",
-    "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
-    "price": {
-      "amount": 3199,
-      "currency": "GBP"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer-stock/suv.webp",
-        "alt": "Hyundai Santa Fe 2.2 CRDi Premium SE SUV 5dr Diesel Auto 4WD Euro 5 (7 seat) (194 bhp)"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Bradford, West Yorkshire",
-      "region": "Bradford, West Yorkshire",
-      "country": "United Kingdom"
-    },
-    "spec": {
-      "make": "Hyundai",
-      "model": "Santa Fe",
-      "trim": "2.2 CRDi Premium SE SUV 5dr Diesel Auto 4WD Euro 5 (7 seat) (194 bhp)",
-      "year": 2013,
-      "bodyType": "suv",
-      "fuelType": "diesel",
-      "transmission": "automatic",
-      "mileageValue": 275198,
-      "mileageUnit": "km",
-      "mileageSourceValue": 171000,
-      "mileageSourceUnit": "mi"
-    },
-    "seller": {
-      "id": "dealer-bradford-cherry-tree-cars",
-      "type": "dealer",
-      "displayName": "Cherry Tree Cars Ltd",
-      "verificationStatus": "unverified",
-      "city": "Bradford, West Yorkshire",
-      "logoUrl": "/dealer-brand/logo.webp"
+      "logoUrl": "/dealer-brand/v2-c4d01a5862dcc9e1/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false

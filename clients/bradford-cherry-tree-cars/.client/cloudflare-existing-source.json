@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "dealer": "bradford-cherry-tree-cars",
+  "kind": "personalized-source-candidate-not-an-approved-release",
+  "sourceRevision": "097805706654b327a2b8327a7c1670da3a5f67ae",
+  "candidateSourceDigest": "fb897d7e77c7aabdc86d8470d4bb864e9affe6b393ada3b395307d991e197a0e",
+  "qualificationContextPath": ".client/native-qualification-context.json",
+  "qualificationContextSha256": "144d3fa1380212967dd0644b6ec601b7bc83e06ef561a9ebce4f1c5b1881f977",
+  "qualificationLockPath": ".client/native-qualification-lock.json",
+  "qualificationLockSha256": "23622acb9fbaa5cb78379d6a080170f99dadb4703ff7b8ccba3d21a2b41e8786",
+  "sourceDeltaReview": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
+    "sha256": "8fac7527b396f75ff6647a724ce7a2152bb13ff514efe6480b7c322f66fc195f",
+    "reviewedAt": "2026-10-14T18:24:47.957Z"
+  },
+  "nativeApproval": false,
+  "hostedApproval": false
+}

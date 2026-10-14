@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "Cherry Tree Cars Ltd",
-  "logo": "/dealer-brand/logo.webp",
+  "logo": "/dealer-brand/v2-c4d01a5862dcc9e1/logo-on-light.webp",
   "phone": null,
   "email": null,
   "address": null,

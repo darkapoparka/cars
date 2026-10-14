@@ -3,12 +3,12 @@
   "dealer": "bradford-cherry-tree-cars",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "4e184777567849a2c5b4a9e4a3e652252179c29c",
+    "revision": "097805706654b327a2b8327a7c1670da3a5f67ae",
     "path": "templates/app",
-    "digest": "fad0067e48d7bd7e1c5177c5e91e2bc5767352e2c16621cb458d18a081f7c541",
-    "tree": "749512ff762c25272d1474225ff653dd4c88f0fe"
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
   },
-  "appDigest": "9fd91969d928da239139067ca0be542bd2c1fb43da8d709ae9f6ee003a768e59",
+  "appDigest": "20b2dd18bc8f08a68ff149f295851fb43ce4e5cb16f996b0d0d51aecd59000c0",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "bradford-cherry-tree-cars",
@@ -151,5 +151,5 @@
   },
   "needsDealerQA": true,
   "readyToPublish": false,
-  "refreshedAt": "2026-10-10T21:26:58.782Z"
+  "refreshedAt": "2026-10-14T21:17:45.318Z"
 }

@@ -61,5 +61,5 @@ export const contactTopics: ContactTopic[] = [
 ];
 export const resolveContactTopic = (value: string | null) =>
   contactTopics.find((topic) => topic.id === value) ?? contactTopics[0];
-export const showroomCoordinates = {"latitude":0,"longitude":0} as const;
+export const showroomCoordinates = null;
 export const dealerAddress = brand.address;

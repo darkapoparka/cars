@@ -34,6 +34,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Petrol",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.gasoline"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2008",
+        "labelKey": "vehicle.field.year"
       }
     ],
     "gallery": {
@@ -72,7 +78,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Cherry Tree Cars Ltd",
       "location": "",
-      "avatar": "/dealer-brand/logo.webp",
+      "avatar": "/dealer-brand/v2-c4d01a5862dcc9e1/logo-on-light.webp",
       "mobile": "",
       "email": "",
       "whatsapp": "",
@@ -122,6 +128,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2018",
+        "labelKey": "vehicle.field.year"
       }
     ],
     "gallery": {
@@ -160,7 +172,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Cherry Tree Cars Ltd",
       "location": "",
-      "avatar": "/dealer-brand/logo.webp",
+      "avatar": "/dealer-brand/v2-c4d01a5862dcc9e1/logo-on-light.webp",
       "mobile": "",
       "email": "",
       "whatsapp": "",
@@ -210,6 +222,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2007",
+        "labelKey": "vehicle.field.year"
       }
     ],
     "gallery": {
@@ -248,7 +266,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Cherry Tree Cars Ltd",
       "location": "",
-      "avatar": "/dealer-brand/logo.webp",
+      "avatar": "/dealer-brand/v2-c4d01a5862dcc9e1/logo-on-light.webp",
       "mobile": "",
       "email": "",
       "whatsapp": "",
@@ -298,6 +316,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2009",
+        "labelKey": "vehicle.field.year"
       }
     ],
     "gallery": {
@@ -336,7 +360,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Cherry Tree Cars Ltd",
       "location": "",
-      "avatar": "/dealer-brand/logo.webp",
+      "avatar": "/dealer-brand/v2-c4d01a5862dcc9e1/logo-on-light.webp",
       "mobile": "",
       "email": "",
       "whatsapp": "",
@@ -386,6 +410,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2011",
+        "labelKey": "vehicle.field.year"
       }
     ],
     "gallery": {
@@ -424,7 +454,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Cherry Tree Cars Ltd",
       "location": "",
-      "avatar": "/dealer-brand/logo.webp",
+      "avatar": "/dealer-brand/v2-c4d01a5862dcc9e1/logo-on-light.webp",
       "mobile": "",
       "email": "",
       "whatsapp": "",
@@ -474,6 +504,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2013",
+        "labelKey": "vehicle.field.year"
       }
     ],
     "gallery": {
@@ -512,7 +548,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Cherry Tree Cars Ltd",
       "location": "",
-      "avatar": "/dealer-brand/logo.webp",
+      "avatar": "/dealer-brand/v2-c4d01a5862dcc9e1/logo-on-light.webp",
       "mobile": "",
       "email": "",
       "whatsapp": "",
@@ -562,6 +598,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2010",
+        "labelKey": "vehicle.field.year"
       }
     ],
     "gallery": {
@@ -600,7 +642,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Cherry Tree Cars Ltd",
       "location": "",
-      "avatar": "/dealer-brand/logo.webp",
+      "avatar": "/dealer-brand/v2-c4d01a5862dcc9e1/logo-on-light.webp",
       "mobile": "",
       "email": "",
       "whatsapp": "",
@@ -650,6 +692,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Petrol",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.gasoline"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2014",
+        "labelKey": "vehicle.field.year"
       }
     ],
     "gallery": {
@@ -688,7 +736,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Cherry Tree Cars Ltd",
       "location": "",
-      "avatar": "/dealer-brand/logo.webp",
+      "avatar": "/dealer-brand/v2-c4d01a5862dcc9e1/logo-on-light.webp",
       "mobile": "",
       "email": "",
       "whatsapp": "",

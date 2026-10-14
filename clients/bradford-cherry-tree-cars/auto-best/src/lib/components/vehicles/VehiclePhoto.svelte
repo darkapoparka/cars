@@ -6,7 +6,7 @@
   import { lockPageScroll, trapDialogTab } from '$lib/ui/overlay';
 
   const i18n = getI18n();
-  let { image, title, id }: { image: string; title: string; id: string } = $props();
+  let { image, title, id, compact = false, priority = true }: { image: string; title: string; id: string; compact?: boolean; priority?: boolean } = $props();
   let trigger = $state<HTMLAnchorElement>();
   let dialog = $state<HTMLDialogElement>();
   let open = $state(false);
@@ -38,6 +38,7 @@
 
 <a
   class="dn-vehicle-photo"
+  class:compact
   bind:this={trigger}
   href={image}
   onclick={showPhoto}
@@ -51,12 +52,13 @@
     alt={title}
     width="1245"
     height="988"
-    fetchpriority="high"
+    fetchpriority={priority ? 'high' : 'auto'}
+    loading={priority ? 'eager' : 'lazy'}
     decoding="async"
   />
   <span class="dn-vehicle-photo__hint">
     <Icon name="search" size={16} />
-    {i18n.t('vehicle.photo.open')}
+    <span class:dn-sr-only={compact}>{i18n.t('vehicle.photo.open')}</span>
   </span>
 </a>
 
@@ -131,6 +133,7 @@
   }
 
   .dn-vehicle-photo:hover .dn-vehicle-photo__hint { background: var(--dn-surface-hover); }
+  .compact .dn-vehicle-photo__hint { right: var(--dn-space-2); bottom: var(--dn-space-2); width: var(--dn-control-height-compact); min-height: var(--dn-control-height-compact); justify-content: center; padding: 0; }
 
   .dn-vehicle-photo-dialog {
     width: min(1440px, calc(100% - 48px));
