@@ -7,7 +7,37 @@ const requireVercelQualificationExport = (value, message) => { if (!value) throw
 /** One explicit owner-authorized production pilot retains all provisional flags.
  * The previously READY six-service deployment and reviewed exact two-leaf source
  * successor are distinct from the production build and hosted acceptance pending. */
+/** A reviewed Auto Best-only successor reuses real six-service production proof.
+ * The exact source/tree/input/lock/main leases are data from its sealed source
+ * request; pending build and hosted flags are never replaced with acceptance. */
+export function assertVercelReviewedAutoSuccessor(pilot, {meta, manifest} = {}) {
+  const require=(value,message)=>requireVercelQualificationExport(value,'reviewed F1rst successor: '+message);
+  const oid=value=>/^[a-f0-9]{40}$/.test(value||''),digest=value=>/^[a-f0-9]{64}$/.test(value||'');
+  require(pilot?.schemaVersion===1&&pilot.kind==='cars-owner-authorized-f1rst-main-production-pilot','explicit owner production-pilot record required');
+  require(pilot.dealer==='f1rst-motors'&&pilot.repository==='darkapoparka/cars-f1rstmotors'&&pilot.projectId==='prj_mavqUXCj6hSEg8EvBJW8G3XJlihm'&&pilot.publicOrigin==='https://cars-f1rstmotors.vercel.app','existing dealer identity changed');
+  require(manifest?.slug===pilot.dealer&&manifest.repository===pilot.repository&&manifest.shareIdentity?.publicOrigin===pilot.publicOrigin,'package identity differs');
+  require(oid(pilot.sourceCommit)&&meta.sourceCommit===pilot.sourceCommit&&oid(pilot.sourceTree)&&oid(pilot.privateMain)&&oid(pilot.templateSourceCommit),'exact immutable source and current MAIN leases required');
+  require(meta.qualification.templateSourceCommit===pilot.templateSourceCommit&&digest(pilot.candidateLockSha256)&&meta.qualification.candidateLockSha256===pilot.candidateLockSha256,'qualified template/lock changed');
+  const review=pilot.reviewedSuccessor;
+  require(review?.scope==='owner-reviewed-auto-best-ui-source-successor'&&review.reviewed===true&&review.authoritativeFactsUnchanged===true&&review.allRasterAssetBytesUnchanged===true,'explicit reviewed UI-only source successor required');
+  require(review.path==='docs/releases/cloudflare-existing25-20261011/vercel-existing-source/f1rst-motors/source-preparation-successor-receipt.json'&&digest(review.sha256)&&review.preparedTree===pilot.sourceTree&&review.sourceRevision===pilot.templateSourceCommit,'source receipt tuple differs');
+  require(oid(review.baseline?.commit)&&oid(review.baseline?.tree)&&digest(review.nativeInputDigest)&&meta.qualification.nativeInput?.digest===review.nativeInputDigest,'exact retained source/input seal required');
+  require(Array.isArray(review.changedAutoLeaves)&&review.changedAutoLeaves.length>0&&review.changedAutoLeaves.length<=16&&new Set(review.changedAutoLeaves.map(r=>r.path)).size===review.changedAutoLeaves.length,'bounded exact source leaf delta required');
+  for(const leaf of review.changedAutoLeaves)require(typeof leaf.path==='string'&&/^(?:src\/lib\/components\/[a-zA-Z0-9_./+-]+\.svelte|src\/lib\/styles\/[a-zA-Z0-9_./+-]+\.css|src\/lib\/locale\/catalog\.ts)$/.test(leaf.path)&&!leaf.path.split('/').some(p=>!p||p==='.'||p==='..')&&oid(leaf.beforeBlob)&&oid(leaf.afterBlob)&&leaf.beforeBlob!==leaf.afterBlob,'unreviewed or protected Auto source leaf');
+  const unchanged={modern:['01eac7390fa6ba951d4b8d4c26159a9be150f6c8','30e1a99f857cc25e4d78c9459cfb4394a9f70c5b114196a5ca6325ff38823b4b'],import:['d841ddfe5bec918bf6b2c19fd6971fecd6b8e54d','c7d6c93214e859aa2747af8f5e068b6a0b8ca095d6328c807728a4d531d688f8'],app:['7f3d3ffa40546635377e6c5225194fe06fead291','df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1'],mobile:['792bfdd1d8eb22aabd90c7e3a0c0779a6c1c36f3','f5a3e541a7c648a4c2899ad3893e22a3806027a9f66d95fa4e8c74b2226635b6'],'karento-best':['8c5ac869c7fd15e19a80c660343fc64b20a2bad9','be17ef365e3272753df6e50826b139a45bfc32b8fef54ddcb86d977ad16280a9']};
+  require(JSON.stringify(Object.keys(manifest.templateSources||{}).sort())===JSON.stringify(['auto-best',...Object.keys(unchanged)].sort()),'six selected source tuples required');
+  for(const [key,s]of Object.entries(manifest.templateSources)){require(s.repository==='darkapoparka/cars'&&s.revision===pilot.templateSourceCommit&&s.path==='templates/'+key&&oid(s.tree)&&digest(s.digest),'invalid immutable template tuple');if(unchanged[key])require(s.tree===unchanged[key][0]&&s.digest===unchanged[key][1],'another template master changed');}
+  require(review.autoBestSource?.tree===manifest.templateSources['auto-best'].tree&&review.autoBestSource?.digest===manifest.templateSources['auto-best'].digest,'reviewed Auto source differs');
+  const marker=review.personalizationMarker;
+  if(marker!==undefined)require(marker.path==='src/lib/data/company.ts'&&oid(marker.beforeBlob)&&oid(marker.afterBlob)&&marker.beforeBlob!==marker.afterBlob&&marker.insertedDeclaration==="export const companyServicesCopyOwner = 'dealer' as const;"&&marker.factualServiceFieldsUnchanged===true,'only the reviewed factual-copy owner marker may change');
+  const prior=pilot.priorProduction;
+  require(prior?.state==='READY'&&prior.target==='production'&&prior.gitBranch==='main'&&prior.projectId===pilot.projectId&&prior.publicOrigin===pilot.publicOrigin&&/^dpl_[A-Za-z0-9]+$/.test(prior.deploymentId||'')&&oid(prior.gitCommit)&&prior.gitCommit===pilot.privateMain&&digest(prior.receiptSha256)&&prior.serviceCount===6,'actual previous six-service MAIN production receipt required');
+  require(prior.sourceCommit===review.baseline.commit&&prior.sourceTree===review.baseline.tree,'reviewed source baseline differs from prior production');
+  for(const field of ['ownerAuthorizedMain','otherFiveTemplateTreesUnchanged','stockAndFactsUnchanged','productionBuildPending'])require(pilot[field]===true,'false production-pilot scope');require(pilot.hostedApproval===false,'hosted acceptance is pending');
+}
+
 export function assertVercelProductionPilot(pilot, {meta, manifest} = {}) {
+  if(pilot?.reviewedSuccessor?.scope==='owner-reviewed-auto-best-ui-source-successor'){assertVercelReviewedAutoSuccessor(pilot,{meta,manifest});return;}
   const match=(actual,expected)=>requireVercelQualificationExport(actual===expected,'exact F1rst MAIN production-pilot proof required');
   match(pilot?.schemaVersion,1);match(pilot?.kind,'cars-owner-authorized-f1rst-main-production-pilot');
   match(pilot.dealer,'f1rst-motors');match(pilot.repository,'darkapoparka/cars-f1rstmotors');
