@@ -58,7 +58,7 @@ function VehicleCard({vehicle, showDiscount = false, desktopTile = false, imageP
     <Heading title={`${tx(vehicle.year)} ${tx(vehicle.model)}`} {...stylex.props(s.title, desktopTile && s.tileTitle, importListing && s.importText)}>{tx(vehicle.year)} {tx(vehicle.model)}</Heading>
     {vehicle.trim ? <p {...stylex.props(s.trim)}>{tx(vehicle.trim)}</p> : null}
     <div {...stylex.props(s.priceRow)}><strong {...stylex.props(s.price, vehicle.priceOnRequest && s.priceOnRequest)}>{vehicle.priceOnRequest ? tx('Price on request') : <><CurrencyLabel size={18} />{tx(formatPrice(vehicle.price))}</>}</strong>{showDiscount && discount > 0 ? <span {...stylex.props(s.discount)}>{tx(formatPrice(discount))} {tx(" OFF")}</span> : null}</div>
-    {!finance && hasPublishedMonthlyPayment(vehicle) ? <p {...stylex.props(s.monthly)}><span {...stylex.props(s.monthlyPrice)}><CurrencyLabel size={11} />{tx(formatPrice(vehicle.monthly))}{tx("/mo*")}</span><span {...stylex.props(s.monthlyNote)}>{tx("est.")}</span></p> : null}
+    {!finance && hasPublishedMonthlyPayment(vehicle) ? <p {...stylex.props(s.monthly)}><span {...stylex.props(s.monthlyPrice)}><span {...stylex.props(s.srOnly)}><CurrencyLabel size={11}/></span>{tx(formatPrice(vehicle.monthly))}{tx("/mo*")}</span><span {...stylex.props(s.monthlyNote)}>{tx("est.")}</span></p> : null}
   </>;
   return <article aria-label={tx(`${vehicle.year} ${displayMake(vehicle.make)} ${vehicle.model}`)} data-desktop-tile={desktopTile || undefined} data-price={vehicle.price} data-mileage={vehicle.mileage} data-monthly={vehicle.monthly} {...stylex.props(s.card)}>
     <div {...stylex.props(s.main, desktopTile && s.tileMain)}>
@@ -106,6 +106,7 @@ const s = stylex.create({
   monthly: {display: 'flex', alignItems: 'center', gap: 4, marginTop: 1, whiteSpace: 'nowrap', lineHeight: {[media.desktop]: '20px', default: '18px'}},
   monthlyPrice: {display: 'inline-flex', alignItems: 'center', gap: 2, color: $.muted, fontSize: {[media.desktop]: $.desktopSupportSize, default: 13}, fontWeight: 400},
   monthlyNote: {overflow: 'hidden', color: $.muted, fontSize: 12, fontWeight: 400, textOverflow: 'ellipsis'},
+  srOnly: {position: 'absolute', width: 1, height: 1, padding: 0, margin: -1, overflow: 'hidden', clipPath: 'inset(50%)', whiteSpace: 'nowrap', borderWidth: 0},
   benefits: {marginTop: {[media.mobile]: 4, default: 6}},
   benefitLabel: {display: 'block', marginBottom: 3, color: '#7a8087', fontSize: {[media.desktop]: $.desktopLabelSize, default: 8}, fontWeight: 700, lineHeight: {[media.desktop]: '18px', default: '11px'}, letterSpacing: '.04em', textTransform: 'uppercase'},
   benefitRow: {display: 'flex', flexWrap: {[media.mobile]: 'nowrap', default: 'wrap'}, gap: 3, minWidth: 0, maxWidth: '100%', overflowX: {[media.mobile]: 'auto', default: 'visible'}, overscrollBehaviorX: 'contain', scrollbarWidth: 'none', outline: {default: 'none', ':focus-visible': '2px solid #242428'}, outlineOffset: 2},

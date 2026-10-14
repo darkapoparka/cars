@@ -5,9 +5,10 @@ import * as stylex from '@stylexjs/stylex';
 import {Check, ChevronRight, UserRound} from 'lucide-react';
 import Link from '@/components/AppLink';
 import ShowroomIcon, {type ShowroomIconName} from '@/components/ShowroomIcon';
+import ShowroomArtwork from '@/components/ShowroomArtwork';
 import {dealer} from '@/lib/dealer-config';
 import {useCopy, useLocale} from '@/lib/locale';
-import {browserPath} from '@/lib/paths';
+import {assetPath, browserPath} from '@/lib/paths';
 import {homeAlternativeHref, useHomeAlternative} from '@/lib/home-alternative';
 import {showroom} from '@/lib/showroom';
 import {media, tokens as $} from '@/app/tokens.stylex';
@@ -21,7 +22,7 @@ export default function ShowroomMenu({compact = false, languagePath = '/more', o
   const id = useId();
   return <>
     <div data-menu-guest {...stylex.props(s.guest, compact && s.compactGuest)}>
-      <span aria-hidden="true" {...stylex.props(s.avatar, compact && s.compactAvatar)}><UserRound size={compact ? 20 : 24} strokeWidth={1.75}/></span>
+      <span aria-hidden="true" {...stylex.props(s.avatar, compact && s.compactAvatar)}><ShowroomArtwork src={assetPath('/navigation/menu/guest.webp')} size={compact ? 28 : 36} intrinsicSize={80} fallback={<UserRound size={compact ? 20 : 24} strokeWidth={1.75}/>}/></span>
       <div {...stylex.props(s.guestCopy)}>
         <p {...stylex.props(s.greeting, compact && s.compactGreeting)}>{tx('Hi, guest')}</p>
         <p {...stylex.props(s.guestNote)}>{tx('Saved cars, on this device.')}</p>
@@ -46,7 +47,7 @@ export default function ShowroomMenu({compact = false, languagePath = '/more', o
 
 function MenuRow({href, icon, title, compact, alternative, onNavigate}: {href: string; icon: ShowroomIconName; title: string; compact: boolean; alternative: boolean; onNavigate?: () => void}) {
   return <Link href={href} onClick={onNavigate} {...stylex.props(t.input, s.row, compact && s.compactRow, alternative && s.alternativeRow)}>
-    <span {...stylex.props(s.icon, compact && s.compactIcon)}><ShowroomIcon name={icon} size={compact ? 18 : 20}/></span>
+    <span {...stylex.props(s.icon, compact && s.compactIcon)}><ShowroomIcon name={icon} size={compact ? 24 : 28} artwork/></span>
     <span {...stylex.props(s.label)}>{title}</span>
     <ChevronRight size={compact ? 14 : 16} aria-hidden="true" {...stylex.props(s.chevron)}/>
   </Link>;
