@@ -22,7 +22,7 @@ import {repairImportDealerDisclosureCatalog} from './lib/import-dealer-inventory
 import {componentRepairRow,componentAssemblyRow,applyReviewedComponentRepairs,componentSourceRows} from './lib/fleet-component-repairs.mjs';
 import {applyDealerPresentation} from './publishing/dealer-presentation.mjs';
 import {applyAutoBestCardLayout} from './publishing/auto-best-card-layout.mjs';
-import {applyOptionalContactFallback} from './publishing/dealer-contact-fallback.mjs';
+import {applyOptionalContactFallback,applyModernOptionalContactFallback} from './publishing/dealer-contact-fallback.mjs';
 import {applyDealerShare} from './publishing/dealer-share.mjs';
 import {appendProposalIntroduction} from './publishing/proposal-introduction.mjs';
 import {assertLeadBranding} from './publishing/lead-branding.mjs';
@@ -282,6 +282,7 @@ export async function prepareExistingFleetSourcePackage(slug,key,sha,area,reques
  if(!manifest.shareIdentity?.logo?.sourcePath||!files.has(manifest.shareIdentity.logo.sourcePath)||hash(files.get(manifest.shareIdentity.logo.sourcePath))!==manifest.shareIdentity.logo.sha256)throw Error('Preserved dealer share-logo contract differs');
  manifest.shareIdentity={...manifest.shareIdentity,publicOrigin};manifest.candidate={...(manifest.candidate||{}),approved:false,nativeReleaseQualification:false};
  const contactFallback=applyOptionalContactFallback(files,manifest);
+ const modernContactFallback=applyModernOptionalContactFallback(files,manifest,{profile,typescript});
  const presentation=applyDealerPresentation(files,manifest);
  applyAutoBestCardLayout(files,manifest);
  files=applySixVariantMounts(files,manifest,{provider:'cloudflare'});
@@ -307,7 +308,7 @@ export async function prepareExistingFleetSourcePackage(slug,key,sha,area,reques
  const root=key==='router'?'cloudflare':key;
  const retained=fullSource?files:new Map([...files].filter(([name])=>name.startsWith(root+'/')||name.startsWith('scripts/')||!name.includes('/')));
  const packageRoot=path.join(area,'package');writeFiles(packageRoot,retained);
- const provenance={schemaVersion:1,dealer:slug,key,sourceCommit:sha,sourceTree:git(ROOT,['rev-parse',sha+':clients/'+slug]),inputDigest:hash(JSON.stringify(inputRows)),sourceCandidate:newSource?.sourceCandidate??candidate.candidateSourceDigest,sourceReleases:manifest.templateSources,manifest,workerPrefix,publicOrigin,originalSourceUnchanged:true,assembledDigest:hash(JSON.stringify(assembledRows)),targetBeforeDependencies:sourceRows(retained),...(componentRepair?{componentRepair,familyBeforeDependencies}:{}),branding,nativeSource,contracts,...(signatureContactRepair?{signatureContactRepair}:{}),contactFallback,presentation,reference,databaseSpecialization,retention:pruned.receipts,...(modernFreeServicesExperiment?{modernFreeServicesExperiment}:{}),...(modernFreeNativeQueryExperiment?{modernFreeNativeQueryExperiment}:{}),nativeApproval:false,hosted:false,...(newSource?{sourceMode:mode,sourcePreparation:newSource}:{})};
+ const provenance={schemaVersion:1,dealer:slug,key,sourceCommit:sha,sourceTree:git(ROOT,['rev-parse',sha+':clients/'+slug]),inputDigest:hash(JSON.stringify(inputRows)),sourceCandidate:newSource?.sourceCandidate??candidate.candidateSourceDigest,sourceReleases:manifest.templateSources,manifest,workerPrefix,publicOrigin,originalSourceUnchanged:true,assembledDigest:hash(JSON.stringify(assembledRows)),targetBeforeDependencies:sourceRows(retained),...(componentRepair?{componentRepair,familyBeforeDependencies}:{}),branding,nativeSource,contracts,...(signatureContactRepair?{signatureContactRepair}:{}),contactFallback,modernContactFallback,presentation,reference,databaseSpecialization,retention:pruned.receipts,...(modernFreeServicesExperiment?{modernFreeServicesExperiment}:{}),...(modernFreeNativeQueryExperiment?{modernFreeNativeQueryExperiment}:{}),nativeApproval:false,hosted:false,...(newSource?{sourceMode:mode,sourcePreparation:newSource}:{})};
  writeJson(path.join(area,'receipts/source.json'),provenance);return {packageRoot,manifest,provenance};
 }
 function installedBin(root,name){
