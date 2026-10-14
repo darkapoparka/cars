@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-reviewed-modern-bilingual-copy-input",
+  "dealer": "vaen-cars-varna",
+  "sourceCommit": "d9594c2979f668831b78609e4e990640259aee81",
+  "baselineTree": "a75973ad32cf59600f7347a252e9b99379264d62",
+  "inputSha256": "62ce5f40e1870f62c3f7d32705ff0344d0602ab1375248c0e20f0eac3bfdfc74",
+  "modernInputRowsSha256": "9721b3f65d205b21484a98863e813b5b105948513f9d243e8ef7764945471c22",
+  "listingCount": 2,
+  "profileInputs": [
+    {
+      "path": "dealer.json",
+      "gitBlob": "35b96d71a1a54c5f10b70d44836f9fb565d513ce",
+      "sha256": "07d2be340d53b10b9e8a203bd302cd146e6e6ca3bb918e898517227896439360",
+      "bytes": 4419
+    },
+    {
+      "path": "business-facts.json",
+      "gitBlob": "7a70c4b021f0cbf67cbf3ccb1eaddf88999ef4ac",
+      "sha256": "dcd80fb5e69316a3eee8f8bc76309252b8af8ce030f39281a11377cac9290bec",
+      "bytes": 7201
+    },
+    {
+      "path": "stock.json",
+      "gitBlob": "976336dde283236c80604b981ad75c32b26e02ca",
+      "sha256": "29552b40d05c5a2532b5c5591f4e057a86e651e4327af36fa467e5c8eb2241f1",
+      "bytes": 5210
+    }
+  ],
+  "reviewedGeneratorHelper": {
+    "path": "scripts/lib/modern-dealer-inventory-copy.mjs",
+    "sha256": "cbdbaa28dc07911cfe913b4e627671b6556fc25d3bfe59364e29c5ca5a29072b",
+    "sourceCommit": "14d86f67c160699c18a6ec5658197cc4d9011e0b"
+  },
+  "review": {
+    "displayCopyOnly": true,
+    "exactSourceDescriptionKeys": true,
+    "listingFactsUnchanged": true,
+    "imageUrlsUnchanged": true,
+    "imageAltsPreserved": true,
+    "interpolationTokensUnchanged": true,
+    "reviewedBy": "Codex, authorized final-template rollout",
+    "reviewedAt": "2026-10-14T20:04:09.154Z",
+    "notes": "Reuse exact existing native or reviewed registered companions for every actual current row; no new translation/factual source edits."
+  },
+  "reviewedCopy": {
+    "vaen-cars-varna-11790770761188035": {
+      "sourceDescription": "MG S6 Luxury от датирана обява за фабрично нов автомобил, наличен за предварителна поръчка при партньор в Нидерландия. В обявата е посочена очаквана доставка в началото на декември; потвърдете актуалния срок, цената и наличността с автокъщата. Заглавието посочва AWD, а описанието RWD; потвърдете задвижването с продавача.",
+      "en": {
+        "description": "MG S6 Luxury from a dated advert for a factory-new vehicle available for preorder at a partner in the Netherlands. The advert states expected delivery in early December; confirm current timing, price and availability with the dealership. The headline says AWD while the description says RWD; confirm the drivetrain with the seller.",
+        "imageAlts": [
+          "MG S6 Luxury",
+          "MG S6 Luxury"
+        ]
+      },
+      "bg": {
+        "description": "MG S6 Luxury от датирана обява за фабрично нов автомобил, наличен за предварителна поръчка при партньор в Нидерландия. В обявата е посочена очаквана доставка в началото на декември; потвърдете актуалния срок, цената и наличността с автокъщата. Заглавието посочва AWD, а описанието RWD; потвърдете задвижването с продавача.",
+        "imageAlts": [
+          "MG S6 Luxury",
+          "MG S6 Luxury"
+        ]
+      }
+    },
+    "vaen-cars-varna-11790767561385627": {
+      "sourceDescription": "MG S6 Luxury Long Range от датирана обява за фабрично нов автомобил, наличен за предварителна поръчка при партньор в Нидерландия. В обявата е посочена очаквана доставка в началото на декември; потвърдете актуалния срок, цената и наличността с автокъщата.",
+      "en": {
+        "description": "MG S6 Luxury Long Range from a dated advert for a factory-new vehicle available for preorder at a partner in the Netherlands. The advert states expected delivery in early December; confirm current timing, price and availability with the dealership.",
+        "imageAlts": [
+          "MG S6 Luxury Long Range",
+          "MG S6 Luxury Long Range"
+        ]
+      },
+      "bg": {
+        "description": "MG S6 Luxury Long Range от датирана обява за фабрично нов автомобил, наличен за предварителна поръчка при партньор в Нидерландия. В обявата е посочена очаквана доставка в началото на декември; потвърдете актуалния срок, цената и наличността с автокъщата.",
+        "imageAlts": [
+          "MG S6 Luxury Long Range",
+          "MG S6 Luxury Long Range"
+        ]
+      }
+    }
+  }
+}

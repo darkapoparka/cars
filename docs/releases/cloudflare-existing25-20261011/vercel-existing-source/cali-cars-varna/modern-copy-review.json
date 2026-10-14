@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-reviewed-modern-bilingual-copy-input",
+  "dealer": "cali-cars-varna",
+  "sourceCommit": "d9594c2979f668831b78609e4e990640259aee81",
+  "baselineTree": "287d787dc8468ea5f472291cd62a8b533d629f91",
+  "inputSha256": "36402bac834c414a3a870fff9324c5a1f361b0a31acb24ceeda362701bb15c62",
+  "modernInputRowsSha256": "aaac014b328eeb0a5ae078dfa6f97511b3fd57009fce1c84f1653aed540e18dc",
+  "listingCount": 2,
+  "profileInputs": [
+    {
+      "path": "dealer.json",
+      "gitBlob": "f8fc557144ac543afffc72c8bdbd70e0bb7dbe9c",
+      "sha256": "e7418c35b7b73beb966dbf0d9f4609ed7446593f8a9893c5f58f621e4faf2858",
+      "bytes": 4325
+    },
+    {
+      "path": "business-facts.json",
+      "gitBlob": "5717e863faad4cbf3dfacc056d4d55e9995a96e6",
+      "sha256": "bcf0418900b4d537f5495c0ca3cf470c9b5199e4fc4b4134351c1d2ffad61b17",
+      "bytes": 5509
+    },
+    {
+      "path": "stock.json",
+      "gitBlob": "df12f981f4803040fd56dce892391bc7e2590952",
+      "sha256": "49a4b5c6bd5d5c52c270f42ae5cb995a56ab0adf009e60ea1de3d165c52c9937",
+      "bytes": 3122
+    }
+  ],
+  "reviewedGeneratorHelper": {
+    "path": "scripts/lib/modern-dealer-inventory-copy.mjs",
+    "sha256": "cbdbaa28dc07911cfe913b4e627671b6556fc25d3bfe59364e29c5ca5a29072b",
+    "sourceCommit": "14d86f67c160699c18a6ec5658197cc4d9011e0b"
+  },
+  "review": {
+    "displayCopyOnly": true,
+    "exactSourceDescriptionKeys": true,
+    "listingFactsUnchanged": true,
+    "imageUrlsUnchanged": true,
+    "imageAltsPreserved": true,
+    "interpolationTokensUnchanged": true,
+    "reviewedBy": "Codex, authorized final-template rollout",
+    "reviewedAt": "2026-10-14T20:04:09.148Z",
+    "notes": "Reuse exact existing native or reviewed registered companions for every actual current row; no new translation/factual source edits."
+  },
+  "reviewedCopy": {
+    "cali-cars-varna-21785846592411235": {
+      "sourceDescription": "BMW X4 M40i xDrive от датирана публична обява. Потвърдете цената и наличността директно с автокъщата.",
+      "en": {
+        "description": "BMW X4 M40i xDrive from a dated public advert. Confirm price and availability directly with the dealership.",
+        "imageAlts": [
+          "BMW X4 M40i xDrive",
+          "BMW X4 M40i xDrive"
+        ]
+      },
+      "bg": {
+        "description": "BMW X4 M40i xDrive от датирана публична обява. Потвърдете цената и наличността директно с автокъщата.",
+        "imageAlts": [
+          "BMW X4 M40i xDrive",
+          "BMW X4 M40i xDrive"
+        ]
+      }
+    },
+    "cali-cars-varna-21753383277707999": {
+      "sourceDescription": "Mercedes-Benz GLC 300 4Matic от датирана публична обява. Потвърдете цената и наличността директно с автокъщата.",
+      "en": {
+        "description": "Mercedes-Benz GLC 300 4Matic from a dated public advert. Confirm price and availability directly with the dealership.",
+        "imageAlts": [
+          "Mercedes-Benz GLC 300 4Matic",
+          "Mercedes-Benz GLC 300 4Matic"
+        ]
+      },
+      "bg": {
+        "description": "Mercedes-Benz GLC 300 4Matic от датирана публична обява. Потвърдете цената и наличността директно с автокъщата.",
+        "imageAlts": [
+          "Mercedes-Benz GLC 300 4Matic",
+          "Mercedes-Benz GLC 300 4Matic"
+        ]
+      }
+    }
+  }
+}

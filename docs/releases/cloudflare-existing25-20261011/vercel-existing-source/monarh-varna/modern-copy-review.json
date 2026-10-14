@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-reviewed-modern-bilingual-copy-input",
+  "dealer": "monarh-varna",
+  "sourceCommit": "d9594c2979f668831b78609e4e990640259aee81",
+  "baselineTree": "28fe6c115e31a8d12ddeaf71dbc22458dc3192ff",
+  "inputSha256": "d9dc3e321905054776d7772646604856ac37b28c6f05dcd5e4121864d971c798",
+  "modernInputRowsSha256": "bdfaecf57969db07b245bf59ec39fa3205146c2acbb7f8f4f02a7e3783456d35",
+  "listingCount": 2,
+  "profileInputs": [
+    {
+      "path": "dealer.json",
+      "gitBlob": "dd338637d03f62614c409d0101777a4c6a2794f8",
+      "sha256": "d5d7c07d4db43fcc24a756c8434a774f67a23242d261cc02f9b8462f9f265791",
+      "bytes": 4310
+    },
+    {
+      "path": "business-facts.json",
+      "gitBlob": "dd32d2b3a1d02a4925654c944adbd862e0c8fb91",
+      "sha256": "5a3caa925b568a4af26525c2631f7cc93c00729da8bdf24bdde97db5f7a2aa45",
+      "bytes": 5504
+    },
+    {
+      "path": "stock.json",
+      "gitBlob": "a608820b60a6557ae355cad412479d897d800963",
+      "sha256": "68cacbf484f2592eddcebf21998668737f9308700255f8e6459165db2cc35bd3",
+      "bytes": 4010
+    }
+  ],
+  "reviewedGeneratorHelper": {
+    "path": "scripts/lib/modern-dealer-inventory-copy.mjs",
+    "sha256": "cbdbaa28dc07911cfe913b4e627671b6556fc25d3bfe59364e29c5ca5a29072b",
+    "sourceCommit": "14d86f67c160699c18a6ec5658197cc4d9011e0b"
+  },
+  "review": {
+    "displayCopyOnly": true,
+    "exactSourceDescriptionKeys": true,
+    "listingFactsUnchanged": true,
+    "imageUrlsUnchanged": true,
+    "imageAltsPreserved": true,
+    "interpolationTokensUnchanged": true,
+    "reviewedBy": "Codex, authorized final-template rollout",
+    "reviewedAt": "2026-10-14T20:04:09.153Z",
+    "notes": "Reuse exact existing native or reviewed registered companions for every actual current row; no new translation/factual source edits."
+  },
+  "reviewedCopy": {
+    "monarh-varna-21789634036820538": {
+      "sourceDescription": "Isuzu TFS от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+      "en": {
+        "description": "Isuzu TFS from a dated public advert. Confirm condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "Isuzu TFS",
+          "Isuzu TFS"
+        ]
+      },
+      "bg": {
+        "description": "Isuzu TFS от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+        "imageAlts": [
+          "Isuzu TFS",
+          "Isuzu TFS"
+        ]
+      }
+    },
+    "monarh-varna-11772882774601045": {
+      "sourceDescription": "SEAT Toledo от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+      "en": {
+        "description": "SEAT Toledo from a dated public advert. Confirm condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "SEAT Toledo",
+          "SEAT Toledo"
+        ]
+      },
+      "bg": {
+        "description": "SEAT Toledo от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+        "imageAlts": [
+          "SEAT Toledo",
+          "SEAT Toledo"
+        ]
+      }
+    }
+  }
+}
