@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
+  "sourceRevision": "097805706654b327a2b8327a7c1670da3a5f67ae",
+  "approvedParentLockDigest": "ecdfaf9599fbcbeadebc24de3b9aa1c7615a9a49e29d338e5e9a23427d405e26",
   "dealers": [
     "bradford-cherry-tree-cars"
   ],
-  "sourceRevision": "097805706654b327a2b8327a7c1670da3a5f67ae",
-  "approvedParentLockDigest": "ecdfaf9599fbcbeadebc24de3b9aa1c7615a9a49e29d338e5e9a23427d405e26",
   "inputs": {
     "bradford-cherry-tree-cars": {
       "candidateLock": {

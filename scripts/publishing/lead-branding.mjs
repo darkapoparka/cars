@@ -160,6 +160,7 @@ export async function applyLeadBranding(files,manifest,{master,sharp,readTemplat
  const targetFiles=files;files=new Map(files);
  const original=new Map(files),facts=Object.fromEntries(['business-facts.json','stock.json','locale.json','auto-best/src/lib/data/dealer-profile.json'].filter(p=>files.has(p)).map(p=>[p,sha(files.get(p))]));
  const palette=preserveTemplatePalettes(files,manifest,readTemplate),pack=usesReviewedSurfaces?await reviewedRasterPack(master,reviewedSurfaces,sharp):await rasterPack(master,sharp),packId=pack.packId??sha(Buffer.concat([pack.masterPng,pack.markPng])).slice(0,16),publicBase='/dealer-brand/v2-'+packId;
+ const derivedProfiles=new Set(Object.values(PROFILE_LOGO_CONSUMERS).filter(name=>original.has(name)&&JSON.parse(read(original,name)).logoContract!=null));
  const oldLogos=new Set();for(const [name,bytes]of original){if(!/\.(?:json|ts|tsx|js|svelte)$/.test(name)||!Object.keys(PUBLIC_ROOTS).some(k=>name.startsWith(k+'/')))continue;for(const match of Buffer.from(bytes).toString().matchAll(/(["'])(\/[^"'\r\n]+)\1/g))if(LEGACY_LOGO.test(match[2]))oldLogos.add(match[2]);}
  const publicPaths=[];
  for(const [key,root]of Object.entries(PUBLIC_ROOTS)){
@@ -169,7 +170,7 @@ export async function applyLeadBranding(files,manifest,{master,sharp,readTemplat
   for(const old of oldLogos){if(!files.has(root+old.slice(1))||old.endsWith('.svg'))continue;const tone=toneFor(old),ext=old.endsWith('.png')?'png':'webp';files.set(root+old.slice(1),pack.assets.get('logo-'+tone+'.'+ext));}
   for(const name of [root+'favicon.ico',root+'apple-touch-icon.png',root+'dealer-brand/icon.png',root+'dealer-brand/icon-192.png',root+'dealer-brand/icon-512.png'])if(files.has(name))files.set(name,name.endsWith('.ico')?pack.assets.get('favicon.ico'):pack.assets.get('app-icon.png'));
  }
- for(const [name,bytes]of [...files]){if(!/\.(?:json|ts|tsx|js|svelte)$/.test(name)||!Object.keys(PUBLIC_ROOTS).some(k=>name.startsWith(k+'/'))||name.includes('/.template/')||name.includes('/.client/')||Object.hasOwn(facts,name))continue;const text=Buffer.from(bytes).toString();let next=text;for(const old of oldLogos)next=next.replaceAll(JSON.stringify(old),JSON.stringify(publicBase+'/logo-'+toneFor(old)+'.webp')).replaceAll("'"+old+"'",JSON.stringify(publicBase+'/logo-'+toneFor(old)+'.webp'));if(next!==text)files.set(name,Buffer.from(next));}
+ for(const [name,bytes]of [...files]){if(!/\.(?:json|ts|tsx|js|svelte)$/.test(name)||!Object.keys(PUBLIC_ROOTS).some(k=>name.startsWith(k+'/'))||name.includes('/.template/')||name.includes('/.client/')||Object.hasOwn(facts,name)||derivedProfiles.has(name))continue;const text=Buffer.from(bytes).toString();let next=text;for(const old of oldLogos)next=next.replaceAll(JSON.stringify(old),JSON.stringify(publicBase+'/logo-'+toneFor(old)+'.webp')).replaceAll("'"+old+"'",JSON.stringify(publicBase+'/logo-'+toneFor(old)+'.webp'));if(next!==text)files.set(name,Buffer.from(next));}
  const surfaceBindingsVersion=files.has(MOBILE_LOGO_HEADER)?(applyLogoSurfaceBindings(files,publicBase),1):0;
  const appFile='app/lib/dealer.json';if(files.has(appFile)){const app=JSON.parse(read(files,appFile));app.logo={...app.logo,light:publicBase+'/logo-on-light.webp',dark:publicBase+'/logo-on-dark.webp',icon:publicBase+'/app-icon.png'};files.set(appFile,encode(app));}
  const modern='modern/packages/marketplace/lead-site.ts';let modernText=read(files,modern);modernText=modernText.replace(/(^\s*logoPath:\s*)["'][^"']+["']/m,(_,prefix)=>prefix+JSON.stringify(publicBase+'/logo-on-light.webp'));files.set(modern,Buffer.from(modernText));
@@ -219,5 +220,6 @@ export function assertLeadBranding(files,manifest){
  for(const row of contract.derivedProfileLogoBindings||[])if(!Object.values(PROFILE_LOGO_CONSUMERS).includes(row.path)||row.factualFieldsUnchanged!==true||!files.has(row.path)||sha(files.get(row.path))!==row.afterSha256)throw Error('Derived profile branding proof changed: '+row.path);
  for(const [name,wanted]of Object.entries(contract.facts))if(sha(files.get(name))!==wanted)throw Error('Factual source changed since branding: '+name);return contract;
 }
+
 
 

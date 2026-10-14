@@ -630,14 +630,35 @@ async function personalizePinnedTargetBases({pins,newBases,dealerRoot,manifest,p
 export function assertFactualRefreshCandidate({candidate,newBases,proof}) {
   const keys=['auto-best','modern','import','app','mobile','karento-best'];
   if(!proof || proof.schemaVersion!==1 || proof.stage!=='preservation-merge-before-native-catalogs-and-branding' || proof.mode!=='current-facts-from-pinned-six-targets' || !/^[a-f0-9]{64}$/.test(proof.profileSha256??'') || JSON.stringify(Object.keys(proof.targetSources??{}).sort())!==JSON.stringify([...keys].sort()) || !Array.isArray(proof.consumerPaths) || !proof.consumerPaths.length || new Set(proof.consumerPaths).size!==proof.consumerPaths.length || JSON.stringify(proof.consumerPaths)!==JSON.stringify([...proof.consumerPaths].sort()) || proof.consumerPaths.some(name=>typeof name!=='string'||!keys.includes(name.split('/')[0])||name.split('/').some(part=>!part||part==='.'||part==='..')||name.includes('\\')) || keys.some(key=>!proof.consumerPaths.some(name=>name.startsWith(key+'/'))))throw new Error('Exact factual target proof required');
-  const consumerHashes=[];
+  const consumerHashes=[],mismatches=[];
   for(const name of proof.consumerPaths) {
     const slash=name.indexOf('/'),key=name.slice(0,slash),relative=name.slice(slash+1);
     const expected=newBases[key]?.get(relative),actual=candidate.get(name);
-    if(!expected||!actual||!actual.equals(expected))throw new Error('Factual target differs after preservation; review custom factual consumer: '+name);
+    if(!expected||!actual||!actual.equals(expected)){mismatches.push({path:name,targetSha256:expected?sha256(expected):null,mergedSha256:actual?sha256(actual):null,targetMissing:!expected,mergedMissing:!actual});continue;}
     consumerHashes.push({path:name,sha256:sha256(expected)});
   }
+  if(mismatches.length){const error=new Error('Factual target differs after preservation; review custom factual consumer: '+mismatches.map(row=>row.path).join(', '));error.code='CARS_FACTUAL_CONSUMER_MISMATCH';error.factualConsumerMismatches=mismatches;throw error;}
   return {...proof,consumerHashes};
+}
+
+/** Hash-only refusal evidence; no mismatch is admitted or materialized. */
+export function writeFactualRefreshMismatchReview({error,runDirectory,dealerRoot,oldBases,proof,sourceBeforeSha256}) {
+  if(error?.code!=='CARS_FACTUAL_CONSUMER_MISMATCH'||!Array.isArray(error.factualConsumerMismatches))return null;
+  const rows=error.factualConsumerMismatches,seen=new Set(),physicalRoot=fs.realpathSync(dealerRoot);
+  if(!rows.length||!Array.isArray(proof?.consumerPaths))throw new Error('Exact factual mismatch evidence required');
+  const mismatches=rows.map(row=>{
+    if(!proof.consumerPaths.includes(row.path)||seen.has(row.path)||typeof row.path!=='string'||row.path.includes('\\')||row.path.split('/').some(part=>!part||part==='.'||part==='..')||
+       ![row.targetSha256,row.mergedSha256].every(value=>value===null||/^[a-f0-9]{64}$/.test(value??''))||row.targetMissing!==(row.targetSha256===null)||row.mergedMissing!==(row.mergedSha256===null))throw new Error('Invalid factual mismatch evidence path or hash');
+    seen.add(row.path);const slash=row.path.indexOf('/'),key=row.path.slice(0,slash),relative=row.path.slice(slash+1),originalPath=path.resolve(physicalRoot,row.path);
+    if(!isInsidePath(physicalRoot,originalPath)||!['auto-best','modern','import','app','mobile','karento-best'].includes(key))throw new Error('Factual mismatch evidence escaped the dealer');
+    let originalSha256=null;
+    if(fs.existsSync(originalPath)){if(!fs.statSync(originalPath).isFile()||!isInsidePath(physicalRoot,fs.realpathSync(originalPath)))throw new Error('Factual mismatch evidence escaped the dealer');originalSha256=sha256(fs.readFileSync(originalPath));}
+    const old=oldBases[key]?.get(relative);
+    return {path:row.path,originalSha256,oldSha256:old?sha256(old):null,targetSha256:row.targetSha256,mergedSha256:row.mergedSha256,targetMissing:row.targetMissing,mergedMissing:row.mergedMissing};
+  });
+  const report={schemaVersion:1,kind:'cars-factual-consumer-mismatch-review',dealer:proof.dealer,stage:proof.stage,profileSha256:proof.profileSha256,targetSources:proof.targetSources,sourceBeforeSha256,mismatches,ready:false,nativeApproval:false,hostedApproval:false};
+  if(Buffer.byteLength(JSON.stringify(report))>128*1024)throw new Error('Factual mismatch evidence exceeds its compact bound');
+  writeJsonExclusive(path.join(fs.realpathSync(runDirectory),'factual-mismatch-review.json'),report);return report;
 }
 
 export function assertFactualRefreshReplay({proof,metadata,newBases}){
@@ -1126,7 +1147,10 @@ async function runPlan(values) {
   const plan = planDealerUpgrade({ dealerRoot, lock, oldBases: adapted.oldBases, newBases: adapted.newBases, targetManifest: adapted.targetManifest, selectedKeys:selection.selectedKeys, resolutions, qualification:qualification?.context,root:carsRoot,registeredAdoption });
   let candidateDirectory = null, candidateDigest = null;
   if(plan.ready&&factualConsumerReview)applyFactualReviewToPlan({plan,dealerRoot,carsRoot,manifest,qualification:qualification?.context,selection:{...selection,designSet:values['design-set']},registeredAdoption,refreshFacts,templatePalette,factualProof:factual?.proof,oldBases:adapted.oldBases,newBases:adapted.newBases,review:factualConsumerReview,resolutions});
-  if(plan.ready&&factual)plan.factualRefresh=assertFactualRefreshCandidate({candidate:plan.candidate,newBases:adapted.newBases,proof:factual.proof});
+  if(plan.ready&&factual){
+    try{plan.factualRefresh=assertFactualRefreshCandidate({candidate:plan.candidate,newBases:adapted.newBases,proof:factual.proof});}
+    catch(error){writeFactualRefreshMismatchReview({error,runDirectory,dealerRoot,oldBases:adapted.oldBases,proof:factual.proof,sourceBeforeSha256});throw error;}
+  }
   if (plan.ready) {
     candidateDirectory = materializeUpgradeCandidate({
       source: dealerRoot,

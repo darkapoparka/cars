@@ -8,7 +8,7 @@ import { fileURLToPath } from 'node:url';
 import test from 'node:test';
 import { fingerprint } from '../lib/workflow.mjs';
 import { applyMounts } from '../publishing/mounts.mjs';
-import { targetManifestForUpgrade, assertUpgradeSourceAdmission, personalizeRegisteredCandidate, assertFactualRefreshAdmission, assertFactualRefreshCandidate, assertFactualRefreshReplay, assertRegisteredPersonalizationPreservation, planReviewedRegisteredConsumerResolutions, deriveRegisteredConsumerTargets, applyReviewedFactualConsumerResolutions } from './update-dealer-template.mjs';
+import { targetManifestForUpgrade, assertUpgradeSourceAdmission, personalizeRegisteredCandidate, assertFactualRefreshAdmission, assertFactualRefreshCandidate, writeFactualRefreshMismatchReview, assertFactualRefreshReplay, assertRegisteredPersonalizationPreservation, planReviewedRegisteredConsumerResolutions, deriveRegisteredConsumerTargets, applyReviewedFactualConsumerResolutions } from './update-dealer-template.mjs';
 import {planThreeWayUpgrade,materializeUpgradeCandidate} from './three-way-upgrade.mjs';
 
 const wrapper = fileURLToPath(new URL('./update-dealer-template.mjs', import.meta.url));
@@ -494,3 +494,33 @@ test('ordinary paired factual choice keeps the exact ordered two-path whitelist 
  for(const mutate of [f=>{f.review.paths.reverse();},f=>{f.review.paths=f.review.paths.slice(1);},f=>{f.review.paths[1].path='import/src/paid.ts';},f=>{f.review.paths[1].path='../outside';},f=>{f.review.paths.push({...f.review.paths[1]});}]){const f=pairedOrdinaryFactualConsumerFixture();mutate(f);assert.throws(()=>applyReviewedFactualConsumerResolutions(f));assert(f.plan.candidate.get(f.name).equals(f.merged));assert(f.plan.candidate.get(f.site.name).equals(f.site.merged));}
 });
 
+
+test('factual mismatch refusal enumerates all changed and missing consumers without changing candidates',()=>{
+ const f=factualProofFixture(),app='app/src/current-facts.json',missingTarget='import/src/current-facts.json',missingMerged='mobile/src/current-facts.json';
+ f.candidate.set(app,Buffer.from('preserved custom factual consumer\n'));f.newBases.import.delete('src/current-facts.json');f.candidate.delete(missingMerged);
+ const before=[...f.candidate].map(([name,bytes])=>[name,createHash('sha256').update(bytes).digest('hex')]);let refusal;
+ assert.throws(()=>assertFactualRefreshCandidate(f),error=>{refusal=error;assert.equal(error.code,'CARS_FACTUAL_CONSUMER_MISMATCH');assert.match(error.message,/^Factual target differs after preservation/);assert.deepEqual(error.factualConsumerMismatches.map(row=>row.path),[app,missingTarget,missingMerged]);return true;});
+ const rows=refusal.factualConsumerMismatches;assert.equal(rows[0].targetMissing,false);assert.equal(rows[0].mergedMissing,false);assert.equal(rows[1].targetSha256,null);assert.equal(rows[1].targetMissing,true);assert.equal(rows[2].mergedSha256,null);assert.equal(rows[2].mergedMissing,true);
+ assert.deepEqual([...f.candidate].map(([name,bytes])=>[name,createHash('sha256').update(bytes).digest('hex')]),before);
+ assert.throws(()=>assertFactualRefreshCandidate({...f,proof:{...f.proof,consumerPaths:['../escape']}}),error=>{assert.match(error.message,/Exact factual target proof/);assert.equal(error.factualConsumerMismatches,undefined);return true;});
+});
+
+test('factual mismatch plan evidence records four raw byte leases and refuses without copying source content',()=>{
+ const f=factualProofFixture(),name='app/src/current-facts.json',relative='src/current-facts.json',original=Buffer.from('original-private-factual-consumer\n'),old=Buffer.from('old-private-factual-consumer\n'),merged=Buffer.from('merged-private-factual-consumer\n');
+ f.candidate.set(name,merged);let refusal;try{assertFactualRefreshCandidate(f);}catch(error){refusal=error;}
+ const tempParent=fs.realpathSync(os.tmpdir()),root=fs.mkdtempSync(path.join(tempParent,'cars-factual-mismatch-')),dealerRoot=path.join(root,'dealer'),runDirectory=path.join(root,'plan');
+ try{
+  fs.mkdirSync(path.join(dealerRoot,'app/src'),{recursive:true});fs.mkdirSync(runDirectory);fs.writeFileSync(path.join(dealerRoot,name),original);
+  const oldBases={app:new Map([[relative,old]])},sourceBeforeSha256='e'.repeat(64),digest=bytes=>createHash('sha256').update(bytes).digest('hex');
+  assert.equal(writeFactualRefreshMismatchReview({error:new Error('unrelated guard refusal'),runDirectory,dealerRoot,oldBases,proof:f.proof,sourceBeforeSha256}),null);assert.deepEqual(fs.readdirSync(runDirectory),[]);
+  const report=writeFactualRefreshMismatchReview({error:refusal,runDirectory,dealerRoot,oldBases,proof:f.proof,sourceBeforeSha256});
+  assert.deepEqual(report.mismatches,[{path:name,originalSha256:digest(original),oldSha256:digest(old),targetSha256:digest(f.newBases.app.get(relative)),mergedSha256:digest(merged),targetMissing:false,mergedMissing:false}]);
+  assert.equal(report.ready,false);assert.equal(report.nativeApproval,false);assert.equal(report.hostedApproval,false);assert.equal(report.sourceBeforeSha256,sourceBeforeSha256);assert.deepEqual(report.targetSources,f.proof.targetSources);
+  const output=fs.readFileSync(path.join(runDirectory,'factual-mismatch-review.json'),'utf8');assert.deepEqual(JSON.parse(output),report);assert(!output.includes('private-factual-consumer'));assert(output.length<128*1024);assert.deepEqual(fs.readdirSync(runDirectory),['factual-mismatch-review.json']);assert(fs.readFileSync(path.join(dealerRoot,name)).equals(original));assert(f.candidate.get(name).equals(merged));
+  assert.throws(()=>writeFactualRefreshMismatchReview({error:refusal,runDirectory,dealerRoot,oldBases,proof:f.proof,sourceBeforeSha256}),/EEXIST/);
+  const unsafe={...refusal,code:refusal.code,factualConsumerMismatches:[{...refusal.factualConsumerMismatches[0],path:'../outside'}]};
+  assert.throws(()=>writeFactualRefreshMismatchReview({error:unsafe,runDirectory,dealerRoot,oldBases,proof:{...f.proof,consumerPaths:['../outside']},sourceBeforeSha256}),/Invalid factual mismatch evidence/);
+ }finally{
+  const resolved=fs.realpathSync(root);assert.equal(path.dirname(resolved),tempParent);assert(path.basename(resolved).startsWith('cars-factual-mismatch-'));fs.rmSync(resolved,{recursive:true,force:true});
+ }
+});
