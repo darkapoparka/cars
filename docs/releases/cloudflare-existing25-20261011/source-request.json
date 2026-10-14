@@ -1,39 +1,12 @@
 {
   "schemaVersion": 1,
   "dealers": [
-    "centralauto-varna",
-    "f1rst-motors",
-    "bradford-cherry-tree-cars"
+    "bradford-cherry-tree-cars",
+    "f1rst-motors"
   ],
   "sourceRevision": "097805706654b327a2b8327a7c1670da3a5f67ae",
   "approvedParentLockDigest": "ecdfaf9599fbcbeadebc24de3b9aa1c7615a9a49e29d338e5e9a23427d405e26",
   "inputs": {
-    "centralauto-varna": {
-      "candidateLock": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/candidate-lock.json",
-        "sha256": "23622acb9fbaa5cb78379d6a080170f99dadb4703ff7b8ccba3d21a2b41e8786"
-      },
-      "qualification": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/contexts/centralauto-varna.json",
-        "sha256": "bcc381b51e03f8a761c3b8c2941478de4a12036f4017d00775bf61df44482845"
-      },
-      "sourceDeltaReview": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
-        "sha256": "8fac7527b396f75ff6647a724ce7a2152bb13ff514efe6480b7c322f66fc195f"
-      },
-      "branding": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-branding/centralauto-varna.json",
-        "sha256": "ca7db45c3acbe29c388be75898313f278be9a96615c7ae785ca1cd580366e226"
-      },
-      "modernCopyReview": {
-        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/centralauto-varna/modern-copy-review.json",
-        "sha256": "c8146c7fa68580f19cfb2c09dfa3fc7977e06a5a04a16a983e66796f3dc6015a"
-      },
-      "resolutions": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/resolutions/centralauto-varna.json",
-        "sha256": "6b429b9be11055484de0eeb3465e30b0db85e7df84a3b0b92b553cd534536e13"
-      }
-    },
     "f1rst-motors": {
       "candidateLock": {
         "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/candidate-lock.json",

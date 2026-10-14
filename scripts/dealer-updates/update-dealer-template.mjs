@@ -3,7 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { createRequire } from 'node:module';
-import { fingerprint, filesAt, git } from '../lib/workflow.mjs';
+import { fingerprint, filesAt, git, normalized } from '../lib/workflow.mjs';
 import { planSixDesignSelection, SIX_DESIGN_PACKAGING_CANDIDATE } from '../lib/six-design-release.mjs';
 import { loadDealerProfile } from '../lib/client-refresh-normalize.mjs';
 import {loadReviewedSharingAsset} from '../lib/client-logo-contract.mjs';
@@ -794,6 +794,15 @@ function reviewedUpgradeReport(plan) {
   return review;
 }
 
+/** Only an exact selected Mobile template consumer may replace its retained selector. */
+export function isPinnedMobileLogoConsumer({files, source, carsRoot, readPinned = (root, args) => git(root,args,{encoding:null})}) {
+  if (!source || source.repository !== 'darkapoparka/cars' || source.path !== 'templates/mobile' || !/^[a-f0-9]{40}$/.test(source.revision || '') || !/^[a-f0-9]{40}$/.test(source.tree || '') || !/^[a-f0-9]{64}$/.test(source.digest || '')) return false;
+  const header=files.get(MOBILE_LOGO_HEADER);
+  if (!header) return false;
+  const pinned=readPinned(carsRoot,['--no-lazy-fetch','show',source.revision+':'+source.path+'/src/components/Header.tsx']);
+  return Buffer.isBuffer(pinned) && normalized(header).equals(normalized(pinned));
+}
+
 async function addNativeAdoption(plan, candidateDirectory, dealerRoot, lock, {carsRoot, refreshedAt, extendedAdaptations = {}, candidateAssetPool, templatePalette = false, templatePaletteConfigs, qualification, registeredAdoption,registeredAssetView,registeredTargetBases,factualAppProvenance,registeredConsumerReview} = {}) {
   if(registeredConsumerReview&&(!registeredAdoption||!registeredAssetView||!registeredTargetBases))throw new Error('Reviewed consumer resolutions require authenticated registered profile/view/targets');
   if(registeredAdoption){assertRegisteredAdoptionPlan(registeredAdoption,{dealerRoot});const before=readDirectoryTree(candidateDirectory),after=new Map(before);for(const [name,bytes]of registeredAdoption.files){if(after.has(name)&&!after.get(name).equals(bytes))throw new Error('Registered adoption input destination is occupied');after.set(name,bytes);}writeDirectoryTreeChanges(candidateDirectory,before,after,candidateAssetPool);}
@@ -815,7 +824,10 @@ async function addNativeAdoption(plan, candidateDirectory, dealerRoot, lock, {ca
   const retainedLogoChanges=[];
   if(candidateManifest.sourceOwnership!=='independent-repository' && candidateManifest.packaging.version===SIX_DESIGN_PACKAGING_CANDIDATE && retainedLogoFamilies.length && !files.has('.cars-branding.json')) {
     const logoProfile=registeredAdoption?.profile ?? loadDealerProfile(dealerRoot,candidateManifest.slug);
-    if(logoProfile.logoContract)retainedLogoChanges.push(...applyRetainedLogoSurfaceBindings(files,logoProfile.logoContract,{families:retainedLogoFamilies,reviewedPinnedTemplateReplacement:registeredAdoption?.receipt.templateRefresh?.reviewed===true}));
+    if(logoProfile.logoContract) for(const family of retainedLogoFamilies) {
+      const reviewedPinnedTemplateReplacement=registeredAdoption?.receipt.templateRefresh?.reviewed===true || (family==='mobile' && isPinnedMobileLogoConsumer({files,source:plan.pins.mobile?.targetSource,carsRoot}));
+      retainedLogoChanges.push(...applyRetainedLogoSurfaceBindings(files,logoProfile.logoContract,{families:[family],reviewedPinnedTemplateReplacement}));
+    }
   }
   if(plan.factualRefresh&&factualAppProvenance)sealAppDealerSource({files,manifest:candidateManifest,provenance:factualAppProvenance});
   const baseManifest = baseNativeManifest(candidateManifest);
