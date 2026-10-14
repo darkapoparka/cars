@@ -47,7 +47,7 @@ export default function AppShell({children}: {children:ReactNode}){
       <Link href="/" aria-label={`${showroom.name} · ${tx('Home')}`} {...stylex.props(s.wordmark)}><DealerBrand/></Link>
       <nav data-desktop-journeys aria-label={tx('Main navigation')} {...stylex.props(s.journeys)}>{desktopJourneys.map(item=>{
         const active=item.key==='buy'?pathname==='/'||['/cars','/saved','/search','/luxe'].some(route=>pathname===route||pathname.startsWith(route+'/')):pathname===item.href||pathname.startsWith(item.href+'/')||item.key==='service'&&pathname==='/services';
-        return <Link key={item.key} href={item.href} aria-current={active?'page':undefined} {...stylex.props(s.journey)}><span {...stylex.props(s.journeyLabel,active&&s.journeyActive)}>{tx(item.key==='finance'?'Leasing':item.label)}</span></Link>;
+        return <Link key={item.key} href={item.href} aria-current={active?'page':undefined} {...stylex.props(s.journey)}><span {...stylex.props(s.journeyLabel,active&&s.journeyActive)}>{tx(item.key==='finance'?'Finance navigation':item.label)}</span></Link>;
       })}</nav>
       <nav data-desktop-tools aria-label={tx('Header actions')} {...stylex.props(s.actions)}>
         <Link href="/saved" aria-label={tx("Saved cars")} title={tx("Saved cars")} {...stylex.props(s.iconButton)}><Heart size={21} aria-hidden="true"/></Link>

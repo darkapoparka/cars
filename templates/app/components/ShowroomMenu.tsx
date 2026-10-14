@@ -2,7 +2,7 @@
 
 import {useId} from 'react';
 import * as stylex from '@stylexjs/stylex';
-import {Check, ChevronRight} from 'lucide-react';
+import {Check, ChevronRight, UserRound} from 'lucide-react';
 import Link from '@/components/AppLink';
 import ShowroomIcon, {type ShowroomIconName} from '@/components/ShowroomIcon';
 import {dealer} from '@/lib/dealer-config';
@@ -20,6 +20,13 @@ export default function ShowroomMenu({compact = false, languagePath = '/more', o
   const tx = useCopy(), locale = useLocale(), alternative = useHomeAlternative();
   const id = useId();
   return <>
+    <div data-menu-guest {...stylex.props(s.guest, compact && s.compactGuest)}>
+      <span aria-hidden="true" {...stylex.props(s.avatar, compact && s.compactAvatar)}><UserRound size={compact ? 20 : 24} strokeWidth={1.75}/></span>
+      <div {...stylex.props(s.guestCopy)}>
+        <p {...stylex.props(s.greeting, compact && s.compactGreeting)}>{tx('Hi, guest')}</p>
+        <p {...stylex.props(s.guestNote)}>{tx('Saved cars, on this device.')}</p>
+      </div>
+    </div>
     {showroom.menu.map((group, index) => <nav key={group.label} aria-labelledby={`${id}-group-${index}`} {...stylex.props(s.section, compact && s.compactSection)}>
       <h2 id={`${id}-group-${index}`} {...stylex.props(t.caption, s.sectionTitle, compact && s.compactTitle)}>{tx(group.label)}</h2>
       <div {...stylex.props(s.list, compact && s.compactList, alternative && s.alternativeList)}>
@@ -46,18 +53,26 @@ function MenuRow({href, icon, title, compact, alternative, onNavigate}: {href: s
 }
 
 const s = stylex.create({
-  section: {marginBottom: $.mobileSectionGap},
+  guest: {display: 'flex', alignItems: 'center', gap: 12, marginBottom: 12, padding: 12, borderWidth: 1, borderStyle: 'solid', borderColor: $.line, borderRadius: $.radiusMd, backgroundColor: $.surface},
+  avatar: {display: 'grid', placeItems: 'center', flexShrink: 0, width: 40, height: 40, color: $.ink, borderRadius: '50%', backgroundColor: $.surfaceAlt},
+  guestCopy: {minWidth: 0},
+  greeting: {margin: 0, color: $.ink, fontSize: 16, fontWeight: 500, lineHeight: '22px'},
+  guestNote: {margin: 0, marginTop: 2, color: $.muted, fontSize: 13, lineHeight: '18px'},
+  compactGuest: {gap: 10, marginBottom: 12, padding: 10},
+  compactAvatar: {width: 32, height: 32},
+  compactGreeting: {fontSize: 14, lineHeight: '20px'},
+  section: {marginBottom: {[media.mobile]: 12, default: $.mobileSectionGap}},
   sectionTitle: {margin: 0, paddingBottom: 8, paddingInline: 2, color: $.muted},
   list: {display: {[media.mobile]: 'flex', default: 'block'}, flexDirection: 'column', gap: 0, padding: 0, backgroundColor: $.surfaceAlt, borderWidth: 0, borderRadius: $.radiusMd, overflow: 'hidden'},
   alternativeList: {backgroundColor: $.surfaceAlt},
   alternativeRow: {backgroundColor: {default: $.surfaceAlt, ':hover': $.line, ':active': $.line}},
-  row: {display: 'grid', gridTemplateColumns: '32px minmax(0,1fr) 16px', alignItems: 'center', gap: 12, minHeight: 56, paddingBlock: 10, paddingInline: 12, color: $.ink, textAlign: 'left',
+  row: {display: 'grid', gridTemplateColumns: '32px minmax(0,1fr) 16px', alignItems: 'center', gap: 6, minHeight: {[media.mobile]: 52, default: 56}, paddingBlock: 10, paddingInline: 12, color: $.ink, textAlign: 'left',
     borderRadius: 0, borderBottomWidth: {[media.mobile]: {default: 1, ':last-child': 0}, default: 0}, borderBottomStyle: 'solid', borderBottomColor: $.line, backgroundColor: {default: $.surfaceAlt, ':hover': $.line, ':active': $.line},
     outlineOffset: -3, outlineWidth: 2, outlineStyle: {default: 'none', ':focus-visible': 'solid'}, outlineColor: $.ink},
   icon: {display: 'grid', placeItems: 'center', width: 32, height: 32, borderRadius: 10, backgroundColor: {[media.mobile]: 'transparent', default: $.surfaceAlt}},
   label: {minWidth: 0, overflowWrap: 'anywhere'},
   chevron: {color: $.subtle},
-  languageFooter: {display: 'flex', justifyContent: 'center', flexShrink: 0, marginTop: {[media.desktop]: 0, default: 'auto'}, paddingTop: {[media.desktop]: 8, default: 24}},
+  languageFooter: {display: 'flex', justifyContent: 'center', flexShrink: 0, marginTop: {[media.desktop]: 0, default: 'auto'}, paddingTop: {[media.mobile]: 8, [media.desktop]: 8, default: 24}},
   languages: {position: 'relative', display: 'flex', maxWidth: '100%', paddingInline: 2},
   languageRail: {position: 'absolute', top: '50%', left: 0, right: 0, height: 36, transform: 'translateY(-50%)', borderRadius: 20, backgroundColor: $.surfaceAlt, pointerEvents: 'none'},
   language: {position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: 44, paddingInline: 2, color: $.muted, fontSize: 13, fontWeight: 400, lineHeight: '18px', borderRadius: 20, outlineOffset: -2, outlineWidth: 2, outlineStyle: {default: 'none', ':focus-visible': 'solid'}, outlineColor: $.ink},
@@ -66,7 +81,7 @@ const s = stylex.create({
   compactSection: {marginBottom: 12, paddingBottom: 0},
   compactTitle: {paddingInline: 10, paddingBottom: 4, fontSize: 12, fontWeight: 500, lineHeight: '18px'},
   compactList: {display: 'flex', flexDirection: 'column', gap: 4, borderWidth: 0, borderRadius: 0},
-  compactRow: {gridTemplateColumns: '28px minmax(0,1fr) 14px', gap: 10, minHeight: 44, paddingBlock: 8, paddingInline: 10, fontSize: 14, lineHeight: '20px', borderRadius: 8, borderBottomWidth: 0, backgroundColor: {default: $.surfaceAlt, ':hover': $.line, ':active': $.line}},
+  compactRow: {gridTemplateColumns: '28px minmax(0,1fr) 14px', gap: 7, minHeight: 44, paddingBlock: 8, paddingInline: 10, fontSize: 14, lineHeight: '20px', borderRadius: 8, borderBottomWidth: 0, backgroundColor: {default: $.surfaceAlt, ':hover': $.line, ':active': $.line}},
   compactIcon: {width: 28, height: 28, backgroundColor: 'transparent'},
   compactFooter: {display: 'flex', justifyContent: 'center', flexShrink: 0, marginTop: 0, paddingTop: 0},
   compactLanguageRail: {backgroundColor: $.surfaceAlt},
