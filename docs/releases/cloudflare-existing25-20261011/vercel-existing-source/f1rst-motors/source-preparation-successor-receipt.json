@@ -1,51 +1,77 @@
 {
   "schemaVersion": 1,
-  "kind": "cars-reviewed-existing-source-two-leaf-successor",
+  "kind": "cars-reviewed-existing-source-auto-ui-successor",
+  "scope": "owner-reviewed-auto-best-ui-source-successor",
+  "reviewed": true,
   "dealer": "f1rst-motors",
   "repository": "darkapoparka/cars-f1rstmotors",
   "canonicalSourceRepository": "darkapoparka/cars",
   "canonicalBaseline": {
-    "commit": "3e7002fb71f38c3c99bc35e8ba8b9fb9730c8447",
-    "tree": "4bf06e41365c440f74754a787063b4ff35c6f343"
+    "commit": "a7044683f48187e2e095d1541177b746b41b15e5",
+    "tree": "947f66ca0c9bc86c5b94eae1d0aed1e7b78d3cfd"
   },
-  "preparedTree": "947f66ca0c9bc86c5b94eae1d0aed1e7b78d3cfd",
-  "sourceRevision": "7d4557f3074b32e3f57af28b89906754b73fb9cd",
+  "preparedTree": "d1a2f40bfc5eee2f75356463b390241f90e57806",
+  "sourceRevision": "ab532f180e9ed1f0abbcfb55ca17c3e27b325d0e",
+  "personalizationMarker": {
+    "path": "src/lib/data/company.ts",
+    "beforeBlob": "c54fab8d7eae45cd0d28d2d7a27fd5baa60eadde",
+    "afterBlob": "4809bbcca9c3640aefdb19978f5eedb6fad3425e",
+    "insertedDeclaration": "export const companyServicesCopyOwner = 'dealer' as const;",
+    "factualServiceFieldsUnchanged": true
+  },
+  "autoBestSource": {
+    "tree": "465389f178f435a2dc0799e46d51301a99934124",
+    "digest": "2bdfc1655af6e0abf5ebe348728452a7075121fb22f9de89bd70f9aa19225c7d"
+  },
   "stockRows": 10,
   "authoritativeFactsUnchanged": true,
   "allRasterAssetBytesUnchanged": true,
   "otherFiveTemplateTreesUnchanged": true,
   "changedAutoLeaves": [
     {
-      "path": "auto-best/src/lib/components/home/BodyTypes.svelte",
-      "beforeBlob": "eb87d14dd507e6de91a4a42bf38541f3d4c1a7b1",
-      "afterBlob": "a188dac11b4cc0ad668ba811a3eb2730c6b3ded7"
+      "path": "auto-best/src/lib/components/company/AboutProcess.svelte",
+      "beforeBlob": "484fce2fe0da7c07b9a59c6b230b3f2b6a1d7f51",
+      "afterBlob": "4aa8e4598a521746954c479a81c4d371a06647f9"
     },
     {
-      "path": "auto-best/src/lib/styles/composition.css",
-      "beforeBlob": "a6a11ebd16d3ce400583402558197f0a8708a0df",
-      "afterBlob": "e5c2fa6c5eaa0f881381a83d59a710a6d6af9634"
+      "path": "auto-best/src/lib/components/company/AboutHero.svelte",
+      "beforeBlob": "208c8be30157232a8a62b7779888e7639c94debe",
+      "afterBlob": "6ba5abda25b4bbd9f34c32f8990724d4bbd49a34"
+    },
+    {
+      "path": "auto-best/src/lib/components/company/ContactHero.svelte",
+      "beforeBlob": "573af1e1f7460d0a8b6855c12cb72e4f9ca72105",
+      "afterBlob": "8048832682156959882b0fb072a3f43a10d6b3a6"
     }
   ],
-  "pathsChanged": 11,
-  "uniqueBlobBytes": 309003,
+  "pathsChanged": 13,
+  "uniqueBlobBytes": 299536,
   "brandingPackId": "1cc6f1fb3927da42",
   "nativeInput": {
-    "digest": "68cc34d7b99cc5356ee7494ff77ce27c47674c00d0369f93e02d572be73b9622",
+    "digest": "dcad35257ad6a5a028d8ac7f4f24cf26005ba30c0b1aab001afba08aa391249c",
     "files": 9169
   },
-  "qualificationContextSha256": "f4634d5f8efb686a60433e0821295c1c8bba68f13e55d5d8b37ce899283d4358",
+  "qualificationContextSha256": "4311d9a61fa8516d8d1e950dfe9442668ab008ebe0c1b3fd1e4a4b4db6d7a98b",
   "nativeApproval": false,
   "hostedApproval": false,
   "globalReleaseApproval": false,
-  "originalSixDesignReadyDeployment": "dpl_DMWq9arGWLk3wxSqzhSyzSvsu5pa",
+  "originalSixDesignReadyDeployment": "dpl_DhKSjHLeR9K6qykGy96qdks7PgFn",
   "sourceOnly": true,
   "published": false,
-  "priorFullSourceReceipt": {
-    "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/f1rst-motors/source-preparation-receipt.json",
-    "sha256": "ae60cc4d5b75296da7356a6066a757ee6eb675daae62a40cdfebf9193bb9d47f"
+  "priorSourceSuccessorReceipt": {
+    "repository": "darkapoparka/cars",
+    "commit": "a7044683f48187e2e095d1541177b746b41b15e5",
+    "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/f1rst-motors/source-preparation-successor-receipt.json",
+    "sha256": "2536b02b81da5aa9e6f0f22dfef055f017542632d6a790ab2175dadaa6506772"
+  },
+  "priorProductionReadyReceipt": {
+    "retainedEvidenceFile": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/f1rst-final-main-production-ready-receipt.json",
+    "sha256": "263777ed0cb33818b9008994408a8bc368db1b374cdf804ef2ebe842590f3e7f",
+    "deploymentId": "dpl_DhKSjHLeR9K6qykGy96qdks7PgFn",
+    "gitCommit": "771d8e368e796d94ce3bbbcc589989f5dc778533"
   },
   "actualPreparation": {
-    "localExecution": "session68648, exit0",
+    "localExecution": "session61398, exit0",
     "native": "PASS",
     "app": "PASS",
     "extended": "PASS",
@@ -53,7 +79,7 @@
     "sourcePatch": "PASS",
     "sourceAssetsCopied": false,
     "exactCurrentPathLeases": true,
+    "companyMarkerOnlyInsertionProved": true,
     "duplicateLegacyAliasRasterBytesRetained": true
-  },
-  "reviewed": true
+  }
 }
