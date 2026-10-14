@@ -6,6 +6,7 @@ import { createRequire } from 'node:module';
 import { fingerprint, filesAt, git } from '../lib/workflow.mjs';
 import { planSixDesignSelection, SIX_DESIGN_PACKAGING_CANDIDATE } from '../lib/six-design-release.mjs';
 import { loadDealerProfile } from '../lib/client-refresh-normalize.mjs';
+import {loadReviewedSharingAsset} from '../lib/client-logo-contract.mjs';
 import { applyRefreshAdapter } from '../lib/client-refresh-adapters.mjs';
 import {buildModernDealerInventoryCopy} from '../lib/modern-dealer-inventory-copy.mjs';
 import { restoreTemplatePalette, templatePaletteConfigPath } from '../lib/client-refresh-presentation.mjs';
@@ -277,7 +278,7 @@ export function targetManifestForUpgrade({ dealerRoot, manifest, pins, targetVar
       const registryFile = path.join(carsRoot,'docs/DEPLOYMENT-INVENTORY.json');
       const record = fs.existsSync(registryFile) ? readJson(registryFile).dealers?.find(row=>row.slug===manifest.slug) : null;
       const origin = registeredDeliveryOrigin(record, manifest);
-      const profile = loadDealerProfile(dealerRoot,manifest.slug),asset = profile.logoContract?.assets.onLight;
+      const profile = loadDealerProfile(dealerRoot,manifest.slug),asset = loadReviewedSharingAsset(dealerRoot,manifest,profile.logoContract);
       if (!asset) throw new Error('Six-design sharing needs the reviewed dealer logo contract');
       next.shareIdentity={...(manifest.shareIdentity || {}),name:profile.business.name,publicOrigin:origin.origin,
         description:profile.business.previewNotice,

@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
-import { stripModernAlternateWordmark, bindReviewedModernMobileSurfaceLogo, normalizeModernFinancingLogo, bindModernMobileWordmarkLogo, applyDealerLogoContract, loadLogoContract } from './lib/client-logo-contract.mjs';
+import { stripModernAlternateWordmark, bindReviewedModernMobileSurfaceLogo, normalizeModernFinancingLogo, bindModernMobileWordmarkLogo, applyDealerLogoContract, loadLogoContract, loadReviewedSharingAsset } from './lib/client-logo-contract.mjs';
 
 test('Modern logo normalization removes the complete alternate wordmark JSX expression', () => {
   const source = `<span className="relative">
@@ -254,3 +254,36 @@ test('legacy inline Modern refresh retains its prior explicit light/dark declara
  assert.match(bar,/const useOnLight = wordmarkTone === "dark" \|\| \(wordmarkTone === "original" && light\)/);assert.match(bar,/const logoSource = useOnLight \? leadSite\.logoOnLight : leadSite\.logoOnDark/);assert.match(bar,/src=\{logoSource\}/);assert.doesNotMatch(bar,/clipPath|brightness-0|\binvert\b/);f.apply();assert.equal(fs.readFileSync(path.join(f.candidate,'packages/marketplace-ui/components/dealer-mobile-brand-bar.tsx'),'utf8'),bar);
 });
 
+
+function sharingFixture(t) {
+  const root=fs.mkdtempSync(path.join(os.tmpdir(),'cars-reviewed-sharing-'));
+  t.after(()=>fs.rmSync(root,{recursive:true,force:true}));
+  const png=Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIHWP4z8DwHwAFgAI/ScLbtAAAAABJRU5ErkJggg==','base64'),hash=createHash('sha256').update(png).digest('hex');
+  const inputs=[['master','generated-master'],['mark','generated-mark'],['onLight','reviewed-surfaces/on-light'],['onDark','reviewed-surfaces/on-dark'],['onAccent','reviewed-surfaces/on-accent']].map(([role,name])=>({role,path:'branding/'+name+'.png',sha256:hash}));
+  for(const row of inputs){fs.mkdirSync(path.dirname(path.join(root,row.path)),{recursive:true});fs.writeFileSync(path.join(root,row.path),png);}
+  fs.writeFileSync(path.join(root,'branding/logo-on-light.png'),png);
+  const packId=createHash('sha256').update(JSON.stringify(inputs)).digest('hex').slice(0,16);
+  const contract={schemaVersion:1,dealer:'centralauto-varna',policy:'template-default',creationMethod:'image-generation-reviewed-surface-variants',monochromePairFromOneMaster:false,packId,publicBase:'/dealer-brand/v2-'+packId,packInputs:inputs,reviewedSurfaceVariants:{schemaVersion:1,reviewed:true,reviewedAt:'2026-10-14T11:56:24.553Z',surfaces:Object.fromEntries(['onLight','onDark','onAccent'].map(role=>[role,{assetPath:inputs.find(x=>x.role===role).path,sha256:hash,alphaSha256:'a'.repeat(64),sourceReference:'docs/reviewed-logo.json',generation:{tool:'image_gen',id:'recorded-generation'}}]))}};
+  const manifest={slug:'centralauto-varna',branding:{contract:'.cars-branding.json'},shareIdentity:{logo:{sourcePath:'branding/logo-on-light.png',sha256:hash}}};
+  const save=()=>fs.writeFileSync(path.join(root,'.cars-branding.json'),JSON.stringify(contract));
+  save();return {root,png,hash,manifest,contract,save};
+}
+test('reviewed PNG source sharing works without a legacy WebP logo contract and preserves the source',t=>{
+  const f=sharingFixture(t),before=JSON.stringify(f.manifest),bytes=fs.readFileSync(path.join(f.root,'.cars-branding.json'));
+  assert.deepEqual(loadReviewedSharingAsset(f.root,f.manifest,null),{publicPath:'/branding/logo-on-light.png',sha256:f.hash});
+  assert.equal(JSON.stringify(f.manifest),before);assert.deepEqual(fs.readFileSync(path.join(f.root,'.cars-branding.json')),bytes);
+});
+test('reviewed source sharing rejects missing review, wrong dealer, provenance and source bytes',t=>{
+  const f=sharingFixture(t),original=JSON.stringify(f.contract);
+  for(const change of [c=>{c.dealer='other';},c=>{c.reviewedSurfaceVariants.reviewed=false;},c=>{c.reviewedSurfaceVariants.reviewedAt='invalid';},c=>{delete c.reviewedSurfaceVariants.surfaces.onDark;},c=>{delete c.reviewedSurfaceVariants.surfaces.onLight.generation;},c=>{c.packInputs[2].path='../outside.png';}]){f.contract=JSON.parse(original);change(f.contract);fs.writeFileSync(path.join(f.root,'.cars-branding.json'),JSON.stringify(f.contract));assert.throws(()=>loadReviewedSharingAsset(f.root,f.manifest,null));}
+  fs.writeFileSync(path.join(f.root,'.cars-branding.json'),original);fs.writeFileSync(path.join(f.root,'branding/reviewed-surfaces/on-dark.png'),'changed');assert.throws(()=>loadReviewedSharingAsset(f.root,f.manifest,null),/bytes differ/);
+});
+test('reviewed sharing cannot borrow a foreign or changed manifest PNG',t=>{
+  const f=sharingFixture(t);for(const sourcePath of ['../outside.png','modern/public/logo.png','branding/missing.png'])assert.throws(()=>loadReviewedSharingAsset(f.root,{...f.manifest,shareIdentity:{logo:{sourcePath,sha256:f.hash}}},null));
+  fs.writeFileSync(path.join(f.root,'branding/logo-on-light.png'),'changed');assert.throws(()=>loadReviewedSharingAsset(f.root,f.manifest,null),/differs/);
+});
+test('legacy reviewed sharing assets remain authoritative when their contract exists',()=>{
+  const asset={publicPath:'/dealer-brand/logo-on-light.webp',sha256:'a'.repeat(64)};
+  assert.equal(loadReviewedSharingAsset('unused',{branding:{contract:'.cars-branding.json'}},{assets:{onLight:asset}}),asset);
+  assert.equal(loadReviewedSharingAsset('unused',{},null),null);
+});

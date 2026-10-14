@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import {reviewedRasterProvenance} from '../publishing/lead-branding.mjs';
 import {bindCurrentImportLogoAssets} from './client-presentation-policy.mjs';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
@@ -30,6 +31,40 @@ export function loadLogoContract(client) {
     if (sha256(bytes) !== asset.sha256) throw Error(`Approved ${surface} logo bytes changed without updating the contract: ${file}`);
   }
   return contract;
+}
+
+
+/** Source proposals already bind reviewed PNG surfaces without a legacy WebP contract. */
+export function loadReviewedSharingAsset(client, manifest, legacyContract) {
+  if (legacyContract) return legacyContract.assets?.onLight ?? null;
+  if (manifest.branding?.contract !== '.cars-branding.json') return null;
+  const root=fs.realpathSync(client);
+  const boundedRead=name=>{
+    if(typeof name!=='string'||!/^[-A-Za-z0-9._/]+$/.test(name)||name.split('/').some(p=>!p||p==='.'||p==='..'))throw Error('Unsafe reviewed sharing asset path');
+    const file=path.resolve(root,name),relative=path.relative(root,file);
+    if(!relative||relative.startsWith('..'+path.sep)||path.isAbsolute(relative)||!fs.lstatSync(file).isFile()||fs.lstatSync(file).isSymbolicLink()||path.relative(root,fs.realpathSync(file))!==relative)throw Error('Reviewed sharing assets must remain regular contained files');
+    if(fs.statSync(file).size>16*1024*1024)throw Error('Reviewed sharing asset exceeds source bound');
+    return fs.readFileSync(file);
+  };
+  const contract=JSON.parse(boundedRead('.cars-branding.json'));
+  const retained=contract.creationMethod==='reviewed-raster-surface-variants';
+  const review=contract.reviewedSurfaceVariants;
+  if(contract.schemaVersion!==1||contract.dealer!==manifest.slug||contract.policy!=='template-default'||contract.monochromePairFromOneMaster!==false||(!retained&&contract.creationMethod!=='image-generation-reviewed-surface-variants')||review?.schemaVersion!==1||review.reviewed!==true||!/^\d{4}-\d{2}-\d{2}T/.test(review.reviewedAt??'')||!Number.isFinite(Date.parse(review.reviewedAt))||JSON.stringify(Object.keys(review.surfaces??{}).sort())!==JSON.stringify(['onAccent','onDark','onLight'])||(retained&&(review.sourceMode!=='retained-or-mixed-raster'||contract.generation!==undefined)))throw Error('Six-design sharing needs the reviewed dealer logo contract');
+  if(!Array.isArray(contract.packInputs)||contract.packInputs.length<5||contract.packInputs.length>16||new Set(contract.packInputs.map(x=>x.role)).size!==contract.packInputs.length||contract.packId!==sha256(JSON.stringify(contract.packInputs)).slice(0,16)||contract.publicBase!=='/dealer-brand/v2-'+contract.packId)throw Error('Reviewed sharing input identity differs');
+  const signature=Buffer.from([137,80,78,71,13,10,26,10]);
+  for(const [role,name]of [['master',retained?'reviewed-master':'generated-master'],['mark',retained?'reviewed-mark':'generated-mark'],['onLight','reviewed-surfaces/on-light'],['onDark','reviewed-surfaces/on-dark'],['onAccent','reviewed-surfaces/on-accent']]){
+    const input=contract.packInputs.find(x=>x.role===role),expected='branding/'+name+'.png';
+    if(input?.path!==expected||!/^[a-f0-9]{64}$/.test(input.sha256??''))throw Error('Reviewed sharing PNG input differs: '+role);
+    const bytes=boundedRead(input.path);
+    if(sha256(bytes)!==input.sha256||!bytes.subarray(0,8).equals(signature))throw Error('Reviewed sharing PNG bytes differ: '+role);
+    if(role==='master'||role==='mark')continue;
+    const surface=review.surfaces[role];
+    if(surface.assetPath!==input.path||surface.sha256!==input.sha256||!/^[a-f0-9]{64}$/.test(surface.alphaSha256??'')||typeof surface.sourceReference!=='string'||!surface.sourceReference.trim()||surface.sourceReference.length>2048||/[\x00-\x1f]/.test(surface.sourceReference))throw Error('Reviewed sharing surface proof differs: '+role);
+    reviewedRasterProvenance({...surface,generation:surface.generation?{tool:surface.generation.tool,generationId:surface.generation.id,modelVersion:surface.generation.modelVersion}:undefined},{retainedAllowed:retained});
+  }
+  const share=manifest.shareIdentity?.logo,light=review.surfaces.onLight;
+  if(!share?.sourcePath?.startsWith('branding/')||!share.sourcePath.endsWith('.png')||share.sha256!==light.sha256||sha256(boundedRead(share.sourcePath))!==share.sha256)throw Error('Retained sharing PNG differs from its reviewed on-light surface');
+  return {publicPath:'/'+share.sourcePath,sha256:share.sha256};
 }
 
 export function stripModernAlternateWordmark(text) {
