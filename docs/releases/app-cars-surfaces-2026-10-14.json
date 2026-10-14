@@ -1,0 +1,276 @@
+{
+  "schemaVersion": 1,
+  "key": "app",
+  "release": "app-cars-surfaces-2026-10-14",
+  "status": "standalone-published-and-qualified",
+  "approved": false,
+  "repository": "darkapoparka/cars",
+  "commit": "b8cd7897ad7cd66466e8ff3e7139834f562a580d",
+  "sourcePath": "templates/app",
+  "sourceTree": "34a055e75a159c14cde3fec61c38ba78c729e9c8",
+  "sourceDigest": "280101da001df29cfc75804e8b458bf67754aa0c3435f08cd345b992b70b4f14",
+  "exportPolicy": "cars-source-v1",
+  "sourceFileCount": 1698,
+  "verifiedAt": "2026-10-14T16:42:54.247Z",
+  "scope": "Final App template publication. Existing dealer refreshes, the combined six-design pilot and global fleet lock selection remain with the separate rollout chat.",
+  "changes": [
+    "Mobile Cars Search and inactive Filter/Sort actions have white fills and fine 1px outlines; Brand/Model/Budget pills retain their pale grey fill and selected actions retain their dark fill.",
+    "Mobile Cars cards retain their white fill, border, dimensions and beside-photo layout with the diffuse shadow removed. Desktop and Home retain their existing surfaces.",
+    "The approved dock/Menu artwork, neutral guest avatar and accessible monthly-price treatment remain included from the preceding App release."
+  ],
+  "changedFiles": [
+    {
+      "path": "components/InventoryClient.tsx",
+      "beforeSha256": "6459e462b021388257f35c62c176bec68d9748807afdb9e80a79a66e7b6fa9e4",
+      "sha256": "34268e4929fcc8242ff83414c095a06aa07712f81466072d10333be6f57dd33b",
+      "bytes": 40459,
+      "gitBlob": "01ea05071a4ee625244859922252b086b8650056"
+    },
+    {
+      "path": "components/VehicleCard.tsx",
+      "beforeSha256": "6644fd34a67602b00e53524149ed7bc95baeef405259cbef2364e612f6844aec",
+      "sha256": "fa7a5f49826ee93176ddd75c720b23eb8bf73289630abf491b48f4ec7fa0be55",
+      "bytes": 17286,
+      "gitBlob": "906adade6dde8fb64165adcdbeb306a5db4e700a"
+    }
+  ],
+  "runtime": {
+    "localNode": "22.20.0",
+    "ciNode": "22",
+    "declaredNode": ">=22.20.0 <23",
+    "next": "16.3.8"
+  },
+  "checks": [
+    {
+      "name": "scoped-lint-and-typescript",
+      "status": "passed"
+    },
+    {
+      "name": "exact-source-App-quality",
+      "status": "passed",
+      "runId": 38595455524,
+      "url": "https://github.com/darkapoparka/cars/actions/runs/38595455524",
+      "headSha": "b8cd7897ad7cd66466e8ff3e7139834f562a580d",
+      "attempt": 2,
+      "unit": {
+        "passed": 149,
+        "failed": 0
+      },
+      "browser": {
+        "passed": 104,
+        "skipped": 4,
+        "failed": 0
+      },
+      "productionRoutes": 50,
+      "coverage": [
+        "Full ESLint",
+        "TypeScript",
+        "Unit tests",
+        "Production build",
+        "High-severity production-dependency audit",
+        "Browser journeys at 320/390/1100/1440 in EN/BG and both App journeys",
+        "50 production routes in both locales and journeys"
+      ],
+      "firstAttempt": {
+        "status": "failed",
+        "passed": 103,
+        "skipped": 4,
+        "failed": 1,
+        "reason": "The desktop-1440 sorting test timed out waiting for visible images in support.ts:30 before sorting assertions. The unchanged failed job passed on rerun; the sorted page and reload also passed focused local and public checks."
+      }
+    },
+    {
+      "name": "public-production-browser",
+      "status": "passed",
+      "widths": [
+        320,
+        390,
+        1440
+      ],
+      "locales": [
+        "en",
+        "bg"
+      ],
+      "journeys": [
+        "regular",
+        "alternative"
+      ],
+      "checks": [
+        "No page overflow",
+        "All visible images loaded",
+        "Mobile white canvas and toolbar without diffuse shadow",
+        "Mobile outlined controls and shadow-free cards",
+        "Filter Escape dismissal and restored trigger focus",
+        "Ascending prices survive reload",
+        "Zero observed browser console errors"
+      ]
+    }
+  ],
+  "standalone": {
+    "mobile": {
+      "verified": true,
+      "widths": [
+        320,
+        390
+      ],
+      "locales": [
+        "en",
+        "bg"
+      ]
+    },
+    "desktop": {
+      "verified": true,
+      "widths": [
+        1100,
+        1440
+      ],
+      "locales": [
+        "en",
+        "bg"
+      ],
+      "detail": "Both desktop breakpoints/locales passed exact-source CI. Focused fresh local and public desktop rendering was additionally verified."
+    }
+  },
+  "modes": {
+    "standalone": "Published and verified on the existing public App Vercel alias.",
+    "internalAlternativeJourney": "Verified by exact-source CI and public /en/2/cars checks.",
+    "mounted": "Combined six-design dealer pilot remains pending with the rollout chat."
+  },
+  "deployment": {
+    "provider": "vercel",
+    "target": "production",
+    "projectId": "prj_TnD7adaf0u3zjwhmV2xRxx9mWkOu",
+    "teamId": "team_RTNXBnClGWDdcYFFUW0BnqvJ",
+    "projectName": "cars-template-app",
+    "deploymentId": "dpl_76ZgYEZqv7ompaHoY5Mmr63v866w",
+    "state": "READY",
+    "mirrorRepository": "darkapoparka/cars-template-app",
+    "gitCommit": "7ea2b524cd182a844dedb6509a776d42200d297b",
+    "mirrorTree": "89785497e608cd16306def3efe4b99b4156428cc",
+    "url": "https://cars-template-jenw9wdzu-tyj5.vercel.app",
+    "publicAlias": "https://cars-template-app.vercel.app",
+    "productionAliasMatchesDeployment": true,
+    "buildSeconds": 136.016,
+    "browserErrors": 0,
+    "runtimeErrorScan": {
+      "scope": "This exact deployment, error/fatal levels, latest 15 minutes",
+      "result": "No grouped error/fatal log rows returned"
+    },
+    "anonymousHttpChecks": [
+      {
+        "route": "/en/cars",
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "bytes": 274289,
+        "anonymous": true,
+        "verifiedAt": "2026-10-14T16:27:52.4457293+00:00"
+      },
+      {
+        "route": "/bg/cars",
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "bytes": 281058,
+        "anonymous": true,
+        "verifiedAt": "2026-10-14T16:27:53.0847277+00:00"
+      },
+      {
+        "route": "/en/2/cars",
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "bytes": 276976,
+        "anonymous": true,
+        "verifiedAt": "2026-10-14T16:27:53.9228437+00:00"
+      },
+      {
+        "route": "/en/more",
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "bytes": 23438,
+        "anonymous": true,
+        "verifiedAt": "2026-10-14T16:27:54.6270288+00:00"
+      }
+    ]
+  },
+  "publisherSourceBoundary": {
+    "applicationSourceFilesMatched": 1685,
+    "changedFiles": 2,
+    "preservedPublishingMetadata": true,
+    "historicalQaOmissions": [
+      "docs/finance-pill-alignment-2026-10-10/README.md",
+      "docs/finance-pill-alignment-2026-10-10/after-390.png",
+      "docs/finance-pill-alignment-2026-10-10/after-checks.json",
+      "docs/finance-pill-alignment-2026-10-10/before-390.png",
+      "docs/finance-pill-alignment-2026-10-10/before-checks.json",
+      "docs/mobile-spacing-audit-2026-10-10/README.md",
+      "docs/mobile-spacing-audit-2026-10-10/after-sell-390.png",
+      "docs/mobile-spacing-audit-2026-10-10/audit-alternative.png",
+      "docs/mobile-spacing-audit-2026-10-10/audit-regular.png",
+      "docs/mobile-spacing-audit-2026-10-10/before-sell-390.png",
+      "docs/mobile-spacing-audit-2026-10-10/final-checks.json",
+      "docs/mobile-spacing-audit-2026-10-10/luxe-target-checks.json",
+      "docs/mobile-spacing-audit-2026-10-10/route-checks.json"
+    ],
+    "detail": "The verified preceding mirror was unchanged before this release. Only the two reviewed source blobs changed and their Git blob IDs match Cars. Existing historical QA omissions and publishing metadata remain preserved."
+  },
+  "releaseSelection": {
+    "written": false,
+    "currentApprovedAppCommit": "4e184777567849a2c5b4a9e4a3e652252179c29c",
+    "ciQualificationHold": false,
+    "combinedPilotRequired": true,
+    "reason": "The owner assigned client updates and combined dealer qualification/lock selection to the separate rollout chat.",
+    "nextAction": "Use Cars commit b8cd7897ad7cd66466e8ff3e7139834f562a580d, templates/app, tree 34a055e75a159c14cde3fec61c38ba78c729e9c8 and digest 280101da001df29cfc75804e8b458bf67754aa0c3435f08cd345b992b70b4f14 in the maintained six-design qualification candidate. Complete the combined hosted dealer pilot, then approve/select the evidenced source and refresh the authorized cohort."
+  },
+  "sourceCoordination": {
+    "localGitHead": "3bc5a0ea33969f18ccc34d5e4b0e8cab1513e6a2",
+    "localGitIndexLockPreserved": true,
+    "publication": "Scoped immutable Git blobs/trees and expected-head fast-forward GitHub API updates; no local index mutation or Git download.",
+    "sourceParent": "9562441b53f767cf3978eaff7b0d9879a5f53c71",
+    "laterInspectedCarsHead": "e762213230ff15afe074b3082cc76132c721fb58",
+    "laterAppTreeMatchesFrozenSource": true,
+    "sharedCssMatchesFrozenSource": [
+      "app/tokens.stylex.ts",
+      "components/pill.stylex.ts",
+      "components/search-field.stylex.ts"
+    ],
+    "storage": "L reached zero free bytes during hosted capture. Only the remaining small evidence files were written to the owner-approved K drive; existing source, previews and earlier comparisons remain at their existing paths."
+  },
+  "previousTemplateRelease": {
+    "reference": "docs/releases/app-artwork-price-2026-10-14.json",
+    "commit": "a8f671cb6d9d3c761a6553f633a5862022ef7bbd",
+    "sourceTree": "b7af6bfb3c2bc4b78b79bf5f4d131bb1cdff8824",
+    "sourceDigest": "2996d6cfa5079c8af92663a0036de8af3356c6bec675cd539f54094b51fdb595"
+  },
+  "evidence": [
+    {
+      "path": "K:/CODEX/cars-runtime/app-mobile-spacing-20261014/cars-surfaces-hosted-320.jpg",
+      "sha256": "0a027058b81ab21c5069a483b8dd3b7ddc8f92108f68fb7ea8e00b342c34fe88",
+      "bytes": 46161
+    },
+    {
+      "path": "K:/CODEX/cars-runtime/app-mobile-spacing-20261014/cars-surfaces-hosted-1440.jpg",
+      "sha256": "6426f089d803ac11c9477b6f3f7c88156e8c16cf1d7c631623dee33023ed8647",
+      "bytes": 154654
+    },
+    {
+      "path": "K:/CODEX/cars-runtime/app-mobile-spacing-20261014/cars-surfaces-hosted-validation.json",
+      "sha256": "627907371862ee41338d031257daac5f33d52d6eb9a0212b306422d0fe254096",
+      "bytes": 21975
+    },
+    {
+      "path": "K:/CODEX/cars-runtime/app-mobile-spacing-20261014/cars-surfaces-source-receipt.json",
+      "sha256": "205c5e19050635c85790b40b343d4c7079ed8b90f75de87d1c97422ea3a7751d",
+      "bytes": 1482
+    }
+  ],
+  "comparisons": {
+    "directory": "templates/app/runtime/mobile-spacing-20261014",
+    "captures": [
+      "cars-surfaces-before-390.jpg",
+      "cars-surfaces-after-390.jpg",
+      "cars-surfaces-before-320.jpg",
+      "cars-surfaces-after-320.jpg"
+    ],
+    "validation": "cars-surfaces-validation.json",
+    "retentionReason": "Four matched local comparisons plus two exact public mobile/desktop release captures. No build/export/dependency copies were created."
+  }
+}
