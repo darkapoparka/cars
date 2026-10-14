@@ -4,17 +4,40 @@ import path from 'node:path';
 import {ROOT,args,json,writeJson,git,inside,filesAt,sha256,normalized,validateManifest} from './lib/workflow.mjs';
 
 const requireVercelQualificationExport = (value, message) => { if (!value) throw new Error('Vercel pilot qualification: ' + message); };
-/** A provisional package can be exported only to its explicitly reviewed preview branch. */
-export function assertVercelQualificationExport(meta, {branch, manifest} = {}) {
-  if (meta.qualification === undefined) return;
+/** One explicit owner-authorized production pilot retains all provisional flags.
+ * The previously READY six-service deployment and reviewed exact two-leaf source
+ * successor are distinct from the production build and hosted acceptance pending. */
+export function assertVercelProductionPilot(pilot, {meta, manifest} = {}) {
+  const match=(actual,expected)=>requireVercelQualificationExport(actual===expected,'exact F1rst MAIN production-pilot proof required');
+  match(pilot?.schemaVersion,1);match(pilot?.kind,'cars-owner-authorized-f1rst-main-production-pilot');
+  match(pilot.dealer,'f1rst-motors');match(pilot.repository,'darkapoparka/cars-f1rstmotors');
+  match(pilot.projectId,'prj_mavqUXCj6hSEg8EvBJW8G3XJlihm');match(pilot.publicOrigin,'https://cars-f1rstmotors.vercel.app');
+  match(manifest?.slug,pilot.dealer);match(manifest?.repository,pilot.repository);match(manifest?.shareIdentity?.publicOrigin,pilot.publicOrigin);
+  match(pilot.sourceCommit,'a7044683f48187e2e095d1541177b746b41b15e5');match(meta?.sourceCommit,pilot.sourceCommit);
+  match(pilot.sourceTree,'947f66ca0c9bc86c5b94eae1d0aed1e7b78d3cfd');match(pilot.templateSourceCommit,'7d4557f3074b32e3f57af28b89906754b73fb9cd');
+  match(meta?.qualification?.templateSourceCommit,pilot.templateSourceCommit);match(meta?.qualification?.candidateLockSha256,'4ceb9b3085d3dae4c415229d134ef33905e352f499ae2e1126bd85e318d648d8');
+  match(meta?.qualification?.nativeInput?.digest,'68cc34d7b99cc5356ee7494ff77ce27c47674c00d0369f93e02d572be73b9622');
+  match(pilot.privateMain,'6e0184b856858fa4f9d0b158f64b4edef44f0e83');
+  const prior=pilot.priorReady;match(prior?.deploymentId,'dpl_DMWq9arGWLk3wxSqzhSyzSvsu5pa');match(prior?.gitCommit,'bda8b54af9326f1e85d981431346fccc29b1d05e');
+  match(prior?.sourceCommit,'3e7002fb71f38c3c99bc35e8ba8b9fb9730c8447');match(prior?.sourceTree,'4bf06e41365c440f74754a787063b4ff35c6f343');
+  match(prior?.packageTree,'0fe7f8d8b3ba54c67ad45066ecd3f7814d4b50d5');match(prior?.serviceCount,6);match(prior?.receiptSha256,'4940ea6bada364d711ef8c78ab118a183f61b0c4de8c6541020289e1075cf95a');
+  const successor=pilot.reviewedSuccessor;match(successor?.path,'docs/releases/cloudflare-existing25-20261011/vercel-existing-source/f1rst-motors/source-preparation-successor-receipt.json');
+  match(successor?.sha256,'2536b02b81da5aa9e6f0f22dfef055f017542632d6a790ab2175dadaa6506772');match(successor?.preparedTree,pilot.sourceTree);match(successor?.nativeInputDigest,meta.qualification.nativeInput.digest);
+  for(const field of ['ownerAuthorizedMain','otherFiveTemplateTreesUnchanged','stockAndFactsUnchanged','productionBuildPending'])match(pilot[field],true);match(pilot.hostedApproval,false);
+}
+/** Ordinary provisional export still requires its exact reviewed preview branch.
+ * MAIN is an opt-in only for the one exact owner-authorized production pilot. */
+export function assertVercelQualificationExport(meta, {branch, manifest, productionPilot} = {}) {
+  if (meta.qualification === undefined) {if(productionPilot!==undefined)throw new Error('Production pilot requires its actual provisional source envelope');return;}
   const proof = meta.qualification;
   requireVercelQualificationExport(proof.schemaVersion === 1 && proof.kind === 'cars-vercel-native-source-qualification' &&
     proof.provider === 'vercel' && meta.assetDelivery?.provider === 'vercel' &&
     proof.production === false && proof.nativeApproval === false && proof.hostedApproval === false &&
     proof.globalReleaseApproval === false && proof.sourceCommit === meta.sourceCommit &&
     proof.dealer === manifest?.slug && proof.repository === manifest?.repository &&
-    proof.publicOrigin === manifest?.shareIdentity?.publicOrigin &&
-    /^codex\/[a-z0-9][a-z0-9/-]*$/.test(branch || '') && !branch.includes('..') &&
+    proof.publicOrigin === manifest?.shareIdentity?.publicOrigin, 'provisional source envelope changed');
+  if(productionPilot!==undefined){requireVercelQualificationExport(branch==='main','production pilot requires existing MAIN');assertVercelProductionPilot(productionPilot,{meta,manifest});return;}
+  requireVercelQualificationExport(/^codex\/[a-z0-9][a-z0-9/-]*$/.test(branch || '') && !branch.includes('..') &&
     branch === proof.targetBranch, 'provisional source package requires its exact reviewed preview branch');
 }
 
@@ -179,7 +202,7 @@ function restoredGitProcessEnvironment(receipt) {
   return Object.keys(env).length?env:undefined;
 }
 
-export function exportDealer({root=ROOT,slug,packageDir,packageTree,reviewFile,write=false,targetBranch,preservePrefixes=[]}) {
+export function exportDealer({root=ROOT,slug,packageDir,packageTree,reviewFile,write=false,targetBranch,preservePrefixes=[],productionPilot}) {
   assertCarsOwnedDealer(root, slug);
   const client=inside(root,'clients/'+slug,{mustExist:true});
   const manifest=validateManifest(json(path.join(client,'dealer.json')));
@@ -194,11 +217,12 @@ export function exportDealer({root=ROOT,slug,packageDir,packageTree,reviewFile,w
   git(root,['cat-file','-e',packageMeta.sourceCommit+'^{commit}']);
   const branch=targetBranch||manifest.defaultBranch||'main';
   if(!/^[a-zA-Z0-9][a-zA-Z0-9/._-]*$/.test(branch)||branch.includes('..'))throw new Error('Invalid target branch.');
-  assertVercelQualificationExport(packageMeta,{branch,manifest:packageManifest});
+  assertVercelQualificationExport(packageMeta,{branch,manifest:packageManifest,productionPilot});
   const url='https://github.com/'+manifest.repository+'.git';
   const defaultBranch=manifest.defaultBranch||'main';
   const baseHead=remoteHead(root,url,defaultBranch),targetHead=remoteHead(root,url,branch);
   const parent=targetHead||baseHead;
+  if(productionPilot!==undefined && (baseHead!==productionPilot.privateMain || targetHead!==productionPilot.privateMain))throw new Error('Production pilot private MAIN lease changed');
   if(!parent)throw new Error('Publishing repository must exist with a reviewed initial commit. Create its private empty initialization once, then retry.');
   git(root,['fetch','--no-tags',url,parent]);
   const area=inside(root,'runtime/dealer-exports/'+slug);fs.mkdirSync(area,{recursive:true});const run=fs.mkdtempSync(path.join(area,'proposal-'));
@@ -218,7 +242,7 @@ export function exportDealer({root=ROOT,slug,packageDir,packageTree,reviewFile,w
   const priorText=git(root,['show',parent+':.cars-publish.json'],{allowFailure:true});
   let unexpected=[];
   if(priorText){const prior=JSON.parse(priorText);if(prior.repository!==manifest.repository)throw new Error('Remote publishing metadata has another repository identity.');const managed=new Map(prior.files.map(f=>[f.path,f.blob]));unexpected=[...new Set([...remote.keys(),...managed.keys()])].filter(p=>p!=='.cars-publish.json'&&remote.get(p)!==managed.get(p)&&!inPreservedPrefix(p,envelope?.prefixes??[]));}
-  const report={schemaVersion:1,slug,repository:manifest.repository,branch,defaultBranch,baseHead,targetHead,parent,sourceCommit:packageMeta.sourceCommit,candidateDigest:digest.digest,tree,changes,unexpectedRemoteChanges:unexpected,packageDirectory:directory,proposalDirectory:run,...(envelope?{publicationEnvelope:envelope,packagePayloadTree:payloadTree}:{}),...(treePackage?{packageTree:treePackage.tree,packageObject:packageTree,treeVerification:treePackage.io}:{}),...(packageMeta.assetDelivery?.provider === 'cloudflare' ? {provider:'cloudflare'} : {})};
+  const report={...(productionPilot?{productionPilot:structuredClone(productionPilot)}:{}),schemaVersion:1,slug,repository:manifest.repository,branch,defaultBranch,baseHead,targetHead,parent,sourceCommit:packageMeta.sourceCommit,candidateDigest:digest.digest,tree,changes,unexpectedRemoteChanges:unexpected,packageDirectory:directory,proposalDirectory:run,...(envelope?{publicationEnvelope:envelope,packagePayloadTree:payloadTree}:{}),...(treePackage?{packageTree:treePackage.tree,packageObject:packageTree,treeVerification:treePackage.io}:{}),...(packageMeta.assetDelivery?.provider === 'cloudflare' ? {provider:'cloudflare'} : {})};
   if(process.env.GIT_ALTERNATE_OBJECT_DIRECTORIES)report.gitObjectAlternates=process.env.GIT_ALTERNATE_OBJECT_DIRECTORIES;
   const gitProcessConfig=retainedGitProcessConfig();
   if(Object.keys(gitProcessConfig).length)report.gitProcessConfig=gitProcessConfig;
