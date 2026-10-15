@@ -40,7 +40,14 @@ jobs:
         with:
           node-version: '26.10.0'
           package-manager-cache: false
+      - name: Install the pinned AST parser for focused missing-contact tests
+        run: |
+          mkdir -p runtime/varna-tools
+          printf '{"private":true}\n' > runtime/varna-tools/package.json
+          npm install --prefix runtime/varna-tools --ignore-scripts --save-exact typescript@6.0.3
       - run: node --test scripts/fleet-component-repairs.test.mjs scripts/existing-fleet-cloudflare.test.mjs scripts/assemble-existing-fleet-single-worker.test.mjs scripts/deploy-dealer-single-worker.test.mjs scripts/client-logo-contract.test.mjs scripts/dealer-reference-package.test.mjs scripts/modern-demo-database.test.mjs scripts/dealer-presentation.test.mjs scripts/existing-wave-registry.test.mjs scripts/dealer-contact-fallback.test.mjs scripts/emit-existing-fleet-cloudflare-source.test.mjs scripts/cloudflare-native-source-qualification.test.mjs
+        env:
+          CARS_ESBUILD_RESOLVE_FROM: ${{ github.workspace }}/runtime/varna-tools/package.json
       - id: matrix
         run: |
           node scripts/build-existing-fleet-cloudflare.mjs matrix >> "$GITHUB_OUTPUT"
