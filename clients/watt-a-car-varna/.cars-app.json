@@ -3,12 +3,12 @@
   "dealer": "watt-a-car-varna",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/app",
-    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
-    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
   },
-  "appDigest": "311063e2a3e20baa0e30e01b7cdd1d6230528dfefaaa42c325c0f4bc66272e11",
+  "appDigest": "137aba13f6ac43ff1f1dcbf84db77db0343e75245cc884db514a6b1f624b80b9",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "watt-a-car-varna",
@@ -21,14 +21,14 @@
     "assets": [
       {
         "source": "auto-best/static/dealer-brand/logo-on-light.png",
-        "output": "public/dealer-app/logo-light-8997206a075a88bcb47d.png",
-        "sha256": "8997206a075a88bcb47dea84d9f99afc08c7167ba35b9f33fff1f537fd34e355",
+        "output": "public/dealer-app/logo-light-445de2de6ff16962c855.png",
+        "sha256": "445de2de6ff16962c855f3343f0ec36925b86e86d395c2d8930f42059f43d521",
         "role": "logo-light"
       },
       {
         "source": "auto-best/static/dealer-brand/logo-on-dark.png",
-        "output": "public/dealer-app/logo-dark-7290161a14f303c9b4b1.png",
-        "sha256": "7290161a14f303c9b4b1e0aeb1957e923a4a876cb2a726cf470dcab726bcf978",
+        "output": "public/dealer-app/logo-dark-064e3fed97f3aabf8d66.png",
+        "sha256": "064e3fed97f3aabf8d660d85ea4fc07fd48596b5d4dfc81b7634a2c5327bd628",
         "role": "logo-dark"
       },
       {
@@ -60,5 +60,6 @@
     ]
   },
   "needsDealerQA": true,
-  "readyToPublish": false
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-15T04:17:20.550Z"
 }

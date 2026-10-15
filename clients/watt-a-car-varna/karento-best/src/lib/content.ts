@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "WATT a Car",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-56a58feca6ccdba2/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-56a58feca6ccdba2/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-56a58feca6ccdba2/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-0a40a8d9c0483ba2/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-0a40a8d9c0483ba2/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-0a40a8d9c0483ba2/logo-on-dark.webp",
     "alt": "WATT a Car",
-    "favicon": "/dealer-brand/v2-56a58feca6ccdba2/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-0a40a8d9c0483ba2/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

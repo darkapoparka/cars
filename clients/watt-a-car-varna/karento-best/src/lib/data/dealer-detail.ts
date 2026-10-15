@@ -78,7 +78,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "WATT a Car",
       "location": "ул. 1-ва 95, Варна, България",
-      "avatar": "/dealer-brand/v2-56a58feca6ccdba2/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-0a40a8d9c0483ba2/logo-on-light.webp",
       "mobile": "0887489513",
       "email": "",
       "whatsapp": "",
@@ -172,7 +172,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "WATT a Car",
       "location": "ул. 1-ва 95, Варна, България",
-      "avatar": "/dealer-brand/v2-56a58feca6ccdba2/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-0a40a8d9c0483ba2/logo-on-light.webp",
       "mobile": "0887489513",
       "email": "",
       "whatsapp": "",

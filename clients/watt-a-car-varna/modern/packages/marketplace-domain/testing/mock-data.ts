@@ -46,7 +46,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "WATT a Car",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-56a58feca6ccdba2/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-0a40a8d9c0483ba2/logo-on-light.webp"
     },
     "publishedAt": "2026-10-12T09:00:00.000Z",
     "promoted": true
@@ -95,7 +95,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "WATT a Car",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-56a58feca6ccdba2/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-0a40a8d9c0483ba2/logo-on-light.webp"
     },
     "publishedAt": "2026-10-12T09:00:00.000Z",
     "promoted": true

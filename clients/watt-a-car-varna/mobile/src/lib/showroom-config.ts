@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "WATT a Car",
-  "logo": "/dealer-brand/v2-56a58feca6ccdba2/logo-on-light.webp",
+  "logo": "/dealer-brand/v2-0a40a8d9c0483ba2/logo-on-light.webp",
   "phone": "+359887489513",
   "email": null,
   "address": "ул. 1-ва 95, Варна, България",
