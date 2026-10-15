@@ -155,7 +155,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "УНИТРЕЙД",
   "location": "бул. Цар Освободител-след последния светофар за Владиславово 200 метра вляво, Варна, България",
-  "avatar": "/dealer-brand/v2-0be7408b076da7db/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-1882d00b844a080e/logo-on-light.webp",
   "mobile": "0887479224",
   "email": "",
   "whatsapp": "",

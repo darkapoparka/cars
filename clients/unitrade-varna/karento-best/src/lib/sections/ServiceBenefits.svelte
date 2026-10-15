@@ -13,6 +13,9 @@
     type ServiceFilterId,
   } from "#lib/data/services.ts";
   import MobileServiceCard from "#lib/components/mobile/MobileServiceCard.svelte";
+  import MobileServiceDrawer, {
+    type MobileServiceDetail,
+  } from "#lib/components/services/MobileServiceDrawer.svelte";
   import MobilePill from "#lib/components/mobile/MobilePill.svelte";
   import MobilePillRail from "#lib/components/mobile/MobilePillRail.svelte";
   import DesktopServices from "#lib/components/services/DesktopServices.svelte";
@@ -27,6 +30,7 @@
   } = $props();
   const phone = new MediaQuery("(max-width: 767.98px)");
   const desktop = new MediaQuery("(min-width: 992px)");
+  let selectedService = $state<MobileServiceDetail | null>(null);
   const suppliedServiceCards: readonly ServiceCardContent[] = serviceCards;
   const search = $derived(query.trim().toLowerCase());
   const matchingServices = $derived(
@@ -147,7 +151,11 @@
         {#if services.length}
           <div class="mobile-service-list">
             {#each services as service (service.id)}
-              <MobileServiceCard {service} />
+              <MobileServiceCard
+                {service}
+                onselect={(selected) => (selectedService = selected)}
+                expanded={selectedService?.id === service.id}
+              />
             {/each}
           </div>
         {:else}
@@ -589,6 +597,8 @@
     </div>
   </section>
 {/if}
+
+<MobileServiceDrawer bind:service={selectedService} />
 
 <style>
   @media (max-width: 767.98px) {

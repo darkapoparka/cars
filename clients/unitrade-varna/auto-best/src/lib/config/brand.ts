@@ -33,6 +33,6 @@ export const brand = {
   addressLine,
   address: "бул. Цар Освободител-след последния светофар за Владиславово 200 метра вляво, Варна, България",
   appointment: "Потвърдете работното време директно с автокъщата.",
-  logo: "/dealer-brand/v2-0be7408b076da7db/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/v2-0be7408b076da7db/logo-on-dark.webp"
+  logo: "/dealer-brand/v2-1882d00b844a080e/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-1882d00b844a080e/logo-on-dark.webp"
 } as const satisfies BrandConfig;

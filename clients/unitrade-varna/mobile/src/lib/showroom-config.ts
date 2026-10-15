@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "УНИТРЕЙД",
-  "logo": "/dealer-brand/v2-0be7408b076da7db/logo-on-light.webp",
+  "logo": "/dealer-brand/v2-1882d00b844a080e/logo-on-light.webp",
   "phone": "+359887479224",
   "email": null,
   "address": "бул. Цар Освободител-след последния светофар за Владиславово 200 метра вляво, Варна, България",

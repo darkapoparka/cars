@@ -50,7 +50,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "УНИТРЕЙД",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-0be7408b076da7db/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-1882d00b844a080e/logo-on-light.webp"
     },
     "publishedAt": "2026-10-11T09:00:00.000Z",
     "promoted": true

@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "УНИТРЕЙД",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-0be7408b076da7db/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-0be7408b076da7db/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-0be7408b076da7db/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-1882d00b844a080e/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-1882d00b844a080e/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-1882d00b844a080e/logo-on-dark.webp",
     "alt": "УНИТРЕЙД",
-    "favicon": "/dealer-brand/v2-0be7408b076da7db/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-1882d00b844a080e/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

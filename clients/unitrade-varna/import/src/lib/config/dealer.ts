@@ -33,8 +33,8 @@ const contactVisitBanner = '/assets/daynight/banners/contact-visit-desktop-v3.we
 export const daynightAssets = {
 	// Dealer copies replace these paths once; shared headers, footers and banners reuse them.
 	// The suffix names the background: logoDark is for dark surfaces, logoLight for light ones.
-	logoDark: "/dealer-brand/v2-0be7408b076da7db/logo-on-dark.webp",
-	logoLight: "/dealer-brand/v2-0be7408b076da7db/logo-on-light.webp",
+	logoDark: "/dealer-brand/v2-1882d00b844a080e/logo-on-dark.webp",
+	logoLight: "/dealer-brand/v2-1882d00b844a080e/logo-on-light.webp",
 	hero: '/assets/daynight/hero/home-05-showroom-exterior.webp',
 	homeHeroSlides: [],
 	footerImage: '/assets/daynight/footer-premium-request-v2.webp',
