@@ -3,13 +3,10 @@
   "mode": "existing-migration",
   "sourceRevision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
   "dealers": [
-    "autofest-varna",
-    "autoroad-varna",
-    "sprint-auto-varna",
-    "avtoborsa-mania",
-    "dream-drive-varna",
-    "extra-car-sm",
-    "evrocar-varna-09"
+    "fusion-auto-varna",
+    "top-auto-varna",
+    "vaen-cars-varna",
+    "monarh-varna"
   ],
   "targets": [
     "auto-best",
@@ -22,35 +19,23 @@
   ],
   "composition": {
     "reviewed": true,
-    "reviewedAt": "2026-10-15T06:20:59.597Z",
+    "reviewedAt": "2026-10-15T08:35:50.205Z",
     "reviewScope": "Owner-authorized final six-template refresh of existing Cloudflare identities. All selected dealer source trees are actually published on Cars MAIN; preserve native palettes, factual stock/contacts/locales, selected logos, one existing Worker and its existing canonical exposure. Private source MAIN and hosted acceptance are recorded separately.",
     "canonicalCompositions": {
-      "autofest-varna": {
-        "canonicalOrigin": "https://autofest-varna.webpreviews.site",
+      "fusion-auto-varna": {
+        "canonicalOrigin": "https://fusion-auto-varna.webpreviews.site",
         "ukDefault": false
       },
-      "autoroad-varna": {
-        "canonicalOrigin": "https://autoroad-varna.webpreviews.site",
+      "top-auto-varna": {
+        "canonicalOrigin": "https://top-auto-varna.webpreviews.site",
         "ukDefault": false
       },
-      "sprint-auto-varna": {
-        "canonicalOrigin": "https://sprint-varna.webpreviews.site",
+      "vaen-cars-varna": {
+        "canonicalOrigin": "https://vaen-cars-varna.webpreviews.site",
         "ukDefault": false
       },
-      "avtoborsa-mania": {
-        "canonicalOrigin": "https://avtoborsa-mania.webpreviews.site",
-        "ukDefault": false
-      },
-      "dream-drive-varna": {
-        "canonicalOrigin": "https://dream-drive-varna.webpreviews.site",
-        "ukDefault": false
-      },
-      "extra-car-sm": {
-        "canonicalOrigin": "https://extra-car-sm.webpreviews.site",
-        "ukDefault": false
-      },
-      "evrocar-varna-09": {
-        "canonicalOrigin": "https://evrocarvarna09-varna.webpreviews.site",
+      "monarh-varna": {
+        "canonicalOrigin": "https://monarh-varna.webpreviews.site",
         "ukDefault": false
       }
     }
