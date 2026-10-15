@@ -177,7 +177,7 @@ function comparable(pathname, bytes) {
   const text = TEXT_EXTENSIONS.has(path.extname(pathname).toLowerCase())
     ? tryUtf8(bytes)
     : null;
-  return text === null ? Buffer.from(bytes) : normalizedText(bytes);
+  return text === null ? (Buffer.isBuffer(bytes) ? bytes : Buffer.from(bytes)) : normalizedText(bytes);
 }
 
 function tryUtf8(bytes) {
@@ -388,8 +388,8 @@ export function planDealerUpgrade({ dealerRoot, lock, oldBases, newBases, target
   const candidate = new Map(), changes = [], conflicts = [], perDesign = {};
   for (const key of Object.keys(pins)) {
     if ((!oldBases?.[key] && pins[key].from !== null) || !newBases?.[key]) throw new Error(`Missing exact old/new template trees for ${key}`);
-    // The inner planner owns its defensive Buffer copies. This outer layer only
-    // validates paths/package presence and passes the maps through read-only.
+    // Immutable planner inputs are borrowed read-only. The selected candidate
+    // bytes receive their own defensive copy in planThreeWayUpgrade.
     const oldBase = pins[key].from === null ? new Map() : mapOfFiles(oldBases[key], { copyBuffers: false });
     const newBase = mapOfFiles(newBases[key], { copyBuffers: false });
     if ((pins[key].from !== null && !oldBase.has('package.json')) || !newBase.has('package.json')) throw new Error(`${key}: pinned template tree must contain package.json`);
@@ -462,7 +462,7 @@ export function planRegisteredPinnedTemplateRefresh({newBase,dealer}){
 }
 
 export function planThreeWayUpgrade({ oldBase, newBase, dealer, resolutions = {}, tempRoot = os.tmpdir() }) {
-  const oldFiles = mapOfFiles(oldBase), newFiles = mapOfFiles(newBase), dealerFiles = mapOfFiles(dealer);
+  const oldFiles = mapOfFiles(oldBase, { copyBuffers: false }), newFiles = mapOfFiles(newBase, { copyBuffers: false }), dealerFiles = mapOfFiles(dealer, { copyBuffers: false });
   const candidate = new Map(), changes = [], conflicts = [];
   const names = [...new Set([...oldFiles.keys(), ...newFiles.keys(), ...dealerFiles.keys()])].sort();
   for (const pathname of names) {
