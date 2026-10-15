@@ -1010,7 +1010,7 @@ export function isPinnedMobileLogoConsumer({files, source, carsRoot, readPinned 
 
 /** Materialize and validate the already reviewed selected pack before source seals.
  * The old retained-logo contract remains authoritative for every other update. */
-export async function sealReviewedFactualBranding({files,manifest,proof,applyBranding,assertBranding}) {
+export async function sealReviewedFactualBranding({files,manifest,proof,applyBranding,assertBranding,reviewedPreviousContractSha256,reviewedPreviousContractBlob}) {
   const selected=proof?.targetBranding;
   if(!selected)return null;
   const keys=['auto-best','modern','import','app','mobile','karento-best'];
@@ -1023,17 +1023,18 @@ export async function sealReviewedFactualBranding({files,manifest,proof,applyBra
       assertBranding(files,manifest);
       return {schemaVersion:1,stage:'selected-reviewed-branding-before-native-source-seals',packId:contract.packId,publicBase:contract.publicBase,reused:true};
     }
-    throw Error('Existing source branding pack differs from the exact reviewed target; explicit refresh required');
+    if(!/^[a-f0-9]{64}$/.test(reviewedPreviousContractSha256??'')||!/^[a-f0-9]{40}$/.test(reviewedPreviousContractBlob??'')||sha256(existing)!==reviewedPreviousContractSha256||crypto.createHash('sha1').update('blob '+existing.length+'\0').update(existing).digest('hex')!==reviewedPreviousContractBlob)throw Error('Existing source branding pack differs from the exact reviewed target; explicit refresh required');
   }
   const staged=new Map(files);
+  if(existing)staged.delete('.cars-branding.json');
   const contract=await applyBranding(staged,manifest);
   if(contract?.packId!==selected.packId||contract.publicBase!==selected.publicBase||!staged.has('.cars-branding.json'))throw Error('Selected factual branding pack changed before source seals');
   assertBranding(staged,manifest);
   for(const [name,bytes]of staged)files.set(name,bytes);
-  return {schemaVersion:1,stage:'selected-reviewed-branding-before-native-source-seals',packId:contract.packId,publicBase:contract.publicBase};
+  return {schemaVersion:1,stage:'selected-reviewed-branding-before-native-source-seals',packId:contract.packId,publicBase:contract.publicBase,...(existing?{reviewedPreviousContractSha256,reviewedPreviousContractBlob}: {})};
 }
 
-async function bindReviewedFactualBrandingBeforeSourceSeals({files,plan,manifest,carsRoot,qualification,registeredAdoption}) {
+async function bindReviewedFactualBrandingBeforeSourceSeals({files,plan,manifest,carsRoot,dealerRoot,qualification,registeredAdoption}) {
   const proof=plan.factualRefresh;if(!proof?.targetBranding)return null;
   assertFactualRefreshAdmission({enabled:true,designSet:'six',qualification,registeredAdoption,manifest});
   if(registeredAdoption||manifest.sourceOwnership==='independent-repository')throw Error('Reviewed factual source branding requires an ordinary canonical dealer');
@@ -1041,7 +1042,12 @@ async function bindReviewedFactualBrandingBeforeSourceSeals({files,plan,manifest
   const {readBrandingInputs}=await import('../prepare-existing-fleet-source.mjs'),{applyLeadBranding,assertLeadBranding}=await import('../publishing/lead-branding.mjs');
   const options=readBrandingInputs(carsRoot,input.value,manifest.slug),sharp=createRequire(path.join(carsRoot,'runtime/source-preparation-tools/package.json'))('sharp');if(sharp.versions.sharp!=='0.35.5')throw Error('Source-seal raster toolchain differs');
   const templates=new Map(),readTemplate=(source,name,optional)=>{const key=source.path.slice('templates/'.length);if(!templates.has(key))templates.set(key,readPinnedTemplateTree({key,repositoryPath:carsRoot,source:plan.pins[key].targetSource}).tree);const bytes=templates.get(key).get(name);if(!bytes&&optional)return null;if(!bytes)throw Error('Missing exact source-seal palette '+key+'/'+name);return bytes.toString('utf8');};
-  return sealReviewedFactualBranding({files,manifest,proof,applyBranding:(candidate,target)=>applyLeadBranding(candidate,target,{...options,sharp,readTemplate}),assertBranding:assertLeadBranding});
+  const previousPath=path.join(dealerRoot,'.cars-branding.json');
+  const canonical=fs.realpathSync(dealerRoot)===fs.realpathSync(path.join(carsRoot,'clients',manifest.slug));
+  const previous=canonical&&fs.existsSync(previousPath)?fs.readFileSync(previousPath):null;
+  const reviewedPreviousContractSha256=previous?sha256(previous):undefined;
+  const reviewedPreviousContractBlob=previous?git(carsRoot,['--no-lazy-fetch','rev-parse','HEAD:clients/'+manifest.slug+'/.cars-branding.json']):undefined;
+  return sealReviewedFactualBranding({files,manifest,proof,reviewedPreviousContractSha256,reviewedPreviousContractBlob,applyBranding:(candidate,target)=>applyLeadBranding(candidate,target,{...options,sharp,readTemplate}),assertBranding:assertLeadBranding});
 }
 
 async function addNativeAdoption(plan, candidateDirectory, dealerRoot, lock, {carsRoot, refreshedAt, extendedAdaptations = {}, candidateAssetPool, templatePalette = false, templatePaletteConfigs, qualification, registeredAdoption,registeredAssetView,registeredTargetBases,factualAppProvenance,registeredConsumerReview} = {}) {
@@ -1060,7 +1066,7 @@ async function addNativeAdoption(plan, candidateDirectory, dealerRoot, lock, {ca
   addLegacyDetailUpgrade({files,dealerRoot,manifest:candidateManifest,pins:plan.pins,registeredAdoption});
   plan.manifest=candidateManifest;
   validatePackagingManifest(candidateManifest);
-  await bindReviewedFactualBrandingBeforeSourceSeals({files,plan,manifest:candidateManifest,carsRoot,qualification,registeredAdoption});
+  await bindReviewedFactualBrandingBeforeSourceSeals({files,plan,manifest:candidateManifest,carsRoot,dealerRoot,qualification,registeredAdoption});
   // Retained identity is bound before source seals, independently of presentation opt-in.
   const retainedLogoFamilies=['modern','mobile'].filter(key=>plan.pins[key]);
   const retainedLogoChanges=[];
