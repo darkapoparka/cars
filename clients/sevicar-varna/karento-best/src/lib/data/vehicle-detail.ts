@@ -155,7 +155,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "АВТОКЪЩА СЕВИ КАР",
   "location": "Главен път Е2 ВАРНА-СОФИЯ, 400м. след кръговото под Метро! GPS, Варна, България",
-  "avatar": "/dealer-brand/v2-cec811a67b8c5e20/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-677cf4ef1cd99dc1/logo-on-light.webp",
   "mobile": "0888205072",
   "email": "",
   "whatsapp": "",

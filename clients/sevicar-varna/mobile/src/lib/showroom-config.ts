@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "АВТОКЪЩА СЕВИ КАР",
-  "logo": "/dealer-brand/v2-cec811a67b8c5e20/logo-on-light.webp",
+  "logo": "/dealer-brand/v2-677cf4ef1cd99dc1/logo-on-light.webp",
   "phone": "+359888205072",
   "email": null,
   "address": "Главен път Е2 ВАРНА-СОФИЯ, 400м. след кръговото под Метро! GPS, Варна, България",

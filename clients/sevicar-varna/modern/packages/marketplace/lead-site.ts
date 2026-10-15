@@ -111,8 +111,8 @@ export const leadSite: LeadSiteConfig = {
     "tagline": "СЕВИ КАР — vehicles and dealer support in Varna."
   }
 },
-  accent: "#30343b",
-  desktopAccent: "#4b5057",
+  accent: "#09090b",
+  desktopAccent: "#09090b",
   desktopInventoryFilterLayout: "quick",
   desktopPreviewIdentity: {
     sourceSlug: "day-night-auto-group",
@@ -144,8 +144,8 @@ export const leadSite: LeadSiteConfig = {
   email: "",
   heroPath: "/lead-hero.jpg",
   locale: "bg-BG",
-  logoPath: "/dealer-brand/v2-cec811a67b8c5e20/logo-on-light.webp",
-  logoInversePath: "/dealer-brand/v2-cec811a67b8c5e20/logo-on-dark.webp",
+  logoPath: "/dealer-brand/v2-677cf4ef1cd99dc1/logo-on-light.webp",
+  logoInversePath: "/dealer-brand/v2-677cf4ef1cd99dc1/logo-on-dark.webp",
   mapsEmbedUrl:
     "https://maps.google.com/maps?q=%D0%90%D0%92%D0%A2%D0%9E%D0%9A%D0%AA%D0%A9%D0%90%20%D0%A1%D0%95%D0%92%D0%98%20%D0%9A%D0%90%D0%A0%2C%20%D0%93%D0%BB%D0%B0%D0%B2%D0%B5%D0%BD%20%D0%BF%D1%8A%D1%82%20%D0%952%20%D0%92%D0%90%D0%A0%D0%9D%D0%90-%D0%A1%D0%9E%D0%A4%D0%98%D0%AF%2C%20400%D0%BC.%20%D1%81%D0%BB%D0%B5%D0%B4%20%D0%BA%D1%80%D1%8A%D0%B3%D0%BE%D0%B2%D0%BE%D1%82%D0%BE%20%D0%BF%D0%BE%D0%B4%20%D0%9C%D0%B5%D1%82%D1%80%D0%BE!%20GPS%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F&z=16&output=embed",
   mapsUrl:

@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "АВТОКЪЩА СЕВИ КАР",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-cec811a67b8c5e20/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-cec811a67b8c5e20/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-cec811a67b8c5e20/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-677cf4ef1cd99dc1/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-677cf4ef1cd99dc1/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-677cf4ef1cd99dc1/logo-on-dark.webp",
     "alt": "АВТОКЪЩА СЕВИ КАР",
-    "favicon": "/dealer-brand/v2-cec811a67b8c5e20/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-677cf4ef1cd99dc1/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

@@ -33,6 +33,6 @@ export const brand = {
   addressLine,
   address: "Главен път Е2 ВАРНА-СОФИЯ, 400м. след кръговото под Метро! GPS, Варна, България",
   appointment: "Потвърдете работното време директно с автокъщата.",
-  logo: "/dealer-brand/v2-cec811a67b8c5e20/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/v2-cec811a67b8c5e20/logo-on-dark.webp"
+  logo: "/dealer-brand/v2-677cf4ef1cd99dc1/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-677cf4ef1cd99dc1/logo-on-dark.webp"
 } as const satisfies BrandConfig;

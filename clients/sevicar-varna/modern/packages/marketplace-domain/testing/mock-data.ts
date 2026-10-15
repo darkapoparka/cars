@@ -50,7 +50,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "АВТОКЪЩА СЕВИ КАР",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-cec811a67b8c5e20/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-677cf4ef1cd99dc1/logo-on-light.webp"
     },
     "publishedAt": "2026-10-11T09:00:00.000Z",
     "promoted": true
