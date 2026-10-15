@@ -236,7 +236,7 @@ export const Footer = ({ locale }: FooterProps) => {
             </div>
 
             <ButtonLink
-              className="mt-5 h-11 bg-brand px-4 font-semibold text-body text-brand-foreground shadow-none hover:bg-[var(--lead-site-accent-hover)] hover:text-[var(--brand-hover-foreground)]"
+              className="mt-5 h-11 bg-primary px-4 font-semibold text-body text-primary-foreground shadow-none hover:bg-[var(--primary-hover)] hover:text-[var(--primary-hover-foreground)]"
               href={leadSite.phoneHref}
               size="sm"
             >

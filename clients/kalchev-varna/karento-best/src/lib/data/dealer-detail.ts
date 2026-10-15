@@ -94,7 +94,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Kalchev Correct",
       "location": "пътя за Побитите камъни, на 200 метра от разклона за с.Тополи, отляво, Варна, България",
-      "avatar": "/dealer-brand/v2-f39ea5a561358052/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-742ede27a6e385bd/logo-on-light.webp",
       "mobile": "0879699644",
       "email": "",
       "whatsapp": "",

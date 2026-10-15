@@ -50,7 +50,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Kalchev Correct",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-f39ea5a561358052/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-742ede27a6e385bd/logo-on-light.webp"
     },
     "publishedAt": "2026-10-11T09:00:00.000Z",
     "promoted": true

@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "Kalchev Correct",
-  "logo": "/dealer-brand/v2-f39ea5a561358052/logo-on-light.webp",
+  "logo": "/dealer-brand/v2-742ede27a6e385bd/logo-on-light.webp",
   "phone": "+359879699644",
   "email": null,
   "address": "пътя за Побитите камъни, на 200 метра от разклона за с.Тополи, отляво, Варна, България",

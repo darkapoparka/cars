@@ -62,7 +62,7 @@
 	import Wrench from '@lucide/svelte/icons/wrench';
 
 	const heroImage = '/assets/daynight/offer/offer-poster-background.webp';
-	const logo = "/dealer-brand/v2-f39ea5a561358052/logo-on-light.webp";
+	const logo = "/dealer-brand/v2-742ede27a6e385bd/logo-on-light.webp";
 
 	const stats = $derived([
 		{ value: offerCopy.count, label: offerCopy.inventoryLabel },

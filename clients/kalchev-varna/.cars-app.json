@@ -3,12 +3,12 @@
   "dealer": "kalchev-varna",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/app",
-    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
-    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
   },
-  "appDigest": "9bfa2f25b07736e1977d47b5e0f77f7bb62171c34a1f04787155d29acb098806",
+  "appDigest": "c1d94b64847769cdb0b80c235e8f488066b08dbd155b64059a4fa4ae0050d48f",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "kalchev-varna",
@@ -21,14 +21,14 @@
     "assets": [
       {
         "source": "auto-best/static/dealer-brand/logo-on-light.png",
-        "output": "public/dealer-app/logo-light-d3e1ad0df9b19308976f.png",
-        "sha256": "d3e1ad0df9b19308976ffaabfa476b72e27f98054f59793dd9a0beead58781be",
+        "output": "public/dealer-app/logo-light-ca2a74428c198f85204e.png",
+        "sha256": "ca2a74428c198f85204e7a78cf77e4282e7e63e0e8a6c449d1f51f775f58d1bc",
         "role": "logo-light"
       },
       {
         "source": "auto-best/static/dealer-brand/logo-on-dark.png",
-        "output": "public/dealer-app/logo-dark-e9fc2db45ca3252905cf.png",
-        "sha256": "e9fc2db45ca3252905cf7de01197adc32a2195e8f8a29b2ed02d19c2a0d9a3c3",
+        "output": "public/dealer-app/logo-dark-9c63ee95fd34a75687f5.png",
+        "sha256": "9c63ee95fd34a75687f51489209e9405fef734ab91068f4708a817fb8905ffb1",
         "role": "logo-dark"
       },
       {
@@ -54,5 +54,6 @@
     ]
   },
   "needsDealerQA": true,
-  "readyToPublish": false
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-15T01:23:16.465Z"
 }

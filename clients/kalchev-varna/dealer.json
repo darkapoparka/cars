@@ -64,55 +64,55 @@
     "inventoryCurrency": "EUR"
   },
   "templateRevisions": {
-    "auto-best": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
-    "modern": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
-    "import": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
-    "app": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
-    "mobile": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
-    "karento-best": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
+    "auto-best": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+    "modern": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+    "import": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+    "app": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+    "mobile": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+    "karento-best": "bb173c33d7b640502ad2e4bf27546748c12858b8"
   },
   "templateSources": {
     "auto-best": {
       "repository": "darkapoparka/cars",
-      "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+      "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
       "path": "templates/auto-best",
-      "tree": "5fb7a2164775050a47c1183371622295dbf63725",
-      "digest": "dcbc59990928884006652677d3529020df3844029993895a71e5f6818ba7363c"
+      "digest": "2fc9c3cfc9cf1976dbe30c08592776362e5bcc6b09e8b06620e57c4406df58a5",
+      "tree": "78fa1a82eca14816449f9588283260840ee94f52"
     },
     "modern": {
       "repository": "darkapoparka/cars",
-      "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+      "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
       "path": "templates/modern",
-      "tree": "3974380670eb388bb16182f94ade33be6d87b1c1",
-      "digest": "ba263aac8f1863d133807d3e1bf3597d125cf315a7e0deba3f6e419b52434c25"
+      "digest": "30e1a99f857cc25e4d78c9459cfb4394a9f70c5b114196a5ca6325ff38823b4b",
+      "tree": "01eac7390fa6ba951d4b8d4c26159a9be150f6c8"
     },
     "import": {
       "repository": "darkapoparka/cars",
-      "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+      "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
       "path": "templates/import",
-      "tree": "6afc6901e2f95967fb7c72e9f75525d4d6fbf086",
-      "digest": "f98a0934cdcc5adbda393c14c02eb2adc0175344ab2ac3f913afe4b0603366e5"
+      "digest": "c7d6c93214e859aa2747af8f5e068b6a0b8ca095d6328c807728a4d531d688f8",
+      "tree": "d841ddfe5bec918bf6b2c19fd6971fecd6b8e54d"
     },
     "app": {
       "repository": "darkapoparka/cars",
-      "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+      "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
       "path": "templates/app",
-      "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
-      "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+      "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+      "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
     },
     "mobile": {
       "repository": "darkapoparka/cars",
-      "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+      "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
       "path": "templates/mobile",
-      "tree": "2b02829e157071e305bfb2dff10ef18e85c8a35e",
-      "digest": "4e858bd9dbd3ef5b52cd904c4ed97bbfdc0f4cfe02b5a3840580f38026b867a0"
+      "digest": "f5a3e541a7c648a4c2899ad3893e22a3806027a9f66d95fa4e8c74b2226635b6",
+      "tree": "792bfdd1d8eb22aabd90c7e3a0c0779a6c1c36f3"
     },
     "karento-best": {
       "repository": "darkapoparka/cars",
-      "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+      "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
       "path": "templates/karento-best",
-      "tree": "5f6eec8efb2f9e99819f7f0c2f743d18fff7b134",
-      "digest": "83056967764a686f3737d74b86c5db51c1385a50184853f50ec4ade80c1dd44f"
+      "digest": "be17ef365e3272753df6e50826b139a45bfc32b8fef54ddcb86d977ad16280a9",
+      "tree": "8c5ac869c7fd15e19a80c660343fc64b20a2bad9"
     }
   },
   "cloudflare": {
@@ -121,12 +121,21 @@
   "shareIdentity": {
     "name": "Kalchev Correct",
     "publicOrigin": "https://cars-kalchev-varna.darkapoparka1.workers.dev",
-    "description": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация. Датирана извадка от публични обяви, не складова система в реално време. Потвърдете цената, ДДС и наличността.",
+    "description": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
     "logo": {
       "sourcePath": "branding/logo-on-light.png",
-      "sha256": "d3e1ad0df9b19308976ffaabfa476b72e27f98054f59793dd9a0beead58781be",
+      "sha256": "ca2a74428c198f85204e7a78cf77e4282e7e63e0e8a6c449d1f51f775f58d1bc",
       "faviconSourcePath": "branding/app-icon.png",
       "faviconSha256": "fc215ca6477458010f2add69cece27665374c818c5dbb6883a1082ce62c017f8"
+    }
+  },
+  "appVariant": {
+    "source": {
+      "repository": "darkapoparka/cars",
+      "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+      "path": "templates/app",
+      "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+      "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
     }
   }
 }

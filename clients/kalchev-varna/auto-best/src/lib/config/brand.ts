@@ -33,6 +33,6 @@ export const brand = {
   addressLine,
   address: "пътя за Побитите камъни, на 200 метра от разклона за с.Тополи, отляво, Варна, България",
   appointment: "Потвърдете работното време директно с автокъщата.",
-  logo: "/dealer-brand/v2-f39ea5a561358052/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/v2-f39ea5a561358052/logo-on-dark.webp"
+  logo: "/dealer-brand/v2-742ede27a6e385bd/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-742ede27a6e385bd/logo-on-dark.webp"
 } as const satisfies BrandConfig;

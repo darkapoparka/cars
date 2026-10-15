@@ -10,10 +10,15 @@
   --muted-foreground: var(--desktop-muted-text);
   --control: var(--desktop-canvas);
   --control-hover: var(--desktop-control-neutral-hover);
-  --selected: var(--brand);
-  --selected-foreground: var(--brand-foreground);
-  --primary: var(--brand);
-  --primary-foreground: var(--brand-foreground);
+  /* Hero surfaces retain the configured brand; actions share one neutral palette. */
+  --primary: var(--color-zinc-950);
+  --primary-foreground: #ffffff;
+  --primary-hover: var(--color-zinc-800);
+  --primary-hover-foreground: var(--primary-foreground);
+  --primary-active: var(--color-zinc-800);
+  --primary-active-foreground: var(--primary-foreground);
+  --selected: var(--primary);
+  --selected-foreground: var(--primary-foreground);
   --focus: var(--brand);
   --ring: var(--brand);
   --inverse: var(--desktop-body-text);
@@ -67,7 +72,7 @@
  * Dealer mobile polish
  *
  * Keep the existing visual language intact: white surfaces, zinc controls,
- * and the configured dealer accent for selected states and conversion actions.
+ * configured hero surfaces, and shared primary colours for actions and dark selections.
  */
 @media (max-width: 1023px) {
   /* The source/timestamp strip is desktop metadata, not mobile UI. */

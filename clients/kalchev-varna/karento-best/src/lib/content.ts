@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "Kalchev Correct",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-f39ea5a561358052/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-f39ea5a561358052/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-f39ea5a561358052/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-742ede27a6e385bd/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-742ede27a6e385bd/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-742ede27a6e385bd/logo-on-dark.webp",
     "alt": "Kalchev Correct",
-    "favicon": "/dealer-brand/v2-f39ea5a561358052/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-742ede27a6e385bd/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {
