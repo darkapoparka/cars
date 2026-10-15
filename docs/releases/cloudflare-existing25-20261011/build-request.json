@@ -3,10 +3,16 @@
   "mode": "existing-migration",
   "sourceRevision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
   "dealers": [
-    "fusion-auto-varna",
-    "top-auto-varna",
-    "vaen-cars-varna",
-    "monarh-varna"
+    "autofest-varna",
+    "autoroad-varna",
+    "dream-drive-varna",
+    "prestige-varna",
+    "sunny-varna",
+    "rqs-auto-team",
+    "europa-varna",
+    "sprint-auto-varna",
+    "avtoborsa-mania",
+    "evrocar-varna-09"
   ],
   "targets": [
     "auto-best",
@@ -19,23 +25,47 @@
   ],
   "composition": {
     "reviewed": true,
-    "reviewedAt": "2026-10-15T08:35:50.205Z",
-    "reviewScope": "Owner-authorized final six-template refresh of existing Cloudflare identities. All selected dealer source trees are actually published on Cars MAIN; preserve native palettes, factual stock/contacts/locales, selected logos, one existing Worker and its existing canonical exposure. Private source MAIN and hosted acceptance are recorded separately.",
+    "reviewedAt": "2026-10-15T09:05:51.527Z",
+    "reviewScope": "Owner-authorized final six-template refresh of existing Cloudflare identities. All selected dealer source trees are actually published on Cars MAIN; preserve native palettes, factual stock/contacts/locales, selected logos, one existing Worker and its existing canonical exposure. Private source MAIN and hosted acceptance are recorded separately. This exact corrective batch contains seven published editorial-only or editorial-plus-Modern-alias source successors, plus Sprint/Mania/Evrocar with their published Modern alias fixes. ExtraSM is excluded for the next planned batch. All ten existing purchased webpreviews.site canonical origins and Worker identities are preserved. Historical source CI remains provenance; all seven native targets and delivery artifacts are freshly built on this request commit. Prior unrelated successes remain independently deliverable.",
     "canonicalCompositions": {
-      "fusion-auto-varna": {
-        "canonicalOrigin": "https://fusion-auto-varna.webpreviews.site",
+      "autofest-varna": {
+        "canonicalOrigin": "https://autofest-varna.webpreviews.site",
         "ukDefault": false
       },
-      "top-auto-varna": {
-        "canonicalOrigin": "https://top-auto-varna.webpreviews.site",
+      "autoroad-varna": {
+        "canonicalOrigin": "https://autoroad-varna.webpreviews.site",
         "ukDefault": false
       },
-      "vaen-cars-varna": {
-        "canonicalOrigin": "https://vaen-cars-varna.webpreviews.site",
+      "dream-drive-varna": {
+        "canonicalOrigin": "https://dream-drive-varna.webpreviews.site",
         "ukDefault": false
       },
-      "monarh-varna": {
-        "canonicalOrigin": "https://monarh-varna.webpreviews.site",
+      "prestige-varna": {
+        "canonicalOrigin": "https://prestige-varna.webpreviews.site",
+        "ukDefault": false
+      },
+      "sunny-varna": {
+        "canonicalOrigin": "https://sunny-varna.webpreviews.site",
+        "ukDefault": false
+      },
+      "rqs-auto-team": {
+        "canonicalOrigin": "https://rqs-auto-team.webpreviews.site",
+        "ukDefault": false
+      },
+      "europa-varna": {
+        "canonicalOrigin": "https://evropavarna-varna.webpreviews.site",
+        "ukDefault": false
+      },
+      "sprint-auto-varna": {
+        "canonicalOrigin": "https://sprint-varna.webpreviews.site",
+        "ukDefault": false
+      },
+      "avtoborsa-mania": {
+        "canonicalOrigin": "https://avtoborsa-mania.webpreviews.site",
+        "ukDefault": false
+      },
+      "evrocar-varna-09": {
+        "canonicalOrigin": "https://evrocarvarna09-varna.webpreviews.site",
         "ukDefault": false
       }
     }
