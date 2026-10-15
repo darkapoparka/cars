@@ -33,6 +33,6 @@ export const brand = {
   addressLine,
   address: "Варна, Владислав Варненчик, бул. „Цар Освободител“, втората автокъща след Тилком и Италмодалуче посока Аксаково",
   appointment: "Потвърдете работното време и огледа по телефона",
-  logo: "/registered-branding/onLight.png",
-  logoOnDark: "/registered-branding/onDark.png"
+  logo: "/dealer-brand/v2-7cf90fc8e0bfbac0/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-7cf90fc8e0bfbac0/logo-on-dark.webp"
 } as const satisfies BrandConfig;

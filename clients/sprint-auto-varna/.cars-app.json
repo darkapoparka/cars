@@ -3,17 +3,17 @@
   "dealer": "sprint-auto-varna",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/app",
-    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1",
-    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76"
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
   },
-  "appDigest": "fa99c5bc92c585a7d2ea2b21b6bcf31191a96e4eeff1ee15f3f1b96ffdb25572",
+  "appDigest": "d1659f8715fd203db48a3d0971b1fb4ce73389ddf0afd2287d062acbea86319a",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "sprint-auto-varna",
     "profile": "auto-best/src/lib/data/dealer-profile.json",
-    "profileSha256": "1e71ba9f8fc83f80f6242c4b3e1dd034e52c6bb8b00d6590eaa7fa052399c14d",
+    "profileSha256": "3f835162948a95822e8955861c219ac41c7c9c043b69cd0df81ebf0e645cf877",
     "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
     "vehicles": 7,
     "currency": "EUR",
@@ -121,5 +121,5 @@
   },
   "needsDealerQA": true,
   "readyToPublish": false,
-  "refreshedAt": "2026-10-13T23:09:51.954Z"
+  "refreshedAt": "2026-10-15T06:12:34.178Z"
 }

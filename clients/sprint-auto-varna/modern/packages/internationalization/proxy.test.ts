@@ -68,7 +68,7 @@ describe("native URL locale contract", () => {
     "/api/ai/search",
     "/_next/static/a.js",
     "/images/car.webp",
-    "/dealer-brand/v2-7a86e1262e7c5d63/logo-on-light.webp",
+    "/dealer-brand/v2-7cf90fc8e0bfbac0/logo-on-light.webp",
   ])("preserves resource %s", (path) => {
     expect(handler(request(path)).headers.get("location")).toBeNull();
   });

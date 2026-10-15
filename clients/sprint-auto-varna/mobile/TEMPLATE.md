@@ -44,16 +44,18 @@ close and option targets on small screens.
 The bottom navigation is a centered floating Cars / Services / Contact dock,
 capped at 204px with at least 16px side gutters, 24px corners and a restrained
 shadow. At normal text size it is 48px tall. The three equal-width links retain
-their positions across routes and show a small icon above a persistent label.
-Visible localized text provides each link's accessible name; decorative SVGs
-are hidden from assistive technology. The active destination has a subtle
-neutral fill and stronger text color.
+their positions across routes and show a 28px illustrated icon without visible
+labels. Localized `aria-label` and `title` attributes identify each link;
+decorative images are hidden from assistive technology. The active destination
+has a subtle neutral fill and its icon uses full opacity.
 Links have at least 44px height,
 retain their keyboard focus rings, and use `aria-current`.
-The existing Lucide package supplies 20px car-front, service-grid and message
-glyphs with a consistent 1.8px stroke. Labels use 0.75rem text and may wrap
-when enlarged. The preceding cutout experiment remains archived locally,
-outside the runtime assets.
+The transparent car, wrench and speech-bubble artwork was generated as one
+matching neutral silver set. Its raster master and 64px lossless WebP derivatives
+live in `public/navigation/dock/`. Run `node scripts/prepare-dock-assets.mjs` to
+recreate the derivatives from the retained master. Desktop keeps its existing
+labeled Lucide navigation. The preceding cutout experiment remains archived
+locally, outside the runtime assets.
 The dock floats 10px
 above the bottom safe area; page clearance and toast offsets
 account for its height. Vehicle detail retains its own enquiry footer.
@@ -143,9 +145,12 @@ controls, cards, information surfaces and overlays; `colors.controlSurface` for
 fields and secondary actions. Inactive quick-filter
 pills use the white page token with a faint border and no shadow. Applied or selected pills invert the
 existing text/page tokens for a near-black fill and white text; their border
-matches the fill, without a shadow. Phone Cars and Services quick pills share compact white 36px faces and 14px
-labels inside 48px tap targets, with the same geometry when selected. Desktop inventory pills use
-38px faces and 44px targets. Their flat presentation keeps them secondary to
+matches the fill, without a shadow. Phone Cars and Services quick pills share compact 36px faces and 16px
+labels inside 48px tap targets, with the same geometry when selected.
+Phone Sort uses a 20px arrow icon with a 2px stroke in a 36px circle, inside a 44 x 48px button.
+The accepted sizes and final captures are recorded in the
+[14 October UI baseline](../../docs/mobile-ui-baseline-2026-10-14/README.md).
+Desktop inventory pills use 38px faces and 44px targets. Their flat presentation keeps them secondary to
 search and category navigation.
 Tab rails use the same page
 or sheet surface token. No route adds its own neutral palette. The centered desktop
@@ -358,7 +363,7 @@ width on desktop. Services distributes its
 three categories equally across the viewport, allowing labels to wrap at larger
 text sizes. The wider indicator follows the retained native search reference.
 Home and service pills sit on the same white canvas as the listings below.
-Their compact white outlined faces use 14px text inside 48px targets. Selected pills
+Their compact faces use 16px text on phones inside 48px targets. Selected pills
 use a near-black fill with white labels and icons.
 Vehicle category assets use contained 64 x 40 boxes in 88px-wide tabs, retaining
 the 52px rail height and horizontal scrolling. Their original pixels and alpha
