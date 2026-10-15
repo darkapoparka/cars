@@ -3,16 +3,16 @@
   "mode": "existing-migration",
   "sourceRevision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
   "dealers": [
-    "garage24-varna",
-    "mgauto-varna",
-    "kris-varna",
-    "grand-auto-varna",
-    "focus1-varna",
-    "abcbulgaria-varna",
-    "autostar21-varna",
-    "buscenter-varna",
-    "bavaro-varna",
-    "bora-car-varna"
+    "dm-auto-varna",
+    "kolarov-cars",
+    "car-point-trade-varna",
+    "pm-select-automotive",
+    "dynamic-auto-varna",
+    "prime-auto-varna",
+    "city-cars-varna",
+    "triumf-varna",
+    "wildivaka-varna",
+    "autojo-di-varna"
   ],
   "targets": [
     "auto-best",
@@ -25,47 +25,47 @@
   ],
   "composition": {
     "reviewed": true,
-    "reviewedAt": "2026-10-15T04:13:54.356Z",
+    "reviewedAt": "2026-10-15T04:26:09.313Z",
     "reviewScope": "Owner-authorized final six-template refresh of existing Cloudflare identities. All selected dealer source trees are actually published on Cars MAIN; preserve native palettes, factual stock/contacts/locales, selected logos, one existing Worker and its existing canonical exposure. Private source MAIN and hosted acceptance are recorded separately.",
     "canonicalCompositions": {
-      "garage24-varna": {
-        "canonicalOrigin": "https://garage24-varna.webpreviews.site",
+      "dm-auto-varna": {
+        "canonicalOrigin": "https://dm-auto-varna.webpreviews.site",
         "ukDefault": false
       },
-      "mgauto-varna": {
-        "canonicalOrigin": "https://mgauto-varna.webpreviews.site",
+      "kolarov-cars": {
+        "canonicalOrigin": "https://kolarov-cars.webpreviews.site",
         "ukDefault": false
       },
-      "kris-varna": {
-        "canonicalOrigin": "https://kris-varna.webpreviews.site",
+      "car-point-trade-varna": {
+        "canonicalOrigin": "https://car-point-trade-varna.webpreviews.site",
         "ukDefault": false
       },
-      "grand-auto-varna": {
-        "canonicalOrigin": "https://grand-auto-varna.webpreviews.site",
+      "pm-select-automotive": {
+        "canonicalOrigin": "https://pm-select-automotive.webpreviews.site",
         "ukDefault": false
       },
-      "focus1-varna": {
-        "canonicalOrigin": "https://focus1-varna.webpreviews.site",
+      "dynamic-auto-varna": {
+        "canonicalOrigin": "https://dynamic-auto-varna.webpreviews.site",
         "ukDefault": false
       },
-      "abcbulgaria-varna": {
-        "canonicalOrigin": "https://abcbulgaria-varna.webpreviews.site",
+      "prime-auto-varna": {
+        "canonicalOrigin": "https://prime-auto-varna.webpreviews.site",
         "ukDefault": false
       },
-      "autostar21-varna": {
-        "canonicalOrigin": "https://autostar21-varna.webpreviews.site",
+      "city-cars-varna": {
+        "canonicalOrigin": "https://city-cars-varna.webpreviews.site",
         "ukDefault": false
       },
-      "buscenter-varna": {
-        "canonicalOrigin": "https://buscenter-varna.webpreviews.site",
+      "triumf-varna": {
+        "canonicalOrigin": "https://triumf-varna.webpreviews.site",
         "ukDefault": false
       },
-      "bavaro-varna": {
-        "canonicalOrigin": "https://bavaro-varna.webpreviews.site",
+      "wildivaka-varna": {
+        "canonicalOrigin": "https://wildivaka-varna.webpreviews.site",
         "ukDefault": false
       },
-      "bora-car-varna": {
-        "canonicalOrigin": "https://bora-car-varna.webpreviews.site",
+      "autojo-di-varna": {
+        "canonicalOrigin": "https://autojo-di-varna.webpreviews.site",
         "ukDefault": false
       }
     }
