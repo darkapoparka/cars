@@ -155,7 +155,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "DreamCars77",
   "location": "ул. Прилеп 112, Варна, България",
-  "avatar": "/dealer-brand/v2-deffdfd0e989d2ca/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-174e7606a103b531/logo-on-light.webp",
   "mobile": "0895762847",
   "email": "contact@dreamcars77.com",
   "whatsapp": "",

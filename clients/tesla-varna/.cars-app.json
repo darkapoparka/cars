@@ -3,12 +3,12 @@
   "dealer": "tesla-varna",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/app",
-    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
-    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
   },
-  "appDigest": "fcd9d90b8895fdd71c05fe006626da7d41b0efb2ed5dfb1ac1ef570d20f4ae96",
+  "appDigest": "256d07e0f9bd82de7bdfffeb7a3bdd832ba2af81011258ddbb9e2c42702f2d25",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "tesla-varna",
@@ -21,26 +21,26 @@
     "assets": [
       {
         "source": "auto-best/static/dealer-brand/logo-on-light.png",
-        "output": "public/dealer-app/logo-light-8df308a200f8dee4377a.png",
-        "sha256": "8df308a200f8dee4377acec0a606f48f1966393b1ea572db3ac800ccb15dc6d7",
+        "output": "public/dealer-app/logo-light-8aa8b3f31c12e1acdb2f.png",
+        "sha256": "8aa8b3f31c12e1acdb2fce3639c4584c375b10cfce025c7f4185ddce6967e420",
         "role": "logo-light"
       },
       {
         "source": "auto-best/static/dealer-brand/logo-on-dark.png",
-        "output": "public/dealer-app/logo-dark-4ec69f6c248e6a57d0a2.png",
-        "sha256": "4ec69f6c248e6a57d0a2f414987a283241e54f5ec78ed15b01567a6080a74311",
+        "output": "public/dealer-app/logo-dark-31b951fb468cd776bf49.png",
+        "sha256": "31b951fb468cd776bf499271933acaa04596ca038d782e5742f57ea9d98474c4",
         "role": "logo-dark"
-      },
-      {
-        "source": "auto-best/static/dealer-stock/11791701219612494-2.webp",
-        "output": "public/dealer-app/vehicle-9444105e8a04e0e158b6.webp",
-        "sha256": "9444105e8a04e0e158b6ab2f6dff20906d42398ef2146c0343f521e6f2c3e987",
-        "role": "vehicle"
       },
       {
         "source": "auto-best/static/dealer-stock/11791701219612494-1.webp",
         "output": "public/dealer-app/vehicle-09756aa4feed5033f1d3.webp",
         "sha256": "09756aa4feed5033f1d3d81898e2e14c50de1beb1fc221430fb253bdbde98123",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11791701219612494-2.webp",
+        "output": "public/dealer-app/vehicle-9444105e8a04e0e158b6.webp",
+        "sha256": "9444105e8a04e0e158b6ab2f6dff20906d42398ef2146c0343f521e6f2c3e987",
         "role": "vehicle"
       }
     ],
@@ -54,5 +54,6 @@
     ]
   },
   "needsDealerQA": true,
-  "readyToPublish": false
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-15T03:15:50.922Z"
 }

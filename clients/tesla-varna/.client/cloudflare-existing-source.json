@@ -2,16 +2,16 @@
   "schemaVersion": 1,
   "dealer": "tesla-varna",
   "kind": "personalized-source-candidate-not-an-approved-release",
-  "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
-  "candidateSourceDigest": "eda967873ae56d813be3c8c539b5b77c79b62724824687e919e091fd2665bff5",
+  "sourceRevision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+  "candidateSourceDigest": "623cab51bd41a078c90c6943049e935a84ed467a42509a21591379808a2c97f1",
   "qualificationContextPath": ".client/native-qualification-context.json",
-  "qualificationContextSha256": "6f47c3c252dcec15f7430abaca115b18fb63ecc6b0c716f755781c434f65fb77",
+  "qualificationContextSha256": "2dc83263cb8ecde88d446d95edf7fe5a6eed31e45703a37f633f5faf0d45b375",
   "qualificationLockPath": ".client/native-qualification-lock.json",
-  "qualificationLockSha256": "c28d29acdf39709d38737a972eeb2a1d000cfb1cd96de587c38effd764386ac1",
+  "qualificationLockSha256": "04633129df9e75d6cd62deeac9125b279957789d75f57cdb0b243ef61bfc3e7e",
   "sourceDeltaReview": {
-    "reference": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
-    "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975",
-    "reviewedAt": "2026-10-11T21:04:02.173Z"
+    "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
+    "sha256": "43cb6876e815a2a6b866f1dadd304236de4ae58c05fe65c2ab62a23506ee7ce9",
+    "reviewedAt": "2026-10-14T23:55:37.398Z"
   },
   "nativeApproval": false,
   "hostedApproval": false

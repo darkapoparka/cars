@@ -33,6 +33,6 @@ export const brand = {
   addressLine,
   address: "ул. Прилеп 112, Варна, България",
   appointment: "Потвърдете работното време директно с автокъщата.",
-  logo: "/dealer-brand/v2-deffdfd0e989d2ca/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/v2-deffdfd0e989d2ca/logo-on-dark.webp"
+  logo: "/dealer-brand/v2-174e7606a103b531/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-174e7606a103b531/logo-on-dark.webp"
 } as const satisfies BrandConfig;

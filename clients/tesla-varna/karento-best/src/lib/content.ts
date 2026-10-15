@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "DreamCars77",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-deffdfd0e989d2ca/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-deffdfd0e989d2ca/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-deffdfd0e989d2ca/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-174e7606a103b531/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-174e7606a103b531/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-174e7606a103b531/logo-on-dark.webp",
     "alt": "DreamCars77",
-    "favicon": "/dealer-brand/v2-deffdfd0e989d2ca/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-174e7606a103b531/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

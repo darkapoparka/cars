@@ -50,7 +50,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "DreamCars77",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-deffdfd0e989d2ca/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-174e7606a103b531/logo-on-light.webp"
     },
     "publishedAt": "2026-10-11T09:00:00.000Z",
     "promoted": true
