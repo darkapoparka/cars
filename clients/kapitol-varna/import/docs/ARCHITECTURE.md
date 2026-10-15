@@ -160,6 +160,22 @@ The separately requested mobile About trial opts into the retained `--bc-editori
 
 About supplies `TeamMemberCard`'s optional `action` from its configured contact destination and typed BG/EN label. It composes the shared `Action` with the same 36px black pill treatment as Services, visible on both desktop and mobile. `aboutProcessArtwork` in `content/about-page.ts` maps the existing four process steps to the neutral request, inspection, comparison and handover family in `static/assets/process/`. This family contains no dealer branding in the images; the original branded files remain preserved for their other consumers. `DesktopProcess` still delegates its ordered list to `ProcessSteps`; the editorial artwork variant adds full-width photos, numbered markers and charcoal captions, with four wide-desktop columns and two narrower columns. About's separate mobile composition opts into `mobileBanners`, showing the same assets in two columns above the team. Each composition gates its picture sources to its own breakpoint and uses the shared transparent fallback otherwise. Other process consumers retain their default composition. The complete built-in imagegen edit prompts and asset paths are recorded in [Neutral About process assets](assets/ABOUT-PROCESS-NEUTRAL-2026-10-04.json); [the original manifest](assets/ABOUT-PROCESS-2026-10-04.json) retains the earlier provenance.
 
+## Mobile vehicle reading
+
+`AuxeroVehicleMobilePdp.svelte` gives the image and rounded detail panel one native
+page scroll. The panel starts at the existing 34dvh anchor; its grip also supports
+free pointer dragging, without snap points. Lowering adds space above the panel,
+bounded by the photo frame and enough room for the summary/actions/tabs. Raising
+uses the same page scroll as reading the content; the tab body has no separate
+scroller. The grip keeps the existing painted position inside a 44px target and
+offers keyboard positioning and BG/EN instructions from `content/vehicle-mobile.ts`.
+Info, Specs and Extras stick below the safe-area-aware
+utility row. An intersection observer changes the utility row to an opaque compact
+header as the panel rises; CSS owns the positions. Switching a pinned tab starts its
+new content below the rail, using the actions' normal-flow position. Keyboard tab
+selection, gallery and enquiry overlays retain their focus and scroll restoration.
+Desktop keeps its separate composition. See [the focused receipt](mobile-pdp-scroll-2026-10-14-01a139e0/receipt.json).
+
 ## Deliberately retained legacy area
 
 Legacy account/agent and alternate-preview routes still use the Auxero compatibility modules. LegacyLayoutAssets isolates their CSS from the public route group. They are not dead files merely because the new storefront no longer imports them. Do not delete the renderer, .template-ref, licenses, or their assets until those last route consumers are migrated or explicitly retired with compatibility redirects. Native route dependencies are checked transitively by npm run check:architecture.

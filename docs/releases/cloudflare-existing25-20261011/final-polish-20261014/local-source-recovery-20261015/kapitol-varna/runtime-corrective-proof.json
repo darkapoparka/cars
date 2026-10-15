@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-explicit-local-combined-known-runtime-corrective-reseal-proof",
+  "checkedAt": "2026-10-15T11:03:53.081Z",
+  "dealer": "kapitol-varna",
+  "sourceRevision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+  "originalLocalRecovery": {
+    "file": "C:/Users/radev/AppData/Local/Temp/cars-cf-native-final-polish-20261014/local-source-recovery/exports/kapitol-varna/local-recovery-receipt.json",
+    "sha256": "44a4ceca3fe3681dac53c8c553982f8ba662f85c25f995b2f28491578e563fe7"
+  },
+  "originalPreparedTree": "83069bae5f4083f61d7203cdbeeb45a4e326b1ef",
+  "preparedTree": "9a91a04dab674e4cb2482c59a0c2de17f6aa3ea6",
+  "originalFailedKnownRuntimeProofs": [
+    {
+      "file": "C:/Users/radev/AppData/Local/Temp/cars-cf-native-final-polish-20261014/local-source-recovery/exports/kapitol-varna/pre-native-known-runtime-family-check.json",
+      "sha256": "aba92eba00ce1b6bf24f6153ab32b03d2efd55c38746a251bd31f41891ab5266"
+    },
+    {
+      "file": "C:/Users/radev/AppData/Local/Temp/cars-cf-native-final-polish-20261014/local-source-recovery/exports/kapitol-varna/known-runtime-family-check.json",
+      "sha256": "1836121cd8f6963fcaa4fcb33516b88438e14360b24b240768e112112a063cab"
+    },
+    {
+      "file": "C:/Users/radev/AppData/Local/Temp/cars-cf-native-final-polish-20261014/local-source-recovery/exports/kapitol-varna/mobile-header-binding-check.json",
+      "sha256": "ce11197ece03b56916909ce5a58b2b52b9a5e0eab184ffd8478c05fd7b195e44"
+    }
+  ],
+  "editorialProof": null,
+  "logoProof": {
+    "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/native13-modern-runtime/local-four-logo-companions/kapitol-varna/modern-only-companion-proof.json",
+    "sha256": "f048420a0775a44c2721afe54c0760c47d8c875cc195bf15baecaddb10036b0e"
+  },
+  "maintainedRecipe": {
+    "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-vercel-resume-20261015/wave-transport/prepare-editorial-source-reseals.mjs",
+    "sha256": "805d46d7357d66d91df4dc7ba73ad7ea1df5b787d05f2a56130574c1bc6d997d"
+  },
+  "maintainedChecks": {
+    "nativeQualification": true,
+    "app": true,
+    "extended": true,
+    "branding": true,
+    "sourcePatch": true
+  },
+  "sourcePathsChanged": [
+    ".cars-branding.json",
+    ".client/cloudflare-existing-source.json",
+    ".client/native-qualification-context.json",
+    "localization/adoption.json",
+    "modern/packages/marketplace/lead-site.ts"
+  ],
+  "allOtherSourceEntriesAndBytesUnchanged": true,
+  "authoritativeFactsUnchanged": true,
+  "stockUnchanged": true,
+  "allRasterAssetBytesUnchanged": true,
+  "sixMasterLocatorsUnchanged": true,
+  "mobileHeaderAndModernLayoutUnchanged": true,
+  "originalPreparationAndFailedCiEvidenceUnchanged": true,
+  "originalLocalIoAdaptation": {
+    "loader": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/final-recovery/failed-only-successor/restart-final-five/held-four-after-north-success/local-deduplicated-readonly-git-io-loader.mjs",
+      "sha256": "013eb946e31f6b1614ea5466c1d136646a162dfa26cd31c33d0db96386f8772d"
+    },
+    "originalModule": {
+      "path": "scripts/dealer-updates/pinned-template-source.mjs",
+      "blob": "f7c17ad9edf2ff6ab7667b1d9187fccc963239de",
+      "sha256": "ddebc01d008bf47407ee27756e78d15ddd4932f4361ac1706192fb7c148f04c3"
+    },
+    "adaptedModuleSha256": "1b5b5ecf036b8fa76a1cb28e203e7f03713fd98f56e039acea6f101b70496dff",
+    "before": "      files.set(entry.path, Buffer.from(bytes.subarray(start, end)));",
+    "after": "      const retained = globalThis.carsOrdinaryRamBlobCache?.get(objectId);\n      const body = bytes.subarray(start, end);\n      if (!Buffer.isBuffer(retained) || retained.length !== size || !retained.equals(body) || sha256(retained) !== sha256(body)) throw new Error(`Exact local immutable Git buffer differs: ${entry.path}`);\n      files.set(entry.path, retained);",
+    "onlyLocalGitIoAllocationChanged": true,
+    "initialAllOidBytesVerified": true,
+    "allGitEntryTypeSizeOidBatchAndTruncationChecksUnchanged": true,
+    "allSourceDigestChecksUnchanged": true,
+    "globalBufferUnmodified": true,
+    "originalSourceOidAuditBeforeExport": true
+  },
+  "originalInputOidAudit": {
+    "passed": true,
+    "objects": 14484
+  },
+  "nativeInputBefore": {
+    "digest": "52d25b226573ab194034e3b30ff2737ac4505fbcdfe0f59f5fff998ca5628817",
+    "files": 9142
+  },
+  "nativeInput": {
+    "digest": "9a87ab74769d2360c5e4e5a5bb94b7f879ac32a7e2c8fd437890f3e43488f942",
+    "files": 9142
+  },
+  "contextBeforeSha256": "9a386610421073ce340b2e5614c4d68a2468e25d03d089b92127e009343b9fd3",
+  "contextSha256": "5fb56a0432a0afe75c6d6fafd3bcdd169caab32bfb5127dab8d6b4acb7619e4a",
+  "sourcePatchSha256": "883b1f265cbd4a11ad94a8c7237ac4a130e89e66988d87e425233b409c6a4c0b",
+  "candidateSourceDigest": "a962dd85eb065b7f252e564aebf3950b7ac060aacb8ffb29d31c773f26165673",
+  "decodedUniqueRetainedBytes": 1687161662,
+  "gitObjectsRead": 12640,
+  "maximumDecodedBytes": 2147483648,
+  "fullOriginalMasterHydrations": 0,
+  "sourceCopies": 0,
+  "rasterCopies": 0,
+  "networkReads": 0,
+  "canonicalWorkspaceSourceWrites": 0,
+  "refWrites": 0,
+  "providerWrites": 0,
+  "builds": 0,
+  "firstAndSecondPreparationFinalizationsReexecuted": false,
+  "originalFactualRefreshSnapshotRetainedAsHistory": true,
+  "actualKnownFamilyPassStillRequired": true,
+  "ciExecution": false,
+  "sourceArtifact": null
+}

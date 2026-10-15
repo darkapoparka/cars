@@ -49,7 +49,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Капитол",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-83eda7a46f9497bd/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-81eca7c2156366dc/logo-on-light.webp"
     },
     "publishedAt": "2026-10-12T09:00:00.000Z",
     "promoted": true
@@ -101,7 +101,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Капитол",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-83eda7a46f9497bd/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-81eca7c2156366dc/logo-on-light.webp"
     },
     "publishedAt": "2026-10-12T09:00:00.000Z",
     "promoted": true

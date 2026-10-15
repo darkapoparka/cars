@@ -147,7 +147,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "Капитол",
   "location": "бул. Цар Освободител 236, Варна, България",
-  "avatar": "/dealer-brand/v2-83eda7a46f9497bd/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-81eca7c2156366dc/logo-on-light.webp",
   "mobile": "0878720052",
   "email": "",
   "whatsapp": "",

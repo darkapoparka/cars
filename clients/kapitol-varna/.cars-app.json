@@ -3,17 +3,17 @@
   "dealer": "kapitol-varna",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/app",
-    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1",
-    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76"
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
   },
-  "appDigest": "fbef20cec315bd8da06a733644008a7445a03f5aa1409bf4f4c59638f66065d0",
+  "appDigest": "78c158ace46400ae06a7d099b1a5c2aa72da48fda29ea673c83c2b0d59745f55",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "kapitol-varna",
     "profile": "auto-best/src/lib/data/dealer-profile.json",
-    "profileSha256": "f971150c875c93528ba20c459e9524d296721f7ac6c9d30e05f6d3017241395d",
+    "profileSha256": "70d6e8c9caf3a555862ebac31d778a3a393abc167d3f65311095f10c75face4c",
     "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
     "vehicles": 2,
     "currency": "EUR",
@@ -21,14 +21,14 @@
     "assets": [
       {
         "source": "auto-best/static/dealer-brand/logo-on-light.png",
-        "output": "public/dealer-app/logo-light-2f3d29ca67c82334182f.png",
-        "sha256": "2f3d29ca67c82334182f566297073b9b574fed044122f0f6c2fdbccc191a0ad9",
+        "output": "public/dealer-app/logo-light-abc965dfadce3a65c623.png",
+        "sha256": "abc965dfadce3a65c6237ee7b39ff4d0f18adcd30d96984cdd18af9b4b3ead18",
         "role": "logo-light"
       },
       {
         "source": "auto-best/static/dealer-brand/logo-on-dark.png",
-        "output": "public/dealer-app/logo-dark-f05b318cc167498af5b7.png",
-        "sha256": "f05b318cc167498af5b780960ab0eda43d22c92544fac91330b538265e18153e",
+        "output": "public/dealer-app/logo-dark-db70863f2ecfedbdc746.png",
+        "sha256": "db70863f2ecfedbdc746fc4319b13e8e51679c5ecd15830de39751d45902f54d",
         "role": "logo-dark"
       },
       {
@@ -73,5 +73,5 @@
   },
   "needsDealerQA": true,
   "readyToPublish": false,
-  "refreshedAt": "2026-10-13T21:08:47.748Z"
+  "refreshedAt": "2026-10-15T10:49:11.317Z"
 }

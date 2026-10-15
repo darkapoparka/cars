@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "Капитол",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-83eda7a46f9497bd/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-83eda7a46f9497bd/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-83eda7a46f9497bd/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-81eca7c2156366dc/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-81eca7c2156366dc/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-81eca7c2156366dc/logo-on-dark.webp",
     "alt": "Капитол",
-    "favicon": "/dealer-brand/v2-83eda7a46f9497bd/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-81eca7c2156366dc/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

@@ -32,7 +32,7 @@ export default function MiniVehicleCard({vehicle, green = false, featured = fals
     <Link href={href} {...stylex.props(s.body)}>
       <h3 {...stylex.props(s.title)}>{tx(vehicle.year)} {tx(displayMake(vehicle.make))} {tx(vehicle.model)}</h3>
       <p {...stylex.props(s.price)}>{vehicle.priceOnRequest ? tx('Price on request') : <><CurrencyLabel size={11} />{tx(formatPrice(vehicle.price))}</>}</p>
-      {hasPublishedMonthlyPayment(vehicle) ? <p {...stylex.props(s.monthly)}><CurrencyLabel size={10} />{tx(formatPrice(vehicle.monthly))}{tx("/mo* est.")}</p> : null}
+      {hasPublishedMonthlyPayment(vehicle) ? <p {...stylex.props(s.monthly)}><span {...stylex.props(s.srOnly)}><CurrencyLabel size={10}/></span>{tx(formatPrice(vehicle.monthly))}{tx("/mo* est.")}</p> : null}
     </Link>
     {error ? <p role="alert" {...stylex.props(s.error)}>{tx(error)}</p> : null}
   </article>;
@@ -54,6 +54,7 @@ const s = stylex.create({
   title: {display: 'block', minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', fontSize: 14, fontWeight: 500, lineHeight: '20px'},
   price: {display: 'flex', alignItems: 'center', gap: 1, marginTop: 6, fontSize: 15, fontWeight: 600, lineHeight: '21px', whiteSpace: 'nowrap'},
   monthly: {display: 'inline-flex', alignItems: 'center', gap: 1, marginTop: 2, color: '#626269', fontSize: 12, fontWeight: 400, lineHeight: '18px', whiteSpace: 'nowrap'},
+  srOnly: {position: 'absolute', width: 1, height: 1, padding: 0, margin: -1, overflow: 'hidden', clipPath: 'inset(50%)', whiteSpace: 'nowrap', borderWidth: 0},
   photoTier: {position: 'absolute', left: 6, bottom: 6, padding: '1px 4px', borderRadius: 4, backgroundColor: 'rgba(255,255,255,.94)'},
   error: {padding: 8, color: '#b42318', fontSize: 11, lineHeight: 1.4},
 });
