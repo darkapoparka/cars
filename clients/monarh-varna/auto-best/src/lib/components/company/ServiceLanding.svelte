@@ -54,12 +54,16 @@
   li { display: flex; align-items: baseline; gap: 12px; color: var(--dn-ink); font-size: var(--dn-text-meta); line-height: var(--dn-leading-body); }
   li span { display: grid; place-items: center; flex: 0 0 24px; height: 24px; border-radius: var(--dn-pill); background: var(--dn-surface-panel); color: var(--dn-ink); font-weight: var(--dn-weight-medium); }
   p { margin: 0; padding: 0 var(--dn-space-4) var(--dn-space-4); color: var(--dn-muted); font-size: var(--dn-text-caption); line-height: var(--dn-leading-body); }
+  @media (min-width: 992px) {
+    .dn-service-card { margin-top: calc(var(--dn-route-hero-control-top) - var(--dn-route-hero-height)); }
+    .dn-service-card :global(.dn-entry-card__title) { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  }
   @media (max-width: 767px) {
     .dn-service-landing { --dn-primary-action-surface: var(--dn-ink); --dn-primary-action-surface-hover: var(--dn-ink-hover); }
     .dn-service-landing--import { --dn-workflow-canvas: var(--dn-theme-hero-surface-mid); }
     .dn-service-landing { position: relative; isolation: isolate; min-height: 100svh; padding-bottom: calc(var(--dn-space-8) + var(--dn-space-2) + var(--dn-mobile-nav-height) + env(safe-area-inset-bottom)); }
     .dn-service-landing::before { content: ''; position: absolute; z-index: -1; inset: auto 0 0; height: min(400px, 100%); background-image: linear-gradient(var(--dn-mobile-canvas), color-mix(in srgb, var(--dn-mobile-canvas) 92%, transparent) 40%), var(--dn-service-backdrop); background-size: 100% 100%, auto 100%; background-position: center, left bottom; background-repeat: no-repeat; pointer-events: none; }
-    .dn-service-card { width: calc(100% - 24px); margin-top: -52px;  }
+    .dn-service-card { width: calc(100% - 24px); margin-top: calc(-1 * var(--dn-mobile-entry-overlap)); }
     .dn-service-faq { display: none; }
     .dn-service-guide { display: block; width: calc(100% - 24px); margin: var(--dn-space-3) auto 0; }
   }

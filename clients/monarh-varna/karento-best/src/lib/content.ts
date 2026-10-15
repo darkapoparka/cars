@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "Монарх",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-c58e3d9ad428ebfd/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-c58e3d9ad428ebfd/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-c58e3d9ad428ebfd/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-98723f7778d86794/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-98723f7778d86794/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-98723f7778d86794/logo-on-dark.webp",
     "alt": "Монарх",
-    "favicon": "/dealer-brand/v2-c58e3d9ad428ebfd/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-98723f7778d86794/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

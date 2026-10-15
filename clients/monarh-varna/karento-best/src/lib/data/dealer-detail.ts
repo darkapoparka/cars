@@ -86,7 +86,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Монарх",
       "location": "Бул. Цар Освободител, Варна, България",
-      "avatar": "/dealer-brand/v2-c58e3d9ad428ebfd/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-98723f7778d86794/logo-on-light.webp",
       "mobile": "0877277258\r\n0877796170",
       "email": "monarh@mail.bg",
       "whatsapp": "",
@@ -188,7 +188,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Монарх",
       "location": "Бул. Цар Освободител, Варна, България",
-      "avatar": "/dealer-brand/v2-c58e3d9ad428ebfd/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-98723f7778d86794/logo-on-light.webp",
       "mobile": "0877277258\r\n0877796170",
       "email": "monarh@mail.bg",
       "whatsapp": "",
