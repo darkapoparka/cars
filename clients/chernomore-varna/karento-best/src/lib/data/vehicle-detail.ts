@@ -147,7 +147,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "Черно море",
   "location": "Кръстовището на бул. Цар Освободител и бул. Константин и Фружин, Варна, България",
-  "avatar": "/dealer-brand/v2-f00c3e454420a624/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-f6b69418c0cdebde/logo-on-light.webp",
   "mobile": "0888596963, 052/560733",
   "email": "",
   "whatsapp": "",

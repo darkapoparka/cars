@@ -7,68 +7,81 @@
   "context": {
     "schemaVersion": 1,
     "kind": "cars-native-source-qualification-context",
-    "id": "fleet-additional-historical-new25-b1f0f56",
+    "id": "fleet-final-polish-20261014",
     "dealer": "chernomore-varna",
     "scope": "existing-dealer-pilot",
-    "sourceCommit": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "sourceCommit": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "reviewed": true,
-    "reviewedAt": "2026-10-12T11:33:45.393Z",
+    "reviewedAt": "2026-10-15T11:04:43.503Z",
     "qualificationOnly": true,
+    "approved": false,
     "nativeApproval": false,
     "hostedApproval": false,
     "globalReleaseApproval": false,
     "approvedLockSha256": "ecdfaf9599fbcbeadebc24de3b9aa1c7615a9a49e29d338e5e9a23427d405e26",
-    "candidateLockSha256": "89e11d6ae186b2f45439ba4bd4269a15d8fca8a9f732343aee01096be1229fa6",
+    "candidateLockSha256": "04633129df9e75d6cd62deeac9125b279957789d75f57cdb0b243ef61bfc3e7e",
     "sourceDeltaReview": {
-      "reference": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
-      "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975",
-      "reviewedAt": "2026-10-11T21:04:02.173Z"
+      "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
+      "sha256": "43cb6876e815a2a6b866f1dadd304236de4ae58c05fe65c2ab62a23506ee7ce9",
+      "reviewedAt": "2026-10-14T23:55:37.398Z"
     },
-    "pendingNativeChecks": [
-      "catalog-completeness",
-      "hardcoded-ui",
-      "native-routing",
-      "standalone-journeys",
-      "mounted-journeys",
-      "public-journeys",
-      "preferences-no-js",
-      "preferences-storage-disabled",
-      "preferences-races",
-      "request-isolation",
-      "security-write-blocking",
-      "assets-preserved"
-    ],
-    "pending": [
-      "Exact reviewed input publication commit and maintained public stock join required before source dispatch. Source-only qualification; native/hosted/owner acceptance remain pending."
-    ]
+    "sourceReview": {
+      "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-review.json",
+      "sha256": "27c6ce5dd17ee6e1b9f6a5b059a95d5e1dbe4200f61264fc50addeb7af89d984"
+    },
+    "dealerSourceRepair": {
+      "kind": "explicit-local-modern-selected-logo-alias-and-reference-correction",
+      "parentContextSha256": "d78b2abac161f99ffe7b661ef279c30c2c965f7382d509ec2cb2d4ff4c289625",
+      "originalLocalRecovery": {
+        "file": "C:/Users/radev/AppData/Local/Temp/cars-cf-native-final-polish-20261014/local-source-recovery/exports/chernomore-varna/local-recovery-receipt.json",
+        "sha256": "2394de6c06a0ba44d774a3a81b69cd0c80f4d6e229050c902984623533f09b29"
+      },
+      "baseSourceCommit": "03b7a9f8c3e8238f91eea3a43be92901f9e9982b",
+      "baseSourceTree": "96650b8b3a223cf2d228b01db9217bc0e4816e08",
+      "baseTreeIsUnpublishedLocalCandidate": true,
+      "changedDesigns": [
+        "modern"
+      ],
+      "editorialProof": null,
+      "logoProof": {
+        "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/native13-modern-runtime/local-four-logo-companions/chernomore-varna/modern-only-companion-proof.json",
+        "sha256": "c5e335ad93ed621a1ea993dca7c225766a0602470b637f8ce400dc946c0cd06f"
+      },
+      "companionPaths": [
+        {
+          "path": "modern/packages/marketplace/lead-site.ts",
+          "beforeBlob": "03665eac0826524c900bad7ff4fd217510ccd12a",
+          "afterBlob": "0ac4b609376a2adbdc241831057123d477c04913"
+        },
+        {
+          "path": ".cars-branding.json",
+          "beforeBlob": "ad6bf75d97222ba847bac4fafaa717987ae7f661",
+          "afterBlob": "b97bfbeac1b13356c8912ce886ac32a8acbc2339"
+        }
+      ],
+      "receiptReseals": [],
+      "originalExecutionRemainsLocal": true,
+      "noCiArtifactOrSuccessClaim": true
+    }
   },
-  "contextDigest": "de0edaa76b88c0d7b1aa26c7247853da51ed4bba6f0970ba7d464fdf415273ab",
+  "contextDigest": "22517cf5971cccfdd52a4a3b6a5e52fef6544be076e9efd1af3768d2751646fe",
   "releases": {
     "auto-best": {
-      "repository": "darkapoparka/cars",
       "status": "qualification",
-      "commit": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
-      "release": "auto-best-b1f0f56-source-qualification-2026-10-12",
-      "snapshotPath": "templates/auto-best",
-      "digest": "dcbc59990928884006652677d3529020df3844029993895a71e5f6818ba7363c",
-      "exportPolicy": "cars-source-v1",
+      "repository": "darkapoparka/cars",
+      "commit": "bb173c33d7b640502ad2e4bf27546748c12858b8",
       "source": {
         "repository": "darkapoparka/cars",
-        "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+        "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
         "path": "templates/auto-best",
-        "tree": "5fb7a2164775050a47c1183371622295dbf63725",
-        "digest": "dcbc59990928884006652677d3529020df3844029993895a71e5f6818ba7363c"
+        "tree": "78fa1a82eca14816449f9588283260840ee94f52",
+        "digest": "2fc9c3cfc9cf1976dbe30c08592776362e5bcc6b09e8b06620e57c4406df58a5"
       },
-      "runtime": {
-        "node": "22.20.0"
-      },
-      "modes": {
-        "standalone": "Recorded focused owner checks only; current complete acceptance pending.",
-        "mounted": "Priselci qualification pilot pending",
-        "dealer": "Reviewed Priselci-only source qualification; hosted pilot pending"
-      },
+      "snapshotPath": "templates/auto-best",
+      "digest": "2fc9c3cfc9cf1976dbe30c08592776362e5bcc6b09e8b06620e57c4406df58a5",
+      "exportPolicy": "cars-source-v1",
       "qualification": {
-        "contextId": "fleet-additional-historical-new25-b1f0f56",
+        "contextId": "fleet-final-polish-20261014",
         "sourceQA": {
           "approvedRelease": {
             "repository": "darkapoparka/cars",
@@ -537,9 +550,9 @@
           "verifiedAt": "2026-10-10T17:33:58.141Z"
         },
         "sourceDeltaReview": {
-          "reference": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
-          "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975",
-          "reviewedAt": "2026-10-11T21:04:02.173Z"
+          "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
+          "sha256": "43cb6876e815a2a6b866f1dadd304236de4ae58c05fe65c2ab62a23506ee7ce9",
+          "reviewedAt": "2026-10-14T23:55:37.398Z"
         },
         "catalogs": [
           {
@@ -548,49 +561,25 @@
             "en": "en",
             "bg": "bg"
           }
-        ],
-        "pendingNativeChecks": [
-          "catalog-completeness",
-          "hardcoded-ui",
-          "native-routing",
-          "standalone-journeys",
-          "mounted-journeys",
-          "public-journeys",
-          "preferences-no-js",
-          "preferences-storage-disabled",
-          "preferences-races",
-          "request-isolation",
-          "security-write-blocking",
-          "assets-preserved"
-        ],
-        "sourceState": "published-final-owner-source"
+        ]
       }
     },
     "modern": {
-      "repository": "darkapoparka/cars",
       "status": "qualification",
-      "commit": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
-      "release": "modern-b1f0f56-source-qualification-2026-10-12",
-      "snapshotPath": "templates/modern",
-      "digest": "ba263aac8f1863d133807d3e1bf3597d125cf315a7e0deba3f6e419b52434c25",
-      "exportPolicy": "cars-source-v1",
+      "repository": "darkapoparka/cars",
+      "commit": "bb173c33d7b640502ad2e4bf27546748c12858b8",
       "source": {
         "repository": "darkapoparka/cars",
-        "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+        "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
         "path": "templates/modern",
-        "tree": "3974380670eb388bb16182f94ade33be6d87b1c1",
-        "digest": "ba263aac8f1863d133807d3e1bf3597d125cf315a7e0deba3f6e419b52434c25"
+        "tree": "01eac7390fa6ba951d4b8d4c26159a9be150f6c8",
+        "digest": "30e1a99f857cc25e4d78c9459cfb4394a9f70c5b114196a5ca6325ff38823b4b"
       },
-      "runtime": {
-        "node": "22.x"
-      },
-      "modes": {
-        "standalone": "Recorded focused owner checks only; current complete acceptance pending.",
-        "mounted": "Priselci qualification pilot pending",
-        "dealer": "Reviewed Priselci-only source qualification; hosted pilot pending"
-      },
+      "snapshotPath": "templates/modern",
+      "digest": "30e1a99f857cc25e4d78c9459cfb4394a9f70c5b114196a5ca6325ff38823b4b",
+      "exportPolicy": "cars-source-v1",
       "qualification": {
-        "contextId": "fleet-additional-historical-new25-b1f0f56",
+        "contextId": "fleet-final-polish-20261014",
         "sourceQA": {
           "approvedRelease": {
             "repository": "darkapoparka/cars",
@@ -1075,9 +1064,9 @@
           "verifiedAt": "2026-10-10T17:34:01.221Z"
         },
         "sourceDeltaReview": {
-          "reference": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
-          "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975",
-          "reviewedAt": "2026-10-11T21:04:02.173Z"
+          "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
+          "sha256": "43cb6876e815a2a6b866f1dadd304236de4ae58c05fe65c2ab62a23506ee7ce9",
+          "reviewedAt": "2026-10-14T23:55:37.398Z"
         },
         "catalogs": [
           {
@@ -1102,49 +1091,25 @@
             "path": "packages/marketplace-ui/lib/marketplace-control-copy.ts",
             "export": "copyByLanguage"
           }
-        ],
-        "pendingNativeChecks": [
-          "catalog-completeness",
-          "hardcoded-ui",
-          "native-routing",
-          "standalone-journeys",
-          "mounted-journeys",
-          "public-journeys",
-          "preferences-no-js",
-          "preferences-storage-disabled",
-          "preferences-races",
-          "request-isolation",
-          "security-write-blocking",
-          "assets-preserved"
-        ],
-        "sourceState": "published-final-owner-source"
+        ]
       }
     },
     "import": {
-      "repository": "darkapoparka/cars",
       "status": "qualification",
-      "commit": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
-      "release": "import-b1f0f56-source-qualification-2026-10-12",
-      "snapshotPath": "templates/import",
-      "digest": "f98a0934cdcc5adbda393c14c02eb2adc0175344ab2ac3f913afe4b0603366e5",
-      "exportPolicy": "cars-source-v1",
+      "repository": "darkapoparka/cars",
+      "commit": "bb173c33d7b640502ad2e4bf27546748c12858b8",
       "source": {
         "repository": "darkapoparka/cars",
-        "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+        "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
         "path": "templates/import",
-        "tree": "6afc6901e2f95967fb7c72e9f75525d4d6fbf086",
-        "digest": "f98a0934cdcc5adbda393c14c02eb2adc0175344ab2ac3f913afe4b0603366e5"
+        "tree": "d841ddfe5bec918bf6b2c19fd6971fecd6b8e54d",
+        "digest": "c7d6c93214e859aa2747af8f5e068b6a0b8ca095d6328c807728a4d531d688f8"
       },
-      "runtime": {
-        "node": "24.21.0"
-      },
-      "modes": {
-        "standalone": "Recorded focused owner checks only; current complete acceptance pending.",
-        "mounted": "Priselci qualification pilot pending",
-        "dealer": "Reviewed Priselci-only source qualification; hosted pilot pending"
-      },
+      "snapshotPath": "templates/import",
+      "digest": "c7d6c93214e859aa2747af8f5e068b6a0b8ca095d6328c807728a4d531d688f8",
+      "exportPolicy": "cars-source-v1",
       "qualification": {
-        "contextId": "fleet-additional-historical-new25-b1f0f56",
+        "contextId": "fleet-final-polish-20261014",
         "sourceQA": {
           "approvedRelease": {
             "repository": "darkapoparka/cars",
@@ -1632,9 +1597,9 @@
           "verifiedAt": "2026-10-10T17:34:09.318Z"
         },
         "sourceDeltaReview": {
-          "reference": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
-          "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975",
-          "reviewedAt": "2026-10-11T21:04:02.173Z"
+          "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
+          "sha256": "43cb6876e815a2a6b866f1dadd304236de4ae58c05fe65c2ab62a23506ee7ce9",
+          "reviewedAt": "2026-10-14T23:55:37.398Z"
         },
         "catalogs": [
           {
@@ -1665,22 +1630,7 @@
             "path": "src/lib/content/extra-localized.ts",
             "export": "extraEnglish"
           }
-        ],
-        "pendingNativeChecks": [
-          "catalog-completeness",
-          "hardcoded-ui",
-          "native-routing",
-          "standalone-journeys",
-          "mounted-journeys",
-          "public-journeys",
-          "preferences-no-js",
-          "preferences-storage-disabled",
-          "preferences-races",
-          "request-isolation",
-          "security-write-blocking",
-          "assets-preserved"
-        ],
-        "sourceState": "published-final-owner-source"
+        ]
       }
     }
   },
@@ -1694,8 +1644,8 @@
             "en": "en",
             "bg": "bg"
           },
-          "keys": 1128,
-          "contentDigest": "8d94222e5cb19fd41a5952d1af972f0b1d30a9362e4aba98cfdab7a12a123606"
+          "keys": 1151,
+          "contentDigest": "008b64a1934c63ff7be644f41498038deb427017910580a6f0d8fa74f37752eb"
         }
       ],
       "declaredCatalogParityPassed": true,
@@ -1783,8 +1733,8 @@
             "path": "src/lib/content/inventory-localized.ts",
             "export": "inventoryCopy"
           },
-          "keys": 122,
-          "contentDigest": "351eb39b2a6f109385eaf8d4f4b6cf1d13cb348ad2d398a6a0eee39e4d051576"
+          "keys": 124,
+          "contentDigest": "881a1db95e5eb485810cf8ca66c522e60d01be7576dba1a67c4e3bfca5457a3a"
         },
         {
           "descriptor": {
@@ -1801,8 +1751,8 @@
     }
   },
   "input": {
-    "digest": "4619a60d4deb05079906005e84d36318b4ed7921c5d88fc02dc9d6e48f2d3f74",
-    "files": 9052
+    "digest": "24101c6d64fc8e395e74f53b16b3091a8c23b0030bf58d941f0a783753bd3684",
+    "files": 9142
   },
   "nativeApproval": false,
   "hostedApproval": false,

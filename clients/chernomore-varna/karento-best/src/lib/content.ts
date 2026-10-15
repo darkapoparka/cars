@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "Черно море",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-f00c3e454420a624/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-f00c3e454420a624/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-f00c3e454420a624/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-f6b69418c0cdebde/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-f6b69418c0cdebde/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-f6b69418c0cdebde/logo-on-dark.webp",
     "alt": "Черно море",
-    "favicon": "/dealer-brand/v2-f00c3e454420a624/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-f6b69418c0cdebde/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

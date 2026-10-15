@@ -3,17 +3,17 @@
   "dealer": "chernomore-varna",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/app",
-    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1",
-    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76"
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
   },
-  "appDigest": "591338b82f0e03244b02b6ce8c4c0759081ddf516d6020ef78ba6e2b5f6e35eb",
+  "appDigest": "4a6da9ffc452b76e9eb067bd0ad329f506e4dcad687f78c88fc4b5637a541096",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "chernomore-varna",
     "profile": "auto-best/src/lib/data/dealer-profile.json",
-    "profileSha256": "897e052f0e086ff00bd40dfc60bb1443151d4cef1aa4c3997cede4475bef8d2d",
+    "profileSha256": "cdf2c12691b9a1a889e02f202ae345c3a58d1ff1b1f387b7ee2d8b5d294a571d",
     "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
     "vehicles": 2,
     "currency": "EUR",
@@ -21,14 +21,14 @@
     "assets": [
       {
         "source": "auto-best/static/dealer-brand/logo-on-light.png",
-        "output": "public/dealer-app/logo-light-37a14cb576c390e023f2.png",
-        "sha256": "37a14cb576c390e023f27b4dd1fd21e16fb15ca80556ea69e730d6a776ea2a48",
+        "output": "public/dealer-app/logo-light-aa7f0518da012c144d11.png",
+        "sha256": "aa7f0518da012c144d1143b8b1b0f778aa6c2b4dc5748cf27dee0f64c3757be2",
         "role": "logo-light"
       },
       {
         "source": "auto-best/static/dealer-brand/logo-on-dark.png",
-        "output": "public/dealer-app/logo-dark-55c47593f8e9972aade7.png",
-        "sha256": "55c47593f8e9972aade71878cad7c29a2f23af582c5625a731162419deb48066",
+        "output": "public/dealer-app/logo-dark-735c7dc7a066c4cc3a37.png",
+        "sha256": "735c7dc7a066c4cc3a377fbbc7063675f0f13cfa66aa53deec8b08a20eca8482",
         "role": "logo-dark"
       },
       {
@@ -73,5 +73,5 @@
   },
   "needsDealerQA": true,
   "readyToPublish": false,
-  "refreshedAt": "2026-10-13T23:03:31.652Z"
+  "refreshedAt": "2026-10-15T10:58:31.463Z"
 }

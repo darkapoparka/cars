@@ -33,6 +33,6 @@ export const brand = {
   addressLine,
   address: "Кръстовището на бул. Цар Освободител и бул. Константин и Фружин, Варна, България",
   appointment: "Потвърдете работното време директно с автокъщата.",
-  logo: "/dealer-brand/v2-f00c3e454420a624/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/v2-f00c3e454420a624/logo-on-dark.webp"
+  logo: "/dealer-brand/v2-f6b69418c0cdebde/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-f6b69418c0cdebde/logo-on-dark.webp"
 } as const satisfies BrandConfig;

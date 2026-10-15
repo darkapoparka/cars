@@ -6,7 +6,7 @@
   "scope": "existing-dealer-pilot",
   "sourceCommit": "bb173c33d7b640502ad2e4bf27546748c12858b8",
   "reviewed": true,
-  "reviewedAt": "2026-10-14T23:56:34.182Z",
+  "reviewedAt": "2026-10-15T11:04:43.503Z",
   "qualificationOnly": true,
   "approved": false,
   "nativeApproval": false,
@@ -22,5 +22,39 @@
   "sourceReview": {
     "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-review.json",
     "sha256": "27c6ce5dd17ee6e1b9f6a5b059a95d5e1dbe4200f61264fc50addeb7af89d984"
+  },
+  "dealerSourceRepair": {
+    "kind": "explicit-local-modern-selected-logo-alias-and-reference-correction",
+    "parentContextSha256": "d78b2abac161f99ffe7b661ef279c30c2c965f7382d509ec2cb2d4ff4c289625",
+    "originalLocalRecovery": {
+      "file": "C:/Users/radev/AppData/Local/Temp/cars-cf-native-final-polish-20261014/local-source-recovery/exports/chernomore-varna/local-recovery-receipt.json",
+      "sha256": "2394de6c06a0ba44d774a3a81b69cd0c80f4d6e229050c902984623533f09b29"
+    },
+    "baseSourceCommit": "03b7a9f8c3e8238f91eea3a43be92901f9e9982b",
+    "baseSourceTree": "96650b8b3a223cf2d228b01db9217bc0e4816e08",
+    "baseTreeIsUnpublishedLocalCandidate": true,
+    "changedDesigns": [
+      "modern"
+    ],
+    "editorialProof": null,
+    "logoProof": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/native13-modern-runtime/local-four-logo-companions/chernomore-varna/modern-only-companion-proof.json",
+      "sha256": "c5e335ad93ed621a1ea993dca7c225766a0602470b637f8ce400dc946c0cd06f"
+    },
+    "companionPaths": [
+      {
+        "path": "modern/packages/marketplace/lead-site.ts",
+        "beforeBlob": "03665eac0826524c900bad7ff4fd217510ccd12a",
+        "afterBlob": "0ac4b609376a2adbdc241831057123d477c04913"
+      },
+      {
+        "path": ".cars-branding.json",
+        "beforeBlob": "ad6bf75d97222ba847bac4fafaa717987ae7f661",
+        "afterBlob": "b97bfbeac1b13356c8912ce886ac32a8acbc2339"
+      }
+    ],
+    "receiptReseals": [],
+    "originalExecutionRemainsLocal": true,
+    "noCiArtifactOrSuccessClaim": true
   }
 }

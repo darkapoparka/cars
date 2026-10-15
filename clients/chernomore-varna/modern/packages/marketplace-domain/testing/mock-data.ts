@@ -49,7 +49,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Черно море",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-f00c3e454420a624/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-f6b69418c0cdebde/logo-on-light.webp"
     },
     "publishedAt": "2026-10-12T09:00:00.000Z",
     "promoted": true
@@ -101,7 +101,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Черно море",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-f00c3e454420a624/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-f6b69418c0cdebde/logo-on-light.webp"
     },
     "publishedAt": "2026-10-12T09:00:00.000Z",
     "promoted": true
