@@ -118,7 +118,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "ELIQ AUTO",
       "location": "ул. Свобода, на гърба на Гробищен парк, Пазарджик",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-b9c4f7939487513f/logo-on-light.webp",
       "mobile": "0896 781 662",
       "email": "",
       "whatsapp": "",
@@ -244,7 +244,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "ELIQ AUTO",
       "location": "ул. Свобода, на гърба на Гробищен парк, Пазарджик",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-b9c4f7939487513f/logo-on-light.webp",
       "mobile": "0896 781 662",
       "email": "",
       "whatsapp": "",
@@ -370,7 +370,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "ELIQ AUTO",
       "location": "ул. Свобода, на гърба на Гробищен парк, Пазарджик",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-b9c4f7939487513f/logo-on-light.webp",
       "mobile": "0896 781 662",
       "email": "",
       "whatsapp": "",
@@ -504,7 +504,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "ELIQ AUTO",
       "location": "ул. Свобода, на гърба на Гробищен парк, Пазарджик",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-b9c4f7939487513f/logo-on-light.webp",
       "mobile": "0896 781 662",
       "email": "",
       "whatsapp": "",
@@ -638,7 +638,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "ELIQ AUTO",
       "location": "ул. Свобода, на гърба на Гробищен парк, Пазарджик",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-b9c4f7939487513f/logo-on-light.webp",
       "mobile": "0896 781 662",
       "email": "",
       "whatsapp": "",
@@ -772,7 +772,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "ELIQ AUTO",
       "location": "ул. Свобода, на гърба на Гробищен парк, Пазарджик",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-b9c4f7939487513f/logo-on-light.webp",
       "mobile": "0896 781 662",
       "email": "",
       "whatsapp": "",
@@ -906,7 +906,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "ELIQ AUTO",
       "location": "ул. Свобода, на гърба на Гробищен парк, Пазарджик",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-b9c4f7939487513f/logo-on-light.webp",
       "mobile": "0896 781 662",
       "email": "",
       "whatsapp": "",
@@ -1040,7 +1040,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "ELIQ AUTO",
       "location": "ул. Свобода, на гърба на Гробищен парк, Пазарджик",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-b9c4f7939487513f/logo-on-light.webp",
       "mobile": "0896 781 662",
       "email": "",
       "whatsapp": "",
@@ -1174,7 +1174,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "ELIQ AUTO",
       "location": "ул. Свобода, на гърба на Гробищен парк, Пазарджик",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-b9c4f7939487513f/logo-on-light.webp",
       "mobile": "0896 781 662",
       "email": "",
       "whatsapp": "",
@@ -1308,7 +1308,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "ELIQ AUTO",
       "location": "ул. Свобода, на гърба на Гробищен парк, Пазарджик",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-b9c4f7939487513f/logo-on-light.webp",
       "mobile": "0896 781 662",
       "email": "",
       "whatsapp": "",
@@ -1442,7 +1442,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "ELIQ AUTO",
       "location": "ул. Свобода, на гърба на Гробищен парк, Пазарджик",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-b9c4f7939487513f/logo-on-light.webp",
       "mobile": "0896 781 662",
       "email": "",
       "whatsapp": "",
@@ -1576,7 +1576,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "ELIQ AUTO",
       "location": "ул. Свобода, на гърба на Гробищен парк, Пазарджик",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-b9c4f7939487513f/logo-on-light.webp",
       "mobile": "0896 781 662",
       "email": "",
       "whatsapp": "",
@@ -1710,7 +1710,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "ELIQ AUTO",
       "location": "ул. Свобода, на гърба на Гробищен парк, Пазарджик",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-b9c4f7939487513f/logo-on-light.webp",
       "mobile": "0896 781 662",
       "email": "",
       "whatsapp": "",
@@ -1844,7 +1844,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "ELIQ AUTO",
       "location": "ул. Свобода, на гърба на Гробищен парк, Пазарджик",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-b9c4f7939487513f/logo-on-light.webp",
       "mobile": "0896 781 662",
       "email": "",
       "whatsapp": "",
@@ -1978,7 +1978,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "ELIQ AUTO",
       "location": "ул. Свобода, на гърба на Гробищен парк, Пазарджик",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-b9c4f7939487513f/logo-on-light.webp",
       "mobile": "0896 781 662",
       "email": "",
       "whatsapp": "",
@@ -2112,7 +2112,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "ELIQ AUTO",
       "location": "ул. Свобода, на гърба на Гробищен парк, Пазарджик",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-b9c4f7939487513f/logo-on-light.webp",
       "mobile": "0896 781 662",
       "email": "",
       "whatsapp": "",

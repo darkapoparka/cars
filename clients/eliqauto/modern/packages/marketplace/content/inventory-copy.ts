@@ -15,7 +15,7 @@ export const inventoryCopy = {
       ]
     },
     "bg": {
-      "description": "Audi A5 от 2014 г. със S Line и фейслифт. 245 к.с., дизел, автоматична скоростна кутия.",
+      "description": "Audi A5, 2014 г., S Line, фейслифт. 245 к.с., дизел, автоматична скоростна кутия.",
       "imageAlts": [
         "Audi A5 3.0TDI S LINE FACELIFT LED NAVI B&O ЛИЗИНГ 100%",
         "Audi A5 3.0TDI S LINE FACELIFT LED NAVI B&O ЛИЗИНГ 100%",
@@ -39,7 +39,7 @@ export const inventoryCopy = {
       ]
     },
     "bg": {
-      "description": "BMW 750 от 2017 г. с xDrive и дълга база. 450 к.с., бензин, автоматична скоростна кутия.",
+      "description": "BMW 750, 2017 г., xDrive, дълга база. 450 к.с., бензин, автоматична скоростна кутия.",
       "imageAlts": [
         "BMW 750 I LONG XDRIVE LED NAVI 360 B&W ЛИЗИНГ 100%",
         "BMW 750 I LONG XDRIVE LED NAVI 360 B&W ЛИЗИНГ 100%",
@@ -62,7 +62,7 @@ export const inventoryCopy = {
       ]
     },
     "bg": {
-      "description": "Mercedes-Benz S 500 от 2009 г. с фейслифт и дълга база. 388 к.с., бензин, автоматична скоростна кутия.",
+      "description": "Mercedes-Benz S 500, 2009 г., фейслифт, дълга база. 388 к.с., бензин, автоматична скоростна кутия.",
       "imageAlts": [
         "Mercedes-Benz S 500 LONG FACELIFT LED ПАНО H&K 3XTV ЛИЗИНГ 100%",
         "Mercedes-Benz S 500 LONG FACELIFT LED ПАНО H&K 3XTV ЛИЗИНГ 100%",
@@ -86,7 +86,7 @@ export const inventoryCopy = {
       ]
     },
     "bg": {
-      "description": "Mercedes-Benz CLA 200 от 2014 г. с AMG и фейслифт. 136 к.с., дизел, автоматична скоростна кутия.",
+      "description": "Mercedes-Benz CLA 200, 2014 г., AMG, фейслифт. 136 к.с., дизел, автоматична скоростна кутия.",
       "imageAlts": [
         "Mercedes-Benz CLA 200 D FACELIFT AMG LINE LED NAVI ЛИЗИНГ 100%",
         "Mercedes-Benz CLA 200 D FACELIFT AMG LINE LED NAVI ЛИЗИНГ 100%",
@@ -111,7 +111,7 @@ export const inventoryCopy = {
       ]
     },
     "bg": {
-      "description": "Mercedes-Benz S 560 от 2019 г. с AMG, фейслифт и дълга база. 469 к.с., бензин, автоматична скоростна кутия.",
+      "description": "Mercedes-Benz S 560, 2019 г., AMG, фейслифт, дълга база. 469 к.с., бензин, автоматична скоростна кутия.",
       "imageAlts": [
         "Mercedes-Benz S 560 LONG FACELIFT AMG LINE ПАНО BURM HUD ЛИЗИНГ 100%",
         "Mercedes-Benz S 560 LONG FACELIFT AMG LINE ПАНО BURM HUD ЛИЗИНГ 100%",
@@ -136,7 +136,7 @@ export const inventoryCopy = {
       ]
     },
     "bg": {
-      "description": "Mercedes-Benz S 400 от 2022 г. с AMG и дълга база. 330 к.с., дизел, автоматична скоростна кутия.",
+      "description": "Mercedes-Benz S 400, 2022 г., AMG, дълга база. 330 к.с., дизел, автоматична скоростна кутия.",
       "imageAlts": [
         "Mercedes-Benz S 400 D LONG AMG LINE LED ПАНО 5D BURM HUD ЛИЗИНГ 100%",
         "Mercedes-Benz S 400 D LONG AMG LINE LED ПАНО 5D BURM HUD ЛИЗИНГ 100%",
@@ -161,7 +161,7 @@ export const inventoryCopy = {
       ]
     },
     "bg": {
-      "description": "Audi A8 от 2020 г. с quattro и Matrix. 286 к.с., дизел, автоматична скоростна кутия.",
+      "description": "Audi A8, 2020 г., quattro, Matrix. 286 к.с., дизел, автоматична скоростна кутия.",
       "imageAlts": [
         "Audi A8 50TDI QUATTRO MATRIX ПАНО B&O 3XTV ЛИЗИНГ 100%",
         "Audi A8 50TDI QUATTRO MATRIX ПАНО B&O 3XTV ЛИЗИНГ 100%",
@@ -186,7 +186,7 @@ export const inventoryCopy = {
       ]
     },
     "bg": {
-      "description": "Mercedes-Benz GLS 450 от 2023 г. с AMG и 4MATIC. 367 к.с., бензин, автоматична скоростна кутия.",
+      "description": "Mercedes-Benz GLS 450, 2023 г., AMG, 4MATIC. 367 к.с., бензин, автоматична скоростна кутия.",
       "imageAlts": [
         "Mercedes-Benz GLS 450 I 4MATIC FULL AMG LINE LED ПАНО BURM ЛИЗИНГ 100%",
         "Mercedes-Benz GLS 450 I 4MATIC FULL AMG LINE LED ПАНО BURM ЛИЗИНГ 100%",
@@ -211,7 +211,7 @@ export const inventoryCopy = {
       ]
     },
     "bg": {
-      "description": "Mercedes-Benz E 220 от 2018 г. с AMG. 194 к.с., дизел, автоматична скоростна кутия.",
+      "description": "Mercedes-Benz E 220, 2018 г., AMG. 194 к.с., дизел, автоматична скоростна кутия.",
       "imageAlts": [
         "Mercedes-Benz E 220 D FULL AMG LINE LED ПАНО BURM 3XTV ЛИЗИНГ 100%",
         "Mercedes-Benz E 220 D FULL AMG LINE LED ПАНО BURM 3XTV ЛИЗИНГ 100%",
@@ -236,7 +236,7 @@ export const inventoryCopy = {
       ]
     },
     "bg": {
-      "description": "Mercedes-Benz GLS 450 от 2021 г. с 4MATIC и Maybach. 367 к.с., бензин, автоматична скоростна кутия.",
+      "description": "Mercedes-Benz GLS 450, 2021 г., 4MATIC, Maybach. 367 к.с., бензин, автоматична скоростна кутия.",
       "imageAlts": [
         "Mercedes-Benz GLS 450 I 4MATIC FULL MAYBACH ПАНО BURM 360 ЛИЗИНГ 100%",
         "Mercedes-Benz GLS 450 I 4MATIC FULL MAYBACH ПАНО BURM 360 ЛИЗИНГ 100%",
@@ -261,7 +261,7 @@ export const inventoryCopy = {
       ]
     },
     "bg": {
-      "description": "Mercedes-Benz AMG GT 53 от 2020 г. с 4MATIC+ и designo. 367 к.с., бензин, автоматична скоростна кутия.",
+      "description": "Mercedes-Benz AMG GT 53, 2020 г., 4MATIC+, designo. 367 к.с., бензин, автоматична скоростна кутия.",
       "imageAlts": [
         "Mercedes-Benz AMG GT 53 4MATIC+ LED DESIGNO BURM 360 ЛИЗИНГ 100%",
         "Mercedes-Benz AMG GT 53 4MATIC+ LED DESIGNO BURM 360 ЛИЗИНГ 100%",
@@ -286,7 +286,7 @@ export const inventoryCopy = {
       ]
     },
     "bg": {
-      "description": "BMW 750 от 2020 г. с xDrive и Black Fire Edition. 400 к.с., дизел, автоматична скоростна кутия.",
+      "description": "BMW 750, 2020 г., xDrive, Black Fire Edition. 400 к.с., дизел, автоматична скоростна кутия.",
       "imageAlts": [
         "BMW 750 D XDRIVE BLACK FIRE EDITION 1OF150 ЛИЗИНГ 100%",
         "BMW 750 D XDRIVE BLACK FIRE EDITION 1OF150 ЛИЗИНГ 100%",
@@ -311,7 +311,7 @@ export const inventoryCopy = {
       ]
     },
     "bg": {
-      "description": "Audi A8 от 2020 г. с Matrix и дълга база. 286 к.с., дизел, автоматична скоростна кутия.",
+      "description": "Audi A8, 2020 г., Matrix, дълга база. 286 к.с., дизел, автоматична скоростна кутия.",
       "imageAlts": [
         "Audi A8 50TDI LONG MATRIX ПАНО 3XTV B&O ЛИЗИНГ 100%",
         "Audi A8 50TDI LONG MATRIX ПАНО 3XTV B&O ЛИЗИНГ 100%",
@@ -336,7 +336,7 @@ export const inventoryCopy = {
       ]
     },
     "bg": {
-      "description": "Mercedes-Benz C 63 от 2017 г. с AMG и битурбо. 510 к.с., бензин, автоматична скоростна кутия.",
+      "description": "Mercedes-Benz C 63, 2017 г., AMG, biturbo. 510 к.с., бензин, автоматична скоростна кутия.",
       "imageAlts": [
         "Mercedes-Benz C 63 AMG S V8 BITURBO LED NAVI BURM ЛИЗИНГ 100%",
         "Mercedes-Benz C 63 AMG S V8 BITURBO LED NAVI BURM ЛИЗИНГ 100%",
@@ -361,7 +361,7 @@ export const inventoryCopy = {
       ]
     },
     "bg": {
-      "description": "BMW 330 от 2021 г. с M пакет, xDrive и фейслифт. 258 к.с., бензин, автоматична скоростна кутия.",
+      "description": "BMW 330, 2021 г., M-Pack, xDrive, фейслифт. 258 к.с., бензин, автоматична скоростна кутия.",
       "imageAlts": [
         "BMW 330 I XDRIVE M PACK FACELIFT LED NAVI ЛИЗИНГ 100%",
         "BMW 330 I XDRIVE M PACK FACELIFT LED NAVI ЛИЗИНГ 100%",
@@ -386,7 +386,7 @@ export const inventoryCopy = {
       ]
     },
     "bg": {
-      "description": "Audi A6 от 2012 г. с quattro и RS6 пакет. 245 к.с., дизел, автоматична скоростна кутия.",
+      "description": "Audi A6, 2012 г., quattro, RS6 pack. 245 к.с., дизел, автоматична скоростна кутия.",
       "imageAlts": [
         "Audi A6 3.0TDI QUATTRO FULL RS6 PACK LED NAVI ЛИЗИНГ 100%",
         "Audi A6 3.0TDI QUATTRO FULL RS6 PACK LED NAVI ЛИЗИНГ 100%",

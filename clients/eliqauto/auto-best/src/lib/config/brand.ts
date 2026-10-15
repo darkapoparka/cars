@@ -33,6 +33,6 @@ export const brand = {
   addressLine,
   address: "ул. Свобода, на гърба на Гробищен парк, Пазарджик",
   appointment: "Пон.–пет. 09:30–19:00 · Съб.–нед. 09:30–17:00 · Потвърдете огледа по телефона",
-  logo: "/dealer-brand/logo-on-light-20260919.webp",
-  logoOnDark: "/dealer-brand/logo-on-dark-20260919.webp"
+  logo: "/dealer-brand/v2-b9c4f7939487513f/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-b9c4f7939487513f/logo-on-dark.webp"
 } as const satisfies BrandConfig;

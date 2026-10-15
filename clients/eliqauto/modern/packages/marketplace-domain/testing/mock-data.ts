@@ -66,7 +66,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "ELIQ AUTO",
       "verificationStatus": "unverified",
       "city": "Пазарджик",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-b9c4f7939487513f/logo-on-light.webp"
     },
     "publishedAt": "2026-01-01T09:00:00.000Z",
     "promoted": true
@@ -131,7 +131,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "ELIQ AUTO",
       "verificationStatus": "unverified",
       "city": "Пазарджик",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-b9c4f7939487513f/logo-on-light.webp"
     },
     "publishedAt": "2026-01-01T09:00:00.000Z",
     "promoted": true
@@ -196,7 +196,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "ELIQ AUTO",
       "verificationStatus": "unverified",
       "city": "Пазарджик",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-b9c4f7939487513f/logo-on-light.webp"
     },
     "publishedAt": "2026-01-01T09:00:00.000Z",
     "promoted": true
@@ -265,7 +265,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "ELIQ AUTO",
       "verificationStatus": "unverified",
       "city": "Пазарджик",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-b9c4f7939487513f/logo-on-light.webp"
     },
     "publishedAt": "2026-01-01T09:00:00.000Z",
     "promoted": false
@@ -334,7 +334,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "ELIQ AUTO",
       "verificationStatus": "unverified",
       "city": "Пазарджик",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-b9c4f7939487513f/logo-on-light.webp"
     },
     "publishedAt": "2026-01-01T09:00:00.000Z",
     "promoted": false
@@ -403,7 +403,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "ELIQ AUTO",
       "verificationStatus": "unverified",
       "city": "Пазарджик",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-b9c4f7939487513f/logo-on-light.webp"
     },
     "publishedAt": "2026-01-01T09:00:00.000Z",
     "promoted": false
@@ -472,7 +472,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "ELIQ AUTO",
       "verificationStatus": "unverified",
       "city": "Пазарджик",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-b9c4f7939487513f/logo-on-light.webp"
     },
     "publishedAt": "2026-01-01T09:00:00.000Z",
     "promoted": false
@@ -541,7 +541,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "ELIQ AUTO",
       "verificationStatus": "unverified",
       "city": "Пазарджик",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-b9c4f7939487513f/logo-on-light.webp"
     },
     "publishedAt": "2026-01-01T09:00:00.000Z",
     "promoted": false
@@ -610,7 +610,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "ELIQ AUTO",
       "verificationStatus": "unverified",
       "city": "Пазарджик",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-b9c4f7939487513f/logo-on-light.webp"
     },
     "publishedAt": "2026-01-01T09:00:00.000Z",
     "promoted": false
@@ -679,7 +679,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "ELIQ AUTO",
       "verificationStatus": "unverified",
       "city": "Пазарджик",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-b9c4f7939487513f/logo-on-light.webp"
     },
     "publishedAt": "2026-01-01T09:00:00.000Z",
     "promoted": false
@@ -748,7 +748,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "ELIQ AUTO",
       "verificationStatus": "unverified",
       "city": "Пазарджик",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-b9c4f7939487513f/logo-on-light.webp"
     },
     "publishedAt": "2026-01-01T09:00:00.000Z",
     "promoted": false
@@ -817,7 +817,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "ELIQ AUTO",
       "verificationStatus": "unverified",
       "city": "Пазарджик",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-b9c4f7939487513f/logo-on-light.webp"
     },
     "publishedAt": "2026-01-01T09:00:00.000Z",
     "promoted": false
@@ -886,7 +886,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "ELIQ AUTO",
       "verificationStatus": "unverified",
       "city": "Пазарджик",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-b9c4f7939487513f/logo-on-light.webp"
     },
     "publishedAt": "2026-01-01T09:00:00.000Z",
     "promoted": false
@@ -955,7 +955,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "ELIQ AUTO",
       "verificationStatus": "unverified",
       "city": "Пазарджик",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-b9c4f7939487513f/logo-on-light.webp"
     },
     "publishedAt": "2026-01-01T09:00:00.000Z",
     "promoted": false
@@ -1024,7 +1024,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "ELIQ AUTO",
       "verificationStatus": "unverified",
       "city": "Пазарджик",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-b9c4f7939487513f/logo-on-light.webp"
     },
     "publishedAt": "2026-01-01T09:00:00.000Z",
     "promoted": false
@@ -1093,7 +1093,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "ELIQ AUTO",
       "verificationStatus": "unverified",
       "city": "Пазарджик",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-b9c4f7939487513f/logo-on-light.webp"
     },
     "publishedAt": "2026-01-01T09:00:00.000Z",
     "promoted": false

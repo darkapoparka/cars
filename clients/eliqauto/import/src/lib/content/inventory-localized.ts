@@ -1,6 +1,14 @@
 import type { Locale } from '$lib/locale/core';
 /** Dealer-owned listing descriptions and specification labels. Source facts are not mutated. */
 export const inventoryCopy = {
+	bmw740RearWheelSteering: {
+		bg: 'BMW 740 Завиващ заден мост',
+		en: 'BMW 740 Rear-wheel steering'
+	},
+	rearWheelSteering: {
+		bg: 'Завиващ заден мост',
+		en: 'Rear-wheel steering'
+	},
 	term0: {
 		bg: '4(5) Врати',
 		en: '4(5) doors'
@@ -479,72 +487,74 @@ export const inventoryCopy = {
 	}
 ,
 	"dealerStock_9ff3499aa92e28eb84f732029318a72dd65c8e948d2bae44e9415f7b99ce1c26": {
-		"bg": "Audi A5 от 2014 г. със S Line и фейслифт. 245 к.с., дизел, автоматична скоростна кутия.",
+		"bg": "Audi A5, 2014 г., S Line, фейслифт. 245 к.с., дизел, автоматична скоростна кутия.",
 		"en": "2014 Audi A5 with S Line, facelift. 245 hp, diesel, automatic transmission."
 	},
 	"dealerStock_c6d2a9d4defdc6709bd84df37bf2d347744c40033a87c9ff36ff4d0228160ee0": {
-		"bg": "BMW 750 от 2017 г. с xDrive и дълга база. 450 к.с., бензин, автоматична скоростна кутия.",
+		"bg": "BMW 750, 2017 г., xDrive, дълга база. 450 к.с., бензин, автоматична скоростна кутия.",
 		"en": "2017 BMW 750 with xDrive, long. 450 hp, petrol, automatic transmission."
 	},
 	"dealerStock_9c9a81976abab2553d438c408fb4cdb0d7438f9e8704ee2616a3da35128a7aaf": {
-		"bg": "Mercedes-Benz S 500 от 2009 г. с фейслифт и дълга база. 388 к.с., бензин, автоматична скоростна кутия.",
+		"bg": "Mercedes-Benz S 500, 2009 г., фейслифт, дълга база. 388 к.с., бензин, автоматична скоростна кутия.",
 		"en": "2009 Mercedes-Benz S 500 with facelift, long. 388 hp, petrol, automatic transmission."
 	},
 	"dealerStock_3084ffe59f7524e6c88366ef5c101c19e1a5efa2fca58c7fd591d3720e0641e9": {
-		"bg": "Mercedes-Benz CLA 200 от 2014 г. с AMG и фейслифт. 136 к.с., дизел, автоматична скоростна кутия.",
+		"bg": "Mercedes-Benz CLA 200, 2014 г., AMG, фейслифт. 136 к.с., дизел, автоматична скоростна кутия.",
 		"en": "2014 Mercedes-Benz CLA 200 with AMG, facelift. 136 hp, diesel, automatic transmission."
 	},
 	"dealerStock_21eee0f499fb8b8767a643e751a8957d85fae4231cc719191c94f33971e7502d": {
-		"bg": "Mercedes-Benz S 560 от 2019 г. с AMG, фейслифт и дълга база. 469 к.с., бензин, автоматична скоростна кутия.",
+		"bg": "Mercedes-Benz S 560, 2019 г., AMG, фейслифт, дълга база. 469 к.с., бензин, автоматична скоростна кутия.",
 		"en": "2019 Mercedes-Benz S 560 with AMG, facelift, long. 469 hp, petrol, automatic transmission."
 	},
 	"dealerStock_2048690ba96d7f3e5a559bb179391e5532d95b86a96cc687ebe7e9c89a7f22a4": {
-		"bg": "Mercedes-Benz S 400 от 2022 г. с AMG и дълга база. 330 к.с., дизел, автоматична скоростна кутия.",
+		"bg": "Mercedes-Benz S 400, 2022 г., AMG, дълга база. 330 к.с., дизел, автоматична скоростна кутия.",
 		"en": "2022 Mercedes-Benz S 400 with AMG, long. 330 hp, diesel, automatic transmission."
 	},
 	"dealerStock_fa56415be51c8d07c7c6dbde3dcecd528e77a01582d350c4cc34e7f7c2e4ac63": {
-		"bg": "Audi A8 от 2020 г. с quattro и Matrix. 286 к.с., дизел, автоматична скоростна кутия.",
+		"bg": "Audi A8, 2020 г., quattro, Matrix. 286 к.с., дизел, автоматична скоростна кутия.",
 		"en": "2020 Audi A8 with quattro, Matrix. 286 hp, diesel, automatic transmission."
 	},
 	"dealerStock_64041320755fcfb5cd2b0ff46478d24b262254d5a3073be4d5a6e4c7d42a4bcd": {
-		"bg": "Mercedes-Benz GLS 450 от 2023 г. с AMG и 4MATIC. 367 к.с., бензин, автоматична скоростна кутия.",
+		"bg": "Mercedes-Benz GLS 450, 2023 г., AMG, 4MATIC. 367 к.с., бензин, автоматична скоростна кутия.",
 		"en": "2023 Mercedes-Benz GLS 450 with AMG, 4MATIC. 367 hp, petrol, automatic transmission."
 	},
 	"dealerStock_80ddf131d1162225b13b19b7fa21ffc08d7e3e1ff63e523acb296bc929564017": {
-		"bg": "Mercedes-Benz E 220 от 2018 г. с AMG. 194 к.с., дизел, автоматична скоростна кутия.",
+		"bg": "Mercedes-Benz E 220, 2018 г., AMG. 194 к.с., дизел, автоматична скоростна кутия.",
 		"en": "2018 Mercedes-Benz E 220 with AMG. 194 hp, diesel, automatic transmission."
 	},
 	"dealerStock_d3f89818f44aa1a4b61ff92ecd521247c6ac0a8a1a7442dc49948f9a764a3601": {
-		"bg": "Mercedes-Benz GLS 450 от 2021 г. с 4MATIC и Maybach. 367 к.с., бензин, автоматична скоростна кутия.",
+		"bg": "Mercedes-Benz GLS 450, 2021 г., 4MATIC, Maybach. 367 к.с., бензин, автоматична скоростна кутия.",
 		"en": "2021 Mercedes-Benz GLS 450 with 4MATIC, Maybach. 367 hp, petrol, automatic transmission."
 	},
 	"dealerStock_2b86cc1d3bcba5619874c1cf8576d4c373dc50ac299d4b9b4a8f17df8069bdb7": {
-		"bg": "Mercedes-Benz AMG GT 53 от 2020 г. с 4MATIC+ и designo. 367 к.с., бензин, автоматична скоростна кутия.",
+		"bg": "Mercedes-Benz AMG GT 53, 2020 г., 4MATIC+, designo. 367 к.с., бензин, автоматична скоростна кутия.",
 		"en": "2020 Mercedes-Benz AMG GT 53 with 4MATIC+, designo. 367 hp, petrol, automatic transmission."
 	},
 	"dealerStock_9e23080ef64c70c27e17826b0907a5f2677e5ed0df1b855fae06ad0b44397ecb": {
-		"bg": "BMW 750 от 2020 г. с xDrive и Black Fire Edition. 400 к.с., дизел, автоматична скоростна кутия.",
+		"bg": "BMW 750, 2020 г., xDrive, Black Fire Edition. 400 к.с., дизел, автоматична скоростна кутия.",
 		"en": "2020 BMW 750 with xDrive, Black Fire Edition. 400 hp, diesel, automatic transmission."
 	},
 	"dealerStock_13de5dc34ebc37c2d320c66a43f2f6c87ad1543eff4940e839d6bc86f12efccc": {
-		"bg": "Audi A8 от 2020 г. с Matrix и дълга база. 286 к.с., дизел, автоматична скоростна кутия.",
+		"bg": "Audi A8, 2020 г., Matrix, дълга база. 286 к.с., дизел, автоматична скоростна кутия.",
 		"en": "2020 Audi A8 with Matrix, long. 286 hp, diesel, automatic transmission."
 	},
 	"dealerStock_faf4a338c6d2845b4914ab2245396f942b3f7409f64acc85a3075a6cbbdac4cd": {
-		"bg": "Mercedes-Benz C 63 от 2017 г. с AMG и битурбо. 510 к.с., бензин, автоматична скоростна кутия.",
+		"bg": "Mercedes-Benz C 63, 2017 г., AMG, biturbo. 510 к.с., бензин, автоматична скоростна кутия.",
 		"en": "2017 Mercedes-Benz C 63 with AMG, biturbo. 510 hp, petrol, automatic transmission."
 	},
 	"dealerStock_12dd965015e859d76bf8a4db28d6733789b199a4fa0a8d718603648082c37436": {
-		"bg": "BMW 330 от 2021 г. с M пакет, xDrive и фейслифт. 258 к.с., бензин, автоматична скоростна кутия.",
+		"bg": "BMW 330, 2021 г., M-Pack, xDrive, фейслифт. 258 к.с., бензин, автоматична скоростна кутия.",
 		"en": "2021 BMW 330 with M-Pack, xDrive, facelift. 258 hp, petrol, automatic transmission."
 	},
 	"dealerStock_cb0ac192ada32620013f73463827c898a758331723faab67e075edaf4b733657": {
-		"bg": "Audi A6 от 2012 г. с quattro и RS6 пакет. 245 к.с., дизел, автоматична скоростна кутия.",
+		"bg": "Audi A6, 2012 г., quattro, RS6 pack. 245 к.с., дизел, автоматична скоростна кутия.",
 		"en": "2012 Audi A6 with quattro, RS6 pack. 245 hp, diesel, automatic transmission."
 	}
 
 } satisfies Record<string, Record<Locale, string>>;
 export const inventorySourceKeys: Readonly<Record<string, keyof typeof inventoryCopy>> = {
+	'BMW 740 Завиващ заден мост': 'bmw740RearWheelSteering',
+	'Завиващ заден мост': 'rearWheelSteering',
 	'4(5) Врати': 'term0',
 	'4x4': 'term1',
 	'Auto Start Stop function': 'term2',

@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "ELIQ AUTO",
-  "logo": "/dealer-brand/logo-on-light-20260919.webp",
+  "logo": "/dealer-brand/v2-b9c4f7939487513f/logo-on-light.webp",
   "phone": "+359896781662",
   "email": null,
   "address": "ул. Свобода, на гърба на Гробищен парк, Пазарджик",

@@ -36,11 +36,12 @@ export function DealerEnquiryDraft({vehicleTitle, intent = 'enquiry'}: {vehicleT
 }
 function DealerEnquiryContent({open, onClose, vehicleTitle, intent = 'enquiry'}: {open: boolean; onClose: () => void; vehicleTitle?: string; intent?: DealerEnquiryIntent}) {
   const tx = useCopy();
+  const title = tx(intent === 'importing' ? 'Import enquiry' : intent === 'selling' ? 'Selling enquiry' : intent === 'part-exchange' ? 'Part-exchange enquiry' : intent === 'viewing' ? 'Request a viewing' : 'Contact the dealer');
   const titleId = useId();
   const panel = useModal(open, onClose);
   return <div {...stylex.props(s.backdrop)} onMouseDown={event => event.target === event.currentTarget && onClose()}>
     <section ref={panel} tabIndex={-1} role="dialog" aria-modal="true" aria-labelledby={titleId} {...stylex.props(s.sheet)}>
-      <header {...stylex.props(s.header)}><div><p {...stylex.props(s.eyebrow)}>{dealer.name}</p><h2 id={titleId} {...stylex.props(s.title)}>{tx(intent === 'importing' ? 'Import enquiry' : intent === 'selling' ? 'Selling enquiry' : intent === 'part-exchange' ? 'Part-exchange enquiry' : intent === 'viewing' ? 'Request a viewing' : 'Contact the dealer')}</h2></div><button type="button" aria-label={tx('Close enquiry')} onClick={onClose} {...stylex.props(s.close)}><X size={22}/></button></header>
+      <header {...stylex.props(s.header)}><div {...stylex.props(s.heading)}><p {...stylex.props(s.eyebrow)}>{dealer.name}</p><h2 id={titleId} title={title} {...stylex.props(s.title)}><span {...stylex.props(s.mobileTitle)}>{tx('Enquiry draft')}</span><span {...stylex.props(s.wideTitle)}>{title}</span></h2></div><button type="button" aria-label={tx('Close enquiry')} onClick={onClose} {...stylex.props(s.close)}><X size={22}/></button></header>
       <DealerEnquiryDraft vehicleTitle={vehicleTitle} intent={intent}/>
     </section>
   </div>;
@@ -52,9 +53,12 @@ export default function DealerEnquirySheet(props: {open: boolean; onClose: () =>
 const s = stylex.create({
   backdrop: {position: 'fixed', inset: 0, zIndex: 250, display: 'flex', alignItems: {[media.mobile]: 'flex-end', default: 'center'}, justifyContent: 'center', padding: {[media.mobile]: 0, default: 24}, backgroundColor: 'rgba(0,0,0,.48)'},
   sheet: {width: '100%', maxWidth: 560, maxHeight: '92dvh', overflowY: 'auto', padding: '22px 22px calc(24px + env(safe-area-inset-bottom))', color: $.ink, backgroundColor: '#fff', borderRadius: '24px 24px 12px 12px', outlineStyle: 'none'},
-  header: {display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12},
-  eyebrow: {color: $.muted, fontSize: 12}, title: {fontSize: 21, fontWeight: 600, marginTop: 4},
-  close: {display: 'grid', placeItems: 'center', flexShrink: 0, width: 44, height: 44, padding: 0, borderWidth: 0, borderRadius: '50%', backgroundColor: '#f4f4f5', color: $.ink, cursor: 'pointer'},
+  header: {display: {[media.mobile]: 'grid', default: 'flex'}, gridTemplateColumns: '44px minmax(0,1fr) 44px', alignItems: 'center', justifyContent: 'space-between', gap: {[media.mobile]: 8, default: 12}},
+  heading: {minWidth: 0, gridColumn: {[media.mobile]: 2, default: 'auto'}, textAlign: {[media.mobile]: 'center', default: 'left'}},
+  eyebrow: {display: {[media.mobile]: 'none', default: 'block'}, color: $.muted, fontSize: 12}, title: {fontSize: 21, fontWeight: 600, marginTop: {[media.mobile]: 0, default: 4}, whiteSpace: {[media.mobile]: 'nowrap', default: 'normal'}, overflow: {[media.mobile]: 'hidden', default: 'visible'}, textOverflow: {[media.mobile]: 'ellipsis', default: 'clip'}},
+  mobileTitle: {display: {[media.mobile]: 'inline', default: 'none'}},
+  wideTitle: {display: {[media.mobile]: 'none', default: 'inline'}},
+  close: {display: 'grid', placeItems: 'center', gridColumn: {[media.mobile]: 3, default: 'auto'}, flexShrink: 0, width: 44, height: 44, padding: 0, borderWidth: 0, borderRadius: '50%', backgroundColor: '#f4f4f5', color: $.ink, cursor: 'pointer'},
   note: {marginTop: 14, color: $.muted, fontSize: 12, lineHeight: 1.6},
   label: {display: 'block', marginTop: 20, marginBottom: 8, fontSize: 14, fontWeight: 500},
   textarea: {display: 'block', width: '100%', resize: 'vertical', padding: 12, fontSize: 16, lineHeight: 1.5, color: $.ink, borderColor: $.controlBorder, borderWidth: 1, borderStyle: 'solid', borderRadius: 12, backgroundColor: '#fff'},
