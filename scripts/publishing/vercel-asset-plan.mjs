@@ -101,8 +101,24 @@ export function planVercelAssets(files, { maxPublicBytes = 384 * 1024 * 1024, ma
     const key = e.sha256 + '.' + e.relative.split('.').at(-1).toLowerCase().replace(/^jpeg$/, 'jpg');
     if (!groups.has(key)) groups.set(key, []); groups.get(key).push(e);
   }
+  const config = parse(files, 'vercel.json');
+  if (!config?.services || !Array.isArray(config.rewrites)) throw Error('Expected Vercel Services configuration');
+  const baseRoutes = config.rewrites.length + (config.headers?.length || 0) + (config.redirects?.length || 0) + 1;
+  if (baseRoutes > maxRoutes) throw Error('Vercel route budget exceeded');
+  let poolRoutes = [...groups.values()].reduce((n, group) => n + (group.length > 1 ? group.length + 1 : 0), 0);
+  const unpooled = new Set();
+  if (baseRoutes + poolRoutes > maxRoutes) {
+    // Retain original copies of the least useful pools rather than spending routes on tiny duplicates.
+    const savingsPerRoute = group => group[0].bytes * (group.length - 1) / (group.length + 1);
+    const candidates = [...groups].filter(([, group]) => group.length > 1).sort((a, b) =>
+      savingsPerRoute(a[1]) - savingsPerRoute(b[1]) || (a[0] < b[0] ? -1 : 1));
+    for (const [key, group] of candidates) {
+      if (baseRoutes + poolRoutes <= maxRoutes) break;
+      unpooled.add(key); poolRoutes -= group.length + 1;
+    }
+  }
   for (const [key, group] of groups) {
-    if (group.length < 2) continue;
+    if (group.length < 2 || unpooled.has(key)) continue;
     const destination = '/_cars/media/' + manifest.slug + '/' + key;
     objects.push({ path: '.cars-media/' + manifest.slug + '/' + key, publicPath: 'auto-best/static' + destination, from: group[0].sourcePath, sha256: group[0].sha256, bytes: group[0].bytes });
     for (const e of group) {
@@ -115,9 +131,7 @@ export function planVercelAssets(files, { maxPublicBytes = 384 * 1024 * 1024, ma
   const pooled = new Set(removals.filter(e => e.reason === 'shared-local').map(e => e.sourcePath));
   const outputBytes = entries.filter(e => !pooled.has(e.sourcePath)).reduce((n, e) => n + e.bytes, 0) + objects.reduce((n, e) => n + e.bytes, 0);
   if (outputBytes > maxPublicBytes) throw Error(`Public asset budget exceeded: ${outputBytes} > ${maxPublicBytes}. Optimize or externalize; never silently drop media.`);
-  const config = parse(files, 'vercel.json');
-  if (!config?.services || !Array.isArray(config.rewrites)) throw Error('Expected Vercel Services configuration');
-  const routes = objects.length + aliases.length + config.rewrites.length + (config.headers?.length || 0) + (config.redirects?.length || 0) + 1;
+  const routes = objects.length + aliases.length + baseRoutes;
   if (routes > maxRoutes) throw Error('Vercel route budget exceeded');
   const inputBytes = Object.values(family).reduce((n, f) => n + f.inputBytes, 0);
   const externalReferenceBytes = Object.values(family).reduce((n, f) => n + f.externalBytes, 0);
