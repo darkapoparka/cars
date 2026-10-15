@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "К&K AUTO",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-c40f052551930a49/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-c40f052551930a49/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-c40f052551930a49/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-ff9d15f272df48bb/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-ff9d15f272df48bb/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-ff9d15f272df48bb/logo-on-dark.webp",
     "alt": "К&K AUTO",
-    "favicon": "/dealer-brand/v2-c40f052551930a49/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-ff9d15f272df48bb/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

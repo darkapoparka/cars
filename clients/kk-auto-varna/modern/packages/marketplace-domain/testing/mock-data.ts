@@ -46,7 +46,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "К&K AUTO",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-c40f052551930a49/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-ff9d15f272df48bb/logo-on-light.webp"
     },
     "publishedAt": "2026-10-12T09:00:00.000Z",
     "promoted": true
@@ -95,7 +95,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "К&K AUTO",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-c40f052551930a49/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-ff9d15f272df48bb/logo-on-light.webp"
     },
     "publishedAt": "2026-10-12T09:00:00.000Z",
     "promoted": true

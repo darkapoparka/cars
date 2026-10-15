@@ -27,6 +27,7 @@ export default function ServiceDetailsSheet({service, initialView = 'details', o
   const titleId = useId();
   const formId = useId();
   const title = view === 'details' && service ? service.name : view === 'draft' ? 'Your enquiry draft' : 'Vehicle service enquiry';
+  const mobileTitle = view === 'details' && service ? service.label : view === 'draft' ? 'Enquiry draft' : 'Enquiry';
   const serviceName = tx(service?.name || 'Vehicle service enquiry');
   const notes = details.trim();
   const subject = [`${make.trim()} ${model.trim()}`, serviceName, notes === serviceName ? '' : notes].filter(Boolean).join('\n');
@@ -40,8 +41,8 @@ export default function ServiceDetailsSheet({service, initialView = 'details', o
   return createPortal(<div {...stylex.props(s.backdrop)} onMouseDown={event => event.target === event.currentTarget && onClose()}>
     <section ref={panel} tabIndex={-1} role="dialog" aria-modal="true" aria-labelledby={titleId} data-service-detail-sheet data-service-view={view} {...stylex.props(s.sheet)}>
       <header {...stylex.props(s.header)}>
-        {view === 'draft' || view === 'enquiry' && service ? <button type="button" aria-label={tx(view === 'draft' ? 'Back to enquiry' : 'Back to service')} onClick={() => changeView(view === 'draft' ? 'enquiry' : 'details')} {...stylex.props(s.iconButton)}><ArrowLeft size={20} aria-hidden="true"/></button> : null}
-        <div {...stylex.props(s.heading)}><p {...stylex.props(s.eyebrow)}>{dealer.name}</p><h2 id={titleId} {...stylex.props(s.title)}>{tx(title)}</h2></div>
+        {view === 'draft' || view === 'enquiry' && service ? <button type="button" aria-label={tx(view === 'draft' ? 'Back to enquiry' : 'Back to service')} onClick={() => changeView(view === 'draft' ? 'enquiry' : 'details')} {...stylex.props(s.iconButton, s.backButton)}><ArrowLeft size={20} aria-hidden="true"/></button> : null}
+        <div {...stylex.props(s.heading)}><p {...stylex.props(s.eyebrow)}>{dealer.name}</p><h2 id={titleId} title={tx(title)} {...stylex.props(s.title)}><span {...stylex.props(s.mobileTitle)}>{tx(mobileTitle)}</span><span {...stylex.props(s.wideTitle)}>{tx(title)}</span></h2></div>
         <button type="button" aria-label={tx('Close service details')} onClick={onClose} {...stylex.props(s.iconButton)}><X size={21} aria-hidden="true"/></button>
       </header>
       <div ref={body} {...stylex.props(s.body)}>
@@ -70,11 +71,14 @@ export default function ServiceDetailsSheet({service, initialView = 'details', o
 const s = stylex.create({
   backdrop: {position: 'fixed', inset: 0, zIndex: 250, display: 'flex', alignItems: {[media.mobile]: 'flex-end', default: 'center'}, justifyContent: 'center', padding: {[media.mobile]: 0, default: 24}, backgroundColor: 'rgba(12,12,16,.5)'},
   sheet: {display: 'flex', flexDirection: 'column', width: '100%', maxWidth: 560, maxHeight: '92dvh', overflow: 'hidden', color: $.ink, fontFamily: $.fontSans, borderRadius: {[media.mobile]: '24px 24px 0 0', default: 24}, backgroundColor: $.surface, boxShadow: $.shadowStrong, outlineStyle: 'none'},
-  header: {display: 'flex', alignItems: 'center', flexShrink: 0, gap: 12, padding: '18px 20px 16px'},
-  heading: {flexGrow: 1, minWidth: 0},
-  eyebrow: {margin: 0, color: $.muted, fontSize: 12, lineHeight: '18px'},
-  title: {margin: '3px 0 0', fontSize: 21, fontWeight: 600, lineHeight: '27px', overflowWrap: 'anywhere'},
-  iconButton: {display: 'grid', placeItems: 'center', flexShrink: 0, width: 44, height: 44, padding: 0, color: $.ink, borderWidth: 0, borderRadius: '50%', backgroundColor: {default: $.surfaceAlt, ':hover': $.line}, cursor: 'pointer'},
+  header: {display: {[media.mobile]: 'grid', default: 'flex'}, gridTemplateColumns: '44px minmax(0,1fr) 44px', alignItems: 'center', flexShrink: 0, gap: {[media.mobile]: 8, default: 12}, padding: {[media.mobile]: '12px 16px', default: '18px 20px 16px'}},
+  heading: {flexGrow: 1, minWidth: 0, gridColumn: {[media.mobile]: 2, default: 'auto'}, textAlign: {[media.mobile]: 'center', default: 'left'}},
+  eyebrow: {display: {[media.mobile]: 'none', default: 'block'}, margin: 0, color: $.muted, fontSize: 12, lineHeight: '18px'},
+  title: {margin: {[media.mobile]: 0, default: '3px 0 0'}, fontSize: 21, fontWeight: 600, lineHeight: '27px', whiteSpace: {[media.mobile]: 'nowrap', default: 'normal'}, overflow: {[media.mobile]: 'hidden', default: 'visible'}, textOverflow: {[media.mobile]: 'ellipsis', default: 'clip'}, overflowWrap: 'anywhere'},
+  mobileTitle: {display: {[media.mobile]: 'inline', default: 'none'}},
+  wideTitle: {display: {[media.mobile]: 'none', default: 'inline'}},
+  iconButton: {display: 'grid', placeItems: 'center', gridColumn: {[media.mobile]: 3, default: 'auto'}, flexShrink: 0, width: 44, height: 44, padding: 0, color: $.ink, borderWidth: 0, borderRadius: '50%', backgroundColor: {default: $.surfaceAlt, ':hover': $.line}, cursor: 'pointer'},
+  backButton: {gridColumn: {[media.mobile]: 1, default: 'auto'}},
   body: {minHeight: 0, overflowY: 'auto', overscrollBehaviorY: 'contain', padding: '0 20px 20px'},
   media: {position: 'relative', overflow: 'hidden', borderRadius: 16},
   image: {display: 'block', width: '100%', height: 'auto', aspectRatio: '2 / 1', objectFit: 'cover', objectPosition: 'center 55%'},

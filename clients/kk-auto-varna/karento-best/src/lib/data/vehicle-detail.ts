@@ -147,7 +147,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "К&K AUTO",
   "location": "ул. 3та 18, Варна, България",
-  "avatar": "/dealer-brand/v2-c40f052551930a49/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-ff9d15f272df48bb/logo-on-light.webp",
   "mobile": "0899818608",
   "email": "",
   "whatsapp": "",
