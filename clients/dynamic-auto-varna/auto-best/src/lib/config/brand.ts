@@ -2,7 +2,7 @@ export type BrandConfig = {
   name: string;
   shortName: string;
   city: string;
-  showroomCoordinates: { latitude: number; longitude: number };
+  showroomCoordinates: { latitude: number; longitude: number } | null;
   addressLine: string;
   address: string;
   phone: string;
@@ -11,8 +11,8 @@ export type BrandConfig = {
   logo: `/${string}`;
   logoOnDark: `/${string}`;
   youtubeUrl: `https://${string}` | '';
-  instagramUrl: `https://${string}`;
-  facebookUrl: `https://${string}`;
+  instagramUrl: `https://${string}` | '';
+  facebookUrl: `https://${string}` | '';
 };
 
 const name = "Dynamic Auto Varna";
@@ -24,15 +24,15 @@ export const brand = {
   name,
   shortName,
   city,
-  showroomCoordinates: {"latitude":0,"longitude":0},
-  youtubeUrl: "https://www.youtube.com/",
-  instagramUrl: "https://www.instagram.com/",
-  facebookUrl: "https://www.facebook.com/",
+  showroomCoordinates: null,
+  youtubeUrl: "",
+  instagramUrl: "",
+  facebookUrl: "",
   phone: "0889616721",
   phoneHref: "tel:+359889616721",
   addressLine,
   address: "бул. Цар Освободител 289, Варна, България",
   appointment: "Потвърдете работното време директно с автокъщата.",
-  logo: "/dealer-brand/v2-45006e0c34f113db/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/v2-45006e0c34f113db/logo-on-dark.webp"
+  logo: "/dealer-brand/v2-0b6f5127f33a3666/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-0b6f5127f33a3666/logo-on-dark.webp"
 } as const satisfies BrandConfig;

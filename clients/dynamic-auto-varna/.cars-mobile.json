@@ -5,12 +5,12 @@
   "name": "Dynamic Auto Varna",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "8a97176e3adfbd95dce69b3096abc84e3eecd9c8",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/mobile",
-    "tree": "9a4db757e788ee236712b8eac25956a6a8a61d0b",
-    "digest": "cc126a7c38634c7601ef8c617411d6938d7c9b6efc7b319e87c2c6efc99d8b6d"
+    "digest": "f5a3e541a7c648a4c2899ad3893e22a3806027a9f66d95fa4e8c74b2226635b6",
+    "tree": "792bfdd1d8eb22aabd90c7e3a0c0779a6c1c36f3"
   },
-  "sourceDigest": "aab89203302150ccc7955503c1914c1159986b058f7a2302f5031920f816e853",
+  "sourceDigest": "36357895f206f823fc031c7abf4b2ca26d7777530353da6b93891a7353d40b69",
   "inventory": {
     "mode": "dated-listing-snapshot",
     "count": 8,
@@ -19,8 +19,8 @@
   "personalization": {
     "profileSha256": "de0459785e9b24698ebe7539f745ab7b14e2fd5e645874bb8c5ffee8ef07d40f",
     "logoPaths": [
-      "/dealer-brand/v2-45006e0c34f113db/logo-on-light.webp",
-      "/dealer-brand/v2-45006e0c34f113db/logo-on-dark.webp"
+      "/dealer-brand/logo-on-light.webp",
+      "/dealer-brand/logo-on-dark.webp"
     ],
     "mediaPaths": [
       "/assets/vehicles/11755636345481695/1.webp",
@@ -68,13 +68,15 @@
       "mobile/src/components/DealerScreens.tsx",
       "mobile/src/components/VehicleCard.tsx",
       "mobile/src/components/ShowroomVehicleCard.tsx",
-      "mobile/src/components/VehicleSections.tsx"
+      "mobile/src/components/VehicleSections.tsx",
+      "mobile/src/lib/mobile-mileage.ts",
+      "mobile/src/lib/types.ts",
+      "mobile/src/components/DesktopVehicleSummary.tsx",
+      "mobile/src/components/NativeCarPark.tsx",
+      "mobile/src/components/ShowroomFilterSheet.tsx",
+      "mobile/src/lib/vehicle-copy.ts"
     ]
   },
   "needsDealerQA": true,
-  "readyToPublish": false,
-  "branding": {
-    "packId": "45006e0c34f113db",
-    "previousSourceDigest": "443210dcefaa291ce372260846345459434c27309b4ca4fd6e2b48d154118069"
-  }
+  "readyToPublish": false
 }

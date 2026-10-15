@@ -47,7 +47,7 @@ const s = stylex.create({
   control: {position: 'relative', width: '100%', maxWidth: 640, marginInline: 'auto', padding: {[media.mobile]: '0 12px 20px', default: '0 28px 24px'}},
   compactControl: {padding: {[media.mobile]: '4px 12px 0', default: null}},
   action: {width: '100%', color: '#202024', backgroundColor: {default: $.surface, ':hover': $.surfaceAlt}, textAlign: 'left', cursor: 'pointer', outlineColor: {':focus-visible': {[media.mobile]: $.ink, default: '#fff'}}, outlineOffset: 3},
-  plainMobileAction: {backgroundColor: {default: $.surface, ':hover': $.surfaceAlt}, outlineColor: {':focus-visible': {default: '#fff', [media.mobile]: '#242428'}}, outlineOffset: {[media.mobile]: 2, default: 3}},
+  plainMobileAction: {backgroundColor: {[media.mobile]: $.surfaceAlt, default: $.surface}, outlineColor: {':focus-visible': {default: '#fff', [media.mobile]: '#242428'}}, outlineOffset: {[media.mobile]: 2, default: 3}},
   searchEntry: {color: $.muted},
   icon: {display: 'flex', flexShrink: 0, alignItems: 'center', justifyContent: 'center', width: 20, height: 20},
   label: {flexGrow: 1, minWidth: 0},

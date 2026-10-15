@@ -1,7 +1,7 @@
 'use client';
 import {displayMake} from '@/lib/inventory-labels';
-import {assetPath} from '@/lib/paths';
-import {useCopy} from '@/lib/locale';
+import {assetPath, browserPath} from '@/lib/paths';
+import {useCopy, useLocale} from '@/lib/locale';
 import {useEffect,useRef,useState,type TouchEvent} from 'react';
 import {dealer} from '@/lib/dealer-config';
 import {currency} from '@/lib/currency';
@@ -30,8 +30,10 @@ import {formatPrice,type Vehicle} from '@/lib/data';
 import {media,tokens as $} from '@/app/tokens.stylex';
 
 type Overlay='price'|'gallery'|'warranty'|'similar'|'tour'|'viewing'|null;
-export default function VehicleDetailClient({vehicle,related,reference}: {vehicle:Vehicle;related:Vehicle[];reference?:ReferenceVehicleDetail}){
+export default function VehicleDetailClient({vehicle,related,reference,onClose}: {vehicle:Vehicle;related:Vehicle[];reference?:ReferenceVehicleDetail;onClose?:()=>void}){
   const tx = useCopy();
+  const locale = useLocale();
+  const screen = useRef<HTMLDivElement>(null);
 
  const sectionRail=useRef<HTMLElement>(null);
  const purchaseBar=useRef<HTMLElement>(null),purchaseSpace=useRef<HTMLDivElement>(null);
@@ -49,15 +51,18 @@ export default function VehicleDetailClient({vehicle,related,reference}: {vehicl
  const title=`${vehicle.year} ${displayMake(vehicle.make).toUpperCase()} ${vehicle.model.toUpperCase()} ${vehicle.trim.split(' • ')[0]}`;
  const desktopTitle=`${vehicle.year} ${displayMake(vehicle.make)} ${vehicle.model} ${vehicle.trim.split(' • ')[0]}`;
  const summary=[vehicle.mileageOnRequest?tx('Mileage on request'):`${tx(formatPrice(vehicle.mileage))} ${tx('km')}`,vehicle.transmission!=='Not published'?tx(vehicle.transmission):null,vehicle.fuel!=='Not published'?tx(vehicle.fuel):null].filter(Boolean).join(' · ');
- const backToInventory=useInventoryBack();
+ const inventoryBack=useInventoryBack();
+ const backToInventory=onClose??inventoryBack;
  const priceLabel=vehicle.priceOnRequest?tx('Price on request'):`${tx(currency.symbol)} ${tx(formatPrice(vehicle.price))}`;
  const fee=approvedReference?.convenienceFee??0;
  const message=saveError||shared;
  useEffect(()=>{recordVehicleView(vehicle.slug);},[vehicle.slug]);
  useEffect(()=>{
-  const onScroll=()=>{const showSections=window.innerWidth>=768&&window.scrollY>400;setScrolled(showSections);if(!showSections)return;const sections=['price','overview','features','condition','service-history','car-finance','happy-customers','similar-cars'];const offset=window.innerWidth>=1100?132:60;let active='price';for(const section of sections){const target=document.getElementById(section);if(target&&target.getBoundingClientRect().top<=offset)active=section;}setActiveSection(active);};
-  const frame=requestAnimationFrame(onScroll);window.addEventListener('scroll',onScroll,{passive:true});window.addEventListener('resize',onScroll);
-  return()=>{cancelAnimationFrame(frame);window.removeEventListener('scroll',onScroll);window.removeEventListener('resize',onScroll);};
+  const scrollRoot=screen.current?.closest<HTMLElement>('[data-vehicle-drawer-scroll]');
+  const scrollTarget=scrollRoot??window;
+  const onScroll=()=>{const showSections=window.innerWidth>=768&&(scrollRoot?.scrollTop??window.scrollY)>400;setScrolled(showSections);if(!showSections)return;const sections=['price','overview','features','condition','service-history','car-finance','happy-customers','similar-cars'];const offset=scrollRoot?60:window.innerWidth>=1100?132:60;let active='price';for(const section of sections){const target=screen.current?.querySelector<HTMLElement>('#'+section);if(target&&target.getBoundingClientRect().top<=(scrollRoot?.getBoundingClientRect().top??0)+offset)active=section;}setActiveSection(active);};
+  const frame=requestAnimationFrame(onScroll);scrollTarget.addEventListener('scroll',onScroll,{passive:true});window.addEventListener('resize',onScroll);
+  return()=>{cancelAnimationFrame(frame);scrollTarget.removeEventListener('scroll',onScroll);window.removeEventListener('resize',onScroll);};
  },[]);
  useEffect(()=>{
   const bar=purchaseBar.current,space=purchaseSpace.current;
@@ -67,13 +72,13 @@ export default function VehicleDetailClient({vehicle,related,reference}: {vehicl
   return()=>observer.disconnect();
  },[]);
  useEffect(()=>{const rail=sectionRail.current;const active=rail?.querySelector<HTMLElement>('[aria-current="location"]');if(rail&&active)rail.scrollTo({left:Math.max(0,active.offsetLeft+active.offsetWidth-rail.clientWidth+22),behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});},[activeSection,scrolled]);
- async function share(){try{if(navigator.share){await navigator.share({title,url:location.href});}else if(navigator.clipboard){await navigator.clipboard.writeText(location.href);setShared('Link copied');}else{setShared(location.href);}}catch(error){if(!(error instanceof DOMException&&error.name==='AbortError'))setShared('Sharing is unavailable in this browser.');}}
+ async function share(){const url=new URL(browserPath('/cars/'+vehicle.slug,locale),location.origin).href;try{if(navigator.share){await navigator.share({title,url});}else if(navigator.clipboard){await navigator.clipboard.writeText(url);setShared('Link copied');}else{setShared(url);}}catch(error){if(!(error instanceof DOMException&&error.name==='AbortError'))setShared('Sharing is unavailable in this browser.');}}
  function nextPhoto(direction:number){setPhoto(current=>(current+direction+photos.length)%photos.length);}
  function endSwipe(event:TouchEvent){if(swipe!==null&&Math.abs(event.changedTouches[0].clientX-swipe)>40)nextPhoto(event.changedTouches[0].clientX<swipe?1:-1);setSwipe(null);}
  function openPhoto(selectedPhotos:GalleryPhoto[],index=0){setGallerySelection({photos:selectedPhotos,index});setOverlay('gallery');}
  function openEnquiry(intent:DealerEnquiryIntent='enquiry'){setEnquiryIntent(intent);setEnquiryOpen(true);}
- function jump(id:string){const target=id==='price'&&innerWidth>=1100?document.querySelector<HTMLElement>('[data-desktop-vehicle-hero]'):document.getElementById(id);if(target){const offset=innerWidth>=1100?144:68;if(id==='price'&&innerWidth>=1100)document.querySelector<HTMLElement>('[data-desktop-viewing]')?.scrollTo({top:0,behavior:'instant'});window.scrollTo({top:scrollY+target.getBoundingClientRect().top-offset,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});setActiveSection(id);}else if(id==='similar-cars'){setOverlay('similar');}}
- return <div {...stylex.props(s.screen)}>
+ function jump(id:string){const target=screen.current?.querySelector<HTMLElement>(id==='price'&&innerWidth>=1100?'[data-desktop-vehicle-hero]':'#'+id);if(target){const scrollRoot=screen.current?.closest<HTMLElement>('[data-vehicle-drawer-scroll]');const offset=scrollRoot?68:innerWidth>=1100?144:68;if(id==='price'&&innerWidth>=1100)screen.current?.querySelector<HTMLElement>('[data-desktop-viewing]')?.scrollTo({top:0,behavior:'instant'});(scrollRoot??window).scrollTo({top:(scrollRoot?.scrollTop??scrollY)+target.getBoundingClientRect().top-(scrollRoot?.getBoundingClientRect().top??0)-offset,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});setActiveSection(id);}else if(id==='similar-cars'){setOverlay('similar');}}
+ return <div ref={screen} {...stylex.props(s.screen)}>
   <div data-desktop-detail-layout {...stylex.props(s.desktopLayout)}>
   <section data-desktop-vehicle-hero aria-label={tx(desktopTitle)} {...stylex.props(s.desktopHero)}>
    <nav aria-label={tx('Vehicle actions')} {...stylex.props(s.desktopHeroTools)}>
@@ -93,14 +98,15 @@ export default function VehicleDetailClient({vehicle,related,reference}: {vehicl
   <div {...stylex.props(s.layout)}>
    {!vehicle.imagePlaceholder?<div {...stylex.props(s.albumRow)}><VehiclePhotoAlbums photos={photos} onOpenPhoto={openPhoto}/></div>:null}
    <header data-vehicle-heading {...stylex.props(s.heading)}><h1 {...stylex.props(s.title)}>{tx(title)}</h1><p {...stylex.props(s.summary)}>{summary}</p></header>
+   {dealer.inventoryNotice?<p data-vehicle-media-notice {...stylex.props(s.mediaNotice)}>{tx(dealer.inventoryNotice)}</p>:null}
    <section id="price" aria-label={tx("Vehicle price")} {...stylex.props(s.priceCard)}>
      <p {...stylex.props(s.price,vehicle.priceOnRequest&&s.requestPrice)}>{vehicle.priceOnRequest ? tx('Price on request') : <><CurrencyLabel size={18}/>{tx(formatPrice(vehicle.price))}</>}</p>
      <IconButton icon={Info} label={tx('Price information')} onClick={()=>setOverlay('price')}/>
    </section>
    <div {...stylex.props(s.detailRow)}><VehicleDetailTabs photos={photos} onOpenPhoto={openPhoto} onInformationChange={setInformationVisible}><VehicleBelowFold vehicle={vehicle} reference={approvedReference} equipment={reference?.topFeatures} onLogin={intent=>openEnquiry(intent)}/></VehicleDetailTabs></div>
-  </div></main><aside data-desktop-viewing aria-label={tx('Vehicle price')} {...stylex.props(s.desktopBuy,scrolled&&informationVisible&&s.desktopBuyWithSections)}><div {...stylex.props(s.buyHeader)}><h2 {...stylex.props(s.buyLabel)}>{tx('Vehicle price')}</h2><IconButton icon={Info} label={tx('Price information')} onClick={()=>setOverlay('price')}/></div><p {...stylex.props(s.desktopPrice,vehicle.priceOnRequest&&s.requestPrice)}>{priceLabel}</p><p {...stylex.props(s.overviewText)}>{tx("Confirm availability and arrange a viewing with the dealer.")}</p><button type="button" onClick={()=>setOverlay('viewing')} {...stylex.props(s.primary,s.actionWithIcon,s.desktopViewing)}><CalendarDays size={18} aria-hidden="true" {...stylex.props(s.actionIcon)}/>{tx("Arrange a viewing")}</button><button type="button" onClick={toggleSaved} aria-label={tx(saved?'Remove from saved cars':'Save car')} aria-pressed={saved} {...stylex.props(s.outline,s.actionWithIcon,s.desktopSave)}><Heart size={18} aria-hidden="true" fill={saved?'currentColor':'none'}/>{tx(saved?'Vehicle saved':'Save vehicle')}</button></aside></div>
+  </div></main><aside data-desktop-viewing aria-label={tx('Vehicle price')} {...stylex.props(s.desktopBuy,scrolled&&informationVisible&&s.desktopBuyWithSections,onClose&&s.drawerBuy,onClose&&scrolled&&informationVisible&&s.drawerBuyWithSections)}><div {...stylex.props(s.buyHeader)}><h2 {...stylex.props(s.buyLabel)}>{tx('Vehicle price')}</h2><IconButton icon={Info} label={tx('Price information')} onClick={()=>setOverlay('price')}/></div><p {...stylex.props(s.desktopPrice,vehicle.priceOnRequest&&s.requestPrice)}>{priceLabel}</p><p {...stylex.props(s.overviewText)}>{tx("Confirm availability and arrange a viewing with the dealer.")}</p><button type="button" onClick={()=>setOverlay('viewing')} {...stylex.props(s.primary,s.actionWithIcon,s.desktopViewing)}><CalendarDays size={18} aria-hidden="true" {...stylex.props(s.actionIcon)}/>{tx("Arrange a viewing")}</button><button type="button" onClick={toggleSaved} aria-label={tx(saved?'Remove from saved cars':'Save car')} aria-pressed={saved} {...stylex.props(s.outline,s.actionWithIcon,s.desktopSave)}><Heart size={18} aria-hidden="true" fill={saved?'currentColor':'none'}/>{tx(saved?'Vehicle saved':'Save vehicle')}</button></aside></div>
   {dealer.mode === 'template' && dealer.referenceClaimsApproved?<VehicleComparison vehicle={vehicle} related={related}/>:null}
-  {scrolled&&informationVisible?<nav ref={sectionRail} aria-label={tx("Vehicle sections")} {...stylex.props(s.sectionTabs)}>{[['Price','price'],['Overview','overview'],['Features','features'],...(approvedReference?.inspection.length? [['Inspection report','condition']]:[]),['Service History','service-history'],...(hasDetails?[['Car finance','car-finance'],['Our happy customers','happy-customers']]:[]),['Similar Cars','similar-cars']].map(([label,id])=><button type="button" key={id} onClick={()=>jump(id)} aria-current={activeSection===id?'location':undefined} {...stylex.props(s.sectionTab,activeSection===id&&s.activeSectionTab)}>{tx(label)}</button>)}</nav>:null}
+  {scrolled&&informationVisible?<nav ref={sectionRail} aria-label={tx("Vehicle sections")} {...stylex.props(s.sectionTabs,onClose&&s.drawerSectionTabs)}>{[['Price','price'],['Overview','overview'],['Features','features'],...(approvedReference?.inspection.length? [['Inspection report','condition']]:[]),['Service History','service-history'],...(hasDetails?[['Car finance','car-finance'],['Our happy customers','happy-customers']]:[]),['Similar Cars','similar-cars']].map(([label,id])=><button type="button" key={id} onClick={()=>jump(id)} aria-current={activeSection===id?'location':undefined} {...stylex.props(s.sectionTab,activeSection===id&&s.activeSectionTab)}>{tx(label)}</button>)}</nav>:null}
   <div {...stylex.props(s.floating)}><button type="button" onClick={()=>openEnquiry()} aria-label={tx("Contact the dealer")} {...stylex.props(s.whatsapp)}><span {...stylex.props(s.whatsappInner)}><MessageCircle size={24}/></span></button></div>
   <div ref={purchaseSpace} aria-hidden="true" {...stylex.props(s.purchaseSpace)}/>
   <footer ref={purchaseBar} {...stylex.props(s.purchase)}><button type="button" onClick={toggleSaved} aria-label={tx(saved?'Remove from saved cars':'Save car')} aria-pressed={saved} {...stylex.props(s.outline,s.mobileCta,s.mobileSecondary,s.actionWithIcon)}><Heart size={18} aria-hidden="true" fill={saved?'currentColor':'none'} {...stylex.props(s.actionIcon)}/><span>{tx(saved?'Vehicle saved':'Save vehicle')}</span></button><button type="button" onClick={()=>setOverlay('viewing')} aria-label={tx("Arrange a viewing")} {...stylex.props(s.primary,s.mobileCta,s.actionWithIcon)}><CalendarDays size={18} aria-hidden="true" {...stylex.props(s.actionIcon)}/><span {...stylex.props(s.mobileLabel)}>{tx("Viewing")}</span><span {...stylex.props(s.wideLabel)}>{tx("Arrange viewing")}</span></button></footer>
@@ -144,11 +150,13 @@ detailRow:{display:{[media.desktop]:'block',default:'contents'},gridRow:{[media.
 heading:{display:{[media.desktop]:'none',default:'block'},gridRow:{[media.desktop]:1,default:'auto'},marginTop:{[media.desktop]:0,default:16},marginBottom:{[media.desktop]:20,default:0}},
 title:{minWidth:0,fontFamily:$.fontDisplay,fontSize:{[media.mobile]:18,[media.desktop]:28,default:27},fontWeight:600,lineHeight:{[media.mobile]:'27px',[media.desktop]:'36px',default:'35px'},overflowWrap:'anywhere'},
 summary:{marginTop:4,color:$.muted,fontFamily:$.fontSans,fontSize:{[media.desktop]:$.desktopSupportSize,default:13},fontWeight:400,lineHeight:'20px',overflowWrap:'anywhere'},
+mediaNotice:{gridColumn:'1 / -1',marginTop:8,color:$.muted,fontSize:13,fontWeight:400,lineHeight:'20px'},
 priceCard:{display:{[media.desktop]:'none',default:'flex'},alignItems:'center',justifyContent:'space-between',gap:12,marginTop:6},
 price:{minWidth:0,fontFamily:$.fontSans,fontSize:{[media.mobile]:26,default:28},fontWeight:600,lineHeight:'36px',whiteSpace:'nowrap'},
 requestPrice:{fontSize:18,lineHeight:'24px',whiteSpace:'normal',textAlign:'left'},
 overviewText:{marginTop:5,color:$.muted,fontSize:{[media.desktop]:$.desktopSupportSize,default:13},fontWeight:400,lineHeight:1.6},
 sectionTabs:{display:{[media.mobile]:'none',default:'flex'},position:'fixed',top:{[media.desktop]:69,default:'env(safe-area-inset-top)'},left:{[media.desktop]:$.desktopShellInset,default:0},right:{[media.desktop]:$.desktopShellInset,default:0},zIndex:59,gap:9,overflowX:'auto',padding:{[media.desktop]:'6px 28px 9px',default:'6px 22px 9px'},backgroundColor:'#fff',scrollbarWidth:'none'},
+drawerSectionTabs:{top:0,left:0,right:0},
 sectionTab:{fontFamily:$.fontDisplay,display:'grid',placeItems:'center',flexShrink:0,minHeight:44,padding:'7px 13px',color:'#202024',fontSize:14,lineHeight:'20px',fontWeight:500,borderColor:'#c4c4c4',borderStyle:'solid',borderWidth:1,borderRadius:999,backgroundColor:'#fff',cursor:'pointer'},
 activeSectionTab:{color:'#fff',borderColor:'#202024',backgroundColor:'#202024'},
 sectionTitle:{fontSize:20,fontWeight:500,lineHeight:'27px'},
@@ -157,6 +165,8 @@ desktopBuy:{display:{[media.desktop]:'block',default:'none'},alignSelf:'start',p
 buyHeader:{display:'flex',alignItems:'center',justifyContent:'space-between',gap:12},
 buyLabel:{color:$.muted,fontSize:$.desktopSupportSize,fontWeight:400,lineHeight:'20px'},
 desktopBuyWithSections:{top:148,maxHeight:'calc(100svh - 164px)'},
+drawerBuy:{top:16,maxHeight:'calc(100dvh - 32px)'},
+drawerBuyWithSections:{top:68,maxHeight:'calc(100dvh - 84px)'},
 desktopSave:{marginTop:8},
 desktopViewing:{marginTop:20},
 desktopPrice:{marginTop:8,fontSize:32,fontWeight:600,lineHeight:'40px'},

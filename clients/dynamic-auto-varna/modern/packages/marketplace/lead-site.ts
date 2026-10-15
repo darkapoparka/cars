@@ -114,8 +114,8 @@ export const leadSite: LeadSiteConfig = {
     "tagline": "Dynamic Auto Varna — vehicles and dealer support in Varna."
   }
 },
-  accent: "#30343b",
-  desktopAccent: "#4b5057",
+  accent: "#09090b",
+  desktopAccent: "#09090b",
   desktopInventoryFilterLayout: "quick",
   desktopPreviewIdentity: {
     sourceSlug: "day-night-auto-group",
@@ -127,7 +127,7 @@ export const leadSite: LeadSiteConfig = {
       en: "Find your next car.",
     },
   },
-  address: "ул. „Атанас Манчев“ 18, Варна",
+  address: "бул. Цар Освободител 289, Варна, България",
   city: "Варна",
   district: { bg: "Варна", en: "Varna" },
   sellCategoryAssets: {
@@ -141,17 +141,17 @@ export const leadSite: LeadSiteConfig = {
   mobileShowroomArtworkPath:
     "/images/lease/mobile-pdp-showroom-blue-hour-v1.webp",
   contactUrl: "tel:+359889616721",
-  country: "България",
+  country: "BG",
   countryCode: carsLocale.dealerCountry,
   currency: carsLocale.inventoryCurrency,
   email: "",
   heroPath: "/lead-hero.jpg",
   locale: "bg-BG",
-  logoPath: "/dealer-brand/v2-45006e0c34f113db/logo-on-light.webp",
-  logoInversePath: "/dealer-brand/v2-45006e0c34f113db/logo-on-dark.webp",
-  logoOnLight: "/dealer-brand/v2-45006e0c34f113db/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/v2-45006e0c34f113db/logo-on-dark.webp",
-  logoOnAccent: "/dealer-brand/v2-45006e0c34f113db/logo-on-dark.webp",
+  logoPath: "/dealer-brand/v2-0b6f5127f33a3666/logo-on-light.webp",
+  logoInversePath: "/dealer-brand/v2-0b6f5127f33a3666/logo-on-dark.webp",
+  logoOnLight: "/dealer-brand/v2-0b6f5127f33a3666/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-0b6f5127f33a3666/logo-on-dark.webp",
+  logoOnAccent: "/dealer-brand/v2-0b6f5127f33a3666/logo-on-dark.webp",
   mapsEmbedUrl:
     "https://maps.google.com/maps?q=Dynamic%20Auto%20Varna%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F&z=16&output=embed",
   mapsUrl:
@@ -163,6 +163,6 @@ export const leadSite: LeadSiteConfig = {
   slug: "dynamic-auto-varna",
   socialLinks: {},
   staticDemoMode: true,
-  tagline: "Премиум автомобили, внос и собствен лизинг в Варна.",
+  tagline: "Dynamic Auto Varna — автомобили и съдействие в Варна.",
 };
 // LEAD_SITE_CONFIG_END

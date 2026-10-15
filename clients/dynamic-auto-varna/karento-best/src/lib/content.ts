@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "Dynamic Auto Varna",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-45006e0c34f113db/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-45006e0c34f113db/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-45006e0c34f113db/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-0b6f5127f33a3666/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-0b6f5127f33a3666/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-0b6f5127f33a3666/logo-on-dark.webp",
     "alt": "Dynamic Auto Varna",
-    "favicon": "/dealer-brand/app-icon.png",
+    "favicon": "/dealer-brand/v2-0b6f5127f33a3666/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

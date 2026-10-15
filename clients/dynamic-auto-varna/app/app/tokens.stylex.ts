@@ -50,7 +50,7 @@ export const tokens = stylex.defineVars({
   desktopLabelLineHeight: '18px',
   controlHeight: '44px',
   controlCompactHeight: '36px',
-  controlIconSize: '18px',
+  controlIconSize: '20px',
   controlFontSize: '14px',
   controlLineHeight: '20px',
   bannerPadding: '20px',

@@ -118,6 +118,12 @@ export const referenceSpecifications: readonly DetailSpecification[] = [
     "valueKey": "fuel.diesel"
   },
   {
+    "id": "year",
+    "icon": "/assets/imgs/template/icons/calendar.svg",
+    "value": "2006",
+    "labelKey": "vehicle.field.year"
+  },
+  {
     "id": "lit",
     "icon": "/assets/imgs/page/car/lit.svg",
     "value": "105 hp",
@@ -149,7 +155,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "Dynamic Auto Varna",
   "location": "бул. Цар Освободител 289, Варна, България",
-  "avatar": "/dealer-brand/v2-45006e0c34f113db/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-0b6f5127f33a3666/logo-on-light.webp",
   "mobile": "0889616721",
   "email": "",
   "whatsapp": "",

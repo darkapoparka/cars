@@ -58,7 +58,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Dynamic Auto Varna",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-45006e0c34f113db/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-0b6f5127f33a3666/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": true
@@ -119,7 +119,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Dynamic Auto Varna",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-45006e0c34f113db/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-0b6f5127f33a3666/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": true
@@ -180,7 +180,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Dynamic Auto Varna",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-45006e0c34f113db/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-0b6f5127f33a3666/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": true
@@ -241,7 +241,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Dynamic Auto Varna",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-45006e0c34f113db/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-0b6f5127f33a3666/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -302,7 +302,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Dynamic Auto Varna",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-45006e0c34f113db/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-0b6f5127f33a3666/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -363,7 +363,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Dynamic Auto Varna",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-45006e0c34f113db/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-0b6f5127f33a3666/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -424,7 +424,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Dynamic Auto Varna",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-45006e0c34f113db/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-0b6f5127f33a3666/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -485,373 +485,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Dynamic Auto Varna",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-45006e0c34f113db/logo-on-light.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1004",
-    "slug": "vw-golf-plus-2006-11755636345481695",
-    "category": "car",
-    "dealerOrgId": "dealer-dynamic-auto-varna",
-    "status": "active",
-    "title": "VW Golf Plus 1.9 ТДИ 105кс / Бартер / Лизинг",
-    "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
-    "price": {
-      "amount": 2800,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/vehicles/11755636345481695/1.webp",
-        "alt": "VW Golf Plus 1.9 ТДИ 105кс / Бартер / Лизинг"
-      },
-      {
-        "url": "/assets/vehicles/11755636345481695/2.webp",
-        "alt": "VW Golf Plus 1.9 ТДИ 105кс / Бартер / Лизинг"
-      },
-      {
-        "url": "/assets/vehicles/11755636345481695/3.webp",
-        "alt": "VW Golf Plus 1.9 ТДИ 105кс / Бартер / Лизинг"
-      },
-      {
-        "url": "/assets/vehicles/11755636345481695/4.webp",
-        "alt": "VW Golf Plus 1.9 ТДИ 105кс / Бартер / Лизинг"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "spec": {
-      "make": "VW",
-      "model": "Golf Plus",
-      "year": 2006,
-      "bodyType": "hatchback",
-      "fuelType": "diesel",
-      "transmission": "manual",
-      "mileageValue": 180876,
-      "mileageUnit": "km",
-      "enginePowerHp": 105
-    },
-    "seller": {
-      "id": "dealer-dynamic-auto-varna",
-      "type": "dealer",
-      "displayName": "Dynamic Auto Varna",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-45006e0c34f113db/logo-on-light.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1005",
-    "slug": "vw-caddy-2011-11774253415129356",
-    "category": "car",
-    "dealerOrgId": "dealer-dynamic-auto-varna",
-    "status": "active",
-    "title": "VW Caddy 1.6 дизел / Регистриран / Обслужен / Лизинг",
-    "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
-    "price": {
-      "amount": 5600,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/vehicles/11774253415129356/1.webp",
-        "alt": "VW Caddy 1.6 дизел / Регистриран / Обслужен / Лизинг"
-      },
-      {
-        "url": "/assets/vehicles/11774253415129356/2.webp",
-        "alt": "VW Caddy 1.6 дизел / Регистриран / Обслужен / Лизинг"
-      },
-      {
-        "url": "/assets/vehicles/11774253415129356/3.webp",
-        "alt": "VW Caddy 1.6 дизел / Регистриран / Обслужен / Лизинг"
-      },
-      {
-        "url": "/assets/vehicles/11774253415129356/4.webp",
-        "alt": "VW Caddy 1.6 дизел / Регистриран / Обслужен / Лизинг"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "spec": {
-      "make": "VW",
-      "model": "Caddy",
-      "year": 2011,
-      "bodyType": "other",
-      "fuelType": "diesel",
-      "transmission": "manual",
-      "mileageValue": 260876,
-      "mileageUnit": "km",
-      "enginePowerHp": 100
-    },
-    "seller": {
-      "id": "dealer-dynamic-auto-varna",
-      "type": "dealer",
-      "displayName": "Dynamic Auto Varna",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-45006e0c34f113db/logo-on-light.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1006",
-    "slug": "toyota-corolla-2022-11780920338607763",
-    "category": "car",
-    "dealerOrgId": "dealer-dynamic-auto-varna",
-    "status": "active",
-    "title": "Toyota Corolla Бартер / Лизинг / Без забележки!!! 43.000км",
-    "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
-    "price": {
-      "amount": 18500,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/vehicles/11780920338607763/1.webp",
-        "alt": "Toyota Corolla Бартер / Лизинг / Без забележки!!! 43.000км"
-      },
-      {
-        "url": "/assets/vehicles/11780920338607763/2.webp",
-        "alt": "Toyota Corolla Бартер / Лизинг / Без забележки!!! 43.000км"
-      },
-      {
-        "url": "/assets/vehicles/11780920338607763/3.webp",
-        "alt": "Toyota Corolla Бартер / Лизинг / Без забележки!!! 43.000км"
-      },
-      {
-        "url": "/assets/vehicles/11780920338607763/4.webp",
-        "alt": "Toyota Corolla Бартер / Лизинг / Без забележки!!! 43.000км"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "spec": {
-      "make": "Toyota",
-      "model": "Corolla",
-      "year": 2022,
-      "bodyType": "sedan",
-      "fuelType": "gasoline",
-      "transmission": "automatic",
-      "mileageValue": 43000,
-      "mileageUnit": "km",
-      "enginePowerHp": 163
-    },
-    "seller": {
-      "id": "dealer-dynamic-auto-varna",
-      "type": "dealer",
-      "displayName": "Dynamic Auto Varna",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-45006e0c34f113db/logo-on-light.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1007",
-    "slug": "toyota-avensis-verso-2003-11785227540991935",
-    "category": "van",
-    "dealerOrgId": "dealer-dynamic-auto-varna",
-    "status": "active",
-    "title": "Toyota Avensis verso Регистриран / Обслужен / Лизинг / Бартер",
-    "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
-    "price": {
-      "amount": 2500,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/vehicles/11785227540991935/1.webp",
-        "alt": "Toyota Avensis verso Регистриран / Обслужен / Лизинг / Бартер"
-      },
-      {
-        "url": "/assets/vehicles/11785227540991935/2.webp",
-        "alt": "Toyota Avensis verso Регистриран / Обслужен / Лизинг / Бартер"
-      },
-      {
-        "url": "/assets/vehicles/11785227540991935/3.webp",
-        "alt": "Toyota Avensis verso Регистриран / Обслужен / Лизинг / Бартер"
-      },
-      {
-        "url": "/assets/vehicles/11785227540991935/4.webp",
-        "alt": "Toyota Avensis verso Регистриран / Обслужен / Лизинг / Бартер"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "spec": {
-      "make": "Toyota",
-      "model": "Avensis verso",
-      "year": 2003,
-      "bodyType": "van",
-      "fuelType": "diesel",
-      "transmission": "manual",
-      "mileageValue": 280765,
-      "mileageUnit": "km",
-      "enginePowerHp": 114
-    },
-    "seller": {
-      "id": "dealer-dynamic-auto-varna",
-      "type": "dealer",
-      "displayName": "Dynamic Auto Varna",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-45006e0c34f113db/logo-on-light.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1008",
-    "slug": "smart-mc-2003-11763409304457756",
-    "category": "car",
-    "dealerOrgId": "dealer-dynamic-auto-varna",
-    "status": "active",
-    "title": "Smart Mc Регистриран / Автомат / Климатик / Панорама",
-    "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
-    "price": {
-      "amount": 1200,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/vehicles/11763409304457756/1.webp",
-        "alt": "Smart Mc Регистриран / Автомат / Климатик / Панорама"
-      },
-      {
-        "url": "/assets/vehicles/11763409304457756/2.webp",
-        "alt": "Smart Mc Регистриран / Автомат / Климатик / Панорама"
-      },
-      {
-        "url": "/assets/vehicles/11763409304457756/3.webp",
-        "alt": "Smart Mc Регистриран / Автомат / Климатик / Панорама"
-      },
-      {
-        "url": "/assets/vehicles/11763409304457756/4.webp",
-        "alt": "Smart Mc Регистриран / Автомат / Климатик / Панорама"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "spec": {
-      "make": "Smart",
-      "model": "Mc",
-      "year": 2003,
-      "bodyType": "hatchback",
-      "fuelType": "gasoline",
-      "transmission": "automatic",
-      "mileageValue": 150098,
-      "mileageUnit": "km",
-      "enginePowerHp": 60
-    },
-    "seller": {
-      "id": "dealer-dynamic-auto-varna",
-      "type": "dealer",
-      "displayName": "Dynamic Auto Varna",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-45006e0c34f113db/logo-on-light.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1009",
-    "slug": "peugeot-208-2016-11784058872993223",
-    "category": "car",
-    "dealerOrgId": "dealer-dynamic-auto-varna",
-    "status": "active",
-    "title": "Peugeot 208 125 хил км. / Лизинг / Бартер",
-    "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
-    "price": {
-      "amount": 5000,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/vehicles/11784058872993223/1.webp",
-        "alt": "Peugeot 208 125 хил км. / Лизинг / Бартер"
-      },
-      {
-        "url": "/assets/vehicles/11784058872993223/2.webp",
-        "alt": "Peugeot 208 125 хил км. / Лизинг / Бартер"
-      },
-      {
-        "url": "/assets/vehicles/11784058872993223/3.webp",
-        "alt": "Peugeot 208 125 хил км. / Лизинг / Бартер"
-      },
-      {
-        "url": "/assets/vehicles/11784058872993223/4.webp",
-        "alt": "Peugeot 208 125 хил км. / Лизинг / Бартер"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "spec": {
-      "make": "Peugeot",
-      "model": "208",
-      "year": 2016,
-      "bodyType": "hatchback",
-      "fuelType": "gasoline",
-      "transmission": "manual",
-      "mileageValue": 125654,
-      "mileageUnit": "km",
-      "enginePowerHp": 67
-    },
-    "seller": {
-      "id": "dealer-dynamic-auto-varna",
-      "type": "dealer",
-      "displayName": "Dynamic Auto Varna",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-45006e0c34f113db/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-0b6f5127f33a3666/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false

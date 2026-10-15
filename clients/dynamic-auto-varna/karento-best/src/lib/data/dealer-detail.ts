@@ -36,6 +36,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "valueKey": "fuel.diesel"
       },
       {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2006",
+        "labelKey": "vehicle.field.year"
+      },
+      {
         "id": "lit",
         "icon": "/assets/imgs/page/car/lit.svg",
         "value": "105 hp",
@@ -104,7 +110,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Dynamic Auto Varna",
       "location": "бул. Цар Освободител 289, Варна, България",
-      "avatar": "/dealer-brand/v2-45006e0c34f113db/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-0b6f5127f33a3666/logo-on-light.webp",
       "mobile": "0889616721",
       "email": "",
       "whatsapp": "",
@@ -154,6 +160,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2011",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -224,7 +236,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Dynamic Auto Varna",
       "location": "бул. Цар Освободител 289, Варна, България",
-      "avatar": "/dealer-brand/v2-45006e0c34f113db/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-0b6f5127f33a3666/logo-on-light.webp",
       "mobile": "0889616721",
       "email": "",
       "whatsapp": "",
@@ -274,6 +286,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Petrol",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.gasoline"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2022",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -344,7 +362,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Dynamic Auto Varna",
       "location": "бул. Цар Освободител 289, Варна, България",
-      "avatar": "/dealer-brand/v2-45006e0c34f113db/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-0b6f5127f33a3666/logo-on-light.webp",
       "mobile": "0889616721",
       "email": "",
       "whatsapp": "",
@@ -394,6 +412,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2003",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -464,7 +488,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Dynamic Auto Varna",
       "location": "бул. Цар Освободител 289, Варна, България",
-      "avatar": "/dealer-brand/v2-45006e0c34f113db/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-0b6f5127f33a3666/logo-on-light.webp",
       "mobile": "0889616721",
       "email": "",
       "whatsapp": "",
@@ -514,6 +538,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Petrol",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.gasoline"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2003",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -584,7 +614,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Dynamic Auto Varna",
       "location": "бул. Цар Освободител 289, Варна, България",
-      "avatar": "/dealer-brand/v2-45006e0c34f113db/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-0b6f5127f33a3666/logo-on-light.webp",
       "mobile": "0889616721",
       "email": "",
       "whatsapp": "",
@@ -634,6 +664,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Petrol",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.gasoline"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2016",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -704,7 +740,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Dynamic Auto Varna",
       "location": "бул. Цар Освободител 289, Варна, България",
-      "avatar": "/dealer-brand/v2-45006e0c34f113db/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-0b6f5127f33a3666/logo-on-light.webp",
       "mobile": "0889616721",
       "email": "",
       "whatsapp": "",
@@ -754,6 +790,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Petrol",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.gasoline"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2005",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -824,7 +866,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Dynamic Auto Varna",
       "location": "бул. Цар Освободител 289, Варна, България",
-      "avatar": "/dealer-brand/v2-45006e0c34f113db/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-0b6f5127f33a3666/logo-on-light.webp",
       "mobile": "0889616721",
       "email": "",
       "whatsapp": "",
@@ -874,6 +916,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2012",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -944,7 +992,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Dynamic Auto Varna",
       "location": "бул. Цар Освободител 289, Варна, България",
-      "avatar": "/dealer-brand/v2-45006e0c34f113db/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-0b6f5127f33a3666/logo-on-light.webp",
       "mobile": "0889616721",
       "email": "",
       "whatsapp": "",
