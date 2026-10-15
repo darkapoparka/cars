@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "M Car Varna",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-2dd1aec68dc69962/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-2dd1aec68dc69962/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-2dd1aec68dc69962/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-fb593bfc691819f0/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-fb593bfc691819f0/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-fb593bfc691819f0/logo-on-dark.webp",
     "alt": "M Car Varna",
-    "favicon": "/dealer-brand/v2-2dd1aec68dc69962/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-fb593bfc691819f0/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

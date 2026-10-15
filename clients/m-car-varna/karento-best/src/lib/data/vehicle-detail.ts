@@ -147,7 +147,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "M Car Varna",
   "location": "бул. Владислав Варненчик 320, Варна, България",
-  "avatar": "/dealer-brand/v2-2dd1aec68dc69962/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-fb593bfc691819f0/logo-on-light.webp",
   "mobile": "+359887246669",
   "email": "contact@bmw-mcarvarna.bg",
   "whatsapp": "",

@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "M Car Varna",
-  "logo": "/dealer-brand/v2-2dd1aec68dc69962/logo-on-light.webp",
+  "logo": "/dealer-brand/v2-fb593bfc691819f0/logo-on-light.webp",
   "phone": "+359887246669",
   "email": "contact@bmw-mcarvarna.bg",
   "address": "бул. Владислав Варненчик 320, Варна, България",

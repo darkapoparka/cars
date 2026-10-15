@@ -49,7 +49,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "M Car Varna",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-2dd1aec68dc69962/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-fb593bfc691819f0/logo-on-light.webp"
     },
     "publishedAt": "2026-10-12T09:00:00.000Z",
     "promoted": true
@@ -101,7 +101,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "M Car Varna",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-2dd1aec68dc69962/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-fb593bfc691819f0/logo-on-light.webp"
     },
     "publishedAt": "2026-10-12T09:00:00.000Z",
     "promoted": true
