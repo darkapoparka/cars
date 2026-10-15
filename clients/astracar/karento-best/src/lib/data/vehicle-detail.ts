@@ -190,7 +190,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "Астракар",
   "location": "бул. „Цар Освободител“ 282",
-  "avatar": "/dealer-brand/v2-18b42df68fbfdecf/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-f09b0dbd2205def1/logo-on-light.webp",
   "mobile": "0899 908 040",
   "email": "astracar_2006@abv.bg",
   "whatsapp": "",

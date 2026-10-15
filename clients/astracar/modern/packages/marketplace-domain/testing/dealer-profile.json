@@ -27,9 +27,9 @@
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=%D0%90%D1%81%D1%82%D1%80%D0%B0%D0%BA%D0%B0%D1%80%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20282%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
     "mapsEmbedUrl": "https://maps.google.com/maps?q=%D0%90%D1%81%D1%82%D1%80%D0%B0%D0%BA%D0%B0%D1%80%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20282%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F&output=embed",
     "accent": "#30343b",
-    "logo": "/dealer-brand/v2-18b42df68fbfdecf/logo-on-light.webp",
-    "logoLight": "/dealer-brand/v2-18b42df68fbfdecf/logo-on-light.webp",
-    "logoDark": "/dealer-brand/v2-18b42df68fbfdecf/logo-on-dark.webp",
+    "logo": "/dealer-brand/v2-f09b0dbd2205def1/logo-on-light.webp",
+    "logoLight": "/dealer-brand/v2-f09b0dbd2205def1/logo-on-light.webp",
+    "logoDark": "/dealer-brand/v2-f09b0dbd2205def1/logo-on-dark.webp",
     "socialLinks": {
       "facebook": "",
       "instagram": "",
@@ -2490,17 +2490,17 @@
     "originalSha256": "577b88b43392506185890f29f333d07c0e733629aa8243b2ffb3fd8810dd1bac",
     "assets": {
       "onLight": {
-        "publicPath": "/dealer-brand/v2-18b42df68fbfdecf/logo-on-light.webp",
+        "publicPath": "/dealer-brand/v2-f09b0dbd2205def1/logo-on-light.webp",
         "sha256": "63eea9725a30b10d27fb06561ca43e24b500a7c133f86dfdabb1b389a27d8915",
         "bytes": 104554
       },
       "onDark": {
-        "publicPath": "/dealer-brand/v2-18b42df68fbfdecf/logo-on-dark.webp",
+        "publicPath": "/dealer-brand/v2-f09b0dbd2205def1/logo-on-dark.webp",
         "sha256": "72b447964c4690cd280180978c8d2d3107983b2f8118a3d67e6872717fddc50c",
         "bytes": 29598
       },
       "onAccent": {
-        "publicPath": "/dealer-brand/v2-18b42df68fbfdecf/logo-on-accent.webp",
+        "publicPath": "/dealer-brand/v2-f09b0dbd2205def1/logo-on-accent.webp",
         "sha256": "72b447964c4690cd280180978c8d2d3107983b2f8118a3d67e6872717fddc50c",
         "bytes": 29598
       }

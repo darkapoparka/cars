@@ -114,8 +114,8 @@ export const leadSite: LeadSiteConfig = {
     "tagline": "Astracar — vehicles and dealer support in Varna."
   }
 },
-  accent: "#30343b",
-  desktopAccent: "#4b5057",
+  accent: "#09090b",
+  desktopAccent: "#09090b",
   desktopInventoryFilterLayout: "quick",
   desktopPreviewIdentity: {
     sourceSlug: "day-night-auto-group",
@@ -147,11 +147,11 @@ export const leadSite: LeadSiteConfig = {
   email: "astracar_2006@abv.bg",
   heroPath: "/lead-hero.jpg",
   locale: "bg-BG",
-  logoPath: "/dealer-brand/v2-18b42df68fbfdecf/logo-on-light.webp",
-  logoInversePath: "/dealer-brand/v2-18b42df68fbfdecf/logo-on-dark.webp",
-  logoOnLight: "/dealer-brand/v2-18b42df68fbfdecf/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/v2-18b42df68fbfdecf/logo-on-dark.webp",
-  logoOnAccent: "/dealer-brand/v2-18b42df68fbfdecf/logo-on-dark.webp",
+  logoPath: "/dealer-brand/v2-f09b0dbd2205def1/logo-on-light.webp",
+  logoInversePath: "/dealer-brand/v2-f09b0dbd2205def1/logo-on-dark.webp",
+  logoOnLight: "/dealer-brand/v2-f09b0dbd2205def1/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-f09b0dbd2205def1/logo-on-dark.webp",
+  logoOnAccent: "/dealer-brand/v2-f09b0dbd2205def1/logo-on-dark.webp",
   mapsEmbedUrl:
     "https://maps.google.com/maps?q=%D0%90%D1%81%D1%82%D1%80%D0%B0%D0%BA%D0%B0%D1%80%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20282%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F&output=embed",
   mapsUrl:

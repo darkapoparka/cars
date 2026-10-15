@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "Астракар",
-  "logo": "/dealer-brand/v2-18b42df68fbfdecf/logo-on-light.webp",
+  "logo": "/dealer-brand/v2-f09b0dbd2205def1/logo-on-light.webp",
   "phone": "+359899908040",
   "email": "astracar_2006@abv.bg",
   "address": "бул. „Цар Освободител“ 282",
