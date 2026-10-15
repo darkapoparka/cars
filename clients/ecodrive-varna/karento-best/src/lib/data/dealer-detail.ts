@@ -94,7 +94,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Eco Drive",
       "location": "Варна, България",
-      "avatar": "/dealer-brand/v2-9786c23ceea922da/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-8192942a82565732/logo-on-light.webp",
       "mobile": "0897838559",
       "email": "",
       "whatsapp": "",

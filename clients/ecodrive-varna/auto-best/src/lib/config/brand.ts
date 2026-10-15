@@ -33,6 +33,6 @@ export const brand = {
   addressLine,
   address: "Варна, България",
   appointment: "Понеделник 11:00 - 18:00 ч. Вторник 11:00 - 18:00 ч. Сряда 11:00 - 18:00 ч. Четвъртък 11:00 - 18:00 ч. Петък 11:00 - 18:00 ч. Събота 11:00 - 18:00 ч. Неделя Почивен ден",
-  logo: "/dealer-brand/v2-9786c23ceea922da/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/v2-9786c23ceea922da/logo-on-dark.webp"
+  logo: "/dealer-brand/v2-8192942a82565732/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-8192942a82565732/logo-on-dark.webp"
 } as const satisfies BrandConfig;

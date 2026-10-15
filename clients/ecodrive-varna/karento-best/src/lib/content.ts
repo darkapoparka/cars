@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "Eco Drive",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-9786c23ceea922da/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-9786c23ceea922da/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-9786c23ceea922da/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-8192942a82565732/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-8192942a82565732/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-8192942a82565732/logo-on-dark.webp",
     "alt": "Eco Drive",
-    "favicon": "/dealer-brand/v2-9786c23ceea922da/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-8192942a82565732/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

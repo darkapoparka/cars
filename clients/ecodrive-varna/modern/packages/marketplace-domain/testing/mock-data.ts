@@ -50,7 +50,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Eco Drive",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-9786c23ceea922da/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-8192942a82565732/logo-on-light.webp"
     },
     "publishedAt": "2026-10-11T09:00:00.000Z",
     "promoted": true

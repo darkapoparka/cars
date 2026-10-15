@@ -1,4 +1,5 @@
 import type { Vehicle } from '$lib/data/vehicles';
+import { inventoryText } from '$lib/content/inventory-localized';
 import { translateVehicleTerm, type Locale } from '$lib/i18n/messages';
 import { formatInventoryKm } from './inventory';
 
@@ -81,7 +82,7 @@ export const compareVehiclesFromVehicles = (
 		priceLabel: vehicle.priceLabel,
 		slug: vehicle.slug,
 		stockNumber: vehicle.stockNumber,
-		title: vehicle.title,
+		title: inventoryText(locale, vehicle.title),
 		transmission: translateVehicleTerm(locale, 'transmissions', vehicle.transmission),
 		vin: vehicle.vin,
 		year: vehicle.year

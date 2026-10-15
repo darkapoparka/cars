@@ -3,12 +3,12 @@
   "dealer": "ecodrive-varna",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/app",
-    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
-    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
   },
-  "appDigest": "527dd8625ccf2260961e337ba1ecb6a516041f140d286ffdbf82607e8f6e90f5",
+  "appDigest": "7c070e6509ff801f35163ab5842b9fdbea9dbad6bb80fe3206125b9b9011852c",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "ecodrive-varna",
@@ -21,14 +21,14 @@
     "assets": [
       {
         "source": "auto-best/static/dealer-brand/logo-on-light.png",
-        "output": "public/dealer-app/logo-light-5447506893b7edd82b33.png",
-        "sha256": "5447506893b7edd82b335d71dd5237555c33c17835c7eed4be55518500da9223",
+        "output": "public/dealer-app/logo-light-ad76c5266d9d37e7cc5d.png",
+        "sha256": "ad76c5266d9d37e7cc5df18fc744d9a425f2bd1229b0abc4d0994f12bbfd6fe2",
         "role": "logo-light"
       },
       {
         "source": "auto-best/static/dealer-brand/logo-on-dark.png",
-        "output": "public/dealer-app/logo-dark-030b780a4a9868753ad7.png",
-        "sha256": "030b780a4a9868753ad7977489a522e83f1b80fee3dfe9189b620667290d4ee1",
+        "output": "public/dealer-app/logo-dark-d2fb22a979439b16a085.png",
+        "sha256": "d2fb22a979439b16a08582d3fb7590361e682a8a1ef6e0cbe66a71c88267bc36",
         "role": "logo-dark"
       },
       {
@@ -54,5 +54,6 @@
     ]
   },
   "needsDealerQA": true,
-  "readyToPublish": false
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-15T03:22:19.873Z"
 }

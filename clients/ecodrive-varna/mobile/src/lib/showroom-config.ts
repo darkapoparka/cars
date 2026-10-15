@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "Eco Drive",
-  "logo": "/dealer-brand/v2-9786c23ceea922da/logo-on-light.webp",
+  "logo": "/dealer-brand/v2-8192942a82565732/logo-on-light.webp",
   "phone": "+359897838559",
   "email": null,
   "address": "Варна, България",
