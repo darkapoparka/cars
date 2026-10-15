@@ -1,0 +1,371 @@
+{
+  "schemaVersion": 1,
+  "type": "cars-existing-fleet-single-worker-deployment",
+  "client": "bradford-cherry-tree-cars",
+  "repository": "darkapoparka/cars-uk-bradford-cherry-tree-cars",
+  "sourcePublication": {
+    "repository": "darkapoparka/cars",
+    "commit": "0e6048a2a2e1a9e9a3b92822d4ba9e4b6c63d869",
+    "sourceTree": "2ba44e704c71b1a0fcb8faaad304fb2294b95227",
+    "ref": "refs/heads/main",
+    "publishedAt": "2026-10-15T01:16:06.000Z",
+    "evidence": "Actual immutable native commit/root/client tree and fresh MAIN ancestry; final selected six template tuple and input seal exactly match all seven current native targets and original single Worker archive",
+    "verifiedMainCommit": "40313e7532bcc289583002679b93f89adfba9297"
+  },
+  "privatePublishingMirror": {
+    "repository": "darkapoparka/cars-uk-bradford-cherry-tree-cars",
+    "state": "awaiting-current-main-mirror-publication",
+    "verifiedByBridge": false
+  },
+  "accountId": "cb0007f242077bd759331f096eb75531",
+  "workerName": "cars-uk-bradford-cherry-tree-cars",
+  "publicOrigin": "https://cars-uk-bradford-cherry-tree-cars.darkapoparka1.workers.dev",
+  "sourceCommit": "0e6048a2a2e1a9e9a3b92822d4ba9e4b6c63d869",
+  "sourceTree": "2ba44e704c71b1a0fcb8faaad304fb2294b95227",
+  "inputDigest": "584ed94d7c12ee4c4f697ecf03d341f154de7b7a4593da9defc3b3917155fc0f",
+  "sourceReleases": {
+    "auto-best": {
+      "repository": "darkapoparka/cars",
+      "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+      "path": "templates/auto-best",
+      "tree": "78fa1a82eca14816449f9588283260840ee94f52",
+      "digest": "2fc9c3cfc9cf1976dbe30c08592776362e5bcc6b09e8b06620e57c4406df58a5"
+    },
+    "modern": {
+      "repository": "darkapoparka/cars",
+      "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+      "path": "templates/modern",
+      "tree": "01eac7390fa6ba951d4b8d4c26159a9be150f6c8",
+      "digest": "30e1a99f857cc25e4d78c9459cfb4394a9f70c5b114196a5ca6325ff38823b4b"
+    },
+    "import": {
+      "repository": "darkapoparka/cars",
+      "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+      "path": "templates/import",
+      "tree": "d841ddfe5bec918bf6b2c19fd6971fecd6b8e54d",
+      "digest": "c7d6c93214e859aa2747af8f5e068b6a0b8ca095d6328c807728a4d531d688f8"
+    },
+    "app": {
+      "repository": "darkapoparka/cars",
+      "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+      "path": "templates/app",
+      "tree": "7f3d3ffa40546635377e6c5225194fe06fead291",
+      "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1"
+    },
+    "mobile": {
+      "repository": "darkapoparka/cars",
+      "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+      "path": "templates/mobile",
+      "tree": "792bfdd1d8eb22aabd90c7e3a0c0779a6c1c36f3",
+      "digest": "f5a3e541a7c648a4c2899ad3893e22a3806027a9f66d95fa4e8c74b2226635b6"
+    },
+    "karento-best": {
+      "repository": "darkapoparka/cars",
+      "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+      "path": "templates/karento-best",
+      "tree": "8c5ac869c7fd15e19a80c660343fc64b20a2bad9",
+      "digest": "be17ef365e3272753df6e50826b139a45bfc32b8fef54ddcb86d977ad16280a9"
+    }
+  },
+  "runId": 38664717858,
+  "attempt": 1,
+  "artifactId": 11940587746,
+  "archiveMode": "original-byte-buffer",
+  "archiveDigest": "sha256:50b19290658dd4f6c2645812e0fd73c198379dde805e7c46a728dfbda639f9aa",
+  "artifactDigest": "b2c112c7705e000a87386adc41c21ed8bf6b4419c87ce84aba8624844dbb6373",
+  "outputDigest": "cc6324761d426bf7785017ebdd6a1a1d35d93e77053f893546c8c3e29c1deb25",
+  "applicationCount": 6,
+  "workerCount": 1,
+  "serviceBindings": [],
+  "deploymentMode": "update-existing",
+  "readyToDeploy": true,
+  "canonicalComposition": {
+    "schemaVersion": 1,
+    "kind": "cars-canonical-origin-wrapper-v2",
+    "wrapperVersion": 2,
+    "providerOrigin": "https://cars-uk-bradford-cherry-tree-cars.darkapoparka1.workers.dev",
+    "canonicalOrigin": "https://bradford-cherry-tree-cars.webpreviews.site",
+    "ukDefault": true,
+    "originalWorkerPath": "server/__cars_original_worker.mjs",
+    "toolRevision": "0e6048a2a2e1a9e9a3b92822d4ba9e4b6c63d869",
+    "wrapperSha256": "506aeb54e7a41061d133639b5d201dd580ae0d2c8c0cbf99d4ab081b51e05386"
+  },
+  "canonicalExposure": {
+    "schemaVersion": 1,
+    "kind": "cars-existing-worker-canonical-exposure-lease",
+    "dealer": "bradford-cherry-tree-cars",
+    "reviewed": true,
+    "reviewedAt": "2026-10-15T01:21:55.287Z",
+    "accountId": "cb0007f242077bd759331f096eb75531",
+    "workerName": "cars-uk-bradford-cherry-tree-cars",
+    "providerOrigin": "https://cars-uk-bradford-cherry-tree-cars.darkapoparka1.workers.dev",
+    "canonicalOrigin": "https://bradford-cherry-tree-cars.webpreviews.site",
+    "zoneId": "006e99b27c99b7ee85bc0642fa91fa14",
+    "routeId": "82e755f9ade74e51b0ded7180507da19",
+    "proofs": {
+      "zoneRoutes": {
+        "endpoint": "/zones/006e99b27c99b7ee85bc0642fa91fa14/workers/routes",
+        "sha256": "766c4dce62c283459e28ea1857300c4b2f24caecc06637544d283f33d6a61c96"
+      },
+      "workerDomains": {
+        "endpoint": "/accounts/cb0007f242077bd759331f096eb75531/workers/domains",
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "scriptSubdomain": {
+        "endpoint": "/accounts/cb0007f242077bd759331f096eb75531/workers/scripts/cars-uk-bradford-cherry-tree-cars/subdomain",
+        "sha256": "c49aada11f8b7ae2265faf2ba257bd94d33cd2a864ef91b6654bb7974adfec57"
+      }
+    }
+  },
+  "requiresLiveExposureReader": true,
+  "deployments": 1,
+  "hostedVerified": false,
+  "ownerAccepted": false,
+  "status": "deployed",
+  "versionId": "6b705884-0f96-4ab3-9d94-e04f92b95ab0",
+  "deploymentId": "5abadd86-7936-4e92-ae82-975a8beafb93",
+  "versionTraffic": [
+    {
+      "version_id": "6b705884-0f96-4ab3-9d94-e04f92b95ab0",
+      "percentage": 100
+    }
+  ],
+  "liveBindings": [
+    {
+      "name": "ASSETS",
+      "type": "assets"
+    }
+  ],
+  "scriptCountSnapshot": {
+    "count": 100,
+    "allowed": 100,
+    "checkedAt": "2026-10-15T01:25:51.501Z",
+    "evidence": "authenticated-cloudflare-connector"
+  },
+  "scriptCountVerifiedAfter": false,
+  "exposurePreservation": {
+    "canonicalOrigin": "https://bradford-cherry-tree-cars.webpreviews.site",
+    "zoneId": "006e99b27c99b7ee85bc0642fa91fa14",
+    "routeId": "82e755f9ade74e51b0ded7180507da19",
+    "before": {
+      "stage": "before",
+      "requestId": "729b3c6e-9f00-4ea4-a938-3ab1396ce564",
+      "observedAt": "2026-10-15T01:28:08.433Z",
+      "leaseSha256": "57fe765f8508486d9a439db7d05ba8b779b6113cf87cc5c3c5f39726bb96d284",
+      "proofDigests": {
+        "zoneRoutes": "766c4dce62c283459e28ea1857300c4b2f24caecc06637544d283f33d6a61c96",
+        "workerDomains": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "scriptSubdomain": "c49aada11f8b7ae2265faf2ba257bd94d33cd2a864ef91b6654bb7974adfec57"
+      }
+    },
+    "locked": {
+      "stage": "locked",
+      "requestId": "00a14338-d922-486a-a3b4-83c44cbd26be",
+      "observedAt": "2026-10-15T01:28:20.711Z",
+      "leaseSha256": "57fe765f8508486d9a439db7d05ba8b779b6113cf87cc5c3c5f39726bb96d284",
+      "proofDigests": {
+        "zoneRoutes": "766c4dce62c283459e28ea1857300c4b2f24caecc06637544d283f33d6a61c96",
+        "workerDomains": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "scriptSubdomain": "c49aada11f8b7ae2265faf2ba257bd94d33cd2a864ef91b6654bb7974adfec57"
+      }
+    },
+    "after": {
+      "stage": "after",
+      "requestId": "0534f773-a96d-4a00-9220-4be7caa18569",
+      "observedAt": "2026-10-15T01:29:03.002Z",
+      "leaseSha256": "57fe765f8508486d9a439db7d05ba8b779b6113cf87cc5c3c5f39726bb96d284",
+      "proofDigests": {
+        "zoneRoutes": "766c4dce62c283459e28ea1857300c4b2f24caecc06637544d283f33d6a61c96",
+        "workerDomains": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "scriptSubdomain": "c49aada11f8b7ae2265faf2ba257bd94d33cd2a864ef91b6654bb7974adfec57"
+      }
+    }
+  },
+  "rollback": {
+    "accountId": "cb0007f242077bd759331f096eb75531",
+    "workerName": "cars-uk-bradford-cherry-tree-cars",
+    "publicOrigin": "https://cars-uk-bradford-cherry-tree-cars.darkapoparka1.workers.dev",
+    "exists": true,
+    "workersDev": true,
+    "workersDevPreviewEnabled": false,
+    "checkedAt": "2026-10-15T01:28:04.699Z",
+    "routes": [
+      {
+        "id": "82e755f9ade74e51b0ded7180507da19",
+        "pattern": "bradford-cherry-tree-cars.webpreviews.site/*",
+        "script": "cars-uk-bradford-cherry-tree-cars"
+      }
+    ],
+    "domains": [],
+    "tailConsumers": [],
+    "schedules": [],
+    "bindings": [
+      {
+        "name": "ASSETS",
+        "type": "assets"
+      }
+    ],
+    "handlers": [
+      "fetch"
+    ],
+    "versionId": "d92b99c9-3573-4628-8f97-659c2021f859",
+    "versionTraffic": [
+      {
+        "version_id": "d92b99c9-3573-4628-8f97-659c2021f859",
+        "percentage": 100
+      }
+    ],
+    "deploymentId": "ccc08a7f-d5d6-4039-b22c-31f032a1597a",
+    "scriptCount": 100,
+    "routeCount": 100,
+    "allowedScripts": 100,
+    "evidence": "authenticated-cloudflare-connector",
+    "scriptInventory": {
+      "complete": true,
+      "endpoint": "/accounts/cb0007f242077bd759331f096eb75531/workers/scripts",
+      "names": [
+        "cars-abcbulgaria-varna",
+        "cars-am-varna-varna",
+        "cars-atanasov-varna",
+        "cars-auto-insurance-import-varna",
+        "cars-autobora-varna",
+        "cars-autofestvarna",
+        "cars-autojo-di-varna",
+        "cars-autoroadvarna",
+        "cars-autostar21-varna",
+        "cars-avtoborsa-mania",
+        "cars-balkan-car-varna",
+        "cars-bavaria-auto-varna",
+        "cars-bavaro-varna",
+        "cars-biemaauto-varna",
+        "cars-bora-car-varna",
+        "cars-buscenter-varna",
+        "cars-cali-cars-varna",
+        "cars-carnova-varna",
+        "cars-carpointtradevarna",
+        "cars-centralauto-varna",
+        "cars-champion-auto-varna",
+        "cars-chernomore-varna",
+        "cars-citycarsvarna",
+        "cars-crazy-fox-motors-varna",
+        "cars-dein-auto-varna",
+        "cars-dmautovarna",
+        "cars-dreamdrivevarna",
+        "cars-dynamicautovarna",
+        "cars-ecodrive-varna",
+        "cars-electricauto-varna",
+        "cars-elegantcar-varna",
+        "cars-elexiscars-varna",
+        "cars-eurocar6-varna",
+        "cars-europa-varna",
+        "cars-evrocar-varna-09",
+        "cars-exclusive-auto-varna",
+        "cars-express-auto-varna",
+        "cars-extra-car-sm",
+        "cars-focus1-varna",
+        "cars-fusion-auto-varna",
+        "cars-garage24-varna",
+        "cars-grand-auto-varna",
+        "cars-i1-auto-varna",
+        "cars-kalchev-varna",
+        "cars-kalo-0404-varna",
+        "cars-kalokars-varna",
+        "cars-kapitol-varna",
+        "cars-kk-auto-varna",
+        "cars-kolarovcars",
+        "cars-kolevi-auto-varna",
+        "cars-kris-varna",
+        "cars-lionauto1-varna",
+        "cars-m-car-varna",
+        "cars-mgauto-varna",
+        "cars-miraj-auto-varna",
+        "cars-mladost2-varna",
+        "cars-monarh-varna",
+        "cars-multizaza-varna",
+        "cars-nordic-auto-varna",
+        "cars-nunki-1-varna",
+        "cars-part-mag-cars-varna",
+        "cars-pmselectautomotive",
+        "cars-porsche-varna",
+        "cars-prestige-varna",
+        "cars-primeautovarna",
+        "cars-promotors82-varna",
+        "cars-richicar-varna",
+        "cars-rqs-auto-team",
+        "cars-sevicar-varna",
+        "cars-specialcarood-varna",
+        "cars-sprint-auto-varna",
+        "cars-stadiona-varna",
+        "cars-stefancar-varna",
+        "cars-sunny-varna",
+        "cars-technocar-varna",
+        "cars-tesi-car-varna",
+        "cars-tesla-varna",
+        "cars-tonyem4m-varna",
+        "cars-top-auto-varna",
+        "cars-transcar-varna",
+        "cars-triumf-varna",
+        "cars-uk-batley-as-motor-group",
+        "cars-uk-birmingham-square-one-motors",
+        "cars-uk-birmingham-trade-car-sales-grasmere",
+        "cars-uk-bradford-cherry-tree-cars",
+        "cars-uk-dewsbury-car-market-yorkshire",
+        "cars-uk-motherwell-motors-castle",
+        "cars-uk-north-norfolk-car-sales",
+        "cars-uk-nottingham-s-a-motors",
+        "cars-uk-stockport-broadbent-car-and-servicing",
+        "cars-uk-stockton-norton-grange-trade-cars",
+        "cars-unitrade-varna",
+        "cars-vaen-cars-varna",
+        "cars-valkov-cars-varna",
+        "cars-varnacarexpress-varna",
+        "cars-vichenca-varna",
+        "cars-vvcars-varna",
+        "cars-watt-a-car-varna",
+        "cars-wildivaka-varna",
+        "cars-xcar-varna"
+      ]
+    },
+    "allowanceEvidence": "Maintained publisher existing 100-script fleet allowance; no billing assertion.",
+    "accountUsageModel": "standard",
+    "workerUsageModel": "standard",
+    "observability": {
+      "enabled": true,
+      "head_sampling_rate": 1,
+      "redact_query_string": false,
+      "logs": {
+        "enabled": true,
+        "head_sampling_rate": 1,
+        "persist": true,
+        "invocation_logs": true
+      },
+      "traces": {
+        "enabled": false,
+        "persist": true,
+        "head_sampling_rate": 1
+      }
+    },
+    "resourceSnapshotCheckedAt": "2026-10-15T01:25:51.501Z",
+    "scriptCountVerifiedAfter": false,
+    "canonicalExposureRead": {
+      "stage": "before",
+      "requestId": "729b3c6e-9f00-4ea4-a938-3ab1396ce564",
+      "observedAt": "2026-10-15T01:28:08.433Z",
+      "leaseSha256": "57fe765f8508486d9a439db7d05ba8b779b6113cf87cc5c3c5f39726bb96d284",
+      "proofDigests": {
+        "zoneRoutes": "766c4dce62c283459e28ea1857300c4b2f24caecc06637544d283f33d6a61c96",
+        "workerDomains": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "scriptSubdomain": "c49aada11f8b7ae2265faf2ba257bd94d33cd2a864ef91b6654bb7974adfec57"
+      }
+    }
+  },
+  "reviewSha256": "0e4d8bf636fdb206636bb366e6722c974d046f6c001834a5b49e29d8c0653e2c",
+  "tool": {
+    "node": "v26.10.0",
+    "version": "4.149.0",
+    "packageSha256": "a55b192868faa5aee1061ace714422a8824b30cd9e622aadb149a07305758d81",
+    "entrySha256": "31866b9a3686777254819158e60ebe4920d1d91141cde68846c62b52f75d7a66",
+    "authentication": "standard-wrangler-profile-or-environment"
+  },
+  "finishedAt": "2026-10-15T01:29:06.290Z"
+}

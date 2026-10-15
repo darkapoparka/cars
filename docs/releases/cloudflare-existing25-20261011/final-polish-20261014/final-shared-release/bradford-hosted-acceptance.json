@@ -1,0 +1,984 @@
+{
+  "schemaVersion": 1,
+  "type": "cars-existing-fleet-single-worker-hosted-acceptance",
+  "status": "passed",
+  "unauthenticated": true,
+  "client": "bradford-cherry-tree-cars",
+  "verifiedAt": "2026-10-15T01:55:17.524Z",
+  "publicOrigin": "https://cars-uk-bradford-cherry-tree-cars.darkapoparka1.workers.dev",
+  "accountId": "cb0007f242077bd759331f096eb75531",
+  "workerName": "cars-uk-bradford-cherry-tree-cars",
+  "sourceCommit": "0e6048a2a2e1a9e9a3b92822d4ba9e4b6c63d869",
+  "sourceTree": "2ba44e704c71b1a0fcb8faaad304fb2294b95227",
+  "inputDigest": "584ed94d7c12ee4c4f697ecf03d341f154de7b7a4593da9defc3b3917155fc0f",
+  "sourceReleases": {
+    "auto-best": {
+      "repository": "darkapoparka/cars",
+      "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+      "path": "templates/auto-best",
+      "tree": "78fa1a82eca14816449f9588283260840ee94f52",
+      "digest": "2fc9c3cfc9cf1976dbe30c08592776362e5bcc6b09e8b06620e57c4406df58a5"
+    },
+    "modern": {
+      "repository": "darkapoparka/cars",
+      "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+      "path": "templates/modern",
+      "tree": "01eac7390fa6ba951d4b8d4c26159a9be150f6c8",
+      "digest": "30e1a99f857cc25e4d78c9459cfb4394a9f70c5b114196a5ca6325ff38823b4b"
+    },
+    "import": {
+      "repository": "darkapoparka/cars",
+      "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+      "path": "templates/import",
+      "tree": "d841ddfe5bec918bf6b2c19fd6971fecd6b8e54d",
+      "digest": "c7d6c93214e859aa2747af8f5e068b6a0b8ca095d6328c807728a4d531d688f8"
+    },
+    "app": {
+      "repository": "darkapoparka/cars",
+      "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+      "path": "templates/app",
+      "tree": "7f3d3ffa40546635377e6c5225194fe06fead291",
+      "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1"
+    },
+    "mobile": {
+      "repository": "darkapoparka/cars",
+      "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+      "path": "templates/mobile",
+      "tree": "792bfdd1d8eb22aabd90c7e3a0c0779a6c1c36f3",
+      "digest": "f5a3e541a7c648a4c2899ad3893e22a3806027a9f66d95fa4e8c74b2226635b6"
+    },
+    "karento-best": {
+      "repository": "darkapoparka/cars",
+      "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+      "path": "templates/karento-best",
+      "tree": "8c5ac869c7fd15e19a80c660343fc64b20a2bad9",
+      "digest": "be17ef365e3272753df6e50826b139a45bfc32b8fef54ddcb86d977ad16280a9"
+    }
+  },
+  "outputDigest": "cc6324761d426bf7785017ebdd6a1a1d35d93e77053f893546c8c3e29c1deb25",
+  "workerCount": 1,
+  "applicationCount": 6,
+  "artifactDigest": "b2c112c7705e000a87386adc41c21ed8bf6b4419c87ce84aba8624844dbb6373",
+  "sourcePublication": {
+    "repository": "darkapoparka/cars",
+    "commit": "0e6048a2a2e1a9e9a3b92822d4ba9e4b6c63d869",
+    "sourceTree": "2ba44e704c71b1a0fcb8faaad304fb2294b95227",
+    "ref": "refs/heads/main",
+    "publishedAt": "2026-10-15T01:16:06.000Z",
+    "evidence": "Actual immutable native commit/root/client tree and fresh MAIN ancestry; final selected six template tuple and input seal exactly match all seven current native targets and original single Worker archive",
+    "verifiedMainCommit": "40313e7532bcc289583002679b93f89adfba9297"
+  },
+  "deploymentId": "5abadd86-7936-4e92-ae82-975a8beafb93",
+  "versionId": "6b705884-0f96-4ab3-9d94-e04f92b95ab0",
+  "versionTraffic": [
+    {
+      "version_id": "6b705884-0f96-4ab3-9d94-e04f92b95ab0",
+      "percentage": 100
+    }
+  ],
+  "liveBindings": [
+    {
+      "name": "ASSETS",
+      "type": "assets"
+    }
+  ],
+  "serviceBindings": [],
+  "artifactManifest": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/final-shared-release/bradford-artifact-manifest.json",
+    "sha256": "edcea86b4b015b69b0df6c0fd531155e289520961c2956817d6893dc7cbd91e7"
+  },
+  "singleWorkerReceipt": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/final-shared-release/bradford-single-worker-receipt.json",
+    "sha256": "51a7713752cba193e16674c868f5d7029f0d0772490341f8960c0b47b34943ce"
+  },
+  "deploymentReceipt": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/final-shared-release/bradford-deployment-receipt.json",
+    "sha256": "c8ddb922c6bcb4965589f8513a3202930103d1c6524ca2d4e054138078a8fe75"
+  },
+  "applications": {
+    "auto-best": {
+      "status": "passed",
+      "source": {
+        "repository": "darkapoparka/cars",
+        "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+        "path": "templates/auto-best",
+        "tree": "78fa1a82eca14816449f9588283260840ee94f52",
+        "digest": "2fc9c3cfc9cf1976dbe30c08592776362e5bcc6b09e8b06620e57c4406df58a5"
+      },
+      "checks": [
+        {
+          "name": "mounted-journeys",
+          "status": "passed",
+          "evidenceSha256": "52690d155345690d71906d46cc3364e1e583bd8de7832f4ab274d45a0eed29d4",
+          "evidence": {
+            "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/final-shared-release/six-applications-hosted-evidence.json",
+            "sha256": "52690d155345690d71906d46cc3364e1e583bd8de7832f4ab274d45a0eed29d4"
+          }
+        },
+        {
+          "name": "public-journeys",
+          "status": "passed",
+          "evidenceSha256": "52690d155345690d71906d46cc3364e1e583bd8de7832f4ab274d45a0eed29d4",
+          "evidence": {
+            "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/final-shared-release/six-applications-hosted-evidence.json",
+            "sha256": "52690d155345690d71906d46cc3364e1e583bd8de7832f4ab274d45a0eed29d4"
+          }
+        },
+        {
+          "name": "assets-preserved",
+          "status": "passed",
+          "evidenceSha256": "52690d155345690d71906d46cc3364e1e583bd8de7832f4ab274d45a0eed29d4",
+          "evidence": {
+            "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/final-shared-release/six-applications-hosted-evidence.json",
+            "sha256": "52690d155345690d71906d46cc3364e1e583bd8de7832f4ab274d45a0eed29d4"
+          }
+        }
+      ],
+      "acceptanceMode": "Existing original-dated proof with explicit source identity and current affected-consumer observations"
+    },
+    "modern": {
+      "status": "passed",
+      "source": {
+        "repository": "darkapoparka/cars",
+        "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+        "path": "templates/modern",
+        "tree": "01eac7390fa6ba951d4b8d4c26159a9be150f6c8",
+        "digest": "30e1a99f857cc25e4d78c9459cfb4394a9f70c5b114196a5ca6325ff38823b4b"
+      },
+      "checks": [
+        {
+          "name": "mounted-journeys",
+          "status": "passed",
+          "evidenceSha256": "52690d155345690d71906d46cc3364e1e583bd8de7832f4ab274d45a0eed29d4",
+          "evidence": {
+            "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/final-shared-release/six-applications-hosted-evidence.json",
+            "sha256": "52690d155345690d71906d46cc3364e1e583bd8de7832f4ab274d45a0eed29d4"
+          }
+        },
+        {
+          "name": "public-journeys",
+          "status": "passed",
+          "evidenceSha256": "52690d155345690d71906d46cc3364e1e583bd8de7832f4ab274d45a0eed29d4",
+          "evidence": {
+            "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/final-shared-release/six-applications-hosted-evidence.json",
+            "sha256": "52690d155345690d71906d46cc3364e1e583bd8de7832f4ab274d45a0eed29d4"
+          }
+        },
+        {
+          "name": "assets-preserved",
+          "status": "passed",
+          "evidenceSha256": "52690d155345690d71906d46cc3364e1e583bd8de7832f4ab274d45a0eed29d4",
+          "evidence": {
+            "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/final-shared-release/six-applications-hosted-evidence.json",
+            "sha256": "52690d155345690d71906d46cc3364e1e583bd8de7832f4ab274d45a0eed29d4"
+          }
+        }
+      ],
+      "acceptanceMode": "Existing original-dated proof with explicit source identity and current affected-consumer observations"
+    },
+    "import": {
+      "status": "passed",
+      "source": {
+        "repository": "darkapoparka/cars",
+        "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+        "path": "templates/import",
+        "tree": "d841ddfe5bec918bf6b2c19fd6971fecd6b8e54d",
+        "digest": "c7d6c93214e859aa2747af8f5e068b6a0b8ca095d6328c807728a4d531d688f8"
+      },
+      "checks": [
+        {
+          "name": "mounted-journeys",
+          "status": "passed",
+          "evidenceSha256": "52690d155345690d71906d46cc3364e1e583bd8de7832f4ab274d45a0eed29d4",
+          "evidence": {
+            "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/final-shared-release/six-applications-hosted-evidence.json",
+            "sha256": "52690d155345690d71906d46cc3364e1e583bd8de7832f4ab274d45a0eed29d4"
+          }
+        },
+        {
+          "name": "public-journeys",
+          "status": "passed",
+          "evidenceSha256": "52690d155345690d71906d46cc3364e1e583bd8de7832f4ab274d45a0eed29d4",
+          "evidence": {
+            "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/final-shared-release/six-applications-hosted-evidence.json",
+            "sha256": "52690d155345690d71906d46cc3364e1e583bd8de7832f4ab274d45a0eed29d4"
+          }
+        },
+        {
+          "name": "assets-preserved",
+          "status": "passed",
+          "evidenceSha256": "52690d155345690d71906d46cc3364e1e583bd8de7832f4ab274d45a0eed29d4",
+          "evidence": {
+            "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/final-shared-release/six-applications-hosted-evidence.json",
+            "sha256": "52690d155345690d71906d46cc3364e1e583bd8de7832f4ab274d45a0eed29d4"
+          }
+        }
+      ],
+      "acceptanceMode": "Existing original-dated proof with explicit source identity and current affected-consumer observations"
+    },
+    "app": {
+      "status": "passed",
+      "source": {
+        "repository": "darkapoparka/cars",
+        "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+        "path": "templates/app",
+        "tree": "7f3d3ffa40546635377e6c5225194fe06fead291",
+        "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1"
+      },
+      "checks": [
+        {
+          "name": "mounted-journeys",
+          "status": "passed",
+          "evidenceSha256": "52690d155345690d71906d46cc3364e1e583bd8de7832f4ab274d45a0eed29d4",
+          "evidence": {
+            "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/final-shared-release/six-applications-hosted-evidence.json",
+            "sha256": "52690d155345690d71906d46cc3364e1e583bd8de7832f4ab274d45a0eed29d4"
+          }
+        },
+        {
+          "name": "public-journeys",
+          "status": "passed",
+          "evidenceSha256": "52690d155345690d71906d46cc3364e1e583bd8de7832f4ab274d45a0eed29d4",
+          "evidence": {
+            "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/final-shared-release/six-applications-hosted-evidence.json",
+            "sha256": "52690d155345690d71906d46cc3364e1e583bd8de7832f4ab274d45a0eed29d4"
+          }
+        },
+        {
+          "name": "assets-preserved",
+          "status": "passed",
+          "evidenceSha256": "52690d155345690d71906d46cc3364e1e583bd8de7832f4ab274d45a0eed29d4",
+          "evidence": {
+            "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/final-shared-release/six-applications-hosted-evidence.json",
+            "sha256": "52690d155345690d71906d46cc3364e1e583bd8de7832f4ab274d45a0eed29d4"
+          }
+        }
+      ],
+      "acceptanceMode": "Existing original-dated proof with explicit source identity and current affected-consumer observations"
+    },
+    "mobile": {
+      "status": "passed",
+      "source": {
+        "repository": "darkapoparka/cars",
+        "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+        "path": "templates/mobile",
+        "tree": "792bfdd1d8eb22aabd90c7e3a0c0779a6c1c36f3",
+        "digest": "f5a3e541a7c648a4c2899ad3893e22a3806027a9f66d95fa4e8c74b2226635b6"
+      },
+      "checks": [
+        {
+          "name": "mounted-journeys",
+          "status": "passed",
+          "evidenceSha256": "52690d155345690d71906d46cc3364e1e583bd8de7832f4ab274d45a0eed29d4",
+          "evidence": {
+            "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/final-shared-release/six-applications-hosted-evidence.json",
+            "sha256": "52690d155345690d71906d46cc3364e1e583bd8de7832f4ab274d45a0eed29d4"
+          }
+        },
+        {
+          "name": "public-journeys",
+          "status": "passed",
+          "evidenceSha256": "52690d155345690d71906d46cc3364e1e583bd8de7832f4ab274d45a0eed29d4",
+          "evidence": {
+            "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/final-shared-release/six-applications-hosted-evidence.json",
+            "sha256": "52690d155345690d71906d46cc3364e1e583bd8de7832f4ab274d45a0eed29d4"
+          }
+        },
+        {
+          "name": "assets-preserved",
+          "status": "passed",
+          "evidenceSha256": "52690d155345690d71906d46cc3364e1e583bd8de7832f4ab274d45a0eed29d4",
+          "evidence": {
+            "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/final-shared-release/six-applications-hosted-evidence.json",
+            "sha256": "52690d155345690d71906d46cc3364e1e583bd8de7832f4ab274d45a0eed29d4"
+          }
+        }
+      ],
+      "acceptanceMode": "Existing original-dated proof with explicit source identity and current affected-consumer observations"
+    },
+    "karento-best": {
+      "status": "passed",
+      "source": {
+        "repository": "darkapoparka/cars",
+        "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+        "path": "templates/karento-best",
+        "tree": "8c5ac869c7fd15e19a80c660343fc64b20a2bad9",
+        "digest": "be17ef365e3272753df6e50826b139a45bfc32b8fef54ddcb86d977ad16280a9"
+      },
+      "checks": [
+        {
+          "name": "mounted-journeys",
+          "status": "passed",
+          "evidenceSha256": "52690d155345690d71906d46cc3364e1e583bd8de7832f4ab274d45a0eed29d4",
+          "evidence": {
+            "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/final-shared-release/six-applications-hosted-evidence.json",
+            "sha256": "52690d155345690d71906d46cc3364e1e583bd8de7832f4ab274d45a0eed29d4"
+          }
+        },
+        {
+          "name": "public-journeys",
+          "status": "passed",
+          "evidenceSha256": "52690d155345690d71906d46cc3364e1e583bd8de7832f4ab274d45a0eed29d4",
+          "evidence": {
+            "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/final-shared-release/six-applications-hosted-evidence.json",
+            "sha256": "52690d155345690d71906d46cc3364e1e583bd8de7832f4ab274d45a0eed29d4"
+          }
+        },
+        {
+          "name": "assets-preserved",
+          "status": "passed",
+          "evidenceSha256": "52690d155345690d71906d46cc3364e1e583bd8de7832f4ab274d45a0eed29d4",
+          "evidence": {
+            "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/final-shared-release/six-applications-hosted-evidence.json",
+            "sha256": "52690d155345690d71906d46cc3364e1e583bd8de7832f4ab274d45a0eed29d4"
+          }
+        }
+      ],
+      "acceptanceMode": "Existing original-dated proof with explicit source identity and current affected-consumer observations"
+    }
+  },
+  "nativeLocalization": {
+    "auto-best": {
+      "schemaVersion": 1,
+      "adapter": "native-v1",
+      "repository": "darkapoparka/cars",
+      "commit": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+      "sourcePath": "templates/auto-best",
+      "sourceTree": "78fa1a82eca14816449f9588283260840ee94f52",
+      "sourceDigest": "2fc9c3cfc9cf1976dbe30c08592776362e5bcc6b09e8b06620e57c4406df58a5",
+      "locales": [
+        "en",
+        "bg"
+      ],
+      "widths": [
+        320,
+        390,
+        1440
+      ],
+      "verifiedAt": "2026-10-15T01:55:17.524Z",
+      "evidenceSha256": "0a42fada24fd8a28d1b06dc2afed0e6de12cc639db3f2dc265ee648a02e38f18",
+      "catalogs": [
+        {
+          "format": "typescript-pair",
+          "path": "src/lib/locale/catalog.ts",
+          "en": "en",
+          "bg": "bg"
+        }
+      ],
+      "checks": [
+        {
+          "name": "catalog-completeness",
+          "status": "passed",
+          "evidenceSha256": "0a42fada24fd8a28d1b06dc2afed0e6de12cc639db3f2dc265ee648a02e38f18",
+          "inheritedFrom": {
+            "repository": "darkapoparka/cars",
+            "commit": "696230a404abd9b20b6f907b9cfb139175298c7a",
+            "verifiedAt": "2026-10-10T17:33:58.153Z",
+            "evidenceSha256": "38f0a1c4f3e98d7f6af72ab59f692341a96f39e6cb3c7a5b7f1bd2958ff4a9bc",
+            "releaseReference": "docs/releases/six-design-2026-10-10/native-execution/auto-best-696230a-release.json",
+            "releaseSha256": "aa1e593f7438210920ae7b2e0dae7a5ea9ffd116cd1a33d3e95f3056f0c88e0e"
+          },
+          "acceptanceMode": "original acceptance plus explicit unchanged-mechanism/source delta comparison"
+        },
+        {
+          "name": "hardcoded-ui",
+          "status": "passed",
+          "evidenceSha256": "0a42fada24fd8a28d1b06dc2afed0e6de12cc639db3f2dc265ee648a02e38f18",
+          "inheritedFrom": {
+            "repository": "darkapoparka/cars",
+            "commit": "696230a404abd9b20b6f907b9cfb139175298c7a",
+            "verifiedAt": "2026-10-10T17:33:58.153Z",
+            "evidenceSha256": "38f0a1c4f3e98d7f6af72ab59f692341a96f39e6cb3c7a5b7f1bd2958ff4a9bc",
+            "releaseReference": "docs/releases/six-design-2026-10-10/native-execution/auto-best-696230a-release.json",
+            "releaseSha256": "aa1e593f7438210920ae7b2e0dae7a5ea9ffd116cd1a33d3e95f3056f0c88e0e"
+          },
+          "acceptanceMode": "original acceptance plus explicit unchanged-mechanism/source delta comparison"
+        },
+        {
+          "name": "native-routing",
+          "status": "passed",
+          "evidenceSha256": "0a42fada24fd8a28d1b06dc2afed0e6de12cc639db3f2dc265ee648a02e38f18",
+          "inheritedFrom": {
+            "repository": "darkapoparka/cars",
+            "commit": "696230a404abd9b20b6f907b9cfb139175298c7a",
+            "verifiedAt": "2026-10-10T17:33:58.153Z",
+            "evidenceSha256": "38f0a1c4f3e98d7f6af72ab59f692341a96f39e6cb3c7a5b7f1bd2958ff4a9bc",
+            "releaseReference": "docs/releases/six-design-2026-10-10/native-execution/auto-best-696230a-release.json",
+            "releaseSha256": "aa1e593f7438210920ae7b2e0dae7a5ea9ffd116cd1a33d3e95f3056f0c88e0e"
+          },
+          "acceptanceMode": "original acceptance plus explicit unchanged-mechanism/source delta comparison"
+        },
+        {
+          "name": "standalone-journeys",
+          "status": "passed",
+          "evidenceSha256": "0a42fada24fd8a28d1b06dc2afed0e6de12cc639db3f2dc265ee648a02e38f18",
+          "inheritedFrom": {
+            "repository": "darkapoparka/cars",
+            "commit": "696230a404abd9b20b6f907b9cfb139175298c7a",
+            "verifiedAt": "2026-10-10T17:33:58.153Z",
+            "evidenceSha256": "38f0a1c4f3e98d7f6af72ab59f692341a96f39e6cb3c7a5b7f1bd2958ff4a9bc",
+            "releaseReference": "docs/releases/six-design-2026-10-10/native-execution/auto-best-696230a-release.json",
+            "releaseSha256": "aa1e593f7438210920ae7b2e0dae7a5ea9ffd116cd1a33d3e95f3056f0c88e0e"
+          },
+          "acceptanceMode": "original acceptance plus explicit unchanged-mechanism/source delta comparison"
+        },
+        {
+          "name": "mounted-journeys",
+          "status": "passed",
+          "evidenceSha256": "0a42fada24fd8a28d1b06dc2afed0e6de12cc639db3f2dc265ee648a02e38f18",
+          "inheritedFrom": {
+            "repository": "darkapoparka/cars",
+            "commit": "696230a404abd9b20b6f907b9cfb139175298c7a",
+            "verifiedAt": "2026-10-10T17:33:58.153Z",
+            "evidenceSha256": "38f0a1c4f3e98d7f6af72ab59f692341a96f39e6cb3c7a5b7f1bd2958ff4a9bc",
+            "releaseReference": "docs/releases/six-design-2026-10-10/native-execution/auto-best-696230a-release.json",
+            "releaseSha256": "aa1e593f7438210920ae7b2e0dae7a5ea9ffd116cd1a33d3e95f3056f0c88e0e"
+          },
+          "acceptanceMode": "original acceptance plus explicit unchanged-mechanism/source delta comparison"
+        },
+        {
+          "name": "public-journeys",
+          "status": "passed",
+          "evidenceSha256": "0a42fada24fd8a28d1b06dc2afed0e6de12cc639db3f2dc265ee648a02e38f18",
+          "inheritedFrom": {
+            "repository": "darkapoparka/cars",
+            "commit": "696230a404abd9b20b6f907b9cfb139175298c7a",
+            "verifiedAt": "2026-10-10T17:33:58.153Z",
+            "evidenceSha256": "38f0a1c4f3e98d7f6af72ab59f692341a96f39e6cb3c7a5b7f1bd2958ff4a9bc",
+            "releaseReference": "docs/releases/six-design-2026-10-10/native-execution/auto-best-696230a-release.json",
+            "releaseSha256": "aa1e593f7438210920ae7b2e0dae7a5ea9ffd116cd1a33d3e95f3056f0c88e0e"
+          },
+          "acceptanceMode": "original acceptance plus explicit unchanged-mechanism/source delta comparison"
+        },
+        {
+          "name": "preferences-no-js",
+          "status": "passed",
+          "evidenceSha256": "0a42fada24fd8a28d1b06dc2afed0e6de12cc639db3f2dc265ee648a02e38f18",
+          "inheritedFrom": {
+            "repository": "darkapoparka/cars",
+            "commit": "696230a404abd9b20b6f907b9cfb139175298c7a",
+            "verifiedAt": "2026-10-10T17:33:58.153Z",
+            "evidenceSha256": "38f0a1c4f3e98d7f6af72ab59f692341a96f39e6cb3c7a5b7f1bd2958ff4a9bc",
+            "releaseReference": "docs/releases/six-design-2026-10-10/native-execution/auto-best-696230a-release.json",
+            "releaseSha256": "aa1e593f7438210920ae7b2e0dae7a5ea9ffd116cd1a33d3e95f3056f0c88e0e"
+          },
+          "acceptanceMode": "original acceptance plus explicit unchanged-mechanism/source delta comparison"
+        },
+        {
+          "name": "preferences-storage-disabled",
+          "status": "passed",
+          "evidenceSha256": "0a42fada24fd8a28d1b06dc2afed0e6de12cc639db3f2dc265ee648a02e38f18",
+          "inheritedFrom": {
+            "repository": "darkapoparka/cars",
+            "commit": "696230a404abd9b20b6f907b9cfb139175298c7a",
+            "verifiedAt": "2026-10-10T17:33:58.153Z",
+            "evidenceSha256": "38f0a1c4f3e98d7f6af72ab59f692341a96f39e6cb3c7a5b7f1bd2958ff4a9bc",
+            "releaseReference": "docs/releases/six-design-2026-10-10/native-execution/auto-best-696230a-release.json",
+            "releaseSha256": "aa1e593f7438210920ae7b2e0dae7a5ea9ffd116cd1a33d3e95f3056f0c88e0e"
+          },
+          "acceptanceMode": "original acceptance plus explicit unchanged-mechanism/source delta comparison"
+        },
+        {
+          "name": "preferences-races",
+          "status": "passed",
+          "evidenceSha256": "0a42fada24fd8a28d1b06dc2afed0e6de12cc639db3f2dc265ee648a02e38f18",
+          "inheritedFrom": {
+            "repository": "darkapoparka/cars",
+            "commit": "696230a404abd9b20b6f907b9cfb139175298c7a",
+            "verifiedAt": "2026-10-10T17:33:58.153Z",
+            "evidenceSha256": "38f0a1c4f3e98d7f6af72ab59f692341a96f39e6cb3c7a5b7f1bd2958ff4a9bc",
+            "releaseReference": "docs/releases/six-design-2026-10-10/native-execution/auto-best-696230a-release.json",
+            "releaseSha256": "aa1e593f7438210920ae7b2e0dae7a5ea9ffd116cd1a33d3e95f3056f0c88e0e"
+          },
+          "acceptanceMode": "original acceptance plus explicit unchanged-mechanism/source delta comparison"
+        },
+        {
+          "name": "request-isolation",
+          "status": "passed",
+          "evidenceSha256": "0a42fada24fd8a28d1b06dc2afed0e6de12cc639db3f2dc265ee648a02e38f18",
+          "inheritedFrom": {
+            "repository": "darkapoparka/cars",
+            "commit": "696230a404abd9b20b6f907b9cfb139175298c7a",
+            "verifiedAt": "2026-10-10T17:33:58.153Z",
+            "evidenceSha256": "38f0a1c4f3e98d7f6af72ab59f692341a96f39e6cb3c7a5b7f1bd2958ff4a9bc",
+            "releaseReference": "docs/releases/six-design-2026-10-10/native-execution/auto-best-696230a-release.json",
+            "releaseSha256": "aa1e593f7438210920ae7b2e0dae7a5ea9ffd116cd1a33d3e95f3056f0c88e0e"
+          },
+          "acceptanceMode": "original acceptance plus explicit unchanged-mechanism/source delta comparison"
+        },
+        {
+          "name": "security-write-blocking",
+          "status": "passed",
+          "evidenceSha256": "0a42fada24fd8a28d1b06dc2afed0e6de12cc639db3f2dc265ee648a02e38f18",
+          "inheritedFrom": {
+            "repository": "darkapoparka/cars",
+            "commit": "696230a404abd9b20b6f907b9cfb139175298c7a",
+            "verifiedAt": "2026-10-10T17:33:58.153Z",
+            "evidenceSha256": "38f0a1c4f3e98d7f6af72ab59f692341a96f39e6cb3c7a5b7f1bd2958ff4a9bc",
+            "releaseReference": "docs/releases/six-design-2026-10-10/native-execution/auto-best-696230a-release.json",
+            "releaseSha256": "aa1e593f7438210920ae7b2e0dae7a5ea9ffd116cd1a33d3e95f3056f0c88e0e"
+          },
+          "acceptanceMode": "original acceptance plus explicit unchanged-mechanism/source delta comparison"
+        },
+        {
+          "name": "assets-preserved",
+          "status": "passed",
+          "evidenceSha256": "0a42fada24fd8a28d1b06dc2afed0e6de12cc639db3f2dc265ee648a02e38f18",
+          "inheritedFrom": {
+            "repository": "darkapoparka/cars",
+            "commit": "696230a404abd9b20b6f907b9cfb139175298c7a",
+            "verifiedAt": "2026-10-10T17:33:58.153Z",
+            "evidenceSha256": "38f0a1c4f3e98d7f6af72ab59f692341a96f39e6cb3c7a5b7f1bd2958ff4a9bc",
+            "releaseReference": "docs/releases/six-design-2026-10-10/native-execution/auto-best-696230a-release.json",
+            "releaseSha256": "aa1e593f7438210920ae7b2e0dae7a5ea9ffd116cd1a33d3e95f3056f0c88e0e"
+          },
+          "acceptanceMode": "original acceptance plus explicit unchanged-mechanism/source delta comparison"
+        }
+      ]
+    },
+    "modern": {
+      "schemaVersion": 1,
+      "adapter": "native-v1",
+      "repository": "darkapoparka/cars",
+      "commit": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+      "sourcePath": "templates/modern",
+      "sourceTree": "01eac7390fa6ba951d4b8d4c26159a9be150f6c8",
+      "sourceDigest": "30e1a99f857cc25e4d78c9459cfb4394a9f70c5b114196a5ca6325ff38823b4b",
+      "locales": [
+        "en",
+        "bg"
+      ],
+      "widths": [
+        320,
+        390,
+        1440
+      ],
+      "verifiedAt": "2026-10-15T01:55:17.524Z",
+      "evidenceSha256": "4a35cfc89beda38837f36c25bad8aa5da48d3492b165c7b981ce1c20cbfc6f28",
+      "catalogs": [
+        {
+          "format": "typescript-pair",
+          "path": "packages/internationalization/preferences-messages.ts",
+          "en": "en",
+          "bg": "bg"
+        },
+        {
+          "format": "typescript-pair",
+          "path": "packages/internationalization/public-messages.ts",
+          "en": "en",
+          "bg": "bg"
+        },
+        {
+          "format": "typescript-rows",
+          "path": "packages/marketplace/content/inventory-copy.ts",
+          "export": "inventoryCopy"
+        },
+        {
+          "format": "typescript-locale-object",
+          "path": "packages/marketplace-ui/lib/marketplace-control-copy.ts",
+          "export": "copyByLanguage"
+        }
+      ],
+      "checks": [
+        {
+          "name": "catalog-completeness",
+          "status": "passed",
+          "evidenceSha256": "4a35cfc89beda38837f36c25bad8aa5da48d3492b165c7b981ce1c20cbfc6f28",
+          "inheritedFrom": {
+            "repository": "darkapoparka/cars",
+            "commit": "6f87470c1e3ec8ade7d9ecc07daf9ebe45cb9710",
+            "verifiedAt": "2026-10-10T17:34:01.231Z",
+            "evidenceSha256": "486432fd73aabe67977a906983e3cc03cf5e408d57c939211ba365757977bd92",
+            "releaseReference": "docs/releases/six-design-2026-10-10/native-execution/modern-6f87470-release.json",
+            "releaseSha256": "5017517697ec17dcefae2270e47c4fa93a46677e54fbce5f701a8b21be25d94c"
+          },
+          "acceptanceMode": "original acceptance plus explicit unchanged-mechanism/source delta comparison"
+        },
+        {
+          "name": "hardcoded-ui",
+          "status": "passed",
+          "evidenceSha256": "4a35cfc89beda38837f36c25bad8aa5da48d3492b165c7b981ce1c20cbfc6f28",
+          "inheritedFrom": {
+            "repository": "darkapoparka/cars",
+            "commit": "6f87470c1e3ec8ade7d9ecc07daf9ebe45cb9710",
+            "verifiedAt": "2026-10-10T17:34:01.231Z",
+            "evidenceSha256": "486432fd73aabe67977a906983e3cc03cf5e408d57c939211ba365757977bd92",
+            "releaseReference": "docs/releases/six-design-2026-10-10/native-execution/modern-6f87470-release.json",
+            "releaseSha256": "5017517697ec17dcefae2270e47c4fa93a46677e54fbce5f701a8b21be25d94c"
+          },
+          "acceptanceMode": "original acceptance plus explicit unchanged-mechanism/source delta comparison"
+        },
+        {
+          "name": "native-routing",
+          "status": "passed",
+          "evidenceSha256": "d5a22fd615a54820908d8839710bab68d454fda1646a7d6010780d9fa60f3268",
+          "evidence": {
+            "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/final-shared-release/modern-native-routing.json",
+            "sha256": "d5a22fd615a54820908d8839710bab68d454fda1646a7d6010780d9fa60f3268"
+          },
+          "aggregate": {
+            "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/final-shared-release/modern-current-native-checkpoint.json",
+            "sha256": "4347aeeb639b709685baccabacd907aac70179b1bcc7d66469c8d93a4be1e4b3"
+          }
+        },
+        {
+          "name": "standalone-journeys",
+          "status": "passed",
+          "evidenceSha256": "4a35cfc89beda38837f36c25bad8aa5da48d3492b165c7b981ce1c20cbfc6f28",
+          "inheritedFrom": {
+            "repository": "darkapoparka/cars",
+            "commit": "6f87470c1e3ec8ade7d9ecc07daf9ebe45cb9710",
+            "verifiedAt": "2026-10-10T17:34:01.231Z",
+            "evidenceSha256": "486432fd73aabe67977a906983e3cc03cf5e408d57c939211ba365757977bd92",
+            "releaseReference": "docs/releases/six-design-2026-10-10/native-execution/modern-6f87470-release.json",
+            "releaseSha256": "5017517697ec17dcefae2270e47c4fa93a46677e54fbce5f701a8b21be25d94c"
+          },
+          "acceptanceMode": "original acceptance plus explicit unchanged-mechanism/source delta comparison"
+        },
+        {
+          "name": "mounted-journeys",
+          "status": "passed",
+          "evidenceSha256": "4a35cfc89beda38837f36c25bad8aa5da48d3492b165c7b981ce1c20cbfc6f28",
+          "inheritedFrom": {
+            "repository": "darkapoparka/cars",
+            "commit": "6f87470c1e3ec8ade7d9ecc07daf9ebe45cb9710",
+            "verifiedAt": "2026-10-10T17:34:01.231Z",
+            "evidenceSha256": "486432fd73aabe67977a906983e3cc03cf5e408d57c939211ba365757977bd92",
+            "releaseReference": "docs/releases/six-design-2026-10-10/native-execution/modern-6f87470-release.json",
+            "releaseSha256": "5017517697ec17dcefae2270e47c4fa93a46677e54fbce5f701a8b21be25d94c"
+          },
+          "acceptanceMode": "original acceptance plus explicit unchanged-mechanism/source delta comparison"
+        },
+        {
+          "name": "public-journeys",
+          "status": "passed",
+          "evidenceSha256": "4a35cfc89beda38837f36c25bad8aa5da48d3492b165c7b981ce1c20cbfc6f28",
+          "inheritedFrom": {
+            "repository": "darkapoparka/cars",
+            "commit": "6f87470c1e3ec8ade7d9ecc07daf9ebe45cb9710",
+            "verifiedAt": "2026-10-10T17:34:01.231Z",
+            "evidenceSha256": "486432fd73aabe67977a906983e3cc03cf5e408d57c939211ba365757977bd92",
+            "releaseReference": "docs/releases/six-design-2026-10-10/native-execution/modern-6f87470-release.json",
+            "releaseSha256": "5017517697ec17dcefae2270e47c4fa93a46677e54fbce5f701a8b21be25d94c"
+          },
+          "acceptanceMode": "original acceptance plus explicit unchanged-mechanism/source delta comparison"
+        },
+        {
+          "name": "preferences-no-js",
+          "status": "passed",
+          "evidenceSha256": "9748bfd04a8ce51f69640187dcf3737d229e6fc09c1301893df8ae659e8e492f",
+          "evidence": {
+            "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/final-shared-release/modern-preferences-no-js.json",
+            "sha256": "9748bfd04a8ce51f69640187dcf3737d229e6fc09c1301893df8ae659e8e492f"
+          },
+          "aggregate": {
+            "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/final-shared-release/modern-current-native-checkpoint.json",
+            "sha256": "4347aeeb639b709685baccabacd907aac70179b1bcc7d66469c8d93a4be1e4b3"
+          }
+        },
+        {
+          "name": "preferences-storage-disabled",
+          "status": "passed",
+          "evidenceSha256": "4a35cfc89beda38837f36c25bad8aa5da48d3492b165c7b981ce1c20cbfc6f28",
+          "inheritedFrom": {
+            "repository": "darkapoparka/cars",
+            "commit": "6f87470c1e3ec8ade7d9ecc07daf9ebe45cb9710",
+            "verifiedAt": "2026-10-10T17:34:01.231Z",
+            "evidenceSha256": "486432fd73aabe67977a906983e3cc03cf5e408d57c939211ba365757977bd92",
+            "releaseReference": "docs/releases/six-design-2026-10-10/native-execution/modern-6f87470-release.json",
+            "releaseSha256": "5017517697ec17dcefae2270e47c4fa93a46677e54fbce5f701a8b21be25d94c"
+          },
+          "acceptanceMode": "original acceptance plus explicit unchanged-mechanism/source delta comparison"
+        },
+        {
+          "name": "preferences-races",
+          "status": "passed",
+          "evidenceSha256": "4a35cfc89beda38837f36c25bad8aa5da48d3492b165c7b981ce1c20cbfc6f28",
+          "inheritedFrom": {
+            "repository": "darkapoparka/cars",
+            "commit": "6f87470c1e3ec8ade7d9ecc07daf9ebe45cb9710",
+            "verifiedAt": "2026-10-10T17:34:01.231Z",
+            "evidenceSha256": "486432fd73aabe67977a906983e3cc03cf5e408d57c939211ba365757977bd92",
+            "releaseReference": "docs/releases/six-design-2026-10-10/native-execution/modern-6f87470-release.json",
+            "releaseSha256": "5017517697ec17dcefae2270e47c4fa93a46677e54fbce5f701a8b21be25d94c"
+          },
+          "acceptanceMode": "original acceptance plus explicit unchanged-mechanism/source delta comparison"
+        },
+        {
+          "name": "request-isolation",
+          "status": "passed",
+          "evidenceSha256": "25492eb760dd431a3371561afe8c6b5b2179edb1a1e47fac102e1540706f6df3",
+          "evidence": {
+            "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/final-shared-release/modern-request-isolation.json",
+            "sha256": "25492eb760dd431a3371561afe8c6b5b2179edb1a1e47fac102e1540706f6df3"
+          },
+          "aggregate": {
+            "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/final-shared-release/modern-current-native-checkpoint.json",
+            "sha256": "4347aeeb639b709685baccabacd907aac70179b1bcc7d66469c8d93a4be1e4b3"
+          }
+        },
+        {
+          "name": "security-write-blocking",
+          "status": "passed",
+          "evidenceSha256": "232c3f611d0d8753862ca72c1cf11ad9cd949f6d15f8e4328d7481a238191ebb",
+          "evidence": {
+            "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/final-shared-release/modern-security-write-blocking.json",
+            "sha256": "232c3f611d0d8753862ca72c1cf11ad9cd949f6d15f8e4328d7481a238191ebb"
+          },
+          "aggregate": {
+            "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/final-shared-release/modern-current-native-checkpoint.json",
+            "sha256": "4347aeeb639b709685baccabacd907aac70179b1bcc7d66469c8d93a4be1e4b3"
+          }
+        },
+        {
+          "name": "assets-preserved",
+          "status": "passed",
+          "evidenceSha256": "4a35cfc89beda38837f36c25bad8aa5da48d3492b165c7b981ce1c20cbfc6f28",
+          "inheritedFrom": {
+            "repository": "darkapoparka/cars",
+            "commit": "6f87470c1e3ec8ade7d9ecc07daf9ebe45cb9710",
+            "verifiedAt": "2026-10-10T17:34:01.231Z",
+            "evidenceSha256": "486432fd73aabe67977a906983e3cc03cf5e408d57c939211ba365757977bd92",
+            "releaseReference": "docs/releases/six-design-2026-10-10/native-execution/modern-6f87470-release.json",
+            "releaseSha256": "5017517697ec17dcefae2270e47c4fa93a46677e54fbce5f701a8b21be25d94c"
+          },
+          "acceptanceMode": "original acceptance plus explicit unchanged-mechanism/source delta comparison"
+        }
+      ]
+    },
+    "import": {
+      "schemaVersion": 1,
+      "adapter": "native-v1",
+      "repository": "darkapoparka/cars",
+      "commit": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+      "sourcePath": "templates/import",
+      "sourceTree": "d841ddfe5bec918bf6b2c19fd6971fecd6b8e54d",
+      "sourceDigest": "c7d6c93214e859aa2747af8f5e068b6a0b8ca095d6328c807728a4d531d688f8",
+      "locales": [
+        "en",
+        "bg"
+      ],
+      "widths": [
+        320,
+        390,
+        1440
+      ],
+      "verifiedAt": "2026-10-15T01:55:17.524Z",
+      "evidenceSha256": "3632746f07ff233991ae407cf2b31fedfd26ab192537e325a54ab01ba332bd4f",
+      "catalogs": [
+        {
+          "format": "typescript-pair",
+          "path": "src/lib/locale/messages.ts",
+          "en": "en",
+          "bg": "bg"
+        },
+        {
+          "format": "typescript-pair",
+          "path": "src/lib/i18n/native.ts",
+          "en": "nativeEn",
+          "bg": "nativeBg"
+        },
+        {
+          "format": "typescript-pair",
+          "path": "src/lib/content/localized.ts",
+          "en": "contentEn",
+          "bg": "contentBg"
+        },
+        {
+          "format": "typescript-rows",
+          "path": "src/lib/content/inventory-localized.ts",
+          "export": "inventoryCopy"
+        },
+        {
+          "format": "typescript-source-map",
+          "path": "src/lib/content/extra-localized.ts",
+          "export": "extraEnglish"
+        }
+      ],
+      "checks": [
+        {
+          "name": "catalog-completeness",
+          "status": "passed",
+          "evidenceSha256": "3632746f07ff233991ae407cf2b31fedfd26ab192537e325a54ab01ba332bd4f",
+          "inheritedFrom": {
+            "repository": "darkapoparka/cars",
+            "commit": "b9373e9ed5453bc7d208898ae140eae4d596a232",
+            "verifiedAt": "2026-10-10T17:34:09.329Z",
+            "evidenceSha256": "5012a5c08bb2efb69fb3d84eb9c3d5606745b01770e278d3cc5f6105dd42c1fc",
+            "releaseReference": "docs/releases/six-design-2026-10-10/native-execution/import-b9373e9-release.json",
+            "releaseSha256": "805aabac442322c36c5a65eafbedaff7ba3afb0d5989d686c7b0774a1f768f91"
+          },
+          "acceptanceMode": "original acceptance plus explicit unchanged-mechanism/source delta comparison"
+        },
+        {
+          "name": "hardcoded-ui",
+          "status": "passed",
+          "evidenceSha256": "3632746f07ff233991ae407cf2b31fedfd26ab192537e325a54ab01ba332bd4f",
+          "inheritedFrom": {
+            "repository": "darkapoparka/cars",
+            "commit": "b9373e9ed5453bc7d208898ae140eae4d596a232",
+            "verifiedAt": "2026-10-10T17:34:09.329Z",
+            "evidenceSha256": "5012a5c08bb2efb69fb3d84eb9c3d5606745b01770e278d3cc5f6105dd42c1fc",
+            "releaseReference": "docs/releases/six-design-2026-10-10/native-execution/import-b9373e9-release.json",
+            "releaseSha256": "805aabac442322c36c5a65eafbedaff7ba3afb0d5989d686c7b0774a1f768f91"
+          },
+          "acceptanceMode": "original acceptance plus explicit unchanged-mechanism/source delta comparison"
+        },
+        {
+          "name": "native-routing",
+          "status": "passed",
+          "evidenceSha256": "3632746f07ff233991ae407cf2b31fedfd26ab192537e325a54ab01ba332bd4f",
+          "inheritedFrom": {
+            "repository": "darkapoparka/cars",
+            "commit": "b9373e9ed5453bc7d208898ae140eae4d596a232",
+            "verifiedAt": "2026-10-10T17:34:09.329Z",
+            "evidenceSha256": "5012a5c08bb2efb69fb3d84eb9c3d5606745b01770e278d3cc5f6105dd42c1fc",
+            "releaseReference": "docs/releases/six-design-2026-10-10/native-execution/import-b9373e9-release.json",
+            "releaseSha256": "805aabac442322c36c5a65eafbedaff7ba3afb0d5989d686c7b0774a1f768f91"
+          },
+          "acceptanceMode": "original acceptance plus explicit unchanged-mechanism/source delta comparison"
+        },
+        {
+          "name": "standalone-journeys",
+          "status": "passed",
+          "evidenceSha256": "3632746f07ff233991ae407cf2b31fedfd26ab192537e325a54ab01ba332bd4f",
+          "inheritedFrom": {
+            "repository": "darkapoparka/cars",
+            "commit": "b9373e9ed5453bc7d208898ae140eae4d596a232",
+            "verifiedAt": "2026-10-10T17:34:09.329Z",
+            "evidenceSha256": "5012a5c08bb2efb69fb3d84eb9c3d5606745b01770e278d3cc5f6105dd42c1fc",
+            "releaseReference": "docs/releases/six-design-2026-10-10/native-execution/import-b9373e9-release.json",
+            "releaseSha256": "805aabac442322c36c5a65eafbedaff7ba3afb0d5989d686c7b0774a1f768f91"
+          },
+          "acceptanceMode": "original acceptance plus explicit unchanged-mechanism/source delta comparison"
+        },
+        {
+          "name": "mounted-journeys",
+          "status": "passed",
+          "evidenceSha256": "3632746f07ff233991ae407cf2b31fedfd26ab192537e325a54ab01ba332bd4f",
+          "inheritedFrom": {
+            "repository": "darkapoparka/cars",
+            "commit": "b9373e9ed5453bc7d208898ae140eae4d596a232",
+            "verifiedAt": "2026-10-10T17:34:09.329Z",
+            "evidenceSha256": "5012a5c08bb2efb69fb3d84eb9c3d5606745b01770e278d3cc5f6105dd42c1fc",
+            "releaseReference": "docs/releases/six-design-2026-10-10/native-execution/import-b9373e9-release.json",
+            "releaseSha256": "805aabac442322c36c5a65eafbedaff7ba3afb0d5989d686c7b0774a1f768f91"
+          },
+          "acceptanceMode": "original acceptance plus explicit unchanged-mechanism/source delta comparison"
+        },
+        {
+          "name": "public-journeys",
+          "status": "passed",
+          "evidenceSha256": "3632746f07ff233991ae407cf2b31fedfd26ab192537e325a54ab01ba332bd4f",
+          "inheritedFrom": {
+            "repository": "darkapoparka/cars",
+            "commit": "b9373e9ed5453bc7d208898ae140eae4d596a232",
+            "verifiedAt": "2026-10-10T17:34:09.329Z",
+            "evidenceSha256": "5012a5c08bb2efb69fb3d84eb9c3d5606745b01770e278d3cc5f6105dd42c1fc",
+            "releaseReference": "docs/releases/six-design-2026-10-10/native-execution/import-b9373e9-release.json",
+            "releaseSha256": "805aabac442322c36c5a65eafbedaff7ba3afb0d5989d686c7b0774a1f768f91"
+          },
+          "acceptanceMode": "original acceptance plus explicit unchanged-mechanism/source delta comparison"
+        },
+        {
+          "name": "preferences-no-js",
+          "status": "passed",
+          "evidenceSha256": "3632746f07ff233991ae407cf2b31fedfd26ab192537e325a54ab01ba332bd4f",
+          "inheritedFrom": {
+            "repository": "darkapoparka/cars",
+            "commit": "b9373e9ed5453bc7d208898ae140eae4d596a232",
+            "verifiedAt": "2026-10-10T17:34:09.329Z",
+            "evidenceSha256": "5012a5c08bb2efb69fb3d84eb9c3d5606745b01770e278d3cc5f6105dd42c1fc",
+            "releaseReference": "docs/releases/six-design-2026-10-10/native-execution/import-b9373e9-release.json",
+            "releaseSha256": "805aabac442322c36c5a65eafbedaff7ba3afb0d5989d686c7b0774a1f768f91"
+          },
+          "acceptanceMode": "original acceptance plus explicit unchanged-mechanism/source delta comparison"
+        },
+        {
+          "name": "preferences-storage-disabled",
+          "status": "passed",
+          "evidenceSha256": "3632746f07ff233991ae407cf2b31fedfd26ab192537e325a54ab01ba332bd4f",
+          "inheritedFrom": {
+            "repository": "darkapoparka/cars",
+            "commit": "b9373e9ed5453bc7d208898ae140eae4d596a232",
+            "verifiedAt": "2026-10-10T17:34:09.329Z",
+            "evidenceSha256": "5012a5c08bb2efb69fb3d84eb9c3d5606745b01770e278d3cc5f6105dd42c1fc",
+            "releaseReference": "docs/releases/six-design-2026-10-10/native-execution/import-b9373e9-release.json",
+            "releaseSha256": "805aabac442322c36c5a65eafbedaff7ba3afb0d5989d686c7b0774a1f768f91"
+          },
+          "acceptanceMode": "original acceptance plus explicit unchanged-mechanism/source delta comparison"
+        },
+        {
+          "name": "preferences-races",
+          "status": "passed",
+          "evidenceSha256": "3632746f07ff233991ae407cf2b31fedfd26ab192537e325a54ab01ba332bd4f",
+          "inheritedFrom": {
+            "repository": "darkapoparka/cars",
+            "commit": "b9373e9ed5453bc7d208898ae140eae4d596a232",
+            "verifiedAt": "2026-10-10T17:34:09.329Z",
+            "evidenceSha256": "5012a5c08bb2efb69fb3d84eb9c3d5606745b01770e278d3cc5f6105dd42c1fc",
+            "releaseReference": "docs/releases/six-design-2026-10-10/native-execution/import-b9373e9-release.json",
+            "releaseSha256": "805aabac442322c36c5a65eafbedaff7ba3afb0d5989d686c7b0774a1f768f91"
+          },
+          "acceptanceMode": "original acceptance plus explicit unchanged-mechanism/source delta comparison"
+        },
+        {
+          "name": "request-isolation",
+          "status": "passed",
+          "evidenceSha256": "3632746f07ff233991ae407cf2b31fedfd26ab192537e325a54ab01ba332bd4f",
+          "inheritedFrom": {
+            "repository": "darkapoparka/cars",
+            "commit": "b9373e9ed5453bc7d208898ae140eae4d596a232",
+            "verifiedAt": "2026-10-10T17:34:09.329Z",
+            "evidenceSha256": "5012a5c08bb2efb69fb3d84eb9c3d5606745b01770e278d3cc5f6105dd42c1fc",
+            "releaseReference": "docs/releases/six-design-2026-10-10/native-execution/import-b9373e9-release.json",
+            "releaseSha256": "805aabac442322c36c5a65eafbedaff7ba3afb0d5989d686c7b0774a1f768f91"
+          },
+          "acceptanceMode": "original acceptance plus explicit unchanged-mechanism/source delta comparison"
+        },
+        {
+          "name": "security-write-blocking",
+          "status": "passed",
+          "evidenceSha256": "3632746f07ff233991ae407cf2b31fedfd26ab192537e325a54ab01ba332bd4f",
+          "inheritedFrom": {
+            "repository": "darkapoparka/cars",
+            "commit": "b9373e9ed5453bc7d208898ae140eae4d596a232",
+            "verifiedAt": "2026-10-10T17:34:09.329Z",
+            "evidenceSha256": "5012a5c08bb2efb69fb3d84eb9c3d5606745b01770e278d3cc5f6105dd42c1fc",
+            "releaseReference": "docs/releases/six-design-2026-10-10/native-execution/import-b9373e9-release.json",
+            "releaseSha256": "805aabac442322c36c5a65eafbedaff7ba3afb0d5989d686c7b0774a1f768f91"
+          },
+          "acceptanceMode": "original acceptance plus explicit unchanged-mechanism/source delta comparison"
+        },
+        {
+          "name": "assets-preserved",
+          "status": "passed",
+          "evidenceSha256": "3632746f07ff233991ae407cf2b31fedfd26ab192537e325a54ab01ba332bd4f",
+          "inheritedFrom": {
+            "repository": "darkapoparka/cars",
+            "commit": "b9373e9ed5453bc7d208898ae140eae4d596a232",
+            "verifiedAt": "2026-10-10T17:34:09.329Z",
+            "evidenceSha256": "5012a5c08bb2efb69fb3d84eb9c3d5606745b01770e278d3cc5f6105dd42c1fc",
+            "releaseReference": "docs/releases/six-design-2026-10-10/native-execution/import-b9373e9-release.json",
+            "releaseSha256": "805aabac442322c36c5a65eafbedaff7ba3afb0d5989d686c7b0774a1f768f91"
+          },
+          "acceptanceMode": "original acceptance plus explicit unchanged-mechanism/source delta comparison"
+        }
+      ]
+    }
+  },
+  "canonicalObservations": {
+    "origin": "https://bradford-cherry-tree-cars.webpreviews.site",
+    "currentProof": {
+      "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/final-shared-release/bradford-current-focused-observations.json",
+      "sha256": "533284580fd63c7b0d7c89860e12c8f58a64cf34f31c51a9e50d1f93b2d558a6"
+    },
+    "previousProof": {
+      "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/final-shared-release/bradford-prior-unchanged-observations.json",
+      "sha256": "b4bf1de0d29cbf80257d71cffc39f0395543eda460bb82299c14ef5a914dbf8b"
+    },
+    "latestObservedAt": "2026-10-15T01:30:34.806Z"
+  },
+  "remainingNativeChecks": [],
+  "originalReceiptsUnchanged": true
+}

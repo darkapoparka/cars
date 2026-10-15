@@ -1,0 +1,235 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-exact-native-evidence-provenance",
+  "source": {
+    "repository": "darkapoparka/cars",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+    "path": "templates/modern",
+    "tree": "01eac7390fa6ba951d4b8d4c26159a9be150f6c8",
+    "digest": "30e1a99f857cc25e4d78c9459cfb4394a9f70c5b114196a5ca6325ff38823b4b"
+  },
+  "assembledAt": "2026-10-15T01:55:17.524Z",
+  "acceptanceMode": "Current acceptance assembly; inherited checks keep original execution dates and locators.",
+  "originalAcceptance": {
+    "key": "modern",
+    "commit": "6f87470c1e3ec8ade7d9ecc07daf9ebe45cb9710",
+    "releaseReference": "docs/releases/six-design-2026-10-10/native-execution/modern-6f87470-release.json",
+    "releaseSha256": "5017517697ec17dcefae2270e47c4fa93a46677e54fbce5f701a8b21be25d94c",
+    "verifiedAt": "2026-10-10T17:34:01.221Z",
+    "nativeVerifiedAt": "2026-10-10T17:34:01.231Z",
+    "qualificationReference": "docs/releases/six-design-2026-10-10/native-execution/modern-6f87470-qualification.json",
+    "qualificationSha256": "486432fd73aabe67977a906983e3cc03cf5e408d57c939211ba365757977bd92",
+    "checks": [
+      "catalog-completeness",
+      "hardcoded-ui",
+      "native-routing",
+      "standalone-journeys",
+      "mounted-journeys",
+      "public-journeys",
+      "preferences-no-js",
+      "preferences-storage-disabled",
+      "preferences-races",
+      "request-isolation",
+      "security-write-blocking",
+      "assets-preserved"
+    ]
+  },
+  "semantic": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/final-shared-release/native-semantic-inheritance.json",
+    "sha256": "80f63f56bf1942cf06afc8c40f462095dd9643b48eeeb53be96f76ede1da1aab"
+  },
+  "currentCatalogValidation": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/final-shared-release/current-catalog-validator-result.json",
+    "sha256": "5136f20a148d1bfd365b205cddcf347a6178e6d26d9c38405121e7ee4c45eb1a"
+  },
+  "currentHostedObservations": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/final-shared-release/bradford-current-focused-observations.json",
+    "sha256": "533284580fd63c7b0d7c89860e12c8f58a64cf34f31c51a9e50d1f93b2d558a6"
+  },
+  "originalUnchangedHostedObservations": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/final-shared-release/bradford-prior-unchanged-observations.json",
+    "sha256": "b4bf1de0d29cbf80257d71cffc39f0395543eda460bb82299c14ef5a914dbf8b"
+  },
+  "exactClientSourceComparison": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/final-shared-release/bradford-source-hosted-inheritance.json",
+    "sha256": "2fe74677864cbc5791febf6ce23f786a4ba88dfd66f5fda216303aa7893cec6e"
+  },
+  "sourceReview": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-review.json",
+    "sha256": "27c6ce5dd17ee6e1b9f6a5b059a95d5e1dbe4200f61264fc50addeb7af89d984"
+  },
+  "sourceDeltaReview": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
+    "sha256": "43cb6876e815a2a6b866f1dadd304236de4ae58c05fe65c2ab62a23506ee7ce9"
+  },
+  "currentEdgeAndNativeForm": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/final-shared-release/modern-current-native-checkpoint.json",
+    "sha256": "4347aeeb639b709685baccabacd907aac70179b1bcc7d66469c8d93a4be1e4b3"
+  },
+  "checks": [
+    {
+      "name": "catalog-completeness",
+      "status": "passed",
+      "evidenceSha256": "486432fd73aabe67977a906983e3cc03cf5e408d57c939211ba365757977bd92",
+      "inheritedFrom": {
+        "repository": "darkapoparka/cars",
+        "commit": "6f87470c1e3ec8ade7d9ecc07daf9ebe45cb9710",
+        "verifiedAt": "2026-10-10T17:34:01.231Z",
+        "evidenceSha256": "486432fd73aabe67977a906983e3cc03cf5e408d57c939211ba365757977bd92",
+        "releaseReference": "docs/releases/six-design-2026-10-10/native-execution/modern-6f87470-release.json",
+        "releaseSha256": "5017517697ec17dcefae2270e47c4fa93a46677e54fbce5f701a8b21be25d94c"
+      },
+      "acceptanceMode": "original acceptance plus explicit unchanged-mechanism/source delta comparison"
+    },
+    {
+      "name": "hardcoded-ui",
+      "status": "passed",
+      "evidenceSha256": "486432fd73aabe67977a906983e3cc03cf5e408d57c939211ba365757977bd92",
+      "inheritedFrom": {
+        "repository": "darkapoparka/cars",
+        "commit": "6f87470c1e3ec8ade7d9ecc07daf9ebe45cb9710",
+        "verifiedAt": "2026-10-10T17:34:01.231Z",
+        "evidenceSha256": "486432fd73aabe67977a906983e3cc03cf5e408d57c939211ba365757977bd92",
+        "releaseReference": "docs/releases/six-design-2026-10-10/native-execution/modern-6f87470-release.json",
+        "releaseSha256": "5017517697ec17dcefae2270e47c4fa93a46677e54fbce5f701a8b21be25d94c"
+      },
+      "acceptanceMode": "original acceptance plus explicit unchanged-mechanism/source delta comparison"
+    },
+    {
+      "name": "native-routing",
+      "status": "passed",
+      "evidenceSha256": "d5a22fd615a54820908d8839710bab68d454fda1646a7d6010780d9fa60f3268",
+      "evidence": {
+        "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/final-shared-release/modern-native-routing.json",
+        "sha256": "d5a22fd615a54820908d8839710bab68d454fda1646a7d6010780d9fa60f3268"
+      },
+      "aggregate": {
+        "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/final-shared-release/modern-current-native-checkpoint.json",
+        "sha256": "4347aeeb639b709685baccabacd907aac70179b1bcc7d66469c8d93a4be1e4b3"
+      }
+    },
+    {
+      "name": "standalone-journeys",
+      "status": "passed",
+      "evidenceSha256": "486432fd73aabe67977a906983e3cc03cf5e408d57c939211ba365757977bd92",
+      "inheritedFrom": {
+        "repository": "darkapoparka/cars",
+        "commit": "6f87470c1e3ec8ade7d9ecc07daf9ebe45cb9710",
+        "verifiedAt": "2026-10-10T17:34:01.231Z",
+        "evidenceSha256": "486432fd73aabe67977a906983e3cc03cf5e408d57c939211ba365757977bd92",
+        "releaseReference": "docs/releases/six-design-2026-10-10/native-execution/modern-6f87470-release.json",
+        "releaseSha256": "5017517697ec17dcefae2270e47c4fa93a46677e54fbce5f701a8b21be25d94c"
+      },
+      "acceptanceMode": "original acceptance plus explicit unchanged-mechanism/source delta comparison"
+    },
+    {
+      "name": "mounted-journeys",
+      "status": "passed",
+      "evidenceSha256": "486432fd73aabe67977a906983e3cc03cf5e408d57c939211ba365757977bd92",
+      "inheritedFrom": {
+        "repository": "darkapoparka/cars",
+        "commit": "6f87470c1e3ec8ade7d9ecc07daf9ebe45cb9710",
+        "verifiedAt": "2026-10-10T17:34:01.231Z",
+        "evidenceSha256": "486432fd73aabe67977a906983e3cc03cf5e408d57c939211ba365757977bd92",
+        "releaseReference": "docs/releases/six-design-2026-10-10/native-execution/modern-6f87470-release.json",
+        "releaseSha256": "5017517697ec17dcefae2270e47c4fa93a46677e54fbce5f701a8b21be25d94c"
+      },
+      "acceptanceMode": "original acceptance plus explicit unchanged-mechanism/source delta comparison"
+    },
+    {
+      "name": "public-journeys",
+      "status": "passed",
+      "evidenceSha256": "486432fd73aabe67977a906983e3cc03cf5e408d57c939211ba365757977bd92",
+      "inheritedFrom": {
+        "repository": "darkapoparka/cars",
+        "commit": "6f87470c1e3ec8ade7d9ecc07daf9ebe45cb9710",
+        "verifiedAt": "2026-10-10T17:34:01.231Z",
+        "evidenceSha256": "486432fd73aabe67977a906983e3cc03cf5e408d57c939211ba365757977bd92",
+        "releaseReference": "docs/releases/six-design-2026-10-10/native-execution/modern-6f87470-release.json",
+        "releaseSha256": "5017517697ec17dcefae2270e47c4fa93a46677e54fbce5f701a8b21be25d94c"
+      },
+      "acceptanceMode": "original acceptance plus explicit unchanged-mechanism/source delta comparison"
+    },
+    {
+      "name": "preferences-no-js",
+      "status": "passed",
+      "evidenceSha256": "9748bfd04a8ce51f69640187dcf3737d229e6fc09c1301893df8ae659e8e492f",
+      "evidence": {
+        "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/final-shared-release/modern-preferences-no-js.json",
+        "sha256": "9748bfd04a8ce51f69640187dcf3737d229e6fc09c1301893df8ae659e8e492f"
+      },
+      "aggregate": {
+        "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/final-shared-release/modern-current-native-checkpoint.json",
+        "sha256": "4347aeeb639b709685baccabacd907aac70179b1bcc7d66469c8d93a4be1e4b3"
+      }
+    },
+    {
+      "name": "preferences-storage-disabled",
+      "status": "passed",
+      "evidenceSha256": "486432fd73aabe67977a906983e3cc03cf5e408d57c939211ba365757977bd92",
+      "inheritedFrom": {
+        "repository": "darkapoparka/cars",
+        "commit": "6f87470c1e3ec8ade7d9ecc07daf9ebe45cb9710",
+        "verifiedAt": "2026-10-10T17:34:01.231Z",
+        "evidenceSha256": "486432fd73aabe67977a906983e3cc03cf5e408d57c939211ba365757977bd92",
+        "releaseReference": "docs/releases/six-design-2026-10-10/native-execution/modern-6f87470-release.json",
+        "releaseSha256": "5017517697ec17dcefae2270e47c4fa93a46677e54fbce5f701a8b21be25d94c"
+      },
+      "acceptanceMode": "original acceptance plus explicit unchanged-mechanism/source delta comparison"
+    },
+    {
+      "name": "preferences-races",
+      "status": "passed",
+      "evidenceSha256": "486432fd73aabe67977a906983e3cc03cf5e408d57c939211ba365757977bd92",
+      "inheritedFrom": {
+        "repository": "darkapoparka/cars",
+        "commit": "6f87470c1e3ec8ade7d9ecc07daf9ebe45cb9710",
+        "verifiedAt": "2026-10-10T17:34:01.231Z",
+        "evidenceSha256": "486432fd73aabe67977a906983e3cc03cf5e408d57c939211ba365757977bd92",
+        "releaseReference": "docs/releases/six-design-2026-10-10/native-execution/modern-6f87470-release.json",
+        "releaseSha256": "5017517697ec17dcefae2270e47c4fa93a46677e54fbce5f701a8b21be25d94c"
+      },
+      "acceptanceMode": "original acceptance plus explicit unchanged-mechanism/source delta comparison"
+    },
+    {
+      "name": "request-isolation",
+      "status": "passed",
+      "evidenceSha256": "25492eb760dd431a3371561afe8c6b5b2179edb1a1e47fac102e1540706f6df3",
+      "evidence": {
+        "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/final-shared-release/modern-request-isolation.json",
+        "sha256": "25492eb760dd431a3371561afe8c6b5b2179edb1a1e47fac102e1540706f6df3"
+      },
+      "aggregate": {
+        "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/final-shared-release/modern-current-native-checkpoint.json",
+        "sha256": "4347aeeb639b709685baccabacd907aac70179b1bcc7d66469c8d93a4be1e4b3"
+      }
+    },
+    {
+      "name": "security-write-blocking",
+      "status": "passed",
+      "evidenceSha256": "232c3f611d0d8753862ca72c1cf11ad9cd949f6d15f8e4328d7481a238191ebb",
+      "evidence": {
+        "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/final-shared-release/modern-security-write-blocking.json",
+        "sha256": "232c3f611d0d8753862ca72c1cf11ad9cd949f6d15f8e4328d7481a238191ebb"
+      },
+      "aggregate": {
+        "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/final-shared-release/modern-current-native-checkpoint.json",
+        "sha256": "4347aeeb639b709685baccabacd907aac70179b1bcc7d66469c8d93a4be1e4b3"
+      }
+    },
+    {
+      "name": "assets-preserved",
+      "status": "passed",
+      "evidenceSha256": "486432fd73aabe67977a906983e3cc03cf5e408d57c939211ba365757977bd92",
+      "inheritedFrom": {
+        "repository": "darkapoparka/cars",
+        "commit": "6f87470c1e3ec8ade7d9ecc07daf9ebe45cb9710",
+        "verifiedAt": "2026-10-10T17:34:01.231Z",
+        "evidenceSha256": "486432fd73aabe67977a906983e3cc03cf5e408d57c939211ba365757977bd92",
+        "releaseReference": "docs/releases/six-design-2026-10-10/native-execution/modern-6f87470-release.json",
+        "releaseSha256": "5017517697ec17dcefae2270e47c4fa93a46677e54fbce5f701a8b21be25d94c"
+      },
+      "acceptanceMode": "original acceptance plus explicit unchanged-mechanism/source delta comparison"
+    }
+  ]
+}

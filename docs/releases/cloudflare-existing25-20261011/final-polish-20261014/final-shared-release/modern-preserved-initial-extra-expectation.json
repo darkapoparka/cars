@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-modern-current-native-check",
+  "name": "security-write-blocking",
+  "startedAt": "2026-10-15T01:51:38.541Z",
+  "identity": {
+    "dealer": "bradford-cherry-tree-cars",
+    "canonicalOrigin": "https://bradford-cherry-tree-cars.webpreviews.site",
+    "publicOrigin": "https://cars-uk-bradford-cherry-tree-cars.darkapoparka1.workers.dev",
+    "mount": "/variant-2",
+    "sourceCommit": "0e6048a2a2e1a9e9a3b92822d4ba9e4b6c63d869",
+    "sourceTree": "2ba44e704c71b1a0fcb8faaad304fb2294b95227",
+    "sourceRelease": {
+      "repository": "darkapoparka/cars",
+      "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+      "path": "templates/modern",
+      "tree": "01eac7390fa6ba951d4b8d4c26159a9be150f6c8",
+      "digest": "30e1a99f857cc25e4d78c9459cfb4394a9f70c5b114196a5ca6325ff38823b4b"
+    },
+    "inputDigest": "584ed94d7c12ee4c4f697ecf03d341f154de7b7a4593da9defc3b3917155fc0f",
+    "outputDigest": "cc6324761d426bf7785017ebdd6a1a1d35d93e77053f893546c8c3e29c1deb25",
+    "versionId": "6b705884-0f96-4ab3-9d94-e04f92b95ab0",
+    "deploymentId": "5abadd86-7936-4e92-ae82-975a8beafb93",
+    "traffic": [
+      {
+        "version_id": "6b705884-0f96-4ab3-9d94-e04f92b95ab0",
+        "percentage": 100
+      }
+    ],
+    "providerSummary": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-native/bradford-auto-fixed-provider-deployment-summary.json",
+      "sha256": "fe3c54dbd83fd2208c891b3ddc865f687b4c4b28362d3b06e2f10f267e81c72f",
+      "finishedAt": "2026-10-15T01:29:06.290Z"
+    },
+    "semanticAudit": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/final-release-bookkeeping/native-semantic-inheritance.json",
+      "sha256": "80f63f56bf1942cf06afc8c40f462095dd9643b48eeeb53be96f76ede1da1aab"
+    },
+    "runtime": {
+      "node": "v26.10.0",
+      "platform": "win32",
+      "playwright": "1.62.1",
+      "browserVersion": "151.0.7922.34"
+    }
+  },
+  "adaptation": {
+    "purpose": "Only four newly affected Modern native acceptance checks against the current Bradford hosted pilot.",
+    "maintainedSemantics": [
+      "templates/modern/apps/e2e/localization-http.mjs",
+      "templates/modern/apps/e2e/localization-preferences-client.mjs",
+      "templates/modern/apps/e2e/localization-harness.mjs"
+    ],
+    "change": "Separate bounded current-Bradford profile with exact provider/source pins; no maintained guard was disabled or edited. Uses Node26 only as observational test driver, preinstalled Playwright, live current edge HTTP and real no-JS preference form. Omits unrelated client race/storage/journey matrix. Native form returnTo also includes fragment.",
+    "target": {
+      "origin": "https://bradford-cherry-tree-cars.webpreviews.site",
+      "publicOrigin": "https://cars-uk-bradford-cherry-tree-cars.darkapoparka1.workers.dev",
+      "mount": "/variant-2",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    "mutations": "Only ephemeral browser preference cookies. No source/ref/provider write, build/install/fetch/clone, enquiry/outreach or business mutation. Browser network guard allows GET/HEAD plus POST exactly to same-origin /variant-2/api/preferences. No route.fulfill or response mocking."
+  },
+  "status": "failed",
+  "error": "AssertionError [ERR_ASSERTION]: admin returnTo\n\n303 !== 400\n\n    at file:///E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/modern-native-final-checkpoint/check-current-bradford.mjs:128:14\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async check (file:///E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/modern-native-final-checkpoint/check-current-bradford.mjs:51:31)\n    at async file:///E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/modern-native-final-checkpoint/check-current-bradford.mjs:110:3",
+  "finishedAt": "2026-10-15T01:51:38.731Z"
+}

@@ -1,0 +1,587 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-modern-current-native-check",
+  "name": "request-isolation",
+  "startedAt": "2026-10-15T01:51:36.283Z",
+  "identity": {
+    "dealer": "bradford-cherry-tree-cars",
+    "canonicalOrigin": "https://bradford-cherry-tree-cars.webpreviews.site",
+    "publicOrigin": "https://cars-uk-bradford-cherry-tree-cars.darkapoparka1.workers.dev",
+    "mount": "/variant-2",
+    "sourceCommit": "0e6048a2a2e1a9e9a3b92822d4ba9e4b6c63d869",
+    "sourceTree": "2ba44e704c71b1a0fcb8faaad304fb2294b95227",
+    "sourceRelease": {
+      "repository": "darkapoparka/cars",
+      "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+      "path": "templates/modern",
+      "tree": "01eac7390fa6ba951d4b8d4c26159a9be150f6c8",
+      "digest": "30e1a99f857cc25e4d78c9459cfb4394a9f70c5b114196a5ca6325ff38823b4b"
+    },
+    "inputDigest": "584ed94d7c12ee4c4f697ecf03d341f154de7b7a4593da9defc3b3917155fc0f",
+    "outputDigest": "cc6324761d426bf7785017ebdd6a1a1d35d93e77053f893546c8c3e29c1deb25",
+    "versionId": "6b705884-0f96-4ab3-9d94-e04f92b95ab0",
+    "deploymentId": "5abadd86-7936-4e92-ae82-975a8beafb93",
+    "traffic": [
+      {
+        "version_id": "6b705884-0f96-4ab3-9d94-e04f92b95ab0",
+        "percentage": 100
+      }
+    ],
+    "providerSummary": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-native/bradford-auto-fixed-provider-deployment-summary.json",
+      "sha256": "fe3c54dbd83fd2208c891b3ddc865f687b4c4b28362d3b06e2f10f267e81c72f",
+      "finishedAt": "2026-10-15T01:29:06.290Z"
+    },
+    "semanticAudit": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/final-release-bookkeeping/native-semantic-inheritance.json",
+      "sha256": "80f63f56bf1942cf06afc8c40f462095dd9643b48eeeb53be96f76ede1da1aab"
+    },
+    "runtime": {
+      "node": "v26.10.0",
+      "platform": "win32",
+      "playwright": "1.62.1",
+      "browserVersion": "151.0.7922.34"
+    }
+  },
+  "adaptation": {
+    "purpose": "Only four newly affected Modern native acceptance checks against the current Bradford hosted pilot.",
+    "maintainedSemantics": [
+      "templates/modern/apps/e2e/localization-http.mjs",
+      "templates/modern/apps/e2e/localization-preferences-client.mjs",
+      "templates/modern/apps/e2e/localization-harness.mjs"
+    ],
+    "change": "Separate bounded current-Bradford profile with exact provider/source pins; no maintained guard was disabled or edited. Uses Node26 only as observational test driver, preinstalled Playwright, live current edge HTTP and real no-JS preference form. Omits unrelated client race/storage/journey matrix. Native form returnTo also includes fragment.",
+    "target": {
+      "origin": "https://bradford-cherry-tree-cars.webpreviews.site",
+      "publicOrigin": "https://cars-uk-bradford-cherry-tree-cars.darkapoparka1.workers.dev",
+      "mount": "/variant-2",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    "mutations": "Only ephemeral browser preference cookies. No source/ref/provider write, build/install/fetch/clone, enquiry/outreach or business mutation. Browser network guard allows GET/HEAD plus POST exactly to same-origin /variant-2/api/preferences. No route.fulfill or response mocking."
+  },
+  "observations": {
+    "contexts": "two separate no-JS browser contexts; each same-URL pair requested concurrently, with conflicting locale/country/prompt cookies; two HTML rounds per language plus concurrent RSC pairs",
+    "observations": [
+      [
+        {
+          "round": 0,
+          "locale": "en",
+          "visitor": {
+            "country": "GB",
+            "cookieLocale": "bg",
+            "promptDismissed": false
+          },
+          "request": {
+            "method": "GET",
+            "url": "https://bradford-cherry-tree-cars.webpreviews.site/variant-2/en/cars"
+          },
+          "response": {
+            "status": 200,
+            "headers": {
+              "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+              "cdn-cache-control": "no-store",
+              "cf-ray": "a4ab2dfd1bfb21e2-SOF",
+              "content-language": "en",
+              "content-type": "text/html; charset=utf-8",
+              "date": "Thu, 15 Oct 2026 01:51:36 GMT",
+              "vercel-cdn-cache-control": "no-store",
+              "x-modern-public-path": "/en/cars"
+            },
+            "bodySha256": "161f0e6dd340fa1422af8b0913fe94958526d56bb3910127cc4238d3224ba9bb"
+          },
+          "rendered": {
+            "country": "GB",
+            "promptDismissed": "false",
+            "htmlLang": "en"
+          }
+        },
+        {
+          "round": 0,
+          "locale": "en",
+          "visitor": {
+            "country": "DE",
+            "cookieLocale": "en",
+            "promptDismissed": true
+          },
+          "request": {
+            "method": "GET",
+            "url": "https://bradford-cherry-tree-cars.webpreviews.site/variant-2/en/cars"
+          },
+          "response": {
+            "status": 200,
+            "headers": {
+              "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+              "cdn-cache-control": "no-store",
+              "cf-ray": "a4ab2dfd19938428-SOF",
+              "content-language": "en",
+              "content-type": "text/html; charset=utf-8",
+              "date": "Thu, 15 Oct 2026 01:51:37 GMT",
+              "vercel-cdn-cache-control": "no-store",
+              "x-modern-public-path": "/en/cars"
+            },
+            "bodySha256": "12f40a5e88343ad97e9c6bbe4b7b8050ffa179c9c0aa745bb3f658868d2016db"
+          },
+          "rendered": {
+            "country": "DE",
+            "promptDismissed": "true",
+            "htmlLang": "en"
+          }
+        }
+      ],
+      [
+        {
+          "round": 1,
+          "locale": "en",
+          "visitor": {
+            "country": "GB",
+            "cookieLocale": "bg",
+            "promptDismissed": false
+          },
+          "request": {
+            "method": "GET",
+            "url": "https://bradford-cherry-tree-cars.webpreviews.site/variant-2/en/cars"
+          },
+          "response": {
+            "status": 200,
+            "headers": {
+              "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+              "cdn-cache-control": "no-store",
+              "cf-ray": "a4ab2e039a389e0c-SOF",
+              "content-language": "en",
+              "content-type": "text/html; charset=utf-8",
+              "date": "Thu, 15 Oct 2026 01:51:37 GMT",
+              "vercel-cdn-cache-control": "no-store",
+              "x-modern-public-path": "/en/cars"
+            },
+            "bodySha256": "161f0e6dd340fa1422af8b0913fe94958526d56bb3910127cc4238d3224ba9bb"
+          },
+          "rendered": {
+            "country": "GB",
+            "promptDismissed": "false",
+            "htmlLang": "en"
+          }
+        },
+        {
+          "round": 1,
+          "locale": "en",
+          "visitor": {
+            "country": "DE",
+            "cookieLocale": "en",
+            "promptDismissed": true
+          },
+          "request": {
+            "method": "GET",
+            "url": "https://bradford-cherry-tree-cars.webpreviews.site/variant-2/en/cars"
+          },
+          "response": {
+            "status": 200,
+            "headers": {
+              "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+              "cdn-cache-control": "no-store",
+              "cf-ray": "a4ab2e039a748428-SOF",
+              "content-language": "en",
+              "content-type": "text/html; charset=utf-8",
+              "date": "Thu, 15 Oct 2026 01:51:37 GMT",
+              "vercel-cdn-cache-control": "no-store",
+              "x-modern-public-path": "/en/cars"
+            },
+            "bodySha256": "d64055c1ce13a1a60ff4b74cccb2b08c19ab422127c3b79d6af16eb4284935fe"
+          },
+          "rendered": {
+            "country": "DE",
+            "promptDismissed": "true",
+            "htmlLang": "en"
+          }
+        }
+      ],
+      [
+        {
+          "round": 0,
+          "locale": "bg",
+          "visitor": {
+            "country": "GB",
+            "cookieLocale": "bg",
+            "promptDismissed": false
+          },
+          "request": {
+            "method": "GET",
+            "url": "https://bradford-cherry-tree-cars.webpreviews.site/variant-2/bg/cars"
+          },
+          "response": {
+            "status": 200,
+            "headers": {
+              "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+              "cdn-cache-control": "no-store",
+              "cf-ray": "a4ab2e050a829e0c-SOF",
+              "content-language": "bg",
+              "content-type": "text/html; charset=utf-8",
+              "date": "Thu, 15 Oct 2026 01:51:37 GMT",
+              "vercel-cdn-cache-control": "no-store",
+              "x-modern-public-path": "/bg/cars"
+            },
+            "bodySha256": "35ac7f10cdbbd4693a069aaeba04c8064e53bd263547a442acd0f2c0af7cdac6"
+          },
+          "rendered": {
+            "country": "GB",
+            "promptDismissed": "false",
+            "htmlLang": "bg"
+          }
+        },
+        {
+          "round": 0,
+          "locale": "bg",
+          "visitor": {
+            "country": "DE",
+            "cookieLocale": "en",
+            "promptDismissed": true
+          },
+          "request": {
+            "method": "GET",
+            "url": "https://bradford-cherry-tree-cars.webpreviews.site/variant-2/bg/cars"
+          },
+          "response": {
+            "status": 200,
+            "headers": {
+              "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+              "cdn-cache-control": "no-store",
+              "cf-ray": "a4ab2e050aa18428-SOF",
+              "content-language": "bg",
+              "content-type": "text/html; charset=utf-8",
+              "date": "Thu, 15 Oct 2026 01:51:37 GMT",
+              "vercel-cdn-cache-control": "no-store",
+              "x-modern-public-path": "/bg/cars"
+            },
+            "bodySha256": "2d540765b887ed24f3f2453c60b1ef7e690fb0a84c50d3a4138126ae682aacb1"
+          },
+          "rendered": {
+            "country": "DE",
+            "promptDismissed": "true",
+            "htmlLang": "bg"
+          }
+        }
+      ],
+      [
+        {
+          "round": 1,
+          "locale": "bg",
+          "visitor": {
+            "country": "GB",
+            "cookieLocale": "bg",
+            "promptDismissed": false
+          },
+          "request": {
+            "method": "GET",
+            "url": "https://bradford-cherry-tree-cars.webpreviews.site/variant-2/bg/cars"
+          },
+          "response": {
+            "status": 200,
+            "headers": {
+              "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+              "cdn-cache-control": "no-store",
+              "cf-ray": "a4ab2e068af29e0c-SOF",
+              "content-language": "bg",
+              "content-type": "text/html; charset=utf-8",
+              "date": "Thu, 15 Oct 2026 01:51:38 GMT",
+              "vercel-cdn-cache-control": "no-store",
+              "x-modern-public-path": "/bg/cars"
+            },
+            "bodySha256": "35ac7f10cdbbd4693a069aaeba04c8064e53bd263547a442acd0f2c0af7cdac6"
+          },
+          "rendered": {
+            "country": "GB",
+            "promptDismissed": "false",
+            "htmlLang": "bg"
+          }
+        },
+        {
+          "round": 1,
+          "locale": "bg",
+          "visitor": {
+            "country": "DE",
+            "cookieLocale": "en",
+            "promptDismissed": true
+          },
+          "request": {
+            "method": "GET",
+            "url": "https://bradford-cherry-tree-cars.webpreviews.site/variant-2/bg/cars"
+          },
+          "response": {
+            "status": 200,
+            "headers": {
+              "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+              "cdn-cache-control": "no-store",
+              "cf-ray": "a4ab2e068ac58428-SOF",
+              "content-language": "bg",
+              "content-type": "text/html; charset=utf-8",
+              "date": "Thu, 15 Oct 2026 01:51:38 GMT",
+              "vercel-cdn-cache-control": "no-store",
+              "x-modern-public-path": "/bg/cars"
+            },
+            "bodySha256": "2d540765b887ed24f3f2453c60b1ef7e690fb0a84c50d3a4138126ae682aacb1"
+          },
+          "rendered": {
+            "country": "DE",
+            "promptDismissed": "true",
+            "htmlLang": "bg"
+          }
+        }
+      ],
+      [
+        {
+          "mode": "RSC concurrent same URL",
+          "locale": "en",
+          "visitor": {
+            "country": "GB",
+            "cookieLocale": "bg",
+            "promptDismissed": false
+          },
+          "response": {
+            "status": 200,
+            "headers": {
+              "date": "Thu, 15 Oct 2026 01:51:38 GMT",
+              "content-type": "text/x-component",
+              "cache-control": "private, no-store",
+              "content-language": "en",
+              "cdn-cache-control": "no-store",
+              "vercel-cdn-cache-control": "no-store",
+              "x-modern-public-path": "/en/cars",
+              "cf-ray": "a4ab2e083ff2a9eb-SOF"
+            },
+            "bodySha256": "320bbdc216e6c4eb38f73631700549c19fa95c0751a7de4ee4baaa3238ff5b49"
+          },
+          "state": {
+            "locale": "en",
+            "source": "url",
+            "country": "GB",
+            "suggestedCountry": "GB",
+            "promptDismissed": false
+          }
+        },
+        {
+          "mode": "RSC concurrent same URL",
+          "locale": "en",
+          "visitor": {
+            "country": "DE",
+            "cookieLocale": "en",
+            "promptDismissed": true
+          },
+          "response": {
+            "status": 200,
+            "headers": {
+              "date": "Thu, 15 Oct 2026 01:51:38 GMT",
+              "content-type": "text/x-component",
+              "cache-control": "private, no-store",
+              "content-language": "en",
+              "cdn-cache-control": "no-store",
+              "vercel-cdn-cache-control": "no-store",
+              "x-modern-public-path": "/en/cars",
+              "cf-ray": "a4ab2e083d5adc3a-SOF"
+            },
+            "bodySha256": "5b770dc2c4367fdab0c029393af255c21ad93dcf564147532e350b97fd2bb751"
+          },
+          "state": {
+            "locale": "en",
+            "source": "url",
+            "country": "DE",
+            "suggestedCountry": "GB",
+            "promptDismissed": true
+          }
+        }
+      ],
+      [
+        {
+          "mode": "RSC concurrent same URL",
+          "locale": "bg",
+          "visitor": {
+            "country": "GB",
+            "cookieLocale": "bg",
+            "promptDismissed": false
+          },
+          "response": {
+            "status": 200,
+            "headers": {
+              "date": "Thu, 15 Oct 2026 01:51:38 GMT",
+              "content-type": "text/x-component",
+              "cache-control": "private, no-store",
+              "content-language": "bg",
+              "cdn-cache-control": "no-store",
+              "vercel-cdn-cache-control": "no-store",
+              "x-modern-public-path": "/bg/cars",
+              "cf-ray": "a4ab2e09cd88dc3a-SOF"
+            },
+            "bodySha256": "c86d8c54399602fa28ebf3238f784f5cb5bc48c5e29abef174fb0b75053c1d02"
+          },
+          "state": {
+            "locale": "bg",
+            "source": "url",
+            "country": "GB",
+            "suggestedCountry": "GB",
+            "promptDismissed": false
+          }
+        },
+        {
+          "mode": "RSC concurrent same URL",
+          "locale": "bg",
+          "visitor": {
+            "country": "DE",
+            "cookieLocale": "en",
+            "promptDismissed": true
+          },
+          "response": {
+            "status": 200,
+            "headers": {
+              "date": "Thu, 15 Oct 2026 01:51:38 GMT",
+              "content-type": "text/x-component",
+              "cache-control": "private, no-store",
+              "content-language": "bg",
+              "cdn-cache-control": "no-store",
+              "vercel-cdn-cache-control": "no-store",
+              "x-modern-public-path": "/bg/cars",
+              "cf-ray": "a4ab2e09c85aa9eb-SOF"
+            },
+            "bodySha256": "07e43246d22f5641179e271d2a2d587b0dadacc6c9602b8128a6493bb7854004"
+          },
+          "state": {
+            "locale": "bg",
+            "source": "url",
+            "country": "DE",
+            "suggestedCountry": "GB",
+            "promptDismissed": true
+          }
+        }
+      ]
+    ]
+  },
+  "status": "passed",
+  "finishedAt": "2026-10-15T01:54:41.336Z",
+  "originalCarsProof": {
+    "file": "E:\\CODEX\\runtime\\cars-rollout-20261014-01a13b28\\merged\\modern-native-final-checkpoint\\request-isolation-cars-original.json",
+    "sha256": "084d52038398c7614568f77b0133438e979ab1bc76f5788c9faf4edf5e8be46c"
+  },
+  "servicesBranchSupplement": {
+    "file": "E:\\CODEX\\runtime\\cars-rollout-20261014-01a13b28\\merged\\modern-native-final-checkpoint\\services-branch-supplement.json",
+    "sha256": "5380987b487bd4714fb753c16cd52514070c9e2b8a7b2c469bca372a0dac950b",
+    "observations": [
+      [
+        {
+          "request": {
+            "method": "GET",
+            "url": "https://bradford-cherry-tree-cars.webpreviews.site/variant-2/en/services",
+            "cookies": {
+              "cars_locale": "bg",
+              "cars_country": "GB",
+              "cars_prompt": null
+            }
+          },
+          "response": {
+            "status": 200,
+            "headers": {
+              "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+              "cdn-cache-control": "no-store",
+              "cf-ray": "a4ab32745a63b7fb-SOF",
+              "content-language": "en",
+              "content-type": "text/html; charset=utf-8",
+              "date": "Thu, 15 Oct 2026 01:54:39 GMT"
+            },
+            "bodySha256": "1319e21c8fa93f079228e212e66f6e6d80496b36157c2d80938b7256cf6f32e8"
+          },
+          "rendered": {
+            "country": "GB",
+            "promptDismissed": "false",
+            "htmlLang": "en"
+          }
+        },
+        {
+          "request": {
+            "method": "GET",
+            "url": "https://bradford-cherry-tree-cars.webpreviews.site/variant-2/en/services",
+            "cookies": {
+              "cars_locale": "en",
+              "cars_country": "DE",
+              "cars_prompt": "v1"
+            }
+          },
+          "response": {
+            "status": 200,
+            "headers": {
+              "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+              "cdn-cache-control": "no-store",
+              "cf-ray": "a4ab32745bdf43a2-SOF",
+              "content-language": "en",
+              "content-type": "text/html; charset=utf-8",
+              "date": "Thu, 15 Oct 2026 01:54:40 GMT"
+            },
+            "bodySha256": "d200acc6c9b975ae47e6b003aba859975893864c24d470ce37a0e5c96328d61b"
+          },
+          "rendered": {
+            "country": "DE",
+            "promptDismissed": "true",
+            "htmlLang": "en"
+          }
+        }
+      ],
+      [
+        {
+          "request": {
+            "method": "GET",
+            "url": "https://bradford-cherry-tree-cars.webpreviews.site/variant-2/bg/services",
+            "cookies": {
+              "cars_locale": "bg",
+              "cars_country": "GB",
+              "cars_prompt": null
+            }
+          },
+          "response": {
+            "status": 200,
+            "headers": {
+              "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+              "cdn-cache-control": "no-store",
+              "cf-ray": "a4ab327a8979a9eb-SOF",
+              "content-language": "bg",
+              "content-type": "text/html; charset=utf-8",
+              "date": "Thu, 15 Oct 2026 01:54:40 GMT"
+            },
+            "bodySha256": "03a2a09d71e53c8db61a5572ffb49e281eb35b4f9a9979c248410c32fc50f53d"
+          },
+          "rendered": {
+            "country": "GB",
+            "promptDismissed": "false",
+            "htmlLang": "bg"
+          }
+        },
+        {
+          "request": {
+            "method": "GET",
+            "url": "https://bradford-cherry-tree-cars.webpreviews.site/variant-2/bg/services",
+            "cookies": {
+              "cars_locale": "en",
+              "cars_country": "DE",
+              "cars_prompt": "v1"
+            }
+          },
+          "response": {
+            "status": 200,
+            "headers": {
+              "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+              "cdn-cache-control": "no-store",
+              "cf-ray": "a4ab327a8978a9eb-SOF",
+              "content-language": "bg",
+              "content-type": "text/html; charset=utf-8",
+              "date": "Thu, 15 Oct 2026 01:54:41 GMT"
+            },
+            "bodySha256": "ff49a89b82aec7ff0f632fb44dc83dc9fc61596ad4e802557de63ef960563746"
+          },
+          "rendered": {
+            "country": "DE",
+            "promptDismissed": "true",
+            "htmlLang": "bg"
+          }
+        }
+      ]
+    ],
+    "resolverBlob": "f7f3653475506b77b1ddb2703c4d83acad0e7732"
+  }
+}
