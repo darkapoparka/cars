@@ -69,15 +69,15 @@
     border-radius: calc(var(--spacing) * 3);
   }
   .choice input:checked + span {
-    color: var(--brand-foreground);
-    background: var(--brand);
-    border-color: var(--brand);
+    color: var(--primary-foreground);
+    background: var(--primary);
+    border-color: var(--primary);
   }
   .choice:hover span {
-    border-color: var(--brand);
+    border-color: var(--primary);
   }
   .choice input:focus-visible + span {
-    outline: var(--desktop-focus-width) solid var(--brand);
+    outline: var(--desktop-focus-width) solid var(--primary);
     outline-offset: calc(var(--spacing) * 0.5);
   }
   .summary {

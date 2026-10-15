@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "МИРАЖ АУТО",
-  "logo": "/dealer-brand/v2-c97456cd6e43ecc9/logo-on-light.webp",
+  "logo": "/dealer-brand/v2-c3b62a7d03bc18e1/logo-on-light.webp",
   "phone": "+359893777706",
   "email": null,
   "address": "бул. Цар Освободител 230, срещу МЕТРО до автогуми Жижо, Варна, България",

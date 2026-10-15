@@ -3,12 +3,12 @@
   "dealer": "miraj-auto-varna",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/app",
-    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
-    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
   },
-  "appDigest": "8238dbf00ccc957366f36d8c7aab87818c6dfd29b34343aa05385c1d906de093",
+  "appDigest": "cbbbd4bc19d58aefc0784e171a8b73c04131a94e368375fa3bcc418aac55e2e4",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "miraj-auto-varna",
@@ -21,14 +21,14 @@
     "assets": [
       {
         "source": "auto-best/static/dealer-brand/logo-on-light.png",
-        "output": "public/dealer-app/logo-light-580af9aeb3d1e34a522b.png",
-        "sha256": "580af9aeb3d1e34a522bbaa71172e4b567b24555f73b48391b89d3dacee2d3d2",
+        "output": "public/dealer-app/logo-light-b24d329bab1071d250f1.png",
+        "sha256": "b24d329bab1071d250f17cdf9e26ad441fc7e132c838e6355fc6acfa326a6061",
         "role": "logo-light"
       },
       {
         "source": "auto-best/static/dealer-brand/logo-on-dark.png",
-        "output": "public/dealer-app/logo-dark-1a07c370dcfebf3fb7e2.png",
-        "sha256": "1a07c370dcfebf3fb7e2365585310b12be4bea3189a7c0c8763941fd4878bd7f",
+        "output": "public/dealer-app/logo-dark-1f6f5dae545950a4105f.png",
+        "sha256": "1f6f5dae545950a4105ff08010b9239a934baa5d086b8c9d91624551518e73eb",
         "role": "logo-dark"
       },
       {
@@ -54,5 +54,6 @@
     ]
   },
   "needsDealerQA": true,
-  "readyToPublish": false
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-15T03:15:55.923Z"
 }

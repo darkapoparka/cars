@@ -86,7 +86,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "МИРАЖ АУТО",
       "location": "бул. Цар Освободител 230, срещу МЕТРО до автогуми Жижо, Варна, България",
-      "avatar": "/dealer-brand/v2-c97456cd6e43ecc9/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-c3b62a7d03bc18e1/logo-on-light.webp",
       "mobile": "0893777706",
       "email": "",
       "whatsapp": "",

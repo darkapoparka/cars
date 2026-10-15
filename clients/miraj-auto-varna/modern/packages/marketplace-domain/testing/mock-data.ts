@@ -49,7 +49,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "МИРАЖ АУТО",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-c97456cd6e43ecc9/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-c3b62a7d03bc18e1/logo-on-light.webp"
     },
     "publishedAt": "2026-10-11T09:00:00.000Z",
     "promoted": true

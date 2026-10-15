@@ -7,7 +7,7 @@
   import AboutServiceIcon from './AboutServiceIcon.svelte';
   import { brand } from '$config/brand';
   import { leadSite } from '$config/lead-site';
-  import { companyServices } from '$data/company';
+  import { companyServices, companyServicesCopyOwner } from '$data/company';
 </script>
 
 <section class="dn-about-process dn-section" id="process" aria-labelledby="about-process-title">
@@ -34,11 +34,11 @@
             <AboutServiceIcon name={service.icon} />
           </div>
           <div class="dn-about-service-card__copy">
-            <h3>{i18n.text(service.title)}</h3>
-            <p>{i18n.text(service.description)}</p>
+            <h3>{companyServicesCopyOwner === 'dealer' ? service.title : i18n.text(service.title)}</h3>
+            <p>{companyServicesCopyOwner === 'dealer' ? service.description : i18n.text(service.description)}</p>
           </div>
           <a href={i18n.href(service.href)}>
-            <span>{i18n.text(service.cta)}</span>
+            <span>{companyServicesCopyOwner === 'dealer' ? service.cta : i18n.text(service.cta)}</span>
             <Icon name="arrow-right" size={17} strokeWidth={1.8} />
           </a>
         </article>

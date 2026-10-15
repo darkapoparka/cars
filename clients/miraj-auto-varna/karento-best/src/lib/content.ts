@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "МИРАЖ АУТО",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-c97456cd6e43ecc9/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-c97456cd6e43ecc9/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-c97456cd6e43ecc9/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-c3b62a7d03bc18e1/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-c3b62a7d03bc18e1/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-c3b62a7d03bc18e1/logo-on-dark.webp",
     "alt": "МИРАЖ АУТО",
-    "favicon": "/dealer-brand/v2-c97456cd6e43ecc9/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-c3b62a7d03bc18e1/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

@@ -33,6 +33,6 @@ export const brand = {
   addressLine,
   address: "бул. Цар Освободител 230, срещу МЕТРО до автогуми Жижо, Варна, България",
   appointment: "Потвърдете работното време директно с автокъщата.",
-  logo: "/dealer-brand/v2-c97456cd6e43ecc9/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/v2-c97456cd6e43ecc9/logo-on-dark.webp"
+  logo: "/dealer-brand/v2-c3b62a7d03bc18e1/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-c3b62a7d03bc18e1/logo-on-dark.webp"
 } as const satisfies BrandConfig;
