@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "Al Basma Motors",
-  "logo": "/dealer-brand/v2-c59edf3c3ce6c1f7/logo-on-light.webp",
+  "logo": "/dealer-brand/v2-e73f3eb48de7300c/logo-on-light.webp",
   "phone": "+971543422222",
   "email": "admin@albasmamotors.com",
   "address": "Showroom 61, Souq Al Haraj, Sharjah, UAE",

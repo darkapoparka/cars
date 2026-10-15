@@ -114,8 +114,8 @@ export const leadSite: LeadSiteConfig = {
     "tagline": "Al Basma — vehicles and dealer support in Sharjah."
   }
 },
-  accent: "#30343b",
-  desktopAccent: "#4b5057",
+  accent: "#09090b",
+  desktopAccent: "#09090b",
   desktopInventoryFilterLayout: "quick",
   desktopPreviewIdentity: {
     sourceSlug: "day-night-auto-group",
@@ -147,11 +147,11 @@ export const leadSite: LeadSiteConfig = {
   email: "admin@albasmamotors.com",
   heroPath: "/lead-hero.jpg",
   locale: "en-AE",
-  logoPath: "/dealer-brand/v2-c59edf3c3ce6c1f7/logo-on-light.webp",
-  logoInversePath: "/dealer-brand/v2-c59edf3c3ce6c1f7/logo-on-dark.webp",
-  logoOnLight: "/dealer-brand/v2-c59edf3c3ce6c1f7/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/v2-c59edf3c3ce6c1f7/logo-on-dark.webp",
-  logoOnAccent: "/dealer-brand/v2-c59edf3c3ce6c1f7/logo-on-dark.webp",
+  logoPath: "/dealer-brand/v2-e73f3eb48de7300c/logo-on-light.webp",
+  logoInversePath: "/dealer-brand/v2-e73f3eb48de7300c/logo-on-dark.webp",
+  logoOnLight: "/dealer-brand/v2-e73f3eb48de7300c/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-e73f3eb48de7300c/logo-on-dark.webp",
+  logoOnAccent: "/dealer-brand/v2-e73f3eb48de7300c/logo-on-dark.webp",
   mapsEmbedUrl:
     "https://maps.google.com/maps?q=Showroom%2061%2C%20Souq%20Al%20Haraj%2C%20Sharjah%2C%20UAE&z=16&hl=en&output=embed",
   mapsUrl:

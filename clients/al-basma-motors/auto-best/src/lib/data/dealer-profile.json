@@ -27,9 +27,9 @@
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Showroom%2061%2C%20Souq%20Al%20Haraj%2C%20Sharjah%2C%20UAE",
     "mapsEmbedUrl": "https://maps.google.com/maps?q=Showroom%2061%2C%20Souq%20Al%20Haraj%2C%20Sharjah%2C%20UAE&z=16&hl=en&output=embed",
     "accent": "#454b50",
-    "logo": "/dealer-brand/v2-c59edf3c3ce6c1f7/logo-on-light.webp",
-    "logoLight": "/dealer-brand/v2-c59edf3c3ce6c1f7/logo-on-light.webp",
-    "logoDark": "/dealer-brand/v2-c59edf3c3ce6c1f7/logo-on-dark.webp",
+    "logo": "/dealer-brand/v2-e73f3eb48de7300c/logo-on-light.webp",
+    "logoLight": "/dealer-brand/v2-e73f3eb48de7300c/logo-on-light.webp",
+    "logoDark": "/dealer-brand/v2-e73f3eb48de7300c/logo-on-dark.webp",
     "socialLinks": {
       "facebook": "https://www.facebook.com/albasmamotors",
       "instagram": "https://www.instagram.com/albasmamotors",
@@ -1198,17 +1198,17 @@
     "originalSha256": "ac85d960fc592f393928f178df7107c70729f5fbb9befaf9524891de4702ee2f",
     "assets": {
       "onLight": {
-        "publicPath": "/dealer-brand/v2-c59edf3c3ce6c1f7/logo-on-light.webp",
+        "publicPath": "/dealer-brand/v2-e73f3eb48de7300c/logo-on-light.webp",
         "sha256": "69243b2c43b11bc29a2ece97e5ea5a8ff99a2aad4a36df9a8a76e61c522c85df",
         "bytes": 77628
       },
       "onDark": {
-        "publicPath": "/dealer-brand/v2-c59edf3c3ce6c1f7/logo-on-dark.webp",
+        "publicPath": "/dealer-brand/v2-e73f3eb48de7300c/logo-on-dark.webp",
         "sha256": "7afbb0dd988de9dd59c8c9b00c5f3b216efb9739e825c2e6279e3c06a6d99a6a",
         "bytes": 26462
       },
       "onAccent": {
-        "publicPath": "/dealer-brand/v2-c59edf3c3ce6c1f7/logo-on-accent.webp",
+        "publicPath": "/dealer-brand/v2-e73f3eb48de7300c/logo-on-accent.webp",
         "sha256": "7afbb0dd988de9dd59c8c9b00c5f3b216efb9739e825c2e6279e3c06a6d99a6a",
         "bytes": 26462
       }

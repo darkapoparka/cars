@@ -58,7 +58,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Al Basma Motors",
       "verificationStatus": "unverified",
       "city": "Sharjah",
-      "logoUrl": "/dealer-brand/v2-c59edf3c3ce6c1f7/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-e73f3eb48de7300c/logo-on-light.webp"
     },
     "publishedAt": "2026-09-08T09:00:00.000Z",
     "promoted": true
@@ -119,7 +119,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Al Basma Motors",
       "verificationStatus": "unverified",
       "city": "Sharjah",
-      "logoUrl": "/dealer-brand/v2-c59edf3c3ce6c1f7/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-e73f3eb48de7300c/logo-on-light.webp"
     },
     "publishedAt": "2026-09-08T09:00:00.000Z",
     "promoted": true
@@ -180,7 +180,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Al Basma Motors",
       "verificationStatus": "unverified",
       "city": "Sharjah",
-      "logoUrl": "/dealer-brand/v2-c59edf3c3ce6c1f7/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-e73f3eb48de7300c/logo-on-light.webp"
     },
     "publishedAt": "2026-09-08T09:00:00.000Z",
     "promoted": true
@@ -241,7 +241,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Al Basma Motors",
       "verificationStatus": "unverified",
       "city": "Sharjah",
-      "logoUrl": "/dealer-brand/v2-c59edf3c3ce6c1f7/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-e73f3eb48de7300c/logo-on-light.webp"
     },
     "publishedAt": "2026-09-08T09:00:00.000Z",
     "promoted": false
@@ -302,7 +302,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Al Basma Motors",
       "verificationStatus": "unverified",
       "city": "Sharjah",
-      "logoUrl": "/dealer-brand/v2-c59edf3c3ce6c1f7/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-e73f3eb48de7300c/logo-on-light.webp"
     },
     "publishedAt": "2026-09-08T09:00:00.000Z",
     "promoted": false
@@ -363,7 +363,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Al Basma Motors",
       "verificationStatus": "unverified",
       "city": "Sharjah",
-      "logoUrl": "/dealer-brand/v2-c59edf3c3ce6c1f7/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-e73f3eb48de7300c/logo-on-light.webp"
     },
     "publishedAt": "2026-09-08T09:00:00.000Z",
     "promoted": false
@@ -424,7 +424,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Al Basma Motors",
       "verificationStatus": "unverified",
       "city": "Sharjah",
-      "logoUrl": "/dealer-brand/v2-c59edf3c3ce6c1f7/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-e73f3eb48de7300c/logo-on-light.webp"
     },
     "publishedAt": "2026-09-08T09:00:00.000Z",
     "promoted": false
@@ -485,7 +485,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Al Basma Motors",
       "verificationStatus": "unverified",
       "city": "Sharjah",
-      "logoUrl": "/dealer-brand/v2-c59edf3c3ce6c1f7/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-e73f3eb48de7300c/logo-on-light.webp"
     },
     "publishedAt": "2026-09-08T09:00:00.000Z",
     "promoted": false
@@ -546,7 +546,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Al Basma Motors",
       "verificationStatus": "unverified",
       "city": "Sharjah",
-      "logoUrl": "/dealer-brand/v2-c59edf3c3ce6c1f7/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-e73f3eb48de7300c/logo-on-light.webp"
     },
     "publishedAt": "2026-09-08T09:00:00.000Z",
     "promoted": false
@@ -607,7 +607,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Al Basma Motors",
       "verificationStatus": "unverified",
       "city": "Sharjah",
-      "logoUrl": "/dealer-brand/v2-c59edf3c3ce6c1f7/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-e73f3eb48de7300c/logo-on-light.webp"
     },
     "publishedAt": "2026-09-08T09:00:00.000Z",
     "promoted": false

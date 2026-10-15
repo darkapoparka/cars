@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "Al Basma Motors",
   "locale": "en-AE",
   "logo": {
-    "light": "/dealer-brand/v2-c59edf3c3ce6c1f7/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-c59edf3c3ce6c1f7/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-c59edf3c3ce6c1f7/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-e73f3eb48de7300c/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-e73f3eb48de7300c/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-e73f3eb48de7300c/logo-on-dark.webp",
     "alt": "Al Basma Motors",
-    "favicon": "/dealer-brand/v2-c59edf3c3ce6c1f7/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-e73f3eb48de7300c/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

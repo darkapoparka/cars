@@ -33,6 +33,6 @@ export const brand = {
   addressLine,
   address: "Showroom 61, Souq Al Haraj, Sharjah, UAE",
   appointment: "Contact the showroom before travelling",
-  logo: "/dealer-brand/v2-c59edf3c3ce6c1f7/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/v2-c59edf3c3ce6c1f7/logo-on-dark.webp"
+  logo: "/dealer-brand/v2-e73f3eb48de7300c/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-e73f3eb48de7300c/logo-on-dark.webp"
 } as const satisfies BrandConfig;

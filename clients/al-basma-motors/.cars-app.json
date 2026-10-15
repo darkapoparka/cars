@@ -3,32 +3,32 @@
   "dealer": "al-basma-motors",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/app",
-    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1",
-    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76"
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
   },
-  "appDigest": "0e82abebcb3efdc14764293f252704ab27246b34b770da5bccc4e63dcc0c9866",
+  "appDigest": "24373a6324b23cd85a1783f25ceb541469d47b4571478ebe5ff665000871fd52",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "al-basma-motors",
     "profile": "auto-best/src/lib/data/dealer-profile.json",
-    "profileSha256": "202529a3a06b9ce65006c50e594c1eccd46c726d45e82844348f9081aad04120",
+    "profileSha256": "be7ec905b11fe9a1494d0b483c32d5efc70575a1f0d2e4a4ef5e57a463e17426",
     "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
     "vehicles": 10,
     "currency": "AED",
     "observedAt": "2026-09-08T21:56:53.027Z, 2026-09-08T21:56:53.853Z, 2026-09-08T21:56:54.631Z, 2026-09-08T21:56:55.427Z, 2026-09-08T21:56:55.912Z, 2026-09-08T21:56:56.764Z, 2026-09-08T21:56:57.238Z, 2026-09-08T21:56:57.955Z, 2026-09-08T21:56:58.854Z, 2026-09-08T21:56:59.789Z",
     "assets": [
       {
-        "source": "auto-best/static/dealer-brand/logo-on-light.webp",
-        "output": "public/dealer-app/logo-light-a711de145806bfc28cb9.webp",
-        "sha256": "a711de145806bfc28cb92424e93e21f1c1e5a2cc23b043f97f57b9c0b8035564",
+        "source": "auto-best/static/dealer-brand/v2-e73f3eb48de7300c/logo-on-light.webp",
+        "output": "public/dealer-app/logo-light-69243b2c43b11bc29a2e.webp",
+        "sha256": "69243b2c43b11bc29a2ece97e5ea5a8ff99a2aad4a36df9a8a76e61c522c85df",
         "role": "logo-light"
       },
       {
-        "source": "auto-best/static/dealer-brand/logo-on-dark.webp",
-        "output": "public/dealer-app/logo-dark-4003fd1022280c2c8475.webp",
-        "sha256": "4003fd1022280c2c8475e45f79d364cd0ad5f5423b99aa9c264e7dba3a5e5688",
+        "source": "auto-best/static/dealer-brand/v2-e73f3eb48de7300c/logo-on-dark.webp",
+        "output": "public/dealer-app/logo-dark-7afbb0dd988de9dd59c8.webp",
+        "sha256": "7afbb0dd988de9dd59c8c9b00c5f3b216efb9739e825c2e6279e3c06a6d99a6a",
         "role": "logo-dark"
       },
       {
@@ -333,71 +333,9 @@
         "sourceUnit": "km",
         "canonicalKm": 12000
       }
-    ],
-    "inventoryNoticePreservation": {
-      "schemaVersion": 1,
-      "kind": "cars-current-app-inventory-notice-preservation",
-      "dealer": "al-basma-motors",
-      "baseline": {
-        "commit": "bf6303bbde4268c649efb91df2b04ad3240b347b",
-        "tree": "7094a2b2cfe73e49701819ca8ac983468106cf7a"
-      },
-      "path": "app/lib/dealer.json",
-      "reviewSha256": "1d6e1b52e46258562a193209ac9ff6886c0ed5036c9a2378f963cdf7cecf4ee6",
-      "currentConfigSha256": "830dbf8adb325a97f8252cab97e21ca996835fd0dcc07dc66c40e69d3bab1283",
-      "currentNoticeSha256": "930e2f71ca0269d56eb42579409ae630e1d8802e7af4a34d32c0accaa0bf2d6a",
-      "profileSha256": "202529a3a06b9ce65006c50e594c1eccd46c726d45e82844348f9081aad04120",
-      "unmodifiedTargetConfigSha256": "b63e53c502eecf9cd90acd3e900095b52961609bba745aee97d315962f2674a0",
-      "targetConfigSha256": "9b3a76c1105b86c8b0a293b9ee31c056e35bfcefac44dcaf9cc61157eeb917c4",
-      "targetSources": {
-        "auto-best": {
-          "repository": "darkapoparka/cars",
-          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
-          "path": "templates/auto-best",
-          "digest": "dcbc59990928884006652677d3529020df3844029993895a71e5f6818ba7363c",
-          "tree": "5fb7a2164775050a47c1183371622295dbf63725"
-        },
-        "modern": {
-          "repository": "darkapoparka/cars",
-          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
-          "path": "templates/modern",
-          "digest": "ba263aac8f1863d133807d3e1bf3597d125cf315a7e0deba3f6e419b52434c25",
-          "tree": "3974380670eb388bb16182f94ade33be6d87b1c1"
-        },
-        "import": {
-          "repository": "darkapoparka/cars",
-          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
-          "path": "templates/import",
-          "digest": "f98a0934cdcc5adbda393c14c02eb2adc0175344ab2ac3f913afe4b0603366e5",
-          "tree": "6afc6901e2f95967fb7c72e9f75525d4d6fbf086"
-        },
-        "app": {
-          "repository": "darkapoparka/cars",
-          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
-          "path": "templates/app",
-          "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1",
-          "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76"
-        },
-        "mobile": {
-          "repository": "darkapoparka/cars",
-          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
-          "path": "templates/mobile",
-          "digest": "4e858bd9dbd3ef5b52cd904c4ed97bbfdc0f4cfe02b5a3840580f38026b867a0",
-          "tree": "2b02829e157071e305bfb2dff10ef18e85c8a35e"
-        },
-        "karento-best": {
-          "repository": "darkapoparka/cars",
-          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
-          "path": "templates/karento-best",
-          "digest": "83056967764a686f3737d74b86c5db51c1385a50184853f50ec4ade80c1dd44f",
-          "tree": "5f6eec8efb2f9e99819f7f0c2f743d18fff7b134"
-        }
-      },
-      "allOtherConfigFieldsUnchanged": true,
-      "sourceFactsUnchanged": true
-    }
+    ]
   },
   "needsDealerQA": true,
   "readyToPublish": false,
-  "refreshedAt": "2026-10-12T21:44:09.852Z"
+  "refreshedAt": "2026-10-15T02:30:34.095Z"
 }

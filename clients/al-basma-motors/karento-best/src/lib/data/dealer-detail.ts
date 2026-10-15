@@ -93,7 +93,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Al Basma Motors",
       "location": "Showroom 61, Souq Al Haraj, Sharjah, UAE",
-      "avatar": "/dealer-brand/v2-c59edf3c3ce6c1f7/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-e73f3eb48de7300c/logo-on-light.webp",
       "mobile": "+971 54 342 2222",
       "email": "admin@albasmamotors.com",
       "whatsapp": "",
@@ -202,7 +202,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Al Basma Motors",
       "location": "Showroom 61, Souq Al Haraj, Sharjah, UAE",
-      "avatar": "/dealer-brand/v2-c59edf3c3ce6c1f7/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-e73f3eb48de7300c/logo-on-light.webp",
       "mobile": "+971 54 342 2222",
       "email": "admin@albasmamotors.com",
       "whatsapp": "",
@@ -311,7 +311,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Al Basma Motors",
       "location": "Showroom 61, Souq Al Haraj, Sharjah, UAE",
-      "avatar": "/dealer-brand/v2-c59edf3c3ce6c1f7/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-e73f3eb48de7300c/logo-on-light.webp",
       "mobile": "+971 54 342 2222",
       "email": "admin@albasmamotors.com",
       "whatsapp": "",
@@ -420,7 +420,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Al Basma Motors",
       "location": "Showroom 61, Souq Al Haraj, Sharjah, UAE",
-      "avatar": "/dealer-brand/v2-c59edf3c3ce6c1f7/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-e73f3eb48de7300c/logo-on-light.webp",
       "mobile": "+971 54 342 2222",
       "email": "admin@albasmamotors.com",
       "whatsapp": "",
@@ -529,7 +529,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Al Basma Motors",
       "location": "Showroom 61, Souq Al Haraj, Sharjah, UAE",
-      "avatar": "/dealer-brand/v2-c59edf3c3ce6c1f7/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-e73f3eb48de7300c/logo-on-light.webp",
       "mobile": "+971 54 342 2222",
       "email": "admin@albasmamotors.com",
       "whatsapp": "",
@@ -638,7 +638,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Al Basma Motors",
       "location": "Showroom 61, Souq Al Haraj, Sharjah, UAE",
-      "avatar": "/dealer-brand/v2-c59edf3c3ce6c1f7/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-e73f3eb48de7300c/logo-on-light.webp",
       "mobile": "+971 54 342 2222",
       "email": "admin@albasmamotors.com",
       "whatsapp": "",
@@ -747,7 +747,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Al Basma Motors",
       "location": "Showroom 61, Souq Al Haraj, Sharjah, UAE",
-      "avatar": "/dealer-brand/v2-c59edf3c3ce6c1f7/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-e73f3eb48de7300c/logo-on-light.webp",
       "mobile": "+971 54 342 2222",
       "email": "admin@albasmamotors.com",
       "whatsapp": "",
@@ -856,7 +856,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Al Basma Motors",
       "location": "Showroom 61, Souq Al Haraj, Sharjah, UAE",
-      "avatar": "/dealer-brand/v2-c59edf3c3ce6c1f7/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-e73f3eb48de7300c/logo-on-light.webp",
       "mobile": "+971 54 342 2222",
       "email": "admin@albasmamotors.com",
       "whatsapp": "",
@@ -965,7 +965,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Al Basma Motors",
       "location": "Showroom 61, Souq Al Haraj, Sharjah, UAE",
-      "avatar": "/dealer-brand/v2-c59edf3c3ce6c1f7/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-e73f3eb48de7300c/logo-on-light.webp",
       "mobile": "+971 54 342 2222",
       "email": "admin@albasmamotors.com",
       "whatsapp": "",
@@ -1074,7 +1074,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Al Basma Motors",
       "location": "Showroom 61, Souq Al Haraj, Sharjah, UAE",
-      "avatar": "/dealer-brand/v2-c59edf3c3ce6c1f7/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-e73f3eb48de7300c/logo-on-light.webp",
       "mobile": "+971 54 342 2222",
       "email": "admin@albasmamotors.com",
       "whatsapp": "",
