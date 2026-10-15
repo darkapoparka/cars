@@ -491,8 +491,8 @@ test('ordinary paired factual choice refuses either changed site lease, overlap 
  for(const mutate of mutations){const f=pairedOrdinaryFactualConsumerFixture();mutate(f);assert.throws(()=>applyReviewedFactualConsumerResolutions(f));assert(f.plan.candidate.get(f.name).equals(f.merged));assert(f.plan.candidate.get(f.site.name).equals(f.site.merged));assert.equal(f.plan.changes[0].kind,'auto-merged');}
 });
 
-test('ordinary paired factual choice keeps the exact ordered two-path whitelist and rejects unknown or site-only scope',()=>{
- for(const mutate of [f=>{f.review.paths.reverse();},f=>{f.review.paths=f.review.paths.slice(1);},f=>{f.review.paths[1].path='import/src/paid.ts';},f=>{f.review.paths[1].path='../outside';},f=>{f.review.paths.push({...f.review.paths[1]});}]){const f=pairedOrdinaryFactualConsumerFixture();mutate(f);assert.throws(()=>applyReviewedFactualConsumerResolutions(f));assert(f.plan.candidate.get(f.name).equals(f.merged));assert(f.plan.candidate.get(f.site.name).equals(f.site.merged));}
+test('ordinary paired factual choice keeps the exact ordered two-path whitelist and rejects unknown or reversed scope',()=>{
+ for(const mutate of [f=>{f.review.paths.reverse();},f=>{f.review.paths[1].path='import/src/paid.ts';},f=>{f.review.paths[1].path='../outside';},f=>{f.review.paths.push({...f.review.paths[1]});}]){const f=pairedOrdinaryFactualConsumerFixture();mutate(f);assert.throws(()=>applyReviewedFactualConsumerResolutions(f));assert(f.plan.candidate.get(f.name).equals(f.merged));assert(f.plan.candidate.get(f.site.name).equals(f.site.merged));}
 });
 
 

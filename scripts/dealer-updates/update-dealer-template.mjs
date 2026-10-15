@@ -381,7 +381,7 @@ export function applyReviewedFactualConsumerResolutions({plan,original,oldBases,
   const equal=(a,b)=>JSON.stringify(a)===JSON.stringify(b);
   const keys=['auto-best','modern','import','app','mobile','karento-best'];
   const dealerPath='import/src/lib/config/dealer.ts',sitePath='import/src/lib/config/site.ts';
-  const paths=review.paths?.length===2?[dealerPath,sitePath]:[dealerPath];
+  const paths=review.paths?.length===2?[dealerPath,sitePath]:review.paths?.length===1&&review.paths[0]?.path===sitePath?[sitePath]:[dealerPath];
   assertFactualRefreshAdmission({enabled:refreshFacts,designSet,selectedKeys,qualification,registeredAdoption,manifest});
   if(refreshFacts!==true||templatePalette!==true||registeredAdoption||!plan?.ready||!(plan.candidate instanceof Map)||!(original instanceof Map))throw new Error('Reviewed factual consumers require a ready ordinary six-family factual refresh with selected template palettes');
   if(!exact(review,['schemaVersion','kind','reviewed','dealer','baseline','targetSources','paths'])||review.schemaVersion!==1||review.kind!=='cars-factual-consumer-template-resolutions'||review.reviewed!==true||review.dealer!==manifest.slug||
@@ -393,7 +393,7 @@ export function applyReviewedFactualConsumerResolutions({plan,original,oldBases,
   for(const item of review.paths){
     const pathname=item.path,relative=pathname.slice('import/'.length);
     if(Object.hasOwn(resolutions,pathname)||plan.changes.some(row=>row.path===pathname&&row.kind?.startsWith('resolved-')))throw new Error('Reviewed clean factual choice cannot overlap an existing conflict decision');
-    if(!exact(item,['path','choice','originalSha256','oldSha256','targetSha256','mergedSha256'])||item.choice!=='template'||Object.entries(item).some(([key,value])=>key.endsWith('Sha256')&&!/^[a-f0-9]{64}$/.test(value)))throw new Error('Reviewed factual consumer must name only the exact Import dealer config or paired site config with four byte leases');
+    if(!exact(item,['path','choice','originalSha256','oldSha256','targetSha256','mergedSha256'])||item.choice!=='template'||Object.entries(item).some(([key,value])=>key.endsWith('Sha256')&&!/^[a-f0-9]{64}$/.test(value)))throw new Error('Reviewed factual consumer must name only the exact Import dealer config, site config, or ordered pair with four byte leases');
     const current=original.get(pathname),old=oldBases?.import?.get(relative),target=newBases?.import?.get(relative),merged=plan.candidate.get(pathname);
     const text=bytes=>Buffer.isBuffer(bytes)&&!bytes.includes(0)&&Buffer.from(bytes.toString('utf8')).equals(bytes);
     if(![current,old,target,merged].every(text)||merged.equals(target)||plan.conflicts?.some(row=>row.path===pathname)||
