@@ -3,12 +3,12 @@
   "dealer": "bavaro-varna",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/app",
-    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
-    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
   },
-  "appDigest": "e1d4421430935090bb159bedbf3233e69a7d6911c5dc0467f43f91704e8266f9",
+  "appDigest": "3f72b247cd0235e14f3bb465f8b526716a74c273eed04043140c7b431ca9f019",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "bavaro-varna",
@@ -21,14 +21,14 @@
     "assets": [
       {
         "source": "auto-best/static/dealer-brand/logo-on-light.png",
-        "output": "public/dealer-app/logo-light-1bdf909243d5b4ede123.png",
-        "sha256": "1bdf909243d5b4ede123f0746e04720007848d262547c875177a036480395070",
+        "output": "public/dealer-app/logo-light-df670d0eb93a058c0019.png",
+        "sha256": "df670d0eb93a058c0019327f1bbd51190da4816cf4220bc216130520e18631fd",
         "role": "logo-light"
       },
       {
         "source": "auto-best/static/dealer-brand/logo-on-dark.png",
-        "output": "public/dealer-app/logo-dark-f1c81c909cba69ed33de.png",
-        "sha256": "f1c81c909cba69ed33de0d585df65b6636192dda8a91baed5b51459e34b9c31b",
+        "output": "public/dealer-app/logo-dark-91a2a48c3209a0d4fcf6.png",
+        "sha256": "91a2a48c3209a0d4fcf6651500a4463de5d4a6faeecec96c6e685eadaf7476ac",
         "role": "logo-dark"
       },
       {
@@ -54,5 +54,6 @@
     ]
   },
   "needsDealerQA": true,
-  "readyToPublish": false
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-15T04:04:03.471Z"
 }

@@ -3,6 +3,7 @@
 <script lang="ts">
   import type { MouseEventHandler } from "svelte/elements";
   import MobileIcon, { type MobileIconName } from "./MobileIcon.svelte";
+  import DemoActionLink from "#lib/components/DemoActionLink.svelte";
 
   let {
     label,
@@ -13,6 +14,8 @@
     controls,
     surface = "plain",
     onMedia = false,
+    demo = false,
+    getFeedbackContainer,
     class: className = "",
   }: {
     label: string;
@@ -23,8 +26,17 @@
     controls?: string;
     surface?: "plain" | "circle" | "square";
     onMedia?: boolean;
+    demo?: boolean;
+    getFeedbackContainer?: () => HTMLElement | null | undefined;
     class?: string;
   } = $props();
+  const classes = $derived(
+    "mobile-icon-button" +
+      (surface === "circle" ? " mobile-icon-button-circle" : "") +
+      (surface === "square" ? " mobile-icon-button-square" : "") +
+      (onMedia ? " mobile-icon-button-on-media" : "") +
+      (className ? " " + className : ""),
+  );
 </script>
 
 {#snippet contents()}
@@ -33,34 +45,25 @@
   </span>
 {/snippet}
 
-{#if href}
-  <a
-    class={[
-      "mobile-icon-button",
-      {
-        "mobile-icon-button-circle": surface === "circle",
-        "mobile-icon-button-square": surface === "square",
-        "mobile-icon-button-on-media": onMedia,
-      },
-      className,
-    ]}
+{#if href && demo}
+  <DemoActionLink
+    class={classes}
+    data-mobile-icon-button=""
     {href}
     aria-label={label}
+    {getFeedbackContainer}
   >
+    {@render contents()}
+  </DemoActionLink>
+{:else if href}
+  <a class={classes} data-mobile-icon-button="" {href} aria-label={label}>
     {@render contents()}
   </a>
 {:else}
   <button
     type="button"
-    class={[
-      "mobile-icon-button",
-      {
-        "mobile-icon-button-circle": surface === "circle",
-        "mobile-icon-button-square": surface === "square",
-        "mobile-icon-button-on-media": onMedia,
-      },
-      className,
-    ]}
+    class={classes}
+    data-mobile-icon-button=""
     aria-label={label}
     aria-expanded={expanded}
     aria-controls={controls}
@@ -72,7 +75,7 @@
 
 <style>
   @media (max-width: 767.98px) {
-    :is(a, button).mobile-icon-button {
+    :global(:is(a, button).mobile-icon-button[data-mobile-icon-button]) {
       display: grid;
       place-items: center;
       flex: 0 0 var(--karento-touch-target);
@@ -89,11 +92,11 @@
       cursor: pointer;
     }
 
-    :is(a, button).mobile-icon-button:hover {
+    :global(:is(a, button).mobile-icon-button[data-mobile-icon-button]:hover) {
       background: transparent;
     }
 
-    :is(a, button).mobile-icon-button-circle {
+    :global(:is(a, button).mobile-icon-button-circle[data-mobile-icon-button]) {
       border-radius: var(--karento-radius-pill);
     }
 
@@ -105,30 +108,34 @@
       border-radius: var(--karento-radius-pill);
     }
 
-    .mobile-icon-button-circle .mobile-icon-button-surface {
+    :global(.mobile-icon-button-circle) .mobile-icon-button-surface {
       border: 1px solid var(--bs-border-color);
       background: var(--bs-background-card);
       color: var(--bs-neutral-1000);
     }
 
-    .mobile-icon-button-square .mobile-icon-button-surface {
+    :global(.mobile-icon-button-square) .mobile-icon-button-surface {
       border-radius: var(--karento-radius-media);
       background: var(--bs-neutral-100);
       color: var(--bs-neutral-1000);
     }
 
-    :is(a, button).mobile-icon-button-on-media {
+    :global(
+      :is(a, button).mobile-icon-button-on-media[data-mobile-icon-button]
+    ) {
       color: white;
     }
 
-    .mobile-icon-button-on-media .mobile-icon-button-surface {
+    :global(.mobile-icon-button-on-media) .mobile-icon-button-surface {
       border-color: rgb(255 255 255 / 28%);
       background: rgb(255 255 255 / 14%);
       color: inherit;
       backdrop-filter: blur(12px);
     }
 
-    :is(a, button).mobile-icon-button:focus-visible {
+    :global(
+      :is(a, button).mobile-icon-button[data-mobile-icon-button]:focus-visible
+    ) {
       outline: var(--karento-focus-width) solid currentColor !important;
       outline-offset: var(--karento-focus-offset);
     }

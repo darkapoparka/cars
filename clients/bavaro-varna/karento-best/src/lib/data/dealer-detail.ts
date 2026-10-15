@@ -94,7 +94,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Автоцентър Баваро",
       "location": "бул. Цар Освободител 176, срещу бл. 107, Варна, България",
-      "avatar": "/dealer-brand/v2-755624b53a9c0eda/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-d43004f80ce3d580/logo-on-light.webp",
       "mobile": "0883590090",
       "email": "",
       "whatsapp": "",

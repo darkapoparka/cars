@@ -50,7 +50,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Автоцентър Баваро",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-755624b53a9c0eda/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-d43004f80ce3d580/logo-on-light.webp"
     },
     "publishedAt": "2026-10-11T09:00:00.000Z",
     "promoted": true

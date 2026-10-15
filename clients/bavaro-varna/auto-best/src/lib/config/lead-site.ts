@@ -1,5 +1,6 @@
 export type SiteAssetPath = `/${string}`;
 export type HomeBannerVariant = 'motorsport' | 'kerb' | 'circuit' | 'headlights' | 'taillights';
+export type CompanyHeroVariant = 'studio' | 'circuit';
 
 type RouteHeroAsset = 'cars' | 'keys' | 'guide' | 'silver' | 'graphite' | 'portrait' | 'phone' | 'showroom' | 'email';
 type RouteHeroVariant = 'cars' | 'keys' | 'guide' | 'about' | 'contact' | 'sell';
@@ -33,6 +34,7 @@ type LeadSiteConfig = {
   artwork: {
     responsiveImages: Partial<Record<SiteAssetPath, readonly { src: SiteAssetPath; width: number }[]>>;
     desktopHeroScenes: Record<HeroVehiclePair, DesktopHeroArtwork>;
+    companyHero: CompanyHeroVariant;
     contactHero: { desktop: SiteAssetPath; generalMobile: SiteAssetPath; sellMobile: SiteAssetPath; importMobile: SiteAssetPath; support: SiteAssetPath };
     serviceBanners: { sell: SiteAssetPath; import: SiteAssetPath };
     serviceBackground: SiteAssetPath;
@@ -186,6 +188,7 @@ export const leadSite = {
       blog: { kind: 'vehicles', pair: 'blog' },
       contact: { kind: 'image', src: '/assets/images/template/company-contact-studio-v4.webp' }
     },
+    companyHero: 'circuit',
     contactHero: {
       desktop: '/assets/images/lead/day-night-contact-hero-v2.webp',
       generalMobile: mobileContact,

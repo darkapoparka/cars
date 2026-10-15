@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "Автоцентър Баваро",
-  "logo": "/dealer-brand/v2-755624b53a9c0eda/logo-on-light.webp",
+  "logo": "/dealer-brand/v2-d43004f80ce3d580/logo-on-light.webp",
   "phone": "+359883590090",
   "email": null,
   "address": "бул. Цар Освободител 176, срещу бл. 107, Варна, България",
