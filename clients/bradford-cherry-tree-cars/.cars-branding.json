@@ -24,7 +24,8 @@
     {
       "path": "auto-best/src/lib/config/brand.ts",
       "urls": [
-        "/dealer-brand/v2-c4d01a5862dcc9e1/logo-on-light.webp"
+        "/dealer-brand/v2-c4d01a5862dcc9e1/logo-on-light.webp",
+        "/dealer-brand/v2-c4d01a5862dcc9e1/logo-on-dark.webp"
       ]
     },
     {
@@ -1074,7 +1075,13 @@
     "stock.json": "ecdbebb66ae38d7382f6839df9cdd120a11f7ba959fad0ab31eec1bce9d47078",
     "auto-best/src/lib/data/dealer-profile.json": "c04f17a5f6f295f6fd401d07c005d2c22b35a450c2201656f0271ac28491ebe8"
   },
-  "changes": [],
+  "changes": [
+    {
+      "path": "auto-best/src/lib/config/brand.ts",
+      "before": "6c79f58bf77d75d7dcfc4c7e14a7ebcf777323b7cd8fac107d3d6eedbfe21a1e",
+      "after": "66f59e52e2e1e4b228bb939d878f9024cf7939ed5d855d5c7d50ec4313d8faba"
+    }
+  ],
   "derivedProfileLogoBindings": [
     {
       "path": "auto-best/src/lib/data/dealer-profile.json",

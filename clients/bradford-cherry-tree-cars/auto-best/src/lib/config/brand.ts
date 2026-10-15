@@ -34,5 +34,5 @@ export const brand = {
   address: "",
   appointment: "Contact the dealership before visiting.",
   logo: "/dealer-brand/v2-c4d01a5862dcc9e1/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/v2-c4d01a5862dcc9e1/logo-on-light.webp"
+  logoOnDark: "/dealer-brand/v2-c4d01a5862dcc9e1/logo-on-dark.webp"
 } as const satisfies BrandConfig;
