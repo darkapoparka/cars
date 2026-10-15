@@ -262,9 +262,9 @@
     font-size: var(--text-desktop-control);
     font-weight: var(--font-weight-medium);
     line-height: var(--text-desktop-control--line-height);
-    color: var(--brand-foreground);
-    background: var(--brand);
-    border: var(--desktop-border-width) solid var(--brand);
+    color: var(--primary-foreground);
+    background: var(--primary);
+    border: var(--desktop-border-width) solid var(--primary);
     border-radius: var(--radius-pill);
     transition:
       background-color var(--duration-interaction),
@@ -272,8 +272,8 @@
   }
 
   .action:hover {
-    background: var(--lead-site-accent-hover);
-    border-color: var(--lead-site-accent-hover);
+    background: var(--primary-hover);
+    border-color: var(--primary-hover);
   }
 
   .action[data-secondary="true"] {
@@ -289,7 +289,7 @@
 
   .action:focus-visible {
     outline: var(--desktop-focus-width) solid
-      var(--desktop-hero-focus, var(--brand));
+      var(--desktop-hero-focus, var(--primary));
     outline-offset: var(--desktop-focus-offset);
   }
 

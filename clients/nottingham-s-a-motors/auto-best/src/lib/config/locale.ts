@@ -23,13 +23,17 @@ export const dealerLocalizedText = {
     "city": "Nottingham",
     "addressLine": "Nottingham",
     "address": "Nottingham",
-    "appointment": "Contact the dealership before visiting."
+    "appointment": "Contact the dealership before visiting.",
+    "addressShort": "Nottingham",
+    "appointmentShort": "Contact the dealership before visiting."
   },
   "bg": {
     "city": "Nottingham",
     "addressLine": "Nottingham",
     "address": "Nottingham",
-    "appointment": "Свържете се с автокъщата преди посещение."
+    "appointment": "Свържете се с автокъщата преди посещение.",
+    "addressShort": "Nottingham",
+    "appointmentShort": "Свържете се с автокъщата преди посещение."
   }
 } as const;
 

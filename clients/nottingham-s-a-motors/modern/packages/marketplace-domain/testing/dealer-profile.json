@@ -27,9 +27,9 @@
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=S%20A%20Motors%2C%20Nottingham",
     "mapsEmbedUrl": "https://maps.google.com/maps?q=S%20A%20Motors%2C%20Nottingham&z=16&output=embed",
     "accent": "#126D77",
-    "logo": "/dealer-brand/logo.webp",
-    "logoLight": "/dealer-brand/logo.webp",
-    "logoDark": "/dealer-brand/logo.webp",
+    "logo": "/dealer-brand/v2-ddcdd1628ce29cd1/logo-on-light.webp",
+    "logoLight": "/dealer-brand/v2-ddcdd1628ce29cd1/logo-on-light.webp",
+    "logoDark": "/dealer-brand/v2-ddcdd1628ce29cd1/logo-on-dark.webp",
     "socialLinks": {
       "facebook": "",
       "instagram": "",
@@ -942,25 +942,28 @@
     "approvalStatus": "independent_design_proposal_not_dealer_approved",
     "assets": {
       "onLight": {
-        "publicPath": "/dealer-brand/logo.webp",
-        "sha256": "bdebc2914c113b9adb3b93a1a9ddee86c40ceecafa2d4cb148ef58cce5c85fe4",
+        "publicPath": "/dealer-brand/v2-ddcdd1628ce29cd1/logo-on-light.webp",
+        "sha256": "3d56221575fcd2fa73109497bdf06de3f5489aba2f59a39cfb865e4b45e30e66",
         "width": 1024,
         "height": 341,
-        "background": "opaque_white"
+        "background": "opaque_white",
+        "bytes": 110306
       },
       "onDark": {
-        "publicPath": "/dealer-brand/logo.webp",
-        "sha256": "bdebc2914c113b9adb3b93a1a9ddee86c40ceecafa2d4cb148ef58cce5c85fe4",
+        "publicPath": "/dealer-brand/v2-ddcdd1628ce29cd1/logo-on-dark.webp",
+        "sha256": "9b25c4af5bd01c62870dabbc759b40b8093fa566f01fe7e5af212dc3db7ea32e",
         "width": 1024,
         "height": 341,
-        "background": "opaque_white"
+        "background": "opaque_white",
+        "bytes": 34542
       },
       "onAccent": {
-        "publicPath": "/dealer-brand/logo.webp",
-        "sha256": "bdebc2914c113b9adb3b93a1a9ddee86c40ceecafa2d4cb148ef58cce5c85fe4",
+        "publicPath": "/dealer-brand/v2-ddcdd1628ce29cd1/logo-on-accent.webp",
+        "sha256": "9b25c4af5bd01c62870dabbc759b40b8093fa566f01fe7e5af212dc3db7ea32e",
         "width": 1024,
         "height": 341,
-        "background": "opaque_white"
+        "background": "opaque_white",
+        "bytes": 34542
       }
     },
     "icon": {

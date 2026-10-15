@@ -3,32 +3,32 @@
   "dealer": "nottingham-s-a-motors",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "4e184777567849a2c5b4a9e4a3e652252179c29c",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/app",
-    "digest": "fad0067e48d7bd7e1c5177c5e91e2bc5767352e2c16621cb458d18a081f7c541",
-    "tree": "749512ff762c25272d1474225ff653dd4c88f0fe"
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
   },
-  "appDigest": "7dfcc1621e85db88bb08d7d84b19451b069e807991f7908a3f47af911633628e",
+  "appDigest": "accd66c59de4ca46647787d02313a32cb505695018e7a184693581dabd70f851",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "nottingham-s-a-motors",
     "profile": "auto-best/src/lib/data/dealer-profile.json",
-    "profileSha256": "4b71773564d0722884683339de1b0cb53a2d3c6d47d00ba4f3a2dd86e11494f1",
+    "profileSha256": "e47e50670f84b1e7828feec5c8463b524fd1f298961404fd19d95af2f9a9662b",
     "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
     "vehicles": 5,
     "currency": "GBP",
     "observedAt": "2026-10-10",
     "assets": [
       {
-        "source": "auto-best/static/dealer-brand/logo.webp",
-        "output": "public/dealer-app/logo-light-bdebc2914c113b9adb3b.webp",
-        "sha256": "bdebc2914c113b9adb3b93a1a9ddee86c40ceecafa2d4cb148ef58cce5c85fe4",
+        "source": "auto-best/static/dealer-brand/v2-ddcdd1628ce29cd1/logo-on-light.webp",
+        "output": "public/dealer-app/logo-light-3d56221575fcd2fa7310.webp",
+        "sha256": "3d56221575fcd2fa73109497bdf06de3f5489aba2f59a39cfb865e4b45e30e66",
         "role": "logo-light"
       },
       {
-        "source": "auto-best/static/dealer-brand/logo.webp",
-        "output": "public/dealer-app/logo-dark-bdebc2914c113b9adb3b.webp",
-        "sha256": "bdebc2914c113b9adb3b93a1a9ddee86c40ceecafa2d4cb148ef58cce5c85fe4",
+        "source": "auto-best/static/dealer-brand/v2-ddcdd1628ce29cd1/logo-on-dark.webp",
+        "output": "public/dealer-app/logo-dark-9b25c4af5bd01c62870d.webp",
+        "sha256": "9b25c4af5bd01c62870dabbc759b40b8093fa566f01fe7e5af212dc3db7ea32e",
         "role": "logo-dark"
       },
       {
@@ -115,5 +115,5 @@
   },
   "needsDealerQA": true,
   "readyToPublish": false,
-  "refreshedAt": "2026-10-10T21:50:39.839Z"
+  "refreshedAt": "2026-10-15T02:16:59.390Z"
 }
