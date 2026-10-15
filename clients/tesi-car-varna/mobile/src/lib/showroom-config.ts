@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "Теси Кар",
-  "logo": "/registered-branding/onLight.png",
+  "logo": "/dealer-brand/v2-95e36265aeab55aa/logo-on-light.webp",
   "phone": "+359898694330",
   "email": null,
   "address": "бул. „Цар Освободител“, посока Аксаково, последен вляво",

@@ -154,7 +154,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "Теси Кар",
   "location": "бул. „Цар Освободител“, посока Аксаково, последен вляво",
-  "avatar": "/registered-branding/onLight.png",
+  "avatar": "/dealer-brand/v2-95e36265aeab55aa/logo-on-light.webp",
   "mobile": "0898 694 330",
   "email": "",
   "whatsapp": "",

@@ -5,22 +5,22 @@
   "name": "Теси Кар",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/karento-best",
-    "digest": "83056967764a686f3737d74b86c5db51c1385a50184853f50ec4ade80c1dd44f",
-    "tree": "5f6eec8efb2f9e99819f7f0c2f743d18fff7b134"
+    "digest": "be17ef365e3272753df6e50826b139a45bfc32b8fef54ddcb86d977ad16280a9",
+    "tree": "8c5ac869c7fd15e19a80c660343fc64b20a2bad9"
   },
-  "sourceDigest": "d7ce2e05b0c9695dd628df92ddf3b37449c401a65c1eb342c2ab2cb32b437130",
+  "sourceDigest": "320d82d88279768ff19edcd348143bd94bd954ca481b32b65919a845ffaf9a35",
   "inventory": {
     "mode": "illustrative-not-dealer-stock",
     "count": 7,
     "observedAt": ""
   },
   "personalization": {
-    "profileSha256": "87f3a672f8dc05bbb0c988a3d5f406991a631e7490c29abb98ba826f16a7d360",
+    "profileSha256": "3c5766982799f838e3934b939ea47997b2f494530c987b29d849fd72293a26c1",
     "logoPaths": [
-      "/registered-branding/onLight.png",
-      "/registered-branding/onDark.png"
+      "/dealer-brand/v2-95e36265aeab55aa/logo-on-light.webp",
+      "/dealer-brand/v2-95e36265aeab55aa/logo-on-dark.webp"
     ],
     "mediaPaths": [
       "/assets/images/lead/day-night-stock-04.webp",

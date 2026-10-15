@@ -33,6 +33,6 @@ export const brand = {
   addressLine,
   address: "бул. „Цар Освободител“, посока Аксаково, последен вляво",
   appointment: "Понеделник–събота: 09:00–18:00 (по текущите обяви) • Неделя: позвънете; контактната страница не публикува часове",
-  logo: "/registered-branding/onLight.png",
-  logoOnDark: "/registered-branding/onDark.png"
+  logo: "/dealer-brand/v2-95e36265aeab55aa/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-95e36265aeab55aa/logo-on-dark.webp"
 } as const satisfies BrandConfig;

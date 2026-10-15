@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-explicit-local-source-preparation-provenance",
+  "dealer": "tesi-car-varna",
+  "sourceRevision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+  "localSourceProvenance": {
+    "kind": "explicit-local-recovery",
+    "sourceContext": "local dependency injection into the maintained pure preparer; sourceCiContext was not invoked or changed",
+    "localRunId": "local-tesi-car-varna-38710598015",
+    "originalExactSourceRun": 38710598015,
+    "originalHead": "03b7a9f8c3e8238f91eea3a43be92901f9e9982b",
+    "originalRequest": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/final-recovery/failed-only-successor/restart-final-five/held-four-after-north-success/request.json",
+      "sha256": "f90cb5174dbe3cdbca13e9d9c9a93d51643ed7348afbe72fc58e19cc703f007b"
+    },
+    "ciExecution": false,
+    "githubJobSuccessClaim": false,
+    "githubArtifactClaim": false,
+    "actualFailedHistory": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/current-source-failure-116343172283.json",
+      "sha256": "29b5b502d1e9f49e5d750c8ba710a92c38a24de5d5a31f4f18a5cb115ce53d6f"
+    }
+  },
+  "localIoAdaptation": {
+    "loader": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/final-recovery/failed-only-successor/restart-final-five/held-four-after-north-success/local-deduplicated-readonly-git-io-loader.mjs",
+      "sha256": "013eb946e31f6b1614ea5466c1d136646a162dfa26cd31c33d0db96386f8772d"
+    },
+    "originalModule": {
+      "path": "scripts/dealer-updates/pinned-template-source.mjs",
+      "blob": "f7c17ad9edf2ff6ab7667b1d9187fccc963239de",
+      "sha256": "ddebc01d008bf47407ee27756e78d15ddd4932f4361ac1706192fb7c148f04c3"
+    },
+    "adaptedModuleSha256": "1b5b5ecf036b8fa76a1cb28e203e7f03713fd98f56e039acea6f101b70496dff",
+    "before": "      files.set(entry.path, Buffer.from(bytes.subarray(start, end)));",
+    "after": "      const retained = globalThis.carsOrdinaryRamBlobCache?.get(objectId);\n      const body = bytes.subarray(start, end);\n      if (!Buffer.isBuffer(retained) || retained.length !== size || !retained.equals(body) || sha256(retained) !== sha256(body)) throw new Error(`Exact local immutable Git buffer differs: ${entry.path}`);\n      files.set(entry.path, retained);",
+    "onlyLocalGitIoAllocationChanged": true,
+    "initialAllOidBytesVerified": true,
+    "allGitEntryTypeSizeOidBatchAndTruncationChecksUnchanged": true,
+    "allSourceDigestChecksUnchanged": true,
+    "globalBufferUnmodified": true,
+    "originalSourceOidAuditBeforeExport": true
+  },
+  "ciExecution": false,
+  "sourceArtifact": null,
+  "rootAdmission": {
+    "executionContract": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/final-recovery/local-source-publication/execution-contracts/v7.json",
+      "sha256": "cf778922d6639d8973541b8f09cad3c9bb70a59bf58f1f6e6a1851f489e8bfa9"
+    },
+    "approval": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/final-recovery/failed-only-successor/restart-final-five/held-four-after-north-success/root-local-recovery-approval-v7-tesi-car-varna.json",
+      "sha256": "eef3377690aaf699381fea78e36b1bb7c08f845484aa833557166b6b700c91d6"
+    },
+    "policy": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/final-recovery/failed-only-successor/restart-final-five/held-four-after-north-success/local-recovery-admission-proposal-v7.json",
+      "sha256": "901936069d24bddd73e657d4faafc076521502e554438d006dee52768bebc953"
+    },
+    "driver": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/final-recovery/failed-only-successor/restart-final-five/held-four-after-north-success/run-local-source-recovery-v7.mjs",
+      "sha256": "c313ea202f895806dbac7c18b5a052c9a1be2c3ee095d78f47dbdf15a12ae729"
+    }
+  },
+  "actualLocalReceipt": {
+    "file": "C:/Users/radev/AppData/Local/Temp/cars-cf-native-final-polish-20261014/local-source-recovery/corrected/tesi-car-varna/local-recovery-receipt.json",
+    "sha256": "861abe0aba38aed3aba60903833f5ddaf0289250c6a7e1bb03206b1fa81c1b8b"
+  },
+  "preNativeKnownRuntimeFamilies": {
+    "file": "C:/Users/radev/AppData/Local/Temp/cars-cf-native-final-polish-20261014/local-source-recovery/corrected/tesi-car-varna/pre-native-known-runtime-family-check.json",
+    "sha256": "badabe84f0d0b1f84f3bfdd456b8ee97fd825ab2fbe36d50aeafa5f171010806"
+  },
+  "nativeCiAndHostedAcceptanceStillRequired": true
+}

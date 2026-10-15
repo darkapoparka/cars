@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "Теси Кар",
   "locale": "bg-BG",
   "logo": {
-    "light": "/registered-branding/onLight.png",
-    "footer": "/registered-branding/onDark.png",
-    "archivedDark": "/registered-branding/onDark.png",
+    "light": "/dealer-brand/v2-95e36265aeab55aa/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-95e36265aeab55aa/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-95e36265aeab55aa/logo-on-dark.webp",
     "alt": "Теси Кар",
-    "favicon": "/registered-branding/onLight.png",
+    "favicon": "/dealer-brand/v2-95e36265aeab55aa/app-icon.png",
     "monochromeOnDark": false
   },
   "contacts": {
