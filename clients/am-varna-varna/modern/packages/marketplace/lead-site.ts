@@ -111,8 +111,8 @@ export const leadSite: LeadSiteConfig = {
     "tagline": "АВТОМОТОР ВАРНА АД — vehicles and dealer support in Varna."
   }
 },
-  accent: "#30343b",
-  desktopAccent: "#4b5057",
+  accent: "#09090b",
+  desktopAccent: "#09090b",
   desktopInventoryFilterLayout: "quick",
   desktopPreviewIdentity: {
     sourceSlug: "day-night-auto-group",
@@ -144,8 +144,8 @@ export const leadSite: LeadSiteConfig = {
   email: "",
   heroPath: "/lead-hero.jpg",
   locale: "bg-BG",
-  logoPath: "/dealer-brand/v2-d858e68d227bc130/logo-on-light.webp",
-  logoInversePath: "/dealer-brand/v2-d858e68d227bc130/logo-on-dark.webp",
+  logoPath: "/dealer-brand/v2-4235bb07b7b4eb43/logo-on-light.webp",
+  logoInversePath: "/dealer-brand/v2-4235bb07b7b4eb43/logo-on-dark.webp",
   mapsEmbedUrl:
     "https://maps.google.com/maps?q=%D0%90%D0%92%D0%A2%D0%9E%D0%9C%D0%9E%D0%A2%D0%9E%D0%A0%20%D0%92%D0%90%D0%A0%D0%9D%D0%90%20%D0%90%D0%94%2C%20%D0%91%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20277%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F&z=16&output=embed",
   mapsUrl:

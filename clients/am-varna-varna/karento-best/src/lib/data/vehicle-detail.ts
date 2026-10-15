@@ -155,7 +155,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "АВТОМОТОР ВАРНА АД",
   "location": "Бул. Цар Освободител 277, Варна, България",
-  "avatar": "/dealer-brand/v2-d858e68d227bc130/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-4235bb07b7b4eb43/logo-on-light.webp",
   "mobile": "0885735255",
   "email": "",
   "whatsapp": "",

@@ -33,6 +33,6 @@ export const brand = {
   addressLine,
   address: "Бул. Цар Освободител 277, Варна, България",
   appointment: "Понеделник 08:30 - 17:00 ч. Вторник 08:30 - 17:00 ч. Сряда 08:30 - 17:00 ч. Четвъртък 08:30 - 17:00 ч. Петък 08:30 - 17:00 ч. Събота Почивен ден Неделя Почивен ден",
-  logo: "/dealer-brand/v2-d858e68d227bc130/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/v2-d858e68d227bc130/logo-on-dark.webp"
+  logo: "/dealer-brand/v2-4235bb07b7b4eb43/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-4235bb07b7b4eb43/logo-on-dark.webp"
 } as const satisfies BrandConfig;

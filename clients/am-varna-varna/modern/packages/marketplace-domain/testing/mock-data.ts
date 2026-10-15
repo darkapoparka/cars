@@ -50,7 +50,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "АВТОМОТОР ВАРНА АД",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-d858e68d227bc130/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-4235bb07b7b4eb43/logo-on-light.webp"
     },
     "publishedAt": "2026-10-11T09:00:00.000Z",
     "promoted": true
