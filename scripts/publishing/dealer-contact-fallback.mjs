@@ -33,7 +33,7 @@ export function applyOptionalContactFallback(files,manifest){
  return {...receipt,autoBestOptionalContact};
 }
 
-const MODERN_PHONE_BOUNDARIES = Object.freeze({
+export const MODERN_PHONE_BOUNDARIES = Object.freeze({
   "modern/apps/web/app/[locale]/components/dealer-desktop-footer.tsx": {
     "elements": 1,
     "arrays": 0
@@ -115,6 +115,18 @@ const modernSchemaPath='modern/packages/marketplace-domain/site-config.ts';
 const modernSitePath='modern/packages/marketplace/site-config.ts';
 const modernLeadPath='modern/packages/marketplace/lead-site.ts';
 function replaceContactBoundary(source,before,after,name){if(source.split(before).length!==2)throw Error('Modern optional contact boundary changed: '+name);return source.replace(before,()=>after);}
+/** The reviewed UK preservation schema already rejects URL credentials and validates absent phones.
+ * Keep that exact source policy; adapt only the still-required optional street boundary. */
+export function prepareModernOptionalPhoneSchema(schema,{address}={}){
+ const reviewedPolicy=hash(Buffer.from(schema))==='8d91c2fb6450378b0700346e99dddc80c1bc6e2266dc30749afeee8b9fedf4a6';
+ if(!reviewedPolicy)schema=replaceContactBoundary(schema,'.refine((value) => new URL(value).protocol === "https:", "Use HTTPS");','.refine((value) => { try { return new URL(value).protocol === "https:"; } catch { return false; } }, "Use HTTPS");',modernSchemaPath+' HTTPS validation');
+ if(!address)schema=replaceContactBoundary(schema,'address: z.string().trim().min(1).max(300),','address: z.union([z.string().trim().min(1).max(300), z.literal("")]),',modernSchemaPath+' absent address');
+ if(!reviewedPolicy)schema=replaceContactBoundary(schema,'phoneDisplay: z.string().trim().min(1).max(40),','phoneDisplay: z.union([z.string().trim().min(1).max(40), z.literal("")]),',modernSchemaPath+' absent phone label');
+ if(!reviewedPolicy)schema=replaceContactBoundary(schema,'      phoneHref,','      phoneHref: z.union([phoneHref, z.literal("")]),',modernSchemaPath+' absent telephone');
+ if(!reviewedPolicy)schema=replaceContactBoundary(schema,'.superRefine((site, context) => {','.superRefine((site, context) => {\n    if (Boolean(site.contact.phoneHref) !== Boolean(site.contact.phoneDisplay)) context.addIssue({ code: \"custom\", path: [\"contact\", \"phoneHref\"], message: \"A published telephone requires both its label and telephone link\" });',modernSchemaPath+' telephone pair');
+ return {source:schema,policy:reviewedPolicy?'retained-reviewed-safe-optional-phone':'prepared-native-optional-phone'};
+}
+
 /** Guard only reviewed telephone actions; forms and all unrelated artwork stay in place. */
 export function guardModernUnavailablePhoneActions(source,{name,expected,typescript,phoneExpression='leadSite.phoneHref'}){
  if(!typescript?.createSourceFile)throw Error('Modern optional contact requires the installed TypeScript parser');
@@ -157,11 +169,7 @@ export function applyModernOptionalContactFallback(files,manifest,{profile,types
  const origin=new URL(manifest.shareIdentity.publicOrigin),variant=manifest.variants.find(v=>v.key==='modern'),locale=manifest.localization.defaultLocale;
  if(origin.protocol!=='https:'||origin.username||origin.password||origin.pathname!=='/'||origin.search||origin.hash||!variant||!['/variant-2','/variant-3'].includes(variant.base)||!['bg','en'].includes(locale))throw Error('Invalid existing Modern contact route');
  const href=origin.origin+variant.base+'/'+locale+'/contact',updates=new Map();let schema=String(files.get(modernSchemaPath)),site=String(files.get(modernSitePath));
- schema=replaceContactBoundary(schema,'.refine((value) => new URL(value).protocol === "https:", "Use HTTPS");','.refine((value) => { try { return new URL(value).protocol === "https:"; } catch { return false; } }, "Use HTTPS");',modernSchemaPath+' HTTPS validation');
- if(!b.address)schema=replaceContactBoundary(schema,'address: z.string().trim().min(1).max(300),','address: z.union([z.string().trim().min(1).max(300), z.literal("")]),',modernSchemaPath+' absent address');
- schema=replaceContactBoundary(schema,'phoneDisplay: z.string().trim().min(1).max(40),','phoneDisplay: z.union([z.string().trim().min(1).max(40), z.literal("")]),',modernSchemaPath+' absent phone label');
- schema=replaceContactBoundary(schema,'      phoneHref,','      phoneHref: z.union([phoneHref, z.literal("")]),',modernSchemaPath+' absent telephone');
- schema=replaceContactBoundary(schema,'.superRefine((site, context) => {','.superRefine((site, context) => {\n    if (Boolean(site.contact.phoneHref) !== Boolean(site.contact.phoneDisplay)) context.addIssue({ code: \"custom\", path: [\"contact\", \"phoneHref\"], message: \"A published telephone requires both its label and telephone link\" });',modernSchemaPath+' telephone pair');
+ const schemaPreparation=prepareModernOptionalPhoneSchema(schema,{address:b.address});schema=schemaPreparation.source;
  site=replaceContactBoundary(site,'contactUrl: config.contactUrl,','contactUrl: config.contactUrl || '+JSON.stringify(href)+',',modernSitePath+' existing contact route');
  updates.set(modernSchemaPath,Buffer.from(schema));updates.set(modernSitePath,Buffer.from(site));
  let telephoneActionsHidden=0;for(const [name,expected]of Object.entries(MODERN_PHONE_BOUNDARIES)){
@@ -172,5 +180,5 @@ export function applyModernOptionalContactFallback(files,manifest,{profile,types
  const changes=[...updates].map(([name,after])=>({path:name,beforeSha256:hash(files.get(name)),afterSha256:hash(after)}));
  for(const [name,after]of updates)files.set(name,after);
  if(files.get(modernLeadPath)!==lead)throw Error('Modern factual contact source changed');
- return {schemaVersion:1,dealer:manifest.slug,applied:true,kind:'cars-absent-modern-telephone-consumers',href,telephoneActionsHidden,changes,originalDealerConfigSha256:hash(lead),phoneInvented:false,addressInvented:false,existingContactRouteOnly:true};
+ return {schemaVersion:1,dealer:manifest.slug,applied:true,kind:'cars-absent-modern-telephone-consumers',href,telephoneActionsHidden,schemaPolicy:schemaPreparation.policy,changes,originalDealerConfigSha256:hash(lead),phoneInvented:false,addressInvented:false,existingContactRouteOnly:true};
 }

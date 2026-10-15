@@ -29,3 +29,21 @@ test('Modern sourced phones and other markets remain byte-for-byte untouched',()
  for(const business of [{countryCode:'BG'},{countryCode:'GB',phoneDisplay:'+44 12345678',phoneHref:'tel:+4412345678',phoneE164:'+4412345678'}])assert.equal(applyModernOptionalContactFallback(files,{slug:'fixture'},{profile:{business},typescript:ts}).applied,false);
  assert.equal(files.size,1);assert.equal(files.get('sentinel'),before);
 });
+
+import fs from 'node:fs';
+import {MODERN_PHONE_BOUNDARIES,prepareModernOptionalPhoneSchema} from './publishing/dealer-contact-fallback.mjs';
+const reviewedModernPolicy=fs.readFileSync(new URL('./fixtures/modern-reviewed-optional-contact-schema.ts',import.meta.url),'utf8');
+test('reviewed UK schema retains its exact safe URL/absent-phone/pair policy',()=>{
+ const result=prepareModernOptionalPhoneSchema(reviewedModernPolicy,{address:'Birmingham'});
+ assert.equal(result.source,reviewedModernPolicy);assert.equal(result.policy,'retained-reviewed-safe-optional-phone');
+ const absent=prepareModernOptionalPhoneSchema(reviewedModernPolicy,{address:''});
+ assert.equal(absent.source.replace('address: z.union([z.string().trim().min(1).max(300), z.literal("")]),','address: z.string().trim().min(1).max(300),'),reviewedModernPolicy);
+ assert.throws(()=>prepareModernOptionalPhoneSchema(reviewedModernPolicy.replace('!url.username','true'),{address:'Birmingham'}),/HTTPS validation/);
+});
+test('all Modern absent-phone controls prepare against the real preserved schema without changing facts or validation policy',()=>{
+ const manifest={slug:'birmingham-square-one-motors',shareIdentity:{publicOrigin:'https://birmingham-square-one-motors.webpreviews.site'},variants:[{key:'modern',base:'/variant-2'}],localization:{defaultLocale:'en'}},profile={business:{countryCode:'GB',address:'Birmingham',phoneDisplay:'',phoneHref:'',phoneE164:''}};
+ const lead=Buffer.from('export const leadSite = {\n  address: "Birmingham",\n  phoneDisplay: "",\n  phoneHref: "",\n  contactUrl: "",\n};');
+ const files=new Map([['modern/packages/marketplace-domain/site-config.ts',Buffer.from(reviewedModernPolicy)],['modern/packages/marketplace/site-config.ts',Buffer.from('const contact={contactUrl: config.contactUrl,};')],['modern/packages/marketplace/lead-site.ts',lead],['business-facts.json',Buffer.from('untouched facts')]]);
+ for(const[name,expected]of Object.entries(MODERN_PHONE_BOUNDARIES)){const expr=name.includes('/lease/')?'phoneHref':'leadSite.phoneHref';files.set(name,Buffer.from('const C=()=> <section>'+('<a href={'+expr+'}>Call</a>').repeat(expected.elements)+'<p>Form remains</p></section>; const actions=['+Array.from({length:expected.arrays},()=>'{href:'+expr+',label:"Call"}').join(',')+'];'));}
+ const result=applyModernOptionalContactFallback(files,manifest,{profile,typescript:ts});assert.equal(result.schemaPolicy,'retained-reviewed-safe-optional-phone');assert.equal(String(files.get('modern/packages/marketplace-domain/site-config.ts')),reviewedModernPolicy);assert.equal(files.get('modern/packages/marketplace/lead-site.ts'),lead);assert.equal(String(files.get('business-facts.json')),'untouched facts');assert.equal(result.phoneInvented,false);assert(result.telephoneActionsHidden>0);
+});
