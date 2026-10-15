@@ -6,7 +6,7 @@
   "scope": "existing-dealer-pilot",
   "sourceCommit": "bb173c33d7b640502ad2e4bf27546748c12858b8",
   "reviewed": true,
-  "reviewedAt": "2026-10-14T23:56:34.182Z",
+  "reviewedAt": "2026-10-15T08:42:27.206Z",
   "qualificationOnly": true,
   "approved": false,
   "nativeApproval": false,
@@ -22,5 +22,31 @@
   "sourceReview": {
     "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-review.json",
     "sha256": "27c6ce5dd17ee6e1b9f6a5b059a95d5e1dbe4200f61264fc50addeb7af89d984"
+  },
+  "dealerSourceRepair": {
+    "kind": "explicit-english-editorial-catalog",
+    "parentContextSha256": "6e6d7dbc89cb4518355df6880cda5d7a80425b5414123d2f6dbcd062d176c939",
+    "baseSourceCommit": "139e7e678d5649af3de43b504e338fbf35b285e0",
+    "baseSourceTree": "4e5cbea3dae9a6109dae1bb5ddb49af1cb7aa78e",
+    "path": "import/src/lib/content/extra-localized.ts",
+    "beforeBlob": "ce60ba5e595d21f69aa45d4e00a0fe672965eb11",
+    "afterBlob": "1b151b572aacf52de60808f9b6dbe347aeadcf64",
+    "proof": {
+      "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/editorial-runtime-repair-20261015/europa-varna/focused-proof.json",
+      "sha256": "7a83ad4ce3dcbaa3c9f9b03269b6b084c747a17a237a3a6f9b25aa73cebdbaa5"
+    },
+    "evidenceReuse": "Original immutable six-template QA and source preparation remain provenance; focused exact-source localization proof covers this new dealer edit. No new CI, build, native or hosted success is asserted.",
+    "companionPatches": [
+      {
+        "path": "modern/packages/marketplace/lead-site.ts",
+        "beforeBlob": "bfff54c1178f4a0f022b481264ff8826a7a79c56",
+        "afterBlob": "51d2e519430ba53e1cc1fe2e5e24b76ae1ac4d0a",
+        "sha256": "9a0f558a57670ecda550f3e3762c7250453abc9f339529dc934cf148d0a16b61",
+        "proof": {
+          "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/editorial-runtime-repair-20261015/europa-varna/focused-proof.json",
+          "sha256": "7a83ad4ce3dcbaa3c9f9b03269b6b084c747a17a237a3a6f9b25aa73cebdbaa5"
+        }
+      }
+    ]
   }
 }

@@ -1,0 +1,170 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-focused-exact-source-editorial-repair-proof",
+  "dealer": "europa-varna",
+  "baseSourceCommit": "139e7e678d5649af3de43b504e338fbf35b285e0",
+  "baseSourceTree": "4e5cbea3dae9a6109dae1bb5ddb49af1cb7aa78e",
+  "sourceModuleProof": {
+    "dealer": "europa-varna",
+    "sourceCommit": "139e7e678d5649af3de43b504e338fbf35b285e0",
+    "sourceTree": "4e5cbea3dae9a6109dae1bb5ddb49af1cb7aa78e",
+    "manifest": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/run-38689980731-attempt-1/europa-varna-proposal-manifest.json",
+      "sha256": "47f132bfce66a553ea897af5472f48561850ec13e60c061956e604d295451d28"
+    },
+    "scope": "clients/europa-varna/import/src/lib/content/extra-localized.ts",
+    "baseBlob": "ce60ba5e595d21f69aa45d4e00a0fe672965eb11",
+    "candidateBlob": "1b151b572aacf52de60808f9b6dbe347aeadcf64",
+    "candidate": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/current-eleven-import-editorial/candidates/europa-varna/extra-localized.ts",
+      "sha256": "0ccde0f392edcd638eca0d724d52a952b71f5dd0f7f8c693ee26f83b2800e5df"
+    },
+    "patch": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/current-eleven-import-editorial/candidates/europa-varna/explicit-editorial.patch",
+      "sha256": "7f66343f8166a6494965b5897991f737c2648f62cd2db080f55dcab5ded0f744"
+    },
+    "addedEntries": [
+      {
+        "bg": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата. Illustrative template vehicles, not this dealership’s stock.",
+        "en": "Illustrative template vehicles, not this dealership’s stock."
+      },
+      {
+        "bg": "Независим демонстрационен преглед; формите не изпращат съобщения и не създават резервации. Independent demonstration: forms do not send enquiries or create reservations.",
+        "en": "Independent demonstration: forms do not send enquiries or create reservations."
+      }
+    ],
+    "beforeError": "Missing English editorial catalog entry: Демонстрационни автомобили от шаблона, а не наличност на автокъщата. Illustrative template vehicles, not this dealership’s stock.",
+    "intermediateError": "Missing English editorial catalog entry: Независим демонстрационен преглед; формите не изпращат съобщения и не създават резервации. Independent demonstration: forms do not send enquiries or create reservations.",
+    "after": [
+      {
+        "slug": "confirm-current-availability",
+        "title": "How to confirm current availability at ЕВРОПА",
+        "category": "Dealer information",
+        "date": "2026-01-01",
+        "image": "/assets/daynight/codex-generated-v2/blog/blog-cover-import-check-v2.webp",
+        "excerpt": "Illustrative template vehicles, not this dealership’s stock.",
+        "content": [
+          "Contact the dealership on 0887 600 565 and identify the exact vehicle before visiting.",
+          "Independent demonstration: forms do not send enquiries or create reservations."
+        ]
+      }
+    ],
+    "packagingContactAdapter": {
+      "schemaVersion": 1,
+      "dealer": "europa-varna",
+      "applied": true,
+      "path": "import/src/lib/config/site.ts",
+      "href": "https://cars-europa-varna.darkapoparka1.workers.dev/variant-3/bg/contact",
+      "beforeSha256": "13c22a45540715ccc6a1891423b774a456a285c820177f4e3cbc87bb3cd113b1",
+      "afterSha256": "4a7b2e93026a4a90085b209ef370c0787d4d24086752b8ac0c2c6c088394475e",
+      "originalDealerConfigSha256": "68f31a854dced138dd077e05fa0b95d96a3e66c595efd8d32dfa31ab703330f9",
+      "emailInvented": false,
+      "mode": "Existing same-origin contact page; no external enquiry submitted"
+    },
+    "checks": {
+      "exactRetainedSource": true,
+      "beforeFailureReproduced": true,
+      "actualDisclosureFailureReproduced": true,
+      "afterEnglishPostsPassed": true,
+      "bgBehaviorUnchanged": true,
+      "dateSlugAndImageUnchanged": true,
+      "allExistingCatalogEntriesUnchanged": true,
+      "unknownEditorialStillThrows": true,
+      "onlyActualEmittedCatalogEntriesAdded": true,
+      "onlyCatalogPrefixChanged": true
+    },
+    "modulesRead": [
+      {
+        "path": "import/src/lib/content/localized.ts",
+        "blob": "60a5db1c0254234af52c44ec0c77696e0cfeab7d"
+      },
+      {
+        "path": "import/src/lib/content/extra-localized.ts",
+        "blob": "ce60ba5e595d21f69aa45d4e00a0fe672965eb11"
+      },
+      {
+        "path": "import/src/lib/config/site.ts",
+        "blob": "d8ccb2e922f23a4223bad5c590fd1a61cd234c17"
+      },
+      {
+        "path": "import/src/lib/config/dealer.ts",
+        "blob": "2f16f9cc3e6f352c06ebd5d51f043e8f03c17c13"
+      },
+      {
+        "path": "import/src/lib/config/cars-locale.ts",
+        "blob": "4b996ec70ede301a3372bdaf626f1d12303383cd"
+      },
+      {
+        "path": "import/src/lib/data/blog.ts",
+        "blob": "6021a5263fac10fef6d2c344e4c0498adc347e76"
+      }
+    ]
+  },
+  "originalProof": {
+    "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/current-eleven-import-editorial/candidates/eleven-editorial-repair-proof.json",
+    "sha256": "10f723c352c11ee952437627ffbe79af81d26105d43dd3219ea3c837d86d4f4e"
+  },
+  "modernLogoAliasProof": {
+    "dealer": "europa-varna",
+    "sourceCommit": "139e7e678d5649af3de43b504e338fbf35b285e0",
+    "sourceTree": "4e5cbea3dae9a6109dae1bb5ddb49af1cb7aa78e",
+    "scope": "modern/packages/marketplace/lead-site.ts",
+    "baseBlob": "bfff54c1178f4a0f022b481264ff8826a7a79c56",
+    "baseSha256": "d6dce8dffd0557b613ad2ea854c84042d7fac047760f6f8da9abbef21897cd61",
+    "selectedRasterBindings": {
+      "logoOnLight": {
+        "path": "/dealer-brand/v2-157161b8b9b6ab30/logo-on-light.webp",
+        "sourcePath": "modern/apps/web/public/dealer-brand/v2-157161b8b9b6ab30/logo-on-light.webp",
+        "blob": "373a274c15e4462eaef3bba52330de94319d4d60"
+      },
+      "logoOnDark": {
+        "path": "/dealer-brand/v2-157161b8b9b6ab30/logo-on-dark.webp",
+        "sourcePath": "modern/apps/web/public/dealer-brand/v2-157161b8b9b6ab30/logo-on-dark.webp",
+        "blob": "04cea63e76da17898daae9fc7683e35f6f613e7a"
+      },
+      "logoOnAccent": {
+        "path": "/dealer-brand/v2-157161b8b9b6ab30/logo-on-accent.webp",
+        "sourcePath": "modern/apps/web/public/dealer-brand/v2-157161b8b9b6ab30/logo-on-accent.webp",
+        "blob": "04cea63e76da17898daae9fc7683e35f6f613e7a"
+      }
+    },
+    "values": {
+      "logoOnLight": "/dealer-brand/v2-157161b8b9b6ab30/logo-on-light.webp",
+      "logoOnDark": "/dealer-brand/v2-157161b8b9b6ab30/logo-on-dark.webp",
+      "logoOnAccent": "/dealer-brand/v2-157161b8b9b6ab30/logo-on-dark.webp"
+    },
+    "companionPatches": [
+      {
+        "path": "modern/packages/marketplace/lead-site.ts",
+        "baseBlob": "bfff54c1178f4a0f022b481264ff8826a7a79c56",
+        "candidateFile": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/native13-modern-runtime/europa-varna-lead-site.ts",
+        "candidateSha256": "9a0f558a57670ecda550f3e3762c7250453abc9f339529dc934cf148d0a16b61",
+        "candidateBlob": "51d2e519430ba53e1cc1fe2e5e24b76ae1ac4d0a",
+        "bytes": 6417,
+        "encoding": "utf8"
+      }
+    ],
+    "actualProviderException": null,
+    "unbuiltSourceRiskOnly": true,
+    "checks": {
+      "allThreeAliasesRestored": true,
+      "interfaceAndInitializerBothUpdated": true,
+      "allExistingBytesOtherwiseIdentical": true,
+      "allFactsAndExistingLogoPathsUnchanged": true,
+      "selectedLightDarkAccentBlobsPresent": true,
+      "accentPreservesCurrentSelectedDarkPixels": true,
+      "allAliasUrlCallsPassActualCompiledPaths": true,
+      "originalUndefinedCallReproduced": true,
+      "typescriptSyntax": true,
+      "layoutAndOtherConsumersUnchanged": true
+    },
+    "sourceCopies": 0
+  },
+  "modernOriginalProof": {
+    "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/native13-modern-runtime/eight-modern-alias-repair-proof.json",
+    "sha256": "e6bb81ee497e21000b99317e0833ef7af4f10a1170d213cf1918670301efd9b6"
+  },
+  "compiled": false,
+  "newCiRun": null,
+  "providerWrites": 0
+}
