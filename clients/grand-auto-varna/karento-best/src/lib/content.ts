@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "ГРАНД АУТО ВАРНА",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-1f38653bdc492066/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-1f38653bdc492066/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-1f38653bdc492066/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-5fd3f7d4ac9e408d/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-5fd3f7d4ac9e408d/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-5fd3f7d4ac9e408d/logo-on-dark.webp",
     "alt": "ГРАНД АУТО ВАРНА",
-    "favicon": "/dealer-brand/v2-1f38653bdc492066/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-5fd3f7d4ac9e408d/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

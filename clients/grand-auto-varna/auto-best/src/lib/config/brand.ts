@@ -33,6 +33,6 @@ export const brand = {
   addressLine,
   address: "бул. Цар Освободител 289, до Макао посока Аксаково, Варна, България",
   appointment: "Потвърдете работното време директно с автокъщата.",
-  logo: "/dealer-brand/v2-1f38653bdc492066/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/v2-1f38653bdc492066/logo-on-dark.webp"
+  logo: "/dealer-brand/v2-5fd3f7d4ac9e408d/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-5fd3f7d4ac9e408d/logo-on-dark.webp"
 } as const satisfies BrandConfig;

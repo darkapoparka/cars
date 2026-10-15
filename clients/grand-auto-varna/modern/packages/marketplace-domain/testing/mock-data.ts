@@ -50,7 +50,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "ГРАНД АУТО ВАРНА",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-1f38653bdc492066/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-5fd3f7d4ac9e408d/logo-on-light.webp"
     },
     "publishedAt": "2026-10-11T09:00:00.000Z",
     "promoted": true

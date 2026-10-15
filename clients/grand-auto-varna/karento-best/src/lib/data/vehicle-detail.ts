@@ -155,7 +155,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "ГРАНД АУТО ВАРНА",
   "location": "бул. Цар Освободител 289, до Макао посока Аксаково, Варна, България",
-  "avatar": "/dealer-brand/v2-1f38653bdc492066/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-5fd3f7d4ac9e408d/logo-on-light.webp",
   "mobile": "0889811120",
   "email": "",
   "whatsapp": "",

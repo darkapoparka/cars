@@ -101,19 +101,19 @@
     padding-inline: calc(var(--spacing) * 6.5);
     font-size: calc(var(--spacing) * 3.75);
     font-weight: var(--font-weight-medium);
-    color: var(--brand-foreground);
-    background: var(--brand);
+    color: var(--primary-foreground);
+    background: var(--primary);
     border: 0;
     border-radius: calc(var(--spacing) * 3);
     box-shadow: none;
   }
   .desktopSearch .submit:hover {
-    color: var(--brand-hover-foreground);
-    background: var(--lead-site-accent-hover);
+    color: var(--primary-hover-foreground);
+    background: var(--primary-hover);
   }
   .desktopSearch .submit:active {
-    color: var(--brand-active-foreground);
-    background: var(--lead-site-accent-active);
+    color: var(--primary-active-foreground);
+    background: var(--primary-active);
   }
   .footer {
     display: flex;
@@ -249,11 +249,11 @@
   .desktopSearch .categoryPill[aria-pressed="true"]:hover {
     background: var(
       --desktop-hero-type-selected-hover-background,
-      var(--lead-site-accent-hover)
+      var(--primary-hover)
     );
     border-color: var(
       --desktop-hero-type-selected-hover-background,
-      var(--lead-site-accent-hover)
+      var(--primary-hover)
     );
   }
   .desktopSearch[data-surface="hero"][data-search-context="inventory"] .form {
