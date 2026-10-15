@@ -12,7 +12,7 @@
     "scope": "existing-dealer-pilot",
     "sourceCommit": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "reviewed": true,
-    "reviewedAt": "2026-10-14T23:58:34.754Z",
+    "reviewedAt": "2026-10-15T03:39:09.370Z",
     "qualificationOnly": true,
     "approved": false,
     "nativeApproval": false,
@@ -28,9 +28,23 @@
     "sourceReview": {
       "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-review.json",
       "sha256": "27c6ce5dd17ee6e1b9f6a5b059a95d5e1dbe4200f61264fc50addeb7af89d984"
+    },
+    "dealerSourceRepair": {
+      "kind": "explicit-english-editorial-catalog",
+      "parentContextSha256": "e38395a040ea732f97866113fa56aed217bfaeff374a171486b4c5e387c04ca4",
+      "baseSourceCommit": "62fbde43dbe09787a1116132bf4ff9dd1f424671",
+      "baseSourceTree": "495b1e820a28b4dc564d8cfc21f7fc2a99e67d54",
+      "path": "import/src/lib/content/extra-localized.ts",
+      "beforeBlob": "edd071ad0cc381958f43b0d2b3eb7f9717bbe91c",
+      "afterBlob": "9ebe314550ad20e38a05c33941a51b1e9af38ab8",
+      "proof": {
+        "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/editorial-runtime-repair-20261015/kg-team-auto/focused-proof.json",
+        "sha256": "a1ba259c7ecbdcb64acab76f915079420f2656de8333f72220f6901f53269795"
+      },
+      "evidenceReuse": "Original immutable six-template QA and source preparation remain provenance; focused exact-source localization proof covers this new dealer edit. No new CI, build, native or hosted success is asserted."
     }
   },
-  "contextDigest": "8f2dcd8391716273172e43e9b8104724d2db79c4f0a7772add9621759f3ef728",
+  "contextDigest": "d9fb9d2cd18ccde711fec460265c1d7d4953b909a75b226d47277b4b6cf7133d",
   "releases": {
     "auto-best": {
       "status": "qualification",
@@ -1708,8 +1722,8 @@
             "path": "src/lib/content/extra-localized.ts",
             "export": "extraEnglish"
           },
-          "keys": 93,
-          "contentDigest": "6dff29a69418e6203dcc132caf1cb8f5290ead3f0311d875f86a875e428dd24e"
+          "keys": 94,
+          "contentDigest": "34150199154a1e18566ff8e357e399f1e10f7c841d35b935046b7a42a25bf8bc"
         }
       ],
       "declaredCatalogParityPassed": true,
@@ -1717,7 +1731,7 @@
     }
   },
   "input": {
-    "digest": "cc4858fe27561448972d5ff85a7f990962d9309af3d740c057a8700fa1b581b8",
+    "digest": "7850667788c5a4d5ec561316ef694f481a522d7a4ec4a7fede74ddd2ce4fdfc7",
     "files": 9220
   },
   "nativeApproval": false,

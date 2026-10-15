@@ -1,4 +1,5 @@
 export const extraEnglish = {
+  "Датирани примерни обяви, не потвърдена наличност. Проверете цена, състояние и местоположение при продавача.": "Dated sample listings, not confirmed stock. Check the price, condition and location with the seller.",
   "Най-желаната кола в България | Lamborghini Urus": "The most sought-after car in Bulgaria | Lamborghini Urus",
   "Продадох най-новата Панамера": "I sold the latest Panamera",
   "Продадох най-скъпия Брабус в България": "I sold the most expensive Brabus in Bulgaria",
