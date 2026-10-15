@@ -155,7 +155,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "Garage24",
   "location": "р-н Владислав Варненчик, Варна, България",
-  "avatar": "/dealer-brand/v2-cdc0f7a4b0714d7c/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-0f06ad41199ba549/logo-on-light.webp",
   "mobile": "+359885580070",
   "email": "",
   "whatsapp": "",

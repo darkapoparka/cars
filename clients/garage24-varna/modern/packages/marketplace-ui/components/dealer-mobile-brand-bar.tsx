@@ -31,37 +31,25 @@ function DealerMobileWordmark({
       />
     );
   }
+  // Tone is the painted logo surface, not the layout-only "clean" flag.
+  // Dark chrome and its black logo badge use the committed inverse raster.
+  const onDarkSurface =
+    wordmarkTone === "light" || (wordmarkTone === "original" && !clean);
+  const logoSrc = onDarkSurface
+    ? (leadSite.logoInversePath ?? leadSite.logoPath)
+    : leadSite.logoPath;
+
   return (
-    <span className="relative block aspect-[1780/512] w-[144px] max-w-[48vw]">
+    <span className="relative block h-10 w-[176px] max-w-[48vw]">
       <Image
         alt={leadSite.name}
         className="h-full w-full object-contain"
         height={512}
         priority
-        sizes="(max-width: 1023px) 144px, 0px"
-        src={leadSite.logoPath}
-        style={
-          wordmarkTone === "original"
-            ? undefined
-            : { clipPath: "inset(0 68% 0 0)" }
-        }
+        sizes="(max-width: 1023px) 176px, 0px"
+        src={logoSrc}
         width={1780}
       />
-      {wordmarkTone === "original" ? null : (
-        <Image
-          alt=""
-          aria-hidden="true"
-          className={cn(
-            "pointer-events-none absolute inset-0 h-full w-full object-contain [clip-path:inset(0_0_0_32%)]",
-            wordmarkTone === "light" ? "brightness-0 invert" : "brightness-0"
-          )}
-          height={512}
-          priority
-          sizes="(max-width: 1023px) 144px, 0px"
-          src={leadSite.logoPath}
-          width={1780}
-        />
-      )}
     </span>
   );
 }

@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "Garage24",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-cdc0f7a4b0714d7c/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-cdc0f7a4b0714d7c/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-cdc0f7a4b0714d7c/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-0f06ad41199ba549/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-0f06ad41199ba549/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-0f06ad41199ba549/logo-on-dark.webp",
     "alt": "Garage24",
-    "favicon": "/dealer-brand/v2-cdc0f7a4b0714d7c/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-0f06ad41199ba549/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

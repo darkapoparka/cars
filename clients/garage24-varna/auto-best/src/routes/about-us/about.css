@@ -45,7 +45,7 @@
 
 @media (min-width: 992px) {
   .dn-app-shell .dn-about-hero .dn-about-button { display: inline-flex; }
-  .dn-about-process.dn-section { padding: 56px 0 32px; background: var(--dn-surface-canvas); }
+  .dn-about-process.dn-section { padding: var(--dn-space-8) 0 32px; background: var(--dn-surface-canvas); }
   .dn-about-process__panel { padding: var(--dn-space-8); border-radius: var(--dn-radius-lg); background: var(--dn-surface-raised); }
   .dn-about-process .dn-about-section-heading { max-width: 760px; text-align: center; }
   .dn-about-process .dn-about-section-heading h2 { font-size: var(--dn-text-section-compact); }

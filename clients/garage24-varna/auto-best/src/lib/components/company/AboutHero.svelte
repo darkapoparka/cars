@@ -6,31 +6,32 @@
   import { resolve } from '$app/paths';
   import { brand } from '$config/brand';
   import { leadSite } from '$config/lead-site';
+  import { page } from '$app/state';
+  import { resolveCompanyHero } from '$lib/ui/company-hero';
   import Icon from '$components/ui/Icon.svelte';
   import DesktopHeroScene from '$components/ui/DesktopHeroScene.svelte';
   import HeroLocation from '$components/ui/HeroLocation.svelte';
   import DesktopSocialLinks from './DesktopSocialLinks.svelte';
+  const studioHero = $derived(resolveCompanyHero(page.url.searchParams) === 'studio');
 </script>
 
 <section class="dn-about-hero dn-information-hero dn-route-hero dn-route-hero--studio dn-route-hero--campaign dn-route-hero--company" aria-labelledby="about-title">
-  <DesktopHeroScene scene="about" />
-  <picture class="dn-about-hero__showroom" aria-hidden="true">
-    <source media="(max-width: 991px)" srcset={leadSite.artwork.routeHero.colored.showroom} />
-    <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="" width="1537" height="1023" fetchpriority="high" decoding="async" />
-  </picture>
+  {#if studioHero}
+    <DesktopHeroScene scene="about" />
+    <picture class="dn-about-hero__showroom" aria-hidden="true">
+      <source media="(max-width: 991px)" srcset={leadSite.artwork.routeHero.colored.showroom} />
+      <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="" width="1537" height="1023" fetchpriority="high" decoding="async" />
+    </picture>
+  {/if}
   <div class="container dn-about-hero__content dn-route-hero__layout">
     <div class="dn-about-hero__copy dn-route-hero__copy">
-      <span class="dn-company-hero__eyebrow">{i18n.t("m_b4b580a9ad8c")}</span>
-      <h1 id="about-title">
-        <span class="dn-company-hero__title-line">{i18n.t('about.hero.intro')}</span>
-        <span class="dn-company-hero__title-line">{brand.name}</span>
-      </h1>
-      <HeroLocation appearance="subtitle" />
+      <h1 id="about-title">{i18n.t("m_b4b580a9ad8c")}</h1>
     </div>
     <a class="dn-about-button dn-about-button--primary dn-route-hero__control" href={i18n.href(resolve('/cars'))}>
       <span>{i18n.t("m_9304497d3f4b")}</span>
       <Icon name="arrow-right" size={18} strokeWidth={1.8} />
     </a>
+    <HeroLocation appearance="subtitle" />
     <DesktopSocialLinks hero onDark />
   </div>
 </section>

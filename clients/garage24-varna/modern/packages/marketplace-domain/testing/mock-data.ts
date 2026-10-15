@@ -50,7 +50,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Garage24",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-cdc0f7a4b0714d7c/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-0f06ad41199ba549/logo-on-light.webp"
     },
     "publishedAt": "2026-10-11T09:00:00.000Z",
     "promoted": true

@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "Garage24",
-  "logo": "/dealer-brand/v2-cdc0f7a4b0714d7c/logo-on-light.webp",
+  "logo": "/dealer-brand/v2-0f06ad41199ba549/logo-on-light.webp",
   "phone": "+359885580070",
   "email": null,
   "address": "р-н Владислав Варненчик, Варна, България",

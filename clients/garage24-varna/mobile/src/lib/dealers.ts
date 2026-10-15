@@ -21,7 +21,7 @@ export const capturedDealers: Record<string, CapturedDealer> = {
     "referrals": "",
     "descriptionAccuracy": "",
     "highlights": [],
-    "logo": "/dealer-brand/v2-cdc0f7a4b0714d7c/logo-on-light.webp",
+    "logo": "/dealer-brand/v2-0f06ad41199ba549/logo-on-light.webp",
     "logoWidth": 128
   }
 };

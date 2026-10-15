@@ -2,16 +2,16 @@
   "schemaVersion": 1,
   "dealer": "garage24-varna",
   "kind": "personalized-source-candidate-not-an-approved-release",
-  "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
-  "candidateSourceDigest": "647dc14519ae80e0d8003fa335908cb459ce57c8f0fa73900a07166d6ad85f0a",
+  "sourceRevision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+  "candidateSourceDigest": "695a001b5027259d7b0d03011cc3228c14564772d7baddb57438c5e801f02200",
   "qualificationContextPath": ".client/native-qualification-context.json",
-  "qualificationContextSha256": "2acb47fbedb2a353197835abd2a0fdc2740ff7460a0e8716fcad8c5bbc3a8466",
+  "qualificationContextSha256": "e885506d7c6e7db622ee5e31d3543563e1f5d65fef1e16bb2820aa9ad992f374",
   "qualificationLockPath": ".client/native-qualification-lock.json",
-  "qualificationLockSha256": "c28d29acdf39709d38737a972eeb2a1d000cfb1cd96de587c38effd764386ac1",
+  "qualificationLockSha256": "04633129df9e75d6cd62deeac9125b279957789d75f57cdb0b243ef61bfc3e7e",
   "sourceDeltaReview": {
-    "reference": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
-    "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975",
-    "reviewedAt": "2026-10-11T21:04:02.173Z"
+    "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
+    "sha256": "43cb6876e815a2a6b866f1dadd304236de4ae58c05fe65c2ab62a23506ee7ce9",
+    "reviewedAt": "2026-10-14T23:55:37.398Z"
   },
   "nativeApproval": false,
   "hostedApproval": false
