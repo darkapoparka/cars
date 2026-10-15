@@ -5,19 +5,19 @@
   "name": "СЪНИ",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/karento-best",
-    "digest": "83056967764a686f3737d74b86c5db51c1385a50184853f50ec4ade80c1dd44f",
-    "tree": "5f6eec8efb2f9e99819f7f0c2f743d18fff7b134"
+    "digest": "be17ef365e3272753df6e50826b139a45bfc32b8fef54ddcb86d977ad16280a9",
+    "tree": "8c5ac869c7fd15e19a80c660343fc64b20a2bad9"
   },
-  "sourceDigest": "887d461e20903577829c24d62871a8408c7095f334bcb8de9175993f6abb3dcf",
+  "sourceDigest": "f7091dc9294128abfb4f0662a1b13e39624456c14642225fca4c6e70c0a40c34",
   "inventory": {
     "mode": "illustrative-not-dealer-stock",
     "count": 7,
     "observedAt": ""
   },
   "personalization": {
-    "profileSha256": "831c273929226643e9172984220888762aef82f5e4d3c34b6a7cc82fb94f2c5e",
+    "profileSha256": "31d805cd180dbab2c5418453367e269a24088a98951ca5a268a951ea66d91b09",
     "logoPaths": [
       "/registered-branding/onLight.png",
       "/registered-branding/onDark.png"
