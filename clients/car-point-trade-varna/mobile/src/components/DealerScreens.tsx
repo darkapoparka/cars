@@ -1,4 +1,5 @@
 'use client';
+import { formatMobileMileage } from '../lib/mobile-mileage';
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -127,7 +128,7 @@ export function CompareScreen() {
   const rows: [string, (v: Vehicle) => string][] = [
     ['Price', (v) => money(v.price)],
     ['First registration', (v) => v.registration],
-    ['Mileage', (v) => number(v.mileage) + ' km'],
+    ['Mileage', (v) => formatMobileMileage(v)],
     ['Fuel', (v) => v.fuel],
     ['Power', (v) => v.power > 0 ? v.power + ' hp' : 'Not published'],
     ['Transmission', (v) => v.transmission],

@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "CAR POINT TRADE LTD",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-023b7b5db6ae9faf/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-023b7b5db6ae9faf/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-023b7b5db6ae9faf/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-de735d372fa7af4a/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-de735d372fa7af4a/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-de735d372fa7af4a/logo-on-dark.webp",
     "alt": "CAR POINT TRADE LTD",
-    "favicon": "/dealer-brand/app-icon.png",
+    "favicon": "/dealer-brand/v2-de735d372fa7af4a/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

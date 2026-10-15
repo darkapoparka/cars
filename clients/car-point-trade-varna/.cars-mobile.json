@@ -5,12 +5,12 @@
   "name": "CAR POINT TRADE LTD",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "8a97176e3adfbd95dce69b3096abc84e3eecd9c8",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/mobile",
-    "tree": "9a4db757e788ee236712b8eac25956a6a8a61d0b",
-    "digest": "cc126a7c38634c7601ef8c617411d6938d7c9b6efc7b319e87c2c6efc99d8b6d"
+    "digest": "f5a3e541a7c648a4c2899ad3893e22a3806027a9f66d95fa4e8c74b2226635b6",
+    "tree": "792bfdd1d8eb22aabd90c7e3a0c0779a6c1c36f3"
   },
-  "sourceDigest": "8f9afbff6aa0cd13a5212b8db9666f55c5bc066f231b46b55a67af17235b1262",
+  "sourceDigest": "8e7090f4aa0f8b933dfb76f1d70cd9445a46bc1b05317e567df6ba5e326ef9a2",
   "inventory": {
     "mode": "dated-listing-snapshot",
     "count": 8,
@@ -19,8 +19,8 @@
   "personalization": {
     "profileSha256": "51359c8ddef19d962af936d0095d2ba4d8fedd9335bc70b2c575b0b0026bb355",
     "logoPaths": [
-      "/dealer-brand/v2-023b7b5db6ae9faf/logo-on-light.webp",
-      "/dealer-brand/v2-023b7b5db6ae9faf/logo-on-dark.webp"
+      "/dealer-brand/logo-on-light.webp",
+      "/dealer-brand/logo-on-dark.webp"
     ],
     "mediaPaths": [
       "/assets/vehicles/11791184773376059/1.webp",
@@ -68,13 +68,15 @@
       "mobile/src/components/DealerScreens.tsx",
       "mobile/src/components/VehicleCard.tsx",
       "mobile/src/components/ShowroomVehicleCard.tsx",
-      "mobile/src/components/VehicleSections.tsx"
+      "mobile/src/components/VehicleSections.tsx",
+      "mobile/src/lib/mobile-mileage.ts",
+      "mobile/src/lib/types.ts",
+      "mobile/src/components/DesktopVehicleSummary.tsx",
+      "mobile/src/components/NativeCarPark.tsx",
+      "mobile/src/components/ShowroomFilterSheet.tsx",
+      "mobile/src/lib/vehicle-copy.ts"
     ]
   },
   "needsDealerQA": true,
-  "readyToPublish": false,
-  "branding": {
-    "packId": "023b7b5db6ae9faf",
-    "previousSourceDigest": "daaa6090c2e0263b009a9af85ea6d6ecd8fec27d12c94aaa33ce8e0b1d2b80e1"
-  }
+  "readyToPublish": false
 }

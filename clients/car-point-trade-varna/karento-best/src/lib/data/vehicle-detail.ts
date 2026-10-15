@@ -118,6 +118,12 @@ export const referenceSpecifications: readonly DetailSpecification[] = [
     "valueKey": "fuel.gasoline"
   },
   {
+    "id": "year",
+    "icon": "/assets/imgs/template/icons/calendar.svg",
+    "value": "2020",
+    "labelKey": "vehicle.field.year"
+  },
+  {
     "id": "lit",
     "icon": "/assets/imgs/page/car/lit.svg",
     "value": "190 hp",
@@ -149,7 +155,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "CAR POINT TRADE LTD",
   "location": "бул. Цар Освободител 285, Варна, България",
-  "avatar": "/dealer-brand/v2-023b7b5db6ae9faf/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-de735d372fa7af4a/logo-on-light.webp",
   "mobile": "0883530713",
   "email": "",
   "whatsapp": "",

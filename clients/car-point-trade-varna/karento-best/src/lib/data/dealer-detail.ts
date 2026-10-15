@@ -36,6 +36,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "valueKey": "fuel.gasoline"
       },
       {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2020",
+        "labelKey": "vehicle.field.year"
+      },
+      {
         "id": "lit",
         "icon": "/assets/imgs/page/car/lit.svg",
         "value": "190 hp",
@@ -104,7 +110,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "CAR POINT TRADE LTD",
       "location": "бул. Цар Освободител 285, Варна, България",
-      "avatar": "/dealer-brand/v2-023b7b5db6ae9faf/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-de735d372fa7af4a/logo-on-light.webp",
       "mobile": "0883530713",
       "email": "",
       "whatsapp": "",
@@ -154,6 +160,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Hybrid",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.hybrid"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2020",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -224,7 +236,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "CAR POINT TRADE LTD",
       "location": "бул. Цар Освободител 285, Варна, България",
-      "avatar": "/dealer-brand/v2-023b7b5db6ae9faf/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-de735d372fa7af4a/logo-on-light.webp",
       "mobile": "0883530713",
       "email": "",
       "whatsapp": "",
@@ -274,6 +286,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2007",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -344,7 +362,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "CAR POINT TRADE LTD",
       "location": "бул. Цар Освободител 285, Варна, България",
-      "avatar": "/dealer-brand/v2-023b7b5db6ae9faf/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-de735d372fa7af4a/logo-on-light.webp",
       "mobile": "0883530713",
       "email": "",
       "whatsapp": "",
@@ -394,6 +412,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2008",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -464,7 +488,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "CAR POINT TRADE LTD",
       "location": "бул. Цар Освободител 285, Варна, България",
-      "avatar": "/dealer-brand/v2-023b7b5db6ae9faf/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-de735d372fa7af4a/logo-on-light.webp",
       "mobile": "0883530713",
       "email": "",
       "whatsapp": "",
@@ -514,6 +538,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2008",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -584,7 +614,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "CAR POINT TRADE LTD",
       "location": "бул. Цар Освободител 285, Варна, България",
-      "avatar": "/dealer-brand/v2-023b7b5db6ae9faf/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-de735d372fa7af4a/logo-on-light.webp",
       "mobile": "0883530713",
       "email": "",
       "whatsapp": "",
@@ -634,6 +664,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Petrol",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.gasoline"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2021",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -704,7 +740,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "CAR POINT TRADE LTD",
       "location": "бул. Цар Освободител 285, Варна, България",
-      "avatar": "/dealer-brand/v2-023b7b5db6ae9faf/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-de735d372fa7af4a/logo-on-light.webp",
       "mobile": "0883530713",
       "email": "",
       "whatsapp": "",
@@ -754,6 +790,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2017",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -824,7 +866,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "CAR POINT TRADE LTD",
       "location": "бул. Цар Освободител 285, Варна, България",
-      "avatar": "/dealer-brand/v2-023b7b5db6ae9faf/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-de735d372fa7af4a/logo-on-light.webp",
       "mobile": "0883530713",
       "email": "",
       "whatsapp": "",
@@ -874,6 +916,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2003",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -944,7 +992,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "CAR POINT TRADE LTD",
       "location": "бул. Цар Освободител 285, Варна, България",
-      "avatar": "/dealer-brand/v2-023b7b5db6ae9faf/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-de735d372fa7af4a/logo-on-light.webp",
       "mobile": "0883530713",
       "email": "",
       "whatsapp": "",

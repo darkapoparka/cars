@@ -58,7 +58,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "CAR POINT TRADE LTD",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-023b7b5db6ae9faf/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-de735d372fa7af4a/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": true
@@ -119,7 +119,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "CAR POINT TRADE LTD",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-023b7b5db6ae9faf/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-de735d372fa7af4a/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": true
@@ -180,7 +180,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "CAR POINT TRADE LTD",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-023b7b5db6ae9faf/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-de735d372fa7af4a/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": true
@@ -241,7 +241,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "CAR POINT TRADE LTD",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-023b7b5db6ae9faf/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-de735d372fa7af4a/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -302,7 +302,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "CAR POINT TRADE LTD",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-023b7b5db6ae9faf/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-de735d372fa7af4a/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -363,7 +363,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "CAR POINT TRADE LTD",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-023b7b5db6ae9faf/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-de735d372fa7af4a/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -424,7 +424,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "CAR POINT TRADE LTD",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-023b7b5db6ae9faf/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-de735d372fa7af4a/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -485,373 +485,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "CAR POINT TRADE LTD",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-023b7b5db6ae9faf/logo-on-light.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1004",
-    "slug": "vw-arteon-2020-11791184773376059",
-    "category": "car",
-    "dealerOrgId": "dealer-car-point-trade-varna",
-    "status": "active",
-    "title": "VW Arteon 2.0* 190* R-Line*",
-    "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
-    "price": {
-      "amount": 21980,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/vehicles/11791184773376059/1.webp",
-        "alt": "VW Arteon 2.0* 190* R-Line*"
-      },
-      {
-        "url": "/assets/vehicles/11791184773376059/2.webp",
-        "alt": "VW Arteon 2.0* 190* R-Line*"
-      },
-      {
-        "url": "/assets/vehicles/11791184773376059/3.webp",
-        "alt": "VW Arteon 2.0* 190* R-Line*"
-      },
-      {
-        "url": "/assets/vehicles/11791184773376059/4.webp",
-        "alt": "VW Arteon 2.0* 190* R-Line*"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "spec": {
-      "make": "VW",
-      "model": "Arteon",
-      "year": 2020,
-      "bodyType": "sedan",
-      "fuelType": "gasoline",
-      "transmission": "automatic",
-      "mileageValue": 60000,
-      "mileageUnit": "km",
-      "enginePowerHp": 190
-    },
-    "seller": {
-      "id": "dealer-car-point-trade-varna",
-      "type": "dealer",
-      "displayName": "CAR POINT TRADE LTD",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-023b7b5db6ae9faf/logo-on-light.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1005",
-    "slug": "mercedes-benz-gle-450-2020-11791183074371341",
-    "category": "car",
-    "dealerOrgId": "dealer-car-point-trade-varna",
-    "status": "active",
-    "title": "Mercedes-Benz GLE 450 EQ Boost* Pano* Head UP*",
-    "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
-    "price": {
-      "amount": 47980,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/vehicles/11791183074371341/1.webp",
-        "alt": "Mercedes-Benz GLE 450 EQ Boost* Pano* Head UP*"
-      },
-      {
-        "url": "/assets/vehicles/11791183074371341/2.webp",
-        "alt": "Mercedes-Benz GLE 450 EQ Boost* Pano* Head UP*"
-      },
-      {
-        "url": "/assets/vehicles/11791183074371341/3.webp",
-        "alt": "Mercedes-Benz GLE 450 EQ Boost* Pano* Head UP*"
-      },
-      {
-        "url": "/assets/vehicles/11791183074371341/4.webp",
-        "alt": "Mercedes-Benz GLE 450 EQ Boost* Pano* Head UP*"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "spec": {
-      "make": "Mercedes-Benz",
-      "model": "GLE 450",
-      "year": 2020,
-      "bodyType": "suv",
-      "fuelType": "hybrid",
-      "transmission": "automatic",
-      "mileageValue": 137000,
-      "mileageUnit": "km",
-      "enginePowerHp": 367
-    },
-    "seller": {
-      "id": "dealer-car-point-trade-varna",
-      "type": "dealer",
-      "displayName": "CAR POINT TRADE LTD",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-023b7b5db6ae9faf/logo-on-light.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1006",
-    "slug": "toyota-corolla-verso-2007-11790856761277539",
-    "category": "car",
-    "dealerOrgId": "dealer-car-point-trade-varna",
-    "status": "active",
-    "title": "Toyota Corolla verso",
-    "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
-    "price": {
-      "amount": 1380,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/vehicles/11790856761277539/1.webp",
-        "alt": "Toyota Corolla verso"
-      },
-      {
-        "url": "/assets/vehicles/11790856761277539/2.webp",
-        "alt": "Toyota Corolla verso"
-      },
-      {
-        "url": "/assets/vehicles/11790856761277539/3.webp",
-        "alt": "Toyota Corolla verso"
-      },
-      {
-        "url": "/assets/vehicles/11790856761277539/4.webp",
-        "alt": "Toyota Corolla verso"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "spec": {
-      "make": "Toyota",
-      "model": "Corolla verso",
-      "year": 2007,
-      "bodyType": "other",
-      "fuelType": "diesel",
-      "transmission": "manual",
-      "mileageValue": 255000,
-      "mileageUnit": "km",
-      "enginePowerHp": 136
-    },
-    "seller": {
-      "id": "dealer-car-point-trade-varna",
-      "type": "dealer",
-      "displayName": "CAR POINT TRADE LTD",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-023b7b5db6ae9faf/logo-on-light.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1007",
-    "slug": "toyota-rav4-2008-21763647718712555",
-    "category": "car",
-    "dealerOrgId": "dealer-car-point-trade-varna",
-    "status": "active",
-    "title": "Toyota Rav4",
-    "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
-    "price": {
-      "amount": 4998,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/vehicles/21763647718712555/1.webp",
-        "alt": "Toyota Rav4"
-      },
-      {
-        "url": "/assets/vehicles/21763647718712555/2.webp",
-        "alt": "Toyota Rav4"
-      },
-      {
-        "url": "/assets/vehicles/21763647718712555/3.webp",
-        "alt": "Toyota Rav4"
-      },
-      {
-        "url": "/assets/vehicles/21763647718712555/4.webp",
-        "alt": "Toyota Rav4"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "spec": {
-      "make": "Toyota",
-      "model": "Rav4",
-      "year": 2008,
-      "bodyType": "suv",
-      "fuelType": "diesel",
-      "transmission": "manual",
-      "mileageValue": 239000,
-      "mileageUnit": "km",
-      "enginePowerHp": 140
-    },
-    "seller": {
-      "id": "dealer-car-point-trade-varna",
-      "type": "dealer",
-      "displayName": "CAR POINT TRADE LTD",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-023b7b5db6ae9faf/logo-on-light.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1008",
-    "slug": "toyota-auris-2008-11788508879567241",
-    "category": "car",
-    "dealerOrgId": "dealer-car-point-trade-varna",
-    "status": "active",
-    "title": "Toyota Auris 2.2* 177HP* KEYLESS*",
-    "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
-    "price": {
-      "amount": 4190,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/vehicles/11788508879567241/1.webp",
-        "alt": "Toyota Auris 2.2* 177HP* KEYLESS*"
-      },
-      {
-        "url": "/assets/vehicles/11788508879567241/2.webp",
-        "alt": "Toyota Auris 2.2* 177HP* KEYLESS*"
-      },
-      {
-        "url": "/assets/vehicles/11788508879567241/3.webp",
-        "alt": "Toyota Auris 2.2* 177HP* KEYLESS*"
-      },
-      {
-        "url": "/assets/vehicles/11788508879567241/4.webp",
-        "alt": "Toyota Auris 2.2* 177HP* KEYLESS*"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "spec": {
-      "make": "Toyota",
-      "model": "Auris",
-      "year": 2008,
-      "bodyType": "hatchback",
-      "fuelType": "diesel",
-      "transmission": "manual",
-      "mileageValue": 241000,
-      "mileageUnit": "km",
-      "enginePowerHp": 177
-    },
-    "seller": {
-      "id": "dealer-car-point-trade-varna",
-      "type": "dealer",
-      "displayName": "CAR POINT TRADE LTD",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-023b7b5db6ae9faf/logo-on-light.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1009",
-    "slug": "skoda-octavia-2021-11772557595522560",
-    "category": "car",
-    "dealerOrgId": "dealer-car-point-trade-varna",
-    "status": "active",
-    "title": "Skoda Octavia 1.5* 150HP*",
-    "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
-    "price": {
-      "amount": 15590,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/vehicles/11772557595522560/1.webp",
-        "alt": "Skoda Octavia 1.5* 150HP*"
-      },
-      {
-        "url": "/assets/vehicles/11772557595522560/2.webp",
-        "alt": "Skoda Octavia 1.5* 150HP*"
-      },
-      {
-        "url": "/assets/vehicles/11772557595522560/3.webp",
-        "alt": "Skoda Octavia 1.5* 150HP*"
-      },
-      {
-        "url": "/assets/vehicles/11772557595522560/4.webp",
-        "alt": "Skoda Octavia 1.5* 150HP*"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "spec": {
-      "make": "Skoda",
-      "model": "Octavia",
-      "year": 2021,
-      "bodyType": "wagon",
-      "fuelType": "gasoline",
-      "transmission": "automatic",
-      "mileageValue": 211000,
-      "mileageUnit": "km",
-      "enginePowerHp": 150
-    },
-    "seller": {
-      "id": "dealer-car-point-trade-varna",
-      "type": "dealer",
-      "displayName": "CAR POINT TRADE LTD",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-023b7b5db6ae9faf/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-de735d372fa7af4a/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
