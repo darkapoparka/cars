@@ -114,8 +114,8 @@ export const leadSite: LeadSiteConfig = {
     "tagline": "Car Market Yorkshire — vehicles and dealer support in Dewsbury, West Yorkshire."
   }
 },
-  accent: "#0849AC",
-  desktopAccent: "#4b5057",
+  accent: "#09090b",
+  desktopAccent: "#09090b",
   desktopInventoryFilterLayout: "quick",
   desktopPreviewIdentity: {
     sourceSlug: "day-night-auto-group",
@@ -127,7 +127,7 @@ export const leadSite: LeadSiteConfig = {
       en: "Find your next car.",
     },
   },
-  address: "ул. „Атанас Манчев“ 18, Dewsbury, West Yorkshire",
+  address: "",
   city: "Dewsbury, West Yorkshire",
   district: { bg: "Dewsbury, West Yorkshire", en: "Dewsbury, West Yorkshire" },
   sellCategoryAssets: {
@@ -141,16 +141,17 @@ export const leadSite: LeadSiteConfig = {
   mobileShowroomArtworkPath:
     "/images/lease/mobile-pdp-showroom-blue-hour-v1.webp",
   contactUrl: "",
-  country: "България",
+  country: "United Kingdom",
   countryCode: carsLocale.dealerCountry,
   currency: carsLocale.inventoryCurrency,
   email: "",
   heroPath: "/lead-hero.jpg",
   locale: "en-GB",
-  logoPath: "/dealer-brand/logo.webp",
-  logoOnLight: "/dealer-brand/logo.webp",
-  logoOnDark: "/dealer-brand/logo.webp",
-  logoOnAccent: "/dealer-brand/logo.webp",
+  logoPath: "/dealer-brand/v2-c52eb17295e48be5/logo-on-light.webp",
+  logoInversePath: "/dealer-brand/v2-c52eb17295e48be5/logo-on-dark.webp",
+  logoOnLight: "/dealer-brand/v2-c52eb17295e48be5/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-c52eb17295e48be5/logo-on-light.webp",
+  logoOnAccent: "/dealer-brand/v2-c52eb17295e48be5/logo-on-light.webp",
   mapsEmbedUrl:
     "https://maps.google.com/maps?q=Car%20Market%20Yorkshire%2C%20Dewsbury%2C%20West%20Yorkshire&z=16&output=embed",
   mapsUrl:
@@ -162,6 +163,6 @@ export const leadSite: LeadSiteConfig = {
   slug: "dewsbury-car-market-yorkshire",
   socialLinks: {},
   staticDemoMode: true,
-  tagline: "Премиум автомобили, внос и собствен лизинг в Dewsbury, West Yorkshire.",
+  tagline: "Car Market Yorkshire — vehicles and dealer support in Dewsbury, West Yorkshire.",
 };
 // LEAD_SITE_CONFIG_END

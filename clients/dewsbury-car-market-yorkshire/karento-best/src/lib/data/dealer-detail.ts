@@ -34,6 +34,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Petrol",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.gasoline"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2010",
+        "labelKey": "vehicle.field.year"
       }
     ],
     "gallery": {
@@ -72,7 +78,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Car Market Yorkshire",
       "location": "",
-      "avatar": "/dealer-brand/logo.webp",
+      "avatar": "/dealer-brand/v2-c52eb17295e48be5/logo-on-light.webp",
       "mobile": "",
       "email": "",
       "whatsapp": "",
@@ -122,6 +128,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2022",
+        "labelKey": "vehicle.field.year"
       }
     ],
     "gallery": {
@@ -160,7 +172,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Car Market Yorkshire",
       "location": "",
-      "avatar": "/dealer-brand/logo.webp",
+      "avatar": "/dealer-brand/v2-c52eb17295e48be5/logo-on-light.webp",
       "mobile": "",
       "email": "",
       "whatsapp": "",
@@ -210,6 +222,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2019",
+        "labelKey": "vehicle.field.year"
       }
     ],
     "gallery": {
@@ -248,7 +266,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Car Market Yorkshire",
       "location": "",
-      "avatar": "/dealer-brand/logo.webp",
+      "avatar": "/dealer-brand/v2-c52eb17295e48be5/logo-on-light.webp",
       "mobile": "",
       "email": "",
       "whatsapp": "",
@@ -298,6 +316,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Petrol",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.gasoline"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2018",
+        "labelKey": "vehicle.field.year"
       }
     ],
     "gallery": {
@@ -336,7 +360,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Car Market Yorkshire",
       "location": "",
-      "avatar": "/dealer-brand/logo.webp",
+      "avatar": "/dealer-brand/v2-c52eb17295e48be5/logo-on-light.webp",
       "mobile": "",
       "email": "",
       "whatsapp": "",
@@ -386,6 +410,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Petrol",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.gasoline"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2017",
+        "labelKey": "vehicle.field.year"
       }
     ],
     "gallery": {
@@ -424,7 +454,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Car Market Yorkshire",
       "location": "",
-      "avatar": "/dealer-brand/logo.webp",
+      "avatar": "/dealer-brand/v2-c52eb17295e48be5/logo-on-light.webp",
       "mobile": "",
       "email": "",
       "whatsapp": "",
@@ -474,6 +504,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2018",
+        "labelKey": "vehicle.field.year"
       }
     ],
     "gallery": {
@@ -512,7 +548,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Car Market Yorkshire",
       "location": "",
-      "avatar": "/dealer-brand/logo.webp",
+      "avatar": "/dealer-brand/v2-c52eb17295e48be5/logo-on-light.webp",
       "mobile": "",
       "email": "",
       "whatsapp": "",

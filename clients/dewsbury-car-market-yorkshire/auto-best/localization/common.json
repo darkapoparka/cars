@@ -1,7 +1,63 @@
 {
+  "detail.photos": {
+    "en": "Photos",
+    "bg": "Снимки"
+  },
+  "detail.photos.all": {
+    "en": "All",
+    "bg": "Всички"
+  },
+  "detail.photos.exterior": {
+    "en": "Exterior",
+    "bg": "Екстериор"
+  },
+  "detail.photos.interior": {
+    "en": "Interior",
+    "bg": "Интериор"
+  },
+  "detail.photos.categories": {
+    "en": "Photo categories",
+    "bg": "Категории снимки"
+  },
+  "detail.photos.categoryCount": {
+    "en": "{category} ({count})",
+    "bg": "{category} ({count})"
+  },
+  "detail.photos.demo": {
+    "en": "Demo gallery",
+    "bg": "Демо галерия"
+  },
+  "detail.photos.demoNote": {
+    "en": "Illustrative photos for the gallery preview.",
+    "bg": "Илюстративни снимки за преглед на галерията."
+  },
+  "detail.photos.imageAlt": {
+    "en": "{car} — {view}",
+    "bg": "{car} — {view}"
+  },
+  "detail.photos.demoAlt": {
+    "en": "Demo photo — {car} — {view}",
+    "bg": "Демо снимка — {car} — {view}"
+  },
   "inventory.applied.all": {
     "en": "All ({count})",
     "bg": "Всички ({count})"
+  },
+  "inventory.applied.more": {
+    "en": "+{count} more",
+    "bg": "+{count} още"
+  },
+  "inventory.applied.empty": {
+    "en": "No filters selected.",
+    "bg": "Няма избрани филтри."
+  },
+  "inventory.applied.reviewHint": {
+    "en": "Remove a selection to update the results.",
+    "bg": "Премахнете избран филтър, за да обновите резултатите."
+  },
+  "action.done": {
+    "en": "Done",
+    "bg": "Готово"
   },
   "inventory.modal.yearFrom": {
     "en": "From year",
@@ -308,8 +364,8 @@
     "bg": "Напр. семеен SUV, автоматик, бензин. Опиши предпочитани модели и важното за теб."
   },
   "service.budget": {
-    "en": "Budget (£)",
-    "bg": "Бюджет (£)"
+    "en": "Budget (€)",
+    "bg": "Бюджет (€)"
   },
   "service.make.placeholder": {
     "en": "BMW",
@@ -488,8 +544,8 @@
     "bg": "Предложен регион: {country}"
   },
   "locale.save": {
-    "en": "Save preferences",
-    "bg": "Запази избора"
+    "en": "Save",
+    "bg": "Запази"
   },
   "locale.dismiss": {
     "en": "Not now",
@@ -850,5 +906,41 @@
   "home.bannerPreview.taillights": {
     "en": "Taillights",
     "bg": "Стопове"
+  },
+  "heroPreview.title": {
+    "en": "Hero preview",
+    "bg": "Преглед на банерите"
+  },
+  "heroPreview.current": {
+    "en": "Before",
+    "bg": "Преди"
+  },
+  "heroPreview.compact": {
+    "en": "A · Compact",
+    "bg": "A · Компактен"
+  },
+  "heroPreview.balanced": {
+    "en": "B · Balanced",
+    "bg": "B · Балансиран"
+  },
+  "heroPreview.photo": {
+    "en": "C · Showroom photo",
+    "bg": "C · Снимка"
+  },
+  "heroPreview.sizes": {
+    "en": "{mobile}px mobile · {desktop}px desktop",
+    "bg": "{mobile}px мобилен · {desktop}px десктоп"
+  },
+  "heroPreview.samplePhoto": {
+    "en": "Existing sample photo for this comparison; not verified dealer stock.",
+    "bg": "Примерна снимка за сравнението; не е потвърден автомобил на търговеца."
+  },
+  "heroPreview.pages": {
+    "en": "Compare pages",
+    "bg": "Сравни страниците"
+  },
+  "heroPreview.home": {
+    "en": "Home",
+    "bg": "Начало"
   }
 }

@@ -23,13 +23,17 @@ export const dealerLocalizedText = {
     "city": "Dewsbury, West Yorkshire",
     "addressLine": "Dewsbury, West Yorkshire",
     "address": "Dewsbury, West Yorkshire",
-    "appointment": "Contact the dealership before visiting."
+    "appointment": "Contact the dealership before visiting.",
+    "addressShort": "Dewsbury, West Yorkshire",
+    "appointmentShort": "Contact the dealership before visiting."
   },
   "bg": {
     "city": "Dewsbury, West Yorkshire",
     "addressLine": "Dewsbury, West Yorkshire",
     "address": "Dewsbury, West Yorkshire",
-    "appointment": "Свържете се с автокъщата преди посещение."
+    "appointment": "Свържете се с автокъщата преди посещение.",
+    "addressShort": "Dewsbury, West Yorkshire",
+    "appointmentShort": "Свържете се с автокъщата преди посещение."
   }
 } as const;
 

@@ -6,6 +6,7 @@ export interface PurchaseStep {
   readonly description: CatalogText;
   readonly mobileDescriptionLines?: readonly [CatalogText, CatalogText];
   readonly image: string;
+  readonly imagePosition?: string;
   readonly href: string;
 }
 
@@ -50,6 +51,7 @@ export const purchaseProcess = {
         message("purchaseProcess.view.mobileSecond"),
       ],
       image: "/assets/karento-best/how-it-works/view-20261006-v2.webp",
+      imagePosition: "75% center",
       href: "/contact",
     },
     {

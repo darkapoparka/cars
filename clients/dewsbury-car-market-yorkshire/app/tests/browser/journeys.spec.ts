@@ -50,10 +50,30 @@ test('vehicle navigation returns to the exact filtered collection', async ({page
   test.skip(!firstVehicle, 'The configured dealer has no stock.');
   const query = '?brand=' + encodeURIComponent(firstVehicle.make) + '&order=price-asc';
   await open(page, locales[0] + '/cars' + query);
+  await expect(page.locator('[data-vehicle-drawers-ready]')).toHaveAttribute('data-vehicle-drawers-ready', 'true');
   const detail = page.locator('article[data-price] a[href*="/cars/"]').first();
+  await detail.focus();
+  const collectionUrl = page.url();
+  const permanentUrl = await detail.evaluate(element => (element as HTMLAnchorElement).href);
+  const collectionScroll = await page.evaluate(() => scrollY);
   await detail.click();
-  await expect(page).toHaveURL(/\/cars\/[^/?]+$/);
+  await expect(page).toHaveURL(/#vehicle=/);
+  await expect(page.locator('[data-vehicle-drawer]')).toBeVisible();
+  await expect(page.locator('[data-keyboard-navigation]')).toHaveJSProperty('inert', true);
+  await page.evaluate(() => Object.defineProperty(navigator, 'share', {configurable: true, value: async (data: ShareData) => {document.documentElement.dataset.sharedVehicle = data.url;}}));
+  await page.locator('[data-vehicle-drawer]').getByRole('button', {name: 'Share car', exact: true}).filter({visible: true}).click();
+  await expect(page.locator('html')).toHaveAttribute('data-shared-vehicle', permanentUrl);
+  await page.keyboard.press('Escape');
+  await expect(page.locator('[data-vehicle-drawer]')).toHaveCount(0);
+  await expect(page).toHaveURL(collectionUrl);
+  await expect(detail).toBeFocused();
+  expect(await page.evaluate(() => scrollY)).toBe(collectionScroll);
+  await page.goForward();
+  await expect(page.locator('[data-vehicle-drawer]')).toBeVisible();
+  await page.reload();
+  await expect(page.locator('[data-vehicle-drawer]')).toBeVisible();
   await page.goBack();
+  await expect(page.locator('[data-vehicle-drawer]')).toHaveCount(0);
   await expect(page).toHaveURL(new RegExp('brand=' + encodeURIComponent(firstVehicle.make)));
   await expect(page).toHaveURL(/order=price-asc/);
   await expect(page.locator('article[data-price]').first()).toBeVisible();
@@ -75,13 +95,41 @@ test('saved vehicles survive reload and enquiry actions remain drafts', async ({
   await dismissDialog(page);
 });
 
+test('vehicle drawer unwinds child sheets and replaces a similar car without stacking', async ({page}) => {
+  test.skip(!firstVehicle || !locales.includes('en') || vehicles.length < 2, 'Requires two stocked English vehicles.');
+  await open(page, 'en/2/cars');
+  await expect(page.locator('[data-vehicle-drawers-ready]')).toHaveAttribute('data-vehicle-drawers-ready', 'true');
+  const collectionUrl = page.url();
+  await page.locator('article[data-price] a[href*="/cars/"]').first().click();
+  const drawer = page.locator('[data-vehicle-drawer]');
+  await expect(drawer).toBeVisible();
+  const originalUrl = page.url();
+  await drawer.getByRole('button', {name: 'Price information', exact: true}).filter({visible: true}).click();
+  await expect(page.getByRole('dialog')).toHaveCount(2);
+  await page.goBack();
+  await expect(page.getByRole('dialog')).toHaveCount(1);
+  await expect(page).toHaveURL(originalUrl);
+  await drawer.getByRole('button', {name: 'Similar Cars', exact: true}).filter({visible: true}).click();
+  const similar = page.getByRole('dialog', {name: 'Similar vehicles', exact: true});
+  const target = similar.locator('article a[href*="/cars/"]').first();
+  const targetSlug = (await target.getAttribute('href'))!.split('/').at(-1)!;
+  await target.click();
+  await expect(page).toHaveURL(new RegExp('#vehicle=' + targetSlug + '$'));
+  await expect(similar).toHaveCount(0);
+  await expect(drawer).toBeVisible();
+  await page.keyboard.press('Escape');
+  await expect(drawer).toHaveCount(0);
+  await expect(page).toHaveURL(collectionUrl);
+});
+
 for (const locale of locales) for (const variant of ['', '/2']) {
   test(locale + variant + ' vehicle Back returns to the originating Home', async ({page, viewport, baseURL}) => {
     test.skip(!vehicles.length, 'The configured dealer has no stock.');
     const home = locale + variant;
     await open(page, home);
+    await expect(page.locator('[data-vehicle-drawers-ready]')).toHaveAttribute('data-vehicle-drawers-ready', 'true');
     await page.locator('article:visible a[href*="/cars/"]').first().click();
-    await expect(page).toHaveURL(/\/cars\/[^/?]+$/);
+    await expect(page).toHaveURL(/#vehicle=/);
     const back = viewport && viewport.width >= 1100
       ? page.locator('[data-desktop-vehicle-hero] button').first()
       : page.getByRole('button', {name: locale === 'bg' ? 'Назад' : 'Back', exact: true});

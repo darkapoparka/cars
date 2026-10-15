@@ -21,6 +21,9 @@ html:root {
     --karento-control-selector: 36px;
     --karento-control-field: 48px;
     --karento-control-line: 20px;
+    --karento-mobile-header-height: calc(
+      var(--karento-touch-target) + var(--karento-space-3)
+    );
     --karento-focus-width: 2px;
     --karento-focus-offset: 2px;
     --karento-control-inset: 12px;
@@ -28,6 +31,7 @@ html:root {
     --karento-browse-inset-inline: 6px;
     --karento-browse-inset-block: 3px;
     --karento-safe-area-bottom: env(safe-area-inset-bottom, 0px);
+    --karento-mobile-navigation-icon-size: 24px;
     --karento-mobile-navigation-height: calc(
       var(--karento-touch-target) + var(--karento-space-1) +
         var(--karento-space-1) + 1px + var(--karento-safe-area-bottom)

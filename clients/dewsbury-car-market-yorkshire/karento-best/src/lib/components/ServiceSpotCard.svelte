@@ -8,13 +8,20 @@
   import { MediaQuery } from "svelte/reactivity";
   let { spot }: { spot: ServiceSpot } = $props();
   const desktop = new MediaQuery("(min-width: 992px)");
+  import { dealer } from "#lib/content.ts";
+  const previewServiceSpot = $derived(
+    Boolean(dealer.businessPreview) &&
+      ["referenceHome.services.import", "referenceHome.services.sell", "referenceHome.services.buy", "referenceHome.services.lease"].includes(spot.desktopTitleKey ?? ""),
+  );
   const title = $derived(
-    desktop.current && spot.desktopTitleKey
+    (desktop.current || previewServiceSpot) && spot.desktopTitleKey
       ? locale.t(spot.desktopTitleKey)
       : spot.title,
   );
   const description = $derived(
-    spot.descriptionKey ? locale.t(spot.descriptionKey) : spot.description,
+    previewServiceSpot
+      ? locale.t("referenceHome.services.exampleDescription")
+      : spot.descriptionKey ? locale.t(spot.descriptionKey) : spot.description,
   );
 </script>
 
