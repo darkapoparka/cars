@@ -50,7 +50,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Автосалон СТАДИОНА",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-a91f596f1b37c372/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-213e1320bece47f5/logo-on-light.webp"
     },
     "publishedAt": "2026-10-11T09:00:00.000Z",
     "promoted": true

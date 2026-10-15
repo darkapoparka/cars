@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "Автосалон СТАДИОНА",
-  "logo": "/dealer-brand/v2-a91f596f1b37c372/logo-on-light.webp",
+  "logo": "/dealer-brand/v2-213e1320bece47f5/logo-on-light.webp",
   "phone": "+359898838353",
   "email": null,
   "address": "бул.Цар Освободител-след Метро, Варна, България",

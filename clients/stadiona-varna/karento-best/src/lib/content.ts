@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "Автосалон СТАДИОНА",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-a91f596f1b37c372/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-a91f596f1b37c372/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-a91f596f1b37c372/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-213e1320bece47f5/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-213e1320bece47f5/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-213e1320bece47f5/logo-on-dark.webp",
     "alt": "Автосалон СТАДИОНА",
-    "favicon": "/dealer-brand/v2-a91f596f1b37c372/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-213e1320bece47f5/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

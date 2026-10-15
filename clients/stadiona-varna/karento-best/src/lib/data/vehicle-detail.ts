@@ -155,7 +155,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "Автосалон СТАДИОНА",
   "location": "бул.Цар Освободител-след Метро, Варна, България",
-  "avatar": "/dealer-brand/v2-a91f596f1b37c372/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-213e1320bece47f5/logo-on-light.webp",
   "mobile": "0898838353",
   "email": "",
   "whatsapp": "",

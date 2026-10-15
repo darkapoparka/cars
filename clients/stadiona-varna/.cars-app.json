@@ -3,12 +3,12 @@
   "dealer": "stadiona-varna",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/app",
-    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
-    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
   },
-  "appDigest": "118f064e3eefc237aed74e02fffd4a2556d209530ae9a583adfe2fad9293bc68",
+  "appDigest": "8e656da835f9bee4edb5475a2a1cd4339719b69de562e727f27975d3d7099182",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "stadiona-varna",
@@ -21,26 +21,26 @@
     "assets": [
       {
         "source": "auto-best/static/dealer-brand/logo-on-light.png",
-        "output": "public/dealer-app/logo-light-20c50858a0f35fd03e78.png",
-        "sha256": "20c50858a0f35fd03e78dd0beac3a9803723a3a338f1c42f305e2a816a455c2a",
+        "output": "public/dealer-app/logo-light-ea543874618f8d08d042.png",
+        "sha256": "ea543874618f8d08d042542c1ba644ed3375aff666c40a328d4538715c39af99",
         "role": "logo-light"
       },
       {
         "source": "auto-best/static/dealer-brand/logo-on-dark.png",
-        "output": "public/dealer-app/logo-dark-2ada326d4d5db4f3ac97.png",
-        "sha256": "2ada326d4d5db4f3ac974fbeba903673194dfc87a86407c055b64e772b117baf",
+        "output": "public/dealer-app/logo-dark-2080baab7254f506d452.png",
+        "sha256": "2080baab7254f506d4520da73f9a5ab694a094800e8fcd493a8c438d594c8a21",
         "role": "logo-dark"
-      },
-      {
-        "source": "auto-best/static/dealer-stock/11791629866548922-2.webp",
-        "output": "public/dealer-app/vehicle-fa36167509c2856696c5.webp",
-        "sha256": "fa36167509c2856696c54437988696cf2be937ce8af75f0c1dd6d72ed16de85e",
-        "role": "vehicle"
       },
       {
         "source": "auto-best/static/dealer-stock/11791629866548922-1.webp",
         "output": "public/dealer-app/vehicle-9cf954c0b2718f418e1a.webp",
         "sha256": "9cf954c0b2718f418e1af13de17b93435eb6127f7e8ddb83f34cd62b806b6321",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11791629866548922-2.webp",
+        "output": "public/dealer-app/vehicle-fa36167509c2856696c5.webp",
+        "sha256": "fa36167509c2856696c54437988696cf2be937ce8af75f0c1dd6d72ed16de85e",
         "role": "vehicle"
       }
     ],
@@ -54,5 +54,6 @@
     ]
   },
   "needsDealerQA": true,
-  "readyToPublish": false
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-15T03:28:42.718Z"
 }
