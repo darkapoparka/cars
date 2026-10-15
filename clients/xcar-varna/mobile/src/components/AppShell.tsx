@@ -2,6 +2,7 @@
 import { hydrateLocale, syncLocale, useLocale } from '@/lib/use-locale';
 import { useEffect, useSyncExternalStore, type ReactNode } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import * as stylex from '@stylexjs/stylex';
 import { colors, darkTheme } from '@/styles/tokens.stylex';
@@ -13,6 +14,11 @@ import { showroomService } from '@/lib/showroom-services';
 import { getVehicle } from '@/lib/catalog';
 import { useMobileKeyboard } from '@/lib/use-mobile-keyboard';
 import { showroomNavigation as tabs } from './showroom-navigation';
+const dockArtwork = {
+  '/': 'cars',
+  '/services': 'services',
+  '/contact': 'contact',
+} as const;
 const s = stylex.create({
   root: {
     backgroundColor: colors.background,
@@ -57,14 +63,9 @@ const s = stylex.create({
   keyboardHidden: { display: { default: null, '@media (max-width: 699px)': 'none' } },
   tab: {
     display: 'flex',
-    flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    gap: 2,
     color: colors.muted,
-    fontSize: '0.75rem',
-    lineHeight: 1.25,
-    fontWeight: 400,
     textDecoration: 'none',
     minWidth: 0,
     minHeight: 44,
@@ -83,10 +84,16 @@ const s = stylex.create({
   active: {
     backgroundColor: { default: colors.controlSurface, ':hover': colors.controlSurface },
     color: colors.text,
-    fontWeight: 500,
   },
-  icon: { width: 20, height: 20, display: 'block', flexShrink: 0 },
-  label: { minWidth: 0, maxWidth: '100%', overflowWrap: 'anywhere' },
+  icon: {
+    width: 28,
+    height: 28,
+    display: 'block',
+    flexShrink: 0,
+    objectFit: 'contain',
+    opacity: 0.82,
+  },
+  activeIcon: { opacity: 1 },
   toast: {
     position: 'fixed',
     left: '50%',
@@ -185,7 +192,7 @@ export function AppShell({ children }: { children: ReactNode }) {
           aria-label={t('Main navigation')}
           {...stylex.props(s.nav, keyboard.open && s.keyboardHidden)}
         >
-          {tabs.map(([href, label, NavigationIcon]) => {
+          {tabs.map(([href, label]) => {
             const current =
               pathname === href || (href === '/services' && pathname.startsWith('/services/'));
             return (
@@ -195,17 +202,22 @@ export function AppShell({ children }: { children: ReactNode }) {
                   href === '/' ? showroomInventoryHref(state.filters, state.inventorySort) : href
                 }
                 prefetch={href === '/' ? false : undefined}
+                aria-label={t(label)}
+                title={t(label)}
                 aria-current={current ? 'page' : undefined}
                 {...stylex.props(s.tab, current && s.active)}
               >
-                <NavigationIcon
-                  size={20}
-                  strokeWidth={1.8}
+                <Image
+                  src={`/navigation/dock/${dockArtwork[href]}.webp`}
+                  width={64}
+                  height={64}
+                  alt=""
                   aria-hidden="true"
-                  focusable="false"
-                  {...stylex.props(s.icon)}
+                  draggable={false}
+                  loading="eager"
+                  unoptimized
+                  {...stylex.props(s.icon, current && s.activeIcon)}
                 />
-                <span {...stylex.props(s.label)}>{t(label)}</span>
               </Link>
             );
           })}

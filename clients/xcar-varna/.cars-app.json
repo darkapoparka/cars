@@ -3,12 +3,12 @@
   "dealer": "xcar-varna",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/app",
-    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
-    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
   },
-  "appDigest": "941ab76ecf749ea4740d7c40745e25d5c8778058cd5696a5151700d27b010600",
+  "appDigest": "1bc003f4899f4feaebcff447fc10e68248d6a71f8a80761750bbdd4d1739d1ac",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "xcar-varna",
@@ -21,14 +21,14 @@
     "assets": [
       {
         "source": "auto-best/static/dealer-brand/logo-on-light.png",
-        "output": "public/dealer-app/logo-light-103577be4a3b2ecd3f53.png",
-        "sha256": "103577be4a3b2ecd3f5399d9c5ca66e5f32edcea774f276541553b2ad7be3706",
+        "output": "public/dealer-app/logo-light-6ad83c8518d1cbb739f3.png",
+        "sha256": "6ad83c8518d1cbb739f33c4123ba48c7e3da1edacf8eadb2e9070161dd8bf657",
         "role": "logo-light"
       },
       {
         "source": "auto-best/static/dealer-brand/logo-on-dark.png",
-        "output": "public/dealer-app/logo-dark-38650c18c58ef940bce8.png",
-        "sha256": "38650c18c58ef940bce8f59580972f0701b687a7bccc407649e42756bf8c4b1f",
+        "output": "public/dealer-app/logo-dark-444e73c9c382ae1d1b64.png",
+        "sha256": "444e73c9c382ae1d1b6409c0de2facbc1037f3bbc7597378d5600433116b6342",
         "role": "logo-dark"
       },
       {
@@ -54,5 +54,6 @@
     ]
   },
   "needsDealerQA": true,
-  "readyToPublish": false
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-15T03:29:31.274Z"
 }

@@ -33,6 +33,6 @@ export const brand = {
   addressLine,
   address: "Север, бул. Владислав Варненчик, Варна, България",
   appointment: "Понеделник 08:30 - 18:00 ч. Вторник 08:30 - 18:00 ч. Сряда 08:30 - 18:00 ч. Четвъртък 08:30 - 18:00 ч. Петък 08:30 - 18:00 ч. Събота 09:00 - 17:00 ч. Неделя Почивен ден",
-  logo: "/dealer-brand/v2-0acceb939b679c7d/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/v2-0acceb939b679c7d/logo-on-dark.webp"
+  logo: "/dealer-brand/v2-70232141a1307631/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-70232141a1307631/logo-on-dark.webp"
 } as const satisfies BrandConfig;
