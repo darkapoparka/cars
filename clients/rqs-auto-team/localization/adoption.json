@@ -12,7 +12,7 @@
     "scope": "existing-dealer-pilot",
     "sourceCommit": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "reviewed": true,
-    "reviewedAt": "2026-10-15T08:41:12.508Z",
+    "reviewedAt": "2026-10-15T09:36:34.411Z",
     "qualificationOnly": true,
     "approved": false,
     "nativeApproval": false,
@@ -30,33 +30,75 @@
       "sha256": "27c6ce5dd17ee6e1b9f6a5b059a95d5e1dbe4200f61264fc50addeb7af89d984"
     },
     "dealerSourceRepair": {
-      "kind": "explicit-english-editorial-catalog",
-      "parentContextSha256": "471999e8297274b2d096c087113e05cd83684e63d53e8833ab6f2c5c07502218",
-      "baseSourceCommit": "252f827b369e57292c944564a88b6f608a8ffd91",
-      "baseSourceTree": "3b05dab53ffacb237ff266cc77f407866420e871",
-      "path": "import/src/lib/content/extra-localized.ts",
-      "beforeBlob": "201c9958cd123cdae666e3f911e3668d1dc9207d",
-      "afterBlob": "9d73f9edc737df25307f7283110ba27480a1c32d",
-      "proof": {
-        "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/editorial-runtime-repair-20261015/rqs-auto-team/focused-proof.json",
-        "sha256": "4e4ab6bd086f3fcc3e854424ad88ed406068a938d8156a7c3903afad9f6977fd"
-      },
-      "evidenceReuse": "Original immutable six-template QA and source preparation remain provenance; focused exact-source localization proof covers this new dealer edit. No new CI, build, native or hosted success is asserted.",
-      "companionPatches": [
+      "kind": "explicit-selected-mobile-signature-logo-consumers",
+      "parentContextSha256": "5fb7b12dc349498c4a2889ae925367e5c03331d04b48ed5f31feb0cd68ea4c20",
+      "baseSourceCommit": "bd32e4d18c6b6e5b882263936322fb50f3c023e2",
+      "baseSourceTree": "98c5f144a4ed5e60e0c331091b1f839b905d37cb",
+      "path": "mobile/src/lib/showroom-config.ts",
+      "beforeBlob": "55c09f2725c850abf482e9a0726dd9b1b1be8392",
+      "afterBlob": "7fe1a83e61da5b938cb5ced4c7e233e8b826808d",
+      "changedDesigns": [
+        "mobile",
+        "karento-best"
+      ],
+      "companionPaths": [
         {
-          "path": "modern/packages/marketplace/lead-site.ts",
-          "beforeBlob": "1c3791d63a8adb54e80976b174d46baaa7937afb",
-          "afterBlob": "c6e0fe19f4e7842a58c980ce0035ce47dfa0f422",
-          "sha256": "aa1cb8ab7aff2acdacb058eba9060043979979c9eaa857410cbb110b9537e776",
-          "proof": {
-            "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/editorial-runtime-repair-20261015/rqs-auto-team/focused-proof.json",
-            "sha256": "4e4ab6bd086f3fcc3e854424ad88ed406068a938d8156a7c3903afad9f6977fd"
-          }
+          "path": "mobile/src/lib/showroom-config.ts",
+          "beforeBlob": "55c09f2725c850abf482e9a0726dd9b1b1be8392",
+          "afterBlob": "7fe1a83e61da5b938cb5ced4c7e233e8b826808d"
+        },
+        {
+          "path": "mobile/src/lib/dealers.ts",
+          "beforeBlob": "3573722638c78683567df3f6193bd3607cbd8daa",
+          "afterBlob": "d1db89a81bb6d0f884a499659473db8b538a039e"
+        },
+        {
+          "path": "karento-best/src/lib/content.ts",
+          "beforeBlob": "c6093dff8088d2ff9c129af0e852431cbb72e27d",
+          "afterBlob": "91f00fa6cdc01b2a333d6ca45e929fa174a2b847"
+        },
+        {
+          "path": "karento-best/src/lib/data/dealer-detail.ts",
+          "beforeBlob": "867359cbeb481adeffc26ffef3819405fcfabc82",
+          "afterBlob": "7abc16271f2c328065675ee0b704cef877816077"
+        },
+        {
+          "path": "karento-best/src/lib/data/vehicle-detail.ts",
+          "beforeBlob": "e97990c72ae80e5be10b6a76b417d2b98d46cdb1",
+          "afterBlob": "3782643ace50f250ab47242ca742cf223350d471"
+        },
+        {
+          "path": ".cars-branding.json",
+          "beforeBlob": "767fcd841f8f7683e2d75e9a43359e992d2f9402",
+          "afterBlob": "feac79c13eab49a1df59b2f40aa7a193cc59e3d1"
         }
-      ]
+      ],
+      "receiptReseals": [
+        {
+          "path": ".cars-mobile.json",
+          "family": "mobile",
+          "beforeBlob": "6da655f5bf94d8e8382205d490b8caa795df8503",
+          "profileSha256Preserved": "180a91401e384fa1ca1a31b71b92336e5401f2b52db2ec2ad70d4da7db36b17c"
+        },
+        {
+          "path": ".cars-signature.json",
+          "family": "karento-best",
+          "beforeBlob": "6d5b88e82f3891f53f6bae480d3a9d446d004475",
+          "profileSha256Preserved": "180a91401e384fa1ca1a31b71b92336e5401f2b52db2ec2ad70d4da7db36b17c"
+        }
+      ],
+      "immediateParentOverlay": {
+        "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-native/native-wave-015/published-ten-source-successors.json",
+        "sha256": "e7b40a66d73cd941b85be64ddef3093ee285df288a885fc5709c5627eb6c8c96"
+      },
+      "proof": {
+        "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/selected-webp-consumer-repair-20261015/rqs-auto-team/focused-proof.json",
+        "sha256": "64f4d15bb4959354a6b21a222d21e0332e707dfec7090263ebdaa3416c0da07b"
+      },
+      "evidenceReuse": "Original immutable six-template QA and source preparation remain provenance; focused exact-source selected Mobile and Signature logo consumer proof covers this new dealer edit. No new CI, build, native or hosted success is asserted."
     }
   },
-  "contextDigest": "925fa3ea0763ed1c5d3a5f2c8fed17f6b40ec5db2685bc84033a2221e5164196",
+  "contextDigest": "4f3ef774ee536f3e276a36be95fdf1d3187a60f5bc5bf5246ccc39827c555b12",
   "releases": {
     "auto-best": {
       "status": "qualification",

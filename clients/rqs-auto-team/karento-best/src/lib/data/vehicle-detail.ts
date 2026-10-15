@@ -154,7 +154,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "R.Q.S. Auto – Team",
   "location": "бул. „Цар Освободител“, Владислав Варненчик, Варна — точният номер не е потвърден",
-  "avatar": "/registered-branding/onLight.png",
+  "avatar": "/dealer-brand/v2-5c4df8204c0ea6d6/logo-on-light.webp",
   "mobile": "0876 997 791",
   "email": "",
   "whatsapp": "",

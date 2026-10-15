@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "Европа",
   "locale": "bg-BG",
   "logo": {
-    "light": "/registered-branding/onLight.png",
-    "footer": "/registered-branding/onDark.png",
-    "archivedDark": "/registered-branding/onDark.png",
+    "light": "/dealer-brand/v2-157161b8b9b6ab30/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-157161b8b9b6ab30/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-157161b8b9b6ab30/logo-on-dark.webp",
     "alt": "Европа",
-    "favicon": "/registered-branding/onLight.png",
+    "favicon": "/dealer-brand/v2-157161b8b9b6ab30/app-icon.png",
     "monochromeOnDark": false
   },
   "contacts": {

@@ -10,7 +10,7 @@
     "digest": "be17ef365e3272753df6e50826b139a45bfc32b8fef54ddcb86d977ad16280a9",
     "tree": "8c5ac869c7fd15e19a80c660343fc64b20a2bad9"
   },
-  "sourceDigest": "fe4b5fbc88954d8ff3e9924631dd92eef42dc1d332ca23a7232ca691a49ead58",
+  "sourceDigest": "8732873f2b59e885aa1d3b2f1560f2e0e0fa2c7ac3ff3bdd4b1123226f119679",
   "inventory": {
     "mode": "illustrative-not-dealer-stock",
     "count": 7,
@@ -19,8 +19,8 @@
   "personalization": {
     "profileSha256": "180a91401e384fa1ca1a31b71b92336e5401f2b52db2ec2ad70d4da7db36b17c",
     "logoPaths": [
-      "/registered-branding/onLight.png",
-      "/registered-branding/onDark.png"
+      "/dealer-brand/v2-5c4df8204c0ea6d6/logo-on-light.webp",
+      "/dealer-brand/v2-5c4df8204c0ea6d6/logo-on-dark.webp"
     ],
     "mediaPaths": [
       "/assets/images/lead/day-night-stock-04.webp",

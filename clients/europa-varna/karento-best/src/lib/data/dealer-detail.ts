@@ -85,7 +85,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Европа",
       "location": "Варна, Победа, бул. „Христо Смирненски“, до Вятърна мелница",
-      "avatar": "/registered-branding/onLight.png",
+      "avatar": "/dealer-brand/v2-157161b8b9b6ab30/logo-on-light.webp",
       "mobile": "0887 600 565",
       "email": "",
       "whatsapp": "",
@@ -186,7 +186,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Европа",
       "location": "Варна, Победа, бул. „Христо Смирненски“, до Вятърна мелница",
-      "avatar": "/registered-branding/onLight.png",
+      "avatar": "/dealer-brand/v2-157161b8b9b6ab30/logo-on-light.webp",
       "mobile": "0887 600 565",
       "email": "",
       "whatsapp": "",
@@ -287,7 +287,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Европа",
       "location": "Варна, Победа, бул. „Христо Смирненски“, до Вятърна мелница",
-      "avatar": "/registered-branding/onLight.png",
+      "avatar": "/dealer-brand/v2-157161b8b9b6ab30/logo-on-light.webp",
       "mobile": "0887 600 565",
       "email": "",
       "whatsapp": "",
@@ -387,7 +387,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Европа",
       "location": "Варна, Победа, бул. „Христо Смирненски“, до Вятърна мелница",
-      "avatar": "/registered-branding/onLight.png",
+      "avatar": "/dealer-brand/v2-157161b8b9b6ab30/logo-on-light.webp",
       "mobile": "0887 600 565",
       "email": "",
       "whatsapp": "",
@@ -486,7 +486,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Европа",
       "location": "Варна, Победа, бул. „Христо Смирненски“, до Вятърна мелница",
-      "avatar": "/registered-branding/onLight.png",
+      "avatar": "/dealer-brand/v2-157161b8b9b6ab30/logo-on-light.webp",
       "mobile": "0887 600 565",
       "email": "",
       "whatsapp": "",
@@ -586,7 +586,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Европа",
       "location": "Варна, Победа, бул. „Христо Смирненски“, до Вятърна мелница",
-      "avatar": "/registered-branding/onLight.png",
+      "avatar": "/dealer-brand/v2-157161b8b9b6ab30/logo-on-light.webp",
       "mobile": "0887 600 565",
       "email": "",
       "whatsapp": "",
@@ -685,7 +685,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Европа",
       "location": "Варна, Победа, бул. „Христо Смирненски“, до Вятърна мелница",
-      "avatar": "/registered-branding/onLight.png",
+      "avatar": "/dealer-brand/v2-157161b8b9b6ab30/logo-on-light.webp",
       "mobile": "0887 600 565",
       "email": "",
       "whatsapp": "",

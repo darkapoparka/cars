@@ -12,7 +12,7 @@
     "scope": "existing-dealer-pilot",
     "sourceCommit": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "reviewed": true,
-    "reviewedAt": "2026-10-15T08:42:27.206Z",
+    "reviewedAt": "2026-10-15T09:36:40.848Z",
     "qualificationOnly": true,
     "approved": false,
     "nativeApproval": false,
@@ -30,33 +30,75 @@
       "sha256": "27c6ce5dd17ee6e1b9f6a5b059a95d5e1dbe4200f61264fc50addeb7af89d984"
     },
     "dealerSourceRepair": {
-      "kind": "explicit-english-editorial-catalog",
-      "parentContextSha256": "6e6d7dbc89cb4518355df6880cda5d7a80425b5414123d2f6dbcd062d176c939",
-      "baseSourceCommit": "139e7e678d5649af3de43b504e338fbf35b285e0",
-      "baseSourceTree": "4e5cbea3dae9a6109dae1bb5ddb49af1cb7aa78e",
-      "path": "import/src/lib/content/extra-localized.ts",
-      "beforeBlob": "ce60ba5e595d21f69aa45d4e00a0fe672965eb11",
-      "afterBlob": "1b151b572aacf52de60808f9b6dbe347aeadcf64",
-      "proof": {
-        "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/editorial-runtime-repair-20261015/europa-varna/focused-proof.json",
-        "sha256": "7a83ad4ce3dcbaa3c9f9b03269b6b084c747a17a237a3a6f9b25aa73cebdbaa5"
-      },
-      "evidenceReuse": "Original immutable six-template QA and source preparation remain provenance; focused exact-source localization proof covers this new dealer edit. No new CI, build, native or hosted success is asserted.",
-      "companionPatches": [
+      "kind": "explicit-selected-mobile-signature-logo-consumers",
+      "parentContextSha256": "41914288cd7d848e7f8776286442130ac122c6866fdc5d5b0c785c8c1f8451d1",
+      "baseSourceCommit": "9a5bdba9d1e92604ed20402904d3f85892283efe",
+      "baseSourceTree": "f173420006195510fa001d6069d379567e524306",
+      "path": "mobile/src/lib/showroom-config.ts",
+      "beforeBlob": "acedaf6b70a53e759f5318a2627342387b681baa",
+      "afterBlob": "e3c9481c618027db7abfed71d8ca86594794981e",
+      "changedDesigns": [
+        "mobile",
+        "karento-best"
+      ],
+      "companionPaths": [
         {
-          "path": "modern/packages/marketplace/lead-site.ts",
-          "beforeBlob": "bfff54c1178f4a0f022b481264ff8826a7a79c56",
-          "afterBlob": "51d2e519430ba53e1cc1fe2e5e24b76ae1ac4d0a",
-          "sha256": "9a0f558a57670ecda550f3e3762c7250453abc9f339529dc934cf148d0a16b61",
-          "proof": {
-            "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/editorial-runtime-repair-20261015/europa-varna/focused-proof.json",
-            "sha256": "7a83ad4ce3dcbaa3c9f9b03269b6b084c747a17a237a3a6f9b25aa73cebdbaa5"
-          }
+          "path": "mobile/src/lib/showroom-config.ts",
+          "beforeBlob": "acedaf6b70a53e759f5318a2627342387b681baa",
+          "afterBlob": "e3c9481c618027db7abfed71d8ca86594794981e"
+        },
+        {
+          "path": "mobile/src/lib/dealers.ts",
+          "beforeBlob": "1d58c41a743516d70727e12b7c00ad328e5d5280",
+          "afterBlob": "0fb00e906405090e72682fbf967efac58667dc8c"
+        },
+        {
+          "path": "karento-best/src/lib/content.ts",
+          "beforeBlob": "545bc28ab340632f495d7ebd2d6d958af17be483",
+          "afterBlob": "742b53af673b0a15348185d4481f005f8ab610d5"
+        },
+        {
+          "path": "karento-best/src/lib/data/dealer-detail.ts",
+          "beforeBlob": "bd62d48c960c632d7eb2ee245da98ce5da95ba43",
+          "afterBlob": "4cad458dc9a45628d41f2113f5ba156e30e1becf"
+        },
+        {
+          "path": "karento-best/src/lib/data/vehicle-detail.ts",
+          "beforeBlob": "32c96aac2d001d28adf265cfb9995d364519bccc",
+          "afterBlob": "184a6bce373d43aa779eec4d6cdccf21212b1c12"
+        },
+        {
+          "path": ".cars-branding.json",
+          "beforeBlob": "2d4dae66a919da4a1de60ccad026479bca6e74ea",
+          "afterBlob": "6056b6afd737aba2fe9f82f4854c06b4a4731e0a"
         }
-      ]
+      ],
+      "receiptReseals": [
+        {
+          "path": ".cars-mobile.json",
+          "family": "mobile",
+          "beforeBlob": "2f293a08a993e52c322deb064cd427f13aae0e42",
+          "profileSha256Preserved": "8deec45a6a58578d3df59ed59fe71ce2a30526488b1c87ce9d38d0c8bf802850"
+        },
+        {
+          "path": ".cars-signature.json",
+          "family": "karento-best",
+          "beforeBlob": "05168dd4b12d15c1a439ed242624acc7ddfee13e",
+          "profileSha256Preserved": "8deec45a6a58578d3df59ed59fe71ce2a30526488b1c87ce9d38d0c8bf802850"
+        }
+      ],
+      "immediateParentOverlay": {
+        "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-native/native-wave-015/published-ten-source-successors.json",
+        "sha256": "e7b40a66d73cd941b85be64ddef3093ee285df288a885fc5709c5627eb6c8c96"
+      },
+      "proof": {
+        "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/selected-webp-consumer-repair-20261015/europa-varna/focused-proof.json",
+        "sha256": "2cc639a119f515f4c830fc28c41c3c18a707dfd195be929354d09574782e5ea4"
+      },
+      "evidenceReuse": "Original immutable six-template QA and source preparation remain provenance; focused exact-source selected Mobile and Signature logo consumer proof covers this new dealer edit. No new CI, build, native or hosted success is asserted."
     }
   },
-  "contextDigest": "3b3acde53002ac5126895e48a4fc5801ba4d788bd34b79d7e66341c0c2c78c41",
+  "contextDigest": "8fc73c181842be9b06d95e526824ea1af543e992c3102467add02811f4e837fc",
   "releases": {
     "auto-best": {
       "status": "qualification",

@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "R.Q.S. Auto – Team",
-  "logo": "/registered-branding/onLight.png",
+  "logo": "/dealer-brand/v2-5c4df8204c0ea6d6/logo-on-light.webp",
   "phone": "+359876997791",
   "email": null,
   "address": "бул. „Цар Освободител“, Владислав Варненчик, Варна — точният номер не е потвърден",
