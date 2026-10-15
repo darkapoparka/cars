@@ -114,8 +114,8 @@ export const leadSite: LeadSiteConfig = {
     "tagline": "Al Hamoor Al Thahabi — vehicles and dealer support in Sharjah."
   }
 },
-  accent: "#30343b",
-  desktopAccent: "#4b5057",
+  accent: "#09090b",
+  desktopAccent: "#09090b",
   desktopInventoryFilterLayout: "quick",
   desktopPreviewIdentity: {
     sourceSlug: "day-night-auto-group",
@@ -147,11 +147,11 @@ export const leadSite: LeadSiteConfig = {
   email: "",
   heroPath: "/lead-hero.jpg",
   locale: "en-AE",
-  logoPath: "/dealer-brand/v2-16cb6c74cf4375bc/logo-on-light.webp",
-  logoInversePath: "/dealer-brand/v2-16cb6c74cf4375bc/logo-on-dark.webp",
-  logoOnLight: "/dealer-brand/v2-16cb6c74cf4375bc/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/v2-16cb6c74cf4375bc/logo-on-dark.webp",
-  logoOnAccent: "/dealer-brand/v2-16cb6c74cf4375bc/logo-on-dark.webp",
+  logoPath: "/dealer-brand/v2-f36b0deff0d57ac0/logo-on-light.webp",
+  logoInversePath: "/dealer-brand/v2-f36b0deff0d57ac0/logo-on-dark.webp",
+  logoOnLight: "/dealer-brand/v2-f36b0deff0d57ac0/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-f36b0deff0d57ac0/logo-on-dark.webp",
+  logoOnAccent: "/dealer-brand/v2-f36b0deff0d57ac0/logo-on-dark.webp",
   mapsEmbedUrl:
     "https://maps.google.com/maps?q=Al+Hamoor+Al+Thahabi+Souk+Al+Haraj+353+Sharjah&output=embed",
   mapsUrl:

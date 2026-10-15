@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "Al Hamoor Al Thahabi Used Cars",
   "locale": "en-AE",
   "logo": {
-    "light": "/dealer-brand/v2-16cb6c74cf4375bc/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-16cb6c74cf4375bc/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-16cb6c74cf4375bc/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-f36b0deff0d57ac0/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-f36b0deff0d57ac0/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-f36b0deff0d57ac0/logo-on-dark.webp",
     "alt": "Al Hamoor Al Thahabi Used Cars",
-    "favicon": "/dealer-brand/v2-16cb6c74cf4375bc/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-f36b0deff0d57ac0/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

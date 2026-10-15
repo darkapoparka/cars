@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "Al Hamoor Al Thahabi Used Cars",
-  "logo": "/dealer-brand/v2-16cb6c74cf4375bc/logo-on-light.webp",
+  "logo": "/dealer-brand/v2-f36b0deff0d57ac0/logo-on-light.webp",
   "phone": "+971545555204",
   "email": null,
   "address": "Souk Al Haraj, showroom 353, Sharjah",

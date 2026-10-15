@@ -4,9 +4,9 @@
   "name": "Al Hamoor Al Thahabi Used Cars",
   "shortName": "Al Hamoor Al Thahabi Used Cars",
   "logo": {
-    "light": "/dealer-brand/v2-16cb6c74cf4375bc/logo-on-light.webp",
-    "dark": "/dealer-brand/v2-16cb6c74cf4375bc/logo-on-dark.webp",
-    "icon": "/dealer-brand/v2-16cb6c74cf4375bc/app-icon.png"
+    "light": "/dealer-brand/v2-f36b0deff0d57ac0/logo-on-light.webp",
+    "dark": "/dealer-brand/v2-f36b0deff0d57ac0/logo-on-dark.webp",
+    "icon": "/dealer-brand/v2-f36b0deff0d57ac0/app-icon.png"
   },
   "defaultLocale": "en",
   "enabledLocales": [
@@ -49,6 +49,6 @@
     "Trade-in enquiries: confirm terms directly"
   ],
   "observedAt": "2026-09-09",
-  "inventoryNotice": "Dated listing samples. Confirm price, availability and vehicle information with the dealer.",
+  "inventoryNotice": "Dated listing samples; confirm price and availability directly with the dealership.",
   "previewNotice": "Independent design preview. No purchase, reservation or message is submitted by this website."
 }

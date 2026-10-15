@@ -27,9 +27,9 @@
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Al+Hamoor+Al+Thahabi+Souk+Al+Haraj+353+Sharjah",
     "mapsEmbedUrl": "https://maps.google.com/maps?q=Al+Hamoor+Al+Thahabi+Souk+Al+Haraj+353+Sharjah&output=embed",
     "accent": "#c13f38",
-    "logo": "/dealer-brand/v2-16cb6c74cf4375bc/logo-on-light.webp",
-    "logoLight": "/dealer-brand/v2-16cb6c74cf4375bc/logo-on-light.webp",
-    "logoDark": "/dealer-brand/v2-16cb6c74cf4375bc/logo-on-dark.webp",
+    "logo": "/dealer-brand/v2-f36b0deff0d57ac0/logo-on-light.webp",
+    "logoLight": "/dealer-brand/v2-f36b0deff0d57ac0/logo-on-light.webp",
+    "logoDark": "/dealer-brand/v2-f36b0deff0d57ac0/logo-on-dark.webp",
     "socialLinks": {
       "facebook": "",
       "instagram": "",
@@ -818,17 +818,17 @@
     "originalSha256": "6918488ad30a9d46195974ebe1b83fe56abc9de2d61151c22ade131019023b97",
     "assets": {
       "onLight": {
-        "publicPath": "/dealer-brand/v2-16cb6c74cf4375bc/logo-on-light.webp",
+        "publicPath": "/dealer-brand/v2-f36b0deff0d57ac0/logo-on-light.webp",
         "sha256": "643709b8fcc2872b40a0e08b550bd88cacb5f6bd6aec2504dbbc67f55252aaf0",
         "bytes": 224892
       },
       "onDark": {
-        "publicPath": "/dealer-brand/v2-16cb6c74cf4375bc/logo-on-dark.webp",
+        "publicPath": "/dealer-brand/v2-f36b0deff0d57ac0/logo-on-dark.webp",
         "sha256": "3708cb93366efc0223514bf7f3cb3658b412220088babe615718ceee64869114",
         "bytes": 69946
       },
       "onAccent": {
-        "publicPath": "/dealer-brand/v2-16cb6c74cf4375bc/logo-on-accent.webp",
+        "publicPath": "/dealer-brand/v2-f36b0deff0d57ac0/logo-on-accent.webp",
         "sha256": "3708cb93366efc0223514bf7f3cb3658b412220088babe615718ceee64869114",
         "bytes": 69946
       }

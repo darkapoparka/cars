@@ -149,7 +149,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "Al Hamoor Al Thahabi Used Cars",
   "location": "Souk Al Haraj, showroom 353, Sharjah",
-  "avatar": "/dealer-brand/v2-16cb6c74cf4375bc/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-f36b0deff0d57ac0/logo-on-light.webp",
   "mobile": "+971 54 555 5204",
   "email": "",
   "whatsapp": "",

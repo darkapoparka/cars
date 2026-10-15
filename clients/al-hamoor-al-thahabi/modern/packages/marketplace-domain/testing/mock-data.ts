@@ -65,7 +65,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Al Hamoor Al Thahabi Used Cars",
       "verificationStatus": "unverified",
       "city": "Sharjah",
-      "logoUrl": "/dealer-brand/v2-16cb6c74cf4375bc/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-f36b0deff0d57ac0/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": true
@@ -133,7 +133,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Al Hamoor Al Thahabi Used Cars",
       "verificationStatus": "unverified",
       "city": "Sharjah",
-      "logoUrl": "/dealer-brand/v2-16cb6c74cf4375bc/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-f36b0deff0d57ac0/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": true
@@ -201,7 +201,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Al Hamoor Al Thahabi Used Cars",
       "verificationStatus": "unverified",
       "city": "Sharjah",
-      "logoUrl": "/dealer-brand/v2-16cb6c74cf4375bc/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-f36b0deff0d57ac0/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": true
@@ -269,7 +269,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Al Hamoor Al Thahabi Used Cars",
       "verificationStatus": "unverified",
       "city": "Sharjah",
-      "logoUrl": "/dealer-brand/v2-16cb6c74cf4375bc/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-f36b0deff0d57ac0/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": false
@@ -337,7 +337,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Al Hamoor Al Thahabi Used Cars",
       "verificationStatus": "unverified",
       "city": "Sharjah",
-      "logoUrl": "/dealer-brand/v2-16cb6c74cf4375bc/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-f36b0deff0d57ac0/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": false
@@ -405,7 +405,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Al Hamoor Al Thahabi Used Cars",
       "verificationStatus": "unverified",
       "city": "Sharjah",
-      "logoUrl": "/dealer-brand/v2-16cb6c74cf4375bc/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-f36b0deff0d57ac0/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": false
@@ -473,7 +473,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Al Hamoor Al Thahabi Used Cars",
       "verificationStatus": "unverified",
       "city": "Sharjah",
-      "logoUrl": "/dealer-brand/v2-16cb6c74cf4375bc/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-f36b0deff0d57ac0/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": false
@@ -541,7 +541,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Al Hamoor Al Thahabi Used Cars",
       "verificationStatus": "unverified",
       "city": "Sharjah",
-      "logoUrl": "/dealer-brand/v2-16cb6c74cf4375bc/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-f36b0deff0d57ac0/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": false
