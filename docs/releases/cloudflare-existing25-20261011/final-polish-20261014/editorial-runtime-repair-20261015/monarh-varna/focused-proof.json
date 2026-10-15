@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-focused-exact-source-editorial-repair-proof",
+  "dealer": "monarh-varna",
+  "baseSourceCommit": "80082bf19cfab8f6f8e928f5d83f39a2d5f60b8d",
+  "baseSourceTree": "0910770d56ba3c0e875dc4b66ed87c444b947d8a",
+  "sourceModuleProof": {
+    "dealer": "monarh-varna",
+    "sourceCommit": "80082bf19cfab8f6f8e928f5d83f39a2d5f60b8d",
+    "sourceTree": "0910770d56ba3c0e875dc4b66ed87c444b947d8a",
+    "scope": "clients/monarh-varna/import/src/lib/content/extra-localized.ts",
+    "baseBlob": "83e928e7d98211d1ed2ea2c755633bf5cbe7dd8a",
+    "candidateBlob": "51863a470b3c85142bd9d60b3ff63789fd4de2a2",
+    "candidate": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/current-three-import-editorial/candidates/monarh-varna/extra-localized.ts",
+      "sha256": "1bd9ce4a06bbc8f7c4fe917110b5aa55079f7599d9c4e793b7b169c54c537ad6"
+    },
+    "patch": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/current-three-import-editorial/candidates/monarh-varna/explicit-editorial.patch",
+      "sha256": "9545bf595006a20ab5a80e0bbcafa0dca8bbe50fd559d88512801dbc8c7fd01a"
+    },
+    "addedEntries": [
+      {
+        "bg": "Свържете се с автокъщата на 0877277258\r\n0877796170 и посочете точния автомобил преди посещение.",
+        "en": "Contact the dealership on 0877277258 or 0877796170 and specify the exact vehicle before visiting."
+      }
+    ],
+    "beforeError": "Missing English editorial catalog entry: Свържете се с автокъщата на 0877277258\r\n0877796170 и посочете точния автомобил преди посещение.",
+    "after": {
+      "slug": "confirm-current-availability",
+      "title": "How to confirm current availability at МОНАРХ",
+      "category": "Dealer information",
+      "date": "2026-10-12",
+      "image": "/assets/daynight/codex-generated-v2/blog/blog-cover-import-check-v2.webp",
+      "excerpt": "Dated listing snapshot; confirm the price and availability directly with the dealership.",
+      "content": [
+        "Contact the dealership on 0877277258 or 0877796170 and specify the exact vehicle before visiting.",
+        "Independent demonstration preview. Forms do not send messages or create a reservation."
+      ]
+    },
+    "checks": {
+      "exactRetainedSource": true,
+      "beforeFailureReproduced": true,
+      "afterEnglishPostsPassed": true,
+      "bgBehaviorUnchanged": true,
+      "dateSlugAndImageUnchanged": true,
+      "allExistingCatalogEntriesUnchanged": true,
+      "unknownEditorialStillThrows": true
+    },
+    "modulesRead": [
+      {
+        "path": "import/src/lib/content/localized.ts",
+        "blob": "7c94b5baf7d920edfae2f214259343354405fe79"
+      },
+      {
+        "path": "import/src/lib/content/extra-localized.ts",
+        "blob": "83e928e7d98211d1ed2ea2c755633bf5cbe7dd8a"
+      },
+      {
+        "path": "import/src/lib/config/site.ts",
+        "blob": "d8ccb2e922f23a4223bad5c590fd1a61cd234c17"
+      },
+      {
+        "path": "import/src/lib/config/dealer.ts",
+        "blob": "21f8b6abd9ce1baf6293c14f8286879819819b92"
+      },
+      {
+        "path": "import/src/lib/config/cars-locale.ts",
+        "blob": "b2a736b81a4f1e0f739db99e5fe79cb10ec69cbd"
+      },
+      {
+        "path": "import/src/lib/data/blog.ts",
+        "blob": "942731d93b4a2a494232449d375ceab4b8430737"
+      }
+    ]
+  },
+  "originalProof": {
+    "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/current-three-import-editorial/candidates/remaining-editorial-repair-proof.json",
+    "sha256": "10a6224f4c2bba1a6f0a3098d85ec6e8d2da13d136d122b9120b81f69b42b4f3"
+  },
+  "compiled": false,
+  "newCiRun": null,
+  "providerWrites": 0
+}

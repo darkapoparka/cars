@@ -1,4 +1,5 @@
 export const extraEnglish = {
+  "Свържете се с автокъщата на 0877277258\r\n0877796170 и посочете точния автомобил преди посещение.": "Contact the dealership on 0877277258 or 0877796170 and specify the exact vehicle before visiting.",
   "Най-желаната кола в България | Lamborghini Urus": "The most sought-after car in Bulgaria | Lamborghini Urus",
   "Продадох най-новата Панамера": "I sold the latest Panamera",
   "Продадох най-скъпия Брабус в България": "I sold the most expensive Brabus in Bulgaria",

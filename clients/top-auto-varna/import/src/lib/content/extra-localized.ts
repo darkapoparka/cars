@@ -1,4 +1,5 @@
 export const extraEnglish = {
+  "Датирани обяви за катастрофирали автомобили за части или възстановяване; потвърдете състоянието, разходите за ремонт, цената и наличността с автокъщата.": "Dated listings of accident-damaged vehicles for parts or restoration; confirm condition, repair costs, price and availability with the dealership.",
   "Най-желаната кола в България | Lamborghini Urus": "The most sought-after car in Bulgaria | Lamborghini Urus",
   "Продадох най-новата Панамера": "I sold the latest Panamera",
   "Продадох най-скъпия Брабус в България": "I sold the most expensive Brabus in Bulgaria",

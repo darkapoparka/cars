@@ -1,4 +1,5 @@
 export const extraEnglish = {
+  "Датирани обяви за предварителна поръчка при партньор в Нидерландия; потвърдете срока за доставка, цената и наличността с автокъщата.": "Dated listings for advance orders through a partner in the Netherlands; confirm delivery time, price and availability with the dealership.",
   "Най-желаната кола в България | Lamborghini Urus": "The most sought-after car in Bulgaria | Lamborghini Urus",
   "Продадох най-новата Панамера": "I sold the latest Panamera",
   "Продадох най-скъпия Брабус в България": "I sold the most expensive Brabus in Bulgaria",
