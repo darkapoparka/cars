@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "ФЮЖЪН АУТО",
-  "logo": "/dealer-brand/v2-d598a334d4a2a896/logo-on-light.webp",
+  "logo": "/dealer-brand/v2-30886691951657f7/logo-on-light.webp",
   "phone": "+359879888461",
   "email": null,
   "address": "Пътя за село Тополи, 200 м след Темпо Бетони в ляво, зад Автосервиз и ГТП Тандем, Варна, България",

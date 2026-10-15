@@ -147,7 +147,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "ФЮЖЪН АУТО",
   "location": "Пътя за село Тополи, 200 м след Темпо Бетони в ляво, зад Автосервиз и ГТП Тандем, Варна, България",
-  "avatar": "/dealer-brand/v2-d598a334d4a2a896/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-30886691951657f7/logo-on-light.webp",
   "mobile": "0879888461\r\n0883374712",
   "email": "",
   "whatsapp": "",

@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "ФЮЖЪН АУТО",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-d598a334d4a2a896/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-d598a334d4a2a896/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-d598a334d4a2a896/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-30886691951657f7/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-30886691951657f7/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-30886691951657f7/logo-on-dark.webp",
     "alt": "ФЮЖЪН АУТО",
-    "favicon": "/dealer-brand/v2-d598a334d4a2a896/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-30886691951657f7/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

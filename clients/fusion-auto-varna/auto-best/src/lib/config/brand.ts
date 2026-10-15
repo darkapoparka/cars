@@ -33,6 +33,6 @@ export const brand = {
   addressLine,
   address: "Пътя за село Тополи, 200 м след Темпо Бетони в ляво, зад Автосервиз и ГТП Тандем, Варна, България",
   appointment: "Потвърдете работното време директно с автокъщата.",
-  logo: "/dealer-brand/v2-d598a334d4a2a896/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/v2-d598a334d4a2a896/logo-on-dark.webp"
+  logo: "/dealer-brand/v2-30886691951657f7/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-30886691951657f7/logo-on-dark.webp"
 } as const satisfies BrandConfig;

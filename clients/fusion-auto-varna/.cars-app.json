@@ -3,12 +3,12 @@
   "dealer": "fusion-auto-varna",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/app",
-    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
-    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
   },
-  "appDigest": "46f40c74ac2f6467becabe1b02bdba17b1762aec231f61c8cc04b36f6df3742b",
+  "appDigest": "06727068f0f84a9e1f6af528b5b6320350cc5eea09f50277b2d1dc457d45fb9f",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "fusion-auto-varna",
@@ -21,14 +21,14 @@
     "assets": [
       {
         "source": "auto-best/static/dealer-brand/logo-on-light.png",
-        "output": "public/dealer-app/logo-light-85f89e989c74b709d56d.png",
-        "sha256": "85f89e989c74b709d56d399c5b91275dccf41470c7e4925b889608cf9164beb7",
+        "output": "public/dealer-app/logo-light-a7ffee7fa9f78d3c89d4.png",
+        "sha256": "a7ffee7fa9f78d3c89d42a165bbe3ee5d35274182bb6077efc9eb66a40a54fdd",
         "role": "logo-light"
       },
       {
         "source": "auto-best/static/dealer-brand/logo-on-dark.png",
-        "output": "public/dealer-app/logo-dark-37a69c7739ee9de85b7f.png",
-        "sha256": "37a69c7739ee9de85b7fce8da0b28f15e74a25355d30775d8a283ed136e9b01e",
+        "output": "public/dealer-app/logo-dark-9f98162e5df76bdd008d.png",
+        "sha256": "9f98162e5df76bdd008d290c1cd243911c58fd37e1ca5d4cd0ac685f092b91dd",
         "role": "logo-dark"
       },
       {
@@ -72,5 +72,6 @@
     ]
   },
   "needsDealerQA": true,
-  "readyToPublish": false
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-15T04:30:12.209Z"
 }

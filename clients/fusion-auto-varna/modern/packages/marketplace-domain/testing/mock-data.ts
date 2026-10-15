@@ -49,7 +49,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "ФЮЖЪН АУТО",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-d598a334d4a2a896/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-30886691951657f7/logo-on-light.webp"
     },
     "publishedAt": "2026-10-12T09:00:00.000Z",
     "promoted": true
@@ -101,7 +101,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "ФЮЖЪН АУТО",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-d598a334d4a2a896/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-30886691951657f7/logo-on-light.webp"
     },
     "publishedAt": "2026-10-12T09:00:00.000Z",
     "promoted": true
