@@ -155,7 +155,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "Перфект Ауто",
   "location": "бул. Цар Освободител 110, кв. Победа",
-  "avatar": "/dealer-brand/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-3224d40a0ddda61d/logo-on-light.webp",
   "mobile": "0888 802 226",
   "email": "",
   "whatsapp": "",

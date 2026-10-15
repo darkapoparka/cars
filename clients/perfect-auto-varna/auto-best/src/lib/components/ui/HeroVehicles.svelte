@@ -57,16 +57,16 @@
       top: 56px;
       left: 0;
       right: 0;
-      height: 136px;
+      height: var(--dn-mobile-entry-art-height);
       overflow: hidden;
       pointer-events: none;
     }
     .dn-hero-vehicles__car { display: none; }
     .dn-hero-vehicles__front { display: block; position: absolute; top: -16px; left: 50%; transform: translateX(-50%); width: 160px; height: 160px; object-fit: contain; }
-    .dn-hero-vehicles__scene, .dn-hero-vehicles__pair { display: block; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: min(calc(100% - 16px), 360px); }
+    .dn-hero-vehicles__scene, .dn-hero-vehicles__pair { display: block; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: min(calc(100% - var(--dn-mobile-entry-art-gutter)), var(--dn-mobile-entry-home-art-width)); }
   }
   @media (max-width: 767px) {
-    .dn-hero-vehicles__scene { display: grid; grid-template-columns: 1fr 2fr 1fr; align-items: end; }
+    .dn-hero-vehicles__scene { display: grid; grid-template-columns: 1fr 2fr 1fr; align-items: end; width: min(calc(100% - var(--dn-mobile-entry-art-gutter)), var(--dn-mobile-entry-service-art-width)); }
   }
   @media (min-width: 1440px) {
     .dn-hero-vehicles--desktop {

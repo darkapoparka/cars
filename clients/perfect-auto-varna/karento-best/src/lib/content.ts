@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "Перфект Ауто",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/logo-on-light.webp",
-    "footer": "/dealer-brand/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-3224d40a0ddda61d/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-3224d40a0ddda61d/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-3224d40a0ddda61d/logo-on-dark.webp",
     "alt": "Перфект Ауто",
-    "favicon": "/dealer-brand/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-3224d40a0ddda61d/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

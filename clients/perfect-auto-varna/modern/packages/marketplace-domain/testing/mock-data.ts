@@ -63,7 +63,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Перфект Ауто",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-3224d40a0ddda61d/logo-on-light.webp"
     },
     "publishedAt": "2026-09-10T09:00:00.000Z",
     "promoted": true
@@ -155,7 +155,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Перфект Ауто",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-3224d40a0ddda61d/logo-on-light.webp"
     },
     "publishedAt": "2026-09-10T09:00:00.000Z",
     "promoted": true
@@ -255,7 +255,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Перфект Ауто",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-3224d40a0ddda61d/logo-on-light.webp"
     },
     "publishedAt": "2026-09-10T09:00:00.000Z",
     "promoted": true
@@ -355,7 +355,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Перфект Ауто",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-3224d40a0ddda61d/logo-on-light.webp"
     },
     "publishedAt": "2026-09-10T09:00:00.000Z",
     "promoted": false
@@ -451,7 +451,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Перфект Ауто",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-3224d40a0ddda61d/logo-on-light.webp"
     },
     "publishedAt": "2026-09-10T09:00:00.000Z",
     "promoted": false
@@ -543,7 +543,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Перфект Ауто",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-3224d40a0ddda61d/logo-on-light.webp"
     },
     "publishedAt": "2026-09-10T09:00:00.000Z",
     "promoted": false

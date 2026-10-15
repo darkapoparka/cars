@@ -114,8 +114,8 @@ export const leadSite: LeadSiteConfig = {
     "tagline": "PERFECT AUTO — vehicles and dealer support in Varna."
   }
 },
-  accent: "#30343b",
-  desktopAccent: "#4b5057",
+  accent: "#09090b",
+  desktopAccent: "#09090b",
   desktopInventoryFilterLayout: "quick",
   desktopPreviewIdentity: {
     sourceSlug: "day-night-auto-group",
@@ -147,10 +147,11 @@ export const leadSite: LeadSiteConfig = {
   email: "",
   heroPath: "/lead-hero.jpg",
   locale: "bg-BG",
-  logoPath: "/dealer-brand/logo-on-dark.webp",
-  logoOnLight: "/dealer-brand/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/logo-on-dark.webp",
-  logoOnAccent: "/dealer-brand/logo-on-accent.webp",
+  logoPath: "/dealer-brand/v2-3224d40a0ddda61d/logo-on-light.webp",
+  logoInversePath: "/dealer-brand/v2-3224d40a0ddda61d/logo-on-dark.webp",
+  logoOnLight: "/dealer-brand/v2-3224d40a0ddda61d/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-3224d40a0ddda61d/logo-on-dark.webp",
+  logoOnAccent: "/dealer-brand/v2-3224d40a0ddda61d/logo-on-dark.webp",
   mapsEmbedUrl:
     "https://maps.google.com/maps?q=бул.%20Цар%20Освободител%20110,%20кв.%20Победа%20Варна&output=embed",
   mapsUrl:

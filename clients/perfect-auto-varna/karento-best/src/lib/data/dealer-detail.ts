@@ -118,7 +118,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Перфект Ауто",
       "location": "бул. Цар Освободител 110, кв. Победа",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-3224d40a0ddda61d/logo-on-light.webp",
       "mobile": "0888 802 226",
       "email": "",
       "whatsapp": "",
@@ -259,7 +259,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Перфект Ауто",
       "location": "бул. Цар Освободител 110, кв. Победа",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-3224d40a0ddda61d/logo-on-light.webp",
       "mobile": "0888 802 226",
       "email": "",
       "whatsapp": "",
@@ -402,7 +402,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Перфект Ауто",
       "location": "бул. Цар Освободител 110, кв. Победа",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-3224d40a0ddda61d/logo-on-light.webp",
       "mobile": "0888 802 226",
       "email": "",
       "whatsapp": "",
@@ -545,7 +545,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Перфект Ауто",
       "location": "бул. Цар Освободител 110, кв. Победа",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-3224d40a0ddda61d/logo-on-light.webp",
       "mobile": "0888 802 226",
       "email": "",
       "whatsapp": "",
@@ -687,7 +687,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Перфект Ауто",
       "location": "бул. Цар Освободител 110, кв. Победа",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-3224d40a0ddda61d/logo-on-light.webp",
       "mobile": "0888 802 226",
       "email": "",
       "whatsapp": "",
@@ -828,7 +828,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Перфект Ауто",
       "location": "бул. Цар Освободител 110, кв. Победа",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-3224d40a0ddda61d/logo-on-light.webp",
       "mobile": "0888 802 226",
       "email": "",
       "whatsapp": "",
