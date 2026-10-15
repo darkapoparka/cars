@@ -4,23 +4,23 @@
   "id": "fleet-final-polish-20261014",
   "dealer": "automarket-varna",
   "scope": "existing-dealer-pilot",
-  "sourceCommit": "ab532f180e9ed1f0abbcfb55ca17c3e27b325d0e",
+  "sourceCommit": "bb173c33d7b640502ad2e4bf27546748c12858b8",
   "reviewed": true,
-  "reviewedAt": "2026-10-14T23:31:22.718Z",
+  "reviewedAt": "2026-10-14T23:58:34.754Z",
   "qualificationOnly": true,
   "approved": false,
   "nativeApproval": false,
   "hostedApproval": false,
   "globalReleaseApproval": false,
   "approvedLockSha256": "ecdfaf9599fbcbeadebc24de3b9aa1c7615a9a49e29d338e5e9a23427d405e26",
-  "candidateLockSha256": "84a7194a4afb72db5acade36b743baf6fe0ad673e7987346558c272c09c3b833",
+  "candidateLockSha256": "04633129df9e75d6cd62deeac9125b279957789d75f57cdb0b243ef61bfc3e7e",
   "sourceDeltaReview": {
     "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
-    "sha256": "da44d900278c7fdc1769d1e81b03f46840c7c2c13d654615dfeefaa3a5e5f7dc",
-    "reviewedAt": "2026-10-14T23:31:22.718Z"
+    "sha256": "43cb6876e815a2a6b866f1dadd304236de4ae58c05fe65c2ab62a23506ee7ce9",
+    "reviewedAt": "2026-10-14T23:55:37.398Z"
   },
   "sourceReview": {
     "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-review.json",
-    "sha256": "3f3d0991de42c55bd7ec06a95e322f72aa73d3664467c681343f72bde801e43c"
+    "sha256": "27c6ce5dd17ee6e1b9f6a5b059a95d5e1dbe4200f61264fc50addeb7af89d984"
   }
 }
