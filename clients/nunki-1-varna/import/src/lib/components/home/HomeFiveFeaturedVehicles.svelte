@@ -124,7 +124,7 @@
 					>
 						<span class="daynight-mobile-view-all-card__logo" aria-hidden="true">
 							<img
-								src={assetHref("/dealer-brand/v2-97b63d0ddaa0fa19/logo-on-light.webp")}
+								src={assetHref("/dealer-brand/v2-58fb38f9666e302e/logo-on-light.webp")}
 								loading="lazy"
 								decoding="async"
 								width="220"

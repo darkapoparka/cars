@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "NUNKI - 1",
-  "logo": "/dealer-brand/v2-97b63d0ddaa0fa19/logo-on-light.webp",
+  "logo": "/dealer-brand/v2-58fb38f9666e302e/logo-on-light.webp",
   "phone": "+359890426113",
   "email": null,
   "address": "бул. Цар Освободител 227;9023 планова индустриална зона-Варна, Варна, България",

@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "NUNKI - 1",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-97b63d0ddaa0fa19/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-97b63d0ddaa0fa19/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-97b63d0ddaa0fa19/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-58fb38f9666e302e/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-58fb38f9666e302e/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-58fb38f9666e302e/logo-on-dark.webp",
     "alt": "NUNKI - 1",
-    "favicon": "/dealer-brand/v2-97b63d0ddaa0fa19/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-58fb38f9666e302e/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

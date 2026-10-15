@@ -50,7 +50,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "NUNKI - 1",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-97b63d0ddaa0fa19/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-58fb38f9666e302e/logo-on-light.webp"
     },
     "publishedAt": "2026-10-11T09:00:00.000Z",
     "promoted": true

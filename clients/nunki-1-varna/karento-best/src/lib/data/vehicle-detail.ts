@@ -155,7 +155,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "NUNKI - 1",
   "location": "бул. Цар Освободител 227;9023 планова индустриална зона-Варна, Варна, България",
-  "avatar": "/dealer-brand/v2-97b63d0ddaa0fa19/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-58fb38f9666e302e/logo-on-light.webp",
   "mobile": "0890426113",
   "email": "",
   "whatsapp": "",
