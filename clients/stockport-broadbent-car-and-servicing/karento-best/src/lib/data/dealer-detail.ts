@@ -20,6 +20,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "labelKey": "vehicle.field.mileage",
         "valueNumber": 119000,
         "unit": "mi"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2017",
+        "labelKey": "vehicle.field.year"
       }
     ],
     "gallery": {
@@ -58,7 +64,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Broadbent Car and Servicing",
       "location": "Oldmoor Road, Bredbury, Stockport SK6 2QE",
-      "avatar": "/dealer-brand/logo.webp",
+      "avatar": "/dealer-brand/v2-cf2c5199092708bd/logo-on-light.webp",
       "mobile": "07398 540293",
       "email": "transitsellers2020@gmail.com",
       "whatsapp": "",
@@ -108,6 +114,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2020",
+        "labelKey": "vehicle.field.year"
       }
     ],
     "gallery": {
@@ -146,7 +158,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Broadbent Car and Servicing",
       "location": "Oldmoor Road, Bredbury, Stockport SK6 2QE",
-      "avatar": "/dealer-brand/logo.webp",
+      "avatar": "/dealer-brand/v2-cf2c5199092708bd/logo-on-light.webp",
       "mobile": "07398 540293",
       "email": "transitsellers2020@gmail.com",
       "whatsapp": "",
@@ -196,6 +208,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2017",
+        "labelKey": "vehicle.field.year"
       }
     ],
     "gallery": {
@@ -234,7 +252,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Broadbent Car and Servicing",
       "location": "Oldmoor Road, Bredbury, Stockport SK6 2QE",
-      "avatar": "/dealer-brand/logo.webp",
+      "avatar": "/dealer-brand/v2-cf2c5199092708bd/logo-on-light.webp",
       "mobile": "07398 540293",
       "email": "transitsellers2020@gmail.com",
       "whatsapp": "",
@@ -284,6 +302,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2018",
+        "labelKey": "vehicle.field.year"
       }
     ],
     "gallery": {
@@ -322,7 +346,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Broadbent Car and Servicing",
       "location": "Oldmoor Road, Bredbury, Stockport SK6 2QE",
-      "avatar": "/dealer-brand/logo.webp",
+      "avatar": "/dealer-brand/v2-cf2c5199092708bd/logo-on-light.webp",
       "mobile": "07398 540293",
       "email": "transitsellers2020@gmail.com",
       "whatsapp": "",
@@ -372,6 +396,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2021",
+        "labelKey": "vehicle.field.year"
       }
     ],
     "gallery": {
@@ -410,7 +440,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Broadbent Car and Servicing",
       "location": "Oldmoor Road, Bredbury, Stockport SK6 2QE",
-      "avatar": "/dealer-brand/logo.webp",
+      "avatar": "/dealer-brand/v2-cf2c5199092708bd/logo-on-light.webp",
       "mobile": "07398 540293",
       "email": "transitsellers2020@gmail.com",
       "whatsapp": "",
@@ -460,6 +490,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2016",
+        "labelKey": "vehicle.field.year"
       }
     ],
     "gallery": {
@@ -498,7 +534,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Broadbent Car and Servicing",
       "location": "Oldmoor Road, Bredbury, Stockport SK6 2QE",
-      "avatar": "/dealer-brand/logo.webp",
+      "avatar": "/dealer-brand/v2-cf2c5199092708bd/logo-on-light.webp",
       "mobile": "07398 540293",
       "email": "transitsellers2020@gmail.com",
       "whatsapp": "",
@@ -548,6 +584,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2014",
+        "labelKey": "vehicle.field.year"
       }
     ],
     "gallery": {
@@ -586,7 +628,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Broadbent Car and Servicing",
       "location": "Oldmoor Road, Bredbury, Stockport SK6 2QE",
-      "avatar": "/dealer-brand/logo.webp",
+      "avatar": "/dealer-brand/v2-cf2c5199092708bd/logo-on-light.webp",
       "mobile": "07398 540293",
       "email": "transitsellers2020@gmail.com",
       "whatsapp": "",
@@ -636,6 +678,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Petrol",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.gasoline"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2010",
+        "labelKey": "vehicle.field.year"
       }
     ],
     "gallery": {
@@ -674,7 +722,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Broadbent Car and Servicing",
       "location": "Oldmoor Road, Bredbury, Stockport SK6 2QE",
-      "avatar": "/dealer-brand/logo.webp",
+      "avatar": "/dealer-brand/v2-cf2c5199092708bd/logo-on-light.webp",
       "mobile": "07398 540293",
       "email": "transitsellers2020@gmail.com",
       "whatsapp": "",
@@ -724,6 +772,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2013",
+        "labelKey": "vehicle.field.year"
       }
     ],
     "gallery": {
@@ -762,7 +816,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Broadbent Car and Servicing",
       "location": "Oldmoor Road, Bredbury, Stockport SK6 2QE",
-      "avatar": "/dealer-brand/logo.webp",
+      "avatar": "/dealer-brand/v2-cf2c5199092708bd/logo-on-light.webp",
       "mobile": "07398 540293",
       "email": "transitsellers2020@gmail.com",
       "whatsapp": "",
@@ -812,6 +866,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Petrol",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.gasoline"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2014",
+        "labelKey": "vehicle.field.year"
       }
     ],
     "gallery": {
@@ -850,7 +910,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Broadbent Car and Servicing",
       "location": "Oldmoor Road, Bredbury, Stockport SK6 2QE",
-      "avatar": "/dealer-brand/logo.webp",
+      "avatar": "/dealer-brand/v2-cf2c5199092708bd/logo-on-light.webp",
       "mobile": "07398 540293",
       "email": "transitsellers2020@gmail.com",
       "whatsapp": "",

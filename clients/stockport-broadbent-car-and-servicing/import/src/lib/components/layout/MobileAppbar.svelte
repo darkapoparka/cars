@@ -184,10 +184,9 @@
 	}
 
 	@media (max-width: 767.98px) {
-		/* The narrow pin needs a small optical correction beside the call glyph. */
-		.bc-mobile-appbar__actions :global(.bc-mobile-appbar__map-icon) {
-			width: calc(var(--bc-mobile-icon-action-glyph-size) + 2px);
-			height: calc(var(--bc-mobile-icon-action-glyph-size) + 2px);
+		.bc-mobile-appbar {
+			--bc-mobile-icon-action-surface-size: var(--bc-mobile-control-surface-size);
+			--bc-mobile-icon-action-glyph-size: var(--bc-mobile-control-glyph-size);
 		}
 	}
 

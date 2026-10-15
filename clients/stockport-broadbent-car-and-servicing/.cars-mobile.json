@@ -5,12 +5,12 @@
   "name": "Broadbent Car and Servicing",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "8a97176e3adfbd95dce69b3096abc84e3eecd9c8",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/mobile",
-    "digest": "cc126a7c38634c7601ef8c617411d6938d7c9b6efc7b319e87c2c6efc99d8b6d",
-    "tree": "9a4db757e788ee236712b8eac25956a6a8a61d0b"
+    "digest": "f5a3e541a7c648a4c2899ad3893e22a3806027a9f66d95fa4e8c74b2226635b6",
+    "tree": "792bfdd1d8eb22aabd90c7e3a0c0779a6c1c36f3"
   },
-  "sourceDigest": "d9f9a6806494a3e3997d0047bcb07e2495450174149290128675f4295144b8fe",
+  "sourceDigest": "4efe0e75a36431518631777c43e0669c404170ebf0dee013bdb2724d162cf074",
   "inventory": {
     "mode": "dated-listing-snapshot",
     "count": 10,
@@ -20,8 +20,7 @@
     "profileSha256": "305bf080f5cdc9b5dacce8eb0a0a98a241d254e2d1ca2df0381f8d0bdc15149a",
     "logoPaths": [
       "/dealer-brand/logo-on-light-20261011.webp",
-      "/dealer-brand/logo-on-dark-20261011.webp",
-      "/dealer-brand/logo-on-accent-20261011.webp"
+      "/dealer-brand/logo-on-dark-20261011.webp"
     ],
     "mediaPaths": [
       "/dealer-stock/van.webp",
@@ -52,7 +51,8 @@
       "mobile/src/components/ShowroomServiceRequest.tsx",
       "mobile/src/lib/service-requests.ts",
       "mobile/src/lib/enquiry.ts",
-      "mobile/src/lib/assistant.ts"
+      "mobile/src/lib/assistant.ts",
+      "mobile/src/components/Header.tsx"
     ]
   },
   "needsDealerQA": true,

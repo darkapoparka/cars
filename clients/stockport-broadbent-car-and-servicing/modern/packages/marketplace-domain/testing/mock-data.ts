@@ -49,7 +49,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Broadbent Car and Servicing",
       "verificationStatus": "unverified",
       "city": "Bredbury, Stockport",
-      "logoUrl": "/dealer-brand/logo.webp"
+      "logoUrl": "/dealer-brand/v2-cf2c5199092708bd/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": true
@@ -100,7 +100,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Broadbent Car and Servicing",
       "verificationStatus": "unverified",
       "city": "Bredbury, Stockport",
-      "logoUrl": "/dealer-brand/logo.webp"
+      "logoUrl": "/dealer-brand/v2-cf2c5199092708bd/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": true
@@ -151,7 +151,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Broadbent Car and Servicing",
       "verificationStatus": "unverified",
       "city": "Bredbury, Stockport",
-      "logoUrl": "/dealer-brand/logo.webp"
+      "logoUrl": "/dealer-brand/v2-cf2c5199092708bd/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": true
@@ -202,7 +202,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Broadbent Car and Servicing",
       "verificationStatus": "unverified",
       "city": "Bredbury, Stockport",
-      "logoUrl": "/dealer-brand/logo.webp"
+      "logoUrl": "/dealer-brand/v2-cf2c5199092708bd/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -253,7 +253,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Broadbent Car and Servicing",
       "verificationStatus": "unverified",
       "city": "Bredbury, Stockport",
-      "logoUrl": "/dealer-brand/logo.webp"
+      "logoUrl": "/dealer-brand/v2-cf2c5199092708bd/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -304,7 +304,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Broadbent Car and Servicing",
       "verificationStatus": "unverified",
       "city": "Bredbury, Stockport",
-      "logoUrl": "/dealer-brand/logo.webp"
+      "logoUrl": "/dealer-brand/v2-cf2c5199092708bd/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -355,7 +355,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Broadbent Car and Servicing",
       "verificationStatus": "unverified",
       "city": "Bredbury, Stockport",
-      "logoUrl": "/dealer-brand/logo.webp"
+      "logoUrl": "/dealer-brand/v2-cf2c5199092708bd/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -406,7 +406,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Broadbent Car and Servicing",
       "verificationStatus": "unverified",
       "city": "Bredbury, Stockport",
-      "logoUrl": "/dealer-brand/logo.webp"
+      "logoUrl": "/dealer-brand/v2-cf2c5199092708bd/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -457,7 +457,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Broadbent Car and Servicing",
       "verificationStatus": "unverified",
       "city": "Bredbury, Stockport",
-      "logoUrl": "/dealer-brand/logo.webp"
+      "logoUrl": "/dealer-brand/v2-cf2c5199092708bd/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -508,211 +508,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Broadbent Car and Servicing",
       "verificationStatus": "unverified",
       "city": "Bredbury, Stockport",
-      "logoUrl": "/dealer-brand/logo.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1006",
-    "slug": "peugeot-partner-2017-860026521888",
-    "category": "van",
-    "dealerOrgId": "dealer-stockport-broadbent-car-and-servicing",
-    "status": "active",
-    "title": "2017 Peugeot Partner 850 1.6 BlueHDi 100 Professional Van [non SS] PANEL VAN Die",
-    "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
-    "price": {
-      "amount": 3995,
-      "currency": "GBP"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer-stock/van.webp",
-        "alt": "2017 Peugeot Partner 850 1.6 BlueHDi 100 Professional Van [non SS] PANEL VAN Die"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Bredbury, Stockport",
-      "region": "Bredbury, Stockport",
-      "country": "United Kingdom"
-    },
-    "spec": {
-      "make": "Peugeot",
-      "model": "Partner",
-      "trim": "850 1.6 BlueHDi 100 Professional Van [non SS] PANEL VAN Die",
-      "year": 2017,
-      "bodyType": "van",
-      "fuelType": "other",
-      "transmission": "unknown",
-      "mileageValue": 191512,
-      "mileageUnit": "km",
-      "mileageSourceValue": 119000,
-      "mileageSourceUnit": "mi"
-    },
-    "seller": {
-      "id": "dealer-stockport-broadbent-car-and-servicing",
-      "type": "dealer",
-      "displayName": "Broadbent Car and Servicing",
-      "verificationStatus": "unverified",
-      "city": "Bredbury, Stockport",
-      "logoUrl": "/dealer-brand/logo.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1007",
-    "slug": "ford-transit-2020-860026533399",
-    "category": "van",
-    "dealerOrgId": "dealer-stockport-broadbent-car-and-servicing",
-    "status": "active",
-    "title": "2020 Ford Transit 2.0 EcoBlue 130ps H3 Trend Van PANEL VAN Diesel Manual",
-    "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
-    "price": {
-      "amount": 9995,
-      "currency": "GBP"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer-stock/van.webp",
-        "alt": "2020 Ford Transit 2.0 EcoBlue 130ps H3 Trend Van PANEL VAN Diesel Manual"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Bredbury, Stockport",
-      "region": "Bredbury, Stockport",
-      "country": "United Kingdom"
-    },
-    "spec": {
-      "make": "Ford",
-      "model": "Transit",
-      "trim": "2.0 EcoBlue 130ps H3 Trend Van PANEL VAN Diesel Manual",
-      "year": 2020,
-      "bodyType": "van",
-      "fuelType": "diesel",
-      "transmission": "manual",
-      "mileageValue": 148060,
-      "mileageUnit": "km",
-      "mileageSourceValue": 92000,
-      "mileageSourceUnit": "mi"
-    },
-    "seller": {
-      "id": "dealer-stockport-broadbent-car-and-servicing",
-      "type": "dealer",
-      "displayName": "Broadbent Car and Servicing",
-      "verificationStatus": "unverified",
-      "city": "Bredbury, Stockport",
-      "logoUrl": "/dealer-brand/logo.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1008",
-    "slug": "ford-transit-custom-2017-860026522289",
-    "category": "van",
-    "dealerOrgId": "dealer-stockport-broadbent-car-and-servicing",
-    "status": "active",
-    "title": "2017 Ford Transit Custom 2.0 TDCi 105ps High Roof Van PANEL VAN Diesel Manual",
-    "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
-    "price": {
-      "amount": 5995,
-      "currency": "GBP"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer-stock/van.webp",
-        "alt": "2017 Ford Transit Custom 2.0 TDCi 105ps High Roof Van PANEL VAN Diesel Manual"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Bredbury, Stockport",
-      "region": "Bredbury, Stockport",
-      "country": "United Kingdom"
-    },
-    "spec": {
-      "make": "Ford",
-      "model": "Transit Custom",
-      "trim": "2.0 TDCi 105ps High Roof Van PANEL VAN Diesel Manual",
-      "year": 2017,
-      "bodyType": "van",
-      "fuelType": "diesel",
-      "transmission": "manual",
-      "mileageValue": 231746,
-      "mileageUnit": "km",
-      "mileageSourceValue": 144000,
-      "mileageSourceUnit": "mi"
-    },
-    "seller": {
-      "id": "dealer-stockport-broadbent-car-and-servicing",
-      "type": "dealer",
-      "displayName": "Broadbent Car and Servicing",
-      "verificationStatus": "unverified",
-      "city": "Bredbury, Stockport",
-      "logoUrl": "/dealer-brand/logo.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1009",
-    "slug": "ford-transit-2018-860023676019",
-    "category": "van",
-    "dealerOrgId": "dealer-stockport-broadbent-car-and-servicing",
-    "status": "active",
-    "title": "2018 Ford Transit 2.0 TDCi 130ps H3 Van PANEL VAN Diesel Manual",
-    "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
-    "price": {
-      "amount": 6795,
-      "currency": "GBP"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer-stock/van.webp",
-        "alt": "2018 Ford Transit 2.0 TDCi 130ps H3 Van PANEL VAN Diesel Manual"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Bredbury, Stockport",
-      "region": "Bredbury, Stockport",
-      "country": "United Kingdom"
-    },
-    "spec": {
-      "make": "Ford",
-      "model": "Transit",
-      "trim": "2.0 TDCi 130ps H3 Van PANEL VAN Diesel Manual",
-      "year": 2018,
-      "bodyType": "van",
-      "fuelType": "diesel",
-      "transmission": "manual",
-      "mileageValue": 212433,
-      "mileageUnit": "km",
-      "mileageSourceValue": 132000,
-      "mileageSourceUnit": "mi"
-    },
-    "seller": {
-      "id": "dealer-stockport-broadbent-car-and-servicing",
-      "type": "dealer",
-      "displayName": "Broadbent Car and Servicing",
-      "verificationStatus": "unverified",
-      "city": "Bredbury, Stockport",
-      "logoUrl": "/dealer-brand/logo.webp"
+      "logoUrl": "/dealer-brand/v2-cf2c5199092708bd/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false

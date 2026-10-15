@@ -2,7 +2,7 @@ export type BrandConfig = {
   name: string;
   shortName: string;
   city: string;
-  showroomCoordinates: { latitude: number; longitude: number };
+  showroomCoordinates: { latitude: number; longitude: number } | null;
   addressLine: string;
   address: string;
   phone: string;
@@ -11,8 +11,8 @@ export type BrandConfig = {
   logo: `/${string}`;
   logoOnDark: `/${string}`;
   youtubeUrl: `https://${string}` | '';
-  instagramUrl: `https://${string}`;
-  facebookUrl: `https://${string}`;
+  instagramUrl: `https://${string}` | '';
+  facebookUrl: `https://${string}` | '';
 };
 
 const name = "Broadbent Car and Servicing";
@@ -24,15 +24,15 @@ export const brand = {
   name,
   shortName,
   city,
-  showroomCoordinates: {"latitude":0,"longitude":0},
-  youtubeUrl: "https://www.youtube.com/",
-  instagramUrl: "https://www.instagram.com/",
-  facebookUrl: "https://www.facebook.com/",
+  showroomCoordinates: null,
+  youtubeUrl: "",
+  instagramUrl: "",
+  facebookUrl: "",
   phone: "07398 540293",
   phoneHref: "tel:+447398540293",
   addressLine,
   address: "Oldmoor Road, Bredbury, Stockport SK6 2QE",
   appointment: "Contact the dealership before visiting.",
-  logo: "/dealer-brand/logo-on-light-20261011.webp",
-  logoOnDark: "/dealer-brand/logo-on-dark-20261011.webp"
+  logo: "/dealer-brand/v2-cf2c5199092708bd/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-cf2c5199092708bd/logo-on-dark.webp"
 } as const satisfies BrandConfig;

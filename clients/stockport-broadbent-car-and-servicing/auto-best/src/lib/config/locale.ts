@@ -23,13 +23,17 @@ export const dealerLocalizedText = {
     "city": "Bredbury, Stockport",
     "addressLine": "Oldmoor Road, Bredbury, Stockport SK6 2QE",
     "address": "Oldmoor Road, Bredbury, Stockport SK6 2QE",
-    "appointment": "Contact the dealership before visiting."
+    "appointment": "Contact the dealership before visiting.",
+    "addressShort": "Oldmoor Road, Bredbury, Stockport SK6 2QE",
+    "appointmentShort": "Contact the dealership before visiting."
   },
   "bg": {
     "city": "Bredbury, Stockport",
     "addressLine": "Oldmoor Road, Bredbury, Stockport SK6 2QE",
     "address": "Oldmoor Road, Bredbury, Stockport SK6 2QE",
-    "appointment": "Свържете се с автокъщата преди посещение."
+    "appointment": "Свържете се с автокъщата преди посещение.",
+    "addressShort": "Oldmoor Road, Bredbury, Stockport SK6 2QE",
+    "appointmentShort": "Свържете се с автокъщата преди посещение."
   }
 } as const;
 

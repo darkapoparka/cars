@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "Broadbent Car and Servicing",
   "locale": "en-GB",
   "logo": {
-    "light": "/variant-6/dealer-brand/logo-on-light-20261011.webp",
-    "footer": "/variant-6/dealer-brand/logo-on-dark-20261011.webp",
-    "archivedDark": "/variant-6/dealer-brand/logo-on-dark-20261011.webp",
+    "light": "/dealer-brand/v2-cf2c5199092708bd/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-cf2c5199092708bd/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-cf2c5199092708bd/logo-on-dark.webp",
     "alt": "Broadbent Car and Servicing",
-    "favicon": "/dealer-brand/app-icon.png",
+    "favicon": "/dealer-brand/v2-cf2c5199092708bd/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {
