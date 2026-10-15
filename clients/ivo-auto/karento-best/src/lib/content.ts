@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "Иво Ауто",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/logo-on-light.webp",
-    "footer": "/dealer-brand/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-b4aead090ab56ec9/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-b4aead090ab56ec9/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-b4aead090ab56ec9/logo-on-dark.webp",
     "alt": "Иво Ауто",
-    "favicon": "/dealer-brand/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-b4aead090ab56ec9/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

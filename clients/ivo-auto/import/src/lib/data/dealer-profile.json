@@ -27,9 +27,9 @@
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=%D0%98%D0%B2%D0%BE%20%D0%90%D1%83%D1%82%D0%BE%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20256%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0",
     "mapsEmbedUrl": "https://maps.google.com/maps?q=%D0%98%D0%B2%D0%BE%20%D0%90%D1%83%D1%82%D0%BE%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20256%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0&output=embed",
     "accent": "#c58a1f",
-    "logo": "/dealer-brand/logo-on-light.webp",
-    "logoLight": "/dealer-brand/logo-on-light.webp",
-    "logoDark": "/dealer-brand/logo-on-dark.webp",
+    "logo": "/dealer-brand/v2-b4aead090ab56ec9/logo-on-light.webp",
+    "logoLight": "/dealer-brand/v2-b4aead090ab56ec9/logo-on-light.webp",
+    "logoDark": "/dealer-brand/v2-b4aead090ab56ec9/logo-on-dark.webp",
     "socialLinks": {
       "facebook": "",
       "instagram": "",
@@ -1222,19 +1222,19 @@
     "originalSha256": "7b7dadf1c779f68b84e8d01de313a52709b32715826811571300baf9c46e840d",
     "assets": {
       "onLight": {
-        "publicPath": "/dealer-brand/logo-on-light.webp",
-        "sha256": "e7dd0d595525f68b288822a880877aa54937cfc587e7cbb5bd5017688bcda3d8",
-        "bytes": 88782
+        "publicPath": "/dealer-brand/v2-b4aead090ab56ec9/logo-on-light.webp",
+        "sha256": "2498bf0892d290b084e2c93ba45b596a3b0f9b350e912d5626255b25791b8fcd",
+        "bytes": 145410
       },
       "onDark": {
-        "publicPath": "/dealer-brand/logo-on-dark.webp",
-        "sha256": "d63b81a67bc64a32160173fd991166cbeec5c4a455049e8e1c54c7ed4ac0e7c0",
-        "bytes": 81786
+        "publicPath": "/dealer-brand/v2-b4aead090ab56ec9/logo-on-dark.webp",
+        "sha256": "b90fe58165c18ea4bad48b852e65a6e0c731a581fda34acadee7bd1dff8dc76c",
+        "bytes": 106578
       },
       "onAccent": {
-        "publicPath": "/dealer-brand/logo-on-accent.webp",
-        "sha256": "d63b81a67bc64a32160173fd991166cbeec5c4a455049e8e1c54c7ed4ac0e7c0",
-        "bytes": 81786
+        "publicPath": "/dealer-brand/v2-b4aead090ab56ec9/logo-on-accent.webp",
+        "sha256": "b90fe58165c18ea4bad48b852e65a6e0c731a581fda34acadee7bd1dff8dc76c",
+        "bytes": 106578
       }
     },
     "preparedAt": "2026-10-13T16:27:23.337Z",

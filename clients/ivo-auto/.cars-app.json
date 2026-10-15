@@ -3,32 +3,32 @@
   "dealer": "ivo-auto",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/app",
-    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1",
-    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76"
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
   },
-  "appDigest": "56ac6fe35cd0a49fdf2ab2456814b9a89c56d953599748ace9fafd039f6bcab3",
+  "appDigest": "6ff11afe22c6ca81492f4d9ce22c61281ece3ae96b4348509409e12a87c49781",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "ivo-auto",
     "profile": "auto-best/src/lib/data/dealer-profile.json",
-    "profileSha256": "eee23fcf2cd4caf579bcbcd1d3f15186f80263acb44a7661bdcf49f88b3b28b1",
-    "logoPolicy": "Restore exact retained gold raster identity and existing gold icon; no new identity was generated. Preserve factual proposal provenance and template UI palettes.",
+    "profileSha256": "418215afa40c36e9283d4a06dc8c36ee8bc21dff5d95142d74550b0608f4683d",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
     "vehicles": 16,
     "currency": "EUR",
     "observedAt": "2026-09-07",
     "assets": [
       {
-        "source": "auto-best/static/dealer-brand/logo-on-light.webp",
-        "output": "public/dealer-app/logo-light-e7dd0d595525f68b2888.webp",
-        "sha256": "e7dd0d595525f68b288822a880877aa54937cfc587e7cbb5bd5017688bcda3d8",
+        "source": "auto-best/static/dealer-brand/v2-b4aead090ab56ec9/logo-on-light.webp",
+        "output": "public/dealer-app/logo-light-2498bf0892d290b084e2.webp",
+        "sha256": "2498bf0892d290b084e2c93ba45b596a3b0f9b350e912d5626255b25791b8fcd",
         "role": "logo-light"
       },
       {
-        "source": "auto-best/static/dealer-brand/logo-on-dark.webp",
-        "output": "public/dealer-app/logo-dark-d63b81a67bc64a321601.webp",
-        "sha256": "d63b81a67bc64a32160173fd991166cbeec5c4a455049e8e1c54c7ed4ac0e7c0",
+        "source": "auto-best/static/dealer-brand/v2-b4aead090ab56ec9/logo-on-dark.webp",
+        "output": "public/dealer-app/logo-dark-b90fe58165c18ea4bad4.webp",
+        "sha256": "b90fe58165c18ea4bad48b852e65a6e0c731a581fda34acadee7bd1dff8dc76c",
         "role": "logo-dark"
       },
       {
@@ -414,12 +414,6 @@
         "output": "public/dealer-app/vehicle-685d6003f8c6dc12fe7b.webp",
         "sha256": "685d6003f8c6dc12fe7b36ea950e52260af0ae2a5fe53bbb860e061e1e809baf",
         "role": "vehicle"
-      },
-      {
-        "source": "assets/branding/icon.png",
-        "output": "public/dealer-app/icon.png",
-        "sha256": "b669b8f70e01795346da8f70ef186e849943c04b277c95eb922366d905a868e1",
-        "role": "logo-icon"
       }
     ],
     "mileageFacts": [
@@ -522,5 +516,6 @@
     ]
   },
   "needsDealerQA": true,
-  "readyToPublish": false
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-15T02:36:25.928Z"
 }

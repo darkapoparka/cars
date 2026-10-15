@@ -298,7 +298,7 @@ export const DesktopQuickFilterDialog = ({
               desktopQuickFilterOptionClassName,
               "col-span-2",
               !draftSelected &&
-                "border-transparent bg-brand font-semibold text-brand-foreground hover:border-transparent hover:bg-[var(--lead-site-accent-hover)] hover:text-[var(--brand-hover-foreground)] hover:text-brand-foreground"
+                "border-transparent bg-primary font-semibold text-primary-foreground hover:border-transparent hover:bg-[var(--primary-hover)] hover:text-[var(--primary-hover-foreground)] hover:text-primary-foreground"
             )}
             onClick={() => setDraftSelected(undefined)}
             type="button"
@@ -315,7 +315,7 @@ export const DesktopQuickFilterDialog = ({
               className={cn(
                 desktopQuickFilterOptionClassName,
                 draftSelected === option.value &&
-                  "border-transparent bg-brand font-semibold text-brand-foreground hover:border-transparent hover:bg-[var(--lead-site-accent-hover)] hover:text-[var(--brand-hover-foreground)] hover:text-brand-foreground"
+                  "border-transparent bg-primary font-semibold text-primary-foreground hover:border-transparent hover:bg-[var(--primary-hover)] hover:text-[var(--primary-hover-foreground)] hover:text-primary-foreground"
               )}
               key={option.value}
               onClick={() => setDraftSelected(option.value)}

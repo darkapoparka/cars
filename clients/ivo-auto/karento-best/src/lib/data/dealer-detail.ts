@@ -110,7 +110,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Иво Ауто",
       "location": "бул. „Цар Освободител“ 256",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-b4aead090ab56ec9/logo-on-light.webp",
       "mobile": "0878 720 035",
       "email": "",
       "whatsapp": "",
@@ -238,7 +238,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Иво Ауто",
       "location": "бул. „Цар Освободител“ 256",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-b4aead090ab56ec9/logo-on-light.webp",
       "mobile": "0878 720 035",
       "email": "",
       "whatsapp": "",
@@ -366,7 +366,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Иво Ауто",
       "location": "бул. „Цар Освободител“ 256",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-b4aead090ab56ec9/logo-on-light.webp",
       "mobile": "0878 720 035",
       "email": "",
       "whatsapp": "",
@@ -486,7 +486,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Иво Ауто",
       "location": "бул. „Цар Освободител“ 256",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-b4aead090ab56ec9/logo-on-light.webp",
       "mobile": "0878 720 035",
       "email": "",
       "whatsapp": "",
@@ -612,7 +612,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Иво Ауто",
       "location": "бул. „Цар Освободител“ 256",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-b4aead090ab56ec9/logo-on-light.webp",
       "mobile": "0878 720 035",
       "email": "",
       "whatsapp": "",
@@ -738,7 +738,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Иво Ауто",
       "location": "бул. „Цар Освободител“ 256",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-b4aead090ab56ec9/logo-on-light.webp",
       "mobile": "0878 720 035",
       "email": "",
       "whatsapp": "",
@@ -864,7 +864,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Иво Ауто",
       "location": "бул. „Цар Освободител“ 256",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-b4aead090ab56ec9/logo-on-light.webp",
       "mobile": "0878 720 035",
       "email": "",
       "whatsapp": "",
@@ -992,7 +992,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Иво Ауто",
       "location": "бул. „Цар Освободител“ 256",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-b4aead090ab56ec9/logo-on-light.webp",
       "mobile": "0878 720 035",
       "email": "",
       "whatsapp": "",
@@ -1120,7 +1120,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Иво Ауто",
       "location": "бул. „Цар Освободител“ 256",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-b4aead090ab56ec9/logo-on-light.webp",
       "mobile": "0878 720 035",
       "email": "",
       "whatsapp": "",
@@ -1246,7 +1246,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Иво Ауто",
       "location": "бул. „Цар Освободител“ 256",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-b4aead090ab56ec9/logo-on-light.webp",
       "mobile": "0878 720 035",
       "email": "",
       "whatsapp": "",
@@ -1374,7 +1374,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Иво Ауто",
       "location": "бул. „Цар Освободител“ 256",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-b4aead090ab56ec9/logo-on-light.webp",
       "mobile": "0878 720 035",
       "email": "",
       "whatsapp": "",
@@ -1502,7 +1502,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Иво Ауто",
       "location": "бул. „Цар Освободител“ 256",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-b4aead090ab56ec9/logo-on-light.webp",
       "mobile": "0878 720 035",
       "email": "",
       "whatsapp": "",
@@ -1630,7 +1630,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Иво Ауто",
       "location": "бул. „Цар Освободител“ 256",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-b4aead090ab56ec9/logo-on-light.webp",
       "mobile": "0878 720 035",
       "email": "",
       "whatsapp": "",
@@ -1756,7 +1756,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Иво Ауто",
       "location": "бул. „Цар Освободител“ 256",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-b4aead090ab56ec9/logo-on-light.webp",
       "mobile": "0878 720 035",
       "email": "",
       "whatsapp": "",
@@ -1882,7 +1882,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Иво Ауто",
       "location": "бул. „Цар Освободител“ 256",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-b4aead090ab56ec9/logo-on-light.webp",
       "mobile": "0878 720 035",
       "email": "",
       "whatsapp": "",
@@ -2010,7 +2010,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Иво Ауто",
       "location": "бул. „Цар Освободител“ 256",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-b4aead090ab56ec9/logo-on-light.webp",
       "mobile": "0878 720 035",
       "email": "",
       "whatsapp": "",

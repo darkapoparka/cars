@@ -132,16 +132,16 @@
     background: var(--desktop-control-neutral-hover);
   }
   .contact .primaryAction {
-    color: var(--brand-foreground);
-    background: var(--brand);
+    color: var(--primary-foreground);
+    background: var(--primary);
   }
   .contact .primaryAction:hover {
-    color: var(--brand-hover-foreground);
-    background: var(--lead-site-accent-hover);
+    color: var(--primary-hover-foreground);
+    background: var(--primary-hover);
   }
   .contact .primaryAction:active {
-    color: var(--brand-active-foreground);
-    background: var(--lead-site-accent-active);
+    color: var(--primary-active-foreground);
+    background: var(--primary-active);
   }
   .header a:focus-visible,
   .contact .action:focus-visible {

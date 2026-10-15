@@ -3,18 +3,24 @@ import { site } from '../src/lib/config/site';
 import { promptVersion } from './locale-fixture';
 import { test, expect } from '@playwright/test';
 const hostedQa = process.env.CARS_HOSTED_QA_PROFILE
-  ? await import('../../../scripts/lib/hosted-native-qa.mjs') : null;
+	? await import(new URL('../../../scripts/lib/hosted-native-qa.mjs', import.meta.url).href)
+	: null;
 const mount = process.env.LOCALE_FIXTURE_BASE ?? '';
 const hosted = hostedQa?.readHostedProfile('import') ?? null;
 const hostedBoundaries = new WeakMap();
 test.beforeEach(async ({ context }, info) => {
-  if (!hosted) return;
-  hostedQa!.validateHelperTarget(hosted, info.project.use.baseURL as string, mount, process.env.CARS_HOSTED_QA_IMPORT_OUTPUT ?? '');
-  const blocked = await hostedQa!.guardHostedContext(context, hosted);
-  hostedBoundaries.set(context, blocked);
+	if (!hosted) return;
+	hostedQa!.validateHelperTarget(
+		hosted,
+		info.project.use.baseURL as string,
+		mount,
+		process.env.CARS_HOSTED_QA_IMPORT_OUTPUT ?? ''
+	);
+	const blocked = await hostedQa!.guardHostedContext(context, hosted);
+	hostedBoundaries.set(context, blocked);
 });
 test.afterEach(async ({ context }) => {
-  if (hosted) hostedQa!.assertBoundary(hostedBoundaries.get(context) ?? []);
+	if (hosted) hostedQa!.assertBoundary(hostedBoundaries.get(context) ?? []);
 });
 const route = (locale: string, path = '') => mount + '/' + locale + path;
 const routes = [
