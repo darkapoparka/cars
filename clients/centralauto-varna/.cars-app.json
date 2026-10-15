@@ -3,12 +3,12 @@
   "dealer": "centralauto-varna",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/app",
-    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
-    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
   },
-  "appDigest": "48e3859e8961045c8ef35b50a379306b570419cba0edf4dfe6a49ffd6bd8abe8",
+  "appDigest": "dba00113d4bb14c70c7142b02dd7b81ea44ade137341e4ff5d54346082bf7bba",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "centralauto-varna",
@@ -21,14 +21,14 @@
     "assets": [
       {
         "source": "auto-best/static/dealer-brand/logo-on-light.png",
-        "output": "public/dealer-app/logo-light-4d7a5b17c7e5ea8ab38f.png",
-        "sha256": "4d7a5b17c7e5ea8ab38f609bf5320e46a4a6e2838564083ca0c351c3a7700b35",
+        "output": "public/dealer-app/logo-light-714999e8e68f90a67c70.png",
+        "sha256": "714999e8e68f90a67c70aee4fbdae6c64e3d1d7b531a163015d382c814d33194",
         "role": "logo-light"
       },
       {
         "source": "auto-best/static/dealer-brand/logo-on-dark.png",
-        "output": "public/dealer-app/logo-dark-de4a0dfc0859fd2851aa.png",
-        "sha256": "de4a0dfc0859fd2851aa183f5cac57c813395986916efc02769fc649cedd1219",
+        "output": "public/dealer-app/logo-dark-c28b2405f4fc12990c77.png",
+        "sha256": "c28b2405f4fc12990c7775cfa1a8373bb81fb39f9db5e9b1023d5f81ff7dfb3d",
         "role": "logo-dark"
       },
       {
@@ -54,5 +54,6 @@
     ]
   },
   "needsDealerQA": true,
-  "readyToPublish": false
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-15T05:04:27.909Z"
 }

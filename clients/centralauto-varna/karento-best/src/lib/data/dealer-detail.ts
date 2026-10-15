@@ -94,7 +94,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Ц Е Н Т Р А Л-АВТОСАЛОН",
       "location": "бул. 'Ян Хуняди' 23 /под музей 'Вл. Варненчик'/, Варна, България",
-      "avatar": "/dealer-brand/v2-0e9c59ba68488896/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-af42150539a0243d/logo-on-light.webp",
       "mobile": "0888602290",
       "email": "",
       "whatsapp": "",

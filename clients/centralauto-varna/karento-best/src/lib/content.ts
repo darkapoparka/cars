@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "Ц Е Н Т Р А Л-АВТОСАЛОН",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-0e9c59ba68488896/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-0e9c59ba68488896/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-0e9c59ba68488896/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-af42150539a0243d/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-af42150539a0243d/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-af42150539a0243d/logo-on-dark.webp",
     "alt": "Ц Е Н Т Р А Л-АВТОСАЛОН",
-    "favicon": "/dealer-brand/v2-0e9c59ba68488896/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-af42150539a0243d/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

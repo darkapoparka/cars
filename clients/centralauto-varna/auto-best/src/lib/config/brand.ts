@@ -33,6 +33,6 @@ export const brand = {
   addressLine,
   address: "бул. 'Ян Хуняди' 23 /под музей 'Вл. Варненчик'/, Варна, България",
   appointment: "Потвърдете работното време директно с автокъщата.",
-  logo: "/dealer-brand/v2-0e9c59ba68488896/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/v2-0e9c59ba68488896/logo-on-dark.webp"
+  logo: "/dealer-brand/v2-af42150539a0243d/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-af42150539a0243d/logo-on-dark.webp"
 } as const satisfies BrandConfig;

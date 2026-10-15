@@ -111,8 +111,8 @@ export const leadSite: LeadSiteConfig = {
     "tagline": "ЦЕНТРАЛ АВТОСАЛОН — vehicles and dealer support in Varna."
   }
 },
-  accent: "#30343b",
-  desktopAccent: "#4b5057",
+  accent: "#09090b",
+  desktopAccent: "#09090b",
   desktopInventoryFilterLayout: "quick",
   desktopPreviewIdentity: {
     sourceSlug: "day-night-auto-group",
@@ -144,8 +144,8 @@ export const leadSite: LeadSiteConfig = {
   email: "",
   heroPath: "/lead-hero.jpg",
   locale: "bg-BG",
-  logoPath: "/dealer-brand/v2-0e9c59ba68488896/logo-on-light.webp",
-  logoInversePath: "/dealer-brand/v2-0e9c59ba68488896/logo-on-dark.webp",
+  logoPath: "/dealer-brand/v2-af42150539a0243d/logo-on-light.webp",
+  logoInversePath: "/dealer-brand/v2-af42150539a0243d/logo-on-dark.webp",
   mapsEmbedUrl:
     "https://maps.google.com/maps?q=%D0%A6%20%D0%95%20%D0%9D%20%D0%A2%20%D0%A0%20%D0%90%20%D0%9B-%D0%90%D0%92%D0%A2%D0%9E%D0%A1%D0%90%D0%9B%D0%9E%D0%9D%2C%20%D0%B1%D1%83%D0%BB.%20'%D0%AF%D0%BD%20%D0%A5%D1%83%D0%BD%D1%8F%D0%B4%D0%B8'%2023%20%2F%D0%BF%D0%BE%D0%B4%20%D0%BC%D1%83%D0%B7%D0%B5%D0%B9%20'%D0%92%D0%BB.%20%D0%92%D0%B0%D1%80%D0%BD%D0%B5%D0%BD%D1%87%D0%B8%D0%BA'%2F%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F&z=16&output=embed",
   mapsUrl:
