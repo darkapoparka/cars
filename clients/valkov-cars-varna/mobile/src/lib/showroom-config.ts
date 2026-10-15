@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "ВЪЛКОВ КАРС",
-  "logo": "/dealer-brand/v2-7977e8d706c5271b/logo-on-light.webp",
+  "logo": "/dealer-brand/v2-db71343dfb317ca8/logo-on-light.webp",
   "phone": "+359898685288",
   "email": null,
   "address": "бул. Цар Освободител, Преди изхода от града 500 м в ляво, Варна, България",

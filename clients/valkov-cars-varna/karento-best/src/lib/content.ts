@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "ВЪЛКОВ КАРС",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-7977e8d706c5271b/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-7977e8d706c5271b/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-7977e8d706c5271b/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-db71343dfb317ca8/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-db71343dfb317ca8/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-db71343dfb317ca8/logo-on-dark.webp",
     "alt": "ВЪЛКОВ КАРС",
-    "favicon": "/dealer-brand/v2-7977e8d706c5271b/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-db71343dfb317ca8/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

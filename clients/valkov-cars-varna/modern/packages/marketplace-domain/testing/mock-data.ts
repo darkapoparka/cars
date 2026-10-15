@@ -50,7 +50,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "ВЪЛКОВ КАРС",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-7977e8d706c5271b/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-db71343dfb317ca8/logo-on-light.webp"
     },
     "publishedAt": "2026-10-12T09:00:00.000Z",
     "promoted": true
@@ -103,7 +103,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "ВЪЛКОВ КАРС",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-7977e8d706c5271b/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-db71343dfb317ca8/logo-on-light.webp"
     },
     "publishedAt": "2026-10-12T09:00:00.000Z",
     "promoted": true

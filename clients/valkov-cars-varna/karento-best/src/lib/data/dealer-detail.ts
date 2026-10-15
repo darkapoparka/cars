@@ -86,7 +86,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "ВЪЛКОВ КАРС",
       "location": "бул. Цар Освободител, Преди изхода от града 500 м в ляво, Варна, България",
-      "avatar": "/dealer-brand/v2-7977e8d706c5271b/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-db71343dfb317ca8/logo-on-light.webp",
       "mobile": "0898685288",
       "email": "",
       "whatsapp": "",
@@ -188,7 +188,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "ВЪЛКОВ КАРС",
       "location": "бул. Цар Освободител, Преди изхода от града 500 м в ляво, Варна, България",
-      "avatar": "/dealer-brand/v2-7977e8d706c5271b/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-db71343dfb317ca8/logo-on-light.webp",
       "mobile": "0898685288",
       "email": "",
       "whatsapp": "",
