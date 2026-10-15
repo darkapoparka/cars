@@ -266,13 +266,13 @@
     line-height: calc(var(--spacing) * 6);
     color: var(--desktop-surface);
     cursor: pointer;
-    background: var(--brand);
-    border: var(--desktop-border-width) solid var(--brand);
+    background: var(--primary);
+    border: var(--desktop-border-width) solid var(--primary);
     border-radius: var(--radius-pill);
   }
   .submit:hover,
   .contactAction:hover {
-    background: var(--lead-site-accent-hover);
+    background: var(--primary-hover);
   }
   .previewResult {
     padding: calc(var(--spacing) * 4);

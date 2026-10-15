@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "VAEN CARS",
-  "logo": "/dealer-brand/v2-a84102ff5de00699/logo-on-light.webp",
+  "logo": "/dealer-brand/v2-84121c49534be896/logo-on-light.webp",
   "phone": "+359886039057",
   "email": null,
   "address": "ул. Мусала11, Варна, България",

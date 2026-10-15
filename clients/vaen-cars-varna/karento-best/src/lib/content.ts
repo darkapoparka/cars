@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "VAEN CARS",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-a84102ff5de00699/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-a84102ff5de00699/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-a84102ff5de00699/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-84121c49534be896/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-84121c49534be896/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-84121c49534be896/logo-on-dark.webp",
     "alt": "VAEN CARS",
-    "favicon": "/dealer-brand/v2-a84102ff5de00699/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-84121c49534be896/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

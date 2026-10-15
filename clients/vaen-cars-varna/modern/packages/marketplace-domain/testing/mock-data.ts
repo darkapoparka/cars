@@ -49,7 +49,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "VAEN CARS",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-a84102ff5de00699/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-84121c49534be896/logo-on-light.webp"
     },
     "publishedAt": "2026-10-12T09:00:00.000Z",
     "promoted": true
@@ -101,7 +101,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "VAEN CARS",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-a84102ff5de00699/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-84121c49534be896/logo-on-light.webp"
     },
     "publishedAt": "2026-10-12T09:00:00.000Z",
     "promoted": true

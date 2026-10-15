@@ -649,7 +649,7 @@ const brandOptions = (): AuxeroInventoryFilterOption[] => {
 	return brands
 		.map((brand) => ({
 			count: counts.get(brand) ?? 0,
-			image: brandLogos[brand] ?? "/dealer-brand/v2-a84102ff5de00699/logo-on-light.webp",
+			image: brandLogos[brand] ?? "/dealer-brand/v2-84121c49534be896/logo-on-light.webp",
 			label: brand === 'Mercedes-Benz' ? 'Mercedes' : brand,
 			value: brand
 		}))

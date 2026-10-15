@@ -86,7 +86,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "VAEN CARS",
       "location": "ул. Мусала11, Варна, България",
-      "avatar": "/dealer-brand/v2-a84102ff5de00699/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-84121c49534be896/logo-on-light.webp",
       "mobile": "0886039057",
       "email": "",
       "whatsapp": "",
@@ -188,7 +188,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "VAEN CARS",
       "location": "ул. Мусала11, Варна, България",
-      "avatar": "/dealer-brand/v2-a84102ff5de00699/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-84121c49534be896/logo-on-light.webp",
       "mobile": "0886039057",
       "email": "",
       "whatsapp": "",
