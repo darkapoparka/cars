@@ -61,7 +61,7 @@ jobs:
     timeout-minutes: 60
     strategy:
       fail-fast: false
-      max-parallel: 14
+      max-parallel: 28
       matrix: ${{ fromJSON(needs.plan.outputs.matrix) }}
     env:
       DEALER_SLUG: ${{ matrix.slug }}
@@ -122,7 +122,7 @@ jobs:
     timeout-minutes: 30
     strategy:
       fail-fast: false
-      max-parallel: 3
+      max-parallel: 6
       matrix: ${{ fromJSON(needs.plan.outputs.dealers) }}
     steps:
       - name: Check out exact composition tools, registry and source
