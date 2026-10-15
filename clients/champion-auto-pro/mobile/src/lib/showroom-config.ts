@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "Champion Auto Pro",
-  "logo": "/dealer-brand/v2-3aed802078180a78/logo-on-light.webp",
+  "logo": "/dealer-brand/v2-3e978e4c57d4446e/logo-on-light.webp",
   "phone": "+359885072555",
   "email": null,
   "address": "бул. „Цар Освободител“ 302 / Автомивка Izgi Europe Motor",

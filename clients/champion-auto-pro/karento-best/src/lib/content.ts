@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "Champion Auto Pro",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-3aed802078180a78/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-3aed802078180a78/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-3aed802078180a78/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-3e978e4c57d4446e/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-3e978e4c57d4446e/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-3e978e4c57d4446e/logo-on-dark.webp",
     "alt": "Champion Auto Pro",
-    "favicon": "/dealer-brand/v2-3aed802078180a78/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-3e978e4c57d4446e/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

@@ -155,7 +155,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "Champion Auto Pro",
   "location": "бул. „Цар Освободител“ 302 / Автомивка Izgi Europe Motor",
-  "avatar": "/dealer-brand/v2-3aed802078180a78/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-3e978e4c57d4446e/logo-on-light.webp",
   "mobile": "0885 072 555",
   "email": "",
   "whatsapp": "",

@@ -108,11 +108,18 @@
   --dn-radius-discovery-card: var(--dn-radius-compact);
   --dn-radius-showroom: var(--dn-radius-panel);
   --dn-route-hero-compact: 520px;
-  --dn-mobile-entry-hero-height: 252px;
+  --dn-mobile-entry-hero-height: 204px;
+  --dn-mobile-entry-overlap: 36px;
+  --dn-mobile-entry-art-height: 112px;
+  --dn-mobile-entry-art-gutter: 32px;
+  --dn-mobile-entry-home-art-width: 296px;
+  --dn-mobile-entry-service-art-width: 320px;
   --dn-route-hero-controls: 560px;
   --dn-route-hero-height: 660px;
+  --dn-route-hero-header-space: 8.75rem;
   --dn-route-hero-content-top: 256px;
   --dn-route-hero-control-top: 425px;
+  --dn-discovery-art-ground-offset: 150px;
   --dn-route-hero-overlay: rgba(5, 14, 24, 0.52);
   --dn-pill: 999px;
   --dn-radius-button: var(--dn-pill);
@@ -196,7 +203,7 @@
   --dn-mobile-card-spec-font: var(--dn-weight-medium) var(--dn-text-caption) / var(--dn-leading-badge) var(--dn-font);
   --dn-mobile-card-price-font: var(--dn-weight-semibold) var(--dn-text-card) / var(--dn-leading-heading) var(--dn-font);
   --dn-mobile-card-price-compact-font: var(--dn-weight-semibold) var(--dn-text-lead) / var(--dn-leading-heading) var(--dn-font);
-  --dn-mobile-listing-photo-max-width: 156px;
+  --dn-mobile-listing-photo-share: clamp(45%, calc(100% - 10rem - var(--dn-space-3)), 55%);
   --dn-mobile-listing-photo-min-height: 88px;
 
   /* Mobile body-style and brand tiles share media and label geometry. */

@@ -27,9 +27,9 @@
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Champion%20Auto%20Pro%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20302%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0",
     "mapsEmbedUrl": "https://maps.google.com/maps?q=Champion%20Auto%20Pro%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20302%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0&output=embed",
     "accent": "#282522",
-    "logo": "/dealer-brand/v2-3aed802078180a78/logo-on-light.webp",
-    "logoLight": "/dealer-brand/v2-3aed802078180a78/logo-on-light.webp",
-    "logoDark": "/dealer-brand/v2-3aed802078180a78/logo-on-dark.webp",
+    "logo": "/dealer-brand/v2-3e978e4c57d4446e/logo-on-light.webp",
+    "logoLight": "/dealer-brand/v2-3e978e4c57d4446e/logo-on-light.webp",
+    "logoDark": "/dealer-brand/v2-3e978e4c57d4446e/logo-on-dark.webp",
     "socialLinks": {
       "facebook": "",
       "instagram": "",
@@ -1177,19 +1177,19 @@
     "originalSha256": "01b68fb7cd1d85d3e7d55ea4b746eb79c24d75c9346f25554e7d0cafcff10aa7",
     "assets": {
       "onLight": {
-        "publicPath": "/dealer-brand/v2-3aed802078180a78/logo-on-light.webp",
-        "sha256": "3ab95ad663b71cbaf7d5bf2e56e98a53969461866db429ec865b48b2d3cf9a8f",
-        "bytes": 98766
+        "publicPath": "/dealer-brand/v2-3e978e4c57d4446e/logo-on-light.webp",
+        "sha256": "7a5bb57dc67207c4374eaf4128656203be3b2fda0af9f79ee87e437278a8beef",
+        "bytes": 163354
       },
       "onDark": {
-        "publicPath": "/dealer-brand/v2-3aed802078180a78/logo-on-dark.webp",
-        "sha256": "9e39139745ab780974b6e6faddcadc1faf97e3ae3f44604b8dbcaea9f26d3c11",
-        "bytes": 34238
+        "publicPath": "/dealer-brand/v2-3e978e4c57d4446e/logo-on-dark.webp",
+        "sha256": "3818aa0bfbb622608791d2f28651b2e4fe4b4e67bef93984e3d5586cc58e5230",
+        "bytes": 204994
       },
       "onAccent": {
-        "publicPath": "/dealer-brand/v2-3aed802078180a78/logo-on-accent.webp",
-        "sha256": "9e39139745ab780974b6e6faddcadc1faf97e3ae3f44604b8dbcaea9f26d3c11",
-        "bytes": 34238
+        "publicPath": "/dealer-brand/v2-3e978e4c57d4446e/logo-on-accent.webp",
+        "sha256": "086e626b345cb85a93b0357095be03b2ec513fbffd962c1858e3631c1d3d0a26",
+        "bytes": 125684
       }
     },
     "preparedAt": "2026-09-19T04:59:25.942Z",
