@@ -33,6 +33,6 @@ export const brand = {
   addressLine,
   address: "ул. Петър Дертлиев 34, Варна, България",
   appointment: "Потвърдете работното време директно с автокъщата.",
-  logo: "/dealer-brand/v2-e19f2a798bd049b7/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/v2-e19f2a798bd049b7/logo-on-dark.webp"
+  logo: "/dealer-brand/v2-a7abec1b51196d86/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-a7abec1b51196d86/logo-on-dark.webp"
 } as const satisfies BrandConfig;

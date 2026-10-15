@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "ДайнАуто",
-  "logo": "/dealer-brand/v2-e19f2a798bd049b7/logo-on-light.webp",
+  "logo": "/dealer-brand/v2-a7abec1b51196d86/logo-on-light.webp",
   "phone": "+359899117330",
   "email": null,
   "address": "ул. Петър Дертлиев 34, Варна, България",

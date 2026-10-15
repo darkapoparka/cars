@@ -86,7 +86,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "ДайнАуто",
       "location": "ул. Петър Дертлиев 34, Варна, България",
-      "avatar": "/dealer-brand/v2-e19f2a798bd049b7/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-a7abec1b51196d86/logo-on-light.webp",
       "mobile": "+359899117330",
       "email": "",
       "whatsapp": "",
@@ -188,7 +188,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "ДайнАуто",
       "location": "ул. Петър Дертлиев 34, Варна, България",
-      "avatar": "/dealer-brand/v2-e19f2a798bd049b7/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-a7abec1b51196d86/logo-on-light.webp",
       "mobile": "+359899117330",
       "email": "",
       "whatsapp": "",

@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "ДайнАуто",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-e19f2a798bd049b7/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-e19f2a798bd049b7/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-e19f2a798bd049b7/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-a7abec1b51196d86/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-a7abec1b51196d86/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-a7abec1b51196d86/logo-on-dark.webp",
     "alt": "ДайнАуто",
-    "favicon": "/dealer-brand/v2-e19f2a798bd049b7/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-a7abec1b51196d86/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

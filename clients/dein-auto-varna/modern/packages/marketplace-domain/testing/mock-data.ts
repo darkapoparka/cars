@@ -49,7 +49,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "ДайнАуто",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-e19f2a798bd049b7/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-a7abec1b51196d86/logo-on-light.webp"
     },
     "publishedAt": "2026-10-12T09:00:00.000Z",
     "promoted": true
@@ -101,7 +101,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "ДайнАуто",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-e19f2a798bd049b7/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-a7abec1b51196d86/logo-on-light.webp"
     },
     "publishedAt": "2026-10-12T09:00:00.000Z",
     "promoted": true
