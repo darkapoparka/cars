@@ -10,41 +10,41 @@
     "id": "fleet-final-polish-20261014",
     "dealer": "bradford-cherry-tree-cars",
     "scope": "existing-dealer-pilot",
-    "sourceCommit": "7d4557f3074b32e3f57af28b89906754b73fb9cd",
+    "sourceCommit": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "reviewed": true,
-    "reviewedAt": "2026-10-14T21:53:12.292Z",
+    "reviewedAt": "2026-10-14T23:55:37.398Z",
     "qualificationOnly": true,
     "approved": false,
     "nativeApproval": false,
     "hostedApproval": false,
     "globalReleaseApproval": false,
     "approvedLockSha256": "ecdfaf9599fbcbeadebc24de3b9aa1c7615a9a49e29d338e5e9a23427d405e26",
-    "candidateLockSha256": "4ceb9b3085d3dae4c415229d134ef33905e352f499ae2e1126bd85e318d648d8",
+    "candidateLockSha256": "04633129df9e75d6cd62deeac9125b279957789d75f57cdb0b243ef61bfc3e7e",
     "sourceDeltaReview": {
       "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
-      "sha256": "6b5c5b82e91fc569139af5a84db9dbe34fde1f0e91fa28d55939a53d55c72ec5",
-      "reviewedAt": "2026-10-14T21:53:12.292Z"
+      "sha256": "43cb6876e815a2a6b866f1dadd304236de4ae58c05fe65c2ab62a23506ee7ce9",
+      "reviewedAt": "2026-10-14T23:55:37.398Z"
     },
     "sourceReview": {
       "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-review.json",
-      "sha256": "febeb101b4c30ead5ce4aeef737f7e55fe33990fc06cfb1a8af74d673991e2cf"
+      "sha256": "27c6ce5dd17ee6e1b9f6a5b059a95d5e1dbe4200f61264fc50addeb7af89d984"
     }
   },
-  "contextDigest": "2c28b198b2dd4cb5959739aff647640f4df49f16151c1157a9bd8c9bff40cbd7",
+  "contextDigest": "67d44cdd87a3b81794593208830bb45ba925318ce1e7cebc6db412fd529b5fac",
   "releases": {
     "auto-best": {
       "status": "qualification",
       "repository": "darkapoparka/cars",
-      "commit": "7d4557f3074b32e3f57af28b89906754b73fb9cd",
+      "commit": "bb173c33d7b640502ad2e4bf27546748c12858b8",
       "source": {
         "repository": "darkapoparka/cars",
-        "revision": "7d4557f3074b32e3f57af28b89906754b73fb9cd",
+        "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
         "path": "templates/auto-best",
-        "tree": "0fd8e81b7ea998227b8a5a067b04f318015bff84",
-        "digest": "451141c1787f5ea293a60170ca9f894c35ebd3324e0a6ff09b00b959f2812176"
+        "tree": "78fa1a82eca14816449f9588283260840ee94f52",
+        "digest": "2fc9c3cfc9cf1976dbe30c08592776362e5bcc6b09e8b06620e57c4406df58a5"
       },
       "snapshotPath": "templates/auto-best",
-      "digest": "451141c1787f5ea293a60170ca9f894c35ebd3324e0a6ff09b00b959f2812176",
+      "digest": "2fc9c3cfc9cf1976dbe30c08592776362e5bcc6b09e8b06620e57c4406df58a5",
       "exportPolicy": "cars-source-v1",
       "qualification": {
         "contextId": "fleet-final-polish-20261014",
@@ -517,8 +517,8 @@
         },
         "sourceDeltaReview": {
           "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
-          "sha256": "6b5c5b82e91fc569139af5a84db9dbe34fde1f0e91fa28d55939a53d55c72ec5",
-          "reviewedAt": "2026-10-14T21:53:12.292Z"
+          "sha256": "43cb6876e815a2a6b866f1dadd304236de4ae58c05fe65c2ab62a23506ee7ce9",
+          "reviewedAt": "2026-10-14T23:55:37.398Z"
         },
         "catalogs": [
           {
@@ -533,10 +533,10 @@
     "modern": {
       "status": "qualification",
       "repository": "darkapoparka/cars",
-      "commit": "7d4557f3074b32e3f57af28b89906754b73fb9cd",
+      "commit": "bb173c33d7b640502ad2e4bf27546748c12858b8",
       "source": {
         "repository": "darkapoparka/cars",
-        "revision": "7d4557f3074b32e3f57af28b89906754b73fb9cd",
+        "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
         "path": "templates/modern",
         "tree": "01eac7390fa6ba951d4b8d4c26159a9be150f6c8",
         "digest": "30e1a99f857cc25e4d78c9459cfb4394a9f70c5b114196a5ca6325ff38823b4b"
@@ -1031,8 +1031,8 @@
         },
         "sourceDeltaReview": {
           "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
-          "sha256": "6b5c5b82e91fc569139af5a84db9dbe34fde1f0e91fa28d55939a53d55c72ec5",
-          "reviewedAt": "2026-10-14T21:53:12.292Z"
+          "sha256": "43cb6876e815a2a6b866f1dadd304236de4ae58c05fe65c2ab62a23506ee7ce9",
+          "reviewedAt": "2026-10-14T23:55:37.398Z"
         },
         "catalogs": [
           {
@@ -1063,10 +1063,10 @@
     "import": {
       "status": "qualification",
       "repository": "darkapoparka/cars",
-      "commit": "7d4557f3074b32e3f57af28b89906754b73fb9cd",
+      "commit": "bb173c33d7b640502ad2e4bf27546748c12858b8",
       "source": {
         "repository": "darkapoparka/cars",
-        "revision": "7d4557f3074b32e3f57af28b89906754b73fb9cd",
+        "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
         "path": "templates/import",
         "tree": "d841ddfe5bec918bf6b2c19fd6971fecd6b8e54d",
         "digest": "c7d6c93214e859aa2747af8f5e068b6a0b8ca095d6328c807728a4d531d688f8"
@@ -1564,8 +1564,8 @@
         },
         "sourceDeltaReview": {
           "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
-          "sha256": "6b5c5b82e91fc569139af5a84db9dbe34fde1f0e91fa28d55939a53d55c72ec5",
-          "reviewedAt": "2026-10-14T21:53:12.292Z"
+          "sha256": "43cb6876e815a2a6b866f1dadd304236de4ae58c05fe65c2ab62a23506ee7ce9",
+          "reviewedAt": "2026-10-14T23:55:37.398Z"
         },
         "catalogs": [
           {
@@ -1717,7 +1717,7 @@
     }
   },
   "input": {
-    "digest": "3fe66d190516ecd1a11ec8b811089df91857198001e8ab3366ccf5abc938fd9b",
+    "digest": "5de235deac0d45a5d5c850e630e14b1a5db763ebd0254081320b06123fa3d02c",
     "files": 9127
   },
   "nativeApproval": false,

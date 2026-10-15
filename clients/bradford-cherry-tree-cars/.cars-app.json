@@ -3,17 +3,17 @@
   "dealer": "bradford-cherry-tree-cars",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "7d4557f3074b32e3f57af28b89906754b73fb9cd",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/app",
-    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
-    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291",
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1"
   },
   "appDigest": "20b2dd18bc8f08a68ff149f295851fb43ce4e5cb16f996b0d0d51aecd59000c0",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "bradford-cherry-tree-cars",
     "profile": "auto-best/src/lib/data/dealer-profile.json",
-    "profileSha256": "d06f19bf1c4f4d5f05d5ec48a99e4f7961b09ca021a8026b66714fb903835396",
+    "profileSha256": "c04f17a5f6f295f6fd401d07c005d2c22b35a450c2201656f0271ac28491ebe8",
     "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
     "vehicles": 8,
     "currency": "GBP",
@@ -150,6 +150,5 @@
     }
   },
   "needsDealerQA": true,
-  "readyToPublish": false,
-  "refreshedAt": "2026-10-14T22:47:32.073Z"
+  "readyToPublish": false
 }
