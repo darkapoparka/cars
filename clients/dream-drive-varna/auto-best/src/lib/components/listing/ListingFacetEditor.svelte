@@ -59,6 +59,8 @@
   const yearPresets = listingFilterOptions.years.filter(Boolean).slice(-4);
 
   function isSelected(value: string) {
+    // An unrestricted mobile filter is neutral, not a chosen first option.
+    if (mobile.current && !value && field !== 'sort') return false;
     if (field === 'equipment') return draft.equipment.includes(value as ListingDraft['equipment'][number]);
     if (Array.isArray(selected)) return value ? listingSelectionHas(selected, value) : selected.length === 0;
     return selected === value;

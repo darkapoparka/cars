@@ -1,200 +1,172 @@
 import type { DealerInventoryCopy } from "../lead-site";
-/** Reviewed text for the existing sample stock only. */
+/** Dealer-owned display copy from the exact personalized listing set. */
 export const inventoryCopy = {
-  "bmw-x5-m50d-sofia-2020": {
-    sourceDescription:
-      "Примерна обява за BMW X5 M50d с 360 камери, панорама, HUD и обдухване. Снимката е илюстративна; наличност и условия се потвърждават с автокъщата.",
-    bg: {
-      description:
-        "Примерна обява за BMW X5 M50d с 360 камери, панорама, HUD и обдухване. Снимката е илюстративна; наличност и условия се потвърждават с автокъщата.",
-      imageAlts: ["Черен BMW X5 SUV"],
+  "vw-golf-2013-11790190994561881": {
+    "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+    "en": {
+      "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
+      "imageAlts": [
+        "VW Golf 2.0 TDI 150 4Motion",
+        "VW Golf 2.0 TDI 150 4Motion",
+        "VW Golf 2.0 TDI 150 4Motion",
+        "VW Golf 2.0 TDI 150 4Motion"
+      ]
     },
-    en: {
-      description:
-        "Sample listing for a BMW X5 M50d with 360-degree cameras, panoramic roof, head-up display and ventilated seats. The image is illustrative; availability and terms must be confirmed with the dealership.",
-      imageAlts: ["Black BMW X5 SUV"],
-    },
+    "bg": {
+      "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "imageAlts": [
+        "VW Golf 2.0 TDI 150 4Motion",
+        "VW Golf 2.0 TDI 150 4Motion",
+        "VW Golf 2.0 TDI 150 4Motion",
+        "VW Golf 2.0 TDI 150 4Motion"
+      ]
+    }
   },
-  "mercedes-benz-gls-400d-4matic-amg-sofia-2021": {
-    sourceDescription:
-      "GLS 400d 4MATIC AMG Line с Burmester и панорама. Голям семеен SUV от DREAM DRIVE - наличен за оглед в Варна.",
-    bg: {
-      description:
-        "GLS 400d 4MATIC AMG Line с Burmester и панорама. Голям семеен SUV от {shortName} - наличен за оглед в {city}.",
-      imageAlts: ["Mercedes-Benz GLS 4MATIC AMG SUV"],
+  "audi-a4-2010-11791398612800365": {
+    "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+    "en": {
+      "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
+      "imageAlts": [
+        "Audi A4 2.0 TDI S LINE LED NAVI",
+        "Audi A4 2.0 TDI S LINE LED NAVI",
+        "Audi A4 2.0 TDI S LINE LED NAVI",
+        "Audi A4 2.0 TDI S LINE LED NAVI"
+      ]
     },
-    en: {
-      description:
-        "GLS 400d 4MATIC AMG Line with Burmester audio and a panoramic roof. A large family SUV from {shortName}, available to view in {city}.",
-      imageAlts: ["Mercedes-Benz GLS 4MATIC AMG SUV"],
-    },
+    "bg": {
+      "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "imageAlts": [
+        "Audi A4 2.0 TDI S LINE LED NAVI",
+        "Audi A4 2.0 TDI S LINE LED NAVI",
+        "Audi A4 2.0 TDI S LINE LED NAVI",
+        "Audi A4 2.0 TDI S LINE LED NAVI"
+      ]
+    }
   },
-  "bmw-750e-xdrive-m-sport-sofia-2024": {
-    sourceDescription:
-      "Очакван внос: 7 Series plug-in hybrid с M Sport. Нисък пробег - DREAM DRIVE организира доставка и оглед в Варна.",
-    bg: {
-      description:
-        "Очакван внос: 7 Series plug-in hybrid с M Sport. Нисък пробег - {shortName} организира доставка и оглед в {city}.",
-      imageAlts: ["BMW 7 Series"],
+  "vw-passat-2016-11789907842576383": {
+    "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+    "en": {
+      "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
+      "imageAlts": [
+        "VW Passat 2.0 TDI ALLTRACK DIGITAL",
+        "VW Passat 2.0 TDI ALLTRACK DIGITAL",
+        "VW Passat 2.0 TDI ALLTRACK DIGITAL",
+        "VW Passat 2.0 TDI ALLTRACK DIGITAL"
+      ]
     },
-    en: {
-      description:
-        "Expected import: 7 Series plug-in hybrid with M Sport. Low mileage; {shortName} arranges delivery and viewing in {city}.",
-      imageAlts: ["BMW 7 Series"],
-    },
+    "bg": {
+      "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "imageAlts": [
+        "VW Passat 2.0 TDI ALLTRACK DIGITAL",
+        "VW Passat 2.0 TDI ALLTRACK DIGITAL",
+        "VW Passat 2.0 TDI ALLTRACK DIGITAL",
+        "VW Passat 2.0 TDI ALLTRACK DIGITAL"
+      ]
+    }
   },
-  "mercedes-benz-e-63-s-amg-sofia-2021": {
-    sourceDescription:
-      "E 63 S AMG facelift с 360, HUD и Burmester. Спортна лимузина от DREAM DRIVE.",
-    bg: {
-      description:
-        "E 63 S AMG facelift с 360, HUD и Burmester. Спортна лимузина от {dealer}.",
-      imageAlts: ["Mercedes-Benz E-Class седан"],
+  "toyota-yaris-2008-11789911583559651": {
+    "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+    "en": {
+      "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
+      "imageAlts": [
+        "Toyota Yaris 1.3vvti",
+        "Toyota Yaris 1.3vvti",
+        "Toyota Yaris 1.3vvti",
+        "Toyota Yaris 1.3vvti"
+      ]
     },
-    en: {
-      description:
-        "Facelift E 63 S AMG with 360-degree cameras, head-up display and Burmester audio. A sports saloon from {dealer}.",
-      imageAlts: ["Mercedes-Benz E-Class saloon"],
-    },
+    "bg": {
+      "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "imageAlts": [
+        "Toyota Yaris 1.3vvti",
+        "Toyota Yaris 1.3vvti",
+        "Toyota Yaris 1.3vvti",
+        "Toyota Yaris 1.3vvti"
+      ]
+    }
   },
-  "mercedes-benz-cls-400d-4matic-sofia-2020": {
-    sourceDescription:
-      "CLS 400d 4MATIC AMG Line Designo с 360 камери. Елегантно купе-седан от DREAM DRIVE в Варна.",
-    bg: {
-      description:
-        "CLS 400d 4MATIC AMG Line Designo с 360 камери. Елегантно купе-седан от {shortName} в {city}.",
-      imageAlts: ["Mercedes CLS"],
+  "suzuki-vitara-2017-21789906623508409": {
+    "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+    "en": {
+      "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
+      "imageAlts": [
+        "Suzuki Vitara 1.6DDIS 120кс 4x4",
+        "Suzuki Vitara 1.6DDIS 120кс 4x4",
+        "Suzuki Vitara 1.6DDIS 120кс 4x4",
+        "Suzuki Vitara 1.6DDIS 120кс 4x4"
+      ]
     },
-    en: {
-      description:
-        "CLS 400d 4MATIC AMG Line Designo with 360-degree cameras. An elegant four-door coupe from {shortName} in {city}.",
-      imageAlts: ["Mercedes CLS"],
-    },
+    "bg": {
+      "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "imageAlts": [
+        "Suzuki Vitara 1.6DDIS 120кс 4x4",
+        "Suzuki Vitara 1.6DDIS 120кс 4x4",
+        "Suzuki Vitara 1.6DDIS 120кс 4x4",
+        "Suzuki Vitara 1.6DDIS 120кс 4x4"
+      ]
+    }
   },
-  "audi-q8-50-tdi-quattro-s-line-sofia-2021": {
-    sourceDescription:
-      "Очакван внос: Q8 50 TDI quattro S line Plus. Купе-SUV с quattro за клиенти на DREAM DRIVE.",
-    bg: {
-      description:
-        "Очакван внос: Q8 50 TDI quattro S line Plus. Купе-SUV с quattro за клиенти на {shortName}.",
-      imageAlts: ["Audi Q8"],
+  "suzuki-sx4-2010-11789907068377884": {
+    "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+    "en": {
+      "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
+      "imageAlts": [
+        "Suzuki SX4 1.6i 120кс 4x4 160.000 КМ",
+        "Suzuki SX4 1.6i 120кс 4x4 160.000 КМ",
+        "Suzuki SX4 1.6i 120кс 4x4 160.000 КМ",
+        "Suzuki SX4 1.6i 120кс 4x4 160.000 КМ"
+      ]
     },
-    en: {
-      description:
-        "Expected import: Q8 50 TDI quattro S line Plus. A coupe-SUV with quattro for {shortName} customers.",
-      imageAlts: ["Audi Q8"],
-    },
+    "bg": {
+      "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "imageAlts": [
+        "Suzuki SX4 1.6i 120кс 4x4 160.000 КМ",
+        "Suzuki SX4 1.6i 120кс 4x4 160.000 КМ",
+        "Suzuki SX4 1.6i 120кс 4x4 160.000 КМ",
+        "Suzuki SX4 1.6i 120кс 4x4 160.000 КМ"
+      ]
+    }
   },
-  "mercedes-benz-gle-400d-coupe-sofia-2021": {
-    sourceDescription:
-      "GLE 400d Coupe 4MATIC AMG с 360 и Burmester. Наличен при DREAM DRIVE - Варна.",
-    bg: {
-      description:
-        "GLE 400d Coupe 4MATIC AMG с 360 и Burmester. Наличен при {dealer} - {city}.",
-      imageAlts: ["Черен Mercedes-Benz GLE SUV"],
+  "renault-megane-2011-11789910526546898": {
+    "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+    "en": {
+      "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
+      "imageAlts": [
+        "Renault Megane 1.9 DCI GT LINE 230.000 КМ",
+        "Renault Megane 1.9 DCI GT LINE 230.000 КМ",
+        "Renault Megane 1.9 DCI GT LINE 230.000 КМ",
+        "Renault Megane 1.9 DCI GT LINE 230.000 КМ"
+      ]
     },
-    en: {
-      description:
-        "GLE 400d Coupe 4MATIC AMG with 360-degree cameras and Burmester audio. Available from {dealer} in {city}.",
-      imageAlts: ["Black Mercedes-Benz GLE SUV"],
-    },
+    "bg": {
+      "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "imageAlts": [
+        "Renault Megane 1.9 DCI GT LINE 230.000 КМ",
+        "Renault Megane 1.9 DCI GT LINE 230.000 КМ",
+        "Renault Megane 1.9 DCI GT LINE 230.000 КМ",
+        "Renault Megane 1.9 DCI GT LINE 230.000 КМ"
+      ]
+    }
   },
-  "mercedes-benz-gle-53-amg-coupe-sofia-2022": {
-    sourceDescription:
-      "Очакван внос: GLE 53 AMG Coupe Night Pack. DREAM DRIVE предлага собствен лизинг след оглед.",
-    bg: {
-      description:
-        "Очакван внос: GLE 53 AMG Coupe Night Pack. {shortName} предлага собствен лизинг след оглед.",
-      imageAlts: ["Бял Mercedes-Benz GLE AMG SUV"],
+  "peugeot-3008-2017-11789909936155141": {
+    "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+    "en": {
+      "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
+      "imageAlts": [
+        "Peugeot 3008 1.6HDI 120кс АВТОМАТИК",
+        "Peugeot 3008 1.6HDI 120кс АВТОМАТИК",
+        "Peugeot 3008 1.6HDI 120кс АВТОМАТИК",
+        "Peugeot 3008 1.6HDI 120кс АВТОМАТИК"
+      ]
     },
-    en: {
-      description:
-        "Expected import: GLE 53 AMG Coupe Night Pack. {shortName} offers in-house leasing after a viewing.",
-      imageAlts: ["White Mercedes-Benz GLE AMG SUV"],
-    },
-  },
-  "mercedes-benz-s-350d-long-amg-sofia-2019": {
-    sourceDescription:
-      "S 350d Long с S63 AMG оптика и пакет за шофьор. Представителна лимузина от DREAM DRIVE.",
-    bg: {
-      description:
-        "S 350d Long с S63 AMG оптика и пакет за шофьор. Представителна лимузина от {shortName}.",
-      imageAlts: ["Mercedes-Benz S-Class седан"],
-    },
-    en: {
-      description:
-        "S 350d Long with S63 AMG styling and a chauffeur package. An executive saloon from {shortName}.",
-      imageAlts: ["Mercedes-Benz S-Class saloon"],
-    },
-  },
-  "mercedes-benz-v-250d-vip-business-sofia-2018": {
-    sourceDescription:
-      "V 250d VIP Business с TV, обдухване и подгряване. Бизнес ван от DREAM DRIVE.",
-    bg: {
-      description:
-        "V 250d VIP Business с TV, обдухване и подгряване. Бизнес ван от {dealer}.",
-      imageAlts: ["V-Class ван"],
-    },
-    en: {
-      description:
-        "V 250d VIP Business with TV, ventilated and heated seats. A business van from {dealer}.",
-      imageAlts: ["V-Class van"],
-    },
-  },
-  "range-rover-sport-svr-sofia-2021": {
-    sourceDescription:
-      "Range Rover Sport SVR 600 к.с. с панорама, 360 и Meridian. Висок клас SUV от DREAM DRIVE.",
-    bg: {
-      description:
-        "Range Rover Sport SVR 600 к.с. с панорама, 360 и Meridian. Висок клас SUV от {shortName}.",
-      imageAlts: ["Range Rover Sport"],
-    },
-    en: {
-      description:
-        "Range Rover Sport SVR, 600 hp, with a panoramic roof, 360-degree cameras and Meridian audio. A premium SUV from {shortName}.",
-      imageAlts: ["Range Rover Sport"],
-    },
-  },
-  "bmw-430i-xdrive-gran-coupe-sofia-2023": {
-    sourceDescription:
-      "430i xDrive Gran Coupe M Sport с digital кокпит и Harman Kardon. DREAM DRIVE, Варна.",
-    bg: {
-      description:
-        "430i xDrive Gran Coupe M Sport с digital кокпит и Harman Kardon. {shortName}, {city}.",
-      imageAlts: ["BMW 4 Series"],
-    },
-    en: {
-      description:
-        "430i xDrive Gran Coupe M Sport with a digital cockpit and Harman Kardon audio. {shortName}, {city}.",
-      imageAlts: ["BMW 4 Series"],
-    },
-  },
-  "bmw-m4-competition-sofia-2021": {
-    sourceDescription:
-      "BMW M4 Competition с M пакет, спортен салон и digital кокпит. Купе от портфолиото на DREAM DRIVE.",
-    bg: {
-      description:
-        "BMW M4 Competition с M пакет, спортен салон и digital кокпит. Купе от портфолиото на {dealer}.",
-      imageAlts: ["Червено BMW M4 Competition пред модерен шоурум"],
-    },
-    en: {
-      description:
-        "BMW M4 Competition with M package, sports interior and digital cockpit. A coupe from the {dealer} collection.",
-      imageAlts: ["Red BMW M4 Competition in front of a modern showroom"],
-    },
-  },
-  "bmw-x5-xdrive40d-berlin-2022": {
-    sourceDescription:
-      "Крос-бордер демо наличност с оторизирани медии и право на доставка. Финалният транспорт, данъци и регистрация се уточняват с оферта от DREAM DRIVE.",
-    bg: {
-      description:
-        "Крос-бордер демо наличност с оторизирани медии и право на доставка. Финалният транспорт, данъци и регистрация се уточняват с оферта от {shortName}.",
-      imageAlts: ["Черен BMW X5 SUV в градска среда"],
-    },
-    en: {
-      description:
-        "Cross-border demo inventory with authorized images and delivery rights. Final transport, tax and registration costs are confirmed in a quote from {shortName}.",
-      imageAlts: ["Black BMW X5 SUV in an urban setting"],
-    },
-  },
+    "bg": {
+      "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "imageAlts": [
+        "Peugeot 3008 1.6HDI 120кс АВТОМАТИК",
+        "Peugeot 3008 1.6HDI 120кс АВТОМАТИК",
+        "Peugeot 3008 1.6HDI 120кс АВТОМАТИК",
+        "Peugeot 3008 1.6HDI 120кс АВТОМАТИК"
+      ]
+    }
+  }
 } satisfies DealerInventoryCopy;

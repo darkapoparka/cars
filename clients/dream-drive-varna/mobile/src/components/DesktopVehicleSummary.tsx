@@ -1,4 +1,5 @@
 'use client';
+import { hasMobileMileage, formatMobileMileage } from '../lib/mobile-mileage';
 
 import Link from 'next/link';
 import * as stylex from '@stylexjs/stylex';
@@ -337,9 +338,10 @@ export function DesktopVehicleSummary({
       </div>
       <dl aria-label={t('Vehicle overview')} {...stylex.props(s.facts)}>
         {[
-          ['Mileage', number(v.mileage) + ' ' + t('km')],
-          v.mileage > 0
-            ? ['First registered', v.registration]
+          ['Mileage', formatMobileMileage(v, locale)],
+          !hasMobileMileage(v)
+            ? ['Vehicle condition', t('Not published')]
+            : v.mileage > 0 ? ['First registered', v.registration]
             : ['Vehicle condition', t('New vehicle')],
           ['Fuel', v.attributes?.fuelLabel || v.fuel],
           ['Transmission', v.transmission],

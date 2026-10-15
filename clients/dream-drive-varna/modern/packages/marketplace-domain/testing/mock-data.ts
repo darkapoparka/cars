@@ -58,7 +58,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "DREAM DRIVE",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-bd2059e137647692/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-6929d4c33b8c73cf/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": true
@@ -119,7 +119,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "DREAM DRIVE",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-bd2059e137647692/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-6929d4c33b8c73cf/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": true
@@ -180,7 +180,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "DREAM DRIVE",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-bd2059e137647692/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-6929d4c33b8c73cf/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": true
@@ -241,7 +241,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "DREAM DRIVE",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-bd2059e137647692/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-6929d4c33b8c73cf/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -302,7 +302,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "DREAM DRIVE",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-bd2059e137647692/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-6929d4c33b8c73cf/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -363,7 +363,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "DREAM DRIVE",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-bd2059e137647692/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-6929d4c33b8c73cf/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -424,7 +424,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "DREAM DRIVE",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-bd2059e137647692/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-6929d4c33b8c73cf/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -485,373 +485,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "DREAM DRIVE",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-bd2059e137647692/logo-on-light.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1004",
-    "slug": "vw-golf-2013-11790190994561881",
-    "category": "car",
-    "dealerOrgId": "dealer-dream-drive-varna",
-    "status": "active",
-    "title": "VW Golf 2.0 TDI 150 4Motion",
-    "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
-    "price": {
-      "amount": 8999,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/vehicles/11790190994561881/1.webp",
-        "alt": "VW Golf 2.0 TDI 150 4Motion"
-      },
-      {
-        "url": "/assets/vehicles/11790190994561881/2.webp",
-        "alt": "VW Golf 2.0 TDI 150 4Motion"
-      },
-      {
-        "url": "/assets/vehicles/11790190994561881/3.webp",
-        "alt": "VW Golf 2.0 TDI 150 4Motion"
-      },
-      {
-        "url": "/assets/vehicles/11790190994561881/4.webp",
-        "alt": "VW Golf 2.0 TDI 150 4Motion"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "spec": {
-      "make": "VW",
-      "model": "Golf",
-      "year": 2013,
-      "bodyType": "hatchback",
-      "fuelType": "diesel",
-      "transmission": "manual",
-      "mileageValue": 227000,
-      "mileageUnit": "km",
-      "enginePowerHp": 150
-    },
-    "seller": {
-      "id": "dealer-dream-drive-varna",
-      "type": "dealer",
-      "displayName": "DREAM DRIVE",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-bd2059e137647692/logo-on-light.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1005",
-    "slug": "audi-a4-2010-11791398612800365",
-    "category": "car",
-    "dealerOrgId": "dealer-dream-drive-varna",
-    "status": "active",
-    "title": "Audi A4 2.0 TDI S LINE LED NAVI",
-    "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
-    "price": {
-      "amount": 6900,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/vehicles/11791398612800365/1.webp",
-        "alt": "Audi A4 2.0 TDI S LINE LED NAVI"
-      },
-      {
-        "url": "/assets/vehicles/11791398612800365/2.webp",
-        "alt": "Audi A4 2.0 TDI S LINE LED NAVI"
-      },
-      {
-        "url": "/assets/vehicles/11791398612800365/3.webp",
-        "alt": "Audi A4 2.0 TDI S LINE LED NAVI"
-      },
-      {
-        "url": "/assets/vehicles/11791398612800365/4.webp",
-        "alt": "Audi A4 2.0 TDI S LINE LED NAVI"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "spec": {
-      "make": "Audi",
-      "model": "A4",
-      "year": 2010,
-      "bodyType": "wagon",
-      "fuelType": "diesel",
-      "transmission": "manual",
-      "mileageValue": 237000,
-      "mileageUnit": "km",
-      "enginePowerHp": 143
-    },
-    "seller": {
-      "id": "dealer-dream-drive-varna",
-      "type": "dealer",
-      "displayName": "DREAM DRIVE",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-bd2059e137647692/logo-on-light.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1006",
-    "slug": "vw-passat-2016-11789907842576383",
-    "category": "car",
-    "dealerOrgId": "dealer-dream-drive-varna",
-    "status": "active",
-    "title": "VW Passat 2.0 TDI ALLTRACK DIGITAL",
-    "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
-    "price": {
-      "amount": 14200,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/vehicles/11789907842576383/1.webp",
-        "alt": "VW Passat 2.0 TDI ALLTRACK DIGITAL"
-      },
-      {
-        "url": "/assets/vehicles/11789907842576383/2.webp",
-        "alt": "VW Passat 2.0 TDI ALLTRACK DIGITAL"
-      },
-      {
-        "url": "/assets/vehicles/11789907842576383/3.webp",
-        "alt": "VW Passat 2.0 TDI ALLTRACK DIGITAL"
-      },
-      {
-        "url": "/assets/vehicles/11789907842576383/4.webp",
-        "alt": "VW Passat 2.0 TDI ALLTRACK DIGITAL"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "spec": {
-      "make": "VW",
-      "model": "Passat",
-      "year": 2016,
-      "bodyType": "wagon",
-      "fuelType": "diesel",
-      "transmission": "manual",
-      "mileageValue": 226000,
-      "mileageUnit": "km",
-      "enginePowerHp": 150
-    },
-    "seller": {
-      "id": "dealer-dream-drive-varna",
-      "type": "dealer",
-      "displayName": "DREAM DRIVE",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-bd2059e137647692/logo-on-light.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1007",
-    "slug": "toyota-yaris-2008-11789911583559651",
-    "category": "car",
-    "dealerOrgId": "dealer-dream-drive-varna",
-    "status": "active",
-    "title": "Toyota Yaris 1.3vvti",
-    "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
-    "price": {
-      "amount": 3600,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/vehicles/11789911583559651/1.webp",
-        "alt": "Toyota Yaris 1.3vvti"
-      },
-      {
-        "url": "/assets/vehicles/11789911583559651/2.webp",
-        "alt": "Toyota Yaris 1.3vvti"
-      },
-      {
-        "url": "/assets/vehicles/11789911583559651/3.webp",
-        "alt": "Toyota Yaris 1.3vvti"
-      },
-      {
-        "url": "/assets/vehicles/11789911583559651/4.webp",
-        "alt": "Toyota Yaris 1.3vvti"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "spec": {
-      "make": "Toyota",
-      "model": "Yaris",
-      "year": 2008,
-      "bodyType": "hatchback",
-      "fuelType": "gasoline",
-      "transmission": "manual",
-      "mileageValue": 188000,
-      "mileageUnit": "km",
-      "enginePowerHp": 87
-    },
-    "seller": {
-      "id": "dealer-dream-drive-varna",
-      "type": "dealer",
-      "displayName": "DREAM DRIVE",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-bd2059e137647692/logo-on-light.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1008",
-    "slug": "suzuki-vitara-2017-21789906623508409",
-    "category": "car",
-    "dealerOrgId": "dealer-dream-drive-varna",
-    "status": "active",
-    "title": "Suzuki Vitara 1.6DDIS 120кс 4x4",
-    "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
-    "price": {
-      "amount": 10500,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/vehicles/21789906623508409/1.webp",
-        "alt": "Suzuki Vitara 1.6DDIS 120кс 4x4"
-      },
-      {
-        "url": "/assets/vehicles/21789906623508409/2.webp",
-        "alt": "Suzuki Vitara 1.6DDIS 120кс 4x4"
-      },
-      {
-        "url": "/assets/vehicles/21789906623508409/3.webp",
-        "alt": "Suzuki Vitara 1.6DDIS 120кс 4x4"
-      },
-      {
-        "url": "/assets/vehicles/21789906623508409/4.webp",
-        "alt": "Suzuki Vitara 1.6DDIS 120кс 4x4"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "spec": {
-      "make": "Suzuki",
-      "model": "Vitara",
-      "year": 2017,
-      "bodyType": "suv",
-      "fuelType": "diesel",
-      "transmission": "manual",
-      "mileageValue": 200000,
-      "mileageUnit": "km",
-      "enginePowerHp": 120
-    },
-    "seller": {
-      "id": "dealer-dream-drive-varna",
-      "type": "dealer",
-      "displayName": "DREAM DRIVE",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-bd2059e137647692/logo-on-light.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1009",
-    "slug": "suzuki-sx4-2010-11789907068377884",
-    "category": "car",
-    "dealerOrgId": "dealer-dream-drive-varna",
-    "status": "active",
-    "title": "Suzuki SX4 1.6i 120кс 4x4 160.000 КМ",
-    "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
-    "price": {
-      "amount": 5900,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/vehicles/11789907068377884/1.webp",
-        "alt": "Suzuki SX4 1.6i 120кс 4x4 160.000 КМ"
-      },
-      {
-        "url": "/assets/vehicles/11789907068377884/2.webp",
-        "alt": "Suzuki SX4 1.6i 120кс 4x4 160.000 КМ"
-      },
-      {
-        "url": "/assets/vehicles/11789907068377884/3.webp",
-        "alt": "Suzuki SX4 1.6i 120кс 4x4 160.000 КМ"
-      },
-      {
-        "url": "/assets/vehicles/11789907068377884/4.webp",
-        "alt": "Suzuki SX4 1.6i 120кс 4x4 160.000 КМ"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "spec": {
-      "make": "Suzuki",
-      "model": "SX4",
-      "year": 2010,
-      "bodyType": "suv",
-      "fuelType": "gasoline",
-      "transmission": "manual",
-      "mileageValue": 160000,
-      "mileageUnit": "km",
-      "enginePowerHp": 120
-    },
-    "seller": {
-      "id": "dealer-dream-drive-varna",
-      "type": "dealer",
-      "displayName": "DREAM DRIVE",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-bd2059e137647692/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-6929d4c33b8c73cf/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false

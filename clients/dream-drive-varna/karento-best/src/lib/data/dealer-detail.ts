@@ -36,6 +36,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "valueKey": "fuel.diesel"
       },
       {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2013",
+        "labelKey": "vehicle.field.year"
+      },
+      {
         "id": "lit",
         "icon": "/assets/imgs/page/car/lit.svg",
         "value": "150 hp",
@@ -104,7 +110,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "DREAM DRIVE",
       "location": "бул. Цар Освободител 289, Варна, България",
-      "avatar": "/dealer-brand/v2-bd2059e137647692/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-6929d4c33b8c73cf/logo-on-light.webp",
       "mobile": "0895395980",
       "email": "",
       "whatsapp": "",
@@ -154,6 +160,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2010",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -224,7 +236,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "DREAM DRIVE",
       "location": "бул. Цар Освободител 289, Варна, България",
-      "avatar": "/dealer-brand/v2-bd2059e137647692/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-6929d4c33b8c73cf/logo-on-light.webp",
       "mobile": "0895395980",
       "email": "",
       "whatsapp": "",
@@ -274,6 +286,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2016",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -344,7 +362,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "DREAM DRIVE",
       "location": "бул. Цар Освободител 289, Варна, България",
-      "avatar": "/dealer-brand/v2-bd2059e137647692/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-6929d4c33b8c73cf/logo-on-light.webp",
       "mobile": "0895395980",
       "email": "",
       "whatsapp": "",
@@ -394,6 +412,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Petrol",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.gasoline"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2008",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -464,7 +488,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "DREAM DRIVE",
       "location": "бул. Цар Освободител 289, Варна, България",
-      "avatar": "/dealer-brand/v2-bd2059e137647692/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-6929d4c33b8c73cf/logo-on-light.webp",
       "mobile": "0895395980",
       "email": "",
       "whatsapp": "",
@@ -516,6 +540,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "valueKey": "fuel.diesel"
       },
       {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2017",
+        "labelKey": "vehicle.field.year"
+      },
+      {
         "id": "lit",
         "icon": "/assets/imgs/page/car/lit.svg",
         "value": "120 hp",
@@ -584,7 +614,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "DREAM DRIVE",
       "location": "бул. Цар Освободител 289, Варна, България",
-      "avatar": "/dealer-brand/v2-bd2059e137647692/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-6929d4c33b8c73cf/logo-on-light.webp",
       "mobile": "0895395980",
       "email": "",
       "whatsapp": "",
@@ -636,6 +666,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "valueKey": "fuel.gasoline"
       },
       {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2010",
+        "labelKey": "vehicle.field.year"
+      },
+      {
         "id": "lit",
         "icon": "/assets/imgs/page/car/lit.svg",
         "value": "120 hp",
@@ -704,7 +740,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "DREAM DRIVE",
       "location": "бул. Цар Освободител 289, Варна, България",
-      "avatar": "/dealer-brand/v2-bd2059e137647692/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-6929d4c33b8c73cf/logo-on-light.webp",
       "mobile": "0895395980",
       "email": "",
       "whatsapp": "",
@@ -754,6 +790,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2011",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -824,7 +866,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "DREAM DRIVE",
       "location": "бул. Цар Освободител 289, Варна, България",
-      "avatar": "/dealer-brand/v2-bd2059e137647692/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-6929d4c33b8c73cf/logo-on-light.webp",
       "mobile": "0895395980",
       "email": "",
       "whatsapp": "",
@@ -874,6 +916,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2017",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -944,7 +992,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "DREAM DRIVE",
       "location": "бул. Цар Освободител 289, Варна, България",
-      "avatar": "/dealer-brand/v2-bd2059e137647692/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-6929d4c33b8c73cf/logo-on-light.webp",
       "mobile": "0895395980",
       "email": "",
       "whatsapp": "",

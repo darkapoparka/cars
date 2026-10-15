@@ -118,6 +118,12 @@ export const referenceSpecifications: readonly DetailSpecification[] = [
     "valueKey": "fuel.diesel"
   },
   {
+    "id": "year",
+    "icon": "/assets/imgs/template/icons/calendar.svg",
+    "value": "2013",
+    "labelKey": "vehicle.field.year"
+  },
+  {
     "id": "lit",
     "icon": "/assets/imgs/page/car/lit.svg",
     "value": "150 hp",
@@ -149,7 +155,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "DREAM DRIVE",
   "location": "бул. Цар Освободител 289, Варна, България",
-  "avatar": "/dealer-brand/v2-bd2059e137647692/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-6929d4c33b8c73cf/logo-on-light.webp",
   "mobile": "0895395980",
   "email": "",
   "whatsapp": "",
