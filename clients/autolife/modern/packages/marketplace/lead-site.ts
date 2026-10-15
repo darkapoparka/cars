@@ -114,8 +114,8 @@ export const leadSite: LeadSiteConfig = {
     "tagline": "AUTOLIFE — vehicles and dealer support in Varna."
   }
 },
-  accent: "#30343b",
-  desktopAccent: "#4b5057",
+  accent: "#09090b",
+  desktopAccent: "#09090b",
   desktopInventoryFilterLayout: "quick",
   desktopPreviewIdentity: {
     sourceSlug: "day-night-auto-group",
@@ -147,11 +147,11 @@ export const leadSite: LeadSiteConfig = {
   email: "",
   heroPath: "/lead-hero.jpg",
   locale: "bg-BG",
-  logoPath: "/dealer-brand/v2-a9172326b4d82ce4/logo-on-light.webp",
-  logoInversePath: "/dealer-brand/v2-a9172326b4d82ce4/logo-on-dark.webp",
-  logoOnLight: "/dealer-brand/v2-a9172326b4d82ce4/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/v2-a9172326b4d82ce4/logo-on-dark.webp",
-  logoOnAccent: "/dealer-brand/v2-a9172326b4d82ce4/logo-on-dark.webp",
+  logoPath: "/dealer-brand/v2-b461deb6698b93fc/logo-on-light.webp",
+  logoInversePath: "/dealer-brand/v2-b461deb6698b93fc/logo-on-dark.webp",
+  logoOnLight: "/dealer-brand/v2-b461deb6698b93fc/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-b461deb6698b93fc/logo-on-dark.webp",
+  logoOnAccent: "/dealer-brand/v2-b461deb6698b93fc/logo-on-dark.webp",
   mapsEmbedUrl:
     "https://maps.google.com/maps?q=43.22861,27.8253778&z=15&output=embed",
   mapsUrl:

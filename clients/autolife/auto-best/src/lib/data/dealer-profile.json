@@ -27,9 +27,9 @@
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=43.22861,27.8253778",
     "mapsEmbedUrl": "https://maps.google.com/maps?q=43.22861,27.8253778&z=15&output=embed",
     "accent": "#a46d24",
-    "logo": "/dealer-brand/v2-a9172326b4d82ce4/logo-on-light.webp",
-    "logoLight": "/dealer-brand/v2-a9172326b4d82ce4/logo-on-light.webp",
-    "logoDark": "/dealer-brand/v2-a9172326b4d82ce4/logo-on-dark.webp",
+    "logo": "/dealer-brand/v2-b461deb6698b93fc/logo-on-light.webp",
+    "logoLight": "/dealer-brand/v2-b461deb6698b93fc/logo-on-light.webp",
+    "logoDark": "/dealer-brand/v2-b461deb6698b93fc/logo-on-dark.webp",
     "socialLinks": {
       "facebook": "",
       "instagram": "",
@@ -2396,21 +2396,21 @@
     "preparedAt": "2026-09-19T14:18:13.348Z",
     "assets": {
       "onLight": {
-        "publicPath": "/dealer-brand/v2-a9172326b4d82ce4/logo-on-light.webp",
+        "publicPath": "/dealer-brand/v2-b461deb6698b93fc/logo-on-light.webp",
         "sha256": "379ab5a5957d7012bc262b720b56bab72db3c2f9d0f71de53e290fd8cae17ae1",
         "bytes": 164858,
         "width": 1200,
         "height": 322
       },
       "onDark": {
-        "publicPath": "/dealer-brand/v2-a9172326b4d82ce4/logo-on-dark.webp",
+        "publicPath": "/dealer-brand/v2-b461deb6698b93fc/logo-on-dark.webp",
         "sha256": "ef1dbdcfb9c365e6d9d3724c9eddc2969788131737faafbf4b3f0d8fc5a3067f",
         "bytes": 40692,
         "width": 1200,
         "height": 322
       },
       "onAccent": {
-        "publicPath": "/dealer-brand/v2-a9172326b4d82ce4/logo-on-accent.webp",
+        "publicPath": "/dealer-brand/v2-b461deb6698b93fc/logo-on-accent.webp",
         "sha256": "ef1dbdcfb9c365e6d9d3724c9eddc2969788131737faafbf4b3f0d8fc5a3067f",
         "bytes": 40692,
         "width": 1200,

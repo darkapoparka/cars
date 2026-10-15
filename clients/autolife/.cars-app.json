@@ -3,32 +3,32 @@
   "dealer": "autolife",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/app",
-    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1",
-    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76"
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
   },
-  "appDigest": "c8110f6d2752c1b82d271b632a560099d1dae30e3a64ef49947b0d5da9b9a032",
+  "appDigest": "f264c10476de8184adc3f89f0be0c2589e3b0fe35036a700bdfadde5bf9390e2",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "autolife",
     "profile": "auto-best/src/lib/data/dealer-profile.json",
-    "profileSha256": "4a8b83df4f8ac22d7142a8c4a8828c8b4c8e818f1fcdbf2a193f15828fe1b552",
+    "profileSha256": "e97d474f719172184674224651d0e5e77aa1ce9a0119e1c1f75954f93136438b",
     "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
     "vehicles": 16,
     "currency": "EUR",
     "observedAt": "2026-09-07",
     "assets": [
       {
-        "source": "auto-best/static/dealer-brand/logo-on-light-20260919.webp",
-        "output": "public/dealer-app/logo-light-39e499a64ac1cf2ced3a.webp",
-        "sha256": "39e499a64ac1cf2ced3a00bcbeb2291379dc6fe19f9f693ce6fe0088188252a2",
+        "source": "auto-best/static/dealer-brand/v2-b461deb6698b93fc/logo-on-light.webp",
+        "output": "public/dealer-app/logo-light-379ab5a5957d7012bc26.webp",
+        "sha256": "379ab5a5957d7012bc262b720b56bab72db3c2f9d0f71de53e290fd8cae17ae1",
         "role": "logo-light"
       },
       {
-        "source": "auto-best/static/dealer-brand/logo-on-dark-20260919.webp",
-        "output": "public/dealer-app/logo-dark-fe6ee08d283060f362df.webp",
-        "sha256": "fe6ee08d283060f362dfbeafb9408dd459ed07d8877a31568871f14cf1165d15",
+        "source": "auto-best/static/dealer-brand/v2-b461deb6698b93fc/logo-on-dark.webp",
+        "output": "public/dealer-app/logo-dark-ef1dbdcfb9c365e6d9d3.webp",
+        "sha256": "ef1dbdcfb9c365e6d9d3724c9eddc2969788131737faafbf4b3f0d8fc5a3067f",
         "role": "logo-dark"
       },
       {
@@ -513,71 +513,9 @@
         "sourceUnit": "km",
         "canonicalKm": 140000
       }
-    ],
-    "inventoryNoticePreservation": {
-      "schemaVersion": 1,
-      "kind": "cars-current-app-inventory-notice-preservation",
-      "dealer": "autolife",
-      "baseline": {
-        "commit": "935a5054dc76f950c5de433a7b64d9fe6a06f4bf",
-        "tree": "e181cf2579e12edeb166cd9765605ae87c92ead7"
-      },
-      "path": "app/lib/dealer.json",
-      "reviewSha256": "03aa6f911e72037731701127f370687fdb5af4f9a6678c95ef1274e84adaf931",
-      "currentConfigSha256": "a88c6098a186933dc933706cafcac39bb449f3943d811cd4ad184bbd65c43186",
-      "currentNoticeSha256": "930e2f71ca0269d56eb42579409ae630e1d8802e7af4a34d32c0accaa0bf2d6a",
-      "profileSha256": "4a8b83df4f8ac22d7142a8c4a8828c8b4c8e818f1fcdbf2a193f15828fe1b552",
-      "unmodifiedTargetConfigSha256": "c1f5bf69ff3e56c9c71c70b4341d872ce62f96063c2379a4ccbea579ccd84673",
-      "targetConfigSha256": "b1010d51136b2dc3e6af3cd5650f0b33c271ec515536444e8c4e74bf8b1429ad",
-      "targetSources": {
-        "auto-best": {
-          "repository": "darkapoparka/cars",
-          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
-          "path": "templates/auto-best",
-          "digest": "dcbc59990928884006652677d3529020df3844029993895a71e5f6818ba7363c",
-          "tree": "5fb7a2164775050a47c1183371622295dbf63725"
-        },
-        "modern": {
-          "repository": "darkapoparka/cars",
-          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
-          "path": "templates/modern",
-          "digest": "ba263aac8f1863d133807d3e1bf3597d125cf315a7e0deba3f6e419b52434c25",
-          "tree": "3974380670eb388bb16182f94ade33be6d87b1c1"
-        },
-        "import": {
-          "repository": "darkapoparka/cars",
-          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
-          "path": "templates/import",
-          "digest": "f98a0934cdcc5adbda393c14c02eb2adc0175344ab2ac3f913afe4b0603366e5",
-          "tree": "6afc6901e2f95967fb7c72e9f75525d4d6fbf086"
-        },
-        "app": {
-          "repository": "darkapoparka/cars",
-          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
-          "path": "templates/app",
-          "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1",
-          "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76"
-        },
-        "mobile": {
-          "repository": "darkapoparka/cars",
-          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
-          "path": "templates/mobile",
-          "digest": "4e858bd9dbd3ef5b52cd904c4ed97bbfdc0f4cfe02b5a3840580f38026b867a0",
-          "tree": "2b02829e157071e305bfb2dff10ef18e85c8a35e"
-        },
-        "karento-best": {
-          "repository": "darkapoparka/cars",
-          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
-          "path": "templates/karento-best",
-          "digest": "83056967764a686f3737d74b86c5db51c1385a50184853f50ec4ade80c1dd44f",
-          "tree": "5f6eec8efb2f9e99819f7f0c2f743d18fff7b134"
-        }
-      },
-      "allOtherConfigFieldsUnchanged": true,
-      "sourceFactsUnchanged": true
-    }
+    ]
   },
   "needsDealerQA": true,
   "readyToPublish": false,
-  "refreshedAt": "2026-10-13T02:37:12.762Z"
+  "refreshedAt": "2026-10-15T02:31:18.013Z"
 }

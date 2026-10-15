@@ -191,7 +191,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "Аутолайф",
   "location": "ГП4, разклон за с. Тополи",
-  "avatar": "/dealer-brand/v2-a9172326b4d82ce4/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-b461deb6698b93fc/logo-on-light.webp",
   "mobile": "0895 766 736",
   "email": "",
   "whatsapp": "",

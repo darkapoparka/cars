@@ -17,6 +17,7 @@ export function resolveImportUrl(value: string | null): string | null {
   }
 }
 
+export const companyServicesCopyOwner = 'dealer' as const;
 export const companyServices: CompanyService[] = [
   {
     "index": "01",

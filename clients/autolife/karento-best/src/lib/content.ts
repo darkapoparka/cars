@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "Аутолайф",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-a9172326b4d82ce4/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-a9172326b4d82ce4/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-a9172326b4d82ce4/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-b461deb6698b93fc/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-b461deb6698b93fc/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-b461deb6698b93fc/logo-on-dark.webp",
     "alt": "Аутолайф",
-    "favicon": "/dealer-brand/v2-a9172326b4d82ce4/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-b461deb6698b93fc/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {
