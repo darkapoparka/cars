@@ -155,7 +155,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "АБЦ БЪЛГАРИЯ ЕООД",
   "location": "ул. Орех 1, Варна, България",
-  "avatar": "/dealer-brand/v2-3fde0f5c25977792/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-efa15554243eef12/logo-on-light.webp",
   "mobile": "0893324178",
   "email": "",
   "whatsapp": "",

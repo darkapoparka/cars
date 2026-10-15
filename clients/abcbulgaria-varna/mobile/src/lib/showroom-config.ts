@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "АБЦ БЪЛГАРИЯ ЕООД",
-  "logo": "/dealer-brand/v2-3fde0f5c25977792/logo-on-light.webp",
+  "logo": "/dealer-brand/v2-efa15554243eef12/logo-on-light.webp",
   "phone": "+359893324178",
   "email": null,
   "address": "ул. Орех 1, Варна, България",

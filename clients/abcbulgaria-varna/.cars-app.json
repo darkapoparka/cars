@@ -3,12 +3,12 @@
   "dealer": "abcbulgaria-varna",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/app",
-    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
-    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
   },
-  "appDigest": "96e45d6b67f96e4b97d17bc1b08d5325d6058cf541d40fece510577fe60d1d77",
+  "appDigest": "4abb7fb3bad4a71071cc4f936fc85f319f7196ac400212fb6c7138c609cf165b",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "abcbulgaria-varna",
@@ -21,14 +21,14 @@
     "assets": [
       {
         "source": "auto-best/static/dealer-brand/logo-on-light.png",
-        "output": "public/dealer-app/logo-light-c29a3504e4102e980284.png",
-        "sha256": "c29a3504e4102e98028435449296f69561737f369eefee631e06d585117291b1",
+        "output": "public/dealer-app/logo-light-0d2f107012e9c3c2bfed.png",
+        "sha256": "0d2f107012e9c3c2bfed0208b67c56e72fc8b26967115f19b3ebdf674cb94c8b",
         "role": "logo-light"
       },
       {
         "source": "auto-best/static/dealer-brand/logo-on-dark.png",
-        "output": "public/dealer-app/logo-dark-89526ddd40787bb0b94e.png",
-        "sha256": "89526ddd40787bb0b94eda0e70b72273ea3d6d7f7c460db8858eeaf77465e708",
+        "output": "public/dealer-app/logo-dark-371c63dc0951237e7509.png",
+        "sha256": "371c63dc0951237e7509da00543582a52895c3d49043514290bc7fdde3553dea",
         "role": "logo-dark"
       },
       {
@@ -54,5 +54,6 @@
     ]
   },
   "needsDealerQA": true,
-  "readyToPublish": false
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-15T03:58:32.313Z"
 }

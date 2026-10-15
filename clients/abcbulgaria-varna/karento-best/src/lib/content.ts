@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "АБЦ БЪЛГАРИЯ ЕООД",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-3fde0f5c25977792/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-3fde0f5c25977792/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-3fde0f5c25977792/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-efa15554243eef12/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-efa15554243eef12/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-efa15554243eef12/logo-on-dark.webp",
     "alt": "АБЦ БЪЛГАРИЯ ЕООД",
-    "favicon": "/dealer-brand/v2-3fde0f5c25977792/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-efa15554243eef12/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {
