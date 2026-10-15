@@ -1,8 +1,11 @@
 <script lang="ts">
 	import { page } from '$app/state';
-	import { tick } from 'svelte';
+	import { tick, untrack } from 'svelte';
+	import type { Attachment } from 'svelte/attachments';
 	import { contentText } from '$lib/content/localized';
+	import { vehicleMobilePositionCopy } from '$lib/content/vehicle-mobile';
 	const english = $derived(page.data.locale === 'en');
+	const positionCopy = $derived(vehicleMobilePositionCopy[english ? 'en' : 'bg']);
 	import { assetHref } from '$lib/utils/assets';
 	import { getGarageContext } from '$lib/state/garage.svelte';
 	const garage = getGarageContext();
@@ -20,7 +23,6 @@
 	import Send from '@lucide/svelte/icons/send';
 	import Share2 from '@lucide/svelte/icons/share-2';
 	import X from '@lucide/svelte/icons/x';
-	import { Drawer } from 'vaul-svelte';
 	import { templateInquiryCopy } from '$lib/data/template-settings';
 	import MobileSheet from '$lib/components/common/MobileSheet.svelte';
 	import MobileIconAction from '$lib/components/common/MobileIconAction.svelte';
@@ -30,14 +32,27 @@
 
 	const compareHref = $derived(resolve('/compare'));
 	const externalHref = (href: string) => ({ href });
-	const drawerRestingSnapPoint = 0.66;
-	const drawerExpandedSnapPoint = 0.92;
-	const drawerSnapPoints = [drawerRestingSnapPoint, drawerExpandedSnapPoint];
-
+	const componentId = $props.id();
+	const tabsId = `${componentId}-tabs`;
 	let activeTab = $state<AuxeroVehicleDetailDrawerTabId>('info');
-	let activeDrawerSnapPoint = $state<number | string | null>(drawerSnapPoints[0]);
-	let drawerOpen = $state(true);
-	let drawerContentEl = $state<HTMLElement | null>(null);
+	let headerPinned = $state(false);
+	let rootEl = $state<HTMLElement | null>(null);
+	let drawerEl = $state<HTMLElement | null>(null);
+	let tabListEl = $state<HTMLElement | null>(null);
+	let actionsEl = $state<HTMLElement | null>(null);
+	let drawerDragOffset = $state(0);
+	let drawerDragging = $state(false);
+	type DrawerBounds = { restTop: number; minTop: number; maxTop: number };
+	let drawerDrag: {
+		pointerId: number;
+		startY: number;
+		lastY: number;
+		position: number;
+		moved: boolean;
+		bounds: DrawerBounds;
+		handle: HTMLButtonElement;
+	} | null = null;
+	let suppressHandleClick = false;
 	let selectedImageIndex = $state(0);
 	let galleryPointerId = $state<number | null>(null);
 	let galleryStartX = $state(0);
@@ -45,7 +60,7 @@
 	let gallerySwiped = $state(false);
 	let shareStatus = $state('');
 	let viewerOpen = $state(false);
-	const inquiryFormId = $props.id();
+	const inquiryFormId = `${componentId}-inquiry`;
 	let inquiryOpen = $state(false);
 	$effect(() => {
 		if (!inquiryOpen) return;
@@ -79,69 +94,164 @@
 	const contentTabs = $derived(
 		detail.mobileDrawer.tabs.filter((tab) => ['info', 'specs', 'features'].includes(tab.id))
 	);
-	const drawerSnapOffset = $derived.by(() => {
-		const snap =
-			typeof activeDrawerSnapPoint === 'number' ? activeDrawerSnapPoint : drawerRestingSnapPoint;
-		return `${Math.round((1 - snap) * 100)}dvh`;
-	});
-
-	// vaul only updates `activeDrawerSnapPoint` once a drag *settles*, so the snap-based
-	// bottom padding (which keeps the scroll panel flush with the visible fold) lags behind
-	// the live drag — exposing the sheet's empty padding as a white strip that only fills in
-	// on release. While the sheet is being dragged or is animating to its snap point, mirror
-	// its real on-screen position into the padding var each frame so content tracks the drag.
-	// On settle we drop the inline override and let the reactive `drawerSnapOffset` govern again.
-	$effect(() => {
-		const el = drawerContentEl;
-		if (!el || !browser) return;
-
-		const offsetVar = '--daynight-mobile-pdp-snap-offset';
-		let rafId = 0;
-		let settleTimer = 0;
-		let running = false;
-
-		const syncOffset = () => {
-			const offset = Math.max(0, el.getBoundingClientRect().bottom - window.innerHeight);
-			el.style.setProperty(offsetVar, `${offset}px`);
+	const getDrawerBounds = (): DrawerBounds | null => {
+		const hero = rootEl?.querySelector<HTMLElement>('[data-mobile-pdp-hero]');
+		if (!rootEl || !drawerEl || !tabListEl || !actionsEl || !hero) return null;
+		const flowTop = rootEl.getBoundingClientRect().top + scrollY;
+		const restTop = flowTop + parseFloat(getComputedStyle(rootEl).paddingTop) - drawerDragOffset;
+		const summaryHeight =
+			actionsEl.getBoundingClientRect().bottom - drawerEl.getBoundingClientRect().top;
+		const stickyTop = parseFloat(getComputedStyle(tabListEl).top) || 0;
+		const bottomPadding = parseFloat(getComputedStyle(drawerEl).paddingBottom);
+		return {
+			restTop,
+			minTop: stickyTop - summaryHeight,
+			maxTop: Math.max(
+				restTop,
+				Math.min(
+					flowTop + hero.getBoundingClientRect().height,
+					innerHeight - summaryHeight - tabListEl.getBoundingClientRect().height - bottomPadding
+				)
+			)
 		};
-
-		const tick = () => {
-			syncOffset();
-			if (running) rafId = requestAnimationFrame(tick);
+	};
+	const moveDrawerTo = (top: number, bounds: DrawerBounds) => {
+		const position = Math.min(bounds.maxTop, Math.max(bounds.minTop, top));
+		// Lowering adds photo space; raising uses the same page scroll as the content.
+		drawerDragOffset = Math.max(0, position - bounds.restTop);
+		window.scrollTo({ top: Math.max(0, bounds.restTop - position), behavior: 'instant' });
+		return position;
+	};
+	const beginDrawerDrag = (event: PointerEvent) => {
+		if (!event.isPrimary || (event.pointerType === 'mouse' && event.button !== 0)) return;
+		const bounds = getDrawerBounds();
+		if (!bounds || !drawerEl) return;
+		event.preventDefault();
+		const handle = event.currentTarget as HTMLButtonElement;
+		suppressHandleClick = false;
+		drawerDragging = true;
+		drawerDrag = {
+			pointerId: event.pointerId,
+			startY: event.clientY,
+			lastY: event.clientY,
+			position: drawerEl.getBoundingClientRect().top,
+			moved: false,
+			bounds,
+			handle
 		};
-
-		const start = () => {
-			window.clearTimeout(settleTimer);
-			if (running) return;
-			running = true;
-			rafId = requestAnimationFrame(tick);
+		try {
+			handle.setPointerCapture(event.pointerId);
+		} catch {
+			// Window listeners also finish drags when capture is unavailable.
+		}
+	};
+	const moveDrawerDrag = (event: PointerEvent) => {
+		if (!drawerDrag || event.pointerId !== drawerDrag.pointerId) return;
+		event.preventDefault();
+		drawerDrag.moved ||= Math.abs(event.clientY - drawerDrag.startY) > 4;
+		drawerDrag.position = moveDrawerTo(
+			drawerDrag.position + event.clientY - drawerDrag.lastY,
+			drawerDrag.bounds
+		);
+		drawerDrag.lastY = event.clientY;
+	};
+	const endDrawerDrag = (event?: PointerEvent) => {
+		if (!drawerDrag || (event && event.pointerId !== drawerDrag.pointerId)) return;
+		const drag = drawerDrag;
+		drawerDrag = null;
+		drawerDragging = false;
+		suppressHandleClick = drag.moved;
+		if (drag.handle.hasPointerCapture(drag.pointerId))
+			drag.handle.releasePointerCapture(drag.pointerId);
+	};
+	const activateDrawerHandle = (event: MouseEvent) => {
+		if (event.detail > 0 && suppressHandleClick) {
+			suppressHandleClick = false;
+			return;
+		}
+		const bounds = getDrawerBounds();
+		if (bounds) moveDrawerTo(bounds.minTop, bounds);
+	};
+	const handleDrawerKeydown = (event: KeyboardEvent) => {
+		if (event.altKey || event.ctrlKey || event.metaKey || !drawerEl) return;
+		const bounds = getDrawerBounds();
+		if (!bounds) return;
+		const current = drawerEl.getBoundingClientRect().top;
+		const position =
+			event.key === 'ArrowUp'
+				? current - 32
+				: event.key === 'ArrowDown'
+					? current + 32
+					: event.key === 'Home'
+						? bounds.minTop
+						: event.key === 'End'
+							? bounds.maxTop
+							: null;
+		if (position === null) return;
+		event.preventDefault();
+		moveDrawerTo(position, bounds);
+	};
+	const trackDrawerHeader: Attachment<HTMLElement> = (handle) => {
+		if (!tabListEl) return;
+		const tabs = tabListEl;
+		let observer: IntersectionObserver | undefined;
+		const observe = () => {
+			endDrawerDrag();
+			const bounds = getDrawerBounds();
+			if (bounds) drawerDragOffset = Math.min(drawerDragOffset, bounds.maxTop - bounds.restTop);
+			observer?.disconnect();
+			const top = parseFloat(getComputedStyle(tabs).top) || 0;
+			observer = new IntersectionObserver(
+				([entry]) => {
+					headerPinned = !entry.isIntersecting && entry.boundingClientRect.bottom <= top;
+				},
+				{ rootMargin: `-${top}px 0px 0px 0px` }
+			);
+			observer.observe(handle);
 		};
-
-		const stop = () => {
-			running = false;
-			cancelAnimationFrame(rafId);
-			// Hand control back to the reactive (settled) value.
-			el.style.removeProperty(offsetVar);
-		};
-
-		const endAfterSettle = () => {
-			window.clearTimeout(settleTimer);
-			// Keep mirroring through vaul's snap animation (~0.5s) before releasing.
-			settleTimer = window.setTimeout(stop, 600);
-		};
-
-		el.addEventListener('pointerdown', start);
-		window.addEventListener('pointerup', endAfterSettle);
-		window.addEventListener('pointercancel', endAfterSettle);
-
+		untrack(observe);
+		window.addEventListener('resize', observe, { passive: true });
 		return () => {
-			el.removeEventListener('pointerdown', start);
-			window.removeEventListener('pointerup', endAfterSettle);
-			window.removeEventListener('pointercancel', endAfterSettle);
-			window.clearTimeout(settleTimer);
-			cancelAnimationFrame(rafId);
+			endDrawerDrag();
+			observer?.disconnect();
+			window.removeEventListener('resize', observe);
 		};
-	});
+	};
+
+	const selectContentTab = async (id: AuxeroVehicleDetailDrawerTabId) => {
+		if (id === activeTab) return;
+		const top = tabListEl ? parseFloat(getComputedStyle(tabListEl).top) || 0 : 0;
+		const pinned = tabListEl && tabListEl.getBoundingClientRect().top <= top + 1;
+		activeTab = id;
+		if (!pinned) return;
+		await tick();
+		if (!actionsEl) return;
+		// The actions remain in normal flow while the tab row is sticky.
+		window.scrollTo({
+			top: Math.max(0, scrollY + actionsEl.getBoundingClientRect().bottom - top),
+			behavior: 'instant'
+		});
+	};
+
+	const handleTabKeydown = (event: KeyboardEvent, index: number) => {
+		if (event.altKey || event.ctrlKey || event.metaKey) return;
+		const next =
+			event.key === 'ArrowRight'
+				? (index + 1) % contentTabs.length
+				: event.key === 'ArrowLeft'
+					? (index - 1 + contentTabs.length) % contentTabs.length
+					: event.key === 'Home'
+						? 0
+						: event.key === 'End'
+							? contentTabs.length - 1
+							: null;
+		if (next === null) return;
+		event.preventDefault();
+		void selectContentTab(contentTabs[next].id);
+		tabListEl
+			?.querySelectorAll<HTMLButtonElement>('[role="tab"]')
+			[next]?.focus({ preventScroll: true });
+	};
 
 	const useFallbackImage = (event: Event) => {
 		const image = event.currentTarget as HTMLImageElement;
@@ -294,6 +404,7 @@
 
 	const handleWindowKeydown = (event: KeyboardEvent) => {
 		if (event.key !== 'Escape') return;
+		endDrawerDrag();
 
 		if (viewerOpen) {
 			closeImageViewer();
@@ -303,16 +414,32 @@
 	};
 </script>
 
-<svelte:window onkeydown={handleWindowKeydown} />
+<svelte:window
+	onkeydown={handleWindowKeydown}
+	onpointermove={moveDrawerDrag}
+	onpointerup={endDrawerDrag}
+	onpointercancel={endDrawerDrag}
+/>
 
 <svelte:head>
+	<noscript>
+		<style>
+			@media (max-width: 767.98px) {
+				.daynight-mobile-pdp__topbar::before {
+					opacity: 1;
+				}
+			}
+		</style>
+	</noscript>
 	<style>
 		@media (max-width: 767.98px) {
 			html,
 			body {
 				background: #111111 !important;
-				height: 100dvh !important;
-				overflow: hidden !important;
+				height: auto !important;
+				min-height: 100dvh;
+				overflow-x: clip;
+				overflow-y: visible;
 				padding-bottom: 0 !important;
 				scrollbar-width: none !important;
 				width: 100% !important;
@@ -334,7 +461,8 @@
 	class="daynight-mobile-pdp"
 	data-mobile-pdp-root
 	aria-label={detail.title}
-	style:--daynight-mobile-pdp-snap-offset={drawerSnapOffset}
+	bind:this={rootEl}
+	style:--daynight-mobile-pdp-drag-offset={`${drawerDragOffset}px`}
 >
 	<div class="daynight-mobile-pdp__hero" data-mobile-pdp-hero>
 		<button
@@ -364,170 +492,201 @@
 				{selectedImageIndex + 1} / {heroGalleryImages.length}
 			</p>
 		{/if}
+	</div>
 
-		<div class="daynight-mobile-pdp__topbar mobile-utility-bar" data-mobile-pdp-topbar>
-			<MobileIconAction label={detail.mobileDrawer.backLabel} appearance="overlay" onclick={goBack}>
-				<ArrowLeft size={20} strokeWidth={2} aria-hidden="true" />
+	<div
+		class={[
+			'daynight-mobile-pdp__topbar',
+			'mobile-utility-bar',
+			headerPinned && 'daynight-mobile-pdp__topbar--pinned'
+		]}
+		data-mobile-pdp-topbar
+	>
+		<MobileIconAction label={detail.mobileDrawer.backLabel} appearance="overlay" onclick={goBack}>
+			<ArrowLeft size={20} strokeWidth={2} aria-hidden="true" />
+		</MobileIconAction>
+		<span class="daynight-mobile-pdp__compact-title" title={detail.title} aria-hidden="true"
+			>{detail.title}</span
+		>
+
+		<div class="daynight-mobile-pdp__topbar-actions">
+			<MobileIconAction href={compareHref} label={detail.copy.compare} appearance="overlay">
+				<GitCompare size={20} strokeWidth={2} aria-hidden="true" />
 			</MobileIconAction>
+			<MobileIconAction
+				label={detail.copy.savePrefix}
+				pressed={garage.isFavorite(detail.slug)}
+				appearance="overlay"
+				onclick={() => garage.toggleFavorite(detail.slug)}
+			>
+				<Heart size={20} strokeWidth={2} aria-hidden="true" />
+			</MobileIconAction>
+			<MobileIconAction
+				label={detail.mobileDrawer.shareLabel}
+				appearance="overlay"
+				onclick={shareVehicle}
+			>
+				<Share2 size={20} strokeWidth={2} aria-hidden="true" />
+			</MobileIconAction>
+		</div>
+	</div>
 
-			<div class="daynight-mobile-pdp__topbar-actions">
-				<MobileIconAction href={compareHref} label={detail.copy.compare} appearance="overlay">
-					<GitCompare size={20} strokeWidth={2} aria-hidden="true" />
-				</MobileIconAction>
-				<MobileIconAction
-					label={detail.copy.savePrefix}
-					pressed={garage.isFavorite(detail.slug)}
-					appearance="overlay"
-					onclick={() => garage.toggleFavorite(detail.slug)}
-				>
-					<Heart size={20} strokeWidth={2} aria-hidden="true" />
-				</MobileIconAction>
-				<MobileIconAction
-					label={detail.mobileDrawer.shareLabel}
-					appearance="overlay"
-					onclick={shareVehicle}
-				>
-					<Share2 size={20} strokeWidth={2} aria-hidden="true" />
-				</MobileIconAction>
+	{#if shareStatus}
+		<p class="daynight-mobile-pdp__toast" aria-live="polite">
+			<Check size={16} strokeWidth={2.4} aria-hidden="true" />
+			{shareStatus}
+		</p>
+	{/if}
+	<div
+		class="daynight-mobile-pdp__drawer"
+		data-mobile-pdp-drawer
+		id={`${componentId}-drawer`}
+		bind:this={drawerEl}
+	>
+		<button
+			type="button"
+			class={[
+				'daynight-mobile-pdp__handle',
+				drawerDragging && 'daynight-mobile-pdp__handle--dragging'
+			]}
+			aria-label={positionCopy.label}
+			aria-describedby={`${componentId}-drag-help`}
+			aria-controls={`${componentId}-drawer`}
+			onpointerdown={beginDrawerDrag}
+			onlostpointercapture={endDrawerDrag}
+			onkeydown={handleDrawerKeydown}
+			onclick={activateDrawerHandle}
+			{@attach trackDrawerHeader}
+		></button>
+		<p id={`${componentId}-drag-help`} class="daynight-mobile-pdp__drag-help">
+			{positionCopy.help}
+		</p>
+
+		<div class="daynight-mobile-pdp__drawer-heading">
+			<h1 class="daynight-mobile-pdp__heading-title">
+				<span class="daynight-mobile-pdp__drawer-title" title={detail.title}>{detail.title}</span>
+			</h1>
+			<div class="daynight-mobile-pdp__price-row">
+				<p>{detail.priceLabel}</p>
+				<span>{detail.monthlyLabel}</span>
 			</div>
 		</div>
 
-		{#if shareStatus}
-			<p class="daynight-mobile-pdp__toast" aria-live="polite">
-				<Check size={16} strokeWidth={2.4} aria-hidden="true" />
-				{shareStatus}
-			</p>
-		{/if}
-	</div>
-
-	<Drawer.Root
-		bind:open={drawerOpen}
-		bind:activeSnapPoint={activeDrawerSnapPoint}
-		direction="bottom"
-		dismissible={false}
-		modal={false}
-		snapPoints={drawerSnapPoints}
-		snapToSequentialPoint={true}
-	>
-		<Drawer.Content
-			class="daynight-mobile-pdp__drawer"
-			data-mobile-pdp-drawer
-			bind:ref={drawerContentEl}
-			trapFocus={false}
+		<div
+			class="daynight-mobile-pdp__actions"
+			aria-label={detail.copy.inquiryTitle}
+			bind:this={actionsEl}
 		>
-			<Drawer.Handle class="daynight-mobile-pdp__handle" preventCycle={true} />
+			<button
+				type="button"
+				class="daynight-mobile-pdp__cta daynight-mobile-pdp__cta--primary"
+				onclick={openInquiry}
+			>
+				<Send size={16} strokeWidth={2} aria-hidden="true" />
+				{detail.copy.inquiryCta}
+			</button>
+			<a
+				class="daynight-mobile-pdp__cta daynight-mobile-pdp__cta--call"
+				{...externalHref(detail.contact.primaryPhoneHref)}
+			>
+				<PhoneCall size={16} strokeWidth={2} aria-hidden="true" />
+				{detail.copy.callCta}
+			</a>
+		</div>
 
-			<div class="daynight-mobile-pdp__drawer-heading">
-				<Drawer.Title level={1} class="daynight-mobile-pdp__heading-title">
-					<span class="daynight-mobile-pdp__drawer-title" title={detail.title}>{detail.title}</span>
-				</Drawer.Title>
-				<div class="daynight-mobile-pdp__price-row">
-					<p>{detail.priceLabel}</p>
-					<span>{detail.monthlyLabel}</span>
-				</div>
-			</div>
+		<p class="daynight-mobile-pdp__drawer-description">{detail.description}</p>
 
-			<div class="daynight-mobile-pdp__actions" aria-label={detail.copy.inquiryTitle}>
+		<div
+			class="daynight-mobile-pdp__tabs"
+			aria-label={detail.copy.getToKnow}
+			role="tablist"
+			bind:this={tabListEl}
+		>
+			{#each contentTabs as tab, index (tab.id)}
 				<button
 					type="button"
-					class="daynight-mobile-pdp__cta daynight-mobile-pdp__cta--primary"
-					onclick={openInquiry}
+					role="tab"
+					id={`${tabsId}-${tab.id}`}
+					aria-controls={`${tabsId}-panel`}
+					tabindex={activeTab === tab.id ? 0 : -1}
+					data-mobile-pdp-tab
+					class={['daynight-mobile-pdp__tab', activeTab === tab.id && 'active']}
+					aria-selected={activeTab === tab.id}
+					onclick={() => selectContentTab(tab.id)}
+					onkeydown={(event) => handleTabKeydown(event, index)}
 				>
-					<Send size={16} strokeWidth={2} aria-hidden="true" />
-					{detail.copy.inquiryCta}
+					{tab.label}
 				</button>
-				<a
-					class="daynight-mobile-pdp__cta daynight-mobile-pdp__cta--call"
-					{...externalHref(detail.contact.primaryPhoneHref)}
-				>
-					<PhoneCall size={16} strokeWidth={2} aria-hidden="true" />
-					{detail.copy.callCta}
-				</a>
-			</div>
+			{/each}
+		</div>
 
-			<Drawer.Description>
-				<span class="daynight-mobile-pdp__drawer-description">{detail.description}</span>
-			</Drawer.Description>
-
-			<div class="daynight-mobile-pdp__tabs" aria-label={detail.copy.getToKnow} role="tablist">
-				{#each contentTabs as tab (tab.id)}
-					<button
-						type="button"
-						role="tab"
-						data-mobile-pdp-tab
-						class={['daynight-mobile-pdp__tab', activeTab === tab.id && 'active']}
-						aria-selected={activeTab === tab.id}
-						onclick={() => {
-							activeTab = tab.id;
-						}}
-					>
-						{tab.label}
-					</button>
-				{/each}
-			</div>
-
-			<div class="daynight-mobile-pdp__panel" role="tabpanel" tabindex="0" data-vaul-no-drag>
-				{#if activeTab === 'info'}
-					<div class="daynight-mobile-pdp__section">
-						<div class="daynight-mobile-pdp__facts" aria-label={detail.copy.carOverview}>
-							{#each primaryFacts as item (item.label)}
-								<div>
-									<img src={assetHref(`/assets/icons/${item.icon}`)} alt="" aria-hidden="true" />
-									<span>{item.value}</span>
-								</div>
-							{/each}
-						</div>
-
-						<div class="daynight-mobile-pdp__description">
-							<p class="daynight-mobile-pdp__eyebrow">{detail.copy.description}</p>
-							<p class="daynight-mobile-pdp__body-copy">{detail.description}</p>
-						</div>
-
-						<div class="daynight-mobile-pdp__finance">
+		<div
+			class="daynight-mobile-pdp__panel"
+			role="tabpanel"
+			id={`${tabsId}-panel`}
+			aria-labelledby={`${tabsId}-${activeTab}`}
+			tabindex="0"
+		>
+			{#if activeTab === 'info'}
+				<div class="daynight-mobile-pdp__section">
+					<div class="daynight-mobile-pdp__facts" aria-label={detail.copy.carOverview}>
+						{#each primaryFacts as item (item.label)}
 							<div>
-								<span>{detail.copy.cash}</span>
-								<strong>{detail.priceLabel}</strong>
-								<small>{detail.copy.priceIntro}</small>
+								<img src={assetHref(`/assets/icons/${item.icon}`)} alt="" aria-hidden="true" />
+								<span>{item.value}</span>
 							</div>
-							<div>
-								<span>{detail.copy.finance}</span>
-								<strong>{detail.monthlyLabel}</strong>
-								<small>{detail.copy.financeTerms}</small>
-							</div>
-						</div>
-					</div>
-				{:else if activeTab === 'specs'}
-					<ul class="daynight-mobile-pdp__spec-list">
-						{#each specItems as item (item.label)}
-							<li>
-								<span>
-									<img src={assetHref(`/assets/icons/${item.icon}`)} alt="" aria-hidden="true" />
-									{item.label}
-								</span>
-								<strong>{item.value}</strong>
-							</li>
-						{/each}
-					</ul>
-				{:else if activeTab === 'features'}
-					<div class="daynight-mobile-pdp__feature-groups">
-						{#each featureGroups as group (group.label)}
-							<section>
-								<h2>{group.label}</h2>
-								<ul>
-									{#each group.items as feature, featureIndex (`${group.label}-${featureIndex}`)}
-										<li>
-											<Check size={16} strokeWidth={2.4} aria-hidden="true" />
-											{feature}
-										</li>
-									{/each}
-								</ul>
-							</section>
 						{/each}
 					</div>
-				{/if}
-			</div>
-		</Drawer.Content>
-	</Drawer.Root>
+
+					<div class="daynight-mobile-pdp__description">
+						<p class="daynight-mobile-pdp__eyebrow">{detail.copy.description}</p>
+						<p class="daynight-mobile-pdp__body-copy">{detail.description}</p>
+					</div>
+
+					<div class="daynight-mobile-pdp__finance">
+						<div>
+							<span>{detail.copy.cash}</span>
+							<strong>{detail.priceLabel}</strong>
+							<small>{detail.copy.priceIntro}</small>
+						</div>
+						<div>
+							<span>{detail.copy.finance}</span>
+							<strong>{detail.monthlyLabel}</strong>
+							<small>{detail.copy.financeTerms}</small>
+						</div>
+					</div>
+				</div>
+			{:else if activeTab === 'specs'}
+				<ul class="daynight-mobile-pdp__spec-list">
+					{#each specItems as item (item.label)}
+						<li>
+							<span>
+								<img src={assetHref(`/assets/icons/${item.icon}`)} alt="" aria-hidden="true" />
+								{item.label}
+							</span>
+							<strong>{item.value}</strong>
+						</li>
+					{/each}
+				</ul>
+			{:else if activeTab === 'features'}
+				<div class="daynight-mobile-pdp__feature-groups">
+					{#each featureGroups as group (group.label)}
+						<section>
+							<h2>{group.label}</h2>
+							<ul>
+								{#each group.items as feature, featureIndex (`${group.label}-${featureIndex}`)}
+									<li>
+										<Check size={16} strokeWidth={2.4} aria-hidden="true" />
+										{feature}
+									</li>
+								{/each}
+							</ul>
+						</section>
+					{/each}
+				</div>
+			{/if}
+		</div>
+	</div>
 
 	<MobileSheet
 		bind:open={inquiryOpen}
@@ -665,23 +824,27 @@
 
 	@media (max-width: 767.98px) {
 		.daynight-mobile-pdp {
-			position: fixed;
-			inset: 0;
+			--daynight-mobile-pdp-grip-slot: calc(var(--bc-control-height-standard) / 2);
+			--daynight-mobile-pdp-toolbar-height: calc(
+				var(--bc-control-height-standard) + 2 * var(--bc-space-2) + env(safe-area-inset-top)
+			);
+			--daynight-mobile-pdp-tabs-height: calc(
+				var(--bc-control-height-standard) + var(--bc-space-1) + 1px
+			);
+			position: relative;
 			z-index: 1000;
 			display: block;
 			width: 100%;
-			height: 100dvh;
-			max-height: 100dvh;
+			min-height: 100dvh;
 			margin-left: 0;
-			overflow: hidden;
-			overscroll-behavior: none;
+			padding-top: calc(34dvh + var(--daynight-mobile-pdp-drag-offset, 0px));
 			background: var(--bc-bg);
 			color: #ffffff;
-			touch-action: manipulation;
+			touch-action: pan-y pinch-zoom;
 		}
 
 		.daynight-mobile-pdp__hero {
-			position: fixed;
+			position: absolute;
 			top: 0;
 			right: 0;
 			left: 0;
@@ -719,7 +882,7 @@
 
 		.daynight-mobile-pdp__topbar,
 		.daynight-mobile-pdp__toast {
-			position: absolute;
+			position: fixed;
 			z-index: 1004;
 		}
 
@@ -730,6 +893,44 @@
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
+			gap: 8px;
+		}
+
+		.daynight-mobile-pdp__topbar,
+		.daynight-mobile-pdp__viewer {
+			--bc-mobile-icon-action-surface-size: var(--bc-mobile-control-surface-size);
+			--bc-mobile-icon-action-glyph-size: var(--bc-mobile-control-glyph-size);
+		}
+
+		.daynight-mobile-pdp__topbar::before {
+			position: absolute;
+			z-index: -1;
+			inset: calc(-1 * var(--bc-space-2) - env(safe-area-inset-top))
+				calc(-1 * var(--bc-mobile-gutter)) calc(-1 * var(--bc-space-2));
+			background: var(--bc-white);
+			opacity: 0;
+			content: '';
+		}
+
+		.daynight-mobile-pdp__topbar--pinned::before {
+			opacity: 1;
+		}
+
+		.daynight-mobile-pdp__compact-title {
+			display: none;
+			min-width: 0;
+			flex: 1;
+			overflow: hidden;
+			color: var(--bc-ink);
+			font-size: var(--bc-mobile-label);
+			font-weight: var(--bc-weight-heading);
+			line-height: var(--bc-mobile-label-leading);
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+
+		.daynight-mobile-pdp__topbar--pinned .daynight-mobile-pdp__compact-title {
+			display: block;
 		}
 
 		.daynight-mobile-pdp__topbar-actions {
@@ -807,48 +1008,55 @@
 			line-height: 16px;
 		}
 
-		.daynight-mobile-pdp :global(.daynight-mobile-pdp__drawer[data-vaul-drawer]) {
-			position: fixed;
-			right: 0;
-			bottom: 0;
-			left: 0;
+		.daynight-mobile-pdp__drawer {
+			position: relative;
 			z-index: 1002;
-			display: flex;
-			flex-direction: column;
+			display: block;
 			box-sizing: border-box;
-			height: 100dvh;
-			overflow: hidden;
 			border: 0;
 			border-radius: 22px 22px 0 0;
 			background: #ffffff;
 			color: #1c1c1c;
 			box-shadow: 0 -20px 46px rgba(0, 0, 0, 0.22);
-			/* Match the resting snap before Vaul has measured the viewport. Dragging
-			   and settled snap points use Vaul's inline transform after hydration. */
-			transform: translateY(34dvh);
 			outline: 0;
-			padding: 7px 14px
-				calc(var(--daynight-mobile-pdp-snap-offset, 40dvh) + 12px + env(safe-area-inset-bottom));
+			padding: 7px 14px calc(12px + env(safe-area-inset-bottom));
 		}
 
-		.daynight-mobile-pdp :global(.daynight-mobile-pdp__handle[data-vaul-handle]) {
+		.daynight-mobile-pdp__handle {
 			position: relative;
 			display: block;
+			box-sizing: border-box;
 			width: 56px;
-			height: 22px;
-			min-height: 22px;
+			height: var(--bc-control-height-standard);
+			min-height: var(--bc-control-height-standard);
+			margin: calc(-1 * var(--daynight-mobile-pdp-grip-slot)) auto 0;
 			align-items: center;
 			justify-content: center;
 			align-self: center;
 			flex: 0 0 22px;
 			border-radius: 0;
+			border: 0;
 			background: transparent;
+			padding: 0;
 			opacity: 1;
+			cursor: grab;
+			touch-action: none;
+			user-select: none;
+			-webkit-user-select: none;
 		}
 
-		.daynight-mobile-pdp :global(.daynight-mobile-pdp__handle[data-vaul-handle])::after {
+		.daynight-mobile-pdp__handle--dragging {
+			cursor: grabbing;
+		}
+
+		.daynight-mobile-pdp__handle:focus-visible {
+			outline: 2px solid var(--bc-focus);
+			outline-offset: 2px;
+		}
+
+		.daynight-mobile-pdp__handle::after {
 			position: absolute;
-			top: 50%;
+			top: calc(50% + var(--daynight-mobile-pdp-grip-slot) / 2);
 			left: 50%;
 			width: 34px;
 			height: 3px;
@@ -856,18 +1064,6 @@
 			border-radius: 999px;
 			background: var(--bc-border);
 			content: '';
-		}
-
-		.daynight-mobile-pdp :global(.daynight-mobile-pdp__handle [data-vaul-handle-hitarea]) {
-			position: absolute;
-			inset: 0;
-			top: 0;
-			left: 0;
-			display: block;
-			width: 100%;
-			height: 100%;
-			background: transparent;
-			transform: none;
 		}
 
 		.daynight-mobile-pdp__drawer-heading {
@@ -878,7 +1074,7 @@
 			padding: 4px 0 8px;
 		}
 
-		.daynight-mobile-pdp__drawer-heading :global(.daynight-mobile-pdp__heading-title) {
+		.daynight-mobile-pdp__heading-title {
 			min-width: 0;
 			margin: 0;
 			font: inherit;
@@ -926,7 +1122,8 @@
 			white-space: nowrap;
 		}
 
-		.daynight-mobile-pdp__drawer-description {
+		.daynight-mobile-pdp__drawer-description,
+		.daynight-mobile-pdp__drag-help {
 			position: absolute;
 			width: 1px;
 			height: 1px;
@@ -936,6 +1133,9 @@
 		}
 
 		.daynight-mobile-pdp__tabs {
+			position: sticky;
+			top: var(--daynight-mobile-pdp-toolbar-height);
+			z-index: 1003;
 			display: grid;
 			grid-template-columns: repeat(3, minmax(0, 1fr));
 			align-items: center;
@@ -943,6 +1143,7 @@
 			gap: 0;
 			overflow: visible;
 			border-bottom: 1px solid var(--bc-border);
+			background: var(--bc-white);
 			padding: 4px 0 0;
 		}
 
@@ -1000,18 +1201,12 @@
 		}
 
 		.daynight-mobile-pdp__panel {
-			flex: 1 1 auto;
-			min-height: 0;
-			overflow-y: auto;
-			overflow-x: hidden;
-			overscroll-behavior: contain;
+			box-sizing: border-box;
+			min-height: calc(
+				100dvh - var(--daynight-mobile-pdp-toolbar-height) -
+					var(--daynight-mobile-pdp-tabs-height) - 12px - env(safe-area-inset-bottom)
+			);
 			padding: 12px 0 12px;
-			scrollbar-width: none;
-			-webkit-overflow-scrolling: touch;
-		}
-
-		.daynight-mobile-pdp__panel::-webkit-scrollbar {
-			display: none;
 		}
 
 		.daynight-mobile-pdp__section,

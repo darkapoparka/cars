@@ -3,32 +3,32 @@
   "dealer": "avangard-auto",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/app",
-    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1",
-    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76"
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
   },
-  "appDigest": "e5dd10f943f2440a49e7422158a8c1dbfe5c077f3b9477c55c2244f85d1f3fbb",
+  "appDigest": "4bd65b9ac861fe07af6930a8e8aae9e659000cc8bc1809d54736b9d19a80711c",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "avangard-auto",
     "profile": "auto-best/src/lib/data/dealer-profile.json",
-    "profileSha256": "ab425aa3efb4114e2d4e33639a0946137f4210ea566d46d9e47ec76be5e3e01a",
+    "profileSha256": "e4b21d5b769a1cc39ee2497b3c1b7ea757ea9ae7eb4339c97f85e0b3a12036ab",
     "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
     "vehicles": 16,
     "currency": "EUR",
     "observedAt": "2026-09-06T21:51:19.990Z",
     "assets": [
       {
-        "source": "auto-best/static/dealer-brand/logo-on-light-20260919.webp",
-        "output": "public/dealer-app/logo-light-50aaaad8c8bd39738a9c.webp",
-        "sha256": "50aaaad8c8bd39738a9c0c9214de09779cac4883f9f0857771e05e012a8d3c98",
+        "source": "auto-best/static/dealer-brand/v2-d2d110db50b48593/logo-on-light.webp",
+        "output": "public/dealer-app/logo-light-2c7a7806aba3ab0cc482.webp",
+        "sha256": "2c7a7806aba3ab0cc4829a86ef1e1325c21aef49b1ef00490c132a0c500e6f0e",
         "role": "logo-light"
       },
       {
-        "source": "auto-best/static/dealer-brand/logo-on-dark-20260919.webp",
-        "output": "public/dealer-app/logo-dark-8aded442df0d3a086651.webp",
-        "sha256": "8aded442df0d3a0866513dc5539d0a8b8434166084c86169095899227480fe4d",
+        "source": "auto-best/static/dealer-brand/v2-d2d110db50b48593/logo-on-dark.webp",
+        "output": "public/dealer-app/logo-dark-d7d96ea50fcdb5b63191.webp",
+        "sha256": "d7d96ea50fcdb5b63191b5ca52f3932378f89a8a4261c766f10ddd3500cf1e64",
         "role": "logo-dark"
       },
       {
@@ -517,5 +517,5 @@
   },
   "needsDealerQA": true,
   "readyToPublish": false,
-  "refreshedAt": "2026-10-13T03:38:04.853Z"
+  "refreshedAt": "2026-10-15T02:25:00.624Z"
 }
