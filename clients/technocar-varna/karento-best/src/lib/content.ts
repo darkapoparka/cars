@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "TECHNOCAR",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-047a623de861a7b2/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-047a623de861a7b2/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-047a623de861a7b2/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-2d749c53e3c67348/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-2d749c53e3c67348/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-2d749c53e3c67348/logo-on-dark.webp",
     "alt": "TECHNOCAR",
-    "favicon": "/dealer-brand/v2-047a623de861a7b2/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-2d749c53e3c67348/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

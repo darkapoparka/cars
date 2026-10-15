@@ -54,15 +54,15 @@
     font-size: var(--text-meta);
     font-weight: var(--font-weight-semibold);
     line-height: var(--desktop-leading-none);
-    color: var(--brand-foreground);
-    background: var(--brand);
+    color: var(--primary-foreground);
+    background: var(--primary);
     border: var(--desktop-border-width) solid transparent;
     border-radius: var(--radius-lg);
     box-shadow: none;
   }
   .action:hover {
-    color: var(--brand-hover-foreground);
-    background: var(--lead-site-accent-hover);
+    color: var(--primary-hover-foreground);
+    background: var(--primary-hover);
   }
   .action:disabled {
     color: var(--muted-foreground);
@@ -83,7 +83,7 @@
   }
 
   .panel :is(input, select, textarea, button, a):focus-visible {
-    outline: var(--desktop-focus-width) solid var(--brand);
+    outline: var(--desktop-focus-width) solid var(--primary);
     outline-offset: var(--desktop-focus-offset);
     box-shadow: none;
   }

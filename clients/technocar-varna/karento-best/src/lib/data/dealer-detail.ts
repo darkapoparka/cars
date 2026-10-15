@@ -86,7 +86,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "TECHNOCAR",
       "location": "бул. Владислав Варненчик 310, Варна, България",
-      "avatar": "/dealer-brand/v2-047a623de861a7b2/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-2d749c53e3c67348/logo-on-light.webp",
       "mobile": "00359888605466",
       "email": "showroom@technocar.bg",
       "whatsapp": "",
@@ -188,7 +188,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "TECHNOCAR",
       "location": "бул. Владислав Варненчик 310, Варна, България",
-      "avatar": "/dealer-brand/v2-047a623de861a7b2/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-2d749c53e3c67348/logo-on-light.webp",
       "mobile": "00359888605466",
       "email": "showroom@technocar.bg",
       "whatsapp": "",

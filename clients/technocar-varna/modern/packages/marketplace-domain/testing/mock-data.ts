@@ -49,7 +49,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "TECHNOCAR",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-047a623de861a7b2/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-2d749c53e3c67348/logo-on-light.webp"
     },
     "publishedAt": "2026-10-12T09:00:00.000Z",
     "promoted": true
@@ -101,7 +101,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "TECHNOCAR",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-047a623de861a7b2/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-2d749c53e3c67348/logo-on-light.webp"
     },
     "publishedAt": "2026-10-12T09:00:00.000Z",
     "promoted": true

@@ -111,8 +111,8 @@ export const leadSite: LeadSiteConfig = {
     "tagline": "TECHNOCAR — vehicles and dealer support in Varna."
   }
 },
-  accent: "#30343b",
-  desktopAccent: "#4b5057",
+  accent: "#09090b",
+  desktopAccent: "#09090b",
   desktopInventoryFilterLayout: "quick",
   desktopPreviewIdentity: {
     sourceSlug: "day-night-auto-group",
@@ -144,8 +144,8 @@ export const leadSite: LeadSiteConfig = {
   email: "showroom@technocar.bg",
   heroPath: "/lead-hero.jpg",
   locale: "bg-BG",
-  logoPath: "/dealer-brand/v2-047a623de861a7b2/logo-on-light.webp",
-  logoInversePath: "/dealer-brand/v2-047a623de861a7b2/logo-on-dark.webp",
+  logoPath: "/dealer-brand/v2-2d749c53e3c67348/logo-on-light.webp",
+  logoInversePath: "/dealer-brand/v2-2d749c53e3c67348/logo-on-dark.webp",
   mapsEmbedUrl:
     "https://maps.google.com/maps?q=TECHNOCAR%2C%20%D0%B1%D1%83%D0%BB.%20%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D1%81%D0%BB%D0%B0%D0%B2%20%D0%92%D0%B0%D1%80%D0%BD%D0%B5%D0%BD%D1%87%D0%B8%D0%BA%20310%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F&z=16&output=embed",
   mapsUrl:

@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "TECHNOCAR",
-  "logo": "/dealer-brand/v2-047a623de861a7b2/logo-on-light.webp",
+  "logo": "/dealer-brand/v2-2d749c53e3c67348/logo-on-light.webp",
   "phone": "+359888605466",
   "email": "showroom@technocar.bg",
   "address": "бул. Владислав Варненчик 310, Варна, България",

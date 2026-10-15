@@ -12,7 +12,6 @@
     <header class="dn-about-team__heading">
       <div class="dn-about-team__heading-copy">
         <h2 id="about-team-title">{i18n.t('company.team.title')}</h2>
-        <p>{i18n.t('company.team.demo')}</p>
       </div>
       <a
         class="dn-about-team__contact dn-about-team__section-contact"
@@ -62,9 +61,8 @@
     .dn-about-team { display: block; padding: 0 0 var(--dn-space-8); background: var(--dn-surface-canvas); }
     .dn-about-team__panel { width: min(1296px, calc(100% - 48px)); padding: var(--dn-space-8); border-radius: var(--dn-radius-lg); background: var(--dn-surface-raised); }
     .dn-about-team__heading { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--dn-space-4) var(--dn-space-6); }
-    .dn-about-team__heading-copy { flex: 1 1 16rem; min-width: 0; }
-    .dn-about-team__heading h2 { margin: 0; color: var(--dn-ink); font-size: var(--dn-text-section-compact); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-section); letter-spacing: var(--dn-tracking-heading); }
-    .dn-about-team__heading p { margin: var(--dn-space-2) 0 0; color: var(--dn-muted); font-size: var(--dn-text-meta); line-height: var(--dn-leading-meta); }
+    .dn-about-team__heading-copy { display: flex; flex: 1 1 16rem; align-items: center; min-width: 0; min-height: var(--dn-control-height-default); }
+    .dn-about-team__heading h2 { margin: 0; color: var(--dn-ink); font-size: var(--dn-text-subheading); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-heading); letter-spacing: var(--dn-tracking-heading); }
     .dn-about-team__contact {
       display: inline-flex;
       flex: none;
