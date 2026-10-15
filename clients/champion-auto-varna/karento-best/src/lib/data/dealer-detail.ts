@@ -86,7 +86,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Сhampion Auto",
       "location": "бул. Цар Освободител 210, до изхода на КАТ, Варна, България",
-      "avatar": "/dealer-brand/v2-3a0b44cd293342c3/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-5f3277eaf9d946d1/logo-on-light.webp",
       "mobile": "0899736225",
       "email": "",
       "whatsapp": "",
@@ -188,7 +188,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Сhampion Auto",
       "location": "бул. Цар Освободител 210, до изхода на КАТ, Варна, България",
-      "avatar": "/dealer-brand/v2-3a0b44cd293342c3/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-5f3277eaf9d946d1/logo-on-light.webp",
       "mobile": "0899736225",
       "email": "",
       "whatsapp": "",

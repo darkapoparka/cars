@@ -28,11 +28,13 @@
     details,
     loanState = $bindable(),
     showFinance = true,
+    aboutFirst = false,
   }: {
     product?: boolean;
     details?: DetailContent;
     loanState?: LoanCalculatorState;
     showFinance?: boolean;
+    aboutFirst?: boolean;
   } = $props();
   const desktop = new MediaQuery("(min-width: 992px)");
   let content = $derived(
@@ -52,20 +54,26 @@
   let calculatorState = $derived(loanState ?? localLoanState);
 </script>
 
-<div class="box-collapse-expand">
-  <DetailAccordion
-    id="collapseOverview"
-    title={locale.t("ui.vehicle-detail-panels.overview")}
-    ><DetailOverview paragraphs={content.overview} /></DetailAccordion
-  >
+{#snippet aboutPanel()}
   <DetailAccordion
     id="collapseItinerary"
     title={locale.t(product ? "product.aboutItem" : "vehicle.includedPrice")}
-    mobileOpen={false}
+    mobileOpen={aboutFirst}
     ><DetailIncludedFeatures
       items={content.includedFeatures}
     /></DetailAccordion
   >
+{/snippet}
+
+<div class="box-collapse-expand">
+  {#if aboutFirst}{@render aboutPanel()}{/if}
+  <DetailAccordion
+    id="collapseOverview"
+    title={locale.t("ui.vehicle-detail-panels.overview")}
+    mobileOpen={!aboutFirst}
+    ><DetailOverview paragraphs={content.overview} /></DetailAccordion
+  >
+  {#if !aboutFirst}{@render aboutPanel()}{/if}
   <DetailAccordion
     id="collapseQuestion"
     title={locale.t("ui.vehicle-detail-panels.question-answers")}

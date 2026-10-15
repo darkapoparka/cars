@@ -49,7 +49,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Сhampion Auto",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-3a0b44cd293342c3/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-5f3277eaf9d946d1/logo-on-light.webp"
     },
     "publishedAt": "2026-10-12T09:00:00.000Z",
     "promoted": true
@@ -101,7 +101,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Сhampion Auto",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-3a0b44cd293342c3/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-5f3277eaf9d946d1/logo-on-light.webp"
     },
     "publishedAt": "2026-10-12T09:00:00.000Z",
     "promoted": true

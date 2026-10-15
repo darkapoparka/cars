@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "Сhampion Auto",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-3a0b44cd293342c3/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-3a0b44cd293342c3/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-3a0b44cd293342c3/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-5f3277eaf9d946d1/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-5f3277eaf9d946d1/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-5f3277eaf9d946d1/logo-on-dark.webp",
     "alt": "Сhampion Auto",
-    "favicon": "/dealer-brand/v2-3a0b44cd293342c3/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-5f3277eaf9d946d1/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {
