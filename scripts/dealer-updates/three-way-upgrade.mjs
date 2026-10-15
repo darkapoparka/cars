@@ -226,9 +226,9 @@ function gitMerge(pathname, dealerBytes, baseBytes, templateBytes, tempRoot) {
   }
 }
 
-function mapOfFiles(value) {
+function mapOfFiles(value, { copyBuffers = true } = {}) {
   if (value instanceof Map) {
-    return new Map([...value].map(([name, bytes]) => [safeRelative(name), Buffer.from(bytes)]));
+    return new Map([...value].map(([name, bytes]) => [safeRelative(name), copyBuffers || !Buffer.isBuffer(bytes) ? Buffer.from(bytes) : bytes]));
   }
   if (typeof value === 'string') {
     const root = path.resolve(value), result = new Map();
@@ -388,8 +388,10 @@ export function planDealerUpgrade({ dealerRoot, lock, oldBases, newBases, target
   const candidate = new Map(), changes = [], conflicts = [], perDesign = {};
   for (const key of Object.keys(pins)) {
     if ((!oldBases?.[key] && pins[key].from !== null) || !newBases?.[key]) throw new Error(`Missing exact old/new template trees for ${key}`);
-    const oldBase = pins[key].from === null ? new Map() : mapOfFiles(oldBases[key]);
-    const newBase = mapOfFiles(newBases[key]);
+    // The inner planner owns its defensive Buffer copies. This outer layer only
+    // validates paths/package presence and passes the maps through read-only.
+    const oldBase = pins[key].from === null ? new Map() : mapOfFiles(oldBases[key], { copyBuffers: false });
+    const newBase = mapOfFiles(newBases[key], { copyBuffers: false });
     if ((pins[key].from !== null && !oldBase.has('package.json')) || !newBase.has('package.json')) throw new Error(`${key}: pinned template tree must contain package.json`);
     const designRoot = path.join(source, safeRelative(key));
     if (pins[key].from !== null && !exists(path.join(designRoot, 'package.json'))) throw new Error(`${key}: dealer source is missing its design package.json`);
