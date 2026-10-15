@@ -86,7 +86,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "CARNOVA",
       "location": "ул. Тодор Р. Пенев срещу бл.5 вх.Д, Варна, България",
-      "avatar": "/dealer-brand/v2-9910ae976edbf093/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-f842e0e14d723526/logo-on-light.webp",
       "mobile": "0888865065",
       "email": "",
       "whatsapp": "",
@@ -188,7 +188,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "CARNOVA",
       "location": "ул. Тодор Р. Пенев срещу бл.5 вх.Д, Варна, България",
-      "avatar": "/dealer-brand/v2-9910ae976edbf093/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-f842e0e14d723526/logo-on-light.webp",
       "mobile": "0888865065",
       "email": "",
       "whatsapp": "",

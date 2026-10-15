@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "CARNOVA",
-  "logo": "/dealer-brand/v2-9910ae976edbf093/logo-on-light.webp",
+  "logo": "/dealer-brand/v2-f842e0e14d723526/logo-on-light.webp",
   "phone": "+359888865065",
   "email": null,
   "address": "ул. Тодор Р. Пенев срещу бл.5 вх.Д, Варна, България",

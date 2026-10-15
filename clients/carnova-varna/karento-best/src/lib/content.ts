@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "CARNOVA",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-9910ae976edbf093/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-9910ae976edbf093/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-9910ae976edbf093/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-f842e0e14d723526/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-f842e0e14d723526/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-f842e0e14d723526/logo-on-dark.webp",
     "alt": "CARNOVA",
-    "favicon": "/dealer-brand/v2-9910ae976edbf093/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-f842e0e14d723526/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

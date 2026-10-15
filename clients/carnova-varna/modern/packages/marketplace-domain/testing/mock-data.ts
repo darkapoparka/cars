@@ -49,7 +49,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "CARNOVA",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-9910ae976edbf093/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-f842e0e14d723526/logo-on-light.webp"
     },
     "publishedAt": "2026-10-12T09:00:00.000Z",
     "promoted": true
@@ -101,7 +101,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "CARNOVA",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-9910ae976edbf093/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-f842e0e14d723526/logo-on-light.webp"
     },
     "publishedAt": "2026-10-12T09:00:00.000Z",
     "promoted": true

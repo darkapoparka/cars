@@ -33,6 +33,6 @@ export const brand = {
   addressLine,
   address: "ул. Тодор Р. Пенев срещу бл.5 вх.Д, Варна, България",
   appointment: "Потвърдете работното време директно с автокъщата.",
-  logo: "/dealer-brand/v2-9910ae976edbf093/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/v2-9910ae976edbf093/logo-on-dark.webp"
+  logo: "/dealer-brand/v2-f842e0e14d723526/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-f842e0e14d723526/logo-on-dark.webp"
 } as const satisfies BrandConfig;

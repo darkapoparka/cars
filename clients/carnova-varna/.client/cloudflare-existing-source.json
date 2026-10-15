@@ -2,16 +2,16 @@
   "schemaVersion": 1,
   "dealer": "carnova-varna",
   "kind": "personalized-source-candidate-not-an-approved-release",
-  "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
-  "candidateSourceDigest": "4f29887335b76d5231c36537017a6ef59a400da3c18d255a74fae9ed92bb9ef6",
+  "sourceRevision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+  "candidateSourceDigest": "b03c13454960cfd1927baddd641c9b2ef78c9e9ff43121e03d48ef9cfdd89b7d",
   "qualificationContextPath": ".client/native-qualification-context.json",
-  "qualificationContextSha256": "6016cf0ab454d80eb7f6333f86f47e66dfc707916c1eed9156356b3ccb4c1b4c",
+  "qualificationContextSha256": "874153f4230bc87ec8455bab94d364be85bd19637bd70260866740cefd4dba2a",
   "qualificationLockPath": ".client/native-qualification-lock.json",
-  "qualificationLockSha256": "8825ea96b08eac6f5cceb9969364ad3b4625307814688c4884062ca9d52be97a",
+  "qualificationLockSha256": "04633129df9e75d6cd62deeac9125b279957789d75f57cdb0b243ef61bfc3e7e",
   "sourceDeltaReview": {
-    "reference": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
-    "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975",
-    "reviewedAt": "2026-10-11T21:04:02.173Z"
+    "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
+    "sha256": "43cb6876e815a2a6b866f1dadd304236de4ae58c05fe65c2ab62a23506ee7ce9",
+    "reviewedAt": "2026-10-14T23:55:37.398Z"
   },
   "nativeApproval": false,
   "hostedApproval": false
