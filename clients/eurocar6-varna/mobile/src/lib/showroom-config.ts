@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "ЕВРОКАР",
-  "logo": "/dealer-brand/v2-dd155c8c1c05263b/logo-on-light.webp",
+  "logo": "/dealer-brand/v2-b14068bc43767531/logo-on-light.webp",
   "phone": "+359879430777",
   "email": null,
   "address": "бул. Цар Освободител /до Дом на Камиона/, Варна, България",

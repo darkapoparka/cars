@@ -25,6 +25,7 @@ type LocaleState = ResolvedLocale<Locale>;
 
 import {
   createContext,
+  Suspense,
   type ReactNode,
   useCallback,
   useContext,
@@ -32,6 +33,7 @@ import {
   useRef,
   useState,
 } from "react";
+import { usePathname, useSearchParams } from "next/navigation";
 
 const PreferenceContext = createContext<{
   state: LocaleState;
@@ -41,7 +43,7 @@ const PreferenceContext = createContext<{
 export const useLocalePreferences = () => useContext(PreferenceContext);
 
 /** Native dialog supplies modal focus containment; no mutable server visitor state. */
-export function LocalePreferencesProvider({
+function NativeLocalePreferencesProvider({
   children,
   state,
   returnTo,
@@ -52,6 +54,8 @@ export function LocalePreferencesProvider({
   inventoryCurrency,
   enabledLocales,
   promptVersion,
+  requestPending = false,
+  bootstrapContext,
 }: {
   children: ReactNode;
   state: LocaleState;
@@ -63,6 +67,8 @@ export function LocalePreferencesProvider({
   inventoryCurrency: string;
   enabledLocales: readonly Locale[];
   promptVersion: string;
+  requestPending?: boolean;
+  bootstrapContext?: string;
 }) {
   const promptKey = `cars.prompt.${promptVersion}`;
   const dialog = useRef<HTMLDialogElement>(null);
@@ -106,6 +112,7 @@ export function LocalePreferencesProvider({
   const options = countryOptions;
   const show = useCallback(
     (manualSelection = true) => {
+      if (requestPending) return;
       invalidateRequest();
       returnFocus.current =
         document.activeElement instanceof HTMLElement
@@ -117,10 +124,21 @@ export function LocalePreferencesProvider({
       setError(false);
       setOpen(true);
     },
-    [state.locale, state.country, invalidateRequest]
+    [state.locale, state.country, invalidateRequest, requestPending]
   );
 
   useEffect(() => {
+    if (bootstrapContext === undefined) return;
+    // A navigation or fresh native state invalidates work from the old context.
+    invalidateRequest();
+    setOpen(false);
+    setError(false);
+    setLocale(state.locale);
+    setCountry(state.country);
+  }, [bootstrapContext, requestPending, state.locale, state.country, invalidateRequest]);
+
+  useEffect(() => {
+    if (requestPending) { setReady(false); return; }
     setReady(true);
     if (attempted.current) {
       return;
@@ -138,7 +156,7 @@ export function LocalePreferencesProvider({
     if (!dismissed) {
       show(false);
     }
-  }, [state.promptDismissed, show, promptKey]);
+  }, [state.promptDismissed, show, promptKey, requestPending]);
   useEffect(() => {
     const element = dialog.current;
     if (open && element && !element.open) {
@@ -455,4 +473,84 @@ export function LocalePreferencesProvider({
       </dialog>
     </PreferenceContext.Provider>
   );
+}
+
+
+type NativePreferenceProps = Parameters<typeof NativeLocalePreferencesProvider>[0];
+type NativeBootstrap = { state: LocaleState; returnTo: string };
+
+/** Validate a native-policy response for this navigation; never infer a locale. */
+export function readCarsNativeBootstrap(value: unknown, returnTo: string, locale: Locale): NativeBootstrap {
+  if (!value || typeof value !== "object" || Array.isArray(value)) throw new Error("Invalid native preference bootstrap");
+  const envelope = value as Record<string, unknown>;
+  if (Object.keys(envelope).sort().join(",") !== "kind,returnTo,schemaVersion,state" ||
+    envelope.schemaVersion !== 1 || envelope.kind !== "cars-modern-native-preferences-bootstrap" || envelope.returnTo !== returnTo) {
+    throw new Error("Stale native preference bootstrap");
+  }
+  const state = envelope.state as LocaleState;
+  if (!state || typeof state !== "object" || Array.isArray(state) ||
+    Object.keys(state).sort().join(",") !== "country,locale,promptDismissed,source,suggestedCountry" ||
+    state.locale !== locale || !isCountry(state.country) || !isCountry(state.suggestedCountry) ||
+    typeof state.promptDismissed !== "boolean" || !["url", "cookie", "header", "country", "default"].includes(state.source)) {
+    throw new Error("Invalid native preference state");
+  }
+  return { state, returnTo };
+}
+
+function CarsNativeBootstrapProvider(props: NativePreferenceProps) {
+  const pathname = usePathname();
+  const search = useSearchParams().toString();
+  const [hash, setHash] = useState("");
+  const returnTo = pathname + (search ? "?" + search : "") + hash;
+  const [resolved, setResolved] = useState<(NativeBootstrap & { navigationKey: string }) | null>(null);
+  const bootstrapUsed = useRef(false);
+  useEffect(() => {
+    const update = () => setHash(window.location.hash);
+    update();
+    window.addEventListener("hashchange", update);
+    return () => window.removeEventListener("hashchange", update);
+  }, []);
+  useEffect(() => {
+    const actual = window.location.pathname + window.location.search + window.location.hash;
+    const mounted = actual.match(/^\/variant-([23])\/(en|bg)(?:\/|[?#]|$)/);
+    const originalMount = props.returnTo.match(/^\/variant-([23])\//)?.[1];
+    if (!mounted || mounted[1] !== originalMount || !props.enabledLocales.includes(mounted[2] as Locale)) return;
+    const locale = mounted[2] as Locale;
+    const controller = new AbortController();
+    let active = true;
+    setResolved(null);
+    const read = async () => {
+      const script = document.getElementById("cars-modern-native-preferences");
+      const canUseScript = !bootstrapUsed.current;
+      bootstrapUsed.current = true;
+      if (canUseScript && script?.textContent && script.textContent.length <= 8192) {
+        try { return readCarsNativeBootstrap(JSON.parse(script.textContent), actual, locale); } catch { /* A previous navigation cannot supply current state. */ }
+      }
+      const response = await fetch("/_cars/native-preferences/modern?returnTo=" + encodeURIComponent(actual), {
+        credentials: "same-origin", cache: "no-store", signal: controller.signal,
+      });
+      if (!response.ok) throw new Error("Native preference bootstrap failed");
+      const text = await response.text();
+      if (text.length > 8192) throw new Error("Oversized native preference bootstrap");
+      return readCarsNativeBootstrap(JSON.parse(text), actual, locale);
+    };
+    void read().then((value) => { if (active) setResolved({ ...value, navigationKey: returnTo }); }).catch(() => { /* Keep the native readiness gate closed on failure. */ });
+    return () => { active = false; controller.abort(); };
+  }, [returnTo, props.returnTo, props.enabledLocales]);
+  const current = resolved?.navigationKey === returnTo ? resolved : null;
+  const countryOptions = current ? [...props.countryOptions].sort((a, b) => {
+    if (a.code === current.state.suggestedCountry) return -1;
+    if (b.code === current.state.suggestedCountry) return 1;
+    return a.name.localeCompare(b.name, current.state.locale);
+  }) : props.countryOptions;
+  return <NativeLocalePreferencesProvider {...props} state={current?.state ?? props.state} returnTo={current?.returnTo ?? props.returnTo} countryOptions={countryOptions} requestPending={!current} bootstrapContext={returnTo} />;
+}
+
+/** Opt-in only: ordinary native SSR and the no-JS form retain their existing path. */
+export function LocalePreferencesProvider(props: NativePreferenceProps & { requestBootstrap?: boolean }) {
+  return props.requestBootstrap ? (
+    <Suspense fallback={<NativeLocalePreferencesProvider {...props} requestPending />}>
+      <CarsNativeBootstrapProvider {...props} />
+    </Suspense>
+  ) : <NativeLocalePreferencesProvider {...props} />;
 }

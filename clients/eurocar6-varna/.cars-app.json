@@ -3,12 +3,12 @@
   "dealer": "eurocar6-varna",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/app",
-    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
-    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
   },
-  "appDigest": "997e7f518fc3899d021be301b8ed13237105e572ae9099bbd79af82bb2018283",
+  "appDigest": "7a2a4479c8f0bc3f5f4fd79452870637dbebcbe3f3854142b4e62d580fc7dbba",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "eurocar6-varna",
@@ -21,14 +21,14 @@
     "assets": [
       {
         "source": "auto-best/static/dealer-brand/logo-on-light.png",
-        "output": "public/dealer-app/logo-light-3a23601a0566d93845c8.png",
-        "sha256": "3a23601a0566d93845c88afdbf6b51bc955ffece12c07a367296ec11bf32a5fa",
+        "output": "public/dealer-app/logo-light-bc0a83710a8f006bf383.png",
+        "sha256": "bc0a83710a8f006bf383c762f3365b53bd66857f38019740fdb412d6b0719173",
         "role": "logo-light"
       },
       {
         "source": "auto-best/static/dealer-brand/logo-on-dark.png",
-        "output": "public/dealer-app/logo-dark-e4784fca73906a935749.png",
-        "sha256": "e4784fca73906a935749b95554bc9390c17430e66e55b54cbe13de44872f5041",
+        "output": "public/dealer-app/logo-dark-812ffc3fe9552f64dac7.png",
+        "sha256": "812ffc3fe9552f64dac7761d41131f2d4fe9472d80952f3e126a837f378c5f17",
         "role": "logo-dark"
       },
       {
@@ -54,5 +54,6 @@
     ]
   },
   "needsDealerQA": true,
-  "readyToPublish": false
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-15T03:15:05.247Z"
 }

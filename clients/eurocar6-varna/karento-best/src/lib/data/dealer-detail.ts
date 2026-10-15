@@ -94,7 +94,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "ЕВРОКАР",
       "location": "бул. Цар Освободител /до Дом на Камиона/, Варна, България",
-      "avatar": "/dealer-brand/v2-dd155c8c1c05263b/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-b14068bc43767531/logo-on-light.webp",
       "mobile": "0879430777",
       "email": "",
       "whatsapp": "",

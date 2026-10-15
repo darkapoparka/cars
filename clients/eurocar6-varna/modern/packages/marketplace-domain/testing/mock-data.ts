@@ -50,7 +50,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "ЕВРОКАР",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-dd155c8c1c05263b/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-b14068bc43767531/logo-on-light.webp"
     },
     "publishedAt": "2026-10-11T09:00:00.000Z",
     "promoted": true

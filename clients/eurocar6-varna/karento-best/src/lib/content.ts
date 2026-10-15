@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "ЕВРОКАР",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-dd155c8c1c05263b/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-dd155c8c1c05263b/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-dd155c8c1c05263b/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-b14068bc43767531/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-b14068bc43767531/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-b14068bc43767531/logo-on-dark.webp",
     "alt": "ЕВРОКАР",
-    "favicon": "/dealer-brand/v2-dd155c8c1c05263b/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-b14068bc43767531/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

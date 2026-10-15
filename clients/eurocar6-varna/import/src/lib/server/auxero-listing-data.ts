@@ -137,7 +137,7 @@ for (const vehicle of vehicles) {
 const inventoryBrandPills = brands
 	.map((brand) => ({
 		count: brandCounts.get(brand) ?? 0,
-		image: brandLogos[brand] ?? "/dealer-brand/v2-dd155c8c1c05263b/logo-on-light.webp",
+		image: brandLogos[brand] ?? "/dealer-brand/v2-b14068bc43767531/logo-on-light.webp",
 		label: brand === 'Mercedes-Benz' ? 'Mercedes' : brand,
 		value: brand
 	}))
