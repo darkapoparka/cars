@@ -3,12 +3,12 @@
   "dealer": "electricauto-varna",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/app",
-    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
-    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
   },
-  "appDigest": "1a68c5e40fd2f78d7db9b5f58d3979f4318282458ae4c9343d1f8aa6af122efc",
+  "appDigest": "289a2ad3e154ece686915bbe71861a0e2e7245a1156551108725400d68dea4e9",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "electricauto-varna",
@@ -21,14 +21,14 @@
     "assets": [
       {
         "source": "auto-best/static/dealer-brand/logo-on-light.png",
-        "output": "public/dealer-app/logo-light-b9869448e2d0790bb353.png",
-        "sha256": "b9869448e2d0790bb353194b1ed75e3b888c08e719ff64c87548170d2092aa7e",
+        "output": "public/dealer-app/logo-light-c0c5a69ec29b376278f3.png",
+        "sha256": "c0c5a69ec29b376278f3be7447cbcf2ad4ea0f1b8328286638e5f5a56e0cff21",
         "role": "logo-light"
       },
       {
         "source": "auto-best/static/dealer-brand/logo-on-dark.png",
-        "output": "public/dealer-app/logo-dark-6bc4776ef76e567ffad8.png",
-        "sha256": "6bc4776ef76e567ffad84c98fe95c49c7af6caae5448d1fa8d53dea9e5f67dc1",
+        "output": "public/dealer-app/logo-dark-38bd27fe8ac3a9b761b5.png",
+        "sha256": "38bd27fe8ac3a9b761b5ce22ba7bc84f62fc5b15a0cf67182cc631b388153bef",
         "role": "logo-dark"
       },
       {
@@ -54,5 +54,6 @@
     ]
   },
   "needsDealerQA": true,
-  "readyToPublish": false
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-15T03:51:46.268Z"
 }

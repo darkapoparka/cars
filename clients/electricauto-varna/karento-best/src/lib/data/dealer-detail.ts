@@ -94,7 +94,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Electric Auto",
       "location": "ул. Лале 1, Варна, България",
-      "avatar": "/dealer-brand/v2-c14337c148e680f7/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-c236f8ee3f61b51b/logo-on-light.webp",
       "mobile": "0879904724",
       "email": "",
       "whatsapp": "",

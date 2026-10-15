@@ -50,7 +50,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Electric Auto",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-c14337c148e680f7/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-c236f8ee3f61b51b/logo-on-light.webp"
     },
     "publishedAt": "2026-10-11T09:00:00.000Z",
     "promoted": true

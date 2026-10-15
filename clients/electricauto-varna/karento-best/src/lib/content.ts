@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "Electric Auto",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-c14337c148e680f7/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-c14337c148e680f7/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-c14337c148e680f7/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-c236f8ee3f61b51b/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-c236f8ee3f61b51b/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-c236f8ee3f61b51b/logo-on-dark.webp",
     "alt": "Electric Auto",
-    "favicon": "/dealer-brand/v2-c14337c148e680f7/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-c236f8ee3f61b51b/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {
