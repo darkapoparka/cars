@@ -50,7 +50,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "автосалон Фокус",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-13a3ebdc5ceaa8af/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-5efb500cfba4287a/logo-on-light.webp"
     },
     "publishedAt": "2026-10-11T09:00:00.000Z",
     "promoted": true

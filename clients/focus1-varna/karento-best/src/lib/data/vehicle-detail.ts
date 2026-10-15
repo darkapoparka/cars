@@ -155,7 +155,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "автосалон Фокус",
   "location": "бул. Цар Освободител 329, Варна, България",
-  "avatar": "/dealer-brand/v2-13a3ebdc5ceaa8af/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-5efb500cfba4287a/logo-on-light.webp",
   "mobile": "0899811258",
   "email": "",
   "whatsapp": "",

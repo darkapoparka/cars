@@ -12,11 +12,14 @@
   import DesktopHeroScene from '$components/ui/DesktopHeroScene.svelte';
   import { brand } from '$config/brand';
   import { leadSite } from '$config/lead-site';
+  import { page } from '$app/state';
+  import { resolveCompanyHero } from '$lib/ui/company-hero';
   import { imageSrcset } from '$data/responsive-images';
   import DesktopSocialLinks from './DesktopSocialLinks.svelte';
   import type { ContactTopic } from '$data/company';
 
   let { topic, vehicle = null }: { topic: ContactTopic; vehicle?: Vehicle | null } = $props();
+  const studioHero = $derived(topic.id !== 'general' || resolveCompanyHero(page.url.searchParams) === 'studio');
   const heroDescriptions = $derived({
     general: `${i18n.dealer('city')} · ${i18n.dealer('addressLine')}`,
     inspection: i18n.t("m_2f96cf230044"),
@@ -27,8 +30,8 @@
 </script>
 
 <section class="dn-contact-hero dn-route-hero dn-route-hero--studio dn-route-hero--campaign" class:dn-information-hero={topic.id === 'general'} class:dn-route-hero--company={topic.id === 'general'} class:dn-contact-hero--vehicle={topic.id === 'leasing' && !!vehicle} class:dn-contact-hero--general={topic.id === 'general'} class:dn-contact-hero--workflow={topic.id === 'trade-in' || topic.id === 'import'} class:dn-contact-hero--import={topic.id === 'import'} aria-labelledby="contact-title">
-  <DesktopHeroScene scene="contact" />
-  {#if topic.id === 'general'}
+  {#if studioHero}<DesktopHeroScene scene="contact" />{/if}
+  {#if topic.id === 'general' && studioHero}
     <picture class="dn-contact-hero__showroom" aria-hidden="true">
       <source media="(max-width: 991px)" srcset={imageSrcset(leadSite.artwork.contactHero.generalMobile) ?? leadSite.artwork.contactHero.generalMobile} sizes="(max-width: 383px) calc(100vw - 24px), 360px" />
       <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="" width="960" height="370" fetchpriority="high" decoding="async" />
@@ -39,13 +42,9 @@
   {/if}
   <div class="container dn-contact-hero__content dn-route-hero__layout">
     <div class="dn-contact-hero__copy dn-route-hero__copy">
-      {#if topic.id === 'general'}
-        <span class="dn-company-hero__eyebrow">{i18n.t("m_2b5c3d26721a")}</span>
-      {/if}
       <h1 id="contact-title">
         {#if topic.id === 'general'}
-          <span class="dn-contact-hero__desktop-title dn-company-hero__title-line">{i18n.t('contact.hero.intro')}</span>
-          <span class="dn-contact-hero__desktop-title dn-company-hero__title-line">{i18n.t('contact.hero.subject')}</span>
+          <span class="dn-contact-hero__desktop-title">{i18n.t("m_2b5c3d26721a")}</span>
         {:else}
           <span class="dn-contact-hero__desktop-title">
             {topic.id === 'trade-in' ? i18n.t("m_3d25686c3130") : i18n.text(topic.title)}
@@ -53,7 +52,7 @@
         {/if}
         <span class="dn-contact-hero__mobile-title">{topic.id === 'general' ? i18n.t("m_2b5c3d26721a") : topic.id === 'trade-in' ? i18n.t("m_3d25686c3130") : i18n.text(topic.title)}</span>
       </h1>
-      <p class="dn-contact-hero__lead">{heroDescriptions[topic.id]}</p>
+      {#if topic.id !== 'general'}<p class="dn-contact-hero__lead">{heroDescriptions[topic.id]}</p>{/if}
     </div>
     {#if topic.id === 'general'}
       <div class="dn-contact-hero__desktop-actions dn-route-hero__control">
@@ -61,9 +60,10 @@
           <Icon name="phone" size={18} />{brand.phone}
         </a>
         <a class="dn-contact-button dn-contact-hero__visit" href="#contact-intent">
-          {i18n.t('m_c95356784006')}<Icon name="chevron-down" size={18} />
+          <Icon name="map-pin" size={18} />{i18n.t('m_c95356784006')}
         </a>
       </div>
+      <p class="dn-company-hero__location">{heroDescriptions.general}</p>
       <DesktopSocialLinks hero onDark />
     {/if}
     {#if topic.id === 'leasing'}

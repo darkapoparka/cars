@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "автосалон Фокус",
-  "logo": "/dealer-brand/v2-13a3ebdc5ceaa8af/logo-on-light.webp",
+  "logo": "/dealer-brand/v2-5efb500cfba4287a/logo-on-light.webp",
   "phone": "+359899811258",
   "email": null,
   "address": "бул. Цар Освободител 329, Варна, България",

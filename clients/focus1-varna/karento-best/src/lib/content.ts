@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "автосалон Фокус",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-13a3ebdc5ceaa8af/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-13a3ebdc5ceaa8af/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-13a3ebdc5ceaa8af/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-5efb500cfba4287a/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-5efb500cfba4287a/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-5efb500cfba4287a/logo-on-dark.webp",
     "alt": "автосалон Фокус",
-    "favicon": "/dealer-brand/v2-13a3ebdc5ceaa8af/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-5efb500cfba4287a/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {
