@@ -94,7 +94,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "BUS Center Bulgaria",
       "location": "с. Тополи, изход към крайезерен път, България",
-      "avatar": "/dealer-brand/v2-d016491f7df96de9/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-251d74845ffeba13/logo-on-light.webp",
       "mobile": "0888244000",
       "email": "",
       "whatsapp": "",

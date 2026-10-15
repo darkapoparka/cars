@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "BUS Center Bulgaria",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-d016491f7df96de9/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-d016491f7df96de9/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-d016491f7df96de9/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-251d74845ffeba13/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-251d74845ffeba13/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-251d74845ffeba13/logo-on-dark.webp",
     "alt": "BUS Center Bulgaria",
-    "favicon": "/dealer-brand/v2-d016491f7df96de9/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-251d74845ffeba13/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

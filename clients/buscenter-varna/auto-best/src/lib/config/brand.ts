@@ -33,6 +33,6 @@ export const brand = {
   addressLine,
   address: "с. Тополи, изход към крайезерен път, България",
   appointment: "Потвърдете работното време директно с автокъщата.",
-  logo: "/dealer-brand/v2-d016491f7df96de9/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/v2-d016491f7df96de9/logo-on-dark.webp"
+  logo: "/dealer-brand/v2-251d74845ffeba13/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-251d74845ffeba13/logo-on-dark.webp"
 } as const satisfies BrandConfig;

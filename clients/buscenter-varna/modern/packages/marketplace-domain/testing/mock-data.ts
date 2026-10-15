@@ -50,7 +50,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "BUS Center Bulgaria",
       "verificationStatus": "unverified",
       "city": "Тополи",
-      "logoUrl": "/dealer-brand/v2-d016491f7df96de9/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-251d74845ffeba13/logo-on-light.webp"
     },
     "publishedAt": "2026-10-11T09:00:00.000Z",
     "promoted": true

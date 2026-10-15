@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "BUS Center Bulgaria",
-  "logo": "/dealer-brand/v2-d016491f7df96de9/logo-on-light.webp",
+  "logo": "/dealer-brand/v2-251d74845ffeba13/logo-on-light.webp",
   "phone": "+359888244000",
   "email": null,
   "address": "с. Тополи, изход към крайезерен път, България",

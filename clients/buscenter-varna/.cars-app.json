@@ -3,12 +3,12 @@
   "dealer": "buscenter-varna",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/app",
-    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
-    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
   },
-  "appDigest": "4122b81f01ed5714763c17f66e2aec65430eee1f5fa256f897deff68a4492a5a",
+  "appDigest": "1615f7fd4026e8012b2d86dc192bef4b83911e7974e1a6aca69690f173084d0c",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "buscenter-varna",
@@ -21,14 +21,14 @@
     "assets": [
       {
         "source": "auto-best/static/dealer-brand/logo-on-light.png",
-        "output": "public/dealer-app/logo-light-0bfca4e30645db90e647.png",
-        "sha256": "0bfca4e30645db90e647537a0ae258ef550252003083ec79c37bc89519912ffd",
+        "output": "public/dealer-app/logo-light-843147ab03acb92320dc.png",
+        "sha256": "843147ab03acb92320dcc2d6f1761865ce886110a0d0240b94716e2a573fd217",
         "role": "logo-light"
       },
       {
         "source": "auto-best/static/dealer-brand/logo-on-dark.png",
-        "output": "public/dealer-app/logo-dark-07a6149fdf481effa937.png",
-        "sha256": "07a6149fdf481effa9376dfbc97003b95c97b0b67c2b0e7b7a12d5292e1173d1",
+        "output": "public/dealer-app/logo-dark-b9904a19c5ee539453f6.png",
+        "sha256": "b9904a19c5ee539453f603408acc97726dd5236bc4058dd7b6fe502e66973852",
         "role": "logo-dark"
       },
       {
@@ -54,5 +54,6 @@
     ]
   },
   "needsDealerQA": true,
-  "readyToPublish": false
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-15T03:58:13.025Z"
 }

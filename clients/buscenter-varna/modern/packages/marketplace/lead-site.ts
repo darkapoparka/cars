@@ -111,8 +111,8 @@ export const leadSite: LeadSiteConfig = {
     "tagline": "BUS Center Bulgaria — vehicles and dealer support in Topoli."
   }
 },
-  accent: "#30343b",
-  desktopAccent: "#4b5057",
+  accent: "#09090b",
+  desktopAccent: "#09090b",
   desktopInventoryFilterLayout: "quick",
   desktopPreviewIdentity: {
     sourceSlug: "day-night-auto-group",
@@ -144,8 +144,8 @@ export const leadSite: LeadSiteConfig = {
   email: "",
   heroPath: "/lead-hero.jpg",
   locale: "bg-BG",
-  logoPath: "/dealer-brand/v2-d016491f7df96de9/logo-on-light.webp",
-  logoInversePath: "/dealer-brand/v2-d016491f7df96de9/logo-on-dark.webp",
+  logoPath: "/dealer-brand/v2-251d74845ffeba13/logo-on-light.webp",
+  logoInversePath: "/dealer-brand/v2-251d74845ffeba13/logo-on-dark.webp",
   mapsEmbedUrl:
     "https://maps.google.com/maps?q=BUS%20Center%20Bulgaria%2C%20%D1%81.%20%D0%A2%D0%BE%D0%BF%D0%BE%D0%BB%D0%B8%2C%20%D0%B8%D0%B7%D1%85%D0%BE%D0%B4%20%D0%BA%D1%8A%D0%BC%20%D0%BA%D1%80%D0%B0%D0%B9%D0%B5%D0%B7%D0%B5%D1%80%D0%B5%D0%BD%20%D0%BF%D1%8A%D1%82%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F&z=16&output=embed",
   mapsUrl:
