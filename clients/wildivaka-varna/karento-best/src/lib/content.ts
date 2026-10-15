@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "Axe Cars",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-93e966786f23d1e9/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-93e966786f23d1e9/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-93e966786f23d1e9/logo-on-dark.webp",
     "alt": "Axe Cars",
-    "favicon": "/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-93e966786f23d1e9/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

@@ -155,7 +155,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "Axe Cars",
   "location": "Бул. Цар Освободител 302, Варна, България",
-  "avatar": "/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-93e966786f23d1e9/logo-on-light.webp",
   "mobile": "0898467497",
   "email": "",
   "whatsapp": "",

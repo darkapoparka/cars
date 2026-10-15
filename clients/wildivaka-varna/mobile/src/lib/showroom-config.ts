@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "Axe Cars",
-  "logo": "/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-light.webp",
+  "logo": "/dealer-brand/v2-93e966786f23d1e9/logo-on-light.webp",
   "phone": "+359898467497",
   "email": null,
   "address": "Бул. Цар Освободител 302, Варна, България",

@@ -50,7 +50,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Axe Cars",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-6a32df4f42d9fcd5/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-93e966786f23d1e9/logo-on-light.webp"
     },
     "publishedAt": "2026-10-11T09:00:00.000Z",
     "promoted": true
