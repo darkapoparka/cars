@@ -284,7 +284,7 @@ export function targetManifestForUpgrade({ dealerRoot, manifest, pins, targetVar
       next.shareIdentity={...(manifest.shareIdentity || {}),name:profile.business.name,publicOrigin:origin.origin,
         description:profile.business.previewNotice,
         logo:{...(manifest.shareIdentity?.logo || {}),sourcePath:asset.publicPath.slice(1),sha256:asset.sha256}};
-      next.extraAssets=[...new Set([...(next.extraAssets || []),'dealer-brand','branding'])];
+      next.extraAssets=[...new Set([...(next.extraAssets || []),asset.publicPath.slice(1).split('/')[0],'branding'])];
     }
   }
   const kinds = new Set(Object.entries(pins).map(([key, pin]) =>
