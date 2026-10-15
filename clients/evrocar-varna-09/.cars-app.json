@@ -3,17 +3,17 @@
   "dealer": "evrocar-varna-09",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/app",
-    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1",
-    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76"
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
   },
-  "appDigest": "499d8f3868c7970cdc4fe6276f8dd1fcb0c66704309e00d576d7dae059ffb8b0",
+  "appDigest": "2ecac4fe076e6c302409b02de9a398e8eb652f8efd0cd31e58ba4fe48a8c93aa",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "evrocar-varna-09",
     "profile": "auto-best/src/lib/data/dealer-profile.json",
-    "profileSha256": "a862020d6f0e20c1c6b676252765185e2fbe2e330659d1f630ae2f061f5ad1e0",
+    "profileSha256": "c7d872244b8a63bb6ef13fd194f0b3dc6efb44ba99a535f8a38a2b437256b67a",
     "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
     "vehicles": 7,
     "currency": "EUR",
@@ -121,5 +121,5 @@
   },
   "needsDealerQA": true,
   "readyToPublish": false,
-  "refreshedAt": "2026-10-13T23:09:48.137Z"
+  "refreshedAt": "2026-10-15T06:14:19.186Z"
 }

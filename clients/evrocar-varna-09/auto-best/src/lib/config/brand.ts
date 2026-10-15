@@ -33,6 +33,6 @@ export const brand = {
   addressLine,
   address: "Варна, Кайсиева градина, бул. „Цар Освободител“, след Метро, преди светофара за JUMBO",
   appointment: "Потвърдете работното време и точния вход по телефона",
-  logo: "/registered-branding/onLight.png",
-  logoOnDark: "/registered-branding/onDark.png"
+  logo: "/dealer-brand/v2-2fd2080cc1d79c8f/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-2fd2080cc1d79c8f/logo-on-dark.webp"
 } as const satisfies BrandConfig;
