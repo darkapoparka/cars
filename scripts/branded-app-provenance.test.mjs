@@ -1,6 +1,6 @@
 import test from'node:test';import assert from'node:assert/strict';import{createHash}from'node:crypto';
 import{prepareAppDealer}from'./lib/app-dealer-adapter.mjs';
-import{refreshBrandedAppProvenance}from'./dealer-updates/update-dealer-template.mjs';
+import{refreshBrandedAppProvenance,sealReviewedFactualBranding}from'./dealer-updates/update-dealer-template.mjs';
 const hash=b=>createHash('sha256').update(b).digest('hex'),encode=v=>Buffer.from(JSON.stringify(v));
 async function fixture(){
  const manifest={slug:'dealer-one',packaging:{version:'5'},localization:{defaultLocale:'bg',dealerCountry:'BG',inventoryCurrency:'EUR'},variants:[{key:'auto-best'},{key:'modern'},{key:'import'},{key:'app'},{key:'mobile'},{key:'karento-best'}]},profile={slug:'dealer-one',business:{name:'Dealer One',city:'Sofia',phoneDisplay:'+359 888 000 000',logoLight:'/dealer/logo.png',logoDark:'/dealer/logo.png'},listings:[{slug:'car-one',brand:'BMW',model:'X3',year:2022,priceAmount:70000,currency:'EUR',mileageKm:50000,fuelType:'diesel',transmissionType:'automatic',bodyType:'SUV',images:['/dealer/stock/one.webp'],features:['Navigation']}]};
@@ -18,4 +18,22 @@ test('branded App provenance refuses changed business phone and inventory price'
 });
 test('branded App provenance refuses changed generated assets without changing the source map',async()=>{
  const f=await fixture(),name=[...f.files.keys()].find(n=>n.startsWith('app/public/dealer-app/vehicle-'));assert(name);f.files.set(name,Buffer.from('unreviewed stock bytes'));const before=new Map(f.files);await assert.rejects(()=>refreshBrandedAppProvenance(f),/changed App input/);assert.deepEqual(f.files,before);
+});
+
+function sealFixture(){
+ const manifest={slug:'dealer-one'},keys=['auto-best','modern','import','app','mobile','karento-best'],proof={schemaVersion:1,stage:'preservation-merge-before-native-catalogs-and-branding',mode:'current-facts-from-pinned-six-targets',dealer:'dealer-one',profileSha256:'a'.repeat(64),targetSources:Object.fromEntries(keys.map(key=>[key,{}])),targetBranding:{schemaVersion:1,stage:'reviewed-logo-pack-on-factual-target-before-preservation-merge',input:{path:'docs/releases/branding/dealer-one.json',sha256:'b'.repeat(64)},packId:'1234567890abcdef',publicBase:'/dealer-brand/v2-1234567890abcdef',dealerSourceChanged:false}},files=new Map([['business-facts.json',Buffer.from('unchanged facts')],['stock.json',Buffer.from('unchanged stock')],['modern/apps/web/public/dealer-brand/v2-1234567890abcdef/logo-on-light.webp',Buffer.from('selected reviewed raster')]]);
+ return{files,manifest,proof};
+}
+test('source seals validate the selected reviewed pack before applying any old retained-logo contract',async()=>{
+ const {files,manifest,proof}=sealFixture(),before=new Map(files),order=[];
+ const result=await sealReviewedFactualBranding({files,manifest,proof,applyBranding:async(staged,target)=>{assert.equal(target,manifest);order.push('apply-selected');staged.set('.cars-branding.json',Buffer.from('verified selected pack'));return proof.targetBranding;},assertBranding(staged,target){order.push('assert-selected');assert.equal(target,manifest);assert(staged.has('.cars-branding.json'));for(const[name,bytes]of before)assert(staged.get(name).equals(bytes));}});
+ assert.deepEqual(order,['apply-selected','assert-selected']);assert.equal(result.packId,proof.targetBranding.packId);assert(files.has('.cars-branding.json'));for(const[name,bytes]of before)assert(files.get(name).equals(bytes));
+});
+test('unselected source updates retain their original logo path and every malformed selected proof refuses',async()=>{
+ const original=sealFixture(),snapshot=[...original.files];let applied=false;
+ assert.equal(await sealReviewedFactualBranding({...original,proof:{},applyBranding(){applied=true;},assertBranding(){}}),null);assert.equal(applied,false);assert.deepEqual([...original.files],snapshot);
+ for(const mutate of [v=>v.proof.dealer='other',v=>v.proof.targetBranding.packId='bad',v=>v.proof.targetBranding.publicBase='/other',v=>v.proof.targetBranding.input.sha256='bad',v=>delete v.proof.targetSources.app,v=>v.proof.targetBranding.dealerSourceChanged=true]){const value=sealFixture(),before=[...value.files];mutate(value);await assert.rejects(()=>sealReviewedFactualBranding({...value,applyBranding(){throw Error('must not apply');},assertBranding(){}}),/Exact reviewed factual branding/);assert.deepEqual([...value.files],before);}
+});
+test('changed selected raster/pack evidence refuses atomically before native source sealing',async()=>{
+ for(const failure of ['pack','base','missing-contract','assert']){const value=sealFixture(),before=[...value.files];await assert.rejects(()=>sealReviewedFactualBranding({...value,applyBranding:async staged=>{staged.set('stock.json',Buffer.from('must remain staged on failure'));if(failure!=='missing-contract')staged.set('.cars-branding.json',Buffer.from('proof'));return{packId:failure==='pack'?'f'.repeat(16):value.proof.targetBranding.packId,publicBase:failure==='base'?'/other':value.proof.targetBranding.publicBase};},assertBranding(){if(failure==='assert')throw Error('selected raster bytes changed');}}));assert.deepEqual([...value.files],before);}
 });
