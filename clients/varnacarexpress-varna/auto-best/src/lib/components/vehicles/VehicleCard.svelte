@@ -63,7 +63,7 @@
       <img
         src={vehicle.image}
         srcset={imageSrcset(vehicle.image)}
-        sizes={layout === 'listing' ? '(max-width: 767px) 156px, (max-width: 991px) 50vw, (max-width: 1279px) 33vw, 25vw' : '(max-width: 767px) 250px, (max-width: 991px) 50vw, 25vw'}
+        sizes={layout === 'listing' ? '(max-width: 767px) clamp(calc(45vw - 18px), calc(100vw - 13.25rem), calc(55vw - 22px)), (max-width: 991px) 50vw, (max-width: 1279px) 33vw, 25vw' : '(max-width: 767px) 250px, (max-width: 991px) 50vw, 25vw'}
         alt={vehicle.title}
         loading={priority ? 'eager' : 'lazy'}
         fetchpriority={priority ? 'high' : 'auto'}
@@ -453,7 +453,7 @@
     .dn-vehicle-card--listing .dn-vehicle-card__link {
       display: grid;
       min-height: 0;
-      grid-template-columns: minmax(0, min(45%, var(--dn-mobile-listing-photo-max-width))) minmax(0, 1fr);
+      grid-template-columns: minmax(0, var(--dn-mobile-listing-photo-share)) minmax(0, 1fr);
       grid-template-rows: auto auto;
       grid-template-areas: "visual content" "facts facts";
       column-gap: var(--dn-space-3);
@@ -467,7 +467,7 @@
       width: 100%;
       grid-area: visual;
       align-self: stretch;
-      aspect-ratio: auto;
+      aspect-ratio: 16 / 9;
       border-radius: var(--dn-radius-sm);
     }
 

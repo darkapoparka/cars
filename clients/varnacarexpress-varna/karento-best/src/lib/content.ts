@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "Варна Кар Експрес",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-06758e3f2a974714/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-06758e3f2a974714/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-06758e3f2a974714/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-59471b9f217ceccd/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-59471b9f217ceccd/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-59471b9f217ceccd/logo-on-dark.webp",
     "alt": "Варна Кар Експрес",
-    "favicon": "/dealer-brand/v2-06758e3f2a974714/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-59471b9f217ceccd/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

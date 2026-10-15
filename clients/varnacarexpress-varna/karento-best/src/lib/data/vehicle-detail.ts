@@ -155,7 +155,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "Варна Кар Експрес",
   "location": "бул.'Цар Освободител' 200м. след Дом на Камиона посока Аксаково., Варна, България",
-  "avatar": "/dealer-brand/v2-06758e3f2a974714/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-59471b9f217ceccd/logo-on-light.webp",
   "mobile": "0899155902",
   "email": "",
   "whatsapp": "",

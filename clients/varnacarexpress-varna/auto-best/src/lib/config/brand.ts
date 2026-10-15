@@ -33,6 +33,6 @@ export const brand = {
   addressLine,
   address: "бул.'Цар Освободител' 200м. след Дом на Камиона посока Аксаково., Варна, България",
   appointment: "Понеделник 09:00 - 17:30 ч. Вторник 00:00 - 00:00 ч. Сряда 00:00 - 00:00 ч. Четвъртък 00:00 - 00:00 ч. Петък 00:00 - 00:00 ч. Събота 00:00 - 00:00 ч. Неделя Почивен ден",
-  logo: "/dealer-brand/v2-06758e3f2a974714/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/v2-06758e3f2a974714/logo-on-dark.webp"
+  logo: "/dealer-brand/v2-59471b9f217ceccd/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-59471b9f217ceccd/logo-on-dark.webp"
 } as const satisfies BrandConfig;
