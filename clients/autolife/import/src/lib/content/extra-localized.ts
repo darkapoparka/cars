@@ -1,4 +1,5 @@
 export const extraEnglish = {
+  "Представителна извадка от 16 публикувани обяви; наличност и цена се потвърждават по телефона.": "Representative sample of 16 published listings; availability and price are confirmed by phone.",
   "Най-желаната кола в България | Lamborghini Urus": "The most sought-after car in Bulgaria | Lamborghini Urus",
   "Продадох най-новата Панамера": "I sold the latest Panamera",
   "Продадох най-скъпия Брабус в България": "I sold the most expensive Brabus in Bulgaria",

@@ -1,4 +1,6 @@
 export const extraEnglish = {
+  "Селекция от обяви към 08.09.2026 г., а не складова наличност в реално време. Потвърдете цената, наличността и данните с продавача.": "Selection of listings as of 8 September 2026, not live stock. Confirm the price, availability and details with the seller.",
+  "Демонстрационен сайт за преглед — не е официален канал на автокъщата.": "Demonstration site for review — this is not an official dealership channel.",
   "Най-желаната кола в България | Lamborghini Urus": "The most sought-after car in Bulgaria | Lamborghini Urus",
   "Продадох най-новата Панамера": "I sold the latest Panamera",
   "Продадох най-скъпия Брабус в България": "I sold the most expensive Brabus in Bulgaria",

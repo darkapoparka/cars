@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-focused-exact-source-editorial-repair-proof",
+  "dealer": "isauto-varna",
+  "baseSourceCommit": "ba09b887694caeff43ce6170b9ab3051a4c92016",
+  "baseSourceTree": "10d5f335194f5da181ec98a8d3cb9a518ea9bb22",
+  "sourceModuleProof": {
+    "schemaVersion": 1,
+    "kind": "cars-isauto-explicit-english-editorial-repair-candidate",
+    "checkedAt": "2026-10-15T03:15:33.007Z",
+    "dealer": "isauto-varna",
+    "sourceCommit": "ba09b887694caeff43ce6170b9ab3051a4c92016",
+    "sourceTree": "10d5f335194f5da181ec98a8d3cb9a518ea9bb22",
+    "productionMain": "8fbe92c56397397ae6cedbe47afd6915c01169a8",
+    "deploymentId": "dpl_CY72vCBcw6NmU7mA7CbYmZQNpm4Z",
+    "route": "/variant-3/en",
+    "scope": "clients/isauto-varna/import/src/lib/content/extra-localized.ts",
+    "baseBlob": "5b5d6d16a4c40ec1138b0d72a42abde160d8e74e",
+    "candidateBlob": "7747f34eb8cd468d50d1871b491a999ff671cffa",
+    "candidateSha256": "a1ac86afbcda540c33a39a592db71c73b6511f8f48085ca56a252aaac73d56b1",
+    "candidateBytes": 13040,
+    "candidateFile": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-vercel-resume-20261015/wave-transport/isauto-editorial-repair/extra-localized.ts",
+    "patch": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-vercel-resume-20261015/wave-transport/isauto-editorial-repair/isauto-explicit-editorial.patch",
+      "sha256": "4eb0a2717f0c8b5ca3904d8603a3176900a1e43dc5f91cfb624649c0586def69"
+    },
+    "addedEntries": [
+      {
+        "bg": "Датирана извадка от публичните обяви към 16.09.2026 г.; потвърдете цената и наличността директно с IS AUTO Varna.",
+        "enCatalog": "Dated snapshot of public listings as of 16 September 2026; confirm the price and availability directly with IS AUTO.",
+        "enRendered": "Dated snapshot of public listings as of 16 September 2026; confirm the price and availability directly with IS AUTO VARNA."
+      }
+    ],
+    "sealedInputs": [
+      {
+        "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/run-38670293064-attempt-1/isauto-varna-proposal-manifest.json",
+        "sha256": "f8c929f68a4e35b2f61b94b2ff0e4dbb32c681e59015f0d4785a10b379ece167"
+      },
+      {
+        "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/run-38670293064-attempt-1/isauto-varna-intake.json",
+        "sha256": "7f25c6a863cb763f348594911cadcae01714274f74d20b62c22d96e101454c7f"
+      },
+      {
+        "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/prepared-source-isauto-varna-38670293064-1-receipt.json",
+        "sha256": "a2b4f022ae5d6f60c14934218a1fe3db3808aa39cf3e6564401f63a9312e6fa7"
+      },
+      {
+        "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-vercel-resume-20261015/wave-transport/isauto-varna-vercel-package-receipt.json",
+        "sha256": "c2850d751871699610e3466b2f179bbf25c451b60bc7e8048705db7b6c69046b"
+      },
+      {
+        "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-vercel-resume-20261015/pilots/final23/isauto-varna/runtime-error-8fbe92c.json",
+        "sha256": "6b0ad0c04e269e6b53f8b93b2547e22d4148d46c9b89434b8cf518815a1c08f0"
+      }
+    ],
+    "reproduction": {
+      "call": "localizedCopy(posts, 'en')",
+      "beforeError": "Missing English editorial catalog entry: Датирана извадка от публичните обяви към 16.09.2026 г.; потвърдете цената и наличността директно с IS AUTO Varna.",
+      "after": {
+        "slug": "confirm-current-availability",
+        "title": "How to confirm current availability at IS AUTO VARNA",
+        "category": "Dealer information",
+        "date": "2026-09-16",
+        "image": "/assets/daynight/codex-generated-v2/blog/blog-cover-import-check-v2.webp",
+        "excerpt": "Dated snapshot of public listings as of 16 September 2026; confirm the price and availability directly with IS AUTO VARNA.",
+        "content": [
+          "Contact the dealership on 0899 266 666 and identify the exact vehicle before visiting.",
+          "Independent demonstration preview. Forms do not send messages or create a reservation."
+        ]
+      }
+    },
+    "checks": {
+      "exactSourceBlobsVerified": true,
+      "beforeExactRuntimeCauseReproduced": true,
+      "afterPostsEnglishPassed": true,
+      "bgBehaviorUnchanged": true,
+      "dateSlugAndImageUnchanged": true,
+      "phoneAndDemoDisclosurePreserved": true,
+      "existingCatalogEntriesUnchanged": true,
+      "unknownEditorialStillThrows": true,
+      "vehicleFactsUntouched": true
+    },
+    "modulesRead": [
+      {
+        "path": "import/src/lib/content/extra-localized.ts",
+        "blob": "5b5d6d16a4c40ec1138b0d72a42abde160d8e74e"
+      },
+      {
+        "path": "import/src/lib/content/localized.ts",
+        "blob": "d6c9a0fc4618adb7e7144ae7ec943ebfab05d9dc"
+      },
+      {
+        "path": "import/src/lib/config/site.ts",
+        "blob": "d8ccb2e922f23a4223bad5c590fd1a61cd234c17"
+      },
+      {
+        "path": "import/src/lib/config/dealer.ts",
+        "blob": "0ed21f2f734b469f7213d7a9cff836ddd4be5b59"
+      },
+      {
+        "path": "import/src/lib/config/cars-locale.ts",
+        "blob": "58f6d3d94f45f730db84dfde47331b55e3eb9263"
+      },
+      {
+        "path": "import/src/lib/data/blog.ts",
+        "blob": "37b21a41bd5c361b83c417f0c6638d421ac49f6a"
+      }
+    ],
+    "sourceWrites": 0,
+    "refWrites": 0,
+    "objectWrites": 0,
+    "networkReads": 0,
+    "providerWrites": 0,
+    "builds": 0,
+    "boundary": "Focused evaluation of exact retained TS source modules in RAM; production build and hosted repair not performed."
+  },
+  "originalProof": {
+    "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-vercel-resume-20261015/wave-transport/isauto-editorial-repair/isauto-editorial-repair-proof.json",
+    "sha256": "2d65d65a774a5ae0ad4be26cc5e8beefc88f3b8d6deb474dd793365869013209"
+  },
+  "compiled": false,
+  "newCiRun": null,
+  "providerWrites": 0
+}

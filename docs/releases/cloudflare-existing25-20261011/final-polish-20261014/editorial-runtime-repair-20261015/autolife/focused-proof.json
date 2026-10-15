@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-focused-exact-source-editorial-repair-proof",
+  "dealer": "autolife",
+  "baseSourceCommit": "339f0603a56f0f9f9ac0c1fc0c4d09aa25e190ae",
+  "baseSourceTree": "b2e0925cf2d3bca52f94f4065fa2e4bf992f562e",
+  "sourceModuleProof": {
+    "dealer": "autolife",
+    "sourceCommit": "339f0603a56f0f9f9ac0c1fc0c4d09aa25e190ae",
+    "sourceTree": "b2e0925cf2d3bca52f94f4065fa2e4bf992f562e",
+    "scope": "clients/autolife/import/src/lib/content/extra-localized.ts",
+    "baseBlob": "3f6738e804e5d21eb4a16643f61b3e9d46163d3f",
+    "candidateBlob": "74d59750f471b3fa7cd4aafec9b93c29d90d6be3",
+    "candidate": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-vercel-resume-20261015/wave-transport/isauto-editorial-repair/autolife/extra-localized.ts",
+      "sha256": "76442c30f882e0250319cd5e90fa4c1fabdaea5362d1a264d47040bc3be795de"
+    },
+    "patch": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-vercel-resume-20261015/wave-transport/isauto-editorial-repair/autolife/explicit-editorial.patch",
+      "sha256": "1e34a2777614bea99980d6f949388cc31d1aafe061f2cf13390fc8ca74d792ff"
+    },
+    "addedEntries": [
+      {
+        "bg": "Представителна извадка от 16 публикувани обяви; наличност и цена се потвърждават по телефона.",
+        "en": "Representative sample of 16 published listings; availability and price are confirmed by phone."
+      }
+    ],
+    "beforeError": "Missing English editorial catalog entry: Представителна извадка от 16 публикувани обяви; наличност и цена се потвърждават по телефона.",
+    "after": {
+      "slug": "confirm-current-availability",
+      "title": "How to confirm current availability at АУТОЛАЙФ",
+      "category": "Dealer information",
+      "date": "2026-09-07",
+      "image": "/assets/daynight/codex-generated-v2/blog/blog-cover-import-check-v2.webp",
+      "excerpt": "Representative sample of 16 published listings; availability and price are confirmed by phone.",
+      "content": [
+        "Contact the dealership on 0895 766 736 and identify the exact vehicle before visiting.",
+        "Independent demonstration preview. Forms do not send messages or create a reservation."
+      ]
+    },
+    "checks": {
+      "exactRetainedSource": true,
+      "beforeFailureReproduced": true,
+      "afterEnglishPostsPassed": true,
+      "bgBehaviorUnchanged": true,
+      "dateSlugAndImageUnchanged": true,
+      "allExistingCatalogEntriesUnchanged": true,
+      "unknownEditorialStillThrows": true
+    },
+    "modulesRead": [
+      {
+        "path": "import/src/lib/content/extra-localized.ts",
+        "blob": "3f6738e804e5d21eb4a16643f61b3e9d46163d3f"
+      },
+      {
+        "path": "import/src/lib/content/localized.ts",
+        "blob": "006d3f1877ae3157e9b0e1e2c824550b480bce64"
+      },
+      {
+        "path": "import/src/lib/config/site.ts",
+        "blob": "d8ccb2e922f23a4223bad5c590fd1a61cd234c17"
+      },
+      {
+        "path": "import/src/lib/config/dealer.ts",
+        "blob": "547c8b54fccaa92e070f7f10e26699ed236c07b9"
+      },
+      {
+        "path": "import/src/lib/config/cars-locale.ts",
+        "blob": "6b2e27d42804a99fd582290e38bc05b5e5bc85fb"
+      },
+      {
+        "path": "import/src/lib/data/blog.ts",
+        "blob": "16242766ae14dd0af9696aa5ca7850aa3c040987"
+      }
+    ]
+  },
+  "originalProof": {
+    "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-vercel-resume-20261015/wave-transport/isauto-editorial-repair/additional-editorial-repair-proof.json",
+    "sha256": "5a6cabfcdf2dbaf631d8473d8297e5101ddbdd6482bc4a9f79ddff738be064b1"
+  },
+  "compiled": false,
+  "newCiRun": null,
+  "providerWrites": 0
+}
