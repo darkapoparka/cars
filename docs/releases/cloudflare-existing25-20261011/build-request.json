@@ -3,15 +3,10 @@
   "mode": "existing-migration",
   "sourceRevision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
   "dealers": [
-    "extra-car-sm",
-    "north-norfolk-car-sales",
-    "prestige-varna",
-    "sunny-varna",
-    "rqs-auto-team",
-    "europa-varna",
-    "sprint-auto-varna",
-    "avtoborsa-mania",
-    "evrocar-varna-09"
+    "tesi-car-varna",
+    "exclusive-auto-varna",
+    "kapitol-varna",
+    "chernomore-varna"
   ],
   "targets": [
     "auto-best",
@@ -24,43 +19,23 @@
   ],
   "composition": {
     "reviewed": true,
-    "reviewedAt": "2026-10-15T09:45:02.823Z",
-    "reviewScope": "Owner-authorized final six-template refresh of existing Cloudflare identities. All selected dealer source trees are actually published on Cars MAIN; preserve native palettes, factual stock/contacts/locales, selected logos, one existing Worker and its existing canonical exposure. Private source MAIN and hosted acceptance are recorded separately. This exact nine-dealer batch builds seven actually published selected-WebP Mobile/Signature consumer repairs plus ExtraSM and North. The selected source assets, all six template pins, factual stock/contacts/locales and existing purchased webpreviews.site Worker identities are preserved. North’s exact desktop dark-hero suffix maps to the selected dark WebP. Other held source jobs do not delay this batch; their actual source successes remain a separate wave. All seven native targets and delivery artifacts are freshly built on this request commit.",
+    "reviewedAt": "2026-10-15T11:11:56.985Z",
+    "reviewScope": "Owner-authorized final six-template refresh of existing Cloudflare identities. All selected dealer source trees are actually published on Cars MAIN; preserve native palettes, factual stock/contacts/locales, selected logos, one existing Worker and its existing canonical exposure. Private source MAIN and hosted acceptance are recorded separately. These exact four dealer trees were recovered locally through the maintained preparer with its reviewed bounded IO adaptation after the recorded original source jobs failed. Their sourceArtifact is null and their local-* source identifiers do not claim GitHub CI success. Exact authenticated module provenance and any local execution adaptation are retained separately; this request does not claim byte-identical execution of all original modules. All four complete sources are actually published and read back on Cars MAIN. Fresh actual seven-target native CI and current-version canonical hosted verification remain required. This request changes no provider, Worker, canonical domain, selected raster, factual inventory or template selection.",
     "canonicalCompositions": {
-      "extra-car-sm": {
-        "canonicalOrigin": "https://extra-car-sm.webpreviews.site",
+      "tesi-car-varna": {
+        "canonicalOrigin": "https://tesi-car-varna.webpreviews.site",
         "ukDefault": false
       },
-      "north-norfolk-car-sales": {
-        "canonicalOrigin": "https://north-norfolk-car-sales.webpreviews.site",
-        "ukDefault": true
-      },
-      "prestige-varna": {
-        "canonicalOrigin": "https://prestige-varna.webpreviews.site",
+      "exclusive-auto-varna": {
+        "canonicalOrigin": "https://exclusive-auto-varna.webpreviews.site",
         "ukDefault": false
       },
-      "sunny-varna": {
-        "canonicalOrigin": "https://sunny-varna.webpreviews.site",
+      "kapitol-varna": {
+        "canonicalOrigin": "https://kapitol-varna.webpreviews.site",
         "ukDefault": false
       },
-      "rqs-auto-team": {
-        "canonicalOrigin": "https://rqs-auto-team.webpreviews.site",
-        "ukDefault": false
-      },
-      "europa-varna": {
-        "canonicalOrigin": "https://evropavarna-varna.webpreviews.site",
-        "ukDefault": false
-      },
-      "sprint-auto-varna": {
-        "canonicalOrigin": "https://sprint-varna.webpreviews.site",
-        "ukDefault": false
-      },
-      "avtoborsa-mania": {
-        "canonicalOrigin": "https://avtoborsa-mania.webpreviews.site",
-        "ukDefault": false
-      },
-      "evrocar-varna-09": {
-        "canonicalOrigin": "https://evrocarvarna09-varna.webpreviews.site",
+      "chernomore-varna": {
+        "canonicalOrigin": "https://chernomore-varna.webpreviews.site",
         "ukDefault": false
       }
     }
