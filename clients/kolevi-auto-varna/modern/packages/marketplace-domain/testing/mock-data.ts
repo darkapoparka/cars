@@ -50,7 +50,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Колеви Ауто",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-4942cbba173691f8/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-0d604411594c6811/logo-on-light.webp"
     },
     "publishedAt": "2026-10-11T09:00:00.000Z",
     "promoted": true

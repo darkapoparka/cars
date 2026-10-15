@@ -155,7 +155,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "Колеви Ауто",
   "location": "бул. Цар Освободител, Варна, България",
-  "avatar": "/dealer-brand/v2-4942cbba173691f8/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-0d604411594c6811/logo-on-light.webp",
   "mobile": "0878431141",
   "email": "",
   "whatsapp": "",

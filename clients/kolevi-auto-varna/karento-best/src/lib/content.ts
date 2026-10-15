@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "Колеви Ауто",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-4942cbba173691f8/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-4942cbba173691f8/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-4942cbba173691f8/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-0d604411594c6811/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-0d604411594c6811/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-0d604411594c6811/logo-on-dark.webp",
     "alt": "Колеви Ауто",
-    "favicon": "/dealer-brand/v2-4942cbba173691f8/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-0d604411594c6811/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {
