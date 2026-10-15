@@ -27,9 +27,9 @@
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=LEGEND%20AUTO%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0",
     "mapsEmbedUrl": "https://maps.google.com/maps?q=LEGEND%20AUTO%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0&output=embed",
     "accent": "#c42136",
-    "logo": "/dealer-brand/logo-on-light.webp",
-    "logoLight": "/dealer-brand/logo-on-light.webp",
-    "logoDark": "/dealer-brand/logo-on-dark.webp",
+    "logo": "/dealer-brand/v2-10a764fe9224b1a5/logo-on-light.webp",
+    "logoLight": "/dealer-brand/v2-10a764fe9224b1a5/logo-on-light.webp",
+    "logoDark": "/dealer-brand/v2-10a764fe9224b1a5/logo-on-dark.webp",
     "socialLinks": {
       "facebook": "",
       "instagram": "",
@@ -1970,19 +1970,19 @@
     "originalSha256": "4bca7a37fd15fbdedf8eb32533866dcf0f6060a31f1a65be7393bfdc890f56f4",
     "assets": {
       "onLight": {
-        "publicPath": "/dealer-brand/logo-on-light.webp",
-        "sha256": "393c8f05cb6020c8e4435a742ad89a5d9dfdf5543ed67bc78003931ed35d7029",
-        "bytes": 90992
+        "publicPath": "/dealer-brand/v2-10a764fe9224b1a5/logo-on-light.webp",
+        "sha256": "4df8eee87d1817266f885b3f56aeec3536fcaf014fce2645010073444c638fbf",
+        "bytes": 164200
       },
       "onDark": {
-        "publicPath": "/dealer-brand/logo-on-dark.webp",
-        "sha256": "3306a5e66871d4527cf4de4cfc4b752ebebc346d44c0ecf0c8ffae3626cd61cf",
-        "bytes": 91176
+        "publicPath": "/dealer-brand/v2-10a764fe9224b1a5/logo-on-dark.webp",
+        "sha256": "dcd14f9dc7f287dd35d4b3d2f01422976bdb863bea3d640f0446561565eded21",
+        "bytes": 153676
       },
       "onAccent": {
-        "publicPath": "/dealer-brand/logo-on-accent.webp",
-        "sha256": "275cb5fa30d746abbb2c5086163588481405d50394441dce60065af5501fb28a",
-        "bytes": 67918
+        "publicPath": "/dealer-brand/v2-10a764fe9224b1a5/logo-on-accent.webp",
+        "sha256": "5a629c75d6026c11578596da8576b1693ccef74faba7adad0f55e50114bde601",
+        "bytes": 92150
       }
     },
     "preparedAt": "2026-09-19T05:00:11.612Z",

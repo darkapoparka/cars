@@ -46,7 +46,7 @@
       var(--model-step-count)
     );
     pointer-events: none;
-    background: var(--brand);
+    background: var(--primary);
     border-radius: calc(var(--spacing) * 2);
     transform: translateX(
       calc(var(--model-active-index) * (100% + var(--spacing)))
@@ -71,7 +71,7 @@
     box-shadow: none;
   }
   .stageRail button[data-state="active"] {
-    color: var(--brand-foreground);
+    color: var(--primary-foreground);
     background: transparent;
     box-shadow: none;
   }
@@ -105,7 +105,7 @@
   .searchInput:focus-visible {
     outline: var(--desktop-focus-width) solid var(--ring);
     outline-offset: var(--desktop-focus-offset);
-    border-color: var(--brand);
+    border-color: var(--primary);
     box-shadow: none;
   }
   .stageContent {

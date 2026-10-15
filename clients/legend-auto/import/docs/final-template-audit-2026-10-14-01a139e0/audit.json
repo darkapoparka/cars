@@ -1,0 +1,180 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-14",
+  "owner": "01a139e0",
+  "scope": "Reusable Import template frontend audit in the maintained checkout",
+  "status": "local-audit-complete-with-remaining-findings",
+  "releaseQualified": false,
+  "source": {
+    "root": "L:/CODEX/cars/templates/import",
+    "branch": "main",
+    "baseHead": "3bc5a0ea33969f18ccc34d5e4b0e8cab1513e6a2",
+    "taskChanges": "uncommitted",
+    "files": [
+      {
+        "path": "src/lib/i18n/messages.ts",
+        "sha256": "9aac3b0860796d88b0e408f3434dbf03ed4dc5aa3d9a92f565fe291988891177"
+      },
+      {
+        "path": "src/lib/content/inventory-localized.ts",
+        "sha256": "6c29bf7fb18b306a186d01afbf703e5905e8c41671afc8b7be0f531c53fb101e"
+      },
+      {
+        "path": "src/lib/domain/vehicle-card.ts",
+        "sha256": "62207f8796f87c6071ce251162489d0d9a02340ac094d93242956a2b5408bb46"
+      },
+      {
+        "path": "src/lib/domain/vehicle-search.ts",
+        "sha256": "57fa5e283b59ccdba57681568a04e4049dd0345e3ff7f6e8d625a5d88f344b0e"
+      },
+      {
+        "path": "src/lib/server/vehicle-detail.ts",
+        "sha256": "bcc0e7372eb9b6c4b0297153c0b3d7cdf8ecd73cdc7ff7cf7891af2c83836685"
+      },
+      {
+        "path": "src/lib/auxero/home-five.ts",
+        "sha256": "1111a3c50282809e20efd3f27c0106ed0ac4aa091697878715f4032ce449b29f"
+      },
+      {
+        "path": "src/lib/auxero/compare.ts",
+        "sha256": "5bee93410877313fcd23d012c4cbb36f61ebc64017936486d4490e7974001779"
+      },
+      {
+        "path": "src/lib/i18n/final-review.spec.ts",
+        "sha256": "d7fe0a3175e92a6d88ca9d871eb90718663a4e38b41c04cfc65319546cb976fc"
+      }
+    ]
+  },
+  "preview": {
+    "url": "http://127.0.0.1:6790",
+    "listenerPid": 13896,
+    "previewNode": "24.20.0",
+    "checkNode": "24.21.0",
+    "existingServerReused": true,
+    "finalOpenPage": "/bg"
+  },
+  "homeCrash": {
+    "result": "Not reproduced in this template",
+    "afterFix": "/bg and /en both rendered, hydrated, and produced no new browser errors",
+    "dealerDeployments": "Not part of this local template audit"
+  },
+  "findings": [
+    {
+      "id": "configured-identity",
+      "status": "fixed",
+      "description": "Public message copy and mobile Home accessible labels retained the source dealer name.",
+      "resolution": "Bind the public message catalog to site.identity.displayName."
+    },
+    {
+      "id": "english-stock-title",
+      "status": "fixed",
+      "description": "BMW 740 title retained Bulgarian wording on English cards and detail.",
+      "resolution": "Add authored bilingual title copy across cards, detail and comparison; preserve source facts and make the English title searchable."
+    },
+    {
+      "id": "english-finance-artwork",
+      "status": "open",
+      "description": "English desktop detail uses a finance banner with Bulgarian lettering baked into the raster.",
+      "asset": "static/assets/daynight/pdp/financing-banner.webp",
+      "consumer": "src/lib/components/detail/VehicleDetailPage.svelte:100",
+      "nextAction": "Provide a matching English banner and bind it by locale while preserving the approved composition."
+    },
+    {
+      "id": "shared-typecheck",
+      "status": "open-external",
+      "description": "The existing localization test imports shared hosted QA helpers; strict JS checking pulls in shared publishing modules.",
+      "errors": 3040,
+      "files": 68,
+      "importTemplateErrors": 0,
+      "nextAction": "Resolve the shared helper typing boundary at its integration checkpoint; the full check remains failing."
+    }
+  ],
+  "checks": {
+    "localeRoutes": {
+      "result": "passed",
+      "test": "tests/localization.e2e.ts native route families",
+      "phase": "baseline before copy fixes",
+      "cases": 6,
+      "locales": [
+        "bg",
+        "en"
+      ],
+      "widths": [
+        320,
+        390,
+        1440
+      ],
+      "routesPerCase": 20,
+      "pageVisits": 120,
+      "serverReused": true
+    },
+    "focusedUnits": {
+      "result": "passed",
+      "tests": 41,
+      "files": 5,
+      "selection": [
+        "src/lib/i18n/final-review.spec.ts",
+        "src/lib/i18n/native.spec.ts",
+        "src/lib/auxero/home-five.spec.ts",
+        "src/lib/server/home.spec.ts",
+        "src/lib/domain/vehicle-search.spec.ts"
+      ]
+    },
+    "format": "Passed on task-owned files",
+    "eslint": "Passed on task-owned files",
+    "diffCheck": "Passed",
+    "typecheck": {
+      "result": "failed-external",
+      "totalErrors": 3040,
+      "importTemplateErrors": 0,
+      "details": "typecheck-summary.json"
+    },
+    "svelteAutofixer": {
+      "reviewed": [
+        "HomeFiveHero.svelte",
+        "HomePage.svelte",
+        "FinanceEstimator.svelte",
+        "VehicleDetailPage.svelte",
+        "ComparePicker.svelte"
+      ],
+      "notes": "Home link advisories use the existing locale/base-aware resolver. Finance, detail and Compare returned no issues."
+    },
+    "manualBrowser": [
+      "BG/EN Home at 320/390 and desktop; fonts and overflow",
+      "Mobile make filtering and URL/results",
+      "Mobile vehicle detail actions: 44px targets at 320px",
+      "Mobile enquiry opens without editable-field focus; dismissal",
+      "Mobile menu and back navigation",
+      "Desktop Home Import validation and handoff",
+      "768x540 Import modal: scrolling footer, stable URL and opener focus",
+      "Desktop Inventory keyword search finds translated title",
+      "Desktop About, Contact and Services; BG mobile Services, Import and Sell",
+      "Final BG/EN Home hydration after all changes"
+    ],
+    "productionBuild": "Not run for the local copy and frontend audit"
+  },
+  "evidence": {
+    "route": "/en/inventory/11778678187411931",
+    "captures": [
+      "before-desktop-en.png",
+      "after-desktop-en.png",
+      "before-mobile-en.png",
+      "after-mobile-en.png"
+    ],
+    "desktopViewport": "1440x1000",
+    "mobileViewport": "390x844",
+    "purpose": "Matched title-copy comparisons and unresolved English finance banner evidence"
+  },
+  "preservation": {
+    "existingDirtyWork": "Preserved; no branch change, blanket staging, Git download or deployment",
+    "generatedRetention": "Four final matched captures and compact results retained in template docs. Temporary test captures and generated caches remain at the named task output because automatic approval review blocked recursive removal.",
+    "realDeviceAcceptance": "Not established by browser viewport checks",
+    "temporaryOutput": {
+      "path": "K:/CodexRuntime/import-final-20261014-01a139e0",
+      "bytes": 13953882.0,
+      "status": "cleanup-blocked-by-automatic-approval-review",
+      "reason": "blocked by policy; no more specific reason provided",
+      "purpose": "Inactive generated test output and compile caches awaiting allowed cleanup"
+    }
+  }
+}

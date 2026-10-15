@@ -209,7 +209,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "LEGEND AUTO",
   "location": "бул. Цар Освободител 289, срещу МАКАО",
-  "avatar": "/dealer-brand/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-10a764fe9224b1a5/logo-on-light.webp",
   "mobile": "0899 877 305",
   "email": "",
   "whatsapp": "",
