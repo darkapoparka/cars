@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "IS AUTO Varna",
-  "logo": "/dealer-brand/logo-on-light-20260919.webp",
+  "logo": "/dealer-brand/v2-82b4cdb8bfee0672/logo-on-light.webp",
   "phone": "+359899266666",
   "email": "varna@isauto.net",
   "address": "Бизнес парк Варна, сграда B6, Варна, България",

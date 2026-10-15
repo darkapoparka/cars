@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "IS AUTO Varna",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/logo-on-light-20260919.webp",
-    "footer": "/dealer-brand/logo-on-dark-20260919.webp",
-    "archivedDark": "/dealer-brand/logo-on-dark-20260919.webp",
+    "light": "/dealer-brand/v2-82b4cdb8bfee0672/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-82b4cdb8bfee0672/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-82b4cdb8bfee0672/logo-on-dark.webp",
     "alt": "IS AUTO Varna",
-    "favicon": "/dealer-brand/logo-on-light-20260919.webp",
+    "favicon": "/dealer-brand/v2-82b4cdb8bfee0672/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

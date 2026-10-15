@@ -145,7 +145,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "IS AUTO Varna",
   "location": "Бизнес парк Варна, сграда B6, Варна, България",
-  "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+  "avatar": "/dealer-brand/v2-82b4cdb8bfee0672/logo-on-light.webp",
   "mobile": "0899 266 666",
   "email": "varna@isauto.net",
   "whatsapp": "",

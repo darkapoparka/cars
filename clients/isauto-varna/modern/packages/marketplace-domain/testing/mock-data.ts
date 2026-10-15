@@ -45,7 +45,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "IS AUTO Varna",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-82b4cdb8bfee0672/logo-on-light.webp"
     },
     "publishedAt": "2026-09-16T09:00:00.000Z",
     "promoted": true
@@ -93,7 +93,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "IS AUTO Varna",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-82b4cdb8bfee0672/logo-on-light.webp"
     },
     "publishedAt": "2026-09-16T09:00:00.000Z",
     "promoted": true
@@ -141,7 +141,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "IS AUTO Varna",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-82b4cdb8bfee0672/logo-on-light.webp"
     },
     "publishedAt": "2026-09-16T09:00:00.000Z",
     "promoted": true
@@ -189,7 +189,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "IS AUTO Varna",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-82b4cdb8bfee0672/logo-on-light.webp"
     },
     "publishedAt": "2026-09-16T09:00:00.000Z",
     "promoted": false
@@ -237,7 +237,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "IS AUTO Varna",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-82b4cdb8bfee0672/logo-on-light.webp"
     },
     "publishedAt": "2026-09-16T09:00:00.000Z",
     "promoted": false
@@ -285,7 +285,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "IS AUTO Varna",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-82b4cdb8bfee0672/logo-on-light.webp"
     },
     "publishedAt": "2026-09-16T09:00:00.000Z",
     "promoted": false
