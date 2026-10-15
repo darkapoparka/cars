@@ -276,7 +276,7 @@ jobs:
           import assert from 'node:assert/strict';
           import {createHash} from 'node:crypto';
           import {execFileSync} from 'node:child_process';
-          const reviewedWorkflowSha256 = '1b8a498d0a019b96050c464e9a914b1f85d80ab67cbaa3649c7faa206a150342';
+          const reviewedWorkflowSha256 = '9a54cef1d3f6ea7508708af1a03a1ed1f3b0a18b9e893a914bd620d90a0bd170';
           const base='144169aa68bc22aac577ae5042245f0e2b8ff584',workflow='.github/workflows/existing-fleet-source.yml',runId=38620387848,jobId=116046077657;
           const fullStep='Run the required executable workflow integration checkpoint once';
           let reuse=false,reason='Unchanged shared-code checkpoint proof unavailable';
@@ -409,7 +409,7 @@ jobs:
     timeout-minutes: 40
     strategy:
       fail-fast: false
-      max-parallel: 4
+      max-parallel: 8
       matrix: ${{ fromJSON(needs.plan.outputs.matrix) }}
     env:
       DEALER_SLUG: ${{ matrix.slug }}
