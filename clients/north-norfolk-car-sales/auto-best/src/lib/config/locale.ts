@@ -23,13 +23,17 @@ export const dealerLocalizedText = {
     "city": "North Walsham, Norfolk",
     "addressLine": "Unit 3 Midland Road, North Walsham NR28 9JR",
     "address": "Unit 3 Midland Road, North Walsham NR28 9JR",
-    "appointment": "Contact the dealership before visiting."
+    "appointment": "Contact the dealership before visiting.",
+    "addressShort": "Unit 3 Midland Road, North Walsham NR28 9JR",
+    "appointmentShort": "Contact the dealership before visiting."
   },
   "bg": {
     "city": "North Walsham, Norfolk",
     "addressLine": "Unit 3 Midland Road, North Walsham NR28 9JR",
     "address": "Unit 3 Midland Road, North Walsham NR28 9JR",
-    "appointment": "Свържете се с автокъщата преди посещение."
+    "appointment": "Свържете се с автокъщата преди посещение.",
+    "addressShort": "Unit 3 Midland Road, North Walsham NR28 9JR",
+    "appointmentShort": "Свържете се с автокъщата преди посещение."
   }
 } as const;
 

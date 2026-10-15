@@ -9,6 +9,7 @@
   import { templateMessage } from '$lib/i18n/presentation';
   const i18n = getI18n();
   const mobile = new MediaQuery('(max-width: 767px)', false);
+  const desktop = new MediaQuery('(min-width: 992px)', false);
 
   import './detail.css';
   import { vehicleContactHref } from '$data/journeys';
@@ -17,9 +18,13 @@
   import { tick } from 'svelte';
   import ShowroomMap from '$components/company/ShowroomMap.svelte';
   import Icon from '$components/ui/Icon.svelte';
+  import CheckmarkIcon from '$components/ui/CheckmarkIcon.svelte';
   import MobileActionIcon from '$components/layout/MobileActionIcon.svelte';
   import VehicleFinanceCalculator from '$components/vehicles/VehicleFinanceCalculator.svelte';
   import VehiclePhoto from '$components/vehicles/VehiclePhoto.svelte';
+  import VehiclePhotoGallery from '$components/vehicles/VehiclePhotoGallery.svelte';
+  import { vehicleGallery } from '$data/vehicle-gallery';
+  import { template } from '$config/template';
   import { brand } from '$config/brand';
   import { formatVehiclePrice, formatVehiclePriceLabel, type Vehicle } from '$data/inventory';
   import { imageSrcset } from '$data/responsive-images';
@@ -28,14 +33,17 @@
   let { data }: { data: PageData } = $props();
   const phoneLinkAttributes = { href: brand.phoneHref } as const;
 
-  const detailTabs = [
+  const allDetailTabs = [
     { id: 'overview', label: 'Details', message: 'm_56bd72e87e53' },
     { id: 'description', label: 'Description', message: 'm_3ef61560aafe' },
-    { id: 'equipment', label: 'Features', message: 'm_0c229ca25b6c' }
+    { id: 'equipment', label: 'Features', message: 'm_0c229ca25b6c' },
+    { id: 'photos', label: 'Photos', message: 'detail.photos' }
   ] as const;
-  type DetailTab = (typeof detailTabs)[number]['id'];
+  type DetailTab = (typeof allDetailTabs)[number]['id'];
+  const detailTabs = $derived(allDetailTabs.filter(tab => tab.id !== 'photos' || desktop.current));
+  const gallery = $derived(vehicleGallery(data.vehicle, template.mode === 'preview'));
   let activeTabsByVehicle = $state<Record<number, DetailTab>>({});
-  let activeDetailTab = $derived(activeTabsByVehicle[data.vehicle.id] ?? 'overview');
+  let activeDetailTab = $derived(detailTabs.find(tab => tab.id === activeTabsByVehicle[data.vehicle.id])?.id ?? 'overview');
   let shareCopied = $state(false);
   let financeDialog = $state<HTMLDialogElement>();
   let financeOpener: HTMLButtonElement | undefined;
@@ -131,7 +139,7 @@
             </div>
 
             <section class="dn-detail-card dn-detail-info-card" aria-label={i18n.t("m_ba3e721d1725")}>
-              <div class="dn-detail-tabs" role="tablist" aria-label={i18n.t("m_ba3e721d1725")}>
+              <div class="dn-detail-tabs" class:dn-detail-tabs--photos={desktop.current} role="tablist" aria-label={i18n.t("m_ba3e721d1725")}>
                 {#each detailTabs as tab (tab.id)}
                   <button
                     id={`detail-tab-${tab.id}`}
@@ -173,11 +181,15 @@
                     {i18n.t("m_aaff7e78a8ea")}
                   </a>
                 </div>
+              {:else if activeDetailTab === 'photos'}
+                <div id="detail-panel-photos" role="tabpanel" aria-labelledby="detail-tab-photos">
+                  <VehiclePhotoGallery photos={gallery.photos} title={data.vehicle.title} vehicleId={data.vehicle.id} demo={gallery.demo} />
+                </div>
               {:else}
                 <div id="detail-panel-equipment" role="tabpanel" aria-labelledby="detail-tab-equipment">
                   <ul class="dn-detail-equipment">
                     {#each data.vehicle.equipment as feature (feature)}
-                      <li><span aria-hidden="true">{#if mobile.current}<MobileActionIcon name="check" size={20} />{/if}</span>{specificationLabel(feature, i18n.locale)}</li>
+                      <li><span aria-hidden="true">{#if mobile.current}<MobileActionIcon name="check" size={16} />{:else if desktop.current}<CheckmarkIcon />{/if}</span>{specificationLabel(feature, i18n.locale)}</li>
                     {/each}
                   </ul>
                 </div>

@@ -114,8 +114,8 @@ export const leadSite: LeadSiteConfig = {
     "tagline": "North Norfolk Car Sales — vehicles and dealer support in North Walsham, Norfolk."
   }
 },
-  accent: "#DC0738",
-  desktopAccent: "#4b5057",
+  accent: "#09090b",
+  desktopAccent: "#09090b",
   desktopInventoryFilterLayout: "quick",
   desktopPreviewIdentity: {
     sourceSlug: "day-night-auto-group",
@@ -127,7 +127,7 @@ export const leadSite: LeadSiteConfig = {
       en: "Find your next car.",
     },
   },
-  address: "ул. „Атанас Манчев“ 18, North Walsham, Norfolk",
+  address: "Unit 3 Midland Road, North Walsham NR28 9JR",
   city: "North Walsham, Norfolk",
   district: { bg: "North Walsham, Norfolk", en: "North Walsham, Norfolk" },
   sellCategoryAssets: {
@@ -141,16 +141,17 @@ export const leadSite: LeadSiteConfig = {
   mobileShowroomArtworkPath:
     "/images/lease/mobile-pdp-showroom-blue-hour-v1.webp",
   contactUrl: "tel:+441263653055",
-  country: "България",
+  country: "United Kingdom",
   countryCode: carsLocale.dealerCountry,
   currency: carsLocale.inventoryCurrency,
   email: "sales@northnorfolkcarsales.co.uk",
   heroPath: "/lead-hero.jpg",
   locale: "en-GB",
-  logoPath: "/dealer-brand/logo.webp",
-  logoOnLight: "/dealer-brand/logo.webp",
-  logoOnDark: "/dealer-brand/logo.webp",
-  logoOnAccent: "/dealer-brand/logo.webp",
+  logoPath: "/dealer-brand/v2-1cd3fb6dc67c1653/logo-on-light.webp",
+  logoInversePath: "/dealer-brand/v2-1cd3fb6dc67c1653/logo-on-dark.webp",
+  logoOnLight: "/dealer-brand/v2-1cd3fb6dc67c1653/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-1cd3fb6dc67c1653/logo-on-light.webp",
+  logoOnAccent: "/dealer-brand/v2-1cd3fb6dc67c1653/logo-on-light.webp",
   mapsEmbedUrl:
     "https://maps.google.com/maps?q=North%20Norfolk%20Car%20Sales%2C%20Unit%203%20Midland%20Road%2C%20North%20Walsham%20NR28%209JR&z=16&output=embed",
   mapsUrl:
@@ -162,6 +163,6 @@ export const leadSite: LeadSiteConfig = {
   slug: "north-norfolk-car-sales",
   socialLinks: {},
   staticDemoMode: true,
-  tagline: "Премиум автомобили, внос и собствен лизинг в North Walsham, Norfolk.",
+  tagline: "North Norfolk Car Sales — vehicles and dealer support in North Walsham, Norfolk.",
 };
 // LEAD_SITE_CONFIG_END
