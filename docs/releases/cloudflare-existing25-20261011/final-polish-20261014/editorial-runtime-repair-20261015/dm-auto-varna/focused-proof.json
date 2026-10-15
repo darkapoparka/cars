@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-focused-exact-source-editorial-repair-proof",
+  "dealer": "dm-auto-varna",
+  "baseSourceCommit": "f27d0626d33ed99c86a6d7f8a9bbfa316b1df10f",
+  "baseSourceTree": "85ddf886f24ad64af64b5e9279f2bd1a468b8ecc",
+  "sourceModuleProof": {
+    "dealer": "dm-auto-varna",
+    "sourceCommit": "f27d0626d33ed99c86a6d7f8a9bbfa316b1df10f",
+    "sourceTree": "85ddf886f24ad64af64b5e9279f2bd1a468b8ecc",
+    "scope": "clients/dm-auto-varna/import/src/lib/content/extra-localized.ts",
+    "baseBlob": "247d83d23eb784d0bf703dcf2cf5738a038efeb0",
+    "candidateBlob": "4ac114464cc311dea209cd2002ed8a54ec3e1215",
+    "candidate": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/cf-import-editorial/candidates/dm-auto-varna/extra-localized.ts",
+      "sha256": "013deb7e2aaffa996f144ed0f1f0978654df4e0e07d4821fb66e8d1e1021dc50"
+    },
+    "patch": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/cf-import-editorial/candidates/dm-auto-varna/explicit-editorial.patch",
+      "sha256": "a399015dfbac9203afd259f84c9b3ed4a4f07975df8a2a8e3b102adbc685e8da"
+    },
+    "addedEntries": [
+      {
+        "bg": "Датирана извадка от публични обяви, не складова система в реално време. Потвърдете цената, ДДС и наличността. Обявите за очакван внос не означават наличен автомобил във Варна.",
+        "en": "Dated sample of public listings, not a live stock system. Confirm the price, VAT and availability. Listings for expected imports do not mean the vehicle is available in Varna."
+      }
+    ],
+    "beforeError": "Missing English editorial catalog entry: Датирана извадка от публични обяви, не складова система в реално време. Потвърдете цената, ДДС и наличността. Обявите за очакван внос не означават наличен автомобил във Варна.",
+    "after": {
+      "slug": "confirm-current-availability",
+      "title": "How to confirm current availability at D&M - AUTO VARNA",
+      "category": "Dealer information",
+      "date": "2026-10-10",
+      "image": "/assets/daynight/codex-generated-v2/blog/blog-cover-import-check-v2.webp",
+      "excerpt": "Dated sample of public listings, not a live stock system. Confirm the price, VAT and availability. Listings for expected imports do not mean the vehicle is available in Varna.",
+      "content": [
+        "Contact the dealership on 0898286848 and identify the exact vehicle before visiting.",
+        "Independent demonstration preview. Forms do not send messages or create a reservation."
+      ]
+    },
+    "checks": {
+      "exactRetainedSource": true,
+      "beforeFailureReproduced": true,
+      "afterEnglishPostsPassed": true,
+      "bgBehaviorUnchanged": true,
+      "dateSlugAndImageUnchanged": true,
+      "allExistingCatalogEntriesUnchanged": true,
+      "unknownEditorialStillThrows": true
+    },
+    "modulesRead": [
+      {
+        "path": "import/src/lib/content/localized.ts",
+        "blob": "f948f1e36c77a191dd3b0ed1d2ba62ea7b337c40"
+      },
+      {
+        "path": "import/src/lib/content/extra-localized.ts",
+        "blob": "247d83d23eb784d0bf703dcf2cf5738a038efeb0"
+      },
+      {
+        "path": "import/src/lib/config/site.ts",
+        "blob": "553f3ae74725bc538b14fc13c8c4e450858dad76"
+      },
+      {
+        "path": "import/src/lib/config/dealer.ts",
+        "blob": "81695c0293559895964bb652c4ff2a81d225c742"
+      },
+      {
+        "path": "import/src/lib/config/cars-locale.ts",
+        "blob": "f95ba7ecbcf465d89547df7414e70e7f7fdd7956"
+      },
+      {
+        "path": "import/src/lib/data/blog.ts",
+        "blob": "09ccb7f61ee8f7083837eccb6458c2cfbc309141"
+      }
+    ]
+  },
+  "originalProof": {
+    "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/cf-import-editorial/candidates/remaining-editorial-repair-proof.json",
+    "sha256": "03d21b50d19be0e5938bd4dc6c10c1dabad8cf539f423b125e2f114619ed6cc1"
+  },
+  "compiled": false,
+  "newCiRun": null,
+  "providerWrites": 0
+}

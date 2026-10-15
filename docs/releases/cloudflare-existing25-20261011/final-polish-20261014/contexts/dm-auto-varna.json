@@ -6,7 +6,7 @@
   "scope": "existing-dealer-pilot",
   "sourceCommit": "bb173c33d7b640502ad2e4bf27546748c12858b8",
   "reviewed": true,
-  "reviewedAt": "2026-10-14T23:56:34.182Z",
+  "reviewedAt": "2026-10-15T04:16:22.816Z",
   "qualificationOnly": true,
   "approved": false,
   "nativeApproval": false,
@@ -22,5 +22,19 @@
   "sourceReview": {
     "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-review.json",
     "sha256": "27c6ce5dd17ee6e1b9f6a5b059a95d5e1dbe4200f61264fc50addeb7af89d984"
+  },
+  "dealerSourceRepair": {
+    "kind": "explicit-english-editorial-catalog",
+    "parentContextSha256": "00628b5f9b589d5b83a6d72172f8d32c6081b7a5cfca197a0f21590bc0730ca2",
+    "baseSourceCommit": "f27d0626d33ed99c86a6d7f8a9bbfa316b1df10f",
+    "baseSourceTree": "85ddf886f24ad64af64b5e9279f2bd1a468b8ecc",
+    "path": "import/src/lib/content/extra-localized.ts",
+    "beforeBlob": "247d83d23eb784d0bf703dcf2cf5738a038efeb0",
+    "afterBlob": "4ac114464cc311dea209cd2002ed8a54ec3e1215",
+    "proof": {
+      "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/editorial-runtime-repair-20261015/dm-auto-varna/focused-proof.json",
+      "sha256": "aa004597dc9d2561b490f6d202a9ebf67bd4ffdbc16482fa0585699f4bada9f5"
+    },
+    "evidenceReuse": "Original immutable six-template QA and source preparation remain provenance; focused exact-source localization proof covers this new dealer edit. No new CI, build, native or hosted success is asserted."
   }
 }

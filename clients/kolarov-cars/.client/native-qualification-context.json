@@ -6,7 +6,7 @@
   "scope": "existing-dealer-pilot",
   "sourceCommit": "bb173c33d7b640502ad2e4bf27546748c12858b8",
   "reviewed": true,
-  "reviewedAt": "2026-10-14T23:56:34.182Z",
+  "reviewedAt": "2026-10-15T04:16:38.729Z",
   "qualificationOnly": true,
   "approved": false,
   "nativeApproval": false,
@@ -22,5 +22,19 @@
   "sourceReview": {
     "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-review.json",
     "sha256": "27c6ce5dd17ee6e1b9f6a5b059a95d5e1dbe4200f61264fc50addeb7af89d984"
+  },
+  "dealerSourceRepair": {
+    "kind": "explicit-english-editorial-catalog",
+    "parentContextSha256": "b3b56a6f94fa4201c551f05a137f47dffc09a2359706035ce4e42b11210b6e84",
+    "baseSourceCommit": "8089945eac3f779bcb4828b20f617899c3041421",
+    "baseSourceTree": "dc38ee267858e9ec9007c4624d7613445148c7a9",
+    "path": "import/src/lib/content/extra-localized.ts",
+    "beforeBlob": "a33eb9358ec54a46581aa15a2c3b20bd3ead6da1",
+    "afterBlob": "972c2792743529a1a7333fe79bbcbf2a05664e84",
+    "proof": {
+      "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/editorial-runtime-repair-20261015/kolarov-cars/focused-proof.json",
+      "sha256": "a53008a96e8659290997872b5b11da9bf27e3f894ac9306355d0b8b79982173e"
+    },
+    "evidenceReuse": "Original immutable six-template QA and source preparation remain provenance; focused exact-source localization proof covers this new dealer edit. No new CI, build, native or hosted success is asserted."
   }
 }

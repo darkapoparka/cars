@@ -12,7 +12,7 @@
     "scope": "existing-dealer-pilot",
     "sourceCommit": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "reviewed": true,
-    "reviewedAt": "2026-10-14T23:56:34.182Z",
+    "reviewedAt": "2026-10-15T04:16:38.729Z",
     "qualificationOnly": true,
     "approved": false,
     "nativeApproval": false,
@@ -28,9 +28,23 @@
     "sourceReview": {
       "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-review.json",
       "sha256": "27c6ce5dd17ee6e1b9f6a5b059a95d5e1dbe4200f61264fc50addeb7af89d984"
+    },
+    "dealerSourceRepair": {
+      "kind": "explicit-english-editorial-catalog",
+      "parentContextSha256": "b3b56a6f94fa4201c551f05a137f47dffc09a2359706035ce4e42b11210b6e84",
+      "baseSourceCommit": "8089945eac3f779bcb4828b20f617899c3041421",
+      "baseSourceTree": "dc38ee267858e9ec9007c4624d7613445148c7a9",
+      "path": "import/src/lib/content/extra-localized.ts",
+      "beforeBlob": "a33eb9358ec54a46581aa15a2c3b20bd3ead6da1",
+      "afterBlob": "972c2792743529a1a7333fe79bbcbf2a05664e84",
+      "proof": {
+        "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/editorial-runtime-repair-20261015/kolarov-cars/focused-proof.json",
+        "sha256": "a53008a96e8659290997872b5b11da9bf27e3f894ac9306355d0b8b79982173e"
+      },
+      "evidenceReuse": "Original immutable six-template QA and source preparation remain provenance; focused exact-source localization proof covers this new dealer edit. No new CI, build, native or hosted success is asserted."
     }
   },
-  "contextDigest": "094423a52599477282c281ed7382d8325cfc561fca27f7b3404e8ce9817de096",
+  "contextDigest": "05cd23ad4fb4a23d25f5e5a6bf25a17b685212968244c9cf7366080d372cbca0",
   "releases": {
     "auto-best": {
       "status": "qualification",
@@ -1708,8 +1722,8 @@
             "path": "src/lib/content/extra-localized.ts",
             "export": "extraEnglish"
           },
-          "keys": 93,
-          "contentDigest": "3ef41c7650de609a245b9c87be5b6167a1770d6d11ce6a2aa02e6ce0d98323c5"
+          "keys": 94,
+          "contentDigest": "5ce48939851c5b57b6e1b125359cb7a7179d72d52092dbdb6b5a07643c056036"
         }
       ],
       "declaredCatalogParityPassed": true,
@@ -1717,7 +1731,7 @@
     }
   },
   "input": {
-    "digest": "058fc64f4297b177d6bdb7956bc59f70413dbdf137142c4f3b03a895766d8532",
+    "digest": "78151548f6e914eed1a982ed4082262e2e9a86596f9d9099575c20fb3ed37927",
     "files": 9232
   },
   "nativeApproval": false,

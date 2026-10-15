@@ -6,7 +6,7 @@
   "scope": "existing-dealer-pilot",
   "sourceCommit": "bb173c33d7b640502ad2e4bf27546748c12858b8",
   "reviewed": true,
-  "reviewedAt": "2026-10-14T23:56:34.182Z",
+  "reviewedAt": "2026-10-15T04:16:52.918Z",
   "qualificationOnly": true,
   "approved": false,
   "nativeApproval": false,
@@ -22,5 +22,19 @@
   "sourceReview": {
     "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-review.json",
     "sha256": "27c6ce5dd17ee6e1b9f6a5b059a95d5e1dbe4200f61264fc50addeb7af89d984"
+  },
+  "dealerSourceRepair": {
+    "kind": "explicit-english-editorial-catalog",
+    "parentContextSha256": "bd8fc579b76d650623119e511041be11ce63ca12980b9ad930153d3423201b93",
+    "baseSourceCommit": "3ceb5baccb9044dcd52c902a47fc705fd61b5457",
+    "baseSourceTree": "19cf4312f6d213a02d897f7c97d3004306d14e71",
+    "path": "import/src/lib/content/extra-localized.ts",
+    "beforeBlob": "c8fe04619f8ce7f65f2970c347664aff4a6c438a",
+    "afterBlob": "1fda3e649bf91f69cc3e072bdaddc3ac51caaca3",
+    "proof": {
+      "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/editorial-runtime-repair-20261015/car-point-trade-varna/focused-proof.json",
+      "sha256": "9d301b5c9af683bb173f4ad1045a6dd38629f305eb919c33053288af927beb5f"
+    },
+    "evidenceReuse": "Original immutable six-template QA and source preparation remain provenance; focused exact-source localization proof covers this new dealer edit. No new CI, build, native or hosted success is asserted."
   }
 }
