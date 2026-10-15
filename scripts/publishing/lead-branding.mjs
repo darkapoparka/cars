@@ -167,7 +167,10 @@ export async function applyLeadBranding(files,manifest,{master,sharp,readTemplat
   for(const [name,bytes]of pack.assets){const target=root+publicBase.slice(1)+'/'+name;files.set(target,bytes);publicPaths.push({key,path:target,sha256:sha(bytes)});}
   // Retain compatible aliases without depending on them for cache invalidation.
   for(const [name,bytes]of pack.assets)files.set(root+'dealer-brand/'+name,bytes);
-  for(const old of oldLogos){if(!files.has(root+old.slice(1))||old.endsWith('.svg'))continue;const tone=toneFor(old),ext=old.endsWith('.png')?'png':'webp';files.set(root+old.slice(1),pack.assets.get('logo-'+tone+'.'+ext));}
+  for(const old of oldLogos){if(!files.has(root+old.slice(1))||old.endsWith('.svg'))continue;
+   const addressed=old.match(/^\/dealer-app\/logo-(?:light|dark)-([a-f0-9]{20})\.(?:png|webp)$/);
+   if(addressed){if(sha(files.get(root+old.slice(1))).slice(0,20)!==addressed[1])throw Error('Content-addressed App logo alias differs from its retained bytes: '+old);continue;}
+   const tone=toneFor(old),ext=old.endsWith('.png')?'png':'webp';files.set(root+old.slice(1),pack.assets.get('logo-'+tone+'.'+ext));}
   for(const name of [root+'favicon.ico',root+'apple-touch-icon.png',root+'dealer-brand/icon.png',root+'dealer-brand/icon-192.png',root+'dealer-brand/icon-512.png'])if(files.has(name))files.set(name,name.endsWith('.ico')?pack.assets.get('favicon.ico'):pack.assets.get('app-icon.png'));
  }
  for(const [name,bytes]of [...files]){if(!/\.(?:json|ts|tsx|js|svelte)$/.test(name)||!Object.keys(PUBLIC_ROOTS).some(k=>name.startsWith(k+'/'))||name.includes('/.template/')||name.includes('/.client/')||Object.hasOwn(facts,name)||derivedProfiles.has(name))continue;const text=Buffer.from(bytes).toString();let next=text;for(const old of oldLogos)next=next.replaceAll(JSON.stringify(old),JSON.stringify(publicBase+'/logo-'+toneFor(old)+'.webp')).replaceAll("'"+old+"'",JSON.stringify(publicBase+'/logo-'+toneFor(old)+'.webp'));if(next!==text)files.set(name,Buffer.from(next));}
