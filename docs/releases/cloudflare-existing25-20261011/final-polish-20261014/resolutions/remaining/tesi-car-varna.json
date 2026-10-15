@@ -41,6 +41,9 @@
     "modern/packages/internationalization/proxy.test.ts": "template",
     "modern/packages/marketplace-domain/testing/dealer-profile.json": "template",
     "modern/packages/marketplace-domain/testing/mock-data.ts": "template",
-    "modern/packages/marketplace/lead-site.ts": "template"
+    "modern/packages/marketplace/lead-site.ts": "template",
+    "auto-best/src/lib/data/dealer-profile.json": "template",
+    "modern/packages/marketplace-ui/components/dealer-mobile-brand-bar.tsx": "template",
+    "import/src/lib/data/daynight-listings.json": "template"
   }
 }
