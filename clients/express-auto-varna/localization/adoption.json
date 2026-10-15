@@ -7,68 +7,47 @@
   "context": {
     "schemaVersion": 1,
     "kind": "cars-native-source-qualification-context",
-    "id": "fleet-additional-new25-b1f0f56",
+    "id": "fleet-final-polish-20261014",
     "dealer": "express-auto-varna",
-    "scope": "new-dealer-source-proposal",
-    "sourceCommit": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "scope": "existing-dealer-pilot",
+    "sourceCommit": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "reviewed": true,
-    "reviewedAt": "2026-10-12T12:36:08.053Z",
+    "reviewedAt": "2026-10-14T23:56:34.182Z",
     "qualificationOnly": true,
+    "approved": false,
     "nativeApproval": false,
     "hostedApproval": false,
     "globalReleaseApproval": false,
     "approvedLockSha256": "ecdfaf9599fbcbeadebc24de3b9aa1c7615a9a49e29d338e5e9a23427d405e26",
-    "candidateLockSha256": "8825ea96b08eac6f5cceb9969364ad3b4625307814688c4884062ca9d52be97a",
+    "candidateLockSha256": "04633129df9e75d6cd62deeac9125b279957789d75f57cdb0b243ef61bfc3e7e",
     "sourceDeltaReview": {
-      "reference": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
-      "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975",
-      "reviewedAt": "2026-10-11T21:04:02.173Z"
+      "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
+      "sha256": "43cb6876e815a2a6b866f1dadd304236de4ae58c05fe65c2ab62a23506ee7ce9",
+      "reviewedAt": "2026-10-14T23:55:37.398Z"
     },
-    "pendingNativeChecks": [
-      "catalog-completeness",
-      "hardcoded-ui",
-      "native-routing",
-      "standalone-journeys",
-      "mounted-journeys",
-      "public-journeys",
-      "preferences-no-js",
-      "preferences-storage-disabled",
-      "preferences-races",
-      "request-isolation",
-      "security-write-blocking",
-      "assets-preserved"
-    ],
-    "pending": [
-      "Input-only source qualification; source creation, native/build/hosted journeys and owner approval remain pending."
-    ]
+    "sourceReview": {
+      "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-review.json",
+      "sha256": "27c6ce5dd17ee6e1b9f6a5b059a95d5e1dbe4200f61264fc50addeb7af89d984"
+    }
   },
-  "contextDigest": "e6311abaf81cc8666f7d08bac8da59092dbe7c39c675ef526a01b39320dca267",
+  "contextDigest": "94026d7ffc6f72698f2e9090832fddea0246abc3d3da9814f2bac17e66c9eb80",
   "releases": {
     "auto-best": {
-      "repository": "darkapoparka/cars",
       "status": "qualification",
-      "commit": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
-      "release": "auto-best-b1f0f56-source-qualification-2026-10-12",
-      "snapshotPath": "templates/auto-best",
-      "digest": "dcbc59990928884006652677d3529020df3844029993895a71e5f6818ba7363c",
-      "exportPolicy": "cars-source-v1",
+      "repository": "darkapoparka/cars",
+      "commit": "bb173c33d7b640502ad2e4bf27546748c12858b8",
       "source": {
         "repository": "darkapoparka/cars",
-        "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+        "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
         "path": "templates/auto-best",
-        "tree": "5fb7a2164775050a47c1183371622295dbf63725",
-        "digest": "dcbc59990928884006652677d3529020df3844029993895a71e5f6818ba7363c"
+        "tree": "78fa1a82eca14816449f9588283260840ee94f52",
+        "digest": "2fc9c3cfc9cf1976dbe30c08592776362e5bcc6b09e8b06620e57c4406df58a5"
       },
-      "runtime": {
-        "node": "22.20.0"
-      },
-      "modes": {
-        "standalone": "Recorded focused owner checks only; current complete acceptance pending.",
-        "mounted": "Priselci qualification pilot pending",
-        "dealer": "Reviewed Priselci-only source qualification; hosted pilot pending"
-      },
+      "snapshotPath": "templates/auto-best",
+      "digest": "2fc9c3cfc9cf1976dbe30c08592776362e5bcc6b09e8b06620e57c4406df58a5",
+      "exportPolicy": "cars-source-v1",
       "qualification": {
-        "contextId": "fleet-additional-new25-b1f0f56",
+        "contextId": "fleet-final-polish-20261014",
         "sourceQA": {
           "approvedRelease": {
             "repository": "darkapoparka/cars",
@@ -537,9 +516,9 @@
           "verifiedAt": "2026-10-10T17:33:58.141Z"
         },
         "sourceDeltaReview": {
-          "reference": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
-          "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975",
-          "reviewedAt": "2026-10-11T21:04:02.173Z"
+          "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
+          "sha256": "43cb6876e815a2a6b866f1dadd304236de4ae58c05fe65c2ab62a23506ee7ce9",
+          "reviewedAt": "2026-10-14T23:55:37.398Z"
         },
         "catalogs": [
           {
@@ -548,49 +527,25 @@
             "en": "en",
             "bg": "bg"
           }
-        ],
-        "pendingNativeChecks": [
-          "catalog-completeness",
-          "hardcoded-ui",
-          "native-routing",
-          "standalone-journeys",
-          "mounted-journeys",
-          "public-journeys",
-          "preferences-no-js",
-          "preferences-storage-disabled",
-          "preferences-races",
-          "request-isolation",
-          "security-write-blocking",
-          "assets-preserved"
-        ],
-        "sourceState": "published-final-owner-source"
+        ]
       }
     },
     "modern": {
-      "repository": "darkapoparka/cars",
       "status": "qualification",
-      "commit": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
-      "release": "modern-b1f0f56-source-qualification-2026-10-12",
-      "snapshotPath": "templates/modern",
-      "digest": "ba263aac8f1863d133807d3e1bf3597d125cf315a7e0deba3f6e419b52434c25",
-      "exportPolicy": "cars-source-v1",
+      "repository": "darkapoparka/cars",
+      "commit": "bb173c33d7b640502ad2e4bf27546748c12858b8",
       "source": {
         "repository": "darkapoparka/cars",
-        "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+        "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
         "path": "templates/modern",
-        "tree": "3974380670eb388bb16182f94ade33be6d87b1c1",
-        "digest": "ba263aac8f1863d133807d3e1bf3597d125cf315a7e0deba3f6e419b52434c25"
+        "tree": "01eac7390fa6ba951d4b8d4c26159a9be150f6c8",
+        "digest": "30e1a99f857cc25e4d78c9459cfb4394a9f70c5b114196a5ca6325ff38823b4b"
       },
-      "runtime": {
-        "node": "22.x"
-      },
-      "modes": {
-        "standalone": "Recorded focused owner checks only; current complete acceptance pending.",
-        "mounted": "Priselci qualification pilot pending",
-        "dealer": "Reviewed Priselci-only source qualification; hosted pilot pending"
-      },
+      "snapshotPath": "templates/modern",
+      "digest": "30e1a99f857cc25e4d78c9459cfb4394a9f70c5b114196a5ca6325ff38823b4b",
+      "exportPolicy": "cars-source-v1",
       "qualification": {
-        "contextId": "fleet-additional-new25-b1f0f56",
+        "contextId": "fleet-final-polish-20261014",
         "sourceQA": {
           "approvedRelease": {
             "repository": "darkapoparka/cars",
@@ -1075,9 +1030,9 @@
           "verifiedAt": "2026-10-10T17:34:01.221Z"
         },
         "sourceDeltaReview": {
-          "reference": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
-          "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975",
-          "reviewedAt": "2026-10-11T21:04:02.173Z"
+          "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
+          "sha256": "43cb6876e815a2a6b866f1dadd304236de4ae58c05fe65c2ab62a23506ee7ce9",
+          "reviewedAt": "2026-10-14T23:55:37.398Z"
         },
         "catalogs": [
           {
@@ -1102,49 +1057,25 @@
             "path": "packages/marketplace-ui/lib/marketplace-control-copy.ts",
             "export": "copyByLanguage"
           }
-        ],
-        "pendingNativeChecks": [
-          "catalog-completeness",
-          "hardcoded-ui",
-          "native-routing",
-          "standalone-journeys",
-          "mounted-journeys",
-          "public-journeys",
-          "preferences-no-js",
-          "preferences-storage-disabled",
-          "preferences-races",
-          "request-isolation",
-          "security-write-blocking",
-          "assets-preserved"
-        ],
-        "sourceState": "published-final-owner-source"
+        ]
       }
     },
     "import": {
-      "repository": "darkapoparka/cars",
       "status": "qualification",
-      "commit": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
-      "release": "import-b1f0f56-source-qualification-2026-10-12",
-      "snapshotPath": "templates/import",
-      "digest": "f98a0934cdcc5adbda393c14c02eb2adc0175344ab2ac3f913afe4b0603366e5",
-      "exportPolicy": "cars-source-v1",
+      "repository": "darkapoparka/cars",
+      "commit": "bb173c33d7b640502ad2e4bf27546748c12858b8",
       "source": {
         "repository": "darkapoparka/cars",
-        "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+        "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
         "path": "templates/import",
-        "tree": "6afc6901e2f95967fb7c72e9f75525d4d6fbf086",
-        "digest": "f98a0934cdcc5adbda393c14c02eb2adc0175344ab2ac3f913afe4b0603366e5"
+        "tree": "d841ddfe5bec918bf6b2c19fd6971fecd6b8e54d",
+        "digest": "c7d6c93214e859aa2747af8f5e068b6a0b8ca095d6328c807728a4d531d688f8"
       },
-      "runtime": {
-        "node": "24.21.0"
-      },
-      "modes": {
-        "standalone": "Recorded focused owner checks only; current complete acceptance pending.",
-        "mounted": "Priselci qualification pilot pending",
-        "dealer": "Reviewed Priselci-only source qualification; hosted pilot pending"
-      },
+      "snapshotPath": "templates/import",
+      "digest": "c7d6c93214e859aa2747af8f5e068b6a0b8ca095d6328c807728a4d531d688f8",
+      "exportPolicy": "cars-source-v1",
       "qualification": {
-        "contextId": "fleet-additional-new25-b1f0f56",
+        "contextId": "fleet-final-polish-20261014",
         "sourceQA": {
           "approvedRelease": {
             "repository": "darkapoparka/cars",
@@ -1632,9 +1563,9 @@
           "verifiedAt": "2026-10-10T17:34:09.318Z"
         },
         "sourceDeltaReview": {
-          "reference": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
-          "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975",
-          "reviewedAt": "2026-10-11T21:04:02.173Z"
+          "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
+          "sha256": "43cb6876e815a2a6b866f1dadd304236de4ae58c05fe65c2ab62a23506ee7ce9",
+          "reviewedAt": "2026-10-14T23:55:37.398Z"
         },
         "catalogs": [
           {
@@ -1665,22 +1596,7 @@
             "path": "src/lib/content/extra-localized.ts",
             "export": "extraEnglish"
           }
-        ],
-        "pendingNativeChecks": [
-          "catalog-completeness",
-          "hardcoded-ui",
-          "native-routing",
-          "standalone-journeys",
-          "mounted-journeys",
-          "public-journeys",
-          "preferences-no-js",
-          "preferences-storage-disabled",
-          "preferences-races",
-          "request-isolation",
-          "security-write-blocking",
-          "assets-preserved"
-        ],
-        "sourceState": "published-final-owner-source"
+        ]
       }
     }
   },
@@ -1694,8 +1610,8 @@
             "en": "en",
             "bg": "bg"
           },
-          "keys": 1128,
-          "contentDigest": "8d6a6343534262d814bef713d5b8e731f23d964ee6a4a8097db73f4cddce7d63"
+          "keys": 1151,
+          "contentDigest": "ffcbee1ebb8414e97258a742e358820f17d29b428568e63d882bf39a86002995"
         }
       ],
       "declaredCatalogParityPassed": true,
@@ -1783,8 +1699,8 @@
             "path": "src/lib/content/inventory-localized.ts",
             "export": "inventoryCopy"
           },
-          "keys": 122,
-          "contentDigest": "fed6a46a434ae9af4702d4c18b30a275528662e2ccae590256332291fd7572cd"
+          "keys": 124,
+          "contentDigest": "3ffc9322df245836cb73945e278a3f7f92692af94b46402906b4db06f1c3fe26"
         },
         {
           "descriptor": {
@@ -1801,8 +1717,8 @@
     }
   },
   "input": {
-    "digest": "8f4902e9643710592afb79a311cc6e59aeab9bf51c6b4b2fa396847b0b79afd5",
-    "files": 9055
+    "digest": "5927ea18f3bd56f376f6b4defcbcb528808e5fcc5da86a6339c641df0dfcbe05",
+    "files": 9145
   },
   "nativeApproval": false,
   "hostedApproval": false,

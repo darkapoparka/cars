@@ -3,12 +3,12 @@
   "dealer": "express-auto-varna",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/app",
-    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
-    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
   },
-  "appDigest": "67cd6329fa13a311ef95c766edd95ec9a8f87eaca10f91af6d87ddfb41845203",
+  "appDigest": "fbff45267828b03eef505bf3d9dc3375a40594e5dcbf3bc4d861545cec78f3a3",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "express-auto-varna",
@@ -21,14 +21,14 @@
     "assets": [
       {
         "source": "auto-best/static/dealer-brand/logo-on-light.png",
-        "output": "public/dealer-app/logo-light-c310125ec1256911dc98.png",
-        "sha256": "c310125ec1256911dc98b235f26fec1fd184e35e357f680510221cec3e925909",
+        "output": "public/dealer-app/logo-light-46aaca8342adeae53426.png",
+        "sha256": "46aaca8342adeae53426a57961bbd8b183749035e00cb194da511b763e25b836",
         "role": "logo-light"
       },
       {
         "source": "auto-best/static/dealer-brand/logo-on-dark.png",
-        "output": "public/dealer-app/logo-dark-5812ea851c71c8bba60e.png",
-        "sha256": "5812ea851c71c8bba60eacf166a3b05717c5a9dee2ead61aca9cc9a284100c10",
+        "output": "public/dealer-app/logo-dark-52f5e068dfba942741c7.png",
+        "sha256": "52f5e068dfba942741c7541483861b8d4971d041369d42683131f8a1cc5dc23e",
         "role": "logo-dark"
       },
       {
@@ -72,5 +72,6 @@
     ]
   },
   "needsDealerQA": true,
-  "readyToPublish": false
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-15T04:30:36.340Z"
 }

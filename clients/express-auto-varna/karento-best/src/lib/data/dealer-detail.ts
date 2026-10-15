@@ -86,7 +86,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "ЕКСПРЕС АУТО",
       "location": "бул.Цар Освободител 311, Варна, България",
-      "avatar": "/dealer-brand/v2-d0f1242a26134695/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-f4ec2652e550cb3d/logo-on-light.webp",
       "mobile": "0888885453",
       "email": "",
       "whatsapp": "",
@@ -188,7 +188,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "ЕКСПРЕС АУТО",
       "location": "бул.Цар Освободител 311, Варна, България",
-      "avatar": "/dealer-brand/v2-d0f1242a26134695/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-f4ec2652e550cb3d/logo-on-light.webp",
       "mobile": "0888885453",
       "email": "",
       "whatsapp": "",

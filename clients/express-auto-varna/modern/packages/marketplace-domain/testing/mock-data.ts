@@ -49,7 +49,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "ЕКСПРЕС АУТО",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-d0f1242a26134695/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-f4ec2652e550cb3d/logo-on-light.webp"
     },
     "publishedAt": "2026-10-12T09:00:00.000Z",
     "promoted": true
@@ -101,7 +101,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "ЕКСПРЕС АУТО",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-d0f1242a26134695/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-f4ec2652e550cb3d/logo-on-light.webp"
     },
     "publishedAt": "2026-10-12T09:00:00.000Z",
     "promoted": true

@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "ЕКСПРЕС АУТО",
-  "logo": "/dealer-brand/v2-d0f1242a26134695/logo-on-light.webp",
+  "logo": "/dealer-brand/v2-f4ec2652e550cb3d/logo-on-light.webp",
   "phone": "+359888885453",
   "email": null,
   "address": "бул.Цар Освободител 311, Варна, България",

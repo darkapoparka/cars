@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "ЕКСПРЕС АУТО",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-d0f1242a26134695/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-d0f1242a26134695/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-d0f1242a26134695/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-f4ec2652e550cb3d/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-f4ec2652e550cb3d/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-f4ec2652e550cb3d/logo-on-dark.webp",
     "alt": "ЕКСПРЕС АУТО",
-    "favicon": "/dealer-brand/v2-d0f1242a26134695/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-f4ec2652e550cb3d/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

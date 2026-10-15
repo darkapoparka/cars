@@ -21,7 +21,7 @@ export const capturedDealers: Record<string, CapturedDealer> = {
     "referrals": "",
     "descriptionAccuracy": "",
     "highlights": [],
-    "logo": "/dealer-brand/v2-d0f1242a26134695/logo-on-light.webp",
+    "logo": "/dealer-brand/v2-f4ec2652e550cb3d/logo-on-light.webp",
     "logoWidth": 128
   },
   "11791655386104961": {
@@ -33,7 +33,7 @@ export const capturedDealers: Record<string, CapturedDealer> = {
     "referrals": "",
     "descriptionAccuracy": "",
     "highlights": [],
-    "logo": "/dealer-brand/v2-d0f1242a26134695/logo-on-light.webp",
+    "logo": "/dealer-brand/v2-f4ec2652e550cb3d/logo-on-light.webp",
     "logoWidth": 128
   }
 };
