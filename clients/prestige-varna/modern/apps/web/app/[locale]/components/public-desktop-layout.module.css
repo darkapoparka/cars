@@ -109,11 +109,11 @@
     padding: 0 calc(var(--spacing) * 7);
     margin-inline: auto;
     color: var(--desktop-surface);
-    background: var(--brand);
+    background: var(--primary);
     border-radius: var(--radius-pill);
   }
   .contactAction:hover {
-    background: var(--lead-site-accent-hover);
+    background: var(--primary-hover);
   }
   .contactDetails {
     display: grid;
@@ -375,8 +375,8 @@
   }
   .importPanel [data-slot="desktop-import-routes"] a[aria-current="page"] {
     color: var(--desktop-surface);
-    background: var(--brand);
-    border-color: var(--brand);
+    background: var(--primary);
+    border-color: var(--primary);
   }
   .importPanel
     [data-slot="desktop-import-routes"]

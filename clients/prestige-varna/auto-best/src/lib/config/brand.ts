@@ -33,6 +33,6 @@ export const brand = {
   addressLine,
   address: "бул. Цар Освободител, 15–20 м преди последния светофар за Владиславово, вляво към Аксаково",
   appointment: "Работното време не е публикувано. Потвърдете часа и точния вход по телефона.",
-  logo: "/registered-branding/onLight.png",
-  logoOnDark: "/registered-branding/onDark.png"
+  logo: "/dealer-brand/v2-b8b42a5a9931c7cb/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-b8b42a5a9931c7cb/logo-on-dark.webp"
 } as const satisfies BrandConfig;

@@ -5,19 +5,19 @@
   "name": "Автосалон ПРЕСТИЖ",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/karento-best",
-    "digest": "83056967764a686f3737d74b86c5db51c1385a50184853f50ec4ade80c1dd44f",
-    "tree": "5f6eec8efb2f9e99819f7f0c2f743d18fff7b134"
+    "digest": "be17ef365e3272753df6e50826b139a45bfc32b8fef54ddcb86d977ad16280a9",
+    "tree": "8c5ac869c7fd15e19a80c660343fc64b20a2bad9"
   },
-  "sourceDigest": "024243ca7e1c5f29646ff82139b7b4173b711f227fe73e1f4d577c865fc008e4",
+  "sourceDigest": "301ff9c42282795dcbc6150c78e156fedbd262ff4e27902fa95a0e906af05837",
   "inventory": {
     "mode": "illustrative-not-dealer-stock",
     "count": 7,
     "observedAt": ""
   },
   "personalization": {
-    "profileSha256": "ec3f3cd66ca54826944b52e4333a844f1c72fc777f94354f178e5bab8246bafe",
+    "profileSha256": "d584a06ead383d6c80a02063c42a7ae7ca3d7457849c0d88d33fa4388c5f7994",
     "logoPaths": [
       "/registered-branding/onLight.png",
       "/registered-branding/onDark.png"

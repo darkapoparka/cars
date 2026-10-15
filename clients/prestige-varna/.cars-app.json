@@ -3,17 +3,17 @@
   "dealer": "prestige-varna",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/app",
-    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1",
-    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76"
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
   },
-  "appDigest": "7c9d3fc9715fe250c734f68e9b6fa9408f8ea2831ec13cd75d4d6dc6adc38b8b",
+  "appDigest": "1d0c59361d2c5a13d5136ead651cf3255501ed6291c1c1d73e519e3cc15abe18",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "prestige-varna",
     "profile": "auto-best/src/lib/data/dealer-profile.json",
-    "profileSha256": "31b4d64bc9beb7a11d256dafdb36f418407dd0a91c5cd8e4a8c2c595b211ec93",
+    "profileSha256": "916c4e6712491cb7c37c8fc4802f292ae07c6af8901c787c541db3c6bd43e539",
     "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
     "vehicles": 7,
     "currency": "EUR",
@@ -121,5 +121,5 @@
   },
   "needsDealerQA": true,
   "readyToPublish": false,
-  "refreshedAt": "2026-10-13T23:03:48.069Z"
+  "refreshedAt": "2026-10-15T06:18:26.082Z"
 }
