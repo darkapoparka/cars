@@ -37,3 +37,14 @@ test('unselected source updates retain their original logo path and every malfor
 test('changed selected raster/pack evidence refuses atomically before native source sealing',async()=>{
  for(const failure of ['pack','base','missing-contract','assert']){const value=sealFixture(),before=[...value.files];await assert.rejects(()=>sealReviewedFactualBranding({...value,applyBranding:async staged=>{staged.set('stock.json',Buffer.from('must remain staged on failure'));if(failure!=='missing-contract')staged.set('.cars-branding.json',Buffer.from('proof'));return{packId:failure==='pack'?'f'.repeat(16):value.proof.targetBranding.packId,publicBase:failure==='base'?'/other':value.proof.targetBranding.publicBase};},assertBranding(){if(failure==='assert')throw Error('selected raster bytes changed');}}));assert.deepEqual([...value.files],before);}
 });
+
+test('second source finalization verifies and reuses the exact selected pack without applying it twice',async()=>{
+ const value=sealFixture(),contract={schemaVersion:1,packId:value.proof.targetBranding.packId,publicBase:value.proof.targetBranding.publicBase};value.files.set('.cars-branding.json',Buffer.from(JSON.stringify(contract)));const before=[...value.files];let checks=0;
+ const result=await sealReviewedFactualBranding({...value,applyBranding(){throw Error('Branding contract already exists; must not apply twice');},assertBranding(files){checks++;assert.equal(files,value.files);assert.deepEqual([...files],before);}});assert.equal(result.reused,true);assert.equal(checks,1);assert.deepEqual([...value.files],before);
+ await assert.rejects(()=>sealReviewedFactualBranding({...value,applyBranding(){throw Error('must not apply');},assertBranding(){throw Error('selected asset corruption');}}),/selected asset corruption/);assert.deepEqual([...value.files],before);
+});
+test('a different existing pack and malformed metadata refuse without application or source mutation',async()=>{
+ const value=sealFixture(),old={schemaVersion:1,packId:'f'.repeat(16),publicBase:'/dealer-brand/v2-'+('f'.repeat(16))};value.files.set('.cars-branding.json',Buffer.from(JSON.stringify(old)));const before=new Map(value.files);
+ await assert.rejects(()=>sealReviewedFactualBranding({...value,applyBranding(){throw Error('must not apply a different pack');},assertBranding(){throw Error('must not accept an unreviewed existing pack');}}),/Existing source branding pack differs/);assert.deepEqual([...value.files],[...before]);
+ const malformed=sealFixture();malformed.files.set('.cars-branding.json',Buffer.from(JSON.stringify({schemaVersion:1,packId:malformed.proof.targetBranding.packId,publicBase:'/wrong'})));const snapshot=[...malformed.files];await assert.rejects(()=>sealReviewedFactualBranding({...malformed,applyBranding(){throw Error('must not apply');},assertBranding(){}}),/Existing source branding contract/);assert.deepEqual([...malformed.files],snapshot);
+});

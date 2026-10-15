@@ -1015,7 +1015,18 @@ export async function sealReviewedFactualBranding({files,manifest,proof,applyBra
   if(!selected)return null;
   const keys=['auto-best','modern','import','app','mobile','karento-best'];
   if(!(files instanceof Map)||typeof applyBranding!=='function'||typeof assertBranding!=='function'||proof.schemaVersion!==1||proof.stage!=='preservation-merge-before-native-catalogs-and-branding'||proof.mode!=='current-facts-from-pinned-six-targets'||proof.dealer!==manifest.slug||!/^[a-f0-9]{64}$/.test(proof.profileSha256??'')||JSON.stringify(Object.keys(proof.targetSources??{}).sort())!==JSON.stringify([...keys].sort())||selected.schemaVersion!==1||selected.stage!=='reviewed-logo-pack-on-factual-target-before-preservation-merge'||selected.dealerSourceChanged!==false||!/^[a-f0-9]{16}$/.test(selected.packId??'')||selected.publicBase!=='/dealer-brand/v2-'+selected.packId||!selected.input||!/^[a-f0-9]{64}$/.test(selected.input.sha256??'')||typeof selected.input.path!=='string')throw Error('Exact reviewed factual branding required before source seals');
-  const staged=new Map(files),contract=await applyBranding(staged,manifest);
+  const existing=files.get('.cars-branding.json');
+  if(existing){
+    const contract=JSON.parse(existing.toString('utf8'));
+    if(!contract||contract.schemaVersion!==1||!/^[a-f0-9]{16}$/.test(contract.packId??'')||contract.publicBase!=='/dealer-brand/v2-'+contract.packId)throw Error('Existing source branding contract is not an explicit reviewed pack');
+    if(contract.packId===selected.packId&&contract.publicBase===selected.publicBase){
+      assertBranding(files,manifest);
+      return {schemaVersion:1,stage:'selected-reviewed-branding-before-native-source-seals',packId:contract.packId,publicBase:contract.publicBase,reused:true};
+    }
+    throw Error('Existing source branding pack differs from the exact reviewed target; explicit refresh required');
+  }
+  const staged=new Map(files);
+  const contract=await applyBranding(staged,manifest);
   if(contract?.packId!==selected.packId||contract.publicBase!==selected.publicBase||!staged.has('.cars-branding.json'))throw Error('Selected factual branding pack changed before source seals');
   assertBranding(staged,manifest);
   for(const [name,bytes]of staged)files.set(name,bytes);
