@@ -50,7 +50,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Лион Ауто",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-b288ae392c379daa/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-7ec7821ff2c17bfd/logo-on-light.webp"
     },
     "publishedAt": "2026-10-11T09:00:00.000Z",
     "promoted": true

@@ -2,16 +2,16 @@
   "schemaVersion": 1,
   "dealer": "lionauto1-varna",
   "kind": "personalized-source-candidate-not-an-approved-release",
-  "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
-  "candidateSourceDigest": "c669145d433d605122a049b266b5349ceb5f1b2f8d3f4a844dd58d324d5b8193",
+  "sourceRevision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+  "candidateSourceDigest": "911e4e97b7920df8c064d68621c2e1fa6d7765aea29a8097ad9a7b22ab9058ab",
   "qualificationContextPath": ".client/native-qualification-context.json",
-  "qualificationContextSha256": "7f9ec103374f7230891de1880f4a27314a8d04454eb32ba80254b7da9077c2ca",
+  "qualificationContextSha256": "185d8dc7bc67ff0ddda800cd67774d74eb4764bba1910ea6554d6d5f8fe78fbb",
   "qualificationLockPath": ".client/native-qualification-lock.json",
-  "qualificationLockSha256": "c28d29acdf39709d38737a972eeb2a1d000cfb1cd96de587c38effd764386ac1",
+  "qualificationLockSha256": "04633129df9e75d6cd62deeac9125b279957789d75f57cdb0b243ef61bfc3e7e",
   "sourceDeltaReview": {
-    "reference": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
-    "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975",
-    "reviewedAt": "2026-10-11T21:04:02.173Z"
+    "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
+    "sha256": "43cb6876e815a2a6b866f1dadd304236de4ae58c05fe65c2ab62a23506ee7ce9",
+    "reviewedAt": "2026-10-14T23:55:37.398Z"
   },
   "nativeApproval": false,
   "hostedApproval": false

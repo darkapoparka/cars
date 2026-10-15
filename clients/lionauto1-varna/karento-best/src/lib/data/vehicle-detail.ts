@@ -155,7 +155,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "Лион Ауто",
   "location": "бул.Цар Освободител третата автокъща в ляво след Италмодо, Варна, България",
-  "avatar": "/dealer-brand/v2-b288ae392c379daa/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-7ec7821ff2c17bfd/logo-on-light.webp",
   "mobile": "0895753001",
   "email": "",
   "whatsapp": "",

@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "Лион Ауто",
-  "logo": "/dealer-brand/v2-b288ae392c379daa/logo-on-light.webp",
+  "logo": "/dealer-brand/v2-7ec7821ff2c17bfd/logo-on-light.webp",
   "phone": "+359895753001",
   "email": null,
   "address": "бул.Цар Освободител третата автокъща в ляво след Италмодо, Варна, България",

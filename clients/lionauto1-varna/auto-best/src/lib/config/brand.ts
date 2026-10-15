@@ -33,6 +33,6 @@ export const brand = {
   addressLine,
   address: "бул.Цар Освободител третата автокъща в ляво след Италмодо, Варна, България",
   appointment: "Понеделник 08:30 - 00:00 ч. Вторник 08:30 - 00:00 ч. Сряда 08:30 - 00:00 ч. Четвъртък 08:30 - 00:00 ч. Петък 08:30 - 00:00 ч. Събота 09:00 - 14:00 ч. Неделя Почивен ден",
-  logo: "/dealer-brand/v2-b288ae392c379daa/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/v2-b288ae392c379daa/logo-on-dark.webp"
+  logo: "/dealer-brand/v2-7ec7821ff2c17bfd/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-7ec7821ff2c17bfd/logo-on-dark.webp"
 } as const satisfies BrandConfig;

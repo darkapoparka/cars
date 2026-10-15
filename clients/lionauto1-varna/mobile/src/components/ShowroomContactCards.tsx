@@ -28,6 +28,7 @@ const s = stylex.create({
     borderWidth: 0,
   },
   card: {
+    position: 'relative',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'stretch',
@@ -49,6 +50,7 @@ const s = stylex.create({
     cursor: { default: 'pointer', ':disabled': 'default' },
   },
   cardHeader: { display: 'flex', alignItems: 'center', gap: 8, minWidth: 0 },
+  callHeader: { paddingRight: 38 },
   detail: {
     fontSize: 14,
     lineHeight: '20px',
@@ -57,7 +59,10 @@ const s = stylex.create({
     overflowWrap: 'anywhere',
   },
   arrow: {
-    marginLeft: 'auto',
+    position: 'absolute',
+    top: '50%',
+    right: 16,
+    transform: 'translateY(-50%)',
     flexShrink: 0,
     display: 'inline-flex',
     alignItems: 'center',
@@ -109,7 +114,7 @@ export function ShowroomContactCards() {
   if (!hasCall && !showroom.email) return null;
   const call = (
     <>
-      <span {...stylex.props(s.cardHeader)}>
+      <span {...stylex.props(s.cardHeader, s.callHeader)}>
         <ShowroomContactArtwork name="call" />
         <span {...stylex.props(s.title)}>{t('Call us')}</span>
         <span aria-hidden="true" {...stylex.props(s.arrow)}>

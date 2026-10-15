@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "Лион Ауто",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-b288ae392c379daa/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-b288ae392c379daa/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-b288ae392c379daa/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-7ec7821ff2c17bfd/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-7ec7821ff2c17bfd/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-7ec7821ff2c17bfd/logo-on-dark.webp",
     "alt": "Лион Ауто",
-    "favicon": "/dealer-brand/v2-b288ae392c379daa/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-7ec7821ff2c17bfd/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {
