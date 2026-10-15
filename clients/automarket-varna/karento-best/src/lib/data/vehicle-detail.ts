@@ -192,7 +192,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "Аутомаркет Варна",
   "location": "бул. Цар Освободител — 300 м вдясно след Дом на Камиона, посока летището",
-  "avatar": "/dealer-brand/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-8e43d7ba74a02846/logo-on-light.webp",
   "mobile": "0886 424 400",
   "email": "",
   "whatsapp": "",

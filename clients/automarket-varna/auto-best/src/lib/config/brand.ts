@@ -33,6 +33,6 @@ export const brand = {
   addressLine,
   address: "бул. Цар Освободител — 300 м вдясно след Дом на Камиона, посока летището",
   appointment: "За работно време и оглед се обадете предварително.",
-  logo: "/dealer-brand/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/logo-on-dark.webp"
+  logo: "/dealer-brand/v2-8e43d7ba74a02846/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-8e43d7ba74a02846/logo-on-dark.webp"
 } as const satisfies BrandConfig;

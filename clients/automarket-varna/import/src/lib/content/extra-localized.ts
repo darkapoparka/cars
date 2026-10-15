@@ -89,6 +89,7 @@ export const extraEnglish = {
   "Аутомаркет запазиха разговора практичен: снимки, документи, пробег и разходите, които имат значение преди доставка.": "Аутомаркет kept the conversation practical: photos, documents, mileage and the costs that matter before delivery.",
   "Продава клиентски автомобил": "Customer selling a car",
   "Изпратих данните за колата и получих ясна обратна връзка за цената, документите и най-добрия начин да представя автомобила.": "I sent the car details and received clear feedback on price, documents and the best way to present it.",
+  "Представителни обяви към 07.09.2026 г. Потвърдете наличността и условията по телефона.": "Representative listings as of 07.09.2026. Confirm availability and terms by phone.",
   "Демо профил": "Demo profile",
   "Демонстрационен пример, а не потвърден клиентски отзив.": "Demonstration example, not a verified customer review.",
   "Измислен пример за оформлението на отзив. Не описва реален клиент, покупка или доставка.": "Fictional example of the review layout. It does not describe a real customer, purchase or delivery."

@@ -3,32 +3,32 @@
   "dealer": "automarket-varna",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/app",
-    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1",
-    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76"
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
   },
-  "appDigest": "baedfe19f7d1faa5f2b0c150ba43b002ed179063f2a591dd6a6ca4e2d8263d43",
+  "appDigest": "1f44c4c96677aed71886ad92fce650dc51a8fb6a05ac3c85075a96143ccc71b9",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "automarket-varna",
     "profile": "auto-best/src/lib/data/dealer-profile.json",
-    "profileSha256": "fcdf5c67a6a67581abd65427525c1b89b612a0dc6926331cecda12a168325c33",
+    "profileSha256": "67314859500f91586527297ecd2564702160ef86381a67ff0aef003e11a0e785",
     "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
     "vehicles": 16,
     "currency": "EUR",
     "observedAt": "2026-09-07",
     "assets": [
       {
-        "source": "auto-best/static/dealer-brand/logo-on-light.webp",
-        "output": "public/dealer-app/logo-light-7af239008b510f97e800.webp",
-        "sha256": "7af239008b510f97e800eeb3dad1e13d685a761d4cf085a5ddbd26ebaf291057",
+        "source": "auto-best/static/dealer-brand/v2-8e43d7ba74a02846/logo-on-light.webp",
+        "output": "public/dealer-app/logo-light-7e13737a096829d4e7df.webp",
+        "sha256": "7e13737a096829d4e7df77623f248161ce21872770533e41c570d672a9e15ceb",
         "role": "logo-light"
       },
       {
-        "source": "auto-best/static/dealer-brand/logo-on-dark.webp",
-        "output": "public/dealer-app/logo-dark-8b99f27afd47cc3f0a81.webp",
-        "sha256": "8b99f27afd47cc3f0a8196e742537c8e81285d6d539b82890611a27b65185793",
+        "source": "auto-best/static/dealer-brand/v2-8e43d7ba74a02846/logo-on-dark.webp",
+        "output": "public/dealer-app/logo-dark-3008d674ffe8e7b18f59.webp",
+        "sha256": "3008d674ffe8e7b18f5965644b98de34d616e119fc4a28b5def2a82948a65811",
         "role": "logo-dark"
       },
       {
@@ -613,5 +613,5 @@
   },
   "needsDealerQA": true,
   "readyToPublish": false,
-  "refreshedAt": "2026-10-13T02:50:38.277Z"
+  "refreshedAt": "2026-10-15T02:25:51.769Z"
 }
