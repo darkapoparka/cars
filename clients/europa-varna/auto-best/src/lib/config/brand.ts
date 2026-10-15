@@ -33,6 +33,6 @@ export const brand = {
   addressLine,
   address: "Варна, Победа, бул. „Христо Смирненски“, до Вятърна мелница",
   appointment: "Потвърдете работното време и огледа по телефона",
-  logo: "/registered-branding/onLight.png",
-  logoOnDark: "/registered-branding/onDark.png"
+  logo: "/dealer-brand/v2-157161b8b9b6ab30/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-157161b8b9b6ab30/logo-on-dark.webp"
 } as const satisfies BrandConfig;
