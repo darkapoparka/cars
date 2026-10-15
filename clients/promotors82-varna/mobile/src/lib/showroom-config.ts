@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "PRO MOTORS",
-  "logo": "/dealer-brand/v2-1cfb83127c02ba5f/logo-on-light.webp",
+  "logo": "/dealer-brand/v2-ba59c9c087af41bf/logo-on-light.webp",
   "phone": "+359899519164",
   "email": null,
   "address": "бул. Христо Смирненски, Варна, България",

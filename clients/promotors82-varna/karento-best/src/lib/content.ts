@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "PRO MOTORS",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-1cfb83127c02ba5f/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-1cfb83127c02ba5f/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-1cfb83127c02ba5f/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-ba59c9c087af41bf/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-ba59c9c087af41bf/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-ba59c9c087af41bf/logo-on-dark.webp",
     "alt": "PRO MOTORS",
-    "favicon": "/dealer-brand/v2-1cfb83127c02ba5f/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-ba59c9c087af41bf/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

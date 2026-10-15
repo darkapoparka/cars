@@ -94,7 +94,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "PRO MOTORS",
       "location": "бул. Христо Смирненски, Варна, България",
-      "avatar": "/dealer-brand/v2-1cfb83127c02ba5f/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-ba59c9c087af41bf/logo-on-light.webp",
       "mobile": "0899519164",
       "email": "",
       "whatsapp": "",
