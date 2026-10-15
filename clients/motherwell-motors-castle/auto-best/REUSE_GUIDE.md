@@ -2,6 +2,12 @@
 
 The normal workflow is to clone the template, replace its business content and media, and keep the established page layouts and interactions. The result is an independent client project.
 
+Inventory's desktop Filter button uses the grouped App-style modal. In
+`src/lib/config/template.ts`, `desktopInventorySearch: 'menu'` keeps the current
+Search menu; a client can choose `'filters'` to open the same modal's Search pane
+instead. This setting affects Inventory from 992px. Home, mobile and the quick
+facet pills keep their existing editors.
+
 ## Logo assets
 
 Set both `brand.logo` (light backgrounds) and `brand.logoOnDark` (dark backgrounds) in `src/lib/config/brand.ts`. Both assets must be transparent. For a black-only lead logo, create a faithful white variant; preserve its shape, lettering, proportions and clear space. Use an approved reversed logo if available. Do not compensate for a dark logo with a white rectangle, pill, border, shadow or a background baked into the image.

@@ -23,13 +23,17 @@ export const dealerLocalizedText = {
     "city": "Cleland / Motherwell, Scotland",
     "addressLine": "23a Biggar Road, Cleland Industrial Estate, Motherwell ML1 5PB",
     "address": "23a Biggar Road, Cleland Industrial Estate, Motherwell ML1 5PB",
-    "appointment": "Contact the dealership before visiting."
+    "appointment": "Contact the dealership before visiting.",
+    "addressShort": "23a Biggar Road, Cleland Industrial Estate, Motherwell ML1 5PB",
+    "appointmentShort": "Contact the dealership before visiting."
   },
   "bg": {
     "city": "Cleland / Motherwell, Scotland",
     "addressLine": "23a Biggar Road, Cleland Industrial Estate, Motherwell ML1 5PB",
     "address": "23a Biggar Road, Cleland Industrial Estate, Motherwell ML1 5PB",
-    "appointment": "Свържете се с автокъщата преди посещение."
+    "appointment": "Свържете се с автокъщата преди посещение.",
+    "addressShort": "23a Biggar Road, Cleland Industrial Estate, Motherwell ML1 5PB",
+    "appointmentShort": "Свържете се с автокъщата преди посещение."
   }
 } as const;
 

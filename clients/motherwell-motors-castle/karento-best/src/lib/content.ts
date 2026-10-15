@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "Motors Castle",
   "locale": "en-GB",
   "logo": {
-    "light": "/variant-6/dealer-brand/logo-on-light-20261011.webp",
-    "footer": "/variant-6/dealer-brand/logo-on-dark-20261011.webp",
-    "archivedDark": "/variant-6/dealer-brand/logo-on-dark-20261011.webp",
+    "light": "/dealer-brand/v2-7aace8204a8aa0ad/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-7aace8204a8aa0ad/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-7aace8204a8aa0ad/logo-on-dark.webp",
     "alt": "Motors Castle",
-    "favicon": "/dealer-brand/app-icon.png",
+    "favicon": "/dealer-brand/v2-7aace8204a8aa0ad/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

@@ -49,7 +49,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Motors Castle",
       "verificationStatus": "unverified",
       "city": "Cleland / Motherwell, Scotland",
-      "logoUrl": "/dealer-brand/logo.webp"
+      "logoUrl": "/dealer-brand/v2-7aace8204a8aa0ad/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": true
@@ -100,7 +100,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Motors Castle",
       "verificationStatus": "unverified",
       "city": "Cleland / Motherwell, Scotland",
-      "logoUrl": "/dealer-brand/logo.webp"
+      "logoUrl": "/dealer-brand/v2-7aace8204a8aa0ad/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": true
@@ -151,7 +151,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Motors Castle",
       "verificationStatus": "unverified",
       "city": "Cleland / Motherwell, Scotland",
-      "logoUrl": "/dealer-brand/logo.webp"
+      "logoUrl": "/dealer-brand/v2-7aace8204a8aa0ad/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": true
@@ -202,7 +202,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Motors Castle",
       "verificationStatus": "unverified",
       "city": "Cleland / Motherwell, Scotland",
-      "logoUrl": "/dealer-brand/logo.webp"
+      "logoUrl": "/dealer-brand/v2-7aace8204a8aa0ad/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -253,7 +253,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Motors Castle",
       "verificationStatus": "unverified",
       "city": "Cleland / Motherwell, Scotland",
-      "logoUrl": "/dealer-brand/logo.webp"
+      "logoUrl": "/dealer-brand/v2-7aace8204a8aa0ad/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -304,7 +304,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Motors Castle",
       "verificationStatus": "unverified",
       "city": "Cleland / Motherwell, Scotland",
-      "logoUrl": "/dealer-brand/logo.webp"
+      "logoUrl": "/dealer-brand/v2-7aace8204a8aa0ad/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -355,7 +355,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Motors Castle",
       "verificationStatus": "unverified",
       "city": "Cleland / Motherwell, Scotland",
-      "logoUrl": "/dealer-brand/logo.webp"
+      "logoUrl": "/dealer-brand/v2-7aace8204a8aa0ad/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -406,313 +406,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Motors Castle",
       "verificationStatus": "unverified",
       "city": "Cleland / Motherwell, Scotland",
-      "logoUrl": "/dealer-brand/logo.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1004",
-    "slug": "audi-a1-2013-800753431171",
-    "category": "car",
-    "dealerOrgId": "dealer-motherwell-motors-castle",
-    "status": "active",
-    "title": "2013 Audi A1 1.6 TDI S Line 5dr HATCHBACK Diesel Manual",
-    "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
-    "price": {
-      "amount": 3000,
-      "currency": "GBP"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer-stock/hatchback.webp",
-        "alt": "2013 Audi A1 1.6 TDI S Line 5dr HATCHBACK Diesel Manual"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Cleland / Motherwell, Scotland",
-      "region": "Cleland / Motherwell, Scotland",
-      "country": "United Kingdom"
-    },
-    "spec": {
-      "make": "Audi",
-      "model": "A1",
-      "trim": "1.6 TDI S Line 5dr HATCHBACK Diesel Manual",
-      "year": 2013,
-      "bodyType": "hatchback",
-      "fuelType": "diesel",
-      "transmission": "manual",
-      "mileageValue": 192497,
-      "mileageUnit": "km",
-      "mileageSourceValue": 119612,
-      "mileageSourceUnit": "mi"
-    },
-    "seller": {
-      "id": "dealer-motherwell-motors-castle",
-      "type": "dealer",
-      "displayName": "Motors Castle",
-      "verificationStatus": "unverified",
-      "city": "Cleland / Motherwell, Scotland",
-      "logoUrl": "/dealer-brand/logo.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1005",
-    "slug": "vauxhall-corsa-2021-800729940509",
-    "category": "car",
-    "dealerOrgId": "dealer-motherwell-motors-castle",
-    "status": "active",
-    "title": "2021 Vauxhall Corsa 1.2 SE 5dr HATCHBACK Petrol Manual",
-    "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
-    "price": {
-      "amount": 6500,
-      "currency": "GBP"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer-stock/hatchback.webp",
-        "alt": "2021 Vauxhall Corsa 1.2 SE 5dr HATCHBACK Petrol Manual"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Cleland / Motherwell, Scotland",
-      "region": "Cleland / Motherwell, Scotland",
-      "country": "United Kingdom"
-    },
-    "spec": {
-      "make": "Vauxhall",
-      "model": "Corsa",
-      "trim": "1.2 SE 5dr HATCHBACK Petrol Manual",
-      "year": 2021,
-      "bodyType": "hatchback",
-      "fuelType": "gasoline",
-      "transmission": "manual",
-      "mileageValue": 52449,
-      "mileageUnit": "km",
-      "mileageSourceValue": 32590,
-      "mileageSourceUnit": "mi"
-    },
-    "seller": {
-      "id": "dealer-motherwell-motors-castle",
-      "type": "dealer",
-      "displayName": "Motors Castle",
-      "verificationStatus": "unverified",
-      "city": "Cleland / Motherwell, Scotland",
-      "logoUrl": "/dealer-brand/logo.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1006",
-    "slug": "citroen-c3-2023-800722114749",
-    "category": "car",
-    "dealerOrgId": "dealer-motherwell-motors-castle",
-    "status": "active",
-    "title": "2023 Citroen C3 1.2 PureTech Elle 5dr HATCHBACK Petrol Manual",
-    "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
-    "price": {
-      "amount": 8000,
-      "currency": "GBP"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer-stock/hatchback.webp",
-        "alt": "2023 Citroen C3 1.2 PureTech Elle 5dr HATCHBACK Petrol Manual"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Cleland / Motherwell, Scotland",
-      "region": "Cleland / Motherwell, Scotland",
-      "country": "United Kingdom"
-    },
-    "spec": {
-      "make": "Citroen",
-      "model": "C3",
-      "trim": "1.2 PureTech Elle 5dr HATCHBACK Petrol Manual",
-      "year": 2023,
-      "bodyType": "hatchback",
-      "fuelType": "gasoline",
-      "transmission": "manual",
-      "mileageValue": 5538,
-      "mileageUnit": "km",
-      "mileageSourceValue": 3441,
-      "mileageSourceUnit": "mi"
-    },
-    "seller": {
-      "id": "dealer-motherwell-motors-castle",
-      "type": "dealer",
-      "displayName": "Motors Castle",
-      "verificationStatus": "unverified",
-      "city": "Cleland / Motherwell, Scotland",
-      "logoUrl": "/dealer-brand/logo.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1007",
-    "slug": "renault-clio-2016-800696671424",
-    "category": "car",
-    "dealerOrgId": "dealer-motherwell-motors-castle",
-    "status": "active",
-    "title": "2016 Renault Clio 0.9 TCE 90 Dynamique Nav 5dr HATCHBACK Petrol Manual",
-    "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
-    "price": {
-      "amount": 3500,
-      "currency": "GBP"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer-stock/hatchback.webp",
-        "alt": "2016 Renault Clio 0.9 TCE 90 Dynamique Nav 5dr HATCHBACK Petrol Manual"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Cleland / Motherwell, Scotland",
-      "region": "Cleland / Motherwell, Scotland",
-      "country": "United Kingdom"
-    },
-    "spec": {
-      "make": "Renault",
-      "model": "Clio",
-      "trim": "0.9 TCE 90 Dynamique Nav 5dr HATCHBACK Petrol Manual",
-      "year": 2016,
-      "bodyType": "hatchback",
-      "fuelType": "gasoline",
-      "transmission": "manual",
-      "mileageValue": 87423,
-      "mileageUnit": "km",
-      "mileageSourceValue": 54322,
-      "mileageSourceUnit": "mi"
-    },
-    "seller": {
-      "id": "dealer-motherwell-motors-castle",
-      "type": "dealer",
-      "displayName": "Motors Castle",
-      "verificationStatus": "unverified",
-      "city": "Cleland / Motherwell, Scotland",
-      "logoUrl": "/dealer-brand/logo.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1008",
-    "slug": "vauxhall-corsa-2015-800682432068",
-    "category": "car",
-    "dealerOrgId": "dealer-motherwell-motors-castle",
-    "status": "active",
-    "title": "2015 Vauxhall Corsa 1.4 Limited Edition 3dr HATCHBACK Petrol Manual",
-    "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
-    "price": {
-      "amount": 3300,
-      "currency": "GBP"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer-stock/hatchback.webp",
-        "alt": "2015 Vauxhall Corsa 1.4 Limited Edition 3dr HATCHBACK Petrol Manual"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Cleland / Motherwell, Scotland",
-      "region": "Cleland / Motherwell, Scotland",
-      "country": "United Kingdom"
-    },
-    "spec": {
-      "make": "Vauxhall",
-      "model": "Corsa",
-      "trim": "1.4 Limited Edition 3dr HATCHBACK Petrol Manual",
-      "year": 2015,
-      "bodyType": "hatchback",
-      "fuelType": "gasoline",
-      "transmission": "manual",
-      "mileageValue": 120999,
-      "mileageUnit": "km",
-      "mileageSourceValue": 75185,
-      "mileageSourceUnit": "mi"
-    },
-    "seller": {
-      "id": "dealer-motherwell-motors-castle",
-      "type": "dealer",
-      "displayName": "Motors Castle",
-      "verificationStatus": "unverified",
-      "city": "Cleland / Motherwell, Scotland",
-      "logoUrl": "/dealer-brand/logo.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1009",
-    "slug": "audi-q5-2013-800637144674",
-    "category": "car",
-    "dealerOrgId": "dealer-motherwell-motors-castle",
-    "status": "active",
-    "title": "2013 Audi Q5 2.0 TDI Quattro S Line Plus 5dr ESTATE Diesel Manual",
-    "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
-    "price": {
-      "amount": 7500,
-      "currency": "GBP"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer-stock/wagon.webp",
-        "alt": "2013 Audi Q5 2.0 TDI Quattro S Line Plus 5dr ESTATE Diesel Manual"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Cleland / Motherwell, Scotland",
-      "region": "Cleland / Motherwell, Scotland",
-      "country": "United Kingdom"
-    },
-    "spec": {
-      "make": "Audi",
-      "model": "Q5",
-      "trim": "2.0 TDI Quattro S Line Plus 5dr ESTATE Diesel Manual",
-      "year": 2013,
-      "bodyType": "wagon",
-      "fuelType": "diesel",
-      "transmission": "manual",
-      "mileageValue": 131023,
-      "mileageUnit": "km",
-      "mileageSourceValue": 81414,
-      "mileageSourceUnit": "mi"
-    },
-    "seller": {
-      "id": "dealer-motherwell-motors-castle",
-      "type": "dealer",
-      "displayName": "Motors Castle",
-      "verificationStatus": "unverified",
-      "city": "Cleland / Motherwell, Scotland",
-      "logoUrl": "/dealer-brand/logo.webp"
+      "logoUrl": "/dealer-brand/v2-7aace8204a8aa0ad/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false

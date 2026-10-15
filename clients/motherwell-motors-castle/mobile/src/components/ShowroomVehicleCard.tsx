@@ -12,11 +12,7 @@ import { localizeVehicle, showroomPhotoHasLetterbox } from '@/lib/vehicle-copy';
 import { rememberInventory } from '@/lib/inventory-navigation';
 import { togglePark, useAppState } from '@/lib/store';
 
-const desktopCovers: Record<string, string> = {
-  'bmw-x6': '/images/x6-gallery-06.webp',
-  'bmw-540': '/images/bmw-540-gallery-03.webp',
-  'bmw-x3': '/images/bmw-x3-gallery-03.webp',
-};
+const desktopCovers: Record<string, string> = {};
 
 const s = stylex.create({
   card: {
