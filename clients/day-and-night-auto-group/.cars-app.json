@@ -3,32 +3,32 @@
   "dealer": "day-and-night-auto-group",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/app",
-    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1",
-    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76"
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
   },
-  "appDigest": "588eab48a1a638c591e1eedf60ce45b800b5f744e255719aa7b734c8e0d0c369",
+  "appDigest": "9e82f716db267884cb42f5f1c4c991a4cab921bfd4847ae5eb795034a6c2606a",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "day-and-night-auto-group",
     "profile": "auto-best/src/lib/data/dealer-profile.json",
-    "profileSha256": "410928e6a80a06b0a7ff5cab759145252933e30b5943c01285b4de5f35584aae",
+    "profileSha256": "b6fc82b13c161302fdbed205112c7f8cfdcf040fa871f2802cd34cd638a90882",
     "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
     "vehicles": 40,
     "currency": "EUR",
     "observedAt": "2026-07-24",
     "assets": [
       {
-        "source": "auto-best/static/dealer-brand/logo-on-light.webp",
-        "output": "public/dealer-app/logo-light-04bf9a0cd31cd72992a8.webp",
-        "sha256": "04bf9a0cd31cd72992a8ad4687292554121f7aab84c9195dc971efebd4119e2f",
+        "source": "auto-best/static/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp",
+        "output": "public/dealer-app/logo-light-1901f3047c3fd9cf4007.webp",
+        "sha256": "1901f3047c3fd9cf4007e8e8cadebaf3577bd1d51a8ce3c9f8b1e6bcaa7d3b68",
         "role": "logo-light"
       },
       {
-        "source": "auto-best/static/dealer-brand/logo-on-dark.webp",
-        "output": "public/dealer-app/logo-dark-019719775d6f0bc08136.webp",
-        "sha256": "019719775d6f0bc08136bfc8140dc725c12abd39915276fe43abab29da145e51",
+        "source": "auto-best/static/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-dark.webp",
+        "output": "public/dealer-app/logo-dark-41d55477b3af654b8448.webp",
+        "sha256": "41d55477b3af654b8448eeaf54bda671ce7a7a63e79c8b19da74798e47d8b35c",
         "role": "logo-dark"
       },
       {
@@ -517,93 +517,5 @@
   },
   "needsDealerQA": true,
   "readyToPublish": false,
-  "refreshedAt": "2026-10-13T02:58:10.082Z",
-  "ownerLogoRestoration": {
-    "kind": "exact-historical-assets-and-logo-url-bindings",
-    "sourceCommit": "7a6fb02db18c90390748d7fe234a03021b560510",
-    "sourceHistory": "3d6225f0a57f3bcc59763b464a4fd448d5f0e3a6",
-    "previousReceiptSha256": "b01e80d610efbe770c5364a010dc3c6766f75566c11bcd3c9ef1ea1f61124442",
-    "beforeDigest": "2b6b744b2e28eba87ab5a0410f29cf85ca7dd4b4f103e2eafa0f274aa2bdd998",
-    "afterDigest": "317b9e6b02ac154400d46219c4d396c2a1476835df46d43f78563e60dd817705",
-    "changes": [
-      {
-        "path": "app/lib/dealer.json",
-        "beforeSha256": "7e1646748305441df87ed4990a46287bacda22e7be8e30330225128306d6371e",
-        "afterSha256": "250902997724562eaa1043bc60aa272ad924b1a9218638ef8950b62a44d9f832"
-      },
-      {
-        "path": "app/public/dealer-brand/v2-b57f86f52179d675/logo-on-light.webp",
-        "beforeSha256": null,
-        "afterSha256": "04bf9a0cd31cd72992a8ad4687292554121f7aab84c9195dc971efebd4119e2f"
-      },
-      {
-        "path": "app/public/dealer-brand/v2-b57f86f52179d675/logo-on-light.png",
-        "beforeSha256": null,
-        "afterSha256": "b9faac487d5408022de7c56b12696eed8d387975e6095fe7d301dc362d6ce921"
-      },
-      {
-        "path": "app/public/dealer-brand/v2-b57f86f52179d675/mark-on-light.webp",
-        "beforeSha256": null,
-        "afterSha256": "9f32656b21a0c0230aa18cfbe7e004668a3bcfdef10083ce70977ad17266cf35"
-      },
-      {
-        "path": "app/public/dealer-brand/v2-b57f86f52179d675/logo-on-dark.webp",
-        "beforeSha256": null,
-        "afterSha256": "019719775d6f0bc08136bfc8140dc725c12abd39915276fe43abab29da145e51"
-      },
-      {
-        "path": "app/public/dealer-brand/v2-b57f86f52179d675/logo-on-dark.png",
-        "beforeSha256": null,
-        "afterSha256": "f315518d82fc7a888a17e9b4ecd30582c9f6202424a8e799ff57e83ede195693"
-      },
-      {
-        "path": "app/public/dealer-brand/v2-b57f86f52179d675/mark-on-dark.webp",
-        "beforeSha256": null,
-        "afterSha256": "035c7b6e839d0cca7c932594d57eeef88e6839f311b90e40227973bdce16184f"
-      },
-      {
-        "path": "app/public/dealer-brand/v2-b57f86f52179d675/logo-on-accent.webp",
-        "beforeSha256": null,
-        "afterSha256": "6d130eedafa3938bcae1221474ab6c84c72df4b7c673f6416714d3911f77b22a"
-      },
-      {
-        "path": "app/public/dealer-brand/v2-b57f86f52179d675/app-icon.png",
-        "beforeSha256": null,
-        "afterSha256": "b3c948d8925f8e5f6b4a533fedd7ebd2de94213d3fe7c54b8fbb106bfffc7d69"
-      },
-      {
-        "path": "app/public/dealer-brand/v2-b57f86f52179d675/apple-touch-icon.png",
-        "beforeSha256": null,
-        "afterSha256": "2ebeb86d3fc9806464b82c358b9fd5a8a794a1390496d0c48f7773e05696f8bc"
-      },
-      {
-        "path": "app/public/dealer-brand/v2-b57f86f52179d675/favicon.ico",
-        "beforeSha256": null,
-        "afterSha256": "f96e50bc721189ee40713b0d59a6d79322ea7ed515882fa945ac852136b58621"
-      }
-    ]
-  },
-  "ownerManufacturerCorrection": {
-    "sourceParent": "f77a95b7ed2f606f1b8289d94b7a97b432d36a83",
-    "previousReceiptSha256": "cedb935a669de356f14ae44b65361ca4811c8bd15cb3120dbe0319a686242208",
-    "beforeDigest": "317b9e6b02ac154400d46219c4d396c2a1476835df46d43f78563e60dd817705",
-    "afterDigest": "588eab48a1a638c591e1eedf60ce45b800b5f744e255719aa7b734c8e0d0c369",
-    "changes": [
-      "app/lib/brand-logos.ts",
-      "app/public/brands/emblems/lamborghini-approved-b1.webp"
-    ],
-    "assets": {
-      "lamborghini": {
-        "templateCommit": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
-        "path": "templates/auto-best/static/assets/images/makes/lamborghini.webp",
-        "blob": "fede9502b6371360f7c27a8c8b15ef994ed5ab0a",
-        "sha256": "a0b0f7d584904ec7bf69641e77c09f5bb16988d77ba71440602374ac50a8959e"
-      },
-      "landRover": {
-        "path": "app/public/brands/emblems/land-rover.svg",
-        "blob": "b8bc2a127b0899f31dde3236a1ddad7147bd2221"
-      }
-    },
-    "newQAPassClaimed": false
-  }
+  "refreshedAt": "2026-10-15T02:25:30.445Z"
 }

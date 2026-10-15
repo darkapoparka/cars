@@ -80,7 +80,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Day & Night Auto Group",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/v2-b57f86f52179d675/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp"
     },
     "publishedAt": "2026-07-24T09:00:00.000Z",
     "promoted": true
@@ -163,7 +163,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Day & Night Auto Group",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/v2-b57f86f52179d675/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp"
     },
     "publishedAt": "2026-07-24T09:00:00.000Z",
     "promoted": true
@@ -246,7 +246,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Day & Night Auto Group",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/v2-b57f86f52179d675/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp"
     },
     "publishedAt": "2026-07-24T09:00:00.000Z",
     "promoted": true
@@ -329,7 +329,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Day & Night Auto Group",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/v2-b57f86f52179d675/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp"
     },
     "publishedAt": "2026-07-24T09:00:00.000Z",
     "promoted": false
@@ -412,7 +412,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Day & Night Auto Group",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/v2-b57f86f52179d675/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp"
     },
     "publishedAt": "2026-07-24T09:00:00.000Z",
     "promoted": false
@@ -495,7 +495,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Day & Night Auto Group",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/v2-b57f86f52179d675/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp"
     },
     "publishedAt": "2026-07-24T09:00:00.000Z",
     "promoted": false
@@ -578,7 +578,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Day & Night Auto Group",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/v2-b57f86f52179d675/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp"
     },
     "publishedAt": "2026-07-24T09:00:00.000Z",
     "promoted": false
@@ -661,7 +661,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Day & Night Auto Group",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/v2-b57f86f52179d675/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp"
     },
     "publishedAt": "2026-07-24T09:00:00.000Z",
     "promoted": false
@@ -744,7 +744,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Day & Night Auto Group",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/v2-b57f86f52179d675/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp"
     },
     "publishedAt": "2026-07-24T09:00:00.000Z",
     "promoted": false
@@ -827,7 +827,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Day & Night Auto Group",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/v2-b57f86f52179d675/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp"
     },
     "publishedAt": "2026-07-24T09:00:00.000Z",
     "promoted": false
@@ -910,7 +910,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Day & Night Auto Group",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/v2-b57f86f52179d675/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp"
     },
     "publishedAt": "2026-07-24T09:00:00.000Z",
     "promoted": false
@@ -993,7 +993,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Day & Night Auto Group",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/v2-b57f86f52179d675/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp"
     },
     "publishedAt": "2026-07-24T09:00:00.000Z",
     "promoted": false
@@ -1076,7 +1076,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Day & Night Auto Group",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/v2-b57f86f52179d675/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp"
     },
     "publishedAt": "2026-07-24T09:00:00.000Z",
     "promoted": false
@@ -1159,7 +1159,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Day & Night Auto Group",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/v2-b57f86f52179d675/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp"
     },
     "publishedAt": "2026-07-24T09:00:00.000Z",
     "promoted": false
@@ -1242,7 +1242,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Day & Night Auto Group",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/v2-b57f86f52179d675/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp"
     },
     "publishedAt": "2026-07-24T09:00:00.000Z",
     "promoted": false
@@ -1325,7 +1325,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Day & Night Auto Group",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/v2-b57f86f52179d675/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp"
     },
     "publishedAt": "2026-07-24T09:00:00.000Z",
     "promoted": false
@@ -1408,7 +1408,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Day & Night Auto Group",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/v2-b57f86f52179d675/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp"
     },
     "publishedAt": "2026-07-24T09:00:00.000Z",
     "promoted": false
@@ -1491,7 +1491,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Day & Night Auto Group",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/v2-b57f86f52179d675/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp"
     },
     "publishedAt": "2026-07-24T09:00:00.000Z",
     "promoted": false
@@ -1574,7 +1574,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Day & Night Auto Group",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/v2-b57f86f52179d675/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp"
     },
     "publishedAt": "2026-07-24T09:00:00.000Z",
     "promoted": false
@@ -1657,7 +1657,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Day & Night Auto Group",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/v2-b57f86f52179d675/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp"
     },
     "publishedAt": "2026-07-24T09:00:00.000Z",
     "promoted": false
@@ -1740,7 +1740,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Day & Night Auto Group",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/v2-b57f86f52179d675/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp"
     },
     "publishedAt": "2026-07-24T09:00:00.000Z",
     "promoted": false
@@ -1823,7 +1823,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Day & Night Auto Group",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/v2-b57f86f52179d675/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp"
     },
     "publishedAt": "2026-07-24T09:00:00.000Z",
     "promoted": false
@@ -1906,7 +1906,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Day & Night Auto Group",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/v2-b57f86f52179d675/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp"
     },
     "publishedAt": "2026-07-24T09:00:00.000Z",
     "promoted": false
@@ -1989,7 +1989,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Day & Night Auto Group",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/v2-b57f86f52179d675/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp"
     },
     "publishedAt": "2026-07-24T09:00:00.000Z",
     "promoted": false
@@ -2072,7 +2072,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Day & Night Auto Group",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/v2-b57f86f52179d675/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp"
     },
     "publishedAt": "2026-07-24T09:00:00.000Z",
     "promoted": false
@@ -2155,7 +2155,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Day & Night Auto Group",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/v2-b57f86f52179d675/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp"
     },
     "publishedAt": "2026-07-24T09:00:00.000Z",
     "promoted": false
@@ -2238,7 +2238,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Day & Night Auto Group",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/v2-b57f86f52179d675/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp"
     },
     "publishedAt": "2026-07-24T09:00:00.000Z",
     "promoted": false
@@ -2321,7 +2321,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Day & Night Auto Group",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/v2-b57f86f52179d675/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp"
     },
     "publishedAt": "2026-07-24T09:00:00.000Z",
     "promoted": false
@@ -2404,7 +2404,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Day & Night Auto Group",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/v2-b57f86f52179d675/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp"
     },
     "publishedAt": "2026-07-24T09:00:00.000Z",
     "promoted": false
@@ -2487,7 +2487,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Day & Night Auto Group",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/v2-b57f86f52179d675/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp"
     },
     "publishedAt": "2026-07-24T09:00:00.000Z",
     "promoted": false
@@ -2570,7 +2570,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Day & Night Auto Group",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/v2-b57f86f52179d675/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp"
     },
     "publishedAt": "2026-07-24T09:00:00.000Z",
     "promoted": false
@@ -2653,7 +2653,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Day & Night Auto Group",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/v2-b57f86f52179d675/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp"
     },
     "publishedAt": "2026-07-24T09:00:00.000Z",
     "promoted": false
@@ -2736,7 +2736,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Day & Night Auto Group",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/v2-b57f86f52179d675/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp"
     },
     "publishedAt": "2026-07-24T09:00:00.000Z",
     "promoted": false
@@ -2819,7 +2819,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Day & Night Auto Group",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/v2-b57f86f52179d675/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp"
     },
     "publishedAt": "2026-07-24T09:00:00.000Z",
     "promoted": false
@@ -2902,7 +2902,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Day & Night Auto Group",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/v2-b57f86f52179d675/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp"
     },
     "publishedAt": "2026-07-24T09:00:00.000Z",
     "promoted": false
@@ -2985,7 +2985,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Day & Night Auto Group",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/v2-b57f86f52179d675/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp"
     },
     "publishedAt": "2026-07-24T09:00:00.000Z",
     "promoted": false
@@ -3068,7 +3068,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Day & Night Auto Group",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/v2-b57f86f52179d675/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp"
     },
     "publishedAt": "2026-07-24T09:00:00.000Z",
     "promoted": false
@@ -3151,7 +3151,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Day & Night Auto Group",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/v2-b57f86f52179d675/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp"
     },
     "publishedAt": "2026-07-24T09:00:00.000Z",
     "promoted": false
@@ -3234,7 +3234,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Day & Night Auto Group",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/v2-b57f86f52179d675/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp"
     },
     "publishedAt": "2026-07-24T09:00:00.000Z",
     "promoted": false
@@ -3317,7 +3317,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Day & Night Auto Group",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/v2-b57f86f52179d675/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp"
     },
     "publishedAt": "2026-07-24T09:00:00.000Z",
     "promoted": false

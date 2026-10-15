@@ -114,8 +114,8 @@ export const leadSite: LeadSiteConfig = {
     "tagline": "Day & Night — vehicles and dealer support in София."
   }
 },
-  accent: "#30343b",
-  desktopAccent: "#4b5057",
+  accent: "#09090b",
+  desktopAccent: "#09090b",
   desktopInventoryFilterLayout: "quick",
   desktopPreviewIdentity: {
     sourceSlug: "day-night-auto-group",
@@ -147,11 +147,11 @@ export const leadSite: LeadSiteConfig = {
   email: "",
   heroPath: "/lead-hero.jpg",
   locale: "bg-BG",
-  logoPath: "/dealer-brand/v2-b57f86f52179d675/logo-on-light.webp",
-  logoInversePath: "/dealer-brand/v2-b57f86f52179d675/logo-on-dark.webp",
-  logoOnLight: "/dealer-brand/v2-b57f86f52179d675/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/v2-b57f86f52179d675/logo-on-dark.webp",
-  logoOnAccent: "/dealer-brand/v2-b57f86f52179d675/logo-on-accent.webp",
+  logoPath: "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp",
+  logoInversePath: "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-dark.webp",
+  logoOnLight: "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-dark.webp",
+  logoOnAccent: "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-dark.webp",
   mapsEmbedUrl:
     "https://maps.google.com/maps?q=Day%20%26%20Night%20Auto%20Group%2C%20%D1%83%D0%BB.%20%E2%80%9E%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%E2%80%9C%2018%2C%20%D0%A1%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82%D1%81%D0%BA%D0%B8%20%D0%B3%D1%80%D0%B0%D0%B4%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F&z=16&output=embed",
   mapsUrl:

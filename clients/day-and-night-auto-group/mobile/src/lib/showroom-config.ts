@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "Day & Night Auto Group",
-  "logo": "/dealer-brand/v2-b57f86f52179d675/logo-on-light.webp",
+  "logo": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp",
   "phone": "+359877733110",
   "email": null,
   "address": "ул. „Атанас Манчев“ 18, Студентски град, София",

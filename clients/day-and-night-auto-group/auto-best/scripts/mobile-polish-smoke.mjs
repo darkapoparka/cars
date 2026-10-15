@@ -39,7 +39,7 @@ async function compactControl(locator, { icon = false } = {}) {
 }
 async function alignedDock(page) {
   const alignment = await page.locator('.dn-mobile-bottom-nav a,.dn-mobile-bottom-nav button').evaluateAll(controls => controls.map(control => {
-    const icon = control.querySelector('svg').getBoundingClientRect();
+    const icon = control.querySelector('.dn-icon').getBoundingClientRect();
     const label = control.querySelector('.dn-mobile-bottom-nav__label').getBoundingClientRect();
     return { iconTop: icon.top, labelTop: label.top, transform: getComputedStyle(control).transform };
   }));
@@ -308,10 +308,12 @@ try {
           assert(dockStyle.targets.every(box => box.width >= 44 && box.height >= 44 && box.left >= dockStyle.left && box.right <= dockStyle.right && box.bottom <= dockStyle.bottom),
             'All five dock actions retain separate 44px touch targets inside the surface');
           assert.notEqual(dockStyle.inactive, dockStyle.ink, 'Inactive dock icons and labels stay quieter than body ink');
-          assert.equal(await dock.locator('svg[data-icon-family="fluent-system-regular"][data-icon-state="regular"][viewBox="0 0 24 24"][fill="currentColor"]').count(), 5,
-            'All five mobile dock glyphs use official Fluent Regular geometry');
+          const dockIcons = dock.locator('img[data-icon-family="auto-best-graphite"][data-icon-state="artwork"]');
+          assert.equal(await dockIcons.count(), 5, 'All five mobile dock glyphs use the pinned graphite artwork');
+          assert((await dockIcons.evaluateAll(images => images.map(image => image.complete && image.naturalWidth === 96 && image.naturalHeight === 96))).every(Boolean),
+            'Every transparent dock asset decodes at its four-times-resolution canvas');
           assert.equal(await dock.locator('a[aria-current="page"] [data-icon-active="true"]').count(), 1,
-            'The active destination retains Regular geometry');
+            'The active destination retains the same artwork');
           const activeMark = await dock.locator('a[aria-current="page"] .dn-mobile-bottom-nav__icon').evaluate(el => {
             const mark = getComputedStyle(el, '::after');
             return { surface: getComputedStyle(el).backgroundColor, color: mark.backgroundColor, radius: mark.borderRadius,
@@ -320,8 +322,8 @@ try {
           assert(activeMark.surface === 'rgba(0, 0, 0, 0)' && activeMark.color !== 'rgba(0, 0, 0, 0)' && activeMark.radius === '0px' && activeMark.width > activeMark.height,
             'Selection uses a visible flat mark beneath the icon without a surrounding pill');
           assert.equal(await dock.locator('a:not([aria-current="page"]) [data-icon-active="false"]').count(), 3,
-            'Inactive destinations retain the same Regular geometry');
-          assert.equal(await dock.locator('path[opacity]').count(), 0, 'Dock glyphs have no grey duotone layer');
+            'Inactive destinations retain the same artwork');
+          assert.equal(await dock.locator('svg').count(), 0, 'The dock does not trace or redraw its generated artwork');
           await alignedDock(page);
           for (const pill of await page.locator('.dn-search__mobile-shortcuts a').all()) await compactControl(pill);
           const trigger = page.locator('.dn-mobile-bottom-nav button');

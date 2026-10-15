@@ -7,6 +7,7 @@
   import { resolveRoute } from "#lib/routes.ts";
   import { usePreview } from "#lib/preview.svelte.ts";
   import MobileIcon from "#lib/components/mobile/MobileIcon.svelte";
+  import BottomNavigationIcon from "#lib/components/mobile/BottomNavigationIcon.svelte";
 
   const preview = usePreview();
   const route = $derived(resolveRoute(page.params.path ?? ""));
@@ -77,13 +78,9 @@
   inert={preview.drawer || preview.mobile}
 >
   {#each links as link (link.href)}
-    <a
-      href={locale.href(link.href)}
-      aria-current={link.routes.some((key) => key === route)
-        ? "page"
-        : undefined}
-    >
-      <MobileIcon name={link.icon} size="action" />
+    {@const active = link.routes.some((key) => key === route)}
+    <a href={locale.href(link.href)} aria-current={active ? "page" : undefined}>
+      <BottomNavigationIcon name={link.icon} {active} />
       <span>{link.label}</span>
     </a>
   {/each}
@@ -97,7 +94,7 @@
       preview.drawer = true;
     }}
   >
-    <MobileIcon name="menu" size="action" />
+    <BottomNavigationIcon name="menu" />
     <span>{locale.t("ui.mobile-navigation.menu")}</span>
   </button>
 </nav>

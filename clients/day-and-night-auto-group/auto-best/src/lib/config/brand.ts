@@ -33,6 +33,6 @@ export const brand = {
   addressLine,
   address: "ул. „Атанас Манчев“ 18, Студентски град, София",
   appointment: "Посещения с предварителна уговорка.",
-  logo: "/dealer-brand/v2-b57f86f52179d675/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/v2-b57f86f52179d675/logo-on-dark.webp"
+  logo: "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-dark.webp"
 } as const satisfies BrandConfig;

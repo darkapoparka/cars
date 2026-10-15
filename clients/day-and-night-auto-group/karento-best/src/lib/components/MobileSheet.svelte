@@ -174,11 +174,21 @@
       height: var(--mobile-sheet-height, 100dvh);
       max-height: var(--mobile-sheet-height, 100dvh);
     }
-    .mobile-catalog-editor > header {
-      padding-top: calc(12px + env(safe-area-inset-top, 0px));
-    }
     .mobile-sheet > header {
+      min-height: calc(
+        var(--karento-touch-target) + var(--karento-space-2) +
+          var(--karento-space-1)
+      );
+      padding: var(--karento-space-2) var(--karento-space-4)
+        var(--karento-space-1);
+      border-bottom: 0;
       gap: var(--karento-space-2);
+    }
+    .mobile-catalog-editor > header {
+      padding-top: calc(var(--karento-space-2) + env(safe-area-inset-top, 0px));
+    }
+    .mobile-sheet > footer {
+      border-top: 0;
     }
     .mobile-sheet-heading {
       flex: 1;
@@ -187,6 +197,12 @@
     }
     .mobile-sheet-content {
       scroll-padding-block: 12px;
+    }
+    .mobile-sheet-content
+      > :global(
+        :is(.mobile-contact-form, .mobile-loan-body, .mobile-faq-topic-list)
+      ) {
+      padding-top: var(--karento-space-2);
     }
   }
 </style>
