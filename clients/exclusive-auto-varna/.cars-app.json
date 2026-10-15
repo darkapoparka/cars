@@ -3,17 +3,17 @@
   "dealer": "exclusive-auto-varna",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/app",
-    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1",
-    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76"
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
   },
-  "appDigest": "229e1e879f74cc52fa90fb1c952d9ea9256518f9a4a498740f9ac84b62e0a2d3",
+  "appDigest": "f2c030433dcf8f27fc30b9a30e7a41d6b8bb6ccc43040a00dda2ca978c11838a",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "exclusive-auto-varna",
     "profile": "auto-best/src/lib/data/dealer-profile.json",
-    "profileSha256": "eaeaa281ed57de5e5370d12774846d1cf330f75c60cb83116c727288f6e74bf1",
+    "profileSha256": "9156e34072098c9e9ca3c947faa57eaeb8c17616e3c2a8967c237fb8dc6e6903",
     "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
     "vehicles": 8,
     "currency": "EUR",
@@ -181,5 +181,5 @@
   },
   "needsDealerQA": true,
   "readyToPublish": false,
-  "refreshedAt": "2026-10-13T23:04:18.039Z"
+  "refreshedAt": "2026-10-15T11:01:23.685Z"
 }

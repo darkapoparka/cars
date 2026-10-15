@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "Exclusive Auto",
-  "logo": "/registered-branding/onLight.png",
+  "logo": "/dealer-brand/v2-25629fd4747dffe3/logo-on-light.webp",
   "phone": "+359895303009",
   "email": null,
   "address": "бул. „Цар Освободител“ 176, Възраждане 1, Варна",

@@ -6,7 +6,7 @@
   "scope": "existing-dealer-pilot",
   "sourceCommit": "bb173c33d7b640502ad2e4bf27546748c12858b8",
   "reviewed": true,
-  "reviewedAt": "2026-10-14T23:56:34.182Z",
+  "reviewedAt": "2026-10-15T11:07:37.456Z",
   "qualificationOnly": true,
   "approved": false,
   "nativeApproval": false,
@@ -22,5 +22,88 @@
   "sourceReview": {
     "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-review.json",
     "sha256": "27c6ce5dd17ee6e1b9f6a5b059a95d5e1dbe4200f61264fc50addeb7af89d984"
+  },
+  "dealerSourceRepair": {
+    "kind": "explicit-local-import-modern-mobile-signature-runtime-correction",
+    "parentContextSha256": "71a9fee4ad6197bc5c0fd57da49776658f4dadd0f0e9ad9dae9e9f92c955154c",
+    "originalLocalRecovery": {
+      "file": "C:/Users/radev/AppData/Local/Temp/cars-cf-native-final-polish-20261014/local-source-recovery/exports/exclusive-auto-varna/local-recovery-receipt.json",
+      "sha256": "e7c0d05283216d91fbf3e7b90c6528169eb8a46bdcaa038c66dccd69f06ca3b4"
+    },
+    "baseSourceCommit": "03b7a9f8c3e8238f91eea3a43be92901f9e9982b",
+    "baseSourceTree": "f3192891c1a845003da851cd6625370a8615e4df",
+    "baseTreeIsUnpublishedLocalCandidate": true,
+    "changedDesigns": [
+      "import",
+      "modern",
+      "mobile",
+      "karento-best"
+    ],
+    "editorialProof": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/final-recovery/local-source-publication/corrective-reseal/exclusive-auto-varna/editorial-correction-proof.json",
+      "sha256": "a74be5f01ef7f8b669b236aa97c37f1d93e3ac02fa11003791819cdedbde3758"
+    },
+    "logoProof": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/native13-modern-runtime/local-four-logo-companions/exclusive-auto-varna/logo-companion-proof.json",
+      "sha256": "8b502f2c354e31f4afa90c1d739a8130b84f18f50e9f5b808e3ace235544ac7e"
+    },
+    "companionPaths": [
+      {
+        "path": "import/src/lib/content/extra-localized.ts",
+        "beforeBlob": "ab619b762e28bbb473a3b9c474776453dd3d06b1",
+        "afterBlob": "d375db8e0a19ef8dd87fc9453dfc6160665570c6"
+      },
+      {
+        "path": "modern/packages/marketplace/lead-site.ts",
+        "beforeBlob": "962f394f33f0142ccec96a7fd19136379961f3f4",
+        "afterBlob": "301648b3e40efaa2f5efc9f6e4a7d7d0706af659"
+      },
+      {
+        "path": "mobile/src/lib/showroom-config.ts",
+        "beforeBlob": "513d81802dc6f47ffae9f7219c3e2cf01b55a27d",
+        "afterBlob": "91055281324203b6fc50f9aec638ff4e47923102"
+      },
+      {
+        "path": "mobile/src/lib/dealers.ts",
+        "beforeBlob": "3a6ba1b163ae06f4ccf1f26bea8c88c7ccb45a15",
+        "afterBlob": "fd00cdf1db0ed0b4b14cccc47f25fcb09ad62705"
+      },
+      {
+        "path": "karento-best/src/lib/content.ts",
+        "beforeBlob": "65346d60aa3db31b6ca73822283654d6decb6b7b",
+        "afterBlob": "b68b7adee5a551caeceb6e81ad34585ef64020d7"
+      },
+      {
+        "path": "karento-best/src/lib/data/dealer-detail.ts",
+        "beforeBlob": "3a3aaff11ae39364278ff400842867e0f6079385",
+        "afterBlob": "a42b66653e7d5fa718c21309c0cc63059057a4cf"
+      },
+      {
+        "path": "karento-best/src/lib/data/vehicle-detail.ts",
+        "beforeBlob": "0e44b30cc5e2c66750f0df1f5b7b39ccb5df762f",
+        "afterBlob": "53d886653a9c41f24dab7d972a946b6c74f1f856"
+      },
+      {
+        "path": ".cars-branding.json",
+        "beforeBlob": "e6ff53e56b6188b1cf8f5eecf020aaf83d349e1e",
+        "afterBlob": "26b5c5e18ad71b8c8695f1054adf9423d557375c"
+      }
+    ],
+    "receiptReseals": [
+      {
+        "path": ".cars-mobile.json",
+        "family": "mobile",
+        "beforeBlob": "e7d648561ad030c76847c54bff46fdb89b38f2a8",
+        "profileSha256Preserved": "9997d9ac31e0baf3e9028e40f29518be878ac429fa8981e2bdb3ac1b0b06802f"
+      },
+      {
+        "path": ".cars-signature.json",
+        "family": "karento-best",
+        "beforeBlob": "ed5f6f81a84df0fe9fb43d4950f5087273a5ef84",
+        "profileSha256Preserved": "9997d9ac31e0baf3e9028e40f29518be878ac429fa8981e2bdb3ac1b0b06802f"
+      }
+    ],
+    "originalExecutionRemainsLocal": true,
+    "noCiArtifactOrSuccessClaim": true
   }
 }

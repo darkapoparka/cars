@@ -5,22 +5,22 @@
   "name": "Exclusive Auto",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/karento-best",
-    "digest": "83056967764a686f3737d74b86c5db51c1385a50184853f50ec4ade80c1dd44f",
-    "tree": "5f6eec8efb2f9e99819f7f0c2f743d18fff7b134"
+    "digest": "be17ef365e3272753df6e50826b139a45bfc32b8fef54ddcb86d977ad16280a9",
+    "tree": "8c5ac869c7fd15e19a80c660343fc64b20a2bad9"
   },
-  "sourceDigest": "eaa3d584ea34b8eced25dc26b11a72a8db1332bd63e7f1fda2d12c20ce7baee7",
+  "sourceDigest": "b13b4a46746d1ef39e41f8856b094afddee899e5f241de1ad2561d2006055a9d",
   "inventory": {
     "mode": "dated-listing-snapshot",
     "count": 8,
     "observedAt": "2026-09-09"
   },
   "personalization": {
-    "profileSha256": "87bc6819535133c8c8eb43f21b1c43895ceb1d3f7ebe53b496c81398e2499e20",
+    "profileSha256": "9997d9ac31e0baf3e9028e40f29518be878ac429fa8981e2bdb3ac1b0b06802f",
     "logoPaths": [
-      "/registered-branding/onLight.png",
-      "/registered-branding/onDark.png"
+      "/dealer-brand/v2-25629fd4747dffe3/logo-on-light.webp",
+      "/dealer-brand/v2-25629fd4747dffe3/logo-on-dark.webp"
     ],
     "mediaPaths": [
       "/inventory/11755373421680634-1.webp",

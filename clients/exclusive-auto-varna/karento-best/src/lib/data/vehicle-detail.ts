@@ -160,7 +160,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "Exclusive Auto",
   "location": "бул. „Цар Освободител“ 176, Възраждане 1, Варна",
-  "avatar": "/registered-branding/onLight.png",
+  "avatar": "/dealer-brand/v2-25629fd4747dffe3/logo-on-light.webp",
   "mobile": "0895 303 009",
   "email": "",
   "whatsapp": "",

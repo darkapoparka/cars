@@ -114,8 +114,8 @@ export const leadSite: LeadSiteConfig = {
     "tagline": "Exclusive Auto — vehicles and dealer support in Varna."
   }
 },
-  accent: "#30343b",
-  desktopAccent: "#4b5057",
+  accent: "#09090b",
+  desktopAccent: "#09090b",
   desktopInventoryFilterLayout: "quick",
   desktopPreviewIdentity: {
     sourceSlug: "day-night-auto-group",
@@ -147,11 +147,11 @@ export const leadSite: LeadSiteConfig = {
   email: "",
   heroPath: "/lead-hero.jpg",
   locale: "bg-BG",
-  logoPath: "/dealer-brand/v2-0c0650e852c8e0f1/logo-on-light.webp",
-  logoInversePath: "/dealer-brand/v2-0c0650e852c8e0f1/logo-on-dark.webp",
-  logoOnLight: "/registered-branding/onLight.png",
-  logoOnDark: "/registered-branding/onDark.png",
-  logoOnAccent: "/registered-branding/onLight.png",
+  logoPath: "/dealer-brand/v2-25629fd4747dffe3/logo-on-light.webp",
+  logoInversePath: "/dealer-brand/v2-25629fd4747dffe3/logo-on-dark.webp",
+  logoOnLight: "/dealer-brand/v2-25629fd4747dffe3/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-25629fd4747dffe3/logo-on-dark.webp",
+  logoOnAccent: "/dealer-brand/v2-25629fd4747dffe3/logo-on-dark.webp",
   mapsEmbedUrl:
     "https://maps.google.com/maps?q=Exclusive%20Auto%2C%20%D0%B1%D1%83%D0%BB.%20%E2%80%9E%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%E2%80%9C%20176%2C%20%D0%92%D1%8A%D0%B7%D1%80%D0%B0%D0%B6%D0%B4%D0%B0%D0%BD%D0%B5%201%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0&z=16&output=embed",
   mapsUrl:

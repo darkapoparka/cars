@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "Exclusive Auto",
   "locale": "bg-BG",
   "logo": {
-    "light": "/registered-branding/onLight.png",
-    "footer": "/registered-branding/onDark.png",
-    "archivedDark": "/registered-branding/onDark.png",
+    "light": "/dealer-brand/v2-25629fd4747dffe3/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-25629fd4747dffe3/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-25629fd4747dffe3/logo-on-dark.webp",
     "alt": "Exclusive Auto",
-    "favicon": "/registered-branding/onLight.png",
+    "favicon": "/dealer-brand/v2-25629fd4747dffe3/app-icon.png",
     "monochromeOnDark": false
   },
   "contacts": {
