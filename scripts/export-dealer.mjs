@@ -1,3 +1,4 @@
+import {assertF1rstSharedControlsSuccessor} from './lib/vercel-shared-controls-successor.mjs';
 import {assertCloudflareNativeSourceExport} from './lib/cloudflare-native-source-qualification.mjs';
 import { assertCarsOwnedDealer } from './lib/dealer-source.mjs';
 import fs from 'node:fs';
@@ -59,6 +60,7 @@ export function assertVercelReviewedMetadataSuccessor(pilot,{meta,manifest}={}){
 }
 
 export function assertVercelProductionPilot(pilot, {meta, manifest} = {}) {
+  if(pilot?.kind==='cars-owner-authorized-f1rst-shared-controls-package-successor'){assertF1rstSharedControlsSuccessor(pilot,{meta,manifest});return;}
   if(pilot?.reviewedSuccessor?.scope==='owner-reviewed-final-source-metadata-successor'){assertVercelReviewedMetadataSuccessor(pilot,{meta,manifest});return;}
   if(pilot?.kind==='cars-owner-authorized-vercel-main-production-wave-member'){assertVercelProductionWaveMember(pilot,{meta,manifest});return;}
   if(pilot?.reviewedSuccessor?.scope==='owner-reviewed-auto-best-ui-source-successor'){assertVercelReviewedAutoSuccessor(pilot,{meta,manifest});return;}
