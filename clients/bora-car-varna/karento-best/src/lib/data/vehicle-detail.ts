@@ -155,7 +155,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "BORA CAR",
   "location": "ж.к. Вл. Варненчик, ул. Янко Мустаков, срещу бл. 303, вх.15, спирка Вихрен, Варна, България",
-  "avatar": "/dealer-brand/v2-e98f380293081082/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-87a27eb2ba68ac28/logo-on-light.webp",
   "mobile": "00359896699974",
   "email": "",
   "whatsapp": "",

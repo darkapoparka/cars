@@ -3,12 +3,12 @@
   "dealer": "bora-car-varna",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/app",
-    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
-    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
   },
-  "appDigest": "3d0cc506b363053e8c9a5042b43e3153b059a50a9957f47319c51fa7aa74a294",
+  "appDigest": "c0c64ea8ea4c0547d254d6467d8babd3cce63e8a694c6c9b98a686b5f2d63b9f",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "bora-car-varna",
@@ -21,14 +21,14 @@
     "assets": [
       {
         "source": "auto-best/static/dealer-brand/logo-on-light.png",
-        "output": "public/dealer-app/logo-light-259e3b1e3e0c3c6c9371.png",
-        "sha256": "259e3b1e3e0c3c6c93719ca15b55f2a043470d1e9f7e6a06e5ef9f05e39d9f32",
+        "output": "public/dealer-app/logo-light-8478d3bc51f4b195aaad.png",
+        "sha256": "8478d3bc51f4b195aaad711648afdc8fdee07d7133a0c58db2fbec8726bc8c31",
         "role": "logo-light"
       },
       {
         "source": "auto-best/static/dealer-brand/logo-on-dark.png",
-        "output": "public/dealer-app/logo-dark-700bbafb87f2f1fceb2c.png",
-        "sha256": "700bbafb87f2f1fceb2cd01c061150f074f8892f07845de3501ad98e3008fef0",
+        "output": "public/dealer-app/logo-dark-cadb8d2a3b5c13251e2c.png",
+        "sha256": "cadb8d2a3b5c13251e2cbc9c809fe892248735cc8374dc485c5916567f6b2abe",
         "role": "logo-dark"
       },
       {
@@ -54,5 +54,6 @@
     ]
   },
   "needsDealerQA": true,
-  "readyToPublish": false
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-15T04:05:20.376Z"
 }

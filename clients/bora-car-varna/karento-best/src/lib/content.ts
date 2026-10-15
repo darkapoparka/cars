@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "BORA CAR",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-e98f380293081082/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-e98f380293081082/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-e98f380293081082/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-87a27eb2ba68ac28/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-87a27eb2ba68ac28/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-87a27eb2ba68ac28/logo-on-dark.webp",
     "alt": "BORA CAR",
-    "favicon": "/dealer-brand/v2-e98f380293081082/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-87a27eb2ba68ac28/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

@@ -33,6 +33,6 @@ export const brand = {
   addressLine,
   address: "ж.к. Вл. Варненчик, ул. Янко Мустаков, срещу бл. 303, вх.15, спирка Вихрен, Варна, България",
   appointment: "Потвърдете работното време директно с автокъщата.",
-  logo: "/dealer-brand/v2-e98f380293081082/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/v2-e98f380293081082/logo-on-dark.webp"
+  logo: "/dealer-brand/v2-87a27eb2ba68ac28/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-87a27eb2ba68ac28/logo-on-dark.webp"
 } as const satisfies BrandConfig;

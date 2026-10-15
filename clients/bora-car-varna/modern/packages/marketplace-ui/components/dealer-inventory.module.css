@@ -206,14 +206,14 @@
     font-size: var(--text-desktop-control);
     font-weight: var(--font-weight-medium);
     line-height: var(--text-desktop-control--line-height);
-    color: var(--brand-foreground);
+    color: var(--primary-foreground);
     cursor: pointer;
-    background: var(--brand);
-    border: var(--desktop-border-width) solid var(--brand);
+    background: var(--primary);
+    border: var(--desktop-border-width) solid var(--primary);
     border-radius: calc(var(--spacing) * 5);
   }
   .sort:focus-visible {
-    outline: var(--desktop-focus-width) solid var(--brand);
+    outline: var(--desktop-focus-width) solid var(--primary);
     outline-offset: var(--desktop-focus-offset);
     box-shadow: none;
   }

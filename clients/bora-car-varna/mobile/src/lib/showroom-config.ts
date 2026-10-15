@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "BORA CAR",
-  "logo": "/dealer-brand/v2-e98f380293081082/logo-on-light.webp",
+  "logo": "/dealer-brand/v2-87a27eb2ba68ac28/logo-on-light.webp",
   "phone": "+359896699974",
   "email": null,
   "address": "ж.к. Вл. Варненчик, ул. Янко Мустаков, срещу бл. 303, вх.15, спирка Вихрен, Варна, България",

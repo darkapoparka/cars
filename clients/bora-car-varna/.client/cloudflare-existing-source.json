@@ -2,16 +2,16 @@
   "schemaVersion": 1,
   "dealer": "bora-car-varna",
   "kind": "personalized-source-candidate-not-an-approved-release",
-  "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
-  "candidateSourceDigest": "6f42d6dd29aede139ecfdb74796a283833326eb6139389439d1dbfb5037285f9",
+  "sourceRevision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+  "candidateSourceDigest": "406da130f6289144768a5ce6edbd60890d78ab3255b701261054d4f230412529",
   "qualificationContextPath": ".client/native-qualification-context.json",
-  "qualificationContextSha256": "8dc55cc8c4e3413b1d97bfe9cae06ff95e0d8b601643225b96aad8ac38e7010a",
+  "qualificationContextSha256": "8179e981316b27a92ddc1ac5a67ecc32b68270183e50472a57ee47a3a728b9d4",
   "qualificationLockPath": ".client/native-qualification-lock.json",
-  "qualificationLockSha256": "c28d29acdf39709d38737a972eeb2a1d000cfb1cd96de587c38effd764386ac1",
+  "qualificationLockSha256": "04633129df9e75d6cd62deeac9125b279957789d75f57cdb0b243ef61bfc3e7e",
   "sourceDeltaReview": {
-    "reference": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
-    "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975",
-    "reviewedAt": "2026-10-11T21:04:02.173Z"
+    "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
+    "sha256": "43cb6876e815a2a6b866f1dadd304236de4ae58c05fe65c2ab62a23506ee7ce9",
+    "reviewedAt": "2026-10-14T23:55:37.398Z"
   },
   "nativeApproval": false,
   "hostedApproval": false

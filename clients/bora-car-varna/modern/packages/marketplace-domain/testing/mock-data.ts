@@ -50,7 +50,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "BORA CAR",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-e98f380293081082/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-87a27eb2ba68ac28/logo-on-light.webp"
     },
     "publishedAt": "2026-10-11T09:00:00.000Z",
     "promoted": true
