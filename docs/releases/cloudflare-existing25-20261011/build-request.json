@@ -3,9 +3,8 @@
   "mode": "existing-migration",
   "sourceRevision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
   "dealers": [
-    "autofest-varna",
-    "autoroad-varna",
-    "dream-drive-varna",
+    "extra-car-sm",
+    "north-norfolk-car-sales",
     "prestige-varna",
     "sunny-varna",
     "rqs-auto-team",
@@ -25,20 +24,16 @@
   ],
   "composition": {
     "reviewed": true,
-    "reviewedAt": "2026-10-15T09:05:51.527Z",
-    "reviewScope": "Owner-authorized final six-template refresh of existing Cloudflare identities. All selected dealer source trees are actually published on Cars MAIN; preserve native palettes, factual stock/contacts/locales, selected logos, one existing Worker and its existing canonical exposure. Private source MAIN and hosted acceptance are recorded separately. This exact corrective batch contains seven published editorial-only or editorial-plus-Modern-alias source successors, plus Sprint/Mania/Evrocar with their published Modern alias fixes. ExtraSM is excluded for the next planned batch. All ten existing purchased webpreviews.site canonical origins and Worker identities are preserved. Historical source CI remains provenance; all seven native targets and delivery artifacts are freshly built on this request commit. Prior unrelated successes remain independently deliverable.",
+    "reviewedAt": "2026-10-15T09:45:02.823Z",
+    "reviewScope": "Owner-authorized final six-template refresh of existing Cloudflare identities. All selected dealer source trees are actually published on Cars MAIN; preserve native palettes, factual stock/contacts/locales, selected logos, one existing Worker and its existing canonical exposure. Private source MAIN and hosted acceptance are recorded separately. This exact nine-dealer batch builds seven actually published selected-WebP Mobile/Signature consumer repairs plus ExtraSM and North. The selected source assets, all six template pins, factual stock/contacts/locales and existing purchased webpreviews.site Worker identities are preserved. North’s exact desktop dark-hero suffix maps to the selected dark WebP. Other held source jobs do not delay this batch; their actual source successes remain a separate wave. All seven native targets and delivery artifacts are freshly built on this request commit.",
     "canonicalCompositions": {
-      "autofest-varna": {
-        "canonicalOrigin": "https://autofest-varna.webpreviews.site",
+      "extra-car-sm": {
+        "canonicalOrigin": "https://extra-car-sm.webpreviews.site",
         "ukDefault": false
       },
-      "autoroad-varna": {
-        "canonicalOrigin": "https://autoroad-varna.webpreviews.site",
-        "ukDefault": false
-      },
-      "dream-drive-varna": {
-        "canonicalOrigin": "https://dream-drive-varna.webpreviews.site",
-        "ukDefault": false
+      "north-norfolk-car-sales": {
+        "canonicalOrigin": "https://north-norfolk-car-sales.webpreviews.site",
+        "ukDefault": true
       },
       "prestige-varna": {
         "canonicalOrigin": "https://prestige-varna.webpreviews.site",
