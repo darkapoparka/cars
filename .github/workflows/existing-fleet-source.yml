@@ -276,8 +276,8 @@ jobs:
           import assert from 'node:assert/strict';
           import {createHash} from 'node:crypto';
           import {execFileSync} from 'node:child_process';
-          const reviewedWorkflowSha256 = '9a54cef1d3f6ea7508708af1a03a1ed1f3b0a18b9e893a914bd620d90a0bd170';
-          const base='144169aa68bc22aac577ae5042245f0e2b8ff584',workflow='.github/workflows/existing-fleet-source.yml',runId=38620387848,jobId=116046077657;
+          const reviewedWorkflowSha256 = '95b1393121e36c97fb1d97661d418b790c8860442a2cda40a7d503806a75ed1c';
+          const base='623fb387bd45d41b953a491446448d391469c05b',workflow='.github/workflows/existing-fleet-source.yml',runId=38659854498,jobId=116178273919;
           const fullStep='Run the required executable workflow integration checkpoint once';
           let reuse=false,reason='Unchanged shared-code checkpoint proof unavailable';
           try {
@@ -294,7 +294,7 @@ jobs:
             protect('',['clients','docs','leads','.github']);
             protect('.github',['workflows']);
             protect('.github/workflows',['existing-fleet-source.yml']);
-            assert.equal(object(base,workflow),'15502c9cfff84ca2ab23ddc4e82dde9a2bbbd6cb');
+            assert.equal(object(base,workflow),'997809f907f42f441ade6dcd6a658ff3e621c4dd');
             const workflowBytes=execFileSync('git',['show',process.env.GITHUB_SHA+':'+workflow],{env,encoding:'utf8',maxBuffer:64*1024**2,timeout:30000});
             assert.equal(fs.readFileSync(workflow,'utf8'),workflowBytes,'Workflow checkout differs from its pinned blob');
             const seals=[...workflowBytes.matchAll(/^          const reviewedWorkflowSha256 = '[a-f0-9]{64}';$/gm)];assert.equal(seals.length,1,'Reviewed workflow self seal is ambiguous');
@@ -312,7 +312,7 @@ jobs:
             assert(jobs.total_count<=100&&Array.isArray(jobs.jobs),'Checkpoint job proof is incomplete');
             const plan=jobs.jobs.find(job=>job.id===jobId);
             assert(plan?.run_id===runId&&plan.run_attempt===1&&plan.name==='plan'&&plan.status==='completed'&&plan.conclusion==='success','Exact prior plan did not succeed');
-            const full=plan.steps?.find(step=>step.number===7&&step.name===fullStep);
+            const full=plan.steps?.find(step=>step.number===8&&step.name===fullStep);
             assert(full?.status==='completed'&&full.conclusion==='success','Exact prior full checkpoint did not succeed');
             const age=Date.now()-Date.parse(plan.completed_at);assert(Number.isFinite(age)&&age>=0&&age<=24*60*60*1000,'Checkpoint proof is stale');
             reuse=true;reason='Authenticated unchanged shared-code checkpoint reused; changed dealer/source fixture data is not covered by that suite result';
