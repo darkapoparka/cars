@@ -143,9 +143,18 @@ const s = stylex.create({
   },
   secondaryPhoneFace: {
     minHeight: { default: 36, '@media (min-width: 1024px)': 38 },
+    paddingInline: { default: 12, '@media (max-width: 699px)': 10 },
     paddingBlock: { default: 6, '@media (min-width: 1024px)': 8 },
-    fontSize: { default: 14, '@media (min-width: 1024px)': 16 },
-    lineHeight: { default: '20px', '@media (min-width: 1024px)': '22px' },
+    fontSize: {
+      default: 14,
+      '@media (max-width: 699px)': 16,
+      '@media (min-width: 1024px)': 16,
+    },
+    lineHeight: {
+      default: '20px',
+      '@media (max-width: 699px)': '22px',
+      '@media (min-width: 1024px)': '22px',
+    },
   },
   secondarySurface: {
     borderColor: {

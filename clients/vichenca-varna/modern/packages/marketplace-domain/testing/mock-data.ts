@@ -50,7 +50,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "VICHENCA",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-17a169dca8b4d5ae/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-c4b6ad087c72721d/logo-on-light.webp"
     },
     "publishedAt": "2026-10-11T09:00:00.000Z",
     "promoted": true

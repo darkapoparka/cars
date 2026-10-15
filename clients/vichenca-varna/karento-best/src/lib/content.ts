@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "VICHENCA",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-17a169dca8b4d5ae/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-17a169dca8b4d5ae/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-17a169dca8b4d5ae/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-c4b6ad087c72721d/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-c4b6ad087c72721d/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-c4b6ad087c72721d/logo-on-dark.webp",
     "alt": "VICHENCA",
-    "favicon": "/dealer-brand/v2-17a169dca8b4d5ae/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-c4b6ad087c72721d/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

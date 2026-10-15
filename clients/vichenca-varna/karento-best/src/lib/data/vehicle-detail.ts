@@ -155,7 +155,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "VICHENCA",
   "location": "бул. Цал Освободител, третият автосалон откъм летището в ляво, Варна, България",
-  "avatar": "/dealer-brand/v2-17a169dca8b4d5ae/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-c4b6ad087c72721d/logo-on-light.webp",
   "mobile": "0877 778 669",
   "email": "",
   "whatsapp": "",

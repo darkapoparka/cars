@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "VICHENCA",
-  "logo": "/dealer-brand/v2-17a169dca8b4d5ae/logo-on-light.webp",
+  "logo": "/dealer-brand/v2-c4b6ad087c72721d/logo-on-light.webp",
   "phone": "+359877778669",
   "email": null,
   "address": "бул. Цал Освободител, третият автосалон откъм летището в ляво, Варна, България",
