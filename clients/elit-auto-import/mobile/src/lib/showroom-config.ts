@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "ELIT AUTO IMPORT EXPORT",
-  "logo": "/dealer-brand/v2-05235f29457343af/logo-on-light.webp",
+  "logo": "/dealer-brand/v2-8f7a5757c9331423/logo-on-light.webp",
   "phone": "+359887777887",
   "email": null,
   "address": "ул. „Прилеп“ 74А, м-т Пчелина",

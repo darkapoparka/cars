@@ -203,7 +203,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "ELIT AUTO IMPORT EXPORT",
   "location": "ул. „Прилеп“ 74А, м-т Пчелина",
-  "avatar": "/dealer-brand/v2-05235f29457343af/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-8f7a5757c9331423/logo-on-light.webp",
   "mobile": "0887 777 887",
   "email": "",
   "whatsapp": "",

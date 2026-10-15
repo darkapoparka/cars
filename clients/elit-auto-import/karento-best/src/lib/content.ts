@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "ELIT AUTO IMPORT EXPORT",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-05235f29457343af/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-05235f29457343af/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-05235f29457343af/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-8f7a5757c9331423/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-8f7a5757c9331423/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-8f7a5757c9331423/logo-on-dark.webp",
     "alt": "ELIT AUTO IMPORT EXPORT",
-    "favicon": "/dealer-brand/v2-05235f29457343af/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-8f7a5757c9331423/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {
