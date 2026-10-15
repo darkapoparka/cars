@@ -3,8 +3,11 @@
   "mode": "existing-migration",
   "sourceRevision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
   "dealers": [
-    "eurocar6-varna",
-    "kalokars-varna"
+    "tesla-varna",
+    "vvcars-varna",
+    "multizaza-varna",
+    "nunki-1-varna",
+    "miraj-auto-varna"
   ],
   "targets": [
     "auto-best",
@@ -17,15 +20,27 @@
   ],
   "composition": {
     "reviewed": true,
-    "reviewedAt": "2026-10-15T03:18:23.203Z",
+    "reviewedAt": "2026-10-15T03:22:37.887Z",
     "reviewScope": "Owner-authorized final six-template refresh of existing Cloudflare identities. All selected dealer source trees are actually published on Cars MAIN; preserve native palettes, factual stock/contacts/locales, selected logos, one existing Worker and its existing canonical exposure. Private source MAIN and hosted acceptance are recorded separately.",
     "canonicalCompositions": {
-      "eurocar6-varna": {
-        "canonicalOrigin": "https://eurocar6-varna.webpreviews.site",
+      "tesla-varna": {
+        "canonicalOrigin": "https://tesla-varna.webpreviews.site",
         "ukDefault": false
       },
-      "kalokars-varna": {
-        "canonicalOrigin": "https://kalokars-varna.webpreviews.site",
+      "vvcars-varna": {
+        "canonicalOrigin": "https://vvcars-varna.webpreviews.site",
+        "ukDefault": false
+      },
+      "multizaza-varna": {
+        "canonicalOrigin": "https://multizaza-varna.webpreviews.site",
+        "ukDefault": false
+      },
+      "nunki-1-varna": {
+        "canonicalOrigin": "https://nunki-1-varna.webpreviews.site",
+        "ukDefault": false
+      },
+      "miraj-auto-varna": {
+        "canonicalOrigin": "https://miraj-auto-varna.webpreviews.site",
         "ukDefault": false
       }
     }
