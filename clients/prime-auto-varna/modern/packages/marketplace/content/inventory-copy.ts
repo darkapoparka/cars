@@ -1,200 +1,172 @@
 import type { DealerInventoryCopy } from "../lead-site";
-/** Reviewed text for the existing sample stock only. */
+/** Dealer-owned display copy from the exact personalized listing set. */
 export const inventoryCopy = {
-  "bmw-x5-m50d-sofia-2020": {
-    sourceDescription:
-      "Примерна обява за BMW X5 M50d с 360 камери, панорама, HUD и обдухване. Снимката е илюстративна; наличност и условия се потвърждават с автокъщата.",
-    bg: {
-      description:
-        "Примерна обява за BMW X5 M50d с 360 камери, панорама, HUD и обдухване. Снимката е илюстративна; наличност и условия се потвърждават с автокъщата.",
-      imageAlts: ["Черен BMW X5 SUV"],
+  "vw-polo-2013-11789057604356727": {
+    "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+    "en": {
+      "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
+      "imageAlts": [
+        "VW Polo 1.4TSI GTI DSG Euro-5",
+        "VW Polo 1.4TSI GTI DSG Euro-5",
+        "VW Polo 1.4TSI GTI DSG Euro-5",
+        "VW Polo 1.4TSI GTI DSG Euro-5"
+      ]
     },
-    en: {
-      description:
-        "Sample listing for a BMW X5 M50d with 360-degree cameras, panoramic roof, head-up display and ventilated seats. The image is illustrative; availability and terms must be confirmed with the dealership.",
-      imageAlts: ["Black BMW X5 SUV"],
-    },
+    "bg": {
+      "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "imageAlts": [
+        "VW Polo 1.4TSI GTI DSG Euro-5",
+        "VW Polo 1.4TSI GTI DSG Euro-5",
+        "VW Polo 1.4TSI GTI DSG Euro-5",
+        "VW Polo 1.4TSI GTI DSG Euro-5"
+      ]
+    }
   },
-  "mercedes-benz-gls-400d-4matic-amg-sofia-2021": {
-    sourceDescription:
-      "GLS 400d 4MATIC AMG Line с Burmester и панорама. Голям семеен SUV от PRIME AUTO - наличен за оглед в Варна.",
-    bg: {
-      description:
-        "GLS 400d 4MATIC AMG Line с Burmester и панорама. Голям семеен SUV от {shortName} - наличен за оглед в {city}.",
-      imageAlts: ["Mercedes-Benz GLS 4MATIC AMG SUV"],
+  "vw-touran-2017-11727598230994767": {
+    "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+    "en": {
+      "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
+      "imageAlts": [
+        "VW Touran 1.4TSI Automat 135900km Euro-6",
+        "VW Touran 1.4TSI Automat 135900km Euro-6",
+        "VW Touran 1.4TSI Automat 135900km Euro-6",
+        "VW Touran 1.4TSI Automat 135900km Euro-6"
+      ]
     },
-    en: {
-      description:
-        "GLS 400d 4MATIC AMG Line with Burmester audio and a panoramic roof. A large family SUV from {shortName}, available to view in {city}.",
-      imageAlts: ["Mercedes-Benz GLS 4MATIC AMG SUV"],
-    },
+    "bg": {
+      "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "imageAlts": [
+        "VW Touran 1.4TSI Automat 135900km Euro-6",
+        "VW Touran 1.4TSI Automat 135900km Euro-6",
+        "VW Touran 1.4TSI Automat 135900km Euro-6",
+        "VW Touran 1.4TSI Automat 135900km Euro-6"
+      ]
+    }
   },
-  "bmw-750e-xdrive-m-sport-sofia-2024": {
-    sourceDescription:
-      "Очакван внос: 7 Series plug-in hybrid с M Sport. Нисък пробег - PRIME AUTO организира доставка и оглед в Варна.",
-    bg: {
-      description:
-        "Очакван внос: 7 Series plug-in hybrid с M Sport. Нисък пробег - {shortName} организира доставка и оглед в {city}.",
-      imageAlts: ["BMW 7 Series"],
+  "mercedes-benz-c-300-2013-11785245881133037": {
+    "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+    "en": {
+      "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
+      "imageAlts": [
+        "Mercedes-Benz C 300 CDI 4-Matic FaceLift",
+        "Mercedes-Benz C 300 CDI 4-Matic FaceLift",
+        "Mercedes-Benz C 300 CDI 4-Matic FaceLift",
+        "Mercedes-Benz C 300 CDI 4-Matic FaceLift"
+      ]
     },
-    en: {
-      description:
-        "Expected import: 7 Series plug-in hybrid with M Sport. Low mileage; {shortName} arranges delivery and viewing in {city}.",
-      imageAlts: ["BMW 7 Series"],
-    },
+    "bg": {
+      "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "imageAlts": [
+        "Mercedes-Benz C 300 CDI 4-Matic FaceLift",
+        "Mercedes-Benz C 300 CDI 4-Matic FaceLift",
+        "Mercedes-Benz C 300 CDI 4-Matic FaceLift",
+        "Mercedes-Benz C 300 CDI 4-Matic FaceLift"
+      ]
+    }
   },
-  "mercedes-benz-e-63-s-amg-sofia-2021": {
-    sourceDescription:
-      "E 63 S AMG facelift с 360, HUD и Burmester. Спортна лимузина от PRIME AUTO.",
-    bg: {
-      description:
-        "E 63 S AMG facelift с 360, HUD и Burmester. Спортна лимузина от {dealer}.",
-      imageAlts: ["Mercedes-Benz E-Class седан"],
+  "mercedes-benz-c-200-2015-11759398098504216": {
+    "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+    "en": {
+      "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
+      "imageAlts": [
+        "Mercedes-Benz C 200 AMG Distronic Android Euro-6",
+        "Mercedes-Benz C 200 AMG Distronic Android Euro-6",
+        "Mercedes-Benz C 200 AMG Distronic Android Euro-6",
+        "Mercedes-Benz C 200 AMG Distronic Android Euro-6"
+      ]
     },
-    en: {
-      description:
-        "Facelift E 63 S AMG with 360-degree cameras, head-up display and Burmester audio. A sports saloon from {dealer}.",
-      imageAlts: ["Mercedes-Benz E-Class saloon"],
-    },
+    "bg": {
+      "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "imageAlts": [
+        "Mercedes-Benz C 200 AMG Distronic Android Euro-6",
+        "Mercedes-Benz C 200 AMG Distronic Android Euro-6",
+        "Mercedes-Benz C 200 AMG Distronic Android Euro-6",
+        "Mercedes-Benz C 200 AMG Distronic Android Euro-6"
+      ]
+    }
   },
-  "mercedes-benz-cls-400d-4matic-sofia-2020": {
-    sourceDescription:
-      "CLS 400d 4MATIC AMG Line Designo с 360 камери. Елегантно купе-седан от PRIME AUTO в Варна.",
-    bg: {
-      description:
-        "CLS 400d 4MATIC AMG Line Designo с 360 камери. Елегантно купе-седан от {shortName} в {city}.",
-      imageAlts: ["Mercedes CLS"],
+  "bmw-316-2013-11791461227440727": {
+    "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+    "en": {
+      "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
+      "imageAlts": [
+        "BMW 316 2.0d F30 * BiXenon * Сменена Верига*",
+        "BMW 316 2.0d F30 * BiXenon * Сменена Верига*",
+        "BMW 316 2.0d F30 * BiXenon * Сменена Верига*",
+        "BMW 316 2.0d F30 * BiXenon * Сменена Верига*"
+      ]
     },
-    en: {
-      description:
-        "CLS 400d 4MATIC AMG Line Designo with 360-degree cameras. An elegant four-door coupe from {shortName} in {city}.",
-      imageAlts: ["Mercedes CLS"],
-    },
+    "bg": {
+      "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "imageAlts": [
+        "BMW 316 2.0d F30 * BiXenon * Сменена Верига*",
+        "BMW 316 2.0d F30 * BiXenon * Сменена Верига*",
+        "BMW 316 2.0d F30 * BiXenon * Сменена Верига*",
+        "BMW 316 2.0d F30 * BiXenon * Сменена Верига*"
+      ]
+    }
   },
-  "audi-q8-50-tdi-quattro-s-line-sofia-2021": {
-    sourceDescription:
-      "Очакван внос: Q8 50 TDI quattro S line Plus. Купе-SUV с quattro за клиенти на PRIME AUTO.",
-    bg: {
-      description:
-        "Очакван внос: Q8 50 TDI quattro S line Plus. Купе-SUV с quattro за клиенти на {shortName}.",
-      imageAlts: ["Audi Q8"],
+  "peugeot-2008-2015-11791389088202604": {
+    "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+    "en": {
+      "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
+      "imageAlts": [
+        "Peugeot 2008 1.6HDi ALLURE EURO-5",
+        "Peugeot 2008 1.6HDi ALLURE EURO-5",
+        "Peugeot 2008 1.6HDi ALLURE EURO-5",
+        "Peugeot 2008 1.6HDi ALLURE EURO-5"
+      ]
     },
-    en: {
-      description:
-        "Expected import: Q8 50 TDI quattro S line Plus. A coupe-SUV with quattro for {shortName} customers.",
-      imageAlts: ["Audi Q8"],
-    },
+    "bg": {
+      "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "imageAlts": [
+        "Peugeot 2008 1.6HDi ALLURE EURO-5",
+        "Peugeot 2008 1.6HDi ALLURE EURO-5",
+        "Peugeot 2008 1.6HDi ALLURE EURO-5",
+        "Peugeot 2008 1.6HDi ALLURE EURO-5"
+      ]
+    }
   },
-  "mercedes-benz-gle-400d-coupe-sofia-2021": {
-    sourceDescription:
-      "GLE 400d Coupe 4MATIC AMG с 360 и Burmester. Наличен при PRIME AUTO - Варна.",
-    bg: {
-      description:
-        "GLE 400d Coupe 4MATIC AMG с 360 и Burmester. Наличен при {dealer} - {city}.",
-      imageAlts: ["Черен Mercedes-Benz GLE SUV"],
+  "peugeot-308-2013-11775554915564927": {
+    "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+    "en": {
+      "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
+      "imageAlts": [
+        "Peugeot 308 1.6 Allure, Масаж, Камера, FullLed 96500km",
+        "Peugeot 308 1.6 Allure, Масаж, Камера, FullLed 96500km",
+        "Peugeot 308 1.6 Allure, Масаж, Камера, FullLed 96500km",
+        "Peugeot 308 1.6 Allure, Масаж, Камера, FullLed 96500km"
+      ]
     },
-    en: {
-      description:
-        "GLE 400d Coupe 4MATIC AMG with 360-degree cameras and Burmester audio. Available from {dealer} in {city}.",
-      imageAlts: ["Black Mercedes-Benz GLE SUV"],
-    },
+    "bg": {
+      "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "imageAlts": [
+        "Peugeot 308 1.6 Allure, Масаж, Камера, FullLed 96500km",
+        "Peugeot 308 1.6 Allure, Масаж, Камера, FullLed 96500km",
+        "Peugeot 308 1.6 Allure, Масаж, Камера, FullLed 96500km",
+        "Peugeot 308 1.6 Allure, Масаж, Камера, FullLed 96500km"
+      ]
+    }
   },
-  "mercedes-benz-gle-53-amg-coupe-sofia-2022": {
-    sourceDescription:
-      "Очакван внос: GLE 53 AMG Coupe Night Pack. PRIME AUTO предлага собствен лизинг след оглед.",
-    bg: {
-      description:
-        "Очакван внос: GLE 53 AMG Coupe Night Pack. {shortName} предлага собствен лизинг след оглед.",
-      imageAlts: ["Бял Mercedes-Benz GLE AMG SUV"],
+  "nissan-patrol-1992-21782065548423198": {
+    "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+    "en": {
+      "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
+      "imageAlts": [
+        "Nissan Patrol Y60 GR 2.8TD 116к.с.",
+        "Nissan Patrol Y60 GR 2.8TD 116к.с.",
+        "Nissan Patrol Y60 GR 2.8TD 116к.с.",
+        "Nissan Patrol Y60 GR 2.8TD 116к.с."
+      ]
     },
-    en: {
-      description:
-        "Expected import: GLE 53 AMG Coupe Night Pack. {shortName} offers in-house leasing after a viewing.",
-      imageAlts: ["White Mercedes-Benz GLE AMG SUV"],
-    },
-  },
-  "mercedes-benz-s-350d-long-amg-sofia-2019": {
-    sourceDescription:
-      "S 350d Long с S63 AMG оптика и пакет за шофьор. Представителна лимузина от PRIME AUTO.",
-    bg: {
-      description:
-        "S 350d Long с S63 AMG оптика и пакет за шофьор. Представителна лимузина от {shortName}.",
-      imageAlts: ["Mercedes-Benz S-Class седан"],
-    },
-    en: {
-      description:
-        "S 350d Long with S63 AMG styling and a chauffeur package. An executive saloon from {shortName}.",
-      imageAlts: ["Mercedes-Benz S-Class saloon"],
-    },
-  },
-  "mercedes-benz-v-250d-vip-business-sofia-2018": {
-    sourceDescription:
-      "V 250d VIP Business с TV, обдухване и подгряване. Бизнес ван от PRIME AUTO.",
-    bg: {
-      description:
-        "V 250d VIP Business с TV, обдухване и подгряване. Бизнес ван от {dealer}.",
-      imageAlts: ["V-Class ван"],
-    },
-    en: {
-      description:
-        "V 250d VIP Business with TV, ventilated and heated seats. A business van from {dealer}.",
-      imageAlts: ["V-Class van"],
-    },
-  },
-  "range-rover-sport-svr-sofia-2021": {
-    sourceDescription:
-      "Range Rover Sport SVR 600 к.с. с панорама, 360 и Meridian. Висок клас SUV от PRIME AUTO.",
-    bg: {
-      description:
-        "Range Rover Sport SVR 600 к.с. с панорама, 360 и Meridian. Висок клас SUV от {shortName}.",
-      imageAlts: ["Range Rover Sport"],
-    },
-    en: {
-      description:
-        "Range Rover Sport SVR, 600 hp, with a panoramic roof, 360-degree cameras and Meridian audio. A premium SUV from {shortName}.",
-      imageAlts: ["Range Rover Sport"],
-    },
-  },
-  "bmw-430i-xdrive-gran-coupe-sofia-2023": {
-    sourceDescription:
-      "430i xDrive Gran Coupe M Sport с digital кокпит и Harman Kardon. PRIME AUTO, Варна.",
-    bg: {
-      description:
-        "430i xDrive Gran Coupe M Sport с digital кокпит и Harman Kardon. {shortName}, {city}.",
-      imageAlts: ["BMW 4 Series"],
-    },
-    en: {
-      description:
-        "430i xDrive Gran Coupe M Sport with a digital cockpit and Harman Kardon audio. {shortName}, {city}.",
-      imageAlts: ["BMW 4 Series"],
-    },
-  },
-  "bmw-m4-competition-sofia-2021": {
-    sourceDescription:
-      "BMW M4 Competition с M пакет, спортен салон и digital кокпит. Купе от портфолиото на PRIME AUTO.",
-    bg: {
-      description:
-        "BMW M4 Competition с M пакет, спортен салон и digital кокпит. Купе от портфолиото на {dealer}.",
-      imageAlts: ["Червено BMW M4 Competition пред модерен шоурум"],
-    },
-    en: {
-      description:
-        "BMW M4 Competition with M package, sports interior and digital cockpit. A coupe from the {dealer} collection.",
-      imageAlts: ["Red BMW M4 Competition in front of a modern showroom"],
-    },
-  },
-  "bmw-x5-xdrive40d-berlin-2022": {
-    sourceDescription:
-      "Крос-бордер демо наличност с оторизирани медии и право на доставка. Финалният транспорт, данъци и регистрация се уточняват с оферта от PRIME AUTO.",
-    bg: {
-      description:
-        "Крос-бордер демо наличност с оторизирани медии и право на доставка. Финалният транспорт, данъци и регистрация се уточняват с оферта от {shortName}.",
-      imageAlts: ["Черен BMW X5 SUV в градска среда"],
-    },
-    en: {
-      description:
-        "Cross-border demo inventory with authorized images and delivery rights. Final transport, tax and registration costs are confirmed in a quote from {shortName}.",
-      imageAlts: ["Black BMW X5 SUV in an urban setting"],
-    },
-  },
+    "bg": {
+      "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "imageAlts": [
+        "Nissan Patrol Y60 GR 2.8TD 116к.с.",
+        "Nissan Patrol Y60 GR 2.8TD 116к.с.",
+        "Nissan Patrol Y60 GR 2.8TD 116к.с.",
+        "Nissan Patrol Y60 GR 2.8TD 116к.с."
+      ]
+    }
+  }
 } satisfies DealerInventoryCopy;

@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "PRIME AUTO",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-e801f6ca8cc29905/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-e801f6ca8cc29905/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-e801f6ca8cc29905/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-effc76bdf6860a0b/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-effc76bdf6860a0b/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-effc76bdf6860a0b/logo-on-dark.webp",
     "alt": "PRIME AUTO",
-    "favicon": "/dealer-brand/app-icon.png",
+    "favicon": "/dealer-brand/v2-effc76bdf6860a0b/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

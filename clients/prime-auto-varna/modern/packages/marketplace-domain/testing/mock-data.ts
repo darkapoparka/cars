@@ -58,7 +58,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "PRIME AUTO",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-e801f6ca8cc29905/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-effc76bdf6860a0b/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": true
@@ -119,7 +119,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "PRIME AUTO",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-e801f6ca8cc29905/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-effc76bdf6860a0b/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": true
@@ -180,7 +180,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "PRIME AUTO",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-e801f6ca8cc29905/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-effc76bdf6860a0b/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": true
@@ -241,7 +241,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "PRIME AUTO",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-e801f6ca8cc29905/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-effc76bdf6860a0b/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -302,7 +302,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "PRIME AUTO",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-e801f6ca8cc29905/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-effc76bdf6860a0b/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -363,7 +363,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "PRIME AUTO",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-e801f6ca8cc29905/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-effc76bdf6860a0b/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -424,7 +424,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "PRIME AUTO",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-e801f6ca8cc29905/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-effc76bdf6860a0b/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -485,373 +485,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "PRIME AUTO",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-e801f6ca8cc29905/logo-on-light.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1004",
-    "slug": "vw-polo-2013-11789057604356727",
-    "category": "car",
-    "dealerOrgId": "dealer-prime-auto-varna",
-    "status": "active",
-    "title": "VW Polo 1.4TSI GTI DSG Euro-5",
-    "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
-    "price": {
-      "amount": 7900,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/vehicles/11789057604356727/1.webp",
-        "alt": "VW Polo 1.4TSI GTI DSG Euro-5"
-      },
-      {
-        "url": "/assets/vehicles/11789057604356727/2.webp",
-        "alt": "VW Polo 1.4TSI GTI DSG Euro-5"
-      },
-      {
-        "url": "/assets/vehicles/11789057604356727/3.webp",
-        "alt": "VW Polo 1.4TSI GTI DSG Euro-5"
-      },
-      {
-        "url": "/assets/vehicles/11789057604356727/4.webp",
-        "alt": "VW Polo 1.4TSI GTI DSG Euro-5"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "spec": {
-      "make": "VW",
-      "model": "Polo",
-      "year": 2013,
-      "bodyType": "hatchback",
-      "fuelType": "gasoline",
-      "transmission": "automatic",
-      "mileageValue": 181900,
-      "mileageUnit": "km",
-      "enginePowerHp": 180
-    },
-    "seller": {
-      "id": "dealer-prime-auto-varna",
-      "type": "dealer",
-      "displayName": "PRIME AUTO",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-e801f6ca8cc29905/logo-on-light.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1005",
-    "slug": "vw-touran-2017-11727598230994767",
-    "category": "car",
-    "dealerOrgId": "dealer-prime-auto-varna",
-    "status": "active",
-    "title": "VW Touran 1.4TSI Automat 135900km Euro-6",
-    "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
-    "price": {
-      "amount": 11900,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/vehicles/11727598230994767/1.webp",
-        "alt": "VW Touran 1.4TSI Automat 135900km Euro-6"
-      },
-      {
-        "url": "/assets/vehicles/11727598230994767/2.webp",
-        "alt": "VW Touran 1.4TSI Automat 135900km Euro-6"
-      },
-      {
-        "url": "/assets/vehicles/11727598230994767/3.webp",
-        "alt": "VW Touran 1.4TSI Automat 135900km Euro-6"
-      },
-      {
-        "url": "/assets/vehicles/11727598230994767/4.webp",
-        "alt": "VW Touran 1.4TSI Automat 135900km Euro-6"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "spec": {
-      "make": "VW",
-      "model": "Touran",
-      "year": 2017,
-      "bodyType": "other",
-      "fuelType": "gasoline",
-      "transmission": "automatic",
-      "mileageValue": 135900,
-      "mileageUnit": "km",
-      "enginePowerHp": 150
-    },
-    "seller": {
-      "id": "dealer-prime-auto-varna",
-      "type": "dealer",
-      "displayName": "PRIME AUTO",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-e801f6ca8cc29905/logo-on-light.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1006",
-    "slug": "mercedes-benz-c-300-2013-11785245881133037",
-    "category": "car",
-    "dealerOrgId": "dealer-prime-auto-varna",
-    "status": "active",
-    "title": "Mercedes-Benz C 300 CDI 4-Matic FaceLift",
-    "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
-    "price": {
-      "amount": 7300,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/vehicles/11785245881133037/1.webp",
-        "alt": "Mercedes-Benz C 300 CDI 4-Matic FaceLift"
-      },
-      {
-        "url": "/assets/vehicles/11785245881133037/2.webp",
-        "alt": "Mercedes-Benz C 300 CDI 4-Matic FaceLift"
-      },
-      {
-        "url": "/assets/vehicles/11785245881133037/3.webp",
-        "alt": "Mercedes-Benz C 300 CDI 4-Matic FaceLift"
-      },
-      {
-        "url": "/assets/vehicles/11785245881133037/4.webp",
-        "alt": "Mercedes-Benz C 300 CDI 4-Matic FaceLift"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "spec": {
-      "make": "Mercedes-Benz",
-      "model": "C 300",
-      "year": 2013,
-      "bodyType": "wagon",
-      "fuelType": "diesel",
-      "transmission": "automatic",
-      "mileageValue": 205500,
-      "mileageUnit": "km",
-      "enginePowerHp": 231
-    },
-    "seller": {
-      "id": "dealer-prime-auto-varna",
-      "type": "dealer",
-      "displayName": "PRIME AUTO",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-e801f6ca8cc29905/logo-on-light.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1007",
-    "slug": "mercedes-benz-c-200-2015-11759398098504216",
-    "category": "car",
-    "dealerOrgId": "dealer-prime-auto-varna",
-    "status": "active",
-    "title": "Mercedes-Benz C 200 AMG Distronic Android Euro-6",
-    "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
-    "price": {
-      "amount": 15900,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/vehicles/11759398098504216/1.webp",
-        "alt": "Mercedes-Benz C 200 AMG Distronic Android Euro-6"
-      },
-      {
-        "url": "/assets/vehicles/11759398098504216/2.webp",
-        "alt": "Mercedes-Benz C 200 AMG Distronic Android Euro-6"
-      },
-      {
-        "url": "/assets/vehicles/11759398098504216/3.webp",
-        "alt": "Mercedes-Benz C 200 AMG Distronic Android Euro-6"
-      },
-      {
-        "url": "/assets/vehicles/11759398098504216/4.webp",
-        "alt": "Mercedes-Benz C 200 AMG Distronic Android Euro-6"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "spec": {
-      "make": "Mercedes-Benz",
-      "model": "C 200",
-      "year": 2015,
-      "bodyType": "sedan",
-      "fuelType": "gasoline",
-      "transmission": "automatic",
-      "mileageValue": 212500,
-      "mileageUnit": "km",
-      "enginePowerHp": 184
-    },
-    "seller": {
-      "id": "dealer-prime-auto-varna",
-      "type": "dealer",
-      "displayName": "PRIME AUTO",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-e801f6ca8cc29905/logo-on-light.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1008",
-    "slug": "bmw-316-2013-11791461227440727",
-    "category": "car",
-    "dealerOrgId": "dealer-prime-auto-varna",
-    "status": "active",
-    "title": "BMW 316 2.0d F30 * BiXenon * Сменена Верига*",
-    "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
-    "price": {
-      "amount": 7700,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/vehicles/11791461227440727/1.webp",
-        "alt": "BMW 316 2.0d F30 * BiXenon * Сменена Верига*"
-      },
-      {
-        "url": "/assets/vehicles/11791461227440727/2.webp",
-        "alt": "BMW 316 2.0d F30 * BiXenon * Сменена Верига*"
-      },
-      {
-        "url": "/assets/vehicles/11791461227440727/3.webp",
-        "alt": "BMW 316 2.0d F30 * BiXenon * Сменена Верига*"
-      },
-      {
-        "url": "/assets/vehicles/11791461227440727/4.webp",
-        "alt": "BMW 316 2.0d F30 * BiXenon * Сменена Верига*"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "spec": {
-      "make": "BMW",
-      "model": "316",
-      "year": 2013,
-      "bodyType": "sedan",
-      "fuelType": "diesel",
-      "transmission": "manual",
-      "mileageValue": 250190,
-      "mileageUnit": "km",
-      "enginePowerHp": 116
-    },
-    "seller": {
-      "id": "dealer-prime-auto-varna",
-      "type": "dealer",
-      "displayName": "PRIME AUTO",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-e801f6ca8cc29905/logo-on-light.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1009",
-    "slug": "peugeot-2008-2015-11791389088202604",
-    "category": "car",
-    "dealerOrgId": "dealer-prime-auto-varna",
-    "status": "active",
-    "title": "Peugeot 2008 1.6HDi ALLURE EURO-5",
-    "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
-    "price": {
-      "amount": 6700,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/vehicles/11791389088202604/1.webp",
-        "alt": "Peugeot 2008 1.6HDi ALLURE EURO-5"
-      },
-      {
-        "url": "/assets/vehicles/11791389088202604/2.webp",
-        "alt": "Peugeot 2008 1.6HDi ALLURE EURO-5"
-      },
-      {
-        "url": "/assets/vehicles/11791389088202604/3.webp",
-        "alt": "Peugeot 2008 1.6HDi ALLURE EURO-5"
-      },
-      {
-        "url": "/assets/vehicles/11791389088202604/4.webp",
-        "alt": "Peugeot 2008 1.6HDi ALLURE EURO-5"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "spec": {
-      "make": "Peugeot",
-      "model": "2008",
-      "year": 2015,
-      "bodyType": "suv",
-      "fuelType": "diesel",
-      "transmission": "manual",
-      "mileageValue": 164000,
-      "mileageUnit": "km",
-      "enginePowerHp": 115
-    },
-    "seller": {
-      "id": "dealer-prime-auto-varna",
-      "type": "dealer",
-      "displayName": "PRIME AUTO",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-e801f6ca8cc29905/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-effc76bdf6860a0b/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false

@@ -1,4 +1,5 @@
 'use client';
+import { hasMobileMileage, formatMobileMileage } from '../lib/mobile-mileage';
 import { useLocale } from '@/lib/use-locale';
 import { useState } from 'react';
 import Image from 'next/image';
@@ -281,7 +282,7 @@ export function VehicleCard({
             {v.mileage > 0 && <Pill icon="registration">{v.year}</Pill>}
             <Pill icon="fuel">{v.fuel}</Pill>
             {v.power > 0 && <Pill icon="gauge">{v.power} HP</Pill>}
-            {v.mileage > 0 && <Pill icon="mileage">{number(v.mileage)} km</Pill>}
+            {v.mileage > 0 && <Pill icon="mileage">{formatMobileMileage(v)}</Pill>}
             <Pill icon="transmission">{v.transmission}</Pill>
           </div>
           <p {...stylex.props(s.location)}>
@@ -329,8 +330,9 @@ export function VehicleCard({
           </div>
           {lease && <p {...stylex.props(ui.small, ui.muted, ui.space)}>Price {money(v.price)}</p>}
           <p {...stylex.props(s.metadata)}>
-            {v.mileage === 0
-              ? 'New vehicle'
+            {!hasMobileMileage(v)
+              ? 'Not published'
+              : v.mileage === 0 ? 'New vehicle'
               : v.sample && v.id === 'bmw-x6'
                 ? "Employee's Car"
                 : 'Used vehicle'}{' '}
@@ -340,7 +342,7 @@ export function VehicleCard({
                 <span {...stylex.props(s.nowrap)}>FR {v.registration}</span> •{' '}
               </>
             )}
-            <span {...stylex.props(s.nowrap)}>{number(v.mileage)} km</span> •{' '}
+            <span {...stylex.props(s.nowrap)}>{formatMobileMileage(v)}</span> •{' '}
             <span {...stylex.props(s.nowrap)}>
               {v.power > 0 ? Math.round(v.power / 1.36) + ' kW (' + v.power + ' hp)' : 'Power not published'}
             </span>{' '}

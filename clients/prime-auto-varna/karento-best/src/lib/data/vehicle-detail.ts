@@ -118,6 +118,12 @@ export const referenceSpecifications: readonly DetailSpecification[] = [
     "valueKey": "fuel.gasoline"
   },
   {
+    "id": "year",
+    "icon": "/assets/imgs/template/icons/calendar.svg",
+    "value": "2013",
+    "labelKey": "vehicle.field.year"
+  },
+  {
     "id": "lit",
     "icon": "/assets/imgs/page/car/lit.svg",
     "value": "180 hp",
@@ -149,7 +155,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "PRIME AUTO",
   "location": "бул. Цар Освободител 228, Варна, България",
-  "avatar": "/dealer-brand/v2-e801f6ca8cc29905/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-effc76bdf6860a0b/logo-on-light.webp",
   "mobile": "0878751561",
   "email": "",
   "whatsapp": "",

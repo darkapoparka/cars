@@ -5,12 +5,12 @@
   "name": "PRIME AUTO",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "cc130e432a41a3a60cc80bc2b3461c6416893b4a",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/karento-best",
-    "tree": "c661129affb32649c8fcecea097fc9a6487783d0",
-    "digest": "bf8c6628be5f28b7e3358b121b7cf9e236d36a2fc0138bf640d72113c7e17f30"
+    "digest": "be17ef365e3272753df6e50826b139a45bfc32b8fef54ddcb86d977ad16280a9",
+    "tree": "8c5ac869c7fd15e19a80c660343fc64b20a2bad9"
   },
-  "sourceDigest": "1505276663a7fee6d139b307850bae453908867c392b50b5a300b83ff716200e",
+  "sourceDigest": "555d3e761104d400392260db8bf7ae9357e1beef73ceee4af825964e51d881bb",
   "inventory": {
     "mode": "dated-listing-snapshot",
     "count": 8,
@@ -19,8 +19,8 @@
   "personalization": {
     "profileSha256": "eae633d88224776f126be1e7898ac041f6552075edd7955dbc9afe95f8562f33",
     "logoPaths": [
-      "/dealer-brand/v2-e801f6ca8cc29905/logo-on-light.webp",
-      "/dealer-brand/v2-e801f6ca8cc29905/logo-on-dark.webp"
+      "/dealer-brand/logo-on-light.webp",
+      "/dealer-brand/logo-on-dark.webp"
     ],
     "mediaPaths": [
       "/assets/vehicles/11789057604356727/1.webp",
@@ -67,6 +67,9 @@
       "karento-best/src/lib/pages/cars-details-3.svelte",
       "karento-best/src/lib/components/vehicle-detail/VehicleReservationCard.svelte",
       "karento-best/src/lib/components/vehicle-detail/VehicleDetailPanels.svelte",
+      "karento-best/src/lib/components/ServiceSpotCard.svelte",
+      "karento-best/src/lib/sections/HomeBrandLinks.svelte",
+      "karento-best/src/lib/i18n/catalogs/reference-home.ts",
       "karento-best/src/lib/data/editorial.ts",
       "karento-best/src/lib/data/home-stories.ts",
       "karento-best/src/lib/cards/VehicleEditorialCard.svelte",
@@ -89,9 +92,5 @@
     "nativeDealerFacts": true
   },
   "needsDealerQA": true,
-  "readyToPublish": false,
-  "branding": {
-    "packId": "e801f6ca8cc29905",
-    "previousSourceDigest": "c3ba9341847a77b13a1b6b5b69ed72085ec27c9ef8f876be03ff7c75e515ce98"
-  }
+  "readyToPublish": false
 }
