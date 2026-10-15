@@ -94,7 +94,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "АУТО ЖО-ДИ",
       "location": "бул. Цар Освободител, 300 м. след светофара за Владиславово, Варна, България",
-      "avatar": "/dealer-brand/v2-b9f4960fcbd7901a/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-69d9aed0bbd1b0bf/logo-on-light.webp",
       "mobile": "0898545465",
       "email": "",
       "whatsapp": "",

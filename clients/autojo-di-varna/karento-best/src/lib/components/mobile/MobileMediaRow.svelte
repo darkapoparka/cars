@@ -4,6 +4,7 @@
   import { useLocale } from "#lib/i18n/context.svelte.ts";
   const locale = useLocale();
   import type { Snippet } from "svelte";
+  import type { MouseEventHandler } from "svelte/elements";
 
   let {
     href,
@@ -14,6 +15,8 @@
     loading = "eager",
     class: className = "",
     children,
+    onclick,
+    expanded,
   }: {
     href: string;
     label: string;
@@ -23,21 +26,42 @@
     loading?: "eager" | "lazy";
     class?: string;
     children: Snippet;
+    onclick?: MouseEventHandler<HTMLButtonElement>;
+    expanded?: boolean;
   } = $props();
 </script>
 
-<a
-  class={["mobile-media-row", className]}
-  href={locale.href(href)}
-  aria-label={label}
->
+{#snippet content()}
   <div class={["media-row-photo", { contained: fit === "contain" }]}>
     <img src={image} alt={imageAlt} {loading} decoding="async" />
   </div>
   {@render children()}
-</a>
+{/snippet}
+
+{#if onclick}
+  <button
+    type="button"
+    class={["mobile-media-row", className]}
+    aria-label={label}
+    aria-haspopup="dialog"
+    aria-expanded={expanded}
+    {onclick}>{@render content()}</button
+  >
+{:else}
+  <a
+    class={["mobile-media-row", className]}
+    href={locale.href(href)}
+    aria-label={label}>{@render content()}</a
+  >
+{/if}
 
 <style>
+  button.mobile-media-row {
+    width: 100%;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+  }
   .mobile-media-row {
     display: grid;
     grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);

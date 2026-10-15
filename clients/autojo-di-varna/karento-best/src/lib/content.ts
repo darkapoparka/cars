@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "АУТО ЖО-ДИ",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-b9f4960fcbd7901a/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-b9f4960fcbd7901a/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-b9f4960fcbd7901a/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-69d9aed0bbd1b0bf/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-69d9aed0bbd1b0bf/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-69d9aed0bbd1b0bf/logo-on-dark.webp",
     "alt": "АУТО ЖО-ДИ",
-    "favicon": "/dealer-brand/v2-b9f4960fcbd7901a/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-69d9aed0bbd1b0bf/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

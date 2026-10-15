@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "АУТО ЖО-ДИ",
-  "logo": "/dealer-brand/v2-b9f4960fcbd7901a/logo-on-light.webp",
+  "logo": "/dealer-brand/v2-69d9aed0bbd1b0bf/logo-on-light.webp",
   "phone": "+359898545465",
   "email": null,
   "address": "бул. Цар Освободител, 300 м. след светофара за Владиславово, Варна, България",
