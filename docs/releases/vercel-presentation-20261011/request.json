@@ -4,7 +4,7 @@
   "action": "proposal",
   "stage": "qualification-preview",
   "publicationTransport": "existing-local-publisher",
-  "toolingSourceCommit": "77d16ed3dfcd9794fec65bd1d9f90972ac5e2812",
+  "toolingSourceCommit": "b174531cb7f8b655e7b2ea9c047f148a88bd374d",
   "templateLock": {
     "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/candidate-lock.json",
     "sha256": "04633129df9e75d6cd62deeac9125b279957789d75f57cdb0b243ef61bfc3e7e"
@@ -59,124 +59,124 @@
   },
   "dealers": [
     {
-      "slug": "legend-auto",
-      "repository": "darkapoparka/cars-legendauto",
-      "projectId": "prj_kdnDQxZaPh8xgKBiIXyb9uODrXZw",
-      "publicOrigin": "https://cars-legendauto.vercel.app",
+      "slug": "champion-auto-pro",
+      "repository": "darkapoparka/cars-championautopro",
+      "projectId": "prj_Zles0MpLROdFwgSnvuvpxrNBWcRY",
+      "publicOrigin": "https://cars-championautopro.vercel.app",
       "sourceOwnership": "cars-owned",
       "sourceRepository": "darkapoparka/cars",
-      "sourceCommit": "6d16a0d8dc684aa975cf1599eb54459ad8c5f23c",
-      "sourceTree": "f1124428590b8c36ccb06fcf7b1705a4489b6bfc",
+      "sourceCommit": "3f349a48004aeae9d9663ac478d091194b17d2af",
+      "sourceTree": "dba01fe4aa10556c4e22d5c0cf34123a660086d1",
       "sourceReview": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-receipts/legend-auto.json",
-        "sha256": "02594dd10f19e583b74dbcb0480089b85fdf1b3ed417daaaa08b06b3cd4bfce8",
-        "blob": "1b2accfe729ce2eed0e92aa74ff95ece0c4d09a0"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-receipts/champion-auto-pro.json",
+        "sha256": "3933c58ea633e2eb2a1d830fc0ec1e38a29f0f8cf329fa243e60abd73535e76a",
+        "blob": "0f2607603a8c6e7834d8ab5d93af7b4486647dce"
       },
-      "privateMain": "f96ba187d35a2ce03f4777e970d8bf59a434886a",
+      "privateMain": "81c2addef34c4e7e48af9e1541f55606f6693c88",
       "privateTarget": null,
       "targetBranch": "codex/fleet-final-polish-20261014",
       "qualification": {
-        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/legend-auto/qualification-context.json",
-        "sha256": "c6ab8afe147bf2b42b64152e0efd9ce0e2d051f29e6e948ee3a1a1b4ce4e152c"
+        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/champion-auto-pro/qualification-context.json",
+        "sha256": "63bbd44b63ae58818e842042aca1ad04f306d689a76b62236bdf254493a25a4f"
       }
     },
     {
-      "slug": "perfect-auto-varna",
-      "repository": "darkapoparka/cars-perfectauto",
-      "projectId": "prj_sqN8Xc2fs7g2Y2pSs0qeSeYJgVZR",
-      "publicOrigin": "https://cars-perfectauto.vercel.app",
+      "slug": "astracar",
+      "repository": "darkapoparka/cars-astracar",
+      "projectId": "prj_70zIp6vOJGgHSVcOtk9pR8dCTsTT",
+      "publicOrigin": "https://cars-astracar.vercel.app",
       "sourceOwnership": "cars-owned",
       "sourceRepository": "darkapoparka/cars",
-      "sourceCommit": "a508fef74fe3ffdb63b848eb253e092183ebf7a3",
-      "sourceTree": "7632dadd5e22c44bdf694bf77226114b3a864348",
+      "sourceCommit": "8fd19452a6c8e2ca8b4a4e03f6629fb26408503e",
+      "sourceTree": "4e2781f933fe27b66eb5aae31b7c6c1fb8b1988f",
       "sourceReview": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-receipts/perfect-auto-varna.json",
-        "sha256": "245871ab6146dd5629227da26b201371caa9f6ab05d9eac5ccd8b2fb9ac8a186",
-        "blob": "bbf361adb58963606be58d50ed52ac2f6c6ada8a"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-receipts/astracar.json",
+        "sha256": "2d70d08e633e305c10bdaeef1105a26560764d3025379e15cc72113715fce0d4",
+        "blob": "625dd08a2a43b67809ec16eeb99e3a190e198d43"
       },
-      "privateMain": "8500c16e76e876b2707efdab972b6d6503924067",
+      "privateMain": "2cda77c6513e2d34fe497b2833760c6d13a3f413",
       "privateTarget": null,
       "targetBranch": "codex/fleet-final-polish-20261014",
       "qualification": {
-        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/perfect-auto-varna/qualification-context.json",
-        "sha256": "cef20bccbd8148fe2120a55454eff0d140e0b24025a67e70a66a655be553fe59"
+        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/astracar/qualification-context.json",
+        "sha256": "897ed610c2bea1eb7e27e65248b78bde9fc185ce310137da279ee9c15fcded21"
       }
     },
     {
-      "slug": "al-basma-motors",
-      "repository": "darkapoparka/cars-albasmamotors",
-      "projectId": "prj_axqFQFzpsq6JLTBwXOzyv5Wnbphk",
-      "publicOrigin": "https://cars-albasmamotors.vercel.app",
+      "slug": "eliqauto",
+      "repository": "darkapoparka/cars-eliqauto",
+      "projectId": "prj_0aDYGRa0LI91M3AJRY4dlGssLUF3",
+      "publicOrigin": "https://cars-eliqauto.vercel.app",
       "sourceOwnership": "cars-owned",
       "sourceRepository": "darkapoparka/cars",
-      "sourceCommit": "261a4934699a66f31cbaa679ed8fa36b405fbd87",
-      "sourceTree": "5e790debc28dae5d0a075a464f2c8d5719800d68",
+      "sourceCommit": "2e93f4764c18bbc1a6af2bbd75dde4f033822ff8",
+      "sourceTree": "43a4ca7663d76690a2276a63c4a68b0b1bdd74a8",
       "sourceReview": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-receipts/al-basma-motors.json",
-        "sha256": "fe3883767d9819c47642d3d740ff53696bf70f3b4b79fbb2febcffdf7ce8a616",
-        "blob": "5f17b8ad536d6e49724b7bf57d361c2545dd9a4b"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-receipts/eliqauto.json",
+        "sha256": "e32d54d73883fba7dea43ebf21880c69463ebe4921b602cdc4b0ca26d4c7b671",
+        "blob": "0e03f6f350c6ec0bc674d61308dea1d568d87d6b"
       },
-      "privateMain": "4c733bb2c83e2c92de9f96e0822202689beeb145",
+      "privateMain": "4bf0424056976622b79f1ad5e397248c07a7d745",
       "privateTarget": null,
       "targetBranch": "codex/fleet-final-polish-20261014",
       "qualification": {
-        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/al-basma-motors/qualification-context.json",
-        "sha256": "71d0c5118a12f72b8ea2b28347343969de2d553ebee7dfbed73d4ebafaef9190"
+        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/eliqauto/qualification-context.json",
+        "sha256": "32f53b210628c7830415538270c92d427962b986f126e1a06659e186536350e0"
       }
     },
     {
-      "slug": "al-hamoor-al-thahabi",
-      "repository": "darkapoparka/cars-alhamooralthahabi",
-      "projectId": "prj_hdzWSWLwsNVu7mmsmGA97XbCDSrw",
-      "publicOrigin": "https://cars-alhamooralthahabi.vercel.app",
+      "slug": "elit-auto-import",
+      "repository": "darkapoparka/cars-elitautoimport",
+      "projectId": "prj_7QV9OtCRFxJMWpWWlUXLpptcQPXs",
+      "publicOrigin": "https://cars-elitautoimport.vercel.app",
       "sourceOwnership": "cars-owned",
       "sourceRepository": "darkapoparka/cars",
-      "sourceCommit": "29ff513589fa0d53c4898bbccfe8331c4e58f1d3",
-      "sourceTree": "9ae42cd3a92b1a00b432ed876dce4beee4189866",
+      "sourceCommit": "0a01b096ffe071a8762162ac3b9cc9a32e56c465",
+      "sourceTree": "8c071de6cf32c162f0e1f74c8f4b5bb38efbe932",
       "sourceReview": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-receipts/al-hamoor-al-thahabi.json",
-        "sha256": "0647b38c3c16828e45f3e537dbf4edce6db8b365b3ebb9574eb2c642049501a9",
-        "blob": "17a884e7413957843bca01291e7279580353c61a"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-receipts/elit-auto-import.json",
+        "sha256": "ea735b5676a78b676c19f10375847831ab32e36f762768e9eb512dd8836dd4f9",
+        "blob": "3786713c244616e5d32e172959f48ce5bafbb7fe"
       },
-      "privateMain": "4777aa5eb211fdb1281adddbf25819e5d4b4ed3e",
+      "privateMain": "f948d62227093438f9b203243a129c8d064096a2",
       "privateTarget": null,
       "targetBranch": "codex/fleet-final-polish-20261014",
       "qualification": {
-        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/al-hamoor-al-thahabi/qualification-context.json",
-        "sha256": "abcc36d04cd51a830766b6fb61f8d0db348def7cc08afd448d70e805813421af"
+        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/elit-auto-import/qualification-context.json",
+        "sha256": "74300a58e995592ff7c7504665732c83ef79e13a2eec9c733ddc6b39fc6b904e"
       }
     },
     {
-      "slug": "autolife",
-      "repository": "darkapoparka/cars-autolife",
-      "projectId": "prj_h9XFj7PYyl3OsEMxBueC5bZWvdSd",
-      "publicOrigin": "https://cars-autolife.vercel.app",
+      "slug": "excellent-cars",
+      "repository": "darkapoparka/excellent-cars",
+      "projectId": "prj_dhANzY6pxcqK1hO06ar9ZTk0k4eq",
+      "publicOrigin": "https://excellent-cars.vercel.app",
       "sourceOwnership": "cars-owned",
       "sourceRepository": "darkapoparka/cars",
-      "sourceCommit": "339f0603a56f0f9f9ac0c1fc0c4d09aa25e190ae",
-      "sourceTree": "b2e0925cf2d3bca52f94f4065fa2e4bf992f562e",
+      "sourceCommit": "897c9febf6cb2150a8a001b15f36d4fdc1ee36eb",
+      "sourceTree": "568b0c514e32d2e71669d7c74a67eb0a0c467435",
       "sourceReview": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-receipts/autolife.json",
-        "sha256": "9928c67d1a03ec4f0198ce9cbfdc95e45a5e19d472d13cc332b511e808ed16c9",
-        "blob": "1b63fea378fe8af011deb5c0a3948e9d91617e69"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-receipts/excellent-cars.json",
+        "sha256": "b33145983be645249cbc1172c28f8c5f8adeda79906de499c788c4c9b6502135",
+        "blob": "70dfe00b2fe2359f62bfa5f79c4f040cac28c4b9"
       },
-      "privateMain": "30161b46aa102695fd89a26fe42101a24ce021d7",
+      "privateMain": "5f2a88f09bc8edb437e1dae2c58cb8d3e78d66dd",
       "privateTarget": null,
       "targetBranch": "codex/fleet-final-polish-20261014",
       "qualification": {
-        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/autolife/qualification-context.json",
-        "sha256": "053946fdd36648f4b4abe40509db41e2462b6b60f8b94515360ff5e0cfc8a772"
+        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/excellent-cars/qualification-context.json",
+        "sha256": "b5d4d3533c2afcbf376bb65eecbb3e8203289499de0cd9525be4aa2f925e335f"
       }
     }
   ],
   "intendedPublication": {
     "branch": "main",
     "providerTarget": "production",
-    "scope": "owner-authorized-qualified-Vercel-wave-3",
+    "scope": "owner-authorized-qualified-Vercel-wave-4",
     "noPreviewPublication": true
   },
   "productionWave": {
-    "path": "docs/releases/vercel-presentation-20261011/final-polish-20261014/production-wave-3.json",
-    "sha256": "2ce2de3b154da8a1e2483af9c9bf59f781b9f01db303bbd9520e4ebdd14fdbd9"
+    "path": "docs/releases/vercel-presentation-20261011/final-polish-20261014/production-wave-4.json",
+    "sha256": "e9f99f4390f5dc3b7e11f41c3613c3cbb3c7d351c36d647c162a724cd32cd3b2"
   }
 }
