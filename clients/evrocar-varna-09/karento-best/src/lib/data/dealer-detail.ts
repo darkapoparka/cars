@@ -85,7 +85,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "ЕВРОКАР ВАРНА 09",
       "location": "Варна, Кайсиева градина, бул. „Цар Освободител“, след Метро, преди светофара за JUMBO",
-      "avatar": "/registered-branding/onLight.png",
+      "avatar": "/dealer-brand/v2-2fd2080cc1d79c8f/logo-on-light.webp",
       "mobile": "0897 002 225",
       "email": "",
       "whatsapp": "",
@@ -186,7 +186,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "ЕВРОКАР ВАРНА 09",
       "location": "Варна, Кайсиева градина, бул. „Цар Освободител“, след Метро, преди светофара за JUMBO",
-      "avatar": "/registered-branding/onLight.png",
+      "avatar": "/dealer-brand/v2-2fd2080cc1d79c8f/logo-on-light.webp",
       "mobile": "0897 002 225",
       "email": "",
       "whatsapp": "",
@@ -287,7 +287,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "ЕВРОКАР ВАРНА 09",
       "location": "Варна, Кайсиева градина, бул. „Цар Освободител“, след Метро, преди светофара за JUMBO",
-      "avatar": "/registered-branding/onLight.png",
+      "avatar": "/dealer-brand/v2-2fd2080cc1d79c8f/logo-on-light.webp",
       "mobile": "0897 002 225",
       "email": "",
       "whatsapp": "",
@@ -387,7 +387,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "ЕВРОКАР ВАРНА 09",
       "location": "Варна, Кайсиева градина, бул. „Цар Освободител“, след Метро, преди светофара за JUMBO",
-      "avatar": "/registered-branding/onLight.png",
+      "avatar": "/dealer-brand/v2-2fd2080cc1d79c8f/logo-on-light.webp",
       "mobile": "0897 002 225",
       "email": "",
       "whatsapp": "",
@@ -486,7 +486,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "ЕВРОКАР ВАРНА 09",
       "location": "Варна, Кайсиева градина, бул. „Цар Освободител“, след Метро, преди светофара за JUMBO",
-      "avatar": "/registered-branding/onLight.png",
+      "avatar": "/dealer-brand/v2-2fd2080cc1d79c8f/logo-on-light.webp",
       "mobile": "0897 002 225",
       "email": "",
       "whatsapp": "",
@@ -586,7 +586,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "ЕВРОКАР ВАРНА 09",
       "location": "Варна, Кайсиева градина, бул. „Цар Освободител“, след Метро, преди светофара за JUMBO",
-      "avatar": "/registered-branding/onLight.png",
+      "avatar": "/dealer-brand/v2-2fd2080cc1d79c8f/logo-on-light.webp",
       "mobile": "0897 002 225",
       "email": "",
       "whatsapp": "",
@@ -685,7 +685,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "ЕВРОКАР ВАРНА 09",
       "location": "Варна, Кайсиева градина, бул. „Цар Освободител“, след Метро, преди светофара за JUMBO",
-      "avatar": "/registered-branding/onLight.png",
+      "avatar": "/dealer-brand/v2-2fd2080cc1d79c8f/logo-on-light.webp",
       "mobile": "0897 002 225",
       "email": "",
       "whatsapp": "",

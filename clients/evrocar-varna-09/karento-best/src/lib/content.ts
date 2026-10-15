@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "ЕВРОКАР ВАРНА 09",
   "locale": "bg-BG",
   "logo": {
-    "light": "/registered-branding/onLight.png",
-    "footer": "/registered-branding/onDark.png",
-    "archivedDark": "/registered-branding/onDark.png",
+    "light": "/dealer-brand/v2-2fd2080cc1d79c8f/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-2fd2080cc1d79c8f/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-2fd2080cc1d79c8f/logo-on-dark.webp",
     "alt": "ЕВРОКАР ВАРНА 09",
-    "favicon": "/registered-branding/onLight.png",
+    "favicon": "/dealer-brand/v2-2fd2080cc1d79c8f/app-icon.png",
     "monochromeOnDark": false
   },
   "contacts": {

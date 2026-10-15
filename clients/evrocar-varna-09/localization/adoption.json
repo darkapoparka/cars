@@ -12,7 +12,7 @@
     "scope": "existing-dealer-pilot",
     "sourceCommit": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "reviewed": true,
-    "reviewedAt": "2026-10-15T08:37:10.421Z",
+    "reviewedAt": "2026-10-15T09:37:50.264Z",
     "qualificationOnly": true,
     "approved": false,
     "nativeApproval": false,
@@ -30,32 +30,75 @@
       "sha256": "27c6ce5dd17ee6e1b9f6a5b059a95d5e1dbe4200f61264fc50addeb7af89d984"
     },
     "dealerSourceRepair": {
-      "kind": "explicit-editorial-and-modern-logo-aliases",
-      "parentContextSha256": "3a0363aad0aa60295fe775873036d7fd8498d45ec11e1d15de39c92bfe4c3876",
-      "baseSourceCommit": "7278c981491b22432c2f785f0ab19c7d387aaeb3",
-      "baseSourceTree": "f5e65461197200919f8c76944c34eab933be02aa",
-      "path": "import/src/lib/content/extra-localized.ts",
-      "beforeBlob": "ab1af4557112c94bd12837c4d129ee7c5aeab4cf",
-      "afterBlob": "0527904b3f97e854a201b9a3cb9020907a8b3dcf",
+      "kind": "explicit-selected-mobile-signature-logo-consumers",
+      "parentContextSha256": "daa1163da63f86553af6fca1fcfcbb460bdb2e74f107f5aa302499b70742822e",
+      "baseSourceCommit": "b1efa579a6de24cb1efcd630ace63364d8198e99",
+      "baseSourceTree": "e4fd1a24eb7d2ee590454111f4836f0ff9262814",
+      "path": "mobile/src/lib/showroom-config.ts",
+      "beforeBlob": "5beb9ce342cb1394235acce60b88695c75d07485",
+      "afterBlob": "9e74bf4fc497101d2fba599b89f598b1ad346d9e",
+      "changedDesigns": [
+        "mobile",
+        "karento-best"
+      ],
       "companionPaths": [
         {
-          "path": "modern/packages/marketplace/lead-site.ts",
-          "beforeBlob": "adf10e20ede4d8fe2f5642e9c9e2f3349b389adb",
-          "afterBlob": "b152b6a903f7df00fdf55d81c4ca326416bd62ed"
+          "path": "mobile/src/lib/showroom-config.ts",
+          "beforeBlob": "5beb9ce342cb1394235acce60b88695c75d07485",
+          "afterBlob": "9e74bf4fc497101d2fba599b89f598b1ad346d9e"
+        },
+        {
+          "path": "mobile/src/lib/dealers.ts",
+          "beforeBlob": "52e751685be4aa5f5447620b59622b5404070227",
+          "afterBlob": "7c69e0f6a2efe5d6a4dc3d8e69a39696c3687e8d"
+        },
+        {
+          "path": "karento-best/src/lib/content.ts",
+          "beforeBlob": "09db498ea80dc3059b8cb49abb521102ba533795",
+          "afterBlob": "98b2afff23400c9ee5d0af5c14cd2f92fd75afb7"
+        },
+        {
+          "path": "karento-best/src/lib/data/dealer-detail.ts",
+          "beforeBlob": "ce0d21943c8f81e29440f2cdaf32c3ad92b3936d",
+          "afterBlob": "7ae5049b75072a134352d55f5618aea479fc9f6a"
+        },
+        {
+          "path": "karento-best/src/lib/data/vehicle-detail.ts",
+          "beforeBlob": "4bf7c4c37915111a181d4919c15d96332aedeb22",
+          "afterBlob": "59980e5d2cbefae417a011a20946778e37b874bf"
+        },
+        {
+          "path": ".cars-branding.json",
+          "beforeBlob": "6f8f8c7f136911cb35dc62a3010a8befb817d835",
+          "afterBlob": "09967261c8bdd6430d0b060129f57f65bb705450"
         }
       ],
-      "companionProof": {
-        "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/native13-modern-runtime/eight-modern-alias-repair-proof.json",
-        "sha256": "e6bb81ee497e21000b99317e0833ef7af4f10a1170d213cf1918670301efd9b6"
+      "receiptReseals": [
+        {
+          "path": ".cars-mobile.json",
+          "family": "mobile",
+          "beforeBlob": "bd9ab22949e80fc91d65e74d0db49731e85eec37",
+          "profileSha256Preserved": "cfb309dc13edf2b7997cbcaa1fc24895692c7d6c709ca8d77457f209f537e8b2"
+        },
+        {
+          "path": ".cars-signature.json",
+          "family": "karento-best",
+          "beforeBlob": "1d5ffc0d803f92e41571775b2724f32364fe2b10",
+          "profileSha256Preserved": "cfb309dc13edf2b7997cbcaa1fc24895692c7d6c709ca8d77457f209f537e8b2"
+        }
+      ],
+      "immediateParentOverlay": {
+        "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-native/native-wave-015/published-ten-source-successors.json",
+        "sha256": "e7b40a66d73cd941b85be64ddef3093ee285df288a885fc5709c5627eb6c8c96"
       },
       "proof": {
-        "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/editorial-runtime-repair-20261015/evrocar-varna-09/focused-proof.json",
-        "sha256": "1a6d96ac9bb07a80be04c3ed6cd477e20e85c400f398357451759f8e1bfff3d6"
+        "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/selected-webp-consumer-repair-20261015/evrocar-varna-09/focused-proof.json",
+        "sha256": "aef21d280dafc43e994ae1bfd3573cc7d1262d141edb2f73a1b316dc6fc6104e"
       },
-      "evidenceReuse": "Original immutable six-template QA and source preparation remain provenance; focused exact-source localization proof covers this new dealer edit. No new CI, build, native or hosted success is asserted."
+      "evidenceReuse": "Original immutable six-template QA and source preparation remain provenance; focused exact-source selected Mobile and Signature logo consumer proof covers this new dealer edit. No new CI, build, native or hosted success is asserted."
     }
   },
-  "contextDigest": "c2ac369b060ba022d436da19a5012252e971274e50cd0f129cde6e79ea0b0a85",
+  "contextDigest": "0c2c774e2d44d741b58f62e734b8ef679116f37de50110bf0ffb948327bf8ecc",
   "releases": {
     "auto-best": {
       "status": "qualification",

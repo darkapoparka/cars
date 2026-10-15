@@ -21,7 +21,7 @@ export const capturedDealers: Record<string, CapturedDealer> = {
     "referrals": "",
     "descriptionAccuracy": "",
     "highlights": [],
-    "logo": "/registered-branding/onLight.png",
+    "logo": "/dealer-brand/v2-2fd2080cc1d79c8f/logo-on-light.webp",
     "logoWidth": 128
   },
   "template-demo-auto-best-2": {
@@ -33,7 +33,7 @@ export const capturedDealers: Record<string, CapturedDealer> = {
     "referrals": "",
     "descriptionAccuracy": "",
     "highlights": [],
-    "logo": "/registered-branding/onLight.png",
+    "logo": "/dealer-brand/v2-2fd2080cc1d79c8f/logo-on-light.webp",
     "logoWidth": 128
   },
   "template-demo-auto-best-3": {
@@ -45,7 +45,7 @@ export const capturedDealers: Record<string, CapturedDealer> = {
     "referrals": "",
     "descriptionAccuracy": "",
     "highlights": [],
-    "logo": "/registered-branding/onLight.png",
+    "logo": "/dealer-brand/v2-2fd2080cc1d79c8f/logo-on-light.webp",
     "logoWidth": 128
   },
   "template-demo-auto-best-4": {
@@ -57,7 +57,7 @@ export const capturedDealers: Record<string, CapturedDealer> = {
     "referrals": "",
     "descriptionAccuracy": "",
     "highlights": [],
-    "logo": "/registered-branding/onLight.png",
+    "logo": "/dealer-brand/v2-2fd2080cc1d79c8f/logo-on-light.webp",
     "logoWidth": 128
   },
   "template-demo-auto-best-6": {
@@ -69,7 +69,7 @@ export const capturedDealers: Record<string, CapturedDealer> = {
     "referrals": "",
     "descriptionAccuracy": "",
     "highlights": [],
-    "logo": "/registered-branding/onLight.png",
+    "logo": "/dealer-brand/v2-2fd2080cc1d79c8f/logo-on-light.webp",
     "logoWidth": 128
   },
   "template-demo-auto-best-7": {
@@ -81,7 +81,7 @@ export const capturedDealers: Record<string, CapturedDealer> = {
     "referrals": "",
     "descriptionAccuracy": "",
     "highlights": [],
-    "logo": "/registered-branding/onLight.png",
+    "logo": "/dealer-brand/v2-2fd2080cc1d79c8f/logo-on-light.webp",
     "logoWidth": 128
   },
   "template-demo-auto-best-8": {
@@ -93,7 +93,7 @@ export const capturedDealers: Record<string, CapturedDealer> = {
     "referrals": "",
     "descriptionAccuracy": "",
     "highlights": [],
-    "logo": "/registered-branding/onLight.png",
+    "logo": "/dealer-brand/v2-2fd2080cc1d79c8f/logo-on-light.webp",
     "logoWidth": 128
   }
 };
