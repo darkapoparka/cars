@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "Автосалон М&G auto",
-  "logo": "/dealer-brand/v2-1b42d173387ad5ae/logo-on-light.webp",
+  "logo": "/dealer-brand/v2-b2591ef6dfd59110/logo-on-light.webp",
   "phone": "+359895478847",
   "email": null,
   "address": "бул. Цар Освободител, Варна, България",

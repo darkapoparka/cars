@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "Автосалон М&G auto",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-1b42d173387ad5ae/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-1b42d173387ad5ae/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-1b42d173387ad5ae/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-b2591ef6dfd59110/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-b2591ef6dfd59110/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-b2591ef6dfd59110/logo-on-dark.webp",
     "alt": "Автосалон М&G auto",
-    "favicon": "/dealer-brand/v2-1b42d173387ad5ae/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-b2591ef6dfd59110/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

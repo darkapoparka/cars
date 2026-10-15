@@ -50,7 +50,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Автосалон М&G auto",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-1b42d173387ad5ae/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-b2591ef6dfd59110/logo-on-light.webp"
     },
     "publishedAt": "2026-10-11T09:00:00.000Z",
     "promoted": true

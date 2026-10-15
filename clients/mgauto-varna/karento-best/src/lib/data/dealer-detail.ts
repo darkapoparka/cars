@@ -94,7 +94,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Автосалон М&G auto",
       "location": "бул. Цар Освободител, Варна, България",
-      "avatar": "/dealer-brand/v2-1b42d173387ad5ae/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-b2591ef6dfd59110/logo-on-light.webp",
       "mobile": "0895478847",
       "email": "",
       "whatsapp": "",

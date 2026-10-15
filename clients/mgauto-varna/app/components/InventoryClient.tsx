@@ -126,8 +126,8 @@ export default function InventoryClient({initialEmiMax,initialQuery='',initialBr
     </button>
     {query?<button type="button" aria-label={tx('Clear search')} onClick={()=>setQuery('')} {...stylex.props(searchField.clear,!luxe&&s.compactSearchClear)}><X size={18} aria-hidden="true"/></button>:null}
   </div>}{!home&&!luxe?<div {...stylex.props(s.compactActions)}>
-    <button data-inventory-filter-action type="button" aria-label={filtered?`${tx('Filter')}: ${tx('Applied')}`:tx('Filter')} aria-haspopup="dialog" aria-expanded={overlay==='filters'} onClick={()=>open('filters')} {...stylex.props(pill.control,s.compactActionControl,filtered&&pill.selectedControl)}><span {...stylex.props(pill.surface,pill.soft,pillTone==='grey'&&pill.grey,filtered&&pill.selected,s.compactActionSurface)}><SlidersHorizontal size={20} strokeWidth={2} aria-hidden="true"/></span></button>
-    <button data-inventory-sort-action type="button" aria-label={sortMobileLabel?`${tx('Sort')}: ${sortMobileLabel}`:tx('Sort')} aria-haspopup="dialog" aria-expanded={overlay==='sort'} onClick={()=>open('sort')} {...stylex.props(pill.control,s.compactActionControl,sort!=='default'&&pill.selectedControl)}><span {...stylex.props(pill.surface,pill.soft,pillTone==='grey'&&pill.grey,sort!=='default'&&pill.selected,s.compactActionSurface)}><ArrowUpDown size={20} strokeWidth={2} aria-hidden="true"/></span></button>
+    <button data-inventory-filter-action type="button" aria-label={filtered?`${tx('Filter')}: ${tx('Applied')}`:tx('Filter')} aria-haspopup="dialog" aria-expanded={overlay==='filters'} onClick={()=>open('filters')} {...stylex.props(pill.control,s.compactActionControl,filtered&&pill.selectedControl)}><span {...stylex.props(pill.surface,pill.soft,pillTone==='grey'&&pill.grey,filtered&&pill.selected,s.compactActionSurface,!filtered&&s.compactActionOutline)}><SlidersHorizontal size={20} strokeWidth={2} aria-hidden="true"/></span></button>
+    <button data-inventory-sort-action type="button" aria-label={sortMobileLabel?`${tx('Sort')}: ${sortMobileLabel}`:tx('Sort')} aria-haspopup="dialog" aria-expanded={overlay==='sort'} onClick={()=>open('sort')} {...stylex.props(pill.control,s.compactActionControl,sort!=='default'&&pill.selectedControl)}><span {...stylex.props(pill.surface,pill.soft,pillTone==='grey'&&pill.grey,sort!=='default'&&pill.selected,s.compactActionSurface,sort==='default'&&s.compactActionOutline)}><ArrowUpDown size={20} strokeWidth={2} aria-hidden="true"/></span></button>
   </div>:null}</div>;
  const pageHeader=<PageHeader compact showBack={luxe} title={tx(luxe?'Select collection':'Our cars')} action={<IconButton href="/saved" label={tx('Saved cars')} icon={Heart}/>}/>;
  return <div data-desktop-buy-inventory={home?'':undefined} {...stylex.props(s.screen)}>
@@ -151,7 +151,7 @@ export default function InventoryClient({initialEmiMax,initialQuery='',initialBr
       <div {...stylex.props(s.homeSort)}><DesktopSortMenu value={sort} groups={sortGroups} onChange={setSort} onOpen={()=>setQuickFilter(null)}/></div>
     </div></>:null}
     {luxe?<div {...stylex.props(s.luxeBrands)}><BrandRow compact title={tx("Explore by brand")} onSelect={brand=>setFilters({...filters,brands:[brand]})}/></div>:null}
-    {results.length?<div {...stylex.props(s.grid,home&&s.homeGrid)}>{results.map((vehicle,index)=><VehicleCard key={vehicle.slug} vehicle={vehicle} desktopTile imagePriority={index===0} headingLevel={2}/>)}</div>:<div {...stylex.props(s.empty)}><Search size={32}/><h2>{tx("No cars match these filters")}</h2><p>{tx("Reset the filters or try a broader search.")}</p><button type="button" onClick={reset} {...stylex.props(s.reset)}>{tx("Reset filters")}</button></div>}
+    {results.length?<div {...stylex.props(s.grid,home&&s.homeGrid)}>{results.map((vehicle,index)=><VehicleCard key={vehicle.slug} vehicle={vehicle} desktopTile mobileFlat={!home&&!luxe} imagePriority={index===0} headingLevel={2}/>)}</div>:<div {...stylex.props(s.empty)}><Search size={32}/><h2>{tx("No cars match these filters")}</h2><p>{tx("Reset the filters or try a broader search.")}</p><button type="button" onClick={reset} {...stylex.props(s.reset)}>{tx("Reset filters")}</button></div>}
     {dealer.inventoryNotice?<p {...stylex.props(s.inventoryNotice)}>{tx(dealer.inventoryNotice)}</p>:null}
    </section>
   </main></LandingContentFrame>
@@ -204,12 +204,13 @@ const s=stylex.create({
  phoneHeading:{display:{[media.mobile]:'block',default:'none'}},
  topInner:{maxWidth:$.content,marginInline:'auto',paddingTop:4,paddingInline:{[media.mobile]:12,default:28}},
  searchFirst:{display:{[media.mobile]:'flex',default:'block'},alignItems:'center',gap:8,position:{[media.mobile]:'sticky',default:'static'},top:{[media.mobile]:0,default:'auto'},zIndex:{[media.mobile]:65,default:'auto'},paddingTop:{[media.mobile]:'calc(4px + env(safe-area-inset-top))',default:4},paddingBottom:{[media.mobile]:4,default:0},backgroundColor:$.surface},
- compactSearchField:{flexGrow:{[media.mobile]:1,default:0},flexBasis:{[media.mobile]:0,default:'auto'},height:{[media.mobile]:44,default:'auto'},minHeight:44,minWidth:0},
+ compactSearchField:{flexGrow:{[media.mobile]:1,default:0},flexBasis:{[media.mobile]:0,default:'auto'},height:{[media.mobile]:44,default:'auto'},minHeight:44,minWidth:0,backgroundColor:{[media.mobile]:$.surface,default:$.surfaceAlt},boxShadow:{[media.mobile]:'inset 0 0 0 1px #d7d7dc',default:'none'}},
  compactSearchEntry:{minHeight:{[media.mobile]:44,default:40}},
  compactSearchClear:{width:{[media.mobile]:44,default:42},height:{[media.mobile]:44,default:42}},
  compactActions:{display:{[media.mobile]:'flex',default:'none'},flexShrink:0,gap:8},
  compactActionControl:{width:44,height:44},
  compactActionSurface:{width:40,height:40,paddingInline:0},
+ compactActionOutline:{backgroundColor:{default:$.surface,':hover':$.surfaceAlt},boxShadow:'inset 0 0 0 1px #d7d7dc'},
  phoneSearchPrompt:{display:{[media.mobile]:'inline',default:'none'}},
  wideSearchPrompt:{display:{[media.mobile]:'none',default:'inline'}},
  wideActions:{display:{[media.mobile]:'none',default:'contents'}},
