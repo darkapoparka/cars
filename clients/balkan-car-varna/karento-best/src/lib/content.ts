@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "BalkanCarVarna",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-cd481bfb8ed89f8c/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-cd481bfb8ed89f8c/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-cd481bfb8ed89f8c/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-61bdc4dc5ce603e8/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-61bdc4dc5ce603e8/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-61bdc4dc5ce603e8/logo-on-dark.webp",
     "alt": "BalkanCarVarna",
-    "favicon": "/dealer-brand/v2-cd481bfb8ed89f8c/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-61bdc4dc5ce603e8/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

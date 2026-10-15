@@ -74,7 +74,7 @@ export const DesktopCategoryPickerTrigger = ({
           "h-[var(--control-height-search)] w-52 shrink-0 rounded-xl bg-control",
         appearance === "hero" && "w-44",
         open &&
-          "bg-brand text-brand-foreground hover:bg-[var(--lead-site-accent-active)] active:bg-[var(--lead-site-accent-active)] active:text-[var(--brand-active-foreground)]"
+          "bg-primary text-primary-foreground hover:bg-[var(--primary-active)] active:bg-[var(--primary-active)] active:text-[var(--primary-active-foreground)]"
       )}
       data-slot="desktop-search-category"
       type="button"
@@ -84,7 +84,7 @@ export const DesktopCategoryPickerTrigger = ({
         <span
           className={cn(
             "block font-semibold text-meta",
-            open ? "text-brand-foreground/80" : "text-foreground"
+            open ? "text-primary-foreground/80" : "text-foreground"
           )}
         >
           {localizeMarketplace(isBg, "Категория", "Category")}
@@ -93,7 +93,7 @@ export const DesktopCategoryPickerTrigger = ({
           className={cn(
             "mt-1 flex items-center gap-2 truncate font-normal text-compact-control transition-colors",
             open
-              ? "text-brand-foreground group-hover:text-brand-foreground"
+              ? "text-primary-foreground group-hover:text-primary-foreground"
               : "text-muted-foreground group-hover:text-foreground"
           )}
         >
@@ -112,7 +112,7 @@ export const DesktopCategoryPickerTrigger = ({
         className={cn(
           "size-4 opacity-50 transition-transform duration-[var(--duration-interaction)] group-hover:opacity-80",
           open &&
-            "rotate-180 text-brand-foreground opacity-100 group-hover:opacity-100"
+            "rotate-180 text-primary-foreground opacity-100 group-hover:opacity-100"
         )}
       />
     </Button>
@@ -333,7 +333,7 @@ export const DesktopDiscoverySearch = ({
           <Button
             aria-label={localizeMarketplace(isBg, "Търси", "Search")}
             className={cn(
-              "bg-brand font-semibold text-brand-foreground shadow-none hover:bg-[var(--lead-site-accent-hover)] hover:text-[var(--brand-hover-foreground)]",
+              "bg-primary font-semibold text-primary-foreground shadow-none hover:bg-[var(--primary-hover)] hover:text-[var(--primary-hover-foreground)]",
               compact
                 ? "size-[var(--desktop-submit-size)] rounded-lg"
                 : "size-12 rounded-full"

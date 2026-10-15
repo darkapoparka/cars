@@ -49,7 +49,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "BalkanCarVarna",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-cd481bfb8ed89f8c/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-61bdc4dc5ce603e8/logo-on-light.webp"
     },
     "publishedAt": "2026-10-12T09:00:00.000Z",
     "promoted": true
@@ -101,7 +101,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "BalkanCarVarna",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-cd481bfb8ed89f8c/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-61bdc4dc5ce603e8/logo-on-light.webp"
     },
     "publishedAt": "2026-10-12T09:00:00.000Z",
     "promoted": true

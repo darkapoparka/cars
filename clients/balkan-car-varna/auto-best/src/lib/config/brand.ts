@@ -33,6 +33,6 @@ export const brand = {
   addressLine,
   address: "бул. Цар Освободител 548 (на светофара под Джъмбо), Варна, България",
   appointment: "Потвърдете работното време директно с автокъщата.",
-  logo: "/dealer-brand/v2-cd481bfb8ed89f8c/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/v2-cd481bfb8ed89f8c/logo-on-dark.webp"
+  logo: "/dealer-brand/v2-61bdc4dc5ce603e8/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-61bdc4dc5ce603e8/logo-on-dark.webp"
 } as const satisfies BrandConfig;

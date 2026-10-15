@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "BalkanCarVarna",
-  "logo": "/dealer-brand/v2-cd481bfb8ed89f8c/logo-on-light.webp",
+  "logo": "/dealer-brand/v2-61bdc4dc5ce603e8/logo-on-light.webp",
   "phone": "+359888513460",
   "email": null,
   "address": "бул. Цар Освободител 548 (на светофара под Джъмбо), Варна, България",

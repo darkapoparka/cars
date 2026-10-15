@@ -86,7 +86,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "BalkanCarVarna",
       "location": "бул. Цар Освободител 548 (на светофара под Джъмбо), Варна, България",
-      "avatar": "/dealer-brand/v2-cd481bfb8ed89f8c/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-61bdc4dc5ce603e8/logo-on-light.webp",
       "mobile": "0888513460, 0888706421",
       "email": "",
       "whatsapp": "",
@@ -188,7 +188,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "BalkanCarVarna",
       "location": "бул. Цар Освободител 548 (на светофара под Джъмбо), Варна, България",
-      "avatar": "/dealer-brand/v2-cd481bfb8ed89f8c/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-61bdc4dc5ce603e8/logo-on-light.webp",
       "mobile": "0888513460, 0888706421",
       "email": "",
       "whatsapp": "",
