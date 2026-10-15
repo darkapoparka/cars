@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "АСКО 96",
-  "logo": "/dealer-brand/v2-7282df2f20025b9b/logo-on-light.webp",
+  "logo": "/dealer-brand/v2-39c85dfe8dcecd9c/logo-on-light.webp",
   "phone": "+359899769696",
   "email": "askogroup@abv.bg",
   "address": "бул. „Ботевградско шосе“ 300",

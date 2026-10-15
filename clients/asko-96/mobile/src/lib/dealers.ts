@@ -21,7 +21,7 @@ export const capturedDealers: Record<string, CapturedDealer> = {
     "referrals": "",
     "descriptionAccuracy": "",
     "highlights": [],
-    "logo": "/dealer-brand/v2-7282df2f20025b9b/logo-on-light.webp",
+    "logo": "/dealer-brand/v2-39c85dfe8dcecd9c/logo-on-light.webp",
     "logoWidth": 128
   },
   "11788418194310981": {
@@ -33,7 +33,7 @@ export const capturedDealers: Record<string, CapturedDealer> = {
     "referrals": "",
     "descriptionAccuracy": "",
     "highlights": [],
-    "logo": "/dealer-brand/v2-7282df2f20025b9b/logo-on-light.webp",
+    "logo": "/dealer-brand/v2-39c85dfe8dcecd9c/logo-on-light.webp",
     "logoWidth": 128
   },
   "21788361724092359": {
@@ -45,7 +45,7 @@ export const capturedDealers: Record<string, CapturedDealer> = {
     "referrals": "",
     "descriptionAccuracy": "",
     "highlights": [],
-    "logo": "/dealer-brand/v2-7282df2f20025b9b/logo-on-light.webp",
+    "logo": "/dealer-brand/v2-39c85dfe8dcecd9c/logo-on-light.webp",
     "logoWidth": 128
   },
   "21788340495159936": {
@@ -57,7 +57,7 @@ export const capturedDealers: Record<string, CapturedDealer> = {
     "referrals": "",
     "descriptionAccuracy": "",
     "highlights": [],
-    "logo": "/dealer-brand/v2-7282df2f20025b9b/logo-on-light.webp",
+    "logo": "/dealer-brand/v2-39c85dfe8dcecd9c/logo-on-light.webp",
     "logoWidth": 128
   },
   "11788268077076934": {
@@ -69,7 +69,7 @@ export const capturedDealers: Record<string, CapturedDealer> = {
     "referrals": "",
     "descriptionAccuracy": "",
     "highlights": [],
-    "logo": "/dealer-brand/v2-7282df2f20025b9b/logo-on-light.webp",
+    "logo": "/dealer-brand/v2-39c85dfe8dcecd9c/logo-on-light.webp",
     "logoWidth": 128
   },
   "21787916905998235": {
@@ -81,7 +81,7 @@ export const capturedDealers: Record<string, CapturedDealer> = {
     "referrals": "",
     "descriptionAccuracy": "",
     "highlights": [],
-    "logo": "/dealer-brand/v2-7282df2f20025b9b/logo-on-light.webp",
+    "logo": "/dealer-brand/v2-39c85dfe8dcecd9c/logo-on-light.webp",
     "logoWidth": 128
   },
   "11787665314733489": {
@@ -93,7 +93,7 @@ export const capturedDealers: Record<string, CapturedDealer> = {
     "referrals": "",
     "descriptionAccuracy": "",
     "highlights": [],
-    "logo": "/dealer-brand/v2-7282df2f20025b9b/logo-on-light.webp",
+    "logo": "/dealer-brand/v2-39c85dfe8dcecd9c/logo-on-light.webp",
     "logoWidth": 128
   },
   "11787664720233597": {
@@ -105,7 +105,7 @@ export const capturedDealers: Record<string, CapturedDealer> = {
     "referrals": "",
     "descriptionAccuracy": "",
     "highlights": [],
-    "logo": "/dealer-brand/v2-7282df2f20025b9b/logo-on-light.webp",
+    "logo": "/dealer-brand/v2-39c85dfe8dcecd9c/logo-on-light.webp",
     "logoWidth": 128
   },
   "11787318670316786": {
@@ -117,7 +117,7 @@ export const capturedDealers: Record<string, CapturedDealer> = {
     "referrals": "",
     "descriptionAccuracy": "",
     "highlights": [],
-    "logo": "/dealer-brand/v2-7282df2f20025b9b/logo-on-light.webp",
+    "logo": "/dealer-brand/v2-39c85dfe8dcecd9c/logo-on-light.webp",
     "logoWidth": 128
   },
   "11787292903991160": {
@@ -129,7 +129,7 @@ export const capturedDealers: Record<string, CapturedDealer> = {
     "referrals": "",
     "descriptionAccuracy": "",
     "highlights": [],
-    "logo": "/dealer-brand/v2-7282df2f20025b9b/logo-on-light.webp",
+    "logo": "/dealer-brand/v2-39c85dfe8dcecd9c/logo-on-light.webp",
     "logoWidth": 128
   },
   "11787147161945133": {
@@ -141,7 +141,7 @@ export const capturedDealers: Record<string, CapturedDealer> = {
     "referrals": "",
     "descriptionAccuracy": "",
     "highlights": [],
-    "logo": "/dealer-brand/v2-7282df2f20025b9b/logo-on-light.webp",
+    "logo": "/dealer-brand/v2-39c85dfe8dcecd9c/logo-on-light.webp",
     "logoWidth": 128
   },
   "21787145927135700": {
@@ -153,7 +153,7 @@ export const capturedDealers: Record<string, CapturedDealer> = {
     "referrals": "",
     "descriptionAccuracy": "",
     "highlights": [],
-    "logo": "/dealer-brand/v2-7282df2f20025b9b/logo-on-light.webp",
+    "logo": "/dealer-brand/v2-39c85dfe8dcecd9c/logo-on-light.webp",
     "logoWidth": 128
   },
   "21786786821064251": {
@@ -165,7 +165,7 @@ export const capturedDealers: Record<string, CapturedDealer> = {
     "referrals": "",
     "descriptionAccuracy": "",
     "highlights": [],
-    "logo": "/dealer-brand/v2-7282df2f20025b9b/logo-on-light.webp",
+    "logo": "/dealer-brand/v2-39c85dfe8dcecd9c/logo-on-light.webp",
     "logoWidth": 128
   },
   "21786778589147860": {
@@ -177,7 +177,7 @@ export const capturedDealers: Record<string, CapturedDealer> = {
     "referrals": "",
     "descriptionAccuracy": "",
     "highlights": [],
-    "logo": "/dealer-brand/v2-7282df2f20025b9b/logo-on-light.webp",
+    "logo": "/dealer-brand/v2-39c85dfe8dcecd9c/logo-on-light.webp",
     "logoWidth": 128
   },
   "21786540153108868": {
@@ -189,7 +189,7 @@ export const capturedDealers: Record<string, CapturedDealer> = {
     "referrals": "",
     "descriptionAccuracy": "",
     "highlights": [],
-    "logo": "/dealer-brand/v2-7282df2f20025b9b/logo-on-light.webp",
+    "logo": "/dealer-brand/v2-39c85dfe8dcecd9c/logo-on-light.webp",
     "logoWidth": 128
   },
   "11786173977658651": {
@@ -201,7 +201,7 @@ export const capturedDealers: Record<string, CapturedDealer> = {
     "referrals": "",
     "descriptionAccuracy": "",
     "highlights": [],
-    "logo": "/dealer-brand/v2-7282df2f20025b9b/logo-on-light.webp",
+    "logo": "/dealer-brand/v2-39c85dfe8dcecd9c/logo-on-light.webp",
     "logoWidth": 128
   }
 };

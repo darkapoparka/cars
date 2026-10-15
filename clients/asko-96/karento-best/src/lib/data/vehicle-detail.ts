@@ -155,7 +155,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "АСКО 96",
   "location": "бул. „Ботевградско шосе“ 300",
-  "avatar": "/dealer-brand/v2-7282df2f20025b9b/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-39c85dfe8dcecd9c/logo-on-light.webp",
   "mobile": "0899 76 96 96",
   "email": "askogroup@abv.bg",
   "whatsapp": "",

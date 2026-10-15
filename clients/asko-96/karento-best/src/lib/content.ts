@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "АСКО 96",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-7282df2f20025b9b/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-7282df2f20025b9b/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-7282df2f20025b9b/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-39c85dfe8dcecd9c/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-39c85dfe8dcecd9c/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-39c85dfe8dcecd9c/logo-on-dark.webp",
     "alt": "АСКО 96",
-    "favicon": "/dealer-brand/v2-7282df2f20025b9b/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-39c85dfe8dcecd9c/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

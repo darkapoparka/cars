@@ -47,7 +47,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "АСКО 96",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/v2-7282df2f20025b9b/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-39c85dfe8dcecd9c/logo-on-light.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": true
@@ -109,7 +109,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "АСКО 96",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/v2-7282df2f20025b9b/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-39c85dfe8dcecd9c/logo-on-light.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": true
@@ -171,7 +171,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "АСКО 96",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/v2-7282df2f20025b9b/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-39c85dfe8dcecd9c/logo-on-light.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": true
@@ -233,7 +233,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "АСКО 96",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/v2-7282df2f20025b9b/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-39c85dfe8dcecd9c/logo-on-light.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false
@@ -295,7 +295,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "АСКО 96",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/v2-7282df2f20025b9b/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-39c85dfe8dcecd9c/logo-on-light.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false
@@ -357,7 +357,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "АСКО 96",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/v2-7282df2f20025b9b/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-39c85dfe8dcecd9c/logo-on-light.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false
@@ -418,7 +418,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "АСКО 96",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/v2-7282df2f20025b9b/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-39c85dfe8dcecd9c/logo-on-light.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false
@@ -480,7 +480,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "АСКО 96",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/v2-7282df2f20025b9b/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-39c85dfe8dcecd9c/logo-on-light.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false
@@ -530,7 +530,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "АСКО 96",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/v2-7282df2f20025b9b/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-39c85dfe8dcecd9c/logo-on-light.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false
@@ -580,7 +580,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "АСКО 96",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/v2-7282df2f20025b9b/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-39c85dfe8dcecd9c/logo-on-light.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false
@@ -642,7 +642,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "АСКО 96",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/v2-7282df2f20025b9b/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-39c85dfe8dcecd9c/logo-on-light.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false
@@ -704,7 +704,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "АСКО 96",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/v2-7282df2f20025b9b/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-39c85dfe8dcecd9c/logo-on-light.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false
@@ -766,7 +766,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "АСКО 96",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/v2-7282df2f20025b9b/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-39c85dfe8dcecd9c/logo-on-light.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false
@@ -828,7 +828,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "АСКО 96",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/v2-7282df2f20025b9b/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-39c85dfe8dcecd9c/logo-on-light.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false
@@ -878,7 +878,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "АСКО 96",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/v2-7282df2f20025b9b/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-39c85dfe8dcecd9c/logo-on-light.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false
@@ -940,7 +940,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "АСКО 96",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/v2-7282df2f20025b9b/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-39c85dfe8dcecd9c/logo-on-light.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false

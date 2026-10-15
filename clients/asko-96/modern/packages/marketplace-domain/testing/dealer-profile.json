@@ -27,9 +27,9 @@
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=%D0%90%D0%A1%D0%9A%D0%9E%2096%2C%20%D0%91%D0%BE%D1%82%D0%B5%D0%B2%D0%B3%D1%80%D0%B0%D0%B4%D1%81%D0%BA%D0%BE%20%D1%88%D0%BE%D1%81%D0%B5%20300%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F",
     "mapsEmbedUrl": "https://maps.google.com/maps?q=%D0%90%D0%A1%D0%9A%D0%9E%2096%2C%20%D0%91%D0%BE%D1%82%D0%B5%D0%B2%D0%B3%D1%80%D0%B0%D0%B4%D1%81%D0%BA%D0%BE%20%D1%88%D0%BE%D1%81%D0%B5%20300%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F&output=embed",
     "accent": "#d7ae35",
-    "logo": "/dealer-brand/v2-7282df2f20025b9b/logo-on-light.webp",
-    "logoLight": "/dealer-brand/v2-7282df2f20025b9b/logo-on-light.webp",
-    "logoDark": "/dealer-brand/v2-7282df2f20025b9b/logo-on-dark.webp",
+    "logo": "/dealer-brand/v2-39c85dfe8dcecd9c/logo-on-light.webp",
+    "logoLight": "/dealer-brand/v2-39c85dfe8dcecd9c/logo-on-light.webp",
+    "logoDark": "/dealer-brand/v2-39c85dfe8dcecd9c/logo-on-dark.webp",
     "socialLinks": {
       "facebook": "https://www.facebook.com/p/Asko96-100050328800477/",
       "instagram": "",
@@ -1158,19 +1158,19 @@
     "originalSha256": "f71f4869c0f88d3c3e8f11677a91d432f6b8fc7561014a4990baf0b78b43c3fd",
     "assets": {
       "onLight": {
-        "publicPath": "/dealer-brand/v2-7282df2f20025b9b/logo-on-light.webp",
-        "sha256": "28d6168c821a176ce47b42e5fc34a42ca50148fc3f9f5b52d8bfe0f89a408fc8",
-        "bytes": 158996
+        "publicPath": "/dealer-brand/v2-39c85dfe8dcecd9c/logo-on-light.webp",
+        "sha256": "7a6b04a19fa2841f1b939c838fb7b05c5933348c49691699be96d23e7814e4b3",
+        "bytes": 223250
       },
       "onDark": {
-        "publicPath": "/dealer-brand/v2-7282df2f20025b9b/logo-on-dark.webp",
-        "sha256": "0ef3f403593d0fcea0fc2fb704bc1b6df1b92bee926ff4761a540516b87bb558",
-        "bytes": 43766
+        "publicPath": "/dealer-brand/v2-39c85dfe8dcecd9c/logo-on-dark.webp",
+        "sha256": "9aa226fac376187b630db6d9897c60f015007b1597548edcd1137c1ce901b681",
+        "bytes": 257846
       },
       "onAccent": {
-        "publicPath": "/dealer-brand/v2-7282df2f20025b9b/logo-on-accent.webp",
-        "sha256": "0ef3f403593d0fcea0fc2fb704bc1b6df1b92bee926ff4761a540516b87bb558",
-        "bytes": 43766
+        "publicPath": "/dealer-brand/v2-39c85dfe8dcecd9c/logo-on-accent.webp",
+        "sha256": "f0835d8beb025a54df56477d2a0b10e39d11a724e6100d4225df6a372f5ad3f7",
+        "bytes": 96118
       }
     },
     "preparedAt": "2026-09-19T04:59:03.076Z",

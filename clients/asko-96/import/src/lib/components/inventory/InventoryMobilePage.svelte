@@ -1313,10 +1313,22 @@
 		color: var(--bc-ink);
 	}
 	.daynight-inventory-mobile__search-field {
+		position: relative;
+		isolation: isolate;
 		width: 100%;
-		height: var(--bc-control-height-standard);
+		height: var(--bc-mobile-control-hit-size);
+		background: transparent;
 		cursor: pointer;
 		text-align: left;
+	}
+	.daynight-inventory-mobile__search-field::before {
+		position: absolute;
+		z-index: -1;
+		inset: var(--bc-mobile-control-inset) 0;
+		border-radius: inherit;
+		background: var(--bc-white);
+		content: '';
+		pointer-events: none;
 	}
 	.daynight-inventory-mobile__search-field :global(svg),
 	.daynight-inventory-mobile-drawer__search-box :global(svg) {
@@ -1324,6 +1336,10 @@
 		height: var(--bc-control-icon-size-standard);
 		flex: 0 0 auto;
 		color: var(--bc-copy);
+	}
+	.daynight-inventory-mobile__search-field :global(svg) {
+		width: var(--bc-mobile-control-glyph-size);
+		height: var(--bc-mobile-control-glyph-size);
 	}
 	.daynight-inventory-mobile__search-label {
 		display: flex;
