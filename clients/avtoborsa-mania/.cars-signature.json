@@ -5,19 +5,19 @@
   "name": "АВТОБОРСА МАНИЯ",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/karento-best",
-    "digest": "83056967764a686f3737d74b86c5db51c1385a50184853f50ec4ade80c1dd44f",
-    "tree": "5f6eec8efb2f9e99819f7f0c2f743d18fff7b134"
+    "digest": "be17ef365e3272753df6e50826b139a45bfc32b8fef54ddcb86d977ad16280a9",
+    "tree": "8c5ac869c7fd15e19a80c660343fc64b20a2bad9"
   },
-  "sourceDigest": "8d9d57a153966f7d14b4e23cbaeaf9d61608e5d05d68fb66f99dbeb25fe40f97",
+  "sourceDigest": "a98b0f5292eb39ff88ebd988c1ef42e159046c0c5fee1bec901541356cdd2be3",
   "inventory": {
     "mode": "illustrative-not-dealer-stock",
     "count": 7,
     "observedAt": ""
   },
   "personalization": {
-    "profileSha256": "97ac5035064ceb74259b36c99f157a0ad73577fecdcf17f5ab5e23bf9381f8ed",
+    "profileSha256": "738c42a1c42c750927b75afdb0fc7357b5ecdcff2433ef26258f085d84852d76",
     "logoPaths": [
       "/registered-branding/onLight.png",
       "/registered-branding/onDark.png"

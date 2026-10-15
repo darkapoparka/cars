@@ -16,11 +16,9 @@ type WordmarkTone = "original" | "light" | "dark";
 function DealerMobileWordmark({
   clean,
   wordmarkTone,
-  logoSource,
 }: {
   clean: boolean;
   wordmarkTone: WordmarkTone;
-  readonly logoSource: string;
 }) {
   if (publicSite.identity.desktopPreview) {
     return (
@@ -33,15 +31,23 @@ function DealerMobileWordmark({
       />
     );
   }
+  // Tone is the painted logo surface, not the layout-only "clean" flag.
+  // Dark chrome and its black logo badge use the committed inverse raster.
+  const onDarkSurface =
+    wordmarkTone === "light" || (wordmarkTone === "original" && !clean);
+  const logoSrc = onDarkSurface
+    ? (leadSite.logoInversePath ?? leadSite.logoPath)
+    : leadSite.logoPath;
+
   return (
-    <span className="relative block aspect-[1780/512] w-[144px] max-w-[48vw]">
+    <span className="relative block h-10 w-[176px] max-w-[48vw]">
       <Image
         alt={leadSite.name}
         className="h-full w-full object-contain"
         height={512}
         priority
-        sizes="(max-width: 1023px) 144px, 0px"
-        src={logoSource}
+        sizes="(max-width: 1023px) 176px, 0px"
+        src={logoSrc}
         width={1780}
       />
     </span>
@@ -67,8 +73,6 @@ export const DealerMobileBrandBar = ({
 }) => {
   const light = tone === "light";
   const clean = tone === "clean";
-  const useOnLight = wordmarkTone === "dark" || (wordmarkTone === "original" && light);
-  const logoSource = useOnLight ? leadSite.logoOnLight : leadSite.logoOnDark;
 
   return (
     <div
@@ -97,12 +101,13 @@ export const DealerMobileBrandBar = ({
       <Link
         aria-label={isBg ? "Начало" : "Home"}
         className={cn(
-          "mx-auto flex min-h-11 min-w-0 items-center rounded-lg focus-visible:outline-2 focus-visible:outline-[var(--lead-site-accent-bright)] focus-visible:outline-offset-2"
+          "mx-auto flex min-h-11 min-w-0 items-center rounded-lg focus-visible:outline-2 focus-visible:outline-[var(--lead-site-accent-bright)] focus-visible:outline-offset-2",
+          light && "h-10 bg-black px-2.5"
         )}
         href={getLocalizedPublicPath(locale, "/")}
         onClick={onNavigate}
       >
-        <DealerMobileWordmark clean={clean} wordmarkTone={wordmarkTone} logoSource={logoSource} />
+        <DealerMobileWordmark clean={clean} wordmarkTone={wordmarkTone} />
       </Link>
 
       {clean

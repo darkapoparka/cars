@@ -2,16 +2,16 @@
   "schemaVersion": 1,
   "dealer": "avtoborsa-mania",
   "kind": "personalized-source-candidate-not-an-approved-release",
-  "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
-  "candidateSourceDigest": "3638b32c8e4c37dd0bc5cb57a11f42839673b08b9ff6ce36567581fd425758f3",
+  "sourceRevision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+  "candidateSourceDigest": "c5d70558a722bb938ce47ce09b5ab7bcf8510fe782dedc24e9bb8626f65c99bd",
   "qualificationContextPath": ".client/native-qualification-context.json",
-  "qualificationContextSha256": "85a6f9bd169c248b91aecea08eb20ff019657e9021b94e19bf703ad8b3fd6b08",
+  "qualificationContextSha256": "0fcccf5e86dea09b9f664df95dd25fc64dbbbeab8dc62d538cd06310adbf9df2",
   "qualificationLockPath": ".client/native-qualification-lock.json",
-  "qualificationLockSha256": "94f1fd50092671ce568b5f7872d91ae3233403a3079a40ce6190f0d47f095cd5",
+  "qualificationLockSha256": "04633129df9e75d6cd62deeac9125b279957789d75f57cdb0b243ef61bfc3e7e",
   "sourceDeltaReview": {
-    "reference": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
-    "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975",
-    "reviewedAt": "2026-10-11T21:04:02.173Z"
+    "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
+    "sha256": "43cb6876e815a2a6b866f1dadd304236de4ae58c05fe65c2ab62a23506ee7ce9",
+    "reviewedAt": "2026-10-14T23:55:37.398Z"
   },
   "nativeApproval": false,
   "hostedApproval": false

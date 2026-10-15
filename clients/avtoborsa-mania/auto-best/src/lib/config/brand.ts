@@ -33,6 +33,6 @@ export const brand = {
   addressLine,
   address: "бул. Цар Освободител, район Владислав Варненчик",
   appointment: "Не е публикувано работно време. Потвърдете удобния час и точния вход по телефона.",
-  logo: "/registered-branding/onLight.png",
-  logoOnDark: "/registered-branding/onDark.png"
+  logo: "/dealer-brand/v2-a83417b07db78ad1/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-a83417b07db78ad1/logo-on-dark.webp"
 } as const satisfies BrandConfig;
