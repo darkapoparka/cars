@@ -49,7 +49,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Square One Motors",
       "verificationStatus": "unverified",
       "city": "Birmingham",
-      "logoUrl": "/dealer-brand/logo.webp"
+      "logoUrl": "/dealer-brand/v2-430f237b2ede396d/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": true
@@ -100,7 +100,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Square One Motors",
       "verificationStatus": "unverified",
       "city": "Birmingham",
-      "logoUrl": "/dealer-brand/logo.webp"
+      "logoUrl": "/dealer-brand/v2-430f237b2ede396d/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": true
@@ -151,7 +151,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Square One Motors",
       "verificationStatus": "unverified",
       "city": "Birmingham",
-      "logoUrl": "/dealer-brand/logo.webp"
+      "logoUrl": "/dealer-brand/v2-430f237b2ede396d/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": true
@@ -202,7 +202,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Square One Motors",
       "verificationStatus": "unverified",
       "city": "Birmingham",
-      "logoUrl": "/dealer-brand/logo.webp"
+      "logoUrl": "/dealer-brand/v2-430f237b2ede396d/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -253,7 +253,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Square One Motors",
       "verificationStatus": "unverified",
       "city": "Birmingham",
-      "logoUrl": "/dealer-brand/logo.webp"
+      "logoUrl": "/dealer-brand/v2-430f237b2ede396d/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -304,7 +304,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Square One Motors",
       "verificationStatus": "unverified",
       "city": "Birmingham",
-      "logoUrl": "/dealer-brand/logo.webp"
+      "logoUrl": "/dealer-brand/v2-430f237b2ede396d/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -355,364 +355,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Square One Motors",
       "verificationStatus": "unverified",
       "city": "Birmingham",
-      "logoUrl": "/dealer-brand/logo.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1003",
-    "slug": "ford-fiesta-2015-at-sample-1",
-    "category": "car",
-    "dealerOrgId": "dealer-birmingham-square-one-motors",
-    "status": "active",
-    "title": "Ford Fiesta 1.25 Zetec Euro 6 5dr",
-    "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
-    "price": {
-      "amount": 4000,
-      "currency": "GBP"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer-stock/hatchback.webp",
-        "alt": "Ford Fiesta 1.25 Zetec Euro 6 5dr"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Birmingham",
-      "region": "Birmingham",
-      "country": "United Kingdom"
-    },
-    "spec": {
-      "make": "Ford",
-      "model": "Fiesta",
-      "trim": "1.25 Zetec Euro 6 5dr",
-      "year": 2015,
-      "bodyType": "hatchback",
-      "fuelType": "gasoline",
-      "transmission": "manual",
-      "mileageValue": 74030,
-      "mileageUnit": "km",
-      "mileageSourceValue": 46000,
-      "mileageSourceUnit": "mi"
-    },
-    "seller": {
-      "id": "dealer-birmingham-square-one-motors",
-      "type": "dealer",
-      "displayName": "Square One Motors",
-      "verificationStatus": "unverified",
-      "city": "Birmingham",
-      "logoUrl": "/dealer-brand/logo.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1004",
-    "slug": "volkswagen-golf-2013-at-sample-2",
-    "category": "car",
-    "dealerOrgId": "dealer-birmingham-square-one-motors",
-    "status": "active",
-    "title": "Volkswagen Golf 1.6 TDI BlueMotion Tech S Euro 5 (s/s) 5dr",
-    "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
-    "price": {
-      "amount": 2895,
-      "currency": "GBP"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer-stock/hatchback.webp",
-        "alt": "Volkswagen Golf 1.6 TDI BlueMotion Tech S Euro 5 (s/s) 5dr"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Birmingham",
-      "region": "Birmingham",
-      "country": "United Kingdom"
-    },
-    "spec": {
-      "make": "Volkswagen",
-      "model": "Golf",
-      "trim": "1.6 TDI BlueMotion Tech S Euro 5 (s/s) 5dr",
-      "year": 2013,
-      "bodyType": "hatchback",
-      "fuelType": "diesel",
-      "transmission": "manual",
-      "mileageValue": 245240,
-      "mileageUnit": "km",
-      "mileageSourceValue": 152385,
-      "mileageSourceUnit": "mi"
-    },
-    "seller": {
-      "id": "dealer-birmingham-square-one-motors",
-      "type": "dealer",
-      "displayName": "Square One Motors",
-      "verificationStatus": "unverified",
-      "city": "Birmingham",
-      "logoUrl": "/dealer-brand/logo.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1005",
-    "slug": "ford-transit-2008-at-sample-3",
-    "category": "van",
-    "dealerOrgId": "dealer-birmingham-square-one-motors",
-    "status": "active",
-    "title": "Ford Transit 2.2 TDCi 280 Duratorq Tourneo Limited Minibus 5dr Diesel Manual L1 H1 (113 bhp)",
-    "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
-    "price": {
-      "amount": 2500,
-      "currency": "GBP"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer-stock/van.webp",
-        "alt": "Ford Transit 2.2 TDCi 280 Duratorq Tourneo Limited Minibus 5dr Diesel Manual L1 H1 (113 bhp)"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Birmingham",
-      "region": "Birmingham",
-      "country": "United Kingdom"
-    },
-    "spec": {
-      "make": "Ford",
-      "model": "Transit",
-      "trim": "2.2 TDCi 280 Duratorq Tourneo Limited Minibus 5dr Diesel Manual L1 H1 (113 bhp)",
-      "year": 2008,
-      "bodyType": "van",
-      "fuelType": "diesel",
-      "transmission": "manual",
-      "mileageValue": 255142,
-      "mileageUnit": "km",
-      "mileageSourceValue": 158538,
-      "mileageSourceUnit": "mi"
-    },
-    "seller": {
-      "id": "dealer-birmingham-square-one-motors",
-      "type": "dealer",
-      "displayName": "Square One Motors",
-      "verificationStatus": "unverified",
-      "city": "Birmingham",
-      "logoUrl": "/dealer-brand/logo.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1006",
-    "slug": "bmw-z4-2004-at-sample-4",
-    "category": "car",
-    "dealerOrgId": "dealer-birmingham-square-one-motors",
-    "status": "active",
-    "title": "BMW Z4 2.2i SE Auto Euro 3 2dr",
-    "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
-    "price": {
-      "amount": 2495,
-      "currency": "GBP"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer-stock/convertible.webp",
-        "alt": "BMW Z4 2.2i SE Auto Euro 3 2dr"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Birmingham",
-      "region": "Birmingham",
-      "country": "United Kingdom"
-    },
-    "spec": {
-      "make": "BMW",
-      "model": "Z4",
-      "trim": "2.2i SE Auto Euro 3 2dr",
-      "year": 2004,
-      "bodyType": "convertible",
-      "fuelType": "gasoline",
-      "transmission": "automatic",
-      "mileageValue": 121357,
-      "mileageUnit": "km",
-      "mileageSourceValue": 75408,
-      "mileageSourceUnit": "mi"
-    },
-    "seller": {
-      "id": "dealer-birmingham-square-one-motors",
-      "type": "dealer",
-      "displayName": "Square One Motors",
-      "verificationStatus": "unverified",
-      "city": "Birmingham",
-      "logoUrl": "/dealer-brand/logo.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1007",
-    "slug": "smart-fortwo-2009-at-sample-5",
-    "category": "car",
-    "dealerOrgId": "dealer-birmingham-square-one-motors",
-    "status": "active",
-    "title": "Smart Fortwo 0.8 CDI Pulse SoftTouch Euro 5 2dr",
-    "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
-    "price": {
-      "amount": 2195,
-      "currency": "GBP"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer-stock/coupe.webp",
-        "alt": "Smart Fortwo 0.8 CDI Pulse SoftTouch Euro 5 2dr"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Birmingham",
-      "region": "Birmingham",
-      "country": "United Kingdom"
-    },
-    "spec": {
-      "make": "Smart",
-      "model": "Fortwo",
-      "trim": "0.8 CDI Pulse SoftTouch Euro 5 2dr",
-      "year": 2009,
-      "bodyType": "coupe",
-      "fuelType": "diesel",
-      "transmission": "automatic",
-      "mileageValue": 191565,
-      "mileageUnit": "km",
-      "mileageSourceValue": 119033,
-      "mileageSourceUnit": "mi"
-    },
-    "seller": {
-      "id": "dealer-birmingham-square-one-motors",
-      "type": "dealer",
-      "displayName": "Square One Motors",
-      "verificationStatus": "unverified",
-      "city": "Birmingham",
-      "logoUrl": "/dealer-brand/logo.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1008",
-    "slug": "volkswagen-caddy-maxi-2009-at-sample-6",
-    "category": "van",
-    "dealerOrgId": "dealer-birmingham-square-one-motors",
-    "status": "active",
-    "title": "Volkswagen Caddy Maxi 1.9 TDi Maxi FWD 5dr",
-    "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
-    "price": {
-      "amount": 1395,
-      "currency": "GBP"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer-stock/van.webp",
-        "alt": "Volkswagen Caddy Maxi 1.9 TDi Maxi FWD 5dr"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Birmingham",
-      "region": "Birmingham",
-      "country": "United Kingdom"
-    },
-    "spec": {
-      "make": "Volkswagen",
-      "model": "Caddy Maxi",
-      "trim": "1.9 TDi Maxi FWD 5dr",
-      "year": 2009,
-      "bodyType": "van",
-      "fuelType": "diesel",
-      "transmission": "manual",
-      "mileageValue": 225595,
-      "mileageUnit": "km",
-      "mileageSourceValue": 140178,
-      "mileageSourceUnit": "mi"
-    },
-    "seller": {
-      "id": "dealer-birmingham-square-one-motors",
-      "type": "dealer",
-      "displayName": "Square One Motors",
-      "verificationStatus": "unverified",
-      "city": "Birmingham",
-      "logoUrl": "/dealer-brand/logo.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1009",
-    "slug": "ford-transit-connect-2007-at-sample-7",
-    "category": "van",
-    "dealerOrgId": "dealer-birmingham-square-one-motors",
-    "status": "active",
-    "title": "Ford Transit Connect 1.8 TDCi T230 LX L3 H3 4dr",
-    "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
-    "price": {
-      "amount": 1195,
-      "currency": "GBP"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer-stock/van.webp",
-        "alt": "Ford Transit Connect 1.8 TDCi T230 LX L3 H3 4dr"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Birmingham",
-      "region": "Birmingham",
-      "country": "United Kingdom"
-    },
-    "spec": {
-      "make": "Ford",
-      "model": "Transit Connect",
-      "trim": "1.8 TDCi T230 LX L3 H3 4dr",
-      "year": 2007,
-      "bodyType": "van",
-      "fuelType": "diesel",
-      "transmission": "manual",
-      "mileageValue": 311881,
-      "mileageUnit": "km",
-      "mileageSourceValue": 193794,
-      "mileageSourceUnit": "mi"
-    },
-    "seller": {
-      "id": "dealer-birmingham-square-one-motors",
-      "type": "dealer",
-      "displayName": "Square One Motors",
-      "verificationStatus": "unverified",
-      "city": "Birmingham",
-      "logoUrl": "/dealer-brand/logo.webp"
+      "logoUrl": "/dealer-brand/v2-430f237b2ede396d/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false

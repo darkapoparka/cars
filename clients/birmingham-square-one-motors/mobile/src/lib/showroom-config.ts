@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "Square One Motors",
-  "logo": "/variant-5/dealer-brand/logo-on-light-20261011.webp",
+  "logo": "/dealer-brand/v2-430f237b2ede396d/logo-on-light.webp",
   "phone": null,
   "email": null,
   "address": "Tameside Way, Birmingham B42 2UB",

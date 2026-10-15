@@ -12,12 +12,17 @@
   import { selectedReferenceProduct } from "#lib/data/shop-mobile.ts";
   import { listingProducts } from "#lib/data/vehicle-listing.ts";
   import DesktopShopProductCard from "#lib/components/shop/DesktopShopProductCard.svelte";
+  import { referenceProductDetailContent } from "#lib/data/vehicle-detail.ts";
   const phone = new MediaQuery("(max-width: 767.98px)");
   const desktop = new MediaQuery("(min-width: 992px)");
   const selected = $derived(selectedReferenceProduct(page.url.searchParams));
   const otherProducts = $derived(
     listingProducts.filter((product) => product.id !== selected.id).slice(0, 3),
   );
+  const mobileDetails = $derived({
+    ...referenceProductDetailContent,
+    includedFeatures: selected.features,
+  });
 </script>
 
 {#if desktop.current}
@@ -38,21 +43,24 @@
         />{/each}</div
     >
   </section>
+{:else if phone.current}
+  <section class="mobile-shop-product-information container">
+    <div class="mobile-shop-product-seller"><DetailSellerCard /></div>
+    <div class="mobile-shop-product-details">
+      <p class="product-reference-information">
+        {locale.t(
+          "ui.product-detail.the-content-below-illustrates-the-product-detail-layout",
+        )}
+      </p>
+      <VehicleDetailPanels product details={mobileDetails} aboutFirst />
+    </div>
+    <div class="mobile-shop-product-related"><RelatedProductSidebar /></div>
+  </section>
 {:else}
   <section class="box-section box-content-tour-detail background-body pt-0">
     <div class="container">
       <div class="row pt-30">
         <div class="col-lg-8">
-          {#if phone.current}<div class="product-reference-information"
-              ><h2>{locale.t("ui.product-detail.reference-information")}</h2><p
-                >{locale.t(
-                  "ui.product-detail.the-content-below-illustrates-the-product-detail-layout",
-                )}</p
-              ><ul
-                >{#each selected.features as feature (feature)}<li>{feature}</li
-                  >{/each}</ul
-              ></div
-            >{/if}
           <VehicleDetailPanels product />
         </div>
         <div class="col-lg-4">
@@ -107,32 +115,60 @@
     }
   }
   @media (max-width: 767.98px) {
+    .mobile-shop-product-information {
+      display: grid;
+      gap: var(--karento-space-6);
+      padding-top: var(--karento-space-6);
+      padding-bottom: var(--karento-space-8);
+    }
+
+    .mobile-shop-product-information > div {
+      min-width: 0;
+    }
+
+    .mobile-shop-product-seller :global(.box-agent-support) {
+      border-bottom: 0 !important;
+      padding-bottom: 0 !important;
+    }
+
+    .mobile-shop-product-details :global(.karento-detail-accordion:last-child) {
+      margin-bottom: 0;
+    }
+
     .product-reference-information {
-      margin-bottom: var(--karento-space-4);
-    }
-    .product-reference-information h2 {
-      font-size: var(--karento-type-section-size);
-      font-weight: var(--karento-type-section-weight);
-      line-height: var(--karento-type-section-leading);
-      margin-bottom: 6px;
-    }
-    .product-reference-information p {
+      margin: 0 0 var(--karento-space-3);
       font-size: var(--karento-type-body-small-size);
       font-weight: var(--karento-type-body-small-weight);
       line-height: var(--karento-type-body-small-leading);
       color: var(--bs-neutral-600);
     }
-    .product-reference-information ul {
-      margin-top: var(--karento-space-3);
-      padding-left: 18px;
-      display: grid;
-      gap: 6px;
+
+    .mobile-shop-product-related :global(.sidebar-banner) {
+      margin: 0;
     }
-    .product-reference-information li {
-      list-style: disc;
+
+    .mobile-shop-product-related :global(.desktop-panel) {
+      padding: var(--karento-space-4) !important;
+      border-radius: var(--karento-radius-card) !important;
+    }
+
+    .mobile-shop-product-related :global(.d-flex > .position-relative) {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .mobile-shop-product-related :global(.position-relative > a) {
+      display: -webkit-box;
+      overflow: hidden;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
       font-size: var(--karento-type-body-size);
-      font-weight: var(--karento-type-body-weight);
       line-height: var(--karento-type-body-leading);
+    }
+
+    .mobile-shop-product-related :global(.d-flex:last-child) {
+      margin-bottom: 0 !important;
     }
   }
 </style>

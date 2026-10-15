@@ -3,8 +3,19 @@ export const referenceHomeEn = {
   "referenceHome.services.sell": "Sell",
   "referenceHome.services.buy": "Buy",
   "referenceHome.services.lease": "Lease",
+  "referenceHome.services.importDetails":
+    "Share your preferred vehicle, budget and destination. Ask about sourcing, delivery and the documents you may need.",
+  "referenceHome.services.sellDetails":
+    "Share your vehicle's make, model, year, mileage and condition. Ask about selling or trade-in options.",
+  "referenceHome.services.buyDetails":
+    "Tell us your budget, preferred vehicle and the features that matter to you. Ask about available options and viewing a car.",
+  "referenceHome.services.leaseDetails":
+    "Tell us your preferred vehicle, budget and term. Ask about leasing options, costs and conditions.",
   "referenceHome.services.previewDescription":
     "Explore sample vehicle services and discuss what you need.",
+  "referenceHome.services.exampleDescription": "Service example",
+  "referenceHome.brands.datedIntro": "Explore examples from dated vehicle listings.",
+  "referenceHome.brands.illustrativeIntro": "Explore sample vehicles for this demo.",
   "referenceHome.testimonials.previewLabel": "Sample testimonials",
   "referenceHome.testimonials.vehicleQuote":
     "The vehicle details helped me compare the options and prepare my questions before contacting the team.",
@@ -58,6 +69,9 @@ export const referenceHomeEn = {
   "referenceHome.reviews.description":
     "The Tucson Plug-in Hybrid is easy to drive and provides a sufficient all-electric range.",
   "referenceHome.news.escalade": "2025 Cadillac Escalade costs more money",
+  "referenceHome.news.escalade.mobile": "Cadillac Escalade 2025: price update",
+  "referenceHome.news.bmw.mobile": "BMW 5 Series 2025: review",
+  "referenceHome.news.rodeo.mobile": "Ruf Rodeo 2025: off road",
   "referenceHome.news.bmw": "2025 BMW 5 Series Review: A balanced luxury sedan",
   "referenceHome.news.rodeo":
     "2025 Ruf Rodeo is ready to wrangle some rough roads",
@@ -75,8 +89,19 @@ export const referenceHomeBg = {
   "referenceHome.services.sell": "Продажба",
   "referenceHome.services.buy": "Покупка",
   "referenceHome.services.lease": "Лизинг",
+  "referenceHome.services.importDetails":
+    "Споделете предпочитания автомобил, бюджета и крайната дестинация. Попитайте за намиране, доставка и необходимите документи.",
+  "referenceHome.services.sellDetails":
+    "Споделете марката, модела, годината, пробега и състоянието на автомобила. Попитайте за продажба или замяна.",
+  "referenceHome.services.buyDetails":
+    "Кажете ни бюджета, предпочитания автомобил и важните за вас характеристики. Попитайте за налични варианти и оглед.",
+  "referenceHome.services.leaseDetails":
+    "Кажете ни предпочитания автомобил, бюджета и срока. Попитайте за варианти за лизинг, разходи и условия.",
   "referenceHome.services.previewDescription":
     "Разгледайте примерните автомобилни услуги и обсъдете от какво имате нужда.",
+  "referenceHome.services.exampleDescription": "Примерна услуга",
+  "referenceHome.brands.datedIntro": "Разгледайте примерите от датираните обяви.",
+  "referenceHome.brands.illustrativeIntro": "Разгледайте примерните автомобили в това демо.",
   "referenceHome.testimonials.previewLabel": "Примерни отзиви",
   "referenceHome.testimonials.vehicleQuote":
     "Информацията за автомобилите ми помогна да сравня вариантите и да подготвя въпросите си, преди да се свържа с екипа.",
@@ -131,6 +156,9 @@ export const referenceHomeBg = {
   "referenceHome.reviews.description":
     "Tucson Plug-In Hybrid е лесен за управление и предлага достатъчен пробег само на ток.",
   "referenceHome.news.escalade": "Cadillac Escalade 2025 е с по-висока цена",
+  "referenceHome.news.escalade.mobile": "Cadillac Escalade 2025: нова цена",
+  "referenceHome.news.bmw.mobile": "BMW Серия 5 2025: преглед",
+  "referenceHome.news.rodeo.mobile": "Ruf Rodeo 2025: извън асфалта",
   "referenceHome.news.bmw":
     "Преглед на BMW Серия 5 2025: балансиран луксозен седан",
   "referenceHome.news.rodeo": "Ruf Rodeo 2025 е готов за трудните пътища",

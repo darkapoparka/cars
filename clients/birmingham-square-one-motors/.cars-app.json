@@ -3,22 +3,34 @@
   "dealer": "birmingham-square-one-motors",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "4e184777567849a2c5b4a9e4a3e652252179c29c",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/app",
-    "digest": "fad0067e48d7bd7e1c5177c5e91e2bc5767352e2c16621cb458d18a081f7c541",
-    "tree": "749512ff762c25272d1474225ff653dd4c88f0fe"
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
   },
-  "appDigest": "826b408ce8877d61a6cb1db6897f56714527a987032763f099895c953063f450",
+  "appDigest": "8159e41da3ef741bca816b07d489546d87065a36f05313c2701aa93160a28b99",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "birmingham-square-one-motors",
     "profile": "auto-best/src/lib/data/dealer-profile.json",
-    "profileSha256": "3e2fc0110635bb2c79f549480da711fad068eeb28564fc7339d97da557ae0852",
-    "logoPolicy": "Use exact dark mark on light surfaces; exact white mark on dark and neutral accent surfaces. Never use CSS inversion, white plates or crop the emblem.",
+    "profileSha256": "01016f3db67973387996a3e9e0a368404198dad3ba024ed90a1fdd032dd3e270",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
     "vehicles": 7,
     "currency": "GBP",
     "observedAt": "2026-10-10",
     "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/v2-430f237b2ede396d/logo-on-light.webp",
+        "output": "public/dealer-app/logo-light-9a56a237f6645b97aab0.webp",
+        "sha256": "9a56a237f6645b97aab08c9117fdf968b8b39b46104af3fcb4c1b553ec68cafe",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/v2-430f237b2ede396d/logo-on-dark.webp",
+        "output": "public/dealer-app/logo-dark-e7f53a1e1f406459fb23.webp",
+        "sha256": "e7f53a1e1f406459fb23abe03808a8af5a8c1340a82f65a25134982a4054e018",
+        "role": "logo-dark"
+      },
       {
         "source": "auto-best/static/dealer-stock/hatchback.webp",
         "output": "public/dealer-app/vehicle-aafb8fc639fa0f2693f4.webp",
@@ -60,18 +72,6 @@
         "output": "public/dealer-app/vehicle-72396847dfc15c2091e3.webp",
         "sha256": "72396847dfc15c2091e30fd11f84f3747bf12b497e837c4c3fa12d88b7b75cd5",
         "role": "vehicle"
-      },
-      {
-        "source": "auto-best/static/dealer-brand/logo-on-light-20261011.webp",
-        "output": "public/dealer-brand/logo-on-light-20261011.webp",
-        "sha256": "9a56a237f6645b97aab08c9117fdf968b8b39b46104af3fcb4c1b553ec68cafe",
-        "role": "logo-light"
-      },
-      {
-        "source": "auto-best/static/dealer-brand/logo-on-dark-20261011.webp",
-        "output": "public/dealer-brand/logo-on-dark-20261011.webp",
-        "sha256": "e7f53a1e1f406459fb23abe03808a8af5a8c1340a82f65a25134982a4054e018",
-        "role": "logo-dark"
       }
     ],
     "mileageFacts": [
@@ -138,5 +138,6 @@
     }
   },
   "needsDealerQA": true,
-  "readyToPublish": false
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-15T01:23:01.208Z"
 }

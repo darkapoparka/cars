@@ -23,13 +23,17 @@ export const dealerLocalizedText = {
     "city": "Birmingham",
     "addressLine": "Tameside Way, Birmingham B42 2UB",
     "address": "Tameside Way, Birmingham B42 2UB",
-    "appointment": "Contact the dealership before visiting."
+    "appointment": "Contact the dealership before visiting.",
+    "addressShort": "Tameside Way, Birmingham B42 2UB",
+    "appointmentShort": "Contact the dealership before visiting."
   },
   "bg": {
     "city": "Бирмингам",
     "addressLine": "Tameside Way, Birmingham B42 2UB",
     "address": "Tameside Way, Birmingham B42 2UB",
-    "appointment": "Свържете се с автокъщата преди посещение."
+    "appointment": "Свържете се с автокъщата преди посещение.",
+    "addressShort": "Tameside Way, Birmingham B42 2UB",
+    "appointmentShort": "Свържете се с автокъщата преди посещение."
   }
 } as const;
 

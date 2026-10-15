@@ -5,12 +5,12 @@
   "name": "Square One Motors",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "8a97176e3adfbd95dce69b3096abc84e3eecd9c8",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/mobile",
-    "digest": "cc126a7c38634c7601ef8c617411d6938d7c9b6efc7b319e87c2c6efc99d8b6d",
-    "tree": "9a4db757e788ee236712b8eac25956a6a8a61d0b"
+    "digest": "f5a3e541a7c648a4c2899ad3893e22a3806027a9f66d95fa4e8c74b2226635b6",
+    "tree": "792bfdd1d8eb22aabd90c7e3a0c0779a6c1c36f3"
   },
-  "sourceDigest": "835e9f582b26354799f8ed3355e75caebdbaf22629a46769f688a1c1c9a445bc",
+  "sourceDigest": "4443ecd2ecea8dc062bb0cb38709bf50cf9e61205b71b6ca96df3d1ceda6908f",
   "inventory": {
     "mode": "dated-listing-snapshot",
     "count": 7,
@@ -20,8 +20,7 @@
     "profileSha256": "5971db0ce6c09cdd07506163ec422d1ad9e22cbe310d7d7e53052c1f89ba461e",
     "logoPaths": [
       "/dealer-brand/logo-on-light-20261011.webp",
-      "/dealer-brand/logo-on-dark-20261011.webp",
-      "/dealer-brand/logo-on-accent-20261011.webp"
+      "/dealer-brand/logo-on-dark-20261011.webp"
     ],
     "mediaPaths": [
       "/dealer-stock/hatchback.webp",
@@ -54,7 +53,8 @@
       "mobile/src/components/ShowroomServiceRequest.tsx",
       "mobile/src/lib/service-requests.ts",
       "mobile/src/lib/enquiry.ts",
-      "mobile/src/lib/assistant.ts"
+      "mobile/src/lib/assistant.ts",
+      "mobile/src/components/Header.tsx"
     ]
   },
   "needsDealerQA": true,

@@ -1,5 +1,6 @@
 import { canonicalMileage, mileageLimitKm, mileageSortValue } from '$lib/data/dealer-mileage';
 import type { InventoryFilters, SortKey, Vehicle } from '$lib/types/vehicle';
+import { inventoryText } from '$lib/content/inventory-localized';
 
 const normalizeFilterValue = (value?: string | number) =>
 	String(value ?? '')
@@ -33,6 +34,7 @@ const optionMatcher = (filter?: string) => {
 const vehicleSearchText = (vehicle: Vehicle) =>
 	[
 		vehicle.title,
+		inventoryText('en', vehicle.title),
 		vehicle.brand,
 		vehicle.model,
 		vehicle.year,

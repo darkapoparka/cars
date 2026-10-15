@@ -6,7 +6,7 @@ import type {
 } from "@repo/marketplace-domain/site-config";
 import { inventoryCopy } from "./content/inventory-copy";
 
-export type LeadSiteCurrency = "AED" | "BGN" | "EUR" | "GBP" | "USD";
+export type LeadSiteCurrency = "AED" | "BGN" | "EUR" | "USD";
 
 export interface LeadSiteCopy {
   readonly address: string;
@@ -114,8 +114,8 @@ export const leadSite: LeadSiteConfig = {
     "tagline": "Square One Motors — vehicles and dealer support in Birmingham."
   }
 },
-  accent: "#18181B",
-  desktopAccent: "#4b5057",
+  accent: "#09090b",
+  desktopAccent: "#09090b",
   desktopInventoryFilterLayout: "quick",
   desktopPreviewIdentity: {
     sourceSlug: "day-night-auto-group",
@@ -140,18 +140,18 @@ export const leadSite: LeadSiteConfig = {
   mobileFinancingArtworkPath: "/images/lease/mobile-pdp-finance-studio-v2.webp",
   mobileShowroomArtworkPath:
     "/images/lease/mobile-pdp-showroom-blue-hour-v1.webp",
-  contactUrl: "https://cars-uk-birmingham-square-one-motors.darkapoparka1.workers.dev/variant-2/en/contact",
+  contactUrl: "",
   country: "United Kingdom",
   countryCode: carsLocale.dealerCountry,
   currency: carsLocale.inventoryCurrency,
   email: "",
   heroPath: "/lead-hero.jpg",
   locale: "en-GB",
-  logoInversePath: "/dealer-brand/logo-on-dark-20261011.webp",
-  logoPath: "/dealer-brand/logo-on-light-20261011.webp",
-  logoOnLight: "/dealer-brand/logo-on-light-20261011.webp",
-  logoOnDark: "/dealer-brand/logo-on-dark-20261011.webp",
-  logoOnAccent: "/dealer-brand/logo-on-accent-20261011.webp",
+  logoPath: "/dealer-brand/v2-430f237b2ede396d/logo-on-light.webp",
+  logoInversePath: "/dealer-brand/v2-430f237b2ede396d/logo-on-dark.webp",
+  logoOnLight: "/dealer-brand/v2-430f237b2ede396d/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-430f237b2ede396d/logo-on-dark.webp",
+  logoOnAccent: "/dealer-brand/v2-430f237b2ede396d/logo-on-dark.webp",
   mapsEmbedUrl:
     "https://maps.google.com/maps?q=Square%20One%20Motors%2C%20Tameside%20Way%2C%20Birmingham%20B42%202UB&z=16&output=embed",
   mapsUrl:
@@ -163,6 +163,6 @@ export const leadSite: LeadSiteConfig = {
   slug: "birmingham-square-one-motors",
   socialLinks: {},
   staticDemoMode: true,
-  tagline: "Explore used cars in Birmingham.",
+  tagline: "Square One Motors — vehicles and dealer support in Birmingham.",
 };
 // LEAD_SITE_CONFIG_END
