@@ -50,7 +50,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Ауто-бора",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-8b6fe1b03fb10f7c/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-7be411a7bc73d9cd/logo-on-light.webp"
     },
     "publishedAt": "2026-10-11T09:00:00.000Z",
     "promoted": true

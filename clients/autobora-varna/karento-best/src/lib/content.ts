@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "Ауто-бора",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-8b6fe1b03fb10f7c/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-8b6fe1b03fb10f7c/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-8b6fe1b03fb10f7c/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-7be411a7bc73d9cd/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-7be411a7bc73d9cd/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-7be411a7bc73d9cd/logo-on-dark.webp",
     "alt": "Ауто-бора",
-    "favicon": "/dealer-brand/v2-8b6fe1b03fb10f7c/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-7be411a7bc73d9cd/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

@@ -83,12 +83,12 @@
   }
   .apply {
     min-width: calc(var(--spacing) * 52);
-    color: var(--brand-foreground);
-    background: var(--brand);
+    color: var(--primary-foreground);
+    background: var(--primary);
   }
   .apply:hover {
-    color: var(--brand-hover-foreground);
-    background: var(--lead-site-accent-hover);
+    color: var(--primary-hover-foreground);
+    background: var(--primary-hover);
   }
   .reset {
     color: var(--foreground);

@@ -94,7 +94,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Ауто-бора",
       "location": "бул. Цар Освободител, Варна, България",
-      "avatar": "/dealer-brand/v2-8b6fe1b03fb10f7c/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-7be411a7bc73d9cd/logo-on-light.webp",
       "mobile": "0897447696",
       "email": "",
       "whatsapp": "",
