@@ -151,7 +151,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Promosale Varna",
       "location": "Морска гара Варна, Варна, България",
-      "avatar": "/dealer-brand/v2-a98706ed9a9b259c/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-c1ee2ba0a30e97da/logo-on-light.webp",
       "mobile": "0892 020 208",
       "email": "",
       "whatsapp": "",
@@ -319,7 +319,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Promosale Varna",
       "location": "Морска гара Варна, Варна, България",
-      "avatar": "/dealer-brand/v2-a98706ed9a9b259c/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-c1ee2ba0a30e97da/logo-on-light.webp",
       "mobile": "0892 020 208",
       "email": "",
       "whatsapp": "",
@@ -497,7 +497,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Promosale Varna",
       "location": "Морска гара Варна, Варна, България",
-      "avatar": "/dealer-brand/v2-a98706ed9a9b259c/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-c1ee2ba0a30e97da/logo-on-light.webp",
       "mobile": "0892 020 208",
       "email": "",
       "whatsapp": "",
@@ -671,7 +671,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Promosale Varna",
       "location": "Морска гара Варна, Варна, България",
-      "avatar": "/dealer-brand/v2-a98706ed9a9b259c/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-c1ee2ba0a30e97da/logo-on-light.webp",
       "mobile": "0892 020 208",
       "email": "",
       "whatsapp": "",
@@ -838,7 +838,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Promosale Varna",
       "location": "Морска гара Варна, Варна, България",
-      "avatar": "/dealer-brand/v2-a98706ed9a9b259c/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-c1ee2ba0a30e97da/logo-on-light.webp",
       "mobile": "0892 020 208",
       "email": "",
       "whatsapp": "",
@@ -1010,7 +1010,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Promosale Varna",
       "location": "Морска гара Варна, Варна, България",
-      "avatar": "/dealer-brand/v2-a98706ed9a9b259c/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-c1ee2ba0a30e97da/logo-on-light.webp",
       "mobile": "0892 020 208",
       "email": "",
       "whatsapp": "",

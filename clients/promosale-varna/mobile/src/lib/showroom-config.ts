@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "Promosale Varna",
-  "logo": "/dealer-brand/v2-a98706ed9a9b259c/logo-on-light.webp",
+  "logo": "/dealer-brand/v2-c1ee2ba0a30e97da/logo-on-light.webp",
   "phone": "+359892020208",
   "email": null,
   "address": "Морска гара Варна, Варна, България",

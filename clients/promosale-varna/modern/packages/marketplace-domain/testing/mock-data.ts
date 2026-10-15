@@ -88,7 +88,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Promosale Varna",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-a98706ed9a9b259c/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-c1ee2ba0a30e97da/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": true
@@ -179,7 +179,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Promosale Varna",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-a98706ed9a9b259c/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-c1ee2ba0a30e97da/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": true
@@ -270,7 +270,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Promosale Varna",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-a98706ed9a9b259c/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-c1ee2ba0a30e97da/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": true
@@ -361,7 +361,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Promosale Varna",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-a98706ed9a9b259c/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-c1ee2ba0a30e97da/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": false
@@ -452,7 +452,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Promosale Varna",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-a98706ed9a9b259c/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-c1ee2ba0a30e97da/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": false
@@ -543,7 +543,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Promosale Varna",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-a98706ed9a9b259c/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-c1ee2ba0a30e97da/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": false

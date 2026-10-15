@@ -52,7 +52,7 @@ const s = stylex.create({
   methodTitle: {maxWidth: '100%'},
   methodPoints: {display: 'grid', maxWidth: '65%', gap: 8, padding: 0, margin: '14px 0 0', listStyle: 'none'},
   methodPoint: {display: 'flex', alignItems: 'center', gap: 8, color: '#414147'},
-  benefitIcon: {display: 'grid', placeItems: 'center', flexShrink: 0, width: 32, height: 32, color: campaign.lightInk, borderRadius: 10, backgroundColor: '#e8e8eb'},
+  benefitIcon: {display: 'grid', placeItems: 'center', flexShrink: 0, width: {[media.mobile]: 18, default: 32}, height: 32, color: campaign.lightInk, borderRadius: 10, backgroundColor: {[media.mobile]: 'transparent', default: '#e8e8eb'}},
   methodAction: {position: 'absolute', inset: 0, zIndex: 2, width: '100%', height: '100%', padding: 0, color: campaign.lightInk, borderWidth: 0, borderRadius: 20, backgroundColor: {default: 'transparent', ':hover': 'rgba(38,38,41,.025)'}, cursor: 'pointer', outline: {default: 'none', ':focus-visible': '2px solid #262629'}, outlineOffset: -3},
   methodActionLabel: {position: 'absolute', left: {[media.mobile]: 20, default: 26}, bottom: {[media.mobile]: 18, default: 24}, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 8, minHeight: 36, padding: '8px 14px', fontWeight: 500, borderRadius: 30, backgroundColor: '#fff'},
   desktopCopy: {display: {[media.mobile]: 'none', default: 'inline'}},

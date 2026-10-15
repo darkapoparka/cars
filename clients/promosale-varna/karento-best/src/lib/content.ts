@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "Promosale Varna",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-a98706ed9a9b259c/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-a98706ed9a9b259c/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-a98706ed9a9b259c/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-c1ee2ba0a30e97da/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-c1ee2ba0a30e97da/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-c1ee2ba0a30e97da/logo-on-dark.webp",
     "alt": "Promosale Varna",
-    "favicon": "/dealer-brand/v2-a98706ed9a9b259c/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-c1ee2ba0a30e97da/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {
