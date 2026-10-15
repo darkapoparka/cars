@@ -34,6 +34,7 @@ const s = stylex.create({
     minWidth: 0,
   },
   entry: {
+    position: 'relative',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'stretch',
@@ -53,11 +54,12 @@ const s = stylex.create({
     outlineOffset: 3,
     cursor: 'pointer',
   },
-  entryHeader: { display: 'flex', alignItems: 'center', gap: 8 },
+  entryHeader: { display: 'flex', alignItems: 'center', gap: 8, paddingRight: 38 },
   entryTitle: { fontSize: 18, lineHeight: '26px', fontWeight: 500 },
   prompt: {
     display: 'block',
     minWidth: 0,
+    paddingRight: 38,
   },
   preview: {
     display: '-webkit-box',
@@ -72,7 +74,10 @@ const s = stylex.create({
   },
   placeholder: { color: colors.muted },
   promptArrow: {
-    marginLeft: 'auto',
+    position: 'absolute',
+    top: '50%',
+    right: 16,
+    transform: 'translateY(-50%)',
     flexShrink: 0,
     display: 'inline-flex',
     alignItems: 'center',

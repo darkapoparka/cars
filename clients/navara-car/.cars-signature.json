@@ -5,12 +5,12 @@
   "name": "Навара кар",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/karento-best",
-    "digest": "83056967764a686f3737d74b86c5db51c1385a50184853f50ec4ade80c1dd44f",
-    "tree": "5f6eec8efb2f9e99819f7f0c2f743d18fff7b134"
+    "digest": "be17ef365e3272753df6e50826b139a45bfc32b8fef54ddcb86d977ad16280a9",
+    "tree": "8c5ac869c7fd15e19a80c660343fc64b20a2bad9"
   },
-  "sourceDigest": "e3849d211733a4bc0dbd7eefcff5fbed9b80a1f209ac5bd1873ff83019dc9723",
+  "sourceDigest": "0e6350520fdf10440a3823b16d4bf5ce26fe55751d97796db5b93a3272e34ad0",
   "inventory": {
     "mode": "dated-listing-snapshot",
     "count": 9,
@@ -78,81 +78,5 @@
     "nativeDealerFacts": true
   },
   "needsDealerQA": true,
-  "readyToPublish": false,
-  "refreshedAt": "2026-10-13T02:56:23.230Z",
-  "ownerLogoRestoration": {
-    "kind": "exact-historical-assets-and-logo-url-bindings",
-    "sourceCommit": "9fa56a227811fd89774793c395c65e01fed746c8",
-    "sourceHistory": "e28713a76f90ad163538c79f483911caa099e6f0",
-    "previousReceiptSha256": "d39d1c3e08aaa8bc6f480ea49762a8c6c4102a717a5a2bace2c0586b8e9f1ea3",
-    "beforeDigest": "613d152233bb36f1d4f5c1d4e92a1c8acfc73914e08579fbb92a04c0eebc990e",
-    "afterDigest": "e3849d211733a4bc0dbd7eefcff5fbed9b80a1f209ac5bd1873ff83019dc9723",
-    "changes": [
-      {
-        "path": "karento-best/src/lib/content.ts",
-        "beforeSha256": "a736a4645ecafcf42657b6a77472676e1d8d09a78638719ad8cb88f05047751c",
-        "afterSha256": "42551a2da4e5416fa80fdf5c610b29f6876936733ccfe598081244f537952598"
-      },
-      {
-        "path": "karento-best/src/lib/data/dealer-detail.ts",
-        "beforeSha256": "f4ad8b9e78c66b9e51004c389003b288a57130be547676f2b850b7aafc4650d5",
-        "afterSha256": "ee9abd4102f94ef8b07d3477041d732112ed3d82f9e373787145ba02b96a82b8"
-      },
-      {
-        "path": "karento-best/src/lib/data/vehicle-detail.ts",
-        "beforeSha256": "3b12c709eb4fc2e00adb5ba0542f8dd2aa1c4bea53517e54790954c6db46f147",
-        "afterSha256": "c12cc502fd33f7f6b11bb572075f4030397d059f35c8a3e8391d469c8cfb97a0"
-      },
-      {
-        "path": "karento-best/static/dealer-brand/v2-24f1fab0fc40d49e/logo-on-light.webp",
-        "beforeSha256": null,
-        "afterSha256": "59bf693ac7938da19bad1ff965c84f57d47879457d2832580521e18f98620293"
-      },
-      {
-        "path": "karento-best/static/dealer-brand/v2-24f1fab0fc40d49e/logo-on-light.png",
-        "beforeSha256": null,
-        "afterSha256": "19ed96b7278b011e2ef6f3a910879420005d442225d33c51c08e63826bc6060c"
-      },
-      {
-        "path": "karento-best/static/dealer-brand/v2-24f1fab0fc40d49e/mark-on-light.webp",
-        "beforeSha256": null,
-        "afterSha256": "756d69ce122daa5e88975b0d0744363b05f8f36dbdfcecf92059411e3530e56f"
-      },
-      {
-        "path": "karento-best/static/dealer-brand/v2-24f1fab0fc40d49e/logo-on-dark.webp",
-        "beforeSha256": null,
-        "afterSha256": "c2736c32f1b7151c1206fd2708c96bea6536650a7ff4cbcf699850c801be588f"
-      },
-      {
-        "path": "karento-best/static/dealer-brand/v2-24f1fab0fc40d49e/logo-on-dark.png",
-        "beforeSha256": null,
-        "afterSha256": "b040031e611284f07cc80244ad96b9c459e84b51d1228864d849b44b507d077e"
-      },
-      {
-        "path": "karento-best/static/dealer-brand/v2-24f1fab0fc40d49e/mark-on-dark.webp",
-        "beforeSha256": null,
-        "afterSha256": "2c3297c7c169551791aa6f5584b0a76a405946fd2643a2c1b60c01bdb5d2bb5b"
-      },
-      {
-        "path": "karento-best/static/dealer-brand/v2-24f1fab0fc40d49e/logo-on-accent.webp",
-        "beforeSha256": null,
-        "afterSha256": "dececeb17ebbf45f8d5c756f02e7f0b9433328b83d4235a204e1388f13fac7d9"
-      },
-      {
-        "path": "karento-best/static/dealer-brand/v2-24f1fab0fc40d49e/app-icon.png",
-        "beforeSha256": null,
-        "afterSha256": "110bccca7e35cfb553e37753ff9568d438730bbaefd1754a0bc9a9947ce615ca"
-      },
-      {
-        "path": "karento-best/static/dealer-brand/v2-24f1fab0fc40d49e/apple-touch-icon.png",
-        "beforeSha256": null,
-        "afterSha256": "aa04893fb8a17f80d5dbb42ec3630030c2c9230ebb971c0dedb54990087455eb"
-      },
-      {
-        "path": "karento-best/static/dealer-brand/v2-24f1fab0fc40d49e/favicon.ico",
-        "beforeSha256": null,
-        "afterSha256": "89fc3ea9bea9c015b5e65f532aff44e5c94f66499f724798e251fc6bf50f6b14"
-      }
-    ]
-  }
+  "readyToPublish": false
 }

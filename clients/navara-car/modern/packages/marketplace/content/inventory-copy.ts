@@ -4,7 +4,7 @@ export const inventoryCopy = {
   "nissan-micra-n-sport-065195": {
     "sourceDescription": "Селекция от обяви към 08.09.2026 г., а не складова наличност в реално време. Потвърдете цената, наличността и данните с продавача.",
     "en": {
-      "description": "Selected listings as of 08.09.2026, rather than live stock availability. Confirm the price, availability and details with the seller.",
+      "description": "Selected listings dated 8 September 2026, not a real-time stock feed. Confirm price, availability and vehicle details with the seller.",
       "imageAlts": [
         "Nissan Micra 1.0 N-Sport",
         "Nissan Micra 1.0 N-Sport"
@@ -21,7 +21,7 @@ export const inventoryCopy = {
   "vw-polo-tdi-983224": {
     "sourceDescription": "Селекция от обяви към 08.09.2026 г., а не складова наличност в реално време. Потвърдете цената, наличността и данните с продавача.",
     "en": {
-      "description": "Selected listings as of 08.09.2026, rather than live stock availability. Confirm the price, availability and details with the seller.",
+      "description": "Selected listings dated 8 September 2026, not a real-time stock feed. Confirm price, availability and vehicle details with the seller.",
       "imageAlts": [
         "VW Polo 1.6 TDI",
         "VW Polo 1.6 TDI"
@@ -38,7 +38,7 @@ export const inventoryCopy = {
   "tesla-model-3-performance-769974": {
     "sourceDescription": "Селекция от обяви към 08.09.2026 г., а не складова наличност в реално време. Потвърдете цената, наличността и данните с продавача.",
     "en": {
-      "description": "Selected listings as of 08.09.2026, rather than live stock availability. Confirm the price, availability and details with the seller.",
+      "description": "Selected listings dated 8 September 2026, not a real-time stock feed. Confirm price, availability and vehicle details with the seller.",
       "imageAlts": [
         "Tesla Model 3 Performance Dual Motor",
         "Tesla Model 3 Performance Dual Motor"
@@ -55,7 +55,7 @@ export const inventoryCopy = {
   "nissan-qashqai-sv-awd-049477": {
     "sourceDescription": "Селекция от обяви към 08.09.2026 г., а не складова наличност в реално време. Потвърдете цената, наличността и данните с продавача.",
     "en": {
-      "description": "Selected listings as of 08.09.2026, rather than live stock availability. Confirm the price, availability and details with the seller.",
+      "description": "Selected listings dated 8 September 2026, not a real-time stock feed. Confirm price, availability and vehicle details with the seller.",
       "imageAlts": [
         "Nissan Qashqai 2.0i SV AWD",
         "Nissan Qashqai 2.0i SV AWD"
@@ -72,7 +72,7 @@ export const inventoryCopy = {
   "peugeot-e2008-allure-225914": {
     "sourceDescription": "Селекция от обяви към 08.09.2026 г., а не складова наличност в реално време. Потвърдете цената, наличността и данните с продавача.",
     "en": {
-      "description": "Selected listings as of 08.09.2026, rather than live stock availability. Confirm the price, availability and details with the seller.",
+      "description": "Selected listings dated 8 September 2026, not a real-time stock feed. Confirm price, availability and vehicle details with the seller.",
       "imageAlts": [
         "Peugeot e-2008 Allure",
         "Peugeot e-2008 Allure"
@@ -89,7 +89,7 @@ export const inventoryCopy = {
   "opel-mokka-lpg-506554": {
     "sourceDescription": "Селекция от обяви към 08.09.2026 г., а не складова наличност в реално време. Потвърдете цената, наличността и данните с продавача.",
     "en": {
-      "description": "Selected listings as of 08.09.2026, rather than live stock availability. Confirm the price, availability and details with the seller.",
+      "description": "Selected listings dated 8 September 2026, not a real-time stock feed. Confirm price, availability and vehicle details with the seller.",
       "imageAlts": [
         "Opel Mokka 1.4i Газ/Бензин",
         "Opel Mokka 1.4i Газ/Бензин"
@@ -106,7 +106,7 @@ export const inventoryCopy = {
   "audi-a4-quattro-652112": {
     "sourceDescription": "Селекция от обяви към 08.09.2026 г., а не складова наличност в реално време. Потвърдете цената, наличността и данните с продавача.",
     "en": {
-      "description": "Selected listings as of 08.09.2026, rather than live stock availability. Confirm the price, availability and details with the seller.",
+      "description": "Selected listings dated 8 September 2026, not a real-time stock feed. Confirm price, availability and vehicle details with the seller.",
       "imageAlts": [
         "Audi A4 1.8i quattro",
         "Audi A4 1.8i quattro"
@@ -123,7 +123,7 @@ export const inventoryCopy = {
   "mercedes-b250-electric-578045": {
     "sourceDescription": "Селекция от обяви към 08.09.2026 г., а не складова наличност в реално време. Потвърдете цената, наличността и данните с продавача.",
     "en": {
-      "description": "Selected listings as of 08.09.2026, rather than live stock availability. Confirm the price, availability and details with the seller.",
+      "description": "Selected listings dated 8 September 2026, not a real-time stock feed. Confirm price, availability and vehicle details with the seller.",
       "imageAlts": [
         "Mercedes-Benz B 250 e",
         "Mercedes-Benz B 250 e"
@@ -140,7 +140,7 @@ export const inventoryCopy = {
   "smart-fortwo-824361": {
     "sourceDescription": "Селекция от обяви към 08.09.2026 г., а не складова наличност в реално време. Потвърдете цената, наличността и данните с продавача.",
     "en": {
-      "description": "Selected listings as of 08.09.2026, rather than live stock availability. Confirm the price, availability and details with the seller.",
+      "description": "Selected listings dated 8 September 2026, not a real-time stock feed. Confirm price, availability and vehicle details with the seller.",
       "imageAlts": [
         "Smart Fortwo 1.0i",
         "Smart Fortwo 1.0i"

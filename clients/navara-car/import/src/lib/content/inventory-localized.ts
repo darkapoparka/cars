@@ -1,6 +1,14 @@
 import type { Locale } from '$lib/locale/core';
 /** Dealer-owned listing descriptions and specification labels. Source facts are not mutated. */
 export const inventoryCopy = {
+	bmw740RearWheelSteering: {
+		bg: 'BMW 740 Завиващ заден мост',
+		en: 'BMW 740 Rear-wheel steering'
+	},
+	rearWheelSteering: {
+		bg: 'Завиващ заден мост',
+		en: 'Rear-wheel steering'
+	},
 	term0: {
 		bg: '4(5) Врати',
 		en: '4(5) doors'
@@ -480,7 +488,7 @@ export const inventoryCopy = {
 ,
 	"dealerStock_e3e582b72441e4579883a97ce41ef6de1ef91a89b0406c6daf8bea18caee2e17": {
 		"bg": "Селекция от обяви към 08.09.2026 г., а не складова наличност в реално време. Потвърдете цената, наличността и данните с продавача.",
-		"en": "Selected listings as of 08.09.2026, rather than live stock availability. Confirm the price, availability and details with the seller."
+		"en": "Selected listings dated 8 September 2026, not a real-time stock feed. Confirm price, availability and vehicle details with the seller."
 	},
 	"dealerStock_ddccaa432a46aef43f7ba22295e00818f42a344fa017d07626cfd5cb64a5adb1": {
 		"bg": "Подгряване на седалки",
@@ -533,6 +541,8 @@ export const inventoryCopy = {
 
 } satisfies Record<string, Record<Locale, string>>;
 export const inventorySourceKeys: Readonly<Record<string, keyof typeof inventoryCopy>> = {
+	'BMW 740 Завиващ заден мост': 'bmw740RearWheelSteering',
+	'Завиващ заден мост': 'rearWheelSteering',
 	'4(5) Врати': 'term0',
 	'4x4': 'term1',
 	'Auto Start Stop function': 'term2',

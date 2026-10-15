@@ -91,7 +91,11 @@
   }
 
   @media (min-width: 1200px) {
-    .dn-campaign-vehicles--search { --side-room: max(0px, calc((100% - var(--dn-hero-center-width)) / 2 - var(--dn-space-6))); }
+    /* One tyre line follows the shared search anchor, with no change to route flow. */
+    .dn-campaign-vehicles--search {
+      --car-baseline: calc(var(--dn-route-hero-control-top) + var(--dn-discovery-art-ground-offset));
+      --side-room: max(0px, calc((100% - var(--dn-hero-center-width)) / 2 - var(--dn-space-6)));
+    }
   }
 
   @media (min-width: 992px) and (max-width: 1199px) {

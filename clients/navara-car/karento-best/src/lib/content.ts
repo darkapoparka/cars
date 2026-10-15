@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "Навара кар",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-24f1fab0fc40d49e/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-24f1fab0fc40d49e/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-24f1fab0fc40d49e/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-7d4f22c6bf5681d7/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-7d4f22c6bf5681d7/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-7d4f22c6bf5681d7/logo-on-dark.webp",
     "alt": "Навара кар",
-    "favicon": "/dealer-brand/v2-24f1fab0fc40d49e/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-7d4f22c6bf5681d7/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {
