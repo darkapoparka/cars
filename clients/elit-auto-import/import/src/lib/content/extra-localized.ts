@@ -1,4 +1,5 @@
 export const extraEnglish = {
+  "Подбрани текущо рекламирани автомобили. Наличност, състояние, пробег и условия се потвърждават с продавача.": "Selected currently advertised vehicles. Confirm availability, condition, mileage and terms with the seller.",
   "Най-желаната кола в България | Lamborghini Urus": "The most sought-after car in Bulgaria | Lamborghini Urus",
   "Продадох най-новата Панамера": "I sold the latest Panamera",
   "Продадох най-скъпия Брабус в България": "I sold the most expensive Brabus in Bulgaria",

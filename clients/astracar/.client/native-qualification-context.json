@@ -6,7 +6,7 @@
   "scope": "existing-dealer-pilot",
   "sourceCommit": "bb173c33d7b640502ad2e4bf27546748c12858b8",
   "reviewed": true,
-  "reviewedAt": "2026-10-14T23:58:34.754Z",
+  "reviewedAt": "2026-10-15T03:31:14.169Z",
   "qualificationOnly": true,
   "approved": false,
   "nativeApproval": false,
@@ -22,5 +22,19 @@
   "sourceReview": {
     "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-review.json",
     "sha256": "27c6ce5dd17ee6e1b9f6a5b059a95d5e1dbe4200f61264fc50addeb7af89d984"
+  },
+  "dealerSourceRepair": {
+    "kind": "explicit-english-editorial-catalog",
+    "parentContextSha256": "897ed610c2bea1eb7e27e65248b78bde9fc185ce310137da279ee9c15fcded21",
+    "baseSourceCommit": "8fd19452a6c8e2ca8b4a4e03f6629fb26408503e",
+    "baseSourceTree": "4e2781f933fe27b66eb5aae31b7c6c1fb8b1988f",
+    "path": "import/src/lib/content/extra-localized.ts",
+    "beforeBlob": "56d03de7e44322815f20e2fd582de285df9ffd3f",
+    "afterBlob": "41e32bba4f1cf3dba8cdca97f65e5ee0cff1a8f8",
+    "proof": {
+      "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/editorial-runtime-repair-20261015/astracar/focused-proof.json",
+      "sha256": "83d17694d44dba734bf06a161891636d7c619874bf110fc44ec5a7257b78ea7e"
+    },
+    "evidenceReuse": "Original immutable six-template QA and source preparation remain provenance; focused exact-source localization proof covers this new dealer edit. No new CI, build, native or hosted success is asserted."
   }
 }
