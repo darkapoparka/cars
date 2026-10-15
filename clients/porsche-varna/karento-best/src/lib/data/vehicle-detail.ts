@@ -147,7 +147,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "Porsche Varna",
   "location": "ул. Ян Хуниади 2, Варна, България",
-  "avatar": "/dealer-brand/v2-a51523c9c6d92684/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-e452ef8f1f1e5d3c/logo-on-light.webp",
   "mobile": "052 59 80 10",
   "email": "",
   "whatsapp": "",

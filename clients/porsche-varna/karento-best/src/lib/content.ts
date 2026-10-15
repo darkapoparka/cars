@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "Porsche Varna",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-a51523c9c6d92684/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-a51523c9c6d92684/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-a51523c9c6d92684/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-e452ef8f1f1e5d3c/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-e452ef8f1f1e5d3c/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-e452ef8f1f1e5d3c/logo-on-dark.webp",
     "alt": "Porsche Varna",
-    "favicon": "/dealer-brand/v2-a51523c9c6d92684/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-e452ef8f1f1e5d3c/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

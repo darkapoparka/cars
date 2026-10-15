@@ -664,6 +664,8 @@ const generatedDealerEnglish = (value: string): string | undefined => {
 	return (
 		{
 			'Информация за автокъщата': 'Dealer information',
+			"Показаните демонстрационни автомобили са илюстративни и не представляват наличности на автокъщата. За действителните оферти и наличности се свържете директно с нея.":
+				"The demo vehicles shown are illustrative and are not dealership stock. Contact the dealership directly for actual offers and availability.",
 			'Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.':
 				'Dated listing snapshot; confirm the price and availability directly with the dealership.',
 			'Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.':

@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "Porsche Varna",
-  "logo": "/dealer-brand/v2-a51523c9c6d92684/logo-on-light.webp",
+  "logo": "/dealer-brand/v2-e452ef8f1f1e5d3c/logo-on-light.webp",
   "phone": "+35952598010",
   "email": null,
   "address": "ул. Ян Хуниади 2, Варна, България",

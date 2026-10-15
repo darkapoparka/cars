@@ -49,7 +49,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Porsche Varna",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-a51523c9c6d92684/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-e452ef8f1f1e5d3c/logo-on-light.webp"
     },
     "publishedAt": "2026-10-12T09:00:00.000Z",
     "promoted": true
@@ -101,7 +101,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Porsche Varna",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-a51523c9c6d92684/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-e452ef8f1f1e5d3c/logo-on-light.webp"
     },
     "publishedAt": "2026-10-12T09:00:00.000Z",
     "promoted": true

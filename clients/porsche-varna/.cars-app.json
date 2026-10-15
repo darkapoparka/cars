@@ -3,12 +3,12 @@
   "dealer": "porsche-varna",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/app",
-    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
-    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
   },
-  "appDigest": "8e424359d4af90784749cb25b077b52930007b258c1c70cd5cefe1babe4ff414",
+  "appDigest": "564ab0f2b9e21bdab271b8e7f44b30e5ecf2e9e2a6ba934b22e5332dd2111697",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "porsche-varna",
@@ -21,14 +21,14 @@
     "assets": [
       {
         "source": "auto-best/static/dealer-brand/logo-on-light.png",
-        "output": "public/dealer-app/logo-light-7db4942522b37ec8a938.png",
-        "sha256": "7db4942522b37ec8a938c5678bb87fabc637d9eecfb929249ce23bacaa919bd6",
+        "output": "public/dealer-app/logo-light-9018dead35a36a8e4a49.png",
+        "sha256": "9018dead35a36a8e4a497480f9fbb3d67986bfa40d58b8178405943ce2853e97",
         "role": "logo-light"
       },
       {
         "source": "auto-best/static/dealer-brand/logo-on-dark.png",
-        "output": "public/dealer-app/logo-dark-7b50ee8969423bb9c0b9.png",
-        "sha256": "7b50ee8969423bb9c0b906087ef8d3483718df671dd161122e2de87ded945bb3",
+        "output": "public/dealer-app/logo-dark-88ae11181b1b760765b3.png",
+        "sha256": "88ae11181b1b760765b3fada4b658bfb102c40b47da397280c9c5cdcb33e6de2",
         "role": "logo-dark"
       },
       {
@@ -72,5 +72,6 @@
     ]
   },
   "needsDealerQA": true,
-  "readyToPublish": false
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-15T04:38:42.111Z"
 }
