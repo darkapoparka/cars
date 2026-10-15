@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "Multi ZaZa",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-60dd0f6dac7692fc/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-60dd0f6dac7692fc/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-60dd0f6dac7692fc/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-f55c0eea45d015df/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-f55c0eea45d015df/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-f55c0eea45d015df/logo-on-dark.webp",
     "alt": "Multi ZaZa",
-    "favicon": "/dealer-brand/v2-60dd0f6dac7692fc/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-f55c0eea45d015df/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

@@ -50,7 +50,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Multi ZaZa",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-60dd0f6dac7692fc/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-f55c0eea45d015df/logo-on-light.webp"
     },
     "publishedAt": "2026-10-11T09:00:00.000Z",
     "promoted": true

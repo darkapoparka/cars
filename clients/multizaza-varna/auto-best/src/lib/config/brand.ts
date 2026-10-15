@@ -33,6 +33,6 @@ export const brand = {
   addressLine,
   address: "ул. Райко Жинзифов, Варна, България",
   appointment: "Потвърдете работното време директно с автокъщата.",
-  logo: "/dealer-brand/v2-60dd0f6dac7692fc/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/v2-60dd0f6dac7692fc/logo-on-dark.webp"
+  logo: "/dealer-brand/v2-f55c0eea45d015df/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-f55c0eea45d015df/logo-on-dark.webp"
 } as const satisfies BrandConfig;

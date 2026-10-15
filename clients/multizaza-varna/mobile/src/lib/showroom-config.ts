@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "Multi ZaZa",
-  "logo": "/dealer-brand/v2-60dd0f6dac7692fc/logo-on-light.webp",
+  "logo": "/dealer-brand/v2-f55c0eea45d015df/logo-on-light.webp",
   "phone": "+359887236046",
   "email": null,
   "address": "ул. Райко Жинзифов, Варна, България",

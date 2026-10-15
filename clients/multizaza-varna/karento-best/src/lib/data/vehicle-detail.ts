@@ -155,7 +155,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "Multi ZaZa",
   "location": "ул. Райко Жинзифов, Варна, България",
-  "avatar": "/dealer-brand/v2-60dd0f6dac7692fc/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-f55c0eea45d015df/logo-on-light.webp",
   "mobile": "0887236046",
   "email": "",
   "whatsapp": "",
