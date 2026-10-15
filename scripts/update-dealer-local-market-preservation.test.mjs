@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';import {createHash} from 'node:crypto';import fs from 'node:fs';import path from 'node:path';import os from 'node:os';import test from 'node:test';
+import {planThreeWayUpgrade} from './dealer-updates/three-way-upgrade.mjs';
 import {applyReviewedFactualConsumerResolutions,assertFactualRefreshCandidate,assertFactualRefreshReplay} from './dealer-updates/update-dealer-template.mjs';
 const digest=value=>createHash('sha256').update(value).digest('hex'),encode=value=>Buffer.from(JSON.stringify(value,null,2)+'\n');
 const names=['auto-best/localization/common.json','import/src/lib/auxero/home-five.ts','import/src/lib/content/extra-localized.ts'];
@@ -17,7 +18,7 @@ function fixture(){
  const profile={schemaVersion:1,slug,business:{countryCode:'GB',currency:'GBP',distanceUnit:'mi',phoneHref:'tel:+441234567890',email:'sales@example.test'},listings:[{slug:'retained-stock',price:12999,mileage:42000}],rawFacts:{contactApproved:false}},sourceInputs=new Map([['business-facts.json',encode(profile.business)],['stock.json',encode(profile.listings)]]);
  const review={schemaVersion:1,kind:'cars-local-market-consumer-preservation',reviewed:true,reviewedBy:'owner-reviewed local-market preservation',dealer:slug,baseline:structuredClone(baseline),targetSources:structuredClone(targetSources),market:{countryCode:'GB',currency:'GBP',distanceUnit:'mi'},profileSha256:digest(JSON.stringify(profile)),sourceInputs:[...sourceInputs].map(([path,bytes])=>({path,sha256:digest(bytes)})),paths:names.map((path,i)=>({path,choice:i===2?'dealer':'manual',originalSha256:digest(current[i]),oldSha256:digest(old[i]),targetSha256:digest(target[i]),mergedSha256:digest(merged[i])}))};
  const factualProof={schemaVersion:1,stage:'preservation-merge-before-native-catalogs-and-branding',mode:'current-facts-from-pinned-six-targets',dealer:slug,profileSha256:digest(JSON.stringify(profile)),targetSources,consumerPaths:[...keys.map(key=>key+'/src/facts.json'),...names].sort()};
- const plan={ready:true,candidate,changes:names.map((path,i)=>({path,kind:i===2?'resolved-dealer':'resolved-manual'})),conflicts:[],pins:Object.fromEntries(keys.map(key=>[key,{targetSource:targetSources[key]}]))};
+ const plan={ready:true,candidate,changes:names.slice(0,2).map(path=>({path,kind:'resolved-manual'})),conflicts:[],pins:Object.fromEntries(keys.map(key=>[key,{targetSource:targetSources[key]}]))};
  const qualification={schemaVersion:1,kind:'cars-native-source-qualification-context',id:'test',dealer:slug,scope:'existing-dealer-pilot',reviewed:true,reviewedAt:'2026-10-11',sourceCommit:'b'.repeat(40),nativeApproval:false,hostedApproval:false,globalReleaseApproval:false,approvedLockSha256:'c'.repeat(64),candidateLockSha256:'d'.repeat(64),sourceDeltaReview:{reference:'docs/releases/delta.json',sha256:'e'.repeat(64),reviewedAt:'2026-10-11'}};
  return {plan,original,oldBases,newBases,review,manifest:{slug,packaging:{version:'5'}},qualification,designSet:'six',refreshFacts:true,templatePalette:true,factualProof,baseline,resolutions:{[names[0]]:Buffer.from(merged[0]),[names[1]]:Buffer.from(merged[1]),[names[2]]:'dealer'},profile,sourceInputs,current,target,merged};
 }
@@ -66,4 +67,15 @@ test('saved local-market evidence replays original pre-install source plus exact
  fs.appendFileSync(path.join(directory,names[0]),' ');assert.throws(()=>assertFactualRefreshReplay({proof:f.factualProof,metadata,newBases:f.newBases}),/original source/);fs.writeFileSync(path.join(directory,names[0]),f.original.get(names[0]));
  for(const name of names)fs.writeFileSync(path.join(directory,name),f.plan.candidate.get(name));assert.deepEqual(assertFactualRefreshReplay({proof:f.factualProof,metadata,newBases:f.newBases}),metadata.factualRefresh,'Installed state also verifies the exact same choices');fs.appendFileSync(path.join(directory,names[1]),'// later edit\n');assert.throws(()=>assertFactualRefreshReplay({proof:f.factualProof,metadata,newBases:f.newBases}),/changed|drift/);}
  finally{const target=fs.realpathSync(directory),parent=fs.realpathSync(os.tmpdir());assert.equal(path.dirname(target),parent);assert(path.basename(target).startsWith('cars-local-market-replay-'));fs.rmSync(target,{recursive:true,force:true});}
+});
+
+test('actual three-way planner retains the exact dealer dictionary without a change row and refuses invented rows',()=>{
+ const f=fixture(),oldBase=new Map(),newBase=new Map();
+ for(const name of names){const slash=name.indexOf('/'),key=name.slice(0,slash),relative=name.slice(slash+1);oldBase.set(name,f.oldBases[key].get(relative));newBase.set(name,f.newBases[key].get(relative));}
+ const actual=planThreeWayUpgrade({oldBase,newBase,dealer:f.original,resolutions:f.resolutions});
+ assert.equal(actual.ready,true);assert.deepEqual(actual.conflicts,[]);assert.deepEqual(actual.changes.map(row=>({path:row.path,kind:row.kind})),names.slice(0,2).map(path=>({path,kind:'resolved-manual'})));
+ assert.deepEqual(actual.changes.filter(row=>row.path===names[2]),[]);assert(actual.candidate.get(names[2]).equals(f.original.get(names[2])));
+ for(const name of names){assert(actual.candidate.get(name).equals(f.merged[names.indexOf(name)]));f.plan.candidate.set(name,actual.candidate.get(name));}f.plan.changes=actual.changes;
+ const receipt=applyReviewedFactualConsumerResolutions(f);assert.equal(receipt.paths.length,3);assert.equal(assertFactualRefreshCandidate({candidate:f.plan.candidate,newBases:f.newBases,proof:f.factualProof}).localMarketHashes.length,3);
+ for(const kind of ['resolved-dealer','resolved-manual','dealer-only','auto-merged']){const unexpected=fixture();unexpected.plan.changes.push({path:names[2],kind});assert.throws(()=>applyReviewedFactualConsumerResolutions(unexpected),/exact conflict resolution changed/);assert.equal(unexpected.factualProof.reviewedLocalMarketPreservation,undefined);}
 });
