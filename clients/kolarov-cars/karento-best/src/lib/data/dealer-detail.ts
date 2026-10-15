@@ -36,6 +36,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "valueKey": "fuel.lpg"
       },
       {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2019",
+        "labelKey": "vehicle.field.year"
+      },
+      {
         "id": "lit",
         "icon": "/assets/imgs/page/car/lit.svg",
         "value": "151 hp",
@@ -104,7 +110,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Kolarov Cars",
       "location": "Бизнес Парк Варна, сграда В8, Варна, България",
-      "avatar": "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-200fef89fed2fb80/logo-on-light.webp",
       "mobile": "0876999800",
       "email": "",
       "whatsapp": "",
@@ -156,6 +162,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "valueKey": "fuel.lpg"
       },
       {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2017",
+        "labelKey": "vehicle.field.year"
+      },
+      {
         "id": "lit",
         "icon": "/assets/imgs/page/car/lit.svg",
         "value": "151 hp",
@@ -224,7 +236,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Kolarov Cars",
       "location": "Бизнес Парк Варна, сграда В8, Варна, България",
-      "avatar": "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-200fef89fed2fb80/logo-on-light.webp",
       "mobile": "0876999800",
       "email": "",
       "whatsapp": "",
@@ -274,6 +286,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Electric",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.electric"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2023",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -344,7 +362,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Kolarov Cars",
       "location": "Бизнес Парк Варна, сграда В8, Варна, България",
-      "avatar": "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-200fef89fed2fb80/logo-on-light.webp",
       "mobile": "0876999800",
       "email": "",
       "whatsapp": "",
@@ -394,6 +412,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "LPG",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.lpg"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2024",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -464,7 +488,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Kolarov Cars",
       "location": "Бизнес Парк Варна, сграда В8, Варна, България",
-      "avatar": "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-200fef89fed2fb80/logo-on-light.webp",
       "mobile": "0876999800",
       "email": "",
       "whatsapp": "",
@@ -514,6 +538,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Hybrid",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.hybrid"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2025",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -584,7 +614,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Kolarov Cars",
       "location": "Бизнес Парк Варна, сграда В8, Варна, България",
-      "avatar": "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-200fef89fed2fb80/logo-on-light.webp",
       "mobile": "0876999800",
       "email": "",
       "whatsapp": "",
@@ -634,6 +664,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2021",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -704,7 +740,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Kolarov Cars",
       "location": "Бизнес Парк Варна, сграда В8, Варна, България",
-      "avatar": "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-200fef89fed2fb80/logo-on-light.webp",
       "mobile": "0876999800",
       "email": "",
       "whatsapp": "",
@@ -754,6 +790,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2016",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -824,7 +866,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Kolarov Cars",
       "location": "Бизнес Парк Варна, сграда В8, Варна, България",
-      "avatar": "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-200fef89fed2fb80/logo-on-light.webp",
       "mobile": "0876999800",
       "email": "",
       "whatsapp": "",
@@ -874,6 +916,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "LPG",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.lpg"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2018",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -944,7 +992,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Kolarov Cars",
       "location": "Бизнес Парк Варна, сграда В8, Варна, България",
-      "avatar": "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-200fef89fed2fb80/logo-on-light.webp",
       "mobile": "0876999800",
       "email": "",
       "whatsapp": "",

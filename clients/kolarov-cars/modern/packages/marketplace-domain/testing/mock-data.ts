@@ -58,7 +58,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Kolarov Cars",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-200fef89fed2fb80/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": true
@@ -119,7 +119,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Kolarov Cars",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-200fef89fed2fb80/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": true
@@ -180,7 +180,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Kolarov Cars",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-200fef89fed2fb80/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": true
@@ -241,7 +241,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Kolarov Cars",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-200fef89fed2fb80/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -302,7 +302,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Kolarov Cars",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-200fef89fed2fb80/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -363,7 +363,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Kolarov Cars",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-200fef89fed2fb80/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -424,7 +424,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Kolarov Cars",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-200fef89fed2fb80/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -485,373 +485,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Kolarov Cars",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-light.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1004",
-    "slug": "kia-k5-2019-11791553575767854",
-    "category": "car",
-    "dealerOrgId": "dealer-kolarov-cars",
-    "status": "active",
-    "title": "Kia K5 ОЧАКВАН ВНОС! 2.0 LPI",
-    "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
-    "price": {
-      "amount": 15400,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/vehicles/11791553575767854/1.webp",
-        "alt": "Kia K5 ОЧАКВАН ВНОС! 2.0 LPI"
-      },
-      {
-        "url": "/assets/vehicles/11791553575767854/2.webp",
-        "alt": "Kia K5 ОЧАКВАН ВНОС! 2.0 LPI"
-      },
-      {
-        "url": "/assets/vehicles/11791553575767854/3.webp",
-        "alt": "Kia K5 ОЧАКВАН ВНОС! 2.0 LPI"
-      },
-      {
-        "url": "/assets/vehicles/11791553575767854/4.webp",
-        "alt": "Kia K5 ОЧАКВАН ВНОС! 2.0 LPI"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "spec": {
-      "make": "Kia",
-      "model": "K5",
-      "year": 2019,
-      "bodyType": "sedan",
-      "fuelType": "lpg",
-      "transmission": "automatic",
-      "mileageValue": 101899,
-      "mileageUnit": "km",
-      "enginePowerHp": 151
-    },
-    "seller": {
-      "id": "dealer-kolarov-cars",
-      "type": "dealer",
-      "displayName": "Kolarov Cars",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-light.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1005",
-    "slug": "kia-carens-2017-11791199226623612",
-    "category": "van",
-    "dealerOrgId": "dealer-kolarov-cars",
-    "status": "active",
-    "title": "Kia Carens ОЧАКВАН ВНОС! 2.0 LPI Noblesse",
-    "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
-    "price": {
-      "amount": 13800,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/vehicles/11791199226623612/1.webp",
-        "alt": "Kia Carens ОЧАКВАН ВНОС! 2.0 LPI Noblesse"
-      },
-      {
-        "url": "/assets/vehicles/11791199226623612/2.webp",
-        "alt": "Kia Carens ОЧАКВАН ВНОС! 2.0 LPI Noblesse"
-      },
-      {
-        "url": "/assets/vehicles/11791199226623612/3.webp",
-        "alt": "Kia Carens ОЧАКВАН ВНОС! 2.0 LPI Noblesse"
-      },
-      {
-        "url": "/assets/vehicles/11791199226623612/4.webp",
-        "alt": "Kia Carens ОЧАКВАН ВНОС! 2.0 LPI Noblesse"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "spec": {
-      "make": "Kia",
-      "model": "Carens",
-      "year": 2017,
-      "bodyType": "van",
-      "fuelType": "lpg",
-      "transmission": "automatic",
-      "mileageValue": 158528,
-      "mileageUnit": "km",
-      "enginePowerHp": 151
-    },
-    "seller": {
-      "id": "dealer-kolarov-cars",
-      "type": "dealer",
-      "displayName": "Kolarov Cars",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-light.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1006",
-    "slug": "hyundai-kona-2023-21791198605082937",
-    "category": "car",
-    "dealerOrgId": "dealer-kolarov-cars",
-    "status": "active",
-    "title": "Hyundai Kona ОЧАКВАН ВНОС! 100 kW Select 2WD",
-    "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
-    "price": {
-      "amount": 19000,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/vehicles/21791198605082937/1.webp",
-        "alt": "Hyundai Kona ОЧАКВАН ВНОС! 100 kW Select 2WD"
-      },
-      {
-        "url": "/assets/vehicles/21791198605082937/2.webp",
-        "alt": "Hyundai Kona ОЧАКВАН ВНОС! 100 kW Select 2WD"
-      },
-      {
-        "url": "/assets/vehicles/21791198605082937/3.webp",
-        "alt": "Hyundai Kona ОЧАКВАН ВНОС! 100 kW Select 2WD"
-      },
-      {
-        "url": "/assets/vehicles/21791198605082937/4.webp",
-        "alt": "Hyundai Kona ОЧАКВАН ВНОС! 100 kW Select 2WD"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "spec": {
-      "make": "Hyundai",
-      "model": "Kona",
-      "year": 2023,
-      "bodyType": "suv",
-      "fuelType": "electric",
-      "transmission": "automatic",
-      "mileageValue": 68758,
-      "mileageUnit": "km",
-      "enginePowerHp": 136
-    },
-    "seller": {
-      "id": "dealer-kolarov-cars",
-      "type": "dealer",
-      "displayName": "Kolarov Cars",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-light.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1007",
-    "slug": "hyundai-grandeur-2024-11790857321805014",
-    "category": "car",
-    "dealerOrgId": "dealer-kolarov-cars",
-    "status": "active",
-    "title": "Hyundai Grandeur ОЧАКВАН ВНОС! 3.5 LPG 2WD",
-    "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
-    "price": {
-      "amount": 27900,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/vehicles/11790857321805014/1.webp",
-        "alt": "Hyundai Grandeur ОЧАКВАН ВНОС! 3.5 LPG 2WD"
-      },
-      {
-        "url": "/assets/vehicles/11790857321805014/2.webp",
-        "alt": "Hyundai Grandeur ОЧАКВАН ВНОС! 3.5 LPG 2WD"
-      },
-      {
-        "url": "/assets/vehicles/11790857321805014/3.webp",
-        "alt": "Hyundai Grandeur ОЧАКВАН ВНОС! 3.5 LPG 2WD"
-      },
-      {
-        "url": "/assets/vehicles/11790857321805014/4.webp",
-        "alt": "Hyundai Grandeur ОЧАКВАН ВНОС! 3.5 LPG 2WD"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "spec": {
-      "make": "Hyundai",
-      "model": "Grandeur",
-      "year": 2024,
-      "bodyType": "other",
-      "fuelType": "lpg",
-      "transmission": "automatic",
-      "mileageValue": 45606,
-      "mileageUnit": "km",
-      "enginePowerHp": 240
-    },
-    "seller": {
-      "id": "dealer-kolarov-cars",
-      "type": "dealer",
-      "displayName": "Kolarov Cars",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-light.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1008",
-    "slug": "kia-carnival-2025-11790848955763034",
-    "category": "van",
-    "dealerOrgId": "dealer-kolarov-cars",
-    "status": "active",
-    "title": "Kia Carnival ОЧАКВАН ВНОС! HEV 7SEATER NOBLESS",
-    "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
-    "price": {
-      "amount": 39900,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/vehicles/11790848955763034/1.webp",
-        "alt": "Kia Carnival ОЧАКВАН ВНОС! HEV 7SEATER NOBLESS"
-      },
-      {
-        "url": "/assets/vehicles/11790848955763034/2.webp",
-        "alt": "Kia Carnival ОЧАКВАН ВНОС! HEV 7SEATER NOBLESS"
-      },
-      {
-        "url": "/assets/vehicles/11790848955763034/3.webp",
-        "alt": "Kia Carnival ОЧАКВАН ВНОС! HEV 7SEATER NOBLESS"
-      },
-      {
-        "url": "/assets/vehicles/11790848955763034/4.webp",
-        "alt": "Kia Carnival ОЧАКВАН ВНОС! HEV 7SEATER NOBLESS"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "spec": {
-      "make": "Kia",
-      "model": "Carnival",
-      "year": 2025,
-      "bodyType": "van",
-      "fuelType": "hybrid",
-      "transmission": "automatic",
-      "mileageValue": 7084,
-      "mileageUnit": "km",
-      "enginePowerHp": 245
-    },
-    "seller": {
-      "id": "dealer-kolarov-cars",
-      "type": "dealer",
-      "displayName": "Kolarov Cars",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-light.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1009",
-    "slug": "hyundai-santa-fe-2021-21779090254494625",
-    "category": "car",
-    "dealerOrgId": "dealer-kolarov-cars",
-    "status": "active",
-    "title": "Hyundai Santa fe 2.2 2WD",
-    "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
-    "price": {
-      "amount": 22700,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/vehicles/21779090254494625/1.webp",
-        "alt": "Hyundai Santa fe 2.2 2WD"
-      },
-      {
-        "url": "/assets/vehicles/21779090254494625/2.webp",
-        "alt": "Hyundai Santa fe 2.2 2WD"
-      },
-      {
-        "url": "/assets/vehicles/21779090254494625/3.webp",
-        "alt": "Hyundai Santa fe 2.2 2WD"
-      },
-      {
-        "url": "/assets/vehicles/21779090254494625/4.webp",
-        "alt": "Hyundai Santa fe 2.2 2WD"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "spec": {
-      "make": "Hyundai",
-      "model": "Santa fe",
-      "year": 2021,
-      "bodyType": "suv",
-      "fuelType": "diesel",
-      "transmission": "automatic",
-      "mileageValue": 45007,
-      "mileageUnit": "km",
-      "enginePowerHp": 202
-    },
-    "seller": {
-      "id": "dealer-kolarov-cars",
-      "type": "dealer",
-      "displayName": "Kolarov Cars",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-200fef89fed2fb80/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false

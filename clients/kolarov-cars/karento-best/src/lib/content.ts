@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "Kolarov Cars",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-200fef89fed2fb80/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-200fef89fed2fb80/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-200fef89fed2fb80/logo-on-dark.webp",
     "alt": "Kolarov Cars",
-    "favicon": "/dealer-brand/app-icon.png",
+    "favicon": "/dealer-brand/v2-200fef89fed2fb80/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

@@ -54,7 +54,10 @@
 			target ?? (document.activeElement instanceof HTMLElement ? document.activeElement : null);
 		const version = requestVersion;
 		await tick();
-		if (version === requestVersion && !dialog.open) dialog.showModal();
+		if (version === requestVersion && !dialog.open) {
+			dialog.showModal();
+			dialog.querySelector<HTMLElement>('#cars-locale-title')?.focus({ preventScroll: true });
+		}
 	}
 	function close() {
 		dialog.close();
@@ -151,7 +154,7 @@
 			onclick={() => submit('dismiss')}>×</button
 		>
 		<p class="cars-locale-eyebrow">{localeContract.dealerName}</p>
-		<h2 id="cars-locale-title">{i18n.t(firstVisit ? 'welcome' : 'title')}</h2>
+		<h2 id="cars-locale-title" tabindex="-1">{i18n.t(firstVisit ? 'welcome' : 'title')}</h2>
 		<p id="cars-locale-description">{i18n.t('description')}</p>
 		<p class="cars-locale-suggestion">
 			{i18n.t('suggestion', {
@@ -191,6 +194,9 @@
 </dialog>
 
 <style>
+	#cars-locale-title:focus {
+		outline: none;
+	}
 	.cars-locale-dialog {
 		box-sizing: border-box;
 		width: min(480px, calc(100vw - 24px));

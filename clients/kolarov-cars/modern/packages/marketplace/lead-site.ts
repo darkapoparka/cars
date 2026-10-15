@@ -114,8 +114,8 @@ export const leadSite: LeadSiteConfig = {
     "tagline": "Kolarov Cars — vehicles and dealer support in Varna."
   }
 },
-  accent: "#30343b",
-  desktopAccent: "#4b5057",
+  accent: "#09090b",
+  desktopAccent: "#09090b",
   desktopInventoryFilterLayout: "quick",
   desktopPreviewIdentity: {
     sourceSlug: "day-night-auto-group",
@@ -127,7 +127,7 @@ export const leadSite: LeadSiteConfig = {
       en: "Find your next car.",
     },
   },
-  address: "ул. „Атанас Манчев“ 18, Варна",
+  address: "Бизнес Парк Варна, сграда В8, Варна, България",
   city: "Варна",
   district: { bg: "Варна", en: "Varna" },
   sellCategoryAssets: {
@@ -141,17 +141,17 @@ export const leadSite: LeadSiteConfig = {
   mobileShowroomArtworkPath:
     "/images/lease/mobile-pdp-showroom-blue-hour-v1.webp",
   contactUrl: "tel:+359876999800",
-  country: "България",
+  country: "BG",
   countryCode: carsLocale.dealerCountry,
   currency: carsLocale.inventoryCurrency,
   email: "",
   heroPath: "/lead-hero.jpg",
   locale: "bg-BG",
-  logoPath: "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-light.webp",
-  logoInversePath: "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-dark.webp",
-  logoOnLight: "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-dark.webp",
-  logoOnAccent: "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-dark.webp",
+  logoPath: "/dealer-brand/v2-200fef89fed2fb80/logo-on-light.webp",
+  logoInversePath: "/dealer-brand/v2-200fef89fed2fb80/logo-on-dark.webp",
+  logoOnLight: "/dealer-brand/v2-200fef89fed2fb80/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-200fef89fed2fb80/logo-on-dark.webp",
+  logoOnAccent: "/dealer-brand/v2-200fef89fed2fb80/logo-on-dark.webp",
   mapsEmbedUrl:
     "https://maps.google.com/maps?q=Kolarov%20Cars%2C%20%D0%91%D0%B8%D0%B7%D0%BD%D0%B5%D1%81%20%D0%9F%D0%B0%D1%80%D0%BA%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D1%81%D0%B3%D1%80%D0%B0%D0%B4%D0%B0%20%D0%928%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F&z=16&output=embed",
   mapsUrl:
@@ -163,6 +163,6 @@ export const leadSite: LeadSiteConfig = {
   slug: "kolarov-cars",
   socialLinks: {},
   staticDemoMode: true,
-  tagline: "Премиум автомобили, внос и собствен лизинг в Варна.",
+  tagline: "Kolarov Cars — автомобили и съдействие в Варна.",
 };
 // LEAD_SITE_CONFIG_END

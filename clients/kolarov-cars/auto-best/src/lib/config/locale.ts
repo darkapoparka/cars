@@ -23,13 +23,17 @@ export const dealerLocalizedText = {
     "city": "Varna",
     "addressLine": "Biznes Park Varna, sgrada V8",
     "address": "Biznes Park Varna, sgrada V8, Varna, Balgariya",
-    "appointment": "Viewings by appointment. Please call before visiting."
+    "appointment": "Viewings by appointment. Please call before visiting.",
+    "addressShort": "Biznes Park Varna, sgrada V8",
+    "appointmentShort": "Viewings by appointment. Please call before visiting."
   },
   "bg": {
     "city": "Варна",
     "addressLine": "Бизнес Парк Варна, сграда В8",
     "address": "Бизнес Парк Варна, сграда В8, Варна, България",
-    "appointment": "Потвърдете работното време директно с автокъщата."
+    "appointment": "Потвърдете работното време директно с автокъщата.",
+    "addressShort": "Бизнес Парк Варна, сграда В8",
+    "appointmentShort": "Потвърдете работното време директно с автокъщата."
   }
 } as const;
 

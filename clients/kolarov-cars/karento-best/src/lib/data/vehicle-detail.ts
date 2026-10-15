@@ -118,6 +118,12 @@ export const referenceSpecifications: readonly DetailSpecification[] = [
     "valueKey": "fuel.lpg"
   },
   {
+    "id": "year",
+    "icon": "/assets/imgs/template/icons/calendar.svg",
+    "value": "2019",
+    "labelKey": "vehicle.field.year"
+  },
+  {
     "id": "lit",
     "icon": "/assets/imgs/page/car/lit.svg",
     "value": "151 hp",
@@ -149,7 +155,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "Kolarov Cars",
   "location": "Бизнес Парк Варна, сграда В8, Варна, България",
-  "avatar": "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-200fef89fed2fb80/logo-on-light.webp",
   "mobile": "0876999800",
   "email": "",
   "whatsapp": "",

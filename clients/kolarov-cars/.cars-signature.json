@@ -5,12 +5,12 @@
   "name": "Kolarov Cars",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "cc130e432a41a3a60cc80bc2b3461c6416893b4a",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/karento-best",
-    "tree": "c661129affb32649c8fcecea097fc9a6487783d0",
-    "digest": "bf8c6628be5f28b7e3358b121b7cf9e236d36a2fc0138bf640d72113c7e17f30"
+    "digest": "be17ef365e3272753df6e50826b139a45bfc32b8fef54ddcb86d977ad16280a9",
+    "tree": "8c5ac869c7fd15e19a80c660343fc64b20a2bad9"
   },
-  "sourceDigest": "a01c62f91dd439cc1dd9de50540f8c3a83fb171e1909475e4c14380d5d8da71c",
+  "sourceDigest": "117ff213b76d8c8b296ea8c948567381e558c22afaf2237bce53fa3cb05e9ad6",
   "inventory": {
     "mode": "dated-listing-snapshot",
     "count": 8,
@@ -19,8 +19,8 @@
   "personalization": {
     "profileSha256": "c3d177057dad83160ec0ea34275316edb0f9bb81d616d7d1e11345c377ac58c5",
     "logoPaths": [
-      "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-light.webp",
-      "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-dark.webp"
+      "/dealer-brand/logo-on-light.webp",
+      "/dealer-brand/logo-on-dark.webp"
     ],
     "mediaPaths": [
       "/assets/vehicles/11791553575767854/1.webp",
@@ -67,6 +67,9 @@
       "karento-best/src/lib/pages/cars-details-3.svelte",
       "karento-best/src/lib/components/vehicle-detail/VehicleReservationCard.svelte",
       "karento-best/src/lib/components/vehicle-detail/VehicleDetailPanels.svelte",
+      "karento-best/src/lib/components/ServiceSpotCard.svelte",
+      "karento-best/src/lib/sections/HomeBrandLinks.svelte",
+      "karento-best/src/lib/i18n/catalogs/reference-home.ts",
       "karento-best/src/lib/data/editorial.ts",
       "karento-best/src/lib/data/home-stories.ts",
       "karento-best/src/lib/cards/VehicleEditorialCard.svelte",
@@ -89,9 +92,5 @@
     "nativeDealerFacts": true
   },
   "needsDealerQA": true,
-  "readyToPublish": false,
-  "branding": {
-    "packId": "f0a9cb9e0a0fb982",
-    "previousSourceDigest": "aee3179ebd38d2472a8fafe7de4160f2af3c4bc7dbf1b8ff1e588d314e50bbfc"
-  }
+  "readyToPublish": false
 }

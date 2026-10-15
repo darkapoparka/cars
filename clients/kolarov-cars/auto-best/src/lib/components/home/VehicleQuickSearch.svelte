@@ -71,9 +71,9 @@
     if (mobileView === 'year') return i18n.t("m_89f6832560de");
     return i18n.t("m_546ebb8eb993");
   });
-  const optionSelected = (value: string) => Array.isArray(mobileMenuValue)
+  const optionSelected = (value: string) => Boolean(value) && (Array.isArray(mobileMenuValue)
     ? value ? listingSelectionHas(mobileMenuValue, value) : mobileMenuValue.length === 0
-    : mobileMenuValue === value;
+    : mobileMenuValue === value);
   let mobileMenuValue = $derived.by(() => {
     if (mobileView === 'make') return make;
     if (mobileView === 'model') return model;

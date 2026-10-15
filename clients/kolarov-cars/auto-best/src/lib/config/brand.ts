@@ -2,7 +2,7 @@ export type BrandConfig = {
   name: string;
   shortName: string;
   city: string;
-  showroomCoordinates: { latitude: number; longitude: number };
+  showroomCoordinates: { latitude: number; longitude: number } | null;
   addressLine: string;
   address: string;
   phone: string;
@@ -11,8 +11,8 @@ export type BrandConfig = {
   logo: `/${string}`;
   logoOnDark: `/${string}`;
   youtubeUrl: `https://${string}` | '';
-  instagramUrl: `https://${string}`;
-  facebookUrl: `https://${string}`;
+  instagramUrl: `https://${string}` | '';
+  facebookUrl: `https://${string}` | '';
 };
 
 const name = "Kolarov Cars";
@@ -24,15 +24,15 @@ export const brand = {
   name,
   shortName,
   city,
-  showroomCoordinates: {"latitude":0,"longitude":0},
-  youtubeUrl: "https://www.youtube.com/",
-  instagramUrl: "https://www.instagram.com/",
-  facebookUrl: "https://www.facebook.com/",
+  showroomCoordinates: null,
+  youtubeUrl: "",
+  instagramUrl: "",
+  facebookUrl: "",
   phone: "0876999800",
   phoneHref: "tel:+359876999800",
   addressLine,
   address: "Бизнес Парк Варна, сграда В8, Варна, България",
   appointment: "Потвърдете работното време директно с автокъщата.",
-  logo: "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-dark.webp"
+  logo: "/dealer-brand/v2-200fef89fed2fb80/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-200fef89fed2fb80/logo-on-dark.webp"
 } as const satisfies BrandConfig;
