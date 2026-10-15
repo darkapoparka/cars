@@ -3,7 +3,15 @@
   "mode": "existing-migration",
   "sourceRevision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
   "dealers": [
-    "bradford-cherry-tree-cars"
+    "motherwell-motors-castle",
+    "birmingham-square-one-motors",
+    "sevicar-varna",
+    "kalchev-varna",
+    "stockport-broadbent-car-and-servicing",
+    "dm-auto-varna",
+    "kolarov-cars",
+    "dynamic-auto-varna",
+    "car-point-trade-varna"
   ],
   "targets": [
     "auto-best",
@@ -16,12 +24,44 @@
   ],
   "composition": {
     "reviewed": true,
-    "reviewedAt": "2026-10-15T01:15:52.454Z",
-    "reviewScope": "Owner-authorized final six-template refresh of existing Cloudflare identities. All selected dealer source trees are actually published on Cars MAIN; preserve native palettes, factual stock/contacts/locales, selected logos, one existing Worker and its existing canonical exposure. Private source MAIN and hosted acceptance are recorded separately. Final Bradford pilot binds explicit Auto light/dark rasters, hides absent-phone Auto controls, and includes the reviewed shared welcome chevron through the published maintained builder. Actual source publication 1a52380ac8035e33a0f9eaa5a4edfeaabc63f277, client tree 2ba44e704c71b1a0fcb8faaad304fb2294b95227. Preserve original stock8, faithful missing-contact facts, rasters and existing canonical route. One final seven-target checkpoint; qualified source package and singleton are produced together. No preview branch.",
+    "reviewedAt": "2026-10-15T01:32:48.580Z",
+    "reviewScope": "Owner-authorized final six-template refresh of existing Cloudflare identities. All selected dealer source trees are actually published on Cars MAIN; preserve native palettes, factual stock/contacts/locales, selected logos, one existing Worker and its existing canonical exposure. Private source MAIN and hosted acceptance are recorded separately.",
     "canonicalCompositions": {
-      "bradford-cherry-tree-cars": {
-        "canonicalOrigin": "https://bradford-cherry-tree-cars.webpreviews.site",
+      "motherwell-motors-castle": {
+        "canonicalOrigin": "https://motherwell-motors-castle.webpreviews.site",
         "ukDefault": true
+      },
+      "birmingham-square-one-motors": {
+        "canonicalOrigin": "https://birmingham-square-one-motors.webpreviews.site",
+        "ukDefault": true
+      },
+      "sevicar-varna": {
+        "canonicalOrigin": "https://sevicar-varna.webpreviews.site",
+        "ukDefault": false
+      },
+      "kalchev-varna": {
+        "canonicalOrigin": "https://kalchev-varna.webpreviews.site",
+        "ukDefault": false
+      },
+      "stockport-broadbent-car-and-servicing": {
+        "canonicalOrigin": "https://stockport-broadbent-car-and-servicing.webpreviews.site",
+        "ukDefault": true
+      },
+      "dm-auto-varna": {
+        "canonicalOrigin": "https://dm-auto-varna.webpreviews.site",
+        "ukDefault": false
+      },
+      "kolarov-cars": {
+        "canonicalOrigin": "https://kolarov-cars.webpreviews.site",
+        "ukDefault": false
+      },
+      "dynamic-auto-varna": {
+        "canonicalOrigin": "https://dynamic-auto-varna.webpreviews.site",
+        "ukDefault": false
+      },
+      "car-point-trade-varna": {
+        "canonicalOrigin": "https://car-point-trade-varna.webpreviews.site",
+        "ukDefault": false
       }
     }
   }
