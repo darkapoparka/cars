@@ -124,14 +124,14 @@
   }
   .content :global(button.border-primary[aria-pressed="true"]),
   .focusedContent :global(button.border-primary[aria-pressed="true"]) {
-    color: var(--brand-foreground);
-    background: var(--brand);
-    border-color: var(--brand);
+    color: var(--primary-foreground);
+    background: var(--primary);
+    border-color: var(--primary);
   }
   .content :global(button.border-primary[aria-pressed="true"]:hover),
   .focusedContent :global(button.border-primary[aria-pressed="true"]:hover) {
-    color: var(--brand-hover-foreground);
-    background: var(--lead-site-accent-hover);
+    color: var(--primary-hover-foreground);
+    background: var(--primary-hover);
   }
   .vehicleColumns {
     display: grid;
@@ -215,13 +215,13 @@
     background: var(--accent);
   }
   .vehiclePanel .modelOptions :global(button[aria-pressed="true"]) {
-    color: var(--brand-foreground);
-    background: var(--brand);
-    border-color: var(--brand);
+    color: var(--primary-foreground);
+    background: var(--primary);
+    border-color: var(--primary);
   }
   .modelOptions :global(button[aria-pressed="true"]:hover) {
-    color: var(--brand-hover-foreground);
-    background: var(--lead-site-accent-hover);
+    color: var(--primary-hover-foreground);
+    background: var(--primary-hover);
   }
   .vehiclePanel
     :global(button[aria-pressed="false"] [data-slot="picker-option-meta"]) {

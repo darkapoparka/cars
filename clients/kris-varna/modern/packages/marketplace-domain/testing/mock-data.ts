@@ -50,7 +50,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Крис",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-9235416f04be6f7b/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-88310c2f48c97d04/logo-on-light.webp"
     },
     "publishedAt": "2026-10-11T09:00:00.000Z",
     "promoted": true

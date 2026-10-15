@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "Крис",
-  "logo": "/dealer-brand/v2-9235416f04be6f7b/logo-on-light.webp",
+  "logo": "/dealer-brand/v2-88310c2f48c97d04/logo-on-light.webp",
   "phone": "+359899927244",
   "email": null,
   "address": "гр. Варна, бул. ,,Цар Освободител Номер#355А, Варна, България",

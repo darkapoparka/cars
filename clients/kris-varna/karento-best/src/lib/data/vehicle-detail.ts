@@ -155,7 +155,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "Крис",
   "location": "гр. Варна, бул. ,,Цар Освободител Номер#355А, Варна, България",
-  "avatar": "/dealer-brand/v2-9235416f04be6f7b/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-88310c2f48c97d04/logo-on-light.webp",
   "mobile": "0899927244",
   "email": "",
   "whatsapp": "",

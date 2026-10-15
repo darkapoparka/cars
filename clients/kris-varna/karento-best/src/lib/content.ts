@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "Крис",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-9235416f04be6f7b/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-9235416f04be6f7b/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-9235416f04be6f7b/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-88310c2f48c97d04/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-88310c2f48c97d04/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-88310c2f48c97d04/logo-on-dark.webp",
     "alt": "Крис",
-    "favicon": "/dealer-brand/v2-9235416f04be6f7b/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-88310c2f48c97d04/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

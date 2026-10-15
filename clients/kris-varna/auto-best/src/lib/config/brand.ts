@@ -33,6 +33,6 @@ export const brand = {
   addressLine,
   address: "гр. Варна, бул. ,,Цар Освободител Номер#355А, Варна, България",
   appointment: "Потвърдете работното време директно с автокъщата.",
-  logo: "/dealer-brand/v2-9235416f04be6f7b/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/v2-9235416f04be6f7b/logo-on-dark.webp"
+  logo: "/dealer-brand/v2-88310c2f48c97d04/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-88310c2f48c97d04/logo-on-dark.webp"
 } as const satisfies BrandConfig;
