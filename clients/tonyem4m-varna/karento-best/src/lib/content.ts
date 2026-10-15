@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "Тони Ем",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-fec9d8e77eafb4ab/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-fec9d8e77eafb4ab/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-fec9d8e77eafb4ab/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-e1d0db5b041182f0/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-e1d0db5b041182f0/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-e1d0db5b041182f0/logo-on-dark.webp",
     "alt": "Тони Ем",
-    "favicon": "/dealer-brand/v2-fec9d8e77eafb4ab/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-e1d0db5b041182f0/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

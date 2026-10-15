@@ -50,7 +50,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Тони Ем",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-fec9d8e77eafb4ab/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-e1d0db5b041182f0/logo-on-light.webp"
     },
     "publishedAt": "2026-10-11T09:00:00.000Z",
     "promoted": true

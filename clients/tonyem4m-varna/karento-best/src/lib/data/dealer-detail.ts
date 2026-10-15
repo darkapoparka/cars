@@ -94,7 +94,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Тони Ем",
       "location": "бул. Янош Хуняди 95 ( до Пароцентралата), Варна, България",
-      "avatar": "/dealer-brand/v2-fec9d8e77eafb4ab/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-e1d0db5b041182f0/logo-on-light.webp",
       "mobile": "0889515000",
       "email": "",
       "whatsapp": "",

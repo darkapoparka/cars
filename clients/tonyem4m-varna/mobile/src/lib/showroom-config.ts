@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "Тони Ем",
-  "logo": "/dealer-brand/v2-fec9d8e77eafb4ab/logo-on-light.webp",
+  "logo": "/dealer-brand/v2-e1d0db5b041182f0/logo-on-light.webp",
   "phone": "+359889515000",
   "email": null,
   "address": "бул. Янош Хуняди 95 ( до Пароцентралата), Варна, България",

@@ -33,6 +33,6 @@ export const brand = {
   addressLine,
   address: "бул. Янош Хуняди 95 ( до Пароцентралата), Варна, България",
   appointment: "Понеделник 09:00 - 18:00 ч. Вторник 09:00 - 18:00 ч. Сряда 09:00 - 18:00 ч. Четвъртък 09:00 - 18:00 ч. Петък 09:00 - 18:00 ч. Събота 10:00 - 16:00 ч. Неделя Почивен ден",
-  logo: "/dealer-brand/v2-fec9d8e77eafb4ab/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/v2-fec9d8e77eafb4ab/logo-on-dark.webp"
+  logo: "/dealer-brand/v2-e1d0db5b041182f0/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-e1d0db5b041182f0/logo-on-dark.webp"
 } as const satisfies BrandConfig;
