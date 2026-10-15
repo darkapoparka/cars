@@ -4,7 +4,7 @@
   "action": "proposal",
   "stage": "qualification-preview",
   "publicationTransport": "existing-local-publisher",
-  "toolingSourceCommit": "f3c9cbb80ac0116185dde27e3e779b07487bc1d4",
+  "toolingSourceCommit": "2680752e5d934f0699c69077df363b142abfba9a",
   "templateLock": {
     "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/candidate-lock.json",
     "sha256": "04633129df9e75d6cd62deeac9125b279957789d75f57cdb0b243ef61bfc3e7e"
@@ -59,124 +59,124 @@
   },
   "dealers": [
     {
-      "slug": "isauto-varna",
-      "repository": "darkapoparka/cars-isautovarna",
-      "projectId": "prj_8k5z9l4jyDCcoEfaaLBiyH1GbRVv",
-      "publicOrigin": "https://cars-isautovarna.vercel.app",
-      "sourceOwnership": "cars-owned",
-      "sourceRepository": "darkapoparka/cars",
-      "sourceCommit": "049a7fb8cc0ff70cdf4a6ecf48b8d786fa162f96",
-      "sourceTree": "8f6a8755f276cb23645e641852d61f9c98b3b075",
-      "sourceReview": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/editorial-runtime-repair-20261015/isauto-varna/source-review.json",
-        "sha256": "9930f54e4f865b31def8e64f7a8ca7b1f0228e56bebc50f3c48daf37ef7d32be",
-        "blob": "027265104421209c38420bafe718a74ef9821f35"
-      },
-      "privateMain": "8fbe92c56397397ae6cedbe47afd6915c01169a8",
-      "privateTarget": null,
-      "targetBranch": "codex/fleet-final-polish-20261014",
-      "qualification": {
-        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/isauto-varna/qualification-context.json",
-        "sha256": "2fb03ea306b50f0f747db8c3ecfd9c60dec51940fc8d15b89be8fa9b959b8c03"
-      }
-    },
-    {
-      "slug": "navara-car",
-      "repository": "darkapoparka/cars-navaracar",
-      "projectId": "prj_WIHXMoyCM4BIwvUsrbTosvNXYXwr",
-      "publicOrigin": "https://cars-navaracar.vercel.app",
-      "sourceOwnership": "cars-owned",
-      "sourceRepository": "darkapoparka/cars",
-      "sourceCommit": "049a7fb8cc0ff70cdf4a6ecf48b8d786fa162f96",
-      "sourceTree": "34f74eef1ce627c0f1c61b2f694c867dc0699f1b",
-      "sourceReview": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/editorial-runtime-repair-20261015/navara-car/source-review.json",
-        "sha256": "428833bfc256010999749e4fef27adcda0edb1d99c09cfef4aa5c1ac8bf36022",
-        "blob": "94192625f02c9fc2455f85c0355f0f0e5bd86d68"
-      },
-      "privateMain": "9d6906c55a60ae921eb3434b0afd41a95597c4a1",
-      "privateTarget": null,
-      "targetBranch": "codex/fleet-final-polish-20261014",
-      "qualification": {
-        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/navara-car/qualification-context.json",
-        "sha256": "62fd181256a078f0f1eca0ef9dc1974d46f4209997a520279f2b999c7f058219"
-      }
-    },
-    {
-      "slug": "autolife",
-      "repository": "darkapoparka/cars-autolife",
-      "projectId": "prj_h9XFj7PYyl3OsEMxBueC5bZWvdSd",
-      "publicOrigin": "https://cars-autolife.vercel.app",
-      "sourceOwnership": "cars-owned",
-      "sourceRepository": "darkapoparka/cars",
-      "sourceCommit": "049a7fb8cc0ff70cdf4a6ecf48b8d786fa162f96",
-      "sourceTree": "f5ca12af85cef3b948b8e13345849eebaef5ba95",
-      "sourceReview": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/editorial-runtime-repair-20261015/autolife/source-review.json",
-        "sha256": "b7ceca2c750aa3afe249fb0e0e3614f88e6a72217a2755fe9cafc107f67b2ec4",
-        "blob": "8ded0ce53ae2de799c38436d1f477cd509486c2a"
-      },
-      "privateMain": "e456853b0e38a14e7207f1d53786d71d82648a46",
-      "privateTarget": null,
-      "targetBranch": "codex/fleet-final-polish-20261014",
-      "qualification": {
-        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/autolife/qualification-context.json",
-        "sha256": "4bd0774d9302fea1a4d996c062658624d838726a250610c47fcc8b44bc59c9ba"
-      }
-    },
-    {
-      "slug": "astracar",
-      "repository": "darkapoparka/cars-astracar",
-      "projectId": "prj_70zIp6vOJGgHSVcOtk9pR8dCTsTT",
-      "publicOrigin": "https://cars-astracar.vercel.app",
+      "slug": "elit-auto-import",
+      "repository": "darkapoparka/cars-elitautoimport",
+      "projectId": "prj_7QV9OtCRFxJMWpWWlUXLpptcQPXs",
+      "publicOrigin": "https://cars-elitautoimport.vercel.app",
       "sourceOwnership": "cars-owned",
       "sourceRepository": "darkapoparka/cars",
       "sourceCommit": "2d96c134fcc3938cdf0640a1616ff62279d72a22",
-      "sourceTree": "9f4e880fb763f931980494d7fc7391db4553f43b",
+      "sourceTree": "eec2f81beb5d17bcb3e0cc381cf532c942bda7d9",
       "sourceReview": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/editorial-runtime-repair-20261015/astracar/source-review.json",
-        "sha256": "10f34f5e61d8612f50d4ef7bfd7ee41e64a14b73420f1e74d84d402394309f1d",
-        "blob": "f270b52e057b66aaeccaf602486f4f1a71e6f224"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/editorial-runtime-repair-20261015/elit-auto-import/source-review.json",
+        "sha256": "4c92162d0f5944c6f5e9dc3861e433dc5077490d79c3f59a667c5a12e0fe8694",
+        "blob": "42b21e3e634372152d423560064308d0a848ad68"
       },
-      "privateMain": "2cda77c6513e2d34fe497b2833760c6d13a3f413",
+      "privateMain": "f948d62227093438f9b203243a129c8d064096a2",
       "privateTarget": null,
       "targetBranch": "codex/fleet-final-polish-20261014",
       "qualification": {
-        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/astracar/qualification-context.json",
-        "sha256": "eec6b22b1773eae982bd91b2672bb845ae3baf1a3fafad1985690cd47b876295"
+        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/elit-auto-import/qualification-context.json",
+        "sha256": "8b1e885a4e6c5f8610d1f28429e15192b94a0b9e2f347faefb2c03f091e40f18"
       }
     },
     {
-      "slug": "champion-auto-pro",
-      "repository": "darkapoparka/cars-championautopro",
-      "projectId": "prj_Zles0MpLROdFwgSnvuvpxrNBWcRY",
-      "publicOrigin": "https://cars-championautopro.vercel.app",
+      "slug": "asko-96",
+      "repository": "darkapoparka/cars-asko96",
+      "projectId": "prj_lrmxXJdqRTKdDlufXaS0vd8TdpJX",
+      "publicOrigin": "https://cars-asko96.vercel.app",
       "sourceOwnership": "cars-owned",
       "sourceRepository": "darkapoparka/cars",
-      "sourceCommit": "2d96c134fcc3938cdf0640a1616ff62279d72a22",
-      "sourceTree": "668c91d92053b37fb83b4e97e99eed621dea63fc",
+      "sourceCommit": "f860824c253258a8e1b193c54a05a66abfc89f2a",
+      "sourceTree": "f301cef38c52b4e1119f061fe455fb95f6605b83",
       "sourceReview": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/editorial-runtime-repair-20261015/champion-auto-pro/source-review.json",
-        "sha256": "e87c12789a2c1322f477de198210585cff174059c707973f856fbd5decd86a4c",
-        "blob": "89f660874e679261f27ecb558ea55fc8452e88a5"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/editorial-runtime-repair-20261015/asko-96/source-review.json",
+        "sha256": "0e90860096d99a1d9b9a0150c2e1d65b52b52aee5d93de5b80f8a098c133110d",
+        "blob": "10a6962c865166c303efc2745909baf8746f5b3e"
       },
-      "privateMain": "81c2addef34c4e7e48af9e1541f55606f6693c88",
+      "privateMain": "923ae906aa3cf4d4920d312e6ef9bf1a00fb94a1",
       "privateTarget": null,
       "targetBranch": "codex/fleet-final-polish-20261014",
       "qualification": {
-        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/champion-auto-pro/qualification-context.json",
-        "sha256": "1bc6b094425040b0d601c01f7682c073b08a91f9f39a35a161effe53ca211584"
+        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/asko-96/qualification-context.json",
+        "sha256": "5dccf368e615ac0edb32fdf81789c54215b45cc5b723993cf69114c6924d0e19"
+      }
+    },
+    {
+      "slug": "excellent-cars",
+      "repository": "darkapoparka/excellent-cars",
+      "projectId": "prj_dhANzY6pxcqK1hO06ar9ZTk0k4eq",
+      "publicOrigin": "https://excellent-cars.vercel.app",
+      "sourceOwnership": "cars-owned",
+      "sourceRepository": "darkapoparka/cars",
+      "sourceCommit": "f860824c253258a8e1b193c54a05a66abfc89f2a",
+      "sourceTree": "49ed9b500397629669a66179a47d6e673c0f9b94",
+      "sourceReview": {
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/editorial-runtime-repair-20261015/excellent-cars/source-review.json",
+        "sha256": "603dd322aea3716a6243a677f9de4116ac0733e8caed1e57d0e29934ae7b5c6b",
+        "blob": "4ef8f6e3b8f011d19ef380f42aebc00d59a1e8be"
+      },
+      "privateMain": "5f2a88f09bc8edb437e1dae2c58cb8d3e78d66dd",
+      "privateTarget": null,
+      "targetBranch": "codex/fleet-final-polish-20261014",
+      "qualification": {
+        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/excellent-cars/qualification-context.json",
+        "sha256": "0bb7dffece37a2a8bb0b52a33befc38f49ad1cf403939d694099b1804416d517"
+      }
+    },
+    {
+      "slug": "ivo-auto",
+      "repository": "darkapoparka/cars-ivoauto",
+      "projectId": "prj_bruM9mopofyBcgwxkKFG9tQFZBMN",
+      "publicOrigin": "https://cars-ivoauto.vercel.app",
+      "sourceOwnership": "cars-owned",
+      "sourceRepository": "darkapoparka/cars",
+      "sourceCommit": "f860824c253258a8e1b193c54a05a66abfc89f2a",
+      "sourceTree": "e582cdd450cf6a7ce7f1534033523f8683ce24b4",
+      "sourceReview": {
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/editorial-runtime-repair-20261015/ivo-auto/source-review.json",
+        "sha256": "506ffdacf1372099f8d574a62a9b0f2ee10b78ef0ee961cdf628ef139dfc5f77",
+        "blob": "efaf0cf27a32785554b11b234aa873153189e2f4"
+      },
+      "privateMain": "12195dd08bd7d2100e7904b9d80349b3d04d20fe",
+      "privateTarget": null,
+      "targetBranch": "codex/fleet-final-polish-20261014",
+      "qualification": {
+        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/ivo-auto/qualification-context.json",
+        "sha256": "74046d8dd7d54233ba81f20997fc7d0f9ea15be2f7fd880465b1f34ff37c198c"
+      }
+    },
+    {
+      "slug": "kg-team-auto",
+      "repository": "darkapoparka/cars-kgteamauto",
+      "projectId": "prj_IALzfkjBAv5N4YJfNB1sEliOaNBg",
+      "publicOrigin": "https://cars-kgteamauto.vercel.app",
+      "sourceOwnership": "cars-owned",
+      "sourceRepository": "darkapoparka/cars",
+      "sourceCommit": "f3c9cbb80ac0116185dde27e3e779b07487bc1d4",
+      "sourceTree": "1505b25d6505c07e5b3830fc154827445a5c25f7",
+      "sourceReview": {
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/editorial-runtime-repair-20261015/kg-team-auto/source-review.json",
+        "sha256": "9f9b4e3ccaeaf72da05490a90e0c059a065027b90b8c9b18bc25bf3d4ddd3d2e",
+        "blob": "75eaad0d6998b997a83cc88d2242a73ff2d3aa1d"
+      },
+      "privateMain": "8ad119b04ca78ac4ed663ebaebf0974697c004fb",
+      "privateTarget": null,
+      "targetBranch": "codex/fleet-final-polish-20261014",
+      "qualification": {
+        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/kg-team-auto/qualification-context.json",
+        "sha256": "d2b042b531efb29f3fd7a748b4aa5622070c80c4fac9731bf8afc94a13616e32"
       }
     }
   ],
   "intendedPublication": {
     "branch": "main",
     "providerTarget": "production",
-    "scope": "owner-authorized-qualified-Vercel-wave-8",
+    "scope": "owner-authorized-qualified-Vercel-wave-9",
     "noPreviewPublication": true
   },
   "productionWave": {
-    "path": "docs/releases/vercel-presentation-20261011/final-polish-20261014/production-wave-8.json",
-    "sha256": "40b05dc90f9e5ccf82e4235b00549868ba2382d190b3ad60dee50a0a7b08d124"
+    "path": "docs/releases/vercel-presentation-20261011/final-polish-20261014/production-wave-9.json",
+    "sha256": "52f2b96d0c1fcb05aefe2e27152c80a0167b0030e6666bf70a98bbe186a6c26e"
   }
 }
