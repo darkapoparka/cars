@@ -276,8 +276,8 @@ jobs:
           import assert from 'node:assert/strict';
           import {createHash} from 'node:crypto';
           import {execFileSync} from 'node:child_process';
-          const reviewedWorkflowSha256 = '95e585a30df3020400328454e7acb971ade6122f2e0622d8b0d2e152e722be84';
-          const base='63376f1c206eb0a30294f3e0d08748005c7c697e',workflow='.github/workflows/existing-fleet-source.yml',runId=38669227699,jobId=116208120913;
+          const reviewedWorkflowSha256 = 'a33c07f96562762de4e7f7aa4b2aca12b37bf85b338354870adf5acb946d04c6';
+          const base='932863795e03e047bdac1e65b3f0c2fda3258b6d',workflow='.github/workflows/existing-fleet-source.yml',runId=38674385944,jobId=116224534325;
           const fullStep='Run the required executable workflow integration checkpoint once';
           let reuse=false,reason='Unchanged shared-code checkpoint proof unavailable';
           try {
@@ -288,18 +288,13 @@ jobs:
             const git=args=>execFileSync('git',args,{env,encoding:'utf8',maxBuffer:64*1024**2,timeout:30000}).trimEnd();
             git(['merge-base','--is-ancestor',base,process.env.GITHUB_SHA]);
             const object=(revision,name)=>git(['rev-parse',revision+':'+name]);
-            for(const name of ['templates','templates.lock.json','templates/import/package-lock.json','docs/DEPLOYMENT-INVENTORY.json','clients/index.json','clients/README.md'])assert.equal(object(process.env.GITHUB_SHA,name),object(base,name),'Shared code/configuration changed: '+name);
-            // Owner-authorized focused original-contract admission; exactly these two blobs differ.
-            const reviewedOriginalContractDeltas=new Map([["scripts/dealer-updates/update-dealer-template.mjs",{"before":"c1b72fcbefbaffb49e20d47dcf17841e4086aedb","after":"89ec3506a7e3f90ff926808a681adbf346262c9f"}],["scripts/branded-app-provenance.test.mjs",{"before":"e58a75c70767e19f189cc93010b3577ad6f1e86b","after":"726b6b5113c0c475f32a5097efc75d6bfcf5a232"}]]);
-            const scriptChanges=git(['diff','--no-renames','--name-only','-z',base,process.env.GITHUB_SHA,'--','scripts']).split('\0').filter(Boolean).sort();
-            assert.deepEqual(scriptChanges,[...reviewedOriginalContractDeltas.keys()].sort(),'Other shared scripts changed');
-            for(const [name,pin]of reviewedOriginalContractDeltas){assert.equal(object(base,name),pin.before,'Original reviewed script changed');assert.equal(object(process.env.GITHUB_SHA,name),pin.after,'Focused original-contract correction changed');}
+            for(const name of ['scripts','templates','templates.lock.json','templates/import/package-lock.json','docs/DEPLOYMENT-INVENTORY.json','clients/index.json','clients/README.md'])assert.equal(object(process.env.GITHUB_SHA,name),object(base,name),'Shared code/configuration changed: '+name);
             const listing=(revision,name='')=>git(['ls-tree','-z',name?revision+':'+name:revision]).split('\0').filter(Boolean);
             const protect=(name,except)=>assert.deepEqual(listing(process.env.GITHUB_SHA,name).filter(row=>!except.includes(row.split('\t')[1])),listing(base,name).filter(row=>!except.includes(row.split('\t')[1])),'Other root/workflow configuration changed: '+name);
-            protect('',['clients','docs','leads','.github','scripts']);
+            protect('',['clients','docs','leads','.github']);
             protect('.github',['workflows']);
             protect('.github/workflows',['existing-fleet-source.yml']);
-            assert.equal(object(base,workflow),'905e06bf5c95972104ebc47af2afb23cf539271e');
+            assert.equal(object(base,workflow),'30c0461d90a79a9325afe2b61bf7cc7573b4c1f3');
             const workflowBytes=execFileSync('git',['show',process.env.GITHUB_SHA+':'+workflow],{env,encoding:'utf8',maxBuffer:64*1024**2,timeout:30000});
             assert.equal(fs.readFileSync(workflow,'utf8'),workflowBytes,'Workflow checkout differs from its pinned blob');
             const seals=[...workflowBytes.matchAll(/^          const reviewedWorkflowSha256 = '[a-f0-9]{64}';$/gm)];assert.equal(seals.length,1,'Reviewed workflow self seal is ambiguous');
@@ -309,7 +304,7 @@ jobs:
             assert(changed.length<=500000,'Changed input inventory exceeds its bounded read');
             for(const name of changed){
               assert(!/[\\:\u0000-\u001f\u007f]/.test(name)&&name.split('/').every(part=>part&&part!=='.'&&part!=='..'),'Unsafe changed input path');
-              assert(name===workflow||reviewedOriginalContractDeltas.has(name)||/^clients\/[a-z0-9]+(?:-[a-z0-9]+)*\/.+$/.test(name)||/^docs\/releases\/.+\.json$/.test(name)||/^docs\/logo-polish-2026-10-14\/.+\.(?:json|png|webp|ico)$/.test(name)||/^leads\/.+\.(?:json|md)$/.test(name),'Change lies outside dealer/source input data: '+name);
+              assert(name===workflow||/^clients\/[a-z0-9]+(?:-[a-z0-9]+)*\/.+$/.test(name)||/^docs\/releases\/.+\.json$/.test(name)||/^docs\/logo-polish-2026-10-14\/.+\.(?:json|png|webp|ico)$/.test(name)||/^leads\/.+\.(?:json|md)$/.test(name),'Change lies outside dealer/source input data: '+name);
             }
             const get=async route=>{const response=await fetch('https://api.github.com/repos/darkapoparka/cars/'+route,{headers:{Authorization:'Bearer '+process.env.CARS_CHECKPOINT_TOKEN,Accept:'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'},signal:AbortSignal.timeout(20000)});assert(response.ok,'Authenticated checkpoint proof unavailable');return response.json();};
             const [run,jobs]=await Promise.all([get('actions/runs/'+runId+'/attempts/1'),get('actions/runs/'+runId+'/attempts/1/jobs?per_page=100')]);
