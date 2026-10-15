@@ -94,7 +94,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "AutoStar",
       "location": "Ул. Тодор Радев Пенев 5Д, 9009, Варна, България",
-      "avatar": "/dealer-brand/v2-26972c6239c76e5f/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-04058c0f7e4dcdc5/logo-on-light.webp",
       "mobile": "0887700052",
       "email": "",
       "whatsapp": "",

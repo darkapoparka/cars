@@ -111,8 +111,8 @@ export const leadSite: LeadSiteConfig = {
     "tagline": "AutoStar — vehicles and dealer support in Varna."
   }
 },
-  accent: "#30343b",
-  desktopAccent: "#4b5057",
+  accent: "#09090b",
+  desktopAccent: "#09090b",
   desktopInventoryFilterLayout: "quick",
   desktopPreviewIdentity: {
     sourceSlug: "day-night-auto-group",
@@ -144,8 +144,8 @@ export const leadSite: LeadSiteConfig = {
   email: "",
   heroPath: "/lead-hero.jpg",
   locale: "bg-BG",
-  logoPath: "/dealer-brand/v2-26972c6239c76e5f/logo-on-light.webp",
-  logoInversePath: "/dealer-brand/v2-26972c6239c76e5f/logo-on-dark.webp",
+  logoPath: "/dealer-brand/v2-04058c0f7e4dcdc5/logo-on-light.webp",
+  logoInversePath: "/dealer-brand/v2-04058c0f7e4dcdc5/logo-on-dark.webp",
   mapsEmbedUrl:
     "https://maps.google.com/maps?q=AutoStar%2C%20%D0%A3%D0%BB.%20%D0%A2%D0%BE%D0%B4%D0%BE%D1%80%20%D0%A0%D0%B0%D0%B4%D0%B5%D0%B2%20%D0%9F%D0%B5%D0%BD%D0%B5%D0%B2%205%D0%94%2C%209009%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F&z=16&output=embed",
   mapsUrl:

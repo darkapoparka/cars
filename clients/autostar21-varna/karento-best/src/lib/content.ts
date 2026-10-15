@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "AutoStar",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-26972c6239c76e5f/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-26972c6239c76e5f/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-26972c6239c76e5f/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-04058c0f7e4dcdc5/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-04058c0f7e4dcdc5/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-04058c0f7e4dcdc5/logo-on-dark.webp",
     "alt": "AutoStar",
-    "favicon": "/dealer-brand/v2-26972c6239c76e5f/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-04058c0f7e4dcdc5/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

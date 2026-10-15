@@ -50,7 +50,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "AutoStar",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-26972c6239c76e5f/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-04058c0f7e4dcdc5/logo-on-light.webp"
     },
     "publishedAt": "2026-10-11T09:00:00.000Z",
     "promoted": true

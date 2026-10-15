@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "AutoStar",
-  "logo": "/dealer-brand/v2-26972c6239c76e5f/logo-on-light.webp",
+  "logo": "/dealer-brand/v2-04058c0f7e4dcdc5/logo-on-light.webp",
   "phone": "+359887700052",
   "email": null,
   "address": "Ул. Тодор Радев Пенев 5Д, 9009, Варна, България",

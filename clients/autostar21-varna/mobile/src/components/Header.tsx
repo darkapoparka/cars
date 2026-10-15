@@ -44,7 +44,7 @@ const s = stylex.create({
   backTitle: { paddingInline: 8 },
   logo: {
     width: { default: 176, '@media (max-width: 699px)': 128 },
-    height: { default: 52, '@media (max-width: 699px)': 'auto' },
+    height: { default: 52, '@media (max-width: 699px)': 40 },
     objectFit: 'contain',
     objectPosition: 'left center',
   },
@@ -73,7 +73,7 @@ const s = stylex.create({
     color: { default: colors.text, '@media (min-width: 1024px)': '#fff' },
   },
   overHeroLogo: {
-    // Select committed surface artwork; never manufacture a white logo with CSS.
+    // Use the committed surface image so chrome and colour details stay intact.
     filter: 'none',
   },
   overHeroSticky: {
@@ -149,7 +149,7 @@ export function Header({
               {generatedDesktopLogo && (
                 <ShowroomBrandLogo light={overHeroDesktop} label={t(showroom.name)} />
               )}
-              <picture data-dealer-logo-surfaces style={{display: "contents"}}>
+              <picture data-dealer-logo-surfaces style={{display: 'contents'}}>
                 {overHeroDesktop && !generatedDesktopLogo && <source media="(min-width: 1024px)" srcSet={showroom.logo.replace(/\/logo-on-light\.webp$/, "/logo-on-dark.webp")} />}
               <Image
                 src={showroom.logo}
