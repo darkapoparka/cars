@@ -3,10 +3,11 @@
   "mode": "existing-migration",
   "sourceRevision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
   "dealers": [
-    "birmingham-square-one-motors",
-    "pm-select-automotive",
-    "prime-auto-varna",
-    "city-cars-varna"
+    "birmingham-trade-car-sales-grasmere",
+    "nottingham-s-a-motors",
+    "stockton-norton-grange-trade-cars",
+    "dewsbury-car-market-yorkshire",
+    "batley-as-motor-group"
   ],
   "targets": [
     "auto-best",
@@ -19,24 +20,28 @@
   ],
   "composition": {
     "reviewed": true,
-    "reviewedAt": "2026-10-15T01:41:28.439Z",
-    "reviewScope": "Owner-authorized final six-template refresh of existing Cloudflare identities. All selected dealer source trees are actually published on Cars MAIN; preserve native palettes, factual stock/contacts/locales, selected logos, one existing Worker and its existing canonical exposure. Private source MAIN and hosted acceptance are recorded separately. Includes published shared Auto optional-phone/light-dark binding, reviewed Modern safe optional-contact policy, and the reviewed welcome chevron. This bounded wave retains every source tree and factual/raster/profile seal; all7targets are freshly built on the request commit. Preserve existing100Workers/origins/routes. A failed member is retried explicitly; successful unrelated members remain independently deliverable.",
+    "reviewedAt": "2026-10-15T02:22:11.351Z",
+    "reviewScope": "Owner-authorized final six-template refresh of existing Cloudflare identities. All selected dealer source trees are actually published on Cars MAIN; preserve native palettes, factual stock/contacts/locales, selected logos, one existing Worker and its existing canonical exposure. Private source MAIN and hosted acceptance are recorded separately.",
     "canonicalCompositions": {
-      "birmingham-square-one-motors": {
-        "canonicalOrigin": "https://birmingham-square-one-motors.webpreviews.site",
+      "birmingham-trade-car-sales-grasmere": {
+        "canonicalOrigin": "https://birmingham-trade-car-sales-grasmere.webpreviews.site",
         "ukDefault": true
       },
-      "pm-select-automotive": {
-        "canonicalOrigin": "https://pm-select-automotive.webpreviews.site",
-        "ukDefault": false
+      "nottingham-s-a-motors": {
+        "canonicalOrigin": "https://nottingham-s-a-motors.webpreviews.site",
+        "ukDefault": true
       },
-      "prime-auto-varna": {
-        "canonicalOrigin": "https://prime-auto-varna.webpreviews.site",
-        "ukDefault": false
+      "stockton-norton-grange-trade-cars": {
+        "canonicalOrigin": "https://stockton-norton-grange-trade-cars.webpreviews.site",
+        "ukDefault": true
       },
-      "city-cars-varna": {
-        "canonicalOrigin": "https://city-cars-varna.webpreviews.site",
-        "ukDefault": false
+      "dewsbury-car-market-yorkshire": {
+        "canonicalOrigin": "https://dewsbury-car-market-yorkshire.webpreviews.site",
+        "ukDefault": true
+      },
+      "batley-as-motor-group": {
+        "canonicalOrigin": "https://batley-as-motor-group.webpreviews.site",
+        "ukDefault": true
       }
     }
   }
