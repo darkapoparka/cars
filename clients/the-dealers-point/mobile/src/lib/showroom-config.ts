@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "The Dealers Point",
-  "logo": "/dealer-brand/logo-on-light.webp",
+  "logo": "/dealer-brand/v2-2e9ab7c9bd6ca568/logo-on-light.webp",
   "phone": "+971551875094",
   "email": "sales@tdp.ae",
   "address": "Plot No. 364-0442, Al Quoz Industrial Area 1, Dubai, UAE",

@@ -145,7 +145,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "The Dealers Point",
   "location": "Plot No. 364-0442, Al Quoz Industrial Area 1, Dubai, UAE",
-  "avatar": "/dealer-brand/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-2e9ab7c9bd6ca568/logo-on-light.webp",
   "mobile": "+971 55 187 5094",
   "email": "sales@tdp.ae",
   "whatsapp": "",

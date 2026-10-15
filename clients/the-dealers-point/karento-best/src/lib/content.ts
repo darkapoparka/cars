@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "The Dealers Point",
   "locale": "en-AE",
   "logo": {
-    "light": "/dealer-brand/logo-on-light.webp",
-    "footer": "/dealer-brand/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-2e9ab7c9bd6ca568/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-2e9ab7c9bd6ca568/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-2e9ab7c9bd6ca568/logo-on-dark.webp",
     "alt": "The Dealers Point",
-    "favicon": "/dealer-brand/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-2e9ab7c9bd6ca568/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

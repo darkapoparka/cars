@@ -33,6 +33,6 @@ export const brand = {
   addressLine,
   address: "Plot No. 364-0442, Al Quoz Industrial Area 1, Dubai, UAE",
   appointment: "Contact the dealership before visiting.",
-  logo: "/dealer-brand/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/logo-on-dark.webp"
+  logo: "/dealer-brand/v2-2e9ab7c9bd6ca568/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-2e9ab7c9bd6ca568/logo-on-dark.webp"
 } as const satisfies BrandConfig;

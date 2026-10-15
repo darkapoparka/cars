@@ -3,32 +3,32 @@
   "dealer": "the-dealers-point",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/app",
-    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1",
-    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76"
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
   },
-  "appDigest": "c8594bb1231c385e88c1d468e31c32c6c2877e6aad30fec56637c781736d4fdf",
+  "appDigest": "dd5f8e3c6d9cd1b056155c31b0ab53b0924a14a35339135d67f83d4eefa248ad",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "the-dealers-point",
     "profile": "auto-best/src/lib/data/dealer-profile.json",
-    "profileSha256": "3e1792fd8b5d089bff75dae64a4fbdc7f6b5cc28dad0b5df1ec8e739c9b58601",
+    "profileSha256": "8731b8db709c769b5e42f7f2045e9c67e3e6688a9d0e62ae35d9aeaa7dfac8a5",
     "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
     "vehicles": 10,
     "currency": "AED",
     "observedAt": "2026-09-09",
     "assets": [
       {
-        "source": "auto-best/static/dealer-brand/logo-on-light.webp",
-        "output": "public/dealer-app/logo-light-391e784b3ed422b42763.webp",
-        "sha256": "391e784b3ed422b42763a9417b406e6d8433b625d0149c68464659145c363cb8",
+        "source": "auto-best/static/dealer-brand/v2-2e9ab7c9bd6ca568/logo-on-light.webp",
+        "output": "public/dealer-app/logo-light-fcd009a9a3f5ceeb9bb6.webp",
+        "sha256": "fcd009a9a3f5ceeb9bb60152a80515cc1d6028eb0bff51462e5b45988bbd6f31",
         "role": "logo-light"
       },
       {
-        "source": "auto-best/static/dealer-brand/logo-on-dark.webp",
-        "output": "public/dealer-app/logo-dark-bf2b5687015daf0fe982.webp",
-        "sha256": "bf2b5687015daf0fe982ca89f4116b25e4064ce13e52b9c1dbf6fa02c7f0b4d0",
+        "source": "auto-best/static/dealer-brand/v2-2e9ab7c9bd6ca568/logo-on-dark.webp",
+        "output": "public/dealer-app/logo-dark-beb205f8ea1b15bbe68f.webp",
+        "sha256": "beb205f8ea1b15bbe68fd611a78d7f58b47a2da9e974e2a8004fe66385f667aa",
         "role": "logo-dark"
       }
     ],
@@ -96,5 +96,6 @@
     ]
   },
   "needsDealerQA": true,
-  "readyToPublish": false
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-15T02:36:46.864Z"
 }

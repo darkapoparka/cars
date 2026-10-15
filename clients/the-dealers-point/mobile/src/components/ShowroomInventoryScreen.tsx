@@ -700,7 +700,7 @@ export function ShowroomInventoryScreen() {
                   iconOnly
                   onClick={(event) => openSheet('sort', event.currentTarget)}
                 >
-                  <ArrowDownUp size={16} strokeWidth={1.8} aria-hidden="true" />
+                  <ArrowDownUp size={20} strokeWidth={2} aria-hidden="true" />
                 </ShowroomQuickPill>
               </div>
               {pills.map((pill) => (

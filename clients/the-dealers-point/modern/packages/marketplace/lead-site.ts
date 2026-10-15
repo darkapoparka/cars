@@ -114,8 +114,8 @@ export const leadSite: LeadSiteConfig = {
     "tagline": "Dealers Point — vehicles and dealer support in Dubai."
   }
 },
-  accent: "#30343b",
-  desktopAccent: "#4b5057",
+  accent: "#09090b",
+  desktopAccent: "#09090b",
   desktopInventoryFilterLayout: "quick",
   desktopPreviewIdentity: {
     sourceSlug: "day-night-auto-group",
@@ -147,10 +147,11 @@ export const leadSite: LeadSiteConfig = {
   email: "sales@tdp.ae",
   heroPath: "/lead-hero.jpg",
   locale: "en-AE",
-  logoPath: "/dealer-brand/logo-on-dark.webp",
-  logoOnLight: "/dealer-brand/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/logo-on-dark.webp",
-  logoOnAccent: "/dealer-brand/logo-on-accent.webp",
+  logoPath: "/dealer-brand/v2-2e9ab7c9bd6ca568/logo-on-light.webp",
+  logoInversePath: "/dealer-brand/v2-2e9ab7c9bd6ca568/logo-on-dark.webp",
+  logoOnLight: "/dealer-brand/v2-2e9ab7c9bd6ca568/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-2e9ab7c9bd6ca568/logo-on-dark.webp",
+  logoOnAccent: "/dealer-brand/v2-2e9ab7c9bd6ca568/logo-on-dark.webp",
   mapsEmbedUrl:
     "https://maps.google.com/maps?q=The%20Dealers%20Point%2C%20Plot%20No.%20364-0442%2C%20Al%20Quoz%20Industrial%20Area%201%2C%20Dubai%2C%20UAE&z=16&output=embed",
   mapsUrl:
