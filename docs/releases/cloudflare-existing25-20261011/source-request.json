@@ -3,573 +3,546 @@
   "sourceRevision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
   "approvedParentLockDigest": "ecdfaf9599fbcbeadebc24de3b9aa1c7615a9a49e29d338e5e9a23427d405e26",
   "dealers": [
-    "am-varna-varna",
-    "tonyem4m-varna",
-    "mladost2-varna",
-    "richicar-varna",
-    "lionauto1-varna",
-    "elexiscars-varna",
-    "electricauto-varna",
-    "varnacarexpress-varna",
-    "garage24-varna",
-    "kris-varna",
-    "buscenter-varna",
-    "focus1-varna",
-    "autostar21-varna",
-    "abcbulgaria-varna",
-    "grand-auto-varna",
-    "mgauto-varna",
-    "bora-car-varna",
-    "bavaro-varna",
-    "wildivaka-varna",
-    "triumf-varna",
-    "tesi-car-varna"
+    "unitrade-varna",
+    "autojo-di-varna",
+    "specialcarood-varna",
+    "auto-insurance-import-varna",
+    "watt-a-car-varna",
+    "part-mag-cars-varna",
+    "kalo-0404-varna",
+    "kk-auto-varna",
+    "valkov-cars-varna",
+    "crazy-fox-motors-varna",
+    "i1-auto-varna",
+    "cali-cars-varna",
+    "nordic-auto-varna",
+    "dein-auto-varna",
+    "carnova-varna",
+    "champion-auto-varna",
+    "m-car-varna",
+    "express-auto-varna",
+    "fusion-auto-varna",
+    "bavaria-auto-varna"
   ],
   "inputs": {
-    "am-varna-varna": {
+    "unitrade-varna": {
       "candidateLock": {
         "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/candidate-lock.json",
         "sha256": "04633129df9e75d6cd62deeac9125b279957789d75f57cdb0b243ef61bfc3e7e"
       },
       "qualification": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/contexts/am-varna-varna.json",
-        "sha256": "ef72d3ce4a9adc55b4a20693e5b9cd0153e166b21747dc5f93223d47b940db39"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/contexts/unitrade-varna.json",
+        "sha256": "8817cecae4a574d32d55c15fd250115fe0c4cd326ea7c1c767d0389e3ddbfdee"
       },
       "sourceDeltaReview": {
         "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
         "sha256": "43cb6876e815a2a6b866f1dadd304236de4ae58c05fe65c2ab62a23506ee7ce9"
       },
       "branding": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-branding/am-varna-varna.json",
-        "sha256": "93e35ab6b577889f6614c673984f8369fe86aedf4f62f534713631a8a8bef938"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-branding/unitrade-varna.json",
+        "sha256": "3c85c93d1c3e76a96b22df14dbed30eb54288a6b41735b644d754d1fdf940ab8"
       },
       "modernCopyReview": {
-        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/am-varna-varna/modern-copy-review.json",
-        "sha256": "17605af776a3ad93b72e2eade99d2fc1c3371def2be6ed6dcba9c13d611f6e42"
+        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/unitrade-varna/modern-copy-review.json",
+        "sha256": "9b7b70483d8905fac23d9f29364ddffa795b2271208464106a98db28af521517"
       },
       "resolutions": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/resolutions/remaining/am-varna-varna.json",
-        "sha256": "6cbbceaa97a4666fd6fa5dd514b43a7f77c43231e555558d4df564e2af0b4844"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/resolutions/remaining/unitrade-varna.json",
+        "sha256": "746d2a33d48b853b57cd8d311f0d6810eae2f69dd685931c298f88590ef7c15b"
       }
     },
-    "tonyem4m-varna": {
+    "autojo-di-varna": {
       "candidateLock": {
         "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/candidate-lock.json",
         "sha256": "04633129df9e75d6cd62deeac9125b279957789d75f57cdb0b243ef61bfc3e7e"
       },
       "qualification": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/contexts/tonyem4m-varna.json",
-        "sha256": "1ccadf70bdf736e78dbb34fcf63847b0d86267df98cc50d98e3e411fa47a849e"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/contexts/autojo-di-varna.json",
+        "sha256": "96211fe0c9224244fc8b49b687be72ef81252ccf47c85cf8467f8aa3a4bb88e1"
       },
       "sourceDeltaReview": {
         "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
         "sha256": "43cb6876e815a2a6b866f1dadd304236de4ae58c05fe65c2ab62a23506ee7ce9"
       },
       "branding": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-branding/tonyem4m-varna.json",
-        "sha256": "4cafeb7f7f05a978338b00ad46bfa1779bc0d1e46798719dc611f9884fef3b85"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-branding/autojo-di-varna.json",
+        "sha256": "930daf7110684efb7bf27a7b6331667d8821bf2b337c29edab4d9bf4e4ad58cf"
       },
       "modernCopyReview": {
-        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/tonyem4m-varna/modern-copy-review.json",
-        "sha256": "1feb8e2c8b1a9f5eb167df7fd04986ef536241c263cbf3b7eb8edb6dddde97a4"
+        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/autojo-di-varna/modern-copy-review.json",
+        "sha256": "eac63e5dcb12a7dc0165d226deff331887aec0280c15c7153444415bc28d6bf3"
       },
       "resolutions": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/resolutions/remaining/tonyem4m-varna.json",
-        "sha256": "36dc8691216ae1b25de28be5bb52c7eb8fbc591148dfd559dafd5248c5188e22"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/resolutions/remaining/autojo-di-varna.json",
+        "sha256": "2385f09a9e2ecd5c8a83eb00b4604bc96ddae5db8fdbe2d6c40a5bccc96cce96"
       }
     },
-    "mladost2-varna": {
+    "specialcarood-varna": {
       "candidateLock": {
         "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/candidate-lock.json",
         "sha256": "04633129df9e75d6cd62deeac9125b279957789d75f57cdb0b243ef61bfc3e7e"
       },
       "qualification": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/contexts/mladost2-varna.json",
-        "sha256": "f97c8830dfc26b429fa6463dc83eb9f8affc380b09e61d3a755c5adbff4c7bf9"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/contexts/specialcarood-varna.json",
+        "sha256": "c6ca31ad07d45206604608caa2e4c45aba979def48a06a03d67f1b22f31fa47f"
       },
       "sourceDeltaReview": {
         "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
         "sha256": "43cb6876e815a2a6b866f1dadd304236de4ae58c05fe65c2ab62a23506ee7ce9"
       },
       "branding": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-branding/mladost2-varna.json",
-        "sha256": "504c1a598c1e8727bec6cb0376e027e9436fb95eb03d2d8b2cd6e1fc7cc67920"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-branding/specialcarood-varna.json",
+        "sha256": "c6e48d9dfa016bd111fe8be73b52122ae661105ae31e74ea3670f6e137bf49be"
       },
       "modernCopyReview": {
-        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/mladost2-varna/modern-copy-review.json",
-        "sha256": "171d8b370b0bbeaa432f819a2c1f92fbd2a6157c2019290bae8e45a0c23fa865"
+        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/specialcarood-varna/modern-copy-review.json",
+        "sha256": "92a38f52af05a2d2eebd3851ca783c7f8251cdad1f9839d529263b3c1c00f9ec"
       },
       "resolutions": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/resolutions/remaining/mladost2-varna.json",
-        "sha256": "0aedeec199f54f16a9464b3a348b07166b2dbac45a676555fa0e79256cf593c8"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/resolutions/remaining/specialcarood-varna.json",
+        "sha256": "26b9e081541a56777c91a9576debc74d40693aa0c35969fee174f41ccdd48f1e"
       }
     },
-    "richicar-varna": {
+    "auto-insurance-import-varna": {
       "candidateLock": {
         "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/candidate-lock.json",
         "sha256": "04633129df9e75d6cd62deeac9125b279957789d75f57cdb0b243ef61bfc3e7e"
       },
       "qualification": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/contexts/richicar-varna.json",
-        "sha256": "c85a3618fdb0ee8a83fb728d301d9026769632502c982004e3edea8a7e0baa81"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/contexts/auto-insurance-import-varna.json",
+        "sha256": "a4f3a1fb5c33c52325c504102219a08631caf75d491c95eeeb6c7568f5108636"
       },
       "sourceDeltaReview": {
         "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
         "sha256": "43cb6876e815a2a6b866f1dadd304236de4ae58c05fe65c2ab62a23506ee7ce9"
       },
       "branding": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-branding/richicar-varna.json",
-        "sha256": "c6c629c71bc625c490216a7d364c49f74d5dcad4f1675a44608879f2fde6811f"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-branding/auto-insurance-import-varna.json",
+        "sha256": "56fff4e37c7e26d03728f8a36ecfdd41d5ca855b501c40cbd6358b0d86e7263f"
       },
       "modernCopyReview": {
-        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/richicar-varna/modern-copy-review.json",
-        "sha256": "e3aad78fd303527d4fac76c6e90f9c0cce3bab6371567f6e900b0ad912875be7"
+        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/auto-insurance-import-varna/modern-copy-review.json",
+        "sha256": "8c5c47a7fc572ceb73072974651826104a24b260033661551f7e055d6133fc27"
       },
       "resolutions": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/resolutions/remaining/richicar-varna.json",
-        "sha256": "c932b20c7dfc792e9799a5adbcd868b3831b8201ff7ea785912d19c24a38326e"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/resolutions/remaining/auto-insurance-import-varna.json",
+        "sha256": "ab518fe012a8c5bb6227bafe4383acbe7bbf5b150c0ef9166838b0306d39fd58"
       }
     },
-    "lionauto1-varna": {
+    "watt-a-car-varna": {
       "candidateLock": {
         "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/candidate-lock.json",
         "sha256": "04633129df9e75d6cd62deeac9125b279957789d75f57cdb0b243ef61bfc3e7e"
       },
       "qualification": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/contexts/lionauto1-varna.json",
-        "sha256": "185d8dc7bc67ff0ddda800cd67774d74eb4764bba1910ea6554d6d5f8fe78fbb"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/contexts/watt-a-car-varna.json",
+        "sha256": "f018f7327c12023408e9e942c7f61eb18800f61e79c6fa163eaf4ab7e6bdc7a7"
       },
       "sourceDeltaReview": {
         "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
         "sha256": "43cb6876e815a2a6b866f1dadd304236de4ae58c05fe65c2ab62a23506ee7ce9"
       },
       "branding": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-branding/lionauto1-varna.json",
-        "sha256": "abaa67db698fe7f1d052063aa8cb53040b081ee9b35ec59c8b6f12d06cdc8f4e"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-branding/watt-a-car-varna.json",
+        "sha256": "5ddad4a979b49e990d038923f23d467055b57e5f94e0786333d4394ff85a44c2"
       },
       "modernCopyReview": {
-        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/lionauto1-varna/modern-copy-review.json",
-        "sha256": "d9fd251b7b4d81fa383e341b7df8d90b8b546faffd3805267cae4b967a58c3b2"
+        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/watt-a-car-varna/modern-copy-review.json",
+        "sha256": "8885f7f86f63298194d598a9c1e2df2b3a3d35ff46452312e114b84f2a0ec4c0"
       },
       "resolutions": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/resolutions/remaining/lionauto1-varna.json",
-        "sha256": "51f7077bb9eb3a902e01e97e55e28c8633e970dd2badd6cecfd22d3cfbcba85b"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/resolutions/remaining/watt-a-car-varna.json",
+        "sha256": "872137aa2705fb1b39d3acc687a82b4d9346c301312f4efa21c02a59ef099cba"
       }
     },
-    "elexiscars-varna": {
+    "part-mag-cars-varna": {
       "candidateLock": {
         "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/candidate-lock.json",
         "sha256": "04633129df9e75d6cd62deeac9125b279957789d75f57cdb0b243ef61bfc3e7e"
       },
       "qualification": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/contexts/elexiscars-varna.json",
-        "sha256": "2a11262dff4fe3184c342359e014968b488f31890ab480c69778ee92b30ea8d4"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/contexts/part-mag-cars-varna.json",
+        "sha256": "ee0ccf57ca0523a867f187925ee63b6e61e1d2d39d38778244778b4faccaab11"
       },
       "sourceDeltaReview": {
         "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
         "sha256": "43cb6876e815a2a6b866f1dadd304236de4ae58c05fe65c2ab62a23506ee7ce9"
       },
       "branding": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-branding/elexiscars-varna.json",
-        "sha256": "5cb72789f481c93a71b3027c39957f4346b0d46307017a69a62b514da4495c7d"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-branding/part-mag-cars-varna.json",
+        "sha256": "4c3c01659e99f6091490f73c0e4652ad1d466d2905043e8f4bf68609e29ab22c"
       },
       "modernCopyReview": {
-        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/elexiscars-varna/modern-copy-review.json",
-        "sha256": "6797c5ecfe653a7dbee302265214e0100ad0505c7b8fcaa01024590c28850584"
+        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/part-mag-cars-varna/modern-copy-review.json",
+        "sha256": "99c1cfa72004b768b8deeb3c3e3d1654f8f55a77fe407a7a36b562fdd2e89a23"
       },
       "resolutions": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/resolutions/remaining/elexiscars-varna.json",
-        "sha256": "024ee473dfcad7b93483c52db5dffbb510e8ca3433e9877542fd1620ce02cc18"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/resolutions/remaining/part-mag-cars-varna.json",
+        "sha256": "ed345186fb4a4cd7f2210b2562716bc6df907ef825ea93279fa481190a2d8c81"
       }
     },
-    "electricauto-varna": {
+    "kalo-0404-varna": {
       "candidateLock": {
         "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/candidate-lock.json",
         "sha256": "04633129df9e75d6cd62deeac9125b279957789d75f57cdb0b243ef61bfc3e7e"
       },
       "qualification": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/contexts/electricauto-varna.json",
-        "sha256": "482a34e51b005a8954a4d41870da979c08a4fc27ff015a54f1324d4fc5bcf710"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/contexts/kalo-0404-varna.json",
+        "sha256": "6164101cb86c2b7bf2330edf1b88eb6be773edaa6ee0178d436f2011e1074f07"
       },
       "sourceDeltaReview": {
         "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
         "sha256": "43cb6876e815a2a6b866f1dadd304236de4ae58c05fe65c2ab62a23506ee7ce9"
       },
       "branding": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-branding/electricauto-varna.json",
-        "sha256": "cfa7068c8009321ef968af55acc49500ceeb5be23364c081faa7606e86b858ef"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-branding/kalo-0404-varna.json",
+        "sha256": "331e83783ffd66a04fb89365e78008417f15a779bb5d8cf450b57e9a1b74923a"
       },
       "modernCopyReview": {
-        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/electricauto-varna/modern-copy-review.json",
-        "sha256": "4193964bb5f699d238a122794d7e7c110b2b1af2aae90e107c1a881f168bbcc3"
+        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/kalo-0404-varna/modern-copy-review.json",
+        "sha256": "b1b0bf7d74e2f4eaa115552fc32c99ac292da46cc0c212fd3d5fda5f8c0dd04b"
       },
       "resolutions": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/resolutions/remaining/electricauto-varna.json",
-        "sha256": "e5c51efb62b96f7bd2a1d9b8e75763479ef481e73e71743fd2ea25767981a0b8"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/resolutions/remaining/kalo-0404-varna.json",
+        "sha256": "537b8b7a3814fa847bf89cb8baee5a5f999ca21031c99623178b71306b9fe882"
       }
     },
-    "varnacarexpress-varna": {
+    "kk-auto-varna": {
       "candidateLock": {
         "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/candidate-lock.json",
         "sha256": "04633129df9e75d6cd62deeac9125b279957789d75f57cdb0b243ef61bfc3e7e"
       },
       "qualification": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/contexts/varnacarexpress-varna.json",
-        "sha256": "5077a5338c13fe52ecf7ea2dc30a159ced32d70f4befcca8b8c4bb7292d8e791"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/contexts/kk-auto-varna.json",
+        "sha256": "dd8f61f22399087c3bc945ff1db390e4491fb43cea7487258e7b51ae825c4d2b"
       },
       "sourceDeltaReview": {
         "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
         "sha256": "43cb6876e815a2a6b866f1dadd304236de4ae58c05fe65c2ab62a23506ee7ce9"
       },
       "branding": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-branding/varnacarexpress-varna.json",
-        "sha256": "1d37d2427c6e00d1ae96de71fca6c69e75f743ee411bfbad3cabdf2649e36098"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-branding/kk-auto-varna.json",
+        "sha256": "308cb30a4569ff3531f0c812fd23a4850f5a247a6da75ac4fc7ba572d1591feb"
       },
       "modernCopyReview": {
-        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/varnacarexpress-varna/modern-copy-review.json",
-        "sha256": "755d8fab8971215a3e435a5b5c8b6afa9b37df8651ffd8a80b7486324ab2c62b"
+        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/kk-auto-varna/modern-copy-review.json",
+        "sha256": "d518787e885b3e94cf08870910c36e484d2f5e05e50958d17f816bba96d6f863"
       },
       "resolutions": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/resolutions/remaining/varnacarexpress-varna.json",
-        "sha256": "1a12fa9111a579e355bfea4a8db3aefc1dcd778aa6e6ef5f5ea53c3dd48ea35f"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/resolutions/remaining/kk-auto-varna.json",
+        "sha256": "f497b69639dff806f90f5d1d28c031d7d2a0b91a46d10b97daf599eb51e2be5b"
       }
     },
-    "garage24-varna": {
+    "valkov-cars-varna": {
       "candidateLock": {
         "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/candidate-lock.json",
         "sha256": "04633129df9e75d6cd62deeac9125b279957789d75f57cdb0b243ef61bfc3e7e"
       },
       "qualification": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/contexts/garage24-varna.json",
-        "sha256": "e885506d7c6e7db622ee5e31d3543563e1f5d65fef1e16bb2820aa9ad992f374"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/contexts/valkov-cars-varna.json",
+        "sha256": "63d4b0e4e25943b2616adfe4d0fd1c52148112e5708958371469d67e4e83f6eb"
       },
       "sourceDeltaReview": {
         "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
         "sha256": "43cb6876e815a2a6b866f1dadd304236de4ae58c05fe65c2ab62a23506ee7ce9"
       },
       "branding": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-branding/garage24-varna.json",
-        "sha256": "3ae1fcb3126ea4dd32f5e26c96f17f7cd103526eb6330d6770608357c1146060"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-branding/valkov-cars-varna.json",
+        "sha256": "2d902458ee117f55db90a8ac44f99986198d13f48fb07c40361db18e1e934417"
       },
       "modernCopyReview": {
-        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/garage24-varna/modern-copy-review.json",
-        "sha256": "1726a098c94f3964483d11412bbaaee0bd9d16a027160e29e64b0ee4016ead8d"
+        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/valkov-cars-varna/modern-copy-review.json",
+        "sha256": "c26ebbd28fffb5bef7357bd2830284e33ea2917f6ff4409c3bc933c26bb59b45"
       },
       "resolutions": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/resolutions/remaining/garage24-varna.json",
-        "sha256": "ee7a2c0eedbf3d26102dfe19ba860275a54bf5f92ca4477aa88c17f90527e760"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/resolutions/remaining/valkov-cars-varna.json",
+        "sha256": "eae6dbacc37c9c272e140424e12820be2a2f07caa415ce1ce06af24b59005656"
       }
     },
-    "kris-varna": {
+    "crazy-fox-motors-varna": {
       "candidateLock": {
         "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/candidate-lock.json",
         "sha256": "04633129df9e75d6cd62deeac9125b279957789d75f57cdb0b243ef61bfc3e7e"
       },
       "qualification": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/contexts/kris-varna.json",
-        "sha256": "349676b53600d3f5276e179faa156caf35fb4729ec95becff34e88eacc5d8ef4"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/contexts/crazy-fox-motors-varna.json",
+        "sha256": "b2a0741262a09ff84fa99d98d757428e46d2d285279ea8bcf85295b8dd39b619"
       },
       "sourceDeltaReview": {
         "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
         "sha256": "43cb6876e815a2a6b866f1dadd304236de4ae58c05fe65c2ab62a23506ee7ce9"
       },
       "branding": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-branding/kris-varna.json",
-        "sha256": "2b95eec3a3307ae80875e3cbf358204bcf95f2c70591053c042272706a664e72"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-branding/crazy-fox-motors-varna.json",
+        "sha256": "d75899d156e2a1af2bbd3244f6b1db6d5adea4bf97b0cf32159fd3509a974bb1"
       },
       "modernCopyReview": {
-        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/kris-varna/modern-copy-review.json",
-        "sha256": "26866c03ff3152630668632142d20be1e299a3204895fdeaf8f94dd385d75fed"
+        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/crazy-fox-motors-varna/modern-copy-review.json",
+        "sha256": "22ab4efb8b466cf76fec1cb8f9a1f8605e54513c7cccf94e4f361278b81de574"
       },
       "resolutions": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/resolutions/remaining/kris-varna.json",
-        "sha256": "242240ea7986acd99bc95341cceac5e5267f0daeed336bf73bd27a18dce1e529"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/resolutions/remaining/crazy-fox-motors-varna.json",
+        "sha256": "cf2da9d2587beac85cde3c6d9d895a2d520b92fa8b5037ece9e5d395c2111c1d"
       }
     },
-    "buscenter-varna": {
+    "i1-auto-varna": {
       "candidateLock": {
         "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/candidate-lock.json",
         "sha256": "04633129df9e75d6cd62deeac9125b279957789d75f57cdb0b243ef61bfc3e7e"
       },
       "qualification": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/contexts/buscenter-varna.json",
-        "sha256": "3888b93d8cf3b8fd10e58601206c72430d72030b68e94e811def32b10baf5b27"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/contexts/i1-auto-varna.json",
+        "sha256": "6c9c32f5858a8a4ceba0c4571f093d7c5d0eb30ffabce5ed1bdfd40175d63fc8"
       },
       "sourceDeltaReview": {
         "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
         "sha256": "43cb6876e815a2a6b866f1dadd304236de4ae58c05fe65c2ab62a23506ee7ce9"
       },
       "branding": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-branding/buscenter-varna.json",
-        "sha256": "8da8affa0d3ce73237b84e4300ee15280255bacbb8e3be033c13f3bea28a1678"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-branding/i1-auto-varna.json",
+        "sha256": "69fa0ec74a4bd9c48491300a7e7c772572e0095625eb192c57f7ea3ad34b3165"
       },
       "modernCopyReview": {
-        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/buscenter-varna/modern-copy-review.json",
-        "sha256": "e96afca813c5cdc27ca014dcaa730bfc628ea82e64b46a39848ec6241ca81656"
+        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/i1-auto-varna/modern-copy-review.json",
+        "sha256": "9b9b52a882008546cdd1d3f197763238fa6bd949da672fe97ef515236cb3d9e9"
       },
       "resolutions": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/resolutions/remaining/buscenter-varna.json",
-        "sha256": "3c82492127f1adeff92ee114fe5aaec938808348a1755a3b31008c525673d34a"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/resolutions/remaining/i1-auto-varna.json",
+        "sha256": "d4f05dbd3ba88dd202c0eb7d3ef60328d20063f8df0507fbbc439e2fd115d67a"
       }
     },
-    "focus1-varna": {
+    "cali-cars-varna": {
       "candidateLock": {
         "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/candidate-lock.json",
         "sha256": "04633129df9e75d6cd62deeac9125b279957789d75f57cdb0b243ef61bfc3e7e"
       },
       "qualification": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/contexts/focus1-varna.json",
-        "sha256": "8e4d0b8e13892d7b6d4209a7d486e4f5185308063e1c7880f89c1f5d31a903ed"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/contexts/cali-cars-varna.json",
+        "sha256": "4e88b682aad9666e3f1ad0483892bbbf90183aede9a54b3f8a2e600f35b79421"
       },
       "sourceDeltaReview": {
         "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
         "sha256": "43cb6876e815a2a6b866f1dadd304236de4ae58c05fe65c2ab62a23506ee7ce9"
       },
       "branding": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-branding/focus1-varna.json",
-        "sha256": "b2fbcc69820c8f81a6db78f55f67d64e805173b0eca98a3e90ca2cba28d65dd7"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-branding/cali-cars-varna.json",
+        "sha256": "e6704f297247734e6e3cc2df2b7a43ea8fb911987a183d53a3b44eb224eea688"
       },
       "modernCopyReview": {
-        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/focus1-varna/modern-copy-review.json",
-        "sha256": "218a2555a5cf9874369063ba094992eb3e1defe3f5d37e40ea5a3c93bf1291f8"
+        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/cali-cars-varna/modern-copy-review.json",
+        "sha256": "84566f9db3ffa510f763939f927cf4c561a43db5785402ab478dd5dc42f02d98"
       },
       "resolutions": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/resolutions/remaining/focus1-varna.json",
-        "sha256": "f8bc8a595e6580b1b1a6997f921d640aaab99a1b412ebc78ebe979754f9be0e8"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/resolutions/remaining/cali-cars-varna.json",
+        "sha256": "e3e47682745cf091866aae690637d4a72ea32ee2e143736482d6f30a08dbe150"
       }
     },
-    "autostar21-varna": {
+    "nordic-auto-varna": {
       "candidateLock": {
         "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/candidate-lock.json",
         "sha256": "04633129df9e75d6cd62deeac9125b279957789d75f57cdb0b243ef61bfc3e7e"
       },
       "qualification": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/contexts/autostar21-varna.json",
-        "sha256": "c97f93f58600c721340c5a0fa5820810b92e951a7fda0e389a3b05de1cfa089d"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/contexts/nordic-auto-varna.json",
+        "sha256": "5c318362e48de9c8d5ff4ad4a87e932ec3260d13ee82f37a12c4c5604b07e801"
       },
       "sourceDeltaReview": {
         "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
         "sha256": "43cb6876e815a2a6b866f1dadd304236de4ae58c05fe65c2ab62a23506ee7ce9"
       },
       "branding": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-branding/autostar21-varna.json",
-        "sha256": "95bf9e68b0658ec701697dcfcce26aa05816fefca51b2216f7690cc74f8faa27"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-branding/nordic-auto-varna.json",
+        "sha256": "8d350b341a7cb67f92c2b670bfb14ef0ac532dbdfba5154b7bed9ea519d98776"
       },
       "modernCopyReview": {
-        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/autostar21-varna/modern-copy-review.json",
-        "sha256": "5f9115314c969a1d0f52f35a8aef5ae34b74ec4ca179c480b17aa11e4819a9df"
+        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/nordic-auto-varna/modern-copy-review.json",
+        "sha256": "cf8773777184e7c1ee372a121c61281c50ca2f2b80bbc898c78f8b48dc6d2252"
       },
       "resolutions": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/resolutions/remaining/autostar21-varna.json",
-        "sha256": "6d37eb88d5887d92029edcace49310fcb60322d2ab7e40639d8f02cf68705b05"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/resolutions/remaining/nordic-auto-varna.json",
+        "sha256": "65e14f6ce5443b456979a98b1ae9f501dd9a1b0ae2ef07ba7e95824c52191d52"
       }
     },
-    "abcbulgaria-varna": {
+    "dein-auto-varna": {
       "candidateLock": {
         "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/candidate-lock.json",
         "sha256": "04633129df9e75d6cd62deeac9125b279957789d75f57cdb0b243ef61bfc3e7e"
       },
       "qualification": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/contexts/abcbulgaria-varna.json",
-        "sha256": "c8c83cf9870049fdd1064955316d5fdaf76a9d1d1cc6b9eb1c07074ae8ef600c"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/contexts/dein-auto-varna.json",
+        "sha256": "f5dfd6a2e24e77276a5f3a9714e8d65477c87cbfb7d14df7b340d0aa61ac42ba"
       },
       "sourceDeltaReview": {
         "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
         "sha256": "43cb6876e815a2a6b866f1dadd304236de4ae58c05fe65c2ab62a23506ee7ce9"
       },
       "branding": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-branding/abcbulgaria-varna.json",
-        "sha256": "9584b0aeceb0fc09858cb5785129f27071bc3deef662f218dbf20f39778970ce"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-branding/dein-auto-varna.json",
+        "sha256": "e88ae0b80d25d707f024b3dcba1cc70bd4349b048f8a3b1885eeeb866aa80db2"
       },
       "modernCopyReview": {
-        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/abcbulgaria-varna/modern-copy-review.json",
-        "sha256": "14e0905ca4f0de36440ec50a5cf99df7e1932a1206904d25fe95e527ca32a869"
+        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/dein-auto-varna/modern-copy-review.json",
+        "sha256": "403b11f5127d278bc140f07331204f63f7e8b51453b17081bc1a752dccc30e9f"
       },
       "resolutions": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/resolutions/remaining/abcbulgaria-varna.json",
-        "sha256": "0afbadb877c393920af626b68d22b25896d5898f0ae15dc88ef20929648fd20f"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/resolutions/remaining/dein-auto-varna.json",
+        "sha256": "43d2207f026f0e5778b8fdced391bb3fe897411dd1756f788be01abd41b4a04e"
       }
     },
-    "grand-auto-varna": {
+    "carnova-varna": {
       "candidateLock": {
         "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/candidate-lock.json",
         "sha256": "04633129df9e75d6cd62deeac9125b279957789d75f57cdb0b243ef61bfc3e7e"
       },
       "qualification": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/contexts/grand-auto-varna.json",
-        "sha256": "f98634c251f547d08d8081d227e757f4a2cd2025dc835e5b04ecf8559e00b4e4"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/contexts/carnova-varna.json",
+        "sha256": "874153f4230bc87ec8455bab94d364be85bd19637bd70260866740cefd4dba2a"
       },
       "sourceDeltaReview": {
         "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
         "sha256": "43cb6876e815a2a6b866f1dadd304236de4ae58c05fe65c2ab62a23506ee7ce9"
       },
       "branding": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-branding/grand-auto-varna.json",
-        "sha256": "c65369b30b6380a4905d047728e82b99c271f163fd8fc75392b98e6426773904"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-branding/carnova-varna.json",
+        "sha256": "a07ce2e189021346bcc63c836ba4a4cba0e9e678e75235022197a02fee0f9270"
       },
       "modernCopyReview": {
-        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/grand-auto-varna/modern-copy-review.json",
-        "sha256": "5c1b1590971dddb02161925e43535bba1aa62ca37d5e17a225efb378e62fd3c8"
+        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/carnova-varna/modern-copy-review.json",
+        "sha256": "231f9e2207631952472e35e2a2a57a2906e2e9693abf353f8b9df88fe155e347"
       },
       "resolutions": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/resolutions/remaining/grand-auto-varna.json",
-        "sha256": "c5cb6b853796d46d2953c99bd7126a0e8f8f52cd9971d69e0f23479a86a30155"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/resolutions/remaining/carnova-varna.json",
+        "sha256": "eb763a2e8e93f1b5028c463d10aa057371f4c3ad52090a5ffe2c9a77f7517708"
       }
     },
-    "mgauto-varna": {
+    "champion-auto-varna": {
       "candidateLock": {
         "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/candidate-lock.json",
         "sha256": "04633129df9e75d6cd62deeac9125b279957789d75f57cdb0b243ef61bfc3e7e"
       },
       "qualification": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/contexts/mgauto-varna.json",
-        "sha256": "d254020d46a26a30fc2e222fc523375041aff58ab0955d205f14978851e8425c"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/contexts/champion-auto-varna.json",
+        "sha256": "661214b662c7643ca8bf6e70b504d04369d97ff770010a85054ddeb0dd49c0f3"
       },
       "sourceDeltaReview": {
         "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
         "sha256": "43cb6876e815a2a6b866f1dadd304236de4ae58c05fe65c2ab62a23506ee7ce9"
       },
       "branding": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-branding/mgauto-varna.json",
-        "sha256": "3a9f494d544753c94db05b0488108cc8cddb1596604617e0331287e5c6c4decc"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-branding/champion-auto-varna.json",
+        "sha256": "3da616835df9c4366ea07af0545ace2aef8d5149aaaee8ca1522b7609020c34a"
       },
       "modernCopyReview": {
-        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/mgauto-varna/modern-copy-review.json",
-        "sha256": "2f0f6075ccae2d298180833c6ff4ea3cc7a945adaa178d91be747f53d154dc85"
+        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/champion-auto-varna/modern-copy-review.json",
+        "sha256": "62accbbffbb3a77463fbbc6a7ec9e0c2a421f8af1be1ea55b82c9397e5d3c76a"
       },
       "resolutions": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/resolutions/remaining/mgauto-varna.json",
-        "sha256": "f07fee57d24a3172a184e9a79f53b569325fe9dbec59c7056d3adf32e3494f74"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/resolutions/remaining/champion-auto-varna.json",
+        "sha256": "6f99c5aab1a9ba92bbdd003362b5fe0b64c51ff4b904f96269f2dced82205023"
       }
     },
-    "bora-car-varna": {
+    "m-car-varna": {
       "candidateLock": {
         "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/candidate-lock.json",
         "sha256": "04633129df9e75d6cd62deeac9125b279957789d75f57cdb0b243ef61bfc3e7e"
       },
       "qualification": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/contexts/bora-car-varna.json",
-        "sha256": "8179e981316b27a92ddc1ac5a67ecc32b68270183e50472a57ee47a3a728b9d4"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/contexts/m-car-varna.json",
+        "sha256": "3c352b3cb0ec180ba1fd93bee5f5a25f45785ad81b8aaaa9c454e402b1f9d847"
       },
       "sourceDeltaReview": {
         "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
         "sha256": "43cb6876e815a2a6b866f1dadd304236de4ae58c05fe65c2ab62a23506ee7ce9"
       },
       "branding": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-branding/bora-car-varna.json",
-        "sha256": "4e556df9defc329ca1d17541b625ef869924c1b52aa687222d6e77a06333da09"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-branding/m-car-varna.json",
+        "sha256": "3071cb4b3b5576fe67f5cf4671403de15927d267cd4d13e52e389d30761651ab"
       },
       "modernCopyReview": {
-        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/bora-car-varna/modern-copy-review.json",
-        "sha256": "7043d1cce26f36bef43610071758879370e1e95c47e512749d56db573df257da"
+        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/m-car-varna/modern-copy-review.json",
+        "sha256": "ea20b3c2366f2aff76b0db59cb45ec6c504db7fa451751618ca81e1af20137d2"
       },
       "resolutions": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/resolutions/remaining/bora-car-varna.json",
-        "sha256": "7e082a67e34879b98b4d66ee0c5f8f31a819c1b82ffde0dc00f227fad3f54637"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/resolutions/remaining/m-car-varna.json",
+        "sha256": "ad17c7508f2775dead6649d35c537062f8b072b448ef7c53476d7dcd305b97a6"
       }
     },
-    "bavaro-varna": {
+    "express-auto-varna": {
       "candidateLock": {
         "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/candidate-lock.json",
         "sha256": "04633129df9e75d6cd62deeac9125b279957789d75f57cdb0b243ef61bfc3e7e"
       },
       "qualification": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/contexts/bavaro-varna.json",
-        "sha256": "e5aae75f5a300000d6f5b3401a1c5ef0880d420ec95fa3b18f2eee48ac081560"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/contexts/express-auto-varna.json",
+        "sha256": "450b87f8ee15e002406695a5fad1acaa8c7b0ba22c8ff95a76ff336298bb224d"
       },
       "sourceDeltaReview": {
         "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
         "sha256": "43cb6876e815a2a6b866f1dadd304236de4ae58c05fe65c2ab62a23506ee7ce9"
       },
       "branding": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-branding/bavaro-varna.json",
-        "sha256": "a3bccbfb37f595ca24bdc3585cebe4866344268622811c8e24c240cbbebd5db0"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-branding/express-auto-varna.json",
+        "sha256": "ec881d75214b0411186db6638ac20d9acb5264baa1fbeb4f43b24ab339faf777"
       },
       "modernCopyReview": {
-        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/bavaro-varna/modern-copy-review.json",
-        "sha256": "8c2274a9148c68ab404dd1585472ac961708257132a9cb2e1a450439def9452c"
+        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/express-auto-varna/modern-copy-review.json",
+        "sha256": "3e114004f06376808e1f90f95df6d39dbec1a624141b9cfc7e2988a2dda0d81f"
       },
       "resolutions": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/resolutions/remaining/bavaro-varna.json",
-        "sha256": "70651146338121fa7985d3d0f76b346affaca59f001b3b808895aa450b332793"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/resolutions/remaining/express-auto-varna.json",
+        "sha256": "585aaf426978a08351b3c1c3331f729a05d2c5e821e210ad4eb7bb294e42f065"
       }
     },
-    "wildivaka-varna": {
+    "fusion-auto-varna": {
       "candidateLock": {
         "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/candidate-lock.json",
         "sha256": "04633129df9e75d6cd62deeac9125b279957789d75f57cdb0b243ef61bfc3e7e"
       },
       "qualification": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/contexts/wildivaka-varna.json",
-        "sha256": "aa1d5e9bfc9dc65231d74fc2eb1d96f5ce03e9e0cd1a055cf966300fcbfb0593"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/contexts/fusion-auto-varna.json",
+        "sha256": "2563ea0a9fa86997f81463b7339dc21b9d032cee78557198de3656aaf1a058e0"
       },
       "sourceDeltaReview": {
         "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
         "sha256": "43cb6876e815a2a6b866f1dadd304236de4ae58c05fe65c2ab62a23506ee7ce9"
       },
       "branding": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-branding/wildivaka-varna.json",
-        "sha256": "e9708ab46dd48eb745f76868f6b787616f07534236c714be0a51ca220eb359e0"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-branding/fusion-auto-varna.json",
+        "sha256": "bff28691d534313ddb0328b10e25da21ee101a829078987f9c1f6dce8c67d88a"
       },
       "modernCopyReview": {
-        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/wildivaka-varna/modern-copy-review.json",
-        "sha256": "a3b98b0e31b8c36c6dc495426349837dd999e695964f49f5b5c0f0fb178953c2"
+        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/fusion-auto-varna/modern-copy-review.json",
+        "sha256": "9203f565723ab9f9f3507d461e85170f32a665efa69fe00e3eb1852f75cad531"
       },
       "resolutions": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/resolutions/remaining/wildivaka-varna.json",
-        "sha256": "9e4fb8b58190b3190c354b1c6a75632b6dc41c36a20b863d68c139810668b6f8"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/resolutions/remaining/fusion-auto-varna.json",
+        "sha256": "a9ff2811ac3dbc94b0daa15db1c0cdb55f636f6f1794654bddd7643797a6a4a1"
       }
     },
-    "triumf-varna": {
+    "bavaria-auto-varna": {
       "candidateLock": {
         "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/candidate-lock.json",
         "sha256": "04633129df9e75d6cd62deeac9125b279957789d75f57cdb0b243ef61bfc3e7e"
       },
       "qualification": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/contexts/triumf-varna.json",
-        "sha256": "a113ecc3b549a0946688a9bd2a33b8538a83497349bde91540ef8a846425edd0"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/contexts/bavaria-auto-varna.json",
+        "sha256": "b7bdc5414331ad700524bfef1a7d390b2ed2969268023171874b00d025f5f94a"
       },
       "sourceDeltaReview": {
         "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
         "sha256": "43cb6876e815a2a6b866f1dadd304236de4ae58c05fe65c2ab62a23506ee7ce9"
       },
       "branding": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-branding/triumf-varna.json",
-        "sha256": "b263378b48babea72f8abd707d8b975fcb0bfb032ae44a9529c34276a97bbc3e"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-branding/bavaria-auto-varna.json",
+        "sha256": "85576efd27ef59f185c6968a23c10ea814d4c117d47b3f6231d5b72365883009"
       },
       "modernCopyReview": {
-        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/triumf-varna/modern-copy-review.json",
-        "sha256": "5f23351e73eb15fb127ef0be60263b6ebf9f3217c2688a8992d6b4b34d0027f3"
+        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/bavaria-auto-varna/modern-copy-review.json",
+        "sha256": "a99e17c14080a269465128c9dddcfae9b93f8e54198880fd88344c8722789c0d"
       },
       "resolutions": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/resolutions/remaining/triumf-varna.json",
-        "sha256": "ee3e90b58978528c8affe473982b079145775f630832accf4bbb35ceee6a23e2"
-      }
-    },
-    "tesi-car-varna": {
-      "candidateLock": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/candidate-lock.json",
-        "sha256": "04633129df9e75d6cd62deeac9125b279957789d75f57cdb0b243ef61bfc3e7e"
-      },
-      "qualification": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/contexts/tesi-car-varna.json",
-        "sha256": "f1b6281a607b441b122b6ea85fb39a093561b65fb810cce2372ba32e251dd610"
-      },
-      "sourceDeltaReview": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
-        "sha256": "43cb6876e815a2a6b866f1dadd304236de4ae58c05fe65c2ab62a23506ee7ce9"
-      },
-      "branding": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-branding/tesi-car-varna.json",
-        "sha256": "87d0c4f9dc2ea101e925b9f4fc3b38ffb7834bff2f8785ff0a5de61a5d91d7dc"
-      },
-      "modernCopyReview": {
-        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/tesi-car-varna/modern-copy-review.json",
-        "sha256": "f1f61efa6f8b0b300999454952bfd4da7a916c520e5d71f497beaccecafd2162"
-      },
-      "resolutions": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/resolutions/remaining/tesi-car-varna.json",
-        "sha256": "146fbd0b56098873c9f6c5dbc22173f94ae3a3e7507335d472d87dca502e1297"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/resolutions/remaining/bavaria-auto-varna.json",
+        "sha256": "111e8ecfdc2a8d17c16f1dc64a2b8b8b5fead922ae5c91d7c351776e5c3b9b3a"
       }
     }
   }
