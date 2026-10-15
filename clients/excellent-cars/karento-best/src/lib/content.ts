@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "Excellent Cars",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/logo-on-light.webp",
-    "footer": "/dealer-brand/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-4464617a3c532c13/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-4464617a3c532c13/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-4464617a3c532c13/logo-on-dark.webp",
     "alt": "Excellent Cars",
-    "favicon": "/dealer-brand/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-4464617a3c532c13/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

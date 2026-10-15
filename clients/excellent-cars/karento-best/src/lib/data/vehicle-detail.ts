@@ -161,7 +161,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "Excellent Cars",
   "location": "бул. „Ян Хунияди“, ъгъла с бул. „Цар Освободител“",
-  "avatar": "/dealer-brand/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-4464617a3c532c13/logo-on-light.webp",
   "mobile": "0895 996 559",
   "email": "",
   "whatsapp": "",

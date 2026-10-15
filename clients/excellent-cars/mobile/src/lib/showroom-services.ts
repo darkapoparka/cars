@@ -109,9 +109,10 @@ export const showroomServices: readonly ShowroomService[] = [
     icon: 'car',
     category: 'sell',
     title: 'Sell your car',
+    mobileTitle: 'Car sale',
     copy: 'Ask for a buyout or part exchange valuation.',
     summary: 'Get a sale or trade-in valuation.',
-    mobileSummary: 'Sale or part exchange',
+    mobileSummary: 'Sale or exchange',
     action: 'Start a sale enquiry',
     keywords: [
       'buyout',
@@ -146,7 +147,7 @@ export const showroomServices: readonly ShowroomService[] = [
     title: 'Part exchange',
     copy: 'Get a valuation towards your next car.',
     summary: 'Value your car towards an upgrade.',
-    mobileSummary: 'Value your current car',
+    mobileSummary: "Your car's value",
     action: 'Ask about part exchange',
   },
   {
@@ -159,7 +160,7 @@ export const showroomServices: readonly ShowroomService[] = [
     mobileTitle: 'Car search',
     copy: 'Share your preferred make, model and budget.',
     summary: 'Tell us your make, model and budget.',
-    mobileSummary: 'Make, model and budget',
+    mobileSummary: 'Model and budget',
     action: 'Ask us to find a car',
   },
   {
@@ -171,7 +172,7 @@ export const showroomServices: readonly ShowroomService[] = [
     title: 'Servicing & repairs',
     copy: 'Ask about maintenance and repairs.',
     summary: 'Ask about servicing and repairs.',
-    mobileSummary: 'Maintenance and repairs',
+    mobileSummary: 'Maintenance & repairs',
     action: 'Ask about servicing',
   },
   {
