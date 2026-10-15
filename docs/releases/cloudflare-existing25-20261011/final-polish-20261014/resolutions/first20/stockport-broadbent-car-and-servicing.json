@@ -38,6 +38,7 @@
     "import/static/dealer-brand/app-icon.png": "template",
     "app/public/dealer-brand/app-icon.png": "template",
     "mobile/public/dealer-brand/app-icon.png": "template",
-    "karento-best/static/dealer-brand/app-icon.png": "template"
+    "karento-best/static/dealer-brand/app-icon.png": "template",
+    "auto-best/src/lib/components/company/AboutProcess.svelte": "template"
   }
 }
