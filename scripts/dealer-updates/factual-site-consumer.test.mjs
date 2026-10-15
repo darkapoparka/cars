@@ -34,3 +34,8 @@ test('reviewed site singleton retains qualification, exact six pins and unrelate
  for(const mutate of [f=>f.refreshFacts=false,f=>f.templatePalette=false,f=>f.qualification=null,f=>f.registeredAdoption={},f=>f.designSet=null,f=>f.review.baseline.tree='0'.repeat(40),f=>f.review.targetSources.app.revision='0'.repeat(40),f=>f.plan.ready=false]){const f=fixture();mutate(f);assert.throws(()=>applyReviewedFactualConsumerResolutions(f));assert(f.plan.candidate.get(f.name).equals(f.merged));}
  const f=fixture();applyReviewedFactualConsumerResolutions(f);f.plan.candidate.set('mobile/src/current-facts.json',Buffer.from('stale unrelated stock\n'));assert.throws(()=>assertFactualRefreshCandidate({candidate:f.plan.candidate,newBases:f.newBases,proof:f.proof}),/differs after preservation/);
 });
+
+test('reviewed site factual source order accepts identical object seals and keeps arrays ordered',()=>{
+ const f=fixture();f.review.baseline=Object.fromEntries(Object.entries(f.review.baseline).reverse());f.review.targetSources=Object.fromEntries(Object.entries(f.review.targetSources).reverse().map(([key,value])=>[key,Object.fromEntries(Object.entries(value).reverse())]));assert.doesNotThrow(()=>applyReviewedFactualConsumerResolutions(f));assert(f.plan.candidate.get(f.name).equals(f.target));
+ for(const mutate of [f=>{f.review.targetSources.import.unknown='unreviewed';},f=>{f.review.targetSources.import.tree='0'.repeat(40);},f=>{f.review.paths.push({...f.review.paths[0]});},f=>{f.review.paths[0].path='modern/arbitrary-paid-code.ts';}]){const f=fixture();mutate(f);assert.throws(()=>applyReviewedFactualConsumerResolutions(f));assert(f.plan.candidate.get(f.name).equals(f.merged));}
+});

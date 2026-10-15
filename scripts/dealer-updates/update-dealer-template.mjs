@@ -1,4 +1,5 @@
 import crypto from 'node:crypto';
+import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
@@ -375,10 +376,71 @@ function parseResolutions(bytes, pins) {
 
 
 /** An explicit reviewed exception to a clean preservation merge, never to factual equality. */
+// Integrated into the maintained updater; not a separate source preparation path.
+function reviewedConsumerScope(pathname,current,target){
+  const utf8=bytes=>Buffer.isBuffer(bytes)&&bytes.length>0&&bytes.length<=128*1024&&!bytes.includes(0)&&Buffer.from(bytes.toString('utf8')).equals(bytes);
+  if(!utf8(current)||!utf8(target))throw Error('Reviewed consumer policy requires bounded clean UTF-8');
+  let retained=current.toString('utf8'),fresh=target.toString('utf8');
+  if(pathname==='import/src/lib/config/site.ts'){
+    const favicon=/^(\s*favicon:\s*)(['"])([^'"\r\n]+)\2(?=\s*,?\s*$)/gm;
+    const old=[...retained.matchAll(favicon)],next=[...fresh.matchAll(favicon)];
+    if(old.length!==1||next.length!==1||!/^\/dealer-brand\/(?:v2-[a-f0-9]{16}\/)?app-icon\.png$/.test(old[0][3])||!/^\/(?:brand\/import-template-icon-v1\.png|dealer-brand\/(?:v2-[a-f0-9]{16}\/)?app-icon\.png)$/.test(next[0][3])||retained.replace(favicon,'$1<reviewed-favicon>')!==fresh.replace(favicon,'$1<reviewed-favicon>'))throw Error('Reviewed branding reference differs beyond the sole Import favicon');
+    return 'branding-reference';
+  }
+  if(pathname!=='modern/packages/marketplace-domain/site-config.ts')throw Error('Unreviewed factual consumer classification scope');
+  const replace=(before,after)=>{if(retained.split(before).length!==2)throw Error('Reviewed Modern schema policy boundary changed');retained=retained.replace(before,()=>after);};
+  replace('.refine((value) => { try { const url = new URL(value); return url.protocol === "https:" && !url.username && !url.password; } catch { return false; } }, "Use HTTPS");','.refine((value) => new URL(value).protocol === "https:", "Use HTTPS");');
+  replace('phoneDisplay: z.string().trim().max(40),','phoneDisplay: z.string().trim().min(1).max(40),');
+  replace('phoneHref: z.union([phoneHref, z.literal("")]),','phoneHref,');
+  replace('    if (Boolean(site.contact.phoneDisplay) !== Boolean(site.contact.phoneHref)) { context.addIssue({code: "custom", path: ["contact", "phoneHref"], message: "Published phone label and destination must be provided together"}); }\n','');
+  if(retained!==fresh)throw Error('Reviewed Modern schema differs beyond the exact retained URL/optional-phone policy');
+  return 'schema-policy';
+}
+
+function exactConsumerClassificationRows(value){
+  const exact=(v,keys)=>v&&typeof v==='object'&&!Array.isArray(v)&&JSON.stringify(Object.keys(v).sort())===JSON.stringify([...keys].sort());
+  const scopes={'import/src/lib/config/site.ts':'branding-reference','modern/packages/marketplace-domain/site-config.ts':'schema-policy'};
+  if(!Array.isArray(value)||!value.length||value.length>2||new Set(value.map(row=>row?.path)).size!==value.length||JSON.stringify(value.map(row=>row?.path))!==JSON.stringify(value.map(row=>row?.path).sort())||value.some(row=>!exact(row,['path','choice','classification','originalSha256','oldSha256','targetSha256','mergedSha256'])||row.choice!=='preserve-current'||scopes[row.path]!==row.classification||['originalSha256','oldSha256','targetSha256','mergedSha256'].some(key=>!/^[a-f0-9]{64}$/.test(row[key]??''))||row.originalSha256!==row.mergedSha256||row.mergedSha256===row.targetSha256))throw Error('Exact ordered reviewed schema-policy/branding-reference byte leases required');
+  return value;
+}
+
+/** Preserve only a reviewed clean current=merged policy/reference with four byte leases.
+ * Actual dealer, lead-site, profile, stock and all other factual consumers stay exact. */
+export function applyReviewedFactualConsumerClassifications({plan,original,oldBases,newBases,review,manifest,qualification,designSet,selectedKeys,registeredAdoption,refreshFacts,templatePalette,factualProof,baseline,resolutions={}}){
+  const exact=(v,keys)=>v&&typeof v==='object'&&!Array.isArray(v)&&JSON.stringify(Object.keys(v).sort())===JSON.stringify([...keys].sort());
+  const canonical=value=>Array.isArray(value)?value.map(canonical):value&&typeof value==='object'?Object.fromEntries(Object.keys(value).sort().map(key=>[key,canonical(value[key])])):value;
+  const equal=(a,b)=>JSON.stringify(canonical(a))===JSON.stringify(canonical(b)),keys=['auto-best','modern','import','app','mobile','karento-best'];
+  assertFactualRefreshAdmission({enabled:refreshFacts,designSet,selectedKeys,qualification,registeredAdoption,manifest});
+  if(refreshFacts!==true||templatePalette!==true||registeredAdoption||!plan?.ready||!(plan.candidate instanceof Map)||!(original instanceof Map)||!exact(review,['schemaVersion','kind','reviewed','dealer','baseline','targetSources','paths'])||review.schemaVersion!==1||review.kind!=='cars-factual-consumer-classifications'||review.reviewed!==true||review.dealer!==manifest.slug||!exact(review.baseline,['commit','tree'])||!Object.values(review.baseline).every(v=>/^[a-f0-9]{40}$/.test(v))||!equal(review.baseline,baseline)||!exact(review.targetSources,keys)||!equal(review.targetSources,factualProof?.targetSources)||!equal(review.targetSources,Object.fromEntries(keys.map(key=>[key,renderPins(plan.pins?.[key]?.targetSource)])))||factualProof?.stage!=='preservation-merge-before-native-catalogs-and-branding'||!Array.isArray(factualProof.consumerPaths)||factualProof.reviewedConsumerClassifications)throw Error('Invalid reviewed consumer classification identity, baseline, pins or scope');
+  const rows=exactConsumerClassificationRows(review.paths);
+  for(const row of rows){
+    const slash=row.path.indexOf('/'),key=row.path.slice(0,slash),relative=row.path.slice(slash+1),current=original.get(row.path),old=oldBases?.[key]?.get(relative),target=newBases?.[key]?.get(relative),merged=plan.candidate.get(row.path);
+    if(!factualProof.consumerPaths.includes(row.path)||Object.hasOwn(resolutions,row.path)||plan.changes.some(item=>item.path===row.path&&item.kind?.startsWith('resolved-'))||plan.conflicts?.some(item=>item.path===row.path)||![current,old,target,merged].every(Buffer.isBuffer)||!current.equals(merged)||sha256(current)!==row.originalSha256||sha256(old)!==row.oldSha256||sha256(target)!==row.targetSha256||sha256(merged)!==row.mergedSha256||reviewedConsumerScope(row.path,current,target)!==row.classification)throw Error('Reviewed clean consumer classification bytes, merge or policy changed');
+  }
+  // Every lease and semantic scope is validated before proof changes; candidate bytes never change.
+  const proof={schemaVersion:1,stage:factualProof.stage,mode:'explicit-reviewed-ordinary-consumer-classification',dealer:manifest.slug,baseline:structuredClone(baseline),targetSources:structuredClone(review.targetSources),qualificationSha256:sha256(Buffer.from(JSON.stringify(qualification))),reviewSha256:sha256(Buffer.from(JSON.stringify(review))),paths:structuredClone(rows)};
+  factualProof.reviewedConsumerClassifications={schemaVersion:1,kind:'cars-reviewed-factual-consumer-classifications',reviewSha256:proof.reviewSha256,paths:structuredClone(rows)};
+  factualProof.consumerPaths=factualProof.consumerPaths.filter(name=>!rows.some(row=>row.path===name));
+  plan.factualConsumerResolutions=proof;return proof;
+}
+
+function assertReviewedConsumerClassificationCandidate({candidate,newBases,proof}){
+  const classified=proof.reviewedConsumerClassifications;if(classified===undefined)return null;
+  if(!classified||JSON.stringify(Object.keys(classified).sort())!==JSON.stringify(['schemaVersion','kind','reviewSha256','paths'].sort())||classified.schemaVersion!==1||classified.kind!=='cars-reviewed-factual-consumer-classifications'||!/^[a-f0-9]{64}$/.test(classified.reviewSha256??''))throw Error('Exact reviewed factual consumer classification proof required');
+  return exactConsumerClassificationRows(classified.paths).map(row=>{
+    const slash=row.path.indexOf('/'),key=row.path.slice(0,slash),actual=candidate.get(row.path),target=newBases?.[key]?.get(row.path.slice(slash+1));
+    if(proof.consumerPaths.includes(row.path)||!Buffer.isBuffer(actual)||!Buffer.isBuffer(target)||sha256(actual)!==row.mergedSha256||sha256(target)!==row.targetSha256||reviewedConsumerScope(row.path,actual,target)!==row.classification)throw Error('Reviewed schema policy or branding reference changed after preservation');
+    return {path:row.path,classification:row.classification,preservedSha256:row.mergedSha256,targetSha256:row.targetSha256};
+  });
+}
+
+
 export function applyReviewedFactualConsumerResolutions({plan,original,oldBases,newBases,review,manifest,qualification,designSet,selectedKeys,registeredAdoption,refreshFacts,templatePalette,factualProof,baseline,resolutions={}}) {
+  if(review?.kind==='cars-factual-consumer-classifications')return applyReviewedFactualConsumerClassifications(arguments[0]);
   if(review==null)return null;
   const exact=(value,keys)=>value&&typeof value==='object'&&!Array.isArray(value)&&JSON.stringify(Object.keys(value).sort())===JSON.stringify([...keys].sort());
-  const equal=(a,b)=>JSON.stringify(a)===JSON.stringify(b);
+  const canonical=value=>Array.isArray(value)?value.map(canonical):value&&typeof value==='object'?Object.fromEntries(Object.keys(value).sort().map(key=>[key,canonical(value[key])])):value;
+  const equal=(a,b)=>JSON.stringify(canonical(a))===JSON.stringify(canonical(b));
   const keys=['auto-best','modern','import','app','mobile','karento-best'];
   const dealerPath='import/src/lib/config/dealer.ts',sitePath='import/src/lib/config/site.ts';
   const paths=review.paths?.length===2?[dealerPath,sitePath]:review.paths?.length===1&&review.paths[0]?.path===sitePath?[sitePath]:[dealerPath];
@@ -448,7 +510,7 @@ function factualConsumerBaseline({review,carsRoot,dealerRoot,dealer}) {
 function applyFactualReviewToPlan({plan,dealerRoot,carsRoot,manifest,qualification,selection,registeredAdoption,refreshFacts,templatePalette,factualProof,oldBases,newBases,review,resolutions}) {
   if(!review)return null;
   const baseline=factualConsumerBaseline({review,carsRoot,dealerRoot,dealer:manifest.slug});
-  const allowed=new Set(['import/src/lib/config/dealer.ts','import/src/lib/config/site.ts']);
+  const allowed=new Set(['import/src/lib/config/dealer.ts','import/src/lib/config/site.ts','modern/packages/marketplace-domain/site-config.ts']);
   if(!Array.isArray(review.paths)||review.paths.some(item=>!allowed.has(item?.path)))throw Error('Invalid reviewed factual consumer input scope');
   const original=new Map(review.paths.map(({path:name})=>[name,fs.readFileSync(path.join(dealerRoot,name))]));
   return applyReviewedFactualConsumerResolutions({plan,original,oldBases,newBases,review,manifest,qualification,designSet:selection.designSet,selectedKeys:selection.selectedKeys,registeredAdoption,refreshFacts,templatePalette,factualProof,baseline,resolutions});
@@ -680,10 +742,58 @@ export async function brandFactualTargetBases({newBases,manifest,proof,brandingP
   if(!contract||!/^[a-f0-9]{16}$/.test(contract.packId||'')||contract.publicBase!=='/dealer-brand/v2-'+contract.packId)throw Error('Reviewed target branding contract differs');
   const consumers=new Set(proof.consumerPaths);
   for(const [name,bytes]of before)if(!files.has(name))throw Error('Reviewed target branding removed source: '+name);
-  for(const [name,bytes]of files){const key=name.split('/')[0];if(!keys.includes(key))continue;if(!Buffer.isBuffer(bytes))throw Error('Reviewed target branding bytes required');if(!before.get(name)?.equals(bytes))consumers.add(name);}
+  for(const [name,bytes]of files){const key=name.split('/')[0];if(!keys.includes(key))continue;if(!Buffer.isBuffer(bytes))throw Error('Reviewed target branding bytes required');}
+  const familyFiles=source=>new Map([...source].filter(([name])=>keys.includes(name.split('/')[0])));
+  for(const name of collectFactualTargetConsumers(familyFiles(before),familyFiles(files)))consumers.add(name);
   const split=splitPrefixedTrees(files,keys);for(const key of keys)newBases[key]=split[key];
   return {...proof,consumerPaths:[...consumers].sort(),targetBranding:{schemaVersion:1,stage:'reviewed-logo-pack-on-factual-target-before-preservation-merge',input:brandingPin,packId:contract.packId,publicBase:contract.publicBase,dealerSourceChanged:false}};
 }
+/** Use the original pinned App template for UK code, never an adapted overlay.
+ * Only new logo hash aliases backed by the selected reviewed pack may be added. */
+export async function refreshBrandedAppProvenance({files,manifest,provenance,appTemplateFiles}){
+  const withoutLogo=value=>{const {logo,...facts}=value;return facts;};
+  assert(files instanceof Map&&manifest?.packaging?.version==='5');
+  const profile='auto-best/src/lib/data/dealer-profile.json';
+  assert(provenance?.dealer===manifest.slug&&provenance.profile===profile&&/^[a-f0-9]{64}$/.test(provenance.profileSha256||''));
+  const originalConfig=files.get('app/lib/dealer.json'),originalInventory=files.get('app/lib/dealer-inventory.json');
+  assert(Buffer.isBuffer(originalConfig)&&Buffer.isBuffer(originalInventory)&&Buffer.isBuffer(files.get(profile)));
+  const business=JSON.parse(files.get(profile)).business;
+  if(business?.countryCode==='GB'&&business.distanceUnit==='mi')assert(appTemplateFiles instanceof Map,'Original immutable App template files required for the UK overlay');
+  const app=await prepareAppDealer('',manifest,{
+    readFile:name=>{const bytes=files.get(name);assert(Buffer.isBuffer(bytes),'Missing final canonical App input: '+name);return bytes;},
+    appFiles:appTemplateFiles??new Map([...files].filter(([name])=>name.startsWith('app/')).map(([name,bytes])=>[name.slice(4),bytes]))
+  });
+  assert(originalInventory.equals(app.files.get('lib/dealer-inventory.json')),'Branded profile regeneration changed App inventory');
+  assert.deepEqual(withoutLogo(JSON.parse(originalConfig)),withoutLogo(JSON.parse(app.files.get('lib/dealer.json'))),'Branded profile regeneration changed non-logo App business config');
+  const selectedLogos=new Set([...files].filter(([name])=>/^auto-best\/static\/dealer-brand\/v2-[a-f0-9]{16}\/logo-on-(?:light|dark)\.(?:png|webp)$/.test(name)).map(([,bytes])=>sha256(bytes)));
+  const additions=[];
+  for(const [name,bytes]of app.files){
+    if(name==='lib/dealer.json')continue;
+    const target='app/'+name,current=files.get(target);
+    if(current){assert(Buffer.isBuffer(current)&&current.equals(bytes),'Branded profile regeneration changed App input: '+name);continue;}
+    const asset=app.provenance.assets.find(asset=>asset.output===name);
+    assert(asset&&['logo-light','logo-dark'].includes(asset.role)&&/^public\/dealer-app\/logo-(?:light|dark)-[a-f0-9]{20}\.(?:png|webp)$/.test(name),'Unreviewed new App input: '+name);
+    const source=files.get(asset.source),digest=sha256(bytes);
+    assert(Buffer.isBuffer(source)&&source.equals(bytes)&&asset.sha256===digest&&selectedLogos.has(digest),'New App logo alias is outside the exact selected reviewed logo pack');
+    assert(name==='public/dealer-app/'+asset.role+'-'+digest.slice(0,20)+asset.source.slice(asset.source.lastIndexOf('.')).toLowerCase(),'Noncanonical App logo alias');
+    additions.push({path:target,source:asset.source,sha256:digest,role:asset.role,bytes});
+  }
+  assert.equal(app.provenance.profileSha256,sha256(files.get(profile)));
+  // Validate all inventory/business/code/asset leases before any alias is staged.
+  for(const row of additions)assert(!files.has(row.path),'App alias destination changed during review');
+  for(const row of additions)files.set(row.path,row.bytes);
+  return {provenance:app.provenance,
+    proof:{schemaVersion:1,kind:'cars-final-branded-app-provenance',dealer:manifest.slug,
+      priorProfileSha256:provenance.profileSha256,finalProfileSha256:app.provenance.profileSha256,
+      inventoryRows:app.inventory.length,inventorySha256:sha256(originalInventory),
+      nonLogoBusinessConfigSha256:sha256(JSON.stringify(withoutLogo(JSON.parse(originalConfig)))),
+      logoBindingSha256:sha256(JSON.stringify(JSON.parse(originalConfig).logo)),
+      inventoryBytesIdentical:true,nonLogoBusinessConfigIdentical:true,
+      allExistingGeneratedAppBytesIdentical:true,selectedFinalLogoBindingPreserved:true,
+      aliasesAdded:additions.map(({bytes,...row})=>row),filesChanged:additions.length}
+  };
+}
+
 async function applyReviewedFactualTargetBranding({factual,newBases,manifest,carsRoot,pins,brandingPin}) {
   if(!brandingPin)return;
   const input=qualificationArtifact(carsRoot,brandingPin.path);if(input.sha256!==brandingPin.sha256)throw Error('Reviewed target branding input changed');
@@ -691,6 +801,11 @@ async function applyReviewedFactualTargetBranding({factual,newBases,manifest,car
   const options=readBrandingInputs(carsRoot,input.value,manifest.slug),sharp=createRequire(path.join(carsRoot,'runtime/source-preparation-tools/package.json'))('sharp');if(sharp.versions.sharp!=='0.35.5')throw Error('Target raster toolchain differs');
   const templates=new Map(),readTemplate=(source,name,optional)=>{const key=source.path.slice('templates/'.length);if(!templates.has(key))templates.set(key,readPinnedTemplateTree({key,repositoryPath:carsRoot,source:pins[key].targetSource}).tree);const bytes=templates.get(key).get(name);if(!bytes&&optional)return null;if(!bytes)throw Error('Missing exact target palette '+key+'/'+name);return bytes.toString('utf8');};
   factual.proof=await brandFactualTargetBases({newBases,manifest,proof:factual.proof,brandingPin,applyBranding:(files,target)=>applyLeadBranding(files,target,{...options,sharp,readTemplate})});
+  const finalFiles=new Map();for(const key of Object.keys(newBases))addPrefixedTree(finalFiles,key,newBases[key]);
+  if(!templates.has('app'))templates.set('app',readPinnedTemplateTree({key:'app',repositoryPath:carsRoot,source:pins.app.targetSource}).tree);
+  const beforeApp=new Map(finalFiles),app=await refreshBrandedAppProvenance({files:finalFiles,manifest,provenance:factual.appProvenance,appTemplateFiles:templates.get('app')});
+  newBases.app=splitPrefixedTrees(finalFiles,['app']).app;
+  factual.appProvenance=app.provenance;factual.proof={...factual.proof,appProfileReseal:app.proof,consumerPaths:[...new Set([...factual.proof.consumerPaths,...collectFactualTargetConsumers(beforeApp,finalFiles)])].sort()};
 }
 
 /** A reviewed dealer resolution cannot retain stale facts and receive a new profile seal. */
@@ -705,7 +820,8 @@ export function assertFactualRefreshCandidate({candidate,newBases,proof}) {
     consumerHashes.push({path:name,sha256:sha256(expected)});
   }
   if(mismatches.length){const error=new Error('Factual target differs after preservation; review custom factual consumer: '+mismatches.map(row=>row.path).join(', '));error.code='CARS_FACTUAL_CONSUMER_MISMATCH';error.factualConsumerMismatches=mismatches;throw error;}
-  return {...proof,consumerHashes};
+  const classificationHashes=assertReviewedConsumerClassificationCandidate({candidate,newBases,proof});
+  return {...proof,consumerHashes,...(classificationHashes?{classificationHashes}:{})};
 }
 
 /** Hash-only refusal evidence; no mismatch is admitted or materialized. */
@@ -730,6 +846,7 @@ export function writeFactualRefreshMismatchReview({error,runDirectory,dealerRoot
 
 export function assertFactualRefreshReplay({proof,metadata,newBases}){
   const candidate=new Map();for(const [key,files]of Object.entries(newBases))for(const [name,bytes]of files)candidate.set(key+'/'+name,bytes);
+  for(const row of proof.reviewedConsumerClassifications?.paths??[])candidate.set(row.path,fs.readFileSync(path.join(metadata.dealerRoot,row.path)));
   const current=assertFactualRefreshCandidate({candidate,newBases,proof});
   if(metadata.selection?.refreshFacts!==true||metadata.registeredAdoption||JSON.stringify(current)!==JSON.stringify(metadata.factualRefresh))throw new Error('Current factual profile, target pins or consumer bytes changed after review');return current;
 }
@@ -1065,6 +1182,14 @@ async function validatePinnedBaseEvidence(metadata, manifest, lock, paths) {
   if(sha256(Buffer.from(JSON.stringify(currentTarget)))!==metadata.targetManifestSha256)throw new Error('Dealer delivery identity changed after review; create a new update plan');
   const adapted = await adaptPinnedBases({ keys: Object.keys(metadata.pins), oldBases, newBases, manifest, targetManifest });
   if (adapted.adapter !== metadata.baseAdapter) throw new Error('Dealer source adapter changed after review; create a new update plan');
+  const classifiedReview=readFactualConsumerReview(noticeResolutionBytes);
+  if(classifiedReview?.kind==='cars-factual-consumer-classifications'){
+    const candidate=new Map();for(const [key,files]of Object.entries(adapted.newBases))for(const [name,bytes]of files)candidate.set(key+'/'+name,bytes);
+    for(const row of exactConsumerClassificationRows(classifiedReview.paths))candidate.set(row.path,fs.readFileSync(path.join(metadata.dealerRoot,row.path)));
+    const synthetic={ready:true,candidate,changes:[],conflicts:[],summary:{changed:0},pins:metadata.pins};
+    const receipt=applyFactualReviewToPlan({plan:synthetic,dealerRoot:metadata.dealerRoot,carsRoot:metadata.carsRoot,manifest,qualification:metadata.qualification?.context,selection:metadata.selection,registeredAdoption:metadata.registeredAdoption,refreshFacts,templatePalette:metadata.selection?.templatePalette,factualProof:factual.proof,oldBases:adapted.oldBases,newBases:adapted.newBases,review:classifiedReview,resolutions:parseResolutions(noticeResolutionBytes,metadata.pins)});
+    if(JSON.stringify(receipt)!==JSON.stringify(metadata.factualConsumerResolutions))throw Error('Reviewed schema/reference classification changed during replay');
+  }
   if(factual)assertFactualRefreshReplay({proof:factual.proof,metadata,newBases:adapted.newBases});
   return {...adapted,extendedAdaptations,templatePaletteConfigs,factualAppProvenance:factual?.appProvenance};
 }
