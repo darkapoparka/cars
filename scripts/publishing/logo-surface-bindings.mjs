@@ -1,10 +1,11 @@
 import {createHash} from 'node:crypto';
 
 // Source-level surface selection. It never recolours template backgrounds or changes layout.
+export const AUTO_BEST_LOGO_CONFIG='auto-best/src/lib/config/brand.ts';
 export const MODERN_LOGO_CONFIG='modern/packages/marketplace/lead-site.ts';
 export const MOBILE_LOGO_HEADER='mobile/src/components/Header.tsx';
 const MOBILE_LOGO_CONFIG='mobile/src/lib/showroom-config.ts';
-const publicRoots={modern:'modern/apps/web/public',mobile:'mobile/public'};
+const publicRoots={'auto-best':'auto-best/static',modern:'modern/apps/web/public',mobile:'mobile/public'};
 const get=(files,p)=>{if(!files.has(p))throw Error('Missing logo consumer '+p);return Buffer.from(files.get(p)).toString('utf8');};
 function once(text,from,to,label){if(text.split(from).length!==2)throw Error('Changed logo surface boundary '+label);return text.replace(from,to);}
 // Only the reviewed literal leadSite object is a supported logo boundary.
@@ -30,6 +31,18 @@ function unsupportedModernLogoDeclarations(text){
  }
  return depth!==0;
 }
+
+function autoLogoFields(text){
+ // Reuse the literal-object declaration guard for this exact generated BrandConfig.
+ const declaration=text.replace(/^export const brand = \{/m,'export const leadSite = {').replace(/^\} as const satisfies BrandConfig;/m,'};');
+ const fields={
+  logo:[...text.matchAll(/^([ \t]*logo[ \t]*:[ \t]*)("[^"\r\n]*"|'[^'\r\n]*')([ \t]*,?[ \t]*)$/gm)],
+  logoOnDark:[...text.matchAll(/^([ \t]*logoOnDark[ \t]*:[ \t]*)("[^"\r\n]*"|'[^'\r\n]*')([ \t]*,?[ \t]*)$/gm)]
+ };
+ if(unsupportedModernLogoDeclarations(declaration)||Object.values(fields).some(rows=>rows.length!==1))throw Error('Changed Auto logo surface boundary');
+ return fields;
+}
+
 function publicRaster(value){
  return typeof value==='string'&&/^\/[a-zA-Z0-9._/%+-]+\.(?:png|webp)$/.test(value)&&
   !value.startsWith('//')&&!value.slice(1).split('/').some(part=>!part||part==='.'||part==='..'||/%(?:2e|2f|5c)/i.test(part));
@@ -42,7 +55,8 @@ function surfaces(value){
  if(!value||Object.keys(value).sort().join(',')!=='onDark,onLight'||!publicRaster(value.onLight)||!publicRaster(value.onDark))throw Error('Exact retained light/dark raster tuple required');
  return {...value,retained:true};
 }
-function familiesFor({families=['modern','mobile']}={}){
+function familiesFor({families}={},files){
+ if(families===undefined)families=files?.has(AUTO_BEST_LOGO_CONFIG)?['auto-best','modern','mobile']:['modern','mobile'];
  if(!Array.isArray(families)||!families.length||new Set(families).size!==families.length||families.some(key=>!Object.hasOwn(publicRoots,key)))throw Error('Unsupported logo surface family selection');
  return families;
 }
@@ -55,7 +69,15 @@ function assertRetainedMobile(files,pair){
  if(logos.length!==1||logos[0][2]!==pair.onLight)throw Error('Mobile light header has no retained light raster logo');
 }
 export function applyLogoSurfaceBindings(files,value,options){
- const pair=surfaces(value),families=familiesFor(options),draft=new Map(files),changes=[];
+ const pair=surfaces(value),families=familiesFor(options,files),draft=new Map(files),changes=[];
+ if(families.includes('auto-best')){
+  let auto=get(draft,AUTO_BEST_LOGO_CONFIG);const fields=autoLogoFields(auto);
+  for(const [field,surface]of [['logo','onLight'],['logoOnDark','onDark']]){
+   const selected=fields[field][0];auto=once(auto,selected[0],selected[1]+JSON.stringify(pair[surface])+selected[3],'Auto '+surface+' raster');
+  }
+  draft.set(AUTO_BEST_LOGO_CONFIG,Buffer.from(auto));changes.push(AUTO_BEST_LOGO_CONFIG);
+ }
+
  if(families.includes('modern')){
   let modern=get(draft,MODERN_LOGO_CONFIG);const wanted=JSON.stringify(pair.onDark);
   const primary=modern.match(/^[ \t]*logoPath[ \t]*:/gm)??[],inverse=modern.match(/^[ \t]*logoInversePath[ \t]*:/gm)??[];
@@ -102,7 +124,12 @@ export function applyLogoSurfaceBindings(files,value,options){
  assertLogoSurfaceBindings(draft,value,options);for(const name of changes)files.set(name,draft.get(name));return changes;
 }
 export function assertLogoSurfaceBindings(files,value,options){
- const pair=surfaces(value),families=familiesFor(options);
+ const pair=surfaces(value),families=familiesFor(options,files);
+ if(families.includes('auto-best')){
+  const fields=autoLogoFields(get(files,AUTO_BEST_LOGO_CONFIG));
+  if(fields.logo[0][2]!==JSON.stringify(pair.onLight)||fields.logoOnDark[0][2]!==JSON.stringify(pair.onDark))throw Error('Auto light/dark surfaces have no exact committed raster bindings');
+ }
+
  if(families.includes('modern')){
   const modern=get(files,MODERN_LOGO_CONFIG),primary=[...modern.matchAll(/^[ \t]*logoPath[ \t]*:[ \t]*("(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'),[ \t]*$/gm)],inverse=[...modern.matchAll(/^[ \t]*logoInversePath[ \t]*:[ \t]*("(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*')[ \t]*,?[ \t]*$/gm)];
   if(unsupportedModernLogoDeclarations(modern)||primary.length!==1||(modern.match(/^[ \t]*logoPath[ \t]*:/gm)??[]).length!==1||(modern.match(/^[ \t]*logoInversePath[ \t]*:/gm)??[]).length!==1||inverse.length!==1||inverse[0][1]!==JSON.stringify(pair.onDark))throw Error('Modern dark footer has no inverse raster logo');
@@ -130,12 +157,12 @@ function verifiedRetainedTuple(files,contract,families){
 }
 /** Apply only the verified retained members; never generate or alter their bytes. */
 export function applyRetainedLogoSurfaceBindings(files,contract,options){
- const families=familiesFor(options),tuple=verifiedRetainedTuple(files,contract,families);
+ const families=familiesFor(options,files),tuple=verifiedRetainedTuple(files,contract,families);
  return applyLogoSurfaceBindings(files,tuple,{families,reviewedPinnedTemplateReplacement:options?.reviewedPinnedTemplateReplacement===true});
 }
 /** Read-only guard for raw or already mounted retained consumers. */
 export function assertRetainedLogoSurfaceBindings(files,contract,{mounts={},...options}={}){
- const families=familiesFor(options),tuple=verifiedRetainedTuple(files,contract,families);
+ const families=familiesFor(options,files),tuple=verifiedRetainedTuple(files,contract,families);
  for(const key of families){
   try{assertLogoSurfaceBindings(files,tuple,{families:[key]});}
   catch(error){

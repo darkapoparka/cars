@@ -1,9 +1,10 @@
+import {applyAutoBestOptionalContactFallback} from './auto-best-optional-contact.mjs';
 import {createHash} from 'node:crypto';
 const hash=v=>createHash('sha256').update(v).digest('hex');
 /** Missing email is not a dealer fact. The public contact link may instead open
  * this same demonstration's existing contact page without changing emailHref.
  */
-export function applyOptionalContactFallback(files,manifest){
+function applyImportOptionalContactFallback(files,manifest){
  const config='import/src/lib/config/dealer.ts',site='import/src/lib/config/site.ts';
  if(!files.has(config)||!files.has(site))throw Error('Missing Import contact config');
  const original=files.get(config),text=String(original),matches=[...text.matchAll(/^[ \t]*"emailHref":\s*"([^"\r\n]*)",?$/gm)];
@@ -18,6 +19,19 @@ export function applyOptionalContactFallback(files,manifest){
  return {schemaVersion:1,dealer:manifest.slug,applied:true,path:site,href,beforeSha256:hash(before),afterSha256:hash(after),originalDealerConfigSha256:hash(original),emailInvented:false,mode:'Existing same-origin contact page; no external enquiry submitted'};
 }
 
+/** Both native CF and ordinary Vercel packages use the same optional Auto controls.
+ * Stage changes together so a changed Import or Auto boundary leaves all input intact. */
+export function applyOptionalContactFallback(files,manifest){
+ const autoConfig='auto-best/src/lib/config/brand.ts';
+ if(manifest.packaging?.version!=='5'||!files.has(autoConfig))return applyImportOptionalContactFallback(files,manifest);
+ const profilePath='auto-best/src/lib/data/dealer-profile.json',profileBytes=files.get(profilePath);
+ if(!profileBytes)throw Error('Missing normalized Auto contact profile');
+ const profile=JSON.parse(String(profileBytes)),draft=new Map(files);
+ const autoBestOptionalContact=applyAutoBestOptionalContactFallback(draft,manifest,{profile});
+ const receipt=applyImportOptionalContactFallback(draft,manifest);
+ for(const [name,bytes]of draft)if(bytes!==files.get(name))files.set(name,bytes);
+ return {...receipt,autoBestOptionalContact};
+}
 
 const MODERN_PHONE_BOUNDARIES = Object.freeze({
   "modern/apps/web/app/[locale]/components/dealer-desktop-footer.tsx": {
