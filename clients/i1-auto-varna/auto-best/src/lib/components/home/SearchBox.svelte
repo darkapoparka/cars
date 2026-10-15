@@ -174,7 +174,7 @@
 
     .dn-search__buy { display: contents; }
     .dn-search-wrap {
-      margin-top: -52px;
+      margin-top: calc(-1 * var(--dn-mobile-entry-overlap));
       background: transparent;
     }
 

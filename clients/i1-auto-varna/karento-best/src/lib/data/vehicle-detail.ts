@@ -147,7 +147,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "i1 Auto ApS",
   "location": "срещу КАТ, бул. Ян Хуняди 518, Варна, България",
-  "avatar": "/dealer-brand/v2-aaa4d139286d08ab/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-fe76ed2bfdc4a157/logo-on-light.webp",
   "mobile": "0899820525",
   "email": "",
   "whatsapp": "",

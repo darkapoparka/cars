@@ -33,6 +33,6 @@ export const brand = {
   addressLine,
   address: "срещу КАТ, бул. Ян Хуняди 518, Варна, България",
   appointment: "Потвърдете работното време директно с автокъщата.",
-  logo: "/dealer-brand/v2-aaa4d139286d08ab/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/v2-aaa4d139286d08ab/logo-on-dark.webp"
+  logo: "/dealer-brand/v2-fe76ed2bfdc4a157/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-fe76ed2bfdc4a157/logo-on-dark.webp"
 } as const satisfies BrandConfig;

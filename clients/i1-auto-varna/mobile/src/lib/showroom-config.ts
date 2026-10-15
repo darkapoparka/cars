@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "i1 Auto ApS",
-  "logo": "/dealer-brand/v2-aaa4d139286d08ab/logo-on-light.webp",
+  "logo": "/dealer-brand/v2-fe76ed2bfdc4a157/logo-on-light.webp",
   "phone": "+359899820525",
   "email": null,
   "address": "срещу КАТ, бул. Ян Хуняди 518, Варна, България",

@@ -23,7 +23,8 @@ const staticRoot = path.join(root, 'static');
 // The mobile vehicle detail finance card adds one optimized transparent cutout.
 // Three background-only plates support the requested desktop comparison.
 // Five client choices retain a photographic kerb plate and smaller mobile encodings.
-const guardedMediaCount = 368;
+// Includes the five transparent graphite bottom-dock assets added on 14 October.
+const guardedMediaCount = 375;
 // Preserve the two earlier local Home scene options for provenance.
 const homeScenePrototypes = ['/assets/images/template/home-sell-handover-v1.webp', '/assets/images/template/home-finance-scene-v1.webp'];
 // Preserve source identity/artwork for provenance; the default logo and icon are Auto Best.

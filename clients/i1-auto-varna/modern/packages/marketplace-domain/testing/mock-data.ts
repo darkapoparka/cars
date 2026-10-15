@@ -50,7 +50,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "i1 Auto ApS",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-aaa4d139286d08ab/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-fe76ed2bfdc4a157/logo-on-light.webp"
     },
     "publishedAt": "2026-10-12T09:00:00.000Z",
     "promoted": true
@@ -102,7 +102,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "i1 Auto ApS",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-aaa4d139286d08ab/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-fe76ed2bfdc4a157/logo-on-light.webp"
     },
     "publishedAt": "2026-10-12T09:00:00.000Z",
     "promoted": true

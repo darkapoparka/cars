@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "i1 Auto ApS",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-aaa4d139286d08ab/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-aaa4d139286d08ab/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-aaa4d139286d08ab/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-fe76ed2bfdc4a157/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-fe76ed2bfdc4a157/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-fe76ed2bfdc4a157/logo-on-dark.webp",
     "alt": "i1 Auto ApS",
-    "favicon": "/dealer-brand/v2-aaa4d139286d08ab/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-fe76ed2bfdc4a157/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {
