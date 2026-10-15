@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "АВТОБОРСА МАНИЯ",
   "locale": "bg-BG",
   "logo": {
-    "light": "/registered-branding/onLight.png",
-    "footer": "/registered-branding/onDark.png",
-    "archivedDark": "/registered-branding/onDark.png",
+    "light": "/dealer-brand/v2-a83417b07db78ad1/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-a83417b07db78ad1/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-a83417b07db78ad1/logo-on-dark.webp",
     "alt": "АВТОБОРСА МАНИЯ",
-    "favicon": "/registered-branding/onLight.png",
+    "favicon": "/dealer-brand/v2-a83417b07db78ad1/app-icon.png",
     "monochromeOnDark": false
   },
   "contacts": {

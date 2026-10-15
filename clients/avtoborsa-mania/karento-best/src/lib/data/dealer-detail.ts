@@ -85,7 +85,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "АВТОБОРСА МАНИЯ",
       "location": "бул. Цар Освободител, район Владислав Варненчик",
-      "avatar": "/registered-branding/onLight.png",
+      "avatar": "/dealer-brand/v2-a83417b07db78ad1/logo-on-light.webp",
       "mobile": "0899 874 488",
       "email": "",
       "whatsapp": "",
@@ -186,7 +186,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "АВТОБОРСА МАНИЯ",
       "location": "бул. Цар Освободител, район Владислав Варненчик",
-      "avatar": "/registered-branding/onLight.png",
+      "avatar": "/dealer-brand/v2-a83417b07db78ad1/logo-on-light.webp",
       "mobile": "0899 874 488",
       "email": "",
       "whatsapp": "",
@@ -287,7 +287,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "АВТОБОРСА МАНИЯ",
       "location": "бул. Цар Освободител, район Владислав Варненчик",
-      "avatar": "/registered-branding/onLight.png",
+      "avatar": "/dealer-brand/v2-a83417b07db78ad1/logo-on-light.webp",
       "mobile": "0899 874 488",
       "email": "",
       "whatsapp": "",
@@ -387,7 +387,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "АВТОБОРСА МАНИЯ",
       "location": "бул. Цар Освободител, район Владислав Варненчик",
-      "avatar": "/registered-branding/onLight.png",
+      "avatar": "/dealer-brand/v2-a83417b07db78ad1/logo-on-light.webp",
       "mobile": "0899 874 488",
       "email": "",
       "whatsapp": "",
@@ -486,7 +486,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "АВТОБОРСА МАНИЯ",
       "location": "бул. Цар Освободител, район Владислав Варненчик",
-      "avatar": "/registered-branding/onLight.png",
+      "avatar": "/dealer-brand/v2-a83417b07db78ad1/logo-on-light.webp",
       "mobile": "0899 874 488",
       "email": "",
       "whatsapp": "",
@@ -586,7 +586,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "АВТОБОРСА МАНИЯ",
       "location": "бул. Цар Освободител, район Владислав Варненчик",
-      "avatar": "/registered-branding/onLight.png",
+      "avatar": "/dealer-brand/v2-a83417b07db78ad1/logo-on-light.webp",
       "mobile": "0899 874 488",
       "email": "",
       "whatsapp": "",
@@ -685,7 +685,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "АВТОБОРСА МАНИЯ",
       "location": "бул. Цар Освободител, район Владислав Варненчик",
-      "avatar": "/registered-branding/onLight.png",
+      "avatar": "/dealer-brand/v2-a83417b07db78ad1/logo-on-light.webp",
       "mobile": "0899 874 488",
       "email": "",
       "whatsapp": "",

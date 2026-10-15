@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "Спринт ауто",
   "locale": "bg-BG",
   "logo": {
-    "light": "/registered-branding/onLight.png",
-    "footer": "/registered-branding/onDark.png",
-    "archivedDark": "/registered-branding/onDark.png",
+    "light": "/dealer-brand/v2-7cf90fc8e0bfbac0/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-7cf90fc8e0bfbac0/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-7cf90fc8e0bfbac0/logo-on-dark.webp",
     "alt": "Спринт ауто",
-    "favicon": "/registered-branding/onLight.png",
+    "favicon": "/dealer-brand/v2-7cf90fc8e0bfbac0/app-icon.png",
     "monochromeOnDark": false
   },
   "contacts": {

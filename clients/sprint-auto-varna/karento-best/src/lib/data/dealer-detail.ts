@@ -85,7 +85,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Спринт ауто",
       "location": "Варна, Владислав Варненчик, бул. „Цар Освободител“, втората автокъща след Тилком и Италмодалуче посока Аксаково",
-      "avatar": "/registered-branding/onLight.png",
+      "avatar": "/dealer-brand/v2-7cf90fc8e0bfbac0/logo-on-light.webp",
       "mobile": "0888 006 224",
       "email": "",
       "whatsapp": "",
@@ -186,7 +186,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Спринт ауто",
       "location": "Варна, Владислав Варненчик, бул. „Цар Освободител“, втората автокъща след Тилком и Италмодалуче посока Аксаково",
-      "avatar": "/registered-branding/onLight.png",
+      "avatar": "/dealer-brand/v2-7cf90fc8e0bfbac0/logo-on-light.webp",
       "mobile": "0888 006 224",
       "email": "",
       "whatsapp": "",
@@ -287,7 +287,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Спринт ауто",
       "location": "Варна, Владислав Варненчик, бул. „Цар Освободител“, втората автокъща след Тилком и Италмодалуче посока Аксаково",
-      "avatar": "/registered-branding/onLight.png",
+      "avatar": "/dealer-brand/v2-7cf90fc8e0bfbac0/logo-on-light.webp",
       "mobile": "0888 006 224",
       "email": "",
       "whatsapp": "",
@@ -387,7 +387,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Спринт ауто",
       "location": "Варна, Владислав Варненчик, бул. „Цар Освободител“, втората автокъща след Тилком и Италмодалуче посока Аксаково",
-      "avatar": "/registered-branding/onLight.png",
+      "avatar": "/dealer-brand/v2-7cf90fc8e0bfbac0/logo-on-light.webp",
       "mobile": "0888 006 224",
       "email": "",
       "whatsapp": "",
@@ -486,7 +486,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Спринт ауто",
       "location": "Варна, Владислав Варненчик, бул. „Цар Освободител“, втората автокъща след Тилком и Италмодалуче посока Аксаково",
-      "avatar": "/registered-branding/onLight.png",
+      "avatar": "/dealer-brand/v2-7cf90fc8e0bfbac0/logo-on-light.webp",
       "mobile": "0888 006 224",
       "email": "",
       "whatsapp": "",
@@ -586,7 +586,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Спринт ауто",
       "location": "Варна, Владислав Варненчик, бул. „Цар Освободител“, втората автокъща след Тилком и Италмодалуче посока Аксаково",
-      "avatar": "/registered-branding/onLight.png",
+      "avatar": "/dealer-brand/v2-7cf90fc8e0bfbac0/logo-on-light.webp",
       "mobile": "0888 006 224",
       "email": "",
       "whatsapp": "",
@@ -685,7 +685,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Спринт ауто",
       "location": "Варна, Владислав Варненчик, бул. „Цар Освободител“, втората автокъща след Тилком и Италмодалуче посока Аксаково",
-      "avatar": "/registered-branding/onLight.png",
+      "avatar": "/dealer-brand/v2-7cf90fc8e0bfbac0/logo-on-light.webp",
       "mobile": "0888 006 224",
       "email": "",
       "whatsapp": "",

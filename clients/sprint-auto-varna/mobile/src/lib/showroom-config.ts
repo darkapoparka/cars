@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "Спринт ауто",
-  "logo": "/registered-branding/onLight.png",
+  "logo": "/dealer-brand/v2-7cf90fc8e0bfbac0/logo-on-light.webp",
   "phone": "+359888006224",
   "email": null,
   "address": "Варна, Владислав Варненчик, бул. „Цар Освободител“, втората автокъща след Тилком и Италмодалуче посока Аксаково",

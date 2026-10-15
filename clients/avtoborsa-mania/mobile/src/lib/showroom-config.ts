@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "АВТОБОРСА МАНИЯ",
-  "logo": "/registered-branding/onLight.png",
+  "logo": "/dealer-brand/v2-a83417b07db78ad1/logo-on-light.webp",
   "phone": "+359899874488",
   "email": null,
   "address": "бул. Цар Освободител, район Владислав Варненчик",
