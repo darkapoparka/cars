@@ -1,0 +1,348 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-focused-current-published-selected-logo-consumer-repair-proof",
+  "dealer": "prestige-varna",
+  "baseSourceCommit": "bd32e4d18c6b6e5b882263936322fb50f3c023e2",
+  "baseSourceTree": "9acb6119527c8b34e0bff3e3d2f20a593cf2b2be",
+  "sourceModuleProof": {
+    "dealer": "prestige-varna",
+    "sourceCommit": "bd32e4d18c6b6e5b882263936322fb50f3c023e2",
+    "sourceTree": "9acb6119527c8b34e0bff3e3d2f20a593cf2b2be",
+    "actualSource": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/reviewed-native-817524d8d5918a6d972179800f52df2202341f75193b6c8c05818e5163338d7f-receipt.json",
+      "sha256": "d4f1cd139506179f9f79b6fe49aee0b06db7b3983c57ec51b4a9b2d4765c9a8d",
+      "commit": "bd32e4d18c6b6e5b882263936322fb50f3c023e2",
+      "refUpdated": true,
+      "readbackVerified": true,
+      "checkedAt": "2026-10-15T08:48:13.566Z"
+    },
+    "sourceOverlay": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-native/native-wave-015/published-ten-source-successors.json",
+      "sha256": "e7b40a66d73cd941b85be64ddef3093ee285df288a885fc5709c5627eb6c8c96"
+    },
+    "sourcePatch": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/current-seven-simple-import-editorial/reseals-b/prestige-varna/source-patch.json",
+      "sha256": "dd921165ab7418d20608d719f92d4d11ed9b62050dfd5a65cdd4162796747b79"
+    },
+    "manifest": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/run-38689980731-attempt-1/prestige-varna-proposal-manifest.json",
+      "sha256": "aeb14cbf7aa5d54a3fa7cbf196120aaf6951d762cc28a03659f35f587bd473f8"
+    },
+    "selected": {
+      "light": "/dealer-brand/v2-b8b42a5a9931c7cb/logo-on-light.webp",
+      "dark": "/dealer-brand/v2-b8b42a5a9931c7cb/logo-on-dark.webp",
+      "icon": "/dealer-brand/v2-b8b42a5a9931c7cb/app-icon.png"
+    },
+    "companionPatches": [
+      {
+        "path": "mobile/src/lib/showroom-config.ts",
+        "baseBlob": "cff12e5bb311b7d67de66f25b3b0cdd682991314",
+        "baseSha256": "87c18729d51851142906b08c8d153f0d45e202e00336f89ad310eb68218dc7d4",
+        "candidateFile": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/native13-modern-runtime/seven-selected-extended-rebinds/prestige-varna/mobile--src--lib--showroom-config.ts",
+        "candidateSha256": "2547ad0126e0780e54ac3f8fb017a624a1efb2ffe66fabd99df31f77c4913b76",
+        "candidateBlob": "dc15c8c7aba2dd96c17a0d60c0226df86f73e371",
+        "bytes": 6466,
+        "onlyReviewedLogoLiteralsChanged": true,
+        "replacements": {
+          "onLight": 1,
+          "onDark": 0,
+          "faviconToSelectedAppIcon": 0
+        }
+      },
+      {
+        "path": "mobile/src/lib/dealers.ts",
+        "baseBlob": "5f5a5c9fe4f77f91e4c31e4d0c22c39d49507261",
+        "baseSha256": "433292f6a2c7ba82b9b876b07f106a40af400f3834ce3eca91864f6ecfe22fb1",
+        "candidateFile": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/native13-modern-runtime/seven-selected-extended-rebinds/prestige-varna/mobile--src--lib--dealers.ts",
+        "candidateSha256": "8091db6a719a99dc4e00fd78a5e1d0dc844552715b397a9dfd0a7896569a5914",
+        "candidateBlob": "049eb72c2673e71485862c94cceec1cf8978b9bf",
+        "bytes": 4631,
+        "onlyReviewedLogoLiteralsChanged": true,
+        "replacements": {
+          "onLight": 7,
+          "onDark": 0,
+          "faviconToSelectedAppIcon": 0
+        }
+      },
+      {
+        "path": "karento-best/src/lib/content.ts",
+        "baseBlob": "5c0744f034de209e709ea92f6d409b3a7b036b9a",
+        "baseSha256": "fffa5749b0a2d79b375fc10d7060ef20c819ee2b98a900abbe6b2fbf83d740fb",
+        "candidateFile": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/native13-modern-runtime/seven-selected-extended-rebinds/prestige-varna/karento-best--src--lib--content.ts",
+        "candidateSha256": "203bece42a7e6d61a112679cc9bf9ccdab47fb6cc99c9550b4d68722b351b854",
+        "candidateBlob": "86453693579d3b355182648ac90bb6bdcffc6b64",
+        "bytes": 5687,
+        "onlyReviewedLogoLiteralsChanged": true,
+        "replacements": {
+          "onLight": 2,
+          "onDark": 2,
+          "faviconToSelectedAppIcon": 1
+        }
+      },
+      {
+        "path": "karento-best/src/lib/data/dealer-detail.ts",
+        "baseBlob": "3e15930d8aab26b323d274b9371053394a52cb1b",
+        "baseSha256": "7b07a5d3c935afe85bfa6fa8c7afd98b7c2063d2bd38b1232d0b69c2a06ab7f7",
+        "candidateFile": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/native13-modern-runtime/seven-selected-extended-rebinds/prestige-varna/karento-best--src--lib--data--dealer-detail.ts",
+        "candidateSha256": "2ae8c91e510501ff5e26d8bb0531201a8582ddc647ff2e4c92c1eab9e6a89ed1",
+        "candidateBlob": "588d990cf74f9d7708b441f7386d75d166d47171",
+        "bytes": 19711,
+        "onlyReviewedLogoLiteralsChanged": true,
+        "replacements": {
+          "onLight": 7,
+          "onDark": 0,
+          "faviconToSelectedAppIcon": 0
+        }
+      },
+      {
+        "path": "karento-best/src/lib/data/vehicle-detail.ts",
+        "baseBlob": "e2010009c144e976f9cf914ab92ab6a41e0d82d6",
+        "baseSha256": "f8eb04a0cde449b8045d24b9a38ec2477349c845e63f987fca0a3249a7405d49",
+        "candidateFile": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/native13-modern-runtime/seven-selected-extended-rebinds/prestige-varna/karento-best--src--lib--data--vehicle-detail.ts",
+        "candidateSha256": "8043ed18900ebe15059ea230de85930f1cf78570e986010b450a473a98947e2d",
+        "candidateBlob": "fdee46d225c430473f2df387b5d2f5823209d0f4",
+        "bytes": 11075,
+        "onlyReviewedLogoLiteralsChanged": true,
+        "replacements": {
+          "onLight": 1,
+          "onDark": 0,
+          "faviconToSelectedAppIcon": 0
+        }
+      },
+      {
+        "path": ".cars-branding.json",
+        "baseBlob": "a2c49f6fe1a3888907363547195bbce9ee332307",
+        "baseSha256": "f9e7dfe4a25f77294b0c8720d1f7e267b5fdf89677d0ed9d69c199c971cfd86a",
+        "candidateFile": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/native13-modern-runtime/seven-selected-extended-rebinds/prestige-varna/cars-branding.json",
+        "candidateSha256": "a5fab4ab67b0a5bc95e71e1a3d7ca8523d848d280b54e37b9f9d4282dbed6a27",
+        "candidateBlob": "d4d30504ebbad1fe7746cbb2842f4b5b2281c86e",
+        "bytes": 46071,
+        "onlyConsumerReferencesAdded": true,
+        "addedConsumerReferences": [
+          {
+            "path": "karento-best/src/lib/content.ts",
+            "urls": [
+              "/dealer-brand/v2-b8b42a5a9931c7cb/logo-on-light.webp",
+              "/dealer-brand/v2-b8b42a5a9931c7cb/logo-on-dark.webp",
+              "/dealer-brand/v2-b8b42a5a9931c7cb/app-icon.png"
+            ]
+          },
+          {
+            "path": "karento-best/src/lib/data/dealer-detail.ts",
+            "urls": [
+              "/dealer-brand/v2-b8b42a5a9931c7cb/logo-on-light.webp"
+            ]
+          },
+          {
+            "path": "karento-best/src/lib/data/vehicle-detail.ts",
+            "urls": [
+              "/dealer-brand/v2-b8b42a5a9931c7cb/logo-on-light.webp"
+            ]
+          },
+          {
+            "path": "mobile/src/lib/dealers.ts",
+            "urls": [
+              "/dealer-brand/v2-b8b42a5a9931c7cb/logo-on-light.webp"
+            ]
+          },
+          {
+            "path": "mobile/src/lib/showroom-config.ts",
+            "urls": [
+              "/dealer-brand/v2-b8b42a5a9931c7cb/logo-on-light.webp"
+            ]
+          }
+        ]
+      }
+    ],
+    "requiredReceiptReseals": [
+      {
+        "path": ".cars-mobile.json",
+        "family": "mobile",
+        "baseBlob": "5c5317d27cc8c7bb53b81924b1533f3a4a103385",
+        "baseSha256": "2efb419af0c775b86fd4b2d615bd8f8b7592007066c7c85a7250548aea993bad",
+        "sourceDigestBefore": "3ac8884b6e924cb82fc028681d718a5775f4cf15d5bbef256c4cfb6147479301",
+        "requiredSourceDigest": "Recompute maintained extendedSourceDigest from the exact combined final source",
+        "profileSha256Preserved": "d584a06ead383d6c80a02063c42a7ae7ca3d7457849c0d88d33fa4388c5f7994",
+        "personalizationLogoPathsBefore": [
+          "/registered-branding/onLight.png",
+          "/registered-branding/onDark.png"
+        ],
+        "personalizationLogoPathsAfter": [
+          "/dealer-brand/v2-b8b42a5a9931c7cb/logo-on-light.webp",
+          "/dealer-brand/v2-b8b42a5a9931c7cb/logo-on-dark.webp"
+        ],
+        "allOtherReceiptFieldsUnchanged": true,
+        "factsStockTemplateMediaPreserved": true
+      },
+      {
+        "path": ".cars-signature.json",
+        "family": "karento-best",
+        "baseBlob": "54c78972542ea9523902cf87c19ac911f2b2ca89",
+        "baseSha256": "bed955897d8ca8a126288ad995f0a7fd9c1d9e1e889982d65c705976659d2487",
+        "sourceDigestBefore": "301ff9c42282795dcbc6150c78e156fedbd262ff4e27902fa95a0e906af05837",
+        "requiredSourceDigest": "Recompute maintained extendedSourceDigest from the exact combined final source",
+        "profileSha256Preserved": "d584a06ead383d6c80a02063c42a7ae7ca3d7457849c0d88d33fa4388c5f7994",
+        "personalizationLogoPathsBefore": [
+          "/registered-branding/onLight.png",
+          "/registered-branding/onDark.png"
+        ],
+        "personalizationLogoPathsAfter": [
+          "/dealer-brand/v2-b8b42a5a9931c7cb/logo-on-light.webp",
+          "/dealer-brand/v2-b8b42a5a9931c7cb/logo-on-dark.webp"
+        ],
+        "allOtherReceiptFieldsUnchanged": true,
+        "factsStockTemplateMediaPreserved": true
+      }
+    ],
+    "unchangedSourceAssets": [
+      {
+        "family": "mobile",
+        "surface": "light",
+        "path": "mobile/public/dealer-brand/v2-b8b42a5a9931c7cb/logo-on-light.webp",
+        "url": "/dealer-brand/v2-b8b42a5a9931c7cb/logo-on-light.webp",
+        "blob": "974801e4d1a5811223f473da5a08e77e1d3cb4fe",
+        "mode": "100644",
+        "immutableSourceObjectIdentityVerified": true,
+        "bodyReadRequiredForLiteralOnlyRepair": false,
+        "unchanged": true
+      },
+      {
+        "family": "mobile",
+        "surface": "dark",
+        "path": "mobile/public/dealer-brand/v2-b8b42a5a9931c7cb/logo-on-dark.webp",
+        "url": "/dealer-brand/v2-b8b42a5a9931c7cb/logo-on-dark.webp",
+        "blob": "13e7da7a0d8bc934f77603f67c46455539352937",
+        "mode": "100644",
+        "immutableSourceObjectIdentityVerified": true,
+        "bodyReadRequiredForLiteralOnlyRepair": false,
+        "unchanged": true
+      },
+      {
+        "family": "mobile",
+        "surface": "icon",
+        "path": "mobile/public/dealer-brand/v2-b8b42a5a9931c7cb/app-icon.png",
+        "url": "/dealer-brand/v2-b8b42a5a9931c7cb/app-icon.png",
+        "blob": "3f1e11f498f8fbd2be08b1cca139d4ce66c1db4f",
+        "mode": "100644",
+        "immutableSourceObjectIdentityVerified": true,
+        "bodyReadRequiredForLiteralOnlyRepair": false,
+        "unchanged": true
+      },
+      {
+        "family": "karento-best",
+        "surface": "light",
+        "path": "karento-best/static/dealer-brand/v2-b8b42a5a9931c7cb/logo-on-light.webp",
+        "url": "/dealer-brand/v2-b8b42a5a9931c7cb/logo-on-light.webp",
+        "blob": "974801e4d1a5811223f473da5a08e77e1d3cb4fe",
+        "mode": "100644",
+        "immutableSourceObjectIdentityVerified": true,
+        "bodyReadRequiredForLiteralOnlyRepair": false,
+        "unchanged": true
+      },
+      {
+        "family": "karento-best",
+        "surface": "dark",
+        "path": "karento-best/static/dealer-brand/v2-b8b42a5a9931c7cb/logo-on-dark.webp",
+        "url": "/dealer-brand/v2-b8b42a5a9931c7cb/logo-on-dark.webp",
+        "blob": "13e7da7a0d8bc934f77603f67c46455539352937",
+        "mode": "100644",
+        "immutableSourceObjectIdentityVerified": true,
+        "bodyReadRequiredForLiteralOnlyRepair": false,
+        "unchanged": true
+      },
+      {
+        "family": "karento-best",
+        "surface": "icon",
+        "path": "karento-best/static/dealer-brand/v2-b8b42a5a9931c7cb/app-icon.png",
+        "url": "/dealer-brand/v2-b8b42a5a9931c7cb/app-icon.png",
+        "blob": "3f1e11f498f8fbd2be08b1cca139d4ce66c1db4f",
+        "mode": "100644",
+        "immutableSourceObjectIdentityVerified": true,
+        "bodyReadRequiredForLiteralOnlyRepair": false,
+        "unchanged": true
+      }
+    ],
+    "mobileHeader": {
+      "path": "mobile/src/components/Header.tsx",
+      "blob": "b6a2e92dd686a72ad3b18fa2e0a53d78be3232ef",
+      "sha256": "ce4609eeb0654797012ec73ebf056f8f9ca4008e4bbca96effa41c9e00b4d76d",
+      "unchanged": true,
+      "existingWebpDarkDerivationRestored": true,
+      "selectedDarkUrl": "/dealer-brand/v2-b8b42a5a9931c7cb/logo-on-dark.webp"
+    },
+    "inverseLiteralProof": true,
+    "allFiveTsSyntaxPass": true,
+    "allFactsStockAndOtherSourceBytesPreserved": true,
+    "componentsAndRasterBytesUnchanged": true,
+    "newNativeBuildRequired": true,
+    "newHostedVersionAndLoadedAssetsRequired": true,
+    "hostedAcceptance": false
+  },
+  "originalProof": {
+    "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/native13-modern-runtime/seven-selected-extended-rebinds/seven-selected-extended-rebind-proof.json",
+    "sha256": "444f64491c4b2fb593af99519d2670c2fa3664c5e063bc8e055a240e742e133a"
+  },
+  "currentPublishedBaseline": {
+    "dealer": "prestige-varna",
+    "originalSourceCommit": "e33ced344bde012a59b4d39543696d42c6447780",
+    "originalSourceTree": "17cc51d27e39e7d21b0751673fea95e6ca20f8a3",
+    "currentPublishedCommit": "bd32e4d18c6b6e5b882263936322fb50f3c023e2",
+    "currentPublishedTree": "9acb6119527c8b34e0bff3e3d2f20a593cf2b2be",
+    "exactPublishedPriorChangedPaths": [
+      ".client/cloudflare-existing-source.json",
+      ".client/native-qualification-context.json",
+      "import/src/lib/content/extra-localized.ts",
+      "localization/adoption.json",
+      "modern/packages/marketplace/lead-site.ts"
+    ],
+    "sourcePatch": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/current-seven-simple-import-editorial/reseals-b/prestige-varna/source-patch.json",
+      "sha256": "dd921165ab7418d20608d719f92d4d11ed9b62050dfd5a65cdd4162796747b79"
+    },
+    "publicationSpec": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/current-seven-simple-import-editorial/reseals-b/publication-spec.json",
+      "sha256": "817524d8d5918a6d972179800f52df2202341f75193b6c8c05818e5163338d7f",
+      "blob": "406c8c7238ce261e2505f56882a1284bb9a7c7ea",
+      "bytes": 27262
+    },
+    "actualMainPublication": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/reviewed-native-817524d8d5918a6d972179800f52df2202341f75193b6c8c05818e5163338d7f-receipt.json",
+      "sha256": "d4f1cd139506179f9f79b6fe49aee0b06db7b3983c57ec51b4a9b2d4765c9a8d",
+      "commit": "bd32e4d18c6b6e5b882263936322fb50f3c023e2",
+      "refUpdated": true,
+      "readbackVerified": true,
+      "checkedAt": "2026-10-15T08:48:13.566Z"
+    },
+    "sourceReview": {
+      "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/editorial-runtime-repair-20261015/prestige-varna/source-review.json",
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/current-seven-simple-import-editorial/reseals-b/prestige-varna/source-review.json",
+      "sha256": "d8a6d14296769256dd34dfdf13eec589758eed3196360fbbc30bd218d7435431",
+      "blob": "fe4049265d89fcc106217846332ae3112cd8e126"
+    },
+    "qualification": {
+      "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/contexts/prestige-varna.json",
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/current-seven-simple-import-editorial/reseals-b/prestige-varna/qualification-context.json",
+      "sha256": "6e13e5e10eb1deec154006207c87b7ddbd0b3610bd66983c7c0c6cf482b0afe2"
+    },
+    "currentNativeInput": {
+      "digest": "90a781dd98af1867830efcf06cb70adbc276ab97d422133558a7cdb1905c3374",
+      "files": 9146
+    },
+    "unchangedOtherSourceEntryBlobs": true,
+    "sourceCopies": 0,
+    "networkReads": 0,
+    "objectWrites": 0,
+    "refWrites": 0
+  },
+  "immediateParentOverlay": {
+    "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-native/native-wave-015/published-ten-source-successors.json",
+    "sha256": "e7b40a66d73cd941b85be64ddef3093ee285df288a885fc5709c5627eb6c8c96"
+  },
+  "changedDesigns": [
+    "mobile",
+    "karento-best"
+  ],
+  "compiled": false,
+  "newCiRun": null,
+  "providerWrites": 0
+}

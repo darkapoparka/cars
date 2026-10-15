@@ -12,7 +12,7 @@
     "scope": "existing-dealer-pilot",
     "sourceCommit": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "reviewed": true,
-    "reviewedAt": "2026-10-15T08:40:59.625Z",
+    "reviewedAt": "2026-10-15T09:34:57.832Z",
     "qualificationOnly": true,
     "approved": false,
     "nativeApproval": false,
@@ -30,33 +30,75 @@
       "sha256": "27c6ce5dd17ee6e1b9f6a5b059a95d5e1dbe4200f61264fc50addeb7af89d984"
     },
     "dealerSourceRepair": {
-      "kind": "explicit-english-editorial-catalog",
-      "parentContextSha256": "8495ae4d74ec8aee4029e4b69382d1b0bffc312e0baf24b2662b657013b545f9",
-      "baseSourceCommit": "e33ced344bde012a59b4d39543696d42c6447780",
-      "baseSourceTree": "17cc51d27e39e7d21b0751673fea95e6ca20f8a3",
-      "path": "import/src/lib/content/extra-localized.ts",
-      "beforeBlob": "dbc0820b8403c16a53bfaa1a23e796798eaee5f1",
-      "afterBlob": "692f129dfbc09c1c83ec8013aa89b0b3c1439415",
-      "proof": {
-        "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/editorial-runtime-repair-20261015/prestige-varna/focused-proof.json",
-        "sha256": "7a2e3ca8e13df90449da6bbdb7f912c71c819e1d728fb426fed48bda46ac7ab4"
-      },
-      "evidenceReuse": "Original immutable six-template QA and source preparation remain provenance; focused exact-source localization proof covers this new dealer edit. No new CI, build, native or hosted success is asserted.",
-      "companionPatches": [
+      "kind": "explicit-selected-mobile-signature-logo-consumers",
+      "parentContextSha256": "6e13e5e10eb1deec154006207c87b7ddbd0b3610bd66983c7c0c6cf482b0afe2",
+      "baseSourceCommit": "bd32e4d18c6b6e5b882263936322fb50f3c023e2",
+      "baseSourceTree": "9acb6119527c8b34e0bff3e3d2f20a593cf2b2be",
+      "path": "mobile/src/lib/showroom-config.ts",
+      "beforeBlob": "cff12e5bb311b7d67de66f25b3b0cdd682991314",
+      "afterBlob": "dc15c8c7aba2dd96c17a0d60c0226df86f73e371",
+      "changedDesigns": [
+        "mobile",
+        "karento-best"
+      ],
+      "companionPaths": [
         {
-          "path": "modern/packages/marketplace/lead-site.ts",
-          "beforeBlob": "118d93eb0ca3d67de59f06d07b0e4d8d97e25f05",
-          "afterBlob": "60b146048e3694722dc5e0ad831baf09027e76ea",
-          "sha256": "f2feb9ad660686accbec8b0fc8ccd1d15a86df9c179355fb19cbbd9f4b400c13",
-          "proof": {
-            "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/editorial-runtime-repair-20261015/prestige-varna/focused-proof.json",
-            "sha256": "7a2e3ca8e13df90449da6bbdb7f912c71c819e1d728fb426fed48bda46ac7ab4"
-          }
+          "path": "mobile/src/lib/showroom-config.ts",
+          "beforeBlob": "cff12e5bb311b7d67de66f25b3b0cdd682991314",
+          "afterBlob": "dc15c8c7aba2dd96c17a0d60c0226df86f73e371"
+        },
+        {
+          "path": "mobile/src/lib/dealers.ts",
+          "beforeBlob": "5f5a5c9fe4f77f91e4c31e4d0c22c39d49507261",
+          "afterBlob": "049eb72c2673e71485862c94cceec1cf8978b9bf"
+        },
+        {
+          "path": "karento-best/src/lib/content.ts",
+          "beforeBlob": "5c0744f034de209e709ea92f6d409b3a7b036b9a",
+          "afterBlob": "86453693579d3b355182648ac90bb6bdcffc6b64"
+        },
+        {
+          "path": "karento-best/src/lib/data/dealer-detail.ts",
+          "beforeBlob": "3e15930d8aab26b323d274b9371053394a52cb1b",
+          "afterBlob": "588d990cf74f9d7708b441f7386d75d166d47171"
+        },
+        {
+          "path": "karento-best/src/lib/data/vehicle-detail.ts",
+          "beforeBlob": "e2010009c144e976f9cf914ab92ab6a41e0d82d6",
+          "afterBlob": "fdee46d225c430473f2df387b5d2f5823209d0f4"
+        },
+        {
+          "path": ".cars-branding.json",
+          "beforeBlob": "a2c49f6fe1a3888907363547195bbce9ee332307",
+          "afterBlob": "d4d30504ebbad1fe7746cbb2842f4b5b2281c86e"
         }
-      ]
+      ],
+      "receiptReseals": [
+        {
+          "path": ".cars-mobile.json",
+          "family": "mobile",
+          "beforeBlob": "5c5317d27cc8c7bb53b81924b1533f3a4a103385",
+          "profileSha256Preserved": "d584a06ead383d6c80a02063c42a7ae7ca3d7457849c0d88d33fa4388c5f7994"
+        },
+        {
+          "path": ".cars-signature.json",
+          "family": "karento-best",
+          "beforeBlob": "54c78972542ea9523902cf87c19ac911f2b2ca89",
+          "profileSha256Preserved": "d584a06ead383d6c80a02063c42a7ae7ca3d7457849c0d88d33fa4388c5f7994"
+        }
+      ],
+      "immediateParentOverlay": {
+        "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-native/native-wave-015/published-ten-source-successors.json",
+        "sha256": "e7b40a66d73cd941b85be64ddef3093ee285df288a885fc5709c5627eb6c8c96"
+      },
+      "proof": {
+        "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/selected-webp-consumer-repair-20261015/prestige-varna/focused-proof.json",
+        "sha256": "febc6c9abca7331614cb86eb116d3b1f727613a5ceebfc8337579a0024760e61"
+      },
+      "evidenceReuse": "Original immutable six-template QA and source preparation remain provenance; focused exact-source selected Mobile and Signature logo consumer proof covers this new dealer edit. No new CI, build, native or hosted success is asserted."
     }
   },
-  "contextDigest": "14f6e535e547be431d5912347f7fa1e31f998c73eaca43bc75cc7051f116af8d",
+  "contextDigest": "5deea517dd4a75241761d378155755812324afdda6cc005787b8d05ab1cbff9d",
   "releases": {
     "auto-best": {
       "status": "qualification",

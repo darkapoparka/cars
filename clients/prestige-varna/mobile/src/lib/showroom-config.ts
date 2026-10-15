@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "Автосалон ПРЕСТИЖ",
-  "logo": "/registered-branding/onLight.png",
+  "logo": "/dealer-brand/v2-b8b42a5a9931c7cb/logo-on-light.webp",
   "phone": "+359897298385",
   "email": null,
   "address": "бул. Цар Освободител, 15–20 м преди последния светофар за Владиславово, вляво към Аксаково",

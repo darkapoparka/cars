@@ -154,7 +154,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "СЪНИ",
   "location": "бул. „Цар Освободител“ 256, Кайсиева градина, Варна",
-  "avatar": "/registered-branding/onLight.png",
+  "avatar": "/dealer-brand/v2-3eab0e10b1487ebc/logo-on-light.webp",
   "mobile": "0898 644 464",
   "email": "",
   "whatsapp": "",

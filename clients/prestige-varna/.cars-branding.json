@@ -59,6 +59,38 @@
       ]
     },
     {
+      "path": "karento-best/src/lib/content.ts",
+      "urls": [
+        "/dealer-brand/v2-b8b42a5a9931c7cb/logo-on-light.webp",
+        "/dealer-brand/v2-b8b42a5a9931c7cb/logo-on-dark.webp",
+        "/dealer-brand/v2-b8b42a5a9931c7cb/app-icon.png"
+      ]
+    },
+    {
+      "path": "karento-best/src/lib/data/dealer-detail.ts",
+      "urls": [
+        "/dealer-brand/v2-b8b42a5a9931c7cb/logo-on-light.webp"
+      ]
+    },
+    {
+      "path": "karento-best/src/lib/data/vehicle-detail.ts",
+      "urls": [
+        "/dealer-brand/v2-b8b42a5a9931c7cb/logo-on-light.webp"
+      ]
+    },
+    {
+      "path": "mobile/src/lib/dealers.ts",
+      "urls": [
+        "/dealer-brand/v2-b8b42a5a9931c7cb/logo-on-light.webp"
+      ]
+    },
+    {
+      "path": "mobile/src/lib/showroom-config.ts",
+      "urls": [
+        "/dealer-brand/v2-b8b42a5a9931c7cb/logo-on-light.webp"
+      ]
+    },
+    {
       "path": "modern/packages/internationalization/paths.test.ts",
       "urls": [
         "/dealer-brand/v2-b8b42a5a9931c7cb/logo-on-light.webp"

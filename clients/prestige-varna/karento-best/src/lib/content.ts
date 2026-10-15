@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "Автосалон ПРЕСТИЖ",
   "locale": "bg-BG",
   "logo": {
-    "light": "/registered-branding/onLight.png",
-    "footer": "/registered-branding/onDark.png",
-    "archivedDark": "/registered-branding/onDark.png",
+    "light": "/dealer-brand/v2-b8b42a5a9931c7cb/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-b8b42a5a9931c7cb/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-b8b42a5a9931c7cb/logo-on-dark.webp",
     "alt": "Автосалон ПРЕСТИЖ",
-    "favicon": "/registered-branding/onLight.png",
+    "favicon": "/dealer-brand/v2-b8b42a5a9931c7cb/app-icon.png",
     "monochromeOnDark": false
   },
   "contacts": {

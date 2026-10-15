@@ -154,7 +154,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "Автосалон ПРЕСТИЖ",
   "location": "бул. Цар Освободител, 15–20 м преди последния светофар за Владиславово, вляво към Аксаково",
-  "avatar": "/registered-branding/onLight.png",
+  "avatar": "/dealer-brand/v2-b8b42a5a9931c7cb/logo-on-light.webp",
   "mobile": "0897 298 385",
   "email": "",
   "whatsapp": "",

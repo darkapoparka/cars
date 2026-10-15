@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "СЪНИ",
   "locale": "bg-BG",
   "logo": {
-    "light": "/registered-branding/onLight.png",
-    "footer": "/registered-branding/onDark.png",
-    "archivedDark": "/registered-branding/onDark.png",
+    "light": "/dealer-brand/v2-3eab0e10b1487ebc/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-3eab0e10b1487ebc/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-3eab0e10b1487ebc/logo-on-dark.webp",
     "alt": "СЪНИ",
-    "favicon": "/registered-branding/onLight.png",
+    "favicon": "/dealer-brand/v2-3eab0e10b1487ebc/app-icon.png",
     "monochromeOnDark": false
   },
   "contacts": {
