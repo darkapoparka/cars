@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "РИЧИ КАР",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-ba5527db9845cb7f/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-ba5527db9845cb7f/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-ba5527db9845cb7f/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-07ef9cbabd10f2d4/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-07ef9cbabd10f2d4/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-07ef9cbabd10f2d4/logo-on-dark.webp",
     "alt": "РИЧИ КАР",
-    "favicon": "/dealer-brand/v2-ba5527db9845cb7f/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-07ef9cbabd10f2d4/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

@@ -50,7 +50,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "РИЧИ КАР",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-ba5527db9845cb7f/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-07ef9cbabd10f2d4/logo-on-light.webp"
     },
     "publishedAt": "2026-10-11T09:00:00.000Z",
     "promoted": true

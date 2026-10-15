@@ -117,7 +117,7 @@ export function PublicEnquiryForm({
           </p>
         )}
         <Button
-          className="h-12 rounded-xl bg-brand text-brand-foreground hover:bg-[var(--lead-site-accent-hover)] hover:text-[var(--brand-hover-foreground)]"
+          className="h-12 rounded-xl bg-primary text-primary-foreground hover:bg-[var(--primary-hover)] hover:text-[var(--primary-hover-foreground)]"
           disabled={pending}
           type="submit"
         >

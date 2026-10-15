@@ -1,0 +1,280 @@
+{
+  "exitCode": 1,
+  "totalErrors": 3040,
+  "localErrors": 0,
+  "files": [
+    {
+      "file": "..\\\\..\\\\scripts\\\\assemble-existing-fleet-single-worker.mjs",
+      "count": 58
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\build-existing-fleet-cloudflare.mjs",
+      "count": 109
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\build-uk-dealers.mjs",
+      "count": 82
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\copy-source.mjs",
+      "count": 20
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\dealer-updates\\\\pinned-template-source.mjs",
+      "count": 49
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\dealer-updates\\\\three-way-upgrade.mjs",
+      "count": 150
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\dealer-updates\\\\update-dealer-template.mjs",
+      "count": 229
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\deploy-dealer-single-worker.mjs",
+      "count": 68
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\deploy-uk-cloudflare.mjs",
+      "count": 88
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\lib\\\\app-dealer-adapter.mjs",
+      "count": 38
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\lib\\\\catalog-literal.mjs",
+      "count": 5
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\lib\\\\client-logo-contract.mjs",
+      "count": 43
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\lib\\\\client-presentation-policy.mjs",
+      "count": 4
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\lib\\\\client-refresh-adapters.mjs",
+      "count": 165
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\lib\\\\client-refresh-normalize.mjs",
+      "count": 63
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\lib\\\\client-refresh-presentation.mjs",
+      "count": 39
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\lib\\\\client-refresh-safe-content.mjs",
+      "count": 11
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\lib\\\\client-refresh-signature.mjs",
+      "count": 4
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\lib\\\\client-refresh-six.mjs",
+      "count": 125
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\lib\\\\client-refresh-uk-auto-best.mjs",
+      "count": 8
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\lib\\\\client-refresh-uk-native.mjs",
+      "count": 29
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\lib\\\\client-refresh-uk-next.mjs",
+      "count": 45
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\lib\\\\dealer-guidance.mjs",
+      "count": 5
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\lib\\\\dealer-locale.mjs",
+      "count": 17
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\lib\\\\dealer-localized-copy.mjs",
+      "count": 18
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\lib\\\\dealer-source.mjs",
+      "count": 11
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\lib\\\\derived-assets.mjs",
+      "count": 6
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\lib\\\\five-design-release.mjs",
+      "count": 10
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\lib\\\\hosted-native-qa.mjs",
+      "count": 53
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\lib\\\\import-menu-keys.mjs",
+      "count": 1
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\lib\\\\native-localization.mjs",
+      "count": 95
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\lib\\\\six-design-release.mjs",
+      "count": 3
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\lib\\\\stock-price.mjs",
+      "count": 2
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\lib\\\\template-source.mjs",
+      "count": 7
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\lib\\\\uk-auto-best-locales.mjs",
+      "count": 14
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\lib\\\\uk-cloudflare-artifacts.mjs",
+      "count": 41
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\lib\\\\uk-dealer-icons.mjs",
+      "count": 29
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\lib\\\\uk-import-brand-provider.mjs",
+      "count": 9
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\lib\\\\workflow.mjs",
+      "count": 68
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\new-client.mjs",
+      "count": 43
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\package-dealer-single-worker.mjs",
+      "count": 51
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\package-dealer.mjs",
+      "count": 78
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\package-uk-single-worker.mjs",
+      "count": 40
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\prepare-existing-fleet-source.mjs",
+      "count": 120
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\prepare-new-dealer-source.mjs",
+      "count": 121
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\publishing\\\\app-source.mjs",
+      "count": 4
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\publishing\\\\app-variant.mjs",
+      "count": 16
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\publishing\\\\auto-best-card-layout.mjs",
+      "count": 5
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\publishing\\\\cloudflare-next.mjs",
+      "count": 32
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\publishing\\\\cloudflare-provider.mjs",
+      "count": 15
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\publishing\\\\cloudflare-svelte.mjs",
+      "count": 85
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\publishing\\\\dealer-contact-fallback.mjs",
+      "count": 4
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\publishing\\\\dealer-presentation.mjs",
+      "count": 16
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\publishing\\\\dealer-reference-package.mjs",
+      "count": 8
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\publishing\\\\dealer-share.mjs",
+      "count": 94
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\publishing\\\\lead-branding.mjs",
+      "count": 63
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\publishing\\\\legacy-detail-routes.mjs",
+      "count": 21
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\publishing\\\\logo-surface-bindings.mjs",
+      "count": 10
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\publishing\\\\modern-demo-database.mjs",
+      "count": 5
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\publishing\\\\mounts.mjs",
+      "count": 50
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\publishing\\\\native-mounts.mjs",
+      "count": 32
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\publishing\\\\public-asset-retention.mjs",
+      "count": 26
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\publishing\\\\shared-media.mjs",
+      "count": 8
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\publishing\\\\six-variant.mjs",
+      "count": 36
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\publishing\\\\vercel-asset-plan.mjs",
+      "count": 31
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\registered-dealer-adoption.mjs",
+      "count": 112
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\template-release.mjs",
+      "count": 37
+    },
+    {
+      "file": "..\\\\..\\\\scripts\\\\workspace-doctor.mjs",
+      "count": 56
+    }
+  ],
+  "localDiagnostics": []
+}

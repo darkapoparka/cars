@@ -94,7 +94,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "РИЧИ КАР",
       "location": "Варна, България",
-      "avatar": "/dealer-brand/v2-ba5527db9845cb7f/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-07ef9cbabd10f2d4/logo-on-light.webp",
       "mobile": "0895636226",
       "email": "",
       "whatsapp": "",
