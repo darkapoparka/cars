@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "МЛАДОСТ 2 - Внос на автомобили от западна Европа",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-616ce19740a84cc6/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-616ce19740a84cc6/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-616ce19740a84cc6/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-ee2087ac6686e553/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-ee2087ac6686e553/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-ee2087ac6686e553/logo-on-dark.webp",
     "alt": "МЛАДОСТ 2 - Внос на автомобили от западна Европа",
-    "favicon": "/dealer-brand/v2-616ce19740a84cc6/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-ee2087ac6686e553/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

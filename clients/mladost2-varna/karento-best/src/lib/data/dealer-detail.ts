@@ -94,7 +94,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "МЛАДОСТ 2 - Внос на автомобили от западна Европа",
       "location": "бул. Цар Освободител 290, Варна, България",
-      "avatar": "/dealer-brand/v2-616ce19740a84cc6/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-ee2087ac6686e553/logo-on-light.webp",
       "mobile": "0897873671",
       "email": "",
       "whatsapp": "",

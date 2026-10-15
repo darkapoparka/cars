@@ -50,7 +50,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "МЛАДОСТ 2 - Внос на автомобили от западна Европа",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-616ce19740a84cc6/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-ee2087ac6686e553/logo-on-light.webp"
     },
     "publishedAt": "2026-10-11T09:00:00.000Z",
     "promoted": true

@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "МЛАДОСТ 2 - Внос на автомобили от западна Европа",
-  "logo": "/dealer-brand/v2-616ce19740a84cc6/logo-on-light.webp",
+  "logo": "/dealer-brand/v2-ee2087ac6686e553/logo-on-light.webp",
   "phone": "+359897873671",
   "email": null,
   "address": "бул. Цар Освободител 290, Варна, България",
