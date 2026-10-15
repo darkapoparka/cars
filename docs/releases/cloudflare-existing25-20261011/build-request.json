@@ -3,16 +3,16 @@
   "mode": "existing-migration",
   "sourceRevision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
   "dealers": [
-    "watt-a-car-varna",
-    "specialcarood-varna",
-    "auto-insurance-import-varna",
-    "unitrade-varna",
-    "valkov-cars-varna",
-    "crazy-fox-motors-varna",
-    "kk-auto-varna",
-    "part-mag-cars-varna",
-    "kalo-0404-varna",
-    "nordic-auto-varna"
+    "dein-auto-varna",
+    "i1-auto-varna",
+    "express-auto-varna",
+    "m-car-varna",
+    "cali-cars-varna",
+    "champion-auto-varna",
+    "carnova-varna",
+    "bavaria-auto-varna",
+    "fusion-auto-varna",
+    "technocar-varna"
   ],
   "targets": [
     "auto-best",
@@ -25,47 +25,47 @@
   ],
   "composition": {
     "reviewed": true,
-    "reviewedAt": "2026-10-15T04:36:08.097Z",
+    "reviewedAt": "2026-10-15T04:52:08.245Z",
     "reviewScope": "Owner-authorized final six-template refresh of existing Cloudflare identities. All selected dealer source trees are actually published on Cars MAIN; preserve native palettes, factual stock/contacts/locales, selected logos, one existing Worker and its existing canonical exposure. Private source MAIN and hosted acceptance are recorded separately.",
     "canonicalCompositions": {
-      "watt-a-car-varna": {
-        "canonicalOrigin": "https://watt-a-car-varna.webpreviews.site",
+      "dein-auto-varna": {
+        "canonicalOrigin": "https://dein-auto-varna.webpreviews.site",
         "ukDefault": false
       },
-      "specialcarood-varna": {
-        "canonicalOrigin": "https://specialcarood-varna.webpreviews.site",
+      "i1-auto-varna": {
+        "canonicalOrigin": "https://i1-auto-varna.webpreviews.site",
         "ukDefault": false
       },
-      "auto-insurance-import-varna": {
-        "canonicalOrigin": "https://auto-insurance-import-varna.webpreviews.site",
+      "express-auto-varna": {
+        "canonicalOrigin": "https://express-auto-varna.webpreviews.site",
         "ukDefault": false
       },
-      "unitrade-varna": {
-        "canonicalOrigin": "https://unitrade-varna.webpreviews.site",
+      "m-car-varna": {
+        "canonicalOrigin": "https://m-car-varna.webpreviews.site",
         "ukDefault": false
       },
-      "valkov-cars-varna": {
-        "canonicalOrigin": "https://valkov-cars-varna.webpreviews.site",
+      "cali-cars-varna": {
+        "canonicalOrigin": "https://cali-cars-varna.webpreviews.site",
         "ukDefault": false
       },
-      "crazy-fox-motors-varna": {
-        "canonicalOrigin": "https://crazy-fox-motors-varna.webpreviews.site",
+      "champion-auto-varna": {
+        "canonicalOrigin": "https://champion-auto-varna.webpreviews.site",
         "ukDefault": false
       },
-      "kk-auto-varna": {
-        "canonicalOrigin": "https://kk-auto-varna.webpreviews.site",
+      "carnova-varna": {
+        "canonicalOrigin": "https://carnova-varna.webpreviews.site",
         "ukDefault": false
       },
-      "part-mag-cars-varna": {
-        "canonicalOrigin": "https://part-mag-cars-varna.webpreviews.site",
+      "bavaria-auto-varna": {
+        "canonicalOrigin": "https://bavaria-auto-varna.webpreviews.site",
         "ukDefault": false
       },
-      "kalo-0404-varna": {
-        "canonicalOrigin": "https://kalo-0404-varna.webpreviews.site",
+      "fusion-auto-varna": {
+        "canonicalOrigin": "https://fusion-auto-varna.webpreviews.site",
         "ukDefault": false
       },
-      "nordic-auto-varna": {
-        "canonicalOrigin": "https://nordic-auto-varna.webpreviews.site",
+      "technocar-varna": {
+        "canonicalOrigin": "https://technocar-varna.webpreviews.site",
         "ukDefault": false
       }
     }
