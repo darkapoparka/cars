@@ -1,3 +1,4 @@
+import { hasMobileMileage, mobileMileageValue, compareMobileMileage } from './mobile-mileage';
 import type { Filters, Vehicle } from './types';
 import { modelGroupsFor } from './native-taxonomy';
 import { defaultFilters } from './types';
@@ -123,8 +124,8 @@ export function filterVehicles(vehicles: Vehicle[], input: Filters): Vehicle[] {
       (f.payment === 'lease' || !f.maxPrice || v.price <= Number(f.maxPrice)) &&
       (!f.minYear || v.year >= Number(f.minYear)) &&
       (!f.maxYear || v.year <= Number(f.maxYear)) &&
-      (!f.minMileage || v.mileage >= Number(f.minMileage)) &&
-      (!f.maxMileage || v.mileage <= Number(f.maxMileage)) &&
+      (!f.minMileage || mobileMileageValue(v) >= Number(f.minMileage)) &&
+      (!f.maxMileage || mobileMileageValue(v) <= Number(f.maxMileage)) &&
       (!f.maxPower || v.power <= Number(f.maxPower)) &&
       (f.payment !== 'lease' ||
         !f.minLease ||
@@ -134,8 +135,8 @@ export function filterVehicles(vehicles: Vehicle[], input: Filters): Vehicle[] {
         Boolean(v.monthly && v.monthly <= Number(f.maxLease))) &&
       (!f.country || (v.country || 'Germany') === f.country) &&
       (!f.condition.length ||
-        f.condition.includes(v.mileage ? 'Used' : 'New') ||
-        (v.mileage > 0 && f.condition.includes("Employee's Car"))) &&
+        (hasMobileMileage(v) && f.condition.includes(v.mileage ? 'Used' : 'New')) ||
+        (hasMobileMileage(v) && v.mileage > 0 && f.condition.includes("Employee's Car"))) &&
       (!f.excludeDamaged || !v.damaged) &&
       (!f.damagedOnly || Boolean(v.damaged)) &&
       matchesDetails(v, f.details) &&
@@ -161,10 +162,10 @@ export function sortVehicles(vehicles: Vehicle[], sort: string): Vehicle[] {
   const comparators: Record<string, (a: Vehicle, b: Vehicle) => number> = {
     'price-asc': (a, b) => a.price - b.price,
     'price-desc': (a, b) => b.price - a.price,
-    mileage: (a, b) => a.mileage - b.mileage,
+    mileage: (a, b) => compareMobileMileage(a, b),
     newest: (a, b) => b.year - a.year,
     oldest: (a, b) => a.year - b.year,
-    'mileage-desc': (a, b) => b.mileage - a.mileage,
+    'mileage-desc': (a, b) => compareMobileMileage(a, b, -1),
     'listing-oldest': (a, b) => vehicles.indexOf(a) - vehicles.indexOf(b),
     'listing-newest': (a, b) => vehicles.indexOf(b) - vehicles.indexOf(a),
     power: (a, b) => b.power - a.power,

@@ -118,6 +118,12 @@ export const referenceSpecifications: readonly DetailSpecification[] = [
     "valueKey": "fuel.gasoline"
   },
   {
+    "id": "year",
+    "icon": "/assets/imgs/template/icons/calendar.svg",
+    "value": "2002",
+    "labelKey": "vehicle.field.year"
+  },
+  {
     "id": "lit",
     "icon": "/assets/imgs/page/car/lit.svg",
     "value": "231 hp",
@@ -149,7 +155,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "D&M - Auto Varna",
   "location": "бул. Цар Освободител 282, Варна, България",
-  "avatar": "/dealer-brand/v2-02b0848664dfab2b/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-db2715ad0027a297/logo-on-light.webp",
   "mobile": "0898286848",
   "email": "",
   "whatsapp": "",

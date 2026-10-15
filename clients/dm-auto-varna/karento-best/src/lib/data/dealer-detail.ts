@@ -36,6 +36,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "valueKey": "fuel.gasoline"
       },
       {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2002",
+        "labelKey": "vehicle.field.year"
+      },
+      {
         "id": "lit",
         "icon": "/assets/imgs/page/car/lit.svg",
         "value": "231 hp",
@@ -104,7 +110,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "D&M - Auto Varna",
       "location": "бул. Цар Освободител 282, Варна, България",
-      "avatar": "/dealer-brand/v2-02b0848664dfab2b/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-db2715ad0027a297/logo-on-light.webp",
       "mobile": "0898286848",
       "email": "",
       "whatsapp": "",
@@ -154,6 +160,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2016",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -224,7 +236,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "D&M - Auto Varna",
       "location": "бул. Цар Освободител 282, Варна, България",
-      "avatar": "/dealer-brand/v2-02b0848664dfab2b/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-db2715ad0027a297/logo-on-light.webp",
       "mobile": "0898286848",
       "email": "",
       "whatsapp": "",
@@ -274,6 +286,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2006",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -344,7 +362,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "D&M - Auto Varna",
       "location": "бул. Цар Освободител 282, Варна, България",
-      "avatar": "/dealer-brand/v2-02b0848664dfab2b/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-db2715ad0027a297/logo-on-light.webp",
       "mobile": "0898286848",
       "email": "",
       "whatsapp": "",
@@ -396,6 +414,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "valueKey": "fuel.diesel"
       },
       {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2019",
+        "labelKey": "vehicle.field.year"
+      },
+      {
         "id": "lit",
         "icon": "/assets/imgs/page/car/lit.svg",
         "value": "286 hp",
@@ -464,7 +488,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "D&M - Auto Varna",
       "location": "бул. Цар Освободител 282, Варна, България",
-      "avatar": "/dealer-brand/v2-02b0848664dfab2b/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-db2715ad0027a297/logo-on-light.webp",
       "mobile": "0898286848",
       "email": "",
       "whatsapp": "",
@@ -516,6 +540,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "valueKey": "fuel.diesel"
       },
       {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2018",
+        "labelKey": "vehicle.field.year"
+      },
+      {
         "id": "lit",
         "icon": "/assets/imgs/page/car/lit.svg",
         "value": "286 hp",
@@ -584,7 +614,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "D&M - Auto Varna",
       "location": "бул. Цар Освободител 282, Варна, България",
-      "avatar": "/dealer-brand/v2-02b0848664dfab2b/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-db2715ad0027a297/logo-on-light.webp",
       "mobile": "0898286848",
       "email": "",
       "whatsapp": "",
@@ -634,6 +664,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2016",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -704,7 +740,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "D&M - Auto Varna",
       "location": "бул. Цар Освободител 282, Варна, България",
-      "avatar": "/dealer-brand/v2-02b0848664dfab2b/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-db2715ad0027a297/logo-on-light.webp",
       "mobile": "0898286848",
       "email": "",
       "whatsapp": "",
@@ -754,6 +790,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2005",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -824,7 +866,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "D&M - Auto Varna",
       "location": "бул. Цар Освободител 282, Варна, България",
-      "avatar": "/dealer-brand/v2-02b0848664dfab2b/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-db2715ad0027a297/logo-on-light.webp",
       "mobile": "0898286848",
       "email": "",
       "whatsapp": "",
@@ -874,6 +916,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2014",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -944,7 +992,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "D&M - Auto Varna",
       "location": "бул. Цар Освободител 282, Варна, България",
-      "avatar": "/dealer-brand/v2-02b0848664dfab2b/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-db2715ad0027a297/logo-on-light.webp",
       "mobile": "0898286848",
       "email": "",
       "whatsapp": "",

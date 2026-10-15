@@ -58,7 +58,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "D&M - Auto Varna",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-02b0848664dfab2b/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-db2715ad0027a297/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": true
@@ -119,7 +119,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "D&M - Auto Varna",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-02b0848664dfab2b/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-db2715ad0027a297/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": true
@@ -180,7 +180,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "D&M - Auto Varna",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-02b0848664dfab2b/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-db2715ad0027a297/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": true
@@ -241,7 +241,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "D&M - Auto Varna",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-02b0848664dfab2b/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-db2715ad0027a297/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -302,7 +302,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "D&M - Auto Varna",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-02b0848664dfab2b/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-db2715ad0027a297/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -363,7 +363,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "D&M - Auto Varna",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-02b0848664dfab2b/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-db2715ad0027a297/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -424,7 +424,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "D&M - Auto Varna",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-02b0848664dfab2b/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-db2715ad0027a297/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -485,373 +485,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "D&M - Auto Varna",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-02b0848664dfab2b/logo-on-light.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1004",
-    "slug": "bmw-x5-2002-21791544163341152",
-    "category": "car",
-    "dealerOrgId": "dealer-dm-auto-varna",
-    "status": "active",
-    "title": "BMW X5 Регистриран с Газов инжекцион",
-    "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
-    "price": {
-      "amount": 4449,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/vehicles/21791544163341152/1.webp",
-        "alt": "BMW X5 Регистриран с Газов инжекцион"
-      },
-      {
-        "url": "/assets/vehicles/21791544163341152/2.webp",
-        "alt": "BMW X5 Регистриран с Газов инжекцион"
-      },
-      {
-        "url": "/assets/vehicles/21791544163341152/3.webp",
-        "alt": "BMW X5 Регистриран с Газов инжекцион"
-      },
-      {
-        "url": "/assets/vehicles/21791544163341152/4.webp",
-        "alt": "BMW X5 Регистриран с Газов инжекцион"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "spec": {
-      "make": "BMW",
-      "model": "X5",
-      "year": 2002,
-      "bodyType": "suv",
-      "fuelType": "gasoline",
-      "transmission": "automatic",
-      "mileageValue": 202313,
-      "mileageUnit": "km",
-      "enginePowerHp": 231
-    },
-    "seller": {
-      "id": "dealer-dm-auto-varna",
-      "type": "dealer",
-      "displayName": "D&M - Auto Varna",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-02b0848664dfab2b/logo-on-light.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1005",
-    "slug": "land-rover-range-rover-sport-2016-21790863081842896",
-    "category": "car",
-    "dealerOrgId": "dealer-dm-auto-varna",
-    "status": "active",
-    "title": "Land Rover Range Rover Sport",
-    "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
-    "price": {
-      "amount": 17499,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/vehicles/21790863081842896/1.webp",
-        "alt": "Land Rover Range Rover Sport"
-      },
-      {
-        "url": "/assets/vehicles/21790863081842896/2.webp",
-        "alt": "Land Rover Range Rover Sport"
-      },
-      {
-        "url": "/assets/vehicles/21790863081842896/3.webp",
-        "alt": "Land Rover Range Rover Sport"
-      },
-      {
-        "url": "/assets/vehicles/21790863081842896/4.webp",
-        "alt": "Land Rover Range Rover Sport"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "spec": {
-      "make": "Land Rover",
-      "model": "Range Rover Sport",
-      "year": 2016,
-      "bodyType": "suv",
-      "fuelType": "diesel",
-      "transmission": "automatic",
-      "mileageValue": 207520,
-      "mileageUnit": "km",
-      "enginePowerHp": 249
-    },
-    "seller": {
-      "id": "dealer-dm-auto-varna",
-      "type": "dealer",
-      "displayName": "D&M - Auto Varna",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-02b0848664dfab2b/logo-on-light.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1006",
-    "slug": "mercedes-benz-a-180-2006-11790773105725043",
-    "category": "car",
-    "dealerOrgId": "dealer-dm-auto-varna",
-    "status": "active",
-    "title": "Mercedes-Benz A 180 Регистриран всичко платено",
-    "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
-    "price": {
-      "amount": 2099,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/vehicles/11790773105725043/1.webp",
-        "alt": "Mercedes-Benz A 180 Регистриран всичко платено"
-      },
-      {
-        "url": "/assets/vehicles/11790773105725043/2.webp",
-        "alt": "Mercedes-Benz A 180 Регистриран всичко платено"
-      },
-      {
-        "url": "/assets/vehicles/11790773105725043/3.webp",
-        "alt": "Mercedes-Benz A 180 Регистриран всичко платено"
-      },
-      {
-        "url": "/assets/vehicles/11790773105725043/4.webp",
-        "alt": "Mercedes-Benz A 180 Регистриран всичко платено"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "spec": {
-      "make": "Mercedes-Benz",
-      "model": "A 180",
-      "year": 2006,
-      "bodyType": "coupe",
-      "fuelType": "diesel",
-      "transmission": "manual",
-      "mileageValue": 226313,
-      "mileageUnit": "km",
-      "enginePowerHp": 109
-    },
-    "seller": {
-      "id": "dealer-dm-auto-varna",
-      "type": "dealer",
-      "displayName": "D&M - Auto Varna",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-02b0848664dfab2b/logo-on-light.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1007",
-    "slug": "audi-a7-2019-11790612635782674",
-    "category": "car",
-    "dealerOrgId": "dealer-dm-auto-varna",
-    "status": "active",
-    "title": "Audi A7 S-Line 50 TDI",
-    "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
-    "price": {
-      "amount": 31999,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/vehicles/11790612635782674/1.webp",
-        "alt": "Audi A7 S-Line 50 TDI"
-      },
-      {
-        "url": "/assets/vehicles/11790612635782674/2.webp",
-        "alt": "Audi A7 S-Line 50 TDI"
-      },
-      {
-        "url": "/assets/vehicles/11790612635782674/3.webp",
-        "alt": "Audi A7 S-Line 50 TDI"
-      },
-      {
-        "url": "/assets/vehicles/11790612635782674/4.webp",
-        "alt": "Audi A7 S-Line 50 TDI"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "spec": {
-      "make": "Audi",
-      "model": "A7",
-      "year": 2019,
-      "bodyType": "sedan",
-      "fuelType": "diesel",
-      "transmission": "automatic",
-      "mileageValue": 239520,
-      "mileageUnit": "km",
-      "enginePowerHp": 286
-    },
-    "seller": {
-      "id": "dealer-dm-auto-varna",
-      "type": "dealer",
-      "displayName": "D&M - Auto Varna",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-02b0848664dfab2b/logo-on-light.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1008",
-    "slug": "audi-a8-2018-11790518149051725",
-    "category": "car",
-    "dealerOrgId": "dealer-dm-auto-varna",
-    "status": "active",
-    "title": "Audi A8 50 TDI MATRIX",
-    "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
-    "price": {
-      "amount": 33999,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/vehicles/11790518149051725/1.webp",
-        "alt": "Audi A8 50 TDI MATRIX"
-      },
-      {
-        "url": "/assets/vehicles/11790518149051725/2.webp",
-        "alt": "Audi A8 50 TDI MATRIX"
-      },
-      {
-        "url": "/assets/vehicles/11790518149051725/3.webp",
-        "alt": "Audi A8 50 TDI MATRIX"
-      },
-      {
-        "url": "/assets/vehicles/11790518149051725/4.webp",
-        "alt": "Audi A8 50 TDI MATRIX"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "spec": {
-      "make": "Audi",
-      "model": "A8",
-      "year": 2018,
-      "bodyType": "sedan",
-      "fuelType": "diesel",
-      "transmission": "automatic",
-      "mileageValue": 228530,
-      "mileageUnit": "km",
-      "enginePowerHp": 286
-    },
-    "seller": {
-      "id": "dealer-dm-auto-varna",
-      "type": "dealer",
-      "displayName": "D&M - Auto Varna",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-02b0848664dfab2b/logo-on-light.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1009",
-    "slug": "mercedes-benz-gle-350-2016-21790339935983598",
-    "category": "car",
-    "dealerOrgId": "dealer-dm-auto-varna",
-    "status": "active",
-    "title": "Mercedes-Benz GLE 350 Coupe 4MATIC | 2016 г",
-    "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
-    "price": {
-      "amount": 29499,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/vehicles/21790339935983598/1.webp",
-        "alt": "Mercedes-Benz GLE 350 Coupe 4MATIC | 2016 г"
-      },
-      {
-        "url": "/assets/vehicles/21790339935983598/2.webp",
-        "alt": "Mercedes-Benz GLE 350 Coupe 4MATIC | 2016 г"
-      },
-      {
-        "url": "/assets/vehicles/21790339935983598/3.webp",
-        "alt": "Mercedes-Benz GLE 350 Coupe 4MATIC | 2016 г"
-      },
-      {
-        "url": "/assets/vehicles/21790339935983598/4.webp",
-        "alt": "Mercedes-Benz GLE 350 Coupe 4MATIC | 2016 г"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "spec": {
-      "make": "Mercedes-Benz",
-      "model": "GLE 350",
-      "year": 2016,
-      "bodyType": "coupe",
-      "fuelType": "diesel",
-      "transmission": "automatic",
-      "mileageValue": 233613,
-      "mileageUnit": "km",
-      "enginePowerHp": 258
-    },
-    "seller": {
-      "id": "dealer-dm-auto-varna",
-      "type": "dealer",
-      "displayName": "D&M - Auto Varna",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-02b0848664dfab2b/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-db2715ad0027a297/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false

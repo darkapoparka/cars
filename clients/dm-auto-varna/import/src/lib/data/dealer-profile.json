@@ -27,9 +27,9 @@
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=D%26M%20-%20Auto%20Varna%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20282%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
     "mapsEmbedUrl": "https://maps.google.com/maps?q=D%26M%20-%20Auto%20Varna%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20282%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F&z=16&output=embed",
     "accent": "#c40101",
-    "logo": "/dealer-brand/v2-02b0848664dfab2b/logo-on-light.webp",
-    "logoLight": "/dealer-brand/v2-02b0848664dfab2b/logo-on-light.webp",
-    "logoDark": "/dealer-brand/v2-02b0848664dfab2b/logo-on-dark.webp",
+    "logo": "/dealer-brand/v2-db2715ad0027a297/logo-on-light.webp",
+    "logoLight": "/dealer-brand/v2-db2715ad0027a297/logo-on-light.webp",
+    "logoDark": "/dealer-brand/v2-db2715ad0027a297/logo-on-dark.webp",
     "socialLinks": {
       "facebook": "",
       "instagram": "",
@@ -758,16 +758,19 @@
     "schemaVersion": 1,
     "assets": {
       "onLight": {
-        "publicPath": "/dealer-brand/v2-02b0848664dfab2b/logo-on-light.webp",
-        "sha256": "91a045bac09ea40469482b6eff7becf2b8d25220f62623f3caf7f652a59aac8b"
+        "publicPath": "/dealer-brand/v2-db2715ad0027a297/logo-on-light.webp",
+        "sha256": "8947741544427f79114a4b9439359c1e26049b814b93afd7de724e7c93247774",
+        "bytes": 98790
       },
       "onDark": {
-        "publicPath": "/dealer-brand/v2-02b0848664dfab2b/logo-on-dark.webp",
-        "sha256": "91a045bac09ea40469482b6eff7becf2b8d25220f62623f3caf7f652a59aac8b"
+        "publicPath": "/dealer-brand/v2-db2715ad0027a297/logo-on-dark.webp",
+        "sha256": "994ecf420e77108287ec024aeab091fa958198ec22ea82d2593708dd796177fb",
+        "bytes": 30936
       },
       "onAccent": {
-        "publicPath": "/dealer-brand/v2-02b0848664dfab2b/logo-on-dark.webp",
-        "sha256": "91a045bac09ea40469482b6eff7becf2b8d25220f62623f3caf7f652a59aac8b"
+        "publicPath": "/dealer-brand/v2-db2715ad0027a297/logo-on-accent.webp",
+        "sha256": "994ecf420e77108287ec024aeab091fa958198ec22ea82d2593708dd796177fb",
+        "bytes": 30936
       }
     },
     "source": "assets/brand/logo.png",
