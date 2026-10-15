@@ -146,16 +146,21 @@ transparent pseudo-element outsets to retain the 44px rail footprint and tap are
 Icon-only pills extend the target on all four sides. `MobileIconAction` retains
 its native 44px box around the 40px painted circle.
 
-Page utility bars use `.mobile-utility-bar`: 44px visible circles with 22px icons
-for Cars Filter/Sort, PDP Back/Compare/Save/Share and
-the photo-viewer Close action. Use 14px edge gutters, an 8px top inset plus the
+Page utility bars use `.mobile-utility-bar`: 40px visible circles, 20px glyphs and
+44px native tap areas. Cars Filter/Sort, PDP Back/Compare/Save/Share and
+photo-viewer Close share the compact appbar role. Cars Search paints a 40px-high
+capsule inside its native 44px button, using a 20px magnifier and the existing
+20px search text. Brand/Model/Price/Year quick pills keep their 40px surfaces,
+44px tap areas and 18px labels. This follows the owner's 14 October request
+to align Cars with Home and PDP; consume the existing mobile control tokens.
+Use 14px edge gutters, an 8px top inset plus the
 safe area, and 8px action gaps (4px below 375px). Dark and image-overlay tones
 retain the contrast needed by their backgrounds. Sheet controls keep their
 compact role. Quick filters in the separate row remain 40px high.
 The shared mobile appbar's contact/map actions use 40px visible circles with
 20px glyphs and 44px native tap areas, following the owner's 11 October request
 for smaller header utilities. This supersedes the prior map optical correction.
-Search fields keep their existing dimensions and independent 20px typography.
+Search overlay fields keep their existing dimensions and independent 20px typography.
 The toolbar sizing applies below 768px and preserves desktop styling.
 Default Filter and Sort circles share Search's borderless white surface; keep
 their selected fill and visible keyboard focus styling.

@@ -270,7 +270,7 @@ function AnyMakeModelOption({
           ? marketplaceSelectedOptionButtonClassName
           : marketplaceOptionButtonClassName,
         selected &&
-          "border-brand bg-brand text-brand-foreground hover:bg-brand hover:text-brand-foreground"
+          "border-primary bg-primary text-primary-foreground hover:bg-primary hover:text-primary-foreground"
       )}
       data-slot={dataSlot}
       onClick={onSelect}

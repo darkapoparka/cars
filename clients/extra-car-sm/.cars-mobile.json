@@ -5,19 +5,19 @@
   "name": "ЕКСТРА КАР-СМ",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/mobile",
-    "digest": "4e858bd9dbd3ef5b52cd904c4ed97bbfdc0f4cfe02b5a3840580f38026b867a0",
-    "tree": "2b02829e157071e305bfb2dff10ef18e85c8a35e"
+    "digest": "f5a3e541a7c648a4c2899ad3893e22a3806027a9f66d95fa4e8c74b2226635b6",
+    "tree": "792bfdd1d8eb22aabd90c7e3a0c0779a6c1c36f3"
   },
-  "sourceDigest": "52a3510c566da5fb5485e131448f566bbe33c28d2baa917d2f59e6ef6d95fe96",
+  "sourceDigest": "76db2db1e4d7162a02fd46886cf64d625102b054d0feccf1338b4f1d2a140a60",
   "inventory": {
     "mode": "illustrative-not-dealer-stock",
     "count": 7,
     "observedAt": ""
   },
   "personalization": {
-    "profileSha256": "789e45e90e5f1c076581b6c9cd41f2b14bb25ccf742ad4f6ca035df5871279b5",
+    "profileSha256": "6c035ec3a52ff80287bc01515bf325e41b68a771a2e49a3f9653f39a74869373",
     "logoPaths": [
       "/registered-branding/onLight.png",
       "/registered-branding/onDark.png"
@@ -47,8 +47,7 @@
       "mobile/src/components/DesktopVehicleSummary.tsx",
       "mobile/src/components/NativeCarPark.tsx",
       "mobile/src/components/ShowroomFilterSheet.tsx",
-      "mobile/src/lib/vehicle-copy.ts",
-      "mobile/src/components/Header.tsx"
+      "mobile/src/lib/vehicle-copy.ts"
     ]
   },
   "needsDealerQA": true,
