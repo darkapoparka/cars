@@ -18,7 +18,7 @@ const between = (begin, end) => {
   return updater.slice(start, stop).replace(/^export /gm, '');
 };
 const source = between('export function assertReviewedModernCopy(', 'export function loadModernCopyReview(')
-  + between('async function personalizePinnedTargetBases(', '/** A reviewed dealer resolution');
+  + between('const HISTORICAL_IMPORT_QA_PROVENANCE =', '/** A reviewed dealer resolution');
 const keys = ['auto-best', 'modern', 'import', 'app', 'mobile', 'karento-best'];
 
 function fixture(reviewed) {
