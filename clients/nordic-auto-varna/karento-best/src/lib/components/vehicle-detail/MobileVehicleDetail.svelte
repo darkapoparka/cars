@@ -6,15 +6,13 @@
   const locale = useLocale();
   import type { Attachment } from "svelte/attachments";
   import Gallery from "#lib/components/Gallery.svelte";
-  import DemoActionLink from "#lib/components/DemoActionLink.svelte";
-  import MobileIcon from "#lib/components/mobile/MobileIcon.svelte";
+  import MobileIconButton from "#lib/components/mobile/MobileIconButton.svelte";
   import VehicleHeading from "./VehicleHeading.svelte";
   import VehicleSpecifications from "./VehicleSpecifications.svelte";
   import VehicleDetailPanels from "./VehicleDetailPanels.svelte";
   import VehicleReservationCard from "./VehicleReservationCard.svelte";
   import VehiclePriceActions from "./VehiclePriceActions.svelte";
   import DetailSellerCard from "./DetailSellerCard.svelte";
-  import DetailBrandStrip from "./DetailBrandStrip.svelte";
   import type { LoanCalculatorState } from "#lib/data/loan-estimate.ts";
   import {
     referenceHeading,
@@ -82,24 +80,27 @@
       class="mobile-pdp-photo-actions"
       aria-label={locale.t("vehicle.actions")}
     >
-      <a
+      <MobileIconButton
         href={locale.href("/vehicles")}
-        aria-label={locale.t("action.backVehicles")}
-        ><MobileIcon name="arrow-left" size="action" /></a
-      >
+        label={locale.t("action.backVehicles")}
+        icon="arrow-left"
+        surface="circle"
+      />
       <div class="mobile-pdp-photo-tools">
-        <DemoActionLink
+        <MobileIconButton
           href="#!"
-          aria-label={locale.t("action.wishlist")}
+          label={locale.t("action.wishlist")}
+          icon="heart"
+          surface="circle"
+          demo
           getFeedbackContainer={() => wishlistFeedback}
-          ><MobileIcon name="heart" size="action" /></DemoActionLink
-        >
-        <button
-          type="button"
-          aria-label={locale.t("share.vehicle")}
+        />
+        <MobileIconButton
+          label={locale.t("share.vehicle")}
+          icon="share"
+          surface="circle"
           onclick={shareVehicle}
-          ><MobileIcon name="share" size="action" /></button
-        >
+        />
       </div>
     </nav>
     {#if shareFeedback}<p class="mobile-pdp-share-feedback" role="status"
@@ -122,7 +123,6 @@
     </div>
     <VehicleDetailPanels {details} bind:loanState />
   </div>
-  <DetailBrandStrip />
 </section>
 
 <style>
@@ -153,11 +153,15 @@
 
   .mobile-pdp-photo-actions {
     position: absolute;
-    inset: calc(var(--karento-space-4) + env(safe-area-inset-top, 0px))
-      var(--karento-space-4) auto;
+    inset: env(safe-area-inset-top, 0px) var(--karento-space-4) auto;
     z-index: 2;
     display: flex;
+    align-items: center;
     justify-content: space-between;
+    height: var(
+      --karento-mobile-header-height,
+      calc(var(--karento-touch-target) + var(--karento-space-3))
+    );
     pointer-events: none;
   }
 
@@ -166,16 +170,7 @@
     gap: var(--karento-space-2);
   }
 
-  .mobile-pdp-photo-actions :global(:is(a, button)) {
-    display: grid;
-    place-items: center;
-    width: var(--karento-touch-target);
-    height: var(--karento-touch-target);
-    padding: 0;
-    border: 1px solid var(--bs-neutral-200);
-    border-radius: var(--karento-radius-pill);
-    color: var(--bs-neutral-1000);
-    background: var(--bs-neutral-0);
+  .mobile-pdp-photo-actions :global(.mobile-icon-button) {
     pointer-events: auto;
   }
 

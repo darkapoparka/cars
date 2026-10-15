@@ -147,7 +147,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "Nordic Auto",
   "location": "гр. Варна, Център, Варна, България",
-  "avatar": "/dealer-brand/v2-51c4172c75ecdb1f/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-f8aac6926b022641/logo-on-light.webp",
   "mobile": "0892453350",
   "email": "",
   "whatsapp": "",

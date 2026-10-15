@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "Nordic Auto",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-51c4172c75ecdb1f/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-51c4172c75ecdb1f/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-51c4172c75ecdb1f/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-f8aac6926b022641/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-f8aac6926b022641/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-f8aac6926b022641/logo-on-dark.webp",
     "alt": "Nordic Auto",
-    "favicon": "/dealer-brand/v2-51c4172c75ecdb1f/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-f8aac6926b022641/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

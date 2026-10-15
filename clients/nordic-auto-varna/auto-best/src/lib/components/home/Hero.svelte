@@ -43,8 +43,8 @@
 
   @media (max-width: 767px) {
     .dn-hero {
-      height: 208px;
-      min-height: 208px;
+      height: var(--dn-mobile-entry-hero-height);
+      min-height: var(--dn-mobile-entry-hero-height);
       background: #090a0b;
     }
 

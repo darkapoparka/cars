@@ -50,7 +50,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Nordic Auto",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-51c4172c75ecdb1f/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-f8aac6926b022641/logo-on-light.webp"
     },
     "publishedAt": "2026-10-12T09:00:00.000Z",
     "promoted": true
@@ -103,7 +103,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Nordic Auto",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-51c4172c75ecdb1f/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-f8aac6926b022641/logo-on-light.webp"
     },
     "publishedAt": "2026-10-12T09:00:00.000Z",
     "promoted": true

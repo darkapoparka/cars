@@ -9,11 +9,22 @@
   import MobileSectionHeading from "#lib/components/mobile/MobileSectionHeading.svelte";
   import ServiceSpotCard from "#lib/components/ServiceSpotCard.svelte";
   import MobileHomeServiceCard from "#lib/components/mobile/MobileHomeServiceCard.svelte";
-  import { serviceSpots } from "#lib/data/services.ts";
+  import MobileServiceDrawer, {
+    type MobileServiceDetail,
+  } from "#lib/components/services/MobileServiceDrawer.svelte";
+  import { serviceSpots, type ServiceSpot } from "#lib/data/services.ts";
   import { slider } from "#lib/vendor.ts";
   const mobile = new MediaQuery("(max-width: 767.98px)");
   const desktop = new MediaQuery("(min-width: 992px)");
   let { compactMobile = false }: { compactMobile?: boolean } = $props();
+  let selectedService = $state<MobileServiceDetail | null>(null);
+  function openService(spot: ServiceSpot) {
+    selectedService = {
+      ...spot,
+      titleKey: spot.desktopTitleKey,
+      descriptionKey: spot.detailDescriptionKey ?? spot.descriptionKey,
+    };
+  }
 </script>
 
 <section
@@ -83,7 +94,11 @@
     {#if mobile.current && compactMobile}
       <div class="home-service-grid">
         {#each serviceSpots as spot (spot.id)}
-          <MobileHomeServiceCard {spot} />
+          <MobileHomeServiceCard
+            {spot}
+            onselect={openService}
+            expanded={selectedService?.id === spot.id}
+          />
         {/each}
       </div>
     {:else}
@@ -104,6 +119,8 @@
     {/if}
   </div>
 </section>
+
+<MobileServiceDrawer bind:service={selectedService} />
 
 <style>
   .home-service-grid {
