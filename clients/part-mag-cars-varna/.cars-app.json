@@ -3,12 +3,12 @@
   "dealer": "part-mag-cars-varna",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/app",
-    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
-    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
   },
-  "appDigest": "0d8c79cb4e2b7df2e1ef713543ad5bce4af5d5cb757e439d6456aca13cd7b228",
+  "appDigest": "768f9e458ac4f61fbde85fd78bb41dc46124f710fce22e6356fe043f3fa1a5b8",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "part-mag-cars-varna",
@@ -21,14 +21,14 @@
     "assets": [
       {
         "source": "auto-best/static/dealer-brand/logo-on-light.png",
-        "output": "public/dealer-app/logo-light-9a1e99312d16b5362fa6.png",
-        "sha256": "9a1e99312d16b5362fa6277e502d8e98537beb8ded0130cb69dc98c3e2fbde0c",
+        "output": "public/dealer-app/logo-light-ed661d8aa7022b21c682.png",
+        "sha256": "ed661d8aa7022b21c6827686cb5da029bd58767da9794072a0a430ed81ff4204",
         "role": "logo-light"
       },
       {
         "source": "auto-best/static/dealer-brand/logo-on-dark.png",
-        "output": "public/dealer-app/logo-dark-ee5b9861f1739fb69c56.png",
-        "sha256": "ee5b9861f1739fb69c562a0d8138d87d76bcb078c6d48fe3cd3f03f1d92e4b84",
+        "output": "public/dealer-app/logo-dark-c1bcebd5cd3f82903425.png",
+        "sha256": "c1bcebd5cd3f829034255f80a53a821398fbda3f1b03f01d8f2321a0ee0d9c07",
         "role": "logo-dark"
       },
       {
@@ -60,5 +60,6 @@
     ]
   },
   "needsDealerQA": true,
-  "readyToPublish": false
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-15T04:17:19.559Z"
 }

@@ -147,7 +147,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "Part Mag Cars",
   "location": "гр. Варна, Варна, България",
-  "avatar": "/dealer-brand/v2-81b6e67e9ab3e82b/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-6c3d66fdbfa735fa/logo-on-light.webp",
   "mobile": "0899960605, 0897906712",
   "email": "",
   "whatsapp": "",

@@ -46,7 +46,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Part Mag Cars",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-81b6e67e9ab3e82b/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-6c3d66fdbfa735fa/logo-on-light.webp"
     },
     "publishedAt": "2026-10-12T09:00:00.000Z",
     "promoted": true
@@ -95,7 +95,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Part Mag Cars",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-81b6e67e9ab3e82b/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-6c3d66fdbfa735fa/logo-on-light.webp"
     },
     "publishedAt": "2026-10-12T09:00:00.000Z",
     "promoted": true

@@ -33,6 +33,6 @@ export const brand = {
   addressLine,
   address: "гр. Варна, Варна, България",
   appointment: "Потвърдете работното време директно с автокъщата.",
-  logo: "/dealer-brand/v2-81b6e67e9ab3e82b/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/v2-81b6e67e9ab3e82b/logo-on-dark.webp"
+  logo: "/dealer-brand/v2-6c3d66fdbfa735fa/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-6c3d66fdbfa735fa/logo-on-dark.webp"
 } as const satisfies BrandConfig;

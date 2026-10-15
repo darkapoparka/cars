@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "Part Mag Cars",
-  "logo": "/dealer-brand/v2-81b6e67e9ab3e82b/logo-on-light.webp",
+  "logo": "/dealer-brand/v2-6c3d66fdbfa735fa/logo-on-light.webp",
   "phone": "+359899960605",
   "email": null,
   "address": "гр. Варна, Варна, България",

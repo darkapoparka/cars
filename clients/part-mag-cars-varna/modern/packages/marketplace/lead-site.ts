@@ -111,8 +111,8 @@ export const leadSite: LeadSiteConfig = {
     "tagline": "Part Mag Cars — vehicles and dealer support in Varna."
   }
 },
-  accent: "#30343b",
-  desktopAccent: "#4b5057",
+  accent: "#09090b",
+  desktopAccent: "#09090b",
   desktopInventoryFilterLayout: "quick",
   desktopPreviewIdentity: {
     sourceSlug: "day-night-auto-group",
@@ -144,8 +144,8 @@ export const leadSite: LeadSiteConfig = {
   email: "",
   heroPath: "/lead-hero.jpg",
   locale: "bg-BG",
-  logoPath: "/dealer-brand/v2-81b6e67e9ab3e82b/logo-on-light.webp",
-  logoInversePath: "/dealer-brand/v2-81b6e67e9ab3e82b/logo-on-dark.webp",
+  logoPath: "/dealer-brand/v2-6c3d66fdbfa735fa/logo-on-light.webp",
+  logoInversePath: "/dealer-brand/v2-6c3d66fdbfa735fa/logo-on-dark.webp",
   mapsEmbedUrl:
     "https://maps.google.com/maps?q=Part%20Mag%20Cars%2C%20%D0%B3%D1%80.%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F&z=16&output=embed",
   mapsUrl:

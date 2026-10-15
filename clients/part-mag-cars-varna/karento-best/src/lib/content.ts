@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "Part Mag Cars",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-81b6e67e9ab3e82b/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-81b6e67e9ab3e82b/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-81b6e67e9ab3e82b/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-6c3d66fdbfa735fa/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-6c3d66fdbfa735fa/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-6c3d66fdbfa735fa/logo-on-dark.webp",
     "alt": "Part Mag Cars",
-    "favicon": "/dealer-brand/v2-81b6e67e9ab3e82b/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-6c3d66fdbfa735fa/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {
