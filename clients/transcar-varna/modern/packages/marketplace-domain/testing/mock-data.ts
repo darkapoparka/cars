@@ -50,7 +50,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "АВТОСАЛОН ТРАНС КАР",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-461cd271108a17d3/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-136cb3e16e1ecc9d/logo-on-light.webp"
     },
     "publishedAt": "2026-10-11T09:00:00.000Z",
     "promoted": true

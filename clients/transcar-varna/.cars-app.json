@@ -3,12 +3,12 @@
   "dealer": "transcar-varna",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/app",
-    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
-    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
   },
-  "appDigest": "740aab453b92f45fdb77114e84bd334f191eb63a6e35baf2ad528fcfbb0e6292",
+  "appDigest": "e665fcf57ba251308cc2eb2bb4f36fc1b3336b3ce8f1561c832e4eab28df1813",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "transcar-varna",
@@ -21,14 +21,14 @@
     "assets": [
       {
         "source": "auto-best/static/dealer-brand/logo-on-light.png",
-        "output": "public/dealer-app/logo-light-0f2322641e39c93fa7a3.png",
-        "sha256": "0f2322641e39c93fa7a38ea6c4138dc6d096742b5847fe04857dc678b63249b9",
+        "output": "public/dealer-app/logo-light-25f80abfdbc14da5c680.png",
+        "sha256": "25f80abfdbc14da5c680871a0b884a65dc16f3f91e5e210951f12b3f2ab123f5",
         "role": "logo-light"
       },
       {
         "source": "auto-best/static/dealer-brand/logo-on-dark.png",
-        "output": "public/dealer-app/logo-dark-312b7d8cc5e4c863c141.png",
-        "sha256": "312b7d8cc5e4c863c1415f9979ea2e12a204e0f4aaf3f0602afe1ad77acb2dfd",
+        "output": "public/dealer-app/logo-dark-9b76dd354296b82194aa.png",
+        "sha256": "9b76dd354296b82194aaa7168fcc1f4730297a52d85b73455aec93670a0cea1a",
         "role": "logo-dark"
       },
       {
@@ -54,5 +54,6 @@
     ]
   },
   "needsDealerQA": true,
-  "readyToPublish": false
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-15T03:22:11.937Z"
 }

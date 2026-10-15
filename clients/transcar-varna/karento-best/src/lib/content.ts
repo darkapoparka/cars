@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "АВТОСАЛОН ТРАНС КАР",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-461cd271108a17d3/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-461cd271108a17d3/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-461cd271108a17d3/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-136cb3e16e1ecc9d/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-136cb3e16e1ecc9d/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-136cb3e16e1ecc9d/logo-on-dark.webp",
     "alt": "АВТОСАЛОН ТРАНС КАР",
-    "favicon": "/dealer-brand/v2-461cd271108a17d3/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-136cb3e16e1ecc9d/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

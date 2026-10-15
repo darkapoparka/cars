@@ -155,7 +155,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "АВТОСАЛОН ТРАНС КАР",
   "location": "бул.Цар Освободител 900 метра след Метро, Варна, България",
-  "avatar": "/dealer-brand/v2-461cd271108a17d3/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-136cb3e16e1ecc9d/logo-on-light.webp",
   "mobile": "0898504908",
   "email": "",
   "whatsapp": "",

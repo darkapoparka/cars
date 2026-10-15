@@ -109,13 +109,19 @@
   <p class="cars-locale-suggestion">{i18n.t('locale.suggestion', { country: regionNames.of(i18n.state.suggestedCountry) ?? i18n.state.suggestedCountry })}</p>
   <form onsubmit={(event) => { event.preventDefault(); void submit('save'); }} aria-busy={busy}>
     <label for="cars-locale-country">{i18n.t('locale.country')}</label>
-    <select id="cars-locale-country" name="country" bind:value={country} required>
-      {#each regionOptions as code (code)}<option value={code}>{regionNames.of(code) ?? code}{code === i18n.state.suggestedCountry ? ` — ${i18n.t('locale.suggested')}` : ''}</option>{/each}
-    </select>
+    <div class="cars-locale-select">
+      <select id="cars-locale-country" name="country" bind:value={country} required>
+        {#each regionOptions as code (code)}<option value={code}>{regionNames.of(code) ?? code}{code === i18n.state.suggestedCountry ? ` — ${i18n.t('locale.suggested')}` : ''}</option>{/each}
+      </select>
+      <span class="cars-locale-select-arrow" aria-hidden="true">{#if mobile.current}<MobileActionIcon name="chevronDown" size={18} />{:else}<Icon name="chevron-down" size={18} />{/if}</span>
+    </div>
     <label for="cars-locale-language">{i18n.t('locale.language')}</label>
-    <select id="cars-locale-language" name="locale" bind:value={locale} required>
-      <option value="en" lang="en">English</option><option value="bg" lang="bg">Български</option>
-    </select>
+    <div class="cars-locale-select">
+      <select id="cars-locale-language" name="locale" bind:value={locale} required>
+        <option value="en" lang="en">English</option><option value="bg" lang="bg">Български</option>
+      </select>
+      <span class="cars-locale-select-arrow" aria-hidden="true">{#if mobile.current}<MobileActionIcon name="chevronDown" size={18} />{:else}<Icon name="chevron-down" size={18} />{/if}</span>
+    </div>
     <p class="cars-locale-facts">{i18n.t('locale.facts')}</p>
     <p class="cars-locale-unavailable">{i18n.t('locale.arabic')}</p>
     {#if error}<p role="alert" class="cars-locale-error">{i18n.t('locale.error')}</p>{/if}
@@ -133,6 +139,9 @@
   .cars-locale-dialog::backdrop{background:#10202b99;backdrop-filter:blur(3px)}.cars-locale-dialog h2{margin:8px 32px 12px 0;font-size:var(--dn-text-subheading);line-height:var(--dn-leading-heading);font-weight:var(--dn-weight-bold)}.cars-locale-dialog p{font-size:var(--dn-text-meta);line-height:var(--dn-leading-body);margin:12px 0}.cars-locale-dialog .cars-locale-eyebrow{font-size:var(--dn-locale-eyebrow);letter-spacing:var(--dn-locale-tracking);text-transform:uppercase;margin:0;color:#647180}.cars-locale-close{position:absolute;top:12px;right:12px;border:0;border-radius:var(--dn-radius-circle);background:transparent;color:inherit;cursor:pointer}
   .cars-locale-dialog form{display:grid;gap:8px}.cars-locale-dialog label{font-size:var(--dn-text-meta);font-weight:var(--dn-weight-semibold);margin-top:8px}.cars-locale-dialog select{box-sizing:border-box;width:100%;min-width:0;min-height:48px;padding:10px 12px;border:1px solid #c5cdd6;border-radius:var(--dn-radius-sm);background:#fff;color:#16202c;font:inherit;font-size:var(--dn-text-body)}.cars-locale-suggestion{padding:10px 12px;border-radius:var(--dn-radius-sm);background:#f2f5f8}.cars-locale-dialog .cars-locale-facts{margin:10px 0 0}.cars-locale-dialog .cars-locale-unavailable{margin:0;color:#647180;font-size:var(--dn-text-caption)}.cars-locale-error{color:#a31019}
   .cars-locale-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}.cars-locale-actions button{flex:1 1 8.75rem;min-width:0;max-width:100%;overflow-wrap:anywhere;min-height:48px;padding:10px 12px;border:1px solid #c5cdd6;border-radius:var(--dn-radius-sm);background:#fff;color:#16202c;font:inherit;font-size:var(--dn-text-meta);line-height:var(--dn-leading-control);font-weight:var(--dn-weight-semibold);cursor:pointer}.cars-locale-actions button[type=submit]{background:#142331;color:#fff;border-color:#142331}.cars-locale-actions button:disabled{opacity:.6;cursor:wait}.cars-locale-dialog :is(button,select):focus-visible{outline:3px solid #337aaa;outline-offset:3px}
+  .cars-locale-select { position: relative; min-width: 0; }
+  .cars-locale-dialog .cars-locale-select select { appearance: none; padding-inline-end: calc(var(--dn-space-4) + var(--dn-control-icon-size) + var(--dn-space-2)); cursor: pointer; }
+  .cars-locale-select-arrow { position: absolute; inset-inline-end: var(--dn-space-4); top: 50%; display: grid; place-items: center; width: var(--dn-control-icon-size); height: var(--dn-control-icon-size); color: var(--dn-muted); pointer-events: none; transform: translateY(-50%); }
   @media(max-width:390px){.cars-locale-dialog{padding:24px 16px 16px;border-radius:var(--dn-radius)}.cars-locale-dialog h2{font-size:var(--dn-locale-heading-mobile)}.cars-locale-dialog p{font-size:var(--dn-locale-hint-mobile)}}
   @media(max-width:639px){.cars-locale-dialog{position:fixed;inset:auto 0 0;width:100%;max-width:100%;margin:0;max-height:calc(100dvh - 16px - env(safe-area-inset-top));border-radius:var(--dn-radius-lg) var(--dn-radius-lg) 0 0;padding-bottom:max(20px,env(safe-area-inset-bottom))}}
   @media (max-width: 767px) {
@@ -152,5 +161,9 @@
     .cars-locale-actions button[type=button] { flex: 0 0 auto; padding-inline: var(--dn-space-4); }
     .cars-locale-actions button[type=submit] { background: var(--dn-primary-action-surface); color: var(--dn-white); }
     .cars-locale-dialog :is(button, select):focus-visible { outline: 2px solid var(--dn-focus); outline-offset: -2px; }
+  }
+  @media (forced-colors: active) {
+    .cars-locale-dialog .cars-locale-select select { appearance: auto; padding-inline-end: var(--dn-space-4); }
+    .cars-locale-select-arrow { display: none; }
   }
 </style>
