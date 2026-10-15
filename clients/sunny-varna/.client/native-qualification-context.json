@@ -6,7 +6,7 @@
   "scope": "existing-dealer-pilot",
   "sourceCommit": "bb173c33d7b640502ad2e4bf27546748c12858b8",
   "reviewed": true,
-  "reviewedAt": "2026-10-14T23:56:34.182Z",
+  "reviewedAt": "2026-10-15T08:41:06.302Z",
   "qualificationOnly": true,
   "approved": false,
   "nativeApproval": false,
@@ -22,5 +22,31 @@
   "sourceReview": {
     "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-review.json",
     "sha256": "27c6ce5dd17ee6e1b9f6a5b059a95d5e1dbe4200f61264fc50addeb7af89d984"
+  },
+  "dealerSourceRepair": {
+    "kind": "explicit-english-editorial-catalog",
+    "parentContextSha256": "ff635fd81ba706008175e577be2d2e7b68bf6ff00819aa0080f15b24699161a9",
+    "baseSourceCommit": "2bbe6a99e45526671d9c924962a66680f4c0b471",
+    "baseSourceTree": "07521f6d95a819e9213fd6ed889024fc4d84346d",
+    "path": "import/src/lib/content/extra-localized.ts",
+    "beforeBlob": "61bb83425722972a5b21eae63c677f244afba2aa",
+    "afterBlob": "7909ce408b6177f528f7192b2436ddeacdb5ed58",
+    "proof": {
+      "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/editorial-runtime-repair-20261015/sunny-varna/focused-proof.json",
+      "sha256": "7823cc781412fd4a3f4b2f6b4ecc56f680d7d321af94389d596c4b55369e4df3"
+    },
+    "evidenceReuse": "Original immutable six-template QA and source preparation remain provenance; focused exact-source localization proof covers this new dealer edit. No new CI, build, native or hosted success is asserted.",
+    "companionPatches": [
+      {
+        "path": "modern/packages/marketplace/lead-site.ts",
+        "beforeBlob": "8d24618a54f3c088ed9762af351e042790b94e9a",
+        "afterBlob": "35fc3c2ea7566e8f6eb30e908bc3f3a75d5e1137",
+        "sha256": "6f1f332164316c0bfa03ca2b935b1cb5a3410a247f8df28c3bd41f3cbe192bdc",
+        "proof": {
+          "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/editorial-runtime-repair-20261015/sunny-varna/focused-proof.json",
+          "sha256": "7823cc781412fd4a3f4b2f6b4ecc56f680d7d321af94389d596c4b55369e4df3"
+        }
+      }
+    ]
   }
 }

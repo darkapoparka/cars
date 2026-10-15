@@ -1,0 +1,170 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-focused-exact-source-editorial-repair-proof",
+  "dealer": "rqs-auto-team",
+  "baseSourceCommit": "252f827b369e57292c944564a88b6f608a8ffd91",
+  "baseSourceTree": "3b05dab53ffacb237ff266cc77f407866420e871",
+  "sourceModuleProof": {
+    "dealer": "rqs-auto-team",
+    "sourceCommit": "252f827b369e57292c944564a88b6f608a8ffd91",
+    "sourceTree": "3b05dab53ffacb237ff266cc77f407866420e871",
+    "manifest": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/run-38689980731-attempt-1/rqs-auto-team-proposal-manifest.json",
+      "sha256": "b663fa69058004f4c21cbbe0747c49cb2e2bee043c65ee35534971ea979b9608"
+    },
+    "scope": "clients/rqs-auto-team/import/src/lib/content/extra-localized.ts",
+    "baseBlob": "201c9958cd123cdae666e3f911e3668d1dc9207d",
+    "candidateBlob": "9d73f9edc737df25307f7283110ba27480a1c32d",
+    "candidate": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/current-eleven-import-editorial/candidates/rqs-auto-team/extra-localized.ts",
+      "sha256": "e46358f85dafa294b44c7e73b48368e95068baac215360e5eab198e696b4ef66"
+    },
+    "patch": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/current-eleven-import-editorial/candidates/rqs-auto-team/explicit-editorial.patch",
+      "sha256": "f5addd3095f48e13089454dbfe83fb44d02d3da294b392cbdc817c246b4c2c99"
+    },
+    "addedEntries": [
+      {
+        "bg": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата. Illustrative template vehicles, not this dealership’s stock.",
+        "en": "Illustrative template vehicles, not this dealership’s stock."
+      },
+      {
+        "bg": "Независим демонстрационен преглед; формите не изпращат съобщения и не създават резервации. Independent demonstration: forms do not send enquiries or create reservations.",
+        "en": "Independent demonstration: forms do not send enquiries or create reservations."
+      }
+    ],
+    "beforeError": "Missing English editorial catalog entry: Демонстрационни автомобили от шаблона, а не наличност на автокъщата. Illustrative template vehicles, not this dealership’s stock.",
+    "intermediateError": "Missing English editorial catalog entry: Независим демонстрационен преглед; формите не изпращат съобщения и не създават резервации. Independent demonstration: forms do not send enquiries or create reservations.",
+    "after": [
+      {
+        "slug": "confirm-current-availability",
+        "title": "How to confirm current availability at R.Q.S. AUTO – TEAM",
+        "category": "Dealer information",
+        "date": "2026-01-01",
+        "image": "/assets/daynight/codex-generated-v2/blog/blog-cover-import-check-v2.webp",
+        "excerpt": "Illustrative template vehicles, not this dealership’s stock.",
+        "content": [
+          "Contact the dealership on 0876 997 791 and identify the exact vehicle before visiting.",
+          "Independent demonstration: forms do not send enquiries or create reservations."
+        ]
+      }
+    ],
+    "packagingContactAdapter": {
+      "schemaVersion": 1,
+      "dealer": "rqs-auto-team",
+      "applied": true,
+      "path": "import/src/lib/config/site.ts",
+      "href": "https://cars-rqs-auto-team.darkapoparka1.workers.dev/variant-3/bg/contact",
+      "beforeSha256": "13c22a45540715ccc6a1891423b774a456a285c820177f4e3cbc87bb3cd113b1",
+      "afterSha256": "1ebe69d835369a3d2210785f9bf8622dbfd5a327904ad9555edaf3e197e71796",
+      "originalDealerConfigSha256": "da58d0990029a7cd24f9cf53252f75fadc3b259fd55e42dd7628e722cf5ed1b7",
+      "emailInvented": false,
+      "mode": "Existing same-origin contact page; no external enquiry submitted"
+    },
+    "checks": {
+      "exactRetainedSource": true,
+      "beforeFailureReproduced": true,
+      "actualDisclosureFailureReproduced": true,
+      "afterEnglishPostsPassed": true,
+      "bgBehaviorUnchanged": true,
+      "dateSlugAndImageUnchanged": true,
+      "allExistingCatalogEntriesUnchanged": true,
+      "unknownEditorialStillThrows": true,
+      "onlyActualEmittedCatalogEntriesAdded": true,
+      "onlyCatalogPrefixChanged": true
+    },
+    "modulesRead": [
+      {
+        "path": "import/src/lib/content/localized.ts",
+        "blob": "5163b449da6f4bd8f73e8844ca22f237c184c489"
+      },
+      {
+        "path": "import/src/lib/content/extra-localized.ts",
+        "blob": "201c9958cd123cdae666e3f911e3668d1dc9207d"
+      },
+      {
+        "path": "import/src/lib/config/site.ts",
+        "blob": "d8ccb2e922f23a4223bad5c590fd1a61cd234c17"
+      },
+      {
+        "path": "import/src/lib/config/dealer.ts",
+        "blob": "6fba926e518f65ff637cda4a803b47bc20183d2b"
+      },
+      {
+        "path": "import/src/lib/config/cars-locale.ts",
+        "blob": "56e62dbe06c610b08f2bbdf99ee884126d8e20d5"
+      },
+      {
+        "path": "import/src/lib/data/blog.ts",
+        "blob": "b7f7d308078f4647081b85e3175884fcc1697c5c"
+      }
+    ]
+  },
+  "originalProof": {
+    "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/current-eleven-import-editorial/candidates/eleven-editorial-repair-proof.json",
+    "sha256": "10f723c352c11ee952437627ffbe79af81d26105d43dd3219ea3c837d86d4f4e"
+  },
+  "modernLogoAliasProof": {
+    "dealer": "rqs-auto-team",
+    "sourceCommit": "252f827b369e57292c944564a88b6f608a8ffd91",
+    "sourceTree": "3b05dab53ffacb237ff266cc77f407866420e871",
+    "scope": "modern/packages/marketplace/lead-site.ts",
+    "baseBlob": "1c3791d63a8adb54e80976b174d46baaa7937afb",
+    "baseSha256": "e4335e029357fb2e4cb63428507d3e718ed37ded15b41d2f7e20a72167fc9dbf",
+    "selectedRasterBindings": {
+      "logoOnLight": {
+        "path": "/dealer-brand/v2-5c4df8204c0ea6d6/logo-on-light.webp",
+        "sourcePath": "modern/apps/web/public/dealer-brand/v2-5c4df8204c0ea6d6/logo-on-light.webp",
+        "blob": "00ce47042c0c7eda7b26d69649d04264f9978851"
+      },
+      "logoOnDark": {
+        "path": "/dealer-brand/v2-5c4df8204c0ea6d6/logo-on-dark.webp",
+        "sourcePath": "modern/apps/web/public/dealer-brand/v2-5c4df8204c0ea6d6/logo-on-dark.webp",
+        "blob": "255b48c2f22194e4731b891990fb32f1554a480a"
+      },
+      "logoOnAccent": {
+        "path": "/dealer-brand/v2-5c4df8204c0ea6d6/logo-on-accent.webp",
+        "sourcePath": "modern/apps/web/public/dealer-brand/v2-5c4df8204c0ea6d6/logo-on-accent.webp",
+        "blob": "255b48c2f22194e4731b891990fb32f1554a480a"
+      }
+    },
+    "values": {
+      "logoOnLight": "/dealer-brand/v2-5c4df8204c0ea6d6/logo-on-light.webp",
+      "logoOnDark": "/dealer-brand/v2-5c4df8204c0ea6d6/logo-on-dark.webp",
+      "logoOnAccent": "/dealer-brand/v2-5c4df8204c0ea6d6/logo-on-dark.webp"
+    },
+    "companionPatches": [
+      {
+        "path": "modern/packages/marketplace/lead-site.ts",
+        "baseBlob": "1c3791d63a8adb54e80976b174d46baaa7937afb",
+        "candidateFile": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/native13-modern-runtime/rqs-auto-team-lead-site.ts",
+        "candidateSha256": "aa1cb8ab7aff2acdacb058eba9060043979979c9eaa857410cbb110b9537e776",
+        "candidateBlob": "c6e0fe19f4e7842a58c980ce0035ce47dfa0f422",
+        "bytes": 6784,
+        "encoding": "utf8"
+      }
+    ],
+    "actualProviderException": null,
+    "unbuiltSourceRiskOnly": true,
+    "checks": {
+      "allThreeAliasesRestored": true,
+      "interfaceAndInitializerBothUpdated": true,
+      "allExistingBytesOtherwiseIdentical": true,
+      "allFactsAndExistingLogoPathsUnchanged": true,
+      "selectedLightDarkAccentBlobsPresent": true,
+      "accentPreservesCurrentSelectedDarkPixels": true,
+      "allAliasUrlCallsPassActualCompiledPaths": true,
+      "originalUndefinedCallReproduced": true,
+      "typescriptSyntax": true,
+      "layoutAndOtherConsumersUnchanged": true
+    },
+    "sourceCopies": 0
+  },
+  "modernOriginalProof": {
+    "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/native13-modern-runtime/eight-modern-alias-repair-proof.json",
+    "sha256": "e6bb81ee497e21000b99317e0833ef7af4f10a1170d213cf1918670301efd9b6"
+  },
+  "compiled": false,
+  "newCiRun": null,
+  "providerWrites": 0
+}

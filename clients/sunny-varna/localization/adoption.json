@@ -12,7 +12,7 @@
     "scope": "existing-dealer-pilot",
     "sourceCommit": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "reviewed": true,
-    "reviewedAt": "2026-10-14T23:56:34.182Z",
+    "reviewedAt": "2026-10-15T08:41:06.302Z",
     "qualificationOnly": true,
     "approved": false,
     "nativeApproval": false,
@@ -28,9 +28,35 @@
     "sourceReview": {
       "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-review.json",
       "sha256": "27c6ce5dd17ee6e1b9f6a5b059a95d5e1dbe4200f61264fc50addeb7af89d984"
+    },
+    "dealerSourceRepair": {
+      "kind": "explicit-english-editorial-catalog",
+      "parentContextSha256": "ff635fd81ba706008175e577be2d2e7b68bf6ff00819aa0080f15b24699161a9",
+      "baseSourceCommit": "2bbe6a99e45526671d9c924962a66680f4c0b471",
+      "baseSourceTree": "07521f6d95a819e9213fd6ed889024fc4d84346d",
+      "path": "import/src/lib/content/extra-localized.ts",
+      "beforeBlob": "61bb83425722972a5b21eae63c677f244afba2aa",
+      "afterBlob": "7909ce408b6177f528f7192b2436ddeacdb5ed58",
+      "proof": {
+        "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/editorial-runtime-repair-20261015/sunny-varna/focused-proof.json",
+        "sha256": "7823cc781412fd4a3f4b2f6b4ecc56f680d7d321af94389d596c4b55369e4df3"
+      },
+      "evidenceReuse": "Original immutable six-template QA and source preparation remain provenance; focused exact-source localization proof covers this new dealer edit. No new CI, build, native or hosted success is asserted.",
+      "companionPatches": [
+        {
+          "path": "modern/packages/marketplace/lead-site.ts",
+          "beforeBlob": "8d24618a54f3c088ed9762af351e042790b94e9a",
+          "afterBlob": "35fc3c2ea7566e8f6eb30e908bc3f3a75d5e1137",
+          "sha256": "6f1f332164316c0bfa03ca2b935b1cb5a3410a247f8df28c3bd41f3cbe192bdc",
+          "proof": {
+            "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/editorial-runtime-repair-20261015/sunny-varna/focused-proof.json",
+            "sha256": "7823cc781412fd4a3f4b2f6b4ecc56f680d7d321af94389d596c4b55369e4df3"
+          }
+        }
+      ]
     }
   },
-  "contextDigest": "903115d61893af8ec6cc9602c90064917a217f4f6df6983e2b692d42f511fd90",
+  "contextDigest": "cbc1a37cb7709f5548d35d4deb67960914d10eb1edd9fd4615c1f2c32cd678c3",
   "releases": {
     "auto-best": {
       "status": "qualification",
@@ -1708,8 +1734,8 @@
             "path": "src/lib/content/extra-localized.ts",
             "export": "extraEnglish"
           },
-          "keys": 93,
-          "contentDigest": "a0ae04b8c75b04176fcf79e5e535d29fe91f523c131d6a3b9b2875378f6ed2c7"
+          "keys": 95,
+          "contentDigest": "67a422998ae83b9c9c48016d9184b0acded8f7ea9209a130e5fffa5ac093a667"
         }
       ],
       "declaredCatalogParityPassed": true,
@@ -1717,7 +1743,7 @@
     }
   },
   "input": {
-    "digest": "0a87e0575d8b8470fb04da24312979ca108053caf03ae790f2ae8e5b06bc21e4",
+    "digest": "8d4da87d48361a1532531e052c9b621025f2970c6aaf6560b551d7bc2c5e7adb",
     "files": 9146
   },
   "nativeApproval": false,

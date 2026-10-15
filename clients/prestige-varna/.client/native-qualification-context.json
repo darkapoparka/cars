@@ -6,7 +6,7 @@
   "scope": "existing-dealer-pilot",
   "sourceCommit": "bb173c33d7b640502ad2e4bf27546748c12858b8",
   "reviewed": true,
-  "reviewedAt": "2026-10-14T23:56:34.182Z",
+  "reviewedAt": "2026-10-15T08:40:59.625Z",
   "qualificationOnly": true,
   "approved": false,
   "nativeApproval": false,
@@ -22,5 +22,31 @@
   "sourceReview": {
     "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-review.json",
     "sha256": "27c6ce5dd17ee6e1b9f6a5b059a95d5e1dbe4200f61264fc50addeb7af89d984"
+  },
+  "dealerSourceRepair": {
+    "kind": "explicit-english-editorial-catalog",
+    "parentContextSha256": "8495ae4d74ec8aee4029e4b69382d1b0bffc312e0baf24b2662b657013b545f9",
+    "baseSourceCommit": "e33ced344bde012a59b4d39543696d42c6447780",
+    "baseSourceTree": "17cc51d27e39e7d21b0751673fea95e6ca20f8a3",
+    "path": "import/src/lib/content/extra-localized.ts",
+    "beforeBlob": "dbc0820b8403c16a53bfaa1a23e796798eaee5f1",
+    "afterBlob": "692f129dfbc09c1c83ec8013aa89b0b3c1439415",
+    "proof": {
+      "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/editorial-runtime-repair-20261015/prestige-varna/focused-proof.json",
+      "sha256": "7a2e3ca8e13df90449da6bbdb7f912c71c819e1d728fb426fed48bda46ac7ab4"
+    },
+    "evidenceReuse": "Original immutable six-template QA and source preparation remain provenance; focused exact-source localization proof covers this new dealer edit. No new CI, build, native or hosted success is asserted.",
+    "companionPatches": [
+      {
+        "path": "modern/packages/marketplace/lead-site.ts",
+        "beforeBlob": "118d93eb0ca3d67de59f06d07b0e4d8d97e25f05",
+        "afterBlob": "60b146048e3694722dc5e0ad831baf09027e76ea",
+        "sha256": "f2feb9ad660686accbec8b0fc8ccd1d15a86df9c179355fb19cbbd9f4b400c13",
+        "proof": {
+          "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/editorial-runtime-repair-20261015/prestige-varna/focused-proof.json",
+          "sha256": "7a2e3ca8e13df90449da6bbdb7f912c71c819e1d728fb426fed48bda46ac7ab4"
+        }
+      }
+    ]
   }
 }

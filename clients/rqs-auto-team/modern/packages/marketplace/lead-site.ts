@@ -68,6 +68,9 @@ export interface LeadSiteConfig {
   readonly localizedCopy?: Readonly<Record<"bg" | "en", LeadSiteCopy>>;
   readonly logoInversePath?: string;
   readonly logoPath: string;
+  readonly logoOnLight: string;
+  readonly logoOnDark: string;
+  readonly logoOnAccent: string;
   readonly mapsEmbedUrl: string;
   readonly mapsUrl: string;
   readonly mobileFinancingArtworkPath?: string;
@@ -146,6 +149,9 @@ export const leadSite: LeadSiteConfig = {
   locale: "bg-BG",
   logoPath: "/dealer-brand/v2-5c4df8204c0ea6d6/logo-on-light.webp",
   logoInversePath: "/dealer-brand/v2-5c4df8204c0ea6d6/logo-on-dark.webp",
+  logoOnLight: "/dealer-brand/v2-5c4df8204c0ea6d6/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-5c4df8204c0ea6d6/logo-on-dark.webp",
+  logoOnAccent: "/dealer-brand/v2-5c4df8204c0ea6d6/logo-on-dark.webp",
   mapsEmbedUrl:
     "https://maps.google.com/maps?q=R.Q.S.%20Auto%20%E2%80%93%20Team%2C%20%D0%B1%D1%83%D0%BB.%20%E2%80%9E%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%E2%80%9C%2C%20%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D1%81%D0%BB%D0%B0%D0%B2%20%D0%92%D0%B0%D1%80%D0%BD%D0%B5%D0%BD%D1%87%D0%B8%D0%BA%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%20%E2%80%94%20%D1%82%D0%BE%D1%87%D0%BD%D0%B8%D1%8F%D1%82%20%D0%BD%D0%BE%D0%BC%D0%B5%D1%80%20%D0%BD%D0%B5%20%D0%B5%20%D0%BF%D0%BE%D1%82%D0%B2%D1%8A%D1%80%D0%B4%D0%B5%D0%BD&z=16&output=embed",
   mapsUrl:

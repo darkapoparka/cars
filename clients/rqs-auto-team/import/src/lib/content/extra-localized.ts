@@ -1,4 +1,6 @@
 export const extraEnglish = {
+  "Демонстрационни автомобили от шаблона, а не наличност на автокъщата. Illustrative template vehicles, not this dealership’s stock.": "Illustrative template vehicles, not this dealership’s stock.",
+  "Независим демонстрационен преглед; формите не изпращат съобщения и не създават резервации. Independent demonstration: forms do not send enquiries or create reservations.": "Independent demonstration: forms do not send enquiries or create reservations.",
   "Най-желаната кола в България | Lamborghini Urus": "The most sought-after car in Bulgaria | Lamborghini Urus",
   "Продадох най-новата Панамера": "I sold the latest Panamera",
   "Продадох най-скъпия Брабус в България": "I sold the most expensive Brabus in Bulgaria",

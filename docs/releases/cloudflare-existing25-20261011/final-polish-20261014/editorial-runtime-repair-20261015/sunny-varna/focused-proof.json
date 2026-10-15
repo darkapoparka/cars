@@ -1,0 +1,170 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-focused-exact-source-editorial-repair-proof",
+  "dealer": "sunny-varna",
+  "baseSourceCommit": "2bbe6a99e45526671d9c924962a66680f4c0b471",
+  "baseSourceTree": "07521f6d95a819e9213fd6ed889024fc4d84346d",
+  "sourceModuleProof": {
+    "dealer": "sunny-varna",
+    "sourceCommit": "2bbe6a99e45526671d9c924962a66680f4c0b471",
+    "sourceTree": "07521f6d95a819e9213fd6ed889024fc4d84346d",
+    "manifest": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/run-38689980731-attempt-1/sunny-varna-proposal-manifest.json",
+      "sha256": "4d6cd2f0699efc70548b921ba8e82f506e84f5ddcb2196cfd16619a4f5ead60f"
+    },
+    "scope": "clients/sunny-varna/import/src/lib/content/extra-localized.ts",
+    "baseBlob": "61bb83425722972a5b21eae63c677f244afba2aa",
+    "candidateBlob": "7909ce408b6177f528f7192b2436ddeacdb5ed58",
+    "candidate": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/current-eleven-import-editorial/candidates/sunny-varna/extra-localized.ts",
+      "sha256": "f43562b66a659d3996d4ad04015c11857ac3fd4ebb866ce93198d13814831b2c"
+    },
+    "patch": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/current-eleven-import-editorial/candidates/sunny-varna/explicit-editorial.patch",
+      "sha256": "550badfcf29e23725e347fc08e6a4add28f26cd2e3bf54d0b10a0e317e40ef3d"
+    },
+    "addedEntries": [
+      {
+        "bg": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата. Illustrative template vehicles, not this dealership’s stock.",
+        "en": "Illustrative template vehicles, not this dealership’s stock."
+      },
+      {
+        "bg": "Независим демонстрационен преглед; формите не изпращат съобщения и не създават резервации. Independent demonstration: forms do not send enquiries or create reservations.",
+        "en": "Independent demonstration: forms do not send enquiries or create reservations."
+      }
+    ],
+    "beforeError": "Missing English editorial catalog entry: Демонстрационни автомобили от шаблона, а не наличност на автокъщата. Illustrative template vehicles, not this dealership’s stock.",
+    "intermediateError": "Missing English editorial catalog entry: Независим демонстрационен преглед; формите не изпращат съобщения и не създават резервации. Independent demonstration: forms do not send enquiries or create reservations.",
+    "after": [
+      {
+        "slug": "confirm-current-availability",
+        "title": "How to confirm current availability at СЪНИ",
+        "category": "Dealer information",
+        "date": "2026-01-01",
+        "image": "/assets/daynight/codex-generated-v2/blog/blog-cover-import-check-v2.webp",
+        "excerpt": "Illustrative template vehicles, not this dealership’s stock.",
+        "content": [
+          "Contact the dealership on 0898 644 464 and identify the exact vehicle before visiting.",
+          "Independent demonstration: forms do not send enquiries or create reservations."
+        ]
+      }
+    ],
+    "packagingContactAdapter": {
+      "schemaVersion": 1,
+      "dealer": "sunny-varna",
+      "applied": true,
+      "path": "import/src/lib/config/site.ts",
+      "href": "https://cars-sunny-varna.darkapoparka1.workers.dev/variant-3/bg/contact",
+      "beforeSha256": "13c22a45540715ccc6a1891423b774a456a285c820177f4e3cbc87bb3cd113b1",
+      "afterSha256": "3291b9f1eb4057f2577d654a4af2c4668eb44ce96864a2aa7679e3945762b10a",
+      "originalDealerConfigSha256": "995754dedd614681c9c6816c3007f6d2d0c138b4c64081ddb6f0d2a9c2106f9e",
+      "emailInvented": false,
+      "mode": "Existing same-origin contact page; no external enquiry submitted"
+    },
+    "checks": {
+      "exactRetainedSource": true,
+      "beforeFailureReproduced": true,
+      "actualDisclosureFailureReproduced": true,
+      "afterEnglishPostsPassed": true,
+      "bgBehaviorUnchanged": true,
+      "dateSlugAndImageUnchanged": true,
+      "allExistingCatalogEntriesUnchanged": true,
+      "unknownEditorialStillThrows": true,
+      "onlyActualEmittedCatalogEntriesAdded": true,
+      "onlyCatalogPrefixChanged": true
+    },
+    "modulesRead": [
+      {
+        "path": "import/src/lib/content/localized.ts",
+        "blob": "224c9d6c84fd388af12c1332a2a4710136212f58"
+      },
+      {
+        "path": "import/src/lib/content/extra-localized.ts",
+        "blob": "61bb83425722972a5b21eae63c677f244afba2aa"
+      },
+      {
+        "path": "import/src/lib/config/site.ts",
+        "blob": "d8ccb2e922f23a4223bad5c590fd1a61cd234c17"
+      },
+      {
+        "path": "import/src/lib/config/dealer.ts",
+        "blob": "d0fe2ccf3f9957a0ec133d1364f3d7a78e7297f8"
+      },
+      {
+        "path": "import/src/lib/config/cars-locale.ts",
+        "blob": "425d88a2d65913bccc8d825daf283f8028b96c9c"
+      },
+      {
+        "path": "import/src/lib/data/blog.ts",
+        "blob": "0c031cbade6be7ca36be2539ab16c32778794a84"
+      }
+    ]
+  },
+  "originalProof": {
+    "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/current-eleven-import-editorial/candidates/eleven-editorial-repair-proof.json",
+    "sha256": "10f723c352c11ee952437627ffbe79af81d26105d43dd3219ea3c837d86d4f4e"
+  },
+  "modernLogoAliasProof": {
+    "dealer": "sunny-varna",
+    "sourceCommit": "2bbe6a99e45526671d9c924962a66680f4c0b471",
+    "sourceTree": "07521f6d95a819e9213fd6ed889024fc4d84346d",
+    "scope": "modern/packages/marketplace/lead-site.ts",
+    "baseBlob": "8d24618a54f3c088ed9762af351e042790b94e9a",
+    "baseSha256": "5f14e8cf85acdf4fc10378624a3cd47ff4af323f3b83eba180ac45c5b12c4215",
+    "selectedRasterBindings": {
+      "logoOnLight": {
+        "path": "/dealer-brand/v2-3eab0e10b1487ebc/logo-on-light.webp",
+        "sourcePath": "modern/apps/web/public/dealer-brand/v2-3eab0e10b1487ebc/logo-on-light.webp",
+        "blob": "763381f62c43279ba61d75df41446d711f90dbcf"
+      },
+      "logoOnDark": {
+        "path": "/dealer-brand/v2-3eab0e10b1487ebc/logo-on-dark.webp",
+        "sourcePath": "modern/apps/web/public/dealer-brand/v2-3eab0e10b1487ebc/logo-on-dark.webp",
+        "blob": "3d077b0cdfa012f3cbbd7d68c3a7bfa90ee5417c"
+      },
+      "logoOnAccent": {
+        "path": "/dealer-brand/v2-3eab0e10b1487ebc/logo-on-accent.webp",
+        "sourcePath": "modern/apps/web/public/dealer-brand/v2-3eab0e10b1487ebc/logo-on-accent.webp",
+        "blob": "3d077b0cdfa012f3cbbd7d68c3a7bfa90ee5417c"
+      }
+    },
+    "values": {
+      "logoOnLight": "/dealer-brand/v2-3eab0e10b1487ebc/logo-on-light.webp",
+      "logoOnDark": "/dealer-brand/v2-3eab0e10b1487ebc/logo-on-dark.webp",
+      "logoOnAccent": "/dealer-brand/v2-3eab0e10b1487ebc/logo-on-dark.webp"
+    },
+    "companionPatches": [
+      {
+        "path": "modern/packages/marketplace/lead-site.ts",
+        "baseBlob": "8d24618a54f3c088ed9762af351e042790b94e9a",
+        "candidateFile": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/native13-modern-runtime/sunny-varna-lead-site.ts",
+        "candidateSha256": "6f1f332164316c0bfa03ca2b935b1cb5a3410a247f8df28c3bd41f3cbe192bdc",
+        "candidateBlob": "35fc3c2ea7566e8f6eb30e908bc3f3a75d5e1137",
+        "bytes": 6215,
+        "encoding": "utf8"
+      }
+    ],
+    "actualProviderException": null,
+    "unbuiltSourceRiskOnly": true,
+    "checks": {
+      "allThreeAliasesRestored": true,
+      "interfaceAndInitializerBothUpdated": true,
+      "allExistingBytesOtherwiseIdentical": true,
+      "allFactsAndExistingLogoPathsUnchanged": true,
+      "selectedLightDarkAccentBlobsPresent": true,
+      "accentPreservesCurrentSelectedDarkPixels": true,
+      "allAliasUrlCallsPassActualCompiledPaths": true,
+      "originalUndefinedCallReproduced": true,
+      "typescriptSyntax": true,
+      "layoutAndOtherConsumersUnchanged": true
+    },
+    "sourceCopies": 0
+  },
+  "modernOriginalProof": {
+    "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/native13-modern-runtime/eight-modern-alias-repair-proof.json",
+    "sha256": "e6bb81ee497e21000b99317e0833ef7af4f10a1170d213cf1918670301efd9b6"
+  },
+  "compiled": false,
+  "newCiRun": null,
+  "providerWrites": 0
+}
