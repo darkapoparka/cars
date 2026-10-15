@@ -3,12 +3,12 @@
   "dealer": "triumf-varna",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/app",
-    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
-    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
   },
-  "appDigest": "a674f904f686013bb4662bd11739f39696d28d173671e5adb1d48d45df792b76",
+  "appDigest": "7cc3209b6325bc1b20991e88379927f083a0e8062e15f66cb1d1c7c1306e68fd",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "triumf-varna",
@@ -21,14 +21,14 @@
     "assets": [
       {
         "source": "auto-best/static/dealer-brand/logo-on-light.png",
-        "output": "public/dealer-app/logo-light-a9cf7f8d851e8905bbce.png",
-        "sha256": "a9cf7f8d851e8905bbce5f423feced2bbdc0909f233262bea35289a229889595",
+        "output": "public/dealer-app/logo-light-6f082f384bd0ff53beb7.png",
+        "sha256": "6f082f384bd0ff53beb72553ef7b0dbe4b752cdac79a92bcda10b820012280cf",
         "role": "logo-light"
       },
       {
         "source": "auto-best/static/dealer-brand/logo-on-dark.png",
-        "output": "public/dealer-app/logo-dark-67730c5925f188741ae9.png",
-        "sha256": "67730c5925f188741ae97bc8124def9ec59221947ce4e4cec72f5b2265391dab",
+        "output": "public/dealer-app/logo-dark-77b7f8a1880c378140d3.png",
+        "sha256": "77b7f8a1880c378140d35319bd9f163326849fab2885f7728474c72aaeca9b8b",
         "role": "logo-dark"
       },
       {
@@ -54,5 +54,6 @@
     ]
   },
   "needsDealerQA": true,
-  "readyToPublish": false
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-15T04:04:44.009Z"
 }

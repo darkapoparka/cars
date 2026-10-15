@@ -50,7 +50,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Триумф",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-113ceeaf81b1bde1/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-9e8900cafa168936/logo-on-light.webp"
     },
     "publishedAt": "2026-10-11T09:00:00.000Z",
     "promoted": true

@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "Триумф",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-113ceeaf81b1bde1/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-113ceeaf81b1bde1/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-113ceeaf81b1bde1/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-9e8900cafa168936/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-9e8900cafa168936/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-9e8900cafa168936/logo-on-dark.webp",
     "alt": "Триумф",
-    "favicon": "/dealer-brand/v2-113ceeaf81b1bde1/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-9e8900cafa168936/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

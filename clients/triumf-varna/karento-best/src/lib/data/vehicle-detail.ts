@@ -155,7 +155,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "Триумф",
   "location": "бул. Цар Освободител, Варна, България",
-  "avatar": "/dealer-brand/v2-113ceeaf81b1bde1/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-9e8900cafa168936/logo-on-light.webp",
   "mobile": "0898547765",
   "email": "",
   "whatsapp": "",

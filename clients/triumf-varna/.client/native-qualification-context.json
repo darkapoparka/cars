@@ -1,38 +1,26 @@
 {
   "schemaVersion": 1,
   "kind": "cars-native-source-qualification-context",
-  "id": "fleet-additional100-absent-b1f0f56",
+  "id": "fleet-final-polish-20261014",
   "dealer": "triumf-varna",
-  "scope": "new-dealer-source-proposal",
-  "sourceCommit": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+  "scope": "existing-dealer-pilot",
+  "sourceCommit": "bb173c33d7b640502ad2e4bf27546748c12858b8",
   "reviewed": true,
-  "reviewedAt": "2026-10-12T11:41:11.170Z",
+  "reviewedAt": "2026-10-14T23:56:34.182Z",
   "qualificationOnly": true,
+  "approved": false,
   "nativeApproval": false,
   "hostedApproval": false,
   "globalReleaseApproval": false,
   "approvedLockSha256": "ecdfaf9599fbcbeadebc24de3b9aa1c7615a9a49e29d338e5e9a23427d405e26",
-  "candidateLockSha256": "c28d29acdf39709d38737a972eeb2a1d000cfb1cd96de587c38effd764386ac1",
+  "candidateLockSha256": "04633129df9e75d6cd62deeac9125b279957789d75f57cdb0b243ef61bfc3e7e",
   "sourceDeltaReview": {
-    "reference": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
-    "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975",
-    "reviewedAt": "2026-10-11T21:04:02.173Z"
+    "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
+    "sha256": "43cb6876e815a2a6b866f1dadd304236de4ae58c05fe65c2ab62a23506ee7ce9",
+    "reviewedAt": "2026-10-14T23:55:37.398Z"
   },
-  "pendingNativeChecks": [
-    "catalog-completeness",
-    "hardcoded-ui",
-    "native-routing",
-    "standalone-journeys",
-    "mounted-journeys",
-    "public-journeys",
-    "preferences-no-js",
-    "preferences-storage-disabled",
-    "preferences-races",
-    "request-isolation",
-    "security-write-blocking",
-    "assets-preserved"
-  ],
-  "pending": [
-    "Current-source native build, mounted/public hosted journeys and dealer/owner approval remain pending. This is not template promotion or hosted publication."
-  ]
+  "sourceReview": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-review.json",
+    "sha256": "27c6ce5dd17ee6e1b9f6a5b059a95d5e1dbe4200f61264fc50addeb7af89d984"
+  }
 }
