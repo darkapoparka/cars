@@ -63,7 +63,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "K-G Team Auto",
       "verificationStatus": "unverified",
       "city": "Пловдив",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-781617de6df8596a/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": true
@@ -125,7 +125,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "K-G Team Auto",
       "verificationStatus": "unverified",
       "city": "Пловдив",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-781617de6df8596a/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": true
@@ -181,7 +181,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "K-G Team Auto",
       "verificationStatus": "unverified",
       "city": "Пловдив",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-781617de6df8596a/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": true
@@ -243,7 +243,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "K-G Team Auto",
       "verificationStatus": "unverified",
       "city": "Пловдив",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-781617de6df8596a/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": false
@@ -299,7 +299,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "K-G Team Auto",
       "verificationStatus": "unverified",
       "city": "Пловдив",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-781617de6df8596a/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": false
@@ -373,7 +373,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "K-G Team Auto",
       "verificationStatus": "unverified",
       "city": "Пловдив",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-781617de6df8596a/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": false
@@ -439,7 +439,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "K-G Team Auto",
       "verificationStatus": "unverified",
       "city": "Пловдив",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-781617de6df8596a/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": false
@@ -509,7 +509,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "K-G Team Auto",
       "verificationStatus": "unverified",
       "city": "Пловдив",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-781617de6df8596a/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": false
@@ -565,7 +565,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "K-G Team Auto",
       "verificationStatus": "unverified",
       "city": "Пловдив",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-781617de6df8596a/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": false
@@ -631,7 +631,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "K-G Team Auto",
       "verificationStatus": "unverified",
       "city": "Пловдив",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-781617de6df8596a/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": false

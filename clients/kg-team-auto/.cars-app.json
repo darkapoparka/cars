@@ -3,32 +3,32 @@
   "dealer": "kg-team-auto",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/app",
-    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1",
-    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76"
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
   },
-  "appDigest": "8d9938717e6766dfba408c5fdea3a0280d71d8177a6cf924597276581a178c81",
+  "appDigest": "58ac4c2ceaba7ec4445c622d2e83af5c86c608bea735a6515636e85c23909f0a",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "kg-team-auto",
     "profile": "auto-best/src/lib/data/dealer-profile.json",
-    "profileSha256": "b3904a87fd78ebde2b0e52cb4456e0c548e29adb2fae2c8470323a9b810ef1cd",
+    "profileSha256": "f5a8705f6cd15dd50137d6aa8b919a1539a6c01fba2ff953bebfa7df949279af",
     "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
     "vehicles": 10,
     "currency": "EUR",
     "observedAt": "2026-09-09",
     "assets": [
       {
-        "source": "auto-best/static/dealer-brand/logo-on-light.webp",
-        "output": "public/dealer-app/logo-light-7de2782ad72b2c192387.webp",
-        "sha256": "7de2782ad72b2c192387a2bda31ccf27dd72f30849d49d936b1e89915f908947",
+        "source": "auto-best/static/dealer-brand/v2-781617de6df8596a/logo-on-light.webp",
+        "output": "public/dealer-app/logo-light-005ba474eaae24c74e90.webp",
+        "sha256": "005ba474eaae24c74e9007fcc2bd23d077472d1ad1a5d3451d3e27258d1d7107",
         "role": "logo-light"
       },
       {
-        "source": "auto-best/static/dealer-brand/logo-on-dark.webp",
-        "output": "public/dealer-app/logo-dark-bde0abdfadf37a307295.webp",
-        "sha256": "bde0abdfadf37a307295aa1dfaeb9f51da6f4e9173be96924e13356aff4329d1",
+        "source": "auto-best/static/dealer-brand/v2-781617de6df8596a/logo-on-dark.webp",
+        "output": "public/dealer-app/logo-dark-c3cc1ae7a751cf4fefec.webp",
+        "sha256": "c3cc1ae7a751cf4fefec03a06b3d99aa106f03e03bc3c94789a8e5b0dcf20e3c",
         "role": "logo-dark"
       },
       {
@@ -273,67 +273,9 @@
         "sourceUnit": "km",
         "canonicalKm": 207000
       }
-    ],
-    "manufacturerArtworkRepair": {
-      "sourceRepository": "darkapoparka/cars-f1rstmotors",
-      "sourceCommit": "e01e5aed41d1aa86b43a4af75ef7fcb49e5e1c33",
-      "template": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
-      "assets": [
-        {
-          "make": "koenigsegg",
-          "target": "app/public/brands/approved/koenigsegg.webp",
-          "templatePath": "templates/auto-best/static/assets/images/makes/koenigsegg.webp",
-          "template": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
-          "sha256": "b47642f7fad39261c7438625b0935a96d6650fe5d847ba2056b96b398c6b64d9",
-          "bytes": 4370
-        },
-        {
-          "make": "bugatti",
-          "target": "app/public/brands/approved/bugatti.webp",
-          "templatePath": "templates/auto-best/static/assets/images/makes/bugatti.webp",
-          "template": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
-          "sha256": "89447a433945e489bce3ab24c362028716fed932ce2645e9f08b0dd3fbad65a7",
-          "bytes": 3998
-        },
-        {
-          "make": "porsche",
-          "target": "app/public/brands/approved/porsche.webp",
-          "templatePath": "templates/auto-best/static/assets/images/makes/porsche.webp",
-          "template": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
-          "sha256": "d2f6da6c989574f3abaaa540107d78f2a8f2e0b7b1e60d94737c6371c8f4e3a8",
-          "bytes": 5746
-        },
-        {
-          "make": "ferrari",
-          "target": "app/public/brands/approved/ferrari.webp",
-          "templatePath": "templates/auto-best/static/assets/images/makes/ferrari.webp",
-          "template": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
-          "sha256": "405eec6203242b140dcd0346ae8b27353bf8295f04782ab3ffc1afef78e69b51",
-          "bytes": 4954
-        },
-        {
-          "make": "aston-martin",
-          "target": "app/public/brands/approved/aston-martin.webp",
-          "templatePath": "templates/auto-best/static/assets/images/makes/aston-martin.webp",
-          "template": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
-          "sha256": "432b2e3cdfd6fd6a4ae424c0c880419e452b5f9747d75d480717e7a03262eb56",
-          "bytes": 2722
-        },
-        {
-          "make": "lamborghini",
-          "target": "app/public/brands/approved/lamborghini.webp",
-          "templatePath": "templates/auto-best/static/assets/images/makes/lamborghini.webp",
-          "template": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
-          "sha256": "a0b0f7d584904ec7bf69641e77c09f5bb16988d77ba71440602374ac50a8959e",
-          "bytes": 4642
-        }
-      ],
-      "missing": [
-        "Mini",
-        "Subaru"
-      ]
-    }
+    ]
   },
   "needsDealerQA": true,
-  "readyToPublish": false
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-15T02:36:26.144Z"
 }

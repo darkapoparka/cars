@@ -95,7 +95,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "K-G Team Auto",
       "location": "Индустриална зона – Юг, Околовръстен път срещу хотел Чиирите",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-781617de6df8596a/logo-on-light.webp",
       "mobile": "+359877346262",
       "email": "",
       "whatsapp": "",
@@ -205,7 +205,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "K-G Team Auto",
       "location": "Индустриална зона – Юг, Околовръстен път срещу хотел Чиирите",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-781617de6df8596a/logo-on-light.webp",
       "mobile": "+359877346262",
       "email": "",
       "whatsapp": "",
@@ -313,7 +313,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "K-G Team Auto",
       "location": "Индустриална зона – Юг, Околовръстен път срещу хотел Чиирите",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-781617de6df8596a/logo-on-light.webp",
       "mobile": "+359877346262",
       "email": "",
       "whatsapp": "",
@@ -423,7 +423,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "K-G Team Auto",
       "location": "Индустриална зона – Юг, Околовръстен път срещу хотел Чиирите",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-781617de6df8596a/logo-on-light.webp",
       "mobile": "+359877346262",
       "email": "",
       "whatsapp": "",
@@ -531,7 +531,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "K-G Team Auto",
       "location": "Индустриална зона – Юг, Околовръстен път срещу хотел Чиирите",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-781617de6df8596a/logo-on-light.webp",
       "mobile": "+359877346262",
       "email": "",
       "whatsapp": "",
@@ -644,7 +644,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "K-G Team Auto",
       "location": "Индустриална зона – Юг, Околовръстен път срещу хотел Чиирите",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-781617de6df8596a/logo-on-light.webp",
       "mobile": "+359877346262",
       "email": "",
       "whatsapp": "",
@@ -755,7 +755,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "K-G Team Auto",
       "location": "Индустриална зона – Юг, Околовръстен път срещу хотел Чиирите",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-781617de6df8596a/logo-on-light.webp",
       "mobile": "+359877346262",
       "email": "",
       "whatsapp": "",
@@ -867,7 +867,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "K-G Team Auto",
       "location": "Индустриална зона – Юг, Околовръстен път срещу хотел Чиирите",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-781617de6df8596a/logo-on-light.webp",
       "mobile": "+359877346262",
       "email": "",
       "whatsapp": "",
@@ -975,7 +975,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "K-G Team Auto",
       "location": "Индустриална зона – Юг, Околовръстен път срещу хотел Чиирите",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-781617de6df8596a/logo-on-light.webp",
       "mobile": "+359877346262",
       "email": "",
       "whatsapp": "",
@@ -1086,7 +1086,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "K-G Team Auto",
       "location": "Индустриална зона – Юг, Околовръстен път срещу хотел Чиирите",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-781617de6df8596a/logo-on-light.webp",
       "mobile": "+359877346262",
       "email": "",
       "whatsapp": "",

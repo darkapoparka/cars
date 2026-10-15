@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "K-G Team Auto",
-  "logo": "/dealer-brand/logo-on-light.webp",
+  "logo": "/dealer-brand/v2-781617de6df8596a/logo-on-light.webp",
   "phone": "+359877346262",
   "email": null,
   "address": "Индустриална зона – Юг, Околовръстен път срещу хотел Чиирите",

@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "K-G Team Auto",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/logo-on-light.webp",
-    "footer": "/dealer-brand/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-781617de6df8596a/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-781617de6df8596a/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-781617de6df8596a/logo-on-dark.webp",
     "alt": "K-G Team Auto",
-    "favicon": "/dealer-brand/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-781617de6df8596a/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {
