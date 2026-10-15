@@ -371,7 +371,12 @@ export const MobileDealerDiscoveryHeader = ({
               <CategoryIcon category={category} />
             </button>
 
-            <DealerMobileBrandBar isBg={isBg} locale={locale} tone="clean" />
+            <DealerMobileBrandBar
+              isBg={isBg}
+              locale={locale}
+              tone="clean"
+              wordmarkTone="light"
+            />
 
             <button
               aria-haspopup="dialog"

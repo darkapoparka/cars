@@ -322,8 +322,8 @@
 
 .dockAction,
 .action {
-  color: var(--brand-foreground);
-  background: var(--brand);
+  color: var(--primary-foreground);
+  background: var(--primary);
 }
 
 .mobileContentsBody {
@@ -398,7 +398,7 @@
 
 .action:hover,
 .dockAction:hover {
-  background: var(--lead-site-accent-hover);
+  background: var(--primary-hover);
 }
 
 .back:hover,

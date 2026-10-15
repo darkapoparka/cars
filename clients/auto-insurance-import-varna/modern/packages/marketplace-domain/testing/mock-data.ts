@@ -46,7 +46,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Auto Insurance Import",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-0b34890d15774aaf/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-6c5e4220c5c7c260/logo-on-light.webp"
     },
     "publishedAt": "2026-10-12T09:00:00.000Z",
     "promoted": true
@@ -95,7 +95,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Auto Insurance Import",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-0b34890d15774aaf/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-6c5e4220c5c7c260/logo-on-light.webp"
     },
     "publishedAt": "2026-10-12T09:00:00.000Z",
     "promoted": true

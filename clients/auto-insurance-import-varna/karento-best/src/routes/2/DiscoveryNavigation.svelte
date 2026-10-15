@@ -1,6 +1,7 @@
 <script lang="ts">
   import { useLocale } from "#lib/i18n/context.svelte.ts";
   import { usePreview } from "#lib/preview.svelte.ts";
+  import BottomNavigationIcon from "#lib/components/mobile/BottomNavigationIcon.svelte";
 
   const locale = useLocale();
   const preview = usePreview();
@@ -8,37 +9,25 @@
     {
       href: "/2",
       label: locale.t("navigation.home"),
-      path: "M3 10 12 3l9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1Z",
+      icon: "home" as const,
     },
     {
       href: "/vehicles",
-      label: locale.t("navigation.vehicles"),
-      path: "m5 7 2-4h10l2 4M3 10l2-3h14l2 3v8H3Zm0 8v3m18-3v3M6 13h2m8 0h2",
+      label: locale.t("navigation.mobileVehicles"),
+      icon: "vehicles" as const,
     },
     {
       href: "/services",
       label: locale.t("navigation.services"),
-      path: "M14 3a6 6 0 0 0-7 8L3 15a3 3 0 0 0 4 4l4-4a6 6 0 0 0 8-7l-4 4-3-3 4-4Z",
+      icon: "services" as const,
     },
     {
       href: "/shop",
       label: locale.t("navigation.shop"),
-      path: "M4 8h16l1 13H3ZM8 8V6a4 4 0 0 1 8 0v2",
+      icon: "shop" as const,
     },
   ]);
 </script>
-
-{#snippet icon(path: string)}
-  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"
-    ><path
-      d={path}
-      stroke="currentColor"
-      stroke-width="1.6"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    /></svg
-  >
-{/snippet}
 
 <nav
   class="karento-mobile-navigation discovery-navigation"
@@ -51,7 +40,11 @@
       href={locale.href(link.href)}
       aria-current={link.href === "/2" ? "page" : undefined}
     >
-      {@render icon(link.path)}<span>{link.label}</span>
+      <BottomNavigationIcon
+        name={link.icon}
+        appearance="graphite"
+        active={link.href === "/2"}
+      /><span>{link.label}</span>
     </a>
   {/each}
   <button
@@ -64,7 +57,7 @@
       preview.drawer = true;
     }}
   >
-    {@render icon("M4 6h16M4 12h16M4 18h16")}<span
+    <BottomNavigationIcon name="menu" appearance="graphite" /><span
       >{locale.t("ui.mobile-navigation.menu")}</span
     >
   </button>

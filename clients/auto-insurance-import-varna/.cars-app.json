@@ -3,12 +3,12 @@
   "dealer": "auto-insurance-import-varna",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/app",
-    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
-    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
   },
-  "appDigest": "0d1845ffcccb915840bcd02b8f138fa266a64042fc0186d0359b6e7467aeb9f8",
+  "appDigest": "314e757d88f4bea1e800f5b543ad7c3fe6cabadcd8c8469bedaa75579418f67c",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "auto-insurance-import-varna",
@@ -21,14 +21,14 @@
     "assets": [
       {
         "source": "auto-best/static/dealer-brand/logo-on-light.png",
-        "output": "public/dealer-app/logo-light-1404b0caa34da7d2708f.png",
-        "sha256": "1404b0caa34da7d2708fe8bafe0ac6c43a8d5b029a9a41fb2f09b627458b6f10",
+        "output": "public/dealer-app/logo-light-7c9acdcb5aa617da748d.png",
+        "sha256": "7c9acdcb5aa617da748d5729d8cd3046e8e3eb5c09b2f63ca2cf804aa348e86a",
         "role": "logo-light"
       },
       {
         "source": "auto-best/static/dealer-brand/logo-on-dark.png",
-        "output": "public/dealer-app/logo-dark-7a7b630e06fc31867d6a.png",
-        "sha256": "7a7b630e06fc31867d6abdc5e834080857d89e568580b5d213ae0659dbecfaa4",
+        "output": "public/dealer-app/logo-dark-10186fbd0eef9f16766b.png",
+        "sha256": "10186fbd0eef9f16766b71cb86ec4623b6a853c8f1defc85e02efd23dea1ff71",
         "role": "logo-dark"
       },
       {
@@ -60,5 +60,6 @@
     ]
   },
   "needsDealerQA": true,
-  "readyToPublish": false
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-15T04:17:15.616Z"
 }

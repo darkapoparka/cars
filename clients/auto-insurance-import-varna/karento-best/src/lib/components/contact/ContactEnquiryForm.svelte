@@ -7,11 +7,28 @@
   import DemoForm from "#lib/components/DemoForm.svelte";
   import { MediaQuery } from "svelte/reactivity";
   const desktop = new MediaQuery("(min-width: 992px)");
-  let { idPrefix = "contact" }: { idPrefix?: string } = $props();
+  let {
+    idPrefix = "contact",
+    formId,
+    serviceTitle,
+    showSubmit = true,
+    onpreview,
+  }: {
+    idPrefix?: string;
+    formId?: string;
+    serviceTitle?: string;
+    showSubmit?: boolean;
+    onpreview?: () => void;
+  } = $props();
 </script>
 
-<DemoForm class="form-contact" data-contact-enquiry>
-  {#if desktop.current}
+<DemoForm id={formId} class="form-contact" data-contact-enquiry {onpreview}>
+  {#if serviceTitle}<input
+      type="hidden"
+      name="service"
+      value={serviceTitle}
+    />{/if}
+  {#if desktop.current || serviceTitle}
     <p class="desktop-form-help neutral-500 desktop-type-body-small">
       {locale.t("contact.polish.formHelp")}
     </p>
@@ -130,46 +147,58 @@
         </div>
       </div>
     {/if}
-    <div class="col-lg-12">
-      <button
-        class={desktop.current
-          ? "btn btn-book desktop-action-primary desktop-panel-action rounded-pill desktop-type-pill desktop-enquiry-submit"
-          : "btn btn-book desktop-type-control"}
-        aria-label={locale.t(
-          desktop.current || dealer.businessPreview
-            ? "dealer.enquiry.preview"
-            : "ui.contact-enquiry-form.send-message",
-        )}
-        type="submit"
-      >
-        {locale.t(
-          desktop.current || dealer.businessPreview
-            ? "dealer.enquiry.preview"
-            : "ui.contact-enquiry-form.send-message",
-        )}
-        <svg
-          width="17"
-          height="16"
-          viewBox="0 0 17 16"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true"
-          focusable="false"
+    {#if showSubmit}<div class="col-lg-12">
+        <button
+          class={desktop.current
+            ? "btn btn-book desktop-action-primary desktop-panel-action rounded-pill desktop-type-pill desktop-enquiry-submit"
+            : "btn btn-book desktop-type-control"}
+          aria-label={locale.t(
+            desktop.current || dealer.businessPreview
+              ? "dealer.enquiry.preview"
+              : "ui.contact-enquiry-form.send-message",
+          )}
+          type="submit"
         >
-          <path
-            d="M8.5 15L15.5 8L8.5 1M15.5 8L1.5 8"
-            stroke=""
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          ></path>
-        </svg>
-      </button>
-    </div>
+          {locale.t(
+            desktop.current || dealer.businessPreview
+              ? "dealer.enquiry.preview"
+              : "ui.contact-enquiry-form.send-message",
+          )}
+          <svg
+            width="17"
+            height="16"
+            viewBox="0 0 17 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path
+              d="M8.5 15L15.5 8L8.5 1M15.5 8L1.5 8"
+              stroke=""
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </svg>
+        </button>
+      </div>{/if}
   </div>
 </DemoForm>
 
 <style>
+  @media (max-width: 767.98px) {
+    .form-group input.username,
+    .form-group input.username:focus {
+      background-position: left var(--karento-space-3) center;
+      background-size: var(--karento-control-icon);
+      padding-left: calc(
+        var(--karento-space-3) + var(--karento-control-icon) +
+          var(--karento-space-2)
+      );
+    }
+  }
+
   @media (min-width: 992px) {
     .desktop-form-help {
       margin-bottom: var(--karento-desktop-space-6);

@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "Auto Insurance Import",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-0b34890d15774aaf/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-0b34890d15774aaf/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-0b34890d15774aaf/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-6c5e4220c5c7c260/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-6c5e4220c5c7c260/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-6c5e4220c5c7c260/logo-on-dark.webp",
     "alt": "Auto Insurance Import",
-    "favicon": "/dealer-brand/v2-0b34890d15774aaf/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-6c5e4220c5c7c260/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

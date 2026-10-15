@@ -78,7 +78,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Auto Insurance Import",
       "location": "гр. Варна, Варна, България",
-      "avatar": "/dealer-brand/v2-0b34890d15774aaf/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-6c5e4220c5c7c260/logo-on-light.webp",
       "mobile": "0878601371",
       "email": "",
       "whatsapp": "",
@@ -172,7 +172,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Auto Insurance Import",
       "location": "гр. Варна, Варна, България",
-      "avatar": "/dealer-brand/v2-0b34890d15774aaf/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-6c5e4220c5c7c260/logo-on-light.webp",
       "mobile": "0878601371",
       "email": "",
       "whatsapp": "",
