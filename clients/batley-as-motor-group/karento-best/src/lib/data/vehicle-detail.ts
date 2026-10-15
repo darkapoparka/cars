@@ -116,6 +116,12 @@ export const referenceSpecifications: readonly DetailSpecification[] = [
     "value": "Diesel",
     "labelKey": "vehicle.field.fuel",
     "valueKey": "fuel.diesel"
+  },
+  {
+    "id": "year",
+    "icon": "/assets/imgs/template/icons/calendar.svg",
+    "value": "2015",
+    "labelKey": "vehicle.field.year"
   }
 ];
 
@@ -141,7 +147,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "AS Motor Group",
   "location": "Unit 2-3 Chopdat Industrial Estate, Soothill Lane, Batley WF17 5SS",
-  "avatar": "/dealer-brand/logo.webp",
+  "avatar": "/dealer-brand/v2-f2490e1cd4aba515/logo-on-light.webp",
   "mobile": "",
   "email": "",
   "whatsapp": "",

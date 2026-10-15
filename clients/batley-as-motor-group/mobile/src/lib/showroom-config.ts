@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "AS Motor Group",
-  "logo": "/variant-5/dealer-brand/logo-on-light-20261011.webp",
+  "logo": "/dealer-brand/v2-f2490e1cd4aba515/logo-on-light.webp",
   "phone": null,
   "email": null,
   "address": "Unit 2-3 Chopdat Industrial Estate, Soothill Lane, Batley WF17 5SS",

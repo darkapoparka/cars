@@ -23,13 +23,17 @@ export const dealerLocalizedText = {
     "city": "Batley, West Yorkshire",
     "addressLine": "Unit 2-3 Chopdat Industrial Estate, Soothill Lane, Batley WF17 5SS",
     "address": "Unit 2-3 Chopdat Industrial Estate, Soothill Lane, Batley WF17 5SS",
-    "appointment": "Contact the dealership before visiting."
+    "appointment": "Contact the dealership before visiting.",
+    "addressShort": "Unit 2-3 Chopdat Industrial Estate, Soothill Lane, Batley WF17 5SS",
+    "appointmentShort": "Contact the dealership before visiting."
   },
   "bg": {
     "city": "Batley, West Yorkshire",
     "addressLine": "Unit 2-3 Chopdat Industrial Estate, Soothill Lane, Batley WF17 5SS",
     "address": "Unit 2-3 Chopdat Industrial Estate, Soothill Lane, Batley WF17 5SS",
-    "appointment": "Свържете се с автокъщата преди посещение."
+    "appointment": "Свържете се с автокъщата преди посещение.",
+    "addressShort": "Unit 2-3 Chopdat Industrial Estate, Soothill Lane, Batley WF17 5SS",
+    "appointmentShort": "Свържете се с автокъщата преди посещение."
   }
 } as const;
 

@@ -21,11 +21,20 @@
     services:
       "M14 3a6 6 0 0 0-7 8L3 15a3 3 0 0 0 4 4l4-4a6 6 0 0 0 8-7l-4 4-3-3 4-4Z",
     shop: "M4 8h16l1 13H3ZM8 8V6a4 4 0 0 1 8 0v2",
+    cart: "M3 3h2l3 12h10l3-9H6m2 9-1 3h11M9 21h.01M17 21h.01",
+    minus: "M6 12h12",
+    plus: "M6 12h12M12 6v12",
     account:
       "M15.5 7.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0ZM5 20v-1a7 7 0 0 1 14 0v1",
     search: "m21 21-5.3-5.3M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0",
     message:
       "M21 15a3 3 0 0 1-3 3H7l-4 3V6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v9ZM7 8h10M7 12h6",
+    transport:
+      "M1 4h13v13H1ZM14 8h5l4 5v4h-9M4 17a2 2 0 1 0 4 0M16 17a2 2 0 1 0 4 0M3 9h8m-3-3 3 3-3 3",
+    key: "M9 14a5 5 0 1 1 3-3l9 9-2 2-3-3-2 2-3-3M6 7h.01",
+    finance:
+      "M5 2h14v20H5ZM8 5h8v4H8ZM8 13h1m3 0h1m3 0h.01M8 17h1m3 0h1m3 0h.01",
+    sell: "M3 3h8l10 10-8 8L3 11ZM7 7h.01",
   } as const;
 
   export type MobileIconName = keyof typeof paths;
