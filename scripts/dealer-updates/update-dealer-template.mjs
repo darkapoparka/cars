@@ -612,17 +612,31 @@ export async function personalizeFactualTargetBases({pins,newBases,dealerRoot,ma
   return personalizePinnedTargetBases({pins,newBases,dealerRoot,manifest,profile:loadDealerProfile(dealerRoot,manifest.slug),modernCopyReview,appInventoryNoticeReview});
 }
 
+// These four matrices retain historical dealer QA; they are not current application consumers.
+const HISTORICAL_IMPORT_QA_PROVENANCE = new Set([
+  'import/docs/desktop-hero-content-2026-10-02/charcoal-2026-10-03/after-matrix.json',
+  'import/docs/desktop-hero-content-2026-10-02/charcoal-2026-10-03/before-matrix.json',
+  'import/docs/desktop-home-entry-2026-10-03/after-matrix.json',
+  'import/docs/desktop-home-entry-2026-10-03/before-matrix.json'
+]);
+
+export function collectFactualTargetConsumers(before, after, prefix = '') {
+  const paths = [];
+  for (const name of new Set([...before.keys(), ...after.keys()])) {
+    const prior = before.get(name), next = after.get(name);
+    if (prior && next && prior.equals(next)) continue;
+    if (!next) throw new Error('Factual adapter unexpectedly removed a target path: ' + prefix + name);
+    if (!HISTORICAL_IMPORT_QA_PROVENANCE.has(prefix + name)) paths.push(prefix + name);
+  }
+  return paths.sort();
+}
+
 async function personalizePinnedTargetBases({pins,newBases,dealerRoot,manifest,profile,modernCopyReview=null,appInventoryNoticeReview=null}) {
   const keys=['auto-best','modern','import','app','mobile','karento-best'];
   const consumerPaths=new Set(),adaptations={};
   if(modernCopyReview&&!profile.reviewedModernCopy)assertReviewedModernCopy({profile,value:modernCopyReview.value});
   const note=(before,after,prefix='')=>{
-    for(const name of new Set([...before.keys(),...after.keys()])) {
-      const prior=before.get(name),next=after.get(name);
-      if(prior&&next&&prior.equals(next))continue;
-      if(!next)throw new Error('Factual adapter unexpectedly removed a target path: '+prefix+name);
-      consumerPaths.add(prefix+name);
-    }
+    for (const name of collectFactualTargetConsumers(before, after, prefix)) consumerPaths.add(name);
   };
   for(const key of ['auto-best','modern','import']) {
     const scratchParent=fs.realpathSync(process.env.TEMP||process.env.TMP||dealerRoot),tempRoot=fs.mkdtempSync(path.join(scratchParent,'cars-factual-target-'));
