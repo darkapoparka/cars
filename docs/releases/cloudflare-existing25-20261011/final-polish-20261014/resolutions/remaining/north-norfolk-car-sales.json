@@ -116,5 +116,102 @@
     "mobile/public/dealer-brand/logo.webp": "template",
     "mobile/src/lib/dealer-inventory.json": "template",
     "karento-best/static/dealer-brand/logo.webp": "template"
+  },
+  "factualConsumerResolutions": {
+    "schemaVersion": 1,
+    "kind": "cars-local-market-consumer-preservation",
+    "reviewed": true,
+    "reviewedBy": "Exact retained UK market and current native copy review",
+    "dealer": "north-norfolk-car-sales",
+    "baseline": {
+      "commit": "280a6f9d4c511556e1ed2f733b52dbe489731e67",
+      "tree": "c3770f86b6a3f7e036e057b25c3836db750a675c"
+    },
+    "targetSources": {
+      "auto-best": {
+        "repository": "darkapoparka/cars",
+        "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+        "path": "templates/auto-best",
+        "digest": "2fc9c3cfc9cf1976dbe30c08592776362e5bcc6b09e8b06620e57c4406df58a5",
+        "tree": "78fa1a82eca14816449f9588283260840ee94f52"
+      },
+      "modern": {
+        "repository": "darkapoparka/cars",
+        "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+        "path": "templates/modern",
+        "digest": "30e1a99f857cc25e4d78c9459cfb4394a9f70c5b114196a5ca6325ff38823b4b",
+        "tree": "01eac7390fa6ba951d4b8d4c26159a9be150f6c8"
+      },
+      "import": {
+        "repository": "darkapoparka/cars",
+        "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+        "path": "templates/import",
+        "digest": "c7d6c93214e859aa2747af8f5e068b6a0b8ca095d6328c807728a4d531d688f8",
+        "tree": "d841ddfe5bec918bf6b2c19fd6971fecd6b8e54d"
+      },
+      "app": {
+        "repository": "darkapoparka/cars",
+        "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+        "path": "templates/app",
+        "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+        "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
+      },
+      "mobile": {
+        "repository": "darkapoparka/cars",
+        "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+        "path": "templates/mobile",
+        "digest": "f5a3e541a7c648a4c2899ad3893e22a3806027a9f66d95fa4e8c74b2226635b6",
+        "tree": "792bfdd1d8eb22aabd90c7e3a0c0779a6c1c36f3"
+      },
+      "karento-best": {
+        "repository": "darkapoparka/cars",
+        "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+        "path": "templates/karento-best",
+        "digest": "be17ef365e3272753df6e50826b139a45bfc32b8fef54ddcb86d977ad16280a9",
+        "tree": "8c5ac869c7fd15e19a80c660343fc64b20a2bad9"
+      }
+    },
+    "market": {
+      "countryCode": "GB",
+      "currency": "GBP",
+      "distanceUnit": "mi"
+    },
+    "profileSha256": "adb2e19fc169086f1b9db1263dd275bfe279e3d9970b7143ea85ac2c2f0f8ac6",
+    "sourceInputs": [
+      {
+        "path": "business-facts.json",
+        "sha256": "7a1c5d7281ec894102e5efa70338609033181ae706c54eae35fee70f982d0826"
+      },
+      {
+        "path": "stock.json",
+        "sha256": "e310adfc5caac3012068f2c367931608f4306d559b8feeb2b234bcbbfc3edeb4"
+      }
+    ],
+    "paths": [
+      {
+        "path": "auto-best/localization/common.json",
+        "choice": "manual",
+        "originalSha256": "d92c219797a35eb09ca23705e3dafada887db998ed6076c2ab7403d355c7a1ea",
+        "oldSha256": "0d332e050638c8555dfcb6e22ed83eb1eaee839c961d94a2359aec082f75b88a",
+        "targetSha256": "2ab2ca27066bc4dfc84506e7fea708edcddd47682a71c9dbf25c522bb4cfdfb3",
+        "mergedSha256": "a71920dc6e68dd1411330502339652fcaecfe8b9c3388931dbf92acf27d1057b"
+      },
+      {
+        "path": "import/src/lib/auxero/home-five.ts",
+        "choice": "manual",
+        "originalSha256": "839b58715273d23e353bc6387584db3165dc9d30e567ea83600f3766804518f0",
+        "oldSha256": "1117a3a345856d9188b078bb279a5ca6075b7baffdadb623f73cb6d2a019e0ea",
+        "targetSha256": "595b73501069ec2a2123d8e7d8207273bc2a642b7a544c623575386a977495bd",
+        "mergedSha256": "51be62b9e79823f65312511b95221ba9e174e9da5814d6428c7843707d323b1a"
+      },
+      {
+        "path": "import/src/lib/content/extra-localized.ts",
+        "choice": "dealer",
+        "originalSha256": "77d1194cb944584be650d54921e27b1900e4399001a208803d2868782d1140dc",
+        "oldSha256": "548a63433a75c4c79d16387d52662a40684dbe9f8996d1d5f87d3512351a4238",
+        "targetSha256": "c444fbaf421a4412f0aaff55577c39aaad176395c885be00c0cf13fbea0bbdb3",
+        "mergedSha256": "77d1194cb944584be650d54921e27b1900e4399001a208803d2868782d1140dc"
+      }
+    ]
   }
 }
