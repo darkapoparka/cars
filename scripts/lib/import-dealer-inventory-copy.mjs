@@ -389,6 +389,13 @@ const scalarTerms=new Map([
       "bg": "Сив",
       "en": "Gray"
     }
+  ],
+  [
+    "color:Red",
+    {
+      "bg": "Червен",
+      "en": "Red"
+    }
   ]
 ]);
 const nonempty=x=>typeof x==='string'&&x.trim().length>0&&x.length<=32768;
