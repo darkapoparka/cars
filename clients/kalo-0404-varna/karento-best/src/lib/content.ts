@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "Кало 0404",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-56d1d50d5db51969/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-56d1d50d5db51969/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-56d1d50d5db51969/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-1e207107b7559017/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-1e207107b7559017/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-1e207107b7559017/logo-on-dark.webp",
     "alt": "Кало 0404",
-    "favicon": "/dealer-brand/v2-56d1d50d5db51969/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-1e207107b7559017/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

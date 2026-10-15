@@ -78,7 +78,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Кало 0404",
       "location": "бул. Цар Освободител, Варна, България",
-      "avatar": "/dealer-brand/v2-56d1d50d5db51969/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-1e207107b7559017/logo-on-light.webp",
       "mobile": "0878483604",
       "email": "",
       "whatsapp": "",
@@ -172,7 +172,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Кало 0404",
       "location": "бул. Цар Освободител, Варна, България",
-      "avatar": "/dealer-brand/v2-56d1d50d5db51969/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-1e207107b7559017/logo-on-light.webp",
       "mobile": "0878483604",
       "email": "",
       "whatsapp": "",

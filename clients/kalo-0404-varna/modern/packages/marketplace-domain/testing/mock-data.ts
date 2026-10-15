@@ -46,7 +46,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Кало 0404",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-56d1d50d5db51969/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-1e207107b7559017/logo-on-light.webp"
     },
     "publishedAt": "2026-10-12T09:00:00.000Z",
     "promoted": true
@@ -95,7 +95,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Кало 0404",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-56d1d50d5db51969/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-1e207107b7559017/logo-on-light.webp"
     },
     "publishedAt": "2026-10-12T09:00:00.000Z",
     "promoted": true
