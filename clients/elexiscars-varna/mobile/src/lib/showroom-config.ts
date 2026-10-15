@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "ELEXIS CARS",
-  "logo": "/dealer-brand/v2-09aceb0e74a91828/logo-on-light.webp",
+  "logo": "/dealer-brand/v2-09fde726bb0e6823/logo-on-light.webp",
   "phone": "+359899388989",
   "email": null,
   "address": "ул. Проф. Цани Калянджиев 6, Варна, България",

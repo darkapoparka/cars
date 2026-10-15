@@ -155,7 +155,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "ELEXIS CARS",
   "location": "ул. Проф. Цани Калянджиев 6, Варна, България",
-  "avatar": "/dealer-brand/v2-09aceb0e74a91828/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-09fde726bb0e6823/logo-on-light.webp",
   "mobile": "0899388989",
   "email": "",
   "whatsapp": "",

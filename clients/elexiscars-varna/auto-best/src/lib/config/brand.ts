@@ -33,6 +33,6 @@ export const brand = {
   addressLine,
   address: "ул. Проф. Цани Калянджиев 6, Варна, България",
   appointment: "Потвърдете работното време директно с автокъщата.",
-  logo: "/dealer-brand/v2-09aceb0e74a91828/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/v2-09aceb0e74a91828/logo-on-dark.webp"
+  logo: "/dealer-brand/v2-09fde726bb0e6823/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-09fde726bb0e6823/logo-on-dark.webp"
 } as const satisfies BrandConfig;

@@ -50,7 +50,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "ELEXIS CARS",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-09aceb0e74a91828/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-09fde726bb0e6823/logo-on-light.webp"
     },
     "publishedAt": "2026-10-11T09:00:00.000Z",
     "promoted": true
