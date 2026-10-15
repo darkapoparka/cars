@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "Елегант кар",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-d61e783ce1fa0c6b/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-d61e783ce1fa0c6b/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-d61e783ce1fa0c6b/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-a6752ddb75001700/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-a6752ddb75001700/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-a6752ddb75001700/logo-on-dark.webp",
     "alt": "Елегант кар",
-    "favicon": "/dealer-brand/v2-d61e783ce1fa0c6b/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-a6752ddb75001700/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

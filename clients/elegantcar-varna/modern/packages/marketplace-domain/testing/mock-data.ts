@@ -50,7 +50,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Елегант кар",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-d61e783ce1fa0c6b/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-a6752ddb75001700/logo-on-light.webp"
     },
     "publishedAt": "2026-10-11T09:00:00.000Z",
     "promoted": true

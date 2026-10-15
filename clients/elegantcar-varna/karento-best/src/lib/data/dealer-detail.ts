@@ -94,7 +94,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Елегант кар",
       "location": "бул. Цар Освободител разклона за Владиславово, Варна, България",
-      "avatar": "/dealer-brand/v2-d61e783ce1fa0c6b/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-a6752ddb75001700/logo-on-light.webp",
       "mobile": "0877910051",
       "email": "",
       "whatsapp": "",
