@@ -116,6 +116,12 @@ export const referenceSpecifications: readonly DetailSpecification[] = [
     "value": "Diesel",
     "labelKey": "vehicle.field.fuel",
     "valueKey": "fuel.diesel"
+  },
+  {
+    "id": "year",
+    "icon": "/assets/imgs/template/icons/calendar.svg",
+    "value": "2014",
+    "labelKey": "vehicle.field.year"
   }
 ];
 
@@ -141,7 +147,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "Trade Car Sales",
   "location": "",
-  "avatar": "/dealer-brand/logo.webp",
+  "avatar": "/dealer-brand/v2-7a49c5599de5a3d4/logo-on-light.webp",
   "mobile": "",
   "email": "",
   "whatsapp": "",
