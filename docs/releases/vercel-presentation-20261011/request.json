@@ -4,7 +4,7 @@
   "action": "proposal",
   "stage": "qualification-preview",
   "publicationTransport": "existing-local-publisher",
-  "toolingSourceCommit": "53a65e502e32f5e29c8332310753374194d17693",
+  "toolingSourceCommit": "c356ac73daf826ad808891b8e4c090c1794ead02",
   "templateLock": {
     "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/candidate-lock.json",
     "sha256": "04633129df9e75d6cd62deeac9125b279957789d75f57cdb0b243ef61bfc3e7e"
