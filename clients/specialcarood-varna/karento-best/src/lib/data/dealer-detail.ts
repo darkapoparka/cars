@@ -94,7 +94,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Специал Кар",
       "location": "бул. Цар Освободител 324, Варна, България",
-      "avatar": "/dealer-brand/v2-4e9a2b59394217f9/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-25d04371b32911a3/logo-on-light.webp",
       "mobile": "0893557367",
       "email": "",
       "whatsapp": "",

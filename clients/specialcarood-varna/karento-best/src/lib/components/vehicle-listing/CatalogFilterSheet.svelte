@@ -282,7 +282,18 @@
   bind:open
   {title}
   {label}
-  class={editor ? "mobile-catalog-editor" : ""}
+  class={editor
+    ? "mobile-catalog-sheet mobile-catalog-editor"
+    : "mobile-catalog-sheet"}
   children={sheetBody}
   footer={sheetFooter}
 />
+
+<style>
+  @media (max-width: 767.98px) {
+    .mobile-filter-body {
+      gap: var(--karento-space-3);
+      padding-top: var(--karento-space-2);
+    }
+  }
+</style>

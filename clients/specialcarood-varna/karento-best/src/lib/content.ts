@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "Специал Кар",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-4e9a2b59394217f9/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-4e9a2b59394217f9/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-4e9a2b59394217f9/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-25d04371b32911a3/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-25d04371b32911a3/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-25d04371b32911a3/logo-on-dark.webp",
     "alt": "Специал Кар",
-    "favicon": "/dealer-brand/v2-4e9a2b59394217f9/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-25d04371b32911a3/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

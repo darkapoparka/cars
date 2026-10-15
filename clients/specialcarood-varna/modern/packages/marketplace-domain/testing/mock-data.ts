@@ -50,7 +50,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Специал Кар",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-4e9a2b59394217f9/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-25d04371b32911a3/logo-on-light.webp"
     },
     "publishedAt": "2026-10-11T09:00:00.000Z",
     "promoted": true

@@ -3,12 +3,12 @@
   "dealer": "specialcarood-varna",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/app",
-    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
-    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
   },
-  "appDigest": "3ac27c4e947d8bd76e61937dcfd75acb4c8dea61025e20bbcf4684f77f30e05b",
+  "appDigest": "36a25068a4e834e5df583beb3d23974ad9293c6615c88d8dd4d7f8b8c0ec3e85",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "specialcarood-varna",
@@ -21,14 +21,14 @@
     "assets": [
       {
         "source": "auto-best/static/dealer-brand/logo-on-light.png",
-        "output": "public/dealer-app/logo-light-5dc7f91faee34a214a23.png",
-        "sha256": "5dc7f91faee34a214a23158a6ce5163448a42eb7f08e00113e1fa5d828f49b24",
+        "output": "public/dealer-app/logo-light-fd7d6aa0ccab3ad61b2e.png",
+        "sha256": "fd7d6aa0ccab3ad61b2ea96ee42669f94bc8c39453f8e3676bf93f575c0faff7",
         "role": "logo-light"
       },
       {
         "source": "auto-best/static/dealer-brand/logo-on-dark.png",
-        "output": "public/dealer-app/logo-dark-e70870da81064d535682.png",
-        "sha256": "e70870da81064d535682018cfb9a74f292f0b7cdeecbafae4ad34fdc3b1802c9",
+        "output": "public/dealer-app/logo-dark-402d7778916a6e40b6ac.png",
+        "sha256": "402d7778916a6e40b6ac5c42b20f9c2be48368f806efc1a184d803a383b1a4c9",
         "role": "logo-dark"
       },
       {
@@ -54,5 +54,6 @@
     ]
   },
   "needsDealerQA": true,
-  "readyToPublish": false
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-15T04:16:56.284Z"
 }
