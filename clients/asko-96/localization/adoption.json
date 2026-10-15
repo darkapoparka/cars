@@ -12,7 +12,7 @@
     "scope": "existing-dealer-pilot",
     "sourceCommit": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "reviewed": true,
-    "reviewedAt": "2026-10-14T23:58:34.754Z",
+    "reviewedAt": "2026-10-15T03:31:45.692Z",
     "qualificationOnly": true,
     "approved": false,
     "nativeApproval": false,
@@ -28,9 +28,23 @@
     "sourceReview": {
       "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-review.json",
       "sha256": "27c6ce5dd17ee6e1b9f6a5b059a95d5e1dbe4200f61264fc50addeb7af89d984"
+    },
+    "dealerSourceRepair": {
+      "kind": "explicit-english-editorial-catalog",
+      "parentContextSha256": "ed6d16bcbfe98680008170bbd29b444da11542faf5282264d1767a389930e7f3",
+      "baseSourceCommit": "7cbb9d004bc6ae32f0bace5beeea30bd4bb5cb86",
+      "baseSourceTree": "f3c92c9a759cefbb7f911c73dc847aebcda81069",
+      "path": "import/src/lib/content/extra-localized.ts",
+      "beforeBlob": "fc77f7002b62f92aa8cf3149746fe6f85487fceb",
+      "afterBlob": "157bade69b636c4adc211c46661385b2ddd54e5d",
+      "proof": {
+        "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/editorial-runtime-repair-20261015/asko-96/focused-proof.json",
+        "sha256": "330d3c78405ff0036793efabd75f8145fcd4e600701576b3ed044a54d841e4ad"
+      },
+      "evidenceReuse": "Original immutable six-template QA and source preparation remain provenance; focused exact-source localization proof covers this new dealer edit. No new CI, build, native or hosted success is asserted."
     }
   },
-  "contextDigest": "56e116af1ab141e1c3bcf747ba96d1a222b5d4c4d1d5dcc45afdd52a8a6aefbb",
+  "contextDigest": "9f586b55c132223518040f52afe7b151347558ebaf5859cb612bb19292154bc7",
   "releases": {
     "auto-best": {
       "status": "qualification",
@@ -1708,8 +1722,8 @@
             "path": "src/lib/content/extra-localized.ts",
             "export": "extraEnglish"
           },
-          "keys": 93,
-          "contentDigest": "ecd3af2ffd55fedf0f44ec80b0f8acf107d03d5d8b5b92beec67c5651b365b97"
+          "keys": 94,
+          "contentDigest": "7e998e3f29a80f89348b475aaf99b331e25462cccf5b19eca6d1505ee934bf7f"
         }
       ],
       "declaredCatalogParityPassed": true,
@@ -1717,7 +1731,7 @@
     }
   },
   "input": {
-    "digest": "5f1cd8fb45afab60ec1700791bfc74c6ad5f4b43fbb3ea04ad405e08df055ef1",
+    "digest": "0273dbe57fd5da1eb1ea1fb7e17415f1c8771c4c830e30f28a2b89588affe56c",
     "files": 9303
   },
   "nativeApproval": false,

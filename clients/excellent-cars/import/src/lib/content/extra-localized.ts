@@ -1,4 +1,5 @@
 export const extraEnglish = {
+  "Подбрани публикувани обяви към 07.09.2026. Наличностите и условията се потвърждават по телефона.": "Selected published listings as of 7 September 2026. Availability and terms are confirmed by phone.",
   "Най-желаната кола в България | Lamborghini Urus": "The most sought-after car in Bulgaria | Lamborghini Urus",
   "Продадох най-новата Панамера": "I sold the latest Panamera",
   "Продадох най-скъпия Брабус в България": "I sold the most expensive Brabus in Bulgaria",

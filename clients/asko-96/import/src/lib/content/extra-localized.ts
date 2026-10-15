@@ -1,4 +1,5 @@
 export const extraEnglish = {
+  "Подбрани автомобили от публикуваните обяви. Наличностите и условията се потвърждават с АСКО 96.": "Selected vehicles from the published listings. Availability and terms must be confirmed with АСКО 96.",
   "Най-желаната кола в България | Lamborghini Urus": "The most sought-after car in Bulgaria | Lamborghini Urus",
   "Продадох най-новата Панамера": "I sold the latest Panamera",
   "Продадох най-скъпия Брабус в България": "I sold the most expensive Brabus in Bulgaria",
