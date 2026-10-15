@@ -50,7 +50,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "КАЛО КАРС",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-780a4dbd5d8f0d60/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-6e825dd569a75b95/logo-on-light.webp"
     },
     "publishedAt": "2026-10-11T09:00:00.000Z",
     "promoted": true

@@ -3,12 +3,12 @@
   "dealer": "kalokars-varna",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/app",
-    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
-    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
   },
-  "appDigest": "9d9a1492fa5688d51dfeac3bc61c1033ce88a304278b298eb4536e8535e95fc3",
+  "appDigest": "be56a95caa9654d7e1c9f11422ce579ffcfbcaff85777976dfe2f264ce1b0d63",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "kalokars-varna",
@@ -21,14 +21,14 @@
     "assets": [
       {
         "source": "auto-best/static/dealer-brand/logo-on-light.png",
-        "output": "public/dealer-app/logo-light-1eb7db7654b2b19d5dc4.png",
-        "sha256": "1eb7db7654b2b19d5dc4a0e0ce1ca4aff6f5e7dd83ff855f3223c25b9e94679c",
+        "output": "public/dealer-app/logo-light-3cafd8a30d00f9b966d4.png",
+        "sha256": "3cafd8a30d00f9b966d417e20e2b2271828cb06e40e51ae7bc218a3fe785a22e",
         "role": "logo-light"
       },
       {
         "source": "auto-best/static/dealer-brand/logo-on-dark.png",
-        "output": "public/dealer-app/logo-dark-c7d560a0a682cf94d30c.png",
-        "sha256": "c7d560a0a682cf94d30cf93ce0632e5404b2e50d1abe21be10d3f4c6b0aedf94",
+        "output": "public/dealer-app/logo-dark-c1e4369092951142eeb3.png",
+        "sha256": "c1e4369092951142eeb3411ecd65458b4ac1147a1ab0ae424163f90bc115fc77",
         "role": "logo-dark"
       },
       {
@@ -54,5 +54,6 @@
     ]
   },
   "needsDealerQA": true,
-  "readyToPublish": false
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-15T03:15:12.760Z"
 }

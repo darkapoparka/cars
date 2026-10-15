@@ -33,6 +33,6 @@ export const brand = {
   addressLine,
   address: "до кръстовището на бул. Цар Освободител и бул. Константин и Фружин, под Джъмбо, Варна, България",
   appointment: "Понеделник–събота 09:00–17:30; неделя почивен ден.",
-  logo: "/dealer-brand/v2-780a4dbd5d8f0d60/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/v2-780a4dbd5d8f0d60/logo-on-dark.webp"
+  logo: "/dealer-brand/v2-6e825dd569a75b95/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-6e825dd569a75b95/logo-on-dark.webp"
 } as const satisfies BrandConfig;

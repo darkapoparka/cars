@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "КАЛО КАРС",
-  "logo": "/dealer-brand/v2-780a4dbd5d8f0d60/logo-on-light.webp",
+  "logo": "/dealer-brand/v2-6e825dd569a75b95/logo-on-light.webp",
   "phone": "+359876055588",
   "email": null,
   "address": "до кръстовището на бул. Цар Освободител и бул. Константин и Фружин, под Джъмбо, Варна, България",

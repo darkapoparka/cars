@@ -111,8 +111,8 @@ export const leadSite: LeadSiteConfig = {
     "tagline": "КАЛО КАРС — vehicles and dealer support in Varna."
   }
 },
-  accent: "#30343b",
-  desktopAccent: "#4b5057",
+  accent: "#09090b",
+  desktopAccent: "#09090b",
   desktopInventoryFilterLayout: "quick",
   desktopPreviewIdentity: {
     sourceSlug: "day-night-auto-group",
@@ -144,8 +144,8 @@ export const leadSite: LeadSiteConfig = {
   email: "",
   heroPath: "/lead-hero.jpg",
   locale: "bg-BG",
-  logoPath: "/dealer-brand/v2-780a4dbd5d8f0d60/logo-on-light.webp",
-  logoInversePath: "/dealer-brand/v2-780a4dbd5d8f0d60/logo-on-dark.webp",
+  logoPath: "/dealer-brand/v2-6e825dd569a75b95/logo-on-light.webp",
+  logoInversePath: "/dealer-brand/v2-6e825dd569a75b95/logo-on-dark.webp",
   mapsEmbedUrl:
     "https://maps.google.com/maps?q=%D0%9A%D0%90%D0%9B%D0%9E%20%D0%9A%D0%90%D0%A0%D0%A1%2C%20%D0%B4%D0%BE%20%D0%BA%D1%80%D1%8A%D1%81%D1%82%D0%BE%D0%B2%D0%B8%D1%89%D0%B5%D1%82%D0%BE%20%D0%BD%D0%B0%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20%D0%B8%20%D0%B1%D1%83%D0%BB.%20%D0%9A%D0%BE%D0%BD%D1%81%D1%82%D0%B0%D0%BD%D1%82%D0%B8%D0%BD%20%D0%B8%20%D0%A4%D1%80%D1%83%D0%B6%D0%B8%D0%BD%2C%20%D0%BF%D0%BE%D0%B4%20%D0%94%D0%B6%D1%8A%D0%BC%D0%B1%D0%BE%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F&z=16&output=embed",
   mapsUrl:

@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "КАЛО КАРС",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-780a4dbd5d8f0d60/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-780a4dbd5d8f0d60/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-780a4dbd5d8f0d60/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-6e825dd569a75b95/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-6e825dd569a75b95/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-6e825dd569a75b95/logo-on-dark.webp",
     "alt": "КАЛО КАРС",
-    "favicon": "/dealer-brand/v2-780a4dbd5d8f0d60/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-6e825dd569a75b95/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {
