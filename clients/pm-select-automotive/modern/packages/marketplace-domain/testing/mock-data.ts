@@ -58,7 +58,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "PM SELECT AUTOMOTIVE",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-67ce81cba54450ce/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-1737eb7ee75bdd48/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": true
@@ -119,7 +119,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "PM SELECT AUTOMOTIVE",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-67ce81cba54450ce/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-1737eb7ee75bdd48/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": true
@@ -180,7 +180,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "PM SELECT AUTOMOTIVE",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-67ce81cba54450ce/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-1737eb7ee75bdd48/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": true
@@ -241,7 +241,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "PM SELECT AUTOMOTIVE",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-67ce81cba54450ce/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-1737eb7ee75bdd48/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -302,7 +302,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "PM SELECT AUTOMOTIVE",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-67ce81cba54450ce/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-1737eb7ee75bdd48/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -363,7 +363,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "PM SELECT AUTOMOTIVE",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-67ce81cba54450ce/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-1737eb7ee75bdd48/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -424,7 +424,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "PM SELECT AUTOMOTIVE",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-67ce81cba54450ce/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-1737eb7ee75bdd48/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -485,373 +485,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "PM SELECT AUTOMOTIVE",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-67ce81cba54450ce/logo-on-light.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1004",
-    "slug": "infiniti-fx-30-2010-21783597634982178",
-    "category": "car",
-    "dealerOrgId": "dealer-pm-select-automotive",
-    "status": "active",
-    "title": "Infiniti Fx 30 3.0tdi лизинг/бартер",
-    "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
-    "price": {
-      "amount": 10500,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/vehicles/21783597634982178/1.webp",
-        "alt": "Infiniti Fx 30 3.0tdi лизинг/бартер"
-      },
-      {
-        "url": "/assets/vehicles/21783597634982178/2.webp",
-        "alt": "Infiniti Fx 30 3.0tdi лизинг/бартер"
-      },
-      {
-        "url": "/assets/vehicles/21783597634982178/3.webp",
-        "alt": "Infiniti Fx 30 3.0tdi лизинг/бартер"
-      },
-      {
-        "url": "/assets/vehicles/21783597634982178/4.webp",
-        "alt": "Infiniti Fx 30 3.0tdi лизинг/бартер"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "spec": {
-      "make": "Infiniti",
-      "model": "Fx 30",
-      "year": 2010,
-      "bodyType": "suv",
-      "fuelType": "diesel",
-      "transmission": "automatic",
-      "mileageValue": 230000,
-      "mileageUnit": "km",
-      "enginePowerHp": 235
-    },
-    "seller": {
-      "id": "dealer-pm-select-automotive",
-      "type": "dealer",
-      "displayName": "PM SELECT AUTOMOTIVE",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-67ce81cba54450ce/logo-on-light.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1005",
-    "slug": "mercedes-benz-cls-500-2005-11788776602444544",
-    "category": "car",
-    "dealerOrgId": "dealer-pm-select-automotive",
-    "status": "active",
-    "title": "Mercedes-Benz CLS 500 ЛИЗИНГ/БАРТЕР",
-    "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
-    "price": {
-      "amount": 9500,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/vehicles/11788776602444544/1.webp",
-        "alt": "Mercedes-Benz CLS 500 ЛИЗИНГ/БАРТЕР"
-      },
-      {
-        "url": "/assets/vehicles/11788776602444544/2.webp",
-        "alt": "Mercedes-Benz CLS 500 ЛИЗИНГ/БАРТЕР"
-      },
-      {
-        "url": "/assets/vehicles/11788776602444544/3.webp",
-        "alt": "Mercedes-Benz CLS 500 ЛИЗИНГ/БАРТЕР"
-      },
-      {
-        "url": "/assets/vehicles/11788776602444544/4.webp",
-        "alt": "Mercedes-Benz CLS 500 ЛИЗИНГ/БАРТЕР"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "spec": {
-      "make": "Mercedes-Benz",
-      "model": "CLS 500",
-      "year": 2005,
-      "bodyType": "sedan",
-      "fuelType": "lpg",
-      "transmission": "automatic",
-      "mileageValue": 312000,
-      "mileageUnit": "km",
-      "enginePowerHp": 306
-    },
-    "seller": {
-      "id": "dealer-pm-select-automotive",
-      "type": "dealer",
-      "displayName": "PM SELECT AUTOMOTIVE",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-67ce81cba54450ce/logo-on-light.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1006",
-    "slug": "mini-cooper-s-2011-11778481183815155",
-    "category": "car",
-    "dealerOrgId": "dealer-pm-select-automotive",
-    "status": "active",
-    "title": "Mini Cooper s ALL4 HAMANN POP CORN 4X4 лизинг 2400 първоначална",
-    "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
-    "price": {
-      "amount": 7999,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/vehicles/11778481183815155/1.webp",
-        "alt": "Mini Cooper s ALL4 HAMANN POP CORN 4X4 лизинг 2400 първоначална"
-      },
-      {
-        "url": "/assets/vehicles/11778481183815155/2.webp",
-        "alt": "Mini Cooper s ALL4 HAMANN POP CORN 4X4 лизинг 2400 първоначална"
-      },
-      {
-        "url": "/assets/vehicles/11778481183815155/3.webp",
-        "alt": "Mini Cooper s ALL4 HAMANN POP CORN 4X4 лизинг 2400 първоначална"
-      },
-      {
-        "url": "/assets/vehicles/11778481183815155/4.webp",
-        "alt": "Mini Cooper s ALL4 HAMANN POP CORN 4X4 лизинг 2400 първоначална"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "spec": {
-      "make": "Mini",
-      "model": "Cooper s",
-      "year": 2011,
-      "bodyType": "hatchback",
-      "fuelType": "gasoline",
-      "transmission": "manual",
-      "mileageValue": 180000,
-      "mileageUnit": "km",
-      "enginePowerHp": 230
-    },
-    "seller": {
-      "id": "dealer-pm-select-automotive",
-      "type": "dealer",
-      "displayName": "PM SELECT AUTOMOTIVE",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-67ce81cba54450ce/logo-on-light.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1007",
-    "slug": "mercedes-benz-c-300-2022-11791448820015715",
-    "category": "car",
-    "dealerOrgId": "dealer-pm-select-automotive",
-    "status": "active",
-    "title": "Mercedes-Benz C 300 4-MATIC/360/AMG line лизинг с 9800 първоначална",
-    "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
-    "price": {
-      "amount": 31500,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/vehicles/11791448820015715/1.webp",
-        "alt": "Mercedes-Benz C 300 4-MATIC/360/AMG line лизинг с 9800 първоначална"
-      },
-      {
-        "url": "/assets/vehicles/11791448820015715/2.webp",
-        "alt": "Mercedes-Benz C 300 4-MATIC/360/AMG line лизинг с 9800 първоначална"
-      },
-      {
-        "url": "/assets/vehicles/11791448820015715/3.webp",
-        "alt": "Mercedes-Benz C 300 4-MATIC/360/AMG line лизинг с 9800 първоначална"
-      },
-      {
-        "url": "/assets/vehicles/11791448820015715/4.webp",
-        "alt": "Mercedes-Benz C 300 4-MATIC/360/AMG line лизинг с 9800 първоначална"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "spec": {
-      "make": "Mercedes-Benz",
-      "model": "C 300",
-      "year": 2022,
-      "bodyType": "sedan",
-      "fuelType": "gasoline",
-      "transmission": "automatic",
-      "mileageValue": 85789,
-      "mileageUnit": "km",
-      "enginePowerHp": 258
-    },
-    "seller": {
-      "id": "dealer-pm-select-automotive",
-      "type": "dealer",
-      "displayName": "PM SELECT AUTOMOTIVE",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-67ce81cba54450ce/logo-on-light.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1008",
-    "slug": "bmw-x6-2016-21788698028085342",
-    "category": "car",
-    "dealerOrgId": "dealer-pm-select-automotive",
-    "status": "active",
-    "title": "BMW X6 ЛИЗИНГ ТОП ЦЕНА",
-    "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
-    "price": {
-      "amount": 19999,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/vehicles/21788698028085342/1.webp",
-        "alt": "BMW X6 ЛИЗИНГ ТОП ЦЕНА"
-      },
-      {
-        "url": "/assets/vehicles/21788698028085342/2.webp",
-        "alt": "BMW X6 ЛИЗИНГ ТОП ЦЕНА"
-      },
-      {
-        "url": "/assets/vehicles/21788698028085342/3.webp",
-        "alt": "BMW X6 ЛИЗИНГ ТОП ЦЕНА"
-      },
-      {
-        "url": "/assets/vehicles/21788698028085342/4.webp",
-        "alt": "BMW X6 ЛИЗИНГ ТОП ЦЕНА"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "spec": {
-      "make": "BMW",
-      "model": "X6",
-      "year": 2016,
-      "bodyType": "suv",
-      "fuelType": "diesel",
-      "transmission": "automatic",
-      "mileageValue": 126000,
-      "mileageUnit": "km",
-      "enginePowerHp": 313
-    },
-    "seller": {
-      "id": "dealer-pm-select-automotive",
-      "type": "dealer",
-      "displayName": "PM SELECT AUTOMOTIVE",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-67ce81cba54450ce/logo-on-light.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1009",
-    "slug": "bmw-x6-2016-21788697561330482",
-    "category": "car",
-    "dealerOrgId": "dealer-pm-select-automotive",
-    "status": "active",
-    "title": "BMW X6 Лизинг с 6800 първоначална FULL ТОП ЦЕНА",
-    "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
-    "price": {
-      "amount": 19999,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/vehicles/21788697561330482/1.webp",
-        "alt": "BMW X6 Лизинг с 6800 първоначална FULL ТОП ЦЕНА"
-      },
-      {
-        "url": "/assets/vehicles/21788697561330482/2.webp",
-        "alt": "BMW X6 Лизинг с 6800 първоначална FULL ТОП ЦЕНА"
-      },
-      {
-        "url": "/assets/vehicles/21788697561330482/3.webp",
-        "alt": "BMW X6 Лизинг с 6800 първоначална FULL ТОП ЦЕНА"
-      },
-      {
-        "url": "/assets/vehicles/21788697561330482/4.webp",
-        "alt": "BMW X6 Лизинг с 6800 първоначална FULL ТОП ЦЕНА"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "spec": {
-      "make": "BMW",
-      "model": "X6",
-      "year": 2016,
-      "bodyType": "suv",
-      "fuelType": "diesel",
-      "transmission": "automatic",
-      "mileageValue": 126000,
-      "mileageUnit": "km",
-      "enginePowerHp": 313
-    },
-    "seller": {
-      "id": "dealer-pm-select-automotive",
-      "type": "dealer",
-      "displayName": "PM SELECT AUTOMOTIVE",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-67ce81cba54450ce/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-1737eb7ee75bdd48/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false

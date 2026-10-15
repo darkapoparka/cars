@@ -817,6 +817,7 @@ export const uiEn = {
     "Popular vehicle groups",
   "ui.popular-vehicle-carousel.load-more-cars": "Load More Cars",
   "ui.popular-vehicle-grid.popular-vehicles": "Popular Vehicles",
+  "ui.popular-vehicle-grid.popular-cars": "Popular cars",
   "ui.popular-vehicle-grid.favorite-vehicles-based-on-customer-reviews":
     "Favorite vehicles based on customer reviews",
   "ui.popular-vehicle-grid.popular-vehicles-7dcd98": "Popular vehicles",
@@ -1813,12 +1814,10 @@ export const uiBg = {
     "Открийте следващия си автомобил днес",
   "ui.home-search-carousel.previous-slide": "Предишен слайд",
   "ui.home-search-carousel.next-slide": "Следващ слайд",
-  "ui.home-vehicle-carousel.find-your-next-car":
-    "Открийте следващия си автомобил.",
+  "ui.home-vehicle-carousel.find-your-next-car": "Открийте своята кола.",
   "ui.home-vehicle-carousel.discover-your-next-car-today":
     "Открийте следващия си автомобил днес.",
-  "ui.home-vehicle-carousel.explore-cars-find-your-fit":
-    "Разгледайте автомобили. Открийте подходящия.",
+  "ui.home-vehicle-carousel.explore-cars-find-your-fit": "Разгледайте обявите.",
   "ui.home-vehicle-carousel.explore-our-wide-selection-and-experience-a-smooth-buying":
     "Разгледайте предложенията и стъпките при покупка",
   "ui.home-vehicle-carousel.with-personalized-support-at-every-stage":
@@ -1921,6 +1920,7 @@ export const uiBg = {
     "Популярни групи автомобили",
   "ui.popular-vehicle-carousel.load-more-cars": "Още автомобили",
   "ui.popular-vehicle-grid.popular-vehicles": "Популярни автомобили",
+  "ui.popular-vehicle-grid.popular-cars": "Популярни коли",
   "ui.popular-vehicle-grid.favorite-vehicles-based-on-customer-reviews":
     "Предпочитани автомобили според примерните отзиви",
   "ui.popular-vehicle-grid.popular-vehicles-7dcd98": "Популярни автомобили",

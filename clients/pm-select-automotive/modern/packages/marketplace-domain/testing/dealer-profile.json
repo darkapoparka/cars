@@ -27,9 +27,9 @@
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=PM%20SELECT%20AUTOMOTIVE%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20122%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
     "mapsEmbedUrl": "https://maps.google.com/maps?q=PM%20SELECT%20AUTOMOTIVE%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20122%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F&z=16&output=embed",
     "accent": "#c40101",
-    "logo": "/dealer-brand/v2-67ce81cba54450ce/logo-on-light.webp",
-    "logoLight": "/dealer-brand/v2-67ce81cba54450ce/logo-on-light.webp",
-    "logoDark": "/dealer-brand/v2-67ce81cba54450ce/logo-on-dark.webp",
+    "logo": "/dealer-brand/v2-1737eb7ee75bdd48/logo-on-light.webp",
+    "logoLight": "/dealer-brand/v2-1737eb7ee75bdd48/logo-on-light.webp",
+    "logoDark": "/dealer-brand/v2-1737eb7ee75bdd48/logo-on-dark.webp",
     "socialLinks": {
       "facebook": "",
       "instagram": "",
@@ -760,16 +760,19 @@
     "schemaVersion": 1,
     "assets": {
       "onLight": {
-        "publicPath": "/dealer-brand/v2-67ce81cba54450ce/logo-on-light.webp",
-        "sha256": "1f61830a577e37b336cc67de8859d3a7132b4e4a180760475d2be878387b5779"
+        "publicPath": "/dealer-brand/v2-1737eb7ee75bdd48/logo-on-light.webp",
+        "sha256": "c534150b73213a1ac6042ad63f9d54fbf44c171d62a919f6b0f33f7cde449461",
+        "bytes": 75046
       },
       "onDark": {
-        "publicPath": "/dealer-brand/v2-67ce81cba54450ce/logo-on-dark.webp",
-        "sha256": "1f61830a577e37b336cc67de8859d3a7132b4e4a180760475d2be878387b5779"
+        "publicPath": "/dealer-brand/v2-1737eb7ee75bdd48/logo-on-dark.webp",
+        "sha256": "16b36cfb38904b3b6aec75ca8906eda5b2f8718d6226c5757f0fcd7039bef5d7",
+        "bytes": 27608
       },
       "onAccent": {
-        "publicPath": "/dealer-brand/v2-67ce81cba54450ce/logo-on-dark.webp",
-        "sha256": "1f61830a577e37b336cc67de8859d3a7132b4e4a180760475d2be878387b5779"
+        "publicPath": "/dealer-brand/v2-1737eb7ee75bdd48/logo-on-accent.webp",
+        "sha256": "16b36cfb38904b3b6aec75ca8906eda5b2f8718d6226c5757f0fcd7039bef5d7",
+        "bytes": 27608
       }
     },
     "source": "assets/brand/logo.png",

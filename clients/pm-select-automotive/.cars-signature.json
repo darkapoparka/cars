@@ -5,12 +5,12 @@
   "name": "PM SELECT AUTOMOTIVE",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "cc130e432a41a3a60cc80bc2b3461c6416893b4a",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/karento-best",
-    "tree": "c661129affb32649c8fcecea097fc9a6487783d0",
-    "digest": "bf8c6628be5f28b7e3358b121b7cf9e236d36a2fc0138bf640d72113c7e17f30"
+    "digest": "be17ef365e3272753df6e50826b139a45bfc32b8fef54ddcb86d977ad16280a9",
+    "tree": "8c5ac869c7fd15e19a80c660343fc64b20a2bad9"
   },
-  "sourceDigest": "5b7baf7ad78c3b6e250dd09d864c8a634edbec3de3a49a623a64628ce5a32dc5",
+  "sourceDigest": "b3e30194a671c8bee25ad3c8c73be808f98a74df61e1fb5af55edbc3b3b9c2ec",
   "inventory": {
     "mode": "dated-listing-snapshot",
     "count": 8,
@@ -19,8 +19,8 @@
   "personalization": {
     "profileSha256": "6b69c991bc44e8bbc3e532faaa6e3df4db935f29b345419074b14134081bd1fc",
     "logoPaths": [
-      "/dealer-brand/v2-67ce81cba54450ce/logo-on-light.webp",
-      "/dealer-brand/v2-67ce81cba54450ce/logo-on-dark.webp"
+      "/dealer-brand/logo-on-light.webp",
+      "/dealer-brand/logo-on-dark.webp"
     ],
     "mediaPaths": [
       "/assets/vehicles/21783597634982178/1.webp",
@@ -67,6 +67,9 @@
       "karento-best/src/lib/pages/cars-details-3.svelte",
       "karento-best/src/lib/components/vehicle-detail/VehicleReservationCard.svelte",
       "karento-best/src/lib/components/vehicle-detail/VehicleDetailPanels.svelte",
+      "karento-best/src/lib/components/ServiceSpotCard.svelte",
+      "karento-best/src/lib/sections/HomeBrandLinks.svelte",
+      "karento-best/src/lib/i18n/catalogs/reference-home.ts",
       "karento-best/src/lib/data/editorial.ts",
       "karento-best/src/lib/data/home-stories.ts",
       "karento-best/src/lib/cards/VehicleEditorialCard.svelte",
@@ -89,9 +92,5 @@
     "nativeDealerFacts": true
   },
   "needsDealerQA": true,
-  "readyToPublish": false,
-  "branding": {
-    "packId": "67ce81cba54450ce",
-    "previousSourceDigest": "0114d69316965e89ba2ed050bf972671020787585403e4f4b3f8e8b05961dab8"
-  }
+  "readyToPublish": false
 }

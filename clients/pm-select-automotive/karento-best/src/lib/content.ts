@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "PM SELECT AUTOMOTIVE",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-67ce81cba54450ce/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-67ce81cba54450ce/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-67ce81cba54450ce/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-1737eb7ee75bdd48/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-1737eb7ee75bdd48/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-1737eb7ee75bdd48/logo-on-dark.webp",
     "alt": "PM SELECT AUTOMOTIVE",
-    "favicon": "/dealer-brand/app-icon.png",
+    "favicon": "/dealer-brand/v2-1737eb7ee75bdd48/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

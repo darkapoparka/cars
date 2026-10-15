@@ -23,13 +23,17 @@ export const dealerLocalizedText = {
     "city": "Varna",
     "addressLine": "Tsar Osvoboditel 122",
     "address": "Tsar Osvoboditel 122, Varna, Balgariya",
-    "appointment": "Viewings by appointment. Please call before visiting."
+    "appointment": "Viewings by appointment. Please call before visiting.",
+    "addressShort": "Tsar Osvoboditel 122",
+    "appointmentShort": "Viewings by appointment. Please call before visiting."
   },
   "bg": {
     "city": "Варна",
     "addressLine": "бул. Цар Освободител 122",
     "address": "бул. Цар Освободител 122, Варна, България",
-    "appointment": "Потвърдете работното време директно с автокъщата."
+    "appointment": "Потвърдете работното време директно с автокъщата.",
+    "addressShort": "бул. Цар Освободител 122",
+    "appointmentShort": "Потвърдете работното време директно с автокъщата."
   }
 } as const;
 

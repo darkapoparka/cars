@@ -42,7 +42,7 @@
 			{#if mobileImage.srcset}<source
 					media="(max-width: 767.98px)"
 					srcset={mobileImage.srcset}
-					sizes="320px"
+					sizes="42vw"
 				/>{/if}
 			<img
 				style:--desktop-service-image-position={desktopArtwork.position ?? 'center'}
@@ -55,15 +55,12 @@
 			/>
 		</picture>
 		<div class="service-card__body">
-			<div class="service-card__heading">
-				<span class="service-card__context service-card__mobile-copy">{detail.mobileContext}</span>
-				<h2>
-					<span class="service-card__mobile-copy">{detail.mobileTitle ?? service.title}</span><span
-						class="service-card__desktop-copy"
-						title={service.title}>{service.title}</span
-					>
-				</h2>
-			</div>
+			<h2>
+				<span class="service-card__mobile-copy">{detail.mobileTitle ?? service.title}</span><span
+					class="service-card__desktop-copy"
+					title={service.title}>{service.title}</span
+				>
+			</h2>
 			<p>
 				<span class="service-card__mobile-copy">{detail.mobileSummary}</span><span
 					class="service-card__desktop-copy">{detail.summary}</span
@@ -87,9 +84,6 @@
 	}
 	.service-card__desktop-copy {
 		display: none;
-	}
-	.service-card__heading {
-		display: contents;
 	}
 	.service-card {
 		min-width: 0;
@@ -219,11 +213,11 @@
 	@media (max-width: 767.98px) {
 		.service-card > a {
 			display: grid;
-			grid-template-columns: clamp(30%, calc(100% - 13rem), 36%) minmax(0, 1fr);
+			grid-template-columns: 42% minmax(0, 1fr);
 			align-items: stretch;
 		}
 		.service-card img {
-			min-height: 160px;
+			min-height: 0;
 			height: 100%;
 			aspect-ratio: auto;
 			object-fit: cover;
@@ -241,16 +235,6 @@
 		.service-card h2 {
 			font-size: var(--bc-text-entry);
 			line-height: 1.3;
-		}
-		.service-card__heading {
-			display: flex;
-			flex-direction: column;
-			gap: var(--bc-space-1);
-		}
-		.service-card__context {
-			color: var(--bc-copy);
-			font-size: var(--bc-text-meta);
-			line-height: var(--bc-leading-meta);
 		}
 		.service-card p {
 			font-size: var(--bc-text-body);
@@ -275,19 +259,11 @@
 		}
 		.service-card__cta :global(svg) {
 			flex-shrink: 0;
-			width: 16px;
-			height: 16px;
+			width: var(--bc-control-icon-size-compact);
+			height: var(--bc-control-icon-size-compact);
 		}
 	}
 	@container service-list (width < 16rem) {
-		.service-card > a {
-			grid-template-columns: 1fr;
-		}
-		.service-card img {
-			min-height: 0;
-			height: auto;
-			aspect-ratio: 16 / 9;
-		}
 		.service-card h2 {
 			overflow-wrap: anywhere;
 		}
