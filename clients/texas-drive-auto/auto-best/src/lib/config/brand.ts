@@ -33,6 +33,6 @@ export const brand = {
   addressLine,
   address: "10511 Olympic Drive, Dallas, TX 75220",
   appointment: "Monday–Saturday 10 AM–6 PM; Sunday closed",
-  logo: "/dealer-brand/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/logo-on-dark.webp"
+  logo: "/dealer-brand/v2-785fdecf649f9620/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-785fdecf649f9620/logo-on-dark.webp"
 } as const satisfies BrandConfig;

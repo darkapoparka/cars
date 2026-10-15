@@ -76,7 +76,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Texas Drive Auto",
       "location": "10511 Olympic Drive, Dallas, TX 75220",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-785fdecf649f9620/logo-on-light.webp",
       "mobile": "(214) 972-3233",
       "email": "",
       "whatsapp": "",
@@ -161,7 +161,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Texas Drive Auto",
       "location": "10511 Olympic Drive, Dallas, TX 75220",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-785fdecf649f9620/logo-on-light.webp",
       "mobile": "(214) 972-3233",
       "email": "",
       "whatsapp": "",
@@ -253,7 +253,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Texas Drive Auto",
       "location": "10511 Olympic Drive, Dallas, TX 75220",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-785fdecf649f9620/logo-on-light.webp",
       "mobile": "(214) 972-3233",
       "email": "",
       "whatsapp": "",
@@ -338,7 +338,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Texas Drive Auto",
       "location": "10511 Olympic Drive, Dallas, TX 75220",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-785fdecf649f9620/logo-on-light.webp",
       "mobile": "(214) 972-3233",
       "email": "",
       "whatsapp": "",
@@ -423,7 +423,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Texas Drive Auto",
       "location": "10511 Olympic Drive, Dallas, TX 75220",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-785fdecf649f9620/logo-on-light.webp",
       "mobile": "(214) 972-3233",
       "email": "",
       "whatsapp": "",
@@ -508,7 +508,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Texas Drive Auto",
       "location": "10511 Olympic Drive, Dallas, TX 75220",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-785fdecf649f9620/logo-on-light.webp",
       "mobile": "(214) 972-3233",
       "email": "",
       "whatsapp": "",
@@ -593,7 +593,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Texas Drive Auto",
       "location": "10511 Olympic Drive, Dallas, TX 75220",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-785fdecf649f9620/logo-on-light.webp",
       "mobile": "(214) 972-3233",
       "email": "",
       "whatsapp": "",
@@ -678,7 +678,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Texas Drive Auto",
       "location": "10511 Olympic Drive, Dallas, TX 75220",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-785fdecf649f9620/logo-on-light.webp",
       "mobile": "(214) 972-3233",
       "email": "",
       "whatsapp": "",

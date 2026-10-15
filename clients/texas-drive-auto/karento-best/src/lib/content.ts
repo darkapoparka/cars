@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "Texas Drive Auto",
   "locale": "en-US",
   "logo": {
-    "light": "/dealer-brand/logo-on-light.webp",
-    "footer": "/dealer-brand/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-785fdecf649f9620/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-785fdecf649f9620/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-785fdecf649f9620/logo-on-dark.webp",
     "alt": "Texas Drive Auto",
-    "favicon": "/dealer-brand/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-785fdecf649f9620/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

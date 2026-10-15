@@ -114,8 +114,8 @@ export const leadSite: LeadSiteConfig = {
     "tagline": "Texas Drive Auto — vehicles and dealer support in Dallas."
   }
 },
-  accent: "#30343b",
-  desktopAccent: "#4b5057",
+  accent: "#09090b",
+  desktopAccent: "#09090b",
   desktopInventoryFilterLayout: "quick",
   desktopPreviewIdentity: {
     sourceSlug: "day-night-auto-group",
@@ -147,10 +147,11 @@ export const leadSite: LeadSiteConfig = {
   email: "",
   heroPath: "/lead-hero.jpg",
   locale: "en-US",
-  logoPath: "/dealer-brand/logo-on-dark.webp",
-  logoOnLight: "/dealer-brand/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/logo-on-dark.webp",
-  logoOnAccent: "/dealer-brand/logo-on-accent.webp",
+  logoPath: "/dealer-brand/v2-785fdecf649f9620/logo-on-light.webp",
+  logoInversePath: "/dealer-brand/v2-785fdecf649f9620/logo-on-dark.webp",
+  logoOnLight: "/dealer-brand/v2-785fdecf649f9620/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-785fdecf649f9620/logo-on-dark.webp",
+  logoOnAccent: "/dealer-brand/v2-785fdecf649f9620/logo-on-dark.webp",
   mapsEmbedUrl:
     "https://maps.google.com/maps?q=Texas%20Drive%20Auto%2C%2010511%20Olympic%20Drive%2C%20Dallas%2C%20TX%2075220&z=16&output=embed",
   mapsUrl:

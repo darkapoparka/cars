@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "Texas Drive Auto",
-  "logo": "/dealer-brand/logo-on-light.webp",
+  "logo": "/dealer-brand/v2-785fdecf649f9620/logo-on-light.webp",
   "phone": "+12149723233",
   "email": null,
   "address": "10511 Olympic Drive, Dallas, TX 75220",
