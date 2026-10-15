@@ -33,6 +33,6 @@ export const brand = {
   addressLine,
   address: "Кайсиева градина, до бл. 222, Варна, България",
   appointment: "Потвърдете работното време директно с автокъщата.",
-  logo: "/dealer-brand/v2-0d9426ae4fe386fa/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/v2-0d9426ae4fe386fa/logo-on-dark.webp"
+  logo: "/dealer-brand/v2-7ca5b95dbdc1aaaa/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-7ca5b95dbdc1aaaa/logo-on-dark.webp"
 } as const satisfies BrandConfig;

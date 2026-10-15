@@ -224,12 +224,13 @@ async function run(name, engine) {
       await page
         .getByRole('navigation', { name: 'Main navigation' })
         .getByRole('link')
-        .allTextContents(),
+        .evaluateAll((links) => links.map((link) => link.getAttribute('aria-label'))),
       ['Cars', 'Services', 'Contact'],
     );
     const navigation = page.getByRole('navigation', { name: 'Main navigation' });
-    assert.equal(await navigation.locator('svg').count(), 3);
-    assert.equal(await navigation.locator('img').count(), 0);
+    assert.equal(await navigation.locator('svg').count(), 0);
+    assert.equal(await navigation.locator('img').count(), 3);
+    assert.deepEqual(await navigation.getByRole('link').allTextContents(), ['', '', '']);
     assert.equal(await navigation.getByRole('img').count(), 0, 'Icons are decorative');
     assert.equal(
       await navigation

@@ -111,8 +111,8 @@ export const leadSite: LeadSiteConfig = {
     "tagline": "topauto — vehicles and dealer support in Varna."
   }
 },
-  accent: "#30343b",
-  desktopAccent: "#4b5057",
+  accent: "#09090b",
+  desktopAccent: "#09090b",
   desktopInventoryFilterLayout: "quick",
   desktopPreviewIdentity: {
     sourceSlug: "day-night-auto-group",
@@ -144,8 +144,8 @@ export const leadSite: LeadSiteConfig = {
   email: "",
   heroPath: "/lead-hero.jpg",
   locale: "bg-BG",
-  logoPath: "/dealer-brand/v2-0d9426ae4fe386fa/logo-on-light.webp",
-  logoInversePath: "/dealer-brand/v2-0d9426ae4fe386fa/logo-on-dark.webp",
+  logoPath: "/dealer-brand/v2-7ca5b95dbdc1aaaa/logo-on-light.webp",
+  logoInversePath: "/dealer-brand/v2-7ca5b95dbdc1aaaa/logo-on-dark.webp",
   mapsEmbedUrl:
     "https://maps.google.com/maps?q=topauto%2C%20%D0%9A%D0%B0%D0%B9%D1%81%D0%B8%D0%B5%D0%B2%D0%B0%20%D0%B3%D1%80%D0%B0%D0%B4%D0%B8%D0%BD%D0%B0%2C%20%D0%B4%D0%BE%20%D0%B1%D0%BB.%20222%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F&z=16&output=embed",
   mapsUrl:

@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "topauto",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-0d9426ae4fe386fa/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-0d9426ae4fe386fa/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-0d9426ae4fe386fa/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-7ca5b95dbdc1aaaa/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-7ca5b95dbdc1aaaa/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-7ca5b95dbdc1aaaa/logo-on-dark.webp",
     "alt": "topauto",
-    "favicon": "/dealer-brand/v2-0d9426ae4fe386fa/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-7ca5b95dbdc1aaaa/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

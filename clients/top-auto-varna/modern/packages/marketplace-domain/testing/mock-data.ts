@@ -49,7 +49,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "topauto",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-0d9426ae4fe386fa/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-7ca5b95dbdc1aaaa/logo-on-light.webp"
     },
     "publishedAt": "2026-10-12T09:00:00.000Z",
     "promoted": true
@@ -101,7 +101,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "topauto",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-0d9426ae4fe386fa/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-7ca5b95dbdc1aaaa/logo-on-light.webp"
     },
     "publishedAt": "2026-10-12T09:00:00.000Z",
     "promoted": true

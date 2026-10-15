@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "topauto",
-  "logo": "/dealer-brand/v2-0d9426ae4fe386fa/logo-on-light.webp",
+  "logo": "/dealer-brand/v2-7ca5b95dbdc1aaaa/logo-on-light.webp",
   "phone": "+359893036419",
   "email": null,
   "address": "Кайсиева градина, до бл. 222, Варна, България",

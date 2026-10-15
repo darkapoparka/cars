@@ -147,7 +147,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "topauto",
   "location": "Кайсиева градина, до бл. 222, Варна, България",
-  "avatar": "/dealer-brand/v2-0d9426ae4fe386fa/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-7ca5b95dbdc1aaaa/logo-on-light.webp",
   "mobile": "0893036419",
   "email": "",
   "whatsapp": "",
