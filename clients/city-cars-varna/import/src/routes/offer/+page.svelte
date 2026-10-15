@@ -1,4 +1,46 @@
 <script lang="ts">
+	import { page } from '$app/state';
+	// CARS_IMPORT_OFFER_COPY_START
+	const offerCopy = $derived(page.data.locale === 'en' ? {
+  "name": "Сити Карс",
+  "count": "8",
+  "inventoryLabel": "listings in this preview",
+  "catalogTitle": "Preview catalogue",
+  "roadmap": "Preview catalogue, detail pages, comparison, favourites, services and contact. Confirm current price and availability with the dealership.",
+  "title": "Website proposal for Сити Карс",
+  "description": "Independent website preview for Сити Карс; current dealer availability is unconfirmed.",
+  "heroLead": "Website preview for Сити Карс with 8 listings in this preview. They do not confirm dealer inventory or availability; preview forms do not send enquiries.",
+  "heading": "Website preview for Сити Карс",
+  "headerLabel": "Сити Карс website proposal",
+  "homeLabel": "Сити Карс home",
+  "openSite": "Open the Сити Карс preview",
+  "proposal": "Proposal for Сити Карс",
+  "stackBranding": "Auxero template fidelity + Сити Карс visual adaptation",
+  "stackSummary": "SvelteKit + Auxero + Сити Карс data",
+  "product": "Website proposal for Сити Карс.",
+  "featuresLead": "Preview browsing, comparison, favourites and contact flows. Forms and administration are demonstration interfaces.",
+  "closing": "Сити Карс can review this proposal before any official publication."
+} : {
+  "name": "Сити Карс",
+  "count": "8",
+  "inventoryLabel": "обяви в прегледа",
+  "catalogTitle": "Каталог за преглед",
+  "roadmap": "Каталог за преглед, детайлни страници, сравнение, любими, услуги и контакт. Потвърдете актуалната цена и наличност с автокъщата.",
+  "title": "Предложение за сайт на Сити Карс",
+  "description": "Независим преглед на сайт за Сити Карс; актуалната наличност не е потвърдена.",
+  "heroLead": "Преглед на сайт за Сити Карс с 8 обяви в прегледа. Те не потвърждават наличност на автокъщата; формите в прегледа не изпращат запитвания.",
+  "heading": "Демонстрационен сайт за Сити Карс",
+  "headerLabel": "Предложение за сайт на Сити Карс",
+  "homeLabel": "Начална страница на Сити Карс",
+  "openSite": "Отвори прегледа на Сити Карс",
+  "proposal": "Предложение за Сити Карс",
+  "stackBranding": "Auxero template fidelity + Сити Карс визуална адаптация",
+  "stackSummary": "SvelteKit + Auxero + Сити Карс data",
+  "product": "Предложение за сайт на Сити Карс.",
+  "featuresLead": "Преглед на търсене, сравнение, любими и контакт. Формите и админ зоната са демонстрационни интерфейси.",
+  "closing": "Сити Карс може да прегледа предложението преди официално публикуване."
+});
+	// CARS_IMPORT_OFFER_COPY_END
 	import { resolve } from '$app/paths';
 	import ArrowRight from '@lucide/svelte/icons/arrow-right';
 	import BadgeCheck from '@lucide/svelte/icons/badge-check';
@@ -20,14 +62,14 @@
 	import Wrench from '@lucide/svelte/icons/wrench';
 
 	const heroImage = '/assets/daynight/offer/offer-poster-background.webp';
-	const logo = "/dealer-brand/v2-cb4338735a59835f/logo-on-light.webp";
+	const logo = "/dealer-brand/v2-eea3ac0f0c414a4e/logo-on-light.webp";
 
-	const stats = [
-		{ value: '42', label: 'реални автомобила в каталога' },
+	const stats = $derived([
+		{ value: offerCopy.count, label: offerCopy.inventoryLabel },
 		{ value: '18+', label: 'готови потребителски страници' },
 		{ value: 'BG / EN', label: 'структура за двуезично съдържание' },
 		{ value: 'Admin', label: 'управление на обяви и заявки' }
-	];
+	]);
 
 	const proofCards = [
 		{
@@ -47,10 +89,10 @@
 		}
 	];
 
-	const deliveredFeatures = [
+	const deliveredFeatures = $derived([
 		{
 			icon: Car,
-			title: 'Каталог с реални автомобили',
+			title: offerCopy.catalogTitle,
 			text: 'Обявите са структурирани с цена, пробег, година, гориво, скоростна кутия, снимки, статус и детайли.'
 		},
 		{
@@ -88,22 +130,22 @@
 			title: 'Съдържание и SEO',
 			text: 'Блог, услуги, екип, ревюта, ЧЗВ, sitemap.xml и route структура за търсачки.'
 		}
-	];
+	]);
 
-	const stack = [
+	const stack = $derived([
 		{ label: 'Frontend', value: 'SvelteKit, Svelte 5, TypeScript, Vite' },
-		{ label: 'UI база', value: 'Auxero template fidelity + Сити Карс визуална адаптация' },
+		{ label: 'UI база', value: offerCopy.stackBranding },
 		{ label: 'Данни', value: 'структуриран автомобилен feed, server adapters, route state' },
 		{ label: 'Качество', value: 'Vitest, Playwright, svelte-check, ESLint, Prettier' },
 		{ label: 'Готовност', value: 'responsive pages, admin flows, SEO routes, reusable components' }
-	];
+	]);
 
-	const roadmap = [
+	const roadmap = $derived([
 		{
 			icon: BadgeCheck,
 			kicker: 'Готово сега',
 			title: 'Публичен сайт и каталог',
-			text: 'Работеща потребителска част, реални обяви, детайлни страници, сравнение, любими, услуги и контакт.'
+			text: offerCopy.roadmap
 		},
 		{
 			icon: LayoutDashboard,
@@ -123,38 +165,36 @@
 			title: 'Автоматизации и приложение',
 			text: 'VIN проверка, постване към социални канали, известия, лизингов калкулатор или мобилно приложение.'
 		}
-	];
+	]);
 </script>
 
 <svelte:head>
-	<title>Оферта за Сити Карс</title>
+	<title>{offerCopy.title}</title>
 	<meta
 		name="description"
-		content="Клиентска оферта за новия Сити Карс сайт: реален каталог, админ панел, услуги, SEO, технологии и следващи стъпки."
+		content={offerCopy.description}
 	/>
 	<link rel="preload" as="image" href={heroImage} />
 </svelte:head>
 
 <main class="offer-page" data-daynight-offer>
-	<header class="offer-header" aria-label="Сити Карс offer header">
-		<a class="offer-header__logo" href={resolve('/')} aria-label="Сити Карс home">
-			<img src={logo} alt="Сити Карс" />
+	<header class="offer-header" aria-label={offerCopy.headerLabel}>
+		<a class="offer-header__logo" href={resolve('/')} aria-label={offerCopy.homeLabel}>
+			<img src={logo} alt={offerCopy.name} />
 		</a>
 		<div class="offer-header__meta">
 			<span>Оферта</span>
-			<a href={resolve('/')} aria-label="Отвори Сити Карс сайта">Към сайта</a>
+			<a href={resolve('/')} aria-label={offerCopy.openSite}>Към сайта</a>
 		</div>
 	</header>
 
 	<section class="offer-hero">
 		<div class="offer-wrap offer-hero__grid">
 			<div class="offer-hero__copy">
-				<p class="offer-eyebrow">Предложение за Сити Карс</p>
-				<h1>Новият сайт не е идея. Той вече работи.</h1>
+				<p class="offer-eyebrow">{offerCopy.proposal}</p>
+				<h1>{offerCopy.heading}</h1>
 				<p class="offer-hero__lead">
-					Изградих реална версия на Сити Карс върху Auxero визуалната база: каталог с истински
-					автомобили, страници за услуги, админ зона, сравнение, любими, блог, SEO и ясна пътна
-					карта към production.
+					{offerCopy.heroLead}
 				</p>
 				<div class="offer-hero__actions">
 					<a class="offer-action offer-action--primary" href={resolve('/')}>
@@ -170,7 +210,7 @@
 				<img src={heroImage} alt="Premium showroom workspace with a digital website proposal" />
 				<figcaption>
 					<span>Built as a real product surface</span>
-					<strong>SvelteKit + Auxero + Сити Карс data</strong>
+					<strong>{offerCopy.stackSummary}</strong>
 				</figcaption>
 			</figure>
 		</div>
@@ -191,7 +231,7 @@
 		<div class="offer-wrap">
 			<div class="offer-section__head">
 				<p class="offer-eyebrow">Визуално доказателство</p>
-				<h2>Не е generic landing page. Това е Сити Карс продукт.</h2>
+				<h2>{offerCopy.product}</h2>
 				<p>
 					Страниците използват реалните теми, снимки, сценарии и действия, които клиент на автокъща
 					очаква да види.
@@ -218,8 +258,7 @@
 				<p class="offer-eyebrow">Какво е изградено</p>
 				<h2>Готови функции, които могат да се покажат веднага.</h2>
 				<p>
-					Фокусът е практичен: клиентът намира автомобил, разбира услугата, праща запитване,
-					сравнява, запазва и Сити Карс може да управлява съдържанието.
+					{offerCopy.featuresLead}
 				</p>
 			</div>
 
@@ -282,7 +321,7 @@
 		<div class="offer-wrap offer-closing">
 			<div>
 				<p class="offer-eyebrow">Финал</p>
-				<h2>Ако Сити Карс иска, това може да стане официалният сайт.</h2>
+				<h2>{offerCopy.closing}</h2>
 			</div>
 			<div class="offer-closing__panel">
 				<div class="offer-closing__icons" aria-hidden="true">

@@ -58,7 +58,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Сити Карс",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-cb4338735a59835f/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-eea3ac0f0c414a4e/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": true
@@ -119,7 +119,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Сити Карс",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-cb4338735a59835f/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-eea3ac0f0c414a4e/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": true
@@ -180,7 +180,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Сити Карс",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-cb4338735a59835f/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-eea3ac0f0c414a4e/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": true
@@ -241,7 +241,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Сити Карс",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-cb4338735a59835f/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-eea3ac0f0c414a4e/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -302,7 +302,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Сити Карс",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-cb4338735a59835f/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-eea3ac0f0c414a4e/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -363,7 +363,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Сити Карс",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-cb4338735a59835f/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-eea3ac0f0c414a4e/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -424,7 +424,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Сити Карс",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-cb4338735a59835f/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-eea3ac0f0c414a4e/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -485,373 +485,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Сити Карс",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-cb4338735a59835f/logo-on-light.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1004",
-    "slug": "opel-zafira-2016-11791382885730376",
-    "category": "van",
-    "dealerOrgId": "dealer-city-cars-varna",
-    "status": "active",
-    "title": "Opel Zafira TOURER 2.0 CDTI 6+ 1 МЕСТА ЕВРО 6В - НОВ ВНОС",
-    "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
-    "price": {
-      "amount": 5500,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/vehicles/11791382885730376/1.webp",
-        "alt": "Opel Zafira TOURER 2.0 CDTI 6+ 1 МЕСТА ЕВРО 6В - НОВ ВНОС"
-      },
-      {
-        "url": "/assets/vehicles/11791382885730376/2.webp",
-        "alt": "Opel Zafira TOURER 2.0 CDTI 6+ 1 МЕСТА ЕВРО 6В - НОВ ВНОС"
-      },
-      {
-        "url": "/assets/vehicles/11791382885730376/3.webp",
-        "alt": "Opel Zafira TOURER 2.0 CDTI 6+ 1 МЕСТА ЕВРО 6В - НОВ ВНОС"
-      },
-      {
-        "url": "/assets/vehicles/11791382885730376/4.webp",
-        "alt": "Opel Zafira TOURER 2.0 CDTI 6+ 1 МЕСТА ЕВРО 6В - НОВ ВНОС"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "spec": {
-      "make": "Opel",
-      "model": "Zafira",
-      "year": 2016,
-      "bodyType": "van",
-      "fuelType": "diesel",
-      "transmission": "automatic",
-      "mileageValue": 171000,
-      "mileageUnit": "km",
-      "enginePowerHp": 131
-    },
-    "seller": {
-      "id": "dealer-city-cars-varna",
-      "type": "dealer",
-      "displayName": "Сити Карс",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-cb4338735a59835f/logo-on-light.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1005",
-    "slug": "bmw-x3-2005-21791296931163018",
-    "category": "car",
-    "dealerOrgId": "dealer-city-cars-varna",
-    "status": "active",
-    "title": "BMW X3 2.0d X Drive M Pack нов внос",
-    "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
-    "price": {
-      "amount": 4300,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/vehicles/21791296931163018/1.webp",
-        "alt": "BMW X3 2.0d X Drive M Pack нов внос"
-      },
-      {
-        "url": "/assets/vehicles/21791296931163018/2.webp",
-        "alt": "BMW X3 2.0d X Drive M Pack нов внос"
-      },
-      {
-        "url": "/assets/vehicles/21791296931163018/3.webp",
-        "alt": "BMW X3 2.0d X Drive M Pack нов внос"
-      },
-      {
-        "url": "/assets/vehicles/21791296931163018/4.webp",
-        "alt": "BMW X3 2.0d X Drive M Pack нов внос"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "spec": {
-      "make": "BMW",
-      "model": "X3",
-      "year": 2005,
-      "bodyType": "suv",
-      "fuelType": "diesel",
-      "transmission": "manual",
-      "mileageValue": 195000,
-      "mileageUnit": "km",
-      "enginePowerHp": 150
-    },
-    "seller": {
-      "id": "dealer-city-cars-varna",
-      "type": "dealer",
-      "displayName": "Сити Карс",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-cb4338735a59835f/logo-on-light.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1006",
-    "slug": "audi-a6-2007-11791295165673002",
-    "category": "car",
-    "dealerOrgId": "dealer-city-cars-varna",
-    "status": "active",
-    "title": "Audi A6 3.0 TDI Quatro НОВ ВНОС",
-    "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
-    "price": {
-      "amount": 3300,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/vehicles/11791295165673002/1.webp",
-        "alt": "Audi A6 3.0 TDI Quatro НОВ ВНОС"
-      },
-      {
-        "url": "/assets/vehicles/11791295165673002/2.webp",
-        "alt": "Audi A6 3.0 TDI Quatro НОВ ВНОС"
-      },
-      {
-        "url": "/assets/vehicles/11791295165673002/3.webp",
-        "alt": "Audi A6 3.0 TDI Quatro НОВ ВНОС"
-      },
-      {
-        "url": "/assets/vehicles/11791295165673002/4.webp",
-        "alt": "Audi A6 3.0 TDI Quatro НОВ ВНОС"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "spec": {
-      "make": "Audi",
-      "model": "A6",
-      "year": 2007,
-      "bodyType": "sedan",
-      "fuelType": "diesel",
-      "transmission": "automatic",
-      "mileageValue": 290000,
-      "mileageUnit": "km",
-      "enginePowerHp": 233
-    },
-    "seller": {
-      "id": "dealer-city-cars-varna",
-      "type": "dealer",
-      "displayName": "Сити Карс",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-cb4338735a59835f/logo-on-light.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1007",
-    "slug": "mercedes-benz-c-320-2008-11790952448716027",
-    "category": "car",
-    "dealerOrgId": "dealer-city-cars-varna",
-    "status": "active",
-    "title": "Mercedes-Benz C 320 4MATIC AMG AVANTGARDE",
-    "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
-    "price": {
-      "amount": 7100,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/vehicles/11790952448716027/1.webp",
-        "alt": "Mercedes-Benz C 320 4MATIC AMG AVANTGARDE"
-      },
-      {
-        "url": "/assets/vehicles/11790952448716027/2.webp",
-        "alt": "Mercedes-Benz C 320 4MATIC AMG AVANTGARDE"
-      },
-      {
-        "url": "/assets/vehicles/11790952448716027/3.webp",
-        "alt": "Mercedes-Benz C 320 4MATIC AMG AVANTGARDE"
-      },
-      {
-        "url": "/assets/vehicles/11790952448716027/4.webp",
-        "alt": "Mercedes-Benz C 320 4MATIC AMG AVANTGARDE"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "spec": {
-      "make": "Mercedes-Benz",
-      "model": "C 320",
-      "year": 2008,
-      "bodyType": "sedan",
-      "fuelType": "diesel",
-      "transmission": "automatic",
-      "mileageValue": 192000,
-      "mileageUnit": "km",
-      "enginePowerHp": 224
-    },
-    "seller": {
-      "id": "dealer-city-cars-varna",
-      "type": "dealer",
-      "displayName": "Сити Карс",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-cb4338735a59835f/logo-on-light.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1008",
-    "slug": "mini-one-2010-11790685723628799",
-    "category": "car",
-    "dealerOrgId": "dealer-city-cars-varna",
-    "status": "active",
-    "title": "Mini One 1.6i 2010 г. нов внос",
-    "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
-    "price": {
-      "amount": 3400,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/vehicles/11790685723628799/1.webp",
-        "alt": "Mini One 1.6i 2010 г. нов внос"
-      },
-      {
-        "url": "/assets/vehicles/11790685723628799/2.webp",
-        "alt": "Mini One 1.6i 2010 г. нов внос"
-      },
-      {
-        "url": "/assets/vehicles/11790685723628799/3.webp",
-        "alt": "Mini One 1.6i 2010 г. нов внос"
-      },
-      {
-        "url": "/assets/vehicles/11790685723628799/4.webp",
-        "alt": "Mini One 1.6i 2010 г. нов внос"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "spec": {
-      "make": "Mini",
-      "model": "One",
-      "year": 2010,
-      "bodyType": "hatchback",
-      "fuelType": "gasoline",
-      "transmission": "manual",
-      "mileageValue": 109000,
-      "mileageUnit": "km",
-      "enginePowerHp": 75
-    },
-    "seller": {
-      "id": "dealer-city-cars-varna",
-      "type": "dealer",
-      "displayName": "Сити Карс",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-cb4338735a59835f/logo-on-light.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1009",
-    "slug": "vw-touran-2006-11790421466350380",
-    "category": "van",
-    "dealerOrgId": "dealer-city-cars-varna",
-    "status": "active",
-    "title": "VW Touran 2.0 TDI 170 кс НОВ ВНОС",
-    "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
-    "price": {
-      "amount": 3100,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/vehicles/11790421466350380/1.webp",
-        "alt": "VW Touran 2.0 TDI 170 кс НОВ ВНОС"
-      },
-      {
-        "url": "/assets/vehicles/11790421466350380/2.webp",
-        "alt": "VW Touran 2.0 TDI 170 кс НОВ ВНОС"
-      },
-      {
-        "url": "/assets/vehicles/11790421466350380/3.webp",
-        "alt": "VW Touran 2.0 TDI 170 кс НОВ ВНОС"
-      },
-      {
-        "url": "/assets/vehicles/11790421466350380/4.webp",
-        "alt": "VW Touran 2.0 TDI 170 кс НОВ ВНОС"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "spec": {
-      "make": "VW",
-      "model": "Touran",
-      "year": 2006,
-      "bodyType": "van",
-      "fuelType": "diesel",
-      "transmission": "manual",
-      "mileageValue": 204000,
-      "mileageUnit": "km",
-      "enginePowerHp": 170
-    },
-    "seller": {
-      "id": "dealer-city-cars-varna",
-      "type": "dealer",
-      "displayName": "Сити Карс",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-cb4338735a59835f/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-eea3ac0f0c414a4e/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false

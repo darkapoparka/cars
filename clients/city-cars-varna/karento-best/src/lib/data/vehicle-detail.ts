@@ -118,6 +118,12 @@ export const referenceSpecifications: readonly DetailSpecification[] = [
     "valueKey": "fuel.diesel"
   },
   {
+    "id": "year",
+    "icon": "/assets/imgs/template/icons/calendar.svg",
+    "value": "2016",
+    "labelKey": "vehicle.field.year"
+  },
+  {
     "id": "lit",
     "icon": "/assets/imgs/page/car/lit.svg",
     "value": "131 hp",
@@ -149,7 +155,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "Сити Карс",
   "location": "ул. 'Перекоп' 2, Варна, България",
-  "avatar": "/dealer-brand/v2-cb4338735a59835f/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-eea3ac0f0c414a4e/logo-on-light.webp",
   "mobile": "0899867804",
   "email": "",
   "whatsapp": "",

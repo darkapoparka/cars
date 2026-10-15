@@ -5,12 +5,12 @@
   "name": "Сити Карс",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "8a97176e3adfbd95dce69b3096abc84e3eecd9c8",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/mobile",
-    "tree": "9a4db757e788ee236712b8eac25956a6a8a61d0b",
-    "digest": "cc126a7c38634c7601ef8c617411d6938d7c9b6efc7b319e87c2c6efc99d8b6d"
+    "digest": "f5a3e541a7c648a4c2899ad3893e22a3806027a9f66d95fa4e8c74b2226635b6",
+    "tree": "792bfdd1d8eb22aabd90c7e3a0c0779a6c1c36f3"
   },
-  "sourceDigest": "21f2464e0b28633f9e560d60c7eba49cf4f1850028236b63272ca6f332f8ac8b",
+  "sourceDigest": "a0a6a5964a1cea3cbe5262e94bb7db03f99aaf9ed99a71f03e690b0324e39c76",
   "inventory": {
     "mode": "dated-listing-snapshot",
     "count": 8,
@@ -19,8 +19,8 @@
   "personalization": {
     "profileSha256": "6fca9006ed2533eb7637a5e91fbdc3f834ebdfd9bb42feecb81d0c1c2b96d352",
     "logoPaths": [
-      "/dealer-brand/v2-cb4338735a59835f/logo-on-light.webp",
-      "/dealer-brand/v2-cb4338735a59835f/logo-on-dark.webp"
+      "/dealer-brand/logo-on-light.webp",
+      "/dealer-brand/logo-on-dark.webp"
     ],
     "mediaPaths": [
       "/assets/vehicles/11791382885730376/1.webp",
@@ -68,13 +68,15 @@
       "mobile/src/components/DealerScreens.tsx",
       "mobile/src/components/VehicleCard.tsx",
       "mobile/src/components/ShowroomVehicleCard.tsx",
-      "mobile/src/components/VehicleSections.tsx"
+      "mobile/src/components/VehicleSections.tsx",
+      "mobile/src/lib/mobile-mileage.ts",
+      "mobile/src/lib/types.ts",
+      "mobile/src/components/DesktopVehicleSummary.tsx",
+      "mobile/src/components/NativeCarPark.tsx",
+      "mobile/src/components/ShowroomFilterSheet.tsx",
+      "mobile/src/lib/vehicle-copy.ts"
     ]
   },
   "needsDealerQA": true,
-  "readyToPublish": false,
-  "branding": {
-    "packId": "cb4338735a59835f",
-    "previousSourceDigest": "6810df894265bb52e40a6a9b285bf3214fa7047de2527cdf9e938f57e8a12053"
-  }
+  "readyToPublish": false
 }

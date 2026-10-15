@@ -114,8 +114,8 @@ export const leadSite: LeadSiteConfig = {
     "tagline": "Сити Карс — vehicles and dealer support in Varna."
   }
 },
-  accent: "#30343b",
-  desktopAccent: "#4b5057",
+  accent: "#09090b",
+  desktopAccent: "#09090b",
   desktopInventoryFilterLayout: "quick",
   desktopPreviewIdentity: {
     sourceSlug: "day-night-auto-group",
@@ -127,7 +127,7 @@ export const leadSite: LeadSiteConfig = {
       en: "Find your next car.",
     },
   },
-  address: "ул. „Атанас Манчев“ 18, Варна",
+  address: "ул. 'Перекоп' 2, Варна, България",
   city: "Варна",
   district: { bg: "Варна", en: "Varna" },
   sellCategoryAssets: {
@@ -141,17 +141,17 @@ export const leadSite: LeadSiteConfig = {
   mobileShowroomArtworkPath:
     "/images/lease/mobile-pdp-showroom-blue-hour-v1.webp",
   contactUrl: "tel:+359899867804",
-  country: "България",
+  country: "BG",
   countryCode: carsLocale.dealerCountry,
   currency: carsLocale.inventoryCurrency,
   email: "",
   heroPath: "/lead-hero.jpg",
   locale: "bg-BG",
-  logoPath: "/dealer-brand/v2-cb4338735a59835f/logo-on-light.webp",
-  logoInversePath: "/dealer-brand/v2-cb4338735a59835f/logo-on-dark.webp",
-  logoOnLight: "/dealer-brand/v2-cb4338735a59835f/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/v2-cb4338735a59835f/logo-on-dark.webp",
-  logoOnAccent: "/dealer-brand/v2-cb4338735a59835f/logo-on-dark.webp",
+  logoPath: "/dealer-brand/v2-eea3ac0f0c414a4e/logo-on-light.webp",
+  logoInversePath: "/dealer-brand/v2-eea3ac0f0c414a4e/logo-on-dark.webp",
+  logoOnLight: "/dealer-brand/v2-eea3ac0f0c414a4e/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-eea3ac0f0c414a4e/logo-on-dark.webp",
+  logoOnAccent: "/dealer-brand/v2-eea3ac0f0c414a4e/logo-on-dark.webp",
   mapsEmbedUrl:
     "https://maps.google.com/maps?q=%D0%A1%D0%B8%D1%82%D0%B8%20%D0%9A%D0%B0%D1%80%D1%81%2C%20%D1%83%D0%BB.%20'%D0%9F%D0%B5%D1%80%D0%B5%D0%BA%D0%BE%D0%BF'%202%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F&z=16&output=embed",
   mapsUrl:
@@ -163,6 +163,6 @@ export const leadSite: LeadSiteConfig = {
   slug: "city-cars-varna",
   socialLinks: {},
   staticDemoMode: true,
-  tagline: "Премиум автомобили, внос и собствен лизинг в Варна.",
+  tagline: "Сити Карс — автомобили и съдействие в Варна.",
 };
 // LEAD_SITE_CONFIG_END

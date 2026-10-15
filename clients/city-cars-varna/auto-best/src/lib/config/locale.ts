@@ -23,13 +23,17 @@ export const dealerLocalizedText = {
     "city": "Varna",
     "addressLine": "'Perekop' 2",
     "address": "'Perekop' 2, Varna, Balgariya",
-    "appointment": "Viewings by appointment. Please call before visiting."
+    "appointment": "Viewings by appointment. Please call before visiting.",
+    "addressShort": "'Perekop' 2",
+    "appointmentShort": "Viewings by appointment. Please call before visiting."
   },
   "bg": {
     "city": "Варна",
     "addressLine": "ул. 'Перекоп' 2",
     "address": "ул. 'Перекоп' 2, Варна, България",
-    "appointment": "Потвърдете работното време директно с автокъщата."
+    "appointment": "Потвърдете работното време директно с автокъщата.",
+    "addressShort": "ул. 'Перекоп' 2",
+    "appointmentShort": "Потвърдете работното време директно с автокъщата."
   }
 } as const;
 
