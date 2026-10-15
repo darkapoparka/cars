@@ -3,11 +3,8 @@
   "mode": "existing-migration",
   "sourceRevision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
   "dealers": [
-    "birmingham-trade-car-sales-grasmere",
-    "nottingham-s-a-motors",
-    "stockton-norton-grange-trade-cars",
-    "dewsbury-car-market-yorkshire",
-    "batley-as-motor-group"
+    "eurocar6-varna",
+    "kalokars-varna"
   ],
   "targets": [
     "auto-best",
@@ -20,28 +17,16 @@
   ],
   "composition": {
     "reviewed": true,
-    "reviewedAt": "2026-10-15T02:22:11.351Z",
+    "reviewedAt": "2026-10-15T03:18:23.203Z",
     "reviewScope": "Owner-authorized final six-template refresh of existing Cloudflare identities. All selected dealer source trees are actually published on Cars MAIN; preserve native palettes, factual stock/contacts/locales, selected logos, one existing Worker and its existing canonical exposure. Private source MAIN and hosted acceptance are recorded separately.",
     "canonicalCompositions": {
-      "birmingham-trade-car-sales-grasmere": {
-        "canonicalOrigin": "https://birmingham-trade-car-sales-grasmere.webpreviews.site",
-        "ukDefault": true
+      "eurocar6-varna": {
+        "canonicalOrigin": "https://eurocar6-varna.webpreviews.site",
+        "ukDefault": false
       },
-      "nottingham-s-a-motors": {
-        "canonicalOrigin": "https://nottingham-s-a-motors.webpreviews.site",
-        "ukDefault": true
-      },
-      "stockton-norton-grange-trade-cars": {
-        "canonicalOrigin": "https://stockton-norton-grange-trade-cars.webpreviews.site",
-        "ukDefault": true
-      },
-      "dewsbury-car-market-yorkshire": {
-        "canonicalOrigin": "https://dewsbury-car-market-yorkshire.webpreviews.site",
-        "ukDefault": true
-      },
-      "batley-as-motor-group": {
-        "canonicalOrigin": "https://batley-as-motor-group.webpreviews.site",
-        "ukDefault": true
+      "kalokars-varna": {
+        "canonicalOrigin": "https://kalokars-varna.webpreviews.site",
+        "ukDefault": false
       }
     }
   }
