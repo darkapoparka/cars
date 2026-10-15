@@ -1,0 +1,273 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-owner-authorized-vercel-main-production-wave",
+  "ownerAuthorizedMain": true,
+  "targetBranch": "main",
+  "providerTarget": "production",
+  "noPreviewPublication": true,
+  "cohortSha256": "c50dde1d239985dac13065aff940aba6ffc58ff75032220fd428199460dbc61d",
+  "templateSourceCommit": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+  "candidateLockSha256": "04633129df9e75d6cd62deeac9125b279957789d75f57cdb0b243ef61bfc3e7e",
+  "templateSources": {
+    "auto-best": {
+      "repository": "darkapoparka/cars",
+      "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+      "path": "templates/auto-best",
+      "tree": "78fa1a82eca14816449f9588283260840ee94f52",
+      "digest": "2fc9c3cfc9cf1976dbe30c08592776362e5bcc6b09e8b06620e57c4406df58a5"
+    },
+    "modern": {
+      "repository": "darkapoparka/cars",
+      "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+      "path": "templates/modern",
+      "tree": "01eac7390fa6ba951d4b8d4c26159a9be150f6c8",
+      "digest": "30e1a99f857cc25e4d78c9459cfb4394a9f70c5b114196a5ca6325ff38823b4b"
+    },
+    "import": {
+      "repository": "darkapoparka/cars",
+      "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+      "path": "templates/import",
+      "tree": "d841ddfe5bec918bf6b2c19fd6971fecd6b8e54d",
+      "digest": "c7d6c93214e859aa2747af8f5e068b6a0b8ca095d6328c807728a4d531d688f8"
+    },
+    "app": {
+      "repository": "darkapoparka/cars",
+      "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+      "path": "templates/app",
+      "tree": "7f3d3ffa40546635377e6c5225194fe06fead291",
+      "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1"
+    },
+    "mobile": {
+      "repository": "darkapoparka/cars",
+      "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+      "path": "templates/mobile",
+      "tree": "792bfdd1d8eb22aabd90c7e3a0c0779a6c1c36f3",
+      "digest": "f5a3e541a7c648a4c2899ad3893e22a3806027a9f66d95fa4e8c74b2226635b6"
+    },
+    "karento-best": {
+      "repository": "darkapoparka/cars",
+      "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+      "path": "templates/karento-best",
+      "tree": "8c5ac869c7fd15e19a80c660343fc64b20a2bad9",
+      "digest": "be17ef365e3272753df6e50826b139a45bfc32b8fef54ddcb86d977ad16280a9"
+    }
+  },
+  "pilotQualification": {
+    "cloudflare": {
+      "schemaVersion": 1,
+      "provider": "cloudflare",
+      "dealer": "bradford-cherry-tree-cars",
+      "repository": "darkapoparka/cars-uk-bradford-cherry-tree-cars",
+      "workerName": "cars-uk-bradford-cherry-tree-cars",
+      "publicOrigin": "https://bradford-cherry-tree-cars.webpreviews.site",
+      "state": "READY",
+      "target": "production",
+      "gitBranch": "main",
+      "gitCommit": "3e33228af3f024779c5a8a1bd91a5084844b1430",
+      "sourceCommit": "0e6048a2a2e1a9e9a3b92822d4ba9e4b6c63d869",
+      "sourceTree": "2ba44e704c71b1a0fcb8faaad304fb2294b95227",
+      "versionId": "6b705884-0f96-4ab3-9d94-e04f92b95ab0",
+      "deploymentId": "5abadd86-7936-4e92-ae82-975a8beafb93",
+      "serviceCount": 6,
+      "templateSourceCommit": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+      "candidateLockSha256": "04633129df9e75d6cd62deeac9125b279957789d75f57cdb0b243ef61bfc3e7e",
+      "templateSources": {
+        "auto-best": {
+          "repository": "darkapoparka/cars",
+          "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+          "path": "templates/auto-best",
+          "tree": "78fa1a82eca14816449f9588283260840ee94f52",
+          "digest": "2fc9c3cfc9cf1976dbe30c08592776362e5bcc6b09e8b06620e57c4406df58a5"
+        },
+        "modern": {
+          "repository": "darkapoparka/cars",
+          "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+          "path": "templates/modern",
+          "tree": "01eac7390fa6ba951d4b8d4c26159a9be150f6c8",
+          "digest": "30e1a99f857cc25e4d78c9459cfb4394a9f70c5b114196a5ca6325ff38823b4b"
+        },
+        "import": {
+          "repository": "darkapoparka/cars",
+          "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+          "path": "templates/import",
+          "tree": "d841ddfe5bec918bf6b2c19fd6971fecd6b8e54d",
+          "digest": "c7d6c93214e859aa2747af8f5e068b6a0b8ca095d6328c807728a4d531d688f8"
+        },
+        "app": {
+          "repository": "darkapoparka/cars",
+          "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+          "path": "templates/app",
+          "tree": "7f3d3ffa40546635377e6c5225194fe06fead291",
+          "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1"
+        },
+        "mobile": {
+          "repository": "darkapoparka/cars",
+          "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+          "path": "templates/mobile",
+          "tree": "792bfdd1d8eb22aabd90c7e3a0c0779a6c1c36f3",
+          "digest": "f5a3e541a7c648a4c2899ad3893e22a3806027a9f66d95fa4e8c74b2226635b6"
+        },
+        "karento-best": {
+          "repository": "darkapoparka/cars",
+          "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+          "path": "templates/karento-best",
+          "tree": "8c5ac869c7fd15e19a80c660343fc64b20a2bad9",
+          "digest": "be17ef365e3272753df6e50826b139a45bfc32b8fef54ddcb86d977ad16280a9"
+        }
+      },
+      "hostedVerified": true,
+      "allSixEntriesVerified": true,
+      "aboutContactVerified": true,
+      "fabAndDashboardsVerified": true,
+      "providerReceiptSha256": "fe3c54dbd83fd2208c891b3ddc865f687b4c4b28362d3b06e2f10f267e81c72f",
+      "hostedReceiptSha256": "533284580fd63c7b0d7c89860e12c8f58a64cf34f31c51a9e50d1f93b2d558a6",
+      "privateMainReceiptSha256": "9d6c10a9b5f788332a6fa46a342996ef3ed4a83ac4346c715d4078b86b33273e",
+      "providerReceipt": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-native/bradford-auto-fixed-provider-deployment-summary.json",
+      "hostedReceipt": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-native/bradford-auto-fixed-focused-hosted-proof.json",
+      "normalizedFromSourceOwnerVerifiedProviderAndHostedReceipts": true,
+      "normalization": "Completed production Cloudflare delivery at100% traffic with exact verified canonical version and separately recorded subsequent private MAIN publication.",
+      "ownerAccepted": false,
+      "globalReleaseApproval": false
+    },
+    "vercel": {
+      "schemaVersion": 1,
+      "kind": "cars-f1rst-final-controls-production-hosted-qualification",
+      "checkedAt": "2026-10-15T01:42:58.256Z",
+      "provider": "vercel",
+      "dealer": "f1rst-motors",
+      "repository": "darkapoparka/cars-f1rstmotors",
+      "sourceOwnership": "cars-canonical",
+      "projectId": "prj_mavqUXCj6hSEg8EvBJW8G3XJlihm",
+      "publicOrigin": "https://cars-f1rstmotors.vercel.app",
+      "canonicalOrigin": "https://cars-f1rstmotors.vercel.app",
+      "state": "READY",
+      "target": "production",
+      "gitBranch": "main",
+      "gitCommit": "d54deacdab7b255c1772b37dad828b0316a68553",
+      "deploymentId": "dpl_4nUMDdSSdtNdQikVJT9hqAB9qycG",
+      "privateMain": "d54deacdab7b255c1772b37dad828b0316a68553",
+      "sourceCommit": "53a65e502e32f5e29c8332310753374194d17693",
+      "sourceTree": "2e898661a8176a4f497c53f65eb7461633c21d1e",
+      "templateSourceCommit": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+      "templateSources": {
+        "auto-best": {
+          "repository": "darkapoparka/cars",
+          "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+          "path": "templates/auto-best",
+          "tree": "78fa1a82eca14816449f9588283260840ee94f52",
+          "digest": "2fc9c3cfc9cf1976dbe30c08592776362e5bcc6b09e8b06620e57c4406df58a5"
+        },
+        "modern": {
+          "repository": "darkapoparka/cars",
+          "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+          "path": "templates/modern",
+          "tree": "01eac7390fa6ba951d4b8d4c26159a9be150f6c8",
+          "digest": "30e1a99f857cc25e4d78c9459cfb4394a9f70c5b114196a5ca6325ff38823b4b"
+        },
+        "import": {
+          "repository": "darkapoparka/cars",
+          "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+          "path": "templates/import",
+          "tree": "d841ddfe5bec918bf6b2c19fd6971fecd6b8e54d",
+          "digest": "c7d6c93214e859aa2747af8f5e068b6a0b8ca095d6328c807728a4d531d688f8"
+        },
+        "app": {
+          "repository": "darkapoparka/cars",
+          "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+          "path": "templates/app",
+          "tree": "7f3d3ffa40546635377e6c5225194fe06fead291",
+          "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1"
+        },
+        "mobile": {
+          "repository": "darkapoparka/cars",
+          "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+          "path": "templates/mobile",
+          "tree": "792bfdd1d8eb22aabd90c7e3a0c0779a6c1c36f3",
+          "digest": "f5a3e541a7c648a4c2899ad3893e22a3806027a9f66d95fa4e8c74b2226635b6"
+        },
+        "karento-best": {
+          "repository": "darkapoparka/cars",
+          "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+          "path": "templates/karento-best",
+          "tree": "8c5ac869c7fd15e19a80c660343fc64b20a2bad9",
+          "digest": "be17ef365e3272753df6e50826b139a45bfc32b8fef54ddcb86d977ad16280a9"
+        }
+      },
+      "candidateLockSha256": "04633129df9e75d6cd62deeac9125b279957789d75f57cdb0b243ef61bfc3e7e",
+      "nativeInput": {
+        "digest": "dcad35257ad6a5a028d8ac7f4f24cf26005ba30c0b1aab001afba08aa391249c",
+        "files": 9169
+      },
+      "packageDigest": "ac937e1c9622f1c8b4953c1a02937dbac6adf24548c46feb811463dfeebb7a49",
+      "serviceCount": 6,
+      "exactProductionVerified": true,
+      "hostedVerified": true,
+      "hostedAccepted": true,
+      "allSixEntriesVerified": true,
+      "aboutContactVerified": true,
+      "fabAndDashboardsVerified": true,
+      "currentShareAssetsVerified": true,
+      "providerReceipt": {
+        "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-vercel-resume-20261015/pilots/f1rst-final-controls/provider.json",
+        "sha256": "28ff61d3017d78b5dfc147145b0f2dbf7a6dd3c4af120a1f222e9857cbe534ac"
+      },
+      "providerReceiptSha256": "28ff61d3017d78b5dfc147145b0f2dbf7a6dd3c4af120a1f222e9857cbe534ac",
+      "hostedReceipt": {
+        "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-vercel-resume-20261015/pilots/f1rst-final-controls/hosted-proof.json",
+        "sha256": "e379d0ad3c1c009c57df09e60b9949aa34af864b80131c4fc8d3bfd2f3952b05"
+      },
+      "hostedReceiptSha256": "e379d0ad3c1c009c57df09e60b9949aa34af864b80131c4fc8d3bfd2f3952b05",
+      "rawSourceFactsStockRastersUnchanged": true,
+      "socialRenderReview": {
+        "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-vercel-resume-20261015/f1rst-controls-export-guard/package-review.json",
+        "sha256": "4956876b6af01c3624b0fbe54ae92c5853c614f141c7b7e113c5db1aa65dc677"
+      },
+      "captures": [
+        {
+          "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-vercel-resume-20261015/pilots/f1rst-final-controls/f1rst-final-welcome-en-390.png",
+          "sha256": "9f266ca8eda7753f548198d4127b02f9b40c26f4977f0876bbcda728ab580c80"
+        },
+        {
+          "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-vercel-resume-20261015/pilots/f1rst-final-controls/f1rst-final-welcome-bg-320.png",
+          "sha256": "af0e22041f02a6c0dfd924e51b53f49a7258dfdbfbcb1e2f772c8e1d2a5296a5"
+        }
+      ],
+      "remainingDealerScopeGaps": [],
+      "ownerVisualAcceptance": false,
+      "globalReleaseApproval": false,
+      "providerWrites": 0,
+      "refOrSourceWrites": 0,
+      "productionWavePilotFieldsValidated": true
+    }
+  },
+  "dealers": [
+    {
+      "slug": "texas-drive-auto",
+      "repository": "darkapoparka/cars-texasdriveauto",
+      "projectId": "prj_0BoiQdp4HpS0QcfH425hy9ns536V",
+      "publicOrigin": "https://cars-texasdriveauto.vercel.app",
+      "sourceCommit": "8a182f47ab63f3a80529fc99752720875ba627bc",
+      "sourceTree": "f396a16e8e995c2390910c3fb821d1e521a8a010",
+      "privateMain": "9ec58af4dfef44e16733e0eff30cfd346e18919b",
+      "sourceReviewSha256": "185c5918edd1b2078c4934bfac5b5027b94fd587d6a417751f79208e1fa52e15",
+      "qualificationSha256": "d5e52be2f1123388ac7fdc0a9a14808cb57c36511b03917fc7b1ab441cced929",
+      "nativeInputDigest": "78770a7ada035cd244fd78042cd01595b5942a9cbd49c354cb75355585f3f31c",
+      "stockAndFactsUnchanged": true,
+      "selectedLogoBytesPreserved": true
+    },
+    {
+      "slug": "the-dealers-point",
+      "repository": "darkapoparka/cars-thedealerspoint",
+      "projectId": "prj_tzUK5hufsHiC8aJ7uyxZF5qCii07",
+      "publicOrigin": "https://cars-thedealerspoint.vercel.app",
+      "sourceCommit": "8495057b18e7e20228a34bbd8e5d2f24f4b71824",
+      "sourceTree": "39b48b2037c9924808eea02e7390624cc651df99",
+      "privateMain": "0654ac0a443969690c5f84ece5d4c2350f196bb7",
+      "sourceReviewSha256": "a5b82bfa506b89965465a63d2caee30908799763f93181f4c676094419294a63",
+      "qualificationSha256": "1eb22edb3d6bf5c20965eff44f50a8bee0fab10d1233ddcc5ba65c90aaf3d732",
+      "nativeInputDigest": "54d9b231cf8feb0b7871925489b696d50570dc6e1a0698a897f4e34b6a1c8dbe",
+      "stockAndFactsUnchanged": true,
+      "selectedLogoBytesPreserved": true
+    }
+  ]
+}

@@ -4,7 +4,7 @@
   "action": "proposal",
   "stage": "qualification-preview",
   "publicationTransport": "existing-local-publisher",
-  "toolingSourceCommit": "4f00503d89b55996df7fa5c1b912bf6363514834",
+  "toolingSourceCommit": "a262e15889c81c8b9e16c87bb3f2f7ee36542b49",
   "templateLock": {
     "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/candidate-lock.json",
     "sha256": "04633129df9e75d6cd62deeac9125b279957789d75f57cdb0b243ef61bfc3e7e"
@@ -59,102 +59,58 @@
   },
   "dealers": [
     {
-      "slug": "asko-96",
-      "repository": "darkapoparka/cars-asko96",
-      "projectId": "prj_lrmxXJdqRTKdDlufXaS0vd8TdpJX",
-      "publicOrigin": "https://cars-asko96.vercel.app",
+      "slug": "texas-drive-auto",
+      "repository": "darkapoparka/cars-texasdriveauto",
+      "projectId": "prj_0BoiQdp4HpS0QcfH425hy9ns536V",
+      "publicOrigin": "https://cars-texasdriveauto.vercel.app",
       "sourceOwnership": "cars-owned",
       "sourceRepository": "darkapoparka/cars",
-      "sourceCommit": "7cbb9d004bc6ae32f0bace5beeea30bd4bb5cb86",
-      "sourceTree": "f3c92c9a759cefbb7f911c73dc847aebcda81069",
+      "sourceCommit": "8a182f47ab63f3a80529fc99752720875ba627bc",
+      "sourceTree": "f396a16e8e995c2390910c3fb821d1e521a8a010",
       "sourceReview": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-receipts/asko-96.json",
-        "sha256": "557ff9e6fee66e73092e9701ffa0f4942be92b4f317c773b1990e057b2bf16ee",
-        "blob": "9a0c980ab34bd722cdfbf6f6a6cf5ddb1ae94553"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-receipts/texas-drive-auto.json",
+        "sha256": "185c5918edd1b2078c4934bfac5b5027b94fd587d6a417751f79208e1fa52e15",
+        "blob": "b3e45606fd1f3e571eb8f71f9f90788b4c6c50d8"
       },
-      "privateMain": "923ae906aa3cf4d4920d312e6ef9bf1a00fb94a1",
+      "privateMain": "9ec58af4dfef44e16733e0eff30cfd346e18919b",
       "privateTarget": null,
       "targetBranch": "codex/fleet-final-polish-20261014",
       "qualification": {
-        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/asko-96/qualification-context.json",
-        "sha256": "ed6d16bcbfe98680008170bbd29b444da11542faf5282264d1767a389930e7f3"
+        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/texas-drive-auto/qualification-context.json",
+        "sha256": "d5e52be2f1123388ac7fdc0a9a14808cb57c36511b03917fc7b1ab441cced929"
       }
     },
     {
-      "slug": "kg-team-auto",
-      "repository": "darkapoparka/cars-kgteamauto",
-      "projectId": "prj_IALzfkjBAv5N4YJfNB1sEliOaNBg",
-      "publicOrigin": "https://cars-kgteamauto.vercel.app",
+      "slug": "the-dealers-point",
+      "repository": "darkapoparka/cars-thedealerspoint",
+      "projectId": "prj_tzUK5hufsHiC8aJ7uyxZF5qCii07",
+      "publicOrigin": "https://cars-thedealerspoint.vercel.app",
       "sourceOwnership": "cars-owned",
       "sourceRepository": "darkapoparka/cars",
-      "sourceCommit": "62fbde43dbe09787a1116132bf4ff9dd1f424671",
-      "sourceTree": "495b1e820a28b4dc564d8cfc21f7fc2a99e67d54",
+      "sourceCommit": "8495057b18e7e20228a34bbd8e5d2f24f4b71824",
+      "sourceTree": "39b48b2037c9924808eea02e7390624cc651df99",
       "sourceReview": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-receipts/kg-team-auto.json",
-        "sha256": "0fe8638ec49fa3b8d41ffe169ce0794621a9fe4812acb3cbe476a62716874653",
-        "blob": "db97285c222ea10a3da168025d70201390ebe3b7"
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-receipts/the-dealers-point.json",
+        "sha256": "a5b82bfa506b89965465a63d2caee30908799763f93181f4c676094419294a63",
+        "blob": "2ef9928462e7e38ac75dfcce0935f715c80a7e55"
       },
-      "privateMain": "8ad119b04ca78ac4ed663ebaebf0974697c004fb",
+      "privateMain": "0654ac0a443969690c5f84ece5d4c2350f196bb7",
       "privateTarget": null,
       "targetBranch": "codex/fleet-final-polish-20261014",
       "qualification": {
-        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/kg-team-auto/qualification-context.json",
-        "sha256": "e38395a040ea732f97866113fa56aed217bfaeff374a171486b4c5e387c04ca4"
-      }
-    },
-    {
-      "slug": "ivo-auto",
-      "repository": "darkapoparka/cars-ivoauto",
-      "projectId": "prj_bruM9mopofyBcgwxkKFG9tQFZBMN",
-      "publicOrigin": "https://cars-ivoauto.vercel.app",
-      "sourceOwnership": "cars-owned",
-      "sourceRepository": "darkapoparka/cars",
-      "sourceCommit": "349cae30c70f0f46eb6654a3c52c10f577b0e506",
-      "sourceTree": "5308be3675909f01388e9eed6548aa450da63b67",
-      "sourceReview": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-receipts/ivo-auto.json",
-        "sha256": "48c5ebc95f6871f5a5669f585a0e22309a9fdadddb584e4ee9d0c2095566b279",
-        "blob": "d379e3170d70ad5c9f8621ca232b5ca388834c46"
-      },
-      "privateMain": "12195dd08bd7d2100e7904b9d80349b3d04d20fe",
-      "privateTarget": null,
-      "targetBranch": "codex/fleet-final-polish-20261014",
-      "qualification": {
-        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/ivo-auto/qualification-context.json",
-        "sha256": "98cc745c76819cef43f2d61bf4a2438afec103cfe37001978035cd1fd0f9758f"
-      }
-    },
-    {
-      "slug": "priselci",
-      "repository": "darkapoparka/cars-priselci",
-      "projectId": "prj_GwnlfPmyImlJuiocl77NWplzvTTb",
-      "publicOrigin": "https://cars-priselci.vercel.app",
-      "sourceOwnership": "cars-owned",
-      "sourceRepository": "darkapoparka/cars",
-      "sourceCommit": "3dcbb1da627d4423df33847c30fd8cc8b968aba9",
-      "sourceTree": "5530a281713fcb76b91bcaba7d33f1191a74e6e0",
-      "sourceReview": {
-        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-receipts/priselci.json",
-        "sha256": "c3ad6aac8d34fab38b5d4b9d1c6829b72383202b5545c7c0b989b0f650bed26d",
-        "blob": "54cb501e475cfa4dcf6d5cfbf0f7826db0a84352"
-      },
-      "privateMain": "e060d7a67e0af222a9700f6e9e8e67ae4858c2fc",
-      "privateTarget": null,
-      "targetBranch": "codex/fleet-final-polish-20261014",
-      "qualification": {
-        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/priselci/qualification-context.json",
-        "sha256": "848da8a118b6e85a4295b67e08a69d95689d4fa2ecda9e76dc9af27be6535b22"
+        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/the-dealers-point/qualification-context.json",
+        "sha256": "1eb22edb3d6bf5c20965eff44f50a8bee0fab10d1233ddcc5ba65c90aaf3d732"
       }
     }
   ],
   "intendedPublication": {
     "branch": "main",
     "providerTarget": "production",
-    "scope": "owner-authorized-qualified-Vercel-wave-5",
+    "scope": "owner-authorized-qualified-Vercel-wave-6",
     "noPreviewPublication": true
   },
   "productionWave": {
-    "path": "docs/releases/vercel-presentation-20261011/final-polish-20261014/production-wave-5.json",
-    "sha256": "1752cd93a60927f02bebc4d0967c2b200363fee602bd52f6eef634dcfb4a1eab"
+    "path": "docs/releases/vercel-presentation-20261011/final-polish-20261014/production-wave-6.json",
+    "sha256": "9f7374a372a5d5ea13bf190f254c634b7969f58873c46ed499f7c37e9269daa7"
   }
 }
