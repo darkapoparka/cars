@@ -69,8 +69,8 @@
     margin: calc(var(--spacing) * 8) auto 0;
     font-size: calc(var(--spacing) * 3.75);
     font-weight: var(--font-weight-medium);
-    color: var(--brand-foreground);
-    background: var(--brand);
+    color: var(--primary-foreground);
+    background: var(--primary);
     border-radius: var(--radius-pill);
   }
   .stockAction,
@@ -95,23 +95,23 @@
     transition: background-color var(--duration-interaction);
   }
   .journalAction {
-    color: var(--brand-foreground);
-    background: var(--brand);
-    border-color: var(--brand);
+    color: var(--primary-foreground);
+    background: var(--primary);
+    border-color: var(--primary);
     border-radius: var(--radius-pill);
   }
   .journalAction:hover {
-    background: var(--lead-site-accent-hover);
-    border-color: var(--lead-site-accent-hover);
+    background: var(--primary-hover);
+    border-color: var(--primary-hover);
   }
   .stockAction {
-    color: var(--brand-foreground);
-    background: var(--brand);
-    border-color: var(--brand);
+    color: var(--primary-foreground);
+    background: var(--primary);
+    border-color: var(--primary);
   }
   .stockAction:hover {
-    background: var(--lead-site-accent-hover);
-    border-color: var(--lead-site-accent-hover);
+    background: var(--primary-hover);
+    border-color: var(--primary-hover);
   }
   .servicesSection {
     margin-top: calc(var(--spacing) * 22.5);
@@ -181,12 +181,12 @@
     font-size: calc(var(--spacing) * 3.75);
     font-weight: var(--font-weight-medium);
     line-height: calc(var(--spacing) * 6);
-    color: var(--brand-foreground);
-    background: var(--brand);
+    color: var(--primary-foreground);
+    background: var(--primary);
     border-radius: var(--radius-pill);
   }
   .serviceLinks a:hover .serviceArrow {
-    background: var(--lead-site-accent-hover);
+    background: var(--primary-hover);
   }
   .serviceLinks a:hover {
     box-shadow: var(--desktop-surface-hover-shadow);

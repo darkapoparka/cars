@@ -33,6 +33,6 @@ export const brand = {
   addressLine,
   address: "Бул.Цар Освободите 202 до изхода на КАТ, Варна, България",
   appointment: "Понеделник 09:00 - 19:00 ч. Вторник 09:00 - 19:00 ч. Сряда 09:00 - 19:00 ч. Четвъртък 09:00 - 19:00 ч. Петък 09:00 - 19:00 ч. Събота 09:00 - 19:00 ч. Неделя Почивен ден",
-  logo: "/dealer-brand/v2-3e890b2aa575f82d/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/v2-3e890b2aa575f82d/logo-on-dark.webp"
+  logo: "/dealer-brand/v2-eb1bb8dc7f9ade22/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-eb1bb8dc7f9ade22/logo-on-dark.webp"
 } as const satisfies BrandConfig;

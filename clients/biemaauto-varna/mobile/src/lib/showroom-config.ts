@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "BIEMAAUТO",
-  "logo": "/dealer-brand/v2-3e890b2aa575f82d/logo-on-light.webp",
+  "logo": "/dealer-brand/v2-eb1bb8dc7f9ade22/logo-on-light.webp",
   "phone": "+359878258953",
   "email": null,
   "address": "Бул.Цар Освободите 202 до изхода на КАТ, Варна, България",

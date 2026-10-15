@@ -50,7 +50,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "BIEMAAUТO",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-3e890b2aa575f82d/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-eb1bb8dc7f9ade22/logo-on-light.webp"
     },
     "publishedAt": "2026-10-11T09:00:00.000Z",
     "promoted": true

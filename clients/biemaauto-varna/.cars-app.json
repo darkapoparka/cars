@@ -3,12 +3,12 @@
   "dealer": "biemaauto-varna",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/app",
-    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
-    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
   },
-  "appDigest": "e54c7baa81e8adacca525502dbc699bdd7c9b48e2ce93b24d3ea5cd4d1bd7d13",
+  "appDigest": "b7d3cea46f9c486fe658e8611cc07d3c1d593ff6e42e29a128d522e3082fc2e3",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "biemaauto-varna",
@@ -21,14 +21,14 @@
     "assets": [
       {
         "source": "auto-best/static/dealer-brand/logo-on-light.png",
-        "output": "public/dealer-app/logo-light-dc84d9283929362bd17d.png",
-        "sha256": "dc84d9283929362bd17d0b765c1ab219eb3c093ccb52e4d3c05ada2ddfcb37ce",
+        "output": "public/dealer-app/logo-light-78b54352b70e4e58acfb.png",
+        "sha256": "78b54352b70e4e58acfb556551de0c65fe96112fa8ab1d9ec82df4c252213756",
         "role": "logo-light"
       },
       {
         "source": "auto-best/static/dealer-brand/logo-on-dark.png",
-        "output": "public/dealer-app/logo-dark-8bdc2cbb881d25250f6e.png",
-        "sha256": "8bdc2cbb881d25250f6e12b7147acb10f738247da498080ff6d182dbb01de986",
+        "output": "public/dealer-app/logo-dark-511d31b839f9f971ae42.png",
+        "sha256": "511d31b839f9f971ae4226db2e909d8be6716485b3c2eca8f597c85175426d41",
         "role": "logo-dark"
       },
       {
@@ -54,5 +54,6 @@
     ]
   },
   "needsDealerQA": true,
-  "readyToPublish": false
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-15T03:28:59.604Z"
 }

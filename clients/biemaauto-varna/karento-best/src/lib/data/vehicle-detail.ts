@@ -155,7 +155,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "BIEMAAUТO",
   "location": "Бул.Цар Освободите 202 до изхода на КАТ, Варна, България",
-  "avatar": "/dealer-brand/v2-3e890b2aa575f82d/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-eb1bb8dc7f9ade22/logo-on-light.webp",
   "mobile": "0878258953",
   "email": "",
   "whatsapp": "",

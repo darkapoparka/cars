@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "BIEMAAUТO",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-3e890b2aa575f82d/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-3e890b2aa575f82d/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-3e890b2aa575f82d/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-eb1bb8dc7f9ade22/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-eb1bb8dc7f9ade22/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-eb1bb8dc7f9ade22/logo-on-dark.webp",
     "alt": "BIEMAAUТO",
-    "favicon": "/dealer-brand/v2-3e890b2aa575f82d/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-eb1bb8dc7f9ade22/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {
