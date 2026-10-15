@@ -94,7 +94,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "СТЕФАН КАР -внос и продажба на автомобили",
       "location": "бул. Цар Освободител 500 метра след метро, Варна, България",
-      "avatar": "/dealer-brand/v2-791a821f49548998/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-34b703404e5d59e6/logo-on-light.webp",
       "mobile": "0888229977",
       "email": "",
       "whatsapp": "",

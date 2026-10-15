@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "СТЕФАН КАР -внос и продажба на автомобили",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-791a821f49548998/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-791a821f49548998/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-791a821f49548998/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-34b703404e5d59e6/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-34b703404e5d59e6/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-34b703404e5d59e6/logo-on-dark.webp",
     "alt": "СТЕФАН КАР -внос и продажба на автомобили",
-    "favicon": "/dealer-brand/v2-791a821f49548998/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-34b703404e5d59e6/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

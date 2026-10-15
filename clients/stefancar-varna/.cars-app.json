@@ -3,12 +3,12 @@
   "dealer": "stefancar-varna",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/app",
-    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
-    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
   },
-  "appDigest": "cda0f4a527c43beb9596f0d7befb86c635f3931ddfa09eb905c0ee926b25b4cc",
+  "appDigest": "790c60efd32a76294f1abf62c855d5e23e335456a801654813989fe8442ccf15",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "stefancar-varna",
@@ -21,14 +21,14 @@
     "assets": [
       {
         "source": "auto-best/static/dealer-brand/logo-on-light.png",
-        "output": "public/dealer-app/logo-light-7feb34c78980184f0ac7.png",
-        "sha256": "7feb34c78980184f0ac7d6d9b53847b6aa9623ec08dbe4e777278e3f41af4dd4",
+        "output": "public/dealer-app/logo-light-87cc461564f219946040.png",
+        "sha256": "87cc461564f219946040641b96ff16f9032d2501675b85a944e16fb5ae205d18",
         "role": "logo-light"
       },
       {
         "source": "auto-best/static/dealer-brand/logo-on-dark.png",
-        "output": "public/dealer-app/logo-dark-15379d920b7443808da8.png",
-        "sha256": "15379d920b7443808da8713380b5688770e955755661306f3fb38e9cf24a5bed",
+        "output": "public/dealer-app/logo-dark-dc06da662e843cbf1cfa.png",
+        "sha256": "dc06da662e843cbf1cfa0aa40b75bbeef0dcf2652cb9185f5bae4f6088c8d93a",
         "role": "logo-dark"
       },
       {
@@ -54,5 +54,6 @@
     ]
   },
   "needsDealerQA": true,
-  "readyToPublish": false
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-15T03:22:30.906Z"
 }

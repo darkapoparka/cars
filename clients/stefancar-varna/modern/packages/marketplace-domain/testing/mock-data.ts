@@ -50,7 +50,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "СТЕФАН КАР -внос и продажба на автомобили",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-791a821f49548998/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-34b703404e5d59e6/logo-on-light.webp"
     },
     "publishedAt": "2026-10-11T09:00:00.000Z",
     "promoted": true
