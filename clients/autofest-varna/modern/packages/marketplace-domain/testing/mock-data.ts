@@ -58,7 +58,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Аутофест",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-1b8e62f1172699ff/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-68b437f5785795db/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": true
@@ -119,7 +119,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Аутофест",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-1b8e62f1172699ff/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-68b437f5785795db/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": true
@@ -180,7 +180,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Аутофест",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-1b8e62f1172699ff/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-68b437f5785795db/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": true
@@ -241,7 +241,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Аутофест",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-1b8e62f1172699ff/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-68b437f5785795db/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -302,7 +302,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Аутофест",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-1b8e62f1172699ff/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-68b437f5785795db/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -363,7 +363,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Аутофест",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-1b8e62f1172699ff/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-68b437f5785795db/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -424,7 +424,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Аутофест",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-1b8e62f1172699ff/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-68b437f5785795db/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -485,373 +485,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Аутофест",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-1b8e62f1172699ff/logo-on-light.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1004",
-    "slug": "honda-cr-v-2018-21791561972367404",
-    "category": "car",
-    "dealerOrgId": "dealer-autofest-varna",
-    "status": "active",
-    "title": "Honda Cr-v 2.0i 4x4 АВТОМАТ Г.ИНЖЕКЦИОН",
-    "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
-    "price": {
-      "amount": 18500,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/vehicles/21791561972367404/1.webp",
-        "alt": "Honda Cr-v 2.0i 4x4 АВТОМАТ Г.ИНЖЕКЦИОН"
-      },
-      {
-        "url": "/assets/vehicles/21791561972367404/2.webp",
-        "alt": "Honda Cr-v 2.0i 4x4 АВТОМАТ Г.ИНЖЕКЦИОН"
-      },
-      {
-        "url": "/assets/vehicles/21791561972367404/3.webp",
-        "alt": "Honda Cr-v 2.0i 4x4 АВТОМАТ Г.ИНЖЕКЦИОН"
-      },
-      {
-        "url": "/assets/vehicles/21791561972367404/4.webp",
-        "alt": "Honda Cr-v 2.0i 4x4 АВТОМАТ Г.ИНЖЕКЦИОН"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "spec": {
-      "make": "Honda",
-      "model": "Cr-v",
-      "year": 2018,
-      "bodyType": "suv",
-      "fuelType": "gasoline",
-      "transmission": "automatic",
-      "mileageValue": 121000,
-      "mileageUnit": "km",
-      "enginePowerHp": 155
-    },
-    "seller": {
-      "id": "dealer-autofest-varna",
-      "type": "dealer",
-      "displayName": "Аутофест",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-1b8e62f1172699ff/logo-on-light.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1005",
-    "slug": "seat-ateca-2019-21785142785989074",
-    "category": "car",
-    "dealerOrgId": "dealer-autofest-varna",
-    "status": "active",
-    "title": "Seat Ateca FR 2.0 TDI 4x4 АВТОМАТИК 360-КАМЕРА LED NAVI",
-    "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
-    "price": {
-      "amount": 17990,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/vehicles/21785142785989074/1.webp",
-        "alt": "Seat Ateca FR 2.0 TDI 4x4 АВТОМАТИК 360-КАМЕРА LED NAVI"
-      },
-      {
-        "url": "/assets/vehicles/21785142785989074/2.webp",
-        "alt": "Seat Ateca FR 2.0 TDI 4x4 АВТОМАТИК 360-КАМЕРА LED NAVI"
-      },
-      {
-        "url": "/assets/vehicles/21785142785989074/3.webp",
-        "alt": "Seat Ateca FR 2.0 TDI 4x4 АВТОМАТИК 360-КАМЕРА LED NAVI"
-      },
-      {
-        "url": "/assets/vehicles/21785142785989074/4.webp",
-        "alt": "Seat Ateca FR 2.0 TDI 4x4 АВТОМАТИК 360-КАМЕРА LED NAVI"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "spec": {
-      "make": "Seat",
-      "model": "Ateca",
-      "year": 2019,
-      "bodyType": "suv",
-      "fuelType": "diesel",
-      "transmission": "automatic",
-      "mileageValue": 167400,
-      "mileageUnit": "km",
-      "enginePowerHp": 190
-    },
-    "seller": {
-      "id": "dealer-autofest-varna",
-      "type": "dealer",
-      "displayName": "Аутофест",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-1b8e62f1172699ff/logo-on-light.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1006",
-    "slug": "audi-a4-2012-11780325425358655",
-    "category": "car",
-    "dealerOrgId": "dealer-autofest-varna",
-    "status": "active",
-    "title": "Audi A4 2.0TDI FACELIFT BiXenon ЕВРО-5В",
-    "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
-    "price": {
-      "amount": 7670,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/vehicles/11780325425358655/1.webp",
-        "alt": "Audi A4 2.0TDI FACELIFT BiXenon ЕВРО-5В"
-      },
-      {
-        "url": "/assets/vehicles/11780325425358655/2.webp",
-        "alt": "Audi A4 2.0TDI FACELIFT BiXenon ЕВРО-5В"
-      },
-      {
-        "url": "/assets/vehicles/11780325425358655/3.webp",
-        "alt": "Audi A4 2.0TDI FACELIFT BiXenon ЕВРО-5В"
-      },
-      {
-        "url": "/assets/vehicles/11780325425358655/4.webp",
-        "alt": "Audi A4 2.0TDI FACELIFT BiXenon ЕВРО-5В"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "spec": {
-      "make": "Audi",
-      "model": "A4",
-      "year": 2012,
-      "bodyType": "wagon",
-      "fuelType": "diesel",
-      "transmission": "manual",
-      "mileageValue": 225000,
-      "mileageUnit": "km",
-      "enginePowerHp": 143
-    },
-    "seller": {
-      "id": "dealer-autofest-varna",
-      "type": "dealer",
-      "displayName": "Аутофест",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-1b8e62f1172699ff/logo-on-light.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1007",
-    "slug": "audi-a4-2014-11761146192856132",
-    "category": "car",
-    "dealerOrgId": "dealer-autofest-varna",
-    "status": "active",
-    "title": "Audi A4 2.0TDI FACELIFT НАВИ БИ-КСЕНОН",
-    "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
-    "price": {
-      "amount": 8999,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/vehicles/11761146192856132/1.webp",
-        "alt": "Audi A4 2.0TDI FACELIFT НАВИ БИ-КСЕНОН"
-      },
-      {
-        "url": "/assets/vehicles/11761146192856132/2.webp",
-        "alt": "Audi A4 2.0TDI FACELIFT НАВИ БИ-КСЕНОН"
-      },
-      {
-        "url": "/assets/vehicles/11761146192856132/3.webp",
-        "alt": "Audi A4 2.0TDI FACELIFT НАВИ БИ-КСЕНОН"
-      },
-      {
-        "url": "/assets/vehicles/11761146192856132/4.webp",
-        "alt": "Audi A4 2.0TDI FACELIFT НАВИ БИ-КСЕНОН"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "spec": {
-      "make": "Audi",
-      "model": "A4",
-      "year": 2014,
-      "bodyType": "wagon",
-      "fuelType": "diesel",
-      "transmission": "manual",
-      "mileageValue": 193000,
-      "mileageUnit": "km",
-      "enginePowerHp": 120
-    },
-    "seller": {
-      "id": "dealer-autofest-varna",
-      "type": "dealer",
-      "displayName": "Аутофест",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-1b8e62f1172699ff/logo-on-light.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1008",
-    "slug": "audi-q3-2015-21784645887752101",
-    "category": "car",
-    "dealerOrgId": "dealer-autofest-varna",
-    "status": "active",
-    "title": "Audi Q3 2.0 TDI BIXENON LED NAVI СЕРВИЗНА ИСТОРИЯ",
-    "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
-    "price": {
-      "amount": 11500,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/vehicles/21784645887752101/1.webp",
-        "alt": "Audi Q3 2.0 TDI BIXENON LED NAVI СЕРВИЗНА ИСТОРИЯ"
-      },
-      {
-        "url": "/assets/vehicles/21784645887752101/2.webp",
-        "alt": "Audi Q3 2.0 TDI BIXENON LED NAVI СЕРВИЗНА ИСТОРИЯ"
-      },
-      {
-        "url": "/assets/vehicles/21784645887752101/3.webp",
-        "alt": "Audi Q3 2.0 TDI BIXENON LED NAVI СЕРВИЗНА ИСТОРИЯ"
-      },
-      {
-        "url": "/assets/vehicles/21784645887752101/4.webp",
-        "alt": "Audi Q3 2.0 TDI BIXENON LED NAVI СЕРВИЗНА ИСТОРИЯ"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "spec": {
-      "make": "Audi",
-      "model": "Q3",
-      "year": 2015,
-      "bodyType": "suv",
-      "fuelType": "diesel",
-      "transmission": "manual",
-      "mileageValue": 205000,
-      "mileageUnit": "km",
-      "enginePowerHp": 150
-    },
-    "seller": {
-      "id": "dealer-autofest-varna",
-      "type": "dealer",
-      "displayName": "Аутофест",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-1b8e62f1172699ff/logo-on-light.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1009",
-    "slug": "audi-q5-2017-21774286824949260",
-    "category": "car",
-    "dealerOrgId": "dealer-autofest-varna",
-    "status": "active",
-    "title": "Audi Q5 2.0TDI SLINE DIGITAL ЕВРО-6В",
-    "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
-    "price": {
-      "amount": 18500,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/vehicles/21774286824949260/1.webp",
-        "alt": "Audi Q5 2.0TDI SLINE DIGITAL ЕВРО-6В"
-      },
-      {
-        "url": "/assets/vehicles/21774286824949260/2.webp",
-        "alt": "Audi Q5 2.0TDI SLINE DIGITAL ЕВРО-6В"
-      },
-      {
-        "url": "/assets/vehicles/21774286824949260/3.webp",
-        "alt": "Audi Q5 2.0TDI SLINE DIGITAL ЕВРО-6В"
-      },
-      {
-        "url": "/assets/vehicles/21774286824949260/4.webp",
-        "alt": "Audi Q5 2.0TDI SLINE DIGITAL ЕВРО-6В"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "spec": {
-      "make": "Audi",
-      "model": "Q5",
-      "year": 2017,
-      "bodyType": "suv",
-      "fuelType": "diesel",
-      "transmission": "automatic",
-      "mileageValue": 196000,
-      "mileageUnit": "km",
-      "enginePowerHp": 190
-    },
-    "seller": {
-      "id": "dealer-autofest-varna",
-      "type": "dealer",
-      "displayName": "Аутофест",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-1b8e62f1172699ff/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-68b437f5785795db/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false

@@ -161,7 +161,7 @@
     <nav class="filter-navigation" {@attach attachNavigation} aria-label={i18n.t('m_6f8428de4166')}>
       {#each groups as group (group.label)}
         <section aria-label={i18n.t(group.label)}>
-          <h3>{i18n.t(group.label)}<span aria-hidden="true"></span></h3>
+          <h3 class="dn-sr-only">{i18n.t(group.label)}</h3>
           <div class="navigation-group">
             {#each group.fields as field (field)}
               <button type="button" data-filter-category={field} aria-pressed={active === field} aria-controls="dn-desktop-filter-pane" onclick={() => select(field)}><span>{listingFacetTitle(field, i18n.locale)}</span>{#if selections(field)}<small aria-label={i18n.t('inventory.modal.selected', { count: selections(field) })}>{selections(field)}</small>{/if}</button>
@@ -172,7 +172,7 @@
     </nav>
     <section id="dn-desktop-filter-pane" class="filter-pane" aria-labelledby="dn-desktop-filter-pane-title">
       <header class="pane-heading">
-        <div><h3 id="dn-desktop-filter-pane-title" tabindex="-1" {@attach attachHeading}>{title}{#if activeCount}<small>{i18n.t('inventory.modal.selected', { count: activeCount })}</small>{/if}</h3>{#if active === 'make'}<p>{i18n.t('inventory.modal.makeHelp')}</p>{/if}</div>
+        <div><h3 id="dn-desktop-filter-pane-title" tabindex="-1" {@attach attachHeading}>{title}{#if activeCount}<small>{i18n.t('inventory.modal.selected', { count: activeCount })}</small>{/if}</h3></div>
         {#if activeCount}<button class="section-clear" type="button" onclick={clearActive}>{i18n.t('inventory.modal.clear')}</button>{/if}
       </header>
       <div class="close-control"><FilterCloseButton aria-label={i18n.t('m_2b3fff4a027c')} onclick={close} /></div>
@@ -186,7 +186,7 @@
     </section>
     {#if chips.length}
     <section class="filter-selections" aria-label={i18n.t('inventory.modal.applied')}>
-      <h3>{i18n.t('inventory.modal.applied')} <small>{chips.length}</small></h3>
+      <h3 class="dn-sr-only">{i18n.t('inventory.modal.applied')} <small>{chips.length}</small></h3>
       <div class="applied-filters">
         {#each chips as chip (chip.id)}<button type="button" title={chip.label} aria-label={`${i18n.t('inventory.search.clearFilter')}: ${chip.label}`} onclick={event => removeChip(event, chip.key, chip.value)}><span>{chip.label}</span><Icon name="x" size={14} /></button>{/each}
       </div>
@@ -211,19 +211,17 @@
   .search-navigation button { display: flex; align-items: center; gap: var(--dn-space-2); width: 100%; min-height: var(--dn-control-height-default); padding: 0 14px; border: 1px solid var(--dn-line); border-radius: var(--dn-radius-sm); background: var(--dn-white); color: var(--dn-ink); font-size: var(--dn-text-meta); text-align: left; }
   .search-navigation button[aria-pressed=true] { background: var(--dn-ink); color: var(--dn-white); }
   .search-navigation small { margin-left: auto; }
-  .filter-navigation { grid-column: 1; grid-row: 2; min-height: 0; margin: 0 0 var(--dn-space-3) var(--dn-space-3); padding: var(--dn-space-2) var(--dn-space-3); overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; }
-  .filter-navigation h3 { display: flex; align-items: center; gap: var(--dn-space-2); margin: var(--dn-space-2) 10px var(--dn-space-1); color: var(--dn-muted); font-size: var(--dn-text-caption); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-control); letter-spacing: var(--dn-tracking-label); text-transform: uppercase; white-space: nowrap; }
-  .filter-navigation h3 span { flex: 1; height: 1px; background: var(--dn-line-strong); }
+  .filter-navigation { display: flex; flex-direction: column; gap: var(--dn-space-3); grid-column: 1; grid-row: 2 / 4; min-width: 0; min-height: 0; margin: 0 0 var(--dn-space-3) var(--dn-space-3); padding: 0 var(--dn-space-3); overflow-y: auto; overscroll-behavior: contain; scrollbar-gutter: stable; scrollbar-width: thin; }
+  .filter-navigation section { flex: none; }
   .navigation-group { padding: var(--dn-space-1); border: 1px solid var(--dn-line); border-radius: var(--dn-radius-sm); background: var(--dn-white); }
-  .navigation-group button { display: flex; align-items: center; justify-content: space-between; gap: var(--dn-space-2); width: 100%; min-height: var(--dn-control-height-compact); padding: var(--dn-space-2) 10px; border: 0; border-radius: var(--dn-radius-xs); background: transparent; color: var(--dn-ink); font-size: var(--dn-text-meta); font-weight: var(--dn-weight-medium); line-height: var(--dn-leading-meta); text-align: left; }
+  .navigation-group button { display: flex; align-items: center; justify-content: space-between; gap: var(--dn-space-2); width: 100%; min-height: var(--dn-control-height-default); padding: var(--dn-space-1) 10px; border: 0; border-radius: var(--dn-radius-xs); background: transparent; color: var(--dn-ink); font-size: var(--dn-text-meta); font-weight: var(--dn-weight-medium); line-height: var(--dn-leading-meta); text-align: left; }
   .navigation-group button:hover { background: var(--dn-surface-hover); }
   .navigation-group button[aria-pressed=true] { background: var(--dn-ink); color: var(--dn-white); font-weight: var(--dn-weight-medium); }
   .navigation-group small, .search-navigation small { display: grid; flex: none; place-items: center; min-width: 18px; height: 18px; padding: 0 var(--dn-space-1); border-radius: calc(var(--dn-radius-xs) - 1px); background: var(--dn-surface-subtle); color: var(--dn-ink); font-size: var(--dn-text-caption); font-variant-numeric: tabular-nums; }
   .filter-pane { position: relative; display: flex; flex-direction: column; grid-column: 2; grid-row: 1 / 3; min-width: 0; min-height: 0; margin: var(--dn-space-3) var(--dn-space-3) var(--dn-space-3) 0; padding: var(--dn-space-5) var(--dn-space-6) 0; border-radius: var(--dn-radius-compact); background: var(--dn-white); }
-  .pane-heading { flex: none; display: flex; align-items: start; justify-content: space-between; gap: var(--dn-space-3); min-height: var(--dn-control-height-default); padding-right: 48px; margin-bottom: var(--dn-space-4); }
-  .pane-heading h3 { display: flex; align-items: center; flex-wrap: wrap; gap: var(--dn-space-2); margin: 0; font-size: var(--dn-text-subheading); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-control); }
+  .pane-heading { flex: none; display: flex; align-items: center; justify-content: space-between; gap: var(--dn-space-3); min-height: var(--dn-control-height-default); padding-right: 48px; margin-bottom: var(--dn-space-4); }
+  .pane-heading h3 { display: flex; align-items: center; flex-wrap: wrap; gap: var(--dn-space-2); margin: 0; font-size: var(--dn-text-card); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-control); }
   .pane-heading h3 small { padding: var(--dn-space-1) var(--dn-space-2); border-radius: var(--dn-radius-xs); background: var(--dn-surface-subtle); font-size: var(--dn-text-caption); font-weight: var(--dn-weight-medium); }
-  .pane-heading p { margin: var(--dn-space-2) 0 0; color: var(--dn-muted); font-size: var(--dn-text-meta); line-height: var(--dn-leading-meta); }
   .section-clear { flex: none; min-height: var(--dn-control-height-default); padding: 0 var(--dn-space-2); border: 0; border-radius: var(--dn-pill); background: transparent; color: var(--dn-muted); font-size: var(--dn-text-meta); font-weight: var(--dn-weight-medium); }
   .close-control { position: absolute; top: var(--dn-space-3); right: var(--dn-space-3); }
   .editor-search { flex: none; margin-bottom: var(--dn-space-5); }
@@ -241,9 +239,7 @@
   .show-results { background: var(--dn-ink); color: var(--dn-white); font-weight: var(--dn-weight-semibold); }
   .show-results:hover { background: var(--dn-ink-hover); }
   .show-results:disabled { background: var(--dn-line-strong); color: var(--dn-muted); cursor: default; }
-  .filter-selections { grid-column: 1 / -1; grid-row: 3; min-width: 0; padding: 0 var(--dn-space-6); }
-  .filter-selections h3 { display: flex; align-items: center; gap: var(--dn-space-2); margin: 0 0 var(--dn-space-2); color: var(--dn-muted); font-size: var(--dn-text-meta); font-weight: var(--dn-weight-medium); line-height: var(--dn-leading-control); }
-  .filter-selections h3 small { color: var(--dn-ink); font-size: inherit; font-variant-numeric: tabular-nums; }
+  .filter-selections { grid-column: 2; grid-row: 3; min-width: 0; padding: 0 var(--dn-space-6); }
   .applied-filters { display: flex; align-items: center; flex-wrap: wrap; gap: var(--dn-space-2); min-width: 0; max-height: calc(var(--dn-control-height-compact) * 2 + var(--dn-space-2) + var(--dn-space-1)); padding-block: var(--dn-space-half); overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; }
   .applied-filters button { display: flex; flex: none; align-items: center; gap: var(--dn-space-2); min-height: var(--dn-control-height-compact); max-width: min(100%, 280px); padding: 0 var(--dn-space-3); border: 1px solid var(--dn-line); border-radius: var(--dn-pill); background: var(--dn-white); color: var(--dn-ink); font-size: var(--dn-text-meta); }
   .applied-filters button:hover { background: var(--dn-surface-hover); }

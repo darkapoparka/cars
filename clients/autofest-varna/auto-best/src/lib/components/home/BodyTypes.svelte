@@ -6,10 +6,10 @@
   import { resolve } from '$app/paths';
   import Icon from '$components/ui/Icon.svelte';
   import DiscoveryAllTile from './DiscoveryAllTile.svelte';
-  import { bodyTypes, desktopBodyTypes } from '$data/home';
+  import { desktopBodyTypes } from '$data/home';
 
   const mobileBodyTypes = new Set<string>(
-    [...bodyTypes.filter((item) => item.count > 0), ...bodyTypes.filter((item) => item.count <= 0)]
+    [...desktopBodyTypes.filter((item) => item.count > 0), ...desktopBodyTypes.filter((item) => item.count <= 0)]
       .slice(0, 3)
       .map((item) => item.query)
   );
@@ -36,7 +36,7 @@
     <div class="dn-body-types__viewport dn-home-section-panel">
       <div class="dn-body-types__rail" id="body-types-grid" aria-label={i18n.t("m_b94720bac36c")}>
         {#each desktopBodyTypes as item (item.query)}
-          <a class="dn-body-type" class:dn-body-type--desktop-only={item.count === 0} class:dn-body-type--additional={!mobileBodyTypes.has(item.query)} class:dn-body-type--secondary={!expanded && !mobileBodyTypes.has(item.query)} data-stock-count={item.count} href={i18n.href(resolve(`/cars?body=${encodeURIComponent(item.query)}`))}>
+          <a class="dn-body-type" class:dn-body-type--additional={!mobileBodyTypes.has(item.query)} class:dn-body-type--secondary={!expanded && !mobileBodyTypes.has(item.query)} data-stock-count={item.count} href={i18n.href(resolve(`/cars?body=${encodeURIComponent(item.query)}`))}>
             <span class="dn-body-type__image">
               <span class="dn-body-type__frame"
                 style:--body-aspect={`${item.bounds[2] - item.bounds[0]} / ${item.bounds[3] - item.bounds[1]}`}
@@ -63,7 +63,7 @@
         <DiscoveryAllTile
           {expanded}
           controls="body-types-grid"
-          ontoggle={bodyTypes.length > mobileBodyTypes.size ? () => expanded = !expanded : undefined}
+          ontoggle={desktopBodyTypes.length > mobileBodyTypes.size ? () => expanded = !expanded : undefined}
         />
       </div>
     </div>
@@ -370,7 +370,6 @@
 
     .dn-body-type--additional { order: 2; }
 
-    .dn-body-type--secondary,
-    .dn-body-type--desktop-only { display: none; }
+    .dn-body-type--secondary { display: none; }
   }
 </style>

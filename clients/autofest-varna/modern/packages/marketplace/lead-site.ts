@@ -114,8 +114,8 @@ export const leadSite: LeadSiteConfig = {
     "tagline": "Аутофест — vehicles and dealer support in Varna."
   }
 },
-  accent: "#30343b",
-  desktopAccent: "#4b5057",
+  accent: "#09090b",
+  desktopAccent: "#09090b",
   desktopInventoryFilterLayout: "quick",
   desktopPreviewIdentity: {
     sourceSlug: "day-night-auto-group",
@@ -127,7 +127,7 @@ export const leadSite: LeadSiteConfig = {
       en: "Find your next car.",
     },
   },
-  address: "ул. „Атанас Манчев“ 18, Варна",
+  address: "бул.'Цар Освободител' 1000 метра след Метро, Варна, България",
   city: "Варна",
   district: { bg: "Варна", en: "Varna" },
   sellCategoryAssets: {
@@ -141,17 +141,17 @@ export const leadSite: LeadSiteConfig = {
   mobileShowroomArtworkPath:
     "/images/lease/mobile-pdp-showroom-blue-hour-v1.webp",
   contactUrl: "tel:+359897855097",
-  country: "България",
+  country: "BG",
   countryCode: carsLocale.dealerCountry,
   currency: carsLocale.inventoryCurrency,
   email: "",
   heroPath: "/lead-hero.jpg",
   locale: "bg-BG",
-  logoPath: "/dealer-brand/v2-1b8e62f1172699ff/logo-on-light.webp",
-  logoInversePath: "/dealer-brand/v2-1b8e62f1172699ff/logo-on-dark.webp",
-  logoOnLight: "/dealer-brand/v2-1b8e62f1172699ff/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/v2-1b8e62f1172699ff/logo-on-dark.webp",
-  logoOnAccent: "/dealer-brand/v2-1b8e62f1172699ff/logo-on-dark.webp",
+  logoPath: "/dealer-brand/v2-68b437f5785795db/logo-on-light.webp",
+  logoInversePath: "/dealer-brand/v2-68b437f5785795db/logo-on-dark.webp",
+  logoOnLight: "/dealer-brand/v2-68b437f5785795db/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-68b437f5785795db/logo-on-dark.webp",
+  logoOnAccent: "/dealer-brand/v2-68b437f5785795db/logo-on-dark.webp",
   mapsEmbedUrl:
     "https://maps.google.com/maps?q=%D0%90%D1%83%D1%82%D0%BE%D1%84%D0%B5%D1%81%D1%82%2C%20%D0%B1%D1%83%D0%BB.'%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB'%201000%20%D0%BC%D0%B5%D1%82%D1%80%D0%B0%20%D1%81%D0%BB%D0%B5%D0%B4%20%D0%9C%D0%B5%D1%82%D1%80%D0%BE%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F&z=16&output=embed",
   mapsUrl:
@@ -163,6 +163,6 @@ export const leadSite: LeadSiteConfig = {
   slug: "autofest-varna",
   socialLinks: {},
   staticDemoMode: true,
-  tagline: "Премиум автомобили, внос и собствен лизинг в Варна.",
+  tagline: "Аутофест — автомобили и съдействие в Варна.",
 };
 // LEAD_SITE_CONFIG_END

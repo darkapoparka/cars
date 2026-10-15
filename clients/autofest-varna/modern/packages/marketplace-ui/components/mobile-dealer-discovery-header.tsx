@@ -262,7 +262,11 @@ export const MobileDealerQuickFilters = ({
   isBg,
 }: MobileDealerQuickFiltersProps) => (
   <div
-    className={cn(mobileDealerContentClassName, "overflow-hidden pb-3")}
+    // The pill fill sits 2px inside its tap target; keep each visible gap at 12px.
+    className={cn(
+      mobileDealerContentClassName,
+      "overflow-hidden pt-2.5 pb-2.5"
+    )}
     data-slot="mobile-dealer-content"
   >
     <MobilePillRail
@@ -367,7 +371,12 @@ export const MobileDealerDiscoveryHeader = ({
               <CategoryIcon category={category} />
             </button>
 
-            <DealerMobileBrandBar isBg={isBg} locale={locale} tone="clean" />
+            <DealerMobileBrandBar
+              isBg={isBg}
+              locale={locale}
+              tone="clean"
+              wordmarkTone="light"
+            />
 
             <button
               aria-haspopup="dialog"

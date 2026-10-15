@@ -5,12 +5,12 @@
   "name": "Аутофест",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "cc130e432a41a3a60cc80bc2b3461c6416893b4a",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/karento-best",
-    "tree": "c661129affb32649c8fcecea097fc9a6487783d0",
-    "digest": "bf8c6628be5f28b7e3358b121b7cf9e236d36a2fc0138bf640d72113c7e17f30"
+    "digest": "be17ef365e3272753df6e50826b139a45bfc32b8fef54ddcb86d977ad16280a9",
+    "tree": "8c5ac869c7fd15e19a80c660343fc64b20a2bad9"
   },
-  "sourceDigest": "336b448f0d3760abd1074923be92bd1c3f332d726e4c96f1ce3957ad077bebe6",
+  "sourceDigest": "1c85357f2db8e7305208d28cdf98fd1d180f58440580a44efbcb8f08c2bbf62e",
   "inventory": {
     "mode": "dated-listing-snapshot",
     "count": 8,
@@ -19,8 +19,8 @@
   "personalization": {
     "profileSha256": "c551b8e787ca22fcddd5ed5d8b319ca51f894f3c917f6de35b37efc31e7d5ef3",
     "logoPaths": [
-      "/dealer-brand/v2-1b8e62f1172699ff/logo-on-light.webp",
-      "/dealer-brand/v2-1b8e62f1172699ff/logo-on-dark.webp"
+      "/dealer-brand/logo-on-light.webp",
+      "/dealer-brand/logo-on-dark.webp"
     ],
     "mediaPaths": [
       "/assets/vehicles/21791561972367404/1.webp",
@@ -67,6 +67,9 @@
       "karento-best/src/lib/pages/cars-details-3.svelte",
       "karento-best/src/lib/components/vehicle-detail/VehicleReservationCard.svelte",
       "karento-best/src/lib/components/vehicle-detail/VehicleDetailPanels.svelte",
+      "karento-best/src/lib/components/ServiceSpotCard.svelte",
+      "karento-best/src/lib/sections/HomeBrandLinks.svelte",
+      "karento-best/src/lib/i18n/catalogs/reference-home.ts",
       "karento-best/src/lib/data/editorial.ts",
       "karento-best/src/lib/data/home-stories.ts",
       "karento-best/src/lib/cards/VehicleEditorialCard.svelte",
@@ -89,9 +92,5 @@
     "nativeDealerFacts": true
   },
   "needsDealerQA": true,
-  "readyToPublish": false,
-  "branding": {
-    "packId": "1b8e62f1172699ff",
-    "previousSourceDigest": "6572632eaa7d1168e1b8bbf3f67526b31a76d874951b685594d13887b23106f5"
-  }
+  "readyToPublish": false
 }

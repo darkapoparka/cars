@@ -5,12 +5,12 @@
   "name": "Аутофест",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "8a97176e3adfbd95dce69b3096abc84e3eecd9c8",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/mobile",
-    "tree": "9a4db757e788ee236712b8eac25956a6a8a61d0b",
-    "digest": "cc126a7c38634c7601ef8c617411d6938d7c9b6efc7b319e87c2c6efc99d8b6d"
+    "digest": "f5a3e541a7c648a4c2899ad3893e22a3806027a9f66d95fa4e8c74b2226635b6",
+    "tree": "792bfdd1d8eb22aabd90c7e3a0c0779a6c1c36f3"
   },
-  "sourceDigest": "67deea0b1f6c6f73c7ce7bd12ceef27b6e69a2725849ae443da2e8f1700787cc",
+  "sourceDigest": "6e16a331d092d430f4481b09d54778fdaf752a26768296533c9000a364aa2a4a",
   "inventory": {
     "mode": "dated-listing-snapshot",
     "count": 8,
@@ -19,8 +19,8 @@
   "personalization": {
     "profileSha256": "c551b8e787ca22fcddd5ed5d8b319ca51f894f3c917f6de35b37efc31e7d5ef3",
     "logoPaths": [
-      "/dealer-brand/v2-1b8e62f1172699ff/logo-on-light.webp",
-      "/dealer-brand/v2-1b8e62f1172699ff/logo-on-dark.webp"
+      "/dealer-brand/logo-on-light.webp",
+      "/dealer-brand/logo-on-dark.webp"
     ],
     "mediaPaths": [
       "/assets/vehicles/21791561972367404/1.webp",
@@ -68,13 +68,15 @@
       "mobile/src/components/DealerScreens.tsx",
       "mobile/src/components/VehicleCard.tsx",
       "mobile/src/components/ShowroomVehicleCard.tsx",
-      "mobile/src/components/VehicleSections.tsx"
+      "mobile/src/components/VehicleSections.tsx",
+      "mobile/src/lib/mobile-mileage.ts",
+      "mobile/src/lib/types.ts",
+      "mobile/src/components/DesktopVehicleSummary.tsx",
+      "mobile/src/components/NativeCarPark.tsx",
+      "mobile/src/components/ShowroomFilterSheet.tsx",
+      "mobile/src/lib/vehicle-copy.ts"
     ]
   },
   "needsDealerQA": true,
-  "readyToPublish": false,
-  "branding": {
-    "packId": "1b8e62f1172699ff",
-    "previousSourceDigest": "275f4bd77a23d9dac82f5d4d5f49c2ce84f49981353645b3d96a99752195317c"
-  }
+  "readyToPublish": false
 }

@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "Аутофест",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-1b8e62f1172699ff/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-1b8e62f1172699ff/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-1b8e62f1172699ff/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-68b437f5785795db/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-68b437f5785795db/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-68b437f5785795db/logo-on-dark.webp",
     "alt": "Аутофест",
-    "favicon": "/dealer-brand/app-icon.png",
+    "favicon": "/dealer-brand/v2-68b437f5785795db/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

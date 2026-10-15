@@ -43,6 +43,7 @@
             <div class="karento-process-image">
               <img
                 src={step.image}
+                style:object-position={step.imagePosition ?? "center"}
                 alt=""
                 width="1672"
                 height="941"
@@ -151,6 +152,10 @@
 
     .karento-process-step {
       text-align: left;
+      padding: var(--karento-space-3);
+      border: 1px solid var(--bs-border-color);
+      border-radius: var(--karento-radius-card);
+      background: var(--bs-background-card);
     }
 
     .karento-process-step-link {
@@ -163,6 +168,11 @@
 
     .karento-process-image {
       align-self: stretch;
+      width: 100%;
+      aspect-ratio: var(--karento-image-wide);
+      min-width: 0;
+      border-radius: var(--karento-radius-media);
+      overflow: hidden;
     }
 
     .karento-process-image img {
@@ -186,6 +196,8 @@
       width: var(--karento-space-6);
       height: var(--karento-space-6);
       border-radius: var(--karento-space-1);
+      background: var(--bs-neutral-0);
+      color: var(--bs-neutral-1000);
       font-size: var(--karento-type-badge-size);
       font-weight: var(--karento-type-badge-weight);
       line-height: var(--karento-type-badge-leading);
@@ -204,6 +216,10 @@
       font-size: var(--karento-type-body-small-size);
       font-weight: var(--karento-type-body-small-weight);
       line-height: var(--karento-type-body-small-leading);
+      color: var(--bs-neutral-600) !important;
+    }
+    .karento-process-description-line {
+      display: inline;
     }
   }
 </style>

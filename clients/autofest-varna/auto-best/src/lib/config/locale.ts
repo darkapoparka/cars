@@ -23,13 +23,17 @@ export const dealerLocalizedText = {
     "city": "Varna",
     "addressLine": "'Tsar Osvoboditel' 1000 metra sled Metro",
     "address": "'Tsar Osvoboditel' 1000 metra sled Metro, Varna, Balgariya",
-    "appointment": "Viewings by appointment. Please call before visiting."
+    "appointment": "Viewings by appointment. Please call before visiting.",
+    "addressShort": "'Tsar Osvoboditel' 1000 metra sled Metro",
+    "appointmentShort": "Viewings by appointment. Please call before visiting."
   },
   "bg": {
     "city": "Варна",
     "addressLine": "бул.'Цар Освободител' 1000 метра след Метро",
     "address": "бул.'Цар Освободител' 1000 метра след Метро, Варна, България",
-    "appointment": "Потвърдете работното време директно с автокъщата."
+    "appointment": "Потвърдете работното време директно с автокъщата.",
+    "addressShort": "бул.'Цар Освободител' 1000 метра след Метро",
+    "appointmentShort": "Потвърдете работното време директно с автокъщата."
   }
 } as const;
 

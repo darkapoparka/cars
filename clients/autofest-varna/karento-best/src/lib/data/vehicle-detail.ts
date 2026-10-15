@@ -118,6 +118,12 @@ export const referenceSpecifications: readonly DetailSpecification[] = [
     "valueKey": "fuel.gasoline"
   },
   {
+    "id": "year",
+    "icon": "/assets/imgs/template/icons/calendar.svg",
+    "value": "2018",
+    "labelKey": "vehicle.field.year"
+  },
+  {
     "id": "lit",
     "icon": "/assets/imgs/page/car/lit.svg",
     "value": "155 hp",
@@ -149,7 +155,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "Аутофест",
   "location": "бул.'Цар Освободител' 1000 метра след Метро, Варна, България",
-  "avatar": "/dealer-brand/v2-1b8e62f1172699ff/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-68b437f5785795db/logo-on-light.webp",
   "mobile": "0897855097",
   "email": "",
   "whatsapp": "",
