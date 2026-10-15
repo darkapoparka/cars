@@ -194,7 +194,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "OUTLETCARS.BG — Варна",
   "location": "бул. Янош Хуняди 518, срещу КАТ Варна, Варна, България",
-  "avatar": "/dealer-brand/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-5c0d2d99cd366a51/logo-on-light.webp",
   "mobile": "0898 921 010",
   "email": "",
   "whatsapp": "",

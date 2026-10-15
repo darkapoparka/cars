@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "OUTLETCARS.BG — Варна",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/logo-on-light.webp",
-    "footer": "/dealer-brand/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-5c0d2d99cd366a51/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-5c0d2d99cd366a51/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-5c0d2d99cd366a51/logo-on-dark.webp",
     "alt": "OUTLETCARS.BG — Варна",
-    "favicon": "/dealer-brand/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-5c0d2d99cd366a51/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

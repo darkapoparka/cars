@@ -88,7 +88,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "OUTLETCARS.BG — Варна",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-5c0d2d99cd366a51/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": true
@@ -179,7 +179,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "OUTLETCARS.BG — Варна",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-5c0d2d99cd366a51/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": true
@@ -270,7 +270,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "OUTLETCARS.BG — Варна",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-5c0d2d99cd366a51/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": true
@@ -361,7 +361,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "OUTLETCARS.BG — Варна",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-5c0d2d99cd366a51/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": false
@@ -452,7 +452,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "OUTLETCARS.BG — Варна",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-5c0d2d99cd366a51/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": false
@@ -543,7 +543,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "OUTLETCARS.BG — Варна",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-5c0d2d99cd366a51/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": false
@@ -634,7 +634,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "OUTLETCARS.BG — Варна",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-5c0d2d99cd366a51/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": false
@@ -725,7 +725,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "OUTLETCARS.BG — Варна",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-5c0d2d99cd366a51/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": false
