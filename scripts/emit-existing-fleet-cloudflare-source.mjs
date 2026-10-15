@@ -17,6 +17,13 @@ import {createCloudflareNativeSourceQualification,assertCloudflareNativeSourceEx
 const KEYS=['auto-best','modern','import','app','mobile','karento-best','router'];
 const read=file=>JSON.parse(fs.readFileSync(file,'utf8'));
 const same=(a,b)=>assert.deepEqual(a,b);
+/** The package is a separate work tree; the CI checkout's sparse policy is unrelated. */
+export function indexNativeSourcePackage({root,packageRoot,index}){
+ const env={GIT_INDEX_FILE:index},full=['-c','core.sparseCheckout=false'];
+ git(root,[...full,'read-tree','--empty'],{env});
+ git(root,[...full,'--work-tree',packageRoot,'--literal-pathspecs','add','--force','--pathspec-from-file=-','--pathspec-file-nul'],{env,input:packageFiles(packageRoot).join('\0')+'\0'});
+ return git(root,[...full,'write-tree'],{env});
+}
 export function qualifiedFleetLocks(inputs){
  const svelte={},next=[];
  for(const key of KEYS.filter(k=>k!=='router')){
@@ -60,10 +67,7 @@ export async function emitFleetCloudflareSource({slug,inputRoot,singletonRoot,de
  same(provenance.sourceReleases,receipt.sourceReleases);assert.equal(manifest.repository,sealed.delivery.repository);
  const qualification=createCloudflareNativeSourceQualification({receiptBytes:fs.readFileSync(path.join(singletonRoot,'single-worker-receipt.json')),deliveryBytes:fs.readFileSync(path.join(singletonRoot,'delivery-receipt.json')),artifactDigest:sealed.inventory.digest,manifest});
  const verified=sealNativeSourcePackage(packageRoot,{manifest,sourceCommit,qualification});
- const index=path.join(area,'source.index'),gitEnv={GIT_INDEX_FILE:index};
- git(root,['read-tree','--empty'],{env:gitEnv});
- git(root,['--work-tree',packageRoot,'--literal-pathspecs','add','--force','--pathspec-from-file=-','--pathspec-file-nul'],{env:gitEnv,input:packageFiles(packageRoot).join('\0')+'\0'});
- const packageTree=git(root,['write-tree'],{env:gitEnv});
+ const index=path.join(area,'source.index'),packageTree=indexNativeSourcePackage({root,packageRoot,index});
  const packageCommit=git(root,['-c','user.name=Cars release','-c','user.email=41898282+github-actions[bot]@users.noreply.github.com','commit-tree',packageTree,'-p',sourceCommit],{input:'Transport qualified Cloudflare source for '+slug+'\n'});
  const artifact=path.join(area,'artifact');fs.mkdirSync(artifact);
  const objectTransport=writePackageObjectPack({root,sourceCommit,sourcePaths:['clients/'+slug,'scripts'],packageTree,packageCommit,destination:path.join(artifact,'package.objects.pack')});

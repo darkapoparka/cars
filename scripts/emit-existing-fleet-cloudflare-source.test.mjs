@@ -4,11 +4,20 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import {createHash} from 'node:crypto';
-import {qualifiedFleetLocks,sealNativeSourcePackage} from './emit-existing-fleet-cloudflare-source.mjs';
+import {execFileSync} from 'node:child_process';
+import {qualifiedFleetLocks,sealNativeSourcePackage,indexNativeSourcePackage} from './emit-existing-fleet-cloudflare-source.mjs';
 import {createCloudflareNativeSourceQualification} from './lib/cloudflare-native-source-qualification.mjs';
 const hash=bytes=>createHash('sha256').update(bytes).digest('hex');
 const fixture=()=>fs.mkdtempSync(path.join(os.tmpdir(),'cars-cf-source-seal-'));
 const put=(root,name,value)=>{const bytes=Buffer.from(JSON.stringify(value,null,2)+'\n'),file=path.join(root,name);fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,bytes);return {path:name,bytes:bytes.length,sha256:hash(bytes)};};
+test('source transport indexes its exact separate package under a sparse CI checkout',()=>{
+ const area=fixture(),root=path.join(area,'checkout'),packageRoot=path.join(area,'package');fs.mkdirSync(root);
+ const g=(args,input)=>execFileSync('git',['-C',root,...args],{input,encoding:'utf8',windowsHide:true}).trim();
+ g(['-c','init.templateDir=','init','--quiet']);put(root,'scripts/retained.json',{source:true});g(['add','.']);g(['-c','user.name=Cars test','-c','user.email=cars@example.invalid','commit','--quiet','-m','fixture']);g(['sparse-checkout','init','--cone']);g(['sparse-checkout','set','scripts']);
+ const before=g(['write-tree']);put(packageRoot,'dealer.json',{slug:'demo'});put(packageRoot,'auto-best/site.json',{name:'Correct dealer'});
+ const tree=indexNativeSourcePackage({root,packageRoot,index:path.join(area,'package.index')});
+ assert.deepEqual(g(['ls-tree','-r','--name-only',tree]).split('\n'),['auto-best/site.json','dealer.json']);assert.deepEqual(JSON.parse(g(['show',tree+':auto-best/site.json'])),{name:'Correct dealer'});assert.equal(g(['write-tree']),before);assert.equal(g(['config','core.sparseCheckout']),'true');
+});
 test('full source seal keeps the six frozen native locks requirement',t=>{
  const root=fixture(t);put(root,'.cars-cloudflare.json',{provider:'cloudflare',acceptance:{dependencyLocksFrozen:false}});
  assert.throws(()=>sealNativeSourcePackage(root,{manifest:{},sourceCommit:'a'.repeat(40)}),/All six native dependency locks/);
