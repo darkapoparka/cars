@@ -50,7 +50,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "CrazyFoxMotors",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-a5ae7b53dd49fe7e/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-51633844650603a6/logo-on-light.webp"
     },
     "publishedAt": "2026-10-12T09:00:00.000Z",
     "promoted": true
@@ -103,7 +103,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "CrazyFoxMotors",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-a5ae7b53dd49fe7e/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-51633844650603a6/logo-on-light.webp"
     },
     "publishedAt": "2026-10-12T09:00:00.000Z",
     "promoted": true

@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "CrazyFoxMotors",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-a5ae7b53dd49fe7e/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-a5ae7b53dd49fe7e/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-a5ae7b53dd49fe7e/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-51633844650603a6/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-51633844650603a6/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-51633844650603a6/logo-on-dark.webp",
     "alt": "CrazyFoxMotors",
-    "favicon": "/dealer-brand/v2-a5ae7b53dd49fe7e/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-51633844650603a6/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

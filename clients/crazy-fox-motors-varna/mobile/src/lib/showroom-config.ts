@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "CrazyFoxMotors",
-  "logo": "/dealer-brand/v2-a5ae7b53dd49fe7e/logo-on-light.webp",
+  "logo": "/dealer-brand/v2-51633844650603a6/logo-on-light.webp",
   "phone": "+359888205488",
   "email": null,
   "address": "ул. Прилеп 87, Варна, България",
