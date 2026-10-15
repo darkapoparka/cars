@@ -12,7 +12,7 @@
     "scope": "existing-dealer-pilot",
     "sourceCommit": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "reviewed": true,
-    "reviewedAt": "2026-10-14T23:56:34.182Z",
+    "reviewedAt": "2026-10-15T08:36:57.545Z",
     "qualificationOnly": true,
     "approved": false,
     "nativeApproval": false,
@@ -28,9 +28,34 @@
     "sourceReview": {
       "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-review.json",
       "sha256": "27c6ce5dd17ee6e1b9f6a5b059a95d5e1dbe4200f61264fc50addeb7af89d984"
+    },
+    "dealerSourceRepair": {
+      "kind": "explicit-editorial-and-modern-logo-aliases",
+      "parentContextSha256": "fe16504a3c75b044a84673da88b809f49a896ff080c6f560b86745da18c6a21c",
+      "baseSourceCommit": "4f53c1f7fea4551f46acd2b5ce1afdcf431e145f",
+      "baseSourceTree": "3444ebbe8fae358cec249c5b9ccce5918512645b",
+      "path": "import/src/lib/content/extra-localized.ts",
+      "beforeBlob": "6f38d0758a72a29c54a3329d497ecce5a4494140",
+      "afterBlob": "8f13d96facc0adfc7bdf830b1e2065f3a9b3e7e2",
+      "companionPaths": [
+        {
+          "path": "modern/packages/marketplace/lead-site.ts",
+          "beforeBlob": "89255a0d421c69b2af8de48e112d6293a8af8eab",
+          "afterBlob": "2027196f8f08a2631895d60f53151622116781d8"
+        }
+      ],
+      "companionProof": {
+        "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/native13-modern-runtime/eight-modern-alias-repair-proof.json",
+        "sha256": "e6bb81ee497e21000b99317e0833ef7af4f10a1170d213cf1918670301efd9b6"
+      },
+      "proof": {
+        "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/editorial-runtime-repair-20261015/sprint-auto-varna/focused-proof.json",
+        "sha256": "4af9e63293161bf732ca0262c0269f8304253d1a8be5e7ff142c984b350a9ecb"
+      },
+      "evidenceReuse": "Original immutable six-template QA and source preparation remain provenance; focused exact-source localization proof covers this new dealer edit. No new CI, build, native or hosted success is asserted."
     }
   },
-  "contextDigest": "1ff25459c40c648508290c768ed99bdb0547fb839f5819eb0f1d0707a72c52c4",
+  "contextDigest": "c0c72d5621e5add5234a96ee16a0c277d3bde6a4a48056af81c7dc0cdbbd07aa",
   "releases": {
     "auto-best": {
       "status": "qualification",
@@ -1708,8 +1733,8 @@
             "path": "src/lib/content/extra-localized.ts",
             "export": "extraEnglish"
           },
-          "keys": 93,
-          "contentDigest": "6e4fec17101a213b5e37b89f6b4b5c026bb9dcf2ed1248234502580123bc1c62"
+          "keys": 95,
+          "contentDigest": "e3d281cc70e48813f0861bccb98eda84cf54d5144de7d9f1590639dee64085c3"
         }
       ],
       "declaredCatalogParityPassed": true,
@@ -1717,7 +1742,7 @@
     }
   },
   "input": {
-    "digest": "6916944189f47335522d55e8d1709cf42b98f45f4175a1f57c5cb8b0292bea64",
+    "digest": "05e76cab402c11e09021fcd046f42b6de48a3a3289fb146f0ee70debd64ef23e",
     "files": 9146
   },
   "nativeApproval": false,

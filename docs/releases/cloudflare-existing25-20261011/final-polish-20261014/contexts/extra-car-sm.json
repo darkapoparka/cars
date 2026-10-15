@@ -6,7 +6,7 @@
   "scope": "existing-dealer-pilot",
   "sourceCommit": "bb173c33d7b640502ad2e4bf27546748c12858b8",
   "reviewed": true,
-  "reviewedAt": "2026-10-14T23:56:34.182Z",
+  "reviewedAt": "2026-10-15T08:40:33.849Z",
   "qualificationOnly": true,
   "approved": false,
   "nativeApproval": false,
@@ -22,5 +22,84 @@
   "sourceReview": {
     "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-review.json",
     "sha256": "27c6ce5dd17ee6e1b9f6a5b059a95d5e1dbe4200f61264fc50addeb7af89d984"
+  },
+  "dealerSourceRepair": {
+    "kind": "explicit-editorial-and-exact-logo-consumer-repair",
+    "parentContextSha256": "3617007792c05d92268f8db31a3203141c9f5d8e89b27bd674f9f477379246f6",
+    "baseSourceCommit": "f64656636b3776b6760513ca6185583ccaabb70c",
+    "baseSourceTree": "5054b7144f0137022f65fae2557f856f4e6fe6b6",
+    "path": "import/src/lib/content/extra-localized.ts",
+    "beforeBlob": "099c3f4d66d42d81caa9bf9d211682807c05c984",
+    "afterBlob": "741570b2526bec4bea360865ea843f0cb19bcb96",
+    "changedDesigns": [
+      "import",
+      "modern",
+      "mobile",
+      "karento-best"
+    ],
+    "companionPaths": [
+      {
+        "path": "modern/packages/marketplace/lead-site.ts",
+        "beforeBlob": "d1b8a81b31f0fd3e80d2d2c6c158dc25d3e5d988",
+        "afterBlob": "6ff9122f87533f46d6b7db34c781a73745ec14a6"
+      },
+      {
+        "path": "mobile/src/lib/showroom-config.ts",
+        "beforeBlob": "dcf363a74da87d195dfeb4baf16c35589c7d0e20",
+        "afterBlob": "d4a26240935472ba296991a467e4179d3f370d03"
+      },
+      {
+        "path": "mobile/src/lib/dealers.ts",
+        "beforeBlob": "569ad297e8ee394bc3d5b6af42387610e060d30e",
+        "afterBlob": "5bf0bc1587fb677a1ac28b1c33f11f8e48bb4240"
+      },
+      {
+        "path": "karento-best/src/lib/content.ts",
+        "beforeBlob": "f157c42341ebac3cb62b57cc91cc14226eac54fe",
+        "afterBlob": "a439c4c616b410bdce3c3f438eff9edb5a806874"
+      },
+      {
+        "path": "karento-best/src/lib/data/dealer-detail.ts",
+        "beforeBlob": "0a31b9acbfb2d728832c970f97d8214e14d9ef62",
+        "afterBlob": "157119ab48edd1969e2641fd76ce37bd64488636"
+      },
+      {
+        "path": "karento-best/src/lib/data/vehicle-detail.ts",
+        "beforeBlob": "18b9fd655d582a4767911a0df2d5cebd2854ec25",
+        "afterBlob": "89e8142501c085d015fb3a3ac572be9708d7197f"
+      },
+      {
+        "path": ".cars-branding.json",
+        "beforeBlob": "d82affe5c17720decc588b6a8ce74f37a15a7c09",
+        "afterBlob": "0b0ff8bd5d48ebbd3952243b65e868ac86679f68"
+      }
+    ],
+    "companionProof": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/native13-modern-runtime/eight-modern-alias-repair-proof.json",
+      "sha256": "e6bb81ee497e21000b99317e0833ef7af4f10a1170d213cf1918670301efd9b6"
+    },
+    "extendedLogoProof": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/native13-modern-runtime/extra-extended-logo-repair-proof.json",
+      "sha256": "9bc62f89e7daf4dafcea58b3dd23fd27844bb55bcb9cb56727a9dc1d0b50252b"
+    },
+    "receiptReseals": [
+      {
+        "path": ".cars-mobile.json",
+        "family": "mobile",
+        "beforeBlob": "e84e31753bead0314e44450f9442e61128ec607c",
+        "profileSha256Preserved": "6c035ec3a52ff80287bc01515bf325e41b68a771a2e49a3f9653f39a74869373"
+      },
+      {
+        "path": ".cars-signature.json",
+        "family": "karento-best",
+        "beforeBlob": "f877350e6a81d209de7110131e84fc5a700d219f",
+        "profileSha256Preserved": "6c035ec3a52ff80287bc01515bf325e41b68a771a2e49a3f9653f39a74869373"
+      }
+    ],
+    "proof": {
+      "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/editorial-runtime-repair-20261015/extra-car-sm/focused-proof.json",
+      "sha256": "8a52f80ab3036fa1e601946f305b09c5c59c800b96f6143ced92aea2a8a2f2a5"
+    },
+    "evidenceReuse": "Original immutable six-template QA and source preparation remain provenance; focused exact-source localization proof covers this new dealer edit. No new CI, build, native or hosted success is asserted."
   }
 }

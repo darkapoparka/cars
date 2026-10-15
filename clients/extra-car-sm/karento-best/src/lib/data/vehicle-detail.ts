@@ -154,7 +154,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "ЕКСТРА КАР-СМ",
   "location": "бул. Цар Освободител, преди светофара за Джъмбо, район Владислав Варненчик",
-  "avatar": "/registered-branding/onLight.png",
+  "avatar": "/dealer-brand/v2-c7f37fd29d50291a/logo-on-light.webp",
   "mobile": "0899 968 555",
   "email": "",
   "whatsapp": "",

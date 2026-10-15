@@ -6,7 +6,7 @@
   "scope": "existing-dealer-pilot",
   "sourceCommit": "bb173c33d7b640502ad2e4bf27546748c12858b8",
   "reviewed": true,
-  "reviewedAt": "2026-10-14T23:56:34.182Z",
+  "reviewedAt": "2026-10-15T08:37:10.421Z",
   "qualificationOnly": true,
   "approved": false,
   "nativeApproval": false,
@@ -22,5 +22,30 @@
   "sourceReview": {
     "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-review.json",
     "sha256": "27c6ce5dd17ee6e1b9f6a5b059a95d5e1dbe4200f61264fc50addeb7af89d984"
+  },
+  "dealerSourceRepair": {
+    "kind": "explicit-editorial-and-modern-logo-aliases",
+    "parentContextSha256": "3a0363aad0aa60295fe775873036d7fd8498d45ec11e1d15de39c92bfe4c3876",
+    "baseSourceCommit": "7278c981491b22432c2f785f0ab19c7d387aaeb3",
+    "baseSourceTree": "f5e65461197200919f8c76944c34eab933be02aa",
+    "path": "import/src/lib/content/extra-localized.ts",
+    "beforeBlob": "ab1af4557112c94bd12837c4d129ee7c5aeab4cf",
+    "afterBlob": "0527904b3f97e854a201b9a3cb9020907a8b3dcf",
+    "companionPaths": [
+      {
+        "path": "modern/packages/marketplace/lead-site.ts",
+        "beforeBlob": "adf10e20ede4d8fe2f5642e9c9e2f3349b389adb",
+        "afterBlob": "b152b6a903f7df00fdf55d81c4ca326416bd62ed"
+      }
+    ],
+    "companionProof": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/native13-modern-runtime/eight-modern-alias-repair-proof.json",
+      "sha256": "e6bb81ee497e21000b99317e0833ef7af4f10a1170d213cf1918670301efd9b6"
+    },
+    "proof": {
+      "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/editorial-runtime-repair-20261015/evrocar-varna-09/focused-proof.json",
+      "sha256": "1a6d96ac9bb07a80be04c3ed6cd477e20e85c400f398357451759f8e1bfff3d6"
+    },
+    "evidenceReuse": "Original immutable six-template QA and source preparation remain provenance; focused exact-source localization proof covers this new dealer edit. No new CI, build, native or hosted success is asserted."
   }
 }

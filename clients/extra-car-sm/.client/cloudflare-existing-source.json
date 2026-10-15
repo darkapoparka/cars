@@ -3,9 +3,9 @@
   "dealer": "extra-car-sm",
   "kind": "personalized-source-candidate-not-an-approved-release",
   "sourceRevision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
-  "candidateSourceDigest": "d41e224c6affd42e769bb4574cc2ecf5b3790c4fc71cb3ee691039e6c91b6687",
+  "candidateSourceDigest": "920d9f850137d61fe9224eaa90ece48b94e2356ee9db7f76d7e3741d5189330c",
   "qualificationContextPath": ".client/native-qualification-context.json",
-  "qualificationContextSha256": "3617007792c05d92268f8db31a3203141c9f5d8e89b27bd674f9f477379246f6",
+  "qualificationContextSha256": "f2cff50ec35be886a8a44dd59deb3847c0d81ca3e5b1473562c6148cb413557c",
   "qualificationLockPath": ".client/native-qualification-lock.json",
   "qualificationLockSha256": "04633129df9e75d6cd62deeac9125b279957789d75f57cdb0b243ef61bfc3e7e",
   "sourceDeltaReview": {

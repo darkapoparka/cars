@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "ЕКСТРА КАР-СМ",
   "locale": "bg-BG",
   "logo": {
-    "light": "/registered-branding/onLight.png",
-    "footer": "/registered-branding/onDark.png",
-    "archivedDark": "/registered-branding/onDark.png",
+    "light": "/dealer-brand/v2-c7f37fd29d50291a/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-c7f37fd29d50291a/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-c7f37fd29d50291a/logo-on-dark.webp",
     "alt": "ЕКСТРА КАР-СМ",
-    "favicon": "/registered-branding/onLight.png",
+    "favicon": "/dealer-brand/v2-c7f37fd29d50291a/app-icon.png",
     "monochromeOnDark": false
   },
   "contacts": {
