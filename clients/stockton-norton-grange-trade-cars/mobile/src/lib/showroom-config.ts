@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "Norton Grange Trade Cars",
-  "logo": "/dealer-brand/logo.webp",
+  "logo": "/dealer-brand/v2-12870d10b91ab03b/logo-on-light.webp",
   "phone": null,
   "email": null,
   "address": null,

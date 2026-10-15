@@ -116,6 +116,12 @@ export const referenceSpecifications: readonly DetailSpecification[] = [
     "value": "Diesel",
     "labelKey": "vehicle.field.fuel",
     "valueKey": "fuel.diesel"
+  },
+  {
+    "id": "year",
+    "icon": "/assets/imgs/template/icons/calendar.svg",
+    "value": "2016",
+    "labelKey": "vehicle.field.year"
   }
 ];
 
@@ -141,7 +147,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "Norton Grange Trade Cars",
   "location": "",
-  "avatar": "/dealer-brand/logo.webp",
+  "avatar": "/dealer-brand/v2-12870d10b91ab03b/logo-on-light.webp",
   "mobile": "",
   "email": "",
   "whatsapp": "",

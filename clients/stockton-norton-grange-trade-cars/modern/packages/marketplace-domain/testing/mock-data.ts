@@ -49,7 +49,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Norton Grange Trade Cars",
       "verificationStatus": "unverified",
       "city": "Stockton-on-Tees",
-      "logoUrl": "/dealer-brand/logo.webp"
+      "logoUrl": "/dealer-brand/v2-12870d10b91ab03b/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": true
@@ -100,7 +100,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Norton Grange Trade Cars",
       "verificationStatus": "unverified",
       "city": "Stockton-on-Tees",
-      "logoUrl": "/dealer-brand/logo.webp"
+      "logoUrl": "/dealer-brand/v2-12870d10b91ab03b/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": true
@@ -151,7 +151,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Norton Grange Trade Cars",
       "verificationStatus": "unverified",
       "city": "Stockton-on-Tees",
-      "logoUrl": "/dealer-brand/logo.webp"
+      "logoUrl": "/dealer-brand/v2-12870d10b91ab03b/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": true
@@ -202,7 +202,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Norton Grange Trade Cars",
       "verificationStatus": "unverified",
       "city": "Stockton-on-Tees",
-      "logoUrl": "/dealer-brand/logo.webp"
+      "logoUrl": "/dealer-brand/v2-12870d10b91ab03b/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -253,7 +253,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Norton Grange Trade Cars",
       "verificationStatus": "unverified",
       "city": "Stockton-on-Tees",
-      "logoUrl": "/dealer-brand/logo.webp"
+      "logoUrl": "/dealer-brand/v2-12870d10b91ab03b/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -304,7 +304,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Norton Grange Trade Cars",
       "verificationStatus": "unverified",
       "city": "Stockton-on-Tees",
-      "logoUrl": "/dealer-brand/logo.webp"
+      "logoUrl": "/dealer-brand/v2-12870d10b91ab03b/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -355,7 +355,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Norton Grange Trade Cars",
       "verificationStatus": "unverified",
       "city": "Stockton-on-Tees",
-      "logoUrl": "/dealer-brand/logo.webp"
+      "logoUrl": "/dealer-brand/v2-12870d10b91ab03b/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -406,7 +406,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Norton Grange Trade Cars",
       "verificationStatus": "unverified",
       "city": "Stockton-on-Tees",
-      "logoUrl": "/dealer-brand/logo.webp"
+      "logoUrl": "/dealer-brand/v2-12870d10b91ab03b/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -457,7 +457,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Norton Grange Trade Cars",
       "verificationStatus": "unverified",
       "city": "Stockton-on-Tees",
-      "logoUrl": "/dealer-brand/logo.webp"
+      "logoUrl": "/dealer-brand/v2-12870d10b91ab03b/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -508,211 +508,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Norton Grange Trade Cars",
       "verificationStatus": "unverified",
       "city": "Stockton-on-Tees",
-      "logoUrl": "/dealer-brand/logo.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1006",
-    "slug": "peugeot-208-2016-820214219013",
-    "category": "car",
-    "dealerOrgId": "dealer-stockton-norton-grange-trade-cars",
-    "status": "active",
-    "title": "2016 Peugeot 208 1.6 BlueHDi Active 5dr HATCHBACK Diesel Manual",
-    "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
-    "price": {
-      "amount": 3490,
-      "currency": "GBP"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer-stock/hatchback.webp",
-        "alt": "2016 Peugeot 208 1.6 BlueHDi Active 5dr HATCHBACK Diesel Manual"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Stockton-on-Tees",
-      "region": "Stockton-on-Tees",
-      "country": "United Kingdom"
-    },
-    "spec": {
-      "make": "Peugeot",
-      "model": "208",
-      "trim": "1.6 BlueHDi Active 5dr HATCHBACK Diesel Manual",
-      "year": 2016,
-      "bodyType": "hatchback",
-      "fuelType": "diesel",
-      "transmission": "manual",
-      "mileageValue": 128748,
-      "mileageUnit": "km",
-      "mileageSourceValue": 80000,
-      "mileageSourceUnit": "mi"
-    },
-    "seller": {
-      "id": "dealer-stockton-norton-grange-trade-cars",
-      "type": "dealer",
-      "displayName": "Norton Grange Trade Cars",
-      "verificationStatus": "unverified",
-      "city": "Stockton-on-Tees",
-      "logoUrl": "/dealer-brand/logo.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1007",
-    "slug": "ford-grand-2016-820210366321",
-    "category": "car",
-    "dealerOrgId": "dealer-stockton-norton-grange-trade-cars",
-    "status": "active",
-    "title": "2016 Ford Grand C-Max 1.5 TDCi Titanium 5dr MPV Diesel Manual",
-    "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
-    "price": {
-      "amount": 4990,
-      "currency": "GBP"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer-stock/van.webp",
-        "alt": "2016 Ford Grand C-Max 1.5 TDCi Titanium 5dr MPV Diesel Manual"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Stockton-on-Tees",
-      "region": "Stockton-on-Tees",
-      "country": "United Kingdom"
-    },
-    "spec": {
-      "make": "Ford",
-      "model": "Grand",
-      "trim": "C-Max 1.5 TDCi Titanium 5dr MPV Diesel Manual",
-      "year": 2016,
-      "bodyType": "other",
-      "fuelType": "diesel",
-      "transmission": "manual",
-      "mileageValue": 165762,
-      "mileageUnit": "km",
-      "mileageSourceValue": 103000,
-      "mileageSourceUnit": "mi"
-    },
-    "seller": {
-      "id": "dealer-stockton-norton-grange-trade-cars",
-      "type": "dealer",
-      "displayName": "Norton Grange Trade Cars",
-      "verificationStatus": "unverified",
-      "city": "Stockton-on-Tees",
-      "logoUrl": "/dealer-brand/logo.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1008",
-    "slug": "ford-focus-2016-820209853597",
-    "category": "car",
-    "dealerOrgId": "dealer-stockton-norton-grange-trade-cars",
-    "status": "active",
-    "title": "2016 Ford Focus 1.5 TDCi 120 Titanium 5dr HATCHBACK Diesel Manual",
-    "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
-    "price": {
-      "amount": 3990,
-      "currency": "GBP"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer-stock/hatchback.webp",
-        "alt": "2016 Ford Focus 1.5 TDCi 120 Titanium 5dr HATCHBACK Diesel Manual"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Stockton-on-Tees",
-      "region": "Stockton-on-Tees",
-      "country": "United Kingdom"
-    },
-    "spec": {
-      "make": "Ford",
-      "model": "Focus",
-      "trim": "1.5 TDCi 120 Titanium 5dr HATCHBACK Diesel Manual",
-      "year": 2016,
-      "bodyType": "hatchback",
-      "fuelType": "diesel",
-      "transmission": "manual",
-      "mileageValue": 165762,
-      "mileageUnit": "km",
-      "mileageSourceValue": 103000,
-      "mileageSourceUnit": "mi"
-    },
-    "seller": {
-      "id": "dealer-stockton-norton-grange-trade-cars",
-      "type": "dealer",
-      "displayName": "Norton Grange Trade Cars",
-      "verificationStatus": "unverified",
-      "city": "Stockton-on-Tees",
-      "logoUrl": "/dealer-brand/logo.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1009",
-    "slug": "nissan-qashqai-2017-820206910321",
-    "category": "car",
-    "dealerOrgId": "dealer-stockton-norton-grange-trade-cars",
-    "status": "active",
-    "title": "2017 Nissan Qashqai 1.5 dCi N-Vision 5dr HATCHBACK Diesel Manual",
-    "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
-    "price": {
-      "amount": 5990,
-      "currency": "GBP"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer-stock/hatchback.webp",
-        "alt": "2017 Nissan Qashqai 1.5 dCi N-Vision 5dr HATCHBACK Diesel Manual"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Stockton-on-Tees",
-      "region": "Stockton-on-Tees",
-      "country": "United Kingdom"
-    },
-    "spec": {
-      "make": "Nissan",
-      "model": "Qashqai",
-      "trim": "1.5 dCi N-Vision 5dr HATCHBACK Diesel Manual",
-      "year": 2017,
-      "bodyType": "hatchback",
-      "fuelType": "diesel",
-      "transmission": "manual",
-      "mileageValue": 149669,
-      "mileageUnit": "km",
-      "mileageSourceValue": 93000,
-      "mileageSourceUnit": "mi"
-    },
-    "seller": {
-      "id": "dealer-stockton-norton-grange-trade-cars",
-      "type": "dealer",
-      "displayName": "Norton Grange Trade Cars",
-      "verificationStatus": "unverified",
-      "city": "Stockton-on-Tees",
-      "logoUrl": "/dealer-brand/logo.webp"
+      "logoUrl": "/dealer-brand/v2-12870d10b91ab03b/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false

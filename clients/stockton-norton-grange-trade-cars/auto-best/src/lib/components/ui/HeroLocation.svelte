@@ -7,7 +7,7 @@
   const directionsUrl = $derived(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(i18n.dealer('address'))}`);
 </script>
 
-<p class="dn-hero-location" class:dn-hero-location--subtitle={appearance === 'subtitle'}>
+<p class="dn-hero-location" class:dn-hero-location--subtitle={appearance === 'subtitle'} class:dn-company-hero__location={appearance === 'subtitle'}>
   <Icon name="map-pin" size={16} />
   <a
     href={directionsUrl}

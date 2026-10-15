@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "Norton Grange Trade Cars",
   "locale": "en-GB",
   "logo": {
-    "light": "/dealer-brand/logo.webp",
-    "footer": "/dealer-brand/logo.webp",
-    "archivedDark": "/dealer-brand/logo.webp",
+    "light": "/dealer-brand/v2-12870d10b91ab03b/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-12870d10b91ab03b/logo-on-light.webp",
+    "archivedDark": "/dealer-brand/v2-12870d10b91ab03b/logo-on-light.webp",
     "alt": "Norton Grange Trade Cars",
-    "favicon": "/dealer-brand/app-icon.png",
+    "favicon": "/dealer-brand/v2-12870d10b91ab03b/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {
