@@ -1,7 +1,38 @@
 /* Shared font and small-text roles. Keep the theme's heading and body scale. */
 
+/* Urbanist covers Latin. Supply intentional Bulgarian glyphs instead of OS fallback. */
+@font-face {
+  font-family: "Sofia Sans";
+  src: url("/assets/fonts/sofia-sans/SofiaSans-Regular.cyrillic.woff2")
+    format("woff2");
+  font-style: normal;
+  font-weight: 400 500;
+  font-display: swap;
+  unicode-range: U+0400-052F, U+2DE0-2DFF, U+A640-A69F;
+}
+
+@font-face {
+  font-family: "Sofia Sans";
+  src: url("/assets/fonts/sofia-sans/SofiaSans-SemiBold.cyrillic.woff2")
+    format("woff2");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  unicode-range: U+0400-052F, U+2DE0-2DFF, U+A640-A69F;
+}
+
+@font-face {
+  font-family: "Sofia Sans";
+  src: url("/assets/fonts/sofia-sans/SofiaSans-Bold.cyrillic.woff2")
+    format("woff2");
+  font-style: normal;
+  font-weight: 700 900;
+  font-display: swap;
+  unicode-range: U+0400-052F, U+2DE0-2DFF, U+A640-A69F;
+}
+
 :root {
-  --karento-font-sans: "Urbanist", sans-serif;
+  --karento-font-sans: "Urbanist", "Sofia Sans", sans-serif;
   --karento-text-compact: 0.75rem;
   --karento-text-caption: 0.8125rem;
   --karento-text-field: 1rem;

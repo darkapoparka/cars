@@ -58,7 +58,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "AUTOROAD",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-4b62d6973091f5ff/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-d83e7e609c001f98/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": true
@@ -119,7 +119,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "AUTOROAD",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-4b62d6973091f5ff/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-d83e7e609c001f98/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": true
@@ -180,7 +180,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "AUTOROAD",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-4b62d6973091f5ff/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-d83e7e609c001f98/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": true
@@ -241,7 +241,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "AUTOROAD",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-4b62d6973091f5ff/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-d83e7e609c001f98/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -302,7 +302,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "AUTOROAD",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-4b62d6973091f5ff/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-d83e7e609c001f98/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -363,7 +363,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "AUTOROAD",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-4b62d6973091f5ff/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-d83e7e609c001f98/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -424,7 +424,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "AUTOROAD",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-4b62d6973091f5ff/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-d83e7e609c001f98/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -485,373 +485,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "AUTOROAD",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-4b62d6973091f5ff/logo-on-light.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1004",
-    "slug": "peugeot-5008-2021-11764083375105654",
-    "category": "car",
-    "dealerOrgId": "dealer-autoroad-varna",
-    "status": "active",
-    "title": "Peugeot 5008 1.5 HDI -LED-KEYLESS-DISTRONIK-DIGITAL-LANE ASSIST",
-    "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
-    "price": {
-      "amount": 13500,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/vehicles/11764083375105654/1.webp",
-        "alt": "Peugeot 5008 1.5 HDI -LED-KEYLESS-DISTRONIK-DIGITAL-LANE ASSIST"
-      },
-      {
-        "url": "/assets/vehicles/11764083375105654/2.webp",
-        "alt": "Peugeot 5008 1.5 HDI -LED-KEYLESS-DISTRONIK-DIGITAL-LANE ASSIST"
-      },
-      {
-        "url": "/assets/vehicles/11764083375105654/3.webp",
-        "alt": "Peugeot 5008 1.5 HDI -LED-KEYLESS-DISTRONIK-DIGITAL-LANE ASSIST"
-      },
-      {
-        "url": "/assets/vehicles/11764083375105654/4.webp",
-        "alt": "Peugeot 5008 1.5 HDI -LED-KEYLESS-DISTRONIK-DIGITAL-LANE ASSIST"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "spec": {
-      "make": "Peugeot",
-      "model": "5008",
-      "year": 2021,
-      "bodyType": "suv",
-      "fuelType": "diesel",
-      "transmission": "automatic",
-      "mileageValue": 197000,
-      "mileageUnit": "km",
-      "enginePowerHp": 130
-    },
-    "seller": {
-      "id": "dealer-autoroad-varna",
-      "type": "dealer",
-      "displayName": "AUTOROAD",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-4b62d6973091f5ff/logo-on-light.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1005",
-    "slug": "renault-megane-2023-11791216679127136",
-    "category": "car",
-    "dealerOrgId": "dealer-autoroad-varna",
-    "status": "active",
-    "title": "Renault Megane E-TECH-EV 60-220K.S. Equilibre optimum charge",
-    "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
-    "price": {
-      "amount": 19500,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/vehicles/11791216679127136/1.webp",
-        "alt": "Renault Megane E-TECH-EV 60-220K.S. Equilibre optimum charge"
-      },
-      {
-        "url": "/assets/vehicles/11791216679127136/2.webp",
-        "alt": "Renault Megane E-TECH-EV 60-220K.S. Equilibre optimum charge"
-      },
-      {
-        "url": "/assets/vehicles/11791216679127136/3.webp",
-        "alt": "Renault Megane E-TECH-EV 60-220K.S. Equilibre optimum charge"
-      },
-      {
-        "url": "/assets/vehicles/11791216679127136/4.webp",
-        "alt": "Renault Megane E-TECH-EV 60-220K.S. Equilibre optimum charge"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "spec": {
-      "make": "Renault",
-      "model": "Megane",
-      "year": 2023,
-      "bodyType": "hatchback",
-      "fuelType": "electric",
-      "transmission": "automatic",
-      "mileageValue": 121000,
-      "mileageUnit": "km",
-      "enginePowerHp": 220
-    },
-    "seller": {
-      "id": "dealer-autoroad-varna",
-      "type": "dealer",
-      "displayName": "AUTOROAD",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-4b62d6973091f5ff/logo-on-light.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1006",
-    "slug": "skoda-karoq-2020-21791195488121434",
-    "category": "car",
-    "dealerOrgId": "dealer-autoroad-varna",
-    "status": "active",
-    "title": "Skoda Karoq 1.6 TDI-DSG-KAMERA-LED-FACE",
-    "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
-    "price": {
-      "amount": 11999,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/vehicles/21791195488121434/1.webp",
-        "alt": "Skoda Karoq 1.6 TDI-DSG-KAMERA-LED-FACE"
-      },
-      {
-        "url": "/assets/vehicles/21791195488121434/2.webp",
-        "alt": "Skoda Karoq 1.6 TDI-DSG-KAMERA-LED-FACE"
-      },
-      {
-        "url": "/assets/vehicles/21791195488121434/3.webp",
-        "alt": "Skoda Karoq 1.6 TDI-DSG-KAMERA-LED-FACE"
-      },
-      {
-        "url": "/assets/vehicles/21791195488121434/4.webp",
-        "alt": "Skoda Karoq 1.6 TDI-DSG-KAMERA-LED-FACE"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "spec": {
-      "make": "Skoda",
-      "model": "Karoq",
-      "year": 2020,
-      "bodyType": "suv",
-      "fuelType": "diesel",
-      "transmission": "automatic",
-      "mileageValue": 205000,
-      "mileageUnit": "km",
-      "enginePowerHp": 116
-    },
-    "seller": {
-      "id": "dealer-autoroad-varna",
-      "type": "dealer",
-      "displayName": "AUTOROAD",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-4b62d6973091f5ff/logo-on-light.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1007",
-    "slug": "skoda-karoq-2022-21778683919459620",
-    "category": "car",
-    "dealerOrgId": "dealer-autoroad-varna",
-    "status": "active",
-    "title": "Skoda Karoq 2.0 TDI -AVTOMAT-4x4-KEYLESS-DISTRONIK-DIGITAL",
-    "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
-    "price": {
-      "amount": 14500,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/vehicles/21778683919459620/1.webp",
-        "alt": "Skoda Karoq 2.0 TDI -AVTOMAT-4x4-KEYLESS-DISTRONIK-DIGITAL"
-      },
-      {
-        "url": "/assets/vehicles/21778683919459620/2.webp",
-        "alt": "Skoda Karoq 2.0 TDI -AVTOMAT-4x4-KEYLESS-DISTRONIK-DIGITAL"
-      },
-      {
-        "url": "/assets/vehicles/21778683919459620/3.webp",
-        "alt": "Skoda Karoq 2.0 TDI -AVTOMAT-4x4-KEYLESS-DISTRONIK-DIGITAL"
-      },
-      {
-        "url": "/assets/vehicles/21778683919459620/4.webp",
-        "alt": "Skoda Karoq 2.0 TDI -AVTOMAT-4x4-KEYLESS-DISTRONIK-DIGITAL"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "spec": {
-      "make": "Skoda",
-      "model": "Karoq",
-      "year": 2022,
-      "bodyType": "suv",
-      "fuelType": "diesel",
-      "transmission": "automatic",
-      "mileageValue": 163000,
-      "mileageUnit": "km",
-      "enginePowerHp": 150
-    },
-    "seller": {
-      "id": "dealer-autoroad-varna",
-      "type": "dealer",
-      "displayName": "AUTOROAD",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-4b62d6973091f5ff/logo-on-light.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1008",
-    "slug": "mercedes-benz-cla-200-2022-11785948289956075",
-    "category": "car",
-    "dealerOrgId": "dealer-autoroad-varna",
-    "status": "active",
-    "title": "Mercedes-Benz CLA 200 AMG-PANORAM-PODGREV-AMBIENT-MEMORI",
-    "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
-    "price": {
-      "amount": 25500,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/vehicles/11785948289956075/1.webp",
-        "alt": "Mercedes-Benz CLA 200 AMG-PANORAM-PODGREV-AMBIENT-MEMORI"
-      },
-      {
-        "url": "/assets/vehicles/11785948289956075/2.webp",
-        "alt": "Mercedes-Benz CLA 200 AMG-PANORAM-PODGREV-AMBIENT-MEMORI"
-      },
-      {
-        "url": "/assets/vehicles/11785948289956075/3.webp",
-        "alt": "Mercedes-Benz CLA 200 AMG-PANORAM-PODGREV-AMBIENT-MEMORI"
-      },
-      {
-        "url": "/assets/vehicles/11785948289956075/4.webp",
-        "alt": "Mercedes-Benz CLA 200 AMG-PANORAM-PODGREV-AMBIENT-MEMORI"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "spec": {
-      "make": "Mercedes-Benz",
-      "model": "CLA 200",
-      "year": 2022,
-      "bodyType": "wagon",
-      "fuelType": "diesel",
-      "transmission": "automatic",
-      "mileageValue": 170000,
-      "mileageUnit": "km",
-      "enginePowerHp": 150
-    },
-    "seller": {
-      "id": "dealer-autoroad-varna",
-      "type": "dealer",
-      "displayName": "AUTOROAD",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-4b62d6973091f5ff/logo-on-light.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1009",
-    "slug": "audi-q4-2022-21781865867073187",
-    "category": "car",
-    "dealerOrgId": "dealer-autoroad-varna",
-    "status": "active",
-    "title": "Audi Q4 SPORTBACK E-TRON 82KWH 40 S LINE-PANORAMA-AMBIENT",
-    "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
-    "price": {
-      "amount": 29999,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/vehicles/21781865867073187/1.webp",
-        "alt": "Audi Q4 SPORTBACK E-TRON 82KWH 40 S LINE-PANORAMA-AMBIENT"
-      },
-      {
-        "url": "/assets/vehicles/21781865867073187/2.webp",
-        "alt": "Audi Q4 SPORTBACK E-TRON 82KWH 40 S LINE-PANORAMA-AMBIENT"
-      },
-      {
-        "url": "/assets/vehicles/21781865867073187/3.webp",
-        "alt": "Audi Q4 SPORTBACK E-TRON 82KWH 40 S LINE-PANORAMA-AMBIENT"
-      },
-      {
-        "url": "/assets/vehicles/21781865867073187/4.webp",
-        "alt": "Audi Q4 SPORTBACK E-TRON 82KWH 40 S LINE-PANORAMA-AMBIENT"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "spec": {
-      "make": "Audi",
-      "model": "Q4",
-      "year": 2022,
-      "bodyType": "suv",
-      "fuelType": "electric",
-      "transmission": "automatic",
-      "mileageValue": 128000,
-      "mileageUnit": "km",
-      "enginePowerHp": 204
-    },
-    "seller": {
-      "id": "dealer-autoroad-varna",
-      "type": "dealer",
-      "displayName": "AUTOROAD",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-4b62d6973091f5ff/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-d83e7e609c001f98/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false

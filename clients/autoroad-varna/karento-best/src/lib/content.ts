@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "AUTOROAD",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-4b62d6973091f5ff/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-4b62d6973091f5ff/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-4b62d6973091f5ff/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-d83e7e609c001f98/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-d83e7e609c001f98/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-d83e7e609c001f98/logo-on-dark.webp",
     "alt": "AUTOROAD",
-    "favicon": "/dealer-brand/app-icon.png",
+    "favicon": "/dealer-brand/v2-d83e7e609c001f98/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

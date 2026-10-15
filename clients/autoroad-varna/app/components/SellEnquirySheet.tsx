@@ -31,7 +31,7 @@ export default function SellEnquirySheet({car, onCarChange, intent, onIntentChan
   return intent ? <>
     <div {...stylex.props(s.backdrop)} onMouseDown={event => event.target === event.currentTarget && close()}>
       <section ref={panel} tabIndex={-1} role="dialog" aria-modal="true" aria-labelledby="sell-enquiry-title" {...stylex.props(s.sheet)}>
-        <header {...stylex.props(s.header)}><div><p {...stylex.props(s.eyebrow, t.caption)}>{dealer.name}</p><h2 id="sell-enquiry-title" {...stylex.props(t.heading)}>{tx('Your car')}</h2></div><button type="button" aria-label={tx('Close car details')} onClick={close} {...stylex.props(s.close)}><X size={22} aria-hidden="true"/></button></header>
+        <header {...stylex.props(s.header)}><div {...stylex.props(s.heading)}><p {...stylex.props(s.eyebrow, t.caption)}>{dealer.name}</p><h2 id="sell-enquiry-title" {...stylex.props(t.heading, s.title)}>{tx('Your car')}</h2></div><button type="button" aria-label={tx('Close car details')} onClick={close} {...stylex.props(s.close)}><X size={22} aria-hidden="true"/></button></header>
         <div role="group" aria-label={tx('Selling options')} {...stylex.props(s.intent)}>
           {(['sale', 'exchange'] as const).map(option => <button key={option} type="button" aria-pressed={intent === option} onClick={() => onIntentChange(option)} {...stylex.props(s.choice, t.control, intent === option && s.selected)}>{tx(option === 'sale' ? 'Sell' : 'Exchange')}</button>)}
         </div>
@@ -55,9 +55,11 @@ export default function SellEnquirySheet({car, onCarChange, intent, onIntentChan
 const s = stylex.create({
   backdrop: {position: 'fixed', inset: 0, zIndex: 240, display: 'flex', alignItems: {[media.mobile]: 'flex-end', default: 'center'}, justifyContent: 'center', padding: {[media.mobile]: 0, default: 24}, backgroundColor: 'rgba(0,0,0,.48)'},
   sheet: {width: '100%', maxWidth: 560, maxHeight: '92dvh', overflowY: 'auto', padding: {[media.mobile]: '20px 20px calc(24px + env(safe-area-inset-bottom))', default: 28}, color: $.ink, backgroundColor: '#fff', borderRadius: 24, outlineStyle: 'none'},
-  header: {display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12},
-  eyebrow: {marginBottom: 4, color: $.muted},
-  close: {display: 'grid', placeItems: 'center', flexShrink: 0, width: 44, height: 44, padding: 0, borderWidth: 0, borderRadius: '50%', color: $.ink, backgroundColor: '#f4f4f5', cursor: 'pointer'},
+  header: {display: {[media.mobile]: 'grid', default: 'flex'}, gridTemplateColumns: '44px minmax(0,1fr) 44px', alignItems: 'center', justifyContent: 'space-between', gap: {[media.mobile]: 8, default: 12}},
+  heading: {minWidth: 0, gridColumn: {[media.mobile]: 2, default: 'auto'}, textAlign: {[media.mobile]: 'center', default: 'left'}},
+  title: {whiteSpace: {[media.mobile]: 'nowrap', default: 'normal'}, overflow: {[media.mobile]: 'hidden', default: 'visible'}, textOverflow: {[media.mobile]: 'ellipsis', default: 'clip'}},
+  eyebrow: {display: {[media.mobile]: 'none', default: 'block'}, marginBottom: 4, color: $.muted},
+  close: {display: 'grid', placeItems: 'center', gridColumn: {[media.mobile]: 3, default: 'auto'}, flexShrink: 0, width: 44, height: 44, padding: 0, borderWidth: 0, borderRadius: '50%', color: $.ink, backgroundColor: '#f4f4f5', cursor: 'pointer'},
   intent: {display: 'flex', gap: 8, marginTop: 20},
   choice: {flex: '1 1 0', minWidth: 0, minHeight: 44, padding: '10px 12px', borderWidth: 0, borderRadius: 30, color: $.ink, backgroundColor: '#f4f4f5', cursor: 'pointer'},
   selected: {color: '#fff', backgroundColor: '#262629'},

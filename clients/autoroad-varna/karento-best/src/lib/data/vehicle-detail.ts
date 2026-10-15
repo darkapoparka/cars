@@ -118,6 +118,12 @@ export const referenceSpecifications: readonly DetailSpecification[] = [
     "valueKey": "fuel.diesel"
   },
   {
+    "id": "year",
+    "icon": "/assets/imgs/template/icons/calendar.svg",
+    "value": "2021",
+    "labelKey": "vehicle.field.year"
+  },
+  {
     "id": "lit",
     "icon": "/assets/imgs/page/car/lit.svg",
     "value": "130 hp",
@@ -149,7 +155,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "AUTOROAD",
   "location": "бул. Трети Март 22 Б, Варна, България",
-  "avatar": "/dealer-brand/v2-4b62d6973091f5ff/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-d83e7e609c001f98/logo-on-light.webp",
   "mobile": "+359899230001",
   "email": "dragotd@gmail.com",
   "whatsapp": "",

@@ -1,200 +1,172 @@
 import type { DealerInventoryCopy } from "../lead-site";
-/** Reviewed text for the existing sample stock only. */
+/** Dealer-owned display copy from the exact personalized listing set. */
 export const inventoryCopy = {
-  "bmw-x5-m50d-sofia-2020": {
-    sourceDescription:
-      "Примерна обява за BMW X5 M50d с 360 камери, панорама, HUD и обдухване. Снимката е илюстративна; наличност и условия се потвърждават с автокъщата.",
-    bg: {
-      description:
-        "Примерна обява за BMW X5 M50d с 360 камери, панорама, HUD и обдухване. Снимката е илюстративна; наличност и условия се потвърждават с автокъщата.",
-      imageAlts: ["Черен BMW X5 SUV"],
+  "peugeot-5008-2021-11764083375105654": {
+    "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+    "en": {
+      "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
+      "imageAlts": [
+        "Peugeot 5008 1.5 HDI -LED-KEYLESS-DISTRONIK-DIGITAL-LANE ASSIST",
+        "Peugeot 5008 1.5 HDI -LED-KEYLESS-DISTRONIK-DIGITAL-LANE ASSIST",
+        "Peugeot 5008 1.5 HDI -LED-KEYLESS-DISTRONIK-DIGITAL-LANE ASSIST",
+        "Peugeot 5008 1.5 HDI -LED-KEYLESS-DISTRONIK-DIGITAL-LANE ASSIST"
+      ]
     },
-    en: {
-      description:
-        "Sample listing for a BMW X5 M50d with 360-degree cameras, panoramic roof, head-up display and ventilated seats. The image is illustrative; availability and terms must be confirmed with the dealership.",
-      imageAlts: ["Black BMW X5 SUV"],
-    },
+    "bg": {
+      "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "imageAlts": [
+        "Peugeot 5008 1.5 HDI -LED-KEYLESS-DISTRONIK-DIGITAL-LANE ASSIST",
+        "Peugeot 5008 1.5 HDI -LED-KEYLESS-DISTRONIK-DIGITAL-LANE ASSIST",
+        "Peugeot 5008 1.5 HDI -LED-KEYLESS-DISTRONIK-DIGITAL-LANE ASSIST",
+        "Peugeot 5008 1.5 HDI -LED-KEYLESS-DISTRONIK-DIGITAL-LANE ASSIST"
+      ]
+    }
   },
-  "mercedes-benz-gls-400d-4matic-amg-sofia-2021": {
-    sourceDescription:
-      "GLS 400d 4MATIC AMG Line с Burmester и панорама. Голям семеен SUV от AUTOROAD - наличен за оглед в Варна.",
-    bg: {
-      description:
-        "GLS 400d 4MATIC AMG Line с Burmester и панорама. Голям семеен SUV от {shortName} - наличен за оглед в {city}.",
-      imageAlts: ["Mercedes-Benz GLS 4MATIC AMG SUV"],
+  "renault-megane-2023-11791216679127136": {
+    "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+    "en": {
+      "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
+      "imageAlts": [
+        "Renault Megane E-TECH-EV 60-220K.S. Equilibre optimum charge",
+        "Renault Megane E-TECH-EV 60-220K.S. Equilibre optimum charge",
+        "Renault Megane E-TECH-EV 60-220K.S. Equilibre optimum charge",
+        "Renault Megane E-TECH-EV 60-220K.S. Equilibre optimum charge"
+      ]
     },
-    en: {
-      description:
-        "GLS 400d 4MATIC AMG Line with Burmester audio and a panoramic roof. A large family SUV from {shortName}, available to view in {city}.",
-      imageAlts: ["Mercedes-Benz GLS 4MATIC AMG SUV"],
-    },
+    "bg": {
+      "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "imageAlts": [
+        "Renault Megane E-TECH-EV 60-220K.S. Equilibre optimum charge",
+        "Renault Megane E-TECH-EV 60-220K.S. Equilibre optimum charge",
+        "Renault Megane E-TECH-EV 60-220K.S. Equilibre optimum charge",
+        "Renault Megane E-TECH-EV 60-220K.S. Equilibre optimum charge"
+      ]
+    }
   },
-  "bmw-750e-xdrive-m-sport-sofia-2024": {
-    sourceDescription:
-      "Очакван внос: 7 Series plug-in hybrid с M Sport. Нисък пробег - AUTOROAD организира доставка и оглед в Варна.",
-    bg: {
-      description:
-        "Очакван внос: 7 Series plug-in hybrid с M Sport. Нисък пробег - {shortName} организира доставка и оглед в {city}.",
-      imageAlts: ["BMW 7 Series"],
+  "skoda-karoq-2020-21791195488121434": {
+    "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+    "en": {
+      "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
+      "imageAlts": [
+        "Skoda Karoq 1.6 TDI-DSG-KAMERA-LED-FACE",
+        "Skoda Karoq 1.6 TDI-DSG-KAMERA-LED-FACE",
+        "Skoda Karoq 1.6 TDI-DSG-KAMERA-LED-FACE",
+        "Skoda Karoq 1.6 TDI-DSG-KAMERA-LED-FACE"
+      ]
     },
-    en: {
-      description:
-        "Expected import: 7 Series plug-in hybrid with M Sport. Low mileage; {shortName} arranges delivery and viewing in {city}.",
-      imageAlts: ["BMW 7 Series"],
-    },
+    "bg": {
+      "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "imageAlts": [
+        "Skoda Karoq 1.6 TDI-DSG-KAMERA-LED-FACE",
+        "Skoda Karoq 1.6 TDI-DSG-KAMERA-LED-FACE",
+        "Skoda Karoq 1.6 TDI-DSG-KAMERA-LED-FACE",
+        "Skoda Karoq 1.6 TDI-DSG-KAMERA-LED-FACE"
+      ]
+    }
   },
-  "mercedes-benz-e-63-s-amg-sofia-2021": {
-    sourceDescription:
-      "E 63 S AMG facelift с 360, HUD и Burmester. Спортна лимузина от AUTOROAD.",
-    bg: {
-      description:
-        "E 63 S AMG facelift с 360, HUD и Burmester. Спортна лимузина от {dealer}.",
-      imageAlts: ["Mercedes-Benz E-Class седан"],
+  "skoda-karoq-2022-21778683919459620": {
+    "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+    "en": {
+      "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
+      "imageAlts": [
+        "Skoda Karoq 2.0 TDI -AVTOMAT-4x4-KEYLESS-DISTRONIK-DIGITAL",
+        "Skoda Karoq 2.0 TDI -AVTOMAT-4x4-KEYLESS-DISTRONIK-DIGITAL",
+        "Skoda Karoq 2.0 TDI -AVTOMAT-4x4-KEYLESS-DISTRONIK-DIGITAL",
+        "Skoda Karoq 2.0 TDI -AVTOMAT-4x4-KEYLESS-DISTRONIK-DIGITAL"
+      ]
     },
-    en: {
-      description:
-        "Facelift E 63 S AMG with 360-degree cameras, head-up display and Burmester audio. A sports saloon from {dealer}.",
-      imageAlts: ["Mercedes-Benz E-Class saloon"],
-    },
+    "bg": {
+      "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "imageAlts": [
+        "Skoda Karoq 2.0 TDI -AVTOMAT-4x4-KEYLESS-DISTRONIK-DIGITAL",
+        "Skoda Karoq 2.0 TDI -AVTOMAT-4x4-KEYLESS-DISTRONIK-DIGITAL",
+        "Skoda Karoq 2.0 TDI -AVTOMAT-4x4-KEYLESS-DISTRONIK-DIGITAL",
+        "Skoda Karoq 2.0 TDI -AVTOMAT-4x4-KEYLESS-DISTRONIK-DIGITAL"
+      ]
+    }
   },
-  "mercedes-benz-cls-400d-4matic-sofia-2020": {
-    sourceDescription:
-      "CLS 400d 4MATIC AMG Line Designo с 360 камери. Елегантно купе-седан от AUTOROAD в Варна.",
-    bg: {
-      description:
-        "CLS 400d 4MATIC AMG Line Designo с 360 камери. Елегантно купе-седан от {shortName} в {city}.",
-      imageAlts: ["Mercedes CLS"],
+  "mercedes-benz-cla-200-2022-11785948289956075": {
+    "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+    "en": {
+      "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
+      "imageAlts": [
+        "Mercedes-Benz CLA 200 AMG-PANORAM-PODGREV-AMBIENT-MEMORI",
+        "Mercedes-Benz CLA 200 AMG-PANORAM-PODGREV-AMBIENT-MEMORI",
+        "Mercedes-Benz CLA 200 AMG-PANORAM-PODGREV-AMBIENT-MEMORI",
+        "Mercedes-Benz CLA 200 AMG-PANORAM-PODGREV-AMBIENT-MEMORI"
+      ]
     },
-    en: {
-      description:
-        "CLS 400d 4MATIC AMG Line Designo with 360-degree cameras. An elegant four-door coupe from {shortName} in {city}.",
-      imageAlts: ["Mercedes CLS"],
-    },
+    "bg": {
+      "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "imageAlts": [
+        "Mercedes-Benz CLA 200 AMG-PANORAM-PODGREV-AMBIENT-MEMORI",
+        "Mercedes-Benz CLA 200 AMG-PANORAM-PODGREV-AMBIENT-MEMORI",
+        "Mercedes-Benz CLA 200 AMG-PANORAM-PODGREV-AMBIENT-MEMORI",
+        "Mercedes-Benz CLA 200 AMG-PANORAM-PODGREV-AMBIENT-MEMORI"
+      ]
+    }
   },
-  "audi-q8-50-tdi-quattro-s-line-sofia-2021": {
-    sourceDescription:
-      "Очакван внос: Q8 50 TDI quattro S line Plus. Купе-SUV с quattro за клиенти на AUTOROAD.",
-    bg: {
-      description:
-        "Очакван внос: Q8 50 TDI quattro S line Plus. Купе-SUV с quattro за клиенти на {shortName}.",
-      imageAlts: ["Audi Q8"],
+  "audi-q4-2022-21781865867073187": {
+    "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+    "en": {
+      "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
+      "imageAlts": [
+        "Audi Q4 SPORTBACK E-TRON 82KWH 40 S LINE-PANORAMA-AMBIENT",
+        "Audi Q4 SPORTBACK E-TRON 82KWH 40 S LINE-PANORAMA-AMBIENT",
+        "Audi Q4 SPORTBACK E-TRON 82KWH 40 S LINE-PANORAMA-AMBIENT",
+        "Audi Q4 SPORTBACK E-TRON 82KWH 40 S LINE-PANORAMA-AMBIENT"
+      ]
     },
-    en: {
-      description:
-        "Expected import: Q8 50 TDI quattro S line Plus. A coupe-SUV with quattro for {shortName} customers.",
-      imageAlts: ["Audi Q8"],
-    },
+    "bg": {
+      "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "imageAlts": [
+        "Audi Q4 SPORTBACK E-TRON 82KWH 40 S LINE-PANORAMA-AMBIENT",
+        "Audi Q4 SPORTBACK E-TRON 82KWH 40 S LINE-PANORAMA-AMBIENT",
+        "Audi Q4 SPORTBACK E-TRON 82KWH 40 S LINE-PANORAMA-AMBIENT",
+        "Audi Q4 SPORTBACK E-TRON 82KWH 40 S LINE-PANORAMA-AMBIENT"
+      ]
+    }
   },
-  "mercedes-benz-gle-400d-coupe-sofia-2021": {
-    sourceDescription:
-      "GLE 400d Coupe 4MATIC AMG с 360 и Burmester. Наличен при AUTOROAD - Варна.",
-    bg: {
-      description:
-        "GLE 400d Coupe 4MATIC AMG с 360 и Burmester. Наличен при {dealer} - {city}.",
-      imageAlts: ["Черен Mercedes-Benz GLE SUV"],
+  "lotus-eletre-2024-11781957951294075": {
+    "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+    "en": {
+      "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
+      "imageAlts": [
+        "Lotus Eletre 112 KW-612 K.S.-AKEBONO EDITION",
+        "Lotus Eletre 112 KW-612 K.S.-AKEBONO EDITION",
+        "Lotus Eletre 112 KW-612 K.S.-AKEBONO EDITION",
+        "Lotus Eletre 112 KW-612 K.S.-AKEBONO EDITION"
+      ]
     },
-    en: {
-      description:
-        "GLE 400d Coupe 4MATIC AMG with 360-degree cameras and Burmester audio. Available from {dealer} in {city}.",
-      imageAlts: ["Black Mercedes-Benz GLE SUV"],
-    },
+    "bg": {
+      "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "imageAlts": [
+        "Lotus Eletre 112 KW-612 K.S.-AKEBONO EDITION",
+        "Lotus Eletre 112 KW-612 K.S.-AKEBONO EDITION",
+        "Lotus Eletre 112 KW-612 K.S.-AKEBONO EDITION",
+        "Lotus Eletre 112 KW-612 K.S.-AKEBONO EDITION"
+      ]
+    }
   },
-  "mercedes-benz-gle-53-amg-coupe-sofia-2022": {
-    sourceDescription:
-      "Очакван внос: GLE 53 AMG Coupe Night Pack. AUTOROAD предлага собствен лизинг след оглед.",
-    bg: {
-      description:
-        "Очакван внос: GLE 53 AMG Coupe Night Pack. {shortName} предлага собствен лизинг след оглед.",
-      imageAlts: ["Бял Mercedes-Benz GLE AMG SUV"],
+  "vw-id-4-2021-11789287072800457": {
+    "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+    "en": {
+      "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
+      "imageAlts": [
+        "VW ID.4 Pro-82kWh-AMBIENT LIGHT-LED-SOH-91.36%",
+        "VW ID.4 Pro-82kWh-AMBIENT LIGHT-LED-SOH-91.36%",
+        "VW ID.4 Pro-82kWh-AMBIENT LIGHT-LED-SOH-91.36%",
+        "VW ID.4 Pro-82kWh-AMBIENT LIGHT-LED-SOH-91.36%"
+      ]
     },
-    en: {
-      description:
-        "Expected import: GLE 53 AMG Coupe Night Pack. {shortName} offers in-house leasing after a viewing.",
-      imageAlts: ["White Mercedes-Benz GLE AMG SUV"],
-    },
-  },
-  "mercedes-benz-s-350d-long-amg-sofia-2019": {
-    sourceDescription:
-      "S 350d Long с S63 AMG оптика и пакет за шофьор. Представителна лимузина от AUTOROAD.",
-    bg: {
-      description:
-        "S 350d Long с S63 AMG оптика и пакет за шофьор. Представителна лимузина от {shortName}.",
-      imageAlts: ["Mercedes-Benz S-Class седан"],
-    },
-    en: {
-      description:
-        "S 350d Long with S63 AMG styling and a chauffeur package. An executive saloon from {shortName}.",
-      imageAlts: ["Mercedes-Benz S-Class saloon"],
-    },
-  },
-  "mercedes-benz-v-250d-vip-business-sofia-2018": {
-    sourceDescription:
-      "V 250d VIP Business с TV, обдухване и подгряване. Бизнес ван от AUTOROAD.",
-    bg: {
-      description:
-        "V 250d VIP Business с TV, обдухване и подгряване. Бизнес ван от {dealer}.",
-      imageAlts: ["V-Class ван"],
-    },
-    en: {
-      description:
-        "V 250d VIP Business with TV, ventilated and heated seats. A business van from {dealer}.",
-      imageAlts: ["V-Class van"],
-    },
-  },
-  "range-rover-sport-svr-sofia-2021": {
-    sourceDescription:
-      "Range Rover Sport SVR 600 к.с. с панорама, 360 и Meridian. Висок клас SUV от AUTOROAD.",
-    bg: {
-      description:
-        "Range Rover Sport SVR 600 к.с. с панорама, 360 и Meridian. Висок клас SUV от {shortName}.",
-      imageAlts: ["Range Rover Sport"],
-    },
-    en: {
-      description:
-        "Range Rover Sport SVR, 600 hp, with a panoramic roof, 360-degree cameras and Meridian audio. A premium SUV from {shortName}.",
-      imageAlts: ["Range Rover Sport"],
-    },
-  },
-  "bmw-430i-xdrive-gran-coupe-sofia-2023": {
-    sourceDescription:
-      "430i xDrive Gran Coupe M Sport с digital кокпит и Harman Kardon. AUTOROAD, Варна.",
-    bg: {
-      description:
-        "430i xDrive Gran Coupe M Sport с digital кокпит и Harman Kardon. {shortName}, {city}.",
-      imageAlts: ["BMW 4 Series"],
-    },
-    en: {
-      description:
-        "430i xDrive Gran Coupe M Sport with a digital cockpit and Harman Kardon audio. {shortName}, {city}.",
-      imageAlts: ["BMW 4 Series"],
-    },
-  },
-  "bmw-m4-competition-sofia-2021": {
-    sourceDescription:
-      "BMW M4 Competition с M пакет, спортен салон и digital кокпит. Купе от портфолиото на AUTOROAD.",
-    bg: {
-      description:
-        "BMW M4 Competition с M пакет, спортен салон и digital кокпит. Купе от портфолиото на {dealer}.",
-      imageAlts: ["Червено BMW M4 Competition пред модерен шоурум"],
-    },
-    en: {
-      description:
-        "BMW M4 Competition with M package, sports interior and digital cockpit. A coupe from the {dealer} collection.",
-      imageAlts: ["Red BMW M4 Competition in front of a modern showroom"],
-    },
-  },
-  "bmw-x5-xdrive40d-berlin-2022": {
-    sourceDescription:
-      "Крос-бордер демо наличност с оторизирани медии и право на доставка. Финалният транспорт, данъци и регистрация се уточняват с оферта от AUTOROAD.",
-    bg: {
-      description:
-        "Крос-бордер демо наличност с оторизирани медии и право на доставка. Финалният транспорт, данъци и регистрация се уточняват с оферта от {shortName}.",
-      imageAlts: ["Черен BMW X5 SUV в градска среда"],
-    },
-    en: {
-      description:
-        "Cross-border demo inventory with authorized images and delivery rights. Final transport, tax and registration costs are confirmed in a quote from {shortName}.",
-      imageAlts: ["Black BMW X5 SUV in an urban setting"],
-    },
-  },
+    "bg": {
+      "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "imageAlts": [
+        "VW ID.4 Pro-82kWh-AMBIENT LIGHT-LED-SOH-91.36%",
+        "VW ID.4 Pro-82kWh-AMBIENT LIGHT-LED-SOH-91.36%",
+        "VW ID.4 Pro-82kWh-AMBIENT LIGHT-LED-SOH-91.36%",
+        "VW ID.4 Pro-82kWh-AMBIENT LIGHT-LED-SOH-91.36%"
+      ]
+    }
+  }
 } satisfies DealerInventoryCopy;

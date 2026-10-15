@@ -23,13 +23,17 @@ export const dealerLocalizedText = {
     "city": "Varna",
     "addressLine": "Treti Mart 22 B",
     "address": "Treti Mart 22 B, Varna, Balgariya",
-    "appointment": "Viewings by appointment. Please call before visiting."
+    "appointment": "Viewings by appointment. Please call before visiting.",
+    "addressShort": "Treti Mart 22 B",
+    "appointmentShort": "Viewings by appointment. Please call before visiting."
   },
   "bg": {
     "city": "Варна",
     "addressLine": "бул. Трети Март 22 Б",
     "address": "бул. Трети Март 22 Б, Варна, България",
-    "appointment": "Понеделник–петък 09:00–17:00; събота 10:00–14:00; неделя почивен ден. Извън работно време — с предварителна уговорка."
+    "appointment": "Понеделник–петък 09:00–17:00; събота 10:00–14:00; неделя почивен ден. Извън работно време — с предварителна уговорка.",
+    "addressShort": "бул. Трети Март 22 Б",
+    "appointmentShort": "Понеделник–петък 09:00–17:00; събота 10:00–14:00; неделя почивен ден. Извън работно време — с предварителна уговорка."
   }
 } as const;
 

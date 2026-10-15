@@ -25,19 +25,19 @@
   },
   {
     "key": "dealer.addressShort",
-    "source": "ул. „Атанас Манчев“ 18, София",
-    "en": "18 Atanas Manchev St, Sofia",
-    "bg": "ул. „Атанас Манчев“ 18, София",
+    "source": "бул. Трети Март 22 Б",
+    "en": "Treti Mart 22 B",
+    "bg": "бул. Трети Март 22 Б",
     "disposition": "translate",
-    "notes": "Owner-requested compact mobile street, number and city. Full address and navigation destinations are retained. src/lib/config/locale.ts"
+    "notes": "Native short-address consumer uses the recorded dealer address line."
   },
   {
     "key": "dealer.appointmentShort",
-    "source": "С предварителна уговорка",
-    "en": "By appointment",
-    "bg": "С предварителна уговорка",
+    "source": "Понеделник–петък 09:00–17:00; събота 10:00–14:00; неделя почивен ден. Извън работно време — с предварителна уговорка.",
+    "en": "Viewings by appointment. Please call before visiting.",
+    "bg": "Понеделник–петък 09:00–17:00; събота 10:00–14:00; неделя почивен ден. Извън работно време — с предварителна уговорка.",
     "disposition": "translate",
-    "notes": "Compact mobile visit guidance below the Visits label; same appointment requirement. src/lib/config/locale.ts"
+    "notes": "Native short-hours consumer uses the same factual appointment guidance."
   },
   {
     "key": "m_159520cd7f28",

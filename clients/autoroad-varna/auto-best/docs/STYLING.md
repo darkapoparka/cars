@@ -2,13 +2,69 @@
 
 Auto Best combines an image-led automotive layout, Inter typography, rounded surfaces and direct call-to-action controls. This document describes the existing design and where its styling lives. It is not a proposal for a new theme.
 
+From 992px, Inventory's Filter button opens `DesktopListingFilters.svelte`. Its
+1040px centered frame, grouped left navigation, white editor pane and fixed
+footer follow the App template's desktop overlay. Make cards reuse Auto Best's
+reviewed logos and stock counts; their model action browses the retained family
+picker. Section resets, removable selections and live results belong to a local
+draft until Show submits the canonical GET filters. Close, Escape and backdrop
+dismissal discard that draft. Home, Inventory's quick pills and mobile retain
+their existing editors. `template.desktopInventorySearch` defaults to `menu`;
+a dealer copy can select `filters` to open the same modal's Search pane from
+Inventory's search entry. See [the matched comparison](desktop-filter-modal-2026-10-09/README.md).
+
+The [desktop polish pass](desktop-filter-polish-2026-10-09/README.md) keeps that
+composition and gives the modal 40px navigation rows, 24px pane headings and
+48px number fields. Year and price bounds align to the editor gutter, with
+compact preset pills. Selected criteria wrap in a bounded summary above the
+fixed actions. Outside the modal, applied criteria occupy a 44px results toolbar
+on the left, with separate Filter and Sort controls on the right. Its overflow
+review menu exposes the full list. Applied criteria no longer add height to the
+desktop discovery box or hero; mobile keeps its existing chips and controls.
+The shared desktop model-family editor also keeps the same soft 44px choice
+rows inside a family and in search results. Selected rows use an outline and the
+parent family indicates retained selections. Catalogue values and counts stay
+unchanged.
+
 Overlay footer actions use the shared `dn-overlay-footer`/`dn-mobile-overlay-footer`
 roles in `base.css`: by default 14px text, a 44px target and a 36px visible pill. Primary
-actions follow the existing surface tokens and use intrinsic width; secondary
-actions have a pale grey surface and muted text. Search editors retain 16px text
+actions follow the existing surface tokens and use intrinsic width by default.
+Mobile Home and inventory filter confirmations fill the remaining footer width
+beside the compact Clear action. Secondary actions have a pale grey surface and
+muted text. Search editors retain 16px text
 entry and their existing row sizing. Close controls keep their 44px targets.
 The compact localized labels are Clear/Apply and Изчисти/Приложи; result actions
 use Show (count)/Покажи (count). Home retains its Save (count) label.
+
+On mobile, Home search opens the full-screen editor, with its text field at the
+top, separate Make and Model entries and a footer outside the scrolling choices.
+It focuses the text field during the opening tap. The existing viewport attachment
+keeps the editor inside the visible area when the keyboard opens; only the middle
+content scrolls. Filter fields, choice feedback and action buttons retain the
+template's shared pill shape.
+Home and inventory overviews use pale grey entry pills. Their individual choices
+sit on white, with a grey selected pill and leading black selection indicators.
+Overlay search fields use a white fill and a quiet inset outline to distinguish
+typing from both the overview buttons and the plain choices, while preserving
+their shared pill shape and height.
+The existing darker focus indicator remains visible when editing.
+The mobile shell suppresses the browser's native tap highlight, including inherited
+container paint, while retaining the existing `:focus-visible` keyboard indicators.
+
+The [mobile comparison and checks](mobile-filter-reference-polish-2026-10-09/README.md)
+record the current Home and inventory treatment against the preceding iteration.
+
+The mobile menu places compact Banners and Language actions side by side below
+its primary navigation. Their quiet outlines and 14px action text retain 44px
+targets. Call us / Обадете се stays single-line beside Location, with full
+accessible names. The logo remains centered. Its 16px close icon sits directly
+on white, like the other mobile overlay close controls, and retains its 44px
+target and keyboard focus indicator. Navigation rows stay borderless on white;
+only the current page has the neutral grey surface and a semibold label. Row
+hover feedback requires a fine pointer with hover, so touch devices do not retain
+an unrelated grey row. The top handle is decorative; dragging does not dismiss
+the menu. See the [current-page menu checks](mobile-menu-state-2026-10-09/README.md).
+See the [menu comparison](mobile-menu-utilities-2026-10-09/README.md).
 
 The [7 October desktop search update](DESKTOP-MODEL-PICKER-2026-10-07.md) specifies a 720px Make logo grid, 640px Model panels, 480px companion panels, search in the header row and live Home counts from 992px.
 
@@ -37,33 +93,35 @@ vehicle pairs through `CampaignVehiclePair.svelte`. `DesktopHeroScene.svelte`
 reuses `leadSite.artwork.discoveryBackground` behind these three pairs and disables
 their native dot and red-curve decoration through the existing `decoration` prop.
 It uses the same graphite artwork as the four Home section headers from 992px.
-About and Contact use the
-approved larger car scenes through `DesktopHeroScene.svelte`, giving their simpler
-introductions more presence. Blog keeps its original vehicle pair over the shared background. All use the same
-black palette and subtle halftone dots. The About and Contact/service scenes omit
-decorative red curves; their company page labels use plain text without a red dash.
+About and general Contact use `leadSite.artwork.companyHero: 'circuit'` by default.
+`company-hero.css` reuses the configured circuit banner's photographic asphalt and
+mirrors its kerb onto the opposite edge; it adds no circuit-map outline.
+Their company page labels use plain text without a red dash.
+The retained `?companyHero=studio` review links restore their car/showroom scenes
+in development or preview mode. Published sites use the configured artwork.
+Blog keeps its original vehicle pair over the shared graphite background.
 The warm About photograph and
 the distorted Blog/Contact props are retained as provenance only. White headings,
 red primary actions and white search panels share one
 treatment. Each scene is selected explicitly from `lead-site.ts`; Contact service
 entries use the Contact scene. All desktop
-route heroes share a 540px frame. Home, Inventory and Blog omit their supplementary
-desktop line and position the title 28px above the unchanged search panel at 340px.
-Below 1200px, those titles use the 32px compact section role to clear the side cars;
-wider desktop uses the 48px hero role. Service introductions remain at 200px.
-About and general
-Contact start their page label at the same 200px anchor, followed by a stronger
-two-line introduction. About keeps the complete introductory phrase on the first
-line and the configured business name on the next; Bulgarian reads
-“Запознайте се с” / “Auto Best”. Contact keeps its own natural phrase lengths;
-the two headings do not need equal line widths. Their headlines use the 56px role,
-or 48px below 1200px.
-About keeps its plain location subtitle 8px below the title. Actions flow 24px
-below the copy, followed by any configured social profiles. The shared frame
-stays 540px with the default content; enlarged type or longer business names can
-increase its height so content and actions remain readable. Enlarged type also
-increases the company introduction's clearance below the header.
-Home retains the shared hero anchor and center lane, with a single white,
+route heroes use a shared 448px frame and the configured charcoal surface.
+Home, Inventory, Blog and service entries omit redundant supplementary copy.
+Their search/form panels start at the shared 280px anchor, with 28px between the
+headline and panel. Home, Inventory and Blog use the 32px compact heading role
+below 1200px and the 48px hero role above it.
+From 1200px, Home, Inventory and Blog share a tyre baseline 150px below the desktop search anchor through `--dn-discovery-art-ground-offset`. This keeps their original artwork at one ground line beside both search-panel heights. Vehicle width normalization and natural proportions stay unchanged; the absolute artwork does not affect the hero, heading, panel or following content positions. Compact desktop retains its existing above-panel framing.
+About and general Contact keep 48px company headlines across desktop, with
+their existing phrases flowing horizontally where space allows. Their small
+page labels sit above the headline. The complete company copy/action/location
+group is centered in the available banner area below the shared header clearance.
+Its actions keep 28px spacing below the headline, followed by a quieter location
+row with 24px spacing and any configured social profiles. The layout grows
+naturally for enlarged text or longer business names. The circuit artwork uses
+CSS backgrounds inside the reserved hero frame, so loading it cannot move the copy.
+The retained studio comparison keeps its 16px floor inset.
+Both company pages start their first white content panel 32px below the hero.
+Home retains the shared center lane, with a single white,
 rounded browsing bar through `HomeBrowseBox.svelte` from 768px. Make, Model,
 Body style and Budget share one white surface with subtle vertical dividers,
 a small permanent label, a 17px value and a 56px circular search action.
@@ -181,13 +239,19 @@ without JavaScript or when the provider is unavailable. Mobile uses its own
 intro and contact cards. General Contact places the desktop visit panel below
 the complete hero, with a 32px gap. About and Contact share one white panel with
 32px padding and a compact header above one full-width, inset map. The visit title
-and address sit on the left without an appointment sentence; Call and
+and short localized address share one 44px row, separated by a quiet divider.
+The address uses the quieter 14px metadata role, with its full version in the
+hover title and map. Call and
 Directions sit side by side on the right. The header wraps into two rows when
 enlarged text needs more room. The address label remains available to screen
 readers without repeating it visually. The map reserves 300px before hydration,
 includes the provider's fullscreen permission and has a plain address fallback
 without JavaScript. Directions remains available in the header; there is no
 duplicate map action row underneath the iframe.
+
+The desktop Team panel uses the same 24px heading role and 44px header row,
+with its Contact us action on the right. It has one title without a subtitle.
+Member names, roles and the existing bottom-right card actions retain their layout.
 
 About's service panel uses the configured transparent light-surface logo above
 its introduction and service cards on desktop. The image replaces the visible
@@ -238,17 +302,18 @@ clearance above and below and sits close to the field's right edge; its label,
 live count and arrow retain their existing alignment and submission behavior.
 
 Below 992px, About and general Contact use an overlay header on their dark hero,
-with an inset white card overlapping the banner by 52px, as on Home. About uses
+with an inset white card overlapping the circuit banner by the shared 36px entry
+overlap. About uses
 `EntryCard.svelte` for its only visible page heading, a service-section shortcut,
 inventory action and configured social profiles. The service link uses Home's
 pale entry-field treatment and a downward arrow; it scrolls to the four existing
 service cards. Phone and location remain in the header and contact/map sections.
 Empty profile URLs omit the corresponding social icon.
-Its hero reuses the configured dark showroom illustration. Below 768px, a 244px
-banner places the card at Home's 192px anchor, with the artwork capped at 320px
-to keep the showroom visible above it. At 768–991px the banner follows the image's
-natural height. The artwork is requested only below 992px; the desktop hero
-copy stays in its separate layout. Service cards align their icon and title in
+Both company circuit heroes reuse `--dn-mobile-entry-hero-height` (204px),
+placing their cards at the same 168px anchor as Home on phones. Their kerbs use
+the existing mobile circuit asset; their desktop hero copy stays in its separate
+layout. The studio review retains the former showroom artwork and 52px overlap.
+Unused studio images are omitted from the circuit hero markup. Service cards align their icon and title in
 one row, then give the description the full width below that row. Contact groups its
 phone and directions actions before address and visit details. Its actions stack
 when their container is narrower than 18rem, including enlarged text. Blog's
@@ -367,7 +432,11 @@ Body and entry roles use the interpolated weight 450, navigation/actions use med
 
 Home, Sell and Import use `ui/entry/EntryCard.svelte`, `EntrySegments.svelte`, `EntryInput.svelte` and `EntryAction.svelte`. The card owns padding, spacing, border, radius and shadow; routes own placement and workflow content. Use these components instead of redefining controls in route CSS. Native inputs preserve validation, binding and focus. Sale starts with vehicle details and offers a listing/VIN alternative; Import accepts a listing link or search criteria. `EnquiryEntryField.svelte` remains the editor used by the legacy standalone enquiry presentation.
 
-Mobile Home/Sell/Import entry segments use a centered `min(100%, 15rem)` shell, with the wider field beneath it. The shell and both options retain 44px targets. A shared 2px vertical inset paints the grey surround at 40px; transparent 4px vertical and 2px horizontal option borders inset the selected surface to 36px. Tab and CTA labels use the shared `--dn-tab-font` and `--dn-control-font` roles (16px/500). Use short translated labels that stay on one line at 320px. `EntryCard` owns the mobile CTA width through `--dn-entry-action-width: min(10rem, 100%)` (160px at the default root size), while desktop retains the existing 13rem role. Entry CTAs have a 44px interaction target and a 40px painted pill. Entry fields retain 18px/450 text and 48px height. `--dn-entry-card-padding` and `--dn-entry-stack-gap` both reference the 16px spacing token.
+Mobile Home/Sell/Import entry segments use a centered `min(100%, 15rem)` shell, with the wider field beneath it. The shell and both options retain 44px targets. A shared 2px vertical inset paints the grey surround at 40px; transparent 4px vertical and 2px horizontal option borders inset the selected surface to 36px. Tab and CTA labels use the shared `--dn-tab-font` and `--dn-control-font` roles (16px/500). Labels stay on one line and may ellipsize with enlarged text; their complete accessible names remain available. `EntryCard` owns the mobile CTA width through `--dn-entry-action-width: min(10rem, 100%)` (160px at the default root size), while desktop retains the existing 13rem role. Entry CTAs have a 44px interaction target and a 40px painted pill. Entry fields retain 18px/450 text and 48px height. `--dn-entry-card-padding` and `--dn-entry-stack-gap` both reference the 16px spacing token. Mobile service actions use Request / Заяви with the complete import or valuation request as their accessible name; Home Buy retains View all. These actions reuse `EntryAction` and the pinned Fluent Regular arrow on mobile.
+
+The root keeps `scrollbar-gutter: stable` on desktop. Below 768px it uses `auto` so a classic-scrollbar reserve does not narrow mobile cards and full-width dialogs. Overlay scrollbars occupy no gutter.
+
+Below 768px, Home, Sell and Import share `--dn-mobile-entry-hero-height` (204px) and `--dn-mobile-entry-overlap` (36px) from `tokens.css`. Their artwork uses the shared 112px frame. The common entry geometry keeps the boxes at the same vertical position when navigating between the three routes. These are the template defaults; the explicit `?hero=current` comparison retains the preceding 252px mobile and 492px desktop treatment.
 
 Body copy is 16px with 1.5 leading; long editorial prose uses 1.65. Labels, supporting metadata and helper text use the 14px meta role. The compact five-item mobile dock and inventory badges use the 12px caption role. Nonessential video duration text may use the 12px caption role. Mobile section headings use 24px and service titles use 18px. Make controls and cards reflow around the type instead of adding smaller local overrides. Include `textarea` in native font inheritance.
 
@@ -396,7 +465,7 @@ Sell/Trade-in accepts an optional listing URL or 17-character VIN before opening
 | `--dn-mobile-nav-height` | 64px |
 | `--dn-mobile-detail-bar-height` | 60px |
 
-The shared spacing scale runs from 2px through 32px and supplies repeated relationships such as banner padding, overlap and control insets. Corner declarations use radius tokens, including intentional desktop geometry and one-pixel border insets; spacing tokens must never supply a radius. Below 768px, content, service, entry, discovery and showroom card roles all resolve to the shared 12px mobile card radius, matching the All services banner. Inputs retain their control or pill role, small media their media role, and bottom sheets their 24px top corners. Desktop and tablet card roles preserve their reviewed values. `check:tokens` rejects raw corner values and spacing-token misuse. The mobile root uses `scrollbar-gutter: auto` to avoid reserving a classic-scrollbar strip beside full-width cards and dialogs; desktop retains its stable gutter.
+The shared spacing scale runs from 2px through 32px and supplies repeated relationships such as banner padding, overlap and control insets. Corner declarations use radius tokens, including intentional desktop geometry and one-pixel border insets; spacing tokens must never supply a radius. Below 768px, content, service, entry, discovery and showroom card roles all resolve to the shared 12px mobile card radius, matching the All services banner. Inputs retain their control or pill role, small media their media role, and bottom sheets their 24px top corners. Desktop and tablet card roles preserve their reviewed values. `check:tokens` rejects raw corner values and spacing-token misuse.
 
 Outer card containers use `--dn-radius-card` or their semantic card-family role. The mobile shell redirects those roles to `--dn-radius-mobile-card`, making that token the single size control for mobile cards. Its current default is 12px; [the applied 12px result](mobile-card-radius-12-2026-10-09/README.md) records the rendered result and preserved desktop sizes. Mobile vehicle facts retain 6px corners and inset car photographs retain 10px corners. Header/dock shapes, controls and drawer corners use their separate roles. Card media with a one-pixel border inset follow the outer card through `--dn-radius-card-inset`. Banner-picker tiles, selected-vehicle summaries, enquiry reviews, completion and feedback panels also use the mobile card role. Inset Contact, upload and review vehicle photos use the 10px `--dn-radius-sm` role below 768px; their existing desktop radii are retained. The [final whole-template rounding audit](mobile-radius-final-audit-2026-10-09/README.md) records the missed states, matched screenshots and desktop comparisons.
 
@@ -419,7 +488,7 @@ Keep `scrollbar-gutter: stable` on the root element. Classic desktop scrollbars 
 
 Additional 359/374/380px and 1199px rules handle particular text, grid and control constraints. These are local breakpoints, not separate site themes. Safe-area insets supplement the fixed mobile navigation and sheet footers. The normal dock and vehicle-detail action bar are separate layouts with different height tokens.
 
-The mobile dock is a flat white bar spanning the viewport. `BottomNavIcon.svelte` delegates to `MobileActionIcon.svelte`, sharing the pinned [Fluent Regular SVGs](../provenance/fluent-icons.md) with header, menu and other mobile actions. Use the official native 24px geometry without added strokes or stretched glyphs. Active and inactive destinations retain the same Regular geometry; `currentColor` supplies the selected and muted colors. The rejected generated trial remains in [historical provenance](../provenance/generated-bottom-nav.md). All icons and captions share their baselines, including Sell. Each glyph sits in a 40px by 28px pill frame; the active destination paints only this frame with the neutral selection surface and uses charcoal icon/text. Inactive items use the muted text token. All normal phone widths, including 320px, show the same caption labels and destination order across Home, inventory, Sell and Import. Labels do not disappear after a timer. Only dock content widths of 15rem or less use accessible icons alone, supporting enlarged text. Labels use the compact caption role, with semibold on the active destination. Every link keeps at least a 44px target. The shared dock-height token also reserves page and overlay space; the vehicle-detail Call/Viewing action bar remains its contextual layout.
+The mobile dock retains its inset floating white surface, five equal targets and existing caption baselines. The owner's 14 October 2026 request gives only this dock the [new graphite raster family](../provenance/graphite-bottom-nav-2026-10-14.md), bound explicitly in `dock-artwork.ts` and rendered by `BottomNavIcon.svelte`. Its five transparent 96px PNGs sit in 24px frames; the solid Sell tag uses 2px of internal padding to balance its perceived size. Inactive artwork uses 78% opacity, while the active destination retains full opacity, the existing flat underline and semibold caption. Header, menu contents and other mobile actions retain the pinned Fluent Regular SVGs. The rejected October 3 trial remains in [historical provenance](../provenance/generated-bottom-nav.md). All normal phone widths, including 320px, show the same captions and destination order across Home, inventory, Sell and Import. Only dock content widths of 15rem or less use accessible icons alone for enlarged text. Each control retains its separate 44px target and visible keyboard focus. The dock-height token still reserves page/overlay space; the vehicle-detail Call/Viewing bar remains separate.
 
 The mobile menu uses plain navigation rows on white, with the neutral selection surface and charcoal text on the current destination, including general Contact. Mobile selected-state surfaces and borders use neutral tokens below 992px. Its Call action is primary and its address shortcut uses the pale secondary surface. The vehicle-detail bar follows the same priority: red Call and pale Viewing. Both reuse the shared compact-control role, with a 44px target and 40px paint at normal text size, and allow enlarged labels to wrap. Menu triggers announce a dialog, and Escape restores focus to the opener. Advice keeps its image-free mobile list cards; their shared 12px corners, faint border and subtle shadow reuse the shared white-card treatment.
 
@@ -445,6 +514,15 @@ Matched 320px captures compare the [grey selected row](mobile-selection-2026-10-
 
 **Hero and search.** The hero and its vehicle artwork remain separate from the search panel. Buy/Import tabs share the quieter pill-shaped segmented control with Sell/Import. Mobile entry fields use a pale borderless surface and regular text. Home's browse and Import entry actions use charcoal with white text; its quick pills remain white. Call actions retain the red accent. Desktop discovery is its own presentation. The older charcoal-search token names do not mean the current entire search panel should be recolored charcoal.
 
+Home keeps the original light canvas continuously behind its content, with
+transparent section surfaces and retained white cards and branded headings.
+Mobile uses the same visible silver artwork as Sell/Import at the bottom: one
+400px decoration from `leadSite.artwork.serviceBackground`, at 8% opacity with
+its natural proportions and left alignment. A mask fades both ends into the
+opaque canvas, avoiding the thin edge produced by stacked full-page image and
+gradient layers. Desktop keeps the original plain canvas. Mobile clips horizontal
+overflow only and retains the shared 204px hero and 36px card overlap.
+
 Desktop Inventory shortcuts open an anchored 380px menu for their own field.
 `ListingChoicePicker.svelte` owns every dropdown in the shared full desktop form,
 the reusable inline discovery fields and desktop sorting. `listing-draft.ts`
@@ -458,6 +536,9 @@ for multiselect. Radio arrows browse; click, Enter or Space commits. Escape
 closes the nested menu first and restores focus to its field. The outer draft
 changes the URL only on Apply; cancelling restores the applied filters.
 Sorting submits only a confirmed choice and retains the applied filters.
+The desktop sorting trigger shows only the selected option, such as Recommended
+or Newest, alongside its sort icon and dropdown chevron. Its accessible sorting
+label and 44px interaction height remain in place.
 `FilterPopoverHeader.svelte` supplies a shared 52px header with a plain 18px
 close glyph inside a transparent 44px target. `ui/focus.ts` supplies the opening
 focus rule: pointer opening focuses the menu container, while keyboard opening
@@ -541,11 +622,18 @@ The reusable silver service family is configured once in `leadSite.artwork.servi
 
 General Contact combines contact actions with a contained map section. About and editorial retain their own route composition. Detailed form controls are not a reason to add a second visual system to those pages.
 
+Below 992px, General Contact keeps its intro and phone/directions actions in a
+compact white entry card. Contact details occupy a separate white panel below it.
+The centred red phone and charcoal Directions pills fit their content, retain
+44px targets and wrap into a stack when necessary. Address, Visits and Phone use
+pale grey rows with the complete row as the link. The map follows the details;
+desktop retains its separate hero actions and showroom section.
+
 ## Artwork and icons
 
 Stock images use photo framing; decorative cutouts use proportion-preserving containment. `VehicleCutout`, `HeroVehicles`, `ArtworkRegion` and `FeatureArtwork` interpret the data modules. A bounds tuple describes visible artwork; a crop tuple describes a viewport into a larger image. Their numeric meanings are documented in [Data](DATA.md).
 
-`Icon.svelte`, `MobileActionIcon.svelte` and the service/social icon components are existing native SVG renderers. Mobile actions and `BottomNavIcon.svelte` share the pinned Fluent Regular family. Reuse the existing names and visual weight for an established action. Adding an icon font or a second icon library is unnecessary for ordinary customization.
+`Icon.svelte`, `MobileActionIcon.svelte` and the service/social icon components are existing native SVG renderers. Mobile actions retain the pinned Fluent Regular family; `BottomNavIcon.svelte` alone uses the separately pinned graphite artwork. Reuse the existing names and visual weight for an established action. Adding an icon font or a second icon library is unnecessary for ordinary customization.
 
 ## Interaction styling
 
@@ -557,9 +645,9 @@ For a visual adjustment, find the winning rule in the component/route/global cas
 
 Mobile controls use shared size roles. Home quick links, inventory quick filters and Home/Sell/Import entry CTAs use a 44px interaction shell with a 40px painted surface, 16px control type and an 8px content gap. Within `EntryCard`, the mobile CTA uses the 10rem width role, 20px inline inset and 15px arrow icon. `dn-quick-pill` and inventory quick filters use the shared 16px inline inset. Inventory search uses the same 16px control typography and 40px paint within its 44px target; Home/Sell/Import entry openers use 18px/450 copy in a 48px field, while mobile overlay editor fields use the 48px field role with 16px type. Mobile entry segments use 16px/500 labels and a 36px selected surface inside a 40px grey surround and 44px interaction shell. Their width is capped at 15rem. Longer quick-filter rails scroll horizontally without shrinking their labels.
 
-The mobile Home and inventory openers use one 22px Fluent Regular search glyph; overlay search fields retain 18px icons and the shared entry-icon gap. Header location and phone glyphs use 22px frames inside subtle 40px circles and their retained 44px targets. Header and other mobile phone actions use the official Call Regular handset. All of these glyphs use the pinned native SVG geometry with `currentColor` and no added stroke. The circles inherit the icon color for consistent contrast on light, red and dark heroes. Icon-only controls use a 44px target with a 40px painted circle, while each component chooses an icon size appropriate to its visual role. Grid/flex geometry centres icons; do not add device-specific translations or route-specific offsets.
+The mobile Home and inventory openers use one 22px Fluent Regular search glyph; overlay search fields retain 18px icons and the shared entry-icon gap. Header location and phone glyphs use the shared 20px frames inside subtle 40px circles and their retained 44px targets. Header and other mobile phone actions use the official Call Regular handset. All of these glyphs use the pinned native SVG geometry with `currentColor` and no added stroke. The circles inherit the icon color for consistent contrast on light, red and dark heroes. Icon-only controls use a 44px target with a 40px painted circle, while each component chooses an icon size appropriate to its visual role. Grid/flex geometry centres icons; do not add device-specific translations or route-specific offsets.
 
-Below 768px, Home/Sell/Import entry fields and overlay searches share a pale surface, no decorative border, the control corner radius and no shadow. `--dn-control-height-prominent` and the `--dn-entry-prominent-*` roles own the main entry geometry and regular text. Entry-field icons have no decorative circles. Inventory search, sort and filter controls use a 4px layout gap while retaining their 44px touch targets. Mobile focus uses the ink color; keyboard focus remains visible and pointer focus on the entry opener does not leave an outline. Interactive controls suppress the native tap highlight.
+Below 768px, collapsed Home/Sell/Import entry fields use a pale surface without a decorative border or shadow. Inside `EntryCard`, `--dn-control-height-entry-mobile` owns their 48px height and the shared entry typography role supplies 18px/450 text. Overlay search is white with a subtle inset outline, distinguishing typing from the grey overview buttons and selected choices. Entry fields and overlay searches retain pill corners. Entry-field icons have no decorative circles. Inventory search, sort and filter controls use a 4px layout gap while retaining their 44px touch targets. Mobile focus uses the ink color; keyboard focus remains visible and pointer focus on the entry opener does not leave an outline. Interactive controls suppress the native tap highlight.
 
 ## Overlay control proportions
 
@@ -571,7 +659,7 @@ Overlay gutters, row gaps and row corners reuse the foundation spacing/radius sy
 
 ### Mobile listing cards
 
-Below 768px, listing cards use the shared 12px card corners, 8px padding and a 12px column gap. The photograph sits beside the identity and price, with its width capped at 156px. Cards at most 24rem wide show year, full formatted mileage, fuel and transmission below both columns; wider mobile cards add body style. Content-sized badges have 8px horizontal padding and 4px gaps and can wrap with enlarged text. Home carousel cards show year, mileage and fuel beneath their title and price. Badge text stays on one line and may truncate visually while retaining its complete accessible value. The manufacturer stays subtle at 12px/450. The right-hand column aligns the 16px/500 model near the photo top and an 18px/600 euro price near its bottom, inset 2px, with at least an 8px gap. A muted 12px/450 note sits below the mobile model. Optional localized `Vehicle.cardNote` supplies a seller highlight; without it the card uses its listed panoramic-roof feature or first equipment item. Missing equipment and notes leave the line absent. Long notes retain their full title text and truncate in the narrow side column, while enlarged-text stacked cards allow wrapping. Import/condition claims must be supplied per record rather than inferred. Home retains its 20px/600 price role. Below 12rem of card width, including 200% text on narrow phones, the photo, content and facts stack so the full price has its own line. Model names stop at two lines; the complete title remains in the heading's title attribute and the card's accessible link label. Optional `Vehicle.cardBrand` supplies a sub-brand without changing inventory filtering by make. The mobile image `sizes` hint follows the capped frame. `ListingResults.svelte` keeps equal mobile card heights; `VehicleCard.svelte` owns the composition. Offscreen photographs remain lazy. The quick-filter rail has 4px of space above and 8px below, independently of its 44px tap targets.
+Below 768px, listing cards use the shared 12px card corners, 8px padding and a 12px column gap. Through `--dn-mobile-listing-photo-share`, the photograph grows smoothly from 45% of the shared image/text row on narrow phones toward 55% on wider ones, allowing a preferred 10rem copy column between those bounds. Its reserved 16:9 frame grows with the card without making the row unnecessarily tall, with an 88px minimum height for narrow phones; the identity and price column stretches to the same row height. Cards at most 24rem wide show year, full formatted mileage, fuel and transmission below both columns; wider mobile cards add body style. Content-sized badges have 8px horizontal padding and 4px gaps and can wrap with enlarged text. Home carousel cards show year, mileage and fuel beneath their title and price. Badge text stays on one line and may truncate visually while retaining its complete accessible value. The manufacturer stays subtle at 12px/450. The right-hand column aligns the 16px/500 model near the photo top and an 18px/600 euro price near its bottom, inset 2px, with at least an 8px gap. A muted 12px/450 note sits below the mobile model. Optional localized `Vehicle.cardNote` supplies a seller highlight; without it the card uses its listed panoramic-roof feature or first equipment item. Missing equipment and notes leave the line absent. Long notes retain their full title text and truncate in the narrow side column, while enlarged-text stacked cards allow wrapping. Import/condition claims must be supplied per record rather than inferred. Home retains its 20px/600 price role. Below 12rem of card width, including 200% text on narrow phones, the photo, content and facts stack so the full price has its own line. Model names stop at two lines; the complete title remains in the heading's title attribute and the card's accessible link label. Optional `Vehicle.cardBrand` supplies a sub-brand without changing inventory filtering by make. The mobile image `sizes` hint follows the proportional frame so wider phones receive an appropriate source image. `ListingResults.svelte` keeps equal mobile card heights; `VehicleCard.svelte` owns the composition. Offscreen photographs remain lazy. The quick-filter rail has 4px of space above and 8px below, independently of its 44px tap targets.
 
 Badge columns and row heights are equal. Mobile mileage keeps every digit without grouping or a unit; automatic, electric and petrol/LPG use compact localized labels. Ellipsis contains unusually long badge values without a second text line. Full values and units remain in accessible text and title attributes.
 
@@ -607,7 +695,7 @@ Shared opening measurements in `overlay-content.ts` fit wrapped controls without
 unnecessary scrolling or spare space. Range errors appear directly beneath their inputs.
 Home keeps its make-to-model flow and two-column choice buttons, using the same
 soft grey controls and black primary action in a content-sized sheet.
-All action glyphs use the pinned Fluent Regular renderer.
+Header, menu contents and inventory action glyphs use the pinned Fluent Regular renderer; the five bottom-dock glyphs use their separate graphite artwork.
 See [the restored mobile controls and matched captures](mobile-filter-soft-2026-10-06/README.md).
 
 Home's Комби tile uses the transparent `body-wagon-v2.webp` cutout rather than the

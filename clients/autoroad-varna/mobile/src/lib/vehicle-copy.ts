@@ -1,3 +1,4 @@
+import { formatMobileMileage } from './mobile-mileage';
 import type { Vehicle } from './types';
 import { localeNumber, translate, type Locale } from './locale';
 const variants: Record<string, string> = {
@@ -100,7 +101,7 @@ export function localizeVehicle(vehicle: Vehicle, locale: Locale): Vehicle {
   ).replace('Automatic', t('Automatic'));
   const facts = [
     vehicle.year,
-    localeNumber(vehicle.mileage, locale) + ' ' + t('km'),
+    formatMobileMileage(vehicle, locale),
     t(vehicle.fuel),
     t(vehicle.transmission),
   ].join(' · ');

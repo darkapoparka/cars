@@ -5,12 +5,12 @@
   "name": "AUTOROAD",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "cc130e432a41a3a60cc80bc2b3461c6416893b4a",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/karento-best",
-    "tree": "c661129affb32649c8fcecea097fc9a6487783d0",
-    "digest": "bf8c6628be5f28b7e3358b121b7cf9e236d36a2fc0138bf640d72113c7e17f30"
+    "digest": "be17ef365e3272753df6e50826b139a45bfc32b8fef54ddcb86d977ad16280a9",
+    "tree": "8c5ac869c7fd15e19a80c660343fc64b20a2bad9"
   },
-  "sourceDigest": "96cfedfb59850b148b58d7f04bae4c6cbd6bb270cf9f4ebd98711472517a6461",
+  "sourceDigest": "82c8101986491c48400ebb9995d772ae923c7cec483fa8b252c045a579efa050",
   "inventory": {
     "mode": "dated-listing-snapshot",
     "count": 8,
@@ -19,8 +19,8 @@
   "personalization": {
     "profileSha256": "028d096bf2cfbd5094b6a6d1fa55369c73f500e20ca0d9277c556cca5945e143",
     "logoPaths": [
-      "/dealer-brand/v2-4b62d6973091f5ff/logo-on-light.webp",
-      "/dealer-brand/v2-4b62d6973091f5ff/logo-on-dark.webp"
+      "/dealer-brand/logo-on-light.webp",
+      "/dealer-brand/logo-on-dark.webp"
     ],
     "mediaPaths": [
       "/assets/vehicles/11764083375105654/1.webp",
@@ -67,6 +67,9 @@
       "karento-best/src/lib/pages/cars-details-3.svelte",
       "karento-best/src/lib/components/vehicle-detail/VehicleReservationCard.svelte",
       "karento-best/src/lib/components/vehicle-detail/VehicleDetailPanels.svelte",
+      "karento-best/src/lib/components/ServiceSpotCard.svelte",
+      "karento-best/src/lib/sections/HomeBrandLinks.svelte",
+      "karento-best/src/lib/i18n/catalogs/reference-home.ts",
       "karento-best/src/lib/data/editorial.ts",
       "karento-best/src/lib/data/home-stories.ts",
       "karento-best/src/lib/cards/VehicleEditorialCard.svelte",
@@ -89,9 +92,5 @@
     "nativeDealerFacts": true
   },
   "needsDealerQA": true,
-  "readyToPublish": false,
-  "branding": {
-    "packId": "4b62d6973091f5ff",
-    "previousSourceDigest": "26026ff90f2f09aafdfbdeca0c29ae873cfd92e1845d97ba3c17e5ce87ce3745"
-  }
+  "readyToPublish": false
 }
