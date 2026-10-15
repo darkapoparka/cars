@@ -33,6 +33,6 @@ export const brand = {
   addressLine,
   address: "бул. „Цар Освободител“, Владислав Варненчик, Варна — точният номер не е потвърден",
   appointment: "Потвърдете работното време и огледа по телефона",
-  logo: "/registered-branding/onLight.png",
-  logoOnDark: "/registered-branding/onDark.png"
+  logo: "/dealer-brand/v2-5c4df8204c0ea6d6/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-5c4df8204c0ea6d6/logo-on-dark.webp"
 } as const satisfies BrandConfig;

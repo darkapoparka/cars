@@ -5,19 +5,19 @@
   "name": "R.Q.S. Auto – Team",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/karento-best",
-    "digest": "83056967764a686f3737d74b86c5db51c1385a50184853f50ec4ade80c1dd44f",
-    "tree": "5f6eec8efb2f9e99819f7f0c2f743d18fff7b134"
+    "digest": "be17ef365e3272753df6e50826b139a45bfc32b8fef54ddcb86d977ad16280a9",
+    "tree": "8c5ac869c7fd15e19a80c660343fc64b20a2bad9"
   },
-  "sourceDigest": "dba2a021af3039b5046653c2bb0e99d82e8038700fa173921a1e038d88102c69",
+  "sourceDigest": "fe4b5fbc88954d8ff3e9924631dd92eef42dc1d332ca23a7232ca691a49ead58",
   "inventory": {
     "mode": "illustrative-not-dealer-stock",
     "count": 7,
     "observedAt": ""
   },
   "personalization": {
-    "profileSha256": "9f4bd76ef125e07bd9cef0fbca5fdad2cc89deca458afb3cd206b504f526b7b5",
+    "profileSha256": "180a91401e384fa1ca1a31b71b92336e5401f2b52db2ec2ad70d4da7db36b17c",
     "logoPaths": [
       "/registered-branding/onLight.png",
       "/registered-branding/onDark.png"

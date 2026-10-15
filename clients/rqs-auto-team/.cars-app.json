@@ -3,17 +3,17 @@
   "dealer": "rqs-auto-team",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/app",
-    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1",
-    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76"
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
   },
-  "appDigest": "5d6ff9d07a670d1dd1b6a98b0788486bb97d51dac14e07b79f2e4dd47f89df0a",
+  "appDigest": "731fad363f5b0c2b4581095d3b21c553670f5af6965ac66510f89da03ae0fd5a",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "rqs-auto-team",
     "profile": "auto-best/src/lib/data/dealer-profile.json",
-    "profileSha256": "af53dcc3d85eb9995d9465264e51a5928935a7d664be850167464c2336852733",
+    "profileSha256": "2c4a53fd50f0f59a6fd51815368c4b4fd2a58f9beb35f0bb5f81242f372b01be",
     "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
     "vehicles": 7,
     "currency": "EUR",
@@ -121,5 +121,5 @@
   },
   "needsDealerQA": true,
   "readyToPublish": false,
-  "refreshedAt": "2026-10-13T23:03:41.968Z"
+  "refreshedAt": "2026-10-15T06:18:35.416Z"
 }

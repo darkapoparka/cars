@@ -59,7 +59,7 @@ export const MarketplaceCategoryOptions = ({
               className={cn(
                 "grid size-6 place-items-center rounded-full border",
                 selected
-                  ? "border-[var(--lead-site-accent)] bg-brand text-brand-foreground"
+                  ? "border-primary bg-primary text-primary-foreground"
                   : "border-zinc-300 bg-white text-transparent"
               )}
             >

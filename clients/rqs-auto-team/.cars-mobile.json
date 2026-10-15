@@ -5,19 +5,19 @@
   "name": "R.Q.S. Auto – Team",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/mobile",
-    "digest": "4e858bd9dbd3ef5b52cd904c4ed97bbfdc0f4cfe02b5a3840580f38026b867a0",
-    "tree": "2b02829e157071e305bfb2dff10ef18e85c8a35e"
+    "digest": "f5a3e541a7c648a4c2899ad3893e22a3806027a9f66d95fa4e8c74b2226635b6",
+    "tree": "792bfdd1d8eb22aabd90c7e3a0c0779a6c1c36f3"
   },
-  "sourceDigest": "8256990367ad471d7651ac3e7bdcff7d012fb0639eaddc1d68e38a37904bcdbb",
+  "sourceDigest": "6e450a37cab296417acafcd65427f0c183dee6a2eb1d7ab5c3d11a4744019962",
   "inventory": {
     "mode": "illustrative-not-dealer-stock",
     "count": 7,
     "observedAt": ""
   },
   "personalization": {
-    "profileSha256": "9f4bd76ef125e07bd9cef0fbca5fdad2cc89deca458afb3cd206b504f526b7b5",
+    "profileSha256": "180a91401e384fa1ca1a31b71b92336e5401f2b52db2ec2ad70d4da7db36b17c",
     "logoPaths": [
       "/registered-branding/onLight.png",
       "/registered-branding/onDark.png"
@@ -47,8 +47,7 @@
       "mobile/src/components/DesktopVehicleSummary.tsx",
       "mobile/src/components/NativeCarPark.tsx",
       "mobile/src/components/ShowroomFilterSheet.tsx",
-      "mobile/src/lib/vehicle-copy.ts",
-      "mobile/src/components/Header.tsx"
+      "mobile/src/lib/vehicle-copy.ts"
     ]
   },
   "needsDealerQA": true,
