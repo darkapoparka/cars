@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "Атанасов",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-9a3426837f3f08ca/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-9a3426837f3f08ca/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-9a3426837f3f08ca/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-a25dcfac332aebce/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-a25dcfac332aebce/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-a25dcfac332aebce/logo-on-dark.webp",
     "alt": "Атанасов",
-    "favicon": "/dealer-brand/v2-9a3426837f3f08ca/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-a25dcfac332aebce/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

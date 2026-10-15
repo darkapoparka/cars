@@ -48,18 +48,20 @@
   </nav>
 {/if}
 
-<div class="dn-home-page" data-banner-variant={bannerVariant} data-mobile-banner={leadSite.artwork.homeSectionBanner.mobile} style:--dn-home-section-background={`url("${leadSite.artwork.discoveryBackground}")`} style:--dn-home-circuit-outline={`url("${leadSite.artwork.homeCircuitOutline}")`} style:--dn-home-asphalt-background={`url("${leadSite.artwork.homeSectionBannerAssets.circuit}")`} style:--dn-home-mobile-asphalt-background={`url("${leadSite.artwork.homeSectionBannerMobileAssets.circuit}")`}>
+<div class="dn-home-page" data-banner-variant={bannerVariant} data-mobile-banner={leadSite.artwork.homeSectionBanner.mobile} style:--dn-home-section-background={`url("${leadSite.artwork.discoveryBackground}")`} style:--dn-home-canvas-backdrop={`url("${leadSite.artwork.serviceBackground}")`} style:--dn-home-circuit-outline={`url("${leadSite.artwork.homeCircuitOutline}")`} style:--dn-home-asphalt-background={`url("${leadSite.artwork.homeSectionBannerAssets.circuit}")`} style:--dn-home-mobile-asphalt-background={`url("${leadSite.artwork.homeSectionBannerMobileAssets.circuit}")`}>
   <div class="dn-home-slot dn-home-slot--hero"><Hero /></div>
-  <div class="dn-home-slot dn-home-slot--search"><SearchBox /></div>
-  <div class="dn-home-slot dn-home-slot--mobile-actions"><MobileCoreActions /></div>
-  <div class="dn-home-slot dn-home-slot--browse-actions"><TrustActions group="browse" mobileArtwork={false} /></div>
-  <div class="dn-home-slot dn-home-slot--inventory" style:--dn-home-section-background={`url("${bannerBackground}")`} style:--dn-home-mobile-section-background={`url("${bannerMobileBackground}")`}><InventorySection /></div>
-  <div class="dn-home-slot dn-home-slot--body" style:--dn-home-section-background={`url("${bannerBackground}")`}><BodyTypes /></div>
-  <div class="dn-home-slot dn-home-slot--brands" style:--dn-home-section-background={`url("${bannerBackground}")`}><BrandSection /></div>
-  <div class="dn-home-slot dn-home-slot--ownership-actions"><TrustActions group="ownership" mobileArtwork={false} /></div>
-  <div class="dn-home-slot dn-home-slot--editorial" style:--dn-home-section-background={`url("${bannerBackground}")`}><Editorial /></div>
-  <div class="dn-home-slot dn-home-slot--services"><MobileServicesOverview /></div>
-  <div class="dn-home-slot dn-home-slot--videos"><VideoSection /></div>
+  <div class="dn-home-canvas">
+    <div class="dn-home-slot dn-home-slot--search"><SearchBox /></div>
+    <div class="dn-home-slot dn-home-slot--mobile-actions"><MobileCoreActions /></div>
+    <div class="dn-home-slot dn-home-slot--browse-actions"><TrustActions group="browse" mobileArtwork={false} /></div>
+    <div class="dn-home-slot dn-home-slot--inventory" style:--dn-home-section-background={`url("${bannerBackground}")`} style:--dn-home-mobile-section-background={`url("${bannerMobileBackground}")`}><InventorySection /></div>
+    <div class="dn-home-slot dn-home-slot--body" style:--dn-home-section-background={`url("${bannerBackground}")`}><BodyTypes /></div>
+    <div class="dn-home-slot dn-home-slot--brands" style:--dn-home-section-background={`url("${bannerBackground}")`}><BrandSection /></div>
+    <div class="dn-home-slot dn-home-slot--ownership-actions"><TrustActions group="ownership" mobileArtwork={false} /></div>
+    <div class="dn-home-slot dn-home-slot--editorial" style:--dn-home-section-background={`url("${bannerBackground}")`}><Editorial /></div>
+    <div class="dn-home-slot dn-home-slot--services"><MobileServicesOverview /></div>
+    <div class="dn-home-slot dn-home-slot--videos"><VideoSection /></div>
+  </div>
 </div>
 
 <style>
@@ -68,6 +70,15 @@
   .dn-home-page,
   .dn-home-slot {
     display: contents;
+  }
+
+  .dn-home-canvas {
+    display: flow-root;
+    background-color: var(--dn-surface-canvas);
+  }
+
+  .dn-home-canvas :global(:is(.dn-search__mobile-shortcuts, .dn-mobile-core-actions, .dn-home-content-section, .dn-mobile-services)) {
+    background: transparent;
   }
 
   @media (min-width: 768px) and (max-width: 991px) {
@@ -115,11 +126,12 @@
     }
     .dn-banner-preview > button:focus-visible { outline: 3px solid var(--dn-focus); outline-offset: 2px; }
 
-    .dn-home-page { --dn-home-heading-banner-height: 164px; }
+    .dn-home-page {
+      --dn-home-heading-banner-height: 164px;
+    }
 
     .dn-home-page :global(.dn-home-content-section) {
       padding-block: var(--dn-home-section-space);
-      background: var(--dn-surface-canvas);
     }
     .dn-home-page :global(.dn-home-section-heading) {
       display: flex;
@@ -330,9 +342,29 @@
   }
 
   @media (max-width: 767px) {
+    .dn-home-canvas {
+      position: relative;
+      isolation: isolate;
+    }
+
+    .dn-home-canvas::before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      inset: auto 0 0;
+      height: min(400px, 100%);
+      background-image: var(--dn-home-canvas-backdrop);
+      background-size: auto 100%;
+      background-position: left bottom;
+      background-repeat: no-repeat;
+      opacity: .08;
+      mask-image: linear-gradient(transparent, var(--dn-ink) 40% calc(100% - 48px), transparent);
+      pointer-events: none;
+    }
+
     .dn-home-page {
       display: block;
-      overflow: hidden;
+      overflow-x: clip;
       background: var(--dn-mobile-canvas);
     }
 

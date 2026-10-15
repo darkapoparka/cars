@@ -3,12 +3,12 @@
   "dealer": "atanasov-varna",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/app",
-    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
-    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
   },
-  "appDigest": "6104b195676ec2f5687d03330f3ba3042e9f0b9c76f03316ec9da28b75f344dc",
+  "appDigest": "69bee098955312140be62e522e268125aa72581012ed0d6bdd8598055a0b2adf",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "atanasov-varna",
@@ -21,14 +21,14 @@
     "assets": [
       {
         "source": "auto-best/static/dealer-brand/logo-on-light.png",
-        "output": "public/dealer-app/logo-light-49090c8539f8503e4850.png",
-        "sha256": "49090c8539f8503e48505e0aed165d0d22dfc0e3ca72c069b3c44872a6d757c2",
+        "output": "public/dealer-app/logo-light-5046ff7a70bdb2ea863b.png",
+        "sha256": "5046ff7a70bdb2ea863b2467c34e6a7067ba1aa5eb75ec472d1f570566723729",
         "role": "logo-light"
       },
       {
         "source": "auto-best/static/dealer-brand/logo-on-dark.png",
-        "output": "public/dealer-app/logo-dark-dd046ad895e44f49d1e6.png",
-        "sha256": "dd046ad895e44f49d1e6c4f11cbefec3eb46bd9d4765bd23f10672fd513e6c82",
+        "output": "public/dealer-app/logo-dark-8ea12897fa35a6a1106e.png",
+        "sha256": "8ea12897fa35a6a1106e69e19ae24df8d68888844404523cdc7f33803c0f88d6",
         "role": "logo-dark"
       },
       {
@@ -54,5 +54,6 @@
     ]
   },
   "needsDealerQA": true,
-  "readyToPublish": false
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-15T03:19:06.101Z"
 }

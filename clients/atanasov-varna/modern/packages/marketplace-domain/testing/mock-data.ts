@@ -50,7 +50,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Атанасов",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-9a3426837f3f08ca/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-a25dcfac332aebce/logo-on-light.webp"
     },
     "publishedAt": "2026-10-11T09:00:00.000Z",
     "promoted": true

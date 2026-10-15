@@ -94,7 +94,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Атанасов",
       "location": "Варна, България",
-      "avatar": "/dealer-brand/v2-9a3426837f3f08ca/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-a25dcfac332aebce/logo-on-light.webp",
       "mobile": "0988 864 133",
       "email": "",
       "whatsapp": "",
