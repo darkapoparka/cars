@@ -3,12 +3,12 @@
   "dealer": "cali-cars-varna",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/app",
-    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
-    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
   },
-  "appDigest": "4cdbea4a7314133c55b5a57fab0d17d2c80da06ddcb593c30ddc5ef7f7204318",
+  "appDigest": "3426b90940a719e72eaeefee25d0a60592afc6d48a64ad1aff647cb7759ee593",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "cali-cars-varna",
@@ -21,14 +21,14 @@
     "assets": [
       {
         "source": "auto-best/static/dealer-brand/logo-on-light.png",
-        "output": "public/dealer-app/logo-light-4a4ac8cc28617c03dfd3.png",
-        "sha256": "4a4ac8cc28617c03dfd33479321ec59bcc622641321594e74d084eb9b8055447",
+        "output": "public/dealer-app/logo-light-f85d32acc422b67e140c.png",
+        "sha256": "f85d32acc422b67e140c8dac2ca0258dcb80f612e8257e4acac4ac46fc2af286",
         "role": "logo-light"
       },
       {
         "source": "auto-best/static/dealer-brand/logo-on-dark.png",
-        "output": "public/dealer-app/logo-dark-b8da799984f60b0c2bac.png",
-        "sha256": "b8da799984f60b0c2bace01d3e092bc29d2bf5a111da55ef94734d100df28663",
+        "output": "public/dealer-app/logo-dark-3bd8fb46f9f6375a950b.png",
+        "sha256": "3bd8fb46f9f6375a950b581da6310bffbaa684e7c44dbb12e27d3abd9bd99a1f",
         "role": "logo-dark"
       },
       {
@@ -72,5 +72,6 @@
     ]
   },
   "needsDealerQA": true,
-  "readyToPublish": false
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-15T04:23:49.011Z"
 }

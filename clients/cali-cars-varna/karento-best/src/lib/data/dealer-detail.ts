@@ -86,7 +86,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Cali Cars",
       "location": "Мест. Боровец Север 2029, Варна, България",
-      "avatar": "/dealer-brand/v2-a940d300582c4518/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-2976f80649f63b9b/logo-on-light.webp",
       "mobile": "0877064339",
       "email": "",
       "whatsapp": "",
@@ -188,7 +188,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Cali Cars",
       "location": "Мест. Боровец Север 2029, Варна, България",
-      "avatar": "/dealer-brand/v2-a940d300582c4518/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-2976f80649f63b9b/logo-on-light.webp",
       "mobile": "0877064339",
       "email": "",
       "whatsapp": "",

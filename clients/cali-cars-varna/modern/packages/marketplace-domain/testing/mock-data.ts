@@ -49,7 +49,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Cali Cars",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-a940d300582c4518/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-2976f80649f63b9b/logo-on-light.webp"
     },
     "publishedAt": "2026-10-12T09:00:00.000Z",
     "promoted": true
@@ -102,7 +102,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Cali Cars",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-a940d300582c4518/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-2976f80649f63b9b/logo-on-light.webp"
     },
     "publishedAt": "2026-10-12T09:00:00.000Z",
     "promoted": true

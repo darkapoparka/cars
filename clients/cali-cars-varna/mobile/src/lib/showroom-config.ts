@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "Cali Cars",
-  "logo": "/dealer-brand/v2-a940d300582c4518/logo-on-light.webp",
+  "logo": "/dealer-brand/v2-2976f80649f63b9b/logo-on-light.webp",
   "phone": "+359877064339",
   "email": null,
   "address": "Мест. Боровец Север 2029, Варна, България",

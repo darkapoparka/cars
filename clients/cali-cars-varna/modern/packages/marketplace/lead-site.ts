@@ -111,8 +111,8 @@ export const leadSite: LeadSiteConfig = {
     "tagline": "Cali Cars — vehicles and dealer support in Varna."
   }
 },
-  accent: "#30343b",
-  desktopAccent: "#4b5057",
+  accent: "#09090b",
+  desktopAccent: "#09090b",
   desktopInventoryFilterLayout: "quick",
   desktopPreviewIdentity: {
     sourceSlug: "day-night-auto-group",
@@ -144,8 +144,8 @@ export const leadSite: LeadSiteConfig = {
   email: "",
   heroPath: "/lead-hero.jpg",
   locale: "bg-BG",
-  logoPath: "/dealer-brand/v2-a940d300582c4518/logo-on-light.webp",
-  logoInversePath: "/dealer-brand/v2-a940d300582c4518/logo-on-dark.webp",
+  logoPath: "/dealer-brand/v2-2976f80649f63b9b/logo-on-light.webp",
+  logoInversePath: "/dealer-brand/v2-2976f80649f63b9b/logo-on-dark.webp",
   mapsEmbedUrl:
     "https://maps.google.com/maps?q=Cali%20Cars%2C%20%D0%9C%D0%B5%D1%81%D1%82.%20%D0%91%D0%BE%D1%80%D0%BE%D0%B2%D0%B5%D1%86%20%D0%A1%D0%B5%D0%B2%D0%B5%D1%80%202029%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F&z=16&output=embed",
   mapsUrl:

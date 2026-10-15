@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "Cali Cars",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-a940d300582c4518/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-a940d300582c4518/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-a940d300582c4518/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-2976f80649f63b9b/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-2976f80649f63b9b/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-2976f80649f63b9b/logo-on-dark.webp",
     "alt": "Cali Cars",
-    "favicon": "/dealer-brand/v2-a940d300582c4518/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-2976f80649f63b9b/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

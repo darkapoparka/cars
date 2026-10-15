@@ -33,6 +33,6 @@ export const brand = {
   addressLine,
   address: "Мест. Боровец Север 2029, Варна, България",
   appointment: "Потвърдете работното време директно с автокъщата.",
-  logo: "/dealer-brand/v2-a940d300582c4518/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/v2-a940d300582c4518/logo-on-dark.webp"
+  logo: "/dealer-brand/v2-2976f80649f63b9b/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-2976f80649f63b9b/logo-on-dark.webp"
 } as const satisfies BrandConfig;
