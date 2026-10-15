@@ -32,10 +32,17 @@ const s = stylex.create({
     // Recenter the showroom within the illustration's asymmetric whitespace.
     transform: 'translateX(-12.5%)',
   },
-  body: { display: 'flex', alignItems: 'flex-start', gap: 8, padding: 16, paddingTop: 8 },
-  icon: { flexShrink: 0, color: colors.accent, marginTop: 2 },
-  copy: { display: 'flex', flexDirection: 'column', gap: 4, minWidth: 0 },
-  address: { fontStyle: 'normal', fontSize: 16, lineHeight: '24px', overflowWrap: 'anywhere' },
+  body: { display: 'flex', alignItems: 'center', gap: 8, padding: 16, paddingTop: 8 },
+  icon: { flexShrink: 0, color: colors.accent },
+  copy: { display: 'flex', flexDirection: 'column', flex: '1', gap: 4, minWidth: 0 },
+  address: {
+    fontStyle: 'normal',
+    fontSize: { default: 14, '@media (min-width: 360px)': 16 },
+    lineHeight: '24px',
+    whiteSpace: 'nowrap',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+  },
   actions: { padding: 16, paddingTop: 0 },
   directions: {
     display: 'flex',
@@ -102,7 +109,9 @@ export function ShowroomContactBanner() {
         <div {...stylex.props(s.body)}>
           <MapPin size={18} strokeWidth={1.8} aria-hidden="true" {...stylex.props(s.icon)} />
           <div {...stylex.props(s.copy)}>
-            <address {...stylex.props(s.address)}>{location.address}</address>
+            <address title={location.address} {...stylex.props(s.address)}>
+              {location.address}
+            </address>
           </div>
         </div>
       )}
