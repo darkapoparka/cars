@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "VV Cars",
-  "logo": "/dealer-brand/v2-7799f0a33cba3a3e/logo-on-light.webp",
+  "logo": "/dealer-brand/v2-1ba887dbe0b1d18a/logo-on-light.webp",
   "phone": "+359898554198",
   "email": null,
   "address": "Бул. Цар Освободител - 200 метра след светофара на Дом на камиона - отдясно, Варна, България",

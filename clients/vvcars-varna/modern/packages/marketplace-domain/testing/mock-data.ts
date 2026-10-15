@@ -50,7 +50,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "VV Cars",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-7799f0a33cba3a3e/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-1ba887dbe0b1d18a/logo-on-light.webp"
     },
     "publishedAt": "2026-10-11T09:00:00.000Z",
     "promoted": true

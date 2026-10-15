@@ -155,7 +155,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "VV Cars",
   "location": "Бул. Цар Освободител - 200 метра след светофара на Дом на камиона - отдясно, Варна, България",
-  "avatar": "/dealer-brand/v2-7799f0a33cba3a3e/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-1ba887dbe0b1d18a/logo-on-light.webp",
   "mobile": "0898 554 198",
   "email": "",
   "whatsapp": "",

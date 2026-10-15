@@ -33,6 +33,6 @@ export const brand = {
   addressLine,
   address: "Бул. Цар Освободител - 200 метра след светофара на Дом на камиона - отдясно, Варна, България",
   appointment: "Потвърдете работното време директно с автокъщата.",
-  logo: "/dealer-brand/v2-7799f0a33cba3a3e/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/v2-7799f0a33cba3a3e/logo-on-dark.webp"
+  logo: "/dealer-brand/v2-1ba887dbe0b1d18a/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-1ba887dbe0b1d18a/logo-on-dark.webp"
 } as const satisfies BrandConfig;

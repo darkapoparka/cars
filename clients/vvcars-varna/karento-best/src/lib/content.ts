@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "VV Cars",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-7799f0a33cba3a3e/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-7799f0a33cba3a3e/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-7799f0a33cba3a3e/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-1ba887dbe0b1d18a/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-1ba887dbe0b1d18a/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-1ba887dbe0b1d18a/logo-on-dark.webp",
     "alt": "VV Cars",
-    "favicon": "/dealer-brand/v2-7799f0a33cba3a3e/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-1ba887dbe0b1d18a/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {
