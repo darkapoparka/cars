@@ -160,15 +160,17 @@
 
     .karento-process-step-link {
       display: grid;
-      grid-template-columns: calc(var(--karento-space-8) * 2) minmax(0, 1fr);
+      grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
       align-items: center;
       gap: var(--karento-space-3);
       min-height: var(--karento-touch-target);
     }
 
     .karento-process-image {
-      align-self: center;
-      height: calc(var(--karento-space-8) * 2);
+      align-self: stretch;
+      width: 100%;
+      aspect-ratio: var(--karento-image-wide);
+      min-width: 0;
       border-radius: var(--karento-radius-media);
       overflow: hidden;
     }
@@ -214,6 +216,7 @@
       font-size: var(--karento-type-body-small-size);
       font-weight: var(--karento-type-body-small-weight);
       line-height: var(--karento-type-body-small-leading);
+      color: var(--bs-neutral-600) !important;
     }
     .karento-process-description-line {
       display: inline;

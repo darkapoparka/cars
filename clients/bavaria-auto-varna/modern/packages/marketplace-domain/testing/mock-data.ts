@@ -49,7 +49,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Бавария",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-91776bdbe5aecaa5/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-8a04605c71626655/logo-on-light.webp"
     },
     "publishedAt": "2026-10-12T09:00:00.000Z",
     "promoted": true
@@ -101,7 +101,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Бавария",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/v2-91776bdbe5aecaa5/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-8a04605c71626655/logo-on-light.webp"
     },
     "publishedAt": "2026-10-12T09:00:00.000Z",
     "promoted": true

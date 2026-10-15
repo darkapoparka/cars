@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "Бавария",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/v2-91776bdbe5aecaa5/logo-on-light.webp",
-    "footer": "/dealer-brand/v2-91776bdbe5aecaa5/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/v2-91776bdbe5aecaa5/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-8a04605c71626655/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-8a04605c71626655/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-8a04605c71626655/logo-on-dark.webp",
     "alt": "Бавария",
-    "favicon": "/dealer-brand/v2-91776bdbe5aecaa5/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-8a04605c71626655/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

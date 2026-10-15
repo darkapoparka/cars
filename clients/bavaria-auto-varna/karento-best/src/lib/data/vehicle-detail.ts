@@ -147,7 +147,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "Бавария",
   "location": "бул. Цар Освободител до светофара за Владиславово, Варна, България",
-  "avatar": "/dealer-brand/v2-91776bdbe5aecaa5/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-8a04605c71626655/logo-on-light.webp",
   "mobile": "0879030161",
   "email": "",
   "whatsapp": "",
