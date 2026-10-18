@@ -1,8 +1,8 @@
 # USA expansion research — 18 October 2026
 
-Work in progress: **15 priority research candidates, 9 content-polish reserves, 42 held; 24 evidence records total. Initial priority allocation125; gap110**. The overall owner target is 400 across USA, UK and UAE; the country allocation can change. The [JSON](usa.json) owns evidence and dispositions. These are potential accounts, not buyers or a contact-ready export. Public registry/legacy-lead duplicates were screened; private CRM/suppression screening belongs to the parent task and is not included in this public file.
+Work in progress: **16 priority research candidates, 9 content-polish reserves, 44 held; 25 evidence records total. Initial priority allocation 125; gap 109**. The overall owner target is 400 across USA, UK and UAE; the country allocation can change. The [JSON](usa.json) owns evidence and dispositions. These are potential accounts, not buyers or a contact-ready export. Public registry/legacy-lead duplicates were screened; private CRM/suppression screening belongs to the parent task and is not included in this public file.
 
-Current priority candidates only; reserves are separately identified in JSON and do not count toward400.
+Current priority candidates only; reserves are separately identified in JSON and do not count toward 400.
 
 | Dealer | Observed value gap | Stock evidence | Fit |
 |---|---|---|---|
@@ -21,7 +21,7 @@ Current priority candidates only; reserves are separately identified in JSON and
 | Tony's Auto Sales, Pascagoula MS | The primary linked Privacy Policy contains Wix's general instructions on how to write a policy, rather than completed dealer-specific explanatory content. | 9 primary advertised examples | 75 |
 | 322 Budget Auto Sales LLC, Woodland PA | The visible footer credits Auto Express with year 2035 rather than the dealership identity. | 8 primary advertised examples | 72 |
 
-| Gasper Auto Sales LLC, Lakeland MN | No owned domain identified after bounded searches; original profile/direct email checked |3recent original Audi ads, dated10Oct/19Sep/16Sep2026; availability unconfirmed |82 |
+| Gasper Auto Sales LLC, Lakeland MN | No owned domain identified after bounded searches; original profile/direct email checked | 3 recent original Audi ads, dated 10 Oct / 19 Sep / 16 Sep 2026; availability unconfirmed | 82 |
 
 Fit scores are research judgement about a specific improvement opportunity. They do not establish purchase interest, budget, or that a whole-site replacement is the appropriate sale. Preferred already has a professional site; it is a lower-priority cleanup prospect. Several small-stock exceptions are explicitly marked in JSON.
 
@@ -75,3 +75,10 @@ Gary Bell LLC Auto Sales, Forest MS, moves from hold to priority after original 
 
 
 18October checkpoint: Gasper Auto Sales promoted with parent-verified original Facebook profile/contact and three expanded vehicle advertisements. Exact original Oct10AudiS4 permalink is saved; SeptemberSQ5/S4 observations remain linked to original profile feed. Public email is directly linked. Conflicting directory phones omitted, no available-stock-total claim, and website absence remains bounded/uncertain. Current priority15, reserves9, evidence24, held42; initial125allocationgap110.
+
+
+## Commercial dealer checkpoint
+
+Midwest Work Truck Sales, Kenosha WI, brings the current total to **16 priority candidates and 9 reserves; 25 evidence records, 44 held**. Its six priced commercial vehicle products include three detailed live stock pages. The parent verified the original Facebook identity, Kenosha location, matching domain, public phone/email and a recent F-550 sale video. Main-site contact HTML sends its displayed Gmail link to the Wix template mailbox; product-page email links work. Exact street premises, website rendering, availability and private CRM screening remain pending. Commercial vehicle cards fit the existing template scope.
+
+Joe’s Auto Sales Panorama City stays held: Cloudflare blocked the research browser; this does not prove its catalogue is globally broken. Best Auto Sales Inc. Corona also stays held because source-only legacy layout suspicion has no demonstrated rendered failure. Neither counts toward the priority target.

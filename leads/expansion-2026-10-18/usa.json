@@ -5,8 +5,8 @@
   "researchDate": "2026-10-18",
   "requestedCount": 125,
   "status": "research_in_progress",
-  "qualifiedCount": 15,
-  "remainingGap": 110,
+  "qualifiedCount": 16,
+  "remainingGap": 109,
   "defaults": {
     "researchOnly": true,
     "privateContactHistory": "not_available_to_this_researcher",
@@ -2472,11 +2472,11 @@
         "checkedAt": "2026-10-18",
         "observations": [
           "Bounded exact-name plus Lakeland/location searches returned the original Facebook business profile and matching directories; no independent dealer-owned domain was identified.",
-          "Parent researcher directly opened original profile ID259372398095957, which resolves to100057612182407, and verified business identity,404SaintCroixTrailNorth and direct gasperautosales@gmail.com link. No phone/owned-domain field was seen in checked contact block.",
+          "Parent researcher directly opened original profile ID 259372398095957, which resolves to 100057612182407, and verified business identity, 404 Saint Croix Trail North and the direct gasperautosales@gmail.com link. No phone or owned-domain field was seen in the checked contact block.",
           "This is a bounded absence result, not proof that no website exists."
         ],
         "defectSource": "https://www.facebook.com/profile.php?id=100057612182407",
-        "browserVerification": "Parent researcher verified rendered original Facebook profile, directly expanded vehicle posts and original Oct10permalink. This agent separately checked bounded business/location search results and corroborating historical public city document.",
+        "browserVerification": "Parent researcher verified the rendered original Facebook profile, directly expanded vehicle posts and original 10 October permalink. This agent separately checked bounded business/location search results and a corroborating historical public city document.",
         "fullResponsiveJourneyAudit": "not_applicable_no_owned_domain_identified"
       },
       "inventory": {
@@ -2487,28 +2487,28 @@
         "checkedAt": "2026-10-18",
         "examples": [
           {
-            "vehicle": "2015 Audi S4 Premium Plus3.0Tquattro6-speed manual",
+            "vehicle": "2015 Audi S4 Premium Plus 3.0T quattro 6-speed manual",
             "priceUSD": 18500,
             "miles": 117000,
             "advertisedDate": "2026-10-10",
             "sourceUrl": "https://www.facebook.com/permalink.php?story_fbid=pfbid08yGXs1feGtrUBMQEXZboY3nNevo2TvQSCDo48K3zRBieKiu97itXvaZdtPx7r4kFl&id=100057612182407"
           },
           {
-            "vehicle": "2019 Audi SQ5 Premium Plusquattro",
+            "vehicle": "2019 Audi SQ5 Premium Plus quattro",
             "priceUSD": 28995,
             "miles": 51000,
             "advertisedDate": "2026-09-19",
             "sourceUrl": "https://www.facebook.com/profile.php?id=100057612182407"
           },
           {
-            "vehicle": "2019 Audi S4 Premium Plusquattro",
+            "vehicle": "2019 Audi S4 Premium Plus quattro",
             "priceUSD": 27995,
             "miles": 64000,
             "advertisedDate": "2026-09-16",
             "sourceUrl": "https://www.facebook.com/profile.php?id=100057612182407"
           }
         ],
-        "caveat": "Three distinct original ads were expanded in the live business feed, with displayed September/October dates in2026 context. Advertisements do not establish current unsold physical stock. Additional vehicles on mirror were not counted. By appointment; Sundays closed in checked posts."
+        "caveat": "Three distinct original ads were expanded in the live business feed, with displayed September/October dates in 2026 context. Advertisements do not establish current unsold physical stock. Additional vehicles on mirror were not counted. By appointment; Sundays closed in checked posts."
       },
       "businessContact": {
         "phone": null,
@@ -2525,7 +2525,7 @@
         "phoneCaveat": "No phone was shown in checked original contact block; conflicting directory phones were not adopted."
       },
       "fitScore": 82,
-      "fitReason": "Independent appointment-only European specialist with three recently dated original Audi advertisements at$18,500-$28,995, matching premises and a direct business email. Exact-name/location searches and original profile contacts identified no owned domain, supporting a factual branded stock catalogue opportunity. Budget/intent unestablished; three advertised units are not a verified available-stock total.",
+      "fitReason": "Independent appointment-only European specialist with three recently dated original Audi advertisements at $18,500-$28,995, matching premises and a direct business email. Exact-name/location searches and original profile contacts identified no owned domain, supporting a factual branded stock catalogue opportunity. Budget/intent unestablished; three advertised units are not a verified available-stock total.",
       "confidence": "high_for_primary_identity_email_and_recent_advertisements_medium_for_no_owned_site_search_result",
       "verificationStatus": "original_rendered_facebook_identity_contact_and_three_recent_vehicle_ads_verified_bounded_domain_search_crm_refresh_pending",
       "nextAction": "Refresh current sale availability/prices and independent owned-domain aliases; check private CRM/suppression history before outreach. Use directly published business email, not conflicting directory phone. Keep appointment-only trading conditions and do not copy unsupported condition/title/warranty claims.",
@@ -2537,7 +2537,7 @@
       ],
       "fit": {
         "score": 82,
-        "reason": "Independent appointment-only European specialist with three recently dated original Audi advertisements at$18,500-$28,995, matching premises and a direct business email. Exact-name/location searches and original profile contacts identified no owned domain, supporting a factual branded stock catalogue opportunity. Budget/intent unestablished; three advertised units are not a verified available-stock total.",
+        "reason": "Independent appointment-only European specialist with three recently dated original Audi advertisements at $18,500-$28,995, matching premises and a direct business email. Exact-name/location searches and original profile contacts identified no owned domain, supporting a factual branded stock catalogue opportunity. Budget/intent unestablished; three advertised units are not a verified available-stock total.",
         "budgetConfidence": "not_established"
       },
       "verification": {
@@ -2574,6 +2574,142 @@
         "tier": "priority_research_candidate",
         "countsTowardPriority400": true,
         "reason": "Three recent original dealer vehicle ads, direct public business email and bounded search finding only social trading presence support independent catalogue ownership value.",
+        "reviewedAt": "2026-10-18"
+      }
+    },
+    {
+      "id": "us-wi-kenosha-midwest-work-truck-sales",
+      "name": "Midwest Work Truck Sales",
+      "country": "US",
+      "city": "Kenosha",
+      "region": "WI",
+      "address": null,
+      "businessFocus": "independent_commercial_pickup_and_service_truck_sales",
+      "website_status": "poor_site",
+      "website": {
+        "url": "https://www.mwworktrucks.com/",
+        "inventoryUrl": "https://www.mwworktrucks.com/category/all-products",
+        "checkedAt": "2026-10-18",
+        "observations": [
+          "Fresh HTTP 200 homepage and main contact HTML display midwestworktrucksales@gmail.com but link to mailto:info@mysite.com.",
+          "Product detail email icons correctly link to the business Gmail address; the demonstrated mismatch is limited to the main contact surfaces.",
+          "Parent researcher directly opened the linked original Facebook profile: it identifies Kenosha, Wisconsin, describes commercial-grade pickups, links the exact owned domain and directly publishes the matching telephone and email. Exact street premises were not established."
+        ],
+        "defectSource": "https://www.mwworktrucks.com/blank-4",
+        "browserVerification": "Original Facebook identity, location, domain and contacts were rendered and checked by the parent researcher. Website contact href and product records were checked in fresh bounded HTML; website rendering and responsive journeys remain pending.",
+        "fullResponsiveJourneyAudit": "pending"
+      },
+      "inventory": {
+        "count": null,
+        "minimumIndividuallyObserved": 6,
+        "kind": "fresh_primary_catalogue_priced_products_and_original_recent_social_advert",
+        "sourceUrl": "https://www.mwworktrucks.com/category/all-products",
+        "checkedAt": "2026-10-18",
+        "examples": [
+          {
+            "vehicle": "2014 RAM 4500 service truck, 6.7L Cummins diesel",
+            "priceUSD": 27999,
+            "miles": 227472,
+            "sourceUrl": "https://www.mwworktrucks.com/product-page/2014-ram-4500-service-truck-6-7l-cummins-diesel"
+          },
+          {
+            "vehicle": "2020 Ford F-550 crew cab service truck",
+            "priceUSD": 29000,
+            "miles": 133773,
+            "stock": "2609-03",
+            "sourceUrl": "https://www.mwworktrucks.com/product-page/2020-ford-f-550-crew-cab-service-truck"
+          },
+          {
+            "vehicle": "2014 RAM 5500 4x4 crew cab flatbed",
+            "priceUSD": 29999,
+            "miles": 208022,
+            "stock": "2609-01",
+            "sourceUrl": "https://www.mwworktrucks.com/product-page/2014-ram-5500-4x4-crew-cab-flatbed"
+          }
+        ],
+        "recentPrimarySocialEvidence": "Original Facebook profile shows a FOR SALE 2020 Ford F-550 crew cab service-truck video post labelled 6 days ago in the 18 October research session.",
+        "caveat": "Six fresh priced catalogue products observed; three detail pages returned HTTP 200 with matching prices and InStock schema. This is advertised stock, not independently verified physical or unsold availability. Older cached counts were not adopted. Exact street premises remain unestablished."
+      },
+      "businessContact": {
+        "phone": "+1 262-770-2884",
+        "email": "midwestworktrucksales@gmail.com",
+        "socialUrl": "https://www.facebook.com/profile.php?id=61576431203253",
+        "sourceUrl": "https://www.facebook.com/profile.php?id=61576431203253"
+      },
+      "contact": {
+        "phone": "+1 262-770-2884",
+        "email": "midwestworktrucksales@gmail.com",
+        "socialUrl": "https://www.facebook.com/profile.php?id=61576431203253",
+        "sourceUrl": "https://www.facebook.com/profile.php?id=61576431203253"
+      },
+      "fitScore": 79,
+      "fitReason": "Independent Kenosha commercial pickup/service-truck retailer with six priced vehicle products, three matching detailed live listings and a direct public business email. The main contact page sends clicks on that displayed email to the template mailbox. This supports a concrete branded catalogue/contact improvement using ordinary vehicle templates; product-page email links already work. Buying budget is not established.",
+      "confidence": "high_for_primary_identity_contact_and_specific_html_link_mismatch_medium_for_available_stock",
+      "verificationStatus": "primary_rendered_social_identity_and_contacts_fresh_owned_catalogue_and_href_verified_website_render_crm_refresh_pending",
+      "nextAction": "Refresh stock availability and the rendered main contact link, establish exact sales premises if needed, and check private CRM/suppression history before outreach. Preserve commercial body/equipment details; do not promise bespoke rental or finance software.",
+      "evidenceUrls": [
+        "https://www.mwworktrucks.com/",
+        "https://www.mwworktrucks.com/category/all-products",
+        "https://www.mwworktrucks.com/blank-4",
+        "https://www.mwworktrucks.com/product-page/2014-ram-4500-service-truck-6-7l-cummins-diesel",
+        "https://www.mwworktrucks.com/product-page/2020-ford-f-550-crew-cab-service-truck",
+        "https://www.mwworktrucks.com/product-page/2014-ram-5500-4x4-crew-cab-flatbed",
+        "https://www.facebook.com/profile.php?id=61576431203253"
+      ],
+      "fit": {
+        "score": 79,
+        "reason": "Independent Kenosha commercial pickup/service-truck retailer with six priced vehicle products, three matching detailed live listings and a direct public business email. The main contact page sends clicks on that displayed email to the template mailbox. This supports a concrete branded catalogue/contact improvement using ordinary vehicle templates; product-page email links already work. Buying budget is not established.",
+        "budgetConfidence": "not_established"
+      },
+      "verification": {
+        "status": "primary_rendered_social_identity_and_contacts_fresh_owned_catalogue_and_href_verified_website_render_crm_refresh_pending",
+        "confidence": "high_for_primary_identity_contact_and_specific_html_link_mismatch_medium_for_available_stock",
+        "notBeforeOutreach": [
+          "Refresh stock availability and the rendered main contact link, establish exact sales premises if needed, and check private CRM/suppression history before outreach. Preserve commercial body/equipment details; do not promise bespoke rental or finance software."
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.mwworktrucks.com/",
+          "role": "primary_owned_catalogue_or_main_contact_html",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://www.mwworktrucks.com/category/all-products",
+          "role": "primary_owned_catalogue_or_main_contact_html",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://www.mwworktrucks.com/blank-4",
+          "role": "primary_owned_catalogue_or_main_contact_html",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://www.mwworktrucks.com/product-page/2014-ram-4500-service-truck-6-7l-cummins-diesel",
+          "role": "primary_live_priced_vehicle_detail",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://www.mwworktrucks.com/product-page/2020-ford-f-550-crew-cab-service-truck",
+          "role": "primary_live_priced_vehicle_detail",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://www.mwworktrucks.com/product-page/2014-ram-5500-4x4-crew-cab-flatbed",
+          "role": "primary_live_priced_vehicle_detail",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://www.facebook.com/profile.php?id=61576431203253",
+          "role": "primary_original_rendered_social_identity_contact_and_recent_advert",
+          "checkedAt": "2026-10-18"
+        }
+      ],
+      "priority": "priority_research_candidate",
+      "qualification": {
+        "tier": "priority_research_candidate",
+        "countsTowardPriority400": true,
+        "reason": "Six real priced commercial vehicle products, three detailed stock examples and primary matching contact/identity establish a focused catalogue/contact opportunity.",
         "reviewedAt": "2026-10-18"
       }
     }
@@ -3141,6 +3277,36 @@
       ],
       "checkedAt": "2026-10-18",
       "next": "Obtain recent original stock and current contact confirmation before qualification."
+    },
+    {
+      "name": "Joe's Auto Sales LLC",
+      "city": "Panorama City",
+      "region": "CA",
+      "website": "https://www.joesautosalesandfinance.com/",
+      "status": "held_rendered_catalogue_access_limitation",
+      "observation": "Matching dealer-fed CarGurus profile advertises 38 cars and public 818-489-1298 contact at 7905 Van Nuys Boulevard, Unit X. Fresh owned-site requests and parent browser inventory check were blocked by Cloudflare. Cached empty-inventory text and this research-access block do not establish a generally empty or broken catalogue. Other dealers share these premises and must not be merged.",
+      "sources": [
+        "https://www.joesautosalesandfinance.com/inventory/",
+        "https://www.cargurus.com/Cars/m-Joes-Auto-Sales-LLC-sp458976"
+      ],
+      "checkedAt": "2026-10-18",
+      "next": "Verify ordinary customer catalogue access and a substantial actual defect before priority qualification; no bot-protection bypass."
+    },
+    {
+      "name": "Best Auto Sales Inc.",
+      "city": "Corona",
+      "region": "CA",
+      "website": "https://www.gobestauto.com/",
+      "status": "held_material_rendered_defect_not_established",
+      "observation": "Matching primary site publishes 1026 E 6th Street, 951-735-6269 and multiple detailed priced VIN listings. Legacy table-based markup and missing viewport metadata alone do not establish a rendered mobile failure. Many other catalogue entries are marked coming soon. Distinct from BEST Auto Group Corona.",
+      "sources": [
+        "https://www.gobestauto.com/ContactUs.aspx",
+        "https://www.gobestauto.com/ViewDetails.aspx?VID=96128",
+        "https://www.gobestauto.com/ViewDetails.aspx?VID=96091",
+        "https://www.gobestauto.com/ViewDetails.aspx?VID=96082"
+      ],
+      "checkedAt": "2026-10-18",
+      "next": "Hold unless a material current rendered defect is verified; do not count old copyright or source-only layout suspicion as proof."
     }
   ],
   "exclusions": [
@@ -3290,10 +3456,10 @@
   ],
   "overallRequestedCount": 400,
   "allocationNote": "Initial 125 is flexible within overall 400. qualifiedCount/remainingGap refer only to priority candidates. Reserved content-polish records remain in leads for evidence/history and do not count toward best-400 priority target.",
-  "evidenceRecordCount": 24,
-  "priorityCount": 15,
+  "evidenceRecordCount": 25,
+  "priorityCount": 16,
   "reserveCount": 9,
-  "heldCount": 42,
-  "researchRowCount": 24,
-  "holdCount": 42
+  "heldCount": 44,
+  "researchRowCount": 25,
+  "holdCount": 44
 }

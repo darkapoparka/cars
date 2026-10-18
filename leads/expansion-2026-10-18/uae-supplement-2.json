@@ -1,0 +1,1975 @@
+{
+  "schemaVersion": 1,
+  "kind": "public_research",
+  "market": "United Arab Emirates - Sharjah, Ajman and Dubai supplement 2",
+  "researchDate": "2026-10-18",
+  "overallBatchTarget": 400,
+  "targetScope": "overall_multi_market_flexible_allocation",
+  "status": "frozen_for_owner_intake",
+  "researchRowCount": 15,
+  "priorityCount": 12,
+  "qualifiedCount": 12,
+  "heldCount": 3,
+  "notes": [
+    "Public business research only; no outreach, consent, buying intent or CRM state is inferred.",
+    "Separate supplement; main UAE and northern-emirate supplement are frozen/owned by other agents and used as denylists.",
+    "Website absence is a bounded finding. Primary marketplace contact controls are accepted for screened research with explicit direct-contact confirmation before build or outreach.",
+    "GCCCarDeals is discovery only; current counts and dated stock are verified from original seller catalogues. Counts are never added across platforms.",
+    "Final checkpoint12screened priorities, including2with exposed full primary seller phone contacts and10with masked/public marketplace routes only. All require identity/availability/contact confirmation before build or outreach."
+  ],
+  "leads": [
+    {
+      "id": "ae-ajman-al-jernas-used-cars",
+      "name": "Al Jernas Used Cars Trading FZE",
+      "aliases": [
+        "الجرناس لتجارة السيارات المستعملة",
+        "Al Jernas",
+        "aljernas_cars"
+      ],
+      "country": "AE",
+      "city": "Ajman",
+      "emirate": "Ajman",
+      "address": "Showroom 94, Ajman Car Market (YallaMotor); current ads Al Jurf/Ajman Industrial Area",
+      "researchDate": "2026-10-18",
+      "qualification": {
+        "tier": "priority_research_candidate",
+        "countsTowardPriority400": true,
+        "reviewedAt": "2026-10-18",
+        "reason": "Opened original dealer catalogue with recent priced vehicle ads, legitimate public contact route and bounded website/alias search."
+      },
+      "priority": "priority_research_candidate",
+      "website_status": "no_official_site_found_after_check",
+      "website": {
+        "url": null,
+        "checkedAt": "2026-10-18",
+        "observations": [
+          "No matching official dealer-owned website surfaced in the recorded bounded checks. This does not establish that no website exists.",
+          "YallaMotor publishes both full numbers, matching current OpenSooq masked staff prefixes, and 30 separately advertised cars. Do not add platform counts; prices can differ. Dealer-linked Instagram/Facebook could not be fetched; no absence claim follows."
+        ],
+        "searchChecks": [
+          "\"Al Jernas Used Cars\" Ajman website",
+          "\"الجرناس\" \"سيارات\" موقع",
+          "\"0581225519\"",
+          "\"0525168101\"",
+          "\"aljernas_cars\" website"
+        ],
+        "status": "no_official_site_found_after_check"
+      },
+      "inventory": {
+        "sourceUrl": "https://ae.opensooq.com/en/shops/shop-80568283",
+        "reportedListings": 43,
+        "kind": "original_marketplace_live_listings_snapshot",
+        "observedAt": "2026-10-18",
+        "examples": [
+          {
+            "title": "BMW 330i 2020",
+            "price_aed": 68000,
+            "mileage_km": 137000,
+            "sourceDateLabel": "10 hours ago on 18 October 2026",
+            "sourceUrl": "https://ae.opensooq.com/en/search/287985286"
+          },
+          {
+            "title": "Toyota Land Cruiser GXR 2015 (advertised converted to 2021)",
+            "price_aed": 84000,
+            "mileage_km": 187000,
+            "sourceDateLabel": "10 hours ago on 18 October 2026",
+            "sourceUrl": "https://ae.opensooq.com/en/shops/shop-80568283"
+          },
+          {
+            "title": "Toyota FJ 2022",
+            "price_aed": 135000,
+            "mileage_km": 141000,
+            "sourceDateLabel": "10 hours ago on 18 October 2026",
+            "sourceUrl": "https://ae.opensooq.com/en/shops/shop-80568283"
+          }
+        ],
+        "caveat": "Live Listings is the marketplace all-category profile count; observed first-page cards are vehicles. Advertisements may be syndicated, stale or duplicate; physical availability and ownership were not independently confirmed."
+      },
+      "businessContact": {
+        "phone": "+971581225519",
+        "alternatePhones": [
+          "+971525168101"
+        ],
+        "sourceUrl": "https://uae.yallamotor.com/auto-companies/al-jernas-used-cars-trading-fze-9539",
+        "maskedPublicNumbers": [
+          "05622688XX",
+          "05812255XX",
+          "05251681XX",
+          "05251934XX",
+          "05231915XX"
+        ],
+        "channels": [
+          {
+            "type": "marketplace_chat",
+            "url": "https://ae.opensooq.com/en/shops/shop-80568283",
+            "status": "public_advertised_route_not_tested_or_sent"
+          }
+        ],
+        "socialUrl": "https://www.instagram.com/aljernas_cars",
+        "phoneCaveat": "Public seller-attributed number; confirm current preferred contact before outreach."
+      },
+      "contact": {
+        "phone": "+971581225519",
+        "alternatePhones": [
+          "+971525168101"
+        ],
+        "sourceUrl": "https://uae.yallamotor.com/auto-companies/al-jernas-used-cars-trading-fze-9539",
+        "maskedPublicNumbers": [
+          "05622688XX",
+          "05812255XX",
+          "05251681XX",
+          "05251934XX",
+          "05231915XX"
+        ],
+        "channels": [
+          {
+            "type": "marketplace_chat",
+            "url": "https://ae.opensooq.com/en/shops/shop-80568283",
+            "status": "public_advertised_route_not_tested_or_sent"
+          }
+        ],
+        "socialUrl": "https://www.instagram.com/aljernas_cars",
+        "phoneCaveat": "Public seller-attributed number; confirm current preferred contact before outreach."
+      },
+      "fitScore": 86,
+      "fitReason": "Active independent dealer catalogue and a possible standalone website gap support a six-design proposal. Purchasing ability and interest are unconfirmed.",
+      "confidence": "medium_high_research",
+      "verificationStatus": "screened_not_build_ready",
+      "nextAction": "Confirm legal trading identity, current stock, exact premises, owned-domain aliases and preferred direct business contact before build or outreach.",
+      "sources": [
+        {
+          "url": "https://ae.opensooq.com/en/shops/shop-80568283",
+          "role": "original_current_dealer_catalogue_priced_recent_stock_and_contact_controls",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://uae.yallamotor.com/auto-companies/al-jernas-used-cars-trading-fze-9539",
+          "role": "primary_named_seller_contact_corroboration",
+          "checkedAt": "2026-10-18"
+        }
+      ],
+      "publicBusinessContact": {
+        "phone": "+971581225519",
+        "alternatePhones": [
+          "+971525168101"
+        ],
+        "sourceUrl": "https://uae.yallamotor.com/auto-companies/al-jernas-used-cars-trading-fze-9539",
+        "maskedPublicNumbers": [
+          "05622688XX",
+          "05812255XX",
+          "05251681XX",
+          "05251934XX",
+          "05231915XX"
+        ],
+        "channels": [
+          {
+            "type": "marketplace_chat",
+            "url": "https://ae.opensooq.com/en/shops/shop-80568283",
+            "status": "public_advertised_route_not_tested_or_sent"
+          }
+        ],
+        "socialUrl": "https://www.instagram.com/aljernas_cars",
+        "phoneCaveat": "Public seller-attributed number; confirm current preferred contact before outreach."
+      }
+    },
+    {
+      "id": "ae-sharjah-al-eman-opensooq",
+      "name": "Al Eman Used Cars (OpenSooq company)",
+      "aliases": [
+        "شركه الإيمان لتجاره السيارات المستعمله",
+        "شركة الإيمان لتجارة السيارات المستعملة"
+      ],
+      "country": "AE",
+      "city": "Sharjah",
+      "emirate": "Sharjah",
+      "address": "Souq Al Haraj, Sharjah in current vehicle ads; exact showroom requires confirmation",
+      "researchDate": "2026-10-18",
+      "qualification": {
+        "tier": "priority_research_candidate",
+        "countsTowardPriority400": true,
+        "reviewedAt": "2026-10-18",
+        "reason": "Opened original dealer catalogue with recent priced vehicle ads, legitimate public contact route and bounded website/alias search."
+      },
+      "priority": "priority_research_candidate",
+      "website_status": "no_official_site_found_after_check",
+      "website": {
+        "url": null,
+        "checkedAt": "2026-10-18",
+        "observations": [
+          "No matching official dealer-owned website surfaced in the recorded bounded checks. This does not establish that no website exists.",
+          "ArabWheels Al Eman publishes 0502509280 at Al Ruqa Al Hamra, but that number does not match currently visible masked staff prefixes. Preserve as an unconfirmed possible namesake/older contact, not a callable contact. A directory's old closed Bu Shaghara Al Iman entry is not evidence this current shop is closed."
+        ],
+        "searchChecks": [
+          "\"شركه الإيمان\" \"لتجاره السيارات\" الشارقة",
+          "\"Al Eman Used Cars\" Sharjah website",
+          "\"Al Iman\" \"Used Cars\" Sharjah website",
+          "\"Al Eman\" \"0502509280\"",
+          "\"شركه الإيمان\" السيارات موقع"
+        ],
+        "status": "no_official_site_found_after_check"
+      },
+      "inventory": {
+        "sourceUrl": "https://ae.opensooq.com/en/shops/shop-66913328",
+        "reportedListings": 61,
+        "kind": "original_marketplace_live_listings_snapshot",
+        "observedAt": "2026-10-18",
+        "examples": [
+          {
+            "title": "Nissan Patrol LE Platinum 2017",
+            "price_aed": 53000,
+            "mileage_km": 175000,
+            "sourceDateLabel": "7 hours ago on 18 October 2026",
+            "sourceUrl": "https://ae.opensooq.com/en/shops/shop-66913328"
+          },
+          {
+            "title": "Toyota Yaris SE 2023",
+            "price_aed": 37000,
+            "mileage_km": 57000,
+            "sourceDateLabel": "8 hours ago on 18 October 2026",
+            "sourceUrl": "https://ae.opensooq.com/en/shops/shop-66913328"
+          },
+          {
+            "title": "Kia Optima EX Hybrid 2013",
+            "price_aed": 16500,
+            "mileage_km": 113000,
+            "sourceDateLabel": "8 hours ago on 18 October 2026",
+            "sourceUrl": "https://ae.opensooq.com/en/shops/shop-66913328"
+          }
+        ],
+        "caveat": "Live Listings is the marketplace all-category profile count; observed first-page cards are vehicles. Advertisements may be syndicated, stale or duplicate; physical availability and ownership were not independently confirmed."
+      },
+      "businessContact": {
+        "phone": null,
+        "alternatePhones": [],
+        "sourceUrl": "https://ae.opensooq.com/en/shops/shop-66913328",
+        "maskedPublicNumbers": [
+          "05022924XX",
+          "05441717XX",
+          "05551178XX"
+        ],
+        "channels": [
+          {
+            "type": "marketplace_chat",
+            "url": "https://ae.opensooq.com/en/shops/shop-66913328",
+            "status": "public_advertised_route_not_tested_or_sent"
+          }
+        ],
+        "socialUrl": null,
+        "phoneCaveat": "Full phone was not exposed; no masked digits were guessed. Confirm direct business contact before build/outreach."
+      },
+      "contact": {
+        "phone": null,
+        "alternatePhones": [],
+        "sourceUrl": "https://ae.opensooq.com/en/shops/shop-66913328",
+        "maskedPublicNumbers": [
+          "05022924XX",
+          "05441717XX",
+          "05551178XX"
+        ],
+        "channels": [
+          {
+            "type": "marketplace_chat",
+            "url": "https://ae.opensooq.com/en/shops/shop-66913328",
+            "status": "public_advertised_route_not_tested_or_sent"
+          }
+        ],
+        "socialUrl": null,
+        "phoneCaveat": "Full phone was not exposed; no masked digits were guessed. Confirm direct business contact before build/outreach."
+      },
+      "fitScore": 80,
+      "fitReason": "Active independent dealer catalogue and a possible standalone website gap support a six-design proposal. Purchasing ability and interest are unconfirmed.",
+      "confidence": "medium_research_contact_route_only",
+      "verificationStatus": "screened_not_build_ready",
+      "nextAction": "Confirm legal trading identity, current stock, exact premises, owned-domain aliases and preferred direct business contact before build or outreach.",
+      "sources": [
+        {
+          "url": "https://ae.opensooq.com/en/shops/shop-66913328",
+          "role": "original_current_dealer_catalogue_priced_recent_stock_and_contact_controls",
+          "checkedAt": "2026-10-18"
+        }
+      ],
+      "publicBusinessContact": {
+        "phone": null,
+        "alternatePhones": [],
+        "sourceUrl": "https://ae.opensooq.com/en/shops/shop-66913328",
+        "maskedPublicNumbers": [
+          "05022924XX",
+          "05441717XX",
+          "05551178XX"
+        ],
+        "channels": [
+          {
+            "type": "marketplace_chat",
+            "url": "https://ae.opensooq.com/en/shops/shop-66913328",
+            "status": "public_advertised_route_not_tested_or_sent"
+          }
+        ],
+        "socialUrl": null,
+        "phoneCaveat": "Full phone was not exposed; no masked digits were guessed. Confirm direct business contact before build/outreach."
+      }
+    },
+    {
+      "id": "ae-sharjah-ahmad-alnajem-used-cars",
+      "name": "Ahmad Alnajem Used Cars",
+      "aliases": [
+        "معرض احمد النجم للسيارات المستعملة",
+        "Ahmed Al Najm Used Cars"
+      ],
+      "country": "AE",
+      "city": "Sharjah",
+      "emirate": "Sharjah",
+      "address": "Souq Al Haraj and SAIF, Sharjah in current ads; exact showroom unconfirmed",
+      "researchDate": "2026-10-18",
+      "qualification": {
+        "tier": "priority_research_candidate",
+        "countsTowardPriority400": true,
+        "reviewedAt": "2026-10-18",
+        "reason": "Opened original dealer catalogue with recent priced vehicle ads, legitimate public contact route and bounded website/alias search."
+      },
+      "priority": "priority_research_candidate",
+      "website_status": "no_official_site_found_after_check",
+      "website": {
+        "url": null,
+        "checkedAt": "2026-10-18",
+        "observations": [
+          "No matching official dealer-owned website surfaced in the recorded bounded checks. This does not establish that no website exists.",
+          "Public OneClickDrive seller WhatsApp link exposes +971527911800 for a seller-attributed Charger SRT8 2018 AED65,000. The same brand has multiple OpenSooq staff numbers; this full number is from the separately named seller profile, not a reconstruction of a masked number. Al Najem/Ahmed aliases and legal ownership need final confirmation."
+        ],
+        "searchChecks": [
+          "\"معرض احمد النجم\" سيارات",
+          "\"Ahmad Alnajem Used Cars\" website",
+          "\"Ahmed Al Najm\" used cars website",
+          "\"أحمد النجم\" \"سيارات\" موقع",
+          "\"0527911800\""
+        ],
+        "status": "no_official_site_found_after_check"
+      },
+      "inventory": {
+        "sourceUrl": "https://ae.opensooq.com/en/shops/shop-10216703",
+        "reportedListings": 37,
+        "kind": "original_marketplace_live_listings_snapshot",
+        "observedAt": "2026-10-18",
+        "examples": [
+          {
+            "title": "Chevrolet Tahoe LTZ 2011",
+            "price_aed": 19999,
+            "mileage_km": 235059,
+            "sourceDateLabel": "6 hours ago on 18 October 2026",
+            "sourceUrl": "https://ae.opensooq.com/en/search/288812072"
+          },
+          {
+            "title": "Renault Duster LE 2018",
+            "price_aed": 13000,
+            "mileage_km": 110000,
+            "sourceDateLabel": "14 hours ago on 18 October 2026",
+            "sourceUrl": "https://ae.opensooq.com/en/shops/shop-10216703"
+          },
+          {
+            "title": "Cadillac SRX Luxury 2012",
+            "price_aed": 13000,
+            "mileage_km": 150000,
+            "sourceDateLabel": "14 hours ago on 18 October 2026",
+            "sourceUrl": "https://ae.opensooq.com/en/shops/shop-10216703"
+          }
+        ],
+        "caveat": "Live Listings is the marketplace all-category profile count; observed first-page cards are vehicles. Advertisements may be syndicated, stale or duplicate; physical availability and ownership were not independently confirmed."
+      },
+      "businessContact": {
+        "phone": "+971527911800",
+        "alternatePhones": [],
+        "sourceUrl": "https://www.oneclickdrive.com/company/sharjah/ahmad-alnajem-used-cars",
+        "maskedPublicNumbers": [
+          "05279990XX",
+          "05666434XX",
+          "05888142XX",
+          "05543544XX"
+        ],
+        "channels": [
+          {
+            "type": "marketplace_chat",
+            "url": "https://ae.opensooq.com/en/shops/shop-10216703",
+            "status": "public_advertised_route_not_tested_or_sent"
+          }
+        ],
+        "socialUrl": null,
+        "phoneCaveat": "Public seller-attributed number; confirm current preferred contact before outreach."
+      },
+      "contact": {
+        "phone": "+971527911800",
+        "alternatePhones": [],
+        "sourceUrl": "https://www.oneclickdrive.com/company/sharjah/ahmad-alnajem-used-cars",
+        "maskedPublicNumbers": [
+          "05279990XX",
+          "05666434XX",
+          "05888142XX",
+          "05543544XX"
+        ],
+        "channels": [
+          {
+            "type": "marketplace_chat",
+            "url": "https://ae.opensooq.com/en/shops/shop-10216703",
+            "status": "public_advertised_route_not_tested_or_sent"
+          }
+        ],
+        "socialUrl": null,
+        "phoneCaveat": "Public seller-attributed number; confirm current preferred contact before outreach."
+      },
+      "fitScore": 81,
+      "fitReason": "Active independent dealer catalogue and a possible standalone website gap support a six-design proposal. Purchasing ability and interest are unconfirmed.",
+      "confidence": "medium_high_research",
+      "verificationStatus": "screened_not_build_ready",
+      "nextAction": "Confirm legal trading identity, current stock, exact premises, owned-domain aliases and preferred direct business contact before build or outreach.",
+      "sources": [
+        {
+          "url": "https://ae.opensooq.com/en/shops/shop-10216703",
+          "role": "original_current_dealer_catalogue_priced_recent_stock_and_contact_controls",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://www.oneclickdrive.com/company/sharjah/ahmad-alnajem-used-cars",
+          "role": "primary_named_seller_contact_corroboration",
+          "checkedAt": "2026-10-18"
+        }
+      ],
+      "publicBusinessContact": {
+        "phone": "+971527911800",
+        "alternatePhones": [],
+        "sourceUrl": "https://www.oneclickdrive.com/company/sharjah/ahmad-alnajem-used-cars",
+        "maskedPublicNumbers": [
+          "05279990XX",
+          "05666434XX",
+          "05888142XX",
+          "05543544XX"
+        ],
+        "channels": [
+          {
+            "type": "marketplace_chat",
+            "url": "https://ae.opensooq.com/en/shops/shop-10216703",
+            "status": "public_advertised_route_not_tested_or_sent"
+          }
+        ],
+        "socialUrl": null,
+        "phoneCaveat": "Public seller-attributed number; confirm current preferred contact before outreach."
+      }
+    },
+    {
+      "id": "ae-sharjah-ajman-tawhib-cars-trading",
+      "name": "Tawhib Cars Trading",
+      "aliases": [
+        "Tawhib"
+      ],
+      "country": "AE",
+      "city": "Sharjah / Ajman",
+      "emirate": "Sharjah / Ajman",
+      "address": "Profile says Sharjah; current ads in Al Alia Ajman, Al Rahmaniya and SAIF Sharjah; exact premises unconfirmed",
+      "researchDate": "2026-10-18",
+      "qualification": {
+        "tier": "priority_research_candidate",
+        "countsTowardPriority400": true,
+        "reviewedAt": "2026-10-18",
+        "reason": "Opened original dealer catalogue with recent priced vehicle ads, legitimate public contact route and bounded website/alias search."
+      },
+      "priority": "priority_research_candidate",
+      "website_status": "no_official_site_found_after_check",
+      "website": {
+        "url": null,
+        "checkedAt": "2026-10-18",
+        "observations": [
+          "No matching official dealer-owned website surfaced in the recorded bounded checks. This does not establish that no website exists.",
+          "Cross-emirate ads may be staff distribution or brokerage; confirm business address and ownership before personalization. Search results for unrelated category-filtered versions show zero listings; the canonical all-category shop shows current car ads and 36 live listings."
+        ],
+        "searchChecks": [
+          "\"Tawhib Cars Trading\" website",
+          "\"Tawhib\" cars website",
+          "\"Tawhib Cars\" Sharjah contact",
+          "\"توهب\" \"سيارات\""
+        ],
+        "status": "no_official_site_found_after_check"
+      },
+      "inventory": {
+        "sourceUrl": "https://ae.opensooq.com/en/shops/shop-46363162",
+        "reportedListings": 36,
+        "kind": "original_marketplace_live_listings_snapshot",
+        "observedAt": "2026-10-18",
+        "examples": [
+          {
+            "title": "Mitsubishi L200 Double Cab GLX 2021",
+            "price_aed": 40500,
+            "mileage_km": 35000,
+            "sourceDateLabel": "10 hours ago on 18 October 2026",
+            "sourceUrl": "https://ae.opensooq.com/en/search/288463502"
+          },
+          {
+            "title": "Changan UNI-K Platinum 2024",
+            "price_aed": 78000,
+            "mileage_km": 29000,
+            "sourceDateLabel": "12 hours ago on 18 October 2026",
+            "sourceUrl": "https://ae.opensooq.com/en/shops/shop-46363162"
+          },
+          {
+            "title": "Nissan Patrol LE Platinum 2016",
+            "price_aed": 58500,
+            "mileage_km": 210000,
+            "sourceDateLabel": "Yesterday (17 October 2026)",
+            "sourceUrl": "https://ae.opensooq.com/en/shops/shop-46363162"
+          }
+        ],
+        "caveat": "Live Listings is the marketplace all-category profile count; observed first-page cards are vehicles. Advertisements may be syndicated, stale or duplicate; physical availability and ownership were not independently confirmed."
+      },
+      "businessContact": {
+        "phone": null,
+        "alternatePhones": [],
+        "sourceUrl": "https://ae.opensooq.com/en/shops/shop-46363162",
+        "maskedPublicNumbers": [
+          "05655650XX",
+          "05573370XX"
+        ],
+        "channels": [
+          {
+            "type": "marketplace_chat",
+            "url": "https://ae.opensooq.com/en/shops/shop-46363162",
+            "status": "public_advertised_route_not_tested_or_sent"
+          }
+        ],
+        "socialUrl": null,
+        "phoneCaveat": "Full phone was not exposed; no masked digits were guessed. Confirm direct business contact before build/outreach."
+      },
+      "contact": {
+        "phone": null,
+        "alternatePhones": [],
+        "sourceUrl": "https://ae.opensooq.com/en/shops/shop-46363162",
+        "maskedPublicNumbers": [
+          "05655650XX",
+          "05573370XX"
+        ],
+        "channels": [
+          {
+            "type": "marketplace_chat",
+            "url": "https://ae.opensooq.com/en/shops/shop-46363162",
+            "status": "public_advertised_route_not_tested_or_sent"
+          }
+        ],
+        "socialUrl": null,
+        "phoneCaveat": "Full phone was not exposed; no masked digits were guessed. Confirm direct business contact before build/outreach."
+      },
+      "fitScore": 77,
+      "fitReason": "Active independent dealer catalogue and a possible standalone website gap support a six-design proposal. Purchasing ability and interest are unconfirmed.",
+      "confidence": "medium_research_contact_route_only",
+      "verificationStatus": "screened_not_build_ready",
+      "nextAction": "Confirm legal trading identity, current stock, exact premises, owned-domain aliases and preferred direct business contact before build or outreach.",
+      "sources": [
+        {
+          "url": "https://ae.opensooq.com/en/shops/shop-46363162",
+          "role": "original_current_dealer_catalogue_priced_recent_stock_and_contact_controls",
+          "checkedAt": "2026-10-18"
+        }
+      ],
+      "publicBusinessContact": {
+        "phone": null,
+        "alternatePhones": [],
+        "sourceUrl": "https://ae.opensooq.com/en/shops/shop-46363162",
+        "maskedPublicNumbers": [
+          "05655650XX",
+          "05573370XX"
+        ],
+        "channels": [
+          {
+            "type": "marketplace_chat",
+            "url": "https://ae.opensooq.com/en/shops/shop-46363162",
+            "status": "public_advertised_route_not_tested_or_sent"
+          }
+        ],
+        "socialUrl": null,
+        "phoneCaveat": "Full phone was not exposed; no masked digits were guessed. Confirm direct business contact before build/outreach."
+      }
+    },
+    {
+      "id": "ae-sharjah-farouk-khalaf-cars-trading",
+      "name": "Farouk Khalaf Cars Trading",
+      "aliases": [
+        "معرض فاروق خلف لتجارة السيارات",
+        "Farouk Khalaf Used Cars",
+        "faroukkhalaf"
+      ],
+      "country": "AE",
+      "city": "Sharjah",
+      "emirate": "Sharjah",
+      "address": "Souq Al Haraj, Sharjah in current ads; AUTO.AE does not publish exact premises",
+      "researchDate": "2026-10-18",
+      "qualification": {
+        "tier": "priority_research_candidate",
+        "countsTowardPriority400": true,
+        "reviewedAt": "2026-10-18",
+        "reason": "Opened original dealer catalogue with recent priced vehicle ads, legitimate public contact route and bounded website/alias search."
+      },
+      "priority": "priority_research_candidate",
+      "website_status": "no_official_site_found_after_check",
+      "website": {
+        "url": null,
+        "checkedAt": "2026-10-18",
+        "observations": [
+          "No matching official dealer-owned website surfaced in the recorded bounded checks. This does not establish that no website exists.",
+          "Separate seller AUTO.AE/faroukkhalaf advertises 40 cars with actual model/price cards, but counts and prices differ and are not added. Telegram handle and LinkedIn search results are unverified associations, not adopted contact channels."
+        ],
+        "searchChecks": [
+          "\"Farouk Khalaf\" cars Sharjah website",
+          "\"فاروق خلف\" \"سيارات\" \"الشارقة\"",
+          "\"Farouk Khalaf\" cars website",
+          "\"فاروق خلف\" \"سيارات\" موقع"
+        ],
+        "status": "no_official_site_found_after_check"
+      },
+      "inventory": {
+        "sourceUrl": "https://ae.opensooq.com/en/shops/shop-69676222",
+        "reportedListings": 30,
+        "kind": "original_marketplace_live_listings_snapshot",
+        "observedAt": "2026-10-18",
+        "examples": [
+          {
+            "title": "Hyundai Santa Fe Standard 2015",
+            "price_aed": 20000,
+            "mileage_km": 146403,
+            "sourceDateLabel": "11 hours ago on 18 October 2026",
+            "sourceUrl": "https://ae.opensooq.com/en/search/288797418"
+          },
+          {
+            "title": "Kia Rio 2014",
+            "price_aed": 12500,
+            "mileage_km": 139459,
+            "sourceDateLabel": "15 October 2026",
+            "sourceUrl": "https://ae.opensooq.com/en/shops/shop-69676222"
+          },
+          {
+            "title": "Kia Optima EX Hybrid 2015",
+            "price_aed": 17000,
+            "mileage_km": 187942,
+            "sourceDateLabel": "15 October 2026",
+            "sourceUrl": "https://ae.opensooq.com/en/shops/shop-69676222"
+          }
+        ],
+        "caveat": "Live Listings is the marketplace all-category profile count; observed first-page cards are vehicles. Advertisements may be syndicated, stale or duplicate; physical availability and ownership were not independently confirmed."
+      },
+      "businessContact": {
+        "phone": null,
+        "alternatePhones": [],
+        "sourceUrl": "https://ae.opensooq.com/en/shops/shop-69676222",
+        "maskedPublicNumbers": [
+          "05034593XX",
+          "05299077XX"
+        ],
+        "channels": [
+          {
+            "type": "marketplace_chat",
+            "url": "https://ae.opensooq.com/en/shops/shop-69676222",
+            "status": "public_advertised_route_not_tested_or_sent"
+          }
+        ],
+        "socialUrl": null,
+        "phoneCaveat": "Full phone was not exposed; no masked digits were guessed. Confirm direct business contact before build/outreach."
+      },
+      "contact": {
+        "phone": null,
+        "alternatePhones": [],
+        "sourceUrl": "https://ae.opensooq.com/en/shops/shop-69676222",
+        "maskedPublicNumbers": [
+          "05034593XX",
+          "05299077XX"
+        ],
+        "channels": [
+          {
+            "type": "marketplace_chat",
+            "url": "https://ae.opensooq.com/en/shops/shop-69676222",
+            "status": "public_advertised_route_not_tested_or_sent"
+          }
+        ],
+        "socialUrl": null,
+        "phoneCaveat": "Full phone was not exposed; no masked digits were guessed. Confirm direct business contact before build/outreach."
+      },
+      "fitScore": 79,
+      "fitReason": "Active independent dealer catalogue and a possible standalone website gap support a six-design proposal. Purchasing ability and interest are unconfirmed.",
+      "confidence": "medium_research_contact_route_only",
+      "verificationStatus": "screened_not_build_ready",
+      "nextAction": "Confirm legal trading identity, current stock, exact premises, owned-domain aliases and preferred direct business contact before build or outreach.",
+      "sources": [
+        {
+          "url": "https://ae.opensooq.com/en/shops/shop-69676222",
+          "role": "original_current_dealer_catalogue_priced_recent_stock_and_contact_controls",
+          "checkedAt": "2026-10-18"
+        }
+      ],
+      "publicBusinessContact": {
+        "phone": null,
+        "alternatePhones": [],
+        "sourceUrl": "https://ae.opensooq.com/en/shops/shop-69676222",
+        "maskedPublicNumbers": [
+          "05034593XX",
+          "05299077XX"
+        ],
+        "channels": [
+          {
+            "type": "marketplace_chat",
+            "url": "https://ae.opensooq.com/en/shops/shop-69676222",
+            "status": "public_advertised_route_not_tested_or_sent"
+          }
+        ],
+        "socialUrl": null,
+        "phoneCaveat": "Full phone was not exposed; no masked digits were guessed. Confirm direct business contact before build/outreach."
+      }
+    },
+    {
+      "id": "ae-ajman-somer-ibrahim-cars",
+      "name": "Somer Ibrahim Cars",
+      "aliases": [
+        "سومر ابراهيم للسيارات",
+        "Sumer Ibrahim Cars",
+        "Somar Ibrahim Cars"
+      ],
+      "country": "AE",
+      "city": "Ajman",
+      "emirate": "Ajman",
+      "address": "Al Jurf, Ajman in original current ads; exact showroom and legal trading name unconfirmed",
+      "researchDate": "2026-10-18",
+      "qualification": {
+        "tier": "priority_research_candidate",
+        "countsTowardPriority400": true,
+        "reviewedAt": "2026-10-18",
+        "reason": "Opened original dealer/trader catalogue, recent distinct priced cars and public contact route; no matched official domain in bounded alias/location checks."
+      },
+      "priority": "priority_research_candidate",
+      "website_status": "no_official_site_found_after_check",
+      "website": {
+        "url": null,
+        "checkedAt": "2026-10-18",
+        "observations": [
+          "Bounded search found no confidently matched official dealer-owned website. Another spelling, brand or group site remains possible.",
+          "Named trader shop with substantial distinct advertised vehicles, not merely a directory name. Legal dealer/company identity and physical premises must be confirmed; no personal contact was copied from unrelated same-name search results."
+        ],
+        "searchChecks": [
+          "\"سومر ابراهيم\" سيارات",
+          "\"Sumer Ibrahim\" cars Ajman website",
+          "\"سومر ابراهيم للسيارات\"",
+          "\"Somar Ibrahim\" Ajman cars",
+          "\"سومر ابراهيم\" \"05043932\""
+        ],
+        "status": "no_official_site_found_after_check"
+      },
+      "inventory": {
+        "sourceUrl": "https://ae.opensooq.com/en/shops/shop-67330134",
+        "reportedListings": 22,
+        "kind": "original_marketplace_live_listings_snapshot",
+        "observedAt": "2026-10-18",
+        "examples": [
+          {
+            "title": "Nissan Sentra Standard 2020",
+            "price_aed": 20000,
+            "mileage_km": 140000,
+            "sourceDateLabel": "11 hours ago on 18 October 2026",
+            "sourceUrl": "https://ae.opensooq.com/en/search/287972400"
+          },
+          {
+            "title": "Mitsubishi L200 Standard 2022",
+            "price_aed": 49000,
+            "mileage_km": 120000,
+            "sourceDateLabel": "11 hours ago on 18 October 2026",
+            "sourceUrl": "https://ae.opensooq.com/en/shops/shop-67330134"
+          },
+          {
+            "title": "Mitsubishi Attrage Standard 2023",
+            "price_aed": 23000,
+            "mileage_km": 60000,
+            "sourceDateLabel": "11 hours ago on 18 October 2026",
+            "sourceUrl": "https://ae.opensooq.com/en/shops/shop-67330134"
+          }
+        ],
+        "caveat": "All-category live-listing count is an advertised snapshot; opened first-page cards are cars. Availability, unique stock and dealer ownership are not independently confirmed; syndication/reposts possible."
+      },
+      "businessContact": {
+        "phone": null,
+        "sourceUrl": "https://ae.opensooq.com/en/shops/shop-67330134",
+        "maskedPublicNumbers": [
+          "05043932XX"
+        ],
+        "channels": [
+          {
+            "type": "marketplace_chat",
+            "url": "https://ae.opensooq.com/en/shops/shop-67330134",
+            "status": "public_advertised_route_not_tested_or_sent"
+          }
+        ],
+        "phoneCaveat": "Full direct phone not exposed. No masked digits were inferred. Confirm preferred direct business contact before build or outreach."
+      },
+      "contact": {
+        "phone": null,
+        "sourceUrl": "https://ae.opensooq.com/en/shops/shop-67330134",
+        "maskedPublicNumbers": [
+          "05043932XX"
+        ],
+        "channels": [
+          {
+            "type": "marketplace_chat",
+            "url": "https://ae.opensooq.com/en/shops/shop-67330134",
+            "status": "public_advertised_route_not_tested_or_sent"
+          }
+        ],
+        "phoneCaveat": "Full direct phone not exposed. No masked digits were inferred. Confirm preferred direct business contact before build or outreach."
+      },
+      "fitScore": 76,
+      "fitReason": "A current independent seller catalogue and possible website gap support proposal screening; spending capacity and buying interest remain unknown.",
+      "confidence": "medium_research_contact_route_only",
+      "verificationStatus": "screened_not_build_ready",
+      "nextAction": "Confirm legal company identity, exact premises, current distinct stock, group/owned-domain aliases and preferred direct business contact before build or outreach.",
+      "sources": [
+        {
+          "url": "https://ae.opensooq.com/en/shops/shop-67330134",
+          "role": "original_current_named_seller_shop_priced_recent_stock_and_public_contact_route",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://ae.opensooq.com/en/search/287972400",
+          "role": "specific_original_vehicle_ad",
+          "checkedAt": "2026-10-18"
+        }
+      ],
+      "publicBusinessContact": {
+        "phone": null,
+        "sourceUrl": "https://ae.opensooq.com/en/shops/shop-67330134",
+        "maskedPublicNumbers": [
+          "05043932XX"
+        ],
+        "channels": [
+          {
+            "type": "marketplace_chat",
+            "url": "https://ae.opensooq.com/en/shops/shop-67330134",
+            "status": "public_advertised_route_not_tested_or_sent"
+          }
+        ],
+        "phoneCaveat": "Full direct phone not exposed. No masked digits were inferred. Confirm preferred direct business contact before build or outreach."
+      }
+    },
+    {
+      "id": "ae-ajman-amazon-213-car-showroom",
+      "name": "Amazon 213 Car Showroom",
+      "aliases": [
+        "معرض الامازون 213",
+        "Amazon Used Cars",
+        "Amazon Ajman"
+      ],
+      "country": "AE",
+      "city": "Ajman",
+      "emirate": "Ajman",
+      "address": "Al Jurf, Ajman; showroom number 213 is stated in original profile name; exact premises unconfirmed",
+      "researchDate": "2026-10-18",
+      "qualification": {
+        "tier": "priority_research_candidate",
+        "countsTowardPriority400": true,
+        "reviewedAt": "2026-10-18",
+        "reason": "Opened original dealer/trader catalogue, recent distinct priced cars and public contact route; no matched official domain in bounded alias/location checks."
+      },
+      "priority": "priority_research_candidate",
+      "website_status": "no_official_site_found_after_check",
+      "website": {
+        "url": null,
+        "checkedAt": "2026-10-18",
+        "observations": [
+          "Bounded search found no confidently matched official dealer-owned website. Another spelling, brand or group site remains possible.",
+          "Exact-name AUTO.AE/amazon seller also says showroom213, supporting identity; its catalogue count is a separate snapshot. No association with Amazon retail or unrelated overseas car dealers is implied."
+        ],
+        "searchChecks": [
+          "\"معرض الامازون\" \"213\"",
+          "\"Amazon\" \"213\" cars Ajman website",
+          "\"Amazon Used Cars\" Ajman website",
+          "\"الامازون\" \"05443898\"",
+          "\"معرض الامازون\" \"عجمان\" موقع"
+        ],
+        "status": "no_official_site_found_after_check"
+      },
+      "inventory": {
+        "sourceUrl": "https://ae.opensooq.com/en/shops/shop-74997803",
+        "reportedListings": 25,
+        "kind": "original_marketplace_live_listings_snapshot",
+        "observedAt": "2026-10-18",
+        "examples": [
+          {
+            "title": "Mitsubishi Attrage Standard 2022",
+            "price_aed": 23000,
+            "mileage_km": 162000,
+            "sourceDateLabel": "52 minutes ago on 18 October 2026",
+            "sourceUrl": "https://ae.opensooq.com/en/search/288825714"
+          },
+          {
+            "title": "Dodge Ram Big Horn 2022",
+            "price_aed": 80000,
+            "mileage_km": 32000,
+            "sourceDateLabel": "16 hours ago on 18 October 2026",
+            "sourceUrl": "https://ae.opensooq.com/en/shops/shop-74997803"
+          },
+          {
+            "title": "Mitsubishi Xpander 2021",
+            "price_aed": 38000,
+            "mileage_km": 115000,
+            "sourceDateLabel": "Yesterday (17 October 2026)",
+            "sourceUrl": "https://ae.opensooq.com/en/shops/shop-74997803"
+          }
+        ],
+        "caveat": "All-category live-listing count is an advertised snapshot; opened first-page cards are cars. Availability, unique stock and dealer ownership are not independently confirmed; syndication/reposts possible."
+      },
+      "businessContact": {
+        "phone": null,
+        "sourceUrl": "https://ae.opensooq.com/en/shops/shop-74997803",
+        "maskedPublicNumbers": [
+          "05443898XX"
+        ],
+        "channels": [
+          {
+            "type": "marketplace_chat",
+            "url": "https://ae.opensooq.com/en/shops/shop-74997803",
+            "status": "public_advertised_route_not_tested_or_sent"
+          }
+        ],
+        "phoneCaveat": "Full direct phone not exposed. No masked digits were inferred. Confirm preferred direct business contact before build or outreach."
+      },
+      "contact": {
+        "phone": null,
+        "sourceUrl": "https://ae.opensooq.com/en/shops/shop-74997803",
+        "maskedPublicNumbers": [
+          "05443898XX"
+        ],
+        "channels": [
+          {
+            "type": "marketplace_chat",
+            "url": "https://ae.opensooq.com/en/shops/shop-74997803",
+            "status": "public_advertised_route_not_tested_or_sent"
+          }
+        ],
+        "phoneCaveat": "Full direct phone not exposed. No masked digits were inferred. Confirm preferred direct business contact before build or outreach."
+      },
+      "fitScore": 79,
+      "fitReason": "A current independent seller catalogue and possible website gap support proposal screening; spending capacity and buying interest remain unknown.",
+      "confidence": "medium_research_contact_route_only",
+      "verificationStatus": "screened_not_build_ready",
+      "nextAction": "Confirm legal company identity, exact premises, current distinct stock, group/owned-domain aliases and preferred direct business contact before build or outreach.",
+      "sources": [
+        {
+          "url": "https://ae.opensooq.com/en/shops/shop-74997803",
+          "role": "original_current_named_seller_shop_priced_recent_stock_and_public_contact_route",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://ae.opensooq.com/en/search/288825714",
+          "role": "specific_original_vehicle_ad",
+          "checkedAt": "2026-10-18"
+        }
+      ],
+      "publicBusinessContact": {
+        "phone": null,
+        "sourceUrl": "https://ae.opensooq.com/en/shops/shop-74997803",
+        "maskedPublicNumbers": [
+          "05443898XX"
+        ],
+        "channels": [
+          {
+            "type": "marketplace_chat",
+            "url": "https://ae.opensooq.com/en/shops/shop-74997803",
+            "status": "public_advertised_route_not_tested_or_sent"
+          }
+        ],
+        "phoneCaveat": "Full direct phone not exposed. No masked digits were inferred. Confirm preferred direct business contact before build or outreach."
+      }
+    },
+    {
+      "id": "ae-sharjah-al-sabah-used-cars-opensooq",
+      "name": "Al Sabah Used Cars Trading",
+      "aliases": [
+        "الصباح لتجارة السيارات المستعملة",
+        "معرض الصباح لتجارة السيارات"
+      ],
+      "country": "AE",
+      "city": "Sharjah",
+      "emirate": "Sharjah",
+      "address": "Souq Al Haraj, Sharjah in original vehicle ads; exact showroom unconfirmed",
+      "researchDate": "2026-10-18",
+      "qualification": {
+        "tier": "priority_research_candidate",
+        "countsTowardPriority400": true,
+        "reviewedAt": "2026-10-18",
+        "reason": "Opened original dealer/trader catalogue, recent distinct priced cars and public contact route; no matched official domain in bounded alias/location checks."
+      },
+      "priority": "priority_research_candidate",
+      "website_status": "no_official_site_found_after_check",
+      "website": {
+        "url": null,
+        "checkedAt": "2026-10-18",
+        "observations": [
+          "Bounded search found no confidently matched official dealer-owned website. Another spelling, brand or group site remains possible.",
+          "Al Sabah is a different advertised trading name from existing Shams Al Sabah. Separate DubiCars2127 exists for Al Sabah while Shams is2679; no phone or group connection was found in bounded checks, but ownership should be confirmed. Empty older DubiCars2127 and its generic similar cars are not stock evidence; current OpenSooq has20live and dated vehicle ads."
+        ],
+        "searchChecks": [
+          "\"الصباح لتجارة السيارات المستعملة\"",
+          "\"Al Sabah\" used cars Sharjah website",
+          "\"Al Sabah\" \"05056717\"",
+          "\"الصباح\" \"شمس الصباح\" سيارات",
+          "\"الصباح\" \"05056717\""
+        ],
+        "status": "no_official_site_found_after_check"
+      },
+      "inventory": {
+        "sourceUrl": "https://ae.opensooq.com/en/shops/shop-63569675",
+        "reportedListings": 20,
+        "kind": "original_marketplace_live_listings_snapshot",
+        "observedAt": "2026-10-18",
+        "examples": [
+          {
+            "title": "Nissan Patrol LE 2021",
+            "price_aed": 143000,
+            "mileage_km": 142000,
+            "sourceDateLabel": "Yesterday (17 October 2026)",
+            "sourceUrl": "https://ae.opensooq.com/en/search/287743964"
+          },
+          {
+            "title": "GMC Sierra 1500 AT4 2022",
+            "price_aed": 105000,
+            "mileage_km": 152000,
+            "sourceDateLabel": "Yesterday (17 October 2026)",
+            "sourceUrl": "https://ae.opensooq.com/en/shops/shop-63569675"
+          },
+          {
+            "title": "Nissan Patrol LE 2021 (different mileage)",
+            "price_aed": 123000,
+            "mileage_km": 117000,
+            "sourceDateLabel": "Yesterday (17 October 2026)",
+            "sourceUrl": "https://ae.opensooq.com/en/shops/shop-63569675"
+          }
+        ],
+        "caveat": "All-category live-listing count is an advertised snapshot; opened first-page cards are cars. Availability, unique stock and dealer ownership are not independently confirmed; syndication/reposts possible."
+      },
+      "businessContact": {
+        "phone": null,
+        "sourceUrl": "https://ae.opensooq.com/en/shops/shop-63569675",
+        "maskedPublicNumbers": [
+          "05056717XX"
+        ],
+        "channels": [
+          {
+            "type": "marketplace_chat",
+            "url": "https://ae.opensooq.com/en/shops/shop-63569675",
+            "status": "public_advertised_route_not_tested_or_sent"
+          }
+        ],
+        "phoneCaveat": "Full direct phone not exposed. No masked digits were inferred. Confirm preferred direct business contact before build or outreach."
+      },
+      "contact": {
+        "phone": null,
+        "sourceUrl": "https://ae.opensooq.com/en/shops/shop-63569675",
+        "maskedPublicNumbers": [
+          "05056717XX"
+        ],
+        "channels": [
+          {
+            "type": "marketplace_chat",
+            "url": "https://ae.opensooq.com/en/shops/shop-63569675",
+            "status": "public_advertised_route_not_tested_or_sent"
+          }
+        ],
+        "phoneCaveat": "Full direct phone not exposed. No masked digits were inferred. Confirm preferred direct business contact before build or outreach."
+      },
+      "fitScore": 78,
+      "fitReason": "A current independent seller catalogue and possible website gap support proposal screening; spending capacity and buying interest remain unknown.",
+      "confidence": "medium_research_contact_route_only",
+      "verificationStatus": "screened_not_build_ready",
+      "nextAction": "Confirm legal company identity, exact premises, current distinct stock, group/owned-domain aliases and preferred direct business contact before build or outreach.",
+      "sources": [
+        {
+          "url": "https://ae.opensooq.com/en/shops/shop-63569675",
+          "role": "original_current_named_seller_shop_priced_recent_stock_and_public_contact_route",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://ae.opensooq.com/en/search/287743964",
+          "role": "specific_original_vehicle_ad",
+          "checkedAt": "2026-10-18"
+        }
+      ],
+      "publicBusinessContact": {
+        "phone": null,
+        "sourceUrl": "https://ae.opensooq.com/en/shops/shop-63569675",
+        "maskedPublicNumbers": [
+          "05056717XX"
+        ],
+        "channels": [
+          {
+            "type": "marketplace_chat",
+            "url": "https://ae.opensooq.com/en/shops/shop-63569675",
+            "status": "public_advertised_route_not_tested_or_sent"
+          }
+        ],
+        "phoneCaveat": "Full direct phone not exposed. No masked digits were inferred. Confirm preferred direct business contact before build or outreach."
+      }
+    },
+    {
+      "id": "ae-sharjah-lujain-used-cars-trading",
+      "name": "Lujain Used Cars Trading",
+      "aliases": [
+        "لجين لتجارة السيارات المستعملة",
+        "Lojain Used Cars"
+      ],
+      "country": "AE",
+      "city": "Sharjah",
+      "emirate": "Sharjah",
+      "address": "SAIF, Al Jada and Souq Al Haraj, Sharjah in current ads; exact premises unconfirmed",
+      "researchDate": "2026-10-18",
+      "qualification": {
+        "tier": "priority_research_candidate",
+        "countsTowardPriority400": true,
+        "reviewedAt": "2026-10-18",
+        "reason": "Opened original dealer/trader catalogue, recent distinct priced cars and public contact route; no matched official domain in bounded alias/location checks."
+      },
+      "priority": "priority_research_candidate",
+      "website_status": "no_official_site_found_after_check",
+      "website": {
+        "url": null,
+        "checkedAt": "2026-10-18",
+        "observations": [
+          "Bounded search found no confidently matched official dealer-owned website. Another spelling, brand or group site remains possible.",
+          "Multiple staff prefixes and cross-neighborhood ads require legal identity/location confirmation. Search results for Lujain metallic construction and building materials are unrelated activities and were not adopted as an owned dealer website."
+        ],
+        "searchChecks": [
+          "\"لجين\" \"سيارات\" \"الشارقة\"",
+          "\"Lujain Used Cars\" website",
+          "\"Lujain\" cars Sharjah website",
+          "\"Lojain\" cars Sharjah website",
+          "\"لجين لتجارة السيارات المستعملة\" موقع"
+        ],
+        "status": "no_official_site_found_after_check"
+      },
+      "inventory": {
+        "sourceUrl": "https://ae.opensooq.com/en/shops/shop-48219714",
+        "reportedListings": 19,
+        "kind": "original_marketplace_live_listings_snapshot",
+        "observedAt": "2026-10-18",
+        "examples": [
+          {
+            "title": "Toyota Camry SE 2022",
+            "price_aed": 69000,
+            "mileage_km": 91000,
+            "sourceDateLabel": "7 hours ago on 18 October 2026",
+            "sourceUrl": "https://ae.opensooq.com/en/search/287793450"
+          },
+          {
+            "title": "Kia Picanto GT-Line 2023",
+            "price_aed": 41000,
+            "mileage_km": 74000,
+            "sourceDateLabel": "13 hours ago on 18 October 2026",
+            "sourceUrl": "https://ae.opensooq.com/en/shops/shop-48219714"
+          },
+          {
+            "title": "Toyota Hiace GLS 2021",
+            "price_aed": 59000,
+            "mileage_km": 181000,
+            "sourceDateLabel": "Yesterday (17 October 2026)",
+            "sourceUrl": "https://ae.opensooq.com/en/shops/shop-48219714"
+          }
+        ],
+        "caveat": "All-category live-listing count is an advertised snapshot; opened first-page cards are cars. Availability, unique stock and dealer ownership are not independently confirmed; syndication/reposts possible."
+      },
+      "businessContact": {
+        "phone": null,
+        "sourceUrl": "https://ae.opensooq.com/en/shops/shop-48219714",
+        "maskedPublicNumbers": [
+          "05562554XX",
+          "05042017XX",
+          "05534234XX",
+          "05433056XX"
+        ],
+        "channels": [
+          {
+            "type": "marketplace_chat",
+            "url": "https://ae.opensooq.com/en/shops/shop-48219714",
+            "status": "public_advertised_route_not_tested_or_sent"
+          }
+        ],
+        "phoneCaveat": "Full direct phone not exposed. No masked digits were inferred. Confirm preferred direct business contact before build or outreach."
+      },
+      "contact": {
+        "phone": null,
+        "sourceUrl": "https://ae.opensooq.com/en/shops/shop-48219714",
+        "maskedPublicNumbers": [
+          "05562554XX",
+          "05042017XX",
+          "05534234XX",
+          "05433056XX"
+        ],
+        "channels": [
+          {
+            "type": "marketplace_chat",
+            "url": "https://ae.opensooq.com/en/shops/shop-48219714",
+            "status": "public_advertised_route_not_tested_or_sent"
+          }
+        ],
+        "phoneCaveat": "Full direct phone not exposed. No masked digits were inferred. Confirm preferred direct business contact before build or outreach."
+      },
+      "fitScore": 77,
+      "fitReason": "A current independent seller catalogue and possible website gap support proposal screening; spending capacity and buying interest remain unknown.",
+      "confidence": "medium_research_contact_route_only",
+      "verificationStatus": "screened_not_build_ready",
+      "nextAction": "Confirm legal company identity, exact premises, current distinct stock, group/owned-domain aliases and preferred direct business contact before build or outreach.",
+      "sources": [
+        {
+          "url": "https://ae.opensooq.com/en/shops/shop-48219714",
+          "role": "original_current_named_seller_shop_priced_recent_stock_and_public_contact_route",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://ae.opensooq.com/en/search/287793450",
+          "role": "specific_original_vehicle_ad",
+          "checkedAt": "2026-10-18"
+        }
+      ],
+      "publicBusinessContact": {
+        "phone": null,
+        "sourceUrl": "https://ae.opensooq.com/en/shops/shop-48219714",
+        "maskedPublicNumbers": [
+          "05562554XX",
+          "05042017XX",
+          "05534234XX",
+          "05433056XX"
+        ],
+        "channels": [
+          {
+            "type": "marketplace_chat",
+            "url": "https://ae.opensooq.com/en/shops/shop-48219714",
+            "status": "public_advertised_route_not_tested_or_sent"
+          }
+        ],
+        "phoneCaveat": "Full direct phone not exposed. No masked digits were inferred. Confirm preferred direct business contact before build or outreach."
+      }
+    },
+    {
+      "id": "ae-ajman-al-ihsan-motors",
+      "name": "Al Ihsan Motors",
+      "aliases": [
+        "Al IHSAN MOTORS",
+        "الاحسان موتورز"
+      ],
+      "country": "AE",
+      "city": "Ajman",
+      "emirate": "Ajman",
+      "address": "Al Jurf, Ajman in original current vehicle ads; secondary Waze says CGV7+M8V Al Jerf Industrial1, exact showroom unconfirmed",
+      "researchDate": "2026-10-18",
+      "qualification": {
+        "tier": "priority_research_candidate",
+        "countsTowardPriority400": true,
+        "reviewedAt": "2026-10-18",
+        "reason": "Opened original named Ajman seller catalogue with17live ads and three different recently priced vehicles, public marketplace contact route and bounded alias/domain checks."
+      },
+      "priority": "priority_research_candidate",
+      "website_status": "no_official_site_found_after_check",
+      "website": {
+        "url": null,
+        "checkedAt": "2026-10-18",
+        "observations": [
+          "No matched official dealer-owned website surfaced in exact name, Ajman, Arabic-name and current masked-prefix checks. This bounded result does not prove absence.",
+          "Al Ihsan Used Cars Sharjah is a possible name/group collision; separate Ajman Motors naming/location/profile and current contact prefix are preserved. Confirm legal group identity before build/outreach.",
+          "DubiCars2697 is an older Ajman profile; generic similar cars are excluded from inventory evidence."
+        ],
+        "searchChecks": [
+          "\"Al Ihsan Motors\" Ajman website",
+          "\"Al Ihsan Motors\" website",
+          "\"Al Ihsan Motors\" Ajman contact",
+          "\"الاحسان\" \"موتورز\" عجمان",
+          "\"AL IHSAN MOTORS\" \"Al Jurf\"",
+          "\"Al Ihsan Motors\" \"05533036\""
+        ],
+        "status": "no_official_site_found_after_check"
+      },
+      "inventory": {
+        "sourceUrl": "https://ae.opensooq.com/en/shops/shop-65310230",
+        "reportedListings": 17,
+        "kind": "original_marketplace_live_listings_snapshot",
+        "observedAt": "2026-10-18",
+        "examples": [
+          {
+            "title": "Chevrolet Silverado 1500 LT Z71 2021",
+            "price_aed": 88000,
+            "mileage_km": 133000,
+            "sourceDateLabel": "8 hours ago on 18 October 2026",
+            "sourceUrl": "https://ae.opensooq.com/en/search/288177114"
+          },
+          {
+            "title": "Land Rover Range Rover Evoque Dynamic Plus 2016",
+            "price_aed": 56000,
+            "mileage_km": 120000,
+            "sourceDateLabel": "8 hours ago on 18 October 2026",
+            "sourceUrl": "https://ae.opensooq.com/en/shops/shop-65310230"
+          },
+          {
+            "title": "Cadillac Escalade Premium 2016",
+            "price_aed": 67000,
+            "mileage_km": 210000,
+            "sourceDateLabel": "8 hours ago on 18 October 2026",
+            "sourceUrl": "https://ae.opensooq.com/en/shops/shop-65310230"
+          }
+        ],
+        "caveat": "All-category advertised live count; first-page actual cars checked. Syndication, reposts and physical availability remain unverified. Vehicle condition claims are not adopted."
+      },
+      "businessContact": {
+        "phone": null,
+        "sourceUrl": "https://ae.opensooq.com/en/shops/shop-65310230",
+        "maskedPublicNumbers": [
+          "05533036XX"
+        ],
+        "channels": [
+          {
+            "type": "marketplace_chat",
+            "url": "https://ae.opensooq.com/en/shops/shop-65310230",
+            "status": "public_advertised_route_not_tested_or_sent"
+          }
+        ],
+        "phoneCaveat": "Original shop and all observed cars expose only a masked number. Waze lists a different full number, not corroborated against current seller controls; do not adopt it without confirmation."
+      },
+      "contact": {
+        "phone": null,
+        "sourceUrl": "https://ae.opensooq.com/en/shops/shop-65310230",
+        "maskedPublicNumbers": [
+          "05533036XX"
+        ],
+        "channels": [
+          {
+            "type": "marketplace_chat",
+            "url": "https://ae.opensooq.com/en/shops/shop-65310230",
+            "status": "public_advertised_route_not_tested_or_sent"
+          }
+        ],
+        "phoneCaveat": "Original shop and all observed cars expose only a masked number. Waze lists a different full number, not corroborated against current seller controls; do not adopt it without confirmation."
+      },
+      "fitScore": 78,
+      "fitReason": "Current independent automotive seller catalogue and possible standalone-site gap support screened proposal research; purchasing ability and interest are unconfirmed.",
+      "confidence": "medium_research_contact_route_only",
+      "verificationStatus": "screened_not_build_ready",
+      "nextAction": "Confirm legal trading/group identity, exact premises, current unique stock and preferred direct contact before build or outreach.",
+      "sources": [
+        {
+          "url": "https://ae.opensooq.com/en/shops/shop-65310230",
+          "role": "original_current_named_seller_shop_priced_recent_stock_and_contact_route",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://ae.opensooq.com/en/search/288177114",
+          "role": "specific_original_vehicle_ad",
+          "checkedAt": "2026-10-18"
+        }
+      ],
+      "publicBusinessContact": {
+        "phone": null,
+        "sourceUrl": "https://ae.opensooq.com/en/shops/shop-65310230",
+        "maskedPublicNumbers": [
+          "05533036XX"
+        ],
+        "channels": [
+          {
+            "type": "marketplace_chat",
+            "url": "https://ae.opensooq.com/en/shops/shop-65310230",
+            "status": "public_advertised_route_not_tested_or_sent"
+          }
+        ],
+        "phoneCaveat": "Original shop and all observed cars expose only a masked number. Waze lists a different full number, not corroborated against current seller controls; do not adopt it without confirmation."
+      }
+    },
+    {
+      "id": "ae-ajman-dlc-motors",
+      "name": "DLC Motors",
+      "aliases": [
+        "DLC MOTORS"
+      ],
+      "country": "AE",
+      "city": "Ajman",
+      "emirate": "Ajman",
+      "address": "Al Jurf, Ajman in original current ads; secondary Yango also places DLC Motors in Al Jerf Industrial1",
+      "researchDate": "2026-10-18",
+      "qualification": {
+        "tier": "priority_research_candidate",
+        "countsTowardPriority400": true,
+        "reviewedAt": "2026-10-18",
+        "reason": "Opened named original dealer catalogue with multiple recent priced vehicles, public marketplace contact route and bounded alias/location/domain searches."
+      },
+      "priority": "priority_research_candidate",
+      "website_status": "no_official_site_found_after_check",
+      "website": {
+        "url": null,
+        "checkedAt": "2026-10-18",
+        "observations": [
+          "No confidently matched official dealer-owned domain surfaced in recorded bounded checks; alternate brands/group websites remain possible.",
+          "DLC branded text also appears in its current Malibu ad. Generic overseas DLC namesakes were excluded. Secondary Yango lists a different full phone0501343991 that does not match current visible staff prefixes; no full number is adopted without confirmation."
+        ],
+        "searchChecks": [
+          "\"DLC Motors\" Ajman website",
+          "\"DLC Motors\" website",
+          "\"DLC Motors\" Ajman contact",
+          "\"دي ال سي\" موتورز عجمان",
+          "\"DLC Motors\" Ajman Instagram",
+          "\"DLC Motors\" Ajman \"05555749\""
+        ],
+        "status": "no_official_site_found_after_check"
+      },
+      "inventory": {
+        "sourceUrl": "https://ae.opensooq.com/en/shops/shop-73294061",
+        "reportedListings": 14,
+        "kind": "original_marketplace_live_listings_snapshot",
+        "observedAt": "2026-10-18",
+        "examples": [
+          {
+            "title": "Nissan Patrol Safari 2023",
+            "price_aed": 139000,
+            "mileage_km": 40000,
+            "sourceDateLabel": "3 hours ago on 18 October 2026",
+            "sourceUrl": "https://ae.opensooq.com/en/search/288292834"
+          },
+          {
+            "title": "Chevrolet Corvette C7 Z51 2024 (seller-labelled)",
+            "price_aed": 235000,
+            "mileage_km": 20000,
+            "sourceDateLabel": "9 hours ago on 18 October 2026",
+            "sourceUrl": "https://ae.opensooq.com/en/shops/shop-73294061"
+          },
+          {
+            "title": "Kia Sorento X-Line SX AWD 2025",
+            "price_aed": 83500,
+            "mileage_km": 19000,
+            "sourceDateLabel": "11 hours ago on 18 October 2026",
+            "sourceUrl": "https://ae.opensooq.com/en/shops/shop-73294061"
+          }
+        ],
+        "caveat": "Advertised all-category profile count, with actual first-page vehicle cards read. Availability, unique stock, model details and ownership need confirmation; dealer condition claims are not adopted."
+      },
+      "businessContact": {
+        "phone": null,
+        "sourceUrl": "https://ae.opensooq.com/en/shops/shop-73294061",
+        "maskedPublicNumbers": [
+          "05555749XX",
+          "05040265XX"
+        ],
+        "channels": [
+          {
+            "type": "marketplace_chat",
+            "url": "https://ae.opensooq.com/en/shops/shop-73294061",
+            "status": "public_advertised_route_not_tested_or_sent"
+          }
+        ],
+        "phoneCaveat": "Full preferred direct business contact must be confirmed. No masked digits were inferred."
+      },
+      "contact": {
+        "phone": null,
+        "sourceUrl": "https://ae.opensooq.com/en/shops/shop-73294061",
+        "maskedPublicNumbers": [
+          "05555749XX",
+          "05040265XX"
+        ],
+        "channels": [
+          {
+            "type": "marketplace_chat",
+            "url": "https://ae.opensooq.com/en/shops/shop-73294061",
+            "status": "public_advertised_route_not_tested_or_sent"
+          }
+        ],
+        "phoneCaveat": "Full preferred direct business contact must be confirmed. No masked digits were inferred."
+      },
+      "fitScore": 81,
+      "fitReason": "Current independent seller catalogue and possible website gap support research screening. Purchasing capacity and interest unconfirmed.",
+      "confidence": "medium_research_contact_route_only",
+      "verificationStatus": "screened_not_build_ready",
+      "nextAction": "Confirm legal group identity, exact premises, current distinct stock, owned-domain aliases and preferred direct contact before build or outreach.",
+      "sources": [
+        {
+          "url": "https://ae.opensooq.com/en/shops/shop-73294061",
+          "role": "original_named_seller_catalogue_recent_priced_stock_and_contact_route",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://ae.opensooq.com/en/search/288292834",
+          "role": "specific_original_vehicle_ad",
+          "checkedAt": "2026-10-18"
+        }
+      ],
+      "publicBusinessContact": {
+        "phone": null,
+        "sourceUrl": "https://ae.opensooq.com/en/shops/shop-73294061",
+        "maskedPublicNumbers": [
+          "05555749XX",
+          "05040265XX"
+        ],
+        "channels": [
+          {
+            "type": "marketplace_chat",
+            "url": "https://ae.opensooq.com/en/shops/shop-73294061",
+            "status": "public_advertised_route_not_tested_or_sent"
+          }
+        ],
+        "phoneCaveat": "Full preferred direct business contact must be confirmed. No masked digits were inferred."
+      }
+    },
+    {
+      "id": "ae-sharjah-al-haram-al-masi-used-cars",
+      "name": "Al Haram Al Masi Used Cars Trading",
+      "aliases": [
+        "الهرم الماسي لتجارة السيارات المستعملة",
+        "Diamond Pyramid Used Cars",
+        "Al Haram Al masi Used cars TR LLC"
+      ],
+      "country": "AE",
+      "city": "Sharjah",
+      "emirate": "Sharjah",
+      "address": "Souq Al Haraj, Sharjah in original current vehicle ads; exact showroom unconfirmed",
+      "researchDate": "2026-10-18",
+      "qualification": {
+        "tier": "priority_research_candidate",
+        "countsTowardPriority400": true,
+        "reviewedAt": "2026-10-18",
+        "reason": "Opened named original dealer catalogue with multiple recent priced vehicles, public marketplace contact route and bounded alias/location/domain searches."
+      },
+      "priority": "priority_research_candidate",
+      "website_status": "no_official_site_found_after_check",
+      "website": {
+        "url": null,
+        "checkedAt": "2026-10-18",
+        "observations": [
+          "No confidently matched official dealer-owned domain surfaced in recorded bounded checks; alternate brands/group websites remain possible.",
+          "Mixed commercial/passenger dealer: many current Hiace, L200/Hilux and Coaster ads; passenger stock includes Wrangler16October and Tahoe10October. Show the actual mix and do not market it as a luxury-only lot. Older same-name OpenSooq57342617 may be the same business, counted once here; its0live cars are not added. alharamalmasi.tech is an electronics/mobile-phone activity; no dealer ownership tie established."
+        ],
+        "searchChecks": [
+          "\"الهرم الماسي\" سيارات website",
+          "\"Diamond Pyramid\" used cars Sharjah website",
+          "\"Al Haram Al Masi\" cars website",
+          "\"الهرم الماسي لتجارة السيارات المستعملة\" موقع",
+          "\"الهرم الماسي\" \"سيارات\" \"05552036\"",
+          "\"Al Haram Al masi Used cars\" website"
+        ],
+        "status": "no_official_site_found_after_check"
+      },
+      "inventory": {
+        "sourceUrl": "https://ae.opensooq.com/en/shops/shop-73812015",
+        "reportedListings": 17,
+        "kind": "original_marketplace_live_listings_snapshot",
+        "observedAt": "2026-10-18",
+        "examples": [
+          {
+            "title": "Jeep Wrangler Sport 2016",
+            "price_aed": 38000,
+            "mileage_km": 190000,
+            "sourceDateLabel": "16 October 2026",
+            "sourceUrl": "https://ae.opensooq.com/en/search/287856448"
+          },
+          {
+            "title": "Chevrolet Tahoe 1LTZ 2016",
+            "price_aed": 59000,
+            "mileage_km": 180000,
+            "sourceDateLabel": "10 October 2026",
+            "sourceUrl": "https://ae.opensooq.com/en/shops/shop-73812015"
+          },
+          {
+            "title": "Mitsubishi L200 Double Cab GLX 2022",
+            "price_aed": 41500,
+            "mileage_km": 200000,
+            "sourceDateLabel": "6 hours ago on 18 October 2026",
+            "sourceUrl": "https://ae.opensooq.com/en/shops/shop-73812015"
+          }
+        ],
+        "caveat": "Advertised all-category profile count, with actual first-page vehicle cards read. Availability, unique stock, model details and ownership need confirmation; dealer condition claims are not adopted."
+      },
+      "businessContact": {
+        "phone": null,
+        "sourceUrl": "https://ae.opensooq.com/en/shops/shop-73812015",
+        "maskedPublicNumbers": [
+          "05552036XX",
+          "05824028XX"
+        ],
+        "channels": [
+          {
+            "type": "marketplace_chat",
+            "url": "https://ae.opensooq.com/en/shops/shop-73812015",
+            "status": "public_advertised_route_not_tested_or_sent"
+          }
+        ],
+        "phoneCaveat": "Full preferred direct business contact must be confirmed. No masked digits were inferred."
+      },
+      "contact": {
+        "phone": null,
+        "sourceUrl": "https://ae.opensooq.com/en/shops/shop-73812015",
+        "maskedPublicNumbers": [
+          "05552036XX",
+          "05824028XX"
+        ],
+        "channels": [
+          {
+            "type": "marketplace_chat",
+            "url": "https://ae.opensooq.com/en/shops/shop-73812015",
+            "status": "public_advertised_route_not_tested_or_sent"
+          }
+        ],
+        "phoneCaveat": "Full preferred direct business contact must be confirmed. No masked digits were inferred."
+      },
+      "fitScore": 77,
+      "fitReason": "Current independent seller catalogue and possible website gap support research screening. Purchasing capacity and interest unconfirmed.",
+      "confidence": "medium_research_contact_route_only",
+      "verificationStatus": "screened_not_build_ready",
+      "nextAction": "Confirm legal group identity, exact premises, current distinct stock, owned-domain aliases and preferred direct contact before build or outreach.",
+      "sources": [
+        {
+          "url": "https://ae.opensooq.com/en/shops/shop-73812015",
+          "role": "original_named_seller_catalogue_recent_priced_stock_and_contact_route",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://ae.opensooq.com/en/search/287856448",
+          "role": "specific_original_vehicle_ad",
+          "checkedAt": "2026-10-18"
+        }
+      ],
+      "publicBusinessContact": {
+        "phone": null,
+        "sourceUrl": "https://ae.opensooq.com/en/shops/shop-73812015",
+        "maskedPublicNumbers": [
+          "05552036XX",
+          "05824028XX"
+        ],
+        "channels": [
+          {
+            "type": "marketplace_chat",
+            "url": "https://ae.opensooq.com/en/shops/shop-73812015",
+            "status": "public_advertised_route_not_tested_or_sent"
+          }
+        ],
+        "phoneCaveat": "Full preferred direct business contact must be confirmed. No masked digits were inferred."
+      }
+    }
+  ],
+  "heldCandidates": [
+    {
+      "name": "Golden Royal Ajman",
+      "sourceUrl": "https://ae.opensooq.com/en/shops/shop-75843813",
+      "inventory": {
+        "reportedListings": 23,
+        "examples": "G70 2021 AED55k, XC60 2025 AED125k, L2002023 AED36k current18October"
+      },
+      "reason": "Potential matching owned domain golden-royal.org has exact Arabic trading title but JavaScript-only public text; resolve ownership and rendered catalogue before classification.",
+      "websiteUrl": "https://golden-royal.org/"
+    },
+    {
+      "id": "ae-sharjah-one-stop-auto-used-cars",
+      "name": "One Stop Auto for used cars",
+      "aliases": [
+        "One Stop auto",
+        "One Stop Auto Sharjah"
+      ],
+      "country": "AE",
+      "city": "Sharjah",
+      "emirate": "Sharjah",
+      "address": "Souq Al Haraj / Sharjah Airport Freezone in current ads; exact showroom unconfirmed",
+      "researchDate": "2026-10-18",
+      "qualification": {
+        "tier": "hold_pending_group_dedup",
+        "countsTowardPriority400": false,
+        "reviewedAt": "2026-10-18",
+        "reason": "Current staff05612141XX overlaps existing Al Meqat +971561214174; secondary One Stop business page explicitly surfaces0561214174. Shared contact/group risk unresolved, so do not count as a distinct new business."
+      },
+      "priority": "hold",
+      "website_status": "no_official_site_found_after_check",
+      "website": {
+        "url": null,
+        "checkedAt": "2026-10-18",
+        "observations": [
+          "No matching official dealer-owned website surfaced in the recorded bounded checks. This does not establish that no website exists.",
+          "Opened onestopauto.ae/about describes a Ras Al Khaimah auto repair business with +971521418265, different activity/location/contact; no ownership match was established. Burj Malabar is another service namesake. Older DubiCars2615 generic similar cars are not dealer stock."
+        ],
+        "searchChecks": [
+          "\"One Stop auto\" Sharjah used cars website",
+          "\"One Stop Auto\" Sharjah website",
+          "\"One Stop Auto\" \"05888663\"",
+          "\"One Stop Auto for used cars\" website"
+        ],
+        "status": "no_official_site_found_after_check"
+      },
+      "inventory": {
+        "sourceUrl": "https://ae.opensooq.com/en/shops/shop-11251309",
+        "reportedListings": 33,
+        "kind": "original_marketplace_live_listings_snapshot",
+        "observedAt": "2026-10-18",
+        "examples": [
+          {
+            "title": "Mitsubishi Pajero GLS Plus 2014",
+            "price_aed": 25500,
+            "mileage_km": 210000,
+            "sourceDateLabel": "11 hours ago on 18 October 2026",
+            "sourceUrl": "https://ae.opensooq.com/en/search/287854658"
+          },
+          {
+            "title": "Mercedes-Benz E300 2014",
+            "price_aed": 29000,
+            "mileage_km": 161000,
+            "sourceDateLabel": "12 hours ago on 18 October 2026",
+            "sourceUrl": "https://ae.opensooq.com/en/shops/shop-11251309"
+          },
+          {
+            "title": "Hyundai Tucson GLS 2016",
+            "price_aed": 34000,
+            "mileage_km": 144000,
+            "sourceDateLabel": "Yesterday (17 October 2026)",
+            "sourceUrl": "https://ae.opensooq.com/en/shops/shop-11251309"
+          }
+        ],
+        "caveat": "Live Listings is the marketplace all-category profile count; observed first-page cards are vehicles. Advertisements may be syndicated, stale or duplicate; physical availability and ownership were not independently confirmed."
+      },
+      "businessContact": {
+        "phone": null,
+        "alternatePhones": [],
+        "sourceUrl": "https://ae.opensooq.com/en/shops/shop-11251309",
+        "maskedPublicNumbers": [
+          "05888663XX",
+          "05558770XX",
+          "05612141XX"
+        ],
+        "channels": [
+          {
+            "type": "marketplace_chat",
+            "url": "https://ae.opensooq.com/en/shops/shop-11251309",
+            "status": "public_advertised_route_not_tested_or_sent"
+          }
+        ],
+        "socialUrl": null,
+        "phoneCaveat": "Full phone was not exposed; no masked digits were guessed. Confirm direct business contact before build/outreach."
+      },
+      "contact": {
+        "phone": null,
+        "alternatePhones": [],
+        "sourceUrl": "https://ae.opensooq.com/en/shops/shop-11251309",
+        "maskedPublicNumbers": [
+          "05888663XX",
+          "05558770XX",
+          "05612141XX"
+        ],
+        "channels": [
+          {
+            "type": "marketplace_chat",
+            "url": "https://ae.opensooq.com/en/shops/shop-11251309",
+            "status": "public_advertised_route_not_tested_or_sent"
+          }
+        ],
+        "socialUrl": null,
+        "phoneCaveat": "Full phone was not exposed; no masked digits were guessed. Confirm direct business contact before build/outreach."
+      },
+      "fitScore": 77,
+      "fitReason": "Active independent dealer catalogue and a possible standalone website gap support a six-design proposal. Purchasing ability and interest are unconfirmed.",
+      "confidence": "medium_research_contact_route_only",
+      "verificationStatus": "held_for_possible_existing_alias",
+      "nextAction": "Confirm legal trading identity, current stock, exact premises, owned-domain aliases and preferred direct business contact before build or outreach.",
+      "sources": [
+        {
+          "url": "https://ae.opensooq.com/en/shops/shop-11251309",
+          "role": "original_current_dealer_catalogue_priced_recent_stock_and_contact_controls",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://www.autoyas.com/AE/Umm-al-Qaiwain/103427637676836/One-Stop-Auto-%D9%88%D9%86-%D8%B3%D8%AA%D9%88%D8%A8-%D8%A3%D9%88%D8%AA%D9%88-%D9%84%D8%AA%D8%AC%D8%A7%D8%B1%D8%A9-%D9%88%D8%A7%D8%B3%D8%AA%D9%8A%D8%B1%D8%A7%D8%AF-%D8%A7%D9%84%D8%B3%D9%8A%D8%A7%D8%B1%D8%A7%D8%AA-%D9%85%D9%86-%D8%A7%D9%84%D8%AE%D8%A7%D8%B1%D8%AC",
+          "role": "secondary_business_page_exact_full_phone_overlap_supports_group_contact_hold_not_new_count",
+          "checkedAt": "2026-10-18"
+        }
+      ],
+      "publicBusinessContact": {
+        "phone": null,
+        "alternatePhones": [],
+        "sourceUrl": "https://ae.opensooq.com/en/shops/shop-11251309",
+        "maskedPublicNumbers": [
+          "05888663XX",
+          "05558770XX",
+          "05612141XX"
+        ],
+        "channels": [
+          {
+            "type": "marketplace_chat",
+            "url": "https://ae.opensooq.com/en/shops/shop-11251309",
+            "status": "public_advertised_route_not_tested_or_sent"
+          }
+        ],
+        "socialUrl": null,
+        "phoneCaveat": "Full phone was not exposed; no masked digits were guessed. Confirm direct business contact before build/outreach."
+      }
+    },
+    {
+      "id": "ae-ajman-amwaj-al-arz-used-cars",
+      "name": "Amwaj Al Arz Used Cars",
+      "aliases": [
+        "معرض أمواج الارز للسيارات",
+        "AMWAJ AL ARZ USED CARS"
+      ],
+      "country": "AE",
+      "city": "Ajman",
+      "emirate": "Ajman",
+      "address": "Al Jurf / Al Jurf Industrial1, Ajman in original ads and matching Dubizzle seller caption; exact showroom unconfirmed",
+      "researchDate": "2026-10-18",
+      "qualification": {
+        "tier": "hold_pending_group_dedup",
+        "countsTowardPriority400": false,
+        "reviewedAt": "2026-10-18",
+        "reason": "Current05256666XX overlaps existing Five Stars Motors +971525666658. Prefix is not proof of exact equality, but distinct-business/group identity must be resolved before new count."
+      },
+      "priority": "hold",
+      "website_status": "no_official_site_found_after_check",
+      "website": {
+        "url": null,
+        "checkedAt": "2026-10-18",
+        "observations": [
+          "Bounded search found no confidently matched official dealer-owned website. Another spelling, brand or group site remains possible.",
+          "English seller identity also appears on original Dubizzle stock pages. Older Dubizzle publication dates were not treated as current availability; current opened OpenSooq shop and original car cards supply recent evidence."
+        ],
+        "searchChecks": [
+          "\"أمواج الارز\" سيارات",
+          "\"Amwaj Al Arz\" cars website",
+          "\"Amwaj Al Arz\" Ajman contact",
+          "\"امواج الارز\" سيارات عجمان",
+          "\"Amwaj Al Arz\" website Ajman cars"
+        ],
+        "status": "no_official_site_found_after_check"
+      },
+      "inventory": {
+        "sourceUrl": "https://ae.opensooq.com/en/shops/shop-58500367",
+        "reportedListings": 17,
+        "kind": "original_marketplace_live_listings_snapshot",
+        "observedAt": "2026-10-18",
+        "examples": [
+          {
+            "title": "Nissan Patrol SE Platinum 2013",
+            "price_aed": 36000,
+            "mileage_km": 250000,
+            "sourceDateLabel": "9 hours ago on 18 October 2026",
+            "sourceUrl": "https://ae.opensooq.com/en/search/288803994"
+          },
+          {
+            "title": "Jeep Grand Cherokee Limited 2020",
+            "price_aed": 48000,
+            "mileage_km": 110000,
+            "sourceDateLabel": "9 hours ago on 18 October 2026",
+            "sourceUrl": "https://ae.opensooq.com/en/shops/shop-58500367"
+          },
+          {
+            "title": "Nissan Altima S 2024",
+            "price_aed": 46000,
+            "mileage_km": 110000,
+            "sourceDateLabel": "9 hours ago on 18 October 2026",
+            "sourceUrl": "https://ae.opensooq.com/en/shops/shop-58500367"
+          }
+        ],
+        "caveat": "All-category live-listing count is an advertised snapshot; opened first-page cards are cars. Availability, unique stock and dealer ownership are not independently confirmed; syndication/reposts possible."
+      },
+      "businessContact": {
+        "phone": null,
+        "sourceUrl": "https://ae.opensooq.com/en/shops/shop-58500367",
+        "maskedPublicNumbers": [
+          "05256666XX"
+        ],
+        "channels": [
+          {
+            "type": "marketplace_chat",
+            "url": "https://ae.opensooq.com/en/shops/shop-58500367",
+            "status": "public_advertised_route_not_tested_or_sent"
+          }
+        ],
+        "phoneCaveat": "Full direct phone not exposed. No masked digits were inferred. Confirm preferred direct business contact before build or outreach."
+      },
+      "contact": {
+        "phone": null,
+        "sourceUrl": "https://ae.opensooq.com/en/shops/shop-58500367",
+        "maskedPublicNumbers": [
+          "05256666XX"
+        ],
+        "channels": [
+          {
+            "type": "marketplace_chat",
+            "url": "https://ae.opensooq.com/en/shops/shop-58500367",
+            "status": "public_advertised_route_not_tested_or_sent"
+          }
+        ],
+        "phoneCaveat": "Full direct phone not exposed. No masked digits were inferred. Confirm preferred direct business contact before build or outreach."
+      },
+      "fitScore": 78,
+      "fitReason": "A current independent seller catalogue and possible website gap support proposal screening; spending capacity and buying interest remain unknown.",
+      "confidence": "medium_research_contact_route_only",
+      "verificationStatus": "held_for_possible_existing_alias",
+      "nextAction": "Confirm legal company identity, exact premises, current distinct stock, group/owned-domain aliases and preferred direct business contact before build or outreach.",
+      "sources": [
+        {
+          "url": "https://ae.opensooq.com/en/shops/shop-58500367",
+          "role": "original_current_named_seller_shop_priced_recent_stock_and_public_contact_route",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://ae.opensooq.com/en/search/288803994",
+          "role": "specific_original_vehicle_ad",
+          "checkedAt": "2026-10-18"
+        }
+      ],
+      "publicBusinessContact": {
+        "phone": null,
+        "sourceUrl": "https://ae.opensooq.com/en/shops/shop-58500367",
+        "maskedPublicNumbers": [
+          "05256666XX"
+        ],
+        "channels": [
+          {
+            "type": "marketplace_chat",
+            "url": "https://ae.opensooq.com/en/shops/shop-58500367",
+            "status": "public_advertised_route_not_tested_or_sent"
+          }
+        ],
+        "phoneCaveat": "Full direct phone not exposed. No masked digits were inferred. Confirm preferred direct business contact before build or outreach."
+      }
+    }
+  ],
+  "exclusions": [
+    {
+      "name": "Al Qimma 17 / Deal Cars",
+      "reason": "dealcars.ae/listing/rox-01-2025 explicitly names Al Qimma Cars, business seller alqimma 17 and alqimma@dealcars.com. Existing owned inventory destination disqualifies no-site claim; ownership/marketplace role not fully resolved.",
+      "sourceUrl": "https://dealcars.ae/listing/rox-01-2025/"
+    },
+    {
+      "name": "Impala / Hesham Safwat / Rukn Al Rebou / Al Nawras",
+      "reason": "Existing main UAE aliases; no new count."
+    },
+    {
+      "name": "Al Jana Used Cars",
+      "sourceUrl": "https://www.aljanausedcars.com/",
+      "reason": "Matching owned site surfaced with inventory and full contact; no substantiated poor-site defect. Excluded rather than treated no-site due a fetch timeout."
+    },
+    {
+      "name": "Omar Almoghazy / OMC Auto",
+      "sourceUrl": "https://www.omcauto.ae/used-cars",
+      "reason": "Matching owned inventory site with actual priced vehicle results surfaced. Excluded."
+    },
+    {
+      "name": "Al Muhtaref261 / Al Arfan showroom",
+      "reason": "Potential aliases of main-file Al Muhtaref and Al Irfan. No separate count; exact group/legal identity not resolved."
+    },
+    {
+      "name": "Sama Al Janob Used Cars",
+      "sourceUrl": "https://sajcars.com/",
+      "reason": "Parent rendered functional matching owned site after JS load: +971555557312/+971557446033 match original masked staff prefixes; six priced car cards. No demonstrated major website gap. Excluded.",
+      "checkedAt": "2026-10-18"
+    },
+    {
+      "name": "Al Masar169 / Dar Al Hay",
+      "reason": "Matching owned domains surfaced during shortlists; no no-site priority count.",
+      "sourceUrls": [
+        "https://www.islam-motors.com/contact-us/",
+        "https://www.daralhayusedcars.com/contact-us/"
+      ]
+    }
+  ],
+  "validation": {
+    "checkedAt": "2026-10-18",
+    "priorityIdsUnique": true,
+    "priorityOriginalCatalogueUrlsUnique": true,
+    "exactPriorityIdUrlCollisionsAgainstPublicDenylists": 0,
+    "maskedPrefixAudit": "One Stop Auto and Amwaj Al Arz moved to uncounted group-dedup holds. Remaining priority prefixes checked against main/northern/legacy/deployment fields.",
+    "contactTiers": {
+      "exposedPrimarySellerFullPhone": 2,
+      "maskedMarketplaceRouteOnly": 10
+    }
+  }
+}

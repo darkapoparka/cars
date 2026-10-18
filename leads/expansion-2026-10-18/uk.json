@@ -6,9 +6,9 @@
   "marketTarget": null,
   "researchAsOf": "2026-10-18",
   "status": "research_in_progress",
-  "researchRowCount": 103,
-  "qualifiedCount": 93,
-  "priorityCount": 93,
+  "researchRowCount": 116,
+  "qualifiedCount": 106,
+  "priorityCount": 106,
   "reserveCount": 8,
   "holdCount": 2,
   "remainingGap": null,
@@ -5530,6 +5530,908 @@
       "dedupe_status": "not_in_existing_UK_primary_reserve_or_deployment_registry",
       "buildApproved": false,
       "outreachApproved": false
+    },
+    {
+      "id": "gb-nottingham-j26-vans-trucks",
+      "name": "J26 Vans & Trucks Ltd",
+      "country": "GB",
+      "city": "Awsworth, Nottingham",
+      "region": "Nottinghamshire",
+      "address": "1 Gin Close Way, Awsworth, Nottingham NG16 2TA",
+      "researchAsOf": "2026-10-18",
+      "website_status": "poor_site",
+      "website": "https://j26vanstrucksltd.com/",
+      "website_check": {
+        "method": "opened_primary_marketplace_bounded_name_alias_premises_search_and_public_dns_check",
+        "queries": [
+          "\"J26 Vans\" website",
+          "\"j26vanstrucksltd@gmail.com\" website",
+          "\"J26\" \"Solid Motors\" website",
+          "\"J26 vans trucks\" \"Gin Close\" website"
+        ],
+        "observedAt": "2026-10-18",
+        "conclusion": "The legacy domain matched by exact seller email/premises does not resolve in the checked public DNS snapshot. No matched replacement domain found in bounded checks; a current alternative may exist.",
+        "observations": [
+          "Public Nextdoor business profile supplies j26vanstrucksltd.com with matching seller email and Gin Close Way address.",
+          "Fresh read-only HTTP request reported no such host for j26vanstrucksltd.com; Google public DNS A lookup returned Status 3/NXDOMAIN on 18 October 2026. This is a concrete domain availability issue, not a browser-tool access error.",
+          "Nextdoor describes a relationship with Solid Motors Ltd. Bounded alias search found no matched working replacement domain. Treat related names as one potential account until confirmed.",
+          "Companies House J26 Vans&Trucks Ltd 12752700 is active; its confirmation statement is overdue. This administrative flag is recorded without inferring closure or financial capacity."
+        ],
+        "owner_confirmation_required": true
+      },
+      "inventory": {
+        "advertised_count": 34,
+        "count_type": "opened_marketplace_snapshot_not_unique_physical_stock",
+        "observedAt": "2026-10-18",
+        "source_url": "https://showroom.ebaymotorspro.co.uk/j26vanstrucks-ltd?menu=1",
+        "examples": [
+          "2019 BMW 740Ld xDrive M Sport automatic advertised at GBP 20,995",
+          "2019 Mercedes-Benz S400d L AMG Line automatic advertised at GBP 22,495",
+          "2013 Audi Q3 Quattro S Line automatic advertised at GBP 5,495"
+        ],
+        "availability": "not_confirmed_with_dealer"
+      },
+      "public_business_contact": {
+        "email": "j26vanstrucksltd@gmail.com",
+        "phone": "+441773306870",
+        "channel": "public_business_email_and_phone",
+        "source_url": "https://showroom.ebaymotorspro.co.uk/j26vanstrucks-ltd?menu=1",
+        "phone_ownership": "may_be_marketplace_forwarding_number"
+      },
+      "fit_score": 84,
+      "fit_reason": "Established independent advertiser with thirty-four priced vehicles, substantial car inventory despite its van/truck name, premium saloons and an evidenced non-resolving legacy business domain. Reachable marketplace business contact gives a practical stock-site replacement proposition.",
+      "confidence": "medium",
+      "verification_status": "public_source_qualified_requires_owner_domain_and_stock_confirmation",
+      "source_urls": [
+        "https://showroom.ebaymotorspro.co.uk/j26vanstrucks-ltd?menu=1",
+        "https://www.cazoo.co.uk/dealers/j26-vans--trucks-limited-87885/",
+        "https://nextdoor.co.uk/pages/j26-vans-trucks-ltd-nottingham-gb-eng/",
+        "https://find-and-update.company-information.service.gov.uk/company/12752700",
+        "https://dns.google/resolve?name=j26vanstrucksltd.com&type=A",
+        "https://j26vanstrucksltd.com/"
+      ],
+      "qualification_notes": "Thirty-four is the opened primary catalogue snapshot; other indexed pages vary from 22 to 45. Do not combine counts or assume the advertised forty-plus vans claim is current unique stock. Confirm exact current operator, related Solid Motors identity, preferred website, availability and premises before personalization. No allegations from review/forum pages are adopted.",
+      "dedupe_status": "not_in_existing_UK_primary_reserve_or_deployment_registry",
+      "buildApproved": false,
+      "outreachApproved": false
+    },
+    {
+      "id": "gb-slough-london-used-cars",
+      "name": "London Used Cars",
+      "country": "GB",
+      "city": "Slough",
+      "region": "Berkshire",
+      "address": "Unit 4 Mill Court, 51 Mill Street, Slough SL2 5DA",
+      "researchAsOf": "2026-10-18",
+      "website_status": "no_official_site_found_after_check",
+      "website_check": {
+        "method": "opened_primary_marketplace_and_bounded_exact_name_alias_premises_search",
+        "queries": [
+          "\"London used cars\" \"mill court\" website",
+          "\"londonusedcarsslough@gmail.com\" website",
+          "\"London Used Cars\" Slough \"website\"",
+          "\"London Used Cars\" \"Unit 4\" \"Slough\" company",
+          "\"London Used Cars\" \"mill street\" official"
+        ],
+        "observedAt": "2026-10-18",
+        "conclusion": "No matched standalone official domain found after bounded trading-name, seller-email and exact-premises checks; absence is not proven.",
+        "observations": [
+          "Opened priced eBay stock and public seller contact match the Cazoo dealer page's unit/address.",
+          "Broad name searches return House of Cars London and other similarly named dealers with working sites; their different identities/premises were not adopted as this seller's official site.",
+          "No exact current corporate operating identity was established in bounded checks; confirm the trading entity before personalization."
+        ],
+        "owner_confirmation_required": true
+      },
+      "inventory": {
+        "advertised_count": 11,
+        "count_type": "opened_marketplace_snapshot_not_unique_physical_stock",
+        "observedAt": "2026-10-18",
+        "source_url": "https://showroom.ebaymotorspro.co.uk/London-used-cars?menu=1",
+        "examples": [
+          "2017 Land Rover Range Rover Evoque SE Tech automatic advertised at GBP 7,475",
+          "2014 BMW 420d SE automatic advertised at GBP 5,475"
+        ],
+        "availability": "not_confirmed_with_dealer"
+      },
+      "public_business_contact": {
+        "email": "londonusedcarsslough@gmail.com",
+        "phone": "+441753910009",
+        "channel": "public_business_email_and_phone",
+        "source_url": "https://showroom.ebaymotorspro.co.uk/London-used-cars?menu=1",
+        "phone_ownership": "may_be_marketplace_forwarding_number"
+      },
+      "fit_score": 77,
+      "fit_reason": "Small independent marketplace-led used-car seller with eleven priced adverts, public business email/phone and no matched domain in bounded checks. Lower catalogue depth and a mostly budget/high-mileage mix make it a secondary priority relative to larger forecourts.",
+      "confidence": "medium",
+      "verification_status": "public_source_qualified_requires_owner_domain_and_stock_confirmation",
+      "source_urls": [
+        "https://showroom.ebaymotorspro.co.uk/London-used-cars?menu=1",
+        "https://www.cazoo.co.uk/dealers/london-used-cars-80575/"
+      ],
+      "qualification_notes": "Fresh opened catalogue has eleven adverts versus thirteen on older pages; these are not combined stock. Confirm preferred current website, operating legal identity, physical inventory and viewing premises. Seller page labels Slough as London; research locality follows the Slough address/postcode.",
+      "dedupe_status": "not_in_existing_UK_primary_reserve_or_deployment_registry",
+      "buildApproved": false,
+      "outreachApproved": false
+    },
+    {
+      "id": "gb-smethwick-rolf-street-car-sales",
+      "name": "Rolf Street Car Sales / Aran Used Car",
+      "country": "GB",
+      "city": "Smethwick",
+      "region": "West Midlands",
+      "address": "180 Rolfe Street, Smethwick B66 2AS (seller spells Rolf St)",
+      "researchAsOf": "2026-10-18",
+      "website_status": "no_official_site_found_after_check",
+      "website_check": {
+        "method": "opened_primary_marketplace_and_bounded_exact_name_alias_premises_search",
+        "queries": [
+          "\"Rolf Street Car Sales\" website",
+          "\"ardallan85@hotmail.co.uk\" website",
+          "\"Rolf Street\" \"Car\" \"180\" website",
+          "\"Aran Used Car\" website \"180\"",
+          "\"Aran Used Car\" \"website\" \"Smethwick\""
+        ],
+        "observedAt": "2026-10-18",
+        "conclusion": "No matched standalone official domain found in bounded current-name, legacy-alias, email and premises checks; absence is not proven.",
+        "observations": [
+          "Opened current eBay seller uses Rolf Street Car Sales; slug and some dealer-supplied descriptions use Aran Used Car. Treat as one prospect.",
+          "Regit's Visit Dealer Website link points to centraltrains.co.uk, which does not identify the current dealer and was not adopted as an official matched site.",
+          "An exact-name Aran Used Car Ltd corporate directory entry shares 180 Rolfe Street. Current operating legal entity still requires direct confirmation."
+        ],
+        "owner_confirmation_required": true
+      },
+      "inventory": {
+        "advertised_count": 14,
+        "count_type": "opened_marketplace_snapshot_not_unique_physical_stock",
+        "observedAt": "2026-10-18",
+        "source_url": "https://showroom.ebaymotorspro.co.uk/Aran-used-car?menu=1",
+        "examples": [
+          "2024 Audi A1 Sport automatic advertised at GBP 15,799",
+          "2018 Mercedes-Benz C200 AMG Line coupe automatic advertised at GBP 11,899"
+        ],
+        "availability": "not_confirmed_with_dealer"
+      },
+      "public_business_contact": {
+        "email": "ardallan85@hotmail.co.uk",
+        "phone": "+441215160525",
+        "channel": "public_business_email_and_phone",
+        "source_url": "https://showroom.ebaymotorspro.co.uk/Aran-used-car?menu=1",
+        "phone_ownership": "may_be_marketplace_forwarding_number"
+      },
+      "fit_score": 79,
+      "fit_reason": "Independent advertiser with fourteen priced cars, including recent model years, and current public business contact. Bounded name/alias checks find no matched owned site. Small inventory and substantial repaired-category stock make this a lower priority than larger clean-history forecourts.",
+      "confidence": "medium",
+      "verification_status": "public_source_qualified_requires_owner_domain_and_stock_confirmation",
+      "source_urls": [
+        "https://showroom.ebaymotorspro.co.uk/Aran-used-car?menu=1",
+        "https://www.regit.cars/car-dealers/rolf-street-car-sales-birmingham-west-midlands",
+        "https://www.gumtree.com/p/mercedes-benz/2018-mercedes-benz-c-class-c200-amg-line-2dr-9g-tronic-coupe-petrol-automatic/1803168277",
+        "https://www.gumtree.com/p/audi/2022-audi-a1-25-tfsi-sport-5dr-s-tronic-hatchback-petrol-automatic/1802828851",
+        "https://www.192.com/places/b/b66-2/b66-2as/"
+      ],
+      "qualification_notes": "Primary descriptions explicitly disclose Category S/N repairs on several vehicles, including C200/AudiA1; preserve those disclosures and never present them as clean-history stock. Confirm exact legal operating identity, any current domain and vehicle availability before personalization. The Regit nearby Aran Car Sales entry is not automatically the same business; match contacts/premises before adopting any additional identity.",
+      "dedupe_status": "not_in_existing_UK_primary_reserve_or_deployment_registry",
+      "buildApproved": false,
+      "outreachApproved": false
+    },
+    {
+      "id": "gb-hyde-sour-motors",
+      "name": "Sour Motors (legacy MT Motors showroom)",
+      "country": "GB",
+      "city": "Hyde",
+      "region": "Greater Manchester",
+      "address": "Viewings by appointment, Perrin Street, Hyde SK14 1JE (seller labels Manchester)",
+      "researchAsOf": "2026-10-18",
+      "website_status": "no_official_site_found_after_check",
+      "website_check": {
+        "method": "opened_primary_marketplace_and_bounded_exact_name_alias_premises_search",
+        "queries": [
+          "\"Sour Motors\" website",
+          "\"thaher786@yahoo.co.uk\" website",
+          "\"MT Motors\" \"Perrin\" website",
+          "\"MT Motors\" Hyde website",
+          "\"sourrszn@gmail.com\" website",
+          "\"Sour Motors\" \"177 Great\" website"
+        ],
+        "observedAt": "2026-10-18",
+        "conclusion": "No matched standalone official domain found after bounded current-name, legacy-alias, contact and premises checks; absence is not proven.",
+        "observations": [
+          "Fresh opened eBay showroom uses Sour Motors with MTmotors legacy slug, current email and Perrin Street appointment address. Cazoo corroborates name and address.",
+          "EnterReg has an older same-name Hyde profile at 177 Great Norbury Street with different contact; relationship/current address must be confirmed. Its email was included in the domain check but not adopted as preferred contact.",
+          "MT Motors owned websites found are Surrey/service or foreign businesses without matched Hyde contacts; none was adopted as this dealer's official domain."
+        ],
+        "owner_confirmation_required": true
+      },
+      "inventory": {
+        "advertised_count": 36,
+        "count_type": "opened_marketplace_snapshot_not_unique_physical_stock",
+        "observedAt": "2026-10-18",
+        "source_url": "https://showroom.ebaymotorspro.co.uk/MTmotors?menu=1",
+        "examples": [
+          "2017 Ford Focus ST-Line advertised at GBP 4,395",
+          "2015 Renault Captur diesel advertised at GBP 4,000"
+        ],
+        "availability": "not_confirmed_with_dealer"
+      },
+      "public_business_contact": {
+        "email": "thaher786@yahoo.co.uk",
+        "phone": "+441457600608",
+        "channel": "public_business_email_and_phone",
+        "source_url": "https://showroom.ebaymotorspro.co.uk/MTmotors?menu=1",
+        "phone_ownership": "may_be_marketplace_forwarding_number"
+      },
+      "fit_score": 80,
+      "fit_reason": "Thirty-six advertised cars and reachable public business contact establish an independent stock-site opportunity, with no matched domain after bounded current/legacy-name checks. Mostly older budget stock and an unresolved historical address/contact reduce priority below larger premium dealers.",
+      "confidence": "medium",
+      "verification_status": "public_source_qualified_requires_owner_domain_and_stock_confirmation",
+      "source_urls": [
+        "https://showroom.ebaymotorspro.co.uk/MTmotors?menu=1",
+        "https://www.cazoo.co.uk/dealers/sour-motors-16217/",
+        "https://www.regit.cars/car-dealers/mt-motors-manchester-greater-manchester",
+        "https://www.enterreg.com/sell-my-car/greater-manchester/hyde/sour-motors"
+      ],
+      "qualification_notes": "Confirm exact current operating/legal entity, preferred website and appointment/viewing location. Use the current marketplace contact pending owner confirmation; don't merge the historical EnterReg contact automatically. Some listing mileage fields conflict with descriptions (e.g. a CitroenC1). Confirm factual listing details and availability before copying.",
+      "dedupe_status": "not_in_existing_UK_primary_reserve_or_deployment_registry",
+      "buildApproved": false,
+      "outreachApproved": false
+    },
+    {
+      "id": "gb-bradford-cars4you",
+      "name": "CARS4YOU (Bradford / legacy EDK Cars)",
+      "country": "GB",
+      "city": "Bradford",
+      "region": "West Yorkshire",
+      "address": "Unit 1(A), Whitehead Street, Bradford, BD3 9LY",
+      "researchAsOf": "2026-10-18",
+      "website_status": "no_official_site_found_after_check",
+      "website_check": {
+        "method": "Exact trading-name, legacy seller-name, email and premises searches, checked against opened dealer-supplied current marketplace stock.",
+        "queries": [
+          "\"CARS4YOU\" \"Whitehead\" website",
+          "\"CARS4YOU\" \"BD3 9LY\"",
+          "\"sajkash420@hotmail.co.uk\"",
+          "\"EDK Cars\" Bradford website"
+        ],
+        "observedAt": "2026-10-18",
+        "conclusion": "No matched current standalone official dealer domain found in these bounded checks; this is not proof of absence.",
+        "observations": [
+          "Current eBay stock is branded CARS4YOU at Whitehead Street, under the legacy edk-cars-ltd seller path; Cazoo corroborates the same trading name and premises.",
+          "Legacy EDK Cars directory entry gives 67 Rufford Street, Bradford. It is treated as an alias lead for investigation, not a second prospect.",
+          "Other Cars4You businesses in Edinburgh/Broxburn, Caterham and overseas were not adopted as this Bradford dealer."
+        ],
+        "owner_confirmation_required": true
+      },
+      "inventory": {
+        "advertised_count": 75,
+        "count_type": "opened_marketplace_snapshot_not_unique_physical_stock",
+        "observedAt": "2026-10-18",
+        "source_url": "https://showroom.ebaymotorspro.co.uk/edk-cars-ltd?extendedFilter=1&menu=1&page=1",
+        "examples": [
+          {
+            "title": "2017 Volkswagen Tiguan 2.0 TDI 150 4Motion SEL DSG",
+            "price_gbp": 7750,
+            "mileage": 151000
+          },
+          {
+            "title": "2020 Ford Fiesta 1.0 EcoBoost 95 Titanium",
+            "price_gbp": 4250,
+            "mileage": 129000
+          },
+          {
+            "title": "2019 Nissan Leaf 110kW Acenta 40kWh",
+            "price_gbp": 5450,
+            "mileage": 113000
+          }
+        ],
+        "availability": "not_confirmed_with_dealer"
+      },
+      "public_business_contact": {
+        "email": "sajkash420@hotmail.co.uk",
+        "phone": "+441274028318",
+        "channel": "public_business_email_and_phone",
+        "source_url": "https://showroom.ebaymotorspro.co.uk/edk-cars-ltd?extendedFilter=1&menu=1&page=1",
+        "phone_ownership": "may_be_marketplace_forwarding_number"
+      },
+      "fit_score": 81,
+      "fit_reason": "Substantial active multi-make catalogue and clear marketplace-led public contact, with no matching current official domain found after alias checks. High-mileage budget focus and some repair/gearbox-issue adverts reduce fit below cleaner retail stock dealers.",
+      "confidence": "medium",
+      "verification_status": "public_source_qualified_requires_owner_domain_and_stock_confirmation",
+      "source_urls": [
+        "https://showroom.ebaymotorspro.co.uk/edk-cars-ltd?extendedFilter=1&menu=1&page=1",
+        "https://www.cazoo.co.uk/dealers/cars4you-43883/",
+        "https://www.cardealerreviews.co.uk/dealership/edk-cars-ltd-bradford-west-yorkshire-england"
+      ],
+      "qualification_notes": "75 is the opened advert count, not verified unique available retail vehicles. Dealer describes mainly ex-company/ex-lease high-mileage stock; other pages include explicitly disclosed mechanical-issue and Cat S stock. Some listing titles/descriptions disagree on year or mileage, so source facts must be confirmed before a demo. Current legal operator and relationship to legacy EDK Cars require owner confirmation. One prospect only.",
+      "dedupe_status": "not_in_existing_UK_primary_reserve_or_deployment_registry",
+      "buildApproved": false,
+      "outreachApproved": false
+    },
+    {
+      "id": "gb-swansea-car-shop",
+      "name": "The Car Shop Swansea (TWK Vehicle Sales seller alias)",
+      "country": "GB",
+      "city": "Swansea",
+      "region": "West Glamorgan, Wales",
+      "address": "Cwm Garage, Peniel Green Road, Llansamlet, Swansea, SA7 9AU",
+      "researchAsOf": "2026-10-18",
+      "website_status": "poor_site",
+      "website": "http://www.carshopswansea.co.uk/",
+      "website_check": {
+        "method": "Exact current trading-name, former marketplace seller-name, public email and current/legacy premises searches; bounded primary domain/DNS checks.",
+        "queries": [
+          "\"The Car Shop Swansea\" official used cars",
+          "\"Car Shop Swansea\" \"Cwm Garage\" website",
+          "\"carshopswansea@hotmail.co.uk\"",
+          "\"TWK Vehicle Sales\" Swansea cars website",
+          "\"Car Shop Swansea\" \"carshopswansea.co.uk\""
+        ],
+        "observedAt": "2026-10-18",
+        "conclusion": "Historically attributed dealer domain carshopswansea.co.uk does not resolve in the checked public DNS snapshot; no matching replacement stock website found in bounded current-name, alias and email searches. Domain ownership and replacement site require confirmation.",
+        "observations": [
+          "Nextdoor and business-directory entries attribute carshopswansea.co.uk to this dealer name at the older Samlet Road location.",
+          "Google public DNS returned Status 3 (NXDOMAIN) for carshopswansea.co.uk; direct HTTPS to www.carshopswansea.co.uk returned no-such-host on 18 October 2026.",
+          "Current dealer-supplied eBay stock is branded The Car Shop Swansea Limited, with the Twk-vehicle-sales-ltd seller path and Peniel Green Road premises. Cazoo corroborates the current name/address.",
+          "TWK associated repair-business domain twkswansea.com was also not resolving in the direct check. The exact current relationship to TWK Vehicle Sales and any replacement site remains unconfirmed."
+        ],
+        "owner_confirmation_required": true
+      },
+      "inventory": {
+        "advertised_count": 20,
+        "count_type": "opened_marketplace_snapshot_not_unique_physical_stock",
+        "observedAt": "2026-10-18",
+        "source_url": "https://showroom.ebaymotorspro.co.uk/Twk-vehicle-sales-ltd?extendedFilter=1",
+        "examples": [
+          {
+            "title": "2015 Peugeot 3008 1.6 BlueHDi 120 Allure",
+            "price_gbp": 3495,
+            "mileage": 117627
+          },
+          {
+            "title": "2016 DS 3 1.6 BlueHDi Elegance",
+            "price_gbp": 3995,
+            "mileage": 95388
+          },
+          {
+            "title": "2016 Volkswagen Transporter 2.0 TDI BMT 150 Startline",
+            "price_gbp": 11495,
+            "mileage": 144230
+          }
+        ],
+        "availability": "not_confirmed_with_dealer"
+      },
+      "public_business_contact": {
+        "email": "carshopswansea@hotmail.co.uk",
+        "phone": "+441792940424",
+        "channel": "public_business_email_and_phone",
+        "source_url": "https://showroom.ebaymotorspro.co.uk/Twk-vehicle-sales-ltd?extendedFilter=1",
+        "phone_ownership": "may_be_marketplace_forwarding_number"
+      },
+      "fit_score": 80,
+      "fit_reason": "Active multi-make car/van catalogue, public business email/phone, and a concrete legacy-domain DNS failure; suitable for replacement-site discussion after alias/operator confirmation. Most cars are budget retail stock, so below larger mid-market dealers.",
+      "confidence": "medium",
+      "verification_status": "public_source_qualified_requires_owner_domain_and_stock_confirmation",
+      "source_urls": [
+        "https://showroom.ebaymotorspro.co.uk/Twk-vehicle-sales-ltd?extendedFilter=1",
+        "https://www.cazoo.co.uk/dealers/the-car-shop-swansea-limited-52120/",
+        "https://nextdoor.co.uk/pages/the-car-shop-swansea-swansea-wales/",
+        "https://find-and-update.company-information.service.gov.uk/company/07270505/filing-history",
+        "https://dns.google/resolve?name=carshopswansea.co.uk&type=A"
+      ],
+      "qualification_notes": "Opened eBay snapshot showed 20 adverts; more recent indexed search/Cazoo snapshots showed 18. Counts are not verified unique available stock and the page can be cached. Companies House filing history for exact-name company 07270505 includes a June 2026 confirmation and 2025 accounts; current marketplace legal operator is not proven by trading name alone. Treat TWK alias and Car Shop as one potential account until confirmed. Legacy contact/address entries are evidence of domain attribution only, not current outreach contacts.",
+      "dedupe_status": "not_in_existing_UK_primary_reserve_or_deployment_registry",
+      "buildApproved": false,
+      "outreachApproved": false
+    },
+    {
+      "id": "gb-hinckley-le10-motors",
+      "name": "LE10 Motors Company Ltd",
+      "country": "GB",
+      "city": "Hinckley",
+      "region": "Leicestershire",
+      "address": "Old Builders Yard, Hinckley, LE10 3ED",
+      "researchAsOf": "2026-10-18",
+      "website_status": "no_official_site_found_after_check",
+      "website_check": {
+        "method": "Exact trading-name, email, town and premises searches, cross-checked with opened dealer-supplied marketplace stock.",
+        "queries": [
+          "\"LE10 Motors\" website",
+          "\"LE10 motors\" Hinckley website",
+          "\"le10motors@hotmail.com\"",
+          "\"LE10 Motors\" \"Old Builders\""
+        ],
+        "observedAt": "2026-10-18",
+        "conclusion": "No matched current standalone official dealer domain found in these bounded checks; owner confirmation still required.",
+        "observations": [
+          "Current eBay stock and Cazoo match LE10 Motors / LE10 Motors Company Ltd at Old Builders Yard, LE10 3ED.",
+          "Exact-name results also return a Turkish namesake and unrelated Hinckley garages; neither was treated as this dealer's site.",
+          "Companies House exact-name company 12153799 is shown active, with an Oadby administrative address distinct from the marketplace viewing yard; the indexed accounts due date is in the past and current filing status needs confirmation."
+        ],
+        "owner_confirmation_required": true
+      },
+      "inventory": {
+        "advertised_count": 65,
+        "count_type": "opened_marketplace_snapshot_not_unique_physical_stock",
+        "observedAt": "2026-10-18",
+        "source_url": "https://showroom.ebaymotorspro.co.uk/le10motors?extendedFilter=1&menu=1",
+        "examples": [
+          {
+            "title": "2022 Citroen Dispatch 1400 2.0 BlueHDi 145 Enterprise Pro",
+            "price_gbp": 10495,
+            "mileage": 65000
+          },
+          {
+            "title": "2020 Ford Transit 2.0 EcoBlue 130 single cab tipper",
+            "price_gbp": 24995,
+            "mileage": 69000
+          },
+          {
+            "title": "2003 Toyota Celica 1.8 VVTi",
+            "price_gbp": 7995,
+            "mileage": 96000
+          }
+        ],
+        "availability": "not_confirmed_with_dealer"
+      },
+      "public_business_contact": {
+        "email": "le10motors@hotmail.com",
+        "phone": "+441455245184",
+        "channel": "public_business_email_and_phone",
+        "source_url": "https://showroom.ebaymotorspro.co.uk/le10motors?extendedFilter=1&menu=1",
+        "phone_ownership": "may_be_marketplace_forwarding_number"
+      },
+      "fit_score": 85,
+      "fit_reason": "Deep advertised inventory, established company-name match and public business contact with no matched owned domain found. Predominantly vans, pickups and mixed older cars/classics, so a commercial-vehicle catalogue pitch is more relevant than a prestige-only car pitch.",
+      "confidence": "medium",
+      "verification_status": "public_source_qualified_requires_owner_domain_and_stock_confirmation",
+      "source_urls": [
+        "https://showroom.ebaymotorspro.co.uk/le10motors?extendedFilter=1&menu=1",
+        "https://www.cazoo.co.uk/dealers/le10-motors-company-ltd-54376/",
+        "https://find-and-update.company-information.service.gov.uk/company/12153799",
+        "https://www.regit.cars/car-dealers/le10-motors-company-ltd-bedworth-warwickshire"
+      ],
+      "qualification_notes": "65 is opened advert count; other snapshots showed 62–68. Not confirmed unique physical available vehicles. Newer commercial stock and older enthusiast cars are both present; confirm actual cars/van mix and availability before demo. Viewing location is incompletely specified as Old Builders Yard, so obtain precise directions. Do not confuse Oadby registered office with retail location or Turkish LE10 Motors namesake.",
+      "dedupe_status": "not_in_existing_UK_primary_reserve_or_deployment_registry",
+      "buildApproved": false,
+      "outreachApproved": false
+    },
+    {
+      "id": "gb-accrington-trade-car-centre",
+      "name": "Trade Car Centre (Accrington / ghmcarsales seller path)",
+      "country": "GB",
+      "city": "Accrington",
+      "region": "Lancashire",
+      "address": "Junction 7 Industrial Estate, Blackburn Road, Accrington, BB5 5JW",
+      "researchAsOf": "2026-10-18",
+      "website_status": "no_official_site_found_after_check",
+      "website_check": {
+        "method": "Exact name, email, premises and legacy seller-path searches compared with opened dealer-supplied marketplace stock.",
+        "queries": [
+          "\"Trade Car Centre\" Accrington website",
+          "\"Trade Car Centre\" \"BB5 5JW\"",
+          "\"Trade Car Centre\" \"Junction 7\" website",
+          "\"tradecarcentre1@gmail.com\"",
+          "\"GHM\" \"Accrington\" cars website"
+        ],
+        "observedAt": "2026-10-18",
+        "conclusion": "No matched current standalone official domain found after these bounded checks; owner confirmation required.",
+        "observations": [
+          "Opened eBay catalogue is branded Trade Car Centre at the same premises as Cazoo dealer84221, with matching public business email.",
+          "The primary seller path is ghmcarsales, so GHM was included in search. Unrelated GHM recycling/Scottish businesses were not adopted as this dealer or counted separately.",
+          "The generic Trade Car Centre name has many UK namesakes; this candidate is identified by Accrington premises and exact email."
+        ],
+        "owner_confirmation_required": true
+      },
+      "inventory": {
+        "advertised_count": 79,
+        "count_type": "opened_marketplace_snapshot_not_unique_physical_stock",
+        "observedAt": "2026-10-18",
+        "source_url": "https://showroom.ebaymotorspro.co.uk/ghmcarsales?menu=1",
+        "examples": [
+          {
+            "title": "2016 Land Rover Discovery Sport 2.0 TD4 180 HSE automatic",
+            "price_gbp": 6695,
+            "mileage": 98000
+          },
+          {
+            "title": "2014 Audi Q3 2.0 TDI 177 Quattro S Line Plus S Tronic",
+            "price_gbp": 7995,
+            "mileage": 57000
+          },
+          {
+            "title": "2017 MG3 1.5 VTi-TECH 3Form Sport",
+            "price_gbp": 2995,
+            "mileage": 20000
+          }
+        ],
+        "availability": "not_confirmed_with_dealer"
+      },
+      "public_business_contact": {
+        "email": "tradecarcentre1@gmail.com",
+        "phone": "+441254786608",
+        "channel": "public_business_email_and_phone",
+        "source_url": "https://showroom.ebaymotorspro.co.uk/ghmcarsales?menu=1",
+        "phone_ownership": "may_be_marketplace_forwarding_number"
+      },
+      "fit_score": 82,
+      "fit_reason": "Large advertised multi-make stock catalogue with a few stronger retail vehicles and reachable public contact, while bounded current-name/alias/email/premises checks found no matching owned site. Predominantly older low-price cars/vans reduce fit below newer-stock dealers.",
+      "confidence": "medium",
+      "verification_status": "public_source_qualified_requires_owner_domain_and_stock_confirmation",
+      "source_urls": [
+        "https://showroom.ebaymotorspro.co.uk/ghmcarsales?menu=1",
+        "https://www.cazoo.co.uk/dealers/trade-car-centre-84221/"
+      ],
+      "qualification_notes": "Opened eBay snapshot79 adverts; other snapshots77–83. Not verified unique physical available stock. Current legal operator and precise unit number are not established by marketplace trading name; confirm before demo/outreach. Some low-price adverts say read advert and may be repair/clearance stock; use only confirmed sound retail vehicles in a later demo. One Accrington account; GHM is a seller-path alias clue only.",
+      "dedupe_status": "not_in_existing_UK_primary_reserve_or_deployment_registry",
+      "buildApproved": false,
+      "outreachApproved": false
+    },
+    {
+      "country": "GB",
+      "researchAsOf": "2026-10-18",
+      "website_status": "no_official_site_found_after_check",
+      "confidence": "medium",
+      "verification_status": "public_source_qualified_requires_owner_domain_and_stock_confirmation",
+      "dedupe_status": "not_in_existing_UK_primary_reserve_or_deployment_registry",
+      "buildApproved": false,
+      "outreachApproved": false,
+      "id": "gb-rochdale-tecno-motors",
+      "name": "Tecno Motors (legacy Speed Motors)",
+      "city": "Rochdale",
+      "region": "Lancashire",
+      "address": "Norman Road, Rochdale, OL11 4HP (company registered Unit 1, OL11 4HS)",
+      "website_check": {
+        "method": "Exact trading name, email, premises and legacy-name searches; current opened stock and fresh Companies House HTTP check.",
+        "queries": [
+          "\"Tecno Motors\" Rochdale website",
+          "\"Tecno Motors\" \"Norman Road\" website",
+          "\"speed_motorss@hotmail.com\"",
+          "\"Speed Motors\" \"Norman Road\""
+        ],
+        "observedAt": "2026-10-18",
+        "conclusion": "No matched current standalone official domain found in bounded current/legacy name, email and premises checks; owner confirmation required.",
+        "observations": [
+          "Dealer-supplied eBay stock and Cazoo match Tecno Motors at Norman Road with public email speed_motorss@hotmail.com.",
+          "Speed Motors appears at the same Norman Road premises in an older directory; treated as one possible alias/account, not a second dealer.",
+          "Fresh primary Companies House HTTP200 shows Tecno Motors Limited13920348 Active with February2026 confirmation and February2025 accounts; this supersedes a third-party stale proposal-to-strike-off label.",
+          "Unrelated overseas Tecno businesses were not matched to this UK dealer."
+        ],
+        "owner_confirmation_required": true
+      },
+      "inventory": {
+        "advertised_count": 41,
+        "count_type": "opened_marketplace_snapshot_not_unique_physical_stock",
+        "observedAt": "2026-10-18",
+        "source_url": "https://showroom.ebaymotorspro.co.uk/Tecno-motors?menu=1",
+        "examples": [
+          {
+            "title": "2024 Toyota Yaris Cross 1.5 Hybrid Excel CVT",
+            "price_gbp": 13495,
+            "mileage": 48804
+          },
+          {
+            "title": "2024 Toyota Aygo X 1.0 VVT-i Pure",
+            "price_gbp": 7595,
+            "mileage": 18772
+          },
+          {
+            "title": "2020 Honda CR-V 1.5 VTEC Turbo SR seven-seat",
+            "price_gbp": 11695,
+            "mileage": 32540
+          }
+        ],
+        "availability": "not_confirmed_with_dealer"
+      },
+      "public_business_contact": {
+        "email": "speed_motorss@hotmail.com",
+        "phone": "+441706572587",
+        "channel": "public_business_email_and_phone",
+        "source_url": "https://showroom.ebaymotorspro.co.uk/Tecno-motors?menu=1",
+        "phone_ownership": "may_be_marketplace_forwarding_number"
+      },
+      "fit_score": 80,
+      "fit_reason": "Substantial catalogue including newer low-mileage vehicles with clear public contact and no matched owned domain found. Disclosed Cat S and repairable/salvage stock in the broader catalogue lowers fit and requires a truthful specialist-stock presentation.",
+      "source_urls": [
+        "https://showroom.ebaymotorspro.co.uk/Tecno-motors?menu=1",
+        "https://www.cazoo.co.uk/dealers/tecno-motors-37603/",
+        "https://find-and-update.company-information.service.gov.uk/company/13920348",
+        "https://www.regit.cars/car-dealers/speed-motors-rochdale-greater-manchester"
+      ],
+      "qualification_notes": "41 adverts are not confirmed unique available cars. Primary catalogue includes explicitly Cat S stock; older Gumtree listings also include damaged repairable cars. Do not imply examples are accident-free or stock is all ready-to-retail. Exact viewing unit/postcode and current relationship to Speed Motors require confirmation. Public reviews are unverified allegations and were not adopted as fact or commercial scoring evidence."
+    },
+    {
+      "country": "GB",
+      "researchAsOf": "2026-10-18",
+      "website_status": "no_official_site_found_after_check",
+      "confidence": "medium",
+      "verification_status": "public_source_qualified_requires_owner_domain_and_stock_confirmation",
+      "dedupe_status": "not_in_existing_UK_primary_reserve_or_deployment_registry",
+      "buildApproved": false,
+      "outreachApproved": false,
+      "id": "gb-bury-fairfield-car-centre",
+      "name": "Fairfield Car Centre (Bury / M-Kars seller path)",
+      "city": "Bury",
+      "region": "Greater Manchester",
+      "address": "1 Peter Street, Bury, BL9 6AB (CarGurus lists7 Peter Street)",
+      "website_check": {
+        "method": "Exact trading-name, public email, premises and legacy seller-name searches compared with opened dealer-supplied primary stock.",
+        "queries": [
+          "\"Fairfield Car Centre\" Bury website",
+          "\"Fairfield Car Centre\" \"Peter\" website",
+          "\"fcc1711@gmail.com\"",
+          "\"M Kars\" Bury website"
+        ],
+        "observedAt": "2026-10-18",
+        "conclusion": "No matched current standalone official domain found in these bounded checks; owner confirmation required.",
+        "observations": [
+          "Opened eBay dealer catalogue is branded Fairfield Car Centre and uses the legacy M-Kars seller path; Cazoo and PistonHeads corroborate Bury stock.",
+          "M Kars overseas businesses and other Fairfield namesakes were not adopted as this dealer's website.",
+          "Primary marketplace lists1 Peter Street while CarGurus says7 Peter Street at the same postcode; exact viewing premises remain to confirm."
+        ],
+        "owner_confirmation_required": true
+      },
+      "inventory": {
+        "advertised_count": 57,
+        "count_type": "opened_marketplace_snapshot_not_unique_physical_stock",
+        "observedAt": "2026-10-18",
+        "source_url": "https://showroom.ebaymotorspro.co.uk/M-Kars?menu=1",
+        "examples": [
+          {
+            "title": "2015 Mercedes-Benz C300 BlueTEC Hybrid AMG Line Premium Plus automatic",
+            "price_gbp": 5999,
+            "mileage": 171000
+          },
+          {
+            "title": "2013 Volvo XC60 D5 SE Lux Nav AWD Geartronic",
+            "price_gbp": 3999,
+            "mileage": 167000
+          },
+          {
+            "title": "2014 Volvo V40 D2 R-Design",
+            "price_gbp": 2499,
+            "mileage": 168000
+          }
+        ],
+        "availability": "not_confirmed_with_dealer"
+      },
+      "public_business_contact": {
+        "email": "fcc1711@gmail.com",
+        "phone": "+441612416394",
+        "channel": "public_business_email_and_phone",
+        "source_url": "https://showroom.ebaymotorspro.co.uk/M-Kars?menu=1",
+        "phone_ownership": "may_be_marketplace_forwarding_number"
+      },
+      "fit_score": 80,
+      "fit_reason": "Deep active multi-make catalogue with public email/phone and no matching owned domain found after current-name, alias and premises checks. Predominantly older high-mileage budget vehicles reduce likely commercial fit compared with mid-market dealers.",
+      "source_urls": [
+        "https://showroom.ebaymotorspro.co.uk/M-Kars?menu=1",
+        "https://www.cazoo.co.uk/dealers/fairfield-car-centre-27803/",
+        "https://www.cargurus.co.uk/Cars/m-Fairfield-Car-Centre-sp522871",
+        "https://www.pistonheads.com/buy/dealer/980694"
+      ],
+      "qualification_notes": "57 is the opened advert count, not confirmed unique physically available stock; snapshots56–59. Dealer descriptions include MOT dates into2027, but all condition/history claims remain seller statements. Legal operator not established from trading name; confirm company/sole-trader identity and current domain before outreach/build. M-Kars is a seller-path clue, not proof of separate ownership."
+    },
+    {
+      "id": "gb-ilford-simply-motors",
+      "name": "Simply Motors (Ilford, Stradbroke Grove)",
+      "country": "GB",
+      "city": "Ilford",
+      "region": "Essex / Greater London",
+      "address": "Stradbroke Grove, Ilford, IG5 0DQ",
+      "researchAsOf": "2026-10-18",
+      "website_status": "no_official_site_found_after_check",
+      "website_check": {
+        "method": "Exact current trading-name, email and premises searches compared with primary stock and same-name owned-site attribution.",
+        "queries": [
+          "\"Simply Motors\" Ilford website",
+          "\"simply.motors@yahoo.com\"",
+          "\"Simply Motors\" \"Stradbroke\"",
+          "\"Simply Motors\" \"IG5\""
+        ],
+        "observedAt": "2026-10-18",
+        "conclusion": "No current official domain matched to the Stradbroke Grove Ilford stock seller in these bounded checks; this does not prove absence.",
+        "observations": [
+          "Opened eBay catalogue and Cazoo match Simply Motors at Stradbroke Grove, Ilford, with exact public email.",
+          "simply-motors.com is attributed by AutoTrader and directories to a dealer at1144 London Road, Norbury, SW16 4DS, with a different phone. It was not adopted as the Ilford dealer's website; ownership relationship remains to confirm.",
+          "A historical Simply Motors Limited company05727759 at842 Eastern Avenue dissolved in2010. That old name/address is insufficient to identify today's Stradbroke Grove operator; current legal entity must be confirmed rather than assuming the present stock seller dissolved."
+        ],
+        "owner_confirmation_required": true
+      },
+      "inventory": {
+        "advertised_count": 16,
+        "count_type": "opened_marketplace_snapshot_not_unique_physical_stock",
+        "observedAt": "2026-10-18",
+        "source_url": "https://showroom.ebaymotorspro.co.uk/simply-motors?extendedFilter=1",
+        "examples": [
+          {
+            "title": "2019 Audi A1 25 TFSI Technik Sportback",
+            "price_gbp": 7999,
+            "mileage": 118000
+          },
+          {
+            "title": "2018 Volkswagen Golf 2.0 TDI SE Nav",
+            "price_gbp": 5999,
+            "mileage": 122000
+          },
+          {
+            "title": "2019 Volkswagen Passat 1.5 TSI EVO SE Business estate",
+            "price_gbp": 5999,
+            "mileage": 150000
+          }
+        ],
+        "availability": "not_confirmed_with_dealer"
+      },
+      "public_business_contact": {
+        "email": "simply.motors@yahoo.com",
+        "phone": "+441708204899",
+        "channel": "public_business_email_and_phone",
+        "source_url": "https://showroom.ebaymotorspro.co.uk/simply-motors?extendedFilter=1",
+        "phone_ownership": "may_be_marketplace_forwarding_number"
+      },
+      "fit_score": 78,
+      "fit_reason": "Active16-ad multi-make retail catalogue with public email/phone and no matching domain found after premises/email checks. High-mileage budget stock, imprecise viewing premises and unresolved legal identity lower fit.",
+      "confidence": "medium",
+      "verification_status": "public_source_qualified_requires_owner_domain_and_stock_confirmation",
+      "source_urls": [
+        "https://showroom.ebaymotorspro.co.uk/simply-motors?extendedFilter=1",
+        "https://www.cazoo.co.uk/dealers/simply-motors-81238/",
+        "https://www.autotrader.co.uk/dealers/greater-london/norbury/simply-motors-25872",
+        "https://find-and-update.company-information.service.gov.uk/company/05727759"
+      ],
+      "qualification_notes": "Not confirmed16 unique available vehicles or all stock at one physical site. Confirm exact appointment address, current legal operator, any relation to Norbury Simply Motors and any existing official domain before outreach/build. The historic2010 dissolved company is not asserted to be this current seller. Prices and condition/history are dealer-advert claims.",
+      "dedupe_status": "not_in_existing_UK_primary_reserve_or_deployment_registry",
+      "buildApproved": false,
+      "outreachApproved": false
+    },
+    {
+      "country": "GB",
+      "researchAsOf": "2026-10-18",
+      "website_status": "no_official_site_found_after_check",
+      "confidence": "medium",
+      "verification_status": "public_source_qualified_requires_owner_domain_and_stock_confirmation",
+      "dedupe_status": "not_in_existing_UK_primary_reserve_or_deployment_registry",
+      "buildApproved": false,
+      "outreachApproved": false,
+      "id": "gb-coventry-jdm-direct-imports",
+      "name": "JDM Direct Imports (Coventry)",
+      "city": "Coventry",
+      "region": "West Midlands",
+      "address": "Bayton Industrial Estate, Bayton Road, Coventry, CV7 9EJ",
+      "website_check": {
+        "method": "Exact dealer-name, public email, premises and possible historical legal-name searches against opened primary stock.",
+        "queries": [
+          "\"Jdm direct imports\" Coventry website",
+          "\"jdmdirectimports@hotmail.com\"",
+          "\"JDM Direct Imports\" \"Bayton\" website",
+          "\"JDM Dean Imports\" website"
+        ],
+        "observedAt": "2026-10-18",
+        "conclusion": "No matched current standalone official dealer domain found in these bounded checks; owner domain and legal-operator confirmation required.",
+        "observations": [
+          "Opened eBay dealer catalogue and public business seller profile match the same JDM Direct Imports trading name, email and Bayton premises.",
+          "PistonHeads dealer936306 links to eBay Motors Pro rather than an owned domain, but the no-domain conclusion also uses exact-name/email/premises searches.",
+          "Primary catalogue explicitly describes sale-or-return/advertising services. This is a specialist consignment/import sales prospect, not verified stock ownership.",
+          "Companies House13372211 uses the exact current name and former JDM Dean Imports in the Coventry area, but ownership link to the marketplace seller has not been established. Other UK/Japan/US JDM importers were not treated as this seller's website."
+        ],
+        "owner_confirmation_required": true
+      },
+      "inventory": {
+        "advertised_count": 11,
+        "count_type": "opened_marketplace_snapshot_not_unique_physical_stock",
+        "observedAt": "2026-10-18",
+        "source_url": "https://showroom.ebaymotorspro.co.uk/Jdm-direct-imports?extendedFilter=1",
+        "examples": [
+          {
+            "title": "2025 Nissan Fairlady Z NISMO",
+            "price_gbp": 59995,
+            "mileage": 50
+          },
+          {
+            "title": "2022 Toyota Land Cruiser LC300 ZX V6 Twin Turbo",
+            "price_gbp": 69995,
+            "mileage": 16000
+          },
+          {
+            "title": "1996 Nissan Skyline R33 GT-R V-Spec LM Edition",
+            "price_gbp": 94995,
+            "mileage": 66000
+          }
+        ],
+        "availability": "not_confirmed_with_dealer"
+      },
+      "public_business_contact": {
+        "email": "jdmdirectimports@hotmail.com",
+        "phone": "+442475187131",
+        "channel": "public_business_email_and_phone",
+        "source_url": "https://showroom.ebaymotorspro.co.uk/Jdm-direct-imports?extendedFilter=1",
+        "phone_ownership": "may_be_marketplace_forwarding_number",
+        "additional_public_phone": "07438768168",
+        "additional_phone_source": "https://www.ebay.co.uk/usr/jdm-direct-imports"
+      },
+      "fit_score": 81,
+      "fit_reason": "High-value Japanese specialist/import catalogue with fresh2026 import descriptions, business contact and no matched official domain found. Consignment/advertising model and smaller catalogue reduce fit below a comparable stock-owning dealer.",
+      "source_urls": [
+        "https://showroom.ebaymotorspro.co.uk/Jdm-direct-imports?extendedFilter=1",
+        "https://www.ebay.co.uk/usr/jdm-direct-imports",
+        "https://www.cazoo.co.uk/dealers/jdm-direct-imports-80595/",
+        "https://www.pistonheads.com/buy/dealer/936306",
+        "https://find-and-update.company-information.service.gov.uk/company/13372211"
+      ],
+      "qualification_notes": "11 is opened advert count, not verified owned or unique available stock. Dealer explicitly says sale-or-return; ask who authorizes assets/listings. Some import year fields conflict with original vehicle year (Subaru2026 field/2006 description and Nissan300ZX2025 field/1993 description), so confirm first registration/manufacture dates. PistonHeads location CV6 5LU differs from current Bayton CV7 9EJ. Current legal operator and viewing location require confirmation."
+    },
+    {
+      "country": "GB",
+      "researchAsOf": "2026-10-18",
+      "website_status": "no_official_site_found_after_check",
+      "confidence": "medium",
+      "verification_status": "public_source_qualified_requires_owner_domain_and_stock_confirmation",
+      "dedupe_status": "not_in_existing_UK_primary_reserve_or_deployment_registry",
+      "buildApproved": false,
+      "outreachApproved": false,
+      "id": "gb-broxburn-edinburgh-van-sales",
+      "name": "Edinburgh Van Sales (Broxburn)",
+      "city": "Broxburn",
+      "region": "West Lothian, Scotland",
+      "address": "Unit 13 Thistle Business Park, 155 Main Street, Broxburn, EH52 5AS",
+      "website_check": {
+        "method": "Exact trading-name, public email, premises and town searches against primary dealer-supplied stock, with a fresh bounded HTTP stock read.",
+        "queries": [
+          "\"Edinburgh Van Sales\" website",
+          "\"sales.edinburghvansales@gmail.com\"",
+          "\"Edinburgh Van Sales\" \"155\" website",
+          "\"Edinburgh Van Sales\" Broxburn official website",
+          "\"Edinburgh Van Sales\" \"Thistle\""
+        ],
+        "observedAt": "2026-10-18",
+        "conclusion": "No matched current standalone official dealer domain found after these bounded checks; owner confirmation required.",
+        "observations": [
+          "Primary eBay seller page and Cazoo dealer14752 match Edinburgh Van Sales and the same Broxburn premises.",
+          "Fresh primary eBay HTTP200 on18 October2026 showed93 adverts and priced newer commercial stock. The web-tool cached open showed98 while an older Cazoo snapshot showed12; these are not interchangeable verified physical-stock counts.",
+          "Vanpoint in Edinburgh, Swiss Vans Edinburgh and Fleet Management Services entries were not automatically adopted as this Broxburn seller; none matched the exact public email/premises in the checked results."
+        ],
+        "owner_confirmation_required": true
+      },
+      "inventory": {
+        "advertised_count": 93,
+        "count_type": "fresh_primary_http_advert_count_not_unique_physical_stock",
+        "observedAt": "2026-10-18",
+        "source_url": "https://showroom.ebaymotorspro.co.uk/EdinburghVanSales?page=1",
+        "examples": [
+          {
+            "title": "2022 Ford Transit Connect 1.5 EcoBlue100 Leader double cab",
+            "price_gbp": 11695,
+            "mileage": 63000,
+            "vat": "plus VAT"
+          },
+          {
+            "title": "2022 Citroen Dispatch1000 1.5 BlueHDi100 Enterprise Pro",
+            "price_gbp": 9995,
+            "mileage": 87000,
+            "vat": "plus VAT"
+          },
+          {
+            "title": "2024 Peugeot Partner1000 1.5 BlueHDi100 Professional Premium Plus",
+            "price_gbp": 10695,
+            "mileage": 49000,
+            "vat": "plus VAT"
+          }
+        ],
+        "availability": "not_confirmed_with_dealer"
+      },
+      "public_business_contact": {
+        "email": "sales.edinburghvansales@gmail.com",
+        "phone": "+441324464456",
+        "channel": "public_business_email_and_phone",
+        "source_url": "https://showroom.ebaymotorspro.co.uk/EdinburghVanSales?page=1",
+        "phone_ownership": "may_be_marketplace_forwarding_number"
+      },
+      "fit_score": 86,
+      "fit_reason": "Large fresh advertised commercial-stock catalogue including newer2022–24 vans, a clear business viewing address and reachable public contact, with no matching owned site found in bounded name/email/premises searches. Strong commercial-vehicle catalogue prospect if independently operated.",
+      "source_urls": [
+        "https://showroom.ebaymotorspro.co.uk/EdinburghVanSales?page=1",
+        "https://www.cazoo.co.uk/dealers/edinburgh-van-sales-14752/",
+        "https://www.gumtree.com/p/vans/2022-peugeot-expert-1000-1.5-bluehdi-100-professional-premium-van-panel-van-diesel-manual/1803277448"
+      ],
+      "qualification_notes": "93 is fresh primary advert count, not confirmed93 owned/unique available vans; older marketplace snapshots differ considerably. Some listings are awaiting preparation and some field values conflict, so confirm readiness, manufacture year, VAT and mileage before demo. Current legal operator and whether any owned group site serves this trading name remain unconfirmed. One Broxburn account only; do not conflate other Edinburgh van businesses."
     }
   ]
 }

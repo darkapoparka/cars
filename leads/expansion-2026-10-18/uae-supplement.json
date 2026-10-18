@@ -1,0 +1,1442 @@
+{
+  "schemaVersion": 1,
+  "market": "United Arab Emirates - northern-emirate discovery supplement, with explicit Sharjah and Al Ain cross-emirate findings",
+  "researchDate": "2026-10-18",
+  "overallBatchTarget": 400,
+  "targetScope": "overall_multi_market_flexible_allocation",
+  "supplementAim": "20-30 if supported by current evidence",
+  "researchRowCount": 14,
+  "priorityCount": 14,
+  "marketplaceOnlyContactCount": 5,
+  "reserveCount": 0,
+  "heldCount": 0,
+  "status": "research_in_progress",
+  "notes": [
+    "Public research only. No outreach, consent, buying intent or sales outcome is inferred.",
+    "The UK checkpoint is frozen at 116 research rows and 106 priority prospects. This separate supplement does not modify the main UAE agent's file.",
+    "No official site found is a bounded search result, not proof that a dealer has no website. Confirm alternative spellings, ownership, stock and preferred contacts before a build or outreach.",
+    "Advertised marketplace counts are snapshots, may be stale or duplicate, and are not independently verified physically available vehicles. Counts are never added across platforms.",
+    "Names and phones are checked against the current main UAE research, legacy public UAE lead file and local deployment registry. Private CRM deduplication remains the parent owner's responsibility."
+  ],
+  "leads": [
+    {
+      "id": "ae-umm-al-quwain-royal-motors-used-cars",
+      "name": "Royal Motors Used Cars Trading",
+      "aliases": ["ROYAL MOTORS", "RM Royal Motors Used Cars", "royalmotorsuaq"],
+      "country": "AE",
+      "city": "Umm al-Quwain",
+      "emirate": "Umm al-Quwain",
+      "address": "Sheikh Mohammed Bin Zayed Road, Umm Dera, Umm al-Quwain; Showroom 27 - UAQ in YallaMotor seller attribution",
+      "researchDate": "2026-10-18",
+      "qualification": "screened_prospect",
+      "inventory": {
+        "sourceUrl": "https://auto.ae/royalmotorsuaq/",
+        "reportedListings": 8,
+        "additionalSnapshot": {
+          "sourceUrl": "https://licenseplate.ae/ar/cars/dealer/royal-motors-used-cars",
+          "reportedListings": 18,
+          "observedAt": "2026-10-18",
+          "note": "Opened second marketplace catalogue shows 18 advertised cars and its specific Jeep Wrangler ad122 matches +971565444041. The eight AUTO.AE and eighteen LicensePlate counts are separate snapshots, never added or claimed as 26 unique cars."
+        },
+        "kind": "marketplace_advertised_results",
+        "examples": [
+          {"title": "Toyota Camry 2019", "price_aed": 54000, "mileage_km": 105000},
+          {"title": "Hyundai Accent 2023", "price_aed": 40000, "mileage_km": 53000},
+          {"title": "Jeep Grand Cherokee 2017", "price_aed": 43500, "mileage_km": 163000}
+        ],
+        "freshnessEvidence": "Separate dealer-attributed DriveArabia Chevrolet Groove LT 2025 ad, posted 24 September 2026, advertises AED 39,500 and 22,000 km with the same public phone. This is corroboration, not an additional car added to the AUTO.AE count.",
+        "note": "Opened public seller snapshot shows eight advertised cars. Their actual availability and uniqueness have not been confirmed. Some older YallaMotor ads explicitly inactive; those are not current stock evidence. Listing specification/generation mismatches require dealer confirmation."
+      },
+      "website": {
+        "status": "no_official_site_found_after_check",
+        "url": null,
+        "checkedAt": "2026-10-18",
+        "queries": [
+          "\"Royal Motors Used Cars\" \"Umm\" website",
+          "\"0565444041\" website",
+          "\"Royal Motors\" \"056 544 4041\" website",
+          "\"Royal Motors Used Cars Trading\" official website Umm Dera"
+        ],
+        "confidence": "medium",
+        "note": "Exact trading name, phone variants, UAQ premises and marketplace alias checks surfaced dealer-supplied ads and directories, with no confidently matched owned domain. Common Royal Motors names elsewhere are not presumed the same operator. Absence from this bounded check is uncertain."
+      },
+      "publicBusinessContact": {
+        "channels": ["business_phone", "public_whatsapp_link", "marketplace_call"],
+        "phone": "+971565444041",
+        "sourceUrl": "https://www.drivearabia.com/cars-for-sale/uae/chevrolet/groove/chevrolet-groove-lt-2025-gcc-excellent-condition-d79c6b54af234805830cb9988a242d49/",
+        "note": "Full business contact appears in the named dealer's vehicle description and is corroborated by LicensePlate seller attribution and older YallaMotor business ads. No contact, validity test or message sent."
+      },
+      "fitScore": 79,
+      "fitReason": "Independent UAQ marketplace-led dealer with eight advertised cars, mixed family SUV/sedan stock, a recent September ad and a directly attributable public phone. Smaller stock depth than the largest shortlisted dealers; confirm budget and current catalogue.",
+      "confidence": "medium",
+      "verification": {
+        "inventory": "primary_marketplace_snapshot_and_dated_dealer_ad_read",
+        "officialSiteSearch": "bounded_exact_name_phone_location_alias_search_completed",
+        "identity": "trading_name_UAQ_location_and_public_phone_matched",
+        "publicDedup": "no_name_or_phone_match_in_existing_UAE_research_or_local_registry; main_UAE_agent_confirmed_no_saved_or_unsaved_collision",
+        "privateDedup": "requires_owner_private_crm_check",
+        "visualWebsiteAudit": "not_applicable_no_owned_site_matched"
+      },
+      "sources": [
+        {"url": "https://auto.ae/royalmotorsuaq/", "readOn": "2026-10-18", "role": "opened_dealer_catalogue_eight_advertised_cars"},
+        {"url": "https://www.drivearabia.com/cars-for-sale/uae/chevrolet/groove/chevrolet-groove-lt-2025-gcc-excellent-condition-d79c6b54af234805830cb9988a242d49/", "readOn": "2026-10-18", "role": "dated_dealer_attributed_stock_ad_and_public_phone"},
+        {"url": "https://licenseplate.ae/ar/cars/listing/126-infiniti-qx50-25-at-awd-222-hp-luxury", "readOn": "2026-10-18", "role": "dealer_name_and_phone_attribution"},
+        {"url": "https://easyauto.ae/business/royal-motors-used-cars-rwyl-mwtwrz-ltjr-lsyrt-lmstaaml", "readOn": "2026-10-18", "role": "secondary_premises_and_phone_crosscheck"},
+        {"url": "https://licenseplate.ae/ar/cars/dealer/royal-motors-used-cars", "readOn": "2026-10-18", "role": "opened_second_catalogue_18_advertised_results_not_added_to_AUTO_count"},
+        {"url": "https://licenseplate.ae/ar/cars/listing/122-jeep-wrangler-36-at-286-hp-willys", "readOn": "2026-10-18", "role": "same_public_phone_second_catalogue_identity_match"}
+      ],
+      "buildApproved": false,
+      "outreachApproved": false
+    },
+    {
+      "id": "ae-umm-al-quwain-al-majarah-al-sabaah-used-cars",
+      "name": "Al Majarah Al Sabaah Used Cars Trading",
+      "aliases": [
+        "Al Majarah Al Sabaah Used Cars. TR",
+        "almajarahalsabaahusedcars"
+      ],
+      "country": "AE",
+      "city": "Umm al-Quwain",
+      "emirate": "Umm al-Quwain",
+      "address": "Umm Al Thuoob, Umm Al Qawain in current named vehicle ads; secondary Sharjah listing at Shop 374, 1 Street, Al Ruqa Al Hamra requires confirmation",
+      "researchDate": "2026-10-18",
+      "qualification": "screened_prospect",
+      "inventory": {
+        "sourceUrl": "https://licenseplate.ae/ar/cars/dealer/al-majarah-al-sabaah-used-cars",
+        "reportedListings": 21,
+        "kind": "marketplace_advertised_results",
+        "examples": [
+          {
+            "title": "Audi A7 S line 2018",
+            "price_aed": 39500,
+            "mileage_km": 78000
+          },
+          {
+            "title": "Kia Carnival SX 2021",
+            "price_aed": 90000,
+            "mileage_km": 155000
+          },
+          {
+            "title": "BMW 420i M Sport 2025",
+            "price_aed": 165000,
+            "mileage_km": 19000
+          }
+        ],
+        "freshnessEvidence": "Opened named Audi A7 ad is dated 16 October 2026 and includes the full public dealer phone. Separate Dubizzle BMW 420i listing was indexed within two days, with same dealer and UAQ premises but AED 155,000 rather than LicensePlate AED 165,000; current price needs confirmation.",
+        "note": "21 advertised results in the opened dealer catalogue, not unique physically available stock. AUTO.AE older snapshot has 23 ads and Sharjah label; counts are not added. Mixed American/Korean imports and listing field/price inconsistencies require verification before reuse. Some cars are labelled Sharjah within the same catalogue; this is one prospect, not separate branches."
+      },
+      "website": {
+        "status": "no_official_site_found_after_check",
+        "url": null,
+        "checkedAt": "2026-10-18",
+        "queries": [
+          "\"Al Majarah Al Sabaah\" website",
+          "\"Al Majarah Al Sabaah\" Sharjah website official",
+          "\"Al Majarah Al Sabaah\" \"website\" used cars",
+          "\"Al Majarah\" \"504027960\"",
+          "\"504027960\" \"cars\" website",
+          "\"Al Majarah Al Sabaah\" \"Umm\""
+        ],
+        "confidence": "medium",
+        "note": "Exact-name, UAQ/Sharjah location, full public phone and marketplace alias checks surfaced marketplace catalogues and a secondary showroom directory, with no confidently matched owned domain. This is bounded uncertainty. Resolve preferred current premises and any alternative trading brand directly before implementation or outreach."
+      },
+      "publicBusinessContact": {
+        "channels": [
+          "business_phone",
+          "public_whatsapp_link"
+        ],
+        "phone": "+971504027960",
+        "sourceUrl": "https://licenseplate.ae/ar/cars/listing/12959-audi-a7-30-l-340-hp-gasoline-robot-four-wheel-drive-4wd-s-line",
+        "note": "Full dealer-attributed business phone and WhatsApp link appear in the exact-name vehicle ad dated 16 October 2026. No contact or validity test performed; confirm this is the preferred dealer-owned number."
+      },
+      "fitScore": 83,
+      "fitReason": "Independent marketplace-led business with 21 priced advertised vehicles, October stock freshness and a direct public phone; mix of family vehicles and premium imports supports a useful branded catalogue proposal. Cross-emirate address and price discrepancies lower confidence and require owner confirmation.",
+      "confidence": "medium",
+      "verification": {
+        "inventory": "primary_marketplace_catalogue_and_dated_vehicle_ad_read",
+        "officialSiteSearch": "bounded_exact_name_phone_alias_and_two_emirate_search_completed",
+        "identity": "exact_trading_name_and_UAQ_primary_seller_phone_matched; Sharjah_secondary_premises_unresolved",
+        "publicDedup": "no_name_or_phone_match_in_current_UAE_research_legacy_public_leads_or_local_registry; main_UAE_agent_confirmed_no_saved_or_unsaved_collision",
+        "privateDedup": "requires_owner_private_crm_check",
+        "visualWebsiteAudit": "not_applicable_no_owned_site_matched"
+      },
+      "sources": [
+        {
+          "url": "https://licenseplate.ae/ar/cars/dealer/al-majarah-al-sabaah-used-cars",
+          "readOn": "2026-10-18",
+          "role": "opened_catalogue_21_advertised_results"
+        },
+        {
+          "url": "https://licenseplate.ae/ar/cars/listing/12959-audi-a7-30-l-340-hp-gasoline-robot-four-wheel-drive-4wd-s-line",
+          "readOn": "2026-10-18",
+          "role": "16_October_dealer_ad_public_phone_and_UAQ_premises"
+        },
+        {
+          "url": "https://uaq.dubizzle.com/motors/used-cars/bmw/4-series/2026/04/05/bmw-4-series-420i-m-sport-2025-korean-spec-15-148---0d2dbd78db82471bb429b53b867ebe9c/",
+          "readOn": "2026-10-18",
+          "role": "recent_dealer_ad_price_and_UAQ_premises_crosscheck"
+        },
+        {
+          "url": "https://auto.ae/ar/almajarahalsabaahusedcars/",
+          "readOn": "2026-10-18",
+          "role": "older_catalogue_and_Sharjah_alias_label"
+        },
+        {
+          "url": "https://2gis.ae/dubai/firm/70000001097458178",
+          "readOn": "2026-10-18",
+          "role": "secondary_Sharjah_showroom_address_requires_confirmation"
+        }
+      ],
+      "buildApproved": false,
+      "outreachApproved": false
+    },
+    {
+      "id": "ae-ras-al-khaimah-cantrust-used-cars",
+      "name": "Cantrust Used Cars Trading LLC OPC",
+      "country": "AE",
+      "city": "Ras al-Khaimah",
+      "emirate": "Ras al-Khaimah",
+      "address": "Al Duhaisah, Ras Al Khaimah, UAE",
+      "researchDate": "2026-10-18",
+      "qualification": "screened_prospect",
+      "inventory": {
+        "sourceUrl": "https://licenseplate.ae/ar/cars/dealer/cantrust-used-cars-trading-llc-opc",
+        "reportedListings": 11,
+        "kind": "marketplace_advertised_results",
+        "examples": [
+          {
+            "title": "BYD Seal Design 2022",
+            "price_aed": 75000,
+            "mileage_km": 65000
+          },
+          {
+            "title": "BYD e2 Comfort 2024",
+            "price_aed": 41000,
+            "mileage_km": 9000
+          },
+          {
+            "title": "BMW X5 xDrive40i 2020",
+            "price_aed": 110000,
+            "mileage_km": 26100
+          },
+          {
+            "title": "Rox 01 VIP 2026",
+            "price_aed": 197000,
+            "mileage_km": 0
+          }
+        ],
+        "freshnessEvidence": "Opened dealer-attributed BYD Seal Design ad13082 is dated 16 October 2026; Dubizzle's original 16 October listing corroborates exact trim, year, mileage, asking price and Al Duhaisah business name.",
+        "note": "11 advertised results, not independently verified physically available or unique cars. Chinese-spec electric/hybrid imports dominate. Range, charging, warranty, specification labels and registration/after-sales support must be confirmed directly; no vehicle-performance claims independently endorsed."
+      },
+      "website": {
+        "status": "no_official_site_found_after_check",
+        "url": null,
+        "checkedAt": "2026-10-18",
+        "queries": [
+          "\"Cantrust Used Cars\" website",
+          "\"CANTRUST USED CARS TRADING LLC OPC\" official website",
+          "\"Cantrust Used Cars\" \"Ras\" official website",
+          "\"Cantrust\" \"Al Duhaisah\" website",
+          "\"Cantrust\" \"521065582\"",
+          "\"521065582\" cars website"
+        ],
+        "confidence": "medium",
+        "note": "Exact legal-style trading name, RAK premises and full public business phone checks surfaced named dealer vehicle ads and no confidently matched owned domain. Unrelated Cantrust insurance businesses abroad are not matches. A domain may exist under another brand or spelling."
+      },
+      "publicBusinessContact": {
+        "channels": [
+          "business_phone",
+          "public_whatsapp_link"
+        ],
+        "phone": "+971521065582",
+        "sourceUrl": "https://licenseplate.ae/ar/cars/listing/13082-byd-seal-at-204-hp-design",
+        "note": "Full dealer-attributed phone and WhatsApp link appear in the exact-name vehicle listing dated 16 October 2026. No message or validity test; confirm preferred business ownership of the number."
+      },
+      "fitScore": 83,
+      "fitReason": "Independent marketplace-led dealer with 11 priced advertised vehicles, fresh October inventory, direct public business phone and substantial EV/hybrid asking values. A concise factual catalogue would be useful; Chinese import support and actual availability require confirmation.",
+      "confidence": "medium",
+      "verification": {
+        "inventory": "primary_marketplace_catalogue_and_dated_specific_ad_read",
+        "officialSiteSearch": "bounded_exact_name_full_phone_and_RAK_premises_search_completed",
+        "identity": "exact_name_location_and_dealer_attributed_contact_matched",
+        "publicDedup": "no_name_or_phone_match_in_legacy_UAE_leads_main_UAE_expansion_or_local_deploy_registry; main_UAE_researcher_confirmed_no_known_saved_or_unsaved_collision",
+        "privateDedup": "requires_owner_private_crm_check",
+        "visualWebsiteAudit": "not_applicable_no_owned_site_matched"
+      },
+      "sources": [
+        {
+          "url": "https://licenseplate.ae/ar/cars/dealer/cantrust-used-cars-trading-llc-opc",
+          "readOn": "2026-10-18",
+          "role": "opened_catalogue_11_priced_advertised_results"
+        },
+        {
+          "url": "https://licenseplate.ae/ar/cars/listing/13082-byd-seal-at-204-hp-design",
+          "readOn": "2026-10-18",
+          "role": "16_October_ad_public_phone_and_RAK_premises"
+        },
+        {
+          "url": "https://rak.dubizzle.com/motors/used-cars/byd/seal/2026/10/16/2022-used-byd-seal-design-chinese-specs-fo-11-133---265fdfc1aced461fa5e1d2423d36d32a/",
+          "readOn": "2026-10-18",
+          "role": "original_named_dealer_ad_same_price_mileage_and_location"
+        }
+      ],
+      "buildApproved": false,
+      "outreachApproved": false
+    },
+    {
+      "id": "ae-ras-al-khaimah-texas-used-auto-trading",
+      "name": "Texas Used Auto Trading",
+      "aliases": [
+        "Texas Used Cars Trading",
+        "تكساس لتجارة السيارات ذ.م.م",
+        "texas__cars"
+      ],
+      "country": "AE",
+      "city": "Ras al-Khaimah",
+      "emirate": "Ras al-Khaimah",
+      "address": "Airport Road / Al Digdaga, Ras al-Khaimah; exact current showroom and legal trading entity require confirmation",
+      "researchDate": "2026-10-18",
+      "qualification": "screened_prospect",
+      "inventory": {
+        "sourceUrl": "https://www.instagram.com/texas__cars/",
+        "reportedListings": null,
+        "observedDistinctRecentVehicleAds": 4,
+        "kind": "original_dealer_social_posts_not_full_stock_count",
+        "examples": [
+          {
+            "title": "Toyota Land Cruiser VXR 2025 twin turbo",
+            "price_aed": 320000,
+            "mileage_km": 69000,
+            "postedAt": "2026-10-06",
+            "sourceUrl": "https://www.instagram.com/texas__cars/p/DeJQ2VTiH5N/"
+          },
+          {
+            "title": "Lexus ES350 2018",
+            "price_aed": 67000,
+            "mileage_km": 76000,
+            "postedAt": "2026-10-08",
+            "sourceUrl": "https://www.instagram.com/texas__cars/p/DeO-gjxiDPg/"
+          },
+          {
+            "title": "Lexus GS350 F Sport 2015",
+            "price_aed": null,
+            "priceStatus": "not_in_read_caption",
+            "postedAt": "2026-10-12",
+            "sourceUrl": "https://www.instagram.com/texas__cars/p/DeYjw7ZCM5Y/"
+          },
+          {
+            "title": "Toyota Avalon Limited 2011",
+            "price_aed": null,
+            "priceStatus": "not_in_read_caption",
+            "postedAt": "2026-10-14",
+            "sourceUrl": "https://www.instagram.com/texas__cars/reel/DedrnzaIQC4/"
+          }
+        ],
+        "freshnessEvidence": "Four distinct original dealer post captions inspected in the background research browser. Exact October6/8/12 dates read from public page time elements; Avalon displayed four days ago on18October. Paired photo/reel posts of the same Lexus were not counted twice.",
+        "note": "Full stock depth is unknown. Four recent advertised vehicles are a minimum observed social-ad set, not confirmed current physical availability. No audience/follower/post count is converted into inventory or ability to buy. Some captions describe customs papers/unregistered imports; registration, current price, condition, warranty and permission to reuse images must be confirmed. Older ArabWheels pages had empty recent stock and were not used as current inventory evidence."
+      },
+      "website": {
+        "status": "no_official_site_found_after_check",
+        "url": null,
+        "checkedAt": "2026-10-18",
+        "queries": [
+          "\"Texas Used Auto Trading\" \"Ras Al Khaimah\" website official",
+          "\"Texas Used Auto Trading\" website \"0504888231\"",
+          "\"texas__cars\" website",
+          "\"565628756\" website",
+          "\"Texas Used Cars\" \"Airport\" Ras website"
+        ],
+        "confidence": "medium",
+        "note": "Exact trading-name/RAK Airport Road checks, current public phone, older business phone and observed Instagram alias searches found the social showroom and directories, with no confidently matched owned domain. Waze links the exact Instagram handle and RAK location. This is bounded uncertainty; confirm any domain or related trading brand with the dealer."
+      },
+      "publicBusinessContact": {
+        "channels": [
+          "business_phone",
+          "public_business_whatsapp_number",
+          "public_business_instagram"
+        ],
+        "phone": "+971565628756",
+        "sourceUrl": "https://www.instagram.com/texas__cars/",
+        "note": "Current original dealer profile bio and October vehicle captions publish the same phone for calls/WhatsApp. Older Waze/ArabWheels contact0504888231 and directory0502607888 are historical secondary references linking the handle/location; use the current original phone after dealer ownership confirmation. No contact or message sent."
+      },
+      "fitScore": 81,
+      "fitReason": "Active independent Instagram-led RAK showroom with four distinct original October vehicle ads, including a 2025 Land Cruiser asking AED320,000 and Lexus ES2018 asking AED67,000, plus a consistently published public business phone. No matched owned domain. Full stock size remains unknown, so keep the observed-stock tier explicit and confirm scale/budget.",
+      "confidence": "medium",
+      "verification": {
+        "inventory": "original_dealer_social_caption_and_public_time_element_read; at_least_four_distinct_recent_ads_not_full_stock",
+        "officialSiteSearch": "bounded_exact_name_current_and_legacy_phone_premises_alias_checks_completed",
+        "identity": "current_original_handle_name_RAK_Airport_Road_bio_and_caption_phone_matched_to_directory_link",
+        "publicDedup": "no_name_handle_current_or_legacy_phone_match_in_UAE_research_and_local_registry; main_UAE_researcher_confirmed_no_known_saved_or_unsaved_collision",
+        "privateDedup": "requires_owner_private_crm_check",
+        "visualWebsiteAudit": "not_applicable_no_owned_site_matched"
+      },
+      "sources": [
+        {
+          "url": "https://www.instagram.com/texas__cars/",
+          "readOn": "2026-10-18",
+          "role": "original_business_name_RAK_premises_and_current_phone"
+        },
+        {
+          "url": "https://www.instagram.com/texas__cars/p/DeJQ2VTiH5N/",
+          "readOn": "2026-10-18",
+          "role": "original_6_October_Land_Cruiser2025_320000AED_69000km_ad"
+        },
+        {
+          "url": "https://www.instagram.com/texas__cars/p/DeO-gjxiDPg/",
+          "readOn": "2026-10-18",
+          "role": "original_8_October_LexusES2018_67000AED_76000km_ad"
+        },
+        {
+          "url": "https://www.instagram.com/texas__cars/p/DeYjw7ZCM5Y/",
+          "readOn": "2026-10-18",
+          "role": "original_12_October_LexusGS350F2015_ad"
+        },
+        {
+          "url": "https://www.instagram.com/texas__cars/reel/DedrnzaIQC4/",
+          "readOn": "2026-10-18",
+          "role": "original_Avalon2011_ad_displayed_four_days_ago"
+        },
+        {
+          "url": "https://www.waze.com/live-map/directions/ae/ras-al-khaimah/ras-al-khaimah/tksas-ltjarh-alsyarat-almstamlh-texas-used-auto-trading?to=place.ChIJ7ZGIJ9XZ9T4RtfzsIJ4ShCo",
+          "readOn": "2026-10-18",
+          "role": "secondary_exact_Instagram_link_RAK_premises_legacy_business_phone"
+        },
+        {
+          "url": "https://www.arabwheels.ae/used-cars/dealers/texas-used-auto-trading-showroom-in-uae",
+          "readOn": "2026-10-18",
+          "role": "secondary_business_name_premises_and_legacy_phone; not_current_stock"
+        }
+      ],
+      "buildApproved": false,
+      "outreachApproved": false
+    },
+    {
+      "id": "ae-umm-al-quwain-al-sultan-used-car-trading",
+      "name": "Al Sultan Used Car Trading",
+      "aliases": [
+        "Al Sultan Showroom",
+        "ALSULTAN",
+        "alsultan.cars",
+        "السلطان لتجارة السيارات المستعملة"
+      ],
+      "country": "AE",
+      "city": "Umm al-Quwain",
+      "emirate": "Umm al-Quwain",
+      "address": "Sheikh Mohammed Bin Zayed Road, Al Raafah, Umm al-Quwain; exact showroom and current ownership require confirmation",
+      "researchDate": "2026-10-18",
+      "qualification": "screened_prospect",
+      "inventory": {
+        "sourceUrl": "https://www.instagram.com/alsultan.cars/",
+        "reportedListings": null,
+        "observedDistinctRecentVehicleAds": 3,
+        "kind": "original_social_recent_advertisements",
+        "examples": [
+          {
+            "title": "Chevrolet Impala 2019",
+            "price_aed": 29000,
+            "mileage_miles": 103000,
+            "postedAt": "2026-10-18T16:43:58Z",
+            "sourceUrl": "https://www.instagram.com/alsultan.cars/p/DepI_knjscV/"
+          },
+          {
+            "title": "Ford Mustang GT 5.0 2025",
+            "price_aed": 135000,
+            "mileage_km": 2000,
+            "postedAt": "2026-10-17T14:15:43Z",
+            "sourceUrl": "https://www.instagram.com/alsultan.cars/p/DemTO27DsmE/"
+          },
+          {
+            "title": "Nissan Altima 2025",
+            "price_aed": 59000,
+            "mileage_miles": 7000,
+            "postedAt": "2026-10-17T13:09:18Z",
+            "sourceUrl": "https://www.instagram.com/alsultan.cars/p/DemLof8DsRe/"
+          }
+        ],
+        "freshnessEvidence": "Original dealer captions and public time elements read on18October2026: three distinct priced vehicle adverts posted17–18October. Both public phones recur across all three.",
+        "note": "Full stock size and availability remain unknown. Three is an observed recent advertisement minimum, never a total physical-stock claim. Captions describe US/customs-paper imports; registration, condition, warranty and mileage need dealer confirmation. Posts were read in public DOM with Instagram login/cookie overlays; no login or enquiry sent."
+      },
+      "website": {
+        "status": "no_official_site_found_after_check",
+        "url": null,
+        "checkedAt": "2026-10-18",
+        "queries": [
+          "\"alsultan.cars\"",
+          "\"Al Sultan\" \"Umm Al Quwain\" cars website",
+          "\"0555755794\" website",
+          "\"0552898229\" cars",
+          "\"السلطان\" \"أم القيوين\" سيارات موقع"
+        ],
+        "confidence": "medium",
+        "note": "Exact trading name/location, original social handle and two published phones checked. No confidently matched owned domain found in this bounded search. A site may exist under another brand or spelling."
+      },
+      "publicBusinessContact": {
+        "phone": "+971555755794",
+        "additionalPhones": [
+          "+971552898229"
+        ],
+        "channels": [
+          "public_business_phone",
+          "original_instagram_profile"
+        ],
+        "sourceUrl": "https://www.instagram.com/alsultan.cars/p/DepI_knjscV/",
+        "note": "Both complete phone numbers are published in three original dealer car captions. Current preferred business contact has not been confirmed by contact."
+      },
+      "fitScore": 81,
+      "fitReason": "Independent social-led import showroom with three distinct priced stock advertisements in the last two days, including a Mustang atAED135,000. Clear direct public business numbers and no matched standalone domain. Full stock scale and buying budget remain unverified.",
+      "confidence": "medium",
+      "verification": {
+        "inventory": "three_distinct_original_social_adverts_read_with_exact_public_dates",
+        "officialSiteSearch": "bounded_name_handle_phone_and_location_search_completed",
+        "identity": "UAQ_market_Linktree_original_social_and_matching_directory_phone_location; no ownership collision known",
+        "duplicateCheck": "No current name/handle/two-phone match in main UAE, legacy public UAE file or local registry; main UAE researcher confirmed no known unsaved collision. Taj Al Sultan Sharjah has different exact trading name and +971521009119, no shared ownership evidence; group relationship still requires owner confirmation.",
+        "privateDedup": "requires_owner_private_crm_check",
+        "visualWebsiteAudit": "not_applicable_no_owned_site_matched"
+      },
+      "sources": [
+        {
+          "url": "https://www.instagram.com/alsultan.cars/",
+          "readOn": "2026-10-18",
+          "role": "original_showroom_identity_and_vehicle_post_links"
+        },
+        {
+          "url": "https://www.instagram.com/alsultan.cars/p/DepI_knjscV/",
+          "readOn": "2026-10-18",
+          "role": "original_18October_Impala2019_29000AED_both_public_phones"
+        },
+        {
+          "url": "https://www.instagram.com/alsultan.cars/p/DemTO27DsmE/",
+          "readOn": "2026-10-18",
+          "role": "original_17October_Mustang2025_135000AED_2000km_both_public_phones"
+        },
+        {
+          "url": "https://www.instagram.com/alsultan.cars/p/DemLof8DsRe/",
+          "readOn": "2026-10-18",
+          "role": "original_17October_Altima2025_59000AED_7000miles_both_public_phones"
+        },
+        {
+          "url": "https://linktr.ee/uaq_cars",
+          "readOn": "2026-10-18",
+          "role": "UAQ_market_discovery_link_to_exact_original_social; not_stock_or_ownership_proof"
+        },
+        {
+          "url": "https://maps.yango.com/en-ae/org/180936149781/",
+          "readOn": "2026-10-18",
+          "role": "secondary_UAQ_address_and_matching_0555755794"
+        }
+      ],
+      "buildApproved": false,
+      "outreachApproved": false
+    },
+    {
+      "id": "ae-umm-al-quwain-speed-motors-26",
+      "name": "Speed Motors Used Cars Trading (26)",
+      "aliases": [
+        "Speed Motors26",
+        "speed_motors26",
+        "سبيد موتورز لتجارة السيارات المستعملة"
+      ],
+      "country": "AE",
+      "city": "Umm al-Quwain",
+      "emirate": "Umm al-Quwain",
+      "address": "Showroom26, E311 / Sheikh Mohammed Bin Zayed Road, Umm Dera, Umm al-Quwain; individual marketplace ads also carry Sharjah locations",
+      "researchDate": "2026-10-18",
+      "qualification": "screened_prospect",
+      "inventory": {
+        "sourceUrl": "https://ae.opensooq.com/en/shops/shop-71385778",
+        "reportedListings": 24,
+        "observedOwnPhoneVehicleRows": 23,
+        "kind": "primary_marketplace_live_header_and_dealer_matched_vehicle_rows",
+        "examples": [
+          {
+            "title": "Dodge Charger SRT392 Scat Pack 2021",
+            "price_aed": 68500,
+            "mileage_km": 68000,
+            "sourceUrl": "https://ae.opensooq.com/en/search/288823486",
+            "displayedDate": "1hourago on18October2026"
+          },
+          {
+            "title": "Jetour X70 Plus 2024",
+            "price_aed": 59000,
+            "mileage_km": 50000,
+            "sourceUrl": "https://ae.opensooq.com/en/search/288773844",
+            "displayedDate": "Yesterday on18October2026"
+          },
+          {
+            "title": "GMC Yukon SLE2020",
+            "price_aed": 78000,
+            "mileage_km": 145000,
+            "sourceUrl": "https://ae.opensooq.com/en/search/288773784",
+            "displayedDate": "Yesterday on18October2026"
+          }
+        ],
+        "freshnessEvidence": "Fresh original OpenSooq shop read18October: four own-phone vehicle adverts displayed1hourago, four displayedYesterday, and older own-phone rows dated13–14October2026.",
+        "note": "Header24 is the marketplace's live-listings count. Read DOM contains23 vehicle rows with dealer masked phone05655516XX and one unrelated promoted vehicle with another phone, excluded from this dealer's evidence. No claim of24unique physically available cars; social profile/current complete phone links identity. Some rows label Sharjah despite showroom26UAQ; confirm current stock locations and import/customs status."
+      },
+      "website": {
+        "status": "no_official_site_found_after_check",
+        "url": null,
+        "checkedAt": "2026-10-18",
+        "queries": [
+          "\"Speed Motors\" \"Umm Al Quwain\" website",
+          "\"Speed Motors used cars Trading\" website",
+          "\"speed_motors26\"",
+          "\"0565551655\" website",
+          "\"0503751515\" cars"
+        ],
+        "confidence": "medium",
+        "note": "Checked exact trading style, showroom26UAQ premises, original handle and both complete original-business phones. No matched owned domain found in this bounded search; another spelling or group site may exist."
+      },
+      "publicBusinessContact": {
+        "phone": "+971565551655",
+        "additionalPhones": [
+          "+971503751515"
+        ],
+        "channels": [
+          "public_business_phone",
+          "original_instagram_profile",
+          "marketplace_call"
+        ],
+        "sourceUrl": "https://www.instagram.com/speed_motors26/",
+        "note": "Complete phones are published in original profile bio. OpenSooq dealer/listing phone05655516XX agrees with first. Secondary Coparking has0544423218, retained as historical/unconfirmed rather than preferred current contact."
+      },
+      "fitScore": 84,
+      "fitReason": "Active independent showroom26 with23 own-phone priced car rows on its primary marketplace and fresh posts today. Original social business bio supplies direct phones; no matched owned domain. Existing brand-group relationship and physical availability still need confirmation.",
+      "confidence": "medium",
+      "verification": {
+        "inventory": "original_live_marketplace_profile_and_23_dealer_phone_matched_vehicle_rows_read",
+        "officialSiteSearch": "bounded_exact_name_handle_phone_and_premises_search",
+        "identity": "original_social_showroom26UAQ_and_current_phone_matches_original_OpenSooq_masked_number",
+        "duplicateCheck": "Main Speed Motors LLCFZ Dubai has different legal trading style, location, Chinese-new-car stock and original DubiCars997514 phone+971542842288. No shared phone/alias evidence; main UAE researcher knows no group link. Treated as separate research prospect with common-name/group uncertainty retained; not independent-ownership proof.",
+        "privateDedup": "requires_owner_private_crm_check",
+        "visualWebsiteAudit": "not_applicable_no_owned_site_matched"
+      },
+      "sources": [
+        {
+          "url": "https://ae.opensooq.com/en/shops/shop-71385778",
+          "readOn": "2026-10-18",
+          "role": "original_live_stock_count_and_fresh_vehicle_rows"
+        },
+        {
+          "url": "https://ae.opensooq.com/en/search/288823486",
+          "readOn": "2026-10-18",
+          "role": "original_shop_car_link_2021Charger68500AED68000km_one_hour_ago"
+        },
+        {
+          "url": "https://www.instagram.com/speed_motors26/",
+          "readOn": "2026-10-18",
+          "role": "original_UAQ_showroom26_identity_and_two_complete_business_phones"
+        },
+        {
+          "url": "https://www.dubicars.com/ar/2026-toyota-corolla-cross-997514.html",
+          "readOn": "2026-10-18",
+          "role": "separate_Dubai_namesake_current_phone542842288; not_this_dealers_stock"
+        },
+        {
+          "url": "https://coparking.ch/en/United-Arab-Emirates/car-dealers/794",
+          "readOn": "2026-10-18",
+          "role": "secondary_name_E311_UmmDera_premises_legacy_phone"
+        },
+        {
+          "url": "https://linktr.ee/uaq_cars",
+          "readOn": "2026-10-18",
+          "role": "UAQ_market_discovery_link_exact_social_handle; not_stock_proof"
+        }
+      ],
+      "buildApproved": false,
+      "outreachApproved": false
+    },
+    {
+      "id": "ae-sharjah-nassem-al-sham-used-cars",
+      "name": "Nassem Al Sham Used Cars",
+      "aliases": [
+        "Naseem Alsham Used Cars",
+        "Naseem ALsham",
+        "naseemalsham_usedcars",
+        "نسيم الشام"
+      ],
+      "country": "AE",
+      "city": "Sharjah",
+      "emirate": "Sharjah",
+      "address": "Souq Al Haraj, showroom123 in current original social bio and vehicle description; indexed owned-site contact page still says showroom99, requiring current-premises confirmation",
+      "researchDate": "2026-10-18",
+      "qualification": "screened_prospect",
+      "inventory": {
+        "sourceUrl": "https://www.dubicars.com/dealers/sharjah-nassem-al-sham-used-cars-2211",
+        "reportedListings": 48,
+        "kind": "current_original_marketplace_browser_catalogue",
+        "examples": [
+          {
+            "title": "Toyota Land Cruiser GXR V6 2017, advertised upgrade2025",
+            "price_usd": 29700,
+            "mileage_km": 136000,
+            "sourceUrl": "https://www.dubicars.com/2017-toyota-land-cruiser-gxr-v6-upgrade-2025-1002015.html"
+          },
+          {
+            "title": "Toyota Land Cruiser GXR V6 2018",
+            "price_usd": 28800,
+            "mileage_km": 135000,
+            "sourceUrl": "https://www.dubicars.com/2018-toyota-land-cruiser-gxr-v6-964728.html"
+          },
+          {
+            "title": "Toyota Land Cruiser GXR 2014",
+            "price_usd": 19891,
+            "price_aed": 73000,
+            "mileage_km": 157000,
+            "sourceUrl": "https://www.dubicars.com/2014-toyota-land-cruiser-1033975.html"
+          }
+        ],
+        "freshnessEvidence": "Live original DubiCars browser catalogue opened18October2026 reports48results, with priced inventory and direct dealer call link matching561177933. Older indexed search snapshot says59/60, superseded for count by the live48. Original Instagram latest linked post is dated6October2026 but its caption supplies no readable car detail, so it is activity corroboration only, not another stock count.",
+        "note": "Advertised snapshot, not independently verified unique physical inventory. Catalogue browser currency isUSD; separate direct car1033975 web extraction showsAED73,000. Preserve model years despite facelift/upgrade wording; do not present older upgraded Land Cruisers as new2024/2025 vehicles. Stock/contact confirmation required."
+      },
+      "website": {
+        "status": "poor_site",
+        "url": "http://www.nassemalshamusedcars.com/",
+        "checkedAt": "2026-10-18",
+        "queries": [
+          "\"Nassem Al Sham Used Cars\" website",
+          "\"Naseem Alsham\" cars official website",
+          "\"0561177933\" car sale",
+          "\"0561640606\" car sale"
+        ],
+        "confidence": "medium",
+        "observations": [
+          "Original dealer Instagram bio links this exact HTTP owned domain. Following it in the research browser redirects toward HTTPS and fails with ERR_CERT_COMMON_NAME_INVALID.",
+          "Independent strict curl -I -L on18October2026 shows HTTP301 Location:https://www.nassemalshamusedcars.com/ then fails certificate validation with SEC_E_WRONG_PRINCIPAL; no certificate checks were disabled.",
+          "Search-indexed owned homepage/contact content matches +971561177933 and business name. Site is owned/matched, not classified as no website. No rendered design audit possible past certificate failure."
+        ],
+        "note": "A current certificate-availability problem is demonstrated on the dealer-linked route. It may be repairable quickly and can be transient or environment-dependent; offer an availability/content review before proposing wholesale replacement. Do not claim permanently offline or horrible design. Indexed owned contact lists showroom99 while current original stock/social says123."
+      },
+      "publicBusinessContact": {
+        "phone": "+971561177933",
+        "additionalPhones": [
+          "+971561640606"
+        ],
+        "email": "naseen_alsham11111@hotmail.com",
+        "channels": [
+          "public_business_phone",
+          "original_instagram_profile",
+          "marketplace_call"
+        ],
+        "sourceUrl": "https://www.instagram.com/naseemalsham_usedcars/",
+        "additionalSourceUrl": "https://www.dubicars.com/2014-toyota-land-cruiser-1033975.html",
+        "note": "Two complete phones published in original IG bio; current primary dealer car DOM publishes tel:+971561177933. Email from indexed matched owned contact page; not tested."
+      },
+      "fitScore": 77,
+      "fitReason": "Substantial current primary marketplace stock and direct business contacts, with a dealer-linked owned-domain certificate failure independently reproduced. This is a website-availability repair lead; a full template sale is less certain because repair may suffice.",
+      "confidence": "medium",
+      "verification": {
+        "inventory": "current_original_catalogue_48_results_and_specific_priced_dealer_listing_read",
+        "officialSiteSearch": "matched_owned_domain_linked_from_original_social",
+        "identity": "original_IG_and_DubiCars_phone561177933_match_owned_indexed_business_content; showroom99_vs123_conflict_retained",
+        "duplicateCheck": "No name/phone/handle match in main UAE, legacy public leads or registry; main UAE researcher confirmed no saved or unsaved collision. Actual Sharjah location retained despite UAQ market Linktree discovery.",
+        "privateDedup": "requires_owner_private_crm_check",
+        "visualWebsiteAudit": "certificate_navigation_failure_only; no_bypass_or_rendered_design_audit"
+      },
+      "sources": [
+        {
+          "url": "https://www.dubicars.com/dealers/sharjah-nassem-al-sham-used-cars-2211",
+          "readOn": "2026-10-18",
+          "role": "current_original_browser_catalogue48_not_older_search59"
+        },
+        {
+          "url": "https://www.dubicars.com/2014-toyota-land-cruiser-1033975.html",
+          "readOn": "2026-10-18",
+          "role": "current_priced_stock_dealer_phone_and_showroom123_description"
+        },
+        {
+          "url": "https://www.instagram.com/naseemalsham_usedcars/",
+          "readOn": "2026-10-18",
+          "role": "original_two_complete_phones_showroom123_and_owned_domain_link"
+        },
+        {
+          "url": "https://www.instagram.com/naseemalsham_usedcars/p/DeJs1UuoFzl/",
+          "readOn": "2026-10-18",
+          "role": "original6October_post_date_activity_only_no_readable_vehicle_caption"
+        },
+        {
+          "url": "http://www.nassemalshamusedcars.com/",
+          "readOn": "2026-10-18",
+          "role": "dealer_linked_route_browser_certificate_failure_and_independent_strict_HTTP301_TLS_wrong_principal"
+        },
+        {
+          "url": "https://www.nassemalshamusedcars.com/contact-us/",
+          "readOn": "2026-10-18",
+          "role": "indexed_matched_owned_phone_email_legacy_showroom99; not_live_render_success"
+        }
+      ],
+      "buildApproved": false,
+      "outreachApproved": false
+    },
+    {
+      "id": "ae-umm-al-quwain-al-markabah-used-cars",
+      "name": "Al Markabah Used Cars Trading LLC",
+      "aliases": [
+        "Al markabah used cars",
+        "Al Markba",
+        "ALMARKBA",
+        "المركبة لتجارة السيارات المستعملة"
+      ],
+      "country": "AE",
+      "city": "Umm al-Quwain",
+      "emirate": "Umm al-Quwain",
+      "address": "Sheikh Mohammed Bin Zayed Road, Umm Dera, UAQ in matching directory; current primary cars label Al Humra/Al Aahad/Emirates Modern Industrial, UAQ, and shop page metadata saysAjman",
+      "researchDate": "2026-10-18",
+      "qualification": "screened_prospect",
+      "inventory": {
+        "sourceUrl": "https://ae.opensooq.com/en/shops/shop-18008673",
+        "reportedListings": 17,
+        "kind": "current_original_marketplace_browser_catalogue",
+        "examples": [
+          {
+            "title": "Range Rover Sport V8 2016",
+            "price_aed": 52000,
+            "mileage_km": 270000,
+            "displayedDate": "13hoursago on18October2026",
+            "sourceUrl": "https://ae.opensooq.com/en/search/288522796"
+          },
+          {
+            "title": "BMW520i2018 GCC",
+            "price_aed": 43000,
+            "mileage_km": 245000,
+            "displayedDate": "13hoursago on18October2026",
+            "sourceUrl": "https://ae.opensooq.com/en/search/288651654"
+          },
+          {
+            "title": "Mercedes ML5002015 GCC",
+            "price_aed": 45000,
+            "mileage_km": 147000,
+            "displayedDate": "14October2026",
+            "sourceUrl": "https://ae.opensooq.com/en/search/287489722"
+          }
+        ],
+        "freshnessEvidence": "Original catalogue opened18October reports17live listings. Two lead adverts displayed13hoursago and subsequent distinct cars dated14October, all with same masked05435157XX contact.",
+        "note": "Marketplace-advertised count, not confirmed unique physical stock. Shop title metadata saysAjman while individual original ads and matching named showroom directory indicateUAQ; current premises/branch relationship need confirmation. Listings span GCC and imports; condition and precise specs unverified."
+      },
+      "website": {
+        "status": "no_official_site_found_after_check",
+        "url": null,
+        "checkedAt": "2026-10-18",
+        "queries": [
+          "\"Al Markabah Used Cars\" \"Umm\" website",
+          "\"Al Markabah\" cars website",
+          "\"0543515705\"",
+          "\"المركبة\" \"0543515705\""
+        ],
+        "confidence": "medium",
+        "note": "Exact trading style, UAQ premises and full matched public number checked. Sharjah almarkabah.ae is an auto-maintenance business at different premises with0523157940; no match to this dealer demonstrated. No confidently matched owned domain found, not proof of absence."
+      },
+      "publicBusinessContact": {
+        "phone": "+971543515705",
+        "channels": [
+          "public_business_phone",
+          "marketplace_call"
+        ],
+        "sourceUrl": "https://coparking.ch/en/United-Arab-Emirates/car-dealers/783",
+        "additionalSourceUrl": "https://uae.autotraders.ae/used-cars/bmw/x4/m/2019/bmw-x4-2019-160938",
+        "note": "Full number is public on exact-name UAQ showroom directory and older original AutoTraderUAE dealer1186 captions; original current OpenSooq ads show matching05435157XX. Preferred current ownership not contacted; do not infer masked final digits independently."
+      },
+      "fitScore": 82,
+      "fitReason": "Independent named UAQ showroom with17priced current advertised cars, including same-day recent activity and consistent public contact across primary masked ads and matched full-number sources. No matched owned domain; one prospect with premises/group caveats.",
+      "confidence": "medium",
+      "verification": {
+        "inventory": "current_original_catalogue17_and_dated_priced_vehicle_rows_read",
+        "officialSiteSearch": "bounded_exact_trading_name_UAQ_premises_and_public_phone",
+        "identity": "primary_masked05435157XX_matches_exact_name_UAQ_directory_and_older_original_dealer1186_full_number",
+        "duplicateCheck": "No saved phone/alias collision; main UAE researcher confirmed no known group link. Main Sharjah AlMarkabahAlMutamadah has different exact name/premises and503549113/526160868/504775762. Sharjah auto-maintenance domain has different0523157940. Treat separately with independent ownership still unproven.",
+        "privateDedup": "requires_owner_private_crm_check",
+        "visualWebsiteAudit": "not_applicable_no_owned_site_matched"
+      },
+      "sources": [
+        {
+          "url": "https://ae.opensooq.com/en/shops/shop-18008673",
+          "readOn": "2026-10-18",
+          "role": "original_current17_priced_stock_and_matching_masked_contact"
+        },
+        {
+          "url": "https://ae.opensooq.com/en/search/288522796",
+          "readOn": "2026-10-18",
+          "role": "original_catalogue_13hoursago_RangeRover2016_52000AED270000km_link"
+        },
+        {
+          "url": "https://coparking.ch/en/United-Arab-Emirates/car-dealers/783",
+          "readOn": "2026-10-18",
+          "role": "secondary_exact_name_UAQ_premises_full_public_phone"
+        },
+        {
+          "url": "https://uae.autotraders.ae/used-cars/bmw/x4/m/2019/bmw-x4-2019-160938",
+          "readOn": "2026-10-18",
+          "role": "older_original_ad_full_phone0543515705; not_current_stock_count"
+        },
+        {
+          "url": "https://linktr.ee/uaq_cars",
+          "readOn": "2026-10-18",
+          "role": "market_discovery_name_only; old_linked_social_unavailable_not_closure_proof"
+        }
+      ],
+      "buildApproved": false,
+      "outreachApproved": false
+    },
+    {
+      "id": "ae-umm-al-quwain-skyline-motors",
+      "name": "Skyline Motors (Umm al-Quwain)",
+      "aliases": [
+        "Skyline motors",
+        "سكاي لاين"
+      ],
+      "country": "AE",
+      "city": "Umm al-Quwain",
+      "emirate": "Umm al-Quwain",
+      "address": "Umm Al Thuoob, UAQ in matching public directory; original cars alternate Emirates Modern Industrial, UAQ and Al Jurf, Ajman",
+      "researchDate": "2026-10-18",
+      "qualification": "screened_prospect",
+      "inventory": {
+        "sourceUrl": "https://ae.opensooq.com/en/shops/shop-39989037",
+        "reportedListings": 10,
+        "kind": "current_original_marketplace_browser_catalogue",
+        "examples": [
+          {
+            "title": "Mercedes E63AMG2012 advertised converted2023 Brabus",
+            "price_aed": 57000,
+            "mileage_km": 290000,
+            "displayedDate": "16October2026",
+            "sourceUrl": "https://ae.opensooq.com/en/search/288353246"
+          },
+          {
+            "title": "Mercedes E350Coupe2015 customs papers",
+            "price_aed": 32500,
+            "mileage_km": 150000,
+            "displayedDate": "14October2026",
+            "sourceUrl": "https://ae.opensooq.com/en/search/288600278"
+          },
+          {
+            "title": "GenesisG802019",
+            "price_aed": 49000,
+            "mileage_km": 95000,
+            "displayedDate": "14October2026",
+            "sourceUrl": "https://ae.opensooq.com/en/search/288353350"
+          }
+        ],
+        "freshnessEvidence": "Original dealer catalogue18October shows10live priced vehicle ads. E63dated16October, E350/Genesisdated14October, with consistent05085218XX contact.",
+        "note": "Advertised count, not independently verified physical availability. Keep actual2012 model year despite seller's2023conversion wording. Imports/customs documents and current UAQ/Ajman stock locations require confirmation. No cross-platform counts added."
+      },
+      "website": {
+        "status": "no_official_site_found_after_check",
+        "url": null,
+        "checkedAt": "2026-10-18",
+        "queries": [
+          "\"Skyline Motors\" \"Umm\" phone website",
+          "\"Skyline Motors\" \"Umm Al Thuoob\" website",
+          "\"0508521852\"",
+          "\"سكاي لاين\" \"ام القيوين\" سيارات موقع"
+        ],
+        "confidence": "medium",
+        "note": "Exact English brand, UAQ premises, full public contact and Arabic brand/location checked. No confidently matched owned domain found. Common names elsewhere or vehicle-model Skyline results are not matched to this business; absence remains bounded."
+      },
+      "publicBusinessContact": {
+        "phone": "+971508521852",
+        "channels": [
+          "public_business_phone",
+          "marketplace_call"
+        ],
+        "sourceUrl": "https://magicpin.com/uae/Umm-Al-Quwain/Umm-Al-Thuoob/Autocare/Skyline-Motors/store/2271b35/reviews",
+        "additionalSourceUrl": "https://ae.opensooq.com/en/shops/shop-39989037",
+        "note": "Full number read from public Call tel: link in matching UAQ directory, agreeing with current original profile/car05085218XX. Directory's generic WhatsApp link routes to an India platform number and is explicitly excluded. Full-number current dealer ownership still requires confirmation."
+      },
+      "fitScore": 79,
+      "fitReason": "Independent marketplace-led showroom with10recent priced ads and matching public phone/premises. No matched owned domain. Lower stock depth than larger dealers and direct phone is secondary-source corroborated by original masked profile, so confirm before outreach.",
+      "confidence": "medium",
+      "verification": {
+        "inventory": "current_original_catalogue10_and_distinct14_16October_priced_rows_read",
+        "officialSiteSearch": "bounded_English_Arabic_premises_and_full_phone_search",
+        "identity": "original05085218XX_matches_public_secondary_tel508521852_and_UAQ_showroom_name_location",
+        "duplicateCheck": "No name/full-phone/prefix collision in saved main UAE, legacy public leads or deployment map; main UAE researcher confirmed no known ownership alias. Common brand/group relationship still unproven.",
+        "privateDedup": "requires_owner_private_crm_check",
+        "visualWebsiteAudit": "not_applicable_no_owned_site_matched"
+      },
+      "sources": [
+        {
+          "url": "https://ae.opensooq.com/en/shops/shop-39989037",
+          "readOn": "2026-10-18",
+          "role": "original_current10_priced_adverts_and_masked_public_phone"
+        },
+        {
+          "url": "https://ae.opensooq.com/en/search/288353246",
+          "readOn": "2026-10-18",
+          "role": "original_catalogue_16October_E63_2012_57000AED290000km_link"
+        },
+        {
+          "url": "https://magicpin.com/uae/Umm-Al-Quwain/Umm-Al-Thuoob/Autocare/Skyline-Motors/store/2271b35/reviews",
+          "readOn": "2026-10-18",
+          "role": "secondary_UAQ_premises_and_public_Call_tel508521852; platform_WhatsApp_excluded"
+        },
+        {
+          "url": "https://linktr.ee/uaq_cars",
+          "readOn": "2026-10-18",
+          "role": "UAQ_market_discovery_name_only; not_current_stock_or_ownership_proof"
+        }
+      ],
+      "buildApproved": false,
+      "outreachApproved": false
+    },
+    {
+      "id": "ae-al-ain-al-waeed-cars",
+      "name": "Al Waeed Cars",
+      "aliases": [],
+      "country": "AE",
+      "city": "Al Ain",
+      "emirate": "Abu Dhabi",
+      "address": "Al Ain Industrial Area, Al Ain, as shown on original dealer vehicle listings; exact premises to confirm",
+      "researchDate": "2026-10-18",
+      "qualification": "screened_prospect",
+      "inventory": {
+        "sourceUrl": "https://ae.opensooq.com/en/shops/shop-58587927",
+        "reportedListings": 18,
+        "kind": "current_original_marketplace_browser_catalogue",
+        "examples": [
+          {
+            "title": "Chevrolet Silverado 1500 LT Trail Boss 2021",
+            "price_aed": 125000,
+            "mileage_km": 138000,
+            "displayedDate": "16 October 2026",
+            "sourceUrl": "https://ae.opensooq.com/en/search/288385984"
+          },
+          {
+            "title": "Nissan Patrol LE Platinum 2024",
+            "price_aed": 228000,
+            "mileage_km": 69000,
+            "displayedDate": "16 October 2026",
+            "sourceUrl": "https://ae.opensooq.com/en/search/288387544"
+          },
+          {
+            "title": "Toyota Land Cruiser VXR twin turbo 2023",
+            "price_aed": 335000,
+            "mileage_km": 8000,
+            "displayedDate": "16 October 2026",
+            "sourceUrl": "https://ae.opensooq.com/en/search/288387742"
+          }
+        ],
+        "freshnessEvidence": "Original OpenSooq dealer catalogue opened in browser on 18 October 2026; recent priced vehicle rows read directly.",
+        "note": "Live advertised catalogue count, not independently verified unique or physically available stock. Seller specification, condition and availability claims require confirmation."
+      },
+      "website": {
+        "status": "no_official_site_found_after_check",
+        "url": null,
+        "checkedAt": "2026-10-18",
+        "queries": [
+          "\"Al Waeed Cars\" \"Al Ain\"",
+          "\"Al Waeed Cars\" \"website\"",
+          "\"Al Waleed Cars\" \"Al Ain\" \"05010460\"",
+          "\"الوليد\" \"05010460\""
+        ],
+        "confidence": "medium",
+        "note": "Exact marketplace trading name, Al Ain, plausible Waleed spelling and masked contact checked. Al Waleed Used Cars in Sharjah has different contacts and is not presumed this dealer. A directory-linked @alwaleed.ae was opened and is a furniture business, explicitly excluded. No confidently matched owned domain found within these bounded checks; spelling/group relationships remain uncertain."
+      },
+      "publicBusinessContact": {
+        "phone": null,
+        "maskedPhonePrefixes": [
+          "05010460XX"
+        ],
+        "channels": [
+          "public_marketplace_seller_profile",
+          "marketplace_chat_requires_account",
+          "marketplace_masked_phone_requires_account"
+        ],
+        "sourceUrl": "https://ae.opensooq.com/en/shops/shop-58587927",
+        "note": "Original named business profile and vehicle rows provide public marketplace contact controls. The full phone is gated/masked and was not revealed or guessed. No account created and no chat/call submitted. Direct business contact and current ownership must be confirmed before build or outreach."
+      },
+      "fitScore": 80,
+      "fitReason": "Marketplace-led dealer with 18 priced advertised cars and multiple current 16 October adverts, including higher-value SUVs. No owned domain confidently matched; public marketplace contact is available but full direct contact remains gated.",
+      "confidence": "medium",
+      "verification": {
+        "inventory": "opened_original_catalogue_and_recent_priced_stock_rows",
+        "officialSiteSearch": "bounded_exact_name_location_alias_and_masked_contact_search",
+        "identity": "named_original_dealer_shop_with_consistent_Al_Ain_vehicle_locations",
+        "duplicateCheck": "No exact trading-name or primary masked-contact-prefix collision in main UAE, legacy public research or local deployment map; independent group ownership is unproven.",
+        "privateDedup": "requires_owner_private_crm_check",
+        "directContact": "unresolved_masked_contact_confirmation_required_before_build_or_outreach",
+        "visualWebsiteAudit": "not_applicable_no_owned_site_confidently_matched"
+      },
+      "sources": [
+        {
+          "url": "https://ae.opensooq.com/en/shops/shop-58587927",
+          "readOn": "2026-10-18",
+          "role": "original_current_dealer_catalogue_name_location_stock_and_public_contact_route"
+        },
+        {
+          "url": "https://ae.opensooq.com/en/search/288387742",
+          "readOn": "2026-10-18",
+          "role": "opened_original_16October2026_LandCruiser_ad_location_and_masked_contact"
+        }
+      ],
+      "buildApproved": false,
+      "outreachApproved": false
+    },
+    {
+      "id": "ae-al-ain-caesar-motors-showroom",
+      "name": "Caesar Motors Showroom",
+      "aliases": [],
+      "country": "AE",
+      "city": "Al Ain",
+      "emirate": "Abu Dhabi",
+      "address": "Al Ain Industrial Area, Al Ain, as shown on original dealer vehicle listings; exact premises to confirm",
+      "researchDate": "2026-10-18",
+      "qualification": "screened_prospect",
+      "inventory": {
+        "sourceUrl": "https://ae.opensooq.com/en/shops/caesar-motors-showroom-76177255",
+        "reportedListings": 16,
+        "kind": "current_original_marketplace_browser_catalogue",
+        "examples": [
+          {
+            "title": "Range Rover Vogue SE 2021",
+            "price_aed": 160000,
+            "mileage_km": 164000,
+            "displayedDate": "7 hours ago on 18 October 2026",
+            "sourceUrl": "https://ae.opensooq.com/en/search/288520506"
+          },
+          {
+            "title": "Toyota Land Cruiser GXR 2015",
+            "price_aed": 135000,
+            "mileage_km": 37000,
+            "displayedDate": "12 hours ago on 18 October 2026",
+            "sourceUrl": "https://ae.opensooq.com/en/search/288740070"
+          },
+          {
+            "title": "Volkswagen ID.6 Crozz Pro 2022",
+            "price_aed": 75000,
+            "mileage_km": 118000,
+            "displayedDate": "Yesterday on 18 October 2026",
+            "sourceUrl": "https://ae.opensooq.com/en/search/288739586"
+          }
+        ],
+        "freshnessEvidence": "Original OpenSooq dealer catalogue opened in browser on 18 October 2026; recent priced vehicle rows read directly.",
+        "note": "Live advertised catalogue count, not independently verified unique or physically available stock. Seller specification, condition and availability claims require confirmation."
+      },
+      "website": {
+        "status": "no_official_site_found_after_check",
+        "url": null,
+        "checkedAt": "2026-10-18",
+        "queries": [
+          "\"Caesar motors showroom\" contact",
+          "\"Caesar motors showroom\" \"website\"",
+          "Caesar Motors showroom Al Ain Instagram",
+          "\"معرض القيصر موتورز\" العين",
+          "\"Caesar Motors\" Al Ain official contact -garage"
+        ],
+        "confidence": "medium",
+        "note": "Exact showroom name, location, Arabic transliteration and current masked contact prefixes checked. caesarmotors.com is linked by Caesar Motors Garage LLC in Al Quoz Dubai, a different business type/premises; no relationship established. Legacy Al Ain directory phone +971563781646 does not match any observed current masked contact and is not used as a verified contact. No owned showroom domain confidently matched; ownership and aliases remain bounded uncertainties."
+      },
+      "publicBusinessContact": {
+        "phone": null,
+        "maskedPhonePrefixes": [
+          "05661152XX",
+          "05053356XX",
+          "05248595XX"
+        ],
+        "channels": [
+          "public_marketplace_seller_profile",
+          "marketplace_chat_requires_account",
+          "marketplace_masked_phone_requires_account"
+        ],
+        "sourceUrl": "https://ae.opensooq.com/en/shops/caesar-motors-showroom-76177255",
+        "note": "Original named business profile and vehicle rows provide public marketplace contact controls. The full phone is gated/masked and was not revealed or guessed. No account created and no chat/call submitted. Direct business contact and current ownership must be confirmed before build or outreach."
+      },
+      "fitScore": 80,
+      "fitReason": "Named Al Ain showroom with 16 current priced vehicle adverts and fresh posts today/yesterday. Higher-value mixed inventory supports a branded catalogue opportunity; full dealer contact and ownership remain to confirm.",
+      "confidence": "medium",
+      "verification": {
+        "inventory": "opened_original_catalogue_and_recent_priced_stock_rows",
+        "officialSiteSearch": "bounded_exact_name_location_alias_and_masked_contact_search",
+        "identity": "named_original_dealer_shop_with_consistent_Al_Ain_vehicle_locations",
+        "duplicateCheck": "No exact trading-name or primary masked-contact-prefix collision in main UAE, legacy public research or local deployment map; independent group ownership is unproven.",
+        "privateDedup": "requires_owner_private_crm_check",
+        "directContact": "unresolved_masked_contact_confirmation_required_before_build_or_outreach",
+        "visualWebsiteAudit": "not_applicable_no_owned_site_confidently_matched"
+      },
+      "sources": [
+        {
+          "url": "https://ae.opensooq.com/en/shops/caesar-motors-showroom-76177255",
+          "readOn": "2026-10-18",
+          "role": "original_current_dealer_catalogue_name_location_stock_and_public_contact_route"
+        },
+        {
+          "url": "https://www.linkedin.com/company/caesarmotorsgarage",
+          "readOn": "2026-10-18",
+          "role": "different_Dubai_garage_identity_and_owned_domain_context; not_showroom_contact"
+        }
+      ],
+      "buildApproved": false,
+      "outreachApproved": false
+    },
+    {
+      "id": "ae-al-ain-vtc-motors",
+      "name": "VTC Motors",
+      "aliases": [],
+      "country": "AE",
+      "city": "Al Ain",
+      "emirate": "Abu Dhabi",
+      "address": "Al Ain Industrial Area, Al Ain, as shown on original dealer vehicle listings; exact premises to confirm",
+      "researchDate": "2026-10-18",
+      "qualification": "screened_prospect",
+      "inventory": {
+        "sourceUrl": "https://ae.opensooq.com/en/shops/shop-56772120",
+        "reportedListings": 14,
+        "kind": "current_original_marketplace_browser_catalogue",
+        "examples": [
+          {
+            "title": "Lexus LX 570 2018",
+            "price_aed": 165000,
+            "mileage_km": 330000,
+            "displayedDate": "7 hours ago on 18 October 2026",
+            "sourceUrl": "https://ae.opensooq.com/en/search/288216048"
+          },
+          {
+            "title": "Toyota Land Cruiser EXR 2025",
+            "price_aed": 212000,
+            "mileage_km": 39000,
+            "displayedDate": "7 hours ago on 18 October 2026",
+            "sourceUrl": "https://ae.opensooq.com/en/search/288524124"
+          }
+        ],
+        "freshnessEvidence": "Original OpenSooq dealer catalogue opened in browser on 18 October 2026; recent priced vehicle rows read directly.",
+        "note": "Live advertised catalogue count, not independently verified unique or physically available stock. Seller specification, condition and availability claims require confirmation. Audi advert has S6 text but RS6/A6 structured classification and is not used as a factual example."
+      },
+      "website": {
+        "status": "no_official_site_found_after_check",
+        "url": null,
+        "checkedAt": "2026-10-18",
+        "queries": [
+          "\"VTC Motors\" \"Al Ain\"",
+          "\"VTC Motors\" UAE contact",
+          "\"VTC Motors\" UAE Al Ain official website",
+          "\"05552900\" cars"
+        ],
+        "confidence": "medium",
+        "note": "Exact VTC Motors name, Al Ain/UAE qualifiers and observed contact prefixes checked. Results for a Lithuanian motorcycle-parts operator and a German car dealer have different premises/countries and are not presumed this showroom. No confidently matched owned domain found. Generic VTC model/parts matches are excluded; this remains a bounded absence finding."
+      },
+      "publicBusinessContact": {
+        "phone": null,
+        "maskedPhonePrefixes": [
+          "05522900XX",
+          "05552900XX"
+        ],
+        "channels": [
+          "public_marketplace_seller_profile",
+          "marketplace_chat_requires_account",
+          "marketplace_masked_phone_requires_account"
+        ],
+        "sourceUrl": "https://ae.opensooq.com/en/shops/shop-56772120",
+        "note": "Original named business profile and vehicle rows provide public marketplace contact controls. The full phone is gated/masked and was not revealed or guessed. No account created and no chat/call submitted. Direct business contact and current ownership must be confirmed before build or outreach."
+      },
+      "fitScore": 80,
+      "fitReason": "Marketplace-led Al Ain dealer with 14 priced live adverts and fresh higher-value Lexus/Toyota stock posted today. No matched owned domain; public marketplace route is available while direct contact confirmation remains a build/outreach gate.",
+      "confidence": "medium",
+      "verification": {
+        "inventory": "opened_original_catalogue_and_recent_priced_stock_rows",
+        "officialSiteSearch": "bounded_exact_name_location_alias_and_masked_contact_search",
+        "identity": "named_original_dealer_shop_with_consistent_Al_Ain_vehicle_locations",
+        "duplicateCheck": "No exact trading-name or primary masked-contact-prefix collision in main UAE, legacy public research or local deployment map; independent group ownership is unproven.",
+        "privateDedup": "requires_owner_private_crm_check",
+        "directContact": "unresolved_masked_contact_confirmation_required_before_build_or_outreach",
+        "visualWebsiteAudit": "not_applicable_no_owned_site_confidently_matched"
+      },
+      "sources": [
+        {
+          "url": "https://ae.opensooq.com/en/shops/shop-56772120",
+          "readOn": "2026-10-18",
+          "role": "original_current_dealer_catalogue_name_location_stock_and_public_contact_route"
+        }
+      ],
+      "buildApproved": false,
+      "outreachApproved": false
+    },
+    {
+      "id": "ae-umm-al-quwain-super-1-cars-showroom",
+      "name": "Super 1 Cars Showroom",
+      "aliases": [
+        "معرض سوبر 1 للسيارات",
+        "Super One Cars Showroom"
+      ],
+      "country": "AE",
+      "city": "Umm al-Quwain",
+      "emirate": "Umm al-Quwain",
+      "address": "Original dealer Information tab says Um Al Quwain; cars alternate Emirates Modern Industrial UAQ, Souq Al Haraj Sharjah and Al Ain; exact showroom and stock location to confirm",
+      "researchDate": "2026-10-18",
+      "qualification": "screened_prospect",
+      "inventory": {
+        "sourceUrl": "https://ae.opensooq.com/en/shops/shop-55282418",
+        "reportedListings": 17,
+        "kind": "current_original_marketplace_browser_catalogue",
+        "examples": [
+          {
+            "title": "Nissan Armada 2015",
+            "price_aed": 30000,
+            "mileage_km": 257000,
+            "displayedDate": "12 October 2026",
+            "sourceUrl": "https://ae.opensooq.com/en/search/288539452"
+          },
+          {
+            "title": "Range Rover Sport HSE 2016",
+            "price_aed": 55000,
+            "mileage_km": 206000,
+            "displayedDate": "12 October 2026",
+            "sourceUrl": "https://ae.opensooq.com/en/search/288539464"
+          },
+          {
+            "title": "Mercedes CL550 2013 Japan specs",
+            "price_aed": 38000,
+            "mileage_km": 160000,
+            "displayedDate": "12 October 2026",
+            "sourceUrl": "https://ae.opensooq.com/en/search/287824384"
+          }
+        ],
+        "freshnessEvidence": "Original catalogue reopened 18 October shows 17 live priced ads, with distinct Nissan/Range Rover/Mercedes vehicles dated 12 October and others 11/7/5 October.",
+        "note": "Advertised count, not confirmed physical stock. Cross-emirate car locations and current premises require confirmation. Nissan LE text vs Platinum structured trim mismatch requires correction before reuse."
+      },
+      "website": {
+        "status": "no_official_site_found_after_check",
+        "url": null,
+        "checkedAt": "2026-10-18",
+        "queries": [
+          "\"معرض سوبر 1 للسيارات\" موقع",
+          "\"Super 1\" \"Umm Al Quwain\" cars website",
+          "\"سوبر ون\" \"ام القيوين\" سيارات",
+          "\"05661595\" \"سيارات\""
+        ],
+        "confidence": "medium",
+        "note": "Exact Arabic trading name, English spelling/translation, UAQ location and observed contact prefix checked. Search surfaced this original marketplace shop, no confidently matched owned domain. Generic Super One results are not matched; group/alternative spelling uncertainty remains."
+      },
+      "publicBusinessContact": {
+        "phone": null,
+        "maskedPhonePrefixes": [
+          "05661595XX"
+        ],
+        "channels": [
+          "public_marketplace_seller_profile",
+          "marketplace_chat_requires_account",
+          "marketplace_masked_phone_requires_account"
+        ],
+        "sourceUrl": "https://ae.opensooq.com/en/shops/shop-55282418",
+        "note": "Original business profile and vehicle rows expose legitimate marketplace Chat and phone controls. Phone reveal opened a Login/Register modal; it was closed without logging in, creating an account or submitting any message. Full contact was not guessed. Requires direct business-contact confirmation before build/outreach."
+      },
+      "fitScore": 78,
+      "fitReason": "Named UAQ marketplace-led showroom with 17 live priced vehicles and stock dated 12 October. No matched owned domain in bounded checks; cross-emirate premises and masked direct contact lower confidence.",
+      "confidence": "medium",
+      "verification": {
+        "inventory": "opened_original_catalogue_and_recent_priced_stock_rows",
+        "officialSiteSearch": "bounded_exact_name_location_alias_and_masked_contact_search",
+        "identity": "original_Arabic_showroom_name_UAQ_Information_tab_and_consistent05661595XX_vehicle_rows",
+        "duplicateCheck": "No exact trading-name or primary masked-contact-prefix collision in main UAE, legacy public research or local deployment map; independent group ownership is unproven.",
+        "privateDedup": "requires_owner_private_crm_check",
+        "directContact": "gated_login_modal_confirmed_no_reveal_or_account_creation; requires_confirmation_before_build_or_outreach",
+        "visualWebsiteAudit": "not_applicable_no_owned_site_confidently_matched"
+      },
+      "sources": [
+        {
+          "url": "https://ae.opensooq.com/en/shops/shop-55282418",
+          "readOn": "2026-10-18",
+          "role": "opened_original17_live_priced_stock_UAQ_profile_location_masked_contact_route"
+        },
+        {
+          "url": "https://ae.opensooq.com/en/search/288539464",
+          "readOn": "2026-10-18",
+          "role": "opened_original_RangeRover_12October2026_price_mileage_and_masked_phone"
+        }
+      ],
+      "buildApproved": false,
+      "outreachApproved": false
+    },
+    {
+      "id": "ae-sharjah-sahm-al-najah-used-cars",
+      "name": "Sahm Al Najah Used Cars Trading",
+      "aliases": [
+        "سهم النجاح لتجارة السيارات المستعملة",
+        "Saham Al Najah Used Cars"
+      ],
+      "country": "AE",
+      "city": "Sharjah",
+      "emirate": "Sharjah",
+      "address": "Original dealer Information tab says Sharjah; current advertised cars consistently show Emirates Modern Industrial, Umm al-Quwain. One cross-emirate prospect, exact premises/branch to confirm.",
+      "researchDate": "2026-10-18",
+      "qualification": "screened_prospect",
+      "inventory": {
+        "sourceUrl": "https://ae.opensooq.com/en/shops/shop-66288306",
+        "reportedListings": 12,
+        "kind": "current_original_marketplace_browser_catalogue",
+        "examples": [
+          {
+            "title": "Mercedes GLC300 2022 Canada import",
+            "price_aed": 93000,
+            "mileage_km": 100000,
+            "displayedDate": "Yesterday on 18 October 2026",
+            "sourceUrl": "https://ae.opensooq.com/en/search/287427168"
+          },
+          {
+            "title": "Hyundai Tucson HTRAC Hybrid 2022",
+            "price_aed": 67000,
+            "mileage_km": 125000,
+            "displayedDate": "Yesterday on 18 October 2026",
+            "sourceUrl": "https://ae.opensooq.com/en/search/287797248"
+          },
+          {
+            "title": "Honda CR-V 2021",
+            "price_aed": 65000,
+            "mileage_km": 45000,
+            "displayedDate": "Yesterday on 18 October 2026",
+            "sourceUrl": "https://ae.opensooq.com/en/search/287841604"
+          }
+        ],
+        "freshnessEvidence": "Original current catalogue opened 18 October has 12 live priced cars; at least seven distinct priced car rows display Yesterday. Current rows consistently show masked05531041XX and UAQ stock locations.",
+        "note": "Advertised catalogue count, not independent physical availability. Imported regional specifications, damage claims and inventory/premises need confirmation. Profile contact05043355XX differs from current stock contact05531041XX; retain this explicit contact issue before outreach."
+      },
+      "website": {
+        "status": "no_official_site_found_after_check",
+        "url": null,
+        "checkedAt": "2026-10-18",
+        "queries": [
+          "\"سهم النجاح\" \"سيارات\" موقع",
+          "\"Sahm Al Najah\" cars website UAE",
+          "\"Saham Al Najah\" cars website",
+          "\"05531041\" سيارات"
+        ],
+        "confidence": "medium",
+        "note": "Exact Arabic brand, English transliterations, UAE/Sharjah/UAQ context and current masked contact checked. No confidently matched owned domain found. Saudi trading/contracting namesakes are not matched to this UAE dealer. Absence remains bounded and alternate/group ownership requires confirmation."
+      },
+      "publicBusinessContact": {
+        "phone": null,
+        "maskedPhonePrefixes": [
+          "05043355XX",
+          "05531041XX"
+        ],
+        "channels": [
+          "public_marketplace_seller_profile",
+          "marketplace_chat_requires_account",
+          "marketplace_masked_phone_requires_account"
+        ],
+        "sourceUrl": "https://ae.opensooq.com/en/shops/shop-66288306",
+        "note": "Original named dealer profile and stock rows expose marketplace contact controls; full number is masked/account-gated. Profile and stock prefixes differ. No account, call or message submitted. Preferred direct business contact and ownership must be established before build/outreach."
+      },
+      "fitScore": 79,
+      "fitReason": "Marketplace-led dealer with 12 live cars and multiple recent priced imports. No matched owned domain, but Sharjah profile versus UAQ stock and differing profile/stock masked contacts require confirmation.",
+      "confidence": "medium",
+      "verification": {
+        "inventory": "opened_original_catalogue_and_recent_priced_stock_rows",
+        "officialSiteSearch": "bounded_exact_name_location_alias_and_masked_contact_search",
+        "identity": "exact_original_Arabic_dealer_name_Sharjah_Information_tab_UAQ_current_stock; no_second_UAQ_prospect",
+        "duplicateCheck": "No exact trading-name or primary masked-contact-prefix collision in main UAE, legacy public research or local deployment map; independent group ownership is unproven.",
+        "privateDedup": "requires_owner_private_crm_check",
+        "directContact": "masked_profile_and_stock_contacts_differ; preferred_direct_contact_confirmation_required_before_build_or_outreach",
+        "visualWebsiteAudit": "not_applicable_no_owned_site_confidently_matched"
+      },
+      "sources": [
+        {
+          "url": "https://ae.opensooq.com/en/shops/shop-66288306",
+          "readOn": "2026-10-18",
+          "role": "opened_original12_live_priced_car_ads_Yesterday_Sharjah_profile_UAQ_stock_and_masked_contact_routes"
+        }
+      ],
+      "buildApproved": false,
+      "outreachApproved": false
+    }
+  ]
+}
