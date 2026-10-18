@@ -1,0 +1,3299 @@
+{
+  "schemaVersion": 1,
+  "kind": "public-dealer-prospect-research",
+  "market": "USA",
+  "researchDate": "2026-10-18",
+  "requestedCount": 125,
+  "status": "research_in_progress",
+  "qualifiedCount": 15,
+  "remainingGap": 110,
+  "defaults": {
+    "researchOnly": true,
+    "privateContactHistory": "not_available_to_this_researcher",
+    "newAgainst": [
+      "leads/usa.json",
+      "docs/DEPLOYMENT-INVENTORY.json"
+    ],
+    "crmDeduplication": "requires_private_check_before_outreach",
+    "templateChoices": [
+      "auto-best",
+      "modern",
+      "import",
+      "app",
+      "mobile",
+      "karento-best"
+    ],
+    "buildsCreated": false,
+    "outreachPerformed": false,
+    "purchaseIntentOrBudget": "not_established"
+  },
+  "method": "Public primary dealer/catalogue pages plus bounded exact-name and location searches. Existing-site defects are observed separately from buyer interest. Counts describe advertised records, not independently verified physical or available-only stock. Browser checks below confirm the stated visible defect only; they are not full mobile/desktop conversion audits.",
+  "leads": [
+    {
+      "id": "us-ky-louisville-granada-auto-sales",
+      "name": "Granada Auto Sales LLC",
+      "country": "US",
+      "city": "Louisville",
+      "region": "KY",
+      "address": "2122 Palatka Rd, Louisville, KY 40214",
+      "website_status": "poor_site",
+      "website": {
+        "url": "https://granadaautosales.com/",
+        "inventoryUrl": "https://inventory.granadaautosales.com/",
+        "checkedAt": "2026-10-18",
+        "observations": [
+          "The live inventory-domain about page visibly introduces CARBAZ rather than Granada and contains Lorem Ipsum explanatory text.",
+          "The same primary page exposes a help telephone (431) 529 2093 that differs from the matching Louisville business telephone in its header and footer.",
+          "The inventory homepage contains placeholder testimonials attributed to design/real-estate roles and generic mobile-app copy. No claim is made that these are real customer reviews."
+        ],
+        "defectSource": "https://inventory.granadaautosales.com/about-us",
+        "browserVerification": "Live about page opened with CUA; screenshot and accessibility state confirm CARBAZ and placeholder paragraph are visible at desktop width. Phone/testimonial observations also checked in primary extracted page text.",
+        "fullResponsiveJourneyAudit": "pending"
+      },
+      "inventory": {
+        "count": null,
+        "minimumIndividuallyObserved": 8,
+        "kind": "primary_catalogue_priced_listings",
+        "sourceUrl": "https://inventory.granadaautosales.com/",
+        "checkedAt": "2026-10-18",
+        "examples": [
+          "2016 Mercedes Benz E350 4matic Wagon — $15,450",
+          "2022 Hyundai Sonata SEL — $15,950",
+          "2022 Hyundai Palisade Limited — $26,950"
+        ],
+        "secondaryAdvertisedCount": 33,
+        "secondaryCountSource": "https://www.iseecars.com/dealer-3602101-granada-auto-sales-in-louisville-ky",
+        "caveat": "Catalogue changed across crawler responses. Eight visible priced cards establish multiple advertised cars; 33 is a secondary source's count and is not an audited available-stock total."
+      },
+      "businessContact": {
+        "phone": "+1 502-363-2004",
+        "email": "Granada2122@yahoo.com",
+        "sourceUrl": "https://granadaautosales.com/"
+      },
+      "fitScore": 86,
+      "fitReason": "Independent family-owned dealer with advertised mid-price stock, public direct business email and a conspicuous inherited template identity/content problem on its customer inventory domain. The six existing concepts can demonstrate a concrete correction without claiming new finance integrations.",
+      "confidence": "high_for_identity_contact_and_visible_content_defect_medium_for_current_stock",
+      "verificationStatus": "primary_content_and_live_browser_defect_verified_crm_and_stock_refresh_pending",
+      "nextAction": "Confirm current stock and private suppression/contact history; compare the same real vehicles with a faithful branded proposal. Do not inherit unsupported reviews, financing or service claims.",
+      "evidenceUrls": [
+        "https://granadaautosales.com/",
+        "https://inventory.granadaautosales.com/",
+        "https://inventory.granadaautosales.com/about-us",
+        "https://www.iseecars.com/dealer-3602101-granada-auto-sales-in-louisville-ky"
+      ],
+      "contact": {
+        "phone": "+1 502-363-2004",
+        "email": "Granada2122@yahoo.com",
+        "sourceUrl": "https://granadaautosales.com/"
+      },
+      "fit": {
+        "score": 86,
+        "reason": "Independent family-owned dealer with advertised mid-price stock, public direct business email and a conspicuous inherited template identity/content problem on its customer inventory domain. The six existing concepts can demonstrate a concrete correction without claiming new finance integrations.",
+        "budgetConfidence": "not_established"
+      },
+      "verification": {
+        "status": "primary_content_and_live_browser_defect_verified_crm_and_stock_refresh_pending",
+        "confidence": "high_for_identity_contact_and_visible_content_defect_medium_for_current_stock",
+        "notBeforeOutreach": [
+          "Confirm current stock and private suppression/contact history; compare the same real vehicles with a faithful branded proposal. Do not inherit unsupported reviews, financing or service claims."
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://granadaautosales.com/",
+          "role": "supporting_public_evidence",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://inventory.granadaautosales.com/",
+          "role": "supporting_public_evidence",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://inventory.granadaautosales.com/about-us",
+          "role": "supporting_public_evidence",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://www.iseecars.com/dealer-3602101-granada-auto-sales-in-louisville-ky",
+          "role": "supporting_public_evidence",
+          "checkedAt": "2026-10-18"
+        }
+      ],
+      "priority": "priority_research_candidate",
+      "qualification": {
+        "tier": "priority_research_candidate",
+        "countsTowardPriority400": true,
+        "reason": "Primary evidence establishes a contact-routing, vehicle-data, owned-site identity or stock-access gap beyond an isolated setup/policy paragraph.",
+        "reviewedAt": "2026-10-18"
+      }
+    },
+    {
+      "id": "us-tx-corpus-christi-texas-auto-sales",
+      "name": "Texas Auto Sales",
+      "country": "US",
+      "city": "Corpus Christi",
+      "region": "TX",
+      "address": "4520 Crosstown Expressway, Corpus Christi, TX 78415",
+      "website_status": "poor_site",
+      "website": {
+        "url": "https://texasautosalescc.com/",
+        "checkedAt": "2026-10-18",
+        "observations": [
+          "The live About Us page welcomes visitors to Loeber Motors and ends with a President of Motors attribution while its header identifies Texas Auto Sales.",
+          "The same page visibly shows a generic image placeholder.",
+          "The public Our Team page contains Lorem Ipsum, 1-800-123-4567 numbers and automotivetemplate.com email addresses. These are template leftovers; no assertion is made about actual staff."
+        ],
+        "defectSource": "https://texasautosalescc.com/about-us/",
+        "browserVerification": "Live CUA accessibility state and screenshot confirm the Texas Auto Sales header, Loeber Motors welcome and generic image placeholder together on the About Us page.",
+        "fullResponsiveJourneyAudit": "pending"
+      },
+      "inventory": {
+        "count": 169,
+        "kind": "primary_inventory_matching_records_including_unverified_status",
+        "sourceUrl": "https://texasautosalescc.com/inventory/",
+        "checkedAt": "2026-10-18",
+        "minimumIndividuallyObserved": 8,
+        "examples": [
+          "2011 Hyundai Elantra — $9,500",
+          "2004 Buick Century — $5,800",
+          "2000 Toyota Tundra — $9,500"
+        ],
+        "caveat": "The extracted catalogue reports 169 matching vehicles and contains real VINs/prices. It was labelled crawled three months ago; the homepage was labelled crawled yesterday. Some syndicated listings have very long advertised ages. Refresh unique available-only stock before any build or pitch; 169 is not a current physical-stock claim."
+      },
+      "businessContact": {
+        "phone": "+1 361-356-7409",
+        "email": "texasautosalescc@gmail.com",
+        "sourceUrl": "https://texasautosalescc.com/"
+      },
+      "fitScore": 71,
+      "fitReason": "Independent local BHPH dealer with many advertised cars, direct public business email and a browser-confirmed wrong dealership identity. Strong concrete improvement to demonstrate; finance/payment operations must remain faithful to the dealer's verified existing process.",
+      "confidence": "high_for_identity_contact_and_visible_defect_medium_low_for_current_available_stock",
+      "verificationStatus": "primary_content_and_live_browser_defect_verified_available_stock_refresh_and_crm_pending",
+      "nextAction": "Reconcile genuinely available vehicles and private contact history. Keep BHPH/payment/service functionality separate from a visual proposal and avoid promising the existing finance integration.",
+      "evidenceUrls": [
+        "https://texasautosalescc.com/",
+        "https://texasautosalescc.com/inventory/",
+        "https://texasautosalescc.com/about-us/",
+        "https://texasautosalescc.com/our-team/"
+      ],
+      "contact": {
+        "phone": "+1 361-356-7409",
+        "email": "texasautosalescc@gmail.com",
+        "sourceUrl": "https://texasautosalescc.com/"
+      },
+      "fit": {
+        "score": 71,
+        "reason": "Independent local BHPH dealer with many advertised cars, direct public business email and a browser-confirmed wrong dealership identity. Strong concrete improvement to demonstrate; finance/payment operations must remain faithful to the dealer's verified existing process.",
+        "budgetConfidence": "not_established",
+        "previousResearchScore": 80
+      },
+      "verification": {
+        "status": "primary_content_and_live_browser_defect_verified_available_stock_refresh_and_crm_pending",
+        "confidence": "high_for_identity_contact_and_visible_defect_medium_low_for_current_available_stock",
+        "notBeforeOutreach": [
+          "Reconcile genuinely available vehicles and private contact history. Keep BHPH/payment/service functionality separate from a visual proposal and avoid promising the existing finance integration."
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://texasautosalescc.com/",
+          "role": "supporting_public_evidence",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://texasautosalescc.com/inventory/",
+          "role": "supporting_public_evidence",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://texasautosalescc.com/about-us/",
+          "role": "supporting_public_evidence",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://texasautosalescc.com/our-team/",
+          "role": "supporting_public_evidence",
+          "checkedAt": "2026-10-18"
+        }
+      ],
+      "priority": "reserve_content_polish",
+      "qualification": {
+        "tier": "reserve_content_polish",
+        "countsTowardPriority400": false,
+        "reason": "Wrong-identity About/staff content on an otherwise functional owned catalogue; reserve for narrow content cleanup.",
+        "reviewedAt": "2026-10-18"
+      }
+    },
+    {
+      "id": "us-in-fort-wayne-top-quality-auto-sales",
+      "name": "Top Quality Auto Sales LLC",
+      "country": "US",
+      "city": "Fort Wayne",
+      "region": "IN",
+      "address": "2605 S Calhoun St, Fort Wayne, IN 46807",
+      "website_status": "poor_site",
+      "website": {
+        "url": "https://mytopqualityauto.com/",
+        "checkedAt": "2026-10-18",
+        "observations": [
+          "The live homepage visibly advertises a 2015 Ford Edge lease-style monthly/cash-back banner while the real catalogue lists a different 2016 Ford Edge.",
+          "The catalogue's 2016 Ford Edge link still uses a BMW 535i demo slug, and a Kia Soul link uses a Kia Rio slug. Preserve facts; a slug alone does not prove a vehicle is incorrectly described."
+        ],
+        "defectSource": "https://mytopqualityauto.com/",
+        "browserVerification": "CUA screenshot confirms the full 2015 Ford Edge lease-style banner is visible. Live inventory accessibility state shows six priced car entries. No claim that the finance offer is illegal or incapable of being honored.",
+        "fullResponsiveJourneyAudit": "pending"
+      },
+      "inventory": {
+        "count": null,
+        "minimumIndividuallyObserved": 6,
+        "kind": "live_browser_primary_inventory_priced_entries",
+        "sourceUrl": "https://mytopqualityauto.com/inventory/",
+        "checkedAt": "2026-10-18",
+        "examples": [
+          "2016 Chevy Impala LT — $5,500",
+          "2017 Jeep Patriot Sport — $7,999",
+          "2016 Ford Edge — $8,900"
+        ],
+        "caveat": "Six priced entries observed live; homepage crawler advertises seven or eight. Do not sum those counts or assume every listed vehicle remains available."
+      },
+      "businessContact": {
+        "phone": "+1 260-203-0321",
+        "socialUrl": "https://www.facebook.com/topqualityautollc/",
+        "sourceUrl": "https://mytopqualityauto.com/"
+      },
+      "fitScore": 68,
+      "fitReason": "Small independent dealer with public vehicle stock and a highly visible dated/promotional banner that can be replaced with its actual current offer. Smaller-stock exception; budget and switching intent unknown.",
+      "confidence": "high_for_live_public_stock_and_banner_presence_medium_for_sales_priority",
+      "verificationStatus": "live_browser_stock_and_visible_banner_verified_offer_policy_and_crm_pending",
+      "nextAction": "Confirm the intended current offer, available vehicles and private contact history. Propose factual stock/identity cleanup; do not assert the old offer is fraudulent or promise a finance integration.",
+      "evidenceUrls": [
+        "https://mytopqualityauto.com/",
+        "https://mytopqualityauto.com/inventory/"
+      ],
+      "contact": {
+        "phone": "+1 260-203-0321",
+        "socialUrl": "https://www.facebook.com/topqualityautollc/",
+        "sourceUrl": "https://mytopqualityauto.com/"
+      },
+      "fit": {
+        "score": 68,
+        "reason": "Small independent dealer with public vehicle stock and a highly visible dated/promotional banner that can be replaced with its actual current offer. Smaller-stock exception; budget and switching intent unknown.",
+        "budgetConfidence": "not_established",
+        "previousResearchScore": 74
+      },
+      "verification": {
+        "status": "live_browser_stock_and_visible_banner_verified_offer_policy_and_crm_pending",
+        "confidence": "high_for_live_public_stock_and_banner_presence_medium_for_sales_priority",
+        "notBeforeOutreach": [
+          "Confirm the intended current offer, available vehicles and private contact history. Propose factual stock/identity cleanup; do not assert the old offer is fraudulent or promise a finance integration."
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://mytopqualityauto.com/",
+          "role": "supporting_public_evidence",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://mytopqualityauto.com/inventory/",
+          "role": "supporting_public_evidence",
+          "checkedAt": "2026-10-18"
+        }
+      ],
+      "priority": "reserve_content_polish",
+      "qualification": {
+        "tier": "reserve_content_polish",
+        "countsTowardPriority400": false,
+        "reason": "Old lease/promotion copy and inherited listing identifiers; functioning stock site, no major journey failure proven.",
+        "reviewedAt": "2026-10-18"
+      }
+    },
+    {
+      "id": "us-ca-sacramento-mirage-auto-sales",
+      "name": "Mirage Auto Sales",
+      "country": "US",
+      "city": "Sacramento",
+      "region": "CA",
+      "address": "2305 Fulton Ave Suite b, Sacramento, CA 95825",
+      "website_status": "poor_site",
+      "website": {
+        "url": "https://www.mirageauto.net/",
+        "checkedAt": "2026-10-18",
+        "observations": [
+          "Homepage opens a prominent website-under-construction modal and its ordinary navigation only offers Home and Contact.",
+          "The direct inventory route remains publicly reachable with priced vehicles, but it is absent from the observed home navigation."
+        ],
+        "defectSource": "https://www.mirageauto.net/",
+        "browserVerification": "Live CUA screenshot confirms the construction modal. Direct catalogue opened live and exposes twelve priced entries before sold records; all-status total is 29.",
+        "fullResponsiveJourneyAudit": "pending"
+      },
+      "inventory": {
+        "count": null,
+        "minimumIndividuallyObserved": 12,
+        "kind": "live_primary_catalogue_priced_not_marked_sold",
+        "allStatusesCount": 29,
+        "sourceUrl": "https://www.mirageauto.net/cars-for-sale",
+        "checkedAt": "2026-10-18",
+        "examples": [
+          "2014 Acura MDX w/Tech — $17,988",
+          "2013 Dodge Challenger — $19,777",
+          "2017 Toyota Camry LE — $13,999"
+        ],
+        "caveat": "29 includes sold vehicles and must not be used as available inventory. Twelve entries with numeric prices observed before explicit Sold records. CarGurus has an older 2160 Fulton address; use current site address pending confirmation."
+      },
+      "businessContact": {
+        "phone": "+1 916-979-9474",
+        "alternateSitePhone": "+1 916-665-4435",
+        "socialUrl": "https://www.facebook.com/pages/Mirage-Auto-Sales/606953062682996",
+        "sourceUrl": "https://www.mirageauto.net/"
+      },
+      "fitScore": 78,
+      "fitReason": "Independent dealer with twelve visibly advertised priced cars and a conspicuous construction-only front door. Strong opportunity to present a ready branded catalogue, with a possible existing redesign/supplier already in progress to check.",
+      "confidence": "high_for_live_site_and_listed_stock_medium_for_business_change_status",
+      "verificationStatus": "live_browser_construction_and_primary_stock_verified_crm_and_trading_change_pending",
+      "nextAction": "Confirm trading address, current available stock and whether an existing redesign is underway; deduplicate private CRM before any build/contact.",
+      "evidenceUrls": [
+        "https://www.mirageauto.net/",
+        "https://www.mirageauto.net/cars-for-sale",
+        "https://www.cargurus.com/Cars/m-Mirage-Auto-Sales-sp280586"
+      ],
+      "contact": {
+        "phone": "+1 916-979-9474",
+        "alternateSitePhone": "+1 916-665-4435",
+        "socialUrl": "https://www.facebook.com/pages/Mirage-Auto-Sales/606953062682996",
+        "sourceUrl": "https://www.mirageauto.net/"
+      },
+      "fit": {
+        "score": 78,
+        "reason": "Independent dealer with twelve visibly advertised priced cars and a conspicuous construction-only front door. Strong opportunity to present a ready branded catalogue, with a possible existing redesign/supplier already in progress to check.",
+        "budgetConfidence": "not_established"
+      },
+      "verification": {
+        "status": "live_browser_construction_and_primary_stock_verified_crm_and_trading_change_pending",
+        "confidence": "high_for_live_site_and_listed_stock_medium_for_business_change_status",
+        "notBeforeOutreach": [
+          "Confirm trading address, current available stock and whether an existing redesign is underway; deduplicate private CRM before any build/contact."
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.mirageauto.net/",
+          "role": "supporting_public_evidence",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://www.mirageauto.net/cars-for-sale",
+          "role": "supporting_public_evidence",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://www.cargurus.com/Cars/m-Mirage-Auto-Sales-sp280586",
+          "role": "supporting_public_evidence",
+          "checkedAt": "2026-10-18"
+        }
+      ],
+      "priority": "priority_research_candidate",
+      "qualification": {
+        "tier": "priority_research_candidate",
+        "countsTowardPriority400": true,
+        "reason": "Primary evidence establishes a contact-routing, vehicle-data, owned-site identity or stock-access gap beyond an isolated setup/policy paragraph.",
+        "reviewedAt": "2026-10-18"
+      }
+    },
+    {
+      "id": "us-in-fort-wayne-preferred-automotive-group",
+      "name": "Preferred Automotive Group",
+      "country": "US",
+      "city": "Fort Wayne",
+      "region": "IN",
+      "address": "5005 Illinois Road, Fort Wayne, IN",
+      "website_status": "poor_site",
+      "website": {
+        "url": "https://preferredautogroup.com/",
+        "inventoryUrl": "https://preferredautogroup.com/sale/used-cars-fort-wayne-in",
+        "checkedAt": "2026-10-18",
+        "observations": [
+          "The homepage FAQ answer about how to contact the dealer visibly tells visitors to dial the placeholder 123-456-7890, despite a correct 260-434-0100 header.",
+          "This is a narrow contact-copy defect on an otherwise functional professionally hosted site; it is not evidence that the whole site is poor or a replacement is needed."
+        ],
+        "defectSource": "https://preferredautogroup.com/",
+        "browserVerification": "Expanded Frequently Asked Questions then the contact question in live CUA. Screenshot and accessibility text show the placeholder number. Full responsive audit pending."
+      },
+      "inventory": {
+        "count": null,
+        "advertisedCountRange": [
+          259,
+          262
+        ],
+        "kind": "primary_catalogue",
+        "sourceUrl": "https://preferredautogroup.com/sale/used-cars-fort-wayne-in",
+        "checkedAt": "2026-10-18",
+        "caveats": [
+          "Live homepage showed Inventory 262; extracted inventory page crawled six days earlier showed 259 used. These are advertised records, not confirmed available physical units."
+        ]
+      },
+      "contact": {
+        "phone": "+1 260-434-0100",
+        "channel": "public_business_phone_or_contact_form",
+        "contactUrl": "https://preferredautogroup.com/general-contact",
+        "sourceUrl": "https://preferredautogroup.com/"
+      },
+      "fit": {
+        "score": 63,
+        "reason": "Family-owned single used-car superstore and service centre with substantial advertised inventory. Proven visible contact-copy defect; existing vendor, integrations and professional frontend make a template sale less likely than a cleanup offer.",
+        "priority": "secondary_narrow_cleanup",
+        "budgetConfidence": "not_established",
+        "previousResearchScore": 63
+      },
+      "verification": {
+        "status": "primary_stock_and_live_visible_defect_verified",
+        "confidence": "high_defect_identity_contact_medium_sales_fit",
+        "notBeforeOutreach": [
+          "Confirm current sales interest, incumbent vendor constraints and inventory integration requirements.",
+          "Check private CRM and suppression history."
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://preferredautogroup.com/",
+          "role": "primary_identity_contact_visible_defect",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://preferredautogroup.com/sale/used-cars-fort-wayne-in",
+          "role": "primary_advertised_inventory",
+          "checkedAt": "2026-10-18"
+        }
+      ],
+      "businessContact": {
+        "phone": "+1 260-434-0100",
+        "channel": "public_business_phone_or_contact_form",
+        "contactUrl": "https://preferredautogroup.com/general-contact",
+        "sourceUrl": "https://preferredautogroup.com/"
+      },
+      "fitScore": 63,
+      "fitReason": "Family-owned single used-car superstore and service centre with substantial advertised inventory. Proven visible contact-copy defect; existing vendor, integrations and professional frontend make a template sale less likely than a cleanup offer.",
+      "confidence": "high_defect_identity_contact_medium_sales_fit",
+      "verificationStatus": "primary_stock_and_live_visible_defect_verified",
+      "nextAction": "Confirm current sales interest, incumbent vendor constraints and inventory integration requirements. Check private CRM and suppression history.",
+      "evidenceUrls": [
+        "https://preferredautogroup.com/",
+        "https://preferredautogroup.com/sale/used-cars-fort-wayne-in"
+      ],
+      "priority": "reserve_content_polish",
+      "qualification": {
+        "tier": "reserve_content_polish",
+        "countsTowardPriority400": false,
+        "reason": "Professional existing platform; isolated expanded FAQ placeholder phone is a narrow cleanup issue.",
+        "reviewedAt": "2026-10-18"
+      }
+    },
+    {
+      "id": "us-pa-allentown-romeros-auto-sales-service",
+      "name": "Romero's Auto Sales & Service",
+      "country": "US",
+      "city": "Allentown",
+      "region": "PA",
+      "address": "2010 Union Blvd, Allentown, PA 18109",
+      "website_status": "poor_site",
+      "website": {
+        "url": "https://romerosautos.com/",
+        "inventoryUrl": "https://romerosautos.com/shop/",
+        "checkedAt": "2026-10-18",
+        "observations": [
+          "A normal footer policy link opens an explicitly labelled sample policy with irrelevant packaged-goods, perishable-food and personal-care return text plus unresolved email/address tokens.",
+          "The displayed public footer telephone 610-435-2100 links to tel: (555) 123-4567, so the click-to-call destination disagrees with the visible contact number."
+        ],
+        "defectSource": "https://romerosautos.com/refund_returns/",
+        "browserVerification": "Live CUA policy screenshot and accessibility tree confirm visible sample text. Live catalogue accessibility state confirms the telephone link target mismatch; no telephone call was placed.",
+        "fullResponsiveJourneyAudit": "pending"
+      },
+      "inventory": {
+        "count": 7,
+        "minimumIndividuallyObserved": 7,
+        "kind": "live_primary_priced_catalogue",
+        "sourceUrl": "https://romerosautos.com/shop/",
+        "checkedAt": "2026-10-18",
+        "examples": [
+          "2018 Chevy Malibu LT — $9,995",
+          "2015 Honda Pilot SE 4WD — $11,995",
+          "2023 Toyota Camry LE AWD — $20,500"
+        ],
+        "caveats": [
+          "Advertised available-style catalogue, not independently confirmed physical inventory. Seven cars is below the usual volume preference."
+        ]
+      },
+      "contact": {
+        "phone": "+1 610-435-2100",
+        "email": "info@romerosautos.com",
+        "channel": "public_business_email_or_phone_manually_entered",
+        "contactUrl": "https://romerosautos.com/contact/",
+        "sourceUrl": "https://romerosautos.com/"
+      },
+      "fit": {
+        "score": 77,
+        "reason": "Independent BHPH dealer and repair operator with seven priced cars and a concrete broken call destination. A focused brand/contact and policy cleanup offers clear value; confirm their actual sales and financing workflow before proposing a replacement.",
+        "priority": "small_inventory_exception_with_material_contact_defect",
+        "budgetConfidence": "not_established"
+      },
+      "verification": {
+        "status": "live_primary_stock_and_visible_defect_verified",
+        "confidence": "high_identity_contact_advertised_stock_defect",
+        "notBeforeOutreach": [
+          "Check private CRM and suppression history.",
+          "Confirm available stock and the dealer's intended policies; do not draft legal terms from a theme sample."
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://romerosautos.com/",
+          "role": "primary_business_identity_and_public_contact",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://romerosautos.com/shop/",
+          "role": "live_primary_stock_and_link_destination",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://romerosautos.com/refund_returns/",
+          "role": "live_visible_linked_template_policy",
+          "checkedAt": "2026-10-18"
+        }
+      ],
+      "businessContact": {
+        "phone": "+1 610-435-2100",
+        "email": "info@romerosautos.com",
+        "channel": "public_business_email_or_phone_manually_entered",
+        "contactUrl": "https://romerosautos.com/contact/",
+        "sourceUrl": "https://romerosautos.com/"
+      },
+      "fitScore": 77,
+      "fitReason": "Independent BHPH dealer and repair operator with seven priced cars and a concrete broken call destination. A focused brand/contact and policy cleanup offers clear value; confirm their actual sales and financing workflow before proposing a replacement.",
+      "confidence": "high_identity_contact_advertised_stock_defect",
+      "verificationStatus": "live_primary_stock_and_visible_defect_verified",
+      "nextAction": "Check private CRM and suppression history. Confirm available stock and the dealer's intended policies; do not draft legal terms from a theme sample.",
+      "evidenceUrls": [
+        "https://romerosautos.com/",
+        "https://romerosautos.com/shop/",
+        "https://romerosautos.com/refund_returns/"
+      ],
+      "priority": "priority_research_candidate",
+      "qualification": {
+        "tier": "priority_research_candidate",
+        "countsTowardPriority400": true,
+        "reason": "Primary evidence establishes a contact-routing, vehicle-data, owned-site identity or stock-access gap beyond an isolated setup/policy paragraph.",
+        "reviewedAt": "2026-10-18"
+      }
+    },
+    {
+      "id": "us-co-fort-collins-jwg-auto-sales",
+      "name": "JWG Auto Sales LLC",
+      "country": "US",
+      "city": "Fort Collins",
+      "region": "CO",
+      "address": "200 Air Park Dr, Fort Collins, CO 80524",
+      "website_status": "poor_site",
+      "website": {
+        "url": "https://www.jwgautosales.com/",
+        "inventoryUrl": "https://www.jwgautosales.com/category/all-products",
+        "checkedAt": "2026-10-18",
+        "observations": [
+          "The footer email displays jwgautosales@gmail.com but its actual mailto destination remains info@mysite.com on the home, catalogue and vehicle pages.",
+          "The catalogue and vehicle photos/details work; the demonstrated issue is a contact-route defect, not evidence that the entire site is unusable."
+        ],
+        "defectSource": "https://www.jwgautosales.com/",
+        "browserVerification": "Live CUA accessibility state exposes displayed email and mailto target on three pages. One vehicle detail has a price, six photos and stock identifier. No email was sent.",
+        "fullResponsiveJourneyAudit": "pending"
+      },
+      "inventory": {
+        "count": null,
+        "minimumIndividuallyObserved": 24,
+        "kind": "live_primary_catalogue",
+        "sourceUrl": "https://www.jwgautosales.com/category/all-products",
+        "detailSource": "https://www.jwgautosales.com/product-page/2020-nissan-sentra-s",
+        "checkedAt": "2026-10-18",
+        "examples": [
+          "2020 Nissan Sentra S — $14,000, 57,524 miles, stock NS200802",
+          "2015 Chrysler 300 Limited",
+          "2008 Toyota FJ Cruiser",
+          "2019 Dodge Charger Scat Pack"
+        ],
+        "caveats": [
+          "First catalogue page displayed 24 distinct vehicle titles and a Load More control. Only one detail price checked individually; available-only physical stock unconfirmed."
+        ]
+      },
+      "contact": {
+        "phone": "+1 970-443-6105",
+        "alternatePhones": [
+          "+1 970-599-9625"
+        ],
+        "email": "jwgautosales@gmail.com",
+        "channel": "public_business_phone_or_manually_entered_email",
+        "sourceUrl": "https://www.jwgautosales.com/"
+      },
+      "fit": {
+        "score": 81,
+        "reason": "Independent mixed used-car inventory with 24 distinct live advertised titles, a working priced detail and a clear enquiry-routing defect. Business appears to own content in Wix; offer branded stock/contact polish while preserving finance process.",
+        "priority": "high_specific_contact_defect",
+        "budgetConfidence": "not_established"
+      },
+      "verification": {
+        "status": "live_primary_stock_and_contact_destination_defect_verified",
+        "confidence": "high_identity_contact_defect_medium_available_stock",
+        "notBeforeOutreach": [
+          "Refresh available stock; check private CRM/suppression.",
+          "Confirm the preferred business email and finance integration."
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.jwgautosales.com/",
+          "role": "live_primary_identity_contact_and_mailto_mismatch",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://www.jwgautosales.com/category/all-products",
+          "role": "live_primary_catalogue_24_titles",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://www.jwgautosales.com/product-page/2020-nissan-sentra-s",
+          "role": "live_primary_priced_vehicle_detail",
+          "checkedAt": "2026-10-18"
+        }
+      ],
+      "businessContact": {
+        "phone": "+1 970-443-6105",
+        "alternatePhones": [
+          "+1 970-599-9625"
+        ],
+        "email": "jwgautosales@gmail.com",
+        "channel": "public_business_phone_or_manually_entered_email",
+        "sourceUrl": "https://www.jwgautosales.com/"
+      },
+      "fitScore": 81,
+      "fitReason": "Independent mixed used-car inventory with 24 distinct live advertised titles, a working priced detail and a clear enquiry-routing defect. Business appears to own content in Wix; offer branded stock/contact polish while preserving finance process.",
+      "confidence": "high_identity_contact_defect_medium_available_stock",
+      "verificationStatus": "live_primary_stock_and_contact_destination_defect_verified",
+      "nextAction": "Refresh available stock; check private CRM/suppression. Confirm the preferred business email and finance integration.",
+      "evidenceUrls": [
+        "https://www.jwgautosales.com/",
+        "https://www.jwgautosales.com/category/all-products",
+        "https://www.jwgautosales.com/product-page/2020-nissan-sentra-s"
+      ],
+      "priority": "priority_research_candidate",
+      "qualification": {
+        "tier": "priority_research_candidate",
+        "countsTowardPriority400": true,
+        "reason": "Primary evidence establishes a contact-routing, vehicle-data, owned-site identity or stock-access gap beyond an isolated setup/policy paragraph.",
+        "reviewedAt": "2026-10-18"
+      }
+    },
+    {
+      "id": "us-pa-woodland-322-budget-auto-sales",
+      "name": "322 Budget Auto Sales LLC",
+      "country": "US",
+      "city": "Woodland",
+      "region": "PA",
+      "address": "1637 Woodland Bigler Highway, Woodland, PA 16881",
+      "website_status": "poor_site",
+      "website": {
+        "url": "https://www.budgetautosalesllc.com/",
+        "inventoryUrl": "https://www.budgetautosalesllc.com/general-1-2",
+        "checkedAt": "2026-10-18",
+        "observations": [
+          "The visible footer credits Auto Express with year 2035 rather than the dealership identity.",
+          "Footer social icons link to Wix's Facebook, Twitter and YouTube profiles.",
+          "The main PRE-OWNED landing route renders an empty content region; stock is on submenu category pages. Desktop screenshot also shows horizontal page overflow."
+        ],
+        "defectSource": "https://www.budgetautosalesllc.com/pre-owned",
+        "browserVerification": "Live CUA catalogue confirms eight priced SUVs not marked SOLD. Footer screenshot confirms inherited name/date and overflow. Social destinations verified in accessibility state. Extracted info@mysite.com text was not visible in screenshot and is not claimed as a visible defect.",
+        "fullResponsiveJourneyAudit": "pending"
+      },
+      "inventory": {
+        "count": null,
+        "minimumIndividuallyObserved": 8,
+        "kind": "live_primary_priced_listings_not_marked_sold",
+        "sourceUrl": "https://www.budgetautosalesllc.com/general-1-2",
+        "checkedAt": "2026-10-18",
+        "examples": [
+          "2016 Chevy Traverse LT #943 — $4,295",
+          "2005 Honda CR-V #892 — $3,895",
+          "2011 Honda Pilot #860 — $4,895"
+        ],
+        "caveats": [
+          "Other catalogue entries are explicitly sold; the total page length is not current stock. Sub-$5,000 stock and eight available-style listings make this a small-dealer exception."
+        ]
+      },
+      "contact": {
+        "phone": "+1 814-857-7770",
+        "channel": "public_business_phone",
+        "contactUrl": "https://www.budgetautosalesllc.com/contact-5",
+        "sourceUrl": "https://www.budgetautosalesllc.com/"
+      },
+      "fit": {
+        "score": 72,
+        "reason": "Family-run budget used-car lot with real advertised SUV photos/prices and obvious inherited identity/social routing plus a blank inventory landing page. A simpler branded catalogue is relevant; small inventory and low prices lower expected budget.",
+        "priority": "small_dealer_exception",
+        "budgetConfidence": "low_not_established"
+      },
+      "verification": {
+        "status": "live_primary_stock_and_visible_defect_verified",
+        "confidence": "high_identity_defect_contact_medium_available_stock",
+        "notBeforeOutreach": [
+          "Confirm current stock and private CRM/suppression.",
+          "Confirm the actual Facebook page before using its assets or listings."
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.budgetautosalesllc.com/",
+          "role": "primary_business_identity_contact",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://www.budgetautosalesllc.com/pre-owned",
+          "role": "live_empty_inventory_landing_route",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://www.budgetautosalesllc.com/general-1-2",
+          "role": "live_primary_stock_visible_footer_and_social_destinations",
+          "checkedAt": "2026-10-18"
+        }
+      ],
+      "businessContact": {
+        "phone": "+1 814-857-7770",
+        "channel": "public_business_phone",
+        "contactUrl": "https://www.budgetautosalesllc.com/contact-5",
+        "sourceUrl": "https://www.budgetautosalesllc.com/"
+      },
+      "fitScore": 72,
+      "fitReason": "Family-run budget used-car lot with real advertised SUV photos/prices and obvious inherited identity/social routing plus a blank inventory landing page. A simpler branded catalogue is relevant; small inventory and low prices lower expected budget.",
+      "confidence": "high_identity_defect_contact_medium_available_stock",
+      "verificationStatus": "live_primary_stock_and_visible_defect_verified",
+      "nextAction": "Confirm current stock and private CRM/suppression. Confirm the actual Facebook page before using its assets or listings.",
+      "evidenceUrls": [
+        "https://www.budgetautosalesllc.com/",
+        "https://www.budgetautosalesllc.com/pre-owned",
+        "https://www.budgetautosalesllc.com/general-1-2"
+      ],
+      "priority": "priority_research_candidate",
+      "qualification": {
+        "tier": "priority_research_candidate",
+        "countsTowardPriority400": true,
+        "reason": "Primary evidence establishes a contact-routing, vehicle-data, owned-site identity or stock-access gap beyond an isolated setup/policy paragraph.",
+        "reviewedAt": "2026-10-18"
+      }
+    },
+    {
+      "id": "us-nm-albuquerque-precision-auto-sales",
+      "name": "Precision Auto Sales",
+      "country": "US",
+      "city": "Albuquerque",
+      "region": "NM",
+      "address": "10625 Central Ave NE, Albuquerque, NM 87123",
+      "website_status": "poor_site",
+      "website": {
+        "url": "https://www.precisionautonm.com/",
+        "inventoryUrl": "https://www.precisionautonm.com/category/all-products",
+        "checkedAt": "2026-10-18",
+        "observations": [
+          "The public footer displays precision.autosale.nm@gmail.com but directs email clicks to info@mysite.com on both home and shop.",
+          "Vehicle catalogue and priced cards load; the demonstrated gap is enquiry routing and inherited template data, not a full-site outage."
+        ],
+        "defectSource": "https://www.precisionautonm.com/",
+        "browserVerification": "Live CUA accessibility state confirms displayed email and mismatching mailto target, plus eight priced vehicle records.",
+        "fullResponsiveJourneyAudit": "pending"
+      },
+      "inventory": {
+        "count": 8,
+        "minimumIndividuallyObserved": 8,
+        "kind": "live_primary_priced_catalogue",
+        "sourceUrl": "https://www.precisionautonm.com/category/all-products",
+        "checkedAt": "2026-10-18",
+        "examples": [
+          "2021 Chrysler 300 Touring — $15,995",
+          "2014 Jeep Wrangler — $15,559",
+          "2019 Chevrolet Silverado 2500 Double Cab — $20,995"
+        ],
+        "caveats": [
+          "Advertised records, not confirmed physical available stock. Eight vehicles is below the preferred volume threshold."
+        ]
+      },
+      "contact": {
+        "phone": "+1 505-450-7771",
+        "email": "precision.autosale.nm@gmail.com",
+        "channel": "public_business_phone_or_manually_entered_email",
+        "sourceUrl": "https://www.precisionautonm.com/"
+      },
+      "fit": {
+        "score": 76,
+        "reason": "Family-run mixed used-car dealer with eight priced cars/trucks in the $13k-$21k range and a specific broken enquiry destination. A narrow contact/content repair has clear value; current small inventory limits sales priority.",
+        "priority": "small_inventory_exception_contact_defect",
+        "budgetConfidence": "not_established"
+      },
+      "verification": {
+        "status": "live_primary_stock_and_contact_destination_defect_verified",
+        "confidence": "high_identity_contact_defect_medium_available_stock",
+        "notBeforeOutreach": [
+          "Check private CRM/suppression and current stock.",
+          "Confirm preferred contact destination and financing workflow."
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.precisionautonm.com/",
+          "role": "live_primary_identity_contact_mailto_defect",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://www.precisionautonm.com/category/all-products",
+          "role": "live_primary_priced_stock",
+          "checkedAt": "2026-10-18"
+        }
+      ],
+      "businessContact": {
+        "phone": "+1 505-450-7771",
+        "email": "precision.autosale.nm@gmail.com",
+        "channel": "public_business_phone_or_manually_entered_email",
+        "sourceUrl": "https://www.precisionautonm.com/"
+      },
+      "fitScore": 76,
+      "fitReason": "Family-run mixed used-car dealer with eight priced cars/trucks in the $13k-$21k range and a specific broken enquiry destination. A narrow contact/content repair has clear value; current small inventory limits sales priority.",
+      "confidence": "high_identity_contact_defect_medium_available_stock",
+      "verificationStatus": "live_primary_stock_and_contact_destination_defect_verified",
+      "nextAction": "Check private CRM/suppression and current stock. Confirm preferred contact destination and financing workflow.",
+      "evidenceUrls": [
+        "https://www.precisionautonm.com/",
+        "https://www.precisionautonm.com/category/all-products"
+      ],
+      "priority": "priority_research_candidate",
+      "qualification": {
+        "tier": "priority_research_candidate",
+        "countsTowardPriority400": true,
+        "reason": "Primary evidence establishes a contact-routing, vehicle-data, owned-site identity or stock-access gap beyond an isolated setup/policy paragraph.",
+        "reviewedAt": "2026-10-18"
+      }
+    },
+    {
+      "id": "us-mi-detroit-best-deals-auto-sales",
+      "name": "Best Deals Auto Sales Detroit",
+      "country": "US",
+      "city": "Detroit",
+      "region": "MI",
+      "address": "1790 E 8 Mile Rd, Detroit, MI 48203",
+      "website_status": "poor_site",
+      "website": {
+        "url": "https://www.bestdeals8mile.net/",
+        "additionalBusinessDomain": "https://www.bestdeals8mile.com/",
+        "checkedAt": "2026-10-18",
+        "observations": [
+          "The still-live indexed .com About page visibly introduces Loeber Motors under Best Deals branding and includes generic placeholder photos and theme staff/testimonial content.",
+          "Current dealer-posted Craigslist advertising promotes the .net site. That second site has functional branded inventory; cleanup/consolidation of the old domain may be the appropriate offer."
+        ],
+        "defectSource": "https://www.bestdeals8mile.com/about-us/",
+        "browserVerification": "Live CUA screenshot and accessibility state confirm the .com About page visibly shows Loeber Motors. The .net stock and recent ads were checked in primary extracted pages.",
+        "fullResponsiveJourneyAudit": "pending"
+      },
+      "inventory": {
+        "count": null,
+        "primaryAdvertisedCount": 58,
+        "minimumIndividuallyObserved": 10,
+        "kind": "primary_catalogue_and_recent_dealer_classified",
+        "sourceUrl": "https://www.bestdeals8mile.net/",
+        "secondaryPrimaryCatalogue": "https://www.bestdeals8mile.com/inventory-2/",
+        "recentDealerAd": "https://www.craigslist.org/view/d/buy-here-pay-here-car-lot-no-credit/rXwV58ipk2gUmbuK8Y1igP",
+        "adDate": "2026-09-18",
+        "checkedAt": "2026-10-18",
+        "examples": [
+          "2015 Buick Enclave — $7,200",
+          "2019 Chevrolet Trax — $8,200",
+          "2017 Ford Escape — $7,900"
+        ],
+        "caveats": [
+          "58 is the summed body-style counts in the .net primary page; may include stale/duplicate units. Current availability must be confirmed.",
+          "An advertised $1,600 in the Craigslist headline is a down payment, not vehicle selling price."
+        ]
+      },
+      "contact": {
+        "phone": "+1 313-826-7194",
+        "alternatePhones": [
+          "+1 313-825-5601"
+        ],
+        "channel": "public_business_phone",
+        "sourceUrl": "https://www.bestdeals8mile.com/about-us/",
+        "alternatePhoneSource": "https://www.bestdeals8mile.net/"
+      },
+      "fit": {
+        "score": 68,
+        "reason": "Independent BHPH dealer with substantial priced stock and a severe visible inherited identity on a second business-branded domain. Modern .net site lowers replacement need; pitch careful domain/content reconciliation and preserve real finance integrations.",
+        "priority": "domain_and_legacy_content_cleanup",
+        "budgetConfidence": "not_established",
+        "previousResearchScore": 80
+      },
+      "verification": {
+        "status": "primary_stock_recent_ad_and_live_visible_legacy_defect_verified",
+        "confidence": "high_identity_defect_contact_medium_current_stock_and_domain_control",
+        "notBeforeOutreach": [
+          "Confirm control and intended role of both domains, whether legacy cleanup is desired, and current inventory.",
+          "Check private CRM/suppression and preferred phone."
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.bestdeals8mile.com/about-us/",
+          "role": "live_primary_legacy_identity_defect_and_contact",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://www.bestdeals8mile.net/",
+          "role": "primary_functional_inventory_and_current_ad_domain",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://www.bestdeals8mile.com/inventory-2/",
+          "role": "primary_secondary_domain_stock",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://www.craigslist.org/view/d/buy-here-pay-here-car-lot-no-credit/rXwV58ipk2gUmbuK8Y1igP",
+          "role": "dealer_posted_recent_business_contact_and_domain",
+          "checkedAt": "2026-10-18"
+        }
+      ],
+      "businessContact": {
+        "phone": "+1 313-826-7194",
+        "alternatePhones": [
+          "+1 313-825-5601"
+        ],
+        "channel": "public_business_phone",
+        "sourceUrl": "https://www.bestdeals8mile.com/about-us/",
+        "alternatePhoneSource": "https://www.bestdeals8mile.net/"
+      },
+      "fitScore": 68,
+      "fitReason": "Independent BHPH dealer with substantial priced stock and a severe visible inherited identity on a second business-branded domain. Modern .net site lowers replacement need; pitch careful domain/content reconciliation and preserve real finance integrations.",
+      "confidence": "high_identity_defect_contact_medium_current_stock_and_domain_control",
+      "verificationStatus": "primary_stock_recent_ad_and_live_visible_legacy_defect_verified",
+      "nextAction": "Confirm control and intended role of both domains, whether legacy cleanup is desired, and current inventory. Check private CRM/suppression and preferred phone.",
+      "evidenceUrls": [
+        "https://www.bestdeals8mile.com/about-us/",
+        "https://www.bestdeals8mile.net/",
+        "https://www.bestdeals8mile.com/inventory-2/",
+        "https://www.craigslist.org/view/d/buy-here-pay-here-car-lot-no-credit/rXwV58ipk2gUmbuK8Y1igP"
+      ],
+      "priority": "reserve_content_polish",
+      "qualification": {
+        "tier": "reserve_content_polish",
+        "countsTowardPriority400": false,
+        "reason": "Defect is on older alternate .com domain; newer .net stock site functions, reducing replacement fit.",
+        "reviewedAt": "2026-10-18"
+      }
+    },
+    {
+      "id": "us-ga-cartersville-merly-motors",
+      "name": "Merly Motors LLC",
+      "country": "US",
+      "city": "Cartersville",
+      "region": "GA",
+      "address": "1960 Joe Frank Harris Pkwy NW, Cartersville, GA 30120",
+      "website_status": "poor_site",
+      "website": {
+        "url": "https://www.merlymotors.com/",
+        "inventoryUrl": "https://www.merlymotors.com/inventory",
+        "checkedAt": "2026-10-18",
+        "observations": [
+          "The catalogue contact section labels a link MERLYMOTORS.COM but clicking it would compose an email to the template address info@mysite.com.",
+          "Two vehicle records swap mileage and identifier content: the 2011 Ford Escape displays MILES C71050 and VIN 184,284; the 2015 Ford Edge displays MILES B79260 and VIN 149,385.",
+          "Inventory is a long manually composed page with many partial identifiers, missing prices and duplicated Ford Flex records. These are data-quality opportunities; not claims about vehicle condition."
+        ],
+        "defectSource": "https://www.merlymotors.com/inventory",
+        "browserVerification": "Live CUA rendered accessibility state confirms mismatched mailto and swapped fields. Desktop screenshot confirms real lot photos and the dealer's advertised 44-online/59-on-site message.",
+        "fullResponsiveJourneyAudit": "pending"
+      },
+      "inventory": {
+        "count": null,
+        "primaryAdvertisedOnlineCount": 44,
+        "primaryAdvertisedOnSiteCount": 59,
+        "minimumIndividuallyObserved": 30,
+        "kind": "live_primary_catalogue_with_photos_and_prices",
+        "sourceUrl": "https://www.merlymotors.com/inventory",
+        "checkedAt": "2026-10-18",
+        "examples": [
+          "2015 GMC Terrain SLT — $7,800",
+          "2014 Nissan Rogue — $6,800",
+          "2019 Jeep Grand Cherokee Limited — $15,800"
+        ],
+        "caveats": [
+          "44/59 are dealer claims, not an independent unique/available-unit count. Duplicate records exist, and some entries lack numeric prices."
+        ]
+      },
+      "contact": {
+        "phone": "+1 678-719-8466",
+        "alternatePhones": [
+          "+1 770-546-5104"
+        ],
+        "publicBusinessContactName": "Angel",
+        "facebook": "https://www.facebook.com/Merly-Motors-Llc-105938527450387/",
+        "channel": "public_business_phone_or_facebook",
+        "sourceUrl": "https://www.merlymotors.com/inventory"
+      },
+      "fit": {
+        "score": 87,
+        "reason": "Independent mixed used-car lot with substantial live stock photos, active BHPH offer and clearly repairable contact/data defects. A structured branded catalogue and correct contact routing have strong practical value; preserve their real financing and stock-maintenance process.",
+        "priority": "high",
+        "budgetConfidence": "not_established"
+      },
+      "verification": {
+        "status": "live_primary_stock_and_contact_data_defects_verified",
+        "confidence": "high_identity_contact_defect_medium_unique_available_stock",
+        "notBeforeOutreach": [
+          "Check private CRM/suppression; confirm current unique available stock.",
+          "Confirm the intended contact address, genuine VIN/mileage data and BHPH process before a client build."
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.merlymotors.com/inventory",
+          "role": "live_primary_stock_identity_contact_and_data_defects",
+          "checkedAt": "2026-10-18"
+        }
+      ],
+      "businessContact": {
+        "phone": "+1 678-719-8466",
+        "alternatePhones": [
+          "+1 770-546-5104"
+        ],
+        "publicBusinessContactName": "Angel",
+        "facebook": "https://www.facebook.com/Merly-Motors-Llc-105938527450387/",
+        "channel": "public_business_phone_or_facebook",
+        "sourceUrl": "https://www.merlymotors.com/inventory"
+      },
+      "fitScore": 87,
+      "fitReason": "Independent mixed used-car lot with substantial live stock photos, active BHPH offer and clearly repairable contact/data defects. A structured branded catalogue and correct contact routing have strong practical value; preserve their real financing and stock-maintenance process.",
+      "confidence": "high_identity_contact_defect_medium_unique_available_stock",
+      "verificationStatus": "live_primary_stock_and_contact_data_defects_verified",
+      "nextAction": "Check private CRM/suppression; confirm current unique available stock. Confirm the intended contact address, genuine VIN/mileage data and BHPH process before a client build.",
+      "evidenceUrls": [
+        "https://www.merlymotors.com/inventory"
+      ],
+      "priority": "priority_research_candidate",
+      "qualification": {
+        "tier": "priority_research_candidate",
+        "countsTowardPriority400": true,
+        "reason": "Primary evidence establishes a contact-routing, vehicle-data, owned-site identity or stock-access gap beyond an isolated setup/policy paragraph.",
+        "reviewedAt": "2026-10-18"
+      }
+    },
+    {
+      "id": "us-ga-peachtree-corners-nextstep-auto",
+      "name": "NextStep Auto LLC",
+      "country": "US",
+      "city": "Peachtree Corners",
+      "region": "GA",
+      "address": "4047 Holcomb Bridge Rd, Peachtree Corners, GA 30092",
+      "website_status": "poor_site",
+      "website": {
+        "url": "https://www.nextstepautoga.com/",
+        "inventoryUrl": "https://www.nextstepautoga.com/category/all-products",
+        "checkedAt": "2026-10-18",
+        "observations": [
+          "The site's linked Refund Policy page contains general instructions for writing a policy rather than a completed dealer-specific document.",
+          "Read-only live primary HTML returned HTTP 200 and confirms the displayed nextstepautoga@gmail.com anchor links to mailto:info@mysite.com. This verifies a contact-routing defect; live browser rendering remains pending."
+        ],
+        "defectSource": "https://www.nextstepautoga.com/blank-4",
+        "browserVerification": "Not performed in this pass: CUA inventory returned no available browser/app surfaces. Evidence is primary-page text retrieved via web tooling, not a claim that hidden markup is visible.",
+        "fullResponsiveJourneyAudit": "pending",
+        "contactLinkVerification": {
+          "method": "bounded_read_only_primary_html",
+          "checkedAt": "2026-10-18",
+          "httpStatus": 200,
+          "label": "nextstepautoga@gmail.com",
+          "href": "mailto:info@mysite.com"
+        }
+      },
+      "inventory": {
+        "count": 8,
+        "minimumIndividuallyObserved": 8,
+        "kind": "primary_dealer_advertised_catalogue",
+        "sourceUrl": "https://www.nextstepautoga.com/category/all-products",
+        "checkedAt": "2026-10-18",
+        "examples": [
+          "2013 Ford Edge Limited — $7,990",
+          "2022 Ford Escape SE AWD — $15,290",
+          "2020 Toyota 4Runner SR5 Premium — $29,900"
+        ],
+        "caveat": "Catalogue/primary homepage advertise eight products; actual availability must be refreshed. November 2024 city business list corroborates the business name, address and telephone; it is not a current license determination."
+      },
+      "businessContact": {
+        "phone": "+1 518-416-9734",
+        "email": "nextstepautoga@gmail.com",
+        "sourceUrl": "https://www.nextstepautoga.com/"
+      },
+      "fitScore": 78,
+      "fitReason": "Independent pre-owned dealer with eight priced cars and a direct public email/phone. A correctly completed branded site/content package has a concrete unfinished-template correction to demonstrate. Purchase budget and replacement intent are unknown.",
+      "confidence": "medium_primary_identity_stock_and_content_evidence_no_live_browser_in_this_pass",
+      "verificationStatus": "primary_pages_verified_rendered_contact_and_availability_recheck_pending",
+      "nextAction": "Recheck rendered defect/link destinations and available stock; complete private CRM/suppression screening before any outreach. No contact has been made by this researcher.",
+      "evidenceUrls": [
+        "https://www.nextstepautoga.com/",
+        "https://www.nextstepautoga.com/category/all-products",
+        "https://www.nextstepautoga.com/blank-4",
+        "https://www.peachtreecornersga.gov/Archive.aspx?ADID=1322"
+      ],
+      "contact": {
+        "phone": "+1 518-416-9734",
+        "email": "nextstepautoga@gmail.com",
+        "sourceUrl": "https://www.nextstepautoga.com/"
+      },
+      "fit": {
+        "score": 78,
+        "reason": "Independent pre-owned dealer with eight priced cars and a direct public email/phone. A correctly completed branded site/content package has a concrete unfinished-template correction to demonstrate. Purchase budget and replacement intent are unknown.",
+        "budgetConfidence": "not_established"
+      },
+      "verification": {
+        "status": "primary_pages_verified_rendered_contact_and_availability_recheck_pending",
+        "confidence": "medium_primary_identity_stock_and_content_evidence_no_live_browser_in_this_pass",
+        "notBeforeOutreach": [
+          "Recheck rendered defect/link destinations and available stock; complete private CRM/suppression screening before any outreach. No contact has been made by this researcher."
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.nextstepautoga.com/",
+          "role": "public_business_identity_or_support",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://www.nextstepautoga.com/category/all-products",
+          "role": "primary_advertised_stock",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://www.nextstepautoga.com/blank-4",
+          "role": "specific_content_defect",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://www.peachtreecornersga.gov/Archive.aspx?ADID=1322",
+          "role": "public_business_identity_or_support",
+          "checkedAt": "2026-10-18"
+        }
+      ],
+      "priority": "priority_research_candidate",
+      "qualification": {
+        "tier": "priority_research_candidate",
+        "countsTowardPriority400": true,
+        "reason": "Primary evidence establishes a contact-routing, vehicle-data, owned-site identity or stock-access gap beyond an isolated setup/policy paragraph.",
+        "reviewedAt": "2026-10-18"
+      }
+    },
+    {
+      "id": "us-ms-pascagoula-tonys-auto-sales",
+      "name": "Tony's Auto Sales",
+      "country": "US",
+      "city": "Pascagoula",
+      "region": "MS",
+      "address": "3422 Charlie Ave, Pascagoula, MS 39581",
+      "website_status": "poor_site",
+      "website": {
+        "url": "https://www.tonyautosales.com/",
+        "inventoryUrl": "https://www.tonyautosales.com/category/all-products",
+        "checkedAt": "2026-10-18",
+        "observations": [
+          "The primary linked Privacy Policy contains Wix's general instructions on how to write a policy, rather than completed dealer-specific explanatory content.",
+          "The public Book Online route says nothing is available to book. The footer carries a 2035 copyright year. These are content/completion observations, not legal findings.",
+          "Read-only live primary HTML returned HTTP 200 and confirms the displayed Tonysautosales001@gmail.com anchor links to mailto:info@mysite.com. This verifies a contact-routing defect; live browser rendering remains pending."
+        ],
+        "defectSource": "https://www.tonyautosales.com/blank",
+        "browserVerification": "Not performed in this pass: CUA inventory returned no available browser/app surfaces. Evidence is primary-page text retrieved via web tooling, not a claim that hidden markup is visible.",
+        "fullResponsiveJourneyAudit": "pending",
+        "contactLinkVerification": {
+          "method": "bounded_read_only_primary_html",
+          "checkedAt": "2026-10-18",
+          "httpStatus": 200,
+          "label": "Tonysautosales001@gmail.com",
+          "href": "mailto:info@mysite.com"
+        }
+      },
+      "inventory": {
+        "count": 9,
+        "minimumIndividuallyObserved": 9,
+        "kind": "primary_dealer_advertised_catalogue",
+        "sourceUrl": "https://www.tonyautosales.com/category/all-products",
+        "checkedAt": "2026-10-18",
+        "examples": [
+          "2012 Hyundai Sonata — $6,000",
+          "2018 Chrysler 300 Limited — $13,500",
+          "2013 Ford Mustang V6 — $12,500"
+        ],
+        "caveat": "Primary category reports nine products. Availability and title/vehicle facts require dealer confirmation; do not copy financing approval promises or synthetic imagery as factual client assets."
+      },
+      "businessContact": {
+        "phone": "+1 228-471-5536",
+        "email": "Tonysautosales001@gmail.com",
+        "sourceUrl": "https://www.tonyautosales.com/"
+      },
+      "fitScore": 75,
+      "fitReason": "Small independent used/rebuilt-vehicle dealer with nine priced advertised cars and a public direct email/telephone. Finished factual copy, working contact choices and a clear inventory-first proposal can address specific site-completion gaps. Existing designer credit means this may be a small cleanup sale rather than a full replacement.",
+      "confidence": "medium_primary_identity_stock_and_content_evidence_no_live_browser_in_this_pass",
+      "verificationStatus": "primary_pages_verified_rendered_contact_and_availability_recheck_pending",
+      "nextAction": "Recheck rendered defect/link destinations and available stock; complete private CRM/suppression screening before any outreach. No contact has been made by this researcher.",
+      "evidenceUrls": [
+        "https://www.tonyautosales.com/",
+        "https://www.tonyautosales.com/category/all-products",
+        "https://www.tonyautosales.com/blank",
+        "https://www.tonyautosales.com/book-online"
+      ],
+      "contact": {
+        "phone": "+1 228-471-5536",
+        "email": "Tonysautosales001@gmail.com",
+        "sourceUrl": "https://www.tonyautosales.com/"
+      },
+      "fit": {
+        "score": 75,
+        "reason": "Small independent used/rebuilt-vehicle dealer with nine priced advertised cars and a public direct email/telephone. Finished factual copy, working contact choices and a clear inventory-first proposal can address specific site-completion gaps. Existing designer credit means this may be a small cleanup sale rather than a full replacement.",
+        "budgetConfidence": "not_established"
+      },
+      "verification": {
+        "status": "primary_pages_verified_rendered_contact_and_availability_recheck_pending",
+        "confidence": "medium_primary_identity_stock_and_content_evidence_no_live_browser_in_this_pass",
+        "notBeforeOutreach": [
+          "Recheck rendered defect/link destinations and available stock; complete private CRM/suppression screening before any outreach. No contact has been made by this researcher."
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.tonyautosales.com/",
+          "role": "public_business_identity_or_support",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://www.tonyautosales.com/category/all-products",
+          "role": "primary_advertised_stock",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://www.tonyautosales.com/blank",
+          "role": "specific_content_defect",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://www.tonyautosales.com/book-online",
+          "role": "public_business_identity_or_support",
+          "checkedAt": "2026-10-18"
+        }
+      ],
+      "priority": "priority_research_candidate",
+      "qualification": {
+        "tier": "priority_research_candidate",
+        "countsTowardPriority400": true,
+        "reason": "Primary evidence establishes a contact-routing, vehicle-data, owned-site identity or stock-access gap beyond an isolated setup/policy paragraph.",
+        "reviewedAt": "2026-10-18"
+      }
+    },
+    {
+      "id": "us-oh-cincinnati-auto-credit",
+      "name": "Cincinnati Auto Credit",
+      "country": "US",
+      "city": "Cincinnati / Fairfield",
+      "region": "OH",
+      "address": "2813 Gilbert Ave, Cincinnati, OH 45206; 5489 Dixie Hwy, Fairfield, OH 45014",
+      "website_status": "poor_site",
+      "website": {
+        "url": "https://www.cincyauto.com/",
+        "inventoryUrl": "https://www.cincyauto.com/autos",
+        "checkedAt": "2026-10-18",
+        "observations": [
+          "The public Testimonials page contains Latin placeholder paragraphs attributed to Testfour Larkin, TestThree Larkin and testtwo Larkin, dated December 5, 2025, plus a Test Larkin entry.",
+          "This is an indexed primary content observation; browser rendering/visibility must be rechecked before presenting visual evidence. The rest of the dealer's site has substantial functional inventory and financing flows."
+        ],
+        "defectSource": "https://www.cincyauto.com/testimonials",
+        "browserVerification": "Not performed in this pass: CUA inventory returned no available browser/app surfaces. Evidence is primary-page text retrieved via web tooling, not a claim that hidden markup is visible.",
+        "fullResponsiveJourneyAudit": "pending"
+      },
+      "inventory": {
+        "count": 59,
+        "minimumIndividuallyObserved": 3,
+        "kind": "primary_dealer_advertised_catalogue",
+        "sourceUrl": "https://www.cincyauto.com/autos",
+        "checkedAt": "2026-10-18",
+        "examples": [
+          "2012 Buick Enclave Leather — VIN 5GAKVCED4CJ421131, stock 99841, 126,487 mi",
+          "2016 Buick Encore Base — VIN KL4CJASB5GB736388, stock 99824, 84,613 mi",
+          "2016 Buick Encore Base AWD — VIN KL4CJESB0GB572149, stock 99888, 115,395 mi"
+        ],
+        "caveat": "Inventory page advertised 59 results while a differently cached testimonials navigation advertised 72. These are changing primary catalogue counts, not independently verified physical stock. Example records are call-for-price."
+      },
+      "businessContact": {
+        "phone": "+1 513-221-2255",
+        "sourceUrl": "https://www.cincyauto.com/"
+      },
+      "fitScore": 70,
+      "fitReason": "Independent two-location operator with dozens of advertised VIN/stock records, public business phone and a specific unfinished testimonials page. Higher operational capacity is plausible from two sites and stock, but no budget or buying interest is established. Pitch truthful content/branding cleanup and a demonstrable design option; do not imply its entire working platform needs replacement.",
+      "confidence": "medium_primary_identity_stock_and_content_evidence_no_live_browser_in_this_pass",
+      "verificationStatus": "primary_pages_verified_rendered_contact_and_availability_recheck_pending",
+      "nextAction": "Recheck rendered defect/link destinations and available stock; complete private CRM/suppression screening before any outreach. No contact has been made by this researcher.",
+      "evidenceUrls": [
+        "https://www.cincyauto.com/",
+        "https://www.cincyauto.com/autos",
+        "https://www.cincyauto.com/testimonials"
+      ],
+      "contact": {
+        "phone": "+1 513-221-2255",
+        "sourceUrl": "https://www.cincyauto.com/"
+      },
+      "fit": {
+        "score": 70,
+        "reason": "Independent two-location operator with dozens of advertised VIN/stock records, public business phone and a specific unfinished testimonials page. Higher operational capacity is plausible from two sites and stock, but no budget or buying interest is established. Pitch truthful content/branding cleanup and a demonstrable design option; do not imply its entire working platform needs replacement.",
+        "budgetConfidence": "not_established",
+        "previousResearchScore": 73
+      },
+      "verification": {
+        "status": "primary_pages_verified_rendered_contact_and_availability_recheck_pending",
+        "confidence": "medium_primary_identity_stock_and_content_evidence_no_live_browser_in_this_pass",
+        "notBeforeOutreach": [
+          "Recheck rendered defect/link destinations and available stock; complete private CRM/suppression screening before any outreach. No contact has been made by this researcher."
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.cincyauto.com/",
+          "role": "public_business_identity_or_support",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://www.cincyauto.com/autos",
+          "role": "primary_advertised_stock",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://www.cincyauto.com/testimonials",
+          "role": "specific_content_defect",
+          "checkedAt": "2026-10-18"
+        }
+      ],
+      "priority": "reserve_content_polish",
+      "qualification": {
+        "tier": "reserve_content_polish",
+        "countsTowardPriority400": false,
+        "reason": "Test testimonials on a secondary page; functional inventory/finance platform.",
+        "reviewedAt": "2026-10-18"
+      }
+    },
+    {
+      "id": "us-tn-cleveland-tech-motors",
+      "name": "Tech Motors LLC",
+      "aliases": [
+        "Dalton Pike Motors",
+        "Factory Right Hand Drive Cars"
+      ],
+      "country": "US",
+      "city": "Cleveland",
+      "region": "TN",
+      "address": "4362 Dalton Pike SE, Cleveland, TN 37323",
+      "website_status": "poor_site",
+      "website": {
+        "url": "https://www.factoryrighthanddrivecars.com/",
+        "inventoryUrl": "https://www.factoryrighthanddrivecars.com/category/sale",
+        "checkedAt": "2026-10-18",
+        "observations": [
+          "The live primary HTML confirms the appointment paragraph containing the real telephone is linked to mailto:info@mysite.com. No usable business email is established by that anchor.",
+          "The primary linked Part Suppliers page contains repeated Small Title placeholder headings. This content observation needs rendered confirmation."
+        ],
+        "defectSource": "https://www.factoryrighthanddrivecars.com/",
+        "contactLinkVerification": {
+          "method": "bounded_read_only_primary_html",
+          "httpStatus": 200,
+          "checkedAt": "2026-10-18",
+          "label": "Appointment paragraph containing 423-716-2161",
+          "href": "mailto:info@mysite.com"
+        },
+        "browserVerification": "CUA returned no available browser/app surfaces. Primary extracted pages and live HTML were checked, not a rendered visual audit.",
+        "fullResponsiveJourneyAudit": "pending"
+      },
+      "inventory": {
+        "count": null,
+        "minimumIndividuallyObserved": 12,
+        "kind": "primary_dealer_priced_catalogue",
+        "sourceUrl": "https://www.factoryrighthanddrivecars.com/",
+        "checkedAt": "2026-10-18",
+        "examples": [
+          "2001 Toyota Estima 54K miles 4x4 — $14,900",
+          "1999 Toyota Grand Hiace 67K miles 4x4 — $15,500",
+          "2001 Toyota Corolla Spacio 14K miles — $11,900",
+          "2000 Toyota Estima — $13,500; stock 0345-004; chassis ACR30-0053045; 77,692 km"
+        ],
+        "caveat": "Twelve distinct priced homepage cards were observed. Sale category reports 21 products, including Sold and Pending entries; counts are not additive or available-only. The dealer claims 200-plus in stock; that total was not independently verified."
+      },
+      "businessContact": {
+        "phone": "+1 423-716-2161",
+        "publicContactPerson": "David (dealer page)",
+        "facebook": "https://www.facebook.com/profile.php?id=61562283958031",
+        "sourceUrl": "https://www.factoryrighthanddrivecars.com/"
+      },
+      "fitScore": 70,
+      "fitReason": "Locally owned specialist with multiple individually priced imported right-hand-drive cars and a direct public telephone. A specific broken appointment-contact anchor and unfinished supplier headings provide a concrete cleanup opportunity. Preserve genuine specialist vehicle videos, title disclosures and working finance links; buying interest and budget are unknown.",
+      "confidence": "medium_primary_identity_stock_and_contact_evidence_no_live_browser_in_this_pass",
+      "verificationStatus": "primary_pages_and_contact_href_verified_rendered_and_availability_recheck_pending",
+      "nextAction": "Recheck available stock and rendered contact/supplier pages; complete private CRM/suppression screening before outreach. Do not publish the template mailbox as the dealer email.",
+      "evidenceUrls": [
+        "https://www.factoryrighthanddrivecars.com/",
+        "https://www.factoryrighthanddrivecars.com/category/sale",
+        "https://www.factoryrighthanddrivecars.com/product-page/2000-toyota-estima-28",
+        "https://www.factoryrighthanddrivecars.com/general-6"
+      ],
+      "contact": {
+        "phone": "+1 423-716-2161",
+        "publicContactPerson": "David (dealer page)",
+        "facebook": "https://www.facebook.com/profile.php?id=61562283958031",
+        "sourceUrl": "https://www.factoryrighthanddrivecars.com/"
+      },
+      "fit": {
+        "score": 70,
+        "reason": "Locally owned specialist with multiple individually priced imported right-hand-drive cars and a direct public telephone. A specific broken appointment-contact anchor and unfinished supplier headings provide a concrete cleanup opportunity. Preserve genuine specialist vehicle videos, title disclosures and working finance links; buying interest and budget are unknown.",
+        "budgetConfidence": "not_established",
+        "previousResearchScore": 79
+      },
+      "verification": {
+        "status": "primary_pages_and_contact_href_verified_rendered_and_availability_recheck_pending",
+        "confidence": "medium_primary_identity_stock_and_contact_evidence_no_live_browser_in_this_pass",
+        "notBeforeOutreach": [
+          "Recheck available stock and rendered contact/supplier pages; complete private CRM/suppression screening before outreach. Do not publish the template mailbox as the dealer email."
+        ],
+        "publicDeduplication": "No Tech Motors / Dalton Pike / factoryrighthanddrivecars match in checked legacy USA leads or deployment registry."
+      },
+      "sources": [
+        {
+          "url": "https://www.factoryrighthanddrivecars.com/",
+          "role": "primary_identity_stock_contact_and_href",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://www.factoryrighthanddrivecars.com/category/sale",
+          "role": "primary_catalogue_with_sold_caveat",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://www.factoryrighthanddrivecars.com/product-page/2000-toyota-estima-28",
+          "role": "primary_individual_stock",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://www.factoryrighthanddrivecars.com/general-6",
+          "role": "specific_content_defect",
+          "checkedAt": "2026-10-18"
+        }
+      ],
+      "priority": "reserve_content_polish",
+      "qualification": {
+        "tier": "reserve_content_polish",
+        "countsTowardPriority400": false,
+        "reason": "Unfinished supplier labels and default-mailto appointment paragraph; real phone and detailed specialist catalogue function.",
+        "reviewedAt": "2026-10-18"
+      }
+    },
+    {
+      "country": "US",
+      "website_status": "poor_site",
+      "confidence": "medium_primary_identity_stock_and_content_evidence_no_live_browser_in_this_pass",
+      "verificationStatus": "primary_pages_verified_rendered_and_availability_recheck_pending",
+      "nextAction": "Refresh rendered site, current stock and private CRM/suppression history before outreach. Do not treat a template defect as established buying intent.",
+      "id": "us-ga-albany-a1-auto-sales-800",
+      "name": "A1 Auto Sales 800 LLC",
+      "city": "Albany",
+      "region": "GA",
+      "address": "800 W Oglethorpe Blvd, Albany, GA 31701",
+      "website": {
+        "url": "https://www.a1autosales800.com/",
+        "inventoryUrl": "https://www.a1autosales800.com/team-4",
+        "defectSource": "https://www.a1autosales800.com/",
+        "observations": [
+          "The primary homepage and both linked inventory pages retain an Auto Express copyright identity and 2035 year.",
+          "Main inventory navigation uses separate team-layout pages with manually presented vehicles, while View All Deals returns to the homepage. This is a concrete content/navigation improvement opportunity, not proof that every vehicle is unavailable.",
+          "Read-only live HTML confirms the displayed david@a1autosales800.com link correctly targets that mailbox; no email-link defect is claimed."
+        ],
+        "checkedAt": "2026-10-18",
+        "browserVerification": "CUA returned no browser/app surfaces in this pass. Primary page extraction and bounded read-only live HTML were checked; browser visibility remains pending.",
+        "fullResponsiveJourneyAudit": "pending"
+      },
+      "inventory": {
+        "count": null,
+        "minimumIndividuallyObserved": 8,
+        "kind": "primary_dealer_priced_adverts",
+        "sourceUrl": "https://www.a1autosales800.com/",
+        "examples": [
+          "2016 Lexus RX 350 — $23,968; 210,004 miles",
+          "2019 Toyota Camry XLE — $25,590; 118,321 miles",
+          "2013 Dodge Challenger SXT — $8,500; 118,146 miles"
+        ],
+        "caveat": "Eight priced homepage vehicles. Other linked pages advertise different year/trim/price combinations; without VINs these are not merged or counted as a larger unique fleet. Availability/freshness must be confirmed.",
+        "checkedAt": "2026-10-18"
+      },
+      "businessContact": {
+        "phone": "+1 229-573-7282",
+        "email": "david@a1autosales800.com",
+        "sourceUrl": "https://www.a1autosales800.com/"
+      },
+      "fitScore": 69,
+      "fitReason": "Small independent dealer with eight advertised priced cars, a working direct email/phone and a clear unfinished identity/navigation opportunity. City 2024 business list matches premises/name; it is not a current licence determination. Preserve its factual offers and confirm stock before demonstrating a branded inventory-first alternative.",
+      "evidenceUrls": [
+        "https://www.a1autosales800.com/",
+        "https://www.a1autosales800.com/team-4",
+        "https://www.a1autosales800.com/team-4-1",
+        "https://www.albanyga.gov/files/assets/city/v/1/finance/documents/occupational-tax-certificate/2024-business-listings.pdf"
+      ],
+      "contact": {
+        "phone": "+1 229-573-7282",
+        "email": "david@a1autosales800.com",
+        "sourceUrl": "https://www.a1autosales800.com/"
+      },
+      "fit": {
+        "score": 69,
+        "reason": "Small independent dealer with eight advertised priced cars, a working direct email/phone and a clear unfinished identity/navigation opportunity. City 2024 business list matches premises/name; it is not a current licence determination. Preserve its factual offers and confirm stock before demonstrating a branded inventory-first alternative.",
+        "budgetConfidence": "not_established",
+        "previousResearchScore": 72
+      },
+      "verification": {
+        "status": "primary_pages_verified_rendered_and_availability_recheck_pending",
+        "confidence": "medium_primary_identity_stock_and_content_evidence_no_live_browser_in_this_pass",
+        "notBeforeOutreach": [
+          "Refresh rendered site, current stock and private CRM/suppression history before outreach. Do not treat a template defect as established buying intent."
+        ],
+        "publicDeduplication": "No name/domain match in checked legacy USA leads or deployment registry."
+      },
+      "sources": [
+        {
+          "url": "https://www.a1autosales800.com/",
+          "role": "specific_content_defect",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://www.a1autosales800.com/team-4",
+          "role": "public_business_identity_or_support",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://www.a1autosales800.com/team-4-1",
+          "role": "public_business_identity_or_support",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://www.albanyga.gov/files/assets/city/v/1/finance/documents/occupational-tax-certificate/2024-business-listings.pdf",
+          "role": "public_business_identity_or_support",
+          "checkedAt": "2026-10-18"
+        }
+      ],
+      "priority": "reserve_content_polish",
+      "qualification": {
+        "tier": "reserve_content_polish",
+        "countsTowardPriority400": false,
+        "reason": "Inherited footer/year and static inventory navigation; direct email works and stock content is available.",
+        "reviewedAt": "2026-10-18"
+      }
+    },
+    {
+      "country": "US",
+      "website_status": "poor_site",
+      "confidence": "medium_primary_identity_stock_and_content_evidence_no_live_browser_in_this_pass",
+      "verificationStatus": "primary_pages_verified_rendered_and_availability_recheck_pending",
+      "nextAction": "Refresh rendered site, current stock and private CRM/suppression history before outreach. Do not treat a template defect as established buying intent.",
+      "id": "us-co-denver-ganda-auto-sales",
+      "name": "Ganda Auto Sales",
+      "city": "Denver",
+      "region": "CO",
+      "address": "2107 South Jason St, Denver, CO 80223",
+      "website": {
+        "url": "https://www.gandaautos.com/",
+        "inventoryUrl": "https://www.gandaautos.com/",
+        "defectSource": "https://www.gandaautos.com/Inventory/Details/9889dc2d-6b72-496c-a084-ce75e3451189",
+        "observations": [
+          "The advertised 2019 Jeep Cherokee Limited description contains a language-name dump followed by lengthy Latin placeholder content instead of vehicle-specific seller notes.",
+          "Read-only live HTML returned HTTP 200 and contains the placeholder description both in structured vehicle data and a second HTML occurrence. Rendered placement must still be checked.",
+          "The remaining site has functional Carsforsale inventory, financing and contact flows. This is a narrow content cleanup opportunity, not a no-website or wholly broken platform claim."
+        ],
+        "checkedAt": "2026-10-18",
+        "browserVerification": "CUA returned no browser/app surfaces in this pass. Primary page extraction and bounded read-only live HTML were checked; browser visibility remains pending.",
+        "fullResponsiveJourneyAudit": "pending"
+      },
+      "inventory": {
+        "count": 13,
+        "minimumIndividuallyObserved": 4,
+        "kind": "primary_dealer_priced_catalogue",
+        "sourceUrl": "https://www.gandaautos.com/",
+        "examples": [
+          "2022 Subaru Impreza Sport — $12,500; 62,592 miles",
+          "2020 Chevrolet Malibu LT — $21,950; 81,540 miles",
+          "2019 Jeep Cherokee Limited — $29,950; 39,512 miles; VIN 1C4PJMDX6KD103896; stock 103896",
+          "2019 Chevrolet Malibu LT — $14,500; 100,867 miles"
+        ],
+        "caveat": "Homepage body-style totals advertise 13 units and four individual featured vehicles. Counts describe dealer advertisements; not independently inspected physical or available-only stock.",
+        "checkedAt": "2026-10-18"
+      },
+      "businessContact": {
+        "phone": "+1 720-513-7058",
+        "email": "gandaauto1@gmail.com",
+        "sourceUrl": "https://www.gandaautos.com/contact"
+      },
+      "fitScore": 70,
+      "fitReason": "Independent used-car dealer with real VIN/stock details, multiple priced vehicles and a direct public business email. A prominent advertised vehicle has unfinished template content that a factual branded proposal can address. Existing functional platform lowers full-replacement fit; no purchase budget or interest is established.",
+      "evidenceUrls": [
+        "https://www.gandaautos.com/",
+        "https://www.gandaautos.com/contact",
+        "https://www.gandaautos.com/Inventory/Details/9889dc2d-6b72-496c-a084-ce75e3451189",
+        "https://members.ciada.org/list/searchalpha/g"
+      ],
+      "contact": {
+        "phone": "+1 720-513-7058",
+        "email": "gandaauto1@gmail.com",
+        "sourceUrl": "https://www.gandaautos.com/contact"
+      },
+      "fit": {
+        "score": 70,
+        "reason": "Independent used-car dealer with real VIN/stock details, multiple priced vehicles and a direct public business email. A prominent advertised vehicle has unfinished template content that a factual branded proposal can address. Existing functional platform lowers full-replacement fit; no purchase budget or interest is established.",
+        "budgetConfidence": "not_established",
+        "previousResearchScore": 71
+      },
+      "verification": {
+        "status": "primary_pages_verified_rendered_and_availability_recheck_pending",
+        "confidence": "medium_primary_identity_stock_and_content_evidence_no_live_browser_in_this_pass",
+        "notBeforeOutreach": [
+          "Refresh rendered site, current stock and private CRM/suppression history before outreach. Do not treat a template defect as established buying intent."
+        ],
+        "publicDeduplication": "No name/domain match in checked legacy USA leads or deployment registry."
+      },
+      "sources": [
+        {
+          "url": "https://www.gandaautos.com/",
+          "role": "primary_advertised_stock",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://www.gandaautos.com/contact",
+          "role": "public_business_identity_or_support",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://www.gandaautos.com/Inventory/Details/9889dc2d-6b72-496c-a084-ce75e3451189",
+          "role": "specific_content_defect",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://members.ciada.org/list/searchalpha/g",
+          "role": "public_business_identity_or_support",
+          "checkedAt": "2026-10-18"
+        }
+      ],
+      "priority": "reserve_content_polish",
+      "qualification": {
+        "tier": "reserve_content_polish",
+        "countsTowardPriority400": false,
+        "reason": "One vehicle description retains placeholder text; otherwise substantial functional provider catalogue and finance/contact flows.",
+        "reviewedAt": "2026-10-18"
+      }
+    },
+    {
+      "country": "US",
+      "website_status": "poor_site",
+      "id": "us-fl-kissimmee-marios-auto-sales",
+      "name": "Mario's Auto Sales Inc",
+      "aliases": [
+        "Marios Auto Sales",
+        "mariosautosalesfl.com"
+      ],
+      "city": "Kissimmee",
+      "region": "FL",
+      "address": "1664 Vintage St, Kissimmee, FL 34746",
+      "website": {
+        "url": "https://mariosautosales.com/",
+        "inventoryUrl": "https://mariosautosales.com/inventory/",
+        "defectSource": "https://mariosautosales.com/about-us/",
+        "observations": [
+          "Current navigable About page retains Loeber Motors, Mikey Diokles/President of Motors, Latin testimonials and theme staff mailboxes. Live primary HTML returns 200 and confirms ordinary h3/h5 content and those placeholder mailto anchors.",
+          "Homepage claims 350 offers and 10 new offers daily while current catalogue reports 10 matches. These conflicting displayed claims need correction, not an assumption of actual dealer turnover.",
+          "The older matching mariosautosalesfl.com domain shows a different premises and empty showroom extract. The current .com domain has real stock and matching Florida corporation address; it is the qualified site."
+        ],
+        "checkedAt": "2026-10-18",
+        "browserVerification": "No browser/app surfaces available through CUA in this pass. Dated primary page text plus bounded live HTML verify source content; live rendered visibility remains pending.",
+        "fullResponsiveJourneyAudit": "pending"
+      },
+      "inventory": {
+        "count": 10,
+        "minimumIndividuallyObserved": 8,
+        "kind": "primary_dealer_priced_catalogue",
+        "sourceUrl": "https://mariosautosales.com/inventory/",
+        "examples": [
+          "2017 BMW 320i — $9,900; 120,123 miles",
+          "2004 Ford F-150 — $6,900; 158,000 miles; VIN 1FTPW14514FA34475",
+          "2012 Toyota Camry — $6,900; stock 055682; VIN 4T1BF1FK8CU055682",
+          "2016 Kia Soul+ — $5,900; 174,123 miles"
+        ],
+        "caveat": "Ten current catalogue matches, eight individually priced cards inspected. Other indexed detail records are explicitly Sold and are excluded from available examples. Actual availability must be confirmed.",
+        "checkedAt": "2026-10-18"
+      },
+      "businessContact": {
+        "phone": "+1 407-574-3774",
+        "email": "sales@mariosautosales.com",
+        "sourceUrl": "https://mariosautosales.com/contact-us/"
+      },
+      "fitScore": 72,
+      "fitReason": "Independent dealer with priced VIN/stock records and a current public direct email/phone. Its own navigable About page contains a clear inherited identity and default contacts, providing a strong factual brand/content cleanup opportunity. Florida entity primary record matches business and current premises. Preserve working inventory/finance functionality.",
+      "evidenceUrls": [
+        "https://mariosautosales.com/",
+        "https://mariosautosales.com/inventory/",
+        "https://mariosautosales.com/about-us/",
+        "https://mariosautosales.com/contact-us/",
+        "https://mariosautosales.com/listings/2012-toyota-camry-le-gold/",
+        "https://mariosautosales.com/listings/4426/",
+        "https://search.sunbiz.org/Inquiry/corporationsearch/SearchResultDetail?aggregateId=domp-p09000085288-23ad22ca-d383-4f32-82e9-e752ceb06133&directionType=Initial&inquirytype=EntityName&listNameOrder=MARIOSAUTOBOATTRANSPORTING+L250001707680&searchNameOrder=MARIOSAUTOSALES+P090000852880&searchTerm=MARIO%27S+AUTO+"
+      ],
+      "confidence": "medium_primary_identity_stock_and_content_evidence_no_live_browser_in_this_pass",
+      "verificationStatus": "primary_pages_and_live_html_verified_rendered_and_availability_recheck_pending",
+      "nextAction": "Refresh rendered defect and current available stock; check private CRM/suppression history before outreach. No buying interest or budget has been established.",
+      "contact": {
+        "phone": "+1 407-574-3774",
+        "email": "sales@mariosautosales.com",
+        "sourceUrl": "https://mariosautosales.com/contact-us/"
+      },
+      "fit": {
+        "score": 72,
+        "reason": "Independent dealer with priced VIN/stock records and a current public direct email/phone. Its own navigable About page contains a clear inherited identity and default contacts, providing a strong factual brand/content cleanup opportunity. Florida entity primary record matches business and current premises. Preserve working inventory/finance functionality.",
+        "budgetConfidence": "not_established",
+        "previousResearchScore": 82
+      },
+      "verification": {
+        "status": "primary_pages_and_live_html_verified_rendered_and_availability_recheck_pending",
+        "confidence": "medium_primary_identity_stock_and_content_evidence_no_live_browser_in_this_pass",
+        "notBeforeOutreach": [
+          "Refresh rendered defect and current available stock; check private CRM/suppression history before outreach. No buying interest or budget has been established."
+        ],
+        "publicDeduplication": "No name/domain match in checked legacy USA leads or deployment registry."
+      },
+      "sources": [
+        {
+          "url": "https://mariosautosales.com/",
+          "role": "public_business_identity_or_support",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://mariosautosales.com/inventory/",
+          "role": "primary_advertised_stock",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://mariosautosales.com/about-us/",
+          "role": "specific_content_defect",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://mariosautosales.com/contact-us/",
+          "role": "public_business_identity_or_support",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://mariosautosales.com/listings/2012-toyota-camry-le-gold/",
+          "role": "public_business_identity_or_support",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://mariosautosales.com/listings/4426/",
+          "role": "public_business_identity_or_support",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://search.sunbiz.org/Inquiry/corporationsearch/SearchResultDetail?aggregateId=domp-p09000085288-23ad22ca-d383-4f32-82e9-e752ceb06133&directionType=Initial&inquirytype=EntityName&listNameOrder=MARIOSAUTOBOATTRANSPORTING+L250001707680&searchNameOrder=MARIOSAUTOSALES+P090000852880&searchTerm=MARIO%27S+AUTO+",
+          "role": "public_business_identity_or_support",
+          "checkedAt": "2026-10-18"
+        }
+      ],
+      "priority": "reserve_content_polish",
+      "qualification": {
+        "tier": "reserve_content_polish",
+        "countsTowardPriority400": false,
+        "reason": "Inherited About/staff content and exaggerated default stock claims; real current catalogue and business contacts function.",
+        "reviewedAt": "2026-10-18"
+      }
+    },
+    {
+      "country": "US",
+      "website_status": "poor_site",
+      "id": "us-tx-el-paso-first-choice-auto-sales",
+      "name": "First Choice Auto Sales",
+      "aliases": [
+        "1Choice Autos",
+        "1choiceautos.com"
+      ],
+      "city": "El Paso",
+      "region": "TX",
+      "address": "9641 Socorro Rd, El Paso, TX 79927",
+      "website": {
+        "url": "https://www.1choiceautos.com/",
+        "inventoryUrl": "https://www.1choiceautos.com/search/",
+        "defectSource": "https://www.1choiceautos.com/",
+        "observations": [
+          "Homepage retains an Add Your Heading Text Here heading immediately before business contact details. Bounded live HTML returns 200 and confirms a normal Elementor h2 heading.",
+          "A current Acura RDX listing shows Year 890 while its seller description says 2014. The same Acura VIN is also attached to an explicitly sold Subaru Outback record. These are demonstrated catalogue field errors, not findings about vehicle title/history.",
+          "Contact email anchor correctly targets the displayed business mailbox. Catalogue reports 58 results including Sold entries, which must not be presented as all currently available."
+        ],
+        "checkedAt": "2026-10-18",
+        "browserVerification": "No browser/app surfaces available through CUA in this pass. Dated primary page text plus bounded live HTML verify source content; live rendered visibility remains pending.",
+        "fullResponsiveJourneyAudit": "pending"
+      },
+      "inventory": {
+        "count": null,
+        "minimumIndividuallyObserved": 10,
+        "kind": "primary_dealer_priced_catalogue",
+        "sourceUrl": "https://www.1choiceautos.com/",
+        "examples": [
+          "2009 Acura TSX — $5,500; 186,485 miles",
+          "2018 Dodge Charger RT — $18,000; 80,000 miles",
+          "2015 Ford Fusion SE — $3,900; 150,000 miles",
+          "2013 Nissan Sentra S — $4,650; 97,225 miles"
+        ],
+        "advertisedCatalogueCountIncludingSold": 58,
+        "caveat": "Ten distinct priced homepage entries were inspected after removing repeated sections. Catalogue total 58 includes Sold entries. The RDX year/VIN discrepancies require correction and dealer confirmation; do not copy those erroneous fields into a proposal.",
+        "checkedAt": "2026-10-18"
+      },
+      "businessContact": {
+        "phone": "+1 915-330-8420",
+        "alternatePhone": "+1 915-235-7437",
+        "email": "1choiceautos@gmail.com",
+        "sourceUrl": "https://www.1choiceautos.com/"
+      },
+      "fitScore": 80,
+      "fitReason": "Family-owned dealer with multiple priced advertisements, working direct email/phone and specific heading/vehicle-data errors that a properly sourced proposal can correct. Exact premises are published in the dealer privacy page and individual listing. Confirm available stock and field accuracy; purchase intent remains unknown.",
+      "evidenceUrls": [
+        "https://www.1choiceautos.com/",
+        "https://www.1choiceautos.com/search/",
+        "https://www.1choiceautos.com/privacy/",
+        "https://www.1choiceautos.com/listing/acura-rdx/",
+        "https://www.1choiceautos.com/listing/subaru-outback/",
+        "https://www.1choiceautos.com/listing/jeep-renegade-latitude/"
+      ],
+      "confidence": "medium_primary_identity_stock_and_content_evidence_no_live_browser_in_this_pass",
+      "verificationStatus": "primary_pages_and_live_html_verified_rendered_and_availability_recheck_pending",
+      "nextAction": "Refresh rendered defect and current available stock; check private CRM/suppression history before outreach. No buying interest or budget has been established.",
+      "contact": {
+        "phone": "+1 915-330-8420",
+        "alternatePhone": "+1 915-235-7437",
+        "email": "1choiceautos@gmail.com",
+        "sourceUrl": "https://www.1choiceautos.com/"
+      },
+      "fit": {
+        "score": 80,
+        "reason": "Family-owned dealer with multiple priced advertisements, working direct email/phone and specific heading/vehicle-data errors that a properly sourced proposal can correct. Exact premises are published in the dealer privacy page and individual listing. Confirm available stock and field accuracy; purchase intent remains unknown.",
+        "budgetConfidence": "not_established"
+      },
+      "verification": {
+        "status": "primary_pages_and_live_html_verified_rendered_and_availability_recheck_pending",
+        "confidence": "medium_primary_identity_stock_and_content_evidence_no_live_browser_in_this_pass",
+        "notBeforeOutreach": [
+          "Refresh rendered defect and current available stock; check private CRM/suppression history before outreach. No buying interest or budget has been established."
+        ],
+        "publicDeduplication": "No name/domain match in checked legacy USA leads or deployment registry."
+      },
+      "sources": [
+        {
+          "url": "https://www.1choiceautos.com/",
+          "role": "specific_content_defect",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://www.1choiceautos.com/search/",
+          "role": "public_business_identity_or_support",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://www.1choiceautos.com/privacy/",
+          "role": "public_business_identity_or_support",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://www.1choiceautos.com/listing/acura-rdx/",
+          "role": "public_business_identity_or_support",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://www.1choiceautos.com/listing/subaru-outback/",
+          "role": "public_business_identity_or_support",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://www.1choiceautos.com/listing/jeep-renegade-latitude/",
+          "role": "public_business_identity_or_support",
+          "checkedAt": "2026-10-18"
+        }
+      ],
+      "priority": "priority_research_candidate",
+      "qualification": {
+        "tier": "priority_research_candidate",
+        "countsTowardPriority400": true,
+        "reason": "Primary evidence establishes a contact-routing, vehicle-data, owned-site identity or stock-access gap beyond an isolated setup/policy paragraph.",
+        "reviewedAt": "2026-10-18"
+      }
+    },
+    {
+      "id": "us-ky-harlan-saylors-auto-sales",
+      "name": "Saylor's Auto Sales LLC",
+      "country": "US",
+      "city": "Harlan",
+      "region": "KY",
+      "address": "119 North Cumberland Avenue, Harlan, KY 40831",
+      "website_status": "no_official_site_found_after_check",
+      "website": {
+        "url": null,
+        "primaryPublicPresence": "https://www.facebook.com/saylorsautosales/",
+        "checkedAt": "2026-10-18",
+        "observations": [
+          "Bounded exact-name plus Harlan/location searches returned the matching Facebook profile and directories; no independent dealer-owned domain was identified.",
+          "The original rendered Facebook profile matches the public phone and street address; no owned-domain field was seen in the checked contacts.",
+          "This is an uncertain search result, not proof that no website exists."
+        ],
+        "searchChecks": [
+          "Saylor's Auto Sales Harlan website",
+          "Saylor Auto Sales Harlan stock"
+        ],
+        "browserVerification": "Parent researcher opened the original public Facebook profile and vehicle permalinks in the live browser; identity/contact and recent post dates/content were read from rendered page state. No contact action was taken.",
+        "fullResponsiveJourneyAudit": "not_applicable_no_owned_domain_identified"
+      },
+      "inventory": {
+        "count": null,
+        "minimumIndividuallyObserved": 4,
+        "kind": "primary_recent_social_sale_posts",
+        "sourceUrl": "https://www.facebook.com/saylorsautosales/",
+        "checkedAt": "2026-10-18",
+        "examples": [
+          {
+            "vehicle": "2011 Chevrolet Silverado LT 4x4",
+            "advertisedMiles": 128000,
+            "publishedAt": "2026-10-16 19:38",
+            "price": null,
+            "sourceUrl": "https://www.facebook.com/saylorsautosales/posts/pfbid02HewjtVc4Uz4s8jFDsgrek8tXD9zMPvxA8PVX41fgZKrmGJhfvYuRx3hPvS2CCTGtl"
+          },
+          {
+            "vehicle": "Chrysler Town & Country Sto-n-Go",
+            "publishedAt": "2026-10-10 17:31",
+            "price": null,
+            "sourceUrl": "https://www.facebook.com/saylorsautosales/posts/pfbid02sNEzBpjtAxRQstKZbLY4fStSynFtnfjVBdTTLiJWMV8pLkCnDf1udPBUQ7nXGjRPl"
+          },
+          {
+            "vehicle": "1978 Anniversary Corvette",
+            "publishedAt": "2026-10-10 03:41",
+            "price": null,
+            "sourceUrl": "https://www.facebook.com/saylorsautosales/"
+          },
+          {
+            "vehicle": "2012 Nissan Juke",
+            "advertisedMiles": 130000,
+            "publishedAt": "2026-10-07 20:40",
+            "price": null,
+            "sourceUrl": "https://www.facebook.com/saylorsautosales/posts/pfbid0Wu2A4KCGyhzBRRCbkc18a94fDXMvFwR9uCLrDvxC2yXUttCWoqeLm8PTKJSgaTvvl"
+          }
+        ],
+        "caveat": "Four distinct recent original posts establish ongoing advertised vehicle sales, not a currently available stock total. No published prices were verified. Post times are as displayed in the browser; timezone was not established. Older sold posts were excluded from this minimum."
+      },
+      "businessContact": {
+        "phone": "+1 606-273-9885",
+        "facebook": "https://www.facebook.com/saylorsautosales/",
+        "sourceUrl": "https://www.facebook.com/saylorsautosales/"
+      },
+      "contact": {
+        "phone": "+1 606-273-9885",
+        "facebook": "https://www.facebook.com/saylorsautosales/",
+        "sourceUrl": "https://www.facebook.com/saylorsautosales/"
+      },
+      "fitScore": 78,
+      "fitReason": "Independent dealer with four distinct recently advertised vehicles and a public business phone/address. The checked public presence directs customers to Facebook; a branded stock catalogue and per-vehicle contact route offer a concrete proposal opportunity. No owned domain found after bounded exact-name/location searches; absence is not proven and buying budget is unknown.",
+      "confidence": "high_for_primary_identity_contact_and_recent_posts_medium_for_no_owned_site_search_result",
+      "verificationStatus": "primary_profile_and_recent_posts_rendered_no_site_search_bounded_availability_and_crm_refresh_pending",
+      "nextAction": "Recheck official-site/alias presence, current vehicle availability/prices, private CRM/suppression history and contact eligibility before any outreach; do not reproduce unsupported finance, inspection, review or approval claims.",
+      "evidenceUrls": [
+        "https://www.facebook.com/saylorsautosales/",
+        "https://www.facebook.com/saylorsautosales/posts/pfbid02HewjtVc4Uz4s8jFDsgrek8tXD9zMPvxA8PVX41fgZKrmGJhfvYuRx3hPvS2CCTGtl",
+        "https://www.facebook.com/saylorsautosales/posts/pfbid02sNEzBpjtAxRQstKZbLY4fStSynFtnfjVBdTTLiJWMV8pLkCnDf1udPBUQ7nXGjRPl",
+        "https://www.facebook.com/saylorsautosales/posts/pfbid0Wu2A4KCGyhzBRRCbkc18a94fDXMvFwR9uCLrDvxC2yXUttCWoqeLm8PTKJSgaTvvl",
+        "https://www.autoyas.com/US/Harlan/1773065826347274/Saylor%27s-Auto-Sales-LLC",
+        "https://www.enigma.com/directory/ky/harlan/"
+      ],
+      "fit": {
+        "score": 78,
+        "reason": "Independent dealer with four distinct recently advertised vehicles and a public business phone/address. The checked public presence directs customers to Facebook; a branded stock catalogue and per-vehicle contact route offer a concrete proposal opportunity. No owned domain found after bounded exact-name/location searches; absence is not proven and buying budget is unknown.",
+        "budgetConfidence": "not_established"
+      },
+      "verification": {
+        "status": "primary_profile_and_recent_posts_rendered_no_site_search_bounded_availability_and_crm_refresh_pending",
+        "confidence": "high_for_primary_identity_contact_and_recent_posts_medium_for_no_owned_site_search_result",
+        "notBeforeOutreach": [
+          "Recheck official-site/alias presence, current vehicle availability/prices, private CRM/suppression history and contact eligibility before any outreach; do not reproduce unsupported finance, inspection, review or approval claims."
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.facebook.com/saylorsautosales/",
+          "role": "primary_business_profile_rendered_by_parent_researcher",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://www.facebook.com/saylorsautosales/posts/pfbid02HewjtVc4Uz4s8jFDsgrek8tXD9zMPvxA8PVX41fgZKrmGJhfvYuRx3hPvS2CCTGtl",
+          "role": "primary_recent_vehicle_post_rendered",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://www.facebook.com/saylorsautosales/posts/pfbid02sNEzBpjtAxRQstKZbLY4fStSynFtnfjVBdTTLiJWMV8pLkCnDf1udPBUQ7nXGjRPl",
+          "role": "primary_recent_vehicle_post_rendered",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://www.facebook.com/saylorsautosales/posts/pfbid0Wu2A4KCGyhzBRRCbkc18a94fDXMvFwR9uCLrDvxC2yXUttCWoqeLm8PTKJSgaTvvl",
+          "role": "primary_recent_vehicle_post_rendered",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://www.autoyas.com/US/Harlan/1773065826347274/Saylor%27s-Auto-Sales-LLC",
+          "role": "secondary_discovery_and_post_mirror",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://www.enigma.com/directory/ky/harlan/",
+          "role": "secondary_identity_and_facebook_presence_corroboration",
+          "checkedAt": "2026-10-18"
+        }
+      ],
+      "priority": "priority_research_candidate",
+      "qualification": {
+        "tier": "priority_research_candidate",
+        "countsTowardPriority400": true,
+        "reason": "Multiple recent original vehicle sale posts, matched business contacts and bounded search finding only a Facebook trading presence support a catalogue-ownership opportunity beyond cosmetic polish.",
+        "reviewedAt": "2026-10-18"
+      }
+    },
+    {
+      "id": "us-fl-winter-haven-titanes-autos-solutions",
+      "name": "Titanes Auto Sales & Rentals / Titanes Autos Solutions LLC",
+      "country": "US",
+      "city": "Winter Haven",
+      "region": "FL",
+      "address": "3170 Lake Alfred Rd, Winter Haven, FL 33881",
+      "website_status": "poor_site",
+      "website": {
+        "url": "https://www.titanesautosolutions.com/",
+        "inventoryUrl": "https://www.titanesautosolutions.com/category/all-products",
+        "checkedAt": "2026-10-18",
+        "observations": [
+          "Live HTTP 200 homepage and catalogue HTML show titanesautosolutions@hotmail.com as contact-link text but href mailto:info@mysite.com. This is a specific incorrect contact route, not a claim that the phone or whole site is broken.",
+          "The site is branded for car sales and rentals; primary catalogue has individually priced retail vehicles."
+        ],
+        "defectSource": "https://www.titanesautosolutions.com/",
+        "browserVerification": "Primary extracted page and bounded live HTML reads verified link label/destination and product cards. No live rendered browser surface was available to this researcher; rendering remains pending.",
+        "fullResponsiveJourneyAudit": "pending"
+      },
+      "inventory": {
+        "count": null,
+        "minimumIndividuallyObserved": 23,
+        "kind": "primary_live_priced_catalogue_not_out_of_stock",
+        "sourceUrl": "https://www.titanesautosolutions.com/category/all-products",
+        "checkedAt": "2026-10-18",
+        "examples": [
+          {
+            "vehicle": "Mitsubishi Outlander Sport ES",
+            "priceUSD": 4500,
+            "sourceUrl": "https://www.titanesautosolutions.com/product-page/mitsubishi-outlander-sport-es"
+          },
+          {
+            "vehicle": "2020 Buick Encore",
+            "priceUSD": 6500,
+            "sourceUrl": "https://www.titanesautosolutions.com/product-page/buick-encore-2020"
+          },
+          {
+            "vehicle": "2013 Infiniti FX37",
+            "priceUSD": 3900,
+            "sourceUrl": "https://www.titanesautosolutions.com/product-page/infiniti-fx37-2013"
+          }
+        ],
+        "caveat": "Live first catalogue page had 24 unique product-card titles: 23 priced and one 2009 Ford Edge explicitly Out of stock. Three new top-row detail pages returned HTTP 200, matching prices and InStock schema. Publication dates/VINs/mileages were not established on these three; current physical availability is not independently verified. Older search extraction showed a different 24-card order, so only the live read is used for this minimum."
+      },
+      "businessContact": {
+        "phone": "+1 347-684-2123",
+        "email": "titanesautosolutions@hotmail.com",
+        "sourceUrl": "https://www.titanesautosolutions.com/"
+      },
+      "contact": {
+        "phone": "+1 347-684-2123",
+        "email": "titanesautosolutions@hotmail.com",
+        "sourceUrl": "https://www.titanesautosolutions.com/"
+      },
+      "fitScore": 77,
+      "fitReason": "Independent Winter Haven sales/rental business with multiple priced retail cars and a direct contact-routing defect on its own current domain. The homepage and catalogue display the business Hotmail address but link it to the default Wix mailbox; a factual branded catalogue/contact proposal has a concrete value case. Sales/rental scope and budget still need confirmation.",
+      "confidence": "high_for_live_primary_contact_routing_defect_and_advertised_products_medium_for_current_availability",
+      "verificationStatus": "live_primary_html_link_and_multiple_priced_products_verified_rendering_and_crm_refresh_pending",
+      "nextAction": "Recheck rendered contact link, available sale stock/prices, and private CRM/suppression history before any outreach. Use the displayed business email only after eligibility/current ownership confirmation; do not copy unsupported condition/title or finance claims.",
+      "evidenceUrls": [
+        "https://www.titanesautosolutions.com/",
+        "https://www.titanesautosolutions.com/category/all-products",
+        "https://www.titanesautosolutions.com/product-page/mitsubishi-outlander-sport-es",
+        "https://www.titanesautosolutions.com/product-page/buick-encore-2020",
+        "https://www.titanesautosolutions.com/product-page/infiniti-fx37-2013",
+        "https://search.sunbiz.org/Inquiry/CorporationSearch/GetDocument?aggregateId=flal-l20000163423-1c1c00d5-067e-4b50-be7f-ec0a44f8c982&formatType=PDF&transactionId=l20000163423-2c6126d1-8502-44b7-8019-3fc6f67140fc"
+      ],
+      "fit": {
+        "score": 77,
+        "reason": "Independent Winter Haven sales/rental business with multiple priced retail cars and a direct contact-routing defect on its own current domain. The homepage and catalogue display the business Hotmail address but link it to the default Wix mailbox; a factual branded catalogue/contact proposal has a concrete value case. Sales/rental scope and budget still need confirmation.",
+        "budgetConfidence": "not_established"
+      },
+      "verification": {
+        "status": "live_primary_html_link_and_multiple_priced_products_verified_rendering_and_crm_refresh_pending",
+        "confidence": "high_for_live_primary_contact_routing_defect_and_advertised_products_medium_for_current_availability",
+        "notBeforeOutreach": [
+          "Recheck rendered contact link, available sale stock/prices, and private CRM/suppression history before any outreach. Use the displayed business email only after eligibility/current ownership confirmation; do not copy unsupported condition/title or finance claims."
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.titanesautosolutions.com/",
+          "role": "primary_contact_and_live_html_link_destination",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://www.titanesautosolutions.com/category/all-products",
+          "role": "primary_live_catalogue_and_product_cards",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://www.titanesautosolutions.com/product-page/mitsubishi-outlander-sport-es",
+          "role": "primary_live_product_html_and_schema",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://www.titanesautosolutions.com/product-page/buick-encore-2020",
+          "role": "primary_live_product_html_and_schema",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://www.titanesautosolutions.com/product-page/infiniti-fx37-2013",
+          "role": "primary_live_product_html_and_schema",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://search.sunbiz.org/Inquiry/CorporationSearch/GetDocument?aggregateId=flal-l20000163423-1c1c00d5-067e-4b50-be7f-ec0a44f8c982&formatType=PDF&transactionId=l20000163423-2c6126d1-8502-44b7-8019-3fc6f67140fc",
+          "role": "primary_historical_2024_business_premises_corroboration",
+          "checkedAt": "2026-10-18"
+        }
+      ],
+      "priority": "priority_research_candidate",
+      "qualification": {
+        "tier": "priority_research_candidate",
+        "countsTowardPriority400": true,
+        "reason": "Current primary domain has multiple individually priced cars and an incorrect business-email destination beyond isolated secondary-page polish.",
+        "reviewedAt": "2026-10-18"
+      }
+    },
+    {
+      "id": "us-ms-forest-gary-bell-auto-sales",
+      "name": "Gary Bell LLC Auto Sales",
+      "country": "US",
+      "city": "Forest",
+      "region": "MS",
+      "address": "380 Highway 21, Forest, MS 39074",
+      "website_status": "no_official_site_found_after_check",
+      "website": {
+        "url": null,
+        "primaryPublicPresence": "https://www.facebook.com/garybellllc/",
+        "checkedAt": "2026-10-18",
+        "observations": [
+          "Bounded exact business-name and Forest/location searches returned the matching original Facebook profile and directories; no independent owned domain was identified.",
+          "The rendered original profile contacts show matching phone/premises and a direct business email link; no owned-domain field was seen.",
+          "This is a bounded absence result, not proof that a website does not exist."
+        ],
+        "searchChecks": [
+          "Gary Bell LLC Auto Sales Forest MS website",
+          "Gary Bell Auto Sales Forest inventory"
+        ],
+        "browserVerification": "Parent researcher opened original public Facebook profile and feed in the live browser. Identity/contact and six distinct recent vehicle advertisements were read from original rendered page state; no message or call was sent.",
+        "fullResponsiveJourneyAudit": "not_applicable_no_owned_domain_identified"
+      },
+      "inventory": {
+        "count": null,
+        "minimumIndividuallyObserved": 6,
+        "kind": "primary_recent_social_sale_posts",
+        "sourceUrl": "https://www.facebook.com/garybellllc/",
+        "checkedAt": "2026-10-18",
+        "examples": [
+          {
+            "vehicle": "2022 Ford Escape",
+            "advertisedMiles": 169849,
+            "publishedRelative": "2 days ago",
+            "price": null
+          },
+          {
+            "vehicle": "2017 Nissan Rogue",
+            "advertisedMiles": 165907,
+            "publishedRelative": "2 days ago",
+            "price": null
+          },
+          {
+            "vehicle": "2012 Ford Escape",
+            "advertisedMiles": 125562,
+            "publishedRelative": "2 days ago",
+            "price": null
+          },
+          {
+            "vehicle": "2012 Ram 2500 4x4",
+            "advertisedMiles": 156425,
+            "publishedRelative": "3 days ago",
+            "price": null
+          },
+          {
+            "vehicle": "2019 Dodge Durango SXT",
+            "advertisedMiles": 147580,
+            "publishedRelative": "4 days ago",
+            "price": null,
+            "sourceUrl": "https://www.facebook.com/garybellllc/posts/pfbid02LoDVnkFuvzKHJQntgtdu6XZ5zykLadGgeTa7LE2ybguXJc8bDjHd1SkYwG11xRWUl"
+          },
+          {
+            "vehicle": "2011 Chevrolet Silverado 1500 4x4",
+            "advertisedMiles": 241479,
+            "publishedAt": "2026-10-02 21:52",
+            "price": null
+          }
+        ],
+        "caveat": "Six distinct original advertisements establish recent trading activity, not a currently available inventory total. Relative times are preserved as shown on 18 October; precise timezone/date is not inferred. No public prices were verified. Secondary mirror older records are not added to this minimum."
+      },
+      "businessContact": {
+        "phone": "+1 601-469-3628",
+        "otherAdvertisedPhone": "+1 601-507-8502",
+        "email": "garybellllc63@gmail.com",
+        "facebook": "https://www.facebook.com/garybellllc/",
+        "sourceUrl": "https://www.facebook.com/garybellllc/"
+      },
+      "contact": {
+        "phone": "+1 601-469-3628",
+        "otherAdvertisedPhone": "+1 601-507-8502",
+        "email": "garybellllc63@gmail.com",
+        "facebook": "https://www.facebook.com/garybellllc/",
+        "sourceUrl": "https://www.facebook.com/garybellllc/"
+      },
+      "fitScore": 76,
+      "fitReason": "Independent Forest dealer with six distinct recent original sale posts, matching premises and a public business email/telephone. Bounded searches found only Facebook as its current trading web presence, creating a concrete owned stock-catalogue opportunity. High-mileage budget inventory makes budget confidence moderate/unknown; no buying intent is established.",
+      "confidence": "high_for_primary_identity_contact_and_recent_ads_medium_for_no_owned_site_search_result",
+      "verificationStatus": "primary_profile_contacts_and_six_recent_ads_rendered_no_site_search_bounded_crm_and_availability_refresh_pending",
+      "nextAction": "Recheck owned-domain/alias presence, current sale stock and prices, public contact ownership and private CRM/suppression history before outreach. Do not copy unverified condition, warranty, title or financing claims.",
+      "evidenceUrls": [
+        "https://www.facebook.com/garybellllc/",
+        "https://www.facebook.com/garybellllc/posts/pfbid02LoDVnkFuvzKHJQntgtdu6XZ5zykLadGgeTa7LE2ybguXJc8bDjHd1SkYwG11xRWUl",
+        "https://www.autoyas.com/US/Forest/968049259915973/Gary-Bell%2CLLC-Auto-Sales",
+        "https://reviews.birdeye.com/gary-bell-llc-166695832851680"
+      ],
+      "fit": {
+        "score": 76,
+        "reason": "Independent Forest dealer with six distinct recent original sale posts, matching premises and a public business email/telephone. Bounded searches found only Facebook as its current trading web presence, creating a concrete owned stock-catalogue opportunity. High-mileage budget inventory makes budget confidence moderate/unknown; no buying intent is established.",
+        "budgetConfidence": "not_established"
+      },
+      "verification": {
+        "status": "primary_profile_contacts_and_six_recent_ads_rendered_no_site_search_bounded_crm_and_availability_refresh_pending",
+        "confidence": "high_for_primary_identity_contact_and_recent_ads_medium_for_no_owned_site_search_result",
+        "notBeforeOutreach": [
+          "Recheck owned-domain/alias presence, current sale stock and prices, public contact ownership and private CRM/suppression history before outreach. Do not copy unverified condition, warranty, title or financing claims."
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.facebook.com/garybellllc/",
+          "role": "primary_profile_contacts_and_recent_stock_rendered_by_parent_researcher",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://www.facebook.com/garybellllc/posts/pfbid02LoDVnkFuvzKHJQntgtdu6XZ5zykLadGgeTa7LE2ybguXJc8bDjHd1SkYwG11xRWUl",
+          "role": "primary_durango_sale_post_rendered",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://www.autoyas.com/US/Forest/968049259915973/Gary-Bell%2CLLC-Auto-Sales",
+          "role": "secondary_discovery_and_historical_post_mirror",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://reviews.birdeye.com/gary-bell-llc-166695832851680",
+          "role": "secondary_identity_premises_phone_corroboration",
+          "checkedAt": "2026-10-18"
+        }
+      ],
+      "priority": "priority_research_candidate",
+      "qualification": {
+        "tier": "priority_research_candidate",
+        "countsTowardPriority400": true,
+        "reason": "Six recent original retail vehicle advertisements, public direct contact and bounded search showing only social trading presence support a catalogue ownership opportunity.",
+        "reviewedAt": "2026-10-18"
+      }
+    },
+    {
+      "id": "us-hi-maui-islandwide-auto-sales",
+      "name": "Islandwide Auto Sales LLC",
+      "country": "US",
+      "city": "Maui (exact sales premises not established)",
+      "region": "HI",
+      "address": null,
+      "businessFocus": "independent_preowned_commercial_trucks_and_upfitted_cab_chassis",
+      "website_status": "poor_site",
+      "website": {
+        "url": "https://www.islandwideautosales.com/",
+        "inventoryUrl": "https://www.islandwideautosales.com/inventory",
+        "checkedAt": "2026-10-18",
+        "observations": [
+          "Fresh HTTP 200 primary inventory HTML shows sales@islandwideautosales.com as email-link text but href mailto:info@mysite.com. The same default destination appears in the indexed home/About contact material.",
+          "The normal inventory catalogue has detailed truck listings and many explicit SOLD labels. Phone contact is correctly displayed; the demonstrated issue is email routing, not a full-site outage."
+        ],
+        "defectSource": "https://www.islandwideautosales.com/inventory",
+        "browserVerification": "Primary extracted pages and bounded live HTML reads verified contact anchor and product details; a live rendered browser surface was unavailable to this researcher. Rendered check remains pending.",
+        "fullResponsiveJourneyAudit": "pending"
+      },
+      "inventory": {
+        "count": null,
+        "minimumIndividuallyObserved": 3,
+        "kind": "primary_live_priced_commercial_trucks_not_marked_sold",
+        "sourceUrl": "https://www.islandwideautosales.com/inventory",
+        "checkedAt": "2026-10-18",
+        "examples": [
+          {
+            "vehicle": "2024 Ford F-550 4WD 10ft flatbed cab chassis",
+            "priceUSD": 83900,
+            "sourceUrl": "https://www.islandwideautosales.com/product-page/pre-owned-upfitted-2024-ford-f-550-4wd-9ft-flatbed-cab-chassis"
+          },
+          {
+            "vehicle": "2012 Ford F-450 diesel 4x4 utility/service truck",
+            "priceUSD": 51000,
+            "miles": 54755,
+            "sourceUrl": "https://www.islandwideautosales.com/product-page/2012-ford-f-450-diesel-4x4-utility-service-truck"
+          },
+          {
+            "vehicle": "2016 Ford F-550 8ft stainless steel dump-bed cab chassis",
+            "priceUSD": 54000,
+            "miles": 54082,
+            "sourceUrl": "https://www.islandwideautosales.com/product-page/sale-2016-ford-f-550-8ft-heavy-duty-stainless-steel-dump-bed"
+          }
+        ],
+        "caveat": "All three detail pages returned HTTP 200 with car-specific specifications, matching prices and InStock schema. Most other displayed vehicles are explicitly SOLD and excluded. No publication date, independently checked physical availability or complete available-only stock total is established. Rentals are separately marked unavailable and are not sale inventory. Older cached 2024 truck title/price differ from this fresh read; fresh 10ft/$83,900 values are recorded."
+      },
+      "businessContact": {
+        "phone": "+1 808-291-9604",
+        "email": "sales@islandwideautosales.com",
+        "sourceUrl": "https://www.islandwideautosales.com/about"
+      },
+      "contact": {
+        "phone": "+1 808-291-9604",
+        "email": "sales@islandwideautosales.com",
+        "sourceUrl": "https://www.islandwideautosales.com/about"
+      },
+      "fitScore": 76,
+      "fitReason": "Maui-based independent commercial truck retailer with three detailed priced trucks not labelled SOLD and a demonstrated default-mailbox destination on its normal contact link. Commercial stock fits ordinary vehicle catalogue cards; bespoke rental/fleet financing software is outside the offer. Existing photos/specifications and phone work, so propose a factual catalogue/contact improvement, not an unsupported whole-site replacement claim.",
+      "confidence": "high_for_contact_routing_defect_and_advertised_trucks_medium_for_current_availability",
+      "verificationStatus": "live_primary_html_contact_link_and_three_detailed_priced_trucks_verified_rendering_crm_and_availability_refresh_pending",
+      "nextAction": "Recheck rendered email routing, current retail availability/prices, public sales location and private CRM/suppression history before outreach. Preserve commercial truck specifications and supplied condition disclosures. Do not include SOLD stock or the separately unavailable rental fleet as available sale stock; do not copy unverified licensing/warranty/finance assertions.",
+      "evidenceUrls": [
+        "https://www.islandwideautosales.com/",
+        "https://www.islandwideautosales.com/inventory",
+        "https://www.islandwideautosales.com/about",
+        "https://www.islandwideautosales.com/product-page/pre-owned-upfitted-2024-ford-f-550-4wd-9ft-flatbed-cab-chassis",
+        "https://www.islandwideautosales.com/product-page/2012-ford-f-450-diesel-4x4-utility-service-truck",
+        "https://www.islandwideautosales.com/product-page/sale-2016-ford-f-550-8ft-heavy-duty-stainless-steel-dump-bed"
+      ],
+      "fit": {
+        "score": 76,
+        "reason": "Maui-based independent commercial truck retailer with three detailed priced trucks not labelled SOLD and a demonstrated default-mailbox destination on its normal contact link. Commercial stock fits ordinary vehicle catalogue cards; bespoke rental/fleet financing software is outside the offer. Existing photos/specifications and phone work, so propose a factual catalogue/contact improvement, not an unsupported whole-site replacement claim.",
+        "budgetConfidence": "not_established"
+      },
+      "verification": {
+        "status": "live_primary_html_contact_link_and_three_detailed_priced_trucks_verified_rendering_crm_and_availability_refresh_pending",
+        "confidence": "high_for_contact_routing_defect_and_advertised_trucks_medium_for_current_availability",
+        "notBeforeOutreach": [
+          "Recheck rendered email routing, current retail availability/prices, public sales location and private CRM/suppression history before outreach. Preserve commercial truck specifications and supplied condition disclosures. Do not include SOLD stock or the separately unavailable rental fleet as available sale stock; do not copy unverified licensing/warranty/finance assertions."
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.islandwideautosales.com/",
+          "role": "primary_business_contact_and_catalogue",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://www.islandwideautosales.com/inventory",
+          "role": "primary_business_contact_and_catalogue",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://www.islandwideautosales.com/about",
+          "role": "primary_business_contact_and_catalogue",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://www.islandwideautosales.com/product-page/pre-owned-upfitted-2024-ford-f-550-4wd-9ft-flatbed-cab-chassis",
+          "role": "primary_live_priced_truck_detail_and_schema",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://www.islandwideautosales.com/product-page/2012-ford-f-450-diesel-4x4-utility-service-truck",
+          "role": "primary_live_priced_truck_detail_and_schema",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://www.islandwideautosales.com/product-page/sale-2016-ford-f-550-8ft-heavy-duty-stainless-steel-dump-bed",
+          "role": "primary_live_priced_truck_detail_and_schema",
+          "checkedAt": "2026-10-18"
+        }
+      ],
+      "priority": "priority_research_candidate",
+      "qualification": {
+        "tier": "priority_research_candidate",
+        "countsTowardPriority400": true,
+        "reason": "Commercial-truck scope accepted by parent; three detailed current advertised trucks and a wrong business-email destination provide a concrete contact/catalogue opportunity.",
+        "reviewedAt": "2026-10-18"
+      },
+      "qualificationHistory": [
+        {
+          "status": "held_outside_passenger_car_priority",
+          "reason": "Previously held because of commercial truck focus; promoted after scope clarification and fresh contact/stock HTML verification.",
+          "reviewedAt": "2026-10-18"
+        }
+      ]
+    },
+    {
+      "id": "us-mn-lakeland-gasper-auto-sales",
+      "name": "Gasper Auto Sales LLC",
+      "country": "US",
+      "city": "Lakeland",
+      "region": "MN",
+      "address": "404 St. Croix Trail North, Lakeland, MN 55043 (by appointment)",
+      "businessFocus": "small_independent_european_vehicle_specialist",
+      "website_status": "no_official_site_found_after_check",
+      "website": {
+        "url": null,
+        "inventoryUrl": "https://www.facebook.com/profile.php?id=100057612182407",
+        "checkedAt": "2026-10-18",
+        "observations": [
+          "Bounded exact-name plus Lakeland/location searches returned the original Facebook business profile and matching directories; no independent dealer-owned domain was identified.",
+          "Parent researcher directly opened original profile ID259372398095957, which resolves to100057612182407, and verified business identity,404SaintCroixTrailNorth and direct gasperautosales@gmail.com link. No phone/owned-domain field was seen in checked contact block.",
+          "This is a bounded absence result, not proof that no website exists."
+        ],
+        "defectSource": "https://www.facebook.com/profile.php?id=100057612182407",
+        "browserVerification": "Parent researcher verified rendered original Facebook profile, directly expanded vehicle posts and original Oct10permalink. This agent separately checked bounded business/location search results and corroborating historical public city document.",
+        "fullResponsiveJourneyAudit": "not_applicable_no_owned_domain_identified"
+      },
+      "inventory": {
+        "count": null,
+        "minimumIndividuallyObserved": 3,
+        "kind": "recent_original_facebook_advertisements",
+        "sourceUrl": "https://www.facebook.com/profile.php?id=100057612182407",
+        "checkedAt": "2026-10-18",
+        "examples": [
+          {
+            "vehicle": "2015 Audi S4 Premium Plus3.0Tquattro6-speed manual",
+            "priceUSD": 18500,
+            "miles": 117000,
+            "advertisedDate": "2026-10-10",
+            "sourceUrl": "https://www.facebook.com/permalink.php?story_fbid=pfbid08yGXs1feGtrUBMQEXZboY3nNevo2TvQSCDo48K3zRBieKiu97itXvaZdtPx7r4kFl&id=100057612182407"
+          },
+          {
+            "vehicle": "2019 Audi SQ5 Premium Plusquattro",
+            "priceUSD": 28995,
+            "miles": 51000,
+            "advertisedDate": "2026-09-19",
+            "sourceUrl": "https://www.facebook.com/profile.php?id=100057612182407"
+          },
+          {
+            "vehicle": "2019 Audi S4 Premium Plusquattro",
+            "priceUSD": 27995,
+            "miles": 64000,
+            "advertisedDate": "2026-09-16",
+            "sourceUrl": "https://www.facebook.com/profile.php?id=100057612182407"
+          }
+        ],
+        "caveat": "Three distinct original ads were expanded in the live business feed, with displayed September/October dates in2026 context. Advertisements do not establish current unsold physical stock. Additional vehicles on mirror were not counted. By appointment; Sundays closed in checked posts."
+      },
+      "businessContact": {
+        "phone": null,
+        "email": "gasperautosales@gmail.com",
+        "socialUrl": "https://www.facebook.com/profile.php?id=100057612182407",
+        "sourceUrl": "https://www.facebook.com/profile.php?id=100057612182407",
+        "phoneCaveat": "No phone was shown in checked original contact block; conflicting directory phones were not adopted."
+      },
+      "contact": {
+        "phone": null,
+        "email": "gasperautosales@gmail.com",
+        "socialUrl": "https://www.facebook.com/profile.php?id=100057612182407",
+        "sourceUrl": "https://www.facebook.com/profile.php?id=100057612182407",
+        "phoneCaveat": "No phone was shown in checked original contact block; conflicting directory phones were not adopted."
+      },
+      "fitScore": 82,
+      "fitReason": "Independent appointment-only European specialist with three recently dated original Audi advertisements at$18,500-$28,995, matching premises and a direct business email. Exact-name/location searches and original profile contacts identified no owned domain, supporting a factual branded stock catalogue opportunity. Budget/intent unestablished; three advertised units are not a verified available-stock total.",
+      "confidence": "high_for_primary_identity_email_and_recent_advertisements_medium_for_no_owned_site_search_result",
+      "verificationStatus": "original_rendered_facebook_identity_contact_and_three_recent_vehicle_ads_verified_bounded_domain_search_crm_refresh_pending",
+      "nextAction": "Refresh current sale availability/prices and independent owned-domain aliases; check private CRM/suppression history before outreach. Use directly published business email, not conflicting directory phone. Keep appointment-only trading conditions and do not copy unsupported condition/title/warranty claims.",
+      "evidenceUrls": [
+        "https://www.facebook.com/profile.php?id=100057612182407",
+        "https://www.facebook.com/permalink.php?story_fbid=pfbid08yGXs1feGtrUBMQEXZboY3nNevo2TvQSCDo48K3zRBieKiu97itXvaZdtPx7r4kFl&id=100057612182407",
+        "https://www.autoyas.com/US/Lakeland/259372398095957/Gasper-Auto-Sales-LLC",
+        "https://ci.lakeland.mn.us/vertical/sites/%7BF87BEF79-D520-4F87-86D1-CB82984CEB20%7D/uploads/February_21_2023.pdf"
+      ],
+      "fit": {
+        "score": 82,
+        "reason": "Independent appointment-only European specialist with three recently dated original Audi advertisements at$18,500-$28,995, matching premises and a direct business email. Exact-name/location searches and original profile contacts identified no owned domain, supporting a factual branded stock catalogue opportunity. Budget/intent unestablished; three advertised units are not a verified available-stock total.",
+        "budgetConfidence": "not_established"
+      },
+      "verification": {
+        "status": "original_rendered_facebook_identity_contact_and_three_recent_vehicle_ads_verified_bounded_domain_search_crm_refresh_pending",
+        "confidence": "high_for_primary_identity_email_and_recent_advertisements_medium_for_no_owned_site_search_result",
+        "notBeforeOutreach": [
+          "Refresh current sale availability/prices and independent owned-domain aliases; check private CRM/suppression history before outreach. Use directly published business email, not conflicting directory phone. Keep appointment-only trading conditions and do not copy unsupported condition/title/warranty claims."
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.facebook.com/profile.php?id=100057612182407",
+          "role": "primary_original_rendered_profile_contact_and_two_expanded_stock_advertisements",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://www.facebook.com/permalink.php?story_fbid=pfbid08yGXs1feGtrUBMQEXZboY3nNevo2TvQSCDo48K3zRBieKiu97itXvaZdtPx7r4kFl&id=100057612182407",
+          "role": "primary_original_expanded_Oct10_2015_S4_vehicle_advertisement",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://www.autoyas.com/US/Lakeland/259372398095957/Gasper-Auto-Sales-LLC",
+          "role": "secondary_social_mirror_discovery_not_used_as_current_stock_total",
+          "checkedAt": "2026-10-18"
+        },
+        {
+          "url": "https://ci.lakeland.mn.us/vertical/sites/%7BF87BEF79-D520-4F87-86D1-CB82984CEB20%7D/uploads/February_21_2023.pdf",
+          "role": "primary_historical_2023_city_packet_with_business_premises_email_corroboration_not_current_licence_status",
+          "checkedAt": "2026-10-18"
+        }
+      ],
+      "priority": "priority_research_candidate",
+      "qualification": {
+        "tier": "priority_research_candidate",
+        "countsTowardPriority400": true,
+        "reason": "Three recent original dealer vehicle ads, direct public business email and bounded search finding only social trading presence support independent catalogue ownership value.",
+        "reviewedAt": "2026-10-18"
+      }
+    }
+  ],
+  "heldCandidates": [
+    {
+      "name": "Prestige Auto Gallery LLC",
+      "city": "Kansas City",
+      "region": "MO",
+      "website": "https://prestigeautogallerykc.com/",
+      "status": "held_business_stock_and_domain_control_need_confirmation",
+      "observation": "Live old dealer-branded domain rendered unrelated TALAS789 content on 18 October. Current primary CarZing results attributed at least two cars to the dealer; older CarGurus profile advertised 76 while a newer secondary inventory profile showed zero. Domain mismatch is observed, not a claim of compromise.",
+      "sources": [
+        "https://prestigeautogallerykc.com/",
+        "https://www.carzing.com/cars/chevrolet/guilford-mo-LP_1b72e4d",
+        "https://www.cargurus.com/Cars/m-Prestige-Auto-Gallery-sp461727",
+        "https://www.iseecars.com/dealer-36434-prestige-auto-gallery-in-kansas-city-mo"
+      ],
+      "next": "Confirm trading status, available stock and official current domain before qualifying."
+    },
+    {
+      "name": "Tajari Motors",
+      "city": "Sherwood",
+      "region": "AR",
+      "website": "https://tajarimotors.com/",
+      "status": "held_identity_and_real_stock_unverified",
+      "observation": "Arkansas address mixed with theme-like luxury stock/contact material; independent confirmation of the USA dealer and real current vehicles was not found.",
+      "sources": [
+        "https://tajarimotors.com/"
+      ],
+      "next": "Verify licensed business identity, genuine listings and business contact."
+    },
+    {
+      "name": "Excellon Auto",
+      "city": "Woodland Hills",
+      "region": "CA",
+      "website": "https://excellonauto.com/",
+      "status": "held_current_stock_unverified",
+      "observation": "Primary site reports construction. Marketplace extraction had only three cars and was several months old. Current Carsforsale browser view required CAPTCHA; no challenge was solved.",
+      "sources": [
+        "https://excellonauto.com/",
+        "https://www.carsforsale.com/used-car-dealer/excellon-auto-woodland-hills-ca-d753773"
+      ],
+      "next": "Verify present business activity and multiple available vehicles."
+    },
+    {
+      "name": "Rahib Motors",
+      "city": "Winter Park",
+      "region": "FL",
+      "website": "https://www.rahibmotors.com/",
+      "status": "held_browser_defect_verification_blocked",
+      "observation": "Extracted primary calculator page contains Latin placeholder prose. Live browser blocked this researcher through Cloudflare; this is not evidence of a generally unavailable website.",
+      "sources": [
+        "https://www.rahibmotors.com/Dealer-Websites/Rahib-Motors-FL/car-payment-calculators.aspx"
+      ],
+      "next": "Render the customer-facing page and confirm current inventory before qualifying."
+    },
+    {
+      "name": "Alpha Auto Group LLC",
+      "city": "Toms River",
+      "region": "NJ",
+      "website": "https://www.alphaautogroupllc.com/",
+      "status": "held_browser_stock_verification_blocked",
+      "observation": "Extracted dealer stock page returned zero/not-found while marketplace advertised cars. Browser was blocked by provider security, so no customer-facing empty-stock defect was established.",
+      "sources": [
+        "https://www.alphaautogroupllc.com/inventory/"
+      ],
+      "next": "Verify current catalogue through an ordinary customer browser."
+    },
+    {
+      "name": "DKL Auto Sales",
+      "city": "Portland",
+      "region": "OR",
+      "website": "https://www.dklautosales.com/",
+      "status": "held_stale_stock_and_live_domain_unverified",
+      "observation": "Only a 1.4-year-old primary extract with two unsold-style entries was available. One live research browser attempt failed DNS resolution; not treated as proof the business is closed or its site generally fails.",
+      "sources": [
+        "https://www.dklautosales.com/"
+      ],
+      "next": "Confirm current business/stock and domain before qualifying."
+    },
+    {
+      "name": "J&M Motors LLC",
+      "city": "Marietta",
+      "region": "GA",
+      "website": "https://www.jmmotorsga.com/",
+      "status": "held_insufficient_stock",
+      "observation": "Current primary all-inventory page has one product. Placeholder-linked email appears in extracted footer but this was not promoted above the stock requirement.",
+      "sources": [
+        "https://www.jmmotorsga.com/category/all-products"
+      ],
+      "next": "Find multiple currently advertised cars and confirm the live contact link."
+    },
+    {
+      "name": "SNF Auto Sales",
+      "city": "Atlanta",
+      "region": "GA",
+      "website": "https://www.snfautosales.com/",
+      "status": "held_no_available_stock_observed",
+      "observation": "Five featured vehicle records were explicitly SOLD/out of stock.",
+      "sources": [
+        "https://www.snfautosales.com/"
+      ],
+      "next": "Verify multiple active listings before qualifying."
+    },
+    {
+      "name": "Mariaah's Used Auto Sales",
+      "city": "Delaware County",
+      "region": "PA",
+      "website": "https://mariaahquinn88.wixsite.com/my-site-1",
+      "status": "held_small_stock_and_business_location_needs_confirmation",
+      "observation": "Primary page has four priced entries and many sold records plus template phone/email in its header. Small inventory and no exact premises confirmation kept it below the qualified set.",
+      "sources": [
+        "https://mariaahquinn88.wixsite.com/my-site-1"
+      ],
+      "next": "Confirm current dealer location, business phone and active inventory."
+    },
+    {
+      "name": "WMG Auto Sales LLC",
+      "city": "Hollywood",
+      "region": "FL",
+      "website": "https://wmgautosales.com/",
+      "status": "held_no_real_stock_verified",
+      "observation": "Theme-style homepage includes placeholder phone and a generated-looking image description but no independently verifiable priced stock. Florida entity-name index lists matching entity inactive; exact legal/business status needs checking.",
+      "sources": [
+        "https://wmgautosales.com/",
+        "https://search.sunbiz.org/Inquiry/CorporationSearch/SearchResults?InquiryType=EntityName&SearchTerm=WMG+3195+LLC&entityId=J57393&inquiryDirectionType=ForwardList&listNameOrder=WMG3195+L210003013500&searchNameOrder=WMGARRITYCONSULTANT+J573930"
+      ],
+      "next": "Establish a currently trading dealer and actual stock; do not contact a theme example."
+    },
+    {
+      "name": "Simo Auto Sales",
+      "city": "North Charleston",
+      "region": "SC",
+      "website": "https://simoautosales.com/",
+      "status": "held_identity_stock_and_contact_unverified",
+      "observation": "Primary extracted site has Miles' Garage identity and placeholder contact information. Exact matching real inventory/business telephone was not corroborated.",
+      "sources": [
+        "https://simoautosales.com/"
+      ],
+      "next": "Confirm dealer identity and real cars before live defect audit."
+    },
+    {
+      "name": "North Smithfield Auto Body",
+      "city": "North Smithfield",
+      "region": "RI",
+      "website": "https://www.riautobody.com/auto-sales",
+      "status": "held_no_available_stock_observed",
+      "observation": "Sales page shows placeholder prose/year discrepancy but observed vehicles were all sold; service-first business.",
+      "sources": [
+        "https://www.riautobody.com/auto-sales"
+      ],
+      "next": "Verify active sales stock and relevance to dealer templates."
+    },
+    {
+      "name": "Long Moune Auto Sales",
+      "city": "Minneapolis",
+      "region": "MN",
+      "status": "held_no_primary_current_inventory",
+      "observation": "No-site directory discovery and matching business references found, but no current primary stock evidence.",
+      "sources": [
+        "https://bhphfinder.com/minnesota/minneapolis/long-moune-auto-sales/"
+      ],
+      "next": "Find current dealer-posted listings; independently check owned-domain presence."
+    },
+    {
+      "name": "M&H Auto Sales",
+      "city": "Bowling Green",
+      "region": "KY",
+      "status": "held_no_primary_current_inventory",
+      "observation": "Directory says no website. Exact matching current vehicles were not found; unrelated Anaheim dealer must not be merged.",
+      "sources": [
+        "https://www.allbiz.com/business/m-h-auto-sales_11E-270-904-6653"
+      ],
+      "next": "Find dealer-posted current stock and verify official-site presence."
+    },
+    {
+      "name": "Oriental Auto Sales",
+      "city": "Alliance",
+      "region": "NC",
+      "status": "held_no_primary_current_inventory",
+      "observation": "Directory says no website; no verified current vehicle adverts were established.",
+      "sources": [
+        "https://www.allbiz.com/business/oriental-auto-sales-252-675-5063"
+      ],
+      "next": "Find current dealer-posted stock and verify owned-site presence."
+    },
+    {
+      "name": "Woody's Auto Sales",
+      "city": "Louisville",
+      "region": "KY",
+      "status": "held_no_primary_current_inventory",
+      "observation": "Directory/review no-site claims conflict with other listings of woodysautosales.com. Matching current primary stock was not verified.",
+      "sources": [
+        "https://bhphfinder.com/kentucky/louisville/woody-s-auto-sales/",
+        "https://www.cylex.us.com/company/woody%27s-auto-sales-llc-20602951.html"
+      ],
+      "next": "Resolve official domain and actual available cars."
+    },
+    {
+      "name": "Kory's Used Cars",
+      "city": "Alamogordo",
+      "region": "NM",
+      "website": "https://korysusedcars.net/",
+      "status": "held_current_rendered_defect_unverified",
+      "observation": "Recent priced inventory extract, but inherited About content may be an old/unlinked route; live research requests failed.",
+      "sources": [
+        "https://korysusedcars.net/",
+        "https://korysusedcars.net/about-1/"
+      ],
+      "checkedAt": "2026-10-18",
+      "next": "Resolve the stated evidence gap before qualification. No outreach authorized/performed by this researcher."
+    },
+    {
+      "name": "Kala Auto Sales",
+      "city": "Lawrenceville",
+      "region": "GA",
+      "website": "https://kalaautosales.com/",
+      "status": "held_stock_freshness_and_rendering",
+      "observation": "Two primary priced homepage cars and four unmarked catalogue examples; many Sold entries. Template copy/phone discrepancy needs current rendering.",
+      "sources": [
+        "https://kalaautosales.com/",
+        "https://kalaautosales.com/inventory/"
+      ],
+      "checkedAt": "2026-10-18",
+      "next": "Resolve the stated evidence gap before qualification. No outreach authorized/performed by this researcher."
+    },
+    {
+      "name": "Lake Shore Auto Sales",
+      "city": "Erie",
+      "region": "PA",
+      "website": "https://www.usedcarseriepa.com/",
+      "status": "held_template_footer_visibility",
+      "observation": "Six primary priced cars; default footer text on testimonials extract may be hidden. Do not assert visible without rendering.",
+      "sources": [
+        "https://www.usedcarseriepa.com/",
+        "https://www.usedcarseriepa.com/testimonials"
+      ],
+      "checkedAt": "2026-10-18",
+      "next": "Resolve the stated evidence gap before qualification. No outreach authorized/performed by this researcher."
+    },
+    {
+      "name": "Little's Drive In Auto Sales LLC",
+      "city": "Clearfield",
+      "region": "PA",
+      "website": "https://littlesautollc.com/",
+      "status": "held_weak_replacement_fit",
+      "observation": "Genuine stock added October 2026; old 2017 template blog copy alone is not a major current-site defect.",
+      "sources": [
+        "https://littlesautollc.com/",
+        "https://littlesautollc.com/cars/2016-gmc-acadia-5088/"
+      ],
+      "checkedAt": "2026-10-18",
+      "next": "Resolve the stated evidence gap before qualification. No outreach authorized/performed by this researcher."
+    },
+    {
+      "name": "Choice Auto NY / Choice Auto World",
+      "city": "Hauppauge",
+      "region": "NY",
+      "website": "https://choiceautony.com/",
+      "status": "held_stock_authenticity_freshness",
+      "observation": "Four car-looking priced entries coexist with Dummy Product records; current real VIN/stock evidence not established.",
+      "sources": [
+        "https://choiceautony.com/"
+      ],
+      "checkedAt": "2026-10-18",
+      "next": "Resolve the stated evidence gap before qualification. No outreach authorized/performed by this researcher."
+    },
+    {
+      "name": "JPC Auto Sales",
+      "city": "Dallas",
+      "region": "TX",
+      "website": "https://www.jpcautosales.com/",
+      "status": "held_stock_freshness",
+      "observation": "Four vehicle image captions but no price/VIN/date in checked primary page. Fresh18OctHTMLconfirms4vehiclecaptionimagesonly;contactlabeljpcautosales30@gmail.comlinksmysiteandContáctanoslinkscruzautoshop30@gmil.com,whileonecruzautoshop30@gmail.comlinkworks.Currentprices/VINs/datesstillunproved.",
+      "sources": [
+        "https://www.jpcautosales.com/",
+        "https://www.jpcautosales.com/vehiculos"
+      ],
+      "checkedAt": "2026-10-18",
+      "next": "Resolve the stated evidence gap before qualification. No outreach authorized/performed by this researcher."
+    },
+    {
+      "name": "JMV Auto Sales",
+      "city": "Lakeland",
+      "region": "FL",
+      "website": "https://www.jmvcarsales.com/",
+      "status": "held_stock_and_defect",
+      "observation": "Three vehicle title cards without prices/VINs; extraction mailbox association needs live HTML check.",
+      "sources": [
+        "https://www.jmvcarsales.com/",
+        "https://www.jmvcarsales.com/items"
+      ],
+      "checkedAt": "2026-10-18",
+      "next": "Resolve the stated evidence gap before qualification. No outreach authorized/performed by this researcher."
+    },
+    {
+      "name": "NuView Auto Sales LLC",
+      "city": "Cincinnati",
+      "region": "OH",
+      "website": "https://www.nuviewautosales.com/",
+      "status": "held_domain_and_stock",
+      "observation": "Old location route returns research-tool 410; possible newer nuviewinventory.com alias unresolved. Do not call the dealer site generally broken.",
+      "sources": [
+        "https://www.nuviewautosales.com/",
+        "https://www.cars.com/dealers/6068901/nuview-auto-sales/inventory/"
+      ],
+      "checkedAt": "2026-10-18",
+      "next": "Resolve the stated evidence gap before qualification. No outreach authorized/performed by this researcher."
+    },
+    {
+      "name": "Ruben Car Sales",
+      "city": "Phoenix",
+      "region": "AZ",
+      "website": "https://rubencarsales.com/",
+      "status": "held_business_and_stock_identity",
+      "observation": "Primary site has priced high-value cars and default reviews/copy; exact independent business/stock identity still needs corroboration.",
+      "sources": [
+        "https://rubencarsales.com/",
+        "https://rubencarsales.com/reviews/"
+      ],
+      "checkedAt": "2026-10-18",
+      "next": "Resolve the stated evidence gap before qualification. No outreach authorized/performed by this researcher."
+    },
+    {
+      "name": "Dealers Choice USA",
+      "city": "Tuscaloosa",
+      "region": "AL",
+      "website": "https://dealerschoiceusa.com/",
+      "status": "held_identity_contact",
+      "observation": "Primary site uses placeholder telephone; exact real dealer/business phone and stock not corroborated.",
+      "sources": [
+        "https://dealerschoiceusa.com/"
+      ],
+      "checkedAt": "2026-10-18",
+      "next": "Resolve the stated evidence gap before qualification. No outreach authorized/performed by this researcher."
+    },
+    {
+      "name": "Calera Auto Sales",
+      "city": "Calera",
+      "region": "AL",
+      "website": "https://caleraauto.com/",
+      "status": "held_current_defect_stock",
+      "observation": "Old Latin policy URL now 404; primary homepage research request blocked. Old removed content does not prove current poor site.",
+      "sources": [
+        "https://caleraauto.com/",
+        "https://caleraauto.com/privacy-policy-2/"
+      ],
+      "checkedAt": "2026-10-18",
+      "next": "Resolve the stated evidence gap before qualification. No outreach authorized/performed by this researcher."
+    },
+    {
+      "name": "Henry's Auto Sales LLC",
+      "city": "Indianapolis",
+      "region": "IN",
+      "website": "https://henrydealership.wixsite.com/website",
+      "status": "held_multiple_active_stock",
+      "observation": "Business telephone/location found; no multiple current individual vehicle advertisements verified.",
+      "sources": [
+        "https://henrydealership.wixsite.com/website"
+      ],
+      "checkedAt": "2026-10-18",
+      "next": "Resolve the stated evidence gap before qualification. No outreach authorized/performed by this researcher."
+    },
+    {
+      "name": "Wheel N Dealz",
+      "city": "Midwest / Ohio",
+      "region": "OH",
+      "website": "https://www.wndealz.com/",
+      "status": "held_exact_business_location",
+      "observation": "Three priced vehicles, but exact trading premises and business identity not established. Fresh18OctliveHTMLconfirms3pricedAcura/Kia/Hondacards,614-800-7944,MidwestOH,anddefaultmysitemailto. PrimaryFranklinCountynov2024vendorlistnamesWHEELNDEALZLLC851EJenkinsAveColumbus43207,corroboratingpremiseshistorically;multiplefreshstockstillunproved.",
+      "sources": [
+        "https://www.wndealz.com/",
+        "https://franklincountyauditor.com/AUDR-website/media/Documents/CONSUMER/Vendors%20License/Vendors-2024-11.pdf"
+      ],
+      "checkedAt": "2026-10-18",
+      "next": "Resolve the stated evidence gap before qualification. No outreach authorized/performed by this researcher."
+    },
+    {
+      "name": "Moxie Auto Sales",
+      "city": "Bentonville",
+      "region": "AR",
+      "website": "https://www.moxieautosales.net/",
+      "status": "held_multiple_active_stock",
+      "observation": "Public phone/email and apparent default-mailbox association; no current individually advertised vehicles verified.",
+      "sources": [
+        "https://www.moxieautosales.net/"
+      ],
+      "checkedAt": "2026-10-18",
+      "next": "Resolve the stated evidence gap before qualification. No outreach authorized/performed by this researcher."
+    },
+    {
+      "name": "Drive Ready Auto Group",
+      "city": "Marietta",
+      "region": "GA",
+      "website": "https://www.drivereadyautogroup.com/",
+      "status": "held_multiple_active_stock",
+      "observation": "Public business contact; no primary individual stock verified.",
+      "sources": [
+        "https://www.drivereadyautogroup.com/"
+      ],
+      "checkedAt": "2026-10-18",
+      "next": "Resolve the stated evidence gap before qualification. No outreach authorized/performed by this researcher."
+    },
+    {
+      "name": "Ghandi's Auto",
+      "city": "Portland",
+      "region": "OR",
+      "website": "https://ghandisauto.com/",
+      "status": "held_retail_stock_scope",
+      "observation": "Recent coming-soon/salvage posts and many Sold stock entries; parts/wrecking stock is not available retail-car inventory.",
+      "sources": [
+        "https://ghandisauto.com/",
+        "https://ghandisauto.com/home/auto-sales-inventory/"
+      ],
+      "checkedAt": "2026-10-18",
+      "next": "Resolve the stated evidence gap before qualification. No outreach authorized/performed by this researcher."
+    },
+    {
+      "name": "J&G Motors LLC",
+      "city": "Lawnside",
+      "region": "NJ",
+      "website": "https://jandgcars.com/",
+      "status": "held_trading_and_stock_freshness",
+      "observation": "Primary site says under construction and marketplace has older call-for-price stock; directory closure signal needs resolving.",
+      "sources": [
+        "https://jandgcars.com/",
+        "https://www.mynextride.com/dealers/1152/j-g-motors-lawnside-nj/inventory"
+      ],
+      "checkedAt": "2026-10-18",
+      "next": "Resolve the stated evidence gap before qualification. No outreach authorized/performed by this researcher."
+    },
+    {
+      "name": "RG Auto Repair DFW",
+      "city": "Dallas",
+      "region": "TX",
+      "website": "https://www.rgautorepairdfw.com/",
+      "status": "held_insufficient_stock_service_first",
+      "observation": "About retains Motors identity, but only one unpriced sales vehicle verified; repair-first business outside current priority.",
+      "sources": [
+        "https://www.rgautorepairdfw.com/",
+        "https://www.rgautorepairdfw.com/for-sale/"
+      ],
+      "checkedAt": "2026-10-18",
+      "next": "Resolve the stated evidence gap before qualification. No outreach authorized/performed by this researcher."
+    },
+    {
+      "name": "Mata Auto Sales LLC",
+      "city": "Louisville",
+      "region": "KY",
+      "website": "https://matasales.com/",
+      "status": "held_minor_secondary_page_defect",
+      "observation": "Primary catalogue reports seven cars; Latin FAQ contact text is a secondary cleanup issue, not a whole-site failure.",
+      "sources": [
+        "https://matasales.com/",
+        "https://matasales.com/faq/"
+      ],
+      "checkedAt": "2026-10-18",
+      "next": "Resolve the stated evidence gap before qualification. No outreach authorized/performed by this researcher."
+    },
+    {
+      "name": "Oakes Auto Sales LLC",
+      "city": "Hugo",
+      "region": "OK",
+      "website": "https://www.oakesautosales.com/",
+      "status": "held_owned_domain_conflict_and_primary_stock",
+      "observation": "Recent secondary sale posts exist, but a directory names an owned domain and a primary tribal business directory has a Visit Website link. Resolve site/premises aliases and current original stock before any no-site or poor-site qualification. One research fetch error is not a general outage.",
+      "sources": [
+        "https://www.autoyas.com/US/Hugo/106720107521987/Oakes-auto-sales",
+        "https://choctawsmallbusiness.com/places/oakes-auto-sales-llc/",
+        "https://www.oakesautosales.com/"
+      ],
+      "checkedAt": "2026-10-18",
+      "next": "Resolve the stated primary evidence/identity gap before qualification. No outreach performed."
+    },
+    {
+      "name": "Herron Auto Sales",
+      "city": "Cookeville",
+      "region": "TN",
+      "website": "https://herronauto.acapply.com/",
+      "status": "held_current_domain_and_stock_freshness",
+      "observation": "Working matching provider contact page and older herronauto.com domain found. A second similarly named domain may be unrelated. Secondary recent truck posts include conflicting sold labels; no substantial current platform defect established.",
+      "sources": [
+        "https://www.autoyas.com/US/Cookeville/288697931616165/Herron-Auto-Sales",
+        "https://herronauto.acapply.com/templates/11/ContactUs11.aspx",
+        "http://herronauto.com/"
+      ],
+      "checkedAt": "2026-10-18",
+      "next": "Resolve the stated primary evidence/identity gap before qualification. No outreach performed."
+    },
+    {
+      "name": "Rockstar Autogroup LLC",
+      "city": "Grove",
+      "region": "OK",
+      "website": "https://www.rockstarauto.net/",
+      "status": "held_multiple_genuine_vehicles",
+      "observation": "Matching primary lender dealer directory corroborates premises/phone. Homepage has three vehicle-named products plus three obvious generic model products. Only the 2010 Camaro has specific mileage/specification; CTS-V description is generic floor-mat copy and Colorado is a general specification description. Displayed site-name contact anchor routes to info@mysite.com in live HTML, but multiple genuine current vehicles remain unproven.",
+      "sources": [
+        "https://www.rockstarauto.net/",
+        "https://www.rockstarauto.net/product-page/2010-chevy-camaro-ss-20",
+        "https://www.rockstarauto.net/product-page/2012-cadillac-cts-v",
+        "https://www.rockstarauto.net/product-page/all-weather-floor-mats",
+        "https://www.creditacceptance.com/car-buyers/dealer-finder/OK-Jay"
+      ],
+      "checkedAt": "2026-10-18",
+      "next": "Resolve the stated primary evidence/identity gap before qualification. No outreach performed."
+    },
+    {
+      "name": "Sure Ride Auto Sales",
+      "city": "Little Rock",
+      "region": "AR",
+      "website": "https://www.surerideautosales.com/",
+      "status": "held_catalogue_freshness_and_vehicle_identity",
+      "observation": "Fresh HTTP200 contact page matches5625B Brown Street,501-786-5843,sureride5625@gmail.com; email link works. Primary inventory has six priced cars/SUVs. Home advertises a2015 Pathfinder at50,000 miles/$15,000 while inventory lists a2015 Pathfinder at90,000 miles/$15,000, with a different edited image asset; noVIN establishes same unit. Fiesta heading says2001 while image filename says2011. MySite title alone is not substantial. Current unit identity/freshness and rendered journey remain unproved.",
+      "sources": [
+        "https://www.surerideautosales.com/",
+        "https://www.surerideautosales.com/inventory",
+        "https://www.surerideautosales.com/contact",
+        "https://www.yellowpages.com/woodson-ar/used-car-dealers"
+      ],
+      "checkedAt": "2026-10-18",
+      "next": "Verify units/freshness and rendered catalogue; do not claim phone/email are broken or assume same-year vehicles are identical."
+    },
+    {
+      "name": "Smiling Faces Car Sales LLC",
+      "city": "Riverside",
+      "region": "CA",
+      "website": "https://www.smilingfacescollision.com/contact-3",
+      "status": "held_primary_current_vehicle_inventory",
+      "observation": "Fresh HTTP200 dealer car-sales page shows Sales@SmilingFacesCarSales.com linked to info@mysite.com and real888-669-4756,6600JurupaAveSte105. Homepage now primarily collision/DMV services with7101JurupaAveSte17 address. Car-sales page has Inventory labels but no primary individual current retail cars established; business entity corroboration alone is insufficient stock evidence.",
+      "sources": [
+        "https://www.smilingfacescollision.com/contact-3",
+        "https://www.smilingfacescollision.com/",
+        "https://www.bizprofile.net/ca/riverside/smiling-faces-car-sales"
+      ],
+      "checkedAt": "2026-10-18",
+      "next": "Resolve currently operated sales premises and multiple current primary vehicle ads; hold until then."
+    },
+    {
+      "name": "Advanced Auto Sales",
+      "city": "Kissimmee",
+      "region": "FL",
+      "website": "https://victorautos2770.wixsite.com/advanced-auto-sales",
+      "status": "held_alias_and_material_gap",
+      "observation": "Fresh HTTP200 Wix site advertises five priced featured cars and matching2770MichiganAve/(407)731-4620. Displayedvictorauto97@gmail.com links to advanced2770@yahoo.com, both plausible business aliases; no proof destination is wrong. FooterDirectAutomotives2035 is cosmetic by itself. Older advautosales.com and different407-847-8952 directory phone need alias/ownership resolution before any poor-site claim.",
+      "sources": [
+        "https://victorautos2770.wixsite.com/advanced-auto-sales",
+        "https://www.consumeraffairs.com/automotive/advanced-auto-sale.html",
+        "https://www.bbb.org/us/fl/kissimmee/profile/used-car-dealers/advanced-auto-sales-of-kissimmee-llc-0733-90137309",
+        "https://usa-stores.worldorgs.com/catalog/kissimmee/used-car-dealer/advanced-auto-sales"
+      ],
+      "checkedAt": "2026-10-18",
+      "next": "Check owned-domain/identity aliases and actual material current defect; do not equate two real mailbox aliases with info@mysite."
+    },
+    {
+      "name": "Rocalde Auto Sales",
+      "city": "Laredo",
+      "region": "TX",
+      "website": "https://rocalde1987.wixsite.com/rocaldeautosales",
+      "status": "held_recent_primary_stock",
+      "observation": "Matching Wix site names business,2707ELyonSt,(956)489-7603,rocalde1987@gmail.com. Inventory area contains three image labels but no prices,mileages,VINs or recent ad dates; 2017footer does not prove closure or old stock. Multiple current genuine cars unproved.",
+      "sources": [
+        "https://rocalde1987.wixsite.com/rocaldeautosales",
+        "https://usa-stores.worldorgs.com/catalog/laredo/used-car-dealer/rocalde-auto-sales"
+      ],
+      "checkedAt": "2026-10-18",
+      "next": "Obtain recent original stock and current contact confirmation before qualification."
+    }
+  ],
+  "exclusions": [
+    {
+      "name": "Anthonys Car Sale LLC",
+      "city": "Dallas",
+      "region": "TX",
+      "reason": "Primary matching owned site and priced inventory found; no concrete website defect established.",
+      "sourceUrl": "https://www.anthonyscarsalellc.com/contact-us"
+    },
+    {
+      "name": "BEST Auto Group",
+      "city": "Corona",
+      "region": "CA",
+      "reason": "A directory labels website N/A, but the matching dealer-owned site is live with inventory and the same premises. Not accepted as a no-website lead.",
+      "sourceUrl": "https://www.bestautosgroup.com/"
+    },
+    {
+      "name": "Cavenaugh Automotive Group",
+      "city": "Jonesboro",
+      "region": "AR",
+      "reason": "Franchise/group dealer outside independent-used-car priority; directory no-website statement is insufficient.",
+      "sourceUrl": "https://bhphfinder.com/arkansas/jonesboro/cavenaugh-automotive-group/"
+    },
+    {
+      "name": "Limitless Motors LLC",
+      "city": "Garland",
+      "region": "TX",
+      "reason": "Primary extracted staff placeholders were absent from the live rendered page. No qualifying visible defect established; do not use hidden theme text as evidence.",
+      "sourceUrl": "https://www.limitless-motors.com/about-us/"
+    },
+    {
+      "name": "Affinity Auto Sales",
+      "city": "Medford",
+      "region": "NY",
+      "reason": "Extracted placeholder team was absent from live rendered page. Small observed inventory and no demonstrated material website defect.",
+      "sourceUrl": "https://www.affinityautos.com/about"
+    },
+    {
+      "name": "Future Cars LLC",
+      "city": "Houston",
+      "region": "TX",
+      "reason": "Directory missing-website statement contradicted by a matching official domain; not a no-site lead.",
+      "sourceUrl": "https://www.futurecarus.com/"
+    },
+    {
+      "name": "Annon Auto Sales",
+      "city": "Roscoe",
+      "region": "IL",
+      "reason": "Primary business explicitly markets itself as a salvage/used-parts yard; vehicle list is not proof of retail sale inventory. Outside current car-dealer template priority.",
+      "sourceUrl": "https://www.annonautosales.com/"
+    },
+    {
+      "name": "Everline Automotive",
+      "city": "Nepean",
+      "region": "ON",
+      "reason": "Current domain redirects to Canadian dealer-to-dealer/service business, outside USA market.",
+      "sourceUrl": "https://everlineautomotive.com/vehicle-sales/"
+    },
+    {
+      "name": "Byrds Automotive LLC",
+      "city": "Richmond",
+      "region": "VA",
+      "reason": "All observed listed cars marked sold; no multiple active sale inventory established.",
+      "sourceUrl": "https://hellooptimystic.wixsite.com/byrdsautomotivellc"
+    },
+    {
+      "name": "World Auto Sales / wautosale.com",
+      "reason": "Primary site is a default WordPress sample with no corroborated dealer location, contacts or actual stock. Not counted as a real dealer.",
+      "sourceUrl": "https://wautosale.com/"
+    },
+    {
+      "name": "904 Auto LLC / 904auto.com",
+      "city": "Orange Park",
+      "region": "FL",
+      "reason": "Theme car names and placeholder phone without corroborated real inventory; not counted as a verified business lead.",
+      "sourceUrl": "https://904auto.com/"
+    },
+    {
+      "name": "Farah Auto LLC",
+      "city": "Hudson",
+      "region": "FL",
+      "reason": "Old Wix URL advertises cars and incomplete contact text, but a newer matching branded domain and a local agency case study were found. That newer site reduces replacement fit; no live browser defect was established there. Exclude from weak-site qualification at this checkpoint.",
+      "sourceUrl": "https://farahautollc.com/",
+      "sources": [
+        "https://farahautollc.wixsite.com/farah-auto-llc",
+        "https://farahautollc.com/",
+        "https://reteservices.net/"
+      ]
+    },
+    {
+      "name": "C&L Auto Sales",
+      "city": "Macedon",
+      "region": "NY",
+      "reason": "Extracted missing-image/lot-photo text is hidden fallback/debug content. Actual dealer car and team images returned HTTP 200 image/jpeg; no broken-image defect established.",
+      "sourceUrl": "https://candlautosales.com/",
+      "checkedAt": "2026-10-18"
+    },
+    {
+      "name": "Sterling Imports",
+      "city": "Santa Ana",
+      "region": "CA",
+      "reason": "Old indexed theme About URL redirects to a current clean branded dealer page; legacy template copy is not a demonstrated current defect.",
+      "sourceUrl": "https://www.sterlingimports.net/about-us",
+      "checkedAt": "2026-10-18"
+    },
+    {
+      "name": "Aaron Williams Auto Sales LLC",
+      "city": "Waynesboro",
+      "region": "MS",
+      "reason": "Old Wix placeholder-phone discovery superseded by matching current owned domain. No qualifying current defect established.",
+      "sourceUrl": "https://aaronwilliamsauto.com/who-we-are",
+      "checkedAt": "2026-10-18"
+    },
+    {
+      "name": "Alpha & Omega Auto Sales & Repair II",
+      "city": "Lincoln",
+      "region": "NE",
+      "reason": "Old Wix URL found via vehicle directory; current matching owned domain has functioning priced inventory. No no-site or concrete poor-site qualification established.",
+      "sourceUrl": "https://alphaomegaautosale.com/",
+      "checkedAt": "2026-10-18"
+    },
+    {
+      "name": "A+10th Auto Sales",
+      "city": "Pasco",
+      "region": "WA",
+      "reason": "Directory no-website assertion contradicted by current matching domain and business contacts; no major current defect verified.",
+      "sourceUrl": "https://www.a10thautosales.com/",
+      "checkedAt": "2026-10-18"
+    },
+    {
+      "name": "AG Auto Sales",
+      "city": "Fort Wayne",
+      "region": "IN",
+      "reason": "Cached primary extraction suggested a default mailbox, but fresh HTTP200 homepage HTML now links its displayed Gmail correctly and current catalogue has substantial named stock. No current qualifying defect established. Do not use stale cache as a contact-routing claim.",
+      "sourceUrl": "https://www.agautosales.shop/",
+      "checkedAt": "2026-10-18"
+    },
+    {
+      "name": "Ready To Go Auto Sales",
+      "city": "Ocala",
+      "region": "FL",
+      "reason": "Social-first mirror discovery contradicted by matching current owned domain with priced stock; no substantial site defect established.",
+      "sourceUrl": "https://readytogoautos.com/",
+      "checkedAt": "2026-10-18"
+    }
+  ],
+  "overallRequestedCount": 400,
+  "allocationNote": "Initial 125 is flexible within overall 400. qualifiedCount/remainingGap refer only to priority candidates. Reserved content-polish records remain in leads for evidence/history and do not count toward best-400 priority target.",
+  "evidenceRecordCount": 24,
+  "priorityCount": 15,
+  "reserveCount": 9,
+  "heldCount": 42,
+  "researchRowCount": 24,
+  "holdCount": 42
+}

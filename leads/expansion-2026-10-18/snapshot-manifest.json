@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-18",
+  "overallRequestedCount": 400,
+  "state": "Research in progress; evidence intake is not build, outreach or hosted acceptance",
+  "sourceScope": "Public business facts and dated source evidence only. Private CRM identities, contact history and suppression state remain outside this repository.",
+  "summary": [
+    {
+      "market": "usa",
+      "rows": 24,
+      "priority": 15,
+      "reserves": 9,
+      "holdsWithinRows": 0,
+      "heldCandidatesOutsideRows": 42
+    },
+    {
+      "market": "uk",
+      "rows": 103,
+      "priority": 93,
+      "reserves": 8,
+      "holdsWithinRows": 2
+    },
+    {
+      "market": "uae",
+      "rows": 163,
+      "priority": 158,
+      "reserves": 2,
+      "holdsWithinRows": 3
+    }
+  ],
+  "files": [
+    {
+      "file": "usa.json",
+      "bytes": 177044,
+      "chars": 176931,
+      "sha256": "a8ce0fe52b1ab7d166869bcd0f46d2fe98aa01b508f82c824c989aeed306ee4f"
+    },
+    {
+      "file": "usa-research.md",
+      "bytes": 14046,
+      "chars": 14044,
+      "sha256": "092e04b6bd4ad113f86e02244903982cbaaa2794caaf1e8e1817d10e2187c818"
+    },
+    {
+      "file": "uk.json",
+      "bytes": 292965,
+      "chars": 292770,
+      "sha256": "974658f36b09f10c23f4969dd7e9d74bf6737f2887fba2c6247a45fa51921427"
+    },
+    {
+      "file": "uk-research.md",
+      "bytes": 3327,
+      "chars": 3325,
+      "sha256": "6f4285fc1fc19e67399eb42e3e618a07c89e9d2afde2e22084a21bf7d5d7b2b0"
+    },
+    {
+      "file": "uae.json",
+      "bytes": 400906,
+      "chars": 400871,
+      "sha256": "c5eaf370e2331983cd6c18f51de5f584bb8ace3ac1f0c87889c71c871f49b87a"
+    },
+    {
+      "file": "uae-research.md",
+      "bytes": 7400,
+      "chars": 7396,
+      "sha256": "77eee547f00963a96b0a4e9699ea64e8d2850e87cce10fcdaf8fd69f9e4eb864"
+    }
+  ]
+}
