@@ -19,7 +19,8 @@ export function DealerEnquiryDraft({vehicleTitle, intent = 'enquiry'}: {vehicleT
   });
   const [status, setStatus] = useState('');
   const mail = dealer.email ? `mailto:${dealer.email}?subject=${encodeURIComponent(vehicleTitle || dealer.name)}&body=${encodeURIComponent(message)}` : '';
-  const whatsapp = dealer.whatsappUrl ? dealer.whatsappUrl + (dealer.whatsappUrl.includes('?') ? '&' : '?') + 'text=' + encodeURIComponent(message) : '';
+  const whatsapp = dealer.whatsappUrl ? new URL(dealer.whatsappUrl) : null;
+  whatsapp?.searchParams.set('text', message);
   async function copyDraft() {try {await navigator.clipboard.writeText(message); setStatus(tx('Draft copied. Nothing has been sent.'));} catch {setStatus(tx('Select and copy the draft below.'));}}
   return <>
       <label htmlFor={messageId} {...stylex.props(s.label)}>{tx('Your enquiry draft')}</label>
@@ -27,7 +28,7 @@ export function DealerEnquiryDraft({vehicleTitle, intent = 'enquiry'}: {vehicleT
       <div {...stylex.props(s.actions)}>
         {dealer.phoneE164 ? <a href={'tel:' + dealer.phoneE164} {...stylex.props(s.action)}><Phone size={19}/>{tx('Call dealer')} · {dealer.phoneDisplay}</a> : null}
         {mail ? <a href={mail} {...stylex.props(s.action)}><Mail size={19}/>{tx('Open email draft')}</a> : null}
-        {whatsapp ? <a href={whatsapp} target="_blank" rel="noopener noreferrer" {...stylex.props(s.action)}><MessageCircle size={19}/>{tx('Open WhatsApp draft')}</a> : null}
+        {whatsapp ? <a href={whatsapp.href} target="_blank" rel="noopener noreferrer" {...stylex.props(s.action)}><MessageCircle size={19}/>{tx('Open WhatsApp draft')}</a> : null}
         <button type="button" onClick={copyDraft} {...stylex.props(s.secondary)}><Copy size={18}/>{tx('Copy draft')}</button>
       </div>
       <p {...stylex.props(s.note)}>{tx(!dealer.phoneE164 && !mail && !whatsapp ? 'Contact details are not available. Copy the draft to send it separately.' : 'Review the draft before sending it. Nothing is sent automatically.')}</p>

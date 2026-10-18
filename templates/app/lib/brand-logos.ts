@@ -39,5 +39,5 @@ const logos: Record<string, BrandArtwork> = {
 };
 
 export function brandLogo(make: string): BrandArtwork | undefined {
-  return logos[make.trim().toLowerCase()];
+  return logos[make.trim().toLowerCase().replace(/^mercedes\s+benz$/, 'mercedes-benz')];
 }
