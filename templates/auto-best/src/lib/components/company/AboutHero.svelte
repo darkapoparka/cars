@@ -4,7 +4,6 @@
   const i18n = getI18n();
 
   import { resolve } from '$app/paths';
-  import { brand } from '$config/brand';
   import { leadSite } from '$config/lead-site';
   import { page } from '$app/state';
   import { resolveCompanyHero } from '$lib/ui/company-hero';
