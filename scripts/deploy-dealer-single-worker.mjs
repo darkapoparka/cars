@@ -6,7 +6,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {randomUUID} from 'node:crypto';
 import {spawnSync} from 'node:child_process';
-import {pathToFileURL} from 'node:url';
+import {isEntrypoint} from './lib/cli-entrypoint.mjs';
 import {ROOT,json,sha256,inside} from './lib/workflow.mjs';
 import {registeredCompositionIdentity} from './package-dealer-single-worker.mjs';
 import {hashArchive,readZipReceipt,parseWranglerDeploymentOutput,activeDeployment} from './deploy-uk-cloudflare.mjs';
@@ -137,13 +137,42 @@ function validateCanonicalExposureSnapshot(snapshot, lease, workerName) {
   'Canonical exposure requires the unmodified live-reader snapshot, fetch-only handler and ASSETS-only bindings');
 }
 
+export const MINIMUM_SPARE_WORKER_SCRIPTS=1;
+const freshObservation=(value,now)=>Number.isFinite(Date.parse(value))&&now-Date.parse(value)>=0&&now-Date.parse(value)<=15*60*1000;
+/** A reviewed allowance is separate from inventory and never inferred from purchase intent. */
+export function validateSingletonCapacity(snapshot,{now=Date.now()}={}) {
+ assert(snapshot?.accountId===SINGLETON_ACCOUNT&&Number.isSafeInteger(snapshot.scriptCount)&&snapshot.scriptCount>=0&&
+  [100,500].includes(snapshot.allowedScripts),'Worker capacity requires the target account, a nonnegative count and a supported 100/500 allowance');
+ const review=snapshot.capacityReview;
+ if(review==null){
+  assert(snapshot.allowedScripts===100,'The 500-script allowance requires fresh reviewed paid-plan capacity evidence');
+  return {allowedScripts:100,basis:'conservative-free-default',reviewSha256:null,minimumSpareScripts:MINIMUM_SPARE_WORKER_SCRIPTS};
+ }
+ assert(review.schemaVersion===1&&review.kind==='cars-workers-capacity-review'&&review.accountId===SINGLETON_ACCOUNT&&review.reviewed===true&&
+  freshObservation(review.observedAt,now)&&freshObservation(review.reviewedAt,now)&&Date.parse(review.reviewedAt)>=Date.parse(review.observedAt)&&
+  review.allowedScripts===snapshot.allowedScripts&&({free:100,paid:500})[review.workersPlan]===snapshot.allowedScripts,
+  'Fresh reviewed account-matching Workers plan and allowance evidence is required');
+ const source=review.source;
+ assert(hex64(source?.sha256)&&(
+  review.evidence==='authenticated-cloudflare-connector'&&source.endpoint==='/accounts/'+SINGLETON_ACCOUNT+'/subscriptions'||
+  review.evidence==='authenticated-cloudflare-dashboard'&&source.url==='https://dash.cloudflare.com/'+SINGLETON_ACCOUNT+'/workers/plans'),
+  'Worker capacity evidence requires an exact authenticated account plan source and retained observation hash');
+ const policy=review.reservePolicy;
+ if(policy!==undefined)assert(policy&&typeof policy==='object'&&!Array.isArray(policy)&&canonical(Object.keys(policy).sort())===canonical(['minimumSpareScripts','reason'])&&
+  [0,1].includes(policy.minimumSpareScripts)&&typeof policy.reason==='string'&&policy.reason.trim().length>0&&policy.reason.length<=1000&&
+  (policy.minimumSpareScripts!==0||review.workersPlan==='paid'&&snapshot.allowedScripts===500),'Explicit spare-capacity policy requires a concrete reason; zero reserve requires reviewed Workers Paid 500');
+ return {allowedScripts:snapshot.allowedScripts,basis:'reviewed-workers-'+review.workersPlan,reviewSha256:sha256(canonical(review)),minimumSpareScripts:policy?.minimumSpareScripts??MINIMUM_SPARE_WORKER_SCRIPTS};
+}
+const capacityPins=snapshot=>canonical({allowedScripts:snapshot.allowedScripts,capacityReview:snapshot.capacityReview??null});
+
 export function validateCurrentSingletonTarget(snapshot,workerName,{now=Date.now(),after=false,versionId,canonicalExposure}={}) {
  assert(snapshot?.accountId===SINGLETON_ACCOUNT&&snapshot.workerName===workerName&&snapshot.exists===true&&snapshot.workersDev===true&&
   Number.isFinite(Date.parse(snapshot.checkedAt))&&Math.abs(now-Date.parse(snapshot.checkedAt))<=15*60*1000&&
   Array.isArray(snapshot.routes)&&(canonicalExposure || snapshot.routes.length===0)&&Array.isArray(snapshot.domains)&&snapshot.domains.length===0&&
   Array.isArray(snapshot.tailConsumers)&&snapshot.tailConsumers.length===0&&Array.isArray(snapshot.schedules)&&snapshot.schedules.length===0&&
-  Array.isArray(snapshot.bindings)&&Number.isSafeInteger(snapshot.scriptCount)&&Number.isSafeInteger(snapshot.allowedScripts)&&snapshot.allowedScripts===100,
+  Array.isArray(snapshot.bindings),
   'Fresh existing public Worker snapshot without foreign routes/resources is required');
+ validateSingletonCapacity(snapshot,{now});
  if(canonicalExposure)validateCanonicalExposureSnapshot(snapshot,canonicalExposure,workerName);
  const ownServices=new Set(['auto-best','modern','import','app','mobile','karento-best','signature','carwow'].map(k=>workerName+'-'+k));
  for(const binding of snapshot.bindings){
@@ -162,16 +191,18 @@ export function validateAbsentSingletonTarget(snapshot,workerName,publicOrigin,{
   snapshot.evidence==='authenticated-cloudflare-connector'&&Number.isFinite(Date.parse(snapshot.checkedAt))&&now-Date.parse(snapshot.checkedAt)>=0&&now-Date.parse(snapshot.checkedAt)<=15*60*1000&&
   ['routes','domains','tailConsumers','schedules','bindings','versionTraffic'].every(key=>Array.isArray(snapshot[key])&&snapshot[key].length===0)&&snapshot.versionId===null,
   'Fresh authenticated absent Worker snapshot without routes/resources is required');
- assert(Number.isSafeInteger(snapshot.scriptCount)&&snapshot.scriptCount>=0&&Number.isSafeInteger(snapshot.allowedScripts)&&snapshot.allowedScripts===100&&snapshot.scriptCount<snapshot.allowedScripts,
-  'New Worker requires dated available capacity within the existing 100-script allowance');
+ const capacity=validateSingletonCapacity(snapshot,{now});
+ assert(snapshot.scriptCount+1+capacity.minimumSpareScripts<=snapshot.allowedScripts,
+  'New Worker capacity must retain the reviewed spare script slots after creation');
  const inventory=snapshot.scriptInventory;
- assert(inventory?.complete===true&&inventory.endpoint==='/accounts/'+SINGLETON_ACCOUNT+'/workers/scripts'&&Array.isArray(inventory.names)&&
+ assert(inventory?.complete===true&&freshObservation(inventory.checkedAt,now)&&Date.parse(inventory.checkedAt)<=Date.parse(snapshot.checkedAt)&&
+  inventory.endpoint==='/accounts/'+SINGLETON_ACCOUNT+'/workers/scripts'&&Array.isArray(inventory.names)&&
   inventory.names.length===snapshot.scriptCount&&inventory.names.every(name=>typeof name==='string'&&name.length>0&&name.length<=128)&&
   new Set(inventory.names).size===inventory.names.length&&!inventory.names.includes(workerName),'Complete account script inventory must prove the exact Worker is absent');
  return snapshot;
 }
 
-const absentTargetPins=snapshot=>canonical(Object.fromEntries(['accountId','workerName','publicOrigin','exists','workersDev','routes','domains','tailConsumers','schedules','bindings','versionId','versionTraffic','scriptCount','allowedScripts','evidence'].map(key=>[key,snapshot[key]]).concat([['scriptInventory',{complete:snapshot.scriptInventory.complete,endpoint:snapshot.scriptInventory.endpoint,names:[...snapshot.scriptInventory.names].sort()}]])));
+const absentTargetPins=snapshot=>canonical(Object.fromEntries(['accountId','workerName','publicOrigin','exists','workersDev','routes','domains','tailConsumers','schedules','bindings','versionId','versionTraffic','scriptCount','allowedScripts','evidence'].map(key=>[key,snapshot[key]]).concat([['capacityReview',snapshot.capacityReview??null],['scriptInventory',{complete:snapshot.scriptInventory.complete,endpoint:snapshot.scriptInventory.endpoint,names:[...snapshot.scriptInventory.names].sort()}]])));
 
 /** Only the qualified Wrangler's exact API endpoint/code establishes live absence. */
 export function validateWranglerAbsentTarget(result,accountId,workerName) {
@@ -213,6 +244,7 @@ export async function inspectFleetSingleton({reviewFile,mode='update-existing',r
  assert(review.schemaVersion===1&&typeof review.reviewed==='boolean'&&(!review.reviewed||Number.isFinite(Date.parse(review.reviewedAt)))&&review.accountId===SINGLETON_ACCOUNT&&
   hex40(review.sourceCommit)&&hex40(review.sourceTree)&&hex64(review.inputDigest)&&hex64(review.outputDigest)&&hex64(review.artifactDigest),'Explicit fleet review and exact source/artifact pins are required');
  deploymentMode(mode,review);
+ const capacity=validateSingletonCapacity(review.providerSnapshot);
  if(review.canonicalExposure){assert(mode==='update-existing','Canonical exposure supports existing Workers only');validateCanonicalExposureLease(review.canonicalExposure,review);}
  const archiveMode=review.archiveMode??'file';assert(['file','original-byte-buffer'].includes(archiveMode),'Unsupported original archive input mode');
  const memory=archiveMode==='original-byte-buffer';
@@ -238,7 +270,7 @@ export async function inspectFleetSingleton({reviewFile,mode='update-existing',r
   sourcePublication,privatePublishingMirror:{...(review.privatePublishingMirror??{repository:review.repository,state:'not-verified-by-this-bridge'}),verifiedByBridge:false},accountId:SINGLETON_ACCOUNT,workerName:receipt.workerName,publicOrigin:receipt.publicOrigin,
   sourceCommit:receipt.sourceCommit,sourceTree:receipt.sourceTree,inputDigest:receipt.inputDigest,sourceReleases:receipt.sourceReleases,runId:review.runId,attempt:review.attempt,artifactId:review.artifactId,
   archiveMode,archiveDigest:review.archiveDigest,artifactDigest:inventory.digest,outputDigest:receipt.outputDigest,applicationCount:6,workerCount:1,serviceBindings:[],deploymentMode:mode,readyToDeploy:review.reviewed,
-  ...(composition?{canonicalComposition:composition}:{}),...(review.canonicalExposure?{canonicalExposure:review.canonicalExposure,requiresLiveExposureReader:true}:{}),deployments:0,hostedVerified:false,ownerAccepted:false}};
+  ...(composition?{canonicalComposition:composition}:{}),...(review.canonicalExposure?{canonicalExposure:review.canonicalExposure,requiresLiveExposureReader:true}:{}),capacity,minimumSpareScripts:mode==='create-singleton'?capacity.minimumSpareScripts:null,deployments:0,hostedVerified:false,ownerAccepted:false}};
 }
 
 export function localWrangler({toolPackage,accountId=SINGLETON_ACCOUNT}={}) {
@@ -297,6 +329,7 @@ export async function runFleetSingletonDeployment({reviewFile,write=false,mode='
  const snapshotFor=async(stage,versionId)=>{const notBefore=new Date().toISOString(),snapshot=await uploader.snapshot(review,versionId?{versionId}:{});
   return review.canonicalExposure?readCanonicalExposureSnapshot({snapshot,review,readExposure,stage,notBefore}):snapshot;};
  const before=validateBefore(await snapshotFor('before'));
+ assert(capacityPins(before)===capacityPins(review.providerSnapshot),'Worker allowance evidence changed since the exact provider review');
  if(creating)assert(absentTargetPins(before)===absentTargetPins(review.providerSnapshot),'Absent target/capacity changed since the exact provider review');
  const lock=path.join(reports,'deployment.lock');const fd=fs.openSync(lock,'wx');fs.writeSync(fd,JSON.stringify({pid:process.pid,workerName:review.workerName}));fs.closeSync(fd);
  try{
@@ -304,16 +337,18 @@ export async function runFleetSingletonDeployment({reviewFile,write=false,mode='
   assert(sha256(fs.readFileSync(context.reviewFile))===context.reviewSha256,'Reviewed deployment input changed');
   const sealed=verifyFleetSingletonDirectory(review.directory);assert(sealed.inventory.digest===review.artifactDigest,'Sealed output changed before upload');
   const fresh=validateBefore(await snapshotFor('locked'));
+  assert(capacityPins(fresh)===capacityPins(before),'Worker allowance evidence changed before upload');
   if(creating)assert(absentTargetPins(fresh)===absentTargetPins(before),'Absent target/capacity changed before upload');
   else assert(fresh.versionId===before.versionId,'Public Worker advanced before upload');
   if(review.archiveMode==='original-byte-buffer'){const original=await hashArchive(originalArchiveBytes);assert(original.bytes===context.remote.artifact.size_in_bytes&&'sha256:'+original.sha256===context.remote.artifact.digest,'Original GitHub archive bytes changed before upload');}
   const deployed=await uploader.upload(review,report);assert(uuid(deployed.version_id)&&deployed.worker_name===review.workerName,'Uploader returned another Worker/version');
   if(creating)assert(canonical(deployed.targets)===canonical([review.publicOrigin]),'New Worker upload exposed another target or origin');
   const after=validateCurrentSingletonTarget(await snapshotFor('after',deployed.version_id),review.workerName,{after:true,versionId:deployed.version_id,canonicalExposure:review.canonicalExposure});
+  assert(capacityPins(after)===capacityPins(before),'Worker allowance evidence changed during upload; reconcile the deployment');
   assert(verifyFleetSingletonDirectory(review.directory).inventory.digest===review.artifactDigest,'Output changed during upload');
   const receipt={...context.plan,type:'cars-existing-fleet-single-worker-deployment',status:'deployed',deployments:1,versionId:deployed.version_id,deploymentId:after.deploymentId,versionTraffic:after.versionTraffic,
-   liveBindings:after.bindings,scriptCountSnapshot:{count:before.scriptCount,allowed:before.allowedScripts,checkedAt:before.resourceSnapshotCheckedAt??before.checkedAt,evidence:before.evidence},scriptCountVerifiedAfter:false,
-   ...(creating?{creationEvidence:{absentBefore:true,scriptInventorySha256:sha256(canonical(before.scriptInventory)),checkedAt:before.checkedAt,expectedScriptCountAfter:before.scriptCount+1,scriptCountVerifiedAfter:false,absenceProbe:before.absenceProbe??null}}:{}),
+   liveBindings:after.bindings,scriptCountSnapshot:{count:before.scriptCount,allowed:before.allowedScripts,checkedAt:before.resourceSnapshotCheckedAt??before.checkedAt,evidence:before.evidence,capacity:validateSingletonCapacity(before)},scriptCountVerifiedAfter:false,
+   ...(creating?{creationEvidence:{absentBefore:true,scriptInventorySha256:sha256(canonical(before.scriptInventory)),checkedAt:before.checkedAt,expectedScriptCountAfter:before.scriptCount+1,minimumSpareScripts:validateSingletonCapacity(before).minimumSpareScripts,expectedSpareScriptsAfter:before.allowedScripts-before.scriptCount-1,scriptCountVerifiedAfter:false,absenceProbe:before.absenceProbe??null}}:{}),
    ...(review.canonicalExposure?{exposurePreservation:{canonicalOrigin:review.canonicalExposure.canonicalOrigin,zoneId:review.canonicalExposure.zoneId,routeId:review.canonicalExposure.routeId,before:before.canonicalExposureRead,locked:fresh.canonicalExposureRead,after:after.canonicalExposureRead}}:{}),rollback:before,reviewSha256:context.reviewSha256,tool:uploader.tool,finishedAt:new Date().toISOString(),hostedVerified:false,ownerAccepted:false};
   writeNew(path.join(report,'deployment.json'),receipt);return {...receipt,receiptFile:path.join(report,'deployment.json')};
  }catch(error){if(fs.existsSync(report)&&!fs.existsSync(path.join(report,'needs-reconciliation.json')))writeNew(path.join(report,'needs-reconciliation.json'),{status:'needs-reconciliation',workerName:review.workerName,error:error.message,at:new Date().toISOString()});throw error;
@@ -321,7 +356,7 @@ export async function runFleetSingletonDeployment({reviewFile,write=false,mode='
 }
 
 export function parseDeploymentArgs(argv){const result={write:false};for(let i=0;i<argv.length;i++){const key=argv[i];if(key==='--write'){assert(!result.write,'Repeated --write');result.write=true;}else{assert(['--input','--wrangler-package','--mode'].includes(key)&&argv[i+1]&&!argv[i+1].startsWith('--'),'Use --input REVIEW_JSON [--mode create-singleton] [--write --wrangler-package ABS_PACKAGE_JSON]');const name=key==='--input'?'reviewFile':key==='--mode'?'mode':'toolPackage';assert(!result[name],'Repeated '+key);result[name]=argv[++i];}}assert(result.reviewFile,'Use --input REVIEW_JSON [--mode create-singleton] [--write --wrangler-package ABS_PACKAGE_JSON]');if(result.mode)assert(['update-existing','create-singleton'].includes(result.mode),'Use update-existing or create-singleton mode');return result;}
-if(process.argv[1]&&import.meta.url===pathToFileURL(path.resolve(process.argv[1])).href){try{
- if(process.argv.slice(2).includes('--help'))console.log('Usage: deploy-dealer-single-worker.mjs --input REVIEW_JSON [--mode create-singleton] [--write --wrangler-package ABS_PACKAGE_JSON]\nDefault: exact artifact/source inspection only; update-existing is the default target mode. Explicit create-singleton requires a reviewed absent target and available capacity. --write uploads once with standard Wrangler authentication. No builds/downloads/dependent Workers.');
+if(isEntrypoint(import.meta.url)){try{
+ if(process.argv.slice(2).includes('--help'))console.log('Usage: deploy-dealer-single-worker.mjs --input REVIEW_JSON [--mode create-singleton] [--write --wrangler-package ABS_PACKAGE_JSON]\nDefault: exact artifact/source inspection only; update-existing is the default target mode. Explicit create-singleton requires a fresh complete absent-target inventory. Reserve defaults to one slot; a concrete reviewed Paid-500 policy can explicitly use the final slot. Capacity defaults to 100; 500 requires fresh reviewed paid-plan evidence. --write uploads once with standard Wrangler authentication. No builds/downloads/dependent Workers.');
  else console.log(JSON.stringify(await runFleetSingletonDeployment(parseDeploymentArgs(process.argv.slice(2))),null,2));
 }catch(error){console.error(error.message);process.exitCode=1;}}

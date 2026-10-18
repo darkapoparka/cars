@@ -1,8 +1,9 @@
-import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import path from 'node:path';
+import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import path from 'node:path';import os from 'node:os';
+import {spawnSync} from 'node:child_process';import {pathToFileURL} from 'node:url';
 import {sha256,filesAt} from './lib/workflow.mjs';
 import {artifactInventory} from './lib/uk-cloudflare-artifacts.mjs';
 import {createCanonicalComposition,canonicalCompositionEntry,CANONICAL_ORIGINAL_WORKER_PATH} from './publishing/canonical-origin-wrapper.mjs';
-import {validateSingletonGitHubBuild,validateSourcePublication,validateCurrentSingletonTarget,validateAbsentSingletonTarget,validateWranglerAbsentTarget,inspectFleetSingleton,runFleetSingletonDeployment,parseDeploymentArgs,canonicalExposureDigests,validateCanonicalExposureLease,readCanonicalExposureSnapshot,CANONICAL_EXPOSURE_ZONE,CANONICAL_EXPOSURE_KIND} from './deploy-dealer-single-worker.mjs';
+import {validateSingletonGitHubBuild,validateSourcePublication,validateSingletonCapacity,MINIMUM_SPARE_WORKER_SCRIPTS,validateCurrentSingletonTarget,validateAbsentSingletonTarget,validateWranglerAbsentTarget,inspectFleetSingleton,runFleetSingletonDeployment,parseDeploymentArgs,canonicalExposureDigests,validateCanonicalExposureLease,readCanonicalExposureSnapshot,CANONICAL_EXPOSURE_ZONE,CANONICAL_EXPOSURE_KIND} from './deploy-dealer-single-worker.mjs';
 import {SINGLETON_ACCOUNT} from './assemble-existing-fleet-single-worker.mjs';
 import {tinyArea,writeTinySingleton,writeFixture,tinyZip} from './test-fixtures/fleet-single-worker.mjs';
 const oldVersion='11111111-1111-4111-8111-111111111111',newVersion='22222222-2222-4222-8222-222222222222';
@@ -85,7 +86,7 @@ test('an unqualified uploader is refused before any deployment output is written
 
 function creationFixture(t,options){
  const f=fixture(t,options),snapshot={...f.snapshot,publicOrigin:f.publicOrigin,exists:false,workersDev:false,bindings:[],versionId:null,versionTraffic:[],scriptCount:2,
-  scriptInventory:{complete:true,endpoint:'/accounts/'+SINGLETON_ACCOUNT+'/workers/scripts',names:['preserved-other','retained-qualification']}};
+  scriptInventory:{complete:true,checkedAt:f.snapshot.checkedAt,endpoint:'/accounts/'+SINGLETON_ACCOUNT+'/workers/scripts',names:['preserved-other','retained-qualification']}};
  f.review.deploymentMode='create-singleton';f.review.providerSnapshot=snapshot;writeFixture(f.reviewFile,f.review);
  return {...f,snapshot,options:{...f.options,mode:'create-singleton'}};
 }
@@ -108,7 +109,9 @@ test('creation absence evidence rejects existing targets, unknown inventories, o
  for(const change of [{exists:true},{workersDev:true},{accountId:'a'.repeat(32)},{workerName:'cars-another'},{publicOrigin:'https://cars-another.darkapoparka1.workers.dev'},
   {checkedAt:'2020-01-01T00:00:00Z'},{checkedAt:new Date(Date.now()+60000).toISOString()},{evidence:'unverified'},{routes:[{pattern:'foreign/*'}]},{domains:['example.com']},{schedules:['* * * * *']},{tailConsumers:['foreign']},
   {bindings:[{type:'assets',name:'ASSETS'}]},{versionId:oldVersion},{versionTraffic:[{version_id:oldVersion,percentage:100}]},{scriptCount:-1},{scriptCount:NaN},{scriptCount:100},{scriptCount:101},{allowedScripts:101},
-  {scriptInventory:{...f.snapshot.scriptInventory,complete:false}},{scriptInventory:{...f.snapshot.scriptInventory,endpoint:'/accounts/foreign/workers/scripts'}},{scriptInventory:{...f.snapshot.scriptInventory,names:['only-one']}},
+  {scriptInventory:{...f.snapshot.scriptInventory,complete:false}},{scriptInventory:{...f.snapshot.scriptInventory,checkedAt:undefined}},
+  {scriptInventory:{...f.snapshot.scriptInventory,checkedAt:'2020-01-01T00:00:00Z'}},{scriptInventory:{...f.snapshot.scriptInventory,checkedAt:new Date(Date.now()+60000).toISOString()}},
+  {scriptInventory:{...f.snapshot.scriptInventory,endpoint:'/accounts/foreign/workers/scripts'}},{scriptInventory:{...f.snapshot.scriptInventory,names:['only-one']}},
   {scriptInventory:{...f.snapshot.scriptInventory,names:['duplicate','duplicate']}},{scriptInventory:{...f.snapshot.scriptInventory,names:['preserved-other',f.workerName]}}]){
   assert.throws(()=>validateAbsentSingletonTarget({...f.snapshot,...change},f.workerName,f.publicOrigin),/required|capacity|inventory/);
  }
@@ -341,4 +344,120 @@ test('canonical lease cannot authorize Worker creation and exposure preservation
  const provider=canonicalProvider(g,{snapshotChange:value=>++reads===2?{...value,versionId:newVersion,versionTraffic:[{version_id:newVersion,percentage:100}]}:value,upload:async()=>{uploads++;throw Error('must not upload');}});
  await assert.rejects(runFleetSingletonDeployment({...g.options,write:true,readExposure:freshCanonicalRead(g),provider}),/advanced before upload/);assert.equal(uploads,0);
  const h=canonicalFixture(t);await assert.rejects(runFleetSingletonDeployment({...h.options,write:true,readExposure:freshCanonicalRead(h),provider:canonicalProvider(h,{snapshotChange:value=>({...value,versionTraffic:[{version_id:value.versionId,percentage:50}]})})}),/active/);
+});
+
+function capacityReview(allowedScripts=500,now=Date.now()){
+ const observedAt=new Date(now).toISOString();
+ return {schemaVersion:1,kind:'cars-workers-capacity-review',accountId:SINGLETON_ACCOUNT,reviewed:true,reviewedAt:observedAt,observedAt,
+  workersPlan:allowedScripts===500?'paid':'free',allowedScripts,evidence:'authenticated-cloudflare-connector',
+  source:{endpoint:'/accounts/'+SINGLETON_ACCOUNT+'/subscriptions',sha256:'a'.repeat(64)}};
+}
+function atCapacity(f,count,allowedScripts=100){
+ const names=Array.from({length:count},(_,i)=>'preserved-worker-'+i);
+ return {...f.snapshot,scriptCount:count,allowedScripts,...(allowedScripts===500?{capacityReview:capacityReview()}:{}),
+  scriptInventory:{...f.snapshot.scriptInventory,names}};
+}
+
+test('capacity defaults conservatively to 100 and accepts 500 only with fresh reviewed account plan evidence',t=>{
+ const f=creationFixture(t),now=Date.now(),paid={...f.snapshot,allowedScripts:500,capacityReview:capacityReview(500,now)};
+ assert.deepEqual(validateSingletonCapacity(f.snapshot),{allowedScripts:100,basis:'conservative-free-default',reviewSha256:null,minimumSpareScripts:1});
+ assert.equal(validateSingletonCapacity(paid,{now}).basis,'reviewed-workers-paid');
+ assert.match(validateSingletonCapacity(paid,{now}).reviewSha256,/^[a-f0-9]{64}$/);
+ const free={...f.snapshot,capacityReview:capacityReview(100,now)};assert.equal(validateSingletonCapacity(free,{now}).basis,'reviewed-workers-free');
+ const dashboard={...paid,capacityReview:{...paid.capacityReview,evidence:'authenticated-cloudflare-dashboard',
+  source:{url:'https://dash.cloudflare.com/'+SINGLETON_ACCOUNT+'/workers/plans',sha256:'b'.repeat(64)}}};
+ assert.equal(validateSingletonCapacity(dashboard,{now}).allowedScripts,500);
+ for(const change of [{capacityReview:undefined},{capacityReview:null},{allowedScripts:101},{allowedScripts:1000},{scriptCount:-1},
+  {capacityReview:{...paid.capacityReview,reviewed:false}},{capacityReview:{...paid.capacityReview,accountId:'b'.repeat(32)}},
+  {capacityReview:{...paid.capacityReview,workersPlan:'free'}},{capacityReview:{...paid.capacityReview,workersPlan:'business'}},
+  {capacityReview:{...paid.capacityReview,allowedScripts:100}},{capacityReview:{...paid.capacityReview,observedAt:new Date(now-16*60*1000).toISOString()}},
+  {capacityReview:{...paid.capacityReview,observedAt:new Date(now+1).toISOString()}},{capacityReview:{...paid.capacityReview,reviewedAt:new Date(now-1).toISOString()}},
+  {capacityReview:{...paid.capacityReview,reviewedAt:new Date(now+1).toISOString()}},{capacityReview:{...paid.capacityReview,evidence:'user-intends-to-purchase'}},
+  {capacityReview:{...paid.capacityReview,source:{endpoint:'/accounts/foreign/subscriptions',sha256:'a'.repeat(64)}}},
+  {capacityReview:{...paid.capacityReview,source:{endpoint:paid.capacityReview.source.endpoint,sha256:'not-a-hash'}}},
+  {capacityReview:{...dashboard.capacityReview,source:{...dashboard.capacityReview.source,url:'https://dash.cloudflare.com/foreign/workers/plans'}}}]){
+  assert.throws(()=>validateSingletonCapacity({...paid,...change},{now}),/capacity|allowance|evidence/);
+ }
+});
+
+test('new Workers retain one spare slot at both supported allowances, while existing updates need no new slot',t=>{
+ const f=creationFixture(t);assert.equal(MINIMUM_SPARE_WORKER_SCRIPTS,1);
+ for(const allowed of [100,500]){
+  assert.equal(validateAbsentSingletonTarget(atCapacity(f,allowed-2,allowed),f.workerName,f.publicOrigin).scriptCount,allowed-2);
+  for(const count of [allowed-1,allowed,allowed+1])assert.throws(()=>validateAbsentSingletonTarget(atCapacity(f,count,allowed),f.workerName,f.publicOrigin),/spare/);
+  const existing={...createdSnapshot(f,oldVersion),scriptCount:allowed,allowedScripts:allowed,...(allowed===500?{capacityReview:capacityReview()}:{}),bindings:[{name:'ASSETS',type:'assets'}]};
+  assert.equal(validateCurrentSingletonTarget(existing,f.workerName).scriptCount,allowed);
+  if(allowed===500)assert.throws(()=>validateCurrentSingletonTarget({...existing,capacityReview:undefined},f.workerName),/paid-plan capacity evidence/);
+ }
+});
+
+test('only an explicit reasoned reviewed Paid-500 zero-reserve policy may use the final slot',t=>{
+ const f=creationFixture(t),reason='The authorized 400-additional-dealer cohort uses the final paid slot; further creates will wait for an account quota increase.';
+ const full=atCapacity(f,499,500);full.capacityReview.reservePolicy={minimumSpareScripts:0,reason};
+ assert.equal(validateSingletonCapacity(full).minimumSpareScripts,0);assert.equal(validateAbsentSingletonTarget(full,f.workerName,f.publicOrigin).scriptCount,499);
+ assert.throws(()=>validateAbsentSingletonTarget({...full,scriptCount:500,scriptInventory:{...full.scriptInventory,names:[...full.scriptInventory.names,'last-existing-worker']}},f.workerName,f.publicOrigin),/spare/);
+ for(const reservePolicy of [{minimumSpareScripts:0,reason:''},{minimumSpareScripts:0,reason:'   '},{minimumSpareScripts:-1,reason},{minimumSpareScripts:2,reason},{minimumSpareScripts:'0',reason},{minimumSpareScripts:0,reason,extra:true}]){
+  assert.throws(()=>validateSingletonCapacity({...full,capacityReview:{...full.capacityReview,reservePolicy}}),/policy/);
+ }
+ const free={...atCapacity(f,99),capacityReview:{...capacityReview(100),reservePolicy:{minimumSpareScripts:0,reason}}};
+ assert.throws(()=>validateAbsentSingletonTarget(free,f.workerName,f.publicOrigin),/zero reserve/);
+});
+
+test('an explicit final-slot creation records effective zero reserve and cannot overflow Paid 500',async t=>{
+ const f=creationFixture(t);f.snapshot=atCapacity(f,499,500);f.snapshot.capacityReview.reservePolicy={minimumSpareScripts:0,reason:'Use the authorized final dealer slot after a complete account inventory; hold further creates until quota expansion.'};f.review.providerSnapshot=f.snapshot;writeFixture(f.reviewFile,f.review);let uploads=0;
+ const provider={tool:{version:'4.149.0'},snapshot:async(_review,{versionId}={})=>versionId?createdSnapshot(f,versionId):f.snapshot,upload:async()=>{uploads++;return{worker_name:f.workerName,version_id:newVersion,targets:[f.publicOrigin]};}};
+ const plan=await inspectFleetSingleton(f.options);assert.equal(plan.plan.minimumSpareScripts,0);
+ const result=await runFleetSingletonDeployment({...f.options,write:true,provider});assert.equal(uploads,1);assert.equal(result.creationEvidence.expectedScriptCountAfter,500);assert.equal(result.creationEvidence.minimumSpareScripts,0);assert.equal(result.creationEvidence.expectedSpareScriptsAfter,0);assert.equal(result.scriptCountSnapshot.capacity.minimumSpareScripts,0);assert.equal(result.scriptCountVerifiedAfter,false);
+});
+
+test('paid allowance without reviewed evidence fails read-only inspection before GitHub metadata reads',async t=>{
+ const f=fixture(t);f.review.providerSnapshot.allowedScripts=500;writeFixture(f.reviewFile,f.review);let reads=0;
+ await assert.rejects(inspectFleetSingleton({...f.options,readMetadata:async()=>{reads++;return f.remote;}}),/paid-plan capacity evidence/);
+ assert.equal(reads,0);assert.equal(fs.existsSync(path.join(f.root,'runtime/dealer-single-worker-deployments')),false);
+});
+
+test('reviewed paid creation preserves capacity provenance without inventing post-upload count verification',async t=>{
+ const f=creationFixture(t);f.snapshot=atCapacity(f,498,500);f.review.providerSnapshot=f.snapshot;writeFixture(f.reviewFile,f.review);let uploads=0;
+ const provider={tool:{version:'4.149.0'},snapshot:async(_review,{versionId}={})=>versionId?createdSnapshot(f,versionId):f.snapshot,
+  upload:async()=>{uploads++;return{worker_name:f.workerName,version_id:newVersion,targets:[f.publicOrigin]};}};
+ const result=await runFleetSingletonDeployment({...f.options,write:true,provider});
+ assert.equal(uploads,1);assert.equal(result.scriptCountSnapshot.allowed,500);assert.equal(result.scriptCountSnapshot.capacity.basis,'reviewed-workers-paid');
+ assert.equal(result.creationEvidence.expectedScriptCountAfter,499);assert.equal(result.creationEvidence.minimumSpareScripts,1);assert.equal(result.creationEvidence.expectedSpareScriptsAfter,1);
+ assert.equal(result.scriptCountVerifiedAfter,false);assert.equal(result.hostedVerified,false);assert.equal(result.ownerAccepted,false);
+});
+
+test('changed allowance evidence or reserve policy is refused before upload for both update and creation',async t=>{
+ for(const mode of ['update-existing','create-singleton'])for(const phase of ['before','locked'])for(const drift of ['source','reserve-policy']){
+  const f=mode==='create-singleton'?creationFixture(t):fixture(t);f.snapshot={...f.snapshot,allowedScripts:500,capacityReview:capacityReview()};f.review.providerSnapshot=f.snapshot;writeFixture(f.reviewFile,f.review);
+  let reads=0,uploads=0;const changed={...f.snapshot,capacityReview:drift==='source'?{...f.snapshot.capacityReview,source:{...f.snapshot.capacityReview.source,sha256:'b'.repeat(64)}}:
+   {...f.snapshot.capacityReview,reservePolicy:{minimumSpareScripts:0,reason:'An otherwise valid reviewed final-slot policy still requires a new exact provider review.'}}};
+  const provider={tool:{version:'4.149.0'},snapshot:async()=>++reads===(phase==='before'?1:2)?changed:f.snapshot,upload:async()=>{uploads++;throw Error('must not upload');}};
+  await assert.rejects(runFleetSingletonDeployment({...f.options,write:true,provider}),/allowance evidence changed/);assert.equal(uploads,0);
+ }
+});
+
+test('reserve-policy drift after an upload retains reconciliation evidence and forbids a blind retry',async t=>{
+ const f=creationFixture(t);f.snapshot={...f.snapshot,allowedScripts:500,capacityReview:capacityReview()};f.review.providerSnapshot=f.snapshot;writeFixture(f.reviewFile,f.review);let uploads=0;
+ const provider={tool:{version:'4.149.0'},snapshot:async(_review,{versionId}={})=>versionId?{...createdSnapshot(f,versionId),
+  capacityReview:{...f.snapshot.capacityReview,reservePolicy:{minimumSpareScripts:0,reason:'A changed valid paid policy must not be substituted after upload.'}}}:f.snapshot,
+  upload:async()=>{uploads++;return{worker_name:f.workerName,version_id:newVersion,targets:[f.publicOrigin]};}};
+ await assert.rejects(runFleetSingletonDeployment({...f.options,write:true,provider}),/allowance evidence changed during upload/);
+ const reports=path.join(f.root,'runtime/dealer-single-worker-deployments'),dir=fs.readdirSync(reports).find(n=>n.startsWith(f.client));
+ assert.equal(fs.existsSync(path.join(reports,dir,'needs-reconciliation.json')),true);assert.equal(fs.existsSync(path.join(reports,dir,'deployment.json')),false);
+ await assert.rejects(runFleetSingletonDeployment({...f.options,write:true,provider}),/earlier deployment/);assert.equal(uploads,1);
+});
+
+test('a deployment CLI invoked through a junction executes help and argument errors, while import stays silent',t=>{
+ const temp=fs.realpathSync(os.tmpdir()),area=fs.mkdtempSync(path.join(temp,'cars-deploy-entrypoint-')),alias=path.join(area,'scripts alias'),scripts=fs.realpathSync(import.meta.dirname);
+ t.after(()=>{
+  const resolved=fs.realpathSync(area),relative=path.relative(temp,resolved);
+  assert(relative.startsWith('cars-deploy-entrypoint-')&&path.dirname(relative)==='.'&&!path.isAbsolute(relative));
+  if(fs.existsSync(alias)){assert(fs.lstatSync(alias).isSymbolicLink());assert.equal(fs.realpathSync(alias),scripts);fs.unlinkSync(alias);}
+  fs.rmSync(resolved,{recursive:true});
+ });
+ fs.symlinkSync(scripts,alias,process.platform==='win32'?'junction':'dir');
+ const entry=path.join(alias,'deploy-dealer-single-worker.mjs'),run=args=>spawnSync(process.execPath,args,{encoding:'utf8',timeout:30000,windowsHide:true,env:{...process.env,GIT_NO_LAZY_FETCH:'1',GIT_TERMINAL_PROMPT:'0'}});
+ const help=run([entry,'--help']);assert.ifError(help.error);assert.equal(help.status,0,help.stderr);assert.match(help.stdout,/Usage:/);assert.match(help.stdout,/500 requires fresh reviewed paid-plan evidence/);assert.equal(help.stderr,'');
+ const invalid=run([entry,'--invalid-entrypoint-regression-argument']);assert.ifError(invalid.error);assert.equal(invalid.status,1);assert.equal(invalid.stdout,'');assert.match(invalid.stderr,/Use --input/);
+ const imported=run(['--input-type=module','--eval','await import('+JSON.stringify(pathToFileURL(entry).href)+');']);assert.ifError(imported.error);assert.equal(imported.status,0,imported.stderr);assert.equal(imported.stdout,'');assert.equal(imported.stderr,'');
 });
