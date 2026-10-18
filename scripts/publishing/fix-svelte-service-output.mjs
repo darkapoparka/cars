@@ -1,6 +1,6 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import { pathToFileURL } from 'node:url';
+import { fileURLToPath } from 'node:url';
 
 const escapeRegex = (value) => value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 const exists = async (file) => fs.stat(file).then(() => true, (error) => {
@@ -111,7 +111,23 @@ export async function fixSvelteServiceOutput({ output = path.resolve('.vercel/ou
   return { base, staticPages: staticRoutes.length, functionHandlers: handlerRepairs.length };
 }
 
-if (process.argv[1] && import.meta.url === pathToFileURL(path.resolve(process.argv[1])).href) {
+// This script is exported on its own, so keep its entrypoint check self-contained.
+// Node resolves the module physically while argv may retain a Windows junction.
+async function isDirectEntry() {
+  if (!process.argv[1]) return false;
+  const canonical = async file => {
+    const physical = await fs.realpath(path.resolve(file));
+    return process.platform === 'win32' ? physical.toLowerCase() : physical;
+  };
+  try {
+    return await canonical(process.argv[1]) === await canonical(fileURLToPath(import.meta.url));
+  } catch (error) {
+    if (['ENOENT', 'ENOTDIR'].includes(error.code)) return false;
+    throw error;
+  }
+}
+
+if (await isDirectEntry()) {
   try {
     if (process.argv[2] === '--help') console.log('Usage: node scripts/fix-svelte-service-output.mjs [/variant-2|/variant-3|/variant-6] (run from a built Svelte service root)');
     else if (process.argv.length > 3) throw new Error('Expected at most one service base argument');
