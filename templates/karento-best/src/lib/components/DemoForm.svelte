@@ -17,6 +17,7 @@
 
 <form
   {...attributes}
+  method="dialog"
   onsubmit={(event) => {
     event.preventDefault();
     submitted = true;

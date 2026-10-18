@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-18",
+  "state": "Exact missing source assets recovered; release and owner visual acceptance pending",
+  "canonicalRenderer": {
+    "revision": "23911ca0e6731033a12a129eb0dcfefd5a410191",
+    "path": "templates/karento-best/src/lib/components/mobile/BottomNavigationIcon.svelte",
+    "blob": "43a7bfa9afdc6837f257b45d0c3e53509db0fc86",
+    "expectedAssets": "static/assets/icons/signature-graphite/{home,vehicles,services,shop,menu}.png"
+  },
+  "originalManifest": {
+    "path": "provenance/signature-bottom-navigation-icons.json",
+    "sha256": "2aaf0b40a9ab5265c97a3fbf575706eaf6390bd8aefd10bfc6e76bf8e04e2dd5",
+    "status": "Original generation/reuse record retained unchanged; its absolute source and cross-template reference identify historical local inputs."
+  },
+  "portableGeneratedSource": {
+    "path": "provenance/graphite-bottom-nav-source-2026-10-14.png",
+    "sha256": "b4e8ff3bf4bf4a37a1d07d0532edad1302cee8868a5aefc86a85af7f8a9161e3",
+    "bytes": 771226,
+    "width": 2172,
+    "height": 724,
+    "generator": "Built-in Image Gen; underlying model version not exposed"
+  },
+  "assets": [
+    {
+      "path": "static/assets/icons/signature-graphite/home.png",
+      "sha256": "117e797428bbd42dda3345f04458e4fc31a1af8a567d312d171d837e4142f9fd",
+      "bytes": 13578,
+      "width": 96,
+      "height": 96
+    },
+    {
+      "path": "static/assets/icons/signature-graphite/vehicles.png",
+      "sha256": "0474e4b2192bcb8abf7812b6132a710e2d1a886dba0ca175da884e683177d905",
+      "bytes": 11627,
+      "width": 96,
+      "height": 96
+    },
+    {
+      "path": "static/assets/icons/signature-graphite/services.png",
+      "sha256": "95ba21aa5b5567a59aa13da57fa655066519c636cf0f735ab7c52e9c3e45a3ad",
+      "bytes": 9098,
+      "width": 96,
+      "height": 96
+    },
+    {
+      "path": "static/assets/icons/signature-graphite/shop.png",
+      "sha256": "cbef5721ea4ce8d8af0034d16a26580ddeaa0ccabf37871fb7b2ec1091dfa4ee",
+      "bytes": 12844,
+      "width": 96,
+      "height": 96
+    },
+    {
+      "path": "static/assets/icons/signature-graphite/menu.png",
+      "sha256": "0af1a9aaf8233df0722ce827932f75cd359707328129ce3856314228ac11358f",
+      "bytes": 12330,
+      "width": 96,
+      "height": 96
+    }
+  ],
+  "license": {
+    "path": "static/assets/icons/lucide-LICENSE.txt",
+    "sha256": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57",
+    "upstream": "https://raw.githubusercontent.com/lucide-icons/lucide/d672fc43dbf60962d9d829e35bc3b3e5ed89a178/LICENSE",
+    "verified": "Official pinned license retrieved18October2026; original local complete license retained."
+  },
+  "preservation": "No renderer, CSS, palette, geometry or icon bytes changed. Later16October local refined icons and their consumer/provenance remain separate unpublished work.",
+  "validation": "Every recovered PNG byte count and SHA256 matches the original14October record; all five are96x96. Original generation source hash matches; source image visually inspected. Canonical byte availability is separate from mounted/hosted checks.",
+  "notPerformed": [
+    "Lock promotion",
+    "Dealer refresh",
+    "Framework build",
+    "Hosted image/visual acceptance",
+    "Provider changes"
+  ]
+}

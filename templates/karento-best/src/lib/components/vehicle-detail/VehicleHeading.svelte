@@ -89,10 +89,11 @@
       {#if showMap}{#if dealer.businessPreview}<a
             class="text-md-medium neutral-1000 mr-30 desktop-type-meta"
             href={locale.href(
-              "https://www.google.com/maps/search/?api=1&query=" +
-                encodeURIComponent(
-                  dealer.locations[0]?.address || heading.location,
-                ),
+              dealer.locations[0]?.mapUrl ??
+                "https://www.google.com/maps/search/?api=1&query=" +
+                  encodeURIComponent(
+                    dealer.locations[0]?.address || heading.location,
+                  ),
             )}
             target="_blank"
             rel="noopener noreferrer"

@@ -53,7 +53,8 @@
                 <a
                   class="karento-contact-directions"
                   href={locale.href(
-                    `https://www.google.com/maps/search/?api=1&query=${locationQuery}`,
+                    dealer.locations[0]?.mapUrl ??
+                      `https://www.google.com/maps/search/?api=1&query=${locationQuery}`,
                   )}
                   target="_blank"
                   rel="noopener noreferrer"

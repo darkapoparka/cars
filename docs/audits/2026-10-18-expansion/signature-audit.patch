@@ -1,0 +1,310 @@
+diff --git a/templates/karento-best/src/lib/components/DemoForm.svelte b/templates/karento-best/src/lib/components/DemoForm.svelte
+index 0dc240faf5f3..38acd5c5ba65 100644
+--- a/templates/karento-best/src/lib/components/DemoForm.svelte
++++ b/templates/karento-best/src/lib/components/DemoForm.svelte
+@@ -17,6 +17,7 @@
+ 
+ <form
+   {...attributes}
++  method="dialog"
+   onsubmit={(event) => {
+     event.preventDefault();
+     submitted = true;
+diff --git a/templates/karento-best/src/lib/components/search/DealershipVehicleSearch.svelte b/templates/karento-best/src/lib/components/search/DealershipVehicleSearch.svelte
+index e19c01b42dc3..4b8826f32158 100644
+--- a/templates/karento-best/src/lib/components/search/DealershipVehicleSearch.svelte
++++ b/templates/karento-best/src/lib/components/search/DealershipVehicleSearch.svelte
+@@ -7,6 +7,7 @@
+   import { afterNavigate } from "$app/navigation";
+   import { page } from "$app/state";
+   import { dealer } from "#lib/content.ts";
++  import { resolveInventoryVehicle } from "#lib/data/vehicle-inventory.ts";
+   import { vehicleListings } from "#lib/data/vehicle-listing.ts";
+   import {
+     readDesktopCatalogFilters,
+@@ -26,10 +27,9 @@
+   );
+   const id = $props.id();
+   const inventory = $derived(
+-    vehicleListings.gridFourColumns.map((card) => ({
+-      ...card,
+-      ...dealer.inventory[card.title],
+-    })),
++    vehicleListings.gridFourColumns.map((card) =>
++      resolveInventoryVehicle(card, dealer.inventory),
++    ),
+   );
+   const types = $derived(
+     [...new Set(inventory.map(vehicleBodyType).filter(Boolean))].sort(
+diff --git a/templates/karento-best/src/lib/components/search/VehicleSearch.svelte b/templates/karento-best/src/lib/components/search/VehicleSearch.svelte
+index 749648321d3c..6c309a9c8272 100644
+--- a/templates/karento-best/src/lib/components/search/VehicleSearch.svelte
++++ b/templates/karento-best/src/lib/components/search/VehicleSearch.svelte
+@@ -12,6 +12,7 @@
+   import { page } from "$app/state";
+   import { goto } from "$app/navigation";
+   import { dealer } from "#lib/content.ts";
++  import { resolveInventoryVehicle } from "#lib/data/vehicle-inventory.ts";
+   import { vehicleListings } from "#lib/data/vehicle-listing.ts";
+   import CatalogFilterSheet from "#lib/components/vehicle-listing/CatalogFilterSheet.svelte";
+   import MobileIcon from "#lib/components/mobile/MobileIcon.svelte";
+@@ -42,10 +43,9 @@
+   const optionsId = $props.id();
+   const applied = $derived(readCatalogFilters(page.url.searchParams));
+   const inventory = $derived(
+-    vehicleListings.gridFourColumns.map((card) => ({
+-      ...card,
+-      ...dealer.inventory[card.title],
+-    })),
++    vehicleListings.gridFourColumns.map((card) =>
++      resolveInventoryVehicle(card, dealer.inventory),
++    ),
+   );
+   const searchLabel = $derived(
+     applied.q ||
+diff --git a/templates/karento-best/src/lib/components/vehicle-detail/VehicleHeading.svelte b/templates/karento-best/src/lib/components/vehicle-detail/VehicleHeading.svelte
+index aad4cb7c44bb..544b7e864a55 100644
+--- a/templates/karento-best/src/lib/components/vehicle-detail/VehicleHeading.svelte
++++ b/templates/karento-best/src/lib/components/vehicle-detail/VehicleHeading.svelte
+@@ -89,10 +89,11 @@
+       {#if showMap}{#if dealer.businessPreview}<a
+             class="text-md-medium neutral-1000 mr-30 desktop-type-meta"
+             href={locale.href(
+-              "https://www.google.com/maps/search/?api=1&query=" +
+-                encodeURIComponent(
+-                  dealer.locations[0]?.address || heading.location,
+-                ),
++              dealer.locations[0]?.mapUrl ??
++                "https://www.google.com/maps/search/?api=1&query=" +
++                  encodeURIComponent(
++                    dealer.locations[0]?.address || heading.location,
++                  ),
+             )}
+             target="_blank"
+             rel="noopener noreferrer"
+diff --git a/templates/karento-best/src/lib/components/vehicle-listing/CatalogHeroTypes.svelte b/templates/karento-best/src/lib/components/vehicle-listing/CatalogHeroTypes.svelte
+index bea927e2dc28..f1c3e109efcb 100644
+--- a/templates/karento-best/src/lib/components/vehicle-listing/CatalogHeroTypes.svelte
++++ b/templates/karento-best/src/lib/components/vehicle-listing/CatalogHeroTypes.svelte
+@@ -6,6 +6,7 @@
+   import { goto } from "$app/navigation";
+   import { page } from "$app/state";
+   import { dealer } from "#lib/content.ts";
++  import { resolveInventoryVehicle } from "#lib/data/vehicle-inventory.ts";
+   import { compareBodyTypes } from "#lib/data/body-type-artwork.ts";
+   import {
+     readDesktopCatalogFilters,
+@@ -16,7 +17,7 @@
+ 
+   let { cards }: { cards: readonly ListingVehicle[] } = $props();
+   const inventory = $derived(
+-    cards.map((card) => ({ ...card, ...dealer.inventory[card.title] })),
++    cards.map((card) => resolveInventoryVehicle(card, dealer.inventory)),
+   );
+   const types = $derived(
+     [...new Set(inventory.map(vehicleBodyType).filter(Boolean))].sort(
+diff --git a/templates/karento-best/src/lib/components/vehicle-listing/DesktopCatalogFilters.svelte b/templates/karento-best/src/lib/components/vehicle-listing/DesktopCatalogFilters.svelte
+index ecea0f41bf9a..08d523635d78 100644
+--- a/templates/karento-best/src/lib/components/vehicle-listing/DesktopCatalogFilters.svelte
++++ b/templates/karento-best/src/lib/components/vehicle-listing/DesktopCatalogFilters.svelte
+@@ -6,6 +6,7 @@
+   import { afterNavigate, goto } from "$app/navigation";
+   import { page } from "$app/state";
+   import { dealer } from "#lib/content.ts";
++  import { resolveInventoryVehicle } from "#lib/data/vehicle-inventory.ts";
+   import type { ListingVehicle } from "#lib/data/vehicle-listing.ts";
+   import {
+     desktopCatalogDestination,
+@@ -41,7 +42,7 @@
+   const id = $props.id();
+   const filterDialogId = id + "-filters";
+   const inventory = $derived(
+-    cards.map((card) => ({ ...card, ...dealer.inventory[card.title] })),
++    cards.map((card) => resolveInventoryVehicle(card, dealer.inventory)),
+   );
+   const active = $derived(
+     desktopCatalogFilterKeys.filter((key) => filters[key]),
+diff --git a/templates/karento-best/src/lib/components/vehicle-listing/DesktopCatalogResults.svelte b/templates/karento-best/src/lib/components/vehicle-listing/DesktopCatalogResults.svelte
+index 63ee59d9d30f..de671f540d02 100644
+--- a/templates/karento-best/src/lib/components/vehicle-listing/DesktopCatalogResults.svelte
++++ b/templates/karento-best/src/lib/components/vehicle-listing/DesktopCatalogResults.svelte
+@@ -5,6 +5,7 @@
+   const locale = useLocale();
+   import { page } from "$app/state";
+   import { dealer } from "#lib/content.ts";
++  import { resolveInventoryVehicle } from "#lib/data/vehicle-inventory.ts";
+   import type { ListingVehicle } from "#lib/data/vehicle-listing.ts";
+   import {
+     readDesktopCatalogFilters,
+@@ -20,7 +21,7 @@
+   const desktop = new MediaQuery("(min-width: 992px)");
+   let { cards }: { cards: readonly ListingVehicle[] } = $props();
+   const inventory = $derived(
+-    cards.map((card) => ({ ...card, ...dealer.inventory[card.title] })),
++    cards.map((card) => resolveInventoryVehicle(card, dealer.inventory)),
+   );
+   const filters = $derived(readDesktopCatalogFilters(page.url.searchParams));
+   const filtered = $derived(matchDesktopCatalog(inventory, filters));
+diff --git a/templates/karento-best/src/lib/components/vehicle-listing/MobileCatalog.svelte b/templates/karento-best/src/lib/components/vehicle-listing/MobileCatalog.svelte
+index 3076632c8f33..d0016aacdf14 100644
+--- a/templates/karento-best/src/lib/components/vehicle-listing/MobileCatalog.svelte
++++ b/templates/karento-best/src/lib/components/vehicle-listing/MobileCatalog.svelte
+@@ -7,6 +7,7 @@
+   import { afterNavigate, goto } from "$app/navigation";
+   import { onDestroy, tick } from "svelte";
+   import { dealer } from "#lib/content.ts";
++  import { resolveInventoryVehicle } from "#lib/data/vehicle-inventory.ts";
+   import MobilePill from "#lib/components/mobile/MobilePill.svelte";
+   import MobilePillRail from "#lib/components/mobile/MobilePillRail.svelte";
+   import type {
+@@ -44,7 +45,7 @@
+       : locale.t("ui.mobile-catalog.vehicles"),
+   );
+   const inventory = $derived(
+-    cards.map((card) => ({ ...card, ...dealer.inventory[card.title] })),
++    cards.map((card) => resolveInventoryVehicle(card, dealer.inventory)),
+   );
+   const items = $derived(products ?? inventory);
+   const applied = $derived(readCatalogFilters(page.url.searchParams));
+diff --git a/templates/karento-best/src/lib/components/vehicles/PopularVehicleFilters.svelte b/templates/karento-best/src/lib/components/vehicles/PopularVehicleFilters.svelte
+index 185e667cbe81..8b7f523b5406 100644
+--- a/templates/karento-best/src/lib/components/vehicles/PopularVehicleFilters.svelte
++++ b/templates/karento-best/src/lib/components/vehicles/PopularVehicleFilters.svelte
+@@ -8,6 +8,7 @@
+   import { MediaQuery } from "svelte/reactivity";
+   import { goto } from "$app/navigation";
+   import { dealer } from "#lib/content.ts";
++  import { resolveInventoryVehicle } from "#lib/data/vehicle-inventory.ts";
+   import { vehicleListings } from "#lib/data/vehicle-listing.ts";
+   import {
+     catalogDestination,
+@@ -24,10 +25,9 @@
+   let panel = $state<CatalogPanel>("make");
+   let compact = $state(false);
+   const items = $derived(
+-    vehicleListings.gridFourColumns.map((card) => ({
+-      ...card,
+-      ...dealer.inventory[card.title],
+-    })),
++    vehicleListings.gridFourColumns.map((card) =>
++      resolveInventoryVehicle(card, dealer.inventory),
++    ),
+   );
+   function openPanel(nextPanel: CatalogPanel) {
+     draft = { ...emptyCatalogFilters };
+diff --git a/templates/karento-best/src/lib/data/vehicle-detail-selection.ts b/templates/karento-best/src/lib/data/vehicle-detail-selection.ts
+index 8b751ff516a8..9e1f3f66f024 100644
+--- a/templates/karento-best/src/lib/data/vehicle-detail-selection.ts
++++ b/templates/karento-best/src/lib/data/vehicle-detail-selection.ts
+@@ -7,6 +7,7 @@
+ } from "./vehicle-listing.ts";
+ import { dashboardOwnerInventory, dashboardWishlist } from "./dashboard.ts";
+ import { referenceVehicles } from "./vehicles.ts";
++import { resolveInventoryVehicle } from "./vehicle-inventory.ts";
+ import {
+   referenceHeading,
+   referenceSliderGallery,
+@@ -48,14 +49,9 @@
+     ? catalog.find((card) => card.id === ids[0])
+     : vehicleListings.gridFourColumns[0];
+   if (!source) return null;
+-  const supplied = inventory[source.title];
+   return {
+     id: source.id,
+-    card: {
+-      ...source,
+-      ...supplied,
+-      ...(supplied ? { detailImage: supplied.detailImage } : {}),
+-    },
++    card: resolveInventoryVehicle(source, inventory),
+   };
+ }
+ 
+diff --git a/templates/karento-best/src/lib/data/vehicle-inventory.ts b/templates/karento-best/src/lib/data/vehicle-inventory.ts
+new file mode 100644
+index 000000000000..a7f8ba5f52b6
+--- /dev/null
++++ b/templates/karento-best/src/lib/data/vehicle-inventory.ts
+@@ -0,0 +1,13 @@
++import type { DealerContent } from "../content.ts";
++import type { ListingVehicle } from "./vehicle-listing.ts";
++
++/** Supplied inventory replaces complete records; only the template slot ID remains. */
++export function resolveInventoryVehicle(
++  reference: ListingVehicle,
++  inventory: DealerContent["inventory"],
++): ListingVehicle {
++  const supplied = Object.hasOwn(inventory, reference.title)
++    ? inventory[reference.title]
++    : undefined;
++  return supplied ? { ...supplied, id: reference.id } : reference;
++}
+diff --git a/templates/karento-best/src/lib/sections/ContactEnquiry.svelte b/templates/karento-best/src/lib/sections/ContactEnquiry.svelte
+index 79adc73babc0..1bb5242daef0 100644
+--- a/templates/karento-best/src/lib/sections/ContactEnquiry.svelte
++++ b/templates/karento-best/src/lib/sections/ContactEnquiry.svelte
+@@ -53,7 +53,8 @@
+                 <a
+                   class="karento-contact-directions"
+                   href={locale.href(
+-                    `https://www.google.com/maps/search/?api=1&query=${locationQuery}`,
++                    dealer.locations[0]?.mapUrl ??
++                      `https://www.google.com/maps/search/?api=1&query=${locationQuery}`,
+                   )}
+                   target="_blank"
+                   rel="noopener noreferrer"
+diff --git a/templates/karento-best/tests/vehicle-presentation.test.ts b/templates/karento-best/tests/vehicle-presentation.test.ts
+index 96e4952f9574..66daab945b2b 100644
+--- a/templates/karento-best/tests/vehicle-presentation.test.ts
++++ b/templates/karento-best/tests/vehicle-presentation.test.ts
+@@ -1,7 +1,9 @@
+ import assert from "node:assert/strict";
+ import { test } from "node:test";
+ import { vehicleListings } from "../src/lib/data/vehicle-listing.ts";
++import { selectedReferenceVehicle } from "../src/lib/data/vehicle-detail-selection.ts";
+ import { presentVehicle } from "../src/lib/i18n/vehicle.ts";
++import type { VehicleCardContent } from "../src/lib/content.ts";
+ import type { LocaleContext } from "../src/lib/i18n/context.svelte.ts";
+ import type { Locale } from "../src/lib/i18n/locales.ts";
+ import {
+@@ -21,6 +23,40 @@
+     count: (value, entity = "vehicles") => formatCount(value, entity, locale),
+   };
+ }
++
++test("complete dealer records do not inherit reference stock facts", () => {
++  const source = vehicleListings.gridFourColumns[0];
++  const supplied: VehicleCardContent = {
++    sample: false,
++    image: "/supplied-vehicle.webp",
++    imageAlt: "Supplied electric vehicle",
++    href: "/vehicle?id=supplied-record",
++    title: "Supplied electric vehicle",
++    location: "Sofia",
++    mileage: "40,000 km",
++    transmission: "Single-speed",
++    fuel: "Electric",
++    seats: "5 seats",
++    price: "€19,000",
++    pricePeriod: "",
++    action: "View car",
++    rating: "",
++    reviews: "",
++  };
++  const selected = selectedReferenceVehicle(
++    new URLSearchParams({ vehicle: source.id }),
++    { [source.title]: supplied },
++  );
++  assert.ok(selected);
++  assert.equal(selected.id, source.id);
++  assert.equal(selected.card.href, supplied.href);
++  for (const locale of ["en", "bg"] as const) {
++    assert.deepEqual(
++      presentVehicle(selected.card, context(locale)),
++      presentVehicle(supplied, context(locale)),
++    );
++  }
++});
+ 
+ test("stock highlights remain optional, regardless of a vehicle's foreign location", () => {
+   const stock = {

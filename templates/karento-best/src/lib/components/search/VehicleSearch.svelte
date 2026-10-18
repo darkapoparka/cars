@@ -12,6 +12,7 @@
   import { page } from "$app/state";
   import { goto } from "$app/navigation";
   import { dealer } from "#lib/content.ts";
+  import { resolveInventoryVehicle } from "#lib/data/vehicle-inventory.ts";
   import { vehicleListings } from "#lib/data/vehicle-listing.ts";
   import CatalogFilterSheet from "#lib/components/vehicle-listing/CatalogFilterSheet.svelte";
   import MobileIcon from "#lib/components/mobile/MobileIcon.svelte";
@@ -42,10 +43,9 @@
   const optionsId = $props.id();
   const applied = $derived(readCatalogFilters(page.url.searchParams));
   const inventory = $derived(
-    vehicleListings.gridFourColumns.map((card) => ({
-      ...card,
-      ...dealer.inventory[card.title],
-    })),
+    vehicleListings.gridFourColumns.map((card) =>
+      resolveInventoryVehicle(card, dealer.inventory),
+    ),
   );
   const searchLabel = $derived(
     applied.q ||
