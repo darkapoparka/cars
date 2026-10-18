@@ -53,7 +53,9 @@ function DraftWizard({ mode }: { mode: Mode }) {
       const saved = patchState({ draft: { ...draft, status: 'saved', mode } });
       setPersisted(saved);
       if (!saved)
-        notify('Saving is unavailable. Your draft is kept for this session only. Nothing was sent.');
+        notify(
+          'Saving is unavailable. Your draft is kept for this session only. Nothing was sent.',
+        );
       setDone(true);
     }
   }
@@ -242,8 +244,8 @@ function DraftWizard({ mode }: { mode: Mode }) {
                     ))}
                   </div>
                   <p {...stylex.props(ui.small, ui.muted)}>
-                    Photos are previewed in this session only and are never uploaded. Text fields
-                    are saved on this device.
+                    Photos stay in this session and are never uploaded. Saving text to this device
+                    may fail.
                   </p>
                 </>
               )}
