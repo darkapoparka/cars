@@ -145,7 +145,8 @@ function creationGuidance(plan, variant = null) {
   return guide;
 }
 
-export async function createNewClient(plan, { readGit = gitRead, copy = copySource } = {}) {
+export async function createNewClient(plan, { readGit = gitRead, copy = copySource, mutationWriter } = {}) {
+  if(mutationWriter&&(typeof mutationWriter.writeDetached!=='function'||typeof mutationWriter.installTree!=='function'))throw Error('Explicit proof-capable creator writer required');
   const { root, clientRoot, client, manifest, plans } = plan;
   const qualification=plan.sourceQualification?readNewClientQualification(root,plan.sourceQualification,client):null;
   if (path.resolve(clientRoot) !== inside(root, 'clients/' + client) || manifest.slug !== client) throw new Error('Invalid canonical client plan.');
@@ -163,35 +164,42 @@ export async function createNewClient(plan, { readGit = gitRead, copy = copySour
     const parent = inside(root, 'runtime/new-clients'); fs.mkdirSync(parent, { recursive: true });
     staging = fs.mkdtempSync(path.join(parent, client + '-'));
     const stagedClient = path.join(staging, 'dealer'); fs.mkdirSync(stagedClient);
-    const writeJson = (file, value) => fs.writeFileSync(file, JSON.stringify(value, null, 2) + '\n');
+    const declarations=new Map();
+    const writeOwned=(file,value)=>{const bytes=Buffer.isBuffer(value)?value:Buffer.from(value),name=path.relative(stagedClient,file).split(path.sep).join('/');
+      if(mutationWriter){const proof=mutationWriter.writeDetached(file,bytes,declarations.get(name)??null);if(!name.startsWith('../'))declarations.set(name,{sha256:sha256(bytes),mode:proof.mode});}
+      else fs.writeFileSync(file,bytes);
+    };
+    const writeJson = (file, value) => writeOwned(file, JSON.stringify(value, null, 2) + '\n');
     writeJson(path.join(stagedClient, 'dealer.json'), manifest);
     if (manifest.packaging.version === '5') {
       fs.mkdirSync(path.join(stagedClient, 'localization'));
       writeJson(path.join(stagedClient, 'localization/contract.json'), manifest.localization);
     }
-    fs.writeFileSync(path.join(stagedClient, 'AGENTS.md'), creationGuidance(plan));
+    writeOwned(path.join(stagedClient, 'AGENTS.md'), creationGuidance(plan));
     for (const item of plans) {
       if (JSON.stringify(verifyNewClientRelease(root, item.template, qualification===null?null:readNewClientQualification(root,plan.sourceQualification,client))) !== JSON.stringify(item.release)) throw new Error('Template release changed after planning: ' + item.template);
       const destination = path.join(stagedClient, item.template);
-      await materializeTemplateSource({ root, key: item.template, release: item.release, source: item.sourceRef, destination, copy });
+      const materialized=await materializeTemplateSource({ root, key: item.template, release: item.release, source: item.sourceRef, destination, copy, mutationWriter });
+      if(mutationWriter)for(const row of materialized.declaredFiles)declarations.set(item.template+'/'+row.path,{sha256:row.sha256,mode:row.mode});
       if (fingerprint(destination).digest !== item.release.digest) throw new Error('Copied source differs from the approved release: ' + item.template);
-      const copied = json(path.join(destination, '.template/source-manifest.json'));
+      const copied = mutationWriter?materialized.sourceManifest:json(path.join(destination, '.template/source-manifest.json'));
       copied.destination = item.destination; copied.exportPolicy = POLICY; copied.approvedTemplate = item.release; copied.workflowCommit = plan.checkout.head;
       writeJson(path.join(destination, '.template/source-manifest.json'), copied);
       const metadata = { schemaVersion: 1, client, templateKey: item.template, templateVersion: item.sourceRef.revision, createdAt: new Date().toISOString(), state: 'needs-personalization', selectedHome: item.homes[0].id, availableHomes: item.homes, offeredHomes: [], publicUrl: null, qa: { desktop: false, mobile: false, identity: false, contactPath: false }, crm: { leadId: null, demoProjectId: null, registered: false }, templateSource: { ...item.sourceRef, exportPolicy: POLICY }, packaging: { version: manifest.packaging.version, entry: manifest.variants.find(v => v.key === item.template).entry }, workflowCommit: plan.checkout.head };
       fs.mkdirSync(path.join(destination, '.client'), { recursive: true });
       writeJson(path.join(destination, '.client/project.json'), metadata);
-      fs.writeFileSync(path.join(destination, 'AGENTS.md'), creationGuidance(plan, item.template));
+      writeOwned(path.join(destination, 'AGENTS.md'), creationGuidance(plan, item.template));
     }
     const designs = manifest.variants.length === 6 ? 'six' : 'three';
-    fs.writeFileSync(path.join(stagedClient, 'CLIENT.md'), `# ${client}\n\nStatus: needs personalization, not ready for outreach.\n\nUse one sourced fact/inventory/approved raster-logo pack across all ${designs} apps. Preserve template heroes, banners, layout and interactions. Record unknown facts. Follow docs/WORKFLOW.md and docs/LEAD-PUBLISHING.md in Cars.\n\n${manifest.variants.length} applications, one canonical dealer folder, one publishing repository on main and one shared Admin demo link. Hosting requires a qualified publisher and separate hosted evidence. No CRM/provider record or adoption/personalization receipt was created by this helper.\n`);
+    writeOwned(path.join(stagedClient, 'CLIENT.md'), `# ${client}\n\nStatus: needs personalization, not ready for outreach.\n\nUse one sourced fact/inventory/approved raster-logo pack across all ${designs} apps. Preserve template heroes, banners, layout and interactions. Record unknown facts. Follow docs/WORKFLOW.md and docs/LEAD-PUBLISHING.md in Cars.\n\n${manifest.variants.length} applications, one canonical dealer folder, one publishing repository on main and one shared Admin demo link. Hosting requires a qualified publisher and separate hosted evidence. No CRM/provider record or adoption/personalization receipt was created by this helper.\n`);
     if (assertMainCheckout(root, { readGit, eventCommit: plan.checkout.eventCommit ?? null }).head !== plan.checkout.head) throw new Error('Cars main changed during copying; the staged candidate is preserved, not installed.');
     for (const item of plans) {
       if (JSON.stringify(verifyNewClientRelease(root, item.template, qualification===null?null:readNewClientQualification(root,plan.sourceQualification,client))) !== JSON.stringify(item.release) || fingerprint(path.join(stagedClient, item.template)).digest !== item.release.digest) throw new Error('Source or copied candidate changed during creation: ' + item.template);
     }
     if (resolveIdentity(root, client, plan.dealerId).exists) throw new Error('Dealer destination appeared during copying; existing work was not overwritten.');
     inside(root, 'clients/' + client); // Recheck ancestor links before installation.
-    fs.renameSync(stagedClient, clientRoot);
+    if(mutationWriter)mutationWriter.installTree(stagedClient,declarations);
+    else fs.renameSync(stagedClient, clientRoot);
     writeJson(path.join(staging, 'creation.json'), { createdAt: new Date().toISOString(), clientRoot, workflowCommit: plan.checkout.head, state: 'needs-personalization', templates: plans.map(p => ({ key: p.template, source: p.sourceRef })) });
     return { clientRoot, state: 'needs-personalization', applications: plans.length, receipt: path.join(staging, 'creation.json') };
   } catch (error) {

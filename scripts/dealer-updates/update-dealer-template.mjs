@@ -616,7 +616,7 @@ function writeDirectoryTreeChanges(root, before, after, assetPool) {
   }
 }
 
-export async function regenerateDealerCatalogs(candidateDirectory, carsRoot = defaultCarsRoot(), selectedKeys = ['auto-best','carwow']) {
+export async function regenerateDealerCatalogs(candidateDirectory, carsRoot = defaultCarsRoot(), selectedKeys = ['auto-best','carwow'], {mutationWriter} = {}) {
   for (const key of ['auto-best', 'carwow'].filter(key=>selectedKeys.includes(key))) {
     const directory = path.join(candidateDirectory, key);
     if (!fs.existsSync(directory)) continue;
@@ -634,8 +634,15 @@ export async function regenerateDealerCatalogs(candidateDirectory, carsRoot = de
       script = script.replaceAll('...prettierOptions, parser:',
         '...prettierOptions, plugins: [], parser:');
     }
-    // Execute the existing reviewed generator against this derived source only.
-    await import(`data:text/javascript;base64,${Buffer.from(script).toString('base64')}#${++catalogGeneration}`);
+    // Route only this reviewed generator's existing write seam. Unknown
+    // mutators hold; compilation and reads keep the maintained implementation.
+    if(mutationWriter){
+      if((script.match(/fs\.writeFileSync\(/g)||[]).length!==1||/fs\.(?:writeFile|appendFile|mkdir|rename|unlink|rm|copyFile|chmod)(?:Sync)?\(/.test(script.replaceAll('fs.writeFileSync(','__ownedWrite(')))throw Error(key+': unreviewed catalog mutation boundary');
+      const writerModule=pathToFileURL(path.join(carsRoot,'scripts/lib/source-mutation-writer.mjs')).href;
+      script=`import {sourceMutationWrite as __sourceWrite} from ${JSON.stringify(writerModule)};\nconst __ownedWrite=(file,data)=>__sourceWrite(file,Buffer.from(data),()=>{throw Error('Missing owned catalog writer');});\n`+script.replaceAll('fs.writeFileSync(','__ownedWrite(');
+      const {withSourceMutationWriter}=await import(writerModule);
+      await withSourceMutationWriter(mutationWriter,()=>import(`data:text/javascript;base64,${Buffer.from(script).toString('base64')}#${++catalogGeneration}`));
+    }else await import(`data:text/javascript;base64,${Buffer.from(script).toString('base64')}#${++catalogGeneration}`);
   }
 }
 

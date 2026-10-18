@@ -1,3 +1,4 @@
+import {sourceMutationWrite} from './source-mutation-writer.mjs';
 import fs from 'node:fs';
 import {reviewedRasterProvenance} from '../publishing/lead-branding.mjs';
 import {bindCurrentImportLogoAssets} from './client-presentation-policy.mjs';
@@ -8,7 +9,7 @@ import {replaceCandidateFile} from '../dealer-updates/three-way-upgrade.mjs';
 const sha256 = bytes => createHash('sha256').update(bytes).digest('hex');
 const read = file => fs.readFileSync(file, 'utf8');
 const publicRoot = (key, root) => path.join(root, key === 'modern' ? 'apps/web/public' : 'static');
-const copyLogoAsset=(source,target)=>{fs.mkdirSync(path.dirname(target),{recursive:true});const previous=fs.existsSync(target)?sha256(fs.readFileSync(target)):null;replaceCandidateFile(target,fs.readFileSync(source),{expectedPreviousSha256:previous});};
+const copyLogoAsset=(source,target)=>{const bytes=fs.readFileSync(source);return sourceMutationWrite(target,bytes,()=>{fs.mkdirSync(path.dirname(target),{recursive:true});const previous=fs.existsSync(target)?sha256(fs.readFileSync(target)):null;replaceCandidateFile(target,bytes,{expectedPreviousSha256:previous});});};
 const walk = (dir, files = []) => {
   if (!fs.existsSync(dir)) return files;
   for (const item of fs.readdirSync(dir, { withFileTypes: true })) {
@@ -153,7 +154,7 @@ export function applyDealerLogoContract({ key, oldVariant, candidate, profile })
     const file = path.join(candidate, relative);
     if (!fs.existsSync(file)) throw Error(`Missing logo consumer ${key}/${relative}`);
     const before = read(file), after = transform(before);
-    if (before !== after) { fs.writeFileSync(file, after); changed.push(relative); }
+    if (before !== after) { sourceMutationWrite(file,Buffer.from(after),()=>fs.writeFileSync(file,after)); changed.push(relative); }
   };
   const scalar = (text, name, value) => text.replace(new RegExp(`(\\b${name}\\s*:\\s*)['\"][^'\"]*['\"]`), (_, prefix) => prefix + JSON.stringify(value));
   for (const asset of Object.values(contract.assets)) {

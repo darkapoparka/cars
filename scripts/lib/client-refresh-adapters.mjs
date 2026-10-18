@@ -1,3 +1,4 @@
+import {withSourceMutationWriter,sourceMutationWrite} from './source-mutation-writer.mjs';
 import { ensureImportMenuKeys } from './import-menu-keys.mjs';
 import { repairAutoBestUkInventoryContract } from './client-refresh-uk-auto-best.mjs';
 import { UK_MODERN_CITY_PATHS, UK_IMPORT_PHONE_INPUT_PATHS, repairModernUkCityKeys, repairImportUkOptionalPhone } from './client-refresh-uk-native.mjs';
@@ -15,8 +16,8 @@ import { applyCarwowSafeContent, applyImportSafeContent, applyModernSafeContent 
 const exists = (file) => fs.existsSync(file);
 const read = (file) => fs.readFileSync(file, 'utf8').replace(/^\uFEFF/, '');
 const write = (file, value) => {
-  fs.mkdirSync(path.dirname(file), { recursive: true });
-  fs.writeFileSync(file, value.replace(/\r?\n/g, '\n'));
+  const bytes=Buffer.from(value.replace(/\r?\n/g, '\n'));
+  return sourceMutationWrite(file,bytes,()=>{fs.mkdirSync(path.dirname(file), { recursive: true });fs.writeFileSync(file,bytes);});
 };
 const q = (value) => JSON.stringify(String(value ?? ''));
 const textExtensions = new Set(['.js', '.mjs', '.cjs', '.ts', '.tsx', '.svelte', '.html', '.json']);
@@ -1691,7 +1692,7 @@ function patchImport({ oldVariant, candidate, profile, reviewedModernCopy }) {
 export function applyRefreshAdapter(options) {
   const adapter = { 'auto-best': patchAutoBest, modern: patchModern, carwow: patchCarwow, import: patchImport }[options.key];
   if (!adapter) throw new Error('No current refresh adapter for '+options.key);
-  return [...adapter(options), ...applyDealerLogoContract(options)];
+  return withSourceMutationWriter(options.mutationWriter,()=>[...adapter(options), ...applyDealerLogoContract(options)]);
 }
 
 export const refreshAdapterInternals = {

@@ -1,3 +1,4 @@
+import {sourceMutationWrite} from './source-mutation-writer.mjs';
 import {repairImportDealerDisclosureCatalog} from './import-dealer-inventory-copy.mjs';
 import fs from 'node:fs';
 import { createHash } from 'node:crypto';
@@ -6,8 +7,8 @@ import { readTypeScriptCatalog } from './catalog-literal.mjs';
 
 const read = (file) => fs.readFileSync(file, 'utf8').replace(/^\uFEFF/, '');
 const write = (file, value) => {
-  fs.mkdirSync(path.dirname(file), { recursive: true });
-  fs.writeFileSync(file, value.replace(/\r?\n/g, '\n'));
+  const bytes=Buffer.from(value.replace(/\r?\n/g, '\n'));
+  return sourceMutationWrite(file,bytes,()=>{fs.mkdirSync(path.dirname(file), { recursive: true });fs.writeFileSync(file,bytes);});
 };
 const q = (value) => JSON.stringify(String(value ?? ''));
 const isEnglish = (profile) => profile.business.countryCode !== 'BG';
@@ -297,7 +298,7 @@ export function applyImportSafeContent({ candidate, profile }) {
   }
   const offerFile = path.join(candidate, 'src/routes/offer/+page.svelte');
   if (fs.existsSync(offerFile)) {
-    fs.writeFileSync(offerFile, personalizeImportOfferCopy(read(offerFile), profile));
+    write(offerFile, personalizeImportOfferCopy(read(offerFile), profile));
     editorialFiles.push('src/routes/offer/+page.svelte');
   }
   const videoFile = path.join(candidate, 'src/lib/data/about-videos.ts');

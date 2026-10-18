@@ -3,14 +3,16 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {createRequire} from 'node:module';
+import {randomUUID} from 'node:crypto';
+import {createNewSourceResume,openNewSourceResume,continueNewSourceResume,ownedNewSourceCandidate} from './lib/new-source-resume.mjs';
 import {validateNewSourceRaster} from './lib/source-input-raster.mjs';
 import {isEntrypoint} from './lib/cli-entrypoint.mjs';
-import {ROOT,POLICY,git,json,sha256,inside,filesAt,gitFiles,resolveIdentity} from './lib/workflow.mjs';
+import {ROOT,POLICY,git,json,sha256,inside,filesAt,gitFiles,resolveIdentity,validateManifest} from './lib/workflow.mjs';
 import {assertMainCheckout,planNewClient,createNewClient,readNewClientQualification} from './new-client.mjs';
 import {normalizeDealerLocale} from './lib/dealer-locale.mjs';
 import {parseCatalogJson,assertNativeAdoption,assertNativeQualification,validateTemplateQualification,ADOPTION_FILE} from './lib/native-localization.mjs';
-import {loadDealerProfile} from './lib/client-refresh-normalize.mjs';
-import {applyRefreshAdapter} from './lib/client-refresh-adapters.mjs';
+import {loadDealerProfile,refreshNormalizeInternals} from './lib/client-refresh-normalize.mjs';
+import {applyRefreshAdapter,refreshAdapterInternals} from './lib/client-refresh-adapters.mjs';
 import {retainDealerVariantAssets,applyExtendedRefreshAdapter,sealExtendedVariant} from './lib/client-refresh-six.mjs';
 import {prepareAppDealer,sealAppDealerSource} from './lib/app-dealer-adapter.mjs';
 import {baseNativeManifest,assertAppVariant} from './publishing/app-variant.mjs';
@@ -236,21 +238,139 @@ export function verifyNewSourceProposal({patch,blobs,reusableBlobs}){
 }
 
 function committed(root,name,bytes,head){assert(gitObjectId('blob',bytes)===git(root,['rev-parse',head+':'+name]),'Source input must be exact committed main bytes: '+name);}
-const orchestrationPaths=['scripts/prepare-new-dealer-source.mjs','scripts/prepare-existing-fleet-source.mjs','scripts/lib/client-refresh-normalize.mjs','scripts/lib/client-refresh-adapters.mjs','scripts/lib/client-refresh-six.mjs','scripts/lib/app-dealer-adapter.mjs','scripts/publishing/native-mounts.mjs','scripts/publishing/lead-branding.mjs','scripts/publishing/logo-surface-bindings.mjs','scripts/publishing/dealer-share.mjs','scripts/dealer-updates/update-dealer-template.mjs','scripts/dealer-updates/pinned-template-source.mjs','scripts/package-dealer.mjs'];
+export const NEW_SOURCE_ORCHESTRATION_PATHS=Object.freeze([
+  "scripts/build-existing-fleet-cloudflare.mjs",
+  "scripts/copy-source.mjs",
+  "scripts/dealer-updates/pinned-template-source.mjs",
+  "scripts/dealer-updates/three-way-upgrade.mjs",
+  "scripts/dealer-updates/update-dealer-template.mjs",
+  "scripts/lib/app-dealer-adapter.mjs",
+  "scripts/lib/catalog-literal.mjs",
+  "scripts/lib/cli-entrypoint.mjs",
+  "scripts/lib/client-logo-contract.mjs",
+  "scripts/lib/client-presentation-policy.mjs",
+  "scripts/lib/client-refresh-adapters.mjs",
+  "scripts/lib/client-refresh-normalize.mjs",
+  "scripts/lib/client-refresh-presentation.mjs",
+  "scripts/lib/client-refresh-safe-content.mjs",
+  "scripts/lib/client-refresh-signature.mjs",
+  "scripts/lib/client-refresh-six.mjs",
+  "scripts/lib/client-refresh-uk-auto-best.mjs",
+  "scripts/lib/client-refresh-uk-native.mjs",
+  "scripts/lib/client-refresh-uk-next.mjs",
+  "scripts/lib/dealer-guidance.mjs",
+  "scripts/lib/dealer-locale.mjs",
+  "scripts/lib/dealer-localized-copy.mjs",
+  "scripts/lib/dealer-source.mjs",
+  "scripts/lib/derived-assets.mjs",
+  "scripts/lib/five-design-release.mjs",
+  "scripts/lib/fleet-component-repairs.mjs",
+  "scripts/lib/import-dealer-inventory-copy.mjs",
+  "scripts/lib/import-menu-keys.mjs",
+  "scripts/lib/modern-dealer-inventory-copy.mjs",
+  "scripts/lib/modern-dealer-services.mjs",
+  "scripts/lib/modern-free-native-query-build.mjs",
+  "scripts/lib/modern-free-services-build.mjs",
+  "scripts/lib/modern-free-static-runtime.mjs",
+  "scripts/lib/native-localization.mjs",
+  "scripts/lib/new-source-resume.mjs",
+  "scripts/lib/registered-listing-proof.mjs",
+  "scripts/lib/registered-modern-display-copy.mjs",
+  "scripts/lib/registered-reviewed-public-inputs.mjs",
+  "scripts/lib/six-design-release.mjs",
+  "scripts/lib/source-input-raster.mjs",
+  "scripts/lib/source-mutation-writer.mjs",
+  "scripts/lib/stock-price.mjs",
+  "scripts/lib/template-source.mjs",
+  "scripts/lib/uk-cloudflare-artifacts.mjs",
+  "scripts/lib/uk-import-brand-provider.mjs",
+  "scripts/lib/vercel-app-locale-preference.mjs",
+  "scripts/lib/vercel-git-observation.mjs",
+  "scripts/lib/vercel-native-current-package.mjs",
+  "scripts/lib/vercel-native-import-derivative.mjs",
+  "scripts/lib/vercel-native-mapping.mjs",
+  "scripts/lib/vercel-preview-stage.mjs",
+  "scripts/lib/workflow.mjs",
+  "scripts/new-client.mjs",
+  "scripts/package-dealer-single-worker.mjs",
+  "scripts/package-dealer.mjs",
+  "scripts/package-uk-single-worker.mjs",
+  "scripts/prepare-existing-fleet-source.mjs",
+  "scripts/prepare-new-dealer-source.mjs",
+  "scripts/publishing/app-source.mjs",
+  "scripts/publishing/app-variant.mjs",
+  "scripts/publishing/assets/feature-analytics.webp",
+  "scripts/publishing/assets/feature-assistant.webp",
+  "scripts/publishing/assets/feature-editing.webp",
+  "scripts/publishing/assets/feature-enquiries.webp",
+  "scripts/publishing/assets/feature-vehicle.webp",
+  "scripts/publishing/assets/feature-viewings.webp",
+  "scripts/publishing/auto-best-card-layout.mjs",
+  "scripts/publishing/auto-best-optional-contact.mjs",
+  "scripts/publishing/canonical-origin-wrapper.mjs",
+  "scripts/publishing/cloudflare-next.mjs",
+  "scripts/publishing/cloudflare-provider.mjs",
+  "scripts/publishing/cloudflare-svelte.mjs",
+  "scripts/publishing/dealer-contact-fallback.mjs",
+  "scripts/publishing/dealer-presentation.mjs",
+  "scripts/publishing/dealer-reference-package.mjs",
+  "scripts/publishing/dealer-share.mjs",
+  "scripts/publishing/lead-branding.mjs",
+  "scripts/publishing/legacy-detail-routes.mjs",
+  "scripts/publishing/logo-surface-bindings.mjs",
+  "scripts/publishing/modern-demo-database.mjs",
+  "scripts/publishing/mounts.mjs",
+  "scripts/publishing/native-mounts.mjs",
+  "scripts/publishing/preview-switcher.js",
+  "scripts/publishing/proposal-introduction.js",
+  "scripts/publishing/proposal-introduction.mjs",
+  "scripts/publishing/public-asset-retention.mjs",
+  "scripts/publishing/shared-media.mjs",
+  "scripts/publishing/signature-font-assets.mjs",
+  "scripts/publishing/signature-footer-contact.mjs",
+  "scripts/publishing/signature-navigation.mjs",
+  "scripts/publishing/signature-vercel-adapter.json",
+  "scripts/publishing/six-variant.mjs",
+  "scripts/publishing/switcher-messages.json",
+  "scripts/publishing/vercel-asset-plan.mjs",
+  "scripts/publishing/vercel-output-budget.mjs",
+  "scripts/publishing/vercel-service-assets.mjs",
+  "scripts/registered-dealer-adoption.mjs",
+  "scripts/template-release.mjs",
+  "scripts/workspace-doctor.mjs"
+]);
+const orchestrationPaths=NEW_SOURCE_ORCHESTRATION_PATHS;
 function fileMap(directory){return new Map(filesAt(directory,{filter:n=>proposalRetains(n)||NEW_SOURCE_FAMILIES.some(k=>n===k+'/.template')}).map(n=>[n,fs.readFileSync(inside(directory,n,{mustExist:true}))]));}
-function writeMap(directory,files,before=new Map()){for(const [name,bytes]of files){assert(safe(name),'Unsafe source output path');if(before.get(name)?.equals(bytes))continue;const file=inside(directory,name);fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,bytes);}}
+function writeMap(directory,files,before=null,mutationWriter){assert(mutationWriter,'Owned source mutation writer required');mutationWriter.writeMap(files,before);}
 function writeNew(file,bytes){fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,bytes,{flag:'wx'});}
+
+export function preflightNewSourceModern({root,dealer,facts,stock}){const business=refreshNormalizeInternals.normalizeBusiness(path.join(root,'clients',dealer),dealer,facts),profile={slug:dealer,business,listings:stock.records.map((row,index)=>refreshNormalizeInternals.normalizeListing(row,index,business))};for(const [index,listing]of profile.listings.entries())refreshAdapterInternals.modernListing(listing,index,'preflight-'+index,profile);return {listings:profile.listings.length,adapter:'maintained-modern',inputsUnchanged:true};}
+export function preflightNewSourceImport({root,dealer,facts,stock}){const business=refreshNormalizeInternals.normalizeBusiness(path.join(root,'clients',dealer),dealer,facts),profile={slug:dealer,business,listings:stock.records.map((row,index)=>refreshNormalizeInternals.normalizeListing(row,index,business))};refreshAdapterInternals.assertImportListingFacts(profile);return {listings:profile.listings.length,adapter:'maintained-import',inputsUnchanged:true};}
+export function validateNewSourceResumeOptions({dealer,write,resumeArea=null,resumeOwner=null}){const resuming=resumeArea!==null||resumeOwner!==null;assert(!resuming||(write&&typeof resumeArea==='string'&&typeof resumeOwner==='string'),'Resume requires --write and both --resume-area/--resume-owner');if(resuming)assert(safe(resumeArea)&&resumeArea.split('/').length===4&&resumeArea.startsWith('runtime/new-dealer-source/')&&resumeArea.split('/')[3]===dealer&&/^[a-zA-Z0-9][a-zA-Z0-9._-]{0,127}$/.test(resumeArea.split('/')[2])&&/^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/i.test(resumeOwner),'Exact owned source resume area and owner UUID required');return resuming;}
+export function assertNewSourceCreatorStagingAbsent(root,dealer){assert(slug(dealer),'Exact creator dealer required');const directory=inside(root,'runtime/new-clients');if(!fs.existsSync(directory))return true;assert(fs.realpathSync(directory)===directory&&fs.lstatSync(directory).isDirectory()&&!fs.lstatSync(directory).isSymbolicLink(),'Creator staging must remain a physical directory');const names=fs.readdirSync(directory);assert(names.length<=20000,'Creator staging inventory exceeds bound');assert(!names.some(name=>name.toLowerCase().startsWith(dealer+'-')),'Preserved creator staging for this dealer requires manual reconciliation; no second source copy');return true;}
+export function newSourceCreationReceiptPin(root,relative){const file=inside(root,relative,{mustExist:true}),before=fs.lstatSync(file);assert(before.isFile()&&!before.isSymbolicLink()&&before.nlink===1,'Creator receipt must be an unlinked regular file');const input=physicalInput(root,relative,2*1024**2),after=fs.lstatSync(file),fields=['mode','ino','dev','size','mtimeMs','ctimeMs'];assert(fields.every(key=>before[key]===after[key]),'Creator receipt changed while reading');return {path:relative,sha256:sha256(input.bytes),fileState:Object.fromEntries(fields.map(key=>[key,after[key]]))};}
+export function validateNewSourceCandidateIdentity(directory,row){
+ const manifest=readJson(physicalInput(directory,'dealer.json',2*1024**2).bytes);validateManifest(manifest);
+ const expected=['auto-best',...(row.preset==='import'?['import','modern']:['modern','import']),'app','mobile','karento-best'];
+ assert(manifest.slug===row.slug&&manifest.dealerId===row.dealerId&&manifest.repository===row.repository&&manifest.sourceOwnership!=='independent-repository'&&manifest.packaging?.version==='5'&&same(manifest.variants.map(v=>v.key),expected)&&NEW_SOURCE_FAMILIES.every(key=>sourceEqual(manifest.templateSources?.[key],row.sourceReleases[key])&&manifest.templateRevisions?.[key]===row.sourceReleases[key].revision),'Owned creator manifest/source identity differs');return manifest;
+}
+export function validateNewSourceCreationSummary(root,row,baseline,summary){assert(summary?.clientRoot==='clients/'+row.slug&&summary.applications===6&&safe(summary.receipt?.path)&&summary.receipt.path.startsWith('runtime/new-clients/'+row.slug+'-')&&summary.receipt.path.endsWith('/creation.json')&&hex64(summary.receipt.sha256),'Exact maintained creator receipt summary required');assert(same(newSourceCreationReceiptPin(root,summary.receipt.path),summary.receipt),'Maintained creator receipt changed or missing');const receipt=readJson(physicalInput(root,summary.receipt.path,2*1024**2).bytes);assert(receipt.clientRoot===inside(root,'clients/'+row.slug)&&receipt.workflowCommit===baseline.commit&&Array.isArray(receipt.templates)&&receipt.templates.length===6&&NEW_SOURCE_FAMILIES.every(key=>sourceEqual(receipt.templates.find(p=>p.key===key)?.source,row.sourceReleases[key])),'Maintained creator receipt identity/source changed');assert(summary.readOnly?.dealer===row.slug&&summary.readOnly.repository===row.repository&&summary.readOnly.baseCommit===baseline.commit&&same(summary.readOnly.sourceReleases,row.sourceReleases),'Saved creator source plan differs');validateNewSourceCandidateIdentity(inside(root,'clients/'+row.slug,{mustExist:true}),row);return summary;}
 
 /** Production has no injected Git/platform/copier. CI must establish actual main
  * before invoking this API; this function never creates or switches a branch. */
-export async function prepareNewDealerSource({root=ROOT,requestFile,dealer:requestedDealer,write=false,env=process.env,toolPackage=path.join(root,'runtime/source-preparation-tools/package.json')}={}){
+export async function prepareNewDealerSource({root=ROOT,requestFile,dealer:requestedDealer,write=false,resumeArea=null,resumeOwner=null,env=process.env,toolPackage=path.join(root,'runtime/source-preparation-tools/package.json')}={}){
  assert(typeof write==='boolean'&&slug(requestedDealer),'Explicit dealer and boolean write mode required');root=fs.realpathSync(root);
+ const resuming=validateNewSourceResumeOptions({dealer:requestedDealer,write,resumeArea,resumeOwner});
  assert(typeof requestFile==='string'&&safe(requestFile)&&requestFile.startsWith(NEW_SOURCE_INPUT_ROOT+'/')&&requestFile.endsWith('.json'),'Bounded committed new source request path required');
  const requestInput=physicalInput(root,requestFile,2*1024**2),request=readJson(requestInput.bytes);
  const rawLock=physicalInput(root,'templates.lock.json',4*1024**2).bytes,rawRegistry=physicalInput(root,'docs/DEPLOYMENT-INVENTORY.json',32*1024**2).bytes,rawIndex=physicalInput(root,'clients/index.json',4*1024**2).bytes,lock=readJson(rawLock),registry=readJson(rawRegistry),clientIndex=readJson(rawIndex);
- const occupiedSlugs=fs.readdirSync(inside(root,'clients',{mustExist:true}));validateNewSourceRequest(request,{registry,clientIndex,occupiedSlugs,lock,lockSha256:sha256(rawLock),registrySha256:sha256(rawRegistry),clientIndexSha256:sha256(rawIndex),root});
- const row=request.dealers.find(r=>r.slug===requestedDealer);assert(row,'Dealer is outside the exact reviewed request');
- const qualified=readNewSourceQualification(root,request,row.slug),selectedLock=qualified?.lock??lock,sourceQualification=qualified?{candidateLock:request.qualification.candidateLock,qualification:request.qualification.contexts[row.slug]}:null;assert(!resolveIdentity(root,row.slug,row.dealerId).exists,'Dealer identity is already occupied');
+ const inventories={registry,clientIndex,lock,lockSha256:sha256(rawLock),registrySha256:sha256(rawRegistry),clientIndexSha256:sha256(rawIndex),root};
+ // Structural/registered identity review first. Physical occupancy is authorized
+ // separately, only after a resumed owner's fresh pins and exact state pass.
+ validateNewSourceRequest(request,inventories);
+ const occupiedSlugs=fs.readdirSync(inside(root,'clients',{mustExist:true})),row=request.dealers.find(r=>r.slug===requestedDealer);assert(row,'Dealer is outside the exact reviewed request');
+ const qualified=readNewSourceQualification(root,request,row.slug),selectedLock=qualified?.lock??lock,sourceQualification=qualified?{candidateLock:request.qualification.candidateLock,qualification:request.qualification.contexts[row.slug]}:null;
+ if(!resuming){validateNewSourceRequest(request,{...inventories,occupiedSlugs});assert(!resolveIdentity(root,row.slug,row.dealerId).exists,'Dealer identity is already occupied');}
  const inputs=Object.fromEntries(Object.entries({...row.inputs,identityReview:row.identityReview,...(row.copyReview?{copyReview:row.copyReview}: {})}).map(([k,p])=>{const input=readNewSourceInput(root,p,{prefix:NEW_SOURCE_INPUT_ROOT+'/'+row.slug,maxBytes:k==='locale'?16384:2*1024**2});return [k,{...input,value:readJson(input.bytes)}];}));
  validateNewDealerFacts({dealer:row,facts:inputs.facts.value,stock:inputs.stock.value,locale:inputs.locale.value,identityReview:inputs.identityReview.value});
  const copyReview=inputs.copyReview?validateNewSourceCopyReview(inputs.copyReview.value,row,inputs.stock.value):null;
@@ -261,38 +381,78 @@ export async function prepareNewDealerSource({root=ROOT,requestFile,dealer:reque
  const branchAbsence=originBranchAbsence(root,row.slug,checkout.head);
  const leasePaths=newSourceCurrentLeasePaths(request,requestFile,row,brandingRows,qualified);
  const currentInputLease=assertCurrentNewSourceInputs({root,eventCommit:checkout.head,mainCommit:branchAbsence.mainCommit,row,paths:leasePaths});
+ const codePins=orchestrationPaths.map(name=>({path:name,sha256:sha256(physicalInput(root,name,16*1024**2).bytes)}));
  assert(!git(root,['diff','--name-only','HEAD','--',...orchestrationPaths]),'Commit reviewed source orchestration inputs before dealer creation');
+ for(const pin of codePins)committed(root,pin.path,physicalInput(root,pin.path,16*1024**2).bytes,checkout.head);
  assert(git(root,['merge-base','--is-ancestor',request.sourceRevision,checkout.head],{allowFailure:true})!==null,'Reviewed source revision must be published on canonical main');
  for(const [name,bytes]of [[requestFile,requestInput.bytes],['templates.lock.json',rawLock],['docs/DEPLOYMENT-INVENTORY.json',rawRegistry],['clients/index.json',rawIndex],...Object.entries({...row.inputs,identityReview:row.identityReview,...(row.copyReview?{copyReview:row.copyReview}: {})}).map(([k,p])=>[p.path,inputs[k].bytes]),...media.map(p=>[p.path,p.bytes]),...brandingBytes])committed(root,name,bytes,checkout.head);
- const plan=planNewClient({root,client:row.slug,dealerId:row.dealerId,repository:row.repository,preset:row.preset,designSet:'six',localeConfig:inputs.locale.value,eventCommit:checkout.eventCommit??null,...(sourceQualification?{sourceQualification}: {})});assert(plan.checkout.head===checkout.head&&NEW_SOURCE_FAMILIES.every(k=>sourceEqual(plan.manifest.templateSources[k],row.sourceReleases[k])),'Maintained creator source/checkout differs from reviewed request');
+
+ preflightNewSourceModern({root,dealer:row.slug,facts:inputs.facts.value,stock:inputs.stock.value});
+ preflightNewSourceImport({root,dealer:row.slug,facts:inputs.facts.value,stock:inputs.stock.value});
  const baseline={commit:checkout.head,rootTree:git(root,['rev-parse',checkout.head+'^{tree}'])};assert(!git(root,['ls-tree',checkout.head,'--','clients/'+row.slug]),'Canonical dealer source already exists at the publication baseline');
- const readOnly={schemaVersion:1,kind:NEW_SOURCE_KIND,mode:'new-approved',dealer:row.slug,repository:row.repository,canonicalSourceRepository:'darkapoparka/cars',baseCommit:baseline.commit,sourceRevision:request.sourceRevision,approvedLockSha256:request.approvedLockSha256,sourceReleases:row.sourceReleases,branchAbsence,currentInputLease,applications:6,write:false,published:false,hostedApproval:false,state:'reviewed-inputs-awaiting-source-creation',...(sourceQualification?{sourceQualification,qualificationOnly:true,nativeApproval:false,globalReleaseApproval:false}: {}),newerDevelopment:plan.plans.filter(p=>p.updateAvailable).map(p=>({key:p.template,developmentHead:p.developmentHead,developmentTree:p.developmentTree}))};
- if(!write)return readOnly;
+ const makePlan=()=>{const plan=planNewClient({root,client:row.slug,dealerId:row.dealerId,repository:row.repository,preset:row.preset,designSet:'six',localeConfig:inputs.locale.value,eventCommit:checkout.eventCommit??null,...(sourceQualification?{sourceQualification}: {})});assert(plan.checkout.head===checkout.head&&NEW_SOURCE_FAMILIES.every(k=>sourceEqual(plan.manifest.templateSources[k],row.sourceReleases[k])),'Maintained creator source/checkout differs from reviewed request');return plan;};
+ const makeReadOnly=plan=>{const readOnly={schemaVersion:1,kind:NEW_SOURCE_KIND,mode:'new-approved',dealer:row.slug,repository:row.repository,canonicalSourceRepository:'darkapoparka/cars',baseCommit:baseline.commit,sourceRevision:request.sourceRevision,approvedLockSha256:request.approvedLockSha256,sourceReleases:row.sourceReleases,branchAbsence,currentInputLease,applications:6,write:false,published:false,hostedApproval:false,state:'reviewed-inputs-awaiting-source-creation',...(sourceQualification?{sourceQualification,qualificationOnly:true,nativeApproval:false,globalReleaseApproval:false}: {}),newerDevelopment:plan.plans.filter(p=>p.updateAvailable).map(p=>({key:p.template,developmentHead:p.developmentHead,developmentTree:p.developmentTree}))};return readOnly;};
+ const freshPlan=resuming?null:makePlan();
+ if(!write)return makeReadOnly(freshPlan);
  assert(path.resolve(toolPackage)===inside(root,'runtime/source-preparation-tools/package.json',{mustExist:true}),'Use the bounded maintained source raster toolchain');
- const area=inside(root,'runtime/new-dealer-source/'+ci.runId+'-'+ci.attempt+'/'+row.slug);assert(!fs.existsSync(area),'Source proposal attempt already exists; inspect retained output before retrying');
- const sourceRows=plan.plans.flatMap(p=>gitFiles(root,p.sourceRef.revision,{prefix:p.sourceRef.path}).map(f=>({...f,path:p.template+'/'+f.path,sourcePath:p.sourceRef.path+'/'+f.path,revision:p.sourceRef.revision}))),sourceBytes=plan.plans.reduce((n,p)=>n+Number(git(root,['ls-tree','-rl',p.sourceRef.revision+':'+p.sourceRef.path]).split('\n').filter(Boolean).reduce((sum,line)=>sum+Number(line.split('\t')[0].trim().split(/\s+/).at(-1)),0)),0),disk=fs.statfsSync(root),free=disk.bavail*disk.bsize;
+ const sourcePlans=NEW_SOURCE_FAMILIES.map(template=>({template,sourceRef:row.sourceReleases[template]}));
+ const sourceRows=sourcePlans.flatMap(p=>gitFiles(root,p.sourceRef.revision,{prefix:p.sourceRef.path}).map(f=>({...f,path:p.template+'/'+f.path,sourcePath:p.sourceRef.path+'/'+f.path,revision:p.sourceRef.revision}))),sourceBytes=sourcePlans.reduce((n,p)=>n+Number(git(root,['ls-tree','-rl',p.sourceRef.revision+':'+p.sourceRef.path]).split('\n').filter(Boolean).reduce((sum,line)=>sum+Number(line.split('\t')[0].trim().split(/\s+/).at(-1)),0)),0),disk=fs.statfsSync(root),free=disk.bavail*disk.bsize;
  assert(Number.isSafeInteger(sourceBytes)&&sourceBytes>0&&free>sourceBytes*2+media.reduce((n,p)=>n+p.bytes.length*8,0)+1024**3,'Insufficient disk for one maintained source owner; no client created');
  const sharp=createRequire(toolPackage)('sharp');assert(sharp.versions.sharp==='0.35.5','Reviewed source raster toolchain differs');
  for(const bytes of [...media.map(p=>p.bytes),...brandingBytes.values()]){const meta=await sharp(bytes,{limitInputPixels:64*1024**2}).metadata();assert(Number.isSafeInteger(meta.width)&&Number.isSafeInteger(meta.height)&&meta.width>0&&meta.height>0&&meta.width<=16384&&meta.height<=16384,'Invalid or oversized source raster dimensions');}
- fs.mkdirSync(area,{recursive:true});let creation;
+
+ const area=resuming?resumeArea:'runtime/new-dealer-source/'+ci.runId+'-'+ci.attempt+'/'+row.slug;
+ const inputPaths=[...new Set([...leasePaths.filter(p=>p!==requestFile),'docs/DEPLOYMENT-INVENTORY.json','clients/index.json',path.relative(root,toolPackage).split(path.sep).join('/')])];
+ const pins={identity:{dealer:row.slug,dealerId:row.dealerId,repository:row.repository,workerName:row.workerName,publicOrigin:row.publicOrigin},request:{path:requestFile,sha256:sha256(requestInput.bytes)},base:baseline,approvedLockSha256:request.approvedLockSha256,registrySha256:request.registrySha256,clientIndexSha256:request.clientIndexSha256,sourceReleases:row.sourceReleases,inputLeaseSha256:currentInputLease.inputDigest,branchAbsenceSha256:sha256(encode(branchAbsence)),inputs:inputPaths.map(name=>({path:name,sha256:sha256(physicalInput(root,name,32*1024**2).bytes)})),orchestration:codePins};
+ const run=resuming?openNewSourceResume({root,area,dealer:row.slug,ownerId:resumeOwner,pins}):createNewSourceResume({root,area,dealer:row.slug,pins});
+ const directory=inside(root,'clients/'+row.slug),output=path.join(root,...run.area.split('/'),'output');
  try{
-  creation=await createNewClient(plan);const directory=creation.clientRoot;
+  const owned=ownedNewSourceCandidate(run,{root,dealer:row.slug});
+  if(owned)validateNewSourceCreationSummary(root,row,baseline,run.state.summaries['create-client']);
+  validateNewSourceRequest(request,{...inventories,occupiedSlugs:owned?occupiedSlugs.filter(name=>name!==row.slug):occupiedSlugs});
+  assert(!resolveIdentity(root,row.slug,row.dealerId).exists||Boolean(owned),'Dealer identity is already occupied');
+  if(!owned)assertNewSourceCreatorStagingAbsent(root,row.slug);
+  const plan=owned?null:(freshPlan??makePlan()),readOnly=owned?run.state.summaries['create-client'].readOnly:makeReadOnly(plan);
+  const context=()=>{const manifest=validateNewSourceCandidateIdentity(directory,row);const profile=loadDealerProfile(directory,row.slug);assert(profile.sourceCount===profile.listings.length&&profile.listings.length===inputs.stock.value.records.length&&profile.stockKind===inputs.stock.value.kind,'Maintained normalization dropped/changed authoritative stock');return {manifest,profile};};
+  const final=await continueNewSourceResume(run,{
+   'create-client':async(summaries,mutationWriter)=>{const creation=await createNewClient(plan,{mutationWriter});assert(creation.clientRoot===directory,'Creator destination differs');const relative=path.relative(root,creation.receipt).split(path.sep).join('/');const summary={clientRoot:'clients/'+row.slug,applications:6,receipt:newSourceCreationReceiptPin(root,relative),readOnly};validateNewSourceCreationSummary(root,row,baseline,summary);return summary;},
+   'stage-inputs':async(summaries,mutationWriter)=>{
   const stage=[['business-facts.json',inputs.facts.bytes],['stock.json',inputs.stock.bytes],['locale.json',inputs.locale.bytes],...media.map(p=>[p.destination,p.bytes]),['dealer-brand/logo-on-light.png',branding.reviewedSurfaces.surfaces.onLight.png],['dealer-brand/logo-on-dark.png',branding.reviewedSurfaces.surfaces.onDark.png]];
-  for(const [name,bytes]of stage)writeNew(inside(directory,name),bytes);
-  const manifest=json(path.join(directory,'dealer.json'));manifest.extraAssets=['dealer-stock','dealer-brand','branding','assets'];manifest.cloudflare={workerPrefix:row.workerName};manifest.shareIdentity={name:inputs.facts.value.business.name,publicOrigin:row.publicOrigin,description:[inputs.facts.value.business.previewNotice,inputs.facts.value.business.inventoryNotice].join(' '),logo:{sourcePath:'dealer-brand/logo-on-light.png',sha256:sha256(branding.reviewedSurfaces.surfaces.onLight.png)}};
-  fs.writeFileSync(path.join(directory,'dealer.json'),encode(manifest));const profile=loadDealerProfile(directory,row.slug);assert(profile.sourceCount===profile.listings.length&&profile.listings.length===inputs.stock.value.records.length&&profile.stockKind===inputs.stock.value.kind,'Maintained normalization dropped/changed authoritative stock');
+  const manifestBytes=fs.readFileSync(path.join(directory,'dealer.json')),manifest=readJson(manifestBytes);manifest.extraAssets=['dealer-stock','dealer-brand','branding','assets'];manifest.cloudflare={workerPrefix:row.workerName};manifest.shareIdentity={name:inputs.facts.value.business.name,publicOrigin:row.publicOrigin,description:[inputs.facts.value.business.previewNotice,inputs.facts.value.business.inventoryNotice].join(' '),logo:{sourcePath:'dealer-brand/logo-on-light.png',sha256:sha256(branding.reviewedSurfaces.surfaces.onLight.png)}};
+  writeMap(directory,new Map([...stage,['dealer.json',encode(manifest)]]),new Map([['dealer.json',manifestBytes]]),mutationWriter);const profile=loadDealerProfile(directory,row.slug);assert(profile.sourceCount===profile.listings.length&&profile.listings.length===inputs.stock.value.records.length&&profile.stockKind===inputs.stock.value.kind,'Maintained normalization dropped/changed authoritative stock');
   const reviewedCopy=newSourceReviewedCopy(profile,copyReview);
-  const changes={};for(const {key}of manifest.variants.slice(0,3)){const assets=new Map();retainDealerVariantAssets(assets,key,profile,directory);writeMap(directory,assets);const candidate=inside(directory,key,{mustExist:true});changes[key]=applyRefreshAdapter({key,oldVariant:candidate,candidate,profile,...(['modern','import'].includes(key)&&reviewedCopy?{reviewedModernCopy:reviewedCopy}: {})});}
+
+    return {factsSha256:sha256(inputs.facts.bytes),stockSha256:sha256(inputs.stock.bytes),localeSha256:sha256(inputs.locale.bytes)};
+   },
+   'adapt-primary':async(summaries,mutationWriter)=>{const {manifest,profile}=context(),reviewedCopy=newSourceReviewedCopy(profile,copyReview);
+  const changes={};for(const {key}of manifest.variants.slice(0,3)){const assets=new Map();retainDealerVariantAssets(assets,key,profile,directory);writeMap(directory,assets,null,mutationWriter);const candidate=inside(directory,key,{mustExist:true});changes[key]=applyRefreshAdapter({key,oldVariant:candidate,candidate,profile,mutationWriter,...(['modern','import'].includes(key)&&reviewedCopy?{reviewedModernCopy:reviewedCopy}: {})});}
+
+    return {personalizationChanges:changes};
+   },
+   'adapt-extended':async(summaries,mutationWriter)=>{const {manifest,profile}=context();
   let files=await collectSource(directory,{...manifest,extraAssets:manifest.extraAssets.filter(p=>!['branding','assets'].includes(p))}),before=new Map(files);const app=await prepareAppDealer(directory,manifest,{appFiles:new Map([...files].filter(([n])=>n.startsWith('app/')).map(([n,b])=>[n.slice(4),b]))});for(const [name,bytes]of app.files)files.set('app/'+name,bytes);
-  const adaptations={};for(const key of ['mobile','karento-best'])adaptations[key]=applyExtendedRefreshAdapter({files,key,profile,client:directory});writeMap(directory,files,before);
-  for(const {key}of manifest.variants){const name=path.join(directory,key,'.client/project.json'),metadata=json(name);fs.writeFileSync(name,encode({...metadata,state:'personalized-needs-build',readyToPublish:false,publicUrl:null,hosting:{provider:'cloudflare',status:'not-deployed'},qa:{desktop:false,mobile:false,identity:false,contactPath:false}}));}
-  await regenerateDealerCatalogs(directory,root,manifest.variants.map(v=>v.key));files=await collectSource(directory,{...manifest,extraAssets:manifest.extraAssets.filter(p=>!['branding','assets'].includes(p))});before=new Map(files);
+  const adaptations={};for(const key of ['mobile','karento-best'])adaptations[key]=applyExtendedRefreshAdapter({files,key,profile,client:directory});writeMap(directory,files,before,mutationWriter);
+
+    return {appProvenance:app.provenance,adaptations:Object.fromEntries(Object.entries(adaptations).map(([key,value])=>[key,Object.fromEntries(Object.entries(value).filter(([field])=>['profileSha256','logoPaths','mediaPaths','mediaMappings','contentPaths','nativeFacts','nativeDealerFacts'].includes(field)))]))};
+   },
+   'regenerate-catalogs':async(summaries,mutationWriter)=>{const {manifest}=context();
+  for(const {key}of manifest.variants){const name=path.join(directory,key,'.client/project.json'),metadata=json(name);mutationWriter.writeFile(name,encode({...metadata,state:'personalized-needs-build',readyToPublish:false,publicUrl:null,hosting:{provider:'cloudflare',status:'not-deployed'},qa:{desktop:false,mobile:false,identity:false,contactPath:false}}));}
+  await regenerateDealerCatalogs(directory,root,manifest.variants.map(v=>v.key),{mutationWriter});
+
+
+    return {families:manifest.variants.map(v=>v.key)};
+   },
+   'brand-and-seal':async(summaries,mutationWriter)=>{const {manifest,profile}=context(),app={provenance:summaries['adapt-extended'].appProvenance},adaptations=summaries['adapt-extended'].adaptations;let files=await collectSource(directory,{...manifest,extraAssets:manifest.extraAssets.filter(p=>!['branding','assets'].includes(p))}),before=new Map(files);
   const templates=new Map(),readTemplate=(locator,name,optional)=>{const key=locator.path.slice('templates/'.length),id=key+'@'+locator.revision;if(!templates.has(id))templates.set(id,readPinnedTemplateTree({key,repositoryPath:root,source:locator}).tree);const bytes=templates.get(id).get(name);if(!bytes&&optional)return null;assert(bytes,'Missing approved template palette input');return bytes.toString('utf8');};
   const brand=await applyLeadBranding(files,manifest,{...branding,sharp,readTemplate});bindPreparedShareLogo(files,manifest,brand);resolveShareIdentity(files,manifest);
   files=qualified?adoptNativeQualification(files,baseNativeManifest(manifest),selectedLock.templates,qualified.context,{root}):adoptNativeSource(files,baseNativeManifest(manifest),lock.templates,{root});sealAppDealerSource({files,manifest,provenance:app.provenance});for(const key of ['mobile','karento-best'])sealExtendedVariant({files,key,manifest,profile,adaptation:adaptations[key]});
   if(qualified)assertNativeQualification(files,baseNativeManifest(manifest),qualified.context,{root});else assertNativeAdoption(files,baseNativeManifest(manifest),{root});assertLeadBranding(files,manifest);assertAppVariant(files,manifest);assertExtendedVariantSources(files,manifest);files.set('dealer.json',encode(manifest));
   if(qualified){const candidateSourceDigest=sha256(JSON.stringify([...files].filter(([name])=>!qualificationMarkers.has(name)).sort(([a],[b])=>a.localeCompare(b,'en')).map(([name,bytes])=>[name,sha256(bytes)])));for(const [name,bytes]of sourceQualificationFiles({manifest,qualificationBytes:qualified.qualificationBytes,qualificationLockBytes:qualified.candidateLockBytes,sourceRevision:request.sourceRevision,candidateSourceDigest,root}))files.set(name,bytes);}
-  writeMap(directory,files,before);
+  writeMap(directory,files,before,mutationWriter);
+
+    return {brand,nativeAdoptionSha256:sha256(files.get(ADOPTION_FILE))};
+   },
+   'emit-proposal':async(summaries,mutationWriter)=>{const {manifest}=context(),creationSummary=summaries['create-client'],changes=summaries['adapt-primary'].personalizationChanges,brand=summaries['brand-and-seal'].brand,stage=[['business-facts.json',inputs.facts.bytes],['stock.json',inputs.stock.bytes],['locale.json',inputs.locale.bytes]];validateNewSourceCreationSummary(root,row,baseline,creationSummary);
   for(const [name,bytes]of stage.slice(0,3))assert(fs.readFileSync(path.join(directory,name)).equals(bytes),'Authoritative source facts changed during personalization');
   const stable=assertMainCheckout(root,{eventCommit:checkout.eventCommit??null,env});if(qualified){const current=readNewSourceQualification(root,request,row.slug);assert(current.candidateLockBytes.equals(qualified.candidateLockBytes)&&current.qualificationBytes.equals(qualified.qualificationBytes),'Qualification input changed during source creation');}assert(stable.head===baseline.commit&&sha256(fs.readFileSync(path.join(root,'templates.lock.json')))===request.approvedLockSha256,'Canonical main or approved lock changed; preserve candidate and review again');
   const finalBranchAbsence=originBranchAbsence(root,row.slug,stable.head);
@@ -302,13 +462,17 @@ export async function prepareNewDealerSource({root=ROOT,requestFile,dealer:reque
   for(const p of [...media,...brandingRows])readNewSourceInput(root,{path:p.path,sha256:p.sha256},{prefix:NEW_SOURCE_INPUT_ROOT+'/'+row.slug,maxBytes:25*1024**2});
   const canonical=fileMap(directory),modes=new Map(sourceRows.map(r=>[r.path,r.mode]));for(const name of canonical.keys())if(!modes.has(name))modes.set(name,process.platform!=='win32'&&(fs.statSync(path.join(directory,name)).mode&0o111)?'100755':'100644');
   const originalBlobs=new Map(sourceRows.map(r=>[r.blob,r])),reusable=new Map();for(const bytes of canonical.values()){const blob=gitObjectId('blob',bytes),r=originalBlobs.get(blob);if(r&&!reusable.has(blob))reusable.set(blob,{repository:'darkapoparka/cars',revision:r.revision,path:r.sourcePath,blob,sha256:sha256(bytes),bytes:bytes.length});}const proposal=createNewSourceProposal({dealer:row.slug,baseCommit:baseline.commit,baseRootTree:baseline.rootTree,sourceReleases:row.sourceReleases,files:canonical,modes,reusableBlobs:reusable});
-  const output=path.join(area,'output');writeNew(path.join(output,'source-patch.json'),encode(proposal.patch));for(const [digest,blob]of proposal.blobs)writeNew(path.join(output,'blobs',digest+'.json'),encode(blob));
-  const receipt={...readOnly,finalBranchAbsence,finalInputLease,write:true,state:'personalized-source-proposal-needs-build-and-hosted-review',baseRootTree:baseline.rootTree,preparedTree:proposal.patch.preparedTree,request:{path:requestFile,sha256:sha256(requestInput.bytes)},inputs:row.inputs,identityReview:row.identityReview,creationReceiptSha256:sha256(fs.readFileSync(creation.receipt)),sourcePaths:proposal.patch.entries.length,reusedGitBlobs:proposal.patch.reusedGitBlobs.length,uniqueBlobBytes:proposal.patch.uniqueBlobBytes,patchSha256:sha256(encode(proposal.patch)),branding:brand,nativeAdoptionSha256:sha256(files.get(ADOPTION_FILE)),...(qualified?{nativeQualification:{contextFileSha256:sha256(qualified.qualificationBytes),qualificationLockSha256:sha256(qualified.candidateLockBytes),receiptSha256:sha256(files.get(ADOPTION_FILE)),nativeApproval:false,hostedApproval:false,globalReleaseApproval:false}}: {}),personalizationChanges:changes,authoritativeFactsUnchanged:true,reviewed:false,published:false,buildApproval:false,hostedApproval:false,privatePublishingMirror:{repository:row.repository,state:'not-published-by-source-preparation'},createdAt:new Date().toISOString()};writeNew(path.join(output,'source-preparation-receipt.json'),encode(receipt));artifactInventory(output,{kind:NEW_SOURCE_KIND,dealer:row.slug,status:'passed'});return {dealer:row.slug,output,preparedTree:receipt.preparedTree,sourcePaths:receipt.sourcePaths,uniqueBlobBytes:receipt.uniqueBlobBytes,published:false,hostedApproval:false};
- }catch(error){writeNew(path.join(area,'failure.json'),encode({kind:NEW_SOURCE_KIND,dealer:row.slug,error:error.message,canonicalCandidate:creation?.clientRoot??null,retained:true,published:false,hostedApproval:false,failedAt:new Date().toISOString()}));throw error;}
+  mutationWriter.writeFile(path.join(output,'source-patch.json'),encode(proposal.patch));for(const [digest,blob]of proposal.blobs)mutationWriter.writeFile(path.join(output,'blobs',digest+'.json'),encode(blob));
+  const receipt={...readOnly,finalBranchAbsence,finalInputLease,write:true,state:'personalized-source-proposal-needs-build-and-hosted-review',baseRootTree:baseline.rootTree,preparedTree:proposal.patch.preparedTree,request:{path:requestFile,sha256:sha256(requestInput.bytes)},inputs:row.inputs,identityReview:row.identityReview,creationReceiptSha256:creationSummary.receipt.sha256,sourcePaths:proposal.patch.entries.length,reusedGitBlobs:proposal.patch.reusedGitBlobs.length,uniqueBlobBytes:proposal.patch.uniqueBlobBytes,patchSha256:sha256(encode(proposal.patch)),branding:brand,nativeAdoptionSha256:sha256(physicalInput(directory,ADOPTION_FILE,16*1024**2).bytes),...(qualified?{nativeQualification:{contextFileSha256:sha256(qualified.qualificationBytes),qualificationLockSha256:sha256(qualified.candidateLockBytes),receiptSha256:sha256(physicalInput(directory,ADOPTION_FILE,16*1024**2).bytes),nativeApproval:false,hostedApproval:false,globalReleaseApproval:false}}: {}),personalizationChanges:changes,authoritativeFactsUnchanged:true,reviewed:false,published:false,buildApproval:false,hostedApproval:false,privatePublishingMirror:{repository:row.repository,state:'not-published-by-source-preparation'},sourceResume:{area:run.area,ownerId:run.ownerId,stages:7},createdAt:new Date().toISOString()};mutationWriter.writeFile(path.join(output,'source-preparation-receipt.json'),encode(receipt));artifactInventory(output,{kind:NEW_SOURCE_KIND,dealer:row.slug,status:'passed'},{writeFile:mutationWriter.writeFile});return {result:{dealer:row.slug,output,preparedTree:receipt.preparedTree,sourcePaths:receipt.sourcePaths,uniqueBlobBytes:receipt.uniqueBlobBytes,published:false,hostedApproval:false},receipt:{path:path.relative(root,path.join(output,'source-preparation-receipt.json')).split(path.sep).join('/'),sha256:sha256(encode(receipt))}};
+
+   }
+  });
+  return {...final.result,resume:{area:run.area,ownerId:run.ownerId,completed:true}};
+ }catch(error){try{writeNew(path.join(root,...run.area.split('/'),'failure-'+randomUUID()+'.json'),encode({kind:NEW_SOURCE_KIND,dealer:row.slug,error:error.message,resume:{area:run.area,ownerId:run.ownerId,nextStage:run.nextStage},canonicalCandidate:fs.existsSync(directory)?directory:null,retained:true,published:false,hostedApproval:false,failedAt:new Date().toISOString()}));}catch(evidenceError){error.message+='; failure evidence could not be written: '+evidenceError.message;}error.message+='; preserved source attempt '+run.area+' (resume owner '+run.ownerId+')';throw error;}finally{run.close();}
 }
 
 if(isEntrypoint(import.meta.url)){
- try{const argv=process.argv.slice(2);if(same(argv,['--help']))console.log('Usage: node scripts/prepare-new-dealer-source.mjs --request docs/releases/cloudflare-existing25-20261011/new-source/REQUEST.json --dealer SLUG [--write]\nDefault read-only. Requires real synchronized canonical main, absent Cars identity and all six approved source/branding/fact pins. Outputs source proposal only; build/publication/hosting remain pending.');
- else{const options={};for(let i=0;i<argv.length;i++){const name=argv[i];assert(['--request','--dealer','--write'].includes(name)&&!Object.hasOwn(options,name),'Unknown or duplicate argument');if(name==='--write')options[name]=true;else{assert(argv[i+1]&&!argv[i+1].startsWith('--'),'Missing argument value');options[name]=argv[++i];}}console.log(JSON.stringify(await prepareNewDealerSource({requestFile:options['--request'],dealer:options['--dealer'],write:options['--write']===true}),null,2));}}
+ try{const argv=process.argv.slice(2);if(same(argv,['--help']))console.log('Usage: node scripts/prepare-new-dealer-source.mjs --request docs/releases/cloudflare-existing25-20261011/new-source/REQUEST.json --dealer SLUG [--write] [--resume-area runtime/new-dealer-source/RUN/SLUG --resume-owner UUID]\nExplicit owned resume requires --write and the exact original code/input/base checkpoints. Partial or changed candidates stay held. Default read-only. Requires real synchronized canonical main, absent Cars identity and all six approved source/branding/fact pins. Outputs source proposal only; build/publication/hosting remain pending.');
+ else{const options={};for(let i=0;i<argv.length;i++){const name=argv[i];assert(['--request','--dealer','--write','--resume-area','--resume-owner'].includes(name)&&!Object.hasOwn(options,name),'Unknown or duplicate argument');if(name==='--write')options[name]=true;else{assert(argv[i+1]&&!argv[i+1].startsWith('--'),'Missing argument value');options[name]=argv[++i];}}console.log(JSON.stringify(await prepareNewDealerSource({requestFile:options['--request'],dealer:options['--dealer'],write:options['--write']===true,resumeArea:options['--resume-area']??null,resumeOwner:options['--resume-owner']??null}),null,2));}}
  catch(error){console.error(error.message);process.exitCode=1;}
 }

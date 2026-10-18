@@ -1,0 +1,319 @@
+{
+  "ref": "f540b1f10e7e81ba75205662a422b9a41051770c",
+  "rootTree": "f9b2a032b33c57aa2ba90f10e4f0a458adca432c",
+  "treeSha": "64456f2e3b7673f5e3d1f2079687880c4b381417",
+  "createdAt": "2026-10-18T21:49:57.648Z",
+  "node": "v26.10.0",
+  "scope": [
+    "scripts/prepare-new-dealer-source.mjs",
+    "scripts/prepare-new-dealer-source.test.mjs",
+    "scripts/lib/new-source-resume.mjs",
+    "scripts/new-source-resume.test.mjs",
+    "docs/SOURCE-CREATION-RESUME-2026-10-18.md",
+    "scripts/new-client.mjs",
+    "scripts/lib/template-source.mjs",
+    "scripts/lib/client-refresh-adapters.mjs",
+    "scripts/lib/client-refresh-safe-content.mjs",
+    "scripts/lib/client-logo-contract.mjs",
+    "scripts/dealer-updates/update-dealer-template.mjs",
+    "scripts/lib/uk-cloudflare-artifacts.mjs",
+    "scripts/lib/source-mutation-writer.mjs"
+  ],
+  "files": [
+    {
+      "path": "scripts/prepare-new-dealer-source.mjs",
+      "status": "modified",
+      "before": {
+        "blob": "af48555bf47c987fa083c0abae7cd2312aa36fe2",
+        "sha256": "e5586117c9d8aecd7b976b112ba3fef97cb0cd50c62a3dd9b2243d4c7202ce49",
+        "bytes": 51594
+      },
+      "after": {
+        "blob": "174e7822fc0f2751a25388185878514b3f092b90",
+        "sha256": "f0543bfbfbf907ea16ea149b22a67e68075a580f2d59d9f83111ba130e1739e3",
+        "bytes": 66984
+      },
+      "maintained": {
+        "blob": "174e7822fc0f2751a25388185878514b3f092b90",
+        "sha256": "f0543bfbfbf907ea16ea149b22a67e68075a580f2d59d9f83111ba130e1739e3",
+        "bytes": 66984,
+        "exactCanonicalCandidate": true
+      }
+    },
+    {
+      "path": "scripts/prepare-new-dealer-source.test.mjs",
+      "status": "modified",
+      "before": {
+        "blob": "1822a895b3c4d45bbcd99afbfcf97f8312405a04",
+        "sha256": "d824379a6a04069ddb384ced20af8c9f3d508cbce95f4db4dd630564ae2eab07",
+        "bytes": 30744
+      },
+      "after": {
+        "blob": "885f1162952887cf71ca9b2865d3abb9e6f26c8f",
+        "sha256": "3c577b528ca45949488cc6910be07d9607d892db23fa3bcf7a8d13becfae3853",
+        "bytes": 40841
+      },
+      "maintained": {
+        "blob": "885f1162952887cf71ca9b2865d3abb9e6f26c8f",
+        "sha256": "3c577b528ca45949488cc6910be07d9607d892db23fa3bcf7a8d13becfae3853",
+        "bytes": 40841,
+        "exactCanonicalCandidate": true
+      }
+    },
+    {
+      "path": "scripts/lib/new-source-resume.mjs",
+      "status": "added",
+      "before": null,
+      "after": {
+        "blob": "03e64427cf7b61fc0966a61c11da0a6d296862e5",
+        "sha256": "c1caa3f2bac7c1a6467e8a76d4e44195b48df090a18a3c8f0d5e9f828ab63e37",
+        "bytes": 25487
+      },
+      "maintained": {
+        "blob": "03e64427cf7b61fc0966a61c11da0a6d296862e5",
+        "sha256": "c1caa3f2bac7c1a6467e8a76d4e44195b48df090a18a3c8f0d5e9f828ab63e37",
+        "bytes": 25487,
+        "exactCanonicalCandidate": true
+      }
+    },
+    {
+      "path": "scripts/new-source-resume.test.mjs",
+      "status": "added",
+      "before": null,
+      "after": {
+        "blob": "a17f68f20bfdbe055cba5f092e6e3468ffeebffb",
+        "sha256": "af5fa6887ca32a2b0b4040caa3d64f5112398be739bf603f96e417ab57aa4579",
+        "bytes": 28138
+      },
+      "maintained": {
+        "blob": "a17f68f20bfdbe055cba5f092e6e3468ffeebffb",
+        "sha256": "af5fa6887ca32a2b0b4040caa3d64f5112398be739bf603f96e417ab57aa4579",
+        "bytes": 28138,
+        "exactCanonicalCandidate": true
+      }
+    },
+    {
+      "path": "docs/SOURCE-CREATION-RESUME-2026-10-18.md",
+      "status": "added",
+      "before": null,
+      "after": {
+        "blob": "9c2bd4b871f2af7fe2ce76cc6b25e1902e4f9b2f",
+        "sha256": "50e9f4444972022b3903f673aee21fe7e1d78d11fcb726fb63d30562b5951c95",
+        "bytes": 4763
+      },
+      "maintained": {
+        "blob": "9c2bd4b871f2af7fe2ce76cc6b25e1902e4f9b2f",
+        "sha256": "50e9f4444972022b3903f673aee21fe7e1d78d11fcb726fb63d30562b5951c95",
+        "bytes": 4763,
+        "exactCanonicalCandidate": true
+      }
+    },
+    {
+      "path": "scripts/new-client.mjs",
+      "status": "modified",
+      "before": {
+        "blob": "c9e033b2bb06c17268faa07df760f0e507a0c4a1",
+        "sha256": "c8104c94308a74cca3fbd7537fcb96b724d8db5a9152001d4df987a07a6b4a4f",
+        "bytes": 23171
+      },
+      "after": {
+        "blob": "5f723c41c5bf95028000da41289a6b64dea40f30",
+        "sha256": "d9c2391828790bdf2fa2e1854fbcc11acc733419026496385715f4c08f0e1346",
+        "bytes": 24095
+      },
+      "maintained": {
+        "blob": "5f723c41c5bf95028000da41289a6b64dea40f30",
+        "sha256": "d9c2391828790bdf2fa2e1854fbcc11acc733419026496385715f4c08f0e1346",
+        "bytes": 24095,
+        "exactCanonicalCandidate": true
+      }
+    },
+    {
+      "path": "scripts/lib/template-source.mjs",
+      "status": "modified",
+      "before": {
+        "blob": "8564fea8d4b370d695e1aa2c0db959570ae32dd7",
+        "sha256": "423109d50b24565b4c666d8f6871136f6919caec7c31e3be83577da58dcb4bd9",
+        "bytes": 3666
+      },
+      "after": {
+        "blob": "ad23c30df113bd4a0d3146c8a4bd9cbc6a92da11",
+        "sha256": "9a2501255c6bd7de047e5b25491e3415cbae0d432869fa0c24c6984c23e7a416",
+        "bytes": 5072
+      },
+      "maintained": {
+        "blob": "ad23c30df113bd4a0d3146c8a4bd9cbc6a92da11",
+        "sha256": "9a2501255c6bd7de047e5b25491e3415cbae0d432869fa0c24c6984c23e7a416",
+        "bytes": 5072,
+        "exactCanonicalCandidate": true
+      }
+    },
+    {
+      "path": "scripts/lib/client-refresh-adapters.mjs",
+      "status": "modified",
+      "before": {
+        "blob": "6b3b27fb69aa9959d303a55c57ecfc3ffce620ad",
+        "sha256": "41ef913fbfdde08d3aafe2c9c0f0ed7a2443ead57d0bf1853dda5473f0640db3",
+        "bytes": 87269
+      },
+      "after": {
+        "blob": "54d3f101b806a8601277b0e0ac9e649209c220fc",
+        "sha256": "2c1a1b252ba33655dd39eb903f825dcfa41e6b8c6654b04040f95aaf9a4dfd33",
+        "bytes": 87489
+      },
+      "maintained": {
+        "blob": "54d3f101b806a8601277b0e0ac9e649209c220fc",
+        "sha256": "2c1a1b252ba33655dd39eb903f825dcfa41e6b8c6654b04040f95aaf9a4dfd33",
+        "bytes": 87489,
+        "exactCanonicalCandidate": true
+      }
+    },
+    {
+      "path": "scripts/lib/client-refresh-safe-content.mjs",
+      "status": "modified",
+      "before": {
+        "blob": "8da46dda6ce411154440c6ba8192e9bcf3373d16",
+        "sha256": "af2f62a6a3e7516cefb20e26cb66a300c103a1b272e688cc74dfb3ada3c2d5b5",
+        "bytes": 38794
+      },
+      "after": {
+        "blob": "3bea941bd55606d8bf2628e1e83637f5a18b1dff",
+        "sha256": "c37af2f1459a3c3e71b730abcafc263e7f9509261339e0ead87b02bafc97b2f1",
+        "bytes": 38925
+      },
+      "maintained": {
+        "blob": "0777b90120c5ef215b1e748f35065423eff5074b",
+        "sha256": "14fa76f2016b1f9e84542f83fbe6ad1935d709a02710e2f40304cf85f28952f3",
+        "bytes": 38921,
+        "exactCanonicalCandidate": false
+      },
+      "localDifference": "Occupied owner work preserved; canonical publication uses only this exact candidate delta. The published Modern-services body/import and99th dependency are preserved. Distinct occupied formatting/work remains outside the exact canonical delta."
+    },
+    {
+      "path": "scripts/lib/client-logo-contract.mjs",
+      "status": "modified",
+      "before": {
+        "blob": "a66a28b64c3dccbf2f8eb132c1fe8a95e8dc2500",
+        "sha256": "80a6ee8a3efb3a94785a248988b13e84b9d8bbcf80703279f6e9b2762d61d0c2",
+        "bytes": 22055
+      },
+      "after": {
+        "blob": "f9524c9d56574e53a75707e90b4ad12ebe5a0c21",
+        "sha256": "fb88e53a276c070de5a920b0a9e90f1abe8d8d6134fa7fd08f9c6254b295e244",
+        "bytes": 22235
+      },
+      "maintained": {
+        "blob": "6edb3df4b253978312ee1b29e5351e4c4c18a5d6",
+        "sha256": "f3d35c7ffdea9d469db9d13b385998b6449e539f5f26e2902915e18a610f6d8a",
+        "bytes": 22233,
+        "exactCanonicalCandidate": false
+      },
+      "localDifference": "Occupied owner work preserved; canonical publication uses only this exact candidate delta. The published Modern-services body/import and99th dependency are preserved. Distinct occupied formatting/work remains outside the exact canonical delta."
+    },
+    {
+      "path": "scripts/dealer-updates/update-dealer-template.mjs",
+      "status": "modified",
+      "before": {
+        "blob": "88cea0267a66331cc164d198540b7f1cf6f10b4a",
+        "sha256": "f3c035f3a3b306d2c5054d88eb5444afa16902f9463eaf63c8faec1a9732478b",
+        "bytes": 150298
+      },
+      "after": {
+        "blob": "a2ff9c3bf9a4f3125e18ebad5b67b793ab048692",
+        "sha256": "dbf85b6d23f55568e9af2a32550265226f93b675d93ddb6e9f3e5a89b11ac5c2",
+        "bytes": 151302
+      },
+      "maintained": {
+        "blob": "51e46ab7c8f45280c0ddf9ae15b5e1cbbe97813d",
+        "sha256": "741f21928e20bf2916bac395b561c2da3cc500f63a41e9afd617675462a1a91f",
+        "bytes": 75206,
+        "exactCanonicalCandidate": false
+      },
+      "localDifference": "Occupied owner work preserved; canonical publication uses only this exact candidate delta. The published Modern-services body/import and99th dependency are preserved. Distinct occupied formatting/work remains outside the exact canonical delta."
+    },
+    {
+      "path": "scripts/lib/uk-cloudflare-artifacts.mjs",
+      "status": "modified",
+      "before": {
+        "blob": "761cea5edd9531d1b57b2efd3a2e062107fe7693",
+        "sha256": "0020babc116147fc90f203a40813091ecd14ac12836afdbd0cfed4aae447a6fb",
+        "bytes": 12217
+      },
+      "after": {
+        "blob": "82952c1b37d309f27fbabbec1eb33ba60b69bbd9",
+        "sha256": "e7680ceafc95737df3276562bdfea7f91696e17f0e5ce49072252c7986d77ce8",
+        "bytes": 12363
+      },
+      "maintained": {
+        "blob": "82952c1b37d309f27fbabbec1eb33ba60b69bbd9",
+        "sha256": "e7680ceafc95737df3276562bdfea7f91696e17f0e5ce49072252c7986d77ce8",
+        "bytes": 12363,
+        "exactCanonicalCandidate": true
+      }
+    },
+    {
+      "path": "scripts/lib/source-mutation-writer.mjs",
+      "status": "added",
+      "before": null,
+      "after": {
+        "blob": "8cd868dca1fc6652cd418a61a8b99600a104d254",
+        "sha256": "59a8ad14e6cf87c7782a6a51359db5595074875dc2e617558440166cb3cfbf70",
+        "bytes": 730
+      },
+      "maintained": {
+        "blob": "8cd868dca1fc6652cd418a61a8b99600a104d254",
+        "sha256": "59a8ad14e6cf87c7782a6a51359db5595074875dc2e617558440166cb3cfbf70",
+        "bytes": 730,
+        "exactCanonicalCandidate": true
+      }
+    }
+  ],
+  "patch": {
+    "path": "J:\\cars-generated\\expansion-20261018\\workflow-candidate\\resume\\source-resume.patch",
+    "bytes": 141500,
+    "sha256": "e7590646735668dab688cc1de4f22991196fb44779fbc825a3fbaf60e4dcba87",
+    "exactBaselineApplyCheck": "passed",
+    "whitespaceCheck": "passed"
+  },
+  "runtimeInventory": {
+    "paths": 99,
+    "graphFiles": 101,
+    "graphBytes": 2006676,
+    "manifest": "proof-dependency-manifest.json",
+    "rationale": "Every unchanged static/runtime code/resource byte matched immutable canonical f540; optional interfaces are replayed only at declared exact hunks."
+  },
+  "tests": {
+    "preservedBaseline": 29,
+    "productionTotal": 36,
+    "helperCases": 23,
+    "uniquePassing": 59,
+    "skipped": 0,
+    "evidence": [
+      "proof-final-test-result.json"
+    ],
+    "note": "Final exact f540 integrated candidate: all59 focused cases passed together in one invocation. Original0692 receipts and earlier detailed logs remain preserved separately; ordinary maintained creator25 also passed earlier."
+  },
+  "behavior": {
+    "schema": 2,
+    "existingAttempts": "Schema1 attempts remain preserved and held; no conversion/adoption.",
+    "freshCreation": "Existing creator and immutable materializer remain enabled through optional declared-write/install proof.",
+    "concurrency": "Touched preimages reject before writes; unrelated candidate/output mutations cannot enter a completed checkpoint.",
+    "originalConsumers": "Optional invocation-local interfaces retain the default creator/adapter/catalog paths. No global fs patch."
+  },
+  "remainingLimits": [
+    "No OS mandatory lock or atomic compare-and-swap against an arbitrary process editing the same inode inside the synchronous check/write window.",
+    "Snapshot/rename/checkpoint checks are not one cross-process filesystem transaction; retain one editorial owner and reconcile conflicts manually.",
+    "Actual six-template source attempt/interruption/retry, build and hosted acceptance remain unrun.",
+    "Root canonical Modern-services publication is included as baseline, with its helper pinned unchanged; other unpublished work is excluded."
+  ],
+  "unrun": [
+    "Actual six-template source creation/retry",
+    "Production build",
+    "Git publication",
+    "Hosting/provider actions",
+    "Outreach"
+  ],
+  "published": false,
+  "sourceCreated": false,
+  "hosted": false
+}
