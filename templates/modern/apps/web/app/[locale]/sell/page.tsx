@@ -64,7 +64,7 @@ const pageCopy = {
         question: "Какви данни са необходими?",
       },
       {
-        answer: `Финалната оценка се прави след оглед на място в шоурума ни в ${leadSite.district.bg}, София.`,
+        answer: `Финалната оценка се прави след оглед на място в шоурума ни в ${leadSite.district.bg}, ${leadSite.localizedCopy?.bg.city ?? leadSite.city}.`,
         question: "Може ли оценка само по снимки?",
       },
       {
@@ -112,7 +112,7 @@ const pageCopy = {
         question: "What information do you need?",
       },
       {
-        answer: `The final appraisal follows an in-person inspection at our showroom in ${leadSite.district.en}, Sofia.`,
+        answer: `The final appraisal follows an in-person inspection at our showroom in ${leadSite.district.en}, ${leadSite.localizedCopy?.en.city ?? leadSite.city}.`,
         question: "Can you appraise it from photos only?",
       },
       {

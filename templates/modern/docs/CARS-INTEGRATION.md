@@ -10,7 +10,7 @@ Shared code and design improvements belong in this source boundary. Dealer work 
 
 Cars owns approved immutable source selection and publishing. Follow its [template release contract](https://github.com/darkapoparka/cars/blob/main/docs/TEMPLATE-PROMOTION.md) and [current ownership instructions](https://github.com/darkapoparka/cars/blob/main/AGENTS.md). Main is a development head, not automatic release or visual approval. Existing dealers remain independent of master changes until an explicitly accepted refresh.
 
-The current five-design direction and hosting qualification belong to Cars, not a duplicated template-specific trio list. Preserve each dealer manifest and the approved lock until the relevant migration is accepted. Do not silently substitute, omit or bulk-publish designs.
+The current six-template fleet and hosting qualification are governed by Cars. Preserve each dealer manifest and the approved lock until the relevant migration is accepted. Do not silently substitute, omit or bulk-publish designs.
 
 ## Runtime and adaptation
 

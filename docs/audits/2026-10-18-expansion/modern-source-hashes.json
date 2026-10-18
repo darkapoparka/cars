@@ -1,0 +1,102 @@
+[
+  {
+    "path": "templates/modern/README.md",
+    "localBlob": "d4e27238fd2561e798bae0af62259ad198cbce21",
+    "sha256": "7f885f78639ad13cc443350c547bb5c288df1fb348804ccbf6626d606419d737",
+    "bytes": 2228,
+    "remoteCandidateBlob": "765b0b3d740a6c40270e2c90f59a3d4889d80813",
+    "remoteCandidateSha256": "998ddf5ebc26defeb457dca0a05734699c6227a2977c48d94ec4d490476dc678",
+    "localAfterBlob": "765b0b3d740a6c40270e2c90f59a3d4889d80813",
+    "localEqualsRemoteCandidate": true
+  },
+  {
+    "path": "templates/modern/apps/web/app/[locale]/contact/actions/contact.tsx",
+    "localBlob": "e6c4d7ce2ac016b09b7ff13c905bba0f72299bd9",
+    "sha256": "a7054c31e2ed731ecccbfe005ea57ab134b9a4da1de4644a0e858d48cd50b411",
+    "bytes": 9497,
+    "remoteCandidateBlob": "5dd1be4ac99de95219397c67a8444ec7a902122b",
+    "remoteCandidateSha256": "c39e892c3c6efe70c8df09a2e8a8581925b6eeaabd0583d9c3665bf84c8641c3",
+    "localAfterBlob": "5dd1be4ac99de95219397c67a8444ec7a902122b",
+    "localEqualsRemoteCandidate": true
+  },
+  {
+    "path": "templates/modern/apps/web/app/[locale]/layout.tsx",
+    "localBlob": "e848734c20527de86e4c8cc4dbe32a1798f71f15",
+    "sha256": "e3659d5b2594bc6ade07c91a40fd161d6f9a0da25a2ed991e61527930fe3868a",
+    "bytes": 4649,
+    "remoteCandidateBlob": "6c75f90a1fe17c0114edeb404a112ad3bd6581d5",
+    "remoteCandidateSha256": "ab485eba9444e25645998e67ddad2f28a82f061303455beacb170d4b78b459e7",
+    "localAfterBlob": "9cc074e02f0c640c53f4817e3c10579398dfea1c",
+    "localEqualsRemoteCandidate": false
+  },
+  {
+    "path": "templates/modern/apps/web/app/[locale]/sell/page.tsx",
+    "localBlob": "d6abedb96a6e727102aa8742524bfe3fd9a076b3",
+    "sha256": "aad9bf22efccd393853a9822da7521649aec078f262864249f5d5280d7bf31c6",
+    "bytes": 17042,
+    "remoteCandidateBlob": "f8ad00f8fe48a2fabc4fe07f2bfdba321c4dc2d2",
+    "remoteCandidateSha256": "86c9241c40e862401a22735f310de2fcd9650ede2c9cbb7e363a2645a3d4ee62",
+    "localAfterBlob": "f8ad00f8fe48a2fabc4fe07f2bfdba321c4dc2d2",
+    "localEqualsRemoteCandidate": true
+  },
+  {
+    "path": "templates/modern/apps/web/lib/public-marketplace-data.ts",
+    "localBlob": "dc509b3359bfe7e3d3b1a605eec51e092948da72",
+    "sha256": "4b00c0b568176760ff59aad238d6313a77eefd7aeb959113e3e6d012df1029da",
+    "bytes": 14301,
+    "remoteCandidateBlob": "78e66551c4e00f4bb3d20f02f9ed65613375ea9c",
+    "remoteCandidateSha256": "9684d51f25151d86c86938f9df367c5eb55e804ee9c53c99a29ba43d4b95a28b",
+    "localAfterBlob": "78e66551c4e00f4bb3d20f02f9ed65613375ea9c",
+    "localEqualsRemoteCandidate": true
+  },
+  {
+    "path": "templates/modern/apps/web/lib/public-marketplace-pagination.test.ts",
+    "localBlob": "12c15198a8354103e2d60a65e41e6a6cfbfe0ced",
+    "sha256": "38caa9d3056de1bdf7a28eb014ab0eb827293785e2b67341f4a940c98af4a30f",
+    "bytes": 2736,
+    "remoteCandidateBlob": "5416f37501df5d64d0c2ab14ae24baa33dac2fd1",
+    "remoteCandidateSha256": "3710314abda70131b4031f474c919d7dd43fe414e1e1b0bd05f82e419cb3c3d6",
+    "localAfterBlob": "5416f37501df5d64d0c2ab14ae24baa33dac2fd1",
+    "localEqualsRemoteCandidate": true
+  },
+  {
+    "path": "templates/modern/docs/CARS-INTEGRATION.md",
+    "localBlob": "49aa4215c61d48a643b5c12ec1fe936149d64507",
+    "sha256": "fb8827d84f5d975814ed195f4f883e89f5c9db1e0b291726583f3ef74bc0a5d2",
+    "bytes": 3625,
+    "remoteCandidateBlob": "669441e0ee75c5b953572bcafbd9880b539e90c0",
+    "remoteCandidateSha256": "848c33763c898377b5be90fa1bac81b8015f94eacc4780a7784bebdb1ba73fc8",
+    "localAfterBlob": "669441e0ee75c5b953572bcafbd9880b539e90c0",
+    "localEqualsRemoteCandidate": true
+  },
+  {
+    "path": "templates/modern/docs/LEAD-BUILD.md",
+    "localBlob": "38603ab573bec3a71234c2aee0d6fcbaa810fc7d",
+    "sha256": "4899e4d0c6674c2e0ca17c9ccbd124a2338f3a00d8747387dfd6841b5a47c410",
+    "bytes": 884,
+    "remoteCandidateBlob": "7bbd71e4bdb0db901d142ff9407a76767e273a8b",
+    "remoteCandidateSha256": "99f9e3c2d8429b253bcee2b5dd9f54b053f9698beda02c91ba9ba8f4a1216f57",
+    "localAfterBlob": "7bbd71e4bdb0db901d142ff9407a76767e273a8b",
+    "localEqualsRemoteCandidate": true
+  },
+  {
+    "path": "templates/modern/docs/SITE-CONFIGURATION.md",
+    "localBlob": "6907e1074a52af1c46e949a4d35d7c5fea124374",
+    "sha256": "1572b4a1b09e9842599baf7a3c43f2368ff6d586454c0ccc3a42cf39227e0bed",
+    "bytes": 15312,
+    "remoteCandidateBlob": "9a2c5e88261c693d002861e1d50e8bbb7bc34c36",
+    "remoteCandidateSha256": "e8397e396ad17c283b60188065ca804c8b150fe668a4036a48a299c9fd489ee6",
+    "localAfterBlob": "9a2c5e88261c693d002861e1d50e8bbb7bc34c36",
+    "localEqualsRemoteCandidate": true
+  },
+  {
+    "path": "templates/modern/packages/marketplace-ui/components/listing-detail-content.tsx",
+    "localBlob": "a050046f5c8705e012e69883e66239e891d5ab09",
+    "sha256": "953a2c2f75436c480b7fefbefc9bf9519799a264224eaeb390f549d8fc6ce91e",
+    "bytes": 7037,
+    "remoteCandidateBlob": "6c9cd5c01b84b0042ced47af99c643183f68198a",
+    "remoteCandidateSha256": "2e9c0b251c198ffe66b09de41fe9561248bfb9b5262317aba1ab060407e0cb7b",
+    "localAfterBlob": "6c9cd5c01b84b0042ced47af99c643183f68198a",
+    "localEqualsRemoteCandidate": true
+  }
+]

@@ -4,4 +4,4 @@ Create and edit dealers in canonical Cars clients/<slug>/ using the [Cars workfl
 
 Use [TEMPLATE](../TEMPLATE.md) for the actual personalization boundaries and [QA](QA.md) for technical checks. Keep layout, spacing, typography, routes, cards, interactions and the full runtime. Apply one sourced fact/inventory/asset pack through real application data modules; complete the stale-identity sweep and integrate local media.
 
-[Cars integration](CARS-INTEGRATION.md) owns standard and Import trio compatibility, promotion and canonical/publishing ownership. The Cars workflow owns publication and records; this template document does not authorize outreach or deployment.
+[Cars integration](CARS-INTEGRATION.md) records source and mirror ownership and links to Cars' six-template fleet and promotion contracts. The Cars workflow owns publication and records; this template document does not authorize outreach or deployment.

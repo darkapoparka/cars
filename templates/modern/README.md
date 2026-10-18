@@ -2,7 +2,7 @@
 
 **Working branch: `main`.** Coordinate overlapping files and shared Git/build writes; independent files may be edited concurrently. Read [AGENTS.md](AGENTS.md) before starting; temporary branches/worktrees require an explicit request and a completed integration/cleanup handoff.
 
-Canonical standalone master: **`darkapoparka/cars-template-modern`**. This repository is a reusable dealership design, not a dealer-specific project and not evidence that any sample business data is current.
+Canonical reusable master: **`darkapoparka/cars`, `main`, `templates/modern`**. The standalone **`darkapoparka/cars-template-modern`** repository is a publishing mirror and source history. This repository is a reusable dealership design, not a dealer-specific project and not evidence that any sample business data is current.
 
 **AI/agent entry point:** read `AGENTS.md`, then `TEMPLATE.md`, `docs/LEAD-BUILD.md`, and `docs/QA.md` before editing.
 
@@ -10,8 +10,8 @@ Canonical standalone master: **`darkapoparka/cars-template-modern`**. This repos
 - Template key: `modern`
 - Role: **core**
 - Design position: premium minimal / inventory-first showroom
-- Standard dealer offer: `auto-best + carwow + modern`
-- Import is Design 2 in the intentional Import trio; it does not add a fourth design.
+- Current dealer offer: `auto-best + modern + import + app + mobile + karento-best` (Signature).
+- Shared FAB: all six templates plus Admin, preserving each dealer's recorded variant and route mapping.
 
 ## Rule of ownership
 Improve this repository only when the task is a **shared template improvement**. For a **lead build**, use canonical Cars clients/<slug>/ through its approved-release clone workflow; never personalize this master.

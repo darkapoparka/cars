@@ -35,7 +35,14 @@ interface RootLayoutProperties {
 export const metadata: Metadata = {
   applicationName: leadSite.name,
   icons: {
-    icon: [{ type: "image/png", url: withBasePath(leadSite.logoPath) }],
+    icon: [
+      {
+        type: publicSite.identity.icon.endsWith(".png")
+          ? "image/png"
+          : undefined,
+        url: withBasePath(publicSite.identity.icon),
+      },
+    ],
   },
   metadataBase: new URL(getPublicWebBaseUrl()),
 };
