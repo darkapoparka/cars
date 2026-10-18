@@ -45,5 +45,8 @@ export const load: PageServerLoad = ({ request, url }) => {
 };
 
 export const actions: Actions = {
-	default: async () => ({ passwordSaved: true })
+	default: async ({ request, url }) => {
+		requireDayNightPageSession(request, 'account/password', url.searchParams);
+		return { passwordUnavailable: true };
+	}
 };

@@ -2569,10 +2569,13 @@ function injectLocalBehavior(
 	const favoriteKey = 'daynight:favorites';
 	const compareKey = 'daynight:compare';
 	const sessionKey = 'daynight:session';
+	const runtimeOwner = typeof daynightRuntimeOwner === 'undefined' ? undefined : daynightRuntimeOwner;
+	if (runtimeOwner && !runtimeOwner.active) return;
 	const previousRuntimeController = window.__DAYNIGHT_RUNTIME_ABORT_CONTROLLER__;
 	if (previousRuntimeController) previousRuntimeController.abort();
 	const runtimeAbortController = typeof AbortController !== 'undefined' ? new AbortController() : undefined;
 	window.__DAYNIGHT_RUNTIME_ABORT_CONTROLLER__ = runtimeAbortController;
+	if (runtimeOwner) runtimeOwner.controller = runtimeAbortController;
 	const runtimeListenerOptions = runtimeAbortController ? { signal: runtimeAbortController.signal } : undefined;
 	const runtimeCaptureListenerOptions = runtimeAbortController
 		? { capture: true, signal: runtimeAbortController.signal }
@@ -3105,6 +3108,13 @@ function injectLocalBehavior(
 		}
 
 		event.preventDefault();
+		if (form.matches('.daynight-profile-form, .daynight-password-form')) {
+			const english = document.documentElement.lang !== 'bg';
+			setFormStatus(form, form.matches('.daynight-profile-form')
+				? (english ? 'Demo only. Profile changes are not saved.' : 'Само демо. Промените в профила не се запазват.')
+				: (english ? 'Demo only. Passwords are not changed or stored.' : 'Само демо. Паролите не се променят и не се съхраняват.'));
+			return;
+		}
 		const payload = formPayload(form);
 		if (form.matches('#LoginModal form')) {
 			const result = await postJson('/api/auth/login', {
@@ -3132,12 +3142,6 @@ function injectLocalBehavior(
 				email: payload.email || payload['email-forgot-password']
 			});
 			setFormStatus(form, 'Password recovery request queued locally for Day Night Auto');
-		} else if (form.matches('.daynight-profile-form')) {
-			await postJson('/api/account/profile', payload);
-			setFormStatus(form, 'Profile saved locally for ' + runtimeData.account.session.name);
-		} else if (form.matches('.daynight-password-form')) {
-			await postJson('/api/account/password', payload);
-			setFormStatus(form, 'Password change recorded locally');
 		} else if (form.matches('.daynight-add-listing-form')) {
 			if (window.location.pathname.startsWith('/admin')) {
 				const listingId = payload.listingId || payload.id || payload.slug;

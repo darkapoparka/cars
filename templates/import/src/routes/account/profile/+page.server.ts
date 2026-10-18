@@ -45,5 +45,8 @@ export const load: PageServerLoad = ({ request, url }) => {
 };
 
 export const actions: Actions = {
-	default: async () => ({ profileSaved: true })
+	default: async ({ request, url }) => {
+		requireDayNightPageSession(request, 'account/profile', url.searchParams);
+		return { profileUnavailable: true };
+	}
 };

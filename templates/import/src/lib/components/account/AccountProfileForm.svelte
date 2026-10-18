@@ -12,11 +12,18 @@
 
 	const saveProfile = (event: SubmitEvent) => {
 		event.preventDefault();
-		status = `Profile saved locally for ${profile.firstName} ${profile.lastName}`;
+		status = 'Demo only. Profile changes are not saved.';
 	};
 </script>
 
-<form action="#" class="dash-form" novalidate data-daynight-profile-form onsubmit={saveProfile}>
+<form
+	action="#"
+	method="POST"
+	class="dash-form"
+	novalidate
+	data-daynight-profile-form
+	onsubmit={saveProfile}
+>
 	<input type="hidden" name="role" value={profile.role} />
 	<input type="hidden" name="actorRole" value={profile.role} />
 
@@ -76,7 +83,7 @@
 		<div class="dash-card__head">
 			<div>
 				<h2 class="dash-card__title">Information</h2>
-				<p class="dash-card__subtitle">Profile details used by the dashboard and sales pages.</p>
+				<p class="dash-card__subtitle">Demo only. Profile changes are not saved.</p>
 			</div>
 		</div>
 		<div class="dash-card__body dash-form-grid dash-form-grid--4">
@@ -260,7 +267,7 @@
 	<div class="flex justify-end">
 		<button type="submit" class="dash-primary-button">
 			<Save size={17} strokeWidth={2.1} aria-hidden="true" />
-			Save Locally
+			Profile demo
 		</button>
 	</div>
 	<p class="m-0 min-h-5 text-sm font-black text-[#0f9f7a]" aria-live="polite">{status}</p>

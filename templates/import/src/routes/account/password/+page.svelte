@@ -4,7 +4,13 @@
 
 	let { data, form }: { data: PageData; form: ActionData } = $props();
 
-	let statusMessage = $derived(form?.passwordSaved ? 'Password change recorded locally' : '');
+	let statusMessage = $derived(
+		form?.passwordUnavailable
+			? data.locale === 'en'
+				? 'Demo only. Passwords are not changed or stored.'
+				: 'Само демо. Паролите не се променят и не се съхраняват.'
+			: ''
+	);
 </script>
 
 <AccountPasswordTemplatePage
