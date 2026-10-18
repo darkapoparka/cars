@@ -16,7 +16,7 @@
       href: "/",
       label: locale.t("navigation.home"),
       icon: "home" as const,
-      routes: ["index-3", "index-2", "index"],
+      routes: ["marketplace-home", "index-3", "index-2", "index"],
     },
     {
       href: "/vehicles",

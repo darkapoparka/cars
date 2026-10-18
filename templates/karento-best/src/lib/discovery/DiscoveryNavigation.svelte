@@ -7,7 +7,7 @@
   const preview = usePreview();
   const links = $derived([
     {
-      href: "/2",
+      href: "/",
       label: locale.t("navigation.home"),
       icon: "home" as const,
     },
@@ -38,12 +38,12 @@
   {#each links as link (link.href)}
     <a
       href={locale.href(link.href)}
-      aria-current={link.href === "/2" ? "page" : undefined}
+      aria-current={link.href === "/" ? "page" : undefined}
     >
       <BottomNavigationIcon
         name={link.icon}
         appearance="graphite"
-        active={link.href === "/2"}
+        active={link.href === "/"}
       /><span>{link.label}</span>
     </a>
   {/each}

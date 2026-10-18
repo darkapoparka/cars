@@ -35,7 +35,7 @@
       {#each pills as pill (pill.section)}
         <MobilePill
           label={discoveryText(locale.locale, pill.title)}
-          href={pill.title === "brandPill" ? undefined : "/2#" + pill.section}
+          href={pill.title === "brandPill" ? undefined : "/#" + pill.section}
           popup={pill.title === "brandPill" ? "dialog" : undefined}
           onclick={pill.title === "brandPill"
             ? () => search?.openSearch("make")
@@ -61,7 +61,7 @@
                 ariaLabel={discoveryText(locale.locale, "viewAll") +
                   ": " +
                   discoveryText(locale.locale, collection.title)}
-                href={"/2?collection=" + collection.id}
+                href={"/?collection=" + collection.id}
                 trailingIcon="arrow-right"
                 variant="secondary"
               />

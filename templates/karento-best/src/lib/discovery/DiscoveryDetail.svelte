@@ -83,7 +83,7 @@
     <p class="sample-note">{discoveryText(locale.locale, "sampleDetail")}</p>
     <MobilePill
       label={discoveryText(locale.locale, "more")}
-      href="/2"
+      href="/"
       trailingIcon="arrow-right"
     />
   </div>

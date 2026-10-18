@@ -81,7 +81,7 @@
     <a
       class="browse-back"
       aria-label={discoveryText(locale.locale, "backHome")}
-      href={locale.href(collection ? "/2#collection-" + collection.id : "/2")}
+      href={locale.href(collection ? "/#collection-" + collection.id : "/")}
       ><MobileIcon name="arrow-left" size={24} /></a
     >
     <div class="browse-title">
@@ -140,7 +140,7 @@
       <p>{discoveryText(locale.locale, "noResults")}</p>
       <MobilePill
         label={discoveryText(locale.locale, "all")}
-        href="/2?q="
+        href="/?q="
         trailingIcon="arrow-right"
         variant="secondary"
       />

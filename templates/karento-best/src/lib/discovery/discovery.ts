@@ -23,7 +23,7 @@ type Sample = Pick<
   exclusive?: boolean;
 };
 
-/** Sale values are illustrative data for /2, independent of the main rental demo. */
+/** Sale values are illustrative marketplace inputs, independent of rental examples. */
 function sample(input: Sample): DiscoveryCar {
   return {
     ...input,
@@ -31,7 +31,7 @@ function sample(input: Sample): DiscoveryCar {
     offer: input.offer ?? false,
     exclusive: input.exclusive ?? false,
     imageAlt: "Illustrative " + input.title,
-    href: "/2?car=" + input.id,
+    href: "/?car=" + input.id,
     price: "€" + input.amount,
     priceAmount: input.amount,
     currency: "EUR",
@@ -383,15 +383,19 @@ export function discoveryDestination(
     if (value) next.set(key, value);
     else next.delete(key);
   }
-  return "/2?" + next.toString() + hash;
+  return "/?" + next.toString() + hash;
 }
 
-/** Detail return links stay inside the mobile experiment, including direct loads. */
+/** Detail returns stay on Home; bookmarked /2 returns normalize to the same route. */
 export function discoveryReturn(value: string | null): string {
-  if (!value || !/^\/2(?:[?#]|$)/.test(value)) return "/2";
+  if (!value || !/^\/(?:2)?(?:[?#]|$)/.test(value)) return "/";
   const destination = new URL(value, "https://preview.invalid");
-  if (destination.pathname !== "/2" || destination.searchParams.has("car"))
-    return "/2";
+  if (
+    !["/", "/2"].includes(destination.pathname) ||
+    destination.searchParams.has("car")
+  )
+    return "/";
+  destination.pathname = "/";
   destination.searchParams.delete("returnTo");
   return destination.pathname + destination.search + destination.hash;
 }

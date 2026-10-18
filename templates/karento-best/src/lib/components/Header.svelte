@@ -15,10 +15,11 @@
   import { MediaQuery } from "svelte/reactivity";
   import type { Attachment } from "svelte/attachments";
   const phone = new MediaQuery("(max-width: 767.98px)");
-  // Keep the comparison page's existing header controls.
-  const phoneControls = $derived(phone.current && page.route.id !== "/2");
+  // Preserve the marketplace Home's approved header controls.
+  const phoneControls = $derived(phone.current && page.route.id !== "/");
   const heroHeader = $derived(
     [
+      "marketplace-home",
       "index-3",
       "cars-list-1",
       "cars-list-2",

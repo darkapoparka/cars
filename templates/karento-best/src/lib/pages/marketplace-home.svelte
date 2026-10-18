@@ -5,22 +5,21 @@
   import { useLocale } from "#lib/i18n/context.svelte.ts";
   import PageMetadata from "#lib/components/PageMetadata.svelte";
   import OriginalHome from "#lib/pages/index-3.svelte";
-  import DiscoveryHome from "./DiscoveryHome.svelte";
-  import DiscoveryBrowse from "./DiscoveryBrowse.svelte";
-  import DiscoveryDetail from "./DiscoveryDetail.svelte";
-  import DiscoveryNavigation from "./DiscoveryNavigation.svelte";
+  import DiscoveryHome from "#lib/discovery/DiscoveryHome.svelte";
+  import DiscoveryBrowse from "#lib/discovery/DiscoveryBrowse.svelte";
+  import DiscoveryDetail from "#lib/discovery/DiscoveryDetail.svelte";
+  import DiscoveryNavigation from "#lib/discovery/DiscoveryNavigation.svelte";
   import {
     findCar,
     findCollection,
     readDiscoveryFilters,
     discoveryText,
-  } from "./discovery.ts";
-  import type { PageData } from "./$types";
+  } from "#lib/discovery/discovery.ts";
 
-  let { data }: { data: PageData } = $props();
+  let { phoneHint = false }: { phoneHint?: boolean } = $props();
   const phone = new MediaQuery(
     "(max-width: 767.98px)",
-    untrack(() => data.phoneHint),
+    untrack(() => phoneHint),
   );
   const locale = useLocale();
   const car = $derived(findCar(page.url.searchParams.get("car")));
