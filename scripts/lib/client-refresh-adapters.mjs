@@ -707,10 +707,21 @@ function modernListing(item, index, id, profile) {
   if (uk && (!original || !Number.isFinite(item.priceAmount) || item.priceAmount <= 0)) {
     throw new Error('Modern UK requires a published mileage and price; unsupported unknown values cannot become zero offers: ' + item.id);
   }
+  if (!uk) {
+    const missing = [];
+    if (item.priceOnRequest === true || item.raw?.priceOnRequest === true || !Number.isFinite(item.priceAmount) || item.priceAmount <= 0) missing.push('price');
+    if (!originalMileageFacts(item).mileageKnown) missing.push('mileage');
+    if (!['manual', 'automatic', 'semi_automatic'].includes(item.transmissionType)) missing.push('transmission');
+    if (missing.length) {
+      const error = new Error('Modern adaptation requires reviewed ' + missing.join(', ') + '; its selected source cannot display these unknown facts: ' + (item.sourceId || item.id));
+      error.code = 'MODERN_FACTS_REQUIRE_REVIEW';
+      error.fields = missing;
+      throw error;
+    }
+  }
   const fuel = ['gasoline', 'diesel', 'hybrid', 'plug_in_hybrid', 'electric', 'lpg', 'cng'].includes(item.fuelType)
     ? item.fuelType : 'other';
-  const transmission = uk ? modernUkTransmission(item) : item.transmissionType === 'manual' ? 'manual' :
-    item.transmissionType === 'automatic' ? 'automatic' : 'semi_automatic';
+  const transmission = uk ? modernUkTransmission(item) : item.transmissionType;
   const body = ['hatchback', 'sedan', 'wagon', 'suv', 'coupe', 'convertible', 'pickup', 'van', 'minibus', 'motorcycle', 'scooter', 'truck'].includes(item.bodyType)
     ? item.bodyType : 'other';
   const features = item.features.slice(0, 8).map((feature) => ({ bg: feature, en: feature }));

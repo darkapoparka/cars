@@ -150,7 +150,10 @@ async function reviewedRasterPack(master,reviewedSurfaces,sharp){
   markSource:suppliedMark?(retainedAllowed?'reviewed-mark-colors-preserved':'generated-mark-colors-preserved'):'full-reviewed-surface-logo-contained'};
 }
 const LEGACY_LOGO = /^\/(?:dealer-brand\/logo[^/]*\.(?:webp|png)|dealer-app\/logo[^/]*\.(?:webp|png)|branding\/logo-on-(?:light|dark|accent)\.(?:webp|png)|lead-logo(?:-inverse|-dark|-white)?\.png|brand\/daynight-wordmark\.svg)$/;
-function toneFor(path){return /(?:on-dark|on-accent|logo-dark|inverse|white)/.test(path)?'on-dark':'on-light';}
+const VERSIONED_BRAND_ASSET = /^((?:\/variant-[2-6])?)\/dealer-brand\/v2-[a-f0-9]{16}\/(logo-on-(?:light|dark)\.(?:png|webp)|logo-on-accent\.webp|mark-on-(?:light|dark)\.webp|app-icon\.png|apple-touch-icon\.png|favicon\.ico)$/;
+export function isBrandConsumerSource(name){return Object.keys(PUBLIC_ROOTS).some(key=>name.startsWith(key+'/'))&&/\.(?:json|ts|tsx|js|svelte|webmanifest|html)$/.test(name)&&!name.includes('/.template/')&&!name.includes('/.client/')&&!/\/dealer-brand\/v2-[a-f0-9]{16}\//.test(name)&&!/(?:^|\/)[^/]*(?:provenance|attribution|source-manifest)[^/]*\.json$/i.test(name);}
+function toneFor(path){return /on-accent/.test(path)?'on-accent':/(?:on-dark|logo-dark|inverse|white)/.test(path)?'on-dark':'on-light';}
+function currentBrandPath(old,publicBase){const versioned=old.match(VERSIONED_BRAND_ASSET);return versioned?versioned[1]+publicBase+'/'+versioned[2]:publicBase+'/logo-'+toneFor(old)+'.webp';}
 export async function applyLeadBranding(files,manifest,{master,sharp,readTemplate,generation,reviewedSurfaces}){
  const retainedAllowed=reviewedSurfaces?.sourceMode==='retained-or-mixed-raster';
  if(!(files instanceof Map)||!master||manifest.packaging?.version!=='5'||(!retainedAllowed&&(generation?.tool!=='image_gen'||!generation.generationId)))throw Error('A sourced image-generation master and six-design manifest are required');
@@ -161,19 +164,19 @@ export async function applyLeadBranding(files,manifest,{master,sharp,readTemplat
  const original=new Map(files),facts=Object.fromEntries(['business-facts.json','stock.json','locale.json','auto-best/src/lib/data/dealer-profile.json'].filter(p=>files.has(p)).map(p=>[p,sha(files.get(p))]));
  const palette=preserveTemplatePalettes(files,manifest,readTemplate),pack=usesReviewedSurfaces?await reviewedRasterPack(master,reviewedSurfaces,sharp):await rasterPack(master,sharp),packId=pack.packId??sha(Buffer.concat([pack.masterPng,pack.markPng])).slice(0,16),publicBase='/dealer-brand/v2-'+packId;
  const derivedProfiles=new Set(Object.values(PROFILE_LOGO_CONSUMERS).filter(name=>original.has(name)&&JSON.parse(read(original,name)).logoContract!=null));
- const oldLogos=new Set();for(const [name,bytes]of original){if(!/\.(?:json|ts|tsx|js|svelte)$/.test(name)||!Object.keys(PUBLIC_ROOTS).some(k=>name.startsWith(k+'/')))continue;for(const match of Buffer.from(bytes).toString().matchAll(/(["'])(\/[^"'\r\n]+)\1/g))if(LEGACY_LOGO.test(match[2]))oldLogos.add(match[2]);}
+ const oldLogos=new Set();for(const [name,bytes]of original){if(!isBrandConsumerSource(name))continue;for(const match of Buffer.from(bytes).toString().matchAll(/(["'])(\/[^"'\r\n]+)\1/g))if(LEGACY_LOGO.test(match[2])||VERSIONED_BRAND_ASSET.test(match[2]))oldLogos.add(match[2]);}
  const publicPaths=[];
  for(const [key,root]of Object.entries(PUBLIC_ROOTS)){
   for(const [name,bytes]of pack.assets){const target=root+publicBase.slice(1)+'/'+name;files.set(target,bytes);publicPaths.push({key,path:target,sha256:sha(bytes)});}
   // Retain compatible aliases without depending on them for cache invalidation.
   for(const [name,bytes]of pack.assets)files.set(root+'dealer-brand/'+name,bytes);
-  for(const old of oldLogos){if(!files.has(root+old.slice(1))||old.endsWith('.svg'))continue;
+  for(const old of oldLogos){if(!files.has(root+old.slice(1))||old.endsWith('.svg')||VERSIONED_BRAND_ASSET.test(old))continue;
    const addressed=old.match(/^\/dealer-app\/logo-(?:light|dark)-([a-f0-9]{20})\.(?:png|webp)$/);
    if(addressed){if(sha(files.get(root+old.slice(1))).slice(0,20)!==addressed[1])throw Error('Content-addressed App logo alias differs from its retained bytes: '+old);continue;}
-   const tone=toneFor(old),ext=old.endsWith('.png')?'png':'webp';files.set(root+old.slice(1),pack.assets.get('logo-'+tone+'.'+ext));}
+   const tone=toneFor(old),ext=old.endsWith('.png')?'png':'webp';const bytes=pack.assets.get('logo-'+tone+'.'+ext)??(tone==='on-accent'&&ext==='png'?(pack.reviewedInputs?.find(row=>row.name==='onAccent')?.png??pack.assets.get('logo-on-dark.png')):null);if(!bytes)throw Error('Missing reviewed logo alias treatment: '+old);files.set(root+old.slice(1),bytes);}
   for(const name of [root+'favicon.ico',root+'apple-touch-icon.png',root+'dealer-brand/icon.png',root+'dealer-brand/icon-192.png',root+'dealer-brand/icon-512.png'])if(files.has(name))files.set(name,name.endsWith('.ico')?pack.assets.get('favicon.ico'):pack.assets.get('app-icon.png'));
  }
- for(const [name,bytes]of [...files]){if(!/\.(?:json|ts|tsx|js|svelte)$/.test(name)||!Object.keys(PUBLIC_ROOTS).some(k=>name.startsWith(k+'/'))||name.includes('/.template/')||name.includes('/.client/')||Object.hasOwn(facts,name)||derivedProfiles.has(name))continue;const text=Buffer.from(bytes).toString();let next=text;for(const old of oldLogos)next=next.replaceAll(JSON.stringify(old),JSON.stringify(publicBase+'/logo-'+toneFor(old)+'.webp')).replaceAll("'"+old+"'",JSON.stringify(publicBase+'/logo-'+toneFor(old)+'.webp'));if(next!==text)files.set(name,Buffer.from(next));}
+ for(const [name,bytes]of [...files]){if(!isBrandConsumerSource(name)||Object.hasOwn(facts,name)||derivedProfiles.has(name))continue;const text=Buffer.from(bytes).toString();let next=text;for(const old of oldLogos)next=next.replaceAll(JSON.stringify(old),JSON.stringify(currentBrandPath(old,publicBase))).replaceAll("'"+old+"'",JSON.stringify(currentBrandPath(old,publicBase)));if(next!==text)files.set(name,Buffer.from(next));}
  const surfaceBindingsVersion=files.has(MOBILE_LOGO_HEADER)?(applyLogoSurfaceBindings(files,publicBase),1):0;
  const appFile='app/lib/dealer.json';if(files.has(appFile)){const app=JSON.parse(read(files,appFile));app.logo={...app.logo,light:publicBase+'/logo-on-light.webp',dark:publicBase+'/logo-on-dark.webp',icon:publicBase+'/app-icon.png'};files.set(appFile,encode(app));}
  const modern='modern/packages/marketplace/lead-site.ts';let modernText=read(files,modern);modernText=modernText.replace(/(^\s*logoPath:\s*)["'][^"']+["']/m,(_,prefix)=>prefix+JSON.stringify(publicBase+'/logo-on-light.webp'));files.set(modern,Buffer.from(modernText));
@@ -189,8 +192,8 @@ export async function applyLeadBranding(files,manifest,{master,sharp,readTemplat
  files.set('.cars-branding.json',encode(contract));files.set('branding/brand-policy.json',encode({schemaVersion:1,palettePolicy:'template-default',heroOverride:false,bannerOverride:false,sectionOverride:false,dealerAccentForUi:false,logoSurfacePolicy:'explicit-light-dark',packId,source:pack.sourceNames?.master.split('/').at(-1)??'generated-master.png',approval:contract.approval}));assertLeadBranding(files,manifest);for(const [name,bytes]of files)targetFiles.set(name,bytes);return contract;
 }
 export function captureBrandConsumers(files,publicBase){
- const consumers=[],names=['logo-on-light.webp','logo-on-dark.webp','logo-on-accent.webp','app-icon.png'];
- for(const [name,bytes]of files){if(!Object.keys(PUBLIC_ROOTS).some(key=>name.startsWith(key+'/'))||!/[.](?:json|ts|tsx|js|svelte)$/.test(name)||name.includes('/public/')||name.includes('/static/')||name.includes('/.template/')||name.includes('/.client/'))continue;const text=Buffer.from(bytes).toString(),urls=names.map(suffix=>publicBase+'/'+suffix).filter(url=>text.includes(url));if(urls.length)consumers.push({path:name,urls});}
+ const consumers=[],names=['logo-on-light.png','logo-on-light.webp','mark-on-light.webp','logo-on-dark.png','logo-on-dark.webp','mark-on-dark.webp','logo-on-accent.webp','app-icon.png','apple-touch-icon.png','favicon.ico'];
+ for(const [name,bytes]of files){if(!isBrandConsumerSource(name))continue;const text=Buffer.from(bytes).toString(),urls=names.map(suffix=>publicBase+'/'+suffix).filter(url=>text.includes(url));if(urls.length)consumers.push({path:name,urls});}
  return consumers.sort((a,b)=>a.path.localeCompare(b.path,'en'));
 }
 
@@ -211,6 +214,8 @@ export function assertLeadBranding(files,manifest){
   if(!(retainedAllowed?['reviewed-mark-colors-preserved','full-reviewed-surface-logo-contained']:['generated-mark-colors-preserved','full-reviewed-surface-logo-contained']).includes(contract.markSource))throw Error('Missing reviewed mark derivation');
  }
  if(contract.publicBase!=='/dealer-brand/v2-'+contract.packId||!Array.isArray(contract.consumerReferences)||!contract.consumerReferences.length)throw Error('Unversioned or unbound logo consumers');
+ // Retained packs are provenance; application consumers must select the current one.
+ for(const [name,bytes]of files){if(!isBrandConsumerSource(name)||Object.hasOwn(contract.facts,name))continue;for(const match of Buffer.from(bytes).toString().matchAll(/(["'])(?:\/variant-[2-6])?(\/dealer-brand\/v2-[a-f0-9]{16})\/[^"'\r\n]+\1/g))if(match[2]!==contract.publicBase)throw Error('Stale previous-pack logo consumer: '+name);}
  const assetNames=['logo-on-light.png','logo-on-light.webp','mark-on-light.webp','logo-on-dark.png','logo-on-dark.webp','mark-on-dark.webp','logo-on-accent.webp','app-icon.png','apple-touch-icon.png','favicon.ico'];const expected=new Set(Object.entries(PUBLIC_ROOTS).flatMap(([key,prefix])=>assetNames.map(name=>key+':'+prefix+contract.publicBase.slice(1)+'/'+name)));const actual=new Set(contract.assets.map(row=>row.key+':'+row.path));if(actual.size!==expected.size||[...expected].some(key=>!actual.has(key)))throw Error('Incomplete or duplicated family logo assets');
  for(const consumer of contract.consumerReferences){if(!Object.keys(PUBLIC_ROOTS).some(key=>consumer.path.startsWith(key+'/'))||consumer.path.split('/').includes('..'))throw Error('Unsafe logo consumer');const content=read(files,consumer.path);for(const url of consumer.urls)if(!url.startsWith(contract.publicBase+'/')||!content.includes(url))throw Error('Logo consumer reverted or changed: '+consumer.path);}
  if(manifest.branding?.surfaceBindingsVersion===1&&contract.surfaceBindingsVersion!==1)throw Error('Missing mandatory logo surface proof');if(contract.surfaceBindingsVersion===1)assertLogoSurfaceBindings(files,contract.publicBase);

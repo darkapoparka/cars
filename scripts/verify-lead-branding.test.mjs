@@ -5,7 +5,7 @@ import os from 'node:os';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
 import { resolveBrandingSharp, verifyLeadBranding } from './verify-lead-branding.mjs';
-import {rebindDerivedProfileLogoContracts,assertDerivedProfileLogoContracts,PUBLIC_ROOTS} from './publishing/lead-branding.mjs';
+import {applyLeadBranding,rebindDerivedProfileLogoContracts,assertDerivedProfileLogoContracts,PUBLIC_ROOTS} from './publishing/lead-branding.mjs';
 
 const sharp = resolveBrandingSharp();
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
@@ -68,6 +68,68 @@ test('integrated release checks every family copy and detects a wrong dark logo'
   assert.equal(result.surfaces[0].copies.length, 6);
   fs.writeFileSync(path.join(root, roots.mobile, 'dealer-brand/logo.png'), 'wrong logo');
   await assert.rejects(verifyLeadBranding({ client: root, sharp, integrated: true }), /differ in mobile/);
+}));
+
+async function currentFixture(run) {
+  return fixture(async legacy => {
+    const modern='// LEAD_SITE_CONFIG_START\nexport const leadSite = {\n  accent: "#30343b",\n  desktopAccent: "#4b5057",\n  logoPath: "/dealer-brand/logo-on-light.webp",\n};';
+    const importer='export const dealerTheme = {\n  accent: "#17191c",\n  accentHover: "#34383d",\n  accentContrast: "#ffffff"\n};';
+    const files=new Map([
+      ['modern/packages/marketplace/lead-site.ts',Buffer.from(modern)],
+      ['import/src/lib/config/dealer.ts',Buffer.from(importer)],
+      ['app/lib/dealer.json',Buffer.from(JSON.stringify({id:'fixture',logo:{}}))],
+      ['mobile/src/lib/showroom-config.ts',Buffer.from('export const showroom = {\n  logo: "/dealer-brand/logo-on-light.webp",\n};')],
+      ['mobile/src/components/Header.tsx',Buffer.from("filter: { default: 'none', '@media (min-width: 1024px)': 'brightness(0) invert(1)' },\n              <Image\n                src={showroom.logo}\n              />")],
+    ]);
+    const manifest={slug:'fixture',packaging:{version:'5'},branding:{required:true,contract:'.cars-branding.json',surfaceBindingsVersion:1},variants:Object.keys(PUBLIC_ROOTS).map(key=>({key})),templateSources:Object.fromEntries(Object.keys(PUBLIC_ROOTS).map(key=>[key,{repository:'darkapoparka/cars',path:'templates/'+key,revision:'1'.repeat(40)}]))};
+    const generation={tool:'image_gen',generationId:'synthetic-current-fixture-not-generation-evidence',modelVersion:null,sourceFileSha256:'a'.repeat(64)},surfaces={};
+    for (const [surface,channel] of [['onLight',0],['onDark',1],['onAccent',2]]) {
+      const width=160,height=48,rgba=Buffer.alloc(width*height*4);
+      for(let y=8;y<height-8;y++)for(let x=12;x<width-12;x++){const at=(y*width+x)*4;rgba[at+channel]=200;rgba[at+3]=255;}
+      const png=await sharp(rgba,{raw:{width,height,channels:4}}).png().toBuffer();
+      surfaces[surface]={png,sha256:sha(png),sourceReference:'synthetic/'+surface+'.png',generation};
+    }
+    const contract=await applyLeadBranding(files,manifest,{master:{png:surfaces.onLight.png,sha256:surfaces.onLight.sha256},generation,reviewedSurfaces:{schemaVersion:1,reviewed:true,reviewedAt:'2026-10-18T19:30:00.000Z',surfaces},sharp,readTemplate:source=>source.path.endsWith('/modern')?modern:importer});
+    files.set('dealer.json',Buffer.from(JSON.stringify(manifest)));
+    for(const [name,bytes]of files){const target=path.join(legacy.root,name);fs.mkdirSync(path.dirname(target),{recursive:true});fs.writeFileSync(target,bytes);}
+    // A valid old contract and copies must never substitute for the current pack.
+    for(const publicRoot of Object.values(PUBLIC_ROOTS))fs.writeFileSync(path.join(legacy.root,publicRoot,'dealer-brand/logo.png'),legacy.bytes);
+    await run({...legacy,files,currentContract:contract,manifest});
+  });
+}
+
+test('current pack source verification works without a legacy logo contract',async()=>currentFixture(async({root,currentContract})=>{
+  fs.unlinkSync(path.join(root,'branding/logo-contract.json'));
+  const result=await verifyLeadBranding({client:root,sharp});
+  assert.equal(result.status,'passed');assert.equal(result.contractPath,'.cars-branding.json');assert.equal(result.packId,currentContract.packId);
+  assert(result.surfaces.every(row=>row.publicPath.startsWith(currentContract.publicBase+'/')&&row.copies.length===0));
+}));
+test('current integrated check validates all six copies and cannot pass on stale legacy assets',async()=>currentFixture(async({root,currentContract})=>{
+  const result=await verifyLeadBranding({client:root,sharp,integrated:true});
+  assert.equal(result.status,'passed');assert(result.surfaces.every(row=>row.copies.length===6));
+  fs.unlinkSync(path.join(root,PUBLIC_ROOTS.mobile,currentContract.publicBase.slice(1),'logo-on-dark.webp'));
+  await assert.rejects(verifyLeadBranding({client:root,sharp,integrated:true}),/ENOENT|missing|changed/);
+}));
+test('current integrated check finds stale runtime metadata omitted from the receipt',async()=>currentFixture(async({root})=>{
+  fs.writeFileSync(path.join(root,'mobile/public/unrecorded.webmanifest'),JSON.stringify({icons:[{src:'/variant-5/dealer-brand/v2-0000000000000000/app-icon.png'}]}));
+  await assert.rejects(verifyLeadBranding({client:root,sharp,integrated:true}),/Stale previous-pack logo consumer/);
+}));
+test('declared current branding refuses a missing contract or foreign dealer without legacy fallback',async()=>currentFixture(async({root,currentContract})=>{
+  const contractFile=path.join(root,'.cars-branding.json');
+  fs.writeFileSync(contractFile,JSON.stringify({...currentContract,dealer:'another-dealer'}));
+  await assert.rejects(verifyLeadBranding({client:root,sharp,integrated:true}),/identity|differs/);
+  fs.unlinkSync(contractFile);
+  await assert.rejects(verifyLeadBranding({client:root,sharp,integrated:true}),/Required \.cars-branding\.json is missing/);
+}));
+test('current source treatment aliases must match the selected pack hashes',async()=>currentFixture(async({root})=>{
+  fs.writeFileSync(path.join(root,'branding/logo-on-accent.webp'),'stale or missing logo');
+  await assert.rejects(verifyLeadBranding({client:root,sharp}),/bytes differ/);
+}));
+test('retained logo contracts accept contained content-versioned raster paths',async()=>fixture(async({root,contract,bytes,write})=>{
+  const relative='dealer-brand/v2-0123456789abcdef/logo-on-light.png';
+  fs.mkdirSync(path.dirname(path.join(root,relative)),{recursive:true});fs.writeFileSync(path.join(root,relative),bytes);
+  for(const asset of Object.values(contract.assets))asset.publicPath='/'+relative;write();
+  assert.equal((await verifyLeadBranding({client:root,sharp})).status,'passed');
 }));
 
 function derivedProfileLegacyRasterFixture(){

@@ -1,0 +1,355 @@
+Cars delivery workflow audit
+
+I found seven high-value workflow issues. Five have reviewable patches; source-creation resume and the capacity-proof transition remain explicit follow-up work. The immediate recommendation is to strengthen the existing one-Worker-per-dealer pipeline and its content checks.
+
+This review stayed in this Chat with the selected GPT-6 Astra Pro. I inspected the repository through connected GitHub tools, followed the workflow imports and actual template consumers, and ran focused source and contract checks. I made no remote commits, merges, template promotions or deployments, and did not access or modify the occupied L:/CODEX/cars checkout or its J:/cars junction.
+
+Deliverables
+File	Contents
+
+cars-delivery-workflow-audit.html
+	Complete review, source links, dependency map, findings, consumer trace, validation, release holds and the full diff
+
+cars-delivery-workflow.patch
+	Combined nine-file patch
+
+cars-delivery-workflow-evidence.zip
+	Three independently reviewable patch groups, retained logs, reproductions, commands, hashes and source manifests
+
+cars-delivery-workflow-evidence.json
+	Structured findings, exact refs, patch metadata, test results and evidence boundaries
+
+The combined patch changes four production scripts and five test files: 481 insertions, 43 deletions. Its SHA-256 is:
+
+Plain text
+9cbe92c922cdbd93babec2394b95bba39b71cf609e2397e6e4ec295226c07064
+
+It changes no template frontend, palette, artwork, license, approved lock, dealer identity or provider configuration.
+
+1. Exact inspected state and prior work
+
+Main advanced during the review. The final observed main, resolved on 18 October 2026 at 19:53:30 UTC, was:
+
+8865442cf526daedab19671a6940903d0b7b198b
+
+Inspection point	Exact commit	Relationship and disposition
+Initial full workflow inspection	ec5ca040445dc18c702546b0f393969f39be5e73	Parent 8243539369bbe74419214505f375586e06be0d91
+App producer correction	025c0a4c667f7f0692410c184980d406e76f18a6	Parent ec5ca04…; reviewed and included in the source used for the 156 focused checks
+Separate Auto Best audit integration	d796d9defc85358dd8fdd591cd5b01d411e922ef	Parent 025c0a4…; reviewed, excluded from duplicate findings
+Final observed main	8865442cf526daedab19671a6940903d0b7b198b	Parent d796d9d…; adds an incomplete public research checkpoint
+Approved six-template source	bb173c33d7b640502ad2e4bf27546748c12858b8	Release final-six-bb173c33-2026-10-15; approved lock unchanged
+
+The three later commits changed 15 paths; none overlaps the nine-path patch. The final two commits changed no relevant workflow script or test. The executed 156-check result remains attributed to 025c0a4… plus the proposed patch, rather than being relabeled as an executed 8865442… run.
+
+There is now a material distinction between development source and approved source:
+
+Auto Best’s development tree advanced to cbd21f5e0b794a0cbf52bf36fdf07b25fb0bb499.
+Its approved tree remains 78fa1a82eca14816449f9588283260840ee94f52.
+The other five offered template trees remain unchanged.
+templates.lock.json was not promoted. The new Auto Best integration receipt explicitly records a source-only fix and preserves the occupied checkout’s separate brand.name H1 work. 
+Lock · 
+Auto Best integration
+
+I checked the repository audit/handoff material, accessible Auto Best and Modern reports, and both open PRs. I did not reopen every external artifact from the other four template audits. PR #12’s four font/license blobs already match main; PR #10 covers legacy IS AUTO raster work. Neither warrants a duplicate patch here. 
+PR #12 · 
+PR #10
+
+The ec5ca04 localization repair is excluded from these findings. Its actual Actions 39157056388 logs show 21 + 5 passing contract checks, with packaging/matrix work skipped. That is contract evidence, not an application build or hosted fleet acceptance. The App mirror’s image-wait diagnosis remains with its existing template audit. 
+Localization run
+
+The committed 125-demo receipt remains dated 15 October: 100 Cloudflare and 25 Vercel identities. I did not freshly revalidate those public sites. Final main’s USA/UK/UAE checkpoint explicitly says research remains in progress. I read its manifest, but did not individually reverify its reported 290 rows. The additional 400-prospect target, new builds and new deployments are not complete. 
+Historical fleet receipt · 
+Research checkpoint
+
+2. Short dependency map
+Stage	Actual path	Evidence that must survive the handoff
+Select and create	new-client → copy/pinned-source helpers	Independent identity, approved source tuple, preserved Modern/Import ordering, one owned candidate
+Adapt or refresh	prepare-new-dealer-source / prepare-existing-fleet-source → normalization and six family adapters	One dated facts/stock/locale/media pack; preservation of unknowns and existing ownership
+Brand and seal	Catalogs → lead-branding → logo-surface-bindings / logo helpers → native, App and extended seals	Actual raster bytes, current consumer bindings and digests calculated after personalization
+Collect and export	package-dealer → export-dealer / source transport	Committed files, locales, logos, extras, provenance, package digest and remote-parent lease
+Build and compose	Build request → six application targets plus router → singleton assembly/package	Exact compiled inputs and reusable component lineage; one final Worker with all assets
+Release and accept	Deploy tool → provider version → current alias → hosted checks → owner decision	Separate receipts for each state
+
+The current source-request workflow retains a reviewed source proposal and bounded failure evidence. The build-request workflow separately plans compilation/reuse and retains singleton output, source transport and dry-run evidence. Those artifacts do not themselves establish a provider release. 
+Source workflow · 
+Build workflow
+
+Several existing guards are useful and should remain: retained/committed asset collection, locale.json and .cars-branding.json inclusion, digest rechecks, unsafe-link rejection, remote-head leases, and separate source/build/hosted/owner flags. The seven intermediate compile inputs represent six applications plus the router, not seven final dealer Workers. 
+Collector · 
+Singleton assembly
+
+3. Seven prioritized findings
+F1 — P1: Branding refresh can leave consumers on the previous logo pack
+
+Reproduced; patched.
+
+The maintained explicit refresh removes the old .cars-branding.json before applying reviewed branding. With synthetic pack A applied, then that normal refresh sequence followed by pack B, Mobile’s showroom.logo, Import’s light logo and Modern’s logoOnLight still referenced:
+
+Plain text
+/dealer-brand/v2-f6ce568d1cda040d
+
+The new contract referenced:
+
+Plain text
+/dealer-brand/v2-0bd7501e9bd66b2b
+
+The original assertLeadBranding passed.
+
+The replacement matcher recognized legacy paths but missed previous content-versioned paths. Consumer capture then recorded references to the new base, allowing stale references to disappear from the proof. 
+Replacement and capture · 
+Refresh sequence
+
+Minimal patch: rebind recognized previous-pack logo, mark, icon and favicon members, including mounted paths and HTML/webmanifest consumers; preserve old addressed bytes/provenance; reject remaining stale runtime references. Regressions cover artwork changes and metadata-only changes that produce a new pack identity.
+
+This demonstrates a current source defect. It does not establish that a particular hosted dealer currently serves the synthetic old pack.
+
+F2 — P1 for affected retained configurations: Accent treatment becomes the dark treatment
+
+Reproduced; patched.
+
+With distinct reviewed light, dark and accent PNGs, an existing /dealer-brand/logo-on-accent.webp consumer was rewritten to the dark treatment. The legacy accent alias was also overwritten with dark bytes.
+
+The probe’s correct accent hash began e4d6c9f1b738…; the overwritten alias matched the dark hash 1215ba0ea2b9…. Full hashes are retained in the evidence.
+
+The cause is explicit: toneFor groups on-accent with on-dark, and that choice drives both alias bytes and source replacement. 
+Branding selection · 
+Supported logoOnAccent contract
+
+Minimal patch: preserve the explicit accent role, its WebP and reviewed PNG alias, and test that distinct inputs remain distinct.
+
+The scope matters: a retained inline finance consumer uses this contract; the current extracted Modern artwork card bypasses that older branch. This is not a universal current Modern frontend defect. No template surface colors are changed.
+
+F3 — P1: The integrated branding verifier checks the legacy proof instead of the current pack
+
+Reproduced; patched.
+
+Two cases expose the mismatch:
+
+A source containing only the maintained .cars-branding.json fails because branding/logo-contract.json is missing.
+With an older contract retained, the original integrated verifier can pass after the current Mobile dark WebP is deleted.
+
+The verifier requires the older contract and flat path shape, while the maintained writer emits content-versioned paths and the current contract. 
+Legacy verifier · 
+Current writer
+
+Minimal patch: require the declared/present current contract, with no fallback from an invalid current contract; verify its inputs, hashes, all 60 family assets, aliases and recorded bindings; decode alpha/bounds; retain legitimate legacy support.
+
+The patch also independently enumerates bounded supported runtime text, so an unrecorded stale webmanifest cannot hide outside the contract’s own consumer list. It rejects unsafe links and has file/byte limits.
+
+The result still says renderedContrastVerified: false. Source verification cannot certify the browser-selected image or its visual treatment.
+
+F4 — P1: Accepted unknown facts become fixed zero offers in Modern
+
+Reproduced; patched with a factual hold.
+
+Dated AE/AED/km, US/USD/mi and BG/EUR/km fixtures passed the new-dealer facts validator with priceOnRequest, mileageOnRequest, or omitted transmission. The original non-UK Modern adapter emitted:
+
+Fixed price 0.
+Mileage 0 km.
+Transmission semi_automatic.
+
+Normalization preserved the unknowns; the adapter supplied the misleading values. Its existing unknown-price/mileage guard was limited to GB plus miles. The selected Modern types and actual formatting/card/spec consumers do not provide a supported unknown representation for these fields. 
+Accepted inputs · 
+Normalization · 
+Modern adapter
+
+Minimal patch: stop before writing that listing boundary with MODERN_FACTS_REQUIRE_REVIEW and the exact missing fields. Preserve valid numbers, legitimate zero mileage and known unit conversion; the known 45,000 mi → 72,420 km case remains valid.
+
+This intentionally holds an incompatible source proposal. Native unknown-state UI belongs to a separately approved template change. The patch does not move orchestration preflight ahead of candidate creation; that limitation connects to F6.
+
+F5 — P1: Generic preview smoke still assumes three designs
+
+Reproduced against the actual manifest/selector contract; patched.
+
+The current priselci version-5 manifest validates. Its selector labels the first button Дизайн 1 / 6. The original verifier requests Дизайн 1 / 3, switches modulo three and expects viewport-count × three results. Its journey table also omits App, Mobile and Signature. 
+Original verifier
+
+Minimal patch: derive count/order from the manifest, count only primary design anchors, preserve native prefix/query locales, add all six journey families, follow visible same-origin detail links, accept explicit journey overrides, and check the single shared Admin link’s destination and new-tab behavior. An empty viewport result fails.
+
+Optional home alternatives are excluded from the primary six-choice count, matching the actual selector structure. 
+Locale behavior · 
+Choices and Admin
+
+Validation used contract mocks and the existing selector DOM harness. No real browser, hosted route or live Admin interaction was executed.
+
+F6 — P2: A failed new source cannot resume through the same creation command
+
+Code-path-confirmed limitation; follow-up contract, not patched.
+
+new-client installs clients/<slug> before adaptation, catalogs, branding and seals. Later failure retains the candidate and failure.json. A repeated creation invocation encounters occupied-identity checks before establishing whether that directory belongs to its own failed attempt. A multirow request can likewise be blocked by an earlier locally completed row. 
+Creation order · 
+Occupied checks and failure retention
+
+Minimal follow-up: an explicit per-dealer resume receipt tied to request/input/source hashes, the original creation receipt, owned paths, candidate hashes and completed-phase outputs. Revalidate leases before reuse; invalidate changed phases and their dependents.
+
+Until implemented, the coordinating agent must reconcile the retained candidate and perform a reviewed bounded continuation. It must not adopt a foreign folder, delete the candidate to silence the guard, or create another full checkout/dependency tree for the retry.
+
+A full six-app fault-injection/retry run was not performed.
+
+F7 — P2: The capacity-proof contract still encodes an allowance of 100
+
+Reproduced in the pure validator; no capacity patch.
+
+Five synthetic assertions establish the transition limitation:
+
+Proof shape	Current result
+Absent target, 99 of 100 used	Pass
+Absent target, 100 of 100 used	Reject
+Absent target, 100 of 500 used	Reject
+Existing target, allowance 100	Pass
+Same existing target, allowance 500	Reject
+
+Both validators require allowedScripts === 100. The read path carries a fresh connector inventory/count/allowance but does not establish a purchased plan. The reproduction made zero provider calls. 
+Validators · 
+Provider-read boundary
+
+Minimal follow-up: a reviewed allowance-proof transition containing account/plan or quota approval, observation time, complete inventory, effective cap, separately authorized cohort and reserved headroom. Preserve target ownership and absence/resource guards. A blanket 100 → 500 replacement would discard the meaning of the present guard.
+
+4. What the logo consumer trace establishes
+
+The trace covers 73 bounded config/component/route/CSS files, 870,415 bytes, checked against exact Git blobs with zero byte mismatches. The complete chains and line evidence are in the report and evidence bundle.
+
+Family	Actual consumption and important surface behavior
+Auto Best	brand.ts → SiteShell → Header/Footer/MobileMenu. Header/menu use light; specified mobile overlay modes select dark through <picture>; footer uses dark. Inspected hero artwork has no separate dealer logo.
+Modern	lead-site → site-config → DealerDesktopLogo/DealerMobileBrandBar. Desktop header light, footer inverse; discovery chrome inverse, white menu light. A source-slug/static-demo branch can still render a template mask.
+Import	dealer → site.identity → PublicHeader/PublicFooter/MobileAppbar/MobileNavigationMenu. Desktop header light; footer and mobile hero/menu banner dark. Legacy root-shell compatibility routes remain a bounded coverage gap.
+App	dealer.json → dealer-config → DealerBrand → assetPath. Desktop sticky header light. Actual primary mobile home uses the banner’s picture: light through 767px, dark tablet fallback. The hidden DiscoveryHeader image is not rendered acceptance. Alternative mobile header uses dark.
+Mobile	showroom-config → Header picture. Light fallback; dark desktop over-hero source at 1024px+. Detail sticky wrapper uses the normal header. An exact source placeholder selects the template-mask branch.
+Signature	content.ts → layout Header + index-3 → actual Footer.svelte. Normal header/menu light; mobile unscrolled hero selects archivedDark through CSS, then returns to light after scrolling. The actual footer uses the dark treatment.
+
+This is why pack existence and JSON validity are insufficient. A hidden image, unused component or template-mask branch can produce misleading inspection results. Neither an accent asset nor a compact mark should receive a “used” status merely because the file exists.
+
+Hosted acceptance must inspect the actual selected request/currentSrc, decoded dimensions, bytes/hash, CSS selection and visual treatment on each active surface. Those observations are still unrun.
+
+5. Patch validation and its limits
+
+The authoritative combined execution used Node v24.19.0 and existing sharp 0.35.5, on the 025c0a4… source plus the patch:
+
+Bash
+node --test --test-isolation=none --test-concurrency=1 \
+  scripts/client-refresh-price.test.mjs \
+  scripts/client-refresh-presentation.test.mjs \
+  scripts/prepare-new-dealer-source.test.mjs \
+  scripts/preview-access.test.mjs \
+  scripts/verify-dealer-preview.test.mjs \
+  scripts/preview-switcher-release.test.mjs \
+  scripts/six-design-release.test.mjs \
+  scripts/verify-lead-branding.test.mjs \
+  scripts/lead-branding-addressed-app-alias.test.mjs \
+  scripts/logo-surface-bindings.test.mjs \
+  scripts/logo-surface-bindings-refresh.test.mjs \
+  scripts/validate-fleet-localization-workflow.test.mjs \
+  scripts/app-dealer-adapter.test.mjs \
+  scripts/app-variant.test.mjs
+
+Result: 156 passed, 0 failed, 0 skipped, 0 cancelled; 1,242.049108 ms runner time. Exact working directory, dependency-resolution environment, command and full output are retained.
+
+Additional evidence	Result
+Selected reviewed surface fixtures	22 passed; 2,115.892 ms
+Modern regression against exact original	1 pass / 1 expected failure; candidate regression 2/2 passed
+Preview regression against exact original	1 pass / 3 expected failures
+Capacity transition reproduction	Five assertions passed; zero provider calls
+Combined patch application	git apply --check passed against the eight exact original files and absence of the new ninth file
+Existing Actions 39157056388	21 + 5 passed; packaging/matrix skipped
+
+An initial sandbox run blocked an existing CLI-help subprocess, and an isolated attempt timed out. The successful focused execution used permitted local subprocess access and same-process test isolation. No assertion or required guard was disabled.
+
+Explicitly unrun: production Node 26.10 candidate acceptance, the new App strict-consumer integration test in this bounded snapshot, the unavailable full canonical first-three fixture, complete source orchestration/retry injection, framework installs/builds, Chromium/rendered checks, live provider/alias reads and current hosted fleet acceptance. The separately committed App audit’s reported results are attributed to that audit, not added to mine.
+
+6. Capacity and the separate two-dealer pilot
+
+Official Cloudflare documentation currently lists 100 Workers on Free and 500 on Paid. Against the supplied account count of 100, adding 400 dedicated Workers reaches 500/500, leaving no spare slots. The preserved Vercel identities do not create Worker headroom. 
+Cloudflare Workers docs
+
+Workers Paid has a $5 account minimum, including 10 million requests and 30 million CPU-ms; overages are $0.30 per million requests and $0.02 per million CPU-ms. Direct static delivery is normally free; SSR/Worker invocations and enabled Workers Caching can incur charges. $5 is not an all-inclusive fleet bill. 
+Cloudflare Workers docs
++1
+
+I recommend retaining dedicated dealer Workers. A separate two-dealer shared-preview pilot is justified as a measurement exercise because the planned fleet consumes normal account headroom. It needs to demonstrate:
+
+Six real framework adapters: request-scoped facts, stock, logos and routes across the Svelte and Next applications, with explicit treatment of SSR, static and build-baked content.
+Tenant isolation: distinct identities and opposite Modern/Import ordering; controlled host/path selection; unknown tenants rejected; no mutable global dealer config or cross-tenant fallback.
+Cache and asset isolation: dealer, content version, template release and locale included wherever required; interleaved cold/warm requests, details, errors, cookies and local storage tested.
+Actual rollback: retained runnable code/assets and a demonstrated rollback unit. A config pointer alone is insufficient.
+Measured output: build time, peak disk, source/dependency/artifact copies, asset duplication, bundle size, startup/memory, CPU/TTFB, request mix and cost against two equivalent dedicated Workers.
+
+A slug input alone establishes none of these properties. The present singleton’s per-application framework namespaces are not proof of tenant isolation. 
+Current composition
+
+No shared preview, tenant adapter, isolation result or cost saving is claimed implemented. Purchasing remains with you.
+
+7. Practical release sequence, retries and hold points
+
+The build side already has useful component-reuse machinery. New-source creation does not yet resume itself. The following sequence preserves that distinction.
+
+1. Freeze one dealer’s ownership and source selection
+
+The coordinating agent records physical L:/CODEX/cars, current main, unrelated dirty paths, dealer identity, Worker/Vercel aliases and the existing Modern/Import order. Reconcile only the nine patch paths; a conflicting dirty hunk is an integration hold.
+
+Use the explicit six-design mode and approved source tuple. Keep editable masters in templates/*; publishing mirrors do not become source masters. Public research stays in leads; private CRM/outreach stays in Airtable/Agency OS.
+
+Hold: ambiguous ownership, occupied foreign candidate, source lease or template selection.
+
+2. Freeze and validate one dated facts/stock pack
+
+Retain source IDs, URLs, dates, currency, original units and imagery provenance. Check all six consumer contracts, especially Modern’s unknown-value limitations and App’s strict schema. Remove inherited contacts, locations, videos, staff and testimonials; keep concise illustrative/demo disclosures in existing slots.
+
+Run available prechecks before materialization. Moving every adapter compatibility check ahead of creation remains follow-up work.
+
+Hold: invented facts, dropped provenance, unsupported unknowns or inherited identity.
+
+3. Produce and review the logo pack
+
+For every new lead, use Image Gen with transparent_background: true. Retain actual generation metadata and native dimensions; preserve sourced identity/provenance, or label the result a proposal. Do not invent an unexposed model version.
+
+Review light, dark, accent and compact treatments. Commit PNG/WebP bytes and versioned paths/hashes, then trace their real consumers.
+
+Hold: absent, opaque/empty, stale, uncommitted or wrong-treatment assets—even when the JSON validates.
+
+4. Prepare, adapt and seal the owned source
+
+Use the appropriate new-approved or existing-refresh path. After factual adaptation, catalogs and branding, recompute native/App/extended seals and the exact retained-file inventory.
+
+For a failed candidate, reconcile its creation/failure receipt and owned paths before bounded continuation. Do not blindly rerun creation or allocate another copy.
+
+Hold: conflicts, changed inputs during preparation, stale seals or unverifiable candidate ownership.
+
+5. Publish exact source and build verified inputs
+
+Under the coordinator’s separate authorization, source publication must bind the accepted commit, family sources, facts/logo digests and toolchain locks. Reuse a passed component only when its original lineage and relevant inputs match.
+
+A changed logo pack normally affects all six copied asset outputs. Re-evaluate those outputs and their consumers; a previous successful build is not reusable merely because the dealer slug stayed the same.
+
+Hold: mismatched source, lock, component proof or artifact identity.
+
+6. Compose and inspect the single Worker
+
+Require the exact public mapping:
+
+Mount	Application
+/	Auto Best
+/variant-2	Preserved Modern or Import slot
+/variant-3	The other
+/variant-4	App
+/variant-5	Mobile
+/variant-6	Signature, templates/karento-best
+
+Verify all applications/assets, native localized/detail routes, compatibility redirects, six primary FAB choices and one shared Admin-demo link. Retain Carwow source/history outside the offered choices.
+
+Hold: missing compiled logos/media, broken mounts, incomplete choices, wrong Admin target or output that requires separate application Workers.
+
+7. Review a specific provider release
+
+Before a later authorized upload, bind the immutable output to fresh target ownership/capacity proof and the prior active version. Preserve independent dealer and Vercel identities.
+
+If an upload outcome is ambiguous, read and reconcile actual provider state before retrying. Do not allocate a substitute identity to bypass uncertainty.
+
+Hold: capacity/ownership uncertainty or missing release authorization. This audit performs no upload.
+
+8. Verify the current alias and obtain owner acceptance
+
+At mobile and desktop widths—including the 320px FAB—exercise all six home/inventory/detail/contact journeys, locales and redirects. Check loaded logo URLs, dimensions, hashes and treatments on active header/footer/hero/sticky/menu/inverse surfaces. Compare displayed facts and stock to the sealed pack.
+
+Test demo forms with outbound submission intercepted: no real enquiry, no outreach, and no false “sent” or “saved” success.
+
+A dealer can be marked delivered only when accepted source, compiled output, active provider version, current public alias, hosted content/logo/form checks and explicit owner approval all agree. A stale logo, wrong contact, missing image, broken route or unapproved result keeps that dealer on hold.

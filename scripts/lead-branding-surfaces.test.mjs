@@ -93,6 +93,45 @@ test('each reviewed surface participates in content identity, including a distin
  }
 });
 
+test('distinct accent consumers and PNG/WebP aliases retain the reviewed accent treatment',async()=>{
+ const state=fixture(),input=await inputs(),config='modern/packages/marketplace/lead-site.ts';
+ state.files.set(config,text(state.files.get(config).toString().replace('  logoOnDark:', '  logoOnAccent: "/dealer-brand/logo-on-accent.webp",\n  logoOnDark:')));
+ state.files.set('modern/src/accent-consumer.ts',text('export const png="/dealer-brand/logo-on-accent.png", webp="/dealer-brand/logo-on-accent.webp";'));
+ state.files.set(PUBLIC_ROOTS.modern+'dealer-brand/logo-on-accent.png',input.accent);
+ const contract=await apply(state,input);assertLeadBranding(state.files,state.manifest);
+ assert.match(state.files.get(config).toString(),new RegExp('logoOnAccent: "'+contract.publicBase+'/logo-on-accent\\.webp"'));
+ assert.deepEqual(state.files.get(PUBLIC_ROOTS.modern+'dealer-brand/logo-on-accent.png'),input.accent);
+ assert.deepEqual(state.files.get(PUBLIC_ROOTS.modern+'dealer-brand/logo-on-accent.webp'),state.files.get(PUBLIC_ROOTS.modern+contract.publicBase.slice(1)+'/logo-on-accent.webp'));
+ assert.notDeepEqual(state.files.get(PUBLIC_ROOTS.modern+'dealer-brand/logo-on-accent.webp'),state.files.get(PUBLIC_ROOTS.modern+contract.publicBase.slice(1)+'/logo-on-dark.webp'));
+ assert(!state.files.get('modern/src/accent-consumer.ts').toString().includes('logo-on-dark'));
+});
+
+test('explicit refresh rebinds every previous-pack consumer and preserves prior addressed bytes',async()=>{
+ for(const metadataOnly of [false,true]){
+  const state=fixture(),input=await inputs(),mobile='mobile/src/lib/showroom-config.ts',importer='import/src/logo-consumer.ts';
+  state.files.set(mobile,text('export const showroom = {\n  logo: "/dealer-brand/logo-on-light.webp",\n};'));
+  const first=await apply(state,input),previous=new Map(first.assets.map(row=>[row.path,Buffer.from(state.files.get(row.path))]));
+  const memberNames=first.assets.filter(row=>row.key==='mobile').map(row=>row.path.split('/').at(-1));
+  state.files.set('mobile/public/manifest.webmanifest',json({icons:memberNames.map(name=>({src:'/variant-5'+first.publicBase+'/'+name}))}));
+  state.files.set('import/static/manifest.json',json({icons:memberNames.map(name=>({src:'/variant-3'+first.publicBase+'/'+name}))}));
+  state.files.set('import/static/index.html',text('<link rel="icon" href="/variant-3'+first.publicBase+'/favicon.ico">'));
+  const retained='mobile/.client/previous-logo.json',provenance='mobile/public/logo-provenance.json',history=json({previous:first.publicBase+'/logo-on-light.webp'});state.files.set(retained,history);state.files.set(provenance,history);
+  const refreshed=await inputs();
+  if(metadataOnly){const png=await sharp(input.png).withMetadata({density:144}).png().toBuffer();refreshed.master={png,sha256:sha(png)};}
+  else{const png=await artwork([190,20,110]);refreshed.master={png,sha256:sha(png)};refreshed.reviewedSurfaces.surfaces.onLight={...refreshed.reviewedSurfaces.surfaces.onLight,png,sha256:sha(png)};}
+  // The maintained explicit refresh retains the previous contract in its receipt.
+  state.files.delete('.cars-branding.json');const current=await apply(state,refreshed);
+  assert.notEqual(current.packId,first.packId);assertLeadBranding(state.files,state.manifest);
+  for(const name of [mobile,importer,'modern/packages/marketplace/lead-site.ts','mobile/public/manifest.webmanifest','import/static/manifest.json','import/static/index.html']){const consumer=state.files.get(name).toString();assert(!consumer.includes(first.publicBase),name);assert(consumer.includes(current.publicBase),name);}
+  for(const [name,base]of [['mobile/public/manifest.webmanifest','/variant-5'],['import/static/manifest.json','/variant-3']]){const urls=JSON.parse(state.files.get(name)).icons.map(row=>row.src);assert.deepEqual(urls,memberNames.map(member=>base+current.publicBase+'/'+member));assert(current.consumerReferences.some(row=>row.path===name&&row.urls.length===10));}
+  assert.deepEqual(state.files.get(retained),history);assert.deepEqual(state.files.get(provenance),history);
+  for(const [name,bytes]of previous)assert.deepEqual(state.files.get(name),bytes,'Addressed historical pack changed: '+name);
+  if(metadataOnly)for(const member of memberNames)assert.deepEqual(state.files.get(PUBLIC_ROOTS.mobile+first.publicBase.slice(1)+'/'+member),state.files.get(PUBLIC_ROOTS.mobile+current.publicBase.slice(1)+'/'+member));
+  const unrecorded=new Map(state.files);unrecorded.set('mobile/src/stale-logo.ts',text('export const logo="'+first.publicBase+'/custom-logo.webp";'));
+  assert.throws(()=>assertLeadBranding(unrecorded,state.manifest),/Stale previous-pack logo consumer/);
+ }
+});
+
 test('generated mark colors remain intact and no separate mark claim is fabricated',async()=>{
  const input=await inputs();input.master.markPng=input.mark.toString('base64');input.master.markSha256=sha(input.mark);
  const state=fixture(),contract=await apply(state,input);assert.equal(contract.markSource,'generated-mark-colors-preserved');assert.deepEqual(state.files.get('branding/generated-mark.png'),input.mark);

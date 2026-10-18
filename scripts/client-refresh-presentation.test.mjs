@@ -6,6 +6,7 @@ import os from 'node:os';
 import path from 'node:path';
 import test from 'node:test';
 import { refreshAdapterInternals, patchAutoBestLocale } from './lib/client-refresh-adapters.mjs';
+import { refreshNormalizeInternals } from './lib/client-refresh-normalize.mjs';
 import { assertTemplatePresentation, restoreTemplatePalette } from './lib/client-refresh-presentation.mjs';
 
 const write = (root, relative, content) => {
@@ -83,7 +84,7 @@ test('Modern preserves all supplied facts once instead of repeating or truncatin
   const file = path.join(root, 'mock-data.ts');
   const source = 'export const mockListings: VehicleListing[] = [\n' + Array.from({ length: 14 }, (_, index) => '  {\n    id: "am-' + (1001 + index) + '"\n  }').join(',\n') + '\n];\nconst retained = "native behavior";\n';
   const business = { slug: 'recorded-dealer', name: 'Recorded dealer', countryCode: 'BG', currency: 'EUR', city: 'Varna', region: 'Varna', country: 'Bulgaria' };
-  const listings = Array.from({ length: 16 }, (_, index) => ({ id: 'source-' + index, slug: 'source-' + index, title: 'Car ' + index, priceAmount: 4100 + index, currency: 'EUR', images: ['/photo-' + index + '.webp'], features: [], mileageKm: 100000 + index, year: 2000 + index, make: 'Make', model: 'Model', bodyType: 'sedan', fuelType: 'diesel', transmissionType: 'manual', observedAt: '2026-09-07' }));
+  const listings = Array.from({ length: 16 }, (_, index) => refreshNormalizeInternals.normalizeListing({ id: 'source-' + index, slug: 'source-' + index, title: 'Car ' + index, priceAmount: 4100 + index, currency: 'EUR', images: ['/photo-' + index + '.webp'], features: [], mileageKm: 100000 + index, year: 2000 + index, make: 'Make', model: 'Model', bodyType: 'sedan', fuelType: 'diesel', transmissionType: 'manual', observedAt: '2026-09-07' }, index, business));
   const rows = () => {
     const value = fs.readFileSync(file, 'utf8');
     assert(value.endsWith(';\nconst retained = "native behavior";\n'));
