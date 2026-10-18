@@ -443,6 +443,8 @@ const escapeHtml = (value: string | number) =>
 		.replaceAll('"', '&quot;')
 		.replaceAll("'", '&#39;');
 
+const scriptJson = (value: unknown) => JSON.stringify(value).replace(/</g, '\\u003c');
+
 function applyAuxeroAccessibilityLabels(html: string, templateFile: string) {
 	let next = html
 		.replace(
@@ -2558,12 +2560,12 @@ function injectLocalBehavior(
 <script>
 (() => {
 	${bodyClassInjection}
-	const firstVehicleSlug = ${JSON.stringify(firstVehicleSlug)};
-	const currentView = ${JSON.stringify(currentView)};
-	const runtimeData = ${JSON.stringify(runtimeData)};
-	const navItems = ${JSON.stringify(mainNavigation)};
-	const routeMap = ${JSON.stringify(canonicalTemplateRoutes)};
-	const blockedFiles = ${JSON.stringify([...blockedTemplateFiles])};
+	const firstVehicleSlug = ${scriptJson(firstVehicleSlug)};
+	const currentView = ${scriptJson(currentView)};
+	const runtimeData = ${scriptJson(runtimeData)};
+	const navItems = ${scriptJson(mainNavigation)};
+	const routeMap = ${scriptJson(canonicalTemplateRoutes)};
+	const blockedFiles = ${scriptJson([...blockedTemplateFiles])};
 	const favoriteKey = 'daynight:favorites';
 	const compareKey = 'daynight:compare';
 	const sessionKey = 'daynight:session';
@@ -2876,7 +2878,7 @@ function injectLocalBehavior(
 		...formContext(form),
 		role: runtimeData.account.session.role
 	});
-	const vehicleImageFallback = ${JSON.stringify(daynightAssets.hero)};
+	const vehicleImageFallback = ${scriptJson(daynightAssets.hero)};
 	const isVehicleImage = (img) =>
 		!img.closest('.daynight-inventory-desktop-route .daynight-inventory-content') &&
 		(

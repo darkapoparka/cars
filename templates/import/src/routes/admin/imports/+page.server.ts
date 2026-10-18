@@ -17,7 +17,8 @@ export const load: PageServerLoad = async ({ request, url }) => {
 };
 
 export const actions: Actions = {
-	default: async ({ request }) => {
+	default: async ({ request, url }) => {
+		requireDayNightPageSession(request, 'admin/imports', url.searchParams);
 		const formData = await request.formData();
 		const id = value(formData, 'id');
 
