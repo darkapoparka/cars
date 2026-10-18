@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-mobile-audit-source-integration",
+  "reviewedAt": "2026-10-18T21:51:32Z",
+  "auditBaseline": "b49b5cd10b8a3a3bea5c86d89f80a1c88426c96f",
+  "mobileTree": "792bfdd1d8eb22aabd90c7e3a0c0779a6c1c36f3",
+  "integrationBaseline": "f540b1f10e7e81ba75205662a422b9a41051770c",
+  "patch": {
+    "bytes": 29066,
+    "sha256": "49b69826b2faaa5f0a6949b2cb0a6cf6260f4486ca59b62a73044d422ad2510b",
+    "source": "Recovered original inline Chat/GPT-6 Pro response; bytes and checksum match."
+  },
+  "changes": [
+    "Callback replacements retain literal JavaScript replacement tokens in dealer names and disclosures.",
+    "Preview contact/address and donor-only services, logos, delivery and import-origin facts stay limited to sample data.",
+    "Failed browser persistence reports session-only storage; repeated login query parameters are validated.",
+    "Stale release instructions match the existing six-design contract."
+  ],
+  "validation": {
+    "astra": "Lint, strict typecheck, all 11 template test files and eight producer regressions passed; storage action/state probes passed before and after.",
+    "integrator": "Exact canonical candidate overlay: TypeScript zero errors; lint on13 source files zero errors; eight producer cases and nine template-config cases pass.",
+    "preservation": "All affected StyleX declarations unchanged; source lock/data/defaults/assets unchanged. Published Signature discovery binder retained in the shared generator.",
+    "patchApplicability": "Forward and reverse exact-candidate checks passed."
+  },
+  "remaining": [
+    "Generic non-EUR monetary controls and service units are a separate pending correction.",
+    "Native marketplace/valuation/connectivity entry claims and early SellFlow storage copy remain separate pending corrections.",
+    "Production build, actual rendered six-design pilot and hosted acceptance remain pending."
+  ],
+  "sourceFiles": [
+    {
+      "path": "scripts/lib/client-refresh-six.mjs",
+      "beforeBlob": "7b42732111041c6be3f4c996ae6b52653481cd7d",
+      "afterBlob": "e26f7e0402455d923422a9e22ff965198b878e2c"
+    },
+    {
+      "path": "scripts/mobile-personalization.test.mjs",
+      "beforeBlob": null,
+      "afterBlob": "b13818904e01e78e1e8b031354ff1a788838f3a3"
+    },
+    {
+      "path": "templates/mobile/AGENTS.md",
+      "beforeBlob": "b75278a3ab34cd889e0e711bf6faf95837bcda02",
+      "afterBlob": "e1349201196c020352c75499be4e1ebbc5fc014d"
+    },
+    {
+      "path": "templates/mobile/TEMPLATE.md",
+      "beforeBlob": "5e2bac684fb09418adcdd1d07bacbc9c19215a29",
+      "afterBlob": "3ff4e52e918ebda82a3160f2659d72fd8059dfc6"
+    },
+    {
+      "path": "templates/mobile/docs/FINALIZATION.md",
+      "beforeBlob": "ec6d4bfd4d31ca0c6a67bf67271e03ffc9a1f7fa",
+      "afterBlob": "a604fa7d3312384f09273551fefa8c81c4e054c9"
+    },
+    {
+      "path": "templates/mobile/src/app/login/page.tsx",
+      "beforeBlob": "fe7c168d0ba835e89e82e95b2471b0d2e9c4826d",
+      "afterBlob": "a86bcbeb1a573708f7ffaea3f629214c166f05fc"
+    },
+    {
+      "path": "templates/mobile/src/components/DealerInformation.tsx",
+      "beforeBlob": "95f11ffd0099bfc5071e66a6d0451e8fd196b5fe",
+      "afterBlob": "43dc80ed6aa9b0e4ce823805313fdcc387c5b3e5"
+    },
+    {
+      "path": "templates/mobile/src/components/EnquiryEditor.tsx",
+      "beforeBlob": "cec2face26fa859a8b69adc3e2bb529f07b5c771",
+      "afterBlob": "478fc201b5bb2039816e6fd77c02dd735f6b4d4f"
+    },
+    {
+      "path": "templates/mobile/src/components/NativeChecklist.tsx",
+      "beforeBlob": "3d6a1b60b4c3256bc2377c2ac72651f8bb6063d9",
+      "afterBlob": "937c5533c314fe990b16ef9e4cc197f8c097947b"
+    },
+    {
+      "path": "templates/mobile/src/components/SellFlow.tsx",
+      "beforeBlob": "fd658023f5d2e403c69d23a777794911f697a68c",
+      "afterBlob": "da890455837ec0273b27e1e63c528302df853d86"
+    },
+    {
+      "path": "templates/mobile/src/components/ShowroomImportExamples.tsx",
+      "beforeBlob": "f98610f6549b0303882122058a8a4e2fe0098ac7",
+      "afterBlob": "fad6f4806188191962a1ce99b4c46e7db9f6ec01"
+    },
+    {
+      "path": "templates/mobile/src/components/ShowroomPageLayout.tsx",
+      "beforeBlob": "275789971dddd65404f38bfee50208e071fc8c97",
+      "afterBlob": "70227f2cbb914d754c8b3484586249fde082188d"
+    },
+    {
+      "path": "templates/mobile/src/components/VehicleMessageScreen.tsx",
+      "beforeBlob": "4925134df8a6a41e1744dc5e9f094594b5cc622e",
+      "afterBlob": "fe352175f869e131b88c7c877996d1060f2272ce"
+    },
+    {
+      "path": "templates/mobile/src/components/VehicleSections.tsx",
+      "beforeBlob": "c31dba778d8573b76b89002c4c7e454c90f429db",
+      "afterBlob": "ebe4d7326888bfcbdad816692a1c7887cd25f21a"
+    },
+    {
+      "path": "templates/mobile/src/lib/messages.bg.ts",
+      "beforeBlob": "71ba943192581f00457d84efb30fc45bac057818",
+      "afterBlob": "02a75fc414c9738f48abac43cc7fc2660d952c69"
+    },
+    {
+      "path": "templates/mobile/src/lib/showroom-config.ts",
+      "beforeBlob": "8c50186a09de747f30735ea932368a975a28fe24",
+      "afterBlob": "41d389ef6a31f1fae0001115a49aff6c6f4558f1"
+    },
+    {
+      "path": "templates/mobile/src/lib/showroom.ts",
+      "beforeBlob": "eef1f8a3c7b4eef2e2c6ec361ccc0f49714c23d0",
+      "afterBlob": "d96bb39750b0851af5594fcc1cfe6bc5092f7538"
+    },
+    {
+      "path": "templates/mobile/src/lib/store.ts",
+      "beforeBlob": "7818e5977aab45948b777f83e5c18d50a4dbc391",
+      "afterBlob": "3396f02be916075b410c138600579f57b283341a"
+    },
+    {
+      "path": "templates/mobile/tests/template-config.test.mjs",
+      "beforeBlob": "68746eded593abd0a5cf27e0c04301c675011156",
+      "afterBlob": "f49bab7c864e006adcf1d624e5078c26d6b1ac7e"
+    }
+  ]
+}

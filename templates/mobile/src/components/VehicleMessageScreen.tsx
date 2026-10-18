@@ -182,13 +182,13 @@ export function VehicleMessageScreen({ vehicle: v }: { vehicle: Vehicle }) {
     ['Leasing', 'You can find out the leasing details from the dealer'],
     ['Trade-in', 'Make • Model • First registration • Mileage'],
     ['Onsite visit', 'Date • Time'],
-    ...(v.id === 'bmw-540' ? [['Delivery', 'Zip • City']] : []),
+    ...(v.sample && v.id === 'bmw-540' ? [['Delivery', 'Zip • City']] : []),
   ];
   return (
     <>
       <Header title="Message" back={'/vehicle/' + v.id} />
       <div {...stylex.props(s.to)}>
-        {v.id === 'bmw-x6' ? (
+        {v.sample && v.id === 'bmw-x6' ? (
           <Image
             src="/images/dealer-hofmann.webp"
             width={48}

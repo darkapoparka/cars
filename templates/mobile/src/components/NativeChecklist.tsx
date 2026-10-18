@@ -7,7 +7,7 @@ import checklist from '@/lib/native-data/checklist.json';
 import { colors } from '@/styles/tokens.stylex';
 import type { Vehicle } from '@/lib/types';
 import { money } from '@/lib/search';
-import { patchState, togglePark, useAppState } from '@/lib/store';
+import { notify, patchState, togglePark, useAppState } from '@/lib/store';
 import { Header } from './Header';
 import { IconButton, ui } from './ui';
 import { LoginScreen } from './LoginScreen';
@@ -67,10 +67,14 @@ export function NativeChecklist({ vehicle: v }: { vehicle: Vehicle }) {
   if (!email) return <LoginScreen next={'/vehicle/' + v.id + '/checklist'} />;
   function save() {
     if (!parked.includes(v.id)) togglePark(v.id);
-    patchState({
+    const persisted = patchState({
       parkNotes: { ...parkNotes, [v.id]: notes ?? parkNotes[v.id] ?? '' },
-      toast: 'Checklist saved locally.',
     });
+    notify(
+      persisted
+        ? 'Checklist saved locally.'
+        : 'Saving is unavailable. Changes are kept for this session only.',
+    );
     router.push('/vehicle/' + v.id);
   }
   return (

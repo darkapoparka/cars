@@ -153,7 +153,7 @@ function guardMobileFacts(files,profile) {
     source=replaceOne(source,/        <button\s+type="button"\s+aria-label="View dealer ratings"[\s\S]*?<\/button>/,node=>'{v.reviews > 0 && ('+node+')}', 'Mobile dealer rating action');
     source=replaceOne(source,"['list', 'Ads online', data.listings]","['list', 'Dated vehicle examples', data.listings]",'Mobile dated inventory label');
     source=replaceOne(source,'{stats.map(([icon, label, value]) => (','{stats.filter(([, , value]) => value.trim()).map(([icon, label, value]) => (','Mobile verified dealer facts');
-    source=replaceOne(source,/This information is based exclusively on data from mobile\.de and reviews by other users\.\s*All content is independent and not for sale\./,'{'+JSON.stringify(profile.business.inventoryNotice)+'}','Mobile dated disclosure');
+    source=replaceOne(source,/This information is based exclusively on data from mobile\.de and reviews by other users\.\s*All content is independent and not for sale\./,()=>'{'+JSON.stringify(profile.business.inventoryNotice)+'}','Mobile dated disclosure');
     source=replaceOne(source,/<div \{\.\.\.stylex\.props\(s\.section\)\}>\s*<h3 \{\.\.\.stylex\.props\(s\.subheading\)\}>We speak<\/h3>\s*<p \{\.\.\.stylex\.props\(s\.text\)\}>\{data\.languages\}<\/p>\s*<\/div>/,node=>'{data.languages && ('+node+')}','Mobile unpublished languages');
     source=replaceOne(source,'<Modal open={reviews}','<Modal open={reviews && v.reviews > 0}','Mobile verified reviews modal');
     return source;
@@ -264,7 +264,7 @@ function patchMobile(files, profile, logos) {
     email: business.email || null, address: business.address || null, directionsUrl: business.mapsUrl || null,
     mapEmbedUrl: business.mapsEmbedUrl || null, socialLinks: Object.entries(business.socialLinks).filter(([,href]) => href).map(([label,href]) => ({label,href})),
     contactPreview: false, hours: business.hours ? [business.hours] : [], storageNamespace: profile.slug };
-  config = config.replace(pattern, 'export const showroom = defineShowroom(' + JSON.stringify(showroom, null, 2) + ');');
+  config = config.replace(pattern, () => 'export const showroom = defineShowroom(' + JSON.stringify(showroom, null, 2) + ');');
   put(files, file, config);
   const inventory = profile.listings.map(listing => showroomVehicle(listing, profile));
   const catalog = prefix + 'src/lib/catalog.ts';

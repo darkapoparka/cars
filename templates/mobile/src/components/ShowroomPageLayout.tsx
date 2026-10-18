@@ -5,7 +5,7 @@ import * as stylex from '@stylexjs/stylex';
 import { colors } from '@/styles/tokens.stylex';
 import { showroomDesktop } from '@/styles/showroom-desktop-tokens.stylex';
 import { useLocale } from '@/lib/use-locale';
-import { showroom, showroomPreviewLocation } from '@/lib/showroom';
+import { showroomContactLocation } from '@/lib/showroom';
 import { Icon } from './Icon';
 import { showroomHeroStyles as hero } from './showroom-hero.stylex';
 
@@ -111,7 +111,10 @@ export function ShowroomHeroHeading({
     <div {...stylex.props(hero.copy, desktopOnly && hero.desktopCopy)}>
       <p data-desktop-showroom-location {...stylex.props(hero.location)}>
         <Icon name="pin" size={14} />
-        <span>{showroom.address || showroomPreviewLocation[locale]}</span>
+        <span>
+          {showroomContactLocation(locale).address ||
+            t('Location details are unavailable in this preview.')}
+        </span>
       </p>
       <Heading id={id} data-showroom-hero-title {...stylex.props(hero.title)}>
         {t(title)}

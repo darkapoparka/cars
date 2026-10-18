@@ -4,6 +4,7 @@ import {
   defineShowroom,
   showroom,
   showroomMetadata,
+  showroomPreviewPhone,
   showroomTitle,
   storageKeysFor,
 } from '../.qa/domain/showroom-config.mjs';
@@ -170,6 +171,11 @@ test('configured contact and logo actions reject executable, incomplete and cred
     () => defineShowroom(dealer({ socialLinks: [{ label: ' ', href: 'https://example.com' }] })),
     /Social links/,
   );
+});
+
+test('the display-only preview phone cannot become a configured call destination', () => {
+  for (const phone of [showroomPreviewPhone, '+359000000000', '359 (000) 000-000'])
+    assert.throws(() => defineShowroom(dealer({ phone })), /phone/, phone);
 });
 
 test('personalized metadata and browser titles use the configured dealer in both languages', () => {

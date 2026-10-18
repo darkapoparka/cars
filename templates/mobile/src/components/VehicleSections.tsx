@@ -879,7 +879,7 @@ export function VehicleSections({
                       : v.attributes.description.slice(0, 600)
                     : v.make + ' ' + v.model + '\n' + v.variant}
                 </p>
-                {description && (
+                {description && (!showroomMode || v.sample) && (
                   <p {...stylex.props(ui.small, ui.muted, ui.space)}>
                     {t(
                       'Captured vehicle example. Supplementary specifications are local fixtures, not a verified current sales offer.',

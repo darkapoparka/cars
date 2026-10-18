@@ -73,7 +73,7 @@ export function ShowroomImportExamples({ country = 'all' }: { country?: ImportCo
       <div {...stylex.props(s.grid)}>
         {importExamplesFor(country).map((example) => {
           const vehicle = vehicles.find((vehicle) => vehicle.id === example.vehicleId);
-          if (!vehicle) return null;
+          if (!vehicle || !vehicle.sample) return null;
           return (
             <article
               key={vehicle.id}

@@ -1,16 +1,13 @@
 import { normalizeFilters, serializeFilters } from './search';
 import type { Filters } from './types';
 import { showroom } from './showroom-config';
-export { showroom } from './showroom-config';
+export { showroom, showroomPreviewPhone } from './showroom-config';
 
 // Example requested for the template preview; a configured dealer address takes precedence.
 export const showroomPreviewLocation = {
   bg: 'Варна · ул. Райко Жинзифов 41',
   en: 'Varna · 41 Rayko Zhinzifov St.',
 };
-
-// Display-only example: never create a tel: link for this placeholder.
-export const showroomPreviewPhone = '+359 000 000 000';
 
 // Google Maps Share > Embed for the owner's existing example address.
 // Personalization replaces this with a verified mapEmbedUrl and disables contactPreview.

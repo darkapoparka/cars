@@ -574,10 +574,11 @@ marketplace screenshot contracts do not establish showroom acceptance.
 Run `npm run qa:polish` for Bulgarian/English reflow, Escape, validation and
 storage-failure/retry regressions in Chromium and WebKit.
 
-The catalog registers a working library candidate. No dealer release is selected,
-and the existing dealer generator and default design sets remain as recorded.
-Dealer mounting, personalization adapters and exact-source release
-acceptance remain required before offering Mobile as a published dealer design.
+Cars' `templates.lock.json` selects the approved Mobile source for `/variant-5`
+in the [six-design fleet](../../docs/FLEET-ROLLOUT-2026-10-11.md).
+The [promotion workflow](../../docs/TEMPLATE-PROMOTION.md) governs subsequent
+source changes and dealer refreshes. A local audit, build or standalone preview
+does not promote the lock or establish mounted/hosted acceptance.
 
 Read [the imported architecture reference](docs/REFERENCE-ARCHITECTURE.md) as
 historical donor context. New copy-specific results belong in Cars `docs/`.
