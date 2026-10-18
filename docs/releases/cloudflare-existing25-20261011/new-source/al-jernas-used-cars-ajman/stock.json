@@ -1,0 +1,133 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-jernas-used-cars-ajman",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-18",
+  "disclosure": "Dated public listing snapshot, 18 October 2026. Confirm the original advert, price, condition and availability with the seller.",
+  "physicalAvailabilityConfirmed": false,
+  "records": [
+    {
+      "id": "287985182",
+      "title": "2024 BAIC BJ40 C",
+      "make": "BAIC",
+      "model": "BJ40",
+      "year": 2024,
+      "priceAmount": 77000,
+      "currency": "AED",
+      "mileageValue": 54000,
+      "mileageUnit": "km",
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "body": "SUV",
+      "condition": "used",
+      "color": "Grey",
+      "images": [
+        "/dealer-stock/287985182-01.webp",
+        "/dealer-stock/287985182-02.webp"
+      ],
+      "sourceUrl": "https://ae.opensooq.com/en/search/287985182",
+      "observedAt": "2026-10-18",
+      "sourcePublishedDate": "2026-10-12",
+      "availability": "Dated advertisement; confirm price, condition and availability with seller",
+      "description": "Dated public listing snapshot, 18 October 2026. Confirm the original advert, price, condition and availability with the seller.",
+      "sourceLocation": "Ajman",
+      "sourceEvidence": {
+        "kind": "original_seller_advertisement",
+        "url": "https://ae.opensooq.com/en/search/287985182",
+        "observedAt": "2026-10-18",
+        "publishedDate": "2026-10-12",
+        "units": "Explicit km in original spec and seller description",
+        "readMethod": "Web-tool original PDP extraction; parent separately rendered current dealer profile and corresponding stock cards"
+      },
+      "mediaKind": "original_advert_photograph",
+      "mediaRights": {
+        "permission": "not_independently_established",
+        "watermarkRemoved": false,
+        "published": false
+      }
+    },
+    {
+      "id": "287884308",
+      "title": "2017 BMW 740Li",
+      "make": "BMW",
+      "model": "7 Series",
+      "year": 2017,
+      "priceAmount": 67000,
+      "currency": "AED",
+      "mileageValue": 163000,
+      "mileageUnit": "km",
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "body": "Sedan",
+      "condition": "used",
+      "images": [
+        "/dealer-stock/287884308-01.webp",
+        "/dealer-stock/287884308-02.webp"
+      ],
+      "sourceUrl": "https://ae.opensooq.com/en/search/287884308",
+      "observedAt": "2026-10-18",
+      "sourcePublishedDate": "2026-10-11",
+      "availability": "Dated advertisement; confirm price, condition and availability with seller",
+      "description": "Dated public listing snapshot, 18 October 2026. Confirm the original advert, price, condition and availability with the seller.",
+      "sourceLocation": "Ajman",
+      "sourceEvidence": {
+        "kind": "original_seller_advertisement",
+        "url": "https://ae.opensooq.com/en/search/287884308",
+        "observedAt": "2026-10-18",
+        "publishedDate": "2026-10-11",
+        "units": "Explicit km in original spec and seller description",
+        "readMethod": "Web-tool original PDP extraction; parent separately rendered current dealer profile and corresponding stock cards"
+      },
+      "sourceSelectionNote": "AED67000 on original11OctOpenSooq advert selected; retained olderYalla24SepAED75000 separately. Do not label either dealer-confirmed current price.",
+      "mediaKind": "original_advert_photograph",
+      "mediaRights": {
+        "permission": "not_independently_established",
+        "watermarkRemoved": false,
+        "published": false
+      }
+    },
+    {
+      "id": "288459348",
+      "title": "2022 Toyota FJ Cruiser",
+      "make": "Toyota",
+      "model": "FJ Cruiser",
+      "year": 2022,
+      "priceAmount": 135000,
+      "currency": "AED",
+      "mileageValue": 141000,
+      "mileageUnit": "km",
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "body": "SUV",
+      "condition": "used",
+      "color": "Black",
+      "images": [
+        "/dealer-stock/288459348-01.webp",
+        "/dealer-stock/288459348-02.webp"
+      ],
+      "sourceUrl": "https://ae.opensooq.com/en/search/288459348",
+      "observedAt": "2026-10-18",
+      "sourcePublishedDate": "2026-10-18",
+      "availability": "Dated advertisement; confirm price, condition and availability with seller",
+      "description": "Dated public listing snapshot, 18 October 2026. Confirm the original advert, price, condition and availability with the seller.",
+      "sourceLocation": "Ajman",
+      "sourceEvidence": {
+        "kind": "original_seller_advertisement",
+        "url": "https://ae.opensooq.com/en/search/288459348",
+        "observedAt": "2026-10-18",
+        "publishedDate": "2026-10-18",
+        "units": "Explicit km in original spec and seller description",
+        "readMethod": "Web-tool original PDP extraction; parent separately rendered current dealer profile and corresponding stock cards"
+      },
+      "mediaKind": "original_advert_photograph",
+      "mediaRights": {
+        "permission": "not_independently_established",
+        "watermarkRemoved": false,
+        "published": false
+      }
+    }
+  ],
+  "draft": true,
+  "readyForFactualReview": true,
+  "buildReady": false
+}

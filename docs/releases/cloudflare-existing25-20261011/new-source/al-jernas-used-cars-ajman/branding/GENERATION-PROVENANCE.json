@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-jernas-used-cars-ajman",
+  "purpose": "Independent transparent logo proposal; not dealer approved",
+  "sourceIdentity": {
+    "profileUrl": "https://ae.opensooq.com/en/shops/shop-80568283",
+    "contactCorroboration": "https://uae.yallamotor.com/auto-companies/al-jernas-used-cars-trading-fze-9539",
+    "observedAt": "2026-10-18",
+    "referenceCapture": "../../../../../audits/2026-10-18-expansion/pilot-al-jernas-profile.jpg",
+    "recognizableElements": [
+      "gold flying falcon",
+      "AL JERNAS",
+      "USED CARS TRADING F.Z.E."
+    ]
+  },
+  "generationTool": "image_gen.imagegen",
+  "exposedModelVersion": null,
+  "identifierMeaning": "Generation identifiers below are the exact returned artifact basenames. The tool exposed no underlying model version or separate provider generation ID.",
+  "assets": [
+    {
+      "role": "master/onLight",
+      "file": "on-light-master.png",
+      "generationId": "exec-12d131bd-5632-4655-b19a-289a47b1c94a",
+      "prompt": "Use case: logo-brand. Create a transparent raster dealer logo proposal for AL JERNAS USED CARS TRADING F.Z.E. The reference is a screenshot of the dealer's public marketplace page. Use ONLY its central existing identity: a flying gold falcon with spread wings above the bold AL JERNAS wordmark. Ignore the surrounding cars, skyline, marketplace UI, advertisements and all other text. Produce one polished, practical horizontal website-header logo: restrained flat gold falcon at left, strong charcoal uppercase AL JERNAS to the right, and a smaller carefully spaced second line USED CARS TRADING F.Z.E. Exact spelling is mandatory. Preserve the recognizable falcon silhouette and confident geometric lettering while simplifying tiny feather detail for legibility at small web sizes. This is a proposed refresh, not a claim of official dealer adoption. This variant is for light surfaces: dark charcoal letters with restrained gold bird. Genuine transparent background with alpha; no opaque rectangle, no poster, no mockup, no cars or buildings, no shadows or 3D metallic bevels, no extra slogans, no additional logos, no watermark. Crisp balanced spacing and comfortable transparent padding around the complete mark, no clipping. Return only one coherent finished logo."
+    },
+    {
+      "role": "onDark",
+      "file": "on-dark-master.png",
+      "generationId": "exec-142fe6c4-8458-4aec-8e03-21906a9e3b7a",
+      "prompt": "Edit the provided transparent AL JERNAS logo into its matching on-dark website treatment. Preserve exactly the same falcon shape, geometry, wordmark typography, line breaks, spelling, spacing, composition, canvas dimensions and transparent padding. Keep the gold falcon unchanged. Change ONLY the dark charcoal AL JERNAS lettering and USED CARS TRADING F.Z.E. subline to solid clean white, so the logo reads clearly on dark template headers. Preserve genuine transparent alpha everywhere outside the artwork. No opaque background, shadow, outline, added text, glow, backdrop or mockup. This is a proposed dealer logo treatment, not official adoption. Return one coherent matching transparent raster asset."
+    },
+    {
+      "role": "onAccent",
+      "file": "on-accent-master.png",
+      "generationId": "exec-dfc6c611-856c-4147-bb52-5f3e2daf0b64",
+      "prompt": "Edit this transparent AL JERNAS horizontal logo into a matching monochrome treatment for colored website accent surfaces. Preserve exactly the falcon silhouette, all letter shapes, wordmark, subline text, spacing and composition. Change the gold falcon AND every letter to uniform solid white. Exact text remains AL JERNAS and USED CARS TRADING F.Z.E. No gold, charcoal or other visible color. Transparent background with original alpha and balanced margins; no opaque panel, outline, shadow, glow, texture, extra objects or mockup. Clean closed graphic edges. Keep the complete mark unclipped. This is the same proposed dealer identity, not a new design. Return one matching transparent PNG asset."
+    },
+    {
+      "role": "compactMark",
+      "file": "compact-mark.png",
+      "generationId": "exec-ddbdc7bd-ae67-428c-858d-b7e55a81c35e",
+      "prompt": "Create the matching compact icon treatment from the provided transparent AL JERNAS logo. Keep ONLY the same gold flying falcon; remove all lettering completely. Preserve its recognizable silhouette and feather arrangement, using the same restrained gold coloring. Center the complete falcon on a square transparent canvas with generous even padding so no wing, claw or feather clips. This is a small website/favicon mark, so retain a clear strong silhouette and simplify only tiny interior details that disappear at small size. No text, letters, badge, border, shield, background, shadow, glow, watermark, additional bird, car or decorative element. Genuine transparent alpha; one coherent gold falcon icon. Return a square transparent PNG."
+    }
+  ],
+  "selection": {
+    "selectedConcept": "first reference-based geometry",
+    "reason": "Preserves recognizable sourced falcon and complete trading label, with matched light/dark/accent treatments and a separate compact falcon.",
+    "alternativeConcept": {
+      "generationId": "exec-4418c390-d26b-4913-a8ff-f3c7d7f098ed",
+      "selected": false,
+      "reason": "Exploratory simplification; first reference-based concept retained."
+    },
+    "ownerAccepted": false,
+    "dealerApproved": false
+  },
+  "review": {
+    "nativeRasterBytesChecked": true,
+    "lightDarkSurfaceBrowserCapture": "../../../../../audits/2026-10-18-expansion/logo-surface-final-review.jpg",
+    "accentAndCompactSurfaceReview": true,
+    "checkedAt": "2026-10-18T21:40:03.439Z",
+    "nativeSizes": [
+      16,
+      32,
+      64,
+      128
+    ],
+    "actualTemplateConsumers": false,
+    "hostedVisualAcceptance": false,
+    "scope": "Native PNG alpha and legibility on white, dark and colored surfaces; no template placement or dealer approval claimed."
+  }
+}

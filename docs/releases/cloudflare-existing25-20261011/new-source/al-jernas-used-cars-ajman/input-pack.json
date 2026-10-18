@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-pilot-input-pack-not-production-request",
+  "dealer": "al-jernas-used-cars-ajman",
+  "dealerId": "ae-ajman-al-jernas-used-cars",
+  "preparedAt": "2026-10-18T21:40:03.439Z",
+  "inputs": {
+    "facts": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/al-jernas-used-cars-ajman/business-facts.json",
+      "sha256": "9ec36dfb3c7038c031359838920a48b14e13600c121e5a30bfa88f539d0e6569"
+    },
+    "stock": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/al-jernas-used-cars-ajman/stock.json",
+      "sha256": "3d41816c1a486a907d62654d32b1b2ce1f4cbaacd7417f94981939be5fc7f288"
+    },
+    "locale": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/al-jernas-used-cars-ajman/locale.json",
+      "sha256": "eaaef8d64bdc310c2cc754b97137d35a837294b2c2a3a60fb8156fbc157b7e7e"
+    },
+    "branding": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/al-jernas-used-cars-ajman/branding.json",
+      "sha256": "b34938544caad629d8edea19484bb03dc73f6e3d9b2b127d236aa51af73acec0"
+    }
+  },
+  "copyReview": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/al-jernas-used-cars-ajman/copy-review.json",
+    "sha256": "a7318606e2f6fec46b757170b00c6929030adf793a00f3134eeea7c04073acf5"
+  },
+  "media": [
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/al-jernas-used-cars-ajman/dealer-stock/287985182-01.webp",
+      "sha256": "84f3a6f19271e9aca94734cc648413ffff95f4a4f89c4486618899ce33889de1",
+      "bytes": 141326,
+      "destination": "dealer-stock/287985182-01.webp"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/al-jernas-used-cars-ajman/dealer-stock/287985182-02.webp",
+      "sha256": "76f4774994c6b2b67fd6d604aac8b9c7893c97ae220d7eca7600d9bd1c08ba84",
+      "bytes": 25510,
+      "destination": "dealer-stock/287985182-02.webp"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/al-jernas-used-cars-ajman/dealer-stock/287884308-01.webp",
+      "sha256": "22c3330e20672f74c7108a976fcc03df4253014c4a460507069d846b4d9ab20b",
+      "bytes": 162262,
+      "destination": "dealer-stock/287884308-01.webp"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/al-jernas-used-cars-ajman/dealer-stock/287884308-02.webp",
+      "sha256": "14f223e0bd0d2281a2019387c504bab690327ec2d3e979bc15993c598b8cbe7d",
+      "bytes": 25220,
+      "destination": "dealer-stock/287884308-02.webp"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/al-jernas-used-cars-ajman/dealer-stock/288459348-01.webp",
+      "sha256": "a6978de36afd8bb5de48481c35ca006b59b9ac74b0f0b9f728c9edf2c2893f92",
+      "bytes": 164754,
+      "destination": "dealer-stock/288459348-01.webp"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/al-jernas-used-cars-ajman/dealer-stock/288459348-02.webp",
+      "sha256": "83174b558c64ac1c782155814a405808092f66c85930e0120115690537126d80",
+      "bytes": 16750,
+      "destination": "dealer-stock/288459348-02.webp"
+    }
+  ],
+  "sourceRasters": {
+    "on-light-master.png": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/al-jernas-used-cars-ajman/branding/on-light-master.png",
+      "sha256": "f1bf3161e13a3b39eee59ca928d8b5b87d90072c61361c9b03f8fa25213d7a3a"
+    },
+    "on-dark-master.png": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/al-jernas-used-cars-ajman/branding/on-dark-master.png",
+      "sha256": "d15ef000b5be35ae31d4d0248d3c8d1a55dc92d26f4180ac043a5b4e464587da"
+    },
+    "on-accent-master.png": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/al-jernas-used-cars-ajman/branding/on-accent-master.png",
+      "sha256": "54908927d1681fb4999a4d530df29b8860ef944315065c7bc2c934dbe8065bb5"
+    },
+    "compact-mark.png": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/al-jernas-used-cars-ajman/branding/compact-mark.png",
+      "sha256": "ab9c9a3221a58806c93ede8ef0dee4a4b35b35d3a49bb28f8f8a45f4913208ad"
+    }
+  },
+  "sourceReleases": null,
+  "identityReviewSealed": false,
+  "productionRequestPrepared": false,
+  "sourceCreated": false,
+  "buildPassed": false,
+  "hosted": false,
+  "outreachSent": false,
+  "remaining": [
+    "Fresh canonical identity absence seal",
+    "Final six-template source qualification including current owner Signature home direction",
+    "Production source request and bounded source assembly",
+    "All six rendered logo consumers and local build",
+    "Authenticated Cloudflare Paid capacity proof before new Worker creation"
+  ]
+}
