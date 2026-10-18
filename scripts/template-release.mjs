@@ -1,3 +1,4 @@
+import { isEntrypoint } from './lib/cli-entrypoint.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import {gitRead} from './workspace-doctor.mjs';
@@ -146,4 +147,4 @@ async function main(){const [command,...argv]=process.argv.slice(2);if(!command|
  else if(command==='approve'){gitRead(ROOT,['fetch','origin','refs/heads/main:refs/remotes/origin/main']);console.log(JSON.stringify(approveCarsTemplate({key:o.key,commit:o.commit,evidence:o.evidence,write:!!o.write}),null,2));}
  else if(command==='promote')console.log(JSON.stringify(promoteTemplate({key:o.key,sourceRepo:o['source-repo'],commit:o.commit,evidence:o.evidence,expectedDigest:o['expected-digest'],write:!!o.write}),null,2));else throw new Error(`Unknown command ${command}`);
 }
-if(process.argv[1]&&path.resolve(process.argv[1])===import.meta.filename)main().catch(e=>{console.error(e.message);process.exitCode=1;});
+if(isEntrypoint(import.meta.url))main().catch(e=>{console.error(e.message);process.exitCode=1;});

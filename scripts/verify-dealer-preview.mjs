@@ -1,3 +1,4 @@
+import { isEntrypoint } from './lib/cli-entrypoint.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import {pathToFileURL} from 'node:url';
@@ -108,4 +109,4 @@ async function main() {
   const result=await verifyPreview({slug,origin,output,manifest,chromium,expectedCommit:options['--commit']||null,shareUrl:options['--share-file']?json(options['--share-file']).shareableUrl:null});
   process.exitCode=result.passed?0:1;
 }
-if(process.argv[1]&&path.resolve(process.argv[1])===import.meta.filename)main().catch(e=>{console.error(e.message);process.exitCode=1;});
+if(isEntrypoint(import.meta.url))main().catch(e=>{console.error(e.message);process.exitCode=1;});

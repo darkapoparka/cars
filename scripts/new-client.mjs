@@ -1,3 +1,4 @@
+import { isEntrypoint } from './lib/cli-entrypoint.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import { copySource } from './copy-source.mjs';
@@ -212,4 +213,4 @@ async function main() {
   console.log(JSON.stringify({ mode: o['dry-run'] ? 'dry-run' : 'copy', ...plan }, null, 2));
   if (!o['dry-run']) console.log(JSON.stringify(await createNewClient(plan), null, 2));
 }
-if (process.argv[1] && path.resolve(process.argv[1]) === import.meta.filename) main().catch(error => { console.error(error.message); process.exitCode = 1; });
+if (isEntrypoint(import.meta.url)) main().catch(error => { console.error(error.message); process.exitCode = 1; });

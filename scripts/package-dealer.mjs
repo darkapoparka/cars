@@ -7,7 +7,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
 import { spawnSync } from 'node:child_process';
-import { pathToFileURL } from 'node:url';
+import { isEntrypoint } from './lib/cli-entrypoint.mjs';
 import { applyMounts } from './publishing/mounts.mjs';
 import { git, gitFiles } from './lib/workflow.mjs';
 import { dealerGuidance } from './lib/dealer-guidance.mjs';
@@ -454,6 +454,6 @@ async function main(args) {
   console.log(json({ mode: write ? 'write' : 'dry-run', ...result, ...(assetPool ? { assetPool } : {}), fileCount: result.files.length, files: undefined,untrackedExcluded }).trim());
 }
 
-if (process.argv[1] && import.meta.url === pathToFileURL(path.resolve(process.argv[1])).href) {
+if (isEntrypoint(import.meta.url)) {
   main(process.argv.slice(2)).catch((error) => { console.error(error.message); process.exitCode = 1; });
 }

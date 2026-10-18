@@ -1,3 +1,4 @@
+import { isEntrypoint } from './lib/cli-entrypoint.mjs';
 import {assertF1rstSharedControlsSuccessor} from './lib/vercel-shared-controls-successor.mjs';
 import {assertCloudflareNativeSourceExport} from './lib/cloudflare-native-source-qualification.mjs';
 import { assertCarsOwnedDealer } from './lib/dealer-source.mjs';
@@ -333,5 +334,5 @@ async function main() {
   const result=o['push-receipt']?pushExport({receiptFile:o['push-receipt']}):exportDealer({slug:o.client,packageDir:o.package,packageTree:o['package-tree'],reviewFile:o.review,write:!!o.write,targetBranch:o.branch,preservePrefixes:o['preserve-prefix']?[o['preserve-prefix']]:[]});
   console.log(JSON.stringify(result,null,2));
 }
-if(process.argv[1]&&path.resolve(process.argv[1])===import.meta.filename)main().catch(e=>{console.error(e.message);process.exitCode=1;});
+if(isEntrypoint(import.meta.url))main().catch(e=>{console.error(e.message);process.exitCode=1;});
 

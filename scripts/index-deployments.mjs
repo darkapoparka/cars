@@ -1,3 +1,4 @@
+import { isEntrypoint } from './lib/cli-entrypoint.mjs';
 import fs from 'node:fs';
 import { assertIndependentCheckout } from './lib/dealer-source.mjs';
 import path from 'node:path';
@@ -98,4 +99,4 @@ function main(){
  }
  console.log(JSON.stringify({mode:options[0]||'preview',dealers:inventory.dealers.length,applications:inventory.dealers.reduce((n,d)=>n+d.variants.length,0),importTrios:inventory.dealers.filter(d=>d.variants.some(v=>v.key==='import')).map(d=>d.slug)}));
 }
-if(process.argv[1]&&path.resolve(process.argv[1])===import.meta.filename){try{main();}catch(e){console.error(e.message);process.exitCode=1;}}
+if(isEntrypoint(import.meta.url)){try{main();}catch(e){console.error(e.message);process.exitCode=1;}}

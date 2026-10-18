@@ -1,4 +1,4 @@
-name: Validate fleet localization rollout
+name: Validate localization contracts and legacy three-design v1
 
 on:
   push:
@@ -6,7 +6,25 @@ on:
     paths:
       - '.github/workflows/validate-fleet-localization-rollout.yml'
       - 'scripts/rollout-localized-client.mjs'
+      - 'scripts/validate-fleet-localization-workflow.test.mjs'
+      - 'scripts/lib/six-design-release.mjs'
+      - 'scripts/lib/native-localization.mjs'
+      - 'scripts/dealer-updates/three-way-upgrade.mjs'
+      - 'scripts/build-existing-fleet-cloudflare.mjs'
       - 'templates.lock.json'
+  workflow_dispatch:
+    inputs:
+      dealer:
+        description: One legacy three-design fleet slug to validate, or all
+        required: true
+        default: isauto-varna
+        type: string
+      package_format:
+        description: Historical package contract only; current six-design releases use the maintained fleet pipeline
+        required: true
+        default: legacy-three-design-v1
+        type: choice
+        options: [legacy-three-design-v1]
 
 permissions:
   contents: read
@@ -16,26 +34,67 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  contracts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /.github/workflows/validate-fleet-localization-rollout.yml
+            /scripts/
+            /templates.lock.json
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '26.10.0'
+      - name: Validate current six-family pins and legacy workflow boundaries
+        run: >-
+          node --test --test-concurrency=1
+          scripts/validate-fleet-localization-workflow.test.mjs
+          scripts/template-source-lock.test.mjs
+          scripts/rollout-localized-client-branch.test.mjs
+          scripts/six-design-release.test.mjs
+      - name: Exercise maintained six-family source acceptance contracts without compiling applications
+        run: >-
+          node --test --test-name-pattern='six applications|compilation validates|App, Mobile|extended families|raw reviewed'
+          scripts/existing-fleet-cloudflare.test.mjs
+
   matrix:
+    if: github.event_name == 'workflow_dispatch'
+    needs: contracts
     runs-on: ubuntu-latest
     outputs:
       dealers: ${{ steps.dealers.outputs.dealers }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: /docs/DEPLOYMENT-INVENTORY.json
       - id: dealers
         name: Resolve registered dealer repositories
+        env:
+          DEALER_SELECTION: ${{ inputs.dealer }}
+          PACKAGE_FORMAT: ${{ inputs.package_format }}
         shell: bash
         run: |
           node <<'NODE'
           const fs = require('node:fs');
+          if (process.env.PACKAGE_FORMAT !== 'legacy-three-design-v1') throw new Error('Select the explicit legacy-three-design-v1 package contract');
           const inventory = JSON.parse(fs.readFileSync('docs/DEPLOYMENT-INVENTORY.json', 'utf8'));
-          const requested = new Set([
+          const cohort = new Set([
             'al-basma-motors','al-hamoor-al-thahabi','al-reef-used-cars','asko-96','astracar',
             'autolife','automarket-varna','avangard-auto','champion-auto-pro','day-and-night-auto-group',
             'eliqauto','elit-auto-import','excellent-cars','f1rst-motors','isauto-varna','ivo-auto',
             'kg-team-auto','legend-auto','navara-car','outletcars-varna','perfect-auto-varna','priselci',
             'promosale-varna','texas-drive-auto','the-dealers-point'
           ]);
+          const selection = process.env.DEALER_SELECTION || 'all';
+          if (selection !== 'all' && !cohort.has(selection)) throw new Error('Select a registered fleet slug or all');
+          const requested = selection === 'all' ? cohort : new Set([selection]);
           const rows = inventory.dealers
             .filter((dealer) => requested.has(dealer.slug))
             .map((dealer) => ({
@@ -63,19 +122,67 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 45
     steps:
-      - uses: actions/checkout@v4
-        with:
-          path: cars
-          fetch-depth: 0
+      - name: Require read access to private dealer repositories
+        env:
+          DEALER_REPOSITORIES_READ_TOKEN: ${{ secrets.DEALER_REPOSITORIES_READ_TOKEN }}
+        shell: bash
+        run: |
+          if [ -z "$DEALER_REPOSITORIES_READ_TOKEN" ]; then
+            echo '::error::Configure DEALER_REPOSITORIES_READ_TOKEN with Contents: read access to the registered private dealer repositories.'
+            exit 1
+          fi
       - uses: actions/checkout@v4
         with:
           repository: ${{ matrix.repository }}
           ref: main
           path: client
+          token: ${{ secrets.DEALER_REPOSITORIES_READ_TOKEN }}
+          persist-credentials: false
+          fetch-depth: 1
+      - name: Reject incompatible dealer formats before fetching historical template source
+        env:
+          DEALER_SLUG: ${{ matrix.slug }}
+          DEALER_REPOSITORY: ${{ matrix.repository }}
+        shell: bash
+        run: |
+          node <<'MANIFEST'
+          const fs = require('node:fs');
+          const manifest = JSON.parse(fs.readFileSync('client/dealer.json', 'utf8'));
+          const route = 'Current six-design source and build acceptance uses .github/workflows/existing-fleet-source.yml and existing-fleet-cloudflare.yml with reviewed versioned requests.';
+          if (manifest.schemaVersion !== 1 || manifest.slug !== process.env.DEALER_SLUG || manifest.repository !== process.env.DEALER_REPOSITORY) throw new Error('Registered dealer identity differs from the checked-out manifest');
+          if (!['1', '2'].includes(manifest.packaging?.version) || manifest.variants?.length !== 3) throw new Error(`legacy-three-design-v1 requires packaging version 1/2 and exactly three designs; found version ${manifest.packaging?.version} and ${manifest.variants?.length} designs. ${route}`);
+          const middle = manifest.variants[1]?.key;
+          const expected = [
+            { key: 'auto-best', base: '', entry: '/' },
+            { key: middle, base: '/variant-2', entry: middle === 'modern' ? '/variant-2/cars' : '/variant-2/' },
+            { key: 'carwow', base: '/variant-3', entry: '/variant-3/' }
+          ];
+          if (!['modern', 'import'].includes(middle) || expected.some((row, index) => Object.keys(row).some(key => manifest.variants[index]?.[key] !== row[key]))) throw new Error(`The historical trio mounts or families differ. ${route}`);
+          console.log(JSON.stringify({ contract: 'legacy-three-design-v1', slug: manifest.slug, packagingVersion: manifest.packaging.version, variants: manifest.variants, compiled: false, hosted: false }));
+          MANIFEST
+      - uses: actions/checkout@v4
+        id: source_checkout
+        with:
+          path: cars
+          ref: ${{ github.sha }}
+          # Exact historical blobs may need authenticated lazy reads until sealing ends.
+          persist-credentials: true
+          # Keep ancestry for immutable template pins without downloading fleet blobs.
+          fetch-depth: 0
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /.github/workflows/validate-fleet-localization-rollout.yml
+            /templates.lock.json
+            /scripts/
+            /docs/releases/**/*.json
+            /templates/auto-best/
+            /templates/modern/
+            /templates/import/
+            /templates/carwow/
       - uses: actions/setup-node@v4
         with:
           node-version: '24.8.0'
-      - name: Build and seal native EN/BG package
+      - name: Build and seal legacy three-design native EN/BG package
         shell: bash
         run: |
           set -euo pipefail
@@ -89,6 +196,13 @@ jobs:
           test -s "$RUNNER_TEMP/localized-client/localization/contract.json"
           test -s "$RUNNER_TEMP/localized-client/localization/adoption.json"
           node -e "const m=require(process.argv[1]); if(m.packaging?.version!=='2'||m.localization?.enabledLocales?.sort().join(',')!=='bg,en') process.exit(1)" "$RUNNER_TEMP/localized-client/dealer.json"
+      - name: End historical-source read authentication before artifact upload
+        if: always() && steps.source_checkout.outcome == 'success'
+        shell: bash
+        run: |
+          if git -C cars config --local --get-all http.https://github.com/.extraheader > /dev/null; then
+            git -C cars config --local --unset-all http.https://github.com/.extraheader
+          fi
       - uses: actions/upload-artifact@v4
         if: always()
         with:
