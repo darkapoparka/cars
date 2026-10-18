@@ -56,8 +56,8 @@ export const generateMetadata = async ({
   return createPublicLocalizedMetadata({
     baseUrl: getPublicWebBaseUrl(),
     description: isBg
-      ? `${leadSite.name} в ${getLeadCopy(locale).city} — автомобили в наличност, внос по заявка и собствен лизинг.`
-      : `${leadSite.name} in ${getLeadCopy(locale).city} — vehicles in stock, import on request, and in-house leasing.`,
+      ? `Свържете се с ${leadSite.name} в ${getLeadCopy(locale).city} за въпроси относно автомобили и огледи.`
+      : `Contact ${leadSite.name} in ${getLeadCopy(locale).city} with vehicle and viewing enquiries.`,
     locale,
     path: "/contact",
     robots: getPublicSearchRobots(query),
