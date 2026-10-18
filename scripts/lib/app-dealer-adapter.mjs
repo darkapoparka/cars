@@ -90,13 +90,15 @@ export async function prepareAppDealer(sourceRoot, manifest, {readFile, appFiles
    transmission:({automatic:'Automatic',manual:'Manual'})[transmissionKey]||'Not published',
    body:label(listing.bodyType,['SUV','Sedan','Hatchback','Coupe','MPV','Convertible','Pickup'],'Other'),
    specifications:text(listing.regionalSpecs),sourceUrl:url(listing.sourceUrl),observedAt:text(listing.observedAt),
-   optionsType:'',engineType:text(listing.engineSize||listing.engine),location:text(business.city),badges:[],imagePlaceholder,
+   optionsType:'',location:text(business.city),badges:[],imagePlaceholder,
    proposalBenefits:['Warranty option','Finance option'],
    power:number(listing.powerHp)?listing.powerHp+' hp':'Not published',engine:text(listing.engineSize||listing.engine)||'Not published',
    warranty:'Confirm with seller',condition:'Confirm with seller',highlights:(listing.features||[]).filter(v=>typeof v==='string'),
-   color:text(listing.exteriorColor||listing.color),featureLabels:(listing.features||[]).filter(v=>typeof v==='string')});
+   color:text(listing.exteriorColor||listing.color)});
  }
- const observedAt=[...new Set(profile.listings.map(l=>text(l.observedAt)).filter(Boolean))].sort().join(', ');
+ const observedDates=[...new Set(profile.listings.map(l=>text(l.observedAt)).filter(Boolean))].sort();
+ const observedAt=observedDates.join(', ');
+ const latestObservedAt=observedDates.reduce((latest,date)=>!latest || Date.parse(date)>Date.parse(latest) ? date : latest,'');
  const inventoryNotice=text(business.inventoryNotice) || 'Dated listing samples. Confirm price, availability and vehicle information with the dealer.';
  const illustrated=profile.listings.some(item=>(item.mediaKind || item.raw?.mediaKind)==='generated_category_illustration');
  const social=business.socialLinks || {};
@@ -110,7 +112,7 @@ export async function prepareAppDealer(sourceRoot, manifest, {readFile, appFiles
   email:/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(text(business.email))?text(business.email):'',
   mapsUrl:url(business.mapsUrl),website:url(business.website),whatsappUrl:url(business.whatsappUrl||business.socialLinks?.whatsapp),
   socialLinks,referenceClaimsApproved:false,
-  services:(business.services||[]).map(s=>typeof s==='string'?s:text(s.title)).filter(Boolean),observedAt,
+  services:(business.services||[]).map(s=>typeof s==='string'?s:text(s.title)).filter(Boolean),observedAt:latestObservedAt,
   inventoryNotice:illustrated && !/illustrat/i.test(inventoryNotice) ? 'Illustrated images are representative, not photos of the advertised vehicles. '+inventoryNotice : inventoryNotice,
   previewNotice:'Independent design preview. No purchase, reservation or message is submitted by this website.'};
  files.set('lib/dealer.json',Buffer.from(JSON.stringify(config,null,2)+'\n'));

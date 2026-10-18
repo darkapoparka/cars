@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "repository": "darkapoparka/cars",
+  "reviewBase": "ec5ca040445dc18c702546b0f393969f39be5e73",
+  "scope": "App adapter strict-consumer compatibility; no frontend/template component changes",
+  "consumer": {
+    "path": "templates/app/lib/dealer-schema.ts",
+    "blob": "42fa7e35920e3142ea08a423376fd976e19bb5d7",
+    "localMatchesExactRemote": true
+  },
+  "producer": {
+    "file": "scripts/lib/app-dealer-adapter.mjs",
+    "beforeSha256": "d4e49fc5cc37c5a749125fa4e99431fd7ac5a3120517051a32c860ce930c1063",
+    "previousLastWrite": "2026-10-11T10:37:32.115Z",
+    "afterSha256": "74cc50a5b07af29b265a145198c4cb9a2e11e427e6f5e882ab70e56e7ce5988b",
+    "scopeDeltas": [
+      [
+        "optionsType:'',engineType:text(listing.engineSize||listing.engine),location:",
+        "optionsType:'',location:"
+      ],
+      [
+        "color:text(listing.exteriorColor||listing.color),featureLabels:(listing.features||[]).filter(v=>typeof v==='string')});",
+        "color:text(listing.exteriorColor||listing.color)});"
+      ],
+      [
+        " const observedAt=[...new Set(profile.listings.map(l=>text(l.observedAt)).filter(Boolean))].sort().join(', ');",
+        " const observedDates=[...new Set(profile.listings.map(l=>text(l.observedAt)).filter(Boolean))].sort();\n const observedAt=observedDates.join(', ');\n const latestObservedAt=observedDates.reduce((latest,date)=>!latest || Date.parse(date)>Date.parse(latest) ? date : latest,'');"
+      ],
+      [
+        "services:(business.services||[]).map(s=>typeof s==='string'?s:text(s.title)).filter(Boolean),observedAt,",
+        "services:(business.services||[]).map(s=>typeof s==='string'?s:text(s.title)).filter(Boolean),observedAt:latestObservedAt,"
+      ]
+    ]
+  },
+  "reproductionBefore": {
+    "testCommand": "node --test scripts/integration/app-dealer-schema.test.mjs",
+    "passed": 1,
+    "failed": 3,
+    "findings": [
+      "Inventory rejects engineType and featureLabels as unexpected keys",
+      "Joined observation dates fail dealer date validation"
+    ]
+  },
+  "validationAfter": {
+    "runtime": "Node26.10.0",
+    "command": "node --test --test-concurrency=1 scripts/integration/app-dealer-schema.test.mjs scripts/app-dealer-adapter.test.mjs scripts/prepare-new-dealer-source.test.mjs scripts/prepare-existing-fleet-source.test.mjs scripts/app-variant.test.mjs",
+    "passed": 55,
+    "failed": 0,
+    "consumerIntegrationCases": 4,
+    "dependencies": "Retained templates/app node_modules/zod; no install or source copy"
+  },
+  "behavior": "Keep engine/highlights, remove unused duplicate fields; use newest actual observation instant for dealer aggregate date while keeping each listing date and complete dated provenance",
+  "limitations": [
+    "No application build",
+    "No hosted deployment or visual acceptance",
+    "Does not fix App browser image-wait failure or omitted validator collection; separate audit remains pending",
+    "Invalid individual stock dates still fail strict consumer validation"
+  ]
+}
