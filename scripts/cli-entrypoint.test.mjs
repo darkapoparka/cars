@@ -8,7 +8,9 @@ import test from 'node:test';
 import { isEntrypoint } from './lib/cli-entrypoint.mjs';
 
 const root = fs.realpathSync(path.resolve(import.meta.dirname, '..'));
-const guarded = ['new-client', 'template-release', 'package-dealer', 'export-dealer', 'index-deployments', 'verify-dealer-preview', 'workspace-doctor', 'check-workflow'];
+const helpCommands = ['new-client', 'template-release', 'package-dealer', 'export-dealer', 'index-deployments', 'verify-dealer-preview', 'workspace-doctor', 'package-dealer-single-worker', 'prepare-new-dealer-source'];
+const argumentOnlyCommands = ['assemble-existing-fleet-single-worker', 'check-five-design-release', 'prepare-existing-fleet-source'];
+const guarded = [...helpCommands, ...argumentOnlyCommands, 'check-workflow'];
 
 test('direct execution compares physical files and safely handles a missing argv entry', () => {
   const url = new URL('./lib/cli-entrypoint.mjs', import.meta.url), file = fileURLToPath(url);
@@ -50,13 +52,23 @@ test('maintained CLIs execute through a directory junction or symlink without co
     if (process.platform === 'win32') assert.equal(isEntrypoint(url, entry.toUpperCase()), true);
   });
 
-  for (const command of [...guarded.filter(name => name !== 'check-workflow'), 'check-live-fab']) {
+  for (const command of [...helpCommands, 'check-live-fab']) {
     await t.test(command + ' help actually executes through the alias', () => {
       const result = run(['scripts/' + command + '.mjs', '--help']);
       assert.ifError(result.error);
       assert.equal(result.status, 0, result.stderr);
       assert.match(result.stdout, /Usage:/);
       assert.equal(result.stderr, '');
+    });
+  }
+
+  for (const command of argumentOnlyCommands) {
+    await t.test(command + ' rejects invalid arguments through the alias before doing work', () => {
+      const result = run(['scripts/' + command + '.mjs', '--invalid-entrypoint-regression-argument']);
+      assert.ifError(result.error);
+      assert.equal(result.status, 1, result.stderr);
+      assert.equal(result.stdout, '');
+      assert.match(result.stderr, /Usage:|Use matrix/);
     });
   }
 

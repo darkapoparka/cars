@@ -6,7 +6,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {createHash} from 'node:crypto';
 import {createRequire} from 'node:module';
-import {pathToFileURL} from 'node:url';
+import {isEntrypoint} from './lib/cli-entrypoint.mjs';
 import {ROOT,git,json,sha256,inside,filesAt,fingerprint} from './lib/workflow.mjs';
 import {readRepositoryTreeMap,readPinnedTemplateTree} from './dealer-updates/pinned-template-source.mjs';
 import {packageRetainsPath,collectSource} from './package-dealer.mjs';
@@ -372,6 +372,4 @@ export async function prepareExistingFleetSource({slug,root=ROOT,env=process.env
 // Finish module evaluation before dynamic creator imports: that creator imports
 // the source proposal helpers from this module as its maintained shared seam.
 async function runSourceCli(){const [command,slug]=process.argv.slice(2);if(command==='matrix'){const request=strictJson(fs.readFileSync(path.join(ROOT,SOURCE_CAMPAIGN,'source-request.json')));console.log('matrix='+JSON.stringify(await sourceMatrix(request,{root:ROOT,leads:json(path.join(ROOT,SOURCE_CAMPAIGN,'selection.json')).leads,registry:json(path.join(ROOT,'docs/DEPLOYMENT-INVENTORY.json'))})));}else{assert(command==='prepare'&&slug&&process.argv.length===4,'Use matrix | prepare SLUG (main source CI only)');console.log(JSON.stringify(await prepareFleetSource({slug}),null,2));}}
-if(process.argv[1]&&import.meta.url===pathToFileURL(path.resolve(process.argv[1])).href)runSourceCli().catch(error=>{console.error(error.message);process.exitCode=1;});
-
-
+if(isEntrypoint(import.meta.url))runSourceCli().catch(error=>{console.error(error.message);process.exitCode=1;});

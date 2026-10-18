@@ -10,7 +10,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {createRequire} from 'node:module';
 import {execFileSync} from 'node:child_process';
-import {pathToFileURL} from 'node:url';
+import {isEntrypoint} from './lib/cli-entrypoint.mjs';
 import {ROOT,inside,json,sha256} from './lib/workflow.mjs';
 import {assertSixDesignSelection,SIX_DESIGN_KEYS} from './lib/six-design-release.mjs';
 import {assertIndependentCheckout} from './lib/dealer-source.mjs';
@@ -133,10 +133,9 @@ export function runDealerSingleWorker({client,inputsFile,out,write=false,root=RO
  return result;
 }
 
-if(process.argv[1]&&import.meta.url===pathToFileURL(path.resolve(process.argv[1])).href) {
+if(isEntrypoint(import.meta.url)) {
  try {
   if(process.argv.slice(2).includes('--help'))console.log('Usage: node scripts/package-dealer-single-worker.mjs --client SLUG --inputs reviewed-seven-targets.json --out runtime/OWNER/dealer [--write]\nDefault: verify input digests, ownership, stable public identity and six mounted families without writing. --write composes reviewed compiled inputs only; no build or deployment.\nUse existing esbuild, or set CARS_ESBUILD_RESOLVE_FROM to its existing package.json. See the input JSON contract at the top of this file.');
   else{const opts=parseCompositionArgs(process.argv.slice(2));console.log(JSON.stringify(runDealerSingleWorker({client:opts.client,inputsFile:opts.inputs,out:opts.out,write:opts.write}),null,2));}
  }catch(error){console.error(error.message);process.exitCode=1;}
 }
-

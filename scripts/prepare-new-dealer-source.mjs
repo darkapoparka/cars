@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {createRequire} from 'node:module';
 import {validateNewSourceRaster} from './lib/source-input-raster.mjs';
-import {pathToFileURL} from 'node:url';
+import {isEntrypoint} from './lib/cli-entrypoint.mjs';
 import {ROOT,POLICY,git,json,sha256,inside,filesAt,gitFiles,resolveIdentity} from './lib/workflow.mjs';
 import {assertMainCheckout,planNewClient,createNewClient,readNewClientQualification} from './new-client.mjs';
 import {normalizeDealerLocale} from './lib/dealer-locale.mjs';
@@ -307,7 +307,7 @@ export async function prepareNewDealerSource({root=ROOT,requestFile,dealer:reque
  }catch(error){writeNew(path.join(area,'failure.json'),encode({kind:NEW_SOURCE_KIND,dealer:row.slug,error:error.message,canonicalCandidate:creation?.clientRoot??null,retained:true,published:false,hostedApproval:false,failedAt:new Date().toISOString()}));throw error;}
 }
 
-if(process.argv[1]&&import.meta.url===pathToFileURL(path.resolve(process.argv[1])).href){
+if(isEntrypoint(import.meta.url)){
  try{const argv=process.argv.slice(2);if(same(argv,['--help']))console.log('Usage: node scripts/prepare-new-dealer-source.mjs --request docs/releases/cloudflare-existing25-20261011/new-source/REQUEST.json --dealer SLUG [--write]\nDefault read-only. Requires real synchronized canonical main, absent Cars identity and all six approved source/branding/fact pins. Outputs source proposal only; build/publication/hosting remain pending.');
  else{const options={};for(let i=0;i<argv.length;i++){const name=argv[i];assert(['--request','--dealer','--write'].includes(name)&&!Object.hasOwn(options,name),'Unknown or duplicate argument');if(name==='--write')options[name]=true;else{assert(argv[i+1]&&!argv[i+1].startsWith('--'),'Missing argument value');options[name]=argv[++i];}}console.log(JSON.stringify(await prepareNewDealerSource({requestFile:options['--request'],dealer:options['--dealer'],write:options['--write']===true}),null,2));}}
  catch(error){console.error(error.message);process.exitCode=1;}

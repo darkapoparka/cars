@@ -5,7 +5,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {createRequire} from 'node:module';
 import {spawnSync} from 'node:child_process';
-import {pathToFileURL} from 'node:url';
+import {isEntrypoint} from './lib/cli-entrypoint.mjs';
 import {ROOT,json,sha256,normalized,filesAt,inside,git,writeJson} from './lib/workflow.mjs';
 import {artifactInventory,validateFileInventory} from './lib/uk-cloudflare-artifacts.mjs';
 import {COMPOSITION_KEYS,registeredCompositionIdentity,reviewedRouterVariants,runDealerSingleWorker} from './package-dealer-single-worker.mjs';
@@ -238,9 +238,8 @@ export async function assembleFleetCi({slug,inputRoot,destination,toolPackage,ro
   artifactBytes:sealed.inventory.bytes,outputDigest:receipt.outputDigest,destination:out,compiled:true,dryRun:true,deploymentPerformed:false,hostedVerified:false};
 }
 
-if(process.argv[1]&&import.meta.url===pathToFileURL(path.resolve(process.argv[1])).href){
+if(isEntrypoint(import.meta.url)){
  try{const [slug,inputRoot,destination,toolPackage]=process.argv.slice(2);assert(process.argv.length===6,'Usage: assemble-existing-fleet-single-worker.mjs SLUG INPUT_ROOT OUTPUT TOOL_PACKAGE_JSON (main CI only)');
   console.log(JSON.stringify(await assembleFleetCi({slug,inputRoot:path.resolve(inputRoot),destination:path.resolve(destination),toolPackage:path.resolve(toolPackage)}),null,2));
  }catch(error){console.error(error.message);process.exitCode=1;}
 }
-
