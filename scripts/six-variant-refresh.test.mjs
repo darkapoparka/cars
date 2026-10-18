@@ -95,7 +95,8 @@ function extendedFixture(t,key) {
 
 function signatureFixture(t) {
   const x=extendedFixture(t,'karento-best'),template=path.resolve('templates/karento-best');
-  for(const name of filesAt(template).filter(name=>name.startsWith('src/lib/')))x.files.set('karento-best/'+name,fs.readFileSync(path.join(template,name)));
+  // Legacy fixtures must not inherit an occupied, unpublished promoted feed.
+  for(const name of filesAt(template).filter(name=>name.startsWith('src/lib/')&&!name.startsWith('src/lib/discovery/')))x.files.set('karento-best/'+name,fs.readFileSync(path.join(template,name)));
   // Pin this reviewed adapter boundary while contact polish is dirty; this candidate is not release approval.
   const contact='src/lib/components/contact/ContactLocationCard.svelte';
   x.files.set('karento-best/'+contact,execFileSync('git',['show','513b07fa7369a5090e03a54202ec2118971eeb71:templates/karento-best/'+contact]));
@@ -158,6 +159,120 @@ test('Signature discovery removes currency comparisons for mixed feeds and discl
   assert.match(source,/priceMax: ""/);
   const collectionSource=source.match(/export const collections[^=]*=([\s\S]*?);/)[1];assert.doesNotMatch(collectionSource,/cheapest/);
   assert.doesNotMatch(x.files.get('karento-best/src/routes/2/DiscoverySearch.svelte').toString(),/budget-section/);
+});
+
+const legacyDiscoveryPrefix='karento-best/src/routes/2/';
+const promotedDiscoveryPrefix='karento-best/src/lib/discovery/';
+function moveDiscoveryFixture(x,{retainLegacy=false}={}) {
+  for(const [name,bytes] of [...x.files])if(name.startsWith(legacyDiscoveryPrefix)) {
+    x.files.set(promotedDiscoveryPrefix+name.slice(legacyDiscoveryPrefix.length),Buffer.from(bytes));
+    if(!retainLegacy)x.files.delete(name);
+  }
+  return x;
+}
+
+test('Signature discovery promoted Home binds dealer stock, currency and notices through its moved source',t=>{
+  const x=moveDiscoveryFixture(discoveryFixture(t));
+  x.profile.listings[0].raw.mileageKm=75000;
+  const adaptation=applyExtendedRefreshAdapter({...x,key:'karento-best'});
+  const source=x.files.get(promotedDiscoveryPrefix+'discovery.ts').toString();
+  const cars=JSON.parse(source.match(/discoveryCars[^=]*=\s*([\s\S]*?);/)[1]);
+  assert.equal(cars.length,x.profile.listings.length);
+  assert.equal(cars[0].id,x.profile.listings[0].id);
+  assert.equal(cars[0].href,'/vehicle?id=vehicle-1');
+  assert.equal(cars[0].image,'/dealer/vehicle.webp');
+  assert.equal(cars[0].priceAmount,12500);
+  assert.equal(cars[0].currency,'AED');
+  assert.equal(cars[0].mileage,'75000 km');
+  assert.match(source,/sample: "dealer\.stock\.notice"/);
+  assert.doesNotMatch(source,/\bSample\b|\bfunction sample\(/);
+  assert.match(x.files.get(promotedDiscoveryPrefix+'DiscoverySearch.svelte').toString(),/locale\.money\(amount, "AED"\)/);
+  assert.ok(adaptation.contentPaths.includes(promotedDiscoveryPrefix+'discovery.ts'));
+  assert.ok(!adaptation.contentPaths.includes(legacyDiscoveryPrefix+'discovery.ts'));
+});
+
+test('Signature discovery current promoted inline contract retains actual dealer data and disclosure',t=>{
+  const x=signatureFixture(t);
+  // Inline contract copied as a compact fixture; never read unpublished promoted sources.
+  x.files.set(promotedDiscoveryPrefix+'discovery.ts',Buffer.from(`
+export interface DiscoveryCar extends VehicleCardContent {
+  priceAmount: number;
+  currency: string;
+  id: string;
+  make: string;
+  year: number;
+  arrival: number;
+  offer: boolean;
+  exclusive: boolean;
+  body: "hatchback" | "sedan" | "suv" | "pickup" | "coupe" | "convertible";
+}
+
+type Sample = Pick<DiscoveryCar, "id"> & { amount: number; };
+
+function sample(input: Sample): DiscoveryCar {
+  return { ...input, priceAmount: input.amount };
+}
+
+export const discoveryCars: readonly DiscoveryCar[] = [];
+export const collections = [{id:"newest",title:"newest"}] as const;
+export type Collection = (typeof collections)[number];
+export type CollectionId = Collection["id"];
+const en = {
+  sample: "Sample cars · illustrative sale prices",
+  sampleDetail: "This car and its sale price are illustrative examples for this preview.",
+};
+const bg: Record<DiscoveryTextKey, string> = {
+  sample: "Примерни коли · илюстративни продажни цени",
+  sampleDetail: "Този автомобил и продажната му цена са илюстративни примери за това демо.",
+};
+export function discoveryText(locale, key) { return (locale === "bg" ? bg : en)[key]; }
+`));
+  x.files.set(promotedDiscoveryPrefix+'DiscoveryHome.svelte',Buffer.from('<script>const pills = [{title:"all",section:"collections"}] as const;</script>'));
+  x.files.set(promotedDiscoveryPrefix+'DiscoverySearch.svelte',Buffer.from('<script>const price=locale.money(amount, "EUR");</script>'));
+  const adaptation=applyExtendedRefreshAdapter({...x,key:'karento-best'});
+  const source=x.files.get(promotedDiscoveryPrefix+'discovery.ts').toString();
+  const cars=JSON.parse(source.match(/discoveryCars[^=]*=\s*([\s\S]*?);/)[1]);
+  assert.equal(cars.length,1);
+  assert.equal(cars[0].id,'vehicle-1');
+  assert.equal(cars[0].priceAmount,12500);
+  assert.equal(cars[0].currency,'AED');
+  assert.equal(cars[0].year,2020);
+  assert.equal(cars[0].body,'hatchback');
+  assert.ok(source.includes(JSON.stringify(x.profile.business.inventoryNotice)));
+  assert.doesNotMatch(source,/illustrative sale prices|\bfunction sample\(/);
+  assert.ok(adaptation.contentPaths.includes(promotedDiscoveryPrefix+'discovery.ts'));
+});
+
+test('Signature discovery identical dual layouts bind both catalogues and their consumers',t=>{
+  const x=moveDiscoveryFixture(discoveryFixture(t),{retainLegacy:true});
+  const adaptation=applyExtendedRefreshAdapter({...x,key:'karento-best'});
+  for(const name of ['discovery.ts','DiscoveryHome.svelte','DiscoverySearch.svelte']) {
+    assert.deepEqual(x.files.get(legacyDiscoveryPrefix+name),x.files.get(promotedDiscoveryPrefix+name),name);
+    assert.ok(adaptation.contentPaths.includes(legacyDiscoveryPrefix+name),name);
+    assert.ok(adaptation.contentPaths.includes(promotedDiscoveryPrefix+name),name);
+  }
+  assert.match(x.files.get(promotedDiscoveryPrefix+'discovery.ts').toString(),/"vehicle-1"/);
+});
+
+for(const divergentFile of ['discovery.ts','DiscoveryHome.svelte','DiscoveryCard.svelte'])
+  test('Signature discovery rejects ambiguous divergent dual source '+divergentFile,t=>{
+    const x=moveDiscoveryFixture(discoveryFixture(t),{retainLegacy:true});
+    if(divergentFile==='DiscoveryCard.svelte') {
+      x.files.set(legacyDiscoveryPrefix+divergentFile,Buffer.from('<article>legacy</article>'));
+      x.files.set(promotedDiscoveryPrefix+divergentFile,Buffer.from('<article>promoted</article>'));
+    } else x.files.set(promotedDiscoveryPrefix+divergentFile,
+      Buffer.concat([x.files.get(promotedDiscoveryPrefix+divergentFile),Buffer.from('\n// unreviewed divergence\n')]));
+    const beforeLegacy=x.files.get(legacyDiscoveryPrefix+'discovery.ts');
+    const beforePromoted=x.files.get(promotedDiscoveryPrefix+'discovery.ts');
+    assert.throws(()=>applyExtendedRefreshAdapter({...x,key:'karento-best'}),/Ambiguous Signature discovery source layouts/);
+    assert.deepEqual(x.files.get(legacyDiscoveryPrefix+'discovery.ts'),beforeLegacy);
+    assert.deepEqual(x.files.get(promotedDiscoveryPrefix+'discovery.ts'),beforePromoted);
+  });
+
+test('Signature discovery incomplete promoted layout cannot silently skip factual binding',t=>{
+  const x=moveDiscoveryFixture(discoveryFixture(t));
+  x.files.delete(promotedDiscoveryPrefix+'discovery.ts');
+  assert.throws(()=>applyExtendedRefreshAdapter({...x,key:'karento-best'}),/Signature discovery module missing/);
 });
 
 function mobileFixture(t,uk=false) {

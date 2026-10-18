@@ -1310,8 +1310,36 @@ function patchCarwow({ oldVariant, candidate, profile }) {
 }
 
 
+// Import's native stock schema needs a real year/mileage and one dealer currency.
+// Check the original record before writing; normalized fallbacks are not evidence.
+function assertImportListingFacts(profile) {
+  const sourceYear = (value) => {
+    if (typeof value === 'number') return Number.isInteger(value) && value >= 1900 && value <= 2099 ? value : null;
+    if (typeof value !== 'string' || /unknown|not\s+(?:published|provided|available)|on\s+request|tbc|tba|n\/a/i.test(value)) return null;
+    const years = [...value.matchAll(/\b(?:19|20)\d{2}\b/g)].map(match => Number(match[0]));
+    return years.length === 1 ? years[0] : null;
+  };
+  for (const item of profile.listings) {
+    const raw = item.raw || {}, fields = [];
+    // A legacy scalar date may be a model year; a capture/advert timestamp is not.
+    const dateYear = /^(?:19|20)\d{2}$/.test(String(raw.date ?? '')) ? sourceYear(raw.date) : null;
+    const years = [sourceYear(raw.year), sourceYear(raw.production), dateYear];
+    const productionYear = sourceYear(raw.production || `${item.year} г.`);
+    if (!Number.isInteger(item.year) || !years.includes(item.year) || productionYear !== item.year) fields.push('year');
+    if (!originalMileageFacts(item).mileageKnown) fields.push('mileage');
+    if (!/^[A-Z]{3}$/.test(profile.business.currency || '') || item.currency !== profile.business.currency) fields.push('currency');
+    if (fields.length) {
+      const error = new Error('Import adaptation requires reviewed compatible ' + fields.join(', ') + '; its selected source cannot display these facts safely: ' + (item.sourceId || item.id));
+      error.code = 'IMPORT_FACTS_REQUIRE_REVIEW';
+      error.fields = fields;
+      throw error;
+    }
+  }
+}
+
 function importListingFeed(profile) {
   const b = profile.business;
+  const nativeMiles = b.countryCode === 'GB' && b.distanceUnit === 'mi';
   const spacing = (value) => new Intl.NumberFormat('fr-FR', { maximumFractionDigits: 0 })
     .format(Number(value || 0)).replace(/\u202f/g, ' ');
   const listings = profile.listings.map((item) => {
@@ -1332,9 +1360,9 @@ function importListingFeed(profile) {
       id: item.sourceId || item.id,
       image: item.image,
       location: item.location || b.city,
-      mileage: !originalMileageFacts(item).mileageKnown ? '' : item.mileageUnit === 'mi'
+      mileage: !originalMileageFacts(item).mileageKnown ? '' : nativeMiles && item.mileageUnit === 'mi'
         ? `${spacing(item.mileageValue)} mi`
-        : `${spacing(item.mileageValue)} км`,
+        : `${spacing(mileageKm(item))} км`,
       ...originalMileageFacts(item),
       photoCount: String(item.images.length),
       power: raw.power || (item.powerHp ? `${item.powerHp} к.с.` : ''),
@@ -1608,6 +1636,7 @@ function patchImportText(candidate, profile) {
 }
 
 function patchImport({ oldVariant, candidate, profile, reviewedModernCopy }) {
+  assertImportListingFacts(profile);
   const feedFile = path.join(candidate, 'src/lib/data/daynight-listings.json');
   write(feedFile, `${JSON.stringify(importListingFeed(profile), null, 2)}\n`);
   patchImportDayNight(candidate, oldVariant, profile);
@@ -1677,6 +1706,7 @@ export const refreshAdapterInternals = {
   personalizeSvelteMileage,
   modernListing,
   carwowInventory,
+  assertImportListingFacts,
   importListingFeed,
   pickLogo,
   isRasterLogo,

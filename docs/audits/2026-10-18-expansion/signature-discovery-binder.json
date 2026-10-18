@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "observedAt": "2026-10-19",
+  "kind": "signature-discovery-binder-compatibility",
+  "canonicalBase": "aff0c3be15546bc3bc52e70a2b88eae59620db53",
+  "ownership": {
+    "source": "scripts/lib/client-refresh-six.mjs",
+    "tests": "scripts/six-variant-refresh.test.mjs",
+    "coordinatedWith": "usa_leads - no overlapping edits; its fixed resume candidate excludes this local change"
+  },
+  "scope": [
+    "Support old karento-best/src/routes/2/discovery.ts and promoted karento-best/src/lib/discovery/discovery.ts using the existing factual binder.",
+    "Bind both identical complete discovery layouts; reject differing discovery modules/components and partial layouts with a missing module.",
+    "Keep original inventory IDs/media/price/year/currency/notice rules and missing-fact holds.",
+    "Exclude occupied promoted sources from legacy fixtures; exercise the promoted inline contract using a compact self-contained fixture, with no dependency on unpublished src/lib/discovery files."
+  ],
+  "localBefore": [
+    {
+      "Path": "scripts/lib/client-refresh-six.mjs",
+      "Sha256": "00523beb560bdfc59c509d0343e4140b5c003002ed1fa137ce7e53ab564abbf1",
+      "Blob": "221fa1c2183bea6e1a977f0dfb2d6e64de0c4788"
+    },
+    {
+      "Path": "scripts/six-variant-refresh.test.mjs",
+      "Sha256": "3ce10a79b70f8f502bf8da2293dc2eab688aa4964a9dd03d2fe05f2c9e0c43c0",
+      "Blob": "f4708c1df5ecfc909545c368dc04f0693a120671"
+    }
+  ],
+  "verifiedDelta": {
+    "base": "aff0c3be15546bc3bc52e70a2b88eae59620db53",
+    "rows": [
+      {
+        "scope": "local",
+        "path": "scripts/lib/client-refresh-six.mjs",
+        "beforeBlob": "221fa1c2183bea6e1a977f0dfb2d6e64de0c4788",
+        "afterBlob": "ad1c436d673becc5be02e7a8acfdde4614c39342",
+        "afterSha256": "d88085e362f8ea03ebcfd710735be84cc3fda7904411ec1871d1528f0d77db00",
+        "bytes": 58107,
+        "unrelatedSourcePreserved": true
+      },
+      {
+        "scope": "local",
+        "path": "scripts/six-variant-refresh.test.mjs",
+        "beforeBlob": "f4708c1df5ecfc909545c368dc04f0693a120671",
+        "afterBlob": "b7a5f4c726614fdcaac60714b935f54d4419df01",
+        "afterSha256": "7075bdd57683720c4c25a69eff7c5f4f84ee7de4c2ac942efb9fc3c3652771ad",
+        "bytes": 52190,
+        "unrelatedSourcePreserved": true
+      },
+      {
+        "scope": "canonical",
+        "path": "scripts/lib/client-refresh-six.mjs",
+        "beforeBlob": "af07050725747aefc7dba5c89f075c4c980eef8d",
+        "afterBlob": "7b42732111041c6be3f4c996ae6b52653481cd7d",
+        "afterSha256": "36fa6c35affcff9b358b222f9c3e6c8a06c35547b29d763f1270c4205a981738",
+        "bytes": 63397,
+        "unrelatedSourcePreserved": true
+      },
+      {
+        "scope": "canonical",
+        "path": "scripts/six-variant-refresh.test.mjs",
+        "beforeBlob": "95bb4691dee03db79e9d8665c2733b3eac4338d4",
+        "afterBlob": "25a41856e0334ffe4e86645ed1df2420a1c386b6",
+        "afterSha256": "5b9f1f667ad1f92c98f4e26855a458b8e6fbe60d59c86b09efd7f518ac33ea05",
+        "bytes": 66200,
+        "unrelatedSourcePreserved": true
+      }
+    ]
+  },
+  "checks": {
+    "before": {
+      "command": "node --test --test-name-pattern='Signature discovery' scripts/six-variant-refresh.test.mjs",
+      "passed": 2,
+      "failed": 7,
+      "note": "New regressions reproduced silent skipped binding and missing ambiguity/partial-source rejection on the original helper."
+    },
+    "occupied": {
+      "node": "26.10.0",
+      "command": "node --test --test-name-pattern='Signature discovery|approved discovery|approved inline discovery' scripts/six-variant-refresh.test.mjs scripts/uk-signature-personalization.test.mjs",
+      "passed": 11,
+      "failed": 0,
+      "scope": "Occupied local source and stable dependencies, preserving unrelated local changes."
+    },
+    "canonicalCandidate": {
+      "command": "node --import file:///J:/cars-generated/expansion-20261018/signature-discovery-binder/candidate-loader.mjs --test --test-name-pattern='Signature discovery' scripts/six-variant-refresh.test.mjs",
+      "passed": 9,
+      "failed": 0,
+      "scope": "Exact two changed files built from canonical aff0c3be overlaid at their maintained module URLs; all other dependencies/fixtures are the maintained checkout, not an independently downloaded canonical graph. The corrected promoted inline case is self-contained and all nine affected canonical binder cases passed again."
+    },
+    "scopePreservation": "Inverse of only the declared changes reproduces both original local Git blobs and both canonical baseline Git blobs.",
+    "whitespace": "git diff --check passed for the two scoped files.",
+    "portabilityCorrection": {
+      "reason": "Original test copied unpublished occupied src/lib/discovery files; replaced with a compact inline source/consumer fixture before publication.",
+      "passed": 9,
+      "failed": 0,
+      "productionHelperUnchanged": true
+    }
+  },
+  "candidate": {
+    "root": "J:/cars-generated/expansion-20261018/signature-discovery-binder",
+    "files": [
+      "scripts/lib/client-refresh-six.mjs",
+      "scripts/six-variant-refresh.test.mjs"
+    ],
+    "replay": "patch-spec.json",
+    "hashes": "verified-delta.json",
+    "retention": "One bounded source-only candidate; no dependency tree, full source clone, framework build or static asset copy."
+  },
+  "notPerformed": [
+    "Template frontend or asset changes",
+    "Selector/home-choice changes",
+    "Release lock promotion",
+    "Dealer generation/build",
+    "Framework production build",
+    "Git downloads/fetch",
+    "Publication",
+    "Hosting/provider changes",
+    "Outreach"
+  ],
+  "integration": "Root must reconcile against the then-current canonical blobs, retain unrelated local Mobile/other-owner work, run the required workflow integration checkpoint once, and publish the exact reviewed source before selecting any new template pilot. Local full files are not the remote-only publication candidate."
+}

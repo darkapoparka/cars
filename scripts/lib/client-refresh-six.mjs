@@ -537,8 +537,25 @@ function personalizeSignatureCopy(files,profile) {
 }
 
 function bindSignatureDiscovery(files,profile,cards) {
-  const prefix='karento-best/src/routes/2/',file=prefix+'discovery.ts';
-  if(!files.has(file))return [];
+  const layouts=['karento-best/src/routes/2/','karento-best/src/lib/discovery/'];
+  const sourceNames=prefix=>[...files.keys()].filter(name=>name.startsWith(prefix)&&!name.slice(prefix.length).startsWith('+'));
+  for(const prefix of layouts)
+    if(sourceNames(prefix).length&&!files.has(prefix+'discovery.ts'))
+      throw new Error('Signature discovery module missing from source layout: '+prefix);
+  const prefixes=layouts.filter(prefix=>files.has(prefix+'discovery.ts'));
+  if(prefixes.length>1) {
+    const names=unique(prefixes.flatMap(prefix=>sourceNames(prefix).map(name=>name.slice(prefix.length))));
+    for(const name of names) {
+      const first=files.get(prefixes[0]+name);
+      if(prefixes.some(prefix=>!files.has(prefix+name)||!normalized(files.get(prefix+name)).equals(normalized(first))))
+        throw new Error('Ambiguous Signature discovery source layouts differ at '+name);
+    }
+  }
+  return unique(prefixes.flatMap(prefix=>bindSignatureDiscoveryAt(files,profile,cards,prefix)));
+}
+
+function bindSignatureDiscoveryAt(files,profile,cards,prefix) {
+  const file=prefix+'discovery.ts';
   let source=text(files,file);
   const inlineContract='export interface DiscoveryCar extends VehicleCardContent {\n  priceAmount: number;\n  currency: string;\n  id: string;\n  make: string;\n  year: number;\n  arrival: number;\n  offer: boolean;\n  exclusive: boolean;\n  body: "hatchback" | "sedan" | "suv" | "pickup" | "coupe" | "convertible";\n}';
   const inlineDiscovery=source.includes(inlineContract)&&source.includes('const en = {')&&
