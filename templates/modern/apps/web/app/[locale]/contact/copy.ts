@@ -1,20 +1,58 @@
 import { leadSite } from "@repo/marketplace";
+import { publicSite } from "@repo/marketplace/site-config";
 import { CarFront, Landmark, Ship, Tag } from "lucide-react";
+
+export const getContactServiceCopy = (
+  locale: "bg" | "en",
+  services: Pick<
+    typeof publicSite.services,
+    "imports" | "lease"
+  > = publicSite.services
+) => {
+  const text = (bg: string, en: string) => (locale === "bg" ? bg : en);
+  return {
+    title: `${[
+      text("Премиум автомобили", "Premium vehicles"),
+      ...(services.imports ? [text("Внос", "Imports")] : []),
+      ...(services.lease ? [text("Финансиране", "Financing")] : []),
+    ].join(". ")}.`,
+    contactDescription:
+      services.imports && services.lease
+        ? text(
+            `Един телефон за автомобил, внос или финансиране. Шоурум в ${leadSite.district.bg}.`,
+            `One phone number for vehicles, imports, or finance. Showroom in ${leadSite.district.en}.`
+          )
+        : text(
+            `Свържете се директно с ${leadSite.shortName} за публикуваните обяви и потвърдете останалите услуги.`,
+            `Contact ${leadSite.shortName} directly about the published listings and confirm any other services.`
+          ),
+    servicesDescription: services.imports
+      ? text(
+          "От наличен автомобил до внос по заявка — екипът ни е на една връзка разстояние.",
+          "From a vehicle in stock to an import on request, our team is one call away."
+        )
+      : text(
+          "Разгледайте публикуваните обяви и се свържете директно с автокъщата.",
+          "Browse the published listings and contact the dealership directly."
+        ),
+  };
+};
+const bgServices = getContactServiceCopy("bg");
+const enServices = getContactServiceCopy("en");
 
 export const pageCopy = {
   bg: {
     heroImageAlt: "Нощен автомобилен шоурум",
-    title: "Премиум автомобили. Внос. Лизинг.",
+    title: bgServices.title,
     description: `Вижте автомобилите в наличност или говорете директно с ${leadSite.shortName} за следващия си автомобил.`,
     inventoryAction: "Вижте наличностите",
     phoneAction: "Обадете се",
     contactTitle: "Говорете директно с нас.",
-    contactDescription: `Един телефон за автомобил, внос или финансиране. Шоурум в ${leadSite.district.bg}.`,
+    contactDescription: bgServices.contactDescription,
     locationLabel: `Шоурум · ${leadSite.district.bg}`,
     mapAction: "Отворете картата",
     servicesTitle: "Изберете правилната посока.",
-    servicesDescription:
-      "От наличен автомобил до внос по заявка — екипът ни е на една връзка разстояние.",
+    servicesDescription: bgServices.servicesDescription,
     sellHandoffAction: "Обадете се за оферта",
     sellHandoffDescription: `Данните за автомобила са готови. Обадете се на ${leadSite.shortName}, за да уточним оглед и конкретна оферта.`,
     sellHandoffEditAction: "Редактирайте данните",
@@ -39,7 +77,7 @@ export const pageCopy = {
         icon: Ship,
       },
       {
-        title: "Собствен лизинг",
+        title: "Запитване за финансиране",
         description: "Обсъдете вариант според автомобила и бюджета ви.",
         href: "/lease",
         icon: Landmark,
@@ -54,17 +92,16 @@ export const pageCopy = {
   },
   en: {
     heroImageAlt: "Night-time automotive showroom",
-    title: "Premium vehicles. Imports. Leasing.",
+    title: enServices.title,
     description: `Browse the vehicles in stock or speak directly with ${leadSite.shortName} about your next vehicle.`,
     inventoryAction: "View available vehicles",
     phoneAction: "Call us",
     contactTitle: "Speak directly with us.",
-    contactDescription: `One phone number for vehicles, imports, or finance. Showroom in ${leadSite.district.en}.`,
+    contactDescription: enServices.contactDescription,
     locationLabel: `Showroom · ${leadSite.district.en}`,
     mapAction: "Open the map",
     servicesTitle: "Choose the right direction.",
-    servicesDescription:
-      "From a vehicle in stock to an import on request, our team is one call away.",
+    servicesDescription: enServices.servicesDescription,
     sellHandoffAction: "Call for an offer",
     sellHandoffDescription: `Your vehicle details are ready. Call ${leadSite.shortName} to arrange an inspection and a concrete offer.`,
     sellHandoffEditAction: "Edit vehicle details",
@@ -90,7 +127,7 @@ export const pageCopy = {
         icon: Ship,
       },
       {
-        title: "In-house leasing",
+        title: "Finance enquiries",
         description: "Discuss an option for the vehicle and your budget.",
         href: "/lease",
         icon: Landmark,

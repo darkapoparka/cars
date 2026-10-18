@@ -1,7 +1,7 @@
 import { Badge } from "@repo/design-system/components/ui/badge";
 import { Button } from "@repo/design-system/components/ui/button";
 import { getCollectionPath, leadSite } from "@repo/marketplace";
-import { isDealershipSite } from "@repo/marketplace/site-config";
+import { isDealershipSite, publicSite } from "@repo/marketplace/site-config";
 import { log } from "@repo/observability/log";
 import { getLocalizedPath, normalizeSeoLocale } from "@repo/seo/metadata";
 import { ArrowRight, CarFront } from "lucide-react";
@@ -98,6 +98,10 @@ export default async function ChineseCollectionPage({
   const normalizedLocale = normalizeSeoLocale(locale);
   const copy = collectionCopy[normalizedLocale];
   const page = parsePage((await searchParams).page);
+  const noImportDescription =
+    normalizedLocale === "bg"
+      ? "Разгледайте публикуваните обяви или се свържете директно с автокъщата."
+      : "Browse the published listings or contact the dealership directly.";
 
   try {
     const data = await getChineseEvHybridCollection(page);
@@ -181,19 +185,28 @@ export default async function ChineseCollectionPage({
                   <CarFront aria-hidden="true" className="size-5" />
                 </span>
                 <h3 className="mt-3 font-semibold text-card-title tracking-heading">
-                  {copy.emptyTitle}
+                  {publicSite.services.imports
+                    ? copy.emptyTitle
+                    : copy.emptyMessage}
                 </h3>
                 <p className="mx-auto mt-1 max-w-lg text-body text-muted-foreground">
-                  {copy.emptyDescription}
+                  {publicSite.services.imports
+                    ? copy.emptyDescription
+                    : noImportDescription}
                 </p>
-                <Button asChild className="mt-4" size="sm">
-                  <Link
-                    href={getLocalizedPath(normalizedLocale, "/imports/china")}
-                  >
-                    {copy.importAction}
-                    <ArrowRight aria-hidden="true" className="size-4" />
-                  </Link>
-                </Button>
+                {publicSite.services.imports && (
+                  <Button asChild className="mt-4" size="sm">
+                    <Link
+                      href={getLocalizedPath(
+                        normalizedLocale,
+                        "/imports/china"
+                      )}
+                    >
+                      {copy.importAction}
+                      <ArrowRight aria-hidden="true" className="size-4" />
+                    </Link>
+                  </Button>
+                )}
               </div>
             ) : (
               <PublicInventoryList

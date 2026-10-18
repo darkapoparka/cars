@@ -8,6 +8,7 @@ import { createHash } from 'node:crypto';
 import { applyDealerLogoContract } from './client-logo-contract.mjs';
 import { dealerLocalizedCopy } from './dealer-localized-copy.mjs';
 import {renderModernDealerInventoryCopy} from './modern-dealer-inventory-copy.mjs';
+import {personalizeModernDealerServices} from './modern-dealer-services.mjs';
 import {repairImportDealerInventoryCatalog} from './import-dealer-inventory-copy.mjs';
 import { applyCarwowSafeContent, applyImportSafeContent, applyModernSafeContent } from './client-refresh-safe-content.mjs';
 
@@ -1003,6 +1004,7 @@ function patchModern({ oldVariant, candidate, profile, reviewedModernCopy }) {
     `  district: { bg: ${q(localized.bg.region)}, en: ${q(localized.en.region)} },`);
   text = text.replace(/\s*socialLinks:\s*\{[\s\S]*?\n\s*\},\n\s*staticDemoMode:/m,
     `\n  socialLinks: ${JSON.stringify(Object.fromEntries(Object.entries(b.socialLinks || {}).filter(([, value]) => value)))},\n  staticDemoMode:`);
+  text = personalizeModernDealerServices(text, profile);
   write(file, text);
   write(path.join(candidate, 'packages/marketplace-domain/testing/dealer-profile.json'),
     `${JSON.stringify(profile, null, 2)}\n`);

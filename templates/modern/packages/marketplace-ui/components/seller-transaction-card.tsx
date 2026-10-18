@@ -204,7 +204,7 @@ export const SellerTransactionCard = ({
       )}
       <div className="mt-4 hidden flex-col gap-2 lg:flex">
         {contactButton}
-        {isDealershipSite ? (
+        {isDealershipSite && publicSite.services.lease ? (
           <Button
             asChild
             className="h-11 w-full gap-2 rounded-lg"

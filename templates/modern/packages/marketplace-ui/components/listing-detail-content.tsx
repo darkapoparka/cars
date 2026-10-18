@@ -125,7 +125,7 @@ export const ListingDetailContent = ({
         }
       />
 
-      {listing.category === "car" ? (
+      {listing.category === "car" && publicSite.services.lease ? (
         <div className="pt-1 pb-2 lg:hidden">
           <ListingFinanceCard
             artwork={
