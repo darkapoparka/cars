@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "dealer": "golden-century-motors",
+  "businessFacts": "business-facts.json",
+  "stock": "stock.json",
+  "inventoryKind": "dated-listing-snapshot",
+  "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+  "sources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/golden-century-motors",
+      "observedAt": "2026-10-19T20:03:53.574830Z",
+      "supports": [
+        "dealer-name",
+        "dealer-attributed-listings",
+        "dealer-attributed-photos",
+        "public-business-call-line",
+        "address"
+      ]
+    },
+    {
+      "url": "https://uae.autotraders.ae/dealers/?limit=21&page=3",
+      "observedAt": "2026-10-19T20:03:53.574830Z",
+      "supports": [
+        "published-dealer-logo"
+      ]
+    },
+    {
+      "url": "https://uae.autotraders.ae/dealers/golden-century-motors-1898",
+      "observedAt": "2026-10-19T20:03:53.574830Z",
+      "supports": [
+        "published-dealer-logo",
+        "dealer-name"
+      ]
+    }
+  ]
+}

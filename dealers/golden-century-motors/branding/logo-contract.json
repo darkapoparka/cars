@@ -1,0 +1,287 @@
+{
+  "schemaVersion": 1,
+  "dealer": "golden-century-motors",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T20:47:32.983211Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "sourced-logo-imagegen-redraw",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "7df243543f8164082ab457a41de65b9fb9eeaf4b608a1f788b8e2dd96c6c7ddc",
+      "sourceSha256": "fb1b7858c9be99448fd583b4b65e86dd1dcc33bc7279a031ee48e44005373394"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "ad10baf841ba2f5b40145c1d600d76c0fab453144802ff6188958ac1cfd8b2c1",
+      "sourceSha256": "1528e2bbabf1452ca6643e4d8989ea3053f461f4a7dee789d2bf399dd715ebd5"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "ad10baf841ba2f5b40145c1d600d76c0fab453144802ff6188958ac1cfd8b2c1",
+      "sourceSha256": "1528e2bbabf1452ca6643e4d8989ea3053f461f4a7dee789d2bf399dd715ebd5"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "fb1b7858c9be99448fd583b4b65e86dd1dcc33bc7279a031ee48e44005373394",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-a96c9063-9695-4189-9977-731f436fda55",
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "c7da9ff49faed740f8de8d32904978e0879cfe00b8dc94b2ac8d72713504f04c",
+      "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+      "crop": [
+        0,
+        589,
+        887,
+        887
+      ]
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "f1d0ef939eb97acfd426cb1104e5878fa6bfc58d1710c6c06a825a1129cbab22",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-a96c9063-9695-4189-9977-731f436fda55",
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "c7da9ff49faed740f8de8d32904978e0879cfe00b8dc94b2ac8d72713504f04c",
+      "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+      "crop": [
+        0,
+        0,
+        887,
+        589
+      ]
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "87e1713a6265a54b8df5b583313d003e0f418ae156e776e7462290efa983fce9"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "fb1b7858c9be99448fd583b4b65e86dd1dcc33bc7279a031ee48e44005373394",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a96c9063-9695-4189-9977-731f436fda55",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "c7da9ff49faed740f8de8d32904978e0879cfe00b8dc94b2ac8d72713504f04c",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          589,
+          887,
+          887
+        ]
+      },
+      "sourceReference": "dealers/golden-century-motors/branding/generated-onLight.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "1528e2bbabf1452ca6643e4d8989ea3053f461f4a7dee789d2bf399dd715ebd5",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a96c9063-9695-4189-9977-731f436fda55",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "c7da9ff49faed740f8de8d32904978e0879cfe00b8dc94b2ac8d72713504f04c",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          887,
+          589,
+          1774,
+          887
+        ]
+      },
+      "sourceReference": "dealers/golden-century-motors/branding/generated-onDark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "1528e2bbabf1452ca6643e4d8989ea3053f461f4a7dee789d2bf399dd715ebd5",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a96c9063-9695-4189-9977-731f436fda55",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "c7da9ff49faed740f8de8d32904978e0879cfe00b8dc94b2ac8d72713504f04c",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          887,
+          589,
+          1774,
+          887
+        ]
+      },
+      "sourceReference": "dealers/golden-century-motors/branding/generated-onDark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "b9a4a229bdbfd02f4b8fe63855b3fcfce7324658c4024eab43a1f35ae9e321b7",
+      "sha256": "fb1b7858c9be99448fd583b4b65e86dd1dcc33bc7279a031ee48e44005373394",
+      "crop": {
+        "left": 0,
+        "top": 18,
+        "width": 885,
+        "height": 262
+      },
+      "sourcePath": "branding/generated-onLight.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "82f9b48f88eb33b852acf22b3542ded5671e99e2b93e79139aceb14330441dd4",
+      "sha256": "1528e2bbabf1452ca6643e4d8989ea3053f461f4a7dee789d2bf399dd715ebd5",
+      "crop": {
+        "left": 0,
+        "top": 17,
+        "width": 885,
+        "height": 263
+      },
+      "sourcePath": "branding/generated-onDark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "82f9b48f88eb33b852acf22b3542ded5671e99e2b93e79139aceb14330441dd4",
+      "sha256": "1528e2bbabf1452ca6643e4d8989ea3053f461f4a7dee789d2bf399dd715ebd5",
+      "crop": {
+        "left": 0,
+        "top": 17,
+        "width": 885,
+        "height": 263
+      },
+      "sourcePath": "branding/generated-onDark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "73500e3f7190b4830fd6add2b66c38bc4ef0bd7b70c32c8c0de0456d75a822c5",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a96c9063-9695-4189-9977-731f436fda55",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "c7da9ff49faed740f8de8d32904978e0879cfe00b8dc94b2ac8d72713504f04c",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          0,
+          887,
+          589
+        ]
+      },
+      "sourceReference": "dealers/golden-century-motors/branding/generated-mark.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "6081f2934600fa383c734beff1f36ec39e1b8e8cc11d0b2b1f8ba0c401197f1f",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a96c9063-9695-4189-9977-731f436fda55",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "c7da9ff49faed740f8de8d32904978e0879cfe00b8dc94b2ac8d72713504f04c",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          887,
+          0,
+          1774,
+          589
+        ]
+      },
+      "sourceReference": "dealers/golden-century-motors/branding/generated-markOnDark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "f1d0ef939eb97acfd426cb1104e5878fa6bfc58d1710c6c06a825a1129cbab22",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a96c9063-9695-4189-9977-731f436fda55",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "c7da9ff49faed740f8de8d32904978e0879cfe00b8dc94b2ac8d72713504f04c",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          0,
+          887,
+          589
+        ]
+      },
+      "sourceReference": "dealers/golden-century-motors/branding/generated-mark.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "87e1713a6265a54b8df5b583313d003e0f418ae156e776e7462290efa983fce9",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a96c9063-9695-4189-9977-731f436fda55",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "c7da9ff49faed740f8de8d32904978e0879cfe00b8dc94b2ac8d72713504f04c",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          0,
+          887,
+          589
+        ]
+      },
+      "sourceReference": "dealers/golden-century-motors/branding/generated-mark.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T20:47:32.983211Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "025290fd9158598ffc188f28c0599e522798dfef64c3f0de282d523730573712",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-a96c9063-9695-4189-9977-731f436fda55",
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "c7da9ff49faed740f8de8d32904978e0879cfe00b8dc94b2ac8d72713504f04c",
+      "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+      "crop": [
+        887,
+        0,
+        1774,
+        589
+      ]
+    }
+  }
+}

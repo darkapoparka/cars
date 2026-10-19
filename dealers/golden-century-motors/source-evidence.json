@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "dealer": "golden-century-motors",
+  "researchId": "ae-dubai-golden-century-motors",
+  "observedAt": "2026-10-19T20:03:53.574830Z",
+  "liveFetchPerformed": true,
+  "businessSources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/golden-century-motors",
+      "observedAt": "2026-10-19T20:03:53.574830Z",
+      "supports": [
+        "dealer-name",
+        "dealer-attributed-listings",
+        "dealer-attributed-photos",
+        "public-business-call-line",
+        "address"
+      ]
+    },
+    {
+      "url": "https://uae.autotraders.ae/dealers/?limit=21&page=3",
+      "observedAt": "2026-10-19T20:03:53.574830Z",
+      "supports": [
+        "published-dealer-logo"
+      ]
+    },
+    {
+      "url": "https://uae.autotraders.ae/dealers/golden-century-motors-1898",
+      "observedAt": "2026-10-19T20:03:53.574830Z",
+      "supports": [
+        "published-dealer-logo",
+        "dealer-name"
+      ]
+    }
+  ],
+  "stockMode": "dated-listing-snapshot",
+  "inventoryCountMeaning": "Selected currently advertised public records, not a count or confirmation of available physical stock.",
+  "media": [
+    {
+      "path": "dealer-stock/listing-1513.jpg",
+      "sourceUrl": "https://licenseplate.ae/storage/listings/0/rox-adamas-15-at-awd-475-hp-0-1789493060.webp",
+      "listingUrl": "https://licenseplate.ae/cars/listing/1513-rox-adamas-15-at-awd-475-hp-first-class",
+      "observedAt": "2026-10-19T20:03:53.574830Z",
+      "downloadedSha256": "3ca2aee8bf6aa91dae8321f3063b9a101defdf621ef402bc41447812e1a3fc66",
+      "downloadedDimensions": [
+        1066,
+        800
+      ],
+      "sha256": "89b1c2fe0b82ffc465cc3059f5179c6a6a1a157fe4a85f69b0a7f249e66d718d",
+      "bytes": 174675,
+      "dimensions": [
+        1066,
+        800
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    },
+    {
+      "path": "dealer-stock/listing-1396.jpg",
+      "sourceUrl": "https://licenseplate.ae/storage/listings/0/mercedes-benz-x-class-x-350-d-7g-tronic-plus-4matic-258-hp-0-1789492308.webp",
+      "listingUrl": "https://licenseplate.ae/cars/listing/1396-mercedes-benz-x-class-x-350-d-7g-tronic-plus-4matic-258-hp-x-350-d",
+      "observedAt": "2026-10-19T20:03:53.574830Z",
+      "downloadedSha256": "3cdf62676a64cedd4b84b98d0b7b9666be0d7d7d6cd0db7617afe79d3139c954",
+      "downloadedDimensions": [
+        768,
+        1024
+      ],
+      "sha256": "54cd6d8b4fb3c6469bd53b68fd944f7b7defdd94539bbefbb1f09d2ddd8db67d",
+      "bytes": 187667,
+      "dimensions": [
+        768,
+        1024
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    },
+    {
+      "path": "dealer-stock/listing-1441.jpg",
+      "sourceUrl": "https://licenseplate.ae/storage/listings/0/toyota-tundra-34-at-389-hp-0-1789492600.webp",
+      "listingUrl": "https://licenseplate.ae/cars/listing/1441-toyota-tundra-34-at-389-hp-double-cab-sr5",
+      "observedAt": "2026-10-19T20:03:53.574830Z",
+      "downloadedSha256": "743c4e5c84749729a7c87a083afb6e0d35287596f431974b335102f52597462b",
+      "downloadedDimensions": [
+        1066,
+        800
+      ],
+      "sha256": "9badd3422c6dcf208bf0c0882bf30851da9eca0d9b78b8637297ed618e816df4",
+      "bytes": 196081,
+      "dimensions": [
+        1066,
+        800
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    }
+  ],
+  "researchLimitations": [
+    "Phone taken from dealer-attributed live listings; directory phone differs and is not duplicated."
+  ],
+  "excludedSourceContent": [
+    "Personal names and personal or ambiguous emails",
+    "Marketplace relay numbers",
+    "Prices",
+    "Unsupported warranties, inspections, ratings and finance promises"
+  ],
+  "dealerApproval": "unknown"
+}

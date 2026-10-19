@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "type": "cars-dealer-pack-draft",
+  "slug": "golden-century-motors",
+  "dealerId": "ae-dubai-golden-century-motors",
+  "status": "ready",
+  "buildReady": true,
+  "providerWrites": 0,
+  "createdAt": "2026-10-19T20:47:33.852Z",
+  "inventoryKind": "dated-listing-snapshot",
+  "inventoryRecords": 3,
+  "logoReady": true,
+  "missingFacts": [
+    {
+      "field": "business.email",
+      "required": false,
+      "reason": "No consistent public business value established from the reviewed sources."
+    },
+    {
+      "field": "business.website",
+      "required": false,
+      "reason": "No consistent public business value established from the reviewed sources."
+    },
+    {
+      "field": "business.hours",
+      "required": false,
+      "reason": "No consistent public business value established from the reviewed sources."
+    },
+    {
+      "field": "prices",
+      "required": false,
+      "reason": "All prices are omitted under the public-repository scope."
+    }
+  ],
+  "blocking": [],
+  "stockAcquisition": "explicit-retained-public-snapshot",
+  "liveListingFetchPerformed": true,
+  "next": "Pack input checks passed; awaiting the separately authorized native build path."
+}

@@ -1,0 +1,182 @@
+{
+  "schemaVersion": 1,
+  "dealer": "car-4-me-fz",
+  "publishedBranding": "no-usable-original-obtained",
+  "sourceLogoUrl": null,
+  "creationMethod": "imagegen-proposal",
+  "approvalStatus": "independent-proposal-not-dealer-approved",
+  "dealerApproved": false,
+  "observedAt": "2026-10-19",
+  "checkedSources": [
+    "https://licenseplate.ae/cars/dealer/car-4-me-fz"
+  ],
+  "researchConclusion": "No usable dealer logo obtained from the retained source and bounded public research. This clearly marked independent identity proposal is not dealer-approved.",
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "generationId": "exec-ea11bda4-2d24-4fb5-af4e-a95abe08145b",
+    "generationIdKind": "exposed-tool-execution-output-identifier",
+    "modelVersion": null,
+    "outputReference": "branding/generated-sheet.png",
+    "outputSha256": "3414bd16ced254e82853fd2a39b33a8ede73968ef78731ae4a680c3e378418f4",
+    "prompt": "Create an independent proposed brand identity for a UAE vehicle seller. Exact main lettering: \"CAR 4 ME\". Exact smaller descriptor: \"FZ\". Distinctive identity: a distinctive nearly square number 4 monogram whose diagonal is a single road curve; open geometric silhouette with sturdy strokes, not a shield. Make an elegant professional logo, precise flat geometry and intentional custom typography; no generic clipart, no gradients, no shadows, no slogan, no mockup.\nOUTPUT: one transparent 2-column x 2-row export sheet for THIS ONE DEALER ONLY. Top row about 60% of height: complete emblem and wordmark lockup on left and matching complete inverse lockup on right. Bottom row remaining 40%: nearly square compact emblem ONLY on left, matching compact inverse emblem ONLY on right. Generous actual transparent gutters; every complete logo fits within its own cell. No separator lines or labels.\nLEFT artwork: strong dark ink #15382f, with any brand accent very restrained and dark enough on white. RIGHT artwork: EVERY visible ink element including emblem and descriptor must be PURE WHITE, with no black fill and no coloured ink whatsoever, so it works on charcoal and bright red backgrounds. Preserve the same identity geometry on both sides. Do not draw background panels; open spaces and shape interiors must be genuinely transparent. Compact emblem must remain bold and identifiable at 32px, nearly square rather than a stretched wordmark. Raster output with real alpha.",
+    "sourceRasterDimensions": {
+      "width": 1536,
+      "height": 1024
+    }
+  },
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T20:50:45.106Z",
+    "master": {
+      "path": "branding/reviewed-onLight.png",
+      "sha256": "2bf54fbe9c20fc3f731b45d54228f441e3357d9900a32aa04f0bb72b34064672",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-ea11bda4-2d24-4fb5-af4e-a95abe08145b",
+        "generationIdKind": "exposed-tool-execution-output-identifier",
+        "modelVersion": null,
+        "outputReference": "branding/generated-sheet.png",
+        "outputSha256": "3414bd16ced254e82853fd2a39b33a8ede73968ef78731ae4a680c3e378418f4"
+      },
+      "export": {
+        "operation": "deterministic-artboard-cell-extraction",
+        "crop": [
+          0,
+          0,
+          768,
+          614
+        ]
+      }
+    },
+    "mark": {
+      "path": "branding/reviewed-mark.png",
+      "sha256": "25abd1bc6ad9dc31eb867379a3cea8dd7fbd46d67e654089b699d07b8d2195f1",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-ea11bda4-2d24-4fb5-af4e-a95abe08145b",
+        "generationIdKind": "exposed-tool-execution-output-identifier",
+        "modelVersion": null,
+        "outputReference": "branding/generated-sheet.png",
+        "outputSha256": "3414bd16ced254e82853fd2a39b33a8ede73968ef78731ae4a680c3e378418f4"
+      },
+      "export": {
+        "operation": "deterministic-artboard-cell-extraction",
+        "crop": [
+          0,
+          614,
+          768,
+          1024
+        ]
+      }
+    },
+    "markOnDark": {
+      "path": "branding/reviewed-markOnDark.png",
+      "sha256": "1ebbfce70eb926a81a56a43a9637aee3c66c0cb9065be6286e8073f57dd5ef60",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-ea11bda4-2d24-4fb5-af4e-a95abe08145b",
+        "generationIdKind": "exposed-tool-execution-output-identifier",
+        "modelVersion": null,
+        "outputReference": "branding/generated-sheet.png",
+        "outputSha256": "3414bd16ced254e82853fd2a39b33a8ede73968ef78731ae4a680c3e378418f4"
+      },
+      "export": {
+        "operation": "deterministic-artboard-cell-extraction",
+        "crop": [
+          768,
+          614,
+          1536,
+          1024
+        ]
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/reviewed-onLight.png",
+        "sha256": "2bf54fbe9c20fc3f731b45d54228f441e3357d9900a32aa04f0bb72b34064672",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-ea11bda4-2d24-4fb5-af4e-a95abe08145b",
+          "generationIdKind": "exposed-tool-execution-output-identifier",
+          "modelVersion": null,
+          "outputReference": "branding/generated-sheet.png",
+          "outputSha256": "3414bd16ced254e82853fd2a39b33a8ede73968ef78731ae4a680c3e378418f4"
+        },
+        "export": {
+          "operation": "deterministic-artboard-cell-extraction",
+          "crop": [
+            0,
+            0,
+            768,
+            614
+          ]
+        }
+      },
+      "onDark": {
+        "path": "branding/reviewed-onDark.png",
+        "sha256": "4c30fea3d979692311683483b5dd6745b5115057f63b512c486c3770d039d36d",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-ea11bda4-2d24-4fb5-af4e-a95abe08145b",
+          "generationIdKind": "exposed-tool-execution-output-identifier",
+          "modelVersion": null,
+          "outputReference": "branding/generated-sheet.png",
+          "outputSha256": "3414bd16ced254e82853fd2a39b33a8ede73968ef78731ae4a680c3e378418f4"
+        },
+        "export": {
+          "operation": "deterministic-artboard-cell-extraction",
+          "crop": [
+            768,
+            0,
+            1536,
+            614
+          ]
+        }
+      },
+      "onAccent": {
+        "path": "branding/reviewed-onDark.png",
+        "sha256": "4c30fea3d979692311683483b5dd6745b5115057f63b512c486c3770d039d36d",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-ea11bda4-2d24-4fb5-af4e-a95abe08145b",
+          "generationIdKind": "exposed-tool-execution-output-identifier",
+          "modelVersion": null,
+          "outputReference": "branding/generated-sheet.png",
+          "outputSha256": "3414bd16ced254e82853fd2a39b33a8ede73968ef78731ae4a680c3e378418f4"
+        },
+        "export": {
+          "operation": "deterministic-artboard-cell-extraction",
+          "crop": [
+            768,
+            0,
+            1536,
+            614
+          ]
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#101820",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "notes": "Exact generated raster reviewed on light, charcoal and accent surfaces with actual alpha; original spelling retained. Pure-white inverse provides contrast without modifying template palettes."
+    },
+    "compactMarkStatus": "independent-proposal-not-dealer-approved",
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T20:50:45.106Z",
+      "widths": [
+        32,
+        64
+      ],
+      "notes": "Compact emblem independently composed for 32/64 px use; long descriptor omitted from favicon."
+    }
+  },
+  "usageStatus": "public-preview-only"
+}

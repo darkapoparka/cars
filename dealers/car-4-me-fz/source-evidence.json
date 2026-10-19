@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "dealer": "car-4-me-fz",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/car-4-me-fz",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/10298-lexus-es-25-cvt-218-hp-es-300h-platinum",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/dealer/car-4-me-fz",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "business-name",
+        "public-dealer-contact",
+        "public-location-if-shown",
+        "dated-stock-sample"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "researchedAt": "2026-10-19",
+  "catalogueResponseSha256": "24a57bb4ced9831a7dc81da059ef3d16135a29b47ea53f10c82d003e2e8e05fe",
+  "stockSources": [
+    {
+      "listingUrl": "https://licenseplate.ae/cars/listing/10298-lexus-es-25-cvt-218-hp-es-300h-platinum",
+      "catalogueUrl": "https://licenseplate.ae/cars/dealer/car-4-me-fz",
+      "imageUrl": "https://licenseplate.ae/storage/listings/0/lexus-es-25-cvt-218-hp-0-1789546949.webp",
+      "observedAt": "2026-10-19",
+      "imageSourceSha256": "d29fb44913a2de66ffbbd75ccf72f001320b2803fdd9e14c034eaddecfb4cb59",
+      "retainedPath": "dealer-stock/stock-1.webp",
+      "retainedSha256": "30eb87389b338e3fa9a2ad7ff3f693e66b7d4b24c5010a6b0cb45dfb691c23c2",
+      "originalDimensions": [
+        1422,
+        800
+      ],
+      "retainedDimensions": [
+        1280,
+        720
+      ],
+      "retainedBytes": 105984,
+      "transformation": "Proportional downscale only if needed to maximum 1280 pixels; WebP quality 80; no visual content edits."
+    },
+    {
+      "listingUrl": "https://licenseplate.ae/cars/listing/10328-jetour-t2-20-amt-4wd-245-hp-traveler-plus",
+      "catalogueUrl": "https://licenseplate.ae/cars/dealer/car-4-me-fz",
+      "imageUrl": "https://licenseplate.ae/storage/listings/0/jetour-t2-20-amt-4wd-245-hp-0-1789547122.webp",
+      "observedAt": "2026-10-19",
+      "imageSourceSha256": "3ad88151dd10b7bd8f342ae0ab3e9da716825b794a3fcbb366aa3072a6ca30b3",
+      "retainedPath": "dealer-stock/stock-2.webp",
+      "retainedSha256": "a82dd494175743ccf2ac5db6cf10f9d080a4a9c76ec63247bfeafefcf64198ef",
+      "originalDimensions": [
+        1200,
+        800
+      ],
+      "retainedDimensions": [
+        1200,
+        800
+      ],
+      "retainedBytes": 155176,
+      "transformation": "Proportional downscale only if needed to maximum 1280 pixels; WebP quality 80; no visual content edits."
+    },
+    {
+      "listingUrl": "https://licenseplate.ae/cars/listing/10527-toyota-rush-15-at-104-hp-gx",
+      "catalogueUrl": "https://licenseplate.ae/cars/dealer/car-4-me-fz",
+      "imageUrl": "https://licenseplate.ae/storage/listings/0/toyota-rush-15-at-104-hp-0-1789548374.webp",
+      "observedAt": "2026-10-19",
+      "imageSourceSha256": "673be47af196ea9a78264728242d568dfb70cdd6d955557e7c5680f880cfe6d3",
+      "retainedPath": "dealer-stock/stock-3.webp",
+      "retainedSha256": "67ae8b348b93d280f25e9120b6a3ad0cf2f5dea798df66e47e97d36be9b92724",
+      "originalDimensions": [
+        888,
+        800
+      ],
+      "retainedDimensions": [
+        888,
+        800
+      ],
+      "retainedBytes": 65960,
+      "transformation": "Proportional downscale only if needed to maximum 1280 pixels; WebP quality 80; no visual content edits."
+    }
+  ],
+  "omissions": [
+    "Personal-looking or unverified emails omitted; no private contact fields retained.",
+    "Unknown official website, exact address or hours left empty; marketplace-wide defaults not imported."
+  ]
+}

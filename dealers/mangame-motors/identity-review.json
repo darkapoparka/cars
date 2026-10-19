@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T20:52:56.450363Z",
+  "dealer": "mangame-motors",
+  "dealerId": "ae-dubai-mangame-motors",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "method": "Exact retained registry and client-folder alias comparison, followed by fresh public dealer catalogue research. No existing fleet identity matched; no dealer approval is implied.",
+  "sources": [
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-mangame-motors-2875",
+      "observedAt": "2026-10-19T20:03:53.899776Z",
+      "supports": [
+        "dealer-name",
+        "dealer-attributed-listings",
+        "dealer-attributed-photos",
+        "public-business-call-line",
+        "address"
+      ]
+    }
+  ]
+}

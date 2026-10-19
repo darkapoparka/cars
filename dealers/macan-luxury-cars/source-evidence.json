@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "dealer": "macan-luxury-cars",
+  "researchId": "ae-dubai-macan-luxury-cars",
+  "observedAt": "2026-10-19T20:03:53.853587Z",
+  "liveFetchPerformed": true,
+  "businessSources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/dubai/macan-luxury-cars",
+      "observedAt": "2026-10-19T20:03:53.853587Z",
+      "supports": [
+        "dealer-name",
+        "dealer-attributed-listings",
+        "dealer-attributed-photos",
+        "public-business-call-line",
+        "address"
+      ]
+    }
+  ],
+  "stockMode": "dated-listing-snapshot",
+  "inventoryCountMeaning": "Selected currently advertised public records, not a count or confirmation of available physical stock.",
+  "media": [
+    {
+      "path": "dealer-stock/listing-4368.jpg",
+      "sourceUrl": "https://static.oneclickdrive.com/uploads/cars/Audi_A3_2021_4368_4368_2976091907-1_small.jpg",
+      "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Audi/A3/?id=4368",
+      "observedAt": "2026-10-19T20:03:53.853587Z",
+      "downloadedSha256": "919b4b0c9c71e9df88da9d4a256ea9f11652b2204fe5978994912f4931c2f7a1",
+      "downloadedDimensions": [
+        450,
+        395
+      ],
+      "sha256": "80acea35367dbada0948ad9c7c4bf38529ab022e70d543e0de07e4299957eac0",
+      "bytes": 46942,
+      "dimensions": [
+        450,
+        395
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    },
+    {
+      "path": "dealer-stock/listing-57111.jpg",
+      "sourceUrl": "https://static.oneclickdrive.com/uploads/cars/Mercedes-Benz_C43_2023_57111_57111_54228750402-1_small.jpg",
+      "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Mercedes-Benz/C43-Other/?id=57111",
+      "observedAt": "2026-10-19T20:03:53.853587Z",
+      "downloadedSha256": "722f66aec5d5b1e1863bf10c317ae016e19744c563ff0104f90d89ae588306b7",
+      "downloadedDimensions": [
+        450,
+        395
+      ],
+      "sha256": "22bcefd149ef611c71f1a8f0b62c576a06083ad3c12e4abc1d99df4fb1a054a0",
+      "bytes": 28394,
+      "dimensions": [
+        450,
+        395
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    },
+    {
+      "path": "dealer-stock/listing-44066.jpg",
+      "sourceUrl": "https://static.oneclickdrive.com/uploads/cars/Mercedes-Benz_GLC-300-4MATIC_2024_44066_44066_42433314393-1_small.jpg",
+      "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Mercedes-Benz/GLC-300-4MATIC/?id=44066",
+      "observedAt": "2026-10-19T20:03:53.853587Z",
+      "downloadedSha256": "8833d110271a135cc71cb3968e524ca53dab9c75f53b553a4c3ceb3958566b8c",
+      "downloadedDimensions": [
+        450,
+        395
+      ],
+      "sha256": "772b8c9d9b2e9dbb75181be0599f009689f038482a58d2c204cabdf05a448653",
+      "bytes": 27273,
+      "dimensions": [
+        450,
+        395
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    }
+  ],
+  "researchLimitations": [
+    "Marketplace relay numbers excluded; source catalogue provides address and published shop hours.",
+    "Phone is the dealer-attributed call link in the public vehicle card; common platform WhatsApp relay omitted.",
+    "Opening hours omitted because the platform repeats a generic schedule and independent verification is unavailable."
+  ],
+  "excludedSourceContent": [
+    "Personal names and personal or ambiguous emails",
+    "Marketplace relay numbers",
+    "Prices",
+    "Unsupported warranties, inspections, ratings and finance promises"
+  ],
+  "dealerApproval": "unknown"
+}

@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T20:48:02.976141Z",
+  "dealer": "mabuhay-motors-used-cars-trading-llc",
+  "dealerId": "ae-dubai-mabuhay-motors-used-cars-trading-llc",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "method": "Exact retained registry and client-folder alias comparison, followed by fresh public dealer catalogue research. No existing fleet identity matched; no dealer approval is implied.",
+  "sources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/dubai/mabuhay-motors-used-cars-trading-llc",
+      "observedAt": "2026-10-19T20:03:53.817943Z",
+      "supports": [
+        "dealer-name",
+        "dealer-attributed-listings",
+        "dealer-attributed-photos",
+        "public-business-call-line",
+        "address"
+      ]
+    }
+  ]
+}

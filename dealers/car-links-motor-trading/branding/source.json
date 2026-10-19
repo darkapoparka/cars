@@ -1,0 +1,191 @@
+{
+  "schemaVersion": 1,
+  "dealer": "car-links-motor-trading",
+  "publishedBranding": "retained-public-logo",
+  "sourceLogoUrl": "https://d2souf30ck18jq.cloudfront.net/car-links-motor-trading/logo-3a4a1ee4-6819-401d-86b3-c0f7b2139d8d.jpeg",
+  "creationMethod": "imagegen-faithful-redraw",
+  "approvalStatus": "independent-proposal-not-dealer-approved",
+  "dealerApproved": false,
+  "observedAt": "2026-10-19",
+  "checkedSources": [
+    "https://www.dubicars.com/dealers/dubai-car-links-motor-trading-3223",
+    "https://d2souf30ck18jq.cloudfront.net/car-links-motor-trading/logo-3a4a1ee4-6819-401d-86b3-c0f7b2139d8d.jpeg"
+  ],
+  "researchConclusion": "Faithful clean redraw retaining the name, colours and identifying motif of the public dealer logo.",
+  "originals": [
+    {
+      "path": "branding/original-logo.jpg",
+      "url": "https://d2souf30ck18jq.cloudfront.net/car-links-motor-trading/logo-3a4a1ee4-6819-401d-86b3-c0f7b2139d8d.jpeg",
+      "observedAt": "2026-10-19",
+      "sha256": "d62d9bc20cbe63674c4da781eb036959fe08c765ca699370de2e79cc72ecdfdf"
+    }
+  ],
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "generationId": "exec-967f6764-a2c3-401d-8425-b75e5dd5b361",
+    "generationIdKind": "exposed-tool-execution-output-identifier",
+    "modelVersion": null,
+    "outputReference": "branding/generated-sheet.png",
+    "outputSha256": "f280e3c4eb48334bca95ae180fa814151a93b18b7931e00f8df76c0120208d8d",
+    "prompt": "Create a faithful, substantially cleaner redraw of the attached real dealer logo. Exact main lettering: \"CARLINKS\". Exact smaller descriptor: \"MOTOR TRADING\". Distinctive identity: retain the original two crossed sculpted gold ribbons, precisely four smooth tapering limbs around generous central negative space; use deep bronze #775321 for all gold ink on the LEFT so it contrasts on white. Make an elegant professional logo, precise flat geometry and intentional custom typography; no generic clipart, no gradients, no shadows, no slogan, no mockup.\nOUTPUT: one transparent 2-column x 2-row export sheet for THIS ONE DEALER ONLY. Top row about 60% of height: complete emblem and wordmark lockup on left and matching complete inverse lockup on right. Bottom row remaining 40%: nearly square compact emblem ONLY on left, matching compact inverse emblem ONLY on right. Generous actual transparent gutters; every complete logo fits within its own cell. No separator lines or labels.\nLEFT artwork: strong dark ink #775321, with any brand accent very restrained and dark enough on white. RIGHT artwork: EVERY visible ink element including emblem and descriptor must be PURE WHITE, with no black fill and no coloured ink whatsoever, so it works on charcoal and bright red backgrounds. Preserve the same identity geometry on both sides. Do not draw background panels; open spaces and shape interiors must be genuinely transparent. Compact emblem must remain bold and identifiable at 32px, nearly square rather than a stretched wordmark. Raster output with real alpha.",
+    "sourceRasterDimensions": {
+      "width": 1536,
+      "height": 1024
+    }
+  },
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T20:50:43.949Z",
+    "master": {
+      "path": "branding/reviewed-onLight.png",
+      "sha256": "721a165d17a75be1488308c616f79da6870d6b0e250bd9c6981a9e38da57d2ef",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-967f6764-a2c3-401d-8425-b75e5dd5b361",
+        "generationIdKind": "exposed-tool-execution-output-identifier",
+        "modelVersion": null,
+        "outputReference": "branding/generated-sheet.png",
+        "outputSha256": "f280e3c4eb48334bca95ae180fa814151a93b18b7931e00f8df76c0120208d8d"
+      },
+      "export": {
+        "operation": "deterministic-artboard-cell-extraction",
+        "crop": [
+          0,
+          0,
+          768,
+          614
+        ]
+      }
+    },
+    "mark": {
+      "path": "branding/reviewed-mark.png",
+      "sha256": "def621041d18216c1d3e252d050e776890ce07057649380ccaac40d05a8fedef",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-967f6764-a2c3-401d-8425-b75e5dd5b361",
+        "generationIdKind": "exposed-tool-execution-output-identifier",
+        "modelVersion": null,
+        "outputReference": "branding/generated-sheet.png",
+        "outputSha256": "f280e3c4eb48334bca95ae180fa814151a93b18b7931e00f8df76c0120208d8d"
+      },
+      "export": {
+        "operation": "deterministic-artboard-cell-extraction",
+        "crop": [
+          0,
+          614,
+          768,
+          1024
+        ]
+      }
+    },
+    "markOnDark": {
+      "path": "branding/reviewed-markOnDark.png",
+      "sha256": "d12d1b322872b24eed27869f8717e14ac31a7f5f71eba1607f3ff3c2f9ad9459",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-967f6764-a2c3-401d-8425-b75e5dd5b361",
+        "generationIdKind": "exposed-tool-execution-output-identifier",
+        "modelVersion": null,
+        "outputReference": "branding/generated-sheet.png",
+        "outputSha256": "f280e3c4eb48334bca95ae180fa814151a93b18b7931e00f8df76c0120208d8d"
+      },
+      "export": {
+        "operation": "deterministic-artboard-cell-extraction",
+        "crop": [
+          768,
+          614,
+          1536,
+          1024
+        ]
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/reviewed-onLight.png",
+        "sha256": "721a165d17a75be1488308c616f79da6870d6b0e250bd9c6981a9e38da57d2ef",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-967f6764-a2c3-401d-8425-b75e5dd5b361",
+          "generationIdKind": "exposed-tool-execution-output-identifier",
+          "modelVersion": null,
+          "outputReference": "branding/generated-sheet.png",
+          "outputSha256": "f280e3c4eb48334bca95ae180fa814151a93b18b7931e00f8df76c0120208d8d"
+        },
+        "export": {
+          "operation": "deterministic-artboard-cell-extraction",
+          "crop": [
+            0,
+            0,
+            768,
+            614
+          ]
+        }
+      },
+      "onDark": {
+        "path": "branding/reviewed-onDark.png",
+        "sha256": "ac0e3703157b481323d859ef9585a42525fda627958f5dff0bd490ad0b540d2d",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-967f6764-a2c3-401d-8425-b75e5dd5b361",
+          "generationIdKind": "exposed-tool-execution-output-identifier",
+          "modelVersion": null,
+          "outputReference": "branding/generated-sheet.png",
+          "outputSha256": "f280e3c4eb48334bca95ae180fa814151a93b18b7931e00f8df76c0120208d8d"
+        },
+        "export": {
+          "operation": "deterministic-artboard-cell-extraction",
+          "crop": [
+            768,
+            0,
+            1536,
+            614
+          ]
+        }
+      },
+      "onAccent": {
+        "path": "branding/reviewed-onDark.png",
+        "sha256": "ac0e3703157b481323d859ef9585a42525fda627958f5dff0bd490ad0b540d2d",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-967f6764-a2c3-401d-8425-b75e5dd5b361",
+          "generationIdKind": "exposed-tool-execution-output-identifier",
+          "modelVersion": null,
+          "outputReference": "branding/generated-sheet.png",
+          "outputSha256": "f280e3c4eb48334bca95ae180fa814151a93b18b7931e00f8df76c0120208d8d"
+        },
+        "export": {
+          "operation": "deterministic-artboard-cell-extraction",
+          "crop": [
+            768,
+            0,
+            1536,
+            614
+          ]
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#101820",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "notes": "Exact generated raster reviewed on light, charcoal and accent surfaces with actual alpha; original spelling retained. Pure-white inverse provides contrast without modifying template palettes."
+    },
+    "compactMarkStatus": "independent-proposal-not-dealer-approved",
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T20:50:43.949Z",
+      "widths": [
+        32,
+        64
+      ],
+      "notes": "Compact emblem independently composed for 32/64 px use; long descriptor omitted from favicon."
+    }
+  },
+  "usageStatus": "public-preview-only"
+}

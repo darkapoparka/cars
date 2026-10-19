@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "dealer": "best-wheels-specialized-vehicles",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "best-wheels-specialize-stock-1",
+      "title": "2024 Mazda CX-3",
+      "make": "Mazda",
+      "model": "CX-3",
+      "year": 2024,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/stock-1.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/1421-mazda-cx-3-20-at-121-hp-gs",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Crossover",
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "mileageValue": 39181,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "best-wheels-specialize-stock-2",
+      "title": "2024 Toyota Corolla",
+      "make": "Toyota",
+      "model": "Corolla",
+      "year": 2024,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/stock-2.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/1419-toyota-corolla-16-cvt-132-hp-xli",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Sedan",
+      "transmission": "CVT",
+      "fuel": "Petrol",
+      "mileageValue": 42000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "best-wheels-specialize-stock-3",
+      "title": "2020 Toyota Yaris",
+      "make": "Toyota",
+      "model": "Yaris",
+      "year": 2020,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/stock-3.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/1657-toyota-yaris-15-cvt-105-hp-se",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Sedan",
+      "transmission": "CVT",
+      "fuel": "Petrol",
+      "mileageValue": 88200,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

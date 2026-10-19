@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T20:25:15.688Z",
+  "dealer": "best-wheels-specialized-vehicles",
+  "dealerId": "ae-dubai-best-wheels-specialized-vehicles",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "method": "Exact retained registry and compact-pack identity comparison; no dealer approval is implied.",
+  "sources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/best-wheels-specialized-vehicles",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/1421-mazda-cx-3-20-at-121-hp-gs",
+      "observedAt": "2026-10-19"
+    }
+  ]
+}

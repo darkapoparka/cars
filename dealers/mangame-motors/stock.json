@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "mangame-motors",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:03:53.899776Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "listing-1012639",
+      "title": "2025 Audi Q5 45 TFSI SPORTBACK S-LINE",
+      "make": "Audi",
+      "model": "Q5",
+      "year": 2025,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-1012639.jpg"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2025-audi-q5-fully-loaded-original-paint-no-accident-2-keys-completely-service-with-service-contract-with-agency-1012639.html",
+      "observedAt": "2026-10-19T20:03:53.899776Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 10000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-1014260",
+      "title": "2025 Land Rover Range Rover Sport DYNAMIC SE P530",
+      "make": "Land Rover",
+      "model": "Range Rover Sport",
+      "year": 2025,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-1014260.jpg"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2025-land-rover-range-rover-sport-fully-loaded-low-mileage-completely-serviced-and-ready-to-go-1014260.html",
+      "observedAt": "2026-10-19T20:03:53.899776Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 14500,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-1012503",
+      "title": "2023 Land Rover Range Rover HSE",
+      "make": "Land Rover",
+      "model": "Range Rover",
+      "year": 2023,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-1012503.jpg"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2023-land-rover-range-rover-clean-title-2keys-original-paint-with-heads-up-display-completely-service-and-ready-to-go-1012503.html",
+      "observedAt": "2026-10-19T20:03:53.899776Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 35000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

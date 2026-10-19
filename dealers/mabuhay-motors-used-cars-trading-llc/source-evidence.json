@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "dealer": "mabuhay-motors-used-cars-trading-llc",
+  "researchId": "ae-dubai-mabuhay-motors-used-cars-trading-llc",
+  "observedAt": "2026-10-19T20:03:53.817943Z",
+  "liveFetchPerformed": true,
+  "businessSources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/dubai/mabuhay-motors-used-cars-trading-llc",
+      "observedAt": "2026-10-19T20:03:53.817943Z",
+      "supports": [
+        "dealer-name",
+        "dealer-attributed-listings",
+        "dealer-attributed-photos",
+        "public-business-call-line",
+        "address"
+      ]
+    }
+  ],
+  "stockMode": "dated-listing-snapshot",
+  "inventoryCountMeaning": "Selected currently advertised public records, not a count or confirmation of available physical stock.",
+  "media": [
+    {
+      "path": "dealer-stock/listing-8539.jpg",
+      "sourceUrl": "https://static.oneclickdrive.com/uploads/cars/Toyota_Raize_2022_8539_8539_5571867257-13_small.jpg",
+      "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Toyota/Raize-TURBO-G/?id=8539",
+      "observedAt": "2026-10-19T20:03:53.817943Z",
+      "downloadedSha256": "f8669f315a4cbb3b09f67900fc4ea19f2a39e6422cca007838a364a5502b6a83",
+      "downloadedDimensions": [
+        450,
+        395
+      ],
+      "sha256": "00e36699b9502ffc529359b41a4e9d8b2f1274e456d4f8c2c2ba7a3fb4ffbd19",
+      "bytes": 41302,
+      "dimensions": [
+        450,
+        395
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    },
+    {
+      "path": "dealer-stock/listing-8540.jpg",
+      "sourceUrl": "https://static.oneclickdrive.com/uploads/cars/Fengon-580-2023_8540_748488495192-14_small.jpg",
+      "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Fengon/580-Other/?id=8540",
+      "observedAt": "2026-10-19T20:03:53.817943Z",
+      "downloadedSha256": "10c1903d6d5f8fc0b6e55315a3431d159315c662bb207364fd335362b2f72c6e",
+      "downloadedDimensions": [
+        450,
+        395
+      ],
+      "sha256": "11b68bbb946bb08d01c60be28dbc2e9c672c5c3c88f6113f90cc28e93c1a7c74",
+      "bytes": 43123,
+      "dimensions": [
+        450,
+        395
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    },
+    {
+      "path": "dealer-stock/listing-8541.jpg",
+      "sourceUrl": "https://static.oneclickdrive.com/uploads/cars/Toyota_Fortuner_2020_8541_8541_5574444230-13_small.jpg",
+      "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Toyota/Fortuner-EXR/?id=8541",
+      "observedAt": "2026-10-19T20:03:53.817943Z",
+      "downloadedSha256": "414782a5b9db2e378cfab8f00df4edcdaa52abd97dc48030628c803c6a22a66d",
+      "downloadedDimensions": [
+        450,
+        395
+      ],
+      "sha256": "5c32a734e9f66e340f4cc418b283f64cbca2dd632576f90f07eec7ce0e799ae5",
+      "bytes": 40919,
+      "dimensions": [
+        450,
+        395
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    }
+  ],
+  "researchLimitations": [
+    "Marketplace relay numbers excluded; source catalogue provides address and published shop hours.",
+    "Phone is the dealer-attributed call link in the public vehicle card; common platform WhatsApp relay omitted.",
+    "Opening hours omitted because the platform repeats a generic schedule and independent verification is unavailable."
+  ],
+  "excludedSourceContent": [
+    "Personal names and personal or ambiguous emails",
+    "Marketplace relay numbers",
+    "Prices",
+    "Unsupported warranties, inspections, ratings and finance promises"
+  ],
+  "dealerApproval": "unknown"
+}

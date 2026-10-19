@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "dealer": "mangame-motors",
+  "researchId": "ae-dubai-mangame-motors",
+  "observedAt": "2026-10-19T20:03:53.899776Z",
+  "liveFetchPerformed": true,
+  "businessSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-mangame-motors-2875",
+      "observedAt": "2026-10-19T20:03:53.899776Z",
+      "supports": [
+        "dealer-name",
+        "dealer-attributed-listings",
+        "dealer-attributed-photos",
+        "public-business-call-line",
+        "address"
+      ]
+    }
+  ],
+  "stockMode": "dated-listing-snapshot",
+  "inventoryCountMeaning": "Selected currently advertised public records, not a count or confirmation of available physical stock.",
+  "media": [
+    {
+      "path": "dealer-stock/listing-1012639.jpg",
+      "sourceUrl": "https://www.dubicars.com/images/061127/650x380/mangame-motors/1d49015f-7856-4efe-9311-ebab5dc5400e.jpeg",
+      "listingUrl": "https://www.dubicars.com/2025-audi-q5-fully-loaded-original-paint-no-accident-2-keys-completely-service-with-service-contract-with-agency-1012639.html",
+      "observedAt": "2026-10-19T20:03:53.899776Z",
+      "downloadedSha256": "5b56119b5f6d01dc1f8ccce40f95a281d10d9b3056fc116c12bb593d652415f0",
+      "downloadedDimensions": [
+        650,
+        434
+      ],
+      "sha256": "0d9502431f3938f5b8ab2b1e178d00d7c099b9b04d9c14c046b1a5812d85262f",
+      "bytes": 60560,
+      "dimensions": [
+        650,
+        434
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    },
+    {
+      "path": "dealer-stock/listing-1014260.jpg",
+      "sourceUrl": "https://www.dubicars.com/images/6347f7/650x380/mangame-motors/adf97aa2-5ebc-4200-adaf-902348c81b17.jpeg",
+      "listingUrl": "https://www.dubicars.com/2025-land-rover-range-rover-sport-fully-loaded-low-mileage-completely-serviced-and-ready-to-go-1014260.html",
+      "observedAt": "2026-10-19T20:03:53.899776Z",
+      "downloadedSha256": "595abe1d893950fdacfa4a9d9ff6385bf6c67298aba5f6ef494fe23112e01123",
+      "downloadedDimensions": [
+        650,
+        434
+      ],
+      "sha256": "d4b5518604fbd3681625aa51d1107e0a62070864087e65a9e435510adc6c5ec4",
+      "bytes": 75565,
+      "dimensions": [
+        650,
+        434
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    },
+    {
+      "path": "dealer-stock/listing-1012503.jpg",
+      "sourceUrl": "https://www.dubicars.com/images/596832/650x380/mangame-motors/f4029b3c-8cbe-4404-a49a-d0aa7f3ae266.jpeg",
+      "listingUrl": "https://www.dubicars.com/2023-land-rover-range-rover-clean-title-2keys-original-paint-with-heads-up-display-completely-service-and-ready-to-go-1012503.html",
+      "observedAt": "2026-10-19T20:03:53.899776Z",
+      "downloadedSha256": "36360193e3f73a55b4c9e104c249bd362750bd08d69056791e5fadaad06c6727",
+      "downloadedDimensions": [
+        650,
+        434
+      ],
+      "sha256": "93029c922cdc8270dacf25750f023f3f98f64425aabb104a3da428dd0ff7c90f",
+      "bytes": 67945,
+      "dimensions": [
+        650,
+        434
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    }
+  ],
+  "researchLimitations": [
+    "Email omitted: source address appears personal, ambiguous, or malformed."
+  ],
+  "excludedSourceContent": [
+    "Personal names and personal or ambiguous emails",
+    "Marketplace relay numbers",
+    "Prices",
+    "Unsupported warranties, inspections, ratings and finance promises"
+  ],
+  "dealerApproval": "unknown"
+}

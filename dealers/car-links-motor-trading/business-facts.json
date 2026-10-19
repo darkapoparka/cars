@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "slug": "car-links-motor-trading",
+  "dealerId": "ae-dubai-car-links-motor-trading",
+  "business": {
+    "name": "Car Links Motor Trading",
+    "city": "Dubai",
+    "region": "Dubai",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "",
+    "phone": "+97143458909",
+    "phoneDisplay": "+97143458909",
+    "email": "Carlinks@carlinksmotor.com",
+    "website": "",
+    "stockUrl": "https://www.dubicars.com/dealers/dubai-car-links-motor-trading-3223",
+    "hours": "",
+    "sourceUrl": "https://www.dubicars.com/dealers/dubai-car-links-motor-trading-3223",
+    "observedAt": "2026-10-19",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-car-links-motor-trading-3223",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-car-links-motor-trading-3223",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "business-name",
+        "public-dealer-contact",
+        "public-location-if-shown",
+        "dated-stock-sample",
+        "public-business-email"
+      ]
+    }
+  ]
+}

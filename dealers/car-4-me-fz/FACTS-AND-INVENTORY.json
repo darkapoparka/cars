@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "dealer": "car-4-me-fz",
+  "businessFacts": "business-facts.json",
+  "stock": "stock.json",
+  "inventoryKind": "dated-listing-snapshot",
+  "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+  "sources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/car-4-me-fz",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/10298-lexus-es-25-cvt-218-hp-es-300h-platinum",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ]
+}

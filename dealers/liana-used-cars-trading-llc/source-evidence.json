@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "dealer": "liana-used-cars-trading-llc",
+  "researchId": "ae-dubai-liana-used-cars-trading-llc",
+  "observedAt": "2026-10-19T20:03:53.765432Z",
+  "liveFetchPerformed": true,
+  "businessSources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/dubai/liana-used-cars-trading-llc",
+      "observedAt": "2026-10-19T20:03:53.765432Z",
+      "supports": [
+        "dealer-name",
+        "dealer-attributed-listings",
+        "dealer-attributed-photos",
+        "public-business-call-line"
+      ]
+    }
+  ],
+  "stockMode": "dated-listing-snapshot",
+  "inventoryCountMeaning": "Selected currently advertised public records, not a count or confirmation of available physical stock.",
+  "media": [
+    {
+      "path": "dealer-stock/listing-245022.jpg",
+      "sourceUrl": "https://static.oneclickdrive.com/uploads/cars/Porsche_911-Carrera_2023_245022_245022_953033871273-5_small.jpg",
+      "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Porsche/911-Carrera-Turbo-S/?id=245022",
+      "observedAt": "2026-10-19T20:03:53.765432Z",
+      "downloadedSha256": "4ec81b72eb46084f4a87e0eca63e55c32f5473c1701e4fed324d34cf0e8019b0",
+      "downloadedDimensions": [
+        450,
+        395
+      ],
+      "sha256": "5df51e37330a0316c30189f39f707d6037123f823bf6f44d7cdc084d19c9e14c",
+      "bytes": 61959,
+      "dimensions": [
+        450,
+        395
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    },
+    {
+      "path": "dealer-stock/listing-245021.jpg",
+      "sourceUrl": "https://static.oneclickdrive.com/uploads/cars/Nissan_Rogue_2022_245021_245021_95303255703-5_small.jpg",
+      "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Nissan/Rogue-Sport-/?id=245021",
+      "observedAt": "2026-10-19T20:03:53.765432Z",
+      "downloadedSha256": "c552af4c1949c27012b2a4c71210f7bece987bf3440a816d7d7e296b02a5cacf",
+      "downloadedDimensions": [
+        450,
+        395
+      ],
+      "sha256": "7fb1e5c2576bcdb16e8c96a2879ffeb4d4e7d54355d720ea2fb8b6f958cad359",
+      "bytes": 45388,
+      "dimensions": [
+        450,
+        395
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    },
+    {
+      "path": "dealer-stock/listing-245020.jpg",
+      "sourceUrl": "https://static.oneclickdrive.com/uploads/cars/Audi_S6_RS6_2018_245020_245020_95303096311-5_small.jpg",
+      "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Audi/RS6-/?id=245020",
+      "observedAt": "2026-10-19T20:03:53.765432Z",
+      "downloadedSha256": "50d54cfc97a2f795f156af804c8f1c54c1ab9097b8efdf06ec275d4140c34d18",
+      "downloadedDimensions": [
+        450,
+        395
+      ],
+      "sha256": "6dc2be0d493a60cde6c792560ddd4c6bb6e2b3d2ad7035e33eb3edb17b6abd0a",
+      "bytes": 61752,
+      "dimensions": [
+        450,
+        395
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    }
+  ],
+  "researchLimitations": [
+    "Marketplace relay numbers excluded; source catalogue provides address and published shop hours.",
+    "Phone is the dealer-attributed call link in the public vehicle card; common platform WhatsApp relay omitted.",
+    "Opening hours omitted because the platform repeats a generic schedule and independent verification is unavailable.",
+    "Exact address omitted: marketplace address names a different business (Chrome Automobiles Trading)."
+  ],
+  "excludedSourceContent": [
+    "Personal names and personal or ambiguous emails",
+    "Marketplace relay numbers",
+    "Prices",
+    "Unsupported warranties, inspections, ratings and finance promises"
+  ],
+  "dealerApproval": "unknown"
+}

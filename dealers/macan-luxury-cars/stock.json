@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "dealer": "macan-luxury-cars",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:03:53.853587Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "listing-4368",
+      "title": "2021 Audi A3",
+      "make": "Audi",
+      "model": "A3",
+      "year": 2021,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-4368.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Audi/A3/?id=4368",
+      "observedAt": "2026-10-19T20:03:53.853587Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Sedan",
+      "transmission": "Auto",
+      "fuel": "Petrol",
+      "color": "Black",
+      "mileageValue": 45000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-57111",
+      "title": "2023 Mercedes Benz C43 Other",
+      "make": "Mercedes Benz",
+      "model": "C43 Other",
+      "year": 2023,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-57111.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Mercedes-Benz/C43-Other/?id=57111",
+      "observedAt": "2026-10-19T20:03:53.853587Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Sedan",
+      "transmission": "Auto",
+      "fuel": "Petrol",
+      "color": "Black",
+      "mileageValue": 27800,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-44066",
+      "title": "2024 Mercedes Benz GLC 300 4MATIC",
+      "make": "Mercedes Benz",
+      "model": "GLC 300 4MATIC",
+      "year": 2024,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-44066.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Mercedes-Benz/GLC-300-4MATIC/?id=44066",
+      "observedAt": "2026-10-19T20:03:53.853587Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "SUV",
+      "transmission": "Auto",
+      "fuel": "Petrol",
+      "color": "Gray",
+      "mileageValue": 19000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

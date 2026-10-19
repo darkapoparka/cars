@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "car-nation-dubai",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "car-nation-dubai-stock-1",
+      "title": "2023 Toyota Corolla",
+      "make": "Toyota",
+      "model": "Corolla",
+      "year": 2023,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/stock-1.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2023-toyota-corolla-2023-toyota-corolla-16-xli-1025498.html",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 41000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "car-nation-dubai-stock-2",
+      "title": "2018 Nissan Altima",
+      "make": "Nissan",
+      "model": "Altima",
+      "year": 2018,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/stock-2.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2018-nissan-altima-1032064.html",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 145000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "car-nation-dubai-stock-3",
+      "title": "2005 Gmc Envoy",
+      "make": "Gmc",
+      "model": "Envoy",
+      "year": 2005,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/stock-3.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2005-gmc-envoy-2005-gmc-envoy-v6-1032067.html",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 290000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

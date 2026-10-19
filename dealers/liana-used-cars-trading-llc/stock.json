@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "dealer": "liana-used-cars-trading-llc",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:03:53.765432Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "listing-245022",
+      "title": "2023 Porsche 911 Carrera Turbo S",
+      "make": "Porsche",
+      "model": "911 Carrera Turbo S",
+      "year": 2023,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-245022.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Porsche/911-Carrera-Turbo-S/?id=245022",
+      "observedAt": "2026-10-19T20:03:53.765432Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Luxury Car",
+      "fuel": "Petrol",
+      "mileageValue": 21700,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-245021",
+      "title": "2022 Nissan Rogue Sport",
+      "make": "Nissan",
+      "model": "Rogue Sport",
+      "year": 2022,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-245021.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Nissan/Rogue-Sport-/?id=245021",
+      "observedAt": "2026-10-19T20:03:53.765432Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "SUV",
+      "fuel": "Petrol",
+      "mileageValue": 74000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-245020",
+      "title": "2018 Audi RS6",
+      "make": "Audi",
+      "model": "RS6",
+      "year": 2018,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-245020.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Audi/RS6-/?id=245020",
+      "observedAt": "2026-10-19T20:03:53.765432Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Sedan",
+      "fuel": "Petrol",
+      "mileageValue": 55000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

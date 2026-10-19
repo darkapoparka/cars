@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "slug": "car-4-me-fz",
+  "dealerId": "ae-dubai-car-4-me-fz",
+  "business": {
+    "name": "Car 4 Me FZ",
+    "city": "Dubai",
+    "region": "Dubai",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "Sheikh Zayed Road, Dubai, UAE",
+    "phone": "+971525486463",
+    "phoneDisplay": "+971525486463",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://licenseplate.ae/cars/dealer/car-4-me-fz",
+    "hours": "",
+    "sourceUrl": "https://licenseplate.ae/cars/dealer/car-4-me-fz",
+    "observedAt": "2026-10-19",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/car-4-me-fz",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/10298-lexus-es-25-cvt-218-hp-es-300h-platinum",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/dealer/car-4-me-fz",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "business-name",
+        "public-dealer-contact",
+        "public-location-if-shown",
+        "dated-stock-sample"
+      ]
+    }
+  ]
+}

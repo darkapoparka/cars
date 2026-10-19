@@ -1,0 +1,287 @@
+{
+  "schemaVersion": 1,
+  "dealer": "macan-luxury-cars",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T20:52:47.123510Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "sourced-logo-imagegen-redraw",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "59f712706b5ef8afe51ca1d5a7a1b1c3314ba602ed326dc798c9ce2346e73ef5",
+      "sourceSha256": "d318016e1f728a5c9d2265abe12eccc6e17f75cb6fd5db8c58a82419066134f9"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "65963236ee8a062f3b3011b736088f6f20a5736916be50747eec07c565ca1c9b",
+      "sourceSha256": "bdb1265b4a16fcdd39a01d43675b76fee8876d9c6e82aef5380b231793001892"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "65963236ee8a062f3b3011b736088f6f20a5736916be50747eec07c565ca1c9b",
+      "sourceSha256": "bdb1265b4a16fcdd39a01d43675b76fee8876d9c6e82aef5380b231793001892"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "d318016e1f728a5c9d2265abe12eccc6e17f75cb6fd5db8c58a82419066134f9",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-861a167a-afbc-47db-b99e-668f39da78ca",
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "dc02d24f390c0776687550080f174d0eb2f7694077eec96c1b2ae88e045a175c",
+      "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+      "crop": [
+        0,
+        532,
+        887,
+        887
+      ]
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "e38cdd8513117efd2caf99cba999d6b8e5400704f30f2620644a91e1eb0a02c1",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-861a167a-afbc-47db-b99e-668f39da78ca",
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "dc02d24f390c0776687550080f174d0eb2f7694077eec96c1b2ae88e045a175c",
+      "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+      "crop": [
+        0,
+        0,
+        887,
+        532
+      ]
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "975b98a4c18f8d7c8f33708292f9b4ff65f41d3eb0c594561ec7f1931a7c362c"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "d318016e1f728a5c9d2265abe12eccc6e17f75cb6fd5db8c58a82419066134f9",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-861a167a-afbc-47db-b99e-668f39da78ca",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "dc02d24f390c0776687550080f174d0eb2f7694077eec96c1b2ae88e045a175c",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          532,
+          887,
+          887
+        ]
+      },
+      "sourceReference": "dealers/macan-luxury-cars/branding/generated-onLight.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "bdb1265b4a16fcdd39a01d43675b76fee8876d9c6e82aef5380b231793001892",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-861a167a-afbc-47db-b99e-668f39da78ca",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "dc02d24f390c0776687550080f174d0eb2f7694077eec96c1b2ae88e045a175c",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          887,
+          532,
+          1774,
+          887
+        ]
+      },
+      "sourceReference": "dealers/macan-luxury-cars/branding/generated-onDark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "bdb1265b4a16fcdd39a01d43675b76fee8876d9c6e82aef5380b231793001892",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-861a167a-afbc-47db-b99e-668f39da78ca",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "dc02d24f390c0776687550080f174d0eb2f7694077eec96c1b2ae88e045a175c",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          887,
+          532,
+          1774,
+          887
+        ]
+      },
+      "sourceReference": "dealers/macan-luxury-cars/branding/generated-onDark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "d47c4f69295d4f7d79c19d406be59c58d61be3e649371f94d918a88e47ea696f",
+      "sha256": "d318016e1f728a5c9d2265abe12eccc6e17f75cb6fd5db8c58a82419066134f9",
+      "crop": {
+        "left": 39,
+        "top": 30,
+        "width": 821,
+        "height": 186
+      },
+      "sourcePath": "branding/generated-onLight.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "be3490b80c22aea27601e77eb10462c815a549ce1f180c49b5345f98c32031b2",
+      "sha256": "bdb1265b4a16fcdd39a01d43675b76fee8876d9c6e82aef5380b231793001892",
+      "crop": {
+        "left": 32,
+        "top": 30,
+        "width": 818,
+        "height": 187
+      },
+      "sourcePath": "branding/generated-onDark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "be3490b80c22aea27601e77eb10462c815a549ce1f180c49b5345f98c32031b2",
+      "sha256": "bdb1265b4a16fcdd39a01d43675b76fee8876d9c6e82aef5380b231793001892",
+      "crop": {
+        "left": 32,
+        "top": 30,
+        "width": 818,
+        "height": 187
+      },
+      "sourcePath": "branding/generated-onDark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "beae555eea46c13f8b7d74eedacabb9f88c3218bcb3fe1bcb54bd9518c2425eb",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-861a167a-afbc-47db-b99e-668f39da78ca",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "dc02d24f390c0776687550080f174d0eb2f7694077eec96c1b2ae88e045a175c",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          0,
+          887,
+          532
+        ]
+      },
+      "sourceReference": "dealers/macan-luxury-cars/branding/generated-mark.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "bbd566a5057b96d3baf36fdd1f31c83fec2414fe4b038c1909e6a1e059ae81d4",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-861a167a-afbc-47db-b99e-668f39da78ca",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "dc02d24f390c0776687550080f174d0eb2f7694077eec96c1b2ae88e045a175c",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          887,
+          0,
+          1774,
+          532
+        ]
+      },
+      "sourceReference": "dealers/macan-luxury-cars/branding/generated-markOnDark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "e38cdd8513117efd2caf99cba999d6b8e5400704f30f2620644a91e1eb0a02c1",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-861a167a-afbc-47db-b99e-668f39da78ca",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "dc02d24f390c0776687550080f174d0eb2f7694077eec96c1b2ae88e045a175c",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          0,
+          887,
+          532
+        ]
+      },
+      "sourceReference": "dealers/macan-luxury-cars/branding/generated-mark.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "975b98a4c18f8d7c8f33708292f9b4ff65f41d3eb0c594561ec7f1931a7c362c",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-861a167a-afbc-47db-b99e-668f39da78ca",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "dc02d24f390c0776687550080f174d0eb2f7694077eec96c1b2ae88e045a175c",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          0,
+          887,
+          532
+        ]
+      },
+      "sourceReference": "dealers/macan-luxury-cars/branding/generated-mark.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T20:52:47.123510Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "3b0458c869eb92fb0aaa8f8ab933cfccc8a38f9247d2e3b733c7ddd7d8bcf5fa",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-861a167a-afbc-47db-b99e-668f39da78ca",
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "dc02d24f390c0776687550080f174d0eb2f7694077eec96c1b2ae88e045a175c",
+      "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+      "crop": [
+        887,
+        0,
+        1774,
+        532
+      ]
+    }
+  }
+}
