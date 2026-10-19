@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "dealer": "union-used-car-exhibition-llc",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T19:58:51.772384Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "ocd-138010",
+      "title": "Chevrolet Silverado 2020",
+      "make": "Chevrolet",
+      "model": "Silverado",
+      "year": 2020,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/ocd-138010.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Chevrolet/Silverado/?id=138010",
+      "observedAt": "2026-10-19T19:58:51.772384Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "SUV",
+      "transmission": "Auto",
+      "fuel": "Petrol",
+      "color": "Brown",
+      "mileageValue": 90000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "ocd-138001",
+      "title": "Chevrolet Tahoe LT 2013",
+      "make": "Chevrolet",
+      "model": "Tahoe LT",
+      "year": 2013,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/ocd-138001.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Chevrolet/Tahoe-LT/?id=138001",
+      "observedAt": "2026-10-19T19:58:51.772384Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "SUV",
+      "transmission": "Auto",
+      "fuel": "Petrol",
+      "color": "White",
+      "mileageValue": 243000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "ocd-138011",
+      "title": "Nissan Patrol SE Platinum 2020",
+      "make": "Nissan",
+      "model": "Patrol SE Platinum",
+      "year": 2020,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/ocd-138011.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Nissan/Patrol-SE-Platinum/?id=138011",
+      "observedAt": "2026-10-19T19:58:51.772384Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "SUV",
+      "transmission": "Auto",
+      "fuel": "Petrol",
+      "color": "Gray",
+      "mileageValue": 129000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

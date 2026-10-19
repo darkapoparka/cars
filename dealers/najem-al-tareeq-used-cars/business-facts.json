@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "slug": "najem-al-tareeq-used-cars",
+  "dealerId": "ae-sharjah-najem-al-tareeq-used-cars",
+  "business": {
+    "name": "Najem Al Tareeq Used Cars",
+    "city": "Sharjah",
+    "region": "Sharjah",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "Najem Al Tareeq Used Cars, Souq Al Haraj Phase 2 - Showroom - 310 - Al Ruqa Al Hamra - Sharjah - United Arab Emirates",
+    "phone": "+971551563622",
+    "phoneDisplay": "+971551563622",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://auto.ae/najemaltareeq/",
+    "hours": "Monday–Sunday 09:00–21:00",
+    "sourceUrl": "https://auto.ae/najemaltareeq/",
+    "observedAt": "2026-10-19T20:00:42.619778Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://auto.ae/najemaltareeq/",
+      "observedAt": "2026-10-19T20:00:42.619778Z",
+      "supports": [
+        "public-business-trading-name",
+        "dealer-attributed-catalogue",
+        "business-location",
+        "public-business-phone",
+        "public-business-hours"
+      ]
+    },
+    {
+      "url": "https://auto.ae/sharjah/sale/car/mitsubishi/mitsubishi-pajero-iv-facelift-1-2014/id/226974/",
+      "observedAt": "2026-10-19T20:00:42.619778Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://auto.ae/sharjah/sale/car/kia/kia-optima-iv-2018/id/226972/",
+      "observedAt": "2026-10-19T20:00:42.619778Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://auto.ae/sharjah/sale/car/gmc/gmc-yukon-iv-gmt-k2ug-2015/id/226968/",
+      "observedAt": "2026-10-19T20:00:42.619778Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    }
+  ]
+}

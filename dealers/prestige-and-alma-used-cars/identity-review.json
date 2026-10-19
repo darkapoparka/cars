@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T20:27:28.885Z",
+  "dealer": "prestige-and-alma-used-cars",
+  "dealerId": "ae-sharjah-prestige-and-alma-used-cars",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "method": "Exact retained registry and compact-pack identity comparison plus public marketplace name, location and branding review. Public catalogue is seller-attributed; no dealer approval implied.",
+  "sources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/sharjah/prestige-and-alma-used-cars",
+      "observedAt": "2026-10-19T19:58:50.364391Z",
+      "supports": [
+        "public-business-trading-name",
+        "dealer-attributed-catalogue",
+        "business-location",
+        "public-business-phone"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Maserati/Levante-S/?id=31040",
+      "observedAt": "2026-10-19T19:58:50.364391Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Mini/Cooper-Cooper-S-JCW/?id=31098",
+      "observedAt": "2026-10-19T19:58:50.364391Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Jetour/Dashing-1.6T-Luxury/?id=31035",
+      "observedAt": "2026-10-19T19:58:50.364391Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    }
+  ]
+}

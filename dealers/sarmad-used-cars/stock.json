@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "dealer": "sarmad-used-cars",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T19:58:51.936383Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "ocd-917821",
+      "title": "Lexus IS-Series 2010",
+      "make": "Lexus",
+      "model": "IS-Series",
+      "year": 2010,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/ocd-917821.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Lexus/IS-Series/?id=917821",
+      "observedAt": "2026-10-19T19:58:51.936383Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Sedan",
+      "transmission": "Auto",
+      "fuel": "Petrol",
+      "color": "Silver",
+      "mileageValue": 288000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "ocd-875861",
+      "title": "Chevrolet Silverado 1500 LT 2018",
+      "make": "Chevrolet",
+      "model": "Silverado 1500 LT",
+      "year": 2018,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/ocd-875861.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Chevrolet/Silverado-1500-LT/?id=875861",
+      "observedAt": "2026-10-19T19:58:51.936383Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Pickup Truck",
+      "transmission": "Auto",
+      "fuel": "Petrol",
+      "color": "Black",
+      "mileageValue": 195000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "ocd-875873",
+      "title": "Skoda Kodiaq 2018",
+      "make": "Skoda",
+      "model": "Kodiaq",
+      "year": 2018,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/ocd-875873.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Skoda/Kodiaq/?id=875873",
+      "observedAt": "2026-10-19T19:58:51.936383Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "SUV",
+      "transmission": "Auto",
+      "fuel": "Petrol",
+      "color": "Black",
+      "mileageValue": 100000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

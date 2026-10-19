@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "dealer": "najem-al-tareeq-used-cars",
+  "businessFacts": "business-facts.json",
+  "stock": "stock.json",
+  "inventoryKind": "dated-listing-snapshot",
+  "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+  "sources": [
+    {
+      "url": "https://auto.ae/najemaltareeq/",
+      "observedAt": "2026-10-19T20:00:42.619778Z",
+      "supports": [
+        "public-business-trading-name",
+        "dealer-attributed-catalogue",
+        "business-location",
+        "public-business-phone",
+        "public-business-hours"
+      ]
+    },
+    {
+      "url": "https://auto.ae/sharjah/sale/car/mitsubishi/mitsubishi-pajero-iv-facelift-1-2014/id/226974/",
+      "observedAt": "2026-10-19T20:00:42.619778Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://auto.ae/sharjah/sale/car/kia/kia-optima-iv-2018/id/226972/",
+      "observedAt": "2026-10-19T20:00:42.619778Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://auto.ae/sharjah/sale/car/gmc/gmc-yukon-iv-gmt-k2ug-2015/id/226968/",
+      "observedAt": "2026-10-19T20:00:42.619778Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    }
+  ]
+}

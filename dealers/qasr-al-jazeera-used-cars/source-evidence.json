@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "dealer": "qasr-al-jazeera-used-cars",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/sharjah/qasr-al-jazeera-used-cars",
+      "observedAt": "2026-10-19T19:58:50.508391Z",
+      "supports": [
+        "public-business-trading-name",
+        "dealer-attributed-catalogue",
+        "business-location",
+        "public-business-phone"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Hyundai/Sonata-Limited/?id=131291",
+      "observedAt": "2026-10-19T19:58:50.508391Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Kia/Optima-EX-Top/?id=131277",
+      "observedAt": "2026-10-19T19:58:50.508391Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Nissan/Sentra-SV/?id=131282",
+      "observedAt": "2026-10-19T19:58:50.508391Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "research": {
+    "observedAt": "2026-10-19T19:58:50.508391Z",
+    "profileUrl": "https://www.oneclickdrive.com/company/sharjah/qasr-al-jazeera-used-cars",
+    "profileSha256": "2dbdb9c738929826921b35d07e324feff711c329e325107a7235479029e3baa4",
+    "classification": "public-marketplace-dealer-profile-and-listing-snapshot",
+    "directDealerPostingVerified": false,
+    "profileClaimed": false,
+    "limitation": "Seller attribution comes from the public marketplace profile. Current physical availability and direct dealer posting are not independently confirmed.",
+    "notes": [
+      "Marketplace profile and detail-page timing blocks conflict or appear generic; opening hours omitted. Platform WhatsApp relay is excluded."
+    ],
+    "contactReview": "Only business-labeled dealer call numbers retained. Marketplace relay/support numbers and personal-looking staff contacts excluded.",
+    "photoSources": [
+      {
+        "listingId": "ocd-131291",
+        "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Hyundai/Sonata-Limited/?id=131291",
+        "sourceImageUrl": "https://static.oneclickdrive.com/uploads/cars/Hyundai_Sonata_2018_131291_131291_79149973510-5_small.jpg",
+        "observedAt": "2026-10-19T19:58:50.508391Z",
+        "retainedPath": "dealer-stock/ocd-131291.jpg",
+        "sha256": "43531a397ad3d5f0713338051c2573ad6868885bdd674d115136ca2e36e50aa3",
+        "bytes": 45259,
+        "width": 450,
+        "height": 395,
+        "operation": "resize-within-1280-without-upscale-and-JPEG-quality-82-or-83"
+      },
+      {
+        "listingId": "ocd-131277",
+        "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Kia/Optima-EX-Top/?id=131277",
+        "sourceImageUrl": "https://static.oneclickdrive.com/uploads/cars/Kia_Optima_2016_131277_131277_791479115390-6_small.jpg",
+        "observedAt": "2026-10-19T19:58:50.508391Z",
+        "retainedPath": "dealer-stock/ocd-131277.jpg",
+        "sha256": "e351049082a01f7409d3db671e03fd8c6d51cdc45027bf3e19e1159f3174ab8d",
+        "bytes": 54011,
+        "width": 450,
+        "height": 395,
+        "operation": "resize-within-1280-without-upscale-and-JPEG-quality-82-or-83"
+      },
+      {
+        "listingId": "ocd-131282",
+        "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Nissan/Sentra-SV/?id=131282",
+        "sourceImageUrl": "https://static.oneclickdrive.com/uploads/cars/Nissan_Sentra_2021_131282_131282_791487452016-13_small.jpg",
+        "observedAt": "2026-10-19T19:58:50.508391Z",
+        "retainedPath": "dealer-stock/ocd-131282.jpg",
+        "sha256": "897fce7d5047a0f295c5add0e4599546def838c6b47dbdab3c4053bb76c660d6",
+        "bytes": 45007,
+        "width": 450,
+        "height": 395,
+        "operation": "resize-within-1280-without-upscale-and-JPEG-quality-82-or-83"
+      }
+    ]
+  }
+}

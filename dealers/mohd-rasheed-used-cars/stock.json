@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "dealer": "mohd-rasheed-used-cars",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:00:44.027770Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "aw-74527",
+      "title": "Hyundai Staria 2023",
+      "make": "Hyundai",
+      "model": "Staria",
+      "year": 2023,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/aw-74527.jpg"
+      ],
+      "sourceUrl": "https://www.arabwheels.ae/used-cars/hyundai-staria-2023-for-sale-in-sharjah-74527",
+      "observedAt": "2026-10-19T20:00:44.027770Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "color": "White",
+      "mileageValue": 56596,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "aw-74532",
+      "title": "Iveco Daily 2017",
+      "make": "Iveco",
+      "model": "Daily",
+      "year": 2017,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/aw-74532.jpg"
+      ],
+      "sourceUrl": "https://www.arabwheels.ae/used-cars/iveco-daily-2017-for-sale-in-sharjah-74532",
+      "observedAt": "2026-10-19T20:00:44.027770Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Van",
+      "transmission": "Manual",
+      "fuel": "Diesel",
+      "color": "Pink",
+      "mileageValue": 110000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "aw-74533",
+      "title": "Mitsubishi Fuso Rosa 2016",
+      "make": "Mitsubishi",
+      "model": "Fuso Rosa",
+      "year": 2016,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/aw-74533.jpg"
+      ],
+      "sourceUrl": "https://www.arabwheels.ae/used-cars/mitsubishi-fuso-rosa-2016-for-sale-in-sharjah-74533",
+      "observedAt": "2026-10-19T20:00:44.027770Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "transmission": "Manual",
+      "fuel": "Diesel",
+      "color": "Yellow",
+      "mileageValue": 458000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

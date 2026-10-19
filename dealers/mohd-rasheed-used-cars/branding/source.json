@@ -1,0 +1,163 @@
+{
+  "schemaVersion": 1,
+  "dealer": "mohd-rasheed-used-cars",
+  "realLogoFirst": true,
+  "publishedBranding": true,
+  "creationMethod": "sourced-logo-imagegen-redraw",
+  "dealerApproved": false,
+  "approvalStatus": "redraw-and-compact-adaptation-not-dealer-approved",
+  "usageStatus": "public-preview-only",
+  "observedAt": "2026-10-19T20:00:44.027770Z",
+  "publicSources": [
+    {
+      "url": "https://www.arabwheels.ae/used-cars/dealers/mohd-rasheed-used-cars-showroom-in-uae/",
+      "observedAt": "2026-10-19T20:00:44.027770Z"
+    },
+    {
+      "url": "https://www.arabwheels.ae/used-cars/hyundai-staria-2023-for-sale-in-sharjah-74527",
+      "observedAt": "2026-10-19T20:00:44.027770Z"
+    },
+    {
+      "url": "https://www.arabwheels.ae/used-cars/iveco-daily-2017-for-sale-in-sharjah-74532",
+      "observedAt": "2026-10-19T20:00:44.027770Z"
+    },
+    {
+      "url": "https://www.arabwheels.ae/used-cars/mitsubishi-fuso-rosa-2016-for-sale-in-sharjah-74533",
+      "observedAt": "2026-10-19T20:00:44.027770Z"
+    }
+  ],
+  "originals": [
+    {
+      "path": "branding/source-original.png",
+      "sha256": "36b9f623d87b864bb7fc8598d416f938f789575ee049fcd78403b338c43f723c",
+      "url": "https://cache3.arabwheels.ae/system/dealerships/dealers/000/001/050/original/1050.png?1754316096",
+      "observedAt": "2026-10-19T20:00:44.027770Z",
+      "identityStatus": "public-profile-identity-reference"
+    }
+  ],
+  "logoResearch": "Exact public dealer profile uses MR AUTOS, matched to Mohd Rasheed Used Cars. Company-name business contact only; personal staff contacts are excluded.",
+  "visualReview": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Blue framed car and MR AUTOS retained; full trading name included. Marketing tagline removed.",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T20:58:45.762Z",
+    "master": {
+      "path": "branding/generated-primary.png",
+      "sha256": "3e564d15702b813dd2d74e94f9398b94fd895e6b53185197de3e98b3dd372a38",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-78515c99-ba96-47d9-9cf9-285700842deb",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "d7604a2174d6fd42306428360181ace4276ea328a1eab185840d88b5ec7e779e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-78515c99-ba96-47d9-9cf9-285700842deb",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-primary.png",
+          "sourceSha256": "3e564d15702b813dd2d74e94f9398b94fd895e6b53185197de3e98b3dd372a38",
+          "rectangle": {
+            "left": 0,
+            "top": 0,
+            "width": 717,
+            "height": 724
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-inverse.png",
+      "sha256": "18d7d6a457955da968f47265b7482243464089fb2f4232cda9290ade96315761",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a2b48102-35f7-4f48-8c3f-17a29946f347",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-primary.png",
+        "sha256": "3e564d15702b813dd2d74e94f9398b94fd895e6b53185197de3e98b3dd372a38",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-78515c99-ba96-47d9-9cf9-285700842deb",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-inverse.png",
+        "sha256": "18d7d6a457955da968f47265b7482243464089fb2f4232cda9290ade96315761",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-a2b48102-35f7-4f48-8c3f-17a29946f347",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-inverse.png",
+        "sha256": "18d7d6a457955da968f47265b7482243464089fb2f4232cda9290ade96315761",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-a2b48102-35f7-4f48-8c3f-17a29946f347",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113",
+          "#101820"
+        ],
+        "onAccent": [
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ]
+      },
+      "notes": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Blue framed car and MR AUTOS retained; full trading name included. Marketing tagline removed."
+    },
+    "compactMarkStatus": "unapproved-preview-adaptation",
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T20:58:45.762Z",
+      "widths": [
+        32,
+        64
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820"
+      ],
+      "notes": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Blue framed car and MR AUTOS retained; full trading name included. Marketing tagline removed."
+    }
+  },
+  "generationPrompts": [
+    {
+      "role": "primary",
+      "prompt": "Faithful clean redraw of the provided MR AUTOS dealer identity. Preserve the blue identity, white car roof contour and the thin enclosing rectangular motif, but make a bold compact MR monogram emblem at left and the exact MR AUTOS wordmark right. Deep blue #174887 visible on white, true transparent background with open negative spaces. Text beneath the wordmark: MOHD RASHEED USED CARS. Remove the unverified marketing tagline. Flat clean professional logo, no gradient, no shading, no shadow, no mockup, no background. Wide horizontal lockup; substantial compact emblem legible at 32px.",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-78515c99-ba96-47d9-9cf9-285700842deb",
+      "modelVersion": null,
+      "returnedArtifact": "exec-78515c99-ba96-47d9-9cf9-285700842deb.png",
+      "note": "The tool exposed the returned artifact identifier and did not expose a model version."
+    },
+    {
+      "role": "inverse",
+      "prompt": "Create the compact inverse surface variant of the left-hand emblem in this logo. ONLY the compact left emblem, absolutely no wordmark or business text. Preserve its existing shape, initials where they form the symbol, geometry, motif, proportions and open counters. Re-render entirely in one solid neutral cool silver #b9bec2, substantial flat strokes and smooth boundaries. Dark fills become open transparent negative space with the motif represented in silver. Center the one entire compact emblem on a square true transparent canvas, about 80% of canvas width, no other graphics. No pure white ink. No background, no mockup, no labels, no gradient, no shadow, no texture, no distressed edges, no extra lines. Clean automotive identity asset with a recognizable silhouette at 32 pixels.",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-a2b48102-35f7-4f48-8c3f-17a29946f347",
+      "modelVersion": null,
+      "returnedArtifact": "exec-a2b48102-35f7-4f48-8c3f-17a29946f347.png",
+      "note": "The tool exposed the returned artifact identifier and did not expose a model version."
+    }
+  ]
+}

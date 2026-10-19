@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "dealer": "mahmoud-al-akkaoui-used-cars",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/sharjah/mahmoud-al-akkaoui-used-cars",
+      "observedAt": "2026-10-19T19:58:49.372397Z",
+      "supports": [
+        "public-business-trading-name",
+        "dealer-attributed-catalogue",
+        "business-location",
+        "public-business-phone"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Toyota/Tundra-Limited/?id=44548",
+      "observedAt": "2026-10-19T19:58:49.372397Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Nissan/Pathfinder-SV/?id=44550",
+      "observedAt": "2026-10-19T19:58:49.372397Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Ford/F-Series-Pickup-SVT-Raptor/?id=44562",
+      "observedAt": "2026-10-19T19:58:49.372397Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "research": {
+    "observedAt": "2026-10-19T19:58:49.372397Z",
+    "profileUrl": "https://www.oneclickdrive.com/company/sharjah/mahmoud-al-akkaoui-used-cars",
+    "profileSha256": "7a403ba5e5f19d6a2fb3da07f137dc4030a62d0e3535ed10a27b89f08f5f0f8b",
+    "classification": "public-marketplace-dealer-profile-and-listing-snapshot",
+    "directDealerPostingVerified": false,
+    "profileClaimed": false,
+    "limitation": "Seller attribution comes from the public marketplace profile. Current physical availability and direct dealer posting are not independently confirmed.",
+    "notes": [
+      "Marketplace profile and detail-page timing blocks conflict or appear generic; opening hours omitted. Platform WhatsApp relay is excluded."
+    ],
+    "contactReview": "Only business-labeled dealer call numbers retained. Marketplace relay/support numbers and personal-looking staff contacts excluded.",
+    "photoSources": [
+      {
+        "listingId": "ocd-44548",
+        "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Toyota/Tundra-Limited/?id=44548",
+        "sourceImageUrl": "https://static.oneclickdrive.com/uploads/cars/Toyota_Tundra_2023_44548_44548_43065315761-5_small.jpg",
+        "observedAt": "2026-10-19T19:58:49.372397Z",
+        "retainedPath": "dealer-stock/ocd-44548.jpg",
+        "sha256": "1370bde024fef0e637b65300c8e722aaa9be0b8e81bb5909066eaf78c9eed1f3",
+        "bytes": 51212,
+        "width": 450,
+        "height": 395,
+        "operation": "resize-within-1280-without-upscale-and-JPEG-quality-82-or-83"
+      },
+      {
+        "listingId": "ocd-44550",
+        "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Nissan/Pathfinder-SV/?id=44550",
+        "sourceImageUrl": "https://static.oneclickdrive.com/uploads/cars/Nissan_Pathfinder_2022_44550_44550_43068351844-5_small.jpg",
+        "observedAt": "2026-10-19T19:58:49.372397Z",
+        "retainedPath": "dealer-stock/ocd-44550.jpg",
+        "sha256": "6ed5d14fec5295ca277299fe010694532d1556ba35a615b2e3949083d9fefcac",
+        "bytes": 37370,
+        "width": 450,
+        "height": 395,
+        "operation": "resize-within-1280-without-upscale-and-JPEG-quality-82-or-83"
+      },
+      {
+        "listingId": "ocd-44562",
+        "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Ford/F-Series-Pickup-SVT-Raptor/?id=44562",
+        "sourceImageUrl": "https://static.oneclickdrive.com/uploads/cars/Ford_F-Series-Pickup_2023_44562_44562_43085838086-12_small.jpg",
+        "observedAt": "2026-10-19T19:58:49.372397Z",
+        "retainedPath": "dealer-stock/ocd-44562.jpg",
+        "sha256": "13841336d402be6d9821139103fb6f6da79a3475701b60f2c3b164037609ba74",
+        "bytes": 32430,
+        "width": 450,
+        "height": 395,
+        "operation": "resize-within-1280-without-upscale-and-JPEG-quality-82-or-83"
+      }
+    ]
+  }
+}

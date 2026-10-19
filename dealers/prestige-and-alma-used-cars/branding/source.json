@@ -1,0 +1,175 @@
+{
+  "schemaVersion": 1,
+  "dealer": "prestige-and-alma-used-cars",
+  "realLogoFirst": true,
+  "publishedBranding": true,
+  "creationMethod": "sourced-logo-imagegen-redraw",
+  "dealerApproved": false,
+  "approvalStatus": "redraw-and-compact-adaptation-not-dealer-approved",
+  "usageStatus": "public-preview-only",
+  "observedAt": "2026-10-19T19:58:50.364391Z",
+  "publicSources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/sharjah/prestige-and-alma-used-cars",
+      "observedAt": "2026-10-19T19:58:50.364391Z"
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Maserati/Levante-S/?id=31040",
+      "observedAt": "2026-10-19T19:58:50.364391Z"
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Mini/Cooper-Cooper-S-JCW/?id=31098",
+      "observedAt": "2026-10-19T19:58:50.364391Z"
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Jetour/Dashing-1.6T-Luxury/?id=31035",
+      "observedAt": "2026-10-19T19:58:50.364391Z"
+    }
+  ],
+  "originals": [
+    {
+      "path": "branding/source-original.png",
+      "sha256": "d784091d5fb48d4d323e0ec39cef95984f9f3ad28b03b04aa7e2aba45a4cb66d",
+      "url": "https://static.oneclickdrive.com/application/views/img/company/PA.png",
+      "observedAt": "2026-10-19T19:58:50.364391Z",
+      "identityStatus": "public-profile-identity-reference"
+    }
+  ],
+  "logoResearch": "Exact public dealer-profile logo was visually inspected. Low-resolution or opaque artwork was faithfully redrawn with imagegen; no dealer approval is claimed.",
+  "visualReview": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Published grey/gold serif lettering retained with a compact P-and-A monogram adaptation.",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T20:50:40.372Z",
+    "master": {
+      "path": "branding/generated-primary.png",
+      "sha256": "702d1aea48c13a0d18cb36fc1070dc413b250e68b2cd3a95666657dabb766d8e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-35fd0a20-1e34-4d7f-9ed4-899f9b8bdfc7",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "2df39b64b338e39cd4a6be69b92ddbc428039a16f346c792c7efd9d02582ce41",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-35fd0a20-1e34-4d7f-9ed4-899f9b8bdfc7",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-primary.png",
+          "sourceSha256": "702d1aea48c13a0d18cb36fc1070dc413b250e68b2cd3a95666657dabb766d8e",
+          "rectangle": {
+            "left": 0,
+            "top": 0,
+            "width": 615,
+            "height": 724
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "430a0fdf509c167beadf455c727354905e8497640efe7f66f4dd06c47916f4ec",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a2084e7e-49f4-4b32-9427-bf7274b220dd",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-silver.png",
+          "sourceSha256": "f5a5cf7d8bea2b00d3cfcb099e08732e02b5b9e747957795d614b120060a38e7",
+          "rectangle": {
+            "left": 0,
+            "top": 0,
+            "width": 615,
+            "height": 724
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-primary.png",
+        "sha256": "702d1aea48c13a0d18cb36fc1070dc413b250e68b2cd3a95666657dabb766d8e",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-35fd0a20-1e34-4d7f-9ed4-899f9b8bdfc7",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-silver.png",
+        "sha256": "f5a5cf7d8bea2b00d3cfcb099e08732e02b5b9e747957795d614b120060a38e7",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-a2084e7e-49f4-4b32-9427-bf7274b220dd",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-silver.png",
+        "sha256": "f5a5cf7d8bea2b00d3cfcb099e08732e02b5b9e747957795d614b120060a38e7",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-a2084e7e-49f4-4b32-9427-bf7274b220dd",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113",
+          "#101820"
+        ],
+        "onAccent": [
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ]
+      },
+      "notes": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Published grey/gold serif lettering retained with a compact P-and-A monogram adaptation."
+    },
+    "compactMarkStatus": "unapproved-preview-adaptation",
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T20:50:40.372Z",
+      "widths": [
+        32,
+        64
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820",
+        "#c40101"
+      ],
+      "notes": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Published grey/gold serif lettering retained with a compact P-and-A monogram adaptation."
+    }
+  },
+  "generationPrompts": [
+    {
+      "role": "primary",
+      "prompt": "Use case: logo-brand. Faithfully redraw attached weak logo as a premium crisp flat transparent horizontal lockup. Preserve its overlapping tall elegant P and A serif monogram with small gold ampersand, silver/gray and muted gold identity. Put compact P&A monogram at left and exact high-legibility text at right: \"PRESTIGE & ALMA\" with descriptor \"USED CARS\". Name spelling exact. Refine irregular bevels into flat deliberate geometry and retain elegant serif. Dark graphite text, medium silver monogram and gold ampersand. No gradients, no shadows or background plaque. Clear negative-space separation between mark and wordmark. Horizontal3:1, use substantial enough details to read at32px. This is an unapproved faithful redraw.",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-35fd0a20-1e34-4d7f-9ed4-899f9b8bdfc7",
+      "modelVersion": null,
+      "returnedArtifact": "exec-35fd0a20-1e34-4d7f-9ed4-899f9b8bdfc7.png",
+      "note": "The tool exposed the returned artifact identifier and did not expose a model version."
+    },
+    {
+      "role": "silver",
+      "prompt": "Produce the matching LIGHT SILVER version of the attached automotive logo, in a single flat pale silver #c7d4dc. Preserve the exact spelling, letterforms, emblem shape and arrangement. Re-render with clean substantial precise geometric strokes and completely transparent negative space between strokes, in counters and between letters. Badge interiors formerly dark must become transparent with the essential motifs in pale silver strokes. No white ink, no black ink, no dark colours. No background, no glow, no shadow, no texture, no distressing, no gradients, no speckles. A clean transparent mark for dark and red surfaces, identical wide horizontal composition and exact business name.",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-a2084e7e-49f4-4b32-9427-bf7274b220dd",
+      "modelVersion": null,
+      "returnedArtifact": "exec-a2084e7e-49f4-4b32-9427-bf7274b220dd.png",
+      "note": "The tool exposed the returned artifact identifier and did not expose a model version."
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "dealer": "sarmad-used-cars",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/sharjah/sarmad-used-cars",
+      "observedAt": "2026-10-19T19:58:51.936383Z",
+      "supports": [
+        "public-business-trading-name",
+        "dealer-attributed-catalogue",
+        "business-location",
+        "public-business-phone"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Lexus/IS-Series/?id=917821",
+      "observedAt": "2026-10-19T19:58:51.936383Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Chevrolet/Silverado-1500-LT/?id=875861",
+      "observedAt": "2026-10-19T19:58:51.936383Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Skoda/Kodiaq/?id=875873",
+      "observedAt": "2026-10-19T19:58:51.936383Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "research": {
+    "observedAt": "2026-10-19T19:58:51.936383Z",
+    "profileUrl": "https://www.oneclickdrive.com/company/sharjah/sarmad-used-cars",
+    "profileSha256": "67bf2b8b27985013ceade9da11e87e4a30c47846964c010ba8f806472dbadb6b",
+    "classification": "public-marketplace-dealer-profile-and-listing-snapshot",
+    "directDealerPostingVerified": false,
+    "profileClaimed": false,
+    "limitation": "Seller attribution comes from the public marketplace profile. Current physical availability and direct dealer posting are not independently confirmed.",
+    "notes": [
+      "Marketplace profile and detail-page timing blocks conflict or appear generic; opening hours omitted. Platform WhatsApp relay is excluded."
+    ],
+    "contactReview": "Only business-labeled dealer call numbers retained. Marketplace relay/support numbers and personal-looking staff contacts excluded.",
+    "photoSources": [
+      {
+        "listingId": "ocd-917821",
+        "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Lexus/IS-Series/?id=917821",
+        "sourceImageUrl": "https://static.oneclickdrive.com/uploads/cars/Lexus-IS-Series-IS-300_917821_2250672914025-1_small.jpg",
+        "observedAt": "2026-10-19T19:58:51.936383Z",
+        "retainedPath": "dealer-stock/ocd-917821.jpg",
+        "sha256": "b01ba7dabbe4ff96b92b37899c9f3c542ec221454894d5ab4938a5b690b4c721",
+        "bytes": 47446,
+        "width": 450,
+        "height": 395,
+        "operation": "resize-within-1280-without-upscale-and-JPEG-quality-82-or-83"
+      },
+      {
+        "listingId": "ocd-875861",
+        "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Chevrolet/Silverado-1500-LT/?id=875861",
+        "sourceImageUrl": "https://static.oneclickdrive.com/uploads/cars/Chevrolet-Silverado-1500-LT_875861_2188703591260-1_small.jpg",
+        "observedAt": "2026-10-19T19:58:51.936383Z",
+        "retainedPath": "dealer-stock/ocd-875861.jpg",
+        "sha256": "a7b9db7990db4f4fef08f34af539f83c63d81afa0b372b4362a140aed62af975",
+        "bytes": 48806,
+        "width": 450,
+        "height": 395,
+        "operation": "resize-within-1280-without-upscale-and-JPEG-quality-82-or-83"
+      },
+      {
+        "listingId": "ocd-875873",
+        "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Skoda/Kodiaq/?id=875873",
+        "sourceImageUrl": "https://static.oneclickdrive.com/uploads/cars/Skoda-Kodiaq-Other_875873_2188721641356-1_small.jpg",
+        "observedAt": "2026-10-19T19:58:51.936383Z",
+        "retainedPath": "dealer-stock/ocd-875873.jpg",
+        "sha256": "e7b7a2a8a1fbec53e9e65e74754a335b3fcd2d6093f8847cffbad065553bc0f7",
+        "bytes": 49657,
+        "width": 450,
+        "height": 395,
+        "operation": "resize-within-1280-without-upscale-and-JPEG-quality-82-or-83"
+      }
+    ]
+  }
+}

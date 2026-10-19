@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "slug": "union-used-car-exhibition-llc",
+  "dealerId": "ae-sharjah-union-used-car-exhibition-llc",
+  "business": {
+    "name": "Union Used Car Exhibition LLC",
+    "city": "Sharjah",
+    "region": "Sharjah",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "Souq Al Haraj, Tasjeel Village, Saif Zone, Sharjah - UAE",
+    "phone": "+971544661789",
+    "phoneDisplay": "+971544661789",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://www.oneclickdrive.com/company/sharjah/union-used-car-exhibition-llc",
+    "hours": "",
+    "sourceUrl": "https://www.oneclickdrive.com/company/sharjah/union-used-car-exhibition-llc",
+    "observedAt": "2026-10-19T19:58:51.772384Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/sharjah/union-used-car-exhibition-llc",
+      "observedAt": "2026-10-19T19:58:51.772384Z",
+      "supports": [
+        "public-business-trading-name",
+        "dealer-attributed-catalogue",
+        "business-location",
+        "public-business-phone"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Chevrolet/Silverado/?id=138010",
+      "observedAt": "2026-10-19T19:58:51.772384Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Chevrolet/Tahoe-LT/?id=138001",
+      "observedAt": "2026-10-19T19:58:51.772384Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Nissan/Patrol-SE-Platinum/?id=138011",
+      "observedAt": "2026-10-19T19:58:51.772384Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    }
+  ]
+}

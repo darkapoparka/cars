@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "dealer": "qasr-al-jazeera-used-cars",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T19:58:50.508391Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "ocd-131291",
+      "title": "Hyundai Sonata Limited 2018",
+      "make": "Hyundai",
+      "model": "Sonata Limited",
+      "year": 2018,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/ocd-131291.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Hyundai/Sonata-Limited/?id=131291",
+      "observedAt": "2026-10-19T19:58:50.508391Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Sedan",
+      "transmission": "Auto",
+      "fuel": "Petrol",
+      "color": "Black",
+      "mileageValue": 220000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "ocd-131277",
+      "title": "Kia Optima EX Top 2016",
+      "make": "Kia",
+      "model": "Optima EX Top",
+      "year": 2016,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/ocd-131277.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Kia/Optima-EX-Top/?id=131277",
+      "observedAt": "2026-10-19T19:58:50.508391Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Sedan",
+      "transmission": "Auto",
+      "fuel": "Petrol",
+      "color": "Gray",
+      "mileageValue": 135000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "ocd-131282",
+      "title": "Nissan Sentra SV 2021",
+      "make": "Nissan",
+      "model": "Sentra SV",
+      "year": 2021,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/ocd-131282.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Nissan/Sentra-SV/?id=131282",
+      "observedAt": "2026-10-19T19:58:50.508391Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Sedan",
+      "transmission": "Auto",
+      "fuel": "Petrol",
+      "color": "Black",
+      "mileageValue": 90000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

@@ -1,0 +1,241 @@
+{
+  "schemaVersion": 1,
+  "dealer": "rebou-al-fakhama-used-cars",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T20:59:17.108Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "sourced-logo-imagegen-redraw",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "90f8da655b56cbdc3df6201eee0c8c60091a477ee86b32f38684f5b454ac0323",
+      "sourceSha256": "e2ce232b90989cad4769deac36bae53984181bf46c93e02ff455823b4e30051a"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "f4578cb5ffaa1698755132f4c42bca73bdd430a562ea0da3ed0d62e81d32a76d",
+      "sourceSha256": "96114c0d4705c143b07a1e02aa977a580e8c2fa26fd89e4b08fbf3d954b8932d"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "f4578cb5ffaa1698755132f4c42bca73bdd430a562ea0da3ed0d62e81d32a76d",
+      "sourceSha256": "96114c0d4705c143b07a1e02aa977a580e8c2fa26fd89e4b08fbf3d954b8932d"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "e2ce232b90989cad4769deac36bae53984181bf46c93e02ff455823b4e30051a",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-331518fa-c159-4512-b001-d0b7ea5720b9",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "177b00f06e08f9d30635990a029866899a4772d8deb5d1d520c282dcf78c3623",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-331518fa-c159-4512-b001-d0b7ea5720b9",
+      "modelVersion": null,
+      "transformation": {
+        "operation": "rectangular-extract-without-recolour-or-redrawing",
+        "source": "branding/generated-primary.png",
+        "sourceSha256": "9ad6432dd7e9342ab5a37d936dab685ebb8d99e31307099d0e6b918d67c444fc",
+        "rectangle": {
+          "left": 0,
+          "top": 0,
+          "width": 760,
+          "height": 724
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "2997647077f6e9a6203bb3abd88c49efeb553d960e36b16afd6e8fe1c1966477"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "e2ce232b90989cad4769deac36bae53984181bf46c93e02ff455823b4e30051a",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-331518fa-c159-4512-b001-d0b7ea5720b9",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/rebou-al-fakhama-used-cars/branding/generated-primary.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "96114c0d4705c143b07a1e02aa977a580e8c2fa26fd89e4b08fbf3d954b8932d",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4d5bc152-d57e-4d87-b87d-54a00638b5fc",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/rebou-al-fakhama-used-cars/branding/generated-inverse.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "96114c0d4705c143b07a1e02aa977a580e8c2fa26fd89e4b08fbf3d954b8932d",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4d5bc152-d57e-4d87-b87d-54a00638b5fc",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/rebou-al-fakhama-used-cars/branding/generated-inverse.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "9ad6432dd7e9342ab5a37d936dab685ebb8d99e31307099d0e6b918d67c444fc",
+      "sha256": "e2ce232b90989cad4769deac36bae53984181bf46c93e02ff455823b4e30051a",
+      "crop": {
+        "left": 31,
+        "top": 58,
+        "width": 2118,
+        "height": 625
+      },
+      "sourcePath": "branding/generated-primary.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "277e7da7110612c55a56707311fbb1cbe437b977636a7bd026819a9f3836fc4f",
+      "sha256": "96114c0d4705c143b07a1e02aa977a580e8c2fa26fd89e4b08fbf3d954b8932d",
+      "crop": {
+        "left": 42,
+        "top": 170,
+        "width": 1170,
+        "height": 958
+      },
+      "sourcePath": "branding/generated-inverse.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "277e7da7110612c55a56707311fbb1cbe437b977636a7bd026819a9f3836fc4f",
+      "sha256": "96114c0d4705c143b07a1e02aa977a580e8c2fa26fd89e4b08fbf3d954b8932d",
+      "crop": {
+        "left": 42,
+        "top": 170,
+        "width": 1170,
+        "height": 958
+      },
+      "sourcePath": "branding/generated-inverse.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "a45257b9ab95715c7bdb78516e312753abc7aaf824392ef74390e453cb906f39",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-331518fa-c159-4512-b001-d0b7ea5720b9",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-primary.png",
+          "sourceSha256": "9ad6432dd7e9342ab5a37d936dab685ebb8d99e31307099d0e6b918d67c444fc",
+          "rectangle": {
+            "left": 0,
+            "top": 0,
+            "width": 760,
+            "height": 724
+          }
+        }
+      },
+      "sourceReference": "dealers/rebou-al-fakhama-used-cars/branding/generated-mark.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "1091e1abefb87f71abf1d18875534f61759491ed9b3b80b2c4889b047913eada",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4d5bc152-d57e-4d87-b87d-54a00638b5fc",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/rebou-al-fakhama-used-cars/branding/generated-inverse.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "177b00f06e08f9d30635990a029866899a4772d8deb5d1d520c282dcf78c3623",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-331518fa-c159-4512-b001-d0b7ea5720b9",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-primary.png",
+          "sourceSha256": "9ad6432dd7e9342ab5a37d936dab685ebb8d99e31307099d0e6b918d67c444fc",
+          "rectangle": {
+            "left": 0,
+            "top": 0,
+            "width": 760,
+            "height": 724
+          }
+        }
+      },
+      "sourceReference": "dealers/rebou-al-fakhama-used-cars/branding/generated-mark.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "2997647077f6e9a6203bb3abd88c49efeb553d960e36b16afd6e8fe1c1966477",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-331518fa-c159-4512-b001-d0b7ea5720b9",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-primary.png",
+          "sourceSha256": "9ad6432dd7e9342ab5a37d936dab685ebb8d99e31307099d0e6b918d67c444fc",
+          "rectangle": {
+            "left": 0,
+            "top": 0,
+            "width": 760,
+            "height": 724
+          }
+        }
+      },
+      "sourceReference": "dealers/rebou-al-fakhama-used-cars/branding/generated-mark.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T20:59:17.108Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "e3548c5d9807fd4e86a258c7fe7b2a08feb99dd2471bb8ef7b34187e0063db33",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-4d5bc152-d57e-4d87-b87d-54a00638b5fc",
+      "modelVersion": null
+    }
+  }
+}

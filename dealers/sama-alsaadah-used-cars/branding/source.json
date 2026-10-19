@@ -1,0 +1,194 @@
+{
+  "schemaVersion": 1,
+  "dealer": "sama-alsaadah-used-cars",
+  "realLogoFirst": true,
+  "publishedBranding": true,
+  "creationMethod": "sourced-logo-imagegen-redraw",
+  "dealerApproved": false,
+  "approvalStatus": "redraw-and-compact-adaptation-not-dealer-approved",
+  "usageStatus": "public-preview-only",
+  "observedAt": "2026-10-19T19:58:51.524385Z",
+  "publicSources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/sharjah/sama-alsaadah-used-cars",
+      "observedAt": "2026-10-19T19:58:51.524385Z"
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Mazda/6-Sport/?id=16012",
+      "observedAt": "2026-10-19T19:58:51.524385Z"
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Nissan/Altima-S/?id=16021",
+      "observedAt": "2026-10-19T19:58:51.524385Z"
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Toyota/Corolla-XLI/?id=16007",
+      "observedAt": "2026-10-19T19:58:51.524385Z"
+    }
+  ],
+  "originals": [
+    {
+      "path": "branding/source-original.png",
+      "sha256": "55b7199c934068d02515c7c9ee51df4939b8c83ed0020a6bbc790434f0c59698",
+      "url": "https://static.oneclickdrive.com/application/views/img/company/sama.png",
+      "observedAt": "2026-10-19T19:58:51.524385Z",
+      "identityStatus": "public-profile-identity-reference"
+    }
+  ],
+  "logoResearch": "Exact public dealer-profile logo was visually inspected. Low-resolution or opaque artwork was faithfully redrawn with imagegen; no dealer approval is claimed.",
+  "visualReview": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Red car motif retained in full wordmark; compact frontal-car adaptation is explicitly proposed.",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T20:59:54.908Z",
+    "master": {
+      "path": "branding/generated-primary.png",
+      "sha256": "c54335ccfc4ce02a7b789f2b21b7e0b2aa8cfb8720a70df7e13d60e877b7753a",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-8093cd23-7ce6-4034-a15c-a5f169282389",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "abe9241a46e5f344040a3bbd92e85721f778ad53dfdb58ab9b8359db8fcc3e3c",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-12ba75ce-d47a-4e50-a3c4-891906b58363",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-pair.png",
+          "sourceSha256": "7d96c24ae86376b93e1e33ef941ac3ce8344808deb66dbc8efb3776e54a1d160",
+          "rectangle": {
+            "left": 0,
+            "top": 0,
+            "width": 887,
+            "height": 887
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-dark-surface.png",
+      "sha256": "73e7246724858bb92d6a84dd6d3b7e3b60e00384261971f0c98ce194af42c2f1",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-12ba75ce-d47a-4e50-a3c4-891906b58363",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-pair.png",
+          "sourceSha256": "7d96c24ae86376b93e1e33ef941ac3ce8344808deb66dbc8efb3776e54a1d160",
+          "rectangle": {
+            "left": 887,
+            "top": 0,
+            "width": 887,
+            "height": 887
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-primary.png",
+        "sha256": "c54335ccfc4ce02a7b789f2b21b7e0b2aa8cfb8720a70df7e13d60e877b7753a",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-8093cd23-7ce6-4034-a15c-a5f169282389",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-dark-surface.png",
+        "sha256": "73e7246724858bb92d6a84dd6d3b7e3b60e00384261971f0c98ce194af42c2f1",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-12ba75ce-d47a-4e50-a3c4-891906b58363",
+          "modelVersion": null,
+          "transformation": {
+            "operation": "rectangular-extract-without-recolour-or-redrawing",
+            "source": "branding/generated-pair.png",
+            "sourceSha256": "7d96c24ae86376b93e1e33ef941ac3ce8344808deb66dbc8efb3776e54a1d160",
+            "rectangle": {
+              "left": 887,
+              "top": 0,
+              "width": 887,
+              "height": 887
+            }
+          }
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-silver.png",
+        "sha256": "83f26b3a44db5470d52fdc803879a101f994a048c6aba632301bbcae20a9f4d3",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-f1fbe647-fc83-45d8-ba32-b78a8932e6ce",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113",
+          "#101820"
+        ],
+        "onAccent": [
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ]
+      },
+      "notes": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Red car motif retained in full wordmark; compact frontal-car adaptation is explicitly proposed."
+    },
+    "compactMarkStatus": "unapproved-preview-adaptation",
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T20:59:54.908Z",
+      "widths": [
+        32,
+        64
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820"
+      ],
+      "notes": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Red car motif retained in full wordmark; compact frontal-car adaptation is explicitly proposed."
+    }
+  },
+  "generationPrompts": [
+    {
+      "role": "primary",
+      "prompt": "Use case: logo-brand. Faithfully redraw the attached weak red dealer logo. Keep the red sporty car outline and bold all-capital SAMA ALSAADAH identity; refine the streaky low resolution drawing into simple confident red strokes. Horizontal transparent lockup with compact car emblem at left, exact wordmark \"SAMA ALSAADAH\" at right and small descriptor \"USED CARS\" below. Flat red with deep charcoal text, no red glow, no gradient, no background rectangle, no photograph, no new symbols. Preserve recognizable original car silhouette and lettering style with better32px legibility. Wide3:1 composition, clean gap between car emblem and wordmark. Unapproved faithful redraw.",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-8093cd23-7ce6-4034-a15c-a5f169282389",
+      "modelVersion": null,
+      "returnedArtifact": "exec-8093cd23-7ce6-4034-a15c-a5f169282389.png",
+      "note": "The tool exposed the returned artifact identifier and did not expose a model version."
+    },
+    {
+      "role": "pair",
+      "prompt": "Use case: professional logo variant artwork. On ONE truly transparent canvas place TWO separated versions of the SAME compact emblem, equal sized, side by side with a wide empty transparent gap. NO WORDS ANYWHERE. The LEFT emblem should faithfully adapt the provided dealer logo using its red car outline. Produce a compact forward-facing car emblem with the same smooth red swooping contour and two simple headlight notches, solid red #c21821; this is a proposed compact adaptation of the source side-car motif. The RIGHT emblem must repeat EXACTLY the same geometry in one uniform medium-light grey #b9bec2, with all counters completely transparent. No pure white ink at all. Each emblem must be approximately square with substantial strokes, clean vector-like boundaries and all negative spaces transparent. No background, no label, no text, no shadow, no gradient, no glow, no texture, no distressed edges, no tiny lines, no mockup. Both emblems should be crisp, beautifully balanced, and legible at 32 pixels. Fit each entire symbol within its own square half of a 2:1 canvas, margins around each and clear central gap.",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-12ba75ce-d47a-4e50-a3c4-891906b58363",
+      "modelVersion": null,
+      "returnedArtifact": "exec-12ba75ce-d47a-4e50-a3c4-891906b58363.png",
+      "note": "The tool exposed the returned artifact identifier and did not expose a model version."
+    },
+    {
+      "role": "silver",
+      "prompt": "Produce the matching LIGHT SILVER version of the attached automotive logo, in a single flat pale silver #c7d4dc. Preserve the exact spelling, letterforms, emblem shape and arrangement. Re-render with clean substantial precise geometric strokes and completely transparent negative space between strokes, in counters and between letters. Badge interiors formerly dark must become transparent with the essential motifs in pale silver strokes. No white ink, no black ink, no dark colours. No background, no glow, no shadow, no texture, no distressing, no gradients, no speckles. A clean transparent mark for dark and red surfaces, identical wide horizontal composition and exact business name.",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-f1fbe647-fc83-45d8-ba32-b78a8932e6ce",
+      "modelVersion": null,
+      "returnedArtifact": "exec-f1fbe647-fc83-45d8-ba32-b78a8932e6ce.png",
+      "note": "The tool exposed the returned artifact identifier and did not expose a model version."
+    }
+  ]
+}

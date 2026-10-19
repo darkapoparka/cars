@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T20:27:29.416Z",
+  "dealer": "rebou-al-fakhama-used-cars",
+  "dealerId": "ae-sharjah-rebou-al-fakhama-used-cars",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "method": "Exact retained registry and compact-pack identity comparison plus public marketplace name, location and branding review. Public catalogue is seller-attributed; no dealer approval implied.",
+  "sources": [
+    {
+      "url": "https://ayshei.com/v-shop/rebou_al_fakhama/inventory",
+      "observedAt": "2026-10-19T19:58:51.844383Z",
+      "supports": [
+        "public-business-trading-name",
+        "dealer-attributed-catalogue",
+        "business-location"
+      ]
+    },
+    {
+      "url": "https://ayshei.com/ads/detail/8821814212-2019-audi-q7-american-specs-excellent-condition",
+      "observedAt": "2026-10-19T19:58:51.844383Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://ayshei.com/ads/detail/8084758468-2023-ford-mustang-gt-premium-american-specs-excellent-condition",
+      "observedAt": "2026-10-19T19:58:51.844383Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://ayshei.com/ads/detail/2182514939-2019-dodge-charger-gt-american-specs",
+      "observedAt": "2026-10-19T19:58:51.844383Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    }
+  ]
+}

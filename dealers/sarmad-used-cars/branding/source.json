@@ -1,0 +1,172 @@
+{
+  "schemaVersion": 1,
+  "dealer": "sarmad-used-cars",
+  "realLogoFirst": true,
+  "publishedBranding": true,
+  "creationMethod": "sourced-logo-imagegen-redraw",
+  "dealerApproved": false,
+  "approvalStatus": "redraw-and-compact-adaptation-not-dealer-approved",
+  "usageStatus": "public-preview-only",
+  "observedAt": "2026-10-19T19:58:51.936383Z",
+  "publicSources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/sharjah/sarmad-used-cars",
+      "observedAt": "2026-10-19T19:58:51.936383Z"
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Lexus/IS-Series/?id=917821",
+      "observedAt": "2026-10-19T19:58:51.936383Z"
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Chevrolet/Silverado-1500-LT/?id=875861",
+      "observedAt": "2026-10-19T19:58:51.936383Z"
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Skoda/Kodiaq/?id=875873",
+      "observedAt": "2026-10-19T19:58:51.936383Z"
+    }
+  ],
+  "originals": [
+    {
+      "path": "branding/source-original.png",
+      "sha256": "c4a916f6dde969ba70309c8a2196598876614d25d3da3b2445822b340ec71387",
+      "url": "https://static.oneclickdrive.com/application/views/img/company/sarmad.png",
+      "observedAt": "2026-10-19T19:58:51.936383Z",
+      "identityStatus": "public-profile-identity-reference"
+    }
+  ],
+  "logoResearch": "Exact public dealer-profile logo was visually inspected. Low-resolution or opaque artwork was faithfully redrawn with imagegen; no dealer approval is claimed.",
+  "visualReview": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Published full gold/black car-and-oval wordmark retained. Separate compact version uses a bold dark car and oval with a restrained gold roof accent, readable on white.",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T20:59:10.055Z",
+    "master": {
+      "path": "branding/generated-primary.png",
+      "sha256": "153358a79ea13a9c3c18986b1ce425511f82dbbde8f7170e59449850527ec9dc",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5b0ad019-ce0c-44c3-be8d-c85bc319d05c",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-compact.png",
+      "sha256": "4c2206907cbcdfd274c903188d8cf74b24861ba5e68d20f1437039e98fcb30eb",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9c919a92-7cf1-49e7-b7f6-85214213dc26",
+        "modelVersion": null
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "595f455ac2137206bd11b901be69bbedee1481139e7a3ccfefff6ab5f8a5efc9",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f2907b75-01f4-40f1-8079-1b47ca123bb9",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-silver.png",
+          "sourceSha256": "c43d4dde672ecbcd51c35e1a810136eb644fd621ed3049fce17946382aa27bb3",
+          "rectangle": {
+            "left": 0,
+            "top": 0,
+            "width": 862,
+            "height": 724
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-primary.png",
+        "sha256": "153358a79ea13a9c3c18986b1ce425511f82dbbde8f7170e59449850527ec9dc",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-5b0ad019-ce0c-44c3-be8d-c85bc319d05c",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-silver.png",
+        "sha256": "c43d4dde672ecbcd51c35e1a810136eb644fd621ed3049fce17946382aa27bb3",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-f2907b75-01f4-40f1-8079-1b47ca123bb9",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-silver.png",
+        "sha256": "c43d4dde672ecbcd51c35e1a810136eb644fd621ed3049fce17946382aa27bb3",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-f2907b75-01f4-40f1-8079-1b47ca123bb9",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113",
+          "#101820"
+        ],
+        "onAccent": [
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ]
+      },
+      "notes": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Published full gold/black car-and-oval wordmark retained. Separate compact version uses a bold dark car and oval with a restrained gold roof accent, readable on white."
+    },
+    "compactMarkStatus": "unapproved-preview-adaptation",
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T20:59:10.055Z",
+      "widths": [
+        32,
+        64
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820"
+      ],
+      "notes": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Published full gold/black car-and-oval wordmark retained. Separate compact version uses a bold dark car and oval with a restrained gold roof accent, readable on white."
+    }
+  },
+  "generationPrompts": [
+    {
+      "role": "primary",
+      "prompt": "Use case: logo-brand. Faithfully redraw attached Sarmad dealer logo as crisp flat transparent horizontal asset. Preserve the gold-and-silver sports-car motif within a dynamic partial circular arc, and exact wordmark \"SARMAD CARS\"; small descriptor \"USED CARS\". Do not include showroom number107 in the mark. Compact emblem at left; bold readable dark charcoal wordmark at right. Gold car accent and silver-gray ring, simplify fine metallic shading to clean solid flat areas. No gradients, no shadows, no background plaque, no extra symbols or claims. Strong essential lines legible at32px. Horizontal3:1 with clean space separating emblem and wordmark. Unapproved faithful redraw.",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-5b0ad019-ce0c-44c3-be8d-c85bc319d05c",
+      "modelVersion": null,
+      "returnedArtifact": "exec-5b0ad019-ce0c-44c3-be8d-c85bc319d05c.png",
+      "note": "The tool exposed the returned artifact identifier and did not expose a model version."
+    },
+    {
+      "role": "compact",
+      "prompt": "Create only a clean compact emblem adaptation of this dealer identity, with no wordmark. Retain the existing curved oval arc around a stylized side-on car, but simplify the car into a powerful near-black silhouette with transparent windshield and wheel openings. Around it use a thick near-black oval arch. Add one small dark gold #91671a accent roof segment occupying less than 10% of the overall painted area. The whole emblem should be approximately 1.6:1, compact rather than long and shallow, substantial crisp strokes, recognizable at 32px. True transparent background. Flat dark artwork optimized for a white background. No silver/white ink, no gradients, no shadows, no texture, no car photography, no words, no mockup. Faithful compact proposal based on the published car-and-oval motif.",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-9c919a92-7cf1-49e7-b7f6-85214213dc26",
+      "modelVersion": null,
+      "returnedArtifact": "exec-9c919a92-7cf1-49e7-b7f6-85214213dc26.png",
+      "note": "The tool exposed the returned artifact identifier and did not expose a model version."
+    },
+    {
+      "role": "silver",
+      "prompt": "Produce the matching LIGHT SILVER version of the attached automotive logo, in a single flat pale silver #c7d4dc. Preserve the exact spelling, letterforms, emblem shape and arrangement. Re-render with clean substantial precise geometric strokes and completely transparent negative space between strokes, in counters and between letters. Badge interiors formerly dark must become transparent with the essential motifs in pale silver strokes. No white ink, no black ink, no dark colours. No background, no glow, no shadow, no texture, no distressing, no gradients, no speckles. A clean transparent mark for dark and red surfaces, identical wide horizontal composition and exact business name.",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-f2907b75-01f4-40f1-8079-1b47ca123bb9",
+      "modelVersion": null,
+      "returnedArtifact": "exec-f2907b75-01f4-40f1-8079-1b47ca123bb9.png",
+      "note": "The tool exposed the returned artifact identifier and did not expose a model version."
+    }
+  ]
+}

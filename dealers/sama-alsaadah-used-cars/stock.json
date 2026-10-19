@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "dealer": "sama-alsaadah-used-cars",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T19:58:51.524385Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "ocd-16012",
+      "title": "Mazda 6 Sport 2022",
+      "make": "Mazda",
+      "model": "6 Sport",
+      "year": 2022,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/ocd-16012.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Mazda/6-Sport/?id=16012",
+      "observedAt": "2026-10-19T19:58:51.524385Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Sedan",
+      "transmission": "Auto",
+      "fuel": "Petrol",
+      "color": "Gray",
+      "mileageValue": 52000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "ocd-16021",
+      "title": "Nissan Altima S 2021",
+      "make": "Nissan",
+      "model": "Altima S",
+      "year": 2021,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/ocd-16021.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Nissan/Altima-S/?id=16021",
+      "observedAt": "2026-10-19T19:58:51.524385Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Sedan",
+      "transmission": "Auto",
+      "fuel": "Petrol",
+      "color": "Gray",
+      "mileageValue": 83000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "ocd-16007",
+      "title": "Toyota Corolla XLI 2021",
+      "make": "Toyota",
+      "model": "Corolla XLI",
+      "year": 2021,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/ocd-16007.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Toyota/Corolla-XLI/?id=16007",
+      "observedAt": "2026-10-19T19:58:51.524385Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Sedan",
+      "transmission": "Auto",
+      "fuel": "Petrol",
+      "color": "White",
+      "mileageValue": 142000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

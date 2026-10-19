@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "dealer": "najem-al-tareeq-used-cars",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://auto.ae/najemaltareeq/",
+      "observedAt": "2026-10-19T20:00:42.619778Z",
+      "supports": [
+        "public-business-trading-name",
+        "dealer-attributed-catalogue",
+        "business-location",
+        "public-business-phone",
+        "public-business-hours"
+      ]
+    },
+    {
+      "url": "https://auto.ae/sharjah/sale/car/mitsubishi/mitsubishi-pajero-iv-facelift-1-2014/id/226974/",
+      "observedAt": "2026-10-19T20:00:42.619778Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://auto.ae/sharjah/sale/car/kia/kia-optima-iv-2018/id/226972/",
+      "observedAt": "2026-10-19T20:00:42.619778Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://auto.ae/sharjah/sale/car/gmc/gmc-yukon-iv-gmt-k2ug-2015/id/226968/",
+      "observedAt": "2026-10-19T20:00:42.619778Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "research": {
+    "observedAt": "2026-10-19T20:00:42.619778Z",
+    "profileUrl": "https://auto.ae/najemaltareeq/",
+    "profileSha256": "07c153fe9111ad602eb68dbd92e2c5a31639eb14c970c56abfb4012236400265",
+    "classification": "public-marketplace-dealer-profile-and-listing-snapshot",
+    "directDealerPostingVerified": false,
+    "profileClaimed": false,
+    "limitation": "Seller attribution comes from the public marketplace profile. Current physical availability and direct dealer posting are not independently confirmed.",
+    "notes": [
+      "Retained Sooq listing returned404; current AUTO.AE seller profile provides stock, business contact, address and daily hours."
+    ],
+    "contactReview": "Only business-labeled dealer call numbers retained. Marketplace relay/support numbers and personal-looking staff contacts excluded.",
+    "photoSources": [
+      {
+        "listingId": "auto-226974",
+        "listingUrl": "https://auto.ae/sharjah/sale/car/mitsubishi/mitsubishi-pajero-iv-facelift-1-2014/id/226974/",
+        "sourceImageUrl": "https://auto-ae-prod-storage.storage.googleapis.com/auto_sharjah_mitsubishi_pajero_sale_226974637349400",
+        "observedAt": "2026-10-19T20:00:42.619778Z",
+        "retainedPath": "dealer-stock/auto-226974.jpg",
+        "sha256": "395f480fe1655d11ad59c2c7c28e30de77efdf452b334ddf5944582f054da5ee",
+        "bytes": 81557,
+        "width": 800,
+        "height": 533,
+        "operation": "resize-within-1280-without-upscale-and-JPEG-quality-82-or-83"
+      },
+      {
+        "listingId": "auto-226972",
+        "listingUrl": "https://auto.ae/sharjah/sale/car/kia/kia-optima-iv-2018/id/226972/",
+        "sourceImageUrl": "https://auto-ae-prod-storage.storage.googleapis.com/auto_sharjah_kia_optima_sale_226972637345670",
+        "observedAt": "2026-10-19T20:00:42.619778Z",
+        "retainedPath": "dealer-stock/auto-226972.jpg",
+        "sha256": "88bed4e48e47a51dcaeaf2fbce9f5628e3998a9b8f2f947961c72971ff84a384",
+        "bytes": 84414,
+        "width": 800,
+        "height": 533,
+        "operation": "resize-within-1280-without-upscale-and-JPEG-quality-82-or-83"
+      },
+      {
+        "listingId": "auto-226968",
+        "listingUrl": "https://auto.ae/sharjah/sale/car/gmc/gmc-yukon-iv-gmt-k2ug-2015/id/226968/",
+        "sourceImageUrl": "https://auto-ae-prod-storage.storage.googleapis.com/auto_sharjah_gmc_yukon_sale_226968637339070",
+        "observedAt": "2026-10-19T20:00:42.619778Z",
+        "retainedPath": "dealer-stock/auto-226968.jpg",
+        "sha256": "19dd7d1ccb906ed6e6027a9b94e56f7cb68fe338ebdd8b217749a5bfdfb2ab94",
+        "bytes": 82145,
+        "width": 800,
+        "height": 600,
+        "operation": "resize-within-1280-without-upscale-and-JPEG-quality-82-or-83"
+      }
+    ]
+  }
+}
