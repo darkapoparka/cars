@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "slug": "al-sammarraie-used-cars",
+  "dealerId": "ae-sharjah-al-sammarraie-used-cars",
+  "business": {
+    "name": "Al Sammarraie Used Cars",
+    "city": "Sharjah",
+    "region": "Sharjah",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "",
+    "phone": "",
+    "phoneDisplay": "",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://gcccardeals.com/en-ae/dealers/al-sammarraie-used-cars-tr-sole-proprietorship",
+    "hours": "",
+    "sourceUrl": "https://gcccardeals.com/en-ae/dealers/al-sammarraie-used-cars-tr-sole-proprietorship",
+    "observedAt": "2026-10-19T20:00:42.047781Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://gcccardeals.com/en-ae/dealers/al-sammarraie-used-cars-tr-sole-proprietorship",
+      "observedAt": "2026-10-19T20:00:42.047781Z",
+      "supports": [
+        "public-business-trading-name",
+        "dealer-attributed-catalogue",
+        "business-location"
+      ]
+    }
+  ]
+}

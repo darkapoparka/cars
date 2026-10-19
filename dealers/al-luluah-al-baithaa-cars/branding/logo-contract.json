@@ -1,0 +1,241 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-luluah-al-baithaa-cars",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T20:56:49.810Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "sourced-logo-imagegen-redraw",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "894a336184a7d48e59ed7417b5e1e2a0b7365891518749f1133dd26ae0776807",
+      "sourceSha256": "104238e294ca0256d78e5aa4b478da1f3979e857b5f71c32b1a0fa95a07d5f69"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "23bffe8fac80793717696c946f7a1908602f10c8d340e1bbe56f04b5596cfc96",
+      "sourceSha256": "ef70a50ea2b5a9ea336cd8a5c7f85796800c65a33d62a1d815cd4a417d698c61"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "23bffe8fac80793717696c946f7a1908602f10c8d340e1bbe56f04b5596cfc96",
+      "sourceSha256": "ef70a50ea2b5a9ea336cd8a5c7f85796800c65a33d62a1d815cd4a417d698c61"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "104238e294ca0256d78e5aa4b478da1f3979e857b5f71c32b1a0fa95a07d5f69",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-c18b5c37-5c1e-4429-9235-bc31223c99f3",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "cc396560d02a01fab229b80cb36ab8d01d9d769eebae23537309e3f3e456915e",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-c18b5c37-5c1e-4429-9235-bc31223c99f3",
+      "modelVersion": null,
+      "transformation": {
+        "operation": "rectangular-extract-without-recolour-or-redrawing",
+        "source": "branding/generated-primary.png",
+        "sourceSha256": "76989802c8cfc5c71e7609af8097f58ecd4ed3743408a7b48b1ce8095a45d836",
+        "rectangle": {
+          "left": 0,
+          "top": 0,
+          "width": 684,
+          "height": 793
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "7533442f51d04e3b7fd2498cbc167cb813047563e5366f918637ce4225a12f20"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "104238e294ca0256d78e5aa4b478da1f3979e857b5f71c32b1a0fa95a07d5f69",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c18b5c37-5c1e-4429-9235-bc31223c99f3",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-luluah-al-baithaa-cars/branding/generated-primary.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "ef70a50ea2b5a9ea336cd8a5c7f85796800c65a33d62a1d815cd4a417d698c61",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-efa05551-3ae0-455e-b89f-afeb2ca79c7c",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-luluah-al-baithaa-cars/branding/generated-inverse.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "ef70a50ea2b5a9ea336cd8a5c7f85796800c65a33d62a1d815cd4a417d698c61",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-efa05551-3ae0-455e-b89f-afeb2ca79c7c",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-luluah-al-baithaa-cars/branding/generated-inverse.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "76989802c8cfc5c71e7609af8097f58ecd4ed3743408a7b48b1ce8095a45d836",
+      "sha256": "104238e294ca0256d78e5aa4b478da1f3979e857b5f71c32b1a0fa95a07d5f69",
+      "crop": {
+        "left": 0,
+        "top": 49,
+        "width": 1983,
+        "height": 672
+      },
+      "sourcePath": "branding/generated-primary.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "8c127998a27c198f83d558f09a028cb68c950bf89124fa9b248a16662c3370b1",
+      "sha256": "ef70a50ea2b5a9ea336cd8a5c7f85796800c65a33d62a1d815cd4a417d698c61",
+      "crop": {
+        "left": 11,
+        "top": 69,
+        "width": 1232,
+        "height": 1150
+      },
+      "sourcePath": "branding/generated-inverse.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "8c127998a27c198f83d558f09a028cb68c950bf89124fa9b248a16662c3370b1",
+      "sha256": "ef70a50ea2b5a9ea336cd8a5c7f85796800c65a33d62a1d815cd4a417d698c61",
+      "crop": {
+        "left": 11,
+        "top": 69,
+        "width": 1232,
+        "height": 1150
+      },
+      "sourcePath": "branding/generated-inverse.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "b7babafc6e0fefc0f61a129f460c92c446f40628c9ecc02ca78189d07f07ef89",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c18b5c37-5c1e-4429-9235-bc31223c99f3",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-primary.png",
+          "sourceSha256": "76989802c8cfc5c71e7609af8097f58ecd4ed3743408a7b48b1ce8095a45d836",
+          "rectangle": {
+            "left": 0,
+            "top": 0,
+            "width": 684,
+            "height": 793
+          }
+        }
+      },
+      "sourceReference": "dealers/al-luluah-al-baithaa-cars/branding/generated-mark.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "db90a399350ad652d2f0976434609b4738feb02f9d8da5b801cfd15f71dfd922",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-efa05551-3ae0-455e-b89f-afeb2ca79c7c",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-luluah-al-baithaa-cars/branding/generated-inverse.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "cc396560d02a01fab229b80cb36ab8d01d9d769eebae23537309e3f3e456915e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c18b5c37-5c1e-4429-9235-bc31223c99f3",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-primary.png",
+          "sourceSha256": "76989802c8cfc5c71e7609af8097f58ecd4ed3743408a7b48b1ce8095a45d836",
+          "rectangle": {
+            "left": 0,
+            "top": 0,
+            "width": 684,
+            "height": 793
+          }
+        }
+      },
+      "sourceReference": "dealers/al-luluah-al-baithaa-cars/branding/generated-mark.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "7533442f51d04e3b7fd2498cbc167cb813047563e5366f918637ce4225a12f20",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c18b5c37-5c1e-4429-9235-bc31223c99f3",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-primary.png",
+          "sourceSha256": "76989802c8cfc5c71e7609af8097f58ecd4ed3743408a7b48b1ce8095a45d836",
+          "rectangle": {
+            "left": 0,
+            "top": 0,
+            "width": 684,
+            "height": 793
+          }
+        }
+      },
+      "sourceReference": "dealers/al-luluah-al-baithaa-cars/branding/generated-mark.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T20:56:49.810Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "a14522908e1f355ceae0255107457df112deabb3c64eafb70c29ea05dd979962",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-efa05551-3ae0-455e-b89f-afeb2ca79c7c",
+      "modelVersion": null
+    }
+  }
+}

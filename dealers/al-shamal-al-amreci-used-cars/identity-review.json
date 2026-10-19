@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T20:27:26.091Z",
+  "dealer": "al-shamal-al-amreci-used-cars",
+  "dealerId": "ae-sharjah-al-shamal-al-amreci-used-cars",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "method": "Exact retained registry and compact-pack identity comparison plus public marketplace name, location and branding review. Public catalogue is seller-attributed; no dealer approval implied.",
+  "sources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/sharjah/al-shamal-al-amreci-used-cars",
+      "observedAt": "2026-10-19T19:58:47.888405Z",
+      "supports": [
+        "public-business-trading-name",
+        "dealer-attributed-catalogue",
+        "business-location",
+        "public-business-phone"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Land-Rover/Range-Rover-Velar-R-Dynamic/?id=10072",
+      "observedAt": "2026-10-19T19:58:47.888405Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Nissan/Rogue-SV/?id=10073",
+      "observedAt": "2026-10-19T19:58:47.888405Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Lexus/IS-Series-F-Sport/?id=10064",
+      "observedAt": "2026-10-19T19:58:47.888405Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    }
+  ]
+}

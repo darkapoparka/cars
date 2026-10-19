@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "slug": "al-markabah-al-mutamadah-used-cars",
+  "dealerId": "ae-sharjah-al-markabah-al-mutamadah-used-cars",
+  "business": {
+    "name": "Al Markabah Al Mutamadah Used Cars",
+    "city": "Sharjah",
+    "region": "Sharjah",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "Al Ruqa Al Hamra, Sharjah - UAE",
+    "phone": "+971503549113",
+    "phoneDisplay": "+971503549113",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://www.oneclickdrive.com/company/sharjah/al-markabah-al-mutamadah-used-cars",
+    "hours": "",
+    "sourceUrl": "https://www.oneclickdrive.com/company/sharjah/al-markabah-al-mutamadah-used-cars",
+    "observedAt": "2026-10-19T19:58:48.748400Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/sharjah/al-markabah-al-mutamadah-used-cars",
+      "observedAt": "2026-10-19T19:58:48.748400Z",
+      "supports": [
+        "public-business-trading-name",
+        "dealer-attributed-catalogue",
+        "business-location",
+        "public-business-phone"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Mitsubishi/Canter/?id=36059",
+      "observedAt": "2026-10-19T19:58:48.748400Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Kia/Pegas-LX/?id=36047",
+      "observedAt": "2026-10-19T19:58:48.748400Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Nissan/Micra-S/?id=36044",
+      "observedAt": "2026-10-19T19:58:48.748400Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    }
+  ]
+}

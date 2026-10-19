@@ -1,0 +1,194 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-muhtaref-used-cars",
+  "realLogoFirst": true,
+  "publishedBranding": true,
+  "creationMethod": "sourced-logo-imagegen-redraw",
+  "dealerApproved": false,
+  "approvalStatus": "redraw-and-compact-adaptation-not-dealer-approved",
+  "usageStatus": "public-preview-only",
+  "observedAt": "2026-10-19T19:58:47.928405Z",
+  "publicSources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/sharjah/al-muhtaref-used-cars",
+      "observedAt": "2026-10-19T19:58:47.928405Z"
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/BMW/730li-Exclusive/?id=66722",
+      "observedAt": "2026-10-19T19:58:47.928405Z"
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Land-Rover/Range-Rover-Vogue/?id=66726",
+      "observedAt": "2026-10-19T19:58:47.928405Z"
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Mercedes-Benz/E300/?id=66712",
+      "observedAt": "2026-10-19T19:58:47.928405Z"
+    }
+  ],
+  "originals": [
+    {
+      "path": "branding/source-original.png",
+      "sha256": "dfa99f13f5b568d143cc315a84c0f36b29fcccd3bb7575da430447c9c7b56d13",
+      "url": "https://static.oneclickdrive.com/application/views/img/company/al-muhtaref.png",
+      "observedAt": "2026-10-19T19:58:47.928405Z",
+      "identityStatus": "public-profile-identity-reference"
+    }
+  ],
+  "logoResearch": "Exact public dealer-profile logo was visually inspected. Low-resolution or opaque artwork was faithfully redrawn with imagegen; no dealer approval is claimed.",
+  "visualReview": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Crown, shield, navy/gold and car motif retained; tiny text omitted from the compact version.",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T20:57:24.832Z",
+    "master": {
+      "path": "branding/generated-primary.png",
+      "sha256": "b51d5093b4a1af7e626ed42fb44139a77148d77da6441773dd30d12f81ada0dd",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-469aa425-a6c3-41a5-97c1-5515879300f5",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "ef47a4f4d12bf33290da95094ab1a7baf4d17e2c32f5b3fe522a7c5548458f09",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-479d8f47-4354-4a0f-adcc-0abad6766ad2",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-pair.png",
+          "sourceSha256": "8bc5c94037ca2c130d85280e54947c58f1d18d79c528c8864e8c056db133d5a9",
+          "rectangle": {
+            "left": 0,
+            "top": 0,
+            "width": 887,
+            "height": 887
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-dark-surface.png",
+      "sha256": "0bf20df1e346a5d7022cffa8f7740608d59cac98bcc40134d56979f42cc99ad6",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-479d8f47-4354-4a0f-adcc-0abad6766ad2",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-pair.png",
+          "sourceSha256": "8bc5c94037ca2c130d85280e54947c58f1d18d79c528c8864e8c056db133d5a9",
+          "rectangle": {
+            "left": 887,
+            "top": 0,
+            "width": 887,
+            "height": 887
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-primary.png",
+        "sha256": "b51d5093b4a1af7e626ed42fb44139a77148d77da6441773dd30d12f81ada0dd",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-469aa425-a6c3-41a5-97c1-5515879300f5",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-dark-surface.png",
+        "sha256": "0bf20df1e346a5d7022cffa8f7740608d59cac98bcc40134d56979f42cc99ad6",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-479d8f47-4354-4a0f-adcc-0abad6766ad2",
+          "modelVersion": null,
+          "transformation": {
+            "operation": "rectangular-extract-without-recolour-or-redrawing",
+            "source": "branding/generated-pair.png",
+            "sourceSha256": "8bc5c94037ca2c130d85280e54947c58f1d18d79c528c8864e8c056db133d5a9",
+            "rectangle": {
+              "left": 887,
+              "top": 0,
+              "width": 887,
+              "height": 887
+            }
+          }
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-silver.png",
+        "sha256": "986ea524ff152fb4cf7052873a43a16c399a659c37906efe854a67dea4b049f9",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-d2193169-06fe-4aeb-b4eb-2621fb0453f1",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113",
+          "#101820"
+        ],
+        "onAccent": [
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ]
+      },
+      "notes": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Crown, shield, navy/gold and car motif retained; tiny text omitted from the compact version."
+    },
+    "compactMarkStatus": "unapproved-preview-adaptation",
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T20:57:24.832Z",
+      "widths": [
+        32,
+        64
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820"
+      ],
+      "notes": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Crown, shield, navy/gold and car motif retained; tiny text omitted from the compact version."
+    }
+  },
+  "generationPrompts": [
+    {
+      "role": "primary",
+      "prompt": "Use case: logo-brand. Redraw the attached weak low-resolution dealer logo faithfully as a refined flat transparent horizontal logo asset. Preserve its gold/yellow crown, shield, frontal car motif and exact identity. A compact solid shield/crown/car emblem sits on the left, wordmark on the right. Exact English name: \"AL MUHTAREF\"; small descriptor \"USED CARS\". Keep the crown gold/yellow and main ink deep navy. Use bold highly legible text and simple substantial lines that work at 32px. Strong crisp emblem; no gradients, no shadows, no mockup, no background plate, no ornaments outside original motif, no new claims. Transparent canvas. Horizontal arrangement approximately 3:1, generous space between mark and wordmark so mark can be extracted. This is an unapproved faithful design proposal, not official new branding. Do not add proposal labels to art.",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-469aa425-a6c3-41a5-97c1-5515879300f5",
+      "modelVersion": null,
+      "returnedArtifact": "exec-469aa425-a6c3-41a5-97c1-5515879300f5.png",
+      "note": "The tool exposed the returned artifact identifier and did not expose a model version."
+    },
+    {
+      "role": "pair",
+      "prompt": "Use case: professional logo variant artwork. On ONE truly transparent canvas place TWO separated versions of the SAME compact emblem, equal sized, side by side with a wide empty transparent gap. NO WORDS ANYWHERE. The LEFT emblem should faithfully adapt the provided dealer logo using its navy and gold crown, shield and car. Remove every letter inside the compact shield so the crown/car silhouette remains strong. Use flat dark navy and restrained gold. The RIGHT emblem must repeat EXACTLY the same geometry in one uniform medium-light grey #b9bec2, with all counters completely transparent. No pure white ink at all. Each emblem must be approximately square with substantial strokes, clean vector-like boundaries and all negative spaces transparent. No background, no label, no text, no shadow, no gradient, no glow, no texture, no distressed edges, no tiny lines, no mockup. Both emblems should be crisp, beautifully balanced, and legible at 32 pixels. Fit each entire symbol within its own square half of a 2:1 canvas, margins around each and clear central gap.",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-479d8f47-4354-4a0f-adcc-0abad6766ad2",
+      "modelVersion": null,
+      "returnedArtifact": "exec-479d8f47-4354-4a0f-adcc-0abad6766ad2.png",
+      "note": "The tool exposed the returned artifact identifier and did not expose a model version."
+    },
+    {
+      "role": "silver",
+      "prompt": "Use case: logo-brand. Produce the matching LIGHT SILVER surface version of this logo. RE-RENDER with exactly one flat light silver ink #c7d4dc for all visible artwork. Preserve the exact business name, letterforms, spacing, emblem shape and arrangement. Transparent knockout areas between strokes must stay open and completely transparent. For the badge interiors, turn the dark solid fill into transparent negative space and preserve the car/crown/star/outline essential motifs as substantial silver strokes. Very smooth clean geometric hard boundaries. No white ink, no black ink, no dark navy ink. Do not distress the mark. No texture, no gradient, no shading, no shadow, no speckles, no background. A true transparent flat raster identity asset in pale silver. Maintain wide horizontal composition with emblem at left and wordmark at right. Keep the full exact same business text with correct spelling.",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-d2193169-06fe-4aeb-b4eb-2621fb0453f1",
+      "modelVersion": null,
+      "returnedArtifact": "exec-d2193169-06fe-4aeb-b4eb-2621fb0453f1.png",
+      "note": "The tool exposed the returned artifact identifier and did not expose a model version."
+    }
+  ]
+}

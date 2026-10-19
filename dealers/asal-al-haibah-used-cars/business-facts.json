@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "slug": "asal-al-haibah-used-cars",
+  "dealerId": "ae-sharjah-asal-al-haibah-used-cars",
+  "business": {
+    "name": "Asal Al Haibah Used Cars",
+    "city": "Sharjah",
+    "region": "Sharjah",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "Souq Al Haraj / Tasjeel Village, Saif Zone (Sharjah International Airport Free Zone), Sharjah",
+    "phone": "+971564950571",
+    "phoneDisplay": "+971564950571",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://www.arabwheels.ae/used-cars/dealers/asal-al-haibah-used-cars-showroom-in-uae/",
+    "hours": "",
+    "sourceUrl": "https://www.arabwheels.ae/used-cars/dealers/asal-al-haibah-used-cars-showroom-in-uae/",
+    "observedAt": "2026-10-19T20:00:47.391752Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.arabwheels.ae/used-cars/dealers/asal-al-haibah-used-cars-showroom-in-uae/",
+      "observedAt": "2026-10-19T20:00:47.391752Z",
+      "supports": [
+        "public-business-trading-name",
+        "dealer-attributed-catalogue",
+        "business-location",
+        "public-business-phone"
+      ]
+    },
+    {
+      "url": "https://www.arabwheels.ae/used-cars/jeep-cherokee-2019-for-sale-in-sharjah-73717",
+      "observedAt": "2026-10-19T20:00:47.391752Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://www.arabwheels.ae/used-cars/chevrolet-silverado-2022-for-sale-in-sharjah-73733",
+      "observedAt": "2026-10-19T20:00:47.391752Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://www.arabwheels.ae/used-cars/toyota-land-cruiser-2021-for-sale-in-sharjah-73753",
+      "observedAt": "2026-10-19T20:00:47.391752Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    }
+  ]
+}

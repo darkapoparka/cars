@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "type": "cars-dealer-pack-draft",
+  "slug": "al-sammarraie-used-cars",
+  "dealerId": "ae-sharjah-al-sammarraie-used-cars",
+  "status": "inputs-checked",
+  "buildReady": true,
+  "providerWrites": 0,
+  "createdAt": "2026-10-19T20:27:25.782Z",
+  "inventoryKind": "dated-listing-snapshot",
+  "inventoryRecords": 3,
+  "logoReady": true,
+  "missingFacts": [
+    {
+      "field": "business.address",
+      "required": false,
+      "reason": "No unambiguous current public business value verified; omitted."
+    },
+    {
+      "field": "business.phone",
+      "required": false,
+      "reason": "No unambiguous current public business value verified; omitted."
+    },
+    {
+      "field": "business.email",
+      "required": false,
+      "reason": "No unambiguous current public business value verified; omitted."
+    },
+    {
+      "field": "business.website",
+      "required": false,
+      "reason": "No unambiguous current public business value verified; omitted."
+    },
+    {
+      "field": "business.hours",
+      "required": false,
+      "reason": "No unambiguous current public business value verified; omitted."
+    },
+    {
+      "field": "prices",
+      "required": false,
+      "reason": "All listing prices omitted under the public-repository scope."
+    }
+  ],
+  "blocking": [],
+  "stockAcquisition": "explicit-retained-public-snapshot",
+  "liveListingFetchPerformed": true,
+  "next": "Input checks passed. Build and provider acceptance are separate guarded operations."
+}

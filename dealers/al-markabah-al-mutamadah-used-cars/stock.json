@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-markabah-al-mutamadah-used-cars",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T19:58:48.748400Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "ocd-36059",
+      "title": "Mitsubishi Canter 2017",
+      "make": "Mitsubishi",
+      "model": "Canter",
+      "year": 2017,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/ocd-36059.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Mitsubishi/Canter/?id=36059",
+      "observedAt": "2026-10-19T19:58:48.748400Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Pickup Truck",
+      "transmission": "Manual",
+      "fuel": "Diesel",
+      "color": "White",
+      "mileageValue": 179000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "ocd-36047",
+      "title": "Kia Pegas LX 2021",
+      "make": "Kia",
+      "model": "Pegas LX",
+      "year": 2021,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/ocd-36047.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Kia/Pegas-LX/?id=36047",
+      "observedAt": "2026-10-19T19:58:48.748400Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Sedan",
+      "transmission": "Auto",
+      "fuel": "Petrol",
+      "color": "White",
+      "mileageValue": 73000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "ocd-36044",
+      "title": "Nissan Micra S 2020",
+      "make": "Nissan",
+      "model": "Micra S",
+      "year": 2020,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/ocd-36044.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Nissan/Micra-S/?id=36044",
+      "observedAt": "2026-10-19T19:58:48.748400Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Compact",
+      "transmission": "Auto",
+      "fuel": "Petrol",
+      "color": "Silver",
+      "mileageValue": 65000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

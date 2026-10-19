@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-shamal-al-amreci-used-cars",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/sharjah/al-shamal-al-amreci-used-cars",
+      "observedAt": "2026-10-19T19:58:47.888405Z",
+      "supports": [
+        "public-business-trading-name",
+        "dealer-attributed-catalogue",
+        "business-location",
+        "public-business-phone"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Land-Rover/Range-Rover-Velar-R-Dynamic/?id=10072",
+      "observedAt": "2026-10-19T19:58:47.888405Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Nissan/Rogue-SV/?id=10073",
+      "observedAt": "2026-10-19T19:58:47.888405Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Lexus/IS-Series-F-Sport/?id=10064",
+      "observedAt": "2026-10-19T19:58:47.888405Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "research": {
+    "observedAt": "2026-10-19T19:58:47.888405Z",
+    "profileUrl": "https://www.oneclickdrive.com/company/sharjah/al-shamal-al-amreci-used-cars",
+    "profileSha256": "6c984b65464191ed68118304f14ff966a235aefff2cfe48bd8cf8519e289ef30",
+    "classification": "public-marketplace-dealer-profile-and-listing-snapshot",
+    "directDealerPostingVerified": false,
+    "profileClaimed": false,
+    "limitation": "Seller attribution comes from the public marketplace profile. Current physical availability and direct dealer posting are not independently confirmed.",
+    "notes": [
+      "Marketplace profile and detail-page timing blocks conflict or appear generic; opening hours omitted. Platform WhatsApp relay is excluded."
+    ],
+    "contactReview": "Only business-labeled dealer call numbers retained. Marketplace relay/support numbers and personal-looking staff contacts excluded.",
+    "photoSources": [
+      {
+        "listingId": "ocd-10072",
+        "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Land-Rover/Range-Rover-Velar-R-Dynamic/?id=10072",
+        "sourceImageUrl": "https://static.oneclickdrive.com/uploads/cars/Land-Rover_Range-Rover-Velar_2023_10072_10072_7100823554-16_small.jpg",
+        "observedAt": "2026-10-19T19:58:47.888405Z",
+        "retainedPath": "dealer-stock/ocd-10072.jpg",
+        "sha256": "baa407c1da88ce4f21bbde9bdaa75544e124377de1ee4734d3d1608709396217",
+        "bytes": 45094,
+        "width": 450,
+        "height": 395,
+        "operation": "resize-within-1280-without-upscale-and-JPEG-quality-82-or-83"
+      },
+      {
+        "listingId": "ocd-10073",
+        "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Nissan/Rogue-SV/?id=10073",
+        "sourceImageUrl": "https://static.oneclickdrive.com/uploads/cars/Nissan-Rogue-2020_10073_2035401910002-19_small.jpg",
+        "observedAt": "2026-10-19T19:58:47.888405Z",
+        "retainedPath": "dealer-stock/ocd-10073.jpg",
+        "sha256": "31d92d9a330381d2f688f210d7af28a0ca262fdc75dc7d059c6420c9b6b1758c",
+        "bytes": 21944,
+        "width": 450,
+        "height": 395,
+        "operation": "resize-within-1280-without-upscale-and-JPEG-quality-82-or-83"
+      },
+      {
+        "listingId": "ocd-10064",
+        "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Lexus/IS-Series-F-Sport/?id=10064",
+        "sourceImageUrl": "https://static.oneclickdrive.com/uploads/cars/Lexus_IS-Series_2014_10064_10064_7092062171-1_small.jpg",
+        "observedAt": "2026-10-19T19:58:47.888405Z",
+        "retainedPath": "dealer-stock/ocd-10064.jpg",
+        "sha256": "c0b6681dea9f53e3c5b96a223b9a8f5e8d320d45b55a877a0b91719981ec2fc0",
+        "bytes": 55741,
+        "width": 450,
+        "height": 395,
+        "operation": "resize-within-1280-without-upscale-and-JPEG-quality-82-or-83"
+      }
+    ]
+  }
+}

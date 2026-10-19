@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-muhtaref-used-cars",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/sharjah/al-muhtaref-used-cars",
+      "observedAt": "2026-10-19T19:58:47.928405Z",
+      "supports": [
+        "public-business-trading-name",
+        "dealer-attributed-catalogue",
+        "business-location",
+        "public-business-phone"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/BMW/730li-Exclusive/?id=66722",
+      "observedAt": "2026-10-19T19:58:47.928405Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Land-Rover/Range-Rover-Vogue/?id=66726",
+      "observedAt": "2026-10-19T19:58:47.928405Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Mercedes-Benz/E300/?id=66712",
+      "observedAt": "2026-10-19T19:58:47.928405Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "research": {
+    "observedAt": "2026-10-19T19:58:47.928405Z",
+    "profileUrl": "https://www.oneclickdrive.com/company/sharjah/al-muhtaref-used-cars",
+    "profileSha256": "92e73055612d1d0e648791fdcb832cf6775da73510fd417967bb90198687a0f0",
+    "classification": "public-marketplace-dealer-profile-and-listing-snapshot",
+    "directDealerPostingVerified": false,
+    "profileClaimed": false,
+    "limitation": "Seller attribution comes from the public marketplace profile. Current physical availability and direct dealer posting are not independently confirmed.",
+    "notes": [
+      "Marketplace profile and detail-page timing blocks conflict or appear generic; opening hours omitted. Platform WhatsApp relay is excluded."
+    ],
+    "contactReview": "Only business-labeled dealer call numbers retained. Marketplace relay/support numbers and personal-looking staff contacts excluded.",
+    "photoSources": [
+      {
+        "listingId": "ocd-66722",
+        "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/BMW/730li-Exclusive/?id=66722",
+        "sourceImageUrl": "https://static.oneclickdrive.com/uploads/cars/BMW_730li-Exclusive_2019_66693_66693_66120466311-18_small.jpg",
+        "observedAt": "2026-10-19T19:58:47.928405Z",
+        "retainedPath": "dealer-stock/ocd-66722.jpg",
+        "sha256": "f2a0972ebb0bb4e1faee7955cd114bc146d8c8556c7d30933b70b5dd1c9d5dac",
+        "bytes": 43846,
+        "width": 450,
+        "height": 395,
+        "operation": "resize-within-1280-without-upscale-and-JPEG-quality-82-or-83"
+      },
+      {
+        "listingId": "ocd-66726",
+        "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Land-Rover/Range-Rover-Vogue/?id=66726",
+        "sourceImageUrl": "https://static.oneclickdrive.com/uploads/cars/Land-Rover-Range-Rover-Vogue-2019_66726_1921188744326-21_small.jpg",
+        "observedAt": "2026-10-19T19:58:47.928405Z",
+        "retainedPath": "dealer-stock/ocd-66726.jpg",
+        "sha256": "87d006eadaf6f2593e24a1dc15f3f9c8b8c6fb07cd209d5bf141a644d77a4824",
+        "bytes": 37014,
+        "width": 450,
+        "height": 395,
+        "operation": "resize-within-1280-without-upscale-and-JPEG-quality-82-or-83"
+      },
+      {
+        "listingId": "ocd-66712",
+        "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Mercedes-Benz/E300/?id=66712",
+        "sourceImageUrl": "https://static.oneclickdrive.com/uploads/cars/Mercedes-Benz-E300-2018_66683_1919437496483-21_small.jpg",
+        "observedAt": "2026-10-19T19:58:47.928405Z",
+        "retainedPath": "dealer-stock/ocd-66712.jpg",
+        "sha256": "d0b24292a487ce5cf15089525c71813f62dbde7a378a3e5471e84ac614343a26",
+        "bytes": 29179,
+        "width": 450,
+        "height": 395,
+        "operation": "resize-within-1280-without-upscale-and-JPEG-quality-82-or-83"
+      }
+    ]
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-luluah-al-baithaa-cars",
+  "realLogoFirst": true,
+  "publishedBranding": true,
+  "creationMethod": "sourced-logo-imagegen-redraw",
+  "dealerApproved": false,
+  "approvalStatus": "redraw-and-compact-adaptation-not-dealer-approved",
+  "usageStatus": "public-preview-only",
+  "observedAt": "2026-10-19T20:00:43.779771Z",
+  "publicSources": [
+    {
+      "url": "https://www.arabwheels.ae/used-cars/dealers/al-luluah-al-baithaa-cars-showroom-in-uae/",
+      "observedAt": "2026-10-19T20:00:43.779771Z"
+    },
+    {
+      "url": "https://www.arabwheels.ae/used-cars/mercedes-benz-v-class-2022-for-sale-in-sharjah-78075",
+      "observedAt": "2026-10-19T20:00:43.779771Z"
+    },
+    {
+      "url": "https://www.arabwheels.ae/used-cars/mercedes-benz-v-class-2024-for-sale-in-sharjah-78077",
+      "observedAt": "2026-10-19T20:00:43.779771Z"
+    },
+    {
+      "url": "https://www.arabwheels.ae/used-cars/mercedes-benz-s-class-2015-for-sale-in-sharjah-78079",
+      "observedAt": "2026-10-19T20:00:43.779771Z"
+    }
+  ],
+  "originals": [
+    {
+      "path": "branding/source-original.jpeg",
+      "sha256": "b4ca2a32c96bde5c54ab959daae6c594bb9a6fd69d74a8c127c6b670a50a2806",
+      "url": "https://cache2.arabwheels.ae/system/dealerships/dealers/000/001/177/original/1177.jpeg?1774442048",
+      "observedAt": "2026-10-19T20:00:43.779771Z",
+      "identityStatus": "public-profile-identity-reference"
+    }
+  ],
+  "logoResearch": "Exact ArabWheels business profile displays the Al Luluah Motors shield. Published short branding name retained; the full retained lead business name stays in the facts.",
+  "visualReview": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Gold/black shield, three stars and car retained with the published AL LULUAH MOTORS wordmark.",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T20:56:49.810Z",
+    "master": {
+      "path": "branding/generated-primary.png",
+      "sha256": "76989802c8cfc5c71e7609af8097f58ecd4ed3743408a7b48b1ce8095a45d836",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c18b5c37-5c1e-4429-9235-bc31223c99f3",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "57762364dbe25653cb94ae8ce2a3c3efde50eb48127dded3b3dd9cc52e93e2f2",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c18b5c37-5c1e-4429-9235-bc31223c99f3",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-primary.png",
+          "sourceSha256": "76989802c8cfc5c71e7609af8097f58ecd4ed3743408a7b48b1ce8095a45d836",
+          "rectangle": {
+            "left": 0,
+            "top": 0,
+            "width": 684,
+            "height": 793
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-inverse.png",
+      "sha256": "8c127998a27c198f83d558f09a028cb68c950bf89124fa9b248a16662c3370b1",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-efa05551-3ae0-455e-b89f-afeb2ca79c7c",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-primary.png",
+        "sha256": "76989802c8cfc5c71e7609af8097f58ecd4ed3743408a7b48b1ce8095a45d836",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-c18b5c37-5c1e-4429-9235-bc31223c99f3",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-inverse.png",
+        "sha256": "8c127998a27c198f83d558f09a028cb68c950bf89124fa9b248a16662c3370b1",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-efa05551-3ae0-455e-b89f-afeb2ca79c7c",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-inverse.png",
+        "sha256": "8c127998a27c198f83d558f09a028cb68c950bf89124fa9b248a16662c3370b1",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-efa05551-3ae0-455e-b89f-afeb2ca79c7c",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113",
+          "#101820"
+        ],
+        "onAccent": [
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ]
+      },
+      "notes": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Gold/black shield, three stars and car retained with the published AL LULUAH MOTORS wordmark."
+    },
+    "compactMarkStatus": "unapproved-preview-adaptation",
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T20:56:49.810Z",
+      "widths": [
+        32,
+        64
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820"
+      ],
+      "notes": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Gold/black shield, three stars and car retained with the published AL LULUAH MOTORS wordmark."
+    }
+  },
+  "generationPrompts": [
+    {
+      "role": "primary",
+      "prompt": "Faithfully redraw the provided tiny dealer logo as a professional clean transparent mark. Preserve the gold/silver shield, stylized gold car, three gold stars and the exact published words AL LULUAH MOTORS. Make one compact bold shield at the left with no tiny embedded lettering, and a generous wordmark to the right AL LULUAH on first line and MOTORS below. Strong dark gold #946b16 and deep charcoal for excellent readability on white. Flat colours, simple smooth geometry, transparent negative spaces. No background, no mockup, no gradients, no shadows, no texture. Wide horizontal composition, emblem approximately square, readable down to 32px. Do not invent claims or change the trading name.",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-c18b5c37-5c1e-4429-9235-bc31223c99f3",
+      "modelVersion": null,
+      "returnedArtifact": "exec-c18b5c37-5c1e-4429-9235-bc31223c99f3.png",
+      "note": "The tool exposed the returned artifact identifier and did not expose a model version."
+    },
+    {
+      "role": "inverse",
+      "prompt": "Create the compact inverse surface variant of the left-hand emblem in this logo. ONLY the compact left emblem, absolutely no wordmark or business text. Preserve its existing shape, initials where they form the symbol, geometry, motif, proportions and open counters. Re-render entirely in one solid neutral cool silver #b9bec2, substantial flat strokes and smooth boundaries. Dark fills become open transparent negative space with the motif represented in silver. Center the one entire compact emblem on a square true transparent canvas, about 80% of canvas width, no other graphics. No pure white ink. No background, no mockup, no labels, no gradient, no shadow, no texture, no distressed edges, no extra lines. Clean automotive identity asset with a recognizable silhouette at 32 pixels.",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-efa05551-3ae0-455e-b89f-afeb2ca79c7c",
+      "modelVersion": null,
+      "returnedArtifact": "exec-efa05551-3ae0-455e-b89f-afeb2ca79c7c.png",
+      "note": "The tool exposed the returned artifact identifier and did not expose a model version."
+    }
+  ]
+}

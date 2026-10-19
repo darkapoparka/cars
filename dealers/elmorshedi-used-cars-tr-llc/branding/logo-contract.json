@@ -1,0 +1,219 @@
+{
+  "schemaVersion": 1,
+  "dealer": "elmorshedi-used-cars-tr-llc",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T20:59:10.061Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "sourced-logo-imagegen-redraw",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "6a2207c743505b65658ad77484bfa8a1fa63e209a2cdfe8bfc2917b3b712c35f",
+      "sourceSha256": "d2c73dc1bf0a0be44387e242f35a8c7fc04e4fdb55dbd6d7905d8e1ed388edd8"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "de8e9cb786123593c47ec97a470091a5521297d0aff214aa260d199abcfcbd8d",
+      "sourceSha256": "e4e09b2e915d40b9de0f6d93eb9248324f990ebcb03f3d8d822b3c977b3c2e5c"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "de8e9cb786123593c47ec97a470091a5521297d0aff214aa260d199abcfcbd8d",
+      "sourceSha256": "e4e09b2e915d40b9de0f6d93eb9248324f990ebcb03f3d8d822b3c977b3c2e5c"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "d2c73dc1bf0a0be44387e242f35a8c7fc04e4fdb55dbd6d7905d8e1ed388edd8",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-62056e2a-af6e-41e4-b398-56b09a31d58a",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "bb5164fb112b153b0c2e777f4f02a9bfb83d9923113a2925e4d3c8f7366f56d3",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-b1b359d7-1a60-4ff8-8f18-0e182640bc84",
+      "modelVersion": null
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "d5fab501a5b992e84ccbf5ab71a8780ca88515f83a6cca2153036d7248308702"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "d2c73dc1bf0a0be44387e242f35a8c7fc04e4fdb55dbd6d7905d8e1ed388edd8",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-62056e2a-af6e-41e4-b398-56b09a31d58a",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/elmorshedi-used-cars-tr-llc/branding/generated-primary.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "e4e09b2e915d40b9de0f6d93eb9248324f990ebcb03f3d8d822b3c977b3c2e5c",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-b7afe50f-a954-4359-ae75-f0c20fff5671",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/elmorshedi-used-cars-tr-llc/branding/generated-silver.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "e4e09b2e915d40b9de0f6d93eb9248324f990ebcb03f3d8d822b3c977b3c2e5c",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-b7afe50f-a954-4359-ae75-f0c20fff5671",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/elmorshedi-used-cars-tr-llc/branding/generated-silver.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "a1b99fe742baa9ff99318cee5b0d958e218011b15213d5e33c438acee1765aa6",
+      "sha256": "d2c73dc1bf0a0be44387e242f35a8c7fc04e4fdb55dbd6d7905d8e1ed388edd8",
+      "crop": {
+        "left": 0,
+        "top": 90,
+        "width": 2172,
+        "height": 526
+      },
+      "sourcePath": "branding/generated-primary.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "6b756c789c05210d4c2e97bd95fa7f1fe6f4e7ffd0589170eadb292aa84def46",
+      "sha256": "e4e09b2e915d40b9de0f6d93eb9248324f990ebcb03f3d8d822b3c977b3c2e5c",
+      "crop": {
+        "left": 0,
+        "top": 92,
+        "width": 2165,
+        "height": 524
+      },
+      "sourcePath": "branding/generated-silver.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "6b756c789c05210d4c2e97bd95fa7f1fe6f4e7ffd0589170eadb292aa84def46",
+      "sha256": "e4e09b2e915d40b9de0f6d93eb9248324f990ebcb03f3d8d822b3c977b3c2e5c",
+      "crop": {
+        "left": 0,
+        "top": 92,
+        "width": 2165,
+        "height": 524
+      },
+      "sourcePath": "branding/generated-silver.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "d9913b92644ed89a9a3efb7005410f4b73616d67d16da239b52119d6c9bdf864",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-b1b359d7-1a60-4ff8-8f18-0e182640bc84",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/elmorshedi-used-cars-tr-llc/branding/generated-compact.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "465b6cfaa59f56af5dfe1fb357627f1fcf77c9ae8b05311b72436597786d24c0",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-b7afe50f-a954-4359-ae75-f0c20fff5671",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-silver.png",
+          "sourceSha256": "6b756c789c05210d4c2e97bd95fa7f1fe6f4e7ffd0589170eadb292aa84def46",
+          "rectangle": {
+            "left": 0,
+            "top": 290,
+            "width": 282,
+            "height": 275
+          }
+        }
+      },
+      "sourceReference": "dealers/elmorshedi-used-cars-tr-llc/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "bb5164fb112b153b0c2e777f4f02a9bfb83d9923113a2925e4d3c8f7366f56d3",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-b1b359d7-1a60-4ff8-8f18-0e182640bc84",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/elmorshedi-used-cars-tr-llc/branding/generated-compact.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "d5fab501a5b992e84ccbf5ab71a8780ca88515f83a6cca2153036d7248308702",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-b1b359d7-1a60-4ff8-8f18-0e182640bc84",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/elmorshedi-used-cars-tr-llc/branding/generated-compact.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T20:59:10.061Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "3d9f4f5501a2f668930539743c76a0aa1baaa5aab290b68770fbcd8d29a7faba",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-b7afe50f-a954-4359-ae75-f0c20fff5671",
+      "modelVersion": null,
+      "transformation": {
+        "operation": "rectangular-extract-without-recolour-or-redrawing",
+        "source": "branding/generated-silver.png",
+        "sourceSha256": "6b756c789c05210d4c2e97bd95fa7f1fe6f4e7ffd0589170eadb292aa84def46",
+        "rectangle": {
+          "left": 0,
+          "top": 290,
+          "width": 282,
+          "height": 275
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T20:27:27.253Z",
+  "dealer": "elmorshedi-used-cars-tr-llc",
+  "dealerId": "ae-sharjah-elmorshedi-used-cars-tr-llc",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "method": "Exact retained registry and compact-pack identity comparison plus public marketplace name, location and branding review. Public catalogue is seller-attributed; no dealer approval implied.",
+  "sources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/sharjah/elmorshedi-used-cars-tr-llc",
+      "observedAt": "2026-10-19T19:58:49.340397Z",
+      "supports": [
+        "public-business-trading-name",
+        "dealer-attributed-catalogue",
+        "business-location",
+        "public-business-phone"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Hyundai/Accent-Comfort/?id=137143",
+      "observedAt": "2026-10-19T19:58:49.340397Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Mercedes-Benz/S63-AMG-4Matic-Plus/?id=137132",
+      "observedAt": "2026-10-19T19:58:49.340397Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Kia/Cerato-EX/?id=137144",
+      "observedAt": "2026-10-19T19:58:49.340397Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    }
+  ]
+}

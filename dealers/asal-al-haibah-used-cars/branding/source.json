@@ -1,0 +1,163 @@
+{
+  "schemaVersion": 1,
+  "dealer": "asal-al-haibah-used-cars",
+  "realLogoFirst": true,
+  "publishedBranding": true,
+  "creationMethod": "sourced-logo-imagegen-redraw",
+  "dealerApproved": false,
+  "approvalStatus": "redraw-and-compact-adaptation-not-dealer-approved",
+  "usageStatus": "public-preview-only",
+  "observedAt": "2026-10-19T20:00:47.391752Z",
+  "publicSources": [
+    {
+      "url": "https://www.arabwheels.ae/used-cars/dealers/asal-al-haibah-used-cars-showroom-in-uae/",
+      "observedAt": "2026-10-19T20:00:47.391752Z"
+    },
+    {
+      "url": "https://www.arabwheels.ae/used-cars/jeep-cherokee-2019-for-sale-in-sharjah-73717",
+      "observedAt": "2026-10-19T20:00:47.391752Z"
+    },
+    {
+      "url": "https://www.arabwheels.ae/used-cars/chevrolet-silverado-2022-for-sale-in-sharjah-73733",
+      "observedAt": "2026-10-19T20:00:47.391752Z"
+    },
+    {
+      "url": "https://www.arabwheels.ae/used-cars/toyota-land-cruiser-2021-for-sale-in-sharjah-73753",
+      "observedAt": "2026-10-19T20:00:47.391752Z"
+    }
+  ],
+  "originals": [
+    {
+      "path": "branding/source-original.jpg",
+      "sha256": "4d9a1ddb33658531531752643cd34a4d118ab8bf5451a5decac9872da54a1570",
+      "url": "https://cache3.arabwheels.ae/system/dealerships/dealers/000/001/205/original/1205.jpg?1782914698",
+      "observedAt": "2026-10-19T20:00:47.391752Z",
+      "identityStatus": "public-profile-identity-reference"
+    }
+  ],
+  "logoResearch": "Exact ArabWheels public dealer profile displays ASL AL HAIBAH / FOR USED CARS. This source spelling is retained in the faithful redraw; retained business identity remains Asal Al Haibah Used Cars.",
+  "visualReview": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Red wings, three stars and black wheel retained. Full source words visually checked.",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T20:58:18.845Z",
+    "master": {
+      "path": "branding/generated-primary.png",
+      "sha256": "3b5072ad7b93fbe187ea185e9e60da1e055d17f5ec3e0ce1f0c24a9619f52c1e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-400bb3d9-af1d-4196-a80d-2bdbad0e23aa",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "e98534860e1ebf119b782b1c997d9356039827b7265b2efbe3c3b433e3f721ab",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-400bb3d9-af1d-4196-a80d-2bdbad0e23aa",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-primary.png",
+          "sourceSha256": "3b5072ad7b93fbe187ea185e9e60da1e055d17f5ec3e0ce1f0c24a9619f52c1e",
+          "rectangle": {
+            "left": 0,
+            "top": 0,
+            "width": 882,
+            "height": 724
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-inverse.png",
+      "sha256": "cacac92949f6f4755887604797cec33b6a71a3d2b7eb7544aca7c687d0208dd0",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-143d5c28-9cd6-486a-a852-1ff06de39fb3",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-primary.png",
+        "sha256": "3b5072ad7b93fbe187ea185e9e60da1e055d17f5ec3e0ce1f0c24a9619f52c1e",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-400bb3d9-af1d-4196-a80d-2bdbad0e23aa",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-inverse.png",
+        "sha256": "cacac92949f6f4755887604797cec33b6a71a3d2b7eb7544aca7c687d0208dd0",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-143d5c28-9cd6-486a-a852-1ff06de39fb3",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-inverse.png",
+        "sha256": "cacac92949f6f4755887604797cec33b6a71a3d2b7eb7544aca7c687d0208dd0",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-143d5c28-9cd6-486a-a852-1ff06de39fb3",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113",
+          "#101820"
+        ],
+        "onAccent": [
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ]
+      },
+      "notes": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Red wings, three stars and black wheel retained. Full source words visually checked."
+    },
+    "compactMarkStatus": "unapproved-preview-adaptation",
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T20:58:18.845Z",
+      "widths": [
+        32,
+        64
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820"
+      ],
+      "notes": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Red wings, three stars and black wheel retained. Full source words visually checked."
+    }
+  },
+  "generationPrompts": [
+    {
+      "role": "primary",
+      "prompt": "Faithfully redraw the provided dealer logo. Preserve its three red stars, red outstretched wings and black wheel motif. One compact geometric wheel-and-wings emblem to the left, bold exact text ASL AL HAIBAH to the right and FOR USED CARS beneath. Clean red #bc141e, near-black #181a20, transparent background, no opaque backing. Smooth substantial shapes, excellent automotive logo quality. Wide horizontal lockup with a compact approximately square emblem legible at 32px. No gradients, no glows, no shadows, no extra text.",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-400bb3d9-af1d-4196-a80d-2bdbad0e23aa",
+      "modelVersion": null,
+      "returnedArtifact": "exec-400bb3d9-af1d-4196-a80d-2bdbad0e23aa.png",
+      "note": "The tool exposed the returned artifact identifier and did not expose a model version."
+    },
+    {
+      "role": "inverse",
+      "prompt": "Create the compact inverse surface variant of the left-hand emblem in this logo. ONLY the compact left emblem, absolutely no wordmark or business text. Preserve its existing shape, initials where they form the symbol, geometry, motif, proportions and open counters. Re-render entirely in one solid neutral cool silver #b9bec2, substantial flat strokes and smooth boundaries. Dark fills become open transparent negative space with the motif represented in silver. Center the one entire compact emblem on a square true transparent canvas, about 80% of canvas width, no other graphics. No pure white ink. No background, no mockup, no labels, no gradient, no shadow, no texture, no distressed edges, no extra lines. Clean automotive identity asset with a recognizable silhouette at 32 pixels.",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-143d5c28-9cd6-486a-a852-1ff06de39fb3",
+      "modelVersion": null,
+      "returnedArtifact": "exec-143d5c28-9cd6-486a-a852-1ff06de39fb3.png",
+      "note": "The tool exposed the returned artifact identifier and did not expose a model version."
+    }
+  ]
+}

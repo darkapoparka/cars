@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-ishfaq-used-cars-llc",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T19:58:47.752406Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "ocd-45541",
+      "title": "Jeep Wrangler Sport S 2015",
+      "make": "Jeep",
+      "model": "Wrangler Sport S",
+      "year": 2015,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/ocd-45541.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Jeep/Wrangler-Sport-S/?id=45541",
+      "observedAt": "2026-10-19T19:58:47.752406Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "SUV",
+      "transmission": "Auto",
+      "fuel": "Petrol",
+      "color": "Gray",
+      "mileageValue": 134000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "ocd-45551",
+      "title": "Audi Q7 45 TFSI Quattro 2016",
+      "make": "Audi",
+      "model": "Q7 45 TFSI Quattro",
+      "year": 2016,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/ocd-45551.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Audi/Q7-45-TFSI-Quattro/?id=45551",
+      "observedAt": "2026-10-19T19:58:47.752406Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "SUV",
+      "transmission": "Auto",
+      "fuel": "Petrol",
+      "color": "Brown",
+      "mileageValue": 187000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "ocd-45567",
+      "title": "Tesla Model 3 Long Range 2024",
+      "make": "Tesla",
+      "model": "Model 3 Long Range",
+      "year": 2024,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/ocd-45567.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Tesla/Model-3-Long-Range/?id=45567",
+      "observedAt": "2026-10-19T19:58:47.752406Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Electric",
+      "transmission": "Auto",
+      "fuel": "Electric",
+      "color": "Gray",
+      "mileageValue": 8400,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

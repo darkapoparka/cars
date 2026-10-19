@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-sammarraie-used-cars",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://gcccardeals.com/en-ae/dealers/al-sammarraie-used-cars-tr-sole-proprietorship",
+      "observedAt": "2026-10-19T20:00:42.047781Z",
+      "supports": [
+        "public-business-trading-name",
+        "dealer-attributed-catalogue",
+        "business-location"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "research": {
+    "observedAt": "2026-10-19T20:00:42.047781Z",
+    "profileUrl": "https://gcccardeals.com/en-ae/dealers/al-sammarraie-used-cars-tr-sole-proprietorship",
+    "profileSha256": "f8d292224db0e892eacdcd215c795225b5bd535820373d448c0f85e191042f7a",
+    "classification": "public-marketplace-dealer-profile-and-listing-snapshot",
+    "directDealerPostingVerified": false,
+    "profileClaimed": false,
+    "limitation": "Seller attribution comes from the public marketplace profile. Current physical availability and direct dealer posting are not independently confirmed.",
+    "notes": [
+      "Original OneClickDrive dealer URL redirects to the general UAE marketplace and is not used for current stock.",
+      "DubiCars exact dealer profile presently has no active ads. GCC Car Deals seller-specific profile exposes separately dated Dubizzle-attributed stock snapshots; current physical availability remains unconfirmed.",
+      "Street address, business phone, email, owned website and hours omitted pending a reliable current business source."
+    ],
+    "contactReview": "Only business-labeled dealer call numbers retained. Marketplace relay/support numbers and personal-looking staff contacts excluded.",
+    "photoSources": [
+      {
+        "listingId": "gcc-1",
+        "listingUrl": "https://gcccardeals.com/en-ae/dealers/al-sammarraie-used-cars-tr-sole-proprietorship",
+        "sourceImageUrl": "https://dbz-images.dubizzle.com/images/2026/10/17/bed41cd32a88401a9d1eef1f2760dd64-.jpg?impolicy=dpv",
+        "observedAt": "2026-10-19T20:00:42.047781Z",
+        "retainedPath": "dealer-stock/gcc-1.jpg",
+        "sha256": "ef11a9201fb9f98eb853352795bf2b678653d7f93c87b361332e01f16d7d6b41",
+        "bytes": 158512,
+        "width": 1066,
+        "height": 800,
+        "operation": "resize-within-1280-without-upscale-and-JPEG-quality-82-or-83"
+      },
+      {
+        "listingId": "gcc-2",
+        "listingUrl": "https://gcccardeals.com/en-ae/dealers/al-sammarraie-used-cars-tr-sole-proprietorship",
+        "sourceImageUrl": "https://dbz-images.dubizzle.com/images/2026/10/17/28364a3a4c7c41bba5138a18ef8a769b-.jpg?impolicy=dpv",
+        "observedAt": "2026-10-19T20:00:42.047781Z",
+        "retainedPath": "dealer-stock/gcc-2.jpg",
+        "sha256": "76dd2a41edec5ead0785767a691dd7c28b6bc0a42f17792e876585c35193859b",
+        "bytes": 129584,
+        "width": 1066,
+        "height": 800,
+        "operation": "resize-within-1280-without-upscale-and-JPEG-quality-82-or-83"
+      },
+      {
+        "listingId": "gcc-3",
+        "listingUrl": "https://gcccardeals.com/en-ae/dealers/al-sammarraie-used-cars-tr-sole-proprietorship",
+        "sourceImageUrl": "https://dbz-images.dubizzle.com/images/2026/10/17/569d03cff1364e868f9c556a716302e3-.jpg?impolicy=dpv",
+        "observedAt": "2026-10-19T20:00:42.047781Z",
+        "retainedPath": "dealer-stock/gcc-3.jpg",
+        "sha256": "7c480e9b3543797702fce50f5bbdc9269e10a6b55eb9e3f8ae393af517d68d02",
+        "bytes": 151383,
+        "width": 1066,
+        "height": 800,
+        "operation": "resize-within-1280-without-upscale-and-JPEG-quality-82-or-83"
+      }
+    ]
+  }
+}

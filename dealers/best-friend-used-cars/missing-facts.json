@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "dealer": "best-friend-used-cars",
+  "missing": [
+    {
+      "field": "business.email",
+      "required": false,
+      "reason": "No unambiguous current public business value verified; omitted."
+    },
+    {
+      "field": "business.website",
+      "required": false,
+      "reason": "No unambiguous current public business value verified; omitted."
+    },
+    {
+      "field": "business.hours",
+      "required": false,
+      "reason": "No unambiguous current public business value verified; omitted."
+    },
+    {
+      "field": "prices",
+      "required": false,
+      "reason": "All listing prices omitted under the public-repository scope."
+    }
+  ],
+  "blocking": []
+}

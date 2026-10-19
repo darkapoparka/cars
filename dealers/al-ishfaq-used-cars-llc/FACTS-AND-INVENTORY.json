@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-ishfaq-used-cars-llc",
+  "businessFacts": "business-facts.json",
+  "stock": "stock.json",
+  "inventoryKind": "dated-listing-snapshot",
+  "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+  "sources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/sharjah/al-ishfaq-used-cars-llc",
+      "observedAt": "2026-10-19T19:58:47.752406Z",
+      "supports": [
+        "public-business-trading-name",
+        "dealer-attributed-catalogue",
+        "business-location",
+        "public-business-phone"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Jeep/Wrangler-Sport-S/?id=45541",
+      "observedAt": "2026-10-19T19:58:47.752406Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Audi/Q7-45-TFSI-Quattro/?id=45551",
+      "observedAt": "2026-10-19T19:58:47.752406Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Tesla/Model-3-Long-Range/?id=45567",
+      "observedAt": "2026-10-19T19:58:47.752406Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    }
+  ]
+}

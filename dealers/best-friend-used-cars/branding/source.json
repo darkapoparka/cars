@@ -1,0 +1,216 @@
+{
+  "schemaVersion": 1,
+  "dealer": "best-friend-used-cars",
+  "realLogoFirst": true,
+  "publishedBranding": true,
+  "creationMethod": "sourced-logo-imagegen-redraw",
+  "dealerApproved": false,
+  "approvalStatus": "redraw-and-compact-adaptation-not-dealer-approved",
+  "usageStatus": "public-preview-only",
+  "observedAt": "2026-10-19T19:58:48.920399Z",
+  "publicSources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/sharjah/best-friend-used-cars",
+      "observedAt": "2026-10-19T19:58:48.920399Z"
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Mercedes-Benz/C300-Luxury-/?id=16176",
+      "observedAt": "2026-10-19T19:58:48.920399Z"
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Hyundai/Kona-Other/?id=16157",
+      "observedAt": "2026-10-19T19:58:48.920399Z"
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Kia/Sedona-LX/?id=16163",
+      "observedAt": "2026-10-19T19:58:48.920399Z"
+    }
+  ],
+  "originals": [
+    {
+      "path": "branding/source-original.png",
+      "sha256": "6b86ce569dbea840d9bcb9a789900e3c8b678813bc78ccdd0d6baf7b32c29ef1",
+      "url": "https://static.oneclickdrive.com/application/views/img/company/bestfriend.png",
+      "observedAt": "2026-10-19T19:58:48.920399Z",
+      "identityStatus": "public-profile-identity-reference"
+    }
+  ],
+  "logoResearch": "Exact public dealer-profile logo was visually inspected. Low-resolution or opaque artwork was faithfully redrawn with imagegen; no dealer approval is claimed.",
+  "visualReview": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Three rounded wing bars retained; dark grey and silver variants. Full orange wordmark retained as master; compact surface avoids low-contrast orange small type.",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T20:58:26.695Z",
+    "master": {
+      "path": "branding/generated-mark.png",
+      "sha256": "c967b9d28ab2151f441113bb8288c88fc9ca394a688aa720289b835e0787e105",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-483c569b-8bc4-4989-99a5-b639e5e975f1",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-pair.png",
+          "sourceSha256": "b8bf24a8b3531ef539401c530833af1f0be3044c50b812cdcf4e0b62bc0a782d",
+          "rectangle": {
+            "left": 0,
+            "top": 0,
+            "width": 887,
+            "height": 887
+          }
+        }
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "c967b9d28ab2151f441113bb8288c88fc9ca394a688aa720289b835e0787e105",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-483c569b-8bc4-4989-99a5-b639e5e975f1",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-pair.png",
+          "sourceSha256": "b8bf24a8b3531ef539401c530833af1f0be3044c50b812cdcf4e0b62bc0a782d",
+          "rectangle": {
+            "left": 0,
+            "top": 0,
+            "width": 887,
+            "height": 887
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-dark-surface.png",
+      "sha256": "82d567f6453fc2b7536a32715b1e1c4db0285ab3e05e411e5aec2a3ad16aebf4",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-483c569b-8bc4-4989-99a5-b639e5e975f1",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-pair.png",
+          "sourceSha256": "b8bf24a8b3531ef539401c530833af1f0be3044c50b812cdcf4e0b62bc0a782d",
+          "rectangle": {
+            "left": 887,
+            "top": 0,
+            "width": 887,
+            "height": 887
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-mark.png",
+        "sha256": "c967b9d28ab2151f441113bb8288c88fc9ca394a688aa720289b835e0787e105",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-483c569b-8bc4-4989-99a5-b639e5e975f1",
+          "modelVersion": null,
+          "transformation": {
+            "operation": "rectangular-extract-without-recolour-or-redrawing",
+            "source": "branding/generated-pair.png",
+            "sourceSha256": "b8bf24a8b3531ef539401c530833af1f0be3044c50b812cdcf4e0b62bc0a782d",
+            "rectangle": {
+              "left": 0,
+              "top": 0,
+              "width": 887,
+              "height": 887
+            }
+          }
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-dark-surface.png",
+        "sha256": "82d567f6453fc2b7536a32715b1e1c4db0285ab3e05e411e5aec2a3ad16aebf4",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-483c569b-8bc4-4989-99a5-b639e5e975f1",
+          "modelVersion": null,
+          "transformation": {
+            "operation": "rectangular-extract-without-recolour-or-redrawing",
+            "source": "branding/generated-pair.png",
+            "sourceSha256": "b8bf24a8b3531ef539401c530833af1f0be3044c50b812cdcf4e0b62bc0a782d",
+            "rectangle": {
+              "left": 887,
+              "top": 0,
+              "width": 887,
+              "height": 887
+            }
+          }
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-silver.png",
+        "sha256": "c5b873cfbde33c818d84f9c8ef830ad8109bb76f014ff36f996a9ac05f37854f",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-ff8dce75-ef6a-483b-8d7e-12478f08b1c5",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113",
+          "#101820"
+        ],
+        "onAccent": [
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ]
+      },
+      "notes": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Three rounded wing bars retained; dark grey and silver variants. Full orange wordmark retained as master; compact surface avoids low-contrast orange small type."
+    },
+    "compactMarkStatus": "unapproved-preview-adaptation",
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T20:58:26.695Z",
+      "widths": [
+        32,
+        64
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820"
+      ],
+      "notes": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Three rounded wing bars retained; dark grey and silver variants. Full orange wordmark retained as master; compact surface avoids low-contrast orange small type."
+    }
+  },
+  "generationPrompts": [
+    {
+      "role": "primary",
+      "prompt": "Use case: logo-brand. Faithful full redraw of attached weak dealer logo as transparent flat horizontal brand asset. Keep the recognizable silver three-tier wing motif to the left and the orange wordmark to the right; replace hairline wing outlines with substantial simple silver-gray strokes, and crisp bold exact text \"BEST FRIEND\" / \"USED CARS\". A premium calm sans serif, rich warm orange and medium silver gray. Legibility at32px, a compact wing can be extracted at left. Absolutely no extra tiny \"cars\" fragment, no backdrop, no gradients, no glow/shadow, no new symbol. Horizontal3:1 transparent lockup, generous space between wing and text. Unapproved faithful redraw.",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-f92c999c-a793-42d2-add1-6ab5caf01bc4",
+      "modelVersion": null,
+      "returnedArtifact": "exec-f92c999c-a793-42d2-add1-6ab5caf01bc4.png",
+      "note": "The tool exposed the returned artifact identifier and did not expose a model version."
+    },
+    {
+      "role": "pair",
+      "prompt": "Use case: professional logo variant artwork. On ONE truly transparent canvas place TWO separated versions of the SAME compact emblem, equal sized, side by side with a wide empty transparent gap. NO WORDS ANYWHERE. The LEFT emblem should faithfully adapt the provided dealer logo using its three stacked wing bars. Compose the three rounded tapering bars in a compact 1.7:1 shape, exact motif, use flat dark grey #62686c on the left. The RIGHT emblem must repeat EXACTLY the same geometry in one uniform medium-light grey #b9bec2, with all counters completely transparent. No pure white ink at all. Each emblem must be approximately square with substantial strokes, clean vector-like boundaries and all negative spaces transparent. No background, no label, no text, no shadow, no gradient, no glow, no texture, no distressed edges, no tiny lines, no mockup. Both emblems should be crisp, beautifully balanced, and legible at 32 pixels. Fit each entire symbol within its own square half of a 2:1 canvas, margins around each and clear central gap.",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-483c569b-8bc4-4989-99a5-b639e5e975f1",
+      "modelVersion": null,
+      "returnedArtifact": "exec-483c569b-8bc4-4989-99a5-b639e5e975f1.png",
+      "note": "The tool exposed the returned artifact identifier and did not expose a model version."
+    },
+    {
+      "role": "silver",
+      "prompt": "Use case: logo-brand. Produce the matching LIGHT SILVER surface version of this logo. RE-RENDER with exactly one flat light silver ink #c7d4dc for all visible artwork. Preserve the exact business name, letterforms, spacing, emblem shape and arrangement. Transparent knockout areas between strokes must stay open and completely transparent. For the badge interiors, turn the dark solid fill into transparent negative space and preserve the car/crown/star/outline essential motifs as substantial silver strokes. Very smooth clean geometric hard boundaries. No white ink, no black ink, no dark navy ink. Do not distress the mark. No texture, no gradient, no shading, no shadow, no speckles, no background. A true transparent flat raster identity asset in pale silver. Maintain wide horizontal composition with emblem at left and wordmark at right. Keep the full exact same business text with correct spelling.",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-ff8dce75-ef6a-483b-8d7e-12478f08b1c5",
+      "modelVersion": null,
+      "returnedArtifact": "exec-ff8dce75-ef6a-483b-8d7e-12478f08b1c5.png",
+      "note": "The tool exposed the returned artifact identifier and did not expose a model version."
+    }
+  ]
+}

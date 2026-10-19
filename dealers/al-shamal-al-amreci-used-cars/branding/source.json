@@ -1,0 +1,216 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-shamal-al-amreci-used-cars",
+  "realLogoFirst": true,
+  "publishedBranding": true,
+  "creationMethod": "sourced-logo-imagegen-redraw",
+  "dealerApproved": false,
+  "approvalStatus": "redraw-and-compact-adaptation-not-dealer-approved",
+  "usageStatus": "public-preview-only",
+  "observedAt": "2026-10-19T19:58:47.888405Z",
+  "publicSources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/sharjah/al-shamal-al-amreci-used-cars",
+      "observedAt": "2026-10-19T19:58:47.888405Z"
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Land-Rover/Range-Rover-Velar-R-Dynamic/?id=10072",
+      "observedAt": "2026-10-19T19:58:47.888405Z"
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Nissan/Rogue-SV/?id=10073",
+      "observedAt": "2026-10-19T19:58:47.888405Z"
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Lexus/IS-Series-F-Sport/?id=10064",
+      "observedAt": "2026-10-19T19:58:47.888405Z"
+    }
+  ],
+  "originals": [
+    {
+      "path": "branding/source-original.png",
+      "sha256": "bf0fbcb4d0aad520b8d3bb39ea88c068c1faccc4bcde25da9d8926a52be57853",
+      "url": "https://static.oneclickdrive.com/application/views/img/company/xa.png",
+      "observedAt": "2026-10-19T19:58:47.888405Z",
+      "identityStatus": "public-profile-identity-reference"
+    }
+  ],
+  "logoResearch": "Exact public dealer-profile logo was visually inspected. Low-resolution or opaque artwork was faithfully redrawn with imagegen; no dealer approval is claimed.",
+  "visualReview": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Published angular AA, aircraft and gold motif retained. Compact gold toned for visibility on light surfaces.",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T20:57:57.390Z",
+    "master": {
+      "path": "branding/generated-mark.png",
+      "sha256": "c617a517a63da8375c7c863de6769b351faef42739f7c24148677d3d7bff3086",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bbe34a28-45fa-49a3-ad33-b4119f7f1544",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-pair.png",
+          "sourceSha256": "2782cf1763065fc8da1b30d13bfd84fe73c79becc66ef2e43272de5d847b5c4a",
+          "rectangle": {
+            "left": 0,
+            "top": 0,
+            "width": 887,
+            "height": 887
+          }
+        }
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "c617a517a63da8375c7c863de6769b351faef42739f7c24148677d3d7bff3086",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bbe34a28-45fa-49a3-ad33-b4119f7f1544",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-pair.png",
+          "sourceSha256": "2782cf1763065fc8da1b30d13bfd84fe73c79becc66ef2e43272de5d847b5c4a",
+          "rectangle": {
+            "left": 0,
+            "top": 0,
+            "width": 887,
+            "height": 887
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-dark-surface.png",
+      "sha256": "c48f4de10b4eb968c8e60924df43f50574aab4b895238f4c3d3c33031c827e5a",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bbe34a28-45fa-49a3-ad33-b4119f7f1544",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-pair.png",
+          "sourceSha256": "2782cf1763065fc8da1b30d13bfd84fe73c79becc66ef2e43272de5d847b5c4a",
+          "rectangle": {
+            "left": 887,
+            "top": 0,
+            "width": 887,
+            "height": 887
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-mark.png",
+        "sha256": "c617a517a63da8375c7c863de6769b351faef42739f7c24148677d3d7bff3086",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-bbe34a28-45fa-49a3-ad33-b4119f7f1544",
+          "modelVersion": null,
+          "transformation": {
+            "operation": "rectangular-extract-without-recolour-or-redrawing",
+            "source": "branding/generated-pair.png",
+            "sourceSha256": "2782cf1763065fc8da1b30d13bfd84fe73c79becc66ef2e43272de5d847b5c4a",
+            "rectangle": {
+              "left": 0,
+              "top": 0,
+              "width": 887,
+              "height": 887
+            }
+          }
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-dark-surface.png",
+        "sha256": "c48f4de10b4eb968c8e60924df43f50574aab4b895238f4c3d3c33031c827e5a",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-bbe34a28-45fa-49a3-ad33-b4119f7f1544",
+          "modelVersion": null,
+          "transformation": {
+            "operation": "rectangular-extract-without-recolour-or-redrawing",
+            "source": "branding/generated-pair.png",
+            "sourceSha256": "2782cf1763065fc8da1b30d13bfd84fe73c79becc66ef2e43272de5d847b5c4a",
+            "rectangle": {
+              "left": 887,
+              "top": 0,
+              "width": 887,
+              "height": 887
+            }
+          }
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-silver.png",
+        "sha256": "52c71070e00dc0fb91af81a4eb9fbf7c72bff626a24a9d6fb3113d1d8d266706",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-bc16d625-dd0d-45d0-8627-ed2380881396",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113",
+          "#101820"
+        ],
+        "onAccent": [
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ]
+      },
+      "notes": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Published angular AA, aircraft and gold motif retained. Compact gold toned for visibility on light surfaces."
+    },
+    "compactMarkStatus": "unapproved-preview-adaptation",
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T20:57:57.390Z",
+      "widths": [
+        32,
+        64
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820"
+      ],
+      "notes": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Published angular AA, aircraft and gold motif retained. Compact gold toned for visibility on light surfaces."
+    }
+  },
+  "generationPrompts": [
+    {
+      "role": "primary",
+      "prompt": "Use case: logo-brand. Faithful clean redraw of the attached low-resolution gold dealer mark. Preserve the stylized interlocking angular A silhouette and low swept gold underline and small angled glyph on right; simplify fragile stray hairs into deliberate substantial geometric strokes, keep recognizable motif and gold colour. Create a transparent horizontal lockup with this compact gold emblem at left and exact dark navy English wordmark on right in two strong clear lines: \"AL SHAMAL AL AMRECI\" / \"USED CARS\". Identity spelling must be exact. Premium restrained typography, flat gold colour, no gradients/shadow, no background, no additional symbols. Emblem must remain recognizable at32px. Wide3:1 composition and generous space between emblem and wordmark to extract emblem separately. Unapproved faithful design proposal.",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-7b6c2643-cec8-4919-8839-caedbe4a17b5",
+      "modelVersion": null,
+      "returnedArtifact": "exec-7b6c2643-cec8-4919-8839-caedbe4a17b5.png",
+      "note": "The tool exposed the returned artifact identifier and did not expose a model version."
+    },
+    {
+      "role": "pair",
+      "prompt": "Use case: professional logo variant artwork. On ONE truly transparent canvas place TWO separated versions of the SAME compact emblem, equal sized, side by side with a wide empty transparent gap. NO WORDS ANYWHERE. The LEFT emblem should faithfully adapt the provided dealer logo using its angular interwoven double A and plane motif. Keep the distinctive AA geometry, shorten the long underline to the emblem width, use a darker flat gold #916b18 so it is visible on white. The RIGHT emblem must repeat EXACTLY the same geometry in one uniform medium-light grey #b9bec2, with all counters completely transparent. No pure white ink at all. Each emblem must be approximately square with substantial strokes, clean vector-like boundaries and all negative spaces transparent. No background, no label, no text, no shadow, no gradient, no glow, no texture, no distressed edges, no tiny lines, no mockup. Both emblems should be crisp, beautifully balanced, and legible at 32 pixels. Fit each entire symbol within its own square half of a 2:1 canvas, margins around each and clear central gap.",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-bbe34a28-45fa-49a3-ad33-b4119f7f1544",
+      "modelVersion": null,
+      "returnedArtifact": "exec-bbe34a28-45fa-49a3-ad33-b4119f7f1544.png",
+      "note": "The tool exposed the returned artifact identifier and did not expose a model version."
+    },
+    {
+      "role": "silver",
+      "prompt": "Use case: logo-brand. Produce the matching LIGHT SILVER surface version of this logo. RE-RENDER with exactly one flat light silver ink #c7d4dc for all visible artwork. Preserve the exact business name, letterforms, spacing, emblem shape and arrangement. Transparent knockout areas between strokes must stay open and completely transparent. For the badge interiors, turn the dark solid fill into transparent negative space and preserve the car/crown/star/outline essential motifs as substantial silver strokes. Very smooth clean geometric hard boundaries. No white ink, no black ink, no dark navy ink. Do not distress the mark. No texture, no gradient, no shading, no shadow, no speckles, no background. A true transparent flat raster identity asset in pale silver. Maintain wide horizontal composition with emblem at left and wordmark at right. Keep the full exact same business text with correct spelling.",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-bc16d625-dd0d-45d0-8627-ed2380881396",
+      "modelVersion": null,
+      "returnedArtifact": "exec-bc16d625-dd0d-45d0-8627-ed2380881396.png",
+      "note": "The tool exposed the returned artifact identifier and did not expose a model version."
+    }
+  ]
+}

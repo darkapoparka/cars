@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "dealer": "best-friend-used-cars",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/sharjah/best-friend-used-cars",
+      "observedAt": "2026-10-19T19:58:48.920399Z",
+      "supports": [
+        "public-business-trading-name",
+        "dealer-attributed-catalogue",
+        "business-location",
+        "public-business-phone"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Mercedes-Benz/C300-Luxury-/?id=16176",
+      "observedAt": "2026-10-19T19:58:48.920399Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Hyundai/Kona-Other/?id=16157",
+      "observedAt": "2026-10-19T19:58:48.920399Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Kia/Sedona-LX/?id=16163",
+      "observedAt": "2026-10-19T19:58:48.920399Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "research": {
+    "observedAt": "2026-10-19T19:58:48.920399Z",
+    "profileUrl": "https://www.oneclickdrive.com/company/sharjah/best-friend-used-cars",
+    "profileSha256": "9baa38d7fa99fb1d8039f6ed80c23b40b8a78498719dc2a33fe416e14c9ab74a",
+    "classification": "public-marketplace-dealer-profile-and-listing-snapshot",
+    "directDealerPostingVerified": false,
+    "profileClaimed": false,
+    "limitation": "Seller attribution comes from the public marketplace profile. Current physical availability and direct dealer posting are not independently confirmed.",
+    "notes": [
+      "Marketplace profile and detail-page timing blocks conflict or appear generic; opening hours omitted. Platform WhatsApp relay is excluded."
+    ],
+    "contactReview": "Only business-labeled dealer call numbers retained. Marketplace relay/support numbers and personal-looking staff contacts excluded.",
+    "photoSources": [
+      {
+        "listingId": "ocd-16176",
+        "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Mercedes-Benz/C300-Luxury-/?id=16176",
+        "sourceImageUrl": "https://static.oneclickdrive.com/uploads/cars/Mercedes-Benz_C-Class_2018_16176_16176_9764345864-16_small.jpg",
+        "observedAt": "2026-10-19T19:58:48.920399Z",
+        "retainedPath": "dealer-stock/ocd-16176.jpg",
+        "sha256": "cfde09ec23525a430f66b23d489a2fd380a969a74bfe9b64b6fecb2f5d2bc074",
+        "bytes": 21220,
+        "width": 450,
+        "height": 395,
+        "operation": "resize-within-1280-without-upscale-and-JPEG-quality-82-or-83"
+      },
+      {
+        "listingId": "ocd-16157",
+        "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Hyundai/Kona-Other/?id=16157",
+        "sourceImageUrl": "https://static.oneclickdrive.com/uploads/cars/Hyundai_Kona_2020_16157_16157_9735551961-13_small.jpg",
+        "observedAt": "2026-10-19T19:58:48.920399Z",
+        "retainedPath": "dealer-stock/ocd-16157.jpg",
+        "sha256": "e57011c38b1ec8af1cb0eff310413af00cd1035d3982c8334ccfa0849903448d",
+        "bytes": 30428,
+        "width": 450,
+        "height": 395,
+        "operation": "resize-within-1280-without-upscale-and-JPEG-quality-82-or-83"
+      },
+      {
+        "listingId": "ocd-16163",
+        "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Kia/Sedona-LX/?id=16163",
+        "sourceImageUrl": "https://static.oneclickdrive.com/uploads/cars/Kia_Sedona_2016_16163_16163_9744575627-11_small.jpg",
+        "observedAt": "2026-10-19T19:58:48.920399Z",
+        "retainedPath": "dealer-stock/ocd-16163.jpg",
+        "sha256": "9a0a9ba470920ecc68b9a9a690bc1ce1d88f3109418dcbafb76865b01475a84b",
+        "bytes": 37779,
+        "width": 450,
+        "height": 395,
+        "operation": "resize-within-1280-without-upscale-and-JPEG-quality-82-or-83"
+      }
+    ]
+  }
+}

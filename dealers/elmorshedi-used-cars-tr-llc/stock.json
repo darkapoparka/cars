@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "dealer": "elmorshedi-used-cars-tr-llc",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T19:58:49.340397Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "ocd-137143",
+      "title": "Hyundai Accent Comfort 2016",
+      "make": "Hyundai",
+      "model": "Accent Comfort",
+      "year": 2016,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/ocd-137143.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Hyundai/Accent-Comfort/?id=137143",
+      "observedAt": "2026-10-19T19:58:49.340397Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Economy",
+      "transmission": "Auto",
+      "fuel": "Petrol",
+      "color": "Silver",
+      "mileageValue": 120000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "ocd-137132",
+      "title": "Mercedes Benz S63 AMG 4Matic Plus 2019",
+      "make": "Mercedes Benz",
+      "model": "S63 AMG 4Matic Plus",
+      "year": 2019,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/ocd-137132.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Mercedes-Benz/S63-AMG-4Matic-Plus/?id=137132",
+      "observedAt": "2026-10-19T19:58:49.340397Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Coupe",
+      "transmission": "Auto",
+      "fuel": "Petrol",
+      "color": "Black",
+      "mileageValue": 46000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "ocd-137144",
+      "title": "Kia Cerato EX 2016",
+      "make": "Kia",
+      "model": "Cerato EX",
+      "year": 2016,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/ocd-137144.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Kia/Cerato-EX/?id=137144",
+      "observedAt": "2026-10-19T19:58:49.340397Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Sedan",
+      "transmission": "Auto",
+      "fuel": "Petrol",
+      "color": "Red",
+      "mileageValue": 119000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

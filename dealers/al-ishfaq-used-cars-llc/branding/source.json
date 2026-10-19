@@ -1,0 +1,163 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-ishfaq-used-cars-llc",
+  "realLogoFirst": true,
+  "publishedBranding": false,
+  "creationMethod": "imagegen-independent-logo-proposal",
+  "dealerApproved": false,
+  "approvalStatus": "independent-proposal-not-dealer-approved",
+  "usageStatus": "public-preview-only",
+  "observedAt": "2026-10-19T19:58:47.752406Z",
+  "publicSources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/sharjah/al-ishfaq-used-cars-llc",
+      "observedAt": "2026-10-19T19:58:47.752406Z"
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Jeep/Wrangler-Sport-S/?id=45541",
+      "observedAt": "2026-10-19T19:58:47.752406Z"
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Audi/Q7-45-TFSI-Quattro/?id=45551",
+      "observedAt": "2026-10-19T19:58:47.752406Z"
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Tesla/Model-3-Long-Range/?id=45567",
+      "observedAt": "2026-10-19T19:58:47.752406Z"
+    }
+  ],
+  "originals": [
+    {
+      "path": "branding/source-original.jpeg",
+      "sha256": "b79e37e611fc17c6013f899f1e70ae6f0315b7f0021cff4d588aa4b517ae70d9",
+      "url": "https://static.oneclickdrive.com/application/views/img/company/1746688882.jpeg",
+      "observedAt": "2026-10-19T19:58:47.752406Z",
+      "identityStatus": "mismatched-marketplace-mark-not-adopted"
+    }
+  ],
+  "logoResearch": "Exact OneClickDrive and ArabWheels dealer profiles both supply a DCB / SHOP 271 logo. The relationship to the retained trading name was not established. That ambiguous mark is retained only as research evidence and not adopted. New exact-name proposal is clearly unapproved.",
+  "visualReview": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Exact AL ISHFAQ USED CARS LLC wordmark and compact I/road proposal; no claim that this is the official logo.",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T20:56:49.740Z",
+    "master": {
+      "path": "branding/generated-primary.png",
+      "sha256": "e09108361a28692a35cb8a995cdd44fab808d0d5f2f1359c8f1e9088c125ccb4",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-966905ee-c9d6-475f-9a3b-b42e7a024c30",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "5b44ca4ada0f254f33a2cc8bcc2546da1e3ac81d42ff9a838e4044dca1600340",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-966905ee-c9d6-475f-9a3b-b42e7a024c30",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-primary.png",
+          "sourceSha256": "e09108361a28692a35cb8a995cdd44fab808d0d5f2f1359c8f1e9088c125ccb4",
+          "rectangle": {
+            "left": 0,
+            "top": 0,
+            "width": 500,
+            "height": 724
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-inverse.png",
+      "sha256": "bf8747a6e52500f5c96e4609988c5853c1cee7374d96675aab7a211dce167833",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-92ce6795-95fa-467e-8797-4e6605026a79",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-primary.png",
+        "sha256": "e09108361a28692a35cb8a995cdd44fab808d0d5f2f1359c8f1e9088c125ccb4",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-966905ee-c9d6-475f-9a3b-b42e7a024c30",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-inverse.png",
+        "sha256": "bf8747a6e52500f5c96e4609988c5853c1cee7374d96675aab7a211dce167833",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-92ce6795-95fa-467e-8797-4e6605026a79",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-inverse.png",
+        "sha256": "bf8747a6e52500f5c96e4609988c5853c1cee7374d96675aab7a211dce167833",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-92ce6795-95fa-467e-8797-4e6605026a79",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113",
+          "#101820"
+        ],
+        "onAccent": [
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ]
+      },
+      "notes": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Exact AL ISHFAQ USED CARS LLC wordmark and compact I/road proposal; no claim that this is the official logo."
+    },
+    "compactMarkStatus": "unapproved-preview-adaptation",
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T20:56:49.740Z",
+      "widths": [
+        32,
+        64
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820"
+      ],
+      "notes": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Exact AL ISHFAQ USED CARS LLC wordmark and compact I/road proposal; no claim that this is the official logo."
+    }
+  },
+  "generationPrompts": [
+    {
+      "role": "primary",
+      "prompt": "Create a refined automotive identity proposal for AL ISHFAQ USED CARS LLC. Exact typography AL ISHFAQ on the first line, USED CARS LLC smaller below. A compact confident emblem to the left: a geometric capital I with an open curved road cutout, restrained dark cobalt #174b82 and near-black. Distinctive but simple, strong generous spacing, bold readable at 32px. Wide horizontal lockup with an approximately square emblem and elegant sturdy modern letterforms. Flat colour, true transparent background. No mockup, no shadow, no gradient, no photographic material, no random swooshes, no slogan. This is an independent proposal, not an approved real logo. Only the business name should be text.",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-966905ee-c9d6-475f-9a3b-b42e7a024c30",
+      "modelVersion": null,
+      "returnedArtifact": "exec-966905ee-c9d6-475f-9a3b-b42e7a024c30.png",
+      "note": "The tool exposed the returned artifact identifier and did not expose a model version."
+    },
+    {
+      "role": "inverse",
+      "prompt": "Create the compact inverse surface variant of the left-hand emblem in this logo. ONLY the compact left emblem, absolutely no wordmark or business text. Preserve its existing shape, initials where they form the symbol, geometry, motif, proportions and open counters. Re-render entirely in one solid neutral cool silver #b9bec2, substantial flat strokes and smooth boundaries. Dark fills become open transparent negative space with the motif represented in silver. Center the one entire compact emblem on a square true transparent canvas, about 80% of canvas width, no other graphics. No pure white ink. No background, no mockup, no labels, no gradient, no shadow, no texture, no distressed edges, no extra lines. Clean automotive identity asset with a recognizable silhouette at 32 pixels.",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-92ce6795-95fa-467e-8797-4e6605026a79",
+      "modelVersion": null,
+      "returnedArtifact": "exec-92ce6795-95fa-467e-8797-4e6605026a79.png",
+      "note": "The tool exposed the returned artifact identifier and did not expose a model version."
+    }
+  ]
+}

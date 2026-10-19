@@ -1,0 +1,172 @@
+{
+  "schemaVersion": 1,
+  "dealer": "elmorshedi-used-cars-tr-llc",
+  "realLogoFirst": true,
+  "publishedBranding": true,
+  "creationMethod": "sourced-logo-imagegen-redraw",
+  "dealerApproved": false,
+  "approvalStatus": "redraw-and-compact-adaptation-not-dealer-approved",
+  "usageStatus": "public-preview-only",
+  "observedAt": "2026-10-19T19:58:49.340397Z",
+  "publicSources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/sharjah/elmorshedi-used-cars-tr-llc",
+      "observedAt": "2026-10-19T19:58:49.340397Z"
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Hyundai/Accent-Comfort/?id=137143",
+      "observedAt": "2026-10-19T19:58:49.340397Z"
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Mercedes-Benz/S63-AMG-4Matic-Plus/?id=137132",
+      "observedAt": "2026-10-19T19:58:49.340397Z"
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Kia/Cerato-EX/?id=137144",
+      "observedAt": "2026-10-19T19:58:49.340397Z"
+    }
+  ],
+  "originals": [
+    {
+      "path": "branding/source-original.png",
+      "sha256": "67daacac04e62f2209b6c489ba1b630d039abb1c6af0107319419a870fe251ff",
+      "url": "https://static.oneclickdrive.com/application/views/img/company/lmorshedi.png",
+      "observedAt": "2026-10-19T19:58:49.340397Z",
+      "identityStatus": "public-profile-identity-reference"
+    }
+  ],
+  "logoResearch": "Exact public dealer-profile logo was visually inspected. Low-resolution or opaque artwork was faithfully redrawn with imagegen; no dealer approval is claimed.",
+  "visualReview": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Published full red/black car-roof wordmark retained. Compact complete racing E with short black/red/gold bars is a separately generated unapproved adaptation; partial-letter crop rejected.",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T20:59:10.061Z",
+    "master": {
+      "path": "branding/generated-primary.png",
+      "sha256": "a1b99fe742baa9ff99318cee5b0d958e218011b15213d5e33c438acee1765aa6",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-62056e2a-af6e-41e4-b398-56b09a31d58a",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-compact.png",
+      "sha256": "6ce39f00fce9fca517bcb6eb0cd0da676b8e9a356278f14724fa2ce975c8cd8e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-b1b359d7-1a60-4ff8-8f18-0e182640bc84",
+        "modelVersion": null
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "f2960194b0f6091aa2a82630e5ecae7a9c6287873a7ce01fb11dd95590ce050c",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-b7afe50f-a954-4359-ae75-f0c20fff5671",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-silver.png",
+          "sourceSha256": "6b756c789c05210d4c2e97bd95fa7f1fe6f4e7ffd0589170eadb292aa84def46",
+          "rectangle": {
+            "left": 0,
+            "top": 290,
+            "width": 282,
+            "height": 275
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-primary.png",
+        "sha256": "a1b99fe742baa9ff99318cee5b0d958e218011b15213d5e33c438acee1765aa6",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-62056e2a-af6e-41e4-b398-56b09a31d58a",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-silver.png",
+        "sha256": "6b756c789c05210d4c2e97bd95fa7f1fe6f4e7ffd0589170eadb292aa84def46",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-b7afe50f-a954-4359-ae75-f0c20fff5671",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-silver.png",
+        "sha256": "6b756c789c05210d4c2e97bd95fa7f1fe6f4e7ffd0589170eadb292aa84def46",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-b7afe50f-a954-4359-ae75-f0c20fff5671",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113",
+          "#101820"
+        ],
+        "onAccent": [
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ]
+      },
+      "notes": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Published full red/black car-roof wordmark retained. Compact complete racing E with short black/red/gold bars is a separately generated unapproved adaptation; partial-letter crop rejected."
+    },
+    "compactMarkStatus": "unapproved-preview-adaptation",
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T20:59:10.061Z",
+      "widths": [
+        32,
+        64
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820"
+      ],
+      "notes": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Published full red/black car-roof wordmark retained. Compact complete racing E with short black/red/gold bars is a separately generated unapproved adaptation; partial-letter crop rejected."
+    }
+  },
+  "generationPrompts": [
+    {
+      "role": "primary",
+      "prompt": "Use case: logo-brand. Faithfully redraw attached weak dealer identity as a refined transparent horizontal logo. Preserve the strong italic ELMORSHEDI English identity, abstract three diagonal speed bars in red/yellow/dark charcoal, and sleek motion/car-line motif. Clean substantial compact three-bar emblem sits at left; exact dominant wordmark \"ELMORSHEDI\", smaller descriptor \"USED CARS TR LLC\" at right in dark charcoal. Preserve red and yellow accents, no black background. Remove duplicated miniature logos, export/import text and other small clutter; do not invent claims. Flat clean substantial strokes, correct exact spelling, legible at32px, premium restraint. No gradients or shadows or mockup. Transparent3:1 horizontal lockup with separate left emblem. Unapproved faithful design redraw.",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-62056e2a-af6e-41e4-b398-56b09a31d58a",
+      "modelVersion": null,
+      "returnedArtifact": "exec-62056e2a-af6e-41e4-b398-56b09a31d58a.png",
+      "note": "The tool exposed the returned artifact identifier and did not expose a model version."
+    },
+    {
+      "role": "compact",
+      "prompt": "Create only a clean compact emblem adaptation of this dealer logo, no business wordmark. Preserve the black italic racing E and three offset racing bars in black, red and gold. Integrate them as ONE approximately square compact symbol: a strong near-black E taking about 80% of the painted area, with one short red speed stripe and one very short dark-gold accent #91671a at its left. The E must be complete, with all three arms and open counters, no fragments of any other letters. Flat substantial geometry, no car roof needed in this compact variant, no words beyond E. True transparent background. No gradient, no shadow, no texture, no mockup, no background. Bold, beautifully spaced, balanced approximately square icon legible at 32px. Explicit unapproved compact adaptation of the published red/black/gold racing identity.",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-b1b359d7-1a60-4ff8-8f18-0e182640bc84",
+      "modelVersion": null,
+      "returnedArtifact": "exec-b1b359d7-1a60-4ff8-8f18-0e182640bc84.png",
+      "note": "The tool exposed the returned artifact identifier and did not expose a model version."
+    },
+    {
+      "role": "silver",
+      "prompt": "Use case: logo-brand. Produce the matching LIGHT SILVER surface version of this logo. RE-RENDER with exactly one flat light silver ink #c7d4dc for all visible artwork. Preserve the exact business name, letterforms, spacing, emblem shape and arrangement. Transparent knockout areas between strokes must stay open and completely transparent. For the badge interiors, turn the dark solid fill into transparent negative space and preserve the car/crown/star/outline essential motifs as substantial silver strokes. Very smooth clean geometric hard boundaries. No white ink, no black ink, no dark navy ink. Do not distress the mark. No texture, no gradient, no shading, no shadow, no speckles, no background. A true transparent flat raster identity asset in pale silver. Maintain wide horizontal composition with emblem at left and wordmark at right. Keep the full exact same business text with correct spelling.",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-b7afe50f-a954-4359-ae75-f0c20fff5671",
+      "modelVersion": null,
+      "returnedArtifact": "exec-b7afe50f-a954-4359-ae75-f0c20fff5671.png",
+      "note": "The tool exposed the returned artifact identifier and did not expose a model version."
+    }
+  ]
+}

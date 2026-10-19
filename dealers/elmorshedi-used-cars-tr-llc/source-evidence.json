@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "dealer": "elmorshedi-used-cars-tr-llc",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/sharjah/elmorshedi-used-cars-tr-llc",
+      "observedAt": "2026-10-19T19:58:49.340397Z",
+      "supports": [
+        "public-business-trading-name",
+        "dealer-attributed-catalogue",
+        "business-location",
+        "public-business-phone"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Hyundai/Accent-Comfort/?id=137143",
+      "observedAt": "2026-10-19T19:58:49.340397Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Mercedes-Benz/S63-AMG-4Matic-Plus/?id=137132",
+      "observedAt": "2026-10-19T19:58:49.340397Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Kia/Cerato-EX/?id=137144",
+      "observedAt": "2026-10-19T19:58:49.340397Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "research": {
+    "observedAt": "2026-10-19T19:58:49.340397Z",
+    "profileUrl": "https://www.oneclickdrive.com/company/sharjah/elmorshedi-used-cars-tr-llc",
+    "profileSha256": "03cc47d9f9e2eb2ba1e05ce3aa4a3968ff61bf8174213020be2bfe9fc040eda5",
+    "classification": "public-marketplace-dealer-profile-and-listing-snapshot",
+    "directDealerPostingVerified": false,
+    "profileClaimed": false,
+    "limitation": "Seller attribution comes from the public marketplace profile. Current physical availability and direct dealer posting are not independently confirmed.",
+    "notes": [
+      "Marketplace profile and detail-page timing blocks conflict or appear generic; opening hours omitted. Platform WhatsApp relay is excluded."
+    ],
+    "contactReview": "Only business-labeled dealer call numbers retained. Marketplace relay/support numbers and personal-looking staff contacts excluded.",
+    "photoSources": [
+      {
+        "listingId": "ocd-137143",
+        "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Hyundai/Accent-Comfort/?id=137143",
+        "sourceImageUrl": "https://static.oneclickdrive.com/uploads/cars/Hyundai_Accent_2016_137143_137143_796261410455-10_small.jpg",
+        "observedAt": "2026-10-19T19:58:49.340397Z",
+        "retainedPath": "dealer-stock/ocd-137143.jpg",
+        "sha256": "6b5e4dbb4efd515a1120c2df7c67f26eaee608f65c12c429517b92a40aa78034",
+        "bytes": 46470,
+        "width": 450,
+        "height": 395,
+        "operation": "resize-within-1280-without-upscale-and-JPEG-quality-82-or-83"
+      },
+      {
+        "listingId": "ocd-137132",
+        "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Mercedes-Benz/S63-AMG-4Matic-Plus/?id=137132",
+        "sourceImageUrl": "https://static.oneclickdrive.com/uploads/cars/Mercedes-Benz_S63-AMG-4Matic+_2019_137132_137132_796244244019-15_small.jpg",
+        "observedAt": "2026-10-19T19:58:49.340397Z",
+        "retainedPath": "dealer-stock/ocd-137132.jpg",
+        "sha256": "e1ce23452f0fc3713d207685e8e50b062d035a97ed19ae527c02dd43f72cf8d2",
+        "bytes": 47088,
+        "width": 450,
+        "height": 395,
+        "operation": "resize-within-1280-without-upscale-and-JPEG-quality-82-or-83"
+      },
+      {
+        "listingId": "ocd-137144",
+        "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Kia/Cerato-EX/?id=137144",
+        "sourceImageUrl": "https://static.oneclickdrive.com/uploads/cars/Kia_Cerato_2016_137144_137144_796263132374-11_small.jpg",
+        "observedAt": "2026-10-19T19:58:49.340397Z",
+        "retainedPath": "dealer-stock/ocd-137144.jpg",
+        "sha256": "331f10cb86af979262593344a79120c2b896dd40bd88bc8890fea7455ea848a6",
+        "bytes": 48151,
+        "width": 450,
+        "height": 395,
+        "operation": "resize-within-1280-without-upscale-and-JPEG-quality-82-or-83"
+      }
+    ]
+  }
+}

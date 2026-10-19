@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-ishfaq-used-cars-llc",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/sharjah/al-ishfaq-used-cars-llc",
+      "observedAt": "2026-10-19T19:58:47.752406Z",
+      "supports": [
+        "public-business-trading-name",
+        "dealer-attributed-catalogue",
+        "business-location",
+        "public-business-phone"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Jeep/Wrangler-Sport-S/?id=45541",
+      "observedAt": "2026-10-19T19:58:47.752406Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Audi/Q7-45-TFSI-Quattro/?id=45551",
+      "observedAt": "2026-10-19T19:58:47.752406Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Tesla/Model-3-Long-Range/?id=45567",
+      "observedAt": "2026-10-19T19:58:47.752406Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "research": {
+    "observedAt": "2026-10-19T19:58:47.752406Z",
+    "profileUrl": "https://www.oneclickdrive.com/company/sharjah/al-ishfaq-used-cars-llc",
+    "profileSha256": "ed7a9a7961ebb0cfd199c82a7a199d07294f33064179827b42f8b60c3dfd5f14",
+    "classification": "public-marketplace-dealer-profile-and-listing-snapshot",
+    "directDealerPostingVerified": false,
+    "profileClaimed": false,
+    "limitation": "Seller attribution comes from the public marketplace profile. Current physical availability and direct dealer posting are not independently confirmed.",
+    "notes": [
+      "Marketplace profile and detail-page timing blocks conflict or appear generic; opening hours omitted. Platform WhatsApp relay is excluded."
+    ],
+    "contactReview": "Only business-labeled dealer call numbers retained. Marketplace relay/support numbers and personal-looking staff contacts excluded.",
+    "photoSources": [
+      {
+        "listingId": "ocd-45541",
+        "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Jeep/Wrangler-Sport-S/?id=45541",
+        "sourceImageUrl": "https://static.oneclickdrive.com/uploads/cars/Jeep-Wrangler-2015_45541_1185853310815-18_small.jpg",
+        "observedAt": "2026-10-19T19:58:47.752406Z",
+        "retainedPath": "dealer-stock/ocd-45541.jpg",
+        "sha256": "468b1f134f904dc5f345b92e14e73a1773262d221a05cabf329434335e4e7eb5",
+        "bytes": 42737,
+        "width": 450,
+        "height": 395,
+        "operation": "resize-within-1280-without-upscale-and-JPEG-quality-82-or-83"
+      },
+      {
+        "listingId": "ocd-45551",
+        "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Audi/Q7-45-TFSI-Quattro/?id=45551",
+        "sourceImageUrl": "https://static.oneclickdrive.com/uploads/cars/Audi-Q7-2016_45551_118575651058-21_small.jpg",
+        "observedAt": "2026-10-19T19:58:47.752406Z",
+        "retainedPath": "dealer-stock/ocd-45551.jpg",
+        "sha256": "e89a7727d9828ebbf211635bd2d3c53b5701e48cfccb4ccf287b4007521a7cba",
+        "bytes": 40931,
+        "width": 450,
+        "height": 395,
+        "operation": "resize-within-1280-without-upscale-and-JPEG-quality-82-or-83"
+      },
+      {
+        "listingId": "ocd-45567",
+        "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Tesla/Model-3-Long-Range/?id=45567",
+        "sourceImageUrl": "https://static.oneclickdrive.com/uploads/cars/Tesla-Model-3-Long-Range-2024_45567_1183447375309-21_small.jpg",
+        "observedAt": "2026-10-19T19:58:47.752406Z",
+        "retainedPath": "dealer-stock/ocd-45567.jpg",
+        "sha256": "97c1096c102420b4b29384fbca97d1ac95d640986ec5cc158cb770830982364b",
+        "bytes": 38047,
+        "width": 450,
+        "height": 395,
+        "operation": "resize-within-1280-without-upscale-and-JPEG-quality-82-or-83"
+      }
+    ]
+  }
+}

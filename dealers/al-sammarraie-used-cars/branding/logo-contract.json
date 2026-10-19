@@ -1,0 +1,241 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-sammarraie-used-cars",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T20:57:51.052Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-independent-logo-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "a8560c43932a9fa66f1f1508b655f09d0983fcd9e381e5050ff3d3b5404918d3",
+      "sourceSha256": "85539dd3707c72bab18e59deceab0a6e2b2b661325e6ae3832fec48f204a6afa"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "99451e6ea34b64dcab1d9bb68860af6e3d1f4e72509623d6265150a07fa8c6b0",
+      "sourceSha256": "d3744d8d9de430a1a210f209ef26d52c49881b85f5285fb09e21d1cf7353c48f"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "99451e6ea34b64dcab1d9bb68860af6e3d1f4e72509623d6265150a07fa8c6b0",
+      "sourceSha256": "d3744d8d9de430a1a210f209ef26d52c49881b85f5285fb09e21d1cf7353c48f"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "85539dd3707c72bab18e59deceab0a6e2b2b661325e6ae3832fec48f204a6afa",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-a90ab8f1-6ae6-4ec2-b396-15e04731a233",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "6ea438363ab7b95c418acdcc0946b90eded95055293046a098b988cfdf0d6a11",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-a90ab8f1-6ae6-4ec2-b396-15e04731a233",
+      "modelVersion": null,
+      "transformation": {
+        "operation": "rectangular-extract-without-recolour-or-redrawing",
+        "source": "branding/generated-primary.png",
+        "sourceSha256": "a65265ee83b5b2853c6cd7808b1ea63f05a61cadbb87008bb65481410892a747",
+        "rectangle": {
+          "left": 0,
+          "top": 0,
+          "width": 451,
+          "height": 887
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "d6662e94a2823b7fdbb880d90728e26c52d5157efd84d2883696f39413da3f8f"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "85539dd3707c72bab18e59deceab0a6e2b2b661325e6ae3832fec48f204a6afa",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a90ab8f1-6ae6-4ec2-b396-15e04731a233",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-sammarraie-used-cars/branding/generated-primary.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "d3744d8d9de430a1a210f209ef26d52c49881b85f5285fb09e21d1cf7353c48f",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-874a1a1f-dc46-4e9b-a0d3-d5ec6ee20688",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-sammarraie-used-cars/branding/generated-inverse.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "d3744d8d9de430a1a210f209ef26d52c49881b85f5285fb09e21d1cf7353c48f",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-874a1a1f-dc46-4e9b-a0d3-d5ec6ee20688",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-sammarraie-used-cars/branding/generated-inverse.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "a65265ee83b5b2853c6cd7808b1ea63f05a61cadbb87008bb65481410892a747",
+      "sha256": "85539dd3707c72bab18e59deceab0a6e2b2b661325e6ae3832fec48f204a6afa",
+      "crop": {
+        "left": 0,
+        "top": 186,
+        "width": 1774,
+        "height": 500
+      },
+      "sourcePath": "branding/generated-primary.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "dfef6dec474f660744f45d3d7132da6885ea1eac9c0bf157f4212c1d86e376e2",
+      "sha256": "d3744d8d9de430a1a210f209ef26d52c49881b85f5285fb09e21d1cf7353c48f",
+      "crop": {
+        "left": 127,
+        "top": 160,
+        "width": 1042,
+        "height": 1027
+      },
+      "sourcePath": "branding/generated-inverse.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "dfef6dec474f660744f45d3d7132da6885ea1eac9c0bf157f4212c1d86e376e2",
+      "sha256": "d3744d8d9de430a1a210f209ef26d52c49881b85f5285fb09e21d1cf7353c48f",
+      "crop": {
+        "left": 127,
+        "top": 160,
+        "width": 1042,
+        "height": 1027
+      },
+      "sourcePath": "branding/generated-inverse.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "3e3a2d783549cb9e8327264bf2cef4298d1ce1c6bc36e3c187e2102604b5f740",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a90ab8f1-6ae6-4ec2-b396-15e04731a233",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-primary.png",
+          "sourceSha256": "a65265ee83b5b2853c6cd7808b1ea63f05a61cadbb87008bb65481410892a747",
+          "rectangle": {
+            "left": 0,
+            "top": 0,
+            "width": 451,
+            "height": 887
+          }
+        }
+      },
+      "sourceReference": "dealers/al-sammarraie-used-cars/branding/generated-mark.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "fa1db9c88ed7434def7b8acdf26d5d51851bee8863e95cc795ff44edb1b16a2d",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-874a1a1f-dc46-4e9b-a0d3-d5ec6ee20688",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-sammarraie-used-cars/branding/generated-inverse.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "6ea438363ab7b95c418acdcc0946b90eded95055293046a098b988cfdf0d6a11",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a90ab8f1-6ae6-4ec2-b396-15e04731a233",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-primary.png",
+          "sourceSha256": "a65265ee83b5b2853c6cd7808b1ea63f05a61cadbb87008bb65481410892a747",
+          "rectangle": {
+            "left": 0,
+            "top": 0,
+            "width": 451,
+            "height": 887
+          }
+        }
+      },
+      "sourceReference": "dealers/al-sammarraie-used-cars/branding/generated-mark.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "d6662e94a2823b7fdbb880d90728e26c52d5157efd84d2883696f39413da3f8f",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a90ab8f1-6ae6-4ec2-b396-15e04731a233",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-primary.png",
+          "sourceSha256": "a65265ee83b5b2853c6cd7808b1ea63f05a61cadbb87008bb65481410892a747",
+          "rectangle": {
+            "left": 0,
+            "top": 0,
+            "width": 451,
+            "height": 887
+          }
+        }
+      },
+      "sourceReference": "dealers/al-sammarraie-used-cars/branding/generated-mark.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T20:57:51.052Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "407e4a7b47c8e9133da88d05765deac18c5e4bd1ef75cb453dcd29002606317b",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-874a1a1f-dc46-4e9b-a0d3-d5ec6ee20688",
+      "modelVersion": null
+    }
+  }
+}

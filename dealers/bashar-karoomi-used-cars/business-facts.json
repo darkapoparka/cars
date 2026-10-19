@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "slug": "bashar-karoomi-used-cars",
+  "dealerId": "ae-sharjah-bashar-karoomi-used-cars",
+  "business": {
+    "name": "Bashar Karoomi Used Cars",
+    "city": "Sharjah",
+    "region": "Sharjah",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "Showroom no. 87, Souq Al Haraj, Sharjah - UAE",
+    "phone": "+971506950599",
+    "phoneDisplay": "+971506950599",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://www.oneclickdrive.com/company/sharjah/bashar-karoomi-used-cars",
+    "hours": "",
+    "sourceUrl": "https://www.oneclickdrive.com/company/sharjah/bashar-karoomi-used-cars",
+    "observedAt": "2026-10-19T19:58:49.152398Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/sharjah/bashar-karoomi-used-cars",
+      "observedAt": "2026-10-19T19:58:49.152398Z",
+      "supports": [
+        "public-business-trading-name",
+        "dealer-attributed-catalogue",
+        "business-location",
+        "public-business-phone"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Land-Rover/Range-Rover-Vogue-Supercharged/?id=66510",
+      "observedAt": "2026-10-19T19:58:49.152398Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Toyota/Avalon-Limited/?id=66529",
+      "observedAt": "2026-10-19T19:58:49.152398Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Ford/Mustang-EcoBoost/?id=66522",
+      "observedAt": "2026-10-19T19:58:49.152398Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    }
+  ]
+}

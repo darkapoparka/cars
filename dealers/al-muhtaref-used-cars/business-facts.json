@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "slug": "al-muhtaref-used-cars",
+  "dealerId": "ae-sharjah-al-muhtaref-used-cars",
+  "business": {
+    "name": "Al Muhtaref Used Cars",
+    "city": "Sharjah",
+    "region": "Sharjah",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "Showroom # 260, Souq Al Haraj, Al Ruqa Al Hamra, Sharjah - UAE",
+    "phone": "+971545009661",
+    "phoneDisplay": "+971545009661",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://www.oneclickdrive.com/company/sharjah/al-muhtaref-used-cars",
+    "hours": "",
+    "sourceUrl": "https://www.oneclickdrive.com/company/sharjah/al-muhtaref-used-cars",
+    "observedAt": "2026-10-19T19:58:47.928405Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/sharjah/al-muhtaref-used-cars",
+      "observedAt": "2026-10-19T19:58:47.928405Z",
+      "supports": [
+        "public-business-trading-name",
+        "dealer-attributed-catalogue",
+        "business-location",
+        "public-business-phone"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/BMW/730li-Exclusive/?id=66722",
+      "observedAt": "2026-10-19T19:58:47.928405Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Land-Rover/Range-Rover-Vogue/?id=66726",
+      "observedAt": "2026-10-19T19:58:47.928405Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Mercedes-Benz/E300/?id=66712",
+      "observedAt": "2026-10-19T19:58:47.928405Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    }
+  ]
+}
