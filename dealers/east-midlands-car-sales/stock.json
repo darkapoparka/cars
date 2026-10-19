@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "dealer": "east-midlands-car-sales",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "listing-1",
+      "title": "2013 Ford C-Max 2.0 TDCi Titanium X 5dr Powershift",
+      "make": "Ford",
+      "model": "C-Max 2.0 TDCi Titanium X 5dr Powershift",
+      "year": 2013,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/listing-1.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/960079294609",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "transmission": "Automatic",
+      "fuel": "Diesel",
+      "mileageValue": 93403,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview. The public advert's vehicle-history panel shows a Cat S/N Advisory. The reviewed advisory does not identify which of these categories applies. This history has not been independently verified."
+    },
+    {
+      "id": "listing-2",
+      "title": "2014 Volkswagen Tiguan 2.0 TDi BlueMotion Tech Match 177 5dr DSG",
+      "make": "Volkswagen",
+      "model": "Tiguan 2.0 TDi BlueMotion Tech Match 177 5dr DSG",
+      "year": 2014,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/listing-2.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/960079277872",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "transmission": "Automatic",
+      "fuel": "Diesel",
+      "mileageValue": 113841,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-3",
+      "title": "2024 Nissan Qashqai 1.5 E-Power N-Connecta 5dr Auto",
+      "make": "Nissan",
+      "model": "Qashqai 1.5 E-Power N-Connecta 5dr Auto",
+      "year": 2024,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/listing-3.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/960079249899",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "transmission": "Automatic",
+      "fuel": "Petrol Hybrid",
+      "mileageValue": 19798,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

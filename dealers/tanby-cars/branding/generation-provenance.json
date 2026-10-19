@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "dealer": "tanby-cars",
+  "generations": [
+    {
+      "role": "master",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-92cc6881-3add-45a9-939b-94501e39d67a",
+      "modelVersion": null,
+      "prompt": null,
+      "promptRetained": false,
+      "sourceAssetSha256": "6ea96f4ef7932d6b7278035a3562568c90d3ed050aeb917ea485013034943777",
+      "observedAt": "2026-10-19",
+      "originalResponseArtworkRetained": true
+    },
+    {
+      "role": "onDarkAndAccent",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-2c0be0fc-9a7a-4f89-9b41-2e108e8ed8d1",
+      "modelVersion": null,
+      "prompt": "Adapt this exact supplied logo into one clean dual-ink surface variant for dark or red backgrounds. Keep the exact word spelling, exact emblem and layout. Use solid bright WHITE filled letters and emblem areas bounded by a strong clean deep NAVY #101820 contour; then a subtle WHITE outside keyline. Make the contour broad, smooth, and deliberate so the inner white shape and edge remain fully solid. True transparent alpha outside the logo, generous transparent margin. No grunge, no speckles, no distressed raster texture, no holes in solid strokes, no gradients, no drop shadow, no background, no additional content. Flat digital logo with clean dual outlines. This is a precise surface adaptation, not a new identity.",
+      "promptRetained": true,
+      "sourceAssetSha256": "464c8a3fef99154111cf938630fbdab97c40f2509d69783165e518b0e5300fc5",
+      "observedAt": "2026-10-19",
+      "originalResponseArtworkRetained": true
+    },
+    {
+      "role": "compact",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-4001ca2a-5923-4f06-a85a-08eb962aa60a",
+      "modelVersion": null,
+      "prompt": "From the supplied dealer logo, create ONLY its compact TC monogram at the left, keeping the same exact letters, initials, distinctive shape and motif. Remove all other wordmark text and any divider. One isolated monogram centered in a SQUARE transparent canvas with generous alpha margins. Solid opaque pale silver #d9e2ec fills, dark charcoal #111111 contour and a thin white outer keyline; preserve the blue inner contour if already present. The same actual mark must work on white, navy and red backgrounds. Broad clean solid strokes, smooth closed edges, open transparent letter counters, no speckles, no raster distress, no extra letters, no background, no shadows or gradients. Make the small 32px silhouette exceptionally legible while faithfully keeping this identity.",
+      "promptRetained": true,
+      "sourceAssetSha256": "88b18b360d24edffc387b90d6527162c6ec6e1f0e9eb9e9ab5e6fa4e2ba257bf",
+      "observedAt": "2026-10-19",
+      "originalResponseArtworkRetained": true
+    }
+  ],
+  "exportPolicy": "Original generated PNG bytes are retained. Compact pixel-exact extractions, where used, retain their parent generation, hash and rectangle in source.json. Existing dealer-pack logo tooling performs only transparent padding removal and deterministic raster exports. No deterministic recolour is used."
+}

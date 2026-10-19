@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "dealer": "ep-cars-kirby-cross",
+  "photos": [
+    {
+      "id": "listing-1",
+      "listingUrl": "https://www.ebay.co.uk/itm/820241211288",
+      "catalogueUrl": "https://showroom.ebaymotorspro.co.uk/Eimantas-Plukas",
+      "imageUrl": "https://i.ebayimg.com/00/s/OTAwWDE2MDA=/z/yowAAeSwaeVq1Fh4/$_2.JPG",
+      "downloadUrl": "https://i.ebayimg.com/00/s/OTAwWDE2MDA=/z/yowAAeSwaeVq1Fh4/$_57.JPG",
+      "originalDimensions": [
+        1600,
+        900
+      ],
+      "retainedDimensions": [
+        1024,
+        576
+      ],
+      "retainedBytes": 141296,
+      "mediaPath": "dealer-stock/listing-1.jpg",
+      "retainedSha256": "5c6c22a3e0f5e3604e6aeedfdfc457a6f1edf0efa4b98fba92d7c9b6f1c41e26",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "2a5f82d2563bc317a3dc1bba9e716cfca1e07efc2ad51bedd4da7a01fc9457f3",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "id": "listing-2",
+      "listingUrl": "https://www.ebay.co.uk/itm/820175315447",
+      "catalogueUrl": "https://showroom.ebaymotorspro.co.uk/Eimantas-Plukas",
+      "imageUrl": "https://i.ebayimg.com/00/s/OTAwWDE2MDA=/z/7pIAAeSwgKBqyxyQ/$_2.JPG",
+      "downloadUrl": "https://i.ebayimg.com/00/s/OTAwWDE2MDA=/z/7pIAAeSwgKBqyxyQ/$_57.JPG",
+      "originalDimensions": [
+        1600,
+        900
+      ],
+      "retainedDimensions": [
+        1024,
+        576
+      ],
+      "retainedBytes": 139049,
+      "mediaPath": "dealer-stock/listing-2.jpg",
+      "retainedSha256": "c7f62a801c5b6130d13e4ec771c3e4592e313990ff164b61182832672c09e730",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "3e0a71e58759629258628684bf3747f1388deb6bf578eb3efb5f2818ff524af2",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "id": "listing-3",
+      "listingUrl": "https://www.ebay.co.uk/itm/358891349471",
+      "catalogueUrl": "https://showroom.ebaymotorspro.co.uk/Eimantas-Plukas",
+      "imageUrl": "https://i.ebayimg.com/00/s/OTAwWDE2MDA=/z/ZoMAAeSwnURqzxFs/$_2.JPG",
+      "downloadUrl": "https://i.ebayimg.com/00/s/OTAwWDE2MDA=/z/ZoMAAeSwnURqzxFs/$_57.JPG",
+      "originalDimensions": [
+        1600,
+        900
+      ],
+      "retainedDimensions": [
+        1024,
+        576
+      ],
+      "retainedBytes": 137778,
+      "mediaPath": "dealer-stock/listing-3.jpg",
+      "retainedSha256": "6c2a427daaee57cd0ce3342b988826c769a4b217e7f3591dc5b16a443105826e",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "fd91e5585640b96b6182dbce42fa42bc91adb40a0521762456911f791e084294",
+      "observedAt": "2026-10-19"
+    }
+  ],
+  "review": {
+    "reviewed": true,
+    "observedAt": "2026-10-19",
+    "method": "Viewed every selected photograph in contact sheets; checked actual vehicle content, placeholders, price cards and visible dealer identity.",
+    "maximumDimension": 1024,
+    "maximumBytes": 141296
+  }
+}

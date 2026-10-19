@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "dealer": "driveline-cars",
+  "generations": [
+    {
+      "role": "master",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-5fdf6f1c-e4bd-4a62-af28-62310129aba6",
+      "modelVersion": null,
+      "prompt": null,
+      "promptRetained": false,
+      "sourceAssetSha256": "53e4275a99216b07fe3956fd75caaa393ac1df93afd76aac73a4fc16c3bc6478",
+      "observedAt": "2026-10-19",
+      "originalResponseArtworkRetained": true
+    },
+    {
+      "role": "onDarkAndAccent",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-4710ac65-13db-4029-9178-517540782f86",
+      "modelVersion": null,
+      "prompt": "Adapt this exact supplied logo into one clean dual-ink surface variant for dark or red backgrounds. Keep the exact word spelling, exact emblem and layout. Use solid bright WHITE filled letters and emblem areas bounded by a strong clean deep NAVY #101820 contour; then a subtle WHITE outside keyline. Make the contour broad, smooth, and deliberate so the inner white shape and edge remain fully solid. True transparent alpha outside the logo, generous transparent margin. No grunge, no speckles, no distressed raster texture, no holes in solid strokes, no gradients, no drop shadow, no background, no additional content. Flat digital logo with clean dual outlines. This is a precise surface adaptation, not a new identity.",
+      "promptRetained": true,
+      "sourceAssetSha256": "bcf9d531dd1dd00f5c80d6ee5740f1d716b728172474468662e929e6ceb45d21",
+      "observedAt": "2026-10-19",
+      "originalResponseArtworkRetained": true
+    }
+  ],
+  "exportPolicy": "Original generated PNG bytes are retained. Compact pixel-exact extractions, where used, retain their parent generation, hash and rectangle in source.json. Existing dealer-pack logo tooling performs only transparent padding removal and deterministic raster exports. No deterministic recolour is used."
+}

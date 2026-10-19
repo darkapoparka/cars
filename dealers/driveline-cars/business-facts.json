@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "slug": "driveline-cars",
+  "dealerId": "gb-leicester-driveline-cars",
+  "business": {
+    "name": "Driveline Cars",
+    "city": "Leicester",
+    "region": "Leicestershire",
+    "countryCode": "GB",
+    "currency": "GBP",
+    "distanceUnit": "mi",
+    "locale": "en-GB",
+    "address": "",
+    "phone": "+447441952311",
+    "phoneDisplay": "(07441) 952311",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://www.autotrader.co.uk/dealers/leicestershire/leicester/driveline-cars-10049555",
+    "hours": "Viewing by appointment only.",
+    "sourceUrl": "https://www.autotrader.co.uk/dealers/leicestershire/leicester/driveline-cars-10049555",
+    "observedAt": "2026-10-19",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/leicestershire/leicester/driveline-cars-10049555",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "current-public-business-details",
+        "dated-advertised-stock-snapshot"
+      ]
+    }
+  ]
+}

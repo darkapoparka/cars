@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "dealer": "tanby-cars",
+  "dealerId": "gb-huddersfield-tanby-cars",
+  "reviewedAt": "2026-10-19",
+  "providerWrites": 0,
+  "dealerContactPerformed": false,
+  "primarySource": {
+    "url": "https://showroom.ebaymotorspro.co.uk/TANBY-CAR-AUDIO",
+    "httpStatus": 200,
+    "htmlSha256": "9f66d9622faeb08cbb7c0c0dcf2565961b0b016c4429df6793c9687109eb670e",
+    "observedAt": "2026-10-19"
+  },
+  "identity": {
+    "retainedLeadName": "Tanby Cars",
+    "currentSellerDisplayName": "TANBY CAR AUDIO",
+    "existingRegistryOrClientMatch": false
+  },
+  "publicBusinessPhone": {
+    "source": "current dealer marketplace profile",
+    "ownership": "Public business contact; it may be a marketplace forwarding number."
+  },
+  "factsOmitted": [],
+  "limitations": [
+    "The primary catalogue retains the TANBY CAR AUDIO header; Tanby Cars is supported by matching dealer directories and business email at the same Manchester Road premises."
+  ],
+  "inventory": {
+    "kind": "dated-listing-snapshot",
+    "retainedListings": 3,
+    "photos": 3,
+    "availabilityConfirmedWithDealer": false,
+    "pricesOmitted": true,
+    "rawMarketplaceHtmlRetainedInPublicPack": false
+  },
+  "researchMethod": "Opened the exact primary seller catalogue; used its current Used cars/vehicle records and excluded generic Featured advertisements. Checked matched directories and bounded exact business name plus locality searches for an official site or usable logo."
+}

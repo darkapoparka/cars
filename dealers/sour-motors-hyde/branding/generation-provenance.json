@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "dealer": "sour-motors-hyde",
+  "generations": [
+    {
+      "role": "master",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-5e96afb9-7c16-4862-86d8-0f149a75e01a",
+      "modelVersion": null,
+      "prompt": null,
+      "promptRetained": false,
+      "sourceAssetSha256": "263a8d2ec2109d4c7c6a416dd9e5df5283c4cc0869584b2481a552892edefcf7",
+      "observedAt": "2026-10-19",
+      "originalResponseArtworkRetained": true
+    },
+    {
+      "role": "onDarkAndAccent",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-5572ff8e-55f9-4b38-af05-521082e2f88d",
+      "modelVersion": null,
+      "prompt": "Adapt the exact supplied logo into a refined dual-ink surface version, for readable use on dark and red backgrounds. Keep the name spelling, logo motif and layout exactly. Use pure WHITE filled lettering and emblem bounded by a clean broad deep-navy contour, finished with a narrow white outer keyline. No glow. All white areas must be solid opaque ink protected inside the navy contour. True transparent background outside. Maintain a GENEROUS TRANSPARENT GAP between compact emblem and wordmark, do not let their contours touch. No grunge, no speckles, no distressed raster texture, no holes in solid strokes, no gradients, no drop shadow, no decorative panel, no additional content. Flat precise digital artwork with smooth clean contours, professional restrained proportions.",
+      "promptRetained": true,
+      "sourceAssetSha256": "c46f861f4c296d994a6b72baea7ea18825af21e121d7d280f5ccef5444fb1183",
+      "observedAt": "2026-10-19",
+      "originalResponseArtworkRetained": true
+    }
+  ],
+  "exportPolicy": "Original generated PNG bytes are retained. Compact pixel-exact extractions, where used, retain their parent generation, hash and rectangle in source.json. Existing dealer-pack logo tooling performs only transparent padding removal and deterministic raster exports. No deterministic recolour is used."
+}

@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "dealer": "danny-trading",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T19:34:01.044Z",
+  "observedAt": "2026-10-19T19:31:40.274451+00:00",
+  "method": "Reviewed exact selected public advert bodies and marketplace vehicle-history panels. Preserve attributed dated advisories; do not infer an unspecified damage category or finance settlement.",
+  "coverage": [
+    {
+      "listingId": "listing-2",
+      "sourceUrl": "https://www.ebay.co.uk/itm/128111050186",
+      "httpStatus": 200,
+      "pageSha256": "bea37bde48d72a2b9adeeb0e04fa1758871f7d49f1954d7f52713d3b2f713ba6",
+      "descriptionFetched": true,
+      "descriptionSha256": "6912c6cca6cee13fc399c3502249975320f812e87968347c82469def443277db"
+    },
+    {
+      "listingId": "listing-3",
+      "sourceUrl": "https://www.ebay.co.uk/itm/128110912767",
+      "httpStatus": 200,
+      "pageSha256": "f003165a89b8341660631ece9272ab8e1f0def56d19b9445508ed3aec9f1aad2",
+      "descriptionFetched": true,
+      "descriptionSha256": "11d434067a930bf819b1ff1e37c0b5bbf1d0ecce47d1c64871bd6ba36c9bc9b6"
+    }
+  ],
+  "findings": [
+    {
+      "listingId": "listing-2",
+      "advertId": "128111050186",
+      "stockTitle": "2004 Mercedes-Benz SL 55 AMG F1 5.5 V8 Kompressor",
+      "sourceUrl": "https://www.ebay.co.uk/itm/128111050186",
+      "observedAt": "2026-10-19T19:26:21.548189Z",
+      "httpStatus": 200,
+      "pageSha256": "bea37bde48d72a2b9adeeb0e04fa1758871f7d49f1954d7f52713d3b2f713ba6",
+      "descriptionUrl": "https://itm.ebaydesc.com/itmdesc/128111050186?t=1791509597000&category=9855&seller=dannytradingltd&excSoj=1&ver=1&excTrk=1&lsite=3&ittenable=false&domain=ebay.com&descgauge=1&cspheader=1&oneClk=2&secureDesc=1&lang=en",
+      "descriptionSha256": "6912c6cca6cee13fc399c3502249975320f812e87968347c82469def443277db",
+      "type": "vehicle-history",
+      "category": "C/D",
+      "finding": "The public eBay vehicle-history panel shows a Category C/D advisory without identifying which category applies.",
+      "evidenceLocation": "Public eBay description iframe; seller description and/or vehicle-history advisory panel",
+      "publicHistoryEvidence": {
+        "advisory": "Cat C/D Advisory",
+        "repairClaim": false
+      }
+    }
+  ],
+  "correctionApplied": true,
+  "copyReferences": [
+    "stock.json",
+    "copy-review.json"
+  ],
+  "rawAdvertContentRetained": false,
+  "independentlyCertified": false
+}

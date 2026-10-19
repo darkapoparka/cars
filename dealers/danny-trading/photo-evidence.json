@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "dealer": "danny-trading",
+  "photos": [
+    {
+      "id": "listing-2",
+      "listingUrl": "https://www.ebay.co.uk/itm/128111050186",
+      "catalogueUrl": "https://showroom.ebaymotorspro.co.uk/Danny-Trading-Ltd?menu=1",
+      "imageUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/zU8AAeSw3cdq1cVn/$_2.JPG",
+      "downloadUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/zU8AAeSw3cdq1cVn/$_57.JPG",
+      "originalDimensions": [
+        1600,
+        1200
+      ],
+      "retainedDimensions": [
+        1024,
+        768
+      ],
+      "retainedBytes": 161677,
+      "mediaPath": "dealer-stock/listing-2.jpg",
+      "retainedSha256": "565aa567f17b7f2b4d9f17d135f7932bf8a82178b90230c07c9aa31e67e2c4e1",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "d8cf4d027d0b9aa9ff6c53a029bbfd97afd6977a9660dc450682b244f7db263b",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "id": "listing-3",
+      "listingUrl": "https://www.ebay.co.uk/itm/128110912767",
+      "catalogueUrl": "https://showroom.ebaymotorspro.co.uk/Danny-Trading-Ltd?menu=1",
+      "imageUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/TecAAeSw6zhq1cVo/$_2.JPG",
+      "downloadUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/TecAAeSw6zhq1cVo/$_57.JPG",
+      "originalDimensions": [
+        1600,
+        1200
+      ],
+      "retainedDimensions": [
+        1024,
+        768
+      ],
+      "retainedBytes": 167641,
+      "mediaPath": "dealer-stock/listing-3.jpg",
+      "retainedSha256": "90c279a91f0069a1d0a34811a726f5bb570b7a75cc3194758016ff5f31d54843",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "59e064e71d68e9f0c3cf82e38f88563e7943ec39bd427b9d137edc24a89dab96",
+      "observedAt": "2026-10-19"
+    }
+  ],
+  "review": {
+    "reviewed": true,
+    "observedAt": "2026-10-19",
+    "method": "Viewed every selected photograph in contact sheets; checked actual vehicle content, placeholders, price cards and visible dealer identity.",
+    "maximumDimension": 1024,
+    "maximumBytes": 167641
+  }
+}

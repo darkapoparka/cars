@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T18:23:39.223Z",
+  "dealer": "simply-motors-ilford",
+  "dealerId": "gb-ilford-simply-motors",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "method": "Exact retained registry and compact-pack identity comparison; no dealer approval is implied.",
+  "sources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/simply-motors?extendedFilter=1",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "url": "https://www.cazoo.co.uk/dealers/simply-motors-81238/",
+      "observedAt": "2026-10-19"
+    }
+  ],
+  "additionalReview": {
+    "observedAt": "2026-10-19",
+    "registryMatch": false,
+    "existingClientFolderMatch": false,
+    "sourceRevision": "a999878a921fb61b37bf198c43275550814f88cc"
+  }
+}

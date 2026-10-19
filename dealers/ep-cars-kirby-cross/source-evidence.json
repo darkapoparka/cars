@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "dealer": "ep-cars-kirby-cross",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uk.json",
+    "sha256": "6cd8d365586f9a5d5131fe4b1d50baede7de91ab384a135017c25367298b07c4"
+  },
+  "publicSources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Eimantas-Plukas",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "current-public-business-details",
+        "dated-advertised-stock-snapshot"
+      ]
+    }
+  ],
+  "liveFetchPerformed": false,
+  "currentResearch": {
+    "performed": true,
+    "observedAt": "2026-10-19",
+    "primaryPage": {
+      "url": "https://showroom.ebaymotorspro.co.uk/Eimantas-Plukas",
+      "httpStatus": 200,
+      "sha256": "2821369d44bdda7353626e08945110f5442a0c31672266ae107b475d650b9896"
+    },
+    "reference": "research-review.json"
+  }
+}

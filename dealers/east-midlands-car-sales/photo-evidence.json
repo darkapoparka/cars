@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "dealer": "east-midlands-car-sales",
+  "photos": [
+    {
+      "id": "listing-1",
+      "listingUrl": "https://www.ebay.co.uk/itm/960079294609",
+      "catalogueUrl": "https://showroom.ebaymotorspro.co.uk/East-Midlands-Car-sales-LTD",
+      "imageUrl": "https://i.ebayimg.com/00/s/MTYwMFgxMjAw/z/ZC0AAeSwKYpq1b4O/$_2.JPG",
+      "downloadUrl": "https://i.ebayimg.com/00/s/MTYwMFgxMjAw/z/ZC0AAeSwKYpq1b4O/$_57.JPG",
+      "originalDimensions": [
+        1200,
+        1600
+      ],
+      "retainedDimensions": [
+        768,
+        1024
+      ],
+      "retainedBytes": 115223,
+      "mediaPath": "dealer-stock/listing-1.jpg",
+      "retainedSha256": "26f30b57b51232623db01cb729f086684fc5e202dfe1f9eaf8d6d3b726258ca6",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "18675f0045fb01869772c7fc9814a8e1b9fb26e72b4962cd492c301eaa3ade46",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "id": "listing-2",
+      "listingUrl": "https://www.ebay.co.uk/itm/960079277872",
+      "catalogueUrl": "https://showroom.ebaymotorspro.co.uk/East-Midlands-Car-sales-LTD",
+      "imageUrl": "https://i.ebayimg.com/00/s/MTYwMFg5MDE=/z/rH8AAeSwMnlq03-o/$_2.JPG",
+      "downloadUrl": "https://i.ebayimg.com/00/s/MTYwMFg5MDE=/z/rH8AAeSwMnlq03-o/$_57.JPG",
+      "originalDimensions": [
+        901,
+        1600
+      ],
+      "retainedDimensions": [
+        577,
+        1024
+      ],
+      "retainedBytes": 123221,
+      "mediaPath": "dealer-stock/listing-2.jpg",
+      "retainedSha256": "5e00b96ca1378ebbd3b690df0e8857439c8b76e2ddf72e79725d820649b42931",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "161dfd6b0252ccf539eb543575ff60b4f45df1ec38d3cfdce5aa500a2ba24480",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "id": "listing-3",
+      "listingUrl": "https://www.ebay.co.uk/itm/960079249899",
+      "catalogueUrl": "https://showroom.ebaymotorspro.co.uk/East-Midlands-Car-sales-LTD",
+      "imageUrl": "https://i.ebayimg.com/00/s/MTYwMFg5MDE=/z/rCsAAeSw4dhq03-m/$_2.JPG",
+      "downloadUrl": "https://i.ebayimg.com/00/s/MTYwMFg5MDE=/z/rCsAAeSw4dhq03-m/$_57.JPG",
+      "originalDimensions": [
+        901,
+        1600
+      ],
+      "retainedDimensions": [
+        577,
+        1024
+      ],
+      "retainedBytes": 103103,
+      "mediaPath": "dealer-stock/listing-3.jpg",
+      "retainedSha256": "9494675b869f6c7f37b88ab71c8fb4ef95295b61e16e1464774f127c69c79a40",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "81878a8f48dd9edf470fbb3ea8277e1b0926d2dc358e7499423af14c16885df0",
+      "observedAt": "2026-10-19"
+    }
+  ],
+  "review": {
+    "reviewed": true,
+    "observedAt": "2026-10-19",
+    "method": "Viewed every selected photograph in contact sheets; checked actual vehicle content, placeholders, price cards and visible dealer identity.",
+    "maximumDimension": 1024,
+    "maximumBytes": 123221
+  }
+}

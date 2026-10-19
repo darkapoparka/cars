@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "slug": "wortley-road-car-sales",
+  "dealerId": "gb-leeds-wortley-road-car-sales",
+  "business": {
+    "name": "Wortley Road Car Sales",
+    "city": "Leeds",
+    "region": "West Yorkshire",
+    "countryCode": "GB",
+    "currency": "GBP",
+    "distanceUnit": "mi",
+    "locale": "en-GB",
+    "address": "2 Wortley Road, Leeds, LS12 3HU",
+    "phone": "+447537165365",
+    "phoneDisplay": "(07537) 165365",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://www.autotrader.co.uk/dealers/yorkshire/leeds/wortley-road-car-sales-10041304",
+    "hours": "Viewing by appointment only.",
+    "sourceUrl": "https://www.autotrader.co.uk/dealers/yorkshire/leeds/wortley-road-car-sales-10041304",
+    "observedAt": "2026-10-19",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/yorkshire/leeds/wortley-road-car-sales-10041304",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "current-public-business-details",
+        "dated-advertised-stock-snapshot"
+      ]
+    }
+  ]
+}

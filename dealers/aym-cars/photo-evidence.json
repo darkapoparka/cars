@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "dealer": "aym-cars",
+  "photos": [
+    {
+      "id": "listing-1",
+      "listingUrl": "https://www.ebay.co.uk/itm/168783426999",
+      "catalogueUrl": "https://showroom.ebaymotorspro.co.uk/Aymro-Mortors-ltd",
+      "imageUrl": "https://i.ebayimg.com/00/s/NzM5WDE2MDA=/z/fF8AAeSwfS1q1ITQ/$_2.JPG",
+      "downloadUrl": "https://i.ebayimg.com/00/s/NzM5WDE2MDA=/z/fF8AAeSwfS1q1ITQ/$_57.JPG",
+      "originalDimensions": [
+        1600,
+        739
+      ],
+      "retainedDimensions": [
+        1024,
+        473
+      ],
+      "retainedBytes": 123185,
+      "mediaPath": "dealer-stock/listing-1.jpg",
+      "retainedSha256": "ae76a1f9acf23a6115c5dc6827d58a79d42c656bb7ebeefb0de1b76b85b57444",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "4c87efa3e9c14f5c9cc4f7b74760062391c180e05e0fbfc6e82591ab4d5d27d1",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "id": "listing-3",
+      "listingUrl": "https://www.ebay.co.uk/itm/168715510079",
+      "catalogueUrl": "https://showroom.ebaymotorspro.co.uk/Aymro-Mortors-ltd",
+      "imageUrl": "https://i.ebayimg.com/00/s/NzM5WDE2MDA=/z/gUIAAeSwF-Zq1ITW/$_2.JPG",
+      "downloadUrl": "https://i.ebayimg.com/00/s/NzM5WDE2MDA=/z/gUIAAeSwF-Zq1ITW/$_57.JPG",
+      "originalDimensions": [
+        1600,
+        739
+      ],
+      "retainedDimensions": [
+        1024,
+        473
+      ],
+      "retainedBytes": 123351,
+      "mediaPath": "dealer-stock/listing-3.jpg",
+      "retainedSha256": "fac1630733565a5a52f935f3459f05858656b9459eb6b5ac196d0d7ad544e8eb",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "4aa6a9d13ae6492006dbeaf2ad3ab34c36385698d59363fb07c80669fc105492",
+      "observedAt": "2026-10-19"
+    }
+  ],
+  "review": {
+    "reviewed": true,
+    "observedAt": "2026-10-19",
+    "method": "Viewed every selected photograph in contact sheets; checked actual vehicle content, placeholders, price cards and visible dealer identity.",
+    "maximumDimension": 1024,
+    "maximumBytes": 123351
+  }
+}

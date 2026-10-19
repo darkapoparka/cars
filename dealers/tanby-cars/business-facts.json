@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "slug": "tanby-cars",
+  "dealerId": "gb-huddersfield-tanby-cars",
+  "business": {
+    "name": "Tanby Cars",
+    "city": "Huddersfield",
+    "region": "West Yorkshire",
+    "countryCode": "GB",
+    "currency": "GBP",
+    "distanceUnit": "mi",
+    "locale": "en-GB",
+    "address": "274 Manchester Road, Huddersfield HD4 5AA",
+    "phone": "+441484240424",
+    "phoneDisplay": "+441484240424",
+    "email": "tanbycars@hotmail.co.uk",
+    "website": "",
+    "stockUrl": "https://showroom.ebaymotorspro.co.uk/TANBY-CAR-AUDIO",
+    "hours": "",
+    "sourceUrl": "https://showroom.ebaymotorspro.co.uk/TANBY-CAR-AUDIO",
+    "observedAt": "2026-10-19",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/TANBY-CAR-AUDIO",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "current-public-business-details",
+        "dated-advertised-stock-snapshot"
+      ]
+    },
+    {
+      "url": "https://www.cazoo.co.uk/dealers/tanby-cars-56853/",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "matching-dealer-directory-identity"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "dealer": "danny-trading",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T19:22:56.608725Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "926e23f334952391c006b639971c5b8f39d9635df34ff46d0f40c4ef29b91931",
+      "sourceSha256": "1180652af39979d219d404b4fb95ed9370f2459c85ce2c95783e494677df02b8"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "60eea59af287c32cb065ecab9437d7dcacd872a8d70e4faf29fb2a1091099812",
+      "sourceSha256": "4ea4b43b02c3b20632e5c20615cae90f14965439403b63c349787fcb6d53ab92"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "60eea59af287c32cb065ecab9437d7dcacd872a8d70e4faf29fb2a1091099812",
+      "sourceSha256": "4ea4b43b02c3b20632e5c20615cae90f14965439403b63c349787fcb6d53ab92"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "1180652af39979d219d404b4fb95ed9370f2459c85ce2c95783e494677df02b8",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-8086ddff-dd57-45f1-8f71-7ca3fadcd58e",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "85aeb91444a889706806b2e27968a8a9281c2ff6ed2e0c515917213adf24ed86",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-d4b7d96b-80ec-4ed3-aaf7-e56ab1836334",
+      "modelVersion": null
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "cf1f7b8c881990a9d594f1df399772f9e22c209507fc2c2bc952ee68715350a5"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "1180652af39979d219d404b4fb95ed9370f2459c85ce2c95783e494677df02b8",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-8086ddff-dd57-45f1-8f71-7ca3fadcd58e",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/danny-trading/branding/generated-master.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "4ea4b43b02c3b20632e5c20615cae90f14965439403b63c349787fcb6d53ab92",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-cbe924f8-ad2d-40f1-a524-de9021b47425",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/danny-trading/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "4ea4b43b02c3b20632e5c20615cae90f14965439403b63c349787fcb6d53ab92",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-cbe924f8-ad2d-40f1-a524-de9021b47425",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/danny-trading/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "004428ab808a7e4ab9e08a6a56e1e46c12fc3b7ab15b1cf6abc796a95918d877",
+      "sha256": "1180652af39979d219d404b4fb95ed9370f2459c85ce2c95783e494677df02b8",
+      "crop": {
+        "left": 22,
+        "top": 157,
+        "width": 2126,
+        "height": 384
+      },
+      "sourcePath": "branding/generated-master.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "5fd4030ae794d90a070bf3d41a60dea6c1ba7bcfdf59ae27c434108d203c7fe1",
+      "sha256": "4ea4b43b02c3b20632e5c20615cae90f14965439403b63c349787fcb6d53ab92",
+      "crop": {
+        "left": 0,
+        "top": 126,
+        "width": 2168,
+        "height": 442
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "5fd4030ae794d90a070bf3d41a60dea6c1ba7bcfdf59ae27c434108d203c7fe1",
+      "sha256": "4ea4b43b02c3b20632e5c20615cae90f14965439403b63c349787fcb6d53ab92",
+      "crop": {
+        "left": 0,
+        "top": 126,
+        "width": 2168,
+        "height": 442
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "c5fc79e7e36bf46a204215a648fa653e98e658c7363c9003402163f8fe82b40d",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d4b7d96b-80ec-4ed3-aaf7-e56ab1836334",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/danny-trading/branding/generated-mark.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "c5fc79e7e36bf46a204215a648fa653e98e658c7363c9003402163f8fe82b40d",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d4b7d96b-80ec-4ed3-aaf7-e56ab1836334",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/danny-trading/branding/generated-mark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "85aeb91444a889706806b2e27968a8a9281c2ff6ed2e0c515917213adf24ed86",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d4b7d96b-80ec-4ed3-aaf7-e56ab1836334",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/danny-trading/branding/generated-mark.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "cf1f7b8c881990a9d594f1df399772f9e22c209507fc2c2bc952ee68715350a5",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d4b7d96b-80ec-4ed3-aaf7-e56ab1836334",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/danny-trading/branding/generated-mark.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T19:22:56.608725Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "85aeb91444a889706806b2e27968a8a9281c2ff6ed2e0c515917213adf24ed86",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-d4b7d96b-80ec-4ed3-aaf7-e56ab1836334",
+      "modelVersion": null
+    }
+  }
+}

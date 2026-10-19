@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "dealer": "danny-trading",
+  "dealerId": "gb-leicester-danny-trading",
+  "reviewedAt": "2026-10-19",
+  "providerWrites": 0,
+  "dealerContactPerformed": false,
+  "primarySource": {
+    "url": "https://showroom.ebaymotorspro.co.uk/Danny-Trading-Ltd?menu=1",
+    "httpStatus": 200,
+    "htmlSha256": "11620b59eccfd333c978b25ae4320398e7edb4bc31a64af4007e48a5ed530d84",
+    "observedAt": "2026-10-19"
+  },
+  "identity": {
+    "retainedLeadName": "Danny Trading Ltd",
+    "currentSellerDisplayName": "Danny Trading Ltd",
+    "existingRegistryOrClientMatch": false
+  },
+  "publicBusinessPhone": {
+    "source": "current dealer marketplace profile",
+    "ownership": "Public business contact; it may be a marketplace forwarding number."
+  },
+  "factsOmitted": [],
+  "limitations": [
+    "Excluded the photographed AWAITING PREP placeholder and other adverts with conflicting advertised vehicle configuration. Retained two currently advertised examples. The legacy standalone website did not provide a usable current response."
+  ],
+  "inventory": {
+    "kind": "dated-listing-snapshot",
+    "retainedListings": 2,
+    "photos": 2,
+    "availabilityConfirmedWithDealer": false,
+    "pricesOmitted": true,
+    "rawMarketplaceHtmlRetainedInPublicPack": false,
+    "advertDetailReview": {
+      "reference": "advert-detail-review.json",
+      "reviewedAt": "2026-10-19T19:34:01.044Z",
+      "retainedDisclosures": [
+        {
+          "listingId": "listing-2",
+          "type": "vehicle-history",
+          "category": "C/D"
+        }
+      ],
+      "publicSourceReportsOnly": true
+    }
+  },
+  "researchMethod": "Opened the exact primary seller catalogue; used its current Used cars/vehicle records and excluded generic Featured advertisements. Checked matched directories and bounded exact business name plus locality searches for an official site or usable logo."
+}

@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "dealer": "wortley-road-car-sales",
+  "dealerId": "gb-leeds-wortley-road-car-sales",
+  "reviewedAt": "2026-10-19",
+  "providerWrites": 0,
+  "dealerContactPerformed": false,
+  "primarySource": {
+    "url": "https://www.autotrader.co.uk/dealers/yorkshire/leeds/wortley-road-car-sales-10041304",
+    "httpStatus": 200,
+    "htmlSha256": "0209e228a6eb76e9ef2b5b6c53b1cb0c6d77394340437169b2063c4df58cf3e2",
+    "observedAt": "2026-10-19"
+  },
+  "identity": {
+    "retainedLeadName": "Wortley Road Car Sales",
+    "currentSellerDisplayName": "Wortley Road Car Sales",
+    "existingRegistryOrClientMatch": false
+  },
+  "publicBusinessPhone": {
+    "source": "current dealer marketplace profile",
+    "ownership": "Public business contact; it may be a marketplace forwarding number."
+  },
+  "factsOmitted": [],
+  "limitations": [],
+  "inventory": {
+    "kind": "dated-listing-snapshot",
+    "retainedListings": 3,
+    "photos": 3,
+    "availabilityConfirmedWithDealer": false,
+    "pricesOmitted": true,
+    "rawMarketplaceHtmlRetainedInPublicPack": false,
+    "advertDetailReview": {
+      "reference": "advert-detail-review.json",
+      "reviewedAt": "2026-10-19T19:34:01.044Z",
+      "retainedDisclosures": [
+        {
+          "listingId": "listing-1",
+          "type": "dated-finance-status"
+        }
+      ],
+      "publicSourceReportsOnly": true
+    }
+  },
+  "researchMethod": "Opened the exact primary seller catalogue; used its current Used cars/vehicle records and excluded generic Featured advertisements. Checked matched directories and bounded exact business name plus locality searches for an official site or usable logo."
+}

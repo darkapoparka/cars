@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "dealer": "east-midlands-car-sales",
+  "generations": [
+    {
+      "role": "master",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-0b7e711f-de50-4e2d-b43c-c2e3aa6099e1",
+      "modelVersion": null,
+      "prompt": "Faithfully redraw this weak real EAST MIDLANDS CAR SALES logo into a substantially cleaner transparent mark. Keep exact full name EAST MIDLANDS CAR SALES, its monochrome black-and-white identity, and the simple sweeping coupe roof motif. New refined horizontal lockup: compact bold EM monogram with a simple thick coupe roof curve above it at left, and to the right exact words EAST MIDLANDS on line1, CAR SALES on line2 in bold refined sans serif lettering. Preserve the restrained character and accurate name. Solid near-black ink for a white surface, genuinely transparent alpha background. No gradient, shadow, reflections, rectangle, badge, additional words, colour, distress or speckle. Large clear gap between the compact EM/roof emblem and the text. Clean broad strokes make the mark work at32px.",
+      "promptRetained": true,
+      "sourceAssetSha256": "ce4c99cb012011cccf5556742ad27bec44f2c30507c8e5c94756af536269c404",
+      "observedAt": "2026-10-19",
+      "originalResponseArtworkRetained": true
+    },
+    {
+      "role": "onDarkAndAccent",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-16497a00-a602-4ac1-b5f2-4b20cea2a25c",
+      "modelVersion": null,
+      "prompt": "Faithfully redraw this real EAST MIDLANDS CAR SALES logo as a refined transparent dark-surface variant. EXACT words EAST MIDLANDS on line1 and CAR SALES on line2. Keep the original monochrome palette and coupe roof motif. Horizontal lockup: at left compact bold EM monogram with a simple thick coupe roof curve above it; at right the exact name in bold refined sans serif. Preserve restrained character, accurate name and a large transparent gap between emblem and text. All artwork filled SOLID OPAQUE PALE SILVER #d9e2ec inside a BLACK #111111 contour with a thin WHITE outer keyline; ONLY monochrome tones, no coloured strokes. True transparent alpha and transparent counters. No gradient, shadow, reflections, rectangle, badge, extra text, grunge or speckles. Clean broad strokes, legible compact mark at32px.",
+      "promptRetained": true,
+      "sourceAssetSha256": "7727f885662a5023d636c8ac977b075a7e566017f0cb35357acf6526982430c6",
+      "observedAt": "2026-10-19",
+      "originalResponseArtworkRetained": true
+    }
+  ],
+  "exportPolicy": "Original generated PNG bytes are retained. Compact pixel-exact extractions, where used, retain their parent generation, hash and rectangle in source.json. Existing dealer-pack logo tooling performs only transparent padding removal and deterministic raster exports. No deterministic recolour is used."
+}

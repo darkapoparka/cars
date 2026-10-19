@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "dealer": "hmz-cars-dealers",
+  "photos": [
+    {
+      "id": "listing-1",
+      "listingUrl": "https://www.ebay.co.uk/itm/257799855332",
+      "catalogueUrl": "https://showroom.ebaymotorspro.co.uk/I-B-MOTORS-LTD",
+      "imageUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/I~0AAeSwBTZq1ZpN/$_2.JPG",
+      "downloadUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/I~0AAeSwBTZq1ZpN/$_57.JPG",
+      "originalDimensions": [
+        1600,
+        1200
+      ],
+      "retainedDimensions": [
+        1024,
+        768
+      ],
+      "retainedBytes": 183472,
+      "mediaPath": "dealer-stock/listing-1.jpg",
+      "retainedSha256": "3d5bd7f254642c1270628ab20e0bd07b1662b25a0154e5e859bd7f6cd3de5bbb",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "0d10773dcbd5924966e2a5b3ad80da6edcd3405c5653bcd0c27adbd809e0f00e",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "id": "listing-2",
+      "listingUrl": "https://www.ebay.co.uk/itm/257799828820",
+      "catalogueUrl": "https://showroom.ebaymotorspro.co.uk/I-B-MOTORS-LTD",
+      "imageUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/Z7kAAeSwZddq1ZpO/$_2.JPG",
+      "downloadUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/Z7kAAeSwZddq1ZpO/$_57.JPG",
+      "originalDimensions": [
+        1600,
+        1200
+      ],
+      "retainedDimensions": [
+        1024,
+        768
+      ],
+      "retainedBytes": 166878,
+      "mediaPath": "dealer-stock/listing-2.jpg",
+      "retainedSha256": "364a22f08d4ac30d349ca0db760a39286969b272e4bebbdde9725a8084201740",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "5db465ef7e9102c28a1e101d94b65df65890db62d8340ef6c454e1d6214dcef1",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "id": "listing-3",
+      "listingUrl": "https://www.ebay.co.uk/itm/257799818805",
+      "catalogueUrl": "https://showroom.ebaymotorspro.co.uk/I-B-MOTORS-LTD",
+      "imageUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/2JkAAeSwlOZq0Pi2/$_2.JPG",
+      "downloadUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/2JkAAeSwlOZq0Pi2/$_57.JPG",
+      "originalDimensions": [
+        1600,
+        1200
+      ],
+      "retainedDimensions": [
+        1024,
+        768
+      ],
+      "retainedBytes": 182457,
+      "mediaPath": "dealer-stock/listing-3.jpg",
+      "retainedSha256": "c8fcf0a092ac5b69cabf5c0af84f92dee1292ee022d406600733b4565be95269",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "9fc5d51f50fe196d649557eaf019f8d30421a240737ba1ede27f2a0bf325e062",
+      "observedAt": "2026-10-19"
+    }
+  ],
+  "review": {
+    "reviewed": true,
+    "observedAt": "2026-10-19",
+    "method": "Viewed every selected photograph in contact sheets; checked actual vehicle content, placeholders, price cards and visible dealer identity.",
+    "maximumDimension": 1024,
+    "maximumBytes": 183472
+  }
+}

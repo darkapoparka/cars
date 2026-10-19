@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "dealer": "sour-motors-hyde",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T19:34:01.044Z",
+  "observedAt": "2026-10-19T19:31:40.274451+00:00",
+  "method": "Reviewed exact selected public advert bodies and marketplace vehicle-history panels. Preserve attributed dated advisories; do not infer an unspecified damage category or finance settlement.",
+  "coverage": [
+    {
+      "listingId": "listing-1",
+      "sourceUrl": "https://www.ebay.co.uk/itm/860047187288",
+      "httpStatus": 200,
+      "pageSha256": "4f0759c4077d7222a3ace50e7e728b63d7732385237e4a5235ade0be3cebae30",
+      "descriptionFetched": true,
+      "descriptionSha256": "54fb809ae0a8e17f589049f2bfec6a53c45fa38e1d2e52d9c59d59d26e9e0b28"
+    },
+    {
+      "listingId": "listing-2",
+      "sourceUrl": "https://www.ebay.co.uk/itm/860047175048",
+      "httpStatus": 200,
+      "pageSha256": "5c1c76a418e28309b4c5a56bd807572edff4c8e9184c84173ac8f5b97cb613ba",
+      "descriptionFetched": true,
+      "descriptionSha256": "fd00ac993d45f705e49a8a8799b6b5094323d6c0ce45767bc0702559819a2b3e"
+    },
+    {
+      "listingId": "listing-3",
+      "sourceUrl": "https://www.ebay.co.uk/itm/860023504308",
+      "httpStatus": 200,
+      "pageSha256": "8457635928ebd176aadb661edbeba7de6a02e7a119b2f70d5d23da8db6849e93",
+      "descriptionFetched": true,
+      "descriptionSha256": "a390698c80baddb0d10cdf327b05fbecbdef8a61236aeb690d2e2bcf4ed9c543"
+    }
+  ],
+  "findings": [
+    {
+      "listingId": "listing-1",
+      "advertId": "860047187288",
+      "stockTitle": "2011 Vauxhall Astra 1.6i 16V SRi 5dr",
+      "sourceUrl": "https://www.ebay.co.uk/itm/860047187288",
+      "observedAt": "2026-10-19T19:26:18.065161Z",
+      "httpStatus": 200,
+      "pageSha256": "4f0759c4077d7222a3ace50e7e728b63d7732385237e4a5235ade0be3cebae30",
+      "descriptionUrl": "https://itm.ebaydesc.com/itmdesc/860047187288?t=1792077314000&category=9858&seller=mtmot85&excSoj=1&ver=1&excTrk=1&lsite=3&ittenable=false&domain=ebay.com&descgauge=1&cspheader=1&oneClk=2&secureDesc=1&lang=en",
+      "descriptionSha256": "54fb809ae0a8e17f589049f2bfec6a53c45fa38e1d2e52d9c59d59d26e9e0b28",
+      "type": "vehicle-history",
+      "category": "S/N",
+      "finding": "The public eBay vehicle-history panel shows a Category S/N advisory without identifying which category applies.",
+      "evidenceLocation": "Public eBay description iframe; seller description and/or vehicle-history advisory panel",
+      "publicHistoryEvidence": {
+        "advisory": "Cat S/N Advisory",
+        "repairClaim": false
+      }
+    },
+    {
+      "listingId": "listing-3",
+      "advertId": "860023504308",
+      "stockTitle": "2009 Honda Jazz 1.4 i-VTEC ES 5dr",
+      "sourceUrl": "https://www.ebay.co.uk/itm/860023504308",
+      "observedAt": "2026-10-19T19:26:18.067385Z",
+      "httpStatus": 200,
+      "pageSha256": "8457635928ebd176aadb661edbeba7de6a02e7a119b2f70d5d23da8db6849e93",
+      "descriptionUrl": "https://itm.ebaydesc.com/itmdesc/860023504308?t=1791473870000&category=18206&seller=mtmot85&excSoj=1&ver=1&excTrk=1&lsite=3&ittenable=false&domain=ebay.com&descgauge=1&cspheader=1&oneClk=2&secureDesc=1&lang=en",
+      "descriptionSha256": "a390698c80baddb0d10cdf327b05fbecbdef8a61236aeb690d2e2bcf4ed9c543",
+      "type": "vehicle-history",
+      "category": "S/N",
+      "finding": "The public eBay vehicle-history panel shows a Category S/N advisory without identifying which category applies.",
+      "evidenceLocation": "Public eBay description iframe; seller description and/or vehicle-history advisory panel",
+      "publicHistoryEvidence": {
+        "advisory": "Cat S/N Advisory",
+        "repairClaim": false
+      }
+    }
+  ],
+  "correctionApplied": true,
+  "copyReferences": [
+    "stock.json",
+    "copy-review.json"
+  ],
+  "rawAdvertContentRetained": false,
+  "independentlyCertified": false
+}

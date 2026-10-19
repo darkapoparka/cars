@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "dealer": "ep-cars-kirby-cross",
+  "dealerId": "gb-kirby-cross-ep-cars",
+  "reviewedAt": "2026-10-19",
+  "providerWrites": 0,
+  "dealerContactPerformed": false,
+  "primarySource": {
+    "url": "https://showroom.ebaymotorspro.co.uk/Eimantas-Plukas",
+    "httpStatus": 200,
+    "htmlSha256": "2821369d44bdda7353626e08945110f5442a0c31672266ae107b475d650b9896",
+    "observedAt": "2026-10-19"
+  },
+  "identity": {
+    "retainedLeadName": "E P Cars (Kirby Cross)",
+    "currentSellerDisplayName": "E P Cars",
+    "existingRegistryOrClientMatch": false
+  },
+  "publicBusinessPhone": {
+    "source": "current dealer marketplace profile",
+    "ownership": "Public business contact; it may be a marketplace forwarding number."
+  },
+  "factsOmitted": [
+    "A personally named email address was omitted; no personal contact value is retained in this pack."
+  ],
+  "limitations": [
+    "The page explicitly says viewing by appointment; its all-closed hours grid was not interpreted as permanent closure."
+  ],
+  "inventory": {
+    "kind": "dated-listing-snapshot",
+    "retainedListings": 3,
+    "photos": 3,
+    "availabilityConfirmedWithDealer": false,
+    "pricesOmitted": true,
+    "rawMarketplaceHtmlRetainedInPublicPack": false
+  },
+  "researchMethod": "Opened the exact primary seller catalogue; used its current Used cars/vehicle records and excluded generic Featured advertisements. Checked matched directories and bounded exact business name plus locality searches for an official site or usable logo."
+}

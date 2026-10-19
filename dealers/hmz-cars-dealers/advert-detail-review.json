@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "dealer": "hmz-cars-dealers",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T19:34:01.044Z",
+  "observedAt": "2026-10-19T19:31:40.274451+00:00",
+  "method": "Reviewed exact selected public advert bodies and marketplace vehicle-history panels. Preserve attributed dated advisories; do not infer an unspecified damage category or finance settlement.",
+  "coverage": [
+    {
+      "listingId": "listing-1",
+      "sourceUrl": "https://www.ebay.co.uk/itm/257799855332",
+      "httpStatus": 200,
+      "pageSha256": "43a9f5e7d24edab63b10c112bbbe1915c434d21f20bef2c969f0e43bf7fe26b5",
+      "descriptionFetched": true,
+      "descriptionSha256": "1fc2368998cb567e3dca52ae10af15c86b0ef9443b3d5280c1bd6adc51569fbd"
+    },
+    {
+      "listingId": "listing-2",
+      "sourceUrl": "https://www.ebay.co.uk/itm/257799828820",
+      "httpStatus": 200,
+      "pageSha256": "32198d349b5fe8d9e52346bea17d2244580c5ca9c15a57b3e50d32786875af70",
+      "descriptionFetched": true,
+      "descriptionSha256": "326912bff43b64fa4a7a607b89495b494a3d9b7d68105b80a12d9dcc24c7f19a"
+    },
+    {
+      "listingId": "listing-3",
+      "sourceUrl": "https://www.ebay.co.uk/itm/257799818805",
+      "httpStatus": 200,
+      "pageSha256": "4c570794cef7560297f119910e4d2335e908dc658d1d6d9a8225fca86caaef37",
+      "descriptionFetched": true,
+      "descriptionSha256": "e0d402b4d5da0522858330cd98fa4aa5a6ae31c00e96280194b30e9467895ef0"
+    }
+  ],
+  "findings": [
+    {
+      "listingId": "listing-2",
+      "advertId": "257799828820",
+      "stockTitle": "2015 Honda Jazz 1.4 i-VTEC ES Plus 5dr",
+      "sourceUrl": "https://www.ebay.co.uk/itm/257799828820",
+      "observedAt": "2026-10-19T19:26:22.708318Z",
+      "httpStatus": 200,
+      "pageSha256": "32198d349b5fe8d9e52346bea17d2244580c5ca9c15a57b3e50d32786875af70",
+      "descriptionUrl": "https://itm.ebaydesc.com/itmdesc/257799828820?t=1792077912000&category=18206&seller=ibah2260&excSoj=1&ver=1&excTrk=1&lsite=3&ittenable=false&domain=ebay.com&descgauge=1&cspheader=1&oneClk=2&secureDesc=1&lang=en",
+      "descriptionSha256": "326912bff43b64fa4a7a607b89495b494a3d9b7d68105b80a12d9dcc24c7f19a",
+      "type": "vehicle-history",
+      "category": "S/N",
+      "finding": "The public eBay vehicle-history panel shows a Category S/N advisory without identifying which category applies.",
+      "evidenceLocation": "Public eBay description iframe; seller description and/or vehicle-history advisory panel",
+      "publicHistoryEvidence": {
+        "advisory": "Cat S/N Advisory",
+        "repairClaim": false
+      }
+    }
+  ],
+  "correctionApplied": true,
+  "copyReferences": [
+    "stock.json",
+    "copy-review.json"
+  ],
+  "rawAdvertContentRetained": false,
+  "independentlyCertified": false
+}

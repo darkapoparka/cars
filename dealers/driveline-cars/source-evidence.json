@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "dealer": "driveline-cars",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uk.json",
+    "sha256": "6cd8d365586f9a5d5131fe4b1d50baede7de91ab384a135017c25367298b07c4"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/leicestershire/leicester/driveline-cars-10049555",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "current-public-business-details",
+        "dated-advertised-stock-snapshot"
+      ]
+    }
+  ],
+  "liveFetchPerformed": false,
+  "currentResearch": {
+    "performed": true,
+    "observedAt": "2026-10-19",
+    "primaryPage": {
+      "url": "https://www.autotrader.co.uk/dealers/leicestershire/leicester/driveline-cars-10049555",
+      "httpStatus": 200,
+      "sha256": "d6ec137cdc75ea5863c7ee4dc39b1714d2f36dd3c5a31f99e6460318cbc8fa7e"
+    },
+    "reference": "research-review.json"
+  }
+}

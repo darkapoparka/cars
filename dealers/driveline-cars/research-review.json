@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "dealer": "driveline-cars",
+  "dealerId": "gb-leicester-driveline-cars",
+  "reviewedAt": "2026-10-19",
+  "providerWrites": 0,
+  "dealerContactPerformed": false,
+  "primarySource": {
+    "url": "https://www.autotrader.co.uk/dealers/leicestershire/leicester/driveline-cars-10049555",
+    "httpStatus": 200,
+    "htmlSha256": "d6ec137cdc75ea5863c7ee4dc39b1714d2f36dd3c5a31f99e6460318cbc8fa7e",
+    "observedAt": "2026-10-19"
+  },
+  "identity": {
+    "retainedLeadName": "Driveline Cars",
+    "currentSellerDisplayName": "DRIVELINE CARS",
+    "existingRegistryOrClientMatch": false
+  },
+  "publicBusinessPhone": {
+    "source": "current dealer marketplace profile",
+    "ownership": "Public business contact; it may be a marketplace forwarding number."
+  },
+  "factsOmitted": [],
+  "limitations": [
+    "The marketplace office address was not independently confirmed as a customer viewing forecourt and is omitted; viewing is by appointment."
+  ],
+  "inventory": {
+    "kind": "dated-listing-snapshot",
+    "retainedListings": 3,
+    "photos": 3,
+    "availabilityConfirmedWithDealer": false,
+    "pricesOmitted": true,
+    "rawMarketplaceHtmlRetainedInPublicPack": false
+  },
+  "researchMethod": "Opened the exact primary seller catalogue; used its current Used cars/vehicle records and excluded generic Featured advertisements. Checked matched directories and bounded exact business name plus locality searches for an official site or usable logo."
+}

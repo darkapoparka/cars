@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "dealer": "simply-motors-ilford",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uk.json",
+    "sha256": "6cd8d365586f9a5d5131fe4b1d50baede7de91ab384a135017c25367298b07c4"
+  },
+  "publicSources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/simply-motors?extendedFilter=1",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "current-public-business-details",
+        "dated-advertised-stock-snapshot"
+      ]
+    },
+    {
+      "url": "https://www.cazoo.co.uk/dealers/simply-motors-81238/",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "matching-dealer-directory-identity"
+      ]
+    }
+  ],
+  "liveFetchPerformed": false,
+  "currentResearch": {
+    "performed": true,
+    "observedAt": "2026-10-19",
+    "primaryPage": {
+      "url": "https://showroom.ebaymotorspro.co.uk/simply-motors?extendedFilter=1",
+      "httpStatus": 200,
+      "sha256": "46fbef2d78717dadc10f61da8bee50aede7b7a67009ef143d009327207d39f3e"
+    },
+    "reference": "research-review.json"
+  }
+}

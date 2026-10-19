@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "slug": "danny-trading",
+  "dealerId": "gb-leicester-danny-trading",
+  "business": {
+    "name": "Danny Trading Ltd",
+    "city": "Leicester",
+    "region": "Leicestershire",
+    "countryCode": "GB",
+    "currency": "GBP",
+    "distanceUnit": "mi",
+    "locale": "en-GB",
+    "address": "Leicester LE4 1AW (viewing by appointment only)",
+    "phone": "+441163668355",
+    "phoneDisplay": "+441163668355",
+    "email": "dannytradingltd@hotmail.com",
+    "website": "",
+    "stockUrl": "https://showroom.ebaymotorspro.co.uk/Danny-Trading-Ltd?menu=1",
+    "hours": "Viewing by appointment only.",
+    "sourceUrl": "https://showroom.ebaymotorspro.co.uk/Danny-Trading-Ltd?menu=1",
+    "observedAt": "2026-10-19",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Danny-Trading-Ltd?menu=1",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "current-public-business-details",
+        "dated-advertised-stock-snapshot"
+      ]
+    },
+    {
+      "url": "https://www.cazoo.co.uk/dealers/danny-trading-ltd-59971/",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "matching-dealer-directory-identity"
+      ]
+    }
+  ]
+}
