@@ -1,0 +1,317 @@
+{
+  "schemaVersion": 1,
+  "dealer": "muscle-cars-fze",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T20:55:17Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-faithful-clean-redraw",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "be885a626eae0ef271127c7137957a86557b8f71716823c1670db4b86c9e36a9",
+      "sourceSha256": "c423b52cd0ec56d26a5ec52a17b8033fab99f0626532b3cafc3b2c17328da751"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "e9e948618bf37e315c03ec0a18135694861271904541b22691e1b9061530e522",
+      "sourceSha256": "c7099b33fb7bc01fb3ea45246cb6e4a1b95ba4a616d2f671809392af9b41ff8b"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "e9e948618bf37e315c03ec0a18135694861271904541b22691e1b9061530e522",
+      "sourceSha256": "c7099b33fb7bc01fb3ea45246cb6e4a1b95ba4a616d2f671809392af9b41ff8b"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "c423b52cd0ec56d26a5ec52a17b8033fab99f0626532b3cafc3b2c17328da751",
+    "generation": {
+      "tool": "image_gen",
+      "generationId": "exec-0794d8ef-6a86-47c4-9492-300134d0af73",
+      "identifierKind": "tool-execution-output-identifier",
+      "providerGenerationIdExposed": false,
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "3d9e05b6d5125d2034bb226228e84d7a8257fd49b95b5df864e180ed820aa577",
+      "outputFileName": "exec-0794d8ef-6a86-47c4-9492-300134d0af73.png",
+      "operation": "deterministic-sprite-crop",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 767,
+        "height": 582
+      }
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "be7dd7536ece8c9748667ab9324b650b75d87733760bac83595134fc5bdc489f",
+    "generation": {
+      "tool": "image_gen",
+      "generationId": "exec-0794d8ef-6a86-47c4-9492-300134d0af73",
+      "identifierKind": "tool-execution-output-identifier",
+      "providerGenerationIdExposed": false,
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "3d9e05b6d5125d2034bb226228e84d7a8257fd49b95b5df864e180ed820aa577",
+      "outputFileName": "exec-0794d8ef-6a86-47c4-9492-300134d0af73.png",
+      "operation": "deterministic-sprite-crop",
+      "crop": {
+        "left": 0,
+        "top": 582,
+        "width": 767,
+        "height": 442
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "1126c0688a2e8402dafcd88310192155bc42925856126a7e323866806a2ffa80"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "c423b52cd0ec56d26a5ec52a17b8033fab99f0626532b3cafc3b2c17328da751",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-0794d8ef-6a86-47c4-9492-300134d0af73",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "3d9e05b6d5125d2034bb226228e84d7a8257fd49b95b5df864e180ed820aa577",
+        "outputFileName": "exec-0794d8ef-6a86-47c4-9492-300134d0af73.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 767,
+          "height": 582
+        }
+      },
+      "sourceReference": "dealers/muscle-cars-fze/branding/input-onLight.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "c7099b33fb7bc01fb3ea45246cb6e4a1b95ba4a616d2f671809392af9b41ff8b",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-0794d8ef-6a86-47c4-9492-300134d0af73",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "3d9e05b6d5125d2034bb226228e84d7a8257fd49b95b5df864e180ed820aa577",
+        "outputFileName": "exec-0794d8ef-6a86-47c4-9492-300134d0af73.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 767,
+          "top": 0,
+          "width": 769,
+          "height": 582
+        }
+      },
+      "sourceReference": "dealers/muscle-cars-fze/branding/input-onDark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "c7099b33fb7bc01fb3ea45246cb6e4a1b95ba4a616d2f671809392af9b41ff8b",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-0794d8ef-6a86-47c4-9492-300134d0af73",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "3d9e05b6d5125d2034bb226228e84d7a8257fd49b95b5df864e180ed820aa577",
+        "outputFileName": "exec-0794d8ef-6a86-47c4-9492-300134d0af73.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 767,
+          "top": 0,
+          "width": 769,
+          "height": 582
+        }
+      },
+      "sourceReference": "dealers/muscle-cars-fze/branding/input-onDark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "02445f35b003dd7dec4dfb146155407e888a556af076ad7c21d88e30436283b1",
+      "sha256": "c423b52cd0ec56d26a5ec52a17b8033fab99f0626532b3cafc3b2c17328da751",
+      "crop": {
+        "left": 46,
+        "top": 125,
+        "width": 651,
+        "height": 401
+      },
+      "sourcePath": "branding/input-onLight.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "d015ba8e625cf47c5c202318b1f95f96b17fc706ba6c7a4fe3537ddbc07d90f6",
+      "sha256": "c7099b33fb7bc01fb3ea45246cb6e4a1b95ba4a616d2f671809392af9b41ff8b",
+      "crop": {
+        "left": 71,
+        "top": 125,
+        "width": 647,
+        "height": 401
+      },
+      "sourcePath": "branding/input-onDark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "d015ba8e625cf47c5c202318b1f95f96b17fc706ba6c7a4fe3537ddbc07d90f6",
+      "sha256": "c7099b33fb7bc01fb3ea45246cb6e4a1b95ba4a616d2f671809392af9b41ff8b",
+      "crop": {
+        "left": 71,
+        "top": 125,
+        "width": 647,
+        "height": 401
+      },
+      "sourcePath": "branding/input-onDark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "c3e93c5f4c9f6d3d5341dfe0262c14e287a1636e0b23228bd0e54e6ad1692dc7",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-0794d8ef-6a86-47c4-9492-300134d0af73",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "3d9e05b6d5125d2034bb226228e84d7a8257fd49b95b5df864e180ed820aa577",
+        "outputFileName": "exec-0794d8ef-6a86-47c4-9492-300134d0af73.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 582,
+          "width": 767,
+          "height": 442
+        }
+      },
+      "sourceReference": "dealers/muscle-cars-fze/branding/input-mark.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "5c1c69cbe9382e24bca9797aa16e2fea3f1fd2938c14339d9b9061fafb9d9b07",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-0794d8ef-6a86-47c4-9492-300134d0af73",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "3d9e05b6d5125d2034bb226228e84d7a8257fd49b95b5df864e180ed820aa577",
+        "outputFileName": "exec-0794d8ef-6a86-47c4-9492-300134d0af73.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 767,
+          "top": 582,
+          "width": 769,
+          "height": 442
+        }
+      },
+      "sourceReference": "dealers/muscle-cars-fze/branding/input-markOnDark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "be7dd7536ece8c9748667ab9324b650b75d87733760bac83595134fc5bdc489f",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-0794d8ef-6a86-47c4-9492-300134d0af73",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "3d9e05b6d5125d2034bb226228e84d7a8257fd49b95b5df864e180ed820aa577",
+        "outputFileName": "exec-0794d8ef-6a86-47c4-9492-300134d0af73.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 582,
+          "width": 767,
+          "height": 442
+        }
+      },
+      "sourceReference": "dealers/muscle-cars-fze/branding/input-mark.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "1126c0688a2e8402dafcd88310192155bc42925856126a7e323866806a2ffa80",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-0794d8ef-6a86-47c4-9492-300134d0af73",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "3d9e05b6d5125d2034bb226228e84d7a8257fd49b95b5df864e180ed820aa577",
+        "outputFileName": "exec-0794d8ef-6a86-47c4-9492-300134d0af73.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 582,
+          "width": 767,
+          "height": 442
+        }
+      },
+      "sourceReference": "dealers/muscle-cars-fze/branding/input-mark.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T20:55:17Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "22213041ec14f50ad9f6fdf242740aea277189a4c6b3c9a627c4fbe094730781",
+    "generation": {
+      "tool": "image_gen",
+      "generationId": "exec-0794d8ef-6a86-47c4-9492-300134d0af73",
+      "identifierKind": "tool-execution-output-identifier",
+      "providerGenerationIdExposed": false,
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "3d9e05b6d5125d2034bb226228e84d7a8257fd49b95b5df864e180ed820aa577",
+      "outputFileName": "exec-0794d8ef-6a86-47c4-9492-300134d0af73.png",
+      "operation": "deterministic-sprite-crop",
+      "crop": {
+        "left": 767,
+        "top": 582,
+        "width": 769,
+        "height": 442
+      }
+    }
+  }
+}

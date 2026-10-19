@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "new-abu-taj-motors",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-new-abu-taj-motors-247",
+      "observedAt": "2026-10-19T20:55:17Z",
+      "supports": [
+        "public-business-identity",
+        "business-contact",
+        "address",
+        "attributed-public-stock"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "observedAt": "2026-10-19T20:55:17Z",
+  "stockMedia": [
+    {
+      "path": "dealer-stock/listing-1.jpg",
+      "sourceUrl": "https://www.dubicars.com/images/dcce46/650x380/new-abu-taj-motors/d72cdc63-5c27-4ba3-ab18-b09b6445b4e6.jpeg",
+      "listingUrl": "https://www.dubicars.com/2022-toyota-land-cruiser-gcc-specs-diesel-v6-35-excellent-condition-1018706.html",
+      "observedAt": "2026-10-19T20:55:17Z",
+      "sourceSha256": "24bdf7a672ad78379bb041d44cf796867a032dc38f7393cadd098fc76b78af1c",
+      "sha256": "a6f3cfa6a90e197face980800a4bc9fbd538a9f0b0757c8610fa4b7080a6ea06",
+      "width": 650,
+      "height": 489,
+      "bytes": 66124,
+      "transformation": "Bounded resize to at most 1280px; optimized JPEG quality 87."
+    },
+    {
+      "path": "dealer-stock/listing-2.jpg",
+      "sourceUrl": "https://www.dubicars.com/images/5adbe5/650x380/new-abu-taj-motors/379678a2-3b88-4a2c-bd81-3550af61c507.jpeg",
+      "listingUrl": "https://www.dubicars.com/2018-lexus-rx450h-1019105.html",
+      "observedAt": "2026-10-19T20:55:17Z",
+      "sourceSha256": "6b6c464be525ece051e56c1107033fa1e68cc66a6bda1d4e8cbe716c23784bfa",
+      "sha256": "e41967f1fb939b4730a424133309096108bdacb8e1d31cfb76c85e888e30ff68",
+      "width": 650,
+      "height": 347,
+      "bytes": 48976,
+      "transformation": "Bounded resize to at most 1280px; optimized JPEG quality 87."
+    },
+    {
+      "path": "dealer-stock/listing-3.jpg",
+      "sourceUrl": "https://www.dubicars.com/images/0495bd/650x380/new-abu-taj-motors/d8257009-e68a-4bc4-b1b6-fe4beaabf5d0.jpeg",
+      "listingUrl": "https://www.dubicars.com/2020-nissan-patrol-gcc-specs-v6-40l-2020-interior-and-exterior-excellent-condition-1019579.html",
+      "observedAt": "2026-10-19T20:55:17Z",
+      "sourceSha256": "e12cb73cce0cb1e2fe39c23863f9876fcf877b5eed7c6d85ed039c146ee0e5a6",
+      "sha256": "7c08fe177841e9b0e96310d1059b6bbd96518e6406bb912938f3d308b14ba5e5",
+      "width": 650,
+      "height": 489,
+      "bytes": 69743,
+      "transformation": "Bounded resize to at most 1280px; optimized JPEG quality 87."
+    }
+  ],
+  "contactReview": {
+    "namedPersonalContactsOmitted": true,
+    "outreachPerformed": false,
+    "businessPhoneBasis": "Dealer-level public business contact field; not an individual staff contact."
+  },
+  "researchNotes": ""
+}

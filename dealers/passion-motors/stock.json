@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "dealer": "passion-motors",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:10:47Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "listing-1",
+      "title": "BYD QIN PLUS STANDARD",
+      "make": "BYD",
+      "model": "Qin Plus",
+      "year": 2025,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-1.jpg"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2025-byd-qin-plus-dm-i-chinese-specs-gcc-ready-984267.html",
+      "observedAt": "2026-10-19T20:10:47Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageOnRequest": true,
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-2",
+      "title": "GMC Yukon DENALI",
+      "make": "GMC",
+      "model": "Yukon",
+      "year": 2022,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-2.jpg"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2022-gmc-yukon-gcc-specs-very-good-condetion-1000340.html",
+      "observedAt": "2026-10-19T20:10:47Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 106000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-3",
+      "title": "Kia Sportage EX",
+      "make": "Kia",
+      "model": "Sportage",
+      "year": 2024,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-3.jpg"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2024-kia-sportage-chinese-specs-1033511.html",
+      "observedAt": "2026-10-19T20:10:47Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageOnRequest": true,
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

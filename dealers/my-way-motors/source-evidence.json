@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "my-way-motors",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://mywayautos.com/",
+      "observedAt": "2026-10-19T20:55:17Z",
+      "supports": [
+        "public-business-identity",
+        "business-contact",
+        "address",
+        "attributed-public-stock"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "observedAt": "2026-10-19T20:55:17Z",
+  "stockMedia": [
+    {
+      "path": "dealer-stock/listing-1.jpg",
+      "sourceUrl": "https://mywayautos.com/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-01-at-12.21.14-PM-1024x655.jpeg",
+      "listingUrl": "https://mywayautos.com/listings/ferrari-amalfi/",
+      "observedAt": "2026-10-19T20:55:17Z",
+      "sourceSha256": "52f92b40275f0326d58b26941ef8046fe0492b08d36966f535a41da29723c45d",
+      "sha256": "7fab01ffabb536af059778c3d87ea7d799f31bd7126cd57e5a3b2e1fb83fbf62",
+      "width": 1024,
+      "height": 655,
+      "bytes": 85616,
+      "transformation": "Bounded resize to at most 1280px; optimized JPEG quality 87."
+    },
+    {
+      "path": "dealer-stock/listing-2.jpg",
+      "sourceUrl": "https://mywayautos.com/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-01-at-11.51.57-AM-1024x659.jpeg",
+      "listingUrl": "https://mywayautos.com/listings/ferrari-purosangue/",
+      "observedAt": "2026-10-19T20:55:17Z",
+      "sourceSha256": "b76ad2d02c1499aa168d3540931014193fda38c43961723cb7283c2a43a9c9ba",
+      "sha256": "7e83e93651398426d1738fa3b59f1a0ec2d2826e4142a0f95576d59a78b2d0d2",
+      "width": 1024,
+      "height": 659,
+      "bytes": 103351,
+      "transformation": "Bounded resize to at most 1280px; optimized JPEG quality 87."
+    },
+    {
+      "path": "dealer-stock/listing-3.jpg",
+      "sourceUrl": "https://mywayautos.com/wp-content/uploads/2026/04/WhatsApp-Image-2026-04-13-at-2.12.23-PM-1024x768.jpeg",
+      "listingUrl": "https://mywayautos.com/listings/chevrolet-equinox-activ/",
+      "observedAt": "2026-10-19T20:55:17Z",
+      "sourceSha256": "8baa5f72d3341bd38291659bf211dfe3d91f507981ef31749daecc29b7270a56",
+      "sha256": "8a8223f1e6f499e643899fd554ff22ae6c4f677d16ed0333d45b1ee67b48e362",
+      "width": 1024,
+      "height": 768,
+      "bytes": 154854,
+      "transformation": "Bounded resize to at most 1280px; optimized JPEG quality 87."
+    }
+  ],
+  "researchNotes": "",
+  "contactReview": {
+    "namedPersonalContactsOmitted": true,
+    "outreachPerformed": false,
+    "businessPhoneBasis": "Dealer-level public business contact field; not an individual staff contact."
+  }
+}

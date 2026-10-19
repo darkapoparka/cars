@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "dealer": "royal-diamond-motors",
+  "missing": [
+    {
+      "field": "prices",
+      "required": false,
+      "reason": "All listing prices are omitted under the public-repository scope."
+    }
+  ],
+  "blocking": []
+}

@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T21:00:01Z",
+  "dealer": "noor-al-islam-used-cars",
+  "dealerId": "ae-dubai-noor-al-islam-used-cars",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "method": "Exact retained registry and pack identity comparison, current public source review and client-folder alias comparison. No fleet collision found; no dealer approval implied.",
+  "sources": [
+    {
+      "url": "https://uae.yallamotor.com/auto-companies/noor-al-islam-used-cars-10946",
+      "observedAt": "2026-10-19T21:00:01Z"
+    }
+  ]
+}

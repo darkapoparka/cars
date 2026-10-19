@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "dealer": "passion-motors",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-passion-motors-3287",
+      "observedAt": "2026-10-19T20:43:14Z",
+      "supports": [
+        "public-business-identity",
+        "business-contact",
+        "address",
+        "attributed-public-stock"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "observedAt": "2026-10-19T20:43:14Z",
+  "stockMedia": [
+    {
+      "path": "dealer-stock/listing-1.jpg",
+      "sourceUrl": "https://www.dubicars.com/images/a0eac7/650x380/passion-motors/1f768d6a-03e3-4f1e-ab5e-f5f1058d5cc6.jpeg",
+      "listingUrl": "https://www.dubicars.com/2025-byd-qin-plus-dm-i-chinese-specs-gcc-ready-984267.html",
+      "observedAt": "2026-10-19T20:43:14Z",
+      "sourceSha256": "e8f5bcebf3cf0d20c9317c3edbc2e909f556cc296d4709c560393416f0c30610",
+      "sha256": "dbe0fc16463b52cb24e677a779b8d9f176beac6edd24b6aea6a78ee51956456d",
+      "width": 650,
+      "height": 411,
+      "bytes": 58991,
+      "transformation": "Bounded resize to at most 1280px; optimized JPEG quality 87."
+    },
+    {
+      "path": "dealer-stock/listing-2.jpg",
+      "sourceUrl": "https://www.dubicars.com/images/16c47b/650x380/passion-motors/28e6ee46-7087-483e-b0ac-a50fd5ae6fad.jpeg",
+      "listingUrl": "https://www.dubicars.com/2022-gmc-yukon-gcc-specs-very-good-condetion-1000340.html",
+      "observedAt": "2026-10-19T20:43:14Z",
+      "sourceSha256": "f93b6feb9b978b0f2a134b9a8a1973190bdb307e1671c2c8f0ff760d983635f2",
+      "sha256": "2a73451ecad6ebd4bad78c4aff630f4e944678b61ae6232712ad34ffd37b03c0",
+      "width": 650,
+      "height": 406,
+      "bytes": 82413,
+      "transformation": "Bounded resize to at most 1280px; optimized JPEG quality 87."
+    },
+    {
+      "path": "dealer-stock/listing-3.jpg",
+      "sourceUrl": "https://www.dubicars.com/images/8a736c/650x380/passion-motors/f563a1d1-f276-48f7-bea8-d68d0113badd.jpeg",
+      "listingUrl": "https://www.dubicars.com/2024-kia-sportage-chinese-specs-1033511.html",
+      "observedAt": "2026-10-19T20:43:14Z",
+      "sourceSha256": "ea7888438078d93745c03aca086c5f923c247bf180db55eb36c89e4cbfa18fb8",
+      "sha256": "590333aa3ae1c02baefb46c30db2fb556dd3477b72765e6bdd95151ca8954c1b",
+      "width": 650,
+      "height": 411,
+      "bytes": 78609,
+      "transformation": "Bounded resize to at most 1280px; optimized JPEG quality 87."
+    }
+  ],
+  "contactReview": {
+    "namedPersonalContactsOmitted": true,
+    "outreachPerformed": false,
+    "businessPhoneBasis": "Dealer-level public business contact field; not an individual staff contact."
+  }
+}

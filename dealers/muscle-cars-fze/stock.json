@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "dealer": "muscle-cars-fze",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:55:17Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "listing-1",
+      "title": "Dodge Charger Daytona R/T 2021",
+      "make": "Dodge",
+      "model": "Charger Daytona R/T",
+      "year": 2021,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-1.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Dodge/Charger-Daytona-R/T/?id=68523",
+      "observedAt": "2026-10-19T20:55:17Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageOnRequest": true,
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-2",
+      "title": "Dodge Challenger R/T Shaker 2019",
+      "make": "Dodge",
+      "model": "Challenger R/T Shaker",
+      "year": 2019,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-2.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Dodge/Challenger-R/T-Shaker/?id=68518",
+      "observedAt": "2026-10-19T20:55:17Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageOnRequest": true,
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-3",
+      "title": "Dodge Charger R/T 2018",
+      "make": "Dodge",
+      "model": "Charger R/T",
+      "year": 2018,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-3.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Dodge/Charger-R/T/?id=68519",
+      "observedAt": "2026-10-19T20:55:17Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageOnRequest": true,
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

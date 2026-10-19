@@ -1,0 +1,317 @@
+{
+  "schemaVersion": 1,
+  "dealer": "quick-cars",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T21:00:01Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-faithful-clean-redraw",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "1a78f842f77dca48959e63127208b058f55798e5316a2dfd6a75c5e39255abbb",
+      "sourceSha256": "459a13cb68bd0109cf1a1ed393d212230a9b9da3e471642cefc8fb81f2544fbb"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "0f4a358dc64e823bdbcf7b7f24343c172e6b729cd95bbb76e1c922c94bc98217",
+      "sourceSha256": "f2a5f91810254b38690366f55f761878d06d888dbd98f51e09c634a06ae8976b"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "0f4a358dc64e823bdbcf7b7f24343c172e6b729cd95bbb76e1c922c94bc98217",
+      "sourceSha256": "f2a5f91810254b38690366f55f761878d06d888dbd98f51e09c634a06ae8976b"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "459a13cb68bd0109cf1a1ed393d212230a9b9da3e471642cefc8fb81f2544fbb",
+    "generation": {
+      "tool": "image_gen",
+      "generationId": "exec-f2785d01-b5d5-4e00-93c7-d17961afc14b",
+      "identifierKind": "tool-execution-output-identifier",
+      "providerGenerationIdExposed": false,
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "b32f6602b8c7e85eb8bfcf3dbf600c2e7d1d83c554b83007b9feef7fc559e5f1",
+      "outputFileName": "exec-f2785d01-b5d5-4e00-93c7-d17961afc14b.png",
+      "operation": "deterministic-sprite-crop",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 780,
+        "height": 493
+      }
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "e324b32157a8466ab7ffb4faaac89fd68f785bc7dc62ff92683e3b545fc65e5a",
+    "generation": {
+      "tool": "image_gen",
+      "generationId": "exec-f2785d01-b5d5-4e00-93c7-d17961afc14b",
+      "identifierKind": "tool-execution-output-identifier",
+      "providerGenerationIdExposed": false,
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "b32f6602b8c7e85eb8bfcf3dbf600c2e7d1d83c554b83007b9feef7fc559e5f1",
+      "outputFileName": "exec-f2785d01-b5d5-4e00-93c7-d17961afc14b.png",
+      "operation": "deterministic-sprite-crop",
+      "crop": {
+        "left": 0,
+        "top": 493,
+        "width": 780,
+        "height": 531
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "4ffc9b13edb90ec9d289ba4523d6eccd74922df6655825f6ac1d5a1d481235f1"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "459a13cb68bd0109cf1a1ed393d212230a9b9da3e471642cefc8fb81f2544fbb",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-f2785d01-b5d5-4e00-93c7-d17961afc14b",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "b32f6602b8c7e85eb8bfcf3dbf600c2e7d1d83c554b83007b9feef7fc559e5f1",
+        "outputFileName": "exec-f2785d01-b5d5-4e00-93c7-d17961afc14b.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 780,
+          "height": 493
+        }
+      },
+      "sourceReference": "dealers/quick-cars/branding/input-onLight.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "f2a5f91810254b38690366f55f761878d06d888dbd98f51e09c634a06ae8976b",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-f2785d01-b5d5-4e00-93c7-d17961afc14b",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "b32f6602b8c7e85eb8bfcf3dbf600c2e7d1d83c554b83007b9feef7fc559e5f1",
+        "outputFileName": "exec-f2785d01-b5d5-4e00-93c7-d17961afc14b.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 780,
+          "top": 0,
+          "width": 756,
+          "height": 493
+        }
+      },
+      "sourceReference": "dealers/quick-cars/branding/input-onDark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "f2a5f91810254b38690366f55f761878d06d888dbd98f51e09c634a06ae8976b",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-f2785d01-b5d5-4e00-93c7-d17961afc14b",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "b32f6602b8c7e85eb8bfcf3dbf600c2e7d1d83c554b83007b9feef7fc559e5f1",
+        "outputFileName": "exec-f2785d01-b5d5-4e00-93c7-d17961afc14b.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 780,
+          "top": 0,
+          "width": 756,
+          "height": 493
+        }
+      },
+      "sourceReference": "dealers/quick-cars/branding/input-onDark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "81e5ac6bc2699e105ba435fbc7856f10f24273f3202b150cce1ff5d6da222b0c",
+      "sha256": "459a13cb68bd0109cf1a1ed393d212230a9b9da3e471642cefc8fb81f2544fbb",
+      "crop": {
+        "left": 8,
+        "top": 150,
+        "width": 764,
+        "height": 255
+      },
+      "sourcePath": "branding/input-onLight.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "338a29319795ae4d5073fc26cfceb7bdf51fa203379e6648798de3490c5d282b",
+      "sha256": "f2a5f91810254b38690366f55f761878d06d888dbd98f51e09c634a06ae8976b",
+      "crop": {
+        "left": 9,
+        "top": 149,
+        "width": 747,
+        "height": 255
+      },
+      "sourcePath": "branding/input-onDark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "338a29319795ae4d5073fc26cfceb7bdf51fa203379e6648798de3490c5d282b",
+      "sha256": "f2a5f91810254b38690366f55f761878d06d888dbd98f51e09c634a06ae8976b",
+      "crop": {
+        "left": 9,
+        "top": 149,
+        "width": 747,
+        "height": 255
+      },
+      "sourcePath": "branding/input-onDark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "73e16cd6fea551701ab5aba263f235b52c3d5b2f3c8a2018ad48ab5f64b65bae",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-f2785d01-b5d5-4e00-93c7-d17961afc14b",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "b32f6602b8c7e85eb8bfcf3dbf600c2e7d1d83c554b83007b9feef7fc559e5f1",
+        "outputFileName": "exec-f2785d01-b5d5-4e00-93c7-d17961afc14b.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 493,
+          "width": 780,
+          "height": 531
+        }
+      },
+      "sourceReference": "dealers/quick-cars/branding/input-mark.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "00d4d17380ce89b3c2e46b78668371463e6b273638a69a5182278a18e137effc",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-f2785d01-b5d5-4e00-93c7-d17961afc14b",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "b32f6602b8c7e85eb8bfcf3dbf600c2e7d1d83c554b83007b9feef7fc559e5f1",
+        "outputFileName": "exec-f2785d01-b5d5-4e00-93c7-d17961afc14b.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 780,
+          "top": 493,
+          "width": 756,
+          "height": 531
+        }
+      },
+      "sourceReference": "dealers/quick-cars/branding/input-markOnDark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "e324b32157a8466ab7ffb4faaac89fd68f785bc7dc62ff92683e3b545fc65e5a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-f2785d01-b5d5-4e00-93c7-d17961afc14b",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "b32f6602b8c7e85eb8bfcf3dbf600c2e7d1d83c554b83007b9feef7fc559e5f1",
+        "outputFileName": "exec-f2785d01-b5d5-4e00-93c7-d17961afc14b.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 493,
+          "width": 780,
+          "height": 531
+        }
+      },
+      "sourceReference": "dealers/quick-cars/branding/input-mark.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "4ffc9b13edb90ec9d289ba4523d6eccd74922df6655825f6ac1d5a1d481235f1",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-f2785d01-b5d5-4e00-93c7-d17961afc14b",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "b32f6602b8c7e85eb8bfcf3dbf600c2e7d1d83c554b83007b9feef7fc559e5f1",
+        "outputFileName": "exec-f2785d01-b5d5-4e00-93c7-d17961afc14b.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 493,
+          "width": 780,
+          "height": 531
+        }
+      },
+      "sourceReference": "dealers/quick-cars/branding/input-mark.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T21:00:01Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "49cae5665c23341f4a7304669fce11ec1f987d9c8c18834786b93f3af9104d92",
+    "generation": {
+      "tool": "image_gen",
+      "generationId": "exec-f2785d01-b5d5-4e00-93c7-d17961afc14b",
+      "identifierKind": "tool-execution-output-identifier",
+      "providerGenerationIdExposed": false,
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "b32f6602b8c7e85eb8bfcf3dbf600c2e7d1d83c554b83007b9feef7fc559e5f1",
+      "outputFileName": "exec-f2785d01-b5d5-4e00-93c7-d17961afc14b.png",
+      "operation": "deterministic-sprite-crop",
+      "crop": {
+        "left": 780,
+        "top": 493,
+        "width": 756,
+        "height": 531
+      }
+    }
+  }
+}

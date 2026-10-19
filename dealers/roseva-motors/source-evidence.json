@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "roseva-motors",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.rosevamotors.com/",
+      "observedAt": "2026-10-19T20:55:17Z",
+      "supports": [
+        "public-business-identity",
+        "business-contact",
+        "address",
+        "attributed-public-stock"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "observedAt": "2026-10-19T20:55:17Z",
+  "stockMedia": [
+    {
+      "path": "dealer-stock/listing-1.jpg",
+      "sourceUrl": "https://gacpzdybwnriyexlhjnu.supabase.co/storage/v1/object/public/vehicle-photos/58178919-915b-4273-ad46-6e47a9cabcdf/7e590be2-8d8b-43bb-817f-340a13b65bfe-4be89120-a8c2-4774-971a-a8a0ab771182.jpeg",
+      "listingUrl": "https://www.rosevamotors.com/vehicle/58178919-915b-4273-ad46-6e47a9cabcdf",
+      "observedAt": "2026-10-19T20:55:17Z",
+      "sourceSha256": "94245edb3b430f4f53ef0b7e413fbcdb37f81abebb39739e92c1113e2fe62d73",
+      "sha256": "daec6df353685228cc28ba2d6cee113c849cf77525ed811fc74fd3b6d0a441cc",
+      "width": 1280,
+      "height": 960,
+      "bytes": 178609,
+      "transformation": "Bounded resize to at most 1280px; optimized JPEG quality 82."
+    },
+    {
+      "path": "dealer-stock/listing-2.jpg",
+      "sourceUrl": "https://gacpzdybwnriyexlhjnu.supabase.co/storage/v1/object/public/vehicle-photos/9d6633d2-4a60-4739-aa3a-343b6b2b1bc1/fd7f4c2b-c896-4443-8283-ae34c77560ab-3d0c72e3-02ad-48ac-8337-9d813cd6e51f.jpeg",
+      "listingUrl": "https://www.rosevamotors.com/vehicle/9d6633d2-4a60-4739-aa3a-343b6b2b1bc1",
+      "observedAt": "2026-10-19T20:55:17Z",
+      "sourceSha256": "8d488aa57653838f93cf9ad1b0a0e17bc7f4aacbd34b0755bd066effc01968b1",
+      "sha256": "8b96872072b96a0efc8e31b3f125f1ecc25d969d9b3b0b9da0b38378211c59dc",
+      "width": 1280,
+      "height": 960,
+      "bytes": 164151,
+      "transformation": "Bounded resize to at most 1280px; optimized JPEG quality 87."
+    },
+    {
+      "path": "dealer-stock/listing-3.jpg",
+      "sourceUrl": "https://gacpzdybwnriyexlhjnu.supabase.co/storage/v1/object/public/vehicle-photos/38541da9-b20c-4841-8321-8c6da1519d9a/a45d9cc0-6743-4f9a-9705-208bc1725322-87764544-82a7-46dc-bb74-2dd5a7795859.jpg",
+      "listingUrl": "https://www.rosevamotors.com/vehicle/38541da9-b20c-4841-8321-8c6da1519d9a",
+      "observedAt": "2026-10-19T20:55:17Z",
+      "sourceSha256": "85573a12239598d1e57d4a69a0c0b40e0896d615e95cf2fc7413f21d40d37475",
+      "sha256": "af9546dd747c96ac5abbd1d60348561fce555b6e597c2434480fdfccfdfad50b",
+      "width": 1280,
+      "height": 1280,
+      "bytes": 191769,
+      "transformation": "Bounded resize to at most 1280px; optimized JPEG quality 72."
+    }
+  ],
+  "researchNotes": "Retained directory listing could not be read; current dealer-controlled website supplies current identity, main business landline and available stock. Search-cached older contact page was not used. Mileage units omitted because site labels appear inconsistent.",
+  "contactReview": {
+    "namedPersonalContactsOmitted": true,
+    "outreachPerformed": false,
+    "businessPhoneBasis": "Dealer-level public business contact field; not an individual staff contact."
+  }
+}

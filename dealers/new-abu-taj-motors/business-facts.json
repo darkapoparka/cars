@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "slug": "new-abu-taj-motors",
+  "dealerId": "ae-dubai-new-abu-taj-motors",
+  "business": {
+    "name": "New Abu Taj Motors",
+    "city": "Dubai",
+    "region": "Dubai",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "Showroom 280, Ducamz, Ras Al Khor",
+    "phone": "+971509185034",
+    "phoneDisplay": "+971509185034",
+    "email": "abutajmotors2000@gmail.com",
+    "website": "",
+    "stockUrl": "https://www.dubicars.com/dealers/dubai-new-abu-taj-motors-247",
+    "hours": "",
+    "sourceUrl": "https://www.dubicars.com/dealers/dubai-new-abu-taj-motors-247",
+    "observedAt": "2026-10-19T20:55:17Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-new-abu-taj-motors-247",
+      "observedAt": "2026-10-19T20:55:17Z",
+      "supports": [
+        "public-business-identity",
+        "business-contact",
+        "address",
+        "attributed-public-stock"
+      ]
+    }
+  ]
+}

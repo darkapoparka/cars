@@ -1,0 +1,317 @@
+{
+  "schemaVersion": 1,
+  "dealer": "royal-diamond-motors",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T20:55:17Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-faithful-clean-redraw",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "63a1f22ad2dfed4b66742122326e977dd492fbfa706a6eb59c88dc0e07307125",
+      "sourceSha256": "f61420a4bdca3c7f19108473e2e8d25d9b46012a7f002899e7837b6634c2c0e3"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "c51c05b553f31e1f3fc7eb35c43740f0e00233b7053710ab454e37b8c95fdf41",
+      "sourceSha256": "74273610ffcbdc88f37c1775478ab7bd27090ba19eca8f5d7ef486787fb3570b"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "c51c05b553f31e1f3fc7eb35c43740f0e00233b7053710ab454e37b8c95fdf41",
+      "sourceSha256": "74273610ffcbdc88f37c1775478ab7bd27090ba19eca8f5d7ef486787fb3570b"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "f61420a4bdca3c7f19108473e2e8d25d9b46012a7f002899e7837b6634c2c0e3",
+    "generation": {
+      "tool": "image_gen",
+      "generationId": "exec-8063b73b-9ebf-4b41-8d8d-cdec00500ca3",
+      "identifierKind": "tool-execution-output-identifier",
+      "providerGenerationIdExposed": false,
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "0364a2085e328358f65b3d32e4a221fb7182dd89a09774c3900a01ffccdb1e47",
+      "outputFileName": "exec-8063b73b-9ebf-4b41-8d8d-cdec00500ca3.png",
+      "operation": "deterministic-sprite-crop",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 780,
+        "height": 615
+      }
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "70518fe50129e8b4442b2dbe22debe75acd02e7c5949db4256cdcc1111d9ee0b",
+    "generation": {
+      "tool": "image_gen",
+      "generationId": "exec-8063b73b-9ebf-4b41-8d8d-cdec00500ca3",
+      "identifierKind": "tool-execution-output-identifier",
+      "providerGenerationIdExposed": false,
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "0364a2085e328358f65b3d32e4a221fb7182dd89a09774c3900a01ffccdb1e47",
+      "outputFileName": "exec-8063b73b-9ebf-4b41-8d8d-cdec00500ca3.png",
+      "operation": "deterministic-sprite-crop",
+      "crop": {
+        "left": 0,
+        "top": 615,
+        "width": 780,
+        "height": 409
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "e7e92103a43c5da6d35c7cf76c972f7b5526492b4117d549f5ceea873dcbe600"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "f61420a4bdca3c7f19108473e2e8d25d9b46012a7f002899e7837b6634c2c0e3",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-8063b73b-9ebf-4b41-8d8d-cdec00500ca3",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "0364a2085e328358f65b3d32e4a221fb7182dd89a09774c3900a01ffccdb1e47",
+        "outputFileName": "exec-8063b73b-9ebf-4b41-8d8d-cdec00500ca3.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 780,
+          "height": 615
+        }
+      },
+      "sourceReference": "dealers/royal-diamond-motors/branding/input-onLight.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "74273610ffcbdc88f37c1775478ab7bd27090ba19eca8f5d7ef486787fb3570b",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-8063b73b-9ebf-4b41-8d8d-cdec00500ca3",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "0364a2085e328358f65b3d32e4a221fb7182dd89a09774c3900a01ffccdb1e47",
+        "outputFileName": "exec-8063b73b-9ebf-4b41-8d8d-cdec00500ca3.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 780,
+          "top": 0,
+          "width": 756,
+          "height": 615
+        }
+      },
+      "sourceReference": "dealers/royal-diamond-motors/branding/input-onDark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "74273610ffcbdc88f37c1775478ab7bd27090ba19eca8f5d7ef486787fb3570b",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-8063b73b-9ebf-4b41-8d8d-cdec00500ca3",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "0364a2085e328358f65b3d32e4a221fb7182dd89a09774c3900a01ffccdb1e47",
+        "outputFileName": "exec-8063b73b-9ebf-4b41-8d8d-cdec00500ca3.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 780,
+          "top": 0,
+          "width": 756,
+          "height": 615
+        }
+      },
+      "sourceReference": "dealers/royal-diamond-motors/branding/input-onDark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "3fc2c4a3c3431c73b639278fa99a8a7ef2b9f01ad1a92a3684dbeb160adc6419",
+      "sha256": "f61420a4bdca3c7f19108473e2e8d25d9b46012a7f002899e7837b6634c2c0e3",
+      "crop": {
+        "left": 109,
+        "top": 60,
+        "width": 555,
+        "height": 529
+      },
+      "sourcePath": "branding/input-onLight.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "3d6085ac9dc114b6d53a2cdfdf4f2be5c9358ac7fedeb4a55fdf660b1bf999f6",
+      "sha256": "74273610ffcbdc88f37c1775478ab7bd27090ba19eca8f5d7ef486787fb3570b",
+      "crop": {
+        "left": 117,
+        "top": 60,
+        "width": 556,
+        "height": 528
+      },
+      "sourcePath": "branding/input-onDark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "3d6085ac9dc114b6d53a2cdfdf4f2be5c9358ac7fedeb4a55fdf660b1bf999f6",
+      "sha256": "74273610ffcbdc88f37c1775478ab7bd27090ba19eca8f5d7ef486787fb3570b",
+      "crop": {
+        "left": 117,
+        "top": 60,
+        "width": 556,
+        "height": 528
+      },
+      "sourcePath": "branding/input-onDark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "64c6f3da49ad7ee219d3a0c63e6283ab36fe9ce0e991bec6a04049d6b1c5b3c0",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-8063b73b-9ebf-4b41-8d8d-cdec00500ca3",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "0364a2085e328358f65b3d32e4a221fb7182dd89a09774c3900a01ffccdb1e47",
+        "outputFileName": "exec-8063b73b-9ebf-4b41-8d8d-cdec00500ca3.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 615,
+          "width": 780,
+          "height": 409
+        }
+      },
+      "sourceReference": "dealers/royal-diamond-motors/branding/input-mark.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "ca6a5af4039f01aa05d8a56b587c1fddf3a914fbf2fc250143bb3feecacd4ee5",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-8063b73b-9ebf-4b41-8d8d-cdec00500ca3",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "0364a2085e328358f65b3d32e4a221fb7182dd89a09774c3900a01ffccdb1e47",
+        "outputFileName": "exec-8063b73b-9ebf-4b41-8d8d-cdec00500ca3.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 780,
+          "top": 615,
+          "width": 756,
+          "height": 409
+        }
+      },
+      "sourceReference": "dealers/royal-diamond-motors/branding/input-markOnDark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "70518fe50129e8b4442b2dbe22debe75acd02e7c5949db4256cdcc1111d9ee0b",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-8063b73b-9ebf-4b41-8d8d-cdec00500ca3",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "0364a2085e328358f65b3d32e4a221fb7182dd89a09774c3900a01ffccdb1e47",
+        "outputFileName": "exec-8063b73b-9ebf-4b41-8d8d-cdec00500ca3.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 615,
+          "width": 780,
+          "height": 409
+        }
+      },
+      "sourceReference": "dealers/royal-diamond-motors/branding/input-mark.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "e7e92103a43c5da6d35c7cf76c972f7b5526492b4117d549f5ceea873dcbe600",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-8063b73b-9ebf-4b41-8d8d-cdec00500ca3",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "0364a2085e328358f65b3d32e4a221fb7182dd89a09774c3900a01ffccdb1e47",
+        "outputFileName": "exec-8063b73b-9ebf-4b41-8d8d-cdec00500ca3.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 615,
+          "width": 780,
+          "height": 409
+        }
+      },
+      "sourceReference": "dealers/royal-diamond-motors/branding/input-mark.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T20:55:17Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "ddee1f406ddc73f14f5ad255e95ab98c846cac73d60a2f88b03eb17d61aa4e50",
+    "generation": {
+      "tool": "image_gen",
+      "generationId": "exec-8063b73b-9ebf-4b41-8d8d-cdec00500ca3",
+      "identifierKind": "tool-execution-output-identifier",
+      "providerGenerationIdExposed": false,
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "0364a2085e328358f65b3d32e4a221fb7182dd89a09774c3900a01ffccdb1e47",
+      "outputFileName": "exec-8063b73b-9ebf-4b41-8d8d-cdec00500ca3.png",
+      "operation": "deterministic-sprite-crop",
+      "crop": {
+        "left": 780,
+        "top": 615,
+        "width": 756,
+        "height": 409
+      }
+    }
+  }
+}

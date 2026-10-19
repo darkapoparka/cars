@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "slug": "my-way-motors",
+  "dealerId": "ae-dubai-my-way-motors",
+  "business": {
+    "name": "My Way Motors",
+    "city": "Dubai",
+    "region": "Dubai",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "Showroom No. 73, DUCAMZ, Ras Al Khor Industrial Area 3, Dubai, UAE",
+    "phone": "+971552450088",
+    "phoneDisplay": "+971552450088",
+    "email": "mywaymotors@hotmail.com",
+    "website": "https://mywayautos.com/",
+    "stockUrl": "https://mywayautos.com/",
+    "hours": "Monday-Saturday 09:00-19:00; Sunday and public holidays closed",
+    "sourceUrl": "https://mywayautos.com/",
+    "observedAt": "2026-10-19T20:55:17Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://mywayautos.com/",
+      "observedAt": "2026-10-19T20:55:17Z",
+      "supports": [
+        "public-business-identity",
+        "business-contact",
+        "address",
+        "attributed-public-stock"
+      ]
+    }
+  ]
+}

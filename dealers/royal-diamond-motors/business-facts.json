@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "slug": "royal-diamond-motors",
+  "dealerId": "ae-dubai-royal-diamond-motors",
+  "business": {
+    "name": "Royal Diamond Motors",
+    "city": "Dubai",
+    "region": "Dubai",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "Showroom No. 19, Al Aweer Auto Market, Dubai, UAE",
+    "phone": "+971504773348",
+    "phoneDisplay": "+971504773348",
+    "email": "info@royaldiamondmotors.ae",
+    "website": "https://royaldiamondmotors.ae/",
+    "stockUrl": "https://royaldiamondmotors.ae/ourcars/",
+    "hours": "Daily 09:00–13:00 and 16:00–21:00",
+    "sourceUrl": "https://royaldiamondmotors.ae/ourcars/",
+    "observedAt": "2026-10-19T20:55:17Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://royaldiamondmotors.ae/ourcars/",
+      "observedAt": "2026-10-19T20:55:17Z",
+      "supports": [
+        "public-business-identity",
+        "business-contact",
+        "address",
+        "attributed-public-stock"
+      ]
+    }
+  ]
+}

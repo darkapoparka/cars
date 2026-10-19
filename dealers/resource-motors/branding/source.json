@@ -1,0 +1,182 @@
+{
+  "schemaVersion": 1,
+  "dealer": "resource-motors",
+  "status": "reviewed-independent-proposal",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/dubai/resource-motors",
+      "observedAt": "2026-10-19T21:00:01Z"
+    }
+  ],
+  "originals": [
+    {
+      "path": "branding/public-original.png",
+      "sha256": "50b8bdaf3ffd06e26ec5875ffea7d364b171ff26f23f6ae54c50de5bed352050",
+      "url": "https://static.oneclickdrive.com/application/views/img/company/guessthecompanyname.png?ok=1.12&height=70&width=auto&fit=resize",
+      "observedAt": "2026-10-19T21:00:01Z"
+    }
+  ],
+  "creationMethod": "imagegen-independent-proposal",
+  "dealerApproved": false,
+  "logoSource": "proposal",
+  "researchSummary": "The public catalogue uses a generic non-identifying car-logo placeholder. Exact-name bounded public research did not reveal a confidently attributable real logo; this is a clearly marked independent proposal.",
+  "generation": {
+    "tool": "image_gen",
+    "generationId": "exec-b8e8e402-9307-4e4d-94ac-56f889cbcdc8",
+    "identifierKind": "tool-execution-output-identifier",
+    "modelVersion": null,
+    "sourcePath": "branding/generation-source.png",
+    "sourceSha256": "640f9c559b66d5f9b1a1daefd41cc49bb8bad1c279ceb4e81d334a335a00a369",
+    "nativeDimensions": {
+      "width": 1536,
+      "height": 1024
+    },
+    "prompt": "Design an independent proposed identity for RESOURCE MOTORS, an automobile dealer. Name exactly RESOURCE with MOTORS below, contemporary warm professional aesthetic. Create a distinctive navy R monogram using two bold folded road-like strokes, one small muted teal accent. Strong uncluttered geometric sans wordmark. Compact square R emblem must have clear recognizable R shape, not a generic car roof. Palette deep navy #112b3a with dark teal #00665f, no slogan. Elegant practical dealer brand. Output exactly four production variants on truly transparent alpha, in a two by two grid with large clear gutters and ample margins. TOP LEFT: full logo in dark ink for white background. TOP RIGHT: same full logo in pure-white monochrome for dark and red backgrounds. BOTTOM LEFT: compact emblem in dark ink; BOTTOM RIGHT: same compact emblem in pure white. No panel, background fill, shadows, glow, gradients, texture, photographic mockup or labels. Flat crisp brand artwork with transparent internal cutouts. Compact emblem substantially square and legible at 32px."
+  },
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T21:00:01Z",
+    "master": {
+      "path": "branding/input-onLight.png",
+      "sha256": "80b69643cadc590e3281d83a2dd8a5c56232dcd88436436aeaf260f07255397a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-b8e8e402-9307-4e4d-94ac-56f889cbcdc8",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "640f9c559b66d5f9b1a1daefd41cc49bb8bad1c279ceb4e81d334a335a00a369",
+        "outputFileName": "exec-b8e8e402-9307-4e4d-94ac-56f889cbcdc8.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 770,
+          "height": 558
+        }
+      }
+    },
+    "mark": {
+      "path": "branding/input-mark.png",
+      "sha256": "4f8afd3d1acbcbb068fbe1cf0493888b804b14c9751734d2e69244bdb5c78df0",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-b8e8e402-9307-4e4d-94ac-56f889cbcdc8",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "640f9c559b66d5f9b1a1daefd41cc49bb8bad1c279ceb4e81d334a335a00a369",
+        "outputFileName": "exec-b8e8e402-9307-4e4d-94ac-56f889cbcdc8.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 558,
+          "width": 770,
+          "height": 466
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/input-markOnDark.png",
+      "sha256": "23f918af79caf3115f8ab48710718686a996098ee12f3ff9d009e3f126b34fba",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-b8e8e402-9307-4e4d-94ac-56f889cbcdc8",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "640f9c559b66d5f9b1a1daefd41cc49bb8bad1c279ceb4e81d334a335a00a369",
+        "outputFileName": "exec-b8e8e402-9307-4e4d-94ac-56f889cbcdc8.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 770,
+          "top": 558,
+          "width": 766,
+          "height": 466
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/input-onLight.png",
+        "sha256": "80b69643cadc590e3281d83a2dd8a5c56232dcd88436436aeaf260f07255397a",
+        "generation": {
+          "tool": "image_gen",
+          "generationId": "exec-b8e8e402-9307-4e4d-94ac-56f889cbcdc8",
+          "identifierKind": "tool-execution-output-identifier",
+          "providerGenerationIdExposed": false,
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "640f9c559b66d5f9b1a1daefd41cc49bb8bad1c279ceb4e81d334a335a00a369",
+          "outputFileName": "exec-b8e8e402-9307-4e4d-94ac-56f889cbcdc8.png",
+          "operation": "deterministic-sprite-crop",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 770,
+            "height": 558
+          }
+        }
+      },
+      "onDark": {
+        "path": "branding/input-onDark.png",
+        "sha256": "a234afcc7b6dfd6b2d2f61182eb577954dd81971fa4c976ea1f879a4b7289359",
+        "generation": {
+          "tool": "image_gen",
+          "generationId": "exec-b8e8e402-9307-4e4d-94ac-56f889cbcdc8",
+          "identifierKind": "tool-execution-output-identifier",
+          "providerGenerationIdExposed": false,
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "640f9c559b66d5f9b1a1daefd41cc49bb8bad1c279ceb4e81d334a335a00a369",
+          "outputFileName": "exec-b8e8e402-9307-4e4d-94ac-56f889cbcdc8.png",
+          "operation": "deterministic-sprite-crop",
+          "crop": {
+            "left": 770,
+            "top": 0,
+            "width": 766,
+            "height": 558
+          }
+        }
+      },
+      "onAccent": {
+        "path": "branding/input-onDark.png",
+        "sha256": "a234afcc7b6dfd6b2d2f61182eb577954dd81971fa4c976ea1f879a4b7289359",
+        "generation": {
+          "tool": "image_gen",
+          "generationId": "exec-b8e8e402-9307-4e4d-94ac-56f889cbcdc8",
+          "identifierKind": "tool-execution-output-identifier",
+          "providerGenerationIdExposed": false,
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "640f9c559b66d5f9b1a1daefd41cc49bb8bad1c279ceb4e81d334a335a00a369",
+          "outputFileName": "exec-b8e8e402-9307-4e4d-94ac-56f889cbcdc8.png",
+          "operation": "deterministic-sprite-crop",
+          "crop": {
+            "left": 770,
+            "top": 0,
+            "width": 766,
+            "height": 558
+          }
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T21:00:01Z",
+      "method": "Agent reviewed generated artwork spelling, matching identity and transparent crop. White, charcoal and red contact sheet inspected; 32px compact marks reviewed.",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820",
+        "#09090b",
+        "#17191c",
+        "#c40101"
+      ],
+      "dealerApproval": false
+    }
+  }
+}

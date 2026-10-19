@@ -1,0 +1,160 @@
+{
+  "schemaVersion": 1,
+  "dealer": "my-way-motors",
+  "status": "reviewed-retained-real-with-generated-variants",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://mywayautos.com/",
+      "observedAt": "2026-10-19T20:55:17Z"
+    }
+  ],
+  "originals": [
+    {
+      "path": "branding/public-original.png",
+      "sha256": "be33742e2e58138707fb75318ebc9f9cd0c4ddf0d5710c654ead251a357c0711",
+      "url": "https://mywayautos.com/wp-content/uploads/2025/07/My-Way-MOTORS-FZE-2-1-e1753367852190.png",
+      "observedAt": "2026-10-19T20:55:17Z"
+    }
+  ],
+  "creationMethod": "retained-original-with-imagegen-surface-and-compact-variants",
+  "dealerApproved": false,
+  "logoSource": "real",
+  "researchSummary": "The dealer-controlled website supplies a good transparent gold master, retained unchanged as master and onLight. Imagegen provides faithful white surface variants and compact MW marks. No official/dealer approval implied.",
+  "generation": {
+    "tool": "image_gen",
+    "generationId": "exec-c9a8875c-80dd-429c-b956-a9f23cb7eceb",
+    "identifierKind": "tool-execution-output-identifier",
+    "modelVersion": null,
+    "sourcePath": "branding/generation-source.png",
+    "sourceSha256": "2ab50587d0a10eeafb0fa96b25a7ca30341b1ea6c8ca774299af2a366e82d88e",
+    "nativeDimensions": {
+      "width": 1774,
+      "height": 887
+    },
+    "prompt": "Faithful elegant clean redraw of supplied MY WAY MOTORS mark: retain flowing car profile and exact My Way large title case, MOTORS beneath. Flat dark antique-gold ink #83601f on left. Preserve sweeping car motif, elegant athletic proportions and clear generous sans typography. Compact bottom emblem is a bold MW monogram topped with the SAME sweeping car roof, roughly square, clear at favicon size. Inverse versions pure white. Production logo assets on truly transparent alpha canvas. EXACTLY four separate assets in a regular 2 by 2 grid, each centered inside its quadrant with very wide empty margins and a large clear central gutter. Top left full name plus emblem in dark ink for white. Top right identical full name plus emblem in solid pure-white ink for black and red. Bottom left bold compact emblem in dark ink; bottom right same compact emblem in pure-white ink. Each emblem roughly square and clear at 32 pixels. Background and internal empty spaces fully transparent. Flat vector-like crisp edges; no gradients, shadows, glow, fuzzy halo, textures, panels, labels or tiny decorative text."
+  },
+  "reviewedInputs": {
+    "reviewedAt": "2026-10-19T21:08:42Z",
+    "master": {
+      "path": "branding/public-original.png",
+      "sha256": "be33742e2e58138707fb75318ebc9f9cd0c4ddf0d5710c654ead251a357c0711",
+      "retainedSource": {
+        "kind": "retained-original-raster",
+        "sha256": "be33742e2e58138707fb75318ebc9f9cd0c4ddf0d5710c654ead251a357c0711",
+        "url": "https://mywayautos.com/wp-content/uploads/2025/07/My-Way-MOTORS-FZE-2-1-e1753367852190.png",
+        "observedAt": "2026-10-19T20:55:17Z"
+      }
+    },
+    "mark": {
+      "path": "branding/input-mark.png",
+      "sha256": "024d865edd8cbef48ecc67f57c6aea474ad875d0b42dabfbc8729434c540c5a2",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-c9a8875c-80dd-429c-b956-a9f23cb7eceb",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "2ab50587d0a10eeafb0fa96b25a7ca30341b1ea6c8ca774299af2a366e82d88e",
+        "outputFileName": "exec-c9a8875c-80dd-429c-b956-a9f23cb7eceb.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 447,
+          "width": 883,
+          "height": 440
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/input-markOnDark.png",
+      "sha256": "fdfa80b09ae33bde2422bf9b9e16eb07118f55459175865a57157e5ad93ba018",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-c9a8875c-80dd-429c-b956-a9f23cb7eceb",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "2ab50587d0a10eeafb0fa96b25a7ca30341b1ea6c8ca774299af2a366e82d88e",
+        "outputFileName": "exec-c9a8875c-80dd-429c-b956-a9f23cb7eceb.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 883,
+          "top": 447,
+          "width": 891,
+          "height": 440
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/public-original.png",
+        "sha256": "be33742e2e58138707fb75318ebc9f9cd0c4ddf0d5710c654ead251a357c0711",
+        "retainedSource": {
+          "kind": "retained-original-raster",
+          "sha256": "be33742e2e58138707fb75318ebc9f9cd0c4ddf0d5710c654ead251a357c0711",
+          "url": "https://mywayautos.com/wp-content/uploads/2025/07/My-Way-MOTORS-FZE-2-1-e1753367852190.png",
+          "observedAt": "2026-10-19T20:55:17Z"
+        }
+      },
+      "onDark": {
+        "path": "branding/input-onDark.png",
+        "sha256": "bf7a79ea13050d67ec45a3fb625bde072a9093ca0e2557f55dcd5ae5933985b6",
+        "generation": {
+          "tool": "image_gen",
+          "generationId": "exec-c9a8875c-80dd-429c-b956-a9f23cb7eceb",
+          "identifierKind": "tool-execution-output-identifier",
+          "providerGenerationIdExposed": false,
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "2ab50587d0a10eeafb0fa96b25a7ca30341b1ea6c8ca774299af2a366e82d88e",
+          "outputFileName": "exec-c9a8875c-80dd-429c-b956-a9f23cb7eceb.png",
+          "operation": "deterministic-sprite-crop",
+          "crop": {
+            "left": 883,
+            "top": 0,
+            "width": 891,
+            "height": 447
+          }
+        }
+      },
+      "onAccent": {
+        "path": "branding/input-onDark.png",
+        "sha256": "bf7a79ea13050d67ec45a3fb625bde072a9093ca0e2557f55dcd5ae5933985b6",
+        "generation": {
+          "tool": "image_gen",
+          "generationId": "exec-c9a8875c-80dd-429c-b956-a9f23cb7eceb",
+          "identifierKind": "tool-execution-output-identifier",
+          "providerGenerationIdExposed": false,
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "2ab50587d0a10eeafb0fa96b25a7ca30341b1ea6c8ca774299af2a366e82d88e",
+          "outputFileName": "exec-c9a8875c-80dd-429c-b956-a9f23cb7eceb.png",
+          "operation": "deterministic-sprite-crop",
+          "crop": {
+            "left": 883,
+            "top": 0,
+            "width": 891,
+            "height": 447
+          }
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T20:55:17Z",
+      "method": "Agent reviewed generated artwork spelling, matching identity and transparent crop. White, charcoal and red contact sheet inspected; 32px compact marks reviewed.",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820",
+        "#09090b",
+        "#17191c",
+        "#c40101"
+      ],
+      "dealerApproval": false
+    }
+  }
+}

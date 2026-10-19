@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "muscle-cars-fze",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/dubai/muscle-cars-fze",
+      "observedAt": "2026-10-19T20:55:17Z",
+      "supports": [
+        "public-business-identity",
+        "business-contact",
+        "address",
+        "attributed-public-stock"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "observedAt": "2026-10-19T20:55:17Z",
+  "stockMedia": [
+    {
+      "path": "dealer-stock/listing-1.jpg",
+      "sourceUrl": "https://static.oneclickdrive.com/uploads/cars/Dodge_Charger_2021_68523_68523_68534888506-9_small.jpg",
+      "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Dodge/Charger-Daytona-R/T/?id=68523",
+      "observedAt": "2026-10-19T20:55:17Z",
+      "sourceSha256": "86214308fc5d60d675936ac292ba7ac5cd3f0989d26cc64da9a09322df57a68f",
+      "sha256": "daf71c20da191a6194bb48914e7a293a1109c6e5d73ee8ff465f5a3baaec3356",
+      "width": 450,
+      "height": 395,
+      "bytes": 45727,
+      "transformation": "Bounded resize to at most 1280px; optimized JPEG quality 87."
+    },
+    {
+      "path": "dealer-stock/listing-2.jpg",
+      "sourceUrl": "https://static.oneclickdrive.com/uploads/cars/Dodge_Challenger_2019_68518_68518_68528575614-11_small.jpg",
+      "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Dodge/Challenger-R/T-Shaker/?id=68518",
+      "observedAt": "2026-10-19T20:55:17Z",
+      "sourceSha256": "5a039dbd970fe6e8e3138f1deb8af1e8e9686c2951e6bf654c485a98b6ef36fb",
+      "sha256": "9f5f464467dbbdbcf9891daf93e0ba3003348a8d0bc1c34a2dd7f6b967dbef6a",
+      "width": 450,
+      "height": 395,
+      "bytes": 50584,
+      "transformation": "Bounded resize to at most 1280px; optimized JPEG quality 87."
+    },
+    {
+      "path": "dealer-stock/listing-3.jpg",
+      "sourceUrl": "https://static.oneclickdrive.com/uploads/cars/Dodge-Charger-2018_68519_753003450435-14_small.jpg",
+      "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Dodge/Charger-R/T/?id=68519",
+      "observedAt": "2026-10-19T20:55:17Z",
+      "sourceSha256": "efb7150fa8bc4ca9464d34c1d496f25562e663ac892235e5fd833a75741c2782",
+      "sha256": "8c5ac7e0f42018bc8454b384f5cd098a566cab0706da6a2faac6ce37f75cc1dd",
+      "width": 450,
+      "height": 395,
+      "bytes": 33870,
+      "transformation": "Bounded resize to at most 1280px; optimized JPEG quality 87."
+    }
+  ],
+  "researchNotes": "",
+  "contactReview": {
+    "namedPersonalContactsOmitted": true,
+    "outreachPerformed": false,
+    "businessPhoneBasis": "Dealer-level public business contact field; not an individual staff contact."
+  }
+}
