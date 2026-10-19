@@ -8,7 +8,7 @@
   "publicSources": [
     {
       "url": "https://www.dubicars.com/dealers/dubai-mpi-middle-east-2184",
-      "observedAt": "2026-10-19T20:10:47Z",
+      "observedAt": "2026-10-19T21:07:30Z",
       "supports": [
         "public-business-identity",
         "business-contact",
@@ -18,42 +18,42 @@
     }
   ],
   "liveFetchPerformed": true,
-  "observedAt": "2026-10-19T20:10:47Z",
+  "observedAt": "2026-10-19T21:07:30Z",
   "stockMedia": [
     {
       "path": "dealer-stock/listing-1.jpg",
       "sourceUrl": "https://www.dubicars.com/images/ddc580/650x380/mpi-middle-east/3b6fe635-c763-4855-ab14-c4ea5c9ac3cc.jpeg",
       "listingUrl": "https://www.dubicars.com/2026-lexus-rx500h-947430.html",
-      "observedAt": "2026-10-19T20:10:47Z",
-      "sourceSha256": "5acd2f1ed7d12260cae1546432079c7129aaf977fb8c1699efb0adc8a7444680",
-      "sha256": "101cadfd40a948d729666d61016096ecbf3277461e698d64068466a9b4c6b552",
+      "observedAt": "2026-10-19T21:07:30Z",
+      "sourceSha256": "0adc5d371047e6130f6f673c5dc451c8329d8adaf26cca1c1d978afb5f7c8c40",
+      "sha256": "f378a75693988a8149ad641b56bf802ae9633b3dba6de8610aa1ae671e3d6261",
       "width": 650,
       "height": 434,
-      "bytes": 57877,
+      "bytes": 56980,
       "transformation": "Bounded resize to at most 1280px; optimized JPEG quality 87."
     },
     {
       "path": "dealer-stock/listing-2.jpg",
       "sourceUrl": "https://www.dubicars.com/images/ebe798/650x380/mpi-middle-east/64313817-2bf3-488b-875e-eaf851e8e11f.jpeg",
       "listingUrl": "https://www.dubicars.com/2026-lexus-lm-350h-hybrid-7-seater-2026-model-ready-stock-799765.html",
-      "observedAt": "2026-10-19T20:10:47Z",
-      "sourceSha256": "74137ffa5bc1889e4a49bd6621dd3e6904cfc44e292551bdadb085a96b35b309",
-      "sha256": "f2710efa0e228c1ed1ad79303e091da5744c277e3ab3e51849561663dab0c9e0",
+      "observedAt": "2026-10-19T21:07:30Z",
+      "sourceSha256": "4871059312d486c3a45f5479a88356c9083b79b4983de58a271bb2524e1d7261",
+      "sha256": "54e9cd1402c59fab16bf109e591bd6dd82f448c97b623b087750d9e378297f12",
       "width": 650,
       "height": 488,
-      "bytes": 78609,
+      "bytes": 77424,
       "transformation": "Bounded resize to at most 1280px; optimized JPEG quality 87."
     },
     {
       "path": "dealer-stock/listing-3.jpg",
       "sourceUrl": "https://www.dubicars.com/images/8c78ae/650x380/mpi-middle-east/2906797f-c285-452e-9fc1-0a2f093528a5.jpeg",
       "listingUrl": "https://www.dubicars.com/2026-lexus-lm-350h-hybrid-4-seater-2026-ready-stock-924128.html",
-      "observedAt": "2026-10-19T20:10:47Z",
-      "sourceSha256": "0e8d38769a42d434ced167d365c139892c0c75855c338c4d75dc106908a1b0e6",
-      "sha256": "382180f63c452434fdf0af8f2133db7dc587c5a4fc6b869c5e8968f9dcc229aa",
+      "observedAt": "2026-10-19T21:07:30Z",
+      "sourceSha256": "8d11bddfb2a195335d91120367c957bb3b120465a0615493b2142e7b72e5d2e3",
+      "sha256": "35105bb691c70f80299d27c106e454308917d85ee08ba1c674b0be03e8c3554a",
       "width": 650,
       "height": 434,
-      "bytes": 54539,
+      "bytes": 53549,
       "transformation": "Bounded resize to at most 1280px; optimized JPEG quality 87."
     }
   ],
@@ -61,5 +61,6 @@
     "namedPersonalContactsOmitted": true,
     "outreachPerformed": false,
     "businessPhoneBasis": "Dealer-level public business contact field; not an individual staff contact."
-  }
+  },
+  "researchNotes": ""
 }

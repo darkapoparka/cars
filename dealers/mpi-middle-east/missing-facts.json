@@ -26,6 +26,11 @@
       "field": "business.email",
       "required": false,
       "reason": "Omitted a named, personal-looking or ambiguous mailbox; no value retained."
+    },
+    {
+      "field": "business.email",
+      "required": false,
+      "reason": "Omitted a named, personal-looking or ambiguous mailbox; no value retained."
     }
   ],
   "blocking": []

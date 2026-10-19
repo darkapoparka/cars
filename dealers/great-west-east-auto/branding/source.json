@@ -10,59 +10,59 @@
   "creationMethod": "sourced-logo-imagegen-redraw",
   "approvalStatus": "independent-preview-not-dealer-approved",
   "dealerApproved": false,
-  "visualReview": "Retains sourced red GWE/car-front motif and exact English trading-name wording. The opaque showroom photo is replaced by clean transparent artwork; inverse variants preserve composition.",
-  "generationPrompt": "Create ONE transparent RGBA sprite of four matched GREAT WEST EAST AUTOS logos, 2 columns x 2 rows, generous fully transparent gutters. Faithful redraw of supplied red GWE/car identity. TOP LEFT COMPACT MARK: make a near-SQUARE block mark with thick uppercase 'GW' on first line and 'E' centered below, one short simple red car roof stroke over GW; dark red #B10014 solid ink. No long car nose in the compact version. TOP RIGHT: exact same near-square mark in white ink. BOTTOM LEFT horizontal logo: keep original recognizable long car nose/roof plus bold GWE motif, followed by exact text 'GREAT WEST EAST' above 'AUTOS', using dark red #B10014 and charcoal. BOTTOM RIGHT: matching horizontal white inverse. Compact mark must occupy near-square silhouette so GW/E reads at 32px. Preserve red automotive idea and trade name. Flat clean solid strokes, no shadows, glow, gradients, background panels, extra text or labels.",
+  "visualReview": "Faithful redraw retains sourced red GWE/car-front identity and exact GREAT WEST EAST AUTOS wording. The revised open wordmark and line spacing supply genuine transparent gaps for the existing downstream raster boundary; template styling is unchanged.",
+  "generationPrompt": "Use case: logo-brand. ONE transparent RGBA sprite for ONE dealer, 4 matching assets in 2 columns x 2 rows with LARGE fully transparent gutters. Top-left compact near-square mark in dark ink for WHITE backgrounds; top-right matching mark entirely WHITE. Bottom-left horizontal logo in dark brand colour; bottom-right matching logo entirely WHITE. Flat crisp solid artwork with truly empty transparent space between all strokes and letters, open counters, no shadow/glow/halo/fog/texture/background. Keep letter spacing generous and counter spaces open; avoid solid dense wordmark blocks. Faithful clean redraw of supplied red GWE/car-front dealership identity. Compact top marks: bold upright GW over E in a near-square arrangement, one short car roof stroke over GW; dark red #AD0015 on left and white on right. Bottom wordmarks: the recognizable red GWE with a simple car-nose line on left, followed by exact 'GREAT WEST EAST' over 'AUTOS' in medium-bold dark-charcoal sans serif with generous tracking and clear open gaps. In inverse, every stroke white. Maintain a LARGE empty gap between emblem and lettering, a clear empty band between the two text lines, and generously open letters. Wordmark artwork should have at least half of its tightly bounded rectangle empty of ink; do not fill the rectangle with heavy block lettering. Preserve source red automotive motif and full English trading name.",
   "workingLogoPath": "branding/generated-onLight.png",
   "generatedInputs": {
-    "reviewedAt": "2026-10-19T20:28:00.164983Z",
+    "reviewedAt": "2026-10-19T21:10:22.097563Z",
     "master": {
       "path": "branding/generated-onLight.png",
-      "sha256": "c0ee7848d3b04e7700e0c0fe3d26a5abd4457327264bcc56fecb4818c99ec867",
+      "sha256": "7e00851f13dfa0596d7279afcb9e08d7303579bed6a1fcffe70a82fceb40ef13",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-e6dd25d5-1342-4250-8d3e-2b9241a7c7e7",
+        "generationId": "exec-a695bce2-02ad-4013-8490-ccef969ee988",
         "modelVersion": null,
         "sourcePath": "branding/generation-source.png",
-        "sourceSha256": "c1b0b6930eae32302c58ac173199afa0695f6192773793889573e40ceec07ae0",
+        "sourceSha256": "aa8e9c90715fde0e28bda503879af702f0c9829b89537f89509e306d3b43ac12",
         "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
         "crop": [
           0,
           614,
-          772,
+          768,
           1024
         ]
       }
     },
     "mark": {
       "path": "branding/generated-mark.png",
-      "sha256": "b5e35b21e214ca0da8c8571630263df0f192e9392b78832254754207dc66a2a3",
+      "sha256": "dfd3798ef2764b1c5651ba26135eaa9cdaafffc9f1e669999b3705eea2380ab4",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-e6dd25d5-1342-4250-8d3e-2b9241a7c7e7",
+        "generationId": "exec-a695bce2-02ad-4013-8490-ccef969ee988",
         "modelVersion": null,
         "sourcePath": "branding/generation-source.png",
-        "sourceSha256": "c1b0b6930eae32302c58ac173199afa0695f6192773793889573e40ceec07ae0",
+        "sourceSha256": "aa8e9c90715fde0e28bda503879af702f0c9829b89537f89509e306d3b43ac12",
         "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
         "crop": [
           0,
           0,
-          772,
+          768,
           614
         ]
       }
     },
     "markOnDark": {
       "path": "branding/generated-markOnDark.png",
-      "sha256": "8bf7db243b69c9cd1acd3152ac92e7de55da9c3fd227787fd1e1df06a944a5f6",
+      "sha256": "c1ee2b07da6cdaaf2be58de8243dcea99abfd7d2b43bcf03a592af647e23c8ec",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-e6dd25d5-1342-4250-8d3e-2b9241a7c7e7",
+        "generationId": "exec-a695bce2-02ad-4013-8490-ccef969ee988",
         "modelVersion": null,
         "sourcePath": "branding/generation-source.png",
-        "sourceSha256": "c1b0b6930eae32302c58ac173199afa0695f6192773793889573e40ceec07ae0",
+        "sourceSha256": "aa8e9c90715fde0e28bda503879af702f0c9829b89537f89509e306d3b43ac12",
         "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
         "crop": [
-          772,
+          768,
           0,
           1536,
           614
@@ -72,34 +72,34 @@
     "surfaces": {
       "onLight": {
         "path": "branding/generated-onLight.png",
-        "sha256": "c0ee7848d3b04e7700e0c0fe3d26a5abd4457327264bcc56fecb4818c99ec867",
+        "sha256": "7e00851f13dfa0596d7279afcb9e08d7303579bed6a1fcffe70a82fceb40ef13",
         "generation": {
           "tool": "image_gen.imagegen",
-          "generationId": "exec-e6dd25d5-1342-4250-8d3e-2b9241a7c7e7",
+          "generationId": "exec-a695bce2-02ad-4013-8490-ccef969ee988",
           "modelVersion": null,
           "sourcePath": "branding/generation-source.png",
-          "sourceSha256": "c1b0b6930eae32302c58ac173199afa0695f6192773793889573e40ceec07ae0",
+          "sourceSha256": "aa8e9c90715fde0e28bda503879af702f0c9829b89537f89509e306d3b43ac12",
           "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
           "crop": [
             0,
             614,
-            772,
+            768,
             1024
           ]
         }
       },
       "onDark": {
         "path": "branding/generated-onDark.png",
-        "sha256": "9874f3acfe1e11b9f86fd00c17228b41f908975cb950f124b2dc3cc025b11625",
+        "sha256": "239d44b3ec8342d9d463efccf39faafdd6290f3b723f953b0a6ae1f1320e46f0",
         "generation": {
           "tool": "image_gen.imagegen",
-          "generationId": "exec-e6dd25d5-1342-4250-8d3e-2b9241a7c7e7",
+          "generationId": "exec-a695bce2-02ad-4013-8490-ccef969ee988",
           "modelVersion": null,
           "sourcePath": "branding/generation-source.png",
-          "sourceSha256": "c1b0b6930eae32302c58ac173199afa0695f6192773793889573e40ceec07ae0",
+          "sourceSha256": "aa8e9c90715fde0e28bda503879af702f0c9829b89537f89509e306d3b43ac12",
           "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
           "crop": [
-            772,
+            768,
             614,
             1536,
             1024
@@ -108,16 +108,16 @@
       },
       "onAccent": {
         "path": "branding/generated-onDark.png",
-        "sha256": "9874f3acfe1e11b9f86fd00c17228b41f908975cb950f124b2dc3cc025b11625",
+        "sha256": "239d44b3ec8342d9d463efccf39faafdd6290f3b723f953b0a6ae1f1320e46f0",
         "generation": {
           "tool": "image_gen.imagegen",
-          "generationId": "exec-e6dd25d5-1342-4250-8d3e-2b9241a7c7e7",
+          "generationId": "exec-a695bce2-02ad-4013-8490-ccef969ee988",
           "modelVersion": null,
           "sourcePath": "branding/generation-source.png",
-          "sourceSha256": "c1b0b6930eae32302c58ac173199afa0695f6192773793889573e40ceec07ae0",
+          "sourceSha256": "aa8e9c90715fde0e28bda503879af702f0c9829b89537f89509e306d3b43ac12",
           "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
           "crop": [
-            772,
+            768,
             614,
             1536,
             1024
@@ -139,11 +139,11 @@
         120,
         180
       ],
-      "notes": "Retains sourced red GWE/car-front motif and exact English trading-name wording. The opaque showroom photo is replaced by clean transparent artwork; inverse variants preserve composition."
+      "notes": "Faithful redraw retains sourced red GWE/car-front identity and exact GREAT WEST EAST AUTOS wording. The revised open wordmark and line spacing supply genuine transparent gaps for the existing downstream raster boundary; template styling is unchanged."
     },
     "compactMarkReview": {
       "reviewed": true,
-      "reviewedAt": "2026-10-19T20:28:00.164983Z",
+      "reviewedAt": "2026-10-19T21:10:22.097563Z",
       "widths": [
         32,
         64,
@@ -154,7 +154,7 @@
         "#101820",
         "#c40101"
       ],
-      "notes": "A proposed GW/E arrangement makes the original GWE letters near-square at 32px, retaining the red car roof stroke. Matching white inverse for dark/red."
+      "notes": "Proposed GW/E stacking makes the original wide GWE letters compact at 32px while retaining the car roof; matching white inverse uses the same composition."
     },
     "compactMarkStatus": "proposed-compact-adaptation-not-dealer-approved"
   },
