@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "dealer": "mikki-middle-east-cars",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/sharjah-mikki-middle-east-cars-2534",
+      "observedAt": "2026-10-19T20:00:20.447056Z",
+      "supports": [
+        "business.name",
+        "business.city",
+        "business.countryCode",
+        "business.address",
+        "business.phone",
+        "business.hours",
+        "dated-dealer-catalogue-listings"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2026-toyota-prado-24-petrol-1018183.html",
+      "observedAt": "2026-10-19T20:00:20.447056Z",
+      "supports": [
+        "stock.dubicars-1018183"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2025-lexus-lx600-1020080.html",
+      "observedAt": "2026-10-19T20:00:20.447056Z",
+      "supports": [
+        "stock.dubicars-1020080"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2026-toyota-corolla-20-l-1023476.html",
+      "observedAt": "2026-10-19T20:00:20.447056Z",
+      "supports": [
+        "stock.dubicars-1023476"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "agentResearch": {
+    "observedAt": "2026-10-19T20:00:20.447056Z",
+    "method": "Public catalogue HTML/JSON-LD and actual stock image read; fields checked before inclusion. No contact or account interaction.",
+    "identityNotes": [
+      "Profile supplies country only; exact showroom address omitted."
+    ],
+    "imageReview": "Actual three stock images visually reviewed; no price overlay or named personal contact used.",
+    "logoResearchStatus": "in-progress"
+  },
+  "stockPhotos": [
+    {
+      "listingId": "dubicars-1018183",
+      "listingUrl": "https://www.dubicars.com/2026-toyota-prado-24-petrol-1018183.html",
+      "sourceUrl": "https://www.dubicars.com/images/1563d3/650x380/mikki-middle-east-cars/091c750b-a91d-4d81-a6e7-f7e85c0c1990.jpeg",
+      "observedAt": "2026-10-19T20:00:20.447056Z",
+      "sourceSha256": "45e2785a2a32c029ec7e0e61739365661ecbdfb3d4ab26ed95880e9812735ce0",
+      "retainedPath": "dealer-stock/dubicars-1018183.webp",
+      "retainedSha256": "fdd4729a9546c41f9c958c7864e8f93b819f0115bbcd07623b3ea24e79ff2302",
+      "nativeDimensions": [
+        650,
+        488
+      ],
+      "retainedDimensions": [
+        650,
+        488
+      ],
+      "retainedBytes": 44946,
+      "transformation": "Bounded resize with preserved aspect ratio and WebP compression; no watermark removal.",
+      "reusePermission": "not independently established; public-preview source attribution retained"
+    },
+    {
+      "listingId": "dubicars-1020080",
+      "listingUrl": "https://www.dubicars.com/2025-lexus-lx600-1020080.html",
+      "sourceUrl": "https://www.dubicars.com/images/9d4a91/650x380/mikki-middle-east-cars/c99e2fb4-ea10-44d1-8157-4c09c879eb4a.jpeg",
+      "observedAt": "2026-10-19T20:00:20.447056Z",
+      "sourceSha256": "32878a757260467191ffe248bc2575103ad2e8baf397954b36ae6e4121609590",
+      "retainedPath": "dealer-stock/dubicars-1020080.webp",
+      "retainedSha256": "5a0759233c36b10a2841048f3c8b3ca10d719d0c7eb8bbbeb4d7ee034f9b7aef",
+      "nativeDimensions": [
+        650,
+        488
+      ],
+      "retainedDimensions": [
+        650,
+        488
+      ],
+      "retainedBytes": 44208,
+      "transformation": "Bounded resize with preserved aspect ratio and WebP compression; no watermark removal.",
+      "reusePermission": "not independently established; public-preview source attribution retained"
+    },
+    {
+      "listingId": "dubicars-1023476",
+      "listingUrl": "https://www.dubicars.com/2026-toyota-corolla-20-l-1023476.html",
+      "sourceUrl": "https://www.dubicars.com/images/936a40/650x380/mikki-middle-east-cars/785c0d9c-f3d4-43d9-9e70-6e70628045e4.jpeg",
+      "observedAt": "2026-10-19T20:00:20.447056Z",
+      "sourceSha256": "f4dbd32a80ff59e2ccdfeb2835e94e83a21901eff2d659a4e7b1d3438a7dcf98",
+      "retainedPath": "dealer-stock/dubicars-1023476.webp",
+      "retainedSha256": "1b333d5cf623a2253ec6c7ae5dc11621621097e267f87677758eaade88384135",
+      "nativeDimensions": [
+        650,
+        488
+      ],
+      "retainedDimensions": [
+        650,
+        488
+      ],
+      "retainedBytes": 54218,
+      "transformation": "Bounded resize with preserved aspect ratio and WebP compression; no watermark removal.",
+      "reusePermission": "not independently established; public-preview source attribution retained"
+    }
+  ]
+}

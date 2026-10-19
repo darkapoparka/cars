@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "slug": "mikki-middle-east-cars",
+  "dealerId": "ae-sharjah-mikki-middle-east-cars",
+  "business": {
+    "name": "Mikki Middle East Cars",
+    "city": "Sharjah",
+    "region": "Sharjah",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "",
+    "phone": "+971559467666",
+    "phoneDisplay": "+971559467666",
+    "email": "info@mikicars.com",
+    "website": "",
+    "stockUrl": "https://www.dubicars.com/dealers/sharjah-mikki-middle-east-cars-2534",
+    "hours": "",
+    "sourceUrl": "https://www.dubicars.com/dealers/sharjah-mikki-middle-east-cars-2534",
+    "observedAt": "2026-10-19T20:00:20.447056Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.dubicars.com/dealers/sharjah-mikki-middle-east-cars-2534",
+      "observedAt": "2026-10-19T20:00:20.447056Z",
+      "supports": [
+        "business.name",
+        "business.city",
+        "business.countryCode",
+        "business.address",
+        "business.phone",
+        "business.hours",
+        "dated-dealer-catalogue-listings"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2026-toyota-prado-24-petrol-1018183.html",
+      "observedAt": "2026-10-19T20:00:20.447056Z",
+      "supports": [
+        "stock.dubicars-1018183"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2025-lexus-lx600-1020080.html",
+      "observedAt": "2026-10-19T20:00:20.447056Z",
+      "supports": [
+        "stock.dubicars-1020080"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2026-toyota-corolla-20-l-1023476.html",
+      "observedAt": "2026-10-19T20:00:20.447056Z",
+      "supports": [
+        "stock.dubicars-1023476"
+      ]
+    }
+  ]
+}

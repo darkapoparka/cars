@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "dealer": "emirates-gulf-used-cars",
+  "businessFacts": "business-facts.json",
+  "stock": "stock.json",
+  "inventoryKind": "dated-listing-snapshot",
+  "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+  "sources": [
+    {
+      "url": "https://www.dubicars.com/dealers/sharjah-emirates-gulf-used-cars-753",
+      "observedAt": "2026-10-19T20:00:18.032483Z",
+      "supports": [
+        "business.name",
+        "business.city",
+        "business.countryCode",
+        "business.address",
+        "business.phone",
+        "business.hours",
+        "dated-dealer-catalogue-listings"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2015-mitsubishi-pajero-platinum-fully-modified-for-off-road-2015-gcc-specs-974495.html",
+      "observedAt": "2026-10-19T20:00:18.032483Z",
+      "supports": [
+        "stock.dubicars-974495"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2020-land-rover-range-rover-se-2020-gcc-specs-983487.html",
+      "observedAt": "2026-10-19T20:00:18.032483Z",
+      "supports": [
+        "stock.dubicars-983487"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2011-ford-f-150-ford-f-150-2011-gcc-specs-998765.html",
+      "observedAt": "2026-10-19T20:00:18.032483Z",
+      "supports": [
+        "stock.dubicars-998765"
+      ]
+    }
+  ]
+}

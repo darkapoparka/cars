@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-kuwait-used-cars-exhibition",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:00:12.026118Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "dubicars-1037390",
+      "title": "Mercedes Benz E300 AMG",
+      "make": "Mercedes Benz",
+      "model": "E 300",
+      "year": 2018,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/dubicars-1037390.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2018-mercedes-benz-e300-1037390.html",
+      "observedAt": "2026-10-19T20:00:12.026118Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 100000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "dubicars-1026064",
+      "title": "Nissan Patrol SUPER SAFARI",
+      "make": "Nissan",
+      "model": "Patrol",
+      "year": 2020,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/dubicars-1026064.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2020-nissan-patrol-super-safari-1026064.html",
+      "observedAt": "2026-10-19T20:00:12.026118Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 140000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "dubicars-977456",
+      "title": "Audi S7 TOP",
+      "make": "Audi",
+      "model": "S7",
+      "year": 2014,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/dubicars-977456.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2014-audi-s7-top-40l-420-hp-977456.html",
+      "observedAt": "2026-10-19T20:00:12.026118Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 107258,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-nujoom-al-malakiah-used-cars",
+  "businessFacts": "business-facts.json",
+  "stock": "stock.json",
+  "inventoryKind": "dated-listing-snapshot",
+  "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+  "sources": [
+    {
+      "url": "https://www.dubicars.com/dealers/sharjah-al-nujoom-al-malakiah-used-cars-729",
+      "observedAt": "2026-10-19T20:00:12.747267Z",
+      "supports": [
+        "business.name",
+        "business.city",
+        "business.countryCode",
+        "business.address",
+        "business.phone",
+        "business.hours",
+        "dated-dealer-catalogue-listings"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2023-land-rover-defender-1016013.html",
+      "observedAt": "2026-10-19T20:00:12.747267Z",
+      "supports": [
+        "stock.dubicars-1016013"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2017-nissan-patrol-le-platinum-city-le-platinium-vip-711649.html",
+      "observedAt": "2026-10-19T20:00:12.747267Z",
+      "supports": [
+        "stock.dubicars-711649"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2014-mercedes-benz-s500-lwb-top-924417.html",
+      "observedAt": "2026-10-19T20:00:12.747267Z",
+      "supports": [
+        "stock.dubicars-924417"
+      ]
+    }
+  ]
+}

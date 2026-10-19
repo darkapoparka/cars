@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-shams-al-thahbiah-used-cars",
+  "businessFacts": "business-facts.json",
+  "stock": "stock.json",
+  "inventoryKind": "dated-listing-snapshot",
+  "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+  "sources": [
+    {
+      "url": "https://www.dubicars.com/dealers/sharjah-al-shams-al-thahbiah-used-cars-2477",
+      "observedAt": "2026-10-19T20:00:12.845406Z",
+      "supports": [
+        "business.name",
+        "business.city",
+        "business.countryCode",
+        "business.address",
+        "business.phone",
+        "business.hours",
+        "dated-dealer-catalogue-listings"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2023-mercedes-benz-g-63-amg-4x4-engine-performance-o-engine-type-40-liter-v8-biturbo-amg-built-engine-o-horsepower-approx-942703.html",
+      "observedAt": "2026-10-19T20:00:12.845406Z",
+      "supports": [
+        "stock.dubicars-942703"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2025-bmw-m5-44-l-727-hp-921632.html",
+      "observedAt": "2026-10-19T20:00:12.845406Z",
+      "supports": [
+        "stock.dubicars-921632"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2025-land-rover-range-rover-sport-v8-893536.html",
+      "observedAt": "2026-10-19T20:00:12.845406Z",
+      "supports": [
+        "stock.dubicars-893536"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "ayoon-al-hoot-used-cars",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:00:15.621719Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "dubicars-952069",
+      "title": "BMW X5 50i",
+      "make": "BMW",
+      "model": "X5",
+      "year": 2015,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/dubicars-952069.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2015-bmw-x5-individual-v8-7-seats-mkit-gcc-free-accidents-perfect-condition-89k-miles-952069.html",
+      "observedAt": "2026-10-19T20:00:15.621719Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 89000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "dubicars-952128",
+      "title": "Porsche Cayenne GTS",
+      "make": "Porsche",
+      "model": "Cayenne",
+      "year": 2014,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/dubicars-952128.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2014-porsche-cayenne-amazing-gts-v8-gcc-fully-loaded-perfect-condition-radar-952128.html",
+      "observedAt": "2026-10-19T20:00:15.621719Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 113000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "dubicars-952108",
+      "title": "BMW X5 35i EXCLUSIVE",
+      "make": "BMW",
+      "model": "X5",
+      "year": 2017,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/dubicars-952108.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2017-bmw-x5-best-xdrive50i-gcc-specs-accident-free-single-owner-fully-loaded-952108.html",
+      "observedAt": "2026-10-19T20:00:15.621719Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 100600,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T20:30:06.548Z",
+  "dealer": "al-kuwait-used-cars-exhibition",
+  "dealerId": "ae-sharjah-al-kuwait-used-cars-exhibition",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "method": "Exact retained registry and compact-pack identity comparison; no dealer approval is implied.",
+  "sources": [
+    {
+      "url": "https://www.dubicars.com/dealers/sharjah-al-kuwait-used-cars-exhibition-2717",
+      "observedAt": "2026-10-19T20:00:12.026118Z"
+    }
+  ]
+}

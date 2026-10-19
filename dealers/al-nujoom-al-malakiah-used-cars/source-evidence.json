@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-nujoom-al-malakiah-used-cars",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/sharjah-al-nujoom-al-malakiah-used-cars-729",
+      "observedAt": "2026-10-19T20:00:12.747267Z",
+      "supports": [
+        "business.name",
+        "business.city",
+        "business.countryCode",
+        "business.address",
+        "business.phone",
+        "business.hours",
+        "dated-dealer-catalogue-listings"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2023-land-rover-defender-1016013.html",
+      "observedAt": "2026-10-19T20:00:12.747267Z",
+      "supports": [
+        "stock.dubicars-1016013"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2017-nissan-patrol-le-platinum-city-le-platinium-vip-711649.html",
+      "observedAt": "2026-10-19T20:00:12.747267Z",
+      "supports": [
+        "stock.dubicars-711649"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2014-mercedes-benz-s500-lwb-top-924417.html",
+      "observedAt": "2026-10-19T20:00:12.747267Z",
+      "supports": [
+        "stock.dubicars-924417"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "agentResearch": {
+    "observedAt": "2026-10-19T20:00:12.747267Z",
+    "method": "Public catalogue HTML/JSON-LD and actual stock image read; fields checked before inclusion. No contact or account interaction.",
+    "identityNotes": [
+      "Personal-looking mailbox omitted; no personal contact retained.",
+      "Linked website and marketplace give different hours and contacts; website details not adopted.",
+      "Marketplace-linked domain not adopted: current fetch failed or identity/contact conflicts remain."
+    ],
+    "imageReview": "Actual three stock images visually reviewed; no price overlay or named personal contact used.",
+    "logoResearchStatus": "in-progress"
+  },
+  "stockPhotos": [
+    {
+      "listingId": "dubicars-1016013",
+      "listingUrl": "https://www.dubicars.com/2023-land-rover-defender-1016013.html",
+      "sourceUrl": "https://www.dubicars.com/images/731afa/650x380/al-nujoom-al-malakiah-used-cars/40ae8804-ca06-41a0-ac81-bde3fb29b0fd.jpeg",
+      "observedAt": "2026-10-19T20:00:12.747267Z",
+      "sourceSha256": "77431fbbc28fea65d42855e2c5ff0841be71e0a87303b6e42ee7c9445f928f49",
+      "retainedPath": "dealer-stock/dubicars-1016013.webp",
+      "retainedSha256": "ad589e76c042ea1fa9cfe93b5d376fc3f187cf5909e71751af2b000f90739edf",
+      "nativeDimensions": [
+        650,
+        366
+      ],
+      "retainedDimensions": [
+        650,
+        366
+      ],
+      "retainedBytes": 39632,
+      "transformation": "Bounded resize with preserved aspect ratio and WebP compression; no watermark removal.",
+      "reusePermission": "not independently established; public-preview source attribution retained"
+    },
+    {
+      "listingId": "dubicars-711649",
+      "listingUrl": "https://www.dubicars.com/2017-nissan-patrol-le-platinum-city-le-platinium-vip-711649.html",
+      "sourceUrl": "https://www.dubicars.com/images/9dc432/650x380/al-nujoom-al-malakiah-used-cars/6efde2e2-3df1-4b40-98e6-c78f59907a50.jpeg",
+      "observedAt": "2026-10-19T20:00:12.747267Z",
+      "sourceSha256": "380e32c62a8f033d0a629615f6151542241e3bfd3af765a3ee0986e17913b492",
+      "retainedPath": "dealer-stock/dubicars-711649.webp",
+      "retainedSha256": "e583ee4e1fed9bb46fb8b160dade5dbfefc87c2a8526305dd6c93ae697773a7a",
+      "nativeDimensions": [
+        650,
+        366
+      ],
+      "retainedDimensions": [
+        650,
+        366
+      ],
+      "retainedBytes": 41922,
+      "transformation": "Bounded resize with preserved aspect ratio and WebP compression; no watermark removal.",
+      "reusePermission": "not independently established; public-preview source attribution retained"
+    },
+    {
+      "listingId": "dubicars-924417",
+      "listingUrl": "https://www.dubicars.com/2014-mercedes-benz-s500-lwb-top-924417.html",
+      "sourceUrl": "https://www.dubicars.com/images/da8a73/650x380/al-nujoom-al-malakiah-used-cars/a148b52a-c98a-4984-bf5d-695c22a2d34e.jpeg",
+      "observedAt": "2026-10-19T20:00:12.747267Z",
+      "sourceSha256": "3f6063041a1bd67d19b8b2b212b929a2301e1202208a887436ed43336eb4cbbf",
+      "retainedPath": "dealer-stock/dubicars-924417.webp",
+      "retainedSha256": "a765ac3065da6f005db5ed526fe4b978aec46e1cc9216e4fd61f10ec13534369",
+      "nativeDimensions": [
+        650,
+        366
+      ],
+      "retainedDimensions": [
+        650,
+        366
+      ],
+      "retainedBytes": 43496,
+      "transformation": "Bounded resize with preserved aspect ratio and WebP compression; no watermark removal.",
+      "reusePermission": "not independently established; public-preview source attribution retained"
+    }
+  ]
+}

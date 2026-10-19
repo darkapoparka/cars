@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "dealer": "altamayoz-al-aali-general-trading",
+  "businessFacts": "business-facts.json",
+  "stock": "stock.json",
+  "inventoryKind": "dated-listing-snapshot",
+  "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+  "sources": [
+    {
+      "url": "https://www.dubicars.com/dealers/sharjah-altamayoz-al-aali-generalading-1556",
+      "observedAt": "2026-10-19T20:00:15.084443Z",
+      "supports": [
+        "business.name",
+        "business.city",
+        "business.countryCode",
+        "business.address",
+        "business.phone",
+        "business.hours",
+        "dated-dealer-catalogue-listings"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2022-mercedes-benz-glc-220d-4matic-glc-1037358.html",
+      "observedAt": "2026-10-19T20:00:15.084443Z",
+      "supports": [
+        "stock.dubicars-1037358"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2011-land-rover-range-rover-sport-1013630.html",
+      "observedAt": "2026-10-19T20:00:15.084443Z",
+      "supports": [
+        "stock.dubicars-1013630"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2020-mercedes-benz-glc350e-1029019.html",
+      "observedAt": "2026-10-19T20:00:15.084443Z",
+      "supports": [
+        "stock.dubicars-1029019"
+      ]
+    }
+  ]
+}

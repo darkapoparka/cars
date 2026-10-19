@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "bab-al-rola-used-cars",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:00:17.439041Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "dubicars-1031323",
+      "title": "Mercedes Benz GLE53 AMG COUPE 4MATIC+",
+      "make": "Mercedes Benz",
+      "model": "Gle 53",
+      "year": 2024,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/dubicars-1031323.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2024-mercedes-benz-gle53-amg-1031323.html",
+      "observedAt": "2026-10-19T20:00:17.439041Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 31592,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "dubicars-1031757",
+      "title": "Land Rover Defender 90 X-DYNAMIC HSE P300",
+      "make": "Land Rover",
+      "model": "Defender 90",
+      "year": 2024,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/dubicars-1031757.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2024-land-rover-defender-90-1031757.html",
+      "observedAt": "2026-10-19T20:00:17.439041Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 49113,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "dubicars-1006884",
+      "title": "Land Rover Range Rover Velar R-DYNAMIC HSE",
+      "make": "Land Rover",
+      "model": "Range Rover Velar",
+      "year": 2018,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/dubicars-1006884.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2018-land-rover-range-rover-velar-1006884.html",
+      "observedAt": "2026-10-19T20:00:17.439041Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 85380,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

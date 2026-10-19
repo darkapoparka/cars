@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "golden-desert",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:00:20.312509Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "dubicars-973287",
+      "title": "Cadillac Escalade SPORT PLATINUM",
+      "make": "Cadillac",
+      "model": "Escalade",
+      "year": 2023,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/dubicars-973287.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2023-cadillac-escalade-sport-62l-4wd-diesel-sport-973287.html",
+      "observedAt": "2026-10-19T20:00:20.312509Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 60900,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "dubicars-973282",
+      "title": "Jeep Wrangler Unlimited SAHARA",
+      "make": "Jeep",
+      "model": "Wrangler Unlimited",
+      "year": 2024,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/dubicars-973282.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2024-jeep-wrangler-unlimited-sahara-sport-extreme-wrangler-sport-4xe-973282.html",
+      "observedAt": "2026-10-19T20:00:20.312509Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 4000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "dubicars-973271",
+      "title": "Toyota Grand Highlander",
+      "make": "Toyota",
+      "model": "Grand Highlander",
+      "year": 2024,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/dubicars-973271.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2024-toyota-grand-highlander-973271.html",
+      "observedAt": "2026-10-19T20:00:20.312509Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 24400,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

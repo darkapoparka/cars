@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "dealer": "ayoon-al-hoot-used-cars",
+  "businessFacts": "business-facts.json",
+  "stock": "stock.json",
+  "inventoryKind": "dated-listing-snapshot",
+  "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+  "sources": [
+    {
+      "url": "https://www.dubicars.com/dealers/sharjah-ayoon-al-hoot-used-cars-3111",
+      "observedAt": "2026-10-19T20:00:15.621719Z",
+      "supports": [
+        "business.name",
+        "business.city",
+        "business.countryCode",
+        "business.address",
+        "business.phone",
+        "business.hours",
+        "dated-dealer-catalogue-listings"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2015-bmw-x5-individual-v8-7-seats-mkit-gcc-free-accidents-perfect-condition-89k-miles-952069.html",
+      "observedAt": "2026-10-19T20:00:15.621719Z",
+      "supports": [
+        "stock.dubicars-952069"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2014-porsche-cayenne-amazing-gts-v8-gcc-fully-loaded-perfect-condition-radar-952128.html",
+      "observedAt": "2026-10-19T20:00:15.621719Z",
+      "supports": [
+        "stock.dubicars-952128"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2017-bmw-x5-best-xdrive50i-gcc-specs-accident-free-single-owner-fully-loaded-952108.html",
+      "observedAt": "2026-10-19T20:00:15.621719Z",
+      "supports": [
+        "stock.dubicars-952108"
+      ]
+    }
+  ]
+}

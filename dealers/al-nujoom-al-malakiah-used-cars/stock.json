@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-nujoom-al-malakiah-used-cars",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:00:12.747267Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "dubicars-1016013",
+      "title": "Land Rover Defender other",
+      "make": "Land Rover",
+      "model": "Defender",
+      "year": 2023,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/dubicars-1016013.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2023-land-rover-defender-1016013.html",
+      "observedAt": "2026-10-19T20:00:12.747267Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 83000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "dubicars-711649",
+      "title": "Nissan Patrol LE PLATINUM CITY",
+      "make": "Nissan",
+      "model": "Patrol",
+      "year": 2017,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/dubicars-711649.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2017-nissan-patrol-le-platinum-city-le-platinium-vip-711649.html",
+      "observedAt": "2026-10-19T20:00:12.747267Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 163000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "dubicars-924417",
+      "title": "Mercedes Benz S500 LWB TOP",
+      "make": "Mercedes Benz",
+      "model": "S 500",
+      "year": 2014,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/dubicars-924417.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2014-mercedes-benz-s500-lwb-top-924417.html",
+      "observedAt": "2026-10-19T20:00:12.747267Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 208750,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

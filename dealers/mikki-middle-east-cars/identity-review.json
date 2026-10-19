@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T20:30:09.003Z",
+  "dealer": "mikki-middle-east-cars",
+  "dealerId": "ae-sharjah-mikki-middle-east-cars",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "method": "Exact retained registry and compact-pack identity comparison; no dealer approval is implied.",
+  "sources": [
+    {
+      "url": "https://www.dubicars.com/dealers/sharjah-mikki-middle-east-cars-2534",
+      "observedAt": "2026-10-19T20:00:20.447056Z"
+    }
+  ]
+}

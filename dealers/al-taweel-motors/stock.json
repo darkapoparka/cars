@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-taweel-motors",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:00:14.539701Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "dubicars-979795",
+      "title": "Mercedes Benz CLE200 Diesel",
+      "make": "Mercedes Benz",
+      "model": "Cle200",
+      "year": 2025,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/dubicars-979795.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2025-mercedes-benz-cle200-2025-cle-220d-convertible-20l-4-cylinder-diesel-220-hp-perfect-condition-979795.html",
+      "observedAt": "2026-10-19T20:00:14.539701Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 35000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "dubicars-967875",
+      "title": "Mercedes Benz E300 Diesel Plug-in Hybrid",
+      "make": "Mercedes Benz",
+      "model": "E 300",
+      "year": 2025,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/dubicars-967875.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2025-mercedes-benz-e300-diesel-plug-in-hybrid-2025-20l-turbocharged-europe-specs-perfect-condition-967875.html",
+      "observedAt": "2026-10-19T20:00:14.539701Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 44000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "dubicars-956775",
+      "title": "Bentley Bentayga SIGNATURE",
+      "make": "Bentley",
+      "model": "Bentayga",
+      "year": 2017,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/dubicars-956775.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2017-bentley-bentayga-bentayga-40t-2017-bentley-bentayga-w12-twin-turbo-gcc-spec-956775.html",
+      "observedAt": "2026-10-19T20:00:14.539701Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 105000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

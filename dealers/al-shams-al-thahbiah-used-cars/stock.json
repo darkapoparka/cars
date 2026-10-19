@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-shams-al-thahbiah-used-cars",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:00:12.845406Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "dubicars-942703",
+      "title": "Mercedes Benz G 63 AMG 4X4² Other",
+      "make": "Mercedes Benz",
+      "model": "G 63 Amg 4X4",
+      "year": 2023,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/dubicars-942703.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2023-mercedes-benz-g-63-amg-4x4-engine-performance-o-engine-type-40-liter-v8-biturbo-amg-built-engine-o-horsepower-approx-942703.html",
+      "observedAt": "2026-10-19T20:00:12.845406Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 4000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "dubicars-921632",
+      "title": "BMW M5 STANDARD",
+      "make": "BMW",
+      "model": "M5",
+      "year": 2025,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/dubicars-921632.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2025-bmw-m5-44-l-727-hp-921632.html",
+      "observedAt": "2026-10-19T20:00:12.845406Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 6000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "dubicars-893536",
+      "title": "New Land Rover Range Rover Sport AUTOBIOGRAPHY P400",
+      "make": "Land Rover",
+      "model": "Range Rover Sport",
+      "year": 2025,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/dubicars-893536.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2025-land-rover-range-rover-sport-v8-893536.html",
+      "observedAt": "2026-10-19T20:00:12.845406Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageOnRequest": true,
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

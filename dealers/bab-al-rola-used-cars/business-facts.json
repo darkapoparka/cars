@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "slug": "bab-al-rola-used-cars",
+  "dealerId": "ae-sharjah-bab-al-rola-used-cars",
+  "business": {
+    "name": "Bab Al Rola Used Cars",
+    "city": "Sharjah",
+    "region": "Sharjah",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "Area 2, Al Jubail Street",
+    "phone": "+971557623513",
+    "phoneDisplay": "+971557623513",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://www.dubicars.com/dealers/sharjah-bab-al-rola-used-cars-3020",
+    "hours": "",
+    "sourceUrl": "https://www.dubicars.com/dealers/sharjah-bab-al-rola-used-cars-3020",
+    "observedAt": "2026-10-19T20:00:17.439041Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.dubicars.com/dealers/sharjah-bab-al-rola-used-cars-3020",
+      "observedAt": "2026-10-19T20:00:17.439041Z",
+      "supports": [
+        "business.name",
+        "business.city",
+        "business.countryCode",
+        "business.address",
+        "business.phone",
+        "business.hours",
+        "dated-dealer-catalogue-listings"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2024-mercedes-benz-gle53-amg-1031323.html",
+      "observedAt": "2026-10-19T20:00:17.439041Z",
+      "supports": [
+        "stock.dubicars-1031323"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2024-land-rover-defender-90-1031757.html",
+      "observedAt": "2026-10-19T20:00:17.439041Z",
+      "supports": [
+        "stock.dubicars-1031757"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2018-land-rover-range-rover-velar-1006884.html",
+      "observedAt": "2026-10-19T20:00:17.439041Z",
+      "supports": [
+        "stock.dubicars-1006884"
+      ]
+    }
+  ]
+}

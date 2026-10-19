@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "slug": "emirates-gulf-used-cars",
+  "dealerId": "ae-sharjah-emirates-gulf-used-cars",
+  "business": {
+    "name": "Emirates & Gulf Used Cars",
+    "city": "Sharjah",
+    "region": "Sharjah",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "Souq Al Haraj, Sharjah",
+    "phone": "+971552424009",
+    "phoneDisplay": "+971552424009",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://www.dubicars.com/dealers/sharjah-emirates-gulf-used-cars-753",
+    "hours": "Mo-Th 09:00-13:00; Mo-Th 16:00-21:00; Fr 16:00-21:00; Sa-Su 09:00-13:00; Sa-Su 16:00-21:00",
+    "sourceUrl": "https://www.dubicars.com/dealers/sharjah-emirates-gulf-used-cars-753",
+    "observedAt": "2026-10-19T20:00:18.032483Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.dubicars.com/dealers/sharjah-emirates-gulf-used-cars-753",
+      "observedAt": "2026-10-19T20:00:18.032483Z",
+      "supports": [
+        "business.name",
+        "business.city",
+        "business.countryCode",
+        "business.address",
+        "business.phone",
+        "business.hours",
+        "dated-dealer-catalogue-listings"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2015-mitsubishi-pajero-platinum-fully-modified-for-off-road-2015-gcc-specs-974495.html",
+      "observedAt": "2026-10-19T20:00:18.032483Z",
+      "supports": [
+        "stock.dubicars-974495"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2020-land-rover-range-rover-se-2020-gcc-specs-983487.html",
+      "observedAt": "2026-10-19T20:00:18.032483Z",
+      "supports": [
+        "stock.dubicars-983487"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2011-ford-f-150-ford-f-150-2011-gcc-specs-998765.html",
+      "observedAt": "2026-10-19T20:00:18.032483Z",
+      "supports": [
+        "stock.dubicars-998765"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "dealer": "golden-desert",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/sharjah-golden-desert-3242",
+      "observedAt": "2026-10-19T20:00:20.312509Z",
+      "supports": [
+        "business.name",
+        "business.city",
+        "business.countryCode",
+        "business.address",
+        "business.phone",
+        "business.hours",
+        "dated-dealer-catalogue-listings"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2023-cadillac-escalade-sport-62l-4wd-diesel-sport-973287.html",
+      "observedAt": "2026-10-19T20:00:20.312509Z",
+      "supports": [
+        "stock.dubicars-973287"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2024-jeep-wrangler-unlimited-sahara-sport-extreme-wrangler-sport-4xe-973282.html",
+      "observedAt": "2026-10-19T20:00:20.312509Z",
+      "supports": [
+        "stock.dubicars-973282"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2024-toyota-grand-highlander-973271.html",
+      "observedAt": "2026-10-19T20:00:20.312509Z",
+      "supports": [
+        "stock.dubicars-973271"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "agentResearch": {
+    "observedAt": "2026-10-19T20:00:20.312509Z",
+    "method": "Public catalogue HTML/JSON-LD and actual stock image read; fields checked before inclusion. No contact or account interaction.",
+    "identityNotes": [
+      "Personal-looking mailbox omitted; no personal contact retained."
+    ],
+    "imageReview": "Actual three stock images visually reviewed; no price overlay or named personal contact used.",
+    "logoResearchStatus": "in-progress"
+  },
+  "stockPhotos": [
+    {
+      "listingId": "dubicars-973287",
+      "listingUrl": "https://www.dubicars.com/2023-cadillac-escalade-sport-62l-4wd-diesel-sport-973287.html",
+      "sourceUrl": "https://www.dubicars.com/images/79b553/650x380/golden-desert-/681ea871-3bb4-4a0d-a849-8db032c8da4e.jpeg",
+      "observedAt": "2026-10-19T20:00:20.312509Z",
+      "sourceSha256": "d1ffd06075323cbd394cec4412f67d3256963052735c36e8d2ca44afbdc91021",
+      "retainedPath": "dealer-stock/dubicars-973287.webp",
+      "retainedSha256": "67ad9081da6e9414dee46af54d8f7a6ac4dc110861e39d408dec8fe5bc80e221",
+      "nativeDimensions": [
+        650,
+        434
+      ],
+      "retainedDimensions": [
+        650,
+        434
+      ],
+      "retainedBytes": 37376,
+      "transformation": "Bounded resize with preserved aspect ratio and WebP compression; no watermark removal.",
+      "reusePermission": "not independently established; public-preview source attribution retained"
+    },
+    {
+      "listingId": "dubicars-973282",
+      "listingUrl": "https://www.dubicars.com/2024-jeep-wrangler-unlimited-sahara-sport-extreme-wrangler-sport-4xe-973282.html",
+      "sourceUrl": "https://www.dubicars.com/images/10c50f/650x380/golden-desert-/d925ba3e-2807-4f72-912d-0fbf045b2748.jpeg",
+      "observedAt": "2026-10-19T20:00:20.312509Z",
+      "sourceSha256": "bfc4460e8c79c1b4faffb3a8091c92eb8f6e9accade00b70dfbf94dc9719ec36",
+      "retainedPath": "dealer-stock/dubicars-973282.webp",
+      "retainedSha256": "5f4b681afcafbfa4d19140be9438cdb798bf4729264ec3ee39696ee1745480dc",
+      "nativeDimensions": [
+        650,
+        434
+      ],
+      "retainedDimensions": [
+        650,
+        434
+      ],
+      "retainedBytes": 34114,
+      "transformation": "Bounded resize with preserved aspect ratio and WebP compression; no watermark removal.",
+      "reusePermission": "not independently established; public-preview source attribution retained"
+    },
+    {
+      "listingId": "dubicars-973271",
+      "listingUrl": "https://www.dubicars.com/2024-toyota-grand-highlander-973271.html",
+      "sourceUrl": "https://www.dubicars.com/images/ccbf6a/650x380/golden-desert-/a4dbf73c-b939-4b46-a462-e17d1ea1a331.jpeg",
+      "observedAt": "2026-10-19T20:00:20.312509Z",
+      "sourceSha256": "9c7ae221adced15bd2ba8e2ef4f20581b1782e910509ddc646b68db9a7a904fe",
+      "retainedPath": "dealer-stock/dubicars-973271.webp",
+      "retainedSha256": "563c0f6484427cc0ceb746b37280327a16dc4d0430f3023d2ced4ffc4a51b1f8",
+      "nativeDimensions": [
+        650,
+        434
+      ],
+      "retainedDimensions": [
+        650,
+        434
+      ],
+      "retainedBytes": 38502,
+      "transformation": "Bounded resize with preserved aspect ratio and WebP compression; no watermark removal.",
+      "reusePermission": "not independently established; public-preview source attribution retained"
+    }
+  ]
+}

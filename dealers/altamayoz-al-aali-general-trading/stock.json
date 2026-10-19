@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "altamayoz-al-aali-general-trading",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:00:15.084443Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "dubicars-1037358",
+      "title": "Mercedes Benz Glc 220d 4matic AMG LINE",
+      "make": "Mercedes Benz",
+      "model": "Glc 220D 4Matic",
+      "year": 2022,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/dubicars-1037358.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2022-mercedes-benz-glc-220d-4matic-glc-1037358.html",
+      "observedAt": "2026-10-19T20:00:15.084443Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 36000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "dubicars-1013630",
+      "title": "Land Rover Range Rover Sport SUPERCHARGED",
+      "make": "Land Rover",
+      "model": "Range Rover Sport",
+      "year": 2011,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/dubicars-1013630.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2011-land-rover-range-rover-sport-1013630.html",
+      "observedAt": "2026-10-19T20:00:15.084443Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 175000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "dubicars-1029019",
+      "title": "Mercedes Benz GLC350E GLC350",
+      "make": "Mercedes Benz",
+      "model": "Glc 350 E",
+      "year": 2020,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/dubicars-1029019.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2020-mercedes-benz-glc350e-1029019.html",
+      "observedAt": "2026-10-19T20:00:15.084443Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 87000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

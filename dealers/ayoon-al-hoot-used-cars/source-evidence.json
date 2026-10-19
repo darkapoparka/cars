@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "dealer": "ayoon-al-hoot-used-cars",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/sharjah-ayoon-al-hoot-used-cars-3111",
+      "observedAt": "2026-10-19T20:00:15.621719Z",
+      "supports": [
+        "business.name",
+        "business.city",
+        "business.countryCode",
+        "business.address",
+        "business.phone",
+        "business.hours",
+        "dated-dealer-catalogue-listings"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2015-bmw-x5-individual-v8-7-seats-mkit-gcc-free-accidents-perfect-condition-89k-miles-952069.html",
+      "observedAt": "2026-10-19T20:00:15.621719Z",
+      "supports": [
+        "stock.dubicars-952069"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2014-porsche-cayenne-amazing-gts-v8-gcc-fully-loaded-perfect-condition-radar-952128.html",
+      "observedAt": "2026-10-19T20:00:15.621719Z",
+      "supports": [
+        "stock.dubicars-952128"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2017-bmw-x5-best-xdrive50i-gcc-specs-accident-free-single-owner-fully-loaded-952108.html",
+      "observedAt": "2026-10-19T20:00:15.621719Z",
+      "supports": [
+        "stock.dubicars-952108"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "agentResearch": {
+    "observedAt": "2026-10-19T20:00:15.621719Z",
+    "method": "Public catalogue HTML/JSON-LD and actual stock image read; fields checked before inclusion. No contact or account interaction.",
+    "identityNotes": [
+      "Personal-looking mailbox omitted; no personal contact retained."
+    ],
+    "imageReview": "Actual three stock images visually reviewed; no price overlay or named personal contact used.",
+    "logoResearchStatus": "in-progress"
+  },
+  "stockPhotos": [
+    {
+      "listingId": "dubicars-952069",
+      "listingUrl": "https://www.dubicars.com/2015-bmw-x5-individual-v8-7-seats-mkit-gcc-free-accidents-perfect-condition-89k-miles-952069.html",
+      "sourceUrl": "https://www.dubicars.com/images/4475b9/650x380/ayoon-al-hoot-used-cars/d5bdfafd-5844-4fcd-808a-9f474c65a24b.jpeg",
+      "observedAt": "2026-10-19T20:00:15.621719Z",
+      "sourceSha256": "463ba6ec4d51d76f6a17624c94dd231fd3c70524daf1eb766e20b96ee7c7cb42",
+      "retainedPath": "dealer-stock/dubicars-952069.webp",
+      "retainedSha256": "2bd69cffff8d58f2e4edd071e1e49d1cb3099b675afbd31dfa860ca93510bd46",
+      "nativeDimensions": [
+        650,
+        366
+      ],
+      "retainedDimensions": [
+        650,
+        366
+      ],
+      "retainedBytes": 31374,
+      "transformation": "Bounded resize with preserved aspect ratio and WebP compression; no watermark removal.",
+      "reusePermission": "not independently established; public-preview source attribution retained"
+    },
+    {
+      "listingId": "dubicars-952128",
+      "listingUrl": "https://www.dubicars.com/2014-porsche-cayenne-amazing-gts-v8-gcc-fully-loaded-perfect-condition-radar-952128.html",
+      "sourceUrl": "https://www.dubicars.com/images/e502ab/650x380/ayoon-al-hoot-used-cars/fc1c40ba-ce3e-49a9-94c8-cc6d837aae25.jpeg",
+      "observedAt": "2026-10-19T20:00:15.621719Z",
+      "sourceSha256": "dc70bb162f8fc385a3bc56e8805b31a56f29d8737239f7eab9f2cc481e06d78b",
+      "retainedPath": "dealer-stock/dubicars-952128.webp",
+      "retainedSha256": "b4c7fc6f112274a36695ead6368d886b9b45b508d3656fdef06a6dd2a2302f63",
+      "nativeDimensions": [
+        650,
+        524
+      ],
+      "retainedDimensions": [
+        650,
+        524
+      ],
+      "retainedBytes": 47982,
+      "transformation": "Bounded resize with preserved aspect ratio and WebP compression; no watermark removal.",
+      "reusePermission": "not independently established; public-preview source attribution retained"
+    },
+    {
+      "listingId": "dubicars-952108",
+      "listingUrl": "https://www.dubicars.com/2017-bmw-x5-best-xdrive50i-gcc-specs-accident-free-single-owner-fully-loaded-952108.html",
+      "sourceUrl": "https://www.dubicars.com/images/387292/650x380/ayoon-al-hoot-used-cars/2eeea4ae-bf48-4021-9698-824c4a837430.jpeg",
+      "observedAt": "2026-10-19T20:00:15.621719Z",
+      "sourceSha256": "2e5872bc03ab0acbb9b506ff31c5c82e8c1342d735d636b299f8896796e6e65f",
+      "retainedPath": "dealer-stock/dubicars-952108.webp",
+      "retainedSha256": "22c74039f4c40432edffb2783abe9dba51f92b898cc1b3b043fa77de1c9e2227",
+      "nativeDimensions": [
+        650,
+        500
+      ],
+      "retainedDimensions": [
+        650,
+        500
+      ],
+      "retainedBytes": 53712,
+      "transformation": "Bounded resize with preserved aspect ratio and WebP compression; no watermark removal.",
+      "reusePermission": "not independently established; public-preview source attribution retained"
+    }
+  ]
+}

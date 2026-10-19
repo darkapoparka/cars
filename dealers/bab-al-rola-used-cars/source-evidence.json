@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "dealer": "bab-al-rola-used-cars",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/sharjah-bab-al-rola-used-cars-3020",
+      "observedAt": "2026-10-19T20:00:17.439041Z",
+      "supports": [
+        "business.name",
+        "business.city",
+        "business.countryCode",
+        "business.address",
+        "business.phone",
+        "business.hours",
+        "dated-dealer-catalogue-listings"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2024-mercedes-benz-gle53-amg-1031323.html",
+      "observedAt": "2026-10-19T20:00:17.439041Z",
+      "supports": [
+        "stock.dubicars-1031323"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2024-land-rover-defender-90-1031757.html",
+      "observedAt": "2026-10-19T20:00:17.439041Z",
+      "supports": [
+        "stock.dubicars-1031757"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2018-land-rover-range-rover-velar-1006884.html",
+      "observedAt": "2026-10-19T20:00:17.439041Z",
+      "supports": [
+        "stock.dubicars-1006884"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "agentResearch": {
+    "observedAt": "2026-10-19T20:00:17.439041Z",
+    "method": "Public catalogue HTML/JSON-LD and actual stock image read; fields checked before inclusion. No contact or account interaction.",
+    "identityNotes": [
+      "Personal-looking mailbox omitted; no personal contact retained."
+    ],
+    "imageReview": "Actual three stock images visually reviewed; no price overlay or named personal contact used.",
+    "logoResearchStatus": "in-progress"
+  },
+  "stockPhotos": [
+    {
+      "listingId": "dubicars-1031323",
+      "listingUrl": "https://www.dubicars.com/2024-mercedes-benz-gle53-amg-1031323.html",
+      "sourceUrl": "https://www.dubicars.com/images/a8bfe6/650x380/bab-al-rola-used-cars/87aac984-65dc-4205-9d04-8cdfc11f380d.jpeg",
+      "observedAt": "2026-10-19T20:00:17.439041Z",
+      "sourceSha256": "c408fdad040b89f48ea6943ed9415f8bc8dcbe08d9985d1c6a565364ba7fdc7d",
+      "retainedPath": "dealer-stock/dubicars-1031323.webp",
+      "retainedSha256": "4553230eb47579b2b82182e99f7754a6a57ff5ab6e9c079d05acdae067253d65",
+      "nativeDimensions": [
+        650,
+        450
+      ],
+      "retainedDimensions": [
+        650,
+        450
+      ],
+      "retainedBytes": 39326,
+      "transformation": "Bounded resize with preserved aspect ratio and WebP compression; no watermark removal.",
+      "reusePermission": "not independently established; public-preview source attribution retained"
+    },
+    {
+      "listingId": "dubicars-1031757",
+      "listingUrl": "https://www.dubicars.com/2024-land-rover-defender-90-1031757.html",
+      "sourceUrl": "https://www.dubicars.com/images/cc5d23/650x380/bab-al-rola-used-cars/779e9e09-3194-40ee-b62a-380572358938.jpeg",
+      "observedAt": "2026-10-19T20:00:17.439041Z",
+      "sourceSha256": "a897491f597a8a9a67d0f89b2b125ccc4d921f4076211b94cc50dc8de914cc77",
+      "retainedPath": "dealer-stock/dubicars-1031757.webp",
+      "retainedSha256": "bf1e214b29cfb87336e21e4d16f1f4a239a55ee762802f9996f5ec262bc01395",
+      "nativeDimensions": [
+        650,
+        492
+      ],
+      "retainedDimensions": [
+        650,
+        492
+      ],
+      "retainedBytes": 60294,
+      "transformation": "Bounded resize with preserved aspect ratio and WebP compression; no watermark removal.",
+      "reusePermission": "not independently established; public-preview source attribution retained"
+    },
+    {
+      "listingId": "dubicars-1006884",
+      "listingUrl": "https://www.dubicars.com/2018-land-rover-range-rover-velar-1006884.html",
+      "sourceUrl": "https://www.dubicars.com/images/3cd634/650x380/bab-al-rola-used-cars/43a63a46-4149-45a1-8d59-dc2590ed166a.jpeg",
+      "observedAt": "2026-10-19T20:00:17.439041Z",
+      "sourceSha256": "9de11e65dfa9503572a50b72f9ef8eb9ea0a74a9c50581995be727466a865992",
+      "retainedPath": "dealer-stock/dubicars-1006884.webp",
+      "retainedSha256": "9153b70cd0c6ccf98f204c70d553867c5e3449404bc67d85bbd210a0daf51ead",
+      "nativeDimensions": [
+        650,
+        398
+      ],
+      "retainedDimensions": [
+        650,
+        398
+      ],
+      "retainedBytes": 40354,
+      "transformation": "Bounded resize with preserved aspect ratio and WebP compression; no watermark removal.",
+      "reusePermission": "not independently established; public-preview source attribution retained"
+    }
+  ]
+}

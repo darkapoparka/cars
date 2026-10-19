@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "dealer": "mikki-middle-east-cars",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:00:20.447056Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "dubicars-1018183",
+      "title": "New Toyota Prado PRADO 2.4 URBAN 2026",
+      "make": "Toyota",
+      "model": "Prado",
+      "year": 2026,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/dubicars-1018183.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2026-toyota-prado-24-petrol-1018183.html",
+      "observedAt": "2026-10-19T20:00:20.447056Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageOnRequest": true,
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "dubicars-1020080",
+      "title": "New Lexus LX600 LEXUS LX 600 TURBO PLUS",
+      "make": "Lexus",
+      "model": "Lx 600",
+      "year": 2025,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/dubicars-1020080.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2025-lexus-lx600-1020080.html",
+      "observedAt": "2026-10-19T20:00:20.447056Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageOnRequest": true,
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "dubicars-1023476",
+      "title": "New Toyota Corolla GLI",
+      "make": "Toyota",
+      "model": "Corolla",
+      "year": 2026,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/dubicars-1023476.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2026-toyota-corolla-20-l-1023476.html",
+      "observedAt": "2026-10-19T20:00:20.447056Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageOnRequest": true,
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

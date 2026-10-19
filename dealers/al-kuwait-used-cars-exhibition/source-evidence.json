@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-kuwait-used-cars-exhibition",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/sharjah-al-kuwait-used-cars-exhibition-2717",
+      "observedAt": "2026-10-19T20:00:12.026118Z",
+      "supports": [
+        "business.name",
+        "business.city",
+        "business.countryCode",
+        "business.address",
+        "business.phone",
+        "business.hours",
+        "dated-dealer-catalogue-listings"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2018-mercedes-benz-e300-1037390.html",
+      "observedAt": "2026-10-19T20:00:12.026118Z",
+      "supports": [
+        "stock.dubicars-1037390"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2020-nissan-patrol-super-safari-1026064.html",
+      "observedAt": "2026-10-19T20:00:12.026118Z",
+      "supports": [
+        "stock.dubicars-1026064"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2014-audi-s7-top-40l-420-hp-977456.html",
+      "observedAt": "2026-10-19T20:00:12.026118Z",
+      "supports": [
+        "stock.dubicars-977456"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "agentResearch": {
+    "observedAt": "2026-10-19T20:00:12.026118Z",
+    "method": "Public catalogue HTML/JSON-LD and actual stock image read; fields checked before inclusion. No contact or account interaction.",
+    "identityNotes": [
+      "Personal-looking mailbox omitted; no personal contact retained.",
+      "Marketplace avatar reads Target Motors; excluded as a mismatched identity. Listing samples are bound to the named dealer catalogue; physical stock ownership is unconfirmed."
+    ],
+    "imageReview": "Actual three stock images visually reviewed; no price overlay or named personal contact used.",
+    "logoResearchStatus": "in-progress"
+  },
+  "stockPhotos": [
+    {
+      "listingId": "dubicars-1037390",
+      "listingUrl": "https://www.dubicars.com/2018-mercedes-benz-e300-1037390.html",
+      "sourceUrl": "https://www.dubicars.com/images/650f8f/650x380/al-kuwait-used-cars-exhibition/31553dee-e530-4c01-922a-613bf02b3450.jpeg",
+      "observedAt": "2026-10-19T20:00:12.026118Z",
+      "sourceSha256": "a2af7fda47ca728eca07cf6b0308b70b0d8ff8254e6b31208015e984f6f6d22d",
+      "retainedPath": "dealer-stock/dubicars-1037390.webp",
+      "retainedSha256": "5d60d88fdcab305816987deba330746b09d7e45f377509466c33ec75a1c09806",
+      "nativeDimensions": [
+        650,
+        488
+      ],
+      "retainedDimensions": [
+        650,
+        488
+      ],
+      "retainedBytes": 49554,
+      "transformation": "Bounded resize with preserved aspect ratio and WebP compression; no watermark removal.",
+      "reusePermission": "not independently established; public-preview source attribution retained"
+    },
+    {
+      "listingId": "dubicars-1026064",
+      "listingUrl": "https://www.dubicars.com/2020-nissan-patrol-super-safari-1026064.html",
+      "sourceUrl": "https://www.dubicars.com/images/2675be/650x380/al-kuwait-used-cars-exhibition/36a2e9a3-3a66-4ad4-84a5-4cccf41a2c8f.jpeg",
+      "observedAt": "2026-10-19T20:00:12.026118Z",
+      "sourceSha256": "36f042c2a865a501bfece8b60656df5046700ee9975cb57b0cd958892cfa338e",
+      "retainedPath": "dealer-stock/dubicars-1026064.webp",
+      "retainedSha256": "6fcb3daa979b24af0667868225da1c05d26c9a709a150a615fccb75a237a4b3f",
+      "nativeDimensions": [
+        650,
+        488
+      ],
+      "retainedDimensions": [
+        650,
+        488
+      ],
+      "retainedBytes": 47726,
+      "transformation": "Bounded resize with preserved aspect ratio and WebP compression; no watermark removal.",
+      "reusePermission": "not independently established; public-preview source attribution retained"
+    },
+    {
+      "listingId": "dubicars-977456",
+      "listingUrl": "https://www.dubicars.com/2014-audi-s7-top-40l-420-hp-977456.html",
+      "sourceUrl": "https://www.dubicars.com/images/22f222/650x380/al-kuwait-used-cars-exhibition/e122ebf9-b6d1-4913-801a-9de6591045d8.jpeg",
+      "observedAt": "2026-10-19T20:00:12.026118Z",
+      "sourceSha256": "9a757674fd2d23e0b663784e1f9ecbe6d2af9886623b6e6fd708ff83f505a59f",
+      "retainedPath": "dealer-stock/dubicars-977456.webp",
+      "retainedSha256": "b2f426b28682f22ceb43cc7409cf0fa7e76c548cda6c236495f0c6e252e5e143",
+      "nativeDimensions": [
+        650,
+        488
+      ],
+      "retainedDimensions": [
+        650,
+        488
+      ],
+      "retainedBytes": 48306,
+      "transformation": "Bounded resize with preserved aspect ratio and WebP compression; no watermark removal.",
+      "reusePermission": "not independently established; public-preview source attribution retained"
+    }
+  ]
+}

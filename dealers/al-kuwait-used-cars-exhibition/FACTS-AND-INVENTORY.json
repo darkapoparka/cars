@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-kuwait-used-cars-exhibition",
+  "businessFacts": "business-facts.json",
+  "stock": "stock.json",
+  "inventoryKind": "dated-listing-snapshot",
+  "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+  "sources": [
+    {
+      "url": "https://www.dubicars.com/dealers/sharjah-al-kuwait-used-cars-exhibition-2717",
+      "observedAt": "2026-10-19T20:00:12.026118Z",
+      "supports": [
+        "business.name",
+        "business.city",
+        "business.countryCode",
+        "business.address",
+        "business.phone",
+        "business.hours",
+        "dated-dealer-catalogue-listings"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2018-mercedes-benz-e300-1037390.html",
+      "observedAt": "2026-10-19T20:00:12.026118Z",
+      "supports": [
+        "stock.dubicars-1037390"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2020-nissan-patrol-super-safari-1026064.html",
+      "observedAt": "2026-10-19T20:00:12.026118Z",
+      "supports": [
+        "stock.dubicars-1026064"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2014-audi-s7-top-40l-420-hp-977456.html",
+      "observedAt": "2026-10-19T20:00:12.026118Z",
+      "supports": [
+        "stock.dubicars-977456"
+      ]
+    }
+  ]
+}

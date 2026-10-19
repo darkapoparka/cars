@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-shams-al-thahbiah-used-cars",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/sharjah-al-shams-al-thahbiah-used-cars-2477",
+      "observedAt": "2026-10-19T20:00:12.845406Z",
+      "supports": [
+        "business.name",
+        "business.city",
+        "business.countryCode",
+        "business.address",
+        "business.phone",
+        "business.hours",
+        "dated-dealer-catalogue-listings"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2023-mercedes-benz-g-63-amg-4x4-engine-performance-o-engine-type-40-liter-v8-biturbo-amg-built-engine-o-horsepower-approx-942703.html",
+      "observedAt": "2026-10-19T20:00:12.845406Z",
+      "supports": [
+        "stock.dubicars-942703"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2025-bmw-m5-44-l-727-hp-921632.html",
+      "observedAt": "2026-10-19T20:00:12.845406Z",
+      "supports": [
+        "stock.dubicars-921632"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2025-land-rover-range-rover-sport-v8-893536.html",
+      "observedAt": "2026-10-19T20:00:12.845406Z",
+      "supports": [
+        "stock.dubicars-893536"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "agentResearch": {
+    "observedAt": "2026-10-19T20:00:12.845406Z",
+    "method": "Public catalogue HTML/JSON-LD and actual stock image read; fields checked before inclusion. No contact or account interaction.",
+    "identityNotes": [
+      "Personal-looking mailbox omitted; no personal contact retained."
+    ],
+    "imageReview": "Actual three stock images visually reviewed; no price overlay or named personal contact used.",
+    "logoResearchStatus": "in-progress"
+  },
+  "stockPhotos": [
+    {
+      "listingId": "dubicars-942703",
+      "listingUrl": "https://www.dubicars.com/2023-mercedes-benz-g-63-amg-4x4-engine-performance-o-engine-type-40-liter-v8-biturbo-amg-built-engine-o-horsepower-approx-942703.html",
+      "sourceUrl": "https://www.dubicars.com/images/6705c7/650x380/al-shams-al-thahbiah-used-cars/b2fa0fb8-6738-4d66-8dcb-812a154b8d05.jpeg",
+      "observedAt": "2026-10-19T20:00:12.845406Z",
+      "sourceSha256": "5302a842563f2ab04e311870d1719fd1a908de98375face4eeb239da076b8479",
+      "retainedPath": "dealer-stock/dubicars-942703.webp",
+      "retainedSha256": "e8483d6294fbaacb08e9f735f31ac7507a24209b4fe2fc205e2a343a3c96f345",
+      "nativeDimensions": [
+        650,
+        366
+      ],
+      "retainedDimensions": [
+        650,
+        366
+      ],
+      "retainedBytes": 39948,
+      "transformation": "Bounded resize with preserved aspect ratio and WebP compression; no watermark removal.",
+      "reusePermission": "not independently established; public-preview source attribution retained"
+    },
+    {
+      "listingId": "dubicars-921632",
+      "listingUrl": "https://www.dubicars.com/2025-bmw-m5-44-l-727-hp-921632.html",
+      "sourceUrl": "https://www.dubicars.com/images/6fd762/650x380/al-shams-al-thahbiah-used-cars/e5ccd485-829c-46fb-8c91-ae9c726be3c3.jpeg",
+      "observedAt": "2026-10-19T20:00:12.845406Z",
+      "sourceSha256": "d156bffde2fd344e93f266be392604c5114db39b5d1b1aa016cff6ec318b83d0",
+      "retainedPath": "dealer-stock/dubicars-921632.webp",
+      "retainedSha256": "f3684eaf9c9afd9c7fc0d590ebb0d9191b0179623a2bee25858e315d5163cd29",
+      "nativeDimensions": [
+        650,
+        429
+      ],
+      "retainedDimensions": [
+        650,
+        429
+      ],
+      "retainedBytes": 55830,
+      "transformation": "Bounded resize with preserved aspect ratio and WebP compression; no watermark removal.",
+      "reusePermission": "not independently established; public-preview source attribution retained"
+    },
+    {
+      "listingId": "dubicars-893536",
+      "listingUrl": "https://www.dubicars.com/2025-land-rover-range-rover-sport-v8-893536.html",
+      "sourceUrl": "https://www.dubicars.com/images/5f4874/650x380/al-shams-al-thahbiah-used-cars/18a91139-17dc-420f-b954-d9273a9b71de.jpeg",
+      "observedAt": "2026-10-19T20:00:12.845406Z",
+      "sourceSha256": "11910119e4b960ac3352e51d40e08a75961d4f348b662b37194f1fc91914ccc9",
+      "retainedPath": "dealer-stock/dubicars-893536.webp",
+      "retainedSha256": "d16bfef944ab50e65e6336bdadb6ca9f6ad175d46efd534642bca15958646ac2",
+      "nativeDimensions": [
+        650,
+        366
+      ],
+      "retainedDimensions": [
+        650,
+        366
+      ],
+      "retainedBytes": 41564,
+      "transformation": "Bounded resize with preserved aspect ratio and WebP compression; no watermark removal.",
+      "reusePermission": "not independently established; public-preview source attribution retained"
+    }
+  ]
+}

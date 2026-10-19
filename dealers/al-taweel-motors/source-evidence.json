@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-taweel-motors",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/sharjah-al-taweel-motors-2968",
+      "observedAt": "2026-10-19T20:00:14.539701Z",
+      "supports": [
+        "business.name",
+        "business.city",
+        "business.countryCode",
+        "business.address",
+        "business.phone",
+        "business.hours",
+        "dated-dealer-catalogue-listings"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2025-mercedes-benz-cle200-2025-cle-220d-convertible-20l-4-cylinder-diesel-220-hp-perfect-condition-979795.html",
+      "observedAt": "2026-10-19T20:00:14.539701Z",
+      "supports": [
+        "stock.dubicars-979795"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2025-mercedes-benz-e300-diesel-plug-in-hybrid-2025-20l-turbocharged-europe-specs-perfect-condition-967875.html",
+      "observedAt": "2026-10-19T20:00:14.539701Z",
+      "supports": [
+        "stock.dubicars-967875"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2017-bentley-bentayga-bentayga-40t-2017-bentley-bentayga-w12-twin-turbo-gcc-spec-956775.html",
+      "observedAt": "2026-10-19T20:00:14.539701Z",
+      "supports": [
+        "stock.dubicars-956775"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "agentResearch": {
+    "observedAt": "2026-10-19T20:00:14.539701Z",
+    "method": "Public catalogue HTML/JSON-LD and actual stock image read; fields checked before inclusion. No contact or account interaction.",
+    "identityNotes": [
+      "Personal-looking mailbox omitted; no personal contact retained."
+    ],
+    "imageReview": "Actual three stock images visually reviewed; no price overlay or named personal contact used.",
+    "logoResearchStatus": "in-progress"
+  },
+  "stockPhotos": [
+    {
+      "listingId": "dubicars-979795",
+      "listingUrl": "https://www.dubicars.com/2025-mercedes-benz-cle200-2025-cle-220d-convertible-20l-4-cylinder-diesel-220-hp-perfect-condition-979795.html",
+      "sourceUrl": "https://www.dubicars.com/images/5f12a3/650x380/al-taweel-motors/c0a8f53d-4e44-4032-9bd1-78c9cf5ece28.jpeg",
+      "observedAt": "2026-10-19T20:00:14.539701Z",
+      "sourceSha256": "09d5c73b7ee825f4931157d766d01c9219d920bc722032d0c47a213479e23bf6",
+      "retainedPath": "dealer-stock/dubicars-979795.webp",
+      "retainedSha256": "a8c42053d589c4f010d5319c7e50c9549d2888716fd21263a12737a222d74f73",
+      "nativeDimensions": [
+        650,
+        488
+      ],
+      "retainedDimensions": [
+        650,
+        488
+      ],
+      "retainedBytes": 68396,
+      "transformation": "Bounded resize with preserved aspect ratio and WebP compression; no watermark removal.",
+      "reusePermission": "not independently established; public-preview source attribution retained"
+    },
+    {
+      "listingId": "dubicars-967875",
+      "listingUrl": "https://www.dubicars.com/2025-mercedes-benz-e300-diesel-plug-in-hybrid-2025-20l-turbocharged-europe-specs-perfect-condition-967875.html",
+      "sourceUrl": "https://www.dubicars.com/images/bea287/650x380/al-taweel-motors/b8e74faf-a693-4b9a-b3e9-e9b1288e3667.jpeg",
+      "observedAt": "2026-10-19T20:00:14.539701Z",
+      "sourceSha256": "05c264ac1798d343990f94e74ed31bc0e62df2b8df754b032da8d4fb08d9c9d7",
+      "retainedPath": "dealer-stock/dubicars-967875.webp",
+      "retainedSha256": "b0e35bd189456b9bbe44aaab5ff37c5619462b6cda20b70721518d2e2debb0f5",
+      "nativeDimensions": [
+        650,
+        488
+      ],
+      "retainedDimensions": [
+        650,
+        488
+      ],
+      "retainedBytes": 65558,
+      "transformation": "Bounded resize with preserved aspect ratio and WebP compression; no watermark removal.",
+      "reusePermission": "not independently established; public-preview source attribution retained"
+    },
+    {
+      "listingId": "dubicars-956775",
+      "listingUrl": "https://www.dubicars.com/2017-bentley-bentayga-bentayga-40t-2017-bentley-bentayga-w12-twin-turbo-gcc-spec-956775.html",
+      "sourceUrl": "https://www.dubicars.com/images/ea7d10/650x380/al-taweel-motors/2c3f00aa-f94d-4965-b505-8738292a3143.jpeg",
+      "observedAt": "2026-10-19T20:00:14.539701Z",
+      "sourceSha256": "c38ae4b5e1a4e5494c1ef05a8243a4e6ab904cbdb2896c16eef55909573e3a99",
+      "retainedPath": "dealer-stock/dubicars-956775.webp",
+      "retainedSha256": "c42d104cada256d4e778196e156e44cf08c3e3fde7c077a18b79db275036a1c1",
+      "nativeDimensions": [
+        650,
+        488
+      ],
+      "retainedDimensions": [
+        650,
+        488
+      ],
+      "retainedBytes": 62318,
+      "transformation": "Bounded resize with preserved aspect ratio and WebP compression; no watermark removal.",
+      "reusePermission": "not independently established; public-preview source attribution retained"
+    }
+  ]
+}

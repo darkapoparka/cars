@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "dealer": "bab-al-rola-used-cars",
+  "businessFacts": "business-facts.json",
+  "stock": "stock.json",
+  "inventoryKind": "dated-listing-snapshot",
+  "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+  "sources": [
+    {
+      "url": "https://www.dubicars.com/dealers/sharjah-bab-al-rola-used-cars-3020",
+      "observedAt": "2026-10-19T20:00:17.439041Z",
+      "supports": [
+        "business.name",
+        "business.city",
+        "business.countryCode",
+        "business.address",
+        "business.phone",
+        "business.hours",
+        "dated-dealer-catalogue-listings"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2024-mercedes-benz-gle53-amg-1031323.html",
+      "observedAt": "2026-10-19T20:00:17.439041Z",
+      "supports": [
+        "stock.dubicars-1031323"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2024-land-rover-defender-90-1031757.html",
+      "observedAt": "2026-10-19T20:00:17.439041Z",
+      "supports": [
+        "stock.dubicars-1031757"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2018-land-rover-range-rover-velar-1006884.html",
+      "observedAt": "2026-10-19T20:00:17.439041Z",
+      "supports": [
+        "stock.dubicars-1006884"
+      ]
+    }
+  ]
+}

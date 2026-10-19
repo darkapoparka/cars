@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "dealer": "emirates-gulf-used-cars",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/sharjah-emirates-gulf-used-cars-753",
+      "observedAt": "2026-10-19T20:00:18.032483Z",
+      "supports": [
+        "business.name",
+        "business.city",
+        "business.countryCode",
+        "business.address",
+        "business.phone",
+        "business.hours",
+        "dated-dealer-catalogue-listings"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2015-mitsubishi-pajero-platinum-fully-modified-for-off-road-2015-gcc-specs-974495.html",
+      "observedAt": "2026-10-19T20:00:18.032483Z",
+      "supports": [
+        "stock.dubicars-974495"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2020-land-rover-range-rover-se-2020-gcc-specs-983487.html",
+      "observedAt": "2026-10-19T20:00:18.032483Z",
+      "supports": [
+        "stock.dubicars-983487"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2011-ford-f-150-ford-f-150-2011-gcc-specs-998765.html",
+      "observedAt": "2026-10-19T20:00:18.032483Z",
+      "supports": [
+        "stock.dubicars-998765"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "agentResearch": {
+    "observedAt": "2026-10-19T20:00:18.032483Z",
+    "method": "Public catalogue HTML/JSON-LD and actual stock image read; fields checked before inclusion. No contact or account interaction.",
+    "identityNotes": [
+      "Personal-looking mailbox omitted; no personal contact retained."
+    ],
+    "imageReview": "Actual three stock images visually reviewed; no price overlay or named personal contact used.",
+    "logoResearchStatus": "in-progress"
+  },
+  "stockPhotos": [
+    {
+      "listingId": "dubicars-974495",
+      "listingUrl": "https://www.dubicars.com/2015-mitsubishi-pajero-platinum-fully-modified-for-off-road-2015-gcc-specs-974495.html",
+      "sourceUrl": "https://www.dubicars.com/images/096e31/650x380/mds-motors/d301f2f5-93af-4453-95f3-00184055f841.jpeg",
+      "observedAt": "2026-10-19T20:00:18.032483Z",
+      "sourceSha256": "86254377b9f8dcabc5c2b808660d5b979d7916db06cb99a6793d865fcd1e8d87",
+      "retainedPath": "dealer-stock/dubicars-974495.webp",
+      "retainedSha256": "4babca364fb9b7d43b198d5d61c3f4f5d8eff85bbab659337806e7c51eae899b",
+      "nativeDimensions": [
+        650,
+        365
+      ],
+      "retainedDimensions": [
+        650,
+        365
+      ],
+      "retainedBytes": 53650,
+      "transformation": "Bounded resize with preserved aspect ratio and WebP compression; no watermark removal.",
+      "reusePermission": "not independently established; public-preview source attribution retained"
+    },
+    {
+      "listingId": "dubicars-983487",
+      "listingUrl": "https://www.dubicars.com/2020-land-rover-range-rover-se-2020-gcc-specs-983487.html",
+      "sourceUrl": "https://www.dubicars.com/images/9846be/650x380/mds-motors/64bfeecb-4cb2-4402-8a71-dc7bc24621da.jpeg",
+      "observedAt": "2026-10-19T20:00:18.032483Z",
+      "sourceSha256": "8ca905a203bb21df3923fad0e8f905f8e8a0ef291d0a24ee37c3de1a801010ac",
+      "retainedPath": "dealer-stock/dubicars-983487.webp",
+      "retainedSha256": "b0bd408846101aeb731d1a4c9c64846f0ef5981240fa6240b45cbc6b9d4805ac",
+      "nativeDimensions": [
+        650,
+        365
+      ],
+      "retainedDimensions": [
+        650,
+        365
+      ],
+      "retainedBytes": 31686,
+      "transformation": "Bounded resize with preserved aspect ratio and WebP compression; no watermark removal.",
+      "reusePermission": "not independently established; public-preview source attribution retained"
+    },
+    {
+      "listingId": "dubicars-998765",
+      "listingUrl": "https://www.dubicars.com/2011-ford-f-150-ford-f-150-2011-gcc-specs-998765.html",
+      "sourceUrl": "https://www.dubicars.com/images/3bfc75/650x380/mds-motors/d9108b5b-7fbf-4c78-b3b0-66857db7f529.jpeg",
+      "observedAt": "2026-10-19T20:00:18.032483Z",
+      "sourceSha256": "02ce97edab0b4cc5300e89ebe8a2bafa2c2f8c5e191a2895668292c79acc1546",
+      "retainedPath": "dealer-stock/dubicars-998765.webp",
+      "retainedSha256": "79f983244da3fd1e8d3ef1c06ded1fc87e043fe988e05590765219a4ed3fb9f3",
+      "nativeDimensions": [
+        650,
+        365
+      ],
+      "retainedDimensions": [
+        650,
+        365
+      ],
+      "retainedBytes": 41084,
+      "transformation": "Bounded resize with preserved aspect ratio and WebP compression; no watermark removal.",
+      "reusePermission": "not independently established; public-preview source attribution retained"
+    }
+  ]
+}

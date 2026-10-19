@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "dealer": "altamayoz-al-aali-general-trading",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/sharjah-altamayoz-al-aali-generalading-1556",
+      "observedAt": "2026-10-19T20:00:15.084443Z",
+      "supports": [
+        "business.name",
+        "business.city",
+        "business.countryCode",
+        "business.address",
+        "business.phone",
+        "business.hours",
+        "dated-dealer-catalogue-listings"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2022-mercedes-benz-glc-220d-4matic-glc-1037358.html",
+      "observedAt": "2026-10-19T20:00:15.084443Z",
+      "supports": [
+        "stock.dubicars-1037358"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2011-land-rover-range-rover-sport-1013630.html",
+      "observedAt": "2026-10-19T20:00:15.084443Z",
+      "supports": [
+        "stock.dubicars-1013630"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2020-mercedes-benz-glc350e-1029019.html",
+      "observedAt": "2026-10-19T20:00:15.084443Z",
+      "supports": [
+        "stock.dubicars-1029019"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "agentResearch": {
+    "observedAt": "2026-10-19T20:00:15.084443Z",
+    "method": "Public catalogue HTML/JSON-LD and actual stock image read; fields checked before inclusion. No contact or account interaction.",
+    "identityNotes": [
+      "Personal-looking mailbox omitted; no personal contact retained.",
+      "Marketplace-linked domain not adopted: current fetch failed or identity/contact conflicts remain."
+    ],
+    "imageReview": "Actual three stock images visually reviewed; no price overlay or named personal contact used.",
+    "logoResearchStatus": "in-progress"
+  },
+  "stockPhotos": [
+    {
+      "listingId": "dubicars-1037358",
+      "listingUrl": "https://www.dubicars.com/2022-mercedes-benz-glc-220d-4matic-glc-1037358.html",
+      "sourceUrl": "https://www.dubicars.com/images/19007e/650x380/altamayoz-al-aali/0a885764-b9ba-4599-bdd5-e5e982542be3.jpeg",
+      "observedAt": "2026-10-19T20:00:15.084443Z",
+      "sourceSha256": "3841b6e2a855f4c84f1415a330913a349f3eb02424a2eb3da327ee3c876c4746",
+      "retainedPath": "dealer-stock/dubicars-1037358.webp",
+      "retainedSha256": "38fa978fe651128660f50eb2003d8735e3609ccb7dca2da0e4c0574bc6d40890",
+      "nativeDimensions": [
+        650,
+        452
+      ],
+      "retainedDimensions": [
+        650,
+        452
+      ],
+      "retainedBytes": 45416,
+      "transformation": "Bounded resize with preserved aspect ratio and WebP compression; no watermark removal.",
+      "reusePermission": "not independently established; public-preview source attribution retained"
+    },
+    {
+      "listingId": "dubicars-1013630",
+      "listingUrl": "https://www.dubicars.com/2011-land-rover-range-rover-sport-1013630.html",
+      "sourceUrl": "https://www.dubicars.com/images/90f97d/650x380/altamayoz-al-aali/ca5fbfd8-a9e8-48a6-bd26-c3422d0e56ba.jpeg",
+      "observedAt": "2026-10-19T20:00:15.084443Z",
+      "sourceSha256": "d8ea35991b04b160ade28853fc25e474c71a3b0d3b025bad57f799bea93d9b9b",
+      "retainedPath": "dealer-stock/dubicars-1013630.webp",
+      "retainedSha256": "c57947b0fa607b0adee1ba2aa85acc353ebf003d1cfca35a6259abd908cacf63",
+      "nativeDimensions": [
+        650,
+        650
+      ],
+      "retainedDimensions": [
+        650,
+        650
+      ],
+      "retainedBytes": 96906,
+      "transformation": "Bounded resize with preserved aspect ratio and WebP compression; no watermark removal.",
+      "reusePermission": "not independently established; public-preview source attribution retained"
+    },
+    {
+      "listingId": "dubicars-1029019",
+      "listingUrl": "https://www.dubicars.com/2020-mercedes-benz-glc350e-1029019.html",
+      "sourceUrl": "https://www.dubicars.com/images/1f8998/650x380/altamayoz-al-aali/16ccd9d3-559c-42ed-83b4-b11ae7b04fa0.jpeg",
+      "observedAt": "2026-10-19T20:00:15.084443Z",
+      "sourceSha256": "eb69d3b2cfa01ca3055b7e368d323f75cb5367b851fed70114011005f9a3697d",
+      "retainedPath": "dealer-stock/dubicars-1029019.webp",
+      "retainedSha256": "d74249cbda11b459466498d9c64b63224cccbde49f67aeb39f213280107d04fb",
+      "nativeDimensions": [
+        650,
+        469
+      ],
+      "retainedDimensions": [
+        650,
+        469
+      ],
+      "retainedBytes": 47196,
+      "transformation": "Bounded resize with preserved aspect ratio and WebP compression; no watermark removal.",
+      "reusePermission": "not independently established; public-preview source attribution retained"
+    }
+  ]
+}
