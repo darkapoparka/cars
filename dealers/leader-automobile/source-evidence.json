@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "dealer": "leader-automobile",
+  "researchId": "ae-dubai-leader-automobile",
+  "observedAt": "2026-10-19T20:03:53.753313Z",
+  "liveFetchPerformed": true,
+  "businessSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-leader-automobile-124",
+      "observedAt": "2026-10-19T20:03:53.753313Z",
+      "supports": [
+        "dealer-name",
+        "dealer-attributed-listings",
+        "dealer-attributed-photos",
+        "public-business-call-line"
+      ]
+    },
+    {
+      "url": "https://uae.yallamotor.com/ar/auto-companies/leader-automobile-1919",
+      "observedAt": "2026-10-19T20:03:53.753313Z",
+      "supports": [
+        "logo-placeholder-review"
+      ]
+    }
+  ],
+  "stockMode": "dated-listing-snapshot",
+  "inventoryCountMeaning": "Selected currently advertised public records, not a count or confirmation of available physical stock.",
+  "media": [
+    {
+      "path": "dealer-stock/listing-1019419.jpg",
+      "sourceUrl": "https://www.dubicars.com/images/07deee/650x380/leader-automobile/bd4bd052-3b9a-426f-850b-dad1612f19a6.jpeg",
+      "listingUrl": "https://www.dubicars.com/2012-mercedes-benz-e250-1019419.html",
+      "observedAt": "2026-10-19T20:03:53.753313Z",
+      "downloadedSha256": "98b9fc570bd1d51a23276f4c3533612a1df21b9bb9818a30348eb73af9a18af3",
+      "downloadedDimensions": [
+        650,
+        489
+      ],
+      "sha256": "168f4858e22946ba1d29628f1e080cb793580ce9105e4d60d577db6801cb1b1d",
+      "bytes": 70176,
+      "dimensions": [
+        650,
+        489
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    },
+    {
+      "path": "dealer-stock/listing-1024352.jpg",
+      "sourceUrl": "https://www.dubicars.com/images/f8261b/650x380/leader-automobile/482381d7-cf66-44d0-a9f9-6c9811c5e65f.jpeg",
+      "listingUrl": "https://www.dubicars.com/2015-bentley-flying-spur-excellent-condition-1024352.html",
+      "observedAt": "2026-10-19T20:03:53.753313Z",
+      "downloadedSha256": "98777e80dd5c29d00da70a875de137b726df1ccc5d14b2fb275b8ba479a3875d",
+      "downloadedDimensions": [
+        650,
+        476
+      ],
+      "sha256": "b83afc57c4df93dc0c320c7ffd794a36c678b93d8231ef6925a49765ba46e4cd",
+      "bytes": 70873,
+      "dimensions": [
+        650,
+        476
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    },
+    {
+      "path": "dealer-stock/listing-603945.jpg",
+      "sourceUrl": "https://www.dubicars.com/images/877bcc/650x380/leader-automobile-llc/9fd910d2-7580-4eec-a1a0-225712c8e75f.jpg",
+      "listingUrl": "https://www.dubicars.com/2019-mercedes-benz-gls-550-std-603945.html",
+      "observedAt": "2026-10-19T20:03:53.753313Z",
+      "downloadedSha256": "59d4f3679d7395c211c12cb0710fdfe0c654718a700ae3b22fc2a626d8ae5817",
+      "downloadedDimensions": [
+        650,
+        486
+      ],
+      "sha256": "dad4e742a31572231e07af6b3cfd66036fc6a72de324a58814a4c211cce108b3",
+      "bytes": 91041,
+      "dimensions": [
+        650,
+        486
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    }
+  ],
+  "researchLimitations": [
+    "Email omitted: source address appears personal, ambiguous, or malformed.",
+    "No published logo found: DubiCars dealer-no-logo image and YallaMotor placeholder.svg; independent logo proposal prepared.",
+    "Older YallaMotor listing has a different phone and incomplete address; current active DubiCars call line retained and exact street address omitted."
+  ],
+  "excludedSourceContent": [
+    "Personal names and personal or ambiguous emails",
+    "Marketplace relay numbers",
+    "Prices",
+    "Unsupported warranties, inspections, ratings and finance promises"
+  ],
+  "dealerApproval": "unknown"
+}

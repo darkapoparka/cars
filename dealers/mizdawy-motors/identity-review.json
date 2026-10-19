@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T21:05:40.228981Z",
+  "dealer": "mizdawy-motors",
+  "dealerId": "ae-dubai-mizdawy-motors",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "method": "Exact retained registry and client-folder alias comparison, followed by fresh public dealer catalogue research. No existing fleet identity matched; no dealer approval is implied.",
+  "sources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/dubai/mizdawy-motors",
+      "observedAt": "2026-10-19T20:03:54.057713Z",
+      "supports": [
+        "dealer-name",
+        "dealer-attributed-listings",
+        "dealer-attributed-photos",
+        "public-business-call-line",
+        "address"
+      ]
+    },
+    {
+      "url": "https://auto.ae/dubai/sale/car/rox/rox-adamas-2026/id/269318/",
+      "observedAt": "2026-10-19T20:03:54.057713Z",
+      "supports": [
+        "seller-name",
+        "vehicle-identity",
+        "seller-attributed-listing-photo"
+      ]
+    }
+  ]
+}

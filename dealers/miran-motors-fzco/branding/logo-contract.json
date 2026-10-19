@@ -1,0 +1,287 @@
+{
+  "schemaVersion": 1,
+  "dealer": "miran-motors-fzco",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T21:16:46.087850Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "sourced-logo-imagegen-redraw",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "1a62d0b9b033ae490e9d2838ca97bd4f856cd95c3f095b18f13245132d40f801",
+      "sourceSha256": "50ea9f45fdf1dbf589f2f7a4f48b7a57edd6e5961171588648aef8d5469181c1"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "94e001ee0a7bc5dea39f70c4e24c0206877d77f7eabd312a1e8ed7754b6ef12d",
+      "sourceSha256": "2b951af84ff742cdf6c499c915e266b19b3ab68115e005447e36a0b67981c450"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "94e001ee0a7bc5dea39f70c4e24c0206877d77f7eabd312a1e8ed7754b6ef12d",
+      "sourceSha256": "2b951af84ff742cdf6c499c915e266b19b3ab68115e005447e36a0b67981c450"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "50ea9f45fdf1dbf589f2f7a4f48b7a57edd6e5961171588648aef8d5469181c1",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-5b2897a5-b5a5-4ff6-b5ff-4483affdec57",
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "f94bfeeca26a8300c23447bbadb6a9efb1abe21bf06573fa42e22bbffe1b4e18",
+      "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+      "crop": [
+        0,
+        614,
+        768,
+        1024
+      ]
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "96f2c9cecff169893e07e5ab11fecf07554bd72f6f6a36090293e52c298e3b15",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-5b2897a5-b5a5-4ff6-b5ff-4483affdec57",
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "f94bfeeca26a8300c23447bbadb6a9efb1abe21bf06573fa42e22bbffe1b4e18",
+      "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+      "crop": [
+        0,
+        0,
+        768,
+        614
+      ]
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "fb0b4593a0d28e6395987c2ac0fb9f8643c1871cc208c8bfe48f7abc06b7ba99"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "50ea9f45fdf1dbf589f2f7a4f48b7a57edd6e5961171588648aef8d5469181c1",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5b2897a5-b5a5-4ff6-b5ff-4483affdec57",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "f94bfeeca26a8300c23447bbadb6a9efb1abe21bf06573fa42e22bbffe1b4e18",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          614,
+          768,
+          1024
+        ]
+      },
+      "sourceReference": "dealers/miran-motors-fzco/branding/generated-onLight.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "2b951af84ff742cdf6c499c915e266b19b3ab68115e005447e36a0b67981c450",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5b2897a5-b5a5-4ff6-b5ff-4483affdec57",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "f94bfeeca26a8300c23447bbadb6a9efb1abe21bf06573fa42e22bbffe1b4e18",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          768,
+          614,
+          1536,
+          1024
+        ]
+      },
+      "sourceReference": "dealers/miran-motors-fzco/branding/generated-onDark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "2b951af84ff742cdf6c499c915e266b19b3ab68115e005447e36a0b67981c450",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5b2897a5-b5a5-4ff6-b5ff-4483affdec57",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "f94bfeeca26a8300c23447bbadb6a9efb1abe21bf06573fa42e22bbffe1b4e18",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          768,
+          614,
+          1536,
+          1024
+        ]
+      },
+      "sourceReference": "dealers/miran-motors-fzco/branding/generated-onDark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "46d96a2ce52eb728d2dbbb0ee5690137014b2c23cba048d2996e60dae6363d2a",
+      "sha256": "50ea9f45fdf1dbf589f2f7a4f48b7a57edd6e5961171588648aef8d5469181c1",
+      "crop": {
+        "left": 77,
+        "top": 44,
+        "width": 668,
+        "height": 296
+      },
+      "sourcePath": "branding/generated-onLight.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "ef5ab0207c8d9542e82234efa0baf2df3f462870dac5c926511621f625ad0053",
+      "sha256": "2b951af84ff742cdf6c499c915e266b19b3ab68115e005447e36a0b67981c450",
+      "crop": {
+        "left": 46,
+        "top": 42,
+        "width": 691,
+        "height": 299
+      },
+      "sourcePath": "branding/generated-onDark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "ef5ab0207c8d9542e82234efa0baf2df3f462870dac5c926511621f625ad0053",
+      "sha256": "2b951af84ff742cdf6c499c915e266b19b3ab68115e005447e36a0b67981c450",
+      "crop": {
+        "left": 46,
+        "top": 42,
+        "width": 691,
+        "height": 299
+      },
+      "sourcePath": "branding/generated-onDark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "6b2cbe4d7979be3c3415b0ca9754ab4efb58bf64badb6e187c66eab6520c49d4",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5b2897a5-b5a5-4ff6-b5ff-4483affdec57",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "f94bfeeca26a8300c23447bbadb6a9efb1abe21bf06573fa42e22bbffe1b4e18",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          0,
+          768,
+          614
+        ]
+      },
+      "sourceReference": "dealers/miran-motors-fzco/branding/generated-mark.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "05e4f89cd9ad49b64e2ad4967ae786320f77bda225fca342ccf524effaadfd4d",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5b2897a5-b5a5-4ff6-b5ff-4483affdec57",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "f94bfeeca26a8300c23447bbadb6a9efb1abe21bf06573fa42e22bbffe1b4e18",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          768,
+          0,
+          1536,
+          614
+        ]
+      },
+      "sourceReference": "dealers/miran-motors-fzco/branding/generated-markOnDark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "96f2c9cecff169893e07e5ab11fecf07554bd72f6f6a36090293e52c298e3b15",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5b2897a5-b5a5-4ff6-b5ff-4483affdec57",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "f94bfeeca26a8300c23447bbadb6a9efb1abe21bf06573fa42e22bbffe1b4e18",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          0,
+          768,
+          614
+        ]
+      },
+      "sourceReference": "dealers/miran-motors-fzco/branding/generated-mark.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "fb0b4593a0d28e6395987c2ac0fb9f8643c1871cc208c8bfe48f7abc06b7ba99",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5b2897a5-b5a5-4ff6-b5ff-4483affdec57",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "f94bfeeca26a8300c23447bbadb6a9efb1abe21bf06573fa42e22bbffe1b4e18",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          0,
+          768,
+          614
+        ]
+      },
+      "sourceReference": "dealers/miran-motors-fzco/branding/generated-mark.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T21:16:46.087850Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "b038847fd4344f45dbfff88a8cb5049d54bfe8179b6d57ad4af1e162b3ced04d",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-5b2897a5-b5a5-4ff6-b5ff-4483affdec57",
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "f94bfeeca26a8300c23447bbadb6a9efb1abe21bf06573fa42e22bbffe1b4e18",
+      "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+      "crop": [
+        768,
+        0,
+        1536,
+        614
+      ]
+    }
+  }
+}

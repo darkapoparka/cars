@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "dealer": "master-cars-used-car-trading-llc-fz",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:03:53.926049Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "listing-705418",
+      "title": "2023 MG ZS Comfort",
+      "make": "MG",
+      "model": "ZS Comfort",
+      "year": 2023,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-705418.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/MG/ZS-Comfort/?id=705418",
+      "observedAt": "2026-10-19T20:03:53.926049Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Crossover",
+      "fuel": "Petrol",
+      "color": "White",
+      "mileageValue": 64000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-705403",
+      "title": "2019 Nissan Sunny SV",
+      "make": "Nissan",
+      "model": "Sunny SV",
+      "year": 2019,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-705403.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Nissan/Sunny-SV/?id=705403",
+      "observedAt": "2026-10-19T20:03:53.926049Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Sedan",
+      "fuel": "Petrol",
+      "color": "White",
+      "mileageValue": 135000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-705401",
+      "title": "2023 Suzuki Ciaz GLX",
+      "make": "Suzuki",
+      "model": "Ciaz GLX",
+      "year": 2023,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-705401.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Suzuki/Ciaz-GLX/?id=705401",
+      "observedAt": "2026-10-19T20:03:53.926049Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Sedan",
+      "fuel": "Petrol",
+      "color": "White",
+      "mileageValue": 60000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

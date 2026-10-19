@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 1,
+  "dealer": "master-cars-used-car-trading-llc-fz",
+  "sourceLogoUrl": "https://static.oneclickdrive.com/application/views/img/company/image3.png",
+  "sourcePath": "branding/source-original.png",
+  "sourceSha256": "bca00aac31bc9f6b39e4640554c511e9050bdcdd91d6c65f08f1de51ab5b684e",
+  "publishedBranding": true,
+  "sourcePage": "https://www.oneclickdrive.com/company/dubai/master-cars-used-car-trading-llc-fz",
+  "observedAt": "2026-10-19T20:03:53.926049Z",
+  "creationMethod": "sourced-logo-imagegen-redraw",
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "dealerApproved": false,
+  "visualReview": "Faithful refinement retains the source green connected MC and offset open circular strokes. Deeper green supports light-surface contrast; proposed MASTER CARS lockup and matching white inverse reviewed.",
+  "generationPrompt": "Use case: logo-brand. ONE transparent RGBA sprite for ONE dealer with 4 matching assets in 2 columns x 2 rows, large transparent gutters. Top left bold near-square compact mark for WHITE background, top right same compact mark entirely WHITE. Bottom left horizontal full wordmark in source dark colours, bottom right identical wordmark entirely WHITE. Flat solid ink, clean transparent counters, substantial strokes for 32px marks and 120px wordmarks. No labels, panels, textures, shadows, glows or gradients. Faithful refinement of supplied green MC in an open circular ring. Preserve connected handwritten M and C letter idea and two offset partial circle arcs, simplifying them into smooth thick professional strokes. Source green should become deeper dark green #167019 for strong white-background contrast, while retaining green/black identity. Compact MC near-square inside open green arcs; full horizontal logo same emblem left, exact text 'MASTER' above 'CARS' right in bold clean charcoal letters with green secondary accent. Entire right column white including rings, MC and text, no green on inverse. No car silhouette or unrelated motifs.",
+  "workingLogoPath": "branding/generated-onLight.png",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T20:53:19.291560Z",
+    "master": {
+      "path": "branding/generated-onLight.png",
+      "sha256": "247c2be13a38c2e6c3eba6b222200722f0d2f9c4251dc453127f085d38f9b1c8",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a5c0f5bc-71ee-4d06-8992-01539be9d615",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "0a727dbe31cf113f8b8c180bf115c1d4875ac59b73287746d3253962a4179bf3",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          614,
+          768,
+          1024
+        ]
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "78027732ae28800dab42e035c149533421f48c1da186458fe79c694136cfb205",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a5c0f5bc-71ee-4d06-8992-01539be9d615",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "0a727dbe31cf113f8b8c180bf115c1d4875ac59b73287746d3253962a4179bf3",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          0,
+          768,
+          614
+        ]
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-markOnDark.png",
+      "sha256": "74c3ebc0dc5e1bd2c0cc8423cd6a4410884569749967f22524ddadeaeb3e3852",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a5c0f5bc-71ee-4d06-8992-01539be9d615",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "0a727dbe31cf113f8b8c180bf115c1d4875ac59b73287746d3253962a4179bf3",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          768,
+          0,
+          1536,
+          614
+        ]
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-onLight.png",
+        "sha256": "247c2be13a38c2e6c3eba6b222200722f0d2f9c4251dc453127f085d38f9b1c8",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-a5c0f5bc-71ee-4d06-8992-01539be9d615",
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "0a727dbe31cf113f8b8c180bf115c1d4875ac59b73287746d3253962a4179bf3",
+          "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+          "crop": [
+            0,
+            614,
+            768,
+            1024
+          ]
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-onDark.png",
+        "sha256": "4c903595e5e305a834427aae9cb2a94bb185d730b1a458f357ffb5e9313d0347",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-a5c0f5bc-71ee-4d06-8992-01539be9d615",
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "0a727dbe31cf113f8b8c180bf115c1d4875ac59b73287746d3253962a4179bf3",
+          "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+          "crop": [
+            768,
+            614,
+            1536,
+            1024
+          ]
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-onDark.png",
+        "sha256": "4c903595e5e305a834427aae9cb2a94bb185d730b1a458f357ffb5e9313d0347",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-a5c0f5bc-71ee-4d06-8992-01539be9d615",
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "0a727dbe31cf113f8b8c180bf115c1d4875ac59b73287746d3253962a4179bf3",
+          "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+          "crop": [
+            768,
+            614,
+            1536,
+            1024
+          ]
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820",
+        "#09090b",
+        "#17191c",
+        "#c40101"
+      ],
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "notes": "Faithful refinement retains the source green connected MC and offset open circular strokes. Deeper green supports light-surface contrast; proposed MASTER CARS lockup and matching white inverse reviewed."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T20:53:19.291560Z",
+      "widths": [
+        32,
+        64,
+        96
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#101820",
+        "#c40101"
+      ],
+      "notes": "Connected MC fills the circular mark at 32px, with broad white inverse strokes and open counters."
+    },
+    "compactMarkStatus": "proposed-compact-adaptation-not-dealer-approved"
+  },
+  "usageStatus": "public-preview-only"
+}

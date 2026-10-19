@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "dealer": "master-cars-used-car-trading-llc-fz",
+  "researchId": "ae-dubai-master-cars-used-car-trading-llc-fz",
+  "observedAt": "2026-10-19T20:03:53.926049Z",
+  "liveFetchPerformed": true,
+  "businessSources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/dubai/master-cars-used-car-trading-llc-fz",
+      "observedAt": "2026-10-19T20:03:53.926049Z",
+      "supports": [
+        "dealer-name",
+        "dealer-attributed-listings",
+        "dealer-attributed-photos",
+        "public-business-call-line",
+        "address"
+      ]
+    }
+  ],
+  "stockMode": "dated-listing-snapshot",
+  "inventoryCountMeaning": "Selected currently advertised public records, not a count or confirmation of available physical stock.",
+  "media": [
+    {
+      "path": "dealer-stock/listing-705418.jpg",
+      "sourceUrl": "https://static.oneclickdrive.com/uploads/cars/MG-ZS-Comfort_705418_1865475159644-1_small.jpg",
+      "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/MG/ZS-Comfort/?id=705418",
+      "observedAt": "2026-10-19T20:03:53.926049Z",
+      "downloadedSha256": "57d8d290ad2ca431980165f6a837c3b719a103e30c83f83b976b229f99dcb5fc",
+      "downloadedDimensions": [
+        450,
+        395
+      ],
+      "sha256": "2c6454762bea62228efa70863d81392036ecda1b7eeb5c19137aae4911c71d49",
+      "bytes": 41571,
+      "dimensions": [
+        450,
+        395
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    },
+    {
+      "path": "dealer-stock/listing-705403.jpg",
+      "sourceUrl": "https://static.oneclickdrive.com/uploads/cars/Nissan-Sunny-SV_705403_1865455294873-1_small.jpg",
+      "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Nissan/Sunny-SV/?id=705403",
+      "observedAt": "2026-10-19T20:03:53.926049Z",
+      "downloadedSha256": "92f1ff8e518b4d16cd958a2ce6caa74925da06779b23d451ceb11dc2ad8d70f2",
+      "downloadedDimensions": [
+        450,
+        395
+      ],
+      "sha256": "d3dc458ecc026a9b34568f5daec52c1fec4dfacc183235f2ab6fca5cc783afe8",
+      "bytes": 39809,
+      "dimensions": [
+        450,
+        395
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    },
+    {
+      "path": "dealer-stock/listing-705401.jpg",
+      "sourceUrl": "https://static.oneclickdrive.com/uploads/cars/Suzuki-Ciaz-GLX_705401_1865452067371-1_small.jpg",
+      "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Suzuki/Ciaz-GLX/?id=705401",
+      "observedAt": "2026-10-19T20:03:53.926049Z",
+      "downloadedSha256": "3646b0b4204a8b54666af3288b23013ddde238747957ea1409dff6f180e4b90f",
+      "downloadedDimensions": [
+        450,
+        395
+      ],
+      "sha256": "4aa1ede1c5394ed416aed507d45f8f7c7ba4240c8e10955689f09c75a36c4eaa",
+      "bytes": 44123,
+      "dimensions": [
+        450,
+        395
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    }
+  ],
+  "researchLimitations": [
+    "Marketplace relay numbers excluded; source catalogue provides address and published shop hours.",
+    "Phone is the dealer-attributed call link in the public vehicle card; common platform WhatsApp relay omitted.",
+    "Opening hours omitted because the platform repeats a generic schedule and independent verification is unavailable."
+  ],
+  "excludedSourceContent": [
+    "Personal names and personal or ambiguous emails",
+    "Marketplace relay numbers",
+    "Prices",
+    "Unsupported warranties, inspections, ratings and finance promises"
+  ],
+  "dealerApproval": "unknown"
+}

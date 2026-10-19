@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "dealer": "jump-sky-automobile-trading-fze",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:03:53.743081Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "listing-1002675",
+      "title": "2025 BYD QIN PLUS STANDARD",
+      "make": "Byd",
+      "model": "Qin Plus",
+      "year": 2025,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-1002675.jpg"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2025-byd-qin-plus-130km-1002675.html",
+      "observedAt": "2026-10-19T20:03:53.743081Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageOnRequest": true,
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-1007238",
+      "title": "2026 ROX Adamas FIRST CLASS",
+      "make": "Rox",
+      "model": "Adamas",
+      "year": 2026,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-1007238.jpg"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2026-rox-adamas-1007238.html",
+      "observedAt": "2026-10-19T20:03:53.743081Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageOnRequest": true,
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-1002676",
+      "title": "2026 BYD Leopard 5 FLAGSHIP",
+      "make": "Byd",
+      "model": "Leopard 5",
+      "year": 2026,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-1002676.jpg"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2026-byd-leopard-5-1002676.html",
+      "observedAt": "2026-10-19T20:03:53.743081Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageOnRequest": true,
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

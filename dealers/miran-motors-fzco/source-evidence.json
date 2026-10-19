@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "dealer": "miran-motors-fzco",
+  "researchId": "ae-dubai-miran-motors-fzco",
+  "observedAt": "2026-10-19T20:03:54.011522Z",
+  "liveFetchPerformed": true,
+  "businessSources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/dubai/miran-motors-fzco",
+      "observedAt": "2026-10-19T20:03:54.011522Z",
+      "supports": [
+        "dealer-name",
+        "dealer-attributed-listings",
+        "dealer-attributed-photos",
+        "public-business-call-line",
+        "address"
+      ]
+    },
+    {
+      "url": "https://sooq-cars.com/ae/en/ready/cars/2156949",
+      "observedAt": "2026-10-19T20:03:54.011522Z",
+      "supports": [
+        "dealer-attributed-listing",
+        "dealer-attributed-photo"
+      ]
+    },
+    {
+      "url": "https://www.yellowpages-uae.com/miran-motors-fzco-182346",
+      "observedAt": "2026-10-19T20:03:54.011522Z",
+      "supports": [
+        "dealer-name",
+        "Ras-Al-Khor-location"
+      ]
+    }
+  ],
+  "stockMode": "dated-listing-snapshot",
+  "inventoryCountMeaning": "Selected currently advertised public records, not a count or confirmation of available physical stock.",
+  "media": [
+    {
+      "path": "dealer-stock/listing-2156949.jpg",
+      "sourceUrl": "https://static.sooq-cars.com/1468027/fa86ac60198545cdb174a811b99a08e2-.webp",
+      "listingUrl": "https://sooq-cars.com/ae/en/ready/cars/2156949-mitsubishi-pajero-2013",
+      "observedAt": "2026-10-19T20:03:54.011522Z",
+      "downloadedSha256": "5afd40ac788c8c3bd7dca238eb286c6eddfd1eb21f8d96e539f0b014f1a46a75",
+      "downloadedDimensions": [
+        800,
+        600
+      ],
+      "sha256": "a1224a7a2157ed850d55336a883e99ac37a9e1c35c2d2eaeccc615a5f129f482",
+      "bytes": 98647,
+      "dimensions": [
+        800,
+        600
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    }
+  ],
+  "researchLimitations": [
+    "One current seller-attributed Sooq Cars photo retained. OneClickDrive public catalogue corroborates dealer identity and gives the public dealer call line and logo.",
+    "Catalogue call link is attributed to Miran Motors FZCO; platform WhatsApp relay omitted.",
+    "Exact unit and opening hours omitted because catalogue and historic directories do not establish a consistent current value."
+  ],
+  "excludedSourceContent": [
+    "Personal names and personal or ambiguous emails",
+    "Marketplace relay numbers",
+    "Prices",
+    "Unsupported warranties, inspections, ratings and finance promises"
+  ],
+  "dealerApproval": "unknown"
+}

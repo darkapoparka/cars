@@ -1,0 +1,287 @@
+{
+  "schemaVersion": 1,
+  "dealer": "leader-automobile",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T21:10:50.195240Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "76571dc1bc03cfb814c27f9cd8d698fcba206e304518504e6becd0daf4079899",
+      "sourceSha256": "4b741ff32619c64a9bda4fb87ab025bb8a8a8bb5f8b7241ea277e3599de173cc"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "16bc59f5be76acc3f98277391af9ab03aa97f99b3441e761af4d99d416fb63dd",
+      "sourceSha256": "bc94b96770a410903ea074fd090f771ae774f593a852a79e7dfd936ac3956d2d"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "16bc59f5be76acc3f98277391af9ab03aa97f99b3441e761af4d99d416fb63dd",
+      "sourceSha256": "bc94b96770a410903ea074fd090f771ae774f593a852a79e7dfd936ac3956d2d"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "4b741ff32619c64a9bda4fb87ab025bb8a8a8bb5f8b7241ea277e3599de173cc",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-bdad76cc-cf4c-434f-b346-e75a641b7a31",
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "75628065be303168b5c739e4dc4d39774524a3d89f2f6b77a2bb49f9461f027a",
+      "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+      "crop": [
+        0,
+        614,
+        768,
+        1024
+      ]
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "7e2be99940b73a241fd110553a4a74c406994b8d9e1ab3701c276e31b15cfbce",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-bdad76cc-cf4c-434f-b346-e75a641b7a31",
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "75628065be303168b5c739e4dc4d39774524a3d89f2f6b77a2bb49f9461f027a",
+      "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+      "crop": [
+        0,
+        0,
+        768,
+        614
+      ]
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "e3d49440e6d5aaa7610332911243ae61a119d89dade44c1c05d2ec22e98c339c"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "4b741ff32619c64a9bda4fb87ab025bb8a8a8bb5f8b7241ea277e3599de173cc",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bdad76cc-cf4c-434f-b346-e75a641b7a31",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "75628065be303168b5c739e4dc4d39774524a3d89f2f6b77a2bb49f9461f027a",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          614,
+          768,
+          1024
+        ]
+      },
+      "sourceReference": "dealers/leader-automobile/branding/generated-onLight.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "bc94b96770a410903ea074fd090f771ae774f593a852a79e7dfd936ac3956d2d",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bdad76cc-cf4c-434f-b346-e75a641b7a31",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "75628065be303168b5c739e4dc4d39774524a3d89f2f6b77a2bb49f9461f027a",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          768,
+          614,
+          1536,
+          1024
+        ]
+      },
+      "sourceReference": "dealers/leader-automobile/branding/generated-onDark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "bc94b96770a410903ea074fd090f771ae774f593a852a79e7dfd936ac3956d2d",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bdad76cc-cf4c-434f-b346-e75a641b7a31",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "75628065be303168b5c739e4dc4d39774524a3d89f2f6b77a2bb49f9461f027a",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          768,
+          614,
+          1536,
+          1024
+        ]
+      },
+      "sourceReference": "dealers/leader-automobile/branding/generated-onDark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "7b977b565e8fff681103131315ae019b3593d6087adf06dac42c22a51f98a414",
+      "sha256": "4b741ff32619c64a9bda4fb87ab025bb8a8a8bb5f8b7241ea277e3599de173cc",
+      "crop": {
+        "left": 55,
+        "top": 13,
+        "width": 681,
+        "height": 238
+      },
+      "sourcePath": "branding/generated-onLight.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "862d19f4b838fa54ae632ba04593da4ed3a187dcfe9d37689d71bcc26440492c",
+      "sha256": "bc94b96770a410903ea074fd090f771ae774f593a852a79e7dfd936ac3956d2d",
+      "crop": {
+        "left": 33,
+        "top": 13,
+        "width": 680,
+        "height": 238
+      },
+      "sourcePath": "branding/generated-onDark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "862d19f4b838fa54ae632ba04593da4ed3a187dcfe9d37689d71bcc26440492c",
+      "sha256": "bc94b96770a410903ea074fd090f771ae774f593a852a79e7dfd936ac3956d2d",
+      "crop": {
+        "left": 33,
+        "top": 13,
+        "width": 680,
+        "height": 238
+      },
+      "sourcePath": "branding/generated-onDark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "23f42d0b3cd240afe5f5ffbcc37ea6b98b3bccb32690c390dbab4f3daeba4d8a",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bdad76cc-cf4c-434f-b346-e75a641b7a31",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "75628065be303168b5c739e4dc4d39774524a3d89f2f6b77a2bb49f9461f027a",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          0,
+          768,
+          614
+        ]
+      },
+      "sourceReference": "dealers/leader-automobile/branding/generated-mark.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "0d422b26d895037019453e8e4c09afcbbf86e34c4c951b9b7d0b930c816930e0",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bdad76cc-cf4c-434f-b346-e75a641b7a31",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "75628065be303168b5c739e4dc4d39774524a3d89f2f6b77a2bb49f9461f027a",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          768,
+          0,
+          1536,
+          614
+        ]
+      },
+      "sourceReference": "dealers/leader-automobile/branding/generated-markOnDark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "7e2be99940b73a241fd110553a4a74c406994b8d9e1ab3701c276e31b15cfbce",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bdad76cc-cf4c-434f-b346-e75a641b7a31",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "75628065be303168b5c739e4dc4d39774524a3d89f2f6b77a2bb49f9461f027a",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          0,
+          768,
+          614
+        ]
+      },
+      "sourceReference": "dealers/leader-automobile/branding/generated-mark.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "e3d49440e6d5aaa7610332911243ae61a119d89dade44c1c05d2ec22e98c339c",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bdad76cc-cf4c-434f-b346-e75a641b7a31",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "75628065be303168b5c739e4dc4d39774524a3d89f2f6b77a2bb49f9461f027a",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          0,
+          768,
+          614
+        ]
+      },
+      "sourceReference": "dealers/leader-automobile/branding/generated-mark.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T21:10:50.195240Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "8252a5abaeb8bdb3ae2bbe3a4999b916f20d5130330fd86a4279d9ba7823799f",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-bdad76cc-cf4c-434f-b346-e75a641b7a31",
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "75628065be303168b5c739e4dc4d39774524a3d89f2f6b77a2bb49f9461f027a",
+      "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+      "crop": [
+        768,
+        0,
+        1536,
+        614
+      ]
+    }
+  }
+}

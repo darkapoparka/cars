@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "dealer": "jump-sky-automobile-trading-fze",
+  "researchId": "ae-dubai-jump-sky-automobile-trading-fze",
+  "observedAt": "2026-10-19T20:03:53.743081Z",
+  "liveFetchPerformed": true,
+  "businessSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-jump-sky-automobile-trading-fze-3348",
+      "observedAt": "2026-10-19T20:03:53.743081Z",
+      "supports": [
+        "dealer-name",
+        "dealer-attributed-listings",
+        "dealer-attributed-photos",
+        "public-business-call-line"
+      ]
+    }
+  ],
+  "stockMode": "dated-listing-snapshot",
+  "inventoryCountMeaning": "Selected currently advertised public records, not a count or confirmation of available physical stock.",
+  "media": [
+    {
+      "path": "dealer-stock/listing-1002675.jpg",
+      "sourceUrl": "https://www.dubicars.com/images/2a414d/650x380/jump-sky-automobile-trading-fze/daa46395-ad6e-4db5-bff3-9e42bef89d6b.jpeg",
+      "listingUrl": "https://www.dubicars.com/2025-byd-qin-plus-130km-1002675.html",
+      "observedAt": "2026-10-19T20:03:53.743081Z",
+      "downloadedSha256": "077199a7b9cd2359c2b000b67da38dfa3bad7bb730b8161898b9322000c74a9c",
+      "downloadedDimensions": [
+        650,
+        434
+      ],
+      "sha256": "50647b90ac57912968604ad8386340311771fe328bdaf8fe702466fc0d5c24a6",
+      "bytes": 51166,
+      "dimensions": [
+        650,
+        434
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    },
+    {
+      "path": "dealer-stock/listing-1007238.jpg",
+      "sourceUrl": "https://www.dubicars.com/images/abc4ea/650x380/jump-sky-automobile-trading-fze/9f4d49cc-73c7-4b12-b2ec-ef891a8f3fa7.jpeg",
+      "listingUrl": "https://www.dubicars.com/2026-rox-adamas-1007238.html",
+      "observedAt": "2026-10-19T20:03:53.743081Z",
+      "downloadedSha256": "5fbfadce745e4b433bd05d1b0b1457c393459877f9c16b004b27ea59b67a6076",
+      "downloadedDimensions": [
+        650,
+        487
+      ],
+      "sha256": "5d09271baef77c2d84e08cdd3c6f62eeed75eb5517cb0936065ed7723d9e9470",
+      "bytes": 71145,
+      "dimensions": [
+        650,
+        487
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    },
+    {
+      "path": "dealer-stock/listing-1002676.jpg",
+      "sourceUrl": "https://www.dubicars.com/images/9816b5/650x380/jump-sky-automobile-trading-fze/123c5588-ea02-46c0-80af-a7969bcd0f73.jpeg",
+      "listingUrl": "https://www.dubicars.com/2026-byd-leopard-5-1002676.html",
+      "observedAt": "2026-10-19T20:03:53.743081Z",
+      "downloadedSha256": "217abba34b3c8e7897821e54148c6fdd0b84dda1fc6d4c57afcfcc37db0e1d7e",
+      "downloadedDimensions": [
+        650,
+        488
+      ],
+      "sha256": "fd5217e51e67d2b7f0a4e960c99d06bbee0789a4d90308377223ecf8ca5e0229",
+      "bytes": 56251,
+      "dimensions": [
+        650,
+        488
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    }
+  ],
+  "researchLimitations": [
+    "Email omitted: source address appears personal, ambiguous, or malformed.",
+    "Dubai directory grouping conflicts with Sharjah in current listings; exact showroom address omitted."
+  ],
+  "excludedSourceContent": [
+    "Personal names and personal or ambiguous emails",
+    "Marketplace relay numbers",
+    "Prices",
+    "Unsupported warranties, inspections, ratings and finance promises"
+  ],
+  "dealerApproval": "unknown"
+}

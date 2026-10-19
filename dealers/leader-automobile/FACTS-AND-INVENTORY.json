@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "dealer": "leader-automobile",
+  "businessFacts": "business-facts.json",
+  "stock": "stock.json",
+  "inventoryKind": "dated-listing-snapshot",
+  "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+  "sources": [
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-leader-automobile-124",
+      "observedAt": "2026-10-19T20:03:53.753313Z",
+      "supports": [
+        "dealer-name",
+        "dealer-attributed-listings",
+        "dealer-attributed-photos",
+        "public-business-call-line"
+      ]
+    },
+    {
+      "url": "https://uae.yallamotor.com/ar/auto-companies/leader-automobile-1919",
+      "observedAt": "2026-10-19T20:03:53.753313Z",
+      "supports": [
+        "logo-placeholder-review"
+      ]
+    }
+  ]
+}

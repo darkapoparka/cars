@@ -1,0 +1,287 @@
+{
+  "schemaVersion": 1,
+  "dealer": "mehran-motors-fzco",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T20:58:49.696616Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "sourced-logo-imagegen-redraw",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "f935cd3c4df126187863daf86af2e40b501231db5c10cec5a0f8e90d5bc5b255",
+      "sourceSha256": "451075318630e09a0e4cdaee1938bebe7f36d81debc4c3072094412742e0a74f"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "4c11c13ce140f4c82e1407c17421d3d58cd8a651d9d03aac7bc14c2a046828b7",
+      "sourceSha256": "46a4a83b9179b0717a08b2aba31fda24b89c8bce5200c16885b60ca2090fe3f7"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "4c11c13ce140f4c82e1407c17421d3d58cd8a651d9d03aac7bc14c2a046828b7",
+      "sourceSha256": "46a4a83b9179b0717a08b2aba31fda24b89c8bce5200c16885b60ca2090fe3f7"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "451075318630e09a0e4cdaee1938bebe7f36d81debc4c3072094412742e0a74f",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-32fe3eee-e962-4a09-902f-fdf82059ee27",
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "1311b9b3f4bc7b7a435eacaee99290f1da93e5c46b4a0bcbceeea1c8acdcd0d8",
+      "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+      "crop": [
+        0,
+        614,
+        768,
+        1024
+      ]
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "4c3b338b179a7212d28f628ec475e6b78c7e816898cea891f90e9c73ee554c01",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-32fe3eee-e962-4a09-902f-fdf82059ee27",
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "1311b9b3f4bc7b7a435eacaee99290f1da93e5c46b4a0bcbceeea1c8acdcd0d8",
+      "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+      "crop": [
+        0,
+        0,
+        768,
+        614
+      ]
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "3d3aac0adfeae5be1a8a08e5dcacf97e76e059b87d106d098188fc748417513e"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "451075318630e09a0e4cdaee1938bebe7f36d81debc4c3072094412742e0a74f",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-32fe3eee-e962-4a09-902f-fdf82059ee27",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "1311b9b3f4bc7b7a435eacaee99290f1da93e5c46b4a0bcbceeea1c8acdcd0d8",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          614,
+          768,
+          1024
+        ]
+      },
+      "sourceReference": "dealers/mehran-motors-fzco/branding/generated-onLight.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "46a4a83b9179b0717a08b2aba31fda24b89c8bce5200c16885b60ca2090fe3f7",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-32fe3eee-e962-4a09-902f-fdf82059ee27",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "1311b9b3f4bc7b7a435eacaee99290f1da93e5c46b4a0bcbceeea1c8acdcd0d8",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          768,
+          614,
+          1536,
+          1024
+        ]
+      },
+      "sourceReference": "dealers/mehran-motors-fzco/branding/generated-onDark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "46a4a83b9179b0717a08b2aba31fda24b89c8bce5200c16885b60ca2090fe3f7",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-32fe3eee-e962-4a09-902f-fdf82059ee27",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "1311b9b3f4bc7b7a435eacaee99290f1da93e5c46b4a0bcbceeea1c8acdcd0d8",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          768,
+          614,
+          1536,
+          1024
+        ]
+      },
+      "sourceReference": "dealers/mehran-motors-fzco/branding/generated-onDark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "2ed287e2b2516ab59b893de7e00000fc1b2e956e8cb782d8eed60692b242eef5",
+      "sha256": "451075318630e09a0e4cdaee1938bebe7f36d81debc4c3072094412742e0a74f",
+      "crop": {
+        "left": 22,
+        "top": 24,
+        "width": 746,
+        "height": 290
+      },
+      "sourcePath": "branding/generated-onLight.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "5282dfcc643b767998ee9ca0997f96229eb4cb2c38f71ff002fdd46ce6f75449",
+      "sha256": "46a4a83b9179b0717a08b2aba31fda24b89c8bce5200c16885b60ca2090fe3f7",
+      "crop": {
+        "left": 21,
+        "top": 27,
+        "width": 734,
+        "height": 289
+      },
+      "sourcePath": "branding/generated-onDark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "5282dfcc643b767998ee9ca0997f96229eb4cb2c38f71ff002fdd46ce6f75449",
+      "sha256": "46a4a83b9179b0717a08b2aba31fda24b89c8bce5200c16885b60ca2090fe3f7",
+      "crop": {
+        "left": 21,
+        "top": 27,
+        "width": 734,
+        "height": 289
+      },
+      "sourcePath": "branding/generated-onDark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "1c00e82fabefb260ded7540a59cf800e4d2a965d454f025d68bedf9b61de2925",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-32fe3eee-e962-4a09-902f-fdf82059ee27",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "1311b9b3f4bc7b7a435eacaee99290f1da93e5c46b4a0bcbceeea1c8acdcd0d8",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          0,
+          768,
+          614
+        ]
+      },
+      "sourceReference": "dealers/mehran-motors-fzco/branding/generated-mark.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "4c519dc2fb12f1c0115d676951a4d6048f81fb5972d0290b25fe473855c6e035",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-32fe3eee-e962-4a09-902f-fdf82059ee27",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "1311b9b3f4bc7b7a435eacaee99290f1da93e5c46b4a0bcbceeea1c8acdcd0d8",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          768,
+          0,
+          1536,
+          614
+        ]
+      },
+      "sourceReference": "dealers/mehran-motors-fzco/branding/generated-markOnDark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "4c3b338b179a7212d28f628ec475e6b78c7e816898cea891f90e9c73ee554c01",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-32fe3eee-e962-4a09-902f-fdf82059ee27",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "1311b9b3f4bc7b7a435eacaee99290f1da93e5c46b4a0bcbceeea1c8acdcd0d8",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          0,
+          768,
+          614
+        ]
+      },
+      "sourceReference": "dealers/mehran-motors-fzco/branding/generated-mark.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "3d3aac0adfeae5be1a8a08e5dcacf97e76e059b87d106d098188fc748417513e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-32fe3eee-e962-4a09-902f-fdf82059ee27",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "1311b9b3f4bc7b7a435eacaee99290f1da93e5c46b4a0bcbceeea1c8acdcd0d8",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          0,
+          768,
+          614
+        ]
+      },
+      "sourceReference": "dealers/mehran-motors-fzco/branding/generated-mark.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T20:58:49.696616Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "d60ab07ac7b3660a1e341c67a9ec6049e8283c3d513afb3099c14be08ca93aa3",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-32fe3eee-e962-4a09-902f-fdf82059ee27",
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "1311b9b3f4bc7b7a435eacaee99290f1da93e5c46b4a0bcbceeea1c8acdcd0d8",
+      "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+      "crop": [
+        768,
+        0,
+        1536,
+        614
+      ]
+    }
+  }
+}

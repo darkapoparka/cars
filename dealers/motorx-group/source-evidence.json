@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "dealer": "motorx-group",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-motorx-group-3189",
+      "observedAt": "2026-10-19T20:30:19Z",
+      "supports": [
+        "public-business-identity",
+        "business-contact",
+        "address",
+        "attributed-public-stock"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "observedAt": "2026-10-19T20:30:19Z",
+  "stockMedia": [
+    {
+      "path": "dealer-stock/listing-1.jpg",
+      "sourceUrl": "https://www.dubicars.com/images/bc04a9/650x380/motorx-group/81c8f49b-aa44-4c65-afcf-e8d221eed7eb.jpeg",
+      "listingUrl": "https://www.dubicars.com/2026-rox-01-975485.html",
+      "observedAt": "2026-10-19T20:30:19Z",
+      "sourceSha256": "979be97abf7029b0da938f6f8be1c1db2fd9f4c08dcd09f156b377b9132fa913",
+      "sha256": "17a75b0f95fcd175b99b7f5f9317b90c5198f9657fd1e4dcb6975c8f20189052",
+      "width": 650,
+      "height": 488,
+      "bytes": 54046,
+      "transformation": "Bounded resize to at most 1280px; optimized JPEG quality 87."
+    },
+    {
+      "path": "dealer-stock/listing-2.jpg",
+      "sourceUrl": "https://www.dubicars.com/images/2d4356/650x380/motorx-group/fee718c6-8c46-49ce-a2ff-4dfb1cbfa05c.jpeg",
+      "listingUrl": "https://www.dubicars.com/2026-byd-leopard-8-1015097.html",
+      "observedAt": "2026-10-19T20:30:19Z",
+      "sourceSha256": "5d61c18d85fa68777aa3b28eb64353f359f609a82763cfd27c0a5516779c9863",
+      "sha256": "07f31b832a34b68cf61faa54e3741f758c079b05f8026c24272c97afc46a72e6",
+      "width": 650,
+      "height": 488,
+      "bytes": 68956,
+      "transformation": "Bounded resize to at most 1280px; optimized JPEG quality 87."
+    },
+    {
+      "path": "dealer-stock/listing-3.jpg",
+      "sourceUrl": "https://www.dubicars.com/images/1a0261/650x380/motorx-group/fb76ee28-92ff-4455-937e-3af94860394c.jpeg",
+      "listingUrl": "https://www.dubicars.com/2026-rox-01-1000553.html",
+      "observedAt": "2026-10-19T20:30:19Z",
+      "sourceSha256": "112c4c9c9ccd731643dcf442552991c13113d27efc58411b4245fefcc0be700c",
+      "sha256": "10005238dc2ca177d0456645e2ad573882b25dba36113596d3d5e7b2d80252ab",
+      "width": 650,
+      "height": 488,
+      "bytes": 75357,
+      "transformation": "Bounded resize to at most 1280px; optimized JPEG quality 87."
+    }
+  ],
+  "contactReview": {
+    "namedPersonalContactsOmitted": true,
+    "outreachPerformed": false,
+    "businessPhoneBasis": "Dealer-level public business contact field; not an individual staff contact."
+  }
+}

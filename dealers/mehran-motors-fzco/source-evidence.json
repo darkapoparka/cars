@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "dealer": "mehran-motors-fzco",
+  "researchId": "ae-dubai-mehran-motors-fzco",
+  "observedAt": "2026-10-19T20:03:53.953359Z",
+  "liveFetchPerformed": true,
+  "businessSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-mehran-motors-2749",
+      "observedAt": "2026-10-19T20:03:53.953359Z",
+      "supports": [
+        "dealer-name",
+        "dealer-attributed-listings",
+        "dealer-attributed-photos",
+        "public-business-call-line",
+        "address"
+      ]
+    }
+  ],
+  "stockMode": "dated-listing-snapshot",
+  "inventoryCountMeaning": "Selected currently advertised public records, not a count or confirmation of available physical stock.",
+  "media": [
+    {
+      "path": "dealer-stock/listing-912652.jpg",
+      "sourceUrl": "https://www.dubicars.com/images/f8084a/650x380/mehran-motors/db8f6d48-408f-4b1a-9404-25b12108c6c3.jpeg",
+      "listingUrl": "https://www.dubicars.com/2025-toyota-hilux-adv-40l-912652.html",
+      "observedAt": "2026-10-19T20:03:53.953359Z",
+      "downloadedSha256": "ece490ae58256cd4b5f235d99fece617e04c49926e63f8dc8a3f2449e6e3d38d",
+      "downloadedDimensions": [
+        650,
+        488
+      ],
+      "sha256": "402b9a6411538f16ad4189f1bfc1d6ae8958b2d516fa7a6c610ed688a2d709aa",
+      "bytes": 42714,
+      "dimensions": [
+        650,
+        488
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    },
+    {
+      "path": "dealer-stock/listing-900801.jpg",
+      "sourceUrl": "https://www.dubicars.com/images/3b67b6/650x380/mehran-motors/cc9e99f8-9ecf-42f0-9794-fe86fb1ca77f.jpeg",
+      "listingUrl": "https://www.dubicars.com/2025-volkswagen-golf-900801.html",
+      "observedAt": "2026-10-19T20:03:53.953359Z",
+      "downloadedSha256": "17158c65a2986b88a5c1eeeecda5687caa15d7fc65a028f5b1a99e6f611eb72e",
+      "downloadedDimensions": [
+        650,
+        867
+      ],
+      "sha256": "eb9fc5251057b74e13efec9d514626bb26ec5c2e5e20f10602e0edd977439422",
+      "bytes": 80438,
+      "dimensions": [
+        650,
+        867
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    },
+    {
+      "path": "dealer-stock/listing-998810.jpg",
+      "sourceUrl": "https://www.dubicars.com/images/c90818/650x380/mehran-motors/5fbca7f1-6e81-488e-8581-653e45a77399.jpeg",
+      "listingUrl": "https://www.dubicars.com/2026-toyota-hilux-sr5-non-gcc-998810.html",
+      "observedAt": "2026-10-19T20:03:53.953359Z",
+      "downloadedSha256": "6bb619e4febd1cd1c241a4186acb19e538587c1e286ee31cfa0e838fb55a0873",
+      "downloadedDimensions": [
+        650,
+        488
+      ],
+      "sha256": "4393a4a72d767d2ac3d11125fe5bb34ee62f284ea1976d4b476dcd396d329ec0",
+      "bytes": 71242,
+      "dimensions": [
+        650,
+        488
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    }
+  ],
+  "researchLimitations": [
+    "Email omitted: source address appears personal, ambiguous, or malformed."
+  ],
+  "excludedSourceContent": [
+    "Personal names and personal or ambiguous emails",
+    "Marketplace relay numbers",
+    "Prices",
+    "Unsupported warranties, inspections, ratings and finance promises"
+  ],
+  "dealerApproval": "unknown"
+}

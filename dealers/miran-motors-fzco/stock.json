@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "dealer": "miran-motors-fzco",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:03:54.011522Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "listing-2156949",
+      "title": "2013 MITSUBISHI PAJERO",
+      "make": "Mitsubishi",
+      "model": "PAJERO",
+      "year": 2013,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-2156949.jpg"
+      ],
+      "sourceUrl": "https://sooq-cars.com/ae/en/ready/cars/2156949-mitsubishi-pajero-2013",
+      "observedAt": "2026-10-19T20:03:54.011522Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageOnRequest": true,
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

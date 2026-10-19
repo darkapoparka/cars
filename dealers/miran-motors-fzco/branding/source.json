@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 1,
+  "dealer": "miran-motors-fzco",
+  "sourceLogoUrl": "https://static.oneclickdrive.com/application/views/img/company/1745220693.jpeg",
+  "sourcePath": "branding/source-original.jpg",
+  "sourceSha256": "11c77dc7a6687e1b6255a7823adfd55f70b7f3f345384c166bc026266c9aad1e",
+  "publishedBranding": true,
+  "sourcePage": "https://www.oneclickdrive.com/company/dubai/miran-motors-fzco",
+  "observedAt": "2026-10-19T20:03:54.011522Z",
+  "creationMethod": "sourced-logo-imagegen-redraw",
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "dealerApproved": false,
+  "visualReview": "Faithful redraw keeps the published teal car silhouette and condensed Miran Motors lettering. A revised horizontal two-line lockup creates open transparent spacing, while the compact letter/car adaptation and white inverse remain clearly marked proposals.",
+  "generationPrompt": "Use case: logo-brand. Create one transparent RGBA sprite of 4 matching MIRAN MOTORS assets, 2 columns x 2 rows with very large truly transparent gutters. Faithful clean redraw of the supplied pale-teal car/condensed-wordmark identity using deeper teal #176A62 for light surfaces. Top left: near-square bold MM initials under a SHORT simplified car roof, deep teal. Top right exactly matching mark PURE WHITE. BOTTOM LEFT: a truly HORIZONTAL lockup, with a SIMPLE SMALL car-profile symbol on the LEFT, then a LARGE EMPTY GAP, then 'Miran' above 'Motors' on the RIGHT in tall clean condensed sans-serif with generous letter spacing and large empty space between the two lines. BOTTOM RIGHT exactly the same layout, all pure WHITE. Do not put a full-length car above a single line of tightly packed wording. The two-line text has open counters and medium strokes, not dense solid blocks. At least half the area inside each tightly bounded wordmark rectangle must remain completely transparent. All background and all gaps between strokes are zero-alpha empty; no faint haze, halo, glow, shadows, textures, gradient or panel. No extra words or motifs. Preserve source teal, simple car-profile motif and exact 'Miran Motors' brand name. Compact MM must still read at 32px.",
+  "workingLogoPath": "branding/generated-onLight.png",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T21:16:46.087850Z",
+    "master": {
+      "path": "branding/generated-onLight.png",
+      "sha256": "46d96a2ce52eb728d2dbbb0ee5690137014b2c23cba048d2996e60dae6363d2a",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5b2897a5-b5a5-4ff6-b5ff-4483affdec57",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "f94bfeeca26a8300c23447bbadb6a9efb1abe21bf06573fa42e22bbffe1b4e18",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          614,
+          768,
+          1024
+        ]
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "b48042376a6b4c17e3f49a84a60a0081e35f41ae964bbc7fb603ff750946062c",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5b2897a5-b5a5-4ff6-b5ff-4483affdec57",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "f94bfeeca26a8300c23447bbadb6a9efb1abe21bf06573fa42e22bbffe1b4e18",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          0,
+          768,
+          614
+        ]
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-markOnDark.png",
+      "sha256": "fa269752eaff10a83e8be0cf0a54224879f728a30ad42ec85cbee67578abebd5",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5b2897a5-b5a5-4ff6-b5ff-4483affdec57",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "f94bfeeca26a8300c23447bbadb6a9efb1abe21bf06573fa42e22bbffe1b4e18",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          768,
+          0,
+          1536,
+          614
+        ]
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-onLight.png",
+        "sha256": "46d96a2ce52eb728d2dbbb0ee5690137014b2c23cba048d2996e60dae6363d2a",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-5b2897a5-b5a5-4ff6-b5ff-4483affdec57",
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "f94bfeeca26a8300c23447bbadb6a9efb1abe21bf06573fa42e22bbffe1b4e18",
+          "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+          "crop": [
+            0,
+            614,
+            768,
+            1024
+          ]
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-onDark.png",
+        "sha256": "ef5ab0207c8d9542e82234efa0baf2df3f462870dac5c926511621f625ad0053",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-5b2897a5-b5a5-4ff6-b5ff-4483affdec57",
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "f94bfeeca26a8300c23447bbadb6a9efb1abe21bf06573fa42e22bbffe1b4e18",
+          "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+          "crop": [
+            768,
+            614,
+            1536,
+            1024
+          ]
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-onDark.png",
+        "sha256": "ef5ab0207c8d9542e82234efa0baf2df3f462870dac5c926511621f625ad0053",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-5b2897a5-b5a5-4ff6-b5ff-4483affdec57",
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "f94bfeeca26a8300c23447bbadb6a9efb1abe21bf06573fa42e22bbffe1b4e18",
+          "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+          "crop": [
+            768,
+            614,
+            1536,
+            1024
+          ]
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820",
+        "#09090b",
+        "#17191c",
+        "#c40101"
+      ],
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "notes": "Faithful redraw keeps the published teal car silhouette and condensed Miran Motors lettering. A revised horizontal two-line lockup creates open transparent spacing, while the compact letter/car adaptation and white inverse remain clearly marked proposals."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T21:16:46.087850Z",
+      "widths": [
+        32,
+        64,
+        96
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#101820",
+        "#c40101"
+      ],
+      "notes": "A tall condensed initial under the source car silhouette remains legible at 32px; white inverse has the same open counters."
+    },
+    "compactMarkStatus": "proposed-compact-adaptation-not-dealer-approved"
+  },
+  "usageStatus": "public-preview-only"
+}

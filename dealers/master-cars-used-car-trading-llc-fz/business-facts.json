@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "slug": "master-cars-used-car-trading-llc-fz",
+  "dealerId": "ae-dubai-master-cars-used-car-trading-llc-fz",
+  "business": {
+    "name": "Master Cars Used Car Trading LLC FZ",
+    "city": "Dubai",
+    "region": "Dubai",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "Ras Al Khor Industrial Area, Ras Al Khor Industrial Area 2, Dubai - UAE",
+    "phone": "+971501172485",
+    "phoneDisplay": "+971501172485",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://www.oneclickdrive.com/company/dubai/master-cars-used-car-trading-llc-fz",
+    "hours": "",
+    "sourceUrl": "https://www.oneclickdrive.com/company/dubai/master-cars-used-car-trading-llc-fz",
+    "observedAt": "2026-10-19T20:03:53.926049Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/dubai/master-cars-used-car-trading-llc-fz",
+      "observedAt": "2026-10-19T20:03:53.926049Z",
+      "supports": [
+        "dealer-name",
+        "dealer-attributed-listings",
+        "dealer-attributed-photos",
+        "public-business-call-line",
+        "address"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "slug": "metro-motors-llc",
+  "dealerId": "ae-dubai-metro-motors-llc",
+  "business": {
+    "name": "Metro Motors LLC",
+    "city": "Dubai",
+    "region": "Dubai",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "Showroom P3-20, Al Aweer, Auto Market Phase 2, Ras Al Khor Road, Dubai - UAE",
+    "phone": "+971506248428",
+    "phoneDisplay": "+971506248428",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://www.oneclickdrive.com/company/dubai/metro-motors-llc",
+    "hours": "",
+    "sourceUrl": "https://www.oneclickdrive.com/company/dubai/metro-motors-llc",
+    "observedAt": "2026-10-19T20:03:53.980957Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/dubai/metro-motors-llc",
+      "observedAt": "2026-10-19T20:03:53.980957Z",
+      "supports": [
+        "dealer-name",
+        "dealer-attributed-listings",
+        "dealer-attributed-photos",
+        "public-business-call-line",
+        "address"
+      ]
+    }
+  ]
+}
