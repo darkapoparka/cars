@@ -1,0 +1,206 @@
+{
+  "schemaVersion": 1,
+  "dealer": "shams-al-sabah-used-cars",
+  "realLogoFirst": true,
+  "publishedBranding": false,
+  "creationMethod": "imagegen-independent-logo-proposal",
+  "dealerApproved": false,
+  "approvalStatus": "independent-proposal-not-dealer-approved",
+  "usageStatus": "public-preview-only",
+  "observedAt": "2026-10-19T21:38:36.514857Z",
+  "publicSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/sharjah-shams-al-sabah-used-cars-2679",
+      "observedAt": "2026-10-19T20:00:26.132632Z"
+    },
+    {
+      "url": "https://www.dubicars.com/2013-lexus-ls460-1003444.html",
+      "observedAt": "2026-10-19T20:00:26.132632Z"
+    },
+    {
+      "url": "https://www.dubicars.com/2021-toyota-rush-ex-989381.html",
+      "observedAt": "2026-10-19T20:00:26.132632Z"
+    },
+    {
+      "url": "https://www.dubicars.com/2024-nissan-rogue-platinum-non-gcc-989389.html",
+      "observedAt": "2026-10-19T20:00:26.132632Z"
+    },
+    {
+      "url": "https://www.arabwheels.ae/used-cars/dealers/shams-al-sabah-used-cars-showroom-in-uae/",
+      "observedAt": "2026-10-19T21:38:36.514857Z"
+    }
+  ],
+  "originals": [],
+  "logoResearch": "Exact DubiCars and GCC profiles have no attributable logo. Exact ArabWheels profile explicitly returns a generic missing.png dealer placeholder. No identifiable original mark was found in reviewed seller-bound stock photos. The new S/sun identity is a clearly unapproved proposal.",
+  "visualReview": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Exact retained business-name spelling, paired full lockups and compact emblems reviewed. This identity is an independent unapproved proposal.",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T21:43:32.990Z",
+    "master": {
+      "path": "branding/generated-master.png",
+      "sha256": "5dbb539d851ccd3e98ab37a629f4187374c962327646f87306973d0920dfa932",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-339c0bfa-e0de-4197-ae58-9e0211b99f7c",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-primary.png",
+          "sourceSha256": "096ca597d76f0d59882b36351586fc1d69b520ce15c099f74023eaf5dee01cd7",
+          "rectangle": {
+            "left": 0,
+            "top": 0,
+            "width": 887,
+            "height": 443
+          }
+        }
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "1d46fb8843ce2e8a6bdcf34f3fb0fb132973573ca8776431da8c671cd14a3e62",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-339c0bfa-e0de-4197-ae58-9e0211b99f7c",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-primary.png",
+          "sourceSha256": "096ca597d76f0d59882b36351586fc1d69b520ce15c099f74023eaf5dee01cd7",
+          "rectangle": {
+            "left": 0,
+            "top": 443,
+            "width": 887,
+            "height": 444
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "13b17a59e5550c35bf0a627b3707ea979fc104bff347971a5109287e2d4776aa",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-339c0bfa-e0de-4197-ae58-9e0211b99f7c",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-primary.png",
+          "sourceSha256": "096ca597d76f0d59882b36351586fc1d69b520ce15c099f74023eaf5dee01cd7",
+          "rectangle": {
+            "left": 887,
+            "top": 443,
+            "width": 887,
+            "height": 444
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-master.png",
+        "sha256": "5dbb539d851ccd3e98ab37a629f4187374c962327646f87306973d0920dfa932",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-339c0bfa-e0de-4197-ae58-9e0211b99f7c",
+          "modelVersion": null,
+          "transformation": {
+            "operation": "rectangular-extract-without-recolour-or-redrawing",
+            "source": "branding/generated-primary.png",
+            "sourceSha256": "096ca597d76f0d59882b36351586fc1d69b520ce15c099f74023eaf5dee01cd7",
+            "rectangle": {
+              "left": 0,
+              "top": 0,
+              "width": 887,
+              "height": 443
+            }
+          }
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-dark-surface.png",
+        "sha256": "4ea02f58c19916c5a4418ad861e3f33549ea7edc23d4802bc967e4b5cce8c07e",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-339c0bfa-e0de-4197-ae58-9e0211b99f7c",
+          "modelVersion": null,
+          "transformation": {
+            "operation": "rectangular-extract-without-recolour-or-redrawing",
+            "source": "branding/generated-primary.png",
+            "sourceSha256": "096ca597d76f0d59882b36351586fc1d69b520ce15c099f74023eaf5dee01cd7",
+            "rectangle": {
+              "left": 887,
+              "top": 0,
+              "width": 887,
+              "height": 443
+            }
+          }
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-dark-surface.png",
+        "sha256": "4ea02f58c19916c5a4418ad861e3f33549ea7edc23d4802bc967e4b5cce8c07e",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-339c0bfa-e0de-4197-ae58-9e0211b99f7c",
+          "modelVersion": null,
+          "transformation": {
+            "operation": "rectangular-extract-without-recolour-or-redrawing",
+            "source": "branding/generated-primary.png",
+            "sourceSha256": "096ca597d76f0d59882b36351586fc1d69b520ce15c099f74023eaf5dee01cd7",
+            "rectangle": {
+              "left": 887,
+              "top": 0,
+              "width": 887,
+              "height": 443
+            }
+          }
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113",
+          "#101820"
+        ],
+        "onAccent": [
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ]
+      },
+      "notes": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Exact retained business-name spelling, paired full lockups and compact emblems reviewed. This identity is an independent unapproved proposal."
+    },
+    "compactMarkStatus": "unapproved-preview-adaptation",
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T21:43:32.990Z",
+      "widths": [
+        32,
+        64
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820"
+      ],
+      "notes": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Exact retained business-name spelling, paired full lockups and compact emblems reviewed. This identity is an independent unapproved proposal."
+    }
+  },
+  "generationPrompts": [
+    {
+      "role": "primary",
+      "prompt": "Use case: flat logo-brand artwork. Create one professional transparent RGBA asset sheet arranged in FOUR separate, well-spaced quadrants. Upper left is the full logo in dark ink. Upper right is the SAME full logo in uniform opaque cool silver #c4ccd0. Lower left is the compact emblem only, in dark ink. Lower right is the SAME emblem in uniform opaque cool silver #c4ccd0. Leave wide transparent gutters around all four assets so they can be extracted without overlap. All shapes are flat, solid print ink with crisp smooth edges; outside shapes is entirely transparent, with NO glow, fuzzy halo, texture, shadow, background, lighting or photographic material. The compact emblem must read clearly at 32px, with broad strokes and open counters. Keep each design inside its own quadrant. No quadrant labels. No slogans, year, contact info, claim, badge or extra wording. This is an independent unapproved dealership-logo proposal. Exact words SHAMS AL SABAH in strong refined uppercase, smaller USED CARS below. Compact emblem to the left: a bold letter S formed as two curved strokes, with a small rising half-sun nested cleanly in the upper opening. Use dark warm copper #9b491f and dark navy #162b42, keeping most ink dark navy. Only one simple small semicircle, no thin sun rays, no gradients. Modern, confident, minimal, wide horizontal full lockup and distinctive square compact S. This is an independent proposal.",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-339c0bfa-e0de-4197-ae58-9e0211b99f7c",
+      "modelVersion": null,
+      "returnedArtifact": "exec-339c0bfa-e0de-4197-ae58-9e0211b99f7c.png",
+      "returnedArtifactSha256": "096ca597d76f0d59882b36351586fc1d69b520ce15c099f74023eaf5dee01cd7",
+      "note": "The tool exposed the returned artifact identifier and did not expose a model version."
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "dealer": "shams-al-sabah-used-cars",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/sharjah-shams-al-sabah-used-cars-2679",
+      "observedAt": "2026-10-19T20:00:26.132632Z",
+      "supports": [
+        "business.name",
+        "business.city",
+        "business.countryCode",
+        "business.address",
+        "business.phone",
+        "business.hours",
+        "dated-dealer-catalogue-listings"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2013-lexus-ls460-1003444.html",
+      "observedAt": "2026-10-19T20:00:26.132632Z",
+      "supports": [
+        "stock.dubicars-1003444"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2021-toyota-rush-ex-989381.html",
+      "observedAt": "2026-10-19T20:00:26.132632Z",
+      "supports": [
+        "stock.dubicars-989381"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2024-nissan-rogue-platinum-non-gcc-989389.html",
+      "observedAt": "2026-10-19T20:00:26.132632Z",
+      "supports": [
+        "stock.dubicars-989389"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "agentResearch": {
+    "observedAt": "2026-10-19T20:00:26.132632Z",
+    "method": "Public catalogue HTML/JSON-LD and actual stock image read; fields checked before inclusion. No contact or account interaction.",
+    "identityNotes": [
+      "Personal-looking mailbox omitted; no personal contact retained."
+    ],
+    "imageReview": "Actual three stock images visually reviewed; no price overlay or named personal contact used.",
+    "logoResearchStatus": "in-progress"
+  },
+  "stockPhotos": [
+    {
+      "listingId": "dubicars-1003444",
+      "listingUrl": "https://www.dubicars.com/2013-lexus-ls460-1003444.html",
+      "sourceUrl": "https://www.dubicars.com/images/345206/650x380/shams-al-sabah-used-cars/dec97632-ac66-4c98-8114-828d5c0469ae.jpeg",
+      "observedAt": "2026-10-19T20:00:26.132632Z",
+      "sourceSha256": "cb1c4c395ee49b114f7e05f6c1ff01e46d089ff71cb1f9eedd645c710a6ed79b",
+      "retainedPath": "dealer-stock/dubicars-1003444.webp",
+      "retainedSha256": "7caa71aa5b75d5d4f068aacd9a65b79a944afd1f417c8a943bf470d68e0af4e2",
+      "nativeDimensions": [
+        650,
+        521
+      ],
+      "retainedDimensions": [
+        650,
+        521
+      ],
+      "retainedBytes": 41660,
+      "transformation": "Bounded resize with preserved aspect ratio and WebP compression; no watermark removal.",
+      "reusePermission": "not independently established; public-preview source attribution retained"
+    },
+    {
+      "listingId": "dubicars-989381",
+      "listingUrl": "https://www.dubicars.com/2021-toyota-rush-ex-989381.html",
+      "sourceUrl": "https://www.dubicars.com/images/3c7879/650x380/shams-al-sabah-used-cars/d16209ec-bb1b-4183-9491-375d8eccb1db.jpeg",
+      "observedAt": "2026-10-19T20:00:26.132632Z",
+      "sourceSha256": "4c833b0bdc9b4f68ecf5711bf8ef601475af01705b115c5299b62cf049670623",
+      "retainedPath": "dealer-stock/dubicars-989381.webp",
+      "retainedSha256": "8ad76e5851b8ba4775731d445bbc9b7c45a44f46c823f28013b0a9bbd5d72153",
+      "nativeDimensions": [
+        650,
+        521
+      ],
+      "retainedDimensions": [
+        650,
+        521
+      ],
+      "retainedBytes": 32098,
+      "transformation": "Bounded resize with preserved aspect ratio and WebP compression; no watermark removal.",
+      "reusePermission": "not independently established; public-preview source attribution retained"
+    },
+    {
+      "listingId": "dubicars-989389",
+      "listingUrl": "https://www.dubicars.com/2024-nissan-rogue-platinum-non-gcc-989389.html",
+      "sourceUrl": "https://www.dubicars.com/images/d6c872/650x380/shams-al-sabah-used-cars/aa6f9f9d-2621-4b12-a571-ea8aecf699fb.jpeg",
+      "observedAt": "2026-10-19T20:00:26.132632Z",
+      "sourceSha256": "f70b58e60b33a501ef6be7deb2422d0042e8ef0723b0890d8ae4fbddb2447472",
+      "retainedPath": "dealer-stock/dubicars-989389.webp",
+      "retainedSha256": "a66b3a27e4e83e9d1ba870cd978452435cad10e6e55227fbf8c73be8f17d3ab0",
+      "nativeDimensions": [
+        650,
+        521
+      ],
+      "retainedDimensions": [
+        650,
+        521
+      ],
+      "retainedBytes": 33352,
+      "transformation": "Bounded resize with preserved aspect ratio and WebP compression; no watermark removal.",
+      "reusePermission": "not independently established; public-preview source attribution retained"
+    }
+  ]
+}

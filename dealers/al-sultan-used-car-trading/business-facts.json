@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "slug": "al-sultan-used-car-trading",
+  "dealerId": "ae-umm-al-quwain-al-sultan-used-car-trading",
+  "business": {
+    "name": "Al Sultan Used Car Trading",
+    "city": "Umm al-Quwain",
+    "region": "Umm al-Quwain",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "Showroom 11, Umm Al Quwain",
+    "phone": "+971555755794",
+    "phoneDisplay": "+971555755794",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://www.instagram.com/alsultan.cars/",
+    "hours": "",
+    "sourceUrl": "https://www.instagram.com/alsultan.cars/",
+    "observedAt": "2026-10-19T21:11:36.717164Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.instagram.com/alsultan.cars/",
+      "observedAt": "2026-10-19T21:11:36.717164Z",
+      "supports": [
+        "business.name",
+        "business.city",
+        "business.countryCode",
+        "dated-dealer-catalogue-listings",
+        "business.address"
+      ]
+    },
+    {
+      "url": "https://www.instagram.com/alsultan.cars/p/DepI_knjscV/",
+      "observedAt": "2026-10-19T21:11:36.717164Z",
+      "supports": [
+        "stock.instagram-depi-knjscv",
+        "business.phone"
+      ]
+    },
+    {
+      "url": "https://www.instagram.com/alsultan.cars/p/DemTO27DsmE/",
+      "observedAt": "2026-10-19T21:11:36.717164Z",
+      "supports": [
+        "stock.instagram-demto27dsme"
+      ]
+    },
+    {
+      "url": "https://www.instagram.com/alsultan.cars/p/DemLof8DsRe/",
+      "observedAt": "2026-10-19T21:11:36.717164Z",
+      "supports": [
+        "stock.instagram-demlof8dsre"
+      ]
+    }
+  ]
+}

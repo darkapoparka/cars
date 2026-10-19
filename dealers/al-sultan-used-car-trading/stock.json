@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-sultan-used-car-trading",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T21:11:36.717164Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "instagram-depi-knjscv",
+      "title": "Chevrolet Impala 2019",
+      "make": "Chevrolet",
+      "model": "Impala",
+      "year": 2019,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/instagram-depi-knjscv.webp"
+      ],
+      "sourceUrl": "https://www.instagram.com/alsultan.cars/p/DepI_knjscV/",
+      "observedAt": "2026-10-19T21:11:36.717164Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 103000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "instagram-demto27dsme",
+      "title": "Ford Mustang 2025",
+      "make": "Ford",
+      "model": "Mustang",
+      "year": 2025,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/instagram-demto27dsme.webp"
+      ],
+      "sourceUrl": "https://www.instagram.com/alsultan.cars/p/DemTO27DsmE/",
+      "observedAt": "2026-10-19T21:11:36.717164Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 2000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "instagram-demlof8dsre",
+      "title": "Nissan Altima 2025",
+      "make": "Nissan",
+      "model": "Altima",
+      "year": 2025,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/instagram-demlof8dsre.webp"
+      ],
+      "sourceUrl": "https://www.instagram.com/alsultan.cars/p/DemLof8DsRe/",
+      "observedAt": "2026-10-19T21:11:36.717164Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 7000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

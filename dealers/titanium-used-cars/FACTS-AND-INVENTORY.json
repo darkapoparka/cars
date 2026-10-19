@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "dealer": "titanium-used-cars",
+  "businessFacts": "business-facts.json",
+  "stock": "stock.json",
+  "inventoryKind": "dated-listing-snapshot",
+  "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+  "sources": [
+    {
+      "url": "https://www.dubicars.com/dealers/sharjah-titanium-used-cars-2450",
+      "observedAt": "2026-10-19T20:00:28.436516Z",
+      "supports": [
+        "business.name",
+        "business.city",
+        "business.countryCode",
+        "business.address",
+        "business.phone",
+        "business.hours",
+        "dated-dealer-catalogue-listings"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2015-mercedes-benz-g63-amg-1016456.html",
+      "observedAt": "2026-10-19T20:00:28.436516Z",
+      "supports": [
+        "stock.dubicars-1016456"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2024-lexus-lx600-1034109.html",
+      "observedAt": "2026-10-19T20:00:28.436516Z",
+      "supports": [
+        "stock.dubicars-1034109"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2012-rolls-royce-ghost-std-999572.html",
+      "observedAt": "2026-10-19T20:00:28.436516Z",
+      "supports": [
+        "stock.dubicars-999572"
+      ]
+    }
+  ]
+}

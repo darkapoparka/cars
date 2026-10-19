@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-saif-used-cars-trading",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T21:42:42.038Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "sourced-logo-imagegen-redraw",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "1a394a3609b5de6588e2453333b101599eae50ef6b9c40265a5b10396aa8f7e8",
+      "sourceSha256": "0546b3767adbcf18d9e2d8138d61c0c108638f04af5e1db59aedce7e23a4b4b6"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "928c79a6689db874dbf251e595295f853168d6224b5d57fd49b9eb0ad5727544",
+      "sourceSha256": "49cb35ee2044c8a173d3129de321f257809c04b4b6b4791b9e8f7b665797a158"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "928c79a6689db874dbf251e595295f853168d6224b5d57fd49b9eb0ad5727544",
+      "sourceSha256": "49cb35ee2044c8a173d3129de321f257809c04b4b6b4791b9e8f7b665797a158"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "0546b3767adbcf18d9e2d8138d61c0c108638f04af5e1db59aedce7e23a4b4b6",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-2e79af13-e5f2-47ea-8bf7-8a48453046a3",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "d7e9936492b5d0a27feb923ea31f4e10f7dbf8aee55ce91753c1ce1bda68d1d8",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-2e79af13-e5f2-47ea-8bf7-8a48453046a3",
+      "modelVersion": null
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "a2c4a94608c325b8ed767639615016e65c89f4e561417e31762080bc1b7c0e57"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "0546b3767adbcf18d9e2d8138d61c0c108638f04af5e1db59aedce7e23a4b4b6",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-2e79af13-e5f2-47ea-8bf7-8a48453046a3",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-saif-used-cars-trading/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "49cb35ee2044c8a173d3129de321f257809c04b4b6b4791b9e8f7b665797a158",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-38c8da6d-370c-41ed-8073-1773827386cc",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-saif-used-cars-trading/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "49cb35ee2044c8a173d3129de321f257809c04b4b6b4791b9e8f7b665797a158",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-38c8da6d-370c-41ed-8073-1773827386cc",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-saif-used-cars-trading/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "c90b9555a9af780c055bf6ce1854846ca4f48c115c2459cecf847de7ef849ce8",
+      "sha256": "0546b3767adbcf18d9e2d8138d61c0c108638f04af5e1db59aedce7e23a4b4b6",
+      "crop": {
+        "left": 105,
+        "top": 245,
+        "width": 1084,
+        "height": 835
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "09d773bbc8ff8964ec3f8c4f9fe4ecc0ea2e4e608814bb119f64b9d32f82995e",
+      "sha256": "49cb35ee2044c8a173d3129de321f257809c04b4b6b4791b9e8f7b665797a158",
+      "crop": {
+        "left": 67,
+        "top": 211,
+        "width": 1159,
+        "height": 924
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "09d773bbc8ff8964ec3f8c4f9fe4ecc0ea2e4e608814bb119f64b9d32f82995e",
+      "sha256": "49cb35ee2044c8a173d3129de321f257809c04b4b6b4791b9e8f7b665797a158",
+      "crop": {
+        "left": 67,
+        "top": 211,
+        "width": 1159,
+        "height": 924
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "1d65f3bf5fe8d7f95226ab2942c0bd7f2d4fa1e07123d1860e8cfc8988a7e1ff",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-2e79af13-e5f2-47ea-8bf7-8a48453046a3",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-saif-used-cars-trading/branding/generated-on-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "df71f4c4d881a85b775f131cc7ddb34663114c037d8063b36703fbb4f0b5833a",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-38c8da6d-370c-41ed-8073-1773827386cc",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-saif-used-cars-trading/branding/generated-on-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "d7e9936492b5d0a27feb923ea31f4e10f7dbf8aee55ce91753c1ce1bda68d1d8",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-2e79af13-e5f2-47ea-8bf7-8a48453046a3",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-saif-used-cars-trading/branding/generated-on-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "a2c4a94608c325b8ed767639615016e65c89f4e561417e31762080bc1b7c0e57",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-2e79af13-e5f2-47ea-8bf7-8a48453046a3",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-saif-used-cars-trading/branding/generated-on-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T21:42:42.038Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "b5a065f93a4685d020ff73647084014f4c6103b7892679782664d652bd6f2456",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-38c8da6d-370c-41ed-8073-1773827386cc",
+      "modelVersion": null
+    }
+  }
+}

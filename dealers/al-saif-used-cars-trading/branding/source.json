@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-saif-used-cars-trading",
+  "realLogoFirst": true,
+  "publishedBranding": true,
+  "creationMethod": "sourced-logo-imagegen-redraw",
+  "approvalStatus": "redraw-and-compact-proposal-not-dealer-approved",
+  "dealerApproved": false,
+  "usageStatus": "public-preview-only",
+  "observedAt": "2026-10-19T21:42:42.038Z",
+  "publicSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/umm-al-quwain-al-saif-used-cars-trading-3226",
+      "observedAt": "2026-10-19T20:00:29.349400Z"
+    },
+    {
+      "url": "https://www.dubicars.com/2017-mini-cooper-full-option-1036997.html",
+      "observedAt": "2026-10-19T20:00:29.349400Z"
+    },
+    {
+      "url": "https://www.dubicars.com/2023-jeep-wrangler-original-factory-paint-no-accidents-1035469.html",
+      "observedAt": "2026-10-19T20:00:29.349400Z"
+    },
+    {
+      "url": "https://www.dubicars.com/2012-abarth-500-pocket-rocket-2012-abarth-500-rare-find-only-63365-km-excellent-condition-high-performance-969957.html",
+      "observedAt": "2026-10-19T20:00:29.349400Z"
+    }
+  ],
+  "originals": [
+    {
+      "path": "branding/source-original.png",
+      "sha256": "cec8efe26e4dd07853be817f8ca8e4ef3ad3c62067e046248097ab0c94990e69",
+      "url": "https://www.dubicars.com/images/7608d7/z_180x120/al-saif-used-cars-trading/logo-b8cdc362-1436-4e50-9ada-169f4d831732.png",
+      "observedAt": "2026-10-19T20:00:29.349400Z"
+    }
+  ],
+  "logoResearch": "Exact named public DubiCars avatar depicts a navy coupe and bronze angular shield; original viewed and faithfully redrawn with simplified lettering.",
+  "visualReview": "Actual transparent artwork composited on white, navy and red and reviewed at header and32/64px sizes. Exact AL SAIF USED CARS name, shield and coupe retained; no extra showroom claims.",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T21:42:42.038Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "c90b9555a9af780c055bf6ce1854846ca4f48c115c2459cecf847de7ef849ce8",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-2e79af13-e5f2-47ea-8bf7-8a48453046a3",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "c90b9555a9af780c055bf6ce1854846ca4f48c115c2459cecf847de7ef849ce8",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-2e79af13-e5f2-47ea-8bf7-8a48453046a3",
+        "modelVersion": null
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "09d773bbc8ff8964ec3f8c4f9fe4ecc0ea2e4e608814bb119f64b9d32f82995e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-38c8da6d-370c-41ed-8073-1773827386cc",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "c90b9555a9af780c055bf6ce1854846ca4f48c115c2459cecf847de7ef849ce8",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-2e79af13-e5f2-47ea-8bf7-8a48453046a3",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "09d773bbc8ff8964ec3f8c4f9fe4ecc0ea2e4e608814bb119f64b9d32f82995e",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-38c8da6d-370c-41ed-8073-1773827386cc",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "09d773bbc8ff8964ec3f8c4f9fe4ecc0ea2e4e608814bb119f64b9d32f82995e",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-38c8da6d-370c-41ed-8073-1773827386cc",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113",
+          "#101820"
+        ],
+        "onAccent": [
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ]
+      },
+      "notes": "Actual transparent artwork composited on white, navy and red and reviewed at header and32/64px sizes. Exact AL SAIF USED CARS name, shield and coupe retained; no extra showroom claims."
+    },
+    "compactMarkStatus": "independent-proposal-not-dealer-approved",
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T21:42:42.038Z",
+      "widths": [
+        32,
+        64
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#101820",
+        "#c40101"
+      ],
+      "notes": "Actual transparent artwork composited on white, navy and red and reviewed at header and32/64px sizes. Exact AL SAIF USED CARS name, shield and coupe retained; no extra showroom claims."
+    }
+  },
+  "generationPrompts": [
+    "Make a faithful, thoroughly clean redraw of this small published AL SAIF USED CARS logo for a dealer preview. Preserve the navy sports coupe and the angular bronze shield framing it, and exact name AL SAIF USED CARS. Rebuild into a sophisticated compact nearly-square brand mark with a simplified recognizable navy coupe, solid dark bronze shield, and bold legible stacked AL SAIF / USED CARS below the car within the badge. Remove the tiny secondary CAR SHOWROOM line and stars for small-size clarity. Flat solid navy #091329 and deep bronze #855000, no gradients or metallic effects. No added icons or invented luxury crests. Actual transparent background with generous empty margins. Clean enough to read the shield/car at 32px. Name spelling exact, sharp professional typography.",
+    "Make the inverse surface companion of this exact AL SAIF USED CARS logo. Preserve all exact wording, simplified sports car and shield silhouette. Re-express the whole visible navy/bronze artwork as opaque pale silver #f2f4f6 ink; use genuine transparent negative spaces for car windows and the car-body whites, so all the intended contours stay visible on deep navy and on red #c40101. Keep clear broad strokes. Transparent background, no panel, no checkerboard, no glow, no texture or shadow. Exact name intact; balanced compact badge."
+  ]
+}

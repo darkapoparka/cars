@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-laqtah-sharjah",
+  "missing": [
+    {
+      "field": "business.email",
+      "required": false,
+      "reason": "No reliable public business-scoped value adopted from reviewed sources."
+    },
+    {
+      "field": "business.website",
+      "required": false,
+      "reason": "No reliable public business-scoped value adopted from reviewed sources."
+    },
+    {
+      "field": "business.hours",
+      "required": false,
+      "reason": "No reliable public business-scoped value adopted from reviewed sources."
+    },
+    {
+      "field": "prices",
+      "required": false,
+      "reason": "Prices omitted under the public-repository scope."
+    }
+  ],
+  "blocking": []
+}

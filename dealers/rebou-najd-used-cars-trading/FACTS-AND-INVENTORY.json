@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "dealer": "rebou-najd-used-cars-trading",
+  "businessFacts": "business-facts.json",
+  "stock": "stock.json",
+  "inventoryKind": "dated-listing-snapshot",
+  "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+  "sources": [
+    {
+      "url": "https://www.dubicars.com/dealers/sharjah-rebou-najd-used-cars-trading-1785",
+      "observedAt": "2026-10-19T20:00:23.851965Z",
+      "supports": [
+        "business.name",
+        "business.city",
+        "business.countryCode",
+        "business.address",
+        "business.phone",
+        "business.hours",
+        "dated-dealer-catalogue-listings"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2020-mitsubishi-pajero-mitsuhbishi-pajero-gls-2020engine-38lv6-1037103.html",
+      "observedAt": "2026-10-19T20:00:23.851965Z",
+      "supports": [
+        "stock.dubicars-1037103"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2025-toyota-land-cruiser-toyota-land-cruiser-prado-2025-1037098.html",
+      "observedAt": "2026-10-19T20:00:23.851965Z",
+      "supports": [
+        "stock.dubicars-1037098"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2020-nissan-patrol-engine-56lv8-1036920.html",
+      "observedAt": "2026-10-19T20:00:23.851965Z",
+      "supports": [
+        "stock.dubicars-1036920"
+      ]
+    }
+  ]
+}

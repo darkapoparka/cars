@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "slug": "al-saif-used-cars-trading",
+  "dealerId": "ae-umm-al-quwain-al-saif-used-cars-trading",
+  "business": {
+    "name": "Al Saif Used Cars Trading",
+    "city": "Umm al-Quwain",
+    "region": "Umm al-Quwain",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "showroom no 4",
+    "phone": "+971586631995",
+    "phoneDisplay": "+971586631995",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://www.dubicars.com/dealers/umm-al-quwain-al-saif-used-cars-trading-3226",
+    "hours": "",
+    "sourceUrl": "https://www.dubicars.com/dealers/umm-al-quwain-al-saif-used-cars-trading-3226",
+    "observedAt": "2026-10-19T20:00:29.349400Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.dubicars.com/dealers/umm-al-quwain-al-saif-used-cars-trading-3226",
+      "observedAt": "2026-10-19T20:00:29.349400Z",
+      "supports": [
+        "business.name",
+        "business.city",
+        "business.countryCode",
+        "business.address",
+        "business.phone",
+        "business.hours",
+        "dated-dealer-catalogue-listings"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2017-mini-cooper-full-option-1036997.html",
+      "observedAt": "2026-10-19T20:00:29.349400Z",
+      "supports": [
+        "stock.dubicars-1036997"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2023-jeep-wrangler-original-factory-paint-no-accidents-1035469.html",
+      "observedAt": "2026-10-19T20:00:29.349400Z",
+      "supports": [
+        "stock.dubicars-1035469"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2012-abarth-500-pocket-rocket-2012-abarth-500-rare-find-only-63365-km-excellent-condition-high-performance-969957.html",
+      "observedAt": "2026-10-19T20:00:29.349400Z",
+      "supports": [
+        "stock.dubicars-969957"
+      ]
+    }
+  ]
+}

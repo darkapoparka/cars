@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T20:30:10.123Z",
+  "dealer": "rebou-najd-used-cars-trading",
+  "dealerId": "ae-sharjah-rebou-najd-used-cars-trading",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "method": "Exact retained registry and compact-pack identity comparison; no dealer approval is implied.",
+  "sources": [
+    {
+      "url": "https://www.dubicars.com/dealers/sharjah-rebou-najd-used-cars-trading-1785",
+      "observedAt": "2026-10-19T20:00:23.851965Z"
+    }
+  ]
+}

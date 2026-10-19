@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "sport-used-cars",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:00:26.748637Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "dubicars-987072",
+      "title": "BMW 320i M SPORT",
+      "make": "BMW",
+      "model": "320",
+      "year": 2025,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/dubicars-987072.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2025-bmw-320i-987072.html",
+      "observedAt": "2026-10-19T20:00:26.748637Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 4000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "dubicars-1031777",
+      "title": "Lexus LS500 PLATINUM",
+      "make": "Lexus",
+      "model": "Ls 500",
+      "year": 2018,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/dubicars-1031777.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2018-lexus-ls500-lexus-ls500-korean-import-full-option-excellent-condition-1031777.html",
+      "observedAt": "2026-10-19T20:00:26.748637Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 133000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "dubicars-1033061",
+      "title": "Toyota Land Cruiser VXR",
+      "make": "Toyota",
+      "model": "Land Cruiser",
+      "year": 2021,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/dubicars-1033061.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2021-toyota-land-cruiser-1033061.html",
+      "observedAt": "2026-10-19T20:00:26.748637Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 117000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

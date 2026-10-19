@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-sultan-used-car-trading",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae-supplement.json",
+    "sha256": "ea2d396ef7a8a73326f488e53858ac60b4a0324d553ccba34b566b5ec5e91f2a"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.instagram.com/alsultan.cars/",
+      "observedAt": "2026-10-19T21:11:36.717164Z",
+      "supports": [
+        "business.name",
+        "business.city",
+        "business.countryCode",
+        "dated-dealer-catalogue-listings",
+        "business.address"
+      ]
+    },
+    {
+      "url": "https://www.instagram.com/alsultan.cars/p/DepI_knjscV/",
+      "observedAt": "2026-10-19T21:11:36.717164Z",
+      "supports": [
+        "stock.instagram-depi-knjscv",
+        "business.phone"
+      ]
+    },
+    {
+      "url": "https://www.instagram.com/alsultan.cars/p/DemTO27DsmE/",
+      "observedAt": "2026-10-19T21:11:36.717164Z",
+      "supports": [
+        "stock.instagram-demto27dsme"
+      ]
+    },
+    {
+      "url": "https://www.instagram.com/alsultan.cars/p/DemLof8DsRe/",
+      "observedAt": "2026-10-19T21:11:36.717164Z",
+      "supports": [
+        "stock.instagram-demlof8dsre"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "agentResearch": {
+    "observedAt": "2026-10-19T21:11:36.717164Z",
+    "method": "Public named dealer page and seller-bound catalogue data or current public business-account post captions. Full public business phones only; no sign-in, reveal, contact or account interaction.",
+    "identityNotes": [
+      "Showroom address read from original public profile. Business phone appears in all three dealer captions; no named individual contact retained.",
+      "Public posts dated17–18October2026; no condition, import-document or availability claims adopted. Mileage units remain as posted.",
+      "Profile avatar is a vehicle photograph, not an established logo; proposal branding required."
+    ],
+    "imageReview": "All retained actual vehicle photos visually reviewed. No price overlays or personal contact details retained. Marketplace watermarks preserved. Instagram source photos are the published first-frame previews, including their original framing.",
+    "logoResearchStatus": "in-progress"
+  },
+  "stockPhotos": [
+    {
+      "listingId": "instagram-depi-knjscv",
+      "listingUrl": "https://www.instagram.com/alsultan.cars/p/DepI_knjscV/",
+      "sourceUrl": "https://scontent-den2-1.cdninstagram.com/v/t51.82787-15/846612331_18641030659059801_5461761258677715346_n.jpg?stp=c192.0.576.576a_dst-jpg_e35_s640x640_tt6&_nc_cat=110&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=9pXpjfNcDKoQ7kNvwE6NSgl&_nc_oc=AdpNs-jtLheGbYK1DiOGgJoCdjr5ksJeX_qbmks-H8p3JhFx8Y36dy3h0LZ99iZFOuWkecLZS-OB4jI_UqhEkg6B&_nc_zt=23&_nc_ht=scontent-den2-1.cdninstagram.com&_nc_gid=wmZhwkh8Gc9T_-fjgpUaPA&_nc_ss=7e60f&oh=00_AQMJGt8NkYwUhWhrFOsF8ne5mSMea8CazMYk0fbViCk7Ag&oe=6ADC58BB",
+      "observedAt": "2026-10-19T21:11:36.717164Z",
+      "sourceSha256": "cc9638d6e47789c2082378606b9532ab7210b037a245a834b59c546a7c9000a7",
+      "retainedPath": "dealer-stock/instagram-depi-knjscv.webp",
+      "retainedSha256": "1ddfa3007c40f81ce736c272ae2b527703af8e28b07b18908d9ad66cd96e057d",
+      "nativeDimensions": [
+        576,
+        576
+      ],
+      "retainedDimensions": [
+        576,
+        576
+      ],
+      "retainedBytes": 24230,
+      "transformation": "Aspect-preserving resize and WebP encoding, no content removal."
+    },
+    {
+      "listingId": "instagram-demto27dsme",
+      "listingUrl": "https://www.instagram.com/alsultan.cars/p/DemTO27DsmE/",
+      "sourceUrl": "https://scontent-den2-1.cdninstagram.com/v/t51.82787-15/848370747_18640565641059801_857064746678699821_n.jpg?stp=c192.0.576.576a_dst-jpg_e35_s640x640_tt6&_nc_cat=105&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=ZX7KwiRDTfsQ7kNvwFwDQ9H&_nc_oc=AdpU5A86h0gn9phJxydu8Z8DtCJTAxs52YjRntRfuoVu1o_L8aQdNDDzbBwENlzCfqwSQLdnJ4sXt3N51aTlP7Y3&_nc_zt=23&_nc_ht=scontent-den2-1.cdninstagram.com&_nc_gid=3RKIiS6Q-xMx3PepeQgQnA&_nc_ss=7e60f&oh=00_AQN5xMqIaaJXFG_fIEUh5QgjRNubcNyjL4khHXqRlWKPYQ&oe=6ADC6357",
+      "observedAt": "2026-10-19T21:11:36.717164Z",
+      "sourceSha256": "0baa533f015f02a5178f31e479f6e46e52b61a06673e4500e66605524c859719",
+      "retainedPath": "dealer-stock/instagram-demto27dsme.webp",
+      "retainedSha256": "d64d8a3afd59a5b2b75afb95123ef187387f7037bcb244e8fb65b9cfa1d7da4c",
+      "nativeDimensions": [
+        576,
+        576
+      ],
+      "retainedDimensions": [
+        576,
+        576
+      ],
+      "retainedBytes": 23156,
+      "transformation": "Aspect-preserving resize and WebP encoding, no content removal."
+    },
+    {
+      "listingId": "instagram-demlof8dsre",
+      "listingUrl": "https://www.instagram.com/alsultan.cars/p/DemLof8DsRe/",
+      "sourceUrl": "https://scontent-den2-1.cdninstagram.com/v/t51.82787-15/850210737_18640542211059801_8651320286968596978_n.jpg?stp=c192.0.576.576a_dst-jpg_e35_s640x640_tt6&_nc_cat=106&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=OgnHkYrufCEQ7kNvwGtjOWk&_nc_oc=Adq-GUAUEh-ZExBwIfH0xoOyCOdt236HpGsyTn6u6U1Xux4spQsWYSpgqD6HYakcTJ8-RsY629eM7427uxqytweG&_nc_zt=23&_nc_ht=scontent-den2-1.cdninstagram.com&_nc_gid=YkY9I1rokjX4UC8gz-U59Q&_nc_ss=7e60f&oh=00_AQMttYvPGtbsmdGnUoItyAsncx96B1nGwt8JE1xenQkr4A&oe=6ADC5EDE",
+      "observedAt": "2026-10-19T21:11:36.717164Z",
+      "sourceSha256": "b1c3a730ec2d940d0386c788136c9424acd085ab95691248aaadf5f66b16e461",
+      "retainedPath": "dealer-stock/instagram-demlof8dsre.webp",
+      "retainedSha256": "d0eb1fc1880e4368086d543447e9fe3df2e93bf98112e539dc38cf0bada76113",
+      "nativeDimensions": [
+        576,
+        576
+      ],
+      "retainedDimensions": [
+        576,
+        576
+      ],
+      "retainedBytes": 31024,
+      "transformation": "Aspect-preserving resize and WebP encoding, no content removal."
+    }
+  ]
+}

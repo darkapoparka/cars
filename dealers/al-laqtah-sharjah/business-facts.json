@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "slug": "al-laqtah-sharjah",
+  "dealerId": "ae-sharjah-al-laqtah-sharjah",
+  "business": {
+    "name": "Al Laqtah Sharjah",
+    "city": "Sharjah",
+    "region": "Sharjah",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "Showroom #93, Sharjah Souq Al Haraj, Sharjah",
+    "phone": "+971555047247",
+    "phoneDisplay": "+971555047247",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://www.oneclickdrive.com/company/sharjah/al-laqtah",
+    "hours": "",
+    "sourceUrl": "https://www.dubicars.com/dealers/sharjah-al-laqtah-sharjah-2119",
+    "observedAt": "2026-10-19T21:11:36.717164Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/sharjah/al-laqtah",
+      "observedAt": "2026-10-19T21:11:36.717164Z",
+      "supports": [
+        "business.name",
+        "business.city",
+        "business.countryCode",
+        "dated-dealer-catalogue-listings",
+        "business.phone",
+        "business.address"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Hyundai/Santa-Fe/?id=185693",
+      "observedAt": "2026-10-19T21:11:36.717164Z",
+      "supports": [
+        "stock.ocd-185693"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Chevrolet/Captiva/?id=185684",
+      "observedAt": "2026-10-19T21:11:36.717164Z",
+      "supports": [
+        "stock.ocd-185684"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Ford/Edge/?id=100634",
+      "observedAt": "2026-10-19T21:11:36.717164Z",
+      "supports": [
+        "stock.ocd-100634"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/company/sharjah/al-laqtah",
+      "observedAt": "2026-10-19T21:11:36.717164Z",
+      "supports": [
+        "dated-dealer-catalogue-listings"
+      ]
+    }
+  ]
+}

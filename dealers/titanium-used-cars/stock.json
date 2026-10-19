@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "titanium-used-cars",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:00:28.436516Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "dubicars-1016456",
+      "title": "Mercedes Benz G63 AMG 4X4 SQUARED",
+      "make": "Mercedes Benz",
+      "model": "G 63 Amg",
+      "year": 2015,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/dubicars-1016456.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2015-mercedes-benz-g63-amg-1016456.html",
+      "observedAt": "2026-10-19T20:00:28.436516Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 65000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "dubicars-1034109",
+      "title": "Lexus LX600 SIGNATURE",
+      "make": "Lexus",
+      "model": "Lx 600",
+      "year": 2024,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/dubicars-1034109.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2024-lexus-lx600-1034109.html",
+      "observedAt": "2026-10-19T20:00:28.436516Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 35000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "dubicars-999572",
+      "title": "Rolls Royce Ghost STANDARD",
+      "make": "Rolls Royce",
+      "model": "Ghost",
+      "year": 2012,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/dubicars-999572.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2012-rolls-royce-ghost-std-999572.html",
+      "observedAt": "2026-10-19T20:00:28.436516Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 85000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

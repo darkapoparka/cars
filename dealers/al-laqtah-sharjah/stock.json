@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-laqtah-sharjah",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T21:11:36.717164Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "ocd-185693",
+      "title": "Hyundai Santa Fe 2013",
+      "make": "Hyundai",
+      "model": "Santa Fe",
+      "year": 2013,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/ocd-185693.webp"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Hyundai/Santa-Fe/?id=185693",
+      "observedAt": "2026-10-19T21:11:36.717164Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 188000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "ocd-185684",
+      "title": "Chevrolet Captiva 2022",
+      "make": "Chevrolet",
+      "model": "Captiva",
+      "year": 2022,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/ocd-185684.webp"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Chevrolet/Captiva/?id=185684",
+      "observedAt": "2026-10-19T21:11:36.717164Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 138000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "ocd-100634",
+      "title": "Ford Edge 2016",
+      "make": "Ford",
+      "model": "Edge",
+      "year": 2016,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/ocd-100634.webp"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Ford/Edge/?id=100634",
+      "observedAt": "2026-10-19T21:11:36.717164Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 172000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

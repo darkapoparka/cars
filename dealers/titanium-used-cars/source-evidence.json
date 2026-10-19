@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "dealer": "titanium-used-cars",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/sharjah-titanium-used-cars-2450",
+      "observedAt": "2026-10-19T20:00:28.436516Z",
+      "supports": [
+        "business.name",
+        "business.city",
+        "business.countryCode",
+        "business.address",
+        "business.phone",
+        "business.hours",
+        "dated-dealer-catalogue-listings"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2015-mercedes-benz-g63-amg-1016456.html",
+      "observedAt": "2026-10-19T20:00:28.436516Z",
+      "supports": [
+        "stock.dubicars-1016456"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2024-lexus-lx600-1034109.html",
+      "observedAt": "2026-10-19T20:00:28.436516Z",
+      "supports": [
+        "stock.dubicars-1034109"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2012-rolls-royce-ghost-std-999572.html",
+      "observedAt": "2026-10-19T20:00:28.436516Z",
+      "supports": [
+        "stock.dubicars-999572"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "agentResearch": {
+    "observedAt": "2026-10-19T20:00:28.436516Z",
+    "method": "Public catalogue HTML/JSON-LD and actual stock image read; fields checked before inclusion. No contact or account interaction.",
+    "identityNotes": [
+      "Profile street address conflicts with its stated emirate; exact address omitted."
+    ],
+    "imageReview": "Actual three stock images visually reviewed; no price overlay or named personal contact used.",
+    "logoResearchStatus": "in-progress"
+  },
+  "stockPhotos": [
+    {
+      "listingId": "dubicars-1016456",
+      "listingUrl": "https://www.dubicars.com/2015-mercedes-benz-g63-amg-1016456.html",
+      "sourceUrl": "https://www.dubicars.com/images/6aa956/650x380/titanium-used-cars/8e2982c4-617e-47f9-8d4e-06f505b2ee01.jpeg",
+      "observedAt": "2026-10-19T20:00:28.436516Z",
+      "sourceSha256": "58c5d03e20095dfc484e429b87d0737e4ca08676309ccb252a9c0c31ae29083d",
+      "retainedPath": "dealer-stock/dubicars-1016456.webp",
+      "retainedSha256": "a6a828e96731062be1aee56e78baa568619b99d21cf7d7470530dff1f9149c7a",
+      "nativeDimensions": [
+        650,
+        488
+      ],
+      "retainedDimensions": [
+        650,
+        488
+      ],
+      "retainedBytes": 58944,
+      "transformation": "Bounded resize with preserved aspect ratio and WebP compression; no watermark removal.",
+      "reusePermission": "not independently established; public-preview source attribution retained"
+    },
+    {
+      "listingId": "dubicars-1034109",
+      "listingUrl": "https://www.dubicars.com/2024-lexus-lx600-1034109.html",
+      "sourceUrl": "https://www.dubicars.com/images/562f7d/650x380/titanium-used-cars/e9bf1b21-130d-4a29-b27d-da1e70f3d94e.jpeg",
+      "observedAt": "2026-10-19T20:00:28.436516Z",
+      "sourceSha256": "baffa879c09421cb6408987175836960fbd46d0a662fa41b9465e2b8a9ec3ac1",
+      "retainedPath": "dealer-stock/dubicars-1034109.webp",
+      "retainedSha256": "1eadfa665b49e8f886f62572b25e8a7a2d6dc0538d87a0a08b644e2f2b4560d1",
+      "nativeDimensions": [
+        650,
+        488
+      ],
+      "retainedDimensions": [
+        650,
+        488
+      ],
+      "retainedBytes": 61576,
+      "transformation": "Bounded resize with preserved aspect ratio and WebP compression; no watermark removal.",
+      "reusePermission": "not independently established; public-preview source attribution retained"
+    },
+    {
+      "listingId": "dubicars-999572",
+      "listingUrl": "https://www.dubicars.com/2012-rolls-royce-ghost-std-999572.html",
+      "sourceUrl": "https://www.dubicars.com/images/359b7f/650x380/titanium-used-cars/3ece8e11-f268-4481-aaee-68441be29a2b.jpeg",
+      "observedAt": "2026-10-19T20:00:28.436516Z",
+      "sourceSha256": "08388d8e92766db2f0adec2684deaf25e199e14eb07550e33946cc88e0df166c",
+      "retainedPath": "dealer-stock/dubicars-999572.webp",
+      "retainedSha256": "d8405bad6957fb524b09ee42c0b2c671cfc09064b02ebf6f7895b29010cd336f",
+      "nativeDimensions": [
+        650,
+        366
+      ],
+      "retainedDimensions": [
+        650,
+        366
+      ],
+      "retainedBytes": 47800,
+      "transformation": "Bounded resize with preserved aspect ratio and WebP compression; no watermark removal.",
+      "reusePermission": "not independently established; public-preview source attribution retained"
+    }
+  ]
+}

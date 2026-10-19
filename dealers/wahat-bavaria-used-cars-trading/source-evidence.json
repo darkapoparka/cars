@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "dealer": "wahat-bavaria-used-cars-trading",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/sharjah-wahat-bavaria-used-cars-trading-2145",
+      "observedAt": "2026-10-19T20:00:28.899200Z",
+      "supports": [
+        "business.name",
+        "business.city",
+        "business.countryCode",
+        "business.address",
+        "business.phone",
+        "business.hours",
+        "dated-dealer-catalogue-listings"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2025-dongfeng-m-hero-m-hero-m817-2025-with-warranty-1035817.html",
+      "observedAt": "2026-10-19T20:00:28.899200Z",
+      "supports": [
+        "stock.dubicars-1035817"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2020-volkswagen-passat-1000360.html",
+      "observedAt": "2026-10-19T20:00:28.899200Z",
+      "supports": [
+        "stock.dubicars-1000360"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2022-toyota-corolla-xli-15l-950863.html",
+      "observedAt": "2026-10-19T20:00:28.899200Z",
+      "supports": [
+        "stock.dubicars-950863"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "agentResearch": {
+    "observedAt": "2026-10-19T20:00:28.899200Z",
+    "method": "Public catalogue HTML/JSON-LD and actual stock image read; fields checked before inclusion. No contact or account interaction.",
+    "identityNotes": [
+      "Personal-looking mailbox omitted; no personal contact retained."
+    ],
+    "imageReview": "Actual three stock images visually reviewed; no price overlay or named personal contact used.",
+    "logoResearchStatus": "in-progress"
+  },
+  "stockPhotos": [
+    {
+      "listingId": "dubicars-1035817",
+      "listingUrl": "https://www.dubicars.com/2025-dongfeng-m-hero-m-hero-m817-2025-with-warranty-1035817.html",
+      "sourceUrl": "https://www.dubicars.com/images/d65bf1/650x380/wahat-bavaria-used-cars-trading/3eec5329-9eca-4a43-92bd-45df574f7c45.jpeg",
+      "observedAt": "2026-10-19T20:00:28.899200Z",
+      "sourceSha256": "daaa30ddefe640ef1f70b27b3609a95d0ee17ebd0818d677b50592c0b39d47c7",
+      "retainedPath": "dealer-stock/dubicars-1035817.webp",
+      "retainedSha256": "175e1b75cd6e6ee05b4b0c2cbefc5974ca48fb6dcfaba53a9518bf086a56bb9b",
+      "nativeDimensions": [
+        650,
+        867
+      ],
+      "retainedDimensions": [
+        650,
+        867
+      ],
+      "retainedBytes": 25808,
+      "transformation": "Bounded resize with preserved aspect ratio and WebP compression; no watermark removal.",
+      "reusePermission": "not independently established; public-preview source attribution retained"
+    },
+    {
+      "listingId": "dubicars-1000360",
+      "listingUrl": "https://www.dubicars.com/2020-volkswagen-passat-1000360.html",
+      "sourceUrl": "https://www.dubicars.com/images/9be879/650x380/wahat-bavaria-used-cars-trading/c43fd45d-2ded-493e-b768-9ad540e1e7a7.jpeg",
+      "observedAt": "2026-10-19T20:00:28.899200Z",
+      "sourceSha256": "bd5b4195e12a4f8dbd01257aa731f6c992722d03e63d7bf51d5cd39bb6b194a4",
+      "retainedPath": "dealer-stock/dubicars-1000360.webp",
+      "retainedSha256": "3d960e66d02f398cade3e82316f78c63034cc1a6122ec37241abb80b459b263a",
+      "nativeDimensions": [
+        650,
+        867
+      ],
+      "retainedDimensions": [
+        650,
+        867
+      ],
+      "retainedBytes": 34132,
+      "transformation": "Bounded resize with preserved aspect ratio and WebP compression; no watermark removal.",
+      "reusePermission": "not independently established; public-preview source attribution retained"
+    },
+    {
+      "listingId": "dubicars-950863",
+      "listingUrl": "https://www.dubicars.com/2022-toyota-corolla-xli-15l-950863.html",
+      "sourceUrl": "https://www.dubicars.com/images/bf3c6e/650x380/wahat-bavaria-used-cars-trading/21ab941e-3b08-4b24-8c4c-1b4e2499d1a1.jpeg",
+      "observedAt": "2026-10-19T20:00:28.899200Z",
+      "sourceSha256": "379fae2a864705da9065f8e5da0eca86cc7723669c5aec3bf0ffd5701ddf1696",
+      "retainedPath": "dealer-stock/dubicars-950863.webp",
+      "retainedSha256": "ba03856fb673d2dd5977c960e451e0083f2f3eb99d6029bdc650df534c9db1df",
+      "nativeDimensions": [
+        650,
+        867
+      ],
+      "retainedDimensions": [
+        650,
+        867
+      ],
+      "retainedBytes": 33866,
+      "transformation": "Bounded resize with preserved aspect ratio and WebP compression; no watermark removal.",
+      "reusePermission": "not independently established; public-preview source attribution retained"
+    }
+  ]
+}

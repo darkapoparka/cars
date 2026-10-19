@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-laqtah-sharjah",
+  "businessFacts": "business-facts.json",
+  "stock": "stock.json",
+  "inventoryKind": "dated-listing-snapshot",
+  "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+  "sources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/sharjah/al-laqtah",
+      "observedAt": "2026-10-19T21:11:36.717164Z",
+      "supports": [
+        "business.name",
+        "business.city",
+        "business.countryCode",
+        "dated-dealer-catalogue-listings",
+        "business.phone",
+        "business.address"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Hyundai/Santa-Fe/?id=185693",
+      "observedAt": "2026-10-19T21:11:36.717164Z",
+      "supports": [
+        "stock.ocd-185693"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Chevrolet/Captiva/?id=185684",
+      "observedAt": "2026-10-19T21:11:36.717164Z",
+      "supports": [
+        "stock.ocd-185684"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Ford/Edge/?id=100634",
+      "observedAt": "2026-10-19T21:11:36.717164Z",
+      "supports": [
+        "stock.ocd-100634"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/company/sharjah/al-laqtah",
+      "observedAt": "2026-10-19T21:11:36.717164Z",
+      "supports": [
+        "dated-dealer-catalogue-listings"
+      ]
+    }
+  ]
+}

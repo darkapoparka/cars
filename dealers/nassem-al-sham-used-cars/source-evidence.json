@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "dealer": "nassem-al-sham-used-cars",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae-supplement.json",
+    "sha256": "ea2d396ef7a8a73326f488e53858ac60b4a0324d553ccba34b566b5ec5e91f2a"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/sharjah-nassem-al-sham-used-cars-2211",
+      "observedAt": "2026-10-19T20:00:20.646591Z",
+      "supports": [
+        "business.name",
+        "business.city",
+        "business.countryCode",
+        "business.address",
+        "business.phone",
+        "business.hours",
+        "dated-dealer-catalogue-listings"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2017-toyota-land-cruiser-gxr-v6-upgrade-2025-1002015.html",
+      "observedAt": "2026-10-19T20:00:20.646591Z",
+      "supports": [
+        "stock.dubicars-1002015"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2018-toyota-land-cruiser-gxr-v6-964728.html",
+      "observedAt": "2026-10-19T20:00:20.646591Z",
+      "supports": [
+        "stock.dubicars-964728"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2010-toyota-land-cruiser-1033532.html",
+      "observedAt": "2026-10-19T20:00:20.646591Z",
+      "supports": [
+        "stock.dubicars-1033532"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "agentResearch": {
+    "observedAt": "2026-10-19T20:00:20.646591Z",
+    "method": "Public catalogue HTML/JSON-LD and actual stock image read; fields checked before inclusion. No contact or account interaction.",
+    "identityNotes": [
+      "Personal-looking mailbox omitted; no personal contact retained.",
+      "Marketplace-linked domain not adopted: current fetch failed or identity/contact conflicts remain."
+    ],
+    "imageReview": "Actual three stock images visually reviewed; no price overlay or named personal contact used.",
+    "logoResearchStatus": "in-progress"
+  },
+  "stockPhotos": [
+    {
+      "listingId": "dubicars-1002015",
+      "listingUrl": "https://www.dubicars.com/2017-toyota-land-cruiser-gxr-v6-upgrade-2025-1002015.html",
+      "sourceUrl": "https://www.dubicars.com/images/859210/650x380/nassem-al-sham-used-cars/0ade5444-8781-4a43-922e-1879304f4d2a.jpeg",
+      "observedAt": "2026-10-19T20:00:20.646591Z",
+      "sourceSha256": "3b0949dda1b3c90489b41111454b765ec225a9fd8d7cf30df1a75f9d088d0a49",
+      "retainedPath": "dealer-stock/dubicars-1002015.webp",
+      "retainedSha256": "5c26decbeed1022c5555e5c2667c12deadca72f2dd6eece3309c2fa0f036bbc6",
+      "nativeDimensions": [
+        650,
+        427
+      ],
+      "retainedDimensions": [
+        650,
+        427
+      ],
+      "retainedBytes": 57338,
+      "transformation": "Bounded resize with preserved aspect ratio and WebP compression; no watermark removal.",
+      "reusePermission": "not independently established; public-preview source attribution retained"
+    },
+    {
+      "listingId": "dubicars-964728",
+      "listingUrl": "https://www.dubicars.com/2018-toyota-land-cruiser-gxr-v6-964728.html",
+      "sourceUrl": "https://www.dubicars.com/images/8a46c3/650x380/nassem-al-sham-used-cars/70860378-8828-4d58-8c37-3a827dd36e3c.jpeg",
+      "observedAt": "2026-10-19T20:00:20.646591Z",
+      "sourceSha256": "3863fe62f1952e5a310a6acecd11ba33c9fc7e0e8df81fbe365f54924b8dffc2",
+      "retainedPath": "dealer-stock/dubicars-964728.webp",
+      "retainedSha256": "f4f678723c9867cc07092cfc3f9687173c205e7a4c4dd20c36b7caeb83cdab46",
+      "nativeDimensions": [
+        650,
+        418
+      ],
+      "retainedDimensions": [
+        650,
+        418
+      ],
+      "retainedBytes": 68478,
+      "transformation": "Bounded resize with preserved aspect ratio and WebP compression; no watermark removal.",
+      "reusePermission": "not independently established; public-preview source attribution retained"
+    },
+    {
+      "listingId": "dubicars-1033532",
+      "listingUrl": "https://www.dubicars.com/2010-toyota-land-cruiser-1033532.html",
+      "sourceUrl": "https://www.dubicars.com/images/2573cc/650x380/nassem-al-sham-used-cars/5344c658-056b-4f06-b53f-e2544d37529e.jpeg",
+      "observedAt": "2026-10-19T20:00:20.646591Z",
+      "sourceSha256": "da016c3711807c85c855ef3ae0cfc0f7f01d70f07fdaeb089f68a779a1718455",
+      "retainedPath": "dealer-stock/dubicars-1033532.webp",
+      "retainedSha256": "95304dc09ebf84474ef44155ddbea6c23019e7b20a783a5130eecefe441ebc66",
+      "nativeDimensions": [
+        650,
+        427
+      ],
+      "retainedDimensions": [
+        650,
+        427
+      ],
+      "retainedBytes": 61352,
+      "transformation": "Bounded resize with preserved aspect ratio and WebP compression; no watermark removal.",
+      "reusePermission": "not independently established; public-preview source attribution retained"
+    }
+  ]
+}

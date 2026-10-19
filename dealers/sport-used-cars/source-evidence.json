@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "dealer": "sport-used-cars",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/sharjah-sport-used-cars-812",
+      "observedAt": "2026-10-19T20:00:26.748637Z",
+      "supports": [
+        "business.name",
+        "business.city",
+        "business.countryCode",
+        "business.address",
+        "business.phone",
+        "business.hours",
+        "dated-dealer-catalogue-listings"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2025-bmw-320i-987072.html",
+      "observedAt": "2026-10-19T20:00:26.748637Z",
+      "supports": [
+        "stock.dubicars-987072"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2018-lexus-ls500-lexus-ls500-korean-import-full-option-excellent-condition-1031777.html",
+      "observedAt": "2026-10-19T20:00:26.748637Z",
+      "supports": [
+        "stock.dubicars-1031777"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2021-toyota-land-cruiser-1033061.html",
+      "observedAt": "2026-10-19T20:00:26.748637Z",
+      "supports": [
+        "stock.dubicars-1033061"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "agentResearch": {
+    "observedAt": "2026-10-19T20:00:26.748637Z",
+    "method": "Public catalogue HTML/JSON-LD and actual stock image read; fields checked before inclusion. No contact or account interaction.",
+    "identityNotes": [
+      "Personal-looking mailbox omitted; no personal contact retained.",
+      "Marketplace-linked domain not adopted: current fetch failed or identity/contact conflicts remain."
+    ],
+    "imageReview": "Actual three stock images visually reviewed; no price overlay or named personal contact used.",
+    "logoResearchStatus": "in-progress"
+  },
+  "stockPhotos": [
+    {
+      "listingId": "dubicars-987072",
+      "listingUrl": "https://www.dubicars.com/2025-bmw-320i-987072.html",
+      "sourceUrl": "https://www.dubicars.com/images/9050e3/650x380/sport-used-cars/1e8666a7-99ad-4d02-849a-6b71c525d2d1.jpeg",
+      "observedAt": "2026-10-19T20:00:26.748637Z",
+      "sourceSha256": "925460eb4872d0bba2849061de6778e1539a0ef29c3cba281de15842202e40f3",
+      "retainedPath": "dealer-stock/dubicars-987072.webp",
+      "retainedSha256": "1c4a7eea58d5665bd9104d88a36c311014a49c9fb2c9a6bf4cfed670a8a0861d",
+      "nativeDimensions": [
+        650,
+        488
+      ],
+      "retainedDimensions": [
+        650,
+        488
+      ],
+      "retainedBytes": 57628,
+      "transformation": "Bounded resize with preserved aspect ratio and WebP compression; no watermark removal.",
+      "reusePermission": "not independently established; public-preview source attribution retained"
+    },
+    {
+      "listingId": "dubicars-1031777",
+      "listingUrl": "https://www.dubicars.com/2018-lexus-ls500-lexus-ls500-korean-import-full-option-excellent-condition-1031777.html",
+      "sourceUrl": "https://www.dubicars.com/images/2bfc45/650x380/sport-used-cars/a59b53aa-93c1-4cde-aeba-f42b5d6235b2.jpeg",
+      "observedAt": "2026-10-19T20:00:26.748637Z",
+      "sourceSha256": "224aae96464d233268406e9dcebd088275ed44066c0affff0f13e1c659210bf0",
+      "retainedPath": "dealer-stock/dubicars-1031777.webp",
+      "retainedSha256": "9d8a32d76a6d808bc8e812ee207299300afd5179aad710d6a9e47d51a6022cfb",
+      "nativeDimensions": [
+        650,
+        488
+      ],
+      "retainedDimensions": [
+        650,
+        488
+      ],
+      "retainedBytes": 50900,
+      "transformation": "Bounded resize with preserved aspect ratio and WebP compression; no watermark removal.",
+      "reusePermission": "not independently established; public-preview source attribution retained"
+    },
+    {
+      "listingId": "dubicars-1033061",
+      "listingUrl": "https://www.dubicars.com/2021-toyota-land-cruiser-1033061.html",
+      "sourceUrl": "https://www.dubicars.com/images/741fe9/650x380/sport-used-cars/d5f37fbd-bd0c-49ce-9629-86c624afb9da.jpeg",
+      "observedAt": "2026-10-19T20:00:26.748637Z",
+      "sourceSha256": "55542cecd875bcb8805ac3d37a50c8501eefacdf25aa2643037f8b6c6b55bb40",
+      "retainedPath": "dealer-stock/dubicars-1033061.webp",
+      "retainedSha256": "1ad705a0b62712d4c8274f817cc5b8a9c71ac52a93502ac000a3a54237dd36e1",
+      "nativeDimensions": [
+        650,
+        557
+      ],
+      "retainedDimensions": [
+        650,
+        557
+      ],
+      "retainedBytes": 72434,
+      "transformation": "Bounded resize with preserved aspect ratio and WebP compression; no watermark removal.",
+      "reusePermission": "not independently established; public-preview source attribution retained"
+    }
+  ]
+}

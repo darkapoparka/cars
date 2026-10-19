@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-sultan-used-car-trading",
+  "businessFacts": "business-facts.json",
+  "stock": "stock.json",
+  "inventoryKind": "dated-listing-snapshot",
+  "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+  "sources": [
+    {
+      "url": "https://www.instagram.com/alsultan.cars/",
+      "observedAt": "2026-10-19T21:11:36.717164Z",
+      "supports": [
+        "business.name",
+        "business.city",
+        "business.countryCode",
+        "dated-dealer-catalogue-listings",
+        "business.address"
+      ]
+    },
+    {
+      "url": "https://www.instagram.com/alsultan.cars/p/DepI_knjscV/",
+      "observedAt": "2026-10-19T21:11:36.717164Z",
+      "supports": [
+        "stock.instagram-depi-knjscv",
+        "business.phone"
+      ]
+    },
+    {
+      "url": "https://www.instagram.com/alsultan.cars/p/DemTO27DsmE/",
+      "observedAt": "2026-10-19T21:11:36.717164Z",
+      "supports": [
+        "stock.instagram-demto27dsme"
+      ]
+    },
+    {
+      "url": "https://www.instagram.com/alsultan.cars/p/DemLof8DsRe/",
+      "observedAt": "2026-10-19T21:11:36.717164Z",
+      "supports": [
+        "stock.instagram-demlof8dsre"
+      ]
+    }
+  ]
+}

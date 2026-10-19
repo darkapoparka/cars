@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "slug": "wahat-bavaria-used-cars-trading",
+  "dealerId": "ae-sharjah-wahat-bavaria-used-cars-trading",
+  "business": {
+    "name": "Wahat Bavaria Used Cars Trading",
+    "city": "Sharjah",
+    "region": "Sharjah",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "Showroom 37, Sharjah Souq Al Haraj, Sharjah",
+    "phone": "+971508400111",
+    "phoneDisplay": "+971508400111",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://www.dubicars.com/dealers/sharjah-wahat-bavaria-used-cars-trading-2145",
+    "hours": "",
+    "sourceUrl": "https://www.dubicars.com/dealers/sharjah-wahat-bavaria-used-cars-trading-2145",
+    "observedAt": "2026-10-19T20:00:28.899200Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.dubicars.com/dealers/sharjah-wahat-bavaria-used-cars-trading-2145",
+      "observedAt": "2026-10-19T20:00:28.899200Z",
+      "supports": [
+        "business.name",
+        "business.city",
+        "business.countryCode",
+        "business.address",
+        "business.phone",
+        "business.hours",
+        "dated-dealer-catalogue-listings"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2025-dongfeng-m-hero-m-hero-m817-2025-with-warranty-1035817.html",
+      "observedAt": "2026-10-19T20:00:28.899200Z",
+      "supports": [
+        "stock.dubicars-1035817"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2020-volkswagen-passat-1000360.html",
+      "observedAt": "2026-10-19T20:00:28.899200Z",
+      "supports": [
+        "stock.dubicars-1000360"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2022-toyota-corolla-xli-15l-950863.html",
+      "observedAt": "2026-10-19T20:00:28.899200Z",
+      "supports": [
+        "stock.dubicars-950863"
+      ]
+    }
+  ]
+}

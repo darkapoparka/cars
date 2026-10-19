@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "dealer": "wahat-bavaria-used-cars-trading",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:00:28.899200Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "dubicars-1035817",
+      "title": "New Dongfeng M Hero M817",
+      "make": "Dongfeng",
+      "model": "M Hero 917",
+      "year": 2025,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/dubicars-1035817.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2025-dongfeng-m-hero-m-hero-m817-2025-with-warranty-1035817.html",
+      "observedAt": "2026-10-19T20:00:28.899200Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageOnRequest": true,
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "dubicars-1000360",
+      "title": "Volkswagen Passat HIGHLINE",
+      "make": "Volkswagen",
+      "model": "Passat",
+      "year": 2020,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/dubicars-1000360.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2020-volkswagen-passat-1000360.html",
+      "observedAt": "2026-10-19T20:00:28.899200Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 138000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "dubicars-950863",
+      "title": "Toyota Corolla XLI",
+      "make": "Toyota",
+      "model": "Corolla",
+      "year": 2022,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/dubicars-950863.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2022-toyota-corolla-xli-15l-950863.html",
+      "observedAt": "2026-10-19T20:00:28.899200Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 34000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

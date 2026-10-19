@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-laqtah-sharjah",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/sharjah/al-laqtah",
+      "observedAt": "2026-10-19T21:11:36.717164Z",
+      "supports": [
+        "business.name",
+        "business.city",
+        "business.countryCode",
+        "dated-dealer-catalogue-listings",
+        "business.phone",
+        "business.address"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Hyundai/Santa-Fe/?id=185693",
+      "observedAt": "2026-10-19T21:11:36.717164Z",
+      "supports": [
+        "stock.ocd-185693"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Chevrolet/Captiva/?id=185684",
+      "observedAt": "2026-10-19T21:11:36.717164Z",
+      "supports": [
+        "stock.ocd-185684"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Ford/Edge/?id=100634",
+      "observedAt": "2026-10-19T21:11:36.717164Z",
+      "supports": [
+        "stock.ocd-100634"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/company/sharjah/al-laqtah",
+      "observedAt": "2026-10-19T21:11:36.717164Z",
+      "supports": [
+        "dated-dealer-catalogue-listings"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "agentResearch": {
+    "observedAt": "2026-10-19T21:11:36.717164Z",
+    "method": "Public named dealer page and seller-bound catalogue data or current public business-account post captions. Full public business phones only; no sign-in, reveal, contact or account interaction.",
+    "identityNotes": [
+      "DubiCars showroom identity, address and phone match the current OneClickDrive seller. DubiCars has no current stock; only dealer-bound OneClickDrive offers are retained.",
+      "Hours omitted because a reliable complete schedule was not adopted."
+    ],
+    "imageReview": "All retained actual vehicle photos visually reviewed. No price overlays or personal contact details retained. Marketplace watermarks preserved. Instagram source photos are the published first-frame previews, including their original framing.",
+    "logoResearchStatus": "in-progress"
+  },
+  "stockPhotos": [
+    {
+      "listingId": "ocd-185693",
+      "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Hyundai/Santa-Fe/?id=185693",
+      "sourceUrl": "https://static.oneclickdrive.com/uploads/cars/Hyundai-Santa-Fe-2013_185693_1889964670302-16_small.jpg",
+      "observedAt": "2026-10-19T21:11:36.717164Z",
+      "sourceSha256": "9a0525d6954d4da2cb248a606c85c53b6c275ee94e83ed080cac7e3bc0cb53a4",
+      "retainedPath": "dealer-stock/ocd-185693.webp",
+      "retainedSha256": "f3f9ca947b4137e7144fccd3b968b01c57bb3d4a888982a1d619b5fc9e6d999c",
+      "nativeDimensions": [
+        450,
+        395
+      ],
+      "retainedDimensions": [
+        450,
+        395
+      ],
+      "retainedBytes": 20748,
+      "transformation": "Aspect-preserving resize and WebP encoding, no content removal."
+    },
+    {
+      "listingId": "ocd-185684",
+      "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Chevrolet/Captiva/?id=185684",
+      "sourceUrl": "https://static.oneclickdrive.com/uploads/cars/Chevrolet-Captiva-2022_185684_1889993567176-15_small.jpg",
+      "observedAt": "2026-10-19T21:11:36.717164Z",
+      "sourceSha256": "31d8ea9bf0bd01e9901685b3a45aa387813aacad278bb54e4dcb5310eb9bad43",
+      "retainedPath": "dealer-stock/ocd-185684.webp",
+      "retainedSha256": "db379c1eae21105e13d591b8ad633a8b2a7d6d0478a04c931db9a75c06a32634",
+      "nativeDimensions": [
+        450,
+        395
+      ],
+      "retainedDimensions": [
+        450,
+        395
+      ],
+      "retainedBytes": 14248,
+      "transformation": "Aspect-preserving resize and WebP encoding, no content removal."
+    },
+    {
+      "listingId": "ocd-100634",
+      "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Ford/Edge/?id=100634",
+      "sourceUrl": "https://static.oneclickdrive.com/uploads/cars/Ford-Edge-2016_100634_1889945343602-16_small.jpg",
+      "observedAt": "2026-10-19T21:11:36.717164Z",
+      "sourceSha256": "1a12c610d9cf74d67669adf3f9154b554fd40c7736b814b684c7be261dcf46fc",
+      "retainedPath": "dealer-stock/ocd-100634.webp",
+      "retainedSha256": "376d65b49261aafad2628479cf373ea7acd03d9b8dfe05ea59890c3f19a73f6c",
+      "nativeDimensions": [
+        450,
+        395
+      ],
+      "retainedDimensions": [
+        450,
+        395
+      ],
+      "retainedBytes": 23352,
+      "transformation": "Aspect-preserving resize and WebP encoding, no content removal."
+    }
+  ]
+}
