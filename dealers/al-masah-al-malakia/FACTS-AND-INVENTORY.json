@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-masah-al-malakia",
+  "businessFacts": "business-facts.json",
+  "stock": "stock.json",
+  "inventoryKind": "dated-listing-snapshot",
+  "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+  "sources": [
+    {
+      "url": "https://auto.ae/almasahalmalakia/",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "supports": [
+        "business-name",
+        "public-showroom-phone",
+        "showroom-address-where-consistent",
+        "advertised-stock-snapshot",
+        "published-hours-where-consistent"
+      ]
+    }
+  ]
+}

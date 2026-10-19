@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "almalakyah-cars-al-malakyah-cars",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:01:39Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "listing-285024",
+      "title": "Infiniti QX80 2022",
+      "make": "Infiniti",
+      "model": "QX80",
+      "year": 2022,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-285024.jpg"
+      ],
+      "sourceUrl": "https://auto.ae/sharjah/sale/car/infiniti/infiniti-qx80-i-z62-facelift-3-2022/id/285024",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 146000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-285011",
+      "title": "Toyota Land Cruiser 2023",
+      "make": "Toyota",
+      "model": "Land Cruiser",
+      "year": 2023,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-285011.jpg"
+      ],
+      "sourceUrl": "https://auto.ae/sharjah/sale/car/toyota/toyota-land-cruiser-300-series-2023/id/285011",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 14000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-285003",
+      "title": "Toyota Land Cruiser 2024",
+      "make": "Toyota",
+      "model": "Land Cruiser",
+      "year": 2024,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-285003.jpg"
+      ],
+      "sourceUrl": "https://auto.ae/sharjah/sale/car/toyota/toyota-land-cruiser-300-series-2024/id/285003",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 42000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

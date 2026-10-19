@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-ostoura-used-cars",
+  "researchId": "ae-sharjah-al-ostoura-used-cars",
+  "observedAt": "2026-10-19T20:01:39Z",
+  "liveFetchPerformed": true,
+  "businessSources": [
+    {
+      "url": "https://auto.ae/alostoura/",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "supports": [
+        "business-name",
+        "public-showroom-phone",
+        "showroom-address-where-consistent",
+        "advertised-stock-snapshot",
+        "published-hours-where-consistent"
+      ]
+    }
+  ],
+  "profile": {
+    "name": "Al Ostoura Used Cars",
+    "url": "https://auto.ae/alostoura/",
+    "sha256": "54ae9cf7cb397791412755d102d67ecff169ae217338c291ec0674a2b14b4433",
+    "retrieval": "public HTML and embedded public showroom structured data"
+  },
+  "stockMode": "dated-listing-snapshot",
+  "inventoryCountMeaning": "Three selected publicly advertised listings; physical availability, freshness and uniqueness are not independently confirmed.",
+  "media": [
+    {
+      "path": "/dealer-stock/listing-285008.jpg",
+      "sourceUrl": "https://auto-ae-prod-storage.storage.googleapis.com/auto_sharjah_toyota_land_cruiser_sale_285008865631260",
+      "listingUrl": "https://auto.ae/sharjah/sale/car/toyota/toyota-land-cruiser-200-series-facelift-1-2014/id/285008",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "sourceSha256": "252c58b4c8b09534b1f7d5ef8a161a1376342200bf63073d3dcd7603ad3c8b08",
+      "sha256": "a446af6d015c2fab55b6539a55ed384cc2e573c97525d997bb36a1195256ca1f",
+      "sourceDimensions": [
+        768,
+        1024
+      ],
+      "retainedDimensions": [
+        768,
+        1024
+      ],
+      "bytes": 150225,
+      "operation": "aspect-preserving resize, JPEG re-encode; no content alterations"
+    },
+    {
+      "path": "/dealer-stock/listing-285007.jpg",
+      "sourceUrl": "https://auto-ae-prod-storage.storage.googleapis.com/auto_sharjah_toyota_land_cruiser_sale_285007865191750",
+      "listingUrl": "https://auto.ae/sharjah/sale/car/toyota/toyota-land-cruiser-300-series-2023/id/285007",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "sourceSha256": "9d0d0a85a03eb8c7f33951a367cc2487d007393abfa3aca157896e8e12bbd2de",
+      "sha256": "b781610db7c4784c85d44e28d1fdf07d80b0a217880c9a9b12fcb0731a593d05",
+      "sourceDimensions": [
+        768,
+        1024
+      ],
+      "retainedDimensions": [
+        768,
+        1024
+      ],
+      "bytes": 159694,
+      "operation": "aspect-preserving resize, JPEG re-encode; no content alterations"
+    },
+    {
+      "path": "/dealer-stock/listing-285005.jpg",
+      "sourceUrl": "https://auto-ae-prod-storage.storage.googleapis.com/auto_sharjah_toyota_hiace_sale_285005865190500",
+      "listingUrl": "https://auto.ae/sharjah/sale/car/toyota/toyota-hiace-h300-2026/id/285005",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "sourceSha256": "70ab19f29d1279a9f4d12252bd07737731e5b376438d0f0df51968c9b9678868",
+      "sha256": "19457aea1de5912102b3c7112514fff87c9716b2fb52e2f227974c51acec7257",
+      "sourceDimensions": [
+        1066,
+        800
+      ],
+      "retainedDimensions": [
+        1066,
+        800
+      ],
+      "bytes": 182665,
+      "operation": "aspect-preserving resize, JPEG re-encode; no content alterations"
+    }
+  ],
+  "factualCaveats": [
+    "Current public showroom phone replaces the older retained contact; no phone validity test performed."
+  ],
+  "excludedSourceContent": [
+    "Prices and finance amounts",
+    "Private or personal contact details",
+    "Protected email placeholders and marketplace support emails",
+    "Unverified service, warranty, review or finance claims"
+  ],
+  "dealerApproval": "unknown"
+}

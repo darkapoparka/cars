@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "slug": "hesham-safwat-used-cars-tr-llc-sp",
+  "dealerId": "ae-sharjah-hesham-safwat-used-cars",
+  "business": {
+    "name": "Hesham Safwat Used Cars TR LLC SP",
+    "city": "Sharjah",
+    "region": "Sharjah",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "Hesham safwat used cars, 8FWJ+GQG Al ruqaa Al Hamrah Shaikh - Sheikh Mohammed Bin Zayed Rd - near tasjeel Village - Al Ruqa Al H",
+    "phone": "+971506950599",
+    "phoneDisplay": "+971 50 695 0599",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://auto.ae/heshamsafwatusedcars/",
+    "hours": "Mon 10:00–22:00; Tue 10:00–22:00; Wed 10:00–22:00; Thu 10:00–22:00; Fri 10:00–22:00; Sat 10:00–22:00; Sun 10:00–22:00",
+    "sourceUrl": "https://auto.ae/heshamsafwatusedcars/",
+    "observedAt": "2026-10-19T20:01:39Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://auto.ae/heshamsafwatusedcars/",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "supports": [
+        "business-name",
+        "public-showroom-phone",
+        "showroom-address-where-consistent",
+        "advertised-stock-snapshot",
+        "published-hours-where-consistent"
+      ]
+    }
+  ]
+}

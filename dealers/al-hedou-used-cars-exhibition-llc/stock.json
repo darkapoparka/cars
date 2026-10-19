@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-hedou-used-cars-exhibition-llc",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:01:39Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "listing-227384",
+      "title": "Chevrolet Impala 2019",
+      "make": "Chevrolet",
+      "model": "Impala",
+      "year": 2019,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-227384.jpg"
+      ],
+      "sourceUrl": "https://auto.ae/sharjah/sale/car/chevrolet/chevrolet-impala-x-2019/id/227384",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 73000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-227381",
+      "title": "Kia Sorento 2019",
+      "make": "Kia",
+      "model": "Sorento",
+      "year": 2019,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-227381.jpg"
+      ],
+      "sourceUrl": "https://auto.ae/sharjah/sale/car/kia/kia-sorento-iii-prime-facelift-2019/id/227381",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 93000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-227378",
+      "title": "Kia Sorento 2019",
+      "make": "Kia",
+      "model": "Sorento",
+      "year": 2019,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-227378.jpg"
+      ],
+      "sourceUrl": "https://auto.ae/sharjah/sale/car/kia/kia-sorento-iii-prime-facelift-2019/id/227378",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 99000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

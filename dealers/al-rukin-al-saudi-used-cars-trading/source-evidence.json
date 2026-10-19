@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-rukin-al-saudi-used-cars-trading",
+  "researchId": "ae-sharjah-al-rukin-al-saudi-used-cars",
+  "observedAt": "2026-10-19T20:01:39Z",
+  "liveFetchPerformed": true,
+  "businessSources": [
+    {
+      "url": "https://auto.ae/alrukinalsaudi/",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "supports": [
+        "business-name",
+        "public-showroom-phone",
+        "showroom-address-where-consistent",
+        "advertised-stock-snapshot",
+        "published-hours-where-consistent"
+      ]
+    }
+  ],
+  "profile": {
+    "name": "Al Rukin Al Saudi",
+    "url": "https://auto.ae/alrukinalsaudi/",
+    "sha256": "69eb1bc53b115fdc5199e884898f727b0c8a9f3047e852d51ecac492ced45c2a",
+    "retrieval": "public HTML and embedded public showroom structured data"
+  },
+  "stockMode": "dated-listing-snapshot",
+  "inventoryCountMeaning": "Three selected publicly advertised listings; physical availability, freshness and uniqueness are not independently confirmed.",
+  "media": [
+    {
+      "path": "/dealer-stock/listing-216278.jpg",
+      "sourceUrl": "https://auto-ae-prod-storage.storage.googleapis.com/auto_sharjah_genesis_gv70_sale_2162781",
+      "listingUrl": "https://auto.ae/sharjah/sale/car/genesis/genesis-gv70-i-2023/id/216278",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "sourceSha256": "df1f9ac3481f5997b72399918af8376678060d463aef70acc2d2acdf290d6ec0",
+      "sha256": "d1ff1f19aaf098f775fb346237810a9e46409a8042fc048aa5710fe4c8386124",
+      "sourceDimensions": [
+        800,
+        533
+      ],
+      "retainedDimensions": [
+        800,
+        533
+      ],
+      "bytes": 92169,
+      "operation": "aspect-preserving resize, JPEG re-encode; no content alterations"
+    },
+    {
+      "path": "/dealer-stock/listing-216129.jpg",
+      "sourceUrl": "https://auto-ae-prod-storage.storage.googleapis.com/auto_sharjah_renault_duster_sale_2161291",
+      "listingUrl": "https://auto.ae/sharjah/sale/car/renault/renault-duster-ii-2023/id/216129",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "sourceSha256": "8835c567952cf47a4147334ac472d84b2108261cbf152a72d1d8cf1e21c23d8c",
+      "sha256": "3d6b5adc45bdd537651d8903e18267d4284a837e6674ae37492ec0e32cf54f9f",
+      "sourceDimensions": [
+        800,
+        600
+      ],
+      "retainedDimensions": [
+        800,
+        600
+      ],
+      "bytes": 104631,
+      "operation": "aspect-preserving resize, JPEG re-encode; no content alterations"
+    },
+    {
+      "path": "/dealer-stock/listing-216128.jpg",
+      "sourceUrl": "https://auto-ae-prod-storage.storage.googleapis.com/auto_sharjah_mg_5_sale_2161281",
+      "listingUrl": "https://auto.ae/sharjah/sale/car/mg/mg-5-i-facelift-2022/id/216128",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "sourceSha256": "a553b2b42482c926b464acded33087235a4bd52b312ea0bef10c323f2701b56f",
+      "sha256": "d2c6a239c68c03c0e5f7514990a4e5527b7a52de34a25b6a569bdc5de889a04e",
+      "sourceDimensions": [
+        800,
+        533
+      ],
+      "retainedDimensions": [
+        800,
+        533
+      ],
+      "bytes": 83683,
+      "operation": "aspect-preserving resize, JPEG re-encode; no content alterations"
+    }
+  ],
+  "factualCaveats": [
+    "Current public showroom phone replaces the older retained contact; no phone validity test performed."
+  ],
+  "excludedSourceContent": [
+    "Prices and finance amounts",
+    "Private or personal contact details",
+    "Protected email placeholders and marketplace support emails",
+    "Unverified service, warranty, review or finance claims"
+  ],
+  "dealerApproval": "unknown"
+}

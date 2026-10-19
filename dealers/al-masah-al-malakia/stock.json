@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-masah-al-malakia",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:01:39Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "listing-220062",
+      "title": "Toyota Camry 2022",
+      "make": "Toyota",
+      "model": "Camry",
+      "year": 2022,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-220062.jpg"
+      ],
+      "sourceUrl": "https://auto.ae/sharjah/sale/car/toyota/toyota-camry-viii-xv70-facelift-2022/id/220062",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 76000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-220061",
+      "title": "Hyundai Kona 2022",
+      "make": "Hyundai",
+      "model": "Kona",
+      "year": 2022,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-220061.jpg"
+      ],
+      "sourceUrl": "https://auto.ae/sharjah/sale/car/hyundai/hyundai-kona-i-facelift-2022/id/220061",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 75000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-220060",
+      "title": "Nissan Altima 2021",
+      "make": "Nissan",
+      "model": "Altima",
+      "year": 2021,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-220060.jpg"
+      ],
+      "sourceUrl": "https://auto.ae/sharjah/sale/car/nissan/nissan-altima-vi-l34-2021/id/220060",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 18000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

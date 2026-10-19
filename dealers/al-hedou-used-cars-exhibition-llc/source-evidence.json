@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-hedou-used-cars-exhibition-llc",
+  "researchId": "ae-sharjah-al-hedou-used-cars",
+  "observedAt": "2026-10-19T20:01:39Z",
+  "liveFetchPerformed": true,
+  "businessSources": [
+    {
+      "url": "https://auto.ae/alhedou/",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "supports": [
+        "business-name",
+        "public-showroom-phone",
+        "showroom-address-where-consistent",
+        "advertised-stock-snapshot",
+        "published-hours-where-consistent"
+      ]
+    }
+  ],
+  "profile": {
+    "name": "Al Hedou Used Cars",
+    "url": "https://auto.ae/alhedou/",
+    "sha256": "a4fd8b5db30cd0c1a48b1ce335f8ec351a03fe059ebdf34b94a288a187f0b293",
+    "retrieval": "public HTML and embedded public showroom structured data"
+  },
+  "stockMode": "dated-listing-snapshot",
+  "inventoryCountMeaning": "Three selected publicly advertised listings; physical availability, freshness and uniqueness are not independently confirmed.",
+  "media": [
+    {
+      "path": "/dealer-stock/listing-227384.jpg",
+      "sourceUrl": "https://auto-ae-prod-storage.storage.googleapis.com/auto_sharjah_chevrolet_impala_sale_227384638165740",
+      "listingUrl": "https://auto.ae/sharjah/sale/car/chevrolet/chevrolet-impala-x-2019/id/227384",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "sourceSha256": "08f180522916f2967f0ee434845c9676f374f30236c2b448f370bcdb4de75489",
+      "sha256": "0b001faefa5b5c9dcc122686cfe5457a39432d84055c05848785588da9f081b5",
+      "sourceDimensions": [
+        1066,
+        800
+      ],
+      "retainedDimensions": [
+        1066,
+        800
+      ],
+      "bytes": 197607,
+      "operation": "aspect-preserving resize, JPEG re-encode; no content alterations"
+    },
+    {
+      "path": "/dealer-stock/listing-227381.jpg",
+      "sourceUrl": "https://auto-ae-prod-storage.storage.googleapis.com/auto_sharjah_kia_sorento_sale_227381638163280",
+      "listingUrl": "https://auto.ae/sharjah/sale/car/kia/kia-sorento-iii-prime-facelift-2019/id/227381",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "sourceSha256": "0ff9364d64cd278463ed5178022039e50656e329655f475473c401b874a110bf",
+      "sha256": "053790feef24696a14099ee04a0d36a42eb3850267fe34100512eb6f47e6faa7",
+      "sourceDimensions": [
+        800,
+        600
+      ],
+      "retainedDimensions": [
+        800,
+        600
+      ],
+      "bytes": 110187,
+      "operation": "aspect-preserving resize, JPEG re-encode; no content alterations"
+    },
+    {
+      "path": "/dealer-stock/listing-227378.jpg",
+      "sourceUrl": "https://auto-ae-prod-storage.storage.googleapis.com/auto_sharjah_kia_sorento_sale_227378638161790",
+      "listingUrl": "https://auto.ae/sharjah/sale/car/kia/kia-sorento-iii-prime-facelift-2019/id/227378",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "sourceSha256": "8a8e1b1272ee109dd66e4fb06ee3dcce523da686c137c3a78b74d5a44c7e24ef",
+      "sha256": "babb0baf6d47f5c114f5a6df49b27f8a8694a968b4548828a4b383f63dda0f1b",
+      "sourceDimensions": [
+        800,
+        600
+      ],
+      "retainedDimensions": [
+        800,
+        600
+      ],
+      "bytes": 112901,
+      "operation": "aspect-preserving resize, JPEG re-encode; no content alterations"
+    }
+  ],
+  "factualCaveats": [],
+  "excludedSourceContent": [
+    "Prices and finance amounts",
+    "Private or personal contact details",
+    "Protected email placeholders and marketplace support emails",
+    "Unverified service, warranty, review or finance claims"
+  ],
+  "dealerApproval": "unknown"
+}

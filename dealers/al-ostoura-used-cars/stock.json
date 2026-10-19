@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-ostoura-used-cars",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:01:39Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "listing-285008",
+      "title": "Toyota Land Cruiser 2014",
+      "make": "Toyota",
+      "model": "Land Cruiser",
+      "year": 2014,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-285008.jpg"
+      ],
+      "sourceUrl": "https://auto.ae/sharjah/sale/car/toyota/toyota-land-cruiser-200-series-facelift-1-2014/id/285008",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 192000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-285007",
+      "title": "Toyota Land Cruiser 2023",
+      "make": "Toyota",
+      "model": "Land Cruiser",
+      "year": 2023,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-285007.jpg"
+      ],
+      "sourceUrl": "https://auto.ae/sharjah/sale/car/toyota/toyota-land-cruiser-300-series-2023/id/285007",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 71000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-285005",
+      "title": "Toyota HiAce 2026",
+      "make": "Toyota",
+      "model": "HiAce",
+      "year": 2026,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-285005.jpg"
+      ],
+      "sourceUrl": "https://auto.ae/sharjah/sale/car/toyota/toyota-hiace-h300-2026/id/285005",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageOnRequest": true,
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

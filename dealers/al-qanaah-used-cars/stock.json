@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-qanaah-used-cars",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:01:39Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "listing-219793",
+      "title": "Kia Optima 2017",
+      "make": "Kia",
+      "model": "Optima",
+      "year": 2017,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-219793.jpg"
+      ],
+      "sourceUrl": "https://auto.ae/sharjah/sale/car/kia/kia-optima-iv-2017/id/219793",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 80000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-219791",
+      "title": "Mazda 3 2012",
+      "make": "Mazda",
+      "model": "3",
+      "year": 2012,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-219791.jpg"
+      ],
+      "sourceUrl": "https://auto.ae/sharjah/sale/car/mazda/mazda-3-ii-bl-facelift-2012/id/219791",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 130000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-219789",
+      "title": "Honda Accord 2011",
+      "make": "Honda",
+      "model": "Accord",
+      "year": 2011,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-219789.jpg"
+      ],
+      "sourceUrl": "https://auto.ae/sharjah/sale/car/honda/honda-accord-viii-facelift-2011/id/219789",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 280000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

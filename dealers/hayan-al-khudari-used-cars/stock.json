@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "hayan-al-khudari-used-cars",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:01:39Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "listing-281478",
+      "title": "Tesla Model 3 2026",
+      "make": "Tesla",
+      "model": "Model 3",
+      "year": 2026,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-281478.jpg"
+      ],
+      "sourceUrl": "https://auto.ae/sharjah/sale/car/tesla/tesla-model-3-i-facelift-2026/id/281478",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 16000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-281476",
+      "title": "Mercedes-Benz E-Class 2021",
+      "make": "Mercedes-Benz",
+      "model": "E-Class",
+      "year": 2021,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-281476.jpg"
+      ],
+      "sourceUrl": "https://auto.ae/sharjah/sale/car/mercedes-benz/mercedes-benz-e-class-v-w213-s213-c238-facelift-2021/id/281476",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 110000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-281474",
+      "title": "Jetour T2 2025",
+      "make": "Jetour",
+      "model": "T2",
+      "year": 2025,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-281474.jpg"
+      ],
+      "sourceUrl": "https://auto.ae/sharjah/sale/car/jetour/jetour-t2-2025/id/281474",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 52000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

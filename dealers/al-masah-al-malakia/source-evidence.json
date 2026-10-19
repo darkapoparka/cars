@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-masah-al-malakia",
+  "researchId": "ae-sharjah-al-masah-al-malakia",
+  "observedAt": "2026-10-19T20:01:39Z",
+  "liveFetchPerformed": true,
+  "businessSources": [
+    {
+      "url": "https://auto.ae/almasahalmalakia/",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "supports": [
+        "business-name",
+        "public-showroom-phone",
+        "showroom-address-where-consistent",
+        "advertised-stock-snapshot",
+        "published-hours-where-consistent"
+      ]
+    }
+  ],
+  "profile": {
+    "name": "Al Masah Al Malakia",
+    "url": "https://auto.ae/almasahalmalakia/",
+    "sha256": "3b7e3b969e4364df6558ed70affd5af58c3214d2a334f6f734ade257adc5c9cd",
+    "retrieval": "public HTML and embedded public showroom structured data"
+  },
+  "stockMode": "dated-listing-snapshot",
+  "inventoryCountMeaning": "Three selected publicly advertised listings; physical availability, freshness and uniqueness are not independently confirmed.",
+  "media": [
+    {
+      "path": "/dealer-stock/listing-220062.jpg",
+      "sourceUrl": "https://auto-ae-prod-storage.storage.googleapis.com/auto_sharjah_toyota_camry_sale_2200621",
+      "listingUrl": "https://auto.ae/sharjah/sale/car/toyota/toyota-camry-viii-xv70-facelift-2022/id/220062",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "sourceSha256": "b972d3eaa42a5ad67c0a8f8c9d8423b0e0bd05de001fb20015fb64a9a92df5dc",
+      "sha256": "b21905420a91465d36ce871ba8af548759d0d88186956796d34dd04cec3daf33",
+      "sourceDimensions": [
+        960,
+        1280
+      ],
+      "retainedDimensions": [
+        960,
+        1280
+      ],
+      "bytes": 144111,
+      "operation": "aspect-preserving resize, JPEG re-encode; no content alterations"
+    },
+    {
+      "path": "/dealer-stock/listing-220061.jpg",
+      "sourceUrl": "https://auto-ae-prod-storage.storage.googleapis.com/auto_sharjah_hyundai_kona_sale_2200612",
+      "listingUrl": "https://auto.ae/sharjah/sale/car/hyundai/hyundai-kona-i-facelift-2022/id/220061",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "sourceSha256": "f6f5ca642453e3cb4d5a968da78c4f3ff430d5c35410fab0427d5f4a8938e8cf",
+      "sha256": "9eff16fc77912416399ec33ff5cbcba721162d75cdc98d739df2473c29e8785a",
+      "sourceDimensions": [
+        960,
+        1280
+      ],
+      "retainedDimensions": [
+        960,
+        1280
+      ],
+      "bytes": 160930,
+      "operation": "aspect-preserving resize, JPEG re-encode; no content alterations"
+    },
+    {
+      "path": "/dealer-stock/listing-220060.jpg",
+      "sourceUrl": "https://auto-ae-prod-storage.storage.googleapis.com/auto_sharjah_nissan_altima_sale_2200601",
+      "listingUrl": "https://auto.ae/sharjah/sale/car/nissan/nissan-altima-vi-l34-2021/id/220060",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "sourceSha256": "d7e4c71a5a44daefbe058c233168aa25cafcdfe73bd508fae39fdad5aaf4cd18",
+      "sha256": "ebdf93133753f035f49b2134c81d5b9be7bcb30ee9881b13c3805fe8bdf5f15a",
+      "sourceDimensions": [
+        1280,
+        1264
+      ],
+      "retainedDimensions": [
+        1280,
+        1264
+      ],
+      "bytes": 195887,
+      "operation": "aspect-preserving resize, JPEG re-encode; no content alterations"
+    }
+  ],
+  "factualCaveats": [
+    "Current public showroom phone replaces the older retained contact; no phone validity test performed."
+  ],
+  "excludedSourceContent": [
+    "Prices and finance amounts",
+    "Private or personal contact details",
+    "Protected email placeholders and marketplace support emails",
+    "Unverified service, warranty, review or finance claims"
+  ],
+  "dealerApproval": "unknown"
+}

@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-qanaah-used-cars",
+  "researchId": "ae-sharjah-al-qanaah-used-cars",
+  "observedAt": "2026-10-19T20:01:39Z",
+  "liveFetchPerformed": true,
+  "businessSources": [
+    {
+      "url": "https://auto.ae/alqanaah/",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "supports": [
+        "business-name",
+        "public-showroom-phone",
+        "showroom-address-where-consistent",
+        "advertised-stock-snapshot",
+        "published-hours-where-consistent"
+      ]
+    }
+  ],
+  "profile": {
+    "name": "Al Qanaah Used Cars",
+    "url": "https://auto.ae/alqanaah/",
+    "sha256": "25d87923b4f09762f6af2859d667b04fd80136ac47736ed33b2d23db7f745b0a",
+    "retrieval": "public HTML and embedded public showroom structured data"
+  },
+  "stockMode": "dated-listing-snapshot",
+  "inventoryCountMeaning": "Three selected publicly advertised listings; physical availability, freshness and uniqueness are not independently confirmed.",
+  "media": [
+    {
+      "path": "/dealer-stock/listing-219793.jpg",
+      "sourceUrl": "https://auto-ae-prod-storage.storage.googleapis.com/auto_sharjah_kia_optima_sale_2197931",
+      "listingUrl": "https://auto.ae/sharjah/sale/car/kia/kia-optima-iv-2017/id/219793",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "sourceSha256": "afe364d9aa1b8942b289fe09e57ef3948b1f1cde1a92dd2c504514dffdb374d8",
+      "sha256": "245141a3f5f30b600bbeba5988969206da909422d41d11316938faa414f11c5d",
+      "sourceDimensions": [
+        1280,
+        960
+      ],
+      "retainedDimensions": [
+        1280,
+        960
+      ],
+      "bytes": 193277,
+      "operation": "aspect-preserving resize, JPEG re-encode; no content alterations"
+    },
+    {
+      "path": "/dealer-stock/listing-219791.jpg",
+      "sourceUrl": "https://auto-ae-prod-storage.storage.googleapis.com/auto_sharjah_mazda_3_sale_2197911",
+      "listingUrl": "https://auto.ae/sharjah/sale/car/mazda/mazda-3-ii-bl-facelift-2012/id/219791",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "sourceSha256": "ab63a144c8b02b23fd0641ecab96d1b4f5a3e19de0e217aa1ccc5a05d5b61da7",
+      "sha256": "92b816c4a0228028e239b748d11a63c5fac74daa90cdf8ed9fb01af908a7ed55",
+      "sourceDimensions": [
+        1280,
+        960
+      ],
+      "retainedDimensions": [
+        1280,
+        960
+      ],
+      "bytes": 199602,
+      "operation": "aspect-preserving resize, JPEG re-encode; no content alterations"
+    },
+    {
+      "path": "/dealer-stock/listing-219789.jpg",
+      "sourceUrl": "https://auto-ae-prod-storage.storage.googleapis.com/auto_sharjah_honda_accord_sale_2197891",
+      "listingUrl": "https://auto.ae/sharjah/sale/car/honda/honda-accord-viii-facelift-2011/id/219789",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "sourceSha256": "31feb1fe0c2a3ca37346274541f093cce16e007f745c8c1817c17ddb8088dfc1",
+      "sha256": "641ac51c6a0fb1f4b7df43d281207445d91153e4edb23259a726394e2cedd676",
+      "sourceDimensions": [
+        1280,
+        960
+      ],
+      "retainedDimensions": [
+        1280,
+        960
+      ],
+      "bytes": 178624,
+      "operation": "aspect-preserving resize, JPEG re-encode; no content alterations"
+    }
+  ],
+  "factualCaveats": [
+    "Current public showroom phone replaces the older retained contact; no phone validity test performed.",
+    "Marketplace address text is partial; retained as published, no missing street text invented."
+  ],
+  "excludedSourceContent": [
+    "Prices and finance amounts",
+    "Private or personal contact details",
+    "Protected email placeholders and marketplace support emails",
+    "Unverified service, warranty, review or finance claims"
+  ],
+  "dealerApproval": "unknown"
+}

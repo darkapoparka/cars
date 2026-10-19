@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-saqr-al-mutaliq-used-car",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:01:39Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "listing-218509",
+      "title": "Volkswagen Golf GTI 2019",
+      "make": "Volkswagen",
+      "model": "Golf GTI",
+      "year": 2019,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-218509.jpg"
+      ],
+      "sourceUrl": "https://auto.ae/sharjah/sale/car/volkswagen/volkswagen-golf-gti-vii-facelift-2019/id/218509",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 111000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-218507",
+      "title": "Chevrolet Captiva 2024",
+      "make": "Chevrolet",
+      "model": "Captiva",
+      "year": 2024,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-218507.jpg"
+      ],
+      "sourceUrl": "https://auto.ae/sharjah/sale/car/chevrolet/chevrolet-captiva-ii-2024/id/218507",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 23000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-218491",
+      "title": "Hyundai Creta 2021",
+      "make": "Hyundai",
+      "model": "Creta",
+      "year": 2021,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-218491.jpg"
+      ],
+      "sourceUrl": "https://auto.ae/sharjah/sale/car/hyundai/hyundai-creta-ii-2021/id/218491",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 130000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

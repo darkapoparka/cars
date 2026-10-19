@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-rukin-al-saudi-used-cars-trading",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:01:39Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "listing-216278",
+      "title": "Genesis GV70 2023",
+      "make": "Genesis",
+      "model": "GV70",
+      "year": 2023,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-216278.jpg"
+      ],
+      "sourceUrl": "https://auto.ae/sharjah/sale/car/genesis/genesis-gv70-i-2023/id/216278",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 61000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-216129",
+      "title": "Renault Duster 2023",
+      "make": "Renault",
+      "model": "Duster",
+      "year": 2023,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-216129.jpg"
+      ],
+      "sourceUrl": "https://auto.ae/sharjah/sale/car/renault/renault-duster-ii-2023/id/216129",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 61000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-216128",
+      "title": "MG 5 (GT) 2022",
+      "make": "MG",
+      "model": "5 (GT)",
+      "year": 2022,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-216128.jpg"
+      ],
+      "sourceUrl": "https://auto.ae/sharjah/sale/car/mg/mg-5-i-facelift-2022/id/216128",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 102000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

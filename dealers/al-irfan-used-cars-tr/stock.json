@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-irfan-used-cars-tr",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:01:39Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "listing-2124596",
+      "title": "Kia Sportage 1.6L Standard 2025",
+      "make": "Kia",
+      "model": "Sportage",
+      "year": 2025,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-2124596.jpg"
+      ],
+      "sourceUrl": "https://uae.yallamotor.com/used-cars/kia/sportage/2025/used-kia-sportage-2025-sharjah-2124596",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageOnRequest": true,
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-2124192",
+      "title": "Nissan Altima 2.5 SL 2014",
+      "make": "Nissan",
+      "model": "Altima",
+      "year": 2014,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-2124192.jpg"
+      ],
+      "sourceUrl": "https://uae.yallamotor.com/used-cars/nissan/altima/2014/used-nissan-altima-2014-sharjah-2124192",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageOnRequest": true,
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-2124189",
+      "title": "Mercedes-Benz E-Class E 300 2012",
+      "make": "Mercedes Benz",
+      "model": "E Class",
+      "year": 2012,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-2124189.jpg"
+      ],
+      "sourceUrl": "https://uae.yallamotor.com/used-cars/mercedes-benz/e-class/2012/used-mercedes-benz-e-class-2012-sharjah-2124189",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageOnRequest": true,
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

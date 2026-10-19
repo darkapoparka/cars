@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "slug": "al-rukin-al-saudi-used-cars-trading",
+  "dealerId": "ae-sharjah-al-rukin-al-saudi-used-cars",
+  "business": {
+    "name": "Al Rukin Al Saudi Used Cars Trading",
+    "city": "Sharjah",
+    "region": "Sharjah",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "الركن السعودي Alrukn Al saudi, souq alharaj showroom 259 - Al Ruqa Al Hamra - Sharjah - United Arab Emirates",
+    "phone": "+971527920709",
+    "phoneDisplay": "+971 52 792 0709",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://auto.ae/alrukinalsaudi/",
+    "hours": "Mon 09:00–21:00; Tue 09:00–21:00; Wed 09:00–21:00; Thu 09:00–21:00; Fri 09:00–21:00; Sat 09:00–21:00; Sun 09:00–21:00",
+    "sourceUrl": "https://auto.ae/alrukinalsaudi/",
+    "observedAt": "2026-10-19T20:01:39Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://auto.ae/alrukinalsaudi/",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "supports": [
+        "business-name",
+        "public-showroom-phone",
+        "showroom-address-where-consistent",
+        "advertised-stock-snapshot",
+        "published-hours-where-consistent"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "dealer": "almalakyah-cars-al-malakyah-cars",
+  "researchId": "ae-sharjah-almalakyah-cars",
+  "observedAt": "2026-10-19T20:01:39Z",
+  "liveFetchPerformed": true,
+  "businessSources": [
+    {
+      "url": "https://auto.ae/almalakyahcars/",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "supports": [
+        "business-name",
+        "public-showroom-phone",
+        "showroom-address-where-consistent",
+        "advertised-stock-snapshot",
+        "published-hours-where-consistent"
+      ]
+    }
+  ],
+  "profile": {
+    "name": "Almalakyah Cars",
+    "url": "https://auto.ae/almalakyahcars/",
+    "sha256": "c24100952667dad8d9072d489aa2c23997c344c56fa3667e8fe9f0fd3dbc2056",
+    "retrieval": "public HTML and embedded public showroom structured data"
+  },
+  "stockMode": "dated-listing-snapshot",
+  "inventoryCountMeaning": "Three selected publicly advertised listings; physical availability, freshness and uniqueness are not independently confirmed.",
+  "media": [
+    {
+      "path": "/dealer-stock/listing-285024.jpg",
+      "sourceUrl": "https://auto-ae-prod-storage.storage.googleapis.com/auto_sharjah_infiniti_qx80_sale_285024865214830",
+      "listingUrl": "https://auto.ae/sharjah/sale/car/infiniti/infiniti-qx80-i-z62-facelift-3-2022/id/285024",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "sourceSha256": "4883f33a5e39ebfa3b9ccd0a59390100c39882246ce359367b4bd119447d0e83",
+      "sha256": "bf6e00bbf977c19b79e27ec663c4c3ae10e2feb243e1dea323d2de7e78c0cb58",
+      "sourceDimensions": [
+        1300,
+        731
+      ],
+      "retainedDimensions": [
+        1280,
+        720
+      ],
+      "bytes": 164053,
+      "operation": "aspect-preserving resize, JPEG re-encode; no content alterations"
+    },
+    {
+      "path": "/dealer-stock/listing-285011.jpg",
+      "sourceUrl": "https://auto-ae-prod-storage.storage.googleapis.com/auto_sharjah_toyota_land_cruiser_sale_285011865199440",
+      "listingUrl": "https://auto.ae/sharjah/sale/car/toyota/toyota-land-cruiser-300-series-2023/id/285011",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "sourceSha256": "ad0c207a2d1bc980edafaa56a7e5074add276fd23bb2399416fa2e8e64675d25",
+      "sha256": "a80c0bea5b5543b4870a5d9b54498cbcde7382c7b3feb6071969aedbb1925496",
+      "sourceDimensions": [
+        1124,
+        1500
+      ],
+      "retainedDimensions": [
+        959,
+        1280
+      ],
+      "bytes": 158267,
+      "operation": "aspect-preserving resize, JPEG re-encode; no content alterations"
+    },
+    {
+      "path": "/dealer-stock/listing-285003.jpg",
+      "sourceUrl": "https://auto-ae-prod-storage.storage.googleapis.com/auto_sharjah_toyota_land_cruiser_sale_285003865192130",
+      "listingUrl": "https://auto.ae/sharjah/sale/car/toyota/toyota-land-cruiser-300-series-2024/id/285003",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "sourceSha256": "69aa8294157a64ea0e954cf98cc03e95b191f72ee4f9dd6ae5baee4fb908f635",
+      "sha256": "1a5d52b34ff8fe6028ec47c3ac7ee9702e820bb312b214aa8ca140893a4d7509",
+      "sourceDimensions": [
+        1211,
+        1500
+      ],
+      "retainedDimensions": [
+        1033,
+        1280
+      ],
+      "bytes": 194222,
+      "operation": "aspect-preserving resize, JPEG re-encode; no content alterations"
+    }
+  ],
+  "factualCaveats": [
+    "Current public showroom phone replaces the older retained contact; no phone validity test performed.",
+    "Address omitted: AUTO.AE address uses another Al Madina Al Malakeya identity and industrial-area premises, while the retained dealer sign is showroom 48. That conflicting address and its hours need confirmation."
+  ],
+  "excludedSourceContent": [
+    "Prices and finance amounts",
+    "Private or personal contact details",
+    "Protected email placeholders and marketplace support emails",
+    "Unverified service, warranty, review or finance claims"
+  ],
+  "dealerApproval": "unknown"
+}

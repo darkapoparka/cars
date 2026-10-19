@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "dealer": "hesham-safwat-used-cars-tr-llc-sp",
+  "researchId": "ae-sharjah-hesham-safwat-used-cars",
+  "observedAt": "2026-10-19T20:01:39Z",
+  "liveFetchPerformed": true,
+  "businessSources": [
+    {
+      "url": "https://auto.ae/heshamsafwatusedcars/",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "supports": [
+        "business-name",
+        "public-showroom-phone",
+        "showroom-address-where-consistent",
+        "advertised-stock-snapshot",
+        "published-hours-where-consistent"
+      ]
+    }
+  ],
+  "profile": {
+    "name": "Hesham Safwat  Used Cars",
+    "url": "https://auto.ae/heshamsafwatusedcars/",
+    "sha256": "9e4199a85800ba2174c051c44cb907c6b796bbf0340375b01cf969c4e74f8373",
+    "retrieval": "public HTML and embedded public showroom structured data"
+  },
+  "stockMode": "dated-listing-snapshot",
+  "inventoryCountMeaning": "Three selected publicly advertised listings; physical availability, freshness and uniqueness are not independently confirmed.",
+  "media": [
+    {
+      "path": "/dealer-stock/listing-287745.jpg",
+      "sourceUrl": "https://auto-ae-prod-storage.storage.googleapis.com/auto_sharjah_bmw_8_series_sale_287745876401830",
+      "listingUrl": "https://auto.ae/sharjah/sale/car/bmw/bmw-8-series-ii-g14g15g16-facelift-2022/id/287745",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "sourceSha256": "b5ca0d48672e1a33d67685fb894466b6a4b7571128b200ba355e94ca55d048fc",
+      "sha256": "59b9cf6198d0de384a4675b5d505ad00e304c7dbd9100b2eefce01a5997ec4e8",
+      "sourceDimensions": [
+        810,
+        1080
+      ],
+      "retainedDimensions": [
+        810,
+        1080
+      ],
+      "bytes": 133201,
+      "operation": "aspect-preserving resize, JPEG re-encode; no content alterations"
+    },
+    {
+      "path": "/dealer-stock/listing-287163.jpg",
+      "sourceUrl": "https://auto-ae-prod-storage.storage.googleapis.com/auto_sharjah_hyundai_creta_sale_287163874712300",
+      "listingUrl": "https://auto.ae/sharjah/sale/car/hyundai/hyundai-creta-i-2019/id/287163",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "sourceSha256": "4d23158d5f5884230bcb258703330401ca0bd11e10cf44960526b559008972b1",
+      "sha256": "0a9c87ed977025b378f8d92b42bbdd229d556a887a179f21d66c5dc102e3c081",
+      "sourceDimensions": [
+        810,
+        1080
+      ],
+      "retainedDimensions": [
+        810,
+        1080
+      ],
+      "bytes": 168445,
+      "operation": "aspect-preserving resize, JPEG re-encode; no content alterations"
+    },
+    {
+      "path": "/dealer-stock/listing-287162.jpg",
+      "sourceUrl": "https://auto-ae-prod-storage.storage.googleapis.com/auto_sharjah_lexus_lx_sale_287162874710440",
+      "listingUrl": "https://auto.ae/sharjah/sale/car/lexus/lexus-lx-iii-2010/id/287162",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "sourceSha256": "365c589780f2cbfdd58657cc3dfda0f9bdbb45690a0294631d69dcdc9bc0ed5b",
+      "sha256": "83d18f3952b5b4957bc8355ee172f527f25300f7571a03b10b99731adbf5ffec",
+      "sourceDimensions": [
+        810,
+        1080
+      ],
+      "retainedDimensions": [
+        810,
+        1080
+      ],
+      "bytes": 162593,
+      "operation": "aspect-preserving resize, JPEG re-encode; no content alterations"
+    }
+  ],
+  "factualCaveats": [
+    "Current public showroom phone replaces the older retained contact; no phone validity test performed."
+  ],
+  "excludedSourceContent": [
+    "Prices and finance amounts",
+    "Private or personal contact details",
+    "Protected email placeholders and marketplace support emails",
+    "Unverified service, warranty, review or finance claims"
+  ],
+  "dealerApproval": "unknown"
+}

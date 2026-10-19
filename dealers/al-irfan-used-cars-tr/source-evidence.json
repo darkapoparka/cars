@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-irfan-used-cars-tr",
+  "researchId": "ae-sharjah-al-irfan-used-cars-tr",
+  "observedAt": "2026-10-19T20:01:39Z",
+  "liveFetchPerformed": true,
+  "businessSources": [
+    {
+      "url": "https://uae.yallamotor.com/auto-companies/al-irfan-used-cars-tr-8702",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "supports": [
+        "business-name",
+        "public-showroom-phone",
+        "showroom-address-where-consistent",
+        "advertised-stock-snapshot",
+        "published-hours-where-consistent"
+      ]
+    }
+  ],
+  "profile": {
+    "name": "Al Irfan Used Cars TR — Auto Company in UAE",
+    "url": "https://uae.yallamotor.com/auto-companies/al-irfan-used-cars-tr-8702",
+    "sha256": "847a2da635ec05608c5260296982df94fea8c618714ea4f2a77ff58144605b76",
+    "retrieval": "public HTML and embedded public showroom structured data"
+  },
+  "stockMode": "dated-listing-snapshot",
+  "inventoryCountMeaning": "Three selected publicly advertised listings; physical availability, freshness and uniqueness are not independently confirmed.",
+  "media": [
+    {
+      "path": "/dealer-stock/listing-2124596.jpg",
+      "sourceUrl": "https://ymimg1.b8cdn.com/resized/used_car/2026/7/21/2124596/pictures/16920745/webp_mobile_listing_main_kia_sportage_2025_in_sharjah_2124596.webp",
+      "listingUrl": "https://uae.yallamotor.com/used-cars/kia/sportage/2025/used-kia-sportage-2025-sharjah-2124596",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "sourceSha256": "e44c886720d3e4054ab7fbcfdd8eb14ec1f736cb9d34d4607bf8de3801639c24",
+      "sha256": "7278172c2430e804570b9919e6d8d5ca87a9c1a8a65303b0b9afba6bb0ecb650",
+      "sourceDimensions": [
+        480,
+        270
+      ],
+      "retainedDimensions": [
+        480,
+        270
+      ],
+      "bytes": 25760,
+      "operation": "aspect-preserving resize, JPEG re-encode; no content alterations"
+    },
+    {
+      "path": "/dealer-stock/listing-2124192.jpg",
+      "sourceUrl": "https://ymimg1.b8cdn.com/resized/used_car/2026/7/19/2124192/pictures/16917357/webp_mobile_listing_main_nissan_altima_2014_in_sharjah_2124192.webp",
+      "listingUrl": "https://uae.yallamotor.com/used-cars/nissan/altima/2014/used-nissan-altima-2014-sharjah-2124192",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "sourceSha256": "0c82bd997ddf5efa02b10668561dadd34069920a156e97372325ec18022663d7",
+      "sha256": "dc94c4848ce1fd6b7d528e845938bf01a249085fbfed1df1a1be86e6401fcca7",
+      "sourceDimensions": [
+        480,
+        270
+      ],
+      "retainedDimensions": [
+        480,
+        270
+      ],
+      "bytes": 27676,
+      "operation": "aspect-preserving resize, JPEG re-encode; no content alterations"
+    },
+    {
+      "path": "/dealer-stock/listing-2124189.jpg",
+      "sourceUrl": "https://ymimg1.b8cdn.com/resized/used_car/2026/7/19/2124189/pictures/16917328/webp_mobile_listing_main_mercedes-benz_e-class_2012_in_sharjah_2124189.webp",
+      "listingUrl": "https://uae.yallamotor.com/used-cars/mercedes-benz/e-class/2012/used-mercedes-benz-e-class-2012-sharjah-2124189",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "sourceSha256": "409867804511788e6e69c3de6439cea234e5279a37e995e2adfebae0311d8842",
+      "sha256": "471154c7c18f6734aeca70b24d66839e90c7e133249fd8a81556be0d6b501120",
+      "sourceDimensions": [
+        480,
+        270
+      ],
+      "retainedDimensions": [
+        480,
+        270
+      ],
+      "bytes": 29081,
+      "operation": "aspect-preserving resize, JPEG re-encode; no content alterations"
+    }
+  ],
+  "factualCaveats": [
+    "YallaMotor showroom phone and address read. Email omitted because extraction supplies only a protected placeholder; linked marketplace profile is not represented as an official domain."
+  ],
+  "excludedSourceContent": [
+    "Prices and finance amounts",
+    "Private or personal contact details",
+    "Protected email placeholders and marketplace support emails",
+    "Unverified service, warranty, review or finance claims"
+  ],
+  "dealerApproval": "unknown"
+}

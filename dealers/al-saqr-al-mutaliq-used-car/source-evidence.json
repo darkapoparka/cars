@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-saqr-al-mutaliq-used-car",
+  "researchId": "ae-sharjah-al-saqr-al-mutaliq-used-car",
+  "observedAt": "2026-10-19T20:01:39Z",
+  "liveFetchPerformed": true,
+  "businessSources": [
+    {
+      "url": "https://auto.ae/alsaqr/",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "supports": [
+        "business-name",
+        "public-showroom-phone",
+        "showroom-address-where-consistent",
+        "advertised-stock-snapshot",
+        "published-hours-where-consistent"
+      ]
+    }
+  ],
+  "profile": {
+    "name": "Al Saqr Al Mutaliq",
+    "url": "https://auto.ae/alsaqr/",
+    "sha256": "21e7acacac94904ac257e084f5c0bfc8c6452d6b79f7e692553c393bf472e029",
+    "retrieval": "public HTML and embedded public showroom structured data"
+  },
+  "stockMode": "dated-listing-snapshot",
+  "inventoryCountMeaning": "Three selected publicly advertised listings; physical availability, freshness and uniqueness are not independently confirmed.",
+  "media": [
+    {
+      "path": "/dealer-stock/listing-218509.jpg",
+      "sourceUrl": "https://auto-ae-prod-storage.storage.googleapis.com/auto_sharjah_volkswagen_golf_gti_sale_2185091",
+      "listingUrl": "https://auto.ae/sharjah/sale/car/volkswagen/volkswagen-golf-gti-vii-facelift-2019/id/218509",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "sourceSha256": "0a1dcb2cb4578ad1992e9df5bf4974e6ad7033806e1e076e7f0e3aa457721740",
+      "sha256": "af73f7e007192f6c37015e08abf6a52a62c4e27a72cd313e33f73f8d15f2c0bc",
+      "sourceDimensions": [
+        800,
+        600
+      ],
+      "retainedDimensions": [
+        800,
+        600
+      ],
+      "bytes": 103309,
+      "operation": "aspect-preserving resize, JPEG re-encode; no content alterations"
+    },
+    {
+      "path": "/dealer-stock/listing-218507.jpg",
+      "sourceUrl": "https://auto-ae-prod-storage.storage.googleapis.com/auto_sharjah_chevrolet_captiva_sale_2185071",
+      "listingUrl": "https://auto.ae/sharjah/sale/car/chevrolet/chevrolet-captiva-ii-2024/id/218507",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "sourceSha256": "943250374382f0ab57d0a7e8d2e7308d439c777dd219c5b1f41d8e90db33f1d2",
+      "sha256": "b2dee404699940dbb73605f0d71b2fa5a3b21dbf0e81031f39a80f3edbe50925",
+      "sourceDimensions": [
+        800,
+        600
+      ],
+      "retainedDimensions": [
+        800,
+        600
+      ],
+      "bytes": 115235,
+      "operation": "aspect-preserving resize, JPEG re-encode; no content alterations"
+    },
+    {
+      "path": "/dealer-stock/listing-218491.jpg",
+      "sourceUrl": "https://auto-ae-prod-storage.storage.googleapis.com/auto_sharjah_hyundai_creta_sale_2184911",
+      "listingUrl": "https://auto.ae/sharjah/sale/car/hyundai/hyundai-creta-ii-2021/id/218491",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "sourceSha256": "b86c021c4cd4ac02c71822b3e3063e6caed53f9b4fd7c37abecb90146923306f",
+      "sha256": "e5e9b628cf32c491d6b290705312c0d420999e9f4754bf6261502162185be026",
+      "sourceDimensions": [
+        800,
+        600
+      ],
+      "retainedDimensions": [
+        800,
+        600
+      ],
+      "bytes": 113045,
+      "operation": "aspect-preserving resize, JPEG re-encode; no content alterations"
+    }
+  ],
+  "factualCaveats": [
+    "Current public showroom phone replaces the older retained contact; no phone validity test performed."
+  ],
+  "excludedSourceContent": [
+    "Prices and finance amounts",
+    "Private or personal contact details",
+    "Protected email placeholders and marketplace support emails",
+    "Unverified service, warranty, review or finance claims"
+  ],
+  "dealerApproval": "unknown"
+}

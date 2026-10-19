@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "dealer": "hayan-al-khudari-used-cars",
+  "researchId": "ae-sharjah-hayan-al-khudari-used-cars",
+  "observedAt": "2026-10-19T20:01:39Z",
+  "liveFetchPerformed": true,
+  "businessSources": [
+    {
+      "url": "https://auto.ae/hayanalkhudari/",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "supports": [
+        "business-name",
+        "public-showroom-phone",
+        "showroom-address-where-consistent",
+        "advertised-stock-snapshot",
+        "published-hours-where-consistent"
+      ]
+    }
+  ],
+  "profile": {
+    "name": "Hayan Alkhudari Used Cars",
+    "url": "https://auto.ae/hayanalkhudari/",
+    "sha256": "556878b2a8fbbea33ef57ac6f2b58e3f53408025f3bfaaada8027f55aa308442",
+    "retrieval": "public HTML and embedded public showroom structured data"
+  },
+  "stockMode": "dated-listing-snapshot",
+  "inventoryCountMeaning": "Three selected publicly advertised listings; physical availability, freshness and uniqueness are not independently confirmed.",
+  "media": [
+    {
+      "path": "/dealer-stock/listing-281478.jpg",
+      "sourceUrl": "https://auto-ae-prod-storage.storage.googleapis.com/auto_sharjah_tesla_model_3_sale_281478850474730",
+      "listingUrl": "https://auto.ae/sharjah/sale/car/tesla/tesla-model-3-i-facelift-2026/id/281478",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "sourceSha256": "e315317b4252d0e84fcc33162ce36c2f927f5647eea87d66f9725a3c0ece3fd7",
+      "sha256": "ee05c454cbc672c8b7ca748113b1ca42ec78a878ac437c65ff3df6e99ea5d573",
+      "sourceDimensions": [
+        1066,
+        800
+      ],
+      "retainedDimensions": [
+        1066,
+        800
+      ],
+      "bytes": 178548,
+      "operation": "aspect-preserving resize, JPEG re-encode; no content alterations"
+    },
+    {
+      "path": "/dealer-stock/listing-281476.jpg",
+      "sourceUrl": "https://auto-ae-prod-storage.storage.googleapis.com/auto_sharjah_mercedes_benz_e_class_sale_281476850125990",
+      "listingUrl": "https://auto.ae/sharjah/sale/car/mercedes-benz/mercedes-benz-e-class-v-w213-s213-c238-facelift-2021/id/281476",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "sourceSha256": "1f00fc83c45220a5d8f1555952208ab976c6f69b1585b72288e7684c26cccb10",
+      "sha256": "d710de2e8152f5f69448126ab1391e83f1a2aae7d1776c7161b40d8391e649cf",
+      "sourceDimensions": [
+        1066,
+        800
+      ],
+      "retainedDimensions": [
+        1066,
+        800
+      ],
+      "bytes": 179945,
+      "operation": "aspect-preserving resize, JPEG re-encode; no content alterations"
+    },
+    {
+      "path": "/dealer-stock/listing-281474.jpg",
+      "sourceUrl": "https://auto-ae-prod-storage.storage.googleapis.com/auto_sharjah_jetour_t2_sale_281474850123910",
+      "listingUrl": "https://auto.ae/sharjah/sale/car/jetour/jetour-t2-2025/id/281474",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "sourceSha256": "acc7778ba3646add1ff94ed4ae52e6171fc533159a224d762f320712c13c0392",
+      "sha256": "9206af8c71095ec735159ed7ecd17c9e3720b0dbf766c7a2bf05a7ef7d989bb9",
+      "sourceDimensions": [
+        1066,
+        800
+      ],
+      "retainedDimensions": [
+        1066,
+        800
+      ],
+      "bytes": 180586,
+      "operation": "aspect-preserving resize, JPEG re-encode; no content alterations"
+    }
+  ],
+  "factualCaveats": [],
+  "excludedSourceContent": [
+    "Prices and finance amounts",
+    "Private or personal contact details",
+    "Protected email placeholders and marketplace support emails",
+    "Unverified service, warranty, review or finance claims"
+  ],
+  "dealerApproval": "unknown"
+}
