@@ -1,6 +1,9 @@
 name: Dealer pack deploy queue
 
 on:
+  push:
+    branches: [astra/m2-fast-deploy]
+    paths: [docs/m2/pilot-inspection-request.json]
   workflow_dispatch:
     inputs:
       action:
@@ -39,8 +42,57 @@ permissions:
 # GitHub concurrency groups replace pending runs. Durable requests and the
 # account CAS claim serialize this workflow; no Actions concurrency group is used.
 jobs:
+  inspect-pilot:
+    if: ${{ github.event_name == 'push' }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    permissions:
+      contents: read
+      actions: read
+    env:
+      CARS_DEALER_PACK_TOOL_PACKAGE: ${{ github.workspace }}/runtime/dealer-pack-deploy-tools/package.json
+      CARS_SHARP_ROOT: ${{ github.workspace }}/runtime/dealer-pack-deploy-tools
+    steps:
+      - name: Check out the exact branch inspection code and request
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 1
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /scripts/
+            /dealers/
+            /docs/**/*.json
+            /docs/**/*.md
+            /leads/expansion-2026-10-18/
+            /templates.lock.json
+            /workspace.json
+            /catalog.json
+            /clients/index.json
+            /.github/
+            /.gitignore
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: '26.10.0'
+          package-manager-cache: false
+      - name: Install the pinned deterministic input inspection tools
+        run: npm install --prefix runtime/dealer-pack-deploy-tools --ignore-scripts --no-audit --no-fund --save-exact sharp@0.35.5 blake3-wasm@2.1.5
+      - name: Inspect only the three exact proof artifacts; never enqueue or deploy
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: node scripts/inspect-dealer-pack-pilot.mjs --request docs/m2/pilot-inspection-request.json --report runtime/dealer-pack-dispatch/pilot-summary.json
+      - name: Retain the pilot dry run and explicit credential blocker
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: dealer-pack-pilot-inspection--${{ github.run_id }}
+          path: runtime/dealer-pack-dispatch/*.json
+          if-no-files-found: error
+          retention-days: 3
   deploy:
-    if: ${{ github.event_name != 'workflow_run' || (github.event.workflow_run.head_repository.full_name == github.repository && (github.event.workflow_run.conclusion == 'success' || github.event.workflow_run.conclusion == 'failure')) }}
+    if: ${{ (github.event_name == 'workflow_dispatch' || github.event_name == 'schedule' || github.event_name == 'workflow_run') && (github.event_name != 'workflow_run' || (github.event.workflow_run.head_repository.full_name == github.repository && (github.event.workflow_run.conclusion == 'success' || github.event.workflow_run.conclusion == 'failure'))) }}
     runs-on: ubuntu-24.04
     timeout-minutes: 350
     permissions:
@@ -132,11 +184,13 @@ jobs:
             const drain=JSON.parse(fs.readFileSync(file,'utf8')),reports=[];
             for(const row of drain.results??[]){
               const receipt=row.receipt;if(!receipt?.deployedAt)continue;
-              try{reports.push(await readPackMetrics({slug:receipt.slug,start:new Date(Date.parse(receipt.deployedAt)-60000).toISOString(),end:new Date().toISOString(),startupTimeMs:receipt.runtime?.startupTimeMs??null}));}
+              try{reports.push(await readPackMetrics({slug:receipt.slug,start:new Date(Date.parse(receipt.deployedAt)-60000).toISOString(),end:new Date().toISOString(),startupTimeMs:receipt.runtime?.startupTimeMs??null,cpuLimitMs:receipt.runtime?.cpuLimitMs??null,cpuLimitSource:receipt.runtime?.cpuLimitSource??null}));}
               catch(error){reports.push({slug:receipt.slug,status:'unavailable',providerWrites:0,reason:error.message});}
             }
-            fs.writeFileSync('runtime/dealer-pack-dispatch/metrics.json',JSON.stringify({providerWrites:0,reports,complete:reports.length>0&&reports.every(row=>row.status==='observed-without-errors')},null,2)+'\n');
+            const complete=reports.length>0&&reports.every(row=>row.status==='observed-without-errors'&&row.withinLimits===true);
+            fs.writeFileSync('runtime/dealer-pack-dispatch/metrics.json',JSON.stringify({providerWrites:0,reports,complete},null,2)+'\n');
             console.log('Retained '+reports.length+' runtime reports; missing or lagged samples remain explicitly unavailable.');
+            if(reports.length&&!complete){console.error('Runtime acceptance is incomplete or outside limits; repeat the read-only metrics check after ingestion. Existing deployment receipts remain retained.');process.exitCode=1;}
           }
           NODE
       - name: Record an unavailable deployment credential as a blocked write request

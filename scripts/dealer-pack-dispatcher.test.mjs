@@ -77,10 +77,22 @@ test('real ZIP extraction reconstructs only declared sealed blobs and rejects ex
 });
 
 test('runtime evidence converts documented microseconds/bytes and leaves absent samples unavailable',()=>{
-  const options={slug:'dealer-one',start:at,end,startupTimeMs:32},empty={status:200,success:true,result:{viewer:{accounts:[{workersInvocationsAdaptive:[]}]}}};
+  const options={slug:'dealer-one',start:at,end,startupTimeMs:32,cpuLimitMs:30000,cpuLimitSource:'provider-version-response'},empty={status:200,success:true,result:{viewer:{accounts:[{workersInvocationsAdaptive:[]}]}}};
   const waiting=assessPackMetrics(empty,options);assert.equal(waiting.status,'awaiting-ingestion');assert.equal(waiting.maxP99CpuMs,null);assert.equal(waiting.maxP99MemoryMiB,null);
+  assert.equal(waiting.withinLimits,null);assert.equal(waiting.limitChecks.cpu.withinLimit,null);
   const row={dimensions:{scriptName:'cars-dealer-one',status:'success'},sum:{requests:6,errors:0},quantiles:{cpuTimeP50:2500,cpuTimeP99:15000,memoryUsageBytesP50:1024**2,memoryUsageBytesP99:1.5*1024**2}},reply=structuredClone(empty);reply.result.viewer.accounts[0].workersInvocationsAdaptive=[row];
   const report=assessPackMetrics(reply,options);assert.equal(report.maxP99CpuMs,15);assert.equal(report.maxP99MemoryMiB,1.5);assert.equal(report.status,'observed-without-errors');assert.equal(report.startupTimeMs,32);
+  assert.equal(report.withinLimits,true);assert.equal(report.cpuLimitMs,30000);assert.equal(report.limitChecks.startup.limitMs,1000);assert.equal(report.limitChecks.memory.limitMiB,128);
   row.sum.errors=1;assert.equal(assessPackMetrics(reply,options).status,'observed-errors');row.sum.errors=0;row.dimensions.scriptName='cars-another';assert.throws(()=>assessPackMetrics(reply,options),/another Worker/);
   assert.throws(()=>packMetricsRequest({...options,end:'2026-10-21T20:00:00.000Z'}),/24hours/);
+});
+test('runtime acceptance needs an explicit CPU cap and startup and compares observed quantiles with each ceiling',()=>{
+  const options={slug:'dealer-one',start:at,end,startupTimeMs:1000,cpuLimitMs:30000,cpuLimitSource:'successful-explicit-upload-request'},row={dimensions:{scriptName:'cars-dealer-one',status:'success'},sum:{requests:6,errors:0},quantiles:{cpuTimeP50:2500,cpuTimeP99:15000,memoryUsageBytesP50:1024**2,memoryUsageBytesP99:1.5*1024**2}},reply={status:200,success:true,result:{viewer:{accounts:[{workersInvocationsAdaptive:[row]}]}}};
+  assert.equal(assessPackMetrics(reply,options).withinLimits,true);
+  for(const missing of [{startupTimeMs:null},{cpuLimitMs:null}]){const report=assessPackMetrics(reply,{...options,...missing});assert.equal(report.withinLimits,null);assert.equal(report.status,'incomplete');}
+  for(const exceeded of [{startupTimeMs:1001},{cpuLimitMs:10}]){const report=assessPackMetrics(reply,{...options,...exceeded});assert.equal(report.withinLimits,false);assert.equal(report.status,'observed-limits-exceeded');}
+  row.quantiles.cpuTimeP99=30000000;assert.equal(assessPackMetrics(reply,options).withinLimits,true);row.quantiles.cpuTimeP99=30001000;assert.equal(assessPackMetrics(reply,options).limitChecks.cpu.withinLimit,false);
+  row.quantiles.cpuTimeP99=15000;row.quantiles.memoryUsageBytesP99=129*1024**2;assert.equal(assessPackMetrics(reply,options).limitChecks.memory.withinLimit,false);
+  delete row.quantiles.memoryUsageBytesP99;assert.equal(assessPackMetrics(reply,options).withinLimits,null);
+  row.sum.errors=1;const errors=assessPackMetrics(reply,options);assert.equal(errors.withinLimits,false);assert.equal(errors.status,'observed-errors');
 });

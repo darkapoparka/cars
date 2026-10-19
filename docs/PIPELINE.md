@@ -20,6 +20,8 @@ A failed pack is excluded with a reason and the remaining packs continue. Downst
 
 The three proof builds at `26b626c979d2cfd653b3015d94ff8fe2df724a93` passed all 54 comparisons against the final M1 bundles: **zero unexpected pixels** across 81,340,510 pixels on each side. The only changes were 29,691 pixels inside the explicitly requested FAB artwork correction and nine antialiasing pixels. See [the visual evidence and exact comparison method](m2/VISUAL-EQUIVALENCE-2026-10-19.md) and [all screenshot/report digests](m2/visual-equivalence-2026-10-19.json). This is visual equivalence with that named artwork exception, not a claim of complete pixel identity.
 
+The continuation also authenticated the newer three proof bundles at `19feec837524c04f88f3c3ccbd0586e0771574c3`, [run 39319236637](https://github.com/darkapoparka/cars/actions/runs/39319236637). All 54 views match the previously compared M2 output: 51 PNGs are byte-identical; the other three contain nine classified antialiasing pixels in total and zero unexpected pixels. The [carry-forward receipt](m2/visual-carry-forward-19feec8.json) binds the exact archive, build, QA and screenshot hashes. The HEAD correction changes only HTTP request handling; fresh native builds and their screenshots remain required after that executable change.
+
 No template frontend or styling source is changed. Signature desktop example cards remain unchanged. V2 uses the same active-design FAB artwork as the 100 live dealers, as explicitly requested. M1 pack FABs used the dealer's mark, so that requested correction is a real, bounded visual difference from M1.
 
 `scripts/compare-dealer-pack-screenshots.mjs` authenticates the final green M1 run `39284983471`, attempt 2, commit `a999878`, its exact reports and all 54 screenshot hashes. It compares all six designs at 320, 390 and 1280 pixels with threshold 0, no resizing, equal dimensions, and zero unexpected pixels. Only classified edge antialiasing is accepted. `--allow-fab-correction` additionally permits the exact verified fleet image inside the existing 46 by 34 CSS-pixel FAB image bounds; the surrounding button, count, shadow and page pixels remain strict. Its report explicitly distinguishes that authorized difference from global pixel identity.
@@ -193,13 +195,27 @@ The command is `scripts/dispatch-dealer-pack-queue.mjs`; the workflow is **Deale
 
 The queue lives in `queue.json` on the dedicated `cars-deploy-queue` branch of `darkapoparka/cars`. It was initialized once from complete live Workers, routes and custom-domain inventories and the owner's capacity policy. Do not reinitialize it or replace it with a new empty file. This state branch does not contain research packs. Each request has a deterministic identity, an ordered durable status history, and per-dealer receipts. Four batches append with compare-and-swap; conflicting writers reread and retry. CI uses a normal fast-forward Git push from the exact fetched queue head, while the connector uses the Contents API's current-blob SHA compare-and-swap.
 
-Requests are persisted after authenticating their small manifest/source metadata, before the account executor downloads large shards. The winning executor drains requests from all batches through one non-expiring account claim. There is no GitHub Actions concurrency group to replace pending runs. Manual and 15-minute scheduled drains can service retained work. A missing provider credential or another active executor leaves requests retained. Before merge, scheduled and `workflow_run` execution cannot use this new workflow on `main`; use a manual run of the reviewed M2 branch or the connector pilot. After merge, scheduled and automatic drains execute maintained `main` code, with exact pack-source commits mounted separately. Scripts from research pack branches are never executed by the deployer.
+Requests are persisted after authenticating their small manifest/source metadata, before the account executor downloads large shards. The winning executor drains requests from all batches through one non-expiring account claim. There is no GitHub Actions concurrency group to replace pending runs. Manual and 15-minute scheduled drains can service retained work. A missing provider credential or another active executor leaves requests retained. Before merge, scheduled and `workflow_run` execution cannot use this new workflow on `main`; manual dispatch also requires the workflow to be available on the default branch, so do not assume an unregistered branch-only workflow can be dispatched. The read-only pre-merge pilot trigger below resolves inspection without merging or writing to the provider. After merge, scheduled and automatic drains execute maintained `main` code, with exact pack-source commits mounted separately. Scripts from research pack branches are never executed by the deployer.
 
 Immediately before every create, the claim owner obtains a new paginated live inventory through the modern Workers API, including reserved Worker records. It checks the full protected baseline, canonical name/origin, current routes/domains, saved ownership receipts, and remaining capacity. A cached listing or a local-file lock is insufficient. The baseline inventory contained exactly 100 Workers, all mapped to protected dealers, and no non-dealer Workers: all 400 slots fit at that observation. Any new unrelated account Worker reduces the available expansion count and is reported before a create.
 
 The only create is modern `POST /accounts/{account_id}/workers/workers` with exactly `cars-<slug>`. It fails on an existing name. Subsequent version uploads address the returned immutable Worker ID, set `deploy:false`, and are activated only through the guarded owned-version deployment call. The route is exactly `<slug>.webpreviews.site/*`. Every consequential provider write has a durable preceding intent. The 100 baseline Workers, their identities and routes are never candidates for create, overwrite, route reassignment, update or rollback.
 
 An earlier deploy is reusable only when the dedicated queue's own receipt binds the same dealer, canonical identity, immutable Worker ID and provider ownership tags. A same-name Worker without that evidence remains a collision. Rollback selects a previously recorded version belonging to that same pack; it does not compile or import another dealer's version.
+
+### Pre-merge three-proof dry run
+
+The workflow has one branch push trigger, limited to changes to `docs/m2/pilot-inspection-request.json` on `astra/m2-fast-deploy`. The file must contain `schemaVersion: 1`, `action: "inspect"`, the exact completed `sourceRunId`, its full `sourceCommit`, and exactly `za-motors`, `wadishee-used-cars` and `granada-auto-sales` in `slugs`. The helper verifies the run/commit before downloading any bundles, then calls the ordinary `inspect` dispatcher. It rejects extra fields, other slugs and any write action.
+
+The `inspect-pilot` job has only `contents: read` and `actions: read`. The deployment job explicitly excludes push events. A present provider token adds the normal live provider reads; an absent token produces an authenticated offline bundle inspection and an explicit `blocked-missing-provider-token` report. Both outcomes have zero queue writes, zero provider writes and zero deployments. The artifact is `dealer-pack-pilot-inspection--RUN_ID`; it does not qualify a live preview.
+
+The same bounded helper on an authorized executor is:
+
+```sh
+node scripts/inspect-dealer-pack-pilot.mjs \
+  --request docs/m2/pilot-inspection-request.json \
+  --report runtime/dealer-pack-dispatch/pilot-summary.json
+```
 
 ### Exact batch go-live sequence
 
@@ -216,6 +232,19 @@ Each batch owner incorporates the reviewed M2 tooling into their own branch. The
    Review each failure and commit the mechanically migrated `dealers/` inputs on that batch owner's branch. The full assignment plan reports missing or invalid leads; it does not silently turn 100 into a smaller complete batch.
 
 2. **Build the exact committed batch.** Run **Dealer pack pipeline** on that branch with `batch: "1"`, leaving `slugs` empty. Retain its completed run ID. For a deliberately selected ready subset, supply the explicit slugs and `batch: "1"` together. The workflow validates each pack, builds valid entries across seven lanes, and retains qualified bundles independently.
+
+   Once the reviewed workflows are available on `main`, the exact GitHub CLI invocation is:
+
+   ```sh
+   gh workflow run dealer-pack-pipeline.yml --repo darkapoparka/cars \
+     --ref astra/batch-1 -f batch=1
+   gh run list --repo darkapoparka/cars --workflow dealer-pack-pipeline.yml \
+     --branch astra/batch-1 --limit 5 \
+     --json databaseId,headSha,status,conclusion,url
+   gh run watch BUILD_RUN_ID --repo darkapoparka/cars --exit-status
+   ```
+
+   Bind `BUILD_RUN_ID` to the exact committed batch SHA in that listing. A failed shared contracts job blocks all its artifacts; an unrelated pack failure does not erase independently qualified results.
 
 3. **Deploy dry-run.** Use **Dealer pack deploy queue** with `action: inspect`, that `source_run_id`, and `batch: "1"`. Leave `artifact_prefix` empty to inspect every lane. With credentials on an authorized executor, the identical CLI is:
 
@@ -240,7 +269,7 @@ Each batch owner incorporates the reviewed M2 tooling into their own branch. The
 
    Enqueue is durable and does not deploy. Drain uses the shared account claim and may also service requests already retained from the other batches. A losing executor exits with a retained-queue result, not a dropped request. Use the actual running GitHub workflow ID for the owner so stopped-run recovery can be authenticated. Automatic post-build intake uses the same path once the maintained deploy workflow is on `main`.
 
-5. **Hosted verify.** Every successful activation is immediately checked by the drainer before it records a passing deployment receipt. The check visits all six homes and sourced contact journeys at 390 pixels, requires HTTP 200, visible own name/logo, a sourced phone or its explicit absence policy, six correct FAB choices and usable open/Escape interaction, exact logo asset hashes, no overflow or page errors, and no known other dealer identity. It scans all checked-out pack facts plus the live registry. Requests are anonymous GET/HEAD; forms and enquiries are not submitted. Inspect the retained `dealer-pack-deploy-reports--DEPLOY_RUN_ID` artifact and per-dealer queue receipts. For an explicit repeat with retained exact inputs:
+5. **Hosted verify.** Every successful activation is immediately checked by the drainer before it records a passing deployment receipt. The check visits all six homes and sourced contact journeys at 390 pixels, requires HTTP 200 for both GET and bodyless HEAD, visible own name/logo, a sourced phone or its explicit absence policy, six correct FAB choices and usable open/Escape interaction, exact logo asset hashes, no overflow or page errors, and no known other dealer identity. HEAD follows only bounded same-origin redirects and retains their status evidence. Every design's compact receipt must contain passing HEAD evidence; a GET-only report cannot qualify. It scans all checked-out pack facts plus the live registry. Requests are anonymous GET/HEAD; forms and enquiries are not submitted. Inspect the retained `dealer-pack-deploy-reports--DEPLOY_RUN_ID` artifact and per-dealer queue receipts. For an explicit repeat with retained exact inputs:
 
    ```sh
    node scripts/verify-hosted-dealer-pack.mjs \
@@ -252,6 +281,22 @@ Each batch owner incorporates the reviewed M2 tooling into their own branch. The
    ```
 
    Use the exact pack source commit associated with the receipt; the verifier refuses a changed pack digest. A hosted failure is retained as a failure, with its owned Worker identity recorded for a guarded retry. It does not become a passing inventory entry.
+
+6. **Retain receipts and integrate accepted inventory.** Retain the exact build run, immutable transport artifact IDs and digests, inspection report, queue request IDs, drain artifact and hosted/metrics reports. The queue preserves fresh per-create counts and each owned Worker/version. Propose successful receipt integration only after hosted acceptance:
+
+   ```sh
+   node scripts/merge-dealer-pack-receipts.mjs \
+     --out runtime/DEPLOYMENT-INVENTORY.proposed.json
+   node scripts/merge-dealer-pack-receipts.mjs --write
+   ```
+
+   Review and commit the resulting coordinator inventory change. These commands do not deploy or push; rejected or unverified receipts do not become passing inventory entries.
+
+### HEAD compatibility for new bundles
+
+Existing live Workers were reported to return `HEAD /` as HTTP 500 while `GET /` was HTTP 200, including `kolarov-cars`, `centralauto-varna` and `batley-as-motor-group`. This release does not redeploy those dealers. Newly composed Workers handle HEAD through the same native GET representation, preserve its status and headers, cancel the unused response stream and return a bodyless response. Native redirects, conditional responses and genuine errors keep their status. Ordinary GET and write-method behavior and all template frontend files are unchanged.
+
+A later read-only check on October 19 at 21:38–21:40 UTC did not reproduce that earlier 500. Preserving HEAD through every redirect, Kolarov and CentralAuto returned 307 to `/bg` then 200; Batley returned 302 to `/en` then 200, all bodyless. A second check completed HEAD with a unique query before sending its matching GET and obtained the same results. These are current observations through the available proxy, not evidence that the old Workers were fixed or that the prior failure cannot recur. No cache purge or deployment occurred. See [the exact per-hop observations](m2/existing-head-observations-2026-10-19.json).
 
 ## Recovering an interrupted initial creation
 
@@ -293,14 +338,16 @@ The focused regression suite covers asset/version interruption, positive activat
 
 Full per-dealer hosted reports and screenshots remain separate artifacts. A queue receipt contains the six accepted design gate rows, the exact pack/output/version and origin, the 390-pixel width, language, completion time, and public identity coverage counts. Coverage arrays are represented by their counts and a digest. `receipt.hosted.sha256` binds the unchanged full report; `receipt.hosted.summarySha256` binds the compact `receipt.hosted.report`. The report scope explicitly says `compact-acceptance-summary`.
 
-A conservative synthetic scale test uses 400 exact request envelopes, 43-character slugs, complete source proofs, eight immutable shard artifact locators per request, successful create event histories, and accepted six-design hosted summaries. Its pretty-printed queue is **8,239,129 bytes**, leaving **8,538,087 bytes** under the existing **16,777,216-byte** queue cap. The fixture's full hosted reports include 400 pack identities each and are deliberately kept outside queue state. This is a serialized-state capacity test, not a hosted deployment timing or runtime measurement. CPU and memory are not inferred from receipt size.
+A conservative synthetic scale test uses 400 exact request envelopes, 43-character slugs, complete source proofs, eight immutable shard artifact locators per request, successful create event histories, accepted six-design GET/HEAD summaries and explicit runtime-limit evidence. Its pretty-printed queue is **8,756,729 bytes**, leaving **8,020,487 bytes** under the existing **16,777,216-byte** queue cap. The fixture's full hosted reports include 400 pack identities each and are deliberately kept outside queue state. This is a serialized-state capacity test, not a hosted deployment timing or runtime measurement. CPU and memory are not inferred from receipt size.
 
 
 ### Provider credentials and connector fallback
 
 The repository secret is exactly `CLOUDFLARE_API_TOKEN`. Minimum deployment scopes are **Account / Workers Scripts / Edit**, scoped to account `cb0007f242077bd759331f096eb75531`, and **Zone / Workers Routes / Edit**, scoped to the `webpreviews.site` zone `006e99b27c99b7ee85bc0642fa91fa14`. Add **Account / Account Analytics / Read** for the CPU/memory evidence. Fixed account and zone IDs mean no DNS Edit or zone-discovery permission is needed. The owner confirmation of Workers Paid is retained; the connector does not pretend to read a subscription it cannot inspect.
 
-When the secret is absent, the workflow reports that fact without exposing credentials and leaves authenticated requests durable. `scripts/dealer-pack-connector-bridge.mjs` exposes the same inspect/enqueue/drain/rollback core through private request/response files for the connected GitHub and Cloudflare transports. It is not an alternate unguarded uploader. Asset-session JWTs are short-lived, scoped upload credentials; request and response files are mode 0600 and deleted after consumption. Never commit them, print them into logs, or place them in public receipts.
+When the secret is absent, the workflow reports that fact without exposing credentials and leaves any already authenticated queue requests durable. An explicit inspection does not enqueue requests. `scripts/dealer-pack-connector-bridge.mjs` exposes the same inspect/enqueue/drain/rollback core through private request/response files for the connected GitHub and Cloudflare transports. It is not an alternate unguarded uploader. Asset-session JWTs are short-lived, scoped upload credentials; request and response files are mode 0600 and deleted after consumption. Never commit them, print them into logs, or place them in public receipts.
+
+For these proof bundles, the retained authenticated ZA upload audit found 747 module files totaling 33,343,749 bytes (largest module 7,672,531 bytes). The current version-upload endpoint requires every module's complete `content_base64` in one JSON request. The connected execute tool has no supported file or streaming input for that payload. The bridge therefore is not a qualified upload transport for this bundle size; use the GitHub executor's guarded uploader. Do not create a placeholder Worker while upload capability or the repository secret remains unresolved, and do not run Wrangler by hand. The missing secret blocks the live pilot, hosted identity checks and observed startup/CPU evidence; an offline dry run does not satisfy those live checks.
 
 ### Receipts, metrics and integration
 
@@ -317,12 +364,15 @@ The default command reads the authenticated queue and produces a reviewable prop
 
 Legacy registry inconsistencies are preserved and reported only when the complete old record is unchanged; new or changed records must pass current validation. The initial integration audit found one existing inconsistency: Al Reef records six variants with a packaging-version-3 label. This PR does not alter that dealer's record. Shared repository use is allowed for authenticated dealer packs with distinct `dealers/<slug>` source directories and pinned commits.
 
-The provider's version upload returns startup time. `read-dealer-pack-metrics.mjs` queries observed Workers CPU and V8 isolate-memory quantiles, requests, errors and statuses for an explicit time window. CPU quantiles are converted from microseconds; memory is isolate usage, not process RSS. Empty or delayed analytics remain `awaiting-ingestion`, never fabricated zero usage. Retain the measured interval and sample scope when making a capacity claim.
+The provider's version upload must return a finite startup time from 0 through 1,000 milliseconds before activation. Uploads explicitly retain a validated configured CPU budget, or set the current Paid default of 30,000 milliseconds when no budget was configured. The receipt records the requested budget and whether the accepted value came from the provider version response or the successful explicit request; a conflicting provider value is refused. Recovery applies the same startup and budget checks.
+
+`read-dealer-pack-metrics.mjs` queries observed Workers CPU and V8 isolate-memory quantiles, requests, errors and statuses for an explicit time window. CPU quantiles are converted from microseconds; memory is isolate usage, not process RSS. It compares startup with 1,000 ms, the maximum reported group P99 CPU with the bound CPU budget, and maximum group P99 isolate memory with 128 MiB. `withinLimits: true` requires complete measured inputs, no reported errors and all comparisons passing. This is sampled quantile evidence, not an exact observed peak or a load test. Empty or delayed analytics remain `awaiting-ingestion`, never fabricated zero usage. The deployment workflow does not pass its runtime acceptance step when measurements remain incomplete or exceed limits. Repeat the read-only metrics check after ingestion; that does not redeploy the dealer. Retain the measured interval and sample scope when making a capacity claim.
 
 ```sh
 node scripts/read-dealer-pack-metrics.mjs \
   --slug SLUG --start START_ISO --end END_ISO \
   --startup-ms OBSERVED_STARTUP_MS \
+  --cpu-limit-ms RECEIPT_CPU_LIMIT_MS \
   --report runtime/metrics/SLUG.json
 ```
 

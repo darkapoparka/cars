@@ -18,14 +18,14 @@ function fixture({count=100,existing=[]}={}){
     async snapshot({request,challenge}){calls.push('read:'+challenge.stage);const worker=workers.get(request.workerName),active=worker?.versionId;return {kind:'cars-live-pack-provider-snapshot',evidence:'authenticated-cloudflare-api',accountId:PACK_DEPLOY_ACCOUNT,zoneId:PACK_DEPLOY_ZONE,requestId:challenge.requestId,stage:challenge.stage,startedAt:challenge.notBefore,observedAt:now,complete:true,scripts:[...workers.values()].map(row=>({id:row.id,name:row.name,tags:row.tags})),scriptCount:workers.size,routes:structuredClone(routes),domains:[],target:worker?{exists:true,workerId:worker.id,workerName:worker.name,tags:[...worker.tags],versionId:active??null,versionTraffic:active?[{version_id:active,percentage:100}]:[],undeployed:!active,bindings:active?[{type:'assets',name:'ASSETS'}]:[],subdomain:worker.subdomain}:{exists:false}};},
     async createWorker({request,ownershipTags}){calls.push('create:'+request.workerName);if(workers.has(request.workerName)){const error=Error('Create-only conflict409');error.providerOutcomeKnown=true;throw error;}const value={id:id(request.workerName).slice(0,32),name:request.workerName,tags:[...ownershipTags],subdomain:{enabled:false,previews_enabled:false},versionId:null};workers.set(value.name,value);return structuredClone(value);},
     async prepareAssets(){calls.push('assets');return {completionToken:'not-a-real-token-for-tests',manifestDigest:id('assets'),assetFiles:12,uploadedFiles:12};},
-    async upload({request,workerId}){calls.push('upload:'+workerId);versionCounter++;return {workerId,workerName:request.workerName,versionId:String(versionCounter).padStart(8,'0')+'-2222-4222-8222-222222222222',startupTimeMs:32};},
+    async upload({request,workerId}){calls.push('upload:'+workerId);versionCounter++;return {workerId,workerName:request.workerName,versionId:String(versionCounter).padStart(8,'0')+'-2222-4222-8222-222222222222',startupTimeMs:32,requestedCpuLimitMs:30000,cpuLimitMs:30000,cpuLimitSource:'provider-version-response'};},
     async activateVersion({request,versionId}){calls.push('activate');workers.get(request.workerName).versionId=versionId;},
     async disableSubdomain({request}){calls.push('subdomain');workers.get(request.workerName).subdomain={enabled:false,previews_enabled:false};},
     async createRoute({request}){calls.push('route');const value={id:id(request.workerName+'route').slice(0,32),pattern:new URL(request.publicOrigin).hostname+'/*',script:request.workerName};routes.push(value);return value;},
     async rollbackVersion({request,versionId}){calls.push('rollback');workers.get(request.workerName).versionId=versionId;},
   };
   const candidate=request=>({verified:true,slug:request.slug,manifest:{pack:{benchmarkOnly:false}},packDigest:request.packDigest,releaseId:request.releaseId,releaseDigest:request.releaseDigest,outputDigest:request.outputDigest,sourceCommit:request.sourceCommit,sourceProof:{verified:true,repository:'darkapoparka/cars',commit:request.sourceCommit,path:'dealers/'+request.slug},qa:{success:true,packDigest:request.packDigest,releaseDigest:request.releaseDigest,outputDigest:request.outputDigest}});
-  const hosted=({request,receipt})=>({type:'cars-dealer-pack-hosted-qa',slug:request.slug,publicOrigin:request.publicOrigin,packDigest:request.packDigest,outputDigest:request.outputDigest,versionId:receipt?.versionId,width:390,success:true,finishedAt:now,providerWrites:0,language:'en',designs:keys.map(key=>({key,status:'passed',httpStatus:200,sixChoices:true,nameVisible:true,logoVisible:true,phoneStatus:'passed',foreignIdentityCount:0}))});
+  const hosted=({request,receipt})=>({type:'cars-dealer-pack-hosted-qa',slug:request.slug,publicOrigin:request.publicOrigin,packDigest:request.packDigest,outputDigest:request.outputDigest,versionId:receipt?.versionId,width:390,success:true,finishedAt:now,providerWrites:0,language:'en',designs:keys.map(key=>({key,status:'passed',httpStatus:200,headStatus:'passed',headHttpStatus:200,sixChoices:true,nameVisible:true,logoVisible:true,phoneStatus:'passed',foreignIdentityCount:0}))});
   const execute=async(request=input(),options={})=>{await enqueuePackDeployments(store,[request],{now:time});const row=await claimPackDeployment(store,{owner:'test-executor',requestId:request.id,now:time});assert.equal(row.value.claimed,true);return executeQueuedPackDeployment({store,claim:row.value.claim,provider,inspectCandidate:async value=>candidate(value),registry:{dealers:[]},verifyHosted:async value=>hosted(value),now:clock,...options});};
   return {queue,store,workers,routes,calls,provider,candidate,hosted,execute};
 }
@@ -56,6 +56,8 @@ test('two racing executors cannot both acquire the account claim and claims neve
 });
 test('a successful create uses create-only API, fresh capacity, immutable ID, owned route and durable hosted receipt',async()=>{
   const f=fixture(),result=await f.execute();assert.equal(result.status,'deployed');assert.equal(f.workers.size,101);assert.equal(result.receipt.counts.before,100);assert.equal(result.receipt.counts.after,101);assert.equal(result.receipt.hostedVerified,true);assert.equal(result.receipt.runtime.startupTimeMs,32);assert.equal(f.store.state.active,null);
+  assert.ok(result.receipt.hosted.report.designs.every(row=>row.headStatus==='passed'&&row.headHttpStatus===200));
+  assert.equal(result.receipt.runtime.startupWithinLimit,true);assert.equal(result.receipt.runtime.startupLimitMs,1000);assert.equal(result.receipt.runtime.cpuLimitMs,30000);assert.equal(result.receipt.runtime.requestedCpuLimitMs,30000);assert.equal(result.receipt.runtime.cpuLimitSource,'provider-version-response');
   const createIndex=f.calls.findIndex(value=>value.startsWith('create:'));assert.equal(f.calls[createIndex-1],'read:immediately-before-worker-create');assert.match(f.calls.find(value=>value.startsWith('upload:')),/^upload:[a-f0-9]{32}$/);assert.equal(f.routes[0].pattern,'dealer-one.webpreviews.site/*');assert.equal(f.store.state.receipts['dealer-one'].length,1);
   assert.deepEqual([...f.workers.keys()].filter(name=>name.startsWith('cars-protected-')).sort(),[...f.queue.baseline.workerNames].sort());
 });
@@ -102,6 +104,17 @@ test('a fresh count drift between first inspection and create blocks the final s
 test('malformed candidate and benchmark-only pack fail before any provider operation',async()=>{
   for(const change of [candidate=>({...candidate,packDigest:id('wrong')}),candidate=>({...candidate,benchmarkOnly:true})]){const f=fixture(),result=await f.execute(input(),{inspectCandidate:async request=>change(f.candidate(request))});assert.equal(result.status,'failed');assert.equal(f.calls.length,0);assert.equal(f.store.state.active,null);}
 });
+test('unavailable or excessive startup and a changed CPU cap block activation while preserving the owned reservation',async()=>{
+  const changes=[row=>({...row,startupTimeMs:null}),row=>({...row,startupTimeMs:1001}),row=>({...row,startupTimeMs:-1}),row=>({...row,cpuLimitMs:50000}),row=>({...row,requestedCpuLimitMs:50000})];
+  for(const change of changes){
+    const f=fixture(),original=f.provider.upload;f.provider.upload=async options=>change(await original(options));const result=await f.execute();
+    assert.equal(result.status,'needs-reconciliation');assert.equal(result.claimRetained,true);assert.match(result.error,/startup|CPU limit/);assert.equal(f.calls.includes('activate'),false);assert.equal(f.calls.includes('route'),false);assert.equal(f.workers.size,101);
+    const events=f.store.state.requests[input().id].events;assert.ok(events.some(row=>row.kind==='worker-upload-observed'&&row.versionId));assert.equal(events.some(row=>row.kind==='activate-version-intent'),false);assert.ok(f.store.state.active);
+  }
+});
+test('measured startup accepts zero and the1000ms ceiling without raising the requested CPU cap',async()=>{
+  for(const startupTimeMs of [0,1000]){const f=fixture(),original=f.provider.upload;f.provider.upload=async options=>({...await original(options),startupTimeMs});const result=await f.execute();assert.equal(result.status,'deployed');assert.equal(result.receipt.runtime.startupTimeMs,startupTimeMs);assert.equal(result.receipt.runtime.cpuLimitMs,30000);}
+});
 test('unknown create outcome retains durable claim and blocks another executor',async()=>{
   const f=fixture();f.provider.createWorker=async()=>{throw Error('Connection lost after sending create');};const result=await f.execute();assert.equal(result.status,'needs-reconciliation');assert.equal(result.claimRetained,true);assert.ok(f.store.state.active);await enqueuePackDeployments(f.store,[input('dealer-two')]);assert.equal((await claimPackDeployment(f.store,{owner:'another-runner'})).value.claimed,false);
 });
@@ -110,6 +123,14 @@ test('a missing route after known upload retains ownership intent for recovery',
 });
 test('hosted failure keeps a complete own receipt and allows unrelated packs to continue',async()=>{
   const f=fixture();const bad=await f.execute(input(),{verifyHosted:async options=>({...f.hosted(options),success:false})});assert.equal(bad.status,'failed');assert.equal(bad.receipt.hostedVerified,false);assert.ok(f.store.state.receipts['dealer-one']);assert.equal(f.store.state.active,null);assert.equal((await f.execute(input('dealer-two'))).status,'deployed');
+});
+test('successful GET cannot finalize a deployment when any design lacks or fails HEAD evidence',async()=>{
+  const mutations=[row=>{delete row.headStatus;delete row.headHttpStatus;},row=>{row.headStatus='failed';},row=>{row.headHttpStatus=500;}];
+  for(const mutate of mutations){
+    const f=fixture(),result=await f.execute(input(),{verifyHosted:async options=>{const report=f.hosted(options);mutate(report.designs[0]);return report;}});
+    assert.equal(result.status,'failed');assert.match(result.error,/HEAD/);assert.equal(result.receipt.hostedVerified,false);assert.equal(result.receipt.hosted,undefined);
+    assert.equal(f.store.state.requests[input().id].status,'failed');assert.equal(f.store.state.receipts['dealer-one'][0].receipt.hostedVerified,false);assert.equal(f.store.state.active,null);
+  }
 });
 test('rollback restores only an earlier same-pack hosted-qualified version and preserves the route/count',async()=>{
   const f=fixture(),first=await f.execute();await f.execute(input('dealer-one',{outputDigest:id('second')}));const original=f.store.state.receipts['dealer-one'][0],request=input('dealer-one',{action:'rollback',outputDigest:id('second'),rollbackTo:original.sha256});const result=await f.execute(request);assert.equal(result.status,'rolled-back');assert.equal(result.receipt.versionId,first.receipt.versionId);assert.equal(f.workers.size,101);assert.equal(f.routes.length,1);

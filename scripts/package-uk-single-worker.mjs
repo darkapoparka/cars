@@ -30,10 +30,18 @@ export function singleWorkerSource(freeStaticExperiment=null){return [
  ...(freeStaticExperiment?['import {createModernFreeStaticRuntime,modernSnapshotRequest} from "./modern-free-static-runtime.mjs";','import {resolveCarsNativePreferences} from "./modern/cars-native-preferences.js";']:[]),
  ...KEYS.filter(k=>k!=='router').map(k=>'import design_'+k.replaceAll('-','_')+' from "./'+k+'/'+(NEXT.has(k)?'index.js':'index.mjs')+'";'),
  ...(freeStaticExperiment?['const modernStaticManifest='+JSON.stringify(validateModernStaticManifest(freeStaticExperiment))+';','const modernStatic=createModernFreeStaticRuntime({manifest:modernStaticManifest,resolvePreferences:resolveCarsNativePreferences});']:[]),
- 'export default {async fetch(request, env, ctx) {',
+ 'async function dispatch(request, env, ctx) {',
  ...(freeStaticExperiment?[' if(!modernSnapshotRequest(request,modernStaticManifest)){const experimentResponse=await modernStatic.fetch(request,env);if(experimentResponse)return experimentResponse;}']:[]),
  ' const bindings={...env,'+KEYS.filter(k=>k!=='router').map(k=>'CARS_'+k.toUpperCase().replaceAll('-','_')+':{fetch:'+((freeStaticExperiment&&k==='modern')?'async r=>(await modernStatic.fetch(r,env))??design_modern.fetch(r,env,ctx)':'r=>design_'+k.replaceAll('-','_')+'.fetch(r,env,ctx)')+'}').join(',')+'};',
  ' return router.fetch(request,bindings);',
+ '}',
+ '// HEAD uses the same read-only response path as GET, including native redirects.',
+ '// Keep all status/representation headers and discard the unused stream without buffering it.',
+ 'export default {async fetch(request, env, ctx) {',
+ ' if(request.method!=="HEAD")return dispatch(request,env,ctx);',
+ ' const response=await dispatch(new Request(request,{method:"GET"}),env,ctx);',
+ ' if(response.body){const cancelled=response.body.cancel().catch(()=>{});if(ctx?.waitUntil)ctx.waitUntil(cancelled);else await cancelled;}',
+ ' return new Response(null,{status:response.status,statusText:response.statusText,headers:response.headers});',
  '}};',''].join('\n');}
 export function scopeCompiledModule(source,scopeImport,esbuild){
  assert(!source.includes('__CARS_FRAMEWORK_GLOBAL__'),'Private namespace identifier already occupied');

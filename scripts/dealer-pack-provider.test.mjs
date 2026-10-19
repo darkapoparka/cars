@@ -30,8 +30,15 @@ test('asset and module payloads preserve sealed bytes, MIME and native routing m
   const plan=packModuleUploadPlan(candidate,{request,assets:{completionToken:'test-only-completion-token'}});
   assert.deepEqual(body,{...plan,modules:plan.modules.map(({file,...module})=>({...module,content_base64:fs.readFileSync(path.join(candidate.directory,file.path)).toString('base64')}))});
   assert.equal(body.main_module,'server/worker.mjs');assert.deepEqual(body.bindings,[{type:'assets',name:'ASSETS'}]);assert.equal(body.assets.config.run_worker_first,false);assert.equal(body.assets.config.html_handling,'none');
+  assert.deepEqual(body.limits,{cpu_ms:30000});
   assert.equal(body.modules.find(row=>row.name==='server/native.wasm').content_type,'application/wasm');assert.equal(body.modules.find(row=>row.name==='_headers').content_type,'text/plain');
   for(const row of body.modules){const source=candidate.files.find(file=>file.path===row.name||file.path==='public/'+row.name);assert.equal(hash(Buffer.from(row.content_base64,'base64')),source.sha256);}
+});
+test('module upload preserves a configured lower CPU budget and rejects invalid runtime limits',t=>{
+  const candidate=bundle(t),options={request,assets:{completionToken:'test-only-completion-token'}};candidate.config.limits={cpu_ms:50,subrequests:1000};
+  assert.deepEqual(packModuleUploadPlan(candidate,options).limits,{cpu_ms:50,subrequests:1000});
+  for(const cpu_ms of [0,-1,300001,1.5,'50',null]){candidate.config.limits={cpu_ms};assert.throws(()=>packModuleUploadPlan(candidate,options),/CPU limit/);}
+  candidate.config.limits={cpu_ms:50,unsupported:true};assert.throws(()=>packModuleUploadPlan(candidate,options),/Unsupported/);
 });
 test('asset hashes match retained Wrangler4.149.0 golden values and preserve exact extensions',()=>{
   assert.equal(packAssetHash(Buffer.from('identical'),'index.html'),'de00984b532586084e5ed86f8bad77d9');
@@ -53,6 +60,13 @@ test('modern paginated inventory includes never-deployed reservations and refuse
   const drifting=cloudflarePackProvider({api:async operation=>{const response=await api(operation);if(operation.path.endsWith('/workers/workers')&&operation.query.page===2)response.result_info.total_count=202;return response;},now:()=>clock});
   await assert.rejects(()=>drifting.snapshot({request,challenge:{requestId:'new',stage:'test',notBefore:clock}}),/changed while paginating/);
 });
+test('modern inventory with total_count alone reads every full page plus its terminating page',async()=>{
+  for(const count of [100,200,500]){
+    const workers=Array.from({length:count},(_,i)=>({id:i.toString(16).padStart(32,'0'),name:'cars-protected-'+i,tags:[]})),pages=[];
+    const provider=cloudflarePackProvider({api:async operation=>{if(operation.path.endsWith('/workers/workers')){pages.push(operation.query.page);return ok(workers.slice((operation.query.page-1)*100,operation.query.page*100),{result_info:{total_count:count}});}return ok([]);},now:()=>clock});
+    const snapshot=await provider.snapshot({request,challenge:{requestId:'count-'+count,stage:'test',notBefore:clock}});assert.equal(snapshot.scriptCount,count);assert.deepEqual(pages,Array.from({length:count/100+1},(_,i)=>i+1));
+  }
+});
 test('create-only conflict reports a known failure and exposes no name-upsert request',async()=>{
   const calls=[],provider=cloudflarePackProvider({api:async operation=>{calls.push(operation);return {status:409,success:false,result:null};}});
   await assert.rejects(()=>provider.createWorker({request,ownershipTags:['cars-pack-v1']}),error=>error.providerOutcomeKnown===true&&/conflict/.test(error.message));assert.equal(calls.length,1);assert.equal(calls[0].method,'POST');assert.equal(calls[0].path,'/accounts/'+PACK_DEPLOY_ACCOUNT+'/workers/workers');assert.equal(calls[0].body.name,request.workerName);assert.equal(calls[0].body.subdomain.enabled,false);
@@ -66,6 +80,12 @@ test('static uploads use only session JWT, enforce requested hashes, and require
 test('version uploads address immutable Worker IDs and preserve measured startup',async t=>{
   const candidate=bundle(t),workerId='b'.repeat(32),versionId='11111111-1111-4111-8111-111111111111',calls=[],provider=cloudflarePackProvider({api:async operation=>{calls.push(operation);return ok({id:versionId,startup_time_ms:23});}});
   const uploaded=await provider.upload({candidate,request,workerId,assets:{completionToken:'test-only-completion-token'},ownershipTags:['cars-pack-v1']});assert.equal(uploaded.workerId,workerId);assert.equal(uploaded.versionId,versionId);assert.equal(uploaded.startupTimeMs,23);assert.equal(calls[0].method,'POST');assert.equal(calls[0].path,'/accounts/'+PACK_DEPLOY_ACCOUNT+'/workers/workers/'+workerId+'/versions');assert.deepEqual(calls[0].query,{deploy:false});await assert.rejects(()=>provider.upload({candidate,request,workerId:request.workerName,assets:{}}),/immutable Worker ID/);
+  assert.equal(uploaded.requestedCpuLimitMs,30000);assert.equal(uploaded.cpuLimitMs,30000);assert.equal(uploaded.cpuLimitSource,'successful-explicit-upload-request');assert.equal(calls[0].body.limits.cpu_ms,30000);
+});
+test('version upload distinguishes provider CPU readback from the explicit request',async t=>{
+  const candidate=bundle(t);candidate.config.limits={cpu_ms:50};
+  const provider=cloudflarePackProvider({api:async operation=>{assert.equal(operation.body.limits.cpu_ms,50);return ok({id:'11111111-1111-4111-8111-111111111111',startup_time_ms:20,limits:{cpu_ms:50}});}});
+  const uploaded=await provider.upload({candidate,request,workerId:'b'.repeat(32),assets:{completionToken:'test-only-completion-token'}});assert.equal(uploaded.requestedCpuLimitMs,50);assert.equal(uploaded.cpuLimitMs,50);assert.equal(uploaded.cpuLimitSource,'provider-version-response');
 });
 test('token adapter confines API paths and does not return authentication headers',async()=>{
   const token='test-account-token-never-log',calls=[],transport=tokenCloudflareTransport({token,fetchImpl:async(url,options)=>{calls.push({url:String(url),options});return {status:200,json:async()=>({success:true,result:[]})};}});

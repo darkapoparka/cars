@@ -2,6 +2,7 @@
 import {randomUUID} from 'node:crypto';
 import {PACK_DEPLOY_ACCOUNT,PACK_DEPLOY_ZONE,queueCanonical,queueDigest,packDeploymentRequest,validatePackQueue,readPackClaim,recordPackEvent,finishPackDeployment,validatePackOwnedCreateResume} from './dealer-pack-queue.mjs';
 import {expectedPackHosting,packRegistryCollisions} from './dealer-pack-identity.mjs';
+import {PACK_RUNTIME_LIMITS,packRuntimeLimits} from './dealer-pack-cloudflare.mjs';
 
 const assert=(ok,message)=>{if(!ok)throw Error(message);};
 const uuid=value=>/^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/i.test(value??'');
@@ -80,6 +81,7 @@ export function validateHostedPackResult(result,request,versionId) {
   assert(result?.type==='cars-dealer-pack-hosted-qa'&&result.slug===request.slug&&result.publicOrigin===request.publicOrigin&&result.outputDigest===request.outputDigest&&result.packDigest===request.packDigest&&result.success===true&&result.width===390,'Hosted QA must pass on this exact pack/output at 390px');
   const required=['auto-best','modern','import','app','mobile','karento-best'];
   assert(Array.isArray(result.designs)&&result.designs.length===6&&required.every(key=>result.designs.filter(row=>row.key===key).length===1)&&result.designs.every(row=>row.status==='passed'&&row.httpStatus===200&&row.sixChoices===true&&row.nameVisible===true&&row.logoVisible===true&&['passed','not-provided'].includes(row.phoneStatus)&&row.foreignIdentityCount===0),'All six hosted designs, business identity, FAB and leak checks are required');
+  assert(result.designs.every(row=>row.headStatus==='passed'&&row.headHttpStatus===200),'All six hosted designs require passing HEAD checks with HTTP 200');
   if(versionId)assert(result.versionId===versionId,'Hosted verification does not identify the deployed version');
   assert(result.providerWrites===0&&timestamp(result.finishedAt),'Hosted verification must be read-only and dated');
   return result;
@@ -92,7 +94,7 @@ export function validateHostedPackResult(result,request,versionId) {
 export function packHostedReceiptEvidence(result) {
   const keys=['type','slug','publicOrigin','packDigest','outputDigest','versionId','width','language','success','providerWrites','finishedAt'];
   const report=Object.fromEntries(keys.filter(key=>result[key]!==undefined).map(key=>[key,result[key]]));
-  const fields=['key','status','httpStatus','sixChoices','nameVisible','logoVisible','phoneStatus','foreignIdentityCount','fabInteraction'];
+  const fields=['key','status','httpStatus','headStatus','headHttpStatus','sixChoices','nameVisible','logoVisible','phoneStatus','foreignIdentityCount','fabInteraction'];
   report.designs=result.designs.map(row=>Object.fromEntries(fields.filter(key=>row[key]!==undefined).map(key=>[key,row[key]])));
   if(result.identityCoverage){
     const coverage=result.identityCoverage,countKeys=['registryDealers','totalIdentities','packDealers','withName','withBusinessFacts','withPublicIdentityEvidence','withPhone'];
@@ -155,6 +157,7 @@ export async function executeQueuedPackDeployment({store,claim,provider,inspectC
     if(request.action==='rollback')return await executeRollback({store,claim,provider,request,queue,own,snapshot,intent,observed,writeCall,time,verifyHosted,inspectCandidate,markActivated:()=>{versionActivated=true;},markEstablished:()=>{ownershipEstablished=true;}});
     const candidate=await inspectCandidate(request);
     assertExactPackCandidate(candidate,request);
+    const requestedCpuLimitMs=packRuntimeLimits(candidate.config).cpu_ms,requestedCpuLimitSource=candidate.config?.limits?.cpu_ms===undefined?'documented-paid-default':'sealed-worker-configuration';
     const ownershipTags=own?.receipt.ownershipTags??resume?.ownershipTags??packOwnershipTags(queue,request);
     let before=await snapshot('before-assets');if(resume)validateResumedPackTargetForWrite(before,{request,resume});else validatePackTargetForWrite(before,{request,queue,own,creating:mode==='create-new'});
     let workerId=own?.receipt.workerId??resume?.workerId;if(resume)workerCreated=true;
@@ -173,7 +176,7 @@ export async function executeQueuedPackDeployment({store,claim,provider,inspectC
     await intent('assets',{workerName:request.workerName,outputDigest:request.outputDigest});
     const assets=await writeCall(()=>provider.prepareAssets({candidate,request,beforeWrite:()=>readPackClaim(store,claim)}));
     await observed('assets',{manifestDigest:assets.manifestDigest,assetFiles:assets.assetFiles,uploadedFiles:assets.uploadedFiles});
-    await intent('worker-upload',{workerName:request.workerName,workerId,outputDigest:request.outputDigest,ownershipTags,previousVersionId:own?.receipt.versionId??resume?.versionId??null,deploy:false});
+    await intent('worker-upload',{workerName:request.workerName,workerId,outputDigest:request.outputDigest,ownershipTags,previousVersionId:own?.receipt.versionId??resume?.versionId??null,deploy:false,requestedCpuLimitMs,requestedCpuLimitSource});
     // This complete inventory is deliberately after potentially slow asset work
     // and after persisting intent, immediately before the version POST.
     const preUpload=await snapshot('immediately-before-worker-upload');
@@ -182,7 +185,10 @@ export async function executeQueuedPackDeployment({store,claim,provider,inspectC
     else assert(preUpload.snapshot.target.workerId===workerId&&preUpload.snapshot.target.undeployed===true&&ownershipTags.every(tag=>preUpload.snapshot.target.tags.includes(tag))&&!preUpload.route,'Newly reserved Worker changed before upload');
     const uploaded=await writeCall(()=>provider.upload({candidate,request,workerId,assets,ownershipTags}));
     assert(uuid(uploaded?.versionId)&&uploaded.workerName===request.workerName&&uploaded.workerId===workerId,'Worker upload did not return the exact immutable target and version');
-    await observed('worker-upload',{versionId:uploaded.versionId,workerName:request.workerName,workerId,...(Number.isFinite(uploaded.startupTimeMs)?{startupTimeMs:uploaded.startupTimeMs}:{})});
+    await observed('worker-upload',{versionId:uploaded.versionId,workerName:request.workerName,workerId,...(Number.isFinite(uploaded.startupTimeMs)?{startupTimeMs:uploaded.startupTimeMs}:{}),
+      ...(Number.isFinite(uploaded.cpuLimitMs)?{cpuLimitMs:uploaded.cpuLimitMs}:{}),requestedCpuLimitMs,...(typeof uploaded.cpuLimitSource==='string'?{cpuLimitSource:uploaded.cpuLimitSource}:{})});
+    assert(Number.isFinite(uploaded.startupTimeMs)&&uploaded.startupTimeMs>=0&&uploaded.startupTimeMs<=PACK_RUNTIME_LIMITS.startupMs,'Measured Worker startup must be available and within the 1000 ms limit before activation');
+    assert(uploaded.requestedCpuLimitMs===requestedCpuLimitMs&&uploaded.cpuLimitMs===requestedCpuLimitMs&&['provider-version-response','successful-explicit-upload-request'].includes(uploaded.cpuLimitSource),'Provider Worker CPU limit differs from its explicit upload request; activation refused');
     await intent('activate-version',{workerId,workerName:request.workerName,versionId:uploaded.versionId});
     await writeCall(()=>provider.activateVersion({request,workerId,versionId:uploaded.versionId}));versionActivated=true;await observed('activate-version',{versionId:uploaded.versionId,workerId});
     const afterUpload=await snapshot('after-worker-upload');
@@ -202,6 +208,8 @@ export async function executeQueuedPackDeployment({store,claim,provider,inspectC
     assert(after.route?.id===route.id&&after.snapshot.target.versionId===uploaded.versionId&&ownershipTags.every(tag=>after.snapshot.target.tags.includes(tag)),'Post-deploy Worker/route identity changed');
     assert(after.snapshot.target.subdomain?.enabled===false&&after.snapshot.target.subdomain?.previews_enabled===false,'Unexpected workers.dev or preview URL exposure remains');
     assert(after.snapshot.target.bindings.length===1&&after.snapshot.target.bindings[0].name==='ASSETS'&&after.snapshot.target.bindings[0].type==='assets','Deployed Worker is not ASSETS-only');
+    const observedCpuLimitMs=after.snapshot.target.limits?.cpu_ms;
+    assert(observedCpuLimitMs===undefined||observedCpuLimitMs===requestedCpuLimitMs,'Active Worker CPU limit differs from its explicit upload request');
     const baseReceipt={schemaVersion:1,type:'cars-dealer-pack-deployment',status:'deployed',queueId:queue.queueId,requestId:request.id,accountId:queue.accountId,zoneId:queue.zoneId,
       slug:request.slug,dealerId:request.dealerId,batch:request.batch,workerName:request.workerName,publicOrigin:request.publicOrigin,
       packDigest:request.packDigest,releaseId:request.releaseId,releaseDigest:request.releaseDigest,outputDigest:request.outputDigest,sourceCommit:request.sourceCommit,sourceProof:candidate.sourceProof,
@@ -210,7 +218,8 @@ export async function executeQueuedPackDeployment({store,claim,provider,inspectC
       counts:{before:before.snapshot.scriptCount,after:after.snapshot.scriptCount,allowed:queue.policy.allowedScripts,minimumSpareScripts:queue.policy.minimumSpareScripts,beforeObservedAt:before.snapshot.observedAt,afterObservedAt:after.snapshot.observedAt},
       capacityEvidence:{basis:'owner-confirmed-workers-paid',policyDigest:queue.policyDigest,subscriptionReadVerified:false},
       resources:{bindings:after.snapshot.target.bindings,subdomain:after.snapshot.target.subdomain,route},
-      runtime:{startupTimeMs:Number.isFinite(uploaded.startupTimeMs)?uploaded.startupTimeMs:null,cpu:'not-measured-by-upload',memory:'not-measured-by-upload'},
+      runtime:{startupTimeMs:uploaded.startupTimeMs,startupLimitMs:PACK_RUNTIME_LIMITS.startupMs,startupWithinLimit:true,cpuLimitMs:uploaded.cpuLimitMs,requestedCpuLimitMs,requestedCpuLimitSource,
+        cpuLimitSource:observedCpuLimitMs===undefined?uploaded.cpuLimitSource:'provider-active-version-readback',cpu:'not-measured-by-upload',memory:'not-measured-by-upload'},
       deployedAt:time(),hostedVerified:false,ownerAccepted:false,outreachPerformed:false};
     // Record recoverable complete ownership before browser work starts.
     await recordPackEvent(store,claim,{kind:'deployment-established',receipt:baseReceipt},{now:time});
