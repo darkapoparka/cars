@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "dealer": "cars-4-less-west-bromwich",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uk.json",
+    "sha256": "6cd8d365586f9a5d5131fe4b1d50baede7de91ab384a135017c25367298b07c4"
+  },
+  "publicSources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Cars-4-less?menu=1",
+      "observedAt": "2026-10-19T17:36:51.080302Z",
+      "supports": [
+        "public-business-identity",
+        "public-business-contact",
+        "advertised-stock"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "publicObservations": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Cars-4-less?menu=1",
+      "observedAt": "2026-10-19T17:36:51.080302Z",
+      "httpStatus": 200,
+      "sha256": "f1a79df7aa5528fff94f9f9fb5e0136515119089934ef42063b1f04e5cbfcb7e",
+      "byteLength": 36601,
+      "retention": "Only reviewed public business fields, hashes, listing identities and compressed photographs are committed; raw HTML remains outside the public pack."
+    }
+  ],
+  "stock": [
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/307224475006",
+      "photoUrl": "https://i.ebayimg.com/images/g/BXwAAeSwJiJqyj5h/s-l1600.jpg",
+      "observedAt": "2026-10-19T17:53:23.257599Z",
+      "listingSha256": "95ff99bef78f1554c3064a8b133ca7750578dd6e04844efedd338ebf7f2ada72",
+      "descriptionSha256": "47cb6e995247ee00c611ff10866123400dc893c9856ed83b9eb4146ce12d5259",
+      "sourcePhotoSha256": "098ff908b2f76b17c37c8fe698b7fe92b519ce3deb31eb5427c8520a7c17d86e",
+      "sourcePhotoDimensions": [
+        1500,
+        1125
+      ],
+      "photoSha256": "3fafc586adf3945834600b0007ede469d6aed8bb70aad3b47b3936fb0f8dc745",
+      "photoDimensions": [
+        1280,
+        960
+      ],
+      "photoBytes": 150475,
+      "photoObservedAt": "2026-10-19T18:24:25.802231Z",
+      "photoChoice": "Alternate gallery view selected to omit visible price placards.",
+      "recordId": "public-listing-1",
+      "title": "2015 Nissan Juke 1.5 dCi Visia",
+      "retainedPhoto": "dealer-stock/public-1.jpg",
+      "publicPhotoReviewed": true
+    },
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/307224463211",
+      "photoUrl": "https://i.ebayimg.com/images/g/lYMAAeSwhLpqyjuV/s-l1600.jpg",
+      "observedAt": "2026-10-19T17:53:23.520310Z",
+      "listingSha256": "90bb499aafea62eeb4e3c2bd72068bd5d478db45b17074340717b028635c7801",
+      "sourcePhotoSha256": "2ae4e6e294fbe6fcc23c25eeeb4fd09c8f5e4ffa3e0b5436d4dce5061b7932f0",
+      "sourcePhotoDimensions": [
+        1500,
+        1125
+      ],
+      "photoSha256": "d8d9830d83ffd513b8c5df90aebfb7b6ad14c225989f34bff2177f6193eca011",
+      "photoDimensions": [
+        1280,
+        960
+      ],
+      "photoBytes": 180840,
+      "photoObservedAt": "2026-10-19T18:24:25.932372Z",
+      "photoChoice": "Alternate gallery view selected to omit visible price placards.",
+      "recordId": "public-listing-2",
+      "title": "2017 Citroen C4 Cactus 1.6 BlueHDi Flair",
+      "retainedPhoto": "dealer-stock/public-2.jpg",
+      "publicPhotoReviewed": true
+    },
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/307215870489",
+      "photoUrl": "https://i.ebayimg.com/images/g/jEwAAeSw69xq02PO/s-l1600.jpg",
+      "observedAt": "2026-10-19T17:53:23.743130Z",
+      "listingSha256": "a522d66bed28a2eb5b1ff0447d54d458cfc114c797a096e61298ce086ba10ba1",
+      "descriptionSha256": "92ff999edb1c0caf4398dc667331bf2df477b8cc18b7c51ee9756c187965d435",
+      "sourcePhotoSha256": "850a913b4ec90b360cf8d26ec47f4cccb8e89591e4d6325f791e2efb3e1d2a3b",
+      "sourcePhotoDimensions": [
+        1500,
+        693
+      ],
+      "photoSha256": "8c9065071365f0e0d9862298b4ec08944baef691750db649d6c9828ae3a29a93",
+      "photoDimensions": [
+        1280,
+        591
+      ],
+      "photoBytes": 70725,
+      "photoObservedAt": "2026-10-19T18:24:26.067916Z",
+      "photoChoice": "Alternate gallery view selected to omit visible price placards.",
+      "recordId": "public-listing-3",
+      "title": "2019 Volkswagen Polo 1.0 EVO SE",
+      "retainedPhoto": "dealer-stock/public-3.jpg",
+      "publicPhotoReviewed": true
+    }
+  ],
+  "review": {
+    "reviewedAt": "2026-10-19T18:24:27.013214Z",
+    "stockPhotoIdentityChecked": true,
+    "sourceClaimLimits": "Dated public adverts only; availability, repairs, vehicle condition and legal entity details are not independently certified.",
+    "omissions": [
+      "Alternate original gallery views selected to omit visible price placards; two interior images and one rear exterior view.",
+      "Exact retained lead business.name preserved for the M1 identity validator; clean public trading name used in artwork."
+    ]
+  }
+}

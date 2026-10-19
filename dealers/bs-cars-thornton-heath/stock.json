@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "dealer": "bs-cars-thornton-heath",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "public-listing-1",
+      "title": "2019 Mitsubishi L200 Double Cab DI-D Warrior 4WD",
+      "make": "Mitsubishi",
+      "model": "L200",
+      "year": 2019,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/public-1.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/147641024676",
+      "observedAt": "2026-10-19T17:53:24.996688Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "transmission": "Manual",
+      "fuel": "Diesel",
+      "color": "White",
+      "mileageValue": 108000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "public-listing-2",
+      "title": "2017 Mitsubishi Outlander 2.0 PHEV GX3h+ Auto",
+      "make": "Mitsubishi",
+      "model": "Outlander",
+      "year": 2017,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/public-2.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/147621726549",
+      "observedAt": "2026-10-19T17:53:25.894426Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "fuel": "Petrol plug-in hybrid",
+      "color": "Black",
+      "mileageValue": 104000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "public-listing-3",
+      "title": "2015 BMW 220d M Sport Convertible Auto",
+      "make": "BMW",
+      "model": "2 Series",
+      "year": 2015,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/public-3.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/147619417417",
+      "observedAt": "2026-10-19T17:53:26.220845Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "transmission": "Automatic",
+      "fuel": "Diesel",
+      "color": "Grey",
+      "mileageValue": 155000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

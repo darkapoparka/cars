@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "dealer": "aventus-motors",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uk.json",
+    "sha256": "6cd8d365586f9a5d5131fe4b1d50baede7de91ab384a135017c25367298b07c4"
+  },
+  "publicSources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/LEICESTER-CAR-SHOP",
+      "observedAt": "2026-10-19T17:36:50.529932Z",
+      "supports": [
+        "public-business-identity",
+        "public-business-contact",
+        "advertised-stock"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "publicObservations": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/LEICESTER-CAR-SHOP",
+      "observedAt": "2026-10-19T17:36:50.529932Z",
+      "httpStatus": 200,
+      "sha256": "4c469f999b37c6ea93abd2dacb9d11ad7e601115509b81b42a7cc3b4cec215a7",
+      "byteLength": 39215,
+      "retention": "Only reviewed public business fields, hashes, listing identities and compressed photographs are committed; raw HTML remains outside the public pack."
+    }
+  ],
+  "stock": [
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/128132812312",
+      "photoUrl": "https://i.ebayimg.com/images/g/rXsAAeSw0z9qzgMQ/s-l1600.jpg",
+      "observedAt": "2026-10-19T17:53:12.400015Z",
+      "listingSha256": "20715c467adda67bac74d9402f3b0ab9bfb2e3e3dd88accc7755cd570acc836e",
+      "descriptionSha256": "1183b4cff955b3e7d403d78c7a049859fe3defa90320cb39723712e04ce34016",
+      "sourcePhotoSha256": "35b20a66ce1c399ffad81c2832733a6a6f9ebdeb09dff833733a007b3abc2648",
+      "sourcePhotoDimensions": [
+        1500,
+        1125
+      ],
+      "photoSha256": "14fa6826df5262042f69c1585d5a46105e345aa06a5b205572d902cf90d21cd8",
+      "photoDimensions": [
+        1280,
+        960
+      ],
+      "photoBytes": 191767,
+      "photoObservedAt": "2026-10-19T18:01:44.956756Z",
+      "recordId": "public-listing-1",
+      "title": "2005 Volkswagen Transporter T30 130 TDI",
+      "retainedPhoto": "dealer-stock/public-1.jpg",
+      "publicPhotoReviewed": true
+    },
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/128124830030",
+      "photoUrl": "https://i.ebayimg.com/images/g/vaAAAeSwa3RqyQcx/s-l1600.jpg",
+      "observedAt": "2026-10-19T17:53:12.403213Z",
+      "listingSha256": "d2e06f8dd7bb02029f1630d02dfd3434efa2ed105c8a12135f71e1e74a962a0b",
+      "descriptionSha256": "1114684c1282810a61b68e62a416c70e9d09237c0883bbc16a9cb8f1cd951a2a",
+      "sourcePhotoSha256": "646071890ef3508d2a8c8bb2a0eb57de2790753dbc6ff5e0c5a10c840fc59022",
+      "sourcePhotoDimensions": [
+        1500,
+        1125
+      ],
+      "photoSha256": "c4d8f87bfbc5e94aac06f48a0892f6398f42d89b47519338715e7e4e017126c1",
+      "photoDimensions": [
+        1280,
+        960
+      ],
+      "photoBytes": 189441,
+      "photoObservedAt": "2026-10-19T18:01:45.119995Z",
+      "recordId": "public-listing-2",
+      "title": "2020 Vauxhall Corsa 1.2 SE — Cat N",
+      "retainedPhoto": "dealer-stock/public-2.jpg",
+      "publicPhotoReviewed": true,
+      "conditionDisclosure": "The public listing records Category N history. Vehicle condition has not been independently verified."
+    },
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/128124780720",
+      "photoUrl": "https://i.ebayimg.com/images/g/omkAAeSwFG9qyQFa/s-l1600.jpg",
+      "observedAt": "2026-10-19T17:53:12.404219Z",
+      "listingSha256": "3a9c86c92d4e38fa8ff79d9ef279807aff872a3bc02dc60a6ee14f0a07f2e201",
+      "descriptionSha256": "af728d654d0bc2d7e1ca40c98b06c6097e8eab7db00146f5c4aff6bfd58a4475",
+      "sourcePhotoSha256": "3a5e54158c25f9d2335bc917dff48b263a9d972407413dc0d66f860460e7fdbf",
+      "sourcePhotoDimensions": [
+        1500,
+        693
+      ],
+      "photoSha256": "f20f3b0144a708315a531cbc94ee01eea65c269b71bbe9c87b8f61692e8af344",
+      "photoDimensions": [
+        1280,
+        591
+      ],
+      "photoBytes": 128797,
+      "photoObservedAt": "2026-10-19T18:01:45.038895Z",
+      "recordId": "public-listing-3",
+      "title": "2014 MINI Paceman 1.6 Cooper D ALL4 — Cat N",
+      "retainedPhoto": "dealer-stock/public-3.jpg",
+      "publicPhotoReviewed": true,
+      "conditionDisclosure": "The public listing records Category N history. Vehicle condition has not been independently verified."
+    }
+  ],
+  "review": {
+    "reviewedAt": "2026-10-19T18:24:26.967147Z",
+    "stockPhotoIdentityChecked": true,
+    "sourceClaimLimits": "Dated public adverts only; availability, repairs, vehicle condition and legal entity details are not independently certified.",
+    "omissions": [
+      "Exact retained lead business.name preserved for the M1 identity validator; clean public trading name used in artwork."
+    ]
+  }
+}

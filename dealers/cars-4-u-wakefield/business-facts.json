@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "slug": "cars-4-u-wakefield",
+  "dealerId": "gb-wakefield-cars-4-u",
+  "business": {
+    "name": "Cars 4 U Wakefield",
+    "city": "Wakefield",
+    "region": "West Yorkshire",
+    "countryCode": "GB",
+    "currency": "GBP",
+    "distanceUnit": "mi",
+    "locale": "en-GB",
+    "address": "Trinity Church Gate, Wakefield WF1 1TX",
+    "phone": "+441924793256",
+    "phoneDisplay": "+441924793256",
+    "email": "cars4uwakefield@hotmail.com",
+    "website": "",
+    "stockUrl": "https://showroom.ebaymotorspro.co.uk/Cars-4-U?menu=1",
+    "hours": "",
+    "sourceUrl": "https://showroom.ebaymotorspro.co.uk/Cars-4-U?menu=1",
+    "observedAt": "2026-10-19T17:36:51.210650Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Cars-4-U?menu=1",
+      "observedAt": "2026-10-19T17:36:51.210650Z",
+      "supports": [
+        "public-business-identity",
+        "public-business-contact",
+        "advertised-stock"
+      ]
+    }
+  ]
+}

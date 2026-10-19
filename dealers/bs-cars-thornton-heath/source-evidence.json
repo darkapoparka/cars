@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "dealer": "bs-cars-thornton-heath",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uk.json",
+    "sha256": "6cd8d365586f9a5d5131fe4b1d50baede7de91ab384a135017c25367298b07c4"
+  },
+  "publicSources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Bs-Cars?menu=1",
+      "observedAt": "2026-10-19T17:36:50.702381Z",
+      "supports": [
+        "public-business-identity",
+        "public-business-contact",
+        "advertised-stock"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "publicObservations": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Bs-Cars?menu=1",
+      "observedAt": "2026-10-19T17:36:50.702381Z",
+      "httpStatus": 200,
+      "sha256": "095c72a89f15c72f7092cc3eb220b9f8c5f10364f7eb6ab781e6268bfea8cb7e",
+      "byteLength": 35816,
+      "retention": "Only reviewed public business fields, hashes, listing identities and compressed photographs are committed; raw HTML remains outside the public pack."
+    }
+  ],
+  "stock": [
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/147641024676",
+      "photoUrl": "https://i.ebayimg.com/images/g/hIQAAeSwZUpq1JXg/s-l1600.jpg",
+      "observedAt": "2026-10-19T17:53:24.996688Z",
+      "listingSha256": "f60329c1dc17b80d55826cd22d47152bb08c6ff13ac02907ffd3a0f7ea411b2e",
+      "descriptionSha256": "2ae4cbc30351e23bee9403790b7b243f7377e866ca5f1c12763e3fb9b7a73c89",
+      "sourcePhotoSha256": "98833aa6967a4cb033c13a2cde92a3318f50896a296dc06fa6dcaefe98b47ed5",
+      "sourcePhotoDimensions": [
+        1500,
+        1125
+      ],
+      "photoSha256": "dd02e78a487943511d0685d2523fb40a6942d2000e3e574b494704a5f187163e",
+      "photoDimensions": [
+        1280,
+        960
+      ],
+      "photoBytes": 188127,
+      "photoObservedAt": "2026-10-19T18:01:44.890407Z",
+      "recordId": "public-listing-1",
+      "title": "2019 Mitsubishi L200 Double Cab DI-D Warrior 4WD",
+      "retainedPhoto": "dealer-stock/public-1.jpg",
+      "publicPhotoReviewed": true
+    },
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/147621726549",
+      "photoUrl": "https://i.ebayimg.com/images/g/sroAAeSwe8tqzKTl/s-l1600.jpg",
+      "observedAt": "2026-10-19T17:53:25.894426Z",
+      "listingSha256": "ffd82f019c56d5dec39364e8db8a6af8df163a29d90e48e2f6f33fdafe927c40",
+      "descriptionSha256": "b0b93bbd136a7351a1f17f9073d50939183b7f7ecdbcd0fb1c22497a02096015",
+      "sourcePhotoSha256": "46f57f19cbfe83965bbfac83ba285c1b1bc97bd6d93586e530144c0e399036fe",
+      "sourcePhotoDimensions": [
+        1500,
+        1125
+      ],
+      "photoSha256": "35901ffaffb8ce12a8101872820eaf07610a0e32d83512b8a87a2247a94331b0",
+      "photoDimensions": [
+        1280,
+        960
+      ],
+      "photoBytes": 188745,
+      "photoObservedAt": "2026-10-19T18:01:44.901593Z",
+      "recordId": "public-listing-2",
+      "title": "2017 Mitsubishi Outlander 2.0 PHEV GX3h+ Auto",
+      "retainedPhoto": "dealer-stock/public-2.jpg",
+      "publicPhotoReviewed": true
+    },
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/147619417417",
+      "photoUrl": "https://i.ebayimg.com/images/g/hYMAAeSwbn5qx6SM/s-l1600.jpg",
+      "observedAt": "2026-10-19T17:53:26.220845Z",
+      "listingSha256": "f24749f95766a374e8bda211fb41228bd63416d587741901a90aec09fd3431f1",
+      "descriptionSha256": "062c42900fdb367d46901cb30a8898e9a4588bfc565eaf6bffd2986d1801e981",
+      "sourcePhotoSha256": "4229bafa92a17111cb6b21e7af452c57feba007af5158bf13c48c720ca208c30",
+      "sourcePhotoDimensions": [
+        1500,
+        1125
+      ],
+      "photoSha256": "38734a1502a1e7779ff6197a0d90ff7c71fcea687979033ca794ab53ebd86a84",
+      "photoDimensions": [
+        1280,
+        960
+      ],
+      "photoBytes": 189355,
+      "photoObservedAt": "2026-10-19T18:01:45.008043Z",
+      "recordId": "public-listing-3",
+      "title": "2015 BMW 220d M Sport Convertible Auto",
+      "retainedPhoto": "dealer-stock/public-3.jpg",
+      "publicPhotoReviewed": true
+    }
+  ],
+  "review": {
+    "reviewedAt": "2026-10-19T18:24:26.940567Z",
+    "stockPhotoIdentityChecked": true,
+    "sourceClaimLimits": "Dated public adverts only; availability, repairs, vehicle condition and legal entity details are not independently certified.",
+    "omissions": [
+      "Personal-looking mailbox omitted; no replacement business email invented."
+    ]
+  }
+}

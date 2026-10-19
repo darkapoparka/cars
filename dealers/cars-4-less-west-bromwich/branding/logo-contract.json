@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "dealer": "cars-4-less-west-bromwich",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T18:40:32.878Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "134a5698ba630e81938cea4ef8451557e89584ccad66a72d7356ef2e6485d90b",
+      "sourceSha256": "9e14ec7eb528639b885fe394ab9df9f6a0b9ff7eb79a27645a0bfeb4b73d11d6"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "134a5698ba630e81938cea4ef8451557e89584ccad66a72d7356ef2e6485d90b",
+      "sourceSha256": "9e14ec7eb528639b885fe394ab9df9f6a0b9ff7eb79a27645a0bfeb4b73d11d6"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "134a5698ba630e81938cea4ef8451557e89584ccad66a72d7356ef2e6485d90b",
+      "sourceSha256": "9e14ec7eb528639b885fe394ab9df9f6a0b9ff7eb79a27645a0bfeb4b73d11d6"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "9e14ec7eb528639b885fe394ab9df9f6a0b9ff7eb79a27645a0bfeb4b73d11d6",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-15f44eb0-c81f-46f1-808b-45bced536da1",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "440996fd3fc3da482ce0d8e81c4736325a1639774b23c37594ee347a0aaeecc3",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-a9d03f34-37f9-4300-b5d8-eca6358042de",
+      "modelVersion": null
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "46a9156cd553cd44f3c87b9aa4dc285916da9929c2445428ee8d486c0d22f283"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "9e14ec7eb528639b885fe394ab9df9f6a0b9ff7eb79a27645a0bfeb4b73d11d6",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-15f44eb0-c81f-46f1-808b-45bced536da1",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/cars-4-less-west-bromwich/branding/generated-master.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "9e14ec7eb528639b885fe394ab9df9f6a0b9ff7eb79a27645a0bfeb4b73d11d6",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-15f44eb0-c81f-46f1-808b-45bced536da1",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/cars-4-less-west-bromwich/branding/generated-master.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "9e14ec7eb528639b885fe394ab9df9f6a0b9ff7eb79a27645a0bfeb4b73d11d6",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-15f44eb0-c81f-46f1-808b-45bced536da1",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/cars-4-less-west-bromwich/branding/generated-master.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "659c94324c27eef22e7c0aead791d19cc4b78d9bc05ed6c10a994999c652758f",
+      "sha256": "9e14ec7eb528639b885fe394ab9df9f6a0b9ff7eb79a27645a0bfeb4b73d11d6",
+      "crop": {
+        "left": 0,
+        "top": 71,
+        "width": 2162,
+        "height": 602
+      },
+      "sourcePath": "branding/generated-master.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "659c94324c27eef22e7c0aead791d19cc4b78d9bc05ed6c10a994999c652758f",
+      "sha256": "9e14ec7eb528639b885fe394ab9df9f6a0b9ff7eb79a27645a0bfeb4b73d11d6",
+      "crop": {
+        "left": 0,
+        "top": 71,
+        "width": 2162,
+        "height": 602
+      },
+      "sourcePath": "branding/generated-master.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "659c94324c27eef22e7c0aead791d19cc4b78d9bc05ed6c10a994999c652758f",
+      "sha256": "9e14ec7eb528639b885fe394ab9df9f6a0b9ff7eb79a27645a0bfeb4b73d11d6",
+      "crop": {
+        "left": 0,
+        "top": 71,
+        "width": 2162,
+        "height": 602
+      },
+      "sourcePath": "branding/generated-master.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "8580493a3ad1a8e4ac9c96c77bca5dd638799a848ff21e2e198146571c462a73",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a9d03f34-37f9-4300-b5d8-eca6358042de",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/cars-4-less-west-bromwich/branding/generated-mark.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "8580493a3ad1a8e4ac9c96c77bca5dd638799a848ff21e2e198146571c462a73",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a9d03f34-37f9-4300-b5d8-eca6358042de",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/cars-4-less-west-bromwich/branding/generated-mark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "440996fd3fc3da482ce0d8e81c4736325a1639774b23c37594ee347a0aaeecc3",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a9d03f34-37f9-4300-b5d8-eca6358042de",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/cars-4-less-west-bromwich/branding/generated-mark.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "46a9156cd553cd44f3c87b9aa4dc285916da9929c2445428ee8d486c0d22f283",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a9d03f34-37f9-4300-b5d8-eca6358042de",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/cars-4-less-west-bromwich/branding/generated-mark.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T18:40:32.878Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "440996fd3fc3da482ce0d8e81c4736325a1639774b23c37594ee347a0aaeecc3",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-a9d03f34-37f9-4300-b5d8-eca6358042de",
+      "modelVersion": null
+    }
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "dealer": "cars-4-less-west-bromwich",
+  "status": "reviewed",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Cars-4-less?menu=1",
+      "observedAt": "2026-10-19T17:36:51.080302Z"
+    },
+    {
+      "source": "alternate-public-logo-page",
+      "retainedEvidence": "source URL in real-logo research",
+      "observation": "A dealer-image URL was observed, but the image host timed out; no inaccessible image is claimed as an obtained original."
+    }
+  ],
+  "originals": [],
+  "creationMethod": "imagegen-proposal",
+  "dealerApproved": false,
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "researchConclusion": "Bounded public checks did not yield usable distinct dealer artwork. Generic text banners or unavailable image-host URLs do not prove that the dealer has no logo. This artwork is clearly an independent proposal.",
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "generationId": "exec-15f44eb0-c81f-46f1-808b-45bced536da1",
+    "modelVersion": null,
+    "prompt": "Use case: logo-brand. Create one polished independent UK motor dealer identity proposal. Transparent background, flat crisp graphic, no mockup, no gradients, no shadows, no raster distress or speckles. Wide horizontal lockup, simple isolated compact emblem on left and exact business name on right with plenty of transparent gap for cropping. Emblem legible at32px, thick clean geometry, no tiny details. Design a dual-contrast outline of clean white and deep navy around every shape so it works on white, dark charcoal #111113 and red #c40101. Two-line wordmark, tight readable bold geometric letterforms, no tagline, no extra text. Business name CARS4LESS. Left emblem a bold number 4 with one orange #e48a35 inset triangle and a deep navy vertical leg. Right wordmark CARS4LESS as one intact word, all letters and number exact. Use a single line wordmark if better. Contemporary uncluttered, never use currency symbols, prices or discount claims."
+  },
+  "compactDerivation": {
+    "method": "separate-imagegen-compact-emblem",
+    "parentReference": "branding/generated-master.png",
+    "parentSha256": "659c94324c27eef22e7c0aead791d19cc4b78d9bc05ed6c10a994999c652758f",
+    "prompt": "Use case: logo-brand, derive compact logo. Reproduce ONLY the isolated emblem on the far left of the reference, omitting the adjacent business wordmark entirely. Keep exactly the same motif, lettering inside the emblem, colour palette, navy and white outlines and proportions. Center this one compact emblem on a generous square transparent canvas, no other objects or words. Strengthen only tiny outline irregularities so the emblem is perfectly smooth and clear at32px. Flat crisp graphic, absolutely no speckles, no distressed pixels, no shadows, no gradients, no new geometry or creative changes.",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-a9d03f34-37f9-4300-b5d8-eca6358042de",
+      "modelVersion": null
+    }
+  },
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T18:40:32.878Z",
+    "master": {
+      "path": "branding/generated-master.png",
+      "sha256": "659c94324c27eef22e7c0aead791d19cc4b78d9bc05ed6c10a994999c652758f",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-15f44eb0-c81f-46f1-808b-45bced536da1",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "7b26afa53566214ad1901f57bf5fcb4b64b3ea4efd86f968689d90c6971d5516",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a9d03f34-37f9-4300-b5d8-eca6358042de",
+        "modelVersion": null
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "7b26afa53566214ad1901f57bf5fcb4b64b3ea4efd86f968689d90c6971d5516",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a9d03f34-37f9-4300-b5d8-eca6358042de",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-master.png",
+        "sha256": "659c94324c27eef22e7c0aead791d19cc4b78d9bc05ed6c10a994999c652758f",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-15f44eb0-c81f-46f1-808b-45bced536da1",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-master.png",
+        "sha256": "659c94324c27eef22e7c0aead791d19cc4b78d9bc05ed6c10a994999c652758f",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-15f44eb0-c81f-46f1-808b-45bced536da1",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-master.png",
+        "sha256": "659c94324c27eef22e7c0aead791d19cc4b78d9bc05ed6c10a994999c652758f",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-15f44eb0-c81f-46f1-808b-45bced536da1",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113"
+        ],
+        "onAccent": [
+          "#c40101"
+        ]
+      },
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "markWidths": [
+        32,
+        64
+      ],
+      "method": "Same actual dual-contrast generated artwork on each surface; no generated colours are represented as a template palette change.",
+      "reviewedAt": "2026-10-19T18:40:32.878Z",
+      "review": "Visually reviewed exact cropTransparentPadding exports at120px and180px wordmark widths and32px/64px compact sizes on white, charcoal and red. Exact spelling retained, real alpha present, compact emblem clear. The source palette is part of the artwork only."
+    }
+  }
+}

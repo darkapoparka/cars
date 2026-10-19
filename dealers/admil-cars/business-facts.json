@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "slug": "admil-cars",
+  "dealerId": "gb-surbiton-admil-cars",
+  "business": {
+    "name": "Admil Cars",
+    "city": "Surbiton",
+    "region": "Greater London",
+    "countryCode": "GB",
+    "currency": "GBP",
+    "distanceUnit": "mi",
+    "locale": "en-GB",
+    "address": "174 Hook Rise North, Surbiton, KT6 5DE",
+    "phone": "+447429380370",
+    "phoneDisplay": "(07429) 380370",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://www.autotrader.co.uk/dealers/essex/romford/admil-cars-10049378",
+    "hours": "Mo-Fr 08:00-20:00; Su 10:00-18:00; Sa 09:00-20:00",
+    "sourceUrl": "https://www.autotrader.co.uk/dealers/essex/romford/admil-cars-10049378",
+    "observedAt": "2026-10-19T17:36:49.969107Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/essex/romford/admil-cars-10049378",
+      "observedAt": "2026-10-19T17:36:49.969107Z",
+      "supports": [
+        "public-business-identity",
+        "public-business-contact",
+        "advertised-stock"
+      ]
+    }
+  ]
+}

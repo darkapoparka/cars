@@ -1,0 +1,131 @@
+{
+  "schemaVersion": 1,
+  "dealer": "stanley-motor-group",
+  "status": "reviewed",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/west-yorkshire/wakefield/stanley-motor-group-10032038",
+      "observedAt": "2026-10-19T17:36:49.323710Z"
+    }
+  ],
+  "originals": [
+    {
+      "path": "branding/observed-logo.gif",
+      "sha256": "c5c08e39351ff7a639cd716122863e7f7afb3106db97c690b8774867f993da7c",
+      "sourceUrl": "https://m.atcdn.co.uk/dealer-logo/at2/adbranding/10032038/images/fpa_logo.gif",
+      "observedAt": "2026-10-19",
+      "kind": "published-logo-artwork"
+    }
+  ],
+  "creationMethod": "imagegen-redraw",
+  "dealerApproved": false,
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "researchConclusion": "The public logo was inspected. A clean transparent redraw preserves its name, colours and principal motif; the original bytes are retained.",
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "generationId": "exec-139b4155-08b6-4d4d-a132-47dc0ec62a8f",
+    "modelVersion": null,
+    "prompt": "Use case: logo-brand. Faithful clean redraw of the Stanley Motor Group wordmark in the reference, preserving exact name and black/white identity and its bold classic slab-serif character. Create a refined contemporary typographic logo, not a new automotive cliché: bold serif \"STANLEY\" with \"MOTOR GROUP\" beneath, and an isolated strong S letterform at far left as the compact matching mark. Keep a generous transparent gap between compact S and full wordmark. Transparent background, no black rectangle. Flat white and charcoal dual-ink letterforms with crisp dark edging and white outer keyline so the identical mark remains legible on white, charcoal and red backgrounds. Expert kerning, clean edges, no textures, no gradient, no shadow, no extra motif or tagline. Compact S must read clearly at 32px. Independent faithful redraw, not dealer approved."
+  },
+  "compactDerivation": {
+    "method": "lossless-isolated-emblem-crop",
+    "parentReference": "branding/generated-master.png",
+    "parentSha256": "2515315c9f96d184343abfd92ca53ca1ea4fde954833377161cff4ab09f37c7e",
+    "crop": {
+      "left": 0,
+      "top": 0,
+      "width": 494,
+      "height": 725
+    },
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-139b4155-08b6-4d4d-a132-47dc0ec62a8f",
+      "modelVersion": null
+    }
+  },
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T18:40:24.957Z",
+    "master": {
+      "path": "branding/generated-master.png",
+      "sha256": "2515315c9f96d184343abfd92ca53ca1ea4fde954833377161cff4ab09f37c7e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-139b4155-08b6-4d4d-a132-47dc0ec62a8f",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "033946a00b280ff30ebfa7838e020e29bab54929b9a0162728950ea6eb92b865",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-139b4155-08b6-4d4d-a132-47dc0ec62a8f",
+        "modelVersion": null
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "033946a00b280ff30ebfa7838e020e29bab54929b9a0162728950ea6eb92b865",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-139b4155-08b6-4d4d-a132-47dc0ec62a8f",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-master.png",
+        "sha256": "2515315c9f96d184343abfd92ca53ca1ea4fde954833377161cff4ab09f37c7e",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-139b4155-08b6-4d4d-a132-47dc0ec62a8f",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-master.png",
+        "sha256": "2515315c9f96d184343abfd92ca53ca1ea4fde954833377161cff4ab09f37c7e",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-139b4155-08b6-4d4d-a132-47dc0ec62a8f",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-master.png",
+        "sha256": "2515315c9f96d184343abfd92ca53ca1ea4fde954833377161cff4ab09f37c7e",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-139b4155-08b6-4d4d-a132-47dc0ec62a8f",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113"
+        ],
+        "onAccent": [
+          "#c40101"
+        ]
+      },
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "markWidths": [
+        32,
+        64
+      ],
+      "method": "Same actual dual-contrast generated artwork on each surface; no generated colours are represented as a template palette change.",
+      "reviewedAt": "2026-10-19T18:40:24.957Z",
+      "review": "Visually reviewed exact cropTransparentPadding exports at120px and180px wordmark widths and32px/64px compact sizes on white, charcoal and red. Exact spelling retained, real alpha present, compact emblem clear. The source palette is part of the artwork only."
+    }
+  }
+}

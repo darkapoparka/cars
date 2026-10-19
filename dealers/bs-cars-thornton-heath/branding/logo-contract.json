@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "dealer": "bs-cars-thornton-heath",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T18:56:55.806518Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "735b713e7eaf0916ec03760fb7028366e64f4840664ebbcc1e8f7c746b0d379a",
+      "sourceSha256": "18ca83f851be0e5f5a49d7fe3889ac8c38bf7ce80b4cff78cdb4fd58961e88d3"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "e328840b90055c31fb80527dcf074b722315c6f6ee5f787516d0b0d08d7e14bb",
+      "sourceSha256": "2fb67c6c4f7b63de26729861e6fe62aaca6003106b6728554f8cb806265dde8e"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "e328840b90055c31fb80527dcf074b722315c6f6ee5f787516d0b0d08d7e14bb",
+      "sourceSha256": "2fb67c6c4f7b63de26729861e6fe62aaca6003106b6728554f8cb806265dde8e"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "18ca83f851be0e5f5a49d7fe3889ac8c38bf7ce80b4cff78cdb4fd58961e88d3",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-29e789b8-dc5a-401e-a7bc-6e3e516990cc",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "a7810d81870c3f9c0e275ab39f629dbe738c8e5c4dd626c759160abbd70c4968",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-29e789b8-dc5a-401e-a7bc-6e3e516990cc",
+      "modelVersion": null
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "17c027a6be81cf750a52904b45436982f435bc3766319663aa6de6d015b8ca5e"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "18ca83f851be0e5f5a49d7fe3889ac8c38bf7ce80b4cff78cdb4fd58961e88d3",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-29e789b8-dc5a-401e-a7bc-6e3e516990cc",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/bs-cars-thornton-heath/branding/generated-master.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "2fb67c6c4f7b63de26729861e6fe62aaca6003106b6728554f8cb806265dde8e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-3b2e68cd-18ae-4417-8a84-3b8b9969be5b",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/bs-cars-thornton-heath/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "2fb67c6c4f7b63de26729861e6fe62aaca6003106b6728554f8cb806265dde8e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-3b2e68cd-18ae-4417-8a84-3b8b9969be5b",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/bs-cars-thornton-heath/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "b769b82f5064e156233744817a3d53829fa4e085dedd540ba544339de9ceabc7",
+      "sha256": "18ca83f851be0e5f5a49d7fe3889ac8c38bf7ce80b4cff78cdb4fd58961e88d3",
+      "crop": {
+        "left": 0,
+        "top": 45,
+        "width": 1941,
+        "height": 688
+      },
+      "sourcePath": "branding/generated-master.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "9f790585b6bc62ba5563d7f63039dc227ff494d8d4b0a9003cec4fefc323ddf9",
+      "sha256": "2fb67c6c4f7b63de26729861e6fe62aaca6003106b6728554f8cb806265dde8e",
+      "crop": {
+        "left": 0,
+        "top": 41,
+        "width": 1944,
+        "height": 696
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "9f790585b6bc62ba5563d7f63039dc227ff494d8d4b0a9003cec4fefc323ddf9",
+      "sha256": "2fb67c6c4f7b63de26729861e6fe62aaca6003106b6728554f8cb806265dde8e",
+      "crop": {
+        "left": 0,
+        "top": 41,
+        "width": 1944,
+        "height": 696
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "b664e0f983cdf3208af6a4bde1a3c2c1bd6a382c098081d2521b15f0e4ff0198",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-29e789b8-dc5a-401e-a7bc-6e3e516990cc",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/bs-cars-thornton-heath/branding/generated-mark.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "55a571c0b49dcf51de5e12609cee855aef2cc43f2289e0eb3b8a2c682a7044ea",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-3b2e68cd-18ae-4417-8a84-3b8b9969be5b",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/bs-cars-thornton-heath/branding/generated-mark-on-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "a7810d81870c3f9c0e275ab39f629dbe738c8e5c4dd626c759160abbd70c4968",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-29e789b8-dc5a-401e-a7bc-6e3e516990cc",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/bs-cars-thornton-heath/branding/generated-mark.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "17c027a6be81cf750a52904b45436982f435bc3766319663aa6de6d015b8ca5e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-29e789b8-dc5a-401e-a7bc-6e3e516990cc",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/bs-cars-thornton-heath/branding/generated-mark.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T18:56:55.806518Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "0b99d55f5ac3c072a1413fb8e85fe04c63317de061bed548bd819c9a009c5624",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-3b2e68cd-18ae-4417-8a84-3b8b9969be5b",
+      "modelVersion": null
+    }
+  }
+}

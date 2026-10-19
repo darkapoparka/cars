@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "dealer": "stanley-motor-group",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uk.json",
+    "sha256": "6cd8d365586f9a5d5131fe4b1d50baede7de91ab384a135017c25367298b07c4"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/west-yorkshire/wakefield/stanley-motor-group-10032038",
+      "observedAt": "2026-10-19T17:36:49.323710Z",
+      "supports": [
+        "public-business-identity",
+        "public-business-contact",
+        "advertised-stock"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "publicObservations": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/west-yorkshire/wakefield/stanley-motor-group-10032038",
+      "observedAt": "2026-10-19T17:36:49.323710Z",
+      "httpStatus": 200,
+      "sha256": "315f027c07b7803921217a111a5fea4c163e0a89223b8856b3f72760f01a9a35",
+      "byteLength": 199384,
+      "retention": "Only reviewed public business fields, hashes, listing identities and compressed photographs are committed; raw HTML remains outside the public pack."
+    }
+  ],
+  "stock": [
+    {
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202608225345355",
+      "photoUrl": "https://m.atcdn.co.uk/a/media/w600/8b188229b4514345b7ac6693896e8fa5.jpg",
+      "observedAt": "2026-10-19T17:53:20.129773Z",
+      "listingSha256": "6c1238f89d36d6ed75f6fe1cd06af716c24c2e6ddeaf2329aedd456971b962b6",
+      "sourcePhotoSha256": "71a3312db949b5ad812244dc235c6a4b4687f210673c60fe176349a37000a96e",
+      "sourcePhotoDimensions": [
+        600,
+        450
+      ],
+      "photoSha256": "8518892cd1672a9d89e584def2348e665214abcbc1aacb2ae0c5b44b4eef0840",
+      "photoDimensions": [
+        600,
+        450
+      ],
+      "photoBytes": 67359,
+      "recordId": "public-listing-1",
+      "title": "2014 BMW 330d M Sport Auto xDrive",
+      "retainedPhoto": "dealer-stock/public-1.jpg",
+      "publicPhotoReviewed": true
+    },
+    {
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202609306518188",
+      "photoUrl": "https://m.atcdn.co.uk/a/media/w600/2db10a497a744b7d897437cec6f3af46.jpg",
+      "observedAt": "2026-10-19T17:53:20.472866Z",
+      "listingSha256": "d05fcffae0a2426423513b06f6297eb3c39c4854bc5fa729413b1fea0e802271",
+      "sourcePhotoSha256": "0c7ba7382930241962f52a78712b5c5b9c350f4281d1b680d068aaa0daa8605a",
+      "sourcePhotoDimensions": [
+        600,
+        450
+      ],
+      "photoSha256": "2c72bb5c72bc9e13fad973d5b9f8f85cc423c7c0359dcafc5c1429b411209ba6",
+      "photoDimensions": [
+        600,
+        450
+      ],
+      "photoBytes": 68092,
+      "recordId": "public-listing-2",
+      "title": "2015 BMW 330d M Sport Touring Auto xDrive",
+      "retainedPhoto": "dealer-stock/public-2.jpg",
+      "publicPhotoReviewed": true
+    },
+    {
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202607304640132",
+      "photoUrl": "https://m.atcdn.co.uk/a/media/w600/4e69440bc9ee4a7b93aaebb5cd23adb0.jpg",
+      "observedAt": "2026-10-19T17:53:20.793470Z",
+      "listingSha256": "932c500570e01cfbd9d849fbcce39085f5d63c0eb519ca329a4bbc7d6cbacb5c",
+      "sourcePhotoSha256": "cfde5f6f3d226515b888e131025a69448b5d9e5db77a069b9bec3b5c99c9d20f",
+      "sourcePhotoDimensions": [
+        600,
+        450
+      ],
+      "photoSha256": "35615e2274f4906d79e57bf9c686554d69fb2be24c9eb215f25b9039946e4096",
+      "photoDimensions": [
+        600,
+        450
+      ],
+      "photoBytes": 59493,
+      "recordId": "public-listing-3",
+      "title": "2016 Land Rover Range Rover Evoque 2.0 TD4 HSE Dynamic Auto",
+      "retainedPhoto": "dealer-stock/public-3.jpg",
+      "publicPhotoReviewed": true
+    }
+  ],
+  "review": {
+    "reviewedAt": "2026-10-19T18:24:26.996284Z",
+    "stockPhotoIdentityChecked": true,
+    "sourceClaimLimits": "Dated public adverts only; availability, repairs, vehicle condition and legal entity details are not independently certified.",
+    "omissions": []
+  }
+}

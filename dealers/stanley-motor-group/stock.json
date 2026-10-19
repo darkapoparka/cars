@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "dealer": "stanley-motor-group",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "public-listing-1",
+      "title": "2014 BMW 330d M Sport Auto xDrive",
+      "make": "BMW",
+      "model": "3 Series",
+      "year": 2014,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/public-1.jpg"
+      ],
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202608225345355",
+      "observedAt": "2026-10-19T17:53:20.129773Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Saloon",
+      "transmission": "Automatic",
+      "fuel": "Diesel",
+      "mileageValue": 115000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "public-listing-2",
+      "title": "2015 BMW 330d M Sport Touring Auto xDrive",
+      "make": "BMW",
+      "model": "3 Series",
+      "year": 2015,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/public-2.jpg"
+      ],
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202609306518188",
+      "observedAt": "2026-10-19T17:53:20.472866Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Estate",
+      "transmission": "Automatic",
+      "fuel": "Diesel",
+      "mileageValue": 136000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "public-listing-3",
+      "title": "2016 Land Rover Range Rover Evoque 2.0 TD4 HSE Dynamic Auto",
+      "make": "Land Rover",
+      "model": "Range Rover Evoque",
+      "year": 2016,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/public-3.jpg"
+      ],
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202607304640132",
+      "observedAt": "2026-10-19T17:53:20.793470Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "SUV",
+      "transmission": "Automatic",
+      "fuel": "Diesel",
+      "mileageValue": 80000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

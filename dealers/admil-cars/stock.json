@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "dealer": "admil-cars",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "public-listing-1",
+      "title": "2024 BMW 320i M Sport Auto",
+      "make": "BMW",
+      "model": "3 Series",
+      "year": 2024,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/public-1.jpg"
+      ],
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202610026625130",
+      "observedAt": "2026-10-19T17:53:22.128206Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Saloon",
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "mileageValue": 25112,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "public-listing-2",
+      "title": "2022 Mercedes-Benz C200h MHEV Sport G-Tronic+",
+      "make": "Mercedes-Benz",
+      "model": "C Class",
+      "year": 2022,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/public-2.jpg"
+      ],
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202605092262302",
+      "observedAt": "2026-10-19T17:53:22.468821Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Saloon",
+      "transmission": "Automatic",
+      "fuel": "Petrol Hybrid",
+      "mileageValue": 55080,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "public-listing-3",
+      "title": "2018 Mercedes-Benz E220d SE Premium G-Tronic+",
+      "make": "Mercedes-Benz",
+      "model": "E Class",
+      "year": 2018,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/public-3.jpg"
+      ],
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202610116885400",
+      "observedAt": "2026-10-19T17:53:22.689401Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Saloon",
+      "transmission": "Automatic",
+      "fuel": "Diesel",
+      "mileageValue": 80828,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}
