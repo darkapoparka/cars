@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "dealer": "raj-motors",
+  "dealerId": "gb-leicester-raj-motors",
+  "reviewedAt": "2026-10-19",
+  "providerWrites": 0,
+  "dealerContactPerformed": false,
+  "primarySource": {
+    "url": "https://showroom.ebaymotorspro.co.uk/RMLCARS",
+    "httpStatus": 200,
+    "htmlSha256": "da4d16ed39d2225d0aeedac5089e20e8e1b39c75b469bd246b0da2d3d08c0977",
+    "observedAt": "2026-10-19"
+  },
+  "identity": {
+    "retainedLeadName": "Raj Motors",
+    "currentSellerDisplayName": "Raj Motors",
+    "existingRegistryOrClientMatch": false
+  },
+  "publicBusinessPhone": {
+    "source": "current dealer marketplace profile",
+    "ownership": "Public business contact; it may be a marketplace forwarding number."
+  },
+  "factsOmitted": [],
+  "limitations": [
+    "Two otherwise current listings were omitted because visible windscreen price cards would publish prices in the preview. One price-free vehicle photo is retained. The standalone domain currently serves unrelated template content, so the website field is omitted."
+  ],
+  "inventory": {
+    "kind": "dated-listing-snapshot",
+    "retainedListings": 1,
+    "photos": 1,
+    "availabilityConfirmedWithDealer": false,
+    "pricesOmitted": true,
+    "rawMarketplaceHtmlRetainedInPublicPack": false
+  },
+  "researchMethod": "Opened the exact primary seller catalogue; used its current Used cars/vehicle records and excluded generic Featured advertisements. Checked matched directories and bounded exact business name plus locality searches for an official site or usable logo."
+}

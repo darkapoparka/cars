@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "g1-autos",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "listing-1",
+      "title": "2020 BMW X3 3.0 M40i Auto xDrive Euro 6 (s/s) 5dr",
+      "make": "BMW",
+      "model": "X3",
+      "year": 2020,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/listing-1.jpg"
+      ],
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202512088448004",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 30775,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-2",
+      "title": "2014 Audi RS6 Avant 4.0 TFSI V8 Tiptronic quattro Euro 5 (s/s) 5dr",
+      "make": "Audi",
+      "model": "RS6 Avant",
+      "year": 2014,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/listing-2.jpg"
+      ],
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202604091417312",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 74980,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-3",
+      "title": "2018 Volkswagen Golf 2.0 TSI GTI Euro 6 (s/s) 5dr",
+      "make": "Volkswagen",
+      "model": "Golf",
+      "year": 2018,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/listing-3.jpg"
+      ],
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202607184296778",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 27718,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview. The public advert's history panel records Category N. This history has not been independently verified."
+    }
+  ]
+}

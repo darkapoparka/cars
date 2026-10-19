@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "dealer": "chris-automotive",
+  "photos": [
+    {
+      "id": "listing-1",
+      "listingUrl": "https://www.autotrader.co.uk/car-details/202605142392510",
+      "catalogueUrl": "https://www.autotrader.co.uk/dealers/berkshire/maidenhead/chris-automotive-10048966",
+      "imageUrl": "https://m.atcdn.co.uk/a/media/w1280/c0aabc9638804944a64d0d5b0d0c3256.jpg",
+      "downloadUrl": "https://m.atcdn.co.uk/a/media/w1280/c0aabc9638804944a64d0d5b0d0c3256.jpg",
+      "originalDimensions": [
+        1280,
+        960
+      ],
+      "retainedDimensions": [
+        1024,
+        768
+      ],
+      "retainedBytes": 178843,
+      "mediaPath": "dealer-stock/listing-1.jpg",
+      "retainedSha256": "817c3ffb2651d494555e217dfb888a77e915ef875cb913b58d5349f82acf6430",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "4de4dd24781c063580fdc407696f4dee6e53662bd608199ded483755c152d116",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "id": "listing-2",
+      "listingUrl": "https://www.autotrader.co.uk/car-details/202610106867649",
+      "catalogueUrl": "https://www.autotrader.co.uk/dealers/berkshire/maidenhead/chris-automotive-10048966",
+      "imageUrl": "https://m.atcdn.co.uk/a/media/w1280/c22c59816639410f985d1d7b5e47a996.jpg",
+      "downloadUrl": "https://m.atcdn.co.uk/a/media/w1280/c22c59816639410f985d1d7b5e47a996.jpg",
+      "originalDimensions": [
+        1280,
+        960
+      ],
+      "retainedDimensions": [
+        1024,
+        768
+      ],
+      "retainedBytes": 178683,
+      "mediaPath": "dealer-stock/listing-2.jpg",
+      "retainedSha256": "d9c87d12698d25d24fab74dc1dcd75d8d42f69f054a4ea19af96735507da0340",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "77c9eb7644d830509456eaacebdee4f1f44f7110fb476ddb4b430e1501fec4b5",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "id": "listing-3",
+      "listingUrl": "https://www.autotrader.co.uk/car-details/202609186175176",
+      "catalogueUrl": "https://www.autotrader.co.uk/dealers/berkshire/maidenhead/chris-automotive-10048966",
+      "imageUrl": "https://m.atcdn.co.uk/a/media/w1280/5b3235b99d424b8ebe7b3caf356b71e3.jpg",
+      "downloadUrl": "https://m.atcdn.co.uk/a/media/w1280/5b3235b99d424b8ebe7b3caf356b71e3.jpg",
+      "originalDimensions": [
+        1280,
+        960
+      ],
+      "retainedDimensions": [
+        1024,
+        768
+      ],
+      "retainedBytes": 185871,
+      "mediaPath": "dealer-stock/listing-3.jpg",
+      "retainedSha256": "36a5a24aad14dc26cb891cafa243f7d0ceca61f0276c58fac2561405a34ea838",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "211cc30514341436a52858e63cb4d185fd19c159382103a8a0d0d37528e9d5bc",
+      "observedAt": "2026-10-19"
+    }
+  ],
+  "review": {
+    "reviewed": true,
+    "observedAt": "2026-10-19",
+    "method": "Viewed every selected photograph in contact sheets; checked actual vehicle content, placeholders, price cards and visible dealer identity.",
+    "maximumDimension": 1024,
+    "maximumBytes": 185871
+  }
+}

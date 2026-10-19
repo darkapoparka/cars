@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "dealer": "car-force",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uk.json",
+    "sha256": "6cd8d365586f9a5d5131fe4b1d50baede7de91ab384a135017c25367298b07c4"
+  },
+  "publicSources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/CAR-FORCE-LTD?menu=1",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "current-public-business-details",
+        "dated-advertised-stock-snapshot"
+      ]
+    }
+  ],
+  "liveFetchPerformed": false,
+  "currentResearch": {
+    "performed": true,
+    "observedAt": "2026-10-19",
+    "primaryPage": {
+      "url": "https://showroom.ebaymotorspro.co.uk/CAR-FORCE-LTD?menu=1",
+      "httpStatus": 200,
+      "sha256": "18bb8bb8469a3bb660e6819cc92ce6227aeec808649e6b3e6b64bed00810787c"
+    },
+    "reference": "research-review.json"
+  }
+}

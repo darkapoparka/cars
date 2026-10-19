@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "dealer": "g1-autos",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uk.json",
+    "sha256": "6cd8d365586f9a5d5131fe4b1d50baede7de91ab384a135017c25367298b07c4"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/bedfordshire/luton/g1-autos-ltd-10046522",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "current-public-business-details",
+        "dated-advertised-stock-snapshot"
+      ]
+    }
+  ],
+  "liveFetchPerformed": false,
+  "currentResearch": {
+    "performed": true,
+    "observedAt": "2026-10-19",
+    "primaryPage": {
+      "url": "https://www.autotrader.co.uk/dealers/bedfordshire/luton/g1-autos-ltd-10046522",
+      "httpStatus": 200,
+      "sha256": "b4563ae933d0f1db0c02f8ea4890030d4dfd2ed67d845799bd49b8623e781347"
+    },
+    "reference": "research-review.json"
+  }
+}

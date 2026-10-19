@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "dealer": "chris-automotive",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T19:22:56.608725Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "be1ea7134399a918d346c585608e5b661edb1919cb4390451a8520d01ea5e956",
+      "sourceSha256": "edac5f84df00dcbc28130308e35d4c1ac6dc54ed45e2a467a7f0b8bab71c3d5b"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "ead79a39065f8df5f04f389143dd92630a081873c00208ccc2aaf9ff03662a10",
+      "sourceSha256": "b83e1ad68439963a67fd423388b0e5c2c975d2c2db94a42b40ddefea825a569d"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "ead79a39065f8df5f04f389143dd92630a081873c00208ccc2aaf9ff03662a10",
+      "sourceSha256": "b83e1ad68439963a67fd423388b0e5c2c975d2c2db94a42b40ddefea825a569d"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "edac5f84df00dcbc28130308e35d4c1ac6dc54ed45e2a467a7f0b8bab71c3d5b",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-fc05ed46-0add-44ac-81e1-82212bb65457",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "923e2b9db52b663959c77d0cb2f0b3ace531c8f9577f1d203ee678bf2da69da1",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-fbbf3b18-1f81-4d39-98df-af792575329c",
+      "modelVersion": null
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "440214a0cf48ae7947f0afe26d9fcf82e6fe79bbd62a97ab82afdb9674e036d5"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "edac5f84df00dcbc28130308e35d4c1ac6dc54ed45e2a467a7f0b8bab71c3d5b",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-fc05ed46-0add-44ac-81e1-82212bb65457",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/chris-automotive/branding/generated-master.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "b83e1ad68439963a67fd423388b0e5c2c975d2c2db94a42b40ddefea825a569d",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-27825418-41a3-4d93-91ce-0678f0c81a96",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/chris-automotive/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "b83e1ad68439963a67fd423388b0e5c2c975d2c2db94a42b40ddefea825a569d",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-27825418-41a3-4d93-91ce-0678f0c81a96",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/chris-automotive/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "81d4f57fb6f3fc720d7d4aa1cf1634b133030ce21d243333d60aaff2d002c639",
+      "sha256": "edac5f84df00dcbc28130308e35d4c1ac6dc54ed45e2a467a7f0b8bab71c3d5b",
+      "crop": {
+        "left": 104,
+        "top": 144,
+        "width": 1814,
+        "height": 489
+      },
+      "sourcePath": "branding/generated-master.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "25abf2a157f0b909c07ab81873e31472c496dc8d315d0f0869bed49a2c46ca3b",
+      "sha256": "b83e1ad68439963a67fd423388b0e5c2c975d2c2db94a42b40ddefea825a569d",
+      "crop": {
+        "left": 89,
+        "top": 132,
+        "width": 1859,
+        "height": 518
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "25abf2a157f0b909c07ab81873e31472c496dc8d315d0f0869bed49a2c46ca3b",
+      "sha256": "b83e1ad68439963a67fd423388b0e5c2c975d2c2db94a42b40ddefea825a569d",
+      "crop": {
+        "left": 89,
+        "top": 132,
+        "width": 1859,
+        "height": 518
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "483509db18317c8c94a06d541eb927142d8f337e2236a6e7dd8cfe98aad603c1",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-fbbf3b18-1f81-4d39-98df-af792575329c",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/chris-automotive/branding/generated-mark.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "483509db18317c8c94a06d541eb927142d8f337e2236a6e7dd8cfe98aad603c1",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-fbbf3b18-1f81-4d39-98df-af792575329c",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/chris-automotive/branding/generated-mark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "923e2b9db52b663959c77d0cb2f0b3ace531c8f9577f1d203ee678bf2da69da1",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-fbbf3b18-1f81-4d39-98df-af792575329c",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/chris-automotive/branding/generated-mark.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "440214a0cf48ae7947f0afe26d9fcf82e6fe79bbd62a97ab82afdb9674e036d5",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-fbbf3b18-1f81-4d39-98df-af792575329c",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/chris-automotive/branding/generated-mark.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T19:22:56.608725Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "923e2b9db52b663959c77d0cb2f0b3ace531c8f9577f1d203ee678bf2da69da1",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-fbbf3b18-1f81-4d39-98df-af792575329c",
+      "modelVersion": null
+    }
+  }
+}

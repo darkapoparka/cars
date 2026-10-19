@@ -1,0 +1,216 @@
+{
+  "schemaVersion": 1,
+  "dealer": "supreme-cars-luton",
+  "realLogoFirst": true,
+  "logoKind": "redraw",
+  "publishedBranding": "real-logo-observed",
+  "publicSources": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/bedfordshire/luton/supreme-cars-10019372?channel=cars",
+      "observedAt": "2026-10-19"
+    }
+  ],
+  "originals": [
+    {
+      "url": "https://m.atcdn.co.uk/dealer-logo/at2/adbranding/10019372/images/fpa_logo.gif",
+      "observedAt": "2026-10-19",
+      "sha256": "91472c5d7960204942ae7d3831756afe22f694e883173e9ca2c9821745feaa3d",
+      "nativeDimensions": {
+        "width": 600,
+        "height": 100
+      },
+      "format": "GIF",
+      "description": "Low-resolution white Supreme Cars wordmark on an opaque black rectangle; preserved the name and monochrome identity, with compact SC lettering.",
+      "path": "branding/original-logo.gif"
+    }
+  ],
+  "sourceLogoUrl": "https://m.atcdn.co.uk/dealer-logo/at2/adbranding/10019372/images/fpa_logo.gif",
+  "workingLogoPath": "branding/generated-master.png",
+  "creationMethod": "imagegen-faithful-redraw",
+  "dealerApproved": false,
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "usageStatus": "public-preview-only",
+  "observedAt": "2026-10-19",
+  "researchConclusion": "A real identity was obtained and visually reviewed. Low-resolution white Supreme Cars wordmark on an opaque black rectangle; preserved the name and monochrome identity, with compact SC lettering. This is a faithful image-generated redraw for an independent preview and has not been approved by the dealer.",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T19:22:56.608725Z",
+    "master": {
+      "path": "branding/generated-master.png",
+      "sha256": "d4676b5159769b9882077e633b2efccb8e24d9d95cec4d4f46f0cc813ce667e8",
+      "nativeDimensions": {
+        "width": 2170,
+        "height": 725
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9e4f7976-fc3e-450e-9ab9-e03d5fc537c8",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "07e80d9db09618d3053a29168937dc02e2470b1738aeab7eee9f45c7fc56d05b",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9e4f7976-fc3e-450e-9ab9-e03d5fc537c8",
+        "modelVersion": null
+      },
+      "derivation": {
+        "operation": "pixel-exact rectangular extraction of the existing generated compact emblem; no recolouring or invented artwork",
+        "parentPath": "branding/generated-master.png",
+        "parentSha256": "d4676b5159769b9882077e633b2efccb8e24d9d95cec4d4f46f0cc813ce667e8",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 506,
+          "height": 725
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-on-dark.png",
+      "sha256": "92417ddc192776dca9936bced35b8a77f5d632398c447bc3144a234f29877e22",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-18274f9d-a8b7-4df8-b4fa-fc0c6148ce23",
+        "modelVersion": null
+      },
+      "derivation": {
+        "operation": "pixel-exact rectangular extraction of the existing generated compact emblem; no recolouring or invented artwork",
+        "parentPath": "branding/generated-on-dark.png",
+        "parentSha256": "811b9be4853ca3d2519242b38a518c65f43272425d6969360378504bcb2e8ad8",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 461,
+          "height": 725
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-master.png",
+        "sha256": "d4676b5159769b9882077e633b2efccb8e24d9d95cec4d4f46f0cc813ce667e8",
+        "nativeDimensions": {
+          "width": 2170,
+          "height": 725
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-9e4f7976-fc3e-450e-9ab9-e03d5fc537c8",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "811b9be4853ca3d2519242b38a518c65f43272425d6969360378504bcb2e8ad8",
+        "nativeDimensions": {
+          "width": 2167,
+          "height": 725
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-18274f9d-a8b7-4df8-b4fa-fc0c6148ce23",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "811b9be4853ca3d2519242b38a518c65f43272425d6969360378504bcb2e8ad8",
+        "nativeDimensions": {
+          "width": 2167,
+          "height": 725
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-18274f9d-a8b7-4df8-b4fa-fc0c6148ce23",
+          "modelVersion": null
+        }
+      }
+    },
+    "marks": {
+      "onLight": {
+        "path": "branding/generated-mark.png",
+        "sha256": "07e80d9db09618d3053a29168937dc02e2470b1738aeab7eee9f45c7fc56d05b",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-9e4f7976-fc3e-450e-9ab9-e03d5fc537c8",
+          "modelVersion": null
+        },
+        "derivation": {
+          "operation": "pixel-exact rectangular extraction of the existing generated compact emblem; no recolouring or invented artwork",
+          "parentPath": "branding/generated-master.png",
+          "parentSha256": "d4676b5159769b9882077e633b2efccb8e24d9d95cec4d4f46f0cc813ce667e8",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 506,
+            "height": 725
+          }
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-mark-on-dark.png",
+        "sha256": "92417ddc192776dca9936bced35b8a77f5d632398c447bc3144a234f29877e22",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-18274f9d-a8b7-4df8-b4fa-fc0c6148ce23",
+          "modelVersion": null
+        },
+        "derivation": {
+          "operation": "pixel-exact rectangular extraction of the existing generated compact emblem; no recolouring or invented artwork",
+          "parentPath": "branding/generated-on-dark.png",
+          "parentSha256": "811b9be4853ca3d2519242b38a518c65f43272425d6969360378504bcb2e8ad8",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 461,
+            "height": 725
+          }
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113",
+          "#101820"
+        ],
+        "onAccent": [
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ]
+      },
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "reviewedAt": "2026-10-19T19:22:56.608725Z",
+      "notes": "Visually reviewed the actual deterministic transparent-padding exports at120px and180px on all six retained template surface colours. Exact name spelling, silhouette, alpha edges, spacing and clipping were checked. Light-ink variants are actual imagegen results, not deterministic recolours. Small secondary suffix text is subordinate to the principal name; compact identity is provided separately."
+    },
+    "compactMarkStatus": "independent-preview-not-dealer-approved",
+    "compactMarkDescription": "SC monogram",
+    "compactMarkReview": {
+      "reviewed": true,
+      "widths": [
+        32,
+        64
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820",
+        "#09090b",
+        "#17191c",
+        "#c40101"
+      ],
+      "reviewedAt": "2026-10-19T19:22:56.608725Z",
+      "notes": "Visually inspected the actual compact exports at32px and64px on all six template backgrounds. Existing-emblem pixel crops have explicit parent hashes and exact rectangle provenance; independently generated compact marks retain their own actual generation IDs. Shape, spacing, clipping and transparent counters were checked. Dealer approval remains unknown."
+    }
+  }
+}

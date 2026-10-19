@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "dealer": "zed-specialist",
+  "generations": [
+    {
+      "role": "master",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-e6625904-7a87-4eea-a012-5c47e74f7091",
+      "modelVersion": null,
+      "prompt": "Create a refined independent logo proposal for ZED SPECIALIST. One horizontal lockup with compact dynamic Z symbol at left and exact wording ZED SPECIALIST at right in a very legible modern bold sans serif. Use a simple split Z with one clean diagonal negative-space channel, strong broad strokes suitable for32px. Entirely flat near-black ink, true transparent backdrop, generous gap between left mark and text. No tiny text, slogans, badge, literal car drawing, background, texture, gradients or shadows. Premium automotive typographic precision, restrained balanced design.",
+      "promptRetained": true,
+      "sourceAssetSha256": "860d56e94883e4bfb281b5a44ce01f48bf1432904e1d453b94160d5b708dc6a1",
+      "observedAt": "2026-10-19",
+      "originalResponseArtworkRetained": true
+    },
+    {
+      "role": "onDarkAndAccent",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-4a4936dd-54db-455d-a027-273b860791ab",
+      "modelVersion": null,
+      "prompt": "Adapt the exact supplied logo into a refined surface version for dark and red backgrounds. Keep the exact spelling, the original motif, every word, proportions and layout. Give all dark lettering and dark emblem strokes a pure WHITE fill bounded by a strong clean deep near-black #101820 contour, finished with a narrow white outer keyline. Preserve any original red or orange brand accent inside its contour. All white areas must be solid opaque ink protected inside the dark contour. True transparent alpha outside. Keep a GENEROUS TRANSPARENT GAP between compact emblem and wordmark and preserve all internal letter counters. No grunge, no speckles, no distressed raster texture, no holes in solid strokes, no gradients, no drop shadow, no decorative panel, no extra content. Smooth precise restrained digital logo, clean hard edges.",
+      "promptRetained": true,
+      "sourceAssetSha256": "52dfbe8b0260b4f0d339c82a75d601c379a99d27e79c29c71c97c5acf2ebb258",
+      "observedAt": "2026-10-19",
+      "originalResponseArtworkRetained": true
+    }
+  ],
+  "exportPolicy": "Original generated PNG bytes are retained. Compact pixel-exact extractions, where used, retain their parent generation, hash and rectangle in source.json. Existing dealer-pack logo tooling performs only transparent padding removal and deterministic raster exports. No deterministic recolour is used."
+}

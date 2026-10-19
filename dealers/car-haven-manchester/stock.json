@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "dealer": "car-haven-manchester",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "listing-1",
+      "title": "2021 Audi A1 1.0 TFSI 30 Sport Sportback S Tronic Euro 6 (s/s) 5dr",
+      "make": "Audi",
+      "model": "A1",
+      "year": 2021,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/listing-1.jpg"
+      ],
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202610046666476",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Hatchback",
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "mileageValue": 14509,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview. The public advert's history panel records Category N. This history has not been independently verified."
+    },
+    {
+      "id": "listing-2",
+      "title": "2020 Volkswagen Polo 1.0 TSI beats Euro 6 (s/s) 5dr",
+      "make": "Volkswagen",
+      "model": "Polo",
+      "year": 2020,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/listing-2.jpg"
+      ],
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202609186176419",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 39594,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview. The public advert history panel records Category S; the seller description also reports a Category S total loss. These source reports have not been independently verified."
+    }
+  ]
+}

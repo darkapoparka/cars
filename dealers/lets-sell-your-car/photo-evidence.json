@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "dealer": "lets-sell-your-car",
+  "photos": [
+    {
+      "id": "listing-1",
+      "listingUrl": "https://www.ebay.co.uk/itm/800809102204",
+      "catalogueUrl": "https://showroom.ebaymotorspro.co.uk/let-s-sell-your-car?aboutUs=&menu=1",
+      "imageUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/Y5cAAeSw1jVq1NE3/$_2.JPG",
+      "downloadUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/Y5cAAeSw1jVq1NE3/$_57.JPG",
+      "originalDimensions": [
+        1600,
+        1200
+      ],
+      "retainedDimensions": [
+        1024,
+        768
+      ],
+      "retainedBytes": 172669,
+      "mediaPath": "dealer-stock/listing-1.jpg",
+      "retainedSha256": "33e720baf34ff58f3c86d479c78404caa34562ee4e7012dc47271b92a336885f",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "902712fa73455401ed28ca1c27aec58e6708812d77725397babc422fe8553f1c",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "id": "listing-2",
+      "listingUrl": "https://www.ebay.co.uk/itm/800797778391",
+      "catalogueUrl": "https://showroom.ebaymotorspro.co.uk/let-s-sell-your-car?aboutUs=&menu=1",
+      "imageUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/YKEAAeSwHmRq1e4X/$_2.JPG",
+      "downloadUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/YKEAAeSwHmRq1e4X/$_57.JPG",
+      "originalDimensions": [
+        1600,
+        1200
+      ],
+      "retainedDimensions": [
+        1024,
+        768
+      ],
+      "retainedBytes": 163898,
+      "mediaPath": "dealer-stock/listing-2.jpg",
+      "retainedSha256": "0c0706857b98565207518d2d8fb61d3728a4d915ec626adca5c43d3a2690fe27",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "7cbe4c0bd42dc166ecd964e65376ca5767ea836ecb52bfd5c6b74243ffbb6192",
+      "observedAt": "2026-10-19"
+    }
+  ],
+  "review": {
+    "reviewed": true,
+    "observedAt": "2026-10-19",
+    "method": "Viewed every selected photograph in contact sheets; checked actual vehicle content, placeholders, price cards and visible dealer identity.",
+    "maximumDimension": 1024,
+    "maximumBytes": 172669
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "dealer": "leicester-motor-group",
+  "generations": [
+    {
+      "role": "master",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-1f959efb-f104-449f-8f2e-43e2c034a93b",
+      "modelVersion": null,
+      "prompt": "Faithfully redraw this weak tiny real logo for LEICESTER MOTOR GROUP LTD. Preserve its black-and-white italic name and small automotive roof/profile motif, but fully redesign the fuzzy proportions and typography into a clean professional vector-like raster. One horizontal lockup, compact LMG monogram beneath a simplified single roof stroke at left, readable bold slightly italic LEICESTER above MOTOR GROUP LTD at right. Accurate name. Genuine transparent background, near-black ink only, no backgrounds, glow, shadows, gradients, texture, circles or badges. Strong strokes for32px compact mark, clear space between mark and words. No extra words or contact details.",
+      "promptRetained": true,
+      "sourceAssetSha256": "243197a75b2b28eb488796100d818ea05c1af5286185dffc576b0ea38f5a5d8e",
+      "observedAt": "2026-10-19",
+      "originalResponseArtworkRetained": true
+    },
+    {
+      "role": "onDarkAndAccent",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-c77d1340-0aa6-4f43-9d40-15f24da7b80b",
+      "modelVersion": null,
+      "prompt": "Make a faithful MONOCHROME dark-surface version of the attached black and white LEICESTER MOTOR GROUP LTD logo. EXACT words: LEICESTER on first line, MOTOR GROUP LTD on second line; left emblem LMG with the same simple coupe roof. Use ONLY THREE colors: pale silver #d9e2ec filled artwork, black #111111 contour, white #ffffff thin outside keyline. Absolutely NO orange, NO purple, NO blue, NO colorful highlights, NO unrelated words. Preserve exact business name and source motif. Correct exact spelling LEICESTER MOTOR GROUP LTD. True transparent alpha outside and in every letter counter. Solid fills, smooth precise contours, no speckles, no grunge, no edge noise, no gradients, no reflections, no background, no shadows. Keep compact LMG emblem visibly separated from wordmark by a generous clear gap.",
+      "promptRetained": true,
+      "sourceAssetSha256": "5a999c27433f415b4b0472e1e45c57b299c95c592522e6cb72946579cc5b93f2",
+      "observedAt": "2026-10-19",
+      "originalResponseArtworkRetained": true
+    }
+  ],
+  "exportPolicy": "Original generated PNG bytes are retained. Compact pixel-exact extractions, where used, retain their parent generation, hash and rectangle in source.json. Existing dealer-pack logo tooling performs only transparent padding removal and deterministic raster exports. No deterministic recolour is used."
+}

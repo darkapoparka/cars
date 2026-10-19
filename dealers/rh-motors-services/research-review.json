@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "dealer": "rh-motors-services",
+  "dealerId": "gb-london-rh-motors-services",
+  "reviewedAt": "2026-10-19",
+  "providerWrites": 0,
+  "dealerContactPerformed": false,
+  "primarySource": {
+    "url": "https://showroom.ebaymotorspro.co.uk/Rh-Motors-Services-Ltd?menu=1",
+    "httpStatus": 200,
+    "htmlSha256": "0e3b0e4593afd3b3f3aa460d227ecef75df9df0673fac9df46baa2d468b38ed9",
+    "observedAt": "2026-10-19"
+  },
+  "identity": {
+    "retainedLeadName": "R&H Motors Services Ltd",
+    "currentSellerDisplayName": "R&h Motors Services Ltd",
+    "existingRegistryOrClientMatch": false
+  },
+  "publicBusinessPhone": {
+    "source": "current dealer marketplace profile",
+    "ownership": "Public business contact; it may be a marketplace forwarding number."
+  },
+  "factsOmitted": [
+    "A personally named email address was omitted; no personal contact value is retained in this pack."
+  ],
+  "limitations": [],
+  "inventory": {
+    "kind": "dated-listing-snapshot",
+    "retainedListings": 3,
+    "photos": 3,
+    "availabilityConfirmedWithDealer": false,
+    "pricesOmitted": true,
+    "rawMarketplaceHtmlRetainedInPublicPack": false
+  },
+  "researchMethod": "Opened the exact primary seller catalogue; used its current Used cars/vehicle records and excluded generic Featured advertisements. Checked matched directories and bounded exact business name plus locality searches for an official site or usable logo."
+}

@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "dealer": "rh-motors-services",
+  "missing": [
+    {
+      "field": "business.email",
+      "required": false,
+      "reason": "Personally named contact omitted under public-business-only scope."
+    },
+    {
+      "field": "business.website",
+      "required": false,
+      "reason": "No sufficiently verified current public business value retained after source review."
+    },
+    {
+      "field": "business.hours",
+      "required": false,
+      "reason": "No sufficiently verified current public business value retained after source review."
+    },
+    {
+      "field": "prices",
+      "required": false,
+      "reason": "All listing prices are omitted under the public-repository scope."
+    }
+  ],
+  "blocking": []
+}

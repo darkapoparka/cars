@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "dealer": "zed-specialist",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uk.json",
+    "sha256": "6cd8d365586f9a5d5131fe4b1d50baede7de91ab384a135017c25367298b07c4"
+  },
+  "publicSources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Zed-Specialist",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "current-public-business-details",
+        "dated-advertised-stock-snapshot"
+      ]
+    },
+    {
+      "url": "https://www.cazoo.co.uk/dealers/zed-specialist-96585/",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "matching-dealer-directory-identity"
+      ]
+    }
+  ],
+  "liveFetchPerformed": false,
+  "currentResearch": {
+    "performed": true,
+    "observedAt": "2026-10-19",
+    "primaryPage": {
+      "url": "https://showroom.ebaymotorspro.co.uk/Zed-Specialist",
+      "httpStatus": 200,
+      "sha256": "defa41b802a8095c316870fe8e878bdd701210311a7bbdc9112872bf29ae904d"
+    },
+    "reference": "research-review.json"
+  }
+}

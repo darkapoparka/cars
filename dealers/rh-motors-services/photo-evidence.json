@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "dealer": "rh-motors-services",
+  "photos": [
+    {
+      "id": "listing-1",
+      "listingUrl": "https://www.ebay.co.uk/itm/880028863593",
+      "catalogueUrl": "https://showroom.ebaymotorspro.co.uk/Rh-Motors-Services-Ltd?menu=1",
+      "imageUrl": "https://i.ebayimg.com/00/s/MTYwMFgxMjAw/z/Ql0AAeSwFcZq1dLh/$_2.JPG",
+      "downloadUrl": "https://i.ebayimg.com/00/s/MTYwMFgxMjAw/z/Ql0AAeSwFcZq1dLh/$_57.JPG",
+      "originalDimensions": [
+        1200,
+        1600
+      ],
+      "retainedDimensions": [
+        768,
+        1024
+      ],
+      "retainedBytes": 130874,
+      "mediaPath": "dealer-stock/listing-1.jpg",
+      "retainedSha256": "28011f339ed29d63129237cdf16e3a4fc67ea6832c59f492aeeacf099fb72f93",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "863bebdc21f899412e057c96ff3be180efecaecd2a975f458e29e255d0ca8c6e",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "id": "listing-2",
+      "listingUrl": "https://www.ebay.co.uk/itm/880021909920",
+      "catalogueUrl": "https://showroom.ebaymotorspro.co.uk/Rh-Motors-Services-Ltd?menu=1",
+      "imageUrl": "https://i.ebayimg.com/00/s/MTYwMFgxMjAw/z/O50AAeSwzcxq1Rdk/$_2.JPG",
+      "downloadUrl": "https://i.ebayimg.com/00/s/MTYwMFgxMjAw/z/O50AAeSwzcxq1Rdk/$_57.JPG",
+      "originalDimensions": [
+        1200,
+        1600
+      ],
+      "retainedDimensions": [
+        768,
+        1024
+      ],
+      "retainedBytes": 128080,
+      "mediaPath": "dealer-stock/listing-2.jpg",
+      "retainedSha256": "9358040d2146a2110759681be771baf5f3e0b51d4927e517932d61a13668a777",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "40154a8c34291fccd05d033eb68d8f5403106102fd2940ca4337cd01aa52211a",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "id": "listing-3",
+      "listingUrl": "https://www.ebay.co.uk/itm/880000257904",
+      "catalogueUrl": "https://showroom.ebaymotorspro.co.uk/Rh-Motors-Services-Ltd?menu=1",
+      "imageUrl": "https://i.ebayimg.com/00/s/MzM4WDYwMA==/z/rx4AAeSw28dq1dLh/$_2.JPG",
+      "downloadUrl": "https://i.ebayimg.com/00/s/MzM4WDYwMA==/z/rx4AAeSw28dq1dLh/$_57.JPG",
+      "originalDimensions": [
+        600,
+        338
+      ],
+      "retainedDimensions": [
+        600,
+        338
+      ],
+      "retainedBytes": 31639,
+      "mediaPath": "dealer-stock/listing-3.jpg",
+      "retainedSha256": "8243cb6053edce7797f4077cbf716fceb32101d80f0d30372406f57f372bc683",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "fc6e716a88971f7251776638ae46ce7673a6e4aa8f1f6ae68a0cdfdbd5965d45",
+      "observedAt": "2026-10-19"
+    }
+  ],
+  "review": {
+    "reviewed": true,
+    "observedAt": "2026-10-19",
+    "method": "Viewed every selected photograph in contact sheets; checked actual vehicle content, placeholders, price cards and visible dealer identity.",
+    "maximumDimension": 1024,
+    "maximumBytes": 130874
+  }
+}

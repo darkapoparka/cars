@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "dealer": "leicester-motor-group",
+  "photos": [
+    {
+      "id": "listing-1",
+      "listingUrl": "https://www.ebay.co.uk/itm/178548453928",
+      "catalogueUrl": "https://showroom.ebaymotorspro.co.uk/Leicester-Autos--Sales-LTD?menu=1",
+      "imageUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/MQkAAeSwNwZqzeRe/$_2.JPG",
+      "downloadUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/MQkAAeSwNwZqzeRe/$_57.JPG",
+      "originalDimensions": [
+        1600,
+        1200
+      ],
+      "retainedDimensions": [
+        1024,
+        768
+      ],
+      "retainedBytes": 140329,
+      "mediaPath": "dealer-stock/listing-1.jpg",
+      "retainedSha256": "79b3ac2f1968bce8e5a5420908310c8e62d5b1e81548b92aa4340f7c578b72ba",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "f25dffb71e7cb175bf37a92ea93c9b8a13755a75bb38ecf80793dccb14aaba88",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "id": "listing-2",
+      "listingUrl": "https://www.ebay.co.uk/itm/178547962896",
+      "catalogueUrl": "https://showroom.ebaymotorspro.co.uk/Leicester-Autos--Sales-LTD?menu=1",
+      "imageUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/Y94AAeSwQMlq0z69/$_2.JPG",
+      "downloadUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/Y94AAeSwQMlq0z69/$_57.JPG",
+      "originalDimensions": [
+        1600,
+        1200
+      ],
+      "retainedDimensions": [
+        1024,
+        768
+      ],
+      "retainedBytes": 163504,
+      "mediaPath": "dealer-stock/listing-2.jpg",
+      "retainedSha256": "479601c92204755234b62006ea4727bfbeaea19b184a835d0f7eab47cffc4e88",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "dbb8415147b6d9793a2f573d4040cc4fdbc6e507616ad96a04b7f7216e621f06",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "id": "listing-3",
+      "listingUrl": "https://www.ebay.co.uk/itm/178547916220",
+      "catalogueUrl": "https://showroom.ebaymotorspro.co.uk/Leicester-Autos--Sales-LTD?menu=1",
+      "imageUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/WvMAAeSwmuZqzeRh/$_2.JPG",
+      "downloadUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/WvMAAeSwmuZqzeRh/$_57.JPG",
+      "originalDimensions": [
+        1600,
+        1200
+      ],
+      "retainedDimensions": [
+        1024,
+        768
+      ],
+      "retainedBytes": 157127,
+      "mediaPath": "dealer-stock/listing-3.jpg",
+      "retainedSha256": "231601a09f8da50519a224062aa18ae3269fd7543cb0c39fe52c20f57a652b83",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "dcfecd3e4b4272431312b4006ee5d5efe7f94d80fcb187da4735f9cdf48eb0ed",
+      "observedAt": "2026-10-19"
+    }
+  ],
+  "review": {
+    "reviewed": true,
+    "observedAt": "2026-10-19",
+    "method": "Viewed every selected photograph in contact sheets; checked actual vehicle content, placeholders, price cards and visible dealer identity.",
+    "maximumDimension": 1024,
+    "maximumBytes": 163504
+  }
+}

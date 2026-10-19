@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "dealer": "car-force",
+  "photos": [
+    {
+      "id": "listing-1",
+      "listingUrl": "https://www.ebay.co.uk/itm/920037227875",
+      "catalogueUrl": "https://showroom.ebaymotorspro.co.uk/CAR-FORCE-LTD?menu=1",
+      "imageUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/hLsAAeSw1jVq1aPc/$_2.JPG",
+      "downloadUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/hLsAAeSw1jVq1aPc/$_57.JPG",
+      "originalDimensions": [
+        1600,
+        1200
+      ],
+      "retainedDimensions": [
+        1024,
+        768
+      ],
+      "retainedBytes": 156411,
+      "mediaPath": "dealer-stock/listing-1.jpg",
+      "retainedSha256": "6365d54e2908443346205ddc813ce6e1f5eb9a70083aa616821e7cd8547d5daf",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "99fa4db4ca8f76f8a29340d9a126b2c707513fbf9bbc3cb6dd4e06ad78381c21",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "id": "listing-2",
+      "listingUrl": "https://www.ebay.co.uk/itm/920037207965",
+      "catalogueUrl": "https://showroom.ebaymotorspro.co.uk/CAR-FORCE-LTD?menu=1",
+      "imageUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/1qYAAeSwdrxq0a7Y/$_2.JPG",
+      "downloadUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/1qYAAeSwdrxq0a7Y/$_57.JPG",
+      "originalDimensions": [
+        1600,
+        1200
+      ],
+      "retainedDimensions": [
+        1024,
+        768
+      ],
+      "retainedBytes": 139916,
+      "mediaPath": "dealer-stock/listing-2.jpg",
+      "retainedSha256": "25a190ab8f5c1d93cf63dd15ae9c54cd0d9f3018e8aa9e45c40e54cfcbbf1de0",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "384a0e381baed6193b74d14784eb2a782de1e5d6612312781b36d23657f60968",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "id": "listing-3",
+      "listingUrl": "https://www.ebay.co.uk/itm/920034031109",
+      "catalogueUrl": "https://showroom.ebaymotorspro.co.uk/CAR-FORCE-LTD?menu=1",
+      "imageUrl": "https://i.ebayimg.com/00/s/MzM4WDYwMA==/z/Ql0AAeSwnBlqzblI/$_2.JPG",
+      "downloadUrl": "https://i.ebayimg.com/00/s/MzM4WDYwMA==/z/Ql0AAeSwnBlqzblI/$_57.JPG",
+      "originalDimensions": [
+        600,
+        338
+      ],
+      "retainedDimensions": [
+        600,
+        338
+      ],
+      "retainedBytes": 24523,
+      "mediaPath": "dealer-stock/listing-3.jpg",
+      "retainedSha256": "c7a5baa98f899c64fc49cab25eb31767d264c43bbd62a893b7b4955c3b52e527",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "fae1ccff0760003c2edf937301e2141025e845b60920632461f2cdd1d8b61a9b",
+      "observedAt": "2026-10-19"
+    }
+  ],
+  "review": {
+    "reviewed": true,
+    "observedAt": "2026-10-19",
+    "method": "Viewed every selected photograph in contact sheets; checked actual vehicle content, placeholders, price cards and visible dealer identity.",
+    "maximumDimension": 1024,
+    "maximumBytes": 156411
+  }
+}

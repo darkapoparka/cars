@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "slug": "zed-specialist",
+  "dealerId": "gb-luton-zed-specialist",
+  "business": {
+    "name": "Zed Specialist",
+    "city": "Luton",
+    "region": "Bedfordshire",
+    "countryCode": "GB",
+    "currency": "GBP",
+    "distanceUnit": "mi",
+    "locale": "en-GB",
+    "address": "338 Oakley Road Luton Bedfordshire LU4 9QD",
+    "phone": "+441582280666",
+    "phoneDisplay": "+441582280666",
+    "email": "zedspecialistslimited@outlook.com",
+    "website": "",
+    "stockUrl": "https://showroom.ebaymotorspro.co.uk/Zed-Specialist",
+    "hours": "By appointment only, Monday–Sunday 06:00–22:00.",
+    "sourceUrl": "https://showroom.ebaymotorspro.co.uk/Zed-Specialist",
+    "observedAt": "2026-10-19",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Zed-Specialist",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "current-public-business-details",
+        "dated-advertised-stock-snapshot"
+      ]
+    },
+    {
+      "url": "https://www.cazoo.co.uk/dealers/zed-specialist-96585/",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "matching-dealer-directory-identity"
+      ]
+    }
+  ]
+}

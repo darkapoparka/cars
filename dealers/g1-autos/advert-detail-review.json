@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "dealer": "g1-autos",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T19:34:01.044Z",
+  "observedAt": "2026-10-19T19:31:40.274451+00:00",
+  "method": "Reviewed exact selected public advert bodies and marketplace vehicle-history panels. Preserve attributed dated advisories; do not infer an unspecified damage category or finance settlement.",
+  "coverage": [
+    {
+      "listingId": "listing-1",
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202512088448004",
+      "httpStatus": 200,
+      "pageSha256": "a1b4557b3ffabc98da8f4ff2b389aa07c0582ee6f1ffb50ba210949e739d2dce",
+      "descriptionFetched": false,
+      "descriptionSha256": null
+    },
+    {
+      "listingId": "listing-2",
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202604091417312",
+      "httpStatus": 200,
+      "pageSha256": "83e20c722c88dda18acf69130bb675b168dfc77cbff26e6c0dd74bb3d9947061",
+      "descriptionFetched": false,
+      "descriptionSha256": null
+    },
+    {
+      "listingId": "listing-3",
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202607184296778",
+      "httpStatus": 200,
+      "pageSha256": "318545b41a9d10956d2fa0a0f26910111a1c3cd162af852fa1932280ad0c3d08",
+      "descriptionFetched": false,
+      "descriptionSha256": null
+    }
+  ],
+  "findings": [
+    {
+      "listingId": "listing-3",
+      "advertId": "202607184296778",
+      "stockTitle": "2018 Volkswagen Golf 2.0 TSI GTI Euro 6 (s/s) 5dr",
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202607184296778",
+      "observedAt": "2026-10-19T19:26:25.578457Z",
+      "httpStatus": 200,
+      "pageSha256": "318545b41a9d10956d2fa0a0f26910111a1c3cd162af852fa1932280ad0c3d08",
+      "descriptionUrl": null,
+      "descriptionSha256": null,
+      "type": "vehicle-history",
+      "category": "N",
+      "finding": "The public AutoTrader history panel records Category N.",
+      "evidenceLocation": "window.__staticRouterHydrationData.loaderData[car-details].aggregatorAdvert.history.vehicleCheck",
+      "publicHistoryEvidence": {
+        "writeoffCategory": "N",
+        "lastChecked": null,
+        "checks": [
+          {
+            "id": "WRITE_OFF",
+            "label": "Recorded as Category N",
+            "status": "FAILED",
+            "failureNotificationStatus": "WARNING"
+          }
+        ]
+      }
+    }
+  ],
+  "correctionApplied": true,
+  "copyReferences": [
+    "stock.json",
+    "copy-review.json"
+  ],
+  "rawAdvertContentRetained": false,
+  "independentlyCertified": false
+}

@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "dealer": "lets-sell-your-car",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T19:22:56.608725Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "cf662c59187d5b49a6f7d640ba08de7fd5dd4e96bcc19b4d2308f3cdcb46ac88",
+      "sourceSha256": "db3dd9d497ccd30a94f37202b35217a768c2619db69c915500d30e1e0ccba1f4"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "3679ddcedbd70e3a7faf52dd47608b3b8bf1b66b89128293136e1e37ea426b99",
+      "sourceSha256": "ad0a67c06c0e6e24d9af48c322b76d67cdd82a3f5da008c755cd6a13a7fa64f5"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "3679ddcedbd70e3a7faf52dd47608b3b8bf1b66b89128293136e1e37ea426b99",
+      "sourceSha256": "ad0a67c06c0e6e24d9af48c322b76d67cdd82a3f5da008c755cd6a13a7fa64f5"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "db3dd9d497ccd30a94f37202b35217a768c2619db69c915500d30e1e0ccba1f4",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-e3ad5715-dabe-4816-9d59-79c843ffcbba",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "9d34e0b59704101506d5ddc793ddcc2e3e717bd1a99cce705a6287b8e8183400",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-e3ad5715-dabe-4816-9d59-79c843ffcbba",
+      "modelVersion": null
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "247089b0dcbcdaf2d8464edd488eafebd3fd58475fa6c558715374ef344416da"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "db3dd9d497ccd30a94f37202b35217a768c2619db69c915500d30e1e0ccba1f4",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-e3ad5715-dabe-4816-9d59-79c843ffcbba",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/lets-sell-your-car/branding/generated-master.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "ad0a67c06c0e6e24d9af48c322b76d67cdd82a3f5da008c755cd6a13a7fa64f5",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-72dc45fd-87ce-4df9-b726-53b3f9074741",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/lets-sell-your-car/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "ad0a67c06c0e6e24d9af48c322b76d67cdd82a3f5da008c755cd6a13a7fa64f5",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-72dc45fd-87ce-4df9-b726-53b3f9074741",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/lets-sell-your-car/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "d1ad63d6144cbd4f0740f61daafc3533138180f40e52550d6220f60b94c355b0",
+      "sha256": "db3dd9d497ccd30a94f37202b35217a768c2619db69c915500d30e1e0ccba1f4",
+      "crop": {
+        "left": 20,
+        "top": 146,
+        "width": 1938,
+        "height": 501
+      },
+      "sourcePath": "branding/generated-master.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "067cd694ef9cac31b75e347dccecaef86161a1d0ca10c6050a2451fb168c1791",
+      "sha256": "ad0a67c06c0e6e24d9af48c322b76d67cdd82a3f5da008c755cd6a13a7fa64f5",
+      "crop": {
+        "left": 0,
+        "top": 131,
+        "width": 1979,
+        "height": 532
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "067cd694ef9cac31b75e347dccecaef86161a1d0ca10c6050a2451fb168c1791",
+      "sha256": "ad0a67c06c0e6e24d9af48c322b76d67cdd82a3f5da008c755cd6a13a7fa64f5",
+      "crop": {
+        "left": 0,
+        "top": 131,
+        "width": 1979,
+        "height": 532
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "eeeb66f35ef71bbccfab2d07e9ac8650ec0aed090e418a86084ebe65c46b2a30",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-e3ad5715-dabe-4816-9d59-79c843ffcbba",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/lets-sell-your-car/branding/generated-mark.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "d4fb1fe361b1736f720b1e4fc19351bb635985b968209b25e86ecaef95435889",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-72dc45fd-87ce-4df9-b726-53b3f9074741",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/lets-sell-your-car/branding/generated-mark-on-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "9d34e0b59704101506d5ddc793ddcc2e3e717bd1a99cce705a6287b8e8183400",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-e3ad5715-dabe-4816-9d59-79c843ffcbba",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/lets-sell-your-car/branding/generated-mark.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "247089b0dcbcdaf2d8464edd488eafebd3fd58475fa6c558715374ef344416da",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-e3ad5715-dabe-4816-9d59-79c843ffcbba",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/lets-sell-your-car/branding/generated-mark.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T19:22:56.608725Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "b019d6d4d02b1b29d4c164bc1198fbd0310bf451fb32fd28cbe4b82ee72a4829",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-72dc45fd-87ce-4df9-b726-53b3f9074741",
+      "modelVersion": null
+    }
+  }
+}

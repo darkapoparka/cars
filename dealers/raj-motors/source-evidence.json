@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "dealer": "raj-motors",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uk.json",
+    "sha256": "6cd8d365586f9a5d5131fe4b1d50baede7de91ab384a135017c25367298b07c4"
+  },
+  "publicSources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/RMLCARS",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "current-public-business-details",
+        "dated-advertised-stock-snapshot"
+      ]
+    }
+  ],
+  "liveFetchPerformed": false,
+  "currentResearch": {
+    "performed": true,
+    "observedAt": "2026-10-19",
+    "primaryPage": {
+      "url": "https://showroom.ebaymotorspro.co.uk/RMLCARS",
+      "httpStatus": 200,
+      "sha256": "da4d16ed39d2225d0aeedac5089e20e8e1b39c75b469bd246b0da2d3d08c0977"
+    },
+    "reference": "research-review.json"
+  }
+}

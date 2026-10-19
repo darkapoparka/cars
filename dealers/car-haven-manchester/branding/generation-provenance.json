@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "dealer": "car-haven-manchester",
+  "generations": [
+    {
+      "role": "master",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-a7911db0-f536-4e76-b013-6ff9ec17e6b8",
+      "modelVersion": null,
+      "prompt": "Create a beautiful professional independent proposed identity for CAR HAVEN MANCHESTER. A single horizontal lockup: left, stout elegant CH monogram inside an open protective arch; right, exact CAR HAVEN above MANCHESTER in a bold geometrically balanced sans serif. Refined contemporary automotive typography, recognizable at32px compact symbol, clear gap between symbol and type. Solid near-black ink on genuine transparent background. No gradients, shadows, background panels, texture, skyline, literal car, shield or slogans. Restrained premium but approachable identity.",
+      "promptRetained": true,
+      "sourceAssetSha256": "b2b79b815abe03608696ae9ae42c2dc37fa29aa79a909559e6c5760a9ecc39aa",
+      "observedAt": "2026-10-19",
+      "originalResponseArtworkRetained": true
+    },
+    {
+      "role": "onDarkAndAccent",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-d2942518-47ea-4f06-85fa-aef222e6e854",
+      "modelVersion": null,
+      "prompt": "Create a refined dark-surface adaptation of the exact supplied dealer logo. Exact text MUST READ: CAR HAVEN with MANCHESTER below. Keep every name letter exactly, and preserve the supplied monogram/motif and proportions. The typography and dark emblem portions should be filled in SOLID OPAQUE PALE SILVER #d9e2ec inside a DARK CHARCOAL outer contour plus a thin WHITE outer keyline. Preserve copper/orange/purple accents if present inside dark contour. True TRANSPARENT alpha background and transparent letter counters. Make smooth strong solid contours without fringing, grunge, raster distress, speckles or noise. Generous clear gap between compact emblem and wording. No gradients, shadow, glowing effects, rectangle or additional content. It needs clear readable contrast on dark navy and red surfaces. Do not introduce unrelated terms such as motorsports. Exact spelling and business identity are essential.",
+      "promptRetained": true,
+      "sourceAssetSha256": "a5b60609595afbea7af7d2396d0177a2529f3e54b37cba026f5eba4dcc98a3a2",
+      "observedAt": "2026-10-19",
+      "originalResponseArtworkRetained": true
+    }
+  ],
+  "exportPolicy": "Original generated PNG bytes are retained. Compact pixel-exact extractions, where used, retain their parent generation, hash and rectangle in source.json. Existing dealer-pack logo tooling performs only transparent padding removal and deterministic raster exports. No deterministic recolour is used."
+}

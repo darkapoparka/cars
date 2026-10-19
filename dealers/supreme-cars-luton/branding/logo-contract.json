@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "dealer": "supreme-cars-luton",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T19:22:56.608725Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-faithful-redraw",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "1949900b929e7dfa68f8e8d799620a04b722d6c24b13091549b64b2ac812a45c",
+      "sourceSha256": "2e46f25af81420966e4e5e6106e057ffcf5ac54e56a87af2adde9df6014c6845"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "ea299294c64000c4e4c4741ece8b4cc5343ccfd2a01679a932d0213ff3d2274d",
+      "sourceSha256": "a7a639c3281b3c09fc045ccc5c7bdc086b520e92652f520112061e889544f67b"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "ea299294c64000c4e4c4741ece8b4cc5343ccfd2a01679a932d0213ff3d2274d",
+      "sourceSha256": "a7a639c3281b3c09fc045ccc5c7bdc086b520e92652f520112061e889544f67b"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "2e46f25af81420966e4e5e6106e057ffcf5ac54e56a87af2adde9df6014c6845",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-9e4f7976-fc3e-450e-9ab9-e03d5fc537c8",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "97df9c766baec139d02b4d75109082c6fd551f5baa5e12e9a03061248a3147de",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-9e4f7976-fc3e-450e-9ab9-e03d5fc537c8",
+      "modelVersion": null
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "9cd3b22011d4f17e1f86a260e77dbf135dff98b49ba83590e72da178306d0ce3"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "2e46f25af81420966e4e5e6106e057ffcf5ac54e56a87af2adde9df6014c6845",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9e4f7976-fc3e-450e-9ab9-e03d5fc537c8",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/supreme-cars-luton/branding/generated-master.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "a7a639c3281b3c09fc045ccc5c7bdc086b520e92652f520112061e889544f67b",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-18274f9d-a8b7-4df8-b4fa-fc0c6148ce23",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/supreme-cars-luton/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "a7a639c3281b3c09fc045ccc5c7bdc086b520e92652f520112061e889544f67b",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-18274f9d-a8b7-4df8-b4fa-fc0c6148ce23",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/supreme-cars-luton/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "d4676b5159769b9882077e633b2efccb8e24d9d95cec4d4f46f0cc813ce667e8",
+      "sha256": "2e46f25af81420966e4e5e6106e057ffcf5ac54e56a87af2adde9df6014c6845",
+      "crop": {
+        "left": 115,
+        "top": 200,
+        "width": 1955,
+        "height": 373
+      },
+      "sourcePath": "branding/generated-master.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "811b9be4853ca3d2519242b38a518c65f43272425d6969360378504bcb2e8ad8",
+      "sha256": "a7a639c3281b3c09fc045ccc5c7bdc086b520e92652f520112061e889544f67b",
+      "crop": {
+        "left": 34,
+        "top": 149,
+        "width": 2094,
+        "height": 437
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "811b9be4853ca3d2519242b38a518c65f43272425d6969360378504bcb2e8ad8",
+      "sha256": "a7a639c3281b3c09fc045ccc5c7bdc086b520e92652f520112061e889544f67b",
+      "crop": {
+        "left": 34,
+        "top": 149,
+        "width": 2094,
+        "height": 437
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "0b381438bcaa5b6d3adfc5592cbc20fe574a1fb9ad5ca04843700aa06c7c907f",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9e4f7976-fc3e-450e-9ab9-e03d5fc537c8",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/supreme-cars-luton/branding/generated-mark.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "d93ed768f7b68e3231e7f4d314653bfd77331dca1f1d12bc8e5a3b8077db6f10",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-18274f9d-a8b7-4df8-b4fa-fc0c6148ce23",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/supreme-cars-luton/branding/generated-mark-on-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "97df9c766baec139d02b4d75109082c6fd551f5baa5e12e9a03061248a3147de",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9e4f7976-fc3e-450e-9ab9-e03d5fc537c8",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/supreme-cars-luton/branding/generated-mark.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "9cd3b22011d4f17e1f86a260e77dbf135dff98b49ba83590e72da178306d0ce3",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9e4f7976-fc3e-450e-9ab9-e03d5fc537c8",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/supreme-cars-luton/branding/generated-mark.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T19:22:56.608725Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "26201b1dd47891ad51964a7652146e192e4847363107629175d679cec96a9e5b",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-18274f9d-a8b7-4df8-b4fa-fc0c6148ce23",
+      "modelVersion": null
+    }
+  }
+}

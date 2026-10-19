@@ -1,0 +1,228 @@
+{
+  "schemaVersion": 1,
+  "dealer": "leicester-motor-group",
+  "realLogoFirst": true,
+  "logoKind": "redraw",
+  "publishedBranding": "real-logo-observed",
+  "publicSources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Leicester-Autos--Sales-LTD?menu=1",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "url": "https://www.cazoo.co.uk/dealers/leicester-motor-group-ltd-78762/",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "url": "https://find-and-update.company-information.service.gov.uk/company/14238546",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "url": "https://www.companiesintheuk.co.uk/ltd/leicester-autos",
+      "observedAt": "2026-10-19"
+    }
+  ],
+  "originals": [
+    {
+      "url": "https://cdn.autoexposure.co.uk/motorscdn/motors/dealer-images/78762/motors-car-details-logo.jpg",
+      "observedAt": "2026-10-19",
+      "sha256": "208938cb3572c7e85c83b842ee02619739a3f43bf1ce96e3ccfbd00748df5cf6",
+      "nativeDimensions": {
+        "width": 60,
+        "height": 60
+      },
+      "format": "JPEG",
+      "description": "Only a 60px monochrome italic name and car-line identity was obtained; retained the full name, monochrome palette and car-line motif, with compact LMG lettering.",
+      "path": "branding/original-logo.jpg"
+    }
+  ],
+  "sourceLogoUrl": "https://cdn.autoexposure.co.uk/motorscdn/motors/dealer-images/78762/motors-car-details-logo.jpg",
+  "workingLogoPath": "branding/generated-master.png",
+  "creationMethod": "imagegen-faithful-redraw",
+  "dealerApproved": false,
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "usageStatus": "public-preview-only",
+  "observedAt": "2026-10-19",
+  "researchConclusion": "A real identity was obtained and visually reviewed. Only a 60px monochrome italic name and car-line identity was obtained; retained the full name, monochrome palette and car-line motif, with compact LMG lettering. This is a faithful image-generated redraw for an independent preview and has not been approved by the dealer.",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T19:22:56.608725Z",
+    "master": {
+      "path": "branding/generated-master.png",
+      "sha256": "243197a75b2b28eb488796100d818ea05c1af5286185dffc576b0ea38f5a5d8e",
+      "nativeDimensions": {
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1f959efb-f104-449f-8f2e-43e2c034a93b",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "fc067f1f43f75e07bb99d51091a6755d5b80bc399e0339b49da69d0bd1e04318",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1f959efb-f104-449f-8f2e-43e2c034a93b",
+        "modelVersion": null
+      },
+      "derivation": {
+        "operation": "pixel-exact rectangular extraction of the existing generated compact emblem; no recolouring or invented artwork",
+        "parentPath": "branding/generated-master.png",
+        "parentSha256": "243197a75b2b28eb488796100d818ea05c1af5286185dffc576b0ea38f5a5d8e",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 948,
+          "height": 724
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-on-dark.png",
+      "sha256": "0539eb4ccbaaa999c60bb500be2a3972176df0b674dd5ee2f7583dc00ce9a1e4",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c77d1340-0aa6-4f43-9d40-15f24da7b80b",
+        "modelVersion": null
+      },
+      "derivation": {
+        "operation": "pixel-exact rectangular extraction of the existing generated compact emblem; no recolouring or invented artwork",
+        "parentPath": "branding/generated-on-dark.png",
+        "parentSha256": "5a999c27433f415b4b0472e1e45c57b299c95c592522e6cb72946579cc5b93f2",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 948,
+          "height": 724
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-master.png",
+        "sha256": "243197a75b2b28eb488796100d818ea05c1af5286185dffc576b0ea38f5a5d8e",
+        "nativeDimensions": {
+          "width": 2172,
+          "height": 724
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-1f959efb-f104-449f-8f2e-43e2c034a93b",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "5a999c27433f415b4b0472e1e45c57b299c95c592522e6cb72946579cc5b93f2",
+        "nativeDimensions": {
+          "width": 2172,
+          "height": 724
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-c77d1340-0aa6-4f43-9d40-15f24da7b80b",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "5a999c27433f415b4b0472e1e45c57b299c95c592522e6cb72946579cc5b93f2",
+        "nativeDimensions": {
+          "width": 2172,
+          "height": 724
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-c77d1340-0aa6-4f43-9d40-15f24da7b80b",
+          "modelVersion": null
+        }
+      }
+    },
+    "marks": {
+      "onLight": {
+        "path": "branding/generated-mark.png",
+        "sha256": "fc067f1f43f75e07bb99d51091a6755d5b80bc399e0339b49da69d0bd1e04318",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-1f959efb-f104-449f-8f2e-43e2c034a93b",
+          "modelVersion": null
+        },
+        "derivation": {
+          "operation": "pixel-exact rectangular extraction of the existing generated compact emblem; no recolouring or invented artwork",
+          "parentPath": "branding/generated-master.png",
+          "parentSha256": "243197a75b2b28eb488796100d818ea05c1af5286185dffc576b0ea38f5a5d8e",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 948,
+            "height": 724
+          }
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-mark-on-dark.png",
+        "sha256": "0539eb4ccbaaa999c60bb500be2a3972176df0b674dd5ee2f7583dc00ce9a1e4",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-c77d1340-0aa6-4f43-9d40-15f24da7b80b",
+          "modelVersion": null
+        },
+        "derivation": {
+          "operation": "pixel-exact rectangular extraction of the existing generated compact emblem; no recolouring or invented artwork",
+          "parentPath": "branding/generated-on-dark.png",
+          "parentSha256": "5a999c27433f415b4b0472e1e45c57b299c95c592522e6cb72946579cc5b93f2",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 948,
+            "height": 724
+          }
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113",
+          "#101820"
+        ],
+        "onAccent": [
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ]
+      },
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "reviewedAt": "2026-10-19T19:22:56.608725Z",
+      "notes": "Visually reviewed the actual deterministic transparent-padding exports at120px and180px on all six retained template surface colours. Exact name spelling, silhouette, alpha edges, spacing and clipping were checked. Light-ink variants are actual imagegen results, not deterministic recolours. Small secondary suffix text is subordinate to the principal name; compact identity is provided separately."
+    },
+    "compactMarkStatus": "independent-preview-not-dealer-approved",
+    "compactMarkDescription": "LMG monogram and coupe roof",
+    "compactMarkReview": {
+      "reviewed": true,
+      "widths": [
+        32,
+        64
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820",
+        "#09090b",
+        "#17191c",
+        "#c40101"
+      ],
+      "reviewedAt": "2026-10-19T19:22:56.608725Z",
+      "notes": "Visually inspected the actual compact exports at32px and64px on all six template backgrounds. Existing-emblem pixel crops have explicit parent hashes and exact rectangle provenance; independently generated compact marks retain their own actual generation IDs. Shape, spacing, clipping and transparent counters were checked. Dealer approval remains unknown."
+    }
+  }
+}

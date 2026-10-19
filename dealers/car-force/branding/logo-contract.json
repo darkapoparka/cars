@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "dealer": "car-force",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T19:22:56.608725Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "61fa8b4c19d54c65cebb29c8afbef96e010b189dd5e398c4d755656b413c3d0b",
+      "sourceSha256": "cc4808a271a8919df5e9d277df4f99b671cf21155dccee07ed5dcec8fe369561"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "8f446fd1a21fb2005c87006f041efd85d68584b3e7805df7226d46865f01b0d8",
+      "sourceSha256": "940ab296cf935aa61cf1e2d582c35e9b42c0b437d2e3ad54cf31d58cb4a1f881"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "8f446fd1a21fb2005c87006f041efd85d68584b3e7805df7226d46865f01b0d8",
+      "sourceSha256": "940ab296cf935aa61cf1e2d582c35e9b42c0b437d2e3ad54cf31d58cb4a1f881"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "cc4808a271a8919df5e9d277df4f99b671cf21155dccee07ed5dcec8fe369561",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-ebc21ed2-f6fa-4b90-b486-5a71b0a4f4e5",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "cbd841e896865017ff72b9ea06044d9e666aa7c77c8ba3e74c24dd7362478728",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-f2aa2c8d-e0fe-4174-b7b4-7fdc22ac6a32",
+      "modelVersion": null
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "8c610da5548c80178da7b02eba8651fed5856845cf1bda1fdd9d8b981e730032"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "cc4808a271a8919df5e9d277df4f99b671cf21155dccee07ed5dcec8fe369561",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-ebc21ed2-f6fa-4b90-b486-5a71b0a4f4e5",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/car-force/branding/generated-master.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "940ab296cf935aa61cf1e2d582c35e9b42c0b437d2e3ad54cf31d58cb4a1f881",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c328be37-cbeb-426e-941c-60c077b027a4",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/car-force/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "940ab296cf935aa61cf1e2d582c35e9b42c0b437d2e3ad54cf31d58cb4a1f881",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c328be37-cbeb-426e-941c-60c077b027a4",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/car-force/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "38efd4f95e05446919148e6483b1e0f4c79f73dd376cf7015319a2bf193c5c86",
+      "sha256": "cc4808a271a8919df5e9d277df4f99b671cf21155dccee07ed5dcec8fe369561",
+      "crop": {
+        "left": 37,
+        "top": 161,
+        "width": 2099,
+        "height": 442
+      },
+      "sourcePath": "branding/generated-master.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "8ab38c110be48acf66d03c85d52db6e5b0ffee5e3e02b10a4a74e9b8c35ae33d",
+      "sha256": "940ab296cf935aa61cf1e2d582c35e9b42c0b437d2e3ad54cf31d58cb4a1f881",
+      "crop": {
+        "left": 21,
+        "top": 142,
+        "width": 2130,
+        "height": 468
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "8ab38c110be48acf66d03c85d52db6e5b0ffee5e3e02b10a4a74e9b8c35ae33d",
+      "sha256": "940ab296cf935aa61cf1e2d582c35e9b42c0b437d2e3ad54cf31d58cb4a1f881",
+      "crop": {
+        "left": 21,
+        "top": 142,
+        "width": 2130,
+        "height": 468
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "e5cee8301c582557d37664c7792932b61ebdbe2a6571a22586f7e73729d4360b",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f2aa2c8d-e0fe-4174-b7b4-7fdc22ac6a32",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/car-force/branding/generated-mark.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "e5cee8301c582557d37664c7792932b61ebdbe2a6571a22586f7e73729d4360b",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f2aa2c8d-e0fe-4174-b7b4-7fdc22ac6a32",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/car-force/branding/generated-mark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "cbd841e896865017ff72b9ea06044d9e666aa7c77c8ba3e74c24dd7362478728",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f2aa2c8d-e0fe-4174-b7b4-7fdc22ac6a32",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/car-force/branding/generated-mark.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "8c610da5548c80178da7b02eba8651fed5856845cf1bda1fdd9d8b981e730032",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f2aa2c8d-e0fe-4174-b7b4-7fdc22ac6a32",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/car-force/branding/generated-mark.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T19:22:56.608725Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "cbd841e896865017ff72b9ea06044d9e666aa7c77c8ba3e74c24dd7362478728",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-f2aa2c8d-e0fe-4174-b7b4-7fdc22ac6a32",
+      "modelVersion": null
+    }
+  }
+}

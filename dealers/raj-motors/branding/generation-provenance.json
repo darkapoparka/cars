@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "dealer": "raj-motors",
+  "generations": [
+    {
+      "role": "master",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-70978c14-33c7-4e00-9665-643fed32ea68",
+      "modelVersion": null,
+      "prompt": "Faithfully redraw ONLY the RAJ MOTORS dealership sign on the back wall of the supplied source photo. Make a clean transparent horizontal logo lockup. Preserve the copper-orange RAJ MOTORS name and sleek silver-grey sweeping coupe silhouette motif; simplify and thicken the motif substantially for clarity at 32px, placing it as a separate compact symbol to the left of RAJ MOTORS in sturdy clean sans-serif letters. Use dark graphite for silver-grey portions so they read on a white surface. Do not reproduce a black sign background, the car photo, the price card, advertising banners, the EST. 1975 line, or any extra content. True alpha transparency, flat colours, no reflections/gradients/shadow. A faithful premium clean redraw of the actual sign, not a new identity.",
+      "promptRetained": true,
+      "sourceAssetSha256": "487ae44137fec2ce06f5009cacae395398f77742b85f8c4e7e9c7167da5acbef",
+      "observedAt": "2026-10-19",
+      "originalResponseArtworkRetained": true
+    },
+    {
+      "role": "onDarkAndAccent",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-c708541e-ac95-45f4-8be8-b821041ed7ab",
+      "modelVersion": null,
+      "prompt": "Create a refined dark-surface adaptation of the exact supplied dealer logo. Exact text MUST READ: RAJ MOTORS. Keep every name letter exactly, and preserve the supplied monogram/motif and proportions. The typography and dark emblem portions should be filled in SOLID OPAQUE PALE SILVER #d9e2ec inside a DARK CHARCOAL outer contour plus a thin WHITE outer keyline. Preserve copper/orange/purple accents if present inside dark contour. True TRANSPARENT alpha background and transparent letter counters. Make smooth strong solid contours without fringing, grunge, raster distress, speckles or noise. Generous clear gap between compact emblem and wording. No gradients, shadow, glowing effects, rectangle or additional content. It needs clear readable contrast on dark navy and red surfaces. Do not introduce unrelated terms such as motorsports. Exact spelling and business identity are essential.",
+      "promptRetained": true,
+      "sourceAssetSha256": "2a83a2539c7b8f19058935d599b40127a89035abfe0230b7be0271d271f39071",
+      "observedAt": "2026-10-19",
+      "originalResponseArtworkRetained": true
+    }
+  ],
+  "exportPolicy": "Original generated PNG bytes are retained. Compact pixel-exact extractions, where used, retain their parent generation, hash and rectangle in source.json. Existing dealer-pack logo tooling performs only transparent padding removal and deterministic raster exports. No deterministic recolour is used."
+}
