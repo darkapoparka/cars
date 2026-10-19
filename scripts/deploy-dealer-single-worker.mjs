@@ -407,7 +407,10 @@ export function parseDeploymentArgs(argv){
  else{assert(result.reviewFile&&!result.bundleRoot&&!result.plan&&!result.reportFile,'Use --input REVIEW_JSON [--mode create-singleton] [--write --wrangler-package ABS_PACKAGE_JSON]');if(result.mode)assert(['update-existing','create-singleton'].includes(result.mode),'Use update-existing or create-singleton mode');}
  return result;
 }
-if(isEntrypoint(import.meta.url)){try{
+async function runDeploymentCli(){
  if(process.argv.slice(2).includes('--help'))console.log('Usage: deploy-dealer-single-worker.mjs --input REVIEW_JSON [--mode create-singleton] [--write --wrangler-package ABS_PACKAGE_JSON]\nDefault: exact artifact/source inspection only; update-existing is the default target mode. Explicit create-singleton requires a fresh complete absent-target inventory. Reserve defaults to one slot; a concrete reviewed Paid-500 policy can explicitly use the final slot. Capacity defaults to 100; 500 requires fresh reviewed paid-plan evidence. --write uploads once with standard Wrangler authentication. No builds/downloads/dependent Workers.\nDealer-pack candidate inspection: --batch SLUGS_JSON --bundle-root runtime/dealer-packs --plan free|paid [--report PATH]. JSON arrays of slugs only; --write is rejected for candidate batches pending M2.');
  else{const options=parseDeploymentArgs(process.argv.slice(2)),result=await(options.batchFile?inspectDealerPackBatch(options):runFleetSingletonDeployment(options));console.log(JSON.stringify(result,null,2));if(options.batchFile&&!result.success)process.exitCode=1;}
-}catch(error){console.error(error.message);process.exitCode=1;}}
+}
+// Batch QA imports hosted checks that reuse this module's deployment guards.
+// Finish module evaluation before awaiting that graph so CLI inspection can run.
+if(isEntrypoint(import.meta.url))runDeploymentCli().catch(error=>{console.error(error.message);process.exitCode=1;});
