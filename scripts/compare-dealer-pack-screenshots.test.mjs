@@ -89,6 +89,9 @@ function fabFixture() {
 test('the FAB exception binds the exact active artwork and only its observed 46 by 34 CSS-pixel rectangle', () => {
   const f = fabFixture(), value = dealerPackFabArtworkException(f);
   assert.deepEqual(value.rectangle, {x: 324, y: 780, width: 46, height: 35});
+  assert.equal(value.scrollbarGutterPixels, 0);
+  const withScrollbar = fabFixture();withScrollbar.candidateRow.observation.fabMarks[0].bounds.x -= 15;
+  assert.equal(dealerPackFabArtworkException(withScrollbar).scrollbarGutterPixels, 15);
   assert.equal(value.beforeSha256, M1_VISUAL_BASELINE.dealers['za-motors'].fabLogoSha256);
   for (const mutate of [
     f => f.candidate.qa.fabPolicy = 'arbitrary-change',

@@ -1,0 +1,3063 @@
+{
+  "observedAt": "2026-10-19T20:03:20.868Z",
+  "run": {
+    "id": 39310711918,
+    "name": "Dealer pack pipeline",
+    "node_id": "WFR_kwLOUSWAMM8AAAAJJxncbg",
+    "head_branch": "astra/m2-fast-deploy",
+    "head_sha": "dedb9c0565c7d39da1c1cb12c3958f03e45464f6",
+    "path": ".github/workflows/dealer-pack-pipeline.yml",
+    "display_title": "Add isolated fast build lanes, v2 pack migration, and guarded deploym…",
+    "run_number": 9,
+    "event": "push",
+    "status": "completed",
+    "conclusion": "failure",
+    "workflow_id": 389425433,
+    "check_suite_id": 106526984932,
+    "check_suite_node_id": "CS_kwDOUSWAMM8AAAAYzYDK5A",
+    "url": "https://api.github.com/repos/darkapoparka/cars/actions/runs/39310711918",
+    "html_url": "https://github.com/darkapoparka/cars/actions/runs/39310711918",
+    "pull_requests": [
+      {
+        "url": "https://api.github.com/repos/darkapoparka/cars/pulls/17",
+        "id": 4926504330,
+        "number": 17,
+        "head": {
+          "ref": "astra/m2-fast-deploy",
+          "sha": "26b626c979d2cfd653b3015d94ff8fe2df724a93",
+          "repo": {
+            "id": 1361412144,
+            "url": "https://api.github.com/repos/darkapoparka/cars",
+            "name": "cars"
+          }
+        },
+        "base": {
+          "ref": "main",
+          "sha": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+          "repo": {
+            "id": 1361412144,
+            "url": "https://api.github.com/repos/darkapoparka/cars",
+            "name": "cars"
+          }
+        }
+      }
+    ],
+    "created_at": "2026-10-19T19:24:24Z",
+    "updated_at": "2026-10-19T20:02:01Z",
+    "actor": {
+      "login": "darkapoparka",
+      "id": 264301241,
+      "node_id": "U_kgDOD8DquQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/264301241?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/darkapoparka",
+      "html_url": "https://github.com/darkapoparka",
+      "followers_url": "https://api.github.com/users/darkapoparka/followers",
+      "following_url": "https://api.github.com/users/darkapoparka/following{/other_user}",
+      "gists_url": "https://api.github.com/users/darkapoparka/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/darkapoparka/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/darkapoparka/subscriptions",
+      "organizations_url": "https://api.github.com/users/darkapoparka/orgs",
+      "repos_url": "https://api.github.com/users/darkapoparka/repos",
+      "events_url": "https://api.github.com/users/darkapoparka/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/darkapoparka/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "run_attempt": 1,
+    "referenced_workflows": [],
+    "run_started_at": "2026-10-19T19:24:24Z",
+    "triggering_actor": {
+      "login": "darkapoparka",
+      "id": 264301241,
+      "node_id": "U_kgDOD8DquQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/264301241?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/darkapoparka",
+      "html_url": "https://github.com/darkapoparka",
+      "followers_url": "https://api.github.com/users/darkapoparka/followers",
+      "following_url": "https://api.github.com/users/darkapoparka/following{/other_user}",
+      "gists_url": "https://api.github.com/users/darkapoparka/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/darkapoparka/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/darkapoparka/subscriptions",
+      "organizations_url": "https://api.github.com/users/darkapoparka/orgs",
+      "repos_url": "https://api.github.com/users/darkapoparka/repos",
+      "events_url": "https://api.github.com/users/darkapoparka/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/darkapoparka/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "jobs_url": "https://api.github.com/repos/darkapoparka/cars/actions/runs/39310711918/jobs",
+    "logs_url": "https://api.github.com/repos/darkapoparka/cars/actions/runs/39310711918/logs",
+    "check_suite_url": "https://api.github.com/repos/darkapoparka/cars/check-suites/106526984932",
+    "artifacts_url": "https://api.github.com/repos/darkapoparka/cars/actions/runs/39310711918/artifacts",
+    "cancel_url": "https://api.github.com/repos/darkapoparka/cars/actions/runs/39310711918/cancel",
+    "rerun_url": "https://api.github.com/repos/darkapoparka/cars/actions/runs/39310711918/rerun",
+    "previous_attempt_url": null,
+    "workflow_url": "https://api.github.com/repos/darkapoparka/cars/actions/workflows/389425433",
+    "head_commit": {
+      "id": "dedb9c0565c7d39da1c1cb12c3958f03e45464f6",
+      "tree_id": "c3ff48e3a3f2722096254096a3bd1f1ec0eefed6",
+      "message": "Add isolated fast build lanes, v2 pack migration, and guarded deployment core [benchmark25]",
+      "timestamp": "2026-10-19T19:24:19Z",
+      "author": {
+        "name": "darkapoparka",
+        "email": "obi4amdar4eto@gmail.com"
+      },
+      "committer": {
+        "name": "darkapoparka",
+        "email": "obi4amdar4eto@gmail.com"
+      }
+    },
+    "repository": {
+      "id": 1361412144,
+      "node_id": "R_kgDOUSWAMA",
+      "name": "cars",
+      "full_name": "darkapoparka/cars",
+      "private": false,
+      "owner": {
+        "login": "darkapoparka",
+        "id": 264301241,
+        "node_id": "U_kgDOD8DquQ",
+        "avatar_url": "https://avatars.githubusercontent.com/u/264301241?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/darkapoparka",
+        "html_url": "https://github.com/darkapoparka",
+        "followers_url": "https://api.github.com/users/darkapoparka/followers",
+        "following_url": "https://api.github.com/users/darkapoparka/following{/other_user}",
+        "gists_url": "https://api.github.com/users/darkapoparka/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/darkapoparka/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/darkapoparka/subscriptions",
+        "organizations_url": "https://api.github.com/users/darkapoparka/orgs",
+        "repos_url": "https://api.github.com/users/darkapoparka/repos",
+        "events_url": "https://api.github.com/users/darkapoparka/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/darkapoparka/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "html_url": "https://github.com/darkapoparka/cars",
+      "description": null,
+      "fork": false,
+      "url": "https://api.github.com/repos/darkapoparka/cars",
+      "forks_url": "https://api.github.com/repos/darkapoparka/cars/forks",
+      "keys_url": "https://api.github.com/repos/darkapoparka/cars/keys{/key_id}",
+      "collaborators_url": "https://api.github.com/repos/darkapoparka/cars/collaborators{/collaborator}",
+      "teams_url": "https://api.github.com/repos/darkapoparka/cars/teams",
+      "hooks_url": "https://api.github.com/repos/darkapoparka/cars/hooks",
+      "issue_events_url": "https://api.github.com/repos/darkapoparka/cars/issues/events{/number}",
+      "events_url": "https://api.github.com/repos/darkapoparka/cars/events",
+      "assignees_url": "https://api.github.com/repos/darkapoparka/cars/assignees{/user}",
+      "branches_url": "https://api.github.com/repos/darkapoparka/cars/branches{/branch}",
+      "tags_url": "https://api.github.com/repos/darkapoparka/cars/tags",
+      "blobs_url": "https://api.github.com/repos/darkapoparka/cars/git/blobs{/sha}",
+      "git_tags_url": "https://api.github.com/repos/darkapoparka/cars/git/tags{/sha}",
+      "git_refs_url": "https://api.github.com/repos/darkapoparka/cars/git/refs{/sha}",
+      "trees_url": "https://api.github.com/repos/darkapoparka/cars/git/trees{/sha}",
+      "statuses_url": "https://api.github.com/repos/darkapoparka/cars/statuses/{sha}",
+      "languages_url": "https://api.github.com/repos/darkapoparka/cars/languages",
+      "stargazers_url": "https://api.github.com/repos/darkapoparka/cars/stargazers",
+      "contributors_url": "https://api.github.com/repos/darkapoparka/cars/contributors",
+      "subscribers_url": "https://api.github.com/repos/darkapoparka/cars/subscribers",
+      "subscription_url": "https://api.github.com/repos/darkapoparka/cars/subscription",
+      "commits_url": "https://api.github.com/repos/darkapoparka/cars/commits{/sha}",
+      "git_commits_url": "https://api.github.com/repos/darkapoparka/cars/git/commits{/sha}",
+      "comments_url": "https://api.github.com/repos/darkapoparka/cars/comments{/number}",
+      "issue_comment_url": "https://api.github.com/repos/darkapoparka/cars/issues/comments{/number}",
+      "contents_url": "https://api.github.com/repos/darkapoparka/cars/contents/{+path}",
+      "compare_url": "https://api.github.com/repos/darkapoparka/cars/compare/{base}...{head}",
+      "merges_url": "https://api.github.com/repos/darkapoparka/cars/merges",
+      "archive_url": "https://api.github.com/repos/darkapoparka/cars/{archive_format}{/ref}",
+      "downloads_url": "https://api.github.com/repos/darkapoparka/cars/downloads",
+      "issues_url": "https://api.github.com/repos/darkapoparka/cars/issues{/number}",
+      "pulls_url": "https://api.github.com/repos/darkapoparka/cars/pulls{/number}",
+      "milestones_url": "https://api.github.com/repos/darkapoparka/cars/milestones{/number}",
+      "notifications_url": "https://api.github.com/repos/darkapoparka/cars/notifications{?since,all,participating}",
+      "labels_url": "https://api.github.com/repos/darkapoparka/cars/labels{/name}",
+      "releases_url": "https://api.github.com/repos/darkapoparka/cars/releases{/id}",
+      "deployments_url": "https://api.github.com/repos/darkapoparka/cars/deployments"
+    },
+    "head_repository": {
+      "id": 1361412144,
+      "node_id": "R_kgDOUSWAMA",
+      "name": "cars",
+      "full_name": "darkapoparka/cars",
+      "private": false,
+      "owner": {
+        "login": "darkapoparka",
+        "id": 264301241,
+        "node_id": "U_kgDOD8DquQ",
+        "avatar_url": "https://avatars.githubusercontent.com/u/264301241?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/darkapoparka",
+        "html_url": "https://github.com/darkapoparka",
+        "followers_url": "https://api.github.com/users/darkapoparka/followers",
+        "following_url": "https://api.github.com/users/darkapoparka/following{/other_user}",
+        "gists_url": "https://api.github.com/users/darkapoparka/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/darkapoparka/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/darkapoparka/subscriptions",
+        "organizations_url": "https://api.github.com/users/darkapoparka/orgs",
+        "repos_url": "https://api.github.com/users/darkapoparka/repos",
+        "events_url": "https://api.github.com/users/darkapoparka/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/darkapoparka/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "html_url": "https://github.com/darkapoparka/cars",
+      "description": null,
+      "fork": false,
+      "url": "https://api.github.com/repos/darkapoparka/cars",
+      "forks_url": "https://api.github.com/repos/darkapoparka/cars/forks",
+      "keys_url": "https://api.github.com/repos/darkapoparka/cars/keys{/key_id}",
+      "collaborators_url": "https://api.github.com/repos/darkapoparka/cars/collaborators{/collaborator}",
+      "teams_url": "https://api.github.com/repos/darkapoparka/cars/teams",
+      "hooks_url": "https://api.github.com/repos/darkapoparka/cars/hooks",
+      "issue_events_url": "https://api.github.com/repos/darkapoparka/cars/issues/events{/number}",
+      "events_url": "https://api.github.com/repos/darkapoparka/cars/events",
+      "assignees_url": "https://api.github.com/repos/darkapoparka/cars/assignees{/user}",
+      "branches_url": "https://api.github.com/repos/darkapoparka/cars/branches{/branch}",
+      "tags_url": "https://api.github.com/repos/darkapoparka/cars/tags",
+      "blobs_url": "https://api.github.com/repos/darkapoparka/cars/git/blobs{/sha}",
+      "git_tags_url": "https://api.github.com/repos/darkapoparka/cars/git/tags{/sha}",
+      "git_refs_url": "https://api.github.com/repos/darkapoparka/cars/git/refs{/sha}",
+      "trees_url": "https://api.github.com/repos/darkapoparka/cars/git/trees{/sha}",
+      "statuses_url": "https://api.github.com/repos/darkapoparka/cars/statuses/{sha}",
+      "languages_url": "https://api.github.com/repos/darkapoparka/cars/languages",
+      "stargazers_url": "https://api.github.com/repos/darkapoparka/cars/stargazers",
+      "contributors_url": "https://api.github.com/repos/darkapoparka/cars/contributors",
+      "subscribers_url": "https://api.github.com/repos/darkapoparka/cars/subscribers",
+      "subscription_url": "https://api.github.com/repos/darkapoparka/cars/subscription",
+      "commits_url": "https://api.github.com/repos/darkapoparka/cars/commits{/sha}",
+      "git_commits_url": "https://api.github.com/repos/darkapoparka/cars/git/commits{/sha}",
+      "comments_url": "https://api.github.com/repos/darkapoparka/cars/comments{/number}",
+      "issue_comment_url": "https://api.github.com/repos/darkapoparka/cars/issues/comments{/number}",
+      "contents_url": "https://api.github.com/repos/darkapoparka/cars/contents/{+path}",
+      "compare_url": "https://api.github.com/repos/darkapoparka/cars/compare/{base}...{head}",
+      "merges_url": "https://api.github.com/repos/darkapoparka/cars/merges",
+      "archive_url": "https://api.github.com/repos/darkapoparka/cars/{archive_format}{/ref}",
+      "downloads_url": "https://api.github.com/repos/darkapoparka/cars/downloads",
+      "issues_url": "https://api.github.com/repos/darkapoparka/cars/issues{/number}",
+      "pulls_url": "https://api.github.com/repos/darkapoparka/cars/pulls{/number}",
+      "milestones_url": "https://api.github.com/repos/darkapoparka/cars/milestones{/number}",
+      "notifications_url": "https://api.github.com/repos/darkapoparka/cars/notifications{?since,all,participating}",
+      "labels_url": "https://api.github.com/repos/darkapoparka/cars/labels{/name}",
+      "releases_url": "https://api.github.com/repos/darkapoparka/cars/releases{/id}",
+      "deployments_url": "https://api.github.com/repos/darkapoparka/cars/deployments"
+    }
+  },
+  "jobs": [
+    {
+      "id": 118259238629,
+      "run_id": 39310711918,
+      "workflow_name": "Dealer pack pipeline",
+      "head_branch": "astra/m2-fast-deploy",
+      "run_url": "https://api.github.com/repos/darkapoparka/cars/actions/runs/39310711918",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOUSWAMM8AAAAbiMzG5Q",
+      "head_sha": "dedb9c0565c7d39da1c1cb12c3958f03e45464f6",
+      "url": "https://api.github.com/repos/darkapoparka/cars/actions/jobs/118259238629",
+      "html_url": "https://github.com/darkapoparka/cars/actions/runs/39310711918/job/118259238629",
+      "status": "completed",
+      "conclusion": "failure",
+      "created_at": "2026-10-19T19:24:25Z",
+      "started_at": "2026-10-19T19:24:27Z",
+      "completed_at": "2026-10-19T19:26:29Z",
+      "name": "contracts",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-19T19:24:28Z",
+          "completed_at": "2026-10-19T19:24:29Z"
+        },
+        {
+          "name": "Check out only pipeline source, packs and readable contracts",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-19T19:24:29Z",
+          "completed_at": "2026-10-19T19:25:39Z"
+        },
+        {
+          "name": "Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-19T19:25:39Z",
+          "completed_at": "2026-10-19T19:25:44Z"
+        },
+        {
+          "name": "Install bounded test dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-19T19:25:44Z",
+          "completed_at": "2026-10-19T19:25:49Z"
+        },
+        {
+          "name": "Install the existing pinned Worker stream-test runtime",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-19T19:25:49Z",
+          "completed_at": "2026-10-19T19:25:52Z"
+        },
+        {
+          "name": "Verify old composer and new pack contracts",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-19T19:25:52Z",
+          "completed_at": "2026-10-19T19:26:22Z"
+        },
+        {
+          "name": "Use the retained Auto Best runtime for Svelte publisher tests",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-19T19:26:22Z",
+          "completed_at": "2026-10-19T19:26:26Z"
+        },
+        {
+          "name": "Verify the maintained Svelte publisher and external cache contract",
+          "status": "completed",
+          "conclusion": "failure",
+          "number": 8,
+          "started_at": "2026-10-19T19:26:26Z",
+          "completed_at": "2026-10-19T19:26:26Z"
+        },
+        {
+          "name": "Restore the pipeline runtime for matrix resolution",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 9,
+          "started_at": "2026-10-19T19:26:26Z",
+          "completed_at": "2026-10-19T19:26:26Z"
+        },
+        {
+          "name": "Report deployment secret availability without disclosing it",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 10,
+          "started_at": "2026-10-19T19:26:26Z",
+          "completed_at": "2026-10-19T19:26:26Z"
+        },
+        {
+          "name": "Post Use the retained Auto Best runtime for Svelte publisher tests",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 18,
+          "started_at": "2026-10-19T19:26:26Z",
+          "completed_at": "2026-10-19T19:26:26Z"
+        },
+        {
+          "name": "Post Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 19,
+          "started_at": "2026-10-19T19:26:26Z",
+          "completed_at": "2026-10-19T19:26:26Z"
+        },
+        {
+          "name": "Post Check out only pipeline source, packs and readable contracts",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 20,
+          "started_at": "2026-10-19T19:26:26Z",
+          "completed_at": "2026-10-19T19:26:27Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 21,
+          "started_at": "2026-10-19T19:26:27Z",
+          "completed_at": "2026-10-19T19:26:27Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/darkapoparka/cars/check-runs/118259238629",
+      "labels": [
+        "ubuntu-24.04"
+      ],
+      "runner_id": 1000018583,
+      "runner_name": "GitHub Actions 1000018583",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 118259239133,
+      "run_id": 39310711918,
+      "workflow_name": "Dealer pack pipeline",
+      "head_branch": "astra/m2-fast-deploy",
+      "run_url": "https://api.github.com/repos/darkapoparka/cars/actions/runs/39310711918",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOUSWAMM8AAAAbiMzI3Q",
+      "head_sha": "dedb9c0565c7d39da1c1cb12c3958f03e45464f6",
+      "url": "https://api.github.com/repos/darkapoparka/cars/actions/jobs/118259239133",
+      "html_url": "https://github.com/darkapoparka/cars/actions/runs/39310711918/job/118259239133",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-19T19:24:25Z",
+      "started_at": "2026-10-19T19:24:28Z",
+      "completed_at": "2026-10-19T19:25:45Z",
+      "name": "plan",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-19T19:24:28Z",
+          "completed_at": "2026-10-19T19:24:29Z"
+        },
+        {
+          "name": "Check out maintained sources and all pack identity facts once",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-19T19:24:29Z",
+          "completed_at": "2026-10-19T19:25:27Z"
+        },
+        {
+          "name": "Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-19T19:25:27Z",
+          "completed_at": "2026-10-19T19:25:35Z"
+        },
+        {
+          "name": "Run npm install --prefix runtime/dealer-pack-tools --ignore-scripts --no-audit --no-fund --save-exact sharp@0.35.5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-19T19:25:35Z",
+          "completed_at": "2026-10-19T19:25:37Z"
+        },
+        {
+          "name": "Validate each input independently; plan changed packs and persistent lanes",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-19T19:25:37Z",
+          "completed_at": "2026-10-19T19:25:41Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-19T19:25:41Z",
+          "completed_at": "2026-10-19T19:25:42Z"
+        },
+        {
+          "name": "Post Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-10-19T19:25:42Z",
+          "completed_at": "2026-10-19T19:25:42Z"
+        },
+        {
+          "name": "Post Check out maintained sources and all pack identity facts once",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12,
+          "started_at": "2026-10-19T19:25:42Z",
+          "completed_at": "2026-10-19T19:25:43Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-10-19T19:25:43Z",
+          "completed_at": "2026-10-19T19:25:43Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/darkapoparka/cars/check-runs/118259239133",
+      "labels": [
+        "ubuntu-24.04"
+      ],
+      "runner_id": 1000018584,
+      "runner_name": "GitHub Actions 1000018584",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 118259886643,
+      "run_id": 39310711918,
+      "workflow_name": "Dealer pack pipeline",
+      "head_branch": "astra/m2-fast-deploy",
+      "run_url": "https://api.github.com/repos/darkapoparka/cars/actions/runs/39310711918",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOUSWAMM8AAAAbiNaqMw",
+      "head_sha": "dedb9c0565c7d39da1c1cb12c3958f03e45464f6",
+      "url": "https://api.github.com/repos/darkapoparka/cars/actions/jobs/118259886643",
+      "html_url": "https://github.com/darkapoparka/cars/actions/runs/39310711918/job/118259886643",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-19T19:25:45Z",
+      "started_at": "2026-10-19T19:25:48Z",
+      "completed_at": "2026-10-19T19:58:06Z",
+      "name": "lane (3, m2-bench-03-wadishee-used-cars, m2-bench-10-wadishee-used-cars, m2-bench-17-za-motors, m...",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-19T19:25:49Z",
+          "completed_at": "2026-10-19T19:25:51Z"
+        },
+        {
+          "name": "Release unused preinstalled SDK disk on this disposable build runner",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-19T19:25:51Z",
+          "completed_at": "2026-10-19T19:27:50Z"
+        },
+        {
+          "name": "Check out maintained sources and all pack identity facts once",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-19T19:27:50Z",
+          "completed_at": "2026-10-19T19:28:55Z"
+        },
+        {
+          "name": "Run actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-19T19:28:55Z",
+          "completed_at": "2026-10-19T19:28:56Z"
+        },
+        {
+          "name": "Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-19T19:28:56Z",
+          "completed_at": "2026-10-19T19:29:04Z"
+        },
+        {
+          "name": "Record exact Node 22.23.2",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-19T19:29:04Z",
+          "completed_at": "2026-10-19T19:29:04Z"
+        },
+        {
+          "name": "Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-19T19:29:04Z",
+          "completed_at": "2026-10-19T19:29:11Z"
+        },
+        {
+          "name": "Record exact Node 24.21.0",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-10-19T19:29:11Z",
+          "completed_at": "2026-10-19T19:29:11Z"
+        },
+        {
+          "name": "Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-10-19T19:29:11Z",
+          "completed_at": "2026-10-19T19:29:17Z"
+        },
+        {
+          "name": "Record exact Node 26.10.0",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-10-19T19:29:17Z",
+          "completed_at": "2026-10-19T19:29:17Z"
+        },
+        {
+          "name": "Restore only immutable release package downloads",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-10-19T19:29:17Z",
+          "completed_at": "2026-10-19T19:29:17Z"
+        },
+        {
+          "name": "Install source and browser tools once for the lane",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12,
+          "started_at": "2026-10-19T19:29:17Z",
+          "completed_at": "2026-10-19T19:29:46Z"
+        },
+        {
+          "name": "Build and verify all lane packs independently",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-10-19T19:29:46Z",
+          "completed_at": "2026-10-19T19:57:45Z"
+        },
+        {
+          "name": "Keep timings, receipts, browser evidence and failure reasons",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14,
+          "started_at": "2026-10-19T19:57:45Z",
+          "completed_at": "2026-10-19T19:57:48Z"
+        },
+        {
+          "name": "Seal deduplicated final bundle transport",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 15,
+          "started_at": "2026-10-19T19:57:48Z",
+          "completed_at": "2026-10-19T19:57:48Z"
+        },
+        {
+          "name": "Retain final bundle manifest",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 16,
+          "started_at": "2026-10-19T19:57:48Z",
+          "completed_at": "2026-10-19T19:57:48Z"
+        },
+        {
+          "name": "Retain deduplicated final blob shard 0",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 17,
+          "started_at": "2026-10-19T19:57:48Z",
+          "completed_at": "2026-10-19T19:57:48Z"
+        },
+        {
+          "name": "Retain deduplicated final blob shard 1",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 18,
+          "started_at": "2026-10-19T19:57:48Z",
+          "completed_at": "2026-10-19T19:57:48Z"
+        },
+        {
+          "name": "Retain deduplicated final blob shard 2",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 19,
+          "started_at": "2026-10-19T19:57:48Z",
+          "completed_at": "2026-10-19T19:57:48Z"
+        },
+        {
+          "name": "Retain deduplicated final blob shard 3",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 20,
+          "started_at": "2026-10-19T19:57:48Z",
+          "completed_at": "2026-10-19T19:57:48Z"
+        },
+        {
+          "name": "Retain deduplicated final blob shard 4",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 21,
+          "started_at": "2026-10-19T19:57:48Z",
+          "completed_at": "2026-10-19T19:57:48Z"
+        },
+        {
+          "name": "Retain deduplicated final blob shard 5",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 22,
+          "started_at": "2026-10-19T19:57:48Z",
+          "completed_at": "2026-10-19T19:57:48Z"
+        },
+        {
+          "name": "Retain deduplicated final blob shard 6",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 23,
+          "started_at": "2026-10-19T19:57:48Z",
+          "completed_at": "2026-10-19T19:57:48Z"
+        },
+        {
+          "name": "Retain deduplicated final blob shard 7",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 24,
+          "started_at": "2026-10-19T19:57:48Z",
+          "completed_at": "2026-10-19T19:57:48Z"
+        },
+        {
+          "name": "Post Restore only immutable release package downloads",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 44,
+          "started_at": "2026-10-19T19:57:48Z",
+          "completed_at": "2026-10-19T19:58:02Z"
+        },
+        {
+          "name": "Post Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 45,
+          "started_at": "2026-10-19T19:58:02Z",
+          "completed_at": "2026-10-19T19:58:02Z"
+        },
+        {
+          "name": "Post Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 46,
+          "started_at": "2026-10-19T19:58:02Z",
+          "completed_at": "2026-10-19T19:58:02Z"
+        },
+        {
+          "name": "Post Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 47,
+          "started_at": "2026-10-19T19:58:02Z",
+          "completed_at": "2026-10-19T19:58:02Z"
+        },
+        {
+          "name": "Post Check out maintained sources and all pack identity facts once",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 48,
+          "started_at": "2026-10-19T19:58:02Z",
+          "completed_at": "2026-10-19T19:58:03Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 49,
+          "started_at": "2026-10-19T19:58:03Z",
+          "completed_at": "2026-10-19T19:58:03Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/darkapoparka/cars/check-runs/118259886643",
+      "labels": [
+        "ubuntu-24.04"
+      ],
+      "runner_id": 1000018587,
+      "runner_name": "GitHub Actions 1000018587",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 118259886646,
+      "run_id": 39310711918,
+      "workflow_name": "Dealer pack pipeline",
+      "head_branch": "astra/m2-fast-deploy",
+      "run_url": "https://api.github.com/repos/darkapoparka/cars/actions/runs/39310711918",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOUSWAMM8AAAAbiNaqNg",
+      "head_sha": "dedb9c0565c7d39da1c1cb12c3958f03e45464f6",
+      "url": "https://api.github.com/repos/darkapoparka/cars/actions/jobs/118259886646",
+      "html_url": "https://github.com/darkapoparka/cars/actions/runs/39310711918/job/118259886646",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-19T19:25:45Z",
+      "started_at": "2026-10-19T19:25:48Z",
+      "completed_at": "2026-10-19T19:53:47Z",
+      "name": "lane (6, m2-bench-06-wadishee-used-cars, m2-bench-13-wadishee-used-cars, m2-bench-20-za-motors, m...",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-19T19:25:48Z",
+          "completed_at": "2026-10-19T19:25:50Z"
+        },
+        {
+          "name": "Release unused preinstalled SDK disk on this disposable build runner",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-19T19:25:50Z",
+          "completed_at": "2026-10-19T19:26:34Z"
+        },
+        {
+          "name": "Check out maintained sources and all pack identity facts once",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-19T19:26:34Z",
+          "completed_at": "2026-10-19T19:27:36Z"
+        },
+        {
+          "name": "Run actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-19T19:27:36Z",
+          "completed_at": "2026-10-19T19:27:37Z"
+        },
+        {
+          "name": "Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-19T19:27:37Z",
+          "completed_at": "2026-10-19T19:27:41Z"
+        },
+        {
+          "name": "Record exact Node 22.23.2",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-19T19:27:41Z",
+          "completed_at": "2026-10-19T19:27:41Z"
+        },
+        {
+          "name": "Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-19T19:27:41Z",
+          "completed_at": "2026-10-19T19:27:48Z"
+        },
+        {
+          "name": "Record exact Node 24.21.0",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-10-19T19:27:48Z",
+          "completed_at": "2026-10-19T19:27:48Z"
+        },
+        {
+          "name": "Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-10-19T19:27:48Z",
+          "completed_at": "2026-10-19T19:27:52Z"
+        },
+        {
+          "name": "Record exact Node 26.10.0",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-10-19T19:27:52Z",
+          "completed_at": "2026-10-19T19:27:52Z"
+        },
+        {
+          "name": "Restore only immutable release package downloads",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-10-19T19:27:52Z",
+          "completed_at": "2026-10-19T19:27:53Z"
+        },
+        {
+          "name": "Install source and browser tools once for the lane",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12,
+          "started_at": "2026-10-19T19:27:53Z",
+          "completed_at": "2026-10-19T19:28:20Z"
+        },
+        {
+          "name": "Build and verify all lane packs independently",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-10-19T19:28:20Z",
+          "completed_at": "2026-10-19T19:53:29Z"
+        },
+        {
+          "name": "Keep timings, receipts, browser evidence and failure reasons",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14,
+          "started_at": "2026-10-19T19:53:29Z",
+          "completed_at": "2026-10-19T19:53:31Z"
+        },
+        {
+          "name": "Seal deduplicated final bundle transport",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 15,
+          "started_at": "2026-10-19T19:53:31Z",
+          "completed_at": "2026-10-19T19:53:31Z"
+        },
+        {
+          "name": "Retain final bundle manifest",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 16,
+          "started_at": "2026-10-19T19:53:31Z",
+          "completed_at": "2026-10-19T19:53:31Z"
+        },
+        {
+          "name": "Retain deduplicated final blob shard 0",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 17,
+          "started_at": "2026-10-19T19:53:31Z",
+          "completed_at": "2026-10-19T19:53:31Z"
+        },
+        {
+          "name": "Retain deduplicated final blob shard 1",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 18,
+          "started_at": "2026-10-19T19:53:31Z",
+          "completed_at": "2026-10-19T19:53:31Z"
+        },
+        {
+          "name": "Retain deduplicated final blob shard 2",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 19,
+          "started_at": "2026-10-19T19:53:31Z",
+          "completed_at": "2026-10-19T19:53:31Z"
+        },
+        {
+          "name": "Retain deduplicated final blob shard 3",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 20,
+          "started_at": "2026-10-19T19:53:31Z",
+          "completed_at": "2026-10-19T19:53:31Z"
+        },
+        {
+          "name": "Retain deduplicated final blob shard 4",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 21,
+          "started_at": "2026-10-19T19:53:31Z",
+          "completed_at": "2026-10-19T19:53:31Z"
+        },
+        {
+          "name": "Retain deduplicated final blob shard 5",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 22,
+          "started_at": "2026-10-19T19:53:31Z",
+          "completed_at": "2026-10-19T19:53:31Z"
+        },
+        {
+          "name": "Retain deduplicated final blob shard 6",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 23,
+          "started_at": "2026-10-19T19:53:31Z",
+          "completed_at": "2026-10-19T19:53:31Z"
+        },
+        {
+          "name": "Retain deduplicated final blob shard 7",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 24,
+          "started_at": "2026-10-19T19:53:31Z",
+          "completed_at": "2026-10-19T19:53:31Z"
+        },
+        {
+          "name": "Post Restore only immutable release package downloads",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 44,
+          "started_at": "2026-10-19T19:53:31Z",
+          "completed_at": "2026-10-19T19:53:43Z"
+        },
+        {
+          "name": "Post Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 45,
+          "started_at": "2026-10-19T19:53:43Z",
+          "completed_at": "2026-10-19T19:53:43Z"
+        },
+        {
+          "name": "Post Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 46,
+          "started_at": "2026-10-19T19:53:43Z",
+          "completed_at": "2026-10-19T19:53:43Z"
+        },
+        {
+          "name": "Post Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 47,
+          "started_at": "2026-10-19T19:53:43Z",
+          "completed_at": "2026-10-19T19:53:43Z"
+        },
+        {
+          "name": "Post Check out maintained sources and all pack identity facts once",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 48,
+          "started_at": "2026-10-19T19:53:43Z",
+          "completed_at": "2026-10-19T19:53:45Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 49,
+          "started_at": "2026-10-19T19:53:45Z",
+          "completed_at": "2026-10-19T19:53:45Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/darkapoparka/cars/check-runs/118259886646",
+      "labels": [
+        "ubuntu-24.04"
+      ],
+      "runner_id": 1000018585,
+      "runner_name": "GitHub Actions 1000018585",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 118259886651,
+      "run_id": 39310711918,
+      "workflow_name": "Dealer pack pipeline",
+      "head_branch": "astra/m2-fast-deploy",
+      "run_url": "https://api.github.com/repos/darkapoparka/cars/actions/runs/39310711918",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOUSWAMM8AAAAbiNaqOw",
+      "head_sha": "dedb9c0565c7d39da1c1cb12c3958f03e45464f6",
+      "url": "https://api.github.com/repos/darkapoparka/cars/actions/jobs/118259886651",
+      "html_url": "https://github.com/darkapoparka/cars/actions/runs/39310711918/job/118259886651",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-19T19:25:45Z",
+      "started_at": "2026-10-19T19:25:47Z",
+      "completed_at": "2026-10-19T20:01:54Z",
+      "name": "lane (4, m2-bench-04-wadishee-used-cars, m2-bench-11-wadishee-used-cars, m2-bench-18-wadishee-use...",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-19T19:25:48Z",
+          "completed_at": "2026-10-19T19:25:49Z"
+        },
+        {
+          "name": "Release unused preinstalled SDK disk on this disposable build runner",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-19T19:25:49Z",
+          "completed_at": "2026-10-19T19:26:45Z"
+        },
+        {
+          "name": "Check out maintained sources and all pack identity facts once",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-19T19:26:45Z",
+          "completed_at": "2026-10-19T19:27:52Z"
+        },
+        {
+          "name": "Run actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-19T19:27:52Z",
+          "completed_at": "2026-10-19T19:27:52Z"
+        },
+        {
+          "name": "Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-19T19:27:52Z",
+          "completed_at": "2026-10-19T19:28:00Z"
+        },
+        {
+          "name": "Record exact Node 22.23.2",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-19T19:28:00Z",
+          "completed_at": "2026-10-19T19:28:00Z"
+        },
+        {
+          "name": "Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-19T19:28:00Z",
+          "completed_at": "2026-10-19T19:28:01Z"
+        },
+        {
+          "name": "Record exact Node 24.21.0",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-10-19T19:28:01Z",
+          "completed_at": "2026-10-19T19:28:01Z"
+        },
+        {
+          "name": "Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-10-19T19:28:01Z",
+          "completed_at": "2026-10-19T19:28:06Z"
+        },
+        {
+          "name": "Record exact Node 26.10.0",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-10-19T19:28:06Z",
+          "completed_at": "2026-10-19T19:28:06Z"
+        },
+        {
+          "name": "Restore only immutable release package downloads",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-10-19T19:28:06Z",
+          "completed_at": "2026-10-19T19:28:06Z"
+        },
+        {
+          "name": "Install source and browser tools once for the lane",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12,
+          "started_at": "2026-10-19T19:28:06Z",
+          "completed_at": "2026-10-19T19:28:37Z"
+        },
+        {
+          "name": "Build and verify all lane packs independently",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-10-19T19:28:37Z",
+          "completed_at": "2026-10-19T20:01:35Z"
+        },
+        {
+          "name": "Keep timings, receipts, browser evidence and failure reasons",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14,
+          "started_at": "2026-10-19T20:01:35Z",
+          "completed_at": "2026-10-19T20:01:38Z"
+        },
+        {
+          "name": "Seal deduplicated final bundle transport",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 15,
+          "started_at": "2026-10-19T20:01:38Z",
+          "completed_at": "2026-10-19T20:01:38Z"
+        },
+        {
+          "name": "Retain final bundle manifest",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 16,
+          "started_at": "2026-10-19T20:01:38Z",
+          "completed_at": "2026-10-19T20:01:38Z"
+        },
+        {
+          "name": "Retain deduplicated final blob shard 0",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 17,
+          "started_at": "2026-10-19T20:01:38Z",
+          "completed_at": "2026-10-19T20:01:38Z"
+        },
+        {
+          "name": "Retain deduplicated final blob shard 1",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 18,
+          "started_at": "2026-10-19T20:01:38Z",
+          "completed_at": "2026-10-19T20:01:38Z"
+        },
+        {
+          "name": "Retain deduplicated final blob shard 2",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 19,
+          "started_at": "2026-10-19T20:01:38Z",
+          "completed_at": "2026-10-19T20:01:38Z"
+        },
+        {
+          "name": "Retain deduplicated final blob shard 3",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 20,
+          "started_at": "2026-10-19T20:01:38Z",
+          "completed_at": "2026-10-19T20:01:38Z"
+        },
+        {
+          "name": "Retain deduplicated final blob shard 4",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 21,
+          "started_at": "2026-10-19T20:01:38Z",
+          "completed_at": "2026-10-19T20:01:38Z"
+        },
+        {
+          "name": "Retain deduplicated final blob shard 5",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 22,
+          "started_at": "2026-10-19T20:01:38Z",
+          "completed_at": "2026-10-19T20:01:38Z"
+        },
+        {
+          "name": "Retain deduplicated final blob shard 6",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 23,
+          "started_at": "2026-10-19T20:01:38Z",
+          "completed_at": "2026-10-19T20:01:38Z"
+        },
+        {
+          "name": "Retain deduplicated final blob shard 7",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 24,
+          "started_at": "2026-10-19T20:01:38Z",
+          "completed_at": "2026-10-19T20:01:38Z"
+        },
+        {
+          "name": "Post Restore only immutable release package downloads",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 44,
+          "started_at": "2026-10-19T20:01:38Z",
+          "completed_at": "2026-10-19T20:01:50Z"
+        },
+        {
+          "name": "Post Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 45,
+          "started_at": "2026-10-19T20:01:50Z",
+          "completed_at": "2026-10-19T20:01:50Z"
+        },
+        {
+          "name": "Post Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 46,
+          "started_at": "2026-10-19T20:01:50Z",
+          "completed_at": "2026-10-19T20:01:50Z"
+        },
+        {
+          "name": "Post Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 47,
+          "started_at": "2026-10-19T20:01:50Z",
+          "completed_at": "2026-10-19T20:01:50Z"
+        },
+        {
+          "name": "Post Check out maintained sources and all pack identity facts once",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 48,
+          "started_at": "2026-10-19T20:01:50Z",
+          "completed_at": "2026-10-19T20:01:52Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 49,
+          "started_at": "2026-10-19T20:01:52Z",
+          "completed_at": "2026-10-19T20:01:52Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/darkapoparka/cars/check-runs/118259886651",
+      "labels": [
+        "ubuntu-24.04"
+      ],
+      "runner_id": 1000018588,
+      "runner_name": "GitHub Actions 1000018588",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 118259886667,
+      "run_id": 39310711918,
+      "workflow_name": "Dealer pack pipeline",
+      "head_branch": "astra/m2-fast-deploy",
+      "run_url": "https://api.github.com/repos/darkapoparka/cars/actions/runs/39310711918",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOUSWAMM8AAAAbiNaqSw",
+      "head_sha": "dedb9c0565c7d39da1c1cb12c3958f03e45464f6",
+      "url": "https://api.github.com/repos/darkapoparka/cars/actions/jobs/118259886667",
+      "html_url": "https://github.com/darkapoparka/cars/actions/runs/39310711918/job/118259886667",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-19T19:25:45Z",
+      "started_at": "2026-10-19T19:25:48Z",
+      "completed_at": "2026-10-19T19:55:20Z",
+      "name": "lane (7, m2-bench-07-wadishee-used-cars, m2-bench-14-za-motors, m2-bench-21-wadishee-used-cars, m...",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-19T19:25:50Z",
+          "completed_at": "2026-10-19T19:25:51Z"
+        },
+        {
+          "name": "Release unused preinstalled SDK disk on this disposable build runner",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-19T19:25:51Z",
+          "completed_at": "2026-10-19T19:27:30Z"
+        },
+        {
+          "name": "Check out maintained sources and all pack identity facts once",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-19T19:27:30Z",
+          "completed_at": "2026-10-19T19:29:47Z"
+        },
+        {
+          "name": "Run actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-19T19:29:47Z",
+          "completed_at": "2026-10-19T19:29:48Z"
+        },
+        {
+          "name": "Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-19T19:29:48Z",
+          "completed_at": "2026-10-19T19:29:53Z"
+        },
+        {
+          "name": "Record exact Node 22.23.2",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-19T19:29:53Z",
+          "completed_at": "2026-10-19T19:29:53Z"
+        },
+        {
+          "name": "Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-19T19:29:53Z",
+          "completed_at": "2026-10-19T19:29:54Z"
+        },
+        {
+          "name": "Record exact Node 24.21.0",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-10-19T19:29:54Z",
+          "completed_at": "2026-10-19T19:29:54Z"
+        },
+        {
+          "name": "Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-10-19T19:29:54Z",
+          "completed_at": "2026-10-19T19:30:01Z"
+        },
+        {
+          "name": "Record exact Node 26.10.0",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-10-19T19:30:01Z",
+          "completed_at": "2026-10-19T19:30:01Z"
+        },
+        {
+          "name": "Restore only immutable release package downloads",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-10-19T19:30:01Z",
+          "completed_at": "2026-10-19T19:30:01Z"
+        },
+        {
+          "name": "Install source and browser tools once for the lane",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12,
+          "started_at": "2026-10-19T19:30:01Z",
+          "completed_at": "2026-10-19T19:30:31Z"
+        },
+        {
+          "name": "Build and verify all lane packs independently",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-10-19T19:30:31Z",
+          "completed_at": "2026-10-19T19:54:59Z"
+        },
+        {
+          "name": "Keep timings, receipts, browser evidence and failure reasons",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14,
+          "started_at": "2026-10-19T19:54:59Z",
+          "completed_at": "2026-10-19T19:55:02Z"
+        },
+        {
+          "name": "Seal deduplicated final bundle transport",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 15,
+          "started_at": "2026-10-19T19:55:02Z",
+          "completed_at": "2026-10-19T19:55:02Z"
+        },
+        {
+          "name": "Retain final bundle manifest",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 16,
+          "started_at": "2026-10-19T19:55:02Z",
+          "completed_at": "2026-10-19T19:55:02Z"
+        },
+        {
+          "name": "Retain deduplicated final blob shard 0",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 17,
+          "started_at": "2026-10-19T19:55:02Z",
+          "completed_at": "2026-10-19T19:55:02Z"
+        },
+        {
+          "name": "Retain deduplicated final blob shard 1",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 18,
+          "started_at": "2026-10-19T19:55:02Z",
+          "completed_at": "2026-10-19T19:55:02Z"
+        },
+        {
+          "name": "Retain deduplicated final blob shard 2",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 19,
+          "started_at": "2026-10-19T19:55:02Z",
+          "completed_at": "2026-10-19T19:55:02Z"
+        },
+        {
+          "name": "Retain deduplicated final blob shard 3",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 20,
+          "started_at": "2026-10-19T19:55:02Z",
+          "completed_at": "2026-10-19T19:55:02Z"
+        },
+        {
+          "name": "Retain deduplicated final blob shard 4",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 21,
+          "started_at": "2026-10-19T19:55:02Z",
+          "completed_at": "2026-10-19T19:55:02Z"
+        },
+        {
+          "name": "Retain deduplicated final blob shard 5",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 22,
+          "started_at": "2026-10-19T19:55:02Z",
+          "completed_at": "2026-10-19T19:55:02Z"
+        },
+        {
+          "name": "Retain deduplicated final blob shard 6",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 23,
+          "started_at": "2026-10-19T19:55:02Z",
+          "completed_at": "2026-10-19T19:55:02Z"
+        },
+        {
+          "name": "Retain deduplicated final blob shard 7",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 24,
+          "started_at": "2026-10-19T19:55:02Z",
+          "completed_at": "2026-10-19T19:55:02Z"
+        },
+        {
+          "name": "Post Restore only immutable release package downloads",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 44,
+          "started_at": "2026-10-19T19:55:02Z",
+          "completed_at": "2026-10-19T19:55:15Z"
+        },
+        {
+          "name": "Post Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 45,
+          "started_at": "2026-10-19T19:55:15Z",
+          "completed_at": "2026-10-19T19:55:15Z"
+        },
+        {
+          "name": "Post Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 46,
+          "started_at": "2026-10-19T19:55:15Z",
+          "completed_at": "2026-10-19T19:55:16Z"
+        },
+        {
+          "name": "Post Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 47,
+          "started_at": "2026-10-19T19:55:16Z",
+          "completed_at": "2026-10-19T19:55:16Z"
+        },
+        {
+          "name": "Post Check out maintained sources and all pack identity facts once",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 48,
+          "started_at": "2026-10-19T19:55:16Z",
+          "completed_at": "2026-10-19T19:55:17Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 49,
+          "started_at": "2026-10-19T19:55:17Z",
+          "completed_at": "2026-10-19T19:55:17Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/darkapoparka/cars/check-runs/118259886667",
+      "labels": [
+        "ubuntu-24.04"
+      ],
+      "runner_id": 1000018590,
+      "runner_name": "GitHub Actions 1000018590",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 118259886673,
+      "run_id": 39310711918,
+      "workflow_name": "Dealer pack pipeline",
+      "head_branch": "astra/m2-fast-deploy",
+      "run_url": "https://api.github.com/repos/darkapoparka/cars/actions/runs/39310711918",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOUSWAMM8AAAAbiNaqUQ",
+      "head_sha": "dedb9c0565c7d39da1c1cb12c3958f03e45464f6",
+      "url": "https://api.github.com/repos/darkapoparka/cars/actions/jobs/118259886673",
+      "html_url": "https://github.com/darkapoparka/cars/actions/runs/39310711918/job/118259886673",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-19T19:25:45Z",
+      "started_at": "2026-10-19T19:25:48Z",
+      "completed_at": "2026-10-19T19:57:09Z",
+      "name": "lane (2, m2-bench-02-za-motors, m2-bench-09-za-motors, m2-bench-16-wadishee-used-cars, m2-bench-2...",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-19T19:25:49Z",
+          "completed_at": "2026-10-19T19:25:50Z"
+        },
+        {
+          "name": "Release unused preinstalled SDK disk on this disposable build runner",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-19T19:25:50Z",
+          "completed_at": "2026-10-19T19:28:01Z"
+        },
+        {
+          "name": "Check out maintained sources and all pack identity facts once",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-19T19:28:01Z",
+          "completed_at": "2026-10-19T19:30:07Z"
+        },
+        {
+          "name": "Run actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-19T19:30:07Z",
+          "completed_at": "2026-10-19T19:30:08Z"
+        },
+        {
+          "name": "Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-19T19:30:08Z",
+          "completed_at": "2026-10-19T19:30:15Z"
+        },
+        {
+          "name": "Record exact Node 22.23.2",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-19T19:30:15Z",
+          "completed_at": "2026-10-19T19:30:15Z"
+        },
+        {
+          "name": "Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-19T19:30:15Z",
+          "completed_at": "2026-10-19T19:30:16Z"
+        },
+        {
+          "name": "Record exact Node 24.21.0",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-10-19T19:30:16Z",
+          "completed_at": "2026-10-19T19:30:16Z"
+        },
+        {
+          "name": "Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-10-19T19:30:16Z",
+          "completed_at": "2026-10-19T19:30:24Z"
+        },
+        {
+          "name": "Record exact Node 26.10.0",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-10-19T19:30:24Z",
+          "completed_at": "2026-10-19T19:30:24Z"
+        },
+        {
+          "name": "Restore only immutable release package downloads",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-10-19T19:30:24Z",
+          "completed_at": "2026-10-19T19:30:24Z"
+        },
+        {
+          "name": "Install source and browser tools once for the lane",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12,
+          "started_at": "2026-10-19T19:30:24Z",
+          "completed_at": "2026-10-19T19:30:53Z"
+        },
+        {
+          "name": "Build and verify all lane packs independently",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-10-19T19:30:53Z",
+          "completed_at": "2026-10-19T19:56:47Z"
+        },
+        {
+          "name": "Keep timings, receipts, browser evidence and failure reasons",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14,
+          "started_at": "2026-10-19T19:56:47Z",
+          "completed_at": "2026-10-19T19:56:50Z"
+        },
+        {
+          "name": "Seal deduplicated final bundle transport",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 15,
+          "started_at": "2026-10-19T19:56:50Z",
+          "completed_at": "2026-10-19T19:56:50Z"
+        },
+        {
+          "name": "Retain final bundle manifest",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 16,
+          "started_at": "2026-10-19T19:56:50Z",
+          "completed_at": "2026-10-19T19:56:50Z"
+        },
+        {
+          "name": "Retain deduplicated final blob shard 0",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 17,
+          "started_at": "2026-10-19T19:56:50Z",
+          "completed_at": "2026-10-19T19:56:50Z"
+        },
+        {
+          "name": "Retain deduplicated final blob shard 1",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 18,
+          "started_at": "2026-10-19T19:56:50Z",
+          "completed_at": "2026-10-19T19:56:50Z"
+        },
+        {
+          "name": "Retain deduplicated final blob shard 2",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 19,
+          "started_at": "2026-10-19T19:56:50Z",
+          "completed_at": "2026-10-19T19:56:50Z"
+        },
+        {
+          "name": "Retain deduplicated final blob shard 3",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 20,
+          "started_at": "2026-10-19T19:56:50Z",
+          "completed_at": "2026-10-19T19:56:50Z"
+        },
+        {
+          "name": "Retain deduplicated final blob shard 4",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 21,
+          "started_at": "2026-10-19T19:56:50Z",
+          "completed_at": "2026-10-19T19:56:50Z"
+        },
+        {
+          "name": "Retain deduplicated final blob shard 5",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 22,
+          "started_at": "2026-10-19T19:56:50Z",
+          "completed_at": "2026-10-19T19:56:50Z"
+        },
+        {
+          "name": "Retain deduplicated final blob shard 6",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 23,
+          "started_at": "2026-10-19T19:56:50Z",
+          "completed_at": "2026-10-19T19:56:50Z"
+        },
+        {
+          "name": "Retain deduplicated final blob shard 7",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 24,
+          "started_at": "2026-10-19T19:56:50Z",
+          "completed_at": "2026-10-19T19:56:50Z"
+        },
+        {
+          "name": "Post Restore only immutable release package downloads",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 44,
+          "started_at": "2026-10-19T19:56:50Z",
+          "completed_at": "2026-10-19T19:57:04Z"
+        },
+        {
+          "name": "Post Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 45,
+          "started_at": "2026-10-19T19:57:04Z",
+          "completed_at": "2026-10-19T19:57:05Z"
+        },
+        {
+          "name": "Post Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 46,
+          "started_at": "2026-10-19T19:57:05Z",
+          "completed_at": "2026-10-19T19:57:05Z"
+        },
+        {
+          "name": "Post Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 47,
+          "started_at": "2026-10-19T19:57:05Z",
+          "completed_at": "2026-10-19T19:57:05Z"
+        },
+        {
+          "name": "Post Check out maintained sources and all pack identity facts once",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 48,
+          "started_at": "2026-10-19T19:57:05Z",
+          "completed_at": "2026-10-19T19:57:06Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 49,
+          "started_at": "2026-10-19T19:57:06Z",
+          "completed_at": "2026-10-19T19:57:06Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/darkapoparka/cars/check-runs/118259886673",
+      "labels": [
+        "ubuntu-24.04"
+      ],
+      "runner_id": 1000018586,
+      "runner_name": "GitHub Actions 1000018586",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 118259886756,
+      "run_id": 39310711918,
+      "workflow_name": "Dealer pack pipeline",
+      "head_branch": "astra/m2-fast-deploy",
+      "run_url": "https://api.github.com/repos/darkapoparka/cars/actions/runs/39310711918",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOUSWAMM8AAAAbiNaqpA",
+      "head_sha": "dedb9c0565c7d39da1c1cb12c3958f03e45464f6",
+      "url": "https://api.github.com/repos/darkapoparka/cars/actions/jobs/118259886756",
+      "html_url": "https://github.com/darkapoparka/cars/actions/runs/39310711918/job/118259886756",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-19T19:25:45Z",
+      "started_at": "2026-10-19T19:25:48Z",
+      "completed_at": "2026-10-19T20:01:22Z",
+      "name": "lane (1, m2-bench-01-wadishee-used-cars, m2-bench-08-wadishee-used-cars, m2-bench-15-wadishee-use...",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-19T19:25:48Z",
+          "completed_at": "2026-10-19T19:25:50Z"
+        },
+        {
+          "name": "Release unused preinstalled SDK disk on this disposable build runner",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-19T19:25:50Z",
+          "completed_at": "2026-10-19T19:27:09Z"
+        },
+        {
+          "name": "Check out maintained sources and all pack identity facts once",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-19T19:27:09Z",
+          "completed_at": "2026-10-19T19:28:24Z"
+        },
+        {
+          "name": "Run actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-19T19:28:24Z",
+          "completed_at": "2026-10-19T19:28:24Z"
+        },
+        {
+          "name": "Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-19T19:28:24Z",
+          "completed_at": "2026-10-19T19:28:31Z"
+        },
+        {
+          "name": "Record exact Node 22.23.2",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-19T19:28:31Z",
+          "completed_at": "2026-10-19T19:28:31Z"
+        },
+        {
+          "name": "Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-19T19:28:31Z",
+          "completed_at": "2026-10-19T19:28:39Z"
+        },
+        {
+          "name": "Record exact Node 24.21.0",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-10-19T19:28:39Z",
+          "completed_at": "2026-10-19T19:28:39Z"
+        },
+        {
+          "name": "Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-10-19T19:28:39Z",
+          "completed_at": "2026-10-19T19:28:45Z"
+        },
+        {
+          "name": "Record exact Node 26.10.0",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-10-19T19:28:45Z",
+          "completed_at": "2026-10-19T19:28:45Z"
+        },
+        {
+          "name": "Restore only immutable release package downloads",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-10-19T19:28:45Z",
+          "completed_at": "2026-10-19T19:28:45Z"
+        },
+        {
+          "name": "Install source and browser tools once for the lane",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12,
+          "started_at": "2026-10-19T19:28:45Z",
+          "completed_at": "2026-10-19T19:29:23Z"
+        },
+        {
+          "name": "Build and verify all lane packs independently",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-10-19T19:29:23Z",
+          "completed_at": "2026-10-19T20:00:54Z"
+        },
+        {
+          "name": "Keep timings, receipts, browser evidence and failure reasons",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14,
+          "started_at": "2026-10-19T20:00:54Z",
+          "completed_at": "2026-10-19T20:00:57Z"
+        },
+        {
+          "name": "Seal deduplicated final bundle transport",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 15,
+          "started_at": "2026-10-19T20:00:57Z",
+          "completed_at": "2026-10-19T20:00:57Z"
+        },
+        {
+          "name": "Retain final bundle manifest",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 16,
+          "started_at": "2026-10-19T20:00:57Z",
+          "completed_at": "2026-10-19T20:00:57Z"
+        },
+        {
+          "name": "Retain deduplicated final blob shard 0",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 17,
+          "started_at": "2026-10-19T20:00:57Z",
+          "completed_at": "2026-10-19T20:00:57Z"
+        },
+        {
+          "name": "Retain deduplicated final blob shard 1",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 18,
+          "started_at": "2026-10-19T20:00:57Z",
+          "completed_at": "2026-10-19T20:00:57Z"
+        },
+        {
+          "name": "Retain deduplicated final blob shard 2",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 19,
+          "started_at": "2026-10-19T20:00:57Z",
+          "completed_at": "2026-10-19T20:00:57Z"
+        },
+        {
+          "name": "Retain deduplicated final blob shard 3",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 20,
+          "started_at": "2026-10-19T20:00:57Z",
+          "completed_at": "2026-10-19T20:00:57Z"
+        },
+        {
+          "name": "Retain deduplicated final blob shard 4",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 21,
+          "started_at": "2026-10-19T20:00:57Z",
+          "completed_at": "2026-10-19T20:00:57Z"
+        },
+        {
+          "name": "Retain deduplicated final blob shard 5",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 22,
+          "started_at": "2026-10-19T20:00:57Z",
+          "completed_at": "2026-10-19T20:00:57Z"
+        },
+        {
+          "name": "Retain deduplicated final blob shard 6",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 23,
+          "started_at": "2026-10-19T20:00:57Z",
+          "completed_at": "2026-10-19T20:00:57Z"
+        },
+        {
+          "name": "Retain deduplicated final blob shard 7",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 24,
+          "started_at": "2026-10-19T20:00:57Z",
+          "completed_at": "2026-10-19T20:00:57Z"
+        },
+        {
+          "name": "Post Restore only immutable release package downloads",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 44,
+          "started_at": "2026-10-19T20:00:57Z",
+          "completed_at": "2026-10-19T20:01:16Z"
+        },
+        {
+          "name": "Post Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 45,
+          "started_at": "2026-10-19T20:01:16Z",
+          "completed_at": "2026-10-19T20:01:16Z"
+        },
+        {
+          "name": "Post Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 46,
+          "started_at": "2026-10-19T20:01:16Z",
+          "completed_at": "2026-10-19T20:01:17Z"
+        },
+        {
+          "name": "Post Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 47,
+          "started_at": "2026-10-19T20:01:17Z",
+          "completed_at": "2026-10-19T20:01:17Z"
+        },
+        {
+          "name": "Post Check out maintained sources and all pack identity facts once",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 48,
+          "started_at": "2026-10-19T20:01:17Z",
+          "completed_at": "2026-10-19T20:01:19Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 49,
+          "started_at": "2026-10-19T20:01:19Z",
+          "completed_at": "2026-10-19T20:01:19Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/darkapoparka/cars/check-runs/118259886756",
+      "labels": [
+        "ubuntu-24.04"
+      ],
+      "runner_id": 1000018589,
+      "runner_name": "GitHub Actions 1000018589",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 118259887530,
+      "run_id": 39310711918,
+      "workflow_name": "Dealer pack pipeline",
+      "head_branch": "astra/m2-fast-deploy",
+      "run_url": "https://api.github.com/repos/darkapoparka/cars/actions/runs/39310711918",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOUSWAMM8AAAAbiNatqg",
+      "head_sha": "dedb9c0565c7d39da1c1cb12c3958f03e45464f6",
+      "url": "https://api.github.com/repos/darkapoparka/cars/actions/jobs/118259887530",
+      "html_url": "https://github.com/darkapoparka/cars/actions/runs/39310711918/job/118259887530",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-19T19:25:45Z",
+      "started_at": "2026-10-19T19:25:48Z",
+      "completed_at": "2026-10-19T19:49:04Z",
+      "name": "lane (5, m2-bench-05-za-motors, m2-bench-12-granada-auto-sales, m2-bench-19-wadishee-used-cars, m...",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-19T19:25:49Z",
+          "completed_at": "2026-10-19T19:25:52Z"
+        },
+        {
+          "name": "Release unused preinstalled SDK disk on this disposable build runner",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-19T19:25:52Z",
+          "completed_at": "2026-10-19T19:28:14Z"
+        },
+        {
+          "name": "Check out maintained sources and all pack identity facts once",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-19T19:28:14Z",
+          "completed_at": "2026-10-19T19:29:46Z"
+        },
+        {
+          "name": "Run actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-19T19:29:46Z",
+          "completed_at": "2026-10-19T19:29:46Z"
+        },
+        {
+          "name": "Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-19T19:29:46Z",
+          "completed_at": "2026-10-19T19:29:54Z"
+        },
+        {
+          "name": "Record exact Node 22.23.2",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-19T19:29:54Z",
+          "completed_at": "2026-10-19T19:29:54Z"
+        },
+        {
+          "name": "Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-19T19:29:54Z",
+          "completed_at": "2026-10-19T19:30:01Z"
+        },
+        {
+          "name": "Record exact Node 24.21.0",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-10-19T19:30:01Z",
+          "completed_at": "2026-10-19T19:30:01Z"
+        },
+        {
+          "name": "Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-10-19T19:30:01Z",
+          "completed_at": "2026-10-19T19:30:06Z"
+        },
+        {
+          "name": "Record exact Node 26.10.0",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-10-19T19:30:06Z",
+          "completed_at": "2026-10-19T19:30:06Z"
+        },
+        {
+          "name": "Restore only immutable release package downloads",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-10-19T19:30:06Z",
+          "completed_at": "2026-10-19T19:30:06Z"
+        },
+        {
+          "name": "Install source and browser tools once for the lane",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12,
+          "started_at": "2026-10-19T19:30:06Z",
+          "completed_at": "2026-10-19T19:30:39Z"
+        },
+        {
+          "name": "Build and verify all lane packs independently",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-10-19T19:30:39Z",
+          "completed_at": "2026-10-19T19:48:45Z"
+        },
+        {
+          "name": "Keep timings, receipts, browser evidence and failure reasons",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14,
+          "started_at": "2026-10-19T19:48:45Z",
+          "completed_at": "2026-10-19T19:48:47Z"
+        },
+        {
+          "name": "Seal deduplicated final bundle transport",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 15,
+          "started_at": "2026-10-19T19:48:47Z",
+          "completed_at": "2026-10-19T19:48:47Z"
+        },
+        {
+          "name": "Retain final bundle manifest",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 16,
+          "started_at": "2026-10-19T19:48:47Z",
+          "completed_at": "2026-10-19T19:48:47Z"
+        },
+        {
+          "name": "Retain deduplicated final blob shard 0",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 17,
+          "started_at": "2026-10-19T19:48:47Z",
+          "completed_at": "2026-10-19T19:48:47Z"
+        },
+        {
+          "name": "Retain deduplicated final blob shard 1",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 18,
+          "started_at": "2026-10-19T19:48:47Z",
+          "completed_at": "2026-10-19T19:48:47Z"
+        },
+        {
+          "name": "Retain deduplicated final blob shard 2",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 19,
+          "started_at": "2026-10-19T19:48:47Z",
+          "completed_at": "2026-10-19T19:48:47Z"
+        },
+        {
+          "name": "Retain deduplicated final blob shard 3",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 20,
+          "started_at": "2026-10-19T19:48:47Z",
+          "completed_at": "2026-10-19T19:48:47Z"
+        },
+        {
+          "name": "Retain deduplicated final blob shard 4",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 21,
+          "started_at": "2026-10-19T19:48:47Z",
+          "completed_at": "2026-10-19T19:48:47Z"
+        },
+        {
+          "name": "Retain deduplicated final blob shard 5",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 22,
+          "started_at": "2026-10-19T19:48:47Z",
+          "completed_at": "2026-10-19T19:48:47Z"
+        },
+        {
+          "name": "Retain deduplicated final blob shard 6",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 23,
+          "started_at": "2026-10-19T19:48:47Z",
+          "completed_at": "2026-10-19T19:48:47Z"
+        },
+        {
+          "name": "Retain deduplicated final blob shard 7",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 24,
+          "started_at": "2026-10-19T19:48:47Z",
+          "completed_at": "2026-10-19T19:48:47Z"
+        },
+        {
+          "name": "Post Restore only immutable release package downloads",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 44,
+          "started_at": "2026-10-19T19:48:47Z",
+          "completed_at": "2026-10-19T19:49:00Z"
+        },
+        {
+          "name": "Post Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 45,
+          "started_at": "2026-10-19T19:49:00Z",
+          "completed_at": "2026-10-19T19:49:00Z"
+        },
+        {
+          "name": "Post Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 46,
+          "started_at": "2026-10-19T19:49:00Z",
+          "completed_at": "2026-10-19T19:49:00Z"
+        },
+        {
+          "name": "Post Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 47,
+          "started_at": "2026-10-19T19:49:00Z",
+          "completed_at": "2026-10-19T19:49:00Z"
+        },
+        {
+          "name": "Post Check out maintained sources and all pack identity facts once",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 48,
+          "started_at": "2026-10-19T19:49:00Z",
+          "completed_at": "2026-10-19T19:49:01Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 49,
+          "started_at": "2026-10-19T19:49:01Z",
+          "completed_at": "2026-10-19T19:49:01Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/darkapoparka/cars/check-runs/118259887530",
+      "labels": [
+        "ubuntu-24.04"
+      ],
+      "runner_id": 1000018591,
+      "runner_name": "GitHub Actions 1000018591",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 118277087311,
+      "run_id": 39310711918,
+      "workflow_name": "Dealer pack pipeline",
+      "head_branch": "astra/m2-fast-deploy",
+      "run_url": "https://api.github.com/repos/darkapoparka/cars/actions/runs/39310711918",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOUSWAMM8AAAAbid0gTw",
+      "head_sha": "dedb9c0565c7d39da1c1cb12c3958f03e45464f6",
+      "url": "https://api.github.com/repos/darkapoparka/cars/actions/jobs/118277087311",
+      "html_url": "https://github.com/darkapoparka/cars/actions/runs/39310711918/job/118277087311",
+      "status": "completed",
+      "conclusion": "failure",
+      "created_at": "2026-10-19T20:01:54Z",
+      "started_at": "2026-10-19T20:01:57Z",
+      "completed_at": "2026-10-19T20:02:01Z",
+      "name": "result",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-19T20:01:58Z",
+          "completed_at": "2026-10-19T20:01:58Z"
+        },
+        {
+          "name": "Report independent outcomes without hiding rejected packs",
+          "status": "completed",
+          "conclusion": "failure",
+          "number": 2,
+          "started_at": "2026-10-19T20:01:58Z",
+          "completed_at": "2026-10-19T20:01:58Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-19T20:01:59Z",
+          "completed_at": "2026-10-19T20:01:59Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/darkapoparka/cars/check-runs/118277087311",
+      "labels": [
+        "ubuntu-24.04"
+      ],
+      "runner_id": 1000018610,
+      "runner_name": "GitHub Actions 1000018610",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    }
+  ],
+  "artifacts": [
+    {
+      "id": 12218735045,
+      "node_id": "MDg6QXJ0aWZhY3QxMjIxODczNTA0NQ==",
+      "name": "dealer-pack-reports--lane-1--39310711918",
+      "size_in_bytes": 43183464,
+      "url": "https://api.github.com/repos/darkapoparka/cars/actions/artifacts/12218735045",
+      "archive_download_url": "https://api.github.com/repos/darkapoparka/cars/actions/artifacts/12218735045/zip",
+      "expired": false,
+      "digest": "sha256:ae765f9937f69a9ba9c90307e81d6c17da80d741cac18368c87ab85138aca1ae",
+      "created_at": "2026-10-19T20:00:57Z",
+      "updated_at": "2026-10-19T20:00:57Z",
+      "expires_at": "2026-10-22T20:00:54Z",
+      "workflow_run": {
+        "id": 39310711918,
+        "repository_id": 1361412144,
+        "head_repository_id": 1361412144,
+        "head_branch": "astra/m2-fast-deploy",
+        "head_sha": "dedb9c0565c7d39da1c1cb12c3958f03e45464f6"
+      }
+    },
+    {
+      "id": 12218360230,
+      "node_id": "MDg6QXJ0aWZhY3QxMjIxODM2MDIzMA==",
+      "name": "dealer-pack-reports--lane-3--39310711918",
+      "size_in_bytes": 42909388,
+      "url": "https://api.github.com/repos/darkapoparka/cars/actions/artifacts/12218360230",
+      "archive_download_url": "https://api.github.com/repos/darkapoparka/cars/actions/artifacts/12218360230/zip",
+      "expired": false,
+      "digest": "sha256:459b3ec12c1578bac08ec52744f1fc891e67b5447979f46feb85f0b1cf734cc0",
+      "created_at": "2026-10-19T19:57:48Z",
+      "updated_at": "2026-10-19T19:57:48Z",
+      "expires_at": "2026-10-22T19:57:46Z",
+      "workflow_run": {
+        "id": 39310711918,
+        "repository_id": 1361412144,
+        "head_repository_id": 1361412144,
+        "head_branch": "astra/m2-fast-deploy",
+        "head_sha": "dedb9c0565c7d39da1c1cb12c3958f03e45464f6"
+      }
+    },
+    {
+      "id": 12217670605,
+      "node_id": "MDg6QXJ0aWZhY3QxMjIxNzY3MDYwNQ==",
+      "name": "dealer-pack-reports--lane-6--39310711918",
+      "size_in_bytes": 32252922,
+      "url": "https://api.github.com/repos/darkapoparka/cars/actions/artifacts/12217670605",
+      "archive_download_url": "https://api.github.com/repos/darkapoparka/cars/actions/artifacts/12217670605/zip",
+      "expired": false,
+      "digest": "sha256:c1198df1a91a9adc540fafe17b1255e2b75a9cf0bf6ec33db2dd37cf8eb50725",
+      "created_at": "2026-10-19T19:53:31Z",
+      "updated_at": "2026-10-19T19:53:31Z",
+      "expires_at": "2026-10-22T19:53:29Z",
+      "workflow_run": {
+        "id": 39310711918,
+        "repository_id": 1361412144,
+        "head_repository_id": 1361412144,
+        "head_branch": "astra/m2-fast-deploy",
+        "head_sha": "dedb9c0565c7d39da1c1cb12c3958f03e45464f6"
+      }
+    },
+    {
+      "id": 12217577154,
+      "node_id": "MDg6QXJ0aWZhY3QxMjIxNzU3NzE1NA==",
+      "name": "dealer-pack-reports--lane-4--39310711918",
+      "size_in_bytes": 43183291,
+      "url": "https://api.github.com/repos/darkapoparka/cars/actions/artifacts/12217577154",
+      "archive_download_url": "https://api.github.com/repos/darkapoparka/cars/actions/artifacts/12217577154/zip",
+      "expired": false,
+      "digest": "sha256:a66a0efdeccc5adc8b9ae89e4e5e1bbcfbc3b0556c558467d10d2b3aedb6937a",
+      "created_at": "2026-10-19T20:01:38Z",
+      "updated_at": "2026-10-19T20:01:38Z",
+      "expires_at": "2026-10-22T20:01:35Z",
+      "workflow_run": {
+        "id": 39310711918,
+        "repository_id": 1361412144,
+        "head_repository_id": 1361412144,
+        "head_branch": "astra/m2-fast-deploy",
+        "head_sha": "dedb9c0565c7d39da1c1cb12c3958f03e45464f6"
+      }
+    },
+    {
+      "id": 12217343610,
+      "node_id": "MDg6QXJ0aWZhY3QxMjIxNzM0MzYxMA==",
+      "name": "dealer-pack-reports--lane-2--39310711918",
+      "size_in_bytes": 42908875,
+      "url": "https://api.github.com/repos/darkapoparka/cars/actions/artifacts/12217343610",
+      "archive_download_url": "https://api.github.com/repos/darkapoparka/cars/actions/artifacts/12217343610/zip",
+      "expired": false,
+      "digest": "sha256:6884f72d4f7d91b491f75ee48f1f4055d6057aa7c463625796887c1c45d5aefb",
+      "created_at": "2026-10-19T19:56:50Z",
+      "updated_at": "2026-10-19T19:56:50Z",
+      "expires_at": "2026-10-22T19:56:47Z",
+      "workflow_run": {
+        "id": 39310711918,
+        "repository_id": 1361412144,
+        "head_repository_id": 1361412144,
+        "head_branch": "astra/m2-fast-deploy",
+        "head_sha": "dedb9c0565c7d39da1c1cb12c3958f03e45464f6"
+      }
+    },
+    {
+      "id": 12216674116,
+      "node_id": "MDg6QXJ0aWZhY3QxMjIxNjY3NDExNg==",
+      "name": "dealer-pack-reports--lane-5--39310711918",
+      "size_in_bytes": 31948663,
+      "url": "https://api.github.com/repos/darkapoparka/cars/actions/artifacts/12216674116",
+      "archive_download_url": "https://api.github.com/repos/darkapoparka/cars/actions/artifacts/12216674116/zip",
+      "expired": false,
+      "digest": "sha256:18938285c7a170f538e5403aa37c2195be3a4ec88a24a52837f397a5319c3301",
+      "created_at": "2026-10-19T19:48:47Z",
+      "updated_at": "2026-10-19T19:48:47Z",
+      "expires_at": "2026-10-22T19:48:46Z",
+      "workflow_run": {
+        "id": 39310711918,
+        "repository_id": 1361412144,
+        "head_repository_id": 1361412144,
+        "head_branch": "astra/m2-fast-deploy",
+        "head_sha": "dedb9c0565c7d39da1c1cb12c3958f03e45464f6"
+      }
+    },
+    {
+      "id": 12215924618,
+      "node_id": "MDg6QXJ0aWZhY3QxMjIxNTkyNDYxOA==",
+      "name": "dealer-pack-reports--lane-7--39310711918",
+      "size_in_bytes": 32253053,
+      "url": "https://api.github.com/repos/darkapoparka/cars/actions/artifacts/12215924618",
+      "archive_download_url": "https://api.github.com/repos/darkapoparka/cars/actions/artifacts/12215924618/zip",
+      "expired": false,
+      "digest": "sha256:43adad0c44543c06b6fdc36e9f77bae39c7533806c732a55af791ba5f2cb101a",
+      "created_at": "2026-10-19T19:55:02Z",
+      "updated_at": "2026-10-19T19:55:02Z",
+      "expires_at": "2026-10-22T19:54:59Z",
+      "workflow_run": {
+        "id": 39310711918,
+        "repository_id": 1361412144,
+        "head_repository_id": 1361412144,
+        "head_branch": "astra/m2-fast-deploy",
+        "head_sha": "dedb9c0565c7d39da1c1cb12c3958f03e45464f6"
+      }
+    },
+    {
+      "id": 12215173997,
+      "node_id": "MDg6QXJ0aWZhY3QxMjIxNTE3Mzk5Nw==",
+      "name": "dealer-pack-plan--39310711918",
+      "size_in_bytes": 1343,
+      "url": "https://api.github.com/repos/darkapoparka/cars/actions/artifacts/12215173997",
+      "archive_download_url": "https://api.github.com/repos/darkapoparka/cars/actions/artifacts/12215173997/zip",
+      "expired": false,
+      "digest": "sha256:dd44d272f027e4083253779855a32ac2e1b5e5de9b998a9e43958d6a052d31a4",
+      "created_at": "2026-10-19T19:25:42Z",
+      "updated_at": "2026-10-19T19:25:42Z",
+      "expires_at": "2026-10-22T19:25:41Z",
+      "workflow_run": {
+        "id": 39310711918,
+        "repository_id": 1361412144,
+        "head_repository_id": 1361412144,
+        "head_branch": "astra/m2-fast-deploy",
+        "head_sha": "dedb9c0565c7d39da1c1cb12c3958f03e45464f6"
+      }
+    }
+  ],
+  "correctedContractsRun": {
+    "id": 39312845364,
+    "name": "Dealer pack pipeline",
+    "node_id": "WFR_kwLOUSWAMM8AAAAJJzpqNA",
+    "head_branch": "astra/m2-fast-deploy",
+    "head_sha": "1c2d56a0a3014f0c17aae6547f8018fb9c979949",
+    "path": ".github/workflows/dealer-pack-pipeline.yml",
+    "display_title": "Pin strict M1 visual evidence and fix Node 22 contract invocation",
+    "run_number": 10,
+    "event": "push",
+    "status": "completed",
+    "conclusion": "success",
+    "workflow_id": 389425433,
+    "check_suite_id": 106532950749,
+    "check_suite_node_id": "CS_kwDOUSWAMM8AAAAYzdvS3Q",
+    "url": "https://api.github.com/repos/darkapoparka/cars/actions/runs/39312845364",
+    "html_url": "https://github.com/darkapoparka/cars/actions/runs/39312845364",
+    "pull_requests": [],
+    "created_at": "2026-10-19T19:39:47Z",
+    "updated_at": "2026-10-19T19:42:00Z",
+    "actor": {
+      "login": "darkapoparka",
+      "id": 264301241,
+      "node_id": "U_kgDOD8DquQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/264301241?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/darkapoparka",
+      "html_url": "https://github.com/darkapoparka",
+      "followers_url": "https://api.github.com/users/darkapoparka/followers",
+      "following_url": "https://api.github.com/users/darkapoparka/following{/other_user}",
+      "gists_url": "https://api.github.com/users/darkapoparka/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/darkapoparka/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/darkapoparka/subscriptions",
+      "organizations_url": "https://api.github.com/users/darkapoparka/orgs",
+      "repos_url": "https://api.github.com/users/darkapoparka/repos",
+      "events_url": "https://api.github.com/users/darkapoparka/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/darkapoparka/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "run_attempt": 1,
+    "referenced_workflows": [],
+    "run_started_at": "2026-10-19T19:39:47Z",
+    "triggering_actor": {
+      "login": "darkapoparka",
+      "id": 264301241,
+      "node_id": "U_kgDOD8DquQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/264301241?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/darkapoparka",
+      "html_url": "https://github.com/darkapoparka",
+      "followers_url": "https://api.github.com/users/darkapoparka/followers",
+      "following_url": "https://api.github.com/users/darkapoparka/following{/other_user}",
+      "gists_url": "https://api.github.com/users/darkapoparka/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/darkapoparka/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/darkapoparka/subscriptions",
+      "organizations_url": "https://api.github.com/users/darkapoparka/orgs",
+      "repos_url": "https://api.github.com/users/darkapoparka/repos",
+      "events_url": "https://api.github.com/users/darkapoparka/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/darkapoparka/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "jobs_url": "https://api.github.com/repos/darkapoparka/cars/actions/runs/39312845364/jobs",
+    "logs_url": "https://api.github.com/repos/darkapoparka/cars/actions/runs/39312845364/logs",
+    "check_suite_url": "https://api.github.com/repos/darkapoparka/cars/check-suites/106532950749",
+    "artifacts_url": "https://api.github.com/repos/darkapoparka/cars/actions/runs/39312845364/artifacts",
+    "cancel_url": "https://api.github.com/repos/darkapoparka/cars/actions/runs/39312845364/cancel",
+    "rerun_url": "https://api.github.com/repos/darkapoparka/cars/actions/runs/39312845364/rerun",
+    "previous_attempt_url": null,
+    "workflow_url": "https://api.github.com/repos/darkapoparka/cars/actions/workflows/389425433",
+    "head_commit": {
+      "id": "1c2d56a0a3014f0c17aae6547f8018fb9c979949",
+      "tree_id": "5e786b99240d3887603be99f6e160f7b318c97ee",
+      "message": "Pin strict M1 visual evidence and fix Node 22 contract invocation",
+      "timestamp": "2026-10-19T19:39:42Z",
+      "author": {
+        "name": "darkapoparka",
+        "email": "obi4amdar4eto@gmail.com"
+      },
+      "committer": {
+        "name": "darkapoparka",
+        "email": "obi4amdar4eto@gmail.com"
+      }
+    },
+    "repository": {
+      "id": 1361412144,
+      "node_id": "R_kgDOUSWAMA",
+      "name": "cars",
+      "full_name": "darkapoparka/cars",
+      "private": false,
+      "owner": {
+        "login": "darkapoparka",
+        "id": 264301241,
+        "node_id": "U_kgDOD8DquQ",
+        "avatar_url": "https://avatars.githubusercontent.com/u/264301241?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/darkapoparka",
+        "html_url": "https://github.com/darkapoparka",
+        "followers_url": "https://api.github.com/users/darkapoparka/followers",
+        "following_url": "https://api.github.com/users/darkapoparka/following{/other_user}",
+        "gists_url": "https://api.github.com/users/darkapoparka/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/darkapoparka/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/darkapoparka/subscriptions",
+        "organizations_url": "https://api.github.com/users/darkapoparka/orgs",
+        "repos_url": "https://api.github.com/users/darkapoparka/repos",
+        "events_url": "https://api.github.com/users/darkapoparka/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/darkapoparka/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "html_url": "https://github.com/darkapoparka/cars",
+      "description": null,
+      "fork": false,
+      "url": "https://api.github.com/repos/darkapoparka/cars",
+      "forks_url": "https://api.github.com/repos/darkapoparka/cars/forks",
+      "keys_url": "https://api.github.com/repos/darkapoparka/cars/keys{/key_id}",
+      "collaborators_url": "https://api.github.com/repos/darkapoparka/cars/collaborators{/collaborator}",
+      "teams_url": "https://api.github.com/repos/darkapoparka/cars/teams",
+      "hooks_url": "https://api.github.com/repos/darkapoparka/cars/hooks",
+      "issue_events_url": "https://api.github.com/repos/darkapoparka/cars/issues/events{/number}",
+      "events_url": "https://api.github.com/repos/darkapoparka/cars/events",
+      "assignees_url": "https://api.github.com/repos/darkapoparka/cars/assignees{/user}",
+      "branches_url": "https://api.github.com/repos/darkapoparka/cars/branches{/branch}",
+      "tags_url": "https://api.github.com/repos/darkapoparka/cars/tags",
+      "blobs_url": "https://api.github.com/repos/darkapoparka/cars/git/blobs{/sha}",
+      "git_tags_url": "https://api.github.com/repos/darkapoparka/cars/git/tags{/sha}",
+      "git_refs_url": "https://api.github.com/repos/darkapoparka/cars/git/refs{/sha}",
+      "trees_url": "https://api.github.com/repos/darkapoparka/cars/git/trees{/sha}",
+      "statuses_url": "https://api.github.com/repos/darkapoparka/cars/statuses/{sha}",
+      "languages_url": "https://api.github.com/repos/darkapoparka/cars/languages",
+      "stargazers_url": "https://api.github.com/repos/darkapoparka/cars/stargazers",
+      "contributors_url": "https://api.github.com/repos/darkapoparka/cars/contributors",
+      "subscribers_url": "https://api.github.com/repos/darkapoparka/cars/subscribers",
+      "subscription_url": "https://api.github.com/repos/darkapoparka/cars/subscription",
+      "commits_url": "https://api.github.com/repos/darkapoparka/cars/commits{/sha}",
+      "git_commits_url": "https://api.github.com/repos/darkapoparka/cars/git/commits{/sha}",
+      "comments_url": "https://api.github.com/repos/darkapoparka/cars/comments{/number}",
+      "issue_comment_url": "https://api.github.com/repos/darkapoparka/cars/issues/comments{/number}",
+      "contents_url": "https://api.github.com/repos/darkapoparka/cars/contents/{+path}",
+      "compare_url": "https://api.github.com/repos/darkapoparka/cars/compare/{base}...{head}",
+      "merges_url": "https://api.github.com/repos/darkapoparka/cars/merges",
+      "archive_url": "https://api.github.com/repos/darkapoparka/cars/{archive_format}{/ref}",
+      "downloads_url": "https://api.github.com/repos/darkapoparka/cars/downloads",
+      "issues_url": "https://api.github.com/repos/darkapoparka/cars/issues{/number}",
+      "pulls_url": "https://api.github.com/repos/darkapoparka/cars/pulls{/number}",
+      "milestones_url": "https://api.github.com/repos/darkapoparka/cars/milestones{/number}",
+      "notifications_url": "https://api.github.com/repos/darkapoparka/cars/notifications{?since,all,participating}",
+      "labels_url": "https://api.github.com/repos/darkapoparka/cars/labels{/name}",
+      "releases_url": "https://api.github.com/repos/darkapoparka/cars/releases{/id}",
+      "deployments_url": "https://api.github.com/repos/darkapoparka/cars/deployments"
+    },
+    "head_repository": {
+      "id": 1361412144,
+      "node_id": "R_kgDOUSWAMA",
+      "name": "cars",
+      "full_name": "darkapoparka/cars",
+      "private": false,
+      "owner": {
+        "login": "darkapoparka",
+        "id": 264301241,
+        "node_id": "U_kgDOD8DquQ",
+        "avatar_url": "https://avatars.githubusercontent.com/u/264301241?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/darkapoparka",
+        "html_url": "https://github.com/darkapoparka",
+        "followers_url": "https://api.github.com/users/darkapoparka/followers",
+        "following_url": "https://api.github.com/users/darkapoparka/following{/other_user}",
+        "gists_url": "https://api.github.com/users/darkapoparka/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/darkapoparka/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/darkapoparka/subscriptions",
+        "organizations_url": "https://api.github.com/users/darkapoparka/orgs",
+        "repos_url": "https://api.github.com/users/darkapoparka/repos",
+        "events_url": "https://api.github.com/users/darkapoparka/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/darkapoparka/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "html_url": "https://github.com/darkapoparka/cars",
+      "description": null,
+      "fork": false,
+      "url": "https://api.github.com/repos/darkapoparka/cars",
+      "forks_url": "https://api.github.com/repos/darkapoparka/cars/forks",
+      "keys_url": "https://api.github.com/repos/darkapoparka/cars/keys{/key_id}",
+      "collaborators_url": "https://api.github.com/repos/darkapoparka/cars/collaborators{/collaborator}",
+      "teams_url": "https://api.github.com/repos/darkapoparka/cars/teams",
+      "hooks_url": "https://api.github.com/repos/darkapoparka/cars/hooks",
+      "issue_events_url": "https://api.github.com/repos/darkapoparka/cars/issues/events{/number}",
+      "events_url": "https://api.github.com/repos/darkapoparka/cars/events",
+      "assignees_url": "https://api.github.com/repos/darkapoparka/cars/assignees{/user}",
+      "branches_url": "https://api.github.com/repos/darkapoparka/cars/branches{/branch}",
+      "tags_url": "https://api.github.com/repos/darkapoparka/cars/tags",
+      "blobs_url": "https://api.github.com/repos/darkapoparka/cars/git/blobs{/sha}",
+      "git_tags_url": "https://api.github.com/repos/darkapoparka/cars/git/tags{/sha}",
+      "git_refs_url": "https://api.github.com/repos/darkapoparka/cars/git/refs{/sha}",
+      "trees_url": "https://api.github.com/repos/darkapoparka/cars/git/trees{/sha}",
+      "statuses_url": "https://api.github.com/repos/darkapoparka/cars/statuses/{sha}",
+      "languages_url": "https://api.github.com/repos/darkapoparka/cars/languages",
+      "stargazers_url": "https://api.github.com/repos/darkapoparka/cars/stargazers",
+      "contributors_url": "https://api.github.com/repos/darkapoparka/cars/contributors",
+      "subscribers_url": "https://api.github.com/repos/darkapoparka/cars/subscribers",
+      "subscription_url": "https://api.github.com/repos/darkapoparka/cars/subscription",
+      "commits_url": "https://api.github.com/repos/darkapoparka/cars/commits{/sha}",
+      "git_commits_url": "https://api.github.com/repos/darkapoparka/cars/git/commits{/sha}",
+      "comments_url": "https://api.github.com/repos/darkapoparka/cars/comments{/number}",
+      "issue_comment_url": "https://api.github.com/repos/darkapoparka/cars/issues/comments{/number}",
+      "contents_url": "https://api.github.com/repos/darkapoparka/cars/contents/{+path}",
+      "compare_url": "https://api.github.com/repos/darkapoparka/cars/compare/{base}...{head}",
+      "merges_url": "https://api.github.com/repos/darkapoparka/cars/merges",
+      "archive_url": "https://api.github.com/repos/darkapoparka/cars/{archive_format}{/ref}",
+      "downloads_url": "https://api.github.com/repos/darkapoparka/cars/downloads",
+      "issues_url": "https://api.github.com/repos/darkapoparka/cars/issues{/number}",
+      "pulls_url": "https://api.github.com/repos/darkapoparka/cars/pulls{/number}",
+      "milestones_url": "https://api.github.com/repos/darkapoparka/cars/milestones{/number}",
+      "notifications_url": "https://api.github.com/repos/darkapoparka/cars/notifications{?since,all,participating}",
+      "labels_url": "https://api.github.com/repos/darkapoparka/cars/labels{/name}",
+      "releases_url": "https://api.github.com/repos/darkapoparka/cars/releases{/id}",
+      "deployments_url": "https://api.github.com/repos/darkapoparka/cars/deployments"
+    }
+  },
+  "correctedContractsJobs": [
+    {
+      "id": 118266642342,
+      "run_id": 39312845364,
+      "workflow_name": "Dealer pack pipeline",
+      "head_branch": "astra/m2-fast-deploy",
+      "run_url": "https://api.github.com/repos/darkapoparka/cars/actions/runs/39312845364",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOUSWAMM8AAAAbiT2_pg",
+      "head_sha": "1c2d56a0a3014f0c17aae6547f8018fb9c979949",
+      "url": "https://api.github.com/repos/darkapoparka/cars/actions/jobs/118266642342",
+      "html_url": "https://github.com/darkapoparka/cars/actions/runs/39312845364/job/118266642342",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-19T19:39:48Z",
+      "started_at": "2026-10-19T19:39:50Z",
+      "completed_at": "2026-10-19T19:41:52Z",
+      "name": "contracts",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-19T19:39:51Z",
+          "completed_at": "2026-10-19T19:39:51Z"
+        },
+        {
+          "name": "Check out only pipeline source, packs and readable contracts",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-19T19:39:51Z",
+          "completed_at": "2026-10-19T19:41:05Z"
+        },
+        {
+          "name": "Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-19T19:41:05Z",
+          "completed_at": "2026-10-19T19:41:15Z"
+        },
+        {
+          "name": "Install bounded test dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-19T19:41:15Z",
+          "completed_at": "2026-10-19T19:41:19Z"
+        },
+        {
+          "name": "Install the existing pinned Worker stream-test runtime",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-19T19:41:19Z",
+          "completed_at": "2026-10-19T19:41:24Z"
+        },
+        {
+          "name": "Verify old composer and new pack contracts",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-19T19:41:24Z",
+          "completed_at": "2026-10-19T19:41:43Z"
+        },
+        {
+          "name": "Use the retained Auto Best runtime for Svelte publisher tests",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-19T19:41:43Z",
+          "completed_at": "2026-10-19T19:41:47Z"
+        },
+        {
+          "name": "Verify the maintained Svelte publisher and external cache contract",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-10-19T19:41:47Z",
+          "completed_at": "2026-10-19T19:41:48Z"
+        },
+        {
+          "name": "Restore the pipeline runtime for matrix resolution",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-10-19T19:41:48Z",
+          "completed_at": "2026-10-19T19:41:48Z"
+        },
+        {
+          "name": "Report deployment secret availability without disclosing it",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-10-19T19:41:48Z",
+          "completed_at": "2026-10-19T19:41:48Z"
+        },
+        {
+          "name": "Post Restore the pipeline runtime for matrix resolution",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17,
+          "started_at": "2026-10-19T19:41:48Z",
+          "completed_at": "2026-10-19T19:41:48Z"
+        },
+        {
+          "name": "Post Use the retained Auto Best runtime for Svelte publisher tests",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 18,
+          "started_at": "2026-10-19T19:41:48Z",
+          "completed_at": "2026-10-19T19:41:48Z"
+        },
+        {
+          "name": "Post Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 19,
+          "started_at": "2026-10-19T19:41:48Z",
+          "completed_at": "2026-10-19T19:41:48Z"
+        },
+        {
+          "name": "Post Check out only pipeline source, packs and readable contracts",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 20,
+          "started_at": "2026-10-19T19:41:48Z",
+          "completed_at": "2026-10-19T19:41:49Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 21,
+          "started_at": "2026-10-19T19:41:49Z",
+          "completed_at": "2026-10-19T19:41:49Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/darkapoparka/cars/check-runs/118266642342",
+      "labels": [
+        "ubuntu-24.04"
+      ],
+      "runner_id": 1000018596,
+      "runner_name": "GitHub Actions 1000018596",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 118266644130,
+      "run_id": 39312845364,
+      "workflow_name": "Dealer pack pipeline",
+      "head_branch": "astra/m2-fast-deploy",
+      "run_url": "https://api.github.com/repos/darkapoparka/cars/actions/runs/39312845364",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOUSWAMM8AAAAbiT3Gog",
+      "head_sha": "1c2d56a0a3014f0c17aae6547f8018fb9c979949",
+      "url": "https://api.github.com/repos/darkapoparka/cars/actions/jobs/118266644130",
+      "html_url": "https://github.com/darkapoparka/cars/actions/runs/39312845364/job/118266644130",
+      "status": "completed",
+      "conclusion": "skipped",
+      "created_at": "2026-10-19T19:39:48Z",
+      "started_at": "2026-10-19T19:39:48Z",
+      "completed_at": "2026-10-19T19:39:48Z",
+      "name": "plan",
+      "steps": [],
+      "check_run_url": "https://api.github.com/repos/darkapoparka/cars/check-runs/118266644130",
+      "labels": [
+        "ubuntu-24.04"
+      ],
+      "runner_id": null,
+      "runner_name": null,
+      "runner_group_id": null,
+      "runner_group_name": null
+    },
+    {
+      "id": 118266644973,
+      "run_id": 39312845364,
+      "workflow_name": "Dealer pack pipeline",
+      "head_branch": "astra/m2-fast-deploy",
+      "run_url": "https://api.github.com/repos/darkapoparka/cars/actions/runs/39312845364",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOUSWAMM8AAAAbiT3J7Q",
+      "head_sha": "1c2d56a0a3014f0c17aae6547f8018fb9c979949",
+      "url": "https://api.github.com/repos/darkapoparka/cars/actions/jobs/118266644973",
+      "html_url": "https://github.com/darkapoparka/cars/actions/runs/39312845364/job/118266644973",
+      "status": "completed",
+      "conclusion": "skipped",
+      "created_at": "2026-10-19T19:39:48Z",
+      "started_at": "2026-10-19T19:39:48Z",
+      "completed_at": "2026-10-19T19:39:48Z",
+      "name": "lane",
+      "steps": [],
+      "check_run_url": "https://api.github.com/repos/darkapoparka/cars/check-runs/118266644973",
+      "labels": [
+        "ubuntu-24.04"
+      ],
+      "runner_id": null,
+      "runner_name": null,
+      "runner_group_id": null,
+      "runner_group_name": null
+    },
+    {
+      "id": 118267625984,
+      "run_id": 39312845364,
+      "workflow_name": "Dealer pack pipeline",
+      "head_branch": "astra/m2-fast-deploy",
+      "run_url": "https://api.github.com/repos/darkapoparka/cars/actions/runs/39312845364",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOUSWAMM8AAAAbiUzCAA",
+      "head_sha": "1c2d56a0a3014f0c17aae6547f8018fb9c979949",
+      "url": "https://api.github.com/repos/darkapoparka/cars/actions/jobs/118267625984",
+      "html_url": "https://github.com/darkapoparka/cars/actions/runs/39312845364/job/118267625984",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-19T19:41:52Z",
+      "started_at": "2026-10-19T19:41:56Z",
+      "completed_at": "2026-10-19T19:42:00Z",
+      "name": "result",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-19T19:41:56Z",
+          "completed_at": "2026-10-19T19:41:57Z"
+        },
+        {
+          "name": "Report independent outcomes without hiding rejected packs",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-19T19:41:57Z",
+          "completed_at": "2026-10-19T19:41:57Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-19T19:41:57Z",
+          "completed_at": "2026-10-19T19:41:57Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/darkapoparka/cars/check-runs/118267625984",
+      "labels": [
+        "ubuntu-24.04"
+      ],
+      "runner_id": 1000018598,
+      "runner_name": "GitHub Actions 1000018598",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    }
+  ]
+}

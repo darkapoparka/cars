@@ -258,7 +258,8 @@ export async function buildFastDealerPack({root = ROOT, slug, out, workspaceRoot
   // Registry tarballs/content-addressed downloads can survive a publisher
   // implementation change. Installers still verify package integrity and every
   // installed release pin; source/proof workspaces keep the stricter tools key.
-  const cacheBase = path.join(workspaceBase, 'download-cache', releaseDigest);fs.mkdirSync(cacheBase, {recursive: true});
+  const downloadCacheRoot = assertGeneratedRuntimeDirectory(root, process.env.CARS_DEALER_PACK_DOWNLOAD_CACHE ?? path.join(workspaceBase, 'download-cache'));
+  const cacheBase = path.join(downloadCacheRoot, releaseDigest);fs.mkdirSync(cacheBase, {recursive: true});
   const lockFile = path.join(workspaces, '.cars-fast-lane.lock');let lock;
   try {lock = fs.openSync(lockFile, 'wx');fs.writeFileSync(lock, JSON.stringify({pid: process.pid, slug, startedAt: new Date(started).toISOString()}));}
   catch (error) {if (error.code === 'EEXIST') throw Error('Another dealer owns this release workspace; use another lane');throw error;}

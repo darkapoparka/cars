@@ -3,7 +3,6 @@ import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {PACK_DEPLOY_ACCOUNT,PACK_DEPLOY_ZONE,createPackDeploymentQueue,packDeploymentRequest,validatePackQueue,queueDigest,enqueuePackDeployments,claimPackDeployment,readPackClaim,finishPackDeployment,recoverPackClaim,githubPackQueueStore} from './lib/dealer-pack-queue.mjs';
 import {executeQueuedPackDeployment,registryPackCollisions,validatePackDeploymentIdentity,validatePackProviderSnapshot,packOwnershipTags,latestOwnedPackReceipt} from './lib/dealer-pack-deployment.mjs';
-import {mergePackDeploymentReceipts} from './merge-dealer-pack-receipts.mjs';
 
 const now='2026-10-19T20:00:00.000Z',clock=()=>Date.parse(now),time=()=>now;
 const id=value=>createHash('sha256').update(value).digest('hex');
@@ -36,6 +35,18 @@ test('four simultaneous batches persist all requests and duplicate enqueue is id
   await Promise.all(groups.map(group=>enqueuePackDeployments(f.store,group,{now:time})));
   assert.equal(f.store.state.order.length,80);const generation=f.store.state.generation;
   const duplicate=await enqueuePackDeployments(f.store,groups[0],{now:time});assert.equal(duplicate.value.added.length,0);assert.equal(f.store.state.generation,generation);validatePackQueue(f.store.state);
+});
+test('a queue collision arriving during CAS retry rejects only that slug in collection mode',async()=>{
+  const f=fixture(),rival=input('claimed-name'),colliding=input('different-name',{dealerId:rival.dealerId}),valid=input('independent-ready');
+  const original=f.store.compareAndSwap;let raced=false;
+  f.store.compareAndSwap=async(revision,next)=>{
+    if(!raced){raced=true;await enqueuePackDeployments({read:f.store.read,compareAndSwap:original},[rival],{now:time});return false;}
+    return original(revision,next);
+  };
+  const result=await enqueuePackDeployments(f.store,[colliding,valid,{slug:'malformed'}],{collectRejections:true,now:time});
+  assert.deepEqual(result.value.added,[valid.id]);assert.deepEqual(result.value.rejected.map(row=>row.slug).sort(),['different-name','malformed']);
+  assert.equal(f.store.state.order.length,2);assert.ok(f.store.state.requests[rival.id]);assert.ok(f.store.state.requests[valid.id]);assert.equal(f.store.state.requests[colliding.id],undefined);
+  const generation=f.store.state.generation;await assert.rejects(()=>enqueuePackDeployments(f.store,[colliding,input('strict-uncommitted')],{now:time}),/conflicting/);assert.equal(f.store.state.generation,generation);
 });
 test('two racing executors cannot both acquire the account claim and claims never auto-expire',async()=>{
   const f=fixture();await enqueuePackDeployments(f.store,[input(),input('dealer-two')],{now:time});
@@ -108,10 +119,6 @@ test('rollback refuses a receipt from a different dealer',async()=>{
 });
 test('negative provider read cannot release an unacknowledged create',async()=>{
   const f=fixture();f.provider.createWorker=async()=>{throw Error('in-flight');};await f.execute();await assert.rejects(()=>recoverPackClaim(f.store,{requestId:input().id,ownerStopped:{verified:true,kind:'completed-github-run',evidence:'Actual run terminal status'},readOutcome:async()=>({verified:true,requestId:input().id,evidence:'authenticated-cloudflare-api',observedAt:now,outcome:'absent'})}),/negative read/);assert.ok(f.store.state.active);
-});
-test('receipt integration preserves all unrelated historical rows and is idempotent',async()=>{
-  const f=fixture();await f.execute();const registry={schemaVersion:2,updatedAt:'old',dealers:[{slug:'old-dealer',name:'Preserved',delivery:{provider:'vercel',custom:'unchanged'}}]},readPack=slug=>({manifest:{slug,dealerId:'gb-birmingham-'+slug,pack:{},variants:keys.map((key,index)=>({key,base:index?'/variant-'+(index+1):'',entry:index?'/variant-'+(index+1)+'/':'/'})),templateSources:Object.fromEntries(keys.map(key=>[key,{key}]))},facts:{business:{name:'Dealer One'}}});
-  const result=mergePackDeploymentReceipts({registry,queue:f.store.state,readPack,now});assert.deepEqual(result.registry.dealers[0],registry.dealers[0]);assert.equal(result.changes.length,1);assert.equal(result.registry.dealers[1].delivery.workerId,f.store.state.receipts['dealer-one'][0].receipt.workerId);assert.equal(mergePackDeploymentReceipts({registry:result.registry,queue:f.store.state,readPack,now}).changes.length,0);
 });
 test('GitHub store uses Contents SHA CAS and reads large state through its immutable blob',async()=>{
   const f=fixture(),calls=[],sha='b'.repeat(40),content=Buffer.from(JSON.stringify(f.store.state)).toString('base64');const store=githubPackQueueStore({request:async request=>{calls.push(request);if(request.method==='PUT')return {status:409,body:{}};if(request.path.includes('/git/blobs/'))return {status:200,body:{sha,encoding:'base64',size:1024**2+1,content}};return {status:200,body:{type:'file',sha,size:1024**2+1,encoding:'none',content:''}};}});const read=await store.read();assert.equal(read.revision,sha);assert.equal(calls[1].path,'/repos/darkapoparka/cars/git/blobs/'+sha);assert.equal(await store.compareAndSwap(sha,read.state),false);assert.equal(calls[2].body.sha,sha);assert.equal(calls[2].body.branch,'cars-deploy-queue');

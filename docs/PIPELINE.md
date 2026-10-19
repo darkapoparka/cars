@@ -12,11 +12,13 @@ The proposed runtime JSON substitution is not a safe drop-in for these templates
 
 At most seven CI lanes run in parallel. Within a lane, dealers and their native framework compilations run serially. The lane keeps dependency installations and family workspaces, isolates source preparation in a child that exits before native compilation, and rebinds the maintained Svelte publisher to the next prepared source. A content-addressed esbuild transform cache reuses only an identical input/options transformation. Dealer-specific compiled output is never treated as a template release.
 
-There are no per-dealer source archive artifacts and no family-to-family artifact downloads. Package-download caches bind the stable template release, exact tools, runtime, OS and architecture, rather than the research commit. Source and native intermediates remain on the lane runner and are discarded after their final bundle/report is sealed. The final bundle transport described below deduplicates identical file bytes across the lane. Build transports expire after one day; compact plans, reports and screenshots after three days. Cache and artifact actions are pinned to immutable SHAs. Artifact names contain `--` separators and omit `run_attempt`, while deployment locators still bind immutable artifact IDs and digests.
+There are no per-dealer source archive artifacts and no family-to-family artifact downloads. Package-download caches bind the stable template release, exact tools, runtime, OS and architecture, rather than the research commit. Every lane now restores the same physical `runtime/dealer-pack-download-cache/` path; the measured benchmark predates that path normalization and uploaded seven separate cache versions. Source and native intermediates remain on the lane runner and are discarded after their final bundle/report is sealed. The final bundle transport described below deduplicates identical file bytes across the lane. Build transports expire after one day; compact plans, reports and screenshots after three days. Cache and artifact actions are pinned to immutable SHAs. Artifact names contain `--` separators and omit `run_attempt`, while deployment locators still bind immutable artifact IDs and digests.
 
 A failed pack is excluded with a reason and the remaining packs continue. Downstream reporting uses `!cancelled()` rather than an implicit success-only chain. The final CI gate remains failed if any pack was rejected or failed. Deployment can consume successful individual artifacts from such a run only after authenticating the exact source run's successful shared `contracts` job. A failure in shared guards or packaging contracts cannot be bypassed by selecting a successful dealer artifact.
 
 ## Visual policy
+
+The three proof builds at `26b626c979d2cfd653b3015d94ff8fe2df724a93` passed all 54 comparisons against the final M1 bundles: **zero unexpected pixels** across 81,340,510 pixels on each side. The only changes were 29,691 pixels inside the explicitly requested FAB artwork correction and nine antialiasing pixels. See [the visual evidence and exact comparison method](m2/VISUAL-EQUIVALENCE-2026-10-19.md) and [all screenshot/report digests](m2/visual-equivalence-2026-10-19.json). This is visual equivalence with that named artwork exception, not a claim of complete pixel identity.
 
 No template frontend or styling source is changed. Signature desktop example cards remain unchanged. V2 uses the same active-design FAB artwork as the 100 live dealers, as explicitly requested. M1 pack FABs used the dealer's mark, so that requested correction is a real, bounded visual difference from M1.
 
@@ -156,6 +158,35 @@ Restoration requires a fresh destination. It verifies the complete transport man
 
 Benchmark loading/building needs the explicit benchmark capability. Ordinary loaders, final transport and deployment reject benchmark packs. The measured workflow retains reports and screenshots, not deployment transports. The benchmark's business-source distribution is fixed, while native build and QA times are measured from the actual temporary outputs.
 
+## M2 benchmark and capacity forecast
+
+The authenticated [25-pack benchmark, run 39310711918](https://github.com/darkapoparka/cars/actions/runs/39310711918), used `dedb9c0565c7d39da1c1cb12c3958f03e45464f6` and seven concurrent lanes. Each lane built its packs serially with seven serial native component builds per pack. The 25 temporary, never-deployed clones were 7 ZA Motors, 1 Granada Auto Sales and 17 Wadishee Used Cars. All 25 passed: 350 QA gates, 1,050 route observations, 450 screenshot hashes, and zero provider writes. Wall time was **37m37s**, including plan and final gate; all seven build lanes had finished at **37m30s**. Summed lane runner execution was **3h36m07s**, while pack work summed to **3h03m18s**.
+
+| Measure | Actual result |
+|---|---:|
+| Cold pack mean / range, 7 observations | 9m34s / 8m03s–10m27s |
+| Warm pack mean / range, 18 observations | 6m28s / 4m49s–7m28s |
+| Mean source assembly | 26.89s |
+| Mean provider preparation/source sync | 7.52s |
+| Mean seven native build-driver elapsed time | 237.85s |
+| Mean composition/dry-run | 14.61s |
+| Mean local browser QA | 150.81s |
+| Report/log/screenshot ZIP artifacts | 268,639,656 bytes; three-day retention |
+| Source/native archives transferred | 0 / 0 |
+| Actual dependency-cache uploads | 8,421,557,456 bytes across seven lanes |
+
+This fallback **still compiles each native app for every dealer**. It reuses checked dependency installations and source workspaces; it does not claim compile-once runtime loading. The 25-pack run executed 150 app compiles and 25 router bundles. The 400-dealer forecast remains **2,400 app compiles + 400 router bundles = 2,800 build operations**.
+
+Using each observed lane's own cold time, warm mean and setup/finish overhead, **100 ready packs forecast about 1h53m** on seven concurrent lanes. The supported four sequential 100-pack runs at the same seven-runner budget forecast **about 7h31m for 400**. Favorable/unfavorable observed runner-speed scenarios are about **1h20m–2h02m per 100**; that range is not a statistical confidence interval. Keeping seven lanes continuously warm across all 400 would model about 7h08m, but workflow inputs are capped at 100. Four overlapping 100-pack workflows would require up to 28 concurrent lane runners; that capacity was not verified. Final bundle sealing/transport, extra report upload time, live asset upload, account-serialized deployment and hosted checks are additional.
+
+The owner's prior **36-hour M1 model** for 400 forecast 2,800 native builds, 3,616 jobs, 1.1 TB artifacts and 765 GB caches. That was a model, not a completed 400-dealer measurement. The new 400 figure is also a projection, based on the actual 25-pack execution.
+
+The benchmark used a stable release cache key but lane-specific cache paths. All seven cache saves therefore uploaded about 1.203 GB each. The subsequent fixed cache path is a storage correction; no unmeasured speed gain is attributed to it. Final bundle transport was skipped for temporary benchmark packs, so the 268.64 MB artifact total measures only reports, logs and screenshots. The preparation subprocess peak was 3.84–4.11 GiB; this is build memory, not Worker runtime memory. Peak disk, hosted CPU, startup and runtime memory were not measured in this benchmark.
+
+The original benchmark workflow is **red overall** because Node 22 rejected `--test-isolation=none` at a shared Svelte-test invocation after the main tests passed. The aggregate gate correctly preserved that failure while all seven build lanes completed. The [corrected contracts run 39312845364](https://github.com/darkapoparka/cars/actions/runs/39312845364) is green: 537 main tests passed, one Windows-only test skipped on Linux, and all 20 separate Svelte tests passed. It does not replace or rerun the 25 benchmark timings. M1 visual comparison is separate evidence.
+
+The committed measurement, lane timings, authenticated CI metadata and complete interpretation are in [the 25-pack report](m2/BENCHMARK-25.md), [machine-readable measurements](m2/benchmark-25.json), [all dealer timings](m2/benchmark-25-timings.csv) and [CI artifact evidence](m2/benchmark-25-api-evidence.json).
+
 ## Guarded account deployment
 
 The command is `scripts/dispatch-dealer-pack-queue.mjs`; the workflow is **Dealer pack deploy queue**. A ready pack does not need a prior `main` inventory entry or a rebuild triggered by a `main` push. It does need its exact published source commit, a successful bound build and browser QA, and immutable authenticated artifacts. Never replace this path with `wrangler deploy`.
@@ -278,9 +309,13 @@ Each immutable receipt is appended under its dealer in the state branch, with re
 ```sh
 node scripts/merge-dealer-pack-receipts.mjs \
   --out runtime/DEPLOYMENT-INVENTORY.proposed.json
+
+node scripts/merge-dealer-pack-receipts.mjs --write
 ```
 
-The command reads the authenticated queue, keeps the existing 100 rows byte-equivalent, and produces a reviewable proposed inventory. `--queue-state FILE` is available for an explicitly offline proposal, labelled unauthenticated. The command does not overwrite the tracked inventory or write Cloudflare resources.
+The default command reads the authenticated queue and produces a reviewable proposal. Explicit `--write` integrates the receipts locally into `docs/DEPLOYMENT-INVENTORY.json` and regenerates `docs/DEPLOYMENTS.md`, `clients/README.md` and `clients/index.json`. Each published pack is authenticated against the receipt's immutable source commit, exact Git tree/blob inventory and complete pack digest; edited working-tree business facts cannot rename an already published dealer. The existing 100 live dealer records retain their data. `--queue-state FILE` is available for an explicitly offline proposal, labelled unauthenticated, and cannot be combined with `--write`. Neither mode changes Cloudflare resources or pushes the resulting inventory commit.
+
+Legacy registry inconsistencies are preserved and reported only when the complete old record is unchanged; new or changed records must pass current validation. The initial integration audit found one existing inconsistency: Al Reef records six variants with a packaging-version-3 label. This PR does not alter that dealer's record. Shared repository use is allowed for authenticated dealer packs with distinct `dealers/<slug>` source directories and pinned commits.
 
 The provider's version upload returns startup time. `read-dealer-pack-metrics.mjs` queries observed Workers CPU and V8 isolate-memory quantiles, requests, errors and statuses for an explicit time window. CPU quantiles are converted from microseconds; memory is isolate usage, not process RSS. Empty or delayed analytics remain `awaiting-ingestion`, never fabricated zero usage. Retain the measured interval and sample scope when making a capacity claim.
 

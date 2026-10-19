@@ -87,18 +87,21 @@ export async function mutatePackQueue(store,mutate,{attempts=20,now=()=>new Date
 
 export async function enqueuePackDeployments(store,inputs,options={}) {
   assert(Array.isArray(inputs)&&inputs.length>0&&inputs.length<=400,'Enqueue between 1 and 400 exact deployment requests');
-  const requests=inputs.map(packDeploymentRequest);
+  const requests=[],invalid=[];
+  for(const input of inputs)try{requests.push(packDeploymentRequest(input));}catch(error){if(!options.collectRejections)throw error;invalid.push({slug:typeof input?.slug==='string'?input.slug:null,reason:error.message});}
   return mutatePackQueue(store,state=>{
-    const added=[],existing=[];
-    for(const request of requests){
+    const added=[],existing=[],rejected=[...invalid],dealerIds=new Set(Object.values(state.requests).map(row=>row.request.dealerId));
+    for(const request of requests)try{
       assert(!state.baseline.workerNames.includes(request.workerName),'Refusing a protected baseline Worker');
       const prior=state.requests[request.id];if(prior){assert(queueCanonical(prior.request)===queueCanonical(request),'Duplicate request ID content differs');existing.push(request.id);continue;}
       // Names and lead ownership cannot be taken by another pack across batches.
       for(const row of Object.values(state.requests))assert(row.request.slug===request.slug&&row.request.dealerId===request.dealerId||row.request.workerName!==request.workerName&&row.request.publicOrigin!==request.publicOrigin&&row.request.dealerId!==request.dealerId,'Queue contains a conflicting dealer/name/origin assignment');
+      assert(dealerIds.has(request.dealerId)||dealerIds.size<state.policy.maximumNewDealers,'Queue exceeds the 400 authorized new dealers');
       state.order.push(request.id);state.requests[request.id]={request,status:'queued',queuedAt:options.now?.()??new Date().toISOString(),events:[]};added.push(request.id);
-    }
-    assert(new Set(Object.values(state.requests).map(row=>row.request.dealerId)).size<=state.policy.maximumNewDealers,'Queue exceeds the 400 authorized new dealers');
-    return added.length?{added,existing}:{unchanged:true,value:{added,existing}};
+      dealerIds.add(request.dealerId);
+    }catch(error){if(!options.collectRejections)throw error;rejected.push({slug:request.slug,requestId:request.id,reason:error.message});}
+    const value={added,existing,...(options.collectRejections?{rejected}:{})};
+    return added.length?value:{unchanged:true,value};
   },options);
 }
 

@@ -108,12 +108,17 @@ export function dealerPackFabArtworkException({baseline, candidate, baselineRow,
     ['x', 'y', 'width', 'height'].every(key => Number.isFinite(bounds[key])) && bounds.width === 46 && bounds.height === 34,
   'FAB exception requires the measured 46 by 34 CSS-pixel artwork');
   const desktop = candidateRow.width >= 992, expectedX = candidateRow.width - (desktop ? 24 : 14) - 52;
-  assert(bounds.x === expectedX && bounds.y >= 390 && bounds.y + bounds.height <= 884 &&
+  // Retained native pages differ in whether their Chromium scrollbar consumes
+  // 15px of the layout viewport. A fixed-position FAB follows that viewport.
+  // Accept only those two observed gutter widths; the full-image comparison
+  // still checks the scrollbar, button and every pixel outside the artwork.
+  const scrollbarGutterPixels = expectedX - bounds.x;
+  assert([0, 15].includes(scrollbarGutterPixels) && bounds.y >= 390 && bounds.y + bounds.height <= 884 &&
     (!desktop || bounds.y === 758), 'FAB artwork moved outside the retained switcher geometry');
   const rectangle = {x: Math.floor(bounds.x), y: Math.floor(bounds.y),
     width: Math.ceil(bounds.x + bounds.width) - Math.floor(bounds.x), height: Math.ceil(bounds.y + bounds.height) - Math.floor(bounds.y)};
   assert(rectangle.width <= 47 && rectangle.height <= 35, 'FAB exception exceeds the observed artwork raster');
-  return {policy: 'fleet-design-mark-v1', bounds, rectangle, beforeSha256: old.sha256, afterSha256: current.sha256,
+  return {policy: 'fleet-design-mark-v1', bounds, rectangle, scrollbarGutterPixels, beforeSha256: old.sha256, afterSha256: current.sha256,
     checkedOutsideArtwork: 'button border, badge, shadow and every other page pixel'};
 }
 

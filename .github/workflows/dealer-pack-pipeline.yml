@@ -193,6 +193,7 @@ jobs:
       PACK_BATCH: ${{ inputs.batch }}
       PACK_BENCHMARK: ${{ needs.plan.outputs.benchmark }}
       CARS_DEALER_PACK_TOOL_PACKAGE: ${{ github.workspace }}/runtime/dealer-pack-tools/package.json
+      CARS_DEALER_PACK_DOWNLOAD_CACHE: ${{ github.workspace }}/runtime/dealer-pack-download-cache
       CARS_SHARP_ROOT: ${{ github.workspace }}/runtime/dealer-pack-tools
       CARS_PLAYWRIGHT_ROOT: ${{ github.workspace }}/runtime/dealer-pack-tools
       CARS_QA_RESOLVE_FROM: ${{ github.workspace }}/runtime/dealer-pack-tools/package.json
@@ -258,12 +259,22 @@ jobs:
     - name: Restore only immutable release package downloads
       uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830
       with:
-        path: runtime/dealer-pack-fast/lane-${{ matrix.lane }}/workspaces/download-cache/
+        path: runtime/dealer-pack-download-cache/
         key: dealer-pack-downloads-v2-${{ runner.os }}-${{ runner.arch }}-${{ needs.plan.outputs.release_key }}
     - name: Install source and browser tools once for the lane
       run: |-
         npm install --prefix runtime/dealer-pack-tools --ignore-scripts --no-audit --no-fund --save-exact sharp@0.35.5 prettier@3.8.1 typescript@6.0.3 playwright@1.62.1 wrangler@4.149.0
         runtime/dealer-pack-tools/node_modules/.bin/playwright install --with-deps chromium
+    - name: Retain the exact M2 pilot headless browser for connector hosted QA
+      if: ${{ !cancelled() && matrix.lane == 1 && needs.plan.outputs.benchmark != 'true' && (github.head_ref || github.ref_name) == 'astra/m2-fast-deploy' && contains(matrix.slugs, 'granada-auto-sales') }}
+      uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+      with:
+        name: dealer-pack-hosted-browser--chromium-1234--${{ github.run_id }}
+        path: ~/.cache/ms-playwright/chromium_headless_shell-1234/
+        include-hidden-files: true
+        if-no-files-found: error
+        compression-level: 1
+        retention-days: 1
     - name: Build and verify all lane packs independently
       id: build
       run: node scripts/run-dealer-pack-ci.mjs lane
