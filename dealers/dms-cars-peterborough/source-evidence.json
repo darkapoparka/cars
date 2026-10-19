@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "dealer": "dms-cars-peterborough",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uk.json",
+    "sha256": "6cd8d365586f9a5d5131fe4b1d50baede7de91ab384a135017c25367298b07c4"
+  },
+  "publicSources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/dms-cars-ltd",
+      "observedAt": "2026-10-19T17:36:50.867520Z",
+      "supports": [
+        "public-business-identity",
+        "public-business-contact",
+        "advertised-stock"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "publicObservations": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/dms-cars-ltd",
+      "observedAt": "2026-10-19T17:36:50.867520Z",
+      "httpStatus": 200,
+      "sha256": "7b4036856ba26e493a2dcc1f3ff678060aac86c87bda0f6f478fd9938be2caf8",
+      "byteLength": 35887,
+      "retention": "Only reviewed public business fields, hashes, listing identities and compressed photographs are committed; raw HTML remains outside the public pack."
+    }
+  ],
+  "stock": [
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/900022316953",
+      "photoUrl": "https://i.ebayimg.com/images/g/sfkAAeSwu~1q1Ltn/s-l1600.jpg",
+      "observedAt": "2026-10-19T17:53:27.756281Z",
+      "listingSha256": "d4127cbd9ea1af58df0fd54d3281ce31035a16d168e08efb97b120a1c7e67aae",
+      "descriptionSha256": "77b2e5ed6324b930a5567b9e29a9f8014639f706694f8b7098799cb8ad9d366c",
+      "sourcePhotoSha256": "e72dcf07fb0f40cf740776d223e4102336f7d0445ffbaa7a0369119e9beda65d",
+      "sourcePhotoDimensions": [
+        1500,
+        1125
+      ],
+      "photoSha256": "c4ad2656a5046a939742808c452864a5add2e35e5d2c13ea17a9b0f747a6dbb3",
+      "photoDimensions": [
+        1280,
+        960
+      ],
+      "photoBytes": 204075,
+      "photoObservedAt": "2026-10-19T18:01:42.083439Z",
+      "recordId": "public-listing-1",
+      "title": "2018 Hyundai Tucson 1.7 CRDi SE Nav DCT",
+      "retainedPhoto": "dealer-stock/public-1.jpg",
+      "publicPhotoReviewed": true
+    },
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/900021969688",
+      "photoUrl": "https://i.ebayimg.com/images/g/UNoAAeSwzkRq1ISD/s-l1600.jpg",
+      "observedAt": "2026-10-19T17:53:28.243968Z",
+      "listingSha256": "0037c382fc4ed206902d1c0f26782fab5faa267512079ead51825ec5c650ef9f",
+      "descriptionSha256": "da3d8d3c8bc7470ea3c524efeda53659bcaed5dce53dfb6d764cd7270c90d504",
+      "sourcePhotoSha256": "531f9b06867f403ec0f8fbfb7bacb98092d704952dbda601822187af5118c3ff",
+      "sourcePhotoDimensions": [
+        1500,
+        1125
+      ],
+      "photoSha256": "eb696f63066172de782b02eebb42cb1b17b81ad9ee905b766e1232d8690f0cd3",
+      "photoDimensions": [
+        1280,
+        960
+      ],
+      "photoBytes": 168845,
+      "photoObservedAt": "2026-10-19T18:01:41.968135Z",
+      "recordId": "public-listing-2",
+      "title": "2014 Ford Fiesta 1.5 TDCi Zetec",
+      "retainedPhoto": "dealer-stock/public-2.jpg",
+      "publicPhotoReviewed": true
+    },
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/900018390039",
+      "photoUrl": "https://i.ebayimg.com/images/g/nLMAAeSwAoxq0nvE/s-l1600.jpg",
+      "observedAt": "2026-10-19T17:53:28.365447Z",
+      "listingSha256": "48083af5be6940e059a4e4859f2306f6b264d1997a9432adbf6d762ba197684c",
+      "descriptionSha256": "ebf403b6f724bf94f40e2a828cc68ee0df6ae6945d96870745479b8ac5812dbe",
+      "sourcePhotoSha256": "b9a69cec3b83d708a08870cbfa4b97be46eee9f27bd5868eee01aaace0e0c3e8",
+      "sourcePhotoDimensions": [
+        1500,
+        1125
+      ],
+      "photoSha256": "503d523881b6769c8337a0618fbe706ef94b688afb6c858a7bb24174246113e0",
+      "photoDimensions": [
+        1280,
+        960
+      ],
+      "photoBytes": 189248,
+      "photoObservedAt": "2026-10-19T18:01:43.094743Z",
+      "recordId": "public-listing-3",
+      "title": "2016 Hyundai i40 1.7 CRDi SE Nav",
+      "retainedPhoto": "dealer-stock/public-3.jpg",
+      "publicPhotoReviewed": true
+    }
+  ],
+  "review": {
+    "reviewedAt": "2026-10-19T18:24:26.780643Z",
+    "stockPhotoIdentityChecked": true,
+    "sourceClaimLimits": "Dated public adverts only; availability, repairs, vehicle condition and legal entity details are not independently certified.",
+    "omissions": [
+      "Personal-looking mailbox omitted; no replacement business email invented.",
+      "Tucson mileage differs between catalogue and advert description; mileage omitted for that vehicle.",
+      "Exact retained lead business.name preserved for the M1 identity validator; clean public trading name used in artwork."
+    ]
+  }
+}

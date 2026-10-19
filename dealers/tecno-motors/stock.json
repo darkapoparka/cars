@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "dealer": "tecno-motors",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "public-listing-1",
+      "title": "2021 Peugeot 108 1.0 Allure — Cat N",
+      "make": "Peugeot",
+      "model": "108",
+      "year": 2021,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/public-1.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/267810008239",
+      "observedAt": "2026-10-19T17:53:33.406069Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "transmission": "Manual",
+      "fuel": "Petrol",
+      "color": "Red",
+      "mileageValue": 41393,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview. The public listing records Category N history and says the front bumper was replaced. Repair quality has not been independently verified."
+    },
+    {
+      "id": "public-listing-2",
+      "title": "2020 Dacia Sandero 1.0 SCe Essential — Cat S",
+      "make": "Dacia",
+      "model": "Sandero",
+      "year": 2020,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/public-2.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/257792411944",
+      "observedAt": "2026-10-19T17:53:33.593439Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "transmission": "Manual",
+      "fuel": "Petrol",
+      "color": "White",
+      "mileageValue": 42236,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview. The public listing records Category S history and says previous damage to the driver-side rear quarter panel has been repaired. Repair quality has not been independently verified."
+    },
+    {
+      "id": "public-listing-3",
+      "title": "2016 Renault Captur 0.9 TCe Dynamique Nav — Cat N",
+      "make": "Renault",
+      "model": "Captur",
+      "year": 2016,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/public-3.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/267810001064",
+      "observedAt": "2026-10-19T17:53:34.522944Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "transmission": "Manual",
+      "fuel": "Petrol",
+      "color": "Orange",
+      "mileageValue": 35685,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview. The public listing records Category N history and says previous bonnet and front-bumper damage has been repaired. Repair quality has not been independently verified."
+    }
+  ]
+}

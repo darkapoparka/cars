@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "dealer": "king-street-motors-smethwick",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T18:39:55.953Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-redraw",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "1e169def019fb98185433ea03227c950b26da741165f2d431b5a05d4a497a904",
+      "sourceSha256": "2f534187821873d9377a2b9bf69a5c4a79d565d410ebf4bb8cbcdafc1b2d6c96"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "1e169def019fb98185433ea03227c950b26da741165f2d431b5a05d4a497a904",
+      "sourceSha256": "2f534187821873d9377a2b9bf69a5c4a79d565d410ebf4bb8cbcdafc1b2d6c96"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "1e169def019fb98185433ea03227c950b26da741165f2d431b5a05d4a497a904",
+      "sourceSha256": "2f534187821873d9377a2b9bf69a5c4a79d565d410ebf4bb8cbcdafc1b2d6c96"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "2f534187821873d9377a2b9bf69a5c4a79d565d410ebf4bb8cbcdafc1b2d6c96",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-6dcf534e-f0df-4db3-818f-b8c9ce0d861e",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "41aa65379cc8249cc2827cd41d84e93ab46e999954ba39b7544dac7e20332f6b",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-6dcf534e-f0df-4db3-818f-b8c9ce0d861e",
+      "modelVersion": null
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "faa26aefd887350e55a9ab5e497544f6b020bdf271b341e40fe40664fae0f9d2"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "2f534187821873d9377a2b9bf69a5c4a79d565d410ebf4bb8cbcdafc1b2d6c96",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-6dcf534e-f0df-4db3-818f-b8c9ce0d861e",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/king-street-motors-smethwick/branding/generated-master.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "2f534187821873d9377a2b9bf69a5c4a79d565d410ebf4bb8cbcdafc1b2d6c96",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-6dcf534e-f0df-4db3-818f-b8c9ce0d861e",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/king-street-motors-smethwick/branding/generated-master.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "2f534187821873d9377a2b9bf69a5c4a79d565d410ebf4bb8cbcdafc1b2d6c96",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-6dcf534e-f0df-4db3-818f-b8c9ce0d861e",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/king-street-motors-smethwick/branding/generated-master.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "466320a6dd38858c13f95bfaa66cbffc5d2ddb5e98df9284ee8d658c415c6426",
+      "sha256": "2f534187821873d9377a2b9bf69a5c4a79d565d410ebf4bb8cbcdafc1b2d6c96",
+      "crop": {
+        "left": 10,
+        "top": 125,
+        "width": 2158,
+        "height": 485
+      },
+      "sourcePath": "branding/generated-master.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "466320a6dd38858c13f95bfaa66cbffc5d2ddb5e98df9284ee8d658c415c6426",
+      "sha256": "2f534187821873d9377a2b9bf69a5c4a79d565d410ebf4bb8cbcdafc1b2d6c96",
+      "crop": {
+        "left": 10,
+        "top": 125,
+        "width": 2158,
+        "height": 485
+      },
+      "sourcePath": "branding/generated-master.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "466320a6dd38858c13f95bfaa66cbffc5d2ddb5e98df9284ee8d658c415c6426",
+      "sha256": "2f534187821873d9377a2b9bf69a5c4a79d565d410ebf4bb8cbcdafc1b2d6c96",
+      "crop": {
+        "left": 10,
+        "top": 125,
+        "width": 2158,
+        "height": 485
+      },
+      "sourcePath": "branding/generated-master.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "65a641d5c33d261054f4605d18fcf218fd8235a85402e67a0bcdfc943137a77b",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-6dcf534e-f0df-4db3-818f-b8c9ce0d861e",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/king-street-motors-smethwick/branding/generated-mark.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "65a641d5c33d261054f4605d18fcf218fd8235a85402e67a0bcdfc943137a77b",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-6dcf534e-f0df-4db3-818f-b8c9ce0d861e",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/king-street-motors-smethwick/branding/generated-mark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "41aa65379cc8249cc2827cd41d84e93ab46e999954ba39b7544dac7e20332f6b",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-6dcf534e-f0df-4db3-818f-b8c9ce0d861e",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/king-street-motors-smethwick/branding/generated-mark.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "faa26aefd887350e55a9ab5e497544f6b020bdf271b341e40fe40664fae0f9d2",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-6dcf534e-f0df-4db3-818f-b8c9ce0d861e",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/king-street-motors-smethwick/branding/generated-mark.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T18:39:55.953Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "41aa65379cc8249cc2827cd41d84e93ab46e999954ba39b7544dac7e20332f6b",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-6dcf534e-f0df-4db3-818f-b8c9ce0d861e",
+      "modelVersion": null
+    }
+  }
+}

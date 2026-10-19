@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "dealer": "london-used-cars",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T18:56:47.410734Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "b95131faf52035beb56fbf6e9f439832d8622775f2b82e4c206a66e23e2a5b6f",
+      "sourceSha256": "6aae448281b9a0a06e3161f3b0e48ae9eea021bd095dbe1572bb900b45b00ae9"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "8086231ff88c808554d82463368a8c527f687560002471e4ce74571c116d9200",
+      "sourceSha256": "f06b1a66a018e988f823b0032bec7820fa586a93c8264d176d5a7c612f6cc178"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "8086231ff88c808554d82463368a8c527f687560002471e4ce74571c116d9200",
+      "sourceSha256": "f06b1a66a018e988f823b0032bec7820fa586a93c8264d176d5a7c612f6cc178"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "6aae448281b9a0a06e3161f3b0e48ae9eea021bd095dbe1572bb900b45b00ae9",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-1c396cf0-6572-4012-9cdf-90469a029987",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "009190ecdcca513e687379c8ac89ec675df523b93c089aa8480f34e0f78eabcc",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-1c396cf0-6572-4012-9cdf-90469a029987",
+      "modelVersion": null
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "64cee4600380b5c6a6d638ab26c66b61cbad74afc0c541d01cf43c7954f8f4f0"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "6aae448281b9a0a06e3161f3b0e48ae9eea021bd095dbe1572bb900b45b00ae9",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1c396cf0-6572-4012-9cdf-90469a029987",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/london-used-cars/branding/generated-master.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "f06b1a66a018e988f823b0032bec7820fa586a93c8264d176d5a7c612f6cc178",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-23e55444-9cfb-4e15-aced-82c825b548e3",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/london-used-cars/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "f06b1a66a018e988f823b0032bec7820fa586a93c8264d176d5a7c612f6cc178",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-23e55444-9cfb-4e15-aced-82c825b548e3",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/london-used-cars/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "fb9f7198320673b8dda4b3496b71af689bbf12cbc11a24fb3b85386ffe346deb",
+      "sha256": "6aae448281b9a0a06e3161f3b0e48ae9eea021bd095dbe1572bb900b45b00ae9",
+      "crop": {
+        "left": 23,
+        "top": 123,
+        "width": 2142,
+        "height": 462
+      },
+      "sourcePath": "branding/generated-master.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "febe3962f4f288b20a50273f5626af1661e0f10f919f78e3156249ba05cc6b43",
+      "sha256": "f06b1a66a018e988f823b0032bec7820fa586a93c8264d176d5a7c612f6cc178",
+      "crop": {
+        "left": 17,
+        "top": 116,
+        "width": 2136,
+        "height": 475
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "febe3962f4f288b20a50273f5626af1661e0f10f919f78e3156249ba05cc6b43",
+      "sha256": "f06b1a66a018e988f823b0032bec7820fa586a93c8264d176d5a7c612f6cc178",
+      "crop": {
+        "left": 17,
+        "top": 116,
+        "width": 2136,
+        "height": 475
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "8ff2a60076f0f69f665c5c7d75f3f40d1d7f13ca6f8cc61de947fe3f6dbec5e1",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1c396cf0-6572-4012-9cdf-90469a029987",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/london-used-cars/branding/generated-mark.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "8ff2a60076f0f69f665c5c7d75f3f40d1d7f13ca6f8cc61de947fe3f6dbec5e1",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1c396cf0-6572-4012-9cdf-90469a029987",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/london-used-cars/branding/generated-mark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "009190ecdcca513e687379c8ac89ec675df523b93c089aa8480f34e0f78eabcc",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1c396cf0-6572-4012-9cdf-90469a029987",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/london-used-cars/branding/generated-mark.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "64cee4600380b5c6a6d638ab26c66b61cbad74afc0c541d01cf43c7954f8f4f0",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1c396cf0-6572-4012-9cdf-90469a029987",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/london-used-cars/branding/generated-mark.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T18:56:47.410734Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "009190ecdcca513e687379c8ac89ec675df523b93c089aa8480f34e0f78eabcc",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-1c396cf0-6572-4012-9cdf-90469a029987",
+      "modelVersion": null
+    }
+  }
+}

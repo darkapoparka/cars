@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "dealer": "millions-auto-cars",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T18:39:43.452Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-redraw",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "23f61edd5d82f062048d4fa168aaf1a71b2902b0d3b277bde1a4e502fc7ed1c4",
+      "sourceSha256": "32b0435e1204b17381e89c9b3c8eb23aa6f8c532df9014347559af4854204342"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "23f61edd5d82f062048d4fa168aaf1a71b2902b0d3b277bde1a4e502fc7ed1c4",
+      "sourceSha256": "32b0435e1204b17381e89c9b3c8eb23aa6f8c532df9014347559af4854204342"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "23f61edd5d82f062048d4fa168aaf1a71b2902b0d3b277bde1a4e502fc7ed1c4",
+      "sourceSha256": "32b0435e1204b17381e89c9b3c8eb23aa6f8c532df9014347559af4854204342"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "32b0435e1204b17381e89c9b3c8eb23aa6f8c532df9014347559af4854204342",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-6558754b-cbf4-44e6-8faf-f1c1d4b7e85a",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "e1967e2510edcf5d546d55093fdc3105d4791d29c42df2d4da7b21984cba1d8f",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-6558754b-cbf4-44e6-8faf-f1c1d4b7e85a",
+      "modelVersion": null
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "b79a9f9536e24f51c036f21fd5983b112f09ee42194f5628de8828becd034bb9"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "32b0435e1204b17381e89c9b3c8eb23aa6f8c532df9014347559af4854204342",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-6558754b-cbf4-44e6-8faf-f1c1d4b7e85a",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/millions-auto-cars/branding/generated-master.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "32b0435e1204b17381e89c9b3c8eb23aa6f8c532df9014347559af4854204342",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-6558754b-cbf4-44e6-8faf-f1c1d4b7e85a",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/millions-auto-cars/branding/generated-master.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "32b0435e1204b17381e89c9b3c8eb23aa6f8c532df9014347559af4854204342",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-6558754b-cbf4-44e6-8faf-f1c1d4b7e85a",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/millions-auto-cars/branding/generated-master.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "ab01ffcbcee04b72e551b7bdd022423ffe77f65e22886266d6bf8a7cdad0c7db",
+      "sha256": "32b0435e1204b17381e89c9b3c8eb23aa6f8c532df9014347559af4854204342",
+      "crop": {
+        "left": 69,
+        "top": 70,
+        "width": 2033,
+        "height": 595
+      },
+      "sourcePath": "branding/generated-master.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "ab01ffcbcee04b72e551b7bdd022423ffe77f65e22886266d6bf8a7cdad0c7db",
+      "sha256": "32b0435e1204b17381e89c9b3c8eb23aa6f8c532df9014347559af4854204342",
+      "crop": {
+        "left": 69,
+        "top": 70,
+        "width": 2033,
+        "height": 595
+      },
+      "sourcePath": "branding/generated-master.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "ab01ffcbcee04b72e551b7bdd022423ffe77f65e22886266d6bf8a7cdad0c7db",
+      "sha256": "32b0435e1204b17381e89c9b3c8eb23aa6f8c532df9014347559af4854204342",
+      "crop": {
+        "left": 69,
+        "top": 70,
+        "width": 2033,
+        "height": 595
+      },
+      "sourcePath": "branding/generated-master.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "dffa8cf0de10980b068ab46a667df0ed2190b58950a7aa8190598f36a90c90c6",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-6558754b-cbf4-44e6-8faf-f1c1d4b7e85a",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/millions-auto-cars/branding/generated-mark.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "dffa8cf0de10980b068ab46a667df0ed2190b58950a7aa8190598f36a90c90c6",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-6558754b-cbf4-44e6-8faf-f1c1d4b7e85a",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/millions-auto-cars/branding/generated-mark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "e1967e2510edcf5d546d55093fdc3105d4791d29c42df2d4da7b21984cba1d8f",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-6558754b-cbf4-44e6-8faf-f1c1d4b7e85a",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/millions-auto-cars/branding/generated-mark.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "b79a9f9536e24f51c036f21fd5983b112f09ee42194f5628de8828becd034bb9",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-6558754b-cbf4-44e6-8faf-f1c1d4b7e85a",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/millions-auto-cars/branding/generated-mark.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T18:39:43.452Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "e1967e2510edcf5d546d55093fdc3105d4791d29c42df2d4da7b21984cba1d8f",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-6558754b-cbf4-44e6-8faf-f1c1d4b7e85a",
+      "modelVersion": null
+    }
+  }
+}

@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "dealer": "rolf-street-car-sales",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T18:56:47.945880Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "3e8029cdc1ef6fcd3f0ebf716a58bb12e52ec2d7e6f4fe08847fee8b20b86513",
+      "sourceSha256": "9dd6fe6645a417f0178adfb23ef99bb8a536e5d05888c48b0ac1c99a8ed6f8cd"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "d7ce741f6a665cddec4f5fa10c256d825c139cf1b6816a6abed2082ba6fb5d82",
+      "sourceSha256": "fd80d14be4d488e9818574a3476f72e3c7c3b8d41e6af607f6634e35bcbf4f12"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "d7ce741f6a665cddec4f5fa10c256d825c139cf1b6816a6abed2082ba6fb5d82",
+      "sourceSha256": "fd80d14be4d488e9818574a3476f72e3c7c3b8d41e6af607f6634e35bcbf4f12"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "9dd6fe6645a417f0178adfb23ef99bb8a536e5d05888c48b0ac1c99a8ed6f8cd",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-1999df7f-209f-40c9-ae99-40b0d0ae0700",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "23654f077de68873804d9ec871ba1c419bddb6520db646ac05dca1134aabb8eb",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-1999df7f-209f-40c9-ae99-40b0d0ae0700",
+      "modelVersion": null
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "9c28dd7231abede22e714ec6393659c8bf5fd122a8fe93264971a8a5e1d14a87"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "9dd6fe6645a417f0178adfb23ef99bb8a536e5d05888c48b0ac1c99a8ed6f8cd",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1999df7f-209f-40c9-ae99-40b0d0ae0700",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/rolf-street-car-sales/branding/generated-master.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "fd80d14be4d488e9818574a3476f72e3c7c3b8d41e6af607f6634e35bcbf4f12",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d53f642f-5fa8-4667-9234-6c28344aee61",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/rolf-street-car-sales/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "fd80d14be4d488e9818574a3476f72e3c7c3b8d41e6af607f6634e35bcbf4f12",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d53f642f-5fa8-4667-9234-6c28344aee61",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/rolf-street-car-sales/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "7f987315cf01ca5a9d5cfd53a46d04b9fba6c1301d465e48af204d6e965089fb",
+      "sha256": "9dd6fe6645a417f0178adfb23ef99bb8a536e5d05888c48b0ac1c99a8ed6f8cd",
+      "crop": {
+        "left": 0,
+        "top": 141,
+        "width": 2172,
+        "height": 447
+      },
+      "sourcePath": "branding/generated-master.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "39efa98f285c535e02b1dbde4529193d69d33def3872e1d4afedaf4fa433a73c",
+      "sha256": "fd80d14be4d488e9818574a3476f72e3c7c3b8d41e6af607f6634e35bcbf4f12",
+      "crop": {
+        "left": 0,
+        "top": 137,
+        "width": 2172,
+        "height": 457
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "39efa98f285c535e02b1dbde4529193d69d33def3872e1d4afedaf4fa433a73c",
+      "sha256": "fd80d14be4d488e9818574a3476f72e3c7c3b8d41e6af607f6634e35bcbf4f12",
+      "crop": {
+        "left": 0,
+        "top": 137,
+        "width": 2172,
+        "height": 457
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "f28b95a2b7381925781da0446d8527c3a3a2e7488996edbdeeea364b2a9b0249",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1999df7f-209f-40c9-ae99-40b0d0ae0700",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/rolf-street-car-sales/branding/generated-mark.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "341c430bd0ce718c227d433f541664ee195ced8a85d09d1bc32b7df9809e8923",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d53f642f-5fa8-4667-9234-6c28344aee61",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/rolf-street-car-sales/branding/generated-mark-on-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "23654f077de68873804d9ec871ba1c419bddb6520db646ac05dca1134aabb8eb",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1999df7f-209f-40c9-ae99-40b0d0ae0700",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/rolf-street-car-sales/branding/generated-mark.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "9c28dd7231abede22e714ec6393659c8bf5fd122a8fe93264971a8a5e1d14a87",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1999df7f-209f-40c9-ae99-40b0d0ae0700",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/rolf-street-car-sales/branding/generated-mark.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T18:56:47.945880Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "e231561c72f624dffe4d9cefc95459de2623a4c5c1107d5a93b24cc42f032080",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-d53f642f-5fa8-4667-9234-6c28344aee61",
+      "modelVersion": null
+    }
+  }
+}

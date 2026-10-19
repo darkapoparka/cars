@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "dealer": "millions-auto-cars",
+  "status": "reviewed",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/middlesex/ruislip/millions-auto-cars-ltd-10032341",
+      "observedAt": "2026-10-19T17:36:50.202476Z"
+    },
+    {
+      "source": "alternate-public-logo-page",
+      "retainedEvidence": "source URL in real-logo research",
+      "observation": "A dealer-image URL was observed, but the image host timed out; no inaccessible image is claimed as an obtained original."
+    }
+  ],
+  "originals": [
+    {
+      "path": "branding/observed-logo.gif",
+      "sha256": "9ac57599bb50ffa7a90773e2a0e8396dd65b61193410803e399a4cefed4dc8b8",
+      "sourceUrl": "https://m.atcdn.co.uk/dealer-logo/at2/adbranding/10032341/images/fpa_logo.gif",
+      "observedAt": "2026-10-19",
+      "kind": "published-logo-artwork"
+    }
+  ],
+  "creationMethod": "imagegen-redraw",
+  "dealerApproved": false,
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "researchConclusion": "The public logo was inspected. A clean transparent redraw preserves its name, colours and principal motif; the original bytes are retained.",
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "generationId": "exec-6558754b-cbf4-44e6-8faf-f1c1d4b7e85a",
+    "modelVersion": null,
+    "prompt": "Use case: logo-brand. Faithfully redraw the actual Million’s Auto Cars logo in the reference as a clean, premium transparent identity. Exact text \"Million’s\" over \"AUTO CARS\", preserve red bold name and silver/white sleek car-roof motif. No dark rectangle or backdrop. Rebuild the weak small raster completely with confident precise shapes and lettering; keep its recognizable vehicle silhouette and name. Wide horizontal lockup: far left a compact red M and silver roof contour emblem, generously separated from the full wordmark on the right so the icon can be cropped. Flat graphic design, no gradient, texture, glows, shadows, slogans, or 3D. Give coloured strokes a subtle white outer keyline and dark inner edge to retain readability on white, charcoal and dark-red website backgrounds. Compact mark must be clear at 32px; wordmark legible at header size. Independent preview redraw, not dealer approved."
+  },
+  "compactDerivation": {
+    "method": "lossless-isolated-emblem-crop",
+    "parentReference": "branding/generated-master.png",
+    "parentSha256": "ab01ffcbcee04b72e551b7bdd022423ffe77f65e22886266d6bf8a7cdad0c7db",
+    "crop": {
+      "left": 0,
+      "top": 0,
+      "width": 680,
+      "height": 725
+    },
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-6558754b-cbf4-44e6-8faf-f1c1d4b7e85a",
+      "modelVersion": null
+    }
+  },
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T18:39:43.452Z",
+    "master": {
+      "path": "branding/generated-master.png",
+      "sha256": "ab01ffcbcee04b72e551b7bdd022423ffe77f65e22886266d6bf8a7cdad0c7db",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-6558754b-cbf4-44e6-8faf-f1c1d4b7e85a",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "6a273b653a5b7f801fb602bfcc493eb350a698575eecbd86e039fcb9ac11af49",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-6558754b-cbf4-44e6-8faf-f1c1d4b7e85a",
+        "modelVersion": null
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "6a273b653a5b7f801fb602bfcc493eb350a698575eecbd86e039fcb9ac11af49",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-6558754b-cbf4-44e6-8faf-f1c1d4b7e85a",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-master.png",
+        "sha256": "ab01ffcbcee04b72e551b7bdd022423ffe77f65e22886266d6bf8a7cdad0c7db",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-6558754b-cbf4-44e6-8faf-f1c1d4b7e85a",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-master.png",
+        "sha256": "ab01ffcbcee04b72e551b7bdd022423ffe77f65e22886266d6bf8a7cdad0c7db",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-6558754b-cbf4-44e6-8faf-f1c1d4b7e85a",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-master.png",
+        "sha256": "ab01ffcbcee04b72e551b7bdd022423ffe77f65e22886266d6bf8a7cdad0c7db",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-6558754b-cbf4-44e6-8faf-f1c1d4b7e85a",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113"
+        ],
+        "onAccent": [
+          "#c40101"
+        ]
+      },
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "markWidths": [
+        32,
+        64
+      ],
+      "method": "Same actual dual-contrast generated artwork on each surface; no generated colours are represented as a template palette change.",
+      "reviewedAt": "2026-10-19T18:39:43.452Z",
+      "review": "Visually reviewed exact cropTransparentPadding exports at120px and180px wordmark widths and32px/64px compact sizes on white, charcoal and red. Exact spelling retained, real alpha present, compact emblem clear. The source palette is part of the artwork only."
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "type": "cars-dealer-pack-draft",
+  "slug": "rolf-street-car-sales",
+  "dealerId": "gb-smethwick-rolf-street-car-sales",
+  "status": "ready",
+  "buildReady": true,
+  "providerWrites": 0,
+  "createdAt": "2026-10-19T18:18:49.906Z",
+  "inventoryKind": "dated-listing-snapshot",
+  "inventoryRecords": 3,
+  "logoReady": true,
+  "missingFacts": [
+    {
+      "field": "business.email",
+      "required": false,
+      "reason": "Personal-looking public mailbox omitted under requested privacy rules."
+    },
+    {
+      "field": "business.website",
+      "required": false,
+      "reason": "No verified value in the bounded public source checks; omitted rather than invented."
+    },
+    {
+      "field": "business.hours",
+      "required": false,
+      "reason": "No verified value in the bounded public source checks; omitted rather than invented."
+    },
+    {
+      "field": "prices",
+      "required": false,
+      "reason": "All listing prices are omitted under the public-repository scope."
+    }
+  ],
+  "blocking": [],
+  "stockAcquisition": "fresh-public-catalogue-and-detail-page-snapshot",
+  "liveListingFetchPerformed": true,
+  "next": "Ready for the guarded build path; no deployment performed.",
+  "stockPhotoReview": {
+    "reviewedAt": "2026-10-19T18:24:26.868770Z",
+    "visiblePricesOmitted": true,
+    "vehicleIdentityMatched": true
+  }
+}

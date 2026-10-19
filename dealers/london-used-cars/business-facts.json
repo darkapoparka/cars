@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "slug": "london-used-cars",
+  "dealerId": "gb-slough-london-used-cars",
+  "business": {
+    "name": "London Used Cars",
+    "city": "Slough",
+    "region": "Berkshire",
+    "countryCode": "GB",
+    "currency": "GBP",
+    "distanceUnit": "mi",
+    "locale": "en-GB",
+    "address": "Unit 4 Mill Court, 51 Mill Street, Slough SL2 5DA",
+    "phone": "+441753910009",
+    "phoneDisplay": "+441753910009",
+    "email": "londonusedcarsslough@gmail.com",
+    "website": "",
+    "stockUrl": "https://showroom.ebaymotorspro.co.uk/London-used-cars?menu=1",
+    "hours": "",
+    "sourceUrl": "https://showroom.ebaymotorspro.co.uk/London-used-cars?menu=1",
+    "observedAt": "2026-10-19T17:36:51.252546Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/London-used-cars?menu=1",
+      "observedAt": "2026-10-19T17:36:51.252546Z",
+      "supports": [
+        "public-business-identity",
+        "public-business-contact",
+        "advertised-stock"
+      ]
+    }
+  ]
+}

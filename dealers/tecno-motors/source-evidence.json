@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "dealer": "tecno-motors",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uk.json",
+    "sha256": "6cd8d365586f9a5d5131fe4b1d50baede7de91ab384a135017c25367298b07c4"
+  },
+  "publicSources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Tecno-motors?menu=1",
+      "observedAt": "2026-10-19T17:36:51.578651Z",
+      "supports": [
+        "public-business-identity",
+        "public-business-contact",
+        "advertised-stock"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "publicObservations": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Tecno-motors?menu=1",
+      "observedAt": "2026-10-19T17:36:51.578651Z",
+      "httpStatus": 200,
+      "sha256": "408580f0bbdc116d16ed1758d0760d413292c3f709e0266d7fe114527d3e2bca",
+      "byteLength": 37305,
+      "retention": "Only reviewed public business fields, hashes, listing identities and compressed photographs are committed; raw HTML remains outside the public pack."
+    }
+  ],
+  "stock": [
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/267810008239",
+      "photoUrl": "https://i.ebayimg.com/images/g/Wi4AAeSwknRqyozB/s-l1600.jpg",
+      "observedAt": "2026-10-19T17:53:33.406069Z",
+      "listingSha256": "94bcfbc138de3dd7eaceb8192f7a0f6c2b2014852a04ebef6c5652f31f46a8c2",
+      "descriptionSha256": "e455a1827ae7f8179edddb237f810ea61ba82c7d1e7cfa3fa0e69d3e361dc21d",
+      "sourcePhotoSha256": "83ed344b427aaf7e40ae7995439912a172669f0029d3822a8ce1511ff10d6595",
+      "sourcePhotoDimensions": [
+        1500,
+        1125
+      ],
+      "photoSha256": "88b207f8bce7ae33a863e78d47585d132a82fb621cd75e89616d9ebf6df8fc5a",
+      "photoDimensions": [
+        1280,
+        960
+      ],
+      "photoBytes": 202330,
+      "photoObservedAt": "2026-10-19T18:01:42.952630Z",
+      "recordId": "public-listing-1",
+      "title": "2021 Peugeot 108 1.0 Allure — Cat N",
+      "retainedPhoto": "dealer-stock/public-1.jpg",
+      "publicPhotoReviewed": true,
+      "conditionDisclosure": "The public listing records Category N history and says the front bumper was replaced. Repair quality has not been independently verified."
+    },
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/257792411944",
+      "photoUrl": "https://i.ebayimg.com/images/g/HQwAAeSwkkFqyonR/s-l1600.jpg",
+      "observedAt": "2026-10-19T17:53:33.593439Z",
+      "listingSha256": "910132f3ca41ee6232e08caaa4b5f726753ad56ec38b274da7432f4ba3a11a9e",
+      "descriptionSha256": "abbbe1b827a5f9320220a03aea146587b503ee6122974c671c0981c67ab312b9",
+      "sourcePhotoSha256": "9705c2a5de0b1c215975e869147affcded8caf009f571cd0f50e094f307b056b",
+      "sourcePhotoDimensions": [
+        1500,
+        1125
+      ],
+      "photoSha256": "80df6bbf6bbfb93ded441de090a4a6ec695d97bb16127c68ad42f58bf9078785",
+      "photoDimensions": [
+        1280,
+        960
+      ],
+      "photoBytes": 198800,
+      "photoObservedAt": "2026-10-19T18:01:43.111015Z",
+      "recordId": "public-listing-2",
+      "title": "2020 Dacia Sandero 1.0 SCe Essential — Cat S",
+      "retainedPhoto": "dealer-stock/public-2.jpg",
+      "publicPhotoReviewed": true,
+      "conditionDisclosure": "The public listing records Category S history and says previous damage to the driver-side rear quarter panel has been repaired. Repair quality has not been independently verified."
+    },
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/267810001064",
+      "photoUrl": "https://i.ebayimg.com/images/g/eRgAAeSwFONqyoji/s-l1600.jpg",
+      "observedAt": "2026-10-19T17:53:34.522944Z",
+      "listingSha256": "a8bd23c49dec8b36c7ac175132755d4e4aa1d558c76eadce2f15a0b3c7a44ff9",
+      "descriptionSha256": "4a0ee7a6c73220285e55182aaba4c448902f5ecc4d2c88dfc9326358fd09e948",
+      "sourcePhotoSha256": "1c33b15b5c69a5a3a023607fea8ebaf07995466be979337588e320e63d2ae400",
+      "sourcePhotoDimensions": [
+        1500,
+        1125
+      ],
+      "photoSha256": "50b25bcc5072c7c51fb11cef028bf2ed91b11af8dc8e62592a74dccd4ccddff4",
+      "photoDimensions": [
+        1100,
+        825
+      ],
+      "photoBytes": 183351,
+      "photoObservedAt": "2026-10-19T18:01:42.591004Z",
+      "recordId": "public-listing-3",
+      "title": "2016 Renault Captur 0.9 TCe Dynamique Nav — Cat N",
+      "retainedPhoto": "dealer-stock/public-3.jpg",
+      "publicPhotoReviewed": true,
+      "conditionDisclosure": "The public listing records Category N history and says previous bonnet and front-bumper damage has been repaired. Repair quality has not been independently verified."
+    }
+  ],
+  "review": {
+    "reviewedAt": "2026-10-19T18:24:26.788625Z",
+    "stockPhotoIdentityChecked": true,
+    "sourceClaimLimits": "Dated public adverts only; availability, repairs, vehicle condition and legal entity details are not independently certified.",
+    "omissions": [
+      "Current seller is Tecno Motors; retained Speed Motors alias kept only in exact lead identity. Fresh marketplace postcode OL11 4HP is used; a differing registered-address postcode is not mixed into it.",
+      "Exact retained lead business.name preserved for the M1 identity validator; clean public trading name used in artwork."
+    ]
+  }
+}

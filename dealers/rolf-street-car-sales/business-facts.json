@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "slug": "rolf-street-car-sales",
+  "dealerId": "gb-smethwick-rolf-street-car-sales",
+  "business": {
+    "name": "Rolf Street Car Sales / Aran Used Car",
+    "city": "Smethwick",
+    "region": "West Midlands",
+    "countryCode": "GB",
+    "currency": "GBP",
+    "distanceUnit": "mi",
+    "locale": "en-GB",
+    "address": "180 Rolfe Street, Smethwick B66 2AS (seller spells Rolf St)",
+    "phone": "+441215160525",
+    "phoneDisplay": "+441215160525",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://showroom.ebaymotorspro.co.uk/Aran-used-car?menu=1",
+    "hours": "",
+    "sourceUrl": "https://showroom.ebaymotorspro.co.uk/Aran-used-car?menu=1",
+    "observedAt": "2026-10-19T17:36:51.341464Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Aran-used-car?menu=1",
+      "observedAt": "2026-10-19T17:36:51.341464Z",
+      "supports": [
+        "public-business-identity",
+        "public-business-contact",
+        "advertised-stock"
+      ]
+    }
+  ]
+}

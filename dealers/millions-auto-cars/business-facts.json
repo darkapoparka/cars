@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "slug": "millions-auto-cars",
+  "dealerId": "gb-ruislip-millions-auto-cars",
+  "business": {
+    "name": "Million's Auto Cars Ltd",
+    "city": "Ruislip",
+    "region": "Greater London",
+    "countryCode": "GB",
+    "currency": "GBP",
+    "distanceUnit": "mi",
+    "locale": "en-GB",
+    "address": "Station Yard , Ickenham Road, Ruislip, HA4 7DY",
+    "phone": "+447537122023",
+    "phoneDisplay": "(07537) 122023",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://www.autotrader.co.uk/dealers/middlesex/ruislip/millions-auto-cars-ltd-10032341",
+    "hours": "Mo-Su 09:00-20:00",
+    "sourceUrl": "https://www.autotrader.co.uk/dealers/middlesex/ruislip/millions-auto-cars-ltd-10032341",
+    "observedAt": "2026-10-19T17:36:50.202476Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/middlesex/ruislip/millions-auto-cars-ltd-10032341",
+      "observedAt": "2026-10-19T17:36:50.202476Z",
+      "supports": [
+        "public-business-identity",
+        "public-business-contact",
+        "advertised-stock"
+      ]
+    }
+  ]
+}

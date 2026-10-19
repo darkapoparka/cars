@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "dealer": "night-bat-motors",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uk.json",
+    "sha256": "6cd8d365586f9a5d5131fe4b1d50baede7de91ab384a135017c25367298b07c4"
+  },
+  "publicSources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/H-DAutosoutlook-com",
+      "observedAt": "2026-10-19T17:36:49.980144Z",
+      "supports": [
+        "public-business-identity",
+        "public-business-contact",
+        "advertised-stock"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "publicObservations": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/H-DAutosoutlook-com",
+      "observedAt": "2026-10-19T17:36:49.980144Z",
+      "httpStatus": 200,
+      "sha256": "e550495c912fc0c025468cee698f6e8d4b03d1eaede6b41254f143ee6d33916a",
+      "byteLength": 37508,
+      "retention": "Only reviewed public business fields, hashes, listing identities and compressed photographs are committed; raw HTML remains outside the public pack."
+    }
+  ],
+  "stock": [
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/147638849616",
+      "photoUrl": "https://i.ebayimg.com/images/g/cTIAAeSwfQFq0ng8/s-l1600.jpg",
+      "observedAt": "2026-10-19T17:53:26.244084Z",
+      "listingSha256": "7d7094b646e7735d42c8d2a006ee1ca1719c5f3dba50d164d5018f7fa7a837cd",
+      "descriptionSha256": "00ccbc060396cd34bf5d84cc96a0fb8c3db5ffaf09169740e1cbcec2d2e4eb9b",
+      "sourcePhotoSha256": "7d5553f73ef31d16be51714870accd486aeb6f0d7b5afd2dd44a625a3a369db0",
+      "sourcePhotoDimensions": [
+        1320,
+        977
+      ],
+      "photoSha256": "bd3d6b0937ef49cb9aebb3387c9a28f51ce2b9051deecac99b47c91074f50f09",
+      "photoDimensions": [
+        1280,
+        947
+      ],
+      "photoBytes": 156414,
+      "photoObservedAt": "2026-10-19T18:01:43.539869Z",
+      "recordId": "public-listing-1",
+      "title": "2014 BMW X5 xDrive40d SE Auto",
+      "retainedPhoto": "dealer-stock/public-1.jpg",
+      "publicPhotoReviewed": true
+    },
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/147638334366",
+      "photoUrl": "https://i.ebayimg.com/images/g/sGMAAeSwKcxq0gWd/s-l1600.jpg",
+      "observedAt": "2026-10-19T17:53:26.691534Z",
+      "listingSha256": "201aba30c6871e7f41bdc31ff0ddfaef3d08a74e89ed0468c86e4c7c14796cf1",
+      "descriptionSha256": "f7c2a5c5291ff110ddd6cd1341ff8b225bfa35e0ea4b87b9bf89b56ca7993f10",
+      "sourcePhotoSha256": "3114d7e79b3122d2c8450e7c2cd05272e4f80b99a7e09c648114071e6db05fd8",
+      "sourcePhotoDimensions": [
+        1500,
+        1125
+      ],
+      "photoSha256": "e0f35f414fc354f70522751d80d963d060dd1d98db9894ef90b53b2d6dea97c7",
+      "photoDimensions": [
+        1280,
+        960
+      ],
+      "photoBytes": 166062,
+      "photoObservedAt": "2026-10-19T18:01:43.498521Z",
+      "recordId": "public-listing-2",
+      "title": "2017 Volvo V60 D3 R Design Lux Nav Geartronic — Cat N",
+      "retainedPhoto": "dealer-stock/public-2.jpg",
+      "publicPhotoReviewed": true,
+      "conditionDisclosure": "The public listing records Category N history and says the vehicle has been repaired. Repair quality has not been independently verified."
+    },
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/147635840953",
+      "photoUrl": "https://i.ebayimg.com/images/g/B4gAAeSwvVlqz7oB/s-l1600.jpg",
+      "observedAt": "2026-10-19T17:53:26.734020Z",
+      "listingSha256": "f06f2d29e3417b277ecf366e128ade736d9e547e8fb139c8ef3c43ade9c900c1",
+      "descriptionSha256": "0ea3a8b48d54f8bd73e9b8384095212e44832626d8e7a97208cb679b3ac11ccd",
+      "sourcePhotoSha256": "798cce2ba302ccad27ab87869c123f6631e0f7600fae2c9e4b1ee36c9997c318",
+      "sourcePhotoDimensions": [
+        1500,
+        1125
+      ],
+      "photoSha256": "810ad9dd0c0f55f72c4571412056ee093bff956b46054d138ad4c46fec208345",
+      "photoDimensions": [
+        1280,
+        960
+      ],
+      "photoBytes": 130961,
+      "photoObservedAt": "2026-10-19T18:01:43.639402Z",
+      "recordId": "public-listing-3",
+      "title": "2019 Citroen Berlingo 1.6 BlueHDi Enterprise — Cat S",
+      "retainedPhoto": "dealer-stock/public-3.jpg",
+      "publicPhotoReviewed": true,
+      "conditionDisclosure": "The public listing records Category S history and says the vehicle has been repaired. Repair quality has not been independently verified."
+    }
+  ],
+  "review": {
+    "reviewedAt": "2026-10-19T18:24:26.812168Z",
+    "stockPhotoIdentityChecked": true,
+    "sourceClaimLimits": "Dated public adverts only; availability, repairs, vehicle condition and legal entity details are not independently certified.",
+    "omissions": [
+      "Exact retained lead business.name preserved for the M1 identity validator; clean public trading name used in artwork."
+    ]
+  }
+}

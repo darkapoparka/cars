@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "dealer": "small-automatics",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uk.json",
+    "sha256": "6cd8d365586f9a5d5131fe4b1d50baede7de91ab384a135017c25367298b07c4"
+  },
+  "publicSources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Ulez-automatics?extendedFilter=1",
+      "observedAt": "2026-10-19T17:36:50.653721Z",
+      "supports": [
+        "public-business-identity",
+        "public-business-contact",
+        "advertised-stock"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "publicObservations": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Ulez-automatics?extendedFilter=1",
+      "observedAt": "2026-10-19T17:36:50.653721Z",
+      "httpStatus": 200,
+      "sha256": "f2dff8d13fae35c4d28eeddbe925ecf26835ec640d17739cf4e8fecf9ef3fa35",
+      "byteLength": 36821,
+      "retention": "Only reviewed public business fields, hashes, listing identities and compressed photographs are committed; raw HTML remains outside the public pack."
+    }
+  ],
+  "stock": [
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/960067194824",
+      "photoUrl": "https://i.ebayimg.com/images/g/7cIAAeSwAmVqz775/s-l1600.jpg",
+      "observedAt": "2026-10-19T17:53:14.805635Z",
+      "listingSha256": "556c98ea77d1b4cc4a379d9648ed00d6995b4f113aa8b7353784803fe826200f",
+      "descriptionSha256": "02a04d24ac4e37dfecb50da11c5beb007b45f1f6eb74c252ee0499ab594920d7",
+      "sourcePhotoSha256": "61915b41d7b9751568ba9f42de41c824060d9a345c54c5c7fe22d09095046965",
+      "sourcePhotoDimensions": [
+        1500,
+        1125
+      ],
+      "photoSha256": "4c83f33c5bb79e730476d6f872ba6b7b13d69e8a280feda53a5bf9c3686f4a61",
+      "photoDimensions": [
+        1280,
+        960
+      ],
+      "photoBytes": 157254,
+      "photoObservedAt": "2026-10-19T18:01:44.512441Z",
+      "recordId": "public-listing-1",
+      "title": "2008 BMW 325i M Sport Convertible Auto — Cat C/D",
+      "retainedPhoto": "dealer-stock/public-1.jpg",
+      "publicPhotoReviewed": true,
+      "conditionDisclosure": "The public listing carries a Category C/D vehicle-history advisory without identifying which of those categories applies. Vehicle history and condition have not been independently verified."
+    },
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/960048195234",
+      "photoUrl": "https://i.ebayimg.com/images/g/AC0AAeSwSUZqz7mC/s-l1600.jpg",
+      "observedAt": "2026-10-19T17:53:15.124787Z",
+      "listingSha256": "f7d0347ac4433ce5f14f6d269467506cad3123ac84f3de70b10e572bc21b6807",
+      "descriptionSha256": "97a3c79bf6e10a28308036d1b4c499ca61d7801de4fdda796a80fb0ef0bf7aa5",
+      "sourcePhotoSha256": "4528605abfca015e36814188706a6e465559af08bd088014d42893aba34a20a4",
+      "sourcePhotoDimensions": [
+        1500,
+        1125
+      ],
+      "photoSha256": "be53093d8fd1e4337d4b7156246abb0bcd0c3a4a349096328299f638bd17d8b3",
+      "photoDimensions": [
+        1280,
+        960
+      ],
+      "photoBytes": 170421,
+      "photoObservedAt": "2026-10-19T18:01:44.631519Z",
+      "recordId": "public-listing-2",
+      "title": "2007 Mercedes-Benz A180 CDI Avantgarde SE Auto",
+      "retainedPhoto": "dealer-stock/public-2.jpg",
+      "publicPhotoReviewed": true
+    },
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/960045613995",
+      "photoUrl": "https://i.ebayimg.com/images/g/4AcAAeSw6Zlqz72F/s-l1600.jpg",
+      "observedAt": "2026-10-19T17:53:15.286963Z",
+      "listingSha256": "b63755aaf7414f36cdfee77e939731eafa4d504b0502f97bc6b8eb19a0ebf7ac",
+      "descriptionSha256": "8b14bb619a2149adaacc00b92309548a5cadc44cbbafb737472d86bef17c2bd0",
+      "sourcePhotoSha256": "3b59508749db78ae41f37efa6437ea11a565b73001f4bf437bb55e001b33a774",
+      "sourcePhotoDimensions": [
+        1500,
+        1125
+      ],
+      "photoSha256": "6c0298be56aab5d8602407c987604a2b66e10b5f5bf0339b10a2d36804510603",
+      "photoDimensions": [
+        1280,
+        960
+      ],
+      "photoBytes": 174288,
+      "photoObservedAt": "2026-10-19T18:01:44.570142Z",
+      "recordId": "public-listing-3",
+      "title": "2008 Toyota Yaris 1.3 VVT-i TR MMT",
+      "retainedPhoto": "dealer-stock/public-3.jpg",
+      "publicPhotoReviewed": true
+    }
+  ],
+  "review": {
+    "reviewedAt": "2026-10-19T18:24:26.881026Z",
+    "stockPhotoIdentityChecked": true,
+    "sourceClaimLimits": "Dated public adverts only; availability, repairs, vehicle condition and legal entity details are not independently certified.",
+    "omissions": [
+      "Exact retained lead business.name preserved for the M1 identity validator; clean public trading name used in artwork."
+    ]
+  }
+}

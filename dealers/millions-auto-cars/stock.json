@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "dealer": "millions-auto-cars",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "public-listing-1",
+      "title": "2018 BMW X1 20d M Sport Auto xDrive",
+      "make": "BMW",
+      "model": "X1",
+      "year": 2018,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/public-1.jpg"
+      ],
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202604231790671",
+      "observedAt": "2026-10-19T17:53:13.358340Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "SUV",
+      "transmission": "Automatic",
+      "fuel": "Diesel",
+      "mileageValue": 99000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "public-listing-2",
+      "title": "2019 MG ZS 44.5kWh Exclusive Auto",
+      "make": "MG",
+      "model": "ZS",
+      "year": 2019,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/public-2.jpg"
+      ],
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202607124111384",
+      "observedAt": "2026-10-19T17:53:14.128521Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "SUV",
+      "transmission": "Automatic",
+      "fuel": "Electric",
+      "mileageValue": 86700,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "public-listing-3",
+      "title": "2016 Vauxhall Mokka 1.4i Turbo Exclusiv Auto",
+      "make": "Vauxhall",
+      "model": "Mokka",
+      "year": 2016,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/public-3.jpg"
+      ],
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202609075783623",
+      "observedAt": "2026-10-19T17:53:14.232069Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "SUV",
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "mileageValue": 58500,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

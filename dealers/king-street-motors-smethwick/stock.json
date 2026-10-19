@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "dealer": "king-street-motors-smethwick",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "public-listing-1",
+      "title": "2015 Land Rover Range Rover 4.4 SD V8 Autobiography Auto",
+      "make": "Land Rover",
+      "model": "Range Rover",
+      "year": 2015,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/public-1.jpg"
+      ],
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202204144679276",
+      "observedAt": "2026-10-19T17:53:28.568323Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "SUV",
+      "transmission": "Automatic",
+      "fuel": "Diesel",
+      "mileageValue": 54000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "public-listing-2",
+      "title": "2018 BMW 530d M Sport Touring Auto xDrive — Cat S",
+      "make": "BMW",
+      "model": "5 Series",
+      "year": 2018,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/public-2.jpg"
+      ],
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202609296511064",
+      "observedAt": "2026-10-19T17:53:28.806853Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Estate",
+      "transmission": "Automatic",
+      "fuel": "Diesel",
+      "mileageValue": 100000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview. The public listing records Category S history. Vehicle condition has not been independently verified."
+    },
+    {
+      "id": "public-listing-3",
+      "title": "2015 Audi A3 2.0 TDI S line S Tronic — Cat S",
+      "make": "Audi",
+      "model": "A3",
+      "year": 2015,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/public-3.jpg"
+      ],
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202509076132271",
+      "observedAt": "2026-10-19T17:53:29.537756Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Saloon",
+      "transmission": "Automatic",
+      "fuel": "Diesel",
+      "mileageValue": 50000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview. The public listing records Category S history and says the buyer must apply for the logbook. Vehicle condition and documents have not been independently verified."
+    }
+  ]
+}

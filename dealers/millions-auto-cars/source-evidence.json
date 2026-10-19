@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "dealer": "millions-auto-cars",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uk.json",
+    "sha256": "6cd8d365586f9a5d5131fe4b1d50baede7de91ab384a135017c25367298b07c4"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/middlesex/ruislip/millions-auto-cars-ltd-10032341",
+      "observedAt": "2026-10-19T17:36:50.202476Z",
+      "supports": [
+        "public-business-identity",
+        "public-business-contact",
+        "advertised-stock"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "publicObservations": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/middlesex/ruislip/millions-auto-cars-ltd-10032341",
+      "observedAt": "2026-10-19T17:36:50.202476Z",
+      "httpStatus": 200,
+      "sha256": "29602eb19ff2137845aea40e41414fef2eb0fd77da9566f6ea3b8e450dcc509e",
+      "byteLength": 213100,
+      "retention": "Only reviewed public business fields, hashes, listing identities and compressed photographs are committed; raw HTML remains outside the public pack."
+    }
+  ],
+  "stock": [
+    {
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202604231790671",
+      "photoUrl": "https://m.atcdn.co.uk/a/media/w600/05b54b96446e4a389b61ba81549da85d.jpg",
+      "observedAt": "2026-10-19T17:53:13.358340Z",
+      "listingSha256": "1f24e0ffff55b59ec0125f737eb7f271c0a0baffc1e43906abf332b5a9871be5",
+      "sourcePhotoSha256": "2cf8b54c55fb86259bb7fcee2804e5fb20d582bb46ef0368671d6869a34c0510",
+      "sourcePhotoDimensions": [
+        600,
+        450
+      ],
+      "photoSha256": "d3d46609d1ace995185c34dd81e834b321dcfd29403776053a8b658b840fb927",
+      "photoDimensions": [
+        600,
+        450
+      ],
+      "photoBytes": 65556,
+      "recordId": "public-listing-1",
+      "title": "2018 BMW X1 20d M Sport Auto xDrive",
+      "retainedPhoto": "dealer-stock/public-1.jpg",
+      "publicPhotoReviewed": true
+    },
+    {
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202607124111384",
+      "photoUrl": "https://m.atcdn.co.uk/a/media/w600/adcea55b83d54aeca709fda330ad3719.jpg",
+      "observedAt": "2026-10-19T17:53:14.128521Z",
+      "listingSha256": "010168a6542e5767ea491d2e8e1d2a49f44bbbbb473a10c59bc9c994ab635558",
+      "sourcePhotoSha256": "bfee242e1b785ba4e9f042c9fd229e43fe5b381fb1a91256c0a7d92b70fa9fff",
+      "sourcePhotoDimensions": [
+        600,
+        450
+      ],
+      "photoSha256": "a409bd4f7cdd4b20048110e799527856cfc89184a573c6123947330ff4fb767b",
+      "photoDimensions": [
+        600,
+        450
+      ],
+      "photoBytes": 56496,
+      "recordId": "public-listing-2",
+      "title": "2019 MG ZS 44.5kWh Exclusive Auto",
+      "retainedPhoto": "dealer-stock/public-2.jpg",
+      "publicPhotoReviewed": true
+    },
+    {
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202609075783623",
+      "photoUrl": "https://m.atcdn.co.uk/a/media/w600/97a67065b9ff4ae293eacef349e490e9.jpg",
+      "observedAt": "2026-10-19T17:53:14.232069Z",
+      "listingSha256": "fecee88f775eefe2ef6cac160dcbe36c879f2038c0d51941e1f9fdebdde5eefd",
+      "sourcePhotoSha256": "b33f74b399531fb07f6cbc8564bc42f91dc3fb358863d17df2c319c4a1ee5671",
+      "sourcePhotoDimensions": [
+        600,
+        450
+      ],
+      "photoSha256": "477fdbf4594df6a1e9c255d32e502a2e6c344ee9f5f3c356c65bc0556c38721e",
+      "photoDimensions": [
+        600,
+        450
+      ],
+      "photoBytes": 64739,
+      "recordId": "public-listing-3",
+      "title": "2016 Vauxhall Mokka 1.4i Turbo Exclusiv Auto",
+      "retainedPhoto": "dealer-stock/public-3.jpg",
+      "publicPhotoReviewed": true
+    }
+  ],
+  "review": {
+    "reviewedAt": "2026-10-19T18:24:26.806219Z",
+    "stockPhotoIdentityChecked": true,
+    "sourceClaimLimits": "Dated public adverts only; availability, repairs, vehicle condition and legal entity details are not independently certified.",
+    "omissions": [
+      "Exact retained lead business.name preserved for the M1 identity validator; clean public trading name used in artwork."
+    ]
+  }
+}

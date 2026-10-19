@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "slug": "tecno-motors",
+  "dealerId": "gb-rochdale-tecno-motors",
+  "business": {
+    "name": "Tecno Motors (legacy Speed Motors)",
+    "city": "Rochdale",
+    "region": "Lancashire",
+    "countryCode": "GB",
+    "currency": "GBP",
+    "distanceUnit": "mi",
+    "locale": "en-GB",
+    "address": "Norman Road, Rochdale OL11 4HP",
+    "phone": "+441706572587",
+    "phoneDisplay": "+441706572587",
+    "email": "speed_motorss@hotmail.com",
+    "website": "",
+    "stockUrl": "https://showroom.ebaymotorspro.co.uk/Tecno-motors?menu=1",
+    "hours": "",
+    "sourceUrl": "https://showroom.ebaymotorspro.co.uk/Tecno-motors?menu=1",
+    "observedAt": "2026-10-19T17:36:51.578651Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Tecno-motors?menu=1",
+      "observedAt": "2026-10-19T17:36:51.578651Z",
+      "supports": [
+        "public-business-identity",
+        "public-business-contact",
+        "advertised-stock"
+      ]
+    }
+  ]
+}

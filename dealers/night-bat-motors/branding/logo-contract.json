@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "dealer": "night-bat-motors",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T18:56:44.764978Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "001fe4eb7a6f4467e7d1c1db1523c22444690681f421c67a40aa7e57a1d8a254",
+      "sourceSha256": "5c50c880e8d002dfd91f080dc5207ee19fadc590aecf21102c3f71bf4b942296"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "9690d72399eec461bbf9e9c9d2c741a9f9c1b09cd3d1f0b78f3ddd64d4af85a8",
+      "sourceSha256": "79b9db26264ad8ba141d907dc38df5e6113cea2140096a7ba90dc4dbf19659a8"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "9690d72399eec461bbf9e9c9d2c741a9f9c1b09cd3d1f0b78f3ddd64d4af85a8",
+      "sourceSha256": "79b9db26264ad8ba141d907dc38df5e6113cea2140096a7ba90dc4dbf19659a8"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "5c50c880e8d002dfd91f080dc5207ee19fadc590aecf21102c3f71bf4b942296",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-31124002-d16c-4251-8443-5baa4b2ce483",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "26bbafcfbf59bfa5ae039fe2a2ee192c014974123f53b0d98dec3e0b8a2cdd50",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-450f2199-8137-4bd6-9fa2-239be0f03a7a",
+      "modelVersion": null
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "c55d506ec413ac2e9f6fb11fac53dccfe188c5def832c585329ef459c2cf46ef"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "5c50c880e8d002dfd91f080dc5207ee19fadc590aecf21102c3f71bf4b942296",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-31124002-d16c-4251-8443-5baa4b2ce483",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/night-bat-motors/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "79b9db26264ad8ba141d907dc38df5e6113cea2140096a7ba90dc4dbf19659a8",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-029f5d62-3312-4820-887c-20f002b179c6",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/night-bat-motors/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "79b9db26264ad8ba141d907dc38df5e6113cea2140096a7ba90dc4dbf19659a8",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-029f5d62-3312-4820-887c-20f002b179c6",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/night-bat-motors/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "4a80c91f3d451c42cd67b730d5a4ad700b84558ac0572e0683d2cffef8d5e21f",
+      "sha256": "5c50c880e8d002dfd91f080dc5207ee19fadc590aecf21102c3f71bf4b942296",
+      "crop": {
+        "left": 0,
+        "top": 169,
+        "width": 2172,
+        "height": 375
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "c740a55632b1f9fe0a58f9c17f9e7c44807dc1c14dca966445d8b13b323d0d76",
+      "sha256": "79b9db26264ad8ba141d907dc38df5e6113cea2140096a7ba90dc4dbf19659a8",
+      "crop": {
+        "left": 0,
+        "top": 173,
+        "width": 2172,
+        "height": 361
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "c740a55632b1f9fe0a58f9c17f9e7c44807dc1c14dca966445d8b13b323d0d76",
+      "sha256": "79b9db26264ad8ba141d907dc38df5e6113cea2140096a7ba90dc4dbf19659a8",
+      "crop": {
+        "left": 0,
+        "top": 173,
+        "width": 2172,
+        "height": 361
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "eb5c616fd354095c9af15186b53f73971cc2265b09fc2a79d10275404f5edc57",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-450f2199-8137-4bd6-9fa2-239be0f03a7a",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/night-bat-motors/branding/generated-mark.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "3586e5771607c2b72f3e5bc1dbe56372042a2819d0aa963ae6777b328d6b9561",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-029f5d62-3312-4820-887c-20f002b179c6",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/night-bat-motors/branding/generated-mark-on-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "26bbafcfbf59bfa5ae039fe2a2ee192c014974123f53b0d98dec3e0b8a2cdd50",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-450f2199-8137-4bd6-9fa2-239be0f03a7a",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/night-bat-motors/branding/generated-mark.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "c55d506ec413ac2e9f6fb11fac53dccfe188c5def832c585329ef459c2cf46ef",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-450f2199-8137-4bd6-9fa2-239be0f03a7a",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/night-bat-motors/branding/generated-mark.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T18:56:44.764978Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "df09dd241564dc84bf7b8be7145b810f898a4e9586b026b39f3b5477057f5dc4",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-029f5d62-3312-4820-887c-20f002b179c6",
+      "modelVersion": null
+    }
+  }
+}

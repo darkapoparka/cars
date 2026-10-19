@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "dealer": "small-automatics",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "public-listing-1",
+      "title": "2008 BMW 325i M Sport Convertible Auto — Cat C/D",
+      "make": "BMW",
+      "model": "3 Series",
+      "year": 2008,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/public-1.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/960067194824",
+      "observedAt": "2026-10-19T17:53:14.805635Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "color": "White",
+      "mileageValue": 106709,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview. The public listing carries a Category C/D vehicle-history advisory without identifying which of those categories applies. Vehicle history and condition have not been independently verified."
+    },
+    {
+      "id": "public-listing-2",
+      "title": "2007 Mercedes-Benz A180 CDI Avantgarde SE Auto",
+      "make": "Mercedes-Benz",
+      "model": "A Class",
+      "year": 2007,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/public-2.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/960048195234",
+      "observedAt": "2026-10-19T17:53:15.124787Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "fuel": "Diesel",
+      "color": "Black",
+      "mileageValue": 89000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "public-listing-3",
+      "title": "2008 Toyota Yaris 1.3 VVT-i TR MMT",
+      "make": "Toyota",
+      "model": "Yaris",
+      "year": 2008,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/public-3.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/960045613995",
+      "observedAt": "2026-10-19T17:53:15.286963Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "color": "Grey",
+      "mileageValue": 43898,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}
