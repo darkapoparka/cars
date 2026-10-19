@@ -4,6 +4,7 @@ import { assertIndependentCheckout } from './lib/dealer-source.mjs';
 import path from 'node:path';
 import { clientSourceGuide } from './lib/client-source-guide.mjs';
 import {ROOT,json,writeJson,validateManifest,git} from './lib/workflow.mjs';
+import {listDealerPacks} from './lib/dealer-pack-index.mjs';
 
 const supported=['auto-best','modern','import','carwow','app','mobile','karento-best','rencar','autodeal','showroom','boxcar','motoria','nusavo'];
 const read = file => fs.existsSync(file) ? json(file) : null;
@@ -80,7 +81,8 @@ export function writeRegistryViews(root=ROOT) {
  return registry;
 }
 function main(){
- if(process.argv.includes('--help')){console.log('Usage: node scripts/index-deployments.mjs [--write | --check | --views-only]\nDefault: preview local indexing; write: preserve registry evidence and regenerate views; check: validate without mutation; views-only: regenerate views from saved registry without scanning potentially stale dealer files.');return;}
+ if(process.argv.length===3&&process.argv[2]==='--packs'){console.log(JSON.stringify({schemaVersion:1,sourceFormat:'dealer-pack',projects:listDealerPacks(ROOT),providerWrites:false},null,2));return;}
+ if(process.argv.includes('--help')){console.log('Usage: node scripts/index-deployments.mjs [--write | --check | --views-only | --packs]\nDefault: preview local indexing; write: preserve registry evidence and regenerate views; check: validate without mutation; views-only: regenerate views from saved registry without scanning potentially stale dealer files; packs: list compact source inputs without claiming deployments.');return;}
  const options=process.argv.slice(2);if(options.some(x=>!['--write','--check','--views-only'].includes(x))||options.length>1)throw new Error('Use --write, --check or --views-only.');
  if(options.includes('--views-only')){const registry=writeRegistryViews();console.log(JSON.stringify({mode:'--views-only',dealers:registry.dealers.length,source:'saved-registry',dealerFilesScanned:false}));return;}
  const inventory=indexDeployments();validateRegistry(inventory,ROOT);

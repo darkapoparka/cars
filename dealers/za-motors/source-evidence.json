@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "dealer": "za-motors",
+  "researchId": "gb-birmingham-za-motors",
+  "observedOn": "2026-10-19",
+  "businessSources": [
+    {
+      "url": "https://www.zamotors.co.uk/",
+      "observedAt": "2026-10-19T12:02:43Z",
+      "supports": [
+        "name",
+        "address",
+        "phone",
+        "email"
+      ]
+    },
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Z-A-Motors",
+      "observedAt": "2026-10-19T12:05:15Z",
+      "supports": [
+        "advertised-vehicle-identity",
+        "dealer-attributed-media"
+      ]
+    }
+  ],
+  "stockMode": "dated-listing-snapshot",
+  "inventoryCountMeaning": "Three selected public advertisements; not a count of current physical or available inventory.",
+  "media": [
+    {
+      "path": "dealer-stock/skoda-fabia-2013.jpg",
+      "sourceUrl": "https://i.ebayimg.com/images/g/LGoAAeSwrO1q1QlT/s-l1600.jpg",
+      "listingUrl": "https://www.ebay.co.uk/itm/137854767796",
+      "observedAt": "2026-10-19T12:08:26Z",
+      "sha256": "cc6c403a6f1b392af39c7c508f61b03ce5f25b24a22a513c21663d36b6a74511",
+      "bytes": 333359,
+      "modification": "None; original downloaded raster bytes retained."
+    },
+    {
+      "path": "dealer-stock/ford-b-max-2013.jpg",
+      "sourceUrl": "https://i.ebayimg.com/images/g/JZYAAeSwcC5q1c8A/s-l1600.jpg",
+      "listingUrl": "https://www.ebay.co.uk/itm/137848442337",
+      "observedAt": "2026-10-19T12:08:26Z",
+      "sha256": "2d433c9de69ecd2ec4b3c7421bdc9e073f04c1e769b9f45aefda264fdd91d882",
+      "bytes": 349017,
+      "modification": "None; original downloaded raster bytes retained."
+    },
+    {
+      "path": "dealer-stock/honda-jazz-2007.jpg",
+      "sourceUrl": "https://i.ebayimg.com/images/g/ta0AAeSwjHtq1c8B/s-l1600.jpg",
+      "listingUrl": "https://www.ebay.co.uk/itm/137848442287",
+      "observedAt": "2026-10-19T12:08:28Z",
+      "sha256": "53382f6cc1ac373d5289fb8cd375c9d348c074e8021f57492bc4da6bee01e798",
+      "bytes": 322440,
+      "modification": "None; original downloaded raster bytes retained."
+    }
+  ],
+  "excludedSourceContent": [
+    "Personal names and private contact details",
+    "Listing and finance prices",
+    "Unverified reviews, warranties, finance promises and service claims",
+    "Template content unrelated to the dealer"
+  ],
+  "dealerApproval": "unknown"
+}

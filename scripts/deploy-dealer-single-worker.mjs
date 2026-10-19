@@ -355,8 +355,58 @@ export async function runFleetSingletonDeployment({reviewFile,write=false,mode='
  }finally{fs.unlinkSync(lock);}
 }
 
-export function parseDeploymentArgs(argv){const result={write:false};for(let i=0;i<argv.length;i++){const key=argv[i];if(key==='--write'){assert(!result.write,'Repeated --write');result.write=true;}else{assert(['--input','--wrangler-package','--mode'].includes(key)&&argv[i+1]&&!argv[i+1].startsWith('--'),'Use --input REVIEW_JSON [--mode create-singleton] [--write --wrangler-package ABS_PACKAGE_JSON]');const name=key==='--input'?'reviewFile':key==='--mode'?'mode':'toolPackage';assert(!result[name],'Repeated '+key);result[name]=argv[++i];}}assert(result.reviewFile,'Use --input REVIEW_JSON [--mode create-singleton] [--write --wrangler-package ABS_PACKAGE_JSON]');if(result.mode)assert(['update-existing','create-singleton'].includes(result.mode),'Use update-existing or create-singleton mode');return result;}
+export function readDealerPackBatch(batchFile){
+ const slugs=json(batchFile);
+ assert(Array.isArray(slugs)&&slugs.length>0&&slugs.length<=400&&slugs.every(slug=>typeof slug==='string'&&slug.length<=63&&/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug))&&new Set(slugs).size===slugs.length,
+  'Batch must be a JSON array of 1 to 400 distinct dealer slugs');
+ return slugs;
+}
+
+/** M1 candidates may be inspected on their real branch/run; this never grants deployment approval. */
+export async function inspectDealerPackBatch({batchFile,bundleRoot,plan,reportFile,write=false,root=ROOT,loadPack}={}){
+ assert(write===false,'Dealer pack batch --write is unavailable until the separately authorized M2 deployment');
+ assert(['free','paid'].includes(plan),'Batch inspection requires an explicit --plan free or paid build target');
+ const slugs=readDealerPackBatch(batchFile),base=path.resolve(bundleRoot??path.join(root,'runtime/dealer-packs'));
+ const {inspectDealerPackBundle}=await import('./verify-dealer-pack.mjs');
+ if(!loadPack)({loadDealerPack:loadPack}=await import('./lib/dealer-pack.mjs'));
+ const result={schemaVersion:1,type:'cars-dealer-pack-batch-inspection',startedAt:new Date().toISOString(),targetPlan:plan,success:false,
+  deployments:0,providerWrites:0,readyToDeploy:false,hostedVerified:false,ownerAccepted:false,results:[],
+  qualification:{sourcePublication:'not-verified-by-candidate-inspection',workersPlan:'not-verified',capacity:'not-verified',routes:'not-changed',
+   note:'This verifies local candidate bytes and bound build/QA reports. It is not a main-branch publication proof, a live provider inventory, or deployment authorization.'}};
+ for(const slug of slugs)try{
+  const pack=await loadPack(root,slug),directory=inside(base,slug+'/bundle',{mustExist:true});
+  const context=inspectDealerPackBundle({bundleRoot:directory,slug,packDigest:pack.packDigest,releaseDigest:pack.releaseDigest??pack.manifest.releaseDigest,sourceReleases:pack.manifest.templateSources,plan});
+  const parent=path.dirname(directory),build=json(inside(parent,'build-report.json',{mustExist:true})),qa=json(inside(parent,'qa-report.json',{mustExist:true})),receipt=context.receipt;
+  const bound=value=>value&&value.slug===slug&&value.packDigest===receipt.packDigest&&value.releaseDigest===receipt.releaseDigest&&value.outputDigest===receipt.outputDigest&&canonical(value.execution)===canonical(receipt.execution);
+  assert(bound(build)&&build.status==='passed','Build report does not match the actual compiled candidate');
+  assert(bound(qa)&&qa.type==='cars-dealer-pack-qa'&&qa.success===true&&Array.isArray(qa.checks)&&qa.checks.length>0&&qa.checks.every(row=>row.status==='passed'),
+   'QA report is missing, failed, or does not match this candidate');
+  for(const id of ['bundle-integrity','cloudflare-limits','fleet-contact-coverage','logo-assets','rendered-routes','screenshots','bundle-unchanged'])assert(qa.checks.filter(row=>row.id===id&&row.status==='passed').length===1,'Missing candidate QA gate: '+id);
+  assert(qa.capacity?.targetPlan===plan&&context.capacity.status==='passed','QA or bundle budget differs from the requested target plan');
+  assert(qa.proof?.screenshots?.length===18,'All six designs require 320/390/1280 screenshot evidence');
+  const seen=new Set();
+  for(const image of qa.proof.screenshots){
+   assert(['auto-best','modern','import','app','mobile','karento-best'].includes(image.key)&&[320,390,1280].includes(image.width)&&!seen.has(image.key+':'+image.width)&&
+    typeof image.path==='string'&&!path.isAbsolute(image.path)&&!image.path.includes('\\')&&!image.path.split('/').some(part=>!part||part==='.'||part==='..')&&hex64(image.sha256),'Invalid screenshot evidence');
+   seen.add(image.key+':'+image.width);assert(sha256(fs.readFileSync(inside(parent,image.path,{mustExist:true})))===image.sha256,'Screenshot bytes changed: '+image.path);
+  }
+  result.results.push({slug,status:'passed',workerName:receipt.workerName,publicOrigin:receipt.publicOrigin,workerCount:1,applicationCount:6,serviceBindings:[],
+   execution:receipt.execution,sourceCommit:receipt.sourceCommit,packDigest:receipt.packDigest,releaseDigest:receipt.releaseDigest,outputDigest:receipt.outputDigest,
+   capacity:context.capacity,buildStatus:build.status,qaStatus:'passed',readyToDeploy:false,deployments:0});
+ }catch(error){result.results.push({slug,status:'failed',reason:error.message,readyToDeploy:false,deployments:0});}
+ result.success=result.results.every(row=>row.status==='passed');result.finishedAt=new Date().toISOString();
+ if(reportFile){const target=path.resolve(reportFile);assert(!path.relative(base,target).split(path.sep).includes('bundle'),'Inspection report must stay outside sealed bundles');fs.mkdirSync(path.dirname(target),{recursive:true});fs.writeFileSync(target,JSON.stringify(result,null,2)+'\n');}
+ return result;
+}
+
+export function parseDeploymentArgs(argv){
+ const result={write:false},names={'--input':'reviewFile','--wrangler-package':'toolPackage','--mode':'mode','--batch':'batchFile','--bundle-root':'bundleRoot','--plan':'plan','--report':'reportFile'};
+ for(let i=0;i<argv.length;i++){const key=argv[i];if(key==='--write'){assert(!result.write,'Repeated --write');result.write=true;}else{assert(names[key]&&argv[i+1]&&!argv[i+1].startsWith('--'),'Use --input REVIEW_JSON, or --batch SLUGS_JSON --bundle-root DIRECTORY --plan free|paid');const name=names[key];assert(!result[name],'Repeated '+key);result[name]=argv[++i];}}
+ if(result.batchFile){assert(!result.write,'Dealer pack batch --write is unavailable until the separately authorized M2 deployment');assert(!result.reviewFile&&!result.toolPackage&&!result.mode,'Batch inspection cannot mix legacy deployment options');assert(result.bundleRoot&&['free','paid'].includes(result.plan),'Use --batch SLUGS_JSON --bundle-root DIRECTORY --plan free|paid');}
+ else{assert(result.reviewFile&&!result.bundleRoot&&!result.plan&&!result.reportFile,'Use --input REVIEW_JSON [--mode create-singleton] [--write --wrangler-package ABS_PACKAGE_JSON]');if(result.mode)assert(['update-existing','create-singleton'].includes(result.mode),'Use update-existing or create-singleton mode');}
+ return result;
+}
 if(isEntrypoint(import.meta.url)){try{
- if(process.argv.slice(2).includes('--help'))console.log('Usage: deploy-dealer-single-worker.mjs --input REVIEW_JSON [--mode create-singleton] [--write --wrangler-package ABS_PACKAGE_JSON]\nDefault: exact artifact/source inspection only; update-existing is the default target mode. Explicit create-singleton requires a fresh complete absent-target inventory. Reserve defaults to one slot; a concrete reviewed Paid-500 policy can explicitly use the final slot. Capacity defaults to 100; 500 requires fresh reviewed paid-plan evidence. --write uploads once with standard Wrangler authentication. No builds/downloads/dependent Workers.');
- else console.log(JSON.stringify(await runFleetSingletonDeployment(parseDeploymentArgs(process.argv.slice(2))),null,2));
+ if(process.argv.slice(2).includes('--help'))console.log('Usage: deploy-dealer-single-worker.mjs --input REVIEW_JSON [--mode create-singleton] [--write --wrangler-package ABS_PACKAGE_JSON]\nDefault: exact artifact/source inspection only; update-existing is the default target mode. Explicit create-singleton requires a fresh complete absent-target inventory. Reserve defaults to one slot; a concrete reviewed Paid-500 policy can explicitly use the final slot. Capacity defaults to 100; 500 requires fresh reviewed paid-plan evidence. --write uploads once with standard Wrangler authentication. No builds/downloads/dependent Workers.\nDealer-pack candidate inspection: --batch SLUGS_JSON --bundle-root runtime/dealer-packs --plan free|paid [--report PATH]. JSON arrays of slugs only; --write is rejected for candidate batches pending M2.');
+ else{const options=parseDeploymentArgs(process.argv.slice(2)),result=await(options.batchFile?inspectDealerPackBatch(options):runFleetSingletonDeployment(options));console.log(JSON.stringify(result,null,2));if(options.batchFile&&!result.success)process.exitCode=1;}
 }catch(error){console.error(error.message);process.exitCode=1;}}

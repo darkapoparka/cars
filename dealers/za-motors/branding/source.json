@@ -1,0 +1,131 @@
+{
+  "schemaVersion": 1,
+  "dealer": "za-motors",
+  "publishedBranding": "text-identity-observed",
+  "sourceLogoUrl": null,
+  "workingLogoPath": "branding/generated-master.png",
+  "creationMethod": "imagegen-proposal",
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "id": "exec-6a60aac8-d2e5-4650-9e26-34da25e08164",
+    "modelVersion": null
+  },
+  "approvalStatus": "independent-proposal-not-dealer-approved",
+  "observedAt": "2026-10-19",
+  "checkedSources": [
+    "https://www.zamotors.co.uk/",
+    "https://showroom.ebaymotorspro.co.uk/Z-A-Motors",
+    "https://www.cazoo.co.uk/dealers/z-a-motors-55602/"
+  ],
+  "researchConclusion": "No usable original logo obtained from the bounded source checks. The official homepage uses a text identity and its only image is a vehicle dashboard; the dealer showroom has text identity and car photographs. Cazoo references a logo image on an unavailable image host. This does not prove that no original branding exists.",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T12:19:59Z",
+    "master": {
+      "path": "branding/generated-master.png",
+      "sha256": "2172ff3ba6d7259482ad21180c00b467348650405991b4a2b61bc62703fc0269",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-6a60aac8-d2e5-4650-9e26-34da25e08164",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "7a273061112ff08d1bedfac3f5ef22932666af97bce9287974f2687da141eeaa",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-06f495db-95c1-4e82-b940-aeb5acd78bba",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-master.png",
+        "sha256": "2172ff3ba6d7259482ad21180c00b467348650405991b4a2b61bc62703fc0269",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-6a60aac8-d2e5-4650-9e26-34da25e08164",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "7767d9b1ee59987773a31ebea0c036c0248fcae0519b178d61b1af3b4d93a2ab",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-a381f01f-2f8a-4283-993e-515c969899c2",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "7767d9b1ee59987773a31ebea0c036c0248fcae0519b178d61b1af3b4d93a2ab",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-a381f01f-2f8a-4283-993e-515c969899c2",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#101820",
+        "onAccent": "#ec1838"
+      },
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "notes": "Reviewed composited RGBA artwork. White treatment is the same actual image-generation output on dark and accent surfaces. Transparent padding may be cropped in export; source pixels and originals are retained."
+    },
+    "compactMarkStatus": "independent-proposal-not-dealer-approved",
+    "compactMarkDescription": "ZA monogram consistent with the independent wordmark proposal.",
+    "markOnDark": {
+      "path": "branding/generated-mark-on-dark.png",
+      "sha256": "4fffe43977e24dd9c485084e7de400dc92a406324ee7f68e34d165a783202354",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-3fc9d2af-c019-4229-80f9-9c27ae0ff4f0",
+        "modelVersion": null
+      }
+    },
+    "marks": {
+      "onLight": {
+        "path": "branding/generated-mark.png",
+        "sha256": "7a273061112ff08d1bedfac3f5ef22932666af97bce9287974f2687da141eeaa",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-06f495db-95c1-4e82-b940-aeb5acd78bba",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-mark-on-dark.png",
+        "sha256": "4fffe43977e24dd9c485084e7de400dc92a406324ee7f68e34d165a783202354",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-3fc9d2af-c019-4229-80f9-9c27ae0ff4f0",
+          "modelVersion": null
+        }
+      }
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T12:25:42Z",
+      "widths": [
+        32,
+        64,
+        96
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#101820",
+        "#ec1838"
+      ],
+      "notes": "Actual light and white generated compact variants rendered legibly after transparent padding removal; no dealer approval is claimed."
+    }
+  },
+  "usageStatus": "public-preview-only"
+}

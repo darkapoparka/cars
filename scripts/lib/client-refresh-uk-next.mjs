@@ -58,10 +58,11 @@ export function ukMileageModule(facts = {}) {
   ].join('\n');
 }
 
-function transaction(files, profile, run) {
-  if (!isUk(profile)) return [];
-  if (profile.business.currency !== 'GBP' || profile.listings.some(item => item.currency !== 'GBP')) {
-    throw new Error('UK Next stock must have recorded GBP prices; mixed currencies cannot be relabelled');
+function transaction(files, profile, run, {dealerPackUsMiles = false} = {}) {
+  if (!isUk(profile) && !dealerPackUsMiles) return [];
+  const expectedCurrency = dealerPackUsMiles ? 'USD' : 'GBP';
+  if (profile.business.currency !== expectedCurrency || profile.listings.some(item => item.currency !== expectedCurrency)) {
+    throw new Error((dealerPackUsMiles ? 'US dealer-pack stock must retain USD currency' : 'UK Next stock must have recorded GBP prices') + '; mixed currencies cannot be relabelled');
   }
   const pending = new Map(), changed = [];
   const get = name => {
@@ -335,13 +336,16 @@ export const UK_APP_PATHS = [
   'components/VehicleComparison.tsx', 'components/VehicleDetailClient.tsx',
   'components/SellEnquirySheet.tsx'
 ];
-export function personalizeAppUk(files, profile, mileageFacts) {
-  if (!isUk(profile)) return [];
+export function personalizeAppUk(files, profile, mileageFacts, {factPolicy} = {}) {
+  // New compact US packs share the maintained miles formatter and numeric
+  // filter boundaries. Existing callers keep the exact GB-only behavior.
+  const dealerPackUsMiles = factPolicy === 'dealer-pack-optional-v1' && profile?.business?.countryCode === 'US' && profile.business.distanceUnit === 'mi';
+  if (!isUk(profile) && !dealerPackUsMiles) return [];
   const facts = Object.fromEntries(mileageFacts.map(item => [item.slug,
     item.sourceValue === null ? null : {value: item.sourceValue, unit: item.sourceUnit}]));
   return transaction(files, profile, ({get, put, patch, use}) => {
     put('lib/dealer-mileage.ts', ukMileageModule(facts));
-    patch('lib/currency.ts', "dealer.currency === 'EUR' ? '€' : dealer.currency", "dealer.currency === 'GBP' ? '£' : dealer.currency === 'EUR' ? '€' : dealer.currency");
+    if (!dealerPackUsMiles) patch('lib/currency.ts', "dealer.currency === 'EUR' ? '€' : dealer.currency", "dealer.currency === 'GBP' ? '£' : dealer.currency === 'EUR' ? '€' : dealer.currency");
     use('lib/inventory-filters.ts', 'dealerMileageValue', './dealer-mileage');
     patch('lib/inventory-filters.ts', /Under (30|60|90|120|150),000 kms/g, 'Under $1,000 mi', 5);
     patch('lib/inventory-filters.ts', 'vehicle.mileage < filters.mileageMinimum || vehicle.mileage > filters.mileageMaximum', 'dealerMileageValue(vehicle) < filters.mileageMinimum || dealerMileageValue(vehicle) > filters.mileageMaximum');
@@ -362,7 +366,7 @@ export function personalizeAppUk(files, profile, mileageFacts) {
       "['Kilometers', columns.map(car=>" + tick + "\${formatPrice(car.originalMileage ?? (native && car.slug===vehicle.slug ? 50005 : car.mileage))} km" + tick + ")]",
       "['Mileage', columns.map(car=>formatStockMileage(car))]");
     patch('components/SellEnquirySheet.tsx', "'Mileage (km)'", "'Mileage (mi)'", 2);
-    if (profile.listings.some(item => (item.mediaKind || item.raw?.mediaKind) === 'generated_category_illustration')) {
+    if (!dealerPackUsMiles && profile.listings.some(item => (item.mediaKind || item.raw?.mediaKind) === 'generated_category_illustration')) {
       for (const name of ['components/VehicleCard.tsx', 'components/VehicleDetailClient.tsx']) {
         patch(name, "tx('Photo unavailable')", "tx('Illustration — not the advertised vehicle')", 2);
         // Keep descriptive alt text and one visible inventory notice, without stamping every image.
@@ -373,5 +377,5 @@ export function personalizeAppUk(files, profile, mileageFacts) {
         patch(detail, '<p {...stylex.props(s.summary)}>{summary}</p></header>', '<p {...stylex.props(s.summary)}>{summary}</p></header>{dealer.inventoryNotice?<p data-vehicle-media-notice {...stylex.props(s.summary)}>{tx(dealer.inventoryNotice)}</p>:null}');
       }
     }
-  });
+  }, {dealerPackUsMiles});
 }

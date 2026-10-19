@@ -10,6 +10,7 @@ import { applyDealerLogoContract } from './client-logo-contract.mjs';
 import { dealerLocalizedCopy } from './dealer-localized-copy.mjs';
 import {renderModernDealerInventoryCopy} from './modern-dealer-inventory-copy.mjs';
 import {personalizeModernDealerServices} from './modern-dealer-services.mjs';
+import { DEALER_PACK_MODERN_PATHS, dealerPackModernListing, isDealerPackOptionalFacts, personalizeDealerPackModernFacts } from './dealer-pack-modern-facts.mjs';
 import {repairImportDealerInventoryCatalog} from './import-dealer-inventory-copy.mjs';
 import { applyCarwowSafeContent, applyImportSafeContent, applyModernSafeContent } from './client-refresh-safe-content.mjs';
 
@@ -204,7 +205,7 @@ const mileageSourcePaths = {
 };
 /** Existing adapter seam, applied only to generated UK dealers, never template masters. */
 function personalizeSvelteMileage(files, key, profile) {
-  if (profile.business.countryCode !== 'GB' || profile.business.distanceUnit !== 'mi') return [];
+  if ((profile.business.countryCode !== 'GB' && profile.factPolicy !== 'dealer-pack-optional-v1') || profile.business.distanceUnit !== 'mi') return [];
   if (!mileageSourcePaths[key]) throw new Error('Unsupported UK Svelte mileage family: ' + key);
   const output = new Map(files);
   const get = name => {
@@ -306,7 +307,7 @@ export const mileageSortValue = (facts: MileageFacts): number => Number.isFinite
   return changed;
 }
 function patchSvelteMileage(candidate, key, profile) {
-  if (profile.business.countryCode !== 'GB' || profile.business.distanceUnit !== 'mi') return [];
+  if ((profile.business.countryCode !== 'GB' && profile.factPolicy !== 'dealer-pack-optional-v1') || profile.business.distanceUnit !== 'mi') return [];
   const files = new Map(mileageSourcePaths[key].map(name => [name, read(path.join(candidate, name))]));
   const changed = personalizeSvelteMileage(files, key, profile);
   for (const name of changed) write(path.join(candidate, name), files.get(name));
@@ -703,6 +704,7 @@ function patchAutoBest({ oldVariant, candidate, profile }) {
 }
 
 function modernListing(item, index, id, profile) {
+  if (isDealerPackOptionalFacts(profile)) return dealerPackModernListing(item, index, id, profile);
   const b = profile.business;
   const uk = b.countryCode === 'GB' && b.distanceUnit === 'mi';
   const original = uk ? ukSourceMileage(item) : null;
@@ -1027,12 +1029,20 @@ function patchModern({ oldVariant, candidate, profile, reviewedModernCopy }) {
   }
   const directoryFiles = patchModernAssignedDirectory(candidate, profile);
   const safeContent = applyModernSafeContent({ candidate, profile });
+  const optionalFactsFiles = [];
+  if (isDealerPackOptionalFacts(profile)) {
+    const generated = new Map(DEALER_PACK_MODERN_PATHS.map(name => [name, read(path.join(candidate, name))]));
+    for (const name of personalizeDealerPackModernFacts(generated, profile)) {
+      write(path.join(candidate, name), String(generated.get(name)));
+      optionalFactsFiles.push(name);
+    }
+  }
   return [
     'packages/marketplace-domain/testing/mock-data.ts',
     'packages/marketplace/content/inventory-copy.ts',
     'packages/marketplace/lead-site.ts',
     'packages/marketplace-domain/testing/dealer-profile.json',
-    ...dealerTextFiles, ...directoryFiles, ...safeContent.changed
+    ...dealerTextFiles, ...directoryFiles, ...safeContent.changed, ...optionalFactsFiles
   ];
 }
 
@@ -1329,7 +1339,7 @@ function assertImportListingFacts(profile) {
     const years = [sourceYear(raw.year), sourceYear(raw.production), dateYear];
     const productionYear = sourceYear(raw.production || `${item.year} г.`);
     if (!Number.isInteger(item.year) || !years.includes(item.year) || productionYear !== item.year) fields.push('year');
-    if (!originalMileageFacts(item).mileageKnown) fields.push('mileage');
+    if (!originalMileageFacts(item).mileageKnown && profile.factPolicy !== 'dealer-pack-optional-v1') fields.push('mileage');
     if (!/^[A-Z]{3}$/.test(profile.business.currency || '') || item.currency !== profile.business.currency) fields.push('currency');
     if (fields.length) {
       const error = new Error('Import adaptation requires reviewed compatible ' + fields.join(', ') + '; its selected source cannot display these facts safely: ' + (item.sourceId || item.id));
@@ -1342,7 +1352,7 @@ function assertImportListingFacts(profile) {
 
 function importListingFeed(profile) {
   const b = profile.business;
-  const nativeMiles = b.countryCode === 'GB' && b.distanceUnit === 'mi';
+  const nativeMiles = (b.countryCode === 'GB' || profile.factPolicy === 'dealer-pack-optional-v1') && b.distanceUnit === 'mi';
   const spacing = (value) => new Intl.NumberFormat('fr-FR', { maximumFractionDigits: 0 })
     .format(Number(value || 0)).replace(/\u202f/g, ' ');
   const listings = profile.listings.map((item) => {

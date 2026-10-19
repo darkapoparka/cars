@@ -1,5 +1,7 @@
 # Dealer workflow
 
+New compact-input previews: [dealer-pack pipeline](PIPELINE.md).
+
 The owner's [six-design fleet contract](FLEET-ROLLOUT-2026-10-11.md) defines current delivery: **Auto Best, Modern, Import, App, Mobile and Signature (`karento-best`) through one Cloudflare Worker per dealer**, including all applications/assets, the design FAB and shared public Admin demo. Carwow and old trio/five-design workflows remain history. Marketplace platforms are separate.
 
 ## Ownership and completion

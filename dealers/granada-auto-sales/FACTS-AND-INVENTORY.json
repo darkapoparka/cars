@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "dealer": "granada-auto-sales",
+  "businessFacts": "business-facts.json",
+  "stock": "stock.json",
+  "inventoryKind": "dated-listing-snapshot",
+  "inventoryNotice": "Dated public listing samples observed on 19 October 2026. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "previewNotice": "Independent website preview; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+  "sources": [
+    {
+      "url": "https://granadaautosales.com/",
+      "observedAt": "2026-10-19T12:02:43Z",
+      "supports": [
+        "name",
+        "address",
+        "phone",
+        "email"
+      ]
+    },
+    {
+      "url": "https://inventory.granadaautosales.com/",
+      "observedAt": "2026-10-19T12:02:44Z",
+      "supports": [
+        "advertised-vehicle-identity",
+        "dealer-attributed-media"
+      ]
+    }
+  ]
+}

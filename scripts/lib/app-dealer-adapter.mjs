@@ -43,7 +43,7 @@ function dealerMileage(listing,business) {
  return unknown;
 }
 /** Existing dealer source is authoritative. readFile permits exact, hash-verified deployment inputs. */
-export async function prepareAppDealer(sourceRoot, manifest, {readFile, appFiles} = {}) {
+export async function prepareAppDealer(sourceRoot, manifest, {readFile, appFiles, factPolicy} = {}) {
  const read = readFile || (name => fs.readFile(path.join(sourceRoot, name)));
  const profileBytes = await read('auto-best/src/lib/data/dealer-profile.json');
  const profile = JSON.parse(profileBytes.toString('utf8'));
@@ -119,11 +119,14 @@ export async function prepareAppDealer(sourceRoot, manifest, {readFile, appFiles
  files.set('lib/dealer-inventory.json',Buffer.from(JSON.stringify(inventory,null,2)+'\n'));
  const provenance={schemaVersion:1,dealer:manifest.slug,profile:'auto-best/src/lib/data/dealer-profile.json',profileSha256:hash(profileBytes),
   logoPolicy:'Preserve existing raster identities; no replacement logo was generated.',vehicles:inventory.length,currency,observedAt,assets,mileageFacts};
- if (business.countryCode === 'GB' && business.distanceUnit === 'mi') {
+ const dealerPackUsMiles = factPolicy === 'dealer-pack-optional-v1' && business.countryCode === 'US' && business.distanceUnit === 'mi';
+ if ((business.countryCode === 'GB' && business.distanceUnit === 'mi') || dealerPackUsMiles) {
   const candidate = appFiles ? new Map(appFiles) : new Map(await Promise.all(UK_APP_PATHS.map(async name => [name, await read('app/' + name)])));
-  const contentPaths = personalizeAppUk(candidate, profile, mileageFacts);
+  const contentPaths = personalizeAppUk(candidate, profile, mileageFacts, {factPolicy});
   for (const name of contentPaths) files.set(name, Buffer.from(candidate.get(name)));
-  provenance.ukPresentation = {distanceUnit:'mi', canonicalDistanceUnit:'km', originalMileageRetained:true, contentPaths};
+  const presentation = {distanceUnit:'mi', canonicalDistanceUnit:'km', originalMileageRetained:true, contentPaths};
+  if (dealerPackUsMiles) provenance.dealerPackPresentation = {...presentation, countryCode:'US', factPolicy};
+  else provenance.ukPresentation = presentation;
  }
  return {config,inventory,files,provenance};
 }

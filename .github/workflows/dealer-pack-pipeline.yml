@@ -1,0 +1,316 @@
+name: Dealer pack pipeline
+on:
+  workflow_dispatch:
+    inputs:
+      slugs:
+        description: Comma-separated or JSON list of 1–25 committed dealer packs
+        required: true
+        default: za-motors,wadishee-used-cars,granada-auto-sales
+        type: string
+  pull_request:
+    paths:
+      - 'dealers/**'
+      - 'scripts/**'
+      - 'templates/**'
+      - '.github/workflows/dealer-pack-pipeline.yml'
+permissions:
+  contents: read
+concurrency:
+  group: dealer-packs-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+env:
+  NEXT_TELEMETRY_DISABLED: '1'
+  WRANGLER_SEND_METRICS: 'false'
+  WRANGLER_LOG_SANITIZE: 'true'
+
+jobs:
+  plan:
+    runs-on: ubuntu-24.04
+    outputs:
+      matrix: ${{ steps.plan.outputs.matrix }}
+      dealers: ${{ steps.plan.outputs.dealers }}
+    steps:
+      - name: Check out only pipeline source, packs and readable contracts
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /scripts/
+            /dealers/
+            /templates/
+            /leads/expansion-2026-10-18/
+            /docs/**/*.md
+            /docs/**/*.json
+            /docs/releases/cloudflare-existing25-20261011/new-source/centralauto-varna/branding/
+            /docs/releases/cloudflare-existing25-20261011/new-source/kalchev-varna/branding/
+            /docs/releases/cloudflare-existing25-20261011/new-source/sevicar-varna/branding/
+            /.github/
+            /.agents/
+            /AGENTS.md
+            /README.md
+            /Cars.code-workspace
+            /catalog.json
+            /templates.lock.json
+            /workspace.json
+            /clients/index.json
+            /clients/README.md
+            /leads/README.md
+            /leads/COVERAGE.md
+            /.gitignore
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: '26.10.0'
+          package-manager-cache: false
+      - name: Install bounded test dependencies
+        run: npm install --prefix runtime/dealer-pack-test-tools --ignore-scripts --no-audit --no-fund --save-exact esbuild@0.28.2 sharp@0.35.5 typescript@6.0.3 svelte@5.57.2 zod@4.3.6
+      - name: Install the existing pinned Worker stream-test runtime
+        run: |
+          npm install --prefix runtime/dealer-pack-stream-tests --save-exact --no-audit --no-fund miniflare@5.20261006.1-alpha
+          node --input-type=module <<'NODE'
+          import assert from 'node:assert/strict';
+          import fs from 'node:fs';
+          import {createRequire} from 'node:module';
+          const require=createRequire(process.cwd()+'/runtime/dealer-pack-stream-tests/package.json');
+          for(const [name,version]of Object.entries({miniflare:'5.20261006.1-alpha',workerd:'1.20261006.1'})) assert.equal(JSON.parse(fs.readFileSync(require.resolve(name+'/package.json'))).version,version);
+          NODE
+      - name: Verify old composer and new pack contracts
+        env:
+          CARS_ESBUILD_RESOLVE_FROM: ${{ github.workspace }}/runtime/dealer-pack-test-tools/package.json
+          CARS_SHARP_ROOT: ${{ github.workspace }}/runtime/dealer-pack-test-tools
+          CARS_QA_RESOLVE_FROM: ${{ github.workspace }}/runtime/dealer-pack-test-tools/package.json
+          CARS_MINIFLARE_RESOLVE_FROM: ${{ github.workspace }}/runtime/dealer-pack-stream-tests/package.json
+          NODE_PATH: ${{ github.workspace }}/runtime/dealer-pack-test-tools/node_modules
+        run: |
+          node --test scripts/*dealer-pack*.test.mjs scripts/package-uk-single-worker.test.mjs scripts/package-dealer.test.mjs scripts/six-publishing.test.mjs scripts/cloudflare-six-mount.test.mjs scripts/six-variant-refresh.test.mjs scripts/lead-branding-surfaces.test.mjs scripts/registered-dealer-adoption.test.mjs
+          node scripts/check-workflow.mjs
+      - name: Resolve exact committed packs and bounded native build matrix
+        id: plan
+        env:
+          PACK_SLUGS: ${{ inputs.slugs }}
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          import {packBuildMatrix,parsePackSlugs,PROOF_DEALERS} from './scripts/build-dealer-pack.mjs';
+          import {loadDealerPack} from './scripts/lib/dealer-pack.mjs';
+          const slugs=parsePackSlugs(process.env.PACK_SLUGS || PROOF_DEALERS);
+          for(const slug of slugs) await loadDealerPack(process.cwd(),slug);
+          fs.appendFileSync(process.env.GITHUB_OUTPUT,'matrix='+JSON.stringify(packBuildMatrix(slugs))+'\ndealers='+JSON.stringify(slugs)+'\n');
+          NODE
+
+  source:
+    needs: plan
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        slug: ${{ fromJSON(needs.plan.outputs.dealers) }}
+    env:
+      DEALER_SLUG: ${{ matrix.slug }}
+      CARS_DEALER_PACK_TOOL_PACKAGE: ${{ github.workspace }}/runtime/dealer-pack-source-tools/package.json
+    steps:
+      - name: Check out immutable masters and sourced dealer inputs without the existing fleet
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /scripts/
+            /dealers/${{ matrix.slug }}/
+            /dealers/templates.lock.json
+            /templates/
+            /leads/expansion-2026-10-18/
+            /docs/**/*.md
+            /docs/**/*.json
+            /catalog.json
+            /templates.lock.json
+            /workspace.json
+            /clients/index.json
+            /.gitignore
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: '26.10.0'
+          package-manager-cache: false
+      - name: Bind the shared source cache to the pack, releases, tools and source commit
+        id: identity
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          import {dealerPackSourceIdentity} from './scripts/build-dealer-pack.mjs';
+          const identity=await dealerPackSourceIdentity({slug:process.env.DEALER_SLUG});
+          fs.appendFileSync(process.env.GITHUB_OUTPUT,'cache_key='+identity.cacheKey+'\n');
+          NODE
+      - name: Restore the exact complete personalized source artifact
+        id: source-cache
+        uses: actions/cache@v4
+        with:
+          path: runtime/dealer-pack-source/artifact/
+          key: ${{ steps.identity.outputs.cache_key }}
+      - name: Install exact existing source personalization tools
+        if: steps.source-cache.outputs.cache-hit != 'true'
+        run: npm install --prefix runtime/dealer-pack-source-tools --ignore-scripts --no-audit --no-fund --save-exact sharp@0.35.5 prettier@3.8.1 typescript@6.0.3
+      - name: Assemble all six applications once or verify every cached source byte
+        run: node scripts/build-dealer-pack.mjs source --slug "$DEALER_SLUG" --out runtime/dealer-pack-source
+      - name: Share one sealed source artifact with every native build target
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: dealer-pack-source-${{ matrix.slug }}-${{ github.run_id }}-${{ github.run_attempt }}
+          path: runtime/dealer-pack-source/artifact/
+          include-hidden-files: true
+          if-no-files-found: error
+          compression-level: 6
+          retention-days: 3
+
+  compile:
+    needs: [plan, source]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    strategy:
+      fail-fast: false
+      max-parallel: 7
+      matrix: ${{ fromJSON(needs.plan.outputs.matrix) }}
+    env:
+      DEALER_SLUG: ${{ matrix.slug }}
+      DEALER_FAMILY: ${{ matrix.key }}
+      NODE_OPTIONS: --max-old-space-size=4608
+      CARS_DEALER_PACK_TOOL_PACKAGE: ${{ github.workspace }}/runtime/dealer-pack-source-tools/package.json
+    steps:
+      - name: Check out exact build tools and lightweight pack inputs
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /scripts/
+            /dealers/${{ matrix.slug }}/
+            /dealers/templates.lock.json
+            /docs/**/*.json
+            /catalog.json
+            /templates.lock.json
+            /workspace.json
+            /clients/index.json
+            /.gitignore
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: ${{ matrix.node }}
+          package-manager-cache: false
+      - name: Download the shared exact personalized source
+        uses: actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0
+        with:
+          name: dealer-pack-source-${{ matrix.slug }}-${{ github.run_id }}-${{ github.run_attempt }}
+          path: runtime/dealer-pack-source/artifact/
+      - name: Install exact shared presentation and metadata preparation tools
+        run: npm install --prefix runtime/dealer-pack-source-tools --ignore-scripts --no-audit --no-fund --save-exact sharp@0.35.5 typescript@6.0.3
+      - name: Verify source integrity and apply the existing provider adapter
+        id: prepared
+        run: |
+          node scripts/build-dealer-pack.mjs prepare --slug "$DEALER_SLUG" --family "$DEALER_FAMILY" --source runtime/dealer-pack-source/artifact --out runtime/dealer-pack-work
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const prepared=JSON.parse(fs.readFileSync('runtime/dealer-pack-work/prepare.json'));
+          fs.appendFileSync(process.env.GITHUB_OUTPUT,'cache_key='+prepared.cache.dependencies+'\nrelease_digest='+prepared.releaseDigest+'\n');
+          NODE
+      - name: Reuse release and runtime specific package downloads
+        uses: actions/cache@v4
+        with:
+          path: |
+            runtime/dealer-pack-work/source/.cars-build-assets/${{ matrix.key }}.npm-cache
+            runtime/dealer-pack-cache/${{ steps.prepared.outputs.release_digest }}/${{ matrix.key }}/
+          key: dealer-pack-dependencies-${{ steps.prepared.outputs.cache_key }}
+      - name: Build exact personalized native application and run Wrangler inspection
+        run: node scripts/build-dealer-pack.mjs compile --prepared runtime/dealer-pack-work/prepare.json
+      - name: Retain compiled application and its actual source and build evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: dealer-pack-${{ matrix.slug }}-${{ matrix.key }}-${{ github.run_id }}-${{ github.run_attempt }}
+          path: runtime/dealer-pack-work/artifact/
+          include-hidden-files: true
+          if-no-files-found: warn
+          compression-level: 6
+          retention-days: 3
+      - name: Retain bounded build logs
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: dealer-pack-logs-${{ matrix.slug }}-${{ matrix.key }}-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            runtime/dealer-pack-work/logs/
+            runtime/dealer-pack-work/build-report.json
+          if-no-files-found: warn
+          retention-days: 3
+
+  bundle:
+    needs: [plan, compile]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        slug: ${{ fromJSON(needs.plan.outputs.dealers) }}
+    env:
+      DEALER_SLUG: ${{ matrix.slug }}
+      PLAYWRIGHT_BROWSERS_PATH: ${{ runner.temp }}/cars-dealer-pack-browsers
+      CARS_QA_RESOLVE_FROM: ${{ github.workspace }}/runtime/dealer-pack-tools/package.json
+      CARS_WRANGLER_ROOT: ${{ github.workspace }}/runtime/dealer-pack-compiler-tools
+    steps:
+      - name: Check out exact composition tools and dealer inputs
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /scripts/
+            /dealers/${{ matrix.slug }}/
+            /dealers/templates.lock.json
+            /templates.lock.json
+            /docs/**/*.json
+            /catalog.json
+            /clients/index.json
+            /.gitignore
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: '26.10.0'
+          package-manager-cache: false
+      - uses: actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0
+        with:
+          pattern: dealer-pack-${{ matrix.slug }}-*-${{ github.run_id }}-${{ github.run_attempt }}
+          path: runtime/dealer-pack-inputs/
+      - name: Install the retained exact singleton compiler
+        run: node scripts/build-dealer-pack.mjs tools
+      - name: Compose one six-design Worker with the existing packaging implementation
+        run: node scripts/build-dealer-pack.mjs compose --slug "$DEALER_SLUG" --inputs runtime/dealer-pack-inputs --out "runtime/dealer-packs/$DEALER_SLUG" --tools runtime/dealer-pack-compiler-tools/package.json
+      - name: Install exact browser and image QA tools
+        run: |
+          npm install --prefix runtime/dealer-pack-tools --ignore-scripts --no-audit --no-fund --save-exact sharp@0.35.5 playwright@1.62.1
+          node runtime/dealer-pack-tools/node_modules/playwright/cli.js install --with-deps chromium
+      - name: Verify six real local Worker routes, logo consumers and browser journeys
+        run: node scripts/verify-dealer-pack.mjs --slug "$DEALER_SLUG" --bundle "runtime/dealer-packs/$DEALER_SLUG/bundle" --plan paid --report "runtime/dealer-packs/$DEALER_SLUG/qa-report.json" --screenshots "runtime/dealer-packs/$DEALER_SLUG/screenshots"
+      - name: Inspect the exact candidate through the existing deploy entrypoint
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          fs.writeFileSync('runtime/dealer-pack-batch.json',JSON.stringify([process.env.DEALER_SLUG]));
+          NODE
+          node scripts/deploy-dealer-single-worker.mjs --batch runtime/dealer-pack-batch.json --bundle-root runtime/dealer-packs --plan paid --report "runtime/dealer-packs/$DEALER_SLUG/deploy-inspection.json"
+      - name: Retain complete bundle, JSON reports and screenshots without committing them
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: dealer-pack-bundle-${{ matrix.slug }}-${{ github.run_id }}-${{ github.run_attempt }}
+          path: runtime/dealer-packs/${{ matrix.slug }}/
+          include-hidden-files: true
+          if-no-files-found: warn
+          compression-level: 6
+          retention-days: 7

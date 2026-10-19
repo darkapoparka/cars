@@ -77,7 +77,7 @@ function publishedBranding(input,{root,readGit,baseline,dealer}){
 }
 
 /** Literal-only reading of the maintained Auto Best demo table; never evaluate source. */
-function demoCatalogRecords(catalog,bindings){
+export function demoCatalogRecords(catalog,bindings){
  const text=catalog.toString('utf8'),marker=/const inventoryRecords:[^=]+=/g.exec(text);assert(marker,'reviewed demo declaration required');
  const paths=Object.fromEntries([...bindings.toString('utf8').matchAll(/(stock\d+)\s*:\s*['"]([^'"]+)['"]/g)].map(m=>['leadSite.artwork.inventoryDemo.'+m[1],m[2]]));
  let at=marker.index+marker[0].length;const ws=()=>{while(/\s/.test(text[at]??'')&&at<text.length)at++;};

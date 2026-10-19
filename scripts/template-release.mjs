@@ -40,6 +40,18 @@ export function templateDevelopmentState(root,key,entry,developmentHead,{readGit
  }
  return{developmentHead,developmentTree:null,updateAvailable:developmentHead!==source.revision};
 }
+
+/** Read-only PR inspection. It cannot grant a release or modify the live lock.
+ * The source must already be reachable from the fetched Cars main ref. */
+export function inspectCarsTemplate({root=ROOT,key,commit}) {
+ if(!['auto-best','modern','carwow','import','app','mobile','karento-best'].includes(key)||!/^[a-f0-9]{40}$/.test(commit||''))throw Error('Select a maintained template and immutable Cars commit.');
+ const remote=git(root,['remote','get-url','origin']).replace(/\.git$/,'').replace(/^git@github.com:/,'https://github.com/');
+ if(remote!=='https://github.com/darkapoparka/cars')throw Error('Template inspection requires the Cars repository.');
+ if(git(root,['merge-base','--is-ancestor',commit,'refs/remotes/origin/main'],{allowFailure:true})===null)throw Error('Template source is not published on the fetched Cars main ref.');
+ const prefix=`templates/${key}`,actual=fingerprintCommit(root,commit,{prefix});
+ if(!actual.files.some(row=>row.path==='package.json'))throw Error('Template has no application package: '+key);
+ return {key,source:{repository:'darkapoparka/cars',revision:commit,path:prefix,tree:git(root,['rev-parse',commit+':'+prefix]),digest:actual.digest},files:actual.files.length,readOnly:true,nativeApproval:false,hostedApproval:false,globalReleaseApproval:false};
+}
 export function releaseStatus(root){
  const lock=json(path.join(root,'templates.lock.json'));
  return Object.entries(lock.templates).map(([key,entry])=>{

@@ -1,0 +1,203 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import path from 'node:path';
+import os from 'node:os';
+import {createRequire} from 'node:module';
+import {spawnSync} from 'node:child_process';
+import {filesAt,sha256,writeJson} from './lib/workflow.mjs';
+import {SIX_DESIGN_KEYS} from './lib/six-design-release.mjs';
+import {canonicalPackJson} from './lib/dealer-pack-artifacts.mjs';
+import {assessBundleLimits,inspectDealerPackBundle,loadFleetIdentities,findForeignIdentity,assessPageSnapshot,inspectLogoPixels,readFaviconPngs,verifyPackLogoAssets,stockIsDemo,verifyDealerPack,parseDealerPackVerificationArgs} from './verify-dealer-pack.mjs';
+import {inspectDealerPackBatch,readDealerPackBatch,parseDeploymentArgs} from './deploy-dealer-single-worker.mjs';
+
+const area=t=>{const root=fs.mkdtempSync(path.join(os.tmpdir(),'cars-pack-qa-'));t.after(()=>fs.rmSync(root,{recursive:true,force:true}));return root;};
+const put=(root,name,content)=>{const file=path.join(root,name);fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,typeof content==='string'||Buffer.isBuffer(content)?content:JSON.stringify(content,null,2)+'\n');};
+const variants=SIX_DESIGN_KEYS.map((key,index)=>({key,base:index?'/variant-'+(index+1):'',entry:index?'/variant-'+(index+1)+'/':'/'}));
+const facts={business:{name:'Honest Motors',shortName:'Honest Motors',phone:'+441234567890'}};
+const manifest={schemaVersion:1,slug:'honest-motors',packaging:{version:'5'},variants};
+const emptyFleet={records:[],coverage:{registryDealers:0,withName:0,withBusinessFacts:0,withPhone:0,missingBusinessFacts:[],missingPublicPhone:[]}};
+const execution={kind:'local',id:'11111111-2222-4333-8444-555555555555'};
+const sourceReleases=Object.fromEntries(SIX_DESIGN_KEYS.map(key=>[key,{repository:'darkapoparka/cars',path:'templates/'+key,revision:'a'.repeat(40),tree:'b'.repeat(40),digest:'c'.repeat(64)}]));
+
+function bundle(t){
+ const root=area(t),base=path.join(root,'runtime/dealer-packs'),directory=path.join(base,'honest-motors/bundle');
+ const config={name:'cars-honest-motors',main:'server/worker.mjs',base_dir:'server',compatibility_date:'2026-10-10',compatibility_flags:['nodejs_compat'],workers_dev:true,preview_urls:false,no_bundle:true,find_additional_modules:true,assets:{directory:'./public',binding:'ASSETS',run_worker_first:false}};
+ put(directory,'wrangler.json',config);put(directory,'server/worker.mjs','export default {fetch(){return new Response("fixture");}};');put(directory,'server/router.mjs','export default {};');
+ for(const key of SIX_DESIGN_KEYS)put(directory,'server/'+key+'/'+(['modern','app','mobile'].includes(key)?'index.js':'index.mjs'),'export default {};');
+ put(directory,'public/logo.png','fixture asset bytes');
+ const receipt={schemaVersion:1,type:'cars-dealer-pack-single-worker-provider-package',dealer:'honest-motors',sourceCommit:'a'.repeat(40),sourceDigest:'b'.repeat(64),packDigest:'c'.repeat(64),sourceReleases,releaseDigest:sha256(canonicalPackJson(sourceReleases)),execution,
+  workerName:config.name,publicOrigin:'https://honest-motors.webpreviews.site',applicationCount:6,workerCount:1,composition:{inProcess:SIX_DESIGN_KEYS,serviceBindings:[]},files:[]};
+ const seal=()=>{receipt.files=filesAt(directory,{filter:()=>true}).filter(name=>name!=='single-worker-receipt.json').map(name=>{const bytes=fs.readFileSync(path.join(directory,name));return {path:name,bytes:bytes.length,sha256:sha256(bytes)};});receipt.outputDigest=sha256(JSON.stringify(receipt.files));receipt.serverBytes=receipt.files.filter(row=>row.path.startsWith('server/')).reduce((sum,row)=>sum+row.bytes,0);receipt.assetFiles=receipt.files.filter(row=>row.path.startsWith('public/')).length;put(directory,'single-worker-receipt.json',receipt);};
+ seal();const pack={directory:path.join(root,'dealers/honest-motors'),manifest,facts,packDigest:receipt.packDigest,releaseDigest:receipt.releaseDigest};
+ return {root,base,directory,receipt,config,seal,pack,options:{bundleRoot:directory,slug:'honest-motors',packDigest:receipt.packDigest,releaseDigest:receipt.releaseDigest,plan:'paid'}};
+}
+
+function snapshot(){return {url:'http://127.0.0.1:8787/',status:200,contentType:'text/html; charset=utf-8',title:'Honest Motors',text:'Honest Motors offers a sourced selection of vehicles. Browse our public stock, inspect each listing and use the published business contact details.',metadata:'Honest Motors',phones:['tel:01234567890'],images:[{src:'/dealer-brand/logo.png',alt:'Honest Motors',visible:true,loaded:true,dealerLogo:true}],designChoices:variants.map(variant=>({key:variant.key,href:variant.entry})),adminLinks:[{href:'https://cars-admin-blue.vercel.app/',target:'_blank',rel:'noopener noreferrer'}],errors:[],brokenImages:[],overflow:0};}
+const assess=value=>assessPageSnapshot({snapshot:value,facts,manifest,variant:variants[0],fleet:emptyFleet});
+
+test('platform budgets use uncompressed bytes, inclusive boundaries and explicit Free/Paid asset counts',()=>{
+ const files=[{path:'server/worker.mjs',bytes:64*1024**2},{path:'public/large.bin',bytes:25*1024**2}];
+ assert.equal(assessBundleLimits(files,'free').status,'passed');
+ assert.deepEqual(assessBundleLimits([{...files[0],bytes:64*1024**2+1},files[1]],'paid').violations,['uncompressed-worker-size']);
+ assert.deepEqual(assessBundleLimits([files[0],{...files[1],bytes:25*1024**2+1}],'paid').violations,['individual-static-asset-size']);
+ const many=[{path:'server/worker.mjs',bytes:1},...Array.from({length:20001},(_,index)=>({path:'public/'+index,bytes:1}))];
+ assert.equal(assessBundleLimits(many,'free').status,'failed');assert.equal(assessBundleLimits(many,'paid').status,'passed');
+ assert.throws(()=>assessBundleLimits(many),/explicit target plan/);
+ assert.equal(assessBundleLimits(files,'paid').planVerified,false);
+});
+
+test('a success label cannot replace compiled bytes, family modules, source and execution binding',t=>{
+ const f=bundle(t),result=inspectDealerPackBundle(f.options);assert.equal(result.capacity.status,'passed');
+ put(f.directory,'single-worker-receipt.json',{...f.receipt,success:true,execution:{kind:'local',id:'../invented'}});assert.throws(()=>inspectDealerPackBundle(f.options),/execution identity/);
+ put(f.directory,'single-worker-receipt.json',{...f.receipt,sourceReleases:{}});assert.throws(()=>inspectDealerPackBundle(f.options),/six exact template releases/);
+ assert.throws(()=>inspectDealerPackBundle({...f.options,sourceReleases:{}}),/six exact template releases/);
+ put(f.directory,'single-worker-receipt.json',f.receipt);fs.unlinkSync(path.join(f.directory,'server/import/index.mjs'));f.seal();assert.throws(()=>inspectDealerPackBundle(f.options),/family or router/);
+});
+
+test('tampered, omitted, undeclared and linked bundle files fail independently of receipt claims',t=>{
+ const changed=bundle(t);fs.appendFileSync(path.join(changed.directory,'server/worker.mjs'),'changed');assert.throws(()=>inspectDealerPackBundle(changed.options),/bytes changed/);
+ const extra=bundle(t);put(extra.directory,'public/unreviewed.png','extra');assert.throws(()=>inspectDealerPackBundle(extra.options),/undeclared/);
+ const missing=bundle(t);fs.unlinkSync(path.join(missing.directory,'public/logo.png'));assert.throws(()=>inspectDealerPackBundle(missing.options),/missing|undeclared/);
+ const linked=bundle(t);fs.symlinkSync(path.join(linked.directory,'server/worker.mjs'),path.join(linked.directory,'public/link.js'));assert.throws(()=>inspectDealerPackBundle(linked.options),/link/);
+});
+
+test('candidate configuration cannot introduce service bindings, route mutations or build hooks',t=>{
+ for(const update of [config=>config.services=[{binding:'OTHER',service:'live-worker'}],config=>config.routes=['*.webpreviews.site/*'],config=>config.build={command:'deploy'},config=>config.assets.run_worker_first=true]){
+  const f=bundle(t);update(f.config);put(f.directory,'wrangler.json',f.config);f.seal();assert.throws(()=>inspectDealerPackBundle(f.options),/resources|unexposed|asset-first/);
+ }
+});
+
+test('local registry facts augment names with public phones and show metadata gaps',t=>{
+ const root=area(t);put(root,'clients/foreign-motors/business-facts.json',{business:{name:'Foreign Motors',shortName:'Foreign',phone:'+359888123456'}});
+ const result=loadFleetIdentities(root,{dealers:[{slug:'foreign-motors',name:'Foreign Motors',localPath:'clients/foreign-motors'},{slug:'unknown-motors',name:'Unknown Motors'}]},{readGit:false});
+ assert.deepEqual(result.records[0].phones,['+359888123456']);assert.equal(result.coverage.withBusinessFacts,1);assert.deepEqual(result.coverage.missingBusinessFacts,['unknown-motors']);
+ assert.throws(()=>loadFleetIdentities(root,{dealers:[{slug:'escape',name:'Escape',localPath:'../outside'}]},{readGit:false}),/escapes dealer/);
+});
+
+test('public lead metadata supplements only a unique fleet identity and never promotes contact candidates',t=>{
+ const root=area(t);put(root,'leads/public.json',{leads:[{id:'gb-foreign',name:'Foreign Motors',publicBusinessContact:{phone:'+441111111111',contactName:'PRIVATE PERSON'},contactCandidates:{phone:'+442222222222'},notes:'PRIVATE'},{id:'gb-unknown',name:'Someone Else',publicBusinessContact:{phone:'+443333333333'}}]});
+ const fleet=loadFleetIdentities(root,{dealers:[{id:'gb-foreign',slug:'foreign-motors',name:'Foreign Motors'},{slug:'missing',name:'Missing Motors'}]},{readGit:false});
+ assert.equal(fleet.coverage.withName,2);assert.equal(fleet.coverage.withPhone,1);assert.equal(fleet.coverage.withBusinessFacts,0);assert.equal(fleet.coverage.withPublicIdentityEvidence,1);assert.deepEqual(fleet.records[0].phones,['+441111111111']);assert.doesNotMatch(JSON.stringify(fleet.records),/PRIVATE|2222222222|3333333333/);
+});
+
+test('foreign dealer names and formatted plain-text or tel phones are caught, while the real dealer is allowed',()=>{
+ const fleet={records:[{slug:'foreign',names:['Day & Night Auto Group'],phones:['+359877733110']},{slug:'own-alias',names:['Honest Motors'],phones:['+441234567890']}]};
+ const hits=findForeignIdentity({text:'Contact Day and Night Auto Group on 0877 733 110.',ownSlug:'honest-motors',ownFacts:facts,fleet});assert.deepEqual(hits.map(row=>row.type),['name','phone']);
+ assert.deepEqual(findForeignIdentity({text:'Honest Motors',phones:['tel:01234567890'],ownSlug:'honest-motors',ownFacts:facts,fleet}),[]);
+ assert.equal(findForeignIdentity({text:'A public page',phones:['tel:+359877733110'],ownSlug:'honest-motors',ownFacts:facts,fleet})[0].type,'phone');
+});
+
+test('HTTP 200, an unrendered logo or a five-design FAB cannot masquerade as successful dealer QA',()=>{
+ assert.equal(assess(snapshot()).status,'passed');
+ for(const [update,failure] of [[page=>page.status=500,'route-response'],[page=>page.text='OK','route-response'],[page=>page.images[0].loaded=false,'dealer-logo'],[page=>page.images[0].dealerLogo=false,'dealer-logo'],[page=>page.phones=['tel:+359888123456'],'dealer-phone'],[page=>page.designChoices.pop(),'six-design-fab'],[page=>page.designChoices.push(page.designChoices[0]),'six-design-fab'],[page=>page.designChoices[1].href='https://foreign.example/','fab-destination'],[page=>page.adminLinks=[],'shared-admin-link']]){
+  const value=snapshot();update(value);assert(assess(value).findings.includes(failure),failure);
+ }
+});
+
+test('missing optional own phone stays unknown; inherited dealer phone still fails independently',()=>{
+ const value=snapshot();value.phones=[];
+ const result=assessPageSnapshot({snapshot:value,facts:{business:{name:'Honest Motors'}},manifest,variant:variants[0],fleet:emptyFleet});assert.equal(result.phone,'not-provided');assert(!result.findings.includes('dealer-phone'));
+ value.phones=['tel:+359888123456'];const fleet={records:[{slug:'foreign',names:['Foreign Motors'],phones:['+359888123456']}]};
+ assert(assessPageSnapshot({snapshot:value,facts:{business:{name:'Honest Motors'}},manifest,variant:variants[0],fleet}).findings.includes('foreign-dealer-identity'));
+ const unknown=snapshot();unknown.phones.push('tel:+447777777777');assert(assess(unknown).findings.includes('unexpected-business-phone'));
+ const visible=snapshot();visible.phones=[];visible.text+=' Call 0121 555 0123.';assert.equal(assessPageSnapshot({snapshot:visible,facts:{business:{name:'Honest Motors',phone:'+441215550123'}},manifest,variant:variants[0],fleet:emptyFleet}).status,'passed');
+});
+
+test('placeholder text and undisclosed demo listings are failures; honest demo disclosure passes',()=>{
+ const placeholder=snapshot();placeholder.text+=' Lorem ipsum dolor sit amet.';assert(assess(placeholder).findings.includes('placeholder-copy'));
+ const value=snapshot(),options={snapshot:value,facts,manifest,variant:variants[0],fleet:emptyFleet,demoStock:true};assert(assessPageSnapshot(options).findings.includes('demo-stock-disclosure'));
+ value.text+=' These are illustrative demo listings, not dealer stock.';assert.equal(assessPageSnapshot(options).status,'passed');
+ assert.equal(stockIsDemo({stock:{kind:'dated-listing-snapshot',records:[]},manifest}),false);
+ assert.equal(stockIsDemo({stock:{kind:'demo-stock',records:[]},manifest}),true);
+ assert.equal(stockIsDemo({stock:{records:[{demo:true}]},manifest}),true);
+});
+
+test('verification emits a failed JSON report if a build does not exist and never starts an uploader',async t=>{
+ const root=area(t),reportPath=path.join(root,'qa.json');let starts=0;
+ const result=await verifyDealerPack({root,slug:'honest-motors',plan:'paid',bundleRoot:path.join(root,'absent'),reportPath,pack:{manifest,facts},startPreview:async()=>{starts++;throw Error('must not start');}});
+ assert.equal(result.success,false);assert.equal(result.providerWrites,0);assert.equal(starts,0);assert.equal(JSON.parse(fs.readFileSync(reportPath)).success,false);assert.equal(result.checks.at(-1).status,'failed');
+});
+
+test('QA CLI rejects ambiguous plans, remote URLs, repeats and path-like slugs',()=>{
+ assert.equal(parseDealerPackVerificationArgs(['--slug','honest-motors','--plan','paid']).plan,'paid');
+ for(const args of [['--slug','honest-motors'],['--slug','../existing','--plan','paid'],['--slug','honest-motors','--plan','paid','--plan','free'],['--slug','honest-motors','--plan','paid','--preview-url','https://existing.webpreviews.site']])assert.throws(()=>parseDealerPackVerificationArgs(args));
+});
+
+test('batch is a bounded exact JSON slug list and never accepts write or mixed legacy arguments',t=>{
+ const root=area(t),file=path.join(root,'batch.json');put(root,'batch.json',['honest-motors']);assert.deepEqual(readDealerPackBatch(file),['honest-motors']);
+ for(const value of [{slugs:['honest-motors']},[],['honest-motors','honest-motors'],['../live'],Array.from({length:401},(_,index)=>'dealer-'+index)]){put(root,'batch.json',value);assert.throws(()=>readDealerPackBatch(file),/JSON array/);}
+ assert.equal(parseDeploymentArgs(['--batch','batch.json','--bundle-root','runtime/dealer-packs','--plan','paid']).write,false);
+ assert.throws(()=>parseDeploymentArgs(['--batch','batch.json','--bundle-root','runtime/dealer-packs','--plan','paid','--write']),/unavailable/);
+ assert.throws(()=>parseDeploymentArgs(['--input','review.json','--batch','batch.json','--bundle-root','runtime/dealer-packs','--plan','paid']),/cannot mix/);
+});
+
+test('batch inspection rejects missing/forged QA and cannot resolve any provider uploader',async t=>{
+ const f=bundle(t),batchFile=path.join(f.root,'batch.json');put(f.root,'batch.json',['honest-motors']);
+ const result=await inspectDealerPackBatch({root:f.root,batchFile,bundleRoot:f.base,plan:'paid',loadPack:()=>f.pack});assert.equal(result.success,false);assert.equal(result.deployments,0);assert.equal(result.providerWrites,0);assert.equal(result.readyToDeploy,false);
+ const parent=path.dirname(f.directory),binding={slug:'honest-motors',packDigest:f.receipt.packDigest,releaseDigest:f.receipt.releaseDigest,outputDigest:f.receipt.outputDigest,execution};
+ put(parent,'build-report.json',{...binding,status:'passed'});put(parent,'qa-report.json',{...binding,type:'cars-dealer-pack-qa',success:true,checks:[]});
+ const forged=await inspectDealerPackBatch({root:f.root,batchFile,bundleRoot:f.base,plan:'paid',loadPack:()=>f.pack});assert.equal(forged.success,false);assert.match(forged.results[0].reason,/QA report/);
+ await assert.rejects(inspectDealerPackBatch({write:true}),/unavailable/);
+});
+
+test('inspection of a byte-bound candidate remains explicitly not ready to deploy',async t=>{
+ const f=bundle(t),batchFile=path.join(f.root,'batch.json');put(f.root,'batch.json',['honest-motors']);
+ const parent=path.dirname(f.directory),binding={slug:'honest-motors',packDigest:f.receipt.packDigest,releaseDigest:f.receipt.releaseDigest,outputDigest:f.receipt.outputDigest,execution};
+ const screenshots=[];for(const key of SIX_DESIGN_KEYS)for(const width of [320,390,1280]){const name='screenshots/'+key+'-'+width+'.png',bytes=Buffer.from('synthetic-test-evidence-'+key+width);put(parent,name,bytes);screenshots.push({key,width,path:name,sha256:sha256(bytes)});}
+ put(parent,'build-report.json',{...binding,status:'passed'});
+ put(parent,'qa-report.json',{...binding,type:'cars-dealer-pack-qa',success:true,capacity:{targetPlan:'paid'},checks:['bundle-integrity','cloudflare-limits','fleet-contact-coverage','logo-assets','rendered-routes','screenshots','bundle-unchanged'].map(id=>({id,status:'passed'})),proof:{screenshots}});
+ const options={root:f.root,batchFile,bundleRoot:f.base,plan:'paid',loadPack:()=>f.pack};
+ const result=await inspectDealerPackBatch(options);assert.equal(result.success,true);assert.equal(result.readyToDeploy,false);assert.equal(result.qualification.sourcePublication,'not-verified-by-candidate-inspection');assert.equal(result.qualification.workersPlan,'not-verified');assert.equal(result.hostedVerified,false);
+ fs.appendFileSync(path.join(parent,screenshots[0].path),'altered');assert.equal((await inspectDealerPackBatch(options)).success,false);
+});
+
+let sharp;
+for(const file of [process.env.CARS_QA_RESOLVE_FROM,process.env.CARS_SHARP_ROOT&&path.join(process.env.CARS_SHARP_ROOT,'package.json'),path.resolve('runtime/dealer-pack-tools/package.json'),path.resolve('templates/karento-best/package.json')].filter(Boolean))try{sharp=createRequire(file)('sharp');break;}catch{}
+
+test('raster checks reject opaque, padded, blank and low-contrast images at actual small sizes',{skip:!sharp&&'Existing sharp installation unavailable'},async()=>{
+ const width=256,height=96,rgba=Buffer.alloc(width*height*4);
+ for(let y=8;y<88;y++)for(let x=12;x<244;x++)if((x%24)<16){const offset=(y*width+x)*4;rgba[offset]=17;rgba[offset+1]=17;rgba[offset+2]=19;rgba[offset+3]=255;}
+ const bytes=await sharp(rgba,{raw:{width,height,channels:4}}).png().toBuffer();
+ const good=await inspectLogoPixels(bytes,{sharp,backgrounds:['#ffffff']});assert.equal(good.status,'passed');assert.equal(good.spellingVerified,false);assert.deepEqual(good.smallSizes.map(row=>row.height),[32,64]);
+ const dark=await inspectLogoPixels(bytes,{sharp,backgrounds:['#111113']});assert(dark.findings.some(value=>value.startsWith('weak-contrast:')));
+ const padded=await sharp(bytes).extend({top:200,bottom:200,left:200,right:200,background:'#00000000'}).png().toBuffer();assert((await inspectLogoPixels(padded,{sharp,backgrounds:['#ffffff']})).findings.includes('excessive-transparent-padding'));
+ const opaque=await sharp({create:{width,height,channels:4,background:'#ffffff'}}).png().toBuffer();assert((await inspectLogoPixels(opaque,{sharp,backgrounds:['#111113']})).findings.includes('opaque-or-empty'));
+ const blank=await sharp({create:{width,height,channels:4,background:'#00000000'}}).png().toBuffer();assert((await inspectLogoPixels(blank,{sharp,backgrounds:['#ffffff']})).findings.includes('opaque-or-empty'));
+});
+
+test('logo QA binds distinct source PNG and lossless public WebP bytes and real 32/64 favicon images',{skip:!sharp&&'Existing sharp installation unavailable'},async t=>{
+ const root=area(t),directory=path.join(root,'pack'),bundleRoot=path.join(root,'bundle');
+ const render=async(color)=>{const rgba=Buffer.alloc(128*128*4);for(let y=8;y<120;y++)for(let x=8;x<120;x++){const at=(y*128+x)*4;rgba[at]=rgba[at+1]=rgba[at+2]=color;rgba[at+3]=255;}return sharp(rgba,{raw:{width:128,height:128,channels:4}}).png().toBuffer();};
+ const dark=await render(17),light=await render(255),contract={schemaVersion:1,dealer:'honest-motors',assets:{},surfaceBackgrounds:{onLight:['#ffffff'],onDark:['#111113'],onAccent:['#c40101']}};
+ for(const [role,png] of [['onLight',dark],['onDark',light],['onAccent',light]]){
+  const sourcePath='branding/'+role+'.png',publicPath='/dealer-brand/'+role+'.webp',webp=await sharp(png).webp({lossless:true,effort:6}).toBuffer();
+  put(directory,sourcePath,png);put(directory,publicPath.slice(1),webp);put(bundleRoot,'public'+publicPath,webp);
+  contract.assets[role]={sourcePath,sourceSha256:sha256(png),publicPath,sha256:sha256(webp)};
+ }
+ for(const [role,png] of [['master',dark],['mark',dark],['markOnDark',light]]){const sourcePath='branding/logo-'+role+'.png';put(directory,sourcePath,png);contract[role]={path:sourcePath,sha256:sha256(png)};}
+ put(bundleRoot,'public/dealer-brand/app-icon.png',dark);put(bundleRoot,'public/dealer-brand/mark-on-dark.webp',await sharp(light).webp({lossless:true,effort:6}).toBuffer());
+ const images=await Promise.all([16,32,48,64].map(async size=>({size,png:await sharp(dark).resize(size,size).png().toBuffer()})));
+ const header=Buffer.alloc(6+16*images.length);header.writeUInt16LE(1,2);header.writeUInt16LE(images.length,4);let offset=header.length;
+ images.forEach(({size,png},index)=>{const at=6+index*16;header[at]=header[at+1]=size;header.writeUInt16LE(1,at+4);header.writeUInt16LE(32,at+6);header.writeUInt32LE(png.length,at+8);header.writeUInt32LE(offset,at+12);offset+=png.length;});
+ const favicon=Buffer.concat([header,...images.map(row=>row.png)]);contract.favicon={path:'dealer-brand/favicon.ico',sha256:sha256(favicon)};put(directory,contract.favicon.path,favicon);put(bundleRoot,'public/'+contract.favicon.path,favicon);
+ assert.deepEqual(readFaviconPngs(favicon).map(row=>row.size),[16,32,48,64]);
+ const corrupted=Buffer.from(favicon);corrupted.writeUInt32LE(0,18);assert.throws(()=>readFaviconPngs(corrupted),/overlapping favicon/);
+ const pack={directory,manifest,branding:contract},result=await verifyPackLogoAssets({pack,sharp,bundleRoot});assert.equal(result.status,'passed',JSON.stringify(result.roles.map(row=>({role:row.role,findings:row.findings}))));assert.equal(result.visualReview.status,'not-recorded');
+ // Real assembly content-addresses the public branding directory; the path
+ // rewrite must still require the exact reviewed public asset bytes.
+ for(const asset of Object.values(contract.assets)){
+  const flat=path.join(bundleRoot,'public'+asset.publicPath),mounted='public/variant-2/dealer-brand/v2-8388ddd06ce49792/'+path.posix.basename(asset.publicPath);
+  put(bundleRoot,mounted,fs.readFileSync(flat));fs.unlinkSync(flat);
+ }
+ const addressed=await verifyPackLogoAssets({pack,sharp,bundleRoot});assert.equal(addressed.status,'passed');
+ assert(addressed.roles.find(row=>row.role==='onLight').integratedCopies.every(name=>name.includes('/v2-8388ddd06ce49792/')));
+ const addressedLight=path.join(bundleRoot,'public',addressed.roles.find(row=>row.role==='onLight').integratedCopies[0]);
+ fs.appendFileSync(addressedLight,'different-identity');
+ assert((await verifyPackLogoAssets({pack,sharp,bundleRoot})).roles.find(row=>row.role==='onLight').findings.includes('missing-bundle-logo'));
+ fs.appendFileSync(path.join(directory,contract.assets.onLight.sourcePath),'changed');await assert.rejects(verifyPackLogoAssets({pack,sharp,bundleRoot}),/Logo bytes changed/);
+});
+
+test('CLI help has no module-import side effects',()=>{
+ const result=spawnSync(process.execPath,['scripts/verify-dealer-pack.mjs','--help'],{encoding:'utf8',timeout:20000});assert.ifError(result.error);assert.equal(result.status,0,result.stderr);assert.match(result.stdout,/no provider writes/i);assert.equal(result.stderr,'');
+});
