@@ -8,7 +8,7 @@ import {execFileSync} from 'node:child_process';
 import {sha256} from './lib/workflow.mjs';
 import {artifactInventory} from './lib/uk-cloudflare-artifacts.mjs';
 import {planSixDesignSelection} from './lib/six-design-release.mjs';
-import {parsePackSlugs, packBuildMatrix, packExecution, sourceFileRows, dealerPackToolDigest, packCacheIdentity, packSourceCacheKey, prepareDealerPackSource, readDealerPackSource, inspectPackBudget, assertCompilerToolDirectory, parsePackBuildArgs, packInputDirectories} from './build-dealer-pack.mjs';
+import {parsePackSlugs, packBuildMatrix, packExecution, sourceFileRows, dealerPackToolDigest, dealerPackBuildEnvironment, verifyPreparedPackSource, packCacheIdentity, packSourceCacheKey, prepareDealerPackSource, readDealerPackSource, inspectPackBudget, assertCompilerToolDirectory, parsePackBuildArgs, packInputDirectories} from './build-dealer-pack.mjs';
 import {DEALER_PACK_COMPILED_KIND, DEALER_PACK_BUNDLE_KIND, PACK_TARGETS, PACK_FAMILIES, canonicalPackJson, validatePackExecution} from './lib/dealer-pack-artifacts.mjs';
 import {inspectSingleWorkerInputs, packageUkSingleWorker} from './package-uk-single-worker.mjs';
 
@@ -39,6 +39,32 @@ test('dependency caches share releases while compiled caches distinguish dealer 
   assert.equal(first.dependencies, second.dependencies); assert.notEqual(first.compiled, second.compiled);
   assert.notEqual(first.dependencies, packCacheIdentity({...common, packDigest: 'c'.repeat(64), toolDigest: 'e'.repeat(64)}).dependencies);
   assert.notEqual(first.dependencies, packCacheIdentity({...common, packDigest: 'c'.repeat(64), arch: 'arm64'}).dependencies);
+});
+
+test('a restored shared npm cache leaves every prepared source byte sealed on the next dealer build', t => {
+  const fixture = sourceFixture(t), runtime = path.join(fixture.root, 'runtime');
+  const cacheRoot = path.join(runtime, 'dealer-pack-cache', 'a'.repeat(64), 'auto-best');
+  const environment = dealerPackBuildEnvironment(cacheRoot, {GITHUB_TOKEN: 'fixture-token'});
+  assert.equal(environment.CARS_CLOUDFLARE_SVELTE_NPM_CACHE, path.join(cacheRoot, 'npm'));
+  assert.equal(environment.GITHUB_TOKEN, undefined);
+  const files = new Map([['auto-best/source.js', Buffer.from('export const original=true;')]]), expected = sourceFileRows(files);
+  const cacheArchive = path.join(runtime, 'saved-dependency-downloads');
+  fs.mkdirSync(path.join(cacheArchive, '_cacache/content-v2/sha512/aa'), {recursive: true});
+  fs.writeFileSync(path.join(cacheArchive, '_cacache/content-v2/sha512/aa/package'), 'cached package bytes');
+  for (const slug of ['first-dealer', 'next-dealer']) {
+    const source = path.join(runtime, slug, 'source'); fs.mkdirSync(path.join(source, 'auto-best'), {recursive: true});
+    fs.writeFileSync(path.join(source, 'auto-best/source.js'), files.get('auto-best/source.js'));
+    verifyPreparedPackSource(source, expected);
+    fs.cpSync(cacheArchive, environment.CARS_CLOUDFLARE_SVELTE_NPM_CACHE, {recursive: true});
+    verifyPreparedPackSource(source, expected);
+    assert.equal(fs.readFileSync(path.join(cacheRoot, 'npm/_cacache/content-v2/sha512/aa/package'), 'utf8'), 'cached package bytes');
+  }
+  const source = path.join(runtime, 'next-dealer/source');
+  fs.mkdirSync(path.join(source, '.cars-build-assets/auto-best.npm-cache'), {recursive: true});
+  const stray = path.join(source, '.cars-build-assets/auto-best.npm-cache/undeclared'); fs.writeFileSync(stray, 'must remain rejected');
+  assert.throws(() => verifyPreparedPackSource(source, expected), /changed, missing or undeclared/);
+  fs.unlinkSync(stray); fs.writeFileSync(path.join(source, 'auto-best/source.js'), 'changed source');
+  assert.throws(() => verifyPreparedPackSource(source, expected), /changed, missing or undeclared/);
 });
 
 test('source sealing is independent of Map insertion order and binds every byte', () => {

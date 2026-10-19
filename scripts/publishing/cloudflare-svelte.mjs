@@ -158,13 +158,29 @@ export function cloudflareSvelteBuildEnvironment(root, key, base, inherited = pr
   // Signature's approved .npmrc keeps a local .runtime/npm-cache. Route the
   // generated build's mutable npm cache outside retained family source, without
   // changing that source configuration or excluding any .runtime content.
-  environment.npm_config_cache = path.join(root, '.cars-build-assets', key + '.npm-cache');
+  const externalCache = inherited.CARS_CLOUDFLARE_SVELTE_NPM_CACHE;
+  environment.npm_config_cache = externalCache === undefined
+    ? path.join(root, '.cars-build-assets', key + '.npm-cache')
+    : externalSvelteNpmCache(root, externalCache);
   return environment;
 }
 
 function beneath(parent, child) {
   const relative = path.relative(parent, child);
   return relative && relative !== '..' && !relative.startsWith('..' + path.sep) && !path.isAbsolute(relative);
+}
+function externalSvelteNpmCache(root, requested) {
+  if (typeof requested !== 'string' || !path.isAbsolute(requested)) throw Error('External Cloudflare npm cache must use an absolute directory');
+  const directory = path.resolve(requested), source = path.resolve(root);
+  const disjoint = (left, right) => left !== right && !beneath(left, right) && !beneath(right, left);
+  if (!disjoint(source, directory)) throw Error('External Cloudflare npm cache must stay outside generated source');
+  let existing = directory;
+  while (!fs.existsSync(existing) && path.dirname(existing) !== existing) existing = path.dirname(existing);
+  if (!fs.statSync(existing).isDirectory()) throw Error('Invalid external Cloudflare npm cache directory');
+  const resolved = path.resolve(fs.realpathSync(existing), path.relative(existing, directory));
+  const resolvedSource = fs.existsSync(source) ? fs.realpathSync(source) : source;
+  if (!disjoint(resolvedSource, resolved)) throw Error('Linked external Cloudflare npm cache reaches generated source');
+  return directory;
 }
 function generatedRoot(packageRoot) {
   const root = fs.realpathSync(packageRoot);

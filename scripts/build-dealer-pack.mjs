@@ -230,8 +230,9 @@ function installedBin(root, name) {
   throw Error('Installed build tool is missing: ' + name);
 }
 
-function buildEnvironment(cacheRoot) {
-  const env = {...process.env, CI: 'true', NEXT_TELEMETRY_DISABLED: '1', WRANGLER_SEND_METRICS: 'false', WRANGLER_LOG_SANITIZE: 'true',
+export function dealerPackBuildEnvironment(cacheRoot, inherited = process.env) {
+  const env = {...inherited, CI: 'true', NEXT_TELEMETRY_DISABLED: '1', WRANGLER_SEND_METRICS: 'false', WRANGLER_LOG_SANITIZE: 'true',
+    CARS_CLOUDFLARE_SVELTE_NPM_CACHE: path.join(cacheRoot, 'npm'),
     npm_config_cache: path.join(cacheRoot, 'npm'), npm_config_store_dir: path.join(cacheRoot, 'pnpm'), XDG_CACHE_HOME: path.join(cacheRoot, 'xdg')};
   for (const name of Object.keys(env)) if (/^(?:CLOUDFLARE|CF)_(?:API_(?:TOKEN|KEY)|TOKEN)$|^WRANGLER_(?:API_TOKEN|TOKEN)$|^(?:GH_TOKEN|GITHUB_TOKEN|NODE_AUTH_TOKEN|NPM_TOKEN)$/.test(name)) delete env[name];
   return env;
@@ -243,7 +244,7 @@ async function runStage({area, name, args, cwd, cacheRoot, command = process.exe
   let result;
   try {
     result = await new Promise((resolve, reject) => {
-      const child = spawn(command, args, {cwd, env: buildEnvironment(cacheRoot), stdio: ['ignore', fd, fd], windowsHide: true});
+      const child = spawn(command, args, {cwd, env: dealerPackBuildEnvironment(cacheRoot), stdio: ['ignore', fd, fd], windowsHide: true});
       const timeout = setTimeout(() => { child.kill(); reject(Error(name + ' exceeded 40 minutes')); }, 40 * 60 * 1000);
       child.once('error', error => { clearTimeout(timeout); reject(error); });
       child.once('close', (code, signal) => { clearTimeout(timeout); resolve({code, signal}); });
@@ -255,6 +256,11 @@ async function runStage({area, name, args, cwd, cacheRoot, command = process.exe
   assert(step.passed, name + ' failed; see ' + log); return step;
 }
 
+export function verifyPreparedPackSource(packageRoot, expectedRows) {
+  const actualInputs = new Map(filesAt(packageRoot, {filter: () => true}).map(name => [name, fs.readFileSync(inside(packageRoot, name, {mustExist: true}))]));
+  assert(same(sourceFileRows(actualInputs), expectedRows), 'Prepared source contains changed, missing or undeclared files');
+}
+
 export async function compileDealerPackBuild({root = ROOT, preparedFile, run = runStage, loadPack} = {}) {
   const prepared = json(preparedFile), {dealer: slug, key, packageRoot, area} = prepared;
   assert(prepared.kind === 'cars-dealer-pack-prepared-build' && PACK_TARGETS.includes(key), 'Invalid prepared dealer-pack build');
@@ -263,8 +269,7 @@ export async function compileDealerPackBuild({root = ROOT, preparedFile, run = r
   assert(git(root, ['rev-parse', 'HEAD']) === prepared.sourceCommit && dealerPackToolDigest(root) === prepared.toolDigest, 'Build tools changed after preparation');
   loadPack ??= (await packModule()).loadDealerPack;
   assert((await loadPack(root, slug)).packDigest === prepared.packDigest, 'Dealer pack changed after preparation');
-  const actualInputs = new Map(filesAt(packageRoot, {filter: () => true}).map(name => [name, fs.readFileSync(inside(packageRoot, name, {mustExist: true}))]));
-  assert(same(sourceFileRows(actualInputs), prepared.inputFiles), 'Prepared source contains changed, missing or undeclared files');
+  verifyPreparedPackSource(packageRoot, prepared.inputFiles);
   const artifact = path.join(area, 'artifact'); assert(!fs.existsSync(artifact), 'Retain the existing build artifact; do not overwrite a completed or failed attempt'); fs.mkdirSync(artifact);
   const startedAt = new Date().toISOString(), started = Date.now(), cacheRoot = path.join(root, 'runtime/dealer-pack-cache', prepared.releaseDigest, key);
   const result = {schemaVersion: 1, kind: 'cars-dealer-pack-family-build', dealer: slug, key, ...identityOf(prepared),

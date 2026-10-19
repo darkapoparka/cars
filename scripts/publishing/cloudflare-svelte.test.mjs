@@ -339,3 +339,24 @@ test('npm cache environment wins over the approved Signature source .npmrc witho
   assert.equal(fs.readFileSync(config, 'utf8'), sourceConfig);
   assert.equal(fs.existsSync(path.join(service, '.runtime')), false);
 });
+
+test('an explicit shared npm cache stays outside the sealed package and wins over source .npmrc', t => {
+  const parent = ownedTemporaryRoot(t), root = path.join(parent, 'source'), service = path.join(root, 'karento-best');
+  fs.mkdirSync(service, {recursive: true});
+  const config = path.join(service, '.npmrc'), sourceConfig = 'cache=.runtime/npm-cache\n'; fs.writeFileSync(config, sourceConfig);
+  const cache = path.join(parent, 'downloads/npm');
+  fs.mkdirSync(path.join(cache, '_cacache'), {recursive: true}); fs.writeFileSync(path.join(cache, '_cacache/restored'), 'warm cache');
+  const environment = cloudflareSvelteBuildEnvironment(root, 'karento-best', '/variant-6', {...process.env, CARS_CLOUDFLARE_SVELTE_NPM_CACHE: cache});
+  const result = spawnSync(process.execPath, [resolveCloudflareNpmCli(process.execPath, fs, path), '--logs-max=0', 'config', 'get', 'cache'], {
+    cwd: service, env: environment, encoding: 'utf8', windowsHide: true
+  });
+  assert.equal(result.error, undefined); assert.equal(result.status, 0, result.stderr); assert.equal(result.stdout.trim(), cache);
+  assert.equal(fs.readFileSync(config, 'utf8'), sourceConfig); assert.equal(fs.existsSync(path.join(root, '.cars-build-assets')), false);
+  for (const invalid of ['relative-cache', root, service, parent]) {
+    assert.throws(() => cloudflareSvelteBuildEnvironment(root, 'karento-best', '/variant-6', {CARS_CLOUDFLARE_SVELTE_NPM_CACHE: invalid}), /absolute directory|outside generated source/);
+  }
+  if (process.platform !== 'win32') {
+    const linked = path.join(parent, 'linked-source'); fs.symlinkSync(root, linked, 'dir');
+    assert.throws(() => cloudflareSvelteBuildEnvironment(root, 'karento-best', '/variant-6', {CARS_CLOUDFLARE_SVELTE_NPM_CACHE: path.join(linked, 'cache')}), /reaches generated source/);
+  }
+});

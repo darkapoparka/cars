@@ -86,6 +86,18 @@ jobs:
         run: |
           node --test scripts/*dealer-pack*.test.mjs scripts/package-uk-single-worker.test.mjs scripts/package-dealer.test.mjs scripts/six-publishing.test.mjs scripts/cloudflare-six-mount.test.mjs scripts/six-variant-refresh.test.mjs scripts/lead-branding-surfaces.test.mjs scripts/registered-dealer-adoption.test.mjs
           node scripts/check-workflow.mjs
+      - name: Use the retained Auto Best runtime for Svelte publisher tests
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: '22.23.2'
+          package-manager-cache: false
+      - name: Verify the maintained Svelte publisher and external cache contract
+        run: node --test scripts/publishing/cloudflare-svelte.test.mjs
+      - name: Restore the pipeline runtime for matrix resolution
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: '26.10.0'
+          package-manager-cache: false
       - name: Resolve exact committed packs and bounded native build matrix
         id: plan
         env:
@@ -222,7 +234,6 @@ jobs:
         uses: actions/cache@v4
         with:
           path: |
-            runtime/dealer-pack-work/source/.cars-build-assets/${{ matrix.key }}.npm-cache
             runtime/dealer-pack-cache/${{ steps.prepared.outputs.release_digest }}/${{ matrix.key }}/
           key: dealer-pack-dependencies-${{ steps.prepared.outputs.cache_key }}
       - name: Build exact personalized native application and run Wrangler inspection
@@ -278,6 +289,17 @@ jobs:
             /docs/**/*.json
             /catalog.json
             /clients/index.json
+            /clients/*/business-facts.json
+            /leads/bulgaria.json
+            /leads/europe.json
+            /leads/uae.json
+            /leads/usa.json
+            /leads/uk-2026-10-10.json
+            /leads/uk-2026-10-10-briefs/*/business-facts.json
+            /leads/varna/all-leads.json
+            /leads/varna/mobile-directory-2026-10-10.json
+            /leads/varna/selected-10.json
+            /leads/varna/packs/*/business-facts.json
             /.gitignore
       - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
         with:
