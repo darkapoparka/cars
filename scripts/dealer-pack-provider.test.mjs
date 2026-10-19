@@ -5,7 +5,7 @@ import os from 'node:os';
 import path from 'node:path';
 import {createHash} from 'node:crypto';
 import {spawnSync} from 'node:child_process';
-import {cloudflarePackProvider,packAssetManifest,packModuleUpload,readPackUploadFile,tokenCloudflareTransport} from './lib/dealer-pack-cloudflare.mjs';
+import {cloudflarePackProvider,packAssetHash,packAssetManifest,packModuleUploadPlan,packModuleUpload,readPackUploadFile,tokenCloudflareTransport} from './lib/dealer-pack-cloudflare.mjs';
 import {PACK_DEPLOY_ACCOUNT,PACK_DEPLOY_ZONE,packDeploymentRequest} from './lib/dealer-pack-queue.mjs';
 import {createPackConnectorRpc,listPackConnectorRequests} from './dealer-pack-connector-bridge.mjs';
 import {verifyPublishedPackSource,inspectPackDeploymentBatch} from './deploy-dealer-packs.mjs';
@@ -27,9 +27,18 @@ test('asset and module payloads preserve sealed bytes, MIME and native routing m
   assert.notEqual(assets.manifest['/index.html'].hash,assets.manifest['/style.css'].hash);
   assert.equal(assets.manifest['/_headers'],undefined);assert.equal(assets.manifest['/_redirects'],undefined);
   const body=packModuleUpload(candidate,{request,assets:{completionToken:'test-only-completion-token'}});
+  const plan=packModuleUploadPlan(candidate,{request,assets:{completionToken:'test-only-completion-token'}});
+  assert.deepEqual(body,{...plan,modules:plan.modules.map(({file,...module})=>({...module,content_base64:fs.readFileSync(path.join(candidate.directory,file.path)).toString('base64')}))});
   assert.equal(body.main_module,'server/worker.mjs');assert.deepEqual(body.bindings,[{type:'assets',name:'ASSETS'}]);assert.equal(body.assets.config.run_worker_first,false);assert.equal(body.assets.config.html_handling,'none');
   assert.equal(body.modules.find(row=>row.name==='server/native.wasm').content_type,'application/wasm');assert.equal(body.modules.find(row=>row.name==='_headers').content_type,'text/plain');
   for(const row of body.modules){const source=candidate.files.find(file=>file.path===row.name||file.path==='public/'+row.name);assert.equal(hash(Buffer.from(row.content_base64,'base64')),source.sha256);}
+});
+test('asset hashes match retained Wrangler4.149.0 golden values and preserve exact extensions',()=>{
+  assert.equal(packAssetHash(Buffer.from('identical'),'index.html'),'de00984b532586084e5ed86f8bad77d9');
+  assert.equal(packAssetHash(Buffer.from('identical'),'style.css'),'4ba17ce368d289d29fcef8058b76f0aa');
+  assert.equal(packAssetHash(Buffer.alloc(0),'empty.txt'),'f9bc91770fa5e997cbd47fba833629fc');
+  assert.equal(packAssetHash(Buffer.from('identical'),'first/file.html'),packAssetHash(Buffer.from('identical'),'another/file.html'));
+  assert.notEqual(packAssetHash(Buffer.from('identical'),'file.HTML'),packAssetHash(Buffer.from('identical'),'file.html'));
 });
 test('modified assets and symlinked ancestor escapes fail before upload',t=>{
   const candidate=bundle(t),row=candidate.files.find(file=>file.path==='public/image.svg');fs.appendFileSync(path.join(candidate.directory,row.path),'changed');assert.throws(()=>packAssetManifest(candidate),/sealed inventory/);
@@ -56,7 +65,7 @@ test('static uploads use only session JWT, enforce requested hashes, and require
 });
 test('version uploads address immutable Worker IDs and preserve measured startup',async t=>{
   const candidate=bundle(t),workerId='b'.repeat(32),versionId='11111111-1111-4111-8111-111111111111',calls=[],provider=cloudflarePackProvider({api:async operation=>{calls.push(operation);return ok({id:versionId,startup_time_ms:23});}});
-  const uploaded=await provider.upload({candidate,request,workerId,assets:{completionToken:'test-only-completion-token'},ownershipTags:['cars-pack-v1']});assert.equal(uploaded.workerId,workerId);assert.equal(uploaded.versionId,versionId);assert.equal(uploaded.startupTimeMs,23);assert.equal(calls[0].method,'POST');assert.equal(calls[0].path,'/accounts/'+PACK_DEPLOY_ACCOUNT+'/workers/workers/'+workerId+'/versions');await assert.rejects(()=>provider.upload({candidate,request,workerId:request.workerName,assets:{}}),/immutable Worker ID/);
+  const uploaded=await provider.upload({candidate,request,workerId,assets:{completionToken:'test-only-completion-token'},ownershipTags:['cars-pack-v1']});assert.equal(uploaded.workerId,workerId);assert.equal(uploaded.versionId,versionId);assert.equal(uploaded.startupTimeMs,23);assert.equal(calls[0].method,'POST');assert.equal(calls[0].path,'/accounts/'+PACK_DEPLOY_ACCOUNT+'/workers/workers/'+workerId+'/versions');assert.deepEqual(calls[0].query,{deploy:false});await assert.rejects(()=>provider.upload({candidate,request,workerId:request.workerName,assets:{}}),/immutable Worker ID/);
 });
 test('token adapter confines API paths and does not return authentication headers',async()=>{
   const token='test-account-token-never-log',calls=[],transport=tokenCloudflareTransport({token,fetchImpl:async(url,options)=>{calls.push({url:String(url),options});return {status:200,json:async()=>({success:true,result:[]})};}});

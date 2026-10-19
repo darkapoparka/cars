@@ -6,9 +6,9 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {isEntrypoint} from './lib/cli-entrypoint.mjs';
 import {ROOT,json} from './lib/workflow.mjs';
-import {validatePackQueue,queueDigest,githubPackQueueStore} from './lib/dealer-pack-queue.mjs';
+import {validatePackQueue,queueDigest} from './lib/dealer-pack-queue.mjs';
+import {gitPackQueueStore} from './lib/dealer-pack-queue-git.mjs';
 import {validatePackDeploymentIdentity} from './lib/dealer-pack-deployment.mjs';
-import {githubPackTransport} from './deploy-dealer-packs.mjs';
 
 const assert=(ok,message)=>{if(!ok)throw Error(message);};
 
@@ -41,7 +41,7 @@ if(isEntrypoint(import.meta.url)){
   const args=process.argv.slice(2);
   if(args.includes('--help'))console.log('Usage: merge-dealer-pack-receipts.mjs --out PROPOSED_INVENTORY.json [--queue-state LOCAL_SNAPSHOT.json]\nDefault reads the authenticated durable GitHub queue. --queue-state produces an offline review proposal only. Never edits batch branches or writes Cloudflare. Review and integrate the generated registry in one coordinator PR.');
   else (async()=>{const options={};for(let i=0;i<args.length;i+=2){assert(['--out','--queue-state'].includes(args[i])&&args[i+1]&&!options[args[i]],'Invalid receipt integration arguments');options[args[i]]=args[i+1];}assert(options['--out'],'Use an explicit proposed inventory output path');
-    const queue=options['--queue-state']?json(options['--queue-state']):(await githubPackQueueStore({request:githubPackTransport()}).read()).state;
+    const queue=options['--queue-state']?json(options['--queue-state']):(await gitPackQueueStore({directory:path.join(ROOT,'runtime/dealer-pack-deploy-cache/queue.git')}).read()).state;
     const result=mergePackDeploymentReceipts({registry:json(path.join(ROOT,'docs/DEPLOYMENT-INVENTORY.json')),queue,readPack:slug=>({manifest:json(path.join(ROOT,'dealers',slug,'dealer.json')),facts:json(path.join(ROOT,'dealers',slug,'business-facts.json'))})});
     const out=path.resolve(options['--out']);assert(out!==path.join(ROOT,'docs/DEPLOYMENT-INVENTORY.json'),'Write a reviewable proposed inventory; integrate it in the coordinator change');fs.mkdirSync(path.dirname(out),{recursive:true});fs.writeFileSync(out,JSON.stringify(result.registry,null,2)+'\n');console.log(JSON.stringify({output:out,changes:result.changes,unchangedExistingRows:result.unchangedExistingRows,queueAuthenticated:!options['--queue-state'],providerWrites:0},null,2));
   })().catch(error=>{console.error(error.message);process.exitCode=1;});

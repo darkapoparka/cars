@@ -9,7 +9,7 @@ import {randomUUID} from 'node:crypto';
 import {isEntrypoint} from './lib/cli-entrypoint.mjs';
 import {ROOT,json} from './lib/workflow.mjs';
 import {githubPackQueueStore,enqueuePackDeployments,packDeploymentRequest} from './lib/dealer-pack-queue.mjs';
-import {cloudflarePackProvider} from './lib/dealer-pack-cloudflare.mjs';
+import {cloudflarePackProvider,packModuleUploadPlan} from './lib/dealer-pack-cloudflare.mjs';
 import {inspectPackDeploymentBatch,drainPackDeployments} from './deploy-dealer-packs.mjs';
 
 const assert=(ok,message)=>{if(!ok)throw Error(message);};
@@ -44,13 +44,15 @@ export function connectorPackAdapters({directory,transportArtifact,notify}={}) {
   const exchange=createPackConnectorRpc({directory,notify});
   const readGithub=operation=>exchange('github',operation),api=operation=>exchange('cloudflare',operation);
   const provider=cloudflarePackProvider({api,
-    uploadAssets:async({candidate,request,session,manifest,beforeWrite})=>{
+    uploadAssets:async({candidate,request,session,manifest,byHash,beforeWrite})=>{
       await beforeWrite();
       return exchange('cloudflare-assets',{request,session,manifest,candidate:{directory:candidate.directory,outputDigest:candidate.outputDigest,files:candidate.files},transportArtifact:transportArtifact??null,
+        uploadFiles:[...new Set(session.buckets.flat())].map(key=>({hash:key,mime:byHash.get(key).mime,file:byHash.get(key).row})),
         endpoint:'/accounts/cb0007f242077bd759331f096eb75531/workers/assets/upload',authentication:'use-only-the-ephemeral-session-jwt-in-this-request',requiredChecks:'Verify artifact and each requested asset against the sealed files inventory before upload. Return only completionToken; never log tokens.'});
     },
-    uploadModules:async({candidate,request,workerId,assets,endpoint})=>exchange('cloudflare-modules',{request,workerId,assets:{completionToken:assets.completionToken},endpoint,
+    uploadModules:async({candidate,request,workerId,assets,endpoint,query})=>exchange('cloudflare-modules',{request,workerId,assets:{completionToken:assets.completionToken},endpoint,query,
       candidate:{directory:candidate.directory,outputDigest:candidate.outputDigest,files:candidate.files,config:candidate.config},transportArtifact:transportArtifact??null,
+      uploadPlan:packModuleUploadPlan(candidate,{request,assets}),
       requiredChecks:'Use the exact packModuleUpload metadata and sealed server JS/MJS/WASM bytes. Hash-check every module. POST to the immutable Worker-ID endpoint; never PUT an arbitrary Worker name. Return the normalized Cloudflare response.'}),
   });
   return {store:githubPackQueueStore({request:readGithub}),provider,readGithub};

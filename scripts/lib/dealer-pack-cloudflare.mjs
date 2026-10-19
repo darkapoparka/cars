@@ -7,6 +7,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {createHash} from 'node:crypto';
+import {createRequire} from 'node:module';
+import {fileURLToPath} from 'node:url';
 import {PACK_DEPLOY_ACCOUNT,PACK_DEPLOY_ZONE,queueDigest} from './dealer-pack-queue.mjs';
 
 const assert=(ok,message)=>{if(!ok)throw Error(message);};
@@ -17,6 +19,18 @@ const exactRequest=request=>assert(request?.workerName==='cars-'+request.slug&&r
 const successful=(response,label)=>{assert(response?.success===true&&response.status>=200&&response.status<300,'Cloudflare '+label+' failed ('+(response?.status??'no response')+'); reconcile any unknown write outcome');return response.result;};
 const mimeTypes={'.html':'text/html','.css':'text/css','.js':'application/javascript','.mjs':'application/javascript','.json':'application/json','.svg':'image/svg+xml','.png':'image/png','.webp':'image/webp','.jpg':'image/jpeg','.jpeg':'image/jpeg','.ico':'image/x-icon','.gif':'image/gif','.avif':'image/avif','.woff':'font/woff','.woff2':'font/woff2','.ttf':'font/ttf','.otf':'font/otf','.mp4':'video/mp4','.webm':'video/webm','.pdf':'application/pdf','.txt':'text/plain','.xml':'application/xml','.wasm':'application/wasm','.webmanifest':'application/manifest+json'};
 export const packAssetMime=name=>mimeTypes[path.extname(name).toLowerCase()]??'application/octet-stream';
+let blake3;
+/** Exactly Wrangler4.149.0 deploy-helpers/hash.ts: sharing its hash prevents
+ * needless re-uploads when the provider can reuse an existing asset. */
+export function packAssetHash(bytes,name) {
+  assert(Buffer.isBuffer(bytes)&&typeof name==='string','Asset bytes and exact original extension required');
+  if(!blake3){
+    const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
+    const require=createRequire(path.resolve(process.env.CARS_DEALER_PACK_TOOL_PACKAGE??process.env.CARS_QA_RESOLVE_FROM??path.join(root,'runtime/dealer-pack-preview-tools/package.json')));
+    assert(require('blake3-wasm/package.json').version==='2.1.5','Use the maintained blake3-wasm2.1.5 asset hasher');blake3=require('blake3-wasm').hash;
+  }
+  return blake3(bytes.toString('base64')+path.extname(name).substring(1)).toString('hex').slice(0,32);
+}
 
 /** Physical reads rehash every member at use time, after inspection. */
 export function readPackUploadFile(candidate,row) {
@@ -31,25 +45,30 @@ export function packAssetManifest(candidate) {
   for(const row of candidate.files.filter(row=>row.path.startsWith('public/'))){
     const name='/'+row.path.slice(7);if(name==='/_headers'||name==='/_redirects')continue;
     const bytes=readPackUploadFile(candidate,row),mime=packAssetMime(name);
-    // The provider requires a32-hex asset key; include MIME so identical bytes
-    // with different extensions do not borrow each other's response type.
-    const key=createHash('sha256').update(bytes).update('\0'+mime).digest('hex').slice(0,32);
+    const key=packAssetHash(bytes,name);
     manifest[name]={hash:key,size:bytes.length};if(!byHash.has(key))byHash.set(key,{row,mime});
   }
   assert(Object.keys(manifest).length>0&&Object.keys(manifest).length<=100000,'Invalid static asset count');
   return {manifest,byHash,manifestDigest:queueDigest(manifest)};
 }
 
-export function packModuleUpload(candidate,{request,assets}) {
+/** Small deterministic upload plan shared with the connector adapter. The
+ * remote transport adds only bytes authenticated by these exact descriptors. */
+export function packModuleUploadPlan(candidate,{request,assets}) {
   exactRequest(request);const config=candidate.config;
   assert(config?.name===request.workerName&&config.main==='server/worker.mjs'&&config.assets?.binding==='ASSETS'&&config.assets.run_worker_first===false&&config.compatibility_flags?.includes('nodejs_compat'),'Candidate is not the maintained ASSETS-only native Worker');
-  const modules=candidate.files.filter(row=>row.path.startsWith('server/')&&/\.(?:m?js|wasm)$/.test(row.path)).map(row=>({name:row.path,content_type:row.path.endsWith('.wasm')?'application/wasm':'application/javascript+module',content_base64:readPackUploadFile(candidate,row).toString('base64')}));
-  for(const name of ['_headers','_redirects']){const row=candidate.files.find(row=>row.path==='public/'+name);if(row)modules.push({name,content_type:'text/plain',content_base64:readPackUploadFile(candidate,row).toString('base64')});}
+  const modules=candidate.files.filter(row=>row.path.startsWith('server/')&&/\.(?:m?js|wasm)$/.test(row.path)).map(row=>({name:row.path,content_type:row.path.endsWith('.wasm')?'application/wasm':'application/javascript+module',file:{path:row.path,bytes:row.bytes,sha256:row.sha256}}));
+  for(const name of ['_headers','_redirects']){const row=candidate.files.find(row=>row.path==='public/'+name);if(row)modules.push({name,content_type:'text/plain',file:{path:row.path,bytes:row.bytes,sha256:row.sha256}});}
   assert(modules.some(row=>row.name===config.main)&&typeof assets.completionToken==='string'&&assets.completionToken.length>20,'Module entry and completed asset session required');
   const assetConfig={run_worker_first:false};for(const key of ['html_handling','not_found_handling','base_path'])if(config.assets[key]!==undefined)assetConfig[key]=config.assets[key];
   return {main_module:config.main,modules,compatibility_date:config.compatibility_date,compatibility_flags:config.compatibility_flags,
     bindings:[{type:'assets',name:'ASSETS'}],assets:{jwt:assets.completionToken,config:assetConfig},
     annotations:{'workers/tag':'cars-pack-'+request.id.slice(0,64),'workers/message':'Cars preview '+request.slug+'; output '+request.outputDigest}};
+}
+
+export function packModuleUpload(candidate,options) {
+  const plan=packModuleUploadPlan(candidate,options);
+  return {...plan,modules:plan.modules.map(({file,...module})=>({...module,content_base64:readPackUploadFile(candidate,file).toString('base64')}))};
 }
 
 async function fullWorkerInventory(api) {
@@ -111,7 +130,8 @@ export function cloudflarePackProvider({api,assetFetch=fetch,uploadAssets,upload
     async upload({candidate,request,workerId,assets,ownershipTags}){
       exactRequest(request);assert(/^[a-f0-9]{32}$/.test(workerId),'Exact immutable Worker ID required');
       const endpoint=account+'/workers/workers/'+workerId+'/versions';
-      const response=uploadModules?await uploadModules({candidate,request,workerId,assets,ownershipTags,endpoint}):await api({method:'POST',path:endpoint,body:packModuleUpload(candidate,{request,assets})});
+      const query={deploy:false};
+      const response=uploadModules?await uploadModules({candidate,request,workerId,assets,ownershipTags,endpoint,query}):await api({method:'POST',path:endpoint,query,body:packModuleUpload(candidate,{request,assets})});
       const value=successful(response,'immutable Worker version upload');return {workerId,workerName:request.workerName,versionId:value.id,startupTimeMs:value.startup_time_ms??null};
     },
     async activateVersion({request,workerId,versionId}){

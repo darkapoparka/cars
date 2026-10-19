@@ -7,9 +7,10 @@ import {isEntrypoint} from './lib/cli-entrypoint.mjs';
 import {ROOT,inside,json,sha256} from './lib/workflow.mjs';
 import {expectedPackHosting,assertPackBatch} from './lib/dealer-pack-identity.mjs';
 import {getPackReleaseBinding} from './lib/dealer-pack-release.mjs';
-import {PACK_QUEUE_REPOSITORY,queueCanonical,packDeploymentRequest,validatePackQueue,githubPackQueueStore,enqueuePackDeployments,claimPackDeployment} from './lib/dealer-pack-queue.mjs';
+import {PACK_QUEUE_REPOSITORY,queueCanonical,packDeploymentRequest,validatePackQueue,enqueuePackDeployments,claimPackDeployment} from './lib/dealer-pack-queue.mjs';
 import {validatePackDeploymentIdentity,latestOwnedPackReceipt,executeQueuedPackDeployment,validatePackProviderSnapshot,validatePackTargetForWrite} from './lib/dealer-pack-deployment.mjs';
 import {cloudflarePackProvider,tokenCloudflareTransport} from './lib/dealer-pack-cloudflare.mjs';
+import {gitPackQueueStore} from './lib/dealer-pack-queue-git.mjs';
 
 const assert=(ok,message)=>{if(!ok)throw Error(message);};
 const hex40=value=>/^[a-f0-9]{40}$/.test(value??'');
@@ -46,6 +47,24 @@ export async function verifyPublishedPackSource({root=ROOT,slug,pack,sourceCommi
     sourceTreeSha256:sha256(queueCanonical(rows)),inputFiles:rows.length,observedAt:new Date().toISOString(),mainReachabilityClaimed:false};
 }
 
+/** Durable intake authenticates the small source/manifest identity first. It
+ * never marks the compiled bundle verified: the account executor must pass
+ * inspectExactPackDeployment before its first provider mutation. */
+export async function inspectPackDeploymentIntake({root=ROOT,slug,row,batch,queue,registry,readGithub,buildArtifact}={}) {
+  const {loadDealerPack}=await import('./lib/dealer-pack.mjs'),identity=expectedPackHosting(slug);
+  assert(row?.slug===slug&&row.sourceCommit===buildArtifact?.sourceCommit,'Artifact intake source identity differs');
+  const manifest=json(path.join(root,'dealers',slug,'dealer.json'));
+  const own=latestOwnedPackReceipt(queue,{slug,...identity,dealerId:manifest.dealerId});
+  const registryRows=Array.isArray(registry)?registry:registry.dealers;
+  const pack=loadDealerPack(root,slug,{registryOverride:own?registryRows.filter(value=>value.slug!==slug):registryRows,batch});
+  assert(pack.manifest.pack?.benchmarkOnly!==true&&pack.packDigest===row.packDigest,'Benchmark or changed source cannot enter the deployment queue');
+  const assignment=assertPackBatch(root,pack.manifest,{batch}),release=getPackReleaseBinding(pack.lock);
+  const request=packDeploymentRequest({slug,dealerId:pack.manifest.dealerId,batch:assignment.number,...identity,packDigest:row.packDigest,releaseId:release.releaseId,releaseDigest:row.releaseDigest,outputDigest:row.outputDigest,sourceCommit:row.sourceCommit,buildArtifact});
+  validatePackDeploymentIdentity({request,queue,registry});
+  const sourceProof=await verifyPublishedPackSource({root,slug,pack,sourceCommit:request.sourceCommit,readGithub});
+  return {request,sourceProof,bundleVerified:false,providerWrites:0};
+}
+
 export async function inspectExactPackDeployment({root=ROOT,slug,bundleRoot,batch,queue,registry=json(path.join(root,'docs/DEPLOYMENT-INVENTORY.json')),loadPack,readGithub=githubPackTransport(),sourceProof,request:expectedRequest}={}) {
   const directory=inside(path.resolve(bundleRoot),slug+'/bundle',{mustExist:true});
   if(!loadPack)({loadPreparedDealerPack:loadPack}=await import('./prepare-dealer-pack-logo.mjs'));
@@ -56,7 +75,7 @@ export async function inspectExactPackDeployment({root=ROOT,slug,bundleRoot,batc
   const own=queue?latestOwnedPackReceipt(queue,preliminary):null;
   const registryRows=Array.isArray(registry)?registry:registry.dealers;
   const registryOverride=own?registryRows.filter(row=>row.slug!==slug):registryRows;
-  const pack=await loadPack(root,slug,{registryOverride});
+  const pack=await loadPack(root,slug,{registryOverride,toolPackage:process.env.CARS_DEALER_PACK_TOOL_PACKAGE});
   assert(pack.manifest.pack?.benchmarkOnly!==true,'Benchmark-only slugs are never deployment candidates');
   const assignment=assertPackBatch(root,pack.manifest,{batch});
   const {inspectDealerPackBundle}=await import('./verify-dealer-pack.mjs');
@@ -121,7 +140,7 @@ export async function runPackDeploymentCli(argv=process.argv.slice(2)) {
   const options={},allowed=new Set(['--slugs','--bundle-root','--batch','--report','--owner','--request-ids','--max']);
   for(let i=0;i<args.length;i++){if(['--write','--live'].includes(args[i])){const flag=args[i].slice(2);assert(!options[flag],'Repeated '+args[i]);options[flag]=true;continue;}assert(allowed.has(args[i])&&args[i+1]&&!args[i+1].startsWith('--')&&!options[args[i]],'Invalid deployment option: '+args[i]);options[args[i]]=args[++i];}
   assert(!options.write||command==='drain','Only drain accepts --write');
-  const readGithub=githubPackTransport(),store=githubPackQueueStore({request:readGithub});let report;
+  const readGithub=githubPackTransport(),store=command==='inspect'&&!options.live?null:gitPackQueueStore({directory:path.join(ROOT,'runtime/dealer-pack-deploy-cache/queue.git')});let report;
   if(command==='status'){const {state}=await store.read();report={queueId:state.queueId,generation:state.generation,active:state.active,requests:state.order.map(id=>({id,slug:state.requests[id].request.slug,status:state.requests[id].status})),receiptCount:Object.values(state.receipts).reduce((sum,rows)=>sum+rows.length,0)};}
   else if(command==='drain'){
     assert(options.write&&options['--bundle-root']&&options['--owner'],'Drain needs --bundle-root, --owner and explicit --write');

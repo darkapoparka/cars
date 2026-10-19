@@ -45,7 +45,12 @@ export function packDeploymentRequest(input) {
   assert(request.workerName==='cars-'+request.slug&&request.publicOrigin==='https://'+request.slug+'.webpreviews.site','Queue identity must be cars-<slug> and the canonical HTTPS preview origin');
   assert([request.packDigest,request.releaseDigest,request.outputDigest].every(hex64)&&typeof request.releaseId==='string'&&request.releaseId.length>=8&&request.releaseId.length<=160&&hex40(request.sourceCommit),'Queue requests require exact pack, immutable release, source and output identities');
   assert(request.sourceRepository===PACK_QUEUE_REPOSITORY,'Only the authorized Cars source repository is accepted');
-  if(request.buildArtifact)assert(Number.isSafeInteger(request.buildArtifact.runId)&&Number.isSafeInteger(request.buildArtifact.artifactId)&&/^sha256:[a-f0-9]{64}$/.test(request.buildArtifact.digest??''),'Build artifact locator must identify exact GitHub bytes');
+  if(request.buildArtifact){
+    const artifact=request.buildArtifact;
+    assert(Number.isSafeInteger(artifact.runId)&&artifact.runId>0&&Number.isSafeInteger(artifact.artifactId)&&artifact.artifactId>0&&/^sha256:[a-f0-9]{64}$/.test(artifact.digest??''),'Build artifact locator must identify exact GitHub bytes');
+    if(artifact.shards){assert(artifact.sourceCommit===request.sourceCommit&&hex64(artifact.manifestSha256)&&new RegExp('^dealer-pack-transport--'+artifact.runId+'--lane-[0-9]+$').test(artifact.prefix)&&artifact.name===artifact.prefix+'--manifest'&&Number.isSafeInteger(artifact.bytes)&&artifact.bytes>0&&Array.isArray(artifact.shards)&&artifact.shards.length>0&&artifact.shards.length<=8,'Exact source and sharded transport locator required');
+      assert(artifact.shards.every((row,index)=>row.index===index&&row.name===artifact.prefix+'--shard-'+index&&Number.isSafeInteger(row.id)&&row.id>0&&Number.isSafeInteger(row.bytes)&&row.bytes>0&&/^sha256:[a-f0-9]{64}$/.test(row.digest??'')),'Transport shard identities differ');}
+  }
   if(request.action==='rollback')assert(typeof request.rollbackTo==='string'&&request.rollbackTo.length>0,'Rollback must identify an earlier owned deployment receipt');
   return {...request,id:queueDigest(request)};
 }
@@ -138,23 +143,49 @@ export async function finishPackDeployment(store,claim,{status,receipt,error,unc
  * No TTL or force-unlock option exists. The caller must check the old Actions run
  * is terminal, or explicitly prove the connector process has stopped.
  */
+export function validatePackOwnedCreateResume(resume,{queue,request,events}={}) {
+  const tags=['cars-pack-v1','cars-queue-'+queue.queueId,'cars-lead-'+queueDigest(request.dealerId).slice(0,32),'cars-request-'+request.id];
+  assert(resume?.schemaVersion===1&&resume.kind==='cars-pack-owned-create-resume'&&resume.queueId===queue.queueId&&resume.requestId===request.id&&resume.slug===request.slug&&resume.dealerId===request.dealerId&&resume.workerName===request.workerName&&resume.publicOrigin===request.publicOrigin,'Owned-create resume identity differs from its exact queued pack');
+  assert(/^[a-f0-9]{32}$/.test(resume.workerId??'')&&queueCanonical(resume.ownershipTags)===queueCanonical(tags)&&hex64(resume.createEventSha256)&&hex64(resume.snapshotSha256)&&timestamp(resume.observedAt),'Owned-create resume needs the saved immutable Worker ID, complete tags and fresh observation binding');
+  const created=events.filter(event=>event.kind==='worker-create-observed');
+  assert(created.length===1&&created[0].workerId===resume.workerId&&created[0].workerName===request.workerName&&queueCanonical(created[0].ownershipTags)===queueCanonical(tags)&&queueDigest(created[0])===resume.createEventSha256,'Resume cannot adopt a same-name Worker without the exact saved create acknowledgement');
+  assert(resume.versionId===null||/^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/i.test(resume.versionId??''),'Resume active version is invalid');
+  const activation=events.filter(event=>event.kind==='activate-version-intent');
+  if(resume.versionId===null)assert(activation.length===0,'A never-deployed read cannot reconcile a possibly in-flight activation');
+  else assert(activation.at(-1)?.versionId===resume.versionId&&events.some(event=>event.kind==='worker-upload-observed'&&event.workerId===resume.workerId&&event.versionId===resume.versionId),'Resume active version is not a positively matched uploaded and requested version');
+  const routeIntents=events.filter(event=>event.kind==='create-route-intent'),routes=events.filter(event=>event.kind==='create-route-observed');
+  if(resume.route===null)assert(routeIntents.length===0&&routes.length===0,'A missing route cannot reconcile a possibly in-flight or removed route');
+  else assert(resume.versionId!==null&&typeof resume.route?.id==='string'&&resume.route.id.length>0&&resume.route.pattern===new URL(request.publicOrigin).hostname+'/*'&&resume.route.script===request.workerName&&events.some(event=>event.kind==='worker-upload-observed'&&event.workerId===resume.workerId&&event.versionId===routeIntents.at(-1)?.versionId)&&routeIntents.at(-1)?.pattern===resume.route.pattern&&routeIntents.at(-1)?.script===request.workerName&&routes.every(event=>event.routeId===resume.route.id),'Resume route is not the positively matched own creation request');
+  // An uploaded version is harmless to resume only when its original request
+  // explicitly disabled automatic deployment. Activation is a separate intent.
+  assert(events.filter(event=>event.kind==='worker-upload-intent').every(event=>event.deploy===false),'Unacknowledged legacy version uploads without deploy:false require manual outcome reconciliation');
+  return resume;
+}
+
 export async function recoverPackClaim(store,{requestId,ownerStopped,outcome,readOutcome,now=()=>new Date().toISOString()}={}) {
   assert(ownerStopped?.verified===true&&['completed-github-run','stopped-connector-executor'].includes(ownerStopped.kind)&&typeof ownerStopped.evidence==='string'&&ownerStopped.evidence.length>=10,'Recovery requires evidence the prior executor cannot still write');
   assert(typeof readOutcome==='function','Recovery requires a fresh authenticated provider reconciliation');
   const initial=await store.read();validatePackQueue(initial.state);assert(initial.state.active?.requestId===requestId,'No matching retained claim');
-  const original=clone(initial.state.active),row=initial.state.requests[requestId],proof=await readOutcome(row.request,row.events);
+  const original=clone(initial.state.active),row=initial.state.requests[requestId],eventDigest=queueDigest(row.events),proof=await readOutcome(row.request,row.events,{queue:clone(initial.state),claim:clone(original)});
   assert(proof?.verified===true&&proof.requestId===requestId&&proof.evidence==='authenticated-cloudflare-api'&&timestamp(proof.observedAt),'Provider outcome is not positively reconciled');
-  assert(['absent','owned-active','owned-rolled-back'].includes(proof.outcome)&&(!outcome||proof.outcome===outcome),'Provider outcome remains uncertain');
+  assert(['absent','owned-active','owned-rolled-back','owned-create-pending'].includes(proof.outcome)&&(!outcome||proof.outcome===outcome),'Provider outcome remains uncertain');
+  if(proof.outcome==='owned-create-pending'){
+    assert(ownerStopped.owner===original.owner&&timestamp(ownerStopped.observedAt),'Owned-create recovery needs exact stopped-executor identity evidence');
+    validatePackOwnedCreateResume(proof.resume,{queue:initial.state,request:row.request,events:row.events});
+    assert(proof.resume.observedAt===proof.observedAt&&Date.parse(proof.observedAt)<=Date.parse(now())&&Date.parse(now())-Date.parse(proof.observedAt)<=30000,'Owned-create recovery observation is stale');
+  }
   if(proof.outcome==='absent'){
     const writes=['worker-create','worker-upload','activate-version','create-route','rollback-version'];
     assert(writes.every(kind=>row.events.filter(event=>event.kind===kind+'-intent').length===row.events.filter(event=>event.kind===kind+'-observed').length),'A negative read cannot reconcile an unacknowledged provider write: it might still complete after that read');
   }
   return mutatePackQueue(store,state=>{
     assert(queueCanonical(state.active)===queueCanonical(original),'Claim changed during reconciliation');
+    assert(queueDigest(state.requests[requestId].events)===eventDigest,'Provider intents changed during reconciliation');
     const current=state.requests[requestId];current.events.push({kind:'reconciled',at:now(),ownerStopped:clone(ownerStopped),proof:clone(proof)});
-    current.status=proof.outcome==='absent'?'queued':proof.outcome==='owned-rolled-back'?'rolled-back':'deployed';
+    current.status=['absent','owned-create-pending'].includes(proof.outcome)?'queued':proof.outcome==='owned-rolled-back'?'rolled-back':'deployed';
+    if(proof.outcome==='owned-create-pending'){current.resume={sha256:queueDigest(proof.resume),resume:clone(proof.resume)};delete current.finishedAt;delete current.error;}
     if(proof.receipt){assert(proof.receipt.requestId===requestId&&proof.receipt.queueId===state.queueId,'Recovered receipt is not queue-bound');const envelope={receipt:clone(proof.receipt),sha256:queueDigest(proof.receipt)};(state.receipts[current.request.slug]??=[]).push(envelope);current.receiptSha256=envelope.sha256;}
-    else assert(proof.outcome==='absent','An existing recovered Worker needs a complete durable receipt');
+    else assert(['absent','owned-create-pending'].includes(proof.outcome),'An existing recovered Worker needs a complete durable receipt');
     state.active=null;return {status:current.status};
   },{now});
 }

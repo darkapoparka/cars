@@ -1,6 +1,6 @@
 /** Deterministic pack-only deployment guards, shared by token and connector transports. */
 import {randomUUID} from 'node:crypto';
-import {PACK_DEPLOY_ACCOUNT,PACK_DEPLOY_ZONE,queueCanonical,queueDigest,packDeploymentRequest,validatePackQueue,readPackClaim,recordPackEvent,finishPackDeployment} from './dealer-pack-queue.mjs';
+import {PACK_DEPLOY_ACCOUNT,PACK_DEPLOY_ZONE,queueCanonical,queueDigest,packDeploymentRequest,validatePackQueue,readPackClaim,recordPackEvent,finishPackDeployment,validatePackOwnedCreateResume} from './dealer-pack-queue.mjs';
 import {expectedPackHosting,packRegistryCollisions} from './dealer-pack-identity.mjs';
 
 const assert=(ok,message)=>{if(!ok)throw Error(message);};
@@ -85,11 +85,48 @@ export function validateHostedPackResult(result,request,versionId) {
   return result;
 }
 
+/** Keep queue state bounded as hundreds of reports accumulate. The outer
+ * sha256 identifies the unchanged full per-dealer report artifact; report is
+ * explicitly a compact acceptance summary with its own independent digest.
+ */
+export function packHostedReceiptEvidence(result) {
+  const keys=['type','slug','publicOrigin','packDigest','outputDigest','versionId','width','language','success','providerWrites','finishedAt'];
+  const report=Object.fromEntries(keys.filter(key=>result[key]!==undefined).map(key=>[key,result[key]]));
+  const fields=['key','status','httpStatus','sixChoices','nameVisible','logoVisible','phoneStatus','foreignIdentityCount','fabInteraction'];
+  report.designs=result.designs.map(row=>Object.fromEntries(fields.filter(key=>row[key]!==undefined).map(key=>[key,row[key]])));
+  if(result.identityCoverage){
+    const coverage=result.identityCoverage,countKeys=['registryDealers','totalIdentities','packDealers','withName','withBusinessFacts','withPublicIdentityEvidence','withPhone'];
+    report.identityCoverage={...Object.fromEntries(countKeys.filter(key=>Number.isSafeInteger(coverage[key])&&coverage[key]>=0).map(key=>[key,coverage[key]])),
+      missingBusinessFactsCount:coverage.missingBusinessFacts?.length??0,missingPublicPhoneCount:coverage.missingPublicPhone?.length??0,packFactsDiagnosticCount:coverage.packFactsDiagnostics?.length??0,
+      sha256:queueDigest(coverage)};
+  }
+  return {sha256:queueDigest(result),reportScope:'compact-acceptance-summary',summarySha256:queueDigest(report),report};
+}
+
 function assertExactPackCandidate(candidate,request) {
   assert(candidate?.verified===true&&candidate.slug===request.slug&&candidate.packDigest===request.packDigest&&candidate.outputDigest===request.outputDigest&&candidate.releaseDigest===request.releaseDigest&&candidate.releaseId===request.releaseId&&candidate.sourceCommit===request.sourceCommit,'Candidate changed or was not verified against the queued exact bytes');
   assert(candidate.sourceProof?.verified===true&&candidate.sourceProof.repository===request.sourceRepository&&candidate.sourceProof.commit===request.sourceCommit&&candidate.sourceProof.path===request.sourcePath,'Pack source has no authenticated exact published commit proof');
   assert(candidate.qa?.success===true&&candidate.qa.packDigest===request.packDigest&&candidate.qa.outputDigest===request.outputDigest&&candidate.qa.releaseDigest===request.releaseDigest,'Missing bound local QA');
   assert(candidate.benchmarkOnly!==true&&candidate.manifest?.pack?.benchmarkOnly!==true,'Benchmark-only packs can never be deployed');
+}
+
+/** A resume is narrower than an ordinary owned deployment: only the same
+ * request's positively acknowledged create can supply the immutable target.
+ * Every continuation authenticates the saved observation again before writing.
+ */
+export function ownedPackCreateResume(queue,request) {
+  const row=queue.requests[request.id],envelope=row?.resume;if(!envelope)return null;
+  assert(envelope.sha256===queueDigest(envelope.resume)&&row.events.some(event=>event.kind==='reconciled'&&event.proof?.outcome==='owned-create-pending'&&queueDigest(event.proof.resume)===envelope.sha256&&event.ownerStopped?.verified===true),'Resume has no exact durable reconciliation evidence');
+  return validatePackOwnedCreateResume(envelope.resume,{queue,request,events:row.events});
+}
+export function validateResumedPackTargetForWrite(context,{request,resume}={}) {
+  const {snapshot,target,route}=context;
+  assert(target&&snapshot.target.workerId===resume.workerId&&snapshot.target.workerName===request.workerName,'Resumed Worker immutable identity changed');
+  assert(snapshot.target.versionId===resume.versionId&&snapshot.target.undeployed===(resume.versionId===null),'Resumed Worker version changed after reconciliation');
+  assert(resume.ownershipTags.every(tag=>snapshot.target.tags.includes(tag)),'Resumed Worker ownership tags changed');
+  assert(snapshot.target.subdomain?.enabled===false&&snapshot.target.subdomain?.previews_enabled===false,'Resumed Worker acquired secondary exposure');
+  assert(resume.versionId===null?snapshot.target.bindings.length===0:snapshot.target.bindings.length===1&&snapshot.target.bindings[0].name==='ASSETS'&&snapshot.target.bindings[0].type==='assets','Resumed Worker acquired unexpected bindings');
+  assert(resume.route===null?!route:route?.id===resume.route.id&&route.pattern===resume.route.pattern&&route.script===resume.route.script,'Resumed canonical route changed');
 }
 
 /** No provider mutation can occur unless a durable claim and local candidate
@@ -111,14 +148,16 @@ export async function executeQueuedPackDeployment({store,claim,provider,inspectC
   const writeCall=async operation=>{providerWriteStarted=true;providerOutcomeKnown=false;try{return await operation();}catch(error){if(error.providerOutcomeKnown===true)providerOutcomeKnown=true;throw error;}};
   const observed=async(kind,details={})=>{await recordPackEvent(store,claim,{kind:kind+'-observed',...details},{now:time});providerOutcomeKnown=true;};
   try{
-    const {own,mode}=validatePackDeploymentIdentity({request,queue,registry});
+    const {own,mode:initialMode}=validatePackDeploymentIdentity({request,queue,registry}),resume=ownedPackCreateResume(queue,request);
+    assert(!resume||!own&&request.action==='deploy','Creation resume cannot bypass an existing deployment receipt or change action');
+    const mode=resume?'resume-owned-create':initialMode;
     if(request.action==='redeploy-owned')assert(own,'Explicit redeployment is only allowed for an earlier queue-owned Worker');
     if(request.action==='rollback')return await executeRollback({store,claim,provider,request,queue,own,snapshot,intent,observed,writeCall,time,verifyHosted,inspectCandidate,markActivated:()=>{versionActivated=true;},markEstablished:()=>{ownershipEstablished=true;}});
     const candidate=await inspectCandidate(request);
     assertExactPackCandidate(candidate,request);
-    const ownershipTags=own?.receipt.ownershipTags??packOwnershipTags(queue,request);
-    let before=await snapshot('before-assets');validatePackTargetForWrite(before,{request,queue,own,creating:mode==='create-new'});
-    let workerId=own?.receipt.workerId;
+    const ownershipTags=own?.receipt.ownershipTags??resume?.ownershipTags??packOwnershipTags(queue,request);
+    let before=await snapshot('before-assets');if(resume)validateResumedPackTargetForWrite(before,{request,resume});else validatePackTargetForWrite(before,{request,queue,own,creating:mode==='create-new'});
+    let workerId=own?.receipt.workerId??resume?.workerId;if(resume)workerCreated=true;
     if(mode==='create-new'){
       await intent('worker-create',{workerName:request.workerName,ownershipTags});
       before=await snapshot('immediately-before-worker-create');validatePackTargetForWrite(before,{request,queue,own,creating:true});
@@ -134,11 +173,12 @@ export async function executeQueuedPackDeployment({store,claim,provider,inspectC
     await intent('assets',{workerName:request.workerName,outputDigest:request.outputDigest});
     const assets=await writeCall(()=>provider.prepareAssets({candidate,request,beforeWrite:()=>readPackClaim(store,claim)}));
     await observed('assets',{manifestDigest:assets.manifestDigest,assetFiles:assets.assetFiles,uploadedFiles:assets.uploadedFiles});
-    await intent('worker-upload',{workerName:request.workerName,workerId,outputDigest:request.outputDigest,ownershipTags,previousVersionId:own?.receipt.versionId??null});
+    await intent('worker-upload',{workerName:request.workerName,workerId,outputDigest:request.outputDigest,ownershipTags,previousVersionId:own?.receipt.versionId??resume?.versionId??null,deploy:false});
     // This complete inventory is deliberately after potentially slow asset work
     // and after persisting intent, immediately before the version POST.
     const preUpload=await snapshot('immediately-before-worker-upload');
-    if(own)validatePackTargetForWrite(preUpload,{request,queue,own});
+    if(resume)validateResumedPackTargetForWrite(preUpload,{request,resume});
+    else if(own)validatePackTargetForWrite(preUpload,{request,queue,own});
     else assert(preUpload.snapshot.target.workerId===workerId&&preUpload.snapshot.target.undeployed===true&&ownershipTags.every(tag=>preUpload.snapshot.target.tags.includes(tag))&&!preUpload.route,'Newly reserved Worker changed before upload');
     const uploaded=await writeCall(()=>provider.upload({candidate,request,workerId,assets,ownershipTags}));
     assert(uuid(uploaded?.versionId)&&uploaded.workerName===request.workerName&&uploaded.workerId===workerId,'Worker upload did not return the exact immutable target and version');
@@ -165,7 +205,8 @@ export async function executeQueuedPackDeployment({store,claim,provider,inspectC
     const baseReceipt={schemaVersion:1,type:'cars-dealer-pack-deployment',status:'deployed',queueId:queue.queueId,requestId:request.id,accountId:queue.accountId,zoneId:queue.zoneId,
       slug:request.slug,dealerId:request.dealerId,batch:request.batch,workerName:request.workerName,publicOrigin:request.publicOrigin,
       packDigest:request.packDigest,releaseId:request.releaseId,releaseDigest:request.releaseDigest,outputDigest:request.outputDigest,sourceCommit:request.sourceCommit,sourceProof:candidate.sourceProof,
-      workerId,versionId:uploaded.versionId,routeId:route.id,ownershipTags,mode,previousReceiptSha256:own?.sha256??null,previousVersionId:own?.receipt.versionId??null,
+      workerId,versionId:uploaded.versionId,routeId:route.id,ownershipTags,mode,previousReceiptSha256:own?.sha256??null,previousVersionId:own?.receipt.versionId??resume?.versionId??null,
+      ...(resume?{resumedCreation:{sha256:queueDigest(resume),workerId:resume.workerId,versionId:resume.versionId,observedAt:resume.observedAt}}:{}),
       counts:{before:before.snapshot.scriptCount,after:after.snapshot.scriptCount,allowed:queue.policy.allowedScripts,minimumSpareScripts:queue.policy.minimumSpareScripts,beforeObservedAt:before.snapshot.observedAt,afterObservedAt:after.snapshot.observedAt},
       capacityEvidence:{basis:'owner-confirmed-workers-paid',policyDigest:queue.policyDigest,subscriptionReadVerified:false},
       resources:{bindings:after.snapshot.target.bindings,subdomain:after.snapshot.target.subdomain,route},
@@ -180,7 +221,7 @@ export async function executeQueuedPackDeployment({store,claim,provider,inspectC
       // receipt, rewrite another Worker, or stop independent queued packs.
       await finishPackDeployment(store,claim,{status:'failed',receipt,error:'Hosted verification failed: '+error.message},{now:time});return {status:'failed',receipt,error:error.message};
     }
-    const receipt={...baseReceipt,hostedVerified:true,hosted:{sha256:queueDigest(hosted),report:hosted},finishedAt:time()};
+    const receipt={...baseReceipt,hostedVerified:true,hosted:packHostedReceiptEvidence(hosted),finishedAt:time()};
     await finishPackDeployment(store,claim,{status:'deployed',receipt},{now:time});return {status:'deployed',receipt};
   }catch(error){
     const uncertain=providerWriteStarted&&(!(providerOutcomeKnown||error.providerOutcomeKnown===true)||(workerCreated||versionActivated)&&!ownershipEstablished);
@@ -211,6 +252,6 @@ async function executeRollback({store,claim,provider,request,queue,own,snapshot,
   let hosted;try{hosted=validateHostedPackResult(await verifyHosted({request:targetRequest,candidate,receipt}),targetRequest,receipt.versionId);}catch(error){
     receipt.hostedFailure=error.message;receipt.finishedAt=time();await finishPackDeployment(store,claim,{status:'failed',receipt,error:'Hosted rollback verification failed: '+error.message},{now:time});return {status:'failed',receipt,error:error.message};
   }
-  receipt.hostedVerified=true;receipt.hosted={sha256:queueDigest(hosted),report:hosted};receipt.finishedAt=time();
+  receipt.hostedVerified=true;receipt.hosted=packHostedReceiptEvidence(hosted);receipt.finishedAt=time();
   await finishPackDeployment(store,claim,{status:'rolled-back',receipt},{now:time});return {status:'rolled-back',receipt};
 }
