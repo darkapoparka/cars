@@ -20,7 +20,9 @@ A failed pack is excluded with a reason and the remaining packs continue. Downst
 
 The three proof builds at `26b626c979d2cfd653b3015d94ff8fe2df724a93` passed all 54 comparisons against the final M1 bundles: **zero unexpected pixels** across 81,340,510 pixels on each side. The only changes were 29,691 pixels inside the explicitly requested FAB artwork correction and nine antialiasing pixels. See [the visual evidence and exact comparison method](m2/VISUAL-EQUIVALENCE-2026-10-19.md) and [all screenshot/report digests](m2/visual-equivalence-2026-10-19.json). This is visual equivalence with that named artwork exception, not a claim of complete pixel identity.
 
-The continuation also authenticated the newer three proof bundles at `19feec837524c04f88f3c3ccbd0586e0771574c3`, [run 39319236637](https://github.com/darkapoparka/cars/actions/runs/39319236637). All 54 views match the previously compared M2 output: 51 PNGs are byte-identical; the other three contain nine classified antialiasing pixels in total and zero unexpected pixels. The [carry-forward receipt](m2/visual-carry-forward-19feec8.json) binds the exact archive, build, QA and screenshot hashes. The HEAD correction changes only HTTP request handling; fresh native builds and their screenshots remain required after that executable change.
+The continuation also authenticated the newer three proof bundles at `19feec837524c04f88f3c3ccbd0586e0771574c3`, [run 39319236637](https://github.com/darkapoparka/cars/actions/runs/39319236637). All 54 views match the previously compared M2 output: 51 PNGs are byte-identical; the other three contain nine classified antialiasing pixels in total and zero unexpected pixels. The [carry-forward receipt](m2/visual-carry-forward-19feec8.json) binds the exact archive, build, QA and screenshot hashes.
+
+After the HEAD correction, fresh native builds at `599adb6c101219eecbe8b4117e62189f7f168f16`, [run 39341160417](https://github.com/darkapoparka/cars/actions/runs/39341160417), passed all three builds and browser QA, and all shared contracts. A new direct comparison against the final M1 attempt passes **54/54 views**: every pixel outside the named FAB artwork is identical, with **zero antialiasing pixels and zero unexpected differences**. The 29,691 changed artwork pixels remain the same explicit exception; complete pixel identity is not claimed. The [fresh comparison receipt](m2/visual-equivalence-599adb6.json) binds the exact source, terminal CI jobs, six downloaded archives, build/QA reports and all 108 baseline/candidate PNG hashes. The subsequent inspection request and workflow sequencing change do not alter pack inputs, template sources or Worker output code.
 
 No template frontend or styling source is changed. Signature desktop example cards remain unchanged. V2 uses the same active-design FAB artwork as the 100 live dealers, as explicitly requested. M1 pack FABs used the dealer's mark, so that requested correction is a real, bounded visual difference from M1.
 
@@ -195,7 +197,7 @@ The command is `scripts/dispatch-dealer-pack-queue.mjs`; the workflow is **Deale
 
 The queue lives in `queue.json` on the dedicated `cars-deploy-queue` branch of `darkapoparka/cars`. It was initialized once from complete live Workers, routes and custom-domain inventories and the owner's capacity policy. Do not reinitialize it or replace it with a new empty file. This state branch does not contain research packs. Each request has a deterministic identity, an ordered durable status history, and per-dealer receipts. Four batches append with compare-and-swap; conflicting writers reread and retry. CI uses a normal fast-forward Git push from the exact fetched queue head, while the connector uses the Contents API's current-blob SHA compare-and-swap.
 
-Requests are persisted after authenticating their small manifest/source metadata, before the account executor downloads large shards. The winning executor drains requests from all batches through one non-expiring account claim. There is no GitHub Actions concurrency group to replace pending runs. Manual and 15-minute scheduled drains can service retained work. A missing provider credential or another active executor leaves requests retained. Before merge, scheduled and `workflow_run` execution cannot use this new workflow on `main`; manual dispatch also requires the workflow to be available on the default branch, so do not assume an unregistered branch-only workflow can be dispatched. The read-only pre-merge pilot trigger below resolves inspection without merging or writing to the provider. After merge, scheduled and automatic drains execute maintained `main` code, with exact pack-source commits mounted separately. Scripts from research pack branches are never executed by the deployer.
+An explicit `enqueue-and-deploy` invocation persists requests after authenticating their small manifest/source metadata, before the account executor downloads large shards. The winning executor drains requests from all batches through one non-expiring account claim. There is no GitHub Actions concurrency group to replace pending runs. Manual and 15-minute scheduled drains can service retained work. A missing provider credential or another active executor leaves requests retained. A completed build's automatic `workflow_run` invocation performs inspection only; it cannot enqueue or drain, so it cannot overtake the required dry run. Before merge, scheduled and `workflow_run` execution cannot use this new workflow on `main`; manual dispatch also requires the workflow to be available on the default branch, so do not assume an unregistered branch-only workflow can be dispatched. The read-only pre-merge pilot trigger below resolves inspection without merging or writing to the provider. After merge, scheduled drains and automatic inspections execute maintained `main` code, with exact pack-source commits mounted separately. Scripts from research pack branches are never executed by the deployer.
 
 Immediately before every create, the claim owner obtains a new paginated live inventory through the modern Workers API, including reserved Worker records. It checks the full protected baseline, canonical name/origin, current routes/domains, saved ownership receipts, and remaining capacity. A cached listing or a local-file lock is insufficient. The baseline inventory contained exactly 100 Workers, all mapped to protected dealers, and no non-dealer Workers: all 400 slots fit at that observation. Any new unrelated account Worker reduces the available expansion count and is reported before a create.
 
@@ -246,7 +248,21 @@ Each batch owner incorporates the reviewed M2 tooling into their own branch. The
 
    Bind `BUILD_RUN_ID` to the exact committed batch SHA in that listing. A failed shared contracts job blocks all its artifacts; an unrelated pack failure does not erase independently qualified results.
 
-3. **Deploy dry-run.** Use **Dealer pack deploy queue** with `action: inspect`, that `source_run_id`, and `batch: "1"`. Leave `artifact_prefix` empty to inspect every lane. With credentials on an authorized executor, the identical CLI is:
+3. **Deploy dry-run.** Use **Dealer pack deploy queue** with `action: inspect`, that `source_run_id`, and `batch: "1"`. Leave `artifact_prefix` empty to inspect every lane:
+
+   ```sh
+   gh workflow run dealer-pack-deploy.yml --repo darkapoparka/cars \
+     --ref main -f action=inspect -f source_run_id=BUILD_RUN_ID -f batch=1
+   gh run list --repo darkapoparka/cars --workflow dealer-pack-deploy.yml \
+     --event workflow_dispatch --branch main --limit 5 \
+     --json databaseId,headSha,status,conclusion,url
+   gh run watch INSPECTION_RUN_ID --repo darkapoparka/cars --exit-status
+   gh run download INSPECTION_RUN_ID --repo darkapoparka/cars \
+     --name dealer-pack-deploy-reports--INSPECTION_RUN_ID \
+     --dir runtime/batch-1-inspection-evidence
+   ```
+
+   Match the run to this invocation and check its retained `inspection.json`: `success`, `bundleVerified` and `liveProviderVerified` must all be `true`, with `providerWrites: 0`, the exact `sourceCommit` and every intended dealer represented. A green offline inspection does not satisfy live preflight. The automatic post-build inspection is also read-only and may supply this evidence when it covers the exact intended source and batch. With credentials on an authorized executor, the identical inspection CLI is:
 
    ```sh
    node scripts/dispatch-dealer-pack-queue.mjs inspect \
@@ -256,7 +272,22 @@ Each batch owner incorporates the reviewed M2 tooling into their own branch. The
 
    This authenticates all sealed bytes and source bindings and performs fresh live identity/capacity reads. It writes no Cloudflare resources. Omitting `--live` is an offline provider-free inspection and is not reported as a live preflight.
 
-4. **Enqueue and deploy write through the account claim.** Run the same workflow with `action: enqueue-and-deploy`, the same run ID and batch. The two explicit CLI operations are:
+4. **Enqueue and deploy write through the account claim.** After inspecting the dry-run evidence, run the same workflow with `action: enqueue-and-deploy`, the same build run ID and batch:
+
+   ```sh
+   gh workflow run dealer-pack-deploy.yml --repo darkapoparka/cars \
+     --ref main -f action=enqueue-and-deploy \
+     -f source_run_id=BUILD_RUN_ID -f batch=1
+   gh run list --repo darkapoparka/cars --workflow dealer-pack-deploy.yml \
+     --event workflow_dispatch --branch main --limit 5 \
+     --json databaseId,headSha,status,conclusion,url
+   gh run watch DEPLOY_RUN_ID --repo darkapoparka/cars --exit-status
+   gh run download DEPLOY_RUN_ID --repo darkapoparka/cars \
+     --name dealer-pack-deploy-reports--DEPLOY_RUN_ID \
+     --dir runtime/batch-1-deploy-evidence
+   ```
+
+   These workflow steps perform the following explicit CLI operations:
 
    ```sh
    node scripts/dispatch-dealer-pack-queue.mjs enqueue \
@@ -267,7 +298,7 @@ Each batch owner incorporates the reviewed M2 tooling into their own branch. The
      --report runtime/batch-1-drain.json
    ```
 
-   Enqueue is durable and does not deploy. Drain uses the shared account claim and may also service requests already retained from the other batches. A losing executor exits with a retained-queue result, not a dropped request. Use the actual running GitHub workflow ID for the owner so stopped-run recovery can be authenticated. Automatic post-build intake uses the same path once the maintained deploy workflow is on `main`.
+   Enqueue is durable and does not deploy. Drain uses the shared account claim and may also service requests already retained from the other batches. A losing executor exits with a retained-queue result, not a dropped request. Use the actual running GitHub workflow ID for the owner so stopped-run recovery can be authenticated. A scheduled drain may win the claim after this explicit enqueue; follow the durable request to its actual executor and receipt instead of assuming this run created it. Automatic post-build inspection cannot enter new requests in the queue.
 
 5. **Hosted verify.** Every successful activation is immediately checked by the drainer before it records a passing deployment receipt. The check visits all six homes and sourced contact journeys at 390 pixels, requires HTTP 200 for both GET and bodyless HEAD, visible own name/logo, a sourced phone or its explicit absence policy, six correct FAB choices and usable open/Escape interaction, exact logo asset hashes, no overflow or page errors, and no known other dealer identity. HEAD follows only bounded same-origin redirects and retains their status evidence. Every design's compact receipt must contain passing HEAD evidence; a GET-only report cannot qualify. It scans all checked-out pack facts plus the live registry. Requests are anonymous GET/HEAD; forms and enquiries are not submitted. Inspect the retained `dealer-pack-deploy-reports--DEPLOY_RUN_ID` artifact and per-dealer queue receipts. For an explicit repeat with retained exact inputs:
 
@@ -282,7 +313,9 @@ Each batch owner incorporates the reviewed M2 tooling into their own branch. The
 
    Use the exact pack source commit associated with the receipt; the verifier refuses a changed pack digest. A hosted failure is retained as a failure, with its owned Worker identity recorded for a guarded retry. It does not become a passing inventory entry.
 
-6. **Retain receipts and integrate accepted inventory.** Retain the exact build run, immutable transport artifact IDs and digests, inspection report, queue request IDs, drain artifact and hosted/metrics reports. The queue preserves fresh per-create counts and each owned Worker/version. Propose successful receipt integration only after hosted acceptance:
+6. **Retain receipts and integrate accepted inventory.** Retain the exact build run, immutable transport artifact IDs and digests, inspection report, queue request IDs, drain artifact and hosted/metrics reports. Full bundle transport artifacts expire after one day; build and deploy reports expire after three days. Complete deployment and download acceptance evidence within those windows. Expired queued artifact locators are refused; rebuild and inspect fresh authenticated artifacts instead of treating a saved ZIP as an authorized replacement. The queue preserves fresh per-create counts and each owned Worker/version.
+
+   Full batch acceptance requires passing hosted receipts for every selected dealer and retained `metrics.json` with `complete: true` and every report's `withinLimits: true`. Missing or delayed metrics require a read-only retry; no Worker redeployment is needed. Such a retry writes a per-dealer report, not a replacement aggregate: retain each needed retry against the same receipt and explicit measurement window, requiring `status: "observed-without-errors"` and `withinLimits: true` for every selected dealer before declaring acceptance. The inventory integration command does not ingest metrics reports, so its success alone does not certify CPU or memory acceptance. Propose the inventory change:
 
    ```sh
    node scripts/merge-dealer-pack-receipts.mjs \
@@ -290,7 +323,7 @@ Each batch owner incorporates the reviewed M2 tooling into their own branch. The
    node scripts/merge-dealer-pack-receipts.mjs --write
    ```
 
-   Review and commit the resulting coordinator inventory change. These commands do not deploy or push; rejected or unverified receipts do not become passing inventory entries.
+   Review and commit the resulting coordinator inventory change. These commands do not deploy or push. A recorded Worker whose hosted check failed remains `deployed-unverified`, preserving ownership evidence without becoming a passing preview. A batch with any such row or incomplete runtime evidence remains incomplete.
 
 ### HEAD compatibility for new bundles
 
@@ -373,6 +406,9 @@ node scripts/read-dealer-pack-metrics.mjs \
   --slug SLUG --start START_ISO --end END_ISO \
   --startup-ms OBSERVED_STARTUP_MS \
   --cpu-limit-ms RECEIPT_CPU_LIMIT_MS \
+  --cpu-limit-source RECEIPT_CPU_LIMIT_SOURCE \
   --report runtime/metrics/SLUG.json
 ```
+
+Use the startup time, CPU limit and limit source from that exact deployment receipt. Check the resulting report's `status: "observed-without-errors"` and `withinLimits: true`; a successful read-only command with `withinLimits: null` records unavailable evidence and does not pass runtime acceptance.
 

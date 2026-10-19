@@ -54,3 +54,38 @@ test('present provider credential adds only live reads to the ordinary inspect c
     assert.equal(report.providerObservations.length,3);assert.deepEqual([report.providerWrites,report.queueWrites,report.deployments],[0,0,0]);
   }finally{fs.rmSync(directory,{recursive:true,force:true});}
 });
+
+test('actual workflow events keep completed-build inspection separate from explicit queue writes',async()=>{
+  const workflow=fs.readFileSync(new URL('../.github/workflows/dealer-pack-deploy.yml',import.meta.url),'utf8');
+  const section=name=>{const value=workflow.split('      - name: '+name+'\n')[1]?.split('\n      - ')[0];assert.ok(value,'Workflow step missing: '+name);return value;};
+  // Evaluate the actual bounded Actions expressions against event fixtures.
+  // The expression grammar used here is also valid JavaScript; no provider,
+  // repository or artifact operation is performed by this regression.
+  const expression=(text,key='if')=>{const match=text.match(new RegExp('^\\s*'+key+': \\$\\{\\{(.+)\\}\\}\\s*$','m'));assert.ok(match,'Workflow expression missing: '+key);return new Function('github','inputs','steps','cancelled','return ('+match[1]+');');};
+  const intake=section('Inspect completed builds; persist requests only for explicit manual intake');
+  const gates={job:expression(workflow.split('  deploy:\n')[1]),intake:expression(intake),drain:expression(section('Drain all retained batches through the single account claim')),
+    metrics:expression(section('Read startup, sampled CPU, memory and error evidence for this drain')),blocked:expression(section('Record an unavailable deployment credential as a blocked write request'))};
+  const action=expression(intake,'PACK_ACTION');
+  const evaluate=(event,input,present,{conclusion='success',repository='darkapoparka/cars',cancelled=false}={})=>{
+    const github={event_name:event,repository:'darkapoparka/cars',event:{workflow_run:{conclusion,head_repository:{full_name:repository}}}},inputs={action:input},steps={token:{outputs:{present:String(present)}}};
+    return {gates:Object.fromEntries(Object.entries(gates).map(([key,value])=>[key,Boolean(value(github,inputs,steps,()=>cancelled))])),action:action(github,inputs,steps,()=>cancelled)};
+  };
+  for(const present of [false,true]){
+    for(const conclusion of ['success','failure'])assert.deepEqual(evaluate('workflow_run',undefined,present,{conclusion}),{gates:{job:true,intake:true,drain:false,metrics:false,blocked:false},action:'inspect'});
+    assert.deepEqual(evaluate('workflow_dispatch','inspect',present),{gates:{job:true,intake:true,drain:false,metrics:false,blocked:false},action:'inspect'});
+    for(const input of ['enqueue-and-deploy','drain'])assert.deepEqual(evaluate('workflow_dispatch',input,present),{gates:{job:true,intake:input!=='drain',drain:present,metrics:present,blocked:!present},action:input});
+    assert.deepEqual(evaluate('schedule',undefined,present).gates,{job:true,intake:false,drain:present,metrics:present,blocked:!present});
+    assert.deepEqual(evaluate('push',undefined,present).gates,{job:false,intake:false,drain:false,metrics:false,blocked:false});
+    assert.equal(evaluate('workflow_run',undefined,present,{conclusion:'cancelled'}).gates.job,false);
+    assert.equal(evaluate('workflow_run',undefined,present,{repository:'someone/fork'}).gates.job,false);
+  }
+  for(const name of ['drain','metrics','blocked'])assert.equal(evaluate('workflow_dispatch','enqueue-and-deploy',name!=='blocked',{cancelled:true}).gates[name],false);
+  const script=intake.match(/node --input-type=module <<'NODE'\n([\s\S]*?)\n\s*NODE/);assert.ok(script,'Workflow intake script missing');
+  const execute=new (Object.getPrototypeOf(async function(){}).constructor)('process','fs','runPackQueueDispatcher',script[1].replace(/^\s*import .+;\n/gm,''));
+  for(const present of [false,true]){
+    let observed;
+    await execute({env:{PACK_ACTION:evaluate('workflow_run',undefined,present).action,SOURCE_RUN_ID:'123',CLOUDFLARE_API_TOKEN:present?'fixture-token':''}},
+      {mkdirSync:()=>assert.fail('Automatic inspection must not write a slug-selection file'),writeFileSync:()=>assert.fail('Unexpected intake file write')},async args=>{observed=args;});
+    assert.equal(observed[0],'inspect');assert.equal(observed.includes('--live'),present);assert.ok(!observed.includes('--write'));
+  }
+});
