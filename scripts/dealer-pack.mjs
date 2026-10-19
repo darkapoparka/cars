@@ -1,10 +1,19 @@
 #!/usr/bin/env node
-/** One entry point for the compact-input pipeline. Artwork is supplied by the
- * reviewed image-generation step; CI never fabricates a generation or approval. */
+/** One entry point for the compact-input pipeline. Public original or generated
+ * artwork is reviewed before CI; no generation or approval is fabricated. */
 import path from 'node:path';
 import {ROOT, args} from './lib/workflow.mjs';
 import {isEntrypoint} from './lib/cli-entrypoint.mjs';
 import {loadDealerPack, listDealerPacks} from './lib/dealer-pack.mjs';
+
+export async function buildAndVerifyDealerPack({options, argv, runBuild, verify}) {
+  const result = await runBuild(argv);
+  const reportPath = path.join(path.dirname(result.bundleRoot), 'qa-report.json');
+  const qa = await verify({slug: options.slug, bundleRoot: result.bundleRoot, plan: options.plan ?? 'paid',
+    reportPath, screenshotDir: path.join(path.dirname(result.bundleRoot), 'screenshots')});
+  if (qa.success !== true) throw Error('Dealer-pack QA failed; retained report: ' + reportPath);
+  return {build: result, qa, providerWrites: false};
+}
 
 export async function runDealerPackCli(argv = process.argv.slice(2)) {
   const [command, ...rest] = argv;
@@ -24,11 +33,8 @@ export async function runDealerPackCli(argv = process.argv.slice(2)) {
   }
   if (command === 'build') {
     const builder = await import('./build-dealer-pack.mjs'), {options} = builder.parsePackBuildArgs([command, ...rest]);
-    const result = await builder.runPackBuildCli([command, ...rest]);
     const {verifyDealerPack} = await import('./verify-dealer-pack.mjs');
-    const qa = await verifyDealerPack({slug: options.slug, bundleRoot: result.bundleRoot, plan: options.plan ?? 'paid',
-      reportPath: path.join(path.dirname(result.bundleRoot), 'qa-report.json'), screenshotDir: path.join(path.dirname(result.bundleRoot), 'screenshots')});
-    return {build: result, qa, providerWrites: false};
+    return buildAndVerifyDealerPack({options, argv: [command, ...rest], runBuild: builder.runPackBuildCli, verify: verifyDealerPack});
   }
   throw Error('Unknown dealer-pack command: ' + command);
 }

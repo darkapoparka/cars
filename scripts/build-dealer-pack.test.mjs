@@ -6,11 +6,11 @@ import path from 'node:path';
 import {createRequire} from 'node:module';
 import {execFileSync} from 'node:child_process';
 import {sha256} from './lib/workflow.mjs';
-import {artifactInventory} from './lib/uk-cloudflare-artifacts.mjs';
+import {artifactInventory, UK_FAMILY_NODES} from './lib/uk-cloudflare-artifacts.mjs';
 import {planSixDesignSelection} from './lib/six-design-release.mjs';
-import {parsePackSlugs, packBuildMatrix, packExecution, sourceFileRows, dealerPackToolDigest, dealerPackBuildEnvironment, verifyPreparedPackSource, packCacheIdentity, packSourceCacheKey, prepareDealerPackSource, readDealerPackSource, inspectPackBudget, assertCompilerToolDirectory, parsePackBuildArgs, packInputDirectories} from './build-dealer-pack.mjs';
-import {DEALER_PACK_COMPILED_KIND, DEALER_PACK_BUNDLE_KIND, PACK_TARGETS, PACK_FAMILIES, canonicalPackJson, validatePackExecution} from './lib/dealer-pack-artifacts.mjs';
-import {inspectSingleWorkerInputs, packageUkSingleWorker} from './package-uk-single-worker.mjs';
+import {parsePackSlugs, packBuildMatrix, packExecution, sourceFileRows, dealerPackToolDigest, dealerPackBuildEnvironment, verifyPreparedPackSource, packCacheIdentity, packSourceCacheKey, prepareDealerPackSource, readDealerPackSource, inspectPackBudget, assertCompilerToolDirectory, parsePackBuildArgs, packInputDirectories, inspectCachedDealerPackBuild, reuseDealerPackBuild} from './build-dealer-pack.mjs';
+import {DEALER_PACK_COMPILED_KIND, DEALER_PACK_BUNDLE_KIND, PACK_TARGETS, PACK_FAMILIES, canonicalPackJson, validatePackExecution, createDealerPackComposition, validateDealerPackComposition, dealerPackCompositionDigest} from './lib/dealer-pack-artifacts.mjs';
+import {inspectSingleWorkerInputs, inspectDealerPackCompiledArtifact, packageUkSingleWorker} from './package-uk-single-worker.mjs';
 
 test('batch input is bounded, exact and cannot become shell or filesystem syntax', () => {
   assert.deepEqual(parsePackSlugs('za-motors, wadishee-used-cars\ngranada-auto-sales'), ['za-motors', 'wadishee-used-cars', 'granada-auto-sales']);
@@ -34,11 +34,16 @@ test('local builds have explicit local identity instead of invented Actions runs
 });
 
 test('dependency caches share releases while compiled caches distinguish dealer inputs', () => {
-  const common = {releaseDigest: 'a'.repeat(64), toolDigest: 'b'.repeat(64), key: 'modern', platform: 'linux', arch: 'x64'};
+  const common = {sourceCommit: '7'.repeat(40), sourceDigest: '8'.repeat(64), capacityPlan: 'paid', releaseDigest: 'a'.repeat(64), toolDigest: 'b'.repeat(64), key: 'modern', platform: 'linux', arch: 'x64'};
   const first = packCacheIdentity({...common, packDigest: 'c'.repeat(64)}), second = packCacheIdentity({...common, packDigest: 'd'.repeat(64)});
   assert.equal(first.dependencies, second.dependencies); assert.notEqual(first.compiled, second.compiled);
   assert.notEqual(first.dependencies, packCacheIdentity({...common, packDigest: 'c'.repeat(64), toolDigest: 'e'.repeat(64)}).dependencies);
   assert.notEqual(first.dependencies, packCacheIdentity({...common, packDigest: 'c'.repeat(64), arch: 'arm64'}).dependencies);
+  for (const changed of [{sourceCommit: '9'.repeat(40)}, {sourceDigest: '9'.repeat(64)}, {capacityPlan: 'free'}]) {
+    const other = packCacheIdentity({...common, packDigest: 'c'.repeat(64), ...changed});
+    assert.equal(other.dependencies, first.dependencies); assert.notEqual(other.compiled, first.compiled);
+  }
+  assert.equal(packCacheIdentity({...common, packDigest: 'c'.repeat(64), execution: {kind: 'local', id: 'fresh'}}).compiled, first.compiled);
 });
 
 test('a restored shared npm cache leaves every prepared source byte sealed on the next dealer build', t => {
@@ -149,6 +154,7 @@ test('provider write flags and duplicate command options are rejected', () => {
   assert.throws(() => parsePackBuildArgs(['compose', '--write', 'true']));
   assert.throws(() => parsePackBuildArgs(['prepare', '--slug', 'one', '--slug', 'two']));
   assert.deepEqual(parsePackBuildArgs(['compile', '--prepared', 'runtime/p/prepare.json']), {command: 'compile', options: {prepared: 'runtime/p/prepare.json'}});
+  assert.deepEqual(parsePackBuildArgs(['reuse', '--prepared', 'runtime/p/prepare.json']), {command: 'reuse', options: {prepared: 'runtime/p/prepare.json'}});
 });
 
 function compiledFixture(t) {
@@ -176,7 +182,8 @@ function compiledFixture(t) {
     write(directory, 'deploy.json', deploy);
     write(directory, 'receipts/source.json', {schemaVersion: 1, kind: 'cars-dealer-pack-build-source', dealer: 'fixture', key, ...identity, originalPackUnchanged: true});
     write(directory, 'receipts/build.json', {schemaVersion: 1, kind: 'cars-dealer-pack-family-build', dealer: 'fixture', key, ...identity,
-      status: 'passed', workerName: deploy.workerName, compiledDigest: deploy.compiledDigest, compiled: true, dryRun: true});
+      status: 'passed', workerName: deploy.workerName, compiledDigest: deploy.compiledDigest, compiled: true, dryRun: true,
+      node: 'v' + UK_FAMILY_NODES[key], platform: process.platform, arch: process.arch});
     artifactInventory(directory, {kind: DEALER_PACK_COMPILED_KIND, dealer: 'fixture', key, status: 'passed'});
   }
   const change = (key, name, edit) => { const file = path.join(inputs[key], name), value = JSON.parse(fs.readFileSync(file)); edit(value); write(inputs[key], name, value); artifactInventory(inputs[key], {kind: DEALER_PACK_COMPILED_KIND, dealer: 'fixture', key, status: 'passed'}); };
@@ -216,4 +223,104 @@ test('pack output uses the existing six-handler layout and truthful qualificatio
   assert(fs.existsSync(path.join(destination, 'server/worker.mjs')));
   const config = JSON.parse(fs.readFileSync(path.join(destination, 'wrangler.json'))); assert.equal(config.assets.binding, 'ASSETS'); assert.equal(config.services, undefined);
   assert.equal(receipt.outputDigest, sha256(JSON.stringify(receipt.files)));
+});
+
+const inspectFixture = fixture => Object.fromEntries(PACK_TARGETS.map(key => [key, inspectDealerPackCompiledArtifact({directory: fixture.inputs[key], key, expectedDealer: 'fixture'})]));
+function preparedFixture(fixture, key = 'app') {
+  const prepared = {schemaVersion: 1, kind: 'cars-dealer-pack-prepared-build', dealer: 'fixture', key, ...structuredClone(fixture.identity),
+    execution: {kind: 'local', id: 'current-preparation'}, workerName: 'cars-fixture', node: UK_FAMILY_NODES[key]};
+  prepared.cache = packCacheIdentity(prepared); return prepared;
+}
+const physicalDigest = directory => {
+  const rows = [];
+  const walk = prefix => { for (const entry of fs.readdirSync(path.join(directory, prefix), {withFileTypes: true})) {
+    const name = prefix ? prefix + '/' + entry.name : entry.name;
+    if (entry.isDirectory()) walk(name); else rows.push([name, sha256(fs.readFileSync(path.join(directory, name)))]);
+  } }; walk(''); return sha256(canonicalPackJson(rows.sort(([a], [b]) => a.localeCompare(b))));
+};
+
+test('an exact restored compiled cache retains every original artifact and execution byte', t => {
+  const fixture = compiledFixture(t), prepared = preparedFixture(fixture), restored = path.join(fixture.root, 'restored-cache');
+  fs.cpSync(fixture.inputs.app, restored, {recursive: true});
+  const before = physicalDigest(restored), reuseExecution = {kind: 'local', id: 'new-cache-inspection'};
+  const report = inspectCachedDealerPackBuild({directory: restored, prepared, reuseExecution});
+  assert.equal(report.compiledNow, false); assert.equal(report.completeArtifactVerified, true); assert.equal(report.originalArtifactChanged, false);
+  assert.deepEqual(report.originalExecution, fixture.identity.execution); assert.deepEqual(report.reuseExecution, reuseExecution);
+  assert.deepEqual(report.originalBuild, JSON.parse(fs.readFileSync(path.join(restored, 'receipts/build.json'))));
+  assert.equal(physicalDigest(restored), before); assert.equal(report.cacheKey, prepared.cache.compiled);
+});
+
+test('cached outputs cannot cross dealer, exact source, release, tool, plan or native runtime boundaries', t => {
+  const fixture = compiledFixture(t), original = preparedFixture(fixture);
+  const differences = {sourceCommit: '2'.repeat(40), sourceDigest: '2'.repeat(64), packDigest: '2'.repeat(64), releaseDigest: '2'.repeat(64), toolDigest: '2'.repeat(64), capacityPlan: 'free', publicOrigin: 'https://foreign.example'};
+  for (const [field, value] of Object.entries(differences)) {
+    const prepared = {...structuredClone(original), [field]: value}; prepared.cache = packCacheIdentity(prepared);
+    assert.throws(() => inspectCachedDealerPackBuild({directory: fixture.inputs.app, prepared}), new RegExp('content differs: ' + field));
+  }
+  const releases = structuredClone(original); releases.sourceReleases.app.tree = '2'.repeat(40);
+  assert.throws(() => inspectCachedDealerPackBuild({directory: fixture.inputs.app, prepared: releases}), /content differs: sourceReleases/);
+  for (const changed of [{dealer: 'foreign'}, {node: '24.21.0'}, {workerName: 'cars-foreign'}]) assert.throws(() => inspectCachedDealerPackBuild({directory: fixture.inputs.app, prepared: {...original, ...changed}}));
+  fixture.change('app', 'receipts/build.json', row => {row.node = 'v24.21.0';});
+  assert.throws(() => inspectCachedDealerPackBuild({directory: fixture.inputs.app, prepared: original}), /native build runtime/);
+});
+
+test('cache inspection rejects tampering, undeclared bytes, failure receipts and relabelled original execution', async t => {
+  for (const mode of ['changed-byte', 'extra-file', 'missing-file', 'failed-build', 'relabelled-execution', 'unsupported-execution', 'foreign-platform']) await t.test(mode, t => {
+    const fixture = compiledFixture(t), directory = fixture.inputs.app, prepared = preparedFixture(fixture);
+    if (mode === 'changed-byte') fs.appendFileSync(path.join(directory, 'compiled/app/public/app.txt'), 'changed');
+    if (mode === 'extra-file') fs.writeFileSync(path.join(directory, 'undeclared.txt'), 'extra');
+    if (mode === 'missing-file') fs.unlinkSync(path.join(directory, 'compiled/app/public/app.txt'));
+    if (mode === 'failed-build') fixture.change('app', 'receipts/build.json', row => {row.status = 'failed';});
+    if (mode === 'relabelled-execution') fixture.change('app', 'receipts/build.json', row => {row.execution = prepared.execution;});
+    if (mode === 'unsupported-execution') for (const name of ['deploy.json', 'receipts/source.json', 'receipts/build.json']) fixture.change('app', name, row => {row.execution = {kind: 'cached', id: 'pretend'};});
+    if (mode === 'foreign-platform') fixture.change('app', 'receipts/build.json', row => {row.platform = 'foreign';});
+    assert.throws(() => inspectCachedDealerPackBuild({directory, prepared}));
+  });
+});
+
+test('reuse checks current prepared source before writing a separate report and never rewrites the cached artifact', async t => {
+  const source = sourceFixture(t), fixture = compiledFixture(t), key = PACK_TARGETS.find(key => process.version === 'v' + UK_FAMILY_NODES[key]) ?? 'app';
+  const area = path.join(source.root, 'runtime/reuse'), packageRoot = path.join(area, 'source'), artifact = path.join(area, 'artifact');
+  fs.mkdirSync(packageRoot, {recursive: true}); fs.writeFileSync(path.join(packageRoot, 'source.js'), 'exact personalized input');
+  const identity = {...fixture.identity, sourceCommit: execFileSync('git', ['rev-parse', 'HEAD'], {cwd: source.root, encoding: 'utf8'}).trim(), toolDigest: dealerPackToolDigest(source.root), packDigest: source.pack.packDigest};
+  for (const name of ['deploy.json', 'receipts/source.json', 'receipts/build.json']) fixture.change(key, name, row => Object.assign(row, identity));
+  fs.cpSync(fixture.inputs[key], artifact, {recursive: true});
+  const prepared = {...preparedFixture({identity}, key), area, packageRoot, inputFiles: sourceFileRows(new Map([['source.js', Buffer.from('exact personalized input')]]))};
+  const preparedFile = path.join(area, 'prepare.json'); fs.writeFileSync(preparedFile, JSON.stringify(prepared));
+  if (process.version !== 'v' + UK_FAMILY_NODES[key]) {
+    await assert.rejects(() => reuseDealerPackBuild({root: source.root, preparedFile, loadPack: source.loadPack}), /requires Node/); return;
+  }
+  const before = physicalDigest(artifact), report = await reuseDealerPackBuild({root: source.root, preparedFile, loadPack: source.loadPack});
+  assert.equal(report.status, 'passed'); assert.equal(report.compiledNow, false); assert.equal(physicalDigest(artifact), before);
+  const reportFile = path.join(area, 'cache-reuse-report.json'), receipt = fs.readFileSync(reportFile); assert.deepEqual(JSON.parse(receipt), report);
+  assert(!fs.existsSync(path.join(artifact, 'cache-reuse-report.json')));
+  fs.appendFileSync(path.join(packageRoot, 'source.js'), 'changed');
+  await assert.rejects(() => reuseDealerPackBuild({root: source.root, preparedFile, loadPack: source.loadPack}), /changed, missing or undeclared/);
+  assert.equal(physicalDigest(artifact), before); assert.deepEqual(fs.readFileSync(reportFile), receipt);
+});
+
+test('explicit pack composition records mixed original compile events and a separate current event', t => {
+  const fixture = compiledFixture(t), originalEvent = {kind: 'local', id: 'earlier-native-app'};
+  for (const name of ['deploy.json', 'receipts/source.json', 'receipts/build.json']) fixture.change('app', name, row => {row.execution = originalEvent;});
+  assert.throws(() => inspectSingleWorkerInputs({inputs: fixture.inputs, expectedDealer: 'fixture'}), /Mixed exact source packages: execution/);
+  const inspected = inspectFixture(fixture), before = Object.fromEntries(PACK_TARGETS.map(key => [key, physicalDigest(fixture.inputs[key])])), execution = {kind: 'local', id: 'current-composition'};
+  const proof = createDealerPackComposition({dealer: 'fixture', execution, inspected});
+  const result = inspectSingleWorkerInputs({inputs: fixture.inputs, expectedDealer: 'fixture', packComposition: proof});
+  assert.deepEqual(result.identity.execution, execution); assert.deepEqual(proof.members.app.execution, originalEvent);
+  assert.deepEqual(proof.members.router.execution, fixture.identity.execution);
+  for (const key of PACK_TARGETS) assert.equal(physicalDigest(fixture.inputs[key]), before[key]);
+  const esbuild = createRequire(process.env.CARS_ESBUILD_RESOLVE_FROM || import.meta.url)('esbuild');
+  const receipt = packageUkSingleWorker({inputs: fixture.inputs, expectedDealer: 'fixture', destination: path.join(fixture.root, 'reused-bundle'), esbuild, packComposition: proof});
+  assert.deepEqual(receipt.execution, execution); assert.deepEqual(receipt.packComposition, proof); assert.equal(receipt.packCompositionDigest, dealerPackCompositionDigest(proof));
+  assert.equal(validateDealerPackComposition(proof, {dealer: 'fixture', identity: receipt, artifacts: receipt.artifacts}), proof);
+});
+
+test('composition provenance cannot conceal changed source content, original execution, digest, native runtime or extra members', t => {
+  const fixture = compiledFixture(t), inspected = inspectFixture(fixture), proof = createDealerPackComposition({dealer: 'fixture', execution: {kind: 'local', id: 'compose'}, inspected});
+  for (const mutate of [value => {value.members.app.artifactDigest = '9'.repeat(64);}, value => {value.members.app.compiledDigest = '9'.repeat(64);}, value => {value.members.app.execution = {kind: 'local', id: 'relabeled'};}, value => {value.members.app.node = 'v24.21.0';}, value => {value.identity.sourceDigest = '9'.repeat(64);}, value => {value.members.extra = value.members.app;}, value => {value.providerWrites = true;}]) {
+    const changed = structuredClone(proof); mutate(changed);
+    assert.throws(() => inspectSingleWorkerInputs({inputs: fixture.inputs, expectedDealer: 'fixture', packComposition: changed}));
+  }
+  for (const name of ['deploy.json', 'receipts/source.json', 'receipts/build.json']) fixture.change('app', name, row => {row.sourceDigest = '9'.repeat(64);});
+  assert.throws(() => createDealerPackComposition({dealer: 'fixture', execution: proof.execution, inspected: inspectFixture(fixture)}), /Mixed exact dealer-pack composition content/);
 });

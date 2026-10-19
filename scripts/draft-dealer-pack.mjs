@@ -153,7 +153,7 @@ export function draftDealerPack({root=ROOT,leadId,slug,stockFile,mediaRoot,obser
   assertPublicPackFacts(facts,inventory.stock);
   const manifest=createPackManifest({slug,dealerId:lead.id,country:lead.country,lock,observedAt:facts.business.observedAt});
   manifest.shareIdentity={name:facts.business.name,publicOrigin:'https://'+slug+'.webpreviews.site',description:PREVIEW_NOTICE};
-  const missing=['name','city','address','sourceUrl','observedAt','phone','email','website','hours'].filter(key=>!facts.business[key]).map(key=>({field:'business.'+key,required:['name','city','address','sourceUrl','observedAt'].includes(key),reason:'No usable sourced value in the retained public business record.'}));
+  const missing=['name','city','address','sourceUrl','observedAt','phone','email','website','hours'].filter(key=>!facts.business[key]).map(key=>({field:'business.'+key,required:['name','city','sourceUrl','observedAt'].includes(key),reason:'No usable sourced value in the retained public business record.'}));
   missing.push({field:'prices',required:false,reason:'All listing prices are omitted under the public-repository scope.'});
   const blocking=missing.filter(row=>row.required).map(row=>row.field);
   const identity={schemaVersion:1,kind:'cars-new-dealer-identity-review',reviewed:true,reviewedAt:now,dealer:slug,dealerId:lead.id,repository:'darkapoparka/cars',existingIdentityFound:false,sourceOwnership:'cars-canonical',

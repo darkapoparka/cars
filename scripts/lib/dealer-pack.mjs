@@ -78,7 +78,7 @@ export function loadDealerPack(root = ROOT, slug, {requireBranding = true} = {})
     return {destination: name.slice(1)};
   });
   assertPublicPackFacts(facts, stock);
-  validateNewDealerFacts({dealer: {...manifest, media}, facts, stock, locale, identityReview});
+  validateNewDealerFacts({dealer: {...manifest, media}, facts, stock, locale, identityReview, factPolicy: 'dealer-pack-optional-v1'});
   const registryPath = path.join(root, 'docs/DEPLOYMENT-INVENTORY.json');
   const normalized = value => String(value).toLowerCase().replace(/[^a-z0-9]/g, '');
   const fleet = fs.existsSync(registryPath) ? json(registryPath).dealers ?? [] : [];

@@ -377,8 +377,8 @@ export async function inspectDealerPackBatch({batchFile,bundleRoot,plan,reportFi
   const pack=await loadPack(root,slug),directory=inside(base,slug+'/bundle',{mustExist:true});
   const context=inspectDealerPackBundle({bundleRoot:directory,slug,packDigest:pack.packDigest,releaseDigest:pack.releaseDigest??pack.manifest.releaseDigest,sourceReleases:pack.manifest.templateSources,plan});
   const parent=path.dirname(directory),build=json(inside(parent,'build-report.json',{mustExist:true})),qa=json(inside(parent,'qa-report.json',{mustExist:true})),receipt=context.receipt;
-  const bound=value=>value&&value.slug===slug&&value.packDigest===receipt.packDigest&&value.releaseDigest===receipt.releaseDigest&&value.outputDigest===receipt.outputDigest&&canonical(value.execution)===canonical(receipt.execution);
-  assert(bound(build)&&build.status==='passed','Build report does not match the actual compiled candidate');
+  const bound=value=>value&&value.slug===slug&&value.packDigest===receipt.packDigest&&value.releaseDigest===receipt.releaseDigest&&value.outputDigest===receipt.outputDigest&&canonical(value.execution)===canonical(receipt.execution)&&value.packCompositionDigest===receipt.packCompositionDigest;
+  assert(bound(build)&&build.status==='passed'&&canonical(build.packComposition)===canonical(receipt.packComposition),'Build report does not match the actual compiled candidate');
   assert(bound(qa)&&qa.type==='cars-dealer-pack-qa'&&qa.success===true&&Array.isArray(qa.checks)&&qa.checks.length>0&&qa.checks.every(row=>row.status==='passed'),
    'QA report is missing, failed, or does not match this candidate');
   for(const id of ['bundle-integrity','cloudflare-limits','fleet-contact-coverage','logo-assets','rendered-routes','screenshots','bundle-unchanged'])assert(qa.checks.filter(row=>row.id===id&&row.status==='passed').length===1,'Missing candidate QA gate: '+id);
@@ -392,6 +392,7 @@ export async function inspectDealerPackBatch({batchFile,bundleRoot,plan,reportFi
   }
   result.results.push({slug,status:'passed',workerName:receipt.workerName,publicOrigin:receipt.publicOrigin,workerCount:1,applicationCount:6,serviceBindings:[],
    execution:receipt.execution,sourceCommit:receipt.sourceCommit,packDigest:receipt.packDigest,releaseDigest:receipt.releaseDigest,outputDigest:receipt.outputDigest,
+   ...(receipt.packCompositionDigest!==undefined?{packCompositionDigest:receipt.packCompositionDigest}:{}),
    capacity:context.capacity,buildStatus:build.status,qaStatus:'passed',readyToDeploy:false,deployments:0});
  }catch(error){result.results.push({slug,status:'failed',reason:error.message,readyToDeploy:false,deployments:0});}
  result.success=result.results.every(row=>row.status==='passed');result.finishedAt=new Date().toISOString();

@@ -24,6 +24,7 @@ import {assertExtendedVariantSources} from './publishing/six-variant.mjs';
 import {resolveShareIdentity} from './publishing/dealer-share.mjs';
 import {safeArtifactPath} from './lib/uk-cloudflare-artifacts.mjs';
 import {adaptPackImportFacts} from './lib/dealer-pack-import-facts.mjs';
+import {applyDealerPackOptionalContact} from './lib/dealer-pack-optional-contact.mjs';
 import {validateNewSourceCopyReview, newSourceReviewedCopy} from './prepare-new-dealer-source.mjs';
 
 const assert = (value, message) => {if (!value) throw Error(message);};
@@ -93,6 +94,7 @@ export async function assembleDealerPack({root = ROOT, slug, out, materialize = 
       ...(['modern', 'import'].includes(key) && reviewedModernCopy ? {reviewedModernCopy} : {})});
   }
   let files = await collectSource(directory, manifest);
+  applyDealerPackOptionalContact(files, manifest, {profile, typescript: createRequire(path.resolve(toolPackage))('typescript')});
   adaptPackImportFacts(files, profile);
   const app = await prepareAppDealer(directory, manifest, {factPolicy: profile.factPolicy, appFiles: new Map([...files].filter(([name]) => name.startsWith('app/')).map(([name, bytes]) => [name.slice(4), bytes]))});
   for (const [name, bytes] of app.files) files.set('app/' + name, bytes);

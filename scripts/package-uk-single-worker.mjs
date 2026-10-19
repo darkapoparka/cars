@@ -2,13 +2,13 @@ import {assertComponentReuseProof,componentAssemblyIdentity,componentSourceDiges
 // One public origin and one Worker per dealer. Provider-only composition of six verified builds.
 // Each Next/Vite application receives its own framework global registry; this is not a security sandbox.
 import fs from 'node:fs';import path from 'node:path';import {createHash} from 'node:crypto';import {gzipSync} from 'node:zlib';
-import {validateFileInventory,safeArtifactPath} from './lib/uk-cloudflare-artifacts.mjs';
+import {validateFileInventory,safeArtifactPath,UK_FAMILY_NODES} from './lib/uk-cloudflare-artifacts.mjs';
 import {filesAt,inside} from './lib/workflow.mjs';
 import {assertSixDesignSelection} from './lib/six-design-release.mjs';
 import {bindImportSurfaceLogos,namespaceImportAssets,importAssetName} from './lib/uk-import-brand-provider.mjs';
 import {validateModernStaticManifest} from './lib/modern-free-static-runtime.mjs';
 import {validateCanonicalComposition,canonicalCompositionEntry,CANONICAL_ORIGINAL_WORKER_PATH} from './publishing/canonical-origin-wrapper.mjs';
-import {DEALER_PACK_COMPILED_KIND,DEALER_PACK_BUNDLE_KIND,PACK_IDENTITY_FIELDS,validateDealerPackCompiled} from './lib/dealer-pack-artifacts.mjs';
+import {DEALER_PACK_COMPILED_KIND,DEALER_PACK_BUNDLE_KIND,PACK_IDENTITY_FIELDS,PACK_CONTENT_IDENTITY_FIELDS,validateDealerPackCompiled,assertDealerPackComposition,dealerPackCompositionDigest} from './lib/dealer-pack-artifacts.mjs';
 const KEYS=['auto-best','modern','import','app','mobile','karento-best','router'],NEXT=new Set(['modern','app','mobile']);
 const hash=b=>createHash('sha256').update(b).digest('hex'),assert=(ok,m)=>{if(!ok)throw Error(m);};
 function walk(root,relative='',out=[]){for(const e of fs.readdirSync(path.join(root,relative),{withFileTypes:true})){assert(!e.isSymbolicLink(),'Linked artifact refused');const n=relative?relative+'/'+e.name:e.name;if(e.isDirectory())walk(root,n,out);else if(e.isFile())out.push(n);else throw Error('Unsupported artifact');}return out.sort();}
@@ -61,6 +61,20 @@ function validateCompiledFiles(inventory,deploy,key){
  assert(inventory.files.filter(row=>row.path.startsWith('compiled/')).length===rows.length,'Undeclared compiled files '+key);
  assert([deploy.mainPath,deploy.configPath].every(name=>safeArtifactPath(name)&&rows.some(row=>row.path===name))&&safeArtifactPath(deploy.assetPath)&&rows.some(row=>row.path.startsWith(deploy.assetPath+'/')),'Missing compiled entry, config or assets '+key);
 }
+function dealerPackBuildEvidence(directory,inventory,deploy,key,expectedDealer){
+ assert(inventory.kind===DEALER_PACK_COMPILED_KIND&&inventory.status==='passed'&&inventory.dealer===expectedDealer&&inventory.key===key&&deploy.schemaVersion===1&&deploy.provider==='cloudflare'&&deploy.compiled===true&&deploy.dryRun===true,'Wrong cached dealer-pack input '+key);
+ const source=JSON.parse(fs.readFileSync(inside(directory,'receipts/source.json',{mustExist:true}),'utf8')),build=JSON.parse(fs.readFileSync(inside(directory,'receipts/build.json',{mustExist:true}),'utf8'));
+ validateDealerPackCompiled({deploy,key,expectedDealer,source,build});
+ assert(build.node==='v'+UK_FAMILY_NODES[key],'Dealer-pack native build runtime differs: '+key);
+ return {source,build};
+}
+/** Complete physical inventory and original native receipts for one pack build. */
+export function inspectDealerPackCompiledArtifact({directory,key,expectedDealer}){
+ assert(KEYS.includes(key)&&typeof directory==='string'&&fs.existsSync(directory)&&fs.lstatSync(directory).isDirectory()&&!fs.lstatSync(directory).isSymbolicLink(),'Missing exact cached dealer-pack artifact');
+ const inventory=verifyCompiledArtifact(directory),deploy=JSON.parse(fs.readFileSync(inside(directory,'deploy.json',{mustExist:true}),'utf8'));
+ validateCompiledFiles(inventory,deploy,key);
+ return {directory,inventory,deploy,...dealerPackBuildEvidence(directory,inventory,deploy,key,expectedDealer)};
+}
 function validateSourceReleases(releases,key){
  assert(releases&&canonical(Object.keys(releases).sort())===canonical(KEYS.filter(name=>name!=='router').sort()),'Missing six exact source releases '+key);
  for(const family of KEYS.filter(name=>name!=='router')){const release=releases[family];assert(release&&release.repository==='darkapoparka/cars'&&release.path==='templates/'+family&&HEX40.test(release.revision??'')&&HEX40.test(release.tree??'')&&HEX64.test(release.digest??''),'Invalid exact source release '+key+': '+family);}
@@ -92,7 +106,7 @@ export function inspectModernFreeStaticExperiment(inspected,modernMount){
  assert(!entry.deploy.compiledFiles.some(row=>row.path.startsWith(entry.deploy.assetPath+'/_vinext/static-cache/')),'Unscoped native static cache is not allowed');
  return plan;
 }
-export function inspectSingleWorkerInputs({inputs,expectedDealer,componentReuse=null}){
+export function inspectSingleWorkerInputs({inputs,expectedDealer,componentReuse=null,packComposition=null}){
  assert(typeof expectedDealer==='string'&&/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(expectedDealer),'Exact dealer required');
  assert(inputs&&canonical(Object.keys(inputs).sort())===canonical([...KEYS].sort()),'Exactly six compiled designs and one router required');
  const inspected={};let inputKind;
@@ -104,10 +118,11 @@ export function inspectSingleWorkerInputs({inputs,expectedDealer,componentReuse=
   assert(inventory.status==='passed'&&inventory.dealer===expectedDealer&&inventory.key===key&&deploy.schemaVersion===1&&deploy.dealer===expectedDealer&&deploy.key===key&&deploy.provider==='cloudflare'&&deploy.compiled===true&&deploy.dryRun===true,'Wrong compiled input '+key);
    assert(HEX40.test(deploy.sourceCommit??'')&&(kind==='dealer-pack'||/^[1-9][0-9]*$/.test(String(deploy.runId??''))&&/^[1-9][0-9]*$/.test(String(deploy.attempt??''))),'Missing exact source or workflow identity '+key);
   validateCompiledFiles(inventory,deploy,key);
+  let packEvidence;
   if(kind==='uk')assert(deploy.kind!==FLEET_KIND&&deploy.sourcePayloadUnchanged===true&&HEX40.test(deploy.packageTree??'')&&HEX64.test(deploy.packageDigest??'')&&HEX64.test(deploy.payloadDigest??''),'Missing immutable UK package seals '+key);
    else if(kind==='dealer-pack'){
     assert(!componentReuse,'Dealer packs cannot borrow existing-fleet component approval');
-    validateDealerPackCompiled({deploy,key,expectedDealer,source:JSON.parse(fs.readFileSync(path.join(directory,'receipts/source.json'),'utf8')),build:JSON.parse(fs.readFileSync(path.join(directory,'receipts/build.json'),'utf8'))});
+    packEvidence=dealerPackBuildEvidence(directory,inventory,deploy,key,expectedDealer);
    }else{
    assert(deploy.kind===FLEET_KIND&&/^[a-f0-9]{32}$/.test(deploy.accountId??'')&&HEX40.test(deploy.sourceTree??'')&&HEX64.test(deploy.inputDigest??'')&&deploy.hosted===false&&deploy.credentialsIncluded===false&&deploy.nativeApproval===false&&!['packageTree','packageDigest','payloadDigest','sourcePayloadUnchanged'].some(field=>Object.hasOwn(deploy,field)),'Invalid existing-fleet source schema '+key);
    validateSourceReleases(deploy.sourceReleases,key);
@@ -116,10 +131,11 @@ export function inspectSingleWorkerInputs({inputs,expectedDealer,componentReuse=
    if(componentReuse){assert(componentReuse.members?.[key]&&componentReuse.members[key].familySourceDigest===componentSourceDigest(source.targetBeforeDependencies,key),'Component source receipt differs from proven family bytes: '+key);if(componentReuse.members[key].mode==='rebuilt')assert(canonical(source.componentRepair)===canonical(componentReuse.sourceRepairs),'New compile did not carry the exact source repairs: '+key);}
    assert(build.schemaVersion===1&&build.status==='passed'&&build.dealer===expectedDealer&&build.key===key&&build.compiled===true&&build.dryRun===true&&['sourceCommit','workerName','compiledDigest'].every(field=>build[field]===deploy[field])&&['runId','attempt'].every(field=>String(build[field])===String(deploy[field])),'Existing-fleet build receipt differs '+key);
   }
-  inspected[key]={directory,inventory,deploy};
+  inspected[key]={directory,inventory,deploy,...(packEvidence??{})};
  }
  if(componentReuse){assert(inputKind==='existing-fleet','Component reuse excludes unrelated UK package identities');assertComponentReuseProof(componentReuse,Object.fromEntries(Object.entries(inspected).map(([key,value])=>[key,value.deploy])));for(const[key,value]of Object.entries(inspected))assert(value.inventory.digest===componentReuse.members[key].artifactDigest,'Component inventory differs from reuse proof: '+key);}
- const identity=componentAssemblyIdentity(inspected.router.deploy,componentReuse),fields=inputKind==='dealer-pack'?PACK_IDENTITY_FIELDS:inputKind==='uk'?['sourceCommit','packageTree','packageDigest','payloadDigest','publicOrigin','runId','attempt']:componentReuse?['sourceTree','inputDigest','sourceReleases','accountId','publicOrigin']:['sourceCommit','sourceTree','inputDigest','sourceReleases','accountId','publicOrigin','runId','attempt'];
+ if(packComposition){assert(inputKind==='dealer-pack'&&!componentReuse,'Pack composition provenance requires dealer-pack inputs only');assertDealerPackComposition(packComposition,inspected);}
+ const originalIdentity=componentAssemblyIdentity(inspected.router.deploy,componentReuse),identity=packComposition?{...originalIdentity,execution:packComposition.execution}:originalIdentity,fields=inputKind==='dealer-pack'?(packComposition?PACK_CONTENT_IDENTITY_FIELDS:PACK_IDENTITY_FIELDS):inputKind==='uk'?['sourceCommit','packageTree','packageDigest','payloadDigest','publicOrigin','runId','attempt']:componentReuse?['sourceTree','inputDigest','sourceReleases','accountId','publicOrigin']:['sourceCommit','sourceTree','inputDigest','sourceReleases','accountId','publicOrigin','runId','attempt'];
  assert(/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(identity.workerName??''),'Exact public Worker name required');
  const origin=new URL(inputKind==='dealer-pack'?identity.providerOrigin:identity.publicOrigin);assert(origin.protocol==='https:'&&!origin.username&&!origin.password&&!origin.search&&!origin.hash&&origin.pathname==='/'&&origin.hostname.startsWith(identity.workerName+'.')&&origin.hostname.endsWith('.workers.dev'),'Public origin differs from Worker identity');
  if(inputKind==='dealer-pack'){const canonicalOrigin=new URL(identity.publicOrigin);assert(canonicalOrigin.protocol==='https:'&&canonicalOrigin.origin===identity.publicOrigin&&!canonicalOrigin.username&&!canonicalOrigin.password,'Invalid dealer-pack canonical share origin');}
@@ -144,10 +160,10 @@ export function materializeSignatureStaticFontCompletion(inspected,completion,co
  return selected.map(({from,...row})=>row);
 }
 
-export function packageUkSingleWorker({inputs,destination,expectedDealer,esbuild,componentReuse=null,canonicalComposition=null}){
+export function packageUkSingleWorker({inputs,destination,expectedDealer,esbuild,componentReuse=null,canonicalComposition=null,packComposition=null}){
  assert(!fs.existsSync(destination),'Exact dealer and a fresh derived destination required');
  assert(esbuild&&typeof esbuild.transformSync==='function','Reviewed existing esbuild required');
- const {inspected,identity,inputKind}=inspectSingleWorkerInputs({inputs,expectedDealer,componentReuse});
+ const {inspected,identity,inputKind}=inspectSingleWorkerInputs({inputs,expectedDealer,componentReuse,packComposition});
  const routerSource=fs.readFileSync(path.join(inspected.router.directory,inspected.router.deploy.mainPath),'utf8'),routerPlan=routerSource.match(/export default createDealerRouter\((\{[\s\S]*\})\);\s*$/);
  assert(routerPlan,'Frozen six-design router is required for provider mount mapping');
  const variants=JSON.parse(routerPlan[1]).variants;assertSixDesignSelection(variants);
@@ -186,6 +202,7 @@ export function packageUkSingleWorker({inputs,destination,expectedDealer,esbuild
  assert(packLimit===null?assetFiles<20000:assetFiles<=packLimit,'Actual static-asset count exceeds selected Workers allowance');assert(files.filter(f=>f.path.startsWith('public/')).every(f=>f.bytes<=25*1024**2),'A static asset exceeds 25 MiB');
  const sourceIdentity=inputKind==='dealer-pack'?Object.fromEntries(PACK_IDENTITY_FIELDS.map(key=>[key,identity[key]])):inputKind==='uk'?{packageTree:identity.packageTree,packageDigest:identity.packageDigest,payloadDigest:identity.payloadDigest}:{sourceTree:identity.sourceTree,inputDigest:identity.inputDigest,sourceReleases:identity.sourceReleases,accountId:identity.accountId};
  const receipt={schemaVersion:1,type:inputKind==='dealer-pack'?DEALER_PACK_BUNDLE_KIND:inputKind==='uk'?'cars-uk-single-worker-provider-package':'cars-existing-fleet-single-worker-provider-package',dealer:expectedDealer,sourceCommit:identity.sourceCommit,...sourceIdentity,...(inputKind==='dealer-pack'?{}:{runId:identity.runId,attempt:identity.attempt}),publicOrigin:identity.publicOrigin,workerName:identity.workerName,applicationCount:6,workerCount:1,composition:{inProcess:KEYS.filter(k=>k!=='router'),serviceBindings:[]},excludedAssetMetadata:{paths:['.vite/**','.assetsignore','vinext-client-entry-manifest.json'],reason:'Per-build tooling manifests are not mounted public application assets; actual client entry filenames remain embedded in each unchanged client bundle and server asset map.'},frameworkGlobalScopes:['modern','app','mobile'],serverBytes,compressedBytes:server.reduce((s,f)=>s+gzipSync(fs.readFileSync(path.join(base,f.path))).length,0),assetFiles,esbuildVersion:esbuild.version,changes,files,outputDigest:hash(JSON.stringify(files)),artifacts:Object.fromEntries(Object.entries(inspected).map(([k,v])=>[k,{digest:v.inventory.digest,compiledDigest:v.deploy.compiledDigest}])),sourceApplicationBytesChanged:false,compiledApplicationBytesChanged:true,hostedVerified:false,...(canonicalComposition?{canonicalComposition}:{}),...(componentReuse?{componentReuse,reviewedDerivedSourceRepairs:componentReuse.sourceRepairs}:{} )};
+ if(packComposition){receipt.packComposition=packComposition;receipt.packCompositionDigest=dealerPackCompositionDigest(packComposition);}
  fs.writeFileSync(base+'/single-worker-receipt.json',JSON.stringify(receipt,null,2)+'\n');return receipt;
 }
 

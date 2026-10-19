@@ -13,7 +13,7 @@ import {UK_FAMILY_NODES, UK_NEXT_FAMILIES, artifactInventory, validateFileInvent
 import {applyCloudflareProvider} from './publishing/cloudflare-provider.mjs';
 import {applyCloudflareSvelte, CLOUDFLARE_SVELTE_OUTPUT} from './publishing/cloudflare-svelte.mjs';
 import {resolveCloudflareNpmCli} from './publishing/cloudflare-next.mjs';
-import {inspectSingleWorkerInputs, packageUkSingleWorker} from './package-uk-single-worker.mjs';
+import {inspectSingleWorkerInputs, inspectDealerPackCompiledArtifact, packageUkSingleWorker} from './package-uk-single-worker.mjs';
 import {prepareSixDesignProviderSource, installDealerDesignSwitcher} from './package-dealer.mjs';
 import {baseNativeManifest} from './publishing/app-variant.mjs';
 import {assertNativeQualification} from './lib/native-localization.mjs';
@@ -21,7 +21,7 @@ import {assertLeadBranding} from './publishing/lead-branding.mjs';
 import {assertRetainedDealerLogoSurfaces} from './publishing/logo-surface-bindings.mjs';
 import {applyAutoBestCardLayout} from './publishing/auto-best-card-layout.mjs';
 import {sealSixVariantBuild} from './publishing/six-variant.mjs';
-import {DEALER_PACK_COMPILED_KIND, DEALER_PACK_BUNDLE_KIND, PACK_TARGETS, PACK_IDENTITY_FIELDS, canonicalPackJson, validatePackExecution, validatePackSourceReleases} from './lib/dealer-pack-artifacts.mjs';
+import {DEALER_PACK_COMPILED_KIND, DEALER_PACK_BUNDLE_KIND, PACK_TARGETS, PACK_IDENTITY_FIELDS, PACK_CONTENT_IDENTITY_FIELDS, canonicalPackJson, validatePackExecution, validatePackSourceReleases, createDealerPackComposition, dealerPackCompositionDigest} from './lib/dealer-pack-artifacts.mjs';
 
 export const PROOF_DEALERS = Object.freeze(['za-motors', 'wadishee-used-cars', 'granada-auto-sales']);
 export const PACK_TOOLCHAIN = Object.freeze({node: '26.10.0', wrangler: '4.149.0', esbuild: '0.28.2'});
@@ -69,12 +69,13 @@ export function dealerPackToolDigest(root = ROOT) {
   return sha256(canonicalPackJson(rows));
 }
 
-export function packCacheIdentity({releaseDigest, packDigest, toolDigest, key, platform = process.platform, arch = process.arch}) {
-  assert(PACK_TARGETS.includes(key) && [releaseDigest, packDigest, toolDigest].every(value => /^[a-f0-9]{64}$/.test(value ?? '')), 'Invalid dealer-pack cache identity');
+export function packCacheIdentity({sourceCommit, sourceDigest, releaseDigest, packDigest, toolDigest, capacityPlan, key, platform = process.platform, arch = process.arch}) {
+  assert(PACK_TARGETS.includes(key) && /^[a-f0-9]{40}$/.test(sourceCommit ?? '') && ['free', 'paid'].includes(capacityPlan) && [sourceDigest, releaseDigest, packDigest, toolDigest].every(value => /^[a-f0-9]{64}$/.test(value ?? '')), 'Invalid dealer-pack cache identity');
   // Downloaded dependencies may be shared across dealers. A compiled output
   // includes dealer facts and therefore must include the pack digest in its key.
   const dependencies = [platform, arch, UK_FAMILY_NODES[key], key, releaseDigest, toolDigest].join('-');
-  return {dependencies, compiled: dependencies + '-' + packDigest};
+  const compiled = 'dealer-pack-compiled-v1-' + sha256(canonicalPackJson({platform, arch, node: UK_FAMILY_NODES[key], key, sourceCommit, sourceDigest, releaseDigest, packDigest, toolDigest, capacityPlan}));
+  return {dependencies, compiled};
 }
 
 export function packSourceCacheKey({sourceCommit, packDigest, releaseDigest, toolDigest}) {
@@ -261,7 +262,7 @@ export function verifyPreparedPackSource(packageRoot, expectedRows) {
   assert(same(sourceFileRows(actualInputs), expectedRows), 'Prepared source contains changed, missing or undeclared files');
 }
 
-export async function compileDealerPackBuild({root = ROOT, preparedFile, run = runStage, loadPack} = {}) {
+async function readPreparedBuildContext({root, preparedFile, loadPack}) {
   const prepared = json(preparedFile), {dealer: slug, key, packageRoot, area} = prepared;
   assert(prepared.kind === 'cars-dealer-pack-prepared-build' && PACK_TARGETS.includes(key), 'Invalid prepared dealer-pack build');
   assert(runtimeArea(root, area) === path.resolve(area) && inside(area, 'source', {mustExist: true}) === packageRoot, 'Prepared source escaped its generated output');
@@ -270,10 +271,41 @@ export async function compileDealerPackBuild({root = ROOT, preparedFile, run = r
   loadPack ??= (await packModule()).loadDealerPack;
   assert((await loadPack(root, slug)).packDigest === prepared.packDigest, 'Dealer pack changed after preparation');
   verifyPreparedPackSource(packageRoot, prepared.inputFiles);
+  validatePackExecution(prepared.execution);
+  assert(same(prepared.cache, packCacheIdentity(prepared)), 'Prepared compiled-cache identity differs');
+  return prepared;
+}
+
+export function inspectCachedDealerPackBuild({directory, prepared, reuseExecution = packExecution()}) {
+  assert(prepared?.kind === 'cars-dealer-pack-prepared-build' && PACK_TARGETS.includes(prepared.key) && prepared.node === UK_FAMILY_NODES[prepared.key], 'Invalid prepared cached dealer-pack build');
+  validatePackExecution(reuseExecution);
+  assert(same(prepared.cache, packCacheIdentity(prepared)), 'Prepared compiled-cache identity differs');
+  const inspected = inspectDealerPackCompiledArtifact({directory, key: prepared.key, expectedDealer: prepared.dealer});
+  for (const field of PACK_CONTENT_IDENTITY_FIELDS) assert(same(inspected.deploy[field], prepared[field]), 'Cached dealer-pack content differs: ' + field);
+  const expectedWorker = prepared.key === 'router' ? prepared.workerName : prepared.workerName + '-' + (prepared.key === 'karento-best' ? 'signature' : prepared.key);
+  assert(inspected.deploy.workerName === expectedWorker && inspected.build.node === 'v' + prepared.node && inspected.build.platform === process.platform && inspected.build.arch === process.arch, 'Cached native runtime, platform or Worker differs');
+  return {schemaVersion: 1, kind: 'cars-dealer-pack-compiled-cache-reuse', status: 'passed', dealer: prepared.dealer, key: prepared.key,
+    cacheKey: prepared.cache.compiled, ...Object.fromEntries(PACK_CONTENT_IDENTITY_FIELDS.map(field => [field, prepared[field]])),
+    artifactDigest: inspected.inventory.digest, compiledDigest: inspected.deploy.compiledDigest, nativeNode: inspected.build.node,
+    originalExecution: inspected.deploy.execution, reuseExecution, originalBuild: inspected.build,
+    compiledNow: false, completeArtifactVerified: true, originalArtifactChanged: false, providerWrites: false};
+}
+
+export async function reuseDealerPackBuild({root = ROOT, preparedFile, loadPack} = {}) {
+  const startedAt = new Date().toISOString(), prepared = await readPreparedBuildContext({root, preparedFile, loadPack});
+  const artifact = path.join(prepared.area, 'artifact'), report = inspectCachedDealerPackBuild({directory: artifact, prepared});
+  Object.assign(report, {startedAt, finishedAt: new Date().toISOString()});
+  writeJson(path.join(prepared.area, 'cache-reuse-report.json'), report);
+  return report;
+}
+
+export async function compileDealerPackBuild({root = ROOT, preparedFile, run = runStage, loadPack} = {}) {
+  const prepared = await readPreparedBuildContext({root, preparedFile, loadPack}), {dealer: slug, key, packageRoot, area} = prepared;
+  loadPack ??= (await packModule()).loadDealerPack;
   const artifact = path.join(area, 'artifact'); assert(!fs.existsSync(artifact), 'Retain the existing build artifact; do not overwrite a completed or failed attempt'); fs.mkdirSync(artifact);
   const startedAt = new Date().toISOString(), started = Date.now(), cacheRoot = path.join(root, 'runtime/dealer-pack-cache', prepared.releaseDigest, key);
   const result = {schemaVersion: 1, kind: 'cars-dealer-pack-family-build', dealer: slug, key, ...identityOf(prepared),
-    status: 'running', compiled: false, dryRun: false, startedAt, node: process.version, providerWrites: false};
+    status: 'running', compiled: false, dryRun: false, startedAt, node: process.version, platform: process.platform, arch: process.arch, providerWrites: false};
   const stage = (name, args, cwd = packageRoot) => run({area, name, args, cwd, cacheRoot});
   try {
     let target, bundle;
@@ -375,18 +407,30 @@ export async function composeDealerPackBuild({root = ROOT, slug, inputRoot, out,
   assert(process.version === 'v' + PACK_TOOLCHAIN.node, 'Singleton compiler requires Node ' + PACK_TOOLCHAIN.node);
   const started = Date.now(), area = runtimeArea(root, out ?? path.join(root, 'runtime/dealer-packs', slug));
   fs.mkdirSync(area, {recursive: true});
-  const inputs = packInputDirectories(inputRoot, slug), {identity, inputKind} = inspectSingleWorkerInputs({inputs, expectedDealer: slug});
+  const inputs = packInputDirectories(inputRoot, slug);
+  // Construct lineage from the original receipts, then authenticate the whole
+  // artifact set through the maintained composer before trusting that lineage.
+  const members = Object.fromEntries(PACK_TARGETS.map(key => [key, {
+    inventory: json(inside(inputs[key], 'artifact-manifest.json', {mustExist: true})),
+    deploy: json(inside(inputs[key], 'deploy.json', {mustExist: true})),
+    build: json(inside(inputs[key], 'receipts/build.json', {mustExist: true})),
+  }]));
+  const packComposition = createDealerPackComposition({dealer: slug, execution: packExecution(), inspected: members});
+  const {identity, inputKind} = inspectSingleWorkerInputs({inputs, expectedDealer: slug, packComposition});
   assert(inputKind === 'dealer-pack' && identity.toolDigest === dealerPackToolDigest(root), 'Pack composition tools differ from the compiled source');
-  loadPack ??= (await packModule()).loadDealerPack; assert((await loadPack(root, slug)).packDigest === identity.packDigest, 'Pack changed after compilation');
+  assert(identity.sourceCommit === git(root, ['rev-parse', 'HEAD']), 'Pack composition source commit differs from the cached build');
+  loadPack ??= (await packModule()).loadDealerPack;
+  const pack = await loadPack(root, slug);
+  assert(pack.packDigest === identity.packDigest && same(pack.manifest.templateSources, identity.sourceReleases) && sha256(canonicalPackJson(identity.sourceReleases)) === identity.releaseDigest, 'Pack or selected releases changed after compilation');
   toolPackage ??= await preparePackTools({root});
   const require = createRequire(path.resolve(toolPackage)), esbuild = require('esbuild'), wranglerPath = require.resolve('wrangler/package.json'), wrangler = json(wranglerPath);
   assert(esbuild.version === PACK_TOOLCHAIN.esbuild && wrangler.version === PACK_TOOLCHAIN.wrangler, 'Unreviewed singleton compiler version');
-  const bundleRoot = path.join(area, 'bundle'), receipt = packageUkSingleWorker({inputs, destination: bundleRoot, expectedDealer: slug, esbuild});
+  const bundleRoot = path.join(area, 'bundle'), receipt = packageUkSingleWorker({inputs, destination: bundleRoot, expectedDealer: slug, esbuild, packComposition});
   await run({area, name: 'singleton-dry-run', args: [path.join(path.dirname(wranglerPath), 'wrangler-dist/cli.js'), 'deploy', '--dry-run', '--no-bundle', '--config', path.join(bundleRoot, 'wrangler.json'), '--outdir', path.join(area, 'dry-run')], cwd: bundleRoot, cacheRoot: path.join(root, 'runtime/dealer-pack-cache/tools')});
   const familyBuilds = Object.fromEntries(PACK_TARGETS.map(key => [key, json(path.join(inputs[key], 'receipts/build.json'))]));
   const report = {schemaVersion: 1, kind: 'cars-dealer-pack-build', slug, status: 'passed', ...identityOf(identity),
     bundleRoot, workerName: receipt.workerName, applicationCount: 6, workerCount: 1, serviceBindings: [],
-    outputDigest: receipt.outputDigest, assetFiles: receipt.assetFiles, serverBytes: receipt.serverBytes,
+    outputDigest: receipt.outputDigest, packComposition, packCompositionDigest: dealerPackCompositionDigest(packComposition), assetFiles: receipt.assetFiles, serverBytes: receipt.serverBytes,
     compressedBytes: receipt.compressedBytes, familyBuilds, milliseconds: Date.now() - started,
     familyMilliseconds: Object.values(familyBuilds).reduce((sum, build) => sum + build.milliseconds, 0),
     startedAt: new Date(started).toISOString(), finishedAt: new Date().toISOString(), compiled: true,
@@ -398,7 +442,7 @@ export async function composeDealerPackBuild({root = ROOT, slug, inputRoot, out,
 
 export function parsePackBuildArgs(argv) {
   const [command, ...rest] = argv, options = {};
-  assert(['matrix', 'source-key', 'source', 'prepare', 'compile', 'compose', 'tools', 'build'].includes(command), 'Use matrix, source-key, source, prepare, compile, compose, tools or build');
+  assert(['matrix', 'source-key', 'source', 'prepare', 'compile', 'reuse', 'compose', 'tools', 'build'].includes(command), 'Use matrix, source-key, source, prepare, compile, reuse, compose, tools or build');
   for (let i = 0; i < rest.length; i += 2) {
     const name = rest[i]; assert(['--slug', '--slugs', '--family', '--out', '--prepared', '--source', '--inputs', '--tools', '--plan', '--execution', '--node-paths'].includes(name) && rest[i + 1] && !rest[i + 1].startsWith('--') && !Object.hasOwn(options, name.slice(2)), 'Invalid or repeated build option: ' + name);
     options[name.slice(2)] = rest[i + 1];
@@ -407,13 +451,14 @@ export function parsePackBuildArgs(argv) {
 }
 
 export async function runPackBuildCli(argv = process.argv.slice(2)) {
-  if (argv.includes('--help')) { console.log('Usage: node scripts/build-dealer-pack.mjs build --slug SLUG [--node-paths runtimes.json]\nCI: matrix --slugs LIST | source-key --slug SLUG | source --slug SLUG --out runtime/SOURCE | prepare --slug SLUG --family KEY --source runtime/SOURCE/artifact --out runtime/AREA | compile --prepared runtime/AREA/prepare.json | compose --slug SLUG --inputs DIRECTORY [--tools PACKAGE_JSON]\nAll commands are provider-free. Build uses pinned Node runtimes; node-paths maps versions to installed Node executables.'); return; }
+  if (argv.includes('--help')) { console.log('Usage: node scripts/build-dealer-pack.mjs build --slug SLUG [--node-paths runtimes.json]\nCI: matrix --slugs LIST | source-key --slug SLUG | source --slug SLUG --out runtime/SOURCE | prepare --slug SLUG --family KEY --source runtime/SOURCE/artifact --out runtime/AREA | compile --prepared runtime/AREA/prepare.json | reuse --prepared runtime/AREA/prepare.json | compose --slug SLUG --inputs DIRECTORY [--tools PACKAGE_JSON]\nAll commands are provider-free. Build uses pinned Node runtimes; node-paths maps versions to installed Node executables. Reuse verifies the full original compiled artifact and writes separate reuse evidence.'); return; }
   const {command, options: o} = parsePackBuildArgs(argv);
   if (command === 'matrix') { console.log(JSON.stringify({matrix: packBuildMatrix(o.slugs ?? PROOF_DEALERS), dealers: parsePackSlugs(o.slugs ?? PROOF_DEALERS)})); return; }
   if (command === 'source-key') return dealerPackSourceIdentity({slug: o.slug});
   if (command === 'source') { const {inputFiles, manifest, ...report} = await prepareDealerPackSource({slug: o.slug, out: o.out}); return report; }
   if (command === 'prepare') return prepareDealerPackBuild({slug: o.slug, key: o.family, out: o.out, sourceArtifact: o.source, ...(o.tools ? {toolPackage: o.tools} : {}), capacityPlan: o.plan ?? 'paid', ...(o.execution ? {execution: JSON.parse(o.execution)} : {})});
   if (command === 'compile') return compileDealerPackBuild({preparedFile: o.prepared});
+  if (command === 'reuse') return reuseDealerPackBuild({preparedFile: o.prepared});
   if (command === 'compose') return composeDealerPackBuild({slug: o.slug, inputRoot: o.inputs, out: o.out, toolPackage: o.tools});
   if (command === 'tools') return preparePackTools({...(o.out ? {out: o.out} : {})});
   assert(process.version === 'v' + PACK_TOOLCHAIN.node, 'Start the full local build with Node ' + PACK_TOOLCHAIN.node + '; --node-paths supplies the other family runtimes');

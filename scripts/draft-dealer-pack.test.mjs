@@ -92,9 +92,18 @@ test('existing draft or fleet identity is rejected before any existing file can 
 });
 
 test('missing required facts stay reported and a sourced stock file is never silently replaced with demo',t=>{
-  const f=setup(t);delete f.row.address;const result=draftDealerPack(f.options);assert(result.blocking.includes('business.address'));
+  const f=setup(t);delete f.row.name;const result=draftDealerPack(f.options);assert(result.blocking.includes('business.name'));
   const explicit=setup(t),stockFile=put(explicit.root,'stock-input.json',stock());put(explicit.root,'media/dealer-stock/car.png',png);
   const imported=draftDealerPack({...explicit.options,stockFile,mediaRoot:path.join(explicit.root,'media'),readDemo:()=>{throw Error('must not use demo');}});assert.equal(imported.inventoryKind,'dated-listing-snapshot');assert.equal(imported.stockAcquisition,'explicit-retained-public-snapshot');
+});
+
+test('an unpublished street address and telephone remain optional empty facts in a new draft',t=>{
+  const f=setup(t);delete f.row.address;delete f.row.public_business_contact.phone;
+  const result=draftDealerPack(f.options),facts=JSON.parse(fs.readFileSync(path.join(result.directory,'business-facts.json'))),missing=JSON.parse(fs.readFileSync(path.join(result.directory,'missing-facts.json')));
+  assert.equal(facts.business.address,'');assert.equal(facts.business.city,f.row.city);assert.equal(facts.business.phone,'');
+  assert.deepEqual(missing.blocking,[]);
+  for(const field of ['business.address','business.phone'])assert(missing.missing.some(row=>row.field===field&&row.required===false));
+  assert.deepEqual(result.blocking,['branding.reviewed-assets']);
 });
 
 test('draft CLI accepts exact inputs and rejects repeats and unsupported automatic fetch claims',()=>{

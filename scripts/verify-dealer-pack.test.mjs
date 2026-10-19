@@ -7,13 +7,14 @@ import {createRequire} from 'node:module';
 import {spawnSync} from 'node:child_process';
 import {filesAt,sha256,writeJson} from './lib/workflow.mjs';
 import {SIX_DESIGN_KEYS} from './lib/six-design-release.mjs';
-import {canonicalPackJson} from './lib/dealer-pack-artifacts.mjs';
+import {canonicalPackJson,createDealerPackComposition,dealerPackCompositionDigest,PACK_CONTENT_IDENTITY_FIELDS,PACK_TARGETS,DEALER_PACK_COMPILED_KIND} from './lib/dealer-pack-artifacts.mjs';
+import {artifactInventory} from './lib/uk-cloudflare-artifacts.mjs';
 import {assessBundleLimits,inspectDealerPackBundle,loadFleetIdentities,findForeignIdentity,assessPageSnapshot,inspectLogoPixels,readFaviconPngs,verifyPackLogoAssets,stockIsDemo,verifyDealerPack,parseDealerPackVerificationArgs} from './verify-dealer-pack.mjs';
 import {inspectDealerPackBatch,readDealerPackBatch,parseDeploymentArgs} from './deploy-dealer-single-worker.mjs';
 
 const area=t=>{const root=fs.mkdtempSync(path.join(os.tmpdir(),'cars-pack-qa-'));t.after(()=>fs.rmSync(root,{recursive:true,force:true}));return root;};
 const put=(root,name,content)=>{const file=path.join(root,name);fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,typeof content==='string'||Buffer.isBuffer(content)?content:JSON.stringify(content,null,2)+'\n');};
-const variants=SIX_DESIGN_KEYS.map((key,index)=>({key,base:index?'/variant-'+(index+1):'',entry:index?'/variant-'+(index+1)+'/':'/'}));
+const variants=SIX_DESIGN_KEYS.map((key,index)=>({key,base:index?'/variant-'+(index+1):'',entry:key==='modern'?'/variant-'+(index+1)+'/cars':index?'/variant-'+(index+1)+'/':'/'}));
 const facts={business:{name:'Honest Motors',shortName:'Honest Motors',phone:'+441234567890'}};
 const manifest={schemaVersion:1,slug:'honest-motors',packaging:{version:'5'},variants};
 const emptyFleet={records:[],coverage:{registryDealers:0,withName:0,withBusinessFacts:0,withPhone:0,missingBusinessFacts:[],missingPublicPhone:[]}};
@@ -28,9 +29,21 @@ function bundle(t){
  put(directory,'public/logo.png','fixture asset bytes');
  const receipt={schemaVersion:1,type:'cars-dealer-pack-single-worker-provider-package',dealer:'honest-motors',sourceCommit:'a'.repeat(40),sourceDigest:'b'.repeat(64),packDigest:'c'.repeat(64),sourceReleases,releaseDigest:sha256(canonicalPackJson(sourceReleases)),execution,
   workerName:config.name,publicOrigin:'https://honest-motors.webpreviews.site',applicationCount:6,workerCount:1,composition:{inProcess:SIX_DESIGN_KEYS,serviceBindings:[]},files:[]};
- const seal=()=>{receipt.files=filesAt(directory,{filter:()=>true}).filter(name=>name!=='single-worker-receipt.json').map(name=>{const bytes=fs.readFileSync(path.join(directory,name));return {path:name,bytes:bytes.length,sha256:sha256(bytes)};});receipt.outputDigest=sha256(JSON.stringify(receipt.files));receipt.serverBytes=receipt.files.filter(row=>row.path.startsWith('server/')).reduce((sum,row)=>sum+row.bytes,0);receipt.assetFiles=receipt.files.filter(row=>row.path.startsWith('public/')).length;put(directory,'single-worker-receipt.json',receipt);};
+ const seal=()=>{receipt.files=filesAt(directory,{filter:()=>true}).filter(name=>!['single-worker-receipt.json','artifact-manifest.json'].includes(name)).map(name=>{const bytes=fs.readFileSync(path.join(directory,name));return {path:name,bytes:bytes.length,sha256:sha256(bytes)};});receipt.outputDigest=sha256(JSON.stringify(receipt.files));receipt.serverBytes=receipt.files.filter(row=>row.path.startsWith('server/')).reduce((sum,row)=>sum+row.bytes,0);receipt.assetFiles=receipt.files.filter(row=>row.path.startsWith('public/')).length;put(directory,'single-worker-receipt.json',receipt);artifactInventory(directory,{kind:receipt.type,dealer:receipt.dealer,status:'passed'});};
  seal();const pack={directory:path.join(root,'dealers/honest-motors'),manifest,facts,packDigest:receipt.packDigest,releaseDigest:receipt.releaseDigest};
  return {root,base,directory,receipt,config,seal,pack,options:{bundleRoot:directory,slug:'honest-motors',packDigest:receipt.packDigest,releaseDigest:receipt.releaseDigest,plan:'paid'}};
+}
+
+function addComposition(f){
+ Object.assign(f.receipt,{toolDigest:'d'.repeat(64),providerOrigin:'https://cars-honest-motors.darkapoparka1.workers.dev',capacityPlan:'paid',qualification:{hostedVerified:false,providerWrites:false}});
+ const identity=Object.fromEntries(PACK_CONTENT_IDENTITY_FIELDS.map(key=>[key,f.receipt[key]]));
+ const inspected=Object.fromEntries(PACK_TARGETS.map((key,index)=>{
+  const originalExecution={kind:'local',id:'original-native-build-'+index},digest=sha256('original-artifact-'+key),compiledDigest=sha256('original-compiled-'+key);
+  return [key,{inventory:{kind:DEALER_PACK_COMPILED_KIND,status:'passed',dealer:f.receipt.dealer,key,digest},deploy:{...identity,kind:DEALER_PACK_COMPILED_KIND,dealer:f.receipt.dealer,key,execution:originalExecution,compiledDigest},build:{status:'passed',execution:originalExecution,node:key==='import'?'v24.21.0':key==='karento-best'?'v26.10.0':'v22.23.2'}}];
+ }));
+ f.receipt.artifacts=Object.fromEntries(Object.entries(inspected).map(([key,value])=>[key,{digest:value.inventory.digest,compiledDigest:value.deploy.compiledDigest}]));
+ f.receipt.packComposition=createDealerPackComposition({dealer:f.receipt.dealer,execution:f.receipt.execution,inspected});
+ f.receipt.packCompositionDigest=dealerPackCompositionDigest(f.receipt.packComposition);f.seal();return f;
 }
 
 function snapshot(){return {url:'http://127.0.0.1:8787/',status:200,contentType:'text/html; charset=utf-8',title:'Honest Motors',text:'Honest Motors offers a sourced selection of vehicles. Browse our public stock, inspect each listing and use the published business contact details.',metadata:'Honest Motors',phones:['tel:01234567890'],images:[{src:'/dealer-brand/logo.png',alt:'Honest Motors',visible:true,loaded:true,dealerLogo:true}],designChoices:variants.map(variant=>({key:variant.key,href:variant.entry})),adminLinks:[{href:'https://cars-admin-blue.vercel.app/',target:'_blank',rel:'noopener noreferrer'}],errors:[],brokenImages:[],overflow:0};}
@@ -53,6 +66,31 @@ test('a success label cannot replace compiled bytes, family modules, source and 
  put(f.directory,'single-worker-receipt.json',{...f.receipt,sourceReleases:{}});assert.throws(()=>inspectDealerPackBundle(f.options),/six exact template releases/);
  assert.throws(()=>inspectDealerPackBundle({...f.options,sourceReleases:{}}),/six exact template releases/);
  put(f.directory,'single-worker-receipt.json',f.receipt);fs.unlinkSync(path.join(f.directory,'server/import/index.mjs'));f.seal();assert.throws(()=>inspectDealerPackBundle(f.options),/family or router/);
+});
+
+test('the actual composer artifact envelope is accepted and independently authenticates the singleton receipt',t=>{
+ const f=bundle(t);assert.doesNotThrow(()=>inspectDealerPackBundle(f.options));
+ const file=path.join(f.directory,'artifact-manifest.json'),envelope=JSON.parse(fs.readFileSync(file));
+ assert(envelope.files.some(row=>row.path==='single-worker-receipt.json'));
+ put(f.directory,'artifact-manifest.json',{...envelope,dealer:'foreign-motors'});assert.throws(()=>inspectDealerPackBundle(f.options),/artifact envelope/);
+ put(f.directory,'artifact-manifest.json',envelope);put(f.directory,'single-worker-receipt.json',{...f.receipt,unsealedClaim:true});assert.throws(()=>inspectDealerPackBundle(f.options),/Artifact receipt bytes differ/);
+ f.seal();fs.unlinkSync(file);assert.throws(()=>inspectDealerPackBundle(f.options),/artifact envelope/);
+});
+
+test('composition proof retains original native events and binds members, runtime and current bundle identity',async t=>{
+ const f=addComposition(bundle(t)),context=inspectDealerPackBundle(f.options);
+ assert.equal(context.receipt.execution.id,execution.id);assert.equal(context.receipt.packComposition.members.app.execution.id,'original-native-build-3');
+ const report=await verifyDealerPack({root:f.root,slug:'honest-motors',bundleRoot:f.directory,plan:'paid',pack:f.pack,fleet:emptyFleet,sharp:{}});
+ assert.equal(report.packCompositionDigest,f.receipt.packCompositionDigest,JSON.stringify(report.checks));
+ const baseline=structuredClone(f.receipt);
+ for(const change of [r=>r.packCompositionDigest='0'.repeat(64),r=>delete r.packComposition,r=>delete r.packCompositionDigest,r=>delete r.artifacts,
+  r=>{r.packComposition.members.app.artifactDigest='0'.repeat(64);r.packCompositionDigest=dealerPackCompositionDigest(r.packComposition);},
+  r=>{r.packComposition.members.app.node='v99.0.0';},
+  r=>{r.packComposition.identity.packDigest='0'.repeat(64);r.packCompositionDigest=dealerPackCompositionDigest(r.packComposition);},
+  r=>{r.packComposition.execution={kind:'local',id:'relabeled-composition'};r.packCompositionDigest=dealerPackCompositionDigest(r.packComposition);}]){
+  Object.keys(f.receipt).forEach(key=>delete f.receipt[key]);Object.assign(f.receipt,structuredClone(baseline));change(f.receipt);f.seal();
+  assert.throws(()=>inspectDealerPackBundle(f.options),/composition/);
+ }
 });
 
 test('tampered, omitted, undeclared and linked bundle files fail independently of receipt claims',t=>{
@@ -142,13 +180,18 @@ test('batch inspection rejects missing/forged QA and cannot resolve any provider
 });
 
 test('inspection of a byte-bound candidate remains explicitly not ready to deploy',async t=>{
- const f=bundle(t),batchFile=path.join(f.root,'batch.json');put(f.root,'batch.json',['honest-motors']);
- const parent=path.dirname(f.directory),binding={slug:'honest-motors',packDigest:f.receipt.packDigest,releaseDigest:f.receipt.releaseDigest,outputDigest:f.receipt.outputDigest,execution};
+ const f=addComposition(bundle(t)),batchFile=path.join(f.root,'batch.json');put(f.root,'batch.json',['honest-motors']);
+ const parent=path.dirname(f.directory),binding={slug:'honest-motors',packDigest:f.receipt.packDigest,releaseDigest:f.receipt.releaseDigest,outputDigest:f.receipt.outputDigest,execution,packCompositionDigest:f.receipt.packCompositionDigest};
  const screenshots=[];for(const key of SIX_DESIGN_KEYS)for(const width of [320,390,1280]){const name='screenshots/'+key+'-'+width+'.png',bytes=Buffer.from('synthetic-test-evidence-'+key+width);put(parent,name,bytes);screenshots.push({key,width,path:name,sha256:sha256(bytes)});}
- put(parent,'build-report.json',{...binding,status:'passed'});
+ put(parent,'build-report.json',{...binding,status:'passed',packComposition:f.receipt.packComposition});
  put(parent,'qa-report.json',{...binding,type:'cars-dealer-pack-qa',success:true,capacity:{targetPlan:'paid'},checks:['bundle-integrity','cloudflare-limits','fleet-contact-coverage','logo-assets','rendered-routes','screenshots','bundle-unchanged'].map(id=>({id,status:'passed'})),proof:{screenshots}});
  const options={root:f.root,batchFile,bundleRoot:f.base,plan:'paid',loadPack:()=>f.pack};
  const result=await inspectDealerPackBatch(options);assert.equal(result.success,true);assert.equal(result.readyToDeploy,false);assert.equal(result.qualification.sourcePublication,'not-verified-by-candidate-inspection');assert.equal(result.qualification.workersPlan,'not-verified');assert.equal(result.hostedVerified,false);
+ assert.equal(result.results[0].packCompositionDigest,f.receipt.packCompositionDigest);
+ const originalQa=JSON.parse(fs.readFileSync(path.join(parent,'qa-report.json')));put(parent,'qa-report.json',{...originalQa,packCompositionDigest:'0'.repeat(64)});
+ assert.equal((await inspectDealerPackBatch(options)).success,false);put(parent,'qa-report.json',originalQa);
+ const originalBuild=JSON.parse(fs.readFileSync(path.join(parent,'build-report.json'))),changedBuild=structuredClone(originalBuild);changedBuild.packComposition.members.app.execution={kind:'local',id:'rewritten-original-event'};
+ put(parent,'build-report.json',changedBuild);assert.equal((await inspectDealerPackBatch(options)).success,false);put(parent,'build-report.json',originalBuild);
  fs.appendFileSync(path.join(parent,screenshots[0].path),'altered');assert.equal((await inspectDealerPackBatch(options)).success,false);
 });
 
@@ -184,6 +227,10 @@ test('logo QA binds distinct source PNG and lossless public WebP bytes and real 
  assert.deepEqual(readFaviconPngs(favicon).map(row=>row.size),[16,32,48,64]);
  const corrupted=Buffer.from(favicon);corrupted.writeUInt32LE(0,18);assert.throws(()=>readFaviconPngs(corrupted),/overlapping favicon/);
  const pack={directory,manifest,branding:contract},result=await verifyPackLogoAssets({pack,sharp,bundleRoot});assert.equal(result.status,'passed',JSON.stringify(result.roles.map(row=>({role:row.role,findings:row.findings}))));assert.equal(result.visualReview.status,'not-recorded');
+ contract.creationMethod='retained-reviewed-raster';contract.visualReview={spelling:'agent-visual-review',dealerApproval:false};
+ contract.surfaces=Object.fromEntries(Object.entries(contract.assets).map(([role,asset])=>[role,{...asset,retainedSource:{kind:'retained-reviewed-raster',reference:asset.sourcePath,sha256:asset.sourceSha256,sourceUrl:'https://dealer.example/logo.png',observedAt:'2026-10-19T00:00:00Z'}}]));
+ const original=await verifyPackLogoAssets({pack,sharp,bundleRoot});assert.equal(original.status,'passed');
+ assert.deepEqual(original.generationReferences,{onLight:null,onDark:null,onAccent:null});assert.deepEqual(original.visualReview,{spelling:'agent-visual-review',dealerApproval:false});assert(original.roles.every(row=>row.spellingVerified===false));
  // Real assembly content-addresses the public branding directory; the path
  // rewrite must still require the exact reviewed public asset bytes.
  for(const asset of Object.values(contract.assets)){
@@ -200,4 +247,14 @@ test('logo QA binds distinct source PNG and lossless public WebP bytes and real 
 
 test('CLI help has no module-import side effects',()=>{
  const result=spawnSync(process.execPath,['scripts/verify-dealer-pack.mjs','--help'],{encoding:'utf8',timeout:20000});assert.ifError(result.error);assert.equal(result.status,0,result.stderr);assert.match(result.stdout,/no provider writes/i);assert.equal(result.stderr,'');
+});
+
+test('CI failure summary retains the concrete verification error without needing a full bundle download',t=>{
+ const root=area(t),report=path.join(root,'qa-report.json');
+ const result=spawnSync(process.execPath,['scripts/verify-dealer-pack.mjs','--slug','absent-dealer-qa-fixture','--plan','paid','--report',report],{encoding:'utf8',timeout:20000});
+ assert.ifError(result.error);assert.equal(result.status,1,result.stderr);
+ const summary=JSON.parse(result.stdout),full=JSON.parse(fs.readFileSync(report));
+ assert.equal(summary.success,false);assert.equal(summary.checks[0].status,'failed');
+ assert.equal(summary.checks[0].failure,full.checks[0].details.slice(0,1600));assert(summary.checks[0].failure.length>15);
+ assert.equal(full.providerWrites,0);
 });

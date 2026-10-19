@@ -6,9 +6,9 @@ import {createRequire} from 'node:module';
 import {spawn,spawnSync} from 'node:child_process';
 import {isEntrypoint} from './lib/cli-entrypoint.mjs';
 import {ROOT,filesAt,inside,json,sha256,writeJson} from './lib/workflow.mjs';
-import {safeArtifactPath,validateFileInventory} from './lib/uk-cloudflare-artifacts.mjs';
+import {safeArtifactPath,validateFileInventory,verifyArtifactDirectory} from './lib/uk-cloudflare-artifacts.mjs';
 import {assertSixDesignSelection,SIX_DESIGN_KEYS} from './lib/six-design-release.mjs';
-import {canonicalPackJson,validatePackExecution,validatePackSourceReleases} from './lib/dealer-pack-artifacts.mjs';
+import {canonicalPackJson,validatePackExecution,validatePackSourceReleases,validateDealerPackComposition,dealerPackCompositionDigest} from './lib/dealer-pack-artifacts.mjs';
 import {previewJourney,previewDetail} from './verify-dealer-preview.mjs';
 
 const assert=(ok,message)=>{if(!ok)throw Error(message);};
@@ -57,18 +57,27 @@ export function inspectDealerPackBundle({bundleRoot,slug,packDigest,releaseDiges
   assert(/^[a-f0-9]{40}$/.test(receipt.sourceCommit??'')&&hex64(receipt.sourceDigest),'Compiled source identity is missing');
   validatePackExecution(receipt.execution);
   validatePackSourceReleases(receipt.sourceReleases);
+  if(receipt.packComposition!==undefined||receipt.packCompositionDigest!==undefined){
+    validateDealerPackComposition(receipt.packComposition,{dealer:slug,identity:receipt,artifacts:receipt.artifacts??{}});
+    assert(hex64(receipt.packCompositionDigest)&&dealerPackCompositionDigest(receipt.packComposition)===receipt.packCompositionDigest,'Bundle composition proof digest differs');
+  }
   assert(sha256(canonicalPackJson(receipt.sourceReleases))===receipt.releaseDigest&&(!sourceReleases||canonicalPackJson(receipt.sourceReleases)===canonicalPackJson(sourceReleases)),'Bundle does not use the current six pinned template releases');
   assert(receipt.applicationCount===6&&receipt.workerCount===1&&JSON.stringify([...(receipt.composition?.inProcess??[])].sort())===JSON.stringify([...SIX_DESIGN_KEYS].sort())&&Array.isArray(receipt.composition?.serviceBindings)&&receipt.composition.serviceBindings.length===0,'Bundle does not contain six applications in one Worker');
   const inventory=validateFileInventory({schemaVersion:1,files:receipt.files,digest:receipt.outputDigest,bytes:receipt.files?.reduce((sum,row)=>sum+row.bytes,0)});
   const fileNames=new Set(inventory.files.map(row=>row.path));
   assert(fileNames.has('server/router.mjs')&&SIX_DESIGN_KEYS.every(key=>fileNames.has('server/'+key+'/'+(['modern','app','mobile'].includes(key)?'index.js':'index.mjs'))),'Compiled family or router module is missing');
   assert(inventory.files.every(row=>(row.path==='wrangler.json'||/^(?:server|public)\//.test(row.path))&&!/(?:^|\/)(?:\.env(?:\.|$)|\.dev\.vars(?:\.|$)|node_modules\/)/.test(row.path)),'Bundle includes source, private inputs or dependencies outside compiled outputs');
-  const actual=filesAt(directory,{filter:()=>true}).filter(name=>name!==receiptName);
+  const actual=filesAt(directory,{filter:()=>true}).filter(name=>name!==receiptName&&name!=='artifact-manifest.json');
   assert(JSON.stringify(actual)===JSON.stringify(inventory.files.map(row=>row.path).sort()),'Bundle contains missing or undeclared files');
   for(const row of inventory.files){
     const bytes=fs.readFileSync(inside(directory,row.path,{mustExist:true}));
     assert(bytes.length===row.bytes&&sha256(bytes)===row.sha256,'Bundle bytes changed: '+row.path);
   }
+  // The maintained composer seals the successful dry-run with a separate
+  // artifact envelope that also authenticates the singleton receipt itself.
+  assert(fs.existsSync(path.join(directory,'artifact-manifest.json')),'Compiled bundle artifact envelope is missing');
+  const envelope=verifyArtifactDirectory(directory);
+  assert(envelope.kind===candidateType&&envelope.dealer===slug&&envelope.status==='passed','Compiled bundle artifact envelope identity differs');
   const config=json(inside(directory,'wrangler.json',{mustExist:true}));
   assert(config.name===receipt.workerName&&config.main==='server/worker.mjs'&&config.assets?.directory==='./public'&&config.assets.binding==='ASSETS','Bundle Worker/asset configuration differs');
   assert(config.no_bundle===true&&config.find_additional_modules===true&&config.assets.run_worker_first===false,'Candidate requires existing asset-first single-Worker packaging');
@@ -77,7 +86,7 @@ export function inspectDealerPackBundle({bundleRoot,slug,packDigest,releaseDiges
   assert(config.routes===undefined&&config.route===undefined&&config.workers_dev===true&&config.preview_urls===false,'Candidate must be unexposed: no proposed route mutation in this milestone');
   const capacity=assessBundleLimits(inventory.files,plan);
   assert(receipt.serverBytes===capacity.measured.uncompressedWorkerBytes&&receipt.assetFiles===capacity.measured.staticAssetFiles,'Receipt sizes differ from measured file bytes');
-  return {directory,receipt,config,inventory,capacity};
+  return {directory,receipt,config,inventory,envelope,capacity};
 }
 
 /** One bounded git process reads only registered public business-facts paths. */
@@ -373,6 +382,7 @@ export async function verifyDealerPack({root=ROOT,slug,bundleRoot,plan,previewUr
     assert(pack.manifest.slug===slug,'Pack belongs to another dealer');assertSixDesignSelection(pack.manifest.variants);
     const context=inspectDealerPackBundle({bundleRoot,slug,packDigest:pack.packDigest,releaseDigest:pack.releaseDigest??pack.manifest.releaseDigest,sourceReleases:pack.manifest.templateSources,plan});
     report.packDigest=context.receipt.packDigest;report.releaseDigest=context.receipt.releaseDigest;report.outputDigest=context.receipt.outputDigest;report.execution=context.receipt.execution;
+    if(context.receipt.packCompositionDigest!==undefined)report.packCompositionDigest=context.receipt.packCompositionDigest;
     report.qualification={sourcePublicationVerified:false,hostedVerified:false,ownerAccepted:false,candidate:context.receipt.qualification??null,note:'Passing automated QA does not approve or publish a template release.'};
     report.capacity=context.capacity;check('bundle-integrity','passed',{files:context.inventory.files.length,outputDigest:report.outputDigest});check('cloudflare-limits',context.capacity.status,context.capacity);
     if(!fleet)fleet=loadFleetIdentities(root,registry);
@@ -424,7 +434,7 @@ export async function verifyDealerPack({root=ROOT,slug,bundleRoot,plan,previewUr
     check('rendered-routes',report.routes.length>=36&&report.routes.every(row=>row.status==='passed')?'passed':'failed',{observations:report.routes.length,failed:report.routes.filter(row=>row.status!=='passed').map(row=>({key:row.key,label:row.label,width:row.width,findings:row.findings}))});
     check('screenshots',report.proof.screenshots.length===18?'passed':'failed',{count:report.proof.screenshots.length,widths:[320,390,1280],role:'Evidence for visual review; not a visual acceptance claim.'});
     const after=inspectDealerPackBundle({bundleRoot,slug,packDigest:report.packDigest,releaseDigest:report.releaseDigest,plan});
-    check('bundle-unchanged',after.receipt.outputDigest===report.outputDigest?'passed':'failed',{outputDigest:after.receipt.outputDigest});
+    check('bundle-unchanged',after.receipt.outputDigest===report.outputDigest&&after.receipt.packCompositionDigest===report.packCompositionDigest?'passed':'failed',{outputDigest:after.receipt.outputDigest,packCompositionDigest:after.receipt.packCompositionDigest});
     report.success=report.checks.every(row=>row.status==='passed');
   }catch(error){check('verification','failed',error.message);}
   finally{
@@ -443,5 +453,5 @@ export function parseDealerPackVerificationArgs(argv){
 
 if(isEntrypoint(import.meta.url)){
   if(process.argv.includes('--help'))console.log('Usage: node scripts/verify-dealer-pack.mjs --slug SLUG --plan free|paid [--bundle runtime/dealer-packs/SLUG/bundle] [--preview-url http://127.0.0.1:PORT] [--report PATH] [--screenshots DIRECTORY]\nRuns byte, public-identity, raster, six-design browser and platform-budget checks. Starts local Wrangler when no preview URL is given; no provider writes or form submissions. Reports unknown plan/hosted/owner acceptance honestly.');
-  else try{const result=await verifyDealerPack(parseDealerPackVerificationArgs(process.argv.slice(2)));console.log(JSON.stringify({slug:result.slug,success:result.success,checks:result.checks.map(({id,status})=>({id,status})),elapsedMs:result.elapsedMs},null,2));process.exitCode=result.success?0:1;}catch(error){console.error(error.message);process.exitCode=1;}
+  else try{const result=await verifyDealerPack(parseDealerPackVerificationArgs(process.argv.slice(2)));console.log(JSON.stringify({slug:result.slug,success:result.success,checks:result.checks.map(({id,status,details})=>({id,status,...(status==='failed'?{failure:(typeof details==='string'?details:JSON.stringify(details)??'No failure details').slice(0,1600)}:{})})),elapsedMs:result.elapsedMs},null,2));process.exitCode=result.success?0:1;}catch(error){console.error(error.message);process.exitCode=1;}
 }

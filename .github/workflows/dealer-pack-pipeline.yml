@@ -84,7 +84,7 @@ jobs:
           CARS_MINIFLARE_RESOLVE_FROM: ${{ github.workspace }}/runtime/dealer-pack-stream-tests/package.json
           NODE_PATH: ${{ github.workspace }}/runtime/dealer-pack-test-tools/node_modules
         run: |
-          node --test scripts/*dealer-pack*.test.mjs scripts/package-uk-single-worker.test.mjs scripts/package-dealer.test.mjs scripts/six-publishing.test.mjs scripts/cloudflare-six-mount.test.mjs scripts/six-variant-refresh.test.mjs scripts/lead-branding-surfaces.test.mjs scripts/registered-dealer-adoption.test.mjs
+          node --test scripts/*dealer-pack*.test.mjs scripts/package-uk-single-worker.test.mjs scripts/package-dealer.test.mjs scripts/six-publishing.test.mjs scripts/cloudflare-six-mount.test.mjs scripts/six-variant-refresh.test.mjs scripts/lead-branding-surfaces.test.mjs scripts/registered-dealer-adoption.test.mjs scripts/prepare-new-dealer-source.test.mjs scripts/auto-best-optional-contact.test.mjs scripts/dealer-contact-fallback.test.mjs scripts/deploy-dealer-single-worker.test.mjs
           node scripts/check-workflow.mjs
       - name: Use the retained Auto Best runtime for Svelte publisher tests
         uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
@@ -98,7 +98,7 @@ jobs:
         with:
           node-version: '26.10.0'
           package-manager-cache: false
-      - name: Resolve exact committed packs and bounded native build matrix
+      - name: Bind retained leads, reproduce reviewed logos and resolve the native build matrix
         id: plan
         env:
           PACK_SLUGS: ${{ inputs.slugs }}
@@ -106,11 +106,19 @@ jobs:
           node --input-type=module <<'NODE'
           import fs from 'node:fs';
           import {packBuildMatrix,parsePackSlugs,PROOF_DEALERS} from './scripts/build-dealer-pack.mjs';
-          import {loadDealerPack} from './scripts/lib/dealer-pack.mjs';
+          import {checkDealerPackInputs} from './scripts/check-dealer-pack-inputs.mjs';
           const slugs=parsePackSlugs(process.env.PACK_SLUGS || PROOF_DEALERS);
-          for(const slug of slugs) await loadDealerPack(process.cwd(),slug);
+          for(const slug of slugs) await checkDealerPackInputs({slug,toolPackage:process.cwd()+'/runtime/dealer-pack-test-tools/package.json'});
           fs.appendFileSync(process.env.GITHUB_OUTPUT,'matrix='+JSON.stringify(packBuildMatrix(slugs))+'\ndealers='+JSON.stringify(slugs)+'\n');
           NODE
+      - name: Retain lead binding and deterministic logo input checks
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: dealer-pack-input-checks-${{ github.run_id }}-${{ github.run_attempt }}
+          path: runtime/dealer-pack-input-checks/*.json
+          if-no-files-found: warn
+          retention-days: 7
 
   source:
     needs: plan
@@ -228,7 +236,7 @@ jobs:
           node --input-type=module <<'NODE'
           import fs from 'node:fs';
           const prepared=JSON.parse(fs.readFileSync('runtime/dealer-pack-work/prepare.json'));
-          fs.appendFileSync(process.env.GITHUB_OUTPUT,'cache_key='+prepared.cache.dependencies+'\nrelease_digest='+prepared.releaseDigest+'\n');
+          fs.appendFileSync(process.env.GITHUB_OUTPUT,'cache_key='+prepared.cache.dependencies+'\ncompiled_key='+prepared.cache.compiled+'\nrelease_digest='+prepared.releaseDigest+'\n');
           NODE
       - name: Reuse release and runtime specific package downloads
         uses: actions/cache@v4
@@ -236,8 +244,18 @@ jobs:
           path: |
             runtime/dealer-pack-cache/${{ steps.prepared.outputs.release_digest }}/${{ matrix.key }}/
           key: dealer-pack-dependencies-${{ steps.prepared.outputs.cache_key }}
+      - name: Restore only the exact dealer, source, release, tools and native runtime build
+        id: compiled-cache
+        uses: actions/cache@v4
+        with:
+          path: runtime/dealer-pack-work/artifact/
+          key: dealer-pack-compiled-${{ steps.prepared.outputs.compiled_key }}
       - name: Build exact personalized native application and run Wrangler inspection
+        if: steps.compiled-cache.outputs.cache-hit != 'true'
         run: node scripts/build-dealer-pack.mjs compile --prepared runtime/dealer-pack-work/prepare.json
+      - name: Verify cached native bytes and retain their original build provenance
+        if: steps.compiled-cache.outputs.cache-hit == 'true'
+        run: node scripts/build-dealer-pack.mjs reuse --prepared runtime/dealer-pack-work/prepare.json
       - name: Retain compiled application and its actual source and build evidence
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
@@ -256,6 +274,7 @@ jobs:
           path: |
             runtime/dealer-pack-work/logs/
             runtime/dealer-pack-work/build-report.json
+            runtime/dealer-pack-work/cache-reuse-report.json
           if-no-files-found: warn
           retention-days: 3
 
@@ -333,6 +352,17 @@ jobs:
           name: dealer-pack-bundle-${{ matrix.slug }}-${{ github.run_id }}-${{ github.run_attempt }}
           path: runtime/dealer-packs/${{ matrix.slug }}/
           include-hidden-files: true
+          if-no-files-found: warn
+          compression-level: 6
+          retention-days: 7
+      - name: Retain a separate review download of reports and screenshots
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: dealer-pack-evidence-${{ matrix.slug }}-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            runtime/dealer-packs/${{ matrix.slug }}/*.json
+            runtime/dealer-packs/${{ matrix.slug }}/screenshots/
           if-no-files-found: warn
           compression-level: 6
           retention-days: 7

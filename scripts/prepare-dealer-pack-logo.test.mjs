@@ -6,6 +6,7 @@ import test from 'node:test';
 import {createRequire} from 'node:module';
 import {cropTransparentPadding, prepareDealerPackLogo, readPackBranding} from './prepare-dealer-pack-logo.mjs';
 import {sha256} from './lib/workflow.mjs';
+import {reviewedRasterProvenance} from './publishing/lead-branding.mjs';
 
 const root = path.resolve(import.meta.dirname, '..');
 const toolPackage = process.env.CARS_DEALER_PACK_TOOL_PACKAGE || path.join(root, 'runtime/dealer-pack-tools/package.json');
@@ -51,6 +52,20 @@ async function fixture(t) {
   return {fixtureRoot, directory, source, sources, prepare, pack};
 }
 
+function useOriginalArtwork(data) {
+  const inputs = data.source.generatedInputs;
+  delete data.source.generatedInputs;
+  data.source.creationMethod = 'retained-original-raster';
+  data.source.reviewedInputs = inputs;
+  for (const row of [inputs.master, inputs.mark, inputs.markOnDark, ...Object.values(inputs.surfaces)]) {
+    delete row.generation;
+    row.retainedSource = {kind: 'retained-original-raster', url: 'https://dealer.example/brand/' + path.basename(row.path),
+      observedAt: '2026-10-18T09:30:00Z', sha256: row.sha256};
+  }
+  writeJson(path.join(data.directory, 'branding/source.json'), data.source);
+  return inputs;
+}
+
 test('transparent-padding crop preserves the input and records the exact crop and hashes', async () => {
   const bytes = await raster(), before = Buffer.from(bytes), cropped = await cropTransparentPadding(bytes, sharp);
   assert.deepEqual(bytes, before); assert.equal(cropped.sourceSha256, sha256(bytes)); assert.equal(cropped.sha256, sha256(cropped.png));
@@ -66,7 +81,8 @@ test('transparent-padding crop preserves the input and records the exact crop an
 test('prepared raster surfaces retain original provenance, deterministic hashes, share bindings and all ICO sizes', async t => {
   const data = await fixture(t), first = await data.prepare(), pack = data.pack(), contract = pack.branding;
   assert.equal(first.status, 'independent-proposal-not-dealer-approved'); assert.equal(first.markOnDarkReady, true);
-  assert.equal(contract.visualReview.dealerApproval, false); assert.equal(contract.reviewedAt, data.source.generatedInputs.reviewedAt);
+  assert.equal(contract.visualReview.dealerApproval, false); assert.equal(contract.visualReview.spelling, 'agent-visual-review');
+  assert.equal(contract.reviewedAt, data.source.generatedInputs.reviewedAt);
   for (const [name, original] of data.sources) assert.deepEqual(fs.readFileSync(path.join(data.directory, name)), original, name + ' remains untouched');
   for (const [role, asset] of Object.entries(contract.assets)) {
     const png = pack.files.get(asset.sourcePath), webp = pack.files.get(asset.publicPath.slice(1));
@@ -134,4 +150,71 @@ test('readPackBranding rejects changed primary and supplemental bytes or provena
   const changed = {...original, branding: structuredClone(original.branding)};
   changed.branding.supplemental['mark-on-dark.webp'].generation.generationId = 'different-test-only-generation';
   assert.throws(() => readPackBranding(changed), /supplemental logo provenance/);
+});
+
+test('usable real rasters export deterministically and cross the existing retained-provenance boundary without generation IDs', async t => {
+  const data = await fixture(t), inputs = useOriginalArtwork(data);
+  const result = await data.prepare(), pack = data.pack(), prepared = readPackBranding(pack);
+  assert.equal(result.status, 'retained-original-preview-not-dealer-approved');
+  assert.equal(pack.branding.visualReview.spelling, 'agent-visual-review');
+  assert.equal(pack.branding.visualReview.dealerApproval, false);
+  const sourceSha256 = sha256(pack.files.get('branding/source.json'));
+  for (const [role, row] of Object.entries(pack.branding.surfaces)) {
+    assert.equal(row.generation, undefined);
+    assert.equal(row.retainedSource.sourceUrl, inputs.surfaces[role].retainedSource.url);
+    assert.equal(row.retainedSource.observedAt, inputs.surfaces[role].retainedSource.observedAt);
+    assert.equal(row.retainedSource.sha256, inputs.surfaces[role].sha256);
+    assert.equal(row.retainedSource.reviewSha256, sourceSha256);
+    assert.equal(row.retainedSource.reviewReference, 'dealers/' + slug + '/branding/source.json');
+    assert.equal(reviewedRasterProvenance(prepared.reviewedSurfaces.surfaces[role], {retainedAllowed: true}).retainedSource.kind, 'retained-reviewed-raster');
+  }
+  for (const row of [pack.branding.master, pack.branding.mark, pack.branding.markOnDark, ...Object.values(pack.branding.supplemental)]) {
+    assert.equal(row.generation, undefined); assert.equal(row.retainedSource.reviewSha256, sourceSha256);
+  }
+  for (const row of Object.values(prepared.reviewedSurfaces.assets)) {
+    assert.equal(row.generation, undefined); assert.equal(reviewedRasterProvenance(row, {retainedAllowed: true}).retainedSource.kind, 'retained-reviewed-raster');
+  }
+  for (const [name, original] of data.sources) assert.equal(sha256(pack.files.get(name)), sha256(original), 'Original raster remains unchanged');
+  const hashes = [...pack.files].map(([name, bytes]) => [name, sha256(bytes)]);
+  await data.prepare(); assert.deepEqual([...data.pack().files].map(([name, bytes]) => [name, sha256(bytes)]), hashes);
+});
+
+test('a real original can use an explicitly generated variant without relabelling either source', async t => {
+  const data = await fixture(t), actualGeneration = structuredClone(data.source.generatedInputs.surfaces.onDark.generation), inputs = useOriginalArtwork(data);
+  delete inputs.surfaces.onDark.retainedSource;
+  inputs.surfaces.onDark.generation = actualGeneration;
+  writeJson(path.join(data.directory, 'branding/source.json'), data.source);
+  await data.prepare(); const pack = data.pack(), result = readPackBranding(pack);
+  assert.equal(pack.branding.surfaces.onLight.generation, undefined);
+  assert.equal(result.reviewedSurfaces.surfaces.onLight.retainedSource.kind, 'retained-reviewed-raster');
+  assert.deepEqual(pack.branding.surfaces.onDark.generation, actualGeneration);
+  assert.equal(result.reviewedSurfaces.surfaces.onDark.retainedSource, undefined);
+  assert.equal(reviewedRasterProvenance(result.reviewedSurfaces.surfaces.onDark, {retainedAllowed: true}).generation.id, actualGeneration.generationId);
+});
+
+test('retained originals require dated public evidence and reject source, review and supplemental provenance tampering', async t => {
+  const data = await fixture(t), inputs = useOriginalArtwork(data), original = structuredClone(data.source);
+  for (const change of [
+    source => {delete source.reviewedInputs.surfaces.onAccent.retainedSource.observedAt;},
+    source => {source.reviewedInputs.surfaces.onAccent.retainedSource.url = 'file:///private/logo.png';},
+    source => {source.reviewedInputs.surfaces.onAccent.retainedSource.url = 'https://dealer.example/logo.png?token=private';},
+    source => {source.reviewedInputs.surfaces.onAccent.retainedSource.sha256 = '0'.repeat(64);},
+    source => {source.reviewedInputs.surfaces.onAccent.generation = {tool: 'image_gen', generationId: 'synthetic-test-only-conflict'};},
+    source => {source.generatedInputs = structuredClone(source.reviewedInputs);}
+  ]) {
+    const source = structuredClone(original); change(source);
+    writeJson(path.join(data.directory, 'branding/source.json'), source);
+    await assert.rejects(data.prepare, /source hash and observation date|public source URL|conflicting retained source|Choose one/);
+    assert.equal(fs.existsSync(path.join(data.directory, 'branding/logo-on-light.png')), false, 'All evidence is validated before exporting any surface');
+  }
+  writeJson(path.join(data.directory, 'branding/source.json'), original); await data.prepare();
+  const pack = data.pack(), changedSource = {...pack, files: new Map(pack.files)};
+  changedSource.files.set(inputs.master.path, await raster([200, 100, 50]));
+  assert.throws(() => readPackBranding(changedSource), /Prepared source artwork changed/);
+  const changedReview = {...pack, files: new Map(pack.files)};
+  changedReview.files.set('branding/source.json', Buffer.concat([pack.files.get('branding/source.json'), Buffer.from(' ')]));
+  assert.throws(() => readPackBranding(changedReview), /Prepared logo provenance/);
+  const changedSupplement = {...pack, branding: structuredClone(pack.branding)};
+  changedSupplement.branding.supplemental['mark-on-dark.webp'].retainedSource.sourceUrl = 'https://another.example/logo.png';
+  assert.throws(() => readPackBranding(changedSupplement), /supplemental logo provenance/);
 });
