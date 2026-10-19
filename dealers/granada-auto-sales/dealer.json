@@ -133,12 +133,23 @@
     "workerPrefix": "cars-granada-auto-sales"
   },
   "pack": {
-    "schemaVersion": 1,
+    "schemaVersion": 2,
     "source": "leads/expansion-2026-10-18",
     "observedAt": "2026-10-19T12:02:43Z",
     "proposal": true,
     "dealerApproved": false,
-    "providerWrites": false
+    "providerWrites": false,
+    "identity": {
+      "requestedSlug": "granada-auto-sales",
+      "canonicalSlug": "granada-auto-sales",
+      "dealerId": "us-ky-louisville-granada-auto-sales"
+    },
+    "batch": {
+      "number": 2,
+      "assignmentId": "cars-expansion-2026-10-19",
+      "leadId": "us-ky-louisville-granada-auto-sales",
+      "position": 114
+    }
   },
   "shareIdentity": {
     "name": "Granada Auto Sales LLC",

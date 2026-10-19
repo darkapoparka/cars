@@ -1,4 +1,5 @@
 import {createHash} from 'node:crypto';
+import fs from 'node:fs';
 import {BRANDING_SCHEMA, PUBLIC_ROOTS} from '../publishing/lead-branding.mjs';
 
 const MARK = 'mark-on-light.webp';
@@ -6,10 +7,28 @@ const POLICY = 'dealer-pack-reviewed-mark-v1';
 const sha256 = bytes => createHash('sha256').update(bytes).digest('hex');
 const assert = (condition, message) => {if (!condition) throw new Error('Dealer pack FAB logo: ' + message);};
 
-/** The dealer mark identifies the proposal; the six card illustrations identify
- * its designs. Only compact-input packs opt into this additional FAB binding. */
+export function dealerPackFabPolicy(manifest) {
+  return manifest.sourceFormat === 'dealer-pack' && manifest.pack?.schemaVersion === 2 ? 'fleet-design-mark-v1' : POLICY;
+}
+
+/** Read the release artwork without editing the switcher or its CSS. */
+export function fleetDesignFabHashes() {
+  const source = fs.readFileSync(new URL('../publishing/preview-switcher.js', import.meta.url), 'utf8');
+  const match = /const templateLogos = (\{[^\n]+\});/.exec(source);
+  assert(match, 'missing the retained six-design switcher artwork');
+  const images = JSON.parse(match[1]), hashes = {};
+  for (const key of Object.keys(PUBLIC_ROOTS)) {
+    const encoded = /^data:image\/webp;base64,([A-Za-z0-9+/]+={0,2})$/.exec(images[key] ?? '');
+    assert(encoded, 'missing retained design mark: ' + key);
+    hashes[key] = sha256(Buffer.from(encoded[1], 'base64'));
+  }
+  return Object.freeze(hashes);
+}
+
+/** M2 restores the live fleet's design mark. M1 retains its original behavior. */
 export function dealerPackSwitcherLogo(manifest, sourceFiles) {
   if (manifest.sourceFormat !== 'dealer-pack') return undefined;
+  if (dealerPackFabPolicy(manifest) === 'fleet-design-mark-v1') return undefined;
   assert(manifest.repository === 'darkapoparka/cars' && manifest.packaging?.version === '5' &&
     manifest.branding?.required === true && manifest.branding.contract === '.cars-branding.json',
   'requires the Cars six-design reviewed branding contract');

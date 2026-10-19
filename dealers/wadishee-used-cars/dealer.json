@@ -133,12 +133,23 @@
     "workerPrefix": "cars-wadishee-used-cars"
   },
   "pack": {
-    "schemaVersion": 1,
+    "schemaVersion": 2,
     "source": "leads/expansion-2026-10-18",
     "observedAt": "2026-10-19",
     "proposal": true,
     "dealerApproved": false,
-    "providerWrites": false
+    "providerWrites": false,
+    "identity": {
+      "requestedSlug": "wadishee-used-cars",
+      "canonicalSlug": "wadishee-used-cars",
+      "dealerId": "ae-sharjah-wadishee-used-cars"
+    },
+    "batch": {
+      "number": 4,
+      "assignmentId": "cars-expansion-2026-10-19",
+      "leadId": "ae-sharjah-wadishee-used-cars",
+      "position": 390
+    }
   },
   "shareIdentity": {
     "name": "Wadishee Used Cars",

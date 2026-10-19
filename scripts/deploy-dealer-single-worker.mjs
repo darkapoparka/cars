@@ -408,7 +408,18 @@ export function parseDeploymentArgs(argv){
  return result;
 }
 async function runDeploymentCli(){
- if(process.argv.slice(2).includes('--help'))console.log('Usage: deploy-dealer-single-worker.mjs --input REVIEW_JSON [--mode create-singleton] [--write --wrangler-package ABS_PACKAGE_JSON]\nDefault: exact artifact/source inspection only; update-existing is the default target mode. Explicit create-singleton requires a fresh complete absent-target inventory. Reserve defaults to one slot; a concrete reviewed Paid-500 policy can explicitly use the final slot. Capacity defaults to 100; 500 requires fresh reviewed paid-plan evidence. --write uploads once with standard Wrangler authentication. No builds/downloads/dependent Workers.\nDealer-pack candidate inspection: --batch SLUGS_JSON --bundle-root runtime/dealer-packs --plan free|paid [--report PATH]. JSON arrays of slugs only; --write is rejected for candidate batches pending M2.');
+ if(process.argv.slice(2).includes('--queue')){
+  const argv=process.argv.slice(2),options={},names={'--batch':'slugs','--bundle-root':'bundleRoot','--batch-number':'batch','--report':'report','--owner':'owner','--plan':'plan'};
+  for(let i=0;i<argv.length;i++){const key=argv[i];if(key==='--queue'||key==='--write'){assert(!options[key],'Repeated '+key);options[key]=true;}else{assert(names[key]&&argv[i+1]&&!argv[i+1].startsWith('--')&&!options[names[key]],'Use --queue --batch FILE --bundle-root DIR --plan paid [--batch-number 1] [--write --owner github:RUN_ID]');options[names[key]]=argv[++i];}}
+  assert(options.slugs&&options.bundleRoot&&options.plan==='paid','The M2 queue path requires --batch FILE --bundle-root DIR --plan paid');
+  const {runPackDeploymentCli}=await import('./deploy-dealer-packs.mjs');
+  const report=options.report??path.join(ROOT,'runtime/dealer-pack-deploy-inspection.json'),common=['--slugs',options.slugs,'--bundle-root',options.bundleRoot,'--report',report,...(options.batch?['--batch',options.batch]:[])];
+  if(!options['--write'])return runPackDeploymentCli(['inspect',...common]);
+  assert(options.owner,'Queued writes require --owner with an identifiable executor/run');
+  const prepared=await runPackDeploymentCli(['enqueue',...common]);if(prepared.requests.length)return runPackDeploymentCli(['drain','--bundle-root',options.bundleRoot,'--request-ids',report,'--owner',options.owner,'--write']);
+  return prepared;
+ }
+ if(process.argv.slice(2).includes('--help'))console.log('Usage: deploy-dealer-single-worker.mjs --input REVIEW_JSON [--mode create-singleton] [--write --wrangler-package ABS_PACKAGE_JSON]\nDefault: exact artifact/source inspection only; update-existing is the default target mode. Explicit create-singleton requires a fresh complete absent-target inventory. Reserve defaults to one slot; a concrete reviewed Paid-500 policy can explicitly use the final slot. Capacity defaults to 100; 500 requires fresh reviewed paid-plan evidence. --write uploads once with standard Wrangler authentication. No builds/downloads/dependent Workers.\nDealer-pack candidate inspection: --batch SLUGS_JSON --bundle-root runtime/dealer-packs --plan free|paid [--report PATH]. Legacy candidate inspection remains read-only. M2 deployment: add --queue --write --owner github:RUN_ID to use the durable account queue and create-only provider guards; see deploy-dealer-packs.mjs --help.');
  else{const options=parseDeploymentArgs(process.argv.slice(2)),result=await(options.batchFile?inspectDealerPackBatch(options):runFleetSingletonDeployment(options));console.log(JSON.stringify(result,null,2));if(options.batchFile&&!result.success)process.exitCode=1;}
 }
 // Batch QA imports hosted checks that reuse this module's deployment guards.

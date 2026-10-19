@@ -329,7 +329,7 @@ export function mergeCloudflareAssetsIgnore(existing = '') {
 }
 
 export function runCloudflareSvelteBuild(key, { packageRoot = path.resolve(import.meta.dirname, '..'), phase = 'build', run = spawnSync } = {}) {
-  if (!['dependencies', 'prove', 'build', 'dry-run', 'inspect'].includes(phase)) throw Error('Unknown Cloudflare build phase');
+  if (!['dependencies', 'rebind', 'prove', 'build', 'dry-run', 'inspect'].includes(phase)) throw Error('Unknown Cloudflare build phase');
   const root = generatedRoot(packageRoot), manifest = readJson(path.join(root, 'dealer.json'));
   const receipt = readJson(path.join(root, '.cars-cloudflare-svelte.json'));
   const entries = receipt.services?.filter(service => service.key === key), variants = manifest.variants?.filter(variant => variant.key === key);
@@ -367,6 +367,22 @@ export function runCloudflareSvelteBuild(key, { packageRoot = path.resolve(impor
     if (JSON.stringify({ packageMode: proof.packageMode, payloadDigest: proof.payloadDigest }) !== JSON.stringify(seal)) throw Error('Cloudflare package seal changed during dependency installation');
     fs.writeFileSync(proofFile, json(proof));
     return { key, phase, dependencyLockStatus: 'materialized', proofFile, packageMode: proof.packageMode, sourceDigest: proof.sourceDigest };
+  }
+  if (phase === 'rebind') {
+    // A fast batch retains an installed dependency tree while replacing the
+    // exact generated dealer source. Package, lock and adapter configuration
+    // must stay byte-identical. Only the Worker name in the fully validated
+    // generated Wrangler configuration may change; no compiled output is reused.
+    if (!storedProof || !['key', 'node', 'packageSha256', 'lockSha256', 'configSha256'].every(field => storedProof[field] === identity[field]))
+      throw Error('Installed Svelte dependencies cannot be rebound after changed release inputs');
+    if (seal.packageMode === 'sealed-package' || storedProof.packageMode === 'sealed-package')
+      throw Error('Fast dependency rebinding is limited to generated qualification workspaces');
+    verifyInstalledDependencies(root, key, entry);
+    const proof = sourceProof(root, key, identity, seal);
+    fs.writeFileSync(proofFile, json(proof));
+    return {key, phase, proofFile, installed: false, sourceDigest: proof.sourceDigest,
+      previousWranglerSha256: storedProof.wranglerSha256, wranglerSha256: identity.wranglerSha256,
+      buildVerified: false, hosted: false};
   }
   if (!sameDependencyIdentity(storedProof, identity)) throw Error('Verified Cloudflare dependency phase is missing or changed');
   verifyInstalledDependencies(root, key, entry);
@@ -455,7 +471,7 @@ export function freezeCloudflareSvelteDependencies(packageRoot) {
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   try {
     const [key, phase = 'build'] = process.argv.slice(2);
-    if (!key || process.argv.length > 4) throw Error('Usage: node scripts/build-cloudflare-svelte.mjs auto-best|import|karento-best [dependencies|prove|build|dry-run|inspect] OR freeze');
+    if (!key || process.argv.length > 4) throw Error('Usage: node scripts/build-cloudflare-svelte.mjs auto-best|import|karento-best [dependencies|rebind|prove|build|dry-run|inspect] OR freeze');
     const result = key === 'freeze' && process.argv.length === 3
       ? freezeCloudflareSvelteDependencies(path.resolve(import.meta.dirname, '..'))
       : runCloudflareSvelteBuild(key, { phase });

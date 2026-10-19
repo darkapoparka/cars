@@ -11,6 +11,7 @@ import {assertSixDesignSelection,SIX_DESIGN_KEYS} from './lib/six-design-release
 import {canonicalPackJson,validatePackExecution,validatePackSourceReleases,validateDealerPackComposition,dealerPackCompositionDigest} from './lib/dealer-pack-artifacts.mjs';
 import {previewJourney,previewDetail} from './verify-dealer-preview.mjs';
 import {dismissAppWelcome} from './verify-priselci-public-browser.mjs';
+import {dealerPackFabPolicy,fleetDesignFabHashes} from './lib/dealer-pack-switcher-logo.mjs';
 
 const assert=(ok,message)=>{if(!ok)throw Error(message);};
 const hex64=value=>/^[a-f0-9]{64}$/.test(value??'');
@@ -136,10 +137,32 @@ export function loadFleetIdentities(root,registry=json(path.join(root,'docs/DEPL
       }
     }
   }
+  // New packs are not yet registry entries. Include their public identities so
+  // one new preview cannot accidentally carry another new dealer's data.
+  const registered=records.slice(),packFactsDiagnostics=[],packSlugs=[];
+  const packsRoot=path.join(root,'dealers');
+  if(fs.existsSync(packsRoot)){
+    const directories=fs.readdirSync(packsRoot,{withFileTypes:true}).filter(row=>row.isDirectory()).sort((a,b)=>a.name.localeCompare(b.name));
+    assert(directories.length<=2000,'Dealer-pack identity scan exceeds its bound');
+    for(const directory of directories){
+      if(!slugPattern.test(directory.name))continue;
+      const relative='dealers/'+directory.name+'/business-facts.json',file=path.join(root,relative);
+      if(!fs.existsSync(file))continue;
+      try{
+        const stat=fs.lstatSync(file);assert(stat.isFile()&&!stat.isSymbolicLink()&&stat.size<=1024**2,'Unsafe or oversized pack business facts');
+        const facts=json(inside(root,relative,{mustExist:true})),value=business(facts);
+        assert(value&&typeof value==='object'&&typeof value.name==='string'&&value.name.trim(),'Pack business facts have no business name');
+        let record=records.find(row=>row.slug===directory.name);
+        if(!record){record={slug:directory.name,names:[],phones:[],source:null,factsSource:null,publicSources:[]};records.push(record);}
+        merge(record,facts,relative);packSlugs.push(directory.name);
+      }catch(error){packFactsDiagnostics.push({slug:directory.name,path:relative,error:error.message});}
+    }
+  }
   for(const row of records){row.names=[...new Set(row.names.filter(value=>typeof value==='string'&&value.trim()))];row.phones=[...new Set(row.phones.filter(value=>digits(value).length>=7))];}
-  return {records,coverage:{registryDealers:records.length,withName:records.filter(row=>row.names.length).length,withBusinessFacts:records.filter(row=>row.factsSource).length,withPublicIdentityEvidence:records.filter(row=>row.source).length,withPhone:records.filter(row=>row.phones.length).length,
-    missingBusinessFacts:records.filter(row=>!row.factsSource).map(row=>row.slug),missingPublicPhone:records.filter(row=>!row.phones.length).map(row=>row.slug),
-    note:'Only public business fields are read; private contact, outreach and CRM records are not inputs. Missing public phones are not invented.'}};
+  return {records,coverage:{registryDealers:registered.length,totalIdentities:records.length,packDealers:packSlugs.length,packSlugs,packFactsDiagnostics,
+    withName:registered.filter(row=>row.names.length).length,withBusinessFacts:registered.filter(row=>row.factsSource).length,withPublicIdentityEvidence:registered.filter(row=>row.source).length,withPhone:registered.filter(row=>row.phones.length).length,
+    missingBusinessFacts:registered.filter(row=>!row.factsSource).map(row=>row.slug),missingPublicPhone:registered.filter(row=>!row.phones.length).map(row=>row.slug),
+    note:'Registered and new-pack public business identities are scanned. Malformed neighboring facts are reported without stopping other packs; missing public phones are not invented.'}};
 }
 
 export function findForeignIdentity({text,phones=[],ownSlug,ownFacts,fleet}) {
@@ -179,7 +202,9 @@ export function assessPageSnapshot({snapshot,facts,manifest,variant,fleet,demoSt
   for(const key of ['name','phone','logo'])if(required[key]&&!observed[key])findings.push('dealer-'+key);
   if(snapshot.phones?.some(phone=>!own.phone||!samePhone(phone,own.phone)))findings.push('unexpected-business-phone');
   const fabMarks=snapshot.fabMarks??[];
-  if(fabMarks.length!==1||!fabMarks[0].visible||!fabMarks[0].loaded||!fabMarks[0].dealerFabLogo)findings.push('dealer-fab-logo');
+  const fabPolicy=dealerPackFabPolicy(manifest),fleetMark=fabPolicy==='fleet-design-mark-v1';
+  if(fabMarks.length!==1||!fabMarks[0].visible||!fabMarks[0].loaded||
+    (fleetMark?fabMarks[0].sha256!==fleetDesignFabHashes()[variant.key]:!fabMarks[0].dealerFabLogo))findings.push(fleetMark?'fleet-design-fab-logo':'dealer-fab-logo');
   const choices=snapshot.designChoices??[],expected=manifest.variants;
   let actual;try{actual=new URL(snapshot.url);}catch{}
   const actualOwner=actual&&(expected.find(item=>item.base&&(actual.pathname===item.base||actual.pathname.startsWith(item.base+'/')))?.key??'auto-best');
@@ -295,7 +320,7 @@ export async function verifyPackLogoAssets({pack,sharp,bundleRoot}) {
     const asset=contract.assets?.[role]??contract[role];
     const sourcePath=asset?.sourcePath??asset?.path,sourceSha256=asset?.sourceSha256??asset?.sha256;
     assert(asset&&safeArtifactPath(sourcePath)&&hex64(sourceSha256)&&hex64(asset.sha256),'Missing sourced logo role: '+role);
-    const bytes=fs.readFileSync(inside(pack.directory,sourcePath,{mustExist:true}));assert(sha256(bytes)===sourceSha256,'Logo bytes changed: '+role);
+    const bytes=pack.files instanceof Map?pack.files.get(sourcePath):fs.readFileSync(inside(pack.directory,sourcePath,{mustExist:true}));assert(Buffer.isBuffer(bytes)&&sha256(bytes)===sourceSha256,'Logo bytes changed: '+role);
     const backgrounds=asset.backgrounds??contract.surfaceBackgrounds?.[role]??(['onLight','master','mark','favicon'].includes(role)?['#ffffff']:['onDark','markOnDark'].includes(role)?['#111113']:null);
     let result;
     if(role==='favicon'){
@@ -314,7 +339,7 @@ export async function verifyPackLogoAssets({pack,sharp,bundleRoot}) {
       // The composer may share immutable assets between designs; hashes, not six copies, establish identity.
       result.integratedCopies=copies.filter(name=>publicHash(name)===asset.sha256);
       if(!result.integratedCopies.length)result.findings.push('missing-bundle-logo');
-      const publicBytes=fs.readFileSync(inside(pack.directory,asset.publicPath.slice(1),{mustExist:true}));assert(sha256(publicBytes)===asset.sha256,'Public logo bytes changed: '+role);
+      const publicBytes=pack.files instanceof Map?pack.files.get(asset.publicPath.slice(1)):fs.readFileSync(inside(pack.directory,asset.publicPath.slice(1),{mustExist:true}));assert(Buffer.isBuffer(publicBytes)&&sha256(publicBytes)===asset.sha256,'Public logo bytes changed: '+role);
       result.publicQuality=await inspectLogoPixels(publicBytes,{sharp,backgrounds,role});if(result.publicQuality.status!=='passed')result.findings.push('public-logo-quality');
     }else if(['mark','markOnDark','favicon'].includes(role)){
       const supportedHashes=new Set([asset.sha256]);
@@ -510,7 +535,7 @@ export async function verifyDealerPack({root=ROOT,slug,bundleRoot,plan,previewUr
   const report={schemaVersion:1,type:'cars-dealer-pack-qa',slug,success:false,startedAt:new Date().toISOString(),checks:[],routes:[],proof:{screenshots:[]},providerWrites:0,hostedVerified:false,ownerAccepted:false};
   const check=(id,status,details)=>report.checks.push({id,status,details});let preview,browser;
   try{
-    if(!pack){const {loadDealerPack}=await import('./lib/dealer-pack.mjs');pack=await loadDealerPack(root,slug);}
+    if(!pack){const {loadPreparedDealerPack}=await import('./prepare-dealer-pack-logo.mjs');pack=await loadPreparedDealerPack(root,slug);}
     assert(pack.manifest.slug===slug,'Pack belongs to another dealer');assertSixDesignSelection(pack.manifest.variants);
     const context=inspectDealerPackBundle({bundleRoot,slug,packDigest:pack.packDigest,releaseDigest:pack.releaseDigest??pack.manifest.releaseDigest,sourceReleases:pack.manifest.templateSources,plan});
     report.packDigest=context.receipt.packDigest;report.releaseDigest=context.receipt.releaseDigest;report.outputDigest=context.receipt.outputDigest;report.execution=context.receipt.execution;
@@ -530,7 +555,8 @@ export async function verifyDealerPack({root=ROOT,slug,bundleRoot,plan,previewUr
     const demoStock=stockIsDemo(pack),imageDigests=new Map();
     const roleHashes=row=>[row.sha256,row.sourceSha256,...(row.renderedSha256??[])].filter(hex64);
     const logoHashes=new Set(report.logoQuality.roles.flatMap(roleHashes));
-    const fabLogoHashes=new Set(report.logoQuality.roles.filter(row=>['onLight','mark'].includes(row.role)).flatMap(roleHashes));
+    const fabLogoHashes=new Set(dealerPackFabPolicy(pack.manifest)==='fleet-design-mark-v1'?Object.values(fleetDesignFabHashes()):report.logoQuality.roles.filter(row=>['onLight','mark'].includes(row.role)).flatMap(roleHashes));
+    report.fabPolicy=dealerPackFabPolicy(pack.manifest);
     const logoPaths=new Set(context.inventory.files.filter(row=>row.path.startsWith('public/')&&logoHashes.has(row.sha256)).map(row=>'/'+row.path.slice('public/'.length)));
     const branding={logoHashes,fabLogoHashes,logoPaths};
     for(const variant of pack.manifest.variants){

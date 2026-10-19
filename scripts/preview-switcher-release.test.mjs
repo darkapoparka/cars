@@ -6,6 +6,12 @@ import vm from 'node:vm';
 import { switcherConfiguration } from './package-dealer.mjs';
 import { addSignatureNavigationHead, signatureNavigationHead } from './publishing/signature-navigation.mjs';
 import { PUBLIC_ROOTS } from './publishing/lead-branding.mjs';
+import {loadPreparedDealerPack} from './prepare-dealer-pack-logo.mjs';
+import {ROOT} from './lib/workflow.mjs';
+
+const preparedFabPacks=new Map();
+for(const slug of ['za-motors','wadishee-used-cars','granada-auto-sales'])preparedFabPacks.set(slug,
+  await loadPreparedDealerPack(ROOT,slug,{toolPackage:process.env.CARS_QA_RESOLVE_FROM??ROOT+'/runtime/dealer-pack-tools/package.json'}));
 
 const source = readFileSync(new URL('./publishing/preview-switcher.js', import.meta.url), 'utf8');
 const variants = [
@@ -295,12 +301,15 @@ function sixHomesConfiguration(sourceFiles = homeSourceFiles) {
 }
 
 function reviewedDealerFab(slug = 'za-motors') {
-  const manifest = JSON.parse(readFileSync(new URL('../dealers/' + slug + '/dealer.json', import.meta.url)));
-  const retained = JSON.parse(readFileSync(new URL('../dealers/' + slug + '/branding/logo-contract.json', import.meta.url)));
+  const prepared=preparedFabPacks.get(slug),manifest=structuredClone(prepared.manifest);
+  // Retain the M1 adapter contract as a regression fixture; current packs use
+  // the separate fleet-mark case below and never write regenerated files.
+  manifest.pack.schemaVersion=1;
+  const retained=JSON.parse(prepared.files.get('branding/logo-contract.json'));
   const asset = 'mark-on-light.webp';
-  const mark = readFileSync(new URL('../dealers/' + slug + '/dealer-brand/' + asset, import.meta.url));
+  const mark = prepared.files.get('dealer-brand/'+asset);
   const digest = createHash('sha256').update(mark).digest('hex');
-  assert.equal(digest, retained.supplemental[asset].sha256, 'fixture is the committed reviewed dealer mark');
+  assert.equal(digest, retained.supplemental[asset].sha256, 'fixture reproduces the reviewed dealer mark exactly');
   const publicBase = '/dealer-brand/v2-' + digest.slice(0, 16);
   const receipt = {schemaVersion: 1, dealer: slug, publicBase,
     reviewedAssets: [{name: asset, sha256: digest}],
@@ -312,7 +321,7 @@ function reviewedDealerFab(slug = 'za-motors') {
   return {manifest, files, receipt, digest, mark};
 }
 
-test('all three reviewed dealer marks reach the actual FAB in each of six designs', () => {
+test('M1 regression: all three reviewed dealer marks reach the actual FAB in each of six designs', () => {
   for (const slug of ['za-motors', 'wadishee-used-cars', 'granada-auto-sales']) {
     const {manifest, files, digest, mark} = reviewedDealerFab(slug);
     const before = [...files].map(([name, bytes]) => [name, Buffer.from(bytes)]);
@@ -342,6 +351,24 @@ test('all three reviewed dealer marks reach the actual FAB in each of six design
     }
     assert.deepEqual([...files], before, 'configuration does not rewrite any reviewed source bytes');
   }
+});
+
+test('M2 packs use the live fleet design marks while preserving cards, links and interactions',()=>{
+ for(const slug of preparedFabPacks.keys()){
+  const f=reviewedDealerFab(slug);f.manifest.pack.schemaVersion=2;
+  const input=switcherConfiguration(f.manifest,nativeMessages,f.files);
+  assert.equal(input.dealerFabLogo,undefined);
+  const legacyManifest=structuredClone(f.manifest);delete legacyManifest.sourceFormat;
+  const legacy=switcherConfiguration(legacyManifest,nativeMessages,f.files);
+  for(const variant of f.manifest.variants){
+   const address='https://dealer.example'+variant.entry;
+   const actual=render(input,address,'en'),expected=render(legacy,address,'en');
+   assert.equal(actual.shadow.querySelector('.fab-artwork').querySelector('img').src,expected.shadow.querySelector('.fab-artwork').querySelector('img').src);
+   assert.deepEqual(actual.links.map(link=>link.href),expected.links.map(link=>link.href));
+   assert.deepEqual(actual.links.map(link=>link.querySelector('.preview').querySelector('img').src),expected.links.map(link=>link.querySelector('.preview').querySelector('img').src));
+   actual.shadow.querySelector('.fab').fire('click');assert.equal(actual.shadow.querySelector('.sheet').hidden,false);
+  }
+ }
 });
 
 test('dealer FAB source binding rejects foreign identities and incomplete reviewed roles', () => {

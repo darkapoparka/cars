@@ -16,12 +16,12 @@ function fixture(t) {
   return {root, pack, slug: 'public-motors', loadPack: () => pack, readLead};
 }
 
-test('input rehearsal reproduces an isolated pack and retains a truthful report', async t => {
+test('input rehearsal reproduces in memory and retains a truthful committed-input report', async t => {
   const options = fixture(t), original = [...options.pack.files].map(([name, bytes]) => [name, Buffer.from(bytes)]);
-  const report = await checkDealerPackInputs({...options, prepareLogo: async ({root, slug, toolPackage}) => {
-    assert.notEqual(root, options.root); assert.equal(path.isAbsolute(toolPackage), true);
-    assert.equal(fs.readFileSync(path.join(root, 'dealers', slug, 'branding/source.json'), 'utf8'), '{}\n');
-    return {status: 'retained-public-original-not-dealer-approved'};
+  const report = await checkDealerPackInputs({...options, prepareLogo: async ({root, toolPackage, persist, sourceFiles}) => {
+    assert.equal(root, options.root); assert.equal(path.isAbsolute(toolPackage), true); assert.equal(persist, false);
+    assert.equal(sourceFiles.get('branding/source.json').toString(), '{}\n');
+    return {status: 'retained-public-original-not-dealer-approved', generatedFiles: new Map(sourceFiles)};
   }});
   assert.equal(report.success, true); assert.equal(report.logo.deterministic, true);
   assert.equal(report.liveResearchPerformed, false); assert.equal(report.imageGenerationPerformed, false);
@@ -41,15 +41,25 @@ test('input rehearsal rejects an unrelated lead before exporting artwork', async
 test('input rehearsal rejects changed or undeclared exports and preserves original inputs', async t => {
   for (const extra of [false, true]) {
     const options = fixture(t);
-    await assert.rejects(checkDealerPackInputs({...options, prepareLogo: async ({root, slug}) => {
-      fs.writeFileSync(path.join(root, 'dealers', slug, extra ? 'branding/extra.json' : 'branding/source.json'), '{"changed":true}\n');
-      return {status: 'proposal'};
+    await assert.rejects(checkDealerPackInputs({...options, prepareLogo: async ({sourceFiles}) => {
+      const generatedFiles = new Map(sourceFiles); generatedFiles.set(extra ? 'branding/extra.json' : 'branding/source.json', Buffer.from('{"changed":true}\n'));
+      return {status: 'proposal', generatedFiles};
     }}), /stale or non-deterministic/);
     assert.equal(options.pack.files.get('branding/source.json').toString(), '{}\n');
     const directory = path.join(options.root, 'runtime/dealer-pack-input-checks');
     assert.deepEqual(fs.readdirSync(directory), ['public-motors.json']);
     assert.equal(JSON.parse(fs.readFileSync(path.join(directory, 'public-motors.json'))).success, false);
   }
+});
+
+test('a compact v2 pack checks hydrated bytes while preserving the committed pack digest and file count', async t => {
+  const options = fixture(t), bytes = Buffer.from('exact-derived-test-fixture');
+  options.pack.logoRecipe = {outputs: [{path: 'dealer-brand/test.webp', sha256: (await import('./lib/workflow.mjs')).sha256(bytes)}]};
+  options.pack.logoRegeneration = {verified: true}; options.pack.branding = {status: 'proposal'}; options.pack.fileCount = options.pack.files.size;
+  options.pack.files.set('dealer-brand/test.webp', bytes);
+  const result = await checkDealerPackInputs({...options, prepareLogo: () => {throw Error('already rehydrated and verified by loader');}});
+  assert.equal(result.packDigest, 'a'.repeat(64)); assert.equal(result.sourceFiles, 2); assert.equal(result.logo.regeneratedExports, 1);
+  options.pack.files.set('dealer-brand/test.webp', Buffer.from('changed')); await assert.rejects(checkDealerPackInputs(options), /Hydrated logo/);
 });
 
 test('the one-command build fails when real QA reports failure and returns only verified success', async () => {

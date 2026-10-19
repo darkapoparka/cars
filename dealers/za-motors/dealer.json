@@ -133,12 +133,23 @@
     "workerPrefix": "cars-za-motors"
   },
   "pack": {
-    "schemaVersion": 1,
+    "schemaVersion": 2,
     "source": "leads/expansion-2026-10-18",
     "observedAt": "2026-10-19T12:02:43Z",
     "proposal": true,
     "dealerApproved": false,
-    "providerWrites": false
+    "providerWrites": false,
+    "identity": {
+      "requestedSlug": "za-motors",
+      "canonicalSlug": "za-motors",
+      "dealerId": "gb-birmingham-za-motors"
+    },
+    "batch": {
+      "number": 1,
+      "assignmentId": "cars-expansion-2026-10-19",
+      "leadId": "gb-birmingham-za-motors",
+      "position": 20
+    }
   },
   "shareIdentity": {
     "name": "Z A Motors",

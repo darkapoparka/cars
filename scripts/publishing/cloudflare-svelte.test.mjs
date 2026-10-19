@@ -191,6 +191,34 @@ test('source-only prove keeps exact installed dependencies and does not certify 
   assert.throws(() => area.execute('prove'), /Installed Cloudflare dependency version differs/);
 });
 
+test('fast rebind authenticates the same installed release for a new generated dealer without certifying old output', t => {
+  const area = generatedBuildFixture(t);
+  const dealer = JSON.parse(fs.readFileSync(path.join(area.root, 'dealer.json'), 'utf8'));dealer.slug = 'second-dealer';
+  fs.writeFileSync(path.join(area.root, 'dealer.json'), JSON.stringify(dealer));
+  const receiptPath = path.join(area.root, '.cars-cloudflare-svelte.json'), receipt = JSON.parse(fs.readFileSync(receiptPath, 'utf8'));
+  receipt.dealer = dealer.slug;receipt.workerPrefix = 'cars-' + dealer.slug;receipt.services[0].workerName = 'cars-second-dealer-auto-best';
+  fs.writeFileSync(receiptPath, JSON.stringify(receipt));
+  area.write('wrangler.json', JSON.stringify(cloudflareSvelteConfiguration('auto-best', '', {workerPrefix: receipt.workerPrefix})));
+  area.write('src/routes/+page.server.ts', 'export const load = () => ({name: "Second Dealer", stock: ["second-car"]});');
+  assert.throws(() => area.execute('prove'), /dependency phase is missing or changed/);
+  const rebound = area.execute('rebind');
+  assert.equal(rebound.installed, false);assert.equal(rebound.buildVerified, false);assert.equal(rebound.hosted, false);
+  assert.notEqual(rebound.previousWranglerSha256, rebound.wranglerSha256);assert.equal(area.calls.length, 0);
+  assert.throws(() => area.execute('dry-run'), /matching artifact proof/);
+  const installed = path.join(area.root, 'auto-best/node_modules/wrangler/package.json');
+  fs.writeFileSync(installed, JSON.stringify({name: 'wrangler', version: '4.119.0'}));
+  assert.throws(() => area.execute('rebind'), /Installed Cloudflare dependency version differs/);
+});
+
+test('fast rebind rejects deployment-side resource edits and sealed packages', t => {
+  const area = generatedBuildFixture(t), config = JSON.parse(fs.readFileSync(path.join(area.root, 'auto-best/wrangler.json'), 'utf8'));
+  config.routes = ['occupied.example/*'];area.write('wrangler.json', JSON.stringify(config));
+  assert.throws(() => area.execute('rebind'), /configuration changed/);assert.equal(area.calls.length, 0);
+  const sealed = generatedBuildFixture(t, {sealed: true});
+  assert.throws(() => sealed.execute('rebind'), /limited to generated qualification workspaces/);
+  assert.equal(sealed.calls.length, 0);
+});
+
 test('sealed source changes and removal of its package seal cannot be refreshed by prove', t => {
   const area = generatedBuildFixture(t, { sealed: true });
   area.write('src/routes/+page.server.ts', 'export const load = () => ({ changed: true });');

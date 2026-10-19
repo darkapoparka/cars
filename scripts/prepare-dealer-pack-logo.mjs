@@ -3,9 +3,9 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {createRequire} from 'node:module';
 import {isDeepStrictEqual} from 'node:util';
-import {ROOT, sha256, inside, args, writeJson} from './lib/workflow.mjs';
+import {ROOT, sha256, inside, args} from './lib/workflow.mjs';
 import {isEntrypoint} from './lib/cli-entrypoint.mjs';
-import {validPackSlug, safePackPath} from './lib/dealer-pack.mjs';
+import {validPackSlug, safePackPath, encodePackJson, loadDealerPack} from './lib/dealer-pack.mjs';
 
 const assert = (value, message) => {if (!value) throw Error(message);};
 const roles = {onLight: 'on-light', onDark: 'on-dark', onAccent: 'on-accent'};
@@ -67,20 +67,29 @@ function ico(images) {
   return Buffer.concat([header, ...images.map(row => row.png)]);
 }
 
-export async function prepareDealerPackLogo({root = ROOT, slug, toolPackage = process.env.CARS_DEALER_PACK_TOOL_PACKAGE ?? path.join(root, 'runtime/dealer-pack-tools/package.json')} = {}) {
+export async function prepareDealerPackLogo({root = ROOT, slug, persist = true, sourceFiles, sourceDirectory,
+  toolPackage = process.env.CARS_DEALER_PACK_TOOL_PACKAGE ?? path.join(root, 'runtime/dealer-pack-tools/package.json')} = {}) {
   assert(validPackSlug(slug), 'Use a bounded dealer pack slug');
-  const directory = inside(root, 'dealers/' + slug, {mustExist: true}), sourceFile = path.join(directory, 'branding/source.json');
-  const sourceBytes = fs.readFileSync(sourceFile), source = JSON.parse(sourceBytes), {inputs, rows, retainedAllowed} = reviewedInputs(source);
+  const directory = sourceDirectory ? inside(root, path.relative(root, sourceDirectory), {mustExist: true}) : inside(root, 'dealers/' + slug, {mustExist: true});
+  assert(!sourceDirectory || persist === false, 'A source-directory override is only valid for in-memory logo preparation');
+  const read = name => sourceFiles?.has(name) ? sourceFiles.get(name) : fs.readFileSync(inside(directory, name, {mustExist: true}));
+  const sourceBytes = read('branding/source.json'), source = JSON.parse(sourceBytes), {inputs, rows, retainedAllowed} = reviewedInputs(source);
+  const manifestFile = path.join(directory, 'dealer.json'), manifest = sourceFiles?.has('dealer.json') || fs.existsSync(manifestFile) ? JSON.parse(read('dealer.json')) : null;
+  const compact = manifest?.pack?.schemaVersion === 2, generatedFiles = new Map();
   const sharp = createRequire(path.resolve(toolPackage))('sharp');
   assert(sharp.versions.sharp === '0.35.5', 'Use sharp 0.35.5 for deterministic logo exports');
   // Validate every original and generation before an export can replace files.
   const artwork = Object.fromEntries(Object.entries(rows).map(([role, row]) => {
     const provenance = artworkProvenance(row, {slug, retainedAllowed, sourceSha256: sha256(sourceBytes)});
-    const bytes = fs.readFileSync(inside(directory, row.path, {mustExist: true}));
+    const bytes = read(row.path);
     assert(sha256(bytes) === row.sha256, (provenance.generation ? 'Generated' : 'Retained') + ' source artwork changed: ' + row.path);
     return [role, {bytes, provenance}];
   }));
-  const save = (name, bytes) => {const file = inside(directory, name); fs.mkdirSync(path.dirname(file), {recursive: true}); fs.writeFileSync(file, bytes); return {path: name, sha256: sha256(bytes)};};
+  const save = (name, bytes) => {
+    generatedFiles.set(name, bytes);
+    if (persist && (!compact || name.endsWith('.json'))) {const file = inside(directory, name); fs.mkdirSync(path.dirname(file), {recursive: true}); fs.writeFileSync(file, bytes);}
+    return {path: name, sha256: sha256(bytes)};
+  };
   const assets = {}, transforms = {}, surfaces = {}, supplemental = {};
   for (const [role, name] of Object.entries(roles)) {
     const row = inputs.surfaces[role], result = await cropTransparentPadding(artwork[role].bytes, sharp);
@@ -119,17 +128,43 @@ export async function prepareDealerPackLogo({root = ROOT, slug, toolPackage = pr
     save('branding/logo-mark-on-dark.png', darkMark);
     contract.markOnDark = {path: 'branding/logo-mark-on-dark.png', sha256: sha256(darkMark), ...artwork.markOnDark.provenance};
   }
-  writeJson(path.join(directory, 'branding/logo-contract.json'), contract);
-  const manifestFile = path.join(directory, 'dealer.json');
-  if (fs.existsSync(manifestFile)) {
-    const manifest = JSON.parse(fs.readFileSync(manifestFile, 'utf8'));
+  save('branding/logo-contract.json', encodePackJson(contract));
+  if (manifest) {
     if (manifest.shareIdentity) {
       manifest.shareIdentity.logo = {sourcePath: 'branding/logo-on-light.png', sha256: assets.onLight.sourceSha256,
         faviconSourcePath: 'branding/app-icon.png', faviconSha256: sha256(mark.png)};
-      writeJson(manifestFile, manifest);
+      save('dealer.json', encodePackJson(manifest));
     }
   }
-  return {dealer: slug, files: 20 + (darkMark ? 1 : 0), status: contract.status, markOnDarkReady: contract.markOnDarkReady};
+  const recipe = {schemaVersion: 1, kind: 'cars-dealer-pack-logo-recipe', dealer: slug, transformVersion: 'transparent-crop-v1',
+    toolchain: {...sharp.versions}, sourceSha256: sha256(sourceBytes), contractSha256: sha256(encodePackJson(contract)),
+    outputs: [...generatedFiles].filter(([name]) => /\.(?:png|webp|ico)$/.test(name)).sort(([a], [b]) => a.localeCompare(b, 'en'))
+      .map(([name, bytes]) => ({path: name, bytes: bytes.length, sha256: sha256(bytes)}))};
+  if (compact) save('branding/logo-recipe.json', encodePackJson(recipe));
+  return {dealer: slug, files: 20 + (darkMark ? 1 : 0), status: contract.status, markOnDarkReady: contract.markOnDarkReady,
+    ...(persist ? {committedExportPolicy: compact ? 'recipe-and-originals-only' : 'legacy-expanded'} : {generatedFiles, contract, recipe})};
+}
+
+/** Hydration never writes into the source pack. Every generated byte must match its retained recipe. */
+export async function loadPreparedDealerPack(root = ROOT, slug, options = {}) {
+  const pack = loadDealerPack(root, slug, options);
+  // Keep the physical committed inventory separate from regenerated assembly inputs.
+  pack.sourceFiles = new Map(pack.files);
+  if (!pack.logoRecipe) return pack;
+  const recipe = pack.logoRecipe;
+  assert(recipe.schemaVersion === 1 && recipe.kind === 'cars-dealer-pack-logo-recipe' && recipe.dealer === slug && recipe.transformVersion === 'transparent-crop-v1' &&
+    recipe.sourceSha256 === sha256(pack.files.get('branding/source.json')) && recipe.contractSha256 === sha256(pack.files.get('branding/logo-contract.json')), 'Logo regeneration recipe or retained source changed');
+  const generated = await prepareDealerPackLogo({root, slug, toolPackage: options.toolPackage, persist: false, sourceFiles: pack.files});
+  assert(isDeepStrictEqual(recipe.toolchain, generated.recipe.toolchain), 'Logo recipe requires its exact retained sharp/libvips toolchain');
+  assert(isDeepStrictEqual(recipe.outputs, generated.recipe.outputs), 'Deterministic logo regeneration differs from its reviewed byte inventory');
+  assert(generated.generatedFiles.get('branding/logo-contract.json').equals(pack.files.get('branding/logo-contract.json')), 'Regenerated logo provenance differs from the retained contract');
+  for (const row of recipe.outputs) {
+    const bytes = generated.generatedFiles.get(row.path);
+    assert(bytes && bytes.length === row.bytes && sha256(bytes) === row.sha256, 'Regenerated logo export changed: ' + row.path);
+    if (pack.files.has(row.path)) assert(pack.files.get(row.path).equals(bytes), 'Retained duplicate logo export differs: ' + row.path);
+    pack.files.set(row.path, bytes);
+  }
+  return {...pack, hydratedFiles: pack.files.size, hydratedBytes: [...pack.files.values()].reduce((sum, bytes) => sum + bytes.length, 0), logoRegeneration: {verified: true, files: recipe.outputs.length, sourceUnchanged: true}};
 }
 
 export function readPackBranding(pack) {

@@ -6,7 +6,7 @@ import path from 'node:path';
 import {createRequire} from 'node:module';
 import {ROOT, git, sha256, inside, args, writeJson} from './lib/workflow.mjs';
 import {isEntrypoint} from './lib/cli-entrypoint.mjs';
-import {loadDealerPack, PACK_KEYS, encodePackJson, safePackPath} from './lib/dealer-pack.mjs';
+import {PACK_KEYS, encodePackJson, safePackPath} from './lib/dealer-pack.mjs';
 import {readPinnedTemplateTree} from './dealer-updates/pinned-template-source.mjs';
 import {loadDealerProfile} from './lib/client-refresh-normalize.mjs';
 import {applyRefreshAdapter} from './lib/client-refresh-adapters.mjs';
@@ -16,7 +16,7 @@ import {collectSource, packageRetainsPath} from './package-dealer.mjs';
 import {regenerateDealerCatalogs} from './dealer-updates/update-dealer-template.mjs';
 import {applyLeadBranding, assertLeadBranding} from './publishing/lead-branding.mjs';
 import {bindPreparedShareLogo} from './prepare-existing-fleet-source.mjs';
-import {readPackBranding} from './prepare-dealer-pack-logo.mjs';
+import {readPackBranding, loadPreparedDealerPack} from './prepare-dealer-pack-logo.mjs';
 import {adoptNativeQualification} from './publishing/native-mounts.mjs';
 import {assertNativeQualification} from './lib/native-localization.mjs';
 import {baseNativeManifest, assertAppVariant} from './publishing/app-variant.mjs';
@@ -61,8 +61,8 @@ export function bindPackAppBrandingProvenance(files, provenance, branding) {
     logoPolicy: 'Reviewed dealer-pack raster proposal, bound without changing non-logo facts.'};
 }
 
-export async function assembleDealerPack({root = ROOT, slug, out, materialize = true, toolPackage = process.env.CARS_DEALER_PACK_TOOL_PACKAGE ?? path.join(root, 'runtime/dealer-pack-tools/package.json')} = {}) {
-  const started = Date.now(), pack = loadDealerPack(root, slug), manifest = structuredClone(pack.manifest);
+export async function assembleDealerPack({root = ROOT, slug, out, materialize = true, allowBenchmark = false, batch, toolPackage = process.env.CARS_DEALER_PACK_TOOL_PACKAGE ?? path.join(root, 'runtime/dealer-pack-tools/package.json')} = {}) {
+  const started = Date.now(), pack = await loadPreparedDealerPack(root, slug, {toolPackage, allowBenchmark, batch}), manifest = structuredClone(pack.manifest);
   fs.mkdirSync(path.join(root, 'runtime'), {recursive: true});
   const directory = inside(root, path.relative(root, path.resolve(out ?? path.join(root, 'runtime/dealer-packs', slug, 'assembly'))));
   assert(directory.startsWith(path.join(fs.realpathSync(root), 'runtime') + path.sep), 'Assemble only below the ignored runtime directory');

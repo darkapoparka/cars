@@ -78,6 +78,23 @@ test('transparent-padding crop preserves the input and records the exact crop an
   const meta = await sharp(mark.png).metadata(); assert.equal(meta.width, 512); assert.equal(meta.height, 512); assert.equal(meta.hasAlpha, true);
 });
 
+test('compact logo preparation retains only originals and recipe while regenerating byte-identical exports in memory', async t => {
+  const data = await fixture(t);
+  await data.prepare(); const expanded = filesUnder(data.directory), manifest = readJson(path.join(data.directory, 'dealer.json'));
+  const originalCount = data.sources.size;
+  const memory = await prepareDealerPackLogo({root: data.fixtureRoot, slug, toolPackage, persist: false});
+  for (const output of memory.recipe.outputs) assert.deepEqual(memory.generatedFiles.get(output.path), expanded.get(output.path), output.path);
+  assert.deepEqual(filesUnder(data.directory), expanded, 'memory preparation never writes source files');
+  for (const output of memory.recipe.outputs) fs.unlinkSync(path.join(data.directory, output.path));
+  manifest.pack = {schemaVersion: 2}; writeJson(path.join(data.directory, 'dealer.json'), manifest);
+  await data.prepare(); const compact = filesUnder(data.directory), recipe = readJson(path.join(data.directory, 'branding/logo-recipe.json'));
+  assert.equal(compact.size, originalCount + 4); assert.equal(recipe.toolchain.sharp, '0.35.5');
+  for (const output of recipe.outputs) assert.equal(compact.has(output.path), false);
+  const hydrated = await prepareDealerPackLogo({root: data.fixtureRoot, slug, toolPackage, persist: false, sourceFiles: compact});
+  assert.deepEqual(hydrated.recipe, recipe); for (const output of recipe.outputs) assert.deepEqual(hydrated.generatedFiles.get(output.path), expanded.get(output.path));
+  for (const [name, bytes] of data.sources) assert.deepEqual(compact.get(name), bytes);
+});
+
 test('prepared raster surfaces retain original provenance, deterministic hashes, share bindings and all ICO sizes', async t => {
   const data = await fixture(t), first = await data.prepare(), pack = data.pack(), contract = pack.branding;
   assert.equal(first.status, 'independent-proposal-not-dealer-approved'); assert.equal(first.markOnDarkReady, true);

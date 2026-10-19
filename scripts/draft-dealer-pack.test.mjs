@@ -21,7 +21,8 @@ const demoBindings=Buffer.from("export const leadSite={artwork:{inventoryDemo:{s
 const readGit=(_root,args)=>args[0]==='rev-parse'?source.tree:args[1].endsWith('/src/lib/data/inventory.ts')?demoCatalog:args[1].endsWith('/src/lib/config/lead-site.ts')?demoBindings:args[1].endsWith('/static/demo/car.png')?png:(()=>{throw Error('Unexpected read');})();
 
 function setup(t){
-  const root=area(t),review=Buffer.from('{"candidate":true}\n'),delta={reference:'docs/releases/pack-review.json',sha256:sha256(review),reviewedAt:now};
+  const root=area(t),review=Buffer.from(JSON.stringify({schemaVersion:1,kind:'cars-dealer-pack-source-delta-review',reviewed:true,reviewedAt:now,sourceCommit:source.revision,
+    nativeApproval:false,hostedApproval:false,globalReleaseApproval:false,changes:PACK_KEYS.map(key=>({key,selected:{...source,path:'templates/'+key}}))})+'\n'),delta={reference:'docs/releases/pack-review.json',sha256:sha256(review),reviewedAt:now};
   const lock={schemaVersion:1,exportPolicy:'cars-source-v1',templates:Object.fromEntries(PACK_KEYS.map(key=>[key,{commit:source.revision,source:{...source,path:'templates/'+key},qualification:{contextId:'pack-test-context',sourceDeltaReview:delta}}]))};
   put(root,delta.reference,review);put(root,'dealers/templates.lock.json',lock);put(root,'templates.lock.json',{schemaVersion:1,exportPolicy:'cars-source-v1',templates:{}});put(root,'docs/DEPLOYMENT-INVENTORY.json',{dealers:[]});
   const row=lead(),options={root,leadId:row.id,slug:'honest-motors',now,readLead:()=>({lead:row,document:{},source:{path:'leads/expansion-2026-10-18/uk.json',sha256:'e'.repeat(64)}}),readDemo:value=>retainedDemoStock({...value,readGit})};
@@ -79,9 +80,10 @@ test('a new draft reuses maintained files and demo disclosure without claiming l
   const files=filesAt(result.directory,{filter:()=>true});for(const name of ['dealer.json','business-facts.json','stock.json','FACTS-AND-INVENTORY.json','locale.json','qualification.json','branding/source.json'])assert(files.includes(name));assert(!files.some(name=>PACK_KEYS.some(key=>name.startsWith(key+'/'))));
   const facts=JSON.parse(fs.readFileSync(path.join(result.directory,'business-facts.json')));assert.equal(facts.business.inventoryNotice,DEMO_STOCK_DISCLOSURE);assert.equal(facts.business.phone,'');
   const missing=JSON.parse(fs.readFileSync(path.join(result.directory,'missing-facts.json')));assert.deepEqual(missing.blocking,[]);assert(missing.missing.some(row=>row.field==='business.phone'&&!row.required));
-  const qualification=JSON.parse(fs.readFileSync(path.join(result.directory,'qualification.json')));assert.equal(qualification.nativeApproval,false);assert.equal(qualification.hostedApproval,false);assert.equal(qualification.globalReleaseApproval,false);
+  const qualification=JSON.parse(fs.readFileSync(path.join(result.directory,'qualification.json')));assert.equal(qualification.nativeApproval,false);assert.equal(qualification.hostedApproval,false);assert.equal(qualification.globalReleaseApproval,false);assert.equal(qualification.reviewed,false);assert.equal(qualification.review.kind,'pending');
   const stockBytes=fs.readFileSync(path.join(result.directory,'stock.json')),copy=JSON.parse(fs.readFileSync(path.join(result.directory,'copy-review.json')));
-  validateNewSourceCopyReview(copy,{slug:'honest-motors',inputs:{stock:{sha256:sha256(stockBytes)}}},JSON.parse(stockBytes));assert.match(copy.descriptions[0].bg,/демонстрационни/);
+  assert.equal(copy.reviewed,false);assert.throws(()=>validateNewSourceCopyReview(copy,{slug:'honest-motors',inputs:{stock:{sha256:sha256(stockBytes)}}},JSON.parse(stockBytes)),/Reviewed copy/);assert.match(copy.descriptions[0].bg,/демонстрационни/);
+  assert.equal(JSON.parse(fs.readFileSync(path.join(result.directory,'identity-review.json'))).reviewed,false);
   for(const name of files.filter(name=>name.endsWith('.json')))assert.doesNotMatch(fs.readFileSync(path.join(result.directory,name),'utf8'),/PRIVATE|12345|fit_score|contactHistory/);
 });
 
@@ -103,7 +105,7 @@ test('an unpublished street address and telephone remain optional empty facts in
   assert.equal(facts.business.address,'');assert.equal(facts.business.city,f.row.city);assert.equal(facts.business.phone,'');
   assert.deepEqual(missing.blocking,[]);
   for(const field of ['business.address','business.phone'])assert(missing.missing.some(row=>row.field===field&&row.required===false));
-  assert.deepEqual(result.blocking,['branding.reviewed-assets']);
+  assert.deepEqual(result.blocking,['branding.reviewed-assets','automated-input-review']);
 });
 
 test('draft CLI accepts exact inputs and rejects repeats and unsupported automatic fetch claims',()=>{

@@ -6,6 +6,8 @@ import {ROOT,git,inside,json,sha256} from './lib/workflow.mjs';
 import {isEntrypoint} from './lib/cli-entrypoint.mjs';
 import {PACK_KEYS,PACK_COUNTRIES,PACK_LOCK,validPackSlug,safePackPath,createPackManifest,encodePackJson,listDealerPacks,assertPublicPackFacts} from './lib/dealer-pack.mjs';
 import {demoCatalogRecords} from './registered-dealer-adoption.mjs';
+import {canonicalPackSlug, assertPackBatch, PACK_BATCH_FILE, expectedPackHosting} from './lib/dealer-pack-identity.mjs';
+import {createStablePackQualification} from './lib/dealer-pack-release.mjs';
 
 const assert=(ok,message)=>{if(!ok)throw Error(message);};
 const EXPANSION='leads/expansion-2026-10-18';
@@ -120,29 +122,27 @@ export function retainedDemoStock({root,slug,country,lock,observedAt,readGit=git
 }
 
 /** These fixed disclosures are authored UI text, never a translation of unreviewed advert prose. */
-export function draftInventoryCopy(stock,{slug,reviewedAt}={}){
+export function draftInventoryCopy(stock,{slug}={}){
   const en=stock.disclosure;
   const bg=stock.kind==='illustrative-not-dealer-stock'
     ?'Илюстративни демонстрационни автомобили от запазения шаблон Cars; те не са наличности на тази автокъща. Наличността не е проверена. Цените са пропуснати в този преглед.'
     :'Примери от публични обяви, наблюдавани на '+stock.observedAt.slice(0,10)+'. Наличността не е потвърдена. Цените са пропуснати в този преглед.';
   for(const row of stock.records)row.description=en;
-  return {schemaVersion:1,kind:'cars-new-source-reviewed-companion-copy',dealer:slug,reviewed:true,reviewedAt,stockSha256:sha256(encodePackJson(stock)),
+  return {schemaVersion:1,kind:'cars-new-source-reviewed-companion-copy',dealer:slug,reviewed:false,reviewedAt:null,stockSha256:sha256(encodePackJson(stock)),
     descriptions:stock.records.map(row=>({sourceId:row.id,sourceDescription:en,en,bg}))};
 }
 
 export function draftPackQualification(root,slug,lock){
   const release=lock.templates?.['auto-best'],value=release?.qualification;
   assert(value?.contextId&&value.sourceDeltaReview&&PACK_KEYS.every(key=>lock.templates[key]?.qualification?.contextId===value.contextId),'Qualify the shared candidate template lock before drafting packs');
-  const delta=value.sourceDeltaReview;
-  assert(safePackPath(delta.reference)&&sha256(fs.readFileSync(inside(root,delta.reference,{mustExist:true})))===delta.sha256,'Candidate source review changed');
-  return {schemaVersion:1,kind:'cars-native-source-qualification-context',id:value.contextId,scope:'new-dealer-source-proposal',reviewed:true,reviewedAt:delta.reviewedAt,sourceCommit:release.commit,
-    nativeApproval:false,hostedApproval:false,globalReleaseApproval:false,approvedLockSha256:sha256(fs.readFileSync(path.join(root,'templates.lock.json'))),candidateLockSha256:sha256(fs.readFileSync(path.join(root,PACK_LOCK))),sourceDeltaReview:delta,dealer:slug};
+  return createStablePackQualification(root,slug,lock);
 }
 
-export function draftDealerPack({root=ROOT,leadId,slug,stockFile,mediaRoot,observedAt,now=new Date().toISOString(),readLead=readExpansionLead,readDemo=retainedDemoStock}={}){
+export function draftDealerPack({root=ROOT,leadId,slug,batch,stockFile,mediaRoot,observedAt,now=new Date().toISOString(),readLead=readExpansionLead,readDemo=retainedDemoStock}={}){
   const {lead,document,source}=readLead(root,leadId);
   slug??=text(lead.name).normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
-  assert(validPackSlug(slug)&&dated(now),'Choose --slug of at most 43 characters and a real execution date');
+  const requestedSlug=slug;slug=canonicalPackSlug(slug,lead.id);
+  assert(validPackSlug(slug)&&dated(now),'Choose a DNS-safe slug and a real execution date');
   const directory=inside(root,'dealers/'+slug),registryFile=path.join(root,'docs/DEPLOYMENT-INVENTORY.json');
   const fleet=fs.existsSync(registryFile)?json(registryFile).dealers??[]:[],packs=listDealerPacks(root);
   assert(!fs.existsSync(directory)&&![...fleet,...packs].some(row=>normalize(row.slug)===normalize(slug)||[row.id,row.dealerId,row.researchId].includes(lead.id)||row.name&&normalize(row.name)===normalize(lead.name)),'Dealer identity or draft directory already exists; existing packs and clients are preserved');
@@ -150,18 +150,21 @@ export function draftDealerPack({root=ROOT,leadId,slug,stockFile,mediaRoot,obser
   const inventory=stockFile?importPublicStock(json(stockFile),{slug,country:lead.country,mediaRoot}):readDemo({root,slug,country:lead.country,lock,observedAt:now});
   facts.business.inventoryNotice=inventory.stock.disclosure;
   const copyReview=draftInventoryCopy(inventory.stock,{slug,reviewedAt:now});
-  assertPublicPackFacts(facts,inventory.stock);
+  const contactScreen=assertPublicPackFacts(facts,inventory.stock,{allowContactFlags:true});
   const manifest=createPackManifest({slug,dealerId:lead.id,country:lead.country,lock,observedAt:facts.business.observedAt});
-  manifest.shareIdentity={name:facts.business.name,publicOrigin:'https://'+slug+'.webpreviews.site',description:PREVIEW_NOTICE};
+  manifest.shareIdentity={name:facts.business.name,publicOrigin:expectedPackHosting(slug).publicOrigin,description:PREVIEW_NOTICE};
+  manifest.pack.schemaVersion=2;manifest.pack.identity={requestedSlug,canonicalSlug:slug,dealerId:lead.id};
+  if(fs.existsSync(path.join(root,PACK_BATCH_FILE)))manifest.pack.batch=assertPackBatch(root,manifest,{batch});
+  else assert(batch===undefined,'Explicit batch checks require the committed assignment file');
   const missing=['name','city','address','sourceUrl','observedAt','phone','email','website','hours'].filter(key=>!facts.business[key]).map(key=>({field:'business.'+key,required:['name','city','sourceUrl','observedAt'].includes(key),reason:'No usable sourced value in the retained public business record.'}));
   missing.push({field:'prices',required:false,reason:'All listing prices are omitted under the public-repository scope.'});
   const blocking=missing.filter(row=>row.required).map(row=>row.field);
-  const identity={schemaVersion:1,kind:'cars-new-dealer-identity-review',reviewed:true,reviewedAt:now,dealer:slug,dealerId:lead.id,repository:'darkapoparka/cars',existingIdentityFound:false,sourceOwnership:'cars-canonical',
-    method:'Exact retained registry and compact-pack identity comparison; no dealer approval is implied.',sources:facts.sources.map(({url,observedAt})=>({url,observedAt}))};
+  const identity={schemaVersion:1,kind:'cars-new-dealer-identity-review',reviewed:false,reviewedAt:null,dealer:slug,dealerId:lead.id,repository:'darkapoparka/cars',existingIdentityFound:false,sourceOwnership:'cars-canonical',
+    review:{kind:'pending',humanReview:false,dealerApproval:false},method:'Draft identity only; run automated pack input review before building.',sources:facts.sources.map(({url,observedAt})=>({url,observedAt}))};
   const report={schemaVersion:1,type:'cars-dealer-pack-draft',slug,dealerId:lead.id,status:'draft',buildReady:false,providerWrites:0,createdAt:now,
-    inventoryKind:inventory.stock.kind,inventoryRecords:inventory.stock.records.length,logoReady:false,missingFacts:missing,blocking:[...blocking,'branding.reviewed-assets'],
+    inventoryKind:inventory.stock.kind,inventoryRecords:inventory.stock.records.length,logoReady:false,missingFacts:missing,contactScreen,blocking:[...blocking,...contactScreen.blocking,'branding.reviewed-assets','automated-input-review'],
     stockAcquisition:stockFile?'explicit-retained-public-snapshot':'maintained-disclosed-demo',liveListingFetchPerformed:false,
-    next:'Retain public listing snapshots with --stock/--media-root when available; review the real logo first, generate a proposal only when needed, and run logo preparation before building.'};
+    next:'Retain public listing snapshots with --stock/--media-root when available; review source artwork, prepare the logo, then run dealer-pack review. Automated input review does not imply human, dealer or hosted approval.'};
   const files=new Map([
     ['dealer.json',manifest],['business-facts.json',facts],['stock.json',inventory.stock],['copy-review.json',copyReview],['locale.json',manifest.localization],['identity-review.json',identity],['qualification.json',draftPackQualification(root,slug,lock)],
     ['FACTS-AND-INVENTORY.json',{schemaVersion:1,dealer:slug,businessFacts:'business-facts.json',stock:'stock.json',inventoryKind:inventory.stock.kind,inventoryNotice:inventory.stock.disclosure,previewNotice:PREVIEW_NOTICE,sources:facts.sources}],
@@ -177,9 +180,9 @@ export function draftDealerPack({root=ROOT,leadId,slug,stockFile,mediaRoot,obser
 }
 
 export function parseDraftArgs(argv){
-  const result={},names={'--lead':'leadId','--slug':'slug','--stock':'stockFile','--media-root':'mediaRoot','--observed-at':'observedAt'};
+  const result={},names={'--lead':'leadId','--slug':'slug','--batch':'batch','--stock':'stockFile','--media-root':'mediaRoot','--observed-at':'observedAt'};
   for(let i=0;i<argv.length;i++){const key=argv[i];assert(names[key]&&!Object.hasOwn(result,names[key])&&argv[i+1]&&!argv[i+1].startsWith('--'),'Unknown, repeated or incomplete draft option: '+key);result[names[key]]=argv[++i];}
-  assert(result.leadId&&(!result.mediaRoot||result.stockFile)&&(!result.observedAt||dated(result.observedAt)),'Use --lead EXPANSION_ID [--slug SLUG] [--stock STOCK_JSON --media-root DIRECTORY]');return result;
+  assert(result.leadId&&(!result.batch||/^[1-4]$/.test(result.batch))&&(!result.mediaRoot||result.stockFile)&&(!result.observedAt||dated(result.observedAt)),'Use --lead EXPANSION_ID [--slug SLUG] [--batch 1|2|3|4] [--stock STOCK_JSON --media-root DIRECTORY]');return result;
 }
 
 if(isEntrypoint(import.meta.url))try{

@@ -5,6 +5,9 @@ import {normalizeDealerLocale} from './dealer-locale.mjs';
 import {validateNewDealerFacts} from '../prepare-new-dealer-source.mjs';
 import {validateNativeQualificationContext, validateTemplateQualification} from './native-localization.mjs';
 import {listDealerPacks} from './dealer-pack-index.mjs';
+import {assertPackHostingIdentity, assertPackBatch, PACK_BATCH_FILE} from './dealer-pack-identity.mjs';
+import {getPackReleaseBinding, resolveStablePackQualification} from './dealer-pack-release.mjs';
+import {inspectPackContacts} from './dealer-pack-contact-review.mjs';
 
 export {listDealerPacks};
 export const PACK_KEYS = Object.freeze(['auto-best', 'modern', 'import', 'app', 'mobile', 'karento-best']);
@@ -35,7 +38,7 @@ export function readPackFiles(directory) {
   visit(directory); return files;
 }
 
-export function assertPublicPackFacts(facts, stock) {
+export function assertPublicPackFacts(facts, stock, {contactReview, allowContactFlags = false} = {}) {
   const inspect = (value, at = '') => {
     if (Array.isArray(value)) {value.forEach((row, i) => inspect(row, at + '[' + i + ']')); return;}
     if (!value || typeof value !== 'object') return;
@@ -47,6 +50,9 @@ export function assertPublicPackFacts(facts, stock) {
   };
   inspect(facts); inspect(stock);
   assert(stock.records.every(row => row.priceOnRequest === true), 'Every preview listing must omit its price');
+  const contacts = inspectPackContacts(facts, {contactReview});
+  assert(allowContactFlags || contacts.blocking.length === 0, 'Potential personal contact needs dated public-business evidence or omission: ' + contacts.blocking.join(', '));
+  return contacts;
 }
 
 export function createPackManifest({slug, dealerId, country, lock, logo, observedAt}) {
@@ -64,11 +70,17 @@ export function createPackManifest({slug, dealerId, country, lock, logo, observe
     pack: {schemaVersion: 1, source: 'leads/expansion-2026-10-18', observedAt, proposal: true, dealerApproved: false, providerWrites: false}};
 }
 
-export function loadDealerPack(root = ROOT, slug, {requireBranding = true} = {}) {
+export function reviewedPackInputRows(files) {
+  return [...files].filter(([name]) => !['input-review.json', 'draft-report.json', 'migration-report.json'].includes(name) && !name.startsWith('receipts/'))
+    .sort(([a], [b]) => a < b ? -1 : a > b ? 1 : 0).map(([name, data]) => ({path: name, sha256: sha256(data)}));
+}
+
+export function loadDealerPack(root = ROOT, slug, {requireBranding = true, allowUnreviewed = false, allowBenchmark = false, registryOverride, batch} = {}) {
   assert(validPackSlug(slug), 'Use a lowercase dealer-pack slug of at most 43 characters');
   const directory = inside(root, 'dealers/' + slug, {mustExist: true}), files = readPackFiles(directory);
   const read = name => {assert(files.has(name), 'Missing dealer pack input: ' + name); return JSON.parse(files.get(name).toString('utf8'));};
   const manifest = validateManifest(read('dealer.json'), {allowDealerPackSource: true});
+  assert(manifest.pack?.benchmarkOnly !== true || allowBenchmark, 'Benchmark-only dealer packs cannot enter ordinary builds or deployment');
   assert(manifest.slug === slug && manifest.sourceFormat === 'dealer-pack' && manifest.sourcePath === 'dealers/' + slug && manifest.templateLock === PACK_LOCK, 'Pack must identify its exact Cars source path and lock');
   const facts = read('business-facts.json'), stock = read('stock.json'), locale = normalizeDealerLocale(read('locale.json'), manifest.dealerId);
   assert(JSON.stringify(locale) === JSON.stringify(manifest.localization), 'Locale file and manifest differ');
@@ -77,32 +89,47 @@ export function loadDealerPack(root = ROOT, slug, {requireBranding = true} = {})
     assert(name.startsWith('/dealer-stock/') && safePackPath(name.slice(1)) && files.has(name.slice(1)), 'Stock must use a retained pack image: ' + name);
     return {destination: name.slice(1)};
   });
-  assertPublicPackFacts(facts, stock);
-  validateNewDealerFacts({dealer: {...manifest, media}, facts, stock, locale, identityReview, factPolicy: 'dealer-pack-optional-v1'});
+  const contacts = assertPublicPackFacts(facts, stock, {contactReview: files.has('contact-review.json') ? read('contact-review.json') : undefined});
+  const checkedIdentity = allowUnreviewed ? {...identityReview, reviewed: true, reviewedAt: identityReview.reviewedAt ?? facts.business.observedAt} : identityReview;
+  validateNewDealerFacts({dealer: {...manifest, media}, facts, stock, locale, identityReview: checkedIdentity, factPolicy: 'dealer-pack-optional-v1'});
   const registryPath = path.join(root, 'docs/DEPLOYMENT-INVENTORY.json');
-  const normalized = value => String(value).toLowerCase().replace(/[^a-z0-9]/g, '');
-  const fleet = fs.existsSync(registryPath) ? json(registryPath).dealers ?? [] : [];
-  assert(!fleet.some(row => normalized(row.slug) === normalized(slug) || [row.id, row.dealerId, row.researchId].includes(manifest.dealerId)), 'Dealer pack duplicates an existing fleet identity');
-  assert(!listDealerPacks(root).some(row => row.slug !== slug && (row.dealerId === manifest.dealerId || normalized(row.slug) === normalized(slug))), 'Dealer pack duplicates another pack');
-  const lockBytes = fs.readFileSync(path.join(root, PACK_LOCK)), lock = JSON.parse(lockBytes);
+  assert(registryOverride === undefined || Array.isArray(registryOverride), 'A guarded registry override must be an explicit row array');
+  const fleet = registryOverride ?? (fs.existsSync(registryPath) ? json(registryPath).dealers ?? [] : []);
+  const benchmark = manifest.pack?.benchmarkOnly === true && allowBenchmark;
+  assertPackHostingIdentity(manifest, {registry: benchmark ? fleet.filter(row => ![row.id, row.dealerId, row.researchId].includes(manifest.dealerId)) : fleet,
+    packs: listDealerPacks(root).filter(row => benchmark ? row.dealerId !== manifest.dealerId : row.benchmarkOnly !== true)});
+  const batchBinding = fs.existsSync(path.join(root, PACK_BATCH_FILE)) ? assertPackBatch(root, manifest, {batch}) : null;
+  assert(batch === undefined || batchBinding, 'Explicit batch checks require the committed assignment file');
+  const lockBytes = fs.readFileSync(path.join(root, PACK_LOCK)); let lock = JSON.parse(lockBytes);
   assert(lock.schemaVersion === 1 && lock.exportPolicy === POLICY, 'Invalid pack template lock');
-  const qualification = read('qualification.json');
+  const storedQualification = read('qualification.json'); let qualification = storedQualification;
+  const release = getPackReleaseBinding(lock);
+  if (storedQualification.schemaVersion === 2) ({lock, qualification} = resolveStablePackQualification(root, slug, storedQualification, lock, {allowUnreviewed}));
   validateNativeQualificationContext(qualification, {dealer: slug});
-  assert(qualification.candidateLockSha256 === sha256(lockBytes) && qualification.approvedLockSha256 === sha256(fs.readFileSync(path.join(root, 'templates.lock.json'))), 'Candidate or approved parent lock changed');
-  assert(sha256(fs.readFileSync(inside(root, qualification.sourceDeltaReview.reference, {mustExist: true}))) === qualification.sourceDeltaReview.sha256, 'Source delta review changed');
+  if (storedQualification.schemaVersion !== 2) {
+    assert(qualification.candidateLockSha256 === sha256(lockBytes) && qualification.approvedLockSha256 === sha256(fs.readFileSync(path.join(root, 'templates.lock.json'))), 'Candidate or approved parent lock changed; run the mechanical dealer-pack migration');
+    assert(sha256(fs.readFileSync(inside(root, qualification.sourceDeltaReview.reference, {mustExist: true}))) === qualification.sourceDeltaReview.sha256, 'Source delta review changed; run the mechanical dealer-pack migration');
+  }
   for (const key of PACK_KEYS) {
     validateTemplateQualification(key, lock.templates[key], qualification, {root});
     assert(JSON.stringify(manifest.templateSources[key]) === JSON.stringify(lock.templates[key].source) && manifest.templateRevisions[key] === lock.templates[key].commit, 'Pack source release differs: ' + key);
   }
   const branding = files.has('branding/logo-contract.json') ? read('branding/logo-contract.json') : null;
+  const logoRecipe = files.has('branding/logo-recipe.json') ? read('branding/logo-recipe.json') : null;
+  const hasAsset = (name, hash) => files.has(name) ? (!hash || sha256(files.get(name)) === hash) : manifest.pack?.schemaVersion === 2 && logoRecipe?.outputs?.some(row => row.path === name && (!hash || row.sha256 === hash));
   if (requireBranding) {
     assert(branding?.schemaVersion === 1 && branding.dealer === slug && branding.reviewed === true, 'Prepare and review the dealer logo before building');
     for (const role of ['onLight', 'onDark', 'onAccent']) {
       const asset = branding.assets?.[role];
-      assert(asset && /^\/dealer-brand\/[^/]+\.webp$/.test(asset.publicPath) && files.has(asset.publicPath.slice(1)) && sha256(files.get(asset.publicPath.slice(1))) === asset.sha256 && files.has(asset.sourcePath), 'Missing or changed logo surface: ' + role);
+      assert(asset && /^\/dealer-brand\/[^/]+\.webp$/.test(asset.publicPath) && hasAsset(asset.publicPath.slice(1), asset.sha256) && hasAsset(asset.sourcePath, asset.sourceSha256), 'Missing or changed logo surface: ' + role);
     }
   }
+  if (manifest.pack?.schemaVersion === 2 && !allowUnreviewed) {
+    const review = read('input-review.json');
+    assert(review.reviewed === true && review.review?.kind === 'automated' && review.review.humanReview === false && review.dealer === slug &&
+      JSON.stringify(review.inputs) === JSON.stringify(reviewedPackInputRows(files)), 'Automated input review is missing or stale; run dealer-pack review');
+  }
   const rows = [...files].sort(([a], [b]) => a < b ? -1 : a > b ? 1 : 0).map(([name, data]) => ({path: name, sha256: sha256(data)}));
-  return {directory, manifest, facts, stock, locale, branding, files, lock, qualification, media,
+  return {directory, manifest, facts, stock, locale, branding, logoRecipe, files, lock, qualification, storedQualification, release, batch: batchBinding, contacts, media,
     packDigest: sha256(JSON.stringify(rows)), fileCount: files.size, bytes: [...files.values()].reduce((sum, data) => sum + data.length, 0)};
 }

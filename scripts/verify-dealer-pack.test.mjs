@@ -12,6 +12,7 @@ import {canonicalPackJson,createDealerPackComposition,dealerPackCompositionDiges
 import {artifactInventory} from './lib/uk-cloudflare-artifacts.mjs';
 import {assessBundleLimits,inspectDealerPackBundle,loadFleetIdentities,findForeignIdentity,assessPageSnapshot,dealerPackIdentityRequirements,assessDealerPackDesignIdentity,completeDealerPackWelcome,prepareDealerPackScreenshot,readDealerPackDom,observeDealerPackImages,inspectLogoPixels,readFaviconPngs,verifyPackLogoAssets,stockIsDemo,verifyDealerPack,parseDealerPackVerificationArgs} from './verify-dealer-pack.mjs';
 import {inspectDealerPackBatch,readDealerPackBatch,parseDeploymentArgs} from './deploy-dealer-single-worker.mjs';
+import {dealerPackFabPolicy,fleetDesignFabHashes} from './lib/dealer-pack-switcher-logo.mjs';
 
 const area=t=>{const root=fs.mkdtempSync(path.join(os.tmpdir(),'cars-pack-qa-'));t.after(()=>fs.rmSync(root,{recursive:true,force:true}));return root;};
 const put=(root,name,content)=>{const file=path.join(root,name);fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,typeof content==='string'||Buffer.isBuffer(content)?content:JSON.stringify(content,null,2)+'\n');};
@@ -118,6 +119,28 @@ test('public lead metadata supplements only a unique fleet identity and never pr
  const root=area(t);put(root,'leads/public.json',{leads:[{id:'gb-foreign',name:'Foreign Motors',publicBusinessContact:{phone:'+441111111111',contactName:'PRIVATE PERSON'},contactCandidates:{phone:'+442222222222'},notes:'PRIVATE'},{id:'gb-unknown',name:'Someone Else',publicBusinessContact:{phone:'+443333333333'}}]});
  const fleet=loadFleetIdentities(root,{dealers:[{id:'gb-foreign',slug:'foreign-motors',name:'Foreign Motors'},{slug:'missing',name:'Missing Motors'}]},{readGit:false});
  assert.equal(fleet.coverage.withName,2);assert.equal(fleet.coverage.withPhone,1);assert.equal(fleet.coverage.withBusinessFacts,0);assert.equal(fleet.coverage.withPublicIdentityEvidence,1);assert.deepEqual(fleet.records[0].phones,['+441111111111']);assert.doesNotMatch(JSON.stringify(fleet.records),/PRIVATE|2222222222|3333333333/);
+});
+
+test('unregistered packs participate in fleet leak checks and a malformed neighbor is reported independently',t=>{
+ const root=area(t);
+ put(root,'dealers/new-motors/business-facts.json',{business:{name:'New Motors',phone:'+441212223333'}});
+ put(root,'dealers/broken-motors/business-facts.json','<<<<<<< merge conflict');
+ const fleet=loadFleetIdentities(root,{dealers:[]},{readGit:false});
+ assert.equal(fleet.coverage.registryDealers,0);assert.equal(fleet.coverage.packDealers,1);
+ assert.equal(fleet.coverage.packFactsDiagnostics.length,1);
+ const hits=findForeignIdentity({text:'New Motors. Call 0121 222 3333.',ownSlug:'honest-motors',ownFacts:facts,fleet});
+ assert.deepEqual(hits.map(row=>row.type),['name','phone']);
+});
+
+test('v2 requires the exact active design mark used by the live fleet',()=>{
+ const current={...manifest,sourceFormat:'dealer-pack',pack:{schemaVersion:2}},value=snapshot();
+ assert.equal(dealerPackFabPolicy(current),'fleet-design-mark-v1');
+ const hashes=fleetDesignFabHashes();assert.equal(Object.keys(hashes).length,6);
+ value.fabMarks[0].dealerFabLogo=false;value.fabMarks[0].sha256=hashes[variants[0].key];
+ const inspect=()=>assessPageSnapshot({snapshot:value,facts,manifest:current,variant:variants[0],fleet:emptyFleet});
+ assert.equal(inspect().status,'passed');
+ value.fabMarks[0].sha256=hashes[variants[1].key];assert(inspect().findings.includes('fleet-design-fab-logo'));
+ value.fabMarks[0].sha256=hashes[variants[0].key];value.fabMarks[0].visible=false;assert(inspect().findings.includes('fleet-design-fab-logo'));
 });
 
 test('foreign dealer names and formatted plain-text or tel phones are caught, while the real dealer is allowed',()=>{

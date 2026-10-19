@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "kind": "cars-new-dealer-identity-review",
   "reviewed": true,
-  "reviewedAt": "2026-10-19T12:23:55Z",
+  "reviewedAt": "2026-10-19T19:01:31.276Z",
   "dealer": "granada-auto-sales",
   "dealerId": "us-ky-louisville-granada-auto-sales",
   "repository": "darkapoparka/cars",
@@ -17,5 +17,11 @@
       "url": "https://inventory.granadaautosales.com/",
       "observedAt": "2026-10-19T12:02:44Z"
     }
-  ]
+  ],
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "method": "Automated exact registry/pack identity, canonical hosting and batch comparison; retained public source fields were structurally checked, not human-approved."
 }
