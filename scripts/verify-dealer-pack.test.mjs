@@ -274,13 +274,13 @@ test('the real DOM observer distinguishes the active shadow FAB from hidden temp
 
 function scrollingFixture({height=2600,pending=false,broken=false}={}) {
  const state={top:0,height,viewport:900},calls=[],images=[];
- const image=(src,y,complete,naturalWidth)=>({src,currentSrc:src,complete,naturalWidth,getBoundingClientRect:()=>({top:y-state.top,bottom:y-state.top+160,width:200,height:160}),y});
+ const image=(src,y,complete,naturalWidth,{x=20,parentElement=null,style={}}={})=>{const row={src,currentSrc:src,complete,naturalWidth,y,x,parentElement,style,getBoundingClientRect:()=>({left:row.x,right:row.x+200,top:row.y-state.top,bottom:row.y-state.top+160,width:200,height:160})};return row;};
  images.push(image('/first.png',50,true,200),image('/lazy-stock.png',1700,false,0),image('/unrequested.png',height+2000,false,0));
- const document={fonts:{status:'loaded'},images,documentElement:{scrollHeight:height},body:{scrollHeight:height}},context={document,innerHeight:state.viewport,innerWidth:390,getComputedStyle:()=>({display:'block',visibility:'visible'}),requestAnimationFrame:callback=>callback()};
+ const document={fonts:{status:'loaded'},images,documentElement:{scrollHeight:height},body:{scrollHeight:height}},context={document,innerHeight:state.viewport,innerWidth:390,getComputedStyle:node=>({display:'block',visibility:'visible',opacity:'1',overflowX:'visible',overflowY:'visible',...node.style}),requestAnimationFrame:callback=>callback()};
  Object.defineProperty(context,'scrollY',{get:()=>state.top});const runtime=vm.createContext(context);
  const run=(fn,arg)=>{context.__arg=arg;return vm.runInContext('('+fn.toString()+')(__arg)',runtime);};
  const page={evaluate:async(fn,arg)=>run(fn,arg),waitForFunction:async(fn,arg)=>{if(!await run(fn,arg))throw Error('Bounded wait timed out');},mouse:{move:async(x,y)=>{assert.equal(x,195);assert.equal(y,450);calls.push('move');},wheel:async(_x,delta)=>{calls.push(delta);state.top=Math.max(0,Math.min(height-state.viewport,state.top+delta));for(const row of images)if(row.y>=state.top&&row.y<state.top+state.viewport&&row.src==='/lazy-stock.png'&&!pending){row.complete=true;row.naturalWidth=broken?0:200;}}}};
- return {page,state,calls,images};
+ return {page,state,calls,images,image};
 }
 
 test('visitor screenshot preparation loads encountered lazy images, leaves unrequested images alone and returns to the top',async()=>{
@@ -290,6 +290,20 @@ test('visitor screenshot preparation loads encountered lazy images, leaves unreq
  const broken=await prepareDealerPackScreenshot(scrollingFixture({broken:true}).page);assert.deepEqual(Array.from(broken.failedImages),['/lazy-stock.png']);assert.deepEqual(Array.from(broken.pendingImages),[]);
  await assert.rejects(prepareDealerPackScreenshot(scrollingFixture({height:9000}).page,{maxSteps:2}),/bounded visitor scroll/);
  await assert.rejects(prepareDealerPackScreenshot(scrollingFixture().page,{maxSteps:1000}),/Invalid screenshot preparation bound/);
+});
+
+test('screenshot visitation excludes horizontal and ancestor-clipped carousel images until they enter the visible rail',async()=>{
+ const f=scrollingFixture(),rail={style:{overflowX:'auto',overflowY:'hidden'},getBoundingClientRect:()=>({left:20,right:200,top:40-f.state.top,bottom:230-f.state.top,width:180,height:190})};
+ const outside=f.image('/horizontal-offscreen.png',50,false,0,{x:500}),clipped=f.image('/clipped-carousel.png',50,false,0,{x:220,parentElement:rail});
+ const hidden=f.image('/hidden-slide.png',50,false,0,{parentElement:{style:{opacity:'0'}}}),partial=f.image('/partially-visible.png',50,true,200,{x:180,parentElement:rail});
+ f.images.push(outside,clipped,hidden,partial);
+ const first=await prepareDealerPackScreenshot(f.page);assert.equal(first.status,'passed');assert.equal(first.imageWaitTimeouts,0);assert.equal(first.encounteredImages,3);assert.equal(first.loadedImages,3);
+ assert.equal(outside.complete,false);assert.equal(clipped.complete,false);assert.equal(hidden.complete,false);
+ // Actual element geometry changes represent horizontal visitor movement: the
+ // same previously unrequested nodes must now enter the bounded completion gate.
+ outside.x=30;clipped.x=40;
+ const encountered=await prepareDealerPackScreenshot(f.page);assert.equal(encountered.status,'failed');assert(encountered.imageWaitTimeouts>0);
+ assert.deepEqual(Array.from(encountered.pendingImages).sort(),['/clipped-carousel.png','/horizontal-offscreen.png']);
 });
 
 test('placeholder text and undisclosed demo listings are failures; honest demo disclosure passes',()=>{

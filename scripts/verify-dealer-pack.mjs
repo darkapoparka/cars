@@ -393,6 +393,26 @@ export async function completeDealerPackWelcome(page,variant) {
   return {status:'passed',documentLocale,locale,actions,localeChanged:false};
 }
 
+/** Screenshot visitation is bounded by the viewport and every ancestor scroll clip. */
+export function readDealerPackViewportImages(requireComplete=false) {
+  const images=[...document.images].filter(image=>{
+    const r=image.getBoundingClientRect(),clip={left:Math.max(0,r.left),right:Math.min(innerWidth,r.right),top:Math.max(0,r.top),bottom:Math.min(innerHeight,r.bottom)};
+    if(r.width<=0||r.height<=0||clip.right<=clip.left||clip.bottom<=clip.top)return false;
+    for(let node=image;node;node=node.parentElement??node.getRootNode?.().host){
+      const style=getComputedStyle(node);if(style.display==='none'||style.visibility==='hidden'||style.opacity==='0')return false;
+      if(node===image)continue;
+      const clipX=/^(?:hidden|clip|auto|scroll)$/.test(style.overflowX),clipY=/^(?:hidden|clip|auto|scroll)$/.test(style.overflowY);
+      if(!clipX&&!clipY)continue;
+      const bounds=node.getBoundingClientRect();
+      if(clipX){clip.left=Math.max(clip.left,bounds.left);clip.right=Math.min(clip.right,bounds.right);}
+      if(clipY){clip.top=Math.max(clip.top,bounds.top);clip.bottom=Math.min(clip.bottom,bounds.bottom);}
+      if(clip.right<=clip.left||clip.bottom<=clip.top)return false;
+    }
+    return true;
+  }).map(image=>({src:image.currentSrc||image.src,complete:image.complete,loaded:image.complete&&image.naturalWidth>0})).filter(image=>image.src);
+  return requireComplete?images.every(image=>image.complete):images;
+}
+
 /** Trigger native lazy loading with bounded visitor scrolling before a full-page capture. */
 export async function prepareDealerPackScreenshot(page,{maxSteps=80,imageWaitMs=2500}={}) {
   assert(Number.isInteger(maxSteps)&&maxSteps>0&&maxSteps<=80&&Number.isInteger(imageWaitMs)&&imageWaitMs>0&&imageWaitMs<=5000,'Invalid screenshot preparation bound');
@@ -406,9 +426,9 @@ export async function prepareDealerPackScreenshot(page,{maxSteps=80,imageWaitMs=
     // A native wheel turn gives IntersectionObserver/lazy-loading a rendering
     // opportunity. Only images actually encountered in the viewport are awaited.
     await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
-    const visible=await page.evaluate(()=>[...document.images].filter(image=>{const r=image.getBoundingClientRect(),s=getComputedStyle(image);return r.width>0&&r.height>0&&r.bottom>0&&r.top<innerHeight&&s.display!=='none'&&s.visibility!=='hidden';}).map(image=>image.currentSrc||image.src).filter(Boolean));
-    visible.forEach(src=>visited.add(src));
-    try{await page.waitForFunction(()=>[...document.images].filter(image=>{const r=image.getBoundingClientRect(),s=getComputedStyle(image);return r.width>0&&r.height>0&&r.bottom>0&&r.top<innerHeight&&s.display!=='none'&&s.visibility!=='hidden'&&(image.currentSrc||image.src);}).every(image=>image.complete),null,{timeout:imageWaitMs});}catch{imageWaitTimeouts++;}
+    const visible=await page.evaluate(readDealerPackViewportImages);
+    visible.forEach(image=>visited.add(image.src));
+    try{await page.waitForFunction(readDealerPackViewportImages,true,{timeout:imageWaitMs});}catch{imageWaitTimeouts++;}
     current=await geometry();
     if(current.top+current.viewport>=current.height-1){reachedBottom=true;break;}
     await page.mouse.wheel(0,Math.max(120,Math.floor(current.viewport*0.75)));

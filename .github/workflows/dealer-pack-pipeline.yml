@@ -17,7 +17,8 @@ permissions:
   contents: read
 concurrency:
   group: dealer-packs-${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: false
+  # Superseded PR commits need no remaining build; dispatched batches retain their run.
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 env:
   NEXT_TELEMETRY_DISABLED: '1'
   WRANGLER_SEND_METRICS: 'false'
