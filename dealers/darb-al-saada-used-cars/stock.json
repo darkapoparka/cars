@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "dealer": "darb-al-saada-used-cars",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:00:22.151911Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "licenseplate-6793",
+      "title": "2013 Nissan Patrol",
+      "make": "Nissan",
+      "model": "Patrol",
+      "year": 2013,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-6793.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/6793-nissan-patrol-56-at-4wd-405-hp-se",
+      "observedAt": "2026-10-19T20:00:22.151911Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Crossover",
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "color": "White",
+      "mileageValue": 210000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "licenseplate-6795",
+      "title": "2022 Toyota Camry",
+      "make": "Toyota",
+      "model": "Camry",
+      "year": 2022,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-6795.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/6795-toyota-camry-35-at-249-hp-grande",
+      "observedAt": "2026-10-19T20:00:22.151911Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Sedan",
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "color": "Grey",
+      "mileageValue": 114000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "licenseplate-6797",
+      "title": "2026 Toyota Yaris",
+      "make": "Toyota",
+      "model": "Yaris",
+      "year": 2026,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-6797.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/6797-toyota-yaris-15-cvt-105-hp-e",
+      "observedAt": "2026-10-19T20:00:22.151911Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Sedan",
+      "transmission": "CVT",
+      "fuel": "Petrol",
+      "color": "White",
+      "mileageValue": 60,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

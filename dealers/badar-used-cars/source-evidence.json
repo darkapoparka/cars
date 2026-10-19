@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "dealer": "badar-used-cars",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/badar-used-cars-exhb",
+      "observedAt": "2026-10-19T20:00:18.245418Z",
+      "supports": [
+        "business-trading-name",
+        "public-business-phone",
+        "marketplace-location",
+        "dealer-catalogue"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7253-gmc-yukon-62-at-4wd-420-hp-denali",
+      "observedAt": "2026-10-19T20:00:18.245418Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7251-kia-ev9-at-218-hp-air",
+      "observedAt": "2026-10-19T20:00:18.245418Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7256-chevrolet-silverado-53-at-rwd-355-hp-lt-trail-boss",
+      "observedAt": "2026-10-19T20:00:18.245418Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "research": {
+    "observedAt": "2026-10-19T20:00:18.245418Z",
+    "profileUrl": "https://licenseplate.ae/cars/dealer/badar-used-cars-exhb",
+    "profileSha256": "8f76aa2fb2ce2648c0e1856fc12368dcc8439ef4841c5c75c3d83f7c39a0b9e1",
+    "marketplaceTradingName": "Badar Used Cars Exhb",
+    "classification": "public-marketplace-dealer-profile-and-listing-snapshot",
+    "directDealerPostingVerified": false,
+    "profileClaimed": false,
+    "limitation": "The named marketplace profile may be syndicated or automatically assembled. Seller-attributed listings are dated observations; current physical stock and direct dealer posting are not confirmed.",
+    "unknownFields": [
+      "public-business-email",
+      "owned-website",
+      "opening-hours"
+    ],
+    "stockSources": [
+      {
+        "id": "licenseplate-7253",
+        "url": "https://licenseplate.ae/cars/listing/7253-gmc-yukon-62-at-4wd-420-hp-denali",
+        "observedAt": "2026-10-19T20:00:18.245418Z",
+        "sha256": "a86a2031a5ac9f3c70d1fc602625fbc83a70cb747d0961db75e74dcfa0c1773b",
+        "sellerName": "Badar Used Cars Exhb",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/badar-used-cars-exhb"
+      },
+      {
+        "id": "licenseplate-7251",
+        "url": "https://licenseplate.ae/cars/listing/7251-kia-ev9-at-218-hp-air",
+        "observedAt": "2026-10-19T20:00:18.245418Z",
+        "sha256": "741c1103ef1f720b9c29044402289e293c0ba54170feadd3fd9c9e64ce1a1db3",
+        "sellerName": "Badar Used Cars Exhb",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/badar-used-cars-exhb"
+      },
+      {
+        "id": "licenseplate-7256",
+        "url": "https://licenseplate.ae/cars/listing/7256-chevrolet-silverado-53-at-rwd-355-hp-lt-trail-boss",
+        "observedAt": "2026-10-19T20:00:18.245418Z",
+        "sha256": "6e35b3ae71efead8da5915081b4d9a91b8615473c5dded49df0027364e5788a2",
+        "sellerName": "Badar Used Cars Exhb",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/badar-used-cars-exhb"
+      }
+    ],
+    "photoSources": [
+      {
+        "listingId": "licenseplate-7253",
+        "listingUrl": "https://licenseplate.ae/cars/listing/7253-gmc-yukon-62-at-4wd-420-hp-denali",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/gmc-yukon-62-at-4wd-420-hp-0-1789527674.webp",
+        "observedAt": "2026-10-19T20:00:18.245418Z",
+        "retainedPath": "dealer-stock/licenseplate-7253.webp",
+        "sha256": "61e07fabaf7537363983f3b7479a5ac929e578aa8f26470cbd60bb03b2923f1a",
+        "originalSha256": "5d36f532d02eeb4e9f725d5d9462855a29c7359f93b1332f0255e473ffe6b264",
+        "bytes": 72522,
+        "width": 1280,
+        "height": 720,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      },
+      {
+        "listingId": "licenseplate-7251",
+        "listingUrl": "https://licenseplate.ae/cars/listing/7251-kia-ev9-at-218-hp-air",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/kia-ev9-at-218-hp-0-1789527574.webp",
+        "observedAt": "2026-10-19T20:00:18.245418Z",
+        "retainedPath": "dealer-stock/licenseplate-7251.webp",
+        "sha256": "97d953c6c23985ec5f4579edbe65a85c87d9877d4ee7e69fd002d5a6f4419f27",
+        "originalSha256": "4b43bff2b1b1a59cfdb50d4e5763f071a0a409d88ba57e13d1cb5f65622dfcfa",
+        "bytes": 61416,
+        "width": 1280,
+        "height": 720,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      },
+      {
+        "listingId": "licenseplate-7256",
+        "listingUrl": "https://licenseplate.ae/cars/listing/7256-chevrolet-silverado-53-at-rwd-355-hp-lt-trail-boss",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/chevrolet-silverado-53-at-rwd-355-hp-0-1789527850.webp",
+        "observedAt": "2026-10-19T20:00:18.245418Z",
+        "retainedPath": "dealer-stock/licenseplate-7256.webp",
+        "sha256": "c33c6bcb6f5d2619266da38e27a572d828560707c7433acaec3b757c788eaca8",
+        "originalSha256": "944e02337952cc3036327c159fbc99646ab79104a333a46eeb47f87fd33e07d3",
+        "bytes": 84162,
+        "width": 1280,
+        "height": 720,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      }
+    ]
+  },
+  "stockVisualReview": {
+    "reviewedAt": "2026-10-19T20:25:00Z",
+    "reviewed": true,
+    "scope": "All retained photos, viewed in seven-dealer contact sheets",
+    "result": "Vehicle photos match listing types; no price values, named-person contacts or obvious unrelated photos observed."
+  }
+}

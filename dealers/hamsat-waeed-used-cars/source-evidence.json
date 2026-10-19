@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "dealer": "hamsat-waeed-used-cars",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/hamsat-waeed-used-cars",
+      "observedAt": "2026-10-19T20:00:22.311496Z",
+      "supports": [
+        "business-trading-name",
+        "public-business-phone",
+        "marketplace-location",
+        "dealer-catalogue"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/6694-byd-fangchengbao-leopard-5-15-cvt-awd-687-hp-ultra",
+      "observedAt": "2026-10-19T20:00:22.311496Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/6817-toyota-land-cruiser-35-at-4wd-415-hp-vxr",
+      "observedAt": "2026-10-19T20:00:22.311496Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7027-toyota-land-cruiser-35-at-4wd-415-hp-exr",
+      "observedAt": "2026-10-19T20:00:22.311496Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "research": {
+    "observedAt": "2026-10-19T20:00:22.311496Z",
+    "profileUrl": "https://licenseplate.ae/cars/dealer/hamsat-waeed-used-cars",
+    "profileSha256": "c98c0576424dde103084734347eccfe9df7042c3d7bc9dc7b12c19045076e18a",
+    "marketplaceTradingName": "Hamsat Waeed Used Cars",
+    "classification": "public-marketplace-dealer-profile-and-listing-snapshot",
+    "directDealerPostingVerified": false,
+    "profileClaimed": false,
+    "limitation": "The named marketplace profile may be syndicated or automatically assembled. Seller-attributed listings are dated observations; current physical stock and direct dealer posting are not confirmed.",
+    "unknownFields": [
+      "public-business-email",
+      "owned-website",
+      "opening-hours"
+    ],
+    "stockSources": [
+      {
+        "id": "licenseplate-6694",
+        "url": "https://licenseplate.ae/cars/listing/6694-byd-fangchengbao-leopard-5-15-cvt-awd-687-hp-ultra",
+        "observedAt": "2026-10-19T20:00:22.311496Z",
+        "sha256": "def57a44c08757ac6826bc21d299c3fb631831abbaee329d57e25eb1390fa593",
+        "sellerName": "Hamsat Waeed Used Cars",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/hamsat-waeed-used-cars"
+      },
+      {
+        "id": "licenseplate-6817",
+        "url": "https://licenseplate.ae/cars/listing/6817-toyota-land-cruiser-35-at-4wd-415-hp-vxr",
+        "observedAt": "2026-10-19T20:00:22.311496Z",
+        "sha256": "fc741985f25d3c1b9243d60d21ac115acef1cabf2fe6e73f4b8a48b8e1fe5163",
+        "sellerName": "Hamsat Waeed Used Cars",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/hamsat-waeed-used-cars"
+      },
+      {
+        "id": "licenseplate-7027",
+        "url": "https://licenseplate.ae/cars/listing/7027-toyota-land-cruiser-35-at-4wd-415-hp-exr",
+        "observedAt": "2026-10-19T20:00:22.311496Z",
+        "sha256": "6c42563cd9016dbdba861d8137c1f9d7a409908f9d85a6d13a01dd9449aaede9",
+        "sellerName": "Hamsat Waeed Used Cars",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/hamsat-waeed-used-cars"
+      }
+    ],
+    "photoSources": [
+      {
+        "listingId": "licenseplate-6694",
+        "listingUrl": "https://licenseplate.ae/cars/listing/6694-byd-fangchengbao-leopard-5-15-cvt-awd-687-hp-ultra",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/byd-fangchengbao-leopard-5-15-cvt-awd-687-hp-0-1789524270.webp",
+        "observedAt": "2026-10-19T20:00:22.311496Z",
+        "retainedPath": "dealer-stock/licenseplate-6694.webp",
+        "sha256": "1503cab13f339a05dc4d0aeb89922ebeffa2d79badcb6528356c80188ae9a210",
+        "originalSha256": "2cc3bea077c5b90475d4396415da3b1cd50632e0ed9c7867be484b24a9661103",
+        "bytes": 79010,
+        "width": 1066,
+        "height": 800,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      },
+      {
+        "listingId": "licenseplate-6817",
+        "listingUrl": "https://licenseplate.ae/cars/listing/6817-toyota-land-cruiser-35-at-4wd-415-hp-vxr",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/toyota-land-cruiser-35-at-4wd-415-hp-0-1789525006.webp",
+        "observedAt": "2026-10-19T20:00:22.311496Z",
+        "retainedPath": "dealer-stock/licenseplate-6817.webp",
+        "sha256": "86856c2ca03d3a430b2c8bd5a43af25c72dbed1b1a904749e7d465966f7ac287",
+        "originalSha256": "2e0e27845266aa33f3500795c7b34da18207936435120f17a8635f706b243b67",
+        "bytes": 62264,
+        "width": 768,
+        "height": 1024,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      },
+      {
+        "listingId": "licenseplate-7027",
+        "listingUrl": "https://licenseplate.ae/cars/listing/7027-toyota-land-cruiser-35-at-4wd-415-hp-exr",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/toyota-land-cruiser-35-at-4wd-415-hp-0-1789526261.webp",
+        "observedAt": "2026-10-19T20:00:22.311496Z",
+        "retainedPath": "dealer-stock/licenseplate-7027.webp",
+        "sha256": "0da58a39c3d9823840ffbd115ed3c1033685b18ae4d23062c69aba419e7f595a",
+        "originalSha256": "7c09b9c5323ee400325af3eebf0b7ad1f8c04ed2e130a675d588e450b650ff6e",
+        "bytes": 108460,
+        "width": 1066,
+        "height": 800,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      }
+    ]
+  },
+  "stockVisualReview": {
+    "reviewedAt": "2026-10-19T20:25:00Z",
+    "reviewed": true,
+    "scope": "All retained photos, viewed in seven-dealer contact sheets",
+    "result": "Vehicle photos match listing types; no price values, named-person contacts or obvious unrelated photos observed."
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "dealer": "darb-al-saada-used-cars",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/darb-al-saada-used-cars",
+      "observedAt": "2026-10-19T20:00:22.151911Z",
+      "supports": [
+        "business-trading-name",
+        "public-business-phone",
+        "marketplace-location",
+        "dealer-catalogue"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/6793-nissan-patrol-56-at-4wd-405-hp-se",
+      "observedAt": "2026-10-19T20:00:22.151911Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/6795-toyota-camry-35-at-249-hp-grande",
+      "observedAt": "2026-10-19T20:00:22.151911Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/6797-toyota-yaris-15-cvt-105-hp-e",
+      "observedAt": "2026-10-19T20:00:22.151911Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "research": {
+    "observedAt": "2026-10-19T20:00:22.151911Z",
+    "profileUrl": "https://licenseplate.ae/cars/dealer/darb-al-saada-used-cars",
+    "profileSha256": "931f94e184f4215869ef38a0b7a00976b1639af0d3b5120ac6b142b294b3bc90",
+    "marketplaceTradingName": "Darb Al Saada Used Cars",
+    "classification": "public-marketplace-dealer-profile-and-listing-snapshot",
+    "directDealerPostingVerified": false,
+    "profileClaimed": false,
+    "limitation": "The named marketplace profile may be syndicated or automatically assembled. Seller-attributed listings are dated observations; current physical stock and direct dealer posting are not confirmed.",
+    "unknownFields": [
+      "public-business-email",
+      "owned-website",
+      "opening-hours"
+    ],
+    "stockSources": [
+      {
+        "id": "licenseplate-6793",
+        "url": "https://licenseplate.ae/cars/listing/6793-nissan-patrol-56-at-4wd-405-hp-se",
+        "observedAt": "2026-10-19T20:00:22.151911Z",
+        "sha256": "a8f78317b46d7838412c77a19183492f7e7e1fa41e51d6d53225b4a5739f069e",
+        "sellerName": "Darb Al Saada Used Cars",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/darb-al-saada-used-cars"
+      },
+      {
+        "id": "licenseplate-6795",
+        "url": "https://licenseplate.ae/cars/listing/6795-toyota-camry-35-at-249-hp-grande",
+        "observedAt": "2026-10-19T20:00:22.151911Z",
+        "sha256": "2b32f5012110d24d168be7d26de58d9ab099cf8f7f08f24c57836e91a5cad33b",
+        "sellerName": "Darb Al Saada Used Cars",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/darb-al-saada-used-cars"
+      },
+      {
+        "id": "licenseplate-6797",
+        "url": "https://licenseplate.ae/cars/listing/6797-toyota-yaris-15-cvt-105-hp-e",
+        "observedAt": "2026-10-19T20:00:22.151911Z",
+        "sha256": "b0f18b34d0b2191cc9d7c2ba34801bd2e187b2aa96b45ce98c3597ee8c6f4c0c",
+        "sellerName": "Darb Al Saada Used Cars",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/darb-al-saada-used-cars"
+      }
+    ],
+    "photoSources": [
+      {
+        "listingId": "licenseplate-6793",
+        "listingUrl": "https://licenseplate.ae/cars/listing/6793-nissan-patrol-56-at-4wd-405-hp-se",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/nissan-patrol-56-at-4wd-405-hp-0-1789524865.webp",
+        "observedAt": "2026-10-19T20:00:22.151911Z",
+        "retainedPath": "dealer-stock/licenseplate-6793.webp",
+        "sha256": "ea0d0bca5b74aab0e3fbf93d76adbead0f1ebc0f17f21f267adb0d12305a9462",
+        "originalSha256": "821bfc91447e683f385185f4f974d888fcf2490db7d03d071205edf425b6104a",
+        "bytes": 65142,
+        "width": 1066,
+        "height": 800,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      },
+      {
+        "listingId": "licenseplate-6795",
+        "listingUrl": "https://licenseplate.ae/cars/listing/6795-toyota-camry-35-at-249-hp-grande",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/toyota-camry-35-at-249-hp-0-1789524874.webp",
+        "observedAt": "2026-10-19T20:00:22.151911Z",
+        "retainedPath": "dealer-stock/licenseplate-6795.webp",
+        "sha256": "c95453390379f3f7dee0aad9b76f7cde8378f7d855e8e299addf8ba533b715ca",
+        "originalSha256": "b0d387128e4d6cab11c77914c339f4884a5f79efcb1faa607f0961c85d2c9d60",
+        "bytes": 123148,
+        "width": 1066,
+        "height": 800,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      },
+      {
+        "listingId": "licenseplate-6797",
+        "listingUrl": "https://licenseplate.ae/cars/listing/6797-toyota-yaris-15-cvt-105-hp-e",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/toyota-yaris-15-cvt-105-hp-0-1789524887.webp",
+        "observedAt": "2026-10-19T20:00:22.151911Z",
+        "retainedPath": "dealer-stock/licenseplate-6797.webp",
+        "sha256": "2f3c41c0a00e90e8e4cec977ecac2a8e2337f51ed3e46c873f3d081f3965c77f",
+        "originalSha256": "acc2fc23f517aaeebfd5f3b8f74f56ca989fa394434ccb2c6505997cc955bc18",
+        "bytes": 98002,
+        "width": 1066,
+        "height": 800,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      }
+    ]
+  },
+  "stockVisualReview": {
+    "reviewedAt": "2026-10-19T20:25:00Z",
+    "reviewed": true,
+    "scope": "All retained photos, viewed in seven-dealer contact sheets",
+    "result": "Vehicle photos match listing types; no price values, named-person contacts or obvious unrelated photos observed."
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "dealer": "bdayt-al-khir-used-cars",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:00:18.408611Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "licenseplate-823",
+      "title": "2026 Toyota Yaris",
+      "make": "Toyota",
+      "model": "Yaris",
+      "year": 2026,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-823.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/823-toyota-yaris-15-cvt-105-hp-other",
+      "observedAt": "2026-10-19T20:00:18.408611Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Sedan",
+      "transmission": "CVT",
+      "fuel": "Petrol",
+      "color": "White",
+      "mileageValue": 0,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "licenseplate-315",
+      "title": "2019 Mitsubishi Eclipse Cross",
+      "make": "Mitsubishi",
+      "model": "Eclipse Cross",
+      "year": 2019,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-315.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/315-mitsubishi-eclipse-cross-15-cvt-150-hp-glx",
+      "observedAt": "2026-10-19T20:00:18.408611Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Crossover",
+      "transmission": "CVT",
+      "fuel": "Petrol",
+      "color": "Red",
+      "mileageValue": 81000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "licenseplate-419",
+      "title": "2024 Mercedes-Benz A-Class",
+      "make": "Mercedes-Benz",
+      "model": "A-Class",
+      "year": 2024,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-419.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/419-mercedes-benz-a-class-13-amt-163-hp-a-200-amg",
+      "observedAt": "2026-10-19T20:00:18.408611Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Sedan",
+      "transmission": "Automated manual",
+      "fuel": "Petrol",
+      "color": "Black",
+      "mileageValue": 60150,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

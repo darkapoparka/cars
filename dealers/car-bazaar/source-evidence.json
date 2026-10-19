@@ -1,0 +1,141 @@
+{
+  "schemaVersion": 1,
+  "dealer": "car-bazaar",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/car-bazaar",
+      "observedAt": "2026-10-19T20:00:21.857169Z",
+      "supports": [
+        "business-trading-name",
+        "public-business-phone",
+        "marketplace-location",
+        "dealer-catalogue"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7064-mercedes-benz-glc-class-300-9g-tronic-4matic-258-hp-glc-300",
+      "observedAt": "2026-10-19T20:00:21.857169Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7200-lexus-is-350-at-315-hp-is-350",
+      "observedAt": "2026-10-19T20:00:21.857169Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7783-mg-rx5-15-amt-169-hp-luxury",
+      "observedAt": "2026-10-19T20:00:21.857169Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "research": {
+    "observedAt": "2026-10-19T20:00:21.857169Z",
+    "profileUrl": "https://licenseplate.ae/cars/dealer/car-bazaar",
+    "profileSha256": "429491f2685bf850c9ccafb575a8387aee6bfb8f28e0dd10b2e412cba82d5ca4",
+    "marketplaceTradingName": "CAR Bazaar",
+    "classification": "public-marketplace-dealer-profile-and-listing-snapshot",
+    "directDealerPostingVerified": false,
+    "profileClaimed": false,
+    "limitation": "The named marketplace profile may be syndicated or automatically assembled. Seller-attributed listings are dated observations; current physical stock and direct dealer posting are not confirmed.",
+    "unknownFields": [
+      "public-business-email",
+      "owned-website",
+      "opening-hours"
+    ],
+    "stockSources": [
+      {
+        "id": "licenseplate-7064",
+        "url": "https://licenseplate.ae/cars/listing/7064-mercedes-benz-glc-class-300-9g-tronic-4matic-258-hp-glc-300",
+        "observedAt": "2026-10-19T20:00:21.857169Z",
+        "sha256": "1d223710066d9d43463c7abb0a44016d66c0252169ee276bdcc25df5c42502ee",
+        "sellerName": "CAR Bazaar",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/car-bazaar"
+      },
+      {
+        "id": "licenseplate-7200",
+        "url": "https://licenseplate.ae/cars/listing/7200-lexus-is-350-at-315-hp-is-350",
+        "observedAt": "2026-10-19T20:00:21.857169Z",
+        "sha256": "6094e92ed49592323289f48f156480d973ce0e443540c9c4f9a7f1cece7ca8e4",
+        "sellerName": "CAR Bazaar",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/car-bazaar"
+      },
+      {
+        "id": "licenseplate-7783",
+        "url": "https://licenseplate.ae/cars/listing/7783-mg-rx5-15-amt-169-hp-luxury",
+        "observedAt": "2026-10-19T20:00:21.857169Z",
+        "sha256": "5d06a64c6f70970c63669cf1c8facb8292e1b011ac3381bb7ef43e2b52aaab1a",
+        "sellerName": "CAR Bazaar",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/car-bazaar"
+      }
+    ],
+    "photoSources": [
+      {
+        "listingId": "licenseplate-7064",
+        "listingUrl": "https://licenseplate.ae/cars/listing/7064-mercedes-benz-glc-class-300-9g-tronic-4matic-258-hp-glc-300",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/mercedes-benz-glc-class-300-9g-tronic-4matic-258-hp-0-1789526487.webp",
+        "observedAt": "2026-10-19T20:00:21.857169Z",
+        "retainedPath": "dealer-stock/licenseplate-7064.webp",
+        "sha256": "ab579a103280b3fb7bd2d75332ec4e6984bcbcd0710181ac4d9e1a719fdf756b",
+        "originalSha256": "52378dbed504602fd731d03625e3e704e0371f1fb9d2727833aa7ce2f366dcd9",
+        "bytes": 148514,
+        "width": 843,
+        "height": 800,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      },
+      {
+        "listingId": "licenseplate-7200",
+        "listingUrl": "https://licenseplate.ae/cars/listing/7200-lexus-is-350-at-315-hp-is-350",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/lexus-is-350-at-315-hp-0-1789527268.webp",
+        "observedAt": "2026-10-19T20:00:21.857169Z",
+        "retainedPath": "dealer-stock/licenseplate-7200.webp",
+        "sha256": "ecea0a77e4fe5fea180ccf4bae3dd70be58ccc42ee3ef4172a03c2042537ccde",
+        "originalSha256": "08d840ec89a21be7a7713c5e0ec9875ae98bba09d72aaef17f57a05c9e5b314c",
+        "bytes": 117402,
+        "width": 767,
+        "height": 1024,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      },
+      {
+        "listingId": "licenseplate-7783",
+        "listingUrl": "https://licenseplate.ae/cars/listing/7783-mg-rx5-15-amt-169-hp-luxury",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/mg-rx5-15-amt-169-hp-0-1789530968.webp",
+        "observedAt": "2026-10-19T20:00:21.857169Z",
+        "retainedPath": "dealer-stock/licenseplate-7783.webp",
+        "sha256": "c3333e6f342799fa07a4501eb06e50813940f9502bcf003f941a745c7562c00a",
+        "originalSha256": "f977f3b283af6f71f9077fd61ac0092a0bc6903e34699cff0e135d37b6fa22ac",
+        "bytes": 70738,
+        "width": 1280,
+        "height": 791,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      }
+    ]
+  },
+  "stockVisualReview": {
+    "reviewedAt": "2026-10-19T20:25:00Z",
+    "reviewed": true,
+    "scope": "All retained photos, viewed in seven-dealer contact sheets",
+    "result": "Vehicle photos match listing types; no price values, named-person contacts or obvious unrelated photos observed."
+  },
+  "catalogueIdentityReview": {
+    "reviewedAt": "2026-10-19T21:14:00Z",
+    "result": "Current Sooq Cars listing names CAR BAZAAR FZC with dealer phone +971558863781 and region Sharjah, matching the current LicensePlate business profile. GCCCarDeals aggregate dealer city says Dubai; current phone-bound sources support the retained Sharjah facts. Exact street/premise is not independently verified.",
+    "sourceUrl": "https://sooq-cars.com/ae/en/ready/cars/2140581"
+  }
+}

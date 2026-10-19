@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "dealer": "car-bazaar",
+  "businessFacts": "business-facts.json",
+  "stock": "stock.json",
+  "inventoryKind": "dated-listing-snapshot",
+  "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+  "sources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/car-bazaar",
+      "observedAt": "2026-10-19T20:00:21.857169Z",
+      "supports": [
+        "business-trading-name",
+        "public-business-phone",
+        "marketplace-location",
+        "dealer-catalogue"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7064-mercedes-benz-glc-class-300-9g-tronic-4matic-258-hp-glc-300",
+      "observedAt": "2026-10-19T20:00:21.857169Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7200-lexus-is-350-at-315-hp-is-350",
+      "observedAt": "2026-10-19T20:00:21.857169Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7783-mg-rx5-15-amt-169-hp-luxury",
+      "observedAt": "2026-10-19T20:00:21.857169Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    }
+  ]
+}

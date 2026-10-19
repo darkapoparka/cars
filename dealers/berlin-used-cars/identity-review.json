@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T20:13:01.611Z",
+  "dealer": "berlin-used-cars",
+  "dealerId": "ae-sharjah-berlin-used-cars",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "method": "Exact retained registry, clients index and compact-pack identity comparison, followed by current public named dealer catalogue and seller-bound listings. Marketplace profile name variants are not separate identities. No dealer approval is implied.",
+  "sources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/berlin-used-cars-trllc-sp",
+      "observedAt": "2026-10-19T20:00:18.885044Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7726-land-rover-range-rover-sport-30-v6-supercharged-at-awd-340-hp-hse",
+      "observedAt": "2026-10-19T20:00:18.885044Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7727-land-rover-range-rover-50-v8-supercharged-at-awd-565-hp-vogue-se",
+      "observedAt": "2026-10-19T20:00:18.885044Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7728-chevrolet-camaro-62-at-455-hp-zl1",
+      "observedAt": "2026-10-19T20:00:18.885044Z"
+    }
+  ]
+}

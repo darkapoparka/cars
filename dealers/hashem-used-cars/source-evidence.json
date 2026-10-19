@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "dealer": "hashem-used-cars",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/hashem-used-cars",
+      "observedAt": "2026-10-19T20:00:22.330459Z",
+      "supports": [
+        "business-trading-name",
+        "public-business-phone",
+        "marketplace-location",
+        "dealer-catalogue"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7016-toyota-land-cruiser-35-at-4wd-415-hp-gxr",
+      "observedAt": "2026-10-19T20:00:22.330459Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7286-toyota-land-cruiser-prado-40-at-271-hp-vxr",
+      "observedAt": "2026-10-19T20:00:22.330459Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7282-toyota-rush-15-at-104-hp-gx",
+      "observedAt": "2026-10-19T20:00:22.330459Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "research": {
+    "observedAt": "2026-10-19T20:00:22.330459Z",
+    "profileUrl": "https://licenseplate.ae/cars/dealer/hashem-used-cars",
+    "profileSha256": "a8a92cfc58d510c6ff888223aea8034fa418425abb0120cbcd1856dbd60dd9e2",
+    "marketplaceTradingName": "Hashem Used Cars",
+    "classification": "public-marketplace-dealer-profile-and-listing-snapshot",
+    "directDealerPostingVerified": false,
+    "profileClaimed": false,
+    "limitation": "The named marketplace profile may be syndicated or automatically assembled. Seller-attributed listings are dated observations; current physical stock and direct dealer posting are not confirmed.",
+    "unknownFields": [
+      "public-business-email",
+      "owned-website",
+      "opening-hours"
+    ],
+    "stockSources": [
+      {
+        "id": "licenseplate-7016",
+        "url": "https://licenseplate.ae/cars/listing/7016-toyota-land-cruiser-35-at-4wd-415-hp-gxr",
+        "observedAt": "2026-10-19T20:00:22.330459Z",
+        "sha256": "5b4de7f977793afeb611acc12985f9b2ebc9f7e2ad9e4004fd7dfcd604b21a84",
+        "sellerName": "Hashem Used Cars",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/hashem-used-cars"
+      },
+      {
+        "id": "licenseplate-7286",
+        "url": "https://licenseplate.ae/cars/listing/7286-toyota-land-cruiser-prado-40-at-271-hp-vxr",
+        "observedAt": "2026-10-19T20:00:22.330459Z",
+        "sha256": "7757f3dc07ce4454311463c9c8ddc07fb1e4950338b934d0c98d89b34b2d1f9c",
+        "sellerName": "Hashem Used Cars",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/hashem-used-cars"
+      },
+      {
+        "id": "licenseplate-7282",
+        "url": "https://licenseplate.ae/cars/listing/7282-toyota-rush-15-at-104-hp-gx",
+        "observedAt": "2026-10-19T20:00:22.330459Z",
+        "sha256": "8c6ef6e07d5e0ecdf6a3c4574db633d6ad2c8220f799e4556dc968e9069ed31c",
+        "sellerName": "Hashem Used Cars",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/hashem-used-cars"
+      }
+    ],
+    "photoSources": [
+      {
+        "listingId": "licenseplate-7016",
+        "listingUrl": "https://licenseplate.ae/cars/listing/7016-toyota-land-cruiser-35-at-4wd-415-hp-gxr",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/toyota-land-cruiser-35-at-4wd-415-hp-0-1789526207.webp",
+        "observedAt": "2026-10-19T20:00:22.330459Z",
+        "retainedPath": "dealer-stock/licenseplate-7016.webp",
+        "sha256": "a2aefb2f1f201b0d11bd700e96bf73ff6c43e298ac190990ace44749e3cd25e5",
+        "originalSha256": "f46c5a933defec77dda9819429136c81ca449b327bbc6d0ed47f7f88477e9e45",
+        "bytes": 113552,
+        "width": 1066,
+        "height": 800,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      },
+      {
+        "listingId": "licenseplate-7286",
+        "listingUrl": "https://licenseplate.ae/cars/listing/7286-toyota-land-cruiser-prado-40-at-271-hp-vxr",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/toyota-land-cruiser-prado-40-at-271-hp-0-1789528054.webp",
+        "observedAt": "2026-10-19T20:00:22.330459Z",
+        "retainedPath": "dealer-stock/licenseplate-7286.webp",
+        "sha256": "1c40fdad5348a1181aea836be168ebd97e465a9c3d73c702761250eb37bea333",
+        "originalSha256": "cf9a92b0900f1ec4a2760af51adc3c7b0d83c0ce45f733e33432dedad28f859a",
+        "bytes": 167412,
+        "width": 1066,
+        "height": 800,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      },
+      {
+        "listingId": "licenseplate-7282",
+        "listingUrl": "https://licenseplate.ae/cars/listing/7282-toyota-rush-15-at-104-hp-gx",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/toyota-rush-15-at-104-hp-0-1789528033.webp",
+        "observedAt": "2026-10-19T20:00:22.330459Z",
+        "retainedPath": "dealer-stock/licenseplate-7282.webp",
+        "sha256": "bf0aba3ab732f98bf8d0a2af401c71b1f258246f787fff10d4c5d35bd292a1ab",
+        "originalSha256": "bf7eb25e571751feacaac08741572efa84e24d982e147886bc621cd36bb64e8d",
+        "bytes": 141060,
+        "width": 1066,
+        "height": 800,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      }
+    ]
+  },
+  "stockVisualReview": {
+    "reviewedAt": "2026-10-19T20:25:00Z",
+    "reviewed": true,
+    "scope": "All retained photos, viewed in seven-dealer contact sheets",
+    "result": "Vehicle photos match listing types; no price values, named-person contacts or obvious unrelated photos observed."
+  }
+}

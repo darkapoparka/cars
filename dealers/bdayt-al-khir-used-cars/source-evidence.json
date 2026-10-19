@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "dealer": "bdayt-al-khir-used-cars",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/bdayt-al-khir-used-cars-tr-llcsp",
+      "observedAt": "2026-10-19T20:00:18.408611Z",
+      "supports": [
+        "business-trading-name",
+        "public-business-phone",
+        "marketplace-location",
+        "dealer-catalogue"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/823-toyota-yaris-15-cvt-105-hp-other",
+      "observedAt": "2026-10-19T20:00:18.408611Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/315-mitsubishi-eclipse-cross-15-cvt-150-hp-glx",
+      "observedAt": "2026-10-19T20:00:18.408611Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/419-mercedes-benz-a-class-13-amt-163-hp-a-200-amg",
+      "observedAt": "2026-10-19T20:00:18.408611Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "research": {
+    "observedAt": "2026-10-19T20:00:18.408611Z",
+    "profileUrl": "https://licenseplate.ae/cars/dealer/bdayt-al-khir-used-cars-tr-llcsp",
+    "profileSha256": "e9ea7c2a2d478725db62d995d9bb1dd7e9246c4ba36903b3eea2db1cb521b5ff",
+    "marketplaceTradingName": "Bdayt Al Khir Used Cars TR L.L.C.SP",
+    "classification": "public-marketplace-dealer-profile-and-listing-snapshot",
+    "directDealerPostingVerified": false,
+    "profileClaimed": false,
+    "limitation": "The named marketplace profile may be syndicated or automatically assembled. Seller-attributed listings are dated observations; current physical stock and direct dealer posting are not confirmed.",
+    "unknownFields": [
+      "public-business-email",
+      "owned-website",
+      "opening-hours"
+    ],
+    "stockSources": [
+      {
+        "id": "licenseplate-823",
+        "url": "https://licenseplate.ae/cars/listing/823-toyota-yaris-15-cvt-105-hp-other",
+        "observedAt": "2026-10-19T20:00:18.408611Z",
+        "sha256": "54b267cee1f8df24ca3a727215e6adc226cfc99ab37e250a8f14c4bc7244c882",
+        "sellerName": "Bdayt Al Khir Used Cars TR L.L.C.SP",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/bdayt-al-khir-used-cars-tr-llcsp"
+      },
+      {
+        "id": "licenseplate-315",
+        "url": "https://licenseplate.ae/cars/listing/315-mitsubishi-eclipse-cross-15-cvt-150-hp-glx",
+        "observedAt": "2026-10-19T20:00:18.408611Z",
+        "sha256": "d750eb1fae0ede2904ce2bee915d7a973735811b42b9e3111d3736208adcabce",
+        "sellerName": "Bdayt Al Khir Used Cars TR L.L.C.SP",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/bdayt-al-khir-used-cars-tr-llcsp"
+      },
+      {
+        "id": "licenseplate-419",
+        "url": "https://licenseplate.ae/cars/listing/419-mercedes-benz-a-class-13-amt-163-hp-a-200-amg",
+        "observedAt": "2026-10-19T20:00:18.408611Z",
+        "sha256": "3130fb49af464f02ad483626d299a5e94da46ac9f880da37514ea7a178c1e565",
+        "sellerName": "Bdayt Al Khir Used Cars TR L.L.C.SP",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/bdayt-al-khir-used-cars-tr-llcsp"
+      }
+    ],
+    "photoSources": [
+      {
+        "listingId": "licenseplate-823",
+        "listingUrl": "https://licenseplate.ae/cars/listing/823-toyota-yaris-15-cvt-105-hp-other",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/toyota-yaris-15-cvt-105-hp-0-1789479666.webp",
+        "observedAt": "2026-10-19T20:00:18.408611Z",
+        "retainedPath": "dealer-stock/licenseplate-823.webp",
+        "sha256": "c1a16da9dc4cec470bad1017dde7323313b8f81700ab59130cc0e1ac5ff06e3d",
+        "originalSha256": "b452e47c8d7768d0df7c8ffe16c3d62856193f65d8bba2b1dd4d048589ed4acd",
+        "bytes": 51170,
+        "width": 1066,
+        "height": 800,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      },
+      {
+        "listingId": "licenseplate-315",
+        "listingUrl": "https://licenseplate.ae/cars/listing/315-mitsubishi-eclipse-cross-15-cvt-150-hp-glx",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/mitsubishi-eclipse-cross-15-cvt-150-hp-0-1789411024.webp",
+        "observedAt": "2026-10-19T20:00:18.408611Z",
+        "retainedPath": "dealer-stock/licenseplate-315.webp",
+        "sha256": "cdef958bc3d31326c59f9ca9162a61a13fec09215e1a2e6d0e4dc7d6336b5d65",
+        "originalSha256": "f95e3959a8448df98baf406f946eba21376039c4efd12777ff9efafd4d44b97c",
+        "bytes": 118004,
+        "width": 768,
+        "height": 1024,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      },
+      {
+        "listingId": "licenseplate-419",
+        "listingUrl": "https://licenseplate.ae/cars/listing/419-mercedes-benz-a-class-13-amt-163-hp-a-200-amg",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/mercedes-benz-a-class-13-amt-163-hp-0-1789415606.webp",
+        "observedAt": "2026-10-19T20:00:18.408611Z",
+        "retainedPath": "dealer-stock/licenseplate-419.webp",
+        "sha256": "35a5032e080f42f9a150c58c25cb962628758514a714853be53ef4a0f47918cc",
+        "originalSha256": "1223b935303734eb43136e013245d4708beabafcbca4661134b08ad3afebfac5",
+        "bytes": 88298,
+        "width": 768,
+        "height": 1024,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      }
+    ]
+  },
+  "stockVisualReview": {
+    "reviewedAt": "2026-10-19T20:25:00Z",
+    "reviewed": true,
+    "scope": "All retained photos, viewed in seven-dealer contact sheets",
+    "result": "Vehicle photos match listing types; no price values, named-person contacts or obvious unrelated photos observed."
+  }
+}

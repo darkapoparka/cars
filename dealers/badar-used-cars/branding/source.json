@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 1,
+  "dealer": "badar-used-cars",
+  "realLogoFirst": true,
+  "publishedBranding": true,
+  "creationMethod": "sourced-logo-imagegen-redraw",
+  "approvalStatus": "redraw-and-compact-proposal-not-dealer-approved",
+  "dealerApproved": false,
+  "usageStatus": "public-preview-only",
+  "observedAt": "2026-10-19T21:26:28.430Z",
+  "publicSources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/badar-used-cars-exhb",
+      "observedAt": "2026-10-19T20:00:18.245418Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7253-gmc-yukon-62-at-4wd-420-hp-denali",
+      "observedAt": "2026-10-19T20:00:18.245418Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7251-kia-ev9-at-218-hp-air",
+      "observedAt": "2026-10-19T20:00:18.245418Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7256-chevrolet-silverado-53-at-rwd-355-hp-lt-trail-boss",
+      "observedAt": "2026-10-19T20:00:18.245418Z"
+    }
+  ],
+  "originals": [
+    {
+      "path": "branding/source-original.jpg",
+      "sha256": "ef257374a207372c355c93d0887accfe8a40d9e9354701eca90f5c5c41a9e7fd",
+      "url": "https://dbz-images.dubizzle.com/profiles/auto_agency/Badar_Used_Cars_Exhb_L.L.C_Logo.jpg?impolicy=agency",
+      "observedAt": "2026-10-19T21:26:28.430Z"
+    }
+  ],
+  "logoResearch": {
+    "method": "Opened current named dealer profile and three seller-bound LicensePlate stock listings; searched public catalogues and exact trading names, and retrieved the current named public catalogue profile and its attributable original dealer image.",
+    "result": "Original public raster was small or opaque and needed a full clean transparent redraw. Identity and dealer city were compared with the retained lead; original name, palette and motif are preserved with surface-specific contrast adjustments.",
+    "sources": [
+      "https://licenseplate.ae/cars/dealer/badar-used-cars-exhb",
+      "https://gcccardeals.com/en-ae/dealers/badar-used-cars-exhb"
+    ]
+  },
+  "visualReview": "Faithful blue-disc and vintage-roadster identity with stronger gold strokes and bold BADAR USED CARS wording. Flat deep blue/gold on white and light blue/gold on dark/accent. No founding-year claim is added; the source slogan is omitted from the redraw. At32px the vintage-car/circle silhouette is the identity cue.",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T21:26:28.430Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "110bc45ee264644eb68a85e8cce41a7a23de49dff6a873a95da9e5912d960428",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-89149987-71a2-4262-8b24-4f28e7982042",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "110bc45ee264644eb68a85e8cce41a7a23de49dff6a873a95da9e5912d960428",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-89149987-71a2-4262-8b24-4f28e7982042",
+        "modelVersion": null
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "e66b4796ef805d8e03923bf742f63bec89ccdb22e44f0498abcbce38ffe08b19",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-45e3dac6-a323-4fad-9ae0-98f8703f9cdb",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "110bc45ee264644eb68a85e8cce41a7a23de49dff6a873a95da9e5912d960428",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-89149987-71a2-4262-8b24-4f28e7982042",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "e66b4796ef805d8e03923bf742f63bec89ccdb22e44f0498abcbce38ffe08b19",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-45e3dac6-a323-4fad-9ae0-98f8703f9cdb",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "e66b4796ef805d8e03923bf742f63bec89ccdb22e44f0498abcbce38ffe08b19",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-45e3dac6-a323-4fad-9ae0-98f8703f9cdb",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113",
+          "#101820"
+        ],
+        "onAccent": [
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ]
+      },
+      "notes": "Faithful blue-disc and vintage-roadster identity with stronger gold strokes and bold BADAR USED CARS wording. Flat deep blue/gold on white and light blue/gold on dark/accent. No founding-year claim is added; the source slogan is omitted from the redraw. At32px the vintage-car/circle silhouette is the identity cue."
+    },
+    "compactMarkStatus": "independent-proposal-not-dealer-approved",
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T21:26:28.430Z",
+      "widths": [
+        32,
+        64
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#101820",
+        "#c40101"
+      ],
+      "notes": "Faithful blue-disc and vintage-roadster identity with stronger gold strokes and bold BADAR USED CARS wording. Flat deep blue/gold on white and light blue/gold on dark/accent. No founding-year claim is added; the source slogan is omitted from the redraw. At32px the vintage-car/circle silhouette is the identity cue."
+    }
+  },
+  "generationPrompts": [
+    "Use case: logo-brand. Fully redraw this real Badar Used Cars logo into a clean transparent dealership brand mark, keeping the vintage roadster in front three-quarter view with long bonnet, exposed front wheels and spare wheel, and the blue circular disc behind it. Crisp flat illustration with substantial consistent strokes and less fussy detail. Use rich dark blue #234799 for the circle and deep warm gold #a4711d for the car with transparent negative spaces. Large emblem above exact bold friendly wording BADAR / USED CARS on two lines in dark navy #10264a; near-square balanced lockup with the distinctive car dominating enough to be recognizable at32px. Omit the tiny founding-year slogan; make no additional claim. Transparent background outside the circular emblem and in text counters. Same name, blue/gold palette and vintage-car motif, but a complete polished flat redraw. No photograph, rectangle, shadow, metallic gradient, texture or watermark.",
+    "Matching dark/accent-surface version of this exact BADAR USED CARS vintage-car logo. Preserve exact roadster, blue circular disc, lettering and geometry. Change the dark blue disc and navy text to pale ice blue #c4dcf5; change deep gold car strokes to flat light warm gold #ead399, keeping the vintage-car silhouette recognizable. Because two light inks meet, use transparent open cuts between the car contours and circular disc so the car remains legible. All exterior background and negative spaces genuinely transparent. High contrast on charcoal and red. Flat crisp substantial graphic, no textures, glow, shadow, photograph or extra detail."
+  ]
+}

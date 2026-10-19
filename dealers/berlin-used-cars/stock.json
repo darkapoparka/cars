@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "dealer": "berlin-used-cars",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:00:18.885044Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "licenseplate-7726",
+      "title": "2020 Land Rover Range Rover Sport",
+      "make": "Land Rover",
+      "model": "Range Rover Sport",
+      "year": 2020,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-7726.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/7726-land-rover-range-rover-sport-30-v6-supercharged-at-awd-340-hp-hse",
+      "observedAt": "2026-10-19T20:00:18.885044Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Crossover",
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "color": "Grey",
+      "mileageValue": 75200,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "licenseplate-7727",
+      "title": "2020 Land Rover Range Rover",
+      "make": "Land Rover",
+      "model": "Range Rover",
+      "year": 2020,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-7727.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/7727-land-rover-range-rover-50-v8-supercharged-at-awd-565-hp-vogue-se",
+      "observedAt": "2026-10-19T20:00:18.885044Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Crossover",
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "color": "Blue",
+      "mileageValue": 98000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "licenseplate-7728",
+      "title": "2022 Chevrolet Camaro",
+      "make": "Chevrolet",
+      "model": "Camaro",
+      "year": 2022,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-7728.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/7728-chevrolet-camaro-62-at-455-hp-zl1",
+      "observedAt": "2026-10-19T20:00:18.885044Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Coupe",
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "color": "White",
+      "mileageValue": 31000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

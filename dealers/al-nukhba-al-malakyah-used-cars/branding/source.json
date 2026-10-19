@@ -1,0 +1,145 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-nukhba-al-malakyah-used-cars",
+  "realLogoFirst": true,
+  "publishedBranding": true,
+  "creationMethod": "sourced-logo-imagegen-redraw",
+  "approvalStatus": "redraw-and-compact-proposal-not-dealer-approved",
+  "dealerApproved": false,
+  "usageStatus": "public-preview-only",
+  "observedAt": "2026-10-19T21:03:30.060Z",
+  "publicSources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/al-nukhba-al-malakyah-used-cars",
+      "observedAt": "2026-10-19T20:00:11.597729Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7188-hyundai-santa-fe-25-at-194-hp-sel",
+      "observedAt": "2026-10-19T20:00:11.597729Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7479-hyundai-santa-fe-25-at-4wd-194-hp-premium",
+      "observedAt": "2026-10-19T20:00:11.597729Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7488-kia-sorento-25-amt-4wd-281-hp-sx-x-line",
+      "observedAt": "2026-10-19T20:00:11.597729Z"
+    }
+  ],
+  "originals": [
+    {
+      "path": "branding/source-original.jpg",
+      "sha256": "77c6268420230554eddd3a68ede399b04cf361b632bb6bb73bb7b1ecf11b0aca",
+      "url": "https://dbz-images.dubizzle.com/profiles/auto_agency/WhatsApp_Image_2022-01-27_at_6.21.27_PM.jpeg?impolicy=agency",
+      "observedAt": "2026-10-19T21:03:30.060Z"
+    }
+  ],
+  "logoResearch": {
+    "method": "Opened current named dealer profile and three seller-bound LicensePlate stock listings; searched public catalogues and exact trading names, and retrieved the current named GCCCarDeals profile and its attributable original dealer image.",
+    "result": "Original public raster was small or opaque and needed a full clean transparent redraw. Identity and dealer city were compared with the retained lead; original name, palette and motif are preserved with surface-specific contrast adjustments.",
+    "sources": [
+      "https://licenseplate.ae/cars/dealer/al-nukhba-al-malakyah-used-cars",
+      "https://gcccardeals.com/en-ae/dealers/al-nukhba-al-malakyah-used-cars-tr"
+    ]
+  },
+  "visualReview": "Faithful gold crown and bilingual business identity, refined into an open transparent lockup. Gold/black on white; light warm gold/silver on dark and red. Separate compact crown retains the original distinctive central finial and curved tips for32px. Old opaque oval backing was removed as part of the full redraw. No dealer approval or native-language expert sign-off is claimed.",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T21:03:30.060Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "618a091c76d69f16609986ba1f5ae85647920d5f5cb259654147ac6bd8af4250",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-860f615e-52ce-4103-a953-18532399d167",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "921e8a727cfb626427bbebaf9cf37006271919c83e1bc0431c5b0996643fa060",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-ef679aff-c251-4bfe-9e23-ddde9d09eb86",
+        "modelVersion": null
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-on-dark.png",
+      "sha256": "17a710aa1979c68c3b9e635228ba2bd3ef4bf23d54d19871cfd7bdba9b1ea5d6",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-961f4d32-2624-4129-bc93-e6b62cf456ad",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "618a091c76d69f16609986ba1f5ae85647920d5f5cb259654147ac6bd8af4250",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-860f615e-52ce-4103-a953-18532399d167",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "81c2496f298db2e92036326c30ab2c2754fca23712be7aba57295ce4e3bb87ca",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-2a56e25c-846e-42e7-a0c1-94c6b92280a7",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "81c2496f298db2e92036326c30ab2c2754fca23712be7aba57295ce4e3bb87ca",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-2a56e25c-846e-42e7-a0c1-94c6b92280a7",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113",
+          "#101820"
+        ],
+        "onAccent": [
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ]
+      },
+      "notes": "Faithful gold crown and bilingual business identity, refined into an open transparent lockup. Gold/black on white; light warm gold/silver on dark and red. Separate compact crown retains the original distinctive central finial and curved tips for32px. Old opaque oval backing was removed as part of the full redraw. No dealer approval or native-language expert sign-off is claimed."
+    },
+    "compactMarkStatus": "independent-proposal-not-dealer-approved",
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T21:03:30.060Z",
+      "widths": [
+        32,
+        64
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#101820",
+        "#c40101"
+      ],
+      "notes": "Faithful gold crown and bilingual business identity, refined into an open transparent lockup. Gold/black on white; light warm gold/silver on dark and red. Separate compact crown retains the original distinctive central finial and curved tips for32px. Old opaque oval backing was removed as part of the full redraw. No dealer approval or native-language expert sign-off is claimed."
+    }
+  },
+  "generationPrompts": [
+    "Faithful clean redraw of this actual Al Nukhba Al Malakyah Used Cars logo. Preserve the gold royal crown motif and exact Arabic lettering from the reference: النخبة الملكية and لتجارة السيارات المستعملة. Refine the crown into a crisp symmetrical elegant silhouette with clean open details, substantial strokes, balanced vertical proportions and enough space above the name; preserve the existing identity, not a new logo. Gold crown in rich deep gold #90621f and lettering in solid black #111111, a crisp flat two-ink production mark readable on white. Genuine transparent background, no white rectangle, no gradient, bevel, shadow, texture, ornament, mockup or watermark. Keep the near-square stacked arrangement and improve the typography and optical spacing.",
+    "Use case: logo-brand. Professionally redraw this Al Nukhba Al Malakyah Used Cars identity as a clean standalone transparent logo. Keep the recognizable gold royal crown and exact business name, but refine the overcrowded badge into a premium near-square open stacked lockup: a SMALL crisp elegant gold crown on top; BELOW the crown, large black Arabic النخبة الملكية; BELOW that exact Latin AL NUKHBA AL MALAKYAH in readable balanced uppercase; smallest line USED CARS. Crown must be separate above the words, never behind them. Gold is rich deep flat gold #90621f, lettering flat black #111111. White/black oval backdrop and ornamental oval border are removed completely, genuine transparent background with generous negative spaces. Clean optical spacing and substantial strokes; retain the name, gold/black palette and royal crown motif faithfully. No gradient, texture, shadow, bevel, mockup or watermark.",
+    "Matching surface variant of this exact Al Nukhba Al Malakyah logo for dark charcoal and red backgrounds. Preserve the exact crown silhouette, Arabic النخبة الملكية, Latin AL NUKHBA AL MALAKYAH and USED CARS, identical placement and type. Change crown to flat light warm gold #ead399 and all black lettering to flat pale silver #c7d4dc. These inks need strong contrast against red. Genuine transparent background and counters. No visible glow, shadow, gradient, texture, rectangle or additional decoration. Same identity, clean flat transparent production raster.",
+    "Derive a compact favicon from this Al Nukhba Al Malakyah identity: ONLY the same distinctive elegant five-point royal crown, no text. Preserve its central pointed flame-shaped finial, smaller inward peaks, curved outward tips and broad arched base. Refine to a balanced near-square silhouette with substantial bold form and open negative spaces so it reads at32px. One flat rich deep gold #90621f ink on a genuine transparent background. Clean smooth contours, no glow, no gradient, no shadow, no texture, no frame or mockup. The source crown motif faithfully isolated as a clean compact logo proposal.",
+    "Matching light warm-gold #ead399 variant of this exact compact crown. Preserve every contour, curved tip, central flame finial, proportions and the thin transparent gap above the lower base. Same clean substantial form, optimized32px. One flat light warm-gold ink on a genuinely transparent background; no glow, gradient, texture, shadows, outline, text or new shapes. Dark-surface counterpart of the same Al Nukhba crown mark."
+  ]
+}

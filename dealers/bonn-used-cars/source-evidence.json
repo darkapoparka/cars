@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "dealer": "bonn-used-cars",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/bonn-used-cars",
+      "observedAt": "2026-10-19T20:00:18.902177Z",
+      "supports": [
+        "business-trading-name",
+        "public-business-phone",
+        "marketplace-location",
+        "dealer-catalogue"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7478-rox-01-15-at-awd-476-hp-vip",
+      "observedAt": "2026-10-19T20:00:18.902177Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7487-mercedes-benz-e-class-20-at-4wd-255-hp-e-300-4matic",
+      "observedAt": "2026-10-19T20:00:18.902177Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/8049-land-rover-defender-hybrid-phev-defender-p400e-with-404-110-hse-p400",
+      "observedAt": "2026-10-19T20:00:18.902177Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "research": {
+    "observedAt": "2026-10-19T20:00:18.902177Z",
+    "profileUrl": "https://licenseplate.ae/cars/dealer/bonn-used-cars",
+    "profileSha256": "6c4cfc02671b32b1717f4289a65bb888839caea188c63569b41edb6841a321b3",
+    "marketplaceTradingName": "Bonn Used Cars",
+    "classification": "public-marketplace-dealer-profile-and-listing-snapshot",
+    "directDealerPostingVerified": false,
+    "profileClaimed": false,
+    "limitation": "The named marketplace profile may be syndicated or automatically assembled. Seller-attributed listings are dated observations; current physical stock and direct dealer posting are not confirmed.",
+    "unknownFields": [
+      "public-business-email",
+      "owned-website",
+      "opening-hours"
+    ],
+    "stockSources": [
+      {
+        "id": "licenseplate-7478",
+        "url": "https://licenseplate.ae/cars/listing/7478-rox-01-15-at-awd-476-hp-vip",
+        "observedAt": "2026-10-19T20:00:18.902177Z",
+        "sha256": "27bfa74f8cf5b99b406c4c18b6ca406819d354cee785c6ce9e1ea5900bf82b73",
+        "sellerName": "Bonn Used Cars",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/bonn-used-cars"
+      },
+      {
+        "id": "licenseplate-7487",
+        "url": "https://licenseplate.ae/cars/listing/7487-mercedes-benz-e-class-20-at-4wd-255-hp-e-300-4matic",
+        "observedAt": "2026-10-19T20:00:18.902177Z",
+        "sha256": "3f6b575f18386b15fe7cf0a21a7191a63a85fc06890ba3e57de32fe5b98f39c1",
+        "sellerName": "Bonn Used Cars",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/bonn-used-cars"
+      },
+      {
+        "id": "licenseplate-8049",
+        "url": "https://licenseplate.ae/cars/listing/8049-land-rover-defender-hybrid-phev-defender-p400e-with-404-110-hse-p400",
+        "observedAt": "2026-10-19T20:00:18.902177Z",
+        "sha256": "7f8d180f5e419baeae4f684cad262e969e58305eb51b1c7452943f90ab5cc1d7",
+        "sellerName": "Bonn Used Cars",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/bonn-used-cars"
+      }
+    ],
+    "photoSources": [
+      {
+        "listingId": "licenseplate-7478",
+        "listingUrl": "https://licenseplate.ae/cars/listing/7478-rox-01-15-at-awd-476-hp-vip",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/rox-01-15-at-awd-476-hp-0-1789529194.webp",
+        "observedAt": "2026-10-19T20:00:18.902177Z",
+        "retainedPath": "dealer-stock/licenseplate-7478.webp",
+        "sha256": "70f81d0b92d8a1cda6ce93014f102916579b26fe5742dd2f02eab7c330287b5d",
+        "originalSha256": "e40c406492e43c059fbbf4a432f046e312fd73553615f35a80fe4f9eb9b49406",
+        "bytes": 71640,
+        "width": 768,
+        "height": 1024,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      },
+      {
+        "listingId": "licenseplate-7487",
+        "listingUrl": "https://licenseplate.ae/cars/listing/7487-mercedes-benz-e-class-20-at-4wd-255-hp-e-300-4matic",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/mercedes-benz-e-class-20-at-4wd-255-hp-0-1789529249.webp",
+        "observedAt": "2026-10-19T20:00:18.902177Z",
+        "retainedPath": "dealer-stock/licenseplate-7487.webp",
+        "sha256": "9c1a2ec62ddfe1ec6c8f1b2276f40b1990666a1b3c63ceca34b65f29a14200b9",
+        "originalSha256": "11df3cb6d04f05f941e16d104631fb794f2f86662a8fa052e97be46ef60e87c1",
+        "bytes": 77906,
+        "width": 768,
+        "height": 1024,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      },
+      {
+        "listingId": "licenseplate-8049",
+        "listingUrl": "https://licenseplate.ae/cars/listing/8049-land-rover-defender-hybrid-phev-defender-p400e-with-404-110-hse-p400",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/land-rover-defender-hybrid-phev-defender-p400e-with-404-0-1789532607.webp",
+        "observedAt": "2026-10-19T20:00:18.902177Z",
+        "retainedPath": "dealer-stock/licenseplate-8049.webp",
+        "sha256": "25ee4564044bcd54299f83414ecbc4102649a345afe0a482875db1eac1cf03df",
+        "originalSha256": "e9bf09243a5d871be3ec8e2c25486a52b0e6b29007d8808621e597e5e1d45ace",
+        "bytes": 71390,
+        "width": 768,
+        "height": 1024,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      }
+    ]
+  },
+  "stockVisualReview": {
+    "reviewedAt": "2026-10-19T20:25:00Z",
+    "reviewed": true,
+    "scope": "All retained photos, viewed in seven-dealer contact sheets",
+    "result": "Vehicle photos match listing types; no price values, named-person contacts or obvious unrelated photos observed."
+  }
+}

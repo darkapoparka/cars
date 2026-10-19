@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "dealer": "bdayt-al-khir-used-cars",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T21:26:51.301Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "sourced-logo-imagegen-redraw",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "5ac6943f7e84bbe87a161fee0f60a469421a96b51b114bf640e6a25a2e60ca7f",
+      "sourceSha256": "0a7e5674bdffb39ec3f95be64b0cc4ed8ab4aac695b17c1bf160f66f070e838b"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "4c3556fbcc0220337f3427a81c4e3f4fc07475f1ddb978e56ba8493e60a494c5",
+      "sourceSha256": "80985c311b9b12cef50f45e1d44dd6ca68ca0bbbde897607a6b072d045dd92ce"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "4c3556fbcc0220337f3427a81c4e3f4fc07475f1ddb978e56ba8493e60a494c5",
+      "sourceSha256": "80985c311b9b12cef50f45e1d44dd6ca68ca0bbbde897607a6b072d045dd92ce"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "0a7e5674bdffb39ec3f95be64b0cc4ed8ab4aac695b17c1bf160f66f070e838b",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-40459f1b-7aaf-4777-95a9-58556fcde604",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "c4ab74d920f3c9e0402c265a614173c4e68fb0f0019b8070ff0707d0d1b41c7a",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-40459f1b-7aaf-4777-95a9-58556fcde604",
+      "modelVersion": null
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "99b9bb6e678c47f71a485a2029922260847ef43b4131c1463aed7aefdc25602b"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "0a7e5674bdffb39ec3f95be64b0cc4ed8ab4aac695b17c1bf160f66f070e838b",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-40459f1b-7aaf-4777-95a9-58556fcde604",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/bdayt-al-khir-used-cars/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "80985c311b9b12cef50f45e1d44dd6ca68ca0bbbde897607a6b072d045dd92ce",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c01de7a4-503a-45f5-bf7a-d16a09112ab4",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/bdayt-al-khir-used-cars/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "80985c311b9b12cef50f45e1d44dd6ca68ca0bbbde897607a6b072d045dd92ce",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c01de7a4-503a-45f5-bf7a-d16a09112ab4",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/bdayt-al-khir-used-cars/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "07071fd25b17ad266fb57dcf99acf4ce1744c576b5bbd41bafbf23a27a775799",
+      "sha256": "0a7e5674bdffb39ec3f95be64b0cc4ed8ab4aac695b17c1bf160f66f070e838b",
+      "crop": {
+        "left": 30,
+        "top": 235,
+        "width": 1217,
+        "height": 862
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "ca76fc9537ef7d56fb4877984755210b458263d385be08093093214b904f9fa7",
+      "sha256": "80985c311b9b12cef50f45e1d44dd6ca68ca0bbbde897607a6b072d045dd92ce",
+      "crop": {
+        "left": 31,
+        "top": 231,
+        "width": 1217,
+        "height": 867
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "ca76fc9537ef7d56fb4877984755210b458263d385be08093093214b904f9fa7",
+      "sha256": "80985c311b9b12cef50f45e1d44dd6ca68ca0bbbde897607a6b072d045dd92ce",
+      "crop": {
+        "left": 31,
+        "top": 231,
+        "width": 1217,
+        "height": 867
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "62438b4f50625b645103081af13de6ca97617ced55f44cbf49ad27c6b91676e0",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-40459f1b-7aaf-4777-95a9-58556fcde604",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/bdayt-al-khir-used-cars/branding/generated-on-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "e5516e8dea2156e206db6cfd2c2a0bd22f4e6673474fab1e85235dde401b8bf0",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c01de7a4-503a-45f5-bf7a-d16a09112ab4",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/bdayt-al-khir-used-cars/branding/generated-on-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "c4ab74d920f3c9e0402c265a614173c4e68fb0f0019b8070ff0707d0d1b41c7a",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-40459f1b-7aaf-4777-95a9-58556fcde604",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/bdayt-al-khir-used-cars/branding/generated-on-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "99b9bb6e678c47f71a485a2029922260847ef43b4131c1463aed7aefdc25602b",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-40459f1b-7aaf-4777-95a9-58556fcde604",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/bdayt-al-khir-used-cars/branding/generated-on-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T21:26:51.301Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "a405d416846b11dba9f618124972b62b8d271fc5f779a671c29b121bcf417caa",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-c01de7a4-503a-45f5-bf7a-d16a09112ab4",
+      "modelVersion": null
+    }
+  }
+}

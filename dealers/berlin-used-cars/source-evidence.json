@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "dealer": "berlin-used-cars",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/berlin-used-cars-trllc-sp",
+      "observedAt": "2026-10-19T20:00:18.885044Z",
+      "supports": [
+        "business-trading-name",
+        "public-business-phone",
+        "marketplace-location",
+        "dealer-catalogue"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7726-land-rover-range-rover-sport-30-v6-supercharged-at-awd-340-hp-hse",
+      "observedAt": "2026-10-19T20:00:18.885044Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7727-land-rover-range-rover-50-v8-supercharged-at-awd-565-hp-vogue-se",
+      "observedAt": "2026-10-19T20:00:18.885044Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7728-chevrolet-camaro-62-at-455-hp-zl1",
+      "observedAt": "2026-10-19T20:00:18.885044Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "research": {
+    "observedAt": "2026-10-19T20:00:18.885044Z",
+    "profileUrl": "https://licenseplate.ae/cars/dealer/berlin-used-cars-trllc-sp",
+    "profileSha256": "42c1a6462f462d88e860463957775935b8c89aa3ca72b06b0ffe02f7736a78cd",
+    "marketplaceTradingName": "Berlin Used Cars Tr.llc SP",
+    "classification": "public-marketplace-dealer-profile-and-listing-snapshot",
+    "directDealerPostingVerified": false,
+    "profileClaimed": false,
+    "limitation": "The named marketplace profile may be syndicated or automatically assembled. Seller-attributed listings are dated observations; current physical stock and direct dealer posting are not confirmed.",
+    "unknownFields": [
+      "public-business-email",
+      "owned-website",
+      "opening-hours"
+    ],
+    "stockSources": [
+      {
+        "id": "licenseplate-7726",
+        "url": "https://licenseplate.ae/cars/listing/7726-land-rover-range-rover-sport-30-v6-supercharged-at-awd-340-hp-hse",
+        "observedAt": "2026-10-19T20:00:18.885044Z",
+        "sha256": "de8836fcedb86f52a4309b0aa61f4b15274c122f152cd01fa0fca8f60ee34900",
+        "sellerName": "Berlin Used Cars Tr.llc SP",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/berlin-used-cars-trllc-sp"
+      },
+      {
+        "id": "licenseplate-7727",
+        "url": "https://licenseplate.ae/cars/listing/7727-land-rover-range-rover-50-v8-supercharged-at-awd-565-hp-vogue-se",
+        "observedAt": "2026-10-19T20:00:18.885044Z",
+        "sha256": "0afee497b71d29488d4c07f4921d635639fd0703c94da64f266e2cb09121af46",
+        "sellerName": "Berlin Used Cars Tr.llc SP",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/berlin-used-cars-trllc-sp"
+      },
+      {
+        "id": "licenseplate-7728",
+        "url": "https://licenseplate.ae/cars/listing/7728-chevrolet-camaro-62-at-455-hp-zl1",
+        "observedAt": "2026-10-19T20:00:18.885044Z",
+        "sha256": "6c9d1df20fb41b89501799b9fa0365741d5539f7bc05a319c67be6a011eb836f",
+        "sellerName": "Berlin Used Cars Tr.llc SP",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/berlin-used-cars-trllc-sp"
+      }
+    ],
+    "photoSources": [
+      {
+        "listingId": "licenseplate-7726",
+        "listingUrl": "https://licenseplate.ae/cars/listing/7726-land-rover-range-rover-sport-30-v6-supercharged-at-awd-340-hp-hse",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/land-rover-range-rover-sport-30-v6-supercharged-at-awd-340-hp-0-1789530620.webp",
+        "observedAt": "2026-10-19T20:00:18.885044Z",
+        "retainedPath": "dealer-stock/licenseplate-7726.webp",
+        "sha256": "3e0c61d8ebb1c407aece70427b197d9b6763ebd433c740a5233f88a954ded4b7",
+        "originalSha256": "fd6c03ad024a1ee6021ea68cc6b23af715b5c3124d34d038f2967f35b2095a43",
+        "bytes": 63526,
+        "width": 1066,
+        "height": 800,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      },
+      {
+        "listingId": "licenseplate-7727",
+        "listingUrl": "https://licenseplate.ae/cars/listing/7727-land-rover-range-rover-50-v8-supercharged-at-awd-565-hp-vogue-se",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/land-rover-range-rover-50-v8-supercharged-at-awd-565-hp-0-1789530625.webp",
+        "observedAt": "2026-10-19T20:00:18.885044Z",
+        "retainedPath": "dealer-stock/licenseplate-7727.webp",
+        "sha256": "68dbff1835066999ccbd215ec4448e7bc64928cd3adbd228724929f5ea6362c6",
+        "originalSha256": "139d90a2625edc14e1d5d8e88f4a5c848d264fe7b3d887c297c48a7759410b3f",
+        "bytes": 89966,
+        "width": 1066,
+        "height": 800,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      },
+      {
+        "listingId": "licenseplate-7728",
+        "listingUrl": "https://licenseplate.ae/cars/listing/7728-chevrolet-camaro-62-at-455-hp-zl1",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/chevrolet-camaro-62-at-455-hp-0-1789530631.webp",
+        "observedAt": "2026-10-19T20:00:18.885044Z",
+        "retainedPath": "dealer-stock/licenseplate-7728.webp",
+        "sha256": "d675b490fc891a963f116de02629c3fe54da794be2053d711c4132594c64af5b",
+        "originalSha256": "aa242f8757a31ae6d74afcef59f7dbcceac99d705e6156f480d344ccfd8a9f78",
+        "bytes": 107026,
+        "width": 1066,
+        "height": 800,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      }
+    ]
+  },
+  "stockVisualReview": {
+    "reviewedAt": "2026-10-19T20:25:00Z",
+    "reviewed": true,
+    "scope": "All retained photos, viewed in seven-dealer contact sheets",
+    "result": "Vehicle photos match listing types; no price values, named-person contacts or obvious unrelated photos observed."
+  }
+}

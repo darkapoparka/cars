@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "dealer": "hamsat-waeed-used-cars",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:00:22.311496Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "licenseplate-6694",
+      "title": "2025 BYD FangChengBao Leopard 5",
+      "make": "BYD",
+      "model": "FangChengBao Leopard 5",
+      "year": 2025,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-6694.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/6694-byd-fangchengbao-leopard-5-15-cvt-awd-687-hp-ultra",
+      "observedAt": "2026-10-19T20:00:22.311496Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Crossover",
+      "transmission": "CVT",
+      "fuel": "Hybrid",
+      "color": "Green",
+      "mileageValue": 7500,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "licenseplate-6817",
+      "title": "2023 Toyota Land Cruiser",
+      "make": "Toyota",
+      "model": "Land Cruiser",
+      "year": 2023,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-6817.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/6817-toyota-land-cruiser-35-at-4wd-415-hp-vxr",
+      "observedAt": "2026-10-19T20:00:22.311496Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Crossover",
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "color": "White",
+      "mileageValue": 112000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "licenseplate-7027",
+      "title": "2023 Toyota Land Cruiser",
+      "make": "Toyota",
+      "model": "Land Cruiser",
+      "year": 2023,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-7027.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/7027-toyota-land-cruiser-35-at-4wd-415-hp-exr",
+      "observedAt": "2026-10-19T20:00:22.311496Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Crossover",
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "color": "White",
+      "mileageValue": 72000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

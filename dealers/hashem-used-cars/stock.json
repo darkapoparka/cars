@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "dealer": "hashem-used-cars",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:00:22.330459Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "licenseplate-7016",
+      "title": "2022 Toyota Land Cruiser",
+      "make": "Toyota",
+      "model": "Land Cruiser",
+      "year": 2022,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-7016.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/7016-toyota-land-cruiser-35-at-4wd-415-hp-gxr",
+      "observedAt": "2026-10-19T20:00:22.330459Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Crossover",
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "color": "Black",
+      "mileageValue": 48000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "licenseplate-7286",
+      "title": "2020 Toyota Land Cruiser Prado",
+      "make": "Toyota",
+      "model": "Land Cruiser Prado",
+      "year": 2020,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-7286.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/7286-toyota-land-cruiser-prado-40-at-271-hp-vxr",
+      "observedAt": "2026-10-19T20:00:22.330459Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Crossover",
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "color": "White",
+      "mileageValue": 56000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "licenseplate-7282",
+      "title": "2023 Toyota Rush",
+      "make": "Toyota",
+      "model": "Rush",
+      "year": 2023,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-7282.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/7282-toyota-rush-15-at-104-hp-gx",
+      "observedAt": "2026-10-19T20:00:22.330459Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Crossover",
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "color": "White",
+      "mileageValue": 51000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

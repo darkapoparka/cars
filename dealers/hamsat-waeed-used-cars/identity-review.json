@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T20:13:05.504Z",
+  "dealer": "hamsat-waeed-used-cars",
+  "dealerId": "ae-sharjah-hamsat-waeed-used-cars",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "method": "Exact retained registry, clients index and compact-pack identity comparison, followed by current public named dealer catalogue and seller-bound listings. Marketplace profile name variants are not separate identities. No dealer approval is implied.",
+  "sources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/hamsat-waeed-used-cars",
+      "observedAt": "2026-10-19T20:00:22.311496Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/6694-byd-fangchengbao-leopard-5-15-cvt-awd-687-hp-ultra",
+      "observedAt": "2026-10-19T20:00:22.311496Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/6817-toyota-land-cruiser-35-at-4wd-415-hp-vxr",
+      "observedAt": "2026-10-19T20:00:22.311496Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7027-toyota-land-cruiser-35-at-4wd-415-hp-exr",
+      "observedAt": "2026-10-19T20:00:22.311496Z"
+    }
+  ]
+}

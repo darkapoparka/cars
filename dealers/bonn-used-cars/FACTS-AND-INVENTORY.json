@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "dealer": "bonn-used-cars",
+  "businessFacts": "business-facts.json",
+  "stock": "stock.json",
+  "inventoryKind": "dated-listing-snapshot",
+  "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+  "sources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/bonn-used-cars",
+      "observedAt": "2026-10-19T20:00:18.902177Z",
+      "supports": [
+        "business-trading-name",
+        "public-business-phone",
+        "marketplace-location",
+        "dealer-catalogue"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7478-rox-01-15-at-awd-476-hp-vip",
+      "observedAt": "2026-10-19T20:00:18.902177Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7487-mercedes-benz-e-class-20-at-4wd-255-hp-e-300-4matic",
+      "observedAt": "2026-10-19T20:00:18.902177Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/8049-land-rover-defender-hybrid-phev-defender-p400e-with-404-110-hse-p400",
+      "observedAt": "2026-10-19T20:00:18.902177Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    }
+  ]
+}

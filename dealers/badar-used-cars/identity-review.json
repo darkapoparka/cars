@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T20:12:59.349Z",
+  "dealer": "badar-used-cars",
+  "dealerId": "ae-sharjah-badar-used-cars",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "method": "Exact retained registry, clients index and compact-pack identity comparison, followed by current public named dealer catalogue and seller-bound listings. Marketplace profile name variants are not separate identities. No dealer approval is implied.",
+  "sources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/badar-used-cars-exhb",
+      "observedAt": "2026-10-19T20:00:18.245418Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7253-gmc-yukon-62-at-4wd-420-hp-denali",
+      "observedAt": "2026-10-19T20:00:18.245418Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7251-kia-ev9-at-218-hp-air",
+      "observedAt": "2026-10-19T20:00:18.245418Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7256-chevrolet-silverado-53-at-rwd-355-hp-lt-trail-boss",
+      "observedAt": "2026-10-19T20:00:18.245418Z"
+    }
+  ]
+}
