@@ -259,7 +259,7 @@ jobs:
         slug: ${{ fromJSON(needs.plan.outputs.dealers) }}
     env:
       DEALER_SLUG: ${{ matrix.slug }}
-      PLAYWRIGHT_BROWSERS_PATH: ${{ runner.temp }}/cars-dealer-pack-browsers
+      PLAYWRIGHT_BROWSERS_PATH: /tmp/cars-dealer-pack-browsers
       CARS_QA_RESOLVE_FROM: ${{ github.workspace }}/runtime/dealer-pack-tools/package.json
       CARS_WRANGLER_ROOT: ${{ github.workspace }}/runtime/dealer-pack-compiler-tools
     steps:
