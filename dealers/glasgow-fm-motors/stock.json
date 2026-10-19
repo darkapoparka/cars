@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "glasgow-fm-motors",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T17:36:00.595114Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "vehicle-1",
+      "title": "2011 Nissan Juke",
+      "make": "Nissan",
+      "model": "Juke",
+      "year": 2011,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/vehicle-1.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/920054683827",
+      "observedAt": "2026-10-19T17:36:00.595114Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 113000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "vehicle-2",
+      "title": "2009 Toyota AYGO",
+      "make": "Toyota",
+      "model": "AYGO",
+      "year": 2009,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/vehicle-2.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/920053774208",
+      "observedAt": "2026-10-19T17:36:00.595114Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 66000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "vehicle-3",
+      "title": "2016 Nissan Qashqai",
+      "make": "Nissan",
+      "model": "Qashqai",
+      "year": 2016,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/vehicle-3.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/920048272967",
+      "observedAt": "2026-10-19T17:36:00.595114Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 106000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

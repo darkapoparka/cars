@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T18:17:49.651Z",
+  "dealer": "bury-fairfield-car-centre",
+  "dealerId": "gb-bury-fairfield-car-centre",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "method": "Read-only exact retained registry and clients identity comparison by lead ID, normalized trading name and normalized slug; no match. Public catalogue identity corroborated on the observation date.",
+  "sources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/M-Kars?menu=1",
+      "observedAt": "2026-10-19T17:36:01.580200Z",
+      "supports": [
+        "business-name",
+        "public-business-contact",
+        "business-location",
+        "current-listing-snapshot"
+      ]
+    },
+    {
+      "url": "https://www.cargurus.co.uk/Cars/m-Fairfield-Car-Centre-sp522871",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "address-conflict"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "dealer": "coventry-cars-and-van",
+  "missing": [
+    {
+      "field": "business.website",
+      "required": false,
+      "reason": "No usable verified public business value obtained from the reviewed sources."
+    },
+    {
+      "field": "prices",
+      "required": false,
+      "reason": "All listing prices are omitted under the public-repository scope."
+    }
+  ],
+  "blocking": []
+}

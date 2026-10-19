@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "dealer": "cardiff-fusion-autos",
+  "reviewedAt": "2026-10-19T20:10:55.129003Z",
+  "scope": "Complete public advert descriptions and available vehicle-history panels for the selected stock samples. No dealer contact or independent vehicle inspection.",
+  "records": [
+    {
+      "listingId": "vehicle-1",
+      "sourceUrl": "https://www.ebay.co.uk/itm/128118747071",
+      "observedAt": "2026-10-19T20:03:57.153691Z",
+      "httpStatus": 200,
+      "pageSha256": "965b649afa2ecb84edbec327563f81766eb56772e43a2b188db6f976bcd736b9",
+      "descriptionUrl": "https://itm.ebaydesc.com/itmdesc/128118747071?t=1791315442000&category=122202&seller=fusionautos&excSoj=1&ver=1&excTrk=1&lsite=3&ittenable=false&domain=ebay.com&descgauge=1&cspheader=1&oneClk=2&secureDesc=1&lang=en",
+      "descriptionSha256": "ec5d8bd34910177185b26e6c2bae6768083eeb40c2727cef792d9c250210e151",
+      "embeddedHistoryChecked": false,
+      "descriptionResult": "full-public-advert-reviewed",
+      "retained": true,
+      "finding": "No additional material condition or history disclosure identified in the reviewed public advert; this is not an independent vehicle inspection or history certificate."
+    },
+    {
+      "listingId": "vehicle-2",
+      "sourceUrl": "https://www.ebay.co.uk/itm/128109904918",
+      "observedAt": "2026-10-19T20:03:57.247574Z",
+      "httpStatus": 200,
+      "pageSha256": "64046c7b618d0b41406193baaa512824cbe95cd67dc5aedb36b0aa8e0bfdb2db",
+      "descriptionUrl": "https://itm.ebaydesc.com/itmdesc/128109904918?t=1790896669000&category=9873&seller=fusionautos&excSoj=1&ver=1&excTrk=1&lsite=3&ittenable=false&domain=ebay.com&descgauge=1&cspheader=1&oneClk=2&secureDesc=1&lang=en",
+      "descriptionSha256": "9db4bd0773c26e7cd62587d76fbef8ff260814c5dd0209efd75c12cff656c7ec",
+      "embeddedHistoryChecked": false,
+      "descriptionResult": "full-public-advert-reviewed",
+      "retained": true,
+      "finding": "No additional material condition or history disclosure identified in the reviewed public advert; this is not an independent vehicle inspection or history certificate."
+    },
+    {
+      "listingId": "vehicle-3",
+      "sourceUrl": "https://www.ebay.co.uk/itm/128109885647",
+      "observedAt": "2026-10-19T20:03:57.676029Z",
+      "httpStatus": 200,
+      "pageSha256": "e317510980ee578281f3f29906b0ce45eaa39077492f5d5194a701ffe10c5c24",
+      "descriptionUrl": "https://itm.ebaydesc.com/itmdesc/128109885647?t=1790895311000&category=18206&seller=fusionautos&excSoj=1&ver=1&excTrk=1&lsite=3&ittenable=false&domain=ebay.com&descgauge=1&cspheader=1&oneClk=2&secureDesc=1&lang=en",
+      "descriptionSha256": "adba267361f123c97e7d1df468d2801a43a78cfe6b271cc2d358d3aa95bb47b9",
+      "embeddedHistoryChecked": false,
+      "descriptionResult": "full-public-advert-reviewed",
+      "retained": true,
+      "finding": "The public eBay history panel shows a Category S/N advisory without identifying which category applies. The seller also reports rear sill repairs. Repair quality and current condition are unverified."
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "slug": "dukinfield-r-racer",
+  "dealerId": "gb-dukinfield-r-racer",
+  "business": {
+    "name": "R Racer Ltd",
+    "city": "Dukinfield",
+    "region": "Cheshire",
+    "countryCode": "GB",
+    "currency": "GBP",
+    "distanceUnit": "mi",
+    "locale": "en-GB",
+    "address": "Tower Mill, Park Road, Dukinfield, Cheshire, SK16 5NA",
+    "phone": "+447456414079",
+    "phoneDisplay": "(07456) 414079",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://www.autotrader.co.uk/dealers/cheshire/dukinfield/r-racer-ltd-10046816?refresh=true",
+    "hours": "Monday–Sunday 10:00–18:00. Viewings by appointment.",
+    "sourceUrl": "https://www.autotrader.co.uk/dealers/cheshire/dukinfield/r-racer-ltd-10046816?refresh=true",
+    "observedAt": "2026-10-19T17:36:00.262636Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/cheshire/dukinfield/r-racer-ltd-10046816?refresh=true",
+      "observedAt": "2026-10-19T17:36:00.262636Z",
+      "supports": [
+        "business-name",
+        "public-business-contact",
+        "business-location",
+        "current-listing-snapshot"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "slug": "glasgow-dalmarnock-car-sales",
+  "dealerId": "gb-glasgow-dalmarnock-car-sales",
+  "business": {
+    "name": "Dalmarnock Car Sales",
+    "city": "Rutherglen, Glasgow",
+    "region": "Scotland",
+    "countryCode": "GB",
+    "currency": "GBP",
+    "distanceUnit": "mi",
+    "locale": "en-GB",
+    "address": "5 Downiebrae Road Rutherglen Glasgow Glasgow (City of) G73 1PW",
+    "phone": "+441416119843",
+    "phoneDisplay": "+441416119843",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://showroom.ebaymotorspro.co.uk/Aman-Motors",
+    "hours": "Viewings by appointment. Confirm opening times with the business.",
+    "sourceUrl": "https://showroom.ebaymotorspro.co.uk/Aman-Motors",
+    "observedAt": "2026-10-19T17:36:00.712402Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Aman-Motors",
+      "observedAt": "2026-10-19T17:36:00.712402Z",
+      "supports": [
+        "business-name",
+        "public-business-contact",
+        "business-location",
+        "current-listing-snapshot"
+      ]
+    },
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Aman-Motors?aboutUs=&expandOpeningHours=1&expandAboutUs=1",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "opening-hours"
+      ]
+    }
+  ]
+}

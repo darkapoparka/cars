@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "dealer": "dukinfield-r-racer",
+  "reviewedAt": "2026-10-19T20:10:55.129003Z",
+  "scope": "Complete public advert descriptions and available vehicle-history panels for the selected stock samples. No dealer contact or independent vehicle inspection.",
+  "records": [
+    {
+      "listingId": "vehicle-1",
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202610076739349",
+      "observedAt": "2026-10-19T20:03:53.025390Z",
+      "httpStatus": 200,
+      "pageSha256": "ff3959b411a52e5b35d63effd183bd0366fd74f18549ca531ef43b094504cfb3",
+      "descriptionUrl": null,
+      "descriptionSha256": null,
+      "embeddedHistoryChecked": true,
+      "descriptionResult": "full-public-advert-reviewed",
+      "retained": true,
+      "finding": "No additional material condition or history disclosure identified in the reviewed public advert; this is not an independent vehicle inspection or history certificate."
+    },
+    {
+      "listingId": "vehicle-2",
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202610146989471",
+      "observedAt": "2026-10-19T20:03:53.106031Z",
+      "httpStatus": 200,
+      "pageSha256": "9ddf5569c4972c9c9679af76bd6823b39efa66d0ed9368361e1a842040bb5cbd",
+      "descriptionUrl": null,
+      "descriptionSha256": null,
+      "embeddedHistoryChecked": true,
+      "descriptionResult": "full-public-advert-reviewed",
+      "retained": true,
+      "finding": "No additional material condition or history disclosure identified in the reviewed public advert; this is not an independent vehicle inspection or history certificate."
+    },
+    {
+      "listingId": "vehicle-3",
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202608145111222",
+      "observedAt": "2026-10-19T20:03:53.149187Z",
+      "httpStatus": 200,
+      "pageSha256": "f94169c9b1797e6eb985225771384a8d13480e2333c1ce17cc8a617ae0077a1f",
+      "descriptionUrl": null,
+      "descriptionSha256": null,
+      "embeddedHistoryChecked": true,
+      "descriptionResult": "full-public-advert-reviewed",
+      "retained": true,
+      "finding": "No additional material condition or history disclosure identified in the reviewed public advert; this is not an independent vehicle inspection or history certificate."
+    }
+  ]
+}

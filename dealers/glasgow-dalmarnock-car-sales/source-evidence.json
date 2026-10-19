@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "dealer": "glasgow-dalmarnock-car-sales",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uk.json",
+    "sha256": "6cd8d365586f9a5d5131fe4b1d50baede7de91ab384a135017c25367298b07c4"
+  },
+  "publicSources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Aman-Motors",
+      "observedAt": "2026-10-19T17:36:00.712402Z",
+      "supports": [
+        "business-name",
+        "public-business-contact",
+        "business-location",
+        "current-listing-snapshot"
+      ]
+    },
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Aman-Motors?aboutUs=&expandOpeningHours=1&expandAboutUs=1",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "opening-hours"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "dealerId": "gb-glasgow-dalmarnock-car-sales",
+  "observedAt": "2026-10-19T17:36:00.712402Z",
+  "primaryFetch": {
+    "url": "https://showroom.ebaymotorspro.co.uk/Aman-Motors",
+    "status": 200,
+    "observedAt": "2026-10-19T17:36:00.712402Z",
+    "htmlSha256": "7484ae26a0b04636477e610370816f3d4f567c42139bf3b8cf830feefe1f0cb0"
+  },
+  "stockPhotos": [
+    {
+      "recordId": "vehicle-1",
+      "catalogueUrl": "https://showroom.ebaymotorspro.co.uk/Aman-Motors",
+      "listingUrl": "https://www.ebay.co.uk/itm/860040919554",
+      "observedAt": "2026-10-19T17:36:00.712402Z",
+      "originalImageUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/5kcAAeSwVVVqzkfl/$_57.JPG",
+      "resolvedImageUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/5kcAAeSwVVVqzkfl/$_57.JPG",
+      "originalSha256": "5a16fd73e1a8ce4dbda15e5a605101e07059fa8b9f61589b333f7ec66ef93363",
+      "originalDimensions": [
+        1600,
+        1200
+      ],
+      "retainedPath": "dealer-stock/vehicle-1.jpg",
+      "retainedSha256": "3c099511146046c09ceb41fd3de0b28adbe2149c1cfd63bb9cb867768ac63179",
+      "retainedDimensions": [
+        1280,
+        960
+      ],
+      "retainedBytes": 181440,
+      "processing": "EXIF orientation; resize only if over 1280 pixels; JPEG compression; metadata omitted. No content alterations."
+    },
+    {
+      "recordId": "vehicle-3",
+      "catalogueUrl": "https://showroom.ebaymotorspro.co.uk/Aman-Motors",
+      "listingUrl": "https://www.ebay.co.uk/itm/860011037926",
+      "observedAt": "2026-10-19T17:36:00.712402Z",
+      "originalImageUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/GRIAAeSwTgtq1dmE/$_57.JPG",
+      "resolvedImageUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/GRIAAeSwTgtq1dmE/$_57.JPG",
+      "originalSha256": "812ba6ce0b2cc2d77d18be8ae840ab4747bf29d165692738fa3a85bf1bc9955b",
+      "originalDimensions": [
+        1600,
+        1200
+      ],
+      "retainedPath": "dealer-stock/vehicle-3.jpg",
+      "retainedSha256": "e354c83e3cb282e83fd4ade5245e88f368bd391b2f5bb5e95f23076c80fcefbd",
+      "retainedDimensions": [
+        1280,
+        960
+      ],
+      "retainedBytes": 199011,
+      "processing": "EXIF orientation; resize only if over 1280 pixels; JPEG compression; metadata omitted. No content alterations."
+    }
+  ],
+  "publicResearchSummary": [
+    "Public vehicle seller confirmed from the current dealer catalogue.",
+    "Existing registry and clients identities checked against the exact lead and normalized trading names; no live-fleet match found.",
+    "Listing availability is not confirmed; the dated stock disclosure and price omission are retained.",
+    "A personal-looking email address was omitted from the public pack; its value is not retained.",
+    "The published Sunday time is ambiguous; exact clock hours omitted and appointment requirement retained."
+  ],
+  "stockHistoryReview": "stock-history-review.json"
+}

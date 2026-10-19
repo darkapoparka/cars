@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "dealer": "burton-trent-motor-shop",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uk.json",
+    "sha256": "6cd8d365586f9a5d5131fe4b1d50baede7de91ab384a135017c25367298b07c4"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/staffordshire/burton-on-trent/trent-motor-shop-10037753",
+      "observedAt": "2026-10-19T17:36:00.062141Z",
+      "supports": [
+        "business-name",
+        "public-business-contact",
+        "business-location",
+        "current-listing-snapshot"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "dealerId": "gb-burton-trent-motor-shop",
+  "observedAt": "2026-10-19T17:36:00.062141Z",
+  "primaryFetch": {
+    "url": "https://www.autotrader.co.uk/dealers/staffordshire/burton-on-trent/trent-motor-shop-10037753",
+    "status": 200,
+    "observedAt": "2026-10-19T17:36:00.062141Z",
+    "htmlSha256": "9007d2cd724276894cbbcbf01372c3aa737fbe6d68c25a436b714c574bd39eff"
+  },
+  "stockPhotos": [
+    {
+      "recordId": "vehicle-1",
+      "catalogueUrl": "https://www.autotrader.co.uk/dealers/staffordshire/burton-on-trent/trent-motor-shop-10037753",
+      "listingUrl": "https://www.autotrader.co.uk/car-details/202607104083242",
+      "observedAt": "2026-10-19T17:36:00.062141Z",
+      "originalImageUrl": "https://m.atcdn.co.uk/a/media/w1280/7ee6f832af094f9e8e78a8d067dd0d16.jpg",
+      "resolvedImageUrl": "https://m.atcdn.co.uk/a/media/w1280/7ee6f832af094f9e8e78a8d067dd0d16.jpg",
+      "originalSha256": "a9515d4a0be9cac48db00af89e2b9ba9419d961f8e5f868c14586f7092caa846",
+      "originalDimensions": [
+        1280,
+        960
+      ],
+      "retainedPath": "dealer-stock/vehicle-1.jpg",
+      "retainedSha256": "73ca9d455bb164125a8b6a3deb28e74cfbabebd432238b14d627f6b0619790b0",
+      "retainedDimensions": [
+        1280,
+        960
+      ],
+      "retainedBytes": 192941,
+      "processing": "EXIF orientation; resize only if over 1280 pixels; JPEG compression; metadata omitted. No content alterations."
+    },
+    {
+      "recordId": "vehicle-2",
+      "catalogueUrl": "https://www.autotrader.co.uk/dealers/staffordshire/burton-on-trent/trent-motor-shop-10037753",
+      "listingUrl": "https://www.autotrader.co.uk/car-details/202610197135361",
+      "observedAt": "2026-10-19T17:36:00.062141Z",
+      "originalImageUrl": "https://m.atcdn.co.uk/a/media/w1280/9059f440bbf24ca8b36a504c61c6a7ad.jpg",
+      "resolvedImageUrl": "https://m.atcdn.co.uk/a/media/w1280/9059f440bbf24ca8b36a504c61c6a7ad.jpg",
+      "originalSha256": "ab24676e053cf4a0f5926a8b1ba459c206f42cd3d81dc9cc6a931f6c34aa56b7",
+      "originalDimensions": [
+        1280,
+        960
+      ],
+      "retainedPath": "dealer-stock/vehicle-2.jpg",
+      "retainedSha256": "f164cda1eb823a9144153bded3dea58cc709e33cd5087e5a3389d84ed95401e2",
+      "retainedDimensions": [
+        1280,
+        960
+      ],
+      "retainedBytes": 194013,
+      "processing": "EXIF orientation; resize only if over 1280 pixels; JPEG compression; metadata omitted. No content alterations."
+    },
+    {
+      "recordId": "vehicle-3",
+      "catalogueUrl": "https://www.autotrader.co.uk/dealers/staffordshire/burton-on-trent/trent-motor-shop-10037753",
+      "listingUrl": "https://www.autotrader.co.uk/car-details/202608145099452",
+      "observedAt": "2026-10-19T17:36:00.062141Z",
+      "originalImageUrl": "https://m.atcdn.co.uk/a/media/w1280/18e5a50304254f2c8fa38d7fb075f10f.jpg",
+      "resolvedImageUrl": "https://m.atcdn.co.uk/a/media/w1280/18e5a50304254f2c8fa38d7fb075f10f.jpg",
+      "originalSha256": "d52b8fce1429587056aafaa71619697ebb5ce4ce802cd94ac4873eb1110e6bd6",
+      "originalDimensions": [
+        1280,
+        693
+      ],
+      "retainedPath": "dealer-stock/vehicle-3.jpg",
+      "retainedSha256": "e7fce537dda9e63c78c183c4511e8730c8a95c159db553c578434912b22060bf",
+      "retainedDimensions": [
+        1280,
+        693
+      ],
+      "retainedBytes": 160985,
+      "processing": "EXIF orientation; resize only if over 1280 pixels; JPEG compression; metadata omitted. No content alterations."
+    }
+  ],
+  "publicResearchSummary": [
+    "Public vehicle seller confirmed from the current dealer catalogue.",
+    "Existing registry and clients identities checked against the exact lead and normalized trading names; no live-fleet match found.",
+    "Listing availability is not confirmed; the dated stock disclosure and price omission are retained."
+  ],
+  "stockHistoryReview": "stock-history-review.json"
+}

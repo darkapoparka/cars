@@ -1,0 +1,181 @@
+{
+  "schemaVersion": 1,
+  "dealer": "glasgow-dalmarnock-car-sales",
+  "dealerId": "gb-glasgow-dalmarnock-car-sales",
+  "status": "reviewed",
+  "realLogoFirst": true,
+  "creationMethod": "imagegen-proposal",
+  "logoKind": "proposal",
+  "dealerApproved": false,
+  "approvalStatus": "independent-proposal-not-dealer-approved",
+  "observedAt": "2026-10-19",
+  "sourceLogoUrl": null,
+  "researchConclusion": "No usable real logo was obtained in the bounded public profile, catalogue and available source checks. This is an independent proposal and is not presented as the dealer’s established identity.",
+  "checkedSources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Aman-Motors",
+      "observedAt": "2026-10-19",
+      "result": "Public dealer identity, current advertised vehicles and available brand artwork reviewed."
+    },
+    {
+      "url": "https://www.cazoo.co.uk/dealers/rutherglen-motor-company-71024/",
+      "observedAt": "2026-10-19T17:39:43.809941Z",
+      "result": "Public profile or business source checked; unsupported claims and personal-looking contacts were excluded."
+    },
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Aman-Motors?aboutUs=&expandOpeningHours=1&expandAboutUs=1",
+      "observedAt": "2026-10-19T17:39:45.820550Z",
+      "result": "Public profile or business source checked; unsupported claims and personal-looking contacts were excluded."
+    },
+    {
+      "url": "https://cdn.autoexposure.co.uk/motorscdn/motors/dealer-images/71024/motors-car-details-logo.jpg",
+      "observedAt": "2026-10-19",
+      "result": "The read operation timed out"
+    }
+  ],
+  "originals": [],
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "id": "exec-3871c23a-98f3-47c9-8eda-5a59c0c7f19b",
+    "modelVersion": null,
+    "prompt": "Create ONE finished transparent horizontal UK dealership logo proposal with exact text DALMARNOCK on the first line and CAR SALES. An original clean D monogram formed by a curved road, with one simple negative-space inset; bold compact humanist sans DALMARNOCK above CAR SALES. No coat of arms or manufacturer car badge. Compact isolated icon at far LEFT occupies about 22 percent width; wordmark to right occupies 65 percent; wide fully transparent gap between icon and lettering so icon can be cropped separately. Flat #153545 ink fills letters and forms, with a bold clean solid WHITE KEYLINE around each outside edge and counter. White keyline is integral to this dual-contrast transparent identity so it reads on white, charcoal and red backgrounds. Clear professional small-size legibility, restrained precise typography, no other text, no city unless specified in the exact name. No background rectangle, shadows, gradient, texture, grunge, distress, 3D, metallic effect, glow, mockup or photos. True transparent alpha margins on a wide 3:1 canvas; exactly one complete logo."
+  },
+  "generationReferences": [],
+  "workingLogoPath": "branding/generated-master.png",
+  "usageStatus": "public-preview-only",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T18:56:42.959980Z",
+    "master": {
+      "path": "branding/generated-master.png",
+      "sha256": "6581eeada470eb871c919b8dfadf5358db5b59ac1d485c1b0b85ab900644864e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-3871c23a-98f3-47c9-8eda-5a59c0c7f19b",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "156aba5f26deedbdf955321db386cb92cc2e01b53e26f9ceebf3a15ceaab9ed3",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-3871c23a-98f3-47c9-8eda-5a59c0c7f19b",
+        "modelVersion": null
+      },
+      "derivation": {
+        "operation": "rectangular-crop-without-recolouring",
+        "sourcePath": "branding/generated-master.png",
+        "sourceSha256": "6581eeada470eb871c919b8dfadf5358db5b59ac1d485c1b0b85ab900644864e",
+        "bounds": {
+          "left": 0,
+          "top": 0,
+          "width": 597,
+          "height": 724
+        },
+        "reason": "Isolate the separately generated compact icon; all retained pixels come from the named master generation."
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-on-dark.png",
+      "sha256": "53708587d47ed8496e8a413a52903e88a8fb9d88f86a4ba3999f23a58922f9f2",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-8749ecce-5b48-442f-8dae-d09ec24fb547",
+        "modelVersion": null
+      },
+      "derivation": {
+        "operation": "rectangular-crop-without-recolouring",
+        "sourcePath": "branding/generated-on-dark.png",
+        "sourceSha256": "0ede549632a2f8077e8a22f2c4bf0d22d36f000b333e1344bedfc6c586598730",
+        "bounds": {
+          "left": 0,
+          "top": 0,
+          "width": 597,
+          "height": 724
+        },
+        "reason": "Isolate the separately generated compact icon; all retained pixels come from the named master generation."
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-master.png",
+        "sha256": "6581eeada470eb871c919b8dfadf5358db5b59ac1d485c1b0b85ab900644864e",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-3871c23a-98f3-47c9-8eda-5a59c0c7f19b",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "0ede549632a2f8077e8a22f2c4bf0d22d36f000b333e1344bedfc6c586598730",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-8749ecce-5b48-442f-8dae-d09ec24fb547",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "0ede549632a2f8077e8a22f2c4bf0d22d36f000b333e1344bedfc6c586598730",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-8749ecce-5b48-442f-8dae-d09ec24fb547",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113",
+          "#101820"
+        ],
+        "onAccent": [
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ]
+      },
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "notes": "Visually reviewed at 120px and 180px wordmark widths on all six listed existing template backgrounds. Correct trading-name spelling, recognisable motif, sufficient contrast and transparent backgrounds verified. Genuine pale-silver generated variants preserve solid fills on dark/accent surfaces where needed. Template palettes and composition are unchanged. No dealer approval is claimed."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "widths": [
+        32,
+        64,
+        96
+      ],
+      "notes": "Visually reviewed at 32px, 64px and 96px on all six existing template backgrounds. The compact symbol remains recognisable without the full wordmark. Separately generated compact symbols replace overlapping text fragments for Thornton Motors, Yorkshire Car Company and Auto Club. No dealer approval is claimed."
+    },
+    "compactMarkStatus": "independent-proposal-not-dealer-approved"
+  },
+  "generationVariants": [
+    {
+      "role": "onDark-and-onAccent",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-8749ecce-5b48-442f-8dae-d09ec24fb547",
+        "modelVersion": null
+      },
+      "prompt": "Edit this exact attached dealership logo into its strong DARK-BACKGROUND VARIANT. Preserve exact geometry, icon, letters, wordmark spelling, line arrangement, proportions and spacing. Change ONLY the dark/navy interior ink of letters and compact icon strokes to SOLID OPAQUE PALE SILVER #d9e2ec. Retain any lime-green colour accent unchanged. Keep a strong smooth DARK CHARCOAL outer contour around every silver-filled form and the existing thin white outer keyline. Solid silver-filled letters, NEVER just hollow thin outline letters. Every pale silver shape must be uninterrupted flat opaque ink, no holes except the correct transparent counters. Background and gaps remain completely transparent. No speckles, missing patches, distress, texture, gradient, 3D, metallic lighting, glow, shadows, rectangle, extra text or mockup. One exact original horizontal logo with clean solid pale silver inside dark outlines, clear at small sizes on charcoal and red.",
+      "reference": {
+        "path": "branding/generated-master.png",
+        "sha256": "6581eeada470eb871c919b8dfadf5358db5b59ac1d485c1b0b85ab900644864e",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-3871c23a-98f3-47c9-8eda-5a59c0c7f19b",
+          "modelVersion": null
+        }
+      }
+    }
+  ]
+}

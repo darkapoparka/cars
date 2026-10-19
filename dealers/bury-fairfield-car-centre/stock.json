@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "bury-fairfield-car-centre",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T17:36:01.580200Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "vehicle-1",
+      "title": "2012 Honda CR-V",
+      "make": "Honda",
+      "model": "CR-V",
+      "year": 2012,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/vehicle-1.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/307227911147",
+      "observedAt": "2026-10-19T17:36:01.580200Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 154000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "vehicle-2",
+      "title": "2009 Land Rover Range Rover Sport",
+      "make": "Land Rover",
+      "model": "Range Rover Sport",
+      "year": 2009,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/vehicle-2.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/307216918410",
+      "observedAt": "2026-10-19T17:36:01.580200Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 115000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "vehicle-3",
+      "title": "2010 Mercedes-Benz C Class",
+      "make": "Mercedes-Benz",
+      "model": "C Class",
+      "year": 2010,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/vehicle-3.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/307220727436",
+      "observedAt": "2026-10-19T17:36:01.580200Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 121000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

@@ -1,0 +1,181 @@
+{
+  "schemaVersion": 1,
+  "dealer": "dukinfield-r-racer",
+  "dealerId": "gb-dukinfield-r-racer",
+  "status": "reviewed",
+  "realLogoFirst": true,
+  "creationMethod": "imagegen-proposal",
+  "logoKind": "proposal",
+  "dealerApproved": false,
+  "approvalStatus": "independent-proposal-not-dealer-approved",
+  "observedAt": "2026-10-19",
+  "sourceLogoUrl": null,
+  "researchConclusion": "No usable real logo was obtained in the bounded public profile, catalogue and available source checks. This is an independent proposal and is not presented as the dealer’s established identity.",
+  "checkedSources": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/cheshire/dukinfield/r-racer-ltd-10046816?refresh=true",
+      "observedAt": "2026-10-19",
+      "result": "Public dealer identity, current advertised vehicles and available brand artwork reviewed."
+    },
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/R-racer-ltd",
+      "observedAt": "2026-10-19T17:39:45.719035Z",
+      "result": "Public profile or business source checked; unsupported claims and personal-looking contacts were excluded."
+    }
+  ],
+  "originals": [],
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "id": "exec-94bfadd4-0498-418b-ba3b-78b03cd725ea",
+    "modelVersion": null,
+    "prompt": "Create ONE finished production transparent dealership logo for R RACER LTD. Preserve the exact original dynamic slanted R icon and the exact R RACER LTD typography from the attached proposed logo. Retain dark charcoal ink, all spelling and geometry, with a restrained crisp white keyline added. No new icon, no new brand. Wide horizontal composition: compact separate icon at far LEFT, main wordmark at far RIGHT with ample FULLY TRANSPARENT separation for icon cropping. Dark ink-filled forms with a CLEAN SOLID WHITE outer KEYLINE around every letter, icon, outside edge and counter. This permanent dual-contrast treatment makes this exact transparent asset readable on white, charcoal and red. Flat crisp smooth vector-style identity, strong small-size legibility. No rectangle, white matte, background, texture, speckles, distress, 3D, gradient, metallic effect, shadows, glow, scenery, mockup or photos. Exactly one logo on a transparent 3:1 canvas with empty transparent margins."
+  },
+  "generationReferences": [
+    {
+      "path": "branding/proposal-reference.png",
+      "sha256": "31779ea40962c675c9f916892f52c43f7270fecb0bb09a7ccf93b6a47d2930a4",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-36468ad8-bfbc-4369-908d-bc5717504866",
+        "modelVersion": null
+      }
+    }
+  ],
+  "workingLogoPath": "branding/generated-master.png",
+  "usageStatus": "public-preview-only",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T18:56:42.959980Z",
+    "master": {
+      "path": "branding/generated-master.png",
+      "sha256": "89cb298020c2f6627424d521a47374793aa598c8c901bc08c486709be1113d67",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-94bfadd4-0498-418b-ba3b-78b03cd725ea",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "5bed0512a34b691732a90002a9536d88a2d89e560805768367f0f4821f1f70ea",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-94bfadd4-0498-418b-ba3b-78b03cd725ea",
+        "modelVersion": null
+      },
+      "derivation": {
+        "operation": "rectangular-crop-without-recolouring",
+        "sourcePath": "branding/generated-master.png",
+        "sourceSha256": "89cb298020c2f6627424d521a47374793aa598c8c901bc08c486709be1113d67",
+        "bounds": {
+          "left": 0,
+          "top": 0,
+          "width": 586,
+          "height": 724
+        },
+        "reason": "Isolate the separately generated compact icon; all retained pixels come from the named master generation."
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-on-dark.png",
+      "sha256": "cafbb5ce87c0c5f4aca8a9b401ac53fc693a971c968acabae8c4f6c695a0a3f6",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-710c30cb-6680-4fe0-b2db-5093e403d7f1",
+        "modelVersion": null
+      },
+      "derivation": {
+        "operation": "rectangular-crop-without-recolouring",
+        "sourcePath": "branding/generated-on-dark.png",
+        "sourceSha256": "c2d779f24e6a705487721cdd2b965c7a8b9eae07ea020872e0c7630e7179eb23",
+        "bounds": {
+          "left": 0,
+          "top": 0,
+          "width": 586,
+          "height": 724
+        },
+        "reason": "Isolate the separately generated compact icon; all retained pixels come from the named master generation."
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-master.png",
+        "sha256": "89cb298020c2f6627424d521a47374793aa598c8c901bc08c486709be1113d67",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-94bfadd4-0498-418b-ba3b-78b03cd725ea",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "c2d779f24e6a705487721cdd2b965c7a8b9eae07ea020872e0c7630e7179eb23",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-710c30cb-6680-4fe0-b2db-5093e403d7f1",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "c2d779f24e6a705487721cdd2b965c7a8b9eae07ea020872e0c7630e7179eb23",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-710c30cb-6680-4fe0-b2db-5093e403d7f1",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113",
+          "#101820"
+        ],
+        "onAccent": [
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ]
+      },
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "notes": "Visually reviewed at 120px and 180px wordmark widths on all six listed existing template backgrounds. Correct trading-name spelling, recognisable motif, sufficient contrast and transparent backgrounds verified. Genuine pale-silver generated variants preserve solid fills on dark/accent surfaces where needed. Template palettes and composition are unchanged. No dealer approval is claimed."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "widths": [
+        32,
+        64,
+        96
+      ],
+      "notes": "Visually reviewed at 32px, 64px and 96px on all six existing template backgrounds. The compact symbol remains recognisable without the full wordmark. Separately generated compact symbols replace overlapping text fragments for Thornton Motors, Yorkshire Car Company and Auto Club. No dealer approval is claimed."
+    },
+    "compactMarkStatus": "independent-proposal-not-dealer-approved"
+  },
+  "generationVariants": [
+    {
+      "role": "onDark-and-onAccent",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-710c30cb-6680-4fe0-b2db-5093e403d7f1",
+        "modelVersion": null
+      },
+      "prompt": "Edit this exact R RACER LTD logo into its strong dark-background colour variant. Preserve the original geometry, lettering, spacing, icon, proportions and exact spelling. Change ONLY the dark interior ink of each letter and monogram stroke to SOLID OPAQUE PALE SILVER #d9e2ec. Keep a strong smooth dark charcoal outer border around every silver letter and icon stroke; also keep the thin white outer keyline. This is light SILVER INK enclosed in a dark contour, with fully transparent gaps and counters, not thin outline lettering. Silver interiors must be uninterrupted flat colour; no missing patches, no texture, no distress, no speckles. The same complete original horizontal logo, precisely its existing icon and type layout. Transparent alpha outside logo and inside counters. No background, no rectangle, no shadows, no mockup, no photorealism, no gradient. One finished opaque light-silver-filled logo asset.",
+      "reference": {
+        "path": "branding/generated-master.png",
+        "sha256": "89cb298020c2f6627424d521a47374793aa598c8c901bc08c486709be1113d67",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-94bfadd4-0498-418b-ba3b-78b03cd725ea",
+          "modelVersion": null
+        }
+      }
+    }
+  ]
+}

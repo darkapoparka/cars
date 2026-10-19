@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-native-source-qualification-context",
+  "id": "dealer-pack-5d052ea-20261019",
+  "scope": "new-dealer-source-proposal",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T12:23:55Z",
+  "sourceCommit": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "globalReleaseApproval": false,
+  "approvedLockSha256": "3e5adccefdf04a97208bd1363f99a646a258eec96b80637100ddbdb15e60b3f1",
+  "candidateLockSha256": "d0c4ce3233f5dd3f92cff0ef18706472db85d30628b4ab3e217652a543bfa8d8",
+  "sourceDeltaReview": {
+    "reference": "docs/releases/dealer-pack-2026-10-19-source-review.json",
+    "sha256": "3c8b40dc6bdc3198c0e0997e8c520789d63747838af9507973b1f8b09e8f34c2",
+    "reviewedAt": "2026-10-19T12:23:55Z"
+  },
+  "dealer": "glasgow-fm-motors"
+}

@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "dealer": "chessington-land-of-autoz",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uk.json",
+    "sha256": "6cd8d365586f9a5d5131fe4b1d50baede7de91ab384a135017c25367298b07c4"
+  },
+  "publicSources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Hash-Mir?menu=1",
+      "observedAt": "2026-10-19T17:36:01.499945Z",
+      "supports": [
+        "business-name",
+        "public-business-contact",
+        "business-location",
+        "current-listing-snapshot"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "dealerId": "gb-chessington-land-of-autoz",
+  "observedAt": "2026-10-19T17:36:01.499945Z",
+  "primaryFetch": {
+    "url": "https://showroom.ebaymotorspro.co.uk/Hash-Mir?menu=1",
+    "status": 200,
+    "observedAt": "2026-10-19T17:36:01.499945Z",
+    "htmlSha256": "dc43e1b09d99238cdbd702dfebaab1049653c9d5c05a0abc7774e6afa273eccb"
+  },
+  "stockPhotos": [
+    {
+      "recordId": "vehicle-1",
+      "catalogueUrl": "https://showroom.ebaymotorspro.co.uk/Hash-Mir?menu=1",
+      "listingUrl": "https://www.ebay.co.uk/itm/860052490877",
+      "observedAt": "2026-10-19T17:36:01.499945Z",
+      "originalImageUrl": "https://i.ebayimg.com/00/s/MTAxOVgxNDI3/z/5-sAAeSwp6hq0xCB/$_57.JPG",
+      "resolvedImageUrl": "https://i.ebayimg.com/00/s/MTAxOVgxNDI3/z/5-sAAeSwp6hq0xCB/$_57.JPG",
+      "originalSha256": "15ed6be7fd3191ab752dc8ba10ca5a1549de6a8039b5631928181c6eda2c0a3b",
+      "originalDimensions": [
+        1427,
+        1019
+      ],
+      "retainedPath": "dealer-stock/vehicle-1.jpg",
+      "retainedSha256": "50a9607fdafcf101a6e0fec6c861772f6f33742a9db9af280b3f0b1bafad8037",
+      "retainedDimensions": [
+        1280,
+        914
+      ],
+      "retainedBytes": 199492,
+      "processing": "EXIF orientation; resize only if over 1280 pixels; JPEG compression; metadata omitted. No content alterations."
+    },
+    {
+      "recordId": "vehicle-2",
+      "catalogueUrl": "https://showroom.ebaymotorspro.co.uk/Hash-Mir?menu=1",
+      "listingUrl": "https://www.ebay.co.uk/itm/860047138898",
+      "observedAt": "2026-10-19T17:36:01.499945Z",
+      "originalImageUrl": "https://i.ebayimg.com/00/s/MTMxMlgxNjAw/z/h5sAAeSwMnlq1bFE/$_57.JPG",
+      "resolvedImageUrl": "https://i.ebayimg.com/00/s/MTMxMlgxNjAw/z/h5sAAeSwMnlq1bFE/$_57.JPG",
+      "originalSha256": "c71e6afc035db14b82bb89cd3d20af03a71b4cacb27ed3be31ba2b411afcee64",
+      "originalDimensions": [
+        1600,
+        1312
+      ],
+      "retainedPath": "dealer-stock/vehicle-2.jpg",
+      "retainedSha256": "da34bcc77ace5c9bf9887edf42120d07b2a833addbf7244433db49393eb17e04",
+      "retainedDimensions": [
+        932,
+        765
+      ],
+      "retainedBytes": 174553,
+      "processing": "EXIF orientation; resize only if over 1280 pixels; JPEG compression; metadata omitted. No content alterations."
+    },
+    {
+      "recordId": "vehicle-3",
+      "catalogueUrl": "https://showroom.ebaymotorspro.co.uk/Hash-Mir?menu=1",
+      "listingUrl": "https://www.ebay.co.uk/itm/860046889243",
+      "observedAt": "2026-10-19T17:36:01.499945Z",
+      "originalImageUrl": "https://i.ebayimg.com/00/s/MTIwM1gxNjAw/z/t1cAAeSwqvZq1bE~/$_57.JPG",
+      "resolvedImageUrl": "https://i.ebayimg.com/00/s/MTIwM1gxNjAw/z/t1cAAeSwqvZq1bE~/$_57.JPG",
+      "originalSha256": "686b048d44636fc2e9ffa4b967ab7888716109fbf9fb4ced433d8d279ff4f945",
+      "originalDimensions": [
+        1600,
+        1203
+      ],
+      "retainedPath": "dealer-stock/vehicle-3.jpg",
+      "retainedSha256": "1986edf79fdd3ec4098b763c460213f1c53911e4912b8ac900aa8893480b802b",
+      "retainedDimensions": [
+        1280,
+        962
+      ],
+      "retainedBytes": 186396,
+      "processing": "EXIF orientation; resize only if over 1280 pixels; JPEG compression; metadata omitted. No content alterations."
+    }
+  ],
+  "publicResearchSummary": [
+    "Public vehicle seller confirmed from the current dealer catalogue.",
+    "Existing registry and clients identities checked against the exact lead and normalized trading names; no live-fleet match found.",
+    "Listing availability is not confirmed; the dated stock disclosure and price omission are retained."
+  ],
+  "stockHistoryReview": "stock-history-review.json"
+}

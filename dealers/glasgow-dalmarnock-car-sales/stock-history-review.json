@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "dealer": "glasgow-dalmarnock-car-sales",
+  "reviewedAt": "2026-10-19T20:10:55.129003Z",
+  "scope": "Complete public advert descriptions and available vehicle-history panels for the selected stock samples. No dealer contact or independent vehicle inspection.",
+  "records": [
+    {
+      "listingId": "vehicle-1",
+      "sourceUrl": "https://www.ebay.co.uk/itm/860040919554",
+      "observedAt": "2026-10-19T20:03:54.286966Z",
+      "httpStatus": 200,
+      "pageSha256": "fdfca1edd4e7f950cde0448a7ba6bc8b143abc1ef5440199b84ba0ac39c51218",
+      "descriptionUrl": "https://itm.ebaydesc.com/itmdesc/860040919554?t=1791903555000&category=18206&seller=amanmotors1-5&excSoj=1&ver=1&excTrk=1&lsite=3&ittenable=false&domain=ebay.com&descgauge=1&cspheader=1&oneClk=2&secureDesc=1&lang=en",
+      "descriptionSha256": "a3bce8f72904ecdb36104d07dedf562c3b042c2660ed2c461deb454c83d35ee7",
+      "embeddedHistoryChecked": false,
+      "descriptionResult": "full-public-advert-reviewed",
+      "retained": true,
+      "finding": "The seller explicitly records Category S history. Repair quality and current condition have not been independently verified."
+    },
+    {
+      "listingId": "vehicle-2",
+      "sourceUrl": "https://www.ebay.co.uk/itm/860036345907",
+      "observedAt": "2026-10-19T20:03:54.380408Z",
+      "httpStatus": 200,
+      "pageSha256": "d125293aa6bf91d7e842d4c1a1cedef02a22492360d7a455c6ed7e290f826611",
+      "descriptionUrl": "https://itm.ebaydesc.com/itmdesc/860036345907?t=1791804854000&category=18183&seller=amanmotors1-5&excSoj=1&ver=1&excTrk=1&lsite=3&ittenable=false&domain=ebay.com&descgauge=1&cspheader=1&oneClk=2&secureDesc=1&lang=en",
+      "descriptionSha256": "127952121177e2ebd94b8c37e2958dd23f55cedfa4c98d1480570aed858b096b",
+      "embeddedHistoryChecked": false,
+      "descriptionResult": "full-public-advert-reviewed",
+      "retained": false,
+      "finding": "Excluded because the advert title identifies a 2018 Hyundai Tucson while its body identifies a 2014 Kia Sportage; the vehicle identity is inconsistent."
+    },
+    {
+      "listingId": "vehicle-3",
+      "sourceUrl": "https://www.ebay.co.uk/itm/860011037926",
+      "observedAt": "2026-10-19T20:03:54.443246Z",
+      "httpStatus": 200,
+      "pageSha256": "ed3f2ce44c54e2843912a28e651468c24be6b3d7ef00b94114e0e4c96cad0da0",
+      "descriptionUrl": "https://itm.ebaydesc.com/itmdesc/860011037926?t=1791374848000&category=18308&seller=amanmotors1-5&excSoj=1&ver=1&excTrk=1&lsite=3&ittenable=false&domain=ebay.com&descgauge=1&cspheader=1&oneClk=2&secureDesc=1&lang=en",
+      "descriptionSha256": "d3b4347f2ad8f9f29e63064802cf40dae72cff2704eba5b83fc1d08f23600f40",
+      "embeddedHistoryChecked": false,
+      "descriptionResult": "full-public-advert-reviewed",
+      "retained": true,
+      "finding": "No additional material condition or history disclosure identified in the reviewed public advert; this is not an independent vehicle inspection or history certificate."
+    }
+  ]
+}

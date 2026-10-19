@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "dealer": "bury-fairfield-car-centre",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T18:56:42.959980Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "f7aba82be7ad287e8d1a6bbc04ed20c3974458928fdaf5ebd7dd8ba91e94b307",
+      "sourceSha256": "d952ba62eee35839f6435d1ac8865a73b541c539ce203a18acc312383b4925bf"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "6e85f817da27b8d183a3cdbda93dc13d50bbe308a0b941c5a56d18964593aa08",
+      "sourceSha256": "22b1848dacc06602321baab7e70228766e8c90d685ff25066038aead4c6a7f90"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "6e85f817da27b8d183a3cdbda93dc13d50bbe308a0b941c5a56d18964593aa08",
+      "sourceSha256": "22b1848dacc06602321baab7e70228766e8c90d685ff25066038aead4c6a7f90"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "d952ba62eee35839f6435d1ac8865a73b541c539ce203a18acc312383b4925bf",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-0d4a5278-55f4-45e2-8b9e-46f00a514010",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "79db4fa53b6838ae1d65b9548eeb27c1194a3c01bd98891da0280d60692e916b",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-0d4a5278-55f4-45e2-8b9e-46f00a514010",
+      "modelVersion": null
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "900a8229e899f3e5de5d0e667c860ca7c60735e5c5ebd706cc141cdcbd00e3b8"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "d952ba62eee35839f6435d1ac8865a73b541c539ce203a18acc312383b4925bf",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-0d4a5278-55f4-45e2-8b9e-46f00a514010",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/bury-fairfield-car-centre/branding/generated-master.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "22b1848dacc06602321baab7e70228766e8c90d685ff25066038aead4c6a7f90",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-db6e8c2c-ccd5-4855-ae93-9088c599960b",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/bury-fairfield-car-centre/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "22b1848dacc06602321baab7e70228766e8c90d685ff25066038aead4c6a7f90",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-db6e8c2c-ccd5-4855-ae93-9088c599960b",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/bury-fairfield-car-centre/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "0d54622dbfc0b807b8c53eecd5ac0349aaae3a5feba89aa281e88aedef354c49",
+      "sha256": "d952ba62eee35839f6435d1ac8865a73b541c539ce203a18acc312383b4925bf",
+      "crop": {
+        "left": 96,
+        "top": 77,
+        "width": 1994,
+        "height": 567
+      },
+      "sourcePath": "branding/generated-master.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "d09fb81fa0f2c51bec1f4d1b8d611caf7bf631cd476fe27a9901d6f03c951497",
+      "sha256": "22b1848dacc06602321baab7e70228766e8c90d685ff25066038aead4c6a7f90",
+      "crop": {
+        "left": 92,
+        "top": 72,
+        "width": 2004,
+        "height": 579
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "d09fb81fa0f2c51bec1f4d1b8d611caf7bf631cd476fe27a9901d6f03c951497",
+      "sha256": "22b1848dacc06602321baab7e70228766e8c90d685ff25066038aead4c6a7f90",
+      "crop": {
+        "left": 92,
+        "top": 72,
+        "width": 2004,
+        "height": 579
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "84a5ff83e5afd1a1ecc7885c54b12c6358e813c55714584ebade373765532d92",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-0d4a5278-55f4-45e2-8b9e-46f00a514010",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/bury-fairfield-car-centre/branding/generated-mark.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "53513b9b8cc58701904152dfa1453ac1bec062b9b27d1f9696e65de99ddfcae0",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-db6e8c2c-ccd5-4855-ae93-9088c599960b",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/bury-fairfield-car-centre/branding/generated-mark-on-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "79db4fa53b6838ae1d65b9548eeb27c1194a3c01bd98891da0280d60692e916b",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-0d4a5278-55f4-45e2-8b9e-46f00a514010",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/bury-fairfield-car-centre/branding/generated-mark.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "900a8229e899f3e5de5d0e667c860ca7c60735e5c5ebd706cc141cdcbd00e3b8",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-0d4a5278-55f4-45e2-8b9e-46f00a514010",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/bury-fairfield-car-centre/branding/generated-mark.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T18:56:42.959980Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "412890bf10e8c6229d24a795f35c519e362bf968e5345d14f5e3ee9520aa2321",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-db6e8c2c-ccd5-4855-ae93-9088c599960b",
+      "modelVersion": null
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "slug": "glasgow-matts-motors",
+  "dealerId": "gb-glasgow-matts-motors",
+  "business": {
+    "name": "Matts Motors (Glasgow)",
+    "city": "Glasgow",
+    "region": "Scotland",
+    "countryCode": "GB",
+    "currency": "GBP",
+    "distanceUnit": "mi",
+    "locale": "en-GB",
+    "address": "Fullarton Avenue Glasgow Glasgow (City of) G32 8NA",
+    "phone": "+441414045286",
+    "phoneDisplay": "+441414045286",
+    "email": "mattsmotors92@gmail.com",
+    "website": "",
+    "stockUrl": "https://showroom.ebaymotorspro.co.uk/JMcars?menu=1",
+    "hours": "",
+    "sourceUrl": "https://showroom.ebaymotorspro.co.uk/JMcars?menu=1",
+    "observedAt": "2026-10-19T17:36:00.763760Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/JMcars?menu=1",
+      "observedAt": "2026-10-19T17:36:00.763760Z",
+      "supports": [
+        "business-name",
+        "public-business-contact",
+        "business-location",
+        "current-listing-snapshot"
+      ]
+    }
+  ]
+}

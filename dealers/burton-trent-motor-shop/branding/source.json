@@ -1,0 +1,176 @@
+{
+  "schemaVersion": 1,
+  "dealer": "burton-trent-motor-shop",
+  "dealerId": "gb-burton-trent-motor-shop",
+  "status": "reviewed",
+  "realLogoFirst": true,
+  "creationMethod": "imagegen-proposal",
+  "logoKind": "proposal",
+  "dealerApproved": false,
+  "approvalStatus": "independent-proposal-not-dealer-approved",
+  "observedAt": "2026-10-19",
+  "sourceLogoUrl": null,
+  "researchConclusion": "No usable real logo was obtained in the bounded public profile, catalogue and available source checks. This is an independent proposal and is not presented as the dealer’s established identity.",
+  "checkedSources": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/staffordshire/burton-on-trent/trent-motor-shop-10037753",
+      "observedAt": "2026-10-19",
+      "result": "Public dealer identity, current advertised vehicles and available brand artwork reviewed."
+    }
+  ],
+  "originals": [],
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "id": "exec-8c883a89-f01d-4799-8973-29f02fc72c85",
+    "modelVersion": null,
+    "prompt": "Create ONE finished production transparent dealership logo for TRENT MOTOR SHOP. Keep the exact original TM monogram and the strong TRENT / MOTOR SHOP typography from the attached proposed logo. Preserve every letter and the restrained original black/charcoal ink. Add the requested crisp white keyline treatment to the entire mark, keeping the same geometry and ample spacing. Do not redesign the identity. Wide horizontal composition: compact separate icon at far LEFT, main wordmark at far RIGHT with ample FULLY TRANSPARENT separation for icon cropping. Dark ink-filled forms with a CLEAN SOLID WHITE outer KEYLINE around every letter, icon, outside edge and counter. This permanent dual-contrast treatment makes this exact transparent asset readable on white, charcoal and red. Flat crisp smooth vector-style identity, strong small-size legibility. No rectangle, white matte, background, texture, speckles, distress, 3D, gradient, metallic effect, shadows, glow, scenery, mockup or photos. Exactly one logo on a transparent 3:1 canvas with empty transparent margins."
+  },
+  "generationReferences": [
+    {
+      "path": "branding/proposal-reference.png",
+      "sha256": "b497d9b847d1b2087064711234e01ec204cca777185e191d64464f8d2cb67acd",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-828838f6-a618-4f77-bdd8-b08175548711",
+        "modelVersion": null
+      }
+    }
+  ],
+  "workingLogoPath": "branding/generated-master.png",
+  "usageStatus": "public-preview-only",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T18:56:42.959980Z",
+    "master": {
+      "path": "branding/generated-master.png",
+      "sha256": "199aeceff52cd09e07e37428c4eb191d3d7c3e0884933c025bcdf51f61ec908b",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-8c883a89-f01d-4799-8973-29f02fc72c85",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "038317c1d63416c0b98b0c98b40d53608f3734e9f08f73389dcc8f00b46c4525",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-8c883a89-f01d-4799-8973-29f02fc72c85",
+        "modelVersion": null
+      },
+      "derivation": {
+        "operation": "rectangular-crop-without-recolouring",
+        "sourcePath": "branding/generated-master.png",
+        "sourceSha256": "199aeceff52cd09e07e37428c4eb191d3d7c3e0884933c025bcdf51f61ec908b",
+        "bounds": {
+          "left": 0,
+          "top": 0,
+          "width": 792,
+          "height": 724
+        },
+        "reason": "Isolate the separately generated compact icon; all retained pixels come from the named master generation."
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-on-dark.png",
+      "sha256": "cfce3bed733bbc7c6d09c662787882be47589e4d135bd148dfe1ac52da5beb46",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-2434c60b-f5f6-4d8d-b49a-b2e496204131",
+        "modelVersion": null
+      },
+      "derivation": {
+        "operation": "rectangular-crop-without-recolouring",
+        "sourcePath": "branding/generated-on-dark.png",
+        "sourceSha256": "3e8f5ec47d8c9c2e73fd7c489dbd02c66d5a7ce4cf3b733c3999c44b33adba46",
+        "bounds": {
+          "left": 0,
+          "top": 0,
+          "width": 792,
+          "height": 724
+        },
+        "reason": "Isolate the separately generated compact icon; all retained pixels come from the named master generation."
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-master.png",
+        "sha256": "199aeceff52cd09e07e37428c4eb191d3d7c3e0884933c025bcdf51f61ec908b",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-8c883a89-f01d-4799-8973-29f02fc72c85",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "3e8f5ec47d8c9c2e73fd7c489dbd02c66d5a7ce4cf3b733c3999c44b33adba46",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-2434c60b-f5f6-4d8d-b49a-b2e496204131",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "3e8f5ec47d8c9c2e73fd7c489dbd02c66d5a7ce4cf3b733c3999c44b33adba46",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-2434c60b-f5f6-4d8d-b49a-b2e496204131",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113",
+          "#101820"
+        ],
+        "onAccent": [
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ]
+      },
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "notes": "Visually reviewed at 120px and 180px wordmark widths on all six listed existing template backgrounds. Correct trading-name spelling, recognisable motif, sufficient contrast and transparent backgrounds verified. Genuine pale-silver generated variants preserve solid fills on dark/accent surfaces where needed. Template palettes and composition are unchanged. No dealer approval is claimed."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "widths": [
+        32,
+        64,
+        96
+      ],
+      "notes": "Visually reviewed at 32px, 64px and 96px on all six existing template backgrounds. The compact symbol remains recognisable without the full wordmark. Separately generated compact symbols replace overlapping text fragments for Thornton Motors, Yorkshire Car Company and Auto Club. No dealer approval is claimed."
+    },
+    "compactMarkStatus": "independent-proposal-not-dealer-approved"
+  },
+  "generationVariants": [
+    {
+      "role": "onDark-and-onAccent",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-2434c60b-f5f6-4d8d-b49a-b2e496204131",
+        "modelVersion": null
+      },
+      "prompt": "Edit this exact TRENT MOTOR SHOP logo into its strong dark-background colour variant. Preserve the original geometry, lettering, spacing, icon, proportions and exact spelling. Change ONLY the dark interior ink of each letter and monogram stroke to SOLID OPAQUE PALE SILVER #d9e2ec. Keep a strong smooth dark charcoal outer border around every silver letter and icon stroke; also keep the thin white outer keyline. This is light SILVER INK enclosed in a dark contour, with fully transparent gaps and counters, not thin outline lettering. Silver interiors must be uninterrupted flat colour; no missing patches, no texture, no distress, no speckles. The same complete original horizontal logo, precisely its existing icon and type layout. Transparent alpha outside logo and inside counters. No background, no rectangle, no shadows, no mockup, no photorealism, no gradient. One finished opaque light-silver-filled logo asset.",
+      "reference": {
+        "path": "branding/generated-master.png",
+        "sha256": "199aeceff52cd09e07e37428c4eb191d3d7c3e0884933c025bcdf51f61ec908b",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-8c883a89-f01d-4799-8973-29f02fc72c85",
+          "modelVersion": null
+        }
+      }
+    }
+  ]
+}

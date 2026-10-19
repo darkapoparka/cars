@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "dealer": "burton-yj-motors",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uk.json",
+    "sha256": "6cd8d365586f9a5d5131fe4b1d50baede7de91ab384a135017c25367298b07c4"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/staffordshire/burton-on-trent/y-j-motors-10030623",
+      "observedAt": "2026-10-19T17:36:00.094994Z",
+      "supports": [
+        "business-name",
+        "public-business-contact",
+        "business-location",
+        "current-listing-snapshot"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "dealerId": "gb-burton-yj-motors",
+  "observedAt": "2026-10-19T17:36:00.094994Z",
+  "primaryFetch": {
+    "url": "https://www.autotrader.co.uk/dealers/staffordshire/burton-on-trent/y-j-motors-10030623",
+    "status": 200,
+    "observedAt": "2026-10-19T17:36:00.094994Z",
+    "htmlSha256": "75e4d432158fe5afaf7181c4643643da64910eef691d2898cdb3c4d1e21f112d"
+  },
+  "stockPhotos": [
+    {
+      "recordId": "vehicle-1",
+      "catalogueUrl": "https://www.autotrader.co.uk/dealers/staffordshire/burton-on-trent/y-j-motors-10030623",
+      "listingUrl": "https://www.autotrader.co.uk/car-details/202610026606651",
+      "observedAt": "2026-10-19T17:36:00.094994Z",
+      "originalImageUrl": "https://m.atcdn.co.uk/a/media/w1280/b3a82358d9124bb08bee04dde3299fb2.jpg",
+      "resolvedImageUrl": "https://m.atcdn.co.uk/a/media/w1280/b3a82358d9124bb08bee04dde3299fb2.jpg",
+      "originalSha256": "e79522956606942d8cf9709bc60bec745d7ed856eb2376e9be23316031b136aa",
+      "originalDimensions": [
+        1280,
+        960
+      ],
+      "retainedPath": "dealer-stock/vehicle-1.jpg",
+      "retainedSha256": "c99eb1d7a39b1ffcdf2d8eabad4dd461699b15f975d19b7e8a21477cbb19e64f",
+      "retainedDimensions": [
+        1280,
+        960
+      ],
+      "retainedBytes": 190589,
+      "processing": "EXIF orientation; resize to at most 1280 pixels and reduce further when needed to keep the file below 200 KB; JPEG compression; metadata omitted. No content alterations."
+    },
+    {
+      "recordId": "vehicle-2",
+      "catalogueUrl": "https://www.autotrader.co.uk/dealers/staffordshire/burton-on-trent/y-j-motors-10030623",
+      "listingUrl": "https://www.autotrader.co.uk/car-details/202608215309580",
+      "observedAt": "2026-10-19T17:36:00.094994Z",
+      "originalImageUrl": "https://m.atcdn.co.uk/a/media/w1280/7bb72ba4449d4de79c8974c9fb38d1b9.jpg",
+      "resolvedImageUrl": "https://m.atcdn.co.uk/a/media/w1280/7bb72ba4449d4de79c8974c9fb38d1b9.jpg",
+      "originalSha256": "ed29783fb60bb3f8fdc0bd71f0031e62d20eeba4a3cae164a1d30b17931564c6",
+      "originalDimensions": [
+        1280,
+        960
+      ],
+      "retainedPath": "dealer-stock/vehicle-2.jpg",
+      "retainedSha256": "b7ce6d6ce27406d17eeb73ef9707f7d981a87c59e3aa6d3231759e56230c6291",
+      "retainedDimensions": [
+        1036,
+        777
+      ],
+      "retainedBytes": 193731,
+      "processing": "EXIF orientation; resize to at most 1280 pixels and reduce further when needed to keep the file below 200 KB; JPEG compression; metadata omitted. No content alterations."
+    },
+    {
+      "recordId": "vehicle-3",
+      "catalogueUrl": "https://www.autotrader.co.uk/dealers/staffordshire/burton-on-trent/y-j-motors-10030623",
+      "listingUrl": "https://www.autotrader.co.uk/car-details/202607134141822",
+      "observedAt": "2026-10-19T17:36:00.094994Z",
+      "originalImageUrl": "https://m.atcdn.co.uk/a/media/w1280/9054a2af2c57474c8fb96e3aa894df36.jpg",
+      "resolvedImageUrl": "https://m.atcdn.co.uk/a/media/w1280/9054a2af2c57474c8fb96e3aa894df36.jpg",
+      "originalSha256": "6de78a0779667e7a2027edbcf68e90f716b7a73615fac92cd5ce3d227deeacf8",
+      "originalDimensions": [
+        1280,
+        960
+      ],
+      "retainedPath": "dealer-stock/vehicle-3.jpg",
+      "retainedSha256": "8c71f9b008df797eae3a26d0cc8154e8d53dd9930315f9527eb398d8002474f5",
+      "retainedDimensions": [
+        1280,
+        960
+      ],
+      "retainedBytes": 194596,
+      "processing": "EXIF orientation; resize to at most 1280 pixels and reduce further when needed to keep the file below 200 KB; JPEG compression; metadata omitted. No content alterations."
+    }
+  ],
+  "publicResearchSummary": [
+    "Public vehicle seller confirmed from the current dealer catalogue.",
+    "Existing registry and clients identities checked against the exact lead and normalized trading names; no live-fleet match found.",
+    "Listing availability is not confirmed; the dated stock disclosure and price omission are retained."
+  ],
+  "stockHistoryReview": "stock-history-review.json"
+}

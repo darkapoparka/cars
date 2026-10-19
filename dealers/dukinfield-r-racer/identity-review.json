@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T18:17:44.671Z",
+  "dealer": "dukinfield-r-racer",
+  "dealerId": "gb-dukinfield-r-racer",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "method": "Read-only exact retained registry and clients identity comparison by lead ID, normalized trading name and normalized slug; no match. Public catalogue identity corroborated on the observation date.",
+  "sources": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/cheshire/dukinfield/r-racer-ltd-10046816?refresh=true",
+      "observedAt": "2026-10-19T17:36:00.262636Z",
+      "supports": [
+        "business-name",
+        "public-business-contact",
+        "business-location",
+        "current-listing-snapshot"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "dealer": "glasgow-fm-motors",
+  "reviewedAt": "2026-10-19T20:10:55.129003Z",
+  "scope": "Complete public advert descriptions and available vehicle-history panels for the selected stock samples. No dealer contact or independent vehicle inspection.",
+  "records": [
+    {
+      "listingId": "vehicle-1",
+      "sourceUrl": "https://www.ebay.co.uk/itm/920054683827",
+      "observedAt": "2026-10-19T20:03:53.320825Z",
+      "httpStatus": 200,
+      "pageSha256": "60b6a60e62a5c3e527435eae26400088af3ff779e1a4bd02bccdc2ce631a93d0",
+      "descriptionUrl": "https://itm.ebaydesc.com/itmdesc/920054683827?t=1792430054000&category=18238&seller=glas1234&excSoj=1&ver=1&excTrk=1&lsite=3&ittenable=false&domain=ebay.com&descgauge=1&cspheader=1&oneClk=2&secureDesc=1&lang=en",
+      "descriptionSha256": "04f16c1ab0b6e0aff7ee8d8e3f9b925d35ca4dbf951acc89f5ce18b7b83cba23",
+      "embeddedHistoryChecked": false,
+      "descriptionResult": "full-public-advert-reviewed",
+      "retained": true,
+      "finding": "No additional material condition or history disclosure identified in the reviewed public advert; this is not an independent vehicle inspection or history certificate."
+    },
+    {
+      "listingId": "vehicle-2",
+      "sourceUrl": "https://www.ebay.co.uk/itm/920053774208",
+      "observedAt": "2026-10-19T20:03:53.427157Z",
+      "httpStatus": 200,
+      "pageSha256": "fca3d152b6ee3e0a6ccfdfda7f7b482bee5a278a11fce50bef4768434f0280ad",
+      "descriptionUrl": "https://itm.ebaydesc.com/itmdesc/920053774208?t=1792406519000&category=18290&seller=glas1234&excSoj=1&ver=1&excTrk=1&lsite=3&ittenable=false&domain=ebay.com&descgauge=1&cspheader=1&oneClk=2&secureDesc=1&lang=en",
+      "descriptionSha256": "90068ca2424fa53f567ed78a1f1a53ecd2b988ca525307b3110dc70b2633a04b",
+      "embeddedHistoryChecked": false,
+      "descriptionResult": "full-public-advert-reviewed",
+      "retained": true,
+      "finding": "No additional material condition or history disclosure identified in the reviewed public advert; this is not an independent vehicle inspection or history certificate."
+    },
+    {
+      "listingId": "vehicle-3",
+      "sourceUrl": "https://www.ebay.co.uk/itm/920048272967",
+      "observedAt": "2026-10-19T20:03:53.440579Z",
+      "httpStatus": 200,
+      "pageSha256": "89e18a9b568289345b651ff352e5a62c21ed2cef48973ed45fa8fbf0bd195cf1",
+      "descriptionUrl": "https://itm.ebaydesc.com/itmdesc/920048272967?t=1792240114000&category=18238&seller=glas1234&excSoj=1&ver=1&excTrk=1&lsite=3&ittenable=false&domain=ebay.com&descgauge=1&cspheader=1&oneClk=2&secureDesc=1&lang=en",
+      "descriptionSha256": "ae0292e04a68faa3d1e08d4cc79f96dcab39da9b66f169a276d024dcafa60050",
+      "embeddedHistoryChecked": false,
+      "descriptionResult": "full-public-advert-reviewed",
+      "retained": true,
+      "finding": "No additional material condition or history disclosure identified in the reviewed public advert; this is not an independent vehicle inspection or history certificate."
+    }
+  ]
+}

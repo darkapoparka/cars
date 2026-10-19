@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "slug": "cardiff-fusion-autos",
+  "dealerId": "gb-cardiff-fusion-autos",
+  "business": {
+    "name": "Fusion Autos Limited",
+    "city": "Cardiff",
+    "region": "South Wales",
+    "countryCode": "GB",
+    "currency": "GBP",
+    "distanceUnit": "mi",
+    "locale": "en-GB",
+    "address": "Wentloog Corporate Park, Wentloog Road wentloog industrial park Cardiff South Glamorgan CF3 2ER",
+    "phone": "+442920028856",
+    "phoneDisplay": "+442920028856",
+    "email": "cardiffcarsales114@gmail.com",
+    "website": "",
+    "stockUrl": "https://showroom.ebaymotorspro.co.uk/Fusion-Autos-Limited",
+    "hours": "",
+    "sourceUrl": "https://showroom.ebaymotorspro.co.uk/Fusion-Autos-Limited",
+    "observedAt": "2026-10-19T17:36:00.984400Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Fusion-Autos-Limited",
+      "observedAt": "2026-10-19T17:36:00.984400Z",
+      "supports": [
+        "business-name",
+        "public-business-contact",
+        "business-location",
+        "current-listing-snapshot"
+      ]
+    }
+  ]
+}

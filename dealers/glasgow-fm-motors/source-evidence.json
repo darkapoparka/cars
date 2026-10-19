@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "dealer": "glasgow-fm-motors",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uk.json",
+    "sha256": "6cd8d365586f9a5d5131fe4b1d50baede7de91ab384a135017c25367298b07c4"
+  },
+  "publicSources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/FM-Motors?menu=1",
+      "observedAt": "2026-10-19T17:36:00.595114Z",
+      "supports": [
+        "business-name",
+        "public-business-contact",
+        "business-location",
+        "current-listing-snapshot"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "dealerId": "gb-glasgow-fm-motors",
+  "observedAt": "2026-10-19T17:36:00.595114Z",
+  "primaryFetch": {
+    "url": "https://showroom.ebaymotorspro.co.uk/FM-Motors?menu=1",
+    "status": 200,
+    "observedAt": "2026-10-19T17:36:00.595114Z",
+    "htmlSha256": "8fdb249157b3a85d1a6e7df52fb45472be2d70b3be29ba51bd81965c9d24d567"
+  },
+  "stockPhotos": [
+    {
+      "recordId": "vehicle-1",
+      "catalogueUrl": "https://showroom.ebaymotorspro.co.uk/FM-Motors?menu=1",
+      "listingUrl": "https://www.ebay.co.uk/itm/920054683827",
+      "observedAt": "2026-10-19T17:36:00.595114Z",
+      "originalImageUrl": "https://i.ebayimg.com/00/s/MTEyOFgxNTAw/z/888AAeSwSFpq1lKC/$_57.JPG",
+      "resolvedImageUrl": "https://i.ebayimg.com/00/s/MTEyOFgxNTAw/z/888AAeSwSFpq1lKC/$_57.JPG",
+      "originalSha256": "2af10bb8f695dfdc3863450ff65fb6b1fe57f7f5f8d6892d392bcc07a3d9269f",
+      "originalDimensions": [
+        1500,
+        1128
+      ],
+      "retainedPath": "dealer-stock/vehicle-1.jpg",
+      "retainedSha256": "f2dde65f87fa2121321110ed642030ed037f508ddc69cb93199540979f51b7b2",
+      "retainedDimensions": [
+        1280,
+        963
+      ],
+      "retainedBytes": 194611,
+      "processing": "EXIF orientation; resize only if over 1280 pixels; JPEG compression; metadata omitted. No content alterations."
+    },
+    {
+      "recordId": "vehicle-2",
+      "catalogueUrl": "https://showroom.ebaymotorspro.co.uk/FM-Motors?menu=1",
+      "listingUrl": "https://www.ebay.co.uk/itm/920053774208",
+      "observedAt": "2026-10-19T17:36:00.595114Z",
+      "originalImageUrl": "https://i.ebayimg.com/00/s/MTIxOFgxNjAw/z/64oAAeSwKYpq1hTN/$_57.JPG",
+      "resolvedImageUrl": "https://i.ebayimg.com/00/s/MTIxOFgxNjAw/z/64oAAeSwKYpq1hTN/$_57.JPG",
+      "originalSha256": "7af7f340c853617a1a5bbda99f0a68dff555ef5f3b3b874636760ee439519d40",
+      "originalDimensions": [
+        1600,
+        1218
+      ],
+      "retainedPath": "dealer-stock/vehicle-2.jpg",
+      "retainedSha256": "e498327549acaf48267e2f21dcd7578ee44c6dc471394617721ff50ee8a02c13",
+      "retainedDimensions": [
+        1280,
+        974
+      ],
+      "retainedBytes": 181982,
+      "processing": "EXIF orientation; resize only if over 1280 pixels; JPEG compression; metadata omitted. No content alterations."
+    },
+    {
+      "recordId": "vehicle-3",
+      "catalogueUrl": "https://showroom.ebaymotorspro.co.uk/FM-Motors?menu=1",
+      "listingUrl": "https://www.ebay.co.uk/itm/920048272967",
+      "observedAt": "2026-10-19T17:36:00.595114Z",
+      "originalImageUrl": "https://i.ebayimg.com/00/s/MTUzNVgxNjAw/z/ZGIAAeSwp6hq03HW/$_57.JPG",
+      "resolvedImageUrl": "https://i.ebayimg.com/00/s/MTUzNVgxNjAw/z/ZGIAAeSwp6hq03HW/$_57.JPG",
+      "originalSha256": "b42a1c8f7c037b6505971a00c0a54454e9195b44cab5d12737232cae8b791287",
+      "originalDimensions": [
+        1600,
+        1535
+      ],
+      "retainedPath": "dealer-stock/vehicle-3.jpg",
+      "retainedSha256": "03ce5841194a4ee3ca297933113004362286b5b419768d6407eb0d9d94ca6c4f",
+      "retainedDimensions": [
+        1280,
+        1228
+      ],
+      "retainedBytes": 179475,
+      "processing": "EXIF orientation; resize only if over 1280 pixels; JPEG compression; metadata omitted. No content alterations."
+    }
+  ],
+  "publicResearchSummary": [
+    "Public vehicle seller confirmed from the current dealer catalogue.",
+    "Existing registry and clients identities checked against the exact lead and normalized trading names; no live-fleet match found.",
+    "Listing availability is not confirmed; the dated stock disclosure and price omission are retained."
+  ],
+  "stockHistoryReview": "stock-history-review.json"
+}

@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "glasgow-matts-motors",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T17:36:00.763760Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "vehicle-1",
+      "title": "2015 Skoda Fabia",
+      "make": "Skoda",
+      "model": "Fabia",
+      "year": 2015,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/vehicle-1.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/920044432380",
+      "observedAt": "2026-10-19T17:36:00.763760Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 76800,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "vehicle-2",
+      "title": "2018 BMW 1 Series",
+      "make": "BMW",
+      "model": "1 Series",
+      "year": 2018,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/vehicle-2.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/920017379789",
+      "observedAt": "2026-10-19T17:36:00.763760Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 67000,
+      "mileageUnit": "mi",
+      "description": "The public eBay history panel shows a Category S/N advisory without identifying which category applies. Repair quality and current condition have not been independently verified. Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "vehicle-3",
+      "title": "2018 Ford EcoSport",
+      "make": "Ford",
+      "model": "EcoSport",
+      "year": 2018,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/vehicle-3.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/920013859678",
+      "observedAt": "2026-10-19T17:36:00.763760Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 67300,
+      "mileageUnit": "mi",
+      "description": "The public eBay history panel shows a Category S/N advisory without identifying which category applies. Repair quality and current condition have not been independently verified. Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

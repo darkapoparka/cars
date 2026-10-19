@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T18:17:45.762Z",
+  "dealer": "glasgow-dalmarnock-car-sales",
+  "dealerId": "gb-glasgow-dalmarnock-car-sales",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "method": "Read-only exact retained registry and clients identity comparison by lead ID, normalized trading name and normalized slug; no match. Public catalogue identity corroborated on the observation date.",
+  "sources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Aman-Motors",
+      "observedAt": "2026-10-19T17:36:00.712402Z",
+      "supports": [
+        "business-name",
+        "public-business-contact",
+        "business-location",
+        "current-listing-snapshot"
+      ]
+    },
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Aman-Motors?aboutUs=&expandOpeningHours=1&expandAboutUs=1",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "opening-hours"
+      ]
+    }
+  ]
+}

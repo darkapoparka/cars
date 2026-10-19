@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "dealer": "burton-yj-motors",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T18:56:42.959980Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-redraw",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "619fb1af27e5cfad147b4f7a8f1b51cec47f7a26a2e8c435dd59764a83b98e8f",
+      "sourceSha256": "733d36b318f56cd6e56141a53120e79c2faf27b6bd167c7de222c0d4fffffeb0"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "ca431903cdc9de7994e997e8ec4eb6aa2f00a4ef5c582f126b8e41072518b632",
+      "sourceSha256": "712fb8f0d43a75e2e3762844660e4827aae883b051293f48af93e3cd52669665"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "ca431903cdc9de7994e997e8ec4eb6aa2f00a4ef5c582f126b8e41072518b632",
+      "sourceSha256": "712fb8f0d43a75e2e3762844660e4827aae883b051293f48af93e3cd52669665"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "733d36b318f56cd6e56141a53120e79c2faf27b6bd167c7de222c0d4fffffeb0",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-1539b7ce-3722-4822-b506-f9bec95bc8ff",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "4dceb8e683e68a9a9b121167e08b4bed0d2575cc91afd2584e0ec1802fb66075",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-1539b7ce-3722-4822-b506-f9bec95bc8ff",
+      "modelVersion": null
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "33b08570ccd9a93f6d8d02c5b0cae73a5d9e132f9ea7d162293c7cd0efb20603"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "733d36b318f56cd6e56141a53120e79c2faf27b6bd167c7de222c0d4fffffeb0",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1539b7ce-3722-4822-b506-f9bec95bc8ff",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/burton-yj-motors/branding/generated-master.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "712fb8f0d43a75e2e3762844660e4827aae883b051293f48af93e3cd52669665",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-10ef0414-4c19-4abf-93e7-7125ef0cf681",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/burton-yj-motors/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "712fb8f0d43a75e2e3762844660e4827aae883b051293f48af93e3cd52669665",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-10ef0414-4c19-4abf-93e7-7125ef0cf681",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/burton-yj-motors/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "f749bfacde345fb64877bdac12f28f83e45ed7c3132366776f3b3ae6dcb9f6c1",
+      "sha256": "733d36b318f56cd6e56141a53120e79c2faf27b6bd167c7de222c0d4fffffeb0",
+      "crop": {
+        "left": 103,
+        "top": 37,
+        "width": 1992,
+        "height": 657
+      },
+      "sourcePath": "branding/generated-master.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "98dc54c0fd94d3368dee3f0f4984775ee17d1e7255011a4ff8ae1bd3b4d377b6",
+      "sha256": "712fb8f0d43a75e2e3762844660e4827aae883b051293f48af93e3cd52669665",
+      "crop": {
+        "left": 101,
+        "top": 36,
+        "width": 1968,
+        "height": 652
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "98dc54c0fd94d3368dee3f0f4984775ee17d1e7255011a4ff8ae1bd3b4d377b6",
+      "sha256": "712fb8f0d43a75e2e3762844660e4827aae883b051293f48af93e3cd52669665",
+      "crop": {
+        "left": 101,
+        "top": 36,
+        "width": 1968,
+        "height": 652
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "44bf31363ae9e266494df38c8ee3dbd76603afe403d012b5c2c9d63b44cc2826",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1539b7ce-3722-4822-b506-f9bec95bc8ff",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/burton-yj-motors/branding/generated-mark.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "101a70c739a6302c2b959b58781856cb70943527614670760a06a4aeb0f188e4",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-10ef0414-4c19-4abf-93e7-7125ef0cf681",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/burton-yj-motors/branding/generated-mark-on-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "4dceb8e683e68a9a9b121167e08b4bed0d2575cc91afd2584e0ec1802fb66075",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1539b7ce-3722-4822-b506-f9bec95bc8ff",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/burton-yj-motors/branding/generated-mark.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "33b08570ccd9a93f6d8d02c5b0cae73a5d9e132f9ea7d162293c7cd0efb20603",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1539b7ce-3722-4822-b506-f9bec95bc8ff",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/burton-yj-motors/branding/generated-mark.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T18:56:42.959980Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "5675a545478609d0c539c3298aff9c856f46e96da008724966093b89edeedd18",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-10ef0414-4c19-4abf-93e7-7125ef0cf681",
+      "modelVersion": null
+    }
+  }
+}

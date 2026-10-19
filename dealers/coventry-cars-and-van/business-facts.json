@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "slug": "coventry-cars-and-van",
+  "dealerId": "gb-coventry-cars-and-van",
+  "business": {
+    "name": "Cars and Van / Cars and Vans",
+    "city": "Coventry",
+    "region": "West Midlands",
+    "countryCode": "GB",
+    "currency": "GBP",
+    "distanceUnit": "mi",
+    "locale": "en-GB",
+    "address": "1059 Foleshill Road Coventry West Midlands CV6 6ER",
+    "phone": "+442475187176",
+    "phoneDisplay": "+442475187176",
+    "email": "vansandcarscoventry@gmail.com",
+    "website": "",
+    "stockUrl": "https://showroom.ebaymotorspro.co.uk/carsandvansdelivered1?menu=1",
+    "hours": "Viewings by appointment.",
+    "sourceUrl": "https://showroom.ebaymotorspro.co.uk/carsandvansdelivered1?menu=1",
+    "observedAt": "2026-10-19T17:36:01.129371Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/carsandvansdelivered1?menu=1",
+      "observedAt": "2026-10-19T17:36:01.129371Z",
+      "supports": [
+        "business-name",
+        "public-business-contact",
+        "business-location",
+        "current-listing-snapshot"
+      ]
+    }
+  ]
+}

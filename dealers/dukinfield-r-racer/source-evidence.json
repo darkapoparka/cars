@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "dealer": "dukinfield-r-racer",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uk.json",
+    "sha256": "6cd8d365586f9a5d5131fe4b1d50baede7de91ab384a135017c25367298b07c4"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/cheshire/dukinfield/r-racer-ltd-10046816?refresh=true",
+      "observedAt": "2026-10-19T17:36:00.262636Z",
+      "supports": [
+        "business-name",
+        "public-business-contact",
+        "business-location",
+        "current-listing-snapshot"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "dealerId": "gb-dukinfield-r-racer",
+  "observedAt": "2026-10-19T17:36:00.262636Z",
+  "primaryFetch": {
+    "url": "https://www.autotrader.co.uk/dealers/cheshire/dukinfield/r-racer-ltd-10046816?refresh=true",
+    "status": 200,
+    "observedAt": "2026-10-19T17:36:00.262636Z",
+    "htmlSha256": "d5bb256dfc4c21799d0936d84ed5fecb12e6185019b9abe3f17469daf6c715d8"
+  },
+  "stockPhotos": [
+    {
+      "recordId": "vehicle-1",
+      "catalogueUrl": "https://www.autotrader.co.uk/dealers/cheshire/dukinfield/r-racer-ltd-10046816?refresh=true",
+      "listingUrl": "https://www.autotrader.co.uk/car-details/202610076739349",
+      "observedAt": "2026-10-19T17:36:00.262636Z",
+      "originalImageUrl": "https://m.atcdn.co.uk/a/media/w1280/4ded1639dc6648eb8b55f69edcbaf048.jpg",
+      "resolvedImageUrl": "https://m.atcdn.co.uk/a/media/w1280/4ded1639dc6648eb8b55f69edcbaf048.jpg",
+      "originalSha256": "d7fba412196c795bd5613425df4fe89a74db537ca9be1ba86e4673949b2a5c61",
+      "originalDimensions": [
+        1280,
+        960
+      ],
+      "retainedPath": "dealer-stock/vehicle-1.jpg",
+      "retainedSha256": "b6ef898bf4010ccd302d324b585ac29bb2b7f2cbff5df6b99261790d3bc2d80a",
+      "retainedDimensions": [
+        1280,
+        960
+      ],
+      "retainedBytes": 197729,
+      "processing": "EXIF orientation; resize only if over 1280 pixels; JPEG compression; metadata omitted. No content alterations."
+    },
+    {
+      "recordId": "vehicle-2",
+      "catalogueUrl": "https://www.autotrader.co.uk/dealers/cheshire/dukinfield/r-racer-ltd-10046816?refresh=true",
+      "listingUrl": "https://www.autotrader.co.uk/car-details/202610146989471",
+      "observedAt": "2026-10-19T17:36:00.262636Z",
+      "originalImageUrl": "https://m.atcdn.co.uk/a/media/w1280/c10033303b97481dbf26f70afe1e879d.jpg",
+      "resolvedImageUrl": "https://m.atcdn.co.uk/a/media/w1280/c10033303b97481dbf26f70afe1e879d.jpg",
+      "originalSha256": "b1d3c4daa313eb7bd3092e1a2df52b49b6abf164588bec978abf2b782ef107f3",
+      "originalDimensions": [
+        1280,
+        1706
+      ],
+      "retainedPath": "dealer-stock/vehicle-2.jpg",
+      "retainedSha256": "25da4bc3b529dd68321306ff5d850cf0a10d69c60858d3834340da3972009249",
+      "retainedDimensions": [
+        960,
+        1280
+      ],
+      "retainedBytes": 186660,
+      "processing": "EXIF orientation; resize only if over 1280 pixels; JPEG compression; metadata omitted. No content alterations."
+    },
+    {
+      "recordId": "vehicle-3",
+      "catalogueUrl": "https://www.autotrader.co.uk/dealers/cheshire/dukinfield/r-racer-ltd-10046816?refresh=true",
+      "listingUrl": "https://www.autotrader.co.uk/car-details/202608145111222",
+      "observedAt": "2026-10-19T17:36:00.262636Z",
+      "originalImageUrl": "https://m.atcdn.co.uk/a/media/w1280/e0a13c8aad334df8a86e073349bcb4b5.jpg",
+      "resolvedImageUrl": "https://m.atcdn.co.uk/a/media/w1280/e0a13c8aad334df8a86e073349bcb4b5.jpg",
+      "originalSha256": "dae4f4248ade88335878e04b8f01ac4d61469faf3a718835780b4e883b4ecc70",
+      "originalDimensions": [
+        1280,
+        960
+      ],
+      "retainedPath": "dealer-stock/vehicle-3.jpg",
+      "retainedSha256": "549c492a313ad36192e71ef457ad11e931dc683e3b453e8b89786873ba50cddc",
+      "retainedDimensions": [
+        1280,
+        960
+      ],
+      "retainedBytes": 193530,
+      "processing": "EXIF orientation; resize only if over 1280 pixels; JPEG compression; metadata omitted. No content alterations."
+    }
+  ],
+  "publicResearchSummary": [
+    "Public vehicle seller confirmed from the current dealer catalogue.",
+    "Existing registry and clients identities checked against the exact lead and normalized trading names; no live-fleet match found.",
+    "Listing availability is not confirmed; the dated stock disclosure and price omission are retained."
+  ],
+  "stockHistoryReview": "stock-history-review.json"
+}

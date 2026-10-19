@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "dealer": "coventry-cars-and-van",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uk.json",
+    "sha256": "6cd8d365586f9a5d5131fe4b1d50baede7de91ab384a135017c25367298b07c4"
+  },
+  "publicSources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/carsandvansdelivered1?menu=1",
+      "observedAt": "2026-10-19T17:36:01.129371Z",
+      "supports": [
+        "business-name",
+        "public-business-contact",
+        "business-location",
+        "current-listing-snapshot"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "dealerId": "gb-coventry-cars-and-van",
+  "observedAt": "2026-10-19T17:36:01.129371Z",
+  "primaryFetch": {
+    "url": "https://showroom.ebaymotorspro.co.uk/carsandvansdelivered1?menu=1",
+    "status": 200,
+    "observedAt": "2026-10-19T17:36:01.129371Z",
+    "htmlSha256": "6211e959ac3dcf22f73a1cc9f2d3055911c897d9903daa0e028b943039686858"
+  },
+  "stockPhotos": [
+    {
+      "recordId": "vehicle-1",
+      "catalogueUrl": "https://showroom.ebaymotorspro.co.uk/carsandvansdelivered1?menu=1",
+      "listingUrl": "https://www.ebay.co.uk/itm/960088145806",
+      "observedAt": "2026-10-19T17:36:01.129371Z",
+      "originalImageUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/JIAAAeSwElRq1kzp/$_57.JPG",
+      "resolvedImageUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/JIAAAeSwElRq1kzp/$_57.JPG",
+      "originalSha256": "45ddc31e6408d2e67beb479afd1285359d55bcd071b7a131037fce3fc375b08a",
+      "originalDimensions": [
+        1600,
+        1200
+      ],
+      "retainedPath": "dealer-stock/vehicle-1.jpg",
+      "retainedSha256": "84a439305194986f265faa602d4636f83aec238f684f5d191964c96b64ae1c43",
+      "retainedDimensions": [
+        1280,
+        960
+      ],
+      "retainedBytes": 195589,
+      "processing": "EXIF orientation; resize only if over 1280 pixels; JPEG compression; metadata omitted. No content alterations."
+    },
+    {
+      "recordId": "vehicle-2",
+      "catalogueUrl": "https://showroom.ebaymotorspro.co.uk/carsandvansdelivered1?menu=1",
+      "listingUrl": "https://www.ebay.co.uk/itm/960079050486",
+      "observedAt": "2026-10-19T17:36:01.129371Z",
+      "originalImageUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/56IAAeSwnrpq1J3h/$_57.JPG",
+      "resolvedImageUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/56IAAeSwnrpq1J3h/$_57.JPG",
+      "originalSha256": "315d689ccfecdc4fe1af987209d1887c8ac49ff5e0aff27808adb58e023c6596",
+      "originalDimensions": [
+        1600,
+        1200
+      ],
+      "retainedPath": "dealer-stock/vehicle-2.jpg",
+      "retainedSha256": "ae96ccc87054ceb4efc58322ec6cd4ccf0d44af96bcf00bddbf876c0e746a251",
+      "retainedDimensions": [
+        1280,
+        960
+      ],
+      "retainedBytes": 197049,
+      "processing": "EXIF orientation; resize only if over 1280 pixels; JPEG compression; metadata omitted. No content alterations."
+    },
+    {
+      "recordId": "vehicle-3",
+      "catalogueUrl": "https://showroom.ebaymotorspro.co.uk/carsandvansdelivered1?menu=1",
+      "listingUrl": "https://www.ebay.co.uk/itm/960071338180",
+      "observedAt": "2026-10-19T17:36:01.129371Z",
+      "originalImageUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/bmkAAeSwKYxq0frq/$_57.JPG",
+      "resolvedImageUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/bmkAAeSwKYxq0frq/$_57.JPG",
+      "originalSha256": "4897c5eca3c45b8f4195cf083c3b219972ec12230fcdee9549cf571ca9a5a5ed",
+      "originalDimensions": [
+        1600,
+        1200
+      ],
+      "retainedPath": "dealer-stock/vehicle-3.jpg",
+      "retainedSha256": "2a039207d323b8a77d8a770537c16635293c3b4ab61e79d0c87d9be5c0f54d18",
+      "retainedDimensions": [
+        932,
+        699
+      ],
+      "retainedBytes": 179254,
+      "processing": "EXIF orientation; resize only if over 1280 pixels; JPEG compression; metadata omitted. No content alterations."
+    }
+  ],
+  "publicResearchSummary": [
+    "Public vehicle seller confirmed from the current dealer catalogue.",
+    "Existing registry and clients identities checked against the exact lead and normalized trading names; no live-fleet match found.",
+    "Listing availability is not confirmed; the dated stock disclosure and price omission are retained.",
+    "A listing whose description states it was sold was excluded."
+  ],
+  "stockHistoryReview": "stock-history-review.json"
+}

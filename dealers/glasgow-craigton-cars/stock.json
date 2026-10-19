@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "glasgow-craigton-cars",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T17:36:00.740263Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "vehicle-1",
+      "title": "2016 Skoda Fabia",
+      "make": "Skoda",
+      "model": "Fabia",
+      "year": 2016,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/vehicle-1.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/137844567712",
+      "observedAt": "2026-10-19T17:36:00.740263Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 97859,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "vehicle-2",
+      "title": "2014 Renault Grand Scenic",
+      "make": "Renault",
+      "model": "Grand Scenic",
+      "year": 2014,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/vehicle-2.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/137844558889",
+      "observedAt": "2026-10-19T17:36:00.740263Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 72911,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "vehicle-3",
+      "title": "2017 DS DS 3",
+      "make": "DS",
+      "model": "DS 3",
+      "year": 2017,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/vehicle-3.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/137844551650",
+      "observedAt": "2026-10-19T17:36:00.740263Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 42804,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}
