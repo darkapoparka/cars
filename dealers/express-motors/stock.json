@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "dealer": "express-motors",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "express-motors-stock-1",
+      "title": "2023 BMW M4 Convertible",
+      "make": "BMW",
+      "model": "M4 Convertible",
+      "year": 2023,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/stock-1.webp"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/BMW/M4-Convertible/?id=8515",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Sedan",
+      "transmission": "Auto",
+      "fuel": "Petrol",
+      "mileageValue": 2000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "express-motors-stock-2",
+      "title": "2021 Mercedes Benz AMG A45",
+      "make": "Mercedes Benz",
+      "model": "AMG A45",
+      "year": 2021,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/stock-2.webp"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Mercedes-Benz/AMG-A45/?id=8513",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "transmission": "Auto",
+      "fuel": "Petrol",
+      "mileageValue": 39000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "express-motors-stock-3",
+      "title": "2013 Mercedes Benz SL 63 AMG",
+      "make": "Mercedes Benz",
+      "model": "SL 63 AMG",
+      "year": 2013,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/stock-3.webp"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Mercedes-Benz/SL-63-AMG/?id=8524",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Convertible",
+      "transmission": "Auto",
+      "fuel": "Petrol",
+      "mileageValue": 48000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

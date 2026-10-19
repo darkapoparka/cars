@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "dealer": "chrome-used-cars",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "chrome-used-cars-stock-1",
+      "title": "2025 GMC Hummer",
+      "make": "GMC",
+      "model": "Hummer",
+      "year": 2025,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/stock-1.webp"
+      ],
+      "sourceUrl": "https://www.carsooq.com/listing/gmc-hummer-ev-suv-2025-model-year-with-warranty-blue-color-exterior",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageOnRequest": true,
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "chrome-used-cars-stock-2",
+      "title": "2020 Honda Pilot",
+      "make": "Honda",
+      "model": "Pilot",
+      "year": 2020,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/stock-2.webp"
+      ],
+      "sourceUrl": "https://www.carsooq.com/listing/2020-honda-pilot-ex-l-yf6-5dr-suv-3-5l-6cyl-petrol-automatic-all-wheel-drive",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 46000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "chrome-used-cars-stock-3",
+      "title": "2024 Citroen Spacetourer",
+      "make": "Citroen",
+      "model": "Spacetourer",
+      "year": 2024,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/stock-3.webp"
+      ],
+      "sourceUrl": "https://www.carsooq.com/listing/citroen-spacetourer-business-lounge-2024-model-year-black-color",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 15000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

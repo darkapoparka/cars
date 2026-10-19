@@ -1,0 +1,170 @@
+{
+  "schemaVersion": 1,
+  "dealer": "carmind-motors",
+  "publishedBranding": "retained-public-logo",
+  "sourceLogoUrl": "https://d2souf30ck18jq.cloudfront.net/carmind-motorsfze/logo-c0e5c0ce-9f86-4214-ad6b-a2dd013b9041.png",
+  "creationMethod": "retained-original-with-imagegen-surface-and-compact-variants",
+  "approvalStatus": "independent-proposal-not-dealer-approved",
+  "dealerApproved": false,
+  "observedAt": "2026-10-19",
+  "checkedSources": [
+    "https://d2souf30ck18jq.cloudfront.net/carmind-motorsfze/logo-c0e5c0ce-9f86-4214-ad6b-a2dd013b9041.png",
+    "https://www.dubicars.com/dealers/dubai-carmind-motors-3125"
+  ],
+  "researchConclusion": "Good transparent public Carmind wordmark retained unchanged as master and onLight. The inverse and compact marks are faithful generated derivatives, independently reviewed and not dealer approved.",
+  "originals": [
+    {
+      "path": "branding/original-logo.png",
+      "url": "https://d2souf30ck18jq.cloudfront.net/carmind-motorsfze/logo-c0e5c0ce-9f86-4214-ad6b-a2dd013b9041.png",
+      "observedAt": "2026-10-19",
+      "sha256": "4d1b52105fc2514e554369d4a87ceaf3be3ea5f18fc6014d054a40d0c2bc9d97"
+    }
+  ],
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "generationId": "exec-6db65341-72a9-4359-b0ad-1c1a59ac841e",
+    "generationIdKind": "exposed-tool-execution-output-identifier",
+    "modelVersion": null,
+    "outputReference": "branding/generated-sheet.png",
+    "outputSha256": "34b37eeb93547ea883778abd3b791c0f646f3445c28206fd3bf3d75267878395",
+    "prompt": "Faithful professional redraw/export of the attached public dealer identity. Main name: \"CARMIND\". No subtitle or slogan. Preserve the attached precise blue geometric CARMIND lettering and its small green diagonal accent. Do not redesign the good original wordmark. Supply a faithful pure-white inverse. Compact emblem is the distinctive opening C and diagonal green slash in a near-square composition, with an all-white matching inverse. This sheet supplements a retained exact original wordmark.\nUse crisp flat forms, no 3D, no gradients, no glow, no shadow, no invented warranty/award/approval text. The brand name appears EXACTLY ONCE in each full lockup. Do not repeat a script name inside the car and then repeat it below.\nDeliver one actual-transparent 2 by 2 export sheet for this ONE dealership: full matching light and inverse lockups across the top 60%, compact standalone near-square emblems across the bottom 40%. Clear large alpha gutters separate the cells; no panels, guides or role labels.\nLEFT full and compact artwork is mostly dark ink, with any existing brand colour kept deep enough on white. RIGHT full and compact artwork must be 100% PURE WHITE INK FOR EVERY SHAPE AND LETTER, no coloured accent at all, no black fill or background, so it contrasts on charcoal AND bright red. White inverse uses the same geometry as left. Shape counters and badge interiors must be truly transparent, not filled black. All compact elements need thick readable strokes and a near-square silhouette that stays clear at 32px. No checkerboard baked into pixels.",
+    "sourceRasterDimensions": {
+      "width": 1774,
+      "height": 887
+    }
+  },
+  "usageStatus": "public-preview-only",
+  "reviewedInputs": {
+    "reviewedAt": "2026-10-19T21:17:05.758Z",
+    "master": {
+      "path": "branding/original-logo.png",
+      "sha256": "4d1b52105fc2514e554369d4a87ceaf3be3ea5f18fc6014d054a40d0c2bc9d97",
+      "retainedSource": {
+        "kind": "retained-original-raster",
+        "sha256": "4d1b52105fc2514e554369d4a87ceaf3be3ea5f18fc6014d054a40d0c2bc9d97",
+        "url": "https://d2souf30ck18jq.cloudfront.net/carmind-motorsfze/logo-c0e5c0ce-9f86-4214-ad6b-a2dd013b9041.png",
+        "observedAt": "2026-10-19"
+      }
+    },
+    "mark": {
+      "path": "branding/reviewed-mark.png",
+      "sha256": "d68922f48be3802254f7e69086fa04091b73ea5b444f22c3ac0bcf49eeb96d1f",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-6db65341-72a9-4359-b0ad-1c1a59ac841e",
+        "generationIdKind": "exposed-tool-execution-output-identifier",
+        "modelVersion": null,
+        "outputReference": "branding/generated-sheet.png",
+        "outputSha256": "34b37eeb93547ea883778abd3b791c0f646f3445c28206fd3bf3d75267878395"
+      },
+      "export": {
+        "operation": "deterministic-artboard-cell-extraction",
+        "crop": [
+          0,
+          420,
+          887,
+          887
+        ]
+      }
+    },
+    "markOnDark": {
+      "path": "branding/reviewed-markOnDark.png",
+      "sha256": "f06044599c064950de9170bade3326c37b85bd57b9c402b1c2f24ab18360333f",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-6db65341-72a9-4359-b0ad-1c1a59ac841e",
+        "generationIdKind": "exposed-tool-execution-output-identifier",
+        "modelVersion": null,
+        "outputReference": "branding/generated-sheet.png",
+        "outputSha256": "34b37eeb93547ea883778abd3b791c0f646f3445c28206fd3bf3d75267878395"
+      },
+      "export": {
+        "operation": "deterministic-artboard-cell-extraction",
+        "crop": [
+          887,
+          420,
+          1774,
+          887
+        ]
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/original-logo.png",
+        "sha256": "4d1b52105fc2514e554369d4a87ceaf3be3ea5f18fc6014d054a40d0c2bc9d97",
+        "retainedSource": {
+          "kind": "retained-original-raster",
+          "sha256": "4d1b52105fc2514e554369d4a87ceaf3be3ea5f18fc6014d054a40d0c2bc9d97",
+          "url": "https://d2souf30ck18jq.cloudfront.net/carmind-motorsfze/logo-c0e5c0ce-9f86-4214-ad6b-a2dd013b9041.png",
+          "observedAt": "2026-10-19"
+        }
+      },
+      "onDark": {
+        "path": "branding/reviewed-onDark.png",
+        "sha256": "ce3cbeefe2bcfafafeeda47f730f3f59eb611e6e5298a9c5e93ba55028924cbf",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-6db65341-72a9-4359-b0ad-1c1a59ac841e",
+          "generationIdKind": "exposed-tool-execution-output-identifier",
+          "modelVersion": null,
+          "outputReference": "branding/generated-sheet.png",
+          "outputSha256": "34b37eeb93547ea883778abd3b791c0f646f3445c28206fd3bf3d75267878395"
+        },
+        "export": {
+          "operation": "deterministic-artboard-cell-extraction",
+          "crop": [
+            887,
+            0,
+            1774,
+            420
+          ]
+        }
+      },
+      "onAccent": {
+        "path": "branding/reviewed-onDark.png",
+        "sha256": "ce3cbeefe2bcfafafeeda47f730f3f59eb611e6e5298a9c5e93ba55028924cbf",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-6db65341-72a9-4359-b0ad-1c1a59ac841e",
+          "generationIdKind": "exposed-tool-execution-output-identifier",
+          "modelVersion": null,
+          "outputReference": "branding/generated-sheet.png",
+          "outputSha256": "34b37eeb93547ea883778abd3b791c0f646f3445c28206fd3bf3d75267878395"
+        },
+        "export": {
+          "operation": "deterministic-artboard-cell-extraction",
+          "crop": [
+            887,
+            0,
+            1774,
+            420
+          ]
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#101820",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "notes": "Actual-alpha artwork reviewed on white, charcoal and red; faithful name and motif retained, with a white inverse for dark and accent template surfaces."
+    },
+    "compactMarkStatus": "independent-proposal-not-dealer-approved",
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T21:17:05.758Z",
+      "widths": [
+        32,
+        64
+      ],
+      "notes": "Compact emblem reviewed at 32px and 64px. Simplified derivative preserves the identifying motif without tiny legal descriptors."
+    }
+  },
+  "logoSource": "real"
+}

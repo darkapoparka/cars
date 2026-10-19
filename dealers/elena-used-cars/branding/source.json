@@ -1,0 +1,191 @@
+{
+  "schemaVersion": 1,
+  "dealer": "elena-used-cars",
+  "publishedBranding": "retained-public-logo",
+  "sourceLogoUrl": "https://static.oneclickdrive.com/application/views/img/company/elena-used-cars.png?ok=1.12&height=70&width=auto&fit=resize",
+  "creationMethod": "imagegen-faithful-redraw",
+  "approvalStatus": "independent-proposal-not-dealer-approved",
+  "dealerApproved": false,
+  "observedAt": "2026-10-19",
+  "checkedSources": [
+    "https://static.oneclickdrive.com/application/views/img/company/elena-used-cars.png?ok=1.12&height=70&width=auto&fit=resize",
+    "https://www.oneclickdrive.com/company/dubai/elena-used-cars"
+  ],
+  "researchConclusion": "The public dealer logo was retained as evidence. The redraw keeps its published name, colours and identifying motif; compact adaptations and inverse variants are independent and unapproved.",
+  "originals": [
+    {
+      "path": "branding/original-logo.png",
+      "url": "https://static.oneclickdrive.com/application/views/img/company/elena-used-cars.png?ok=1.12&height=70&width=auto&fit=resize",
+      "observedAt": "2026-10-19",
+      "sha256": "c7e6439a8a7987647e320dc853073b22325bdeb620155e039f239bda58700481"
+    }
+  ],
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "generationId": "exec-49ff2cb2-c67a-4489-9309-9abbdef179d9",
+    "generationIdKind": "exposed-tool-execution-output-identifier",
+    "modelVersion": null,
+    "outputReference": "branding/generated-sheet.png",
+    "outputSha256": "4314f5f80c1a378b6c089493007b303ad006603f41171d332dc060b48aa9c800",
+    "prompt": "Faithful professional redraw/export of the attached public dealer identity. Main name: \"ELENA\". Smaller descriptor: \"USED CARS\". Preserve the source interlocking EC monogram: block E in charcoal and contrasting C in deep red, clean flat geometry. Add modest readable ELENA / USED CARS lettering below. Compact mark is exactly that near-square EC monogram, with its generous cutouts.\nUse crisp flat forms, no 3D, no gradients, no glow, no shadow, no invented warranty/award/approval text. The brand name appears EXACTLY ONCE in each full lockup. Do not repeat a script name inside the car and then repeat it below.\nDeliver one actual-transparent 2 by 2 export sheet for this ONE dealership: full matching light and inverse lockups across the top 60%, compact standalone near-square emblems across the bottom 40%. Clear large alpha gutters separate the cells; no panels, guides or role labels.\nLEFT full and compact artwork is mostly dark ink, with any existing brand colour kept deep enough on white. RIGHT full and compact artwork must be 100% PURE WHITE INK FOR EVERY SHAPE AND LETTER, no coloured accent at all, no black fill or background, so it contrasts on charcoal AND bright red. White inverse uses the same geometry as left. Shape counters and badge interiors must be truly transparent, not filled black. All compact elements need thick readable strokes and a near-square silhouette that stays clear at 32px. No checkerboard baked into pixels.",
+    "sourceRasterDimensions": {
+      "width": 1254,
+      "height": 1254
+    }
+  },
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T21:17:47.249Z",
+    "master": {
+      "path": "branding/reviewed-onLight.png",
+      "sha256": "efef25913eb7214cfbd58472d7b4a016d9f666f8a31c7f3eb4e6bc3fefd5bb45",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-49ff2cb2-c67a-4489-9309-9abbdef179d9",
+        "generationIdKind": "exposed-tool-execution-output-identifier",
+        "modelVersion": null,
+        "outputReference": "branding/generated-sheet.png",
+        "outputSha256": "4314f5f80c1a378b6c089493007b303ad006603f41171d332dc060b48aa9c800"
+      },
+      "export": {
+        "operation": "deterministic-artboard-cell-extraction",
+        "crop": [
+          0,
+          0,
+          627,
+          790
+        ]
+      }
+    },
+    "mark": {
+      "path": "branding/reviewed-mark.png",
+      "sha256": "27ec3dd8fdf08eb0d15975b2de7d7dabb78901e92b911955fb990893cf472a19",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-49ff2cb2-c67a-4489-9309-9abbdef179d9",
+        "generationIdKind": "exposed-tool-execution-output-identifier",
+        "modelVersion": null,
+        "outputReference": "branding/generated-sheet.png",
+        "outputSha256": "4314f5f80c1a378b6c089493007b303ad006603f41171d332dc060b48aa9c800"
+      },
+      "export": {
+        "operation": "deterministic-artboard-cell-extraction",
+        "crop": [
+          0,
+          790,
+          627,
+          1254
+        ]
+      }
+    },
+    "markOnDark": {
+      "path": "branding/reviewed-markOnDark.png",
+      "sha256": "eb7d0dab77c8ce99952198a0f98a96e87f8d8b0eb2152b7b757f17b038ff71bb",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-49ff2cb2-c67a-4489-9309-9abbdef179d9",
+        "generationIdKind": "exposed-tool-execution-output-identifier",
+        "modelVersion": null,
+        "outputReference": "branding/generated-sheet.png",
+        "outputSha256": "4314f5f80c1a378b6c089493007b303ad006603f41171d332dc060b48aa9c800"
+      },
+      "export": {
+        "operation": "deterministic-artboard-cell-extraction",
+        "crop": [
+          627,
+          790,
+          1254,
+          1254
+        ]
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/reviewed-onLight.png",
+        "sha256": "efef25913eb7214cfbd58472d7b4a016d9f666f8a31c7f3eb4e6bc3fefd5bb45",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-49ff2cb2-c67a-4489-9309-9abbdef179d9",
+          "generationIdKind": "exposed-tool-execution-output-identifier",
+          "modelVersion": null,
+          "outputReference": "branding/generated-sheet.png",
+          "outputSha256": "4314f5f80c1a378b6c089493007b303ad006603f41171d332dc060b48aa9c800"
+        },
+        "export": {
+          "operation": "deterministic-artboard-cell-extraction",
+          "crop": [
+            0,
+            0,
+            627,
+            790
+          ]
+        }
+      },
+      "onDark": {
+        "path": "branding/reviewed-onDark.png",
+        "sha256": "fb568306136761263c4bbc14d52a94e4ee702c93d841de2421138f117530ea8c",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-49ff2cb2-c67a-4489-9309-9abbdef179d9",
+          "generationIdKind": "exposed-tool-execution-output-identifier",
+          "modelVersion": null,
+          "outputReference": "branding/generated-sheet.png",
+          "outputSha256": "4314f5f80c1a378b6c089493007b303ad006603f41171d332dc060b48aa9c800"
+        },
+        "export": {
+          "operation": "deterministic-artboard-cell-extraction",
+          "crop": [
+            627,
+            0,
+            1254,
+            790
+          ]
+        }
+      },
+      "onAccent": {
+        "path": "branding/reviewed-onDark.png",
+        "sha256": "fb568306136761263c4bbc14d52a94e4ee702c93d841de2421138f117530ea8c",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-49ff2cb2-c67a-4489-9309-9abbdef179d9",
+          "generationIdKind": "exposed-tool-execution-output-identifier",
+          "modelVersion": null,
+          "outputReference": "branding/generated-sheet.png",
+          "outputSha256": "4314f5f80c1a378b6c089493007b303ad006603f41171d332dc060b48aa9c800"
+        },
+        "export": {
+          "operation": "deterministic-artboard-cell-extraction",
+          "crop": [
+            627,
+            0,
+            1254,
+            790
+          ]
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#101820",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "notes": "Actual-alpha artwork reviewed on white, charcoal and red; faithful name and motif retained, with a white inverse for dark and accent template surfaces."
+    },
+    "compactMarkStatus": "independent-proposal-not-dealer-approved",
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T21:17:47.249Z",
+      "widths": [
+        32,
+        64
+      ],
+      "notes": "Compact emblem reviewed at 32px and 64px. Simplified derivative preserves the identifying motif without tiny legal descriptors."
+    }
+  },
+  "usageStatus": "public-preview-only"
+}

@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "dealer": "durmaz-auto-export-and-trading-fzco",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "durmaz-auto-export-and-stock-1",
+      "title": "2015 Mercedes Benz G550",
+      "make": "Mercedes Benz",
+      "model": "G550",
+      "year": 2015,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/stock-1.webp"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Mercedes-Benz/G550/?id=150126",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "transmission": "Auto",
+      "fuel": "Petrol",
+      "mileageValue": 69000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "durmaz-auto-export-and-stock-2",
+      "title": "2021 Mercedes Benz G63 AMG",
+      "make": "Mercedes Benz",
+      "model": "G63 AMG",
+      "year": 2021,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/stock-2.webp"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Mercedes-Benz/G63-AMG/?id=150129",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "transmission": "Auto",
+      "fuel": "Petrol",
+      "mileageValue": 52000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "durmaz-auto-export-and-stock-3",
+      "title": "2021 Mercedes Benz E450 4Matic",
+      "make": "Mercedes Benz",
+      "model": "E450 4Matic",
+      "year": 2021,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/stock-3.webp"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Mercedes-Benz/E450-4Matic/?id=150127",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Coupe",
+      "transmission": "Auto",
+      "fuel": "Petrol",
+      "mileageValue": 2000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

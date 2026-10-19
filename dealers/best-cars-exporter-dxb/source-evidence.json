@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "dealer": "best-cars-exporter-dxb",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-best-cars-exporter-dxb-2897",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-best-cars-exporter-dxb-2897",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "business-name",
+        "business-address",
+        "dealer-attributed-business-phone",
+        "dated-stock-sample"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "researchedAt": "2026-10-19",
+  "catalogueResponseSha256": "2dc59488fb125f33a5ba50df7981bd1a534ebc5bf8f80c2e9007333b374bed3e",
+  "stockSources": [
+    {
+      "listingUrl": "https://www.dubicars.com/2025-toyota-hilux-1025241.html",
+      "catalogueUrl": "https://www.dubicars.com/dealers/dubai-best-cars-exporter-dxb-2897",
+      "imageUrl": "https://www.dubicars.com/images/78915c/650x380/best-cars-exporter-dxb/363b9ab2-7a14-4f7d-b169-4baf5fc0c151.jpeg",
+      "observedAt": "2026-10-19",
+      "imageSourceSha256": "d967e813fb4ab341bff7c056a8cb213ab1ee360e70d0d6aab8d8e5c072fb928a",
+      "retainedPath": "dealer-stock/stock-1.webp",
+      "retainedSha256": "4abc078e917d7c885f8cf066a6a00f89e0d8c57582f144c4490c8a16554d4d74",
+      "originalDimensions": [
+        650,
+        488
+      ],
+      "retainedDimensions": [
+        650,
+        488
+      ],
+      "retainedBytes": 26984,
+      "transformation": "Proportional downscale only if needed to maximum 1280 pixels; WebP quality 80; no visual content edits."
+    },
+    {
+      "listingUrl": "https://www.dubicars.com/2026-toyota-hilux-1018220.html",
+      "catalogueUrl": "https://www.dubicars.com/dealers/dubai-best-cars-exporter-dxb-2897",
+      "imageUrl": "https://www.dubicars.com/images/029155/650x380/best-cars-exporter-dxb/d3735aec-5ddd-4d49-b6ef-775d21f163bb.jpeg",
+      "observedAt": "2026-10-19",
+      "imageSourceSha256": "4b8ced9da9aa46c6b895f93e0467be65b203b3d55e987f3c56856a538842ba77",
+      "retainedPath": "dealer-stock/stock-2.webp",
+      "retainedSha256": "6fff5e594680c12213b8520e602e6d5e45b2b8ca34c9ba6e220f91b9aa49f140",
+      "originalDimensions": [
+        650,
+        771
+      ],
+      "retainedDimensions": [
+        650,
+        771
+      ],
+      "retainedBytes": 58208,
+      "transformation": "Proportional downscale only if needed to maximum 1280 pixels; WebP quality 80; no visual content edits."
+    },
+    {
+      "listingUrl": "https://www.dubicars.com/2023-toyota-land-cruiser-1015985.html",
+      "catalogueUrl": "https://www.dubicars.com/dealers/dubai-best-cars-exporter-dxb-2897",
+      "imageUrl": "https://www.dubicars.com/images/af1fa1/650x380/best-cars-exporter-dxb/915f89b7-c54b-46c6-bb03-73ed498f7716.jpeg",
+      "observedAt": "2026-10-19",
+      "imageSourceSha256": "56bdba4b7afd9340d23c0d593d3d361a385595b98ffa73259d72b27790941015",
+      "retainedPath": "dealer-stock/stock-3.webp",
+      "retainedSha256": "f545e3f4cb01d966d15a8f70550011bb69bb9d4e46e08e10f15af429763ec668",
+      "originalDimensions": [
+        650,
+        468
+      ],
+      "retainedDimensions": [
+        650,
+        468
+      ],
+      "retainedBytes": 34304,
+      "transformation": "Proportional downscale only if needed to maximum 1280 pixels; WebP quality 80; no visual content edits."
+    }
+  ],
+  "omissions": [
+    "Personal-looking email omitted without reproducing it.",
+    "No verified official website or opening hours obtained.",
+    "Catalogue location retained as published; exact showroom not independently verified."
+  ]
+}

@@ -4,7 +4,7 @@
   "dealerId": "ae-dubai-mpi-middle-east",
   "business": {
     "name": "MPI Middle East",
-    "city": "Ras Al Khaimah",
+    "city": "RAK",
     "region": "Ras Al Khaimah",
     "countryCode": "AE",
     "currency": "AED",
@@ -34,6 +34,13 @@
         "business-contact",
         "address",
         "attributed-public-stock"
+      ]
+    },
+    {
+      "url": "https://psd.rak.ae/home/public-services-department/about-ras-alkhaimah/",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "standard-public-abbreviation-for-Ras-Al-Khaimah"
       ]
     }
   ]

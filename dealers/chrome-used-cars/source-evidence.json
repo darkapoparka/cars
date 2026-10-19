@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "dealer": "chrome-used-cars",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/dubai/chrome-used-cars",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.carsooq.com/showroom/chrome-used-cars",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.carsooq.com/showroom/chrome-used-cars",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "business-name",
+        "public-dealer-contact",
+        "public-location-if-shown",
+        "dated-stock-sample"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "researchedAt": "2026-10-19",
+  "catalogueResponseSha256": "f464ff466ab419d254b97426329b4062a13e0f6d90488e17cc0310cc44a9a1ce",
+  "stockSources": [
+    {
+      "listingUrl": "https://www.carsooq.com/listing/gmc-hummer-ev-suv-2025-model-year-with-warranty-blue-color-exterior",
+      "catalogueUrl": "https://www.carsooq.com/showroom/chrome-used-cars",
+      "imageUrl": "https://media.carsooq.com/uploads/241554/conversions/2025-gmc-hummer-ev-suv-with-warranty-automatic-electric-suv-crossover-all-wheel-drive-5-seats-5-doors-1745484582-large.webp",
+      "observedAt": "2026-10-19",
+      "imageSourceSha256": "ae574753c9f30d1655221deea2adf77cf3d7dc4cbdc730202cd1a5103767f59f",
+      "retainedPath": "dealer-stock/stock-1.webp",
+      "retainedSha256": "ef3ba9f146be7613e85989ea3b1656271da1bf8e1052f70ea5c1a326b0b375ac",
+      "originalDimensions": [
+        1100,
+        1100
+      ],
+      "retainedDimensions": [
+        960,
+        960
+      ],
+      "retainedBytes": 144656,
+      "transformation": "Proportional downscale to maximum960pixels, WebP quality74; no visual content edits. Retained preview recompressed from the sourced photograph."
+    },
+    {
+      "listingUrl": "https://www.carsooq.com/listing/2020-honda-pilot-ex-l-yf6-5dr-suv-3-5l-6cyl-petrol-automatic-all-wheel-drive",
+      "catalogueUrl": "https://www.carsooq.com/showroom/chrome-used-cars",
+      "imageUrl": "https://media.carsooq.com/uploads/222459/conversions/2020-honda-pilot-ex-l-yf6-5dr-suv-3-5l-6cyl-petrol-automatic-all-wheel-drive-1722055866-large.webp",
+      "observedAt": "2026-10-19",
+      "imageSourceSha256": "388df035a8c9a1f15d9effc73f32f7545942309bb115d849b7f8b270d2e2f734",
+      "retainedPath": "dealer-stock/stock-2.webp",
+      "retainedSha256": "b52ae69e982d783451f8e804c731d297abcd540f47856654728e752854a0ef8e",
+      "originalDimensions": [
+        1100,
+        953
+      ],
+      "retainedDimensions": [
+        1100,
+        953
+      ],
+      "retainedBytes": 190480,
+      "transformation": "Proportional downscale to maximum 1280 pixels; WebP quality 80; no visual content edits."
+    },
+    {
+      "listingUrl": "https://www.carsooq.com/listing/citroen-spacetourer-business-lounge-2024-model-year-black-color",
+      "catalogueUrl": "https://www.carsooq.com/showroom/chrome-used-cars",
+      "imageUrl": "https://media.carsooq.com/uploads/247655/conversions/2024-citroen-spacetourer-business-lounge-2-0t-bluehd-gcc-spec-1754043139-large.webp",
+      "observedAt": "2026-10-19",
+      "imageSourceSha256": "df881eceaff3acb234c56aa566399a7e57681bfc865a4c11ee0bd11b6510a001",
+      "retainedPath": "dealer-stock/stock-3.webp",
+      "retainedSha256": "69de93db0c035be678be3f84b57e8bdbe0d1579ac0782f055382d11d4ae30174",
+      "originalDimensions": [
+        1100,
+        825
+      ],
+      "retainedDimensions": [
+        960,
+        720
+      ],
+      "retainedBytes": 108254,
+      "transformation": "Proportional downscale to maximum960pixels, WebP quality74; no visual content edits. Retained preview recompressed from the sourced photograph."
+    }
+  ],
+  "omissions": [
+    "Personal-looking or unverified emails omitted; no private contact fields retained.",
+    "Unknown official website, exact address or hours left empty; marketplace-wide defaults not imported.",
+    "Source catalogue changed: former OneClickDrive URL no longer identifies this dealer; current Carsooq showroom and seller-attributed detail pages used. Hummer odometer omitted because public description and structured value disagree."
+  ]
+}

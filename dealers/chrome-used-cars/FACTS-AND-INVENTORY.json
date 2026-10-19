@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "dealer": "chrome-used-cars",
+  "businessFacts": "business-facts.json",
+  "stock": "stock.json",
+  "inventoryKind": "dated-listing-snapshot",
+  "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+  "sources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/dubai/chrome-used-cars",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.carsooq.com/showroom/chrome-used-cars",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ]
+}

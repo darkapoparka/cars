@@ -1,0 +1,217 @@
+{
+  "schemaVersion": 1,
+  "dealer": "car-avenue-llc",
+  "publishedBranding": "retained-public-logo",
+  "sourceLogoUrl": "https://static.oneclickdrive.com/application/views/img/company/cars-avenue.png?ok=1.12&height=70&width=auto&fit=resize",
+  "creationMethod": "imagegen-faithful-redraw",
+  "approvalStatus": "independent-proposal-not-dealer-approved",
+  "dealerApproved": false,
+  "observedAt": "2026-10-19",
+  "checkedSources": [
+    "https://static.oneclickdrive.com/application/views/img/company/cars-avenue.png?ok=1.12&height=70&width=auto&fit=resize",
+    "https://www.oneclickdrive.com/company/dubai/car-avenue-llc"
+  ],
+  "researchConclusion": "The public dealer logo was retained as evidence. The redraw keeps its published name, colours and identifying motif; compact adaptations and inverse variants are independent and unapproved.",
+  "originals": [
+    {
+      "path": "branding/original-logo.png",
+      "url": "https://static.oneclickdrive.com/application/views/img/company/cars-avenue.png?ok=1.12&height=70&width=auto&fit=resize",
+      "observedAt": "2026-10-19",
+      "sha256": "54569676fc32029539d35cd3602f8508e753f08aa2289a7ecb41279084499518"
+    }
+  ],
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "generationId": "exec-a5a88b78-18ab-42ba-b60e-ec7adcc373f6",
+    "generationIdKind": "exposed-tool-execution-output-identifier",
+    "modelVersion": null,
+    "outputReference": "branding/generated-sheet.png",
+    "outputSha256": "977e025d76780989dd3feac4bb52adbd151068f496272b65e36a166693e03961",
+    "prompt": "Faithful professional redraw/export of the attached public dealer identity. Main name: \"CARS AVENUE\". No subtitle or slogan. Faithfully retain the strong narrow condensed block-letter wordmark and yellow/black identity, remove the tiny certification claim. Integrate one small yellow #c19400 underline on left. New compact near-square CA monogram is a clearly marked derivative of its typography. No filled yellow rectangle or black background panel.\nUse crisp flat forms, no 3D, no gradients, no glow, no shadow, no invented warranty/award/approval text. The brand name appears EXACTLY ONCE in each full lockup. Do not repeat a script name inside the car and then repeat it below.\nDeliver one actual-transparent 2 by 2 export sheet for this ONE dealership: full matching light and inverse lockups across the top 60%, compact standalone near-square emblems across the bottom 40%. Clear large alpha gutters separate the cells; no panels, guides or role labels.\nLEFT full and compact artwork is mostly dark ink, with any existing brand colour kept deep enough on white. RIGHT full and compact artwork must be 100% PURE WHITE INK FOR EVERY SHAPE AND LETTER, no coloured accent at all, no black fill or background, so it contrasts on charcoal AND bright red. White inverse uses the same geometry as left. Shape counters and badge interiors must be truly transparent, not filled black. All compact elements need thick readable strokes and a near-square silhouette that stays clear at 32px. No checkerboard baked into pixels.",
+    "sourceRasterDimensions": {
+      "width": 1254,
+      "height": 1254
+    }
+  },
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T21:17:17.662Z",
+    "master": {
+      "path": "branding/reviewed-onLight.png",
+      "sha256": "6f19018dd8dfbb0bf238d19a0376995a315e2672bcd9a20178d6f7169c7b457a",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a5a88b78-18ab-42ba-b60e-ec7adcc373f6",
+        "generationIdKind": "exposed-tool-execution-output-identifier",
+        "modelVersion": null,
+        "outputReference": "branding/generated-sheet.png",
+        "outputSha256": "977e025d76780989dd3feac4bb52adbd151068f496272b65e36a166693e03961"
+      },
+      "export": {
+        "operation": "deterministic-artboard-cell-extraction",
+        "crop": [
+          0,
+          0,
+          627,
+          650
+        ]
+      }
+    },
+    "mark": {
+      "path": "branding/compact-reviewed-mark.png",
+      "sha256": "3ac2d5a9ca83b2cf95c27246bbf8b661f975f30a9b5a4bc5d1379eacebc069ea",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a4a4e8a8-a956-4428-9878-3faabc3e98ad",
+        "generationIdKind": "exposed-tool-execution-output-identifier",
+        "modelVersion": null,
+        "outputReference": "branding/compact-generation.png",
+        "outputSha256": "65eaa053d3efc06d0a267b07d9d70a2d81f15b0acc531a7ad1bc293e618f9bd9",
+        "prompt": "Create ONLY two matching compact CA monogram assets for the attached CARS AVENUE dealer identity. This is an unapproved compact derivative of its existing condensed lettering. Preserve bold, condensed block letters C and A, strong deliberate geometry and the small underline motif. Make the monogram nearly square and unmistakable at 32px. LEFT asset dark black ink with a restrained deep golden-yellow underline, RIGHT asset every visible stroke pure white. Each C counter and A counter and all surrounding gaps must be genuinely empty transparent alpha. Use NO surrounding badge, NO enclosing border, NO rectangle, NO panel, NO black or white background. The letters themselves are separate bold strokes with large open space between and within them. Put the two monograms side by side on one WIDE transparent PNG sheet with very generous fully empty transparent gutters and margins. No full wordmark, no text beyond CA, no labels. Flat crisp vector-like ink, no shadows, glow, haze, blur or gradients. At least half of each tight bounding box must remain true fully transparent empty space, including spaces inside the C and A. Keep identity polished and legible."
+      },
+      "export": {
+        "operation": "deterministic-artboard-cell-extraction",
+        "crop": [
+          0,
+          0,
+          991,
+          793
+        ]
+      }
+    },
+    "markOnDark": {
+      "path": "branding/compact-reviewed-markOnDark.png",
+      "sha256": "79e18dc83e7c1622aae94b0f8b0d9fa853b755d5f764b70e77f6e5c0cb7875e3",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a4a4e8a8-a956-4428-9878-3faabc3e98ad",
+        "generationIdKind": "exposed-tool-execution-output-identifier",
+        "modelVersion": null,
+        "outputReference": "branding/compact-generation.png",
+        "outputSha256": "65eaa053d3efc06d0a267b07d9d70a2d81f15b0acc531a7ad1bc293e618f9bd9",
+        "prompt": "Create ONLY two matching compact CA monogram assets for the attached CARS AVENUE dealer identity. This is an unapproved compact derivative of its existing condensed lettering. Preserve bold, condensed block letters C and A, strong deliberate geometry and the small underline motif. Make the monogram nearly square and unmistakable at 32px. LEFT asset dark black ink with a restrained deep golden-yellow underline, RIGHT asset every visible stroke pure white. Each C counter and A counter and all surrounding gaps must be genuinely empty transparent alpha. Use NO surrounding badge, NO enclosing border, NO rectangle, NO panel, NO black or white background. The letters themselves are separate bold strokes with large open space between and within them. Put the two monograms side by side on one WIDE transparent PNG sheet with very generous fully empty transparent gutters and margins. No full wordmark, no text beyond CA, no labels. Flat crisp vector-like ink, no shadows, glow, haze, blur or gradients. At least half of each tight bounding box must remain true fully transparent empty space, including spaces inside the C and A. Keep identity polished and legible."
+      },
+      "export": {
+        "operation": "deterministic-artboard-cell-extraction",
+        "crop": [
+          991,
+          0,
+          1983,
+          793
+        ]
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/reviewed-onLight.png",
+        "sha256": "6f19018dd8dfbb0bf238d19a0376995a315e2672bcd9a20178d6f7169c7b457a",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-a5a88b78-18ab-42ba-b60e-ec7adcc373f6",
+          "generationIdKind": "exposed-tool-execution-output-identifier",
+          "modelVersion": null,
+          "outputReference": "branding/generated-sheet.png",
+          "outputSha256": "977e025d76780989dd3feac4bb52adbd151068f496272b65e36a166693e03961"
+        },
+        "export": {
+          "operation": "deterministic-artboard-cell-extraction",
+          "crop": [
+            0,
+            0,
+            627,
+            650
+          ]
+        }
+      },
+      "onDark": {
+        "path": "branding/reviewed-onDark.png",
+        "sha256": "3eafe6d57589a70594da54ef5e225325d07c4c71992dfc9ae3abe16d41985cd9",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-a5a88b78-18ab-42ba-b60e-ec7adcc373f6",
+          "generationIdKind": "exposed-tool-execution-output-identifier",
+          "modelVersion": null,
+          "outputReference": "branding/generated-sheet.png",
+          "outputSha256": "977e025d76780989dd3feac4bb52adbd151068f496272b65e36a166693e03961"
+        },
+        "export": {
+          "operation": "deterministic-artboard-cell-extraction",
+          "crop": [
+            627,
+            0,
+            1254,
+            650
+          ]
+        }
+      },
+      "onAccent": {
+        "path": "branding/reviewed-onDark.png",
+        "sha256": "3eafe6d57589a70594da54ef5e225325d07c4c71992dfc9ae3abe16d41985cd9",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-a5a88b78-18ab-42ba-b60e-ec7adcc373f6",
+          "generationIdKind": "exposed-tool-execution-output-identifier",
+          "modelVersion": null,
+          "outputReference": "branding/generated-sheet.png",
+          "outputSha256": "977e025d76780989dd3feac4bb52adbd151068f496272b65e36a166693e03961"
+        },
+        "export": {
+          "operation": "deterministic-artboard-cell-extraction",
+          "crop": [
+            627,
+            0,
+            1254,
+            650
+          ]
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#101820",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "notes": "Actual-alpha artwork reviewed on white, charcoal and red; faithful name and motif retained, with a white inverse for dark and accent template surfaces."
+    },
+    "compactMarkStatus": "independent-proposal-not-dealer-approved",
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T21:17:17.662Z",
+      "widths": [
+        32,
+        64
+      ],
+      "notes": "Open CA monogram and underline preserve the condensed wordmark identity. No enclosing panel; independent compact proposal, reviewed at32px/64px."
+    }
+  },
+  "usageStatus": "public-preview-only",
+  "generations": [
+    {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-a5a88b78-18ab-42ba-b60e-ec7adcc373f6",
+      "generationIdKind": "exposed-tool-execution-output-identifier",
+      "modelVersion": null,
+      "outputReference": "branding/generated-sheet.png",
+      "outputSha256": "977e025d76780989dd3feac4bb52adbd151068f496272b65e36a166693e03961",
+      "prompt": "Faithful professional redraw/export of the attached public dealer identity. Main name: \"CARS AVENUE\". No subtitle or slogan. Faithfully retain the strong narrow condensed block-letter wordmark and yellow/black identity, remove the tiny certification claim. Integrate one small yellow #c19400 underline on left. New compact near-square CA monogram is a clearly marked derivative of its typography. No filled yellow rectangle or black background panel.\nUse crisp flat forms, no 3D, no gradients, no glow, no shadow, no invented warranty/award/approval text. The brand name appears EXACTLY ONCE in each full lockup. Do not repeat a script name inside the car and then repeat it below.\nDeliver one actual-transparent 2 by 2 export sheet for this ONE dealership: full matching light and inverse lockups across the top 60%, compact standalone near-square emblems across the bottom 40%. Clear large alpha gutters separate the cells; no panels, guides or role labels.\nLEFT full and compact artwork is mostly dark ink, with any existing brand colour kept deep enough on white. RIGHT full and compact artwork must be 100% PURE WHITE INK FOR EVERY SHAPE AND LETTER, no coloured accent at all, no black fill or background, so it contrasts on charcoal AND bright red. White inverse uses the same geometry as left. Shape counters and badge interiors must be truly transparent, not filled black. All compact elements need thick readable strokes and a near-square silhouette that stays clear at 32px. No checkerboard baked into pixels.",
+      "sourceRasterDimensions": {
+        "width": 1254,
+        "height": 1254
+      }
+    },
+    {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-a4a4e8a8-a956-4428-9878-3faabc3e98ad",
+      "generationIdKind": "exposed-tool-execution-output-identifier",
+      "modelVersion": null,
+      "outputReference": "branding/compact-generation.png",
+      "outputSha256": "65eaa053d3efc06d0a267b07d9d70a2d81f15b0acc531a7ad1bc293e618f9bd9",
+      "prompt": "Create ONLY two matching compact CA monogram assets for the attached CARS AVENUE dealer identity. This is an unapproved compact derivative of its existing condensed lettering. Preserve bold, condensed block letters C and A, strong deliberate geometry and the small underline motif. Make the monogram nearly square and unmistakable at 32px. LEFT asset dark black ink with a restrained deep golden-yellow underline, RIGHT asset every visible stroke pure white. Each C counter and A counter and all surrounding gaps must be genuinely empty transparent alpha. Use NO surrounding badge, NO enclosing border, NO rectangle, NO panel, NO black or white background. The letters themselves are separate bold strokes with large open space between and within them. Put the two monograms side by side on one WIDE transparent PNG sheet with very generous fully empty transparent gutters and margins. No full wordmark, no text beyond CA, no labels. Flat crisp vector-like ink, no shadows, glow, haze, blur or gradients. At least half of each tight bounding box must remain true fully transparent empty space, including spaces inside the C and A. Keep identity polished and legible."
+    }
+  ]
+}

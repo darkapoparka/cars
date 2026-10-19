@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "slug": "express-motors",
+  "dealerId": "ae-dubai-express-motors",
+  "business": {
+    "name": "Express Motors",
+    "city": "Dubai",
+    "region": "Dubai",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "",
+    "phone": "+971504379279",
+    "phoneDisplay": "+971504379279",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://www.oneclickdrive.com/company/dubai/express-motors",
+    "hours": "",
+    "sourceUrl": "https://www.oneclickdrive.com/company/dubai/express-motors",
+    "observedAt": "2026-10-19",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/dubai/express-motors",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/company/dubai/express-motors",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "business-name",
+        "public-dealer-contact",
+        "public-location-if-shown",
+        "dated-stock-sample"
+      ]
+    }
+  ]
+}

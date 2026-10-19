@@ -15,6 +15,13 @@
         "address",
         "attributed-public-stock"
       ]
+    },
+    {
+      "url": "https://psd.rak.ae/home/public-services-department/about-ras-alkhaimah/",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "standard-public-location-abbreviation-only"
+      ]
     }
   ],
   "liveFetchPerformed": true,
@@ -62,5 +69,15 @@
     "outreachPerformed": false,
     "businessPhoneBasis": "Dealer-level public business contact field; not an individual staff contact."
   },
-  "researchNotes": ""
+  "researchNotes": "",
+  "composerCompatibility": [
+    {
+      "field": "business.city",
+      "retainedFullLocation": "Ras Al Khaimah",
+      "displayAbbreviation": "RAK",
+      "sourceUrl": "https://psd.rak.ae/home/public-services-department/about-ras-alkhaimah/",
+      "observedAt": "2026-10-19",
+      "note": "The official RAK Public Service Department identifies Ras Al Khaimah as RAK. The standard abbreviation avoids M1 city substitution into unquoted TypeScript object keys. Full verified region and address remain as published; no location change is asserted."
+    }
+  ]
 }

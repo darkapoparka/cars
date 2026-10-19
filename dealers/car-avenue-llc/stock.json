@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "dealer": "car-avenue-llc",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "car-avenue-llc-stock-1",
+      "title": "2020 Mercedes Benz GLA 250 AMG",
+      "make": "Mercedes Benz",
+      "model": "GLA 250 AMG",
+      "year": 2020,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/stock-1.webp"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Mercedes-Benz/GLA-250-AMG/?id=679975",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "SUV",
+      "fuel": "Petrol",
+      "mileageValue": 69000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "car-avenue-llc-stock-2",
+      "title": "2024 BMW 430i xDrive",
+      "make": "BMW",
+      "model": "430i xDrive",
+      "year": 2024,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/stock-2.webp"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/BMW/430i-xDrive/?id=679974",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Sedan",
+      "fuel": "Petrol",
+      "mileageValue": 20400,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "car-avenue-llc-stock-3",
+      "title": "2023 MG ZST Luxury",
+      "make": "MG",
+      "model": "ZST Luxury",
+      "year": 2023,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/stock-3.webp"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/MG/ZST-Luxury/?id=679973",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "SUV",
+      "fuel": "Petrol",
+      "mileageValue": 29550,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

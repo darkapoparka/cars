@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "dealer": "car-avenue-llc",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/dubai/car-avenue-llc",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/company/dubai/car-avenue-llc",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "business-name",
+        "public-dealer-contact",
+        "public-location-if-shown",
+        "dated-stock-sample"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "researchedAt": "2026-10-19",
+  "catalogueResponseSha256": "d3257c4e05be461d9e0e8917a906397f6418788a4f5a8e9f6a06cc779b3b6326",
+  "stockSources": [
+    {
+      "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Mercedes-Benz/GLA-250-AMG/?id=679975",
+      "catalogueUrl": "https://www.oneclickdrive.com/company/dubai/car-avenue-llc",
+      "imageUrl": "https://static.oneclickdrive.com/uploads/cars/Mercedes-Benz-GLA-Class-GLA-250-AMG_679975_1823056226303-1_small.jpg",
+      "observedAt": "2026-10-19",
+      "imageSourceSha256": "8db7a00af765c4c0734adad5c06ac9955996c9c0ddc20ea12d23c05e081ddfd3",
+      "retainedPath": "dealer-stock/stock-1.webp",
+      "retainedSha256": "57e43f3b56b13e3759185195b082f2bee85a35cb67df2c1913b1cb82b9de16a7",
+      "originalDimensions": [
+        450,
+        395
+      ],
+      "retainedDimensions": [
+        450,
+        395
+      ],
+      "retainedBytes": 76540,
+      "transformation": "Proportional downscale only if needed to maximum 1280 pixels; WebP quality 80; no visual content edits."
+    },
+    {
+      "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/BMW/430i-xDrive/?id=679974",
+      "catalogueUrl": "https://www.oneclickdrive.com/company/dubai/car-avenue-llc",
+      "imageUrl": "https://static.oneclickdrive.com/uploads/cars/BMW-4-Series-430i-xDrive_679974_1823055271753-1_small.jpg",
+      "observedAt": "2026-10-19",
+      "imageSourceSha256": "690d8c1bc657366365ea58794bcf3b32370a8f505b7c1e00617eab8e65c868bb",
+      "retainedPath": "dealer-stock/stock-2.webp",
+      "retainedSha256": "a10a5d55e5e3d8cd1636522fa80c0936527355dead1db4261fde8112b2d9ae2d",
+      "originalDimensions": [
+        450,
+        395
+      ],
+      "retainedDimensions": [
+        450,
+        395
+      ],
+      "retainedBytes": 74112,
+      "transformation": "Proportional downscale only if needed to maximum 1280 pixels; WebP quality 80; no visual content edits."
+    },
+    {
+      "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/MG/ZST-Luxury/?id=679973",
+      "catalogueUrl": "https://www.oneclickdrive.com/company/dubai/car-avenue-llc",
+      "imageUrl": "https://static.oneclickdrive.com/uploads/cars/MG-ZST-Luxury_679973_1823053888438-1_small.jpg",
+      "observedAt": "2026-10-19",
+      "imageSourceSha256": "69c699c3e87814df24b7cfcc65ba6d68a0eb17868b55d29873c307ae86f64d54",
+      "retainedPath": "dealer-stock/stock-3.webp",
+      "retainedSha256": "2b8bb8b308075cf7a3608af517260320c7b7063dfc9609aec974f4082373e690",
+      "originalDimensions": [
+        450,
+        395
+      ],
+      "retainedDimensions": [
+        450,
+        395
+      ],
+      "retainedBytes": 66316,
+      "transformation": "Proportional downscale only if needed to maximum 1280 pixels; WebP quality 80; no visual content edits."
+    }
+  ],
+  "omissions": [
+    "Personal-looking or unverified emails omitted; no private contact fields retained.",
+    "Unknown official website, exact address or hours left empty; marketplace-wide defaults not imported."
+  ]
+}

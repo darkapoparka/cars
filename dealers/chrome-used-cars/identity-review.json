@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T20:52:47.380Z",
+  "dealer": "chrome-used-cars",
+  "dealerId": "ae-dubai-chrome-used-cars",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "method": "Exact retained registry and compact-pack identity comparison; no dealer approval is implied.",
+  "sources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/dubai/chrome-used-cars",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "url": "https://www.carsooq.com/showroom/chrome-used-cars",
+      "observedAt": "2026-10-19"
+    }
+  ]
+}

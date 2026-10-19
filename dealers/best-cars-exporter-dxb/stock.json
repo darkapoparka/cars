@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "dealer": "best-cars-exporter-dxb",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "best-cars-exporter-dxb-stock-1",
+      "title": "2025 Toyota Hilux",
+      "make": "Toyota",
+      "model": "Hilux",
+      "year": 2025,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/stock-1.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2025-toyota-hilux-1025241.html",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 11000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "best-cars-exporter-dxb-stock-2",
+      "title": "2026 Toyota Hilux",
+      "make": "Toyota",
+      "model": "Hilux",
+      "year": 2026,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/stock-2.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2026-toyota-hilux-1018220.html",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageOnRequest": true,
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "best-cars-exporter-dxb-stock-3",
+      "title": "2023 Toyota Land Cruiser",
+      "make": "Toyota",
+      "model": "Land Cruiser",
+      "year": 2023,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/stock-3.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2023-toyota-land-cruiser-1015985.html",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 43200,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

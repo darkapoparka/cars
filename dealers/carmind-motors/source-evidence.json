@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "dealer": "carmind-motors",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-carmind-motors-3125",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-carmind-motors-3125",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "business-name",
+        "public-dealer-contact",
+        "public-location-if-shown",
+        "dated-stock-sample"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "researchedAt": "2026-10-19",
+  "catalogueResponseSha256": "fb1aab96c7457bd422ef9e97177bc41d852882feef4ec089bd6819f1e18b4016",
+  "stockSources": [
+    {
+      "listingUrl": "https://www.dubicars.com/2026-mg-5-mg5-15l-global-luxury-edition-at-2026-1031473.html",
+      "catalogueUrl": "https://www.dubicars.com/dealers/dubai-carmind-motors-3125",
+      "imageUrl": "https://www.dubicars.com/images/dcc535/650x380/carmind-motors/32e4dcdb-fb62-49ca-88d9-45596fd65e6d.jpeg",
+      "observedAt": "2026-10-19",
+      "imageSourceSha256": "9666bd260b275260cfa9df3b53e0c37041f0de18cce77b1a846076e6dd1539a6",
+      "retainedPath": "dealer-stock/stock-1.webp",
+      "retainedSha256": "3c1047ba5f168217de82d1248f0562d72c42b932efc074a05adf5bad5e82d1ec",
+      "originalDimensions": [
+        650,
+        488
+      ],
+      "retainedDimensions": [
+        650,
+        488
+      ],
+      "retainedBytes": 43576,
+      "transformation": "Proportional downscale only if needed to maximum 1280 pixels; WebP quality 80; no visual content edits."
+    },
+    {
+      "listingUrl": "https://www.dubicars.com/2024-chery-arrizo-e-cherry-arrizo-e-2024-405km-949072.html",
+      "catalogueUrl": "https://www.dubicars.com/dealers/dubai-carmind-motors-3125",
+      "imageUrl": "https://www.dubicars.com/images/48bcc1/650x380/carmind-motors/92f165cf-ea6a-4134-95f0-c91041ca240f.jpeg",
+      "observedAt": "2026-10-19",
+      "imageSourceSha256": "468507658289e5b23471981c748c83bab8aad1fcd0ee676b584a347de1c614f9",
+      "retainedPath": "dealer-stock/stock-2.webp",
+      "retainedSha256": "a91ef55b66a522fb3d7f3dca6c588aa5f1db595c7148b244703a8761e6790c4c",
+      "originalDimensions": [
+        650,
+        553
+      ],
+      "retainedDimensions": [
+        650,
+        553
+      ],
+      "retainedBytes": 42996,
+      "transformation": "Proportional downscale only if needed to maximum 1280 pixels; WebP quality 80; no visual content edits."
+    },
+    {
+      "listingUrl": "https://www.dubicars.com/2025-gwm-wey-gaoshan-gaoshan-2025-all-wheel-drive-mpv-946724.html",
+      "catalogueUrl": "https://www.dubicars.com/dealers/dubai-carmind-motors-3125",
+      "imageUrl": "https://www.dubicars.com/images/26317a/650x380/carmind-motors/f24fa0a6-eca4-4658-a2d8-2bcfe7f65fa9.jpeg",
+      "observedAt": "2026-10-19",
+      "imageSourceSha256": "2cb22d1943b769f6bdd16eaa278ce082d815b1fa740d4552bd5f059ada56bd85",
+      "retainedPath": "dealer-stock/stock-3.webp",
+      "retainedSha256": "3dba894d8fb82cc77b1ebfb0c15678eae1e2ecb0d9234a74bc2c4df5d95b2b61",
+      "originalDimensions": [
+        650,
+        880
+      ],
+      "retainedDimensions": [
+        650,
+        880
+      ],
+      "retainedBytes": 56598,
+      "transformation": "Proportional downscale only if needed to maximum 1280 pixels; WebP quality 80; no visual content edits."
+    }
+  ],
+  "omissions": [
+    "Personal-looking or unverified emails omitted; no private contact fields retained.",
+    "Unknown official website, exact address or hours left empty; marketplace-wide defaults not imported."
+  ]
+}

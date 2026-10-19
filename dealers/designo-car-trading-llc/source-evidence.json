@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "dealer": "designo-car-trading-llc",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/dubai/designo-car-trading-l.l.c",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/company/dubai/designo-car-trading-l.l.c",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "business-name",
+        "public-dealer-contact",
+        "public-location-if-shown",
+        "dated-stock-sample"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "researchedAt": "2026-10-19",
+  "catalogueResponseSha256": "c04aef60c938de168e0552d6ee33721996ff07d6dfc65a839402da02cf7d49d1",
+  "stockSources": [
+    {
+      "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Mercedes-Benz/GLA-250-4MATIC/?id=689209",
+      "catalogueUrl": "https://www.oneclickdrive.com/company/dubai/designo-car-trading-l.l.c",
+      "imageUrl": "https://static.oneclickdrive.com/uploads/cars/Mercedes-Benz-GLA-Class-GLA-250-4MATIC_689209_1848508791676-1_small.jpg",
+      "observedAt": "2026-10-19",
+      "imageSourceSha256": "1437156dda8afd043593831157d7fdbbaede93deb62cdf57034c8bd010f23bc3",
+      "retainedPath": "dealer-stock/stock-1.webp",
+      "retainedSha256": "603477cb54947ee65dd3161faf39678639ff7cf28aec7e724d8713124385b9f9",
+      "originalDimensions": [
+        450,
+        395
+      ],
+      "retainedDimensions": [
+        450,
+        395
+      ],
+      "retainedBytes": 32838,
+      "transformation": "Proportional downscale only if needed to maximum 1280 pixels; WebP quality 80; no visual content edits."
+    },
+    {
+      "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Nissan/XTrail-S/?id=689201",
+      "catalogueUrl": "https://www.oneclickdrive.com/company/dubai/designo-car-trading-l.l.c",
+      "imageUrl": "https://static.oneclickdrive.com/uploads/cars/Nissan-XTrail-S_689201_1848495856276-1_small.jpg",
+      "observedAt": "2026-10-19",
+      "imageSourceSha256": "0dc95aedfe1278f6f06fa59d1717b5539ad22cc6bafdebcf385c22098bcd2447",
+      "retainedPath": "dealer-stock/stock-2.webp",
+      "retainedSha256": "bf48ac822cdd3c20eaa58560ec84890167d5d4957bf3a5fd067a70dddccafbfb",
+      "originalDimensions": [
+        450,
+        395
+      ],
+      "retainedDimensions": [
+        450,
+        395
+      ],
+      "retainedBytes": 39568,
+      "transformation": "Proportional downscale only if needed to maximum 1280 pixels; WebP quality 80; no visual content edits."
+    },
+    {
+      "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Toyota/RAV4/?id=689197",
+      "catalogueUrl": "https://www.oneclickdrive.com/company/dubai/designo-car-trading-l.l.c",
+      "imageUrl": "https://static.oneclickdrive.com/uploads/cars/Toyota-Rav4-GXR_689197_1848490231454-1_small.jpg",
+      "observedAt": "2026-10-19",
+      "imageSourceSha256": "430b59f9299a6724bbeba726d17ce31ce3ceab717fc3fe142e578ed18fe7e9fd",
+      "retainedPath": "dealer-stock/stock-3.webp",
+      "retainedSha256": "ff63b1e8ecb0a6630b551b4d1ba8d9866b31c9929416501d54475886dc69cb48",
+      "originalDimensions": [
+        450,
+        395
+      ],
+      "retainedDimensions": [
+        450,
+        395
+      ],
+      "retainedBytes": 40432,
+      "transformation": "Proportional downscale only if needed to maximum 1280 pixels; WebP quality 80; no visual content edits."
+    }
+  ],
+  "omissions": [
+    "Personal-looking or unverified emails omitted; no private contact fields retained.",
+    "Unknown official website, exact address or hours left empty; marketplace-wide defaults not imported."
+  ]
+}

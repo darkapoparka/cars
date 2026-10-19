@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "dealer": "dubuy-auto-cars",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "dubuy-auto-cars-stock-1",
+      "title": "2026 Toyota Rav 4",
+      "make": "Toyota",
+      "model": "Rav 4",
+      "year": 2026,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/stock-1.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2026-toyota-rav4-1025347.html",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageOnRequest": true,
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "dubuy-auto-cars-stock-2",
+      "title": "2025 Mercedes Benz Eqg 580",
+      "make": "Mercedes Benz",
+      "model": "Eqg 580",
+      "year": 2025,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/stock-2.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2025-mercedes-benz-eqg-580-929892.html",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 5000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "dubuy-auto-cars-stock-3",
+      "title": "2019 Nissan Sunny",
+      "make": "Nissan",
+      "model": "Sunny",
+      "year": 2019,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/stock-3.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2019-nissan-sunny-1032354.html",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 200000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

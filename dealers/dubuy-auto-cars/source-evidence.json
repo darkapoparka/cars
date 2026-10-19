@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "dealer": "dubuy-auto-cars",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-dubuy-auto-cars-2965",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-dubuy-auto-cars-2965",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "business-name",
+        "public-dealer-contact",
+        "public-location-if-shown",
+        "dated-stock-sample"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "researchedAt": "2026-10-19",
+  "catalogueResponseSha256": "ef25670a5c0b6c44be800f66e845bdb90b67bcfefedee61593479d352ad4f744",
+  "stockSources": [
+    {
+      "listingUrl": "https://www.dubicars.com/2026-toyota-rav4-1025347.html",
+      "catalogueUrl": "https://www.dubicars.com/dealers/dubai-dubuy-auto-cars-2965",
+      "imageUrl": "https://www.dubicars.com/images/66c742/650x380/dubuy-auto-cars/70bb3b3a-92f9-47f7-a130-d4bf92d2f85e.jpeg",
+      "observedAt": "2026-10-19",
+      "imageSourceSha256": "b850d63660c25d4ab8233566f1d02ebe72a09c860180a12794dc831e3659ec88",
+      "retainedPath": "dealer-stock/stock-1.webp",
+      "retainedSha256": "b99e4ea1fc24178c67dc0433816cc73e7d9c2a5f00bb1efa952c64f170b9019a",
+      "originalDimensions": [
+        650,
+        366
+      ],
+      "retainedDimensions": [
+        650,
+        366
+      ],
+      "retainedBytes": 38612,
+      "transformation": "Proportional downscale only if needed to maximum 1280 pixels; WebP quality 80; no visual content edits."
+    },
+    {
+      "listingUrl": "https://www.dubicars.com/2025-mercedes-benz-eqg-580-929892.html",
+      "catalogueUrl": "https://www.dubicars.com/dealers/dubai-dubuy-auto-cars-2965",
+      "imageUrl": "https://www.dubicars.com/images/b170f7/650x380/dubuy-auto-cars/37e10a50-66ef-4a52-a80e-9797eca14d7f.jpeg",
+      "observedAt": "2026-10-19",
+      "imageSourceSha256": "0b39e51834f39fe4efaa875074dce3666ad9dc5983c607a9a1fda045a63de471",
+      "retainedPath": "dealer-stock/stock-2.webp",
+      "retainedSha256": "67452f0336027c5bce726bc2c9e7ba7d15673551ce7338a8f16c264d6856e7fd",
+      "originalDimensions": [
+        650,
+        462
+      ],
+      "retainedDimensions": [
+        650,
+        462
+      ],
+      "retainedBytes": 32112,
+      "transformation": "Proportional downscale only if needed to maximum 1280 pixels; WebP quality 80; no visual content edits."
+    },
+    {
+      "listingUrl": "https://www.dubicars.com/2019-nissan-sunny-1032354.html",
+      "catalogueUrl": "https://www.dubicars.com/dealers/dubai-dubuy-auto-cars-2965",
+      "imageUrl": "https://www.dubicars.com/images/fca1e3/650x380/dubuy-auto-cars/5e93713b-81e8-4ed5-941d-f39f14b95b23.jpeg",
+      "observedAt": "2026-10-19",
+      "imageSourceSha256": "f8570a67afcadfb7dd0cccf7cef2c8af495c91a428639989fae2a8029a53be9c",
+      "retainedPath": "dealer-stock/stock-3.webp",
+      "retainedSha256": "d423ed891dfa1df6f66b85b293615a9243bca0b210b44e267954a8af8dacd1d2",
+      "originalDimensions": [
+        650,
+        867
+      ],
+      "retainedDimensions": [
+        650,
+        867
+      ],
+      "retainedBytes": 64508,
+      "transformation": "Proportional downscale only if needed to maximum 1280 pixels; WebP quality 80; no visual content edits."
+    }
+  ],
+  "omissions": [
+    "Personal-looking or unverified emails omitted; no private contact fields retained.",
+    "Unknown official website, exact address or hours left empty; marketplace-wide defaults not imported."
+  ]
+}
