@@ -49,6 +49,14 @@ export async function prepareAppDealer(sourceRoot, manifest, {readFile, appFiles
  const profile = JSON.parse(profileBytes.toString('utf8'));
  if(profile.slug !== manifest.slug || !profile.business?.name || !Array.isArray(profile.listings)) throw new Error('Dealer profile identity mismatch');
  const business = profile.business, files = new Map(), assets = [];
+ const optionalPackFacts = factPolicy === 'dealer-pack-optional-v1';
+ if (optionalPackFacts) {
+  const name = 'lib/dealer-schema.ts';
+  const source = (appFiles?.get(name) ?? await read('app/' + name)).toString().replace(/\r\n/g, '\n');
+  const boundary = "body: z.enum(['SUV', 'Sedan', 'Hatchback', 'Coupe', 'MPV', 'Convertible', 'Pickup', 'Other'])";
+  if (source.split(boundary).length !== 2) throw new Error('Dealer-pack App unknown-body schema boundary changed');
+  files.set(name, Buffer.from(source.replace(boundary, boundary.replace("'Other'", "'Other', 'Not published'"))));
+ }
  async function retain(value, role) {
   if(typeof value !== 'string' || !/^\/(?!\/)/.test(value) || value.includes('\\') || value.includes('\0') || value.split('/').includes('..')) throw new Error('App requires a safe retained local asset: '+value);
   const name=value.slice(1), candidates=['auto-best/static/'+name];
@@ -81,6 +89,12 @@ export async function prepareAppDealer(sourceRoot, manifest, {readFile, appFiles
   const price=number(listing.priceAmount),mileage=dealerMileage(listing,business);
   mileageFacts.push({slug,...mileage});
   const fuelKey=text(listing.fuelType).toLowerCase(),transmissionKey=text(listing.transmissionType||listing.transmission).toLowerCase();
+  const bodyLabels=['SUV','Sedan','Hatchback','Coupe','MPV','Convertible','Pickup'];
+  const bodySource=listing.raw && typeof listing.raw==='object' ? listing.raw : listing;
+  const publishedBody=[bodySource.body,bodySource.category,bodySource.bodyType].map(text).find(Boolean);
+  const body=optionalPackFacts
+   ? publishedBody ? label(publishedBody,[...bodyLabels,'Other'],label(listing.bodyType,bodyLabels,'Not published')) : 'Not published'
+   : label(listing.bodyType,bodyLabels,'Other');
   const make=text(listing.brand||listing.make), originalModel=text(listing.model)||text(listing.title);
   const model=make && originalModel.toLowerCase().startsWith(make.toLowerCase()+' ')?originalModel.slice(make.length+1):originalModel;
   inventory.push({slug,make,model,trim:text(listing.trim),year:number(listing.year)||0,
@@ -88,7 +102,7 @@ export async function prepareAppDealer(sourceRoot, manifest, {readFile, appFiles
    mileage:mileage.canonicalKm??0,mileageOnRequest:mileage.canonicalKm===null,
    fuel:({gasoline:'Petrol',petrol:'Petrol',diesel:'Diesel',hybrid:'Hybrid',electric:'Electric'})[fuelKey]||'Not published',
    transmission:({automatic:'Automatic',manual:'Manual'})[transmissionKey]||'Not published',
-   body:label(listing.bodyType,['SUV','Sedan','Hatchback','Coupe','MPV','Convertible','Pickup'],'Other'),
+   body,
    specifications:text(listing.regionalSpecs),sourceUrl:url(listing.sourceUrl),observedAt:text(listing.observedAt),
    optionsType:'',location:text(business.city),badges:[],imagePlaceholder,
    proposalBenefits:['Warranty option','Finance option'],

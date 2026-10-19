@@ -7,6 +7,7 @@ import { stripTypeScriptTypes } from 'node:module';
 import { DEALER_PACK_MODERN_PATHS, dealerPackModernListing, dealerPackModernRuntime, personalizeDealerPackModernFacts } from './lib/dealer-pack-modern-facts.mjs';
 import { UK_MODERN_PATHS, personalizeModernUk } from './lib/client-refresh-uk-next.mjs';
 import { refreshAdapterInternals } from './lib/client-refresh-adapters.mjs';
+import { refreshNormalizeInternals } from './lib/client-refresh-normalize.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const dataPath = 'packages/marketplace-domain/testing/mock-data.ts';
@@ -19,7 +20,7 @@ const profile = (countryCode = 'US') => ({
 const item = (extra = {}) => ({
   id: 'source-one', slug: 'vehicle-one', title: '2022 Example Hatchback', make: 'Example', model: 'Hatchback', year: 2022,
   priceAmount: null, priceOnRequest: true, mileageOnRequest: true, mileageValue: null,
-  images: ['/dealer-stock/one.jpg'], features: [], observedAt: '2026-10-19T10:00:00Z', raw: {}, ...extra
+  images: ['/dealer-stock/one.jpg'], features: [], observedAt: '2026-10-19T10:00:00Z', raw: extra.raw ?? extra, ...extra
 });
 const known = (extra = {}) => item({ priceAmount: 12000, priceOnRequest: false, mileageOnRequest: false, mileageValue: 1000, mileageUnit: 'mi', transmissionType: 'automatic', ...extra });
 const generated = (country = 'US') => {
@@ -44,6 +45,8 @@ test('optional listing facts require the explicit policy and retain source dates
   assert.equal(listing.priceType, 'on_request');
   assert.equal(listing.spec.mileageKnown, false);
   assert.equal(listing.spec.transmission, 'unknown');
+  assert.equal(listing.spec.fuelType, 'unknown');
+  assert.equal(listing.spec.bodyType, 'unknown');
   assert.equal(listing.availabilityKnown, false);
   assert.equal(listing.publishedAt, source.observedAt);
   assert.equal('monthlyEstimate' in listing, false);
@@ -67,7 +70,42 @@ for (const country of ['US', 'AE', 'GB']) test(`${country} overlays apply atomic
   assert.equal(format.formatMileage(1609, 'en', { mileageKnown: true, mileageSourceValue: 1000, mileageSourceUnit: 'mi' }), '1,000 mi');
   assert.equal(format.formatMileage(0, 'en', { mileageKnown: true, mileageSourceValue: 0, mileageSourceUnit: 'km' }), '0 km');
   assert.equal(format.formatTransmission('unknown', 'en'), 'Not published');
+  for(const kind of ['FuelType','BodyType']) {
+    assert.equal(format['format'+kind]('unknown','en'),'Not published');
+    assert.equal(format['format'+kind]('unknown','bg'),'Не е посочено');
+    assert.equal(format['format'+kind]('other','en'),'Other');
+  }
   assert.equal(format.formatPriceType('on_request', 'en'), 'Price on request');
+});
+
+test('unknown categories remain distinct from sourced other through the native filters',async()=>{
+  const {p,files}=generated('AE');
+  const stock=[dealerPackModernListing(item(),0,'unknown',p),dealerPackModernListing(item({bodyType:'other',fuelType:'other'}),1,'other',p),dealerPackModernListing(item({bodyType:'suv',fuelType:'diesel'}),2,'known',p)];
+  const source=plain(files.get(dataPath));
+  const runtime=await evaluate(source.slice(source.indexOf('type ListingPredicate'),source.indexOf('const legacyListingSlugAliases')),runtimeImport(p)+`const mockListings = ${JSON.stringify(stock)};\n`);
+  const ids=filters=>runtime.getMockListings({category:'car',sort:'recommended',...filters}).map(row=>row.id);
+  for(const key of ['body','fuel']) {
+    assert.deepEqual(ids({[key]:'unknown'}),['unknown']);
+    assert.deepEqual(ids({[key]:'other'}),['other']);
+  }
+  assert.deepEqual(ids({fuel:'diesel',body:'suv'}),['known']);
+});
+
+test('normalizer fallback other cannot become a claimed public category',()=>{
+  const p=profile('AE');
+  for(const [extra,expectedBody,expectedFuel] of [
+    [{},'unknown','unknown'],
+    [{bodyType:'Other',fuel:'Other'},'other','other'],
+    [{bodyType:'unmapped source term',fuel:'unmapped source term'},'unknown','unknown'],
+    [{bodyType:'SUV',fuel:'Petrol'},'suv','gasoline'],
+    [{bodyType:'Hatchback',fuelType:'plug_in_hybrid'},'hatchback','plug_in_hybrid'],
+  ]) {
+    const raw=item(extra);delete raw.raw;
+    const normalized=refreshNormalizeInternals.normalizeListing(raw,0,p.business);
+    const listing=dealerPackModernListing(normalized,0,'source-normalized',p);
+    assert.equal(listing.spec.bodyType,expectedBody);
+    assert.equal(listing.spec.fuelType,expectedFuel);
+  }
 });
 
 test('unknowns do not match numeric ranges and sort after known facts in both price directions', async () => {
@@ -100,19 +138,22 @@ test('finance suppresses zero principal and excludes unknown prices/mileage from
   assert.equal(mod.matchesLeaseVehicleFilters(vehicle, { mileageMax: 10000 }), false);
 });
 
-test('structured data omits unknown price, odometer, gearbox and stock availability', async () => {
+test('structured data omits unknown price, odometer, categories, gearbox and stock availability', async () => {
   const { p, files } = generated('AE');
   const stubs = 'const withBasePath = value => value; const localizeListingCopy = value => value; const formatBodyType = value => value; const formatFuelType = value => value; const formatTransmission = value => value; const getLocalizedPath = (_locale, value) => value; const normalizeSeoLocale = value => value; const getCategoryPath = value => value; const leadSite = {};\n';
   const schema = await evaluate(plain(files.get('apps/web/lib/public-structured-data.ts')), stubs);
   const listing = dealerPackModernListing(item(), 0, 'unknown', p);
   const vehicle = schema.createVehicleStructuredData({ baseUrl: 'https://preview.invalid', listing, listingUrl: 'https://preview.invalid/one', locale: 'en' });
   const offer = schema.createOfferStructuredData({ listing, listingUrl: 'https://preview.invalid/one' });
-  for (const key of ['mileageFromOdometer', 'vehicleTransmission', 'offers']) assert.equal(key in vehicle, false, key);
+  for (const key of ['mileageFromOdometer', 'vehicleTransmission', 'bodyType', 'fuelType', 'offers']) assert.equal(key in vehicle, false, key);
   for (const key of ['price', 'priceCurrency', 'availability']) assert.equal(key in offer, false, key);
   const reviewed = dealerPackModernListing(known(), 0, 'known', p);
   const reviewedOffer = schema.createOfferStructuredData({ listing: reviewed, listingUrl: 'https://preview.invalid/two' });
   assert.equal(reviewedOffer.price, 12000);
   assert.equal('availability' in reviewedOffer, false);
+  const other=dealerPackModernListing(known({bodyType:'other',fuelType:'other'}),0,'other',p);
+  const otherVehicle=schema.createVehicleStructuredData({baseUrl:'https://preview.invalid',listing:other,listingUrl:'https://preview.invalid/other',locale:'en'});
+  assert.equal(otherVehicle.bodyType,'other');assert.equal(otherVehicle.fuelType,'other');
 });
 
 test('saved-car and inventory-search projections preserve unknown-fact flags', async () => {

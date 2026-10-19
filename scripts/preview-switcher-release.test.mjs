@@ -1,9 +1,11 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
 import vm from 'node:vm';
 import { switcherConfiguration } from './package-dealer.mjs';
 import { addSignatureNavigationHead, signatureNavigationHead } from './publishing/signature-navigation.mjs';
+import { PUBLIC_ROOTS } from './publishing/lead-branding.mjs';
 
 const source = readFileSync(new URL('./publishing/preview-switcher.js', import.meta.url), 'utf8');
 const variants = [
@@ -291,6 +293,111 @@ function sixHomesConfiguration(sourceFiles = homeSourceFiles) {
     variants: [...structuredClone(variants), { key: 'karento-best', base: '/variant-6', entry: '/variant-6/' }],
   }, nativeMessages, sourceFiles);
 }
+
+function reviewedDealerFab(slug = 'za-motors') {
+  const manifest = JSON.parse(readFileSync(new URL('../dealers/' + slug + '/dealer.json', import.meta.url)));
+  const retained = JSON.parse(readFileSync(new URL('../dealers/' + slug + '/branding/logo-contract.json', import.meta.url)));
+  const asset = 'mark-on-light.webp';
+  const mark = readFileSync(new URL('../dealers/' + slug + '/dealer-brand/' + asset, import.meta.url));
+  const digest = createHash('sha256').update(mark).digest('hex');
+  assert.equal(digest, retained.supplemental[asset].sha256, 'fixture is the committed reviewed dealer mark');
+  const publicBase = '/dealer-brand/v2-' + digest.slice(0, 16);
+  const receipt = {schemaVersion: 1, dealer: slug, publicBase,
+    reviewedAssets: [{name: asset, sha256: digest}],
+    assets: Object.entries(PUBLIC_ROOTS).map(([key, root]) => ({key, path: root + publicBase.slice(1) + '/' + asset, sha256: digest}))};
+  const files = new Map(homeSourceFiles);
+  files.set('branding/' + asset, mark);
+  for (const row of receipt.assets) files.set(row.path, Buffer.from(mark));
+  files.set('.cars-branding.json', Buffer.from(JSON.stringify(receipt)));
+  return {manifest, files, receipt, digest, mark};
+}
+
+test('all three reviewed dealer marks reach the actual FAB in each of six designs', () => {
+  for (const slug of ['za-motors', 'wadishee-used-cars', 'granada-auto-sales']) {
+    const {manifest, files, digest, mark} = reviewedDealerFab(slug);
+    const before = [...files].map(([name, bytes]) => [name, Buffer.from(bytes)]);
+    const input = switcherConfiguration(manifest, nativeMessages, files);
+    assert.equal(input.dealerFabLogo.policy, 'dealer-pack-reviewed-mark-v1');
+    assert.equal(input.dealerFabLogo.dealer, slug);
+    assert.equal(input.dealerFabLogo.sha256, digest);
+    assert.deepEqual(Buffer.from(input.dealerFabLogo.src.split(',')[1], 'base64'), mark);
+    for (const variant of manifest.variants) {
+      const address = 'https://dealer.example' + variant.base + '/?lang=en';
+      const r = render(input, address, 'en');
+      const legacy = render({...input, dealerFabLogo: undefined}, address, 'en');
+      const actual = r.shadow.querySelector('.fab-artwork').querySelector('img');
+      assert.equal(r.host.dataset.activeKey, variant.key);
+      assert.equal(actual.src, input.dealerFabLogo.src);
+      assert.equal(actual.alt, manifest.shareIdentity.name);
+      assert.equal(actual.getAttribute('data-dealer-fab-logo'), digest);
+      assert.equal(createHash('sha256').update(Buffer.from(actual.src.split(',')[1], 'base64')).digest('hex'), digest);
+      assert.deepEqual(r.links.map(link => link.querySelector('.preview').querySelector('img').src),
+        legacy.links.map(link => link.querySelector('.preview').querySelector('img').src), 'design illustrations remain the retained six template marks');
+      assert.deepEqual(r.links.map(link => link.href), legacy.links.map(link => link.href));
+      assert.equal(r.shadow.querySelector('.admin').href, legacy.shadow.querySelector('.admin').href);
+      r.shadow.querySelector('.fab').fire('click');
+      assert.equal(r.shadow.querySelector('.sheet').hidden, false);
+      r.shadow.querySelector('.close').fire('click');
+      assert.equal(r.shadow.querySelector('.sheet').hidden, true);
+    }
+    assert.deepEqual([...files], before, 'configuration does not rewrite any reviewed source bytes');
+  }
+});
+
+test('dealer FAB source binding rejects foreign identities and incomplete reviewed roles', () => {
+  const cases = [
+    f => { f.manifest.repository = 'elsewhere/cars'; },
+    f => { f.manifest.branding.required = false; },
+    f => { f.manifest.shareIdentity.name = ''; },
+    f => { f.manifest.variants.pop(); },
+    f => { f.receipt.dealer = 'another-dealer'; },
+    f => { f.receipt.publicBase = '/dealer-brand/../foreign'; },
+    f => { f.receipt.reviewedAssets = []; },
+    f => { f.receipt.reviewedAssets.push({...f.receipt.reviewedAssets[0]}); },
+    f => { f.receipt.assets[0].sha256 = '0'.repeat(64); },
+    f => { f.receipt.assets[0].path = 'auto-best/static/foreign/mark-on-light.webp'; },
+    f => { f.receipt.assets.push({...f.receipt.assets[0]}); },
+  ];
+  for (const change of cases) {
+    const f = reviewedDealerFab(); change(f);
+    f.files.set('.cars-branding.json', Buffer.from(JSON.stringify(f.receipt)));
+    assert.throws(() => switcherConfiguration(f.manifest, nativeMessages, f.files), /Dealer pack FAB logo:/);
+  }
+  const f = reviewedDealerFab();
+  assert.throws(() => switcherConfiguration(f.manifest, nativeMessages), /requires exact source files/);
+  f.files.delete('.cars-branding.json');
+  assert.throws(() => switcherConfiguration(f.manifest, nativeMessages, f.files), /missing branding receipt/);
+});
+
+test('dealer FAB source binding authenticates every family copy and bounded raster bytes', () => {
+  for (const key of Object.keys(PUBLIC_ROOTS)) {
+    for (const remove of [false, true]) {
+      const f = reviewedDealerFab();
+      const row = f.receipt.assets.find(row => row.key === key);
+      if (remove) f.files.delete(row.path);
+      else {const changed = Buffer.from(f.mark); changed[changed.length - 1] ^= 1; f.files.set(row.path, changed);}
+      assert.throws(() => switcherConfiguration(f.manifest, nativeMessages, f.files), new RegExp('reviewed family mark changed or missing: ' + key));
+    }
+  }
+  for (const bytes of [Buffer.from('<svg/>'), Buffer.alloc(256 * 1024 + 1), Buffer.from('not a reviewed WebP image')]) {
+    const f = reviewedDealerFab(); f.files.set('branding/mark-on-light.webp', bytes);
+    assert.throws(() => switcherConfiguration(f.manifest, nativeMessages, f.files), /bounded reviewed WebP/);
+  }
+  const f = reviewedDealerFab();
+  const changed = Buffer.from(f.mark); changed[changed.length - 1] ^= 1;
+  f.files.set('branding/mark-on-light.webp', changed);
+  assert.throws(() => switcherConfiguration(f.manifest, nativeMessages, f.files), /reviewed mark bytes changed/);
+});
+
+test('legacy switcher configuration retains template FAB defaults without pack inputs', () => {
+  const f = reviewedDealerFab();
+  delete f.manifest.sourceFormat;
+  const input = switcherConfiguration(f.manifest, nativeMessages, homeSourceFiles);
+  assert.equal(input.dealerFabLogo, undefined);
+  const r = render(input, 'https://dealer.example/variant-5/?lang=en', 'en');
+  assert.equal(r.shadow.querySelector('.fab-artwork').querySelector('img').src,
+    r.links[4].querySelector('.preview').querySelector('img').src);
+});
 
 test('six-design packaging adds two homes within App and Signature without changing family entries', () => {
   const configuration = sixHomesConfiguration();

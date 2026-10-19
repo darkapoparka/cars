@@ -3,13 +3,14 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import os from 'node:os';
+import vm from 'node:vm';
 import {createRequire} from 'node:module';
 import {spawnSync} from 'node:child_process';
 import {filesAt,sha256,writeJson} from './lib/workflow.mjs';
 import {SIX_DESIGN_KEYS} from './lib/six-design-release.mjs';
 import {canonicalPackJson,createDealerPackComposition,dealerPackCompositionDigest,PACK_CONTENT_IDENTITY_FIELDS,PACK_TARGETS,DEALER_PACK_COMPILED_KIND} from './lib/dealer-pack-artifacts.mjs';
 import {artifactInventory} from './lib/uk-cloudflare-artifacts.mjs';
-import {assessBundleLimits,inspectDealerPackBundle,loadFleetIdentities,findForeignIdentity,assessPageSnapshot,inspectLogoPixels,readFaviconPngs,verifyPackLogoAssets,stockIsDemo,verifyDealerPack,parseDealerPackVerificationArgs} from './verify-dealer-pack.mjs';
+import {assessBundleLimits,inspectDealerPackBundle,loadFleetIdentities,findForeignIdentity,assessPageSnapshot,dealerPackIdentityRequirements,assessDealerPackDesignIdentity,completeDealerPackWelcome,prepareDealerPackScreenshot,readDealerPackDom,observeDealerPackImages,inspectLogoPixels,readFaviconPngs,verifyPackLogoAssets,stockIsDemo,verifyDealerPack,parseDealerPackVerificationArgs} from './verify-dealer-pack.mjs';
 import {inspectDealerPackBatch,readDealerPackBatch,parseDeploymentArgs} from './deploy-dealer-single-worker.mjs';
 
 const area=t=>{const root=fs.mkdtempSync(path.join(os.tmpdir(),'cars-pack-qa-'));t.after(()=>fs.rmSync(root,{recursive:true,force:true}));return root;};
@@ -46,7 +47,7 @@ function addComposition(f){
  f.receipt.packCompositionDigest=dealerPackCompositionDigest(f.receipt.packComposition);f.seal();return f;
 }
 
-function snapshot(){return {url:'http://127.0.0.1:8787/',status:200,contentType:'text/html; charset=utf-8',title:'Honest Motors',text:'Honest Motors offers a sourced selection of vehicles. Browse our public stock, inspect each listing and use the published business contact details.',metadata:'Honest Motors',phones:['tel:01234567890'],images:[{src:'/dealer-brand/logo.png',alt:'Honest Motors',visible:true,loaded:true,dealerLogo:true}],designChoices:variants.map(variant=>({key:variant.key,href:variant.entry})),adminLinks:[{href:'https://cars-admin-blue.vercel.app/',target:'_blank',rel:'noopener noreferrer'}],errors:[],brokenImages:[],overflow:0};}
+function snapshot(){return {url:'http://127.0.0.1:8787/',status:200,contentType:'text/html; charset=utf-8',title:'Honest Motors',text:'Honest Motors offers a sourced selection of vehicles. Browse our public stock, inspect each listing and use the published business contact details.',metadata:'Honest Motors',phones:['tel:01234567890'],images:[{src:'/dealer-brand/logo.png',alt:'Honest Motors',visible:true,loaded:true,dealerLogo:true}],fabMarks:[{src:'data:image/webp;base64,[test fixture]',consumer:'fab',visible:true,loaded:true,dealerFabLogo:true}],designChoices:variants.map(variant=>({key:variant.key,href:variant.entry})),adminLinks:[{href:'https://cars-admin-blue.vercel.app/',target:'_blank',rel:'noopener noreferrer'}],errors:[],brokenImages:[],overflow:0};}
 const assess=value=>assessPageSnapshot({snapshot:value,facts,manifest,variant:variants[0],fleet:emptyFleet});
 
 test('platform budgets use uncompressed bytes, inclusive boundaries and explicit Free/Paid asset counts',()=>{
@@ -140,6 +141,155 @@ test('missing optional own phone stays unknown; inherited dealer phone still fai
  assert(assessPageSnapshot({snapshot:value,facts:{business:{name:'Honest Motors'}},manifest,variant:variants[0],fleet}).findings.includes('foreign-dealer-identity'));
  const unknown=snapshot();unknown.phones.push('tel:+447777777777');assert(assess(unknown).findings.includes('unexpected-business-phone'));
  const visible=snapshot();visible.phones=[];visible.text+=' Call 0121 555 0123.';assert.equal(assessPageSnapshot({snapshot:visible,facts:{business:{name:'Honest Motors',phone:'+441215550123'}},manifest,variant:variants[0],fleet:emptyFleet}).status,'passed');
+});
+
+const assessJourney=(value,label,extra={})=>assessPageSnapshot({snapshot:value,facts,manifest,variant:variants[0],fleet:emptyFleet,identityRequirements:dealerPackIdentityRequirements(label),...extra});
+const withoutPageIdentity=()=>{const value=snapshot();value.text='Browse the public vehicle catalogue, inspect each listing, and follow the contact navigation to find the sourced dealership details.';value.images=[];value.phones=[];return value;};
+
+test('home policy requires sourced page name and loaded reviewed page logo while recording an unobserved phone honestly',()=>{
+ const home=snapshot();home.phones=[];const result=assessJourney(home,'home');assert.equal(result.status,'passed');
+ assert.deepEqual(result.identity.required,{name:true,phone:false,logo:true});assert.deepEqual(result.identity.observed,{name:true,phone:false,logo:true});assert.equal(result.phone,'not-observed');
+ for(const [change,failure] of [[row=>{row.text=withoutPageIdentity().text;row.images[0].alt='Another dealership';},'dealer-name'],[row=>row.images[0].dealerLogo=false,'dealer-logo'],[row=>row.images[0].loaded=false,'dealer-logo'],[row=>row.images[0].consumer='fab','dealer-logo']]){
+  const value=structuredClone(home);change(value);assert(assessJourney(value,'home').findings.includes(failure),failure);
+ }
+ assert(assess(home).findings.includes('dealer-phone'),'Direct callers must retain the strict default');
+});
+
+test('contact and inner-route policies preserve own-phone and foreign-identity enforcement without inventing page chrome',()=>{
+ const contact=withoutPageIdentity();contact.phones=['tel:01234567890'];const result=assessJourney(contact,'contact');assert.equal(result.status,'passed');
+ assert.deepEqual(result.identity.required,{name:false,phone:true,logo:false});assert.deepEqual(result.identity.observed,{name:false,phone:true,logo:false});assert.equal(result.phone,'observed');
+ for(const phone of [null,'tel:+359888123456']){const value=structuredClone(contact);value.phones=phone?[phone]:[];assert(assessJourney(value,'contact').findings.includes('dealer-phone'));}
+ for(const label of ['inventory','detail']){
+  const value=withoutPageIdentity();assert.equal(assessJourney(value,label).status,'passed');
+  assert.deepEqual(assessJourney(value,label).identity.required,{name:false,phone:false,logo:false});
+  value.phones=['tel:+447777777777'];assert(assessJourney(value,label).findings.includes('unexpected-business-phone'));
+  value.phones=[];value.text+=' Foreign Motors.';
+  assert(assessJourney(value,label,{fleet:{records:[{slug:'foreign',names:['Foreign Motors'],phones:[]}]}}).findings.includes('foreign-dealer-identity'));
+  value.text+=' Lorem ipsum.';assert(assessJourney(value,label).findings.includes('placeholder-copy'));
+  value.status=500;value.errors=['Real hydration failure'];value.brokenImages=['/broken.png'];value.designChoices=[];value.adminLinks=[];
+  const findings=assessJourney(value,label).findings;for(const finding of ['route-response','browser-runtime-error','broken-image','six-design-fab','shared-admin-link'])assert(findings.includes(finding),finding);
+ }
+ assert.deepEqual(assess(withoutPageIdentity()).findings,['dealer-name','dealer-phone','dealer-logo']);
+ assert.throws(()=>dealerPackIdentityRequirements('unreviewed-route'),/Unknown dealer identity/);
+ assert.throws(()=>assessPageSnapshot({snapshot:contact,facts,manifest,variant:variants[0],fleet:emptyFleet,identityRequirements:{phone:false}}),/explicitly name/);
+});
+
+test('a hidden own phone cannot satisfy contact identity but every hidden foreign tel still fails the leak boundary',()=>{
+ const value=withoutPageIdentity();value.phones=['tel:01234567890'];value.visiblePhones=[];
+ const result=assessJourney(value,'contact');assert(result.findings.includes('dealer-phone'));assert.equal(result.identity.observed.phone,false);assert.equal(result.phone,'not-observed');
+ value.visiblePhones=['tel:01234567890'];assert.equal(assessJourney(value,'contact').status,'passed');
+ value.visiblePhones=[];value.phones.push('tel:+359888123456');
+ const hidden=assessJourney(value,'inventory',{fleet:{records:[{slug:'foreign',names:['Foreign Motors'],phones:['+359888123456']}]}});
+ assert(hidden.findings.includes('unexpected-business-phone'));assert(hidden.findings.includes('foreign-dealer-identity'));
+ const compatibility=withoutPageIdentity();compatibility.phones=['tel:01234567890'];assert.equal(assessJourney(compatibility,'contact').identity.observed.phone,true);
+});
+
+test('each design identity proof requires all three real homes and its actual sourced contact observation',()=>{
+ for(const variant of variants){
+  const make=(label,width)=>{const value=snapshot();value.url=new URL(variant.entry,'http://127.0.0.1:8787').href;return {...assessPageSnapshot({snapshot:value,facts,manifest,variant,fleet:emptyFleet,identityRequirements:dealerPackIdentityRequirements(label)}),label,width};};
+  const routes=[...[320,390,1280].map(width=>make('home',width)),make('contact',390)],options={routes,variant,facts};
+  assert.equal(assessDealerPackDesignIdentity(options).status,'passed');
+  for(const mutate of [rows=>rows.splice(0,1),rows=>rows.push(structuredClone(rows[0])),rows=>rows[0].identity.observed.name=false,rows=>rows[1].identity.observed.logo=false,rows=>rows[3].identity.observed.phone=false,rows=>rows[3].identity.required.phone=false,rows=>rows[3].status='failed']){
+   const changed=structuredClone(routes);mutate(changed);assert.equal(assessDealerPackDesignIdentity({...options,routes:changed}).status,'failed');
+  }
+  const other=variants.find(row=>row.key!==variant.key),redirected=snapshot();redirected.url=new URL(other.entry,'http://127.0.0.1:8787').href;
+  assert(assessPageSnapshot({snapshot:redirected,facts,manifest,variant,fleet:emptyFleet,identityRequirements:dealerPackIdentityRequirements('home')}).findings.includes('design-route'));
+  const noPhone={business:{name:facts.business.name}},unknown=structuredClone(routes);unknown.forEach(row=>row.identity.phoneProvided=false);unknown[3].identity.required.phone=false;unknown[3].identity.observed.phone=false;
+  assert.equal(assessDealerPackDesignIdentity({routes:unknown,variant,facts:noPhone}).phone,'not-provided');assert.equal(assessDealerPackDesignIdentity({routes:unknown,variant,facts:noPhone}).status,'passed');
+ }
+});
+
+test('a reviewed page logo cannot substitute for the loaded dealer FAB mark on any route',()=>{
+ for(const label of ['home','home-controls','inventory','detail','contact'])for(const mutate of [row=>row.fabMarks=[],row=>row.fabMarks[0].dealerFabLogo=false,row=>row.fabMarks[0].loaded=false,row=>row.fabMarks[0].visible=false,row=>row.fabMarks.push({...row.fabMarks[0]})]){
+  const value=snapshot();mutate(value);assert(assessJourney(value,label).findings.includes('dealer-fab-logo'),label);
+ }
+ const value=withoutPageIdentity();value.images=[{consumer:'fab',alt:'Honest Motors',visible:true,loaded:true,dealerLogo:true}];
+ const result=assessJourney(value,'home');assert(result.findings.includes('dealer-name'));assert(result.findings.includes('dealer-logo'));
+});
+
+test('rendered image bytes admit retained aliases and inline reviewed marks but reject generic template and wrong-surface FABs',async()=>{
+ const bytes=Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+jB58AAAAASUVORK5CYII=','base64'),digest=sha256(bytes),wrongSurface=Buffer.concat([bytes,Buffer.from('different reviewed role')]),wrongDigest=sha256(wrongSurface);
+ const source=fs.readFileSync(new URL('./publishing/preview-switcher.js',import.meta.url),'utf8'),generic=JSON.parse(source.match(/const templateLogos = (\{[^\n]+\});/)[1]).app;
+ const requests=[],options={origin:'http://127.0.0.1:8787',logoHashes:new Set([digest,wrongDigest]),fabLogoHashes:new Set([digest]),logoPaths:new Set(['/native-assets/reviewed-identity.png']),fetchImage:async url=>{requests.push(String(url));return {ok:true,arrayBuffer:async()=>bytes};}};
+ const image=(src,consumer='fab')=>({src,consumer,visible:true,loaded:true});
+ const images=[image('data:image/png;base64,'+bytes.toString('base64')),image(generic),image('data:image/png;base64,'+wrongSurface.toString('base64')),image('/native-assets/reviewed-identity.png','page'),image('/_next/image?url=%2Fnative-assets%2Freviewed-identity.png&w=64','page'),image('https://foreign.example/native-assets/reviewed-identity.png'),image('/stock/vehicle.jpg','page'),{...image('data:image/png;base64,'+bytes.toString('base64')),loaded:false}];
+ await observeDealerPackImages(images,options);
+ assert.equal(images[0].dealerFabLogo,true);assert.equal(images[0].sha256,digest);
+ assert.equal(images[1].dealerFabLogo,false);assert.notEqual(images[1].sha256,digest);
+ assert.equal(images[2].dealerLogo,true);assert.equal(images[2].dealerFabLogo,false,'A white-on-dark role cannot satisfy the white FAB surface');
+ assert.equal(images[3].dealerLogo,true);assert.equal(images[4].dealerLogo,true);assert.equal(requests.length,1,'Normalized native image aliases share the exact fetched bytes');
+ for(const index of [5,6,7])assert.equal(images[index].dealerLogo,false);
+ const forged=[image('data:image/svg+xml;base64,'+bytes.toString('base64')),image('data:image/png;base64,not-valid@@')];await observeDealerPackImages(forged,options);assert(forged.every(row=>row.sha256===null&&!row.dealerFabLogo));
+});
+
+function welcomeFixture(key,locale,{present=true,blocked=false,changeLocale=false}={}) {
+ const calls=[];let dialogOpen=present&&['auto-best','modern','import'].includes(key),welcomeOpen=present&&key==='app',documentLocale=locale;
+ const page={locator(selector){
+  if(selector==='html')return {getAttribute:async name=>{assert.equal(name,'lang');calls.push('read-locale');return documentLocale;}};
+  if(selector==='dialog[data-locale-dialog][data-locale-ready="true"]')return {waitFor:async options=>{assert.deepEqual(options,{state:'attached',timeout:15000});calls.push('native-ready');}};
+  if(selector==='dialog[data-locale-dialog][open]')return {isVisible:async()=>dialogOpen,getByRole(role,options){assert.equal(role,'button');assert.deepEqual(options,{name:locale.startsWith('bg')?'Не сега':'Not now',exact:true});return {click:async options=>{assert.deepEqual(options,{timeout:10000});calls.push('native-not-now');if(blocked)throw Error('Native button remains blocked');dialogOpen=false;if(changeLocale)documentLocale='bg';}};},waitFor:async options=>{assert.deepEqual(options,{state:'hidden',timeout:10000});assert.equal(dialogOpen,false);calls.push('native-hidden');}};
+  if(selector==='[data-welcome-sheet][role="dialog"]')return {isVisible:async()=>welcomeOpen,getByRole(role,options){assert.equal(role,'button');assert.deepEqual(options,{name:locale.startsWith('bg')?'Затвори приветствието':'Close welcome',exact:true});return {click:async(...args)=>{assert.deepEqual(args,[]);calls.push('maintained-close-welcome');if(blocked)throw Error('Native button remains blocked');welcomeOpen=false;}};}};
+  if(selector==='[data-welcome-overlay]')return {waitFor:async options=>{assert.deepEqual(options,{state:'hidden'});assert.equal(welcomeOpen,false);calls.push('welcome-hidden');}};
+  throw Error('Unexpected selector '+selector);
+ }};
+ return {page,calls};
+}
+
+test('all native welcome families use real localized controls and preserve the current document language',async()=>{
+ for(const locale of ['en','bg','en-GB'])for(const key of SIX_DESIGN_KEYS){
+  const f=welcomeFixture(key,locale),result=await completeDealerPackWelcome(f.page,{key});
+  assert.equal(result.status,'passed');assert.equal(result.documentLocale,locale);assert.equal(result.localeChanged,false);
+  if(['auto-best','modern','import'].includes(key)){assert(f.calls.indexOf('native-ready')<f.calls.indexOf('native-not-now'));assert(f.calls.includes('native-hidden'));assert.equal(result.actions[0].action,'dismiss');}
+  else if(key==='app'){assert(f.calls.includes('maintained-close-welcome'));assert(f.calls.includes('welcome-hidden'));}
+  else assert.deepEqual(result.actions,[]);
+ }
+ const absent=welcomeFixture('modern','en',{present:false});assert.deepEqual((await completeDealerPackWelcome(absent.page,{key:'modern'})).actions,[]);assert(!absent.calls.includes('native-not-now'));
+ const unsupported=welcomeFixture('modern','de');await assert.rejects(completeDealerPackWelcome(unsupported.page,{key:'modern'}),/Unsupported native document locale/);assert.deepEqual(unsupported.calls,['read-locale']);
+ for(const key of ['auto-best','modern','import','app'])await assert.rejects(completeDealerPackWelcome(welcomeFixture(key,'en',{blocked:true}).page,{key}),/remains blocked/);
+ await assert.rejects(completeDealerPackWelcome(welcomeFixture('modern','en',{changeLocale:true}).page,{key:'modern'}),/changed the document locale/);
+});
+
+test('preference dismissal selectors remain bound to the retained native English and Bulgarian catalogues',()=>{
+ for(const relative of ['templates/auto-best/src/lib/locale/catalog.ts','templates/modern/packages/internationalization/preferences-messages.ts']){
+  const text=fs.readFileSync(new URL('../'+relative,import.meta.url),'utf8');assert.match(text,/"locale\.dismiss": "Not now"/);assert.match(text,/"locale\.dismiss": "Не сега"/);
+ }
+ const text=fs.readFileSync(new URL('../templates/import/src/lib/locale/messages.ts',import.meta.url),'utf8');assert.match(text,/dismiss: 'Not now'/);assert.match(text,/dismiss: 'Не сега'/);
+});
+
+test('the real DOM observer distinguishes the active shadow FAB from hidden template cards and native page logos',()=>{
+ const make=(tagName,values={})=>({tagName,style:{display:'block',visibility:'visible',opacity:'1'},parentElement:null,getClientRects:()=>[{}],getBoundingClientRect:()=>({width:44,height:25}),getRootNode:()=>document,...values});
+ const body=make('BODY',{innerText:'Honest Motors public website'}),host=make('DEALER-DESIGN-SWITCHER',{parentElement:body}),native=make('IMG',{parentElement:body,src:'/native-logo.png',currentSrc:'',alt:'Honest Motors',complete:true,naturalWidth:44,width:44,height:25});
+ const shadow={host,children:[]},button=make('BUTTON',{innerText:'Designs and features 1/6',getRootNode:()=>shadow}),panel=make('SECTION',{innerText:'Hidden foreign template card',style:{display:'none',visibility:'visible',opacity:'1'},getRootNode:()=>shadow});
+ const fab=make('IMG',{parentElement:button,getRootNode:()=>shadow,closest:selector=>selector==='button.fab'?button:null,src:'data:image/webp;base64,reviewed',currentSrc:'',alt:'',complete:true,naturalWidth:44,width:44,height:25});
+ const template=make('IMG',{...fab,parentElement:panel,closest:()=>null,src:'data:image/webp;base64,generic'});
+ const visibleTel=make('A',{parentElement:body,getAttribute:()=> 'tel:01234567890'}),hiddenTel=make('A',{parentElement:body,style:{display:'none',visibility:'visible',opacity:'1'},getAttribute:()=> 'tel:+359888123456'});
+ shadow.children=[button,panel];shadow.querySelectorAll=selector=>selector==='*'?[button,panel,fab,template]:selector==='img'?[fab,template]:[];host.shadowRoot=shadow;
+ const document={body,title:'Honest Motors',documentElement:{scrollWidth:390},querySelectorAll:selector=>selector==='*'?[body,host,native,visibleTel,hiddenTel]:selector==='img'?[native]:selector==='a[href^="tel:"]'?[visibleTel,hiddenTel]:[]};
+ const read=()=>vm.runInNewContext('('+readDealerPackDom.toString()+')()',{document,location:{href:'http://127.0.0.1:8787/'},innerWidth:390,getComputedStyle:node=>node.style});
+ const result=read();assert.match(result.text,/Designs and features/);assert.doesNotMatch(result.text,/Hidden foreign/);
+ assert.deepEqual(Array.from(result.phones),['tel:01234567890','tel:+359888123456']);assert.deepEqual(Array.from(result.visiblePhones),['tel:01234567890']);
+ assert.deepEqual(Array.from(result.images,row=>row.consumer),['page','fab','switcher']);assert.equal(result.images[1].visible,true);assert.equal(result.images[2].visible,false);
+ host.style.opacity='0';assert.equal(read().images[1].visible,false,'A hidden composed ancestor cannot supply painted FAB evidence');
+});
+
+function scrollingFixture({height=2600,pending=false,broken=false}={}) {
+ const state={top:0,height,viewport:900},calls=[],images=[];
+ const image=(src,y,complete,naturalWidth)=>({src,currentSrc:src,complete,naturalWidth,getBoundingClientRect:()=>({top:y-state.top,bottom:y-state.top+160,width:200,height:160}),y});
+ images.push(image('/first.png',50,true,200),image('/lazy-stock.png',1700,false,0),image('/unrequested.png',height+2000,false,0));
+ const document={fonts:{status:'loaded'},images,documentElement:{scrollHeight:height},body:{scrollHeight:height}},context={document,innerHeight:state.viewport,innerWidth:390,getComputedStyle:()=>({display:'block',visibility:'visible'}),requestAnimationFrame:callback=>callback()};
+ Object.defineProperty(context,'scrollY',{get:()=>state.top});const runtime=vm.createContext(context);
+ const run=(fn,arg)=>{context.__arg=arg;return vm.runInContext('('+fn.toString()+')(__arg)',runtime);};
+ const page={evaluate:async(fn,arg)=>run(fn,arg),waitForFunction:async(fn,arg)=>{if(!await run(fn,arg))throw Error('Bounded wait timed out');},mouse:{move:async(x,y)=>{assert.equal(x,195);assert.equal(y,450);calls.push('move');},wheel:async(_x,delta)=>{calls.push(delta);state.top=Math.max(0,Math.min(height-state.viewport,state.top+delta));for(const row of images)if(row.y>=state.top&&row.y<state.top+state.viewport&&row.src==='/lazy-stock.png'&&!pending){row.complete=true;row.naturalWidth=broken?0:200;}}}};
+ return {page,state,calls,images};
+}
+
+test('visitor screenshot preparation loads encountered lazy images, leaves unrequested images alone and returns to the top',async()=>{
+ const f=scrollingFixture(),result=await prepareDealerPackScreenshot(f.page);assert.equal(result.status,'passed');assert.equal(f.state.top,0);assert(result.scrollSteps>1);assert(f.calls.some(value=>typeof value==='number'&&value>0));assert(f.calls.some(value=>typeof value==='number'&&value<0));
+ assert.equal(f.images[1].complete,true);assert.equal(f.images[2].complete,false);assert.equal(result.encounteredImages,2);assert.equal(result.loadedImages,2);assert.deepEqual(Array.from(result.pendingImages),[]);assert.deepEqual(Array.from(result.failedImages),[]);
+ const pending=await prepareDealerPackScreenshot(scrollingFixture({pending:true}).page);assert.equal(pending.status,'failed');assert.deepEqual(Array.from(pending.pendingImages),['/lazy-stock.png']);assert.deepEqual(Array.from(pending.failedImages),[]);
+ const broken=await prepareDealerPackScreenshot(scrollingFixture({broken:true}).page);assert.deepEqual(Array.from(broken.failedImages),['/lazy-stock.png']);assert.deepEqual(Array.from(broken.pendingImages),[]);
+ await assert.rejects(prepareDealerPackScreenshot(scrollingFixture({height:9000}).page,{maxSteps:2}),/bounded visitor scroll/);
+ await assert.rejects(prepareDealerPackScreenshot(scrollingFixture().page,{maxSteps:1000}),/Invalid screenshot preparation bound/);
 });
 
 test('placeholder text and undisclosed demo listings are failures; honest demo disclosure passes',()=>{

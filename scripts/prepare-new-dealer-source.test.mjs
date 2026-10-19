@@ -214,6 +214,15 @@ test('resume CLI is explicit, production keeps maintained phases and code invent
  const cli=fileURLToPath(new URL('./prepare-new-dealer-source.mjs',import.meta.url)),result=spawnSync(process.execPath,[cli,'--resume-area','one','--resume-area','two'],{encoding:'utf8',windowsHide:true});assert.notEqual(result.status,0);assert.match(result.stderr,/duplicate argument/);
 });
 
+test('transported orchestration boots using only its pinned files and detects an omitted publisher dependency',t=>{
+ const directory=temp(t),sourceRoot=fileURLToPath(new URL('..',import.meta.url));
+ for(const name of NEW_SOURCE_ORCHESTRATION_PATHS){const output=path.join(directory,name);fs.mkdirSync(path.dirname(output),{recursive:true});fs.copyFileSync(path.join(sourceRoot,name),output);}
+ const run=()=>spawnSync(process.execPath,[path.join(directory,'scripts/prepare-new-dealer-source.mjs'),'--help'],{cwd:directory,encoding:'utf8',windowsHide:true,timeout:30000});
+ const complete=run();assert.equal(complete.status,0,complete.stderr);assert.match(complete.stdout,/Default read-only/);assert.deepEqual(fs.readdirSync(directory),['scripts']);
+ fs.unlinkSync(path.join(directory,'scripts/lib/dealer-pack-switcher-logo.mjs'));
+ const incomplete=run();assert.notEqual(incomplete.status,0);assert.match(incomplete.stderr,/ERR_MODULE_NOT_FOUND/);assert.match(incomplete.stderr,/dealer-pack-switcher-logo\.mjs/);assert.deepEqual(fs.readdirSync(directory),['scripts']);
+});
+
 test('cheap Import preflight rejects original missing facts before any candidate is created',t=>{
  const root=temp(t);for(const field of ['year','mileage','currency']){const f=fixture(),row=f.stock.records[0];if(field==='year')row.year=0;if(field==='mileage'){delete row.mileageValue;row.mileageOnRequest=true;}if(field==='currency')row.currency='USD';const before=JSON.stringify(f.stock);assert.throws(()=>preflightNewSourceImport({root,dealer:f.dealer.slug,facts:f.facts,stock:f.stock}),/Import adaptation requires/);assert.equal(JSON.stringify(f.stock),before);assert.equal(fs.existsSync(path.join(root,'clients',f.dealer.slug)),false);}
  const f=fixture();assert.equal(preflightNewSourceImport({root,dealer:f.dealer.slug,facts:f.facts,stock:f.stock}).listings,1);

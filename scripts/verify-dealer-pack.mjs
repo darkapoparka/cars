@@ -10,6 +10,7 @@ import {safeArtifactPath,validateFileInventory,verifyArtifactDirectory} from './
 import {assertSixDesignSelection,SIX_DESIGN_KEYS} from './lib/six-design-release.mjs';
 import {canonicalPackJson,validatePackExecution,validatePackSourceReleases,validateDealerPackComposition,dealerPackCompositionDigest} from './lib/dealer-pack-artifacts.mjs';
 import {previewJourney,previewDetail} from './verify-dealer-preview.mjs';
+import {dismissAppWelcome} from './verify-priselci-public-browser.mjs';
 
 const assert=(ok,message)=>{if(!ok)throw Error(message);};
 const hex64=value=>/^[a-f0-9]{64}$/.test(value??'');
@@ -156,15 +157,32 @@ export function findForeignIdentity({text,phones=[],ownSlug,ownFacts,fleet}) {
 const placeholders=/\blorem ipsum\b|\bdolor sit amet\b|\byour (?:dealership|dealer name|company name|business name|logo here)\b|\b(?:insert|replace with) (?:dealer|business|company|logo)\b|\bexample@(?:example|email)\./i;
 const demoDisclosure=/\b(?:demo|sample|illustrative)\b.{0,120}\b(?:stock|listings|inventory|vehicles|cars|dealer)\b|\b(?:stock|listings|inventory|vehicles|cars)\b.{0,120}\b(?:demo|sample|illustrative)\b|демонстрацион|примерни (?:автомобили|обяви)|илюстратив/iu;
 
+export function dealerPackIdentityRequirements(label) {
+  assert(['home','home-controls','inventory','detail','contact'].includes(label),'Unknown dealer identity journey');
+  return {name:label.startsWith('home'),phone:label==='contact',logo:label.startsWith('home')};
+}
+
 /** Inspect observed DOM, not receipt claims or source-only success flags. */
-export function assessPageSnapshot({snapshot,facts,manifest,variant,fleet,demoStock=false,requireDisclosure=true}) {
+export function assessPageSnapshot({snapshot,facts,manifest,variant,fleet,demoStock=false,requireDisclosure=true,identityRequirements}) {
   const own=business(facts),findings=[];
+  const requested=identityRequirements??{name:true,phone:true,logo:true};
+  assert(requested&&Object.keys(requested).sort().join(',')==='logo,name,phone'&&Object.values(requested).every(value=>typeof value==='boolean'),'Identity requirements must explicitly name each factual check');
+  const visiblePhones=Object.hasOwn(snapshot,'visiblePhones')?snapshot.visiblePhones:(snapshot.phones??[]);
+  assert(Array.isArray(visiblePhones),'Visible phone observations must be explicit');
+  const pageImages=(snapshot.images??[]).filter(image=>!['fab','switcher'].includes(image.consumer));
+  const observed={name:[own.name,own.shortName].filter(Boolean).some(name=>includesName(snapshot.text,name)||pageImages.some(image=>image.visible&&image.loaded&&includesName(image.alt,name))),
+    phone:Boolean(own.phone)&&[...visiblePhones,...textPhones(snapshot.text)].some(phone=>samePhone(phone,own.phone)),
+    logo:pageImages.some(image=>image.visible&&image.loaded&&image.dealerLogo)};
+  const required={...requested,phone:requested.phone&&Boolean(own.phone)};
   if(snapshot.status!==200||!snapshot.contentType?.includes('text/html')||String(snapshot.text??'').trim().length<80)findings.push('route-response');
-  if(![own.name,own.shortName].filter(Boolean).some(name=>includesName(snapshot.text,name)||snapshot.images?.some(image=>image.visible&&image.loaded&&includesName(image.alt,name))))findings.push('dealer-name');
-  if(own.phone&&![...(snapshot.phones??[]),...textPhones(snapshot.text)].some(phone=>samePhone(phone,own.phone)))findings.push('dealer-phone');
+  for(const key of ['name','phone','logo'])if(required[key]&&!observed[key])findings.push('dealer-'+key);
   if(snapshot.phones?.some(phone=>!own.phone||!samePhone(phone,own.phone)))findings.push('unexpected-business-phone');
-  if(!snapshot.images?.some(image=>image.visible&&image.loaded&&image.dealerLogo))findings.push('dealer-logo');
+  const fabMarks=snapshot.fabMarks??[];
+  if(fabMarks.length!==1||!fabMarks[0].visible||!fabMarks[0].loaded||!fabMarks[0].dealerFabLogo)findings.push('dealer-fab-logo');
   const choices=snapshot.designChoices??[],expected=manifest.variants;
+  let actual;try{actual=new URL(snapshot.url);}catch{}
+  const actualOwner=actual&&(expected.find(item=>item.base&&(actual.pathname===item.base||actual.pathname.startsWith(item.base+'/')))?.key??'auto-best');
+  if(actualOwner!==variant.key)findings.push('design-route');
   if(choices.length!==6||choices.some((choice,index)=>choice.key!==expected[index]?.key))findings.push('six-design-fab');
   for(const [index,choice] of choices.entries()){
     let url;try{url=new URL(choice.href,snapshot.url);}catch{findings.push('fab-destination');continue;}
@@ -182,7 +200,23 @@ export function assessPageSnapshot({snapshot,facts,manifest,variant,fleet,demoSt
   if((snapshot.brokenImages??[]).length)findings.push('broken-image');
   if(snapshot.overflow>1)findings.push('horizontal-overflow');
   return {key:variant.key,status:findings.length?'failed':'passed',findings:[...new Set(findings)],leaks,
-    phone:own.phone?'checked':'not-provided',demoStock,disclosureObserved:demoDisclosure.test(snapshot.text),title:snapshot.title,url:snapshot.url,httpStatus:snapshot.status};
+    identity:{policy:identityRequirements?'explicit-route':'strict',required,observed,phoneProvided:Boolean(own.phone)},
+    phone:own.phone?(observed.phone?'observed':'not-observed'):'not-provided',demoStock,disclosureObserved:demoDisclosure.test(snapshot.text),title:snapshot.title,url:snapshot.url,httpStatus:snapshot.status};
+}
+
+/** Bind each design to its actual three home views and sourced contact journey. */
+export function assessDealerPackDesignIdentity({routes,variant,facts}) {
+  const homes=routes.filter(row=>row.key===variant.key&&row.label==='home'),contacts=routes.filter(row=>row.key===variant.key&&row.label==='contact'),findings=[];
+  const sourcedPhone=Boolean(business(facts).phone);
+  if([...homes,...contacts].some(row=>row.identity?.phoneProvided!==sourcedPhone))findings.push('sourced-phone-binding');
+  for(const width of [320,390,1280]){
+    const rows=homes.filter(row=>row.width===width);
+    if(rows.length!==1||rows[0].status!=='passed'||!rows[0].identity?.required.name||!rows[0].identity?.required.logo||!rows[0].identity?.observed.name||!rows[0].identity?.observed.logo)findings.push('home-identity:'+width);
+  }
+  if(homes.length!==3)findings.push('home-observation-count');
+  if(contacts.length!==1||contacts[0].status!=='passed'||sourcedPhone&&(!contacts[0].identity?.required.phone||!contacts[0].identity?.observed.phone))findings.push('contact-identity');
+  const evidence=row=>({url:row.url,label:row.label,width:row.width,httpStatus:row.httpStatus,status:row.status,identity:row.identity});
+  return {key:variant.key,status:findings.length?'failed':'passed',findings,phone:sourcedPhone?'required-on-contact-journey':'not-provided',homes:homes.map(evidence),contacts:contacts.map(evidence)};
 }
 
 function resolveDependency(root,name,override){
@@ -337,31 +371,102 @@ export async function startDealerPackPreview({root=ROOT,bundleRoot,wranglerRoot=
   }catch(error){await close();throw error;}
 }
 
-async function pageSnapshot(page,response,logoHashes,imageDigests,errors){
-  const value=await page.evaluate(()=>{
+/** Follow the native first-visit dismissal controls without changing locale. */
+export async function completeDealerPackWelcome(page,variant) {
+  assert(SIX_DESIGN_KEYS.includes(variant.key),'Unknown native welcome design');
+  const documentLocale=await page.locator('html').getAttribute('lang'),locale=/^(en|bg)(?:-|$)/.exec(documentLocale??'')?.[1];
+  assert(locale,'Unsupported native document locale: '+documentLocale);
+  const actions=[];
+  if(['auto-best','modern','import'].includes(variant.key)){
+    await page.locator('dialog[data-locale-dialog][data-locale-ready="true"]').waitFor({state:'attached',timeout:15000});
+    const dialog=page.locator('dialog[data-locale-dialog][open]');
+    if(await dialog.isVisible()){
+      const label=locale==='bg'?'Не сега':'Not now';
+      await dialog.getByRole('button',{name:label,exact:true}).click({timeout:10000});
+      await dialog.waitFor({state:'hidden',timeout:10000});
+      actions.push({control:'native-locale-dialog',action:'dismiss',label});
+    }
+  }
+  if(variant.key==='app'&&await dismissAppWelcome(page,locale))actions.push({control:'native-app-welcome',action:'dismiss',label:locale==='bg'?'Затвори приветствието':'Close welcome'});
+  assert(!await page.locator('dialog[data-locale-dialog][open]').isVisible()&&!await page.locator('[data-welcome-sheet][role="dialog"]').isVisible(),'Native welcome still blocks the visitor journey');
+  const after=await page.locator('html').getAttribute('lang');assert(after===documentLocale,'Welcome dismissal changed the document locale');
+  return {status:'passed',documentLocale,locale,actions,localeChanged:false};
+}
+
+/** Trigger native lazy loading with bounded visitor scrolling before a full-page capture. */
+export async function prepareDealerPackScreenshot(page,{maxSteps=80,imageWaitMs=2500}={}) {
+  assert(Number.isInteger(maxSteps)&&maxSteps>0&&maxSteps<=80&&Number.isInteger(imageWaitMs)&&imageWaitMs>0&&imageWaitMs<=5000,'Invalid screenshot preparation bound');
+  await page.waitForFunction(()=>!document.fonts||document.fonts.status==='loaded',null,{timeout:5000});
+  const geometry=()=>page.evaluate(()=>({top:scrollY,height:Math.max(document.documentElement.scrollHeight,document.body.scrollHeight),viewport:innerHeight,width:innerWidth}));
+  let current=await geometry(),steps=0,imageWaitTimeouts=0,reachedBottom=false;
+  const visited=new Set();
+  await page.mouse.move(Math.max(1,Math.floor(current.width/2)),Math.max(1,Math.floor(current.viewport/2)));
+  if(current.top>1){await page.mouse.wheel(0,-current.height-current.viewport);await page.waitForFunction(()=>scrollY<=1,null,{timeout:3000});}
+  for(;steps<maxSteps;steps++){
+    // A native wheel turn gives IntersectionObserver/lazy-loading a rendering
+    // opportunity. Only images actually encountered in the viewport are awaited.
+    await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
+    const visible=await page.evaluate(()=>[...document.images].filter(image=>{const r=image.getBoundingClientRect(),s=getComputedStyle(image);return r.width>0&&r.height>0&&r.bottom>0&&r.top<innerHeight&&s.display!=='none'&&s.visibility!=='hidden';}).map(image=>image.currentSrc||image.src).filter(Boolean));
+    visible.forEach(src=>visited.add(src));
+    try{await page.waitForFunction(()=>[...document.images].filter(image=>{const r=image.getBoundingClientRect(),s=getComputedStyle(image);return r.width>0&&r.height>0&&r.bottom>0&&r.top<innerHeight&&s.display!=='none'&&s.visibility!=='hidden'&&(image.currentSrc||image.src);}).every(image=>image.complete),null,{timeout:imageWaitMs});}catch{imageWaitTimeouts++;}
+    current=await geometry();
+    if(current.top+current.viewport>=current.height-1){reachedBottom=true;break;}
+    await page.mouse.wheel(0,Math.max(120,Math.floor(current.viewport*0.75)));
+    await page.waitForFunction(previous=>scrollY>previous+1||scrollY+innerHeight>=Math.max(document.documentElement.scrollHeight,document.body.scrollHeight)-1,current.top,{timeout:3000});
+  }
+  assert(reachedBottom,'Home screenshot exceeds the bounded visitor scroll');
+  await page.mouse.wheel(0,-current.height-current.viewport);
+  await page.waitForFunction(()=>scrollY<=1,null,{timeout:3000});
+  const images=await page.evaluate(sources=>[...document.images].filter(image=>sources.includes(image.currentSrc||image.src)).map(image=>({src:image.currentSrc||image.src,complete:image.complete,loaded:image.complete&&image.naturalWidth>0})),[...visited]);
+  const pending=images.filter(image=>!image.complete),failed=images.filter(image=>image.complete&&!image.loaded);
+  return {status:pending.length?'failed':'passed',scrollSteps:steps+1,fonts:'loaded',returnedToTop:true,imageWaitTimeouts,encounteredImages:images.length,loadedImages:images.filter(image=>image.loaded).length,
+    pendingImages:pending.map(image=>imageSourceEvidence(image.src)),failedImages:failed.map(image=>imageSourceEvidence(image.src)),note:'Only encountered images were requested; actual image errors remain separate from pending lazy loads.'};
+}
+
+export function readDealerPackDom() {
     const roots=[document];for(let i=0;i<roots.length;i++)for(const element of roots[i].querySelectorAll('*'))if(element.shadowRoot)roots.push(element.shadowRoot);
     const all=selector=>roots.flatMap(root=>[...root.querySelectorAll(selector)]);
-    const visible=element=>{const style=getComputedStyle(element),r=element.getBoundingClientRect();return !!element.getClientRects().length&&r.width>0&&r.height>0&&style.visibility!=='hidden'&&style.display!=='none'&&style.opacity!=='0';};
-    const images=all('img').map(element=>({src:element.currentSrc||element.src,alt:element.alt,visible:visible(element),complete:element.complete,loaded:element.complete&&element.naturalWidth>0,width:element.width,height:element.height}));
-    const text=document.body.innerText;
+    const visible=element=>{const r=element.getBoundingClientRect();if(!element.getClientRects().length||r.width<=0||r.height<=0)return false;for(let node=element;node;node=node.parentElement??node.getRootNode?.().host){const style=getComputedStyle(node);if(style.visibility==='hidden'||style.display==='none'||style.opacity==='0')return false;}return true;};
+    const images=all('img').map(element=>{const inSwitcher=element.getRootNode?.().host?.tagName==='DEALER-DESIGN-SWITCHER';return {src:element.currentSrc||element.src,alt:element.alt,visible:visible(element),complete:element.complete,loaded:element.complete&&element.naturalWidth>0,width:element.width,height:element.height,
+      consumer:inSwitcher?(element.closest('button.fab')?'fab':'switcher'):'page'};});
+    const text=[document.body.innerText,...roots.slice(1).flatMap(root=>[...root.children].filter(visible).map(element=>element.innerText??''))].join('\n');
     const metadata=[document.title,...all('meta[name="description"],meta[property^="og:"]').map(element=>element.content),...all('script[type="application/ld+json"]').map(element=>element.textContent)].join('\n');
     return {url:location.href,title:document.title,text,metadata,images,phones:[...new Set(all('a[href^="tel:"]').map(element=>element.getAttribute('href')))],
+      visiblePhones:[...new Set(all('a[href^="tel:"]').filter(visible).map(element=>element.getAttribute('href')))],
       designChoices:all('a[data-design-key]:not([data-home-id])').map(element=>({key:element.getAttribute('data-design-key'),href:element.getAttribute('href')})),
       adminLinks:all('a[data-cars-admin]').map(element=>({href:element.getAttribute('href'),target:element.getAttribute('target'),rel:element.getAttribute('rel')})),
       brokenImages:images.filter(image=>image.visible&&image.complete&&!image.loaded&&image.src).map(image=>image.src),overflow:document.documentElement.scrollWidth-innerWidth};
-  });
-  const ownOrigin=new URL(value.url).origin;
-  for(const image of value.images){
-    image.dealerLogo=false;
+}
+
+/** Match actual rendered bytes; filenames or a valid logo elsewhere are insufficient. */
+export async function observeDealerPackImages(images,{origin,logoHashes,fabLogoHashes,logoPaths,imageDigests=new Map(),fetchImage=fetch}) {
+  for(const image of images){
+    image.dealerLogo=false;image.dealerFabLogo=false;image.sha256=null;
     if(!image.visible||!image.loaded)continue;
-    let target;try{target=new URL(image.src,value.url);if(target.searchParams.has('url'))target=new URL(target.searchParams.get('url'),target);}catch{continue;}
-    if(target.origin!==ownOrigin||!/(?:dealer-brand|branding)\//.test(target.pathname))continue;
-    if(!imageDigests.has(target.href)){
-      try{const response=await fetch(target,{signal:AbortSignal.timeout(10000)});const bytes=Buffer.from(await response.arrayBuffer());imageDigests.set(target.href,response.ok&&bytes.length<=CLOUDFLARE_BUNDLE_LIMITS.assetBytes?sha256(bytes):null);}catch{imageDigests.set(target.href,null);}
+    let digest=null;
+    if(image.src.startsWith('data:')){
+      const match=image.src.length<=Math.ceil(CLOUDFLARE_BUNDLE_LIMITS.assetBytes/3)*4+64&&/^data:image\/(?:png|webp);base64,([A-Za-z0-9+/]+={0,2})$/.exec(image.src);
+      if(match){const bytes=Buffer.from(match[1],'base64');if(bytes.length<=CLOUDFLARE_BUNDLE_LIMITS.assetBytes&&bytes.toString('base64').replace(/=+$/,'')===match[1].replace(/=+$/,''))digest=sha256(bytes);}
+    }else{
+      let target;try{target=new URL(image.src,origin);if(target.searchParams.has('url'))target=new URL(target.searchParams.get('url'),target);}catch{continue;}
+      if(target.origin!==origin||!['http:','https:'].includes(target.protocol)||image.consumer!=='fab'&&!logoPaths.has(target.pathname))continue;
+      if(!imageDigests.has(target.href)){
+        try{const response=await fetchImage(target,{signal:AbortSignal.timeout(10000)});const bytes=Buffer.from(await response.arrayBuffer());imageDigests.set(target.href,response.ok&&bytes.length<=CLOUDFLARE_BUNDLE_LIMITS.assetBytes?sha256(bytes):null);}catch{imageDigests.set(target.href,null);}
+      }
+      digest=imageDigests.get(target.href);
     }
-    image.dealerLogo=logoHashes.has(imageDigests.get(target.href));
+    image.sha256=digest;image.dealerLogo=logoHashes.has(digest);image.dealerFabLogo=image.consumer==='fab'&&fabLogoHashes.has(digest);
   }
-  return {...value,status:response?.status()??null,contentType:response?.headers()['content-type']??'',errors:[...errors]};
+  return images;
+}
+
+const imageSourceEvidence=src=>src.startsWith('data:')?src.slice(0,src.indexOf(',')+1)+'[omitted]':src;
+const imageEvidence=image=>({src:imageSourceEvidence(image.src),alt:image.alt,consumer:image.consumer,visible:image.visible,loaded:image.loaded,width:image.width,height:image.height,sha256:image.sha256,dealerLogo:image.dealerLogo,dealerFabLogo:image.dealerFabLogo});
+
+async function pageSnapshot(page,response,branding,imageDigests,errors){
+  const value=await page.evaluate(readDealerPackDom);
+  await observeDealerPackImages(value.images,{origin:new URL(value.url).origin,...branding,imageDigests});
+  return {...value,fabMarks:value.images.filter(image=>image.consumer==='fab').map(imageEvidence),status:response?.status()??null,contentType:response?.headers()['content-type']??'',errors:[...errors]};
 }
 
 export function stockIsDemo(pack){
@@ -396,7 +501,11 @@ export async function verifyDealerPack({root=ROOT,slug,bundleRoot,plan,previewUr
     report.preview={origin:preview.origin,kind:preview.kind,command:preview.command??null};
     browser=await chromium.launch({headless:true});fs.mkdirSync(screenshotDir,{recursive:true});
     const demoStock=stockIsDemo(pack),imageDigests=new Map();
-    const logoHashes=new Set(report.logoQuality.roles.flatMap(row=>[row.sha256,row.sourceSha256,...(row.renderedSha256??[])]));
+    const roleHashes=row=>[row.sha256,row.sourceSha256,...(row.renderedSha256??[])].filter(hex64);
+    const logoHashes=new Set(report.logoQuality.roles.flatMap(roleHashes));
+    const fabLogoHashes=new Set(report.logoQuality.roles.filter(row=>['onLight','mark'].includes(row.role)).flatMap(roleHashes));
+    const logoPaths=new Set(context.inventory.files.filter(row=>row.path.startsWith('public/')&&logoHashes.has(row.sha256)).map(row=>'/'+row.path.slice('public/'.length)));
+    const branding={logoHashes,fabLogoHashes,logoPaths};
     for(const variant of pack.manifest.variants){
       const page=await browser.newPage({viewport:{width:390,height:900}}),errors=[];
       page.on('pageerror',error=>errors.push(error.message));
@@ -407,9 +516,16 @@ export async function verifyDealerPack({root=ROOT,slug,bundleRoot,plan,previewUr
         errors.length=0;const response=await page.goto(url.href,{waitUntil:'domcontentloaded',timeout:60000});
         await page.waitForLoadState('networkidle',{timeout:10000}).catch(()=>{});
         await page.locator('dealer-design-switcher').waitFor({state:'attached',timeout:15000}).catch(()=>{});
-        const snapshot=await pageSnapshot(page,response,logoHashes,imageDigests,errors);
-        const result=assessPageSnapshot({snapshot,facts:pack.facts,manifest:pack.manifest,variant,fleet,demoStock,requireDisclosure});
-        result.label=label;result.width=width;result.logoImages=snapshot.images.filter(image=>image.dealerLogo).map(image=>({src:image.src,width:image.width,height:image.height}));
+        const welcome=await completeDealerPackWelcome(page,variant);
+        const screenshotPreparation=screenshot?await prepareDealerPackScreenshot(page):null;
+        if(screenshotPreparation?.status==='failed')check('screenshot-readiness:'+variant.key+':'+width,'failed',screenshotPreparation);
+        const snapshot=await pageSnapshot(page,response,branding,imageDigests,errors);
+        const result=assessPageSnapshot({snapshot,facts:pack.facts,manifest:pack.manifest,variant,fleet,demoStock,requireDisclosure,identityRequirements:dealerPackIdentityRequirements(label)});
+        result.label=label;result.width=width;result.welcome=welcome;
+        if(screenshotPreparation)result.screenshotPreparation=screenshotPreparation;
+        result.logoImages=snapshot.images.filter(image=>image.dealerLogo&&image.consumer==='page').map(imageEvidence);result.fabMarks=snapshot.fabMarks;
+        result.brandingImageObservations=snapshot.images.filter(image=>image.consumer==='page'&&(image.dealerLogo||includesName(image.alt,business(pack.facts).name)||/logo|branding|dealer-brand|reviewed-mark|mark-on-/.test(image.src))).slice(0,24).map(imageEvidence);
+        result.runtimeErrors=snapshot.errors.slice(0,20).map(value=>value.slice(0,1600));result.brokenImages=snapshot.brokenImages.slice(0,50).map(imageSourceEvidence);
         if(new URL(snapshot.url).origin!==preview.origin){result.findings.push('redirected-away-from-preview');result.status='failed';}
         if(screenshot){const filename=variant.key+'-'+width+'-'+label+'.png',file=path.join(screenshotDir,filename);await page.screenshot({path:file,fullPage:true,animations:'disabled',timeout:30000});report.proof.screenshots.push({key:variant.key,width,route:label,path:path.relative(path.dirname(reportPath),file).replaceAll(path.sep,'/'),sha256:sha256(fs.readFileSync(file))});}
         report.routes.push(result);writeJson(reportPath,report);return result;
@@ -432,6 +548,8 @@ export async function verifyDealerPack({root=ROOT,slug,bundleRoot,plan,previewUr
       finally{await page.close();}
     }
     check('rendered-routes',report.routes.length>=36&&report.routes.every(row=>row.status==='passed')?'passed':'failed',{observations:report.routes.length,failed:report.routes.filter(row=>row.status!=='passed').map(row=>({key:row.key,label:row.label,width:row.width,findings:row.findings}))});
+    report.designIdentities=pack.manifest.variants.map(variant=>assessDealerPackDesignIdentity({routes:report.routes,variant,facts:pack.facts}));
+    check('design-identities',report.designIdentities.every(row=>row.status==='passed')?'passed':'failed',{designs:report.designIdentities.length,failed:report.designIdentities.filter(row=>row.status!=='passed').map(row=>({key:row.key,findings:row.findings}))});
     check('screenshots',report.proof.screenshots.length===18?'passed':'failed',{count:report.proof.screenshots.length,widths:[320,390,1280],role:'Evidence for visual review; not a visual acceptance claim.'});
     const after=inspectDealerPackBundle({bundleRoot,slug,packDigest:report.packDigest,releaseDigest:report.releaseDigest,plan});
     check('bundle-unchanged',after.receipt.outputDigest===report.outputDigest&&after.receipt.packCompositionDigest===report.packCompositionDigest?'passed':'failed',{outputDigest:after.receipt.outputDigest,packCompositionDigest:after.receipt.packCompositionDigest});

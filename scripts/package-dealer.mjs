@@ -22,6 +22,7 @@ import {SIX_PACKAGING_VERSION,assertExtendedVariantSources,applySixVariantMounts
 import {LEGACY_DETAIL_FILE,legacyDetailArtifact,legacyDetailRedirects} from './publishing/legacy-detail-routes.mjs';
 import {appendProposalIntroduction} from './publishing/proposal-introduction.mjs';
 import {appLocalePreferenceRedirects} from './lib/vercel-app-locale-preference.mjs';
+import {dealerPackSwitcherLogo} from './lib/dealer-pack-switcher-logo.mjs';
 
 export const PACKAGING_VERSION = '1';
 const ROOT = path.resolve(import.meta.dirname, '..');
@@ -205,7 +206,8 @@ export function switcherConfiguration(manifest, nativeMessages, sourceFiles) {
   if (!labels || !['design', 'choose', 'title'].every((key) => typeof labels[key] === 'string' && labels[key].length > 0)) throw new Error(`Provide switcher labels for language: ${language}`);
   const accent = manifest.switcher?.accent;
   if (accent !== undefined && !/^#[\da-f]{6}$/i.test(accent)) throw new Error('Switcher accent must be a six-digit hex color');
-  return { language, labels, ...(accent ? { accent } : {}), ...(manifest.packaging.version === SIX_PACKAGING_VERSION ? { localePresentation: 'compact-v1' } : {}), ...(native ? { localization: { defaultLocale: language, enabledLocales: manifest.localization.enabledLocales, messages: nativeMessages } } : {}), variants: manifest.variants.map(({ key, base, entry }) => ({
+  const dealerFabLogo = dealerPackSwitcherLogo(manifest, sourceFiles);
+  return { language, labels, ...(accent ? { accent } : {}), ...(dealerFabLogo ? {dealerFabLogo} : {}), ...(manifest.packaging.version === SIX_PACKAGING_VERSION ? { localePresentation: 'compact-v1' } : {}), ...(native ? { localization: { defaultLocale: language, enabledLocales: manifest.localization.enabledLocales, messages: nativeMessages } } : {}), variants: manifest.variants.map(({ key, base, entry }) => ({
     key, base, entry,
     // Only advertise alternate homes present in this package's actual source.
     // Older App releases lack /2 even when the dealer has six design families.

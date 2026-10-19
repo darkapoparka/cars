@@ -2,13 +2,15 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import test from 'node:test';
-import {stripTypeScriptTypes} from 'node:module';
+import {createRequire, stripTypeScriptTypes} from 'node:module';
+import {pathToFileURL} from 'node:url';
 import {prepareAppDealer} from './lib/app-dealer-adapter.mjs';
 import {UK_APP_PATHS, personalizeAppUk} from './lib/client-refresh-uk-next.mjs';
+import {refreshNormalizeInternals} from './lib/client-refresh-normalize.mjs';
 
 const template = path.resolve(import.meta.dirname, '../templates/app');
 const readTemplate = name => fs.readFileSync(path.join(template, name), 'utf8');
-const appFiles = () => new Map(UK_APP_PATHS.map(name => [name, readTemplate(name)]));
+const appFiles = () => new Map([...UK_APP_PATHS, 'lib/dealer-schema.ts'].map(name => [name, readTemplate(name)]));
 const factPolicy = 'dealer-pack-optional-v1';
 const manifest = {slug:'us-facts', localization:{defaultLocale:'en',dealerCountry:'US',inventoryCurrency:'USD'}, variants:[{key:'auto-best'},{key:'modern'},{key:'import'}]};
 const profile = {slug:'us-facts', business:{name:'Recorded Motors', countryCode:'US', country:'United States', currency:'USD', distanceUnit:'mi', city:'Recorded city', logo:'/dealer/logo.png'},
@@ -20,15 +22,45 @@ const profile = {slug:'us-facts', business:{name:'Recorded Motors', countryCode:
   ].map(item=>({brand:'Toyota',model:'Corolla',year:2020,currency:'USD',priceAmount:null,priceOnRequest:true,images:['/dealer/car.webp'],features:[],...item}))};
 const mileageFacts = profile.listings.map(item=>({slug:item.slug,sourceValue:item.mileageOnRequest?null:item.mileageValue,sourceUnit:item.mileageOnRequest?null:item.mileageUnit}));
 async function adapt(options={}) {
-  const bytes=Buffer.from(JSON.stringify(profile));
+  const {sourceProfile = profile, ...adapterOptions} = options;
+  const bytes=Buffer.from(JSON.stringify(sourceProfile));
   return prepareAppDealer('',manifest,{appFiles:appFiles(),readFile:async name=>{
     if(name==='auto-best/src/lib/data/dealer-profile.json')return bytes;
     if(name==='auto-best/static/dealer/logo.png'||name==='auto-best/static/dealer/car.webp')return Buffer.from('retained test raster');
     throw Object.assign(Error('Missing fixture: '+name),{code:'ENOENT'});
-  },...options});
+  },...adapterOptions});
 }
 const uri = source => 'data:text/javascript;base64,'+Buffer.from(stripTypeScriptTypes(source)).toString('base64');
 const withoutImports = source => source.replace(/(?:import|export)\s+(?:type\s+)?[^;]*?\sfrom\s*['"][^'"]+['"];\s*/g,'');
+
+test('pack App distinguishes unpublished body from sourced Other in the strict schema and filters',async()=>{
+  const sourceProfile=structuredClone(profile);
+  sourceProfile.listings[0].bodyType='Other';
+  sourceProfile.listings[1].bodyType='SUV';
+  sourceProfile.listings[3].bodyType='unsupported category';
+  sourceProfile.listings=sourceProfile.listings.map((row,index)=>refreshNormalizeInternals.normalizeListing(row,index,sourceProfile.business));
+  const result=await adapt({factPolicy,sourceProfile});
+  assert.deepEqual(result.inventory.map(item=>item.body),['Other','SUV','Not published','Not published']);
+  const require=createRequire(process.env.CARS_QA_RESOLVE_FROM || path.join(template,'package.json'));
+  const schema=await import(uri(result.files.get('lib/dealer-schema.ts').toString().replace("from 'zod'",'from '+JSON.stringify(pathToFileURL(require.resolve('zod')).href))));
+  assert.deepEqual(schema.inventorySchema.parse(result.inventory).map(item=>item.body),['Other','SUV','Not published','Not published']);
+  const runtime=await import(uri('const dealer={currency:"USD",defaultLocale:"en"};const isDealer=true;const dealerInventory='+JSON.stringify(result.inventory)+';\n'+
+    ['lib/vehicle-values.ts','lib/inventory-identity.ts','lib/currency.ts','lib/inventory-settings.ts','lib/inventory-filters.ts'].map(name=>withoutImports(readTemplate(name))).join('\n')));
+  const matching=body=>result.inventory.filter(item=>runtime.matchesInventory(item,{...runtime.emptyFilters(),bodies:[body]},'')).map(item=>item.slug);
+  assert.deepEqual(matching('OTHER'),['miles']);
+  assert.deepEqual(matching('SUV'),['kilometres']);
+  assert.deepEqual(matching('NOT PUBLISHED'),['unknown','zero']);
+  const legacy=await adapt({sourceProfile});
+  assert.equal(legacy.files.has('lib/dealer-schema.ts'),false);
+  assert.deepEqual(legacy.inventory.map(item=>item.body),['Other','SUV','Other','Other']);
+});
+
+test('pack App refuses a drifted unknown-body schema boundary',async()=>{
+  const files=appFiles();files.set('lib/dealer-schema.ts',readTemplate('lib/dealer-schema.ts').replace("'Pickup', 'Other'","'Pickup'"));
+  const before=[...files];
+  await assert.rejects(adapt({factPolicy,appFiles:files}),/unknown-body schema boundary changed/);
+  assert.deepEqual([...files],before);
+});
 
 test('US App pack preserves original source mileage and unknown facts without relabelling currency',async()=>{
   const before=JSON.stringify(profile),result=await adapt({factPolicy});

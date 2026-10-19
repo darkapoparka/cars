@@ -7,8 +7,18 @@ export const DEALER_PACK_FACT_POLICY = 'dealer-pack-optional-v1';
 export const isDealerPackOptionalFacts = profile => profile?.factPolicy === DEALER_PACK_FACT_POLICY;
 
 const transmissions = new Set(['manual', 'automatic', 'semi_automatic']);
-const fuels = new Set(['gasoline', 'diesel', 'hybrid', 'plug_in_hybrid', 'electric', 'lpg', 'cng']);
-const bodies = new Set(['hatchback', 'sedan', 'wagon', 'suv', 'coupe', 'convertible', 'pickup', 'van', 'minibus', 'motorcycle', 'scooter', 'truck']);
+const fuels = new Set(['gasoline', 'diesel', 'hybrid', 'plug_in_hybrid', 'electric', 'lpg', 'cng', 'other']);
+const bodies = new Set(['hatchback', 'sedan', 'wagon', 'suv', 'coupe', 'convertible', 'pickup', 'van', 'minibus', 'motorcycle', 'scooter', 'truck', 'other']);
+function sourcedCategory(item, key, fields, supported) {
+  // The maintained normalizer uses "other" as a fallback. Only the original
+  // public record can establish that Other was actually supplied by the dealer.
+  const source = item.raw && typeof item.raw === 'object' ? item.raw : item;
+  const published = fields.map(field => typeof source[field] === 'string' ? source[field].trim() : '').find(Boolean);
+  if (!published) return 'unknown';
+  const canonical = published.toLowerCase();
+  if (supported.has(canonical)) return canonical;
+  return item[key] !== 'other' && supported.has(item[key]) ? item[key] : 'unknown';
+}
 
 export function dealerPackModernListing(item, index, id, profile) {
   if (!isDealerPackOptionalFacts(profile)) throw new Error('Modern optional facts require an explicit dealer-pack fact policy');
@@ -16,7 +26,8 @@ export function dealerPackModernListing(item, index, id, profile) {
   const priceKnown = item.priceOnRequest !== true && item.raw?.priceOnRequest !== true && Number.isFinite(item.priceAmount) && item.priceAmount > 0;
   const suppliedMileage = ['mileageKm', 'mileageMiles', 'mileageValue', 'km', 'mileage'].some(key => item.raw?.[key] !== undefined && item.raw[key] !== null && item.raw[key] !== '');
   const mileageKnown = item.mileageOnRequest !== true && item.raw?.mileageOnRequest !== true && (suppliedMileage || item.mileageOnRequest === false) && Number.isFinite(item.mileageValue) && item.mileageValue >= 0 && ['mi', 'km'].includes(item.mileageUnit);
-  const body = bodies.has(item.bodyType) ? item.bodyType : 'other';
+  const body = sourcedCategory(item, 'bodyType', ['body', 'category', 'bodyType'], bodies);
+  const fuel = sourcedCategory(item, 'fuelType', ['fuel', 'fuelType'], fuels);
   const features = (item.features || []).slice(0, 8).map(feature => ({ bg: feature, en: feature }));
   const observedAt = item.observedAt || b.observedAt;
   if (!observedAt || !Number.isFinite(Date.parse(observedAt))) throw new Error('Dealer-pack Modern listing requires its source observation date: ' + item.id);
@@ -34,7 +45,7 @@ export function dealerPackModernListing(item, index, id, profile) {
     ...(features.length ? { features } : {}),
     spec: {
       make: item.make, model: item.model, ...(item.trim ? { trim: item.trim } : {}), year: item.year,
-      bodyType: body, fuelType: fuels.has(item.fuelType) ? item.fuelType : 'other',
+      bodyType: body, fuelType: fuel,
       transmission: transmissions.has(item.transmissionType) ? item.transmissionType : 'unknown',
       mileageValue: mileageKnown ? Math.round(item.mileageValue * (item.mileageUnit === 'mi' ? 1.609344 : 1)) : 0,
       mileageUnit: 'km', mileageKnown,
@@ -149,6 +160,16 @@ export function personalizeDealerPackModernFacts(files, profile) {
   const filterConfig = 'packages/marketplace-ui/lib/marketplace-filter-config.ts';
   patch(filterConfig, /leadSite\.currency === "BGN" \|\| leadSite\.currency === "EUR"(?: \|\| leadSite\.currency === "GBP")?/, 'leadSite.currency === "BGN" || leadSite.currency === "EUR" || leadSite.currency === "GBP" || leadSite.currency === "USD" || leadSite.currency === "AED"');
 
+  // A missing category is not the sourced category "other". Keep that
+  // distinction in the native types, parsers, formatters and equality filters.
+  patch(typesPath, '  | "other";', '  | "other"\n  | "unknown";', 2);
+  patch('packages/marketplace-domain/taxonomy.ts', '  "other",\n] as const;', '  "other",\n  "unknown",\n] as const;', 2);
+  patch(formatPath, '  other: "Other",', '  other: "Other",\n  unknown: "Not published",', 2);
+  patch(formatPath, '  other: "Друго",', '  other: "Друго",\n  unknown: "Не е посочено",', 2);
+  patch('packages/marketplace/filters.ts', '    other: "Other",', '    other: "Other",\n    unknown: "Not published",');
+  patch(filterConfig, '  other: "Друго",', '  other: "Друго",\n  unknown: "Не е посочено",');
+  patch('apps/app/app/(authenticated)/sell/components/listing-form.tsx', '  other: "Друго",', '  other: "Друго",\n  unknown: "Не е посочено",', 2);
+
   // Existing GB overlays already supply truthful unknown-transmission variants.
   if (!typeSource.includes('"semi_automatic" | "unknown"')) {
     patch(typesPath, 'export type Transmission = "automatic" | "manual" | "semi_automatic";', 'export type Transmission = "automatic" | "manual" | "semi_automatic" | "unknown";');
@@ -202,6 +223,8 @@ export function personalizeDealerPackModernFacts(files, profile) {
   patch('apps/web/app/[locale]/lease/lease-desktop-controls.tsx', 'getLeasePrincipal(selectedVehicle.priceAmount, deposit)', 'getLeasePrincipal(selectedVehicle.priceAmount, deposit, selectedVehicle.priceOnRequest)');
 
   const schema = 'apps/web/lib/public-structured-data.ts';
+  patch(schema, '    bodyType: formatBodyType(listing.spec.bodyType, locale),', '    ...(listing.spec.bodyType === "unknown" ? {} : { bodyType: formatBodyType(listing.spec.bodyType, locale) }),');
+  patch(schema, '    fuelType: formatFuelType(listing.spec.fuelType, locale),', '    ...(listing.spec.fuelType === "unknown" ? {} : { fuelType: formatFuelType(listing.spec.fuelType, locale) }),');
   patch(schema, '    mileageFromOdometer: {\n      "@type": "QuantitativeValue",\n      unitCode: "KMT",\n      value: listing.spec.mileageValue,\n    },', '    ...(listing.spec.mileageKnown === false ? {} : { mileageFromOdometer: {\n      "@type": "QuantitativeValue" as const,\n      unitCode: "KMT",\n      value: listing.spec.mileageValue,\n    } }),');
   patch(schema, '    offers: {\n      "@id": `${listingUrl}#offer`,\n    },', '    ...(getAdvertisedPrice(listing).priceOnRequest === true ? {} : { offers: {\n      "@id": `${listingUrl}#offer`,\n    } }),');
   patch(schema, '    vehicleTransmission: formatTransmission(listing.spec.transmission, locale),', '    ...(listing.spec.transmission === "unknown" ? {} : { vehicleTransmission: formatTransmission(listing.spec.transmission, locale) }),');

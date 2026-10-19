@@ -19,14 +19,14 @@ Run the top-level build with Node `26.10.0`; `runtimes.json` maps Node `22.23.2`
 
 ## CI and release boundaries
 
-Run **Dealer pack pipeline** with 1–25 comma-separated slugs. PRs build the three proof packs. CI binds each pack to its retained expansion lead, reproduces reviewed logos byte for byte, assembles once, compiles seven native targets, composes one Worker, and runs local browser/logo/identity/size QA. Bundles and separate reports/screenshots are retained, including failures. Dependencies are cached per release/runtime. Exact compiled reuse binds dealer, source, release, tools and capacity plan; original build receipts stay unchanged. Each composition records those original executions and runs fresh QA.
+Run **Dealer pack pipeline** with 1–25 comma-separated slugs. PRs build the three proof packs. CI binds each pack to its retained expansion lead, reproduces reviewed logos byte for byte, assembles once, compiles seven native targets, composes one Worker, and runs local browser/logo/identity/size QA. It checks visible home branding, contact journeys and the FAB’s reviewed mark. Bundles and separate reports/screenshots are retained, including failures. Dependencies are cached per release/runtime. Exact compiled reuse binds dealer, source, release, tools and capacity plan; original build receipts stay unchanged. Each composition records those original executions and runs fresh QA.
 
 `dealers/templates.lock.json` selects published commit `5d052ea`, including the October 18 fixes, as a qualification candidate reviewed on October 19. Existing `templates.lock.json` and live dealers retain their pins. Native, hosted and global release approval remain false. The workflow contains no provider credentials or deployment step.
 
 Inspect a JSON list of slugs without deploying:
 
 ```sh
-node scripts/deploy-dealer-single-worker.mjs --batch batch.json --bundle-root runtime/dealer-packs
+node scripts/deploy-dealer-single-worker.mjs --batch batch.json --bundle-root runtime/dealer-packs --plan paid
 ```
 
 Paid is a capacity target, not evidence of an active subscription. M2 verifies the plan, hosted pilot, capacity and approved deployment inputs before a write.
