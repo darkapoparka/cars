@@ -1,0 +1,287 @@
+{
+  "schemaVersion": 1,
+  "dealer": "hh-motors-corporation",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T20:24:43.846241Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "sourced-logo-imagegen-redraw",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "475affa3abfe52ce9adc7e6f73658c2c80caf0b961cbe8a3f7525e544d985949",
+      "sourceSha256": "6c4979b65de67702f714d686f634d85cd4f9d22366e0c58b9309db4ce46f2781"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "4330c031c9860ccbdd87d6755bc2fd1a8d72eb647e5e0829ead78529b978d64a",
+      "sourceSha256": "69e346a51931c62b05f32abb949a5b63e119206ced388d25a46ea930c53d8710"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "4330c031c9860ccbdd87d6755bc2fd1a8d72eb647e5e0829ead78529b978d64a",
+      "sourceSha256": "69e346a51931c62b05f32abb949a5b63e119206ced388d25a46ea930c53d8710"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "6c4979b65de67702f714d686f634d85cd4f9d22366e0c58b9309db4ce46f2781",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-e811f31f-a68e-4148-93fd-c689c505ff52",
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "b2fbc37a8fed6d5af9027c3f14f66a14c41ddbb45af53d39eb8f967c495dffda",
+      "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+      "crop": [
+        0,
+        556,
+        887,
+        887
+      ]
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "4bb76694dc0b30f396b5a206a0bbc1d63dd339b43a2f716180623d2bee865b6b",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-e811f31f-a68e-4148-93fd-c689c505ff52",
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "b2fbc37a8fed6d5af9027c3f14f66a14c41ddbb45af53d39eb8f967c495dffda",
+      "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+      "crop": [
+        0,
+        0,
+        887,
+        556
+      ]
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "7558fa296d45f5e035234337b9149d3266b73675f87703a70275677940c5a34c"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "6c4979b65de67702f714d686f634d85cd4f9d22366e0c58b9309db4ce46f2781",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-e811f31f-a68e-4148-93fd-c689c505ff52",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "b2fbc37a8fed6d5af9027c3f14f66a14c41ddbb45af53d39eb8f967c495dffda",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          556,
+          887,
+          887
+        ]
+      },
+      "sourceReference": "dealers/hh-motors-corporation/branding/generated-onLight.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "69e346a51931c62b05f32abb949a5b63e119206ced388d25a46ea930c53d8710",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-e811f31f-a68e-4148-93fd-c689c505ff52",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "b2fbc37a8fed6d5af9027c3f14f66a14c41ddbb45af53d39eb8f967c495dffda",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          887,
+          556,
+          1774,
+          887
+        ]
+      },
+      "sourceReference": "dealers/hh-motors-corporation/branding/generated-onDark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "69e346a51931c62b05f32abb949a5b63e119206ced388d25a46ea930c53d8710",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-e811f31f-a68e-4148-93fd-c689c505ff52",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "b2fbc37a8fed6d5af9027c3f14f66a14c41ddbb45af53d39eb8f967c495dffda",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          887,
+          556,
+          1774,
+          887
+        ]
+      },
+      "sourceReference": "dealers/hh-motors-corporation/branding/generated-onDark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "5036b9bc179b2fd87440ce5e6bcd5cf46195da9771788e2e981ba668fbf10b21",
+      "sha256": "6c4979b65de67702f714d686f634d85cd4f9d22366e0c58b9309db4ce46f2781",
+      "crop": {
+        "left": 21,
+        "top": 60,
+        "width": 855,
+        "height": 204
+      },
+      "sourcePath": "branding/generated-onLight.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "fed98bb8a0ee5a6fa9aa3ee84dd856dccb1e0f3dcbee678a18cf96b59a6468fb",
+      "sha256": "69e346a51931c62b05f32abb949a5b63e119206ced388d25a46ea930c53d8710",
+      "crop": {
+        "left": 15,
+        "top": 59,
+        "width": 852,
+        "height": 205
+      },
+      "sourcePath": "branding/generated-onDark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "fed98bb8a0ee5a6fa9aa3ee84dd856dccb1e0f3dcbee678a18cf96b59a6468fb",
+      "sha256": "69e346a51931c62b05f32abb949a5b63e119206ced388d25a46ea930c53d8710",
+      "crop": {
+        "left": 15,
+        "top": 59,
+        "width": 852,
+        "height": 205
+      },
+      "sourcePath": "branding/generated-onDark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "851172f06ca9c95aca473b3c46422f0c8a51e0c9df08696e3e74d1f096d97769",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-e811f31f-a68e-4148-93fd-c689c505ff52",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "b2fbc37a8fed6d5af9027c3f14f66a14c41ddbb45af53d39eb8f967c495dffda",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          0,
+          887,
+          556
+        ]
+      },
+      "sourceReference": "dealers/hh-motors-corporation/branding/generated-mark.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "0bda011839bd9fc52f7ce070435b0b4ffb95bab573264471f8a18cc82f7f7db8",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-e811f31f-a68e-4148-93fd-c689c505ff52",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "b2fbc37a8fed6d5af9027c3f14f66a14c41ddbb45af53d39eb8f967c495dffda",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          887,
+          0,
+          1774,
+          556
+        ]
+      },
+      "sourceReference": "dealers/hh-motors-corporation/branding/generated-markOnDark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "4bb76694dc0b30f396b5a206a0bbc1d63dd339b43a2f716180623d2bee865b6b",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-e811f31f-a68e-4148-93fd-c689c505ff52",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "b2fbc37a8fed6d5af9027c3f14f66a14c41ddbb45af53d39eb8f967c495dffda",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          0,
+          887,
+          556
+        ]
+      },
+      "sourceReference": "dealers/hh-motors-corporation/branding/generated-mark.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "7558fa296d45f5e035234337b9149d3266b73675f87703a70275677940c5a34c",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-e811f31f-a68e-4148-93fd-c689c505ff52",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "b2fbc37a8fed6d5af9027c3f14f66a14c41ddbb45af53d39eb8f967c495dffda",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          0,
+          887,
+          556
+        ]
+      },
+      "sourceReference": "dealers/hh-motors-corporation/branding/generated-mark.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T20:24:43.846241Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "d2b9bef76674364227c28b05e597d3adf0abbed0da39078166a80549f331d620",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-e811f31f-a68e-4148-93fd-c689c505ff52",
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "b2fbc37a8fed6d5af9027c3f14f66a14c41ddbb45af53d39eb8f967c495dffda",
+      "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+      "crop": [
+        887,
+        0,
+        1774,
+        556
+      ]
+    }
+  }
+}

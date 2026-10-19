@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "dealer": "hh-motors-corporation",
+  "researchId": "ae-dubai-hh-motors-corporation",
+  "observedAt": "2026-10-19T20:03:53.639119Z",
+  "liveFetchPerformed": true,
+  "businessSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-hh-motors-corporation-3299",
+      "observedAt": "2026-10-19T20:03:53.639119Z",
+      "supports": [
+        "dealer-name",
+        "dealer-attributed-listings",
+        "dealer-attributed-photos",
+        "public-business-call-line"
+      ]
+    }
+  ],
+  "stockMode": "dated-listing-snapshot",
+  "inventoryCountMeaning": "Selected currently advertised public records, not a count or confirmation of available physical stock.",
+  "media": [
+    {
+      "path": "dealer-stock/listing-964472.jpg",
+      "sourceUrl": "https://www.dubicars.com/images/32b5b2/650x380/hh-motors-corporation/a3307fc1-857e-4927-978a-1473667cf566.jpeg",
+      "listingUrl": "https://www.dubicars.com/2020-toyota-prado-964472.html",
+      "observedAt": "2026-10-19T20:03:53.639119Z",
+      "downloadedSha256": "13fe30bdfd70822db8c262d47f8c73dc20139437db40e4d0f2cf81504066959f",
+      "downloadedDimensions": [
+        650,
+        488
+      ],
+      "sha256": "1e2487664887ddc429b26b7879d2abd780a16bcd59f0cc0dbc52a5c2b39fb171",
+      "bytes": 62462,
+      "dimensions": [
+        650,
+        488
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    },
+    {
+      "path": "dealer-stock/listing-965070.jpg",
+      "sourceUrl": "https://www.dubicars.com/images/eeb572/650x380/hh-motors-corporation/8bc34724-f424-438d-8f5b-06b79934cef0.jpeg",
+      "listingUrl": "https://www.dubicars.com/2022-toyota-land-cruiser-model-2022-35l-twin-turbo-gcc-specification-full-option-965070.html",
+      "observedAt": "2026-10-19T20:03:53.639119Z",
+      "downloadedSha256": "9300f2eb743dc4e800b0c0d53f15e021cbcfafeb1331bcb1f8fc194378122da2",
+      "downloadedDimensions": [
+        650,
+        440
+      ],
+      "sha256": "8d1ce170ec4bd39a84b19bbd9b67f301a33409cbf7990f26ed23e146624ee3bd",
+      "bytes": 67604,
+      "dimensions": [
+        650,
+        440
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    },
+    {
+      "path": "dealer-stock/listing-965083.jpg",
+      "sourceUrl": "https://www.dubicars.com/images/c83093/650x380/hh-motors-corporation/490785f9-a90e-4857-afec-3b4f4b5303e3.jpeg",
+      "listingUrl": "https://www.dubicars.com/2016-toyota-land-cruiser-46l-vip-965083.html",
+      "observedAt": "2026-10-19T20:03:53.639119Z",
+      "downloadedSha256": "06f3d874ce08d254983ba2482a9cc49ee978f6ff4676766137c30fba41e44acb",
+      "downloadedDimensions": [
+        650,
+        488
+      ],
+      "sha256": "ea44b08ac2b3161f8c51761fbed7a48b37cabbe48686bef960392a50fd80c42b",
+      "bytes": 83712,
+      "dimensions": [
+        650,
+        488
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    }
+  ],
+  "researchLimitations": [
+    "Email omitted: source address appears personal, ambiguous, or malformed."
+  ],
+  "excludedSourceContent": [
+    "Personal names and personal or ambiguous emails",
+    "Marketplace relay numbers",
+    "Prices",
+    "Unsupported warranties, inspections, ratings and finance promises"
+  ],
+  "dealerApproval": "unknown"
+}

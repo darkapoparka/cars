@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "dealer": "golden-coast-auto",
+  "researchId": "ae-dubai-golden-coast-auto",
+  "observedAt": "2026-10-19T20:03:53.583442Z",
+  "liveFetchPerformed": true,
+  "businessSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-golden-coast-auto-2511",
+      "observedAt": "2026-10-19T20:03:53.583442Z",
+      "supports": [
+        "dealer-name",
+        "dealer-attributed-listings",
+        "dealer-attributed-photos",
+        "public-business-call-line",
+        "address"
+      ]
+    }
+  ],
+  "stockMode": "dated-listing-snapshot",
+  "inventoryCountMeaning": "Selected currently advertised public records, not a count or confirmation of available physical stock.",
+  "media": [
+    {
+      "path": "dealer-stock/listing-959114.jpg",
+      "sourceUrl": "https://www.dubicars.com/images/4da888/650x380/golden-coast-auto/647d1a85-6694-4999-a81f-c20e4a7f714c.jpeg",
+      "listingUrl": "https://www.dubicars.com/2024-isuzu-npr-isuzu-npr85h22-cab-chassis-truck-2024-959114.html",
+      "observedAt": "2026-10-19T20:03:53.583442Z",
+      "downloadedSha256": "991645cec408ad32fd31141a771c30d53be37e85cdecdca6105ed16468a8c5aa",
+      "downloadedDimensions": [
+        650,
+        488
+      ],
+      "sha256": "88e1130908a2ccdf73faf2c1cc2fb7f6a75a4cee7e8f5b4b4fc627d7fb930a23",
+      "bytes": 56072,
+      "dimensions": [
+        650,
+        488
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    },
+    {
+      "path": "dealer-stock/listing-959190.jpg",
+      "sourceUrl": "https://www.dubicars.com/images/1fb873/650x380/golden-coast-auto/900b1792-3bb6-43d4-8adb-e2e24a7c606d.jpeg",
+      "listingUrl": "https://www.dubicars.com/2024-toyota-liteace-toyota-liteace-van-2024-959190.html",
+      "observedAt": "2026-10-19T20:03:53.583442Z",
+      "downloadedSha256": "db347154922e7cd35b1b2b5fe5a464c6e9e0937ac3a373bb177bdfff92c4d92a",
+      "downloadedDimensions": [
+        650,
+        488
+      ],
+      "sha256": "633d39bcf777767079e3876bccca64dc2a4094c208cfdfe269411e27b48122c9",
+      "bytes": 55275,
+      "dimensions": [
+        650,
+        488
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    },
+    {
+      "path": "dealer-stock/listing-911175.jpg",
+      "sourceUrl": "https://www.dubicars.com/images/39639a/650x380/golden-coast-auto/4810d8a6-80ca-4ca6-a1fe-b6febebcf467.jpeg",
+      "listingUrl": "https://www.dubicars.com/2025-isuzu-d-max-19l-4x2-rba-single-cab-2-doors-my-2025-made-in-india-911175.html",
+      "observedAt": "2026-10-19T20:03:53.583442Z",
+      "downloadedSha256": "7d047ff21ca124de8b1a599ec72caee78327673598147a4f5735f6a5947efe72",
+      "downloadedDimensions": [
+        650,
+        488
+      ],
+      "sha256": "080ed501f78108b61e399376fbc5f1240f534ddd6d9d7f873ebeae64adaccf14",
+      "bytes": 55123,
+      "dimensions": [
+        650,
+        488
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    }
+  ],
+  "researchLimitations": [
+    "Email omitted: source address appears personal, ambiguous, or malformed."
+  ],
+  "excludedSourceContent": [
+    "Personal names and personal or ambiguous emails",
+    "Marketplace relay numbers",
+    "Prices",
+    "Unsupported warranties, inspections, ratings and finance promises"
+  ],
+  "dealerApproval": "unknown"
+}

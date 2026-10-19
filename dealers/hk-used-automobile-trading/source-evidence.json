@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "dealer": "hk-used-automobile-trading",
+  "researchId": "ae-dubai-hk-used-automobile-trading",
+  "observedAt": "2026-10-19T20:03:53.653789Z",
+  "liveFetchPerformed": true,
+  "businessSources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/dubai/hk-used-automobile-trading",
+      "observedAt": "2026-10-19T20:03:53.653789Z",
+      "supports": [
+        "dealer-name",
+        "dealer-attributed-listings",
+        "dealer-attributed-photos",
+        "public-business-call-line",
+        "address"
+      ]
+    }
+  ],
+  "stockMode": "dated-listing-snapshot",
+  "inventoryCountMeaning": "Selected currently advertised public records, not a count or confirmation of available physical stock.",
+  "media": [
+    {
+      "path": "dealer-stock/listing-102647.jpg",
+      "sourceUrl": "https://static.oneclickdrive.com/uploads/cars/Toyota_Fortuner_2021_102647_102647_752027723698-10_small.jpg",
+      "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Toyota/Fortuner/?id=102647",
+      "observedAt": "2026-10-19T20:03:53.653789Z",
+      "downloadedSha256": "ef991fa72acc438af32a808aa15aa9805ea34fe1e222d53fba1cf122fc73d22a",
+      "downloadedDimensions": [
+        450,
+        395
+      ],
+      "sha256": "eb7e7fda0a35fcd853a82c30098bf8efc4439fd5c4ab37e2b81be9914d4769bf",
+      "bytes": 42789,
+      "dimensions": [
+        450,
+        395
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    },
+    {
+      "path": "dealer-stock/listing-102627.jpg",
+      "sourceUrl": "https://static.oneclickdrive.com/uploads/cars/Toyota_Prado_2020_102627_102627_751991339206-8_small.jpg",
+      "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Toyota/Prado/?id=102627",
+      "observedAt": "2026-10-19T20:03:53.653789Z",
+      "downloadedSha256": "5ae76cd9230f58a8c5b275d13dfee5c3424a2c76dd33e218a3b20ad8038357bd",
+      "downloadedDimensions": [
+        450,
+        395
+      ],
+      "sha256": "84c2f9aa826e2f8f9352ccf6d72a816d2add971feca89c0d06ca5c77b079b99e",
+      "bytes": 38345,
+      "dimensions": [
+        450,
+        395
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    },
+    {
+      "path": "dealer-stock/listing-102665.jpg",
+      "sourceUrl": "https://static.oneclickdrive.com/uploads/cars/Toyota_Land-Cruiser_2019_102665_102665_7520543933-6_small.jpg",
+      "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Toyota/Land-Cruiser/?id=102665",
+      "observedAt": "2026-10-19T20:03:53.653789Z",
+      "downloadedSha256": "979d91842db13295ce22c0cc0f4b3b8a068ab5abd42ca71b5b06041942a794d5",
+      "downloadedDimensions": [
+        450,
+        395
+      ],
+      "sha256": "ebe7b56122a55001f61e1e1aea0f0ff1be4c2d1860be8e99beb322238a6df579",
+      "bytes": 49346,
+      "dimensions": [
+        450,
+        395
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    }
+  ],
+  "researchLimitations": [
+    "Marketplace relay numbers excluded; source catalogue provides address and published shop hours.",
+    "Phone is the dealer-attributed call link in the public vehicle card; common platform WhatsApp relay omitted.",
+    "Opening hours omitted because the platform repeats a generic schedule and independent verification is unavailable."
+  ],
+  "excludedSourceContent": [
+    "Personal names and personal or ambiguous emails",
+    "Marketplace relay numbers",
+    "Prices",
+    "Unsupported warranties, inspections, ratings and finance promises"
+  ],
+  "dealerApproval": "unknown"
+}

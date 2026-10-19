@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "dealer": "impera-motors-llc",
+  "researchId": "ae-dubai-impera-motors-llc",
+  "observedAt": "2026-10-19T20:03:53.687242Z",
+  "liveFetchPerformed": true,
+  "businessSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-impera-motors-llc-3421",
+      "observedAt": "2026-10-19T20:03:53.687242Z",
+      "supports": [
+        "dealer-name",
+        "dealer-attributed-listings",
+        "dealer-attributed-photos",
+        "public-business-call-line"
+      ]
+    }
+  ],
+  "stockMode": "dated-listing-snapshot",
+  "inventoryCountMeaning": "Selected currently advertised public records, not a count or confirmation of available physical stock.",
+  "media": [
+    {
+      "path": "dealer-stock/listing-1035282.jpg",
+      "sourceUrl": "https://www.dubicars.com/images/d4a5f9/650x380/impera-motors-llc/40e2dac4-6fa9-432a-8834-9e9f5fafbc5a.jpeg",
+      "listingUrl": "https://www.dubicars.com/2026-bmw-x3-20-xdrive-m-sport-pro-1035282.html",
+      "observedAt": "2026-10-19T20:03:53.687242Z",
+      "downloadedSha256": "d84c244649ddb0abcb180b8677e9d14bc1aee486d1560a887b9f221b07e8b6f5",
+      "downloadedDimensions": [
+        650,
+        433
+      ],
+      "sha256": "2e21d54cb79bb26ec7dea8e96bf9e2e0195b6e5e2c3dcfd55058557405be2550",
+      "bytes": 71715,
+      "dimensions": [
+        650,
+        433
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    },
+    {
+      "path": "dealer-stock/listing-1035281.jpg",
+      "sourceUrl": "https://www.dubicars.com/images/fd6e5d/650x380/impera-motors-llc/458dd189-f857-41ed-ac8f-b880add10434.jpeg",
+      "listingUrl": "https://www.dubicars.com/2026-porsche-cayenne-1035281.html",
+      "observedAt": "2026-10-19T20:03:53.687242Z",
+      "downloadedSha256": "b710d8d5199d7003d6b0fa5ce51bc9d3e471d9bb79878439b2bb410d002b37a2",
+      "downloadedDimensions": [
+        650,
+        433
+      ],
+      "sha256": "710fb3881eb544de777ba9898dc2b20588db1f4f60f689a77a17925aba9c0cb4",
+      "bytes": 72254,
+      "dimensions": [
+        650,
+        433
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    },
+    {
+      "path": "dealer-stock/listing-1035290.jpg",
+      "sourceUrl": "https://www.dubicars.com/images/6879ba/650x380/impera-motors-llc/cf4d8c3e-d064-42e3-8d3f-1c5a833d6fef.jpeg",
+      "listingUrl": "https://www.dubicars.com/2025-mercedes-maybach-s680-maybach-s-680-gcc-specs-1035290.html",
+      "observedAt": "2026-10-19T20:03:53.687242Z",
+      "downloadedSha256": "377d6420fd21faeb1ed71438ed4187830177182844d47d9a768a44daec8fd192",
+      "downloadedDimensions": [
+        650,
+        433
+      ],
+      "sha256": "74da9acca0cad83059648d5146c964d2b45b7bd97e2262af4eb96bd8df071477",
+      "bytes": 64819,
+      "dimensions": [
+        650,
+        433
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    }
+  ],
+  "researchLimitations": [
+    "Email omitted: source address appears personal, ambiguous, or malformed."
+  ],
+  "excludedSourceContent": [
+    "Personal names and personal or ambiguous emails",
+    "Marketplace relay numbers",
+    "Prices",
+    "Unsupported warranties, inspections, ratings and finance promises"
+  ],
+  "dealerApproval": "unknown"
+}

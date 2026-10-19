@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "slug": "hk-used-automobile-trading",
+  "dealerId": "ae-dubai-hk-used-automobile-trading",
+  "business": {
+    "name": "HK Used Automobile Trading",
+    "city": "Dubai",
+    "region": "Dubai",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "Al Aweer, Ras Al Khor Industrial Area 3, Dubai - UAE",
+    "phone": "+971555399782",
+    "phoneDisplay": "+971555399782",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://www.oneclickdrive.com/company/dubai/hk-used-automobile-trading",
+    "hours": "",
+    "sourceUrl": "https://www.oneclickdrive.com/company/dubai/hk-used-automobile-trading",
+    "observedAt": "2026-10-19T20:03:53.653789Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/dubai/hk-used-automobile-trading",
+      "observedAt": "2026-10-19T20:03:53.653789Z",
+      "supports": [
+        "dealer-name",
+        "dealer-attributed-listings",
+        "dealer-attributed-photos",
+        "public-business-call-line",
+        "address"
+      ]
+    }
+  ]
+}

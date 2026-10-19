@@ -1,0 +1,287 @@
+{
+  "schemaVersion": 1,
+  "dealer": "huapeng-automobile-trading-fze",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T20:25:01.544761Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "sourced-logo-imagegen-redraw",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "85ffbe802fa3a6afe6247df303a473df856b0657ae3a3c4b8668367c296bf97d",
+      "sourceSha256": "df01358a9dfd25be2e2037355d1891d18f1f2cacaeb3fd68a88fe1ae21c6bdc4"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "830702f1b632e4f9550205b7469835c2d53dded8cbba32337f027d8dde540d3a",
+      "sourceSha256": "0afdead315f09d79c716f09f90d27ef4ceb32b339bad8aad359f9a472da6d3e1"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "830702f1b632e4f9550205b7469835c2d53dded8cbba32337f027d8dde540d3a",
+      "sourceSha256": "0afdead315f09d79c716f09f90d27ef4ceb32b339bad8aad359f9a472da6d3e1"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "df01358a9dfd25be2e2037355d1891d18f1f2cacaeb3fd68a88fe1ae21c6bdc4",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-6281126c-1aeb-425a-82e5-8f7131ca283e",
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "aec2c8405bc774da9ed1642661c080c45c436d189277ddf7da6df2ab3fb0f7eb",
+      "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+      "crop": [
+        0,
+        532,
+        887,
+        887
+      ]
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "560c6a10843671db1e904a62f5c117e51db9a196e106eaa1217d664de843af37",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-6281126c-1aeb-425a-82e5-8f7131ca283e",
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "aec2c8405bc774da9ed1642661c080c45c436d189277ddf7da6df2ab3fb0f7eb",
+      "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+      "crop": [
+        0,
+        0,
+        887,
+        532
+      ]
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "a43c23f15db5c7117a56a6f00df4a4ee8ac46b9de7b6351a5d6305f16441c7cd"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "df01358a9dfd25be2e2037355d1891d18f1f2cacaeb3fd68a88fe1ae21c6bdc4",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-6281126c-1aeb-425a-82e5-8f7131ca283e",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "aec2c8405bc774da9ed1642661c080c45c436d189277ddf7da6df2ab3fb0f7eb",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          532,
+          887,
+          887
+        ]
+      },
+      "sourceReference": "dealers/huapeng-automobile-trading-fze/branding/generated-onLight.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "0afdead315f09d79c716f09f90d27ef4ceb32b339bad8aad359f9a472da6d3e1",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-6281126c-1aeb-425a-82e5-8f7131ca283e",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "aec2c8405bc774da9ed1642661c080c45c436d189277ddf7da6df2ab3fb0f7eb",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          887,
+          532,
+          1774,
+          887
+        ]
+      },
+      "sourceReference": "dealers/huapeng-automobile-trading-fze/branding/generated-onDark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "0afdead315f09d79c716f09f90d27ef4ceb32b339bad8aad359f9a472da6d3e1",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-6281126c-1aeb-425a-82e5-8f7131ca283e",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "aec2c8405bc774da9ed1642661c080c45c436d189277ddf7da6df2ab3fb0f7eb",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          887,
+          532,
+          1774,
+          887
+        ]
+      },
+      "sourceReference": "dealers/huapeng-automobile-trading-fze/branding/generated-onDark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "a0376e59ac2916ac51280fbaec926ba7ddf3b3118b3f0b54e282de7c83dc207d",
+      "sha256": "df01358a9dfd25be2e2037355d1891d18f1f2cacaeb3fd68a88fe1ae21c6bdc4",
+      "crop": {
+        "left": 74,
+        "top": 0,
+        "width": 762,
+        "height": 276
+      },
+      "sourcePath": "branding/generated-onLight.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "78187f18c9294cef4939d7d2e0177b7e80738d3b5ebe41da1bde7cec606766cc",
+      "sha256": "0afdead315f09d79c716f09f90d27ef4ceb32b339bad8aad359f9a472da6d3e1",
+      "crop": {
+        "left": 47,
+        "top": 0,
+        "width": 764,
+        "height": 277
+      },
+      "sourcePath": "branding/generated-onDark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "78187f18c9294cef4939d7d2e0177b7e80738d3b5ebe41da1bde7cec606766cc",
+      "sha256": "0afdead315f09d79c716f09f90d27ef4ceb32b339bad8aad359f9a472da6d3e1",
+      "crop": {
+        "left": 47,
+        "top": 0,
+        "width": 764,
+        "height": 277
+      },
+      "sourcePath": "branding/generated-onDark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "b2e12be742081ff2d98e4d105dc79dfcc5566ecc61df48c2a60a33a64e91ecad",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-6281126c-1aeb-425a-82e5-8f7131ca283e",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "aec2c8405bc774da9ed1642661c080c45c436d189277ddf7da6df2ab3fb0f7eb",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          0,
+          887,
+          532
+        ]
+      },
+      "sourceReference": "dealers/huapeng-automobile-trading-fze/branding/generated-mark.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "967cd7ab726c6c1ef889bc89786b1402584bcdc92ad2f04002dc67096a20489a",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-6281126c-1aeb-425a-82e5-8f7131ca283e",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "aec2c8405bc774da9ed1642661c080c45c436d189277ddf7da6df2ab3fb0f7eb",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          887,
+          0,
+          1774,
+          532
+        ]
+      },
+      "sourceReference": "dealers/huapeng-automobile-trading-fze/branding/generated-markOnDark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "560c6a10843671db1e904a62f5c117e51db9a196e106eaa1217d664de843af37",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-6281126c-1aeb-425a-82e5-8f7131ca283e",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "aec2c8405bc774da9ed1642661c080c45c436d189277ddf7da6df2ab3fb0f7eb",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          0,
+          887,
+          532
+        ]
+      },
+      "sourceReference": "dealers/huapeng-automobile-trading-fze/branding/generated-mark.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "a43c23f15db5c7117a56a6f00df4a4ee8ac46b9de7b6351a5d6305f16441c7cd",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-6281126c-1aeb-425a-82e5-8f7131ca283e",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "aec2c8405bc774da9ed1642661c080c45c436d189277ddf7da6df2ab3fb0f7eb",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          0,
+          887,
+          532
+        ]
+      },
+      "sourceReference": "dealers/huapeng-automobile-trading-fze/branding/generated-mark.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T20:25:01.544761Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "9fad96c174b1b5aaff7fd4c4f4f16f3f19e63c6193981ddd76e48917a6b8b709",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-6281126c-1aeb-425a-82e5-8f7131ca283e",
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "aec2c8405bc774da9ed1642661c080c45c436d189277ddf7da6df2ab3fb0f7eb",
+      "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+      "crop": [
+        887,
+        0,
+        1774,
+        532
+      ]
+    }
+  }
+}

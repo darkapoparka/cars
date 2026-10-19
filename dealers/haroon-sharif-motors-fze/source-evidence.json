@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "dealer": "haroon-sharif-motors-fze",
+  "researchId": "ae-dubai-haroon-sharif-motors-fze",
+  "observedAt": "2026-10-19T20:03:53.608743Z",
+  "liveFetchPerformed": true,
+  "businessSources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/dubai/haroon-sharif-motors-fze",
+      "observedAt": "2026-10-19T20:03:53.608743Z",
+      "supports": [
+        "dealer-name",
+        "dealer-attributed-listings",
+        "dealer-attributed-photos",
+        "public-business-call-line",
+        "address"
+      ]
+    }
+  ],
+  "stockMode": "dated-listing-snapshot",
+  "inventoryCountMeaning": "Selected currently advertised public records, not a count or confirmation of available physical stock.",
+  "media": [
+    {
+      "path": "dealer-stock/listing-56225.jpg",
+      "sourceUrl": "https://static.oneclickdrive.com/uploads/cars/Mercedes-Benz_E350_2008_56225_56225_53303759260-17_small.jpg",
+      "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Mercedes-Benz/E350/?id=56225",
+      "observedAt": "2026-10-19T20:03:53.608743Z",
+      "downloadedSha256": "23614af4a061c6d8a6d75f993099053ef2af59b0be9e294810c723c481dee59b",
+      "downloadedDimensions": [
+        450,
+        395
+      ],
+      "sha256": "d1ea9198d27564a06d48046f812af0abf94ac91e0964bdf2be17f46abaa879cc",
+      "bytes": 49482,
+      "dimensions": [
+        450,
+        395
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    },
+    {
+      "path": "dealer-stock/listing-56234.jpg",
+      "sourceUrl": "https://static.oneclickdrive.com/uploads/cars/BMW_530i-M-Kit_2018_56234_56234_53319144094-13_small.jpg",
+      "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/BMW/530i-M-Kit/?id=56234",
+      "observedAt": "2026-10-19T20:03:53.608743Z",
+      "downloadedSha256": "1342182f639bed89687da008177778c1295fc304855495a9375816514986ddfa",
+      "downloadedDimensions": [
+        450,
+        395
+      ],
+      "sha256": "5e718db8265a0c43d28a5b9f405dda716b36559df3e8aa564e45378add0f2a3c",
+      "bytes": 40735,
+      "dimensions": [
+        450,
+        395
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    },
+    {
+      "path": "dealer-stock/listing-56233.jpg",
+      "sourceUrl": "https://static.oneclickdrive.com/uploads/cars/BMW_525i_2007_56233_56233_53317333483-15_small.jpg",
+      "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/BMW/525i/?id=56233",
+      "observedAt": "2026-10-19T20:03:53.608743Z",
+      "downloadedSha256": "0c14ae66868b0096f1e5b72e46f5e5d6b2261d923ddef837bdb93694433fc6e4",
+      "downloadedDimensions": [
+        450,
+        395
+      ],
+      "sha256": "b9c830b495522b9cde2ae112f64127e94baf992a3961887163231f556b239280",
+      "bytes": 49246,
+      "dimensions": [
+        450,
+        395
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    }
+  ],
+  "researchLimitations": [
+    "Marketplace relay numbers excluded; source catalogue provides address and published shop hours.",
+    "Phone is the dealer-attributed call link in the public vehicle card; common platform WhatsApp relay omitted.",
+    "Opening hours omitted because the platform repeats a generic schedule and independent verification is unavailable."
+  ],
+  "excludedSourceContent": [
+    "Personal names and personal or ambiguous emails",
+    "Marketplace relay numbers",
+    "Prices",
+    "Unsupported warranties, inspections, ratings and finance promises"
+  ],
+  "dealerApproval": "unknown"
+}

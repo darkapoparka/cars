@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "dealer": "intercars",
+  "researchId": "ae-dubai-intercars",
+  "observedAt": "2026-10-19T20:03:53.708622Z",
+  "liveFetchPerformed": true,
+  "businessSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-intercars-2469",
+      "observedAt": "2026-10-19T20:03:53.708622Z",
+      "supports": [
+        "dealer-name",
+        "dealer-attributed-listings",
+        "dealer-attributed-photos",
+        "public-business-call-line",
+        "business-email",
+        "address"
+      ]
+    }
+  ],
+  "stockMode": "dated-listing-snapshot",
+  "inventoryCountMeaning": "Selected currently advertised public records, not a count or confirmation of available physical stock.",
+  "media": [
+    {
+      "path": "dealer-stock/listing-1026346.jpg",
+      "sourceUrl": "https://www.dubicars.com/images/2919c1/650x380/intercars/085991bc-5c46-4a7f-be9d-7c20373d483b.jpeg",
+      "listingUrl": "https://www.dubicars.com/2027-mercedes-benz-sprinter-1026346.html",
+      "observedAt": "2026-10-19T20:03:53.708622Z",
+      "downloadedSha256": "b128a59a1d229d117d7cc0029045bd0bed663d1bb027eb362edbf6b1b903acd2",
+      "downloadedDimensions": [
+        650,
+        867
+      ],
+      "sha256": "a177fae4671b7f819bfcf5ab9e4953554196037808b5fbeba002242475ee9499",
+      "bytes": 71082,
+      "dimensions": [
+        650,
+        867
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    },
+    {
+      "path": "dealer-stock/listing-980498.jpg",
+      "sourceUrl": "https://www.dubicars.com/images/23f897/650x380/intercars/986109d4-8dc9-42f7-b5f5-508117e7b7b7.jpeg",
+      "listingUrl": "https://www.dubicars.com/2026-suzuki-jimny-suzuki-limny-glx-best-price-for-export-980498.html",
+      "observedAt": "2026-10-19T20:03:53.708622Z",
+      "downloadedSha256": "d667ee17de18390ecc36a9b17c4eed15886c73681f033b6dbd76747a22c51b90",
+      "downloadedDimensions": [
+        650,
+        867
+      ],
+      "sha256": "e99e0aa769875ffd9e241cc0570d6179dc03299e4fc3175104df50e9d9ce2452",
+      "bytes": 66378,
+      "dimensions": [
+        650,
+        867
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    },
+    {
+      "path": "dealer-stock/listing-924991.jpg",
+      "sourceUrl": "https://www.dubicars.com/images/c1292f/650x380/intercars/afdd26e8-d01b-4cac-bbca-9904ff531e3b.jpeg",
+      "listingUrl": "https://www.dubicars.com/2025-renault-duster-16l-renault-duster-16l-full-option-for-export-only-924991.html",
+      "observedAt": "2026-10-19T20:03:53.708622Z",
+      "downloadedSha256": "aba1fb214e3e8863f87b19c4ccb8eadc05d437616743cc024eb484fa72fa7f7d",
+      "downloadedDimensions": [
+        650,
+        867
+      ],
+      "sha256": "22300efb0ca093f374b3282a2f3b189c14ebe78d392c4cdb876f18efe7b18a70",
+      "bytes": 81485,
+      "dimensions": [
+        650,
+        867
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    }
+  ],
+  "researchLimitations": [],
+  "excludedSourceContent": [
+    "Personal names and personal or ambiguous emails",
+    "Marketplace relay numbers",
+    "Prices",
+    "Unsupported warranties, inspections, ratings and finance promises"
+  ],
+  "dealerApproval": "unknown"
+}

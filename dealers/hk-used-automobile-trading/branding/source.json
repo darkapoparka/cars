@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 1,
+  "dealer": "hk-used-automobile-trading",
+  "sourceLogoUrl": "https://d2souf30ck18jq.cloudfront.net/hk-used-automobile-trading/logo-9c08994a-c67e-450d-a924-2ba9220e6d74.png",
+  "sourcePath": "branding/source-original.png",
+  "sourceSha256": "668e7704af63c8ba26fda8c94be84ddbf7c35fffdc4fedb58939780b456b94cf",
+  "publishedBranding": true,
+  "sourcePage": "https://www.dubicars.com/dealers/dubai-hk-used-automobile-trading-3037",
+  "observedAt": "2026-10-19T20:03:53.653789Z",
+  "creationMethod": "sourced-logo-imagegen-redraw",
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "dealerApproved": false,
+  "visualReview": "Retains HK monogram, circular automotive swoosh and charcoal/gold identity; uses deep bronze to support white-background contrast. Dealer logo from DubiCars, not the generic OneClickDrive placeholder.",
+  "generationPrompt": "ONE transparent RGBA logo sprite, four matching assets of ONE dealer in a 2-column x 2-row grid with very large transparent gutters. Top left compact mark for white backgrounds, top right matching WHITE compact mark for dark/red backgrounds. Bottom left horizontal logo with exact brand name in dark ink, bottom right same horizontal logo in WHITE. Compact marks must be roughly square (never wider than twice their height), large bold shapes legible at 32px. Professional flat clean vector-like raster, smooth solid edges, no shadows/glows/textures/gradients/labels/background panels. Light-version artwork must be predominantly very dark ink for strong white-background contrast; gold if any small and DARK bronze. Faithful refinement of supplied HK emblem: keep large italic intertwined HK in a circular swoosh with one car-roof line. On-light use 90 percent dark charcoal #191919 and a small DARK BRONZE #74501F accent, no pale gold/silver. Preserve HK and the car/swoosh motif. Horizontal wordmark exact 'HK AUTOMOBILE' with smaller 'TRADING' beneath beside the emblem. White inverse completely white/open transparent counters, no metallic texture or tiny slogan. Compact HK occupies a circular badge, not a stretched car silhouette.",
+  "workingLogoPath": "branding/generated-onLight.png",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T20:32:36.821052Z",
+    "master": {
+      "path": "branding/generated-onLight.png",
+      "sha256": "d28a135faf11afadd3d78cd4944015e7caf1a409530510ee2d5941ce7e12a0db",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d03b857f-a65e-4ffd-a89d-2c2227439e26",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "48473db8094d1912768df5c39cac3054343b0538582ea115ec9d1e73236525c4",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          614,
+          768,
+          1024
+        ]
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "f60c3473c66166def040ddb8570d3f03a9ac51f298615656140001a2387e1ed9",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d03b857f-a65e-4ffd-a89d-2c2227439e26",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "48473db8094d1912768df5c39cac3054343b0538582ea115ec9d1e73236525c4",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          0,
+          768,
+          614
+        ]
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-markOnDark.png",
+      "sha256": "bac49395a8d06ba75d41e0096e35d0d783da433a6ebd00721cad1ee4cdfeb591",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d03b857f-a65e-4ffd-a89d-2c2227439e26",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "48473db8094d1912768df5c39cac3054343b0538582ea115ec9d1e73236525c4",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          768,
+          0,
+          1536,
+          614
+        ]
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-onLight.png",
+        "sha256": "d28a135faf11afadd3d78cd4944015e7caf1a409530510ee2d5941ce7e12a0db",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-d03b857f-a65e-4ffd-a89d-2c2227439e26",
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "48473db8094d1912768df5c39cac3054343b0538582ea115ec9d1e73236525c4",
+          "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+          "crop": [
+            0,
+            614,
+            768,
+            1024
+          ]
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-onDark.png",
+        "sha256": "aaf37c4dd35ebafbe47b87a3a68762101bb45a50018ad8066058bcddfe5afa1f",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-d03b857f-a65e-4ffd-a89d-2c2227439e26",
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "48473db8094d1912768df5c39cac3054343b0538582ea115ec9d1e73236525c4",
+          "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+          "crop": [
+            768,
+            614,
+            1536,
+            1024
+          ]
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-onDark.png",
+        "sha256": "aaf37c4dd35ebafbe47b87a3a68762101bb45a50018ad8066058bcddfe5afa1f",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-d03b857f-a65e-4ffd-a89d-2c2227439e26",
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "48473db8094d1912768df5c39cac3054343b0538582ea115ec9d1e73236525c4",
+          "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+          "crop": [
+            768,
+            614,
+            1536,
+            1024
+          ]
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820",
+        "#09090b",
+        "#17191c",
+        "#c40101"
+      ],
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "notes": "Retains HK monogram, circular automotive swoosh and charcoal/gold identity; uses deep bronze to support white-background contrast. Dealer logo from DubiCars, not the generic OneClickDrive placeholder."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T20:32:36.821052Z",
+      "widths": [
+        32,
+        64,
+        96
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#101820",
+        "#c40101"
+      ],
+      "notes": "HK/car-roof emblem fills a compact round shape; clean white inverse preserves the counters at 32px."
+    },
+    "compactMarkStatus": "proposed-compact-adaptation-not-dealer-approved"
+  },
+  "usageStatus": "public-preview-only"
+}

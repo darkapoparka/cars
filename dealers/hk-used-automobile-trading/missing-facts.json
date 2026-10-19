@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "dealer": "hk-used-automobile-trading",
+  "missing": [
+    {
+      "field": "business.email",
+      "required": false,
+      "reason": "No consistent public business value established from the reviewed sources."
+    },
+    {
+      "field": "business.website",
+      "required": false,
+      "reason": "No consistent public business value established from the reviewed sources."
+    },
+    {
+      "field": "business.hours",
+      "required": false,
+      "reason": "No consistent public business value established from the reviewed sources."
+    },
+    {
+      "field": "prices",
+      "required": false,
+      "reason": "All prices are omitted under the public-repository scope."
+    }
+  ],
+  "blocking": []
+}

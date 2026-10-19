@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "dealer": "haroon-sharif-motors-fze",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:03:53.608743Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "listing-56225",
+      "title": "2008 Mercedes Benz E350",
+      "make": "Mercedes Benz",
+      "model": "E350",
+      "year": 2008,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-56225.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Mercedes-Benz/E350/?id=56225",
+      "observedAt": "2026-10-19T20:03:53.608743Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Sedan",
+      "transmission": "Auto",
+      "fuel": "Petrol",
+      "color": "Black",
+      "mileageValue": 41000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-56234",
+      "title": "2018 BMW 530i M Kit",
+      "make": "BMW",
+      "model": "530i M Kit",
+      "year": 2018,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-56234.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/BMW/530i-M-Kit/?id=56234",
+      "observedAt": "2026-10-19T20:03:53.608743Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Sedan",
+      "transmission": "Auto",
+      "fuel": "Petrol",
+      "color": "White",
+      "mileageValue": 60571,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-56233",
+      "title": "2007 BMW 525i",
+      "make": "BMW",
+      "model": "525i",
+      "year": 2007,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-56233.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/BMW/525i/?id=56233",
+      "observedAt": "2026-10-19T20:03:53.608743Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Sedan",
+      "transmission": "Auto",
+      "fuel": "Petrol",
+      "color": "Black",
+      "mileageValue": 89000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

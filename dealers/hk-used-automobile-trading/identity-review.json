@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T20:32:36.821052Z",
+  "dealer": "hk-used-automobile-trading",
+  "dealerId": "ae-dubai-hk-used-automobile-trading",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "method": "Exact retained registry and client-folder alias comparison, followed by fresh public dealer catalogue research. No existing fleet identity matched; no dealer approval is implied.",
+  "sources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/dubai/hk-used-automobile-trading",
+      "observedAt": "2026-10-19T20:03:53.653789Z",
+      "supports": [
+        "dealer-name",
+        "dealer-attributed-listings",
+        "dealer-attributed-photos",
+        "public-business-call-line",
+        "address"
+      ]
+    }
+  ]
+}

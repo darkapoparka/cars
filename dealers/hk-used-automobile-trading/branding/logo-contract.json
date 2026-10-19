@@ -1,0 +1,287 @@
+{
+  "schemaVersion": 1,
+  "dealer": "hk-used-automobile-trading",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T20:32:36.821052Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "sourced-logo-imagegen-redraw",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "bc8193d883629981b91cceac73f759e4115ec7f426d1cf36f59aa89031def343",
+      "sourceSha256": "0b33a3d1ab2ecd8c4e2edb5d2523f08dbe0ef70db86043a1fccd6d6b2e22e4b8"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "92ef03af106c470f577e87cf976660efff3a74c306f7ce2223dab5af97ae0981",
+      "sourceSha256": "7176195bea53c0a227510034901eb6f6871f653b6198b1dc744756f3a3a2e07c"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "92ef03af106c470f577e87cf976660efff3a74c306f7ce2223dab5af97ae0981",
+      "sourceSha256": "7176195bea53c0a227510034901eb6f6871f653b6198b1dc744756f3a3a2e07c"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "0b33a3d1ab2ecd8c4e2edb5d2523f08dbe0ef70db86043a1fccd6d6b2e22e4b8",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-d03b857f-a65e-4ffd-a89d-2c2227439e26",
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "48473db8094d1912768df5c39cac3054343b0538582ea115ec9d1e73236525c4",
+      "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+      "crop": [
+        0,
+        614,
+        768,
+        1024
+      ]
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "e5aa3060e10b2d7ff6ce4e6f3eaa7ea100ea6da05f730bad8a63bdd12a697dca",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-d03b857f-a65e-4ffd-a89d-2c2227439e26",
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "48473db8094d1912768df5c39cac3054343b0538582ea115ec9d1e73236525c4",
+      "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+      "crop": [
+        0,
+        0,
+        768,
+        614
+      ]
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "8d871ec344d0a25b301a096583c1dc7618800a36a5da10137dfe42dd606ac445"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "0b33a3d1ab2ecd8c4e2edb5d2523f08dbe0ef70db86043a1fccd6d6b2e22e4b8",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d03b857f-a65e-4ffd-a89d-2c2227439e26",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "48473db8094d1912768df5c39cac3054343b0538582ea115ec9d1e73236525c4",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          614,
+          768,
+          1024
+        ]
+      },
+      "sourceReference": "dealers/hk-used-automobile-trading/branding/generated-onLight.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "7176195bea53c0a227510034901eb6f6871f653b6198b1dc744756f3a3a2e07c",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d03b857f-a65e-4ffd-a89d-2c2227439e26",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "48473db8094d1912768df5c39cac3054343b0538582ea115ec9d1e73236525c4",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          768,
+          614,
+          1536,
+          1024
+        ]
+      },
+      "sourceReference": "dealers/hk-used-automobile-trading/branding/generated-onDark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "7176195bea53c0a227510034901eb6f6871f653b6198b1dc744756f3a3a2e07c",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d03b857f-a65e-4ffd-a89d-2c2227439e26",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "48473db8094d1912768df5c39cac3054343b0538582ea115ec9d1e73236525c4",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          768,
+          614,
+          1536,
+          1024
+        ]
+      },
+      "sourceReference": "dealers/hk-used-automobile-trading/branding/generated-onDark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "d28a135faf11afadd3d78cd4944015e7caf1a409530510ee2d5941ce7e12a0db",
+      "sha256": "0b33a3d1ab2ecd8c4e2edb5d2523f08dbe0ef70db86043a1fccd6d6b2e22e4b8",
+      "crop": {
+        "left": 26,
+        "top": 55,
+        "width": 742,
+        "height": 233
+      },
+      "sourcePath": "branding/generated-onLight.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "aaf37c4dd35ebafbe47b87a3a68762101bb45a50018ad8066058bcddfe5afa1f",
+      "sha256": "7176195bea53c0a227510034901eb6f6871f653b6198b1dc744756f3a3a2e07c",
+      "crop": {
+        "left": 22,
+        "top": 58,
+        "width": 730,
+        "height": 232
+      },
+      "sourcePath": "branding/generated-onDark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "aaf37c4dd35ebafbe47b87a3a68762101bb45a50018ad8066058bcddfe5afa1f",
+      "sha256": "7176195bea53c0a227510034901eb6f6871f653b6198b1dc744756f3a3a2e07c",
+      "crop": {
+        "left": 22,
+        "top": 58,
+        "width": 730,
+        "height": 232
+      },
+      "sourcePath": "branding/generated-onDark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "d644f4652101fa728f2215d9959fb15aff391e286d90f491953a186c30aa087a",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d03b857f-a65e-4ffd-a89d-2c2227439e26",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "48473db8094d1912768df5c39cac3054343b0538582ea115ec9d1e73236525c4",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          0,
+          768,
+          614
+        ]
+      },
+      "sourceReference": "dealers/hk-used-automobile-trading/branding/generated-mark.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "68f559f412e9383a957e34fa3c089c3348dd8a64ac15b427a71830a0bb5a4938",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d03b857f-a65e-4ffd-a89d-2c2227439e26",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "48473db8094d1912768df5c39cac3054343b0538582ea115ec9d1e73236525c4",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          768,
+          0,
+          1536,
+          614
+        ]
+      },
+      "sourceReference": "dealers/hk-used-automobile-trading/branding/generated-markOnDark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "e5aa3060e10b2d7ff6ce4e6f3eaa7ea100ea6da05f730bad8a63bdd12a697dca",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d03b857f-a65e-4ffd-a89d-2c2227439e26",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "48473db8094d1912768df5c39cac3054343b0538582ea115ec9d1e73236525c4",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          0,
+          768,
+          614
+        ]
+      },
+      "sourceReference": "dealers/hk-used-automobile-trading/branding/generated-mark.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "8d871ec344d0a25b301a096583c1dc7618800a36a5da10137dfe42dd606ac445",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d03b857f-a65e-4ffd-a89d-2c2227439e26",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "48473db8094d1912768df5c39cac3054343b0538582ea115ec9d1e73236525c4",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          0,
+          768,
+          614
+        ]
+      },
+      "sourceReference": "dealers/hk-used-automobile-trading/branding/generated-mark.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T20:32:36.821052Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "5a248b4a89722385d9450235162fe0d149d705b7e68c3ecfb725632c46d7f287",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-d03b857f-a65e-4ffd-a89d-2c2227439e26",
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "48473db8094d1912768df5c39cac3054343b0538582ea115ec9d1e73236525c4",
+      "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+      "crop": [
+        768,
+        0,
+        1536,
+        614
+      ]
+    }
+  }
+}

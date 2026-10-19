@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 1,
+  "dealer": "jr-auto-fzco",
+  "sourceLogoUrl": "https://static.oneclickdrive.com/application/views/img/company/jr-auto.png",
+  "sourcePath": "branding/source-original.png",
+  "sourceSha256": "b8fd51c11b33e2f32e80ab7e85c78945c380c3d544be94e201ce7b0a043929e1",
+  "publishedBranding": true,
+  "sourcePage": "https://www.oneclickdrive.com/company/dubai/jr-auto-fzco",
+  "observedAt": "2026-10-19T20:03:53.723316Z",
+  "creationMethod": "sourced-logo-imagegen-redraw",
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "dealerApproved": false,
+  "visualReview": "Faithful clean redraw retains the red intertwined serif JR, black Auto, and FZCO suffix. The compact JR and all-white inverse preserve the original identity.",
+  "generationPrompt": "Use case: logo-brand. Create ONE transparent RGBA sprite of ONE dealer, 2 columns x 2 rows with very large transparent gutters. Top-left compact mark in dark ink for white; top-right matched compact mark entirely WHITE for dark/red surfaces. Bottom-left full horizontal wordmark in original dark colours, bottom-right identical wordmark entirely WHITE. No labels, panels, shadows, gradients, glow or background. Smooth bold flat solid strokes, open transparent counters. The compact mark must fill a near-SQUARE silhouette and be legible at 32px. Faithful clean redraw of supplied JR Auto FZCO identity. Preserve the distinctive intertwined classical serif JR initials in dark red #B30012 and simple black 'Auto' lettering with small 'FZCO'. Compact mark only strong intertwined JR, near-square, bold open counters with no thin ornamental hairlines. Full horizontal wordmark exact 'JR Auto' with smaller 'FZCO' below Auto. Left column dark red JR and black Auto, right column entirely white JR Auto FZCO, no colour or shadow.",
+  "workingLogoPath": "branding/generated-onLight.png",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T20:41:05.976099Z",
+    "master": {
+      "path": "branding/generated-onLight.png",
+      "sha256": "99fc5fde984b6f39b63dbb90fce3a4c640878e4738958458faa122a807ef5085",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-fec1b4f4-12e5-4601-b66e-5cbb36f90514",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "198d95de4cd095183f39065ed25866ebab4b64c276fd97f400f7031b0002e29c",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          532,
+          887,
+          887
+        ]
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "4818d9dda1de602a069395e1b474b0015f9bd9d2588b97002861e2945047945e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-fec1b4f4-12e5-4601-b66e-5cbb36f90514",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "198d95de4cd095183f39065ed25866ebab4b64c276fd97f400f7031b0002e29c",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          0,
+          887,
+          532
+        ]
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-markOnDark.png",
+      "sha256": "b24bfb3ba8ebf34d2441e3cabb34097944b06e2f0718ee2257998395e0930673",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-fec1b4f4-12e5-4601-b66e-5cbb36f90514",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "198d95de4cd095183f39065ed25866ebab4b64c276fd97f400f7031b0002e29c",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          887,
+          0,
+          1774,
+          532
+        ]
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-onLight.png",
+        "sha256": "99fc5fde984b6f39b63dbb90fce3a4c640878e4738958458faa122a807ef5085",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-fec1b4f4-12e5-4601-b66e-5cbb36f90514",
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "198d95de4cd095183f39065ed25866ebab4b64c276fd97f400f7031b0002e29c",
+          "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+          "crop": [
+            0,
+            532,
+            887,
+            887
+          ]
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-onDark.png",
+        "sha256": "7b7f67e872d4a2a4b5ca769914f19c89280dca5d423b6ca3d59702de08ae0be1",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-fec1b4f4-12e5-4601-b66e-5cbb36f90514",
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "198d95de4cd095183f39065ed25866ebab4b64c276fd97f400f7031b0002e29c",
+          "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+          "crop": [
+            887,
+            532,
+            1774,
+            887
+          ]
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-onDark.png",
+        "sha256": "7b7f67e872d4a2a4b5ca769914f19c89280dca5d423b6ca3d59702de08ae0be1",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-fec1b4f4-12e5-4601-b66e-5cbb36f90514",
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "198d95de4cd095183f39065ed25866ebab4b64c276fd97f400f7031b0002e29c",
+          "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+          "crop": [
+            887,
+            532,
+            1774,
+            887
+          ]
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820",
+        "#09090b",
+        "#17191c",
+        "#c40101"
+      ],
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "notes": "Faithful clean redraw retains the red intertwined serif JR, black Auto, and FZCO suffix. The compact JR and all-white inverse preserve the original identity."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T20:41:05.976099Z",
+      "widths": [
+        32,
+        64,
+        96
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#101820",
+        "#c40101"
+      ],
+      "notes": "Substantial JR serif strokes remain recognizable at 32px, with open counters and matching white inverse."
+    },
+    "compactMarkStatus": "proposed-compact-adaptation-not-dealer-approved"
+  },
+  "usageStatus": "public-preview-only"
+}

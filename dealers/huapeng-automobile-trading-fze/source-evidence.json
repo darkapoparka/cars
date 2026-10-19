@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "dealer": "huapeng-automobile-trading-fze",
+  "researchId": "ae-dubai-huapeng-automobile-trading-fze",
+  "observedAt": "2026-10-19T20:03:53.675734Z",
+  "liveFetchPerformed": true,
+  "businessSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-huapeng-automobile-trading-fze-3368?page=1",
+      "observedAt": "2026-10-19T20:03:53.675734Z",
+      "supports": [
+        "dealer-name",
+        "dealer-attributed-listings",
+        "dealer-attributed-photos",
+        "public-business-call-line"
+      ]
+    }
+  ],
+  "stockMode": "dated-listing-snapshot",
+  "inventoryCountMeaning": "Selected currently advertised public records, not a count or confirmation of available physical stock.",
+  "media": [
+    {
+      "path": "dealer-stock/listing-1032760.jpg",
+      "sourceUrl": "https://www.dubicars.com/images/1e675f/650x380/huapeng-automobile-trading-fze/1e37a0f2-5f44-4608-8428-a6a005519746.jpeg",
+      "listingUrl": "https://www.dubicars.com/2025-byd-song-l-dm-i-112km-beyond-2025-for-export-1032760.html",
+      "observedAt": "2026-10-19T20:03:53.675734Z",
+      "downloadedSha256": "b27b58256c00bc13104c6a22fcf4cb3a9e7f8e1b67a8b11d99371843a0324900",
+      "downloadedDimensions": [
+        650,
+        488
+      ],
+      "sha256": "66f1ca4d71999e79e9d3d447534fcb48aa851ac0a21682c75406aa4e430595a1",
+      "bytes": 53831,
+      "dimensions": [
+        650,
+        488
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    },
+    {
+      "path": "dealer-stock/listing-1027467.jpg",
+      "sourceUrl": "https://www.dubicars.com/images/58fdd9/650x380/huapeng-automobile-trading-fze/1f9c4880-9e97-4f82-9c6d-74a64da81e61.jpeg",
+      "listingUrl": "https://www.dubicars.com/2025-byd-atto-3-for-export-to-djibouti-1027467.html",
+      "observedAt": "2026-10-19T20:03:53.675734Z",
+      "downloadedSha256": "aefce6f8dfecab3497102e788a00639f1c7a7abaa0ad88bb00bd4bca4d9c9a77",
+      "downloadedDimensions": [
+        650,
+        488
+      ],
+      "sha256": "77c00148162952824275399b8440091a12ba61ff6734988ee311328c4bbf9caa",
+      "bytes": 78672,
+      "dimensions": [
+        650,
+        488
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    },
+    {
+      "path": "dealer-stock/listing-1023370.jpg",
+      "sourceUrl": "https://www.dubicars.com/images/5eebba/650x380/huapeng-automobile-trading-fze/d9b0c4d4-6e0e-475b-af67-8b01ebd531c2.jpeg",
+      "listingUrl": "https://www.dubicars.com/2025-byd-sealion-05-05-dm-i-75km-prestige-type-2025-whiteblack-for-export-1023370.html",
+      "observedAt": "2026-10-19T20:03:53.675734Z",
+      "downloadedSha256": "b69509a8226f437738750c78030e21ed1d2732c6a3b01903bfc50618d1fde2fb",
+      "downloadedDimensions": [
+        650,
+        488
+      ],
+      "sha256": "267f4e8bc622446119d01bdf27a0c71788545907ae77876549077a30ea903214",
+      "bytes": 55064,
+      "dimensions": [
+        650,
+        488
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    }
+  ],
+  "researchLimitations": [
+    "Email omitted: source address appears personal, ambiguous, or malformed."
+  ],
+  "excludedSourceContent": [
+    "Personal names and personal or ambiguous emails",
+    "Marketplace relay numbers",
+    "Prices",
+    "Unsupported warranties, inspections, ratings and finance promises"
+  ],
+  "dealerApproval": "unknown"
+}

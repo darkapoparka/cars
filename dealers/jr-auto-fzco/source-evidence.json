@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "dealer": "jr-auto-fzco",
+  "researchId": "ae-dubai-jr-auto-fzco",
+  "observedAt": "2026-10-19T20:03:53.723316Z",
+  "liveFetchPerformed": true,
+  "businessSources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/dubai/jr-auto-fzco",
+      "observedAt": "2026-10-19T20:03:53.723316Z",
+      "supports": [
+        "dealer-name",
+        "dealer-attributed-listings",
+        "dealer-attributed-photos",
+        "public-business-call-line",
+        "address"
+      ]
+    }
+  ],
+  "stockMode": "dated-listing-snapshot",
+  "inventoryCountMeaning": "Selected currently advertised public records, not a count or confirmation of available physical stock.",
+  "media": [
+    {
+      "path": "dealer-stock/listing-70385.jpg",
+      "sourceUrl": "https://static.oneclickdrive.com/uploads/cars/Toyota_Corolla_2025_70385_70385_71161357629-17_small.jpg",
+      "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Toyota/Corolla-/?id=70385",
+      "observedAt": "2026-10-19T20:03:53.723316Z",
+      "downloadedSha256": "322e518f852f4137ccd0befd0071722a9faee75faff4401244097e126ae7278a",
+      "downloadedDimensions": [
+        450,
+        395
+      ],
+      "sha256": "0163cdd3e79d93663eb927a04b0393990490f9696604f90ca3d1dce088618120",
+      "bytes": 33871,
+      "dimensions": [
+        450,
+        395
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    },
+    {
+      "path": "dealer-stock/listing-70389.jpg",
+      "sourceUrl": "https://static.oneclickdrive.com/uploads/cars/Hyundai_Elantra_2025_70389_70389_71166478674-5_small.jpg",
+      "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Hyundai/Elantra-/?id=70389",
+      "observedAt": "2026-10-19T20:03:53.723316Z",
+      "downloadedSha256": "f8c0f696dcefe008be2f67305a894529c63f78dba7e57db73bce6412b006ee00",
+      "downloadedDimensions": [
+        450,
+        395
+      ],
+      "sha256": "693ec7ae9c4f210f87e9d68cedcfa14a5c5d3ae5c2a9c9763ae438b54df11360",
+      "bytes": 41611,
+      "dimensions": [
+        450,
+        395
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    },
+    {
+      "path": "dealer-stock/listing-70391.jpg",
+      "sourceUrl": "https://static.oneclickdrive.com/uploads/cars/Rox_01_2025_70391_70391_71170753994-16_small.jpg",
+      "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/ROX/01-/?id=70391",
+      "observedAt": "2026-10-19T20:03:53.723316Z",
+      "downloadedSha256": "b384ee994fc497b3851d78967e37751c58406b6f94a7fe61c3bd444dd14f8beb",
+      "downloadedDimensions": [
+        450,
+        395
+      ],
+      "sha256": "9a15f85e3fbf6a50fcf5e1c692adafe0c9f356e892bffb7d16c9fe8fac412404",
+      "bytes": 36445,
+      "dimensions": [
+        450,
+        395
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    }
+  ],
+  "researchLimitations": [
+    "Marketplace relay numbers excluded; source catalogue provides address and published shop hours.",
+    "Phone is the dealer-attributed call link in the public vehicle card; common platform WhatsApp relay omitted.",
+    "Opening hours omitted because the platform repeats a generic schedule and independent verification is unavailable."
+  ],
+  "excludedSourceContent": [
+    "Personal names and personal or ambiguous emails",
+    "Marketplace relay numbers",
+    "Prices",
+    "Unsupported warranties, inspections, ratings and finance promises"
+  ],
+  "dealerApproval": "unknown"
+}

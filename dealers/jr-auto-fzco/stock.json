@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "dealer": "jr-auto-fzco",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:03:53.723316Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "listing-70385",
+      "title": "2025 Toyota Corolla",
+      "make": "Toyota",
+      "model": "Corolla",
+      "year": 2025,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-70385.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Toyota/Corolla-/?id=70385",
+      "observedAt": "2026-10-19T20:03:53.723316Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Sedan",
+      "transmission": "Auto",
+      "fuel": "Hybrid",
+      "color": "White",
+      "mileageValue": 0,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-70389",
+      "title": "2025 Hyundai Elantra",
+      "make": "Hyundai",
+      "model": "Elantra",
+      "year": 2025,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-70389.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Hyundai/Elantra-/?id=70389",
+      "observedAt": "2026-10-19T20:03:53.723316Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Sedan",
+      "transmission": "Auto",
+      "fuel": "Petrol",
+      "color": "Black",
+      "mileageValue": 0,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-70391",
+      "title": "2025 ROX 01",
+      "make": "ROX",
+      "model": "01",
+      "year": 2025,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-70391.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/ROX/01-/?id=70391",
+      "observedAt": "2026-10-19T20:03:53.723316Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "SUV",
+      "transmission": "Auto",
+      "fuel": "Hybrid",
+      "color": "Black",
+      "mileageValue": 0,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

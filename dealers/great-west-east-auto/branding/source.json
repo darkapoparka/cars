@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 1,
+  "dealer": "great-west-east-auto",
+  "sourceLogoUrl": "https://auto-ae-prod-storage.storage.googleapis.com/55aacdb84cd3449d833a9fbe65bec503",
+  "sourcePath": "branding/source-original.jpg",
+  "sourceSha256": "8f57c7fa35e415f6cb6483606167ba6b750d00cc35fd9a228690e4941cc6a4b4",
+  "publishedBranding": true,
+  "sourcePage": "https://auto.ae/geartweauto/",
+  "observedAt": "2026-10-19T20:03:53.586498Z",
+  "creationMethod": "sourced-logo-imagegen-redraw",
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "dealerApproved": false,
+  "visualReview": "Retains sourced red GWE/car-front motif and exact English trading-name wording. The opaque showroom photo is replaced by clean transparent artwork; inverse variants preserve composition.",
+  "generationPrompt": "Create ONE transparent RGBA sprite of four matched GREAT WEST EAST AUTOS logos, 2 columns x 2 rows, generous fully transparent gutters. Faithful redraw of supplied red GWE/car identity. TOP LEFT COMPACT MARK: make a near-SQUARE block mark with thick uppercase 'GW' on first line and 'E' centered below, one short simple red car roof stroke over GW; dark red #B10014 solid ink. No long car nose in the compact version. TOP RIGHT: exact same near-square mark in white ink. BOTTOM LEFT horizontal logo: keep original recognizable long car nose/roof plus bold GWE motif, followed by exact text 'GREAT WEST EAST' above 'AUTOS', using dark red #B10014 and charcoal. BOTTOM RIGHT: matching horizontal white inverse. Compact mark must occupy near-square silhouette so GW/E reads at 32px. Preserve red automotive idea and trade name. Flat clean solid strokes, no shadows, glow, gradients, background panels, extra text or labels.",
+  "workingLogoPath": "branding/generated-onLight.png",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T20:28:00.164983Z",
+    "master": {
+      "path": "branding/generated-onLight.png",
+      "sha256": "c0ee7848d3b04e7700e0c0fe3d26a5abd4457327264bcc56fecb4818c99ec867",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-e6dd25d5-1342-4250-8d3e-2b9241a7c7e7",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "c1b0b6930eae32302c58ac173199afa0695f6192773793889573e40ceec07ae0",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          614,
+          772,
+          1024
+        ]
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "b5e35b21e214ca0da8c8571630263df0f192e9392b78832254754207dc66a2a3",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-e6dd25d5-1342-4250-8d3e-2b9241a7c7e7",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "c1b0b6930eae32302c58ac173199afa0695f6192773793889573e40ceec07ae0",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          0,
+          772,
+          614
+        ]
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-markOnDark.png",
+      "sha256": "8bf7db243b69c9cd1acd3152ac92e7de55da9c3fd227787fd1e1df06a944a5f6",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-e6dd25d5-1342-4250-8d3e-2b9241a7c7e7",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "c1b0b6930eae32302c58ac173199afa0695f6192773793889573e40ceec07ae0",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          772,
+          0,
+          1536,
+          614
+        ]
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-onLight.png",
+        "sha256": "c0ee7848d3b04e7700e0c0fe3d26a5abd4457327264bcc56fecb4818c99ec867",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-e6dd25d5-1342-4250-8d3e-2b9241a7c7e7",
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "c1b0b6930eae32302c58ac173199afa0695f6192773793889573e40ceec07ae0",
+          "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+          "crop": [
+            0,
+            614,
+            772,
+            1024
+          ]
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-onDark.png",
+        "sha256": "9874f3acfe1e11b9f86fd00c17228b41f908975cb950f124b2dc3cc025b11625",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-e6dd25d5-1342-4250-8d3e-2b9241a7c7e7",
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "c1b0b6930eae32302c58ac173199afa0695f6192773793889573e40ceec07ae0",
+          "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+          "crop": [
+            772,
+            614,
+            1536,
+            1024
+          ]
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-onDark.png",
+        "sha256": "9874f3acfe1e11b9f86fd00c17228b41f908975cb950f124b2dc3cc025b11625",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-e6dd25d5-1342-4250-8d3e-2b9241a7c7e7",
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "c1b0b6930eae32302c58ac173199afa0695f6192773793889573e40ceec07ae0",
+          "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+          "crop": [
+            772,
+            614,
+            1536,
+            1024
+          ]
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820",
+        "#09090b",
+        "#17191c",
+        "#c40101"
+      ],
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "notes": "Retains sourced red GWE/car-front motif and exact English trading-name wording. The opaque showroom photo is replaced by clean transparent artwork; inverse variants preserve composition."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T20:28:00.164983Z",
+      "widths": [
+        32,
+        64,
+        96
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#101820",
+        "#c40101"
+      ],
+      "notes": "A proposed GW/E arrangement makes the original GWE letters near-square at 32px, retaining the red car roof stroke. Matching white inverse for dark/red."
+    },
+    "compactMarkStatus": "proposed-compact-adaptation-not-dealer-approved"
+  },
+  "usageStatus": "public-preview-only"
+}

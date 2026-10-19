@@ -1,0 +1,191 @@
+{
+  "schemaVersion": 1,
+  "dealer": "billion-auto",
+  "publishedBranding": "retained-public-logo",
+  "sourceLogoUrl": "https://d2souf30ck18jq.cloudfront.net/billion-auto-fze/logo-1ad0843c-667a-4692-acce-626149f79235.jpeg",
+  "creationMethod": "imagegen-faithful-redraw",
+  "approvalStatus": "independent-proposal-not-dealer-approved",
+  "dealerApproved": false,
+  "observedAt": "2026-10-19",
+  "checkedSources": [
+    "https://d2souf30ck18jq.cloudfront.net/billion-auto-fze/logo-1ad0843c-667a-4692-acce-626149f79235.jpeg",
+    "https://www.dubicars.com/dealers/dubai-billion-auto-2646"
+  ],
+  "researchConclusion": "Faithful clean redraw from the published dealer logo, keeping the business name, colours and distinctive motif. Surface-specific ink variants preserve transparent negative space.",
+  "originals": [
+    {
+      "path": "branding/original-logo.jpg",
+      "url": "https://d2souf30ck18jq.cloudfront.net/billion-auto-fze/logo-1ad0843c-667a-4692-acce-626149f79235.jpeg",
+      "observedAt": "2026-10-19",
+      "sha256": "431cee9c092bac9c2d38b80c44b64447aff24d215ed0a3a585b38c181bb41e13"
+    }
+  ],
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "generationId": "exec-66622d44-f79c-4741-a92d-f25e24054ef1",
+    "generationIdKind": "exposed-tool-execution-output-identifier",
+    "modelVersion": null,
+    "outputReference": "branding/generated-sheet.png",
+    "outputSha256": "4fac6d9e6e37813e479eb163d89476686292d57898737db9b734eae3b636e841",
+    "prompt": "Use case: logo-brand. One faithful dealer brand raster export sheet, based on the original supplied dealer logo. BILLION AUTO. Preserve italic interlocked B monogram with two open ring strokes, green identity, and exact Billion wordmark using a simple globe for its o. Top-left full logo and bottom-left emblem: deep forest green #276a36 and near-black ink for a white surface. Top-right full logo AND bottom-right emblem: ALL artwork including the B, ring, globe, Billion and AUTO MUST be pure WHITE. No green whatsoever in either right-hand logo because they must also work on red backgrounds. No filled shields or circles behind the symbols. All logo counters and negative spaces must be truly transparent. Four equal cells in a 2x2 grid with generous transparent gutters: top-left full light-surface logo, top-right full dark/red-surface logo, bottom-left standalone compact emblem, bottom-right identical standalone compact emblem for dark/red. Precise bold flat vector-like geometry, legible at32px, correctly spelled business name. Genuine transparent PNG alpha across whole sheet and all negative spaces. No gradients, no metallic shine, no glow, no drop shadow, no solid black/white background panels. No extra slogans, badges, labels or mockup.",
+    "sourceRasterDimensions": {
+      "width": 1536,
+      "height": 1024
+    }
+  },
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T20:35:25.873Z",
+    "master": {
+      "path": "branding/reviewed-onLight.png",
+      "sha256": "df23f37663f29622d6e280bda09804fd239ef55b4d84ef2580c748e649bd13ba",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-66622d44-f79c-4741-a92d-f25e24054ef1",
+        "generationIdKind": "exposed-tool-execution-output-identifier",
+        "modelVersion": null,
+        "outputReference": "branding/generated-sheet.png",
+        "outputSha256": "4fac6d9e6e37813e479eb163d89476686292d57898737db9b734eae3b636e841"
+      },
+      "export": {
+        "operation": "deterministic-artboard-cell-extraction",
+        "crop": [
+          0,
+          0,
+          768,
+          635
+        ]
+      }
+    },
+    "mark": {
+      "path": "branding/reviewed-mark.png",
+      "sha256": "dfc370ebaf63dad4f50a9c2c1225ce4483eae0041de79fa3dc74c535cd3d96df",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-66622d44-f79c-4741-a92d-f25e24054ef1",
+        "generationIdKind": "exposed-tool-execution-output-identifier",
+        "modelVersion": null,
+        "outputReference": "branding/generated-sheet.png",
+        "outputSha256": "4fac6d9e6e37813e479eb163d89476686292d57898737db9b734eae3b636e841"
+      },
+      "export": {
+        "operation": "deterministic-artboard-cell-extraction",
+        "crop": [
+          0,
+          635,
+          768,
+          1024
+        ]
+      }
+    },
+    "markOnDark": {
+      "path": "branding/reviewed-markOnDark.png",
+      "sha256": "27499b27c05b37d447657e9ac994625a80fc1c050c8b714b761a98ec44091262",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-66622d44-f79c-4741-a92d-f25e24054ef1",
+        "generationIdKind": "exposed-tool-execution-output-identifier",
+        "modelVersion": null,
+        "outputReference": "branding/generated-sheet.png",
+        "outputSha256": "4fac6d9e6e37813e479eb163d89476686292d57898737db9b734eae3b636e841"
+      },
+      "export": {
+        "operation": "deterministic-artboard-cell-extraction",
+        "crop": [
+          768,
+          635,
+          1536,
+          1024
+        ]
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/reviewed-onLight.png",
+        "sha256": "df23f37663f29622d6e280bda09804fd239ef55b4d84ef2580c748e649bd13ba",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-66622d44-f79c-4741-a92d-f25e24054ef1",
+          "generationIdKind": "exposed-tool-execution-output-identifier",
+          "modelVersion": null,
+          "outputReference": "branding/generated-sheet.png",
+          "outputSha256": "4fac6d9e6e37813e479eb163d89476686292d57898737db9b734eae3b636e841"
+        },
+        "export": {
+          "operation": "deterministic-artboard-cell-extraction",
+          "crop": [
+            0,
+            0,
+            768,
+            635
+          ]
+        }
+      },
+      "onDark": {
+        "path": "branding/reviewed-onDark.png",
+        "sha256": "9527f7d6f82e6bab1b6dee07c6698f1c94d19731755bb390367ff75401751be1",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-66622d44-f79c-4741-a92d-f25e24054ef1",
+          "generationIdKind": "exposed-tool-execution-output-identifier",
+          "modelVersion": null,
+          "outputReference": "branding/generated-sheet.png",
+          "outputSha256": "4fac6d9e6e37813e479eb163d89476686292d57898737db9b734eae3b636e841"
+        },
+        "export": {
+          "operation": "deterministic-artboard-cell-extraction",
+          "crop": [
+            768,
+            0,
+            1536,
+            635
+          ]
+        }
+      },
+      "onAccent": {
+        "path": "branding/reviewed-onDark.png",
+        "sha256": "9527f7d6f82e6bab1b6dee07c6698f1c94d19731755bb390367ff75401751be1",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-66622d44-f79c-4741-a92d-f25e24054ef1",
+          "generationIdKind": "exposed-tool-execution-output-identifier",
+          "modelVersion": null,
+          "outputReference": "branding/generated-sheet.png",
+          "outputSha256": "4fac6d9e6e37813e479eb163d89476686292d57898737db9b734eae3b636e841"
+        },
+        "export": {
+          "operation": "deterministic-artboard-cell-extraction",
+          "crop": [
+            768,
+            0,
+            1536,
+            635
+          ]
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#101820",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "notes": "Exact imagegen output visually reviewed after compositing actual PNG alpha; spelling and original motif retained. Source crop boundaries separate the four transparent export roles."
+    },
+    "compactMarkStatus": "independent-proposal-not-dealer-approved",
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T20:35:25.873Z",
+      "widths": [
+        32,
+        64
+      ],
+      "notes": "Compact emblem excludes the long business descriptor for legibility at 32 px."
+    }
+  },
+  "usageStatus": "public-preview-only"
+}

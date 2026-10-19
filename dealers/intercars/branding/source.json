@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 1,
+  "dealer": "intercars",
+  "sourceLogoUrl": "https://d2souf30ck18jq.cloudfront.net/intercars-fze/logo-dc877c4e-81a6-4210-806d-7f8a96668cfa.jpeg",
+  "sourcePath": "branding/source-original.jpg",
+  "sourceSha256": "f20669ddd8ffa1f9be56266eb5fd53915d2ad42b9c7e03498bfbd1b0a9b06520",
+  "publishedBranding": true,
+  "sourcePage": "https://www.dubicars.com/dealers/dubai-intercars-2469",
+  "observedAt": "2026-10-19T20:03:53.708622Z",
+  "creationMethod": "sourced-logo-imagegen-redraw",
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "dealerApproved": false,
+  "visualReview": "Retains sourced globe, red car and INTERCARS lettering, with a proposed IC compact mark. Entirely white inverse maintains contrast on dark and red template surfaces.",
+  "generationPrompt": "Use case: logo-brand. Create ONE transparent RGBA sprite of ONE dealer, 2 columns x 2 rows with very large transparent gutters. Top-left compact mark in dark ink for white; top-right matched compact mark entirely WHITE for dark/red surfaces. Bottom-left full horizontal wordmark in original dark colours, bottom-right identical wordmark entirely WHITE. No labels, panels, shadows, gradients, glow or background. Smooth bold flat solid strokes, open transparent counters. The compact mark must fill a near-SQUARE silhouette and be legible at 32px. Faithful redraw of supplied INTERCARS globe and red car logo. Top compact mark has simple deep blue globe circle with strong IC initials and a red car-roof accent. Bottom full logo retains globe and car, exact 'INTERCARS' lettering in strong deep navy blue. RIGHT COLUMN inverse artwork must be 100 percent solid WHITE, including the car roof, letters and globe. Absolutely no red, blue, gray or coloured strokes in right column. Preserve source geometry and clean open counters with simple globe meridians. Bottom logos may be roundish source composition if better for readability.",
+  "workingLogoPath": "branding/generated-onLight.png",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T20:40:47.426358Z",
+    "master": {
+      "path": "branding/generated-onLight.png",
+      "sha256": "6da19f0038bff931046a235920af676d1c92f39c73f2c71785ec980426f08eea",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-eb5134c5-5e84-4b9f-a55f-1233383d8383",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "8710ca2a56f0ef29aa15b9a19ca88b1edc1fbe87b69817cdec11af0fd6bfedec",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          478,
+          887,
+          887
+        ]
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "f2e200fec5bbdec49e71be0fc077279423b23b8675c2bb1e83c8162dc7c4ef98",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-eb5134c5-5e84-4b9f-a55f-1233383d8383",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "8710ca2a56f0ef29aa15b9a19ca88b1edc1fbe87b69817cdec11af0fd6bfedec",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          0,
+          887,
+          478
+        ]
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-markOnDark.png",
+      "sha256": "9b7f0160a0f2d59d8a4a370865c2ab99bc716561d2d64fd93a426663f138b4d9",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-eb5134c5-5e84-4b9f-a55f-1233383d8383",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "8710ca2a56f0ef29aa15b9a19ca88b1edc1fbe87b69817cdec11af0fd6bfedec",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          887,
+          0,
+          1774,
+          478
+        ]
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-onLight.png",
+        "sha256": "6da19f0038bff931046a235920af676d1c92f39c73f2c71785ec980426f08eea",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-eb5134c5-5e84-4b9f-a55f-1233383d8383",
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "8710ca2a56f0ef29aa15b9a19ca88b1edc1fbe87b69817cdec11af0fd6bfedec",
+          "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+          "crop": [
+            0,
+            478,
+            887,
+            887
+          ]
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-onDark.png",
+        "sha256": "61060046d8ede9001cce6bba286c045aee88b92b337ec4c26b910fc5c779b51b",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-eb5134c5-5e84-4b9f-a55f-1233383d8383",
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "8710ca2a56f0ef29aa15b9a19ca88b1edc1fbe87b69817cdec11af0fd6bfedec",
+          "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+          "crop": [
+            887,
+            478,
+            1774,
+            887
+          ]
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-onDark.png",
+        "sha256": "61060046d8ede9001cce6bba286c045aee88b92b337ec4c26b910fc5c779b51b",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-eb5134c5-5e84-4b9f-a55f-1233383d8383",
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "8710ca2a56f0ef29aa15b9a19ca88b1edc1fbe87b69817cdec11af0fd6bfedec",
+          "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+          "crop": [
+            887,
+            478,
+            1774,
+            887
+          ]
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820",
+        "#09090b",
+        "#17191c",
+        "#c40101"
+      ],
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "notes": "Retains sourced globe, red car and INTERCARS lettering, with a proposed IC compact mark. Entirely white inverse maintains contrast on dark and red template surfaces."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T20:40:47.426358Z",
+      "widths": [
+        32,
+        64,
+        96
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#101820",
+        "#c40101"
+      ],
+      "notes": "IC remains primary at 32px; globe meridians and roof are secondary. White inverse replaces red details for clear accent-surface rendering."
+    },
+    "compactMarkStatus": "proposed-compact-adaptation-not-dealer-approved"
+  },
+  "usageStatus": "public-preview-only"
+}

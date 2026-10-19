@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "slug": "haroon-sharif-motors-fze",
+  "dealerId": "ae-dubai-haroon-sharif-motors-fze",
+  "business": {
+    "name": "Haroon Sharif Motors FZE",
+    "city": "Dubai",
+    "region": "Dubai",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "Showroom No. 356, Dubai Auto Zone, Used Car Complex, Ras Al Khor, Dubai - UAE",
+    "phone": "+971505873667",
+    "phoneDisplay": "+971505873667",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://www.oneclickdrive.com/company/dubai/haroon-sharif-motors-fze",
+    "hours": "",
+    "sourceUrl": "https://www.oneclickdrive.com/company/dubai/haroon-sharif-motors-fze",
+    "observedAt": "2026-10-19T20:03:53.608743Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/dubai/haroon-sharif-motors-fze",
+      "observedAt": "2026-10-19T20:03:53.608743Z",
+      "supports": [
+        "dealer-name",
+        "dealer-attributed-listings",
+        "dealer-attributed-photos",
+        "public-business-call-line",
+        "address"
+      ]
+    }
+  ]
+}
