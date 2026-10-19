@@ -1,0 +1,137 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-meqat",
+  "realLogoFirst": true,
+  "publishedBranding": false,
+  "creationMethod": "imagegen-independent-monogram-proposal",
+  "approvalStatus": "independent-proposal-not-dealer-approved",
+  "dealerApproved": false,
+  "usageStatus": "public-preview-only",
+  "observedAt": "2026-10-19T20:25:11.275Z",
+  "publicSources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/al-meqat-cars",
+      "observedAt": "2026-10-19T20:00:04.403200Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7097-lexus-lx-570-at-367-hp-lx-570-platinum",
+      "observedAt": "2026-10-19T20:00:04.403200Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7368-toyota-fortuner-40-at-4wd-238-hp-vxr",
+      "observedAt": "2026-10-19T20:00:04.403200Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/3340-toyota-c-hr-18-cvt-hybrid-98-hp-g",
+      "observedAt": "2026-10-19T20:00:04.403200Z"
+    }
+  ],
+  "originals": [],
+  "logoResearch": {
+    "method": "Opened named current LicensePlate profile and three seller-bound listings; searched the exact name with official/logo/Sharjah terms and inspected public dealer catalogue results.",
+    "result": "The attributable profile uses an initials placeholder. Al Miqat results have different spelling and no established matching business phone, so their branding was excluded. No usable attributable original was obtained.",
+    "sources": [
+      "https://licenseplate.ae/cars/dealer/al-meqat-cars"
+    ],
+    "queries": [
+      "\"Al Meqat\" cars official logo Sharjah"
+    ]
+  },
+  "visualReview": "Compact AM monogram proposal with open A counter and M valley; dark navy for light surface and pale silver for dark/accent surfaces. Exact trading identity remains in sourced template text. Proposed mark is not dealer-approved.",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T20:25:11.275Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "fd7560d5c07408ed5c52df2108394ae388edd05e39d5264d4c0f6d376bb151d0",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7918cf34-242d-4120-9160-8d943ecd1885",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "fd7560d5c07408ed5c52df2108394ae388edd05e39d5264d4c0f6d376bb151d0",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7918cf34-242d-4120-9160-8d943ecd1885",
+        "modelVersion": null
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "d871ab70f7dbe4b21661fb74db03bcd5d88c76db5e296362cab0f535d7f533db",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f8bbac0c-4238-41d3-bbca-55c3443931d6",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "fd7560d5c07408ed5c52df2108394ae388edd05e39d5264d4c0f6d376bb151d0",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-7918cf34-242d-4120-9160-8d943ecd1885",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "d871ab70f7dbe4b21661fb74db03bcd5d88c76db5e296362cab0f535d7f533db",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-f8bbac0c-4238-41d3-bbca-55c3443931d6",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "d871ab70f7dbe4b21661fb74db03bcd5d88c76db5e296362cab0f535d7f533db",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-f8bbac0c-4238-41d3-bbca-55c3443931d6",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113",
+          "#101820"
+        ],
+        "onAccent": [
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ]
+      },
+      "notes": "Compact AM monogram proposal with open A counter and M valley; dark navy for light surface and pale silver for dark/accent surfaces. Exact trading identity remains in sourced template text. Proposed mark is not dealer-approved."
+    },
+    "compactMarkStatus": "independent-proposal-not-dealer-approved",
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T20:25:11.275Z",
+      "widths": [
+        32,
+        64
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#101820",
+        "#c40101"
+      ],
+      "notes": "Compact AM monogram proposal with open A counter and M valley; dark navy for light surface and pale silver for dark/accent surfaces. Exact trading identity remains in sourced template text. Proposed mark is not dealer-approved."
+    }
+  },
+  "generationPrompts": [
+    "Use case: logo-brand. Make one premium compact monogram proposal for Al Meqat, a UAE car dealership. Exact letters: AM. An elegant strong geometric A and M interlock with a single continuous smooth baseline and a subtly forward-leaning upper corner. Clear A triangular counter and distinctive M center valley, chunky optical strokes, near-square shape. Solid pale silver ink #c7d4dc ONLY, genuine transparent background and large transparent negative spaces. A restrained European automotive identity readable as AM at32px, meticulous shapes. Avoid car clipart, crowns, circles, badges, gradients, shadows, textures, noise, speckled edges, ultra-thin rules, background, mockup, watermark and all other text. Just one clean isolated vector-style raster mark.",
+    "Matching dark-ink version of this exact AM mark for Al Meqat. Preserve its exact AM geometry, proportions and open spaces. Re-render all light silver strokes in one flat very dark navy #10232b. Clean smooth graphic edges. Remove detached flecks completely from transparent negative spaces. No changes to the silhouette, no additional lettering, shadows, noise, texture or background. True transparent raster logo with clean hard edges."
+  ]
+}

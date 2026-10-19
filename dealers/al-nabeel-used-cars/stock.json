@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-nabeel-used-cars",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:00:04.404458Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "licenseplate-6788",
+      "title": "2021 Toyota Hiace",
+      "make": "Toyota",
+      "model": "Hiace",
+      "year": 2021,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-6788.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/6788-toyota-hiace-27-mt-151-hp-gls",
+      "observedAt": "2026-10-19T20:00:04.404458Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Minivan",
+      "transmission": "Manual",
+      "fuel": "Petrol",
+      "color": "White",
+      "mileageValue": 254000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "licenseplate-6799",
+      "title": "2020 Toyota Hilux",
+      "make": "Toyota",
+      "model": "Hilux",
+      "year": 2020,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-6799.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/6799-toyota-hilux-27-mt-164-hp-double-cab-gl",
+      "observedAt": "2026-10-19T20:00:04.404458Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Pickup",
+      "transmission": "Manual",
+      "fuel": "Petrol",
+      "color": "White",
+      "mileageValue": 188000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "licenseplate-6897",
+      "title": "2022 Toyota Hilux",
+      "make": "Toyota",
+      "model": "Hilux",
+      "year": 2022,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-6897.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/6897-toyota-hilux-28-at-awd-177-hp-single-cab-gl",
+      "observedAt": "2026-10-19T20:00:04.404458Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Pickup",
+      "transmission": "Manual",
+      "color": "White",
+      "mileageValue": 125000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

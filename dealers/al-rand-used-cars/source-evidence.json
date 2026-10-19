@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-rand-used-cars",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/al-rand-used-cars",
+      "observedAt": "2026-10-19T20:00:12.300806Z",
+      "supports": [
+        "business-trading-name",
+        "public-business-phone",
+        "marketplace-location",
+        "dealer-catalogue"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/3929-toyota-fortuner-27-at-rwd-160-hp-other",
+      "observedAt": "2026-10-19T20:00:12.300806Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/3969-mitsubishi-pajero-30-at-220-hp-gls",
+      "observedAt": "2026-10-19T20:00:12.300806Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/4015-toyota-land-cruiser-prado-40-at-awd-282-hp-vxr",
+      "observedAt": "2026-10-19T20:00:12.300806Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "research": {
+    "observedAt": "2026-10-19T20:00:12.300806Z",
+    "profileUrl": "https://licenseplate.ae/cars/dealer/al-rand-used-cars",
+    "profileSha256": "525db36eacaf82e9d5e460854e75248d78c7d5e5060a748b2a9fee3afaf19c98",
+    "marketplaceTradingName": "Al Rand Used Cars",
+    "classification": "public-marketplace-dealer-profile-and-listing-snapshot",
+    "directDealerPostingVerified": false,
+    "profileClaimed": false,
+    "limitation": "The named marketplace profile may be syndicated or automatically assembled. Seller-attributed listings are dated observations; current physical stock and direct dealer posting are not confirmed.",
+    "unknownFields": [
+      "public-business-email",
+      "owned-website",
+      "opening-hours"
+    ],
+    "stockSources": [
+      {
+        "id": "licenseplate-3929",
+        "url": "https://licenseplate.ae/cars/listing/3929-toyota-fortuner-27-at-rwd-160-hp-other",
+        "observedAt": "2026-10-19T20:00:12.300806Z",
+        "sha256": "0d8e04010f1d8d8dd915591cec572a45f0bfe44ad746815407f30d3a99ef91aa",
+        "sellerName": "Al Rand Used Cars",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/al-rand-used-cars"
+      },
+      {
+        "id": "licenseplate-3969",
+        "url": "https://licenseplate.ae/cars/listing/3969-mitsubishi-pajero-30-at-220-hp-gls",
+        "observedAt": "2026-10-19T20:00:12.300806Z",
+        "sha256": "31286375b39a0b665a65df438e8145d1b1ecfb9c8449c5544ec3dfac44ce7e18",
+        "sellerName": "Al Rand Used Cars",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/al-rand-used-cars"
+      },
+      {
+        "id": "licenseplate-4015",
+        "url": "https://licenseplate.ae/cars/listing/4015-toyota-land-cruiser-prado-40-at-awd-282-hp-vxr",
+        "observedAt": "2026-10-19T20:00:12.300806Z",
+        "sha256": "72989e3f408507222917a6ecead8d2759ed982453f57c89ed32726e8f771f8bd",
+        "sellerName": "Al Rand Used Cars",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/al-rand-used-cars"
+      }
+    ],
+    "photoSources": [
+      {
+        "listingId": "licenseplate-3929",
+        "listingUrl": "https://licenseplate.ae/cars/listing/3929-toyota-fortuner-27-at-rwd-160-hp-other",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/toyota-fortuner-27-at-rwd-160-hp-0-1789508476.webp",
+        "observedAt": "2026-10-19T20:00:12.300806Z",
+        "retainedPath": "dealer-stock/licenseplate-3929.webp",
+        "sha256": "b6ea729dfd7e9ea5f495af1cec34f10a7a0c82767fd1ef8df3fb9320ae1e09ec",
+        "originalSha256": "73a96306717a7643f70f449137e65535937affcc384ff375cc06410ccd1c98c1",
+        "bytes": 86144,
+        "width": 1280,
+        "height": 592,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      },
+      {
+        "listingId": "licenseplate-3969",
+        "listingUrl": "https://licenseplate.ae/cars/listing/3969-mitsubishi-pajero-30-at-220-hp-gls",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/mitsubishi-pajero-30-at-220-hp-0-1789508713.webp",
+        "observedAt": "2026-10-19T20:00:12.300806Z",
+        "retainedPath": "dealer-stock/licenseplate-3969.webp",
+        "sha256": "403f5f6cf67dab6de45537234ecf1dd05775173770f0da12db345cd812cc6813",
+        "originalSha256": "5103b9550585641508416373415d55bc43d9d073cbd6329558e4b9be47233e6c",
+        "bytes": 102104,
+        "width": 1280,
+        "height": 720,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      },
+      {
+        "listingId": "licenseplate-4015",
+        "listingUrl": "https://licenseplate.ae/cars/listing/4015-toyota-land-cruiser-prado-40-at-awd-282-hp-vxr",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/toyota-land-cruiser-prado-40-at-awd-282-hp-0-1789508954.webp",
+        "observedAt": "2026-10-19T20:00:12.300806Z",
+        "retainedPath": "dealer-stock/licenseplate-4015.webp",
+        "sha256": "0126a3f731f63c94c9cf1a6aacc8efa2359faf89006b1e7089d7615fc528097c",
+        "originalSha256": "5d92d270c9baec0dccfa8cdec387628160c674afc5b9926a48d1341ebc3ab251",
+        "bytes": 93118,
+        "width": 1280,
+        "height": 592,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      }
+    ]
+  }
+}

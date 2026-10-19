@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-tarayoth-used-cars",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:00:15.073904Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "licenseplate-7181",
+      "title": "2023 Kia Telluride",
+      "make": "Kia",
+      "model": "Telluride",
+      "year": 2023,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-7181.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/7181-kia-telluride-38-gdi-at-awd-295-hp-ex-x-line",
+      "observedAt": "2026-10-19T20:00:15.073904Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Crossover",
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "color": "White",
+      "mileageValue": 39000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "licenseplate-4092",
+      "title": "2024 Hyundai Palisade",
+      "make": "Hyundai",
+      "model": "Palisade",
+      "year": 2024,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-4092.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/4092-hyundai-palisade-35-at-4wd-249-hp-limited",
+      "observedAt": "2026-10-19T20:00:15.073904Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Crossover",
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "color": "Black",
+      "mileageValue": 49000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "licenseplate-7652",
+      "title": "2021 Infiniti QX80",
+      "make": "Infiniti",
+      "model": "QX80",
+      "year": 2021,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-7652.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/7652-infiniti-qx80-56-at-awd-405-hp-limited-edition",
+      "observedAt": "2026-10-19T20:00:15.073904Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Crossover",
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "color": "Black",
+      "mileageValue": 131953,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

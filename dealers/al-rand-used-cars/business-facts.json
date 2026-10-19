@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "slug": "al-rand-used-cars",
+  "dealerId": "ae-sharjah-al-rand-used-cars",
+  "business": {
+    "name": "Al Rand Used Cars",
+    "city": "Sharjah",
+    "region": "Sharjah",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "Saif Zone (Sharjah International Airport Free Zone), Sharjah, UAE",
+    "phone": "+971501918138",
+    "phoneDisplay": "+971501918138",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://licenseplate.ae/cars/dealer/al-rand-used-cars",
+    "hours": "",
+    "sourceUrl": "https://licenseplate.ae/cars/dealer/al-rand-used-cars",
+    "observedAt": "2026-10-19T20:00:12.300806Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/al-rand-used-cars",
+      "observedAt": "2026-10-19T20:00:12.300806Z",
+      "supports": [
+        "business-trading-name",
+        "public-business-phone",
+        "marketplace-location",
+        "dealer-catalogue"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/3929-toyota-fortuner-27-at-rwd-160-hp-other",
+      "observedAt": "2026-10-19T20:00:12.300806Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/3969-mitsubishi-pajero-30-at-220-hp-gls",
+      "observedAt": "2026-10-19T20:00:12.300806Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/4015-toyota-land-cruiser-prado-40-at-awd-282-hp-vxr",
+      "observedAt": "2026-10-19T20:00:12.300806Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    }
+  ]
+}

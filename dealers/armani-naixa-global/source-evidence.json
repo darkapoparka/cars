@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "dealer": "armani-naixa-global",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/armani-naixa-global",
+      "observedAt": "2026-10-19T20:00:15.975467Z",
+      "supports": [
+        "business-trading-name",
+        "public-business-phone",
+        "marketplace-location",
+        "dealer-catalogue"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/13088-nissan-tiida-16-at-110-hp-sv",
+      "observedAt": "2026-10-19T20:00:15.975467Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/13104-honda-accord-24-at-201-hp-ex-l",
+      "observedAt": "2026-10-19T20:00:15.975467Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/13089-suzuki-ertiga-15-at-101-hp-gl",
+      "observedAt": "2026-10-19T20:00:15.975467Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "research": {
+    "observedAt": "2026-10-19T20:00:15.975467Z",
+    "profileUrl": "https://licenseplate.ae/cars/dealer/armani-naixa-global",
+    "profileSha256": "d16e72b30d5325a7ae4912ee44296bfc56d6cb74b417946da4f95f0e5b464c76",
+    "marketplaceTradingName": "Armani Naixa Global",
+    "classification": "public-marketplace-dealer-profile-and-listing-snapshot",
+    "directDealerPostingVerified": false,
+    "profileClaimed": false,
+    "limitation": "The named marketplace profile may be syndicated or automatically assembled. Seller-attributed listings are dated observations; current physical stock and direct dealer posting are not confirmed.",
+    "unknownFields": [
+      "public-business-email",
+      "owned-website",
+      "opening-hours"
+    ],
+    "stockSources": [
+      {
+        "id": "licenseplate-13088",
+        "url": "https://licenseplate.ae/cars/listing/13088-nissan-tiida-16-at-110-hp-sv",
+        "observedAt": "2026-10-19T20:00:15.975467Z",
+        "sha256": "5eee56c166d09307c2c6077626808a5be93ab0f3035c9e7b7b1ec8784f39888f",
+        "sellerName": "Armani Naixa Global",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/armani-naixa-global"
+      },
+      {
+        "id": "licenseplate-13104",
+        "url": "https://licenseplate.ae/cars/listing/13104-honda-accord-24-at-201-hp-ex-l",
+        "observedAt": "2026-10-19T20:00:15.975467Z",
+        "sha256": "7c70e640a30d06c9913ec9c6f39566b91d2f8fbb0b5f94f630338551abf405d5",
+        "sellerName": "Armani Naixa Global",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/armani-naixa-global"
+      },
+      {
+        "id": "licenseplate-13089",
+        "url": "https://licenseplate.ae/cars/listing/13089-suzuki-ertiga-15-at-101-hp-gl",
+        "observedAt": "2026-10-19T20:00:15.975467Z",
+        "sha256": "8b98c72f2d105ad877d6c3b7284201c09ef40c8beb567797890097da843c07d8",
+        "sellerName": "Armani Naixa Global",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/armani-naixa-global"
+      }
+    ],
+    "photoSources": [
+      {
+        "listingId": "licenseplate-13088",
+        "listingUrl": "https://licenseplate.ae/cars/listing/13088-nissan-tiida-16-at-110-hp-sv",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/nissan-tiida-16-at-110-hp-0-1792222880.webp",
+        "observedAt": "2026-10-19T20:00:15.975467Z",
+        "retainedPath": "dealer-stock/licenseplate-13088.webp",
+        "sha256": "f421de234073246ea5dfec844d67ce61c712bdf47f83f2da3804ce22191b9bb1",
+        "originalSha256": "39a4384172a56213ad8d4b6ea30be363a0338be489e98a3e40635e57d72177b0",
+        "bytes": 67256,
+        "width": 1066,
+        "height": 800,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      },
+      {
+        "listingId": "licenseplate-13104",
+        "listingUrl": "https://licenseplate.ae/cars/listing/13104-honda-accord-24-at-201-hp-ex-l",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/honda-accord-24-at-201-hp-0-1792230364.webp",
+        "observedAt": "2026-10-19T20:00:15.975467Z",
+        "retainedPath": "dealer-stock/licenseplate-13104.webp",
+        "sha256": "67b64879a1d4bea6715ab4e7dce75909e907c05abf7f9500ce0d17ae791c8bb4",
+        "originalSha256": "d1b68530e6ab64338b8fe5b1ade405045f7e3bcef4fa13e2a5318b937369e734",
+        "bytes": 79758,
+        "width": 1066,
+        "height": 800,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      },
+      {
+        "listingId": "licenseplate-13089",
+        "listingUrl": "https://licenseplate.ae/cars/listing/13089-suzuki-ertiga-15-at-101-hp-gl",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/suzuki-ertiga-15-at-101-hp-0-1792222888.webp",
+        "observedAt": "2026-10-19T20:00:15.975467Z",
+        "retainedPath": "dealer-stock/licenseplate-13089.webp",
+        "sha256": "31b59dd410c22f8ba37ce9bab5336c8c0003cb9edfdf70b23b186da01ddb1002",
+        "originalSha256": "10622d6db2671ca0633c466bce90d1095c4a8a8af82b2ea19a3092088acaf614",
+        "bytes": 124316,
+        "width": 1066,
+        "height": 800,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      }
+    ]
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "dealer": "ali-gad-ali-used-cars",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/ali-gad-ali-used-cars",
+      "observedAt": "2026-10-19T20:00:15.205960Z",
+      "supports": [
+        "business-trading-name",
+        "public-business-phone",
+        "marketplace-location",
+        "dealer-catalogue"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/6778-hyundai-sonata-25-at-191-hp-other",
+      "observedAt": "2026-10-19T20:00:15.205960Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/6819-mitsubishi-pajero-38-at-243-hp-gls",
+      "observedAt": "2026-10-19T20:00:15.205960Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/6893-mitsubishi-asx-20-cvt-166-hp-other",
+      "observedAt": "2026-10-19T20:00:15.205960Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "research": {
+    "observedAt": "2026-10-19T20:00:15.205960Z",
+    "profileUrl": "https://licenseplate.ae/cars/dealer/ali-gad-ali-used-cars",
+    "profileSha256": "1de298e173de7bd8f27e9c6721181a4b289bf7a2be9ca7c39f213629c8ee7ad3",
+    "marketplaceTradingName": "ALI GAD ALI Used Cars",
+    "classification": "public-marketplace-dealer-profile-and-listing-snapshot",
+    "directDealerPostingVerified": false,
+    "profileClaimed": false,
+    "limitation": "The named marketplace profile may be syndicated or automatically assembled. Seller-attributed listings are dated observations; current physical stock and direct dealer posting are not confirmed.",
+    "unknownFields": [
+      "public-business-email",
+      "owned-website",
+      "opening-hours"
+    ],
+    "stockSources": [
+      {
+        "id": "licenseplate-6778",
+        "url": "https://licenseplate.ae/cars/listing/6778-hyundai-sonata-25-at-191-hp-other",
+        "observedAt": "2026-10-19T20:00:15.205960Z",
+        "sha256": "ab39bb2c4410a179dd42687805cb53b0bb9eeb6db2946615bc617363c80b9b50",
+        "sellerName": "ALI GAD ALI Used Cars",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/ali-gad-ali-used-cars"
+      },
+      {
+        "id": "licenseplate-6819",
+        "url": "https://licenseplate.ae/cars/listing/6819-mitsubishi-pajero-38-at-243-hp-gls",
+        "observedAt": "2026-10-19T20:00:15.205960Z",
+        "sha256": "4a6f4b7f3895bb77549f71931937e828e209c9b210321166aba9a5c47ed8c157",
+        "sellerName": "ALI GAD ALI Used Cars",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/ali-gad-ali-used-cars"
+      },
+      {
+        "id": "licenseplate-6893",
+        "url": "https://licenseplate.ae/cars/listing/6893-mitsubishi-asx-20-cvt-166-hp-other",
+        "observedAt": "2026-10-19T20:00:15.205960Z",
+        "sha256": "78a9e43a7ea25be82d9717b8a8f54238c0d7cd4760ce319da52c79525f0f17d9",
+        "sellerName": "ALI GAD ALI Used Cars",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/ali-gad-ali-used-cars"
+      }
+    ],
+    "photoSources": [
+      {
+        "listingId": "licenseplate-6778",
+        "listingUrl": "https://licenseplate.ae/cars/listing/6778-hyundai-sonata-25-at-191-hp-other",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/hyundai-sonata-25-at-191-hp-0-1789524767.webp",
+        "observedAt": "2026-10-19T20:00:15.205960Z",
+        "retainedPath": "dealer-stock/licenseplate-6778.webp",
+        "sha256": "8408591916dae568d2d2e52701c6bbc60231fc55012db207a0cbf5d0c173ca26",
+        "originalSha256": "d8ba44c49d1f9837e45b581d4b4d2bdca536ebad9d617b67c85676e45fec0f41",
+        "bytes": 66440,
+        "width": 768,
+        "height": 1024,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      },
+      {
+        "listingId": "licenseplate-6819",
+        "listingUrl": "https://licenseplate.ae/cars/listing/6819-mitsubishi-pajero-38-at-243-hp-gls",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/mitsubishi-pajero-38-at-243-hp-0-1789525029.webp",
+        "observedAt": "2026-10-19T20:00:15.205960Z",
+        "retainedPath": "dealer-stock/licenseplate-6819.webp",
+        "sha256": "57378917761a8f493024d5f00a3aa2bb6c936c40a65f637e82710e50851c04b0",
+        "originalSha256": "1a813db6a86156d2f46e80ac820cd2a7f5d98dd663392789a0749368a5d1258b",
+        "bytes": 70604,
+        "width": 768,
+        "height": 1024,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      },
+      {
+        "listingId": "licenseplate-6893",
+        "listingUrl": "https://licenseplate.ae/cars/listing/6893-mitsubishi-asx-20-cvt-166-hp-other",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/mitsubishi-asx-20-cvt-166-hp-0-1789525466.webp",
+        "observedAt": "2026-10-19T20:00:15.205960Z",
+        "retainedPath": "dealer-stock/licenseplate-6893.webp",
+        "sha256": "6ae21cbd29e55cd6c0ccec5f04d914ca40d62157f3fabc4bce6f3fdc3e0490a0",
+        "originalSha256": "e2494be42dea45ececfc0640fafcaf35e52efc2c9acd4b6ea004b3e223b1a5a0",
+        "bytes": 72708,
+        "width": 768,
+        "height": 1024,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      }
+    ]
+  }
+}

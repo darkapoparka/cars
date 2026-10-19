@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T20:12:57.174Z",
+  "dealer": "armani-naixa-global",
+  "dealerId": "ae-sharjah-armani-naixa-global",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "method": "Exact retained registry, clients index and compact-pack identity comparison, followed by current public named dealer catalogue and seller-bound listings. Marketplace profile name variants are not separate identities. No dealer approval is implied.",
+  "sources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/armani-naixa-global",
+      "observedAt": "2026-10-19T20:00:15.975467Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/13088-nissan-tiida-16-at-110-hp-sv",
+      "observedAt": "2026-10-19T20:00:15.975467Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/13104-honda-accord-24-at-201-hp-ex-l",
+      "observedAt": "2026-10-19T20:00:15.975467Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/13089-suzuki-ertiga-15-at-101-hp-gl",
+      "observedAt": "2026-10-19T20:00:15.975467Z"
+    }
+  ]
+}

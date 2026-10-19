@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T20:12:50.123Z",
+  "dealer": "al-saah-used-cars",
+  "dealerId": "ae-sharjah-al-saah-used-cars",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "method": "Exact retained registry, clients index and compact-pack identity comparison, followed by current public named dealer catalogue and seller-bound listings. Marketplace profile name variants are not separate identities. No dealer approval is implied.",
+  "sources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/al-saah-used-cars",
+      "observedAt": "2026-10-19T20:00:12.310597Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/1291-mitsubishi-pajero-38-at-243-hp-gls-top-line",
+      "observedAt": "2026-10-19T20:00:12.310597Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7211-mitsubishi-pajero-38-at-243-hp-gls-top-line",
+      "observedAt": "2026-10-19T20:00:12.310597Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7208-lexus-es-350-at-249-hp-es-350",
+      "observedAt": "2026-10-19T20:00:12.310597Z"
+    }
+  ]
+}

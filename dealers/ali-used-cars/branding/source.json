@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "dealer": "ali-used-cars",
+  "status": "research-required",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/ali-used-cars-llc-sp",
+      "observedAt": "2026-10-19T20:00:15.741195Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/3942-mercedes-benz-glc-20-at-4wd-258-hp-glc-300",
+      "observedAt": "2026-10-19T20:00:15.741195Z"
+    },
+    {
+      "url": "https://auto.ae/ar/alicars/",
+      "observedAt": "2026-10-19T20:00:15.741195Z"
+    }
+  ],
+  "originals": [],
+  "creationMethod": null,
+  "dealerApproved": false,
+  "generatedInputs": null
+}

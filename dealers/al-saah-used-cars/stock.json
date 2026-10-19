@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-saah-used-cars",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:00:12.310597Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "licenseplate-1291",
+      "title": "2019 Mitsubishi Pajero",
+      "make": "Mitsubishi",
+      "model": "Pajero",
+      "year": 2019,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-1291.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/1291-mitsubishi-pajero-38-at-243-hp-gls-top-line",
+      "observedAt": "2026-10-19T20:00:12.310597Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Crossover",
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "color": "Grey",
+      "mileageValue": 90000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "licenseplate-7211",
+      "title": "2015 Mitsubishi Pajero",
+      "make": "Mitsubishi",
+      "model": "Pajero",
+      "year": 2015,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-7211.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/7211-mitsubishi-pajero-38-at-243-hp-gls-top-line",
+      "observedAt": "2026-10-19T20:00:12.310597Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Crossover",
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "color": "Brown",
+      "mileageValue": 127000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "licenseplate-7208",
+      "title": "2013 Lexus ES",
+      "make": "Lexus",
+      "model": "ES",
+      "year": 2013,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-7208.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/7208-lexus-es-350-at-249-hp-es-350",
+      "observedAt": "2026-10-19T20:00:12.310597Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Sedan",
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "color": "White",
+      "mileageValue": 81000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

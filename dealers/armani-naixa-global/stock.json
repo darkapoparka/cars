@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "dealer": "armani-naixa-global",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:00:15.975467Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "licenseplate-13088",
+      "title": "2012 Nissan Tiida",
+      "make": "Nissan",
+      "model": "Tiida",
+      "year": 2012,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-13088.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/13088-nissan-tiida-16-at-110-hp-sv",
+      "observedAt": "2026-10-19T20:00:15.975467Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Hatchback",
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "color": "Silver",
+      "mileageValue": 173248,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "licenseplate-13104",
+      "title": "2014 Honda Accord",
+      "make": "Honda",
+      "model": "Accord",
+      "year": 2014,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-13104.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/13104-honda-accord-24-at-201-hp-ex-l",
+      "observedAt": "2026-10-19T20:00:15.975467Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Sedan",
+      "transmission": "Automatic",
+      "color": "Black",
+      "mileageValue": 145857,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "licenseplate-13089",
+      "title": "2023 Suzuki Ertiga",
+      "make": "Suzuki",
+      "model": "Ertiga",
+      "year": 2023,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-13089.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/13089-suzuki-ertiga-15-at-101-hp-gl",
+      "observedAt": "2026-10-19T20:00:15.975467Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Minivan",
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "color": "Brown",
+      "mileageValue": 48303,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

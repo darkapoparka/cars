@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-saah-used-cars",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/al-saah-used-cars",
+      "observedAt": "2026-10-19T20:00:12.310597Z",
+      "supports": [
+        "business-trading-name",
+        "public-business-phone",
+        "marketplace-location",
+        "dealer-catalogue"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/1291-mitsubishi-pajero-38-at-243-hp-gls-top-line",
+      "observedAt": "2026-10-19T20:00:12.310597Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7211-mitsubishi-pajero-38-at-243-hp-gls-top-line",
+      "observedAt": "2026-10-19T20:00:12.310597Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7208-lexus-es-350-at-249-hp-es-350",
+      "observedAt": "2026-10-19T20:00:12.310597Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "research": {
+    "observedAt": "2026-10-19T20:00:12.310597Z",
+    "profileUrl": "https://licenseplate.ae/cars/dealer/al-saah-used-cars",
+    "profileSha256": "d46f7272acdec2ea221400185bc19f79adff2e3e241e93c3ecbec6ef2c1f32d6",
+    "marketplaceTradingName": "Al Saah Used Cars",
+    "classification": "public-marketplace-dealer-profile-and-listing-snapshot",
+    "directDealerPostingVerified": false,
+    "profileClaimed": false,
+    "limitation": "The named marketplace profile may be syndicated or automatically assembled. Seller-attributed listings are dated observations; current physical stock and direct dealer posting are not confirmed.",
+    "unknownFields": [
+      "public-business-email",
+      "owned-website",
+      "opening-hours"
+    ],
+    "stockSources": [
+      {
+        "id": "licenseplate-1291",
+        "url": "https://licenseplate.ae/cars/listing/1291-mitsubishi-pajero-38-at-243-hp-gls-top-line",
+        "observedAt": "2026-10-19T20:00:12.310597Z",
+        "sha256": "ef0d20ac1128e9741dcff8c2df62f90f865c348921394cf7c596d0790d5d5aba",
+        "sellerName": "Al Saah Used Cars",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/al-saah-used-cars"
+      },
+      {
+        "id": "licenseplate-7211",
+        "url": "https://licenseplate.ae/cars/listing/7211-mitsubishi-pajero-38-at-243-hp-gls-top-line",
+        "observedAt": "2026-10-19T20:00:12.310597Z",
+        "sha256": "f809087199f4b6e6841a22affda9847d1b9bd256c8b05cfd819e7d3971b8526d",
+        "sellerName": "Al Saah Used Cars",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/al-saah-used-cars"
+      },
+      {
+        "id": "licenseplate-7208",
+        "url": "https://licenseplate.ae/cars/listing/7208-lexus-es-350-at-249-hp-es-350",
+        "observedAt": "2026-10-19T20:00:12.310597Z",
+        "sha256": "f8898feb48fb5f81d01c9c9f3e914fc593560543cc00d032407856ca22c7ea0c",
+        "sellerName": "Al Saah Used Cars",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/al-saah-used-cars"
+      }
+    ],
+    "photoSources": [
+      {
+        "listingId": "licenseplate-1291",
+        "listingUrl": "https://licenseplate.ae/cars/listing/1291-mitsubishi-pajero-38-at-243-hp-gls-top-line",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/mitsubishi-pajero-38-at-243-hp-0-1789491638.webp",
+        "observedAt": "2026-10-19T20:00:12.310597Z",
+        "retainedPath": "dealer-stock/licenseplate-1291.webp",
+        "sha256": "ea5c624b0693bd4b4d3350886de8fd6f3464fe52ad216f326f5337f3c0ebdc2c",
+        "originalSha256": "4d7c6055ecca0a2b493d80909de3473b63122d296fdf8a3b2b650414ef1d73b3",
+        "bytes": 157112,
+        "width": 842,
+        "height": 800,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      },
+      {
+        "listingId": "licenseplate-7211",
+        "listingUrl": "https://licenseplate.ae/cars/listing/7211-mitsubishi-pajero-38-at-243-hp-gls-top-line",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/mitsubishi-pajero-38-at-243-hp-0-1789527330.webp",
+        "observedAt": "2026-10-19T20:00:12.310597Z",
+        "retainedPath": "dealer-stock/licenseplate-7211.webp",
+        "sha256": "edc5dd9c979ee44d6a7e2e2e4bd43c3ba508eadea472c09379d027bad5c45a84",
+        "originalSha256": "e5971dac0da860dceaadf78232f83a99773df006f358909fcfebe6ce206ed93c",
+        "bytes": 176982,
+        "width": 1145,
+        "height": 800,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      },
+      {
+        "listingId": "licenseplate-7208",
+        "listingUrl": "https://licenseplate.ae/cars/listing/7208-lexus-es-350-at-249-hp-es-350",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/lexus-es-350-at-249-hp-0-1789527317.webp",
+        "observedAt": "2026-10-19T20:00:12.310597Z",
+        "retainedPath": "dealer-stock/licenseplate-7208.webp",
+        "sha256": "60a61756348a617e71533b22084ca8c85a31580305319cb185da26d9ce27b2fc",
+        "originalSha256": "d9e97132b3f07e9a53211ae55a823718df9e3ea85a49db2627a4db8246dc7bf4",
+        "bytes": 188022,
+        "width": 944,
+        "height": 800,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-70"
+      }
+    ]
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "dealer": "ali-used-cars",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/ali-used-cars-llc-sp",
+      "observedAt": "2026-10-19T20:00:15.741195Z",
+      "supports": [
+        "business-trading-name",
+        "public-business-phone",
+        "marketplace-location",
+        "dealer-catalogue"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/3942-mercedes-benz-glc-20-at-4wd-258-hp-glc-300",
+      "observedAt": "2026-10-19T20:00:15.741195Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/3944-land-rover-range-rover-sport-50-v8-supercharged-at-awd-525-hp-hse-dynamic",
+      "observedAt": "2026-10-19T20:00:15.741195Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/3943-mercedes-benz-gle-29-at-awd-330-hp-gle-450-4matic",
+      "observedAt": "2026-10-19T20:00:15.741195Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "research": {
+    "observedAt": "2026-10-19T20:00:15.741195Z",
+    "profileUrl": "https://licenseplate.ae/cars/dealer/ali-used-cars-llc-sp",
+    "profileSha256": "a311f23ae87208e963d5324b4de01f731aacd6015d0d46c11ec0b2fc6ef0e101",
+    "marketplaceTradingName": "Ali Used Cars L.L.C SP",
+    "classification": "public-marketplace-dealer-profile-and-listing-snapshot",
+    "directDealerPostingVerified": false,
+    "profileClaimed": false,
+    "limitation": "The named marketplace profile may be syndicated or automatically assembled. Seller-attributed listings are dated observations; current physical stock and direct dealer posting are not confirmed.",
+    "unknownFields": [
+      "public-business-email",
+      "owned-website",
+      "opening-hours"
+    ],
+    "stockSources": [
+      {
+        "id": "licenseplate-3942",
+        "url": "https://licenseplate.ae/cars/listing/3942-mercedes-benz-glc-20-at-4wd-258-hp-glc-300",
+        "observedAt": "2026-10-19T20:00:15.741195Z",
+        "sha256": "978ff589d86f85871a5eafa0ab0c595a60f8339c9c05af972824d067381343ed",
+        "sellerName": "Ali Used Cars L.L.C SP",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/ali-used-cars-llc-sp"
+      },
+      {
+        "id": "licenseplate-3944",
+        "url": "https://licenseplate.ae/cars/listing/3944-land-rover-range-rover-sport-50-v8-supercharged-at-awd-525-hp-hse-dynamic",
+        "observedAt": "2026-10-19T20:00:15.741195Z",
+        "sha256": "63b973c463a20e963067f008fb94a342dddc876b8a10917da971da78ae40f343",
+        "sellerName": "Ali Used Cars L.L.C SP",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/ali-used-cars-llc-sp"
+      },
+      {
+        "id": "licenseplate-3943",
+        "url": "https://licenseplate.ae/cars/listing/3943-mercedes-benz-gle-29-at-awd-330-hp-gle-450-4matic",
+        "observedAt": "2026-10-19T20:00:15.741195Z",
+        "sha256": "4e32707ab9b3367c38ae38f5f64c6b7a3a855c2e45c2ace1b83de1144352a217",
+        "sellerName": "Ali Used Cars L.L.C SP",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/ali-used-cars-llc-sp"
+      }
+    ],
+    "photoSources": [
+      {
+        "listingId": "licenseplate-3942",
+        "listingUrl": "https://licenseplate.ae/cars/listing/3942-mercedes-benz-glc-20-at-4wd-258-hp-glc-300",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/mercedes-benz-glc-20-at-4wd-258-hp-0-1789508550.webp",
+        "observedAt": "2026-10-19T20:00:15.741195Z",
+        "retainedPath": "dealer-stock/licenseplate-3942.webp",
+        "sha256": "c91dc64bf46ebf6e5a5e6937ca8ead1be4ae89b1a5a3bce9be5cad005be03d66",
+        "originalSha256": "9af6445c70d445df3f63050fcdc446e5002c101959f28e3b21c2da3cd5837d2a",
+        "bytes": 134246,
+        "width": 1066,
+        "height": 800,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      },
+      {
+        "listingId": "licenseplate-3944",
+        "listingUrl": "https://licenseplate.ae/cars/listing/3944-land-rover-range-rover-sport-50-v8-supercharged-at-awd-525-hp-hse-dynamic",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/land-rover-range-rover-sport-50-v8-supercharged-at-awd-525-hp-0-1789508561.webp",
+        "observedAt": "2026-10-19T20:00:15.741195Z",
+        "retainedPath": "dealer-stock/licenseplate-3944.webp",
+        "sha256": "ca3ab395cfddbe6950a9c3998c164ea154a086ba242cc99aab6c39efc2aeaeb1",
+        "originalSha256": "6ea71e820063ec916b0bb8d4e01fa8cb42caff34f877535ce9bbf98f54a9a58c",
+        "bytes": 82670,
+        "width": 1066,
+        "height": 800,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      },
+      {
+        "listingId": "licenseplate-3943",
+        "listingUrl": "https://licenseplate.ae/cars/listing/3943-mercedes-benz-gle-29-at-awd-330-hp-gle-450-4matic",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/mercedes-benz-gle-29-at-awd-330-hp-0-1789508555.webp",
+        "observedAt": "2026-10-19T20:00:15.741195Z",
+        "retainedPath": "dealer-stock/licenseplate-3943.webp",
+        "sha256": "2e6f119e21fe19697f17a4cbe26144e1f99cae9e6c6d230cf1fd36a13f1656a5",
+        "originalSha256": "ffee73924b1cabfdf15e269dae3037977279d1962dc21466f8d89812c811caf7",
+        "bytes": 96234,
+        "width": 1066,
+        "height": 800,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      }
+    ]
+  }
+}

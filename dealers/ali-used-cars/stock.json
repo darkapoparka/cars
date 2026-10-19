@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "dealer": "ali-used-cars",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:00:15.741195Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "licenseplate-3942",
+      "title": "2023 Mercedes-Benz GLC",
+      "make": "Mercedes-Benz",
+      "model": "GLC",
+      "year": 2023,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-3942.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/3942-mercedes-benz-glc-20-at-4wd-258-hp-glc-300",
+      "observedAt": "2026-10-19T20:00:15.741195Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Crossover",
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "color": "Blue",
+      "mileageValue": 32000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "licenseplate-3944",
+      "title": "2021 Land Rover Range Rover Sport",
+      "make": "Land Rover",
+      "model": "Range Rover Sport",
+      "year": 2021,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-3944.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/3944-land-rover-range-rover-sport-50-v8-supercharged-at-awd-525-hp-hse-dynamic",
+      "observedAt": "2026-10-19T20:00:15.741195Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Crossover",
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "color": "White",
+      "mileageValue": 77000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "licenseplate-3943",
+      "title": "2024 Mercedes-Benz GLE",
+      "make": "Mercedes-Benz",
+      "model": "GLE",
+      "year": 2024,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-3943.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/3943-mercedes-benz-gle-29-at-awd-330-hp-gle-450-4matic",
+      "observedAt": "2026-10-19T20:00:15.741195Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "SUV",
+      "transmission": "Automatic",
+      "color": "Silver",
+      "mileageValue": 47000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

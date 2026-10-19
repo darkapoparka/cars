@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "dealer": "ali-gad-ali-used-cars",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:00:15.205960Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "licenseplate-6778",
+      "title": "2023 Hyundai Sonata",
+      "make": "Hyundai",
+      "model": "Sonata",
+      "year": 2023,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-6778.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/6778-hyundai-sonata-25-at-191-hp-other",
+      "observedAt": "2026-10-19T20:00:15.205960Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Sedan",
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "color": "White",
+      "mileageValue": 109000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "licenseplate-6819",
+      "title": "2017 Mitsubishi Pajero",
+      "make": "Mitsubishi",
+      "model": "Pajero",
+      "year": 2017,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-6819.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/6819-mitsubishi-pajero-38-at-243-hp-gls",
+      "observedAt": "2026-10-19T20:00:15.205960Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Crossover",
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "color": "White",
+      "mileageValue": 143000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "licenseplate-6893",
+      "title": "2021 Mitsubishi ASX",
+      "make": "Mitsubishi",
+      "model": "ASX",
+      "year": 2021,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-6893.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/6893-mitsubishi-asx-20-cvt-166-hp-other",
+      "observedAt": "2026-10-19T20:00:15.205960Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Crossover",
+      "transmission": "CVT",
+      "fuel": "Petrol",
+      "color": "Silver",
+      "mileageValue": 82000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

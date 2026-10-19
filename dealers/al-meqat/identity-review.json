@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T20:08:19.619Z",
+  "dealer": "al-meqat",
+  "dealerId": "ae-sharjah-al-meqat",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "method": "Exact retained registry, clients index and compact-pack identity comparison, followed by current public named dealer catalogue and seller-bound listings. Marketplace profile name variants are not separate identities. No dealer approval is implied.",
+  "sources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/al-meqat-cars",
+      "observedAt": "2026-10-19T20:00:04.403200Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7097-lexus-lx-570-at-367-hp-lx-570-platinum",
+      "observedAt": "2026-10-19T20:00:04.403200Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7368-toyota-fortuner-40-at-4wd-238-hp-vxr",
+      "observedAt": "2026-10-19T20:00:04.403200Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/3340-toyota-c-hr-18-cvt-hybrid-98-hp-g",
+      "observedAt": "2026-10-19T20:00:04.403200Z"
+    }
+  ]
+}

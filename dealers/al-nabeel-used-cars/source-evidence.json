@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-nabeel-used-cars",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/al-nabeel-used-cars-exhb",
+      "observedAt": "2026-10-19T20:00:04.404458Z",
+      "supports": [
+        "business-trading-name",
+        "public-business-phone",
+        "marketplace-location",
+        "dealer-catalogue"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/6788-toyota-hiace-27-mt-151-hp-gls",
+      "observedAt": "2026-10-19T20:00:04.404458Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/6799-toyota-hilux-27-mt-164-hp-double-cab-gl",
+      "observedAt": "2026-10-19T20:00:04.404458Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/6897-toyota-hilux-28-at-awd-177-hp-single-cab-gl",
+      "observedAt": "2026-10-19T20:00:04.404458Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "research": {
+    "observedAt": "2026-10-19T20:00:04.404458Z",
+    "profileUrl": "https://licenseplate.ae/cars/dealer/al-nabeel-used-cars-exhb",
+    "profileSha256": "19131d9bc3b5f7d4cc91a04dc498c2373f02ef9c49d74c0407d7a84c340530e3",
+    "marketplaceTradingName": "Al Nabeel Used Cars EXHB",
+    "classification": "public-marketplace-dealer-profile-and-listing-snapshot",
+    "directDealerPostingVerified": false,
+    "profileClaimed": false,
+    "limitation": "The named marketplace profile may be syndicated or automatically assembled. Seller-attributed listings are dated observations; current physical stock and direct dealer posting are not confirmed.",
+    "unknownFields": [
+      "public-business-email",
+      "owned-website",
+      "opening-hours"
+    ],
+    "stockSources": [
+      {
+        "id": "licenseplate-6788",
+        "url": "https://licenseplate.ae/cars/listing/6788-toyota-hiace-27-mt-151-hp-gls",
+        "observedAt": "2026-10-19T20:00:04.404458Z",
+        "sha256": "c9228cd2a25d6c2793f64d9fa6f93af8a7f56f260683bce5e9461a40b2a64cc3",
+        "sellerName": "Al Nabeel Used Cars EXHB",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/al-nabeel-used-cars-exhb"
+      },
+      {
+        "id": "licenseplate-6799",
+        "url": "https://licenseplate.ae/cars/listing/6799-toyota-hilux-27-mt-164-hp-double-cab-gl",
+        "observedAt": "2026-10-19T20:00:04.404458Z",
+        "sha256": "44e3a05e168656292108de537c4de5e62f7c16f343e014aa9205a69442ccec68",
+        "sellerName": "Al Nabeel Used Cars EXHB",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/al-nabeel-used-cars-exhb"
+      },
+      {
+        "id": "licenseplate-6897",
+        "url": "https://licenseplate.ae/cars/listing/6897-toyota-hilux-28-at-awd-177-hp-single-cab-gl",
+        "observedAt": "2026-10-19T20:00:04.404458Z",
+        "sha256": "1268c3113f77edc20e06bec407264e08e3ffa3d857ee77377e3f25ce16e123b6",
+        "sellerName": "Al Nabeel Used Cars EXHB",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/al-nabeel-used-cars-exhb"
+      }
+    ],
+    "photoSources": [
+      {
+        "listingId": "licenseplate-6788",
+        "listingUrl": "https://licenseplate.ae/cars/listing/6788-toyota-hiace-27-mt-151-hp-gls",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/toyota-hiace-27-mt-151-hp-0-1789524843.webp",
+        "observedAt": "2026-10-19T20:00:04.404458Z",
+        "retainedPath": "dealer-stock/licenseplate-6788.webp",
+        "sha256": "4d0868046b65c09e27053d3d50c10e830c2a59e360517836e9d5e839fc44cb2e",
+        "originalSha256": "004dca1c48ae7e6158a8b719a46c899ed4588f39fc057c4ae6f9ec68b8ea353d",
+        "bytes": 59550,
+        "width": 1066,
+        "height": 800,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      },
+      {
+        "listingId": "licenseplate-6799",
+        "listingUrl": "https://licenseplate.ae/cars/listing/6799-toyota-hilux-27-mt-164-hp-double-cab-gl",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/toyota-hilux-27-mt-164-hp-0-1789524908.webp",
+        "observedAt": "2026-10-19T20:00:04.404458Z",
+        "retainedPath": "dealer-stock/licenseplate-6799.webp",
+        "sha256": "9cd68ea0cdf5bfaeb67d43e788d531ede08fabd668dfd0ac1d1162693e69e16e",
+        "originalSha256": "838d540b1a6f09e9b753513d03642806c2293a0f907a27b23ed3cda6a8cee84d",
+        "bytes": 82086,
+        "width": 1066,
+        "height": 800,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      },
+      {
+        "listingId": "licenseplate-6897",
+        "listingUrl": "https://licenseplate.ae/cars/listing/6897-toyota-hilux-28-at-awd-177-hp-single-cab-gl",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/toyota-hilux-28-at-awd-177-hp-0-1789525504.webp",
+        "observedAt": "2026-10-19T20:00:04.404458Z",
+        "retainedPath": "dealer-stock/licenseplate-6897.webp",
+        "sha256": "57d4a8f03e3dd2ca6d8410e0d77bb0104e351b8860b9740b1e46d1aae1889e9d",
+        "originalSha256": "86d2bd9c14528a4bd95c0a07643196b3ffb6e581a71f9dc80dff0406f6e03fa4",
+        "bytes": 68300,
+        "width": 1066,
+        "height": 800,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      }
+    ]
+  }
+}

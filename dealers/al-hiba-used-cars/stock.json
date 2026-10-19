@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-hiba-used-cars",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:00:04.402735Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "licenseplate-7754",
+      "title": "2016 Mitsubishi L200",
+      "make": "Mitsubishi",
+      "model": "L200",
+      "year": 2016,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-7754.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/7754-mitsubishi-l200-24-d-mt-154-hp-other",
+      "observedAt": "2026-10-19T20:00:04.402735Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Pickup",
+      "transmission": "Manual",
+      "fuel": "Diesel",
+      "color": "White",
+      "mileageValue": 167000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "licenseplate-7771",
+      "title": "2012 Toyota Hiace",
+      "make": "Toyota",
+      "model": "Hiace",
+      "year": 2012,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-7771.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/7771-toyota-hiace-27-mt-151-hp-standard",
+      "observedAt": "2026-10-19T20:00:04.402735Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Minivan",
+      "transmission": "Manual",
+      "fuel": "Petrol",
+      "color": "White",
+      "mileageValue": 230000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "licenseplate-7938",
+      "title": "2015 Toyota Hiace",
+      "make": "Toyota",
+      "model": "Hiace",
+      "year": 2015,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-7938.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/7938-toyota-hiace-27-mt-151-hp-other",
+      "observedAt": "2026-10-19T20:00:04.402735Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Minivan",
+      "transmission": "Manual",
+      "fuel": "Petrol",
+      "color": "White",
+      "mileageValue": 147000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

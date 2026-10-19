@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-hiba-used-cars",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/al-hiba-used-cars",
+      "observedAt": "2026-10-19T20:00:04.402735Z",
+      "supports": [
+        "business-trading-name",
+        "public-business-phone",
+        "marketplace-location",
+        "dealer-catalogue"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7754-mitsubishi-l200-24-d-mt-154-hp-other",
+      "observedAt": "2026-10-19T20:00:04.402735Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7771-toyota-hiace-27-mt-151-hp-standard",
+      "observedAt": "2026-10-19T20:00:04.402735Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7938-toyota-hiace-27-mt-151-hp-other",
+      "observedAt": "2026-10-19T20:00:04.402735Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "research": {
+    "observedAt": "2026-10-19T20:00:04.402735Z",
+    "profileUrl": "https://licenseplate.ae/cars/dealer/al-hiba-used-cars",
+    "profileSha256": "d393c01bb267b0dc373da3058601beb74222e6d6a39d4443c20d5fdfdd2d66b3",
+    "marketplaceTradingName": "Al Hiba Used Cars",
+    "classification": "public-marketplace-dealer-profile-and-listing-snapshot",
+    "directDealerPostingVerified": false,
+    "profileClaimed": false,
+    "limitation": "The named marketplace profile may be syndicated or automatically assembled. Seller-attributed listings are dated observations; current physical stock and direct dealer posting are not confirmed.",
+    "unknownFields": [
+      "public-business-email",
+      "owned-website",
+      "opening-hours"
+    ],
+    "stockSources": [
+      {
+        "id": "licenseplate-7754",
+        "url": "https://licenseplate.ae/cars/listing/7754-mitsubishi-l200-24-d-mt-154-hp-other",
+        "observedAt": "2026-10-19T20:00:04.402735Z",
+        "sha256": "a6f374ad35c5960bd57c41e043d0b0fa055621467e407482969da1dcd1eec580",
+        "sellerName": "Al Hiba Used Cars",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/al-hiba-used-cars"
+      },
+      {
+        "id": "licenseplate-7771",
+        "url": "https://licenseplate.ae/cars/listing/7771-toyota-hiace-27-mt-151-hp-standard",
+        "observedAt": "2026-10-19T20:00:04.402735Z",
+        "sha256": "528abb7562a33776bcb68e09f3e5e8ddce5064d772f52f96a668bdd7a01714de",
+        "sellerName": "Al Hiba Used Cars",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/al-hiba-used-cars"
+      },
+      {
+        "id": "licenseplate-7938",
+        "url": "https://licenseplate.ae/cars/listing/7938-toyota-hiace-27-mt-151-hp-other",
+        "observedAt": "2026-10-19T20:00:04.402735Z",
+        "sha256": "0e8f9a13ea2df40893a5a5f22b5f163e752cc01650a71df453336fb9b0697452",
+        "sellerName": "Al Hiba Used Cars",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/al-hiba-used-cars"
+      }
+    ],
+    "photoSources": [
+      {
+        "listingId": "licenseplate-7754",
+        "listingUrl": "https://licenseplate.ae/cars/listing/7754-mitsubishi-l200-24-d-mt-154-hp-other",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/mitsubishi-l200-24-d-mt-154-hp-0-1789530806.webp",
+        "observedAt": "2026-10-19T20:00:04.402735Z",
+        "retainedPath": "dealer-stock/licenseplate-7754.webp",
+        "sha256": "c85b609baa03d40eb377eb0619ba60d2c7d7dd9668a4e67b569d1b66503db461",
+        "originalSha256": "09d0614402a7144858dfaf1ad1f8581cb2d1c33ac71cfa2eb079b5d42470541e",
+        "bytes": 48754,
+        "width": 768,
+        "height": 1024,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      },
+      {
+        "listingId": "licenseplate-7771",
+        "listingUrl": "https://licenseplate.ae/cars/listing/7771-toyota-hiace-27-mt-151-hp-standard",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/toyota-hiace-27-mt-151-hp-0-1789530885.webp",
+        "observedAt": "2026-10-19T20:00:04.402735Z",
+        "retainedPath": "dealer-stock/licenseplate-7771.webp",
+        "sha256": "5017bb27e29ffe58112f6f14affe0db6e69fe9aac910c36530fb4a04ac0206a8",
+        "originalSha256": "57c59a2b613dd939d3230f0dd90ec24ca30b40c0e73fe1fe9195287576d6d49d",
+        "bytes": 37866,
+        "width": 768,
+        "height": 1024,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      },
+      {
+        "listingId": "licenseplate-7938",
+        "listingUrl": "https://licenseplate.ae/cars/listing/7938-toyota-hiace-27-mt-151-hp-other",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/toyota-hiace-27-mt-151-hp-0-1789531949.webp",
+        "observedAt": "2026-10-19T20:00:04.402735Z",
+        "retainedPath": "dealer-stock/licenseplate-7938.webp",
+        "sha256": "b5340ebe9490e1c6767b961c4694da5d6b4f574d53150db06418744e654a8848",
+        "originalSha256": "41796958cc66b9df991fa61d49986a3157bee90423aed1dd758e411119b60e48",
+        "bytes": 34410,
+        "width": 768,
+        "height": 1024,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      }
+    ]
+  }
+}

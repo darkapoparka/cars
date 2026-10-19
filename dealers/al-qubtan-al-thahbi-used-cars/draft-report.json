@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "type": "cars-dealer-pack-draft",
+  "slug": "al-qubtan-al-thahbi-used-cars",
+  "dealerId": "ae-sharjah-al-qubtan-al-thahbi-used-cars",
+  "status": "draft",
+  "buildReady": false,
+  "providerWrites": 0,
+  "createdAt": "2026-10-19T20:12:46.487Z",
+  "inventoryKind": "dated-listing-snapshot",
+  "inventoryRecords": 3,
+  "logoReady": false,
+  "missingFacts": [
+    {
+      "field": "business.email",
+      "required": false,
+      "reason": "No unambiguous current public business value established."
+    },
+    {
+      "field": "business.website",
+      "required": false,
+      "reason": "No unambiguous current public business value established."
+    },
+    {
+      "field": "business.hours",
+      "required": false,
+      "reason": "No unambiguous current public business value established."
+    },
+    {
+      "field": "prices",
+      "required": false,
+      "reason": "All listing prices are omitted under the public-repository scope."
+    }
+  ],
+  "blocking": [
+    "branding.reviewed-assets"
+  ],
+  "stockAcquisition": "explicit-retained-public-snapshot",
+  "liveListingFetchPerformed": true,
+  "next": "Retain public listing snapshots with --stock/--media-root when available; review the real logo first, generate a proposal only when needed, and run logo preparation before building."
+}

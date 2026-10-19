@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T20:12:47.495Z",
+  "dealer": "al-rand-used-cars",
+  "dealerId": "ae-sharjah-al-rand-used-cars",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "method": "Exact retained registry, clients index and compact-pack identity comparison, followed by current public named dealer catalogue and seller-bound listings. Marketplace profile name variants are not separate identities. No dealer approval is implied.",
+  "sources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/al-rand-used-cars",
+      "observedAt": "2026-10-19T20:00:12.300806Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/3929-toyota-fortuner-27-at-rwd-160-hp-other",
+      "observedAt": "2026-10-19T20:00:12.300806Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/3969-mitsubishi-pajero-30-at-220-hp-gls",
+      "observedAt": "2026-10-19T20:00:12.300806Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/4015-toyota-land-cruiser-prado-40-at-awd-282-hp-vxr",
+      "observedAt": "2026-10-19T20:00:12.300806Z"
+    }
+  ]
+}
