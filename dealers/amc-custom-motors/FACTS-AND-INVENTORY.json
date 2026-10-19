@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "dealer": "amc-custom-motors",
+  "businessFacts": "business-facts.json",
+  "stock": "stock.json",
+  "inventoryKind": "dated-listing-snapshot",
+  "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+  "sources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Acmmotors",
+      "observedAt": "2026-10-19T20:00:31.409300Z",
+      "supports": [
+        "current-public-business-name",
+        "public-business-contact",
+        "public-premises-or-appointment-information",
+        "current-public-stock-catalogue"
+      ]
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/407286856541",
+      "observedAt": "2026-10-19T20:02:59.971144Z",
+      "supports": [
+        "selected-current-public-stock",
+        "seller-description-and-vehicle-history-review",
+        "vehicle-photograph"
+      ]
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/407286847193",
+      "observedAt": "2026-10-19T20:03:00.048159Z",
+      "supports": [
+        "selected-current-public-stock",
+        "seller-description-and-vehicle-history-review",
+        "vehicle-photograph"
+      ]
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/407265143343",
+      "observedAt": "2026-10-19T20:03:00.090933Z",
+      "supports": [
+        "selected-current-public-stock",
+        "seller-description-and-vehicle-history-review",
+        "vehicle-photograph"
+      ]
+    },
+    {
+      "url": "https://www.cazoo.co.uk/dealers/amc-custom-motors-60811/",
+      "observedAt": "2026-10-19T20:03:53.983414Z",
+      "supports": [
+        "bounded-public-logo-research"
+      ]
+    }
+  ]
+}

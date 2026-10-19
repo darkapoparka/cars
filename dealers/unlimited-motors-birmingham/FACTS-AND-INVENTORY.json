@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "dealer": "unlimited-motors-birmingham",
+  "businessFacts": "business-facts.json",
+  "stock": "stock.json",
+  "inventoryKind": "dated-listing-snapshot",
+  "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+  "sources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Unlimited-Motors?menu=1",
+      "observedAt": "2026-10-19T20:00:31.563792Z",
+      "supports": [
+        "current-public-business-name",
+        "public-business-contact",
+        "public-premises-or-appointment-information",
+        "current-public-stock-catalogue"
+      ]
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/820256455597",
+      "observedAt": "2026-10-19T20:02:58.349190Z",
+      "supports": [
+        "selected-current-public-stock",
+        "seller-description-and-vehicle-history-review",
+        "vehicle-photograph"
+      ]
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/820249639027",
+      "observedAt": "2026-10-19T20:02:58.350908Z",
+      "supports": [
+        "selected-current-public-stock",
+        "seller-description-and-vehicle-history-review",
+        "vehicle-photograph"
+      ]
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/820248606730",
+      "observedAt": "2026-10-19T20:02:58.452025Z",
+      "supports": [
+        "selected-current-public-stock",
+        "seller-description-and-vehicle-history-review",
+        "vehicle-photograph"
+      ]
+    },
+    {
+      "url": "https://www.cazoo.co.uk/dealers/unlimited-motors-14199/",
+      "observedAt": "2026-10-19T20:03:54.161291Z",
+      "supports": [
+        "bounded-public-logo-research"
+      ]
+    }
+  ]
+}

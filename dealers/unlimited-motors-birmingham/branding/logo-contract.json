@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "dealer": "unlimited-motors-birmingham",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T20:42:24.216931Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-redraw",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "78f970bfd8e4a8c25db81345ac1974f3bb6b88721733ce069ab04d61949b42f1",
+      "sourceSha256": "f22b669883e3957eaef48dda5b894ba39b761f963f52fd9264e9530d49916e90"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "304f274a83fcc6ff8150a6791fdbc61eaf972d7816340e09f9d5716cc23f48c9",
+      "sourceSha256": "72eff6583428e9a647dcb360e1cc7e5571765972111b15c6784b150ff6ae0ede"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "304f274a83fcc6ff8150a6791fdbc61eaf972d7816340e09f9d5716cc23f48c9",
+      "sourceSha256": "72eff6583428e9a647dcb360e1cc7e5571765972111b15c6784b150ff6ae0ede"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "f22b669883e3957eaef48dda5b894ba39b761f963f52fd9264e9530d49916e90",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-67fdfa69-cc86-40ee-9169-fa34b12e39ca",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "bb5147954427b33dd3e162210be0e7172aab50c87c8586c83f169cd2ddf7801d",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-722256a2-5292-4908-8d6b-7f24cd300c15",
+      "modelVersion": null
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "6d8bba62fb6c8496a11b26569b38876cfc83279e5c369a543980ac6cd810e207"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "f22b669883e3957eaef48dda5b894ba39b761f963f52fd9264e9530d49916e90",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-67fdfa69-cc86-40ee-9169-fa34b12e39ca",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/unlimited-motors-birmingham/branding/generated-master.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "72eff6583428e9a647dcb360e1cc7e5571765972111b15c6784b150ff6ae0ede",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1e9cc187-74dc-4380-9a25-e5c5c8fa1077",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/unlimited-motors-birmingham/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "72eff6583428e9a647dcb360e1cc7e5571765972111b15c6784b150ff6ae0ede",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1e9cc187-74dc-4380-9a25-e5c5c8fa1077",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/unlimited-motors-birmingham/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "4bae61cb4320b613965736d72364cd27b514f29edd63b4f289739d46f8f1f1a7",
+      "sha256": "f22b669883e3957eaef48dda5b894ba39b761f963f52fd9264e9530d49916e90",
+      "crop": {
+        "left": 43,
+        "top": 32,
+        "width": 1924,
+        "height": 357
+      },
+      "sourcePath": "branding/generated-master.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "ebcc032060af39290c61a1ca5ce05e3ae794a86e86d6ded44f0b87e4ae49ea94",
+      "sha256": "72eff6583428e9a647dcb360e1cc7e5571765972111b15c6784b150ff6ae0ede",
+      "crop": {
+        "left": 27,
+        "top": 159,
+        "width": 2145,
+        "height": 410
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "ebcc032060af39290c61a1ca5ce05e3ae794a86e86d6ded44f0b87e4ae49ea94",
+      "sha256": "72eff6583428e9a647dcb360e1cc7e5571765972111b15c6784b150ff6ae0ede",
+      "crop": {
+        "left": 27,
+        "top": 159,
+        "width": 2145,
+        "height": 410
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "fc214a6e4b4796b221a30a438778e06302a56dccb806e39cf33458ae576e35c4",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-722256a2-5292-4908-8d6b-7f24cd300c15",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/unlimited-motors-birmingham/branding/generated-mark.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "831c1dd118c3f1053a35f09180b282362e9141813a8e9078e0cc6eb4bf09b303",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7f100a53-4e17-402f-8a73-d30b75e0cab3",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/unlimited-motors-birmingham/branding/generated-mark-on-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "bb5147954427b33dd3e162210be0e7172aab50c87c8586c83f169cd2ddf7801d",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-722256a2-5292-4908-8d6b-7f24cd300c15",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/unlimited-motors-birmingham/branding/generated-mark.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "6d8bba62fb6c8496a11b26569b38876cfc83279e5c369a543980ac6cd810e207",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-722256a2-5292-4908-8d6b-7f24cd300c15",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/unlimited-motors-birmingham/branding/generated-mark.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T20:42:24.216931Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "bbfd6abc7601b1f933e5d0567e47d59e485321e326928d09697111465f6cfe31",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-7f100a53-4e17-402f-8a73-d30b75e0cab3",
+      "modelVersion": null
+    }
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 1,
+  "dealer": "tomlinson-car-sales",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uk.json",
+    "sha256": "6cd8d365586f9a5d5131fe4b1d50baede7de91ab384a135017c25367298b07c4"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/warwickshire/birmingham/tomlinson-car-sales-10043949",
+      "observedAt": "2026-10-19T20:00:30.890647Z",
+      "supports": [
+        "current-public-business-name",
+        "public-business-contact",
+        "public-premises-or-appointment-information",
+        "current-public-stock-catalogue"
+      ]
+    },
+    {
+      "url": "https://www.autotrader.co.uk/car-details/202502139084416",
+      "observedAt": "2026-10-19T20:02:57.481700Z",
+      "supports": [
+        "selected-current-public-stock",
+        "seller-description-and-vehicle-history-review",
+        "vehicle-photograph"
+      ]
+    },
+    {
+      "url": "https://www.autotrader.co.uk/car-details/202608135067607",
+      "observedAt": "2026-10-19T20:02:57.483441Z",
+      "supports": [
+        "selected-current-public-stock",
+        "seller-description-and-vehicle-history-review",
+        "vehicle-photograph"
+      ]
+    },
+    {
+      "url": "https://www.autotrader.co.uk/car-details/202511258123560",
+      "observedAt": "2026-10-19T20:02:58.346716Z",
+      "supports": [
+        "selected-current-public-stock",
+        "seller-description-and-vehicle-history-review",
+        "vehicle-photograph"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "observedAt": "2026-10-19T20:00:30.890647Z",
+  "catalogueObservation": {
+    "sourceUrl": "https://www.autotrader.co.uk/dealers/warwickshire/birmingham/tomlinson-car-sales-10043949",
+    "observedAt": "2026-10-19T20:00:30.890647Z",
+    "httpStatus": 200,
+    "sha256": "a7687f3096dbd961f4aa2a789a4154b9b5e6bb5e8adccd599833c695e6dc0da7",
+    "bytes": 172481
+  },
+  "stockReview": [
+    {
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202502139084416",
+      "observedAt": "2026-10-19T20:02:57.481700Z",
+      "httpStatus": 200,
+      "listingSha256": "25ee7b8a8776e1faf3c0af1f4ccea615133f65d5c0b4e110347c303bb41023c8",
+      "photoUrl": "https://m.atcdn.co.uk/a/media/w600/07d5dffacd1644f89c7604817c8471f2.jpg",
+      "sourcePhotoSha256": "37786ff9c165a7cc2827bb4c99e7f8dda0a0faf81c40a4dc0dac90b074a07b4f",
+      "sourcePhotoDimensions": [
+        600,
+        450
+      ],
+      "photoSha256": "527c799efcf81747aed807c27a56001a623972f38038ff6d060b9070b5a6b8c8",
+      "photoDimensions": [
+        600,
+        450
+      ],
+      "photoBytes": 46992,
+      "sourceExifOrientation": null,
+      "sourceId": "public-listing-1",
+      "photoPath": "dealer-stock/public-1.jpg",
+      "historyReview": {
+        "fullDescriptionReviewed": true,
+        "vehicleHistoryPanelReviewed": true,
+        "materialDisclosure": "The seller describes a Japanese import. The catalogue mileage conflicts with the kilometres and converted miles in the seller description; mileage is omitted. Registration and documents have not been independently verified."
+      }
+    },
+    {
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202608135067607",
+      "observedAt": "2026-10-19T20:02:57.483441Z",
+      "httpStatus": 200,
+      "listingSha256": "209c9caf93994f72eba880809c6c398152e485df16968e170061d1c3ab47ba22",
+      "photoUrl": "https://m.atcdn.co.uk/a/media/w600/d8dabbcb5d4e4f038861567f28afe9cc.jpg",
+      "sourcePhotoSha256": "1d5d1a4c2364ab01f38f2a52d6b7061324322c8efc34ad2f4f999abfbe74f6b4",
+      "sourcePhotoDimensions": [
+        600,
+        450
+      ],
+      "photoSha256": "a300b52b440749fefa479dca66095b0807c4d7fe24e3d1ed3078f07173573e44",
+      "photoDimensions": [
+        600,
+        450
+      ],
+      "photoBytes": 38625,
+      "sourceExifOrientation": null,
+      "sourceId": "public-listing-2",
+      "photoPath": "dealer-stock/public-2.jpg",
+      "historyReview": {
+        "fullDescriptionReviewed": true,
+        "vehicleHistoryPanelReviewed": true,
+        "materialDisclosure": "No additional material adverse disclosure was identified in the retrieved seller description and history fields. This is not a vehicle inspection or a clean-history guarantee."
+      }
+    },
+    {
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202511258123560",
+      "observedAt": "2026-10-19T20:02:58.346716Z",
+      "httpStatus": 200,
+      "listingSha256": "4b8176812a1c15fb87b9f7bec4e2fcc1d65ef9519246424de9e40ed5fb530438",
+      "photoUrl": "https://m.atcdn.co.uk/a/media/w600/69761bc9d6e949ef98b38a3cd5367b5e.jpg",
+      "sourcePhotoSha256": "1f0604b6b3914651dbf54fdd64f1577eead039eb44be1b348871291c52b84a1b",
+      "sourcePhotoDimensions": [
+        600,
+        450
+      ],
+      "photoSha256": "7a95d391bd3c72a43f59fc9ebb048835cc711b90649e7949f81d56e6af5b65dd",
+      "photoDimensions": [
+        600,
+        450
+      ],
+      "photoBytes": 57692,
+      "sourceExifOrientation": null,
+      "sourceId": "public-listing-3",
+      "photoPath": "dealer-stock/public-3.jpg",
+      "historyReview": {
+        "fullDescriptionReviewed": true,
+        "vehicleHistoryPanelReviewed": true,
+        "materialDisclosure": "No additional material adverse disclosure was identified in the retrieved seller description and history fields. This is not a vehicle inspection or a clean-history guarantee."
+      }
+    }
+  ],
+  "researchNotes": [
+    "Used actual used-car catalogue records; generic Featured Ford Kuga Dummy adverts excluded.",
+    "Lexus LX catalogue mileage conflicts with seller kilometre/mile values; omitted and Japanese import disclosed."
+  ],
+  "privacyReview": {
+    "publicBusinessFactsOnly": true,
+    "personalNamesOmitted": true,
+    "personalLookingContactsOmitted": false,
+    "pricesOmitted": true,
+    "rawMarketplaceHtmlNotIncluded": true,
+    "dealerContactPerformed": false
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "dealer": "cars4you-bradford",
+  "businessFacts": "business-facts.json",
+  "stock": "stock.json",
+  "inventoryKind": "dated-listing-snapshot",
+  "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+  "sources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/edk-cars-ltd?extendedFilter=1&menu=1&page=1",
+      "observedAt": "2026-10-19T20:00:31.691769Z",
+      "supports": [
+        "current-public-business-name",
+        "public-business-contact",
+        "public-premises-or-appointment-information",
+        "current-public-stock-catalogue"
+      ]
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/137835447979",
+      "observedAt": "2026-10-19T20:03:00.470550Z",
+      "supports": [
+        "selected-current-public-stock",
+        "seller-description-and-vehicle-history-review",
+        "vehicle-photograph"
+      ]
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/137828372894",
+      "observedAt": "2026-10-19T20:03:01.041140Z",
+      "supports": [
+        "selected-current-public-stock",
+        "seller-description-and-vehicle-history-review",
+        "vehicle-photograph"
+      ]
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/137828382384",
+      "observedAt": "2026-10-19T20:03:01.375402Z",
+      "supports": [
+        "selected-current-public-stock",
+        "seller-description-and-vehicle-history-review",
+        "vehicle-photograph"
+      ]
+    },
+    {
+      "url": "https://www.cazoo.co.uk/dealers/cars4you-43883/",
+      "observedAt": "2026-10-19T20:03:54.236846Z",
+      "supports": [
+        "bounded-public-logo-research"
+      ]
+    }
+  ]
+}

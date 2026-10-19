@@ -1,0 +1,149 @@
+{
+  "schemaVersion": 1,
+  "dealer": "plaistow-cars-birmingham",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uk.json",
+    "sha256": "6cd8d365586f9a5d5131fe4b1d50baede7de91ab384a135017c25367298b07c4"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/warwickshire/birmingham/plaistow-cars-685182",
+      "observedAt": "2026-10-19T20:00:30.914605Z",
+      "supports": [
+        "current-public-business-name",
+        "public-business-contact",
+        "public-premises-or-appointment-information",
+        "current-public-stock-catalogue"
+      ]
+    },
+    {
+      "url": "https://www.autotrader.co.uk/car-details/202609236329942",
+      "observedAt": "2026-10-19T20:02:57.478786Z",
+      "supports": [
+        "selected-current-public-stock",
+        "seller-description-and-vehicle-history-review",
+        "vehicle-photograph"
+      ]
+    },
+    {
+      "url": "https://www.autotrader.co.uk/car-details/202610106872162",
+      "observedAt": "2026-10-19T20:02:57.479751Z",
+      "supports": [
+        "selected-current-public-stock",
+        "seller-description-and-vehicle-history-review",
+        "vehicle-photograph"
+      ]
+    },
+    {
+      "url": "https://www.autotrader.co.uk/car-details/202602280299090",
+      "observedAt": "2026-10-19T20:02:57.480411Z",
+      "supports": [
+        "selected-current-public-stock",
+        "seller-description-and-vehicle-history-review",
+        "vehicle-photograph"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "observedAt": "2026-10-19T20:00:30.914605Z",
+  "catalogueObservation": {
+    "sourceUrl": "https://www.autotrader.co.uk/dealers/warwickshire/birmingham/plaistow-cars-685182",
+    "observedAt": "2026-10-19T20:00:30.914605Z",
+    "httpStatus": 200,
+    "sha256": "db28d49144fc477e906a242298a6030f14e66d99a3cbf122a931722619464860",
+    "bytes": 177891
+  },
+  "stockReview": [
+    {
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202609236329942",
+      "observedAt": "2026-10-19T20:02:57.478786Z",
+      "httpStatus": 200,
+      "listingSha256": "ecab1da15109a3dcaa389466760e5df5703446bdccda355043aa7b00689dc73a",
+      "photoUrl": "https://m.atcdn.co.uk/a/media/w600/384b88b525bd41b68ede315d7266adaa.jpg",
+      "sourcePhotoSha256": "d6f05e80104f47affb50b3be80884fa3070cd44a04ff37b800cd485678d2e8c8",
+      "sourcePhotoDimensions": [
+        600,
+        450
+      ],
+      "photoSha256": "d49375a5fb6ea886a162910ebfb2f67886dc37b510c4728337724ec69f4a4e9b",
+      "photoDimensions": [
+        600,
+        450
+      ],
+      "photoBytes": 90163,
+      "sourceExifOrientation": null,
+      "sourceId": "public-listing-1",
+      "photoPath": "dealer-stock/public-1.jpg",
+      "historyReview": {
+        "fullDescriptionReviewed": true,
+        "vehicleHistoryPanelReviewed": true,
+        "materialDisclosure": "The seller describes this as an imported car whose odometer remains in kilometres. The catalogue labels the mileage in miles; mileage is omitted because the units are unresolved."
+      }
+    },
+    {
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202610106872162",
+      "observedAt": "2026-10-19T20:02:57.479751Z",
+      "httpStatus": 200,
+      "listingSha256": "62c7f47b3e3f9716a02c59177d5dab16b1defe419cf0f64d40d7571d9e8f9eac",
+      "photoUrl": "https://m.atcdn.co.uk/a/media/w600/eda275eb045541cfb4c515c985a363c0.jpg",
+      "sourcePhotoSha256": "bc3ee56e33b09df9f5b524e2ed271665824e5c5e1e663a1694d3f03bb82e887d",
+      "sourcePhotoDimensions": [
+        600,
+        450
+      ],
+      "photoSha256": "32afa4f921185d91394a5eb2061449a00819375fc964968b459fbb3a6d8ea6d8",
+      "photoDimensions": [
+        600,
+        450
+      ],
+      "photoBytes": 86225,
+      "sourceExifOrientation": null,
+      "sourceId": "public-listing-2",
+      "photoPath": "dealer-stock/public-2.jpg",
+      "historyReview": {
+        "fullDescriptionReviewed": true,
+        "vehicleHistoryPanelReviewed": true,
+        "materialDisclosure": "The seller describes this as an imported car whose odometer remains in kilometres. The catalogue labels the mileage in miles; mileage is omitted because the units are unresolved."
+      }
+    },
+    {
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202602280299090",
+      "observedAt": "2026-10-19T20:02:57.480411Z",
+      "httpStatus": 200,
+      "listingSha256": "ba507b7b34ac782a83ae2f9a80b2bb12caeee0ab5d01ac1413248f303d6e9ceb",
+      "photoUrl": "https://m.atcdn.co.uk/a/media/w600/56cc3ada2a9b4398a8d0080f54cc1f82.jpg",
+      "sourcePhotoSha256": "d7d1e31469f0435d14dc2b34846abadb6b6e62214b9a321f16874a4548644994",
+      "sourcePhotoDimensions": [
+        600,
+        450
+      ],
+      "photoSha256": "c633e2402c4da2ad991b38010450abb507b06e29439710ca264528713af0a172",
+      "photoDimensions": [
+        600,
+        450
+      ],
+      "photoBytes": 75850,
+      "sourceExifOrientation": null,
+      "sourceId": "public-listing-3",
+      "photoPath": "dealer-stock/public-3.jpg",
+      "historyReview": {
+        "fullDescriptionReviewed": true,
+        "vehicleHistoryPanelReviewed": true,
+        "materialDisclosure": "No additional material adverse disclosure was identified in the retrieved seller description and history fields. This is not a vehicle inspection or a clean-history guarantee."
+      }
+    }
+  ],
+  "researchNotes": [
+    "Two Japanese imports have unresolved kilometre/mile labels; their mileage fields are omitted.",
+    "Current Yard 1 Tame Road address used; older Plaistow Avenue directory address not merged.",
+    "Candidate plaistowcars.co.uk returned HTTP 503; website omitted."
+  ],
+  "privacyReview": {
+    "publicBusinessFactsOnly": true,
+    "personalNamesOmitted": true,
+    "personalLookingContactsOmitted": false,
+    "pricesOmitted": true,
+    "rawMarketplaceHtmlNotIncluded": true,
+    "dealerContactPerformed": false
+  }
+}

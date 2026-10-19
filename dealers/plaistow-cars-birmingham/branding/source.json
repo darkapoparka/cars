@@ -1,0 +1,339 @@
+{
+  "schemaVersion": 1,
+  "dealer": "plaistow-cars-birmingham",
+  "status": "reviewed",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/warwickshire/birmingham/plaistow-cars-685182",
+      "observedAt": "2026-10-19T20:00:30.914605Z"
+    },
+    {
+      "url": "https://www.autotrader.co.uk/car-details/202609236329942",
+      "observedAt": "2026-10-19T20:02:57.478786Z"
+    },
+    {
+      "url": "https://www.autotrader.co.uk/car-details/202610106872162",
+      "observedAt": "2026-10-19T20:02:57.479751Z"
+    },
+    {
+      "url": "https://www.autotrader.co.uk/car-details/202602280299090",
+      "observedAt": "2026-10-19T20:02:57.480411Z"
+    }
+  ],
+  "originals": [
+    {
+      "path": "branding/observed-logo.gif",
+      "sha256": "f770c9807cb8d3ba165785c2ba8c35f2f14ac8cc647911233cda1bc90392b366",
+      "sourceUrl": "https://m.atcdn.co.uk/dealer-logo/at2/adbranding/685182/images/fpa_logo.gif",
+      "observedAt": "2026-10-19T20:03:53.976328Z",
+      "kind": "published-dealer-logo-artwork"
+    }
+  ],
+  "creationMethod": "imagegen-redraw",
+  "dealerApproved": false,
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "researchConclusion": "The obtained public dealer logo was visually inspected. A clean transparent redraw retains the name, colours and principal motif. Original public artwork bytes and source provenance are retained.",
+  "boundedLogoChecks": [
+    {
+      "sourceUrl": "https://www.plaistowcars.co.uk/",
+      "observedAt": "2026-10-19T20:03:55.290811Z",
+      "outcome": "Candidate website unavailable during public research; omitted from business contacts."
+    }
+  ],
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "generationId": "exec-b0ec7448-aae6-4567-a0ce-b3e3ac6a7328",
+    "modelVersion": null,
+    "prompt": "Create one production logo asset sheet on a genuinely transparent background, not a mockup. TWO complete horizontal logo lockups stacked vertically with a very large EMPTY TRANSPARENT gap between them. No labels and no background panels. Both rows use exactly the same spelling, proportions, layout, and motif. Each row: a separate bold compact emblem on the far left, then a generous transparent horizontal gap, then the complete business name at right. The left emblem must remain unmistakable at 32 px. The complete name must be clean and legible at a small website-header size; use strong simple shapes and avoid tiny taglines. TOP ROW is the dark-ink version for WHITE backgrounds. BOTTOM ROW is the light-ink version for CHARCOAL or RED backgrounds: replace every dark text fill with solid white, preserving accent colours only where they remain readable. Use a thin contrasting keyline around coloured details so they remain visible on all backgrounds. Flat graphic design, crisp edges, no gradients, no shading, no texture, no shadow, no photography, no microtype. Real transparent alpha everywhere outside the actual shapes. Wide landscape canvas with equal row spacing and generous outer transparent margins. This is an independent dealer preview; no approval claims. Faithfully redraw the provided PLAISTOW CARS public logo. Retain the exact name, its bold condensed sans-serif character, and black/white/silver palette. Replace the muddy metallic reflection with clean flat lettering. Introduce a compact interlocking PC emblem as a matching extension at the left; keep it thick and simple. Use no vehicle manufacturer symbols. Top text black with subtle white edge; bottom text solid white with a crisp dark edge."
+  },
+  "additionalGenerations": [
+    {
+      "role": "master-and-surfaces",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-b0ec7448-aae6-4567-a0ce-b3e3ac6a7328",
+      "modelVersion": null,
+      "prompt": "Create one production logo asset sheet on a genuinely transparent background, not a mockup. TWO complete horizontal logo lockups stacked vertically with a very large EMPTY TRANSPARENT gap between them. No labels and no background panels. Both rows use exactly the same spelling, proportions, layout, and motif. Each row: a separate bold compact emblem on the far left, then a generous transparent horizontal gap, then the complete business name at right. The left emblem must remain unmistakable at 32 px. The complete name must be clean and legible at a small website-header size; use strong simple shapes and avoid tiny taglines. TOP ROW is the dark-ink version for WHITE backgrounds. BOTTOM ROW is the light-ink version for CHARCOAL or RED backgrounds: replace every dark text fill with solid white, preserving accent colours only where they remain readable. Use a thin contrasting keyline around coloured details so they remain visible on all backgrounds. Flat graphic design, crisp edges, no gradients, no shading, no texture, no shadow, no photography, no microtype. Real transparent alpha everywhere outside the actual shapes. Wide landscape canvas with equal row spacing and generous outer transparent margins. This is an independent dealer preview; no approval claims. Faithfully redraw the provided PLAISTOW CARS public logo. Retain the exact name, its bold condensed sans-serif character, and black/white/silver palette. Replace the muddy metallic reflection with clean flat lettering. Introduce a compact interlocking PC emblem as a matching extension at the left; keep it thick and simple. Use no vehicle manufacturer symbols. Top text black with subtle white edge; bottom text solid white with a crisp dark edge.",
+      "sourceSheetSha256": "f669d2e5562726648aca3d7bf878be7560cb81715000df64bd0044afdd98d2ee",
+      "sourceSheetDimensions": {
+        "width": 2172,
+        "height": 724
+      }
+    },
+    {
+      "role": "contrast-corrected-master-surfaces-and-compact",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-3b8f93f8-43ba-442d-96a8-e6c62c228ffa",
+      "modelVersion": null,
+      "prompt": "Create a clean production transparent PNG asset sheet: TWO horizontal logo lockups stacked vertically with a very large empty transparent gap, no panels or labels. Each row has a compact emblem on far left, a clear generous transparent horizontal gap, and the complete business name at right. TOP ROW is for white backgrounds: solid near-black or deep blue ink on transparent alpha, with no white outline, no white fill anywhere. BOTTOM ROW is for dark charcoal and red backgrounds: all principal shapes and all lettering filled solid warm white, with a very thin continuous charcoal keyline and only a tiny restrained colour accent. More than ninety percent of the visible ink on each bottom row emblem and wordmark must be white. No gradients, glow, shadow, metallic rendering, distressed edges, texture, photographic car detail or decorative background. Flat crisp geometric artwork with substantial strokes. Preserve exact spelling and keep the left emblem independently readable at 32px. Outer empty transparency, no mockup. Faithfully refine the supplied PLAISTOW CARS redraw. Retain bold condensed PLAISTOW CARS in a single line and the interlocking italic PC emblem with its open counters. On the TOP both P and C are solid near-black, with only a tiny dark-silver accent slit if needed; remove the large pale-silver C fill. On the BOTTOM both P and C are solid white, as are PLAISTOW CARS. The black/white/silver identity remains, using silver very sparingly. No car illustration or extra words. Both rows have the same composition and proportions.",
+      "referenceSha256": "44b8074635ad25280be62b9649ac2928f779325b10a474e341f386dc3cf195ef",
+      "sourceSheetSha256": "a8a681f696fc485876a6bf99fe08e41a7ac48e0d25de11d66560a2d3cb2ff379",
+      "derivations": {
+        "top": {
+          "left": 0,
+          "top": 0,
+          "width": 2172,
+          "height": 369
+        },
+        "bottom": {
+          "left": 0,
+          "top": 369,
+          "width": 2172,
+          "height": 355
+        },
+        "markTop": {
+          "left": 0,
+          "top": 0,
+          "width": 670,
+          "height": 369
+        },
+        "markBottom": {
+          "left": 0,
+          "top": 369,
+          "width": 670,
+          "height": 355
+        }
+      }
+    }
+  ],
+  "derivations": [
+    {
+      "role": "master-and-onLight",
+      "method": "lossless-separated-top-row-crop",
+      "parentGeneration": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-b0ec7448-aae6-4567-a0ce-b3e3ac6a7328",
+        "modelVersion": null
+      },
+      "parentSha256": "f669d2e5562726648aca3d7bf878be7560cb81715000df64bd0044afdd98d2ee",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 2172,
+        "height": 381
+      }
+    },
+    {
+      "role": "onDark-and-onAccent",
+      "method": "lossless-separated-bottom-row-crop",
+      "parentGeneration": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-b0ec7448-aae6-4567-a0ce-b3e3ac6a7328",
+        "modelVersion": null
+      },
+      "parentSha256": "f669d2e5562726648aca3d7bf878be7560cb81715000df64bd0044afdd98d2ee",
+      "crop": {
+        "left": 0,
+        "top": 381,
+        "width": 2172,
+        "height": 343
+      }
+    },
+    {
+      "role": "compact-onLight",
+      "method": "lossless-isolated-emblem-crop",
+      "parentGeneration": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-b0ec7448-aae6-4567-a0ce-b3e3ac6a7328",
+        "modelVersion": null
+      },
+      "parentSha256": "f669d2e5562726648aca3d7bf878be7560cb81715000df64bd0044afdd98d2ee",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 676,
+        "height": 381
+      }
+    },
+    {
+      "role": "compact-onDark",
+      "method": "lossless-isolated-emblem-crop",
+      "parentReference": "branding/generated-on-dark.png",
+      "parentSha256": "a8f42968ef4dc388d26f2fb4ae25f6cd3ffa10dd61c7a9792688a218c945f5ad",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 676,
+        "height": 343
+      }
+    }
+  ],
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T20:42:24.215370Z",
+    "master": {
+      "path": "branding/generated-master.png",
+      "sha256": "24a7511bb7962b93859e51e2d7d075c3cdb8ddb3dee0b5d319c1fbf915d0d883",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-3b8f93f8-43ba-442d-96a8-e6c62c228ffa",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "8bcb0fbf6035fbbabc9c247adc69fe8068d15ef53a11996bb91ad3b35ca2e7f2",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-3b8f93f8-43ba-442d-96a8-e6c62c228ffa",
+        "modelVersion": null
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-on-dark.png",
+      "sha256": "2fb0764cd277673e5793ae22cc1aca3841d7f76960f5ac55b4d02a8ea67d629b",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-3b8f93f8-43ba-442d-96a8-e6c62c228ffa",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-master.png",
+        "sha256": "24a7511bb7962b93859e51e2d7d075c3cdb8ddb3dee0b5d319c1fbf915d0d883",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-3b8f93f8-43ba-442d-96a8-e6c62c228ffa",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "4a82004f15a5fd7ecc03c99d55a39025017fed308ae107cf531aa4f291779f1c",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-3b8f93f8-43ba-442d-96a8-e6c62c228ffa",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "4a82004f15a5fd7ecc03c99d55a39025017fed308ae107cf531aa4f291779f1c",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-3b8f93f8-43ba-442d-96a8-e6c62c228ffa",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113",
+          "#101820"
+        ],
+        "onAccent": [
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ]
+      },
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "markWidths": [
+        32,
+        64
+      ],
+      "method": "Exact existing cropTransparentPadding exports from real generated RGBA inputs, composited with actual alpha at header and compact icon sizes. No template palette or composition changes.",
+      "reviewedAt": "2026-10-19T20:42:24.215370Z",
+      "review": "Visually reviewed exact pipeline exports at 120 and 180 pixel wordmark widths and 32 and 64 pixel compact sizes on all six unchanged template background colours. Actual alpha composition, spelling, crop and compact recognition checked. Affected artwork was regenerated to improve ink contrast; no shared threshold or template was changed."
+    }
+  },
+  "contrastCorrections": [
+    {
+      "reason": "The existing pipeline pixel check found less than 70% readable ink on one or more required surfaces; actual artwork regenerated, thresholds and template backgrounds unchanged.",
+      "supersededInputs": {
+        "reviewedAt": null,
+        "master": {
+          "path": "branding/generated-master.png",
+          "sha256": "44b8074635ad25280be62b9649ac2928f779325b10a474e341f386dc3cf195ef",
+          "generation": {
+            "tool": "image_gen.imagegen",
+            "generationId": "exec-b0ec7448-aae6-4567-a0ce-b3e3ac6a7328",
+            "modelVersion": null
+          }
+        },
+        "mark": {
+          "path": "branding/generated-mark.png",
+          "sha256": "be334fc53db5f88b3b1568609c2f7d3b7a0d263bf4b1911e74275fb67d7e79f8",
+          "generation": {
+            "tool": "image_gen.imagegen",
+            "generationId": "exec-b0ec7448-aae6-4567-a0ce-b3e3ac6a7328",
+            "modelVersion": null
+          }
+        },
+        "markOnDark": {
+          "path": "branding/generated-mark-on-dark.png",
+          "sha256": "8f3ee3c1914494d68ff40e444c4cada4e410069ec130f1ec9e939d0897ce16b9",
+          "generation": {
+            "tool": "image_gen.imagegen",
+            "generationId": "exec-b0ec7448-aae6-4567-a0ce-b3e3ac6a7328",
+            "modelVersion": null
+          }
+        },
+        "surfaces": {
+          "onLight": {
+            "path": "branding/generated-master.png",
+            "sha256": "44b8074635ad25280be62b9649ac2928f779325b10a474e341f386dc3cf195ef",
+            "generation": {
+              "tool": "image_gen.imagegen",
+              "generationId": "exec-b0ec7448-aae6-4567-a0ce-b3e3ac6a7328",
+              "modelVersion": null
+            }
+          },
+          "onDark": {
+            "path": "branding/generated-on-dark.png",
+            "sha256": "a8f42968ef4dc388d26f2fb4ae25f6cd3ffa10dd61c7a9792688a218c945f5ad",
+            "generation": {
+              "tool": "image_gen.imagegen",
+              "generationId": "exec-b0ec7448-aae6-4567-a0ce-b3e3ac6a7328",
+              "modelVersion": null
+            }
+          },
+          "onAccent": {
+            "path": "branding/generated-on-dark.png",
+            "sha256": "a8f42968ef4dc388d26f2fb4ae25f6cd3ffa10dd61c7a9792688a218c945f5ad",
+            "generation": {
+              "tool": "image_gen.imagegen",
+              "generationId": "exec-b0ec7448-aae6-4567-a0ce-b3e3ac6a7328",
+              "modelVersion": null
+            }
+          }
+        },
+        "surfaceReview": {
+          "reviewed": false,
+          "backgrounds": {
+            "onLight": [
+              "#ffffff"
+            ],
+            "onDark": [
+              "#111113",
+              "#101820"
+            ],
+            "onAccent": [
+              "#09090b",
+              "#17191c",
+              "#c40101"
+            ]
+          },
+          "wordmarkWidths": [
+            120,
+            180
+          ],
+          "markWidths": [
+            32,
+            64
+          ],
+          "method": "Exact existing cropTransparentPadding exports from real generated RGBA inputs, composited with actual alpha at header and compact icon sizes. No template palette or composition changes."
+        }
+      },
+      "recordedAt": "2026-10-19T20:41:14.923Z"
+    }
+  ]
+}

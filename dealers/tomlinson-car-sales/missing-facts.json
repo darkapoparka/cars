@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "dealer": "tomlinson-car-sales",
+  "missing": [
+    {
+      "field": "business.email",
+      "required": false,
+      "reason": "No current public business value was verified in the bounded source review."
+    },
+    {
+      "field": "business.website",
+      "required": false,
+      "reason": "No current public business value was verified in the bounded source review."
+    },
+    {
+      "field": "business.hours",
+      "required": false,
+      "reason": "No current public business value was verified in the bounded source review."
+    },
+    {
+      "field": "stock.public-listing-1.mileage",
+      "required": false,
+      "reason": "Catalogue and seller description have unresolved kilometre/mile values; mileage omitted and the conflict is disclosed."
+    },
+    {
+      "field": "prices",
+      "required": false,
+      "reason": "All listing prices are omitted under the public-repository scope."
+    }
+  ],
+  "blocking": []
+}

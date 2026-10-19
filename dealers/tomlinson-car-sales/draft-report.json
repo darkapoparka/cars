@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "type": "cars-dealer-pack-draft",
+  "slug": "tomlinson-car-sales",
+  "dealerId": "gb-birmingham-tomlinson-car-sales",
+  "status": "ready",
+  "buildReady": true,
+  "providerWrites": 0,
+  "createdAt": "2026-10-19T20:17:06.116Z",
+  "inventoryKind": "dated-listing-snapshot",
+  "inventoryRecords": 3,
+  "logoReady": true,
+  "missingFacts": [
+    {
+      "field": "business.email",
+      "required": false,
+      "reason": "No current public business value was verified in the bounded source review."
+    },
+    {
+      "field": "business.website",
+      "required": false,
+      "reason": "No current public business value was verified in the bounded source review."
+    },
+    {
+      "field": "business.hours",
+      "required": false,
+      "reason": "No current public business value was verified in the bounded source review."
+    },
+    {
+      "field": "stock.public-listing-1.mileage",
+      "required": false,
+      "reason": "Catalogue and seller description have unresolved kilometre/mile values; mileage omitted and the conflict is disclosed."
+    },
+    {
+      "field": "prices",
+      "required": false,
+      "reason": "All listing prices are omitted under the public-repository scope."
+    }
+  ],
+  "blocking": [],
+  "stockAcquisition": "current-public-catalogue-and-individual-advert-with-photo",
+  "liveListingFetchPerformed": true,
+  "next": "Ready for the guarded build path; no deployment performed."
+}

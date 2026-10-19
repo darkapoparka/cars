@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "slug": "plaistow-cars-birmingham",
+  "dealerId": "gb-birmingham-plaistow-cars",
+  "business": {
+    "name": "Plaistow Cars",
+    "city": "Birmingham",
+    "region": "West Midlands",
+    "countryCode": "GB",
+    "currency": "GBP",
+    "distanceUnit": "mi",
+    "locale": "en-GB",
+    "address": "Yard 1, Tame Road, Birmingham B6 7EE",
+    "phone": "07537122307",
+    "phoneDisplay": "07537 122307",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://www.autotrader.co.uk/dealers/warwickshire/birmingham/plaistow-cars-685182",
+    "hours": "Viewings by appointment only.",
+    "sourceUrl": "https://www.autotrader.co.uk/dealers/warwickshire/birmingham/plaistow-cars-685182",
+    "observedAt": "2026-10-19",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/warwickshire/birmingham/plaistow-cars-685182",
+      "observedAt": "2026-10-19T20:00:30.914605Z",
+      "supports": [
+        "current-public-business-name",
+        "public-business-contact",
+        "public-premises-or-appointment-information",
+        "current-public-stock-catalogue"
+      ]
+    },
+    {
+      "url": "https://www.autotrader.co.uk/car-details/202609236329942",
+      "observedAt": "2026-10-19T20:02:57.478786Z",
+      "supports": [
+        "selected-current-public-stock",
+        "seller-description-and-vehicle-history-review",
+        "vehicle-photograph"
+      ]
+    },
+    {
+      "url": "https://www.autotrader.co.uk/car-details/202610106872162",
+      "observedAt": "2026-10-19T20:02:57.479751Z",
+      "supports": [
+        "selected-current-public-stock",
+        "seller-description-and-vehicle-history-review",
+        "vehicle-photograph"
+      ]
+    },
+    {
+      "url": "https://www.autotrader.co.uk/car-details/202602280299090",
+      "observedAt": "2026-10-19T20:02:57.480411Z",
+      "supports": [
+        "selected-current-public-stock",
+        "seller-description-and-vehicle-history-review",
+        "vehicle-photograph"
+      ]
+    }
+  ]
+}

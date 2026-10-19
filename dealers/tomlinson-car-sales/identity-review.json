@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T20:26:20.081651Z",
+  "dealer": "tomlinson-car-sales",
+  "dealerId": "gb-birmingham-tomlinson-car-sales",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "method": "Compared the retained 175-dealer deployment registry, 176 client directory entries at a999878, lead id, slug, and normalized business name; reviewed public locality and seller identity. No live-fleet identity match was found.",
+  "sources": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/warwickshire/birmingham/tomlinson-car-sales-10043949",
+      "observedAt": "2026-10-19T20:00:30.890647Z"
+    },
+    {
+      "url": "https://www.autotrader.co.uk/car-details/202502139084416",
+      "observedAt": "2026-10-19T20:02:57.481700Z"
+    },
+    {
+      "url": "https://www.autotrader.co.uk/car-details/202608135067607",
+      "observedAt": "2026-10-19T20:02:57.483441Z"
+    },
+    {
+      "url": "https://www.autotrader.co.uk/car-details/202511258123560",
+      "observedAt": "2026-10-19T20:02:58.346716Z"
+    }
+  ],
+  "registryReview": {
+    "source": "docs/DEPLOYMENT-INVENTORY.json",
+    "sha256": "250dd5868cb842ea8bef8a95b258a6f043bfd0e1043d10cebb57ae6bd22559fb",
+    "dealerCount": 175,
+    "matches": []
+  },
+  "clientsReview": {
+    "commit": "a999878a921fb61b37bf198c43275550814f88cc",
+    "directoryEntries": 176,
+    "matches": []
+  }
+}

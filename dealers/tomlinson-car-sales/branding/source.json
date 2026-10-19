@@ -1,0 +1,308 @@
+{
+  "schemaVersion": 1,
+  "dealer": "tomlinson-car-sales",
+  "status": "reviewed",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/warwickshire/birmingham/tomlinson-car-sales-10043949",
+      "observedAt": "2026-10-19T20:00:30.890647Z"
+    },
+    {
+      "url": "https://www.autotrader.co.uk/car-details/202502139084416",
+      "observedAt": "2026-10-19T20:02:57.481700Z"
+    },
+    {
+      "url": "https://www.autotrader.co.uk/car-details/202608135067607",
+      "observedAt": "2026-10-19T20:02:57.483441Z"
+    },
+    {
+      "url": "https://www.autotrader.co.uk/car-details/202511258123560",
+      "observedAt": "2026-10-19T20:02:58.346716Z"
+    }
+  ],
+  "originals": [],
+  "creationMethod": "imagegen-proposal",
+  "dealerApproved": false,
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "researchConclusion": "Bounded public checks did not yield usable distinct original dealer artwork. An unavailable image URL is not evidence that no real logo exists. This artwork is an independent proposal and is not dealer approved.",
+  "boundedLogoChecks": [],
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "generationId": "exec-f71608b0-41ca-464c-8930-236cfbb4b2c2",
+    "modelVersion": null,
+    "prompt": "Create one production logo asset sheet on a genuinely transparent background, not a mockup. TWO complete horizontal logo lockups stacked vertically with a very large EMPTY TRANSPARENT gap between them. No labels and no background panels. Both rows use exactly the same spelling, proportions, layout, and motif. Each row: a separate bold compact emblem on the far left, then a generous transparent horizontal gap, then the complete business name at right. The left emblem must remain unmistakable at 32 px. The complete name must be clean and legible at a small website-header size; use strong simple shapes and avoid tiny taglines. TOP ROW is the dark-ink version for WHITE backgrounds. BOTTOM ROW is the light-ink version for CHARCOAL or RED backgrounds: replace every dark text fill with solid white, preserving accent colours only where they remain readable. Use a thin contrasting keyline around coloured details so they remain visible on all backgrounds. Flat graphic design, crisp edges, no gradients, no shading, no texture, no shadow, no photography, no microtype. Real transparent alpha everywhere outside the actual shapes. Wide landscape canvas with equal row spacing and generous outer transparent margins. This is an independent dealer preview; no approval claims. Create a refined independent proposal for TOMLINSON CAR SALES. Compact left emblem is a bold interlocking TC monogram with a simple balanced circular aperture, without a surrounding badge. Deep navy and muted warm gold palette. At right TOMLINSON in substantial refined sans-serif capitals above CAR SALES, with restrained letter spacing. Keep every word large enough to read; no extra tagline. Top text navy, bottom text white; gold accent remains small and strong."
+  },
+  "additionalGenerations": [
+    {
+      "role": "master-and-surfaces",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-f71608b0-41ca-464c-8930-236cfbb4b2c2",
+      "modelVersion": null,
+      "prompt": "Create one production logo asset sheet on a genuinely transparent background, not a mockup. TWO complete horizontal logo lockups stacked vertically with a very large EMPTY TRANSPARENT gap between them. No labels and no background panels. Both rows use exactly the same spelling, proportions, layout, and motif. Each row: a separate bold compact emblem on the far left, then a generous transparent horizontal gap, then the complete business name at right. The left emblem must remain unmistakable at 32 px. The complete name must be clean and legible at a small website-header size; use strong simple shapes and avoid tiny taglines. TOP ROW is the dark-ink version for WHITE backgrounds. BOTTOM ROW is the light-ink version for CHARCOAL or RED backgrounds: replace every dark text fill with solid white, preserving accent colours only where they remain readable. Use a thin contrasting keyline around coloured details so they remain visible on all backgrounds. Flat graphic design, crisp edges, no gradients, no shading, no texture, no shadow, no photography, no microtype. Real transparent alpha everywhere outside the actual shapes. Wide landscape canvas with equal row spacing and generous outer transparent margins. This is an independent dealer preview; no approval claims. Create a refined independent proposal for TOMLINSON CAR SALES. Compact left emblem is a bold interlocking TC monogram with a simple balanced circular aperture, without a surrounding badge. Deep navy and muted warm gold palette. At right TOMLINSON in substantial refined sans-serif capitals above CAR SALES, with restrained letter spacing. Keep every word large enough to read; no extra tagline. Top text navy, bottom text white; gold accent remains small and strong.",
+      "sourceSheetSha256": "e26631f976707749a4c85f043eba7107ca576c050350e77decad958762d8c4e0",
+      "sourceSheetDimensions": {
+        "width": 1983,
+        "height": 793
+      }
+    },
+    {
+      "role": "contrast-corrected-onDark-onAccent",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-6cbdb240-f272-4f00-a726-08fa9c049d79",
+      "modelVersion": null,
+      "prompt": "Produce one clean transparent PNG logo variant for dark charcoal and red backgrounds. Preserve the supplied TOMLINSON CAR SALES proposal's exact spelling, bold refined type, interlocking TC geometry and horizontal composition: isolated TC at far left, generous transparent gap, TOMLINSON above CAR SALES at right. All text fills must be solid warm white, including CAR SALES. Both the T and C must be predominantly solid white; retain muted gold only as one narrow inset stroke on the C, less than five percent of visible ink. A very thin continuous dark navy keyline may surround the outer edges, never a thick dark fill. At least ninety percent of the visible logo ink, and ninety percent of the compact TC ink, is white. Actual transparent alpha in all counters and outside shapes, no pale background, no panels, no repeated rows. Flat simple substantial shapes, no gradients, shadow, glow, metallic effect or texture. No extra words. Keep the TC clearly legible at 32 pixels.",
+      "referenceSha256": "e5eb22f2e019fe52d6a56c96e3a29eae972a33cea4d657ca6c0277c65c4a4cbc",
+      "compactDerivation": {
+        "method": "lossless-isolated-emblem-crop",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 573,
+          "height": 724
+        },
+        "parentSha256": "cac7526f95374ae213c2246e4e750718a1c02a30246b39bb56df1c2dcdb31c3d"
+      }
+    }
+  ],
+  "derivations": [
+    {
+      "role": "master-and-onLight",
+      "method": "lossless-separated-top-row-crop",
+      "parentGeneration": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f71608b0-41ca-464c-8930-236cfbb4b2c2",
+        "modelVersion": null
+      },
+      "parentSha256": "e26631f976707749a4c85f043eba7107ca576c050350e77decad958762d8c4e0",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1983,
+        "height": 416
+      }
+    },
+    {
+      "role": "onDark-and-onAccent",
+      "method": "lossless-separated-bottom-row-crop",
+      "parentGeneration": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f71608b0-41ca-464c-8930-236cfbb4b2c2",
+        "modelVersion": null
+      },
+      "parentSha256": "e26631f976707749a4c85f043eba7107ca576c050350e77decad958762d8c4e0",
+      "crop": {
+        "left": 0,
+        "top": 416,
+        "width": 1983,
+        "height": 377
+      }
+    },
+    {
+      "role": "compact-onLight",
+      "method": "lossless-isolated-emblem-crop",
+      "parentGeneration": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f71608b0-41ca-464c-8930-236cfbb4b2c2",
+        "modelVersion": null
+      },
+      "parentSha256": "e26631f976707749a4c85f043eba7107ca576c050350e77decad958762d8c4e0",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 550,
+        "height": 416
+      }
+    },
+    {
+      "role": "compact-onDark",
+      "method": "lossless-isolated-emblem-crop",
+      "parentReference": "branding/generated-on-dark.png",
+      "parentSha256": "40e656c9e1d02d54ac6228470b85d2839518c85e1bb0bc54345c4b404d01e462",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 550,
+        "height": 377
+      }
+    }
+  ],
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T20:42:24.216022Z",
+    "master": {
+      "path": "branding/generated-master.png",
+      "sha256": "e5eb22f2e019fe52d6a56c96e3a29eae972a33cea4d657ca6c0277c65c4a4cbc",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f71608b0-41ca-464c-8930-236cfbb4b2c2",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "b657260c592f1dbe4f2794e62530fc6f4fac5d2bce09c012549e9faaa513a2b2",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f71608b0-41ca-464c-8930-236cfbb4b2c2",
+        "modelVersion": null
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-on-dark.png",
+      "sha256": "77d50bddda2977d5415d4d915620960883e25b9a64d62d6e20cb067ce4f1ae6b",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-6cbdb240-f272-4f00-a726-08fa9c049d79",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-master.png",
+        "sha256": "e5eb22f2e019fe52d6a56c96e3a29eae972a33cea4d657ca6c0277c65c4a4cbc",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-f71608b0-41ca-464c-8930-236cfbb4b2c2",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "cac7526f95374ae213c2246e4e750718a1c02a30246b39bb56df1c2dcdb31c3d",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-6cbdb240-f272-4f00-a726-08fa9c049d79",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "cac7526f95374ae213c2246e4e750718a1c02a30246b39bb56df1c2dcdb31c3d",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-6cbdb240-f272-4f00-a726-08fa9c049d79",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113",
+          "#101820"
+        ],
+        "onAccent": [
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ]
+      },
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "markWidths": [
+        32,
+        64
+      ],
+      "method": "Exact existing cropTransparentPadding exports from real generated RGBA inputs, composited with actual alpha at header and compact icon sizes. No template palette or composition changes.",
+      "reviewedAt": "2026-10-19T20:42:24.216022Z",
+      "review": "Visually reviewed exact pipeline exports at 120 and 180 pixel wordmark widths and 32 and 64 pixel compact sizes on all six unchanged template background colours. Actual alpha composition, spelling, crop and compact recognition checked. Affected artwork was regenerated to improve ink contrast; no shared threshold or template was changed."
+    }
+  },
+  "contrastCorrections": [
+    {
+      "reason": "The existing pipeline pixel check found less than 70% readable ink on one or more required surfaces; actual artwork regenerated, thresholds and template backgrounds unchanged.",
+      "supersededInputs": {
+        "reviewedAt": null,
+        "master": {
+          "path": "branding/generated-master.png",
+          "sha256": "e5eb22f2e019fe52d6a56c96e3a29eae972a33cea4d657ca6c0277c65c4a4cbc",
+          "generation": {
+            "tool": "image_gen.imagegen",
+            "generationId": "exec-f71608b0-41ca-464c-8930-236cfbb4b2c2",
+            "modelVersion": null
+          }
+        },
+        "mark": {
+          "path": "branding/generated-mark.png",
+          "sha256": "b657260c592f1dbe4f2794e62530fc6f4fac5d2bce09c012549e9faaa513a2b2",
+          "generation": {
+            "tool": "image_gen.imagegen",
+            "generationId": "exec-f71608b0-41ca-464c-8930-236cfbb4b2c2",
+            "modelVersion": null
+          }
+        },
+        "markOnDark": {
+          "path": "branding/generated-mark-on-dark.png",
+          "sha256": "c27230af9091e0e87b5166686b3e2869fa8be567d59eff4ece42f093d6429051",
+          "generation": {
+            "tool": "image_gen.imagegen",
+            "generationId": "exec-f71608b0-41ca-464c-8930-236cfbb4b2c2",
+            "modelVersion": null
+          }
+        },
+        "surfaces": {
+          "onLight": {
+            "path": "branding/generated-master.png",
+            "sha256": "e5eb22f2e019fe52d6a56c96e3a29eae972a33cea4d657ca6c0277c65c4a4cbc",
+            "generation": {
+              "tool": "image_gen.imagegen",
+              "generationId": "exec-f71608b0-41ca-464c-8930-236cfbb4b2c2",
+              "modelVersion": null
+            }
+          },
+          "onDark": {
+            "path": "branding/generated-on-dark.png",
+            "sha256": "40e656c9e1d02d54ac6228470b85d2839518c85e1bb0bc54345c4b404d01e462",
+            "generation": {
+              "tool": "image_gen.imagegen",
+              "generationId": "exec-f71608b0-41ca-464c-8930-236cfbb4b2c2",
+              "modelVersion": null
+            }
+          },
+          "onAccent": {
+            "path": "branding/generated-on-dark.png",
+            "sha256": "40e656c9e1d02d54ac6228470b85d2839518c85e1bb0bc54345c4b404d01e462",
+            "generation": {
+              "tool": "image_gen.imagegen",
+              "generationId": "exec-f71608b0-41ca-464c-8930-236cfbb4b2c2",
+              "modelVersion": null
+            }
+          }
+        },
+        "surfaceReview": {
+          "reviewed": false,
+          "backgrounds": {
+            "onLight": [
+              "#ffffff"
+            ],
+            "onDark": [
+              "#111113",
+              "#101820"
+            ],
+            "onAccent": [
+              "#09090b",
+              "#17191c",
+              "#c40101"
+            ]
+          },
+          "wordmarkWidths": [
+            120,
+            180
+          ],
+          "markWidths": [
+            32,
+            64
+          ],
+          "method": "Exact existing cropTransparentPadding exports from real generated RGBA inputs, composited with actual alpha at header and compact icon sizes. No template palette or composition changes."
+        }
+      },
+      "recordedAt": "2026-10-19T20:41:15.469Z"
+    }
+  ]
+}

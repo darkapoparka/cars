@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "dealer": "plaistow-cars-birmingham",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T20:42:24.215370Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-redraw",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "f8fd8e2b258137317b9340b822684e909f6a62febf3ff4004efd21c6119cfe4c",
+      "sourceSha256": "75447ee26d5d3a2bf8a204c70c2413db2e31626334ae555f918fd8d5f9fc0e6e"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "fdc01421a0d01a0c2166dc1554ffb6b375371b56cba9cf84e1704f8efded9101",
+      "sourceSha256": "165fe3923b2ec2d617f24ec9e6e3ac3a3a1997a2a32b8db0fe7f32a4f77414ab"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "fdc01421a0d01a0c2166dc1554ffb6b375371b56cba9cf84e1704f8efded9101",
+      "sourceSha256": "165fe3923b2ec2d617f24ec9e6e3ac3a3a1997a2a32b8db0fe7f32a4f77414ab"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "75447ee26d5d3a2bf8a204c70c2413db2e31626334ae555f918fd8d5f9fc0e6e",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-3b8f93f8-43ba-442d-96a8-e6c62c228ffa",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "2a5c3d1c2b1c85082096b28be2fe0e7af4e4f297a43a85f5e0d3cd64058efeba",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-3b8f93f8-43ba-442d-96a8-e6c62c228ffa",
+      "modelVersion": null
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "05df9730d48adac49e29c2480abab23ec74c1f745fcc9e7d258a6b0406e1e126"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "75447ee26d5d3a2bf8a204c70c2413db2e31626334ae555f918fd8d5f9fc0e6e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-3b8f93f8-43ba-442d-96a8-e6c62c228ffa",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/plaistow-cars-birmingham/branding/generated-master.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "165fe3923b2ec2d617f24ec9e6e3ac3a3a1997a2a32b8db0fe7f32a4f77414ab",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-3b8f93f8-43ba-442d-96a8-e6c62c228ffa",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/plaistow-cars-birmingham/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "165fe3923b2ec2d617f24ec9e6e3ac3a3a1997a2a32b8db0fe7f32a4f77414ab",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-3b8f93f8-43ba-442d-96a8-e6c62c228ffa",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/plaistow-cars-birmingham/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "24a7511bb7962b93859e51e2d7d075c3cdb8ddb3dee0b5d319c1fbf915d0d883",
+      "sha256": "75447ee26d5d3a2bf8a204c70c2413db2e31626334ae555f918fd8d5f9fc0e6e",
+      "crop": {
+        "left": 53,
+        "top": 33,
+        "width": 2074,
+        "height": 323
+      },
+      "sourcePath": "branding/generated-master.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "4a82004f15a5fd7ecc03c99d55a39025017fed308ae107cf531aa4f291779f1c",
+      "sha256": "165fe3923b2ec2d617f24ec9e6e3ac3a3a1997a2a32b8db0fe7f32a4f77414ab",
+      "crop": {
+        "left": 43,
+        "top": 14,
+        "width": 2087,
+        "height": 334
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "4a82004f15a5fd7ecc03c99d55a39025017fed308ae107cf531aa4f291779f1c",
+      "sha256": "165fe3923b2ec2d617f24ec9e6e3ac3a3a1997a2a32b8db0fe7f32a4f77414ab",
+      "crop": {
+        "left": 43,
+        "top": 14,
+        "width": 2087,
+        "height": 334
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "f0c1c0badc1d42242e3ea46be83cef576c709e110f03b74f41b93b48c3ecd39d",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-3b8f93f8-43ba-442d-96a8-e6c62c228ffa",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/plaistow-cars-birmingham/branding/generated-mark.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "2e2482814baccef31015827e3d342c964f44324cfd399ddbdd08af98c43a782c",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-3b8f93f8-43ba-442d-96a8-e6c62c228ffa",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/plaistow-cars-birmingham/branding/generated-mark-on-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "2a5c3d1c2b1c85082096b28be2fe0e7af4e4f297a43a85f5e0d3cd64058efeba",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-3b8f93f8-43ba-442d-96a8-e6c62c228ffa",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/plaistow-cars-birmingham/branding/generated-mark.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "05df9730d48adac49e29c2480abab23ec74c1f745fcc9e7d258a6b0406e1e126",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-3b8f93f8-43ba-442d-96a8-e6c62c228ffa",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/plaistow-cars-birmingham/branding/generated-mark.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T20:42:24.215370Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "c0bdb244a9f942d9221dc4c8ea6dae4eef07b303245c616c1881da12e5f7c313",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-3b8f93f8-43ba-442d-96a8-e6c62c228ffa",
+      "modelVersion": null
+    }
+  }
+}

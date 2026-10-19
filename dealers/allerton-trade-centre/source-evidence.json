@@ -1,0 +1,160 @@
+{
+  "schemaVersion": 1,
+  "dealer": "allerton-trade-centre",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uk.json",
+    "sha256": "6cd8d365586f9a5d5131fe4b1d50baede7de91ab384a135017c25367298b07c4"
+  },
+  "publicSources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Allerton-Trade-Centre-ltd",
+      "observedAt": "2026-10-19T20:00:31.373348Z",
+      "supports": [
+        "current-public-business-name",
+        "public-business-contact",
+        "public-premises-or-appointment-information",
+        "current-public-stock-catalogue"
+      ]
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/267795312582",
+      "observedAt": "2026-10-19T20:02:58.516288Z",
+      "supports": [
+        "selected-current-public-stock",
+        "seller-description-and-vehicle-history-review",
+        "vehicle-photograph"
+      ]
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/267784892007",
+      "observedAt": "2026-10-19T20:02:58.946541Z",
+      "supports": [
+        "selected-current-public-stock",
+        "seller-description-and-vehicle-history-review",
+        "vehicle-photograph"
+      ]
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/267760840215",
+      "observedAt": "2026-10-19T20:02:59.861166Z",
+      "supports": [
+        "selected-current-public-stock",
+        "seller-description-and-vehicle-history-review",
+        "vehicle-photograph"
+      ]
+    },
+    {
+      "url": "https://www.cazoo.co.uk/dealers/allerton-trade-centre-ltd-25490/",
+      "observedAt": "2026-10-19T20:03:55.277975Z",
+      "supports": [
+        "bounded-public-logo-research"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "observedAt": "2026-10-19T20:00:31.373348Z",
+  "catalogueObservation": {
+    "sourceUrl": "https://showroom.ebaymotorspro.co.uk/Allerton-Trade-Centre-ltd",
+    "observedAt": "2026-10-19T20:00:31.373348Z",
+    "httpStatus": 200,
+    "sha256": "2cfb887ac891e36ffd78e9f98e8dc6efb615b4e078e972012a5d5432f92c2a4b",
+    "bytes": 37012
+  },
+  "stockReview": [
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/267795312582",
+      "observedAt": "2026-10-19T20:02:58.516288Z",
+      "httpStatus": 200,
+      "listingSha256": "60c7a53fecd3523011cf83b30a90245c751c2094df50a4672744e8266e50c3c8",
+      "descriptionUrl": "https://itm.ebaydesc.com/itmdesc/267795312582?t=1790334560000&category=9835&seller=allertontradecentre&excSoj=1&ver=1&excTrk=1&lsite=3&ittenable=false&domain=ebay.com&descgauge=1&cspheader=1&oneClk=2&secureDesc=1&lang=en",
+      "descriptionSha256": "963836a78af61a4e4587feb5d99efad8e5691ff6d9f021c51b7c4d9f647d86c2",
+      "photoUrl": "https://i.ebayimg.com/images/g/ecoAAeSwXNxqtlae/s-l1600.jpg",
+      "sourcePhotoSha256": "0317530d7b687e1fdd4a7a7287dceedd263c39338efc0b1cf295c5e3fcac8998",
+      "sourcePhotoDimensions": [
+        1500,
+        1125
+      ],
+      "photoSha256": "75f883e9a0862c7d7cf7ec3311bf9f8d162410d10eec3d2642156e97281b14b2",
+      "photoDimensions": [
+        1280,
+        960
+      ],
+      "photoBytes": 193669,
+      "sourceExifOrientation": null,
+      "sourceId": "public-listing-1",
+      "photoPath": "dealer-stock/public-1.jpg",
+      "historyReview": {
+        "fullDescriptionReviewed": true,
+        "vehicleHistoryPanelReviewed": true,
+        "materialDisclosure": "No additional material adverse disclosure was identified in the retrieved seller description and history fields. This is not a vehicle inspection or a clean-history guarantee."
+      }
+    },
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/267784892007",
+      "observedAt": "2026-10-19T20:02:58.946541Z",
+      "httpStatus": 200,
+      "listingSha256": "270ac16332f5b290ee1b84b41ea5272110d3368eaf837abfa1eeb583885ab484",
+      "descriptionUrl": "https://itm.ebaydesc.com/itmdesc/267784892007?t=1789375148000&category=9855&seller=allertontradecentre&excSoj=1&ver=1&excTrk=1&lsite=3&ittenable=false&domain=ebay.com&descgauge=1&cspheader=1&oneClk=2&secureDesc=1&lang=en",
+      "descriptionSha256": "ddcb9d9ee9c66140058fcf7183012bec06b87713fdfbea2b1ae463b00cddaa18",
+      "photoUrl": "https://i.ebayimg.com/images/g/9hIAAeSw53Jqp7Lv/s-l1600.jpg",
+      "sourcePhotoSha256": "8750f15a100d52b10abcf5be8a82e6c91a89b2852289df8f6d86aa97e730853b",
+      "sourcePhotoDimensions": [
+        1500,
+        1125
+      ],
+      "photoSha256": "cca0867aa7e07952839cccdb3be76d08e794f6fdd9a81991ecc70e818650d9f8",
+      "photoDimensions": [
+        1024,
+        768
+      ],
+      "photoBytes": 177282,
+      "sourceExifOrientation": null,
+      "sourceId": "public-listing-2",
+      "photoPath": "dealer-stock/public-2.jpg",
+      "historyReview": {
+        "fullDescriptionReviewed": true,
+        "vehicleHistoryPanelReviewed": true,
+        "materialDisclosure": "No additional material adverse disclosure was identified in the retrieved seller description and history fields. This is not a vehicle inspection or a clean-history guarantee."
+      }
+    },
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/267760840215",
+      "observedAt": "2026-10-19T20:02:59.861166Z",
+      "httpStatus": 200,
+      "listingSha256": "3d8faf5cd1b3ce34db14d04fc170f27293738b6173926db8f56d7b9947693d24",
+      "descriptionUrl": "https://itm.ebaydesc.com/itmdesc/267760840215?t=1787065030000&category=9873&seller=allertontradecentre&excSoj=1&ver=1&excTrk=1&lsite=3&ittenable=false&domain=ebay.com&descgauge=1&cspheader=1&oneClk=2&secureDesc=1&lang=en",
+      "descriptionSha256": "1da5098c32104e2505ecc2093c1bef00648b8264476c84138aa26a533031e8b9",
+      "photoUrl": "https://i.ebayimg.com/images/g/1U4AAeSweAVqhHIn/s-l1600.jpg",
+      "sourcePhotoSha256": "b50e9995d01e81b1237af6d14f8b3a60db8690a23c258f22fdf4ecf1d5ddae83",
+      "sourcePhotoDimensions": [
+        1500,
+        1125
+      ],
+      "photoSha256": "acb75956617ed53dc15d629d68a76628e8b7c233f6ba367263ae95697a410dcb",
+      "photoDimensions": [
+        1280,
+        960
+      ],
+      "photoBytes": 199377,
+      "sourceExifOrientation": null,
+      "sourceId": "public-listing-3",
+      "photoPath": "dealer-stock/public-3.jpg",
+      "historyReview": {
+        "fullDescriptionReviewed": true,
+        "vehicleHistoryPanelReviewed": true,
+        "materialDisclosure": "No additional material adverse disclosure was identified in the retrieved seller description and history fields. This is not a vehicle inspection or a clean-history guarantee."
+      }
+    }
+  ],
+  "researchNotes": [
+    "Current 71 Hammerton Street marketplace premises used; older addresses not merged."
+  ],
+  "privacyReview": {
+    "publicBusinessFactsOnly": true,
+    "personalNamesOmitted": true,
+    "personalLookingContactsOmitted": false,
+    "pricesOmitted": true,
+    "rawMarketplaceHtmlNotIncluded": true,
+    "dealerContactPerformed": false
+  }
+}

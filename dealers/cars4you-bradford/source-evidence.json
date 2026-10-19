@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 1,
+  "dealer": "cars4you-bradford",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uk.json",
+    "sha256": "6cd8d365586f9a5d5131fe4b1d50baede7de91ab384a135017c25367298b07c4"
+  },
+  "publicSources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/edk-cars-ltd?extendedFilter=1&menu=1&page=1",
+      "observedAt": "2026-10-19T20:00:31.691769Z",
+      "supports": [
+        "current-public-business-name",
+        "public-business-contact",
+        "public-premises-or-appointment-information",
+        "current-public-stock-catalogue"
+      ]
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/137835447979",
+      "observedAt": "2026-10-19T20:03:00.470550Z",
+      "supports": [
+        "selected-current-public-stock",
+        "seller-description-and-vehicle-history-review",
+        "vehicle-photograph"
+      ]
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/137828372894",
+      "observedAt": "2026-10-19T20:03:01.041140Z",
+      "supports": [
+        "selected-current-public-stock",
+        "seller-description-and-vehicle-history-review",
+        "vehicle-photograph"
+      ]
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/137828382384",
+      "observedAt": "2026-10-19T20:03:01.375402Z",
+      "supports": [
+        "selected-current-public-stock",
+        "seller-description-and-vehicle-history-review",
+        "vehicle-photograph"
+      ]
+    },
+    {
+      "url": "https://www.cazoo.co.uk/dealers/cars4you-43883/",
+      "observedAt": "2026-10-19T20:03:54.236846Z",
+      "supports": [
+        "bounded-public-logo-research"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "observedAt": "2026-10-19T20:00:31.691769Z",
+  "catalogueObservation": {
+    "sourceUrl": "https://showroom.ebaymotorspro.co.uk/edk-cars-ltd?extendedFilter=1&menu=1&page=1",
+    "observedAt": "2026-10-19T20:00:31.691769Z",
+    "httpStatus": 200,
+    "sha256": "d1f6fdca43dd903a03b1ce032c636ef10ae95aa83f82845f78f9dc5241398b04",
+    "bytes": 40096
+  },
+  "stockReview": [
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/137835447979",
+      "observedAt": "2026-10-19T20:03:00.470550Z",
+      "httpStatus": 200,
+      "listingSha256": "6af486ad5c2b6221d7a570ecdaf4d43cc97eb125093fd2aa2c44d4fc1a8917a2",
+      "descriptionUrl": "https://itm.ebaydesc.com/itmdesc/137835447979?t=1791753431000&category=9873&seller=therunningwheelsltd&excSoj=1&ver=1&excTrk=1&lsite=3&ittenable=false&domain=ebay.com&descgauge=1&cspheader=1&oneClk=2&secureDesc=1&lang=en",
+      "descriptionSha256": "8849050a1cd4ac28e283f6307d6446996cfd39ba7d9fb09eee938dd1e4915e1d",
+      "photoUrl": "https://i.ebayimg.com/images/g/kigAAeSwuVdqy~0V/s-l1600.jpg",
+      "sourcePhotoSha256": "4e6684bf2c5fc58cc15d208f7be2b9d7daf040d4a500c908a274ceb12c82fffd",
+      "sourcePhotoDimensions": [
+        1500,
+        1125
+      ],
+      "photoSha256": "52473df6e57f3f9b2220c37f097baaeb5718fe6b4a429e022fac640dd4ad948e",
+      "photoDimensions": [
+        1024,
+        768
+      ],
+      "photoBytes": 185792,
+      "sourceExifOrientation": null,
+      "sourceId": "public-listing-1",
+      "photoPath": "dealer-stock/public-1.jpg",
+      "historyReview": {
+        "fullDescriptionReviewed": true,
+        "vehicleHistoryPanelReviewed": true,
+        "materialDisclosure": "No additional material adverse disclosure was identified in the retrieved seller description and history fields. This is not a vehicle inspection or a clean-history guarantee."
+      }
+    },
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/137828372894",
+      "observedAt": "2026-10-19T20:03:01.041140Z",
+      "httpStatus": 200,
+      "listingSha256": "0fd1f5a77190fd47f59cdadd1b31d2eb6423cf254d9d9b9195c22c30834e177e",
+      "descriptionUrl": "https://itm.ebaydesc.com/itmdesc/137828372894?t=1791564071000&category=9859&seller=therunningwheelsltd&excSoj=1&ver=1&excTrk=1&lsite=3&ittenable=false&domain=ebay.com&descgauge=1&cspheader=1&oneClk=2&secureDesc=1&lang=en",
+      "descriptionSha256": "37fdb0b35556088f260a335ddf7404aff0740216e7d97c58943b7bc58b791145",
+      "photoUrl": "https://i.ebayimg.com/images/g/xEAAAeSwDtpqyRh~/s-l1600.jpg",
+      "sourcePhotoSha256": "d07b510bf649cf38c7ac7f17140c75c4945e2579dfadb2dd4a0fdb2153b63b50",
+      "sourcePhotoDimensions": [
+        1500,
+        1125
+      ],
+      "photoSha256": "4fc920eb419e2b9f6d3713b0792ed59e05e45ddcee0134283fbc198cbf54619d",
+      "photoDimensions": [
+        1280,
+        960
+      ],
+      "photoBytes": 198883,
+      "sourceExifOrientation": null,
+      "sourceId": "public-listing-2",
+      "photoPath": "dealer-stock/public-2.jpg",
+      "historyReview": {
+        "fullDescriptionReviewed": true,
+        "vehicleHistoryPanelReviewed": true,
+        "materialDisclosure": "No additional material adverse disclosure was identified in the retrieved seller description and history fields. This is not a vehicle inspection or a clean-history guarantee."
+      }
+    },
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/137828382384",
+      "observedAt": "2026-10-19T20:03:01.375402Z",
+      "httpStatus": 200,
+      "listingSha256": "0732ccd8d747caf0d9239ede6963ed3c2ec941851ed4cf69c2a780d15bec2688",
+      "descriptionUrl": "https://itm.ebaydesc.com/itmdesc/137828382384?t=1791564312000&category=9835&seller=therunningwheelsltd&excSoj=1&ver=1&excTrk=1&lsite=3&ittenable=false&domain=ebay.com&descgauge=1&cspheader=1&oneClk=2&secureDesc=1&lang=en",
+      "descriptionSha256": "a6c92d0c523739dca24387753819dfe55ad7f0541c639e688a8c0cb2b795a459",
+      "photoUrl": "https://i.ebayimg.com/images/g/dqgAAeSwNx5qyRpU/s-l1600.jpg",
+      "sourcePhotoSha256": "ecdd27b598d3c4328d685ca7250d89c1141eec7963a21f03a233c15ae52a03ca",
+      "sourcePhotoDimensions": [
+        1500,
+        1125
+      ],
+      "photoSha256": "c930aa794a176810c1b6cb8cf2118f57399d4167b185589edea38ff262d52656",
+      "photoDimensions": [
+        1024,
+        768
+      ],
+      "photoBytes": 186838,
+      "sourceExifOrientation": null,
+      "sourceId": "public-listing-3",
+      "photoPath": "dealer-stock/public-3.jpg",
+      "historyReview": {
+        "fullDescriptionReviewed": true,
+        "vehicleHistoryPanelReviewed": true,
+        "materialDisclosure": "No additional material adverse disclosure was identified in the retrieved seller description and history fields. This is not a vehicle inspection or a clean-history guarantee."
+      }
+    }
+  ],
+  "researchNotes": [
+    "Personal-looking email omitted.",
+    "Legacy EDK Cars seller path retained as source for current CARS4YOU Bradford identity.",
+    "Volvo V40 advert excluded because 2018 catalogue title conflicts with 2019 description."
+  ],
+  "privacyReview": {
+    "publicBusinessFactsOnly": true,
+    "personalNamesOmitted": true,
+    "personalLookingContactsOmitted": true,
+    "pricesOmitted": true,
+    "rawMarketplaceHtmlNotIncluded": true,
+    "dealerContactPerformed": false
+  }
+}

@@ -1,0 +1,211 @@
+{
+  "schemaVersion": 1,
+  "dealer": "amc-custom-motors",
+  "status": "reviewed",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Acmmotors",
+      "observedAt": "2026-10-19T20:00:31.409300Z"
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/407286856541",
+      "observedAt": "2026-10-19T20:02:59.971144Z"
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/407286847193",
+      "observedAt": "2026-10-19T20:03:00.048159Z"
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/407265143343",
+      "observedAt": "2026-10-19T20:03:00.090933Z"
+    },
+    {
+      "url": "https://www.cazoo.co.uk/dealers/amc-custom-motors-60811/",
+      "observedAt": "2026-10-19T20:03:53.983414Z"
+    }
+  ],
+  "originals": [],
+  "creationMethod": "imagegen-proposal",
+  "dealerApproved": false,
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "researchConclusion": "Bounded public checks did not yield usable distinct original dealer artwork. An unavailable image URL is not evidence that no real logo exists. This artwork is an independent proposal and is not dealer approved.",
+  "boundedLogoChecks": [
+    {
+      "sourceUrl": "https://cdn.autoexposure.co.uk/motorscdn/motors/dealer-images/60811/motors-car-details-logo.jpg",
+      "sourcePage": "https://www.cazoo.co.uk/dealers/amc-custom-motors-60811/",
+      "observedAt": "2026-10-19T20:06:20.384979Z",
+      "outcome": "The read operation timed out",
+      "originalObtained": false
+    }
+  ],
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "generationId": "exec-a12c9912-67f4-4dd2-af1d-56a9ed856d51",
+    "modelVersion": null,
+    "prompt": "Create one production logo asset sheet on a genuinely transparent background, not a mockup. TWO complete horizontal logo lockups stacked vertically with a very large EMPTY TRANSPARENT gap between them. No labels and no background panels. Both rows use exactly the same spelling, proportions, layout, and motif. Each row: a separate bold compact emblem on the far left, then a generous transparent horizontal gap, then the complete business name at right. The left emblem must remain unmistakable at 32 px. The complete name must be clean and legible at a small website-header size; use strong simple shapes and avoid tiny taglines. TOP ROW is the dark-ink version for WHITE backgrounds. BOTTOM ROW is the light-ink version for CHARCOAL or RED backgrounds: replace every dark text fill with solid white, preserving accent colours only where they remain readable. Use a thin contrasting keyline around coloured details so they remain visible on all backgrounds. Flat graphic design, crisp edges, no gradients, no shading, no texture, no shadow, no photography, no microtype. Real transparent alpha everywhere outside the actual shapes. Wide landscape canvas with equal row spacing and generous outer transparent margins. This is an independent dealer preview; no approval claims. Create a distinctive independent proposal for AMC CUSTOM MOTORS. Compact left emblem is a bold forward-leaning geometric A with one deep cyan slash suggesting precision fabrication, simple enough for 32 px. At right AMC in bold broad capitals above CUSTOM MOTORS in a substantial clean sans serif. Palette charcoal and saturated deep cyan. Top text charcoal, bottom text white. Keep exact name AMC CUSTOM MOTORS, no motorsport flags, shields or extra wording."
+  },
+  "additionalGenerations": [
+    {
+      "role": "master-and-surfaces",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-a12c9912-67f4-4dd2-af1d-56a9ed856d51",
+      "modelVersion": null,
+      "prompt": "Create one production logo asset sheet on a genuinely transparent background, not a mockup. TWO complete horizontal logo lockups stacked vertically with a very large EMPTY TRANSPARENT gap between them. No labels and no background panels. Both rows use exactly the same spelling, proportions, layout, and motif. Each row: a separate bold compact emblem on the far left, then a generous transparent horizontal gap, then the complete business name at right. The left emblem must remain unmistakable at 32 px. The complete name must be clean and legible at a small website-header size; use strong simple shapes and avoid tiny taglines. TOP ROW is the dark-ink version for WHITE backgrounds. BOTTOM ROW is the light-ink version for CHARCOAL or RED backgrounds: replace every dark text fill with solid white, preserving accent colours only where they remain readable. Use a thin contrasting keyline around coloured details so they remain visible on all backgrounds. Flat graphic design, crisp edges, no gradients, no shading, no texture, no shadow, no photography, no microtype. Real transparent alpha everywhere outside the actual shapes. Wide landscape canvas with equal row spacing and generous outer transparent margins. This is an independent dealer preview; no approval claims. Create a distinctive independent proposal for AMC CUSTOM MOTORS. Compact left emblem is a bold forward-leaning geometric A with one deep cyan slash suggesting precision fabrication, simple enough for 32 px. At right AMC in bold broad capitals above CUSTOM MOTORS in a substantial clean sans serif. Palette charcoal and saturated deep cyan. Top text charcoal, bottom text white. Keep exact name AMC CUSTOM MOTORS, no motorsport flags, shields or extra wording.",
+      "sourceSheetSha256": "06e2ab67d2fc3a6e5b77774771c8ea7607921aeaacf669154655a48fcfed2d41",
+      "sourceSheetDimensions": {
+        "width": 1774,
+        "height": 887
+      }
+    }
+  ],
+  "derivations": [
+    {
+      "role": "master-and-onLight",
+      "method": "lossless-separated-top-row-crop",
+      "parentGeneration": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a12c9912-67f4-4dd2-af1d-56a9ed856d51",
+        "modelVersion": null
+      },
+      "parentSha256": "06e2ab67d2fc3a6e5b77774771c8ea7607921aeaacf669154655a48fcfed2d41",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1774,
+        "height": 444
+      }
+    },
+    {
+      "role": "onDark-and-onAccent",
+      "method": "lossless-separated-bottom-row-crop",
+      "parentGeneration": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a12c9912-67f4-4dd2-af1d-56a9ed856d51",
+        "modelVersion": null
+      },
+      "parentSha256": "06e2ab67d2fc3a6e5b77774771c8ea7607921aeaacf669154655a48fcfed2d41",
+      "crop": {
+        "left": 0,
+        "top": 444,
+        "width": 1774,
+        "height": 443
+      }
+    },
+    {
+      "role": "compact-onLight",
+      "method": "lossless-isolated-emblem-crop",
+      "parentGeneration": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a12c9912-67f4-4dd2-af1d-56a9ed856d51",
+        "modelVersion": null
+      },
+      "parentSha256": "06e2ab67d2fc3a6e5b77774771c8ea7607921aeaacf669154655a48fcfed2d41",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 632,
+        "height": 444
+      }
+    },
+    {
+      "role": "compact-onDark",
+      "method": "lossless-isolated-emblem-crop",
+      "parentReference": "branding/generated-on-dark.png",
+      "parentSha256": "0fcdfe837ce7e0412c73755fe7b7c19a0974ee3d8daee1fd1322b6eea005de0e",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 632,
+        "height": 443
+      }
+    }
+  ],
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T20:42:40.849086Z",
+    "master": {
+      "path": "branding/generated-master.png",
+      "sha256": "760ac0a415a0e3f8fc509e3ff6d448dbdb46df43f33eeecec55fb639c9afd46a",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a12c9912-67f4-4dd2-af1d-56a9ed856d51",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "967105785323efc8bb5b56d38cf4f8eb69c38f5a56a6dba2fa69d6fa6cc2d90e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a12c9912-67f4-4dd2-af1d-56a9ed856d51",
+        "modelVersion": null
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-on-dark.png",
+      "sha256": "866bb8cc26aff094d0ae09b1b35d6519a76946397ad68f4024d7eddce3311802",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a12c9912-67f4-4dd2-af1d-56a9ed856d51",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-master.png",
+        "sha256": "760ac0a415a0e3f8fc509e3ff6d448dbdb46df43f33eeecec55fb639c9afd46a",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-a12c9912-67f4-4dd2-af1d-56a9ed856d51",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "0fcdfe837ce7e0412c73755fe7b7c19a0974ee3d8daee1fd1322b6eea005de0e",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-a12c9912-67f4-4dd2-af1d-56a9ed856d51",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "0fcdfe837ce7e0412c73755fe7b7c19a0974ee3d8daee1fd1322b6eea005de0e",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-a12c9912-67f4-4dd2-af1d-56a9ed856d51",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113",
+          "#101820"
+        ],
+        "onAccent": [
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ]
+      },
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "markWidths": [
+        32,
+        64
+      ],
+      "method": "Exact existing cropTransparentPadding exports from real generated RGBA inputs, composited with actual alpha at header and compact icon sizes. No template palette or composition changes.",
+      "reviewedAt": "2026-10-19T20:42:40.849086Z",
+      "review": "Visually reviewed exact pipeline exports at 120 and 180 pixel wordmark widths and 32 and 64 pixel compact sizes on all six unchanged template background colours. Actual alpha composition, spelling, crop and compact recognition checked. Affected artwork was regenerated to improve ink contrast; no shared threshold or template was changed."
+    }
+  }
+}

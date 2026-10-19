@@ -1,0 +1,161 @@
+{
+  "schemaVersion": 1,
+  "dealer": "hanli-motors",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uk.json",
+    "sha256": "6cd8d365586f9a5d5131fe4b1d50baede7de91ab384a135017c25367298b07c4"
+  },
+  "publicSources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Hanli---Motors",
+      "observedAt": "2026-10-19T20:00:31.531139Z",
+      "supports": [
+        "current-public-business-name",
+        "public-business-contact",
+        "public-premises-or-appointment-information",
+        "current-public-stock-catalogue"
+      ]
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/820183668852",
+      "observedAt": "2026-10-19T20:03:01.399144Z",
+      "supports": [
+        "selected-current-public-stock",
+        "seller-description-and-vehicle-history-review",
+        "vehicle-photograph"
+      ]
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/820157931832",
+      "observedAt": "2026-10-19T20:03:01.465391Z",
+      "supports": [
+        "selected-current-public-stock",
+        "seller-description-and-vehicle-history-review",
+        "vehicle-photograph"
+      ]
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/820129669539",
+      "observedAt": "2026-10-19T20:03:01.906238Z",
+      "supports": [
+        "selected-current-public-stock",
+        "seller-description-and-vehicle-history-review",
+        "vehicle-photograph"
+      ]
+    },
+    {
+      "url": "https://www.cazoo.co.uk/dealers/hanli-motors-ltd-16627/",
+      "observedAt": "2026-10-19T20:03:53.985855Z",
+      "supports": [
+        "bounded-public-logo-research"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "observedAt": "2026-10-19T20:00:31.531139Z",
+  "catalogueObservation": {
+    "sourceUrl": "https://showroom.ebaymotorspro.co.uk/Hanli---Motors",
+    "observedAt": "2026-10-19T20:00:31.531139Z",
+    "httpStatus": 200,
+    "sha256": "2abe18bfa6ac462eb5b317009039a7a5d783198e0bf7288a354d4117e0494485",
+    "bytes": 36952
+  },
+  "stockReview": [
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/820183668852",
+      "observedAt": "2026-10-19T20:03:01.399144Z",
+      "httpStatus": 200,
+      "listingSha256": "79748831fb4c17aff55ee547ac99469ce5696afca5f95e2f9cdb4ecaf7b1b943",
+      "descriptionUrl": "https://itm.ebaydesc.com/itmdesc/820183668852?t=1790629390000&category=18174&seller=hanli-motors1&excSoj=1&ver=1&excTrk=1&lsite=3&ittenable=false&domain=ebay.com&descgauge=1&cspheader=1&oneClk=2&secureDesc=1&lang=en",
+      "descriptionSha256": "885db37d90514b23206587d903a2a0f4556b848c154b4ed1d84ef292e36c1604",
+      "photoUrl": "https://i.ebayimg.com/images/g/m-QAAeSwED5qutZS/s-l1600.jpg",
+      "sourcePhotoSha256": "8dea62ea88a9f3891df5427ac53b5c3026e0bf4917f1743140585a24f310f8af",
+      "sourcePhotoDimensions": [
+        880,
+        736
+      ],
+      "photoSha256": "179261a76ae77488ff72ea2856fe1064e151817075fbc6ae884029edcf3ae975",
+      "photoDimensions": [
+        880,
+        736
+      ],
+      "photoBytes": 119823,
+      "sourceExifOrientation": null,
+      "sourceId": "public-listing-1",
+      "photoPath": "dealer-stock/public-1.jpg",
+      "historyReview": {
+        "fullDescriptionReviewed": true,
+        "vehicleHistoryPanelReviewed": true,
+        "materialDisclosure": "The catalogue calls this Grand C4 Spacetourer and the individual advert header calls it Grand C4 Picasso. The broad Grand C4 model name is retained pending clarification of the suffix."
+      }
+    },
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/820157931832",
+      "observedAt": "2026-10-19T20:03:01.465391Z",
+      "httpStatus": 200,
+      "listingSha256": "3c07ac9cc7cd4cc32cebf70eb984e6b89f0c6f45d97c7718e4c1d9b52993ac7f",
+      "descriptionUrl": "https://itm.ebaydesc.com/itmdesc/820157931832?t=1790073563000&category=9855&seller=hanli-motors1&excSoj=1&ver=1&excTrk=1&lsite=3&ittenable=false&domain=ebay.com&descgauge=1&cspheader=1&oneClk=2&secureDesc=1&lang=en",
+      "descriptionSha256": "543632afd0f5e744ab438e532315fd0c0f8c23637804989443168fbde8d8f02b",
+      "photoUrl": "https://i.ebayimg.com/images/g/IWEAAeSwy15qslwC/s-l1600.jpg",
+      "sourcePhotoSha256": "07a93faba042d6c4c90ebd7a4be747a294bc776db505c2a16bebcefacc673384",
+      "sourcePhotoDimensions": [
+        1500,
+        904
+      ],
+      "photoSha256": "02f6fa38bb4e38a63a11d6a9b917754f9020d83ba7a27f85d648766b415e1858",
+      "photoDimensions": [
+        1280,
+        771
+      ],
+      "photoBytes": 198731,
+      "sourceExifOrientation": null,
+      "sourceId": "public-listing-2",
+      "photoPath": "dealer-stock/public-2.jpg",
+      "historyReview": {
+        "fullDescriptionReviewed": true,
+        "vehicleHistoryPanelReviewed": true,
+        "materialDisclosure": "No additional material adverse disclosure was identified in the retrieved seller description and history fields. This is not a vehicle inspection or a clean-history guarantee."
+      }
+    },
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/820129669539",
+      "observedAt": "2026-10-19T20:03:01.906238Z",
+      "httpStatus": 200,
+      "listingSha256": "d91e7a952ded77de0c2a71a6115a666fe2630f6215553c0034d95bfb57ea32da",
+      "descriptionUrl": "https://itm.ebaydesc.com/itmdesc/820129669539?t=1789468510000&category=9844&seller=hanli-motors1&excSoj=1&ver=1&excTrk=1&lsite=3&ittenable=false&domain=ebay.com&descgauge=1&cspheader=1&oneClk=2&secureDesc=1&lang=en",
+      "descriptionSha256": "86eda9077d8e6d78c9f0ca372ebcee53284eedfb12c9ebbcae9056ee74e33d70",
+      "photoUrl": "https://i.ebayimg.com/images/g/zTkAAeSw80BqqR-m/s-l1600.jpg",
+      "sourcePhotoSha256": "60f4483f1ee78e766bc04e4d974de6cb95a3e283f2353599298a7d1845d1728c",
+      "sourcePhotoDimensions": [
+        1500,
+        1175
+      ],
+      "photoSha256": "fa7f256c14f83a641d0c8407f3672fa7937854c7a75f10233b171a85a7a3438e",
+      "photoDimensions": [
+        1024,
+        802
+      ],
+      "photoBytes": 187249,
+      "sourceExifOrientation": null,
+      "sourceId": "public-listing-3",
+      "photoPath": "dealer-stock/public-3.jpg",
+      "historyReview": {
+        "fullDescriptionReviewed": true,
+        "vehicleHistoryPanelReviewed": true,
+        "materialDisclosure": "No additional material adverse disclosure was identified in the retrieved seller description and history fields. This is not a vehicle inspection or a clean-history guarantee."
+      }
+    }
+  ],
+  "researchNotes": [
+    "Current source spells the road St Wildfrid's Road; not combined with the older normalized spelling.",
+    "First car is described as Grand C4 Spacetourer in the catalogue and Grand C4 Picasso in the advert header; broad Grand C4 model retained without choosing the disputed suffix."
+  ],
+  "privacyReview": {
+    "publicBusinessFactsOnly": true,
+    "personalNamesOmitted": true,
+    "personalLookingContactsOmitted": false,
+    "pricesOmitted": true,
+    "rawMarketplaceHtmlNotIncluded": true,
+    "dealerContactPerformed": false
+  }
+}

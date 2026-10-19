@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "dealer": "plaistow-cars-birmingham",
+  "missing": [
+    {
+      "field": "business.email",
+      "required": false,
+      "reason": "No current public business value was verified in the bounded source review."
+    },
+    {
+      "field": "business.website",
+      "required": false,
+      "reason": "The candidate business website returned HTTP 503 and was omitted."
+    },
+    {
+      "field": "stock.public-listing-1.mileage",
+      "required": false,
+      "reason": "Catalogue and seller description have unresolved kilometre/mile values; mileage omitted and the conflict is disclosed."
+    },
+    {
+      "field": "stock.public-listing-2.mileage",
+      "required": false,
+      "reason": "Catalogue and seller description have unresolved kilometre/mile values; mileage omitted and the conflict is disclosed."
+    },
+    {
+      "field": "prices",
+      "required": false,
+      "reason": "All listing prices are omitted under the public-repository scope."
+    }
+  ],
+  "blocking": []
+}

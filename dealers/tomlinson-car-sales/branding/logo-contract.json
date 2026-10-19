@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "dealer": "tomlinson-car-sales",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T20:42:24.216022Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "c7fc6c6bb692f8135b2c585823146dcc7a9e0a4dca36de421d03874645d14b88",
+      "sourceSha256": "37f90379406206bb27e2fd53d8f93532035b69b0c57b8493fd5be7c439a917e1"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "ea004b710dd3971d32732269a582d3fb36ad6a7e4cdca3b398a1f4fbe45ed69f",
+      "sourceSha256": "d3a30ec745ca63f034bf15dc2cdbe7f29adbbc71fb5a372439891e86c544dd59"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "ea004b710dd3971d32732269a582d3fb36ad6a7e4cdca3b398a1f4fbe45ed69f",
+      "sourceSha256": "d3a30ec745ca63f034bf15dc2cdbe7f29adbbc71fb5a372439891e86c544dd59"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "37f90379406206bb27e2fd53d8f93532035b69b0c57b8493fd5be7c439a917e1",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-f71608b0-41ca-464c-8930-236cfbb4b2c2",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "8b79fa433d1dd80d57877dc5fd77a4b2f18df0bf15521104df40d04c5d8fe0fb",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-f71608b0-41ca-464c-8930-236cfbb4b2c2",
+      "modelVersion": null
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "68401b37820a2c0385f6328662f2804eec1f2eb2605a9397dac2829903ba315e"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "37f90379406206bb27e2fd53d8f93532035b69b0c57b8493fd5be7c439a917e1",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f71608b0-41ca-464c-8930-236cfbb4b2c2",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/tomlinson-car-sales/branding/generated-master.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "d3a30ec745ca63f034bf15dc2cdbe7f29adbbc71fb5a372439891e86c544dd59",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-6cbdb240-f272-4f00-a726-08fa9c049d79",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/tomlinson-car-sales/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "d3a30ec745ca63f034bf15dc2cdbe7f29adbbc71fb5a372439891e86c544dd59",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-6cbdb240-f272-4f00-a726-08fa9c049d79",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/tomlinson-car-sales/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "e5eb22f2e019fe52d6a56c96e3a29eae972a33cea4d657ca6c0277c65c4a4cbc",
+      "sha256": "37f90379406206bb27e2fd53d8f93532035b69b0c57b8493fd5be7c439a917e1",
+      "crop": {
+        "left": 131,
+        "top": 15,
+        "width": 1734,
+        "height": 401
+      },
+      "sourcePath": "branding/generated-master.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "cac7526f95374ae213c2246e4e750718a1c02a30246b39bb56df1c2dcdb31c3d",
+      "sha256": "d3a30ec745ca63f034bf15dc2cdbe7f29adbbc71fb5a372439891e86c544dd59",
+      "crop": {
+        "left": 80,
+        "top": 117,
+        "width": 2032,
+        "height": 494
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "cac7526f95374ae213c2246e4e750718a1c02a30246b39bb56df1c2dcdb31c3d",
+      "sha256": "d3a30ec745ca63f034bf15dc2cdbe7f29adbbc71fb5a372439891e86c544dd59",
+      "crop": {
+        "left": 80,
+        "top": 117,
+        "width": 2032,
+        "height": 494
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "29f41f5ad5f0adae30aef9e0ba3aa0c7f6a0c83db373bc074ca11c16e7d32265",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f71608b0-41ca-464c-8930-236cfbb4b2c2",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/tomlinson-car-sales/branding/generated-mark.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "860b90d215bccb8d6f972bceed75a292642a468bdb0030f2e69232b911b2cf63",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-6cbdb240-f272-4f00-a726-08fa9c049d79",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/tomlinson-car-sales/branding/generated-mark-on-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "8b79fa433d1dd80d57877dc5fd77a4b2f18df0bf15521104df40d04c5d8fe0fb",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f71608b0-41ca-464c-8930-236cfbb4b2c2",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/tomlinson-car-sales/branding/generated-mark.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "68401b37820a2c0385f6328662f2804eec1f2eb2605a9397dac2829903ba315e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f71608b0-41ca-464c-8930-236cfbb4b2c2",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/tomlinson-car-sales/branding/generated-mark.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T20:42:24.216022Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "4fec39f6d3bc7dc79a19059fd57aa4118b1db8e2579b14fe9dba3ed2988d2222",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-6cbdb240-f272-4f00-a726-08fa9c049d79",
+      "modelVersion": null
+    }
+  }
+}

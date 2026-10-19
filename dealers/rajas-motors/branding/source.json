@@ -1,0 +1,211 @@
+{
+  "schemaVersion": 1,
+  "dealer": "rajas-motors",
+  "status": "reviewed",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Rajasmotors-Ltd",
+      "observedAt": "2026-10-19T20:00:31.529165Z"
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/860058997168",
+      "observedAt": "2026-10-19T20:03:02.288522Z"
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/860055663693",
+      "observedAt": "2026-10-19T20:03:02.525349Z"
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/860041525470",
+      "observedAt": "2026-10-19T20:03:02.742591Z"
+    },
+    {
+      "url": "https://www.cazoo.co.uk/dealers/rajas-motors-ltd-72931/",
+      "observedAt": "2026-10-19T20:03:53.980727Z"
+    }
+  ],
+  "originals": [],
+  "creationMethod": "imagegen-proposal",
+  "dealerApproved": false,
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "researchConclusion": "Bounded public checks did not yield usable distinct original dealer artwork. An unavailable image URL is not evidence that no real logo exists. This artwork is an independent proposal and is not dealer approved.",
+  "boundedLogoChecks": [
+    {
+      "sourceUrl": "https://cdn.autoexposure.co.uk/motorscdn/motors/dealer-images/72931/motors-car-details-logo.jpg",
+      "sourcePage": "https://www.cazoo.co.uk/dealers/rajas-motors-ltd-72931/",
+      "observedAt": "2026-10-19T20:06:20.389047Z",
+      "outcome": "The read operation timed out",
+      "originalObtained": false
+    }
+  ],
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "generationId": "exec-ef5fee46-c088-4019-b13f-97c6fe275e70",
+    "modelVersion": null,
+    "prompt": "Create one production logo asset sheet on a genuinely transparent background, not a mockup. TWO complete horizontal logo lockups stacked vertically with a very large EMPTY TRANSPARENT gap between them. No labels and no background panels. Both rows use exactly the same spelling, proportions, layout, and motif. Each row: a separate bold compact emblem on the far left, then a generous transparent horizontal gap, then the complete business name at right. The left emblem must remain unmistakable at 32 px. The complete name must be clean and legible at a small website-header size; use strong simple shapes and avoid tiny taglines. TOP ROW is the dark-ink version for WHITE backgrounds. BOTTOM ROW is the light-ink version for CHARCOAL or RED backgrounds: replace every dark text fill with solid white, preserving accent colours only where they remain readable. Use a thin contrasting keyline around coloured details so they remain visible on all backgrounds. Flat graphic design, crisp edges, no gradients, no shading, no texture, no shadow, no photography, no microtype. Real transparent alpha everywhere outside the actual shapes. Wide landscape canvas with equal row spacing and generous outer transparent margins. This is an independent dealer preview; no approval claims. Create an independent proposal for RAJAS MOTORS LTD. Compact left emblem is a bold sculpted R with a single flowing teal cutout suggesting forward motion. At right RAJAS above MOTORS LTD in substantial clean sans-serif capitals; exact spelling RAJAS, no apostrophe. Palette dark navy and rich turquoise. Top words navy, bottom words solid white; teal emblem detail retains a thin white/dark contrast edge. No crown, coat of arms, religious motifs or manufacturer badges."
+  },
+  "additionalGenerations": [
+    {
+      "role": "master-and-surfaces",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-ef5fee46-c088-4019-b13f-97c6fe275e70",
+      "modelVersion": null,
+      "prompt": "Create one production logo asset sheet on a genuinely transparent background, not a mockup. TWO complete horizontal logo lockups stacked vertically with a very large EMPTY TRANSPARENT gap between them. No labels and no background panels. Both rows use exactly the same spelling, proportions, layout, and motif. Each row: a separate bold compact emblem on the far left, then a generous transparent horizontal gap, then the complete business name at right. The left emblem must remain unmistakable at 32 px. The complete name must be clean and legible at a small website-header size; use strong simple shapes and avoid tiny taglines. TOP ROW is the dark-ink version for WHITE backgrounds. BOTTOM ROW is the light-ink version for CHARCOAL or RED backgrounds: replace every dark text fill with solid white, preserving accent colours only where they remain readable. Use a thin contrasting keyline around coloured details so they remain visible on all backgrounds. Flat graphic design, crisp edges, no gradients, no shading, no texture, no shadow, no photography, no microtype. Real transparent alpha everywhere outside the actual shapes. Wide landscape canvas with equal row spacing and generous outer transparent margins. This is an independent dealer preview; no approval claims. Create an independent proposal for RAJAS MOTORS LTD. Compact left emblem is a bold sculpted R with a single flowing teal cutout suggesting forward motion. At right RAJAS above MOTORS LTD in substantial clean sans-serif capitals; exact spelling RAJAS, no apostrophe. Palette dark navy and rich turquoise. Top words navy, bottom words solid white; teal emblem detail retains a thin white/dark contrast edge. No crown, coat of arms, religious motifs or manufacturer badges.",
+      "sourceSheetSha256": "e594924e596dc8d1cc29727b49d1c19116f578129cbf6df58307011c2fa3eec9",
+      "sourceSheetDimensions": {
+        "width": 1774,
+        "height": 887
+      }
+    }
+  ],
+  "derivations": [
+    {
+      "role": "master-and-onLight",
+      "method": "lossless-separated-top-row-crop",
+      "parentGeneration": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-ef5fee46-c088-4019-b13f-97c6fe275e70",
+        "modelVersion": null
+      },
+      "parentSha256": "e594924e596dc8d1cc29727b49d1c19116f578129cbf6df58307011c2fa3eec9",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1774,
+        "height": 443
+      }
+    },
+    {
+      "role": "onDark-and-onAccent",
+      "method": "lossless-separated-bottom-row-crop",
+      "parentGeneration": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-ef5fee46-c088-4019-b13f-97c6fe275e70",
+        "modelVersion": null
+      },
+      "parentSha256": "e594924e596dc8d1cc29727b49d1c19116f578129cbf6df58307011c2fa3eec9",
+      "crop": {
+        "left": 0,
+        "top": 443,
+        "width": 1774,
+        "height": 444
+      }
+    },
+    {
+      "role": "compact-onLight",
+      "method": "lossless-isolated-emblem-crop",
+      "parentGeneration": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-ef5fee46-c088-4019-b13f-97c6fe275e70",
+        "modelVersion": null
+      },
+      "parentSha256": "e594924e596dc8d1cc29727b49d1c19116f578129cbf6df58307011c2fa3eec9",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 702,
+        "height": 443
+      }
+    },
+    {
+      "role": "compact-onDark",
+      "method": "lossless-isolated-emblem-crop",
+      "parentReference": "branding/generated-on-dark.png",
+      "parentSha256": "d91f6fdd41281fbb651d35f94a57a17da5fcda9ae6f355b53ee3ac24ece05f2e",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 702,
+        "height": 444
+      }
+    }
+  ],
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T20:42:58.373958Z",
+    "master": {
+      "path": "branding/generated-master.png",
+      "sha256": "c183cd085bf23ef7f97121f5f55433a2ae6d5afd9d7cda517be415d34283ba6f",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-ef5fee46-c088-4019-b13f-97c6fe275e70",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "ce3dafbe4eca0ab0b9244b8dde019a0522cc660be9a8fe2ed266bc51656d6229",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-ef5fee46-c088-4019-b13f-97c6fe275e70",
+        "modelVersion": null
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-on-dark.png",
+      "sha256": "e41e7d57e5b38c9ff92b792873d4510a09246176a05910c50b3831337be61b6d",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-ef5fee46-c088-4019-b13f-97c6fe275e70",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-master.png",
+        "sha256": "c183cd085bf23ef7f97121f5f55433a2ae6d5afd9d7cda517be415d34283ba6f",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-ef5fee46-c088-4019-b13f-97c6fe275e70",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "d91f6fdd41281fbb651d35f94a57a17da5fcda9ae6f355b53ee3ac24ece05f2e",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-ef5fee46-c088-4019-b13f-97c6fe275e70",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "d91f6fdd41281fbb651d35f94a57a17da5fcda9ae6f355b53ee3ac24ece05f2e",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-ef5fee46-c088-4019-b13f-97c6fe275e70",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113",
+          "#101820"
+        ],
+        "onAccent": [
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ]
+      },
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "markWidths": [
+        32,
+        64
+      ],
+      "method": "Exact existing cropTransparentPadding exports from real generated RGBA inputs, composited with actual alpha at header and compact icon sizes. No template palette or composition changes.",
+      "reviewedAt": "2026-10-19T20:42:58.373958Z",
+      "review": "Visually reviewed exact pipeline exports at 120 and 180 pixel wordmark widths and 32 and 64 pixel compact sizes on all six unchanged template background colours. Actual alpha composition, spelling, crop and compact recognition checked. Affected artwork was regenerated to improve ink contrast; no shared threshold or template was changed."
+    }
+  }
+}

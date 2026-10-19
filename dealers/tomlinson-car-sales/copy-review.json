@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-source-reviewed-companion-copy",
+  "dealer": "tomlinson-car-sales",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T20:26:20.081651Z",
+  "stockSha256": "61c58d9500df8352953fab020c39bb36a67fbc7d3445b02c410f47ab792d9793",
+  "descriptions": [
+    {
+      "sourceId": "public-listing-1",
+      "sourceDescription": "The seller describes a Japanese import. The catalogue mileage conflicts with the kilometres and converted miles in the seller description; mileage is omitted. Registration and documents have not been independently verified. Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+      "en": "The seller describes a Japanese import. The catalogue mileage conflicts with the kilometres and converted miles in the seller description; mileage is omitted. Registration and documents have not been independently verified. Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+      "bg": "Продавачът описва автомобила като внос от Япония. Пробегът в каталога се различава от километрите и преобразуваните мили в описанието; пробегът е пропуснат. Регистрацията и документите не са независимо проверени. Примери от публични обяви, наблюдавани на 2026-10-19. Наличността не е потвърдена. Цените са пропуснати в този преглед."
+    },
+    {
+      "sourceId": "public-listing-2",
+      "sourceDescription": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+      "en": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+      "bg": "Примери от публични обяви, наблюдавани на 2026-10-19. Наличността не е потвърдена. Цените са пропуснати в този преглед."
+    },
+    {
+      "sourceId": "public-listing-3",
+      "sourceDescription": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+      "en": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+      "bg": "Примери от публични обяви, наблюдавани на 2026-10-19. Наличността не е потвърдена. Цените са пропуснати в този преглед."
+    }
+  ]
+}

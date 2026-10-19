@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "type": "cars-dealer-pack-draft",
+  "slug": "allerton-trade-centre",
+  "dealerId": "gb-bradford-allerton-trade-centre",
+  "status": "ready",
+  "buildReady": true,
+  "providerWrites": 0,
+  "createdAt": "2026-10-19T20:17:07.263Z",
+  "inventoryKind": "dated-listing-snapshot",
+  "inventoryRecords": 3,
+  "logoReady": true,
+  "missingFacts": [
+    {
+      "field": "business.website",
+      "required": false,
+      "reason": "No current public business value was verified in the bounded source review."
+    },
+    {
+      "field": "prices",
+      "required": false,
+      "reason": "All listing prices are omitted under the public-repository scope."
+    }
+  ],
+  "blocking": [],
+  "stockAcquisition": "current-public-catalogue-and-individual-advert-with-photo",
+  "liveListingFetchPerformed": true,
+  "next": "Ready for the guarded build path; no deployment performed."
+}
