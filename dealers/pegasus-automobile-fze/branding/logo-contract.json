@@ -1,0 +1,317 @@
+{
+  "schemaVersion": 1,
+  "dealer": "pegasus-automobile-fze",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T20:16:36Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-faithful-clean-redraw",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "24f5d804bbec41c6c85d9d6aab0840ff4a26e632b833eb97bf1cd541cd38d828",
+      "sourceSha256": "144ca8b6a963cf048cf3afdef47cb30e4659c0b1ed704290c78878d0e89e8817"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "6b7877974a204270b56882e78fe035d592ec7cb720ccafd29523c842556cf9b7",
+      "sourceSha256": "33f96ddd39648ee897d730a598c51d85ca2cdbc70fc2add0fe47788b2edadb9b"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "6b7877974a204270b56882e78fe035d592ec7cb720ccafd29523c842556cf9b7",
+      "sourceSha256": "33f96ddd39648ee897d730a598c51d85ca2cdbc70fc2add0fe47788b2edadb9b"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "144ca8b6a963cf048cf3afdef47cb30e4659c0b1ed704290c78878d0e89e8817",
+    "generation": {
+      "tool": "image_gen",
+      "generationId": "exec-2af1acb4-08a7-45a3-9480-831407c76097",
+      "identifierKind": "tool-execution-output-identifier",
+      "providerGenerationIdExposed": false,
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "6dfed1c8a1dcc1e9250cd294860f20c9d08aa07622f04d9b8bc1a805d1ca62ba",
+      "outputFileName": "exec-2af1acb4-08a7-45a3-9480-831407c76097.png",
+      "operation": "deterministic-sprite-crop",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 636,
+        "height": 679
+      }
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "50d10f5b73ccc25048e80eb22545d75ed6e69ca9cf431fe50338d4650c14f0f3",
+    "generation": {
+      "tool": "image_gen",
+      "generationId": "exec-2af1acb4-08a7-45a3-9480-831407c76097",
+      "identifierKind": "tool-execution-output-identifier",
+      "providerGenerationIdExposed": false,
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "6dfed1c8a1dcc1e9250cd294860f20c9d08aa07622f04d9b8bc1a805d1ca62ba",
+      "outputFileName": "exec-2af1acb4-08a7-45a3-9480-831407c76097.png",
+      "operation": "deterministic-sprite-crop",
+      "crop": {
+        "left": 0,
+        "top": 679,
+        "width": 636,
+        "height": 575
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "f3722f8b3768a460862a1be9e5d5eb948dd90a3a266b8c870f8df8a56d9cee0d"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "144ca8b6a963cf048cf3afdef47cb30e4659c0b1ed704290c78878d0e89e8817",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-2af1acb4-08a7-45a3-9480-831407c76097",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "6dfed1c8a1dcc1e9250cd294860f20c9d08aa07622f04d9b8bc1a805d1ca62ba",
+        "outputFileName": "exec-2af1acb4-08a7-45a3-9480-831407c76097.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 636,
+          "height": 679
+        }
+      },
+      "sourceReference": "dealers/pegasus-automobile-fze/branding/input-onLight.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "33f96ddd39648ee897d730a598c51d85ca2cdbc70fc2add0fe47788b2edadb9b",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-2af1acb4-08a7-45a3-9480-831407c76097",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "6dfed1c8a1dcc1e9250cd294860f20c9d08aa07622f04d9b8bc1a805d1ca62ba",
+        "outputFileName": "exec-2af1acb4-08a7-45a3-9480-831407c76097.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 636,
+          "top": 0,
+          "width": 618,
+          "height": 679
+        }
+      },
+      "sourceReference": "dealers/pegasus-automobile-fze/branding/input-onDark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "33f96ddd39648ee897d730a598c51d85ca2cdbc70fc2add0fe47788b2edadb9b",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-2af1acb4-08a7-45a3-9480-831407c76097",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "6dfed1c8a1dcc1e9250cd294860f20c9d08aa07622f04d9b8bc1a805d1ca62ba",
+        "outputFileName": "exec-2af1acb4-08a7-45a3-9480-831407c76097.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 636,
+          "top": 0,
+          "width": 618,
+          "height": 679
+        }
+      },
+      "sourceReference": "dealers/pegasus-automobile-fze/branding/input-onDark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "6384b6faf5c219a50300ecbd9c41b6c6a25d704183addb3dfc729c468cc71c99",
+      "sha256": "144ca8b6a963cf048cf3afdef47cb30e4659c0b1ed704290c78878d0e89e8817",
+      "crop": {
+        "left": 54,
+        "top": 174,
+        "width": 560,
+        "height": 445
+      },
+      "sourcePath": "branding/input-onLight.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "eda44fcbeefc784c61f7118ce02d441351a05fbf0843af7843b1249d2d009fac",
+      "sha256": "33f96ddd39648ee897d730a598c51d85ca2cdbc70fc2add0fe47788b2edadb9b",
+      "crop": {
+        "left": 23,
+        "top": 173,
+        "width": 559,
+        "height": 447
+      },
+      "sourcePath": "branding/input-onDark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "eda44fcbeefc784c61f7118ce02d441351a05fbf0843af7843b1249d2d009fac",
+      "sha256": "33f96ddd39648ee897d730a598c51d85ca2cdbc70fc2add0fe47788b2edadb9b",
+      "crop": {
+        "left": 23,
+        "top": 173,
+        "width": 559,
+        "height": 447
+      },
+      "sourcePath": "branding/input-onDark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "907e3536ea977bd871d807e87b1273e0f25ccd7b38710a8400332423c815fa84",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-2af1acb4-08a7-45a3-9480-831407c76097",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "6dfed1c8a1dcc1e9250cd294860f20c9d08aa07622f04d9b8bc1a805d1ca62ba",
+        "outputFileName": "exec-2af1acb4-08a7-45a3-9480-831407c76097.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 679,
+          "width": 636,
+          "height": 575
+        }
+      },
+      "sourceReference": "dealers/pegasus-automobile-fze/branding/input-mark.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "1d5a7fc3030179b0bc01911eca0ef839bdadfa20abfcc7f9c456c8286c62c383",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-2af1acb4-08a7-45a3-9480-831407c76097",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "6dfed1c8a1dcc1e9250cd294860f20c9d08aa07622f04d9b8bc1a805d1ca62ba",
+        "outputFileName": "exec-2af1acb4-08a7-45a3-9480-831407c76097.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 636,
+          "top": 679,
+          "width": 618,
+          "height": 575
+        }
+      },
+      "sourceReference": "dealers/pegasus-automobile-fze/branding/input-markOnDark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "50d10f5b73ccc25048e80eb22545d75ed6e69ca9cf431fe50338d4650c14f0f3",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-2af1acb4-08a7-45a3-9480-831407c76097",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "6dfed1c8a1dcc1e9250cd294860f20c9d08aa07622f04d9b8bc1a805d1ca62ba",
+        "outputFileName": "exec-2af1acb4-08a7-45a3-9480-831407c76097.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 679,
+          "width": 636,
+          "height": 575
+        }
+      },
+      "sourceReference": "dealers/pegasus-automobile-fze/branding/input-mark.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "f3722f8b3768a460862a1be9e5d5eb948dd90a3a266b8c870f8df8a56d9cee0d",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-2af1acb4-08a7-45a3-9480-831407c76097",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "6dfed1c8a1dcc1e9250cd294860f20c9d08aa07622f04d9b8bc1a805d1ca62ba",
+        "outputFileName": "exec-2af1acb4-08a7-45a3-9480-831407c76097.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 679,
+          "width": 636,
+          "height": 575
+        }
+      },
+      "sourceReference": "dealers/pegasus-automobile-fze/branding/input-mark.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T20:16:36Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "ebc8cd330e5592b23d0bd95f490407c99f70f32929895a19fe2f2cd22c609952",
+    "generation": {
+      "tool": "image_gen",
+      "generationId": "exec-2af1acb4-08a7-45a3-9480-831407c76097",
+      "identifierKind": "tool-execution-output-identifier",
+      "providerGenerationIdExposed": false,
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "6dfed1c8a1dcc1e9250cd294860f20c9d08aa07622f04d9b8bc1a805d1ca62ba",
+      "outputFileName": "exec-2af1acb4-08a7-45a3-9480-831407c76097.png",
+      "operation": "deterministic-sprite-crop",
+      "crop": {
+        "left": 636,
+        "top": 679,
+        "width": 618,
+        "height": 575
+      }
+    }
+  }
+}

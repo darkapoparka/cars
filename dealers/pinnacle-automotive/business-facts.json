@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "slug": "pinnacle-automotive",
+  "dealerId": "ae-dubai-pinnacle-automotive-international",
+  "business": {
+    "name": "Pinnacle Automotive International",
+    "city": "Dubai",
+    "region": "Dubai",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "Dubai Al aweer, Compass Building, Office No.SFFO0148",
+    "phone": "+971562776299",
+    "phoneDisplay": "+971562776299",
+    "email": "pinnacleauto2022@gmail.com",
+    "website": "",
+    "stockUrl": "https://www.dubicars.com/dealers/dubai-pinnacle-automotive-international-2545",
+    "hours": "",
+    "sourceUrl": "https://www.dubicars.com/dealers/dubai-pinnacle-automotive-international-2545",
+    "observedAt": "2026-10-19T20:16:36Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-pinnacle-automotive-international-2545",
+      "observedAt": "2026-10-19T20:16:36Z",
+      "supports": [
+        "public-business-identity",
+        "business-contact",
+        "address",
+        "attributed-public-stock"
+      ]
+    }
+  ]
+}

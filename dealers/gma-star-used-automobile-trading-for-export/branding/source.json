@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 1,
+  "dealer": "gma-star-used-automobile-trading-for-export",
+  "sourceLogoUrl": "https://d2souf30ck18jq.cloudfront.net/gma-star-used-automobile-trading-for-export/logo-4d6b62a0-8858-4199-ae8f-8238bc1c197d.jpeg",
+  "sourcePath": "branding/source-original.jpg",
+  "sourceSha256": "2c3edfa0855bc65761863059ef0322ea76a5e733fcce3db74a553f887eb6b10d",
+  "publishedBranding": true,
+  "sourcePage": "https://www.dubicars.com/dealers/dubai-gma-star-used-automobile-trading-for-export-3308",
+  "observedAt": "2026-10-19T20:03:53.568212Z",
+  "creationMethod": "sourced-logo-imagegen-redraw",
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "dealerApproved": false,
+  "visualReview": "Retains the sourced angular GMA STAR black/red wordmark and lightning slash. Clean transparent navy/white surface treatments reviewed; the S/lightning compact mark is a proposed adaptation.",
+  "generationPrompt": "Create ONE transparent RGBA sprite for ONE dealership brand with four separate matching assets in a 2-column, 2-row arrangement, generous fully transparent gutters. Top left compact mark in the original dark/colour inks for white backgrounds; top right matching clean WHITE compact mark for dark/red backgrounds; bottom left horizontal wordmark in original dark/colour inks; bottom right exactly matched white horizontal wordmark. All four centered in their quadrants, no labels or panels. Flat professional vector-style raster, thick strokes, clean edges, no textures or shadows. Compact mark must be recognizable at 32px. Faithful redraw of the reference GMA STAR logo: preserve bold angular italic STAR wordmark, smaller GMA above left, dark red lightning/slash motif through the centre and subtle red underline. Keep exact text 'GMA STAR'. Compact mark: bold angular S with its same red lightning slash; white version replaces dark ink with white while keeping visible red accent minimal. This is a clean source-faithful redraw, no extra words.",
+  "workingLogoPath": "branding/generated-onLight.png",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T20:17:07.086200Z",
+    "master": {
+      "path": "branding/generated-onLight.png",
+      "sha256": "c8770322f50c1acfba3ce4fe05262d5153644cd374920ae74e1e9a1f11290545",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-b4f00dd6-4463-4f73-819e-481047082709",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "fa13d3bbe765d4c7764d215146a319b15c033e5780c23a5e4106a6345236cb92",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          524,
+          887,
+          887
+        ]
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "fb0e72da6214e7fd8b493b891f4d48fee153b39df666d0112d6d7252c8b86648",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-b4f00dd6-4463-4f73-819e-481047082709",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "fa13d3bbe765d4c7764d215146a319b15c033e5780c23a5e4106a6345236cb92",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          0,
+          887,
+          524
+        ]
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-markOnDark.png",
+      "sha256": "f8310232e4fde7d99861be289151c5461557326434e321eab8dad050c860b861",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-b4f00dd6-4463-4f73-819e-481047082709",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "fa13d3bbe765d4c7764d215146a319b15c033e5780c23a5e4106a6345236cb92",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          887,
+          0,
+          1774,
+          524
+        ]
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-onLight.png",
+        "sha256": "c8770322f50c1acfba3ce4fe05262d5153644cd374920ae74e1e9a1f11290545",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-b4f00dd6-4463-4f73-819e-481047082709",
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "fa13d3bbe765d4c7764d215146a319b15c033e5780c23a5e4106a6345236cb92",
+          "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+          "crop": [
+            0,
+            524,
+            887,
+            887
+          ]
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-onDark.png",
+        "sha256": "df551214f64b3a946ed05042e8ff2b4e325a8ecf39c7d6c99f5eed468dbd224a",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-b4f00dd6-4463-4f73-819e-481047082709",
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "fa13d3bbe765d4c7764d215146a319b15c033e5780c23a5e4106a6345236cb92",
+          "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+          "crop": [
+            887,
+            524,
+            1774,
+            887
+          ]
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-onDark.png",
+        "sha256": "df551214f64b3a946ed05042e8ff2b4e325a8ecf39c7d6c99f5eed468dbd224a",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-b4f00dd6-4463-4f73-819e-481047082709",
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "fa13d3bbe765d4c7764d215146a319b15c033e5780c23a5e4106a6345236cb92",
+          "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+          "crop": [
+            887,
+            524,
+            1774,
+            887
+          ]
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820",
+        "#09090b",
+        "#17191c",
+        "#c40101"
+      ],
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "notes": "Retains the sourced angular GMA STAR black/red wordmark and lightning slash. Clean transparent navy/white surface treatments reviewed; the S/lightning compact mark is a proposed adaptation."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T20:17:07.086200Z",
+      "widths": [
+        32,
+        64,
+        96
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#101820",
+        "#c40101"
+      ],
+      "notes": "S with red lightning remains the main symbol at 32px; matched white version maintains visible lettering on dark/accent surfaces."
+    },
+    "compactMarkStatus": "proposed-compact-adaptation-not-dealer-approved"
+  },
+  "usageStatus": "public-preview-only"
+}

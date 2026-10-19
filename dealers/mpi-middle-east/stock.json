@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "dealer": "mpi-middle-east",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:10:47Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "listing-1",
+      "title": "Lexus RX500h F SPORT PERFORMANCE",
+      "make": "Lexus",
+      "model": "Rx 500H",
+      "year": 2026,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-1.jpg"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2026-lexus-rx500h-947430.html",
+      "observedAt": "2026-10-19T20:10:47Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageOnRequest": true,
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-2",
+      "title": "Lexus LM 350h Other",
+      "make": "Lexus",
+      "model": "Lm 350H",
+      "year": 2026,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-2.jpg"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2026-lexus-lm-350h-hybrid-7-seater-2026-model-ready-stock-799765.html",
+      "observedAt": "2026-10-19T20:10:47Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageOnRequest": true,
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-3",
+      "title": "Lexus LM 350h Other",
+      "make": "Lexus",
+      "model": "Lm 350H",
+      "year": 2026,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-3.jpg"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2026-lexus-lm-350h-hybrid-4-seater-2026-ready-stock-924128.html",
+      "observedAt": "2026-10-19T20:10:47Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageOnRequest": true,
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

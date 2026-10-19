@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "dealer": "pinnacle-automotive",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-pinnacle-automotive-international-2545",
+      "observedAt": "2026-10-19T20:16:36Z",
+      "supports": [
+        "public-business-identity",
+        "business-contact",
+        "address",
+        "attributed-public-stock"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "observedAt": "2026-10-19T20:16:36Z",
+  "stockMedia": [
+    {
+      "path": "dealer-stock/listing-1.jpg",
+      "sourceUrl": "https://www.dubicars.com/images/acafc2/650x380/pinnacle-automotive-international/7beab1c8-060a-4c16-abab-1603f1126c08.jpeg",
+      "listingUrl": "https://www.dubicars.com/2026-ram-5500-chassis-67l-turbodiesel-automatic-transmission-only-for-re-export-935955.html",
+      "observedAt": "2026-10-19T20:16:36Z",
+      "sourceSha256": "58c8369db1c92e3320dee003300f3729a42f6c50f44bcc859fc3db8a57cca065",
+      "sha256": "62e91628067e9b21b2b6adec2fe5f4a86c0e129f30def224d3a4d008204643d4",
+      "width": 650,
+      "height": 681,
+      "bytes": 50399,
+      "transformation": "Bounded resize to at most 1280px; optimized JPEG quality 87."
+    },
+    {
+      "path": "dealer-stock/listing-2.jpg",
+      "sourceUrl": "https://www.dubicars.com/images/8def71/650x380/pinnacle-automotive-international/3ddc982c-cb3d-446e-9148-e252d792913e.jpeg",
+      "listingUrl": "https://www.dubicars.com/2026-toyota-hiace-28l-diesel-highroof-14-seater-manual-transmission-for-re-export-only-906961.html",
+      "observedAt": "2026-10-19T20:16:36Z",
+      "sourceSha256": "4fede124ced0361d30c834ccb9ab78117b66ee246981a7083f9ddc1f977205f3",
+      "sha256": "e6e2c11a5df9a06788cb23ac9c379d9977f2855a20498a869c7448689e8df428",
+      "width": 650,
+      "height": 366,
+      "bytes": 32674,
+      "transformation": "Bounded resize to at most 1280px; optimized JPEG quality 87."
+    },
+    {
+      "path": "dealer-stock/listing-3.jpg",
+      "sourceUrl": "https://www.dubicars.com/images/401e41/650x380/pinnacle-automotive-international/1621cc6e-fce5-4d05-9b22-d78d1b839158.jpeg",
+      "listingUrl": "https://www.dubicars.com/2026-lexus-lx600-1008813.html",
+      "observedAt": "2026-10-19T20:16:36Z",
+      "sourceSha256": "6162f7eafea750c4db0f82fb2e938dd5d45a7cedda9c2ca26ba4a763325eec6d",
+      "sha256": "7bc3efe09bd653eb5eb05e7dc9aad7025a3ebf97e8b7400e5a2d944e3ed1251d",
+      "width": 650,
+      "height": 519,
+      "bytes": 83168,
+      "transformation": "Bounded resize to at most 1280px; optimized JPEG quality 87."
+    }
+  ],
+  "contactReview": {
+    "namedPersonalContactsOmitted": true,
+    "outreachPerformed": false,
+    "businessPhoneBasis": "Dealer-level public business contact field; not an individual staff contact."
+  }
+}

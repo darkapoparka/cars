@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "slug": "global-network-motors",
+  "dealerId": "ae-dubai-global-network-motors",
+  "business": {
+    "name": "Global Network Motors",
+    "city": "Dubai",
+    "region": "Dubai",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "21 Street 12/1, Dubai, United Arab Emirates",
+    "phone": "+971565910100",
+    "phoneDisplay": "+971565910100",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://auto.ae/globalnw/",
+    "hours": "",
+    "sourceUrl": "https://auto.ae/globalnw/",
+    "observedAt": "2026-10-19T20:03:53.556086Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://auto.ae/globalnw/",
+      "observedAt": "2026-10-19T20:03:53.556086Z",
+      "supports": [
+        "dealer-name",
+        "dealer-attributed-listings",
+        "dealer-attributed-photos",
+        "public-business-call-line",
+        "address"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "dealer": "pegasus-automobile-fze",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-pegasus-automobile-2488",
+      "observedAt": "2026-10-19T20:16:36Z",
+      "supports": [
+        "public-business-identity",
+        "business-contact",
+        "address",
+        "attributed-public-stock"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "observedAt": "2026-10-19T20:16:36Z",
+  "stockMedia": [
+    {
+      "path": "dealer-stock/listing-1.jpg",
+      "sourceUrl": "https://www.dubicars.com/images/74b1bd/650x380/pegasus-automobile/26c663e8-3665-43d5-a82d-6c87c713db91.jpeg",
+      "listingUrl": "https://www.dubicars.com/2024-jetour-dashing-1010554.html",
+      "observedAt": "2026-10-19T20:16:36Z",
+      "sourceSha256": "d32474fdfc2786bb994b9f7b3bd6e8cc07df3dfa6cd40d6638274596199c6c83",
+      "sha256": "55a47f40998bc6c15bbec68ea62bce2a58f7027a626ca179515bf3844f5ea421",
+      "width": 650,
+      "height": 366,
+      "bytes": 37968,
+      "transformation": "Bounded resize to at most 1280px; optimized JPEG quality 87."
+    },
+    {
+      "path": "dealer-stock/listing-2.jpg",
+      "sourceUrl": "https://www.dubicars.com/images/b00527/650x380/pegasus-automobile/18833acb-9519-4573-a2ad-942e4a0a9f70.jpeg",
+      "listingUrl": "https://www.dubicars.com/2026-changan-x5-plus-1020644.html",
+      "observedAt": "2026-10-19T20:16:36Z",
+      "sourceSha256": "6f63f61feece411babaded34a29708a500fcfae122241809f2f89eeda90961b2",
+      "sha256": "24bdd8483e2e93084c769b0e59b1d411d7920b4d57b4857fe39ca75046a27159",
+      "width": 650,
+      "height": 366,
+      "bytes": 50297,
+      "transformation": "Bounded resize to at most 1280px; optimized JPEG quality 87."
+    },
+    {
+      "path": "dealer-stock/listing-3.jpg",
+      "sourceUrl": "https://www.dubicars.com/images/4f23e1/650x380/pegasus-automobile/b48cf4be-e0c8-4ff4-8532-fe360dff9855.jpeg",
+      "listingUrl": "https://www.dubicars.com/2026-changan-x5-plus-1027334.html",
+      "observedAt": "2026-10-19T20:16:36Z",
+      "sourceSha256": "22e8bfd91d5c1dc9d075d3c904ec00f459cb1d6f42735b920de35aae8a5b7e15",
+      "sha256": "c9da050f4168a2a6864abe314f91635af94c3ea213ac5f94f4ef882cb5c84501",
+      "width": 650,
+      "height": 366,
+      "bytes": 48900,
+      "transformation": "Bounded resize to at most 1280px; optimized JPEG quality 87."
+    }
+  ],
+  "contactReview": {
+    "namedPersonalContactsOmitted": true,
+    "outreachPerformed": false,
+    "businessPhoneBasis": "Dealer-level public business contact field; not an individual staff contact."
+  }
+}

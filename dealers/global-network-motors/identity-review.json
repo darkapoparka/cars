@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T20:12:28.227352Z",
+  "dealer": "global-network-motors",
+  "dealerId": "ae-dubai-global-network-motors",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "method": "Exact retained registry and client-folder alias comparison, followed by fresh public dealer catalogue research. No existing fleet identity matched; no dealer approval is implied.",
+  "sources": [
+    {
+      "url": "https://auto.ae/globalnw/",
+      "observedAt": "2026-10-19T20:03:53.556086Z",
+      "supports": [
+        "dealer-name",
+        "dealer-attributed-listings",
+        "dealer-attributed-photos",
+        "public-business-call-line",
+        "address"
+      ]
+    }
+  ]
+}

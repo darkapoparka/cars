@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "dealer": "global-network-motors",
+  "researchId": "ae-dubai-global-network-motors",
+  "observedAt": "2026-10-19T20:03:53.556086Z",
+  "liveFetchPerformed": true,
+  "businessSources": [
+    {
+      "url": "https://auto.ae/globalnw/",
+      "observedAt": "2026-10-19T20:03:53.556086Z",
+      "supports": [
+        "dealer-name",
+        "dealer-attributed-listings",
+        "dealer-attributed-photos",
+        "public-business-call-line",
+        "address"
+      ]
+    }
+  ],
+  "stockMode": "dated-listing-snapshot",
+  "inventoryCountMeaning": "Selected currently advertised public records, not a count or confirmation of available physical stock.",
+  "media": [
+    {
+      "path": "dealer-stock/listing-252168.jpg",
+      "sourceUrl": "https://auto.ae/image/ae/s:332/plain/https://auto-ae-prod-storage.storage.googleapis.com/auto_dubai_ford_f_150_sale_252168751392470t",
+      "listingUrl": "https://auto.ae/dubai/sale/car/ford/ford-f-150-xiii-facelift-2020/id/252168/",
+      "observedAt": "2026-10-19T20:03:53.556086Z",
+      "downloadedSha256": "853eead4b1191915cc135b224f5d890b703e9781c248792142a21ed66ecd495c",
+      "downloadedDimensions": [
+        332,
+        249
+      ],
+      "sha256": "d30d55a17d24df8bc1e4d6a9f8beb7eca153f1e82127440ed6b457f628a90510",
+      "bytes": 22106,
+      "dimensions": [
+        332,
+        249
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    }
+  ],
+  "researchLimitations": [
+    "Current catalogue has one advertised Ford F-150; older Mercedes examples excluded. Current catalogue business phone used; historical directory number differs."
+  ],
+  "excludedSourceContent": [
+    "Personal names and personal or ambiguous emails",
+    "Marketplace relay numbers",
+    "Prices",
+    "Unsupported warranties, inspections, ratings and finance promises"
+  ],
+  "dealerApproval": "unknown"
+}

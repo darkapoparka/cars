@@ -1,0 +1,175 @@
+{
+  "schemaVersion": 1,
+  "dealer": "mpi-middle-east",
+  "status": "reviewed-independent-proposal",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-mpi-middle-east-2184",
+      "observedAt": "2026-10-19T20:10:47Z"
+    }
+  ],
+  "originals": [],
+  "creationMethod": "imagegen-independent-proposal",
+  "dealerApproved": false,
+  "logoSource": "proposal",
+  "researchSummary": "No confidently matched usable public dealer artwork found in the retained source and bounded search; proposed identity is not official.",
+  "generation": {
+    "tool": "image_gen",
+    "generationId": "exec-36de17c9-9d43-4542-a9d3-f6bc3ee09a31",
+    "identifierKind": "tool-execution-output-identifier",
+    "modelVersion": null,
+    "sourcePath": "branding/generation-source.png",
+    "sourceSha256": "102481cc11bca4ceca2bae291002128e12838d67b164e5cff46eb525912750f9",
+    "nativeDimensions": {
+      "width": 1254,
+      "height": 1254
+    },
+    "prompt": "Use case: logo-brand. New independent proposal for UAE automotive seller MPI Middle East; no matched real artwork found. Create a confident architectural MPI monogram with three clean interlocking forms and a subtle forward chevron. Navy and restrained turquoise. Text exactly \"MPI\" with \"MIDDLE EAST\" below in clean sans typography. Produce exactly four separated assets in a square transparent canvas, 2 by 2 grid. Top left full logo in dark ink for white backgrounds. Top right exact matched full logo in white ink for dark and red backgrounds, keep brand accent. Bottom left compact emblem only dark/accent. Bottom right same compact emblem white/accent. Generous fully transparent margins and gutters; no clipping, no labels or dividing lines. Solid flat ink, refined geometry, professional kerning, no 3D/chrome/shadows/gradients. Marks should remain clear at 32px. Only one brand identity repeated as precise production variants."
+  },
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T20:10:47Z",
+    "master": {
+      "path": "branding/input-onLight.png",
+      "sha256": "aef7df759a2a408913d2fd47f9ca5903dd7eaf0ee7866b50f525fcdfb8b96aaf",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-36de17c9-9d43-4542-a9d3-f6bc3ee09a31",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "102481cc11bca4ceca2bae291002128e12838d67b164e5cff46eb525912750f9",
+        "outputFileName": "exec-36de17c9-9d43-4542-a9d3-f6bc3ee09a31.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 647,
+          "height": 708
+        }
+      }
+    },
+    "mark": {
+      "path": "branding/input-mark.png",
+      "sha256": "d7c9f4b69d5b0b8d7cb9c59bef9551e3c4dadddd9c9de388fa7ca6b2c8700069",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-36de17c9-9d43-4542-a9d3-f6bc3ee09a31",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "102481cc11bca4ceca2bae291002128e12838d67b164e5cff46eb525912750f9",
+        "outputFileName": "exec-36de17c9-9d43-4542-a9d3-f6bc3ee09a31.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 708,
+          "width": 647,
+          "height": 546
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/input-markOnDark.png",
+      "sha256": "93058e0730de853a729195466f9ebb5ee33f89d8dafc880821973b92aa652a71",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-36de17c9-9d43-4542-a9d3-f6bc3ee09a31",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "102481cc11bca4ceca2bae291002128e12838d67b164e5cff46eb525912750f9",
+        "outputFileName": "exec-36de17c9-9d43-4542-a9d3-f6bc3ee09a31.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 647,
+          "top": 708,
+          "width": 607,
+          "height": 546
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/input-onLight.png",
+        "sha256": "aef7df759a2a408913d2fd47f9ca5903dd7eaf0ee7866b50f525fcdfb8b96aaf",
+        "generation": {
+          "tool": "image_gen",
+          "generationId": "exec-36de17c9-9d43-4542-a9d3-f6bc3ee09a31",
+          "identifierKind": "tool-execution-output-identifier",
+          "providerGenerationIdExposed": false,
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "102481cc11bca4ceca2bae291002128e12838d67b164e5cff46eb525912750f9",
+          "outputFileName": "exec-36de17c9-9d43-4542-a9d3-f6bc3ee09a31.png",
+          "operation": "deterministic-sprite-crop",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 647,
+            "height": 708
+          }
+        }
+      },
+      "onDark": {
+        "path": "branding/input-onDark.png",
+        "sha256": "cfcdc0bac40ea1dfdb9fc43907d63d86ee441bdf0d9e60797a3dbf73958a125e",
+        "generation": {
+          "tool": "image_gen",
+          "generationId": "exec-36de17c9-9d43-4542-a9d3-f6bc3ee09a31",
+          "identifierKind": "tool-execution-output-identifier",
+          "providerGenerationIdExposed": false,
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "102481cc11bca4ceca2bae291002128e12838d67b164e5cff46eb525912750f9",
+          "outputFileName": "exec-36de17c9-9d43-4542-a9d3-f6bc3ee09a31.png",
+          "operation": "deterministic-sprite-crop",
+          "crop": {
+            "left": 647,
+            "top": 0,
+            "width": 607,
+            "height": 708
+          }
+        }
+      },
+      "onAccent": {
+        "path": "branding/input-onDark.png",
+        "sha256": "cfcdc0bac40ea1dfdb9fc43907d63d86ee441bdf0d9e60797a3dbf73958a125e",
+        "generation": {
+          "tool": "image_gen",
+          "generationId": "exec-36de17c9-9d43-4542-a9d3-f6bc3ee09a31",
+          "identifierKind": "tool-execution-output-identifier",
+          "providerGenerationIdExposed": false,
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "102481cc11bca4ceca2bae291002128e12838d67b164e5cff46eb525912750f9",
+          "outputFileName": "exec-36de17c9-9d43-4542-a9d3-f6bc3ee09a31.png",
+          "operation": "deterministic-sprite-crop",
+          "crop": {
+            "left": 647,
+            "top": 0,
+            "width": 607,
+            "height": 708
+          }
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T20:10:47Z",
+      "method": "Agent reviewed generated artwork spelling, matching identity and transparent crop. White, charcoal and red contact sheet inspected; 32px compact marks reviewed.",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820",
+        "#09090b",
+        "#17191c",
+        "#c40101"
+      ],
+      "dealerApproval": false
+    }
+  }
+}

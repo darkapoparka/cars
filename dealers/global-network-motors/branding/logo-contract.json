@@ -1,0 +1,287 @@
+{
+  "schemaVersion": 1,
+  "dealer": "global-network-motors",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T20:12:28.227352Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "sourced-logo-imagegen-redraw",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "91eb08621e2fe903f4a0bfe3ca0eb2d24fc653ff257f158aef944c5d2e795e1c",
+      "sourceSha256": "8346a598ad6077da90475ab729723f27b1f96d92b128153e159d45c2b0e8a101"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "9481c7aaf18b48e9651aebffd24ad1f926cf998f33769e8e8a5a86a32d50ec41",
+      "sourceSha256": "16c47bdac25ac0198335bcf9e3e965ffc0974d3a8a9cce28d655496231ad10a4"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "9481c7aaf18b48e9651aebffd24ad1f926cf998f33769e8e8a5a86a32d50ec41",
+      "sourceSha256": "16c47bdac25ac0198335bcf9e3e965ffc0974d3a8a9cce28d655496231ad10a4"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "8346a598ad6077da90475ab729723f27b1f96d92b128153e159d45c2b0e8a101",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-3bc97335-586d-4520-8fd5-47cbf7ec625a",
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "6f9163c62162099feaa53188bc111fc6ac819017cab2b6285a22db28e6e3e440",
+      "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+      "crop": [
+        0,
+        620,
+        768,
+        1024
+      ]
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "52ade6c0885e7d93810ae81b0d4f27280682d44e8bb324cf1e128fa7e913dc26",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-3bc97335-586d-4520-8fd5-47cbf7ec625a",
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "6f9163c62162099feaa53188bc111fc6ac819017cab2b6285a22db28e6e3e440",
+      "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+      "crop": [
+        0,
+        0,
+        768,
+        620
+      ]
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "b49d2b085f2c8b267cc354022329b1565e02c5bdc7973e07f6b81817f14bb892"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "8346a598ad6077da90475ab729723f27b1f96d92b128153e159d45c2b0e8a101",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-3bc97335-586d-4520-8fd5-47cbf7ec625a",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "6f9163c62162099feaa53188bc111fc6ac819017cab2b6285a22db28e6e3e440",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          620,
+          768,
+          1024
+        ]
+      },
+      "sourceReference": "dealers/global-network-motors/branding/generated-onLight.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "16c47bdac25ac0198335bcf9e3e965ffc0974d3a8a9cce28d655496231ad10a4",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-3bc97335-586d-4520-8fd5-47cbf7ec625a",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "6f9163c62162099feaa53188bc111fc6ac819017cab2b6285a22db28e6e3e440",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          768,
+          620,
+          1536,
+          1024
+        ]
+      },
+      "sourceReference": "dealers/global-network-motors/branding/generated-onDark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "16c47bdac25ac0198335bcf9e3e965ffc0974d3a8a9cce28d655496231ad10a4",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-3bc97335-586d-4520-8fd5-47cbf7ec625a",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "6f9163c62162099feaa53188bc111fc6ac819017cab2b6285a22db28e6e3e440",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          768,
+          620,
+          1536,
+          1024
+        ]
+      },
+      "sourceReference": "dealers/global-network-motors/branding/generated-onDark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "ecad7719394871ea4fce295ba7f60dc268fdae30119aa774d3d29ffd039791cb",
+      "sha256": "8346a598ad6077da90475ab729723f27b1f96d92b128153e159d45c2b0e8a101",
+      "crop": {
+        "left": 6,
+        "top": 48,
+        "width": 762,
+        "height": 259
+      },
+      "sourcePath": "branding/generated-onLight.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "cee9f4bff0354a4c8626f207f69e56084ae09e27a53bf79157accc90f175c5cb",
+      "sha256": "16c47bdac25ac0198335bcf9e3e965ffc0974d3a8a9cce28d655496231ad10a4",
+      "crop": {
+        "left": 3,
+        "top": 47,
+        "width": 761,
+        "height": 260
+      },
+      "sourcePath": "branding/generated-onDark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "cee9f4bff0354a4c8626f207f69e56084ae09e27a53bf79157accc90f175c5cb",
+      "sha256": "16c47bdac25ac0198335bcf9e3e965ffc0974d3a8a9cce28d655496231ad10a4",
+      "crop": {
+        "left": 3,
+        "top": 47,
+        "width": 761,
+        "height": 260
+      },
+      "sourcePath": "branding/generated-onDark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "fe66bc0dc82be111afc02cbc91d39faa09b5c2dbe953057d5161c859fd0e9855",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-3bc97335-586d-4520-8fd5-47cbf7ec625a",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "6f9163c62162099feaa53188bc111fc6ac819017cab2b6285a22db28e6e3e440",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          0,
+          768,
+          620
+        ]
+      },
+      "sourceReference": "dealers/global-network-motors/branding/generated-mark.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "8dda54b1897402bf59a179b8b1ffc0ca80ef38a39c6a562eb3ff1018e60bab81",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-3bc97335-586d-4520-8fd5-47cbf7ec625a",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "6f9163c62162099feaa53188bc111fc6ac819017cab2b6285a22db28e6e3e440",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          768,
+          0,
+          1536,
+          620
+        ]
+      },
+      "sourceReference": "dealers/global-network-motors/branding/generated-markOnDark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "52ade6c0885e7d93810ae81b0d4f27280682d44e8bb324cf1e128fa7e913dc26",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-3bc97335-586d-4520-8fd5-47cbf7ec625a",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "6f9163c62162099feaa53188bc111fc6ac819017cab2b6285a22db28e6e3e440",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          0,
+          768,
+          620
+        ]
+      },
+      "sourceReference": "dealers/global-network-motors/branding/generated-mark.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "b49d2b085f2c8b267cc354022329b1565e02c5bdc7973e07f6b81817f14bb892",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-3bc97335-586d-4520-8fd5-47cbf7ec625a",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "6f9163c62162099feaa53188bc111fc6ac819017cab2b6285a22db28e6e3e440",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          0,
+          768,
+          620
+        ]
+      },
+      "sourceReference": "dealers/global-network-motors/branding/generated-mark.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T20:12:28.227352Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "9e5bc5364ab23cffc83a911dfb573b191488d6692783bbb01b54d44d8792cf62",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-3bc97335-586d-4520-8fd5-47cbf7ec625a",
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "6f9163c62162099feaa53188bc111fc6ac819017cab2b6285a22db28e6e3e440",
+      "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+      "crop": [
+        768,
+        0,
+        1536,
+        620
+      ]
+    }
+  }
+}

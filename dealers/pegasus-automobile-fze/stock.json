@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "dealer": "pegasus-automobile-fze",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:16:36Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "listing-1",
+      "title": "Jetour Dashing LUXURY",
+      "make": "Jetour",
+      "model": "Dashing",
+      "year": 2024,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-1.jpg"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2024-jetour-dashing-1010554.html",
+      "observedAt": "2026-10-19T20:16:36Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 57300,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-2",
+      "title": "Changan X5 Plus BEYOND PRO",
+      "make": "Changan",
+      "model": "X5 Plus",
+      "year": 2026,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-2.jpg"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2026-changan-x5-plus-1020644.html",
+      "observedAt": "2026-10-19T20:16:36Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageOnRequest": true,
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-3",
+      "title": "Changan X5 Plus BEYOND PRO",
+      "make": "Changan",
+      "model": "X5 Plus",
+      "year": 2026,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-3.jpg"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2026-changan-x5-plus-1027334.html",
+      "observedAt": "2026-10-19T20:16:36Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageOnRequest": true,
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

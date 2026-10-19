@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "dealer": "pinnacle-automotive",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:16:36Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "listing-1",
+      "title": "RAM 5500 Other",
+      "make": "Ram",
+      "model": "5500",
+      "year": 2026,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-1.jpg"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2026-ram-5500-chassis-67l-turbodiesel-automatic-transmission-only-for-re-export-935955.html",
+      "observedAt": "2026-10-19T20:16:36Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageOnRequest": true,
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-2",
+      "title": "Toyota Hiace DX",
+      "make": "Toyota",
+      "model": "Hiace",
+      "year": 2026,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-2.jpg"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2026-toyota-hiace-28l-diesel-highroof-14-seater-manual-transmission-for-re-export-only-906961.html",
+      "observedAt": "2026-10-19T20:16:36Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageOnRequest": true,
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-3",
+      "title": "Lexus LX600 SIGNATURE",
+      "make": "Lexus",
+      "model": "Lx 600",
+      "year": 2026,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-3.jpg"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2026-lexus-lx600-1008813.html",
+      "observedAt": "2026-10-19T20:16:36Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageOnRequest": true,
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

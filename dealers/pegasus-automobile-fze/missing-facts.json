@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "dealer": "pegasus-automobile-fze",
+  "missing": [
+    {
+      "field": "business.hours",
+      "required": false,
+      "reason": "No usable sourced value in the retained public business record."
+    },
+    {
+      "field": "prices",
+      "required": false,
+      "reason": "All listing prices are omitted under the public-repository scope."
+    },
+    {
+      "field": "business.email",
+      "required": false,
+      "reason": "Omitted a named, personal-looking or ambiguous mailbox; no value retained."
+    }
+  ],
+  "blocking": []
+}

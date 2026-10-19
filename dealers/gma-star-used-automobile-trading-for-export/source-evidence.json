@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "dealer": "gma-star-used-automobile-trading-for-export",
+  "researchId": "ae-dubai-gma-star-used-automobile-trading-for-export",
+  "observedAt": "2026-10-19T20:03:53.568212Z",
+  "liveFetchPerformed": true,
+  "businessSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-gma-star-used-automobile-trading-for-export-3308",
+      "observedAt": "2026-10-19T20:03:53.568212Z",
+      "supports": [
+        "dealer-name",
+        "dealer-attributed-listings",
+        "dealer-attributed-photos",
+        "public-business-call-line",
+        "business-email"
+      ]
+    }
+  ],
+  "stockMode": "dated-listing-snapshot",
+  "inventoryCountMeaning": "Selected currently advertised public records, not a count or confirmation of available physical stock.",
+  "media": [
+    {
+      "path": "dealer-stock/listing-962858.jpg",
+      "sourceUrl": "https://www.dubicars.com/images/135ac9/650x380/gma-star-used-automobile-trading-for-export/4e3702cb-3cac-4520-ac2d-a5b01b543043.jpeg",
+      "listingUrl": "https://www.dubicars.com/2026-toyota-hilux-sr5-non-gcc-27l-super-white-inside-red-962858.html",
+      "observedAt": "2026-10-19T20:03:53.568212Z",
+      "downloadedSha256": "8a0a54957b096ae03da3ee54a8701029b95c38b9c4cb51e8d3af0ef9ea0567b2",
+      "downloadedDimensions": [
+        650,
+        867
+      ],
+      "sha256": "f2757495939d188b47ea80f6a933d550d7fbb074fbd4e492d85ca3be5037fa3a",
+      "bytes": 96691,
+      "dimensions": [
+        650,
+        867
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    },
+    {
+      "path": "dealer-stock/listing-962396.jpg",
+      "sourceUrl": "https://www.dubicars.com/images/3f920d/650x380/gma-star-used-automobile-trading-for-export/e489d243-f389-45fc-870c-0e095c7f922f.jpeg",
+      "listingUrl": "https://www.dubicars.com/2025-nissan-sunny-16l-s-at-962396.html",
+      "observedAt": "2026-10-19T20:03:53.568212Z",
+      "downloadedSha256": "441bc6f1583ea64b0956719bb0f4fcf32ff983dfc5e5da77b26891493d02a892",
+      "downloadedDimensions": [
+        650,
+        867
+      ],
+      "sha256": "78533666149bf090f5c2df1823a5c24f68ad4c9af1c01b18b805f2aa3cdd372c",
+      "bytes": 90928,
+      "dimensions": [
+        650,
+        867
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    },
+    {
+      "path": "dealer-stock/listing-961924.jpg",
+      "sourceUrl": "https://www.dubicars.com/images/13d881/650x380/gma-star-used-automobile-trading-for-export/97fa784c-e8ba-4bed-8481-57230e8dae40.jpeg",
+      "listingUrl": "https://www.dubicars.com/2025-kia-sportage-15t-961924.html",
+      "observedAt": "2026-10-19T20:03:53.568212Z",
+      "downloadedSha256": "f27fb72d64d4981bb0b9d20cf75384323de50e442f6d013d6235c8425e9fab0b",
+      "downloadedDimensions": [
+        650,
+        867
+      ],
+      "sha256": "517f76e9c86b485ad34dbd7b22c54ec792a15a83011049dc3aae2ed75779e468",
+      "bytes": 86348,
+      "dimensions": [
+        650,
+        867
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    }
+  ],
+  "researchLimitations": [],
+  "excludedSourceContent": [
+    "Personal names and personal or ambiguous emails",
+    "Marketplace relay numbers",
+    "Prices",
+    "Unsupported warranties, inspections, ratings and finance promises"
+  ],
+  "dealerApproval": "unknown"
+}
