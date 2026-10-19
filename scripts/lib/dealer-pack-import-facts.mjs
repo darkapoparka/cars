@@ -51,6 +51,12 @@ export function adaptPackImportFacts(files, profile) {
   patch('src/lib/server/auxero-listing-data.ts', "const km = (value: number) => `${value.toLocaleString('fr-FR').replace(/\\u202f/g, ' ')} km`;",
     mileageFormatter("const km = (vehicle: {mileage: number; mileageKnown?: boolean; mileageValue?: number; mileageUnit?: 'mi' | 'km'})"));
   patch('src/lib/server/auxero-listing-data.ts', 'km(vehicle.mileage)', 'km(vehicle)', 4);
+  // The native mobile home and its comparison modal have a separate projection
+  // from the desktop inventory cards. Their labels must retain the same sourced
+  // value/unit and unknown flag before the unchanged compact-card formatter runs.
+  patch('src/lib/auxero/home-five.ts', "const formatKm = (value: number) => `${value.toLocaleString('fr-FR').replace(/\\u202f/g, ' ')} km`;",
+    mileageFormatter("const formatKm = (vehicle: {mileage: number; mileageKnown?: boolean; mileageValue?: number; mileageUnit?: 'mi' | 'km'})"));
+  patch('src/lib/auxero/home-five.ts', 'formatKm(vehicle.mileage)', 'formatKm(vehicle)', 2);
   for (const amount of ['30 000', '50 000', '70 000', '100 000']) {
     patch('src/lib/server/auxero-listing-data.ts', "label: 'Up to " + amount + " EUR'", "label: 'Up to " + amount + ' ' + currency + "'");
   }

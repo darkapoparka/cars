@@ -273,14 +273,15 @@ test('the real DOM observer distinguishes the active shadow FAB from hidden temp
 });
 
 function scrollingFixture({height=2600,pending=false,broken=false}={}) {
- const state={top:0,height,viewport:900},calls=[],images=[];
+ const state={top:0,height,viewport:900},calls=[],images=[],handles=[];
  const image=(src,y,complete,naturalWidth,{x=20,parentElement=null,style={}}={})=>{const row={src,currentSrc:src,complete,naturalWidth,y,x,parentElement,style,getBoundingClientRect:()=>({left:row.x,right:row.x+200,top:row.y-state.top,bottom:row.y-state.top+160,width:200,height:160})};return row;};
  images.push(image('/first.png',50,true,200),image('/lazy-stock.png',1700,false,0),image('/unrequested.png',height+2000,false,0));
  const document={fonts:{status:'loaded'},images,documentElement:{scrollHeight:height},body:{scrollHeight:height}},context={document,innerHeight:state.viewport,innerWidth:390,getComputedStyle:node=>({display:'block',visibility:'visible',opacity:'1',overflowX:'visible',overflowY:'visible',...node.style}),requestAnimationFrame:callback=>callback()};
  Object.defineProperty(context,'scrollY',{get:()=>state.top});const runtime=vm.createContext(context);
- const run=(fn,arg)=>{context.__arg=arg;return vm.runInContext('('+fn.toString()+')(__arg)',runtime);};
- const page={evaluate:async(fn,arg)=>run(fn,arg),waitForFunction:async(fn,arg)=>{if(!await run(fn,arg))throw Error('Bounded wait timed out');},mouse:{move:async(x,y)=>{assert.equal(x,195);assert.equal(y,450);calls.push('move');},wheel:async(_x,delta)=>{calls.push(delta);state.top=Math.max(0,Math.min(height-state.viewport,state.top+delta));for(const row of images)if(row.y>=state.top&&row.y<state.top+state.viewport&&row.src==='/lazy-stock.png'&&!pending){row.complete=true;row.naturalWidth=broken?0:200;}}}};
- return {page,state,calls,images,image};
+ const unwrap=arg=>arg?.fixtureHandle?arg.value:arg?.visited?{...arg,visited:arg.visited.value}:arg;
+ const run=(fn,arg)=>{context.__arg=unwrap(arg);return vm.runInContext('('+fn.toString()+')(__arg)',runtime);};
+ const page={evaluate:async(fn,arg)=>run(fn,arg),evaluateHandle:async fn=>{const handle={fixtureHandle:true,value:run(fn),disposed:false,async dispose(){this.disposed=true;}};handles.push(handle);return handle;},waitForFunction:async(fn,arg)=>{if(!await run(fn,arg))throw Error('Bounded wait timed out');},mouse:{move:async(x,y)=>{assert.equal(x,195);assert.equal(y,450);calls.push('move');},wheel:async(_x,delta)=>{calls.push(delta);state.top=Math.max(0,Math.min(height-state.viewport,state.top+delta));for(const row of images)if(row.y>=state.top&&row.y<state.top+state.viewport&&row.src==='/lazy-stock.png'&&!pending){row.complete=true;row.naturalWidth=broken?0:200;}}}};
+ return {page,state,calls,images,image,handles};
 }
 
 test('visitor screenshot preparation loads encountered lazy images, leaves unrequested images alone and returns to the top',async()=>{
@@ -288,7 +289,8 @@ test('visitor screenshot preparation loads encountered lazy images, leaves unreq
  assert.equal(f.images[1].complete,true);assert.equal(f.images[2].complete,false);assert.equal(result.encounteredImages,2);assert.equal(result.loadedImages,2);assert.deepEqual(Array.from(result.pendingImages),[]);assert.deepEqual(Array.from(result.failedImages),[]);
  const pending=await prepareDealerPackScreenshot(scrollingFixture({pending:true}).page);assert.equal(pending.status,'failed');assert.deepEqual(Array.from(pending.pendingImages),['/lazy-stock.png']);assert.deepEqual(Array.from(pending.failedImages),[]);
  const broken=await prepareDealerPackScreenshot(scrollingFixture({broken:true}).page);assert.deepEqual(Array.from(broken.failedImages),['/lazy-stock.png']);assert.deepEqual(Array.from(broken.pendingImages),[]);
- await assert.rejects(prepareDealerPackScreenshot(scrollingFixture({height:9000}).page,{maxSteps:2}),/bounded visitor scroll/);
+ const oversized=scrollingFixture({height:9000});await assert.rejects(prepareDealerPackScreenshot(oversized.page,{maxSteps:2}),/bounded visitor scroll/);assert(oversized.handles.every(handle=>handle.disposed));
+ assert(f.handles.every(handle=>handle.disposed));
  await assert.rejects(prepareDealerPackScreenshot(scrollingFixture().page,{maxSteps:1000}),/Invalid screenshot preparation bound/);
 });
 
@@ -306,6 +308,25 @@ test('screenshot visitation excludes horizontal and ancestor-clipped carousel im
  assert.deepEqual(Array.from(encountered.pendingImages).sort(),['/clipped-carousel.png','/horizontal-offscreen.png']);
 });
 
+test('screenshot readiness tracks exact visited elements when responsive duplicates share the same image URL',async()=>{
+ const f=scrollingFixture(),hidden=f.image('/first.png',50,false,0,{parentElement:{style:{display:'none'}}}),offscreen=f.image('/first.png',50,false,0,{x:500});
+ f.images.push(hidden,offscreen);
+ const ready=await prepareDealerPackScreenshot(f.page);assert.equal(ready.status,'passed');assert.equal(ready.imageWaitTimeouts,0);assert.equal(ready.encounteredImages,2);assert.equal(hidden.complete,false);assert.equal(offscreen.complete,false);
+ // A second, actually encountered element with identical bytes/source is an
+ // independent loading obligation; the first loaded copy cannot satisfy it.
+ const visibleDuplicate=f.image('/first.png',50,false,0);f.images.push(visibleDuplicate);
+ const pending=await prepareDealerPackScreenshot(f.page);assert.equal(pending.status,'failed');assert.equal(pending.encounteredImages,3);assert.deepEqual(Array.from(pending.pendingImages),['/first.png']);assert(pending.imageWaitTimeouts>0);
+ visibleDuplicate.complete=true;
+ const broken=await prepareDealerPackScreenshot(f.page);assert.deepEqual(Array.from(broken.failedImages),['/first.png']);assert.deepEqual(Array.from(broken.pendingImages),[]);
+ assert(f.handles.every(handle=>handle.disposed));
+});
+
+test('a visited element stays tracked if currentSrc changes after it leaves the viewport',async()=>{
+ const f=scrollingFixture(),wheel=f.page.mouse.wheel;let changed=false;
+ f.page.mouse.wheel=async(x,delta)=>{await wheel(x,delta);if(delta>0&&!changed){changed=true;f.images[0].currentSrc='/new-responsive-source.png';f.images[0].complete=false;f.images[0].naturalWidth=0;}};
+ const result=await prepareDealerPackScreenshot(f.page);assert.equal(result.status,'failed');assert.deepEqual(Array.from(result.pendingImages),['/new-responsive-source.png']);assert.equal(result.encounteredImages,2);assert(f.handles.every(handle=>handle.disposed));
+});
+
 test('placeholder text and undisclosed demo listings are failures; honest demo disclosure passes',()=>{
  const placeholder=snapshot();placeholder.text+=' Lorem ipsum dolor sit amet.';assert(assess(placeholder).findings.includes('placeholder-copy'));
  const value=snapshot(),options={snapshot:value,facts,manifest,variant:variants[0],fleet:emptyFleet,demoStock:true};assert(assessPageSnapshot(options).findings.includes('demo-stock-disclosure'));
@@ -313,6 +334,16 @@ test('placeholder text and undisclosed demo listings are failures; honest demo d
  assert.equal(stockIsDemo({stock:{kind:'dated-listing-snapshot',records:[]},manifest}),false);
  assert.equal(stockIsDemo({stock:{kind:'demo-stock',records:[]},manifest}),true);
  assert.equal(stockIsDemo({stock:{records:[{demo:true}]},manifest}),true);
+});
+
+test('visible NaN or Infinity mileage fails every journey without rejecting a legitimate Infinity dealer name',()=>{
+ for(const value of ['NaN km','NaN\u00a0mi','Infinity км','-Infinity km','+Infinity mi','NaNkm'])for(const label of ['home','inventory','detail','contact']){
+  const page=snapshot();page.text+=' '+value;
+  const result=assessPageSnapshot({snapshot:page,facts,manifest,variant:variants[0],fleet:emptyFleet,identityRequirements:dealerPackIdentityRequirements(label)});
+  assert(result.findings.includes('invalid-mileage-value'),value+' on '+label);
+ }
+ for(const value of ['Infinity Motors','Infinity model range','Mileage unknown','103,000 mi','165,762 km']){const page=snapshot();page.text+=' '+value;assert(!assess(page).findings.includes('invalid-mileage-value'),value);}
+ const hidden=snapshot();hidden.metadata+=' NaN km';assert(!assess(hidden).findings.includes('invalid-mileage-value'));
 });
 
 test('verification emits a failed JSON report if a build does not exist and never starts an uploader',async t=>{

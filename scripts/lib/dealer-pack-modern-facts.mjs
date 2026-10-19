@@ -61,6 +61,7 @@ const formatPath = 'packages/marketplace/format.ts';
 const dataPath = 'packages/marketplace-domain/testing/mock-data.ts';
 const typesPath = 'packages/marketplace-domain/types.ts';
 const financePath = 'apps/web/app/[locale]/lease/lease-finance-policy.ts';
+const cardMoneyPath = 'packages/marketplace-ui/components/vehicle-card-money.tsx';
 const displayPaths = [
   'packages/marketplace-ui/components/listing-specs.tsx',
   'packages/marketplace-ui/components/mobile-inventory-search.tsx',
@@ -87,7 +88,7 @@ const rangePaths = [
   'packages/marketplace-ui/lib/marketplace-control-copy.ts'
 ];
 export const DEALER_PACK_MODERN_PATHS = Object.freeze([...new Set([
-  formatPath, dataPath, typesPath, financePath, ...displayPaths, ...transmissionPaths, ...rangePaths,
+  formatPath, dataPath, typesPath, financePath, cardMoneyPath, ...displayPaths, ...transmissionPaths, ...rangePaths,
   'packages/marketplace/inventory-search.ts', 'packages/marketplace-domain/directory.ts',
   'packages/marketplace-ui/lib/desktop-saved-car.ts',
   'apps/web/lib/public-structured-data.ts',
@@ -102,7 +103,7 @@ export function dealerPackModernRuntime(profile) {
 export type DealerMoney = { amount: number; currency: string; priceOnRequest?: boolean };
 export type DealerMileage = { mileageValue?: number; mileageKnown?: boolean; mileageSourceValue?: number; mileageSourceUnit?: 'mi' | 'km' };
 export const dealerDistanceUnit = ${JSON.stringify(profile.business.distanceUnit)} as const;
-export const priceOnRequestLabel = (locale?: string) => locale?.toLowerCase().startsWith('bg') ? 'Цена при запитване' : 'Price on request';
+export const priceOnRequestLabel = (locale?: string, compact = false) => locale?.toLowerCase().startsWith('bg') ? (compact ? 'По заявка' : 'Цена при запитване') : (compact ? 'POA' : 'Price on request');
 export const isPublishedDealerPrice = (money: DealerMoney) => money.priceOnRequest !== true && Number.isFinite(money.amount) && money.amount > 0;
 export function dealerMileageKm(spec: DealerMileage): number {
   if (spec.mileageKnown === false) return NaN;
@@ -187,11 +188,24 @@ export function personalizeDealerPackModernFacts(files, profile) {
   put('packages/marketplace-domain/dealer-pack-facts.ts', dealerPackModernRuntime(profile));
   use(formatPath, 'priceOnRequestLabel, formatDealerPackMileage, type DealerMileage', '../marketplace-domain/dealer-pack-facts');
   patch(formatPath, '  moneyFormatter(money, locale).format(money.amount);', '  money.priceOnRequest === true ? priceOnRequestLabel(locale) : moneyFormatter(money, locale).format(money.amount);');
-  patch(formatPath, '  moneyFormatter(money, locale).formatToParts(money.amount);', '  money.priceOnRequest === true ? [{ type: "literal", value: priceOnRequestLabel(locale) }] as Intl.NumberFormatPart[] : moneyFormatter(money, locale).formatToParts(money.amount);');
+  patch(formatPath, 'export const formatMoneyParts = (money: Money, locale?: string) =>', 'export const formatMoneyParts = (money: Money, locale?: string, compact = false) =>');
+  patch(formatPath, '  moneyFormatter(money, locale).formatToParts(money.amount);', '  money.priceOnRequest === true ? [{ type: "literal", value: priceOnRequestLabel(locale, compact) }] as Intl.NumberFormatPart[] : moneyFormatter(money, locale).formatToParts(money.amount);');
+  // Supply compact factual values through the native card's existing data
+  // consumers. Its JSX, classes and geometry remain byte-for-byte unchanged.
+  patch(cardMoneyPath, '  const parts = formatMoneyParts(money, locale);', '  const parts = formatMoneyParts(money, locale, true);');
   patch(formatPath, '  fixed: "Fixed price",', '  fixed: "Fixed price",\n  on_request: "Price on request",');
   patch(formatPath, '  fixed: "Фиксирана цена",', '  fixed: "Фиксирана цена",\n  on_request: "Цена при запитване",');
   patch(formatPath, /export const formatMileage = [\s\S]*?;(?=\n\nexport const formatFuelType)/, 'export const formatMileage = (value: number, locale?: string, original: DealerMileage = {}) =>\n  formatDealerPackMileage(value, locale, original);');
   for (const name of displayPaths) patch(name, /formatMileage\(\s*((?:suggestion\.)?listing)\.spec\.mileageValue,\s*(locale|normalizedLocale)(?:,\s*\1\.spec)?\s*\)/, 'formatMileage($1.spec.mileageValue, $2, $1.spec)');
+
+  // The maintained card already provides displayValue with the full value in
+  // its title/accessible label. Unknown facts use that compact slot, so they
+  // cannot crowd out a sourced year or mileage in the one-line badge row.
+  const cardFacts = 'packages/marketplace-ui/lib/vehicle-card-policy.ts';
+  patch(cardFacts, '        value: formatMileage(listing.spec.mileageValue, locale, listing.spec),', '        value: formatMileage(listing.spec.mileageValue, locale, listing.spec),\n        ...(listing.spec.mileageKnown === false ? { displayValue: "—" } : {}),');
+  patch(cardFacts, '        value: fuelValue,', '        value: fuelValue,\n        ...(listing.spec.fuelType === "unknown" ? { displayValue: "—" } : {}),');
+  patch(cardFacts, '        value: compactTransmissionLabels[listing.spec.transmission][language],', '        value: compactTransmissionLabels[listing.spec.transmission][language],\n        ...(listing.spec.transmission === "unknown" ? { displayValue: "—" } : {}),');
+  patch(cardFacts, '        { id: "body", value: heading.bodyType },', '        { id: "body", value: heading.bodyType, ...(listing.spec.bodyType === "unknown" ? { displayValue: "—" } : {}) },');
 
   const search = 'packages/marketplace/inventory-search.ts';
   patch(search, '"mileageValue" | "fuelType"', '"mileageValue" | "fuelType" | "mileageKnown" | "mileageSourceValue" | "mileageSourceUnit"');

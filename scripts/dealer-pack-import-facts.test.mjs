@@ -11,7 +11,8 @@ const root = path.resolve(import.meta.dirname, '..');
 const sourcePaths = ['src/lib/data/daynight.ts', 'src/lib/data/vehicles.ts', 'src/lib/types/vehicle.ts',
   'src/lib/domain/vehicle-card.ts', 'src/lib/server/vehicle-detail.ts', 'src/lib/domain/vehicle-search.ts',
   'src/lib/server/inventory-options.ts', 'src/lib/server/inventory-options-mobile.ts', 'src/lib/utils/format.ts',
-  'src/lib/server/auxero-template.ts', 'src/lib/server/auxero-listing-data.ts', 'src/lib/auxero/compare.ts'];
+  'src/lib/server/auxero-template.ts', 'src/lib/server/auxero-listing-data.ts', 'src/lib/auxero/compare.ts',
+  'src/lib/auxero/home-five.ts'];
 const read = name => fs.readFileSync(path.join(root, 'templates/import', name), 'utf8');
 const withoutImports = source => source.replace(/(?:import|export)\s+(?:type\s+)?[^;]*?\sfrom\s*['"][^'"]+['"];\s*/g, '');
 const uri = source => 'data:text/javascript;base64,' + Buffer.from(stripTypeScriptTypes(source)).toString('base64');
@@ -21,7 +22,7 @@ const between = (source, start, finish) => {
   assert(begin >= 0 && end > begin, 'Actual runtime source boundary: ' + start);
   return source.slice(begin, end);
 };
-function profileFor(countryCode = 'US') {
+function profileFor(countryCode = 'US', knownMileage = 60000) {
   const business = {slug: 'optional-import-fixture', name: 'Optional Import Fixture', city: 'Recorded city',
     countryCode, currency: {GB: 'GBP', US: 'USD', AE: 'AED'}[countryCode], distanceUnit: countryCode === 'AE' ? 'km' : 'mi',
     locale: 'en-' + countryCode, observedAt: '2026-10-19', inventoryNotice: 'Dated source listing; confirm availability.',
@@ -29,7 +30,7 @@ function profileFor(countryCode = 'US') {
   const raw = {id: 'unknown', title: '2018 Audi Test', make: 'Audi', model: 'Test', year: 2018, currency: business.currency,
     priceAmount: null, priceOnRequest: true, mileageOnRequest: true, images: ['/dealer-stock/fixture.webp'],
     sourceUrl: 'https://dealer.example/stock/unknown', observedAt: '2026-10-19'};
-  const listings = [raw, {...raw, id: 'known', priceAmount: 12000, priceOnRequest: false, mileageOnRequest: false, mileageValue: 60000, mileageUnit: business.distanceUnit},
+  const listings = [raw, {...raw, id: 'known', priceAmount: 12000, priceOnRequest: false, mileageOnRequest: false, mileageValue: knownMileage, mileageUnit: business.distanceUnit},
     {...raw, id: 'zero-odometer', priceAmount: 15000, priceOnRequest: false, mileageOnRequest: false, mileageValue: 0, mileageUnit: business.distanceUnit}]
     .map((row, index) => refreshNormalizeInternals.normalizeListing(row, index, business));
   return {factPolicy: 'dealer-pack-optional-v1', business, listings};
@@ -67,7 +68,11 @@ async function actualRuntime(profile) {
     between(legacy, 'export const getAuxeroListingRuntimeData =', '\nconst compareRow ='));
   const hydrate = await evaluate(between(source('src/lib/server/auxero-template.ts'), 'const formatKm =', '\n\tconst compareLabels =') + '\nexport {formatKm};');
   const server = await evaluate(between(legacy, 'const km =', '\nconst inventoryUrl =') + '\nexport {km};');
-  return {files, changed, feed, daynight, vehicles, card, compare, search, hydrate, server,
+  const home = await evaluate('const imageForHomeFiveVehicle=vehicle=>vehicle.images[0];\n' +
+    'const inventoryText=(_locale,value)=>value;const translateVehicleTerm=(_locale,_kind,value)=>value;\n' +
+    between(source('src/lib/auxero/home-five.ts'), 'const formatKm =', '\nexport function homeFiveModalsDataFromVehicles') + '\nexport {modalVehicleFromVehicle};');
+  const compact = await evaluate(withoutImports(read('src/lib/domain/vehicle-card-labels.ts')));
+  return {files, changed, feed, daynight, vehicles, card, compare, search, hydrate, server, home, compact,
     projected: projection.getAuxeroListingRuntimeData().vehicles, format: await evaluate(source('src/lib/utils/format.ts'))};
 }
 
@@ -144,11 +149,59 @@ for (const country of ['US', 'AE']) test(country + ' actual numeric filters excl
   assert.deepEqual(ids({maxMileage: 59999}), ['zero-odometer']);
 });
 
+for (const [country, amount, full, compact] of [
+  ['GB', 103000, '103,000 mi', '103k mi'],
+  ['US', 60000, '60,000 mi', '60k mi'],
+  ['AE', 87000, '87,000 km', '87k km']
+]) test(country + ' actual mobile home and modal projections retain sourced mileage through native compact labels', async () => {
+  const profile = profileFor(country, amount), original = structuredClone(profile), runtime = await actualRuntime(profile);
+  const [unknown, known, zero] = runtime.vehicles;
+  assert.deepEqual(profile, original);
+  if (country !== 'AE') assert.equal(known.mileage, amount * 1.609344, 'Canonical search mileage still uses km');
+  const cards = runtime.home.homeFiveVehicleCardsFromVehicles(runtime.vehicles, 8, 'en');
+  assert.equal(cards[1].mileageLabel, full);
+  assert.equal(runtime.compact.compactCardMileage(cards[1].mileageLabel, 'en'), compact);
+  assert.equal(runtime.home.modalVehicleFromVehicle(known, 'en').mileageLabel, full);
+  assert.equal(cards[0].mileageLabel, '—');
+  assert.equal(cards[2].mileageLabel, '0 ' + profile.business.distanceUnit);
+  assert.equal(runtime.compact.compactCardMileage(cards[0].mileageLabel, 'en'), '—');
+  assert.equal(runtime.compact.compactCardMileage(cards[2].mileageLabel, 'en'), cards[2].mileageLabel);
+  assert.equal(cards[0].priceLabel, 'On request');
+  assert.equal(cards[0].monthlyLabel, '');
+  // Exercise the actual projection after JSON transport, where unknown NaN becomes null.
+  for (const row of [unknown, JSON.parse(JSON.stringify(unknown)), ...[NaN, null, undefined, Infinity].map(mileage => ({...unknown, mileage, mileageKnown: undefined}))]) {
+    const card = runtime.home.homeFiveVehicleCardFromVehicle(row, 0, 'en');
+    assert.equal(card.mileageLabel, '—');
+    assert.equal(runtime.compact.compactCardMileage(card.mileageLabel, 'en'), '—');
+    assert.equal(runtime.home.modalVehicleFromVehicle(row, 'en').mileageLabel, '—');
+  }
+  for (const row of [known, zero]) {
+    assert.equal(runtime.home.homeFiveVehicleCardFromVehicle(JSON.parse(JSON.stringify(row)), 0, 'en').mileageLabel,
+      row === known ? full : '0 ' + profile.business.distanceUnit);
+  }
+  const mixed = {...known, mileage: 90000, mileageValue: 90000, mileageUnit: 'km'};
+  assert.equal(runtime.home.homeFiveVehicleCardFromVehicle(mixed, 0, 'en').mileageLabel, '90,000 km');
+  assert.equal(runtime.home.homeFiveVehicleCardFromVehicle({...known, mileageKnown: false}, 0, 'en').mileageLabel, '—');
+});
+
 test('a missing or drifted late Import formatter boundary refuses the whole source map atomically', () => {
   for (const country of ['US', 'AE']) for (const missing of [true, false]) {
     const profile = profileFor(country), files = sourceFor(profile), target = 'import/src/lib/domain/vehicle-search.ts';
     if (missing) files.delete(target);
     else files.set(target, Buffer.from(files.get(target).toString().replace('return source.filter((vehicle) => {', 'return source.filter((changed) => {')));
+    const before = [...files].map(([name, bytes]) => [name, Buffer.from(bytes)]);
+    assert.throws(() => adaptPackImportFacts(files, profile), /Import facts boundary/);
+    assert.deepEqual([...files], before);
+  }
+});
+
+test('missing or drifted mobile home formatter consumers refuse all Import pack changes atomically', () => {
+  for (const country of ['GB', 'AE']) for (const boundary of ['missing', 'formatter', 'consumer']) {
+    const profile = profileFor(country), files = sourceFor(profile), target = 'import/src/lib/auxero/home-five.ts';
+    if (boundary === 'missing') files.delete(target);
+    else files.set(target, Buffer.from(files.get(target).toString().replace(
+      boundary === 'formatter' ? 'const formatKm = (value: number)' : 'formatKm(vehicle.mileage)',
+      boundary === 'formatter' ? 'const formatKm = (value: unknown)' : 'formatKm(vehicle.mileage + 1)')));
     const before = [...files].map(([name, bytes]) => [name, Buffer.from(bytes)]);
     assert.throws(() => adaptPackImportFacts(files, profile), /Import facts boundary/);
     assert.deepEqual([...files], before);

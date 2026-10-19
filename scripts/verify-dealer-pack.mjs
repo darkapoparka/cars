@@ -155,6 +155,7 @@ export function findForeignIdentity({text,phones=[],ownSlug,ownFacts,fleet}) {
 }
 
 const placeholders=/\blorem ipsum\b|\bdolor sit amet\b|\byour (?:dealership|dealer name|company name|business name|logo here)\b|\b(?:insert|replace with) (?:dealer|business|company|logo)\b|\bexample@(?:example|email)\./i;
+const invalidMileage=/(?:^|[^\p{L}\p{N}_])(?:NaN|[+-]?Infinity)\s*(?:km|mi|км)(?![\p{L}\p{N}_])/u;
 const demoDisclosure=/\b(?:demo|sample|illustrative)\b.{0,120}\b(?:stock|listings|inventory|vehicles|cars|dealer)\b|\b(?:stock|listings|inventory|vehicles|cars)\b.{0,120}\b(?:demo|sample|illustrative)\b|демонстрацион|примерни (?:автомобили|обяви)|илюстратив/iu;
 
 export function dealerPackIdentityRequirements(label) {
@@ -195,6 +196,7 @@ export function assessPageSnapshot({snapshot,facts,manifest,variant,fleet,demoSt
   const leaks=findForeignIdentity({text:[snapshot.text,snapshot.metadata].join('\n'),phones:snapshot.phones,ownSlug:manifest.slug,ownFacts:facts,fleet});
   if(leaks.length)findings.push('foreign-dealer-identity');
   if(placeholders.test([snapshot.text,snapshot.metadata].join('\n')))findings.push('placeholder-copy');
+  if(invalidMileage.test(snapshot.text??''))findings.push('invalid-mileage-value');
   if(demoStock&&requireDisclosure&&!demoDisclosure.test(snapshot.text))findings.push('demo-stock-disclosure');
   if((snapshot.errors??[]).length)findings.push('browser-runtime-error');
   if((snapshot.brokenImages??[]).length)findings.push('broken-image');
@@ -394,8 +396,8 @@ export async function completeDealerPackWelcome(page,variant) {
 }
 
 /** Screenshot visitation is bounded by the viewport and every ancestor scroll clip. */
-export function readDealerPackViewportImages(requireComplete=false) {
-  const images=[...document.images].filter(image=>{
+export function readDealerPackViewportImages({requireComplete=false,visited}={}) {
+  const elements=[...document.images].filter(image=>{
     const r=image.getBoundingClientRect(),clip={left:Math.max(0,r.left),right:Math.min(innerWidth,r.right),top:Math.max(0,r.top),bottom:Math.min(innerHeight,r.bottom)};
     if(r.width<=0||r.height<=0||clip.right<=clip.left||clip.bottom<=clip.top)return false;
     for(let node=image;node;node=node.parentElement??node.getRootNode?.().host){
@@ -409,7 +411,9 @@ export function readDealerPackViewportImages(requireComplete=false) {
       if(clip.right<=clip.left||clip.bottom<=clip.top)return false;
     }
     return true;
-  }).map(image=>({src:image.currentSrc||image.src,complete:image.complete,loaded:image.complete&&image.naturalWidth>0})).filter(image=>image.src);
+  }).filter(image=>image.currentSrc||image.src);
+  if(visited)for(const image of elements)visited.add(image);
+  const images=elements.map(image=>({src:image.currentSrc||image.src,complete:image.complete,loaded:image.complete&&image.naturalWidth>0}));
   return requireComplete?images.every(image=>image.complete):images;
 }
 
@@ -418,17 +422,19 @@ export async function prepareDealerPackScreenshot(page,{maxSteps=80,imageWaitMs=
   assert(Number.isInteger(maxSteps)&&maxSteps>0&&maxSteps<=80&&Number.isInteger(imageWaitMs)&&imageWaitMs>0&&imageWaitMs<=5000,'Invalid screenshot preparation bound');
   await page.waitForFunction(()=>!document.fonts||document.fonts.status==='loaded',null,{timeout:5000});
   const geometry=()=>page.evaluate(()=>({top:scrollY,height:Math.max(document.documentElement.scrollHeight,document.body.scrollHeight),viewport:innerHeight,width:innerWidth}));
+  // Keep exact DOM element identity in a private Playwright handle. Responsive
+  // duplicates may share a URL without ever entering this visitor's viewport.
+  const visited=await page.evaluateHandle(()=>new Set());
+  try{
   let current=await geometry(),steps=0,imageWaitTimeouts=0,reachedBottom=false;
-  const visited=new Set();
   await page.mouse.move(Math.max(1,Math.floor(current.width/2)),Math.max(1,Math.floor(current.viewport/2)));
   if(current.top>1){await page.mouse.wheel(0,-current.height-current.viewport);await page.waitForFunction(()=>scrollY<=1,null,{timeout:3000});}
   for(;steps<maxSteps;steps++){
     // A native wheel turn gives IntersectionObserver/lazy-loading a rendering
     // opportunity. Only images actually encountered in the viewport are awaited.
     await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
-    const visible=await page.evaluate(readDealerPackViewportImages);
-    visible.forEach(image=>visited.add(image.src));
-    try{await page.waitForFunction(readDealerPackViewportImages,true,{timeout:imageWaitMs});}catch{imageWaitTimeouts++;}
+    await page.evaluate(readDealerPackViewportImages,{visited});
+    try{await page.waitForFunction(readDealerPackViewportImages,{requireComplete:true,visited},{timeout:imageWaitMs});}catch{imageWaitTimeouts++;}
     current=await geometry();
     if(current.top+current.viewport>=current.height-1){reachedBottom=true;break;}
     await page.mouse.wheel(0,Math.max(120,Math.floor(current.viewport*0.75)));
@@ -437,10 +443,11 @@ export async function prepareDealerPackScreenshot(page,{maxSteps=80,imageWaitMs=
   assert(reachedBottom,'Home screenshot exceeds the bounded visitor scroll');
   await page.mouse.wheel(0,-current.height-current.viewport);
   await page.waitForFunction(()=>scrollY<=1,null,{timeout:3000});
-  const images=await page.evaluate(sources=>[...document.images].filter(image=>sources.includes(image.currentSrc||image.src)).map(image=>({src:image.currentSrc||image.src,complete:image.complete,loaded:image.complete&&image.naturalWidth>0})),[...visited]);
+  const images=await page.evaluate(elements=>[...elements].map(image=>({src:image.currentSrc||image.src,complete:image.complete,loaded:image.complete&&image.naturalWidth>0})),visited);
   const pending=images.filter(image=>!image.complete),failed=images.filter(image=>image.complete&&!image.loaded);
   return {status:pending.length?'failed':'passed',scrollSteps:steps+1,fonts:'loaded',returnedToTop:true,imageWaitTimeouts,encounteredImages:images.length,loadedImages:images.filter(image=>image.loaded).length,
-    pendingImages:pending.map(image=>imageSourceEvidence(image.src)),failedImages:failed.map(image=>imageSourceEvidence(image.src)),note:'Only encountered images were requested; actual image errors remain separate from pending lazy loads.'};
+    pendingImages:pending.map(image=>imageSourceEvidence(image.src)),failedImages:failed.map(image=>imageSourceEvidence(image.src)),note:'Only encountered image elements were awaited; actual image errors remain separate from pending lazy loads.'};
+  }finally{await visited.dispose();}
 }
 
 export function readDealerPackDom() {

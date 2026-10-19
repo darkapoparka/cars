@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { stripTypeScriptTypes } from 'node:module';
+import { createRequire, stripTypeScriptTypes } from 'node:module';
 import { DEALER_PACK_MODERN_PATHS, dealerPackModernListing, dealerPackModernRuntime, personalizeDealerPackModernFacts } from './lib/dealer-pack-modern-facts.mjs';
 import { UK_MODERN_PATHS, personalizeModernUk } from './lib/client-refresh-uk-next.mjs';
 import { refreshAdapterInternals } from './lib/client-refresh-adapters.mjs';
@@ -13,6 +13,8 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const dataPath = 'packages/marketplace-domain/testing/mock-data.ts';
 const formatPath = 'packages/marketplace/format.ts';
 const financePath = 'apps/web/app/[locale]/lease/lease-finance-policy.ts';
+const cardMoneyPath = 'packages/marketplace-ui/components/vehicle-card-money.tsx';
+const cardFactsPath = 'packages/marketplace-ui/lib/vehicle-card-policy.ts';
 const profile = (countryCode = 'US') => ({
   factPolicy: 'dealer-pack-optional-v1', slug: 'example', listings: [],
   business: { slug: 'example', name: 'Example Cars', city: 'Example City', country: countryCode, countryCode, currency: { US: 'USD', AE: 'AED', GB: 'GBP' }[countryCode], distanceUnit: countryCode === 'AE' ? 'km' : 'mi', locale: `en-${countryCode}`, observedAt: '2026-10-19', inventoryNotice: 'Dated public listing; availability unconfirmed.' }
@@ -76,6 +78,53 @@ for (const country of ['US', 'AE', 'GB']) test(`${country} overlays apply atomic
     assert.equal(format['format'+kind]('other','en'),'Other');
   }
   assert.equal(format.formatPriceType('on_request', 'en'), 'Price on request');
+});
+
+for (const country of ['US', 'AE', 'GB']) test(`${country} native compact cards retain honest and accessible facts without long missing-value labels`, async () => {
+  const { p, files } = generated(country);
+  const formatSource = runtimeImport(p) + `const leadSite = ${JSON.stringify(p.business)};\n` + stripTypeScriptTypes(withoutImports(plain(files.get(formatPath))));
+  const formatUrl = uri(formatSource), format = await import(formatUrl);
+  const formatting = `import { formatBodyType, formatFuelType, formatListingBadge, formatMileage, formatMoney } from ${JSON.stringify(formatUrl)};\n`;
+  const policy = await evaluate(plain(files.get(cardFactsPath)), formatting);
+  const absent = dealerPackModernListing(item(), 0, 'unknown', p);
+  for (const locale of ['en', 'bg']) {
+    const facts = policy.getVehicleCardSpecFacts(absent, locale);
+    assert.deepEqual(facts.map(fact => fact.displayValue ?? fact.value), ['2022', '—', '—', '—']);
+    for (const fact of facts.filter(fact => fact.id !== 'year')) {
+      assert(fact.value.length > 1, 'Full missing-fact wording remains available to the native title and accessible-label consumers');
+      assert.notEqual(fact.value, fact.displayValue);
+    }
+    const body = policy.getShowroomVehicleCardSpecFacts(absent, locale).find(fact => fact.id === 'body');
+    assert.equal(body.displayValue, '—');
+    assert.equal(body.value, format.formatBodyType('unknown', locale));
+  }
+  const published = dealerPackModernListing(known({ mileageValue: 103000, mileageUnit: p.business.distanceUnit, bodyType: 'suv', fuelType: 'gasoline' }), 0, 'known', p);
+  const facts = policy.getVehicleCardSpecFacts(published, 'en');
+  assert.equal(facts.find(fact => fact.id === 'mileage').value, `103,000 ${p.business.distanceUnit}`);
+  assert.equal(facts.find(fact => fact.id === 'mileage').displayValue, undefined);
+  assert.equal(facts.find(fact => fact.id === 'fuel').value, 'Gasoline');
+  assert.equal(facts.find(fact => fact.id === 'transmission').mobileDisplayValue, 'Auto');
+  const other = dealerPackModernListing(known({ fuelType: 'other', bodyType: 'other', mileageValue: 0, mileageUnit: 'km' }), 1, 'other', p);
+  assert.equal(policy.getVehicleCardSpecFacts(other, 'en').find(fact => fact.id === 'fuel').displayValue, undefined);
+  assert.equal(policy.getVehicleCardSpecFacts(other, 'en').find(fact => fact.id === 'mileage').value, '0 km');
+  assert.equal(policy.getShowroomVehicleCardSpecFacts(other, 'en').find(fact => fact.id === 'body').value, 'Other');
+
+  // Execute the actual native primary-price component, which calls parts
+  // directly and does not use formatVehicleCardMoney. Only its data call may
+  // change; the complete JSX fragment remains the selected template's bytes.
+  const source = plain(files.get(cardMoneyPath));
+  const original = fs.readFileSync(path.join(root, 'templates/modern', cardMoneyPath), 'utf8').replace(/\r\n/g, '\n');
+  assert.equal(source.slice(source.indexOf('  return (')), original.slice(original.indexOf('  return (')));
+  const esbuild = createRequire(process.env.CARS_ESBUILD_RESOLVE_FROM || import.meta.url)('esbuild');
+  const compiled = esbuild.transformSync(withoutImports(source), { loader: 'tsx', format: 'esm', jsxFactory: 'h', jsxFragment: 'Fragment' }).code;
+  const component = await import(uri(`import { formatMoneyParts } from ${JSON.stringify(formatUrl)};\nconst Fragment = Symbol('fragment'); const h = (_tag, _props, ...children) => children.flat(Infinity).filter(value => value != null && value !== false).join('');\n` + compiled));
+  assert.equal(component.VehicleCardMoney({ money: absent.price, locale: 'en' }), 'POA');
+  assert.equal(component.VehicleCardMoney({ money: absent.price, locale: 'bg' }), 'По заявка');
+  assert.equal(format.formatMoney(absent.price, 'en'), 'Price on request', 'Full-price descriptions retain their explicit wording');
+  for (const amount of [0, 12345]) {
+    const money = { amount, currency: p.business.currency };
+    assert.equal(component.VehicleCardMoney({ money, locale: 'en' }), format.formatMoney(money, 'en'));
+  }
 });
 
 test('unknown categories remain distinct from sourced other through the native filters',async()=>{
