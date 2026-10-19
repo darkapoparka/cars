@@ -1,0 +1,644 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-m1-visual-baseline",
+  "repository": "darkapoparka/cars",
+  "sourceCommit": "a999878a921fb61b37bf198c43275550814f88cc",
+  "runId": "39284983471",
+  "attempt": "2",
+  "playwrightVersion": "1.62.1",
+  "viewportHeight": 900,
+  "deviceScaleFactor": 1,
+  "fullPage": true,
+  "animations": "disabled",
+  "dealerOrder": [
+    "za-motors",
+    "wadishee-used-cars",
+    "granada-auto-sales"
+  ],
+  "dealers": {
+    "za-motors": {
+      "buildReportSha256": "a99f8f62d1427679eada09b42816d57547b8cef4e47c2aae93c1b6afd1c76b5a",
+      "qaReportSha256": "5303eafa95bff512e6de7a130f1480f954edee97ac8474307a3a62297d3ea75b",
+      "packDigest": "a562c104179389cfc9fb98e88fb2d29dc47fad00f5c53234860afe3b222bb5e6",
+      "releaseDigest": "2920143c97546de03d5e7c7c9f572fb87cee2b088cf48fbba40d575c73cfc9c3",
+      "outputDigest": "8787916ddb0b9c47ec12cc486821ceb3b01b69edbacbfcaff622f4a3eef4ef50",
+      "fabLogoSha256": "40619d1abe626bde53f5b34a96c3b41c6b2664cce2e3dc52058c009df364bb90",
+      "screenshots": [
+        {
+          "key": "auto-best",
+          "width": 320,
+          "route": "home",
+          "path": "screenshots/auto-best-320-home.png",
+          "sha256": "ca996651924f7459794a21ba1384c99852904b88800859dd82984fdf4baefa8c",
+          "pixels": {
+            "width": 320,
+            "height": 2789
+          }
+        },
+        {
+          "key": "auto-best",
+          "width": 390,
+          "route": "home",
+          "path": "screenshots/auto-best-390-home.png",
+          "sha256": "ea27702dd1f1766ddf3e02bf0e6e08446f7f1458a74b7234bb734e2687895a7c",
+          "pixels": {
+            "width": 390,
+            "height": 2822
+          }
+        },
+        {
+          "key": "auto-best",
+          "width": 1280,
+          "route": "home",
+          "path": "screenshots/auto-best-1280-home.png",
+          "sha256": "6aba1e13623fd3742abe67b68db186811fb38a24851c59969f2234601c373d08",
+          "pixels": {
+            "width": 1280,
+            "height": 3853
+          }
+        },
+        {
+          "key": "modern",
+          "width": 320,
+          "route": "home",
+          "path": "screenshots/modern-320-home.png",
+          "sha256": "619be6757becf0e5342668adf6e5594c57fe8719c6ee6b5062ca3f9c3c4343d8",
+          "pixels": {
+            "width": 320,
+            "height": 900
+          }
+        },
+        {
+          "key": "modern",
+          "width": 390,
+          "route": "home",
+          "path": "screenshots/modern-390-home.png",
+          "sha256": "a0dab60a4a713da5acdfd82c5e6baa0517936eb6315f0065d5f5dfa83130389c",
+          "pixels": {
+            "width": 390,
+            "height": 900
+          }
+        },
+        {
+          "key": "modern",
+          "width": 1280,
+          "route": "home",
+          "path": "screenshots/modern-1280-home.png",
+          "sha256": "1dec2874fbf61a3198959bdc572303d396f75e46ba9dea9e2c9365ab3eb9563e",
+          "pixels": {
+            "width": 1280,
+            "height": 1425
+          }
+        },
+        {
+          "key": "import",
+          "width": 320,
+          "route": "home",
+          "path": "screenshots/import-320-home.png",
+          "sha256": "1cbf83a239597425724def2feeb32434fd15797ac71c2fa4f0393fc58162a096",
+          "pixels": {
+            "width": 320,
+            "height": 3219
+          }
+        },
+        {
+          "key": "import",
+          "width": 390,
+          "route": "home",
+          "path": "screenshots/import-390-home.png",
+          "sha256": "9290e6dbdf68d9faa7fda6082602503170505fa02bbc47c585abb333a653e6d3",
+          "pixels": {
+            "width": 390,
+            "height": 3290
+          }
+        },
+        {
+          "key": "import",
+          "width": 1280,
+          "route": "home",
+          "path": "screenshots/import-1280-home.png",
+          "sha256": "3e5ec424060c7ff43200ac4136a5c9f3536d94fab3aa6a79cf2bba9c1715cb08",
+          "pixels": {
+            "width": 1280,
+            "height": 3515
+          }
+        },
+        {
+          "key": "app",
+          "width": 320,
+          "route": "home",
+          "path": "screenshots/app-320-home.png",
+          "sha256": "2ed7b16a802a63e8c5816614f5fc07b5cb215388d1c19462b187a59fb4623ea7",
+          "pixels": {
+            "width": 320,
+            "height": 1119
+          }
+        },
+        {
+          "key": "app",
+          "width": 390,
+          "route": "home",
+          "path": "screenshots/app-390-home.png",
+          "sha256": "009fc35f47279e60e4469b2794d5089e1f99163257e6f90e940d3b0cae3161b8",
+          "pixels": {
+            "width": 390,
+            "height": 1119
+          }
+        },
+        {
+          "key": "app",
+          "width": 1280,
+          "route": "home",
+          "path": "screenshots/app-1280-home.png",
+          "sha256": "480cede2624aeeafcf23b9edf4b6596ad1555208b90065ab1637246c609dea09",
+          "pixels": {
+            "width": 1280,
+            "height": 1115
+          }
+        },
+        {
+          "key": "mobile",
+          "width": 320,
+          "route": "home",
+          "path": "screenshots/mobile-320-home.png",
+          "sha256": "dfdd3565356341b0364201b4e162b3ce2beff47adff224b9d6f69aaab21e9832",
+          "pixels": {
+            "width": 320,
+            "height": 1141
+          }
+        },
+        {
+          "key": "mobile",
+          "width": 390,
+          "route": "home",
+          "path": "screenshots/mobile-390-home.png",
+          "sha256": "aa0cfd8a77e4075aaaa33eb9cdcc6f7e07e1561f7dc473e2da8488dda215e6d5",
+          "pixels": {
+            "width": 390,
+            "height": 1141
+          }
+        },
+        {
+          "key": "mobile",
+          "width": 1280,
+          "route": "home",
+          "path": "screenshots/mobile-1280-home.png",
+          "sha256": "1fb2f95c28f213cad29d2075f5e7305d0010b3027eceddd5908dafac55d236f2",
+          "pixels": {
+            "width": 1280,
+            "height": 917
+          }
+        },
+        {
+          "key": "karento-best",
+          "width": 320,
+          "route": "home",
+          "path": "screenshots/karento-best-320-home.png",
+          "sha256": "dfb420fde717b64fdced89d37a1aaa9756ce21d905b2d1a5c5376d82eb41e3bc",
+          "pixels": {
+            "width": 320,
+            "height": 900
+          }
+        },
+        {
+          "key": "karento-best",
+          "width": 390,
+          "route": "home",
+          "path": "screenshots/karento-best-390-home.png",
+          "sha256": "ad64d608eba5060d6a3fb4f7fbe46c0c2c021253670fe22b8c6856d89382c8f8",
+          "pixels": {
+            "width": 390,
+            "height": 900
+          }
+        },
+        {
+          "key": "karento-best",
+          "width": 1280,
+          "route": "home",
+          "path": "screenshots/karento-best-1280-home.png",
+          "sha256": "02919f46ca20f76f194188f9094b443ca50c1e0b624a6396a9b8c4754bd22b9a",
+          "pixels": {
+            "width": 1280,
+            "height": 4756
+          }
+        }
+      ]
+    },
+    "wadishee-used-cars": {
+      "buildReportSha256": "69b0380dbcf4b8daddd0152c38f9b8939675e8d5a787bcc8793f26be3894e514",
+      "qaReportSha256": "ba0b63e15282d0a439038da34a26ea65a471ef28ac86b1a60f217b539441528f",
+      "packDigest": "9e91431cc7968a2588687c8539a834fe79e84c4526ad9e3486c85158fca2ce86",
+      "releaseDigest": "2920143c97546de03d5e7c7c9f572fb87cee2b088cf48fbba40d575c73cfc9c3",
+      "outputDigest": "89889e1ba51b5735b0c8cb64438142537f1495b9c9357ac3617cfeb12fbd5a47",
+      "fabLogoSha256": "055c256f544b608723690a72fbae02330d543ce387da02b7c2f9c97247085c53",
+      "screenshots": [
+        {
+          "key": "auto-best",
+          "width": 320,
+          "route": "home",
+          "path": "screenshots/auto-best-320-home.png",
+          "sha256": "4df70709f562a81cf293c782c9bde5af4587137155f21ca6021d8696ab039986",
+          "pixels": {
+            "width": 320,
+            "height": 2789
+          }
+        },
+        {
+          "key": "auto-best",
+          "width": 390,
+          "route": "home",
+          "path": "screenshots/auto-best-390-home.png",
+          "sha256": "823593c16f0a40442a1251c8623626ee9ead0ac5cf2cb5652dec5061d8011a40",
+          "pixels": {
+            "width": 390,
+            "height": 2810
+          }
+        },
+        {
+          "key": "auto-best",
+          "width": 1280,
+          "route": "home",
+          "path": "screenshots/auto-best-1280-home.png",
+          "sha256": "7a20f829e7ec7a26f05f010798e9d907694a2f3f6d741f981c943ebef4b2f165",
+          "pixels": {
+            "width": 1280,
+            "height": 3853
+          }
+        },
+        {
+          "key": "modern",
+          "width": 320,
+          "route": "home",
+          "path": "screenshots/modern-320-home.png",
+          "sha256": "199cfd9356f84657c8e4139d1b4f6d1a65db967eaa4d7837203e0490ac44961a",
+          "pixels": {
+            "width": 320,
+            "height": 900
+          }
+        },
+        {
+          "key": "modern",
+          "width": 390,
+          "route": "home",
+          "path": "screenshots/modern-390-home.png",
+          "sha256": "71ee8fc47299c2eb54ab0978f2fcb74a6eb4b73b65eacbccfd991f7a5b173006",
+          "pixels": {
+            "width": 390,
+            "height": 900
+          }
+        },
+        {
+          "key": "modern",
+          "width": 1280,
+          "route": "home",
+          "path": "screenshots/modern-1280-home.png",
+          "sha256": "3928f0fff3ce8bc7046a118076c63f477e7441ec751ec889be51a10ccd882d51",
+          "pixels": {
+            "width": 1280,
+            "height": 1425
+          }
+        },
+        {
+          "key": "import",
+          "width": 320,
+          "route": "home",
+          "path": "screenshots/import-320-home.png",
+          "sha256": "4e3cbfbaa48f5b7738f29db83226c991e0de2cab846b46981449670c8865d8ef",
+          "pixels": {
+            "width": 320,
+            "height": 3266
+          }
+        },
+        {
+          "key": "import",
+          "width": 390,
+          "route": "home",
+          "path": "screenshots/import-390-home.png",
+          "sha256": "8c2da0452b6489e6b50712026f5f808383c422ea3cfa43a2e01b93b8eaffd62e",
+          "pixels": {
+            "width": 390,
+            "height": 3291
+          }
+        },
+        {
+          "key": "import",
+          "width": 1280,
+          "route": "home",
+          "path": "screenshots/import-1280-home.png",
+          "sha256": "a000eb2a1e62819849e54f15b8ffdeaf7406d5ec2ece83ff041dccbe2ead86f8",
+          "pixels": {
+            "width": 1280,
+            "height": 3515
+          }
+        },
+        {
+          "key": "app",
+          "width": 320,
+          "route": "home",
+          "path": "screenshots/app-320-home.png",
+          "sha256": "aeb7ada6e15ace36521890c53a5bc12df321ca48d9b901d9c174e8168b8e8363",
+          "pixels": {
+            "width": 320,
+            "height": 1141
+          }
+        },
+        {
+          "key": "app",
+          "width": 390,
+          "route": "home",
+          "path": "screenshots/app-390-home.png",
+          "sha256": "1a1d85cde64a90570875cfd5b8d3d37f9eb8daeab2ce2b01f4fb18d6b43371b2",
+          "pixels": {
+            "width": 390,
+            "height": 1141
+          }
+        },
+        {
+          "key": "app",
+          "width": 1280,
+          "route": "home",
+          "path": "screenshots/app-1280-home.png",
+          "sha256": "d4fc5708d0810e7adb8c5da5dc3a5697b054ee5c69d877be4da6a3eab0e4e877",
+          "pixels": {
+            "width": 1280,
+            "height": 1115
+          }
+        },
+        {
+          "key": "mobile",
+          "width": 320,
+          "route": "home",
+          "path": "screenshots/mobile-320-home.png",
+          "sha256": "92d941dfb1ba46853c8dd0162f84219ac04389dccbbcb352fbd3719386869641",
+          "pixels": {
+            "width": 320,
+            "height": 1141
+          }
+        },
+        {
+          "key": "mobile",
+          "width": 390,
+          "route": "home",
+          "path": "screenshots/mobile-390-home.png",
+          "sha256": "3f86db041baa7d9467590a1ce5b90dc095d448f9c2547fe5f397f5c04c008659",
+          "pixels": {
+            "width": 390,
+            "height": 1141
+          }
+        },
+        {
+          "key": "mobile",
+          "width": 1280,
+          "route": "home",
+          "path": "screenshots/mobile-1280-home.png",
+          "sha256": "a483153fde9b6b3ce0a990076f1af73ad1ea5c63612902c203f499bc3a1977af",
+          "pixels": {
+            "width": 1280,
+            "height": 917
+          }
+        },
+        {
+          "key": "karento-best",
+          "width": 320,
+          "route": "home",
+          "path": "screenshots/karento-best-320-home.png",
+          "sha256": "58e975c8da995c47a210db96177895afac89b17939e8dbc49fea6dc97bd55725",
+          "pixels": {
+            "width": 320,
+            "height": 900
+          }
+        },
+        {
+          "key": "karento-best",
+          "width": 390,
+          "route": "home",
+          "path": "screenshots/karento-best-390-home.png",
+          "sha256": "19a189a6952d779a8a87d6f2ce718370f76f785f2b403dd1a49ed7f085fb51f6",
+          "pixels": {
+            "width": 390,
+            "height": 900
+          }
+        },
+        {
+          "key": "karento-best",
+          "width": 1280,
+          "route": "home",
+          "path": "screenshots/karento-best-1280-home.png",
+          "sha256": "34a7cbf4d5b26941e4f6a62cef6127176c98e0097818cc1199d6b5f2e11ebfa5",
+          "pixels": {
+            "width": 1280,
+            "height": 4757
+          }
+        }
+      ]
+    },
+    "granada-auto-sales": {
+      "buildReportSha256": "7f1c9e0863aa5fe4938ab7dbae4ad6e0db7ca7e9ce16a8b8ffa7cf1cc384c07e",
+      "qaReportSha256": "82c14b45aefb4c45e8db1ba503edf76176e2e09a58e30b1c281e4102a4308e11",
+      "packDigest": "4a9bf13cb6eff09b020e47e1a685528254b6e8b6bea5668b818189a538a83c78",
+      "releaseDigest": "2920143c97546de03d5e7c7c9f572fb87cee2b088cf48fbba40d575c73cfc9c3",
+      "outputDigest": "afa3dbfdf51a981f526a10a21b83921e3fe2dcea313462ebe94a87841e8283f5",
+      "fabLogoSha256": "23ef336c4cd1c788a2e63ac9b7966159994d70fb859cb5e0371b23cc209012de",
+      "screenshots": [
+        {
+          "key": "auto-best",
+          "width": 320,
+          "route": "home",
+          "path": "screenshots/auto-best-320-home.png",
+          "sha256": "d47eb1f45f6a419605896436c4652c97eccbdf3e3400d1595e1cd1f92b7638b7",
+          "pixels": {
+            "width": 320,
+            "height": 2797
+          }
+        },
+        {
+          "key": "auto-best",
+          "width": 390,
+          "route": "home",
+          "path": "screenshots/auto-best-390-home.png",
+          "sha256": "5005e4e613f7510aaaafa946a3ce18437f82af5e5d422ff1c8e291d001024c58",
+          "pixels": {
+            "width": 390,
+            "height": 2810
+          }
+        },
+        {
+          "key": "auto-best",
+          "width": 1280,
+          "route": "home",
+          "path": "screenshots/auto-best-1280-home.png",
+          "sha256": "e577f6d39d04c6ac955d3ec2335ee024f48f29e770858d14ffe294fe78881758",
+          "pixels": {
+            "width": 1280,
+            "height": 3802
+          }
+        },
+        {
+          "key": "modern",
+          "width": 320,
+          "route": "home",
+          "path": "screenshots/modern-320-home.png",
+          "sha256": "8fb62c0d6692eb3882b2cbdb8a55c1eface6b08eb2b712f2b1bcfda833f08ea1",
+          "pixels": {
+            "width": 320,
+            "height": 900
+          }
+        },
+        {
+          "key": "modern",
+          "width": 390,
+          "route": "home",
+          "path": "screenshots/modern-390-home.png",
+          "sha256": "b2a79bfa2b42d0d4c415874032e164be29afc45a519fcb9e1b9d00416b65f6d9",
+          "pixels": {
+            "width": 390,
+            "height": 900
+          }
+        },
+        {
+          "key": "modern",
+          "width": 1280,
+          "route": "home",
+          "path": "screenshots/modern-1280-home.png",
+          "sha256": "3566b9e8c4c462d1ba8de59efc88cc7a64316651e3b08206992e74192efd35b2",
+          "pixels": {
+            "width": 1280,
+            "height": 1425
+          }
+        },
+        {
+          "key": "import",
+          "width": 320,
+          "route": "home",
+          "path": "screenshots/import-320-home.png",
+          "sha256": "7cf8bb7edf086c256778a8ef95e863170d50d101bda19a9a291ad51b1832baea",
+          "pixels": {
+            "width": 320,
+            "height": 3245
+          }
+        },
+        {
+          "key": "import",
+          "width": 390,
+          "route": "home",
+          "path": "screenshots/import-390-home.png",
+          "sha256": "5ec2d610cdea6b5293a53336cbcb1c4549b378a451377aabce5b0e198e3ef573",
+          "pixels": {
+            "width": 390,
+            "height": 3271
+          }
+        },
+        {
+          "key": "import",
+          "width": 1280,
+          "route": "home",
+          "path": "screenshots/import-1280-home.png",
+          "sha256": "e80f55646f4d2ddf3e003671ef36986ba174112bf978b1e623c4cb1eea6cc6c1",
+          "pixels": {
+            "width": 1280,
+            "height": 3515
+          }
+        },
+        {
+          "key": "app",
+          "width": 320,
+          "route": "home",
+          "path": "screenshots/app-320-home.png",
+          "sha256": "2b461e15017317f52807b900383969316111cdef7a7fa273c53b7589a656726e",
+          "pixels": {
+            "width": 320,
+            "height": 1124
+          }
+        },
+        {
+          "key": "app",
+          "width": 390,
+          "route": "home",
+          "path": "screenshots/app-390-home.png",
+          "sha256": "ca83680e94e71773c8b0f6f6741aa2391ade0a9593c74c8a867cd08f043fc54d",
+          "pixels": {
+            "width": 390,
+            "height": 1124
+          }
+        },
+        {
+          "key": "app",
+          "width": 1280,
+          "route": "home",
+          "path": "screenshots/app-1280-home.png",
+          "sha256": "38520d1ac73116033591061cb93260e0ce990c61a3e6021037f4673fec45dfe9",
+          "pixels": {
+            "width": 1280,
+            "height": 1115
+          }
+        },
+        {
+          "key": "mobile",
+          "width": 320,
+          "route": "home",
+          "path": "screenshots/mobile-320-home.png",
+          "sha256": "0d6b0e29f77ec83b5b070df9469ebb95276f1ce3c11dab8e75f87e60fdf4f764",
+          "pixels": {
+            "width": 320,
+            "height": 1141
+          }
+        },
+        {
+          "key": "mobile",
+          "width": 390,
+          "route": "home",
+          "path": "screenshots/mobile-390-home.png",
+          "sha256": "f4a2e312836a407ee2ef57f83ceb2ab4f84da5a1c7ead0153bd3d0262c8ab1c2",
+          "pixels": {
+            "width": 390,
+            "height": 1141
+          }
+        },
+        {
+          "key": "mobile",
+          "width": 1280,
+          "route": "home",
+          "path": "screenshots/mobile-1280-home.png",
+          "sha256": "373dbe14317c1df98ddf50aced54ac036c6c088f2de32cc316f003b4db586486",
+          "pixels": {
+            "width": 1280,
+            "height": 917
+          }
+        },
+        {
+          "key": "karento-best",
+          "width": 320,
+          "route": "home",
+          "path": "screenshots/karento-best-320-home.png",
+          "sha256": "2ac0dae95544894f926dff1c75f581fbcc3ad98a454eeb7c0f100b0c2a4507a6",
+          "pixels": {
+            "width": 320,
+            "height": 900
+          }
+        },
+        {
+          "key": "karento-best",
+          "width": 390,
+          "route": "home",
+          "path": "screenshots/karento-best-390-home.png",
+          "sha256": "bd0f0a57c3430ccd5b734d41da985c96944684f2f083e6c1e61f55d77aba62aa",
+          "pixels": {
+            "width": 390,
+            "height": 900
+          }
+        },
+        {
+          "key": "karento-best",
+          "width": 1280,
+          "route": "home",
+          "path": "screenshots/karento-best-1280-home.png",
+          "sha256": "17ebf3386574bfba6b6b1384497f878101fd535898ce83a830d46bdd342715c8",
+          "pixels": {
+            "width": 1280,
+            "height": 4739
+          }
+        }
+      ]
+    }
+  }
+}

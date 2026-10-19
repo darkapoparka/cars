@@ -479,7 +479,8 @@ export function readDealerPackDom() {
     const roots=[document];for(let i=0;i<roots.length;i++)for(const element of roots[i].querySelectorAll('*'))if(element.shadowRoot)roots.push(element.shadowRoot);
     const all=selector=>roots.flatMap(root=>[...root.querySelectorAll(selector)]);
     const visible=element=>{const r=element.getBoundingClientRect();if(!element.getClientRects().length||r.width<=0||r.height<=0)return false;for(let node=element;node;node=node.parentElement??node.getRootNode?.().host){const style=getComputedStyle(node);if(style.visibility==='hidden'||style.display==='none'||style.opacity==='0')return false;}return true;};
-    const images=all('img').map(element=>{const inSwitcher=element.getRootNode?.().host?.tagName==='DEALER-DESIGN-SWITCHER';return {src:element.currentSrc||element.src,alt:element.alt,visible:visible(element),complete:element.complete,loaded:element.complete&&element.naturalWidth>0,width:element.width,height:element.height,
+    const images=all('img').map(element=>{const inSwitcher=element.getRootNode?.().host?.tagName==='DEALER-DESIGN-SWITCHER',bounds=element.getBoundingClientRect();return {src:element.currentSrc||element.src,alt:element.alt,visible:visible(element),complete:element.complete,loaded:element.complete&&element.naturalWidth>0,width:element.width,height:element.height,
+      bounds:{x:bounds.x,y:bounds.y,width:bounds.width,height:bounds.height},
       consumer:inSwitcher?(element.closest('button.fab')?'fab':'switcher'):'page'};});
     const text=[document.body.innerText,...roots.slice(1).flatMap(root=>[...root.children].filter(visible).map(element=>element.innerText??''))].join('\n');
     const metadata=[document.title,...all('meta[name="description"],meta[property^="og:"]').map(element=>element.content),...all('script[type="application/ld+json"]').map(element=>element.textContent)].join('\n');
@@ -513,7 +514,7 @@ export async function observeDealerPackImages(images,{origin,logoHashes,fabLogoH
 }
 
 const imageSourceEvidence=src=>src.startsWith('data:')?src.slice(0,src.indexOf(',')+1)+'[omitted]':src;
-const imageEvidence=image=>({src:imageSourceEvidence(image.src),alt:image.alt,consumer:image.consumer,visible:image.visible,loaded:image.loaded,width:image.width,height:image.height,sha256:image.sha256,dealerLogo:image.dealerLogo,dealerFabLogo:image.dealerFabLogo});
+const imageEvidence=image=>({src:imageSourceEvidence(image.src),alt:image.alt,consumer:image.consumer,visible:image.visible,loaded:image.loaded,width:image.width,height:image.height,bounds:image.bounds,sha256:image.sha256,dealerLogo:image.dealerLogo,dealerFabLogo:image.dealerFabLogo});
 
 async function pageSnapshot(page,response,branding,imageDigests,errors){
   const value=await page.evaluate(readDealerPackDom);
