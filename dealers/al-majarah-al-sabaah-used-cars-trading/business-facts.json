@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "slug": "al-majarah-al-sabaah-used-cars-trading",
+  "dealerId": "ae-umm-al-quwain-al-majarah-al-sabaah-used-cars",
+  "business": {
+    "name": "Al Majarah Al Sabaah Used Cars Trading",
+    "city": "Umm al-Quwain",
+    "region": "Umm al-Quwain",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "Umm Al Thuoob, Umm Al Qawain, UAE",
+    "phone": "+971504027960",
+    "phoneDisplay": "+971504027960",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://licenseplate.ae/ar/cars/dealer/al-majarah-al-sabaah-used-cars",
+    "hours": "",
+    "sourceUrl": "https://licenseplate.ae/ar/cars/dealer/al-majarah-al-sabaah-used-cars",
+    "observedAt": "2026-10-19T20:00:28.930638Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://licenseplate.ae/ar/cars/dealer/al-majarah-al-sabaah-used-cars",
+      "observedAt": "2026-10-19T20:00:28.930638Z",
+      "supports": [
+        "business-trading-name",
+        "public-business-phone",
+        "marketplace-location",
+        "dealer-catalogue"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/ar/cars/listing/12959-audi-a7-30-l-340-hp-gasoline-robot-four-wheel-drive-4wd-s-line",
+      "observedAt": "2026-10-19T20:00:28.930638Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/ar/cars/listing/12962-nissan-armada-56-at-317-hp-le",
+      "observedAt": "2026-10-19T20:00:28.930638Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/ar/cars/listing/13042-lexus-es-250-at-184-hp-es-250-f-sport",
+      "observedAt": "2026-10-19T20:00:28.930638Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "dealer": "platform-used-cars",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:00:25.723096Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "licenseplate-4453",
+      "title": "2024 Land Rover Defender",
+      "make": "Land Rover",
+      "model": "Defender",
+      "year": 2024,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-4453.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/4453-land-rover-defender-hybrid-phev-defender-p400e-with-404-110-hse-p400",
+      "observedAt": "2026-10-19T20:00:25.723096Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Crossover",
+      "transmission": "Automatic",
+      "color": "Grey",
+      "mileageValue": 67000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "licenseplate-3917",
+      "title": "2024 RAM 1500",
+      "make": "RAM",
+      "model": "1500",
+      "year": 2024,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-3917.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/3917-ram-1500-57-at-rwd-395-hp-rebel-double-cab",
+      "observedAt": "2026-10-19T20:00:25.723096Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Pickup",
+      "transmission": "Automatic",
+      "color": "Black",
+      "mileageValue": 27000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "licenseplate-6878",
+      "title": "2026 Tesla Model Y",
+      "make": "Tesla",
+      "model": "Model Y",
+      "year": 2026,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-6878.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/6878-tesla-model-y-at-awd-450-hp-long-range",
+      "observedAt": "2026-10-19T20:00:25.723096Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Crossover",
+      "transmission": "Automatic",
+      "fuel": "Electric",
+      "color": "White",
+      "mileageValue": 17000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "slug": "platform-used-cars",
+  "dealerId": "ae-sharjah-platform-used-cars",
+  "business": {
+    "name": "Platform Used Cars",
+    "city": "Sharjah",
+    "region": "Sharjah",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "Saif Zone (Sharjah International Airport Free Zone), Sharjah, UAE",
+    "phone": "+971542171296",
+    "phoneDisplay": "+971542171296",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://licenseplate.ae/cars/dealer/platform-used-cars",
+    "hours": "",
+    "sourceUrl": "https://licenseplate.ae/cars/dealer/platform-used-cars",
+    "observedAt": "2026-10-19T20:00:25.723096Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/platform-used-cars",
+      "observedAt": "2026-10-19T20:00:25.723096Z",
+      "supports": [
+        "business-trading-name",
+        "public-business-phone",
+        "marketplace-location",
+        "dealer-catalogue"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/4453-land-rover-defender-hybrid-phev-defender-p400e-with-404-110-hse-p400",
+      "observedAt": "2026-10-19T20:00:25.723096Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/3917-ram-1500-57-at-rwd-395-hp-rebel-double-cab",
+      "observedAt": "2026-10-19T20:00:25.723096Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/6878-tesla-model-y-at-awd-450-hp-long-range",
+      "observedAt": "2026-10-19T20:00:25.723096Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T20:13:09.455Z",
+  "dealer": "najm-suhail-used-cars",
+  "dealerId": "ae-sharjah-najm-suhail-used-cars",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "method": "Exact retained registry, clients index and compact-pack identity comparison, followed by current public named dealer catalogue and seller-bound listings. Marketplace profile name variants are not separate identities. No dealer approval is implied.",
+  "sources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/najm-suhail-used-cars",
+      "observedAt": "2026-10-19T20:00:25.475093Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7136-toyota-land-cruiser-prado-24-at-4wd-279-hp-txl",
+      "observedAt": "2026-10-19T20:00:25.475093Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7642-toyota-hilux-27-mt-163-hp-single-cab-glx",
+      "observedAt": "2026-10-19T20:00:25.475093Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7643-toyota-hilux-28-at-awd-177-hp-double-cab-glx",
+      "observedAt": "2026-10-19T20:00:25.475093Z"
+    }
+  ]
+}

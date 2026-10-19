@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "dealer": "najm-suhail-used-cars",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/najm-suhail-used-cars",
+      "observedAt": "2026-10-19T20:00:25.475093Z",
+      "supports": [
+        "business-trading-name",
+        "public-business-phone",
+        "marketplace-location",
+        "dealer-catalogue"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7136-toyota-land-cruiser-prado-24-at-4wd-279-hp-txl",
+      "observedAt": "2026-10-19T20:00:25.475093Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7642-toyota-hilux-27-mt-163-hp-single-cab-glx",
+      "observedAt": "2026-10-19T20:00:25.475093Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7643-toyota-hilux-28-at-awd-177-hp-double-cab-glx",
+      "observedAt": "2026-10-19T20:00:25.475093Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "research": {
+    "observedAt": "2026-10-19T20:00:25.475093Z",
+    "profileUrl": "https://licenseplate.ae/cars/dealer/najm-suhail-used-cars",
+    "profileSha256": "5440b8a358687de64e8b006e86dd02878c37e4a6d20e493fd8e8ed5bc565030d",
+    "marketplaceTradingName": "Najm Suhail Used Cars",
+    "classification": "public-marketplace-dealer-profile-and-listing-snapshot",
+    "directDealerPostingVerified": false,
+    "profileClaimed": false,
+    "limitation": "The named marketplace profile may be syndicated or automatically assembled. Seller-attributed listings are dated observations; current physical stock and direct dealer posting are not confirmed.",
+    "unknownFields": [
+      "public-business-email",
+      "owned-website",
+      "opening-hours"
+    ],
+    "stockSources": [
+      {
+        "id": "licenseplate-7136",
+        "url": "https://licenseplate.ae/cars/listing/7136-toyota-land-cruiser-prado-24-at-4wd-279-hp-txl",
+        "observedAt": "2026-10-19T20:00:25.475093Z",
+        "sha256": "1d27fd6508c7ea49a9d8298320fcbd707b246c557750c39fc49e3750b1a79706",
+        "sellerName": "Najm Suhail Used Cars",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/najm-suhail-used-cars"
+      },
+      {
+        "id": "licenseplate-7642",
+        "url": "https://licenseplate.ae/cars/listing/7642-toyota-hilux-27-mt-163-hp-single-cab-glx",
+        "observedAt": "2026-10-19T20:00:25.475093Z",
+        "sha256": "c6e52120b23910c4bc4fcd58175d1532903dd61c1f1ef301a4b00d2259d05c09",
+        "sellerName": "Najm Suhail Used Cars",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/najm-suhail-used-cars"
+      },
+      {
+        "id": "licenseplate-7643",
+        "url": "https://licenseplate.ae/cars/listing/7643-toyota-hilux-28-at-awd-177-hp-double-cab-glx",
+        "observedAt": "2026-10-19T20:00:25.475093Z",
+        "sha256": "b8c10b15f1e68a0d2375752486d90b5394eade33687da6a13837a703a39666ef",
+        "sellerName": "Najm Suhail Used Cars",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/najm-suhail-used-cars"
+      }
+    ],
+    "photoSources": [
+      {
+        "listingId": "licenseplate-7136",
+        "listingUrl": "https://licenseplate.ae/cars/listing/7136-toyota-land-cruiser-prado-24-at-4wd-279-hp-txl",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/toyota-land-cruiser-prado-24-at-4wd-279-hp-0-1789526919.webp",
+        "observedAt": "2026-10-19T20:00:25.475093Z",
+        "retainedPath": "dealer-stock/licenseplate-7136.webp",
+        "sha256": "5b65534fb182644529c1c76af7ddc9766455f7a3887384e269fda9dc33e28eed",
+        "originalSha256": "e36661ee0b1426fd64103cae2c97b75d1af23df5be69dbfd635d3b2a67d9d9d0",
+        "bytes": 111714,
+        "width": 1066,
+        "height": 800,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      },
+      {
+        "listingId": "licenseplate-7642",
+        "listingUrl": "https://licenseplate.ae/cars/listing/7642-toyota-hilux-27-mt-163-hp-single-cab-glx",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/toyota-hilux-27-mt-163-hp-0-1789530161.webp",
+        "observedAt": "2026-10-19T20:00:25.475093Z",
+        "retainedPath": "dealer-stock/licenseplate-7642.webp",
+        "sha256": "3907821adfe8750f8938ce2098fc2ef879abc8b54e010d9bd422fda2015f7644",
+        "originalSha256": "54b12ebdf651def764c7d95ed3553d6386f1e576f48f128d6eb4a365ee5d246b",
+        "bytes": 112836,
+        "width": 1066,
+        "height": 800,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      },
+      {
+        "listingId": "licenseplate-7643",
+        "listingUrl": "https://licenseplate.ae/cars/listing/7643-toyota-hilux-28-at-awd-177-hp-double-cab-glx",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/toyota-hilux-28-at-awd-177-hp-0-1789530164.webp",
+        "observedAt": "2026-10-19T20:00:25.475093Z",
+        "retainedPath": "dealer-stock/licenseplate-7643.webp",
+        "sha256": "0d7d11b0fd2f1112f0af51d9c10848675ae8daccc74149b9209fdd718b8d3f78",
+        "originalSha256": "fd57b089c1cbefe754a4f808173aeaefa52d04b6cb36f7bc20733da4f5d020e3",
+        "bytes": 66812,
+        "width": 1280,
+        "height": 720,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      }
+    ]
+  },
+  "stockVisualReview": {
+    "reviewedAt": "2026-10-19T20:25:00Z",
+    "reviewed": true,
+    "scope": "All retained photos, viewed in seven-dealer contact sheets",
+    "result": "Vehicle photos match listing types; no price values, named-person contacts or obvious unrelated photos observed."
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "dealer": "noor-al-seyoh-used-car",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/sharjah-noor-al-seyoh-used-car-1581",
+      "observedAt": "2026-10-19T20:00:24.216060Z",
+      "supports": [
+        "business.name",
+        "business.city",
+        "business.countryCode",
+        "business.address",
+        "business.phone",
+        "business.hours",
+        "dated-dealer-catalogue-listings"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2017-dodge-charger-62l-707-hp-dodge-charger-hellcat-gcc-2017-original-paint-zero-accidents-full-910598.html",
+      "observedAt": "2026-10-19T20:00:24.216060Z",
+      "supports": [
+        "stock.dubicars-910598"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2023-nissan-x-trail-1031081.html",
+      "observedAt": "2026-10-19T20:00:24.216060Z",
+      "supports": [
+        "stock.dubicars-1031081"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2016-dodge-charger-srt-core-64l-967696.html",
+      "observedAt": "2026-10-19T20:00:24.216060Z",
+      "supports": [
+        "stock.dubicars-967696"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "agentResearch": {
+    "observedAt": "2026-10-19T20:00:24.216060Z",
+    "method": "Public catalogue HTML/JSON-LD and actual stock image read; fields checked before inclusion. No contact or account interaction.",
+    "identityNotes": [
+      "Personal-looking mailbox omitted; no personal contact retained.",
+      "Marketplace-linked domain not adopted: current fetch failed or identity/contact conflicts remain."
+    ],
+    "imageReview": "Actual three stock images visually reviewed; no price overlay or named personal contact used.",
+    "logoResearchStatus": "in-progress"
+  },
+  "stockPhotos": [
+    {
+      "listingId": "dubicars-910598",
+      "listingUrl": "https://www.dubicars.com/2017-dodge-charger-62l-707-hp-dodge-charger-hellcat-gcc-2017-original-paint-zero-accidents-full-910598.html",
+      "sourceUrl": "https://www.dubicars.com/images/d9d6ea/650x380/noor-al-seyoh-used-car/271523c2-832d-4928-ad08-5a9f2ed4b06f.jpeg",
+      "observedAt": "2026-10-19T20:00:24.216060Z",
+      "sourceSha256": "e541bd91fa2c5e0644d1ffeb183094eccb66bbe1e7fa1f280bdb637e87125075",
+      "retainedPath": "dealer-stock/dubicars-910598.webp",
+      "retainedSha256": "3e367d2ad74fef6d620b7f4b38e222de08d8884a02c0b5c873061c40726943ad",
+      "nativeDimensions": [
+        650,
+        478
+      ],
+      "retainedDimensions": [
+        650,
+        478
+      ],
+      "retainedBytes": 32032,
+      "transformation": "Bounded resize with preserved aspect ratio and WebP compression; no watermark removal.",
+      "reusePermission": "not independently established; public-preview source attribution retained"
+    },
+    {
+      "listingId": "dubicars-1031081",
+      "listingUrl": "https://www.dubicars.com/2023-nissan-x-trail-1031081.html",
+      "sourceUrl": "https://www.dubicars.com/images/33b931/650x380/noor-al-seyoh-used-car/c5f1c059-af31-4ae5-87dd-c3d256fb5fdd.jpeg",
+      "observedAt": "2026-10-19T20:00:24.216060Z",
+      "sourceSha256": "191a532fde8bc2404d8e3b48fbc07346b189b6a46f2dc90e62db844947b40ec8",
+      "retainedPath": "dealer-stock/dubicars-1031081.webp",
+      "retainedSha256": "b0dca6e85d38b9a0df1a4a14312e1f3e6863a253c239a3f48068de76944644dc",
+      "nativeDimensions": [
+        650,
+        488
+      ],
+      "retainedDimensions": [
+        650,
+        488
+      ],
+      "retainedBytes": 45312,
+      "transformation": "Bounded resize with preserved aspect ratio and WebP compression; no watermark removal.",
+      "reusePermission": "not independently established; public-preview source attribution retained"
+    },
+    {
+      "listingId": "dubicars-967696",
+      "listingUrl": "https://www.dubicars.com/2016-dodge-charger-srt-core-64l-967696.html",
+      "sourceUrl": "https://www.dubicars.com/images/98d6b0/650x380/noor-al-seyoh-used-car/71d3dd9a-47a9-4468-8cf8-1597081574dc.jpeg",
+      "observedAt": "2026-10-19T20:00:24.216060Z",
+      "sourceSha256": "5fc9f4dcaa62fbbd683cda25d00f1376fb0f4ce9bb55add3207514e236eeaa02",
+      "retainedPath": "dealer-stock/dubicars-967696.webp",
+      "retainedSha256": "ab59f08d562cde40d67ffeaa00941f633d1180e2a9c2f785bd7f2767d9943e63",
+      "nativeDimensions": [
+        650,
+        488
+      ],
+      "retainedDimensions": [
+        650,
+        488
+      ],
+      "retainedBytes": 56830,
+      "transformation": "Bounded resize with preserved aspect ratio and WebP compression; no watermark removal.",
+      "reusePermission": "not independently established; public-preview source attribution retained"
+    }
+  ]
+}

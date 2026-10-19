@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "dealer": "pearl-used-cars",
+  "businessFacts": "business-facts.json",
+  "stock": "stock.json",
+  "inventoryKind": "dated-listing-snapshot",
+  "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+  "sources": [
+    {
+      "url": "https://www.dubicars.com/dealers/sharjah-pearl-used-cars-2618",
+      "observedAt": "2026-10-19T20:00:23.944334Z",
+      "supports": [
+        "business.name",
+        "business.city",
+        "business.countryCode",
+        "business.address",
+        "business.phone",
+        "business.hours",
+        "dated-dealer-catalogue-listings"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2026-rox-adamas-983508.html",
+      "observedAt": "2026-10-19T20:00:23.944334Z",
+      "supports": [
+        "stock.dubicars-983508"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2023-rox-01-991888.html",
+      "observedAt": "2026-10-19T20:00:23.944334Z",
+      "supports": [
+        "stock.dubicars-991888"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2024-mercedes-benz-cla250-20l-942920.html",
+      "observedAt": "2026-10-19T20:00:23.944334Z",
+      "supports": [
+        "stock.dubicars-942920"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "dealer": "korean-city-used-car",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:00:25.271761Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "licenseplate-7373",
+      "title": "2018 Jaguar E-Pace",
+      "make": "Jaguar",
+      "model": "E-Pace",
+      "year": 2018,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-7373.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/7373-jaguar-e-pace-p250-at-awd-249-hp-p250",
+      "observedAt": "2026-10-19T20:00:25.271761Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Crossover",
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "color": "White",
+      "mileageValue": 94852,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "licenseplate-7819",
+      "title": "2019 Hyundai H-1",
+      "make": "Hyundai",
+      "model": "H-1",
+      "year": 2019,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-7819.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/7819-hyundai-h-1-25-at-170-hp-gl-panel-van",
+      "observedAt": "2026-10-19T20:00:25.271761Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Van",
+      "transmission": "Automatic",
+      "fuel": "Diesel",
+      "color": "Silver",
+      "mileageValue": 71339,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "licenseplate-8042",
+      "title": "2018 Hyundai H-1",
+      "make": "Hyundai",
+      "model": "H-1",
+      "year": 2018,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-8042.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/8042-hyundai-h-1-25-at-170-hp-gl-panel-van",
+      "observedAt": "2026-10-19T20:00:25.271761Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Van",
+      "transmission": "Automatic",
+      "fuel": "Diesel",
+      "color": "Silver",
+      "mileageValue": 81283,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

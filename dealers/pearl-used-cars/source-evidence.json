@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "dealer": "pearl-used-cars",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/sharjah-pearl-used-cars-2618",
+      "observedAt": "2026-10-19T20:00:23.944334Z",
+      "supports": [
+        "business.name",
+        "business.city",
+        "business.countryCode",
+        "business.address",
+        "business.phone",
+        "business.hours",
+        "dated-dealer-catalogue-listings"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2026-rox-adamas-983508.html",
+      "observedAt": "2026-10-19T20:00:23.944334Z",
+      "supports": [
+        "stock.dubicars-983508"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2023-rox-01-991888.html",
+      "observedAt": "2026-10-19T20:00:23.944334Z",
+      "supports": [
+        "stock.dubicars-991888"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2024-mercedes-benz-cla250-20l-942920.html",
+      "observedAt": "2026-10-19T20:00:23.944334Z",
+      "supports": [
+        "stock.dubicars-942920"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "agentResearch": {
+    "observedAt": "2026-10-19T20:00:23.944334Z",
+    "method": "Public catalogue HTML/JSON-LD and actual stock image read; fields checked before inclusion. No contact or account interaction.",
+    "identityNotes": [],
+    "imageReview": "Actual three stock images visually reviewed; no price overlay or named personal contact used.",
+    "logoResearchStatus": "in-progress"
+  },
+  "stockPhotos": [
+    {
+      "listingId": "dubicars-983508",
+      "listingUrl": "https://www.dubicars.com/2026-rox-adamas-983508.html",
+      "sourceUrl": "https://www.dubicars.com/images/248847/650x380/pearl-used-cars/ec87b905-9ade-4a6d-919e-10c55b8f433f.jpeg",
+      "observedAt": "2026-10-19T20:00:23.944334Z",
+      "sourceSha256": "855535ac1382a08513c6a713025dfd7fa79556560da239198c9c78ed0514f139",
+      "retainedPath": "dealer-stock/dubicars-983508.webp",
+      "retainedSha256": "87546b30217a6d4c24bd36120d350d0f4569c92ea52100b29e7c17529f357c60",
+      "nativeDimensions": [
+        650,
+        488
+      ],
+      "retainedDimensions": [
+        650,
+        488
+      ],
+      "retainedBytes": 62162,
+      "transformation": "Bounded resize with preserved aspect ratio and WebP compression; no watermark removal.",
+      "reusePermission": "not independently established; public-preview source attribution retained"
+    },
+    {
+      "listingId": "dubicars-991888",
+      "listingUrl": "https://www.dubicars.com/2023-rox-01-991888.html",
+      "sourceUrl": "https://www.dubicars.com/images/621f49/650x380/pearl-used-cars/3b95c65f-9bb1-400a-8fee-5a5d4510ff9f.jpeg",
+      "observedAt": "2026-10-19T20:00:23.944334Z",
+      "sourceSha256": "02b84ae12c86daf4f0ddcbf5ab832f3c23c4ae42fd77a0de32e5cbdf212be91b",
+      "retainedPath": "dealer-stock/dubicars-991888.webp",
+      "retainedSha256": "ed7d1ca222b21ef8fbebd68e684326bf9897fe3f56df66c78f15f30ceb02035a",
+      "nativeDimensions": [
+        650,
+        488
+      ],
+      "retainedDimensions": [
+        650,
+        488
+      ],
+      "retainedBytes": 48838,
+      "transformation": "Bounded resize with preserved aspect ratio and WebP compression; no watermark removal.",
+      "reusePermission": "not independently established; public-preview source attribution retained"
+    },
+    {
+      "listingId": "dubicars-942920",
+      "listingUrl": "https://www.dubicars.com/2024-mercedes-benz-cla250-20l-942920.html",
+      "sourceUrl": "https://www.dubicars.com/images/e99e34/650x380/pearl-used-cars/3e6afb19-dc70-493b-ae1f-59f8cb51b3ef.jpeg",
+      "observedAt": "2026-10-19T20:00:23.944334Z",
+      "sourceSha256": "abfc931fa3990c02f10e209803fe78a7d652e8be5a7d5487f89e3b32739a82af",
+      "retainedPath": "dealer-stock/dubicars-942920.webp",
+      "retainedSha256": "3c3f181b5efd9c398711fd1ac6eda8a93e9b9dc47d5e1ee4530dee897d43e2a8",
+      "nativeDimensions": [
+        650,
+        488
+      ],
+      "retainedDimensions": [
+        650,
+        488
+      ],
+      "retainedBytes": 51802,
+      "transformation": "Bounded resize with preserved aspect ratio and WebP compression; no watermark removal.",
+      "reusePermission": "not independently established; public-preview source attribution retained"
+    }
+  ]
+}

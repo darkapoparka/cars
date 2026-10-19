@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "dealer": "korean-city-used-car",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/korean-city-used-car",
+      "observedAt": "2026-10-19T20:00:25.271761Z",
+      "supports": [
+        "business-trading-name",
+        "public-business-phone",
+        "marketplace-location",
+        "dealer-catalogue"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7373-jaguar-e-pace-p250-at-awd-249-hp-p250",
+      "observedAt": "2026-10-19T20:00:25.271761Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7819-hyundai-h-1-25-at-170-hp-gl-panel-van",
+      "observedAt": "2026-10-19T20:00:25.271761Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/8042-hyundai-h-1-25-at-170-hp-gl-panel-van",
+      "observedAt": "2026-10-19T20:00:25.271761Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "research": {
+    "observedAt": "2026-10-19T20:00:25.271761Z",
+    "profileUrl": "https://licenseplate.ae/cars/dealer/korean-city-used-car",
+    "profileSha256": "2b88451878a9a951e87133c295f05f113eedc607959b175983b2c6f31f6d1658",
+    "marketplaceTradingName": "Korean City Used CAR",
+    "classification": "public-marketplace-dealer-profile-and-listing-snapshot",
+    "directDealerPostingVerified": false,
+    "profileClaimed": false,
+    "limitation": "The named marketplace profile may be syndicated or automatically assembled. Seller-attributed listings are dated observations; current physical stock and direct dealer posting are not confirmed.",
+    "unknownFields": [
+      "public-business-email",
+      "owned-website",
+      "opening-hours"
+    ],
+    "stockSources": [
+      {
+        "id": "licenseplate-7373",
+        "url": "https://licenseplate.ae/cars/listing/7373-jaguar-e-pace-p250-at-awd-249-hp-p250",
+        "observedAt": "2026-10-19T20:00:25.271761Z",
+        "sha256": "36ffba1a28e3b82b8a93b5e0cfa85ac97da5d7d4deb453c6dd1254c762f37607",
+        "sellerName": "Korean City Used CAR",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/korean-city-used-car"
+      },
+      {
+        "id": "licenseplate-7819",
+        "url": "https://licenseplate.ae/cars/listing/7819-hyundai-h-1-25-at-170-hp-gl-panel-van",
+        "observedAt": "2026-10-19T20:00:25.271761Z",
+        "sha256": "f47b2cecd2faed6434ab9780066ad02226b5b37545be925fde143229a5e9da5a",
+        "sellerName": "Korean City Used CAR",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/korean-city-used-car"
+      },
+      {
+        "id": "licenseplate-8042",
+        "url": "https://licenseplate.ae/cars/listing/8042-hyundai-h-1-25-at-170-hp-gl-panel-van",
+        "observedAt": "2026-10-19T20:00:25.271761Z",
+        "sha256": "11608ce8004dfc9fd94c457e1e553b7d9aedd5b8b1859ad858e9372e75a051aa",
+        "sellerName": "Korean City Used CAR",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/korean-city-used-car"
+      }
+    ],
+    "photoSources": [
+      {
+        "listingId": "licenseplate-7373",
+        "listingUrl": "https://licenseplate.ae/cars/listing/7373-jaguar-e-pace-p250-at-awd-249-hp-p250",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/jaguar-e-pace-p250-at-awd-249-hp-0-1789528595.webp",
+        "observedAt": "2026-10-19T20:00:25.271761Z",
+        "retainedPath": "dealer-stock/licenseplate-7373.webp",
+        "sha256": "328af96fdaf3bce4039ad592f0a96e8198a8993226882e0f615f60efc7ba783c",
+        "originalSha256": "bdf47c47e7bce85be91833f204e70ac1c735c0589d9f800df01ccbe9d71dd948",
+        "bytes": 98114,
+        "width": 1066,
+        "height": 800,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      },
+      {
+        "listingId": "licenseplate-7819",
+        "listingUrl": "https://licenseplate.ae/cars/listing/7819-hyundai-h-1-25-at-170-hp-gl-panel-van",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/hyundai-h-1-25-at-170-hp-0-1789531205.webp",
+        "observedAt": "2026-10-19T20:00:25.271761Z",
+        "retainedPath": "dealer-stock/licenseplate-7819.webp",
+        "sha256": "448874ccbaa78cf8ccc4cb41a56b88a7ba9a84c96223797fa4a47b9484a88903",
+        "originalSha256": "ef2b35bf66ac08cf06ea90d0469b300366c586c2cbb18407425ee9ab9b78cd51",
+        "bytes": 80948,
+        "width": 1066,
+        "height": 800,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      },
+      {
+        "listingId": "licenseplate-8042",
+        "listingUrl": "https://licenseplate.ae/cars/listing/8042-hyundai-h-1-25-at-170-hp-gl-panel-van",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/hyundai-h-1-25-at-170-hp-0-1789532583.webp",
+        "observedAt": "2026-10-19T20:00:25.271761Z",
+        "retainedPath": "dealer-stock/licenseplate-8042.webp",
+        "sha256": "6d8d43efd02731e7bdf317ac64d74a4aae9f4df1bd7eebc0fb8e59e0d645872f",
+        "originalSha256": "847ca397ec2fae1da2cf4d0cc2d9e8bcf989cca6a644c70bf5de2f6e43faf902",
+        "bytes": 77942,
+        "width": 1066,
+        "height": 800,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      }
+    ]
+  },
+  "stockVisualReview": {
+    "reviewedAt": "2026-10-19T20:25:00Z",
+    "reviewed": true,
+    "scope": "All retained photos, viewed in seven-dealer contact sheets",
+    "result": "Vehicle photos match listing types; no price values, named-person contacts or obvious unrelated photos observed."
+  }
+}

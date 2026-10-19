@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "dealer": "nabel-al-esawi-used-cars",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:00:25.380142Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "licenseplate-13005",
+      "title": "2018 Jeep Wrangler",
+      "make": "Jeep",
+      "model": "Wrangler",
+      "year": 2018,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-13005.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/13005-jeep-wrangler-36-at-286-hp-unlimited-sport",
+      "observedAt": "2026-10-19T20:00:25.380142Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Crossover",
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "color": "Red",
+      "mileageValue": 178000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "licenseplate-13004",
+      "title": "2018 Ford F-150",
+      "make": "Ford",
+      "model": "F-150",
+      "year": 2018,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-13004.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/13004-ford-f-150-35-at-awd-450-hp-raptor",
+      "observedAt": "2026-10-19T20:00:25.380142Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "SUV",
+      "transmission": "Automatic",
+      "color": "Grey",
+      "mileageValue": 171000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "licenseplate-13001",
+      "title": "2015 Mercedes-Benz G-Class",
+      "make": "Mercedes-Benz",
+      "model": "G-Class",
+      "year": 2015,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-13001.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/13001-mercedes-benz-g-class-g-63-amg-speedshift-plus-7g-tronic-571-hp-g-63-amg-edition-1",
+      "observedAt": "2026-10-19T20:00:25.380142Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Crossover",
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "color": "Black",
+      "mileageValue": 172000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

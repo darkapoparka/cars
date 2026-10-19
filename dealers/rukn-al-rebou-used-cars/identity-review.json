@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T20:13:11.612Z",
+  "dealer": "rukn-al-rebou-used-cars",
+  "dealerId": "ae-sharjah-rukn-al-rebou-used-cars",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "method": "Exact retained registry, clients index and compact-pack identity comparison, followed by current public named dealer catalogue and seller-bound listings. Marketplace profile name variants are not separate identities. No dealer approval is implied.",
+  "sources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/rukn-al-rebou-used-cars",
+      "observedAt": "2026-10-19T20:00:28.301221Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/4472-mercedes-benz-cla-250-7g-dct-224-hp-cla-250-amg",
+      "observedAt": "2026-10-19T20:00:28.301221Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/4474-land-rover-range-rover-30-at-4wd-510-hp-vogue-se",
+      "observedAt": "2026-10-19T20:00:28.301221Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/4471-mercedes-benz-a-class-a-35-speedshift-4matic-306-hp-a-35-amg",
+      "observedAt": "2026-10-19T20:00:28.301221Z"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T20:13:14.141Z",
+  "dealer": "speed-line-used-cars",
+  "dealerId": "ae-sharjah-speed-line-used-cars",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "method": "Exact retained registry, clients index and compact-pack identity comparison, followed by current public named dealer catalogue and seller-bound listings. Marketplace profile name variants are not separate identities. No dealer approval is implied.",
+  "sources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/speed-line-used-cars",
+      "observedAt": "2026-10-19T20:00:28.781952Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/13054-jetour-x50-15-amt-147-hp-premium",
+      "observedAt": "2026-10-19T20:00:28.781952Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/6752-porsche-boxster-34-pdk-295-hp-standard",
+      "observedAt": "2026-10-19T20:00:28.781952Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7214-cadillac-escalade-62-at-rwd-420-hp-sport",
+      "observedAt": "2026-10-19T20:00:28.781952Z"
+    }
+  ]
+}

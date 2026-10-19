@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-majarah-al-sabaah-used-cars-trading",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:00:28.930638Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "licenseplate-12959",
+      "title": "2018 Audi A7",
+      "make": "Audi",
+      "model": "A7",
+      "year": 2018,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-12959.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/ar/cars/listing/12959-audi-a7-30-l-340-hp-gasoline-robot-four-wheel-drive-4wd-s-line",
+      "observedAt": "2026-10-19T20:00:28.930638Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "ليفتباك",
+      "transmission": "أوتوماتيك",
+      "color": "رمادي",
+      "mileageValue": 78000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "licenseplate-12962",
+      "title": "2012 Nissan Armada",
+      "make": "Nissan",
+      "model": "Armada",
+      "year": 2012,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-12962.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/ar/cars/listing/12962-nissan-armada-56-at-317-hp-le",
+      "observedAt": "2026-10-19T20:00:28.930638Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "كروس أوفر",
+      "transmission": "أوتوماتيك",
+      "fuel": "بنزين",
+      "color": "أحمر",
+      "mileageValue": 200000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "licenseplate-13042",
+      "title": "2014 Lexus ES",
+      "make": "Lexus",
+      "model": "ES",
+      "year": 2014,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-13042.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/ar/cars/listing/13042-lexus-es-250-at-184-hp-es-250-f-sport",
+      "observedAt": "2026-10-19T20:00:28.930638Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "سيدان",
+      "transmission": "أوتوماتيك",
+      "fuel": "بنزين",
+      "color": "رمادي",
+      "mileageValue": 360000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

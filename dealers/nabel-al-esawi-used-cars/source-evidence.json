@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "dealer": "nabel-al-esawi-used-cars",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/nabel-al-esawi-used-cars",
+      "observedAt": "2026-10-19T20:00:25.380142Z",
+      "supports": [
+        "business-trading-name",
+        "public-business-phone",
+        "marketplace-location",
+        "dealer-catalogue"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/13005-jeep-wrangler-36-at-286-hp-unlimited-sport",
+      "observedAt": "2026-10-19T20:00:25.380142Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/13004-ford-f-150-35-at-awd-450-hp-raptor",
+      "observedAt": "2026-10-19T20:00:25.380142Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/13001-mercedes-benz-g-class-g-63-amg-speedshift-plus-7g-tronic-571-hp-g-63-amg-edition-1",
+      "observedAt": "2026-10-19T20:00:25.380142Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "research": {
+    "observedAt": "2026-10-19T20:00:25.380142Z",
+    "profileUrl": "https://licenseplate.ae/cars/dealer/nabel-al-esawi-used-cars",
+    "profileSha256": "135dfe48cae0a7369db4b0acf535974e5e8338ed2f7a0bd5a8fec5d2a052dba8",
+    "marketplaceTradingName": "Nabel Al Esawi Used Cars",
+    "classification": "public-marketplace-dealer-profile-and-listing-snapshot",
+    "directDealerPostingVerified": false,
+    "profileClaimed": false,
+    "limitation": "The named marketplace profile may be syndicated or automatically assembled. Seller-attributed listings are dated observations; current physical stock and direct dealer posting are not confirmed.",
+    "unknownFields": [
+      "public-business-email",
+      "owned-website",
+      "opening-hours"
+    ],
+    "stockSources": [
+      {
+        "id": "licenseplate-13005",
+        "url": "https://licenseplate.ae/cars/listing/13005-jeep-wrangler-36-at-286-hp-unlimited-sport",
+        "observedAt": "2026-10-19T20:00:25.380142Z",
+        "sha256": "9fe6402e164dbd1f8e191e5b1d8d15bd3fa1a94d317200f0a142be42db78fa45",
+        "sellerName": "Nabel Al Esawi Used Cars",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/nabel-al-esawi-used-cars"
+      },
+      {
+        "id": "licenseplate-13004",
+        "url": "https://licenseplate.ae/cars/listing/13004-ford-f-150-35-at-awd-450-hp-raptor",
+        "observedAt": "2026-10-19T20:00:25.380142Z",
+        "sha256": "8acda9dd1c6732ac110f137c2f2353f6f6692a4a48beb95884daea6830ac7f52",
+        "sellerName": "Nabel Al Esawi Used Cars",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/nabel-al-esawi-used-cars"
+      },
+      {
+        "id": "licenseplate-13001",
+        "url": "https://licenseplate.ae/cars/listing/13001-mercedes-benz-g-class-g-63-amg-speedshift-plus-7g-tronic-571-hp-g-63-amg-edition-1",
+        "observedAt": "2026-10-19T20:00:25.380142Z",
+        "sha256": "18d4d2cb253ab7ce6adad7f6a0c3ecbf4813827424fb5fbb44e1c4ad029a0b45",
+        "sellerName": "Nabel Al Esawi Used Cars",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/nabel-al-esawi-used-cars"
+      }
+    ],
+    "photoSources": [
+      {
+        "listingId": "licenseplate-13005",
+        "listingUrl": "https://licenseplate.ae/cars/listing/13005-jeep-wrangler-36-at-286-hp-unlimited-sport",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/jeep-wrangler-36-at-286-hp-0-1792185749.webp",
+        "observedAt": "2026-10-19T20:00:25.380142Z",
+        "retainedPath": "dealer-stock/licenseplate-13005.webp",
+        "sha256": "a726a70207ad1552378e4c0e5546ad939d81d23ae0e8e6f1c1c4edf43e18bfa5",
+        "originalSha256": "d1d93c57d9465d516bd116d7cefb868a071435721c95d4204dbf76f13dfb6595",
+        "bytes": 90736,
+        "width": 1066,
+        "height": 800,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      },
+      {
+        "listingId": "licenseplate-13004",
+        "listingUrl": "https://licenseplate.ae/cars/listing/13004-ford-f-150-35-at-awd-450-hp-raptor",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/ford-f-150-35-at-awd-450-hp-0-1792185743.webp",
+        "observedAt": "2026-10-19T20:00:25.380142Z",
+        "retainedPath": "dealer-stock/licenseplate-13004.webp",
+        "sha256": "0deba5a77dd7a70b416f34926d5f55c8d30a5ca495bdf135d620b6caa2ef60f6",
+        "originalSha256": "a86905c8e8450700d456c51ccff7628299a0cbe184da6425793741ef3efe8dfb",
+        "bytes": 91978,
+        "width": 1066,
+        "height": 800,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      },
+      {
+        "listingId": "licenseplate-13001",
+        "listingUrl": "https://licenseplate.ae/cars/listing/13001-mercedes-benz-g-class-g-63-amg-speedshift-plus-7g-tronic-571-hp-g-63-amg-edition-1",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/mercedes-benz-g-class-g-63-amg-speedshift-plus-7g-tronic-571-hp-0-1792185724.webp",
+        "observedAt": "2026-10-19T20:00:25.380142Z",
+        "retainedPath": "dealer-stock/licenseplate-13001.webp",
+        "sha256": "dd0ea7f1f60271901d6d3aa6ed001b7f798d97e5300508ffdd3d7904c1b476e0",
+        "originalSha256": "ec9a1d371d4fe28a04982dc1d6418ea031c6fe9365de12c41f02d8c7439bb430",
+        "bytes": 92658,
+        "width": 1066,
+        "height": 800,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      }
+    ]
+  },
+  "stockVisualReview": {
+    "reviewedAt": "2026-10-19T20:25:00Z",
+    "reviewed": true,
+    "scope": "All retained photos, viewed in seven-dealer contact sheets",
+    "result": "Vehicle photos match listing types; no price values, named-person contacts or obvious unrelated photos observed."
+  }
+}

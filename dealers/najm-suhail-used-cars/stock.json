@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "dealer": "najm-suhail-used-cars",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:00:25.475093Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "licenseplate-7136",
+      "title": "2023 Toyota Land Cruiser Prado",
+      "make": "Toyota",
+      "model": "Land Cruiser Prado",
+      "year": 2023,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-7136.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/7136-toyota-land-cruiser-prado-24-at-4wd-279-hp-txl",
+      "observedAt": "2026-10-19T20:00:25.475093Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Crossover",
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "color": "Grey",
+      "mileageValue": 32000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "licenseplate-7642",
+      "title": "2014 Toyota Hilux",
+      "make": "Toyota",
+      "model": "Hilux",
+      "year": 2014,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-7642.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/7642-toyota-hilux-27-mt-163-hp-single-cab-glx",
+      "observedAt": "2026-10-19T20:00:25.475093Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Pickup",
+      "transmission": "Manual",
+      "fuel": "Petrol",
+      "color": "White",
+      "mileageValue": 180000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "licenseplate-7643",
+      "title": "2021 Toyota Hilux",
+      "make": "Toyota",
+      "model": "Hilux",
+      "year": 2021,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-7643.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/7643-toyota-hilux-28-at-awd-177-hp-double-cab-glx",
+      "observedAt": "2026-10-19T20:00:25.475093Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "SUV",
+      "transmission": "Automatic",
+      "color": "White",
+      "mileageValue": 107000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

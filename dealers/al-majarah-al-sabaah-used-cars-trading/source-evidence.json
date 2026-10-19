@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-majarah-al-sabaah-used-cars-trading",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae-supplement.json",
+    "sha256": "ea2d396ef7a8a73326f488e53858ac60b4a0324d553ccba34b566b5ec5e91f2a"
+  },
+  "publicSources": [
+    {
+      "url": "https://licenseplate.ae/ar/cars/dealer/al-majarah-al-sabaah-used-cars",
+      "observedAt": "2026-10-19T20:00:28.930638Z",
+      "supports": [
+        "business-trading-name",
+        "public-business-phone",
+        "marketplace-location",
+        "dealer-catalogue"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/ar/cars/listing/12959-audi-a7-30-l-340-hp-gasoline-robot-four-wheel-drive-4wd-s-line",
+      "observedAt": "2026-10-19T20:00:28.930638Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/ar/cars/listing/12962-nissan-armada-56-at-317-hp-le",
+      "observedAt": "2026-10-19T20:00:28.930638Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/ar/cars/listing/13042-lexus-es-250-at-184-hp-es-250-f-sport",
+      "observedAt": "2026-10-19T20:00:28.930638Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "research": {
+    "observedAt": "2026-10-19T20:00:28.930638Z",
+    "profileUrl": "https://licenseplate.ae/ar/cars/dealer/al-majarah-al-sabaah-used-cars",
+    "profileSha256": "a72aad0e9ec92b44b2bd0bdb113bb1a27836de92fbc2026de8cff96b96985bda",
+    "marketplaceTradingName": "Al Majarah Al Sabaah Used Cars",
+    "classification": "public-marketplace-dealer-profile-and-listing-snapshot",
+    "directDealerPostingVerified": false,
+    "profileClaimed": false,
+    "limitation": "The named marketplace profile may be syndicated or automatically assembled. Seller-attributed listings are dated observations; current physical stock and direct dealer posting are not confirmed.",
+    "unknownFields": [
+      "public-business-email",
+      "owned-website",
+      "opening-hours"
+    ],
+    "stockSources": [
+      {
+        "id": "licenseplate-12959",
+        "url": "https://licenseplate.ae/ar/cars/listing/12959-audi-a7-30-l-340-hp-gasoline-robot-four-wheel-drive-4wd-s-line",
+        "observedAt": "2026-10-19T20:00:28.930638Z",
+        "sha256": "22f5461a5f8defc34f9ed0d5934fbe177109d933ee10d4f3fef7bd18624d8057",
+        "sellerName": "Al Majarah Al Sabaah Used Cars",
+        "sellerUrl": "https://licenseplate.ae/ar/cars/dealer/al-majarah-al-sabaah-used-cars"
+      },
+      {
+        "id": "licenseplate-12962",
+        "url": "https://licenseplate.ae/ar/cars/listing/12962-nissan-armada-56-at-317-hp-le",
+        "observedAt": "2026-10-19T20:00:28.930638Z",
+        "sha256": "4e8460cbf42d1174348f2d5ad9a00fd8288dbf81a0e136f56b00ca41027ee7e9",
+        "sellerName": "Al Majarah Al Sabaah Used Cars",
+        "sellerUrl": "https://licenseplate.ae/ar/cars/dealer/al-majarah-al-sabaah-used-cars"
+      },
+      {
+        "id": "licenseplate-13042",
+        "url": "https://licenseplate.ae/ar/cars/listing/13042-lexus-es-250-at-184-hp-es-250-f-sport",
+        "observedAt": "2026-10-19T20:00:28.930638Z",
+        "sha256": "f3c9cc2961570e638214f46b368e6d106700bea5a589a26b3861452bddc1690b",
+        "sellerName": "Al Majarah Al Sabaah Used Cars",
+        "sellerUrl": "https://licenseplate.ae/ar/cars/dealer/al-majarah-al-sabaah-used-cars"
+      }
+    ],
+    "photoSources": [
+      {
+        "listingId": "licenseplate-12959",
+        "listingUrl": "https://licenseplate.ae/ar/cars/listing/12959-audi-a7-30-l-340-hp-gasoline-robot-four-wheel-drive-4wd-s-line",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/audi-a7-30-l-340-hp-gasoline-robot-four-wheel-drive-4wd-0-1792168958.webp",
+        "observedAt": "2026-10-19T20:00:28.930638Z",
+        "retainedPath": "dealer-stock/licenseplate-12959.webp",
+        "sha256": "8dfa792bc86ef907caf1fbf973e49a419161f91a385e40325ec7b0f94cdb63ac",
+        "originalSha256": "6496d0d3f29918893906cba193364c9cab648088dbf76d74217a5e7746c23c82",
+        "bytes": 98640,
+        "width": 768,
+        "height": 1024,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      },
+      {
+        "listingId": "licenseplate-12962",
+        "listingUrl": "https://licenseplate.ae/ar/cars/listing/12962-nissan-armada-56-at-317-hp-le",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/nissan-armada-56-at-317-hp-0-1792168982.webp",
+        "observedAt": "2026-10-19T20:00:28.930638Z",
+        "retainedPath": "dealer-stock/licenseplate-12962.webp",
+        "sha256": "e3bbf279f5cb4154618ebccd3632dacc1999d2960ffd9948d96f24efeea4ba69",
+        "originalSha256": "876218ff58193d9a268e8a4d70952ef019842628e705e3d6378baaad424cdec6",
+        "bytes": 108602,
+        "width": 768,
+        "height": 1024,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      },
+      {
+        "listingId": "licenseplate-13042",
+        "listingUrl": "https://licenseplate.ae/ar/cars/listing/13042-lexus-es-250-at-184-hp-es-250-f-sport",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/lexus-es-250-at-184-hp-0-1792200617.webp",
+        "observedAt": "2026-10-19T20:00:28.930638Z",
+        "retainedPath": "dealer-stock/licenseplate-13042.webp",
+        "sha256": "529a58dacba05610bb64ed6f227ad571b678b022850b6684f2046ef48fb88268",
+        "originalSha256": "2848e84d65b8d51c51d14654522a339cb7d2ce0e2dc0bdb1e04e6d165ddf3782",
+        "bytes": 90790,
+        "width": 1066,
+        "height": 800,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      }
+    ]
+  },
+  "stockVisualReview": {
+    "reviewedAt": "2026-10-19T20:25:00Z",
+    "reviewed": true,
+    "scope": "All retained photos, viewed in seven-dealer contact sheets",
+    "result": "Vehicle photos match listing types; no price values, named-person contacts or obvious unrelated photos observed."
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "dealer": "platform-used-cars",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/platform-used-cars",
+      "observedAt": "2026-10-19T20:00:25.723096Z",
+      "supports": [
+        "business-trading-name",
+        "public-business-phone",
+        "marketplace-location",
+        "dealer-catalogue"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/4453-land-rover-defender-hybrid-phev-defender-p400e-with-404-110-hse-p400",
+      "observedAt": "2026-10-19T20:00:25.723096Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/3917-ram-1500-57-at-rwd-395-hp-rebel-double-cab",
+      "observedAt": "2026-10-19T20:00:25.723096Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/6878-tesla-model-y-at-awd-450-hp-long-range",
+      "observedAt": "2026-10-19T20:00:25.723096Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "research": {
+    "observedAt": "2026-10-19T20:00:25.723096Z",
+    "profileUrl": "https://licenseplate.ae/cars/dealer/platform-used-cars",
+    "profileSha256": "63e71cca7d4a63792ab4b6effa3c78a5835e2911299e7ac6e03989896f4850be",
+    "marketplaceTradingName": "Platform Used Cars",
+    "classification": "public-marketplace-dealer-profile-and-listing-snapshot",
+    "directDealerPostingVerified": false,
+    "profileClaimed": false,
+    "limitation": "The named marketplace profile may be syndicated or automatically assembled. Seller-attributed listings are dated observations; current physical stock and direct dealer posting are not confirmed.",
+    "unknownFields": [
+      "public-business-email",
+      "owned-website",
+      "opening-hours"
+    ],
+    "stockSources": [
+      {
+        "id": "licenseplate-4453",
+        "url": "https://licenseplate.ae/cars/listing/4453-land-rover-defender-hybrid-phev-defender-p400e-with-404-110-hse-p400",
+        "observedAt": "2026-10-19T20:00:25.723096Z",
+        "sha256": "de5d5ca59fa0b65b3e4dddcc577b571af74d83fad4df6240ae9326ba4b137d03",
+        "sellerName": "Platform Used Cars",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/platform-used-cars"
+      },
+      {
+        "id": "licenseplate-3917",
+        "url": "https://licenseplate.ae/cars/listing/3917-ram-1500-57-at-rwd-395-hp-rebel-double-cab",
+        "observedAt": "2026-10-19T20:00:25.723096Z",
+        "sha256": "1c6f2cbc8a6b499803a166a8fba70fcf18f4217db05abb742bac75c0cb0827af",
+        "sellerName": "Platform Used Cars",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/platform-used-cars"
+      },
+      {
+        "id": "licenseplate-6878",
+        "url": "https://licenseplate.ae/cars/listing/6878-tesla-model-y-at-awd-450-hp-long-range",
+        "observedAt": "2026-10-19T20:00:25.723096Z",
+        "sha256": "0831b347136b1a3117ff2e09a8767c49d1cc951d02589c46c25f626a7d43ffe7",
+        "sellerName": "Platform Used Cars",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/platform-used-cars"
+      }
+    ],
+    "photoSources": [
+      {
+        "listingId": "licenseplate-4453",
+        "listingUrl": "https://licenseplate.ae/cars/listing/4453-land-rover-defender-hybrid-phev-defender-p400e-with-404-110-hse-p400",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/land-rover-defender-hybrid-phev-defender-p400e-with-404-0-1789511837.webp",
+        "observedAt": "2026-10-19T20:00:25.723096Z",
+        "retainedPath": "dealer-stock/licenseplate-4453.webp",
+        "sha256": "80269984dd3f24b8439e3682854b6014891145f00b7df118eabfb3544df66cfe",
+        "originalSha256": "db09b11308a2825b1a6f099f7f089e14e0264bcf1d0c1d822d2c7a2919048bc0",
+        "bytes": 75526,
+        "width": 1280,
+        "height": 720,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      },
+      {
+        "listingId": "licenseplate-3917",
+        "listingUrl": "https://licenseplate.ae/cars/listing/3917-ram-1500-57-at-rwd-395-hp-rebel-double-cab",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/ram-1500-57-at-rwd-395-hp-0-1789508416.webp",
+        "observedAt": "2026-10-19T20:00:25.723096Z",
+        "retainedPath": "dealer-stock/licenseplate-3917.webp",
+        "sha256": "8ee05f9e858701a557977e2b98d2d73e9132e82474eac87737eb4daa8d8b0565",
+        "originalSha256": "8923cb70a3b6985936ac83e43e27f60909950838177193fb3660f677a135e32f",
+        "bytes": 65074,
+        "width": 1280,
+        "height": 720,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      },
+      {
+        "listingId": "licenseplate-6878",
+        "listingUrl": "https://licenseplate.ae/cars/listing/6878-tesla-model-y-at-awd-450-hp-long-range",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/tesla-model-y-at-awd-450-hp-0-1789525383.webp",
+        "observedAt": "2026-10-19T20:00:25.723096Z",
+        "retainedPath": "dealer-stock/licenseplate-6878.webp",
+        "sha256": "7059d35f6f0193fe33a5e422b5c1133afbad3de925b725217244b63e60af452d",
+        "originalSha256": "554de77eb06f96c180fc38904302f0fef1024edbc0a7b42db83e22add3a2d872",
+        "bytes": 60682,
+        "width": 1280,
+        "height": 720,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      }
+    ]
+  },
+  "stockVisualReview": {
+    "reviewedAt": "2026-10-19T20:25:00Z",
+    "reviewed": true,
+    "scope": "All retained photos, viewed in seven-dealer contact sheets",
+    "result": "Vehicle photos match listing types; no price values, named-person contacts or obvious unrelated photos observed."
+  }
+}

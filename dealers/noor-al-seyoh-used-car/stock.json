@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "noor-al-seyoh-used-car",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:00:24.216060Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "dubicars-910598",
+      "title": "Dodge Charger HELLCAT",
+      "make": "Dodge",
+      "model": "Charger",
+      "year": 2017,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/dubicars-910598.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2017-dodge-charger-62l-707-hp-dodge-charger-hellcat-gcc-2017-original-paint-zero-accidents-full-910598.html",
+      "observedAt": "2026-10-19T20:00:24.216060Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 160000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "dubicars-1031081",
+      "title": "Nissan X Trail SL",
+      "make": "Nissan",
+      "model": "X Trail",
+      "year": 2023,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/dubicars-1031081.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2023-nissan-x-trail-1031081.html",
+      "observedAt": "2026-10-19T20:00:24.216060Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 76000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "dubicars-967696",
+      "title": "Dodge Charger SRT8 SCATPACK",
+      "make": "Dodge",
+      "model": "Charger",
+      "year": 2016,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/dubicars-967696.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2016-dodge-charger-srt-core-64l-967696.html",
+      "observedAt": "2026-10-19T20:00:24.216060Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 215000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

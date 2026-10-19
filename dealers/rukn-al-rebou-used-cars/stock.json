@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "dealer": "rukn-al-rebou-used-cars",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:00:28.301221Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "licenseplate-4472",
+      "title": "2020 Mercedes-Benz CLA",
+      "make": "Mercedes-Benz",
+      "model": "CLA",
+      "year": 2020,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-4472.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/4472-mercedes-benz-cla-250-7g-dct-224-hp-cla-250-amg",
+      "observedAt": "2026-10-19T20:00:28.301221Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Sedan",
+      "transmission": "Automated manual",
+      "fuel": "Petrol",
+      "color": "White",
+      "mileageValue": 72000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "licenseplate-4474",
+      "title": "2023 Land Rover Range Rover",
+      "make": "Land Rover",
+      "model": "Range Rover",
+      "year": 2023,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-4474.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/4474-land-rover-range-rover-30-at-4wd-510-hp-vogue-se",
+      "observedAt": "2026-10-19T20:00:28.301221Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Crossover",
+      "transmission": "Automatic",
+      "color": "Black",
+      "mileageValue": 58000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "licenseplate-4471",
+      "title": "2021 Mercedes-Benz A-Class",
+      "make": "Mercedes-Benz",
+      "model": "A-Class",
+      "year": 2021,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-4471.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/4471-mercedes-benz-a-class-a-35-speedshift-4matic-306-hp-a-35-amg",
+      "observedAt": "2026-10-19T20:00:28.301221Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Hatchback",
+      "transmission": "Automated manual",
+      "fuel": "Petrol",
+      "color": "Black",
+      "mileageValue": 166000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

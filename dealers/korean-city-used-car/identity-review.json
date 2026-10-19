@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T20:13:07.533Z",
+  "dealer": "korean-city-used-car",
+  "dealerId": "ae-sharjah-korean-city-used-car",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "method": "Exact retained registry, clients index and compact-pack identity comparison, followed by current public named dealer catalogue and seller-bound listings. Marketplace profile name variants are not separate identities. No dealer approval is implied.",
+  "sources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/korean-city-used-car",
+      "observedAt": "2026-10-19T20:00:25.271761Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7373-jaguar-e-pace-p250-at-awd-249-hp-p250",
+      "observedAt": "2026-10-19T20:00:25.271761Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7819-hyundai-h-1-25-at-170-hp-gl-panel-van",
+      "observedAt": "2026-10-19T20:00:25.271761Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/8042-hyundai-h-1-25-at-170-hp-gl-panel-van",
+      "observedAt": "2026-10-19T20:00:25.271761Z"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T20:13:15.306Z",
+  "dealer": "al-majarah-al-sabaah-used-cars-trading",
+  "dealerId": "ae-umm-al-quwain-al-majarah-al-sabaah-used-cars",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "method": "Exact retained registry, clients index and compact-pack identity comparison, followed by current public named dealer catalogue and seller-bound listings. Marketplace profile name variants are not separate identities. No dealer approval is implied.",
+  "sources": [
+    {
+      "url": "https://licenseplate.ae/ar/cars/dealer/al-majarah-al-sabaah-used-cars",
+      "observedAt": "2026-10-19T20:00:28.930638Z"
+    },
+    {
+      "url": "https://licenseplate.ae/ar/cars/listing/12959-audi-a7-30-l-340-hp-gasoline-robot-four-wheel-drive-4wd-s-line",
+      "observedAt": "2026-10-19T20:00:28.930638Z"
+    },
+    {
+      "url": "https://licenseplate.ae/ar/cars/listing/12962-nissan-armada-56-at-317-hp-le",
+      "observedAt": "2026-10-19T20:00:28.930638Z"
+    },
+    {
+      "url": "https://licenseplate.ae/ar/cars/listing/13042-lexus-es-250-at-184-hp-es-250-f-sport",
+      "observedAt": "2026-10-19T20:00:28.930638Z"
+    }
+  ]
+}

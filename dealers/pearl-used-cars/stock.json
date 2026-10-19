@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "dealer": "pearl-used-cars",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:00:23.944334Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "dubicars-983508",
+      "title": "New ROX Adamas VIP",
+      "make": "ROX",
+      "model": "Adamas",
+      "year": 2026,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/dubicars-983508.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2026-rox-adamas-983508.html",
+      "observedAt": "2026-10-19T20:00:23.944334Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageOnRequest": true,
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "dubicars-991888",
+      "title": "ROX 01 01",
+      "make": "ROX",
+      "model": "01",
+      "year": 2023,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/dubicars-991888.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2023-rox-01-991888.html",
+      "observedAt": "2026-10-19T20:00:23.944334Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 74000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "dubicars-942920",
+      "title": "Mercedes Benz CLA250 PREMIUM",
+      "make": "Mercedes Benz",
+      "model": "Cla 250",
+      "year": 2024,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/dubicars-942920.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2024-mercedes-benz-cla250-20l-942920.html",
+      "observedAt": "2026-10-19T20:00:23.944334Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 29000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "dealer": "speed-cars-exhibition",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/speed-cars-exhb",
+      "observedAt": "2026-10-19T20:00:28.705573Z",
+      "supports": [
+        "business-trading-name",
+        "public-business-phone",
+        "marketplace-location",
+        "dealer-catalogue"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/13193-soueast-s06-15-amt-156-hp-luxury",
+      "observedAt": "2026-10-19T20:00:28.705573Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7070-nissan-armada-56-at-390-hp-platinum",
+      "observedAt": "2026-10-19T20:00:28.705573Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/4048-land-rover-range-rover-velar-20-at-awd-249-hp-r-dynamic-se",
+      "observedAt": "2026-10-19T20:00:28.705573Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "research": {
+    "observedAt": "2026-10-19T20:00:28.705573Z",
+    "profileUrl": "https://licenseplate.ae/cars/dealer/speed-cars-exhb",
+    "profileSha256": "4aa2546fc9013c54295fa7ce5724fcd177450ab444906ed3e74e4207df8b28dc",
+    "marketplaceTradingName": "Speed Cars Exhb",
+    "classification": "public-marketplace-dealer-profile-and-listing-snapshot",
+    "directDealerPostingVerified": false,
+    "profileClaimed": false,
+    "limitation": "The named marketplace profile may be syndicated or automatically assembled. Seller-attributed listings are dated observations; current physical stock and direct dealer posting are not confirmed.",
+    "unknownFields": [
+      "public-business-email",
+      "owned-website",
+      "opening-hours"
+    ],
+    "stockSources": [
+      {
+        "id": "licenseplate-13193",
+        "url": "https://licenseplate.ae/cars/listing/13193-soueast-s06-15-amt-156-hp-luxury",
+        "observedAt": "2026-10-19T20:00:28.705573Z",
+        "sha256": "6ec0fb093f7a63dd9ce1bce1157c62a7f26e7d41967a2dcf05644b5673216d83",
+        "sellerName": "Speed Cars Exhb",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/speed-cars-exhb"
+      },
+      {
+        "id": "licenseplate-7070",
+        "url": "https://licenseplate.ae/cars/listing/7070-nissan-armada-56-at-390-hp-platinum",
+        "observedAt": "2026-10-19T20:00:28.705573Z",
+        "sha256": "31fd6c5a8617389ff01e20f2b813a3b4672b82bdd60303479d35b519a66df5dc",
+        "sellerName": "Speed Cars Exhb",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/speed-cars-exhb"
+      },
+      {
+        "id": "licenseplate-4048",
+        "url": "https://licenseplate.ae/cars/listing/4048-land-rover-range-rover-velar-20-at-awd-249-hp-r-dynamic-se",
+        "observedAt": "2026-10-19T20:00:28.705573Z",
+        "sha256": "d2503c79810f97762d215ab77a93254a9575b02350796994aebc434fdcb376c0",
+        "sellerName": "Speed Cars Exhb",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/speed-cars-exhb"
+      }
+    ],
+    "photoSources": [
+      {
+        "listingId": "licenseplate-13193",
+        "listingUrl": "https://licenseplate.ae/cars/listing/13193-soueast-s06-15-amt-156-hp-luxury",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/soueast-s06-15-amt-156-hp-0-1792261084.webp",
+        "observedAt": "2026-10-19T20:00:28.705573Z",
+        "retainedPath": "dealer-stock/licenseplate-13193.webp",
+        "sha256": "50cacd4571f1ac178d7ecde06a80185934cfde0a14f50ace20d4b3b33be729e9",
+        "originalSha256": "745aa0b7401a31e44e92c0f32bc18328d174707ca959088e8f6a998df5ee84e7",
+        "bytes": 94198,
+        "width": 1235,
+        "height": 800,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      },
+      {
+        "listingId": "licenseplate-7070",
+        "listingUrl": "https://licenseplate.ae/cars/listing/7070-nissan-armada-56-at-390-hp-platinum",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/nissan-armada-56-at-390-hp-0-1789526537.webp",
+        "observedAt": "2026-10-19T20:00:28.705573Z",
+        "retainedPath": "dealer-stock/licenseplate-7070.webp",
+        "sha256": "300b7a020e11ac50cbba4311728b3b293b41a330aae8b86f0896f2ce875512cb",
+        "originalSha256": "7acbd8c7da6d18e2926f228249e1323cebc5420f2f202f6408b43efbdda9ed82",
+        "bytes": 81788,
+        "width": 1280,
+        "height": 776,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      },
+      {
+        "listingId": "licenseplate-4048",
+        "listingUrl": "https://licenseplate.ae/cars/listing/4048-land-rover-range-rover-velar-20-at-awd-249-hp-r-dynamic-se",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/land-rover-range-rover-velar-20-at-awd-249-hp-0-1789509157.webp",
+        "observedAt": "2026-10-19T20:00:28.705573Z",
+        "retainedPath": "dealer-stock/licenseplate-4048.webp",
+        "sha256": "3da4d79eb3e7137f36ab36be8f5936b56c1f57f428b22788d63f7a6f2beb8dfe",
+        "originalSha256": "72deb3577677ff054251367343898498f0f8d5fde31408bedcb25188168131d6",
+        "bytes": 98616,
+        "width": 1155,
+        "height": 800,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      }
+    ]
+  },
+  "stockVisualReview": {
+    "reviewedAt": "2026-10-19T20:25:00Z",
+    "reviewed": true,
+    "scope": "All retained photos, viewed in seven-dealer contact sheets",
+    "result": "Vehicle photos match listing types; no price values, named-person contacts or obvious unrelated photos observed."
+  }
+}

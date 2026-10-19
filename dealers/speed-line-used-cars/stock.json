@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "dealer": "speed-line-used-cars",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:00:28.781952Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "licenseplate-13054",
+      "title": "2026 Jetour X50",
+      "make": "Jetour",
+      "model": "X50",
+      "year": 2026,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-13054.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/13054-jetour-x50-15-amt-147-hp-premium",
+      "observedAt": "2026-10-19T20:00:28.781952Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Crossover",
+      "transmission": "Automated manual",
+      "fuel": "Petrol",
+      "color": "Grey",
+      "mileageValue": 9500,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "licenseplate-6752",
+      "title": "2011 Porsche Boxster",
+      "make": "Porsche",
+      "model": "Boxster",
+      "year": 2011,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-6752.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/6752-porsche-boxster-34-pdk-295-hp-standard",
+      "observedAt": "2026-10-19T20:00:28.781952Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Roadster",
+      "transmission": "Automated manual",
+      "fuel": "Petrol",
+      "color": "White",
+      "mileageValue": 220000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "licenseplate-7214",
+      "title": "2023 Cadillac Escalade",
+      "make": "Cadillac",
+      "model": "Escalade",
+      "year": 2023,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-7214.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/7214-cadillac-escalade-62-at-rwd-420-hp-sport",
+      "observedAt": "2026-10-19T20:00:28.781952Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "SUV",
+      "transmission": "Automatic",
+      "color": "Black",
+      "mileageValue": 90000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

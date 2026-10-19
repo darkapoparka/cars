@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "dealer": "speed-line-used-cars",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/speed-line-used-cars",
+      "observedAt": "2026-10-19T20:00:28.781952Z",
+      "supports": [
+        "business-trading-name",
+        "public-business-phone",
+        "marketplace-location",
+        "dealer-catalogue"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/13054-jetour-x50-15-amt-147-hp-premium",
+      "observedAt": "2026-10-19T20:00:28.781952Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/6752-porsche-boxster-34-pdk-295-hp-standard",
+      "observedAt": "2026-10-19T20:00:28.781952Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7214-cadillac-escalade-62-at-rwd-420-hp-sport",
+      "observedAt": "2026-10-19T20:00:28.781952Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "research": {
+    "observedAt": "2026-10-19T20:00:28.781952Z",
+    "profileUrl": "https://licenseplate.ae/cars/dealer/speed-line-used-cars",
+    "profileSha256": "06600f5c874e07400f1a2964664d8e3915d217fac1544bcd6171ccc9192cc4b6",
+    "marketplaceTradingName": "Speed Line Used Cars",
+    "classification": "public-marketplace-dealer-profile-and-listing-snapshot",
+    "directDealerPostingVerified": false,
+    "profileClaimed": false,
+    "limitation": "The named marketplace profile may be syndicated or automatically assembled. Seller-attributed listings are dated observations; current physical stock and direct dealer posting are not confirmed.",
+    "unknownFields": [
+      "public-business-email",
+      "owned-website",
+      "opening-hours"
+    ],
+    "stockSources": [
+      {
+        "id": "licenseplate-13054",
+        "url": "https://licenseplate.ae/cars/listing/13054-jetour-x50-15-amt-147-hp-premium",
+        "observedAt": "2026-10-19T20:00:28.781952Z",
+        "sha256": "a4a28bb455a22ea3fa5d765231f4855ebf7bba676293252019d115d860fae1f9",
+        "sellerName": "Speed Line Used Cars",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/speed-line-used-cars"
+      },
+      {
+        "id": "licenseplate-6752",
+        "url": "https://licenseplate.ae/cars/listing/6752-porsche-boxster-34-pdk-295-hp-standard",
+        "observedAt": "2026-10-19T20:00:28.781952Z",
+        "sha256": "c42d2725b7f31ccd59da4faf168950c60a5a55a55c950558908bae8643f2ff1f",
+        "sellerName": "Speed Line Used Cars",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/speed-line-used-cars"
+      },
+      {
+        "id": "licenseplate-7214",
+        "url": "https://licenseplate.ae/cars/listing/7214-cadillac-escalade-62-at-rwd-420-hp-sport",
+        "observedAt": "2026-10-19T20:00:28.781952Z",
+        "sha256": "2a188f70e9ad2b774c339e7385643588f53394c7eec702bd343eacb218bdebd5",
+        "sellerName": "Speed Line Used Cars",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/speed-line-used-cars"
+      }
+    ],
+    "photoSources": [
+      {
+        "listingId": "licenseplate-13054",
+        "listingUrl": "https://licenseplate.ae/cars/listing/13054-jetour-x50-15-amt-147-hp-premium",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/jetour-x50-15-amt-147-hp-0-1792208893.webp",
+        "observedAt": "2026-10-19T20:00:28.781952Z",
+        "retainedPath": "dealer-stock/licenseplate-13054.webp",
+        "sha256": "698ee9dc3888f5cb4223e746dc4777162995991073fd2683ff3025ba22f6995c",
+        "originalSha256": "02e16bb188715200597979b17502ff3770bc0dd1ec2ed9ee8876a08f6d3c2cbf",
+        "bytes": 75522,
+        "width": 1066,
+        "height": 800,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      },
+      {
+        "listingId": "licenseplate-6752",
+        "listingUrl": "https://licenseplate.ae/cars/listing/6752-porsche-boxster-34-pdk-295-hp-standard",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/porsche-boxster-34-pdk-295-hp-0-1789524626.webp",
+        "observedAt": "2026-10-19T20:00:28.781952Z",
+        "retainedPath": "dealer-stock/licenseplate-6752.webp",
+        "sha256": "3c8f0808c5584bb34aec09ab8b7cd9c6e914be6a759448b182bf71025e57dd50",
+        "originalSha256": "7f4d75a88f1b9b0e9458d5135e2d33087ae3bfba8b3a5254d5c375e1eb64d279",
+        "bytes": 49702,
+        "width": 1066,
+        "height": 800,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      },
+      {
+        "listingId": "licenseplate-7214",
+        "listingUrl": "https://licenseplate.ae/cars/listing/7214-cadillac-escalade-62-at-rwd-420-hp-sport",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/cadillac-escalade-62-at-rwd-420-hp-0-1789527343.webp",
+        "observedAt": "2026-10-19T20:00:28.781952Z",
+        "retainedPath": "dealer-stock/licenseplate-7214.webp",
+        "sha256": "a979fee3cedf4534c61c3062d536c3c14b20e8a5fa83277a05f910720ed67f11",
+        "originalSha256": "3f5f58d1068db524fabf5447f9ee9c44a8051ae38c05b0f9f5e68ca408b2e640",
+        "bytes": 86206,
+        "width": 1002,
+        "height": 800,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      }
+    ]
+  },
+  "stockVisualReview": {
+    "reviewedAt": "2026-10-19T20:25:00Z",
+    "reviewed": true,
+    "scope": "All retained photos, viewed in seven-dealer contact sheets",
+    "result": "Vehicle photos match listing types; no price values, named-person contacts or obvious unrelated photos observed."
+  }
+}
