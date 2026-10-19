@@ -16,13 +16,28 @@
     {
       "role": "onDarkAndAccent",
       "tool": "image_gen.imagegen",
+      "generationId": "exec-c40a5bb1-bf51-48b1-b114-50554195427b",
+      "modelVersion": null,
+      "prompt": "Make a precise dark-surface version of the attached TANBY CARS logo. Preserve the identical TC monogram and exact TANBY CARS wordmark, letter geometry, spacing and horizontal layout. The current black ink should become ONE SINGLE SOLID OPAQUE PALE BLUE-GRAY ink #dbe4ef everywhere. Every glyph is a FILLED shape. Absolutely NO dark stroke, NO black contour, NO outline, NO keyline, no second colour, no bevel, no shadows, no glow, no gradients. All gaps and letter counters must remain genuinely alpha transparent. Entire background alpha transparent, no backdrop rectangle. At least ninety percent of the actual painted ink should be the pale #dbe4ef colour, with smooth antialiased edges only. Preserve a clear gap between left TC symbol and right TANBY CARS lettering so the existing emblem can be extracted. Clean flat vector-like edge quality, no speckles or stray pixels. This is only a faithful surface ink variant of the attached artwork, with no new name, slogan or symbol.",
+      "promptRetained": true,
+      "sourceAssetSha256": "0b95d24fc9102a717a038afbc09eb4bce88e06040f138f8faf1c16af2b1b0e33",
+      "observedAt": "2026-10-19",
+      "originalResponseArtworkRetained": true
+    }
+  ],
+  "exportPolicy": "Original current generated PNG bytes retained. Compact marks are exact existing-emblem pixel crops with parent hashes and rectangles. Dark/accent ink is a new actual imagegen result; no deterministic recolour. Existing logo pipeline performs transparent padding removal and deterministic raster export.",
+  "supersededGenerations": [
+    {
+      "role": "onDarkAndAccent",
+      "tool": "image_gen.imagegen",
       "generationId": "exec-2c0be0fc-9a7a-4f89-9b41-2e108e8ed8d1",
       "modelVersion": null,
       "prompt": "Adapt this exact supplied logo into one clean dual-ink surface variant for dark or red backgrounds. Keep the exact word spelling, exact emblem and layout. Use solid bright WHITE filled letters and emblem areas bounded by a strong clean deep NAVY #101820 contour; then a subtle WHITE outside keyline. Make the contour broad, smooth, and deliberate so the inner white shape and edge remain fully solid. True transparent alpha outside the logo, generous transparent margin. No grunge, no speckles, no distressed raster texture, no holes in solid strokes, no gradients, no drop shadow, no background, no additional content. Flat digital logo with clean dual outlines. This is a precise surface adaptation, not a new identity.",
       "promptRetained": true,
       "sourceAssetSha256": "464c8a3fef99154111cf938630fbdab97c40f2509d69783165e518b0e5300fc5",
       "observedAt": "2026-10-19",
-      "originalResponseArtworkRetained": true
+      "originalResponseArtworkRetained": false,
+      "supersededReason": "Existing CI pixel contrast gate failure; actual surface variants and parent-emblem crops replace this source."
     },
     {
       "role": "compact",
@@ -33,8 +48,8 @@
       "promptRetained": true,
       "sourceAssetSha256": "88b18b360d24edffc387b90d6527162c6ec6e1f0e9eb9e9ab5e6fa4e2ba257bf",
       "observedAt": "2026-10-19",
-      "originalResponseArtworkRetained": true
+      "originalResponseArtworkRetained": false,
+      "supersededReason": "Existing CI pixel contrast gate failure; actual surface variants and parent-emblem crops replace this source."
     }
-  ],
-  "exportPolicy": "Original generated PNG bytes are retained. Compact pixel-exact extractions, where used, retain their parent generation, hash and rectangle in source.json. Existing dealer-pack logo tooling performs only transparent padding removal and deterministic raster exports. No deterministic recolour is used."
+  ]
 }

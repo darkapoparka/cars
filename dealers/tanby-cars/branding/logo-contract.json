@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "dealer": "tanby-cars",
   "reviewed": true,
-  "reviewedAt": "2026-10-19T19:22:56.608725Z",
+  "reviewedAt": "2026-10-19T20:31:58.927004Z",
   "status": "independent-proposal-not-dealer-approved",
   "creationMethod": "imagegen-proposal",
   "assets": {
@@ -15,14 +15,14 @@
     "onDark": {
       "sourcePath": "branding/logo-on-dark.png",
       "publicPath": "/dealer-brand/logo-on-dark.webp",
-      "sha256": "242ffb046f9c39a8241341113aa30cb333e66dc12c5b39d4d56f90fa492e648a",
-      "sourceSha256": "06d9f90201ff03fca8ea88f711885965e19248727ebdc01534c3fe4b21534550"
+      "sha256": "d803b707d515e8b3a9bfb6a9c9dd4959209909d46f1d79b2b18a76d2b0cf95b0",
+      "sourceSha256": "f79da281bc742227ee3a28d29d3f655c837aab5adbebf936c54d23b8ca025468"
     },
     "onAccent": {
       "sourcePath": "branding/logo-on-accent.png",
       "publicPath": "/dealer-brand/logo-on-accent.webp",
-      "sha256": "242ffb046f9c39a8241341113aa30cb333e66dc12c5b39d4d56f90fa492e648a",
-      "sourceSha256": "06d9f90201ff03fca8ea88f711885965e19248727ebdc01534c3fe4b21534550"
+      "sha256": "d803b707d515e8b3a9bfb6a9c9dd4959209909d46f1d79b2b18a76d2b0cf95b0",
+      "sourceSha256": "f79da281bc742227ee3a28d29d3f655c837aab5adbebf936c54d23b8ca025468"
     }
   },
   "surfaceBackgrounds": {
@@ -50,16 +50,16 @@
   },
   "mark": {
     "path": "branding/logo-mark.png",
-    "sha256": "c83a4b8763f24e41b56856304fe119bbe6924b081643a60e8749245b7c79ab45",
+    "sha256": "96ffea4d90e429794a76be0abadd1e6d2a2859f194bdad9a4b1cafbad8394c3b",
     "generation": {
       "tool": "image_gen.imagegen",
-      "generationId": "exec-4001ca2a-5923-4f06-a85a-08eb962aa60a",
+      "generationId": "exec-92cc6881-3add-45a9-939b-94501e39d67a",
       "modelVersion": null
     }
   },
   "favicon": {
     "path": "dealer-brand/favicon.ico",
-    "sha256": "b9f7d4a27a271cfc611b934a15bba158459ffc8b0b1ca80db948e1d64d3c1e71"
+    "sha256": "81b4975cacb2ccb44d3c6c2347f45d97f6db74bb4af9502f1cbaeff14c35ad06"
   },
   "surfaces": {
     "onLight": {
@@ -74,20 +74,20 @@
     },
     "onDark": {
       "path": "branding/logo-on-dark.png",
-      "sha256": "06d9f90201ff03fca8ea88f711885965e19248727ebdc01534c3fe4b21534550",
+      "sha256": "f79da281bc742227ee3a28d29d3f655c837aab5adbebf936c54d23b8ca025468",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-2c0be0fc-9a7a-4f89-9b41-2e108e8ed8d1",
+        "generationId": "exec-c40a5bb1-bf51-48b1-b114-50554195427b",
         "modelVersion": null
       },
       "sourceReference": "dealers/tanby-cars/branding/generated-on-dark.png"
     },
     "onAccent": {
       "path": "branding/logo-on-accent.png",
-      "sha256": "06d9f90201ff03fca8ea88f711885965e19248727ebdc01534c3fe4b21534550",
+      "sha256": "f79da281bc742227ee3a28d29d3f655c837aab5adbebf936c54d23b8ca025468",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-2c0be0fc-9a7a-4f89-9b41-2e108e8ed8d1",
+        "generationId": "exec-c40a5bb1-bf51-48b1-b114-50554195427b",
         "modelVersion": null
       },
       "sourceReference": "dealers/tanby-cars/branding/generated-on-dark.png"
@@ -109,26 +109,26 @@
     },
     "onDark": {
       "operation": "crop-transparent-padding-and-resize",
-      "sourceSha256": "464c8a3fef99154111cf938630fbdab97c40f2509d69783165e518b0e5300fc5",
-      "sha256": "06d9f90201ff03fca8ea88f711885965e19248727ebdc01534c3fe4b21534550",
+      "sourceSha256": "0b95d24fc9102a717a038afbc09eb4bce88e06040f138f8faf1c16af2b1b0e33",
+      "sha256": "f79da281bc742227ee3a28d29d3f655c837aab5adbebf936c54d23b8ca025468",
       "crop": {
-        "left": 15,
-        "top": 131,
-        "width": 2130,
-        "height": 447
+        "left": 42,
+        "top": 158,
+        "width": 2078,
+        "height": 382
       },
       "sourcePath": "branding/generated-on-dark.png",
       "outputPath": "branding/logo-on-dark.png"
     },
     "onAccent": {
       "operation": "crop-transparent-padding-and-resize",
-      "sourceSha256": "464c8a3fef99154111cf938630fbdab97c40f2509d69783165e518b0e5300fc5",
-      "sha256": "06d9f90201ff03fca8ea88f711885965e19248727ebdc01534c3fe4b21534550",
+      "sourceSha256": "0b95d24fc9102a717a038afbc09eb4bce88e06040f138f8faf1c16af2b1b0e33",
+      "sha256": "f79da281bc742227ee3a28d29d3f655c837aab5adbebf936c54d23b8ca025468",
       "crop": {
-        "left": 15,
-        "top": 131,
-        "width": 2130,
-        "height": 447
+        "left": 42,
+        "top": 158,
+        "width": 2078,
+        "height": 382
       },
       "sourcePath": "branding/generated-on-dark.png",
       "outputPath": "branding/logo-on-accent.png"
@@ -137,40 +137,40 @@
   "supplemental": {
     "mark-on-light.webp": {
       "path": "dealer-brand/mark-on-light.webp",
-      "sha256": "10be3a7e5013c58bf8947e7bbe1927b0cec4a758513cf5fdf64310a1ef14b7be",
+      "sha256": "6815b54fa8025c66c71dcad368c80470cb827a105c43b666be113ab50b062aa6",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-4001ca2a-5923-4f06-a85a-08eb962aa60a",
+        "generationId": "exec-92cc6881-3add-45a9-939b-94501e39d67a",
         "modelVersion": null
       },
       "sourceReference": "dealers/tanby-cars/branding/generated-mark.png"
     },
     "mark-on-dark.webp": {
       "path": "dealer-brand/mark-on-dark.webp",
-      "sha256": "10be3a7e5013c58bf8947e7bbe1927b0cec4a758513cf5fdf64310a1ef14b7be",
+      "sha256": "ddfa60147337cf1aa8128ca8db37231a70eafc64dd5a18545444c4f930707c5a",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-4001ca2a-5923-4f06-a85a-08eb962aa60a",
+        "generationId": "exec-c40a5bb1-bf51-48b1-b114-50554195427b",
         "modelVersion": null
       },
-      "sourceReference": "dealers/tanby-cars/branding/generated-mark.png"
+      "sourceReference": "dealers/tanby-cars/branding/generated-mark-on-dark.png"
     },
     "app-icon.png": {
       "path": "dealer-brand/app-icon.png",
-      "sha256": "c83a4b8763f24e41b56856304fe119bbe6924b081643a60e8749245b7c79ab45",
+      "sha256": "96ffea4d90e429794a76be0abadd1e6d2a2859f194bdad9a4b1cafbad8394c3b",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-4001ca2a-5923-4f06-a85a-08eb962aa60a",
+        "generationId": "exec-92cc6881-3add-45a9-939b-94501e39d67a",
         "modelVersion": null
       },
       "sourceReference": "dealers/tanby-cars/branding/generated-mark.png"
     },
     "favicon.ico": {
       "path": "dealer-brand/favicon.ico",
-      "sha256": "b9f7d4a27a271cfc611b934a15bba158459ffc8b0b1ca80db948e1d64d3c1e71",
+      "sha256": "81b4975cacb2ccb44d3c6c2347f45d97f6db74bb4af9502f1cbaeff14c35ad06",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-4001ca2a-5923-4f06-a85a-08eb962aa60a",
+        "generationId": "exec-92cc6881-3add-45a9-939b-94501e39d67a",
         "modelVersion": null
       },
       "sourceReference": "dealers/tanby-cars/branding/generated-mark.png"
@@ -180,17 +180,17 @@
   "originalArtworkPreserved": true,
   "visualReview": {
     "reviewed": true,
-    "reviewedAt": "2026-10-19T19:22:56.608725Z",
+    "reviewedAt": "2026-10-19T20:31:58.927004Z",
     "source": "branding/source.json",
     "spelling": "agent-visual-review",
     "dealerApproval": false
   },
   "markOnDark": {
     "path": "branding/logo-mark-on-dark.png",
-    "sha256": "c83a4b8763f24e41b56856304fe119bbe6924b081643a60e8749245b7c79ab45",
+    "sha256": "3eaf48dbefe93ab4d32025982e0fb698e73684a11b69a1254fb5abe44caf756c",
     "generation": {
       "tool": "image_gen.imagegen",
-      "generationId": "exec-4001ca2a-5923-4f06-a85a-08eb962aa60a",
+      "generationId": "exec-c40a5bb1-bf51-48b1-b114-50554195427b",
       "modelVersion": null
     }
   }

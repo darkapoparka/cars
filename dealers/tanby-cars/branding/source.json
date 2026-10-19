@@ -28,7 +28,7 @@
   "observedAt": "2026-10-19",
   "researchConclusion": "No usable original logo was obtained from bounded exact-business/locality searches and the matched public seller and directory sources. The dealer catalogue supplies a text identity and vehicle photographs; an unavailable or absent logo image does not prove that no original branding exists. This is an independent proposed identity, not an official dealer logo.",
   "generatedInputs": {
-    "reviewedAt": "2026-10-19T19:22:56.608725Z",
+    "reviewedAt": "2026-10-19T20:31:58.927004Z",
     "master": {
       "path": "branding/generated-master.png",
       "sha256": "6ea96f4ef7932d6b7278035a3562568c90d3ed050aeb917ea485013034943777",
@@ -44,28 +44,42 @@
     },
     "mark": {
       "path": "branding/generated-mark.png",
-      "sha256": "88b18b360d24edffc387b90d6527162c6ec6e1f0e9eb9e9ab5e6fa4e2ba257bf",
-      "nativeDimensions": {
-        "width": 1254,
-        "height": 1254
-      },
+      "sha256": "546952c01cdb3d768b07f799c32340d1873acd13cbfeec4c5331bfb46a81d5aa",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-4001ca2a-5923-4f06-a85a-08eb962aa60a",
+        "generationId": "exec-92cc6881-3add-45a9-939b-94501e39d67a",
         "modelVersion": null
+      },
+      "derivation": {
+        "operation": "pixel-exact rectangular extraction of the existing generated TC emblem; no recolouring or invented artwork",
+        "parentPath": "branding/generated-master.png",
+        "parentSha256": "6ea96f4ef7932d6b7278035a3562568c90d3ed050aeb917ea485013034943777",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 711,
+          "height": 724
+        }
       }
     },
     "markOnDark": {
-      "path": "branding/generated-mark.png",
-      "sha256": "88b18b360d24edffc387b90d6527162c6ec6e1f0e9eb9e9ab5e6fa4e2ba257bf",
-      "nativeDimensions": {
-        "width": 1254,
-        "height": 1254
-      },
+      "path": "branding/generated-mark-on-dark.png",
+      "sha256": "e12b337a82c71aaaf341b023cf4afd38cf1294cccf8bb49a4c9e4d724e7b9219",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-4001ca2a-5923-4f06-a85a-08eb962aa60a",
+        "generationId": "exec-c40a5bb1-bf51-48b1-b114-50554195427b",
         "modelVersion": null
+      },
+      "derivation": {
+        "operation": "pixel-exact rectangular extraction of the existing generated TC emblem; no recolouring or invented artwork",
+        "parentPath": "branding/generated-on-dark.png",
+        "parentSha256": "0b95d24fc9102a717a038afbc09eb4bce88e06040f138f8faf1c16af2b1b0e33",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 704,
+          "height": 724
+        }
       }
     },
     "surfaces": {
@@ -84,27 +98,27 @@
       },
       "onDark": {
         "path": "branding/generated-on-dark.png",
-        "sha256": "464c8a3fef99154111cf938630fbdab97c40f2509d69783165e518b0e5300fc5",
+        "sha256": "0b95d24fc9102a717a038afbc09eb4bce88e06040f138f8faf1c16af2b1b0e33",
         "nativeDimensions": {
           "width": 2172,
           "height": 724
         },
         "generation": {
           "tool": "image_gen.imagegen",
-          "generationId": "exec-2c0be0fc-9a7a-4f89-9b41-2e108e8ed8d1",
+          "generationId": "exec-c40a5bb1-bf51-48b1-b114-50554195427b",
           "modelVersion": null
         }
       },
       "onAccent": {
         "path": "branding/generated-on-dark.png",
-        "sha256": "464c8a3fef99154111cf938630fbdab97c40f2509d69783165e518b0e5300fc5",
+        "sha256": "0b95d24fc9102a717a038afbc09eb4bce88e06040f138f8faf1c16af2b1b0e33",
         "nativeDimensions": {
           "width": 2172,
           "height": 724
         },
         "generation": {
           "tool": "image_gen.imagegen",
-          "generationId": "exec-2c0be0fc-9a7a-4f89-9b41-2e108e8ed8d1",
+          "generationId": "exec-c40a5bb1-bf51-48b1-b114-50554195427b",
           "modelVersion": null
         }
       }
@@ -112,28 +126,42 @@
     "marks": {
       "onLight": {
         "path": "branding/generated-mark.png",
-        "sha256": "88b18b360d24edffc387b90d6527162c6ec6e1f0e9eb9e9ab5e6fa4e2ba257bf",
-        "nativeDimensions": {
-          "width": 1254,
-          "height": 1254
-        },
+        "sha256": "546952c01cdb3d768b07f799c32340d1873acd13cbfeec4c5331bfb46a81d5aa",
         "generation": {
           "tool": "image_gen.imagegen",
-          "generationId": "exec-4001ca2a-5923-4f06-a85a-08eb962aa60a",
+          "generationId": "exec-92cc6881-3add-45a9-939b-94501e39d67a",
           "modelVersion": null
+        },
+        "derivation": {
+          "operation": "pixel-exact rectangular extraction of the existing generated TC emblem; no recolouring or invented artwork",
+          "parentPath": "branding/generated-master.png",
+          "parentSha256": "6ea96f4ef7932d6b7278035a3562568c90d3ed050aeb917ea485013034943777",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 711,
+            "height": 724
+          }
         }
       },
       "onDark": {
-        "path": "branding/generated-mark.png",
-        "sha256": "88b18b360d24edffc387b90d6527162c6ec6e1f0e9eb9e9ab5e6fa4e2ba257bf",
-        "nativeDimensions": {
-          "width": 1254,
-          "height": 1254
-        },
+        "path": "branding/generated-mark-on-dark.png",
+        "sha256": "e12b337a82c71aaaf341b023cf4afd38cf1294cccf8bb49a4c9e4d724e7b9219",
         "generation": {
           "tool": "image_gen.imagegen",
-          "generationId": "exec-4001ca2a-5923-4f06-a85a-08eb962aa60a",
+          "generationId": "exec-c40a5bb1-bf51-48b1-b114-50554195427b",
           "modelVersion": null
+        },
+        "derivation": {
+          "operation": "pixel-exact rectangular extraction of the existing generated TC emblem; no recolouring or invented artwork",
+          "parentPath": "branding/generated-on-dark.png",
+          "parentSha256": "0b95d24fc9102a717a038afbc09eb4bce88e06040f138f8faf1c16af2b1b0e33",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 704,
+            "height": 724
+          }
         }
       }
     },
@@ -157,8 +185,8 @@
         120,
         180
       ],
-      "reviewedAt": "2026-10-19T19:22:56.608725Z",
-      "notes": "Visually reviewed the actual deterministic transparent-padding exports at120px and180px on all six retained template surface colours. Exact name spelling, silhouette, alpha edges, spacing and clipping were checked. Light-ink variants are actual imagegen results, not deterministic recolours. Small secondary suffix text is subordinate to the principal name; compact identity is provided separately."
+      "reviewedAt": "2026-10-19T20:31:58.927004Z",
+      "notes": "Visually inspected exact deterministic exports on all six retained backgrounds. Wordmarks reviewed at120/180px and compact TC at32/64px; spelling, clear counters, spacing and clipping checked. Solid pale inverse is a new actual imagegen result; light and dark TC marks are exact parent-emblem crops. No recolouring or template palette change."
     },
     "compactMarkStatus": "independent-preview-not-dealer-approved",
     "compactMarkDescription": "TC monogram",
@@ -176,8 +204,8 @@
         "#17191c",
         "#c40101"
       ],
-      "reviewedAt": "2026-10-19T19:22:56.608725Z",
-      "notes": "Visually inspected the actual compact exports at32px and64px on all six template backgrounds. Existing-emblem pixel crops have explicit parent hashes and exact rectangle provenance; independently generated compact marks retain their own actual generation IDs. Shape, spacing, clipping and transparent counters were checked. Dealer approval remains unknown."
+      "reviewedAt": "2026-10-19T20:31:58.927004Z",
+      "notes": "Visually inspected exact deterministic exports on all six retained backgrounds. Wordmarks reviewed at120/180px and compact TC at32/64px; spelling, clear counters, spacing and clipping checked. Solid pale inverse is a new actual imagegen result; light and dark TC marks are exact parent-emblem crops. No recolouring or template palette change."
     }
   }
 }
