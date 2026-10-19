@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "dealer": "rpm-shentonfield",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T19:22:56.608725Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-faithful-redraw",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "76dc852058cdee0839b7e51af26bd32b9d589e50b72693f449ecd35a2adcbce6",
+      "sourceSha256": "6909b8b130ba211a1c5f082b647fbccecf081cca646094d1d3214220f4ef432d"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "b8609e941fef3335721742d968d5b0aa488c21c88fcefd9a63d44c0c0f53d13f",
+      "sourceSha256": "39ef4c87647c5e519b317e04690e81a44e400797e5d0231523a88d1a1f8ac28d"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "b8609e941fef3335721742d968d5b0aa488c21c88fcefd9a63d44c0c0f53d13f",
+      "sourceSha256": "39ef4c87647c5e519b317e04690e81a44e400797e5d0231523a88d1a1f8ac28d"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "6909b8b130ba211a1c5f082b647fbccecf081cca646094d1d3214220f4ef432d",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-181c7f0b-3250-4ca8-a4a1-5ad0e76957d0",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "eb200b6924460aa40181c9bcd7de2e30f8eedad3241420ce1aa91fc9119a75d6",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-181c7f0b-3250-4ca8-a4a1-5ad0e76957d0",
+      "modelVersion": null
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "95b96ef39fe9bcfdb60a0c8ffc0402be4e04cc834aa46d4efad4e29447b12cc1"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "6909b8b130ba211a1c5f082b647fbccecf081cca646094d1d3214220f4ef432d",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-181c7f0b-3250-4ca8-a4a1-5ad0e76957d0",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/rpm-shentonfield/branding/generated-master.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "39ef4c87647c5e519b317e04690e81a44e400797e5d0231523a88d1a1f8ac28d",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7d427150-b95a-4709-92a8-541de1ddbda8",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/rpm-shentonfield/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "39ef4c87647c5e519b317e04690e81a44e400797e5d0231523a88d1a1f8ac28d",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7d427150-b95a-4709-92a8-541de1ddbda8",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/rpm-shentonfield/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "e5ed55b2bcf2d7a360a18d13c69662189a2ab74f368a5b7e9350f336a79ae7da",
+      "sha256": "6909b8b130ba211a1c5f082b647fbccecf081cca646094d1d3214220f4ef432d",
+      "crop": {
+        "left": 5,
+        "top": 56,
+        "width": 2167,
+        "height": 611
+      },
+      "sourcePath": "branding/generated-master.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "e65ee023acb4b49b2af88db09f61d22a10482084990138d2073b47edf8cc501d",
+      "sha256": "39ef4c87647c5e519b317e04690e81a44e400797e5d0231523a88d1a1f8ac28d",
+      "crop": {
+        "left": 0,
+        "top": 37,
+        "width": 2172,
+        "height": 647
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "e65ee023acb4b49b2af88db09f61d22a10482084990138d2073b47edf8cc501d",
+      "sha256": "39ef4c87647c5e519b317e04690e81a44e400797e5d0231523a88d1a1f8ac28d",
+      "crop": {
+        "left": 0,
+        "top": 37,
+        "width": 2172,
+        "height": 647
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "6f09db8a08185a71f1819d3b80fa1e1e780a54abd4967498928dd9e81cca8390",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-181c7f0b-3250-4ca8-a4a1-5ad0e76957d0",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/rpm-shentonfield/branding/generated-master.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "c9124993f833957ada098948dedb9b34e30b2595ad0efc7eaeb4b2d119ecd9e0",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7d427150-b95a-4709-92a8-541de1ddbda8",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/rpm-shentonfield/branding/generated-on-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "eb200b6924460aa40181c9bcd7de2e30f8eedad3241420ce1aa91fc9119a75d6",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-181c7f0b-3250-4ca8-a4a1-5ad0e76957d0",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/rpm-shentonfield/branding/generated-master.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "95b96ef39fe9bcfdb60a0c8ffc0402be4e04cc834aa46d4efad4e29447b12cc1",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-181c7f0b-3250-4ca8-a4a1-5ad0e76957d0",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/rpm-shentonfield/branding/generated-master.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T19:22:56.608725Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "de6edaf05653d5740906f3d3d561fb9c722886b4da19849bd23dbbf2474d8760",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-7d427150-b95a-4709-92a8-541de1ddbda8",
+      "modelVersion": null
+    }
+  }
+}

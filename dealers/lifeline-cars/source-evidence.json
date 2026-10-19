@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "dealer": "lifeline-cars",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uk.json",
+    "sha256": "6cd8d365586f9a5d5131fe4b1d50baede7de91ab384a135017c25367298b07c4"
+  },
+  "publicSources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Lifeline-Cars-Limited",
+      "observedAt": "2026-10-19T17:36:50.358372Z",
+      "supports": [
+        "public-business-identity",
+        "public-business-contact",
+        "advertised-stock"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "publicObservations": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Lifeline-Cars-Limited",
+      "observedAt": "2026-10-19T17:36:50.358372Z",
+      "httpStatus": 200,
+      "sha256": "0204f9adc2ec9bbf4b34440554eac5db1c808fb71d867d06488a69e436664f04",
+      "byteLength": 36955,
+      "retention": "Only reviewed public business fields, hashes, listing identities and compressed photographs are committed; raw HTML remains outside the public pack."
+    }
+  ],
+  "stock": [
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/920039387320",
+      "photoUrl": "https://i.ebayimg.com/images/g/JxMAAeSwxtBq0Jpi/s-l1600.jpg",
+      "observedAt": "2026-10-19T18:02:18.936742Z",
+      "listingSha256": "a3cc0b1578f639054329638d5550b708194cc76335e93cb59415177fc1e97586",
+      "descriptionSha256": "62e7d84707a6f911c85c970413188137f2a4d54b1a471d15110a03120332c5fd",
+      "sourcePhotoSha256": "bef0c5bbe4dd1c9563407ef4dbdbc0b6e8a844cf18a961dc4ccfdc7a895fa3ca",
+      "sourcePhotoDimensions": [
+        1080,
+        791
+      ],
+      "photoSha256": "ab193930458e7b0f9111909ba9b904f020e34ea65418b91599094265d431570c",
+      "photoDimensions": [
+        1080,
+        791
+      ],
+      "photoBytes": 147134,
+      "recordId": "public-listing-1",
+      "title": "2012 Ford Fiesta 1.2 petrol manual",
+      "retainedPhoto": "dealer-stock/public-1.jpg",
+      "publicPhotoReviewed": true
+    },
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/920041380058",
+      "photoUrl": "https://i.ebayimg.com/images/g/Q4sAAeSw86tq0J20/s-l1600.jpg",
+      "observedAt": "2026-10-19T17:53:17.049205Z",
+      "listingSha256": "0ccddedf26cc82f3622bca02f11297217f2649e46ea1bac03d366d307214fa5a",
+      "descriptionSha256": "3d76436e61d52ac9e6cd439b8bb254dbc81a1fb447720ae00677ae6bbc25f24c",
+      "sourcePhotoSha256": "7d4cc0e35678b8b7d62c34727f1d274a4bda85038b756f283fe6a7e1fbd10b53",
+      "sourcePhotoDimensions": [
+        1500,
+        1125
+      ],
+      "photoSha256": "edf6d52c3bcdb981268f847ecc6f98c58a522d500e1e9f7b66667b6d62ef2974",
+      "photoDimensions": [
+        1280,
+        960
+      ],
+      "photoBytes": 197459,
+      "photoObservedAt": "2026-10-19T18:01:41.530017Z",
+      "recordId": "public-listing-2",
+      "title": "2012 Vauxhall Corsa 1.2 petrol manual",
+      "retainedPhoto": "dealer-stock/public-2.jpg",
+      "publicPhotoReviewed": true
+    },
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/920040899472",
+      "photoUrl": "https://i.ebayimg.com/images/g/3hYAAeSwQvlq0QgN/s-l1600.jpg",
+      "observedAt": "2026-10-19T17:53:17.183152Z",
+      "listingSha256": "bb3d5099083029e5856b40ebf6eb70db3d33b89dc1ce31b25370571a7d59b5d2",
+      "descriptionSha256": "71c3627e75a21293b7ebc71a910eae3dcae51dd7356cb23a51372123995abfc4",
+      "sourcePhotoSha256": "30b00cdd9f1338a762da3bb1dcde805b40d3110b4ebefcb45b1ad0e29e45806a",
+      "sourcePhotoDimensions": [
+        1500,
+        1125
+      ],
+      "photoSha256": "ec3064dfe4641d9a5b93ce5d40dd66f36005f372b1a5e99e11b03ea1d1428d0a",
+      "photoDimensions": [
+        1280,
+        960
+      ],
+      "photoBytes": 190010,
+      "photoObservedAt": "2026-10-19T18:01:42.017573Z",
+      "recordId": "public-listing-3",
+      "title": "2013 Ford Ka Zetec 1.2 petrol manual",
+      "retainedPhoto": "dealer-stock/public-3.jpg",
+      "publicPhotoReviewed": true
+    }
+  ],
+  "review": {
+    "reviewedAt": "2026-10-19T18:24:26.760899Z",
+    "stockPhotoIdentityChecked": true,
+    "sourceClaimLimits": "Dated public adverts only; availability, repairs, vehicle condition and legal entity details are not independently certified.",
+    "omissions": [
+      "A catalogue row had an empty /itm/ URL. Replaced with a directly linked Ford Fiesta; no vehicle link invented."
+    ]
+  }
+}

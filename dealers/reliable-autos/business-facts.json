@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "slug": "reliable-autos",
+  "dealerId": "gb-nottingham-reliable-autos",
+  "business": {
+    "name": "Reliable Autos Ltd",
+    "city": "Nottingham",
+    "region": "Nottinghamshire",
+    "countryCode": "GB",
+    "currency": "GBP",
+    "distanceUnit": "mi",
+    "locale": "en-GB",
+    "address": "RELIABLE AUTOS LTD, Whitemoor Road, Nottingham, NG6 0HN",
+    "phone": "+447537145623",
+    "phoneDisplay": "(07537) 145623",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://www.autotrader.co.uk/dealers/nottinghamshire/nottingham/reliable-autos-ltd-10031896",
+    "hours": "Viewing by appointment only.",
+    "sourceUrl": "https://www.autotrader.co.uk/dealers/nottinghamshire/nottingham/reliable-autos-ltd-10031896",
+    "observedAt": "2026-10-19",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/nottinghamshire/nottingham/reliable-autos-ltd-10031896",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "current-public-business-details",
+        "dated-advertised-stock-snapshot"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "dealer": "saad-motors",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T19:34:01.044Z",
+  "observedAt": "2026-10-19T19:31:40.274451+00:00",
+  "method": "Reviewed exact selected public advert bodies and marketplace vehicle-history panels. Preserve attributed dated advisories; do not infer an unspecified damage category or finance settlement.",
+  "coverage": [
+    {
+      "listingId": "listing-1",
+      "sourceUrl": "https://www.ebay.co.uk/itm/267817165986",
+      "httpStatus": 200,
+      "pageSha256": "4e0951123f478b186ad5d9cf32664b0428e767ddcc8d0fd3f2aedaeba38d12c8",
+      "descriptionFetched": true,
+      "descriptionSha256": "c5c0016c32aeaeb69f7ae23e0ade8cf99d2dec613d23219fc50a7058bab5f90b"
+    },
+    {
+      "listingId": "listing-2",
+      "sourceUrl": "https://www.ebay.co.uk/itm/267817153160",
+      "httpStatus": 200,
+      "pageSha256": "0ba21fd70212a10db9bac7c10f61cad51829c479502f01292d392b28c4cb216a",
+      "descriptionFetched": true,
+      "descriptionSha256": "f5e1696ec2669d54112ccd3b97ed3e0cb88c0c54264138e04db3f0ce83f24bb1"
+    },
+    {
+      "listingId": "listing-3",
+      "sourceUrl": "https://www.ebay.co.uk/itm/267810893463",
+      "httpStatus": 200,
+      "pageSha256": "39a317a7c1946e4f781dc3a288243a71ab75267b3c5afed75e4f07b74cc2f57e",
+      "descriptionFetched": true,
+      "descriptionSha256": "92dfc19d70af87ea7533398b3bdc9f9fcb3f61d10751b6907786a0a665cfb240"
+    }
+  ],
+  "findings": [
+    {
+      "listingId": "listing-1",
+      "advertId": "267817165986",
+      "stockTitle": "2022 Nissan Juke 1.0 DiG-T 114 N-Connecta 5dr",
+      "sourceUrl": "https://www.ebay.co.uk/itm/267817165986",
+      "observedAt": "2026-10-19T19:26:27.443227Z",
+      "httpStatus": 200,
+      "pageSha256": "4e0951123f478b186ad5d9cf32664b0428e767ddcc8d0fd3f2aedaeba38d12c8",
+      "descriptionUrl": "https://itm.ebaydesc.com/itmdesc/267817165986?t=1792353072000&category=18238&seller=saadmotorslimited&excSoj=1&ver=1&excTrk=1&lsite=3&ittenable=false&domain=ebay.com&descgauge=1&cspheader=1&oneClk=2&secureDesc=1&lang=en",
+      "descriptionSha256": "c5c0016c32aeaeb69f7ae23e0ade8cf99d2dec613d23219fc50a7058bab5f90b",
+      "type": "vehicle-history",
+      "category": "S",
+      "finding": "The seller description explicitly records Category S history and claims light damage has been repaired. Repair quality is not independently verified.",
+      "evidenceLocation": "Public eBay description iframe; seller description and/or vehicle-history advisory panel",
+      "publicHistoryEvidence": {
+        "advisory": "Category S",
+        "repairClaim": true
+      }
+    },
+    {
+      "listingId": "listing-2",
+      "advertId": "267817153160",
+      "stockTitle": "2016 Nissan Juke 1.2 DiG-T N-Connecta 5dr",
+      "sourceUrl": "https://www.ebay.co.uk/itm/267817153160",
+      "observedAt": "2026-10-19T19:26:27.667998Z",
+      "httpStatus": 200,
+      "pageSha256": "0ba21fd70212a10db9bac7c10f61cad51829c479502f01292d392b28c4cb216a",
+      "descriptionUrl": "https://itm.ebaydesc.com/itmdesc/267817153160?t=1792349828000&category=18238&seller=saadmotorslimited&excSoj=1&ver=1&excTrk=1&lsite=3&ittenable=false&domain=ebay.com&descgauge=1&cspheader=1&oneClk=2&secureDesc=1&lang=en",
+      "descriptionSha256": "f5e1696ec2669d54112ccd3b97ed3e0cb88c0c54264138e04db3f0ce83f24bb1",
+      "type": "vehicle-history",
+      "category": "N",
+      "finding": "The seller description explicitly records Category N history and claims light damage has been repaired. Repair quality is not independently verified.",
+      "evidenceLocation": "Public eBay description iframe; seller description and/or vehicle-history advisory panel",
+      "publicHistoryEvidence": {
+        "advisory": "Category N",
+        "repairClaim": true
+      }
+    },
+    {
+      "listingId": "listing-3",
+      "advertId": "267810893463",
+      "stockTitle": "2015 Honda HR-V 1.6 i-DTEC SE Navi 5dr",
+      "sourceUrl": "https://www.ebay.co.uk/itm/267810893463",
+      "observedAt": "2026-10-19T19:26:27.724845Z",
+      "httpStatus": 200,
+      "pageSha256": "39a317a7c1946e4f781dc3a288243a71ab75267b3c5afed75e4f07b74cc2f57e",
+      "descriptionUrl": "https://itm.ebaydesc.com/itmdesc/267810893463?t=1792136250000&category=18206&seller=saadmotorslimited&excSoj=1&ver=1&excTrk=1&lsite=3&ittenable=false&domain=ebay.com&descgauge=1&cspheader=1&oneClk=2&secureDesc=1&lang=en",
+      "descriptionSha256": "92dfc19d70af87ea7533398b3bdc9f9fcb3f61d10751b6907786a0a665cfb240",
+      "type": "vehicle-history",
+      "category": "N",
+      "finding": "The seller description explicitly records Category N history and claims light damage has been repaired. Repair quality is not independently verified.",
+      "evidenceLocation": "Public eBay description iframe; seller description and/or vehicle-history advisory panel",
+      "publicHistoryEvidence": {
+        "advisory": "Category N",
+        "repairClaim": true
+      }
+    }
+  ],
+  "correctionApplied": true,
+  "copyReferences": [
+    "stock.json",
+    "copy-review.json"
+  ],
+  "rawAdvertContentRetained": false,
+  "independentlyCertified": false
+}

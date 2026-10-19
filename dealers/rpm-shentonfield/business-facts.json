@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "slug": "rpm-shentonfield",
+  "dealerId": "gb-manchester-rpm-shentonfield",
+  "business": {
+    "name": "RPM",
+    "city": "Manchester",
+    "region": "Greater Manchester",
+    "countryCode": "GB",
+    "currency": "GBP",
+    "distanceUnit": "mi",
+    "locale": "en-GB",
+    "address": "Unit 2 Shentonfield House, Shentonfield Road, Manchester, M22 4RW",
+    "phone": "+447441938394",
+    "phoneDisplay": "(07441) 938394",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://www.autotrader.co.uk/dealers/cheshire/manchester/rpm-10042344",
+    "hours": "Viewing by appointment only. Monday–Friday 09:30–17:00; Saturday 09:30–16:30",
+    "sourceUrl": "https://www.autotrader.co.uk/dealers/cheshire/manchester/rpm-10042344",
+    "observedAt": "2026-10-19",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/cheshire/manchester/rpm-10042344",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "current-public-business-details",
+        "dated-advertised-stock-snapshot"
+      ]
+    }
+  ]
+}

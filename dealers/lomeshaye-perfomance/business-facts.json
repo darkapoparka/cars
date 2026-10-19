@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "slug": "lomeshaye-perfomance",
+  "dealerId": "gb-nelson-lomeshaye-perfomance",
+  "business": {
+    "name": "Lomeshaye Perfomance Limited",
+    "city": "Nelson",
+    "region": "Lancashire",
+    "countryCode": "GB",
+    "currency": "GBP",
+    "distanceUnit": "mi",
+    "locale": "en-GB",
+    "address": "Unit 161, Imex Spaces Business Centre, Lomeshaye Business Village, Turner Road, Nelson, BB9 7DR",
+    "phone": "+447441906951",
+    "phoneDisplay": "(07441) 906951",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://www.autotrader.co.uk/dealers/lancashire/nelson/lomeshaye-perfomance-limited-10046928",
+    "hours": "Monday–Friday 10:00–18:00; Saturday–Sunday 10:30–15:00",
+    "sourceUrl": "https://www.autotrader.co.uk/dealers/lancashire/nelson/lomeshaye-perfomance-limited-10046928",
+    "observedAt": "2026-10-19",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/lancashire/nelson/lomeshaye-perfomance-limited-10046928",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "current-public-business-details",
+        "dated-advertised-stock-snapshot"
+      ]
+    }
+  ]
+}

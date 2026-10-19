@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "dealer": "reliable-autos",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "listing-1",
+      "title": "2025 Mercedes-Benz Vito 2.0 114 CDI PRO Tourer G-Tronic RWD L3 Euro 6 (s/s) 5dr",
+      "make": "Mercedes-Benz",
+      "model": "Vito",
+      "year": 2025,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/listing-1.jpg"
+      ],
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202607134137861",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Minibus",
+      "transmission": "Automatic",
+      "fuel": "Diesel",
+      "mileageValue": 5200,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-2",
+      "title": "2023 Tesla Model Y Auto RWD 5dr",
+      "make": "Tesla",
+      "model": "Model Y",
+      "year": 2023,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/listing-2.jpg"
+      ],
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202609216243547",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "SUV",
+      "transmission": "Automatic",
+      "fuel": "Electric",
+      "mileageValue": 30000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-3",
+      "title": "2023 Tesla Model Y Auto RWD 5dr",
+      "make": "Tesla",
+      "model": "Model Y",
+      "year": 2023,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/listing-3.jpg"
+      ],
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202609306535245",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "SUV",
+      "transmission": "Automatic",
+      "fuel": "Electric",
+      "mileageValue": 45000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview. The public advert's history panel, last checked on 2026-10-08, as observed on 2026-10-19, reports outstanding private finance. Current settlement status has not been confirmed."
+    }
+  ]
+}

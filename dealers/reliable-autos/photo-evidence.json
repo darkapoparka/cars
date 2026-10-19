@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "dealer": "reliable-autos",
+  "photos": [
+    {
+      "id": "listing-1",
+      "listingUrl": "https://www.autotrader.co.uk/car-details/202607134137861",
+      "catalogueUrl": "https://www.autotrader.co.uk/dealers/nottinghamshire/nottingham/reliable-autos-ltd-10031896",
+      "imageUrl": "https://m.atcdn.co.uk/a/media/w1280/b9f4b51a40774d68a160e467053741ed.jpg",
+      "downloadUrl": "https://m.atcdn.co.uk/a/media/w1280/b9f4b51a40774d68a160e467053741ed.jpg",
+      "originalDimensions": [
+        1280,
+        721
+      ],
+      "retainedDimensions": [
+        1024,
+        577
+      ],
+      "retainedBytes": 72923,
+      "mediaPath": "dealer-stock/listing-1.jpg",
+      "retainedSha256": "a0e72129737a8af70c009a96af371d547f8c3f98277321be7f5d6f356477b45c",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "dd3cca2292455d628879265e69f0f0563564adc3e14eefe813021c2d8342242a",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "id": "listing-2",
+      "listingUrl": "https://www.autotrader.co.uk/car-details/202609216243547",
+      "catalogueUrl": "https://www.autotrader.co.uk/dealers/nottinghamshire/nottingham/reliable-autos-ltd-10031896",
+      "imageUrl": "https://m.atcdn.co.uk/a/media/w1280/343f0f9d704b4c4da816d5db06f1cc1f.jpg",
+      "downloadUrl": "https://m.atcdn.co.uk/a/media/w1280/343f0f9d704b4c4da816d5db06f1cc1f.jpg",
+      "originalDimensions": [
+        1280,
+        960
+      ],
+      "retainedDimensions": [
+        1024,
+        768
+      ],
+      "retainedBytes": 103539,
+      "mediaPath": "dealer-stock/listing-2.jpg",
+      "retainedSha256": "f80e864c02d1712d07e376e407b04efd3543e5ffb4bbad045f5f21ff687dc317",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "f60a7c941cd1eff20b31a315b2f6229573c7750d921a218cd97a64c2ebf5fbe6",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "id": "listing-3",
+      "listingUrl": "https://www.autotrader.co.uk/car-details/202609306535245",
+      "catalogueUrl": "https://www.autotrader.co.uk/dealers/nottinghamshire/nottingham/reliable-autos-ltd-10031896",
+      "imageUrl": "https://m.atcdn.co.uk/a/media/w1280/b505af9b0973415694e032b399808d53.jpg",
+      "downloadUrl": "https://m.atcdn.co.uk/a/media/w1280/b505af9b0973415694e032b399808d53.jpg",
+      "originalDimensions": [
+        1280,
+        721
+      ],
+      "retainedDimensions": [
+        1024,
+        577
+      ],
+      "retainedBytes": 68381,
+      "mediaPath": "dealer-stock/listing-3.jpg",
+      "retainedSha256": "a495e47c48f603e188690ee18208ff19c667bf3fe8248970c2f81316008c0517",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "6fc5957579d44aabe026e07306061dc0d03c2d4d15bd814445386d503c62817b",
+      "observedAt": "2026-10-19"
+    }
+  ],
+  "review": {
+    "reviewed": true,
+    "observedAt": "2026-10-19",
+    "method": "Viewed every selected photograph in contact sheets; checked actual vehicle content, placeholders, price cards and visible dealer identity.",
+    "maximumDimension": 1024,
+    "maximumBytes": 103539
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "dealer": "rpm-shentonfield",
+  "photos": [
+    {
+      "id": "listing-1",
+      "listingUrl": "https://www.autotrader.co.uk/car-details/202610026601478",
+      "catalogueUrl": "https://www.autotrader.co.uk/dealers/cheshire/manchester/rpm-10042344",
+      "imageUrl": "https://m.atcdn.co.uk/a/media/w1280/4312223266eb4512809959b2a0bc0c59.jpg",
+      "downloadUrl": "https://m.atcdn.co.uk/a/media/w1280/4312223266eb4512809959b2a0bc0c59.jpg",
+      "originalDimensions": [
+        1280,
+        960
+      ],
+      "retainedDimensions": [
+        1024,
+        768
+      ],
+      "retainedBytes": 135435,
+      "mediaPath": "dealer-stock/listing-1.jpg",
+      "retainedSha256": "8cbe76dd5d0b0d8dea03ba850b083364323817b2c91b25c4dc7142ffd56b4d80",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "2d71b43faad67055906dc57e575ae2ea2b16f13990ff6dc93827b3b4638db72c",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "id": "listing-2",
+      "listingUrl": "https://www.autotrader.co.uk/car-details/202605292807356",
+      "catalogueUrl": "https://www.autotrader.co.uk/dealers/cheshire/manchester/rpm-10042344",
+      "imageUrl": "https://m.atcdn.co.uk/a/media/w1280/ccffd6c315fb42aeaba7aa77c7bb2e0d.jpg",
+      "downloadUrl": "https://m.atcdn.co.uk/a/media/w1280/ccffd6c315fb42aeaba7aa77c7bb2e0d.jpg",
+      "originalDimensions": [
+        1280,
+        960
+      ],
+      "retainedDimensions": [
+        1024,
+        768
+      ],
+      "retainedBytes": 126849,
+      "mediaPath": "dealer-stock/listing-2.jpg",
+      "retainedSha256": "950c6664642b4ca143c24610f53e8673f59857a3511ffc96543f61cd60e9bb58",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "cc52611b72f3f064282455c77341c84387ab1b13fdfd328a4f8a960f47ce4ad6",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "id": "listing-3",
+      "listingUrl": "https://www.autotrader.co.uk/car-details/202610197112383",
+      "catalogueUrl": "https://www.autotrader.co.uk/dealers/cheshire/manchester/rpm-10042344",
+      "imageUrl": "https://m.atcdn.co.uk/a/media/w1280/f229d93e0c604a279b635add764d3b86.jpg",
+      "downloadUrl": "https://m.atcdn.co.uk/a/media/w1280/f229d93e0c604a279b635add764d3b86.jpg",
+      "originalDimensions": [
+        1280,
+        960
+      ],
+      "retainedDimensions": [
+        1024,
+        768
+      ],
+      "retainedBytes": 138961,
+      "mediaPath": "dealer-stock/listing-3.jpg",
+      "retainedSha256": "e2d35ba9a8cda0a1648134e7de272cfef817628df0e0f2d940053072d569a822",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "b9c39ba59fe4adde9cb428cd681442199d87b5d528459762132aaff6d35ebd66",
+      "observedAt": "2026-10-19"
+    }
+  ],
+  "review": {
+    "reviewed": true,
+    "observedAt": "2026-10-19",
+    "method": "Viewed every selected photograph in contact sheets; checked actual vehicle content, placeholders, price cards and visible dealer identity.",
+    "maximumDimension": 1024,
+    "maximumBytes": 138961
+  }
+}

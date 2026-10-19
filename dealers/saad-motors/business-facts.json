@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "slug": "saad-motors",
+  "dealerId": "gb-manchester-saad-motors",
+  "business": {
+    "name": "Saad Motors Limited",
+    "city": "Manchester",
+    "region": "Greater Manchester",
+    "countryCode": "GB",
+    "currency": "GBP",
+    "distanceUnit": "mi",
+    "locale": "en-GB",
+    "address": "160 Burnage Lane Burnage Manchester Greater Manchester M19 1EF",
+    "phone": "+441612411710",
+    "phoneDisplay": "+441612411710",
+    "email": "saadmotorsltd@outlook.com",
+    "website": "",
+    "stockUrl": "https://showroom.ebaymotorspro.co.uk/SAAD-MOTORS-LTD?menu=1",
+    "hours": "",
+    "sourceUrl": "https://showroom.ebaymotorspro.co.uk/SAAD-MOTORS-LTD?menu=1",
+    "observedAt": "2026-10-19",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/SAAD-MOTORS-LTD?menu=1",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "current-public-business-details",
+        "dated-advertised-stock-snapshot"
+      ]
+    },
+    {
+      "url": "https://www.cazoo.co.uk/dealers/saad-motors-ltd-51067/",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "matching-dealer-directory-identity"
+      ]
+    }
+  ]
+}

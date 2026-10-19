@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "dealer": "reliable-autos",
+  "dealerId": "gb-nottingham-reliable-autos",
+  "reviewedAt": "2026-10-19",
+  "providerWrites": 0,
+  "dealerContactPerformed": false,
+  "primarySource": {
+    "url": "https://www.autotrader.co.uk/dealers/nottinghamshire/nottingham/reliable-autos-ltd-10031896",
+    "httpStatus": 200,
+    "htmlSha256": "04d0db02b5bec53a2c8c0e71ae9aacb912f96a143a32c3339e081b833247f984",
+    "observedAt": "2026-10-19"
+  },
+  "identity": {
+    "retainedLeadName": "Reliable Autos Ltd",
+    "currentSellerDisplayName": "RELIABLE AUTOS LTD",
+    "existingRegistryOrClientMatch": false
+  },
+  "publicBusinessPhone": {
+    "source": "current dealer marketplace profile",
+    "ownership": "Public business contact; it may be a marketplace forwarding number."
+  },
+  "factsOmitted": [],
+  "limitations": [],
+  "inventory": {
+    "kind": "dated-listing-snapshot",
+    "retainedListings": 3,
+    "photos": 3,
+    "availabilityConfirmedWithDealer": false,
+    "pricesOmitted": true,
+    "rawMarketplaceHtmlRetainedInPublicPack": false,
+    "advertDetailReview": {
+      "reference": "advert-detail-review.json",
+      "reviewedAt": "2026-10-19T19:34:01.044Z",
+      "retainedDisclosures": [
+        {
+          "listingId": "listing-3",
+          "type": "dated-finance-status"
+        }
+      ],
+      "publicSourceReportsOnly": true
+    }
+  },
+  "researchMethod": "Opened the exact primary seller catalogue; used its current Used cars/vehicle records and excluded generic Featured advertisements. Checked matched directories and bounded exact business name plus locality searches for an official site or usable logo."
+}

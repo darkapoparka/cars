@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "dealer": "mosaso",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uk.json",
+    "sha256": "6cd8d365586f9a5d5131fe4b1d50baede7de91ab384a135017c25367298b07c4"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/west-midlands/oldbury/mosaso-10037755",
+      "observedAt": "2026-10-19T17:36:49.281348Z",
+      "supports": [
+        "public-business-identity",
+        "public-business-contact",
+        "advertised-stock"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "publicObservations": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/west-midlands/oldbury/mosaso-10037755",
+      "observedAt": "2026-10-19T17:36:49.281348Z",
+      "httpStatus": 200,
+      "sha256": "f74fb6e164b1010e44a3fb6172e9bed5402f2298ac4a68dfdb577742b76eb202",
+      "byteLength": 169464,
+      "retention": "Only reviewed public business fields, hashes, listing identities and compressed photographs are committed; raw HTML remains outside the public pack."
+    }
+  ],
+  "stock": [
+    {
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202610056697236",
+      "photoUrl": "https://m.atcdn.co.uk/a/media/w600/4cfccb5552cc4db6872fc8ec9d05a0a7.jpg",
+      "observedAt": "2026-10-19T17:53:12.405363Z",
+      "listingSha256": "7462f1aec41169ad9ea5fedeaaeb80a5304372c2d0c8dc14dda2e7401da17da1",
+      "sourcePhotoSha256": "d226d40c4ce7cfe70510384863fed42877df1317a60d7aa346dd8ae39f327318",
+      "sourcePhotoDimensions": [
+        600,
+        450
+      ],
+      "photoSha256": "0d6750a31486f655e7650b5a3266fb0d65cf12ae365d211146611a64b0fbe8a5",
+      "photoDimensions": [
+        600,
+        450
+      ],
+      "photoBytes": 48853,
+      "recordId": "public-listing-1",
+      "title": "2020 Peugeot E-208 50kWh Allure Auto",
+      "retainedPhoto": "dealer-stock/public-1.jpg",
+      "publicPhotoReviewed": true
+    },
+    {
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202610116890314",
+      "photoUrl": "https://m.atcdn.co.uk/a/media/w600/cdd408bf9aa44b23ae0367e398538f5a.jpg",
+      "observedAt": "2026-10-19T17:53:12.406957Z",
+      "listingSha256": "165344dd42d4ae0c28e2c71b24f93b2fdb6f16ffc59f23d85440bcf24c7d9930",
+      "sourcePhotoSha256": "5cca288206bf699ac1627f45681664b601abc87a0dce508515b513ce7e39a8b0",
+      "sourcePhotoDimensions": [
+        600,
+        450
+      ],
+      "photoSha256": "a8b47ced7ff138846db7d8e56c8aedab04f3c9c0a9f28ae49f21748707e89d91",
+      "photoDimensions": [
+        600,
+        450
+      ],
+      "photoBytes": 67907,
+      "recordId": "public-listing-2",
+      "title": "2016 BMW 520d SE Auto",
+      "retainedPhoto": "dealer-stock/public-2.jpg",
+      "publicPhotoReviewed": true
+    },
+    {
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202610036641763",
+      "photoUrl": "https://m.atcdn.co.uk/a/media/w600/9c10e10bd233435c836bb5c8ce9d323e.jpg",
+      "observedAt": "2026-10-19T17:53:13.326339Z",
+      "listingSha256": "903023918baedd5a63f136b218a9ec3b141ecd974e2344d574914d5c10319d4c",
+      "sourcePhotoSha256": "80f0715d9a36316172a0825402f5be4735268653742890175ee64bcfce6548f7",
+      "sourcePhotoDimensions": [
+        600,
+        450
+      ],
+      "photoSha256": "02599bb3e2ba5d479d7f32c2d16938fdd7c6d406951441984b60c6d4309f82e5",
+      "photoDimensions": [
+        600,
+        450
+      ],
+      "photoBytes": 58019,
+      "recordId": "public-listing-3",
+      "title": "2013 Chevrolet Orlando 1.8 LT Auto",
+      "retainedPhoto": "dealer-stock/public-3.jpg",
+      "publicPhotoReviewed": true
+    }
+  ],
+  "review": {
+    "reviewedAt": "2026-10-19T18:24:26.739731Z",
+    "stockPhotoIdentityChecked": true,
+    "sourceClaimLimits": "Dated public adverts only; availability, repairs, vehicle condition and legal entity details are not independently certified.",
+    "omissions": []
+  }
+}

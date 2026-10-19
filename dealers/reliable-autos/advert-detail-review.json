@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "dealer": "reliable-autos",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T19:34:01.044Z",
+  "observedAt": "2026-10-19T19:31:40.274451+00:00",
+  "method": "Reviewed exact selected public advert bodies and marketplace vehicle-history panels. Preserve attributed dated advisories; do not infer an unspecified damage category or finance settlement.",
+  "coverage": [
+    {
+      "listingId": "listing-1",
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202607134137861",
+      "httpStatus": 200,
+      "pageSha256": "32e58e3d6f4ba7b0dce172e6876a77ad4e1c8e34792fbc71d9b3eb5fbc0da4e4",
+      "descriptionFetched": false,
+      "descriptionSha256": null
+    },
+    {
+      "listingId": "listing-2",
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202609216243547",
+      "httpStatus": 200,
+      "pageSha256": "8f87038e94d64966eaec8ef064983b3829e8738c3de7f29860f7932f3d7c1f96",
+      "descriptionFetched": false,
+      "descriptionSha256": null
+    },
+    {
+      "listingId": "listing-3",
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202609306535245",
+      "httpStatus": 200,
+      "pageSha256": "55d377cdd0295fe1ae121b61e5ca1ff262da3f50d550802164d7029782403ea9",
+      "descriptionFetched": false,
+      "descriptionSha256": null
+    }
+  ],
+  "findings": [
+    {
+      "listingId": "listing-3",
+      "advertId": "202609306535245",
+      "stockTitle": "2023 Tesla Model Y Auto RWD 5dr",
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202609306535245",
+      "observedAt": "2026-10-19T19:26:28.571279Z",
+      "httpStatus": 200,
+      "pageSha256": "55d377cdd0295fe1ae121b61e5ca1ff262da3f50d550802164d7029782403ea9",
+      "descriptionUrl": null,
+      "descriptionSha256": null,
+      "type": "dated-finance-status",
+      "finding": "The dated public AutoTrader history panel reports outstanding private finance. This is a marketplace observation; no assumption is made about current settlement or dealer conduct.",
+      "evidenceLocation": "window.__staticRouterHydrationData.loaderData[car-details].aggregatorAdvert.history.vehicleCheck",
+      "publicHistoryEvidence": {
+        "lastChecked": {
+          "label": "Last checked:",
+          "value": "08/10/2026"
+        },
+        "checks": [
+          {
+            "id": "PRIVATE_FINANCE",
+            "label": "There's outstanding private finance",
+            "status": "FAILED",
+            "failureNotificationStatus": "INFORMATION"
+          }
+        ]
+      }
+    }
+  ],
+  "correctionApplied": true,
+  "copyReferences": [
+    "stock.json",
+    "copy-review.json"
+  ],
+  "rawAdvertContentRetained": false,
+  "independentlyCertified": false
+}

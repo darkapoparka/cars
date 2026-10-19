@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "dealer": "j26-vans-trucks",
+  "dealerId": "gb-nottingham-j26-vans-trucks",
+  "reviewedAt": "2026-10-19",
+  "providerWrites": 0,
+  "dealerContactPerformed": false,
+  "primarySource": {
+    "url": "https://showroom.ebaymotorspro.co.uk/j26vanstrucks-ltd?menu=1",
+    "httpStatus": 200,
+    "htmlSha256": "625ab89c6ec080d1ab93190a8b4f72efbc679d45315054dc4194e1ba7fcd39a0",
+    "observedAt": "2026-10-19"
+  },
+  "identity": {
+    "retainedLeadName": "J26 Vans & Trucks Ltd",
+    "currentSellerDisplayName": "j26vans&trucks ltd",
+    "existingRegistryOrClientMatch": false
+  },
+  "publicBusinessPhone": {
+    "source": "current dealer marketplace profile",
+    "ownership": "Public business contact; it may be a marketplace forwarding number."
+  },
+  "factsOmitted": [],
+  "limitations": [
+    "The current primary seller account remains labelled J26 Vans & Trucks, but its selected stock photographs show Junction 26 Cars Ltd signage. The relationship between these trading identities is unresolved; no current dealer-stock photograph is attributed in this preview. The three vehicles are explicitly disclosed retained template examples, not J26 stock. The legacy website was unavailable."
+  ],
+  "inventory": {
+    "kind": "illustrative-not-dealer-stock",
+    "retainedListings": 3,
+    "photos": 3,
+    "availabilityConfirmedWithDealer": false,
+    "pricesOmitted": true,
+    "rawMarketplaceHtmlRetainedInPublicPack": false,
+    "currentPublicListingPhotos": 0,
+    "illustrativeTemplatePhotos": 3,
+    "dealerStock": false
+  },
+  "researchMethod": "Opened the exact primary seller catalogue; used its current Used cars/vehicle records and excluded generic Featured advertisements. Checked matched directories and bounded exact business name plus locality searches for an official site or usable logo."
+}

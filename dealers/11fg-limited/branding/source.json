@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "dealer": "11fg-limited",
+  "status": "reviewed",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/11fglimited",
+      "observedAt": "2026-10-19T17:36:50.806010Z"
+    }
+  ],
+  "originals": [
+    {
+      "path": "branding/observed-logo.jpg",
+      "sha256": "45a781b2959fbb709ccf070ad59f51bcd3013dc1cfc06b131021d183cd1f9226",
+      "sourceUrl": "https://i.ebayimg.com/00/s/NDAyWDQwNQ==/z/8JkAAeSw~2dqykmR/$_1.JPG",
+      "observedAt": "2026-10-19",
+      "kind": "published-logo-artwork"
+    }
+  ],
+  "creationMethod": "imagegen-redraw",
+  "dealerApproved": false,
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "researchConclusion": "The public logo was inspected. A clean transparent redraw preserves its name, colours and principal motif; the original bytes are retained.",
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "generationId": "exec-94f85820-bd93-4db3-b87b-387ec4f21368",
+    "modelVersion": null,
+    "prompt": "Use case: logo-brand. Faithfully redraw the actual 11FG dealer identity in the reference into a clean professional transparent logo, retaining the name \"11FG LTD\", deep forest green, lighter green sweep and silver automotive motif. Replace the low-resolution photographic car with a simple clean silver car silhouette integrated above the text. Omit the email, street address and border entirely. Wide horizontal lockup: strong compact \"11FG\" emblem to the left and full \"11FG LTD\" name to the right with generous transparent separation, so the emblem can be cropped independently for a favicon. Flat confident shapes, no gradient, no shadows, no photographic vehicle, no background. Thick simple lettering and clean white outer keyline around green strokes to remain readable on white, charcoal and red website surfaces. It must be legible at 32px as a compact mark. Retain exact spelling and brand colour relationships. This redraw is for an independent preview and is not dealer approved."
+  },
+  "compactDerivation": {
+    "method": "separate-imagegen-compact-emblem",
+    "parentReference": "branding/generated-master.png",
+    "parentSha256": "e00d579b325c126c88f9a26957505e8fdfa3fcac8d7db2ea77309f01669e14c3",
+    "prompt": "Use case: logo-brand. Create one compact professional automotive dealer logo emblem ONLY, no wordmark beside it. Exact identity 11FG. Use a two-by-two compact arrangement with 11 on upper row and FG below, all four characters clearly legible as 11FG, geometric bold italic type. Preserve green #00a451 and silver/white motif of 11FG Limited automotive branding. One smooth silver car roof arc above if it remains simple. Thick clean dark navy outline and precise white outer keyline, visible on white, charcoal #111113 and red #c40101. Transparent background. Clear at32px, flat crisp graphic, absolutely no speckles, no gradients, no shadow, no fake metallic texture, no mockup, no other text.",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-c2b98b7b-f280-4b05-82ce-0c818204c756",
+      "modelVersion": null
+    }
+  },
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T18:39:36.384Z",
+    "master": {
+      "path": "branding/generated-master.png",
+      "sha256": "e00d579b325c126c88f9a26957505e8fdfa3fcac8d7db2ea77309f01669e14c3",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-94f85820-bd93-4db3-b87b-387ec4f21368",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "680ddd266aa8a42b89b298d7865a1a064d190cb94f574c5f959c584d8ca9fe92",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c2b98b7b-f280-4b05-82ce-0c818204c756",
+        "modelVersion": null
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "680ddd266aa8a42b89b298d7865a1a064d190cb94f574c5f959c584d8ca9fe92",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c2b98b7b-f280-4b05-82ce-0c818204c756",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-master.png",
+        "sha256": "e00d579b325c126c88f9a26957505e8fdfa3fcac8d7db2ea77309f01669e14c3",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-94f85820-bd93-4db3-b87b-387ec4f21368",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-master.png",
+        "sha256": "e00d579b325c126c88f9a26957505e8fdfa3fcac8d7db2ea77309f01669e14c3",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-94f85820-bd93-4db3-b87b-387ec4f21368",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-master.png",
+        "sha256": "e00d579b325c126c88f9a26957505e8fdfa3fcac8d7db2ea77309f01669e14c3",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-94f85820-bd93-4db3-b87b-387ec4f21368",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113"
+        ],
+        "onAccent": [
+          "#c40101"
+        ]
+      },
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "markWidths": [
+        32,
+        64
+      ],
+      "method": "Same actual dual-contrast generated artwork on each surface; no generated colours are represented as a template palette change.",
+      "reviewedAt": "2026-10-19T18:39:36.384Z",
+      "review": "Visually reviewed exact cropTransparentPadding exports at120px and180px wordmark widths and32px/64px compact sizes on white, charcoal and red. Exact spelling retained, real alpha present, compact emblem clear. The source palette is part of the artwork only."
+    }
+  }
+}
