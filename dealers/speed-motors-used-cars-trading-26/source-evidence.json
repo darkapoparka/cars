@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "dealer": "speed-motors-used-cars-trading-26",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae-supplement.json",
+    "sha256": "ea2d396ef7a8a73326f488e53858ac60b4a0324d553ccba34b566b5ec5e91f2a"
+  },
+  "publicSources": [
+    {
+      "url": "https://ae.opensooq.com/ar/%D9%85%D8%AA%D8%A7%D8%AC%D8%B1/Speed-Motors26-71385778",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "supports": [
+        "business.name",
+        "business.city",
+        "business.countryCode",
+        "dated-dealer-catalogue-listings"
+      ]
+    },
+    {
+      "url": "https://www.instagram.com/speed_motors26/",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "supports": [
+        "business.phone",
+        "business.address"
+      ]
+    },
+    {
+      "url": "https://ae.opensooq.com/en/search/288823486",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "supports": [
+        "stock.opensooq-288823486"
+      ]
+    },
+    {
+      "url": "https://ae.opensooq.com/en/search/288823478",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "supports": [
+        "stock.opensooq-288823478"
+      ]
+    },
+    {
+      "url": "https://ae.opensooq.com/en/search/288823470",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "supports": [
+        "stock.opensooq-288823470"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "agentResearch": {
+    "observedAt": "2026-10-19T21:09:57.342849Z",
+    "method": "Public named dealer page and seller-bound catalogue data or current public business-account post captions. Full public business phones only; no sign-in, reveal, contact or account interaction.",
+    "identityNotes": [
+      "Full marketplace phone is masked or requires sign-in; no masked digits inferred and no reveal attempted.",
+      "Incomplete published weekly schedule omitted.",
+      "Showroom26 and business phone publicly published in the exact business Instagram bio; the phone matches the visible marketplace prefix."
+    ],
+    "imageReview": "All retained actual vehicle photos visually reviewed. No price overlays or personal contact details retained. Marketplace watermarks preserved. Instagram source photos are the published first-frame previews, including their original framing.",
+    "logoResearchStatus": "in-progress"
+  },
+  "stockPhotos": [
+    {
+      "listingId": "opensooq-288823486",
+      "listingUrl": "https://ae.opensooq.com/en/search/288823486",
+      "sourceUrl": "https://opensooq-imagesv2.os-cdn.com/previews/640x480/6c/36/6c36bd368f404239fee6191a977eddf44c23779cb140509f0fb53bb2cc0fd930.jpg.webp",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "sourceSha256": "f5feece8999ee2588f66561ef626c1863dadc767b1867915eba8201f764e965d",
+      "retainedPath": "dealer-stock/opensooq-288823486.webp",
+      "retainedSha256": "29e9b2d10b958ee60544e432ea427605c23fd669d206a5908f0d020086031f05",
+      "nativeDimensions": [
+        640,
+        480
+      ],
+      "retainedDimensions": [
+        640,
+        480
+      ],
+      "retainedBytes": 24660,
+      "transformation": "Aspect-preserving bounded resize and WebP encoding; no content removal.",
+      "sellerId": "71385778"
+    },
+    {
+      "listingId": "opensooq-288823478",
+      "listingUrl": "https://ae.opensooq.com/en/search/288823478",
+      "sourceUrl": "https://opensooq-imagesv2.os-cdn.com/previews/640x480/4f/80/4f80aac16fb673aa0152b2081b4bccecb0d8e948bebad33c060a78af5cab794e.jpg.webp",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "sourceSha256": "d19fb57ec7bfa8e0d9d39547ad88aae4cd1323f5ee467e84ecd5a7821b635013",
+      "retainedPath": "dealer-stock/opensooq-288823478.webp",
+      "retainedSha256": "fa814cfe0e93022baf706478bdc4f6b9337ccf6dec323b7c2a716bcae471e286",
+      "nativeDimensions": [
+        640,
+        480
+      ],
+      "retainedDimensions": [
+        640,
+        480
+      ],
+      "retainedBytes": 54714,
+      "transformation": "Aspect-preserving bounded resize and WebP encoding; no content removal.",
+      "sellerId": "71385778"
+    },
+    {
+      "listingId": "opensooq-288823470",
+      "listingUrl": "https://ae.opensooq.com/en/search/288823470",
+      "sourceUrl": "https://opensooq-imagesv2.os-cdn.com/previews/640x480/0e/43/0e43cd432c72a13b02a64eb2760005b880def905cdf08e4e3f63e0fa44e1286d.jpg.webp",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "sourceSha256": "855a96033a31bb8bd91fc7d9daddd208360380909fc79398e881ca05c12b0a85",
+      "retainedPath": "dealer-stock/opensooq-288823470.webp",
+      "retainedSha256": "a350b50dafdd50e670a4b7aa11faaf0dd5b7eafd69e198276d0557ddc9a07d9a",
+      "nativeDimensions": [
+        640,
+        480
+      ],
+      "retainedDimensions": [
+        640,
+        480
+      ],
+      "retainedBytes": 50102,
+      "transformation": "Aspect-preserving bounded resize and WebP encoding; no content removal.",
+      "sellerId": "71385778"
+    }
+  ]
+}

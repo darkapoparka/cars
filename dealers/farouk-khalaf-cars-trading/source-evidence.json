@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "dealer": "farouk-khalaf-cars-trading",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae-supplement-2.json",
+    "sha256": "aee92b9d3407b408d84113272c67358d98517f397cfbfe76fb223f15ba8a093e"
+  },
+  "publicSources": [
+    {
+      "url": "https://ae.opensooq.com/ar/%D9%85%D8%AA%D8%A7%D8%AC%D8%B1/%D9%85%D8%B9%D8%B1%D8%B6-%D9%81%D8%A7%D8%B1%D9%88%D9%82-%D8%AE%D9%84%D9%81-%D9%84%D8%AA%D8%AC%D8%A7%D8%B1%D8%A9-%D8%A7%D9%84%D8%B3%D9%8A%D8%A7%D8%B1%D8%A7%D8%AA-69676222",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "supports": [
+        "business.name",
+        "business.city",
+        "business.countryCode",
+        "dated-dealer-catalogue-listings"
+      ]
+    },
+    {
+      "url": "https://ae.opensooq.com/en/search/288862378",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "supports": [
+        "stock.opensooq-288862378"
+      ]
+    },
+    {
+      "url": "https://ae.opensooq.com/en/search/288797418",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "supports": [
+        "stock.opensooq-288797418"
+      ]
+    },
+    {
+      "url": "https://ae.opensooq.com/en/search/288663806",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "supports": [
+        "stock.opensooq-288663806"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "agentResearch": {
+    "observedAt": "2026-10-19T21:09:57.342849Z",
+    "method": "Public named dealer page and seller-bound catalogue data or current public business-account post captions. Full public business phones only; no sign-in, reveal, contact or account interaction.",
+    "identityNotes": [
+      "Full marketplace phone is masked or requires sign-in; no masked digits inferred and no reveal attempted.",
+      "Only city-level premises confirmed in this catalogue; exact address omitted.",
+      "Similarly named AUTO catalogues have different business phones; no contacts or address borrowed from those possibly different sellers. Current photos show FAROUK KHALAF premises."
+    ],
+    "imageReview": "All retained actual vehicle photos visually reviewed. No price overlays or personal contact details retained. Marketplace watermarks preserved. Instagram source photos are the published first-frame previews, including their original framing.",
+    "logoResearchStatus": "in-progress"
+  },
+  "stockPhotos": [
+    {
+      "listingId": "opensooq-288862378",
+      "listingUrl": "https://ae.opensooq.com/en/search/288862378",
+      "sourceUrl": "https://opensooq-imagesv2.os-cdn.com/previews/640x480/06/a7/06a70275874d96c837673d82259096d35596aacb170fbfcc6a4d22e3bc628a88.jpg.webp",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "sourceSha256": "edb1c65f4e005491f7879c02ceb4c2764191646994ea51b2f181f8a8762b6264",
+      "retainedPath": "dealer-stock/opensooq-288862378.webp",
+      "retainedSha256": "1a77d0a7697af709501843f117a00e2ec1c6104e8400839775617e8f25f4542f",
+      "nativeDimensions": [
+        640,
+        480
+      ],
+      "retainedDimensions": [
+        640,
+        480
+      ],
+      "retainedBytes": 48618,
+      "transformation": "Aspect-preserving bounded resize and WebP encoding; no content removal.",
+      "sellerId": "69676222"
+    },
+    {
+      "listingId": "opensooq-288797418",
+      "listingUrl": "https://ae.opensooq.com/en/search/288797418",
+      "sourceUrl": "https://opensooq-imagesv2.os-cdn.com/previews/640x480/55/c2/55c2fc5606ee3d9c2547353483208fec5b85f16deb4b88fbc23d0ae9c9e4c2c5.jpg.webp",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "sourceSha256": "5f7fe4ead4d6e8feab010537d5bfb6f50c24b698d343f985ced92f618447a29f",
+      "retainedPath": "dealer-stock/opensooq-288797418.webp",
+      "retainedSha256": "5faf230de786ebdb50922778b697c56253f50e821f63ae7ea4849995cc48fde5",
+      "nativeDimensions": [
+        640,
+        480
+      ],
+      "retainedDimensions": [
+        640,
+        480
+      ],
+      "retainedBytes": 42804,
+      "transformation": "Aspect-preserving bounded resize and WebP encoding; no content removal.",
+      "sellerId": "69676222"
+    },
+    {
+      "listingId": "opensooq-288663806",
+      "listingUrl": "https://ae.opensooq.com/en/search/288663806",
+      "sourceUrl": "https://opensooq-imagesv2.os-cdn.com/previews/640x480/44/58/4458f6b6fe0fcb79c2b3fdfa1e01c475a68227d497d1942c3d146faf39b8b3c5.jpg.webp",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "sourceSha256": "14cc629d8f76c03aea5bd76909962c4b3ebe3423da473d624662fc105e4a429d",
+      "retainedPath": "dealer-stock/opensooq-288663806.webp",
+      "retainedSha256": "d4be88e983a94a8233c03ae82e2e090cebf5c47dd4db650f9482bc68a852b2e5",
+      "nativeDimensions": [
+        640,
+        480
+      ],
+      "retainedDimensions": [
+        640,
+        480
+      ],
+      "retainedBytes": 36310,
+      "transformation": "Aspect-preserving bounded resize and WebP encoding; no content removal.",
+      "sellerId": "69676222"
+    }
+  ]
+}

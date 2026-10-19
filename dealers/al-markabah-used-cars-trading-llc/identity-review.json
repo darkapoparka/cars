@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T21:21:45.299Z",
+  "dealer": "al-markabah-used-cars-trading-llc",
+  "dealerId": "ae-umm-al-quwain-al-markabah-used-cars",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "method": "Exact retained registry and compact-pack identity comparison; no dealer approval is implied.",
+  "sources": [
+    {
+      "url": "https://ae.opensooq.com/en/shops/shop-18008673",
+      "observedAt": "2026-10-19T21:09:57.342849Z"
+    },
+    {
+      "url": "https://ae.opensooq.com/en/search/288522796",
+      "observedAt": "2026-10-19T21:09:57.342849Z"
+    },
+    {
+      "url": "https://coparking.ch/en/United-Arab-Emirates/car-dealers/783",
+      "observedAt": "2026-10-19T21:09:57.342849Z"
+    },
+    {
+      "url": "https://uae.autotraders.ae/used-cars/bmw/x4/m/2019/bmw-x4-2019-160938",
+      "observedAt": "2026-10-19T21:09:57.342849Z"
+    },
+    {
+      "url": "https://linktr.ee/uaq_cars",
+      "observedAt": "2026-10-19T21:09:57.342849Z"
+    }
+  ]
+}

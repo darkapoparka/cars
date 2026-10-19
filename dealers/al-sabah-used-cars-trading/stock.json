@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-sabah-used-cars-trading",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T21:09:57.342849Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "opensooq-287743964",
+      "title": "Nissan Patrol 2021",
+      "make": "Nissan",
+      "model": "Patrol",
+      "year": 2021,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/opensooq-287743964.webp"
+      ],
+      "sourceUrl": "https://ae.opensooq.com/en/search/287743964",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 142000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "opensooq-287902368",
+      "title": "GMC Sierra 2022",
+      "make": "GMC",
+      "model": "Sierra",
+      "year": 2022,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/opensooq-287902368.webp"
+      ],
+      "sourceUrl": "https://ae.opensooq.com/en/search/287902368",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 152000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

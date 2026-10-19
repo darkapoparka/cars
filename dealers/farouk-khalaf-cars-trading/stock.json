@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "farouk-khalaf-cars-trading",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T21:09:57.342849Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "opensooq-288862378",
+      "title": "Hyundai Sonata 2015",
+      "make": "Hyundai",
+      "model": "Sonata",
+      "year": 2015,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/opensooq-288862378.webp"
+      ],
+      "sourceUrl": "https://ae.opensooq.com/en/search/288862378",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 263242,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "opensooq-288797418",
+      "title": "Hyundai Santa Fe 2015",
+      "make": "Hyundai",
+      "model": "Santa Fe",
+      "year": 2015,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/opensooq-288797418.webp"
+      ],
+      "sourceUrl": "https://ae.opensooq.com/en/search/288797418",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 146403,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "opensooq-288663806",
+      "title": "Kia Rio 2014",
+      "make": "Kia",
+      "model": "Rio",
+      "year": 2014,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/opensooq-288663806.webp"
+      ],
+      "sourceUrl": "https://ae.opensooq.com/en/search/288663806",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 139459,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

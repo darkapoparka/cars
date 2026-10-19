@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "dealer": "skyline-motors-umm-al-quwain",
+  "businessFacts": "business-facts.json",
+  "stock": "stock.json",
+  "inventoryKind": "dated-listing-snapshot",
+  "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+  "sources": [
+    {
+      "url": "https://ae.opensooq.com/ar/%D9%85%D8%AA%D8%A7%D8%AC%D8%B1/Skyline-motors-39989037",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "supports": [
+        "business.name",
+        "business.city",
+        "business.countryCode",
+        "dated-dealer-catalogue-listings"
+      ]
+    },
+    {
+      "url": "https://ae.opensooq.com/en/search/288869834",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "supports": [
+        "stock.opensooq-288869834"
+      ]
+    },
+    {
+      "url": "https://ae.opensooq.com/en/search/288353246",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "supports": [
+        "stock.opensooq-288353246"
+      ]
+    },
+    {
+      "url": "https://ae.opensooq.com/en/search/288600278",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "supports": [
+        "stock.opensooq-288600278"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-haram-al-masi-used-cars-trading",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae-supplement-2.json",
+    "sha256": "aee92b9d3407b408d84113272c67358d98517f397cfbfe76fb223f15ba8a093e"
+  },
+  "publicSources": [
+    {
+      "url": "https://ae.opensooq.com/ar/%D9%85%D8%AA%D8%A7%D8%AC%D8%B1/%D8%A7%D9%84%D9%87%D8%B1%D9%85-%D8%A7%D9%84%D9%85%D8%A7%D8%B3%D9%8A-%D9%84%D8%AA%D8%AC%D8%A7%D8%B1%D8%A9-%D8%A7%D9%84%D8%B3%D9%8A%D8%A7%D8%B1%D8%A7%D8%AA-%D8%A7%D9%84%D9%85%D8%B3%D8%AA%D8%B9%D9%85%D9%84%D8%A9-73812015",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "supports": [
+        "business.name",
+        "business.city",
+        "business.countryCode",
+        "dated-dealer-catalogue-listings"
+      ]
+    },
+    {
+      "url": "https://ae.opensooq.com/en/search/288669642",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "supports": [
+        "stock.opensooq-288669642"
+      ]
+    },
+    {
+      "url": "https://ae.opensooq.com/en/search/288623044",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "supports": [
+        "stock.opensooq-288623044"
+      ]
+    },
+    {
+      "url": "https://ae.opensooq.com/en/search/288622990",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "supports": [
+        "stock.opensooq-288622990"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "agentResearch": {
+    "observedAt": "2026-10-19T21:09:57.342849Z",
+    "method": "Public named dealer page and seller-bound catalogue data or current public business-account post captions. Full public business phones only; no sign-in, reveal, contact or account interaction.",
+    "identityNotes": [
+      "Full marketplace phone is masked or requires sign-in; no masked digits inferred and no reveal attempted.",
+      "Only city-level premises confirmed in this catalogue; exact address omitted.",
+      "Incomplete published weekly schedule omitted.",
+      "Published logo uses the English translation DIAMOND PYRAMID CARS and Arabic Al Haram Al Masi; preserve this identity in a faithful redraw."
+    ],
+    "imageReview": "All retained actual vehicle photos visually reviewed. No price overlays or personal contact details retained. Marketplace watermarks preserved. Instagram source photos are the published first-frame previews, including their original framing.",
+    "logoResearchStatus": "in-progress"
+  },
+  "stockPhotos": [
+    {
+      "listingId": "opensooq-288669642",
+      "listingUrl": "https://ae.opensooq.com/en/search/288669642",
+      "sourceUrl": "https://opensooq-imagesv2.os-cdn.com/previews/640x480/90/97/9097eb344c8aef3d7e3f964072de88531167296a62b8ea736af305f7a8478265.jpg.webp",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "sourceSha256": "08fd59e33154ebdff284e64147d486d9c882658e811bc1fb199fb97c3c9e4c95",
+      "retainedPath": "dealer-stock/opensooq-288669642.webp",
+      "retainedSha256": "9d58f5d689f4af1a4d9043e319552185abd100309f0d78fdc4484665130e88d2",
+      "nativeDimensions": [
+        640,
+        480
+      ],
+      "retainedDimensions": [
+        640,
+        480
+      ],
+      "retainedBytes": 30454,
+      "transformation": "Aspect-preserving bounded resize and WebP encoding; no content removal.",
+      "sellerId": "73812015"
+    },
+    {
+      "listingId": "opensooq-288623044",
+      "listingUrl": "https://ae.opensooq.com/en/search/288623044",
+      "sourceUrl": "https://opensooq-imagesv2.os-cdn.com/previews/640x480/5b/3a/5b3ace46716b67b247bd984cec8c4787c87e6b8f9c014137ad03fde30e806d37.jpg.webp",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "sourceSha256": "2c4e1cea0edebb89416b83719cb6731b481af6abbe1e3b640d4d525839621ccd",
+      "retainedPath": "dealer-stock/opensooq-288623044.webp",
+      "retainedSha256": "2b26adad759f79dee2dba84e447b9fba2a1903b2fa887450f4306247df8f1a39",
+      "nativeDimensions": [
+        640,
+        480
+      ],
+      "retainedDimensions": [
+        640,
+        480
+      ],
+      "retainedBytes": 33406,
+      "transformation": "Aspect-preserving bounded resize and WebP encoding; no content removal.",
+      "sellerId": "73812015"
+    },
+    {
+      "listingId": "opensooq-288622990",
+      "listingUrl": "https://ae.opensooq.com/en/search/288622990",
+      "sourceUrl": "https://opensooq-imagesv2.os-cdn.com/previews/640x480/ee/a5/eea54e9514cc3ef72e9e79f3fba54bf8bf2e7a54f488dee224b67641ae28818e.jpg.webp",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "sourceSha256": "ae440f31534047cf8ad7449785efca22cc0fcd5976c60befae33b6033871971d",
+      "retainedPath": "dealer-stock/opensooq-288622990.webp",
+      "retainedSha256": "939a5500a3b704af931899804830bfc0c6e629ab641e61d042c0df97ceb6c291",
+      "nativeDimensions": [
+        640,
+        480
+      ],
+      "retainedDimensions": [
+        640,
+        480
+      ],
+      "retainedBytes": 43832,
+      "transformation": "Aspect-preserving bounded resize and WebP encoding; no content removal.",
+      "sellerId": "73812015"
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "dealer": "skyline-motors-umm-al-quwain",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae-supplement.json",
+    "sha256": "ea2d396ef7a8a73326f488e53858ac60b4a0324d553ccba34b566b5ec5e91f2a"
+  },
+  "publicSources": [
+    {
+      "url": "https://ae.opensooq.com/ar/%D9%85%D8%AA%D8%A7%D8%AC%D8%B1/Skyline-motors-39989037",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "supports": [
+        "business.name",
+        "business.city",
+        "business.countryCode",
+        "dated-dealer-catalogue-listings"
+      ]
+    },
+    {
+      "url": "https://ae.opensooq.com/en/search/288869834",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "supports": [
+        "stock.opensooq-288869834"
+      ]
+    },
+    {
+      "url": "https://ae.opensooq.com/en/search/288353246",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "supports": [
+        "stock.opensooq-288353246"
+      ]
+    },
+    {
+      "url": "https://ae.opensooq.com/en/search/288600278",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "supports": [
+        "stock.opensooq-288600278"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "agentResearch": {
+    "observedAt": "2026-10-19T21:09:57.342849Z",
+    "method": "Public named dealer page and seller-bound catalogue data or current public business-account post captions. Full public business phones only; no sign-in, reveal, contact or account interaction.",
+    "identityNotes": [
+      "Full marketplace phone is masked or requires sign-in; no masked digits inferred and no reveal attempted.",
+      "Only city-level premises confirmed in this catalogue; exact address omitted."
+    ],
+    "imageReview": "All retained actual vehicle photos visually reviewed. No price overlays or personal contact details retained. Marketplace watermarks preserved. Instagram source photos are the published first-frame previews, including their original framing.",
+    "logoResearchStatus": "in-progress"
+  },
+  "stockPhotos": [
+    {
+      "listingId": "opensooq-288869834",
+      "listingUrl": "https://ae.opensooq.com/en/search/288869834",
+      "sourceUrl": "https://opensooq-imagesv2.os-cdn.com/previews/640x480/36/ce/36cef6a3ac4b147d4c1f346827f3ae1b7e14fa3b7821daaff9f70aa20ed6384e.jpg.webp",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "sourceSha256": "1bff3c2d48a92bf76a90d1bb2dc7ba2d02508eaa0124e87f7a81317e27edb688",
+      "retainedPath": "dealer-stock/opensooq-288869834.webp",
+      "retainedSha256": "68c811f96e8b49661717a4051c12abf9c4d3cf048e11cc4579cb514d67b26332",
+      "nativeDimensions": [
+        640,
+        480
+      ],
+      "retainedDimensions": [
+        640,
+        480
+      ],
+      "retainedBytes": 39194,
+      "transformation": "Aspect-preserving bounded resize and WebP encoding; no content removal.",
+      "sellerId": "39989037"
+    },
+    {
+      "listingId": "opensooq-288353246",
+      "listingUrl": "https://ae.opensooq.com/en/search/288353246",
+      "sourceUrl": "https://opensooq-imagesv2.os-cdn.com/previews/640x480/04/5b/045b73bfde4f203fc1feb61ec29668cd821f6a5ac10ff134c576321ef9cd6b21.jpg.webp",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "sourceSha256": "5eb04c3a45803ad005b25e0fde70c9415f84091662e9631aa24272da0bf875a0",
+      "retainedPath": "dealer-stock/opensooq-288353246.webp",
+      "retainedSha256": "b6005af3a0c399d84f2a2b1dcebf8004a92a443168b0e7d7ff969128fd78f0b1",
+      "nativeDimensions": [
+        640,
+        480
+      ],
+      "retainedDimensions": [
+        640,
+        480
+      ],
+      "retainedBytes": 39986,
+      "transformation": "Aspect-preserving bounded resize and WebP encoding; no content removal.",
+      "sellerId": "39989037"
+    },
+    {
+      "listingId": "opensooq-288600278",
+      "listingUrl": "https://ae.opensooq.com/en/search/288600278",
+      "sourceUrl": "https://opensooq-imagesv2.os-cdn.com/previews/640x480/a0/e8/a0e818d1a0674ac0db611dfa82b11b637bd65bf3f44fcdff0ef3ec929668790e.jpg.webp",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "sourceSha256": "9ca74b24cd69e30f87e086b12fb54f41fdcdb7316bb75e74528770121bcbf7e8",
+      "retainedPath": "dealer-stock/opensooq-288600278.webp",
+      "retainedSha256": "037aff5183f30ff42340290a1a1be6fe7f9e7fed1ee414703c6cb99ce3399228",
+      "nativeDimensions": [
+        640,
+        480
+      ],
+      "retainedDimensions": [
+        640,
+        480
+      ],
+      "retainedBytes": 38574,
+      "transformation": "Aspect-preserving bounded resize and WebP encoding; no content removal.",
+      "sellerId": "39989037"
+    }
+  ],
+  "skylinePublicPhoneReview": {
+    "observedAt": "2026-10-19T21:59:33.705932Z",
+    "url": "https://magicpin.com/uae/Umm-Al-Quwain/Umm-Al-Thuoob/Autocare/Skyline-Motors/store/2271b35/reviews",
+    "business": "Skyline Motors",
+    "city": "Umm Al Quwain",
+    "telephone": "+971508521852",
+    "evidence": "Public tel: Call link and LocalBusiness telephone match the visible OpenSooq business contact prefix. No reveal/login used. Unrelated platform contacts excluded."
+  }
+}

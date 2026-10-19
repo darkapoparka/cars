@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "dealer": "sahm-al-najah-used-cars-trading",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae-supplement.json",
+    "sha256": "ea2d396ef7a8a73326f488e53858ac60b4a0324d553ccba34b566b5ec5e91f2a"
+  },
+  "publicSources": [
+    {
+      "url": "https://ae.opensooq.com/ar/%D9%85%D8%AA%D8%A7%D8%AC%D8%B1/%D8%B3%D9%87%D9%85-%D8%A7%D9%84%D9%86%D8%AC%D8%A7%D8%AD-%D9%84%D8%AA%D8%AC%D8%A7%D8%B1%D8%A9-%D8%A7%D9%84%D8%B3%D9%8A%D8%A7%D8%B1%D8%A7%D8%AA-%D8%A7%D9%84%D9%85%D8%B3%D8%AA%D8%B9%D9%85%D9%84%D8%A9-66288306",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "supports": [
+        "business.name",
+        "business.city",
+        "business.countryCode",
+        "dated-dealer-catalogue-listings"
+      ]
+    },
+    {
+      "url": "https://ae.opensooq.com/en/search/287841650",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "supports": [
+        "stock.opensooq-287841650"
+      ]
+    },
+    {
+      "url": "https://ae.opensooq.com/en/search/287986100",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "supports": [
+        "stock.opensooq-287986100"
+      ]
+    },
+    {
+      "url": "https://ae.opensooq.com/en/search/287841662",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "supports": [
+        "stock.opensooq-287841662"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "agentResearch": {
+    "observedAt": "2026-10-19T21:09:57.342849Z",
+    "method": "Public named dealer page and seller-bound catalogue data or current public business-account post captions. Full public business phones only; no sign-in, reveal, contact or account interaction.",
+    "identityNotes": [
+      "Full marketplace phone is masked or requires sign-in; no masked digits inferred and no reveal attempted.",
+      "Only city-level premises confirmed in this catalogue; exact address omitted."
+    ],
+    "imageReview": "All retained actual vehicle photos visually reviewed. No price overlays or personal contact details retained. Marketplace watermarks preserved. Instagram source photos are the published first-frame previews, including their original framing.",
+    "logoResearchStatus": "in-progress"
+  },
+  "stockPhotos": [
+    {
+      "listingId": "opensooq-287841650",
+      "listingUrl": "https://ae.opensooq.com/en/search/287841650",
+      "sourceUrl": "https://opensooq-imagesv2.os-cdn.com/previews/640x480/2f/0a/2f0a334846b3547a3497b5ad183ea5bfad6ade853dfc7fe08678c8ecaf9efdf0.jpg.webp",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "sourceSha256": "4e5f0e27dfef359357926f102263a94adc6ebe06c3ea2936b46e17fbbd91d248",
+      "retainedPath": "dealer-stock/opensooq-287841650.webp",
+      "retainedSha256": "654f142a53014279adc8bf97318f2a28cadc9a7ed2086d6691f68b69c8761d31",
+      "nativeDimensions": [
+        640,
+        480
+      ],
+      "retainedDimensions": [
+        640,
+        480
+      ],
+      "retainedBytes": 61900,
+      "transformation": "Aspect-preserving bounded resize and WebP encoding; no content removal.",
+      "sellerId": "66288306"
+    },
+    {
+      "listingId": "opensooq-287986100",
+      "listingUrl": "https://ae.opensooq.com/en/search/287986100",
+      "sourceUrl": "https://opensooq-imagesv2.os-cdn.com/previews/640x480/f9/55/f955732d2441d51aa7b30d839f462a9dbf18aa45b033ecea58d94b350baca267.jpg.webp",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "sourceSha256": "04f30a7be4a077eb0f9fd1dc9139c389dfae339cc323ea30150c5c3954b608ff",
+      "retainedPath": "dealer-stock/opensooq-287986100.webp",
+      "retainedSha256": "ab09256b76a9adab2f3cfbf0f16f79c06d502186563a61d4765ae2111abf1603",
+      "nativeDimensions": [
+        640,
+        480
+      ],
+      "retainedDimensions": [
+        640,
+        480
+      ],
+      "retainedBytes": 53918,
+      "transformation": "Aspect-preserving bounded resize and WebP encoding; no content removal.",
+      "sellerId": "66288306"
+    },
+    {
+      "listingId": "opensooq-287841662",
+      "listingUrl": "https://ae.opensooq.com/en/search/287841662",
+      "sourceUrl": "https://opensooq-imagesv2.os-cdn.com/previews/640x480/8b/cd/8bcd217df9d6a044f537da02621d3519e005473201c159605d3f98d65580c38e.jpg.webp",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "sourceSha256": "c133eee24359b0457642cddbb299cf28a6ca71321485d5d35e096f60a2ea6747",
+      "retainedPath": "dealer-stock/opensooq-287841662.webp",
+      "retainedSha256": "17f3e8b1100e3549fdc6644e8fa0750ab2dcfdfd6904d6acc8aa564f2cc74744",
+      "nativeDimensions": [
+        640,
+        480
+      ],
+      "retainedDimensions": [
+        640,
+        480
+      ],
+      "retainedBytes": 59030,
+      "transformation": "Aspect-preserving bounded resize and WebP encoding; no content removal.",
+      "sellerId": "66288306"
+    }
+  ]
+}

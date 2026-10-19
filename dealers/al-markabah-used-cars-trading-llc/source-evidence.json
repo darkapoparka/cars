@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-markabah-used-cars-trading-llc",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae-supplement.json",
+    "sha256": "ea2d396ef7a8a73326f488e53858ac60b4a0324d553ccba34b566b5ec5e91f2a"
+  },
+  "publicSources": [
+    {
+      "url": "https://ae.opensooq.com/ar/%D9%85%D8%AA%D8%A7%D8%AC%D8%B1/Al-markabah-used-cars-18008673",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "supports": [
+        "business.name",
+        "business.city",
+        "business.countryCode",
+        "dated-dealer-catalogue-listings"
+      ]
+    },
+    {
+      "url": "https://easyauto.ae/business/lmrkb-ltjr-lsyrt-lmstaaml-al-markabah-used-cars-trading-llc",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "supports": [
+        "business.phone",
+        "business.address"
+      ]
+    },
+    {
+      "url": "https://ae.opensooq.com/en/search/288853992",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "supports": [
+        "stock.opensooq-288853992"
+      ]
+    },
+    {
+      "url": "https://ae.opensooq.com/en/search/288522796",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "supports": [
+        "stock.opensooq-288522796"
+      ]
+    },
+    {
+      "url": "https://ae.opensooq.com/en/search/288651654",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "supports": [
+        "stock.opensooq-288651654"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "agentResearch": {
+    "observedAt": "2026-10-19T21:09:57.342849Z",
+    "method": "Public named dealer page and seller-bound catalogue data or current public business-account post captions. Full public business phones only; no sign-in, reveal, contact or account interaction.",
+    "identityNotes": [
+      "Full marketplace phone is masked or requires sign-in; no masked digits inferred and no reveal attempted.",
+      "Public directory business phone matches the visible marketplace prefix; exact road address comes from that same directory. Avatar names Al Fakhr, so it is excluded as another identity; branding must be an explicit proposal."
+    ],
+    "imageReview": "All retained actual vehicle photos visually reviewed. No price overlays or personal contact details retained. Marketplace watermarks preserved. Instagram source photos are the published first-frame previews, including their original framing.",
+    "logoResearchStatus": "in-progress"
+  },
+  "stockPhotos": [
+    {
+      "listingId": "opensooq-288853992",
+      "listingUrl": "https://ae.opensooq.com/en/search/288853992",
+      "sourceUrl": "https://opensooq-imagesv2.os-cdn.com/previews/640x480/61/a7/61a70e0676002a27ce7a55bf4af16e0d332d62dc3f3f3347df25f219f92c3a74.jpg.webp",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "sourceSha256": "8f77400836a66d199493fe652f2da85c8d1def7c131d0a93d8dbb7f245a1b0a3",
+      "retainedPath": "dealer-stock/opensooq-288853992.webp",
+      "retainedSha256": "2a5ddd59c7fd55381d8ad68ba72e48f1f1362209cd02382e72de0cd52d4a0782",
+      "nativeDimensions": [
+        640,
+        480
+      ],
+      "retainedDimensions": [
+        640,
+        480
+      ],
+      "retainedBytes": 48474,
+      "transformation": "Aspect-preserving bounded resize and WebP encoding; no content removal.",
+      "sellerId": "18008673"
+    },
+    {
+      "listingId": "opensooq-288522796",
+      "listingUrl": "https://ae.opensooq.com/en/search/288522796",
+      "sourceUrl": "https://opensooq-imagesv2.os-cdn.com/previews/640x480/f8/f4/f8f4f00229d935403b0c9178ffed54763ee2493e9d8b9f0f0f2bb6013a147071.jpg.webp",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "sourceSha256": "44e312638fd2374b5d608ab47d14704491c79039912edfddb22a794d68eb342d",
+      "retainedPath": "dealer-stock/opensooq-288522796.webp",
+      "retainedSha256": "84909bc2f6227329fd4c7c51f886c66f97801474f10cea146428df05cbfe3a61",
+      "nativeDimensions": [
+        640,
+        480
+      ],
+      "retainedDimensions": [
+        640,
+        480
+      ],
+      "retainedBytes": 47730,
+      "transformation": "Aspect-preserving bounded resize and WebP encoding; no content removal.",
+      "sellerId": "18008673"
+    },
+    {
+      "listingId": "opensooq-288651654",
+      "listingUrl": "https://ae.opensooq.com/en/search/288651654",
+      "sourceUrl": "https://opensooq-imagesv2.os-cdn.com/previews/640x480/af/27/af27c0d7c303edfc5d4c092c8412219c8c68114c7228bfdf514999810cef76c4.jpg.webp",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "sourceSha256": "7958fb6438ce38fd9b097d396e8fe29d0bf4b0dc94c2e05023d77ee848fefe84",
+      "retainedPath": "dealer-stock/opensooq-288651654.webp",
+      "retainedSha256": "0851ad3b1d6e663f1ee5fdb1c83d9062147c7f5cbe2e1cdcd65475deb7fa33c2",
+      "nativeDimensions": [
+        640,
+        480
+      ],
+      "retainedDimensions": [
+        640,
+        480
+      ],
+      "retainedBytes": 63842,
+      "transformation": "Aspect-preserving bounded resize and WebP encoding; no content removal.",
+      "sellerId": "18008673"
+    }
+  ]
+}

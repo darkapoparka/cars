@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-markabah-used-cars-trading-llc",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T21:09:57.342849Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "opensooq-288853992",
+      "title": "BMW 5 Series 2013",
+      "make": "BMW",
+      "model": "5 Series",
+      "year": 2013,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/opensooq-288853992.webp"
+      ],
+      "sourceUrl": "https://ae.opensooq.com/en/search/288853992",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 460000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "opensooq-288522796",
+      "title": "Land Rover Range Rover Sport 2016",
+      "make": "Land Rover",
+      "model": "Range Rover Sport",
+      "year": 2016,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/opensooq-288522796.webp"
+      ],
+      "sourceUrl": "https://ae.opensooq.com/en/search/288522796",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 270000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "opensooq-288651654",
+      "title": "BMW 5 Series 2018",
+      "make": "BMW",
+      "model": "5 Series",
+      "year": 2018,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/opensooq-288651654.webp"
+      ],
+      "sourceUrl": "https://ae.opensooq.com/en/search/288651654",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 245000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

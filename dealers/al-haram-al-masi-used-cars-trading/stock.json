@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-haram-al-masi-used-cars-trading",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T21:09:57.342849Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "opensooq-288669642",
+      "title": "Mitsubishi L200 2022",
+      "make": "Mitsubishi",
+      "model": "L200",
+      "year": 2022,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/opensooq-288669642.webp"
+      ],
+      "sourceUrl": "https://ae.opensooq.com/en/search/288669642",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 200000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "opensooq-288623044",
+      "title": "Toyota Other 2020",
+      "make": "Toyota",
+      "model": "Other",
+      "year": 2020,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/opensooq-288623044.webp"
+      ],
+      "sourceUrl": "https://ae.opensooq.com/en/search/288623044",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 270000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "opensooq-288622990",
+      "title": "Toyota Hilux 2014",
+      "make": "Toyota",
+      "model": "Hilux",
+      "year": 2014,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/opensooq-288622990.webp"
+      ],
+      "sourceUrl": "https://ae.opensooq.com/en/search/288622990",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 225000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

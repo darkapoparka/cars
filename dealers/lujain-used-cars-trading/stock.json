@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "lujain-used-cars-trading",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T21:09:57.342849Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "opensooq-287793450",
+      "title": "Toyota Camry 2022",
+      "make": "Toyota",
+      "model": "Camry",
+      "year": 2022,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/opensooq-287793450.webp"
+      ],
+      "sourceUrl": "https://ae.opensooq.com/en/search/287793450",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 91000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "opensooq-288400912",
+      "title": "Kia Picanto 2023",
+      "make": "Kia",
+      "model": "Picanto",
+      "year": 2023,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/opensooq-288400912.webp"
+      ],
+      "sourceUrl": "https://ae.opensooq.com/en/search/288400912",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 74000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "opensooq-288216036",
+      "title": "Toyota Hiace 2021",
+      "make": "Toyota",
+      "model": "Hiace",
+      "year": 2021,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/opensooq-288216036.webp"
+      ],
+      "sourceUrl": "https://ae.opensooq.com/en/search/288216036",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 181000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

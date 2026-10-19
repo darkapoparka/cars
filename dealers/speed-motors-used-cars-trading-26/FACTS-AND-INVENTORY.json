@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "dealer": "speed-motors-used-cars-trading-26",
+  "businessFacts": "business-facts.json",
+  "stock": "stock.json",
+  "inventoryKind": "dated-listing-snapshot",
+  "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+  "sources": [
+    {
+      "url": "https://ae.opensooq.com/ar/%D9%85%D8%AA%D8%A7%D8%AC%D8%B1/Speed-Motors26-71385778",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "supports": [
+        "business.name",
+        "business.city",
+        "business.countryCode",
+        "dated-dealer-catalogue-listings"
+      ]
+    },
+    {
+      "url": "https://www.instagram.com/speed_motors26/",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "supports": [
+        "business.phone",
+        "business.address"
+      ]
+    },
+    {
+      "url": "https://ae.opensooq.com/en/search/288823486",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "supports": [
+        "stock.opensooq-288823486"
+      ]
+    },
+    {
+      "url": "https://ae.opensooq.com/en/search/288823478",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "supports": [
+        "stock.opensooq-288823478"
+      ]
+    },
+    {
+      "url": "https://ae.opensooq.com/en/search/288823470",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "supports": [
+        "stock.opensooq-288823470"
+      ]
+    }
+  ]
+}

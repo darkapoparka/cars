@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "slug": "skyline-motors-umm-al-quwain",
+  "dealerId": "ae-umm-al-quwain-skyline-motors",
+  "business": {
+    "name": "Skyline Motors (Umm al-Quwain)",
+    "city": "Umm al-Quwain",
+    "region": "Umm al-Quwain",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "",
+    "phone": "+971508521852",
+    "phoneDisplay": "+971508521852",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://ae.opensooq.com/ar/%D9%85%D8%AA%D8%A7%D8%AC%D8%B1/Skyline-motors-39989037",
+    "hours": "Sun 08:00-22:00; Mon 08:00-22:00; Tue 08:00-22:00; Wed 08:00-22:00; Thu 08:00-22:00; Fri 08:00-22:00; Sat 08:00-22:00",
+    "sourceUrl": "https://ae.opensooq.com/ar/%D9%85%D8%AA%D8%A7%D8%AC%D8%B1/Skyline-motors-39989037",
+    "observedAt": "2026-10-19T21:09:57.342849Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://ae.opensooq.com/ar/%D9%85%D8%AA%D8%A7%D8%AC%D8%B1/Skyline-motors-39989037",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "supports": [
+        "business.name",
+        "business.city",
+        "business.countryCode",
+        "dated-dealer-catalogue-listings"
+      ]
+    },
+    {
+      "url": "https://ae.opensooq.com/en/search/288869834",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "supports": [
+        "stock.opensooq-288869834"
+      ]
+    },
+    {
+      "url": "https://ae.opensooq.com/en/search/288353246",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "supports": [
+        "stock.opensooq-288353246"
+      ]
+    },
+    {
+      "url": "https://ae.opensooq.com/en/search/288600278",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "supports": [
+        "stock.opensooq-288600278"
+      ]
+    },
+    {
+      "url": "https://magicpin.com/uae/Umm-Al-Quwain/Umm-Al-Thuoob/Autocare/Skyline-Motors/store/2271b35/reviews",
+      "observedAt": "2026-10-19T21:59:33.705932Z",
+      "supports": [
+        "business.name",
+        "business.city",
+        "business.phone"
+      ]
+    }
+  ]
+}

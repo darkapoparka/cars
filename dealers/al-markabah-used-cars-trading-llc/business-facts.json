@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "slug": "al-markabah-used-cars-trading-llc",
+  "dealerId": "ae-umm-al-quwain-al-markabah-used-cars",
+  "business": {
+    "name": "Al Markabah Used Cars Trading LLC",
+    "city": "Umm al-Quwain",
+    "region": "Umm al-Quwain",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "Sheikh Mohammed Bin Zayed Road, Umm Dera, Umm Al Quwain",
+    "phone": "+971543515705",
+    "phoneDisplay": "+971543515705",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://ae.opensooq.com/ar/%D9%85%D8%AA%D8%A7%D8%AC%D8%B1/Al-markabah-used-cars-18008673",
+    "hours": "Sun 08:00-17:00; Mon 08:00-17:00; Tue 08:00-17:00; Wed 08:00-17:00; Thu 08:00-17:00; Fri 08:00-17:00",
+    "sourceUrl": "https://ae.opensooq.com/ar/%D9%85%D8%AA%D8%A7%D8%AC%D8%B1/Al-markabah-used-cars-18008673",
+    "observedAt": "2026-10-19T21:09:57.342849Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://ae.opensooq.com/ar/%D9%85%D8%AA%D8%A7%D8%AC%D8%B1/Al-markabah-used-cars-18008673",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "supports": [
+        "business.name",
+        "business.city",
+        "business.countryCode",
+        "dated-dealer-catalogue-listings"
+      ]
+    },
+    {
+      "url": "https://easyauto.ae/business/lmrkb-ltjr-lsyrt-lmstaaml-al-markabah-used-cars-trading-llc",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "supports": [
+        "business.phone",
+        "business.address"
+      ]
+    },
+    {
+      "url": "https://ae.opensooq.com/en/search/288853992",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "supports": [
+        "stock.opensooq-288853992"
+      ]
+    },
+    {
+      "url": "https://ae.opensooq.com/en/search/288522796",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "supports": [
+        "stock.opensooq-288522796"
+      ]
+    },
+    {
+      "url": "https://ae.opensooq.com/en/search/288651654",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "supports": [
+        "stock.opensooq-288651654"
+      ]
+    }
+  ]
+}

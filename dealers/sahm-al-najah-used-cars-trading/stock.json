@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "sahm-al-najah-used-cars-trading",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T21:09:57.342849Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "opensooq-287841650",
+      "title": "Ford Edge 2021",
+      "make": "Ford",
+      "model": "Edge",
+      "year": 2021,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/opensooq-287841650.webp"
+      ],
+      "sourceUrl": "https://ae.opensooq.com/en/search/287841650",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 35000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "opensooq-287986100",
+      "title": "Honda Civic 2022",
+      "make": "Honda",
+      "model": "Civic",
+      "year": 2022,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/opensooq-287986100.webp"
+      ],
+      "sourceUrl": "https://ae.opensooq.com/en/search/287986100",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 23000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "opensooq-287841662",
+      "title": "Honda CR-V 2024",
+      "make": "Honda",
+      "model": "CR-V",
+      "year": 2024,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/opensooq-287841662.webp"
+      ],
+      "sourceUrl": "https://ae.opensooq.com/en/search/287841662",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 5000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

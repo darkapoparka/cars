@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-sabah-used-cars-trading",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae-supplement-2.json",
+    "sha256": "aee92b9d3407b408d84113272c67358d98517f397cfbfe76fb223f15ba8a093e"
+  },
+  "publicSources": [
+    {
+      "url": "https://ae.opensooq.com/ar/%D9%85%D8%AA%D8%A7%D8%AC%D8%B1/%D8%A7%D9%84%D8%B5%D8%A8%D8%A7%D8%AD-%D9%84%D8%AA%D8%AC%D8%A7%D8%B1%D8%A9-%D8%A7%D9%84%D8%B3%D9%8A%D8%A7%D8%B1%D8%A7%D8%AA-%D8%A7%D9%84%D9%85%D8%B3%D8%AA%D8%B9%D9%85%D9%84%D8%A9-63569675",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "supports": [
+        "business.name",
+        "business.city",
+        "business.countryCode",
+        "dated-dealer-catalogue-listings"
+      ]
+    },
+    {
+      "url": "https://auto.ae/alsabah/",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "supports": [
+        "business.phone"
+      ]
+    },
+    {
+      "url": "https://ae.opensooq.com/en/search/287743964",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "supports": [
+        "stock.opensooq-287743964"
+      ]
+    },
+    {
+      "url": "https://ae.opensooq.com/en/search/287902368",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "supports": [
+        "stock.opensooq-287902368"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "agentResearch": {
+    "observedAt": "2026-10-19T21:09:57.342849Z",
+    "method": "Public named dealer page and seller-bound catalogue data or current public business-account post captions. Full public business phones only; no sign-in, reveal, contact or account interaction.",
+    "identityNotes": [
+      "Full marketplace phone is masked or requires sign-in; no masked digits inferred and no reveal attempted.",
+      "Incomplete published weekly schedule omitted.",
+      "Public business phone also published by the matching AUTO showroom. Exact address and hours omitted because photographed showroom67 differs from AUTO showroom65. Two distinct listing samples retained; a near-identical additional Patrol photo was omitted."
+    ],
+    "imageReview": "All retained actual vehicle photos visually reviewed. No price overlays or personal contact details retained. Marketplace watermarks preserved. Instagram source photos are the published first-frame previews, including their original framing.",
+    "logoResearchStatus": "in-progress"
+  },
+  "stockPhotos": [
+    {
+      "listingId": "opensooq-287743964",
+      "listingUrl": "https://ae.opensooq.com/en/search/287743964",
+      "sourceUrl": "https://opensooq-imagesv2.os-cdn.com/previews/640x480/00/f4/00f42bbc67cb8e261a05825ecb148721a84a732d93c01dbf857ae2754b3cce6f.jpg.webp",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "sourceSha256": "b43a92e9835be5c9a1b5dfe8e3938d1428d75ba810bdde68d91f28a69185ef9b",
+      "retainedPath": "dealer-stock/opensooq-287743964.webp",
+      "retainedSha256": "ee4dd67e2bf18547fcf78929bcc67d0de4aa8d344afad29e8b623f49692086ae",
+      "nativeDimensions": [
+        640,
+        480
+      ],
+      "retainedDimensions": [
+        640,
+        480
+      ],
+      "retainedBytes": 36020,
+      "transformation": "Aspect-preserving bounded resize and WebP encoding; no content removal.",
+      "sellerId": "63569675"
+    },
+    {
+      "listingId": "opensooq-287902368",
+      "listingUrl": "https://ae.opensooq.com/en/search/287902368",
+      "sourceUrl": "https://opensooq-imagesv2.os-cdn.com/previews/640x480/ea/53/ea5388448083bb422641e94a9e8b6dfa3826a9f96c672134e70088b2152ac75d.jpg.webp",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "sourceSha256": "31b2fae5cc59614c5168c1e519e3a8502f2e361b711db3f649a3f9563afe0625",
+      "retainedPath": "dealer-stock/opensooq-287902368.webp",
+      "retainedSha256": "cc077ed35a02de16c0a7ed485532cd5bb3a13116e0b0b8e002cf57d19ea2f18a",
+      "nativeDimensions": [
+        640,
+        480
+      ],
+      "retainedDimensions": [
+        640,
+        480
+      ],
+      "retainedBytes": 40168,
+      "transformation": "Aspect-preserving bounded resize and WebP encoding; no content removal.",
+      "sellerId": "63569675"
+    }
+  ]
+}

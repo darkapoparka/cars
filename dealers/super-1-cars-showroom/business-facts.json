@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "slug": "super-1-cars-showroom",
+  "dealerId": "ae-umm-al-quwain-super-1-cars-showroom",
+  "business": {
+    "name": "Super 1 Cars Showroom",
+    "city": "Umm al-Quwain",
+    "region": "Umm al-Quwain",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "",
+    "phone": "",
+    "phoneDisplay": "",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://ae.opensooq.com/ar/%D9%85%D8%AA%D8%A7%D8%AC%D8%B1/%D9%85%D8%B9%D8%B1%D8%B6-%D8%B3%D9%88%D8%A8%D8%B1-1-%D9%84%D9%84%D8%B3%D9%8A%D8%A7%D8%B1%D8%A7%D8%AA-55282418",
+    "hours": "",
+    "sourceUrl": "https://ae.opensooq.com/ar/%D9%85%D8%AA%D8%A7%D8%AC%D8%B1/%D9%85%D8%B9%D8%B1%D8%B6-%D8%B3%D9%88%D8%A8%D8%B1-1-%D9%84%D9%84%D8%B3%D9%8A%D8%A7%D8%B1%D8%A7%D8%AA-55282418",
+    "observedAt": "2026-10-19T21:09:57.342849Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://ae.opensooq.com/ar/%D9%85%D8%AA%D8%A7%D8%AC%D8%B1/%D9%85%D8%B9%D8%B1%D8%B6-%D8%B3%D9%88%D8%A8%D8%B1-1-%D9%84%D9%84%D8%B3%D9%8A%D8%A7%D8%B1%D8%A7%D8%AA-55282418",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "supports": [
+        "business.name",
+        "business.city",
+        "business.countryCode",
+        "dated-dealer-catalogue-listings"
+      ]
+    },
+    {
+      "url": "https://ae.opensooq.com/en/search/288855320",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "supports": [
+        "stock.opensooq-288855320"
+      ]
+    },
+    {
+      "url": "https://ae.opensooq.com/en/search/288854976",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "supports": [
+        "stock.opensooq-288854976"
+      ]
+    },
+    {
+      "url": "https://ae.opensooq.com/en/search/288854938",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "supports": [
+        "stock.opensooq-288854938"
+      ]
+    }
+  ]
+}

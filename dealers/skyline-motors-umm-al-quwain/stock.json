@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "skyline-motors-umm-al-quwain",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T21:09:57.342849Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "opensooq-288869834",
+      "title": "Toyota Prado 2016",
+      "make": "Toyota",
+      "model": "Prado",
+      "year": 2016,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/opensooq-288869834.webp"
+      ],
+      "sourceUrl": "https://ae.opensooq.com/en/search/288869834",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 320000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "opensooq-288353246",
+      "title": "Mercedes Benz E-Class 2012",
+      "make": "Mercedes Benz",
+      "model": "E-Class",
+      "year": 2012,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/opensooq-288353246.webp"
+      ],
+      "sourceUrl": "https://ae.opensooq.com/en/search/288353246",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 290000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "opensooq-288600278",
+      "title": "Mercedes Benz E-Class 2015",
+      "make": "Mercedes Benz",
+      "model": "E-Class",
+      "year": 2015,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/opensooq-288600278.webp"
+      ],
+      "sourceUrl": "https://ae.opensooq.com/en/search/288600278",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 150000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

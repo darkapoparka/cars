@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "speed-motors-used-cars-trading-26",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T21:09:57.342849Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "opensooq-288823486",
+      "title": "Dodge Charger 2021",
+      "make": "Dodge",
+      "model": "Charger",
+      "year": 2021,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/opensooq-288823486.webp"
+      ],
+      "sourceUrl": "https://ae.opensooq.com/en/search/288823486",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 68000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "opensooq-288823478",
+      "title": "Honda Accord 2008",
+      "make": "Honda",
+      "model": "Accord",
+      "year": 2008,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/opensooq-288823478.webp"
+      ],
+      "sourceUrl": "https://ae.opensooq.com/en/search/288823478",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 260000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "opensooq-288823470",
+      "title": "Infiniti QX70 2016",
+      "make": "Infiniti",
+      "model": "QX70",
+      "year": 2016,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/opensooq-288823470.webp"
+      ],
+      "sourceUrl": "https://ae.opensooq.com/en/search/288823470",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 131000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

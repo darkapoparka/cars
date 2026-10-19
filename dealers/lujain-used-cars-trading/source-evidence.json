@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "dealer": "lujain-used-cars-trading",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae-supplement-2.json",
+    "sha256": "aee92b9d3407b408d84113272c67358d98517f397cfbfe76fb223f15ba8a093e"
+  },
+  "publicSources": [
+    {
+      "url": "https://ae.opensooq.com/ar/%D9%85%D8%AA%D8%A7%D8%AC%D8%B1/%D9%84%D8%AC%D9%8A%D9%86-%D9%84%D8%AA%D8%AC%D8%A7%D8%B1%D8%A9-%D8%A7%D9%84%D8%B3%D9%8A%D8%A7%D8%B1%D8%A7%D8%AA-%D8%A7%D9%84%D9%85%D8%B3%D8%AA%D8%B9%D9%85%D9%84%D8%A9-48219714",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "supports": [
+        "business.name",
+        "business.city",
+        "business.countryCode",
+        "dated-dealer-catalogue-listings"
+      ]
+    },
+    {
+      "url": "https://ae.opensooq.com/en/search/287793450",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "supports": [
+        "stock.opensooq-287793450"
+      ]
+    },
+    {
+      "url": "https://ae.opensooq.com/en/search/288400912",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "supports": [
+        "stock.opensooq-288400912"
+      ]
+    },
+    {
+      "url": "https://ae.opensooq.com/en/search/288216036",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "supports": [
+        "stock.opensooq-288216036"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "agentResearch": {
+    "observedAt": "2026-10-19T21:09:57.342849Z",
+    "method": "Public named dealer page and seller-bound catalogue data or current public business-account post captions. Full public business phones only; no sign-in, reveal, contact or account interaction.",
+    "identityNotes": [
+      "Full marketplace phone is masked or requires sign-in; no masked digits inferred and no reveal attempted.",
+      "Only city-level premises confirmed in this catalogue; exact address omitted.",
+      "Incomplete published weekly schedule omitted.",
+      "Exact shop avatar spells its brand LUGEN CARS; this transliteration is retained in faithful logo artwork, while the lead-bound business name remains Lujain."
+    ],
+    "imageReview": "All retained actual vehicle photos visually reviewed. No price overlays or personal contact details retained. Marketplace watermarks preserved. Instagram source photos are the published first-frame previews, including their original framing.",
+    "logoResearchStatus": "in-progress"
+  },
+  "stockPhotos": [
+    {
+      "listingId": "opensooq-287793450",
+      "listingUrl": "https://ae.opensooq.com/en/search/287793450",
+      "sourceUrl": "https://opensooq-imagesv2.os-cdn.com/previews/640x480/23/8b/238b45cd8817a77909ddec0bfb3e5bdbbc043cd6f0c2df10a93306f1d0740151.jpg.webp",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "sourceSha256": "f73c3b39fc815dbf1fcb62f54d196505e38372b3a7634b3e58661afba9c152ca",
+      "retainedPath": "dealer-stock/opensooq-287793450.webp",
+      "retainedSha256": "c07e18e82aa15cd1ae3edd1d2e620cbeeea613724e50fd5f7c015f13cc10c159",
+      "nativeDimensions": [
+        640,
+        480
+      ],
+      "retainedDimensions": [
+        640,
+        480
+      ],
+      "retainedBytes": 36318,
+      "transformation": "Aspect-preserving bounded resize and WebP encoding; no content removal.",
+      "sellerId": "48219714"
+    },
+    {
+      "listingId": "opensooq-288400912",
+      "listingUrl": "https://ae.opensooq.com/en/search/288400912",
+      "sourceUrl": "https://opensooq-imagesv2.os-cdn.com/previews/640x480/30/bf/30bf236525e39b6925ca6581a821ce6bd87fe0b5fc1366202b7bffe01c5adba5.jpg.webp",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "sourceSha256": "c1e3dc11264903c01ddd0d14b95f55a7de3e20a368253b06ab73840ed9618008",
+      "retainedPath": "dealer-stock/opensooq-288400912.webp",
+      "retainedSha256": "997c8915856a9f893fb5309748fa7fe5e2330028e9151f72e97575337f7a9624",
+      "nativeDimensions": [
+        640,
+        480
+      ],
+      "retainedDimensions": [
+        640,
+        480
+      ],
+      "retainedBytes": 35746,
+      "transformation": "Aspect-preserving bounded resize and WebP encoding; no content removal.",
+      "sellerId": "48219714"
+    },
+    {
+      "listingId": "opensooq-288216036",
+      "listingUrl": "https://ae.opensooq.com/en/search/288216036",
+      "sourceUrl": "https://opensooq-imagesv2.os-cdn.com/previews/640x480/d2/52/d252e164d1a3d35d61e0c8efec06bd1373cb0ca6f16b714309cdcfbfa903d03a.jpg.webp",
+      "observedAt": "2026-10-19T21:09:57.342849Z",
+      "sourceSha256": "92605f7f344d9f97c98474738b41b8b491f1607ea933d856a5e50533d44b3cde",
+      "retainedPath": "dealer-stock/opensooq-288216036.webp",
+      "retainedSha256": "fcde01083d740bf7eca6e62ed5219ee2f466ad7639f321372f192b57ff50964b",
+      "nativeDimensions": [
+        640,
+        480
+      ],
+      "retainedDimensions": [
+        640,
+        480
+      ],
+      "retainedBytes": 36608,
+      "transformation": "Aspect-preserving bounded resize and WebP encoding; no content removal.",
+      "sellerId": "48219714"
+    }
+  ]
+}
