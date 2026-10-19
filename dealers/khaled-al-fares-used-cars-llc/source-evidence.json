@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "dealer": "khaled-al-fares-used-cars-llc",
+  "researchId": "ae-sharjah-khaled-al-fares-used-cars",
+  "observedAt": "2026-10-19T20:01:39Z",
+  "liveFetchPerformed": true,
+  "businessSources": [
+    {
+      "url": "https://auto.ae/khaledalfares/",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "supports": [
+        "business-name",
+        "public-showroom-phone",
+        "showroom-address-where-consistent",
+        "advertised-stock-snapshot",
+        "published-hours-where-consistent"
+      ]
+    }
+  ],
+  "profile": {
+    "name": "KHALED AL FARES 211",
+    "url": "https://auto.ae/khaledalfares/",
+    "sha256": "aa0e6f0e83af4a55f66fe1fe7e37ccf7478ac926722fca4a4c00852093097483",
+    "retrieval": "public HTML and embedded public showroom structured data"
+  },
+  "stockMode": "dated-listing-snapshot",
+  "inventoryCountMeaning": "Three selected publicly advertised listings; physical availability, freshness and uniqueness are not independently confirmed.",
+  "media": [
+    {
+      "path": "/dealer-stock/listing-280904.jpg",
+      "sourceUrl": "https://auto-ae-prod-storage.storage.googleapis.com/auto_sharjah_mini_hatch_sale_280904848574430",
+      "listingUrl": "https://auto.ae/sharjah/sale/car/mini/mini-hatch-iv-f65f66j01-2025/id/280904",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "sourceSha256": "c1181d2a527db4afa205a5f528311a9d1058b543376e42bbff7cb3c436edb603",
+      "sha256": "49c78160e120ee90ef6c1a9f64224e5d39ba87a70b011749573aab6447a4c9e1",
+      "sourceDimensions": [
+        1200,
+        800
+      ],
+      "retainedDimensions": [
+        1200,
+        800
+      ],
+      "bytes": 194063,
+      "operation": "aspect-preserving resize, JPEG re-encode; no content alterations"
+    },
+    {
+      "path": "/dealer-stock/listing-280902.jpg",
+      "sourceUrl": "https://auto-ae-prod-storage.storage.googleapis.com/auto_sharjah_kia_kx1_sale_280902848687040",
+      "listingUrl": "https://auto.ae/sharjah/sale/car/kia/kia-kx1-2026/id/280902",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "sourceSha256": "a83a30d142a360c632c6c5fb5c57641d616856f8d3b524d3a428cec1fe5a8fd9",
+      "sha256": "5e99de967c01f8469134c4be2802f58587ca7baa586fee5e77923ad9f3eeef02",
+      "sourceDimensions": [
+        1155,
+        800
+      ],
+      "retainedDimensions": [
+        1155,
+        800
+      ],
+      "bytes": 99615,
+      "operation": "aspect-preserving resize, JPEG re-encode; no content alterations"
+    },
+    {
+      "path": "/dealer-stock/listing-280901.jpg",
+      "sourceUrl": "https://auto-ae-prod-storage.storage.googleapis.com/auto_sharjah_jetour_t2_sale_280901848570250",
+      "listingUrl": "https://auto.ae/sharjah/sale/car/jetour/jetour-t2-2025/id/280901",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "sourceSha256": "190ce373c7a94a0f2a3572c5882d29726de14016964a3a754b9ccb92b9e51a9f",
+      "sha256": "7ca81cf8779d3abd3ef9fa4c9e3741530479b1e516223292073d1e3f793bd13e",
+      "sourceDimensions": [
+        976,
+        800
+      ],
+      "retainedDimensions": [
+        976,
+        800
+      ],
+      "bytes": 152299,
+      "operation": "aspect-preserving resize, JPEG re-encode; no content alterations"
+    }
+  ],
+  "factualCaveats": [
+    "Current public showroom phone replaces the older retained contact; no phone validity test performed."
+  ],
+  "excludedSourceContent": [
+    "Prices and finance amounts",
+    "Private or personal contact details",
+    "Protected email placeholders and marketplace support emails",
+    "Unverified service, warranty, review or finance claims"
+  ],
+  "dealerApproval": "unknown"
+}

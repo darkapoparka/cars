@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "dealer": "khat-al-khaleej-used-cars",
+  "researchId": "ae-sharjah-khat-al-khaleej-used-cars",
+  "observedAt": "2026-10-19T20:01:39Z",
+  "liveFetchPerformed": true,
+  "businessSources": [
+    {
+      "url": "https://auto.ae/khatalkhaleej/",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "supports": [
+        "business-name",
+        "public-showroom-phone",
+        "showroom-address-where-consistent",
+        "advertised-stock-snapshot",
+        "published-hours-where-consistent"
+      ]
+    }
+  ],
+  "profile": {
+    "name": "Khat Al Khaleej Used Cars",
+    "url": "https://auto.ae/khatalkhaleej/",
+    "sha256": "4fb59084cbfe160aa2f108288dd6587739de1052bf031b7c2f93ea89ad2f348d",
+    "retrieval": "public HTML and embedded public showroom structured data"
+  },
+  "stockMode": "dated-listing-snapshot",
+  "inventoryCountMeaning": "Three selected publicly advertised listings; physical availability, freshness and uniqueness are not independently confirmed.",
+  "media": [
+    {
+      "path": "/dealer-stock/listing-286120.jpg",
+      "sourceUrl": "https://auto-ae-prod-storage.storage.googleapis.com/auto_sharjah_mercedes_benz_e_class_sale_286120871583070",
+      "listingUrl": "https://auto.ae/sharjah/sale/car/mercedes-benz/mercedes-benz-e-class-v-w213-s213-c238-2017/id/286120",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "sourceSha256": "b21011246b00b82ab85428ee0b4bc8ff093ae740b8d523a2551245330d3c540d",
+      "sha256": "0616ec4f74fe58d5e1bcc7db09d7d5857b79e1a9b2430674010a0fddef56c27b",
+      "sourceDimensions": [
+        1066,
+        800
+      ],
+      "retainedDimensions": [
+        1066,
+        800
+      ],
+      "bytes": 173466,
+      "operation": "aspect-preserving resize, JPEG re-encode; no content alterations"
+    },
+    {
+      "path": "/dealer-stock/listing-286119.jpg",
+      "sourceUrl": "https://auto-ae-prod-storage.storage.googleapis.com/auto_sharjah_mercedes_benz_e_class_sale_286119871583550",
+      "listingUrl": "https://auto.ae/sharjah/sale/car/mercedes-benz/mercedes-benz-e-class-v-w213-s213-c238-2020/id/286119",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "sourceSha256": "4f7bfe109754b1dc07372cb403eed9c3cb1d76d4f7dffbb60c7ccc70983ae517",
+      "sha256": "93cafe87afa0d607906c4db45f135145ee04f3bfc0061521b81c791e5cfb190c",
+      "sourceDimensions": [
+        768,
+        1024
+      ],
+      "retainedDimensions": [
+        768,
+        1024
+      ],
+      "bytes": 199804,
+      "operation": "aspect-preserving resize, JPEG re-encode; no content alterations"
+    },
+    {
+      "path": "/dealer-stock/listing-286113.jpg",
+      "sourceUrl": "https://auto-ae-prod-storage.storage.googleapis.com/auto_sharjah_genesis_gv80_sale_286113871583800",
+      "listingUrl": "https://auto.ae/sharjah/sale/car/genesis/genesis-gv80-i-2020/id/286113",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "sourceSha256": "9aec1e8f8cdbf6c63dbb73bcfc7788991d850b753027307d2b45eaa1a7844ef0",
+      "sha256": "b703817f5903ef635b66ae446c58742b986f0aeb60955878414a76fb3063af01",
+      "sourceDimensions": [
+        768,
+        1024
+      ],
+      "retainedDimensions": [
+        768,
+        1024
+      ],
+      "bytes": 187718,
+      "operation": "aspect-preserving resize, JPEG re-encode; no content alterations"
+    }
+  ],
+  "factualCaveats": [],
+  "excludedSourceContent": [
+    "Prices and finance amounts",
+    "Private or personal contact details",
+    "Protected email placeholders and marketplace support emails",
+    "Unverified service, warranty, review or finance claims"
+  ],
+  "dealerApproval": "unknown"
+}

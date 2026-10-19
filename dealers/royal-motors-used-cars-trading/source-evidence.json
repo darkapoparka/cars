@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "dealer": "royal-motors-used-cars-trading",
+  "researchId": "ae-umm-al-quwain-royal-motors-used-cars",
+  "observedAt": "2026-10-19T20:01:39Z",
+  "liveFetchPerformed": true,
+  "businessSources": [
+    {
+      "url": "https://auto.ae/royalmotorsuaq/",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "supports": [
+        "business-name",
+        "public-showroom-phone",
+        "showroom-address-where-consistent",
+        "advertised-stock-snapshot",
+        "published-hours-where-consistent"
+      ]
+    }
+  ],
+  "profile": {
+    "name": "ROYAL MOTORS",
+    "url": "https://auto.ae/royalmotorsuaq/",
+    "sha256": "bee21ed50c9fabfde771eb9def7265dc15b3f7e36796bd72f074d38f48099d32",
+    "retrieval": "public HTML and embedded public showroom structured data"
+  },
+  "stockMode": "dated-listing-snapshot",
+  "inventoryCountMeaning": "Three selected publicly advertised listings; physical availability, freshness and uniqueness are not independently confirmed.",
+  "media": [
+    {
+      "path": "/dealer-stock/listing-239852.jpg",
+      "sourceUrl": "https://auto-ae-prod-storage.storage.googleapis.com/auto_umm_al_quwain_toyota_camry_sale_239852684601080",
+      "listingUrl": "https://auto.ae/umm-al-quwain/sale/car/toyota/toyota-camry-viii-xv70-2019/id/239852",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "sourceSha256": "58fab69300eb66a420f71698a1afcc6f04cd00d7ed51e71bffe8872c6c22ecd4",
+      "sha256": "d05181a70df76342f551449f5d3426b80d966ab3ec3fa91e063703e1729c7ab6",
+      "sourceDimensions": [
+        827,
+        800
+      ],
+      "retainedDimensions": [
+        827,
+        800
+      ],
+      "bytes": 182835,
+      "operation": "aspect-preserving resize, JPEG re-encode; no content alterations"
+    },
+    {
+      "path": "/dealer-stock/listing-239847.jpg",
+      "sourceUrl": "https://auto-ae-prod-storage.storage.googleapis.com/auto_umm_al_quwain_ford_edge_sale_239847684588050",
+      "listingUrl": "https://auto.ae/umm-al-quwain/sale/car/ford/ford-edge-i-facelift-2014/id/239847",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "sourceSha256": "1eed3ff88de738e3232875e0db8a1b05c3c061b3c624c4e6212e1d38accf9332",
+      "sha256": "4bf8011f02d013d203e8c2eeb4e79c5d40394688aa1b4f8612d156032d4c4c66",
+      "sourceDimensions": [
+        800,
+        931
+      ],
+      "retainedDimensions": [
+        800,
+        931
+      ],
+      "bytes": 171563,
+      "operation": "aspect-preserving resize, JPEG re-encode; no content alterations"
+    },
+    {
+      "path": "/dealer-stock/listing-239836.jpg",
+      "sourceUrl": "https://auto-ae-prod-storage.storage.googleapis.com/auto_umm_al_quwain_nissan_x_trail_sale_239836684566850",
+      "listingUrl": "https://auto.ae/umm-al-quwain/sale/car/nissan/nissan-x-trail-iv-2021/id/239836",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "sourceSha256": "bf9b36765b913e1f3ee243164acbe16840a107302e7025025a2adbc938da8cf9",
+      "sha256": "d72f44f665aa6574a8d9e91989f8128a47f6875b672185e2cc08235b3bdc8469",
+      "sourceDimensions": [
+        800,
+        916
+      ],
+      "retainedDimensions": [
+        800,
+        916
+      ],
+      "bytes": 195901,
+      "operation": "aspect-preserving resize, JPEG re-encode; no content alterations"
+    }
+  ],
+  "factualCaveats": [
+    "Current public showroom phone replaces the older retained contact; no phone validity test performed."
+  ],
+  "excludedSourceContent": [
+    "Prices and finance amounts",
+    "Private or personal contact details",
+    "Protected email placeholders and marketplace support emails",
+    "Unverified service, warranty, review or finance claims"
+  ],
+  "dealerApproval": "unknown"
+}

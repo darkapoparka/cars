@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "dealer": "najm-al-shimal-used-cars-najm-al-shamal",
+  "researchId": "ae-sharjah-najm-al-shimal-used-cars",
+  "observedAt": "2026-10-19T20:01:39Z",
+  "liveFetchPerformed": true,
+  "businessSources": [
+    {
+      "url": "https://auto.ae/najmalshamal/",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "supports": [
+        "business-name",
+        "public-showroom-phone",
+        "showroom-address-where-consistent",
+        "advertised-stock-snapshot",
+        "published-hours-where-consistent"
+      ]
+    },
+    {
+      "url": "https://gcccardeals.com/en-ae/dealers/najm-al-shimal-used-cars",
+      "observedAt": "2026-10-19T20:43:05.187725Z",
+      "supports": [
+        "public-logo-source",
+        "trading-name-and-city-correspondence"
+      ]
+    }
+  ],
+  "profile": {
+    "name": "Najm Al Shamal Used Cars",
+    "url": "https://auto.ae/najmalshamal/",
+    "sha256": "c46550aa339ab0a643318865a8df2cb950f88c631811ec153bfe9b86d0936fbf",
+    "retrieval": "public HTML and embedded public showroom structured data"
+  },
+  "stockMode": "dated-listing-snapshot",
+  "inventoryCountMeaning": "Three selected publicly advertised listings; physical availability, freshness and uniqueness are not independently confirmed.",
+  "media": [
+    {
+      "path": "/dealer-stock/listing-273574.jpg",
+      "sourceUrl": "https://auto-ae-prod-storage.storage.googleapis.com/auto_sharjah_toyota_fortuner_sale_273574816854940",
+      "listingUrl": "https://auto.ae/sharjah/sale/car/toyota/toyota-fortuner-ii-facelift-2024/id/273574",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "sourceSha256": "3d52786ef7529e66714b6ad11c6e063fca6dfeb10b0e972e2fc4748d68559a56",
+      "sha256": "fbfbb97b750af1f74bbc40377605cf06c145c977ae20d92b1049299398a85a57",
+      "sourceDimensions": [
+        1066,
+        800
+      ],
+      "retainedDimensions": [
+        1066,
+        800
+      ],
+      "bytes": 170754,
+      "operation": "aspect-preserving resize, JPEG re-encode; no content alterations"
+    },
+    {
+      "path": "/dealer-stock/listing-273572.jpg",
+      "sourceUrl": "https://auto-ae-prod-storage.storage.googleapis.com/auto_sharjah_land_rover_discovery_sale_273572816853740",
+      "listingUrl": "https://auto.ae/sharjah/sale/car/land-rover/land-rover-discovery-iv-facelift-2016/id/273572",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "sourceSha256": "314b57a67b294d5059c729f276b838efb3ab5d9416cf65e0c376be47b668af4d",
+      "sha256": "0550b56555b7e94116e4da929c909188bc8558dc656190b68783a5e8081ed791",
+      "sourceDimensions": [
+        800,
+        800
+      ],
+      "retainedDimensions": [
+        800,
+        800
+      ],
+      "bytes": 135867,
+      "operation": "aspect-preserving resize, JPEG re-encode; no content alterations"
+    },
+    {
+      "path": "/dealer-stock/listing-273571.jpg",
+      "sourceUrl": "https://auto-ae-prod-storage.storage.googleapis.com/auto_sharjah_toyota_rav4_sale_273571816851690",
+      "listingUrl": "https://auto.ae/sharjah/sale/car/toyota/toyota-rav4-v-xa50-2021/id/273571",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "sourceSha256": "c9fbe2b5c09b1ef9ebbc09d29e25b737234632d9286e2e39f44dd09227a0b6f6",
+      "sha256": "5a656fd2267bcdb395f5402f7330b5b479aede020ce5e614cb93bbfcaeee01ed",
+      "sourceDimensions": [
+        768,
+        1024
+      ],
+      "retainedDimensions": [
+        768,
+        1024
+      ],
+      "bytes": 109617,
+      "operation": "aspect-preserving resize, JPEG re-encode; no content alterations"
+    }
+  ],
+  "factualCaveats": [
+    "Current public showroom phone replaces the older retained contact; no phone validity test performed.",
+    "Additional catalogue logo matches the public trading name and city; legal affiliation and dealer approval have not been independently confirmed."
+  ],
+  "excludedSourceContent": [
+    "Prices and finance amounts",
+    "Private or personal contact details",
+    "Protected email placeholders and marketplace support emails",
+    "Unverified service, warranty, review or finance claims"
+  ],
+  "dealerApproval": "unknown"
+}

@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "dealer": "mk-cars",
+  "realLogoFirst": true,
+  "publishedBranding": false,
+  "creationMethod": "imagegen-independent-proposal",
+  "approvalStatus": "independent-proposal-not-dealer-approved",
+  "dealerApproved": false,
+  "usageStatus": "public-preview-only",
+  "observedAt": "2026-10-19T20:35:29.246Z",
+  "publicSources": [
+    {
+      "url": "https://auto.ae/mkcars/",
+      "observedAt": "2026-10-19T20:01:39Z"
+    }
+  ],
+  "originals": [],
+  "logoResearch": {
+    "publicProfile": "https://auto.ae/mkcars/",
+    "originalLogoUrl": "https://auto-ae-prod-storage.storage.googleapis.com/915f1c0b469b45619cf4acc5effdd06a",
+    "finding": "Existing public avatar/sign was visually reviewed; compact identity is labelled as a proposal."
+  },
+  "visualReview": "Full light, dark and red-surface composites and 32px compact previews reviewed. Exact name and distinctive compact silhouette remain recognizable. Transparent negative spaces, no background plaque or visible grain. The pale silver inverse is a monochrome surface variant; full colour identity is retained on light. No dealer approval is implied.",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T20:35:29.246Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "43000dd743f503c4338031f9080ba129cf5e6207980238bbabc47d0d4e7dc112",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1377dae4-5d56-4b74-b77b-7fc061dbd1a8",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "43000dd743f503c4338031f9080ba129cf5e6207980238bbabc47d0d4e7dc112",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1377dae4-5d56-4b74-b77b-7fc061dbd1a8",
+        "modelVersion": null
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "97887c7eb349ee6881f15b3a85c366a1de592f360648c69a459be744cbca91f1",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-b465b305-4fbd-4229-8bb9-ba7596b5e7a2",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "43000dd743f503c4338031f9080ba129cf5e6207980238bbabc47d0d4e7dc112",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-1377dae4-5d56-4b74-b77b-7fc061dbd1a8",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "97887c7eb349ee6881f15b3a85c366a1de592f360648c69a459be744cbca91f1",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-b465b305-4fbd-4229-8bb9-ba7596b5e7a2",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "97887c7eb349ee6881f15b3a85c366a1de592f360648c69a459be744cbca91f1",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-b465b305-4fbd-4229-8bb9-ba7596b5e7a2",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113",
+          "#101820"
+        ],
+        "onAccent": [
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ]
+      },
+      "notes": "Full light, dark and red-surface composites and 32px compact previews reviewed. Exact name and distinctive compact silhouette remain recognizable. Transparent negative spaces, no background plaque or visible grain. The pale silver inverse is a monochrome surface variant; full colour identity is retained on light. No dealer approval is implied."
+    },
+    "compactMarkStatus": "preview-derivative-not-dealer-approved",
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T20:35:29.246Z",
+      "widths": [
+        32,
+        64
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#101820",
+        "#c40101"
+      ],
+      "notes": "Full light, dark and red-surface composites and 32px compact previews reviewed. Exact name and distinctive compact silhouette remain recognizable. Transparent negative spaces, no background plaque or visible grain. The pale silver inverse is a monochrome surface variant; full colour identity is retained on light. No dealer approval is implied."
+    }
+  },
+  "generationPrompts": [
+    {
+      "role": "on-light",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-1377dae4-5d56-4b74-b77b-7fc061dbd1a8",
+      "generationIdKind": "tool-returned artifact filename; no separate generation ID or model exposed",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand. Design a clearly independent compact logo proposal for the public dealer trading name \"MK CARS\". The supplied showroom photo is only colour/lettering context: it is the current MK Cars profile avatar with an expanded trading name, not an existing compact MK emblem. Preserve its restrained navy, white and silver character. Exact logo text \"MK\" large with \"CARS\" beneath, in a single compact square lockup: decisive custom interlocked navy M/K forms and a subtle silver forward-cut accent. The main MK should be immediately legible at 32px. Polished simple geometry, meaningful negative space, no extra car silhouette, no slogan, no people, no phone, no expanded personal-looking name, no frame, no opaque disk or plaque. Genuine transparent alpha background, flat solid colours, no metallic effects, no gradient, no shadow. Generous transparent margin."
+    },
+    {
+      "role": "on-dark",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-b465b305-4fbd-4229-8bb9-ba7596b5e7a2",
+      "generationIdKind": "tool-returned artifact filename; no separate generation ID or model exposed",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand. Make the exact inverse surface variant of this supplied transparent logo. Preserve every letter, exact spelling, all contours, overall composition, relative scale and motif; do not redesign, add or omit lettering. Convert all existing navy/black/red/blue/gold ink to a single flat pale cool silver #c7d4dc. This is one consistent monochrome logo for dark charcoal and deep red backgrounds, so ALL visible ink must be pale silver. Keep all negative space and all surrounding canvas genuinely fully transparent alpha. No white or black background, no opaque plaque, no gradients, no texture, no glow, no shadow, no halftone, no grain. Clean solid interior ink, crisp smooth alpha edges. Match the original layout closely and retain generous transparent margin. Render only this one logo, not a side-by-side comparison."
+    }
+  ],
+  "generationProvenanceNote": "Each input is byte-exact actual imagegen output. Generation identifiers are the tool-returned artifact filenames; no separate generation ID or model version was exposed. Only the existing M1 exporter crops transparent padding, resizes and encodes display variants."
+}

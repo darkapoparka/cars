@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T20:05:52.441Z",
+  "dealer": "khaled-al-fares-used-cars-llc",
+  "dealerId": "ae-sharjah-khaled-al-fares-used-cars",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "method": "Exact retained registry, clients and compact-pack identity checks; current named dealer catalogue inspected. Names that form trading identities are retained only as business names. No dealer approval is implied.",
+  "sources": [
+    {
+      "url": "https://auto.ae/khaledalfares/",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "supports": [
+        "business-name",
+        "public-showroom-phone",
+        "showroom-address-where-consistent",
+        "advertised-stock-snapshot",
+        "published-hours-where-consistent"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "wahat-al-umra-used-cars",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:01:39Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "listing-290438",
+      "title": "Kia K9 2022",
+      "make": "Kia",
+      "model": "K9",
+      "year": 2022,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-290438.jpg"
+      ],
+      "sourceUrl": "https://auto.ae/sharjah/sale/car/kia/kia-k9-ii-rj-facelift-2022/id/290438",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 71226,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-289590",
+      "title": "Jeep Wrangler 2017",
+      "make": "Jeep",
+      "model": "Wrangler",
+      "year": 2017,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-289590.jpg"
+      ],
+      "sourceUrl": "https://auto.ae/sharjah/sale/car/jeep/jeep-wrangler-iii-jk-2017/id/289590",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 117027,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-289587",
+      "title": "Nissan X-Trail 2015",
+      "make": "Nissan",
+      "model": "X-Trail",
+      "year": 2015,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-289587.jpg"
+      ],
+      "sourceUrl": "https://auto.ae/sharjah/sale/car/nissan/nissan-x-trail-iii-t32-2015/id/289587",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 157256,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

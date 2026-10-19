@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "najm-al-shimal-used-cars-najm-al-shamal",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:01:39Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "listing-273574",
+      "title": "Toyota Fortuner 2024",
+      "make": "Toyota",
+      "model": "Fortuner",
+      "year": 2024,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-273574.jpg"
+      ],
+      "sourceUrl": "https://auto.ae/sharjah/sale/car/toyota/toyota-fortuner-ii-facelift-2024/id/273574",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 56008,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-273572",
+      "title": "Land Rover Discovery 2016",
+      "make": "Land Rover",
+      "model": "Discovery",
+      "year": 2016,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-273572.jpg"
+      ],
+      "sourceUrl": "https://auto.ae/sharjah/sale/car/land-rover/land-rover-discovery-iv-facelift-2016/id/273572",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 200000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-273571",
+      "title": "Toyota RAV4 2021",
+      "make": "Toyota",
+      "model": "RAV4",
+      "year": 2021,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-273571.jpg"
+      ],
+      "sourceUrl": "https://auto.ae/sharjah/sale/car/toyota/toyota-rav4-v-xa50-2021/id/273571",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 80000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

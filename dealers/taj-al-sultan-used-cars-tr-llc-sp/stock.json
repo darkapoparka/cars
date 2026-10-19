@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "taj-al-sultan-used-cars-tr-llc-sp",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:01:39Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "listing-215196",
+      "title": "Mercedes-Benz E-Class 2022",
+      "make": "Mercedes-Benz",
+      "model": "E-Class",
+      "year": 2022,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-215196.jpg"
+      ],
+      "sourceUrl": "https://auto.ae/sharjah/sale/car/mercedes-benz/mercedes-benz-e-class-v-w213-s213-c238-facelift-2022/id/215196",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 23000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-215195",
+      "title": "Mercedes-Benz A-Class AMG 2018",
+      "make": "Mercedes-Benz",
+      "model": "A-Class AMG",
+      "year": 2018,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-215195.jpg"
+      ],
+      "sourceUrl": "https://auto.ae/sharjah/sale/car/mercedes-benz/mercedes-benz-a-class-amg-i-w176-facelift-2018/id/215195",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 117000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-215194",
+      "title": "Mercedes-Benz A-Class AMG 2020",
+      "make": "Mercedes-Benz",
+      "model": "A-Class AMG",
+      "year": 2020,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-215194.jpg"
+      ],
+      "sourceUrl": "https://auto.ae/sharjah/sale/car/mercedes-benz/mercedes-benz-a-class-amg-ii-w177-2020/id/215194",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 56000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "dealer": "impala-used-cars-al-ghazal",
+  "researchId": "ae-sharjah-impala-used-cars-al-ghazal",
+  "observedAt": "2026-10-19T20:01:39Z",
+  "liveFetchPerformed": true,
+  "businessSources": [
+    {
+      "url": "https://uae.yallamotor.com/auto-companies/impala-used-cars-al-ghazal-9065",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "supports": [
+        "business-name",
+        "public-showroom-phone",
+        "showroom-address-where-consistent",
+        "advertised-stock-snapshot",
+        "published-hours-where-consistent"
+      ]
+    },
+    {
+      "url": "https://www.arabwheels.ae/used-cars/dealers/impala-used-cars-al-ghazal-showroom-in-uae/",
+      "observedAt": "2026-10-19T20:30:10.876852Z",
+      "supports": [
+        "optional-fact-conflict-review"
+      ]
+    },
+    {
+      "url": "https://gcccardeals.com/en-ae/dealers/impala-used-cars",
+      "observedAt": "2026-10-19T20:43:05.187725Z",
+      "supports": [
+        "public-logo-source",
+        "trading-name-and-city-correspondence"
+      ]
+    }
+  ],
+  "profile": {
+    "name": "Impala Used Cars  Al Ghazal \u2014 Auto Company in UAE",
+    "url": "https://uae.yallamotor.com/auto-companies/impala-used-cars-al-ghazal-9065",
+    "sha256": "1fade883ada4abbe885152faf5fa53c4d22900555c9c9e9a000d2f52d26bfa8d",
+    "retrieval": "public HTML and embedded public showroom structured data"
+  },
+  "stockMode": "dated-listing-snapshot",
+  "inventoryCountMeaning": "Three selected publicly advertised listings; physical availability, freshness and uniqueness are not independently confirmed.",
+  "media": [
+    {
+      "path": "/dealer-stock/listing-2054584.jpg",
+      "sourceUrl": "https://ymimg1.b8cdn.com/resized/used_car/2025/10/1/2054584/pictures/15787448/webp_mobile_listing_main_motion_photo_569364664550118575.webp",
+      "listingUrl": "https://uae.yallamotor.com/used-cars/hyundai/tucson-turbo/2019/used-hyundai-tucson-turbo-2019-sharjah-2054584",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "sourceSha256": "19a2b29502a8910572df86ba37020e9da13ce94c28b212eedc4d0af9a3d3b6bb",
+      "sha256": "6120f47bc3b3edb28d73175af18dd9443dbf6e5e0edb5cba337ce9d0c8d547b2",
+      "sourceDimensions": [
+        270,
+        480
+      ],
+      "retainedDimensions": [
+        270,
+        480
+      ],
+      "bytes": 30777,
+      "operation": "aspect-preserving resize, JPEG re-encode; no content alterations"
+    },
+    {
+      "path": "/dealer-stock/listing-2077052.jpg",
+      "sourceUrl": "https://ymimg1.b8cdn.com/resized/used_car/2025/12/20/2077052/pictures/16073816/webp_mobile_listing_main_IMG-20251220-WA0282.webp",
+      "listingUrl": "https://uae.yallamotor.com/used-cars/ford/mustang-v8-coupe/2015/used-ford-mustang-v8-coupe-2015-sharjah-2077052",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "sourceSha256": "74de64e32fad26e67e625ab8cf277419aad646c6ec50af2f26b5153ba44bead2",
+      "sha256": "82ca59ae7024ef21a18bc8c8763cf960f91c6ab6f969db8d1eb334ff0857bc19",
+      "sourceDimensions": [
+        480,
+        360
+      ],
+      "retainedDimensions": [
+        480,
+        360
+      ],
+      "bytes": 35961,
+      "operation": "aspect-preserving resize, JPEG re-encode; no content alterations"
+    },
+    {
+      "path": "/dealer-stock/listing-2045568.jpg",
+      "sourceUrl": "https://ymimg1.b8cdn.com/resized/used_car/2025/8/28/2045568/pictures/15660820/webp_mobile_listing_main_IMG-20250828-WA0167.webp",
+      "listingUrl": "https://uae.yallamotor.com/used-cars/dodge/charger/2019/used-dodge-charger-2019-sharjah-2045568",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "sourceSha256": "638d877585bb04470d90192373e3d1a074d8e54ae0d599989a11579b70936479",
+      "sha256": "18481bee5405dff8493ef5bbae28010e4294b8ff5d47f0be3d3a1c2e2b5cb443",
+      "sourceDimensions": [
+        480,
+        360
+      ],
+      "retainedDimensions": [
+        480,
+        360
+      ],
+      "bytes": 38954,
+      "operation": "aspect-preserving resize, JPEG re-encode; no content alterations"
+    }
+  ],
+  "factualCaveats": [
+    "YallaMotor showroom phone and address read. Email omitted because extraction supplies only a protected placeholder; linked marketplace profile is not represented as an official domain.",
+    "Address omitted: YallaMotor lists showroom 414 and ArabWheels lists showroom 411. Phone is the public YallaMotor showroom contact; another catalogue contact is not assumed current.",
+    "Additional catalogue logo matches the public trading name and city; legal affiliation and dealer approval have not been independently confirmed."
+  ],
+  "excludedSourceContent": [
+    "Prices and finance amounts",
+    "Private or personal contact details",
+    "Protected email placeholders and marketplace support emails",
+    "Unverified service, warranty, review or finance claims"
+  ],
+  "dealerApproval": "unknown"
+}

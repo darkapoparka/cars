@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "ishtar-used-cars",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:01:39Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "listing-290522",
+      "title": "Infiniti QX70 2020",
+      "make": "Infiniti",
+      "model": "QX70",
+      "year": 2020,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-290522.jpg"
+      ],
+      "sourceUrl": "https://auto.ae/sharjah/sale/car/infiniti/infiniti-qx70-2020/id/290522",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 66000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-289335",
+      "title": "Toyota Hilux 2025",
+      "make": "Toyota",
+      "model": "Hilux",
+      "year": 2025,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-289335.jpg"
+      ],
+      "sourceUrl": "https://auto.ae/sharjah/sale/car/toyota/toyota-hilux-viii-facelift-2025/id/289335",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 40000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-288749",
+      "title": "Nissan Sunny 2023",
+      "make": "Nissan",
+      "model": "Sunny",
+      "year": 2023,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-288749.jpg"
+      ],
+      "sourceUrl": "https://auto.ae/sharjah/sale/car/nissan/nissan-sunny-n17-facelift-2023/id/288749",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 61000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

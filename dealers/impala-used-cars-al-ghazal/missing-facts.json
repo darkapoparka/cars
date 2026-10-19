@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "dealer": "impala-used-cars-al-ghazal",
+  "missing": [
+    {
+      "field": "business.email",
+      "required": false,
+      "reason": "No clear, consistent, usable public business fact observed."
+    },
+    {
+      "field": "business.website",
+      "required": false,
+      "reason": "No clear, consistent, usable public business fact observed."
+    },
+    {
+      "field": "business.hours",
+      "required": false,
+      "reason": "No clear, consistent, usable public business fact observed."
+    },
+    {
+      "field": "prices",
+      "required": false,
+      "reason": "All listing prices omitted under the public repository scope."
+    },
+    {
+      "field": "business.address",
+      "required": false,
+      "reason": "Address omitted: YallaMotor lists showroom 414 and ArabWheels lists showroom 411. Phone is the public YallaMotor showroom contact; another catalogue contact is not assumed current."
+    }
+  ],
+  "blocking": []
+}

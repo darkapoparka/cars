@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "mk-cars",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:01:39Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "listing-283771",
+      "title": "Mitsubishi Lancer 2017",
+      "make": "Mitsubishi",
+      "model": "Lancer",
+      "year": 2017,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-283771.jpg"
+      ],
+      "sourceUrl": "https://auto.ae/sharjah/sale/car/mitsubishi/mitsubishi-lancer-x-facelift-2-2017/id/283771",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 39000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-207014",
+      "title": "Jaguar F-Pace 2020",
+      "make": "Jaguar",
+      "model": "F-Pace",
+      "year": 2020,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-207014.jpg"
+      ],
+      "sourceUrl": "https://auto.ae/sharjah/sale/car/jaguar/jaguar-f-pace-i-facelift-2020/id/207014",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 120000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-207013",
+      "title": "Toyota Tundra 2021",
+      "make": "Toyota",
+      "model": "Tundra",
+      "year": 2021,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-207013.jpg"
+      ],
+      "sourceUrl": "https://auto.ae/sharjah/sale/car/toyota/toyota-tundra-ii-facelift-2021/id/207013",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 126000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

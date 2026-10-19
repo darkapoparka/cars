@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "dealer": "wahat-al-umra-used-cars",
+  "researchId": "ae-sharjah-wahat-al-umra-used-cars",
+  "observedAt": "2026-10-19T20:01:39Z",
+  "liveFetchPerformed": true,
+  "businessSources": [
+    {
+      "url": "https://auto.ae/wahatalumracars/",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "supports": [
+        "business-name",
+        "public-showroom-phone",
+        "showroom-address-where-consistent",
+        "advertised-stock-snapshot",
+        "published-hours-where-consistent"
+      ]
+    }
+  ],
+  "profile": {
+    "name": "Wahat Al Umra Used Cars",
+    "url": "https://auto.ae/wahatalumracars/",
+    "sha256": "68f1da37381e9d497934049d488bcc44949a0e9ee9d56f88e5894588aba00a90",
+    "retrieval": "public HTML and embedded public showroom structured data"
+  },
+  "stockMode": "dated-listing-snapshot",
+  "inventoryCountMeaning": "Three selected publicly advertised listings; physical availability, freshness and uniqueness are not independently confirmed.",
+  "media": [
+    {
+      "path": "/dealer-stock/listing-290438.jpg",
+      "sourceUrl": "https://auto-ae-prod-storage.storage.googleapis.com/auto_sharjah_kia_k9_sale_290438883471560",
+      "listingUrl": "https://auto.ae/sharjah/sale/car/kia/kia-k9-ii-rj-facelift-2022/id/290438",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "sourceSha256": "9c802a87e879b7b71e928ebe704ea89a81d17dda06152b01110e69965a40a3ce",
+      "sha256": "28add8486c05df8984a765eeba4f02b443fb02c2535b448a039e1cea1838d380",
+      "sourceDimensions": [
+        1080,
+        811
+      ],
+      "retainedDimensions": [
+        1080,
+        811
+      ],
+      "bytes": 162577,
+      "operation": "aspect-preserving resize, JPEG re-encode; no content alterations"
+    },
+    {
+      "path": "/dealer-stock/listing-289590.jpg",
+      "sourceUrl": "https://auto-ae-prod-storage.storage.googleapis.com/auto_sharjah_jeep_wrangler_sale_289590881071280",
+      "listingUrl": "https://auto.ae/sharjah/sale/car/jeep/jeep-wrangler-iii-jk-2017/id/289590",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "sourceSha256": "7720593099e1366166672fcf73d8ffddea1dba7a63e9d39146df25ae05cf82ae",
+      "sha256": "84192152c5d10ecb81a9d0b7a23d47d1003c70e8dde9af06ec044543bc6e0e0e",
+      "sourceDimensions": [
+        750,
+        562
+      ],
+      "retainedDimensions": [
+        750,
+        562
+      ],
+      "bytes": 55832,
+      "operation": "aspect-preserving resize, JPEG re-encode; no content alterations"
+    },
+    {
+      "path": "/dealer-stock/listing-289587.jpg",
+      "sourceUrl": "https://auto-ae-prod-storage.storage.googleapis.com/auto_sharjah_nissan_x_trail_sale_289587881069290",
+      "listingUrl": "https://auto.ae/sharjah/sale/car/nissan/nissan-x-trail-iii-t32-2015/id/289587",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "sourceSha256": "e931e120e77d5c90ca9f6c78d9d5d10162ae5b3808565a478b352b68703da9c5",
+      "sha256": "0c9fdae0d1e19df0b856720e5a8e2c764390aaaa26a6ee4f22f23d5e02eb8af1",
+      "sourceDimensions": [
+        750,
+        562
+      ],
+      "retainedDimensions": [
+        750,
+        562
+      ],
+      "bytes": 63486,
+      "operation": "aspect-preserving resize, JPEG re-encode; no content alterations"
+    }
+  ],
+  "factualCaveats": [
+    "Current public showroom phone replaces the older retained contact; no phone validity test performed.",
+    "Address omitted: current AUTO.AE address says Ajman while catalogue identity and showroom 281 sign say Sharjah. Opening hours attached to that conflicting address are also omitted."
+  ],
+  "excludedSourceContent": [
+    "Prices and finance amounts",
+    "Private or personal contact details",
+    "Protected email placeholders and marketplace support emails",
+    "Unverified service, warranty, review or finance claims"
+  ],
+  "dealerApproval": "unknown"
+}

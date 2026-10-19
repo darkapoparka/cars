@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "dealer": "taj-al-sultan-used-cars-tr-llc-sp",
+  "researchId": "ae-sharjah-taj-al-sultan-used-cars",
+  "observedAt": "2026-10-19T20:01:39Z",
+  "liveFetchPerformed": true,
+  "businessSources": [
+    {
+      "url": "https://auto.ae/tajalsultan/",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "supports": [
+        "business-name",
+        "public-showroom-phone",
+        "showroom-address-where-consistent",
+        "advertised-stock-snapshot",
+        "published-hours-where-consistent"
+      ]
+    }
+  ],
+  "profile": {
+    "name": "Taj Al Sultan Used Cars",
+    "url": "https://auto.ae/tajalsultan/",
+    "sha256": "f707ddf4607dae6bfade31fe022c006691c4915c239e579deee3b43ee3dbd4cb",
+    "retrieval": "public HTML and embedded public showroom structured data"
+  },
+  "stockMode": "dated-listing-snapshot",
+  "inventoryCountMeaning": "Three selected publicly advertised listings; physical availability, freshness and uniqueness are not independently confirmed.",
+  "media": [
+    {
+      "path": "/dealer-stock/listing-215196.jpg",
+      "sourceUrl": "https://auto-ae-prod-storage.storage.googleapis.com/auto_sharjah_mercedes_benz_e_class_sale_2151961",
+      "listingUrl": "https://auto.ae/sharjah/sale/car/mercedes-benz/mercedes-benz-e-class-v-w213-s213-c238-facelift-2022/id/215196",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "sourceSha256": "198b85cb0194c0d769fe8124b66ea1ccec7dc5e9c4f4afe6362473553d047337",
+      "sha256": "443d21c0b3a3891f305b75b3afbb7545e71aba701cfa22c607054347e648d26e",
+      "sourceDimensions": [
+        800,
+        600
+      ],
+      "retainedDimensions": [
+        800,
+        600
+      ],
+      "bytes": 176987,
+      "operation": "aspect-preserving resize, JPEG re-encode; no content alterations"
+    },
+    {
+      "path": "/dealer-stock/listing-215195.jpg",
+      "sourceUrl": "https://auto-ae-prod-storage.storage.googleapis.com/auto_sharjah_mercedes_benz_a_class_amg_sale_2151951",
+      "listingUrl": "https://auto.ae/sharjah/sale/car/mercedes-benz/mercedes-benz-a-class-amg-i-w176-facelift-2018/id/215195",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "sourceSha256": "c383ba9b2fd891788267d8968ea5cb42d94e2f42442f3565e439630c82cb49ea",
+      "sha256": "4aeff662eadbb471efccb466701da34d5cb65c45fa2330956f3367ea617eb7a4",
+      "sourceDimensions": [
+        800,
+        600
+      ],
+      "retainedDimensions": [
+        800,
+        600
+      ],
+      "bytes": 143286,
+      "operation": "aspect-preserving resize, JPEG re-encode; no content alterations"
+    },
+    {
+      "path": "/dealer-stock/listing-215194.jpg",
+      "sourceUrl": "https://auto-ae-prod-storage.storage.googleapis.com/auto_sharjah_mercedes_benz_a_class_amg_sale_2151941",
+      "listingUrl": "https://auto.ae/sharjah/sale/car/mercedes-benz/mercedes-benz-a-class-amg-ii-w177-2020/id/215194",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "sourceSha256": "e99680fb055ca0ca826db7af3208d6c631ad5cc475f74f806c78ff26611d1ef6",
+      "sha256": "46379e05ddfdb21c74640c8168388d8eb75e22a7470095661059a93863966efe",
+      "sourceDimensions": [
+        800,
+        600
+      ],
+      "retainedDimensions": [
+        800,
+        600
+      ],
+      "bytes": 144131,
+      "operation": "aspect-preserving resize, JPEG re-encode; no content alterations"
+    }
+  ],
+  "factualCaveats": [],
+  "excludedSourceContent": [
+    "Prices and finance amounts",
+    "Private or personal contact details",
+    "Protected email placeholders and marketplace support emails",
+    "Unverified service, warranty, review or finance claims"
+  ],
+  "dealerApproval": "unknown"
+}

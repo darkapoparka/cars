@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "khat-al-khaleej-used-cars",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:01:39Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "listing-286120",
+      "title": "Mercedes-Benz E-Class 2017",
+      "make": "Mercedes-Benz",
+      "model": "E-Class",
+      "year": 2017,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-286120.jpg"
+      ],
+      "sourceUrl": "https://auto.ae/sharjah/sale/car/mercedes-benz/mercedes-benz-e-class-v-w213-s213-c238-2017/id/286120",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 203152,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-286119",
+      "title": "Mercedes-Benz E-Class 2020",
+      "make": "Mercedes-Benz",
+      "model": "E-Class",
+      "year": 2020,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-286119.jpg"
+      ],
+      "sourceUrl": "https://auto.ae/sharjah/sale/car/mercedes-benz/mercedes-benz-e-class-v-w213-s213-c238-2020/id/286119",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 199000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-286113",
+      "title": "Genesis GV80 2020",
+      "make": "Genesis",
+      "model": "GV80",
+      "year": 2020,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-286113.jpg"
+      ],
+      "sourceUrl": "https://auto.ae/sharjah/sale/car/genesis/genesis-gv80-i-2020/id/286113",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 81406,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

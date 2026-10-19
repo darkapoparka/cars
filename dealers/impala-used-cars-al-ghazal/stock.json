@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "dealer": "impala-used-cars-al-ghazal",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:01:39Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "listing-2054584",
+      "title": "Hyundai Tucson Turbo 2.0L (AWD) 2019",
+      "make": "Hyundai",
+      "model": "Tucson Turbo",
+      "year": 2019,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-2054584.jpg"
+      ],
+      "sourceUrl": "https://uae.yallamotor.com/used-cars/hyundai/tucson-turbo/2019/used-hyundai-tucson-turbo-2019-sharjah-2054584",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageOnRequest": true,
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-2077052",
+      "title": "Ford Mustang V8 Coupe 5.0L GT 2015",
+      "make": "Ford",
+      "model": "Mustang V8 Coupe",
+      "year": 2015,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-2077052.jpg"
+      ],
+      "sourceUrl": "https://uae.yallamotor.com/used-cars/ford/mustang-v8-coupe/2015/used-ford-mustang-v8-coupe-2015-sharjah-2077052",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageOnRequest": true,
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-2045568",
+      "title": "Dodge Charger 3.6L GTS 2019",
+      "make": "Dodge",
+      "model": "Charger",
+      "year": 2019,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-2045568.jpg"
+      ],
+      "sourceUrl": "https://uae.yallamotor.com/used-cars/dodge/charger/2019/used-dodge-charger-2019-sharjah-2045568",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageOnRequest": true,
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

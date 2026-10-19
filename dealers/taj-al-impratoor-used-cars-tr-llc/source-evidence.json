@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "dealer": "taj-al-impratoor-used-cars-tr-llc",
+  "researchId": "ae-sharjah-taj-al-impratoor-used-cars-tr-llc",
+  "observedAt": "2026-10-19T20:01:39Z",
+  "liveFetchPerformed": true,
+  "businessSources": [
+    {
+      "url": "https://auto.ae/tajalimpratoor/",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "supports": [
+        "business-name",
+        "public-showroom-phone",
+        "showroom-address-where-consistent",
+        "advertised-stock-snapshot",
+        "published-hours-where-consistent"
+      ]
+    }
+  ],
+  "profile": {
+    "name": "Taj Al Impratoor Used Cars",
+    "url": "https://auto.ae/tajalimpratoor/",
+    "sha256": "71074a14ec6c354427532cfdc85162a5218f402ea75ed4acd6282cf7790b7bb3",
+    "retrieval": "public HTML and embedded public showroom structured data"
+  },
+  "stockMode": "dated-listing-snapshot",
+  "inventoryCountMeaning": "Three selected publicly advertised listings; physical availability, freshness and uniqueness are not independently confirmed.",
+  "media": [
+    {
+      "path": "/dealer-stock/listing-290162.jpg",
+      "sourceUrl": "https://auto-ae-prod-storage.storage.googleapis.com/auto_sharjah_mercedes_benz_a_class_sale_290162882907210",
+      "listingUrl": "https://auto.ae/sharjah/sale/car/mercedes-benz/mercedes-benz-a-class-iv-w177-facelift-2023/id/290162",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "sourceSha256": "dac5dfddad29a9fce6c073532613e66211ac79062319473676e80e2eed5b48e0",
+      "sha256": "0d05a27590e853ab99c998204a0610b09d0167e4b04711c0a14533ecda6836a2",
+      "sourceDimensions": [
+        960,
+        1280
+      ],
+      "retainedDimensions": [
+        960,
+        1280
+      ],
+      "bytes": 198670,
+      "operation": "aspect-preserving resize, JPEG re-encode; no content alterations"
+    },
+    {
+      "path": "/dealer-stock/listing-280296.jpg",
+      "sourceUrl": "https://auto-ae-prod-storage.storage.googleapis.com/auto_sharjah_mitsubishi_montero_sport_sale_280296846379520",
+      "listingUrl": "https://auto.ae/sharjah/sale/car/mitsubishi/mitsubishi-montero-sport-iii-facelift-2023/id/280296",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "sourceSha256": "ee1ee734556cd56b9e5165ab279fd13d512ffae7fbb747f8c7864c5fc6b738ff",
+      "sha256": "379c0c23e641948dc0628fcd045997f0a2c6f0afa9d1d4ffa4416d4e3d68c680",
+      "sourceDimensions": [
+        1125,
+        1500
+      ],
+      "retainedDimensions": [
+        960,
+        1280
+      ],
+      "bytes": 180071,
+      "operation": "aspect-preserving resize, JPEG re-encode; no content alterations"
+    },
+    {
+      "path": "/dealer-stock/listing-279676.jpg",
+      "sourceUrl": "https://auto-ae-prod-storage.storage.googleapis.com/auto_sharjah_mitsubishi_outlander_sale_279676844680860",
+      "listingUrl": "https://auto.ae/sharjah/sale/car/mitsubishi/mitsubishi-outlander-iv-facelift-2023/id/279676",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "sourceSha256": "27f2cc1abf2d76b9fb205c0b5777026a9729c1950194ef54aab5aa3503c45732",
+      "sha256": "cb3f068ce90ae9403778caf9e37c7f1ca5a0840b5e47f50448aa7363a859b735",
+      "sourceDimensions": [
+        1500,
+        1125
+      ],
+      "retainedDimensions": [
+        1280,
+        960
+      ],
+      "bytes": 191458,
+      "operation": "aspect-preserving resize, JPEG re-encode; no content alterations"
+    }
+  ],
+  "factualCaveats": [
+    "Current public showroom phone replaces the older retained contact; no phone validity test performed."
+  ],
+  "excludedSourceContent": [
+    "Prices and finance amounts",
+    "Private or personal contact details",
+    "Protected email placeholders and marketplace support emails",
+    "Unverified service, warranty, review or finance claims"
+  ],
+  "dealerApproval": "unknown"
+}

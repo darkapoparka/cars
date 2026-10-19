@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "dealer": "ishtar-used-cars",
+  "researchId": "ae-sharjah-ishtar-used-cars",
+  "observedAt": "2026-10-19T20:01:39Z",
+  "liveFetchPerformed": true,
+  "businessSources": [
+    {
+      "url": "https://auto.ae/ishtarusedcars/",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "supports": [
+        "business-name",
+        "public-showroom-phone",
+        "showroom-address-where-consistent",
+        "advertised-stock-snapshot",
+        "published-hours-where-consistent"
+      ]
+    }
+  ],
+  "profile": {
+    "name": "Ishtar Used Cars",
+    "url": "https://auto.ae/ishtarusedcars/",
+    "sha256": "180126cb7a70b28d8aff237bd5f9a8a1288cb1359ecbbf36fd7b3cb94c45b143",
+    "retrieval": "public HTML and embedded public showroom structured data"
+  },
+  "stockMode": "dated-listing-snapshot",
+  "inventoryCountMeaning": "Three selected publicly advertised listings; physical availability, freshness and uniqueness are not independently confirmed.",
+  "media": [
+    {
+      "path": "/dealer-stock/listing-290522.jpg",
+      "sourceUrl": "https://auto-ae-prod-storage.storage.googleapis.com/auto_sharjah_infiniti_qx70_sale_290522883551090",
+      "listingUrl": "https://auto.ae/sharjah/sale/car/infiniti/infiniti-qx70-2020/id/290522",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "sourceSha256": "c713a699a7fb7f373729aae8b15bab7fcd4dc5901b7ce64289e6fcbced590663",
+      "sha256": "fe1a935272c5218ee755d67178212f747b4f4c90568acda1eda876e76173da69",
+      "sourceDimensions": [
+        1125,
+        1500
+      ],
+      "retainedDimensions": [
+        960,
+        1280
+      ],
+      "bytes": 196171,
+      "operation": "aspect-preserving resize, JPEG re-encode; no content alterations"
+    },
+    {
+      "path": "/dealer-stock/listing-289335.jpg",
+      "sourceUrl": "https://auto-ae-prod-storage.storage.googleapis.com/auto_sharjah_toyota_hilux_sale_289335880132870",
+      "listingUrl": "https://auto.ae/sharjah/sale/car/toyota/toyota-hilux-viii-facelift-2025/id/289335",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "sourceSha256": "a9fd328afb16bbffc6870471284ce4e760fbf44fb4a2a5e7b055e958daab311a",
+      "sha256": "d110cf13921f5bcaab57e706d147f6160964d65ae90f26d64af01fd0835de74e",
+      "sourceDimensions": [
+        1500,
+        1125
+      ],
+      "retainedDimensions": [
+        1280,
+        960
+      ],
+      "bytes": 182633,
+      "operation": "aspect-preserving resize, JPEG re-encode; no content alterations"
+    },
+    {
+      "path": "/dealer-stock/listing-288749.jpg",
+      "sourceUrl": "https://auto-ae-prod-storage.storage.googleapis.com/auto_sharjah_nissan_sunny_sale_288749878987060",
+      "listingUrl": "https://auto.ae/sharjah/sale/car/nissan/nissan-sunny-n17-facelift-2023/id/288749",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "sourceSha256": "67fb4dda3c6a41621f4eacb3fea33d1e27edf7400200fca1682fd74ddab86822",
+      "sha256": "5e2b5b42cd43ce89acbaee1ce8b62a81eff77738e8d1e5974edc2b91008ae041",
+      "sourceDimensions": [
+        1500,
+        1125
+      ],
+      "retainedDimensions": [
+        1280,
+        960
+      ],
+      "bytes": 198164,
+      "operation": "aspect-preserving resize, JPEG re-encode; no content alterations"
+    }
+  ],
+  "factualCaveats": [],
+  "excludedSourceContent": [
+    "Prices and finance amounts",
+    "Private or personal contact details",
+    "Protected email placeholders and marketplace support emails",
+    "Unverified service, warranty, review or finance claims"
+  ],
+  "dealerApproval": "unknown"
+}

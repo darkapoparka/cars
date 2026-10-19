@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "taj-al-impratoor-used-cars-tr-llc",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:01:39Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "listing-290162",
+      "title": "Mercedes-Benz A-Class 2023",
+      "make": "Mercedes-Benz",
+      "model": "A-Class",
+      "year": 2023,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-290162.jpg"
+      ],
+      "sourceUrl": "https://auto.ae/sharjah/sale/car/mercedes-benz/mercedes-benz-a-class-iv-w177-facelift-2023/id/290162",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 1560,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-280296",
+      "title": "Mitsubishi Montero Sport 2023",
+      "make": "Mitsubishi",
+      "model": "Montero Sport",
+      "year": 2023,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-280296.jpg"
+      ],
+      "sourceUrl": "https://auto.ae/sharjah/sale/car/mitsubishi/mitsubishi-montero-sport-iii-facelift-2023/id/280296",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 57000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-279676",
+      "title": "Mitsubishi Outlander 2023",
+      "make": "Mitsubishi",
+      "model": "Outlander",
+      "year": 2023,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-279676.jpg"
+      ],
+      "sourceUrl": "https://auto.ae/sharjah/sale/car/mitsubishi/mitsubishi-outlander-iv-facelift-2023/id/279676",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 84000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

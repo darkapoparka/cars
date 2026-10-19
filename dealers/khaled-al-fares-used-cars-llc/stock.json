@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "dealer": "khaled-al-fares-used-cars-llc",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:01:39Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "listing-280904",
+      "title": "MINI Hatch 2025",
+      "make": "MINI",
+      "model": "Hatch",
+      "year": 2025,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-280904.jpg"
+      ],
+      "sourceUrl": "https://auto.ae/sharjah/sale/car/mini/mini-hatch-iv-f65f66j01-2025/id/280904",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 6500,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-280902",
+      "title": "Kia KX1 2026",
+      "make": "Kia",
+      "model": "KX1",
+      "year": 2026,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-280902.jpg"
+      ],
+      "sourceUrl": "https://auto.ae/sharjah/sale/car/kia/kia-kx1-2026/id/280902",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageOnRequest": true,
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-280901",
+      "title": "Jetour T2 2025",
+      "make": "Jetour",
+      "model": "T2",
+      "year": 2025,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-280901.jpg"
+      ],
+      "sourceUrl": "https://auto.ae/sharjah/sale/car/jetour/jetour-t2-2025/id/280901",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 50000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}
