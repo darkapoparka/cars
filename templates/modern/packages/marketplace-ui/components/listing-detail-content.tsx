@@ -48,7 +48,7 @@ export const ListingDetailContent = ({
   const copy = getListingDetailCopy(locale);
   const desktopDescription = publicSite.identity.desktopPreview
     ? listing.description.replaceAll(
-        "Day & Night",
+        leadSite.shortName,
         publicSite.identity.desktopPreview.shortName
       )
     : listing.description;
@@ -125,7 +125,7 @@ export const ListingDetailContent = ({
         }
       />
 
-      {listing.category === "car" ? (
+      {listing.category === "car" && publicSite.services.lease ? (
         <div className="pt-1 pb-2 lg:hidden">
           <ListingFinanceCard
             artwork={

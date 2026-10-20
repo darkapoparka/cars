@@ -16,6 +16,11 @@ export function nativeFixture(directory, middle = 'modern', slug = 'fixture-deal
   const put = (name, value) => files.set(name, Buffer.isBuffer(value) ? value : Buffer.from(value));
   const defaultSettings = 'schemaVersion: 1, dealerId: "template", defaultLocale: "bg", enabledLocales: ["en", "bg"], dealerCountry: "BG", inventoryCurrency: "EUR"';
   const releases = {};
+  put('auto-best/src/lib/components/vehicles/VehicleCard.svelte', '<script>const vehicle={year:2020};</script><ul class="dn-vehicle-card__mobile-meta"><li class="dn-vehicle-card__fact"><span>{vehicle.year}</span></li></ul><style>.dn-vehicle-card__mobile-meta {display:flex}</style>');
+  put('auto-best/src/routes/listing-detail-v1/[id]/detail.css', '.dn-detail-finance-trigger__logo img {object-fit:contain}');
+  put('auto-best/src/lib/styles/base.css', '.dn-app-shell {display:block}');
+  put('auto-best/src/lib/components/listing/ListingFacetEditor.svelte', '  function isSelected(value: string) {\n    return value === selected;\n  }');
+  put('auto-best/src/lib/components/home/VehicleQuickSearch.svelte', '  const optionSelected = (value: string) => Array.isArray(mobileMenuValue)\n    ? value ? listingSelectionHas(mobileMenuValue, value) : mobileMenuValue.length === 0\n    : mobileMenuValue === value;');
   for (const [index, { key }] of manifest.variants.entries()) {
     const commit = String(index + 1).repeat(40);
     manifest.templateRevisions[key] = commit;

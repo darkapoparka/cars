@@ -7,6 +7,7 @@
   import { afterNavigate } from "$app/navigation";
   import { page } from "$app/state";
   import { dealer } from "#lib/content.ts";
+  import { resolveInventoryVehicle } from "#lib/data/vehicle-inventory.ts";
   import { vehicleListings } from "#lib/data/vehicle-listing.ts";
   import {
     readDesktopCatalogFilters,
@@ -26,10 +27,9 @@
   );
   const id = $props.id();
   const inventory = $derived(
-    vehicleListings.gridFourColumns.map((card) => ({
-      ...card,
-      ...dealer.inventory[card.title],
-    })),
+    vehicleListings.gridFourColumns.map((card) =>
+      resolveInventoryVehicle(card, dealer.inventory),
+    ),
   );
   const types = $derived(
     [...new Set(inventory.map(vehicleBodyType).filter(Boolean))].sort(

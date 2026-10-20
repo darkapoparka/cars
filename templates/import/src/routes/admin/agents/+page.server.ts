@@ -17,7 +17,8 @@ export const load: PageServerLoad = async ({ request, url }) => {
 };
 
 export const actions: Actions = {
-	default: async ({ request }) => {
+	default: async ({ request, url }) => {
+		requireDayNightPageSession(request, 'admin/agents', url.searchParams);
 		const formData = await request.formData();
 		const slug = value(formData, 'slug');
 

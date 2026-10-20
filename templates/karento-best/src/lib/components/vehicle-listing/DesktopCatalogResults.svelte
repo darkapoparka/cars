@@ -5,6 +5,7 @@
   const locale = useLocale();
   import { page } from "$app/state";
   import { dealer } from "#lib/content.ts";
+  import { resolveInventoryVehicle } from "#lib/data/vehicle-inventory.ts";
   import type { ListingVehicle } from "#lib/data/vehicle-listing.ts";
   import {
     readDesktopCatalogFilters,
@@ -20,7 +21,7 @@
   const desktop = new MediaQuery("(min-width: 992px)");
   let { cards }: { cards: readonly ListingVehicle[] } = $props();
   const inventory = $derived(
-    cards.map((card) => ({ ...card, ...dealer.inventory[card.title] })),
+    cards.map((card) => resolveInventoryVehicle(card, dealer.inventory)),
   );
   const filters = $derived(readDesktopCatalogFilters(page.url.searchParams));
   const filtered = $derived(matchDesktopCatalog(inventory, filters));

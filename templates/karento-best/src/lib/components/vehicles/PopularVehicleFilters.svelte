@@ -8,6 +8,7 @@
   import { MediaQuery } from "svelte/reactivity";
   import { goto } from "$app/navigation";
   import { dealer } from "#lib/content.ts";
+  import { resolveInventoryVehicle } from "#lib/data/vehicle-inventory.ts";
   import { vehicleListings } from "#lib/data/vehicle-listing.ts";
   import {
     catalogDestination,
@@ -24,10 +25,9 @@
   let panel = $state<CatalogPanel>("make");
   let compact = $state(false);
   const items = $derived(
-    vehicleListings.gridFourColumns.map((card) => ({
-      ...card,
-      ...dealer.inventory[card.title],
-    })),
+    vehicleListings.gridFourColumns.map((card) =>
+      resolveInventoryVehicle(card, dealer.inventory),
+    ),
   );
   function openPanel(nextPanel: CatalogPanel) {
     draft = { ...emptyCatalogFilters };

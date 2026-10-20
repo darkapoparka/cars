@@ -184,24 +184,51 @@ export {
 	isPrimaryNavActive
 } from '$lib/config/dealer';
 
+/** Optional About presentation stays with the sample records replaced by dealer generation. */
 export const daynightConsultants = [
 	{
 		slug: 'day-night-auto-group-sales',
 		name: 'Продажби и огледи',
 		title: 'Налични автомобили и клиентски запитвания - Day Night Auto',
-		image: '/assets/daynight/team/avatar-sales.jpg'
+		image: '/assets/daynight/team/avatar-sales.jpg',
+		about: {
+			slug: 'kristiyan-kirilov',
+			name: 'Кристиян Кирилов',
+			title: 'Изпълнителен директор · CEO',
+			socials: [
+				{
+					href: 'https://www.instagram.com/kristiankirilov13/',
+					icon: 'brands/instagram.svg',
+					label: 'Кристиян Кирилов в Instagram'
+				}
+			],
+			image: '/assets/daynight/team/kristian-kirilov-public.jpg',
+			desktopPortrait: { position: '60% top', scale: 1.65 }
+		}
 	},
 	{
 		slug: 'day-night-auto-group-documents',
 		name: 'Документи и съдействие',
 		title: 'Регистрация, финансиране и предаване',
-		image: '/assets/daynight/team/avatar-logistics.jpg'
+		image: '/assets/daynight/team/avatar-logistics.jpg',
+		about: {
+			slug: 'demo-mariya-petrova',
+			name: 'Мария Петрова',
+			title: 'Продажби и огледи · Демо профил',
+			image: '/assets/daynight/team/demo-mariya.png'
+		}
 	},
 	{
 		slug: 'day-night-auto-group-inspection',
 		name: 'Проверка и оглед',
 		title: 'Оглед, история и състояние на автомобила',
-		image: '/assets/daynight/team/avatar-inspection.jpg'
+		image: '/assets/daynight/team/avatar-inspection.jpg',
+		about: {
+			slug: 'demo-aleksandar-ivanov',
+			name: 'Александър Иванов',
+			title: 'Внос и консултации · Демо профил',
+			image: '/assets/daynight/team/demo-aleksandar.png'
+		}
 	}
 ] as const;
 

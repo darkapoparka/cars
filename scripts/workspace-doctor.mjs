@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import { isEntrypoint } from './lib/cli-entrypoint.mjs';
 import path from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
@@ -109,7 +110,7 @@ export function inspectWorkspace(root, { fetch = false, readGit = gitRead } = {}
     safeForUnattendedWrites: [...repositories, ...templates].every(item => item.issues.length === 0) };
 }
 
-if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+if (isEntrypoint(import.meta.url)) {
   try {
     const args = process.argv.slice(2);
     if (args.includes('--help')) {

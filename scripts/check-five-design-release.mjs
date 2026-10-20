@@ -1,7 +1,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
-import { fileURLToPath, pathToFileURL } from 'node:url';
+import { fileURLToPath } from 'node:url';
+import { isEntrypoint } from './lib/cli-entrypoint.mjs';
 import { validatePackagingManifest } from './package-dealer.mjs';
 import { FIVE_DESIGN_KEYS, FIVE_DESIGN_PACKAGING_CANDIDATE, planFiveDesignSelection, resolveFiveDesignCohort } from './lib/five-design-release.mjs';
 import { SIX_DESIGN_KEYS, SIX_DESIGN_PACKAGING_CANDIDATE, planSixDesignSelection } from './lib/six-design-release.mjs';
@@ -71,7 +72,7 @@ export function inspectFiveDesignRelease({ includeKarento = false } = {}) {
       note: 'Planning and selector support are not a ' + desiredFamilies.length + '-design build or a completed deployment.' } };
 }
 
-if (process.argv[1] && import.meta.url === pathToFileURL(path.resolve(process.argv[1])).href) {
+if (isEntrypoint(import.meta.url)) {
   try {
     if (process.argv.slice(2).some(arg => !['--json', '--include-karento'].includes(arg))) throw Error('Usage: node scripts/check-five-design-release.mjs [--json] [--include-karento]');
     const report = inspectFiveDesignRelease({ includeKarento: process.argv.includes('--include-karento') });

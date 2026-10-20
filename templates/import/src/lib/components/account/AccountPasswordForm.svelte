@@ -9,11 +9,18 @@
 
 	const changePassword = (event: SubmitEvent) => {
 		event.preventDefault();
-		status = 'Password change recorded locally';
+		status = 'Demo only. Passwords are not changed or stored.';
 	};
 </script>
 
-<form action="#" class="dash-form" novalidate data-daynight-password-form onsubmit={changePassword}>
+<form
+	action="#"
+	method="POST"
+	class="dash-form"
+	novalidate
+	data-daynight-password-form
+	onsubmit={changePassword}
+>
 	<input type="hidden" name="role" value={password.role} />
 	<input type="hidden" name="actorRole" value={password.role} />
 
@@ -21,7 +28,7 @@
 		<div class="dash-card__head">
 			<div>
 				<h2 class="dash-card__title">Change password</h2>
-				<p class="dash-card__subtitle">Update the dashboard login password for this account.</p>
+				<p class="dash-card__subtitle">Demo only. Passwords are not changed or stored.</p>
 			</div>
 			<KeyRound class="text-[var(--dash-primary)]" size={22} strokeWidth={2.1} aria-hidden="true" />
 		</div>
@@ -80,7 +87,7 @@
 	<div class="flex justify-end">
 		<button type="submit" class="dash-primary-button">
 			<Save size={17} strokeWidth={2.1} aria-hidden="true" />
-			Change Password
+			Password demo
 		</button>
 	</div>
 	<p class="m-0 min-h-5 text-sm font-black text-[#0f9f7a]" aria-live="polite">{status}</p>

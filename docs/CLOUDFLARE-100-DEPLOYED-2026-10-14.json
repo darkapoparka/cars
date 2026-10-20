@@ -1,0 +1,1033 @@
+{
+  "kind": "cars-exact100-hosted-delivery",
+  "verifiedAt": "2026-10-14T00:27:03.428Z",
+  "requested": 100,
+  "deployedWorkers": 100,
+  "qualifiedPublicOrigins": 100,
+  "qualifiedDesignEntryResponses": 600,
+  "qualifiedSelectedAssetRequests": 2370,
+  "nativeApplicationJsRequests": 600,
+  "publicMetadataJsRequests": 600,
+  "topology": {
+    "workers": 100,
+    "assetsOnlyBindings": 100,
+    "oneActiveVersionAt100Percent": 100,
+    "correctPublicHostnameRoutes": 100,
+    "verifiedAt": "2026-10-14T00:27:10.306Z"
+  },
+  "designMounts": [
+    "/",
+    "/variant-2/cars",
+    "/variant-3/",
+    "/variant-4/",
+    "/variant-5/",
+    "/variant-6/"
+  ],
+  "qualification": {
+    "browserClickThrough": "inconclusive in available browser across dealer pages and GitHub",
+    "ownerAcceptance": "not claimed",
+    "privatePublishingMirrors": "not certified by this Cloudflare report"
+  },
+  "rows": [
+    {
+      "number": 1,
+      "dealer": "Ц Е Н Т Р А Л-АВТОСАЛОН",
+      "slug": "centralauto-varna",
+      "origin": "https://centralauto-varna.webpreviews.site",
+      "worker": "cars-centralauto-varna",
+      "versionId": "0c7087b7-4dc0-4f82-ad63-3faf8eb5aa3b",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 2,
+      "dealer": "Kalchev Correct",
+      "slug": "kalchev-varna",
+      "origin": "https://kalchev-varna.webpreviews.site",
+      "worker": "cars-kalchev-varna",
+      "versionId": "27915e7b-1549-487d-a544-db6cdd96f2e7",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 3,
+      "dealer": "АВТОКЪЩА СЕВИ КАР",
+      "slug": "sevicar-varna",
+      "origin": "https://sevicar-varna.webpreviews.site",
+      "worker": "cars-sevicar-varna",
+      "versionId": "e4727865-9b72-45f0-8cb9-8d284d80cc2b",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 4,
+      "dealer": "AS Motor Group",
+      "slug": "batley-as-motor-group",
+      "origin": "https://batley-as-motor-group.webpreviews.site",
+      "worker": "cars-uk-batley-as-motor-group",
+      "versionId": "3d557ad4-5a6d-478d-b1cb-bd8e412ffd34",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 5,
+      "dealer": "Square One Motors",
+      "slug": "birmingham-square-one-motors",
+      "origin": "https://birmingham-square-one-motors.webpreviews.site",
+      "worker": "cars-uk-birmingham-square-one-motors",
+      "versionId": "a34991d7-5c4f-40d6-8560-41f942304f71",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 6,
+      "dealer": "Trade Car Sales",
+      "slug": "birmingham-trade-car-sales-grasmere",
+      "origin": "https://birmingham-trade-car-sales-grasmere.webpreviews.site",
+      "worker": "cars-uk-birmingham-trade-car-sales-grasmere",
+      "versionId": "63e4818b-ea16-470d-adac-19e4d64133cf",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 7,
+      "dealer": "Cherry Tree Cars Ltd",
+      "slug": "bradford-cherry-tree-cars",
+      "origin": "https://bradford-cherry-tree-cars.webpreviews.site",
+      "worker": "cars-uk-bradford-cherry-tree-cars",
+      "versionId": "d859efda-123c-471b-8fbd-c952c9944506",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 8,
+      "dealer": "Car Market Yorkshire",
+      "slug": "dewsbury-car-market-yorkshire",
+      "origin": "https://dewsbury-car-market-yorkshire.webpreviews.site",
+      "worker": "cars-uk-dewsbury-car-market-yorkshire",
+      "versionId": "4785d70b-b5db-4f97-af06-3a44c75cd30f",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 9,
+      "dealer": "Motors Castle",
+      "slug": "motherwell-motors-castle",
+      "origin": "https://motherwell-motors-castle.webpreviews.site",
+      "worker": "cars-uk-motherwell-motors-castle",
+      "versionId": "9510e9c5-6a07-4c75-9a64-aa865f615533",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 10,
+      "dealer": "North Norfolk Car Sales",
+      "slug": "north-norfolk-car-sales",
+      "origin": "https://north-norfolk-car-sales.webpreviews.site",
+      "worker": "cars-uk-north-norfolk-car-sales",
+      "versionId": "6c4b2d58-3c16-4a90-adf8-ee8d9f6fa607",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 11,
+      "dealer": "S A Motors",
+      "slug": "nottingham-s-a-motors",
+      "origin": "https://nottingham-s-a-motors.webpreviews.site",
+      "worker": "cars-uk-nottingham-s-a-motors",
+      "versionId": "caa1adac-cd59-4cd4-bae1-872eae59e607",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 12,
+      "dealer": "Broadbent Car and Servicing",
+      "slug": "stockport-broadbent-car-and-servicing",
+      "origin": "https://stockport-broadbent-car-and-servicing.webpreviews.site",
+      "worker": "cars-uk-stockport-broadbent-car-and-servicing",
+      "versionId": "05fb76a0-38ba-42f5-a20f-4d0bbd19f4d3",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 13,
+      "dealer": "Norton Grange Trade Cars",
+      "slug": "stockton-norton-grange-trade-cars",
+      "origin": "https://stockton-norton-grange-trade-cars.webpreviews.site",
+      "worker": "cars-uk-stockton-norton-grange-trade-cars",
+      "versionId": "172b1b0f-3ca0-449a-a295-4f2d1f930ca5",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 14,
+      "dealer": "D&M - Auto Varna",
+      "slug": "dm-auto-varna",
+      "origin": "https://dm-auto-varna.webpreviews.site",
+      "worker": "cars-dmautovarna",
+      "versionId": "f55840b4-77d0-4d07-a3c7-246a15577e97",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 15,
+      "dealer": "Kolarov Cars",
+      "slug": "kolarov-cars",
+      "origin": "https://kolarov-cars.webpreviews.site",
+      "worker": "cars-kolarovcars",
+      "versionId": "80262347-0149-48d7-b121-075702e63bc7",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 16,
+      "dealer": "Dynamic Auto Varna",
+      "slug": "dynamic-auto-varna",
+      "origin": "https://dynamic-auto-varna.webpreviews.site",
+      "worker": "cars-dynamicautovarna",
+      "versionId": "e353e11e-3478-4c02-b257-cc3da0567f6e",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 17,
+      "dealer": "CAR POINT TRADE LTD",
+      "slug": "car-point-trade-varna",
+      "origin": "https://car-point-trade-varna.webpreviews.site",
+      "worker": "cars-carpointtradevarna",
+      "versionId": "419c2992-2e17-4f4c-af10-6150087aa6b4",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 18,
+      "dealer": "PM SELECT AUTOMOTIVE",
+      "slug": "pm-select-automotive",
+      "origin": "https://pm-select-automotive.webpreviews.site",
+      "worker": "cars-pmselectautomotive",
+      "versionId": "1089a021-070f-407b-bdd4-d8406905aa61",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 19,
+      "dealer": "DREAM DRIVE",
+      "slug": "dream-drive-varna",
+      "origin": "https://dream-drive-varna.webpreviews.site",
+      "worker": "cars-dreamdrivevarna",
+      "versionId": "0ce56ef0-bfa7-46d6-ac9f-4922a3cab54d",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 20,
+      "dealer": "PRIME AUTO",
+      "slug": "prime-auto-varna",
+      "origin": "https://prime-auto-varna.webpreviews.site",
+      "worker": "cars-primeautovarna",
+      "versionId": "2cde3470-05bc-47fd-9973-d0d39f79a713",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 21,
+      "dealer": "AUTOROAD",
+      "slug": "autoroad-varna",
+      "origin": "https://autoroad-varna.webpreviews.site",
+      "worker": "cars-autoroadvarna",
+      "versionId": "4da4b6d6-1dd2-4a23-a831-7cc767b753c1",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 22,
+      "dealer": "Аутофест",
+      "slug": "autofest-varna",
+      "origin": "https://autofest-varna.webpreviews.site",
+      "worker": "cars-autofestvarna",
+      "versionId": "90e4108a-852c-4675-8ca3-0ff3e2540ca0",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 23,
+      "dealer": "Сити Карс",
+      "slug": "city-cars-varna",
+      "origin": "https://city-cars-varna.webpreviews.site",
+      "worker": "cars-citycarsvarna",
+      "versionId": "53fdb9ed-81f7-41ef-8f3f-f93d65b4e27c",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 24,
+      "dealer": "Тесла БГ",
+      "slug": "tesla-varna",
+      "origin": "https://tesla-varna.webpreviews.site",
+      "worker": "cars-tesla-varna",
+      "versionId": "c58f2b45-8b53-4965-85ca-91ee42c2446b",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 25,
+      "dealer": "Теси Кар",
+      "slug": "tesi-car-varna",
+      "origin": "https://tesi-car-varna.webpreviews.site",
+      "worker": "cars-tesi-car-varna",
+      "versionId": "a4f31385-6dfb-4ee3-a4e6-d77a5c151aca",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 26,
+      "dealer": "АВТОБОРСА МАНИЯ",
+      "slug": "avtoborsa-mania",
+      "origin": "https://avtoborsa-mania.webpreviews.site",
+      "worker": "cars-avtoborsa-mania",
+      "versionId": "a5ddd77d-d5e4-4ce5-82b7-4a1a8de94a84",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 27,
+      "dealer": "ЕКСТРА КАР-СМ",
+      "slug": "extra-car-sm",
+      "origin": "https://extra-car-sm.webpreviews.site",
+      "worker": "cars-extra-car-sm",
+      "versionId": "3b2fa771-cee8-4b4d-b0bb-4f6648bcfef4",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 28,
+      "dealer": "Спринт ауто",
+      "slug": "sprint-varna",
+      "origin": "https://sprint-varna.webpreviews.site",
+      "worker": "cars-sprint-auto-varna",
+      "versionId": "e23860a9-3e7b-4081-a4f3-8b51d6ba9f00",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 29,
+      "dealer": "ЕВРОКАР ВАРНА 09",
+      "slug": "evrocarvarna09-varna",
+      "origin": "https://evrocarvarna09-varna.webpreviews.site",
+      "worker": "cars-evrocar-varna-09",
+      "versionId": "16ccbcad-a621-4ba8-9d7f-b8153e98e90a",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 30,
+      "dealer": "ЕВРОКАР",
+      "slug": "eurocar6-varna",
+      "origin": "https://eurocar6-varna.webpreviews.site",
+      "worker": "cars-eurocar6-varna",
+      "versionId": "64e44441-642f-413e-ac91-07d5e6933acd",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 31,
+      "dealer": "П Р Е С Т И Ж",
+      "slug": "prestige-varna",
+      "origin": "https://prestige-varna.webpreviews.site",
+      "worker": "cars-prestige-varna",
+      "versionId": "e6f92766-c48d-4b4e-b1fe-db20cde5a285",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 32,
+      "dealer": "МИРАЖ АУТО",
+      "slug": "miraj-auto-varna",
+      "origin": "https://miraj-auto-varna.webpreviews.site",
+      "worker": "cars-miraj-auto-varna",
+      "versionId": "41287150-390d-48c2-b433-4e792700489a",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 33,
+      "dealer": "КАЛО КАРС",
+      "slug": "kalokars-varna",
+      "origin": "https://kalokars-varna.webpreviews.site",
+      "worker": "cars-kalokars-varna",
+      "versionId": "db185d09-87fd-437f-b13e-40087876b11a",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 34,
+      "dealer": "R.Q.S. Auto - Team",
+      "slug": "rqs-auto-team",
+      "origin": "https://rqs-auto-team.webpreviews.site",
+      "worker": "cars-rqs-auto-team",
+      "versionId": "ea689bc0-82d9-4355-84d6-89426543c3ae",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 35,
+      "dealer": "СЪНИ",
+      "slug": "sunny-varna",
+      "origin": "https://sunny-varna.webpreviews.site",
+      "worker": "cars-sunny-varna",
+      "versionId": "c75e9bd7-e937-4400-ac8d-91d65d2fcf8a",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 36,
+      "dealer": "VV Cars",
+      "slug": "vvcars-varna",
+      "origin": "https://vvcars-varna.webpreviews.site",
+      "worker": "cars-vvcars-varna",
+      "versionId": "a48e72ec-227b-43ec-96c1-a12a4c258604",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 37,
+      "dealer": "Европа",
+      "slug": "evropavarna-varna",
+      "origin": "https://evropavarna-varna.webpreviews.site",
+      "worker": "cars-europa-varna",
+      "versionId": "378f60b0-b39b-41ab-b6d6-890ce7b1fde1",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 38,
+      "dealer": "Multi ZaZa",
+      "slug": "multizaza-varna",
+      "origin": "https://multizaza-varna.webpreviews.site",
+      "worker": "cars-multizaza-varna",
+      "versionId": "0c854951-41ba-404f-b77f-8e7ff181bf7c",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 39,
+      "dealer": "NUNKI - 1",
+      "slug": "nunki-1-varna",
+      "origin": "https://nunki-1-varna.webpreviews.site",
+      "worker": "cars-nunki-1-varna",
+      "versionId": "0dc66a32-3238-4b89-a3b4-3b1f100c17a4",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 40,
+      "dealer": "Атанасов",
+      "slug": "atanasov-varna",
+      "origin": "https://atanasov-varna.webpreviews.site",
+      "worker": "cars-atanasov-varna",
+      "versionId": "24fc1b68-f48d-4372-9165-d650562985ce",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 41,
+      "dealer": "Колеви Ауто",
+      "slug": "kolevi-auto-varna",
+      "origin": "https://kolevi-auto-varna.webpreviews.site",
+      "worker": "cars-kolevi-auto-varna",
+      "versionId": "59d48ef2-a9ab-4ef2-8b61-aec83c4eede7",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 42,
+      "dealer": "АВТОСАЛОН ТРАНС КАР",
+      "slug": "transcar-varna",
+      "origin": "https://transcar-varna.webpreviews.site",
+      "worker": "cars-transcar-varna",
+      "versionId": "6f8f591a-e2ff-4688-9586-c292df34a56f",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 43,
+      "dealer": "PRO MOTORS",
+      "slug": "promotors82-varna",
+      "origin": "https://promotors82-varna.webpreviews.site",
+      "worker": "cars-promotors82-varna",
+      "versionId": "3fee785d-71f9-4ba6-a655-21e37b269628",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 44,
+      "dealer": "Eco Drive",
+      "slug": "ecodrive-varna",
+      "origin": "https://ecodrive-varna.webpreviews.site",
+      "worker": "cars-ecodrive-varna",
+      "versionId": "944b411b-462b-41b7-98ed-29583b79b255",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 45,
+      "dealer": "VICHENCA",
+      "slug": "vichenca-varna",
+      "origin": "https://vichenca-varna.webpreviews.site",
+      "worker": "cars-vichenca-varna",
+      "versionId": "e8a9468d-9bff-4fdf-9350-3078ec8faf9f",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 46,
+      "dealer": "Ауто-бора",
+      "slug": "autobora-varna",
+      "origin": "https://autobora-varna.webpreviews.site",
+      "worker": "cars-autobora-varna",
+      "versionId": "d294e3c1-b1ca-434b-aa52-a1f261c57b53",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 47,
+      "dealer": "СТЕФАН КАР -внос и продажба на автомобили",
+      "slug": "stefancar-varna",
+      "origin": "https://stefancar-varna.webpreviews.site",
+      "worker": "cars-stefancar-varna",
+      "versionId": "00d76da4-78b0-4b89-9d42-902e281166af",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 48,
+      "dealer": "Елегант кар",
+      "slug": "elegantcar-varna",
+      "origin": "https://elegantcar-varna.webpreviews.site",
+      "worker": "cars-elegantcar-varna",
+      "versionId": "4247d1d3-ba6b-43bd-9b53-3f9d99c0162b",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 49,
+      "dealer": "Автосалон СТАДИОНА",
+      "slug": "stadiona-varna",
+      "origin": "https://stadiona-varna.webpreviews.site",
+      "worker": "cars-stadiona-varna",
+      "versionId": "3171567d-9ab6-49bf-8200-7b0878d43cec",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 50,
+      "dealer": "Х CAR",
+      "slug": "xcar-varna",
+      "origin": "https://xcar-varna.webpreviews.site",
+      "worker": "cars-xcar-varna",
+      "versionId": "00e62214-0c6a-4794-b2de-c4938ac92453",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 51,
+      "dealer": "BIEMAAUТO",
+      "slug": "biemaauto-varna",
+      "origin": "https://biemaauto-varna.webpreviews.site",
+      "worker": "cars-biemaauto-varna",
+      "versionId": "b7820be8-d6a2-45e8-9623-fbac8cb46896",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 52,
+      "dealer": "АВТОМОТОР ВАРНА АД",
+      "slug": "am-varna-varna",
+      "origin": "https://am-varna-varna.webpreviews.site",
+      "worker": "cars-am-varna-varna",
+      "versionId": "e6820712-d700-41ec-82c0-734147ed9cbb",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 53,
+      "dealer": "Тони Ем",
+      "slug": "tonyem4m-varna",
+      "origin": "https://tonyem4m-varna.webpreviews.site",
+      "worker": "cars-tonyem4m-varna",
+      "versionId": "f6846179-9a28-4515-a2ec-52ca61b69fec",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 54,
+      "dealer": "МЛАДОСТ 2 - Внос на автомобили от западна Европа",
+      "slug": "mladost2-varna",
+      "origin": "https://mladost2-varna.webpreviews.site",
+      "worker": "cars-mladost2-varna",
+      "versionId": "141ac402-0740-4d9b-9686-9abe87e800ca",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 55,
+      "dealer": "РИЧИ КАР",
+      "slug": "richicar-varna",
+      "origin": "https://richicar-varna.webpreviews.site",
+      "worker": "cars-richicar-varna",
+      "versionId": "798f4b27-f5dc-4d29-bb69-3e1c1a314b18",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 56,
+      "dealer": "Лион Ауто",
+      "slug": "lionauto1-varna",
+      "origin": "https://lionauto1-varna.webpreviews.site",
+      "worker": "cars-lionauto1-varna",
+      "versionId": "5ec3d55c-fafb-45cf-ac3d-29f0af82406a",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 57,
+      "dealer": "Exclusive Auto",
+      "slug": "exclusive-auto-varna",
+      "origin": "https://exclusive-auto-varna.webpreviews.site",
+      "worker": "cars-exclusive-auto-varna",
+      "versionId": "eb641125-016c-43e5-a4e7-3b1b55192f19",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 58,
+      "dealer": "ELEXIS CARS",
+      "slug": "elexiscars-varna",
+      "origin": "https://elexiscars-varna.webpreviews.site",
+      "worker": "cars-elexiscars-varna",
+      "versionId": "0aa8e2ea-7866-445c-afa8-d6504fa904cc",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 59,
+      "dealer": "Electric Auto",
+      "slug": "electricauto-varna",
+      "origin": "https://electricauto-varna.webpreviews.site",
+      "worker": "cars-electricauto-varna",
+      "versionId": "ebc4eb1f-7c57-41dc-9fd1-e7742e69dcac",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 60,
+      "dealer": "Варна Кар Експрес",
+      "slug": "varnacarexpress-varna",
+      "origin": "https://varnacarexpress-varna.webpreviews.site",
+      "worker": "cars-varnacarexpress-varna",
+      "versionId": "29328a20-37e6-4a0f-bcd3-a7da848997b9",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 61,
+      "dealer": "Garage24",
+      "slug": "garage24-varna",
+      "origin": "https://garage24-varna.webpreviews.site",
+      "worker": "cars-garage24-varna",
+      "versionId": "2eea8432-ede8-4641-a75d-f05430310606",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 62,
+      "dealer": "Крис",
+      "slug": "kris-varna",
+      "origin": "https://kris-varna.webpreviews.site",
+      "worker": "cars-kris-varna",
+      "versionId": "8ef9461f-236e-49a6-ae77-2afdabfc0030",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 63,
+      "dealer": "BUS Center Bulgaria",
+      "slug": "buscenter-varna",
+      "origin": "https://buscenter-varna.webpreviews.site",
+      "worker": "cars-buscenter-varna",
+      "versionId": "c353a09a-4c09-4c0f-80f9-3cac571a811d",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 64,
+      "dealer": "автосалон Фокус",
+      "slug": "focus1-varna",
+      "origin": "https://focus1-varna.webpreviews.site",
+      "worker": "cars-focus1-varna",
+      "versionId": "4b49c824-003d-4f10-84fd-1eba90918634",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 65,
+      "dealer": "AutoStar",
+      "slug": "autostar21-varna",
+      "origin": "https://autostar21-varna.webpreviews.site",
+      "worker": "cars-autostar21-varna",
+      "versionId": "63f43133-05a4-440f-9dfc-7e44ccb562de",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 66,
+      "dealer": "АБЦ БЪЛГАРИЯ ЕООД",
+      "slug": "abcbulgaria-varna",
+      "origin": "https://abcbulgaria-varna.webpreviews.site",
+      "worker": "cars-abcbulgaria-varna",
+      "versionId": "81523ba2-f7aa-4371-be7e-2447570da315",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 67,
+      "dealer": "ГРАНД АУТО ВАРНА",
+      "slug": "grand-auto-varna",
+      "origin": "https://grand-auto-varna.webpreviews.site",
+      "worker": "cars-grand-auto-varna",
+      "versionId": "1b2096c2-7516-4bbb-80b6-5b7c1cf9f59d",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 68,
+      "dealer": "Автосалон  М&G auto",
+      "slug": "mgauto-varna",
+      "origin": "https://mgauto-varna.webpreviews.site",
+      "worker": "cars-mgauto-varna",
+      "versionId": "3be30ee4-abe1-48ea-adf5-304401ef26e8",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 69,
+      "dealer": "BORA CAR",
+      "slug": "bora-car-varna",
+      "origin": "https://bora-car-varna.webpreviews.site",
+      "worker": "cars-bora-car-varna",
+      "versionId": "0ac8fec5-f00e-4b4e-9b8d-b688ed2ac172",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 70,
+      "dealer": "Автоцентър Баваро",
+      "slug": "bavaro-varna",
+      "origin": "https://bavaro-varna.webpreviews.site",
+      "worker": "cars-bavaro-varna",
+      "versionId": "e83f9a35-5741-4cda-9782-326a7a1857d9",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 71,
+      "dealer": "Axe Cars",
+      "slug": "wildivaka-varna",
+      "origin": "https://wildivaka-varna.webpreviews.site",
+      "worker": "cars-wildivaka-varna",
+      "versionId": "135118f4-ff9f-45e0-b715-ff2eff6eeb2a",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 72,
+      "dealer": "Триумф",
+      "slug": "triumf-varna",
+      "origin": "https://triumf-varna.webpreviews.site",
+      "worker": "cars-triumf-varna",
+      "versionId": "699f2878-a8df-4fb4-90c2-8e56865855e9",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 73,
+      "dealer": "УНИТРЕЙД",
+      "slug": "unitrade-varna",
+      "origin": "https://unitrade-varna.webpreviews.site",
+      "worker": "cars-unitrade-varna",
+      "versionId": "79c7efa1-8229-4fdb-b7e1-dcd180e3ee3d",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 74,
+      "dealer": "АУТО ЖО-ДИ",
+      "slug": "autojo-di-varna",
+      "origin": "https://autojo-di-varna.webpreviews.site",
+      "worker": "cars-autojo-di-varna",
+      "versionId": "471c163d-33a3-43ed-9fed-f307d6bb576a",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 75,
+      "dealer": "Специал Кар",
+      "slug": "specialcarood-varna",
+      "origin": "https://specialcarood-varna.webpreviews.site",
+      "worker": "cars-specialcarood-varna",
+      "versionId": "2bf83ba1-459c-45b8-9c43-bfc4ece5a45c",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 76,
+      "dealer": "Auto Insurance Import",
+      "slug": "auto-insurance-import-varna",
+      "origin": "https://auto-insurance-import-varna.webpreviews.site",
+      "worker": "cars-auto-insurance-import-varna",
+      "versionId": "02bc3b98-aa63-4445-b261-d035294f905f",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 77,
+      "dealer": "WATT a Car",
+      "slug": "watt-a-car-varna",
+      "origin": "https://watt-a-car-varna.webpreviews.site",
+      "worker": "cars-watt-a-car-varna",
+      "versionId": "1d2d0a9c-5550-4cd3-84ce-f20a13d35ecc",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 78,
+      "dealer": "Part Mag Cars",
+      "slug": "part-mag-cars-varna",
+      "origin": "https://part-mag-cars-varna.webpreviews.site",
+      "worker": "cars-part-mag-cars-varna",
+      "versionId": "f2f3f299-b9d5-490f-90e1-6c5a47bfef03",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 79,
+      "dealer": "Кало 0404",
+      "slug": "kalo-0404-varna",
+      "origin": "https://kalo-0404-varna.webpreviews.site",
+      "worker": "cars-kalo-0404-varna",
+      "versionId": "fbb0c6b9-3489-43a7-b203-9844558522e3",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 80,
+      "dealer": "К&K AUTO",
+      "slug": "kk-auto-varna",
+      "origin": "https://kk-auto-varna.webpreviews.site",
+      "worker": "cars-kk-auto-varna",
+      "versionId": "1eff03f2-a539-42d6-8249-5973165d3ff4",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 81,
+      "dealer": "ВЪЛКОВ КАРС",
+      "slug": "valkov-cars-varna",
+      "origin": "https://valkov-cars-varna.webpreviews.site",
+      "worker": "cars-valkov-cars-varna",
+      "versionId": "c206b40d-65fc-4088-a5c9-a49d3d2b4771",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 82,
+      "dealer": "CrazyFoxMotors",
+      "slug": "crazy-fox-motors-varna",
+      "origin": "https://crazy-fox-motors-varna.webpreviews.site",
+      "worker": "cars-crazy-fox-motors-varna",
+      "versionId": "69e0e474-8224-4662-86fd-1b9da8547703",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 83,
+      "dealer": "i1 Auto ApS",
+      "slug": "i1-auto-varna",
+      "origin": "https://i1-auto-varna.webpreviews.site",
+      "worker": "cars-i1-auto-varna",
+      "versionId": "3d843d5b-f46e-4a04-b4f7-1fd6417250c6",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 84,
+      "dealer": "Cali Cars",
+      "slug": "cali-cars-varna",
+      "origin": "https://cali-cars-varna.webpreviews.site",
+      "worker": "cars-cali-cars-varna",
+      "versionId": "b76b8621-ad98-427c-8316-e30c6397828e",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 85,
+      "dealer": "Nordic Auto",
+      "slug": "nordic-auto-varna",
+      "origin": "https://nordic-auto-varna.webpreviews.site",
+      "worker": "cars-nordic-auto-varna",
+      "versionId": "e9748f89-7f7f-4e16-bc46-3f98896a29f3",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 86,
+      "dealer": "ДайнАуто",
+      "slug": "dein-auto-varna",
+      "origin": "https://dein-auto-varna.webpreviews.site",
+      "worker": "cars-dein-auto-varna",
+      "versionId": "88e24e3a-63a7-476c-be91-3e3134292f29",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 87,
+      "dealer": "CARNOVA",
+      "slug": "carnova-varna",
+      "origin": "https://carnova-varna.webpreviews.site",
+      "worker": "cars-carnova-varna",
+      "versionId": "68d7514d-c0f4-4ca0-9372-810458b405de",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 88,
+      "dealer": "Сhampion Auto",
+      "slug": "champion-auto-varna",
+      "origin": "https://champion-auto-varna.webpreviews.site",
+      "worker": "cars-champion-auto-varna",
+      "versionId": "73795d10-093e-47e9-be37-bf2ab1c94e63",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 89,
+      "dealer": "Капитол",
+      "slug": "kapitol-varna",
+      "origin": "https://kapitol-varna.webpreviews.site",
+      "worker": "cars-kapitol-varna",
+      "versionId": "23fbaf0b-d312-4ea0-862b-2137f42da74b",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 90,
+      "dealer": "M Car Varna",
+      "slug": "m-car-varna",
+      "origin": "https://m-car-varna.webpreviews.site",
+      "worker": "cars-m-car-varna",
+      "versionId": "48fe3831-8f22-4856-8670-5e1ccbc27dce",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 91,
+      "dealer": "Черно море",
+      "slug": "chernomore-varna",
+      "origin": "https://chernomore-varna.webpreviews.site",
+      "worker": "cars-chernomore-varna",
+      "versionId": "e8552f6c-0ea4-4de4-ab04-c9f33731dfea",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 92,
+      "dealer": "ЕКСПРЕС АУТО",
+      "slug": "express-auto-varna",
+      "origin": "https://express-auto-varna.webpreviews.site",
+      "worker": "cars-express-auto-varna",
+      "versionId": "a9f0b373-c756-4218-9125-8104c191e240",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 93,
+      "dealer": "ФЮЖЪН АУТО",
+      "slug": "fusion-auto-varna",
+      "origin": "https://fusion-auto-varna.webpreviews.site",
+      "worker": "cars-fusion-auto-varna",
+      "versionId": "3e18cc36-f51d-4064-8e82-e07d81548448",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 94,
+      "dealer": "Бавария",
+      "slug": "bavaria-auto-varna",
+      "origin": "https://bavaria-auto-varna.webpreviews.site",
+      "worker": "cars-bavaria-auto-varna",
+      "versionId": "5a6bbdf8-67ec-47e0-9349-087dc19f4e92",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 95,
+      "dealer": "Монарх",
+      "slug": "monarh-varna",
+      "origin": "https://monarh-varna.webpreviews.site",
+      "worker": "cars-monarh-varna",
+      "versionId": "cc29e695-9b6d-464a-b8e5-65967fb836c4",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 96,
+      "dealer": "BalkanCarVarna",
+      "slug": "balkan-car-varna",
+      "origin": "https://balkan-car-varna.webpreviews.site",
+      "worker": "cars-balkan-car-varna",
+      "versionId": "443725e4-5435-43cf-90af-65e50f5c21ac",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 97,
+      "dealer": "VAEN CARS",
+      "slug": "vaen-cars-varna",
+      "origin": "https://vaen-cars-varna.webpreviews.site",
+      "worker": "cars-vaen-cars-varna",
+      "versionId": "042ae212-17e7-4f8a-bbbf-58230b86b34b",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 98,
+      "dealer": "topauto",
+      "slug": "top-auto-varna",
+      "origin": "https://top-auto-varna.webpreviews.site",
+      "worker": "cars-top-auto-varna",
+      "versionId": "24f5eb85-00b4-4be4-a789-4223d8925189",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 99,
+      "dealer": "TECHNOCAR",
+      "slug": "technocar-varna",
+      "origin": "https://technocar-varna.webpreviews.site",
+      "worker": "cars-technocar-varna",
+      "versionId": "05d7ecd1-c959-4f41-ad6c-326bab78d70b",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    },
+    {
+      "number": 100,
+      "dealer": "Porsche Varna",
+      "slug": "porsche-varna",
+      "origin": "https://porsche-varna.webpreviews.site",
+      "worker": "cars-porsche-varna",
+      "versionId": "0eabb11a-5fb5-49a9-9152-d1761e0afe1b",
+      "sixDesignEntryResponsesPassed": true,
+      "selectedAssetsPassed": true
+    }
+  ]
+}

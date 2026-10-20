@@ -205,6 +205,12 @@ export const submitContactRequest = async (
         request,
         request.locale === "bg"
       );
+      if (request.phone && request.context !== "import-request") {
+        detailLines.push(
+          "",
+          `${request.locale === "bg" ? "Телефон" : "Phone"}: ${request.phone}`
+        );
+      }
       return await getReliableEmailDelivery().deliver({
         ...context,
         payload: {

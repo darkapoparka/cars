@@ -195,6 +195,11 @@ test('six-family package integrates source receipts, common identity, final seal
   const output = new Map(first.files.map(name=>[name,fs.readFileSync(path.join(first.destination,name))]));
   assert.equal(Object.keys(JSON.parse(output.get('vercel.json')).services).length,6);
   assert.match(output.get('auto-best/static/preview-switcher.js').toString(),/"key":"karento-best"/);
+  const selector = output.get('auto-best/static/preview-switcher.js').toString();
+  assert.match(selector,/START CARS PROPOSAL INTRODUCTION/);
+  assert.match(selector,/proposal-dashboards-panel/);
+  assert.match(selector,/"dealerId":"publisher-fixture"/);
+  assert.doesNotThrow(()=>new vm.Script(selector));
   const share = JSON.parse(output.get('.cars-dealer-share.json'));
   assert.equal(share.identity.name,'Fixture Dealer');
   assert.equal(Object.keys(share.metadataBoundaries).length,6);

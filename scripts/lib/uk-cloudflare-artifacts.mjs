@@ -71,14 +71,15 @@ export function validateQualification({key, run, artifact, manifest, source, qua
   return lock;
 }
 
-export function artifactInventory(directory, identity = {}) {
+export function artifactInventory(directory, identity = {}, {writeFile} = {}) {
   const files = filesAt(directory,{filter:()=>true}).filter(name => name !== 'artifact-manifest.json').map(name => {
     const bytes = fs.readFileSync(inside(directory,name,{mustExist:true}));
     return {path:name,bytes:bytes.length,sha256:sha256(bytes)};
   });
   const manifest = {schemaVersion:1,...identity,digest:sha256(JSON.stringify(files)),
     bytes:files.reduce((sum,row)=>sum+row.bytes,0),files};
-  writeJson(path.join(directory,'artifact-manifest.json'),manifest);
+  if(writeFile)writeFile(path.join(directory,'artifact-manifest.json'),Buffer.from(JSON.stringify(manifest,null,2)+'\n'));
+  else writeJson(path.join(directory,'artifact-manifest.json'),manifest);
   return manifest;
 }
 

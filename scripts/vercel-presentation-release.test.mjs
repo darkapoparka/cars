@@ -14,9 +14,9 @@ for(const slug of slugs)test(slug+': the actual preserved six-design source acce
  const contact=applyOptionalContactFallback(files,manifest);const receipt=applyDealerPresentation(files,manifest);
  const logo=inputs[1];files.set(logo,Buffer.from(bindModernMobileWordmarkLogo(files.get(logo).toString())));
  for(const p of inputs.slice(7).concat(['import/src/lib/config/dealer.ts']))assert.equal(hash(files.get(p)),before.get(p),'Preserved identity/stock changed: '+p);
- assert.equal(receipt.logoPixelsChanged,false);assert.equal(receipt.palette,'neutral-black-white');
- const site=String(files.get(inputs[0]));assert.match(site,/accent: "#18181b"/);
- const original=read(prefix+inputs[0]).toString();for(const field of ['name','phoneHref','email','mapsUrl']){const pattern=new RegExp('^  '+field+':.*$','m');assert.deepEqual(site.match(pattern)?.[0],original.match(pattern)?.[0],field);}
+ assert.equal(receipt.logoPixelsChanged,false);assert.equal(receipt.palette,'template-native');
+ const site=String(files.get(inputs[0]));
+ const original=read(prefix+inputs[0]).toString();for(const field of ['accent','desktopAccent','name','phoneHref','email','mapsUrl']){const pattern=new RegExp('^  '+field+':.*$','m');assert.deepEqual(site.match(pattern)?.[0],original.match(pattern)?.[0],field);}
  const header=String(files.get(inputs[2]));assert.match(header,/data-dealer-responsive-logo/);assert.match(header,/<source media=/);assert.match(String(files.get(inputs[3])),/"\/services"/);assert.match(String(files.get(inputs[4])),/data-dealer-services-disclosure/);
  if(contact.applied)assert.equal(new URL(contact.href).origin,new URL(manifest.shareIdentity.publicOrigin).origin);
 });

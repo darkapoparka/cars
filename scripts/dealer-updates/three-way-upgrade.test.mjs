@@ -493,3 +493,9 @@ test('fast review hunks cover insertion, deletion, separated edits and final-new
     assert.equal(oldCount,Number(header[2]));assert.equal(newCount,Number(header[4]));
   }
 });
+
+test('a forged registered plan cannot bootstrap a first manifest through the merge',t=>{
+  const root=fixture(t);
+  assert.throws(()=>planDealerUpgrade({dealerRoot:root,registeredAdoption:{manifest:{}},targetManifest:{packaging:{version:'5'},variants:Array(6).fill({})},qualification:{}}),/validated unmodified/);
+  assert.equal(fs.existsSync(path.join(root,'dealer.json')),false);
+});

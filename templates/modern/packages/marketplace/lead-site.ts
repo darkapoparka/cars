@@ -110,8 +110,8 @@ export const leadSite: LeadSiteConfig = {
       tagline: "Premium vehicles, imports and in-house leasing in Sofia.",
     },
   },
-  accent: "#30343b",
-  desktopAccent: "#4b5057",
+  accent: "#09090b",
+  desktopAccent: "#09090b",
   desktopInventoryFilterLayout: "quick",
   desktopPreviewIdentity: {
     sourceSlug: "day-night-auto-group",

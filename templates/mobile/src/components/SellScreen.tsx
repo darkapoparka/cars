@@ -53,41 +53,40 @@ export function SellScreen() {
   return (
     <>
       <Header title="Sell">
-        <IconButton icon="plus" label="Create new ad" onClick={() => setCreate(true)} />
+        <IconButton icon="plus" label="Create local draft" onClick={() => setCreate(true)} />
       </Header>
       <div {...stylex.props(s.body)}>
         <section {...stylex.props(s.card)}>
           <Image
             src="/images/sell-valuation.webp"
-            alt="Vehicle price estimation"
+            alt="Car valuation demo"
             width={1136}
             height={568}
             {...stylex.props(s.art)}
             priority
           />
           <div {...stylex.props(s.content)}>
-            <h2 {...stylex.props(s.title)}>Free car valuation</h2>
+            <h2 {...stylex.props(s.title)}>Car valuation demo</h2>
             <p {...stylex.props(s.copy)}>
-              Get a quick and <strong>free price estimation online</strong> based on current market
-              data.
+              Try the local <strong>vehicle details form</strong>. No market valuation is generated.
             </p>
             <Button href="/sell/valuation" variant="purple" icon="calculator" block>
-              Evaluate price
+              Try valuation demo
             </Button>
           </div>
         </section>
         <section {...stylex.props(s.card, s.content)}>
-          <h2 {...stylex.props(s.title)}>Sell your vehicle</h2>
+          <h2 {...stylex.props(s.title)}>Vehicle listing demo</h2>
           <p {...stylex.props(s.copy)}>
-            To verified dealers in your area or via listing to over{' '}
-            <strong>14 mio. potential buyers</strong> on Germany’s biggest vehicle marketplace.
+            Prepare a local draft. <strong>No listing is published</strong> and no dealer is
+            contacted.
           </p>
           <div {...stylex.props(s.actions)}>
             <Button href="/sell/direct" variant="outline" icon="timer" block>
-              Direct sale
+              Direct sale demo
             </Button>
             <Button onClick={() => setCreate(true)} variant="outline" icon="tag" block>
-              Create listing
+              Create local draft
             </Button>
           </div>
         </section>

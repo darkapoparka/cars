@@ -187,14 +187,13 @@ export const messages: Record<Locale, PublicMessages> = {
 			languageOptions: ['English', 'Bulgarian'],
 			megaDetails: 'Details',
 			megaView: 'View',
-			searchPlaceholder: 'Search Day Night Auto inventory',
+			searchPlaceholder: `Search ${site.identity.displayName} inventory`,
 			signIn: 'Sign In',
 			wishlist: 'Wishlist'
 		},
 		home: {
 			actionBand: {
-				buyBody:
-					'Discuss import, documents, viewing and next steps with a Day Night Auto consultant.',
+				buyBody: `Discuss import, documents, viewing and next steps with a ${site.identity.displayName} consultant.`,
 				buyCta: 'Book time',
 				buyTitle: 'Book A Consultation',
 				importBody: 'Selection, inspection, documents and delivery from Europe.',
@@ -210,26 +209,25 @@ export const messages: Record<Locale, PublicMessages> = {
 				{ label: '70 000 - 100 000 EUR', active: false },
 				{ label: '100 000+ EUR', active: false }
 			],
-			budgetTitle: 'Day Night Auto by Budget',
-			byline: 'by Day Night Auto',
+			budgetTitle: `${site.identity.displayName} by Budget`,
+			byline: `by ${site.identity.displayName}`,
 			commonCta: 'View All',
 			compareEmpty: 'Your compare is currently empty',
 			compareTitle: 'Compare Top Rated Vehicles',
 			featuredTitle: 'Newest Vehicles',
-			newsTitle: 'Day Night Auto notes',
+			newsTitle: `${site.identity.displayName} notes`,
 			readMore: 'Read more',
 			reviewsTitle: 'Client Reviews',
 			seo: {
-				description:
-					'Day Night Auto: verified cars with clear origin, plus Europe import — selection, inspection, documents, delivery and warranty for Bulgaria.',
-				title: 'Day Night Auto — Cars & Import From Europe'
+				description: `${site.identity.displayName}: verified cars with clear origin, plus Europe import — selection, inspection, documents, delivery and warranty for Bulgaria.`,
+				title: `${site.identity.displayName} — Cars & Import From Europe`
 			},
 			typeCta: 'View All Types',
 			typeTitle: 'Browse By Type',
 			vehicleCard: vehicleCardEn
 		},
 		hero: {
-			checksTitle: 'Day Night Auto Checks',
+			checksTitle: `${site.identity.displayName} Checks`,
 			ctaLabel: 'View Inventory',
 			features: [
 				'Verified source listing',
@@ -241,7 +239,7 @@ export const messages: Record<Locale, PublicMessages> = {
 				'Viewing by appointment',
 				'Client vehicle intake'
 			],
-			heading: 'Browse, Compare, Drive With Day Night Auto!',
+			heading: `Browse, Compare, Drive With ${site.identity.displayName}!`,
 			searchSubmitPrefix: 'Show',
 			searchSubmitSuffix: 'Matches',
 			slideSubtitle: 'Europe-sourced vehicles with verified history and clear appointment support.',
@@ -270,26 +268,25 @@ export const messages: Record<Locale, PublicMessages> = {
 			}
 		},
 		inventory: {
-			emptyBody: 'Clear filters or contact Day Night Auto for a Europe import request.',
-			emptyTitle: 'No Day Night Auto vehicles match these filters',
+			emptyBody: `Clear filters or contact ${site.identity.displayName} for a Europe import request.`,
+			emptyTitle: `No ${site.identity.displayName} vehicles match these filters`,
 			reset: 'Reset inventory',
 			vehicleCard: vehicleCardEn
 		},
 		detail: {
-			callDayNight: 'Call Day Night Auto',
+			callDayNight: `Call ${site.identity.displayName}`,
 			carOverview: 'Car Overview',
 			cash: 'Cash',
 			chatOnViber: 'Chat on Viber',
 			compare: 'Compare',
-			consultantLabel: 'Day Night Auto Consultant',
+			consultantLabel: `${site.identity.displayName} Consultant`,
 			description: 'Description',
-			detailDescriptionFallback:
-				'is available through Day Night Auto with source review and viewing by appointment.',
+			detailDescriptionFallback: `is available through ${site.identity.displayName} with source review and viewing by appointment.`,
 			directions: 'Get Directions',
 			email: 'Email',
 			finance: 'Finance',
 			financeIntro: 'Estimated payment before final taxes, registration, and transport costs.',
-			financeTerms: 'Estimated over 72 months. Final terms confirmed by Day Night Auto.',
+			financeTerms: `Estimated over 72 months. Final terms confirmed by ${site.identity.displayName}.`,
 			formConsent:
 				'Yes, I would like to receive price alerts on this vehicle and helpful shopping information.',
 			formTerms: 'By using this service, you accept our',
@@ -297,8 +294,8 @@ export const messages: Record<Locale, PublicMessages> = {
 			getToKnow: 'Get To Know this car',
 			inquiryTitle: 'Send Inquiry about Vehicle',
 			inquiryCta: 'Inquire',
-			inquiryIntro: 'Leave your details and Day Night Auto will get back to you about this car.',
-			inquirySuccess: 'Done — Day Night Auto will be in touch as soon as possible.',
+			inquiryIntro: `Leave your details and ${site.identity.displayName} will get back to you about this car.`,
+			inquirySuccess: `Done — ${site.identity.displayName} will be in touch as soon as possible.`,
 			callCta: 'Call',
 			message: 'Message',
 			messagePlaceholder: 'Comment',
@@ -366,25 +363,24 @@ export const messages: Record<Locale, PublicMessages> = {
 				{ label: '100 000+ EUR', active: false }
 			],
 			budgetTitle: 'Автомобили по бюджет',
-			byline: 'от Day Night Auto',
+			byline: `от ${site.identity.displayName}`,
 			commonCta: 'Виж всички',
 			compareEmpty: 'Списъкът за сравнение е празен',
 			compareTitle: 'Сравни избрани автомобили',
 			featuredTitle: 'Най-нови автомобили',
-			newsTitle: 'Съвети от Day Night Auto',
+			newsTitle: `Съвети от ${site.identity.displayName}`,
 			readMore: 'Прочети повече',
 			reviewsTitle: 'Отзиви от клиенти',
 			seo: {
-				description:
-					'Day Night Auto: проверени автомобили с ясен произход и подбор на автомобили — подбор, проверка, документи, доставка и гаранция за България.',
-				title: 'Day Night Auto — автомобили и подбор на автомобили'
+				description: `${site.identity.displayName}: проверени автомобили с ясен произход и подбор на автомобили — подбор, проверка, документи, доставка и гаранция за България.`,
+				title: `${site.identity.displayName} — автомобили и подбор на автомобили`
 			},
 			typeCta: 'Виж всички типове',
 			typeTitle: 'Разгледай по тип',
 			vehicleCard: vehicleCardBg
 		},
 		hero: {
-			checksTitle: 'Проверки от Day Night Auto',
+			checksTitle: `Проверки от ${site.identity.displayName}`,
 			ctaLabel: 'Виж наличните',
 			features: [
 				'Проверен източник',
@@ -396,7 +392,7 @@ export const messages: Record<Locale, PublicMessages> = {
 				'Оглед с предварителна уговорка',
 				'Прием на клиентски автомобили'
 			],
-			heading: 'Разгледай, сравни и избери с Day Night Auto!',
+			heading: `Разгледай, сравни и избери с ${site.identity.displayName}!`,
 			searchSubmitPrefix: 'Покажи',
 			searchSubmitSuffix: 'автомобила',
 			slideSubtitle: 'Автомобили от Европа с проверена история и ясни следващи стъпки преди оглед.',
@@ -425,28 +421,26 @@ export const messages: Record<Locale, PublicMessages> = {
 			}
 		},
 		inventory: {
-			emptyBody: 'Изчисти филтрите или се свържи с Day Night Auto за подбор на автомобили.',
+			emptyBody: `Изчисти филтрите или се свържи с ${site.identity.displayName} за подбор на автомобили.`,
 			emptyTitle: 'Няма автомобили, които отговарят на тези филтри',
 			reset: 'Изчисти филтрите',
 			vehicleCard: vehicleCardBg
 		},
 		detail: {
-			callDayNight: 'Обади се на Day Night Auto',
+			callDayNight: `Обади се на ${site.identity.displayName}`,
 			carOverview: 'Основни данни',
 			cash: 'В брой',
 			chatOnViber: 'Чат във Viber',
 			compare: 'Сравни',
-			consultantLabel: 'Консултант Day Night Auto',
+			consultantLabel: `Консултант ${site.identity.displayName}`,
 			description: 'Описание',
-			detailDescriptionFallback:
-				'е наличен чрез Day Night Auto с проверка на източника и оглед с предварителна уговорка.',
+			detailDescriptionFallback: `е наличен чрез ${site.identity.displayName} с проверка на източника и оглед с предварителна уговорка.`,
 			directions: 'Виж упътване',
 			email: 'Имейл',
 			finance: 'Финансиране',
 			financeIntro:
 				'Ориентировъчна вноска преди окончателни данъци, регистрация и транспортни разходи.',
-			financeTerms:
-				'Ориентировъчно за 72 месеца. Финалните условия се потвърждават от Day Night Auto.',
+			financeTerms: `Ориентировъчно за 72 месеца. Финалните условия се потвърждават от ${site.identity.displayName}.`,
 			formConsent:
 				'Да, искам да получавам информация за цената на този автомобил и полезна информация за покупката.',
 			formTerms: 'С използването на тази услуга приемате нашето',

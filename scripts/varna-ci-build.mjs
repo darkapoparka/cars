@@ -7,6 +7,7 @@ import {assertAppVariant} from './publishing/app-variant.mjs';
 import {assertExtendedVariantSources,applySixVariantMounts,sealSixVariantBuild} from './publishing/six-variant.mjs';
 import {legacyDetailArtifact} from './publishing/legacy-detail-routes.mjs';
 import {applyDealerShare} from './publishing/dealer-share.mjs';
+import {appendProposalIntroduction} from './publishing/proposal-introduction.mjs';
 import {applySharedMedia} from './publishing/shared-media.mjs';
 import {applyVercelAssets,planVercelAssets,PUBLIC_ROOTS,SERVICE_NAMES} from './publishing/vercel-asset-plan.mjs';
 export const FAMILIES=['auto-best','modern','import','app','mobile','karento-best'];
@@ -38,7 +39,7 @@ export async function assemble(slug,sourceCommit){
  const messages=read(path.join(ROOT,'scripts/publishing/switcher-messages.json'));
  const config=switcherConfiguration(manifest,messages,files);
  const switcher=fs.readFileSync(path.join(ROOT,'scripts/publishing/preview-switcher.js'),'utf8').replace('__CARS_SWITCHER_CONFIG__',()=>JSON.stringify(config).replace(/</g,'\\u003c'));
- files.set('auto-best/static/preview-switcher.js',Buffer.from(switcher));
+ files.set('auto-best/static/preview-switcher.js',Buffer.from(appendProposalIntroduction(switcher,{dealerId:manifest.dealerId||manifest.slug,dealerName:manifest.shareIdentity?.name||manifest.slug})));
  applySharedMedia(files,read(path.join(ROOT,'scripts/publishing/shared-media-catalog.json')));
  let assetPlan;try{assetPlan=applyVercelAssets(files);}catch(error){
  const diagnosis=planVercelAssets(files,{maxPublicBytes:2*1024**3,maxRoutes:10000});

@@ -4822,27 +4822,30 @@
           "state": "in-progress",
           "qaRecorded": false,
           "localPresent": false,
-          "entry": null,
+          "entry": "/",
           "publicUrl": null,
-          "templateSource": null
+          "templateSource": null,
+          "base": ""
         },
         {
           "key": "modern",
           "state": "in-progress",
           "qaRecorded": false,
           "localPresent": false,
-          "entry": null,
+          "entry": "/variant-2/cars",
           "publicUrl": null,
-          "templateSource": null
+          "templateSource": null,
+          "base": "/variant-2"
         },
         {
           "key": "carwow",
           "state": "in-progress",
           "qaRecorded": false,
           "localPresent": false,
-          "entry": null,
+          "entry": "/variant-3/",
           "publicUrl": null,
-          "templateSource": null
+          "templateSource": null,
+          "base": "/variant-3"
         }
       ],
       "branchSources": [],
@@ -4900,8 +4903,15 @@
       },
       "id": null,
       "aliases": [],
-      "repository": null,
-      "packagingVersion": null
+      "repository": "darkapoparka/cars-exclusive-auto-varna",
+      "packagingVersion": null,
+      "sourceMapHistory": [
+        {
+          "checkedAt": "2026-09-26T16:24:42.250Z",
+          "previousRepository": null,
+          "source": "Existing local dealer manifest and verified GitHub repository identity; no deployment status changed"
+        }
+      ]
     },
     {
       "slug": "extra-car-sm",

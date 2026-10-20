@@ -1,7 +1,7 @@
 import { auxeroReviewCards, type AuxeroReviewCard } from '$lib/auxero/reviews';
 import { agentCardsFromAgents, type AuxeroAgentCard } from '$lib/auxero/agents';
-import { agents } from '$lib/data/agents';
-import { daynightAssets, daynightContact } from '$lib/data/daynight';
+import { agents, type Agent } from '$lib/data/agents';
+import { daynightAssets, daynightContact, daynightConsultants } from '$lib/data/daynight';
 import { brands, vehicles } from '$lib/data/vehicles';
 import type { AuxeroPageBanner } from './page-banner';
 import { auxeroServiceCards } from './services';
@@ -85,6 +85,26 @@ export type AuxeroAboutStat = {
 	value: string;
 };
 
+type ConsultantWithAbout = {
+	slug: string;
+	about?: Partial<
+		Pick<AuxeroAgentCard, 'slug' | 'name' | 'title' | 'image' | 'desktopPortrait'>
+	> & {
+		socials?: readonly AuxeroAgentCard['socials'][number][];
+	};
+};
+
+/** Dealer-generated consultants can omit the master's optional About presentation. */
+export const aboutCardsFromAgents = (
+	sourceAgents: Agent[],
+	consultants: readonly ConsultantWithAbout[]
+): AuxeroAgentCard[] =>
+	agentCardsFromAgents(sourceAgents).map((card) => {
+		const about = consultants.find((consultant) => consultant.slug === card.slug)?.about;
+		if (!about) return card;
+		return { ...card, ...about, socials: about.socials ? [...about.socials] : card.socials };
+	});
+
 const brandLogos: Record<string, string> = {
 	Audi: '/assets/daynight/brands/audi.webp',
 	BMW: '/assets/daynight/brands/bmw.webp',
@@ -116,37 +136,7 @@ export const auxeroAboutContent: AuxeroAboutContent = {
 		hero: daynightAssets.hero
 	},
 	brands: aboutBrandCards,
-	consultants: [
-		{
-			...agentCardsFromAgents(agents)[0],
-			slug: 'kristiyan-kirilov',
-			name: 'Кристиян Кирилов',
-			title: 'Изпълнителен директор · CEO',
-			socials: [
-				{
-					href: 'https://www.instagram.com/kristiankirilov13/',
-					icon: 'brands/instagram.svg',
-					label: 'Кристиян Кирилов в Instagram'
-				}
-			],
-			image: '/assets/daynight/team/kristian-kirilov-public.jpg',
-			desktopPortrait: { position: '60% top', scale: 1.65 }
-		},
-		{
-			...agentCardsFromAgents(agents)[1],
-			slug: 'demo-mariya-petrova',
-			name: 'Мария Петрова',
-			title: 'Продажби и огледи · Демо профил',
-			image: '/assets/daynight/team/demo-mariya.png'
-		},
-		{
-			...agentCardsFromAgents(agents)[2],
-			slug: 'demo-aleksandar-ivanov',
-			name: 'Александър Иванов',
-			title: 'Внос и консултации · Демо профил',
-			image: '/assets/daynight/team/demo-aleksandar.png'
-		}
-	],
+	consultants: aboutCardsFromAgents(agents, daynightConsultants),
 	contact: {
 		primaryPhoneHref: daynightContact.primaryPhoneHref,
 		primaryPhoneLabel: daynightContact.primaryPhoneLabel

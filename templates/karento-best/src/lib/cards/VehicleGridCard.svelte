@@ -15,6 +15,7 @@
     nowrapTitle = true,
     showAction = true,
     showLocation = false,
+    mobileLayout = "row",
   }: {
     card: VehicleCardContent;
     linkedImage?: boolean;
@@ -22,6 +23,7 @@
     nowrapTitle?: boolean;
     showAction?: boolean;
     showLocation?: boolean;
+    mobileLayout?: "row" | "stacked";
   } = $props();
   const card = $derived(dealer.inventory[referenceCard.title] ?? referenceCard);
   const mobile = new MediaQuery("(max-width: 767.98px)");
@@ -51,7 +53,7 @@
 </script>
 
 {#if mobile.current}
-  <MobileVehicleCard {card} {showLocation} />
+  <MobileVehicleCard {card} {showLocation} layout={mobileLayout} />
 {:else}
   <div class="card-journey-small background-card">
     <div class="card-image">
@@ -86,7 +88,7 @@
           ]}
           href={locale.href(destination)}
           aria-label={locale.t("action.viewVehicle", { vehicle: card.title })}
-          >{card.title}</a
+          title={card.title}>{card.title}</a
         ></div
       >
       <div class="card-program">
@@ -183,12 +185,11 @@
     }
 
     .card-title a {
-      display: -webkit-box;
-      -webkit-box-orient: vertical;
-      -webkit-line-clamp: 2;
-      line-clamp: 2;
+      display: block;
+      max-width: 100%;
       overflow: hidden;
-      white-space: normal !important;
+      text-overflow: ellipsis;
+      white-space: nowrap !important;
     }
 
     .card-journey-small

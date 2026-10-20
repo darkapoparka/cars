@@ -15,26 +15,26 @@
   import { MediaQuery } from "svelte/reactivity";
   import type { Attachment } from "svelte/attachments";
   const phone = new MediaQuery("(max-width: 767.98px)");
-  // Keep the comparison page's existing header controls.
-  const phoneControls = $derived(phone.current && page.route.id !== "/2");
+  // Preserve the marketplace Home's approved header controls.
+  const phoneControls = $derived(phone.current && page.route.id !== "/");
   const heroHeader = $derived(
-    phone.current &&
-      [
-        "index-3",
-        "cars-list-1",
-        "cars-list-2",
-        "cars-list-3",
-        "cars-list-4",
-        "shop-list",
-        "services",
-        "contact",
-        "about-us",
-        "pricing",
-        "dealer-listing",
-        "dealer-details",
-        "term",
-        "blog-details",
-      ].includes(resolveRoute(page.params.path ?? "") ?? ""),
+    [
+      "marketplace-home",
+      "index-3",
+      "cars-list-1",
+      "cars-list-2",
+      "cars-list-3",
+      "cars-list-4",
+      "shop-list",
+      "services",
+      "contact",
+      "about-us",
+      "pricing",
+      "dealer-listing",
+      "dealer-details",
+      "term",
+      "blog-details",
+    ].includes(resolveRoute(page.params.path ?? "") ?? ""),
   );
   const preview = usePreview();
   const activePath = $derived(
@@ -98,15 +98,10 @@
             <img
               class="light-mode"
               alt={dealer.logo.alt}
-              src={heroLogo ? dealer.logo.archivedDark : dealer.logo.light}
+              src={dealer.logo.light}
               width="168"
               height="76"
               style:object-fit="contain"
-              style:filter={heroLogo
-                ? dealer.logo.monochromeOnDark
-                  ? "brightness(0) invert(1)"
-                  : "none"
-                : undefined}
             />
             <img
               class="dark-mode"
@@ -138,23 +133,21 @@
                   aria-label={locale.t("ui.header.vehicles")}
                   >{locale.t("ui.header.vehicles")}</a
                 ></li
-              >{#if !dealer.businessPreview}<li class="menu-item"
-                  ><a
-                    href={locale.href("/services")}
-                    aria-current={activePath === "/services"
-                      ? "page"
-                      : undefined}
-                    aria-label={locale.t("ui.header.services")}
-                    >{locale.t("ui.header.services")}</a
-                  ></li
-                >{/if}{#if !dealer.businessPreview}<li class="menu-item"
-                  ><a
-                    href={locale.href("/shop")}
-                    aria-current={activePath === "/shop" ? "page" : undefined}
-                    aria-label={locale.t("ui.header.shop")}
-                    >{locale.t("ui.header.shop")}</a
-                  ></li
-                >{/if}<li
+              ><li class="menu-item"
+                ><a
+                  href={locale.href("/services")}
+                  aria-current={activePath === "/services" ? "page" : undefined}
+                  aria-label={locale.t("ui.header.services")}
+                  >{locale.t("ui.header.services")}</a
+                ></li
+              ><li class="menu-item"
+                ><a
+                  href={locale.href("/shop")}
+                  aria-current={activePath === "/shop" ? "page" : undefined}
+                  aria-label={locale.t("ui.header.shop")}
+                  >{locale.t("ui.header.shop")}</a
+                ></li
+              ><li
                 class="has-children"
                 {@attach ownDesktopExplore}
                 onfocusout={(event) => {
@@ -185,61 +178,59 @@
                       aria-label={locale.t("ui.header.about-us")}
                       >{locale.t("ui.header.about-us")}</a
                     ></li
-                  >{#if !dealer.businessPreview}<li class="menu-item"
-                      ><a
-                        href={locale.href("/import")}
-                        aria-current={activePath === "/import"
-                          ? "page"
-                          : undefined}
-                        aria-label={locale.t("ui.header.import")}
-                        >{locale.t("ui.header.import")}</a
-                      ></li
-                    >{/if}{#if !dealer.businessPreview}<li class="menu-item"
-                      ><a
-                        href={locale.href("/news")}
-                        aria-current={activePath === "/news"
-                          ? "page"
-                          : undefined}
-                        aria-label={locale.t("ui.header.news")}
-                        >{locale.t("ui.header.news")}</a
-                      ></li
-                    >{/if}{#if !dealer.businessPreview}<li class="menu-item"
-                      ><a
-                        href={locale.href("/calculator")}
-                        aria-current={activePath === "/calculator"
-                          ? "page"
-                          : undefined}
-                        aria-label={locale.t("ui.header.car-calculator")}
-                        >{locale.t("ui.header.car-calculator")}</a
-                      ></li
-                    >{/if}<li class="menu-item"
+                  ><li class="menu-item"
+                    ><a
+                      href={locale.href("/import")}
+                      aria-current={activePath === "/import"
+                        ? "page"
+                        : undefined}
+                      aria-label={locale.t("ui.header.import")}
+                      >{locale.t("ui.header.import")}</a
+                    ></li
+                  ><li class="menu-item"
+                    ><a
+                      href={locale.href("/news")}
+                      aria-current={activePath === "/news" ? "page" : undefined}
+                      aria-label={locale.t("ui.header.news")}
+                      >{locale.t("ui.header.news")}</a
+                    ></li
+                  ><li class="menu-item"
+                    ><a
+                      href={locale.href("/calculator")}
+                      aria-current={activePath === "/calculator"
+                        ? "page"
+                        : undefined}
+                      aria-label={locale.t("ui.header.car-calculator")}
+                      >{locale.t("ui.header.car-calculator")}</a
+                    ></li
+                  ><li class="menu-item"
                     ><a
                       href={locale.href("/faq")}
                       aria-current={activePath === "/faq" ? "page" : undefined}
                       aria-label={locale.t("ui.header.faq")}
                       >{locale.t("ui.header.faq")}</a
                     ></li
-                  >{#if !dealer.businessPreview}<li class="menu-item"
-                      ><a
-                        href={locale.href("/terms")}
-                        aria-current={activePath === "/terms"
-                          ? "page"
-                          : undefined}
-                        aria-label={locale.t("ui.header.terms")}
-                        >{locale.t("ui.header.terms")}</a
-                      ></li
-                    >{/if}</ul
+                  ><li class="menu-item"
+                    ><a
+                      href={locale.href("/terms")}
+                      aria-current={activePath === "/terms"
+                        ? "page"
+                        : undefined}
+                      aria-label={locale.t("ui.header.terms")}
+                      >{locale.t("ui.header.terms")}</a
+                    ></li
+                  ></ul
                 ></li
-              >{#if !dealer.businessPreview}<li class="menu-item"
-                  ><a
-                    href={locale.href("/membership")}
-                    aria-current={activePath === "/membership"
-                      ? "page"
-                      : undefined}
-                    aria-label={locale.t("ui.header.plans")}
-                    >{locale.t("ui.header.plans")}</a
-                  ></li
-                >{/if}<li class="menu-item"
+              ><li class="menu-item"
+                ><a
+                  href={locale.href("/membership")}
+                  aria-current={activePath === "/membership"
+                    ? "page"
+                    : undefined}
+                  aria-label={locale.t("ui.header.plans")}
+                  >{locale.t("ui.header.plans")}</a
+                ></li
+              ><li class="menu-item"
                 ><a
                   href={locale.href("/contact")}
                   aria-current={activePath === "/contact" ? "page" : undefined}
@@ -402,23 +393,21 @@
                   aria-label={locale.t("ui.header.vehicles")}
                   >{locale.t("ui.header.vehicles")}</a
                 ></li
-              >{#if !dealer.businessPreview}<li class="menu-item"
-                  ><a
-                    href={locale.href("/services")}
-                    aria-current={activePath === "/services"
-                      ? "page"
-                      : undefined}
-                    aria-label={locale.t("ui.header.services")}
-                    >{locale.t("ui.header.services")}</a
-                  ></li
-                >{/if}{#if !dealer.businessPreview}<li class="menu-item"
-                  ><a
-                    href={locale.href("/shop")}
-                    aria-current={activePath === "/shop" ? "page" : undefined}
-                    aria-label={locale.t("ui.header.shop")}
-                    >{locale.t("ui.header.shop")}</a
-                  ></li
-                >{/if}<li class="has-children"
+              ><li class="menu-item"
+                ><a
+                  href={locale.href("/services")}
+                  aria-current={activePath === "/services" ? "page" : undefined}
+                  aria-label={locale.t("ui.header.services")}
+                  >{locale.t("ui.header.services")}</a
+                ></li
+              ><li class="menu-item"
+                ><a
+                  href={locale.href("/shop")}
+                  aria-current={activePath === "/shop" ? "page" : undefined}
+                  aria-label={locale.t("ui.header.shop")}
+                  >{locale.t("ui.header.shop")}</a
+                ></li
+              ><li class="has-children"
                 ><a
                   href="#!"
                   role="button"
@@ -441,61 +430,59 @@
                       aria-label={locale.t("ui.header.about-us")}
                       >{locale.t("ui.header.about-us")}</a
                     ></li
-                  >{#if !dealer.businessPreview}<li class="menu-item"
-                      ><a
-                        href={locale.href("/import")}
-                        aria-current={activePath === "/import"
-                          ? "page"
-                          : undefined}
-                        aria-label={locale.t("ui.header.import")}
-                        >{locale.t("ui.header.import")}</a
-                      ></li
-                    >{/if}{#if !dealer.businessPreview}<li class="menu-item"
-                      ><a
-                        href={locale.href("/news")}
-                        aria-current={activePath === "/news"
-                          ? "page"
-                          : undefined}
-                        aria-label={locale.t("ui.header.news")}
-                        >{locale.t("ui.header.news")}</a
-                      ></li
-                    >{/if}{#if !dealer.businessPreview}<li class="menu-item"
-                      ><a
-                        href={locale.href("/calculator")}
-                        aria-current={activePath === "/calculator"
-                          ? "page"
-                          : undefined}
-                        aria-label={locale.t("ui.header.car-calculator")}
-                        >{locale.t("ui.header.car-calculator")}</a
-                      ></li
-                    >{/if}<li class="menu-item"
+                  ><li class="menu-item"
+                    ><a
+                      href={locale.href("/import")}
+                      aria-current={activePath === "/import"
+                        ? "page"
+                        : undefined}
+                      aria-label={locale.t("ui.header.import")}
+                      >{locale.t("ui.header.import")}</a
+                    ></li
+                  ><li class="menu-item"
+                    ><a
+                      href={locale.href("/news")}
+                      aria-current={activePath === "/news" ? "page" : undefined}
+                      aria-label={locale.t("ui.header.news")}
+                      >{locale.t("ui.header.news")}</a
+                    ></li
+                  ><li class="menu-item"
+                    ><a
+                      href={locale.href("/calculator")}
+                      aria-current={activePath === "/calculator"
+                        ? "page"
+                        : undefined}
+                      aria-label={locale.t("ui.header.car-calculator")}
+                      >{locale.t("ui.header.car-calculator")}</a
+                    ></li
+                  ><li class="menu-item"
                     ><a
                       href={locale.href("/faq")}
                       aria-current={activePath === "/faq" ? "page" : undefined}
                       aria-label={locale.t("ui.header.faq")}
                       >{locale.t("ui.header.faq")}</a
                     ></li
-                  >{#if !dealer.businessPreview}<li class="menu-item"
-                      ><a
-                        href={locale.href("/terms")}
-                        aria-current={activePath === "/terms"
-                          ? "page"
-                          : undefined}
-                        aria-label={locale.t("ui.header.terms")}
-                        >{locale.t("ui.header.terms")}</a
-                      ></li
-                    >{/if}</ul
+                  ><li class="menu-item"
+                    ><a
+                      href={locale.href("/terms")}
+                      aria-current={activePath === "/terms"
+                        ? "page"
+                        : undefined}
+                      aria-label={locale.t("ui.header.terms")}
+                      >{locale.t("ui.header.terms")}</a
+                    ></li
+                  ></ul
                 ></li
-              >{#if !dealer.businessPreview}<li class="menu-item"
-                  ><a
-                    href={locale.href("/membership")}
-                    aria-current={activePath === "/membership"
-                      ? "page"
-                      : undefined}
-                    aria-label={locale.t("ui.header.plans")}
-                    >{locale.t("ui.header.plans")}</a
-                  ></li
-                >{/if}<li class="menu-item"
+              ><li class="menu-item"
+                ><a
+                  href={locale.href("/membership")}
+                  aria-current={activePath === "/membership"
+                    ? "page"
+                    : undefined}
+                  aria-label={locale.t("ui.header.plans")}
+                  >{locale.t("ui.header.plans")}</a
+                ></li
+              ><li class="menu-item"
                 ><a
                   href={locale.href("/contact")}
                   aria-current={activePath === "/contact" ? "page" : undefined}
@@ -649,28 +636,28 @@
               aria-label={locale.t("ui.header.vehicles")}
               >{locale.t("ui.header.vehicles")}</a
             ></li
-          >{#if !dealer.businessPreview}<li class="menu-item"
-              ><a
-                href={locale.href("/services")}
-                aria-current={activePath === "/services" ? "page" : undefined}
-                aria-label={locale.t("ui.header.services")}
-                >{locale.t("ui.header.services")}</a
-              ></li
-            >{/if}{#if !dealer.businessPreview}<li class="menu-item"
-              ><a
-                href={locale.href("/shop")}
-                aria-current={activePath === "/shop" ? "page" : undefined}
-                aria-label={locale.t("ui.header.shop")}
-                >{locale.t("ui.header.shop")}</a
-              ></li
-            >{/if}{#if !dealer.businessPreview}<li class="menu-item"
-              ><a
-                href={locale.href("/membership")}
-                aria-current={activePath === "/membership" ? "page" : undefined}
-                aria-label={locale.t("ui.header.plans")}
-                >{locale.t("ui.header.plans")}</a
-              ></li
-            >{/if}<li class="menu-item"
+          ><li class="menu-item"
+            ><a
+              href={locale.href("/services")}
+              aria-current={activePath === "/services" ? "page" : undefined}
+              aria-label={locale.t("ui.header.services")}
+              >{locale.t("ui.header.services")}</a
+            ></li
+          ><li class="menu-item"
+            ><a
+              href={locale.href("/shop")}
+              aria-current={activePath === "/shop" ? "page" : undefined}
+              aria-label={locale.t("ui.header.shop")}
+              >{locale.t("ui.header.shop")}</a
+            ></li
+          ><li class="menu-item"
+            ><a
+              href={locale.href("/membership")}
+              aria-current={activePath === "/membership" ? "page" : undefined}
+              aria-label={locale.t("ui.header.plans")}
+              >{locale.t("ui.header.plans")}</a
+            ></li
+          ><li class="menu-item"
             ><a
               href={locale.href("/contact")}
               aria-current={activePath === "/contact" ? "page" : undefined}
@@ -688,44 +675,42 @@
                 aria-label={locale.t("ui.header.about-us")}
                 >{locale.t("ui.header.about-us")}</a
               ></li
-            >{#if !dealer.businessPreview}<li class="menu-item"
-                ><a
-                  href={locale.href("/import")}
-                  aria-current={activePath === "/import" ? "page" : undefined}
-                  aria-label={locale.t("ui.header.import")}
-                  >{locale.t("ui.header.import")}</a
-                ></li
-              >{/if}{#if !dealer.businessPreview}<li class="menu-item"
-                ><a
-                  href={locale.href("/news")}
-                  aria-current={activePath === "/news" ? "page" : undefined}
-                  aria-label={locale.t("ui.header.news")}
-                  >{locale.t("ui.header.news")}</a
-                ></li
-              >{/if}{#if !dealer.businessPreview}<li class="menu-item"
-                ><a
-                  href={locale.href("/calculator")}
-                  aria-current={activePath === "/calculator"
-                    ? "page"
-                    : undefined}
-                  aria-label={locale.t("ui.header.car-calculator")}
-                  >{locale.t("ui.header.car-calculator")}</a
-                ></li
-              >{/if}<li class="menu-item"
+            ><li class="menu-item"
+              ><a
+                href={locale.href("/import")}
+                aria-current={activePath === "/import" ? "page" : undefined}
+                aria-label={locale.t("ui.header.import")}
+                >{locale.t("ui.header.import")}</a
+              ></li
+            ><li class="menu-item"
+              ><a
+                href={locale.href("/news")}
+                aria-current={activePath === "/news" ? "page" : undefined}
+                aria-label={locale.t("ui.header.news")}
+                >{locale.t("ui.header.news")}</a
+              ></li
+            ><li class="menu-item"
+              ><a
+                href={locale.href("/calculator")}
+                aria-current={activePath === "/calculator" ? "page" : undefined}
+                aria-label={locale.t("ui.header.car-calculator")}
+                >{locale.t("ui.header.car-calculator")}</a
+              ></li
+            ><li class="menu-item"
               ><a
                 href={locale.href("/faq")}
                 aria-current={activePath === "/faq" ? "page" : undefined}
                 aria-label={locale.t("ui.header.faq")}
                 >{locale.t("ui.header.faq")}</a
               ></li
-            >{#if !dealer.businessPreview}<li class="menu-item"
-                ><a
-                  href={locale.href("/terms")}
-                  aria-current={activePath === "/terms" ? "page" : undefined}
-                  aria-label={locale.t("ui.header.terms")}
-                  >{locale.t("ui.header.terms")}</a
-                ></li
-              >{/if}</ul
+            ><li class="menu-item"
+              ><a
+                href={locale.href("/terms")}
+                aria-current={activePath === "/terms" ? "page" : undefined}
+                aria-label={locale.t("ui.header.terms")}
+                >{locale.t("ui.header.terms")}</a
+              ></li
+            ></ul
           ></details
         >
       </nav>

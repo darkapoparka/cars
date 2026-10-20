@@ -1,0 +1,172 @@
+name: Existing dealer Cloudflare release builds
+on:
+  push:
+    branches: [main]
+    paths: [docs/releases/cloudflare-existing25-20261011/build-request.json]
+permissions:
+  contents: read
+defaults:
+  run:
+    shell: bash
+concurrency:
+  group: cars-existing25-cloudflare-builds
+  cancel-in-progress: false
+jobs:
+  plan:
+    if: github.repository == 'darkapoparka/cars' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    outputs:
+      matrix: ${{ steps.matrix.outputs.matrix }}
+      dealers: ${{ steps.matrix.outputs.dealers }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /scripts/
+            /.github/workflows/existing-fleet-cloudflare.yml
+            /docs/DEPLOYMENT-INVENTORY.json
+            /docs/releases/cloudflare-existing25-20261011/selection.json
+            /docs/releases/cloudflare-existing25-20261011/build-request.json
+            /templates/karento-best/src/lib/components/Header.svelte
+            /templates/karento-best/src/lib/components/MobileNavigation.svelte
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: '26.10.0'
+          package-manager-cache: false
+      - run: node --test scripts/existing-fleet-cloudflare.test.mjs scripts/assemble-existing-fleet-single-worker.test.mjs scripts/deploy-dealer-single-worker.test.mjs scripts/client-logo-contract.test.mjs scripts/dealer-reference-package.test.mjs scripts/modern-demo-database.test.mjs scripts/dealer-presentation.test.mjs scripts/existing-wave-registry.test.mjs scripts/dealer-contact-fallback.test.mjs
+      - id: matrix
+        run: |
+          node scripts/build-existing-fleet-cloudflare.mjs matrix >> "$GITHUB_OUTPUT"
+          node -e 'const r=require("./docs/releases/cloudflare-existing25-20261011/build-request.json");console.log("dealers="+JSON.stringify({include:r.dealers.map(slug=>({slug}))}));' >> "$GITHUB_OUTPUT"
+  compile:
+    needs: plan
+    name: ${{ matrix.slug }} / ${{ matrix.key }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      max-parallel: 14
+      matrix: ${{ fromJSON(needs.plan.outputs.matrix) }}
+    env:
+      DEALER_SLUG: ${{ matrix.slug }}
+      DEALER_FAMILY: ${{ matrix.key }}
+      NODE_OPTIONS: --max-old-space-size=4608
+      NEXT_TELEMETRY_DISABLED: '1'
+      WRANGLER_SEND_METRICS: 'false'
+    steps:
+      - name: Check out exact build source and historical publication proof objects
+        id: compile_checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+          persist-credentials: true
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /scripts/
+            /docs/DEPLOYMENT-INVENTORY.json
+            /docs/releases/cloudflare-existing25-20261011/selection.json
+            /docs/releases/cloudflare-existing25-20261011/build-request.json
+            /docs/releases/**/*.json
+            /docs/releases/cloudflare-existing25-20261011/new-source/${{ matrix.slug }}/
+            /templates.lock.json
+            /clients/index.json
+            /clients/${{ matrix.slug }}/
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: ${{ matrix.node }}
+          package-manager-cache: false
+      - name: Install pinned share tooling without Cloudflare credentials
+        run: |
+          mkdir -p runtime/varna-tools
+          printf '{"private":true}\n' > runtime/varna-tools/package.json
+          npm install --prefix runtime/varna-tools --ignore-scripts --save-exact sharp@0.35.5 typescript@6.0.3
+      - name: Compile current dealer with maintained native Cloudflare adapters
+        run: node scripts/build-existing-fleet-cloudflare.mjs compile "$DEALER_SLUG" "$DEALER_FAMILY"
+      - name: End historical-build Git read authentication before artifact upload
+        if: always() && steps.compile_checkout.outcome == 'success'
+        run: |
+          credentials_config="$(git config --local --no-includes --get "includeIf.gitdir:$GITHUB_WORKSPACE/.git.path")"
+          [[ "${credentials_config%/*}" == "$RUNNER_TEMP" && "${credentials_config##*/}" =~ ^git-credentials-[0-9a-f-]+\.config$ ]] || exit 1
+          git config --file "$credentials_config" --unset-all http.https://github.com/.extraheader
+      - name: Retain exact compiled Worker, assets, locks and evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: existing-cf-${{ matrix.slug }}-${{ matrix.key }}-${{ github.run_id }}-${{ github.run_attempt }}
+          path: runtime/existing-fleet-cloudflare/${{ matrix.slug }}/${{ matrix.key }}/artifact/
+          include-hidden-files: true
+          if-no-files-found: error
+          retention-days: 7
+          compression-level: 1
+  delivery_artifacts:
+    needs: [plan, compile]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    strategy:
+      max-parallel: 3
+      matrix: ${{ fromJSON(needs.plan.outputs.dealers) }}
+    steps:
+      - name: Check out exact composition tools, registry and source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /scripts/
+            /docs/DEPLOYMENT-INVENTORY.json
+            /docs/releases/cloudflare-existing25-20261011/selection.json
+            /docs/releases/cloudflare-existing25-20261011/build-request.json
+            /docs/releases/**/*.json
+            /clients/${{ matrix.slug }}/
+      - uses: actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0
+        with:
+          pattern: existing-cf-${{ matrix.slug }}-*-${{ github.run_id }}-${{ github.run_attempt }}
+          path: runtime/existing-fleet-single-worker/${{ github.run_id }}-${{ github.run_attempt }}/${{ matrix.slug }}/inputs
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: '26.10.0'
+          package-manager-cache: false
+      - name: Install the existing exact uploader and esbuild lock without credentials
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const lock=JSON.parse(fs.readFileSync('scripts/publishing/cloudflare-router-lock.json'));
+          if(lock.packages['node_modules/wrangler'].version!=='4.149.0'||lock.packages['node_modules/esbuild'].version!=='0.28.2')throw Error('Unexpected singleton toolchain lock');
+          fs.mkdirSync('runtime/single-worker-tools',{recursive:true});
+          fs.writeFileSync('runtime/single-worker-tools/package.json',JSON.stringify({name:lock.name,private:true,devDependencies:lock.packages[''].devDependencies}));
+          fs.copyFileSync('scripts/publishing/cloudflare-router-lock.json','runtime/single-worker-tools/package-lock.json');
+          NODE
+          npm ci --prefix runtime/single-worker-tools --include=dev
+      - name: Verify seven native targets, compose one Worker and seal its dry-run artifact
+        env:
+          DEALER_SLUG: ${{ matrix.slug }}
+          WRANGLER_SEND_METRICS: 'false'
+          NEXT_TELEMETRY_DISABLED: '1'
+          NODE_OPTIONS: --max-old-space-size=4608
+        run: |
+          area="runtime/existing-fleet-single-worker/$GITHUB_RUN_ID-$GITHUB_RUN_ATTEMPT/$DEALER_SLUG"
+          node scripts/assemble-existing-fleet-single-worker.mjs "$DEALER_SLUG" "$area/inputs" "$area/output" runtime/single-worker-tools/package.json
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: existing-cf-single-worker-${{ matrix.slug }}-${{ github.run_id }}-${{ github.run_attempt }}
+          path: runtime/existing-fleet-single-worker/${{ github.run_id }}-${{ github.run_attempt }}/${{ matrix.slug }}/output/
+          include-hidden-files: true
+          if-no-files-found: error
+          compression-level: 6
+          retention-days: 7
+      - name: Retain compact composition and dry-run evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: existing-cf-single-worker-evidence-${{ matrix.slug }}-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            runtime/existing-fleet-single-worker/${{ github.run_id }}-${{ github.run_attempt }}/${{ matrix.slug }}/composition-review.json
+            runtime/existing-fleet-single-worker/${{ github.run_id }}-${{ github.run_attempt }}/${{ matrix.slug }}/evidence/dry-run.log
+          if-no-files-found: warn
+          retention-days: 7

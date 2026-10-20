@@ -3,15 +3,16 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { createRequire } from 'node:module';
-import { fingerprint, filesAt } from '../lib/workflow.mjs';
+import { fingerprint, filesAt, git } from '../lib/workflow.mjs';
 import { planSixDesignSelection, SIX_DESIGN_PACKAGING_CANDIDATE } from '../lib/six-design-release.mjs';
 import { loadDealerProfile } from '../lib/client-refresh-normalize.mjs';
 import { applyRefreshAdapter } from '../lib/client-refresh-adapters.mjs';
+import { restoreTemplatePalette, templatePaletteConfigPath } from '../lib/client-refresh-presentation.mjs';
 import { applyExtendedRefreshAdapter, sealExtendedVariant, EXTENDED_VARIANT_RECEIPTS, retainDealerVariantAssets } from '../lib/client-refresh-six.mjs';
 import { validatePackagingManifest, packageRetainsPath } from '../package-dealer.mjs';
 import { applyMounts } from '../publishing/mounts.mjs';
-import { adoptNativeSource, applyNativeMounts } from '../publishing/native-mounts.mjs';
-import { assertNativeAdoption } from '../lib/native-localization.mjs';
+import { adoptNativeSource, adoptNativeQualification, applyNativeMounts } from '../publishing/native-mounts.mjs';
+import { assertNativeAdoption, assertNativeQualification, validateNativeQualificationContext, validateTemplateQualification, NATIVE_CHECKS, ADOPTION_FILE } from '../lib/native-localization.mjs';
 import { refreshNormalizeInternals } from '../lib/client-refresh-normalize.mjs';
 import {
   materializeUpgradeCandidate,
@@ -26,7 +27,9 @@ import {
 } from './three-way-upgrade.mjs';
 import { readPinnedTemplateTree } from './pinned-template-source.mjs';
 import { baseNativeManifest, APP_PACKAGING_VERSION, assertAppVariant } from '../publishing/app-variant.mjs';
+import {prepareAppDealer,sealAppDealerSource} from '../lib/app-dealer-adapter.mjs';
 import { buildLegacyDetailRouteMap, legacyDetailArtifact, LEGACY_DETAIL_FILE } from '../publishing/legacy-detail-routes.mjs';
+import {readRegisteredDealerAdoption,assertRegisteredAdoptionPlan,registeredAdoptionTarget,materializeRegisteredAssetView,assertRegisteredAssetView,assertRegisteredCandidateDirectory,assertRegisteredMountOwnership} from '../registered-dealer-adoption.mjs';
 
 const TEMPLATE_KEYS = ['auto-best', 'modern', 'carwow', 'import', 'app', 'mobile', 'karento-best'];
 const sha256 = value => crypto.createHash('sha256').update(value).digest('hex');
@@ -41,7 +44,9 @@ Opt in to a template update for one existing dealer.
        [--template-root <path>] [--lock-file <path>] [--run-dir <path>]
        [--candidate-dir <path>] [--resolutions-file <json-path>]
        [--candidate-asset-pool <path>] [--asset-pool <installation-path>]
-       [--design-set six] [--variants karento-best]
+       [--design-set six] [--template-palette] [--variants karento-best]
+       [--qualification <reviewed-context-json> --lock-file <candidate-lock-json>]
+       [--registered-adoption <reviewed-receipt-json> --registered-adoption-sha256 <hash>] [--refresh-facts]
   node update-dealer-template.mjs install --run-dir <path>
   node update-dealer-template.mjs rollback --run-dir <path> [--dealer-root <path>]
 
@@ -55,7 +60,7 @@ function parseCommand(argv) {
   const [action, ...rest] = argv;
   if (!['plan', 'install', 'rollback'].includes(action)) throw new Error(`Unknown action: ${action}\n${updateDealerTemplateUsage}`);
   const allowed = {
-    plan: new Set(['dealer-root', 'cars-root', 'template-root', 'lock-file', 'run-dir', 'candidate-dir', 'resolutions-file', 'asset-pool', 'candidate-asset-pool', 'design-set', 'variants']),
+    plan: new Set(['dealer-root', 'cars-root', 'template-root', 'lock-file', 'run-dir', 'candidate-dir', 'resolutions-file', 'asset-pool', 'candidate-asset-pool', 'design-set', 'variants', 'template-palette', 'qualification', 'registered-adoption', 'registered-adoption-sha256', 'refresh-facts']),
     install: new Set(['run-dir']),
     rollback: new Set(['run-dir', 'dealer-root'])
   }[action];
@@ -65,8 +70,9 @@ function parseCommand(argv) {
     if (!flag.startsWith('--')) throw new Error(`Unexpected argument: ${flag}`);
     const key = flag.slice(2);
     if (!allowed.has(key)) throw new Error(`Unknown --${key} option for ${action}`);
-    if (!rest[index + 1] || rest[index + 1].startsWith('--')) throw new Error(`Missing value for --${key}`);
     if (values[key] !== undefined) throw new Error(`Duplicate --${key} option`);
+    if (key === 'template-palette' || key === 'refresh-facts') { values[key] = true; continue; }
+    if (!rest[index + 1] || rest[index + 1].startsWith('--')) throw new Error(`Missing value for --${key}`);
     values[key] = rest[++index];
   }
   return { action, values };
@@ -222,7 +228,13 @@ export function registeredDeliveryOrigin(record, manifest) {
   return origin;
 }
 
-export function targetManifestForUpgrade({ dealerRoot, manifest, pins, targetVariants = manifest.variants, carsRoot }) {
+export function targetManifestForUpgrade({ dealerRoot, manifest, pins, targetVariants = manifest.variants, carsRoot, registeredAdoption }) {
+  if (registeredAdoption) {
+    assertRegisteredAdoptionPlan(registeredAdoption,{dealerRoot,manifest});
+    const next=registeredAdoptionTarget(registeredAdoption,pins);
+    if(JSON.stringify(next.variants)!==JSON.stringify(targetVariants))throw new Error('Registered adoption requires its reviewed six-family selection');
+    return validatePackagingManifest(next);
+  }
   const next = updateManifestPins(manifest, pins);
   next.variants = structuredClone(targetVariants);
   if (targetVariants.length === 6) {
@@ -269,14 +281,17 @@ export function targetManifestForUpgrade({ dealerRoot, manifest, pins, targetVar
   return validatePackagingManifest(next);
 }
 
-async function adaptPinnedBases({ keys, oldBases, newBases, manifest, targetManifest }) {
+export async function adaptPinnedBases({ keys, oldBases, newBases, manifest, targetManifest, registeredAdoption }) {
   let oldFiles = new Map(), newFiles = new Map();
   for (const key of keys) {
     if (oldBases[key]?.size) addPrefixedTree(oldFiles, key, oldBases[key]);
     addPrefixedTree(newFiles, key, newBases[key]);
   }
   let fromAdapter, targetAdapter;
-  if (manifest.packaging.version === '1') {
+  if (registeredAdoption) {
+    assertRegisteredAdoptionPlan(registeredAdoption,{manifest});
+    fromAdapter='registered-raw-unmounted-applications';
+  } else if (manifest.packaging.version === '1') {
     fromAdapter = 'cars-package-v1-mounts';
     await applyMounts(oldFiles, manifest);
   } else if (['2', APP_PACKAGING_VERSION, SIX_DESIGN_PACKAGING_CANDIDATE].includes(manifest.packaging.version)) {
@@ -353,7 +368,7 @@ function writeDirectoryTreeChanges(root, before, after, assetPool) {
   }
 }
 
-export async function regenerateDealerCatalogs(candidateDirectory, carsRoot = defaultCarsRoot(), selectedKeys = ['auto-best','carwow']) {
+export async function regenerateDealerCatalogs(candidateDirectory, carsRoot = defaultCarsRoot(), selectedKeys = ['auto-best','carwow'], {mutationWriter} = {}) {
   for (const key of ['auto-best', 'carwow'].filter(key=>selectedKeys.includes(key))) {
     const directory = path.join(candidateDirectory, key);
     if (!fs.existsSync(directory)) continue;
@@ -371,8 +386,15 @@ export async function regenerateDealerCatalogs(candidateDirectory, carsRoot = de
       script = script.replaceAll('...prettierOptions, parser:',
         '...prettierOptions, plugins: [], parser:');
     }
-    // Execute the existing reviewed generator against this derived source only.
-    await import(`data:text/javascript;base64,${Buffer.from(script).toString('base64')}#${++catalogGeneration}`);
+    // Route only this reviewed generator's existing write seam. Unknown
+    // mutators hold; compilation and reads keep the maintained implementation.
+    if(mutationWriter){
+      if((script.match(/fs\.writeFileSync\(/g)||[]).length!==1||/fs\.(?:writeFile|appendFile|mkdir|rename|unlink|rm|copyFile|chmod)(?:Sync)?\(/.test(script.replaceAll('fs.writeFileSync(','__ownedWrite(')))throw Error(key+': unreviewed catalog mutation boundary');
+      const writerModule=pathToFileURL(path.join(carsRoot,'scripts/lib/source-mutation-writer.mjs')).href;
+      script=`import {sourceMutationWrite as __sourceWrite} from ${JSON.stringify(writerModule)};\nconst __ownedWrite=(file,data)=>__sourceWrite(file,Buffer.from(data),()=>{throw Error('Missing owned catalog writer');});\n`+script.replaceAll('fs.writeFileSync(','__ownedWrite(');
+      const {withSourceMutationWriter}=await import(writerModule);
+      await withSourceMutationWriter(mutationWriter,()=>import(`data:text/javascript;base64,${Buffer.from(script).toString('base64')}#${++catalogGeneration}`));
+    }else await import(`data:text/javascript;base64,${Buffer.from(script).toString('base64')}#${++catalogGeneration}`);
   }
 }
 
@@ -385,10 +407,12 @@ export function updateSelection(manifest, { designSet, variants } = {}) {
 }
 
 /** Newly selected families reuse the same fact pack and adapters as ordinary dealer work. */
-async function personalizeAddedBases({ pins, newBases, dealerRoot, manifest }) {
+async function personalizeAddedBases({ pins, newBases, dealerRoot, manifest, registeredAdoption }) {
+  // Registered source is personalized consistently after the preservation merge.
+  if(registeredAdoption){assertRegisteredAdoptionPlan(registeredAdoption,{dealerRoot,manifest});return {};}
   const added = Object.entries(pins).filter(([,pin])=>pin.from === null);
   if (!added.length) return {};
-  const profile = loadDealerProfile(dealerRoot,manifest.slug), adaptation = {};
+  const profile = registeredAdoption?.profile ?? loadDealerProfile(dealerRoot,manifest.slug), adaptation = {};
   for (const [key] of added) {
     if (Object.hasOwn(EXTENDED_VARIANT_RECEIPTS,key)) {
       const files = new Map([...newBases[key]].map(([name,bytes])=>[key+'/'+name,bytes]));
@@ -415,8 +439,119 @@ async function personalizeAddedBases({ pins, newBases, dealerRoot, manifest }) {
   return adaptation;
 }
 
+
+/** Explicit factual refresh uses fresh pinned target trees, never a twice-personalized candidate. */
+export async function personalizeFactualTargetBases({pins,newBases,dealerRoot,manifest}) {
+  const keys=['auto-best','modern','import','app','mobile','karento-best'];
+  if(JSON.stringify(Object.keys(pins).sort())!==JSON.stringify([...keys].sort()) || manifest.packaging?.version!=='5')throw new Error('Factual refresh requires all six qualified target families');
+  const profile=loadDealerProfile(dealerRoot,manifest.slug),consumerPaths=new Set(),adaptations={};
+  const note=(before,after,prefix='')=>{
+    for(const name of new Set([...before.keys(),...after.keys()])) {
+      const prior=before.get(name),next=after.get(name);
+      if(prior&&next&&prior.equals(next))continue;
+      if(!next)throw new Error('Factual adapter unexpectedly removed a target path: '+prefix+name);
+      consumerPaths.add(prefix+name);
+    }
+  };
+  for(const key of ['auto-best','modern','import']) {
+    const scratchParent=fs.realpathSync(process.env.TEMP||process.env.TMP||dealerRoot),tempRoot=fs.mkdtempSync(path.join(scratchParent,'cars-factual-target-'));
+    try {
+      const before=new Map(newBases[key]),textInputs=new Map([...before].filter(([,bytes])=>!bytes.includes(0)&&Buffer.from(bytes.toString('utf8')).equals(bytes)));writeDirectoryTreeChanges(tempRoot,new Map(),textInputs);
+      applyRefreshAdapter({key,oldVariant:path.join(dealerRoot,key),candidate:tempRoot,profile});
+      const derived=readDirectoryTree(tempRoot);for(const name of textInputs.keys())if(!derived.has(name))throw new Error('Factual adapter unexpectedly removed a target input: '+key+'/'+name);let after=new Map([...before,...derived]);
+      const retained=new Map([...after].map(([name,bytes])=>[key+'/'+name,bytes]));
+      retainDealerVariantAssets(retained,key,profile,dealerRoot);
+      after=splitPrefixedTrees(retained,[key])[key];note(before,after,key+'/');newBases[key]=after;
+    } finally {
+      const absolute=fs.realpathSync(tempRoot);
+      if(path.dirname(absolute)!==scratchParent||!path.basename(absolute).startsWith('cars-factual-target-'))throw new Error('Unsafe factual target scratch cleanup');
+      fs.rmSync(absolute,{recursive:true,force:true});
+    }
+  }
+  const generated=new Map();for(const key of keys)addPrefixedTree(generated,key,newBases[key]);
+  const readFile=name=>{
+    if(generated.has(name))return generated.get(name);
+    return fs.readFileSync(path.join(dealerRoot,name));
+  };
+  const app=await prepareAppDealer(dealerRoot,manifest,{readFile,appFiles:newBases.app});
+  for(const [name,bytes]of app.files){generated.set('app/'+name,bytes);consumerPaths.add('app/'+name);}
+  const beforeExtended=new Map(generated);
+  for(const key of ['mobile','karento-best'])adaptations[key]=applyExtendedRefreshAdapter({files:generated,key,profile,client:dealerRoot});
+  note(beforeExtended,generated);
+  const split=splitPrefixedTrees(generated,keys);for(const key of keys)newBases[key]=split[key];
+  if(keys.some(key=>![...consumerPaths].some(name=>name.startsWith(key+'/'))))throw new Error('Every factual target family needs exact consumer proof');
+  return {adaptations,appProvenance:app.provenance,proof:{schemaVersion:1,stage:'preservation-merge-before-native-catalogs-and-branding',mode:'current-facts-from-pinned-six-targets',dealer:manifest.slug,profileSha256:sha256(JSON.stringify(profile)),
+    targetSources:Object.fromEntries(keys.map(key=>[key,renderPins(pins[key].targetSource)])),consumerPaths:[...consumerPaths].sort()}};
+}
+
+/** A reviewed dealer resolution cannot retain stale facts and receive a new profile seal. */
+export function assertFactualRefreshCandidate({candidate,newBases,proof}) {
+  const keys=['auto-best','modern','import','app','mobile','karento-best'];
+  if(!proof || proof.schemaVersion!==1 || proof.stage!=='preservation-merge-before-native-catalogs-and-branding' || proof.mode!=='current-facts-from-pinned-six-targets' || !/^[a-f0-9]{64}$/.test(proof.profileSha256??'') || JSON.stringify(Object.keys(proof.targetSources??{}).sort())!==JSON.stringify([...keys].sort()) || !Array.isArray(proof.consumerPaths) || !proof.consumerPaths.length || new Set(proof.consumerPaths).size!==proof.consumerPaths.length || JSON.stringify(proof.consumerPaths)!==JSON.stringify([...proof.consumerPaths].sort()) || proof.consumerPaths.some(name=>typeof name!=='string'||!keys.includes(name.split('/')[0])||name.split('/').some(part=>!part||part==='.'||part==='..')||name.includes('\\')) || keys.some(key=>!proof.consumerPaths.some(name=>name.startsWith(key+'/'))))throw new Error('Exact factual target proof required');
+  const consumerHashes=[];
+  for(const name of proof.consumerPaths) {
+    const slash=name.indexOf('/'),key=name.slice(0,slash),relative=name.slice(slash+1);
+    const expected=newBases[key]?.get(relative),actual=candidate.get(name);
+    if(!expected||!actual||!actual.equals(expected))throw new Error('Factual target differs after preservation; review custom factual consumer: '+name);
+    consumerHashes.push({path:name,sha256:sha256(expected)});
+  }
+  return {...proof,consumerHashes};
+}
+
+export function assertFactualRefreshReplay({proof,metadata,newBases}){
+  const candidate=new Map();for(const [key,files]of Object.entries(newBases))for(const [name,bytes]of files)candidate.set(key+'/'+name,bytes);
+  const current=assertFactualRefreshCandidate({candidate,newBases,proof});
+  if(metadata.selection?.refreshFacts!==true||metadata.registeredAdoption||JSON.stringify(current)!==JSON.stringify(metadata.factualRefresh))throw new Error('Current factual profile, target pins or consumer bytes changed after review');return current;
+}
+
+export function assertFactualRefreshAdmission({enabled,designSet,selectedKeys,qualification,registeredAdoption,manifest}) {
+ if(!enabled)return;
+ if(enabled!==true||designSet!=='six'||selectedKeys||registeredAdoption||!qualification||!['2','3','5'].includes(manifest?.packaging?.version))throw new Error('Explicit factual refresh requires ordinary native source, all six families and reviewed qualification');
+ validateNativeQualificationContext(qualification,{dealer:manifest.slug});
+}
+
+/** Reject any registered adapter delta that would erase a preserved custom consumer. */
+export function assertRegisteredPersonalizationPreservation({before,after,newBases}) {
+  const families=['auto-best','modern','import','app','mobile','karento-best'];
+  if(!(before instanceof Map)||!(after instanceof Map)||families.some(key=>!(newBases?.[key] instanceof Map)))throw new Error('Registered personalization requires exact mounted target bases');
+  const consumerHashes=[];
+  for(const name of [...new Set([...before.keys(),...after.keys()])].sort()) {
+    const slash=name.indexOf('/'),key=name.slice(0,slash);if(!families.includes(key))continue;
+    const prior=before.get(name),next=after.get(name);if(prior&&next&&prior.equals(next))continue;
+    if(!next)throw new Error('Registered personalization removed a preserved path: '+name);
+    // Reviewed rasters have their own exact input lease. Text consumers must have no preserved custom bytes.
+    const text=prior&&!/\.(?:png|webp|jpe?g|gif|ico|avif|woff2?|ttf|eot)$/i.test(name);
+    if(text){const target=newBases[key].get(name.slice(slash+1));if(!target||!target.equals(prior))throw new Error('Registered personalization would overwrite a custom consumer; review a template resolution: '+name);}
+    consumerHashes.push({path:name,sha256:sha256(next)});
+  }
+  return {schemaVersion:1,stage:'personalization-before-native-catalogs-and-branding',mode:'mounted-template-text-consumers-only',consumerHashes};
+}
+
+/** Reuse maintained adapters after merge; only the authenticated asset view supplies inputs. */
+export async function personalizeRegisteredCandidate({registeredAdoption,assetView,candidateDirectory,manifest,assetPool,newBases}) {
+  assertRegisteredAdoptionPlan(registeredAdoption);assertRegisteredAssetView(registeredAdoption,assetView);assertRegisteredCandidateDirectory(registeredAdoption,candidateDirectory);assertRegisteredMountOwnership(manifest,{files:new Map(),commit:registeredAdoption.baseline.commit,tree:registeredAdoption.baseline.tree},registeredAdoption);
+  const profile=registeredAdoption.profile,adaptations={},original=readDirectoryTree(candidateDirectory);
+  for(const key of ['auto-best','modern','import']){
+    const assets=new Map();retainDealerVariantAssets(assets,key,profile,assetView);
+    const before=readDirectoryTree(candidateDirectory),after=new Map([...before,...assets]);writeDirectoryTreeChanges(candidateDirectory,before,after,assetPool);
+    applyRefreshAdapter({key,oldVariant:path.join(assetView,key),candidate:path.join(candidateDirectory,key),profile});
+  }
+  const before=readDirectoryTree(candidateDirectory),files=new Map(before),appFiles=new Map([...files].filter(([name])=>name.startsWith('app/')).map(([name,bytes])=>[name.slice(4),bytes]));
+  const readFile=name=>{const bytes=files.get(name);if(!bytes){const error=Error('Missing reviewed candidate input: '+name);error.code='ENOENT';throw error;}return bytes;};
+  const app=await prepareAppDealer(candidateDirectory,manifest,{appFiles,readFile});for(const [name,bytes]of app.files)files.set('app/'+name,bytes);
+  const icon=fs.readFileSync(path.join(assetView,profile.business.logo.slice(1)));files.set('app/public/dealer-app/icon.png',icon);
+  for(const key of ['mobile','karento-best'])adaptations[key]=applyExtendedRefreshAdapter({files,key,profile,client:assetView});
+  // The share-identity source remains a retained exact reviewed raster.
+  for(const publicName of new Set([profile.business.logo,profile.business.logoDark]))files.set(publicName.slice(1),fs.readFileSync(path.join(assetView,publicName.slice(1))));
+  const preservation=assertRegisteredPersonalizationPreservation({before:original,after:files,newBases});
+  sealAppDealerSource({files,manifest,provenance:app.provenance});
+  writeDirectoryTreeChanges(candidateDirectory,before,files,assetPool);assertRegisteredAssetView(registeredAdoption,assetView);
+  return {adaptations,preservation};
+}
+
 /** Preserve exact old Carwow links while the published third family changes. */
-export function addLegacyDetailUpgrade({ files, dealerRoot, manifest, pins }) {
+export function addLegacyDetailUpgrade({ files, dealerRoot, manifest, pins, registeredAdoption }) {
+  if(registeredAdoption){assertRegisteredAdoptionPlan(registeredAdoption,{dealerRoot});return null;}
   if (manifest.packaging?.version !== SIX_DESIGN_PACKAGING_CANDIDATE) return null;
   const original=readJson(path.join(dealerRoot,'dealer.json'));
   const migration=original.variants?.some(variant=>variant.key==='carwow'&&variant.base==='/variant-3');
@@ -434,7 +569,45 @@ export function addLegacyDetailUpgrade({ files, dealerRoot, manifest, pins }) {
   return {entries:mapping.artifact.entries.length,retired:mapping.artifact.retired.length,reference:mapping.reference};
 }
 
-async function addNativeAdoption(plan, candidateDirectory, dealerRoot, lock, {carsRoot, refreshedAt, extendedAdaptations = {}, candidateAssetPool} = {}) {
+function pinnedPaletteConfigs(newBases, pins, enabled) {
+  if (!enabled) return {};
+  const configs = {};
+  for (const key of Object.keys(pins)) {
+    const configPath = templatePaletteConfigPath(key);
+    if (!configPath) continue;
+    const bytes = newBases[key]?.get(configPath);
+    if (!Buffer.isBuffer(bytes)) throw new Error(`${key}: selected immutable template palette config is missing`);
+    configs[key] = Buffer.from(bytes);
+  }
+  return configs;
+}
+
+/** Runs after the preservation merge and before any native/source seal. */
+export function restorePinnedTemplatePalettes({ plan, candidateDirectory, templatePalette = false, templatePaletteConfigs = {} }) {
+  if (!templatePalette) return null;
+  const corrections = [];
+  for (const [key, pin] of Object.entries(plan.pins)) {
+    if (!templatePaletteConfigPath(key)) continue;
+    const templateConfigBuffer = templatePaletteConfigs[key];
+    if (!Buffer.isBuffer(templateConfigBuffer)) throw new Error(`${key}: exact pinned template palette bytes are required`);
+    corrections.push({ ...restoreTemplatePalette({key, templateConfigBuffer, candidate:path.join(candidateDirectory,key)}), source:renderPins(pin.targetSource) });
+  }
+  return { schemaVersion:1, mode:'selected-template-palette', corrections };
+}
+
+function reviewedUpgradeReport(plan) {
+  const review = upgradeReviewReport(plan);
+  if (plan.templatePalette) review.templatePalette = plan.templatePalette;
+  if (plan.nativeQualification) review.nativeQualification = plan.nativeQualification;
+  if (plan.factualRefresh) review.factualRefresh = plan.factualRefresh;
+  if (plan.registeredPersonalizationPreservation) review.registeredPersonalizationPreservation = plan.registeredPersonalizationPreservation;
+  return review;
+}
+
+async function addNativeAdoption(plan, candidateDirectory, dealerRoot, lock, {carsRoot, refreshedAt, extendedAdaptations = {}, candidateAssetPool, templatePalette = false, templatePaletteConfigs, qualification, registeredAdoption,registeredAssetView,registeredTargetBases,factualAppProvenance} = {}) {
+  if(registeredAdoption){assertRegisteredAdoptionPlan(registeredAdoption,{dealerRoot});const before=readDirectoryTree(candidateDirectory),after=new Map(before);for(const [name,bytes]of registeredAdoption.files){if(after.has(name)&&!after.get(name).equals(bytes))throw new Error('Registered adoption input destination is occupied');after.set(name,bytes);}writeDirectoryTreeChanges(candidateDirectory,before,after,candidateAssetPool);}
+  if(registeredAssetView){const derived=await personalizeRegisteredCandidate({registeredAdoption,assetView:registeredAssetView,candidateDirectory,manifest:plan.manifest,assetPool:candidateAssetPool,newBases:registeredTargetBases});extendedAdaptations=derived.adaptations;plan.registeredPersonalizationPreservation=derived.preservation;}
+  plan.templatePalette = restorePinnedTemplatePalettes({plan,candidateDirectory,templatePalette,templatePaletteConfigs});
   if (!['2', APP_PACKAGING_VERSION, SIX_DESIGN_PACKAGING_CANDIDATE].includes(plan.manifest.packaging.version)) {
     reconcilePlanWithCandidate({ source: dealerRoot, plan, candidateDirectory });
     return;
@@ -443,14 +616,18 @@ async function addNativeAdoption(plan, candidateDirectory, dealerRoot, lock, {ca
   const files = readDirectoryTree(candidateDirectory);
   const before = new Map([...files].map(([name, bytes]) => [name, Buffer.from(bytes)]));
   const candidateManifest = JSON.parse(files.get('dealer.json').toString('utf8').replace(/^\uFEFF/, ''));
-  addLegacyDetailUpgrade({files,dealerRoot,manifest:candidateManifest,pins:plan.pins});
+  addLegacyDetailUpgrade({files,dealerRoot,manifest:candidateManifest,pins:plan.pins,registeredAdoption});
   plan.manifest=candidateManifest;
   validatePackagingManifest(candidateManifest);
+  if(plan.factualRefresh&&factualAppProvenance)sealAppDealerSource({files,manifest:candidateManifest,provenance:factualAppProvenance});
   const baseManifest = baseNativeManifest(candidateManifest);
   const selectedNative = baseManifest.variants.some(({key})=>plan.pins[key]);
   const retainedFiles = new Map([...files].filter(([name]) => packageRetainsPath(name)));
-  const adopted = selectedNative ? adoptNativeSource(retainedFiles, baseManifest, lock.templates) : retainedFiles;
-  assertNativeAdoption(adopted, baseManifest);
+  const adopted = qualification ? adoptNativeQualification(retainedFiles,baseManifest,lock.templates,qualification,{root:carsRoot}) : selectedNative ? adoptNativeSource(retainedFiles, baseManifest, lock.templates,{root:carsRoot}) : retainedFiles;
+  if (qualification) {
+    const receipt=assertNativeQualification(adopted,baseManifest,qualification,{root:carsRoot});
+    plan.nativeQualification={context:structuredClone(qualification),contextDigest:receipt.contextDigest,receiptSha256:sha256(adopted.get(ADOPTION_FILE)),nativeApproval:false};
+  } else assertNativeAdoption(adopted, baseManifest,{root:carsRoot});
   if ([APP_PACKAGING_VERSION,SIX_DESIGN_PACKAGING_CANDIDATE].includes(candidateManifest.packaging.version) && plan.pins.app) {
     const appSource = candidateManifest.templateSources.app;
     candidateManifest.appVariant = { ...candidateManifest.appVariant, source: appSource };
@@ -470,7 +647,7 @@ async function addNativeAdoption(plan, candidateDirectory, dealerRoot, lock, {ca
     plan.manifest = candidateManifest;
   }
   if (candidateManifest.packaging.version === SIX_DESIGN_PACKAGING_CANDIDATE) {
-    const profile = loadDealerProfile(dealerRoot,candidateManifest.slug);
+    const profile = registeredAdoption?.profile ?? loadDealerProfile(dealerRoot,candidateManifest.slug);
     for (const key of Object.keys(EXTENDED_VARIANT_RECEIPTS).filter(key=>plan.pins[key])) {
       const current = files.has(EXTENDED_VARIANT_RECEIPTS[key]) ? JSON.parse(files.get(EXTENDED_VARIANT_RECEIPTS[key]).toString()) : null;
       const p = current?.personalization;
@@ -487,6 +664,17 @@ async function addNativeAdoption(plan, candidateDirectory, dealerRoot, lock, {ca
   const diskFiles = new Map([...files, ...adopted]);
   writeDirectoryTreeChanges(candidateDirectory, before, diskFiles, candidateAssetPool);
   reconcilePlanWithCandidate({ source: dealerRoot, plan, candidateDirectory });
+}
+
+/** Explicit CI candidate finalization after reviewed branding; it never installs source. */
+export async function finalizeDealerTemplateCandidate({plan,candidateDirectory,dealerRoot,lock,...options}) {
+  if (!plan?.ready || !Array.isArray(plan.changes) || !plan.pins || !plan.manifest) throw new Error('Reconstruct the ready reviewed plan, pins and candidate manifest before finalization');
+  const root=fs.realpathSync(options.carsRoot || defaultCarsRoot());
+  ensureInsideRuntime(root,candidateDirectory);
+  if(pathsOverlap(fs.realpathSync(dealerRoot),fs.realpathSync(candidateDirectory)))throw new Error('Candidate finalization must stay separate from dealer source');
+  if(options.qualification)validateNativeQualificationContext(options.qualification,{dealer:plan.manifest.slug});
+  await addNativeAdoption(plan,candidateDirectory,dealerRoot,lock,{...options,carsRoot:root});
+  return {plan,review:reviewedUpgradeReport(plan),candidateDigest:fingerprint(candidateDirectory).digest};
 }
 
 function readResolutionArtifact(runDirectory, metadata) {
@@ -507,6 +695,14 @@ function verifiedReviewArtifact(runDirectory, metadata) {
   if (!review.ready || JSON.stringify(review.pins) !== JSON.stringify(metadata.pins)) {
     throw new Error('Review report does not match the pinned update plan');
   }
+  if (Boolean(review.templatePalette) !== (metadata.selection?.templatePalette === true) ||
+      JSON.stringify(review.templatePalette ?? null) !== JSON.stringify(metadata.templatePalette ?? null)) {
+    throw new Error('Template palette selection or correction receipt changed after review');
+  }
+  if (Boolean(review.nativeQualification) !== Boolean(metadata.qualification) ||
+      JSON.stringify(review.nativeQualification ?? null) !== JSON.stringify(metadata.nativeQualification ?? null)) throw new Error('Source qualification mode or receipt changed after review');
+  if(JSON.stringify(review.registeredPersonalizationPreservation??null)!==JSON.stringify(metadata.registeredPersonalizationPreservation??null))throw new Error('Registered preservation review proof changed');
+  if(JSON.stringify(review.factualRefresh??null)!==JSON.stringify(metadata.factualRefresh??null))throw new Error('Factual refresh review proof changed');
   return review;
 }
 
@@ -548,7 +744,10 @@ async function validatePinnedBaseEvidence(metadata, manifest, lock, paths) {
     oldBases[key] = oldTree.tree;
     newBases[key] = targetTree.tree;
   }
-  const extendedAdaptations=await personalizeAddedBases({pins:metadata.pins,newBases,dealerRoot:metadata.dealerRoot,manifest});
+  const templatePaletteConfigs=pinnedPaletteConfigs(newBases,metadata.pins,metadata.selection?.templatePalette === true);
+  const refreshFacts=metadata.selection?.refreshFacts===true;assertFactualRefreshAdmission({enabled:refreshFacts,designSet:metadata.selection?.designSet,selectedKeys:metadata.selection?.selectedKeys,qualification:metadata.qualification?.context,manifest});
+  const factual=refreshFacts?await personalizeFactualTargetBases({pins:metadata.pins,newBases,dealerRoot:metadata.dealerRoot,manifest:metadata.targetManifest}):null;
+  const extendedAdaptations=factual?.adaptations??await personalizeAddedBases({pins:metadata.pins,newBases,dealerRoot:metadata.dealerRoot,manifest});
   const targetManifest = metadata.targetManifest;
   validatePackagingManifest(targetManifest);
   if (sha256(Buffer.from(JSON.stringify(targetManifest))) !== metadata.targetManifestSha256) {
@@ -559,7 +758,8 @@ async function validatePinnedBaseEvidence(metadata, manifest, lock, paths) {
   if(sha256(Buffer.from(JSON.stringify(currentTarget)))!==metadata.targetManifestSha256)throw new Error('Dealer delivery identity changed after review; create a new update plan');
   const adapted = await adaptPinnedBases({ keys: Object.keys(metadata.pins), oldBases, newBases, manifest, targetManifest });
   if (adapted.adapter !== metadata.baseAdapter) throw new Error('Dealer source adapter changed after review; create a new update plan');
-  return {...adapted,extendedAdaptations};
+  if(factual)assertFactualRefreshReplay({proof:factual.proof,metadata,newBases:adapted.newBases});
+  return {...adapted,extendedAdaptations,templatePaletteConfigs,factualAppProvenance:factual?.appProvenance};
 }
 
 function validateRepositoryPaths(pins, paths) {
@@ -575,6 +775,55 @@ function renderPins(pins) {
   return JSON.parse(JSON.stringify(pins));
 }
 
+function qualificationArtifact(carsRoot,requested) {
+  const target=path.resolve(carsRoot,requested),relative=path.relative(carsRoot,target).replaceAll('\\','/');
+  if(!/^(?:runtime\/|docs\/releases\/)/.test(relative)||!relative.endsWith('.json')||!fs.existsSync(target)||fs.lstatSync(target).isSymbolicLink()||!fs.lstatSync(target).isFile()||!samePath(fs.realpathSync(target),target))throw new Error('Qualification artifacts must be regular JSON files inside Cars runtime or docs/releases');
+  const bytes=fs.readFileSync(target);if(bytes.length>2*1024*1024)throw new Error('Qualification artifact exceeds its bounded source review size');
+  return {file:target,bytes,value:JSON.parse(bytes.toString('utf8').replace(/^\uFEFF/,'')),sha256:sha256(bytes)};
+}
+
+function loadQualification({carsRoot,dealer,lockFile,lockBytes,lock,requested}) {
+  if(!requested)return null;
+  const artifact=qualificationArtifact(carsRoot,requested),context=validateNativeQualificationContext(artifact.value,{dealer});
+  const origin=git(carsRoot,['remote','get-url','origin']).replace(/^git@github\.com:/i,'').replace(/^ssh:\/\/git@github\.com\//i,'').replace(/^https?:\/\/github\.com\//i,'').replace(/\.git\/?$/i,'').replace(/\/$/,'').toLowerCase();
+  if(origin!=='darkapoparka/cars')throw new Error('Qualification requires the registered Cars source repository');
+  const approvedFile=path.join(carsRoot,'templates.lock.json'),approvedBytes=fs.readFileSync(approvedFile),approved=JSON.parse(approvedBytes.toString('utf8').replace(/^\uFEFF/,''));
+  if(samePath(lockFile,approvedFile)||context.approvedLockSha256!==sha256(approvedBytes)||context.candidateLockSha256!==sha256(lockBytes))throw new Error('Qualification must pin a separate candidate lock and the unchanged global approved lock');
+  if(lock.schemaVersion!==approved.schemaVersion||JSON.stringify(Object.keys(lock.templates||{}).sort())!==JSON.stringify(Object.keys(approved.templates||{}).sort()))throw new Error('Qualification candidate lock must retain the complete approved release set');
+  qualificationArtifact(carsRoot,lockFile);
+  const delta=qualificationArtifact(carsRoot,context.sourceDeltaReview.reference);
+  if(delta.sha256!==context.sourceDeltaReview.sha256||delta.value.schemaVersion!==1||delta.value.kind!=='cars-source-delta-review'||delta.value.sourceCommit!==context.sourceCommit||delta.value.reviewed!==true||delta.value.reviewedAt!==context.sourceDeltaReview.reviewedAt||delta.value.nativeApproval!==false||!Array.isArray(delta.value.checks)||!delta.value.checks.length||delta.value.checks.some(row=>row.status!=='passed'||!/^[a-f0-9]{64}$/.test(row.evidenceSha256||''))||JSON.stringify(delta.value.pendingNativeChecks)!==JSON.stringify(NATIVE_CHECKS))throw new Error('Qualification delta evidence changed, failed, or falsely claims native acceptance');
+  let provisional=0;
+  for(const [key,release]of Object.entries(lock.templates||{})){
+    if(release.status!=='qualification'){
+      if(JSON.stringify(release)!==JSON.stringify(approved.templates?.[key]))throw new Error(`${key}: candidate lock changed an ordinary approved entry`);
+      continue;
+    }
+    const proof=validateTemplateQualification(key,release,context,{root:carsRoot}),parent=approved.templates?.[key];
+    if(!parent||JSON.stringify(proof.sourceQA.approvedRelease)!==JSON.stringify(parent))throw new Error(`${key}: source QA parent is not the current globally approved release`);
+    const sourceQa=qualificationArtifact(carsRoot,proof.sourceQA.reference);
+    if(sourceQa.sha256!==proof.sourceQA.sha256)throw new Error(`${key}: referenced original source QA bytes changed`);
+    if(git(carsRoot,['merge-base','--is-ancestor',release.source.revision,'refs/remotes/origin/main'],{allowFailure:true})===null)throw new Error(`${key}: qualification source is not published on Cars main`);
+    if(git(carsRoot,['rev-parse',`${release.source.revision}:${release.source.path}`])!==release.source.tree)throw new Error(`${key}: qualification subtree identity differs from published source`);
+    provisional++;
+  }
+  if(!provisional)throw new Error('Explicit source qualification requires provisional candidate entries');
+  return {file:artifact.file,sha256:artifact.sha256,context,approvedLockSha256:context.approvedLockSha256};
+}
+
+/** Read-only validation of the exact review chain before any candidate output. */
+export function validateDealerSourceQualification({carsRoot,dealer,lockFile,contextFile}) {
+  const root=fs.realpathSync(path.resolve(carsRoot)),file=path.resolve(root,lockFile);
+  const lockBytes=fs.readFileSync(file),lock=JSON.parse(lockBytes.toString('utf8').replace(/^\uFEFF/,''));
+  if(!contextFile)throw new Error('An explicit qualification context file is required');
+  return loadQualification({carsRoot:root,dealer,lockFile:file,lockBytes,lock,requested:contextFile});
+}
+
+export function assertUpgradeSourceAdmission({manifest,qualification,registeredAdoption,dealerRoot}) {
+  if(registeredAdoption){assertRegisteredAdoptionPlan(registeredAdoption,{dealerRoot,manifest});if(!qualification)throw new Error('Registered adoption requires a reviewed native qualification context');validateNativeQualificationContext(qualification,{dealer:manifest.slug});return;}
+  if(qualification&&!['2',APP_PACKAGING_VERSION,SIX_DESIGN_PACKAGING_CANDIDATE].includes(manifest.packaging?.version))throw new Error('Qualification uses the existing native dealer source workflow');
+}
+
 async function runPlan(values) {
   const createdAt = new Date().toISOString();
   const carsRoot = fs.realpathSync(path.resolve(values['cars-root'] || defaultCarsRoot()));
@@ -582,16 +831,26 @@ async function runPlan(values) {
   const manifestPath = path.join(dealerRoot, 'dealer.json');
   const lockFile = path.resolve(values['lock-file'] || path.join(carsRoot, 'templates.lock.json'));
   const templateRoot = path.resolve(values['template-root'] || path.join(path.dirname(carsRoot), 'template-repos'));
-  if (!fs.existsSync(manifestPath)) throw new Error(`Dealer manifest not found: ${manifestPath}`);
+  if(Boolean(values['registered-adoption'])!==Boolean(values['registered-adoption-sha256']))throw new Error('Registered adoption requires its exact reviewed receipt path/hash');
+  let registeredAdoption;
+  if(values['registered-adoption']){
+    if(values['design-set']!=='six'||values.variants)throw new Error('Registered adoption prepares every six-family source together');
+    const receiptPath=path.relative(carsRoot,path.resolve(carsRoot,values['registered-adoption'])).replaceAll('\\','/');
+    registeredAdoption=await readRegisteredDealerAdoption({root:carsRoot,dealer:path.basename(dealerRoot),pin:{path:receiptPath,sha256:values['registered-adoption-sha256']}});
+  }
+  if (!registeredAdoption&&!fs.existsSync(manifestPath)) throw new Error(`Dealer manifest not found: ${manifestPath}`);
   if (!fs.existsSync(lockFile)) throw new Error(`Template approval lock not found: ${lockFile}`);
   const sourceBeforeSha256=fingerprint(dealerRoot).digest;
-  const manifest = readJson(manifestPath);
+  const manifest = registeredAdoption?.manifest ?? readJson(manifestPath);
   validatePackagingManifest(manifest);
   const lockBytes = fs.readFileSync(lockFile);
   const lock = JSON.parse(lockBytes.toString('utf8').replace(/^\uFEFF/, ''));
   const selection = updateSelection(manifest,{designSet:values['design-set'],variants:values.variants});
-  const pins = selectPinnedRevisions(manifest, lock,{targetVariants:selection.targetVariants,keys:selection.selectedKeys});
-  const targetManifest = targetManifestForUpgrade({ dealerRoot, manifest, pins,targetVariants:selection.targetVariants,carsRoot });
+  const qualification=loadQualification({carsRoot,dealer:manifest.slug,lockFile,lockBytes,lock,requested:values.qualification});
+  const pins = selectPinnedRevisions(manifest, lock,{targetVariants:selection.targetVariants,keys:selection.selectedKeys,qualification:qualification?.context,root:carsRoot});
+  assertUpgradeSourceAdmission({manifest,qualification:qualification?.context,registeredAdoption,dealerRoot});
+  const refreshFacts=values['refresh-facts']===true;assertFactualRefreshAdmission({enabled:refreshFacts,designSet:values['design-set'],selectedKeys:selection.selectedKeys,qualification:qualification?.context,registeredAdoption,manifest});
+  const targetManifest = targetManifestForUpgrade({ dealerRoot, manifest, pins,targetVariants:selection.targetVariants,carsRoot,registeredAdoption });
   const resolutionBytes = values['resolutions-file'] ? fs.readFileSync(path.resolve(values['resolutions-file'])) : null;
   const resolutions = parseResolutions(resolutionBytes, pins);
   const paths = repositoryPaths(carsRoot, templateRoot);
@@ -625,27 +884,32 @@ async function runPlan(values) {
       target: { ...pin.targetSource, digest: targetTree.digest }
     };
   }
-  const extendedAdaptations=await personalizeAddedBases({pins,newBases,dealerRoot,manifest});
+  const templatePalette=values['template-palette'] === true;
+  const templatePaletteConfigs=pinnedPaletteConfigs(newBases,pins,templatePalette);
+  const factual=refreshFacts?await personalizeFactualTargetBases({pins,newBases,dealerRoot,manifest:targetManifest}):null;
+  const extendedAdaptations=factual?.adaptations??await personalizeAddedBases({pins,newBases,dealerRoot,manifest,registeredAdoption});
 
-  const adapted = await adaptPinnedBases({ keys: Object.keys(pins), oldBases, newBases, manifest, targetManifest });
+  const adapted = await adaptPinnedBases({ keys: Object.keys(pins), oldBases, newBases, manifest, targetManifest,registeredAdoption });
   const assetPool=values['asset-pool']?ensureCandidateDirectory({carsRoot,dealerRoot,repositoryPaths:paths,runDirectory,requested:values['asset-pool'],explicit:true}):null;
   if(assetPool&&pathsOverlap(assetPool,candidatePath))throw new Error('Derived asset pool must be separate from the candidate');
   const candidateAssetPool=values['candidate-asset-pool']?ensureCandidateDirectory({carsRoot,dealerRoot,repositoryPaths:paths,runDirectory,requested:values['candidate-asset-pool'],explicit:true}):assetPool;
   if(candidateAssetPool&&pathsOverlap(candidateAssetPool,candidatePath))throw new Error('Candidate asset pool must be separate from the candidate');
   if(assetPool&&candidateAssetPool&&!samePath(assetPool,candidateAssetPool)&&pathsOverlap(assetPool,candidateAssetPool))throw new Error('Candidate and installation asset pools must not contain each other');
   const candidateAssetPoolStats={pool:candidateAssetPool,objectsWritten:0,objectsReused:0,filesLinked:0,filesCopied:0,bytesLinked:0};
-  const plan = planDealerUpgrade({ dealerRoot, lock, oldBases: adapted.oldBases, newBases: adapted.newBases, targetManifest: adapted.targetManifest, selectedKeys:selection.selectedKeys, resolutions });
+  const plan = planDealerUpgrade({ dealerRoot, lock, oldBases: adapted.oldBases, newBases: adapted.newBases, targetManifest: adapted.targetManifest, selectedKeys:selection.selectedKeys, resolutions, qualification:qualification?.context,root:carsRoot,registeredAdoption });
   let candidateDirectory = null, candidateDigest = null;
+  if(plan.ready&&factual)plan.factualRefresh=assertFactualRefreshCandidate({candidate:plan.candidate,newBases:adapted.newBases,proof:factual.proof});
   if (plan.ready) {
     candidateDirectory = materializeUpgradeCandidate({
       source: dealerRoot,
       plan,
       destination: candidatePath, assetPool:candidateAssetPool, assetPoolStats:candidateAssetPoolStats
     });
-    await addNativeAdoption(plan, candidateDirectory, dealerRoot, lock, {carsRoot, refreshedAt: createdAt, extendedAdaptations, candidateAssetPool});
+    const registeredAssetView=registeredAdoption?materializeRegisteredAssetView(registeredAdoption,{runDirectory,candidateDirectory}):undefined;
+    await addNativeAdoption(plan, candidateDirectory, dealerRoot, lock, {carsRoot, refreshedAt: createdAt, extendedAdaptations, candidateAssetPool, templatePalette, templatePaletteConfigs,qualification:qualification?.context,registeredAdoption,registeredAssetView,registeredTargetBases:adapted.newBases,factualAppProvenance:factual?.appProvenance});
     candidateDigest = fingerprint(candidateDirectory).digest;
   }
-  const review = upgradeReviewReport(plan);
+  const review = reviewedUpgradeReport(plan);
   const reviewBytes = Buffer.from(`${JSON.stringify(review, null, 2)}\n`);
   writeJsonExclusive(path.join(runDirectory, 'review.json'), review);
   if (resolutionBytes) fs.writeFileSync(path.join(runDirectory, 'resolutions.json'), resolutionBytes, { flag: 'wx' });
@@ -667,7 +931,13 @@ async function runPlan(values) {
     sourceBeforeSha256,
     runDirectory,
     pins: renderPins(pins),
-    selection:{designSet:values['design-set'] || null,selectedKeys:selection.selectedKeys || null},
+    selection:{designSet:values['design-set'] || null,selectedKeys:selection.selectedKeys || null,templatePalette,refreshFacts},
+    factualRefresh:plan.factualRefresh??null,
+    registeredPersonalizationPreservation:plan.registeredPersonalizationPreservation??null,
+    templatePalette:plan.templatePalette ?? null,
+    qualification,
+    registeredAdoption:registeredAdoption?{inputPin:registeredAdoption.inputPin,receiptSha256:registeredAdoption.receiptSha256,personalizationSha256:registeredAdoption.personalizationSha256,baseline:registeredAdoption.baseline,proposalOnly:true}:null,
+    nativeQualification:plan.nativeQualification ?? null,
     bases,
     ready: plan.ready,
     reviewSha256: sha256(reviewBytes),
@@ -698,11 +968,15 @@ function loadRun(runDirectory) {
     throw new Error('Invalid update run metadata');
   }
   ensureInsideRuntime(metadata.carsRoot, resolved);
+  if (metadata.selection?.templatePalette !== undefined && typeof metadata.selection.templatePalette !== 'boolean') throw new Error('Invalid template palette selection in update run');
+  if(metadata.selection?.refreshFacts!==undefined&&typeof metadata.selection.refreshFacts!=='boolean')throw new Error('Invalid factual refresh selection');
+  if(Boolean(metadata.selection?.refreshFacts)!==Boolean(metadata.factualRefresh))throw new Error('Factual refresh selection/proof mismatch');
   return { runDirectory: resolved, metadata };
 }
 
 async function runInstall(values) {
   const { runDirectory, metadata } = loadRun(required(values, 'run-dir'));
+  if(metadata.registeredAdoption)throw new Error('Registered adoption is a source publication proposal only; local install cannot adopt an existing registered identity');
   if (!metadata.ready || !metadata.candidateDirectory || !metadata.candidateDigest) {
     throw new Error('This update has unresolved conflicts and no buildable candidate');
   }
@@ -710,6 +984,8 @@ async function runInstall(values) {
   const lockBytes = fs.readFileSync(metadata.lockFile);
   if (sha256(lockBytes) !== metadata.lockSha256) throw new Error('Approved template lock changed after review; create a new update plan');
   const lock = JSON.parse(lockBytes.toString('utf8').replace(/^\uFEFF/, ''));
+  const qualification=loadQualification({carsRoot:metadata.carsRoot,dealer:metadata.dealerSlug,lockFile:metadata.lockFile,lockBytes,lock,requested:metadata.qualification?.file});
+  if(JSON.stringify(qualification)!==JSON.stringify(metadata.qualification??null))throw new Error('Saved qualification context changed after review');
   const paths = repositoryPaths(metadata.carsRoot, metadata.templateRoot);
   validateRepositoryPaths(metadata.pins, paths);
   if(metadata.assetPool)ensureCandidateDirectory({carsRoot:metadata.carsRoot,dealerRoot,repositoryPaths:paths,runDirectory,requested:metadata.assetPool,explicit:true});
@@ -733,7 +1009,7 @@ async function runInstall(values) {
     const originalManifest = readReceiptOriginalManifest(runDirectory, receipt);
     validatePackagingManifest(originalManifest);
     const originalSelection = updateSelection(originalManifest,{designSet:metadata.selection?.designSet || undefined,variants:metadata.selection?.selectedKeys || undefined});
-    const originalPins = selectPinnedRevisions(originalManifest, lock,{targetVariants:originalSelection.targetVariants,keys:originalSelection.selectedKeys});
+    const originalPins = selectPinnedRevisions(originalManifest, lock,{targetVariants:originalSelection.targetVariants,keys:originalSelection.selectedKeys,qualification:qualification?.context,root:metadata.carsRoot});
     if (JSON.stringify(renderPins(originalPins)) !== JSON.stringify(metadata.pins) ||
         JSON.stringify(stableChangeHashes(review.changes)) !== JSON.stringify(stableChangeHashes(receipt.changes || []))) {
       throw new Error('Installed receipt does not match the reviewed update plan');
@@ -753,12 +1029,13 @@ async function runInstall(values) {
   const manifest = readJson(path.join(dealerRoot, 'dealer.json'));
   validatePackagingManifest(manifest);
   const selection = updateSelection(manifest,{designSet:metadata.selection?.designSet || undefined,variants:metadata.selection?.selectedKeys || undefined});
-  const pins = selectPinnedRevisions(manifest, lock,{targetVariants:selection.targetVariants,keys:selection.selectedKeys});
+  const pins = selectPinnedRevisions(manifest, lock,{targetVariants:selection.targetVariants,keys:selection.selectedKeys,qualification:qualification?.context,root:metadata.carsRoot});
   if (JSON.stringify(renderPins(pins)) !== JSON.stringify(metadata.pins)) {
     throw new Error('Dealer template pins changed after review; create a new update plan');
   }
   const adapted = await validatePinnedBaseEvidence(metadata, manifest, lock, paths);
-  const plan = planDealerUpgrade({ dealerRoot, lock, oldBases: adapted.oldBases, newBases: adapted.newBases, targetManifest: adapted.targetManifest,selectedKeys:selection.selectedKeys, resolutions });
+  const plan = planDealerUpgrade({ dealerRoot, lock, oldBases: adapted.oldBases, newBases: adapted.newBases, targetManifest: adapted.targetManifest,selectedKeys:selection.selectedKeys, resolutions,qualification:qualification?.context,root:metadata.carsRoot });
+  if(metadata.factualRefresh)plan.factualRefresh=assertFactualRefreshCandidate({candidate:plan.candidate,newBases:adapted.newBases,proof:metadata.factualRefresh});
   let recomputedReview;
   if (plan.ready) {
     fs.mkdirSync(path.dirname(candidateDirectory), { recursive: true });
@@ -766,8 +1043,8 @@ async function runInstall(values) {
     try {
       const candidateAssetPool=metadata.candidateAssetPool??metadata.assetPool;
       materializeUpgradeCandidate({ source: dealerRoot, plan, destination: validationCandidate, assetPool:candidateAssetPool });
-      await addNativeAdoption(plan, validationCandidate, dealerRoot, lock, {carsRoot: metadata.carsRoot, refreshedAt: metadata.createdAt,extendedAdaptations:adapted.extendedAdaptations,candidateAssetPool});
-      recomputedReview = upgradeReviewReport(plan);
+      await addNativeAdoption(plan, validationCandidate, dealerRoot, lock, {carsRoot: metadata.carsRoot, refreshedAt: metadata.createdAt,extendedAdaptations:adapted.extendedAdaptations,candidateAssetPool,templatePalette:metadata.selection?.templatePalette === true,templatePaletteConfigs:adapted.templatePaletteConfigs,qualification:qualification?.context,factualAppProvenance:adapted.factualAppProvenance});
+      recomputedReview = reviewedUpgradeReport(plan);
     } finally {
       fs.rmSync(validationCandidate, { recursive: true, force: true });
     }

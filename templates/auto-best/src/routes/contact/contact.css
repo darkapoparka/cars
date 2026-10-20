@@ -544,8 +544,8 @@
 
 @media (max-width: 767px) {
   .dn-contact-hero--workflow.dn-route-hero {
-    height: 208px;
-    min-height: 208px;
+    height: var(--dn-mobile-entry-hero-height);
+    min-height: var(--dn-mobile-entry-hero-height);
   }
 
   .dn-contact-hero--workflow .dn-contact-hero__content { display: none; }
@@ -684,19 +684,25 @@
   }
   .dn-contact-section--general .dn-contact-intent--general .dn-contact-selected { text-align: center; }
   .dn-contact-intent--general .dn-contact-selected p { margin-inline: auto; }
-  .dn-contact-primary-actions { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: var(--dn-space-2); margin-top: var(--dn-space-4); }
-  .dn-contact-primary-actions .dn-entry-action { width: 100%; min-width: 0; padding-inline: var(--dn-space-3); }
-  .dn-contact-intent--general .dn-contact-primary-actions .dn-contact-primary-directions { --dn-compact-control-surface: var(--dn-home-panel); }
-  .dn-contact-intent--general .dn-contact-primary-actions .dn-contact-primary-directions:hover { --dn-compact-control-surface: var(--dn-surface-hover); }
-  .dn-contact-section--general .dn-contact-card { margin-top: var(--dn-space-4); border-radius: var(--dn-radius-content-card); }
+  .dn-contact-primary-actions { --dn-entry-action-width: fit-content; --dn-entry-action-padding-inline: var(--dn-space-4); display: flex; flex-wrap: wrap; justify-content: center; gap: var(--dn-space-2); margin-top: var(--dn-space-4); }
+  .dn-contact-primary-actions .dn-entry-action { min-width: 0; max-width: 100%; }
+  .dn-contact-intent--general .dn-contact-primary-actions .dn-contact-primary-directions { --dn-compact-control-surface: var(--dn-ink); --dn-compact-control-ink: var(--dn-white); }
+  .dn-contact-intent--general .dn-contact-primary-actions .dn-contact-primary-directions:is(:hover, :focus-visible) { --dn-compact-control-surface: var(--dn-ink-hover); }
+  .dn-contact-section--general .dn-contact-intent--general .dn-contact-card { margin-top: var(--dn-space-4); padding: var(--dn-entry-card-padding); border-radius: var(--dn-radius-content-card); background: var(--dn-surface-raised); }
   .dn-contact-section--general .dn-contact-card__heading { display: none; }
-  .dn-contact-section--general .dn-contact-card__links { margin-top: 0; }
+  .dn-contact-section--general .dn-contact-card__links { gap: var(--dn-space-2); margin-top: 0; }
   .dn-contact-intent--general .dn-contact-card__link {
     grid-template-columns: minmax(0, 1fr) 20px;
     column-gap: var(--dn-space-4);
     row-gap: 3px;
     align-content: center;
+    margin-inline: 0;
+    padding: var(--dn-space-3);
+    border-radius: var(--dn-radius-control);
+    background: var(--dn-home-panel);
   }
+  .dn-contact-intent--general .dn-contact-card__link:is(:hover, :focus-visible) { background: var(--dn-surface-hover); }
+  .dn-contact-intent--general .dn-contact-card__link:focus-visible { outline-offset: var(--dn-space-half); }
   .dn-contact-intent--general .dn-contact-card__icon { display: none; }
   .dn-contact-intent--general .dn-contact-card__copy { display: contents; }
   .dn-contact-intent--general .dn-contact-card__copy strong {
@@ -724,10 +730,6 @@
     border: 0;
     border-radius: 0;
   }
-}
-
-@container (max-width: 18rem) {
-  .dn-contact-primary-actions { grid-template-columns: minmax(0, 1fr); }
 }
 
 /* Keep the full photographic hero separate from the practical visit panel. */

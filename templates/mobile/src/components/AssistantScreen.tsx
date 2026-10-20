@@ -124,12 +124,12 @@ export function AssistantScreen() {
             <div {...stylex.props(s.errorRow)}>
               <Icon name="info" size={28} />
               <div>
-                <strong {...stylex.props(s.errorTitle)}>Unable to connect</strong>
-                <p>Please check your internet connection and try again.</p>
+                <strong {...stylex.props(s.errorTitle)}>Local demo assistant</strong>
+                <p>Uses this demo’s vehicle data. No live AI service is connected.</p>
               </div>
             </div>
             <Button onClick={() => setDemo(true)} block>
-              Try again
+              Start demo
             </Button>
           </section>
         ) : (

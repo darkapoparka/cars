@@ -159,6 +159,25 @@ async function githubMetadata(id,kind) {
   if(!response.ok)throw Error('Read-only GitHub build verification failed: HTTP '+response.status);
   return response.json();
 }
+const buildMetadataReads = new Map();
+/** Reuse only successful real GitHub GET responses within this bounded release process. */
+export async function readUkBuildMetadata(runId) {
+  const id=String(runId);
+  if(!/^[1-9][0-9]{0,14}$/.test(id))throw Error('Use an exact GitHub build run ID.');
+  const cached=buildMetadataReads.get(id);
+  if(cached && Date.now()-cached.startedAt<10*60*1000)return structuredClone(await cached.promise);
+  const startedAt=Date.now();
+  const promise=(async()=>{
+    const run=await githubMetadata(id,'runs');
+    if(run.id!==Number(id)||run.status!=='completed'||run.conclusion!=='success')throw Error('Wait for the exact original build to complete successfully.');
+    const inventory=await githubMetadata(id+'/artifacts?per_page=100','runs');
+    if(!Array.isArray(inventory.artifacts)||inventory.total_count!==inventory.artifacts.length||inventory.total_count>100)throw Error('Incomplete GitHub artifact pagination.');
+    return {run,inventory};
+  })();
+  buildMetadataReads.set(id,{startedAt,promise});
+  try{return structuredClone(await promise);}catch(error){buildMetadataReads.delete(id);throw error;}
+}
+
 function uploader(key) {
   const svelte=key!=='router'&&!UK_NEXT_FAMILIES.has(key),version=svelte?'4.118.0':'4.149.0';
   const cli=path.join(ROOT,svelte?SVELTE_CLI:NEXT_CLI),packageFile=path.join(path.dirname(cli),'..','package.json');
@@ -221,8 +240,10 @@ async function inspectInput(inputFile,remote) {
   const job=path.join(UK_DEPLOY_ROOT,dealer.slug,String(input.runId)+'-'+String(input.attempt));
   const reportDirectory=path.join(job,'receipts',input.key);
   if(!remote){
-    const [run,artifact,summaryArtifact]=await Promise.all([
-      githubMetadata(input.runId,'runs'),githubMetadata(input.artifactId,'artifacts'),githubMetadata(input.summaryArtifactId,'artifacts')]);
+    const {run,inventory}=await readUkBuildMetadata(input.runId);
+    const artifact=inventory.artifacts.find(row=>row.id===Number(input.artifactId));
+    const summaryArtifact=inventory.artifacts.find(row=>row.id===Number(input.summaryArtifactId));
+    if(!artifact||!summaryArtifact||[artifact,summaryArtifact].some(row=>row.expired||Date.parse(row.expires_at)<=Date.now()))throw Error('Original build artifacts are missing or expired.');
     remote={run,artifact,summaryArtifact};
   }
   validateRemoteBuild(remote,input);
@@ -293,8 +314,11 @@ function runWrangler(context,label,args,{structured=false}={}) {
       'wrangler_cache_dir','cloudflare_account_id','cf_account_id'].includes(name.toLowerCase()))delete env[name];
   }
   Object.assign(env,{CLOUDFLARE_ACCOUNT_ID:UK_DEPLOY_ACCOUNT,WRANGLER_SEND_METRICS:'false',WRANGLER_LOG:'info',
-    WRANGLER_OUTPUT_FILE_PATH:output,WRANGLER_CACHE_DIR:path.join(folder,'wrangler-cache'),
+    WRANGLER_CACHE_DIR:path.join(folder,'wrangler-cache'),
     WRANGLER_LOG_PATH:path.join(folder,'wrangler-debug'),WRANGLER_LOG_SANITIZE:'true',NO_COLOR:'1'});
+  // Capture deploy events explicitly; query commands must keep their --json stdout.
+  if(structured)env.WRANGLER_OUTPUT_FILE_PATH=output;
+  else delete env.WRANGLER_LOG; // Wrangler --json uses normal log output; info-only suppresses it.
   console.log(JSON.stringify({phase:label,dealer:context.dealer.slug,key:context.input.key,workerName:context.identity.workerName}));
   const result=spawnSync(process.execPath,[...context.identity.tool.nodeArguments,context.identity.tool.entryFile,...args],{
     cwd:folder,env,encoding:'utf8',windowsHide:true,timeout:30*60*1000,maxBuffer:32*1024**2});

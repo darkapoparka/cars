@@ -1,6 +1,6 @@
 export const canonicalRoutes = {
   "404": "404",
-  "": "index-3",
+  "": "marketplace-home",
   vehicles: "cars-list-2",
   vehicle: "cars-details-3",
   import: "dealer-listing",
@@ -71,7 +71,7 @@ export const sourceKeys = [
   "agent-dashboard-listing",
   "agent-dashboard-add-listing",
 ] as const;
-export type SourceKey = (typeof sourceKeys)[number];
+export type SourceKey = (typeof sourceKeys)[number] | "marketplace-home";
 export function resolveRoute(path: string): SourceKey | null {
   const key = path
     .replace(/^\//, "")

@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import { isEntrypoint } from './lib/cli-entrypoint.mjs';
 import path from 'node:path';
 import {spawnSync} from 'node:child_process';
 import {ROOT,json} from './lib/workflow.mjs';
@@ -35,4 +36,4 @@ export function checkWorkflow(root=ROOT,{help=true}={}){
  if(help)for(const script of ['new-client','template-release','package-dealer','export-dealer','index-deployments','verify-dealer-preview','workspace-doctor','check-live-fab']){const r=spawnSync(process.execPath,[path.join(root,'scripts',script+'.mjs'),'--help'],{encoding:'utf8',windowsHide:true,timeout:15000});if(r.status!==0||!r.stdout.includes('Usage:'))failures.push(`Command help failed: ${script}: ${r.stderr}`);}
  if(failures.length)throw new Error(failures.join('\n'));return{activeDocuments:docs.length,workspace,skills:skills.map(({name,path})=>({name,path})),commandHelp:help?'passed':'not-run',discovery:'Repository-scoped .agents/skills validated; app-server skills/list supplies host discovery proof.'};
 }
-if(process.argv[1]&&path.resolve(process.argv[1])===import.meta.filename){try{console.log(JSON.stringify(checkWorkflow(),null,2));}catch(e){console.error(e.message);process.exitCode=1;}}
+if(isEntrypoint(import.meta.url)){try{console.log(JSON.stringify(checkWorkflow(),null,2));}catch(e){console.error(e.message);process.exitCode=1;}}

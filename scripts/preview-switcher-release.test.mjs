@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import vm from 'node:vm';
 import { switcherConfiguration } from './package-dealer.mjs';
+import { addSignatureNavigationHead, signatureNavigationHead } from './publishing/signature-navigation.mjs';
 
 const source = readFileSync(new URL('./publishing/preview-switcher.js', import.meta.url), 'utf8');
 const variants = [
@@ -23,16 +24,21 @@ function config(overrides = {}) {
 
 // In-memory DOM contract harness. No servers, network, browser profiles or files
 // are created. This checks executable routing/focus logic, not visual acceptance.
-function render(input = config(), address = 'https://dealer.example/bg', documentLanguage = 'bg', viewport = { mobile: true }) {
+function render(input = config(), address = 'https://dealer.example/bg', documentLanguage = 'bg', viewport = { mobile: true }, localeDialogs, adminNavigation, navigationState) {
   let shadow;
   class Element {
     constructor(tag = 'div') { this.tagName = tag; this.children = []; this.dataset = {}; this.attributes = {}; this.listeners = {}; this.hidden = false; this.style = { setProperty() {} }; }
-    append(...items) { this.children.push(...items); }
+    append(...items) { this.children.push(...items); items.forEach(item => { item.parent = this; }); }
     setAttribute(key, value) { this.attributes[key] = value; }
     getAttribute(key) { return this.attributes[key] ?? null; }
     removeAttribute(key) { delete this.attributes[key]; }
     addEventListener(name, handler) { (this.listeners[name] ??= []).push(handler); }
-    fire(name, event = {}) { for (const fn of this.listeners[name] ?? []) fn(event); }
+    fire(name, event = {}) {
+      event.target ??= this;
+      event.composedPath ??= () => { const path = []; for (let node = event.target; node; node = node.parent) path.push(node); return path; };
+      for (const fn of this.listeners[name] ?? []) fn(event);
+      if (name === 'click') this.parent?.fire(name, event);
+    }
     focus() { shadow.activeElement = this; }
     querySelectorAll(selector) {
       const matches = node => selector.split(',').some(part => part.startsWith('.')
@@ -46,35 +52,67 @@ function render(input = config(), address = 'https://dealer.example/bg', documen
     attachShadow() {
       shadow = new Element('shadow');
       const nodes = new Map();
-      for (const name of ['fab', 'fab-artwork', 'sheet', 'backdrop', 'close', 'design-grid', 'heading', 'fab-label', 'count', 'admin']) {
-        const node = new Element(['fab', 'close'].includes(name) ? 'button' : name === 'admin' ? 'a' : 'div');
+      for (const name of ['fab', 'fab-artwork', 'sheet', 'backdrop', 'close', 'design-grid', 'heading', 'fab-label', 'count', 'admin', 'navigation', 'navigation-label', 'navigation-retry']) {
+        const node = new Element(['fab', 'close'].includes(name) ? 'button' : ['admin','navigation-retry'].includes(name) ? 'a' : 'div');
         node.className = name; nodes.set('.' + name, node);
       }
       nodes.get('.sheet').hidden = true;
       nodes.get('.backdrop').hidden = true;
       nodes.get('.sheet').append(nodes.get('.close'), nodes.get('.design-grid'), nodes.get('.admin'));
       nodes.get('.admin').append(new Element('strong'));
+      nodes.get('.admin').setAttribute('target', '_blank');
+      nodes.get('.navigation').hidden = true;
+      nodes.get('.navigation-retry').hidden = true;
+      nodes.get('.navigation').append(nodes.get('.navigation-label'),nodes.get('.navigation-retry'));
+      shadow.append(nodes.get('.fab'),nodes.get('.sheet'),nodes.get('.backdrop'),nodes.get('.navigation'));
       shadow.querySelector = selector => nodes.get(selector) ?? null;
       this.shadowRoot = shadow; return shadow;
     }
   }
   const document = new Element('document');
-  document.documentElement = { lang: documentLanguage, style: { overflow: '' } };
+  document.documentElement = new Element('html');
+  document.documentElement.lang = documentLanguage;
+  document.documentElement.style.overflow = '';
   document.body = new Element('body'); document.head = new Element('head');
   document.createElement = tag => new Element(tag);
   document.querySelector = selector => document.body.children.find(node => selector.split(', ').includes(node.tagName)) ?? null;
   const current = new URL(address);
   const navigations = [];
-  const location = { origin: current.origin, hostname: current.hostname, pathname: current.pathname, search: current.search, assign: value => navigations.push(value) };
+  const location = { origin: current.origin, hostname: current.hostname, pathname: current.pathname, search: current.search, hash:current.hash,
+    get href(){return new URL(this.pathname+this.search+this.hash,this.origin).href;},assign: value => navigations.push(value) };
   const timers = [];
+  const windowEvents = {};
   const viewportChanges = [];
   const media = {get matches(){return viewport.mobile;}, addEventListener(event, listener){if(event === 'change') viewportChanges.push(listener);}};
   const context = vm.createContext({ document, location, URL, URLSearchParams,
     matchMedia: () => media, setTimeout: fn => { timers.push(fn); return timers.length; }, clearTimeout() {}, queueMicrotask: fn => fn(),
+    addEventListener: (name, listener) => { windowEvents[name] = listener; },
   });
+  if (adminNavigation) context.__CARS_ADMIN_NAVIGATION__ = adminNavigation;
+  if (localeDialogs) {
+    document.querySelectorAll = () => localeDialogs.dialogs;
+    document.activeElement = localeDialogs.activeElement;
+    context.MutationObserver = class {
+      constructor(callback) { localeDialogs.changed = callback; }
+      observe() {}
+    };
+  }
+  if (navigationState) {
+    const storage = navigationState.storage ?? new Map();
+    context.sessionStorage = {getItem:key=>storage.get(key)??null,setItem:(key,value)=>storage.set(key,value),removeItem:key=>storage.delete(key)};
+    context.MutationObserver = class {
+      constructor(callback){this.callback=callback;}
+      observe(target){if(target===document.body)navigationState.changed=this.callback;}
+      disconnect(){navigationState.disconnected=true;}
+    };
+    document.body.dataset.karentoReady = navigationState.ready ? 'true' : undefined;
+    document.fonts = {ready:navigationState.fonts ?? Promise.resolve()};
+    if(navigationState.frames)context.requestAnimationFrame=callback=>navigationState.frames.push(callback);
+    if(navigationState.head)vm.runInContext(signatureNavigationHead.match(/<script>([\s\S]*?)<\/script>/)[1],context);
+  }
   const script = source.replace('__CARS_SWITCHER_CONFIG__', () => JSON.stringify(input).replaceAll('<', '\\u003c'));
   vm.runInContext(script, context, { timeout: 1000 });
-  return { document, location, navigations, timers, script, context,
+  return { document, location, navigations, timers, script, context, windowEvents,
     resize(mobile){viewport.mobile = mobile; viewportChanges.forEach(listener => listener());},
     get host() { return document.body.children[0]; },
     get links() { return shadow.querySelector('.design-grid').querySelectorAll('.design'); },
@@ -289,6 +327,30 @@ test('six-design packages inject the native locale presentation once without ano
   assert.equal(r.document.body.children.length, 1);
 });
 
+test('welcome dialog initially focuses its title, preserves user focus, and resets on reopen', () => {
+  let count = 0;
+  const heading = {focus(options) { count++; assert.equal(options.preventScroll, true); }};
+  const close = {};
+  const dialog = {open: true, querySelector: () => heading, contains: element => element === close};
+  const state = {dialogs: [dialog], activeElement: close};
+  const r = render(sixHomesConfiguration(), undefined, undefined, undefined, state);
+  assert.equal(count, 1);
+  assert.equal(heading.tabIndex, -1);
+  state.changed();
+  assert.equal(count, 1, 'unrelated mutations must not steal focus');
+  dialog.open = false;
+  state.changed();
+  dialog.open = true;
+  state.changed();
+  assert.equal(count, 2);
+  dialog.open = false;
+  state.changed();
+  r.document.activeElement = {};
+  dialog.open = true;
+  state.changed();
+  assert.equal(count, 2, 'do not override focus outside the dialog');
+});
+
 test('home controls are sibling links inside six cards and preserve each native locale scheme', () => {
   const r = render(sixHomesConfiguration(), 'https://dealer.example/variant-6/2?lang=en&q=BMW&car=stock-42#results', 'bg');
   assert.equal(r.links.length, 6);
@@ -305,7 +367,192 @@ test('home controls are sibling links inside six cards and preserve each native 
   const event = {button:0,preventDefault(){this.prevented=true;}};
   r.homeLinks[3].fire('click', event);
   assert.equal(event.prevented, true);
-  assert.deepEqual(r.navigations, ['/variant-6/2?lang=en']);
+  assert.deepEqual(r.navigations, ['https://dealer.example/variant-6/2?lang=en']);
+});
+
+test('template selection paints a localized loading state before navigating and suppresses duplicate clicks', () => {
+  const r = render();
+  const frames = [];
+  r.context.requestAnimationFrame = fn => frames.push(fn);
+  const event = () => ({button:0,preventDefault(){}});
+  r.shadow.querySelector('.fab').fire('click');
+  r.links[1].fire('click',event());
+  assert.equal(r.shadow.querySelector('.navigation').hidden,false);
+  assert.equal(r.shadow.querySelector('.navigation-label').textContent,'Зарежда се Modern…');
+  assert.equal(r.shadow.querySelector('.sheet').hidden,true);
+  assert.equal(r.document.documentElement.style.overflow,'');
+  assert.equal(r.links[1].getAttribute('aria-busy'),'true');
+  assert.equal(r.navigations.length,0);
+  r.links[1].fire('click',event());
+  assert.equal(frames.length,1);
+  frames.shift()(); frames.shift()();
+  assert.deepEqual(r.navigations,['https://dealer.example/variant-2/bg/cars']);
+  r.windowEvents.pageshow({persisted:true});
+  assert.equal(r.shadow.querySelector('.navigation').hidden,true);
+  assert.equal(r.links[1].getAttribute('aria-busy'),null);
+});
+
+test('slow navigation offers a retry and preserves its destination name', () => {
+  const r = render(config(), 'https://dealer.example/en', 'en');
+  r.links[1].fire('click',{button:0,preventDefault(){}});
+  r.timers.at(-1)();
+  const retry = r.shadow.querySelector('.navigation-retry');
+  assert.equal(retry.hidden,false);
+  assert.equal(retry.href,'https://dealer.example/variant-2/en/cars');
+  assert.equal(r.shadow.querySelector('.navigation-label').textContent,'Still loading Modern…');
+  retry.fire('click',{button:0,preventDefault(){}});
+  assert.equal(r.shadow.querySelector('.navigation-label').textContent,'Loading Modern…');
+  assert.equal(r.navigations.length,2);
+});
+
+test('rapidly changing a selection dispatches only the latest navigation, even when returning to the same link', () => {
+  const r = render(), frames = [];
+  r.context.requestAnimationFrame = callback => frames.push(callback);
+  for (const index of [1,2,1]) r.links[index].fire('click',{button:0,preventDefault(){}});
+  while (frames.length) frames.shift()();
+  assert.deepEqual(r.navigations,['https://dealer.example/variant-2/bg/cars']);
+});
+
+test('cancelled callbacks cannot navigate or change feedback after the same link is selected again', () => {
+  const r = render(), frames = [];
+  r.context.requestAnimationFrame = callback => frames.push(callback);
+  r.links[1].fire('click',{button:0,preventDefault(){}});
+  const cancelledTimer = r.timers.at(-1);
+  r.document.fire('keydown',{key:'Escape'});
+  r.links[1].fire('click',{button:0,preventDefault(){}});
+  cancelledTimer();
+  assert.equal(r.shadow.querySelector('.navigation-retry').hidden,true);
+  assert.equal(r.shadow.querySelector('.navigation-label').textContent,'Зарежда се Modern…');
+  while (frames.length) frames.shift()();
+  assert.deepEqual(r.navigations,['https://dealer.example/variant-2/bg/cars']);
+});
+
+test('initial pageshow does not cancel a selection made while the current page is still loading', () => {
+  const r = render(), frames = [];
+  r.context.requestAnimationFrame = callback => frames.push(callback);
+  r.links[1].fire('click',{button:0,preventDefault(){}});
+  r.windowEvents.pageshow({persisted:false});
+  assert.equal(r.shadow.querySelector('.navigation').hidden,false);
+  while (frames.length) frames.shift()();
+  assert.deepEqual(r.navigations,['https://dealer.example/variant-2/bg/cars']);
+});
+
+test('a cancelled Signature font wait cannot clear a subsequent template selection', async () => {
+  const target='https://dealer.example/variant-6/?lang=en';
+  const storage=new Map([['cars-preview-navigation:v1',JSON.stringify({target,name:'Signature',startedAt:Date.now()})]]);
+  let finishFonts;
+  const state={storage,head:true,ready:true,frames:[],fonts:new Promise(resolve=>{finishFonts=resolve;})};
+  const r=render(sixHomesConfiguration(),target,'en',undefined,undefined,undefined,state);
+  r.links[1].fire('click',{button:0,preventDefault(){}});
+  finishFonts();await new Promise(setImmediate);
+  while (state.frames.length) state.frames.shift()();
+  assert.equal(r.shadow.querySelector('.navigation').hidden,false);
+  assert.equal(r.shadow.querySelector('.navigation-label').textContent,'Loading Modern…');
+  assert.deepEqual(r.navigations,['https://dealer.example/variant-2/en/cars']);
+});
+
+test('new-tab, modified and already-current links do not leave a loading indicator', () => {
+  const r = render();
+  for (const modifier of ['ctrlKey','metaKey','shiftKey','altKey']) {
+    r.links[1].fire('click',{button:0,[modifier]:true,preventDefault(){assert.fail('modified click intercepted');}});
+  }
+  r.links[1].fire('click',{button:1,preventDefault(){assert.fail('middle click intercepted');}});
+  r.shadow.querySelector('.admin').fire('click',{button:0,preventDefault(){assert.fail('new tab intercepted');}});
+  r.links[0].fire('click',{button:0,preventDefault(){}});
+  assert.equal(r.shadow.querySelector('.navigation').hidden,true);
+  assert.equal(r.navigations.length,0);
+});
+
+test('Escape and pagehide clear pending navigation, including a scheduled paint', () => {
+  for (const action of ['Escape','pagehide']) {
+    const r = render(), frames = [];
+    r.context.requestAnimationFrame = fn => frames.push(fn);
+    r.links[1].fire('click',{button:0,preventDefault(){}});
+    if (action === 'Escape') r.document.fire('keydown',{key:'Escape'});
+    else r.windowEvents.pagehide();
+    frames.shift()(); frames.shift()();
+    assert.equal(r.shadow.querySelector('.navigation').hidden,true);
+    assert.equal(r.navigations.length,0);
+  }
+});
+
+test('dashboard selectors use the dealer return origin and locale before any observer runs', () => {
+  const r=render(sixHomesConfiguration(),'https://admin.example/dashboard-2','en',undefined,undefined,{previewUrl:'https://dealer.example/variant-6/2?lang=bg'});
+  assert.equal(r.links[1].href,'https://dealer.example/variant-2/bg/cars');
+  assert.equal(r.homeLinks[3].href,'https://dealer.example/variant-6/2?lang=bg');
+  r.shadow.querySelector('.fab').fire('click');
+  assert.equal(r.links[1].href,'https://dealer.example/variant-2/bg/cars');
+  r.links[1].fire('click',{button:0,preventDefault(){}});
+  assert.equal(r.shadow.querySelector('.navigation-label').textContent,'Зарежда се Modern…');
+  assert.deepEqual(r.navigations,['https://dealer.example/variant-2/bg/cars']);
+});
+
+test('Signature navigation carries its actual destination across the document handoff', () => {
+  const storage = new Map(), state = {storage};
+  const r=render(sixHomesConfiguration(),'https://dealer.example/variant-4/en','en',undefined,undefined,undefined,state);
+  r.links[5].fire('click',{button:0,preventDefault(){}});
+  const pending=JSON.parse(storage.get('cars-preview-navigation:v1'));
+  assert.equal(pending.target,'https://dealer.example/variant-6/?lang=en');
+  assert.equal(pending.name,'Signature');
+  assert.deepEqual(r.navigations,[pending.target]);
+  r.windowEvents.pagehide();
+  assert.equal(storage.has('cars-preview-navigation:v1'),true,'leaving the source page must retain the destination intent');
+  r.windowEvents.pageshow({persisted:true});
+  assert.equal(storage.size,0,'Back must not resurrect a pending transition');
+});
+
+test('Signature waits for hydration, fonts and a settled paint before revealing the destination', async () => {
+  const target='https://dealer.example/variant-6/?lang=en';
+  const storage=new Map([['cars-preview-navigation:v1',JSON.stringify({target,name:'Signature',startedAt:Date.now()})]]);
+  let finishFonts;
+  const state={storage,head:true,frames:[],fonts:new Promise(resolve=>{finishFonts=resolve;})};
+  const r=render(sixHomesConfiguration(),target,'en',undefined,undefined,undefined,state);
+  assert.equal(r.document.documentElement.getAttribute('data-cars-preview-pending'),'signature');
+  assert.equal(r.shadow.querySelector('.navigation-label').textContent,'Loading Signature…');
+  r.windowEvents.pageshow({persisted:false});
+  assert.equal(r.shadow.querySelector('.navigation').hidden,false,'initial pageshow is not proof of application readiness');
+  r.document.body.dataset.karentoReady='true';state.changed();
+  assert.equal(state.frames.length,0,'fonts are still pending');
+  finishFonts();await new Promise(setImmediate);
+  assert.equal(state.frames.length,1);
+  state.frames.shift()();
+  assert.equal(r.shadow.querySelector('.navigation').hidden,false);
+  state.frames.shift()();
+  assert.equal(r.document.documentElement.getAttribute('data-cars-preview-pending'),null);
+  assert.equal(r.shadow.querySelector('.navigation').hidden,true);
+  assert.equal(storage.size,0);
+  assert.equal(state.disconnected,true);
+  assert.equal(r.navigations.length,0,'finishing startup must not reload the page');
+});
+
+test('failed Signature startup reveals the server content and offers a real same-page retry', () => {
+  const target='https://dealer.example/variant-6/2?lang=bg';
+  const storage=new Map([['cars-preview-navigation:v1',JSON.stringify({target,name:'Signature',startedAt:Date.now()})]]);
+  const r=render(sixHomesConfiguration(),target,'bg',undefined,undefined,undefined,{storage,head:true});
+  r.timers.at(-1)();
+  assert.equal(r.document.documentElement.getAttribute('data-cars-preview-pending'),null);
+  const retry=r.shadow.querySelector('.navigation-retry');
+  assert.equal(retry.hidden,false);
+  retry.fire('click',{button:0,preventDefault(){}});
+  assert.deepEqual(r.navigations,[target]);
+});
+
+test('early Signature guard is idempotent, scoped to fresh matching intent and fails open', () => {
+  const html='<html><head>%sveltekit.head%</head><body>server-rendered content</body></html>';
+  const guarded=addSignatureNavigationHead(html);
+  assert.equal(addSignatureNavigationHead(guarded),guarded);
+  assert.ok(guarded.indexOf('data-cars-preview-pending')<guarded.indexOf('%sveltekit.head%'));
+  const code=signatureNavigationHead.match(/<script>([\s\S]*?)<\/script>/)[1];
+  const target='https://dealer.example/variant-6/?lang=en';
+  const run=value=>{
+    const attrs=new Map(),timers=[];
+    vm.runInNewContext(code,{sessionStorage:{getItem:()=>value},location:{href:target},document:{documentElement:{setAttribute:(k,v)=>attrs.set(k,v),removeAttribute:k=>attrs.delete(k)}},setTimeout:callback=>timers.push(callback),Date});
+    return {attrs,timers};
+  };
+  for(const pending of [null,'invalid',JSON.stringify({target:target+'/wrong',startedAt:Date.now()}),JSON.stringify({target,startedAt:Date.now()-31000})])assert.equal(run(pending).attrs.size,0);
+  const pending=run(JSON.stringify({target,startedAt:Date.now()}));
+  assert.equal(pending.attrs.get('data-cars-preview-pending'),'signature');
+  pending.timers[0]();assert.equal(pending.attrs.size,0,'missing shared JS must never permanently hide the page');
 });
 
 test('App /locale/2 marks only its second home and updates all homepage links after a language change', () => {

@@ -18,6 +18,14 @@ const profile = loadDealerProfile(NAVARA, 'navara-car');
 const promosaleProfile = loadDealerProfile(PROMOSALE, 'promosale-varna');
 const perfectProfile = loadDealerProfile(PERFECT, 'perfect-auto-varna');
 
+// Explicit reviewed display copy for the fixed Navara fixture; source wording must match.
+const reviewedNavaraCopy = Object.fromEntries(profile.listings.map(listing => {
+  assert.equal(listing.description, "Селекция от обяви към 08.09.2026 г., а не складова наличност в реално време. Потвърдете цената, наличността и данните с продавача.");
+  return [listing.slug, { sourceDescription: listing.description,
+    en: { description: "Selected listings as of 08.09.2026, rather than live stock availability. Confirm the price, availability and details with the seller.", imageAlts: listing.images.map(() => listing.title) },
+    bg: { description: "Селекция от обяви към 08.09.2026 г., а не складова наличност в реално време. Потвърдете цената, наличността и данните с продавача.", imageAlts: listing.images.map(() => listing.title) } }];
+}));
+
 const hash = (file) => crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
 const copy = (source, destination) => {
   fs.mkdirSync(path.dirname(destination), { recursive: true });
@@ -59,6 +67,7 @@ function temporaryCandidate(templateKey, files) {
       'apps/web/app/[locale]/layout.tsx'
     ],
     import: [
+      'src/lib/content/inventory-localized.ts',
       'src/lib/components/home/HomeFiveHeader.svelte',
       'src/lib/config/dealer.ts'
     ]
@@ -327,22 +336,29 @@ test('Modern refresh preserves the approved hero while retaining stable fixture 
     key: 'modern',
     oldVariant: path.join(NAVARA, 'modern'),
     candidate: root,
-    profile
+    profile,
+    reviewedModernCopy: reviewedNavaraCopy
   });
 
   assert.equal(hash(path.join(root, hero)), hash(path.join(template, hero)));
   const listings = fs.readFileSync(path.join(root, 'packages/marketplace-domain/testing/mock-data.ts'), 'utf8');
   assert.match(listings, /"id": "am-1001"/);
-  assert.match(listings, /"id": "am-1009"/);
+  const generated = JSON.parse(listings.match(/export const mockListings: VehicleListing\[\] = (\[[\s\S]*?\n\]);/)[1]);
+  assert.equal(generated.length, profile.listings.length);
+  assert.deepEqual(generated.map(row => row.slug), profile.listings.map(row => row.slug));
+  assert.equal(new Set(generated.map(row => row.slug)).size, profile.listings.length);
   assert.match(listings, /Nissan Micra 1\.0 N-Sport/);
   const leadSite = fs.readFileSync(path.join(root, 'packages/marketplace/lead-site.ts'), 'utf8');
   assert.match(leadSite, /name: "Навара кар"/);
   assert.match(leadSite, /heroPath: "\/lead-hero\.jpg"/);
   const mobileBrand = fs.readFileSync(path.join(root, 'packages/marketplace-ui/components/dealer-mobile-brand-bar.tsx'), 'utf8');
-  assert.match(mobileBrand, /const useOnLight = wordmarkTone === "dark" \|\| \(wordmarkTone === "original" && light\)/);
-  assert.match(mobileBrand, /const logoSource = useOnLight \? leadSite\.logoOnLight : leadSite\.logoOnDark/);
-  assert.match(mobileBrand, /src=\{logoSource\}/);
-  assert.doesNotMatch(mobileBrand, /clipPath|brightness-0|\binvert\b/);
+  assert.match(mobileBrand, /const onDarkSurface =\s*wordmarkTone === "light" \|\| \(wordmarkTone === "original" && !clean\)/);
+  assert.match(mobileBrand, /const logoSrc = onDarkSurface\s*\? leadSite\.logoOnDark\s*:\s*leadSite\.logoOnLight/);
+  assert.match(mobileBrand, /src=\{logoSrc\}/);
+  assert.match(mobileBrand, /light && "h-10 bg-black px-2\.5"/);
+  assert.match(mobileBrand, /publicSite\.identity\.desktopPreview/);
+  assert.match(mobileBrand, /<DealerDesktopLogo/);
+  assert.doesNotMatch(mobileBrand, /logoInversePath|clipPath|brightness-0|\binvert\b/);
   const masthead = fs.readFileSync(path.join(root, 'packages/marketplace-ui/components/marketplace-masthead.tsx'), 'utf8');
   assert.doesNotMatch(masthead, /Студентски град|Studentski grad/);
   fs.rmSync(root, { recursive: true, force: true });
@@ -367,12 +383,15 @@ test('Modern refresh accepts a previously generated CRLF JSON fixture', () => {
     key: 'modern',
     oldVariant: path.join(NAVARA, 'modern'),
     candidate: root,
-    profile
+    profile,
+    reviewedModernCopy: reviewedNavaraCopy
   });
 
   const listings = fs.readFileSync(path.join(root, fixture), 'utf8');
   assert.match(listings, /"id": "am-1001"/);
-  assert.match(listings, /"id": "am-1009"/);
+  const generated = JSON.parse(listings.match(/export const mockListings: VehicleListing\[\] = (\[[\s\S]*?\n\]);/)[1]);
+  assert.equal(generated.length, profile.listings.length);
+  assert.deepEqual(generated.map(row => row.slug), profile.listings.map(row => row.slug));
   assert.match(listings, /\];\n\nconst matchesText/);
   assert.equal(listings.includes('\r'), false);
   fs.rmSync(root, { recursive: true, force: true });

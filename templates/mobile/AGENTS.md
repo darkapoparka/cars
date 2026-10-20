@@ -14,9 +14,13 @@ and verified vehicle/contact data before dealer use. Do not connect
 demo actions to real sellers, collect passwords, or imply that messages, finance
 applications, appointments or vehicle publication were transmitted.
 
-Build output is `.next-review`; the template preview uses port 6474. Run lint,
-typecheck, domain tests, a production build and focused browser checks at 320,
-390 and 1440 pixels. Use `QA_URL` and `QA_OUTPUT` for copied browser suites.
+Build output is `.next-review`; the template preview uses port 6474. Follow
+[proportional QA and retention](../../docs/QA.md): small edits use the existing
+preview and the affected route/viewport; behavior changes add focused tests.
+Run lint, typecheck, domain tests, a production build and relevant 320/390/1440px
+browser checks at an integration/release checkpoint or when the change warrants
+them, not after each small iteration. Reuse an owner-scoped `QA_OUTPUT` and
+`QA_URL`; retire inactive generated outputs and intermediate captures at closeout.
 Source-era reports are historical reference evidence, not acceptance of this copy.
 Do not run historical one-shot patch scripts or wipe/restart the native AVD.
 

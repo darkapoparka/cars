@@ -104,15 +104,22 @@
 	</PageIntro>
 	<div class="site-mobile-only">
 		<div class="site-container service-mobile-tools">
-			<div class="service-mobile-filters" role="group" aria-label={data.directory.quickLabel}>
+			<div
+				class="service-mobile-filters mobile-quick-rail"
+				role="group"
+				aria-label={data.directory.quickLabel}
+			>
 				{#each data.directory.quickFilters as filter (filter.query)}
-					<Action
-						variant={normalizedQuery === filter.query.toLocaleLowerCase() ? 'strong' : 'secondary'}
-						size="compact"
+					<button
+						type="button"
+						class="mobile-quick-pill"
+						class:active={normalizedQuery === filter.query.toLocaleLowerCase()}
 						aria-pressed={normalizedQuery === filter.query.toLocaleLowerCase()}
 						aria-controls="service-results"
-						onclick={() => (query = filter.query)}>{filter.label}</Action
+						onclick={() => (query = filter.query)}
 					>
+						{filter.query === '' ? `${filter.label} (${data.services.length})` : filter.label}
+					</button>
 				{/each}
 			</div>
 			<span class="sr-only" role="status">{matching.length} {countLabel}</span>
@@ -242,31 +249,29 @@
 		.service-mobile-tools {
 			position: relative;
 			margin-top: calc(-1 * var(--bc-space-6));
-			padding-top: var(--bc-space-2);
+			padding-top: var(--bc-space-3);
 		}
 		.service-mobile-filters {
-			display: flex;
-			flex-wrap: nowrap;
-			gap: var(--bc-space-2);
-			overflow-x: auto;
-			margin-inline: calc(-1 * var(--bc-mobile-gutter));
-			padding: var(--bc-space-1) var(--bc-mobile-gutter);
 			scroll-padding-inline: var(--bc-mobile-gutter);
-			scrollbar-width: none;
 		}
-		.service-mobile-filters :global(.site-action) {
-			flex: 0 0 auto;
-			border-radius: var(--bc-radius-control);
-			padding-inline: var(--bc-space-3);
-			font-size: var(--bc-text-quick-pill);
-			line-height: var(--bc-leading-quick-pill);
-			white-space: nowrap;
+		.service-mobile-filters .active {
+			background: var(--bc-ink);
+			color: var(--bc-white);
 		}
-		.service-mobile-filters :global(.site-action.secondary) {
-			background: var(--bc-white);
+		.service-mobile-filters button:hover {
+			background: var(--bc-surface-hover);
+		}
+		.service-mobile-filters .active:hover {
+			background: var(--bc-dark-hover);
+		}
+		.service-mobile-filters button:focus-visible {
+			outline: 2px solid var(--bc-accent);
+			outline-offset: 2px;
 		}
 		.services-grid {
+			padding-top: var(--bc-space-3);
 			grid-template-columns: 1fr;
+			gap: var(--bc-space-4);
 			container: service-list / inline-size;
 		}
 		.service-empty p {

@@ -1,7 +1,7 @@
 import {createHash} from 'node:crypto';
 const hash = value => createHash('sha256').update(value).digest('hex');
 const marker = '.cars-dealer-presentation.json';
-export const DEALER_PRESENTATION_VERSION = 'neutral-services-v1';
+export const DEALER_PRESENTATION_VERSION = 'template-palette-services-v2';
 const notice = `<p class="container dealer-services-disclosure" data-dealer-services-disclosure>{locale.locale === 'bg' ? 'Примерен каталог на услуги за този дизайн. Наличността, условията и цените се потвърждават с автокъщата.' : 'Illustrative service catalogue for this design. Confirm actual availability, terms and prices with the dealership.'}</p>`;
 function once(text, before, after, label) {
   if (text.split(before).length !== 2) throw Error('Dealer presentation boundary changed: '+label);
@@ -11,7 +11,8 @@ export function neutralModern(source) {
   let text = source;
   const accents = [...text.matchAll(/^  accent: ["']#[a-f0-9]{6}["'],/gmi)];
   if (accents.length !== 1) throw Error('Expected one Modern dealer accent');
-  text = text.replace(accents[0][0], '  accent: "#18181b",');
+  // The dealer adapter preserves the approved template accent. Publishing must
+  // not introduce a second palette or recolour it from the dealer's logo.
   const read = name => {const m = [...text.matchAll(new RegExp('^  '+name+': (["\'])(.*?)\\1,','gm'))];if(m.length!==1)throw Error('Missing verified Modern logo '+name);return m[0][2];};
   const light=read('logoOnLight'),dark=read('logoOnDark');
   text=text.replace(/^  logoPath: ["'][^"']*["'],/m,'  logoPath: '+JSON.stringify(light)+',');
@@ -21,6 +22,19 @@ export function neutralModern(source) {
 }
 export function signatureHeader(source) {
   let text=source;
+  const logos=[...text.matchAll(/<img\b[^>]*>/g)].map(match=>match[0]);
+  const lightLogos=logos.filter(tag=>tag.includes('class="light-mode"'));
+  const darkLogos=logos.filter(tag=>tag.includes('class="dark-mode"'));
+  // Current masters render both surface treatments and let their existing CSS
+  // choose before hydration. Do not apply the old client-only src repair again.
+  if (text.includes('  const heroHeader = $derived(\n    [') &&
+      lightLogos.length && darkLogos.length &&
+      lightLogos.every(tag=>tag.includes('src={dealer.logo.light}')) &&
+      darkLogos.every(tag=>tag.includes('src={dealer.logo.archivedDark}'))) {
+    if ((text.match(/href=\{locale\.href\("\/services"\)\}/g)||[]).length !== 3 ||
+        text.includes('{#if !dealer.businessPreview}<li')) throw Error('Current Signature navigation boundary changed');
+    return text;
+  }
   // The route is known on the server; viewport-dependent img src changes during
   // hydration can retain the wrong initial src. Let picture select it in CSS media.
   text=once(text,'  const heroHeader = $derived(\n    phone.current &&\n      [','  const heroRoute = $derived(\n      [','Signature hero route');
@@ -38,6 +52,9 @@ export function signatureHeader(source) {
   return text;
 }
 export function signatureNavigation(source) {
+  if (source.includes('const links = $derived([') &&
+      ['/', '/vehicles', '/services', '/shop'].every(href=>source.includes('href: '+JSON.stringify(href))) &&
+      !source.includes('.filter(')) return source;
   return once(source,'["/", "/vehicles"].includes(link.href)','["/", "/vehicles", "/services"].includes(link.href)','Signature bottom services tab');
 }
 export function signatureServices(source) {
@@ -59,7 +76,7 @@ export function applyDealerPresentation(files, manifest) {
   ];
   const pending=[],changes=[];
   for(const [name,transform]of edits){const before=files.get(name);if(!before)throw Error('Missing presentation input '+name);const after=Buffer.from(transform(String(before).replace(/\r\n/g,'\n')));pending.push([name,after]);changes.push({path:name,beforeSha256:hash(before),afterSha256:hash(after)});}
-  const receipt={schemaVersion:1,version:DEALER_PRESENTATION_VERSION,dealer:manifest.slug,palette:'neutral-black-white',sourceAccentRetainedInCanonicalDealer:true,logoPixelsChanged:false,services:'visible-illustrative-catalogue',referenceReviewsAndDiscountsNotAdded:true,changes};
+  const receipt={schemaVersion:1,version:DEALER_PRESENTATION_VERSION,dealer:manifest.slug,palette:'template-native',sourceAccentRetainedInCanonicalDealer:true,compiledAccentPreserved:true,logoPixelsChanged:false,services:'visible-illustrative-catalogue',referenceReviewsAndDiscountsNotAdded:true,changes};
   for(const [name,bytes]of pending)files.set(name,bytes);
   files.set(marker,Buffer.from(JSON.stringify(receipt,null,2)+'\n'));return receipt;
 }

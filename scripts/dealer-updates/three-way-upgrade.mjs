@@ -6,6 +6,8 @@ import { spawnSync } from 'node:child_process';
 import {writeDerivedFile} from '../lib/derived-assets.mjs';
 import { assertFiveDesignSelection } from '../lib/five-design-release.mjs';
 import { assertSixDesignSelection, planSixDesignSelection } from '../lib/six-design-release.mjs';
+import { validateTemplateQualification, validateNativeQualificationContext } from '../lib/native-localization.mjs';
+import {assertRegisteredAdoptionPlan} from '../registered-dealer-adoption.mjs';
 
 const TEXT_EXTENSIONS = new Set([
   '.cjs', '.css', '.html', '.js', '.json', '.md', '.mjs', '.svelte', '.ts', '.tsx', '.txt', '.xml', '.yaml', '.yml'
@@ -239,7 +241,8 @@ function record(pathname, kind, before, after, extra = {}) {
 }
 
 /** Select immutable revisions from the current Cars approval lock, never from a floating branch label. */
-export function selectPinnedRevisions(manifest, lock, { targetVariants = manifest?.variants, keys: selectedKeys } = {}) {
+export function selectPinnedRevisions(manifest, lock, { targetVariants = manifest?.variants, keys: selectedKeys, qualification, root } = {}) {
+  if (qualification) validateNativeQualificationContext(qualification,{dealer:manifest?.slug});
   if (!Array.isArray(manifest?.variants) || ![3, 4, 5, 6].includes(manifest.variants.length)) {
     throw new Error('Template update requires the dealer’s recorded three-, four-, five- or six-design manifest');
   }
@@ -289,7 +292,9 @@ export function selectPinnedRevisions(manifest, lock, { targetVariants = manifes
     }
     const validStandalone = targetRepository === `darkapoparka/cars-template-${key}` && targetPath === '';
     const validCarsSubtree = targetRepository === 'darkapoparka/cars' && targetPath === `templates/${key}`;
-    if (approved?.status !== 'approved' || (!validStandalone && !validCarsSubtree) ||
+    const provisional = approved?.status === 'qualification';
+    if (provisional && qualification) validateTemplateQualification(key,approved,qualification,{root});
+    if ((approved?.status !== 'approved' && !(provisional && qualification)) || (!validStandalone && !validCarsSubtree) ||
         !/^[a-f0-9]{40}$/.test(targetRevision || '') || !/^[a-f0-9]{64}$/.test(targetDigest || '') ||
         (targetTree !== null && !/^[a-f0-9]{40}$/.test(targetTree || ''))) {
       throw new Error(`No exact approved target pin is available for ${key}`);
@@ -348,13 +353,17 @@ export function upgradeReviewReport(plan) {
 }
 
 /** Build one dealer-root plan for its exact recorded trio and an approved lock. */
-export function planDealerUpgrade({ dealerRoot, lock, oldBases, newBases, targetManifest, selectedKeys, manifestPath = 'dealer.json', resolutions = {}, tempRoot = os.tmpdir() }) {
+export function planDealerUpgrade({ dealerRoot, lock, oldBases, newBases, targetManifest, selectedKeys, qualification, root, registeredAdoption, manifestPath = 'dealer.json', resolutions = {}, tempRoot = os.tmpdir() }) {
   const source = path.resolve(dealerRoot);
   const safeManifestPath = safeRelative(manifestPath);
   const manifestFile = path.join(source, safeManifestPath);
-  const manifestBytes = fs.readFileSync(manifestFile);
-  const manifest = JSON.parse(manifestBytes.toString('utf8').replace(/^\uFEFF/, ''));
-  const pins = selectPinnedRevisions(manifest, lock, { targetVariants: targetManifest?.variants || manifest.variants, keys: selectedKeys });
+  if (registeredAdoption) {
+    assertRegisteredAdoptionPlan(registeredAdoption,{dealerRoot});
+    if (safeManifestPath !== 'dealer.json' || targetManifest?.packaging?.version !== '5' || targetManifest?.variants?.length !== 6 || !qualification) throw new Error('Registered adoption requires a qualified six-family candidate; no legacy manifest is installed');
+  }
+  const manifestBytes = registeredAdoption ? null : fs.readFileSync(manifestFile);
+  const manifest = registeredAdoption ? registeredAdoption.manifest : JSON.parse(manifestBytes.toString('utf8').replace(/^\uFEFF/, ''));
+  const pins = selectPinnedRevisions(manifest, lock, { targetVariants: targetManifest?.variants || manifest.variants, keys: selectedKeys, qualification, root });
   const candidate = new Map(), changes = [], conflicts = [], perDesign = {};
   for (const key of Object.keys(pins)) {
     if ((!oldBases?.[key] && pins[key].from !== null) || !newBases?.[key]) throw new Error(`Missing exact old/new template trees for ${key}`);
@@ -384,7 +393,7 @@ export function planDealerUpgrade({ dealerRoot, lock, oldBases, newBases, target
     throw new Error('Target dealer manifest differs from the reviewed identity, trio or exact source pins');
   }
   const nextManifestBytes = Buffer.from(`${JSON.stringify(nextManifest, null, 2)}\n`);
-  if (!manifestBytes.equals(nextManifestBytes)) {
+  if (!manifestBytes || !manifestBytes.equals(nextManifestBytes)) {
     candidate.set(safeManifestPath, nextManifestBytes);
     changes.push(record(safeManifestPath, 'manifest-pins', manifestBytes, nextManifestBytes, {
       diff: unifiedDiff(manifestBytes, nextManifestBytes, [`dealer/${safeManifestPath}`, `candidate/${safeManifestPath}`])

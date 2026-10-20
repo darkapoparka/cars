@@ -5,6 +5,7 @@
   import { useLocale } from "#lib/i18n/context.svelte.ts";
   const locale = useLocale();
   import type { VehicleCardContent } from "#lib/content.ts";
+  import { focusableScroll } from "#lib/horizontal-scroll.ts";
 
   type PhoneVehicle = Pick<
     VehicleCardContent,
@@ -35,11 +36,13 @@
     pricePrefix,
     additionalFacts = [],
     showLocation = false,
+    layout = "row",
   }: {
     card: PhoneVehicle;
     pricePrefix?: string;
     additionalFacts?: readonly string[];
     showLocation?: boolean;
+    layout?: "row" | "stacked";
   } = $props();
 
   const display = $derived(presentVehicle(card, locale));
@@ -56,7 +59,10 @@
       {
         id: "transmission",
         label: locale.t("vehicle.transmission"),
-        value: display.transmission,
+        value:
+          card.transmissionType === "automatic"
+            ? locale.t("transmission.automatic.short")
+            : display.transmission,
       },
       { id: "fuel", label: locale.t("vehicle.fuel"), value: display.fuel },
       ...additionalFacts.map((value, index) => ({
@@ -68,32 +74,40 @@
   );
 </script>
 
-<article class="mobile-vehicle-card background-card">
-  <div class="mobile-vehicle-photo">
-    <img src={card.image} alt={card.imageAlt} />
-  </div>
-  <div class="mobile-vehicle-copy">
-    <a
-      class="mobile-vehicle-link"
-      href={locale.href(card.href)}
-      aria-label={locale.t("action.viewVehicle", { vehicle: card.title })}
-    >
-      <div class="mobile-vehicle-summary">
-        <h3 class="mobile-vehicle-title">{card.title}</h3>
-        {#if context}
-          <p class="mobile-vehicle-context">{context}</p>
-        {/if}
-      </div>
-      <p class="mobile-vehicle-price">
-        {#if pricePrefix}<span>{pricePrefix}</span>{/if}
-        <strong>{display.price}</strong>
-        {#if card.pricePeriod}<span>{display.pricePeriod}</span>{/if}
-      </p>
-    </a>
+<article
+  class={[
+    "mobile-vehicle-card background-card",
+    { "mobile-vehicle-card-stacked": layout === "stacked" },
+  ]}
+>
+  <div class="mobile-vehicle-main">
+    <div class="mobile-vehicle-photo">
+      <img src={card.image} alt={card.imageAlt} />
+    </div>
+    <div class="mobile-vehicle-copy">
+      <a
+        class="mobile-vehicle-link"
+        href={locale.href(card.href)}
+        aria-label={locale.t("action.viewVehicle", { vehicle: card.title })}
+      >
+        <div class="mobile-vehicle-summary">
+          <h3 class="mobile-vehicle-title">{card.title}</h3>
+          {#if context}
+            <p class="mobile-vehicle-context">{context}</p>
+          {/if}
+        </div>
+        <p class="mobile-vehicle-price">
+          {#if pricePrefix}<span>{pricePrefix}</span>{/if}
+          <strong>{display.price}</strong>
+          {#if card.pricePeriod}<span>{display.pricePeriod}</span>{/if}
+        </p>
+      </a>
+    </div>
   </div>
   {#if facts.length}
     <ul
       class="mobile-vehicle-facts"
+      {@attach focusableScroll}
       aria-label={locale.t("vehicle.facts", { vehicle: card.title })}
     >
       {#each facts as fact (fact.id)}
@@ -112,12 +126,8 @@
   @media (max-width: 767.98px) {
     .mobile-vehicle-card.background-card {
       position: relative;
-      display: grid;
-      grid-template-columns: min(44%, var(--karento-vehicle-media-max)) minmax(
-          0,
-          1fr
-        );
-      align-items: stretch;
+      display: flex;
+      flex-direction: column;
       gap: var(--karento-space-2);
       min-width: 0;
       margin: var(--karento-vehicle-card-margin, 0 0 var(--karento-space-3));
@@ -125,6 +135,17 @@
       border: 1px solid var(--bs-border-color);
       border-radius: var(--karento-radius-card);
       color: var(--bs-neutral-1000);
+    }
+    .mobile-vehicle-main {
+      display: grid;
+      grid-template-columns: min(44%, var(--karento-vehicle-media-max)) minmax(
+          0,
+          1fr
+        );
+      align-items: stretch;
+      gap: var(--karento-space-2);
+      flex: 1;
+      min-width: 0;
     }
     .mobile-vehicle-card .mobile-vehicle-photo {
       width: 100%;
@@ -216,12 +237,17 @@
       line-height: var(--karento-type-meta-leading);
     }
     .mobile-vehicle-card.background-card .mobile-vehicle-facts {
-      grid-column: 1 / -1;
       display: flex;
+      flex: none;
       align-items: center;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       gap: var(--karento-space-1);
       min-width: 0;
+      overflow-x: auto;
+      overscroll-behavior-x: contain;
+      scrollbar-width: none;
+      position: relative;
+      z-index: 2;
       margin: 0;
       padding: var(--karento-space-2) 0 0;
       border-top: 1px solid var(--bs-border-color);
@@ -232,12 +258,50 @@
       line-height: var(--karento-type-body-small-leading);
     }
     .mobile-vehicle-facts li {
+      flex: none;
       min-width: 0;
-      max-width: 100%;
+      max-width: none;
       padding: var(--karento-space-1) var(--karento-space-2);
       border-radius: var(--karento-radius-media);
       background: var(--bs-neutral-100);
-      overflow-wrap: anywhere;
+      white-space: nowrap;
+    }
+    .mobile-vehicle-facts:focus-visible {
+      outline: var(--karento-focus-width) solid var(--karento-accent);
+      outline-offset: var(--karento-focus-offset);
+    }
+    .mobile-vehicle-card-stacked.background-card {
+      padding: 0;
+    }
+    .mobile-vehicle-card-stacked .mobile-vehicle-main {
+      display: flex;
+      flex-direction: column;
+      gap: var(--karento-space-3);
+    }
+    .mobile-vehicle-card-stacked .mobile-vehicle-photo {
+      position: relative;
+      flex: none;
+      aspect-ratio: var(--karento-image-wide);
+      border-radius: calc(var(--karento-radius-card) - 1px)
+        calc(var(--karento-radius-card) - 1px) 0 0;
+      background: transparent;
+    }
+    .mobile-vehicle-card-stacked .mobile-vehicle-photo img {
+      position: absolute;
+      inset: 0;
+      object-fit: cover;
+    }
+    .mobile-vehicle-card-stacked .mobile-vehicle-copy {
+      flex: 1;
+      padding-inline: var(--karento-space-3);
+    }
+    .mobile-vehicle-card-stacked .mobile-vehicle-link {
+      justify-content: space-between;
+    }
+    .mobile-vehicle-card-stacked.background-card .mobile-vehicle-facts {
+      margin: 0 var(--karento-space-3) var(--karento-space-3);
+      padding: 0;
+      border: 0;
     }
   }
 </style>

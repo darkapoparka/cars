@@ -105,7 +105,8 @@ export const load: PageServerLoad = async ({ request, url }) => {
 };
 
 export const actions: Actions = {
-	default: async ({ request }) => {
+	default: async ({ request, url }) => {
+		requireDayNightPageSession(request, 'admin/messages', url.searchParams);
 		const formData = await request.formData();
 		const id = value(formData, 'id');
 		const routePath = value(formData, 'routePath');

@@ -1,18 +1,20 @@
+import { isEntrypoint } from './lib/cli-entrypoint.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import { copySource } from './copy-source.mjs';
 import { verifyTemplate, selectedTemplateSource, templateDevelopmentState } from './template-release.mjs';
 import { materializeTemplateSource } from './lib/template-source.mjs';
-import { ROOT, POLICY, args, json, inside, fingerprint, resolveIdentity, validateManifest, excluded } from './lib/workflow.mjs';
+import { ROOT, POLICY, args, json, inside, fingerprint, sha256, git, resolveIdentity, validateManifest, excluded } from './lib/workflow.mjs';
 import { dealerGuidance, variantCommands } from './lib/dealer-guidance.mjs';
 import { gitRead, repositoryIdentity } from './workspace-doctor.mjs';
 import { normalizeDealerLocale, readDealerLocale } from './lib/dealer-locale.mjs';
-import { nativeContract, validateNativeRelease } from './lib/native-localization.mjs';
+import { nativeContract, validateNativeRelease, validateNativeQualificationContext, validateTemplateQualification, parseCatalogJson } from './lib/native-localization.mjs';
 import { planSixDesignSelection } from './lib/six-design-release.mjs';
 import { baseNativeManifest } from './publishing/app-variant.mjs';
+import { readPinnedTemplateTree } from './dealer-updates/pinned-template-source.mjs';
 
 // Verify this checkout, not every other repository's unrelated unfinished work.
-export function assertMainCheckout(root, { readGit = gitRead, platform = process.platform } = {}) {
+export function assertMainCheckout(root, { readGit = gitRead, platform = process.platform, env = process.env, eventCommit = null } = {}) {
   const config = json(path.join(root, 'workspace.json'));
   const declared = config.machinePaths?.[platform];
   if (platform === 'win32' && !declared) throw new Error('Missing canonical Windows checkout in workspace.json; resolve the registered Cars source before creating a dealer.');
@@ -22,15 +24,67 @@ export function assertMainCheckout(root, { readGit = gitRead, platform = process
   if (readGit(root, ['branch', '--show-current']) !== 'main') throw new Error('New dealers must be created on main; do not create a branch or worktree.');
   const head = readGit(root, ['rev-parse', 'HEAD']);
   const remoteHead = readGit(root, ['ls-remote', '--exit-code', 'origin', 'refs/heads/main']).split(/\s+/)[0];
+  if (eventCommit !== null) {
+    // Only the immutable Actions source proposal opts in. Ordinary local
+    // creation still requires synchronized main; no caller may fake remoteHead.
+    if (platform !== 'linux' || env.GITHUB_ACTIONS !== 'true' || env.GITHUB_EVENT_NAME !== 'push' ||
+        env.GITHUB_REPOSITORY !== 'darkapoparka/cars' || env.GITHUB_REF !== 'refs/heads/main' ||
+        !/^[a-f0-9]{40}$/.test(eventCommit) || head !== eventCommit || env.GITHUB_SHA !== eventCommit ||
+        !/^[1-9][0-9]*$/.test(env.GITHUB_RUN_ID ?? '') || !/^[1-9][0-9]*$/.test(env.GITHUB_RUN_ATTEMPT ?? '') ||
+        readGit(root, ['rev-parse', '--is-shallow-repository']) !== 'false')
+      throw new Error('Immutable source event requires the actual complete canonical main push checkout');
+    if (Object.entries(env).some(([key,value]) => value && /^(?:CLOUDFLARE|CF)_(?:API_(?:TOKEN|KEY)|TOKEN)$|^WRANGLER_(?:API_TOKEN|TOKEN)$/.test(key)))
+      throw new Error('Provider credentials cannot enter immutable source preparation');
+    if (!/^[a-f0-9]{40}$/.test(remoteHead)) throw new Error('Current origin main is not an exact commit');
+    if (head !== remoteHead) {
+      let present = true;
+      try { readGit(root, ['cat-file', '-e', remoteHead + '^{commit}']); } catch { present = false; }
+      if (!present) readGit(root, ['fetch', '--no-tags', '--no-auto-maintenance', '--no-write-fetch-head',
+        '--no-recurse-submodules', '--refmap=', '--filter=blob:none', 'origin', remoteHead]);
+      if (readGit(root, ['merge-base', head, remoteHead]) !== head)
+        throw new Error('Immutable source event is not an ancestor of current origin main');
+    }
+    return { head, remoteHead, eventCommit, checkedAt: new Date().toISOString() };
+  }
   if (!/^[a-f0-9]{40}$/.test(remoteHead) || head !== remoteHead) throw new Error('Cars main is not synchronized with GitHub. Preserve local work, reconcile/push main, then retry in this same checkout.');
   return { head, remoteHead, checkedAt: new Date().toISOString() };
 }
 
-export function planNewClient({ root = ROOT, client, repository, preset = 'standard', templates, dealerId = null, designSet = null, localeConfig = null, readGit = gitRead }) {
+/** Exact committed qualification pins are an explicit source-only opt-in.
+ * The global approved lock and ordinary new-client path remain authoritative. */
+export function readNewClientQualification(root, pins, dealer) {
+  if (!pins || JSON.stringify(Object.keys(pins).sort()) !== '["candidateLock","qualification"]') throw new Error('Exact candidate lock and qualification pins required');
+  const read = pin => {
+    if (!pin || JSON.stringify(Object.keys(pin).sort()) !== '["path","sha256"]' || !/^docs\/releases\/[a-zA-Z0-9._/-]+\.json$/.test(pin.path || '') || pin.path.split('/').some(p=>p==='.'||p==='..') || !/^[a-f0-9]{64}$/.test(pin.sha256 || '')) throw new Error('Bounded qualification input pin required');
+    const file=inside(root,pin.path,{mustExist:true});let ancestor=fs.realpathSync(root);
+    for(const component of pin.path.split('/')){ancestor=path.join(ancestor,component);if(fs.lstatSync(ancestor).isSymbolicLink())throw new Error('Qualification input must be a physical file');}
+    const stat=fs.statSync(file);if(!stat.isFile()||stat.size<=0||stat.size>2*1024**2)throw new Error('Bounded qualification bytes required');
+    const bytes=fs.readFileSync(file);if(sha256(bytes)!==pin.sha256)throw new Error('Qualification input bytes changed');
+    const blob=git(root,['rev-parse','HEAD:'+pin.path]);if(!/^[a-f0-9]{40}$/.test(blob)||git(root,['hash-object','--stdin'],{input:bytes})!==blob)throw new Error('Qualification inputs must be exact committed source');
+    return {bytes,value:parseCatalogJson(new TextDecoder('utf-8',{fatal:true}).decode(bytes))};
+  };
+  const candidate=read(pins.candidateLock),qualified=read(pins.qualification),context=validateNativeQualificationContext(qualified.value,{dealer});
+  if(context.scope!=='new-dealer-source-proposal')throw new Error('New-client requires a new-dealer source qualification scope');
+  if(context.candidateLockSha256!==pins.candidateLock.sha256||context.approvedLockSha256!==sha256(fs.readFileSync(path.join(root,'templates.lock.json'))))throw new Error('Qualification candidate or approved parent lock changed');
+  if(candidate.value.schemaVersion!==1||candidate.value.exportPolicy!==POLICY||!candidate.value.templates)throw new Error('Invalid candidate source lock');
+  read({path:context.sourceDeltaReview.reference,sha256:context.sourceDeltaReview.sha256});
+  return {lock:candidate.value,context,candidateLockBytes:candidate.bytes,qualificationBytes:qualified.bytes};
+}
+export function verifyNewClientRelease(root,key,qualification=null) {
+  if(qualification===null)return verifyTemplate(root,key);
+  const release=qualification.lock.templates[key];validateTemplateQualification(key,release,qualification.context,{root});
+  if(release.exportPolicy!==POLICY||git(root,['merge-base','--is-ancestor',release.source.revision,'HEAD'],{allowFailure:true})===null||git(root,['rev-parse',release.source.revision+':'+release.source.path])!==release.source.tree)throw new Error(key+': qualification source tree/revision changed');
+  readPinnedTemplateTree({key,repositoryPath:root,source:release.source,expectedDigest:release.digest});
+  inside(root,release.snapshotPath,{mustExist:true});return release;
+}
+
+export function planNewClient({ root = ROOT, client, repository, preset = 'standard', templates, dealerId = null, designSet = null, localeConfig = null, sourceQualification = null, eventCommit = null, readGit = gitRead }) {
   root = fs.realpathSync(root);
   if (!['standard', 'import'].includes(preset)) throw new Error('Use --preset standard or import.');
   if (designSet !== null && designSet !== 'six') throw new Error('Use --design-set six for the explicit six-family release.');
   const six = designSet === 'six';
+  if(sourceQualification!==null&&!six)throw new Error('Source qualification requires the explicit six-design creator');
+  const qualification=sourceQualification===null?null:readNewClientQualification(root,sourceQualification,client);
   if (six && localeConfig === null) throw new Error('Six-design creation requires an explicit --locale-config.');
   if (!six && localeConfig !== null) throw new Error('Use --design-set six for native locale creation; legacy version 1 cannot adopt this contract.');
   if (resolveIdentity(root, client, dealerId).exists) throw new Error('Existing dealer identity: continue its canonical source; do not clone a duplicate.');
@@ -49,7 +103,7 @@ export function planNewClient({ root = ROOT, client, repository, preset = 'stand
   const registryPath = path.join(root, 'docs/DEPLOYMENT-INVENTORY.json');
   const existingRepository = fs.existsSync(registryPath) && json(registryPath).dealers?.find(d => d.repository?.toLowerCase() === manifest.repository.toLowerCase());
   if (existingRepository) throw new Error('Publishing repository already belongs to ' + existingRepository.slug + '; reuse its canonical dealer.');
-  const checkout = assertMainCheckout(root, { readGit });
+  const checkout = assertMainCheckout(root, { readGit, eventCommit });
   const inputs = ['templates.lock.json', 'catalog.json', 'workspace.json', 'scripts/new-client.mjs', 'scripts/copy-source.mjs', 'scripts/template-release.mjs', 'scripts/lib/workflow.mjs', 'scripts/lib/template-source.mjs', 'scripts/lib/dealer-guidance.mjs', 'scripts/workspace-doctor.mjs'];
   if (six) inputs.push('scripts/lib/dealer-locale.mjs', 'scripts/lib/native-localization.mjs', 'scripts/lib/five-design-release.mjs', 'scripts/lib/six-design-release.mjs', 'scripts/publishing/app-variant.mjs');
   const changed = readGit(root, ['diff', '--name-only', 'HEAD', '--', ...inputs]);
@@ -57,7 +111,7 @@ export function planNewClient({ root = ROOT, client, repository, preset = 'stand
   const clientRoot = inside(root, 'clients/' + client);
   if (fs.existsSync(clientRoot)) throw new Error('Client destination is occupied: ' + clientRoot);
   const plans = selected.map(template => {
-    const release = verifyTemplate(root, template.key);
+    const release = verifyNewClientRelease(root, template.key, qualification);
     const source = selectedTemplateSource(release);
     const expectedPath = 'templates/' + template.key;
     const carsSource = release.source?.repository === 'darkapoparka/cars' && source.path === expectedPath;
@@ -68,16 +122,16 @@ export function planNewClient({ root = ROOT, client, repository, preset = 'stand
     const developmentHead = readGit(root, ['ls-remote', '--exit-code', 'https://github.com/' + source.repository + '.git', 'refs/heads/main']).split(/\s+/)[0];
     if (!/^[a-f0-9]{40}$/.test(developmentHead)) throw new Error('Cannot verify current upstream main: ' + template.key);
     const development = templateDevelopmentState(root, template.key, release, developmentHead, { readGit });
-    return { template: template.key, release, sourceRef: source, source: inside(root, expectedPath, { mustExist: true }), destination: path.join(clientRoot, template.key), homes: template.homes, ...development, releasePolicy: 'latest-reviewed-release; newer development is not silently promoted' };
+    return { template: template.key, release, sourceRef: source, source: inside(root, expectedPath, { mustExist: true }), destination: path.join(clientRoot, template.key), homes: template.homes, ...development, releasePolicy: qualification?'reviewed-source-qualification; native and hosted approval pending':'latest-reviewed-release; newer development is not silently promoted' };
   });
   manifest.templateRevisions = Object.fromEntries(plans.map(p => [p.template, p.sourceRef.revision]));
   manifest.templateSources = Object.fromEntries(plans.map(p => [p.template, p.sourceRef]));
   if (six) {
     const base = baseNativeManifest(manifest);
     nativeContract(base);
-    for (const { key } of base.variants) validateNativeRelease(key, plans.find(p => p.template === key).release);
+    for (const { key } of base.variants) {const release=plans.find(p=>p.template===key).release;if(qualification)validateTemplateQualification(key,release,qualification.context,{root});else validateNativeRelease(key,release,{root});}
   }
-  return { root, client, dealerId, clientRoot, manifest, checkout, plans, state: 'needs-personalization' };
+  return { root, client, dealerId, clientRoot, manifest, checkout, plans, state: 'needs-personalization', ...(qualification?{sourceQualification,qualificationOnly:true,nativeApproval:false,hostedApproval:false}: {}) };
 }
 
 function creationGuidance(plan, variant = null) {
@@ -91,8 +145,10 @@ function creationGuidance(plan, variant = null) {
   return guide;
 }
 
-export async function createNewClient(plan, { readGit = gitRead, copy = copySource } = {}) {
+export async function createNewClient(plan, { readGit = gitRead, copy = copySource, mutationWriter } = {}) {
+  if(mutationWriter&&(typeof mutationWriter.writeDetached!=='function'||typeof mutationWriter.installTree!=='function'))throw Error('Explicit proof-capable creator writer required');
   const { root, clientRoot, client, manifest, plans } = plan;
+  const qualification=plan.sourceQualification?readNewClientQualification(root,plan.sourceQualification,client):null;
   if (path.resolve(clientRoot) !== inside(root, 'clients/' + client) || manifest.slug !== client) throw new Error('Invalid canonical client plan.');
   validateManifest(manifest);
   if (manifest.packaging.version === '5') nativeContract(baseNativeManifest(manifest));
@@ -103,40 +159,47 @@ export async function createNewClient(plan, { readGit = gitRead, copy = copySour
   fs.writeFileSync(path.join(lockPath, 'owner.json'), JSON.stringify({ pid: process.pid, client, startedAt: new Date().toISOString() }));
   let staging;
   try {
-    if (assertMainCheckout(root, { readGit }).head !== plan.checkout.head) throw new Error('Cars main advanced after planning; regenerate the plan.');
+    if (assertMainCheckout(root, { readGit, eventCommit: plan.checkout.eventCommit ?? null }).head !== plan.checkout.head) throw new Error('Cars main advanced after planning; regenerate the plan.');
     if (resolveIdentity(root, client, plan.dealerId).exists) throw new Error('Dealer identity appeared after planning; no copy will be installed.');
     const parent = inside(root, 'runtime/new-clients'); fs.mkdirSync(parent, { recursive: true });
     staging = fs.mkdtempSync(path.join(parent, client + '-'));
     const stagedClient = path.join(staging, 'dealer'); fs.mkdirSync(stagedClient);
-    const writeJson = (file, value) => fs.writeFileSync(file, JSON.stringify(value, null, 2) + '\n');
+    const declarations=new Map();
+    const writeOwned=(file,value)=>{const bytes=Buffer.isBuffer(value)?value:Buffer.from(value),name=path.relative(stagedClient,file).split(path.sep).join('/');
+      if(mutationWriter){const proof=mutationWriter.writeDetached(file,bytes,declarations.get(name)??null);if(!name.startsWith('../'))declarations.set(name,{sha256:sha256(bytes),mode:proof.mode});}
+      else fs.writeFileSync(file,bytes);
+    };
+    const writeJson = (file, value) => writeOwned(file, JSON.stringify(value, null, 2) + '\n');
     writeJson(path.join(stagedClient, 'dealer.json'), manifest);
     if (manifest.packaging.version === '5') {
       fs.mkdirSync(path.join(stagedClient, 'localization'));
       writeJson(path.join(stagedClient, 'localization/contract.json'), manifest.localization);
     }
-    fs.writeFileSync(path.join(stagedClient, 'AGENTS.md'), creationGuidance(plan));
+    writeOwned(path.join(stagedClient, 'AGENTS.md'), creationGuidance(plan));
     for (const item of plans) {
-      if (JSON.stringify(verifyTemplate(root, item.template)) !== JSON.stringify(item.release)) throw new Error('Template release changed after planning: ' + item.template);
+      if (JSON.stringify(verifyNewClientRelease(root, item.template, qualification===null?null:readNewClientQualification(root,plan.sourceQualification,client))) !== JSON.stringify(item.release)) throw new Error('Template release changed after planning: ' + item.template);
       const destination = path.join(stagedClient, item.template);
-      await materializeTemplateSource({ root, key: item.template, release: item.release, source: item.sourceRef, destination, copy });
+      const materialized=await materializeTemplateSource({ root, key: item.template, release: item.release, source: item.sourceRef, destination, copy, mutationWriter });
+      if(mutationWriter)for(const row of materialized.declaredFiles)declarations.set(item.template+'/'+row.path,{sha256:row.sha256,mode:row.mode});
       if (fingerprint(destination).digest !== item.release.digest) throw new Error('Copied source differs from the approved release: ' + item.template);
-      const copied = json(path.join(destination, '.template/source-manifest.json'));
+      const copied = mutationWriter?materialized.sourceManifest:json(path.join(destination, '.template/source-manifest.json'));
       copied.destination = item.destination; copied.exportPolicy = POLICY; copied.approvedTemplate = item.release; copied.workflowCommit = plan.checkout.head;
       writeJson(path.join(destination, '.template/source-manifest.json'), copied);
       const metadata = { schemaVersion: 1, client, templateKey: item.template, templateVersion: item.sourceRef.revision, createdAt: new Date().toISOString(), state: 'needs-personalization', selectedHome: item.homes[0].id, availableHomes: item.homes, offeredHomes: [], publicUrl: null, qa: { desktop: false, mobile: false, identity: false, contactPath: false }, crm: { leadId: null, demoProjectId: null, registered: false }, templateSource: { ...item.sourceRef, exportPolicy: POLICY }, packaging: { version: manifest.packaging.version, entry: manifest.variants.find(v => v.key === item.template).entry }, workflowCommit: plan.checkout.head };
       fs.mkdirSync(path.join(destination, '.client'), { recursive: true });
       writeJson(path.join(destination, '.client/project.json'), metadata);
-      fs.writeFileSync(path.join(destination, 'AGENTS.md'), creationGuidance(plan, item.template));
+      writeOwned(path.join(destination, 'AGENTS.md'), creationGuidance(plan, item.template));
     }
     const designs = manifest.variants.length === 6 ? 'six' : 'three';
-    fs.writeFileSync(path.join(stagedClient, 'CLIENT.md'), `# ${client}\n\nStatus: needs personalization, not ready for outreach.\n\nUse one sourced fact/inventory/approved raster-logo pack across all ${designs} apps. Preserve template heroes, banners, layout and interactions. Record unknown facts. Follow docs/WORKFLOW.md and docs/LEAD-PUBLISHING.md in Cars.\n\n${manifest.variants.length} applications, one canonical dealer folder, one publishing repository on main and one shared Admin demo link. Hosting requires a qualified publisher and separate hosted evidence. No CRM/provider record or adoption/personalization receipt was created by this helper.\n`);
-    if (assertMainCheckout(root, { readGit }).head !== plan.checkout.head) throw new Error('Cars main changed during copying; the staged candidate is preserved, not installed.');
+    writeOwned(path.join(stagedClient, 'CLIENT.md'), `# ${client}\n\nStatus: needs personalization, not ready for outreach.\n\nUse one sourced fact/inventory/approved raster-logo pack across all ${designs} apps. Preserve template heroes, banners, layout and interactions. Record unknown facts. Follow docs/WORKFLOW.md and docs/LEAD-PUBLISHING.md in Cars.\n\n${manifest.variants.length} applications, one canonical dealer folder, one publishing repository on main and one shared Admin demo link. Hosting requires a qualified publisher and separate hosted evidence. No CRM/provider record or adoption/personalization receipt was created by this helper.\n`);
+    if (assertMainCheckout(root, { readGit, eventCommit: plan.checkout.eventCommit ?? null }).head !== plan.checkout.head) throw new Error('Cars main changed during copying; the staged candidate is preserved, not installed.');
     for (const item of plans) {
-      if (JSON.stringify(verifyTemplate(root, item.template)) !== JSON.stringify(item.release) || fingerprint(path.join(stagedClient, item.template)).digest !== item.release.digest) throw new Error('Source or copied candidate changed during creation: ' + item.template);
+      if (JSON.stringify(verifyNewClientRelease(root, item.template, qualification===null?null:readNewClientQualification(root,plan.sourceQualification,client))) !== JSON.stringify(item.release) || fingerprint(path.join(stagedClient, item.template)).digest !== item.release.digest) throw new Error('Source or copied candidate changed during creation: ' + item.template);
     }
     if (resolveIdentity(root, client, plan.dealerId).exists) throw new Error('Dealer destination appeared during copying; existing work was not overwritten.');
     inside(root, 'clients/' + client); // Recheck ancestor links before installation.
-    fs.renameSync(stagedClient, clientRoot);
+    if(mutationWriter)mutationWriter.installTree(stagedClient,declarations);
+    else fs.renameSync(stagedClient, clientRoot);
     writeJson(path.join(staging, 'creation.json'), { createdAt: new Date().toISOString(), clientRoot, workflowCommit: plan.checkout.head, state: 'needs-personalization', templates: plans.map(p => ({ key: p.template, source: p.sourceRef })) });
     return { clientRoot, state: 'needs-personalization', applications: plans.length, receipt: path.join(staging, 'creation.json') };
   } catch (error) {
@@ -158,4 +221,4 @@ async function main() {
   console.log(JSON.stringify({ mode: o['dry-run'] ? 'dry-run' : 'copy', ...plan }, null, 2));
   if (!o['dry-run']) console.log(JSON.stringify(await createNewClient(plan), null, 2));
 }
-if (process.argv[1] && path.resolve(process.argv[1]) === import.meta.filename) main().catch(error => { console.error(error.message); process.exitCode = 1; });
+if (isEntrypoint(import.meta.url)) main().catch(error => { console.error(error.message); process.exitCode = 1; });

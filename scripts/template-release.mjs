@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import { isEntrypoint } from './lib/cli-entrypoint.mjs';
 import path from 'node:path';
 import {gitRead} from './workspace-doctor.mjs';
 import { nativeLocaleSources } from './lib/dealer-locale.mjs';
@@ -87,7 +88,7 @@ export function approveCarsTemplate({root=ROOT,key,commit,evidence,write=false})
  if(prior.repository&&prior.commit&&!prior.source&&!prior.legacySource)entry.legacySource={...selectedTemplateSource(prior),
   evidence:prior.qa?.evidence||null,nativeDeployment:prior.qa?.nativeLocalization?.deployment||null};
  const sourceFiles=new Map(gitFiles(root,commit,{prefix}).map(f=>[f.path,Buffer.alloc(0)]));
- if(nativeLocaleSources(sourceFiles).length||qa.nativeLocalization)validateNativeRelease(key,entry);
+ if(nativeLocaleSources(sourceFiles).length||qa.nativeLocalization)validateNativeRelease(key,entry,{root});
  if(write) {
   if(!fs.readFileSync(lockFile).equals(before))throw new Error('Release lock changed during review; preserve the newer selection.');
   lock.templates[key]=entry;
@@ -146,4 +147,4 @@ async function main(){const [command,...argv]=process.argv.slice(2);if(!command|
  else if(command==='approve'){gitRead(ROOT,['fetch','origin','refs/heads/main:refs/remotes/origin/main']);console.log(JSON.stringify(approveCarsTemplate({key:o.key,commit:o.commit,evidence:o.evidence,write:!!o.write}),null,2));}
  else if(command==='promote')console.log(JSON.stringify(promoteTemplate({key:o.key,sourceRepo:o['source-repo'],commit:o.commit,evidence:o.evidence,expectedDigest:o['expected-digest'],write:!!o.write}),null,2));else throw new Error(`Unknown command ${command}`);
 }
-if(process.argv[1]&&path.resolve(process.argv[1])===import.meta.filename)main().catch(e=>{console.error(e.message);process.exitCode=1;});
+if(isEntrypoint(import.meta.url))main().catch(e=>{console.error(e.message);process.exitCode=1;});

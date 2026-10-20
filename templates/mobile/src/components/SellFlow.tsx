@@ -4,7 +4,7 @@ import Image from 'next/image';
 import * as stylex from '@stylexjs/stylex';
 import { colors } from '@/styles/tokens.stylex';
 import { makes, models } from '@/lib/catalog';
-import { patchState, useAppState } from '@/lib/store';
+import { notify, patchState, useAppState } from '@/lib/store';
 import { Header } from './Header';
 import { Button, ui } from './ui';
 import { LoginScreen } from './LoginScreen';
@@ -26,6 +26,7 @@ function DraftWizard({ mode }: { mode: Mode }) {
   const { draft } = useAppState();
   const [step, setStep] = useState(0);
   const [done, setDone] = useState(false);
+  const [persisted, setPersisted] = useState(true);
   const [photos, setPhotos] = useState<string[]>([]);
   const [error, setError] = useState('');
   const total = mode === 'create' ? 3 : 2;
@@ -49,7 +50,12 @@ function DraftWizard({ mode }: { mode: Mode }) {
       setStep(step + 1);
       window.scrollTo(0, 0);
     } else {
-      patchState({ draft: { ...draft, status: 'saved', mode } });
+      const saved = patchState({ draft: { ...draft, status: 'saved', mode } });
+      setPersisted(saved);
+      if (!saved)
+        notify(
+          'Saving is unavailable. Your draft is kept for this session only. Nothing was sent.',
+        );
       setDone(true);
     }
   }
@@ -84,7 +90,11 @@ function DraftWizard({ mode }: { mode: Mode }) {
           {done ? (
             <>
               <h1 {...stylex.props(ui.heading)}>
-                {mode === 'create' ? 'Draft saved' : 'Vehicle details saved'}
+                {persisted
+                  ? mode === 'create'
+                    ? 'Draft saved'
+                    : 'Vehicle details saved'
+                  : 'Draft kept for this session'}
               </h1>
               <div {...stylex.props(s.summary)}>
                 {Object.entries(draft)
@@ -97,9 +107,11 @@ function DraftWizard({ mode }: { mode: Mode }) {
                   ))}
               </div>
               <p>
-                {mode === 'create'
-                  ? 'Your draft is stored in this browser. Publishing is not connected.'
-                  : 'A real valuation provider is not connected. No market valuation has been generated.'}
+                {!persisted
+                  ? 'Saving is unavailable. Your draft is kept for this session only. Nothing was sent.'
+                  : mode === 'create'
+                    ? 'Your draft is stored in this browser. Publishing is not connected.'
+                    : 'A real valuation provider is not connected. No market valuation has been generated.'}
               </p>
               <Button variant="outline" onClick={() => setDone(false)}>
                 Edit details
@@ -232,8 +244,8 @@ function DraftWizard({ mode }: { mode: Mode }) {
                     ))}
                   </div>
                   <p {...stylex.props(ui.small, ui.muted)}>
-                    Photos are previewed in this session only and are never uploaded. Text fields
-                    are saved on this device.
+                    Photos stay in this session and are never uploaded. Saving text to this device
+                    may fail.
                   </p>
                 </>
               )}

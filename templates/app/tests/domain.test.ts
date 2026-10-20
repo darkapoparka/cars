@@ -11,6 +11,7 @@ import {vehicles as catalogue, getVehicle, formatPrice} from '../lib/data';
 import {demoVehicles as vehicles} from '../lib/fixtures/demo-vehicles';
 import {currency} from '../lib/currency';
 import {estimateFinance} from '../lib/finance';
+import {brandLogo} from '../lib/brand-logos';
 
 const both = {defaultLocale: 'en', enabledLocales: ['en', 'bg']} as const;
 const english = {defaultLocale: 'en', enabledLocales: ['en']} as const;
@@ -135,6 +136,11 @@ describe('dealer-scoped saved and recent cars', () => {
 
 describe('inventory domain invariants', () => {
   const car = {...vehicles[0], price:30000, mileage:20000, monthly:500, priceOnRequest:false, mileageOnRequest:false};
+  it('uses the retained Mercedes-Benz emblem for the supported spaced make spelling', () => {
+    const emblem = brandLogo('Mercedes-Benz');
+    assert.ok(emblem);
+    for (const make of ['Mercedes Benz', ' mercedes  benz ', 'MERCEDES-BENZ']) assert.equal(brandLogo(make), emblem);
+  });
   it('keeps all existing inventory visible without active filters', () => {for(const vehicle of vehicles) assert.equal(matchesInventory(vehicle, emptyFilters(), ''),true);});
   it('keeps slug lookup equivalent to the original first-match lookup', () => {for(const vehicle of catalogue) assert.equal(getVehicle(vehicle.slug),catalogue.find(item=>item.slug===vehicle.slug)); assert.equal(getVehicle('not-a-vehicle'),undefined);});
   it('preserves exact currency formatting', () => {for(const amount of [0,1,30000,1234567.89]) assert.equal(formatPrice(amount),new Intl.NumberFormat(currency.locale).format(amount));});

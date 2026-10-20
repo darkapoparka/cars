@@ -2,6 +2,7 @@ import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { assertSixDesignSelection } from '../lib/six-design-release.mjs';
 import { excluded, normalized } from '../lib/workflow.mjs';
+import { addSignatureNavigationHead } from './signature-navigation.mjs';
 
 export const SIX_PACKAGING_VERSION = '5';
 const hash = value => createHash('sha256').update(value).digest('hex');
@@ -183,7 +184,7 @@ function mountSignature(files, adapter, provider) {
     if (app.split('</head>').length !== 2) throw Error('Signature app head boundary changed');
     app = app.replace('</head>', '  <script defer src="/preview-switcher.js"></script>\n</head>');
   }
-  write(files, appName, app);
+  write(files, appName, addSignatureNavigationHead(app));
 }
 
 /** Only generated package files are transformed; source receipts remain original input proof. */

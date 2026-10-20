@@ -27,9 +27,7 @@ export async function generateMetadata({ params }: ServicesPageProps) {
     locale,
     path: "/services",
     title: `${bg ? "Услуги" : "Services"} | ${leadSite.shortName}`,
-    description: bg
-      ? "Разгледайте възможностите за покупка, продажба, внос и финансиране."
-      : "Explore buying, selling, importing and financing your next car.",
+    description: pageCopy[normalizeSeoLocale(locale)].servicesDescription,
   });
 }
 

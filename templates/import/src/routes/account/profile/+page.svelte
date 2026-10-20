@@ -5,8 +5,10 @@
 	let { data, form }: { data: PageData; form: ActionData } = $props();
 
 	let statusMessage = $derived(
-		form?.profileSaved
-			? `Profile saved locally for ${data.profile.firstName} ${data.profile.lastName}`
+		form?.profileUnavailable
+			? data.locale === 'en'
+				? 'Demo only. Profile changes are not saved.'
+				: 'Само демо. Промените в профила не се запазват.'
 			: ''
 	);
 </script>

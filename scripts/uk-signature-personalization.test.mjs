@@ -214,3 +214,25 @@ test('approved inline discovery rejects unavailable mandatory facts, mixed curre
   files.set(file,Buffer.from(files.get(file).toString('utf8').replace('  year: number;','  year: string;')));
   assert.throws(()=>applyExtendedRefreshAdapter({files,key:'karento-best',profile,client:path.join(root,entry.brief)}),/Signature discovery requires a reviewed factual data and text boundary/);
 });
+
+test('Signature detail adds the supplied year without exposing the normalizer fallback',()=>{
+  const entry=batch.dealers.find(item=>item.slug==='stockport-broadbent-car-and-servicing');
+  const {files,profile}=personalize(entry);
+  const details=moduleFrom(files.get('karento-best/src/lib/data/dealer-detail.ts').toString('utf8')).dealerDetails;
+  for(const [index,detail] of details.entries()) {
+    const year=detail.specifications.find(item=>item.id==='year');
+    assert.equal(year.value,String(profile.listings[index].raw.year));
+    assert.equal(year.labelKey,'vehicle.field.year');
+    assert.equal(year.icon,'/assets/imgs/template/icons/calendar.svg');
+  }
+  const transit=details.find(item=>item.id==='860026533399');
+  assert.deepEqual([...transit.specifications].map(item=>item.id),['km','auto','diesel','year']);
+  assert.equal(transit.specifications.find(item=>item.id==='year').value,'2020');
+  for(const rawYear of [undefined,null,'',0,1899,2101,2020.5,'unknown']) {
+    const changed=structuredClone(profile);
+    changed.listings[0].raw={...changed.listings[0].raw,year:rawYear,production:undefined,date:undefined};
+    const missing=personalize(entry,changed);
+    const detail=moduleFrom(missing.files.get('karento-best/src/lib/data/dealer-detail.ts').toString('utf8')).dealerDetails[0];
+    assert.equal(detail.specifications.some(item=>item.id==='year'),false,String(rawYear));
+  }
+});

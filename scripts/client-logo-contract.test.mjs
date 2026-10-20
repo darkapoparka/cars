@@ -1,6 +1,10 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { stripModernAlternateWordmark, normalizeModernFinancingLogo, bindModernMobileWordmarkLogo } from './lib/client-logo-contract.mjs';
+import fs from 'node:fs';
+import os from 'node:os';
+import path from 'node:path';
+import { createHash } from 'node:crypto';
+import { stripModernAlternateWordmark, normalizeModernFinancingLogo, bindModernMobileWordmarkLogo, applyDealerLogoContract, loadLogoContract } from './lib/client-logo-contract.mjs';
 
 test('Modern logo normalization removes the complete alternate wordmark JSX expression', () => {
   const source = `<span className="relative">
@@ -101,3 +105,98 @@ test('Modern mobile wordmark binding rejects unknown or incomplete component sha
   assert.throws(() => bindModernMobileWordmarkLogo(extractedMobileWordmark.replace('<DealerMobileWordmark clean={clean} wordmarkTone={wordmarkTone} />', '<Other />')), /wordmark call/);
   assert.throws(() => bindModernMobileWordmarkLogo(extractedMobileWordmark.replace('wordmarkTone={wordmarkTone} />', 'wordmarkTone={wordmarkTone} logoSource={differentLogo} />')), /Unexpected/);
 });
+
+const importFallbackPaths = [
+  'src/lib/content/sell-your-car.ts',
+  'src/lib/server/auxero-listing-data.ts',
+  'src/lib/server/inventory-options.ts',
+  'src/routes/offer/+page.svelte'
+];
+function importLogoFixture(t, extension = 'webp') {
+  const parent = fs.realpathSync(os.tmpdir());
+  const root = fs.mkdtempSync(path.join(parent, 'cars-import-fallback-'));
+  t.after(() => {
+    const absolute = fs.realpathSync(root);
+    assert.equal(path.dirname(absolute), parent);
+    assert(path.basename(absolute).startsWith('cars-import-fallback-'));
+    fs.rmSync(absolute, { recursive: true });
+  });
+  const candidate = path.join(root, 'candidate');
+  const write = (name, bytes) => {
+    const file = path.join(root, name);
+    fs.mkdirSync(path.dirname(file), { recursive: true });
+    fs.writeFileSync(file, bytes);
+  };
+  const bytes = Buffer.from(extension === 'png'
+    ? 'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+aF9sAAAAASUVORK5CYII='
+    : 'UklGRiIAAABXRUJQVlA4IBYAAAAwAQCdASoBAAEAAUAmJaQAA3AA/v89WAAAAA==', 'base64');
+  const digest = createHash('sha256').update(bytes).digest('hex');
+  const assets = Object.fromEntries(['onLight', 'onDark', 'onAccent'].map(surface => {
+    const publicPath = extension === 'png' ? `/registered-branding/${surface}.png` : `/dealer-brand/${surface}.webp`;
+    write(publicPath.slice(1), bytes);
+    return [surface, { publicPath, sha256: digest }];
+  }));
+  write('candidate/src/lib/config/dealer.ts', "export const daynightAssets = {\n logoLight: '/brand/daynight-wordmark.svg',\n logoDark: '/brand/daynight-wordmark.svg'\n} as const;\nexport const palette = { accent: '#ff0000' };\n");
+  return { root, candidate, write, bytes, contract: { assets }, apply: () => applyDealerLogoContract({ key: 'import', oldVariant: path.join(root, 'import'), candidate, profile: { logoContract: { assets } } }) };
+}
+
+for (const extension of ['webp', 'png']) test(`Import binds four native fallback consumers to the selected ${extension} raster only`, t => {
+  const fixture = importLogoFixture(t, extension);
+  const original = importFallbackPaths.map((name, index) => {
+    const quote = index % 2 ? '"' : "'";
+    const text = `const retained = '/customer/custom-logo.svg';\r\nconst fallback = ${quote}/brand/daynight-wordmark.svg${quote};\r\nconst palette = '#ff0000';\r\n<style>.card{color:#fff;gap:8px}</style>\r\n`;
+    fixture.write('candidate/' + name, text);
+    return text;
+  });
+  fixture.write('candidate/src/lib/content/unowned.ts', "const fallback = '/brand/daynight-wordmark.svg';\n");
+  const changed = fixture.apply();
+  for (const [index, name] of importFallbackPaths.entries()) {
+    const actual = fs.readFileSync(path.join(fixture.candidate, name), 'utf8');
+    assert.equal(actual, original[index].replace(/(['"])\/brand\/daynight-wordmark\.svg\1/, JSON.stringify(fixture.contract.assets.onLight.publicPath)));
+    assert(changed.includes(name));
+  }
+  assert.equal(fs.readFileSync(path.join(fixture.candidate, 'src/lib/content/unowned.ts'), 'utf8'), "const fallback = '/brand/daynight-wordmark.svg';\n");
+  assert(fs.readFileSync(path.join(fixture.candidate, 'src/lib/config/dealer.ts'), 'utf8').includes("accent: '#ff0000'"));
+  for (const asset of Object.values(fixture.contract.assets)) assert.deepEqual(fs.readFileSync(path.join(fixture.candidate, 'static', asset.publicPath.slice(1))), fixture.bytes);
+  assert.deepEqual(fixture.apply(), []);
+});
+
+test('Import fallback binding preserves older absent consumers and arbitrary existing custom logo bindings', t => {
+  const fixture = importLogoFixture(t);
+  const custom = "const fallback = '/customer/custom-logo.svg';\nconst palette = '#ff0000';\n";
+  fixture.write('candidate/' + importFallbackPaths[0], custom);
+  fixture.apply();
+  assert.equal(fs.readFileSync(path.join(fixture.candidate, importFallbackPaths[0]), 'utf8'), custom);
+  for (const name of importFallbackPaths.slice(1)) assert.equal(fs.existsSync(path.join(fixture.candidate, name)), false);
+});
+
+test('Import rejects duplicated fallback slots and retains ordinary contract byte authentication', t => {
+  const fixture = importLogoFixture(t);
+  fixture.write('candidate/' + importFallbackPaths[0], "const one = '/brand/daynight-wordmark.svg';\nconst two = '/brand/daynight-wordmark.svg';\n");
+  assert.throws(fixture.apply, /Ambiguous Import fallback logo/);
+  fixture.write('branding/logo-contract.json', JSON.stringify(fixture.contract));
+  assert.deepEqual(loadLogoContract(fixture.root), fixture.contract);
+  fixture.write(fixture.contract.assets.onLight.publicPath.slice(1), Buffer.from('changed'));
+  assert.throws(() => loadLogoContract(fixture.root), /Approved onLight logo bytes changed/);
+});
+
+test('Registered PNG logo replacement detaches immutable candidate aliases and preserves the shared pool', () => {
+  const root=fs.mkdtempSync(path.join(os.tmpdir(),'cars-logo-pool-'));
+  const view=path.join(root,'registered-input-assets'),candidate=path.join(root,'candidate');
+  fs.mkdirSync(path.join(view,'auto-best'),{recursive:true});
+  fs.mkdirSync(path.join(candidate,'src/lib/config'),{recursive:true});
+  fs.writeFileSync(path.join(candidate,'src/lib/config/brand.ts'),"export const brand={logo:'/old.png',logoOnDark:'/old.png'};");
+  const oldBytes=Buffer.from('immutable old artwork'),pool=path.join(root,'pool.png');fs.writeFileSync(pool,oldBytes);fs.chmodSync(pool,0o444);
+  const assets={};const prefix=Buffer.from([137,80,78,71,13,10,26,10]);
+  for(const surface of ['onLight','onDark','onAccent']){
+    const publicPath='/dealer-brand/'+surface+'.png',source=path.join(view,publicPath.slice(1)),target=path.join(candidate,'static',publicPath.slice(1));
+    fs.mkdirSync(path.dirname(source),{recursive:true});fs.mkdirSync(path.dirname(target),{recursive:true});fs.writeFileSync(source,Buffer.concat([prefix,Buffer.from(surface)]));fs.linkSync(pool,target);assets[surface]={publicPath};
+  }
+  const alias=path.join(candidate,'static/assets/images/lead/day-night-logo.png');fs.mkdirSync(path.dirname(alias),{recursive:true});fs.linkSync(pool,alias);
+  applyDealerLogoContract({key:'auto-best',oldVariant:path.join(view,'auto-best'),candidate,profile:{logoContract:{assets}}});
+  assert.deepEqual(fs.readFileSync(pool),oldBytes);
+  for(const asset of Object.values(assets))assert.deepEqual(fs.readFileSync(path.join(candidate,'static',asset.publicPath.slice(1))),fs.readFileSync(path.join(view,asset.publicPath.slice(1))));
+  assert.deepEqual(fs.readFileSync(alias),fs.readFileSync(path.join(view,assets.onLight.publicPath.slice(1))));
+  assert.match(fs.readFileSync(path.join(candidate,'src/lib/config/brand.ts'),'utf8'),/dealer-brand\/onLight\.png/);
+});
+

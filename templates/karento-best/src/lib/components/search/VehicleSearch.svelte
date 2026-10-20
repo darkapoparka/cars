@@ -12,6 +12,7 @@
   import { page } from "$app/state";
   import { goto } from "$app/navigation";
   import { dealer } from "#lib/content.ts";
+  import { resolveInventoryVehicle } from "#lib/data/vehicle-inventory.ts";
   import { vehicleListings } from "#lib/data/vehicle-listing.ts";
   import CatalogFilterSheet from "#lib/components/vehicle-listing/CatalogFilterSheet.svelte";
   import MobileIcon from "#lib/components/mobile/MobileIcon.svelte";
@@ -42,15 +43,15 @@
   const optionsId = $props.id();
   const applied = $derived(readCatalogFilters(page.url.searchParams));
   const inventory = $derived(
-    vehicleListings.gridFourColumns.map((card) => ({
-      ...card,
-      ...dealer.inventory[card.title],
-    })),
+    vehicleListings.gridFourColumns.map((card) =>
+      resolveInventoryVehicle(card, dealer.inventory),
+    ),
+  );
+  const searchValue = $derived(
+    applied.q || [applied.make, applied.model].filter(Boolean).join(" "),
   );
   const searchLabel = $derived(
-    applied.q ||
-      [applied.make, applied.model].filter(Boolean).join(" ") ||
-      locale.t("ui.vehicle-search.make-or-model"),
+    searchValue || locale.t("ui.vehicle-search.make-or-model"),
   );
   let open = $state(false);
   let draft = $state<CatalogFilters>({ ...emptyCatalogFilters });
@@ -107,7 +108,10 @@
   >
     <button
       type="button"
-      class="mobile-search-opener"
+      class={[
+        "mobile-search-opener",
+        { "mobile-search-placeholder": !searchValue },
+      ]}
       aria-label={locale.t("ui.vehicle-search.make-or-model")}
       aria-haspopup="dialog"
       aria-expanded={open}

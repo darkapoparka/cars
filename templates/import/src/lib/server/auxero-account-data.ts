@@ -1102,7 +1102,7 @@ const applyProfileData = (
 	next = next.replace(
 		'</form>',
 		`<div class="flex justify-end mt-24">
-	<button type="submit" class="btn btn-primary btn-large-3 font-weight-600">${context.isAdmin ? 'Save Locally' : 'Запази промените'}</button>
+	<button type="submit" class="btn btn-primary btn-large-3 font-weight-600">${context.isAdmin ? 'Profile demo' : 'Демо профил'}</button>
 </div>
 </form>`
 	);
@@ -1128,6 +1128,7 @@ const applyPasswordData = (
 		'daynight-password-form',
 		' method="POST" data-daynight-password-form'
 	);
+	next = next.replace(/(<button\b[^>]*>\s*)Change Password(\s*<\/button>)/, '$1Password demo$2');
 
 	return replaceDashboardDemoText(next);
 };

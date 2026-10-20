@@ -1,11 +1,15 @@
+import {sourceMutationWrite} from './source-mutation-writer.mjs';
 import fs from 'node:fs';
+import {reviewedRasterProvenance} from '../publishing/lead-branding.mjs';
 import {bindCurrentImportLogoAssets} from './client-presentation-policy.mjs';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
+import {replaceCandidateFile} from '../dealer-updates/three-way-upgrade.mjs';
 
 const sha256 = bytes => createHash('sha256').update(bytes).digest('hex');
 const read = file => fs.readFileSync(file, 'utf8');
 const publicRoot = (key, root) => path.join(root, key === 'modern' ? 'apps/web/public' : 'static');
+const copyLogoAsset=(source,target)=>{const bytes=fs.readFileSync(source);return sourceMutationWrite(target,bytes,()=>{fs.mkdirSync(path.dirname(target),{recursive:true});const previous=fs.existsSync(target)?sha256(fs.readFileSync(target)):null;replaceCandidateFile(target,bytes,{expectedPreviousSha256:previous});});};
 const walk = (dir, files = []) => {
   if (!fs.existsSync(dir)) return files;
   for (const item of fs.readdirSync(dir, { withFileTypes: true })) {
@@ -30,6 +34,39 @@ export function loadLogoContract(client) {
   return contract;
 }
 
+/** Source proposals already bind reviewed PNG surfaces without a legacy WebP contract. */
+export function loadReviewedSharingAsset(client, manifest, legacyContract) {
+  if (legacyContract) return legacyContract.assets?.onLight ?? null;
+  if (manifest.branding?.contract !== '.cars-branding.json') return null;
+  const root=fs.realpathSync(client);
+  const boundedRead=name=>{
+    if(typeof name!=='string'||!/^[-A-Za-z0-9._/]+$/.test(name)||name.split('/').some(p=>!p||p==='.'||p==='..'))throw Error('Unsafe reviewed sharing asset path');
+    const file=path.resolve(root,name),relative=path.relative(root,file);
+    if(!relative||relative.startsWith('..'+path.sep)||path.isAbsolute(relative)||!fs.lstatSync(file).isFile()||fs.lstatSync(file).isSymbolicLink()||path.relative(root,fs.realpathSync(file))!==relative)throw Error('Reviewed sharing assets must remain regular contained files');
+    if(fs.statSync(file).size>16*1024*1024)throw Error('Reviewed sharing asset exceeds source bound');
+    return fs.readFileSync(file);
+  };
+  const contract=JSON.parse(boundedRead('.cars-branding.json'));
+  const retained=contract.creationMethod==='reviewed-raster-surface-variants';
+  const review=contract.reviewedSurfaceVariants;
+  if(contract.schemaVersion!==1||contract.dealer!==manifest.slug||contract.policy!=='template-default'||contract.monochromePairFromOneMaster!==false||(!retained&&contract.creationMethod!=='image-generation-reviewed-surface-variants')||review?.schemaVersion!==1||review.reviewed!==true||!/^\d{4}-\d{2}-\d{2}T/.test(review.reviewedAt??'')||!Number.isFinite(Date.parse(review.reviewedAt))||JSON.stringify(Object.keys(review.surfaces??{}).sort())!==JSON.stringify(['onAccent','onDark','onLight'])||(retained&&(review.sourceMode!=='retained-or-mixed-raster'||contract.generation!==undefined)))throw Error('Six-design sharing needs the reviewed dealer logo contract');
+  if(!Array.isArray(contract.packInputs)||contract.packInputs.length<5||contract.packInputs.length>16||new Set(contract.packInputs.map(x=>x.role)).size!==contract.packInputs.length||contract.packId!==sha256(JSON.stringify(contract.packInputs)).slice(0,16)||contract.publicBase!=='/dealer-brand/v2-'+contract.packId)throw Error('Reviewed sharing input identity differs');
+  const signature=Buffer.from([137,80,78,71,13,10,26,10]);
+  for(const [role,name]of [['master',retained?'reviewed-master':'generated-master'],['mark',retained?'reviewed-mark':'generated-mark'],['onLight','reviewed-surfaces/on-light'],['onDark','reviewed-surfaces/on-dark'],['onAccent','reviewed-surfaces/on-accent']]){
+    const input=contract.packInputs.find(x=>x.role===role),expected='branding/'+name+'.png';
+    if(input?.path!==expected||!/^[a-f0-9]{64}$/.test(input.sha256??''))throw Error('Reviewed sharing PNG input differs: '+role);
+    const bytes=boundedRead(input.path);
+    if(sha256(bytes)!==input.sha256||!bytes.subarray(0,8).equals(signature))throw Error('Reviewed sharing PNG bytes differ: '+role);
+    if(role==='master'||role==='mark')continue;
+    const surface=review.surfaces[role];
+    if(surface.assetPath!==input.path||surface.sha256!==input.sha256||!/^[a-f0-9]{64}$/.test(surface.alphaSha256??'')||typeof surface.sourceReference!=='string'||!surface.sourceReference.trim()||surface.sourceReference.length>2048||/[\x00-\x1f]/.test(surface.sourceReference))throw Error('Reviewed sharing surface proof differs: '+role);
+    reviewedRasterProvenance({...surface,generation:surface.generation?{tool:surface.generation.tool,generationId:surface.generation.id,modelVersion:surface.generation.modelVersion}:undefined},{retainedAllowed:retained});
+  }
+  const share=manifest.shareIdentity?.logo,light=review.surfaces.onLight;
+  if(!share?.sourcePath?.startsWith('branding/')||!share.sourcePath.endsWith('.png')||share.sha256!==light.sha256||sha256(boundedRead(share.sourcePath))!==share.sha256)throw Error('Retained sharing PNG differs from its reviewed on-light surface');
+  return {publicPath:'/'+share.sourcePath,sha256:share.sha256};
+}
+
 export function stripModernAlternateWordmark(text) {
   const marker = '{wordmarkTone === "original" ? null : (';
   if (!text.includes(marker)) return text;
@@ -41,6 +78,26 @@ export function stripModernAlternateWordmark(text) {
     throw new Error('Could not remove the complete Modern alternate wordmark expression');
   }
   return next;
+}
+
+/** Exact reviewed 0978057 mobile child: its painted surface owns the raster choice.
+ * Bind only that child; parent badges, SVG preview, layout and event handlers stay intact. */
+export function bindReviewedModernMobileSurfaceLogo(text) {
+  const marker='function DealerMobileWordmark(',start=text.indexOf(marker);
+  if(start<0)return null;
+  const end=text.indexOf('export const DealerMobileBrandBar',start);
+  if(end<0)throw Error('Missing Modern mobile wordmark parent boundary');
+  const child=text.slice(start,end);
+  if(!child.includes('const onDarkSurface =')&&!child.includes('src={logoSrc}'))return null;
+  if(start!==text.lastIndexOf(marker))throw Error('Ambiguous reviewed Modern mobile child');
+  const childHash=sha256(Buffer.from(child.replaceAll('\r\n','\n')));
+  if(!["238aff6824604d1f1a9c308b5b9bc11ab1fd2731f4f4346d3d66708f61c1a605","b2efd4cc8841c954c10037ab9692f27438b24499ffe885bbe838cd95f7e068fe"].includes(childHash))throw Error('Unknown reviewed Modern mobile surface child');
+  const parent=text.slice(end),calls=[...parent.matchAll(/<DealerMobileWordmark\b[^>]*\/>/g)];
+  if(calls.length!==1||calls[0][0]!=='<DealerMobileWordmark clean={clean} wordmarkTone={wordmarkTone} />')throw Error('Unknown reviewed Modern mobile surface call');
+  if(childHash==="b2efd4cc8841c954c10037ab9692f27438b24499ffe885bbe838cd95f7e068fe")return text;
+  const eol=child.includes('\r\n')?'\r\n':'\n',before="  const logoSrc = onDarkSurface\n    ? (leadSite.logoInversePath ?? leadSite.logoPath)\n    : leadSite.logoPath;".replaceAll('\n',eol),after="  const logoSrc = onDarkSurface\n    ? leadSite.logoOnDark\n    : leadSite.logoOnLight;".replaceAll('\n',eol);
+  if(!child.includes(before))throw Error('Unknown reviewed Modern mobile surface binding');
+  return text.slice(0,start)+child.replace(before,after)+parent;
 }
 
 /** Bind the parent-selected dealer logo into the extracted mobile child. */
@@ -96,20 +153,23 @@ export function applyDealerLogoContract({ key, oldVariant, candidate, profile })
     const file = path.join(candidate, relative);
     if (!fs.existsSync(file)) throw Error(`Missing logo consumer ${key}/${relative}`);
     const before = read(file), after = transform(before);
-    if (before !== after) { fs.writeFileSync(file, after); changed.push(relative); }
+    if (before !== after) { sourceMutationWrite(file,Buffer.from(after),()=>fs.writeFileSync(file,after)); changed.push(relative); }
   };
   const scalar = (text, name, value) => text.replace(new RegExp(`(\\b${name}\\s*:\\s*)['\"][^'\"]*['\"]`), (_, prefix) => prefix + JSON.stringify(value));
   for (const asset of Object.values(contract.assets)) {
     const source = path.join(path.dirname(oldVariant), asset.publicPath.slice(1));
     const target = path.join(publicRoot(key, candidate), asset.publicPath.slice(1));
-    fs.mkdirSync(path.dirname(target), { recursive: true }); fs.copyFileSync(source, target);
+    copyLogoAsset(source, target);
   }
   const brandRoot = path.join(path.dirname(oldVariant), 'branding');
   const lightPng = path.join(brandRoot, 'logo-on-light.png');
-  const masterPng = fs.existsSync(lightPng) ? lightPng : path.join(brandRoot, 'logo-master.png');
+  const originalMaster=fs.existsSync(lightPng)?lightPng:path.join(brandRoot,'logo-master.png');
+  const reviewedLight=path.join(path.dirname(oldVariant),contract.assets.onLight.publicPath.slice(1));
+  const masterPng=fs.existsSync(originalMaster)?originalMaster:reviewedLight;
   const aliases = key === 'carwow' ? ['brand/daynight-logo-generated.png', 'brand/daynight-logo-lockup.png'] : key === 'modern' ? ['lead-logo.png'] : key === 'auto-best' ? ['assets/images/lead/day-night-logo.png'] : [];
+  if(aliases.length&&!fs.existsSync(originalMaster)&&!fs.readFileSync(masterPng).subarray(0,8).equals(Buffer.from([137,80,78,71,13,10,26,10])))throw Error('Legacy logo aliases require the reviewed PNG surface');
   for (const alias of aliases) {
-    const target = path.join(publicRoot(key, candidate), alias); fs.mkdirSync(path.dirname(target), { recursive: true }); fs.copyFileSync(masterPng, target);
+    const target=path.join(publicRoot(key,candidate),alias);copyLogoAsset(masterPng,target);
     changed.push((key === 'modern' ? 'apps/web/public/' : 'static/') + alias);
   }
   if (key === 'auto-best') {
@@ -127,6 +187,8 @@ export function applyDealerLogoContract({ key, oldVariant, candidate, profile })
       return text;
     });
     edit('packages/marketplace-ui/components/dealer-mobile-brand-bar.tsx', text => {
+      const reviewedSurface=bindReviewedModernMobileSurfaceLogo(text);
+      if(reviewedSurface!==null)return reviewedSurface;
       const source = 'wordmarkTone === "light" ? leadSite.logoOnDark : wordmarkTone === "dark" || light ? leadSite.logoOnLight : leadSite.logoOnDark';
       text = text.replace(/,\r?\n\s*light && "h-10 bg-black px-2\.5"/, '');
       const clippedPrimary = /src=\{leadSite\.logoPath\}(?:\s*style=\{[\s\S]*?\r?\n\s*\})?/;
@@ -169,6 +231,50 @@ export function applyDealerLogoContract({ key, oldVariant, candidate, profile })
     } else {
       edit('src/lib/data/daynight.ts', text => scalar(scalar(text, 'logoLight', p.onDark), 'logoDark', p.onLight));
     }
+    for (const relative of [
+      'src/lib/content/sell-your-car.ts',
+      'src/lib/server/auxero-listing-data.ts',
+      'src/lib/server/inventory-options.ts',
+      'src/routes/offer/+page.svelte'
+    ]) {
+      if (!fs.existsSync(path.join(candidate, relative))) continue;
+      edit(relative, text => {
+        const fallback = /(['"])\/brand\/daynight-wordmark\.svg\1/g;
+        const matches = [...text.matchAll(fallback)];
+        if (matches.length > 1) throw Error(`Ambiguous Import fallback logo: ${relative}`);
+        return text.replace(fallback, () => JSON.stringify(p.onLight));
+      });
+    }
   }
   return changed;
+}
+
+/** Exact source-only Modern mobile correction reviewed in Cars issue15/6138426891.
+ * The two existing on-dark raster bindings are retained. Layout tone remains
+ * clean; the independently specified wordmark tone follows the dark surface.
+ * No App binding, desktop palette, dealer configuration or artwork is changed. */
+const reviewedModernDarkSource = {
+  "dealer-mobile-brand-bar.tsx": {
+    "beforeSha256": "1c998e9fb24930fdd14ff2453f62ec32a42b30e0ef8b311ab22c7217e1cd4948",
+    "afterSha256": "1ccaac2d0758b9cee14dc250a77e602f08b3227961cc098969d99f94434a661d",
+    "from": "return (\n    <span className=\"relative block aspect-[1780/512] w-[144px] max-w-[48vw]\">\n      <Image\n        alt={leadSite.name}\n        className=\"h-full w-full object-contain\"\n        height={512}\n        priority\n        sizes=\"(max-width: 1023px) 144px, 0px\"\n        src={leadSite.logoPath}\n        style={\n          wordmarkTone === \"original\"\n            ? undefined\n            : { clipPath: \"inset(0 68% 0 0)\" }\n        }\n        width={1780}\n      />\n      {wordmarkTone === \"original\" ? null : (\n        <Image\n          alt=\"\"\n          aria-hidden=\"true\"\n          className={cn(\n            \"pointer-events-none absolute inset-0 h-full w-full object-contain [clip-path:inset(0_0_0_32%)]\",\n            wordmarkTone === \"light\" ? \"brightness-0 invert\" : \"brightness-0\"\n          )}\n          height={512}\n          priority\n          sizes=\"(max-width: 1023px) 144px, 0px\"\n          src={leadSite.logoPath}\n          width={1780}\n        />\n      )}",
+    "to": "// Tone is the painted logo surface, not the layout-only \"clean\" flag.\n  // Dark chrome and its black logo badge use the committed inverse raster.\n  const onDarkSurface =\n    wordmarkTone === \"light\" || (wordmarkTone === \"original\" && !clean);\n  const logoSrc = onDarkSurface\n    ? (leadSite.logoInversePath ?? leadSite.logoPath)\n    : leadSite.logoPath;\n\n  return (\n    <span className=\"relative block aspect-[1780/512] w-[144px] max-w-[48vw]\">\n      <Image\n        alt={leadSite.name}\n        className=\"h-full w-full object-contain\"\n        height={512}\n        priority\n        sizes=\"(max-width: 1023px) 144px, 0px\"\n        src={logoSrc}\n        width={1780}\n      />"
+  },
+  "mobile-dealer-discovery-header.tsx": {
+    "beforeSha256": "6b737fa77db6f3d24f5f64c38dbdba42c2a6dcf4e1f6200915e1cc800a5fe322",
+    "afterSha256": "18a13c6a31966cbb5be290c7ccedb4316e2e57f5a99f2b450a55fc281e537529",
+    "from": " isBg={isBg} locale={locale} tone=\"clean\"",
+    "to": "\n              isBg={isBg}\n              locale={locale}\n              tone=\"clean\"\n              wordmarkTone=\"light\"\n           "
+  }
+};
+export function repairModernDarkDiscoverySource(name, source) {
+  const fix = reviewedModernDarkSource[name];
+  if (!fix || typeof source !== 'string') throw new Error('Unreviewed Modern mobile source target');
+  const actual = sha256(source);
+  if (actual === fix.afterSha256) return {source, changed: false};
+  if (actual !== fix.beforeSha256 || source.split(fix.from).length !== 2)
+    throw new Error('Modern mobile source differs from the reviewed before lease');
+  const next = source.replace(fix.from, () => fix.to);
+  if (sha256(next) !== fix.afterSha256) throw new Error('Modern mobile source repair differs from the reviewed result');
+  return {source: next, changed: true};
 }

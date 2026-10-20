@@ -6,6 +6,7 @@
   import { afterNavigate, goto } from "$app/navigation";
   import { page } from "$app/state";
   import { dealer } from "#lib/content.ts";
+  import { resolveInventoryVehicle } from "#lib/data/vehicle-inventory.ts";
   import type { ListingVehicle } from "#lib/data/vehicle-listing.ts";
   import {
     desktopCatalogDestination,
@@ -41,7 +42,7 @@
   const id = $props.id();
   const filterDialogId = id + "-filters";
   const inventory = $derived(
-    cards.map((card) => ({ ...card, ...dealer.inventory[card.title] })),
+    cards.map((card) => resolveInventoryVehicle(card, dealer.inventory)),
   );
   const active = $derived(
     desktopCatalogFilterKeys.filter((key) => filters[key]),

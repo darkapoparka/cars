@@ -6,15 +6,21 @@
   import DemoFeedback from "./DemoFeedback.svelte";
   let {
     children,
+    onpreview,
     ...attributes
-  }: Omit<HTMLFormAttributes, "onsubmit"> & { children: Snippet } = $props();
+  }: Omit<HTMLFormAttributes, "onsubmit"> & {
+    children: Snippet;
+    onpreview?: () => void;
+  } = $props();
   let submitted = $state(false);
 </script>
 
 <form
   {...attributes}
+  method="dialog"
   onsubmit={(event) => {
     event.preventDefault();
     submitted = true;
+    onpreview?.();
   }}>{@render children()}<DemoFeedback visible={submitted} kind="form" /></form
 >

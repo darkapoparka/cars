@@ -1,0 +1,118 @@
+name: Existing dealer reviewed source proposals
+on:
+  push:
+    branches: [main]
+    paths: [docs/releases/cloudflare-existing25-20261011/source-request.json]
+permissions:
+  contents: read
+defaults:
+  run:
+    shell: bash
+concurrency:
+  group: cars-existing25-source-preparation
+  cancel-in-progress: false
+jobs:
+  plan:
+    if: github.repository == 'darkapoparka/cars' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    outputs:
+      matrix: ${{ steps.matrix.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /scripts/
+            /.github/workflows/existing-fleet-source.yml
+            /.github/workflows/existing-fleet-cloudflare.yml
+            /docs/DEPLOYMENT-INVENTORY.json
+            /docs/releases/cloudflare-existing25-20261011/*.json
+            /docs/releases/cloudflare-existing25-20261011/new-source/**/*.json
+            /templates.lock.json
+            /clients/index.json
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: '26.10.0'
+          package-manager-cache: false
+      - run: node --test scripts/prepare-existing-fleet-source.test.mjs scripts/prepare-new-dealer-source.test.mjs
+      - id: matrix
+        run: node scripts/prepare-existing-fleet-source.mjs matrix >> "$GITHUB_OUTPUT"
+  prepare_source:
+    needs: plan
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    strategy:
+      fail-fast: false
+      max-parallel: 1
+      matrix: ${{ fromJSON(needs.plan.outputs.matrix) }}
+    env:
+      DEALER_SLUG: ${{ matrix.slug }}
+      NODE_OPTIONS: --max-old-space-size=4608
+      NEXT_TELEMETRY_DISABLED: '1'
+    steps:
+      - name: Check out published source, exact historical bases and bounded review inputs
+        id: source_checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+          # Sparse blob:none history needs authenticated reads of approved template bases.
+          persist-credentials: true
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /scripts/
+            /templates.lock.json
+            /templates/auto-best/scripts/
+            /docs/DEPLOYMENT-INVENTORY.json
+            /docs/releases/cloudflare-existing25-20261011/source-request.json
+            /docs/releases/cloudflare-existing25-20261011/selection.json
+            ${{ matrix.mode != 'new-approved' && '/docs/releases/' || '' }}
+            /clients/${{ matrix.slug }}/
+            ${{ matrix.sourceInputs }}
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: '26.10.0'
+          package-manager-cache: false
+      - name: Establish actual synchronized main and all branch metadata for new source absence leases
+        if: matrix.mode == 'new-approved'
+        run: |
+          git fetch --no-tags --filter=blob:none origin '+refs/heads/*:refs/remotes/origin/*'
+          git switch -C main "$GITHUB_SHA"
+          [[ "$(git rev-parse HEAD)" == "$GITHUB_SHA" && "$(git branch --show-current)" == main ]]
+      - name: Install only the pinned source raster helper
+        run: |
+          mkdir -p runtime/source-preparation-tools
+          printf '{"private":true}\n' > runtime/source-preparation-tools/package.json
+          npm install --prefix runtime/source-preparation-tools --ignore-scripts --save-exact sharp@0.35.5
+      - name: Plan preservation, apply reviewed branding, reseal and export the minimal source patch
+        run: node scripts/prepare-existing-fleet-source.mjs prepare "$DEALER_SLUG"
+      - name: End historical-source Git read authentication before artifact upload
+        if: always() && steps.source_checkout.outcome == 'success'
+        run: |
+          credentials_config="$(git config --local --no-includes --get "includeIf.gitdir:$GITHUB_WORKSPACE/.git.path")"
+          [[ "${credentials_config%/*}" == "$RUNNER_TEMP" && "${credentials_config##*/}" =~ ^git-credentials-[0-9a-f-]+\.config$ ]] || exit 1
+          git config --file "$credentials_config" --unset-all http.https://github.com/.extraheader
+          # Checkout post-cleanup removes its empty credential file and include entries.
+      - name: Retain one reviewed-source proposal for root canonical publication
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: existing-cf-source-${{ matrix.slug }}-${{ github.run_id }}-${{ github.run_attempt }}
+          path: runtime/${{ matrix.mode == 'new-approved' && 'new-dealer-source' || 'existing-fleet-source' }}/${{ github.run_id }}-${{ github.run_attempt }}/${{ matrix.slug }}/output/
+          include-hidden-files: true
+          if-no-files-found: error
+          compression-level: 6
+          retention-days: 7
+      - name: Preserve bounded conflict or intermediate-plan evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: existing-cf-source-evidence-${{ matrix.slug }}-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            runtime/existing-fleet-source/${{ github.run_id }}-${{ github.run_attempt }}/${{ matrix.slug }}/plan/review.json
+            runtime/existing-fleet-source/${{ github.run_id }}-${{ github.run_attempt }}/${{ matrix.slug }}/plan/run.json
+            runtime/new-dealer-source/${{ github.run_id }}-${{ github.run_attempt }}/${{ matrix.slug }}/failure.json
+          if-no-files-found: warn
+          retention-days: 7

@@ -7,6 +7,7 @@
   import { afterNavigate, goto } from "$app/navigation";
   import { onDestroy, tick } from "svelte";
   import { dealer } from "#lib/content.ts";
+  import { resolveInventoryVehicle } from "#lib/data/vehicle-inventory.ts";
   import MobilePill from "#lib/components/mobile/MobilePill.svelte";
   import MobilePillRail from "#lib/components/mobile/MobilePillRail.svelte";
   import type {
@@ -44,7 +45,7 @@
       : locale.t("ui.mobile-catalog.vehicles"),
   );
   const inventory = $derived(
-    cards.map((card) => ({ ...card, ...dealer.inventory[card.title] })),
+    cards.map((card) => resolveInventoryVehicle(card, dealer.inventory)),
   );
   const items = $derived(products ?? inventory);
   const applied = $derived(readCatalogFilters(page.url.searchParams));
@@ -245,6 +246,11 @@
   >
     {activeCount ? resultLabel : countLabel}
   </p>
+  {#if productMode}
+    <span class="mobile-result-count">
+      · {locale.t("ui.desktop-shop-catalog.reference-collection")}
+    </span>
+  {/if}
   {#if activeCount}
     <MobilePillRail
       class="mobile-active-filters"
@@ -302,6 +308,8 @@
   .mobile-catalog-results {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    column-gap: var(--karento-space-2);
     min-block-size: var(--karento-touch-target);
   }
 

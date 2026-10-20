@@ -16,6 +16,7 @@
     referenceVehicleIdentity,
   } from "#lib/data/vehicle-detail-selection.ts";
   const desktop = new MediaQuery("(min-width: 992px)");
+  const phone = new MediaQuery("(max-width: 767.98px)");
   const hasSelection = $derived(page.url.searchParams.has("vehicle"));
   const selected = $derived(
     hasSelection
@@ -48,5 +49,5 @@
     <VehicleBreadcrumb centered />
     <VehicleEnquiryDetail />
   {/if}
-  <Footer /></main
+  {#if !phone.current}<Footer />{/if}</main
 >

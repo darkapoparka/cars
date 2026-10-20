@@ -7,7 +7,8 @@
   const locale = useLocale();
   import "#lib/styles/home-section-headings.css";
   import { MediaQuery } from "svelte/reactivity";
-  import MobilePill from "#lib/components/mobile/MobilePill.svelte";
+  import MobileSectionHeading from "#lib/components/mobile/MobileSectionHeading.svelte";
+  import ResponsiveCollection from "#lib/components/ResponsiveCollection.svelte";
   import { focusableScroll } from "#lib/horizontal-scroll.ts";
   import { referenceVehicles } from "#lib/data/vehicles.ts";
   import PopularVehicleFilters from "#lib/components/vehicles/PopularVehicleFilters.svelte";
@@ -17,36 +18,46 @@
 
 <section class="section-box background-body py-96 desktop-collection-section">
   <div class="container">
-    <div
-      class="row align-items-end home-section-heading home-section-heading--filters desktop-section-heading"
-    >
-      <div class="col-lg-6 mb-30 text-center text-lg-start home-section-title">
-        <h2 class="neutral-1000 desktop-type-collection"
-          >{locale.t("ui.popular-vehicle-grid.popular-vehicles")}</h2
-        >
-        <p
-          class="text-xl-medium neutral-500 home-section-description desktop-type-lead"
-          >{dealer.businessPreview
-            ? stockNotice(dealer.businessPreview, locale)
-            : locale.t(
-                "ui.popular-vehicle-grid.favorite-vehicles-based-on-customer-reviews",
-              )}</p
-        >
-      </div>
-      <div class="col-lg-6 mb-30 home-section-actions">
-        <PopularVehicleFilters />
-      </div>
-    </div>
     {#if mobile.current}
+      <MobileSectionHeading
+        title={locale.t("ui.popular-vehicle-grid.popular-cars")}
+        actionLabel={locale.t("action.viewAll")}
+        actionHref="/vehicles"
+      />
+    {:else}
       <div
-        class="mobile-home-vehicles"
-        role="region"
-        aria-label={locale.t("ui.popular-vehicle-grid.popular-vehicles-7dcd98")}
+        class="row align-items-end home-section-heading home-section-heading--filters desktop-section-heading"
       >
-        {#each referenceVehicles.popularVehicles.slice(0, 3) as card (card.title)}
-          <VehicleGridCard {card} />
-        {/each}
+        <div
+          class="col-lg-6 mb-30 text-center text-lg-start home-section-title"
+        >
+          <h2 class="neutral-1000 desktop-type-collection"
+            >{locale.t("ui.popular-vehicle-grid.popular-vehicles")}</h2
+          >
+          <p
+            class="text-xl-medium neutral-500 home-section-description desktop-type-lead"
+            >{dealer.businessPreview
+              ? stockNotice(dealer.businessPreview, locale)
+              : locale.t(
+                  "ui.popular-vehicle-grid.favorite-vehicles-based-on-customer-reviews",
+                )}</p
+          >
+        </div>
+        <div class="col-lg-6 mb-30 home-section-actions">
+          <PopularVehicleFilters />
+        </div>
       </div>
+    {/if}
+    {#if mobile.current}
+      <ResponsiveCollection
+        class="mobile-home-vehicles"
+        mobileLayout="rail"
+        label={locale.t("ui.popular-vehicle-grid.popular-vehicles-7dcd98")}
+      >
+        {#each referenceVehicles.popularVehicles as card (card)}
+          <VehicleGridCard {card} mobileLayout="stacked" />
+        {/each}
+      </ResponsiveCollection>
     {:else}
       <div
         class="row mobile-vehicle-rail"
@@ -101,13 +112,7 @@
       </div>
     {/if}
     <div class="d-flex justify-content-center">
-      {#if mobile.current}
-        <MobilePill
-          label={locale.t("ui.popular-vehicle-grid.load-more-cars")}
-          href={locale.href("/vehicles")}
-          variant="secondary"
-        />
-      {:else}
+      {#if !mobile.current}
         <a
           class="btn btn-brand-2 text-nowrap desktop-type-control desktop-panel-action"
           href={locale.href("/vehicles")}
@@ -152,6 +157,14 @@
 </section>
 
 <style>
+  @media (max-width: 767.98px) {
+    :global(.mobile-home-vehicles.mobile-rail > .mobile-vehicle-card) {
+      flex-basis: var(
+        --karento-vehicle-card-width,
+        calc(100% - var(--karento-space-3))
+      );
+    }
+  }
   @media (min-width: 992px) {
     .desktop-section-heading > .mb-30 {
       margin-bottom: 0 !important;

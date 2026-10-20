@@ -6,6 +6,7 @@
   import { goto } from "$app/navigation";
   import { page } from "$app/state";
   import { dealer } from "#lib/content.ts";
+  import { resolveInventoryVehicle } from "#lib/data/vehicle-inventory.ts";
   import { compareBodyTypes } from "#lib/data/body-type-artwork.ts";
   import {
     readDesktopCatalogFilters,
@@ -16,7 +17,7 @@
 
   let { cards }: { cards: readonly ListingVehicle[] } = $props();
   const inventory = $derived(
-    cards.map((card) => ({ ...card, ...dealer.inventory[card.title] })),
+    cards.map((card) => resolveInventoryVehicle(card, dealer.inventory)),
   );
   const types = $derived(
     [...new Set(inventory.map(vehicleBodyType).filter(Boolean))].sort(

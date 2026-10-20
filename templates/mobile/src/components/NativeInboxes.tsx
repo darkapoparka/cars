@@ -83,9 +83,9 @@ export function NativeMessages() {
             height={96}
             {...stylex.props(s.art)}
           />
-          <h2 {...stylex.props(s.title)}>Direct contact with buyers and potential customers</h2>
+          <h2 {...stylex.props(s.title)}>Local message drafts</h2>
           <p {...stylex.props(s.copy)}>
-            Use the app to securely and quickly write and receive messages.
+            Prepare drafts on this device. Messages are not sent or received here.
           </p>
           <div {...stylex.props(s.login)}>
             <Button href="/login?next=/messages" block>

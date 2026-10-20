@@ -1,19 +1,21 @@
-# Working across projects
+# Local and GitHub collaboration
 
-Use Cars for dealer/integration work and the relevant standalone repository for shared template work.
+## Current working agreement — 20 October 2026
 
-## Main is the working branch
+Use this project's maintained checkout and working chat. Codex normally implements locally on main; Claude Code reviews a major scope or handles a named assignment when asked, with no routine competing implementation or portfolio dispatch. A central coordinator and extra skills are optional.
 
-The owner chose a main-only workflow on 13 September 2026. Use the saved checkout on `main` for routine work. Do not create another branch or worktree unless the owner explicitly requests one. One task owns writes to a checkout; concurrent tasks may review read-only or work in a different repository. Fetch and inspect status before writing, preserve other tasks' work, and finish authorized implementation with scoped commits and a non-force push to main.
+Astra ChatGPT web 6 Pro may plan, implement substantial architecture/tooling/backend work remotely on GitHub or review a major result. Astra may use GitHub main directly or an Astra branch while Codex owns coordinated local template/UI files. Reuse a suitable existing branch during transition and preserve old work; do not create a new clone/worktree or branch per task. Infrastructure/state refs used by the actual pipeline are not extra active source owners.
 
-An explicitly requested temporary branch/worktree must be integrated, verified and removed before the task is called complete. If blocked, record its exact repository, ref, commit, paths and next action in the handoff. Do not leave unfinished source discoverable only through a task title or old branch. Source consolidation preserves work; template release, owner visual acceptance and dealer deployment keep their separate checks.
+Agree the observable result, base revision, file scopes and relevant API/schema/configuration boundary briefly. A physical checkout has one HEAD; two different branch writers cannot share it concurrently. Coordinate only overlapping files and shared Git/index, dependency and build-output writes. Re-read shared files before patching and keep independent tasks moving.
 
-## Start and finish
+At handoff, identify dirty files and unfinished commits, then release or transfer that specific scope. A perfectly clean tree, completion of all unrelated PRs or a sole-merger acknowledgement is not a prerequisite for every edit. Preserve other work; do not blanket reset, clean, stash, force-push or switch a checkout under an active writer.
 
-Before edits confirm the physical checkout, `git remote -v`, `git branch --show-current`, `git status --short --branch`, `git worktree list`, and current fetched main. Do not start another writer in the same checkout. When a task only audits, keep it read-only.
+Inspect the actual remote diff against current local source, obtain the selected ref once when needed and integrate without discarding changes. Refresh the maintained preview after integration so owner review sees the actual code. Reviews can use an exact supplied diff/revision before a main push when publishing would trigger deployment. PRs are optional review/transport, not a universal workflow requirement.
 
-Implementation ends with the scoped change on main, appropriate checks, a non-force push and a handoff stating any unfinished acceptance work. Preserve unrelated work and resolve overlapping edits deliberately. Do not use blanket reset, clean, stash or checkout to hide a dirty state.
+Set GIT_NO_LAZY_FETCH=1 before local Git reads when needed. A missing object is a source gap: arrange one serialized, capacity-checked checkpoint rather than repeated lazy downloads or a new clone. Keep broad Git status/index scans out of ordinary fleet checks; inspect the relevant files and selected refs. [The task queue](../tasks.md) records the actual local/remote gap for this transition.
 
-Before removing any authorized temporary branch, verify `git merge-base --is-ancestor <branch> main`; check its worktree for staged, unstaged and untracked work. Delete remote branches only after main is pushed and verified. Never infer source loss from a missing local folder in a sparse checkout.
+## Finish the authorized task
 
-Historical campaign branches and prompts are provenance, not active instructions. Their source is now on main. See [consolidation](MAIN-CONSOLIDATION-2026-09-13.md) and [local setup](LOCAL-SETUP.md).
+Apply focused checks during iteration and the necessary broader release validation at a coherent checkpoint. Keep the existing dependencies, preview and one bounded output. Update the current task with actual implementation, integration, verification and next action. Source publication, provider activation, hosted proof and owner acceptance remain distinct.
+
+A current rollout owner can provide concrete retained source, run and receipt evidence; old task titles and archived ownership are not perpetual locks. Current user scope determines the work. Historical September/October rollout assignments preserve provenance and are superseded as operating instructions by this agreement. No branch/worktree deletion, job cancellation, provider cleanup or outreach follows automatically from coordination.

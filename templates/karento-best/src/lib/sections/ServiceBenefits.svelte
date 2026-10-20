@@ -13,6 +13,9 @@
     type ServiceFilterId,
   } from "#lib/data/services.ts";
   import MobileServiceCard from "#lib/components/mobile/MobileServiceCard.svelte";
+  import MobileServiceDrawer, {
+    type MobileServiceDetail,
+  } from "#lib/components/services/MobileServiceDrawer.svelte";
   import MobilePill from "#lib/components/mobile/MobilePill.svelte";
   import MobilePillRail from "#lib/components/mobile/MobilePillRail.svelte";
   import DesktopServices from "#lib/components/services/DesktopServices.svelte";
@@ -27,6 +30,7 @@
   } = $props();
   const phone = new MediaQuery("(max-width: 767.98px)");
   const desktop = new MediaQuery("(min-width: 992px)");
+  let selectedService = $state<MobileServiceDetail | null>(null);
   const suppliedServiceCards: readonly ServiceCardContent[] = serviceCards;
   const search = $derived(query.trim().toLowerCase());
   const matchingServices = $derived(
@@ -79,7 +83,7 @@
 {:else}
   <section class="section-box background-body py-96 karento-service-benefits">
     <div class="container">
-      <div class="row align-items-end">
+      <div class="row align-items-end service-intro">
         <div class="col-lg-7">
           <h3 class="neutral-1000"
             >{#if phone.current}{locale.t(
@@ -147,7 +151,11 @@
         {#if services.length}
           <div class="mobile-service-list">
             {#each services as service (service.id)}
-              <MobileServiceCard {service} />
+              <MobileServiceCard
+                {service}
+                onselect={(selected) => (selectedService = selected)}
+                expanded={selectedService?.id === service.id}
+              />
             {/each}
           </div>
         {:else}
@@ -590,8 +598,19 @@
   </section>
 {/if}
 
+<MobileServiceDrawer bind:service={selectedService} />
+
 <style>
   @media (max-width: 767.98px) {
+    .service-intro {
+      display: none;
+    }
+    .karento-service-benefits {
+      padding-top: var(--karento-space-3) !important;
+    }
+    .karento-service-benefits :global(.mobile-service-filters) {
+      margin-block: 0;
+    }
     .mobile-service-list {
       display: grid;
       grid-template-columns: minmax(0, 1fr);

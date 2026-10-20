@@ -1,7 +1,9 @@
 // One public origin and one Worker per dealer. Provider-only composition of six verified builds.
 // Each Next/Vite application receives its own framework global registry; this is not a security sandbox.
 import fs from 'node:fs';import path from 'node:path';import {createHash} from 'node:crypto';import {gzipSync} from 'node:zlib';
-import {verifyArtifactDirectory} from './lib/uk-cloudflare-artifacts.mjs';
+import {validateFileInventory,safeArtifactPath} from './lib/uk-cloudflare-artifacts.mjs';
+import {filesAt,inside} from './lib/workflow.mjs';
+import {assertSixDesignSelection} from './lib/six-design-release.mjs';
 import {bindImportSurfaceLogos,namespaceImportAssets,importAssetName} from './lib/uk-import-brand-provider.mjs';
 const KEYS=['auto-best','modern','import','app','mobile','karento-best','router'],NEXT=new Set(['modern','app','mobile']);
 const hash=b=>createHash('sha256').update(b).digest('hex'),assert=(ok,m)=>{if(!ok)throw Error(m);};
@@ -33,11 +35,72 @@ export function scopeCompiledModule(source,scopeImport,esbuild){
  const result=esbuild.transformSync(source,{format:'esm',target:'es2022',minifyWhitespace:true,minifySyntax:true,minifyIdentifiers:false,keepNames:false,legalComments:'inline',define,banner:'import {frameworkGlobal as __CARS_FRAMEWORK_GLOBAL__} from '+JSON.stringify(scopeImport)+';'});
  return result.code;
 }
+const HEX40=/^[a-f0-9]{40}$/,HEX64=/^[a-f0-9]{64}$/,FLEET_KIND='existing-fleet-cloudflare-compiled-candidate';
+const canonical=value=>JSON.stringify(value,(_,entry)=>entry&&typeof entry==='object'&&!Array.isArray(entry)?Object.fromEntries(Object.keys(entry).sort().map(key=>[key,entry[key]])):entry);
+function verifyCompiledArtifact(directory){
+ // Validate the complete inventory once, then hash every byte once. Revalidating
+ // the entire inventory for each file makes a real multi-thousand-file build quadratic.
+ const inventory=validateFileInventory(JSON.parse(fs.readFileSync(inside(directory,'artifact-manifest.json',{mustExist:true}),'utf8')));
+ const actual=filesAt(directory,{filter:()=>true}).filter(name=>name!=='artifact-manifest.json');
+ assert(JSON.stringify(actual)===JSON.stringify(inventory.files.map(row=>row.path).sort()),'Artifact contains missing or undeclared files.');
+ for(const row of inventory.files){const bytes=fs.readFileSync(inside(directory,row.path,{mustExist:true}));assert(bytes.length===row.bytes&&hash(bytes)===row.sha256,'Artifact receipt bytes differ: '+row.path);}
+ return inventory;
+}
+function validateCompiledFiles(inventory,deploy,key){
+ const rows=deploy.compiledFiles;
+ assert(Array.isArray(rows)&&rows.length>0&&new Set(rows.map(row=>row.path)).size===rows.length&&HEX64.test(deploy.compiledDigest??'')&&hash(JSON.stringify(rows))===deploy.compiledDigest,'Changed compiled digest '+key);
+ const inventoryByPath=new Map(inventory.files.map(row=>[row.path,row]));
+ for(const row of rows){const actual=inventoryByPath.get(row.path);assert(safeArtifactPath(row.path)&&row.path.startsWith('compiled/')&&actual&&row.bytes===actual.bytes&&row.sha256===actual.sha256,'Compiled inventory differs '+key);}
+ assert(inventory.files.filter(row=>row.path.startsWith('compiled/')).length===rows.length,'Undeclared compiled files '+key);
+ assert([deploy.mainPath,deploy.configPath].every(name=>safeArtifactPath(name)&&rows.some(row=>row.path===name))&&safeArtifactPath(deploy.assetPath)&&rows.some(row=>row.path.startsWith(deploy.assetPath+'/')),'Missing compiled entry, config or assets '+key);
+}
+function validateSourceReleases(releases,key){
+ assert(releases&&canonical(Object.keys(releases).sort())===canonical(KEYS.filter(name=>name!=='router').sort()),'Missing six exact source releases '+key);
+ for(const family of KEYS.filter(name=>name!=='router')){const release=releases[family];assert(release&&release.repository==='darkapoparka/cars'&&release.path==='templates/'+family&&HEX40.test(release.revision??'')&&HEX40.test(release.tree??'')&&HEX64.test(release.digest??''),'Invalid exact source release '+key+': '+family);}
+}
+export function inspectSingleWorkerInputs({inputs,expectedDealer}){
+ assert(typeof expectedDealer==='string'&&/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(expectedDealer),'Exact dealer required');
+ assert(inputs&&canonical(Object.keys(inputs).sort())===canonical([...KEYS].sort()),'Exactly six compiled designs and one router required');
+ const inspected={};let inputKind;
+ for(const key of KEYS){
+  const directory=inputs[key];assert(typeof directory==='string'&&directory&&fs.existsSync(directory)&&fs.lstatSync(directory).isDirectory()&&!fs.lstatSync(directory).isSymbolicLink(),'Missing exact compiled input '+key);
+  const inventory=verifyCompiledArtifact(directory),deploy=JSON.parse(fs.readFileSync(path.join(directory,'deploy.json'),'utf8'));
+  const kind=inventory.kind==='compiled-worker'?'uk':inventory.kind===FLEET_KIND?'existing-fleet':null;
+  assert(kind&&(!inputKind||kind===inputKind),'Mixed or unsupported compiled artifact kinds '+key);inputKind=kind;
+  assert(inventory.status==='passed'&&inventory.dealer===expectedDealer&&inventory.key===key&&deploy.schemaVersion===1&&deploy.dealer===expectedDealer&&deploy.key===key&&deploy.provider==='cloudflare'&&deploy.compiled===true&&deploy.dryRun===true,'Wrong compiled input '+key);
+  assert(HEX40.test(deploy.sourceCommit??'')&&/^[1-9][0-9]*$/.test(String(deploy.runId??''))&&/^[1-9][0-9]*$/.test(String(deploy.attempt??'')),'Missing exact source or workflow identity '+key);
+  validateCompiledFiles(inventory,deploy,key);
+  if(kind==='uk')assert(deploy.kind!==FLEET_KIND&&deploy.sourcePayloadUnchanged===true&&HEX40.test(deploy.packageTree??'')&&HEX64.test(deploy.packageDigest??'')&&HEX64.test(deploy.payloadDigest??''),'Missing immutable UK package seals '+key);
+  else{
+   assert(deploy.kind===FLEET_KIND&&/^[a-f0-9]{32}$/.test(deploy.accountId??'')&&HEX40.test(deploy.sourceTree??'')&&HEX64.test(deploy.inputDigest??'')&&deploy.hosted===false&&deploy.credentialsIncluded===false&&deploy.nativeApproval===false&&!['packageTree','packageDigest','payloadDigest','sourcePayloadUnchanged'].some(field=>Object.hasOwn(deploy,field)),'Invalid existing-fleet source schema '+key);
+   validateSourceReleases(deploy.sourceReleases,key);
+   const source=JSON.parse(fs.readFileSync(path.join(directory,'receipts/source.json'),'utf8')),build=JSON.parse(fs.readFileSync(path.join(directory,'receipts/build.json'),'utf8'));
+   assert(source.schemaVersion===1&&source.dealer===expectedDealer&&source.key===key&&source.originalSourceUnchanged===true&&['sourceCommit','sourceTree','inputDigest','sourceReleases'].every(field=>canonical(source[field])===canonical(deploy[field])),'Existing-fleet source receipt differs '+key);
+   assert(build.schemaVersion===1&&build.status==='passed'&&build.dealer===expectedDealer&&build.key===key&&build.compiled===true&&build.dryRun===true&&['sourceCommit','workerName','compiledDigest'].every(field=>build[field]===deploy[field])&&['runId','attempt'].every(field=>String(build[field])===String(deploy[field])),'Existing-fleet build receipt differs '+key);
+  }
+  inspected[key]={directory,inventory,deploy};
+ }
+ const identity=inspected.router.deploy,fields=inputKind==='uk'?['sourceCommit','packageTree','packageDigest','payloadDigest','publicOrigin','runId','attempt']:['sourceCommit','sourceTree','inputDigest','sourceReleases','accountId','publicOrigin','runId','attempt'];
+ assert(/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(identity.workerName??''),'Exact public Worker name required');
+ const origin=new URL(identity.publicOrigin);assert(origin.protocol==='https:'&&!origin.username&&!origin.password&&!origin.search&&!origin.hash&&origin.pathname==='/'&&origin.hostname.startsWith(identity.workerName+'.')&&origin.hostname.endsWith('.workers.dev'),'Public origin differs from Worker identity');
+ for(const [key,{deploy}] of Object.entries(inspected)){
+  for(const field of fields)assert(canonical(deploy[field])===canonical(identity[field]),'Mixed exact source packages: '+field);
+  const name=key==='router'?identity.workerName:identity.workerName+'-'+(key==='karento-best'?'signature':key);assert(deploy.workerName===name,'Wrong design Worker identity '+key);
+ }
+ return {inspected,identity,inputKind};
+}
 export function packageUkSingleWorker({inputs,destination,expectedDealer,esbuild}){
- assert(/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(expectedDealer)&&!fs.existsSync(destination),'Exact dealer and a fresh derived destination required');
+ assert(!fs.existsSync(destination),'Exact dealer and a fresh derived destination required');
  assert(esbuild&&typeof esbuild.transformSync==='function','Reviewed existing esbuild required');
- const inspected={};for(const key of KEYS){const directory=inputs[key];assert(directory&&fs.existsSync(directory),'Missing exact compiled input '+key);const inventory=verifyArtifactDirectory(directory),deploy=JSON.parse(fs.readFileSync(path.join(directory,'deploy.json'),'utf8'));assert(inventory.kind==='compiled-worker'&&inventory.status==='passed'&&inventory.dealer===expectedDealer&&deploy.dealer===expectedDealer&&deploy.key===key&&deploy.compiled===true&&deploy.sourcePayloadUnchanged===true,'Wrong compiled input '+key);inspected[key]={directory,inventory,deploy};}
- const identity=inspected.router.deploy;for(const {deploy}of Object.values(inspected))for(const key of ['sourceCommit','packageTree','packageDigest','payloadDigest','publicOrigin','runId','attempt'])assert(String(deploy[key])===String(identity[key]),'Mixed exact source packages: '+key);
+ const {inspected,identity,inputKind}=inspectSingleWorkerInputs({inputs,expectedDealer});
+ const routerSource=fs.readFileSync(path.join(inspected.router.directory,inspected.router.deploy.mainPath),'utf8'),routerPlan=routerSource.match(/export default createDealerRouter\((\{[\s\S]*\})\);\s*$/);
+ assert(routerPlan,'Frozen six-design router is required for provider mount mapping');
+ const variants=JSON.parse(routerPlan[1]).variants;assertSixDesignSelection(variants);
+ const importMount=variants.find(row=>row.key==='import').base,modernMount=variants.find(row=>row.key==='modern').base;
+ assert(['/variant-2','/variant-3'].includes(importMount)&&modernMount===(importMount==='/variant-2'?'/variant-3':'/variant-2'),'Import/Modern mounts must preserve their reviewed opposite positions');
+ const importNamespace=importAssetName('variant-3/_app/').slice('variant-3/'.length,-1);
+ const importName=name=>name.startsWith(importMount.slice(1)+'/_app/')?importMount.slice(1)+'/'+importNamespace+'/'+name.slice((importMount.slice(1)+'/_app/').length):name;
+ const importSource=source=>namespaceImportAssets(inputKind==='uk'?bindImportSurfaceLogos(source).source:source).replaceAll(importMount+'/_app"',importMount+'/'+importNamespace+'"').replaceAll(importMount+'/_app\x60',importMount+'/'+importNamespace+'\x60');
  const base=path.resolve(destination),changes=[],headers=[];fs.mkdirSync(base+'/server',{recursive:true});fs.mkdirSync(base+'/public');
  const copy=(from,name)=>{assert(!path.isAbsolute(name)&&!name.split('/').includes('..'),'Unsafe derived path');const target=path.join(base,name),bytes=fs.readFileSync(from);if(fs.existsSync(target)){assert(fs.readFileSync(target).equals(bytes),'Conflicting static path '+name);return;}fs.mkdirSync(path.dirname(target),{recursive:true});try{fs.linkSync(from,target);}catch{fs.writeFileSync(target,bytes,{flag:'wx'});}};
  for(const [key,{directory,deploy}] of Object.entries(inspected)){
@@ -48,14 +111,15 @@ export function packageUkSingleWorker({inputs,destination,expectedDealer,esbuild
     if(/\.[cm]?js$/.test(name)){const before=fs.readFileSync(source),relative=path.posix.relative(path.posix.dirname(out),scopePath),after=Buffer.from(scopeCompiledModule(before.toString('utf8'),relative.startsWith('.')?relative:'./'+relative,esbuild));fs.mkdirSync(path.dirname(path.join(base,out)),{recursive:true});fs.writeFileSync(path.join(base,out),after,{flag:'wx'});changes.push({path:out,sourcePath:path.relative(directory,source).replaceAll('\\','/'),beforeSha256:hash(before),afterSha256:hash(after),method:'AST-defined private globals; identifiers retained without keepNames helpers so serialized inline functions remain self-contained'});}
     else copy(source,out);
    }
-  }else{const source='compiled/'+key+'/.cars-cloudflare/worker/index.js';assert(inspected[key].inventory.files.some(f=>f.path===source),'Missing verified standalone Svelte module');const before=fs.readFileSync(path.join(directory,source)),after=Buffer.from(esbuild.transformSync(key==='import'?namespaceImportAssets(bindImportSurfaceLogos(before.toString('utf8')).source):before.toString('utf8'),{format:'esm',target:'es2022',minify:true,keepNames:true,legalComments:'inline'}).code),out='server/'+key+'/index.mjs';fs.mkdirSync(path.dirname(path.join(base,out)),{recursive:true});fs.writeFileSync(path.join(base,out),after,{flag:'wx'});changes.push({path:out,sourcePath:source,beforeSha256:hash(before),afterSha256:hash(after),method:key==='import'?'Verified raster surface bindings and versioned asset namespace; ES module minification':'ES module minification only, names retained'});}
-  const assets=path.join(directory,deploy.assetPath);for(const name of walk(assets)){if(name==='_headers'){headers.push(fs.readFileSync(path.join(assets,name),'utf8'));continue;}if(name==='.assetsignore'||name==='.vite'||name.startsWith('.vite/')||name==='vinext-client-entry-manifest.json')continue;if(key==='import'&&/\.[cm]?js$/.test(name)){const original=fs.readFileSync(path.join(assets,name)),branded=Buffer.from(namespaceImportAssets(bindImportSurfaceLogos(original.toString('utf8')).source)),target='public/'+importAssetName(name);fs.mkdirSync(path.dirname(path.join(base,target)),{recursive:true});fs.writeFileSync(path.join(base,target),branded,{flag:'wx'});if(!original.equals(branded))changes.push({path:target,beforeSha256:hash(original),afterSha256:hash(branded),method:'Bind exact dark-on-light and white-on-dark Import logo slots with new immutable asset namespace'});}else copy(path.join(assets,name),'public/'+(key==='import'?importAssetName(name):name));}
+  }else{const source='compiled/'+key+'/.cars-cloudflare/worker/index.js';assert(inspected[key].inventory.files.some(f=>f.path===source),'Missing verified standalone Svelte module');const before=fs.readFileSync(path.join(directory,source)),after=Buffer.from(esbuild.transformSync(key==='import'?importSource(before.toString('utf8')):before.toString('utf8'),{format:'esm',target:'es2022',minify:true,keepNames:true,legalComments:'inline'}).code),out='server/'+key+'/index.mjs';fs.mkdirSync(path.dirname(path.join(base,out)),{recursive:true});fs.writeFileSync(path.join(base,out),after,{flag:'wx'});changes.push({path:out,sourcePath:source,beforeSha256:hash(before),afterSha256:hash(after),method:key==='import'?(inputKind==='uk'?'Verified raster surface bindings and versioned asset namespace; ES module minification':'Retained fleet logo bindings and versioned asset namespace; ES module minification'):'ES module minification only, names retained'});}
+  const assets=path.join(directory,deploy.assetPath);for(const name of walk(assets)){if(name==='_headers'){headers.push(fs.readFileSync(path.join(assets,name),'utf8'));continue;}if(name==='.assetsignore'||name==='.vite'||name.startsWith('.vite/')||name==='vinext-client-entry-manifest.json')continue;if(key==='import'&&/\.[cm]?js$/.test(name)){const original=fs.readFileSync(path.join(assets,name)),branded=Buffer.from(importSource(original.toString('utf8'))),target='public/'+importName(name);fs.mkdirSync(path.dirname(path.join(base,target)),{recursive:true});fs.writeFileSync(path.join(base,target),branded,{flag:'wx'});if(!original.equals(branded))changes.push({path:target,beforeSha256:hash(original),afterSha256:hash(branded),method:inputKind==='uk'?'Bind exact dark-on-light and white-on-dark Import logo slots with new immutable asset namespace':'Preserve fleet logo slots with new immutable asset namespace'});}else copy(path.join(assets,name),'public/'+(key==='import'?importName(name):name));}
  }
  fs.writeFileSync(base+'/public/.assetsignore','.vite\n**/.vite\n');fs.writeFileSync(base+'/public/_headers','/*\n  X-Robots-Tag: noindex, nofollow\n\n'+headers.join('\n\n')+'\n');fs.writeFileSync(base+'/server/worker.mjs',singleWorkerSource());
  const config={name:identity.workerName,main:'server/worker.mjs',base_dir:'server',compatibility_date:'2026-10-10',compatibility_flags:['nodejs_compat'],workers_dev:true,preview_urls:false,no_bundle:true,find_additional_modules:true,rules:[{type:'ESModule',globs:['**/*.js','**/*.mjs'],fallthrough:true},{type:'CompiledWasm',globs:['**/*.wasm'],fallthrough:true}],observability:{enabled:true},assets:{directory:'./public',binding:'ASSETS',run_worker_first:false}};
  fs.writeFileSync(base+'/wrangler.json',JSON.stringify(config,null,2)+'\n');
  const files=walk(base).map(name=>{const b=fs.readFileSync(path.join(base,name));return {path:name,bytes:b.length,sha256:hash(b)};}),server=files.filter(f=>f.path.startsWith('server/')),serverBytes=server.reduce((s,f)=>s+f.bytes,0),assetFiles=files.filter(f=>f.path.startsWith('public/')).length;
  assert(serverBytes<64*1024**2,'Actual server exceeds the current 64 MiB Worker limit');assert(assetFiles<20000,'Actual static-asset count exceeds Workers Free allowance');assert(files.filter(f=>f.path.startsWith('public/')).every(f=>f.bytes<=25*1024**2),'A static asset exceeds 25 MiB');
- const receipt={schemaVersion:1,type:'cars-uk-single-worker-provider-package',dealer:expectedDealer,sourceCommit:identity.sourceCommit,packageTree:identity.packageTree,packageDigest:identity.packageDigest,payloadDigest:identity.payloadDigest,runId:identity.runId,attempt:identity.attempt,publicOrigin:identity.publicOrigin,workerName:identity.workerName,applicationCount:6,workerCount:1,composition:{inProcess:KEYS.filter(k=>k!=='router'),serviceBindings:[]},excludedAssetMetadata:{paths:['.vite/**','.assetsignore','vinext-client-entry-manifest.json'],reason:'Per-build tooling manifests are not mounted public application assets; actual client entry filenames remain embedded in each unchanged client bundle and server asset map.'},frameworkGlobalScopes:['modern','app','mobile'],serverBytes,compressedBytes:server.reduce((s,f)=>s+gzipSync(fs.readFileSync(path.join(base,f.path))).length,0),assetFiles,esbuildVersion:esbuild.version,changes,files,outputDigest:hash(JSON.stringify(files)),artifacts:Object.fromEntries(Object.entries(inspected).map(([k,v])=>[k,{digest:v.inventory.digest,compiledDigest:v.deploy.compiledDigest}])),sourceApplicationBytesChanged:false,compiledApplicationBytesChanged:true,hostedVerified:false};
+ const sourceIdentity=inputKind==='uk'?{packageTree:identity.packageTree,packageDigest:identity.packageDigest,payloadDigest:identity.payloadDigest}:{sourceTree:identity.sourceTree,inputDigest:identity.inputDigest,sourceReleases:identity.sourceReleases,accountId:identity.accountId};
+ const receipt={schemaVersion:1,type:inputKind==='uk'?'cars-uk-single-worker-provider-package':'cars-existing-fleet-single-worker-provider-package',dealer:expectedDealer,sourceCommit:identity.sourceCommit,...sourceIdentity,runId:identity.runId,attempt:identity.attempt,publicOrigin:identity.publicOrigin,workerName:identity.workerName,applicationCount:6,workerCount:1,composition:{inProcess:KEYS.filter(k=>k!=='router'),serviceBindings:[]},excludedAssetMetadata:{paths:['.vite/**','.assetsignore','vinext-client-entry-manifest.json'],reason:'Per-build tooling manifests are not mounted public application assets; actual client entry filenames remain embedded in each unchanged client bundle and server asset map.'},frameworkGlobalScopes:['modern','app','mobile'],serverBytes,compressedBytes:server.reduce((s,f)=>s+gzipSync(fs.readFileSync(path.join(base,f.path))).length,0),assetFiles,esbuildVersion:esbuild.version,changes,files,outputDigest:hash(JSON.stringify(files)),artifacts:Object.fromEntries(Object.entries(inspected).map(([k,v])=>[k,{digest:v.inventory.digest,compiledDigest:v.deploy.compiledDigest}])),sourceApplicationBytesChanged:false,compiledApplicationBytesChanged:true,hostedVerified:false};
  fs.writeFileSync(base+'/single-worker-receipt.json',JSON.stringify(receipt,null,2)+'\n');return receipt;
 }

@@ -1,11 +1,12 @@
 import {assertLeadBranding} from './publishing/lead-branding.mjs';
+import {applyAutoBestCardLayout} from './publishing/auto-best-card-layout.mjs';
 import { APP_PACKAGING_VERSION, baseNativeManifest, assertAppVariant, appendAppService } from './publishing/app-variant.mjs';
 import { assertCarsOwnedDealer } from './lib/dealer-source.mjs';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
 import { spawnSync } from 'node:child_process';
-import { pathToFileURL } from 'node:url';
+import { isEntrypoint } from './lib/cli-entrypoint.mjs';
 import { applyMounts } from './publishing/mounts.mjs';
 import { git, gitFiles } from './lib/workflow.mjs';
 import { dealerGuidance } from './lib/dealer-guidance.mjs';
@@ -18,6 +19,7 @@ import {writeDerivedFile} from './lib/derived-assets.mjs';
 import {assertSixDesignSelection} from './lib/six-design-release.mjs';
 import {SIX_PACKAGING_VERSION,assertExtendedVariantSources,applySixVariantMounts,sealSixVariantBuild} from './publishing/six-variant.mjs';
 import {LEGACY_DETAIL_FILE,legacyDetailArtifact,legacyDetailRedirects} from './publishing/legacy-detail-routes.mjs';
+import {appendProposalIntroduction} from './publishing/proposal-introduction.mjs';
 
 export const PACKAGING_VERSION = '1';
 const ROOT = path.resolve(import.meta.dirname, '..');
@@ -209,7 +211,7 @@ function fallbackGuidance(manifest, provider) {
   return `# ${manifest.slug} dealer package\n\nThis repository is a derived deployment package. Canonical dealer source lives under clients/${manifest.slug} in the Cars repository. Read dealer.json and .cars-package.json for identity and provenance. Make source changes in Cars and regenerate the package; do not silently edit generated mounting code or template masters.\n\nAll ${manifest.variants.length} designs share one Vercel project. Preserve retained lockfiles, source layouts, licensing and provenance. Run each app's documented checks and test every mounted entry, inventory, detail, contact and enquiry destination at 390 and 1440 px. Check the design switcher at 320 px, including Escape and focus return. A build is not public-preview proof. Publishing does not authorize outreach.\n`;
 }
 
-async function prepare({ source, manifest, sourceCommit, guidance, canonicalFiles, nativeReleases, provider = 'vercel', cloudflareLocks }) {
+async function prepare({ root = ROOT, source, manifest, sourceCommit, guidance, canonicalFiles, nativeReleases, provider = 'vercel', cloudflareLocks }) {
   manifest = structuredClone(manifest);
   validatePackagingManifest(manifest);
   if (!['vercel', 'cloudflare'].includes(provider)) throw new Error('Unsupported publishing provider');
@@ -233,8 +235,8 @@ async function prepare({ source, manifest, sourceCommit, guidance, canonicalFile
     files.set(name, preserveExtraBytes(name) ? bytes : normalized(bytes));
   }
   if (native) {
-    if (nativeReleases) files = adoptNativeSource(files, baseNativeManifest(manifest), nativeReleases);
-    else { assertNativeAdoption(files, baseNativeManifest(manifest)); files = applyNativeMounts(files, baseNativeManifest(manifest)); assertNativeAdoption(files, baseNativeManifest(manifest)); }
+    if (nativeReleases) files = adoptNativeSource(files, baseNativeManifest(manifest), nativeReleases,{root});
+    else { assertNativeAdoption(files, baseNativeManifest(manifest),{root}); files = applyNativeMounts(files, baseNativeManifest(manifest)); assertNativeAdoption(files, baseNativeManifest(manifest),{root}); }
     assertAppVariant(files, manifest);
     if (manifest.packaging.version === SIX_PACKAGING_VERSION) {
       assertExtendedVariantSources(files, manifest);
@@ -261,6 +263,7 @@ async function prepare({ source, manifest, sourceCommit, guidance, canonicalFile
     if (nativeReleases) throw new Error('Native releases require packaging version 2');
     await applyMounts(files, manifest);
   }
+  applyAutoBestCardLayout(files, manifest);
   const ignore=(files.get('.gitignore')?.toString('utf8')||'').split(/\r?\n/).filter(Boolean);
   const generatedIgnores=['# Cars generated package exclusions','**/node_modules/','**/.vercel/','**/.wrangler/','**/.open-next/','**/.vinext/','**/.cloudflare/','**/.cars-cloudflare/','**/.cars-build-assets/','.cars-next-*-dependencies.json','.cars-next-*-frozen-lock.json','.cars-cloudflare-svelte-locks.json','**/.svelte-kit/','**/.next*/','**/.turbo/','**/build/','**/dist/','**/.agency-os/','**/.auth/','**/.env*','!**/.env.example','!**/.env.sample','!**/.env.template','runtime/','*.log','*.tsbuildinfo'];
   files.set('.gitignore',Buffer.from([...new Set([...ignore,...generatedIgnores])].join('\n')+'\n'));
@@ -273,7 +276,10 @@ async function prepare({ source, manifest, sourceCommit, guidance, canonicalFile
   }
   const switcher = await fs.readFile(new URL('./publishing/preview-switcher.js', import.meta.url), 'utf8');
   const nativeMessages = native ? JSON.parse(await fs.readFile(new URL('./publishing/switcher-messages.json', import.meta.url), 'utf8')) : undefined;
-  files.set('auto-best/static/preview-switcher.js', Buffer.from(switcher.replace('__CARS_SWITCHER_CONFIG__', () => JSON.stringify(switcherConfiguration(manifest, nativeMessages, files)).replace(/</g, '\\u003c'))));
+  const selector = switcher.replace('__CARS_SWITCHER_CONFIG__', () => JSON.stringify(switcherConfiguration(manifest, nativeMessages, files)).replace(/</g, '\\u003c'));
+  files.set('auto-best/static/preview-switcher.js', Buffer.from(manifest.packaging.version === SIX_PACKAGING_VERSION
+    ? appendProposalIntroduction(selector, {dealerId:manifest.dealerId || manifest.slug, dealerName:manifest.shareIdentity?.name || manifest.slug})
+    : selector));
   files.set('dealer.json', Buffer.from(json(manifest)));
   if (guidance !== undefined && (typeof guidance !== 'string' || !guidance.trim())) throw new Error('guidance must be nonempty portable Markdown');
   if (guidance !== undefined || !files.has('AGENTS.md')) files.set('AGENTS.md', Buffer.from(guidance ?? fallbackGuidance(manifest, provider)));
@@ -412,6 +418,6 @@ async function main(args) {
   console.log(json({ mode: write ? 'write' : 'dry-run', ...result, ...(assetPool ? { assetPool } : {}), fileCount: result.files.length, files: undefined,untrackedExcluded }).trim());
 }
 
-if (process.argv[1] && import.meta.url === pathToFileURL(path.resolve(process.argv[1])).href) {
+if (isEntrypoint(import.meta.url)) {
   main(process.argv.slice(2)).catch((error) => { console.error(error.message); process.exitCode = 1; });
 }

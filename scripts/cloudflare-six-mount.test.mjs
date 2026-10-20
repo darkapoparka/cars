@@ -53,6 +53,9 @@ test('Cloudflare neutral mounting preserves Signature source dependencies/runtim
   assert.match(config, /@sveltejs\/adapter-node/);
   assert.ok(!config.includes('adapter-vercel') && !config.includes('nodejs24.x') && !config.includes('adapter-cloudflare'));
   assert.match(config, /sveltekit\(\{ adapter: adapter\(\), paths: \{ base: "\/variant-6", relative: false \}/);
+  const appHtml=output.get('karento-best/src/app.html').toString();
+  assert.equal((appHtml.match(/CARS SIGNATURE NAVIGATION HANDOFF v1/g)||[]).length,1);
+  assert.ok(appHtml.indexOf('data-cars-preview-pending')<appHtml.indexOf('%sveltekit.head%'));
   assert.match(output.get('karento-best/src/lib/routes.ts').toString(), /path = carsLocalPath\(path\)/);
   assert.match(output.get('karento-best/src/lib/components/Navigation.svelte').toString(), /href="\/variant-6\/vehicles"/);
   assert.match(output.get('karento-best/src/lib/components/Navigation.svelte').toString(), /src="\/variant-6\/brand\/logo.webp"/);

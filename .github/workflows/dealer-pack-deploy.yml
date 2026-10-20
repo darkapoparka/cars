@@ -1,0 +1,243 @@
+name: Dealer pack deploy queue
+
+on:
+  push:
+    branches: [astra/m2-fast-deploy]
+    paths: [docs/m2/pilot-inspection-request.json]
+  workflow_dispatch:
+    inputs:
+      action:
+        description: Inspect a build, enqueue and deploy, drain, or reconcile an exact stopped request
+        required: true
+        default: inspect
+        type: choice
+        options: [inspect, enqueue-and-deploy, drain, recover-inspect, recover-and-drain]
+      request_id:
+        description: Exact retained request SHA-256; required only for recovery
+        required: false
+        type: string
+      source_run_id:
+        description: Completed Dealer pack pipeline run ID; omit for drain or recovery
+        required: false
+        type: string
+      artifact_prefix:
+        description: Optional exact dealer-pack-transport--RUN--lane-N prefix
+        required: false
+        type: string
+      slugs:
+        description: Optional comma-separated or JSON list of exact ready slugs
+        required: false
+        type: string
+      batch:
+        description: Enforce one assigned batch, or read each pack's recorded assignment
+        required: true
+        default: auto
+        type: choice
+        options: [auto, '1', '2', '3', '4']
+  workflow_run:
+    workflows: [Dealer pack pipeline]
+    types: [completed]
+  schedule:
+    - cron: '*/15 * * * *'
+
+permissions:
+  contents: read
+
+# GitHub concurrency groups replace pending runs. Durable requests and the
+# account CAS claim serialize this workflow; no Actions concurrency group is used.
+# Completed builds only inspect. Explicit manual intake persists new requests;
+# scheduled/manual drains service those retained requests after inspection.
+jobs:
+  inspect-pilot:
+    if: ${{ github.event_name == 'push' }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    permissions:
+      contents: read
+      actions: read
+    env:
+      CARS_DEALER_PACK_TOOL_PACKAGE: ${{ github.workspace }}/runtime/dealer-pack-deploy-tools/package.json
+      CARS_SHARP_ROOT: ${{ github.workspace }}/runtime/dealer-pack-deploy-tools
+    steps:
+      - name: Check out the exact branch inspection code and request
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 1
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /scripts/
+            /dealers/
+            /docs/**/*.json
+            /docs/**/*.md
+            /leads/expansion-2026-10-18/
+            /templates.lock.json
+            /workspace.json
+            /catalog.json
+            /clients/index.json
+            /.github/
+            /.gitignore
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: '26.10.0'
+          package-manager-cache: false
+      - name: Install the pinned deterministic input inspection tools
+        run: npm install --prefix runtime/dealer-pack-deploy-tools --ignore-scripts --no-audit --no-fund --save-exact sharp@0.35.5 blake3-wasm@2.1.5
+      - name: Inspect only the three exact proof artifacts; never enqueue or deploy
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: node scripts/inspect-dealer-pack-pilot.mjs --request docs/m2/pilot-inspection-request.json --report runtime/dealer-pack-dispatch/pilot-summary.json
+      - name: Retain the pilot dry run and explicit credential blocker
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: dealer-pack-pilot-inspection--${{ github.run_id }}
+          path: runtime/dealer-pack-dispatch/*.json
+          if-no-files-found: error
+          retention-days: 3
+  deploy:
+    if: ${{ (github.event_name == 'workflow_dispatch' || github.event_name == 'schedule' || github.event_name == 'workflow_run') && (github.event_name != 'workflow_run' || (github.event.workflow_run.head_repository.full_name == github.repository && (github.event.workflow_run.conclusion == 'success' || github.event.workflow_run.conclusion == 'failure'))) }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 350
+    permissions:
+      contents: write
+      actions: read
+    env:
+      NEXT_TELEMETRY_DISABLED: '1'
+      WRANGLER_SEND_METRICS: 'false'
+      WRANGLER_LOG_SANITIZE: 'true'
+      CARS_DEALER_PACK_TOOL_PACKAGE: ${{ github.workspace }}/runtime/dealer-pack-deploy-tools/package.json
+      CARS_QA_RESOLVE_FROM: ${{ github.workspace }}/runtime/dealer-pack-deploy-tools/package.json
+    steps:
+      - name: Check out committed executor code; schedules and automatic inspections use main
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: ${{ github.event_name == 'workflow_dispatch' && github.sha || 'main' }}
+          fetch-depth: 1
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /scripts/
+            /dealers/
+            /docs/**/*.json
+            /docs/**/*.md
+            /leads/expansion-2026-10-18/
+            /templates.lock.json
+            /workspace.json
+            /catalog.json
+            /clients/index.json
+            /.github/
+            /.gitignore
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: '26.10.0'
+          package-manager-cache: false
+      - name: Install exact read-only logo and hosted browser tools
+        run: |
+          npm install --prefix runtime/dealer-pack-deploy-tools --ignore-scripts --no-audit --no-fund --save-exact sharp@0.35.5 playwright@1.62.1 blake3-wasm@2.1.5
+          runtime/dealer-pack-deploy-tools/node_modules/.bin/playwright install --with-deps chromium
+      - name: Check deployment credential presence without exposing it
+        id: token
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const present=Boolean(process.env.CLOUDFLARE_API_TOKEN);
+          fs.appendFileSync(process.env.GITHUB_OUTPUT,'present='+present+'\n');
+          if(!present) console.log('CLOUDFLARE_API_TOKEN is absent. Ready requests can be retained, but CI cannot perform live preflight or deploy. Minimum scopes: Account Workers Scripts Edit; webpreviews.site Workers Routes Edit. Account Analytics Read is also required for CPU/memory metrics.');
+          NODE
+      - name: Inspect completed builds; persist requests only for explicit manual intake
+        if: ${{ github.event_name == 'workflow_run' || (github.event_name == 'workflow_dispatch' && (inputs.action == 'inspect' || inputs.action == 'enqueue-and-deploy')) }}
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          SOURCE_RUN_ID: ${{ github.event.workflow_run.id || inputs.source_run_id }}
+          PACK_ACTION: ${{ github.event_name == 'workflow_run' && 'inspect' || inputs.action }}
+          PACK_PREFIX: ${{ inputs.artifact_prefix }}
+          PACK_SLUGS: ${{ inputs.slugs }}
+          PACK_BATCH: ${{ inputs.batch }}
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          import {runPackQueueDispatcher} from './scripts/dispatch-dealer-pack-queue.mjs';
+          const args=[process.env.PACK_ACTION==='inspect'?'inspect':'enqueue','--run',process.env.SOURCE_RUN_ID,'--report','runtime/dealer-pack-dispatch/inspection.json'];
+          if(process.env.PACK_ACTION==='inspect'&&process.env.CLOUDFLARE_API_TOKEN)args.push('--live');
+          if(process.env.PACK_PREFIX)args.push('--prefix',process.env.PACK_PREFIX);
+          if(process.env.PACK_BATCH&&process.env.PACK_BATCH!=='auto')args.push('--batch',process.env.PACK_BATCH);
+          if(process.env.PACK_SLUGS){const value=process.env.PACK_SLUGS.trim(),slugs=value.startsWith('[')?JSON.parse(value):value.split(',').map(row=>row.trim()).filter(Boolean);fs.mkdirSync('runtime/dealer-pack-dispatch',{recursive:true});fs.writeFileSync('runtime/dealer-pack-dispatch/slugs.json',JSON.stringify(slugs));args.push('--slugs','runtime/dealer-pack-dispatch/slugs.json');}
+          await runPackQueueDispatcher(args);
+          NODE
+      - name: Reconcile only an explicitly selected stopped request
+        id: reconcile
+        if: ${{ github.event_name == 'workflow_dispatch' && steps.token.outputs.present == 'true' && (inputs.action == 'recover-inspect' || inputs.action == 'recover-and-drain') }}
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          RECOVERY_REQUEST_ID: ${{ inputs.request_id }}
+          RECOVERY_ACTION: ${{ inputs.action }}
+        run: |
+          node --input-type=module <<'NODE'
+          import {runPackReconciliationCli} from './scripts/reconcile-dealer-pack-claim.mjs';
+          const id=process.env.RECOVERY_REQUEST_ID;
+          if(!/^[a-f0-9]{64}$/.test(id??''))throw Error('Exact recovery request SHA-256 required');
+          await runPackReconciliationCli(['inspect','--request-id',id,'--report','runtime/dealer-pack-dispatch/recovery-inspection.json']);
+          if(process.env.RECOVERY_ACTION==='recover-and-drain'){
+            await runPackReconciliationCli(['resume','--request-id',id,'--write','--report','runtime/dealer-pack-dispatch/recovery-resume.json']);
+          }
+          NODE
+      - name: Drain all retained batches through the single account claim
+        if: ${{ !cancelled() && steps.token.outputs.present == 'true' && (github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && (inputs.action == 'enqueue-and-deploy' || inputs.action == 'drain' || (inputs.action == 'recover-and-drain' && steps.reconcile.conclusion == 'success')))) }}
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: |
+          node scripts/dispatch-dealer-pack-queue.mjs drain --owner "github:${{ github.run_id }}" --write --max 400 --report runtime/dealer-pack-dispatch/drain.json
+      - name: Read startup, sampled CPU, memory and error evidence for this drain
+        if: ${{ !cancelled() && steps.token.outputs.present == 'true' && (github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && (inputs.action == 'enqueue-and-deploy' || inputs.action == 'drain' || (inputs.action == 'recover-and-drain' && steps.reconcile.conclusion == 'success')))) }}
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          import {readPackMetrics} from './scripts/read-dealer-pack-metrics.mjs';
+          const file='runtime/dealer-pack-dispatch/drain.json';
+          if(fs.existsSync(file)){
+            const drain=JSON.parse(fs.readFileSync(file,'utf8')),reports=[];
+            for(const row of drain.results??[]){
+              const receipt=row.receipt;if(!receipt?.deployedAt)continue;
+              try{reports.push(await readPackMetrics({slug:receipt.slug,start:new Date(Date.parse(receipt.deployedAt)-60000).toISOString(),end:new Date().toISOString(),startupTimeMs:receipt.runtime?.startupTimeMs??null,cpuLimitMs:receipt.runtime?.cpuLimitMs??null,cpuLimitSource:receipt.runtime?.cpuLimitSource??null}));}
+              catch(error){reports.push({slug:receipt.slug,status:'unavailable',providerWrites:0,reason:error.message});}
+            }
+            const complete=reports.length>0&&reports.every(row=>row.status==='observed-without-errors'&&row.withinLimits===true);
+            fs.writeFileSync('runtime/dealer-pack-dispatch/metrics.json',JSON.stringify({providerWrites:0,reports,complete},null,2)+'\n');
+            console.log('Retained '+reports.length+' runtime reports; missing or lagged samples remain explicitly unavailable.');
+            if(reports.length&&!complete){console.error('Runtime acceptance is incomplete or outside limits; repeat the read-only metrics check after ingestion. Existing deployment receipts remain retained.');process.exitCode=1;}
+          }
+          NODE
+      - name: Record an unavailable deployment credential as a blocked write request
+        if: ${{ !cancelled() && steps.token.outputs.present != 'true' && (github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && (inputs.action == 'enqueue-and-deploy' || inputs.action == 'drain' || inputs.action == 'recover-inspect' || inputs.action == 'recover-and-drain'))) }}
+        env:
+          PACK_ACTION: ${{ inputs.action }}
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          fs.mkdirSync('runtime/dealer-pack-dispatch',{recursive:true});
+          fs.writeFileSync('runtime/dealer-pack-dispatch/blocked.json',JSON.stringify({status:'blocked',reason:'CLOUDFLARE_API_TOKEN is missing; queued requests remain durable',providerWrites:0,connectorFallback:'scripts/dealer-pack-connector-bridge.mjs'},null,2)+'\n');
+          console.log('Deployment remains blocked until the token is supplied or the authorized connector executor services these exact requests.');
+          if(['recover-inspect','recover-and-drain'].includes(process.env.PACK_ACTION))process.exitCode=1;
+          NODE
+      - name: Retain compact inspection, deployment and hosted evidence
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: dealer-pack-deploy-reports--${{ github.run_id }}
+          path: |
+            runtime/dealer-pack-dispatch/*.json
+            runtime/dealer-pack-hosted/**/report.json
+            runtime/dealer-pack-hosted/**/screenshots/*.png
+          if-no-files-found: warn
+          retention-days: 3
+          compression-level: 6

@@ -36,6 +36,31 @@ beforeEach(() => {
 });
 
 describe("public demo pagination", () => {
+  it("preserves supplied currencies when adapting dealer identity", async () => {
+    const source = fixtures.find((listing) => listing.supply);
+    if (!source) {
+      throw new Error("Missing supply fixture");
+    }
+    const supplied = {
+      ...source,
+      price: { amount: 12_345, currency: "EUR" as const },
+      monthlyEstimate: { amount: 210, currency: "EUR" as const },
+    };
+    const original = structuredClone(supplied);
+    mocks.listings.splice(0, mocks.listings.length, supplied);
+
+    const result = await getPublicMarketplaceListings(
+      parseMarketplaceSearchParams({})
+    );
+    const listing = result.listings[0];
+    expect(listing?.price).toEqual(supplied.price);
+    expect(listing?.monthlyEstimate).toEqual(supplied.monthlyEstimate);
+    expect(listing?.supply?.nativePrice).toEqual(supplied.price);
+    expect(listing?.price).not.toBe(supplied.price);
+    expect(listing?.monthlyEstimate).not.toBe(supplied.monthlyEstimate);
+    expect(supplied).toEqual(original);
+  });
+
   it("adapts only the current page while keeping complete counts and order", async () => {
     const reads = mocks.listings.map((listing) => {
       const badges = listing.badges;

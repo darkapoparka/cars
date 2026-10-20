@@ -226,13 +226,11 @@ const withLeadSiteDemoIdentity = (listing: VehicleListing): VehicleListing => ({
     ? {
         monthlyEstimate: {
           ...listing.monthlyEstimate,
-          currency: leadSite.currency,
         },
       }
     : {}),
   price: {
     ...listing.price,
-    currency: leadSite.currency,
   },
   seller: {
     ...listing.seller,
@@ -254,7 +252,7 @@ const withLeadSiteDemoIdentity = (listing: VehicleListing): VehicleListing => ({
           },
           documentCount: 0,
           landedCostStatus: "unknown",
-          nativePrice: { ...listing.price, currency: leadSite.currency },
+          nativePrice: { ...listing.price },
           origin: {
             city: leadSite.city,
             country: leadSite.country,

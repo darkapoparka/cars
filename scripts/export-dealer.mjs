@@ -1,5 +1,6 @@
 import { assertCarsOwnedDealer } from './lib/dealer-source.mjs';
 import fs from 'node:fs';
+import { isEntrypoint } from './lib/cli-entrypoint.mjs';
 import path from 'node:path';
 import {ROOT,args,json,writeJson,git,inside,filesAt,sha256,normalized,validateManifest} from './lib/workflow.mjs';
 
@@ -94,8 +95,8 @@ export function verifyPackageTree({root=ROOT,packageTree}) {
   verifyPayload(meta,actual,meta.assetDelivery?.provider==='cloudflare'?readDocument('.cars-cloudflare.json'):undefined);
   return {...actual,tree,meta,manifest,io};
 }
-function remoteHead(root,url,branch) {
-  const text=git(root,['ls-remote',url,'refs/heads/'+branch]);return text ? text.split(/\s/)[0] : null;
+function remoteHead(root,url,branch,env) {
+  const text=git(root,['ls-remote',url,'refs/heads/'+branch],{env});return text ? text.split(/\s/)[0] : null;
 }
 function treeFiles(root,commit) {
   if (!commit) return new Map();
@@ -143,6 +144,7 @@ export function exportDealer({root=ROOT,slug,packageDir,packageTree,reviewFile,w
   let unexpected=[];
   if(priorText){const prior=JSON.parse(priorText);if(prior.repository!==manifest.repository)throw new Error('Remote publishing metadata has another repository identity.');const managed=new Map(prior.files.map(f=>[f.path,f.blob]));unexpected=[...new Set([...remote.keys(),...managed.keys()])].filter(p=>p!=='.cars-publish.json'&&remote.get(p)!==managed.get(p));}
   const report={schemaVersion:1,slug,repository:manifest.repository,branch,defaultBranch,baseHead,targetHead,parent,sourceCommit:packageMeta.sourceCommit,candidateDigest:digest.digest,tree,changes,unexpectedRemoteChanges:unexpected,packageDirectory:directory,proposalDirectory:run,...(treePackage?{packageTree:treePackage.tree,packageObject:packageTree,treeVerification:treePackage.io}:{}),...(packageMeta.assetDelivery?.provider === 'cloudflare' ? {provider:'cloudflare'} : {})};
+  if(process.env.GIT_ALTERNATE_OBJECT_DIRECTORIES)report.gitObjectAlternates=process.env.GIT_ALTERNATE_OBJECT_DIRECTORIES;
   writeJson(path.join(run,'proposal.json'),report);
   if(!write)return report;
   if(!priorText||unexpected.length)validateReview({review:reviewFile?json(reviewFile):null,remoteCommit:parent,candidateDigest:digest.digest,changes:priorText?unexpected:changes});
@@ -157,13 +159,16 @@ export function exportDealer({root=ROOT,slug,packageDir,packageTree,reviewFile,w
 }
 export function pushExport({root=ROOT,receiptFile}) {
   const r=json(receiptFile),url='https://github.com/'+r.repository+'.git';
+  const alternates=r.gitObjectAlternates;
+  if(alternates!==undefined&&(typeof alternates!=='string'||!alternates||alternates.length>32768||/[\r\n\0]/.test(alternates)))throw new Error('Invalid retained Git object-store context.');
+  const env=alternates?{GIT_ALTERNATE_OBJECT_DIRECTORIES:[alternates,process.env.GIT_ALTERNATE_OBJECT_DIRECTORIES].filter(Boolean).join(path.delimiter)}:undefined;
   assertCarsOwnedDealer(root, r.slug);
   const manifest=validateManifest(json(inside(root,'clients/'+r.slug+'/dealer.json',{mustExist:true})));
   if(manifest.repository!==r.repository)throw new Error('Receipt repository no longer matches canonical identity.');
-  if(remoteHead(root,url,r.branch)!==r.targetHead || remoteHead(root,url,r.defaultBranch)!==r.baseHead)throw new Error('Remote advanced after review. Re-export; never force-push.');
-  if(git(root,['rev-parse',r.commit+'^'])!==r.parent)throw new Error('Export does not preserve reviewed remote ancestry.');
-  git(root,['push',url,r.commit+':refs/heads/'+r.branch]);
-  if(remoteHead(root,url,r.branch)!==r.commit)throw new Error('Push did not verify.');
+  if(remoteHead(root,url,r.branch,env)!==r.targetHead || remoteHead(root,url,r.defaultBranch,env)!==r.baseHead)throw new Error('Remote advanced after review. Re-export; never force-push.');
+  if(git(root,['rev-parse',r.commit+'^'],{env})!==r.parent)throw new Error('Export does not preserve reviewed remote ancestry.');
+  git(root,['push',url,r.commit+':refs/heads/'+r.branch],{env});
+  if(remoteHead(root,url,r.branch,env)!==r.commit)throw new Error('Push did not verify.');
   return{repository:r.repository,branch:r.branch,commit:r.commit,trigger:r.provider === 'cloudflare' ? 'Cloudflare source delivered; deploy and verify this exact package separately.' : 'Git-to-Vercel only; inspect the deployment for this exact commit.'};
 }
 async function main() {
@@ -172,4 +177,4 @@ async function main() {
   const result=o['push-receipt']?pushExport({receiptFile:o['push-receipt']}):exportDealer({slug:o.client,packageDir:o.package,packageTree:o['package-tree'],reviewFile:o.review,write:!!o.write,targetBranch:o.branch});
   console.log(JSON.stringify(result,null,2));
 }
-if(process.argv[1]&&path.resolve(process.argv[1])===import.meta.filename)main().catch(e=>{console.error(e.message);process.exitCode=1;});
+if(isEntrypoint(import.meta.url))main().catch(e=>{console.error(e.message);process.exitCode=1;});

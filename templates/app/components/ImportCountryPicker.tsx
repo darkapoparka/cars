@@ -8,6 +8,7 @@ import {showroom} from '@/lib/showroom';
 import {dealer} from '@/lib/dealer-config';
 import {currency} from '@/lib/currency';
 import {importListings, type ImportListing} from '@/lib/import-inventory';
+import {hasPublishedPrice} from '@/lib/vehicle-values';
 import VehicleCard from './VehicleCard';
 import DealerEnquirySheet from './DealerEnquirySheet';
 import {useModal} from './useModal';
@@ -42,7 +43,7 @@ export default function ImportCountryPicker({country: filterCountry, onCountryCh
       setSelectedListing(listing.vehicle.slug);
       const knownCountry = showroom.importCountries.find(item => item.code === listing.countryCode);
       setOrigin(knownCountry ? listing.countryCode : 'other');
-      setDetails({country: knownCountry ? '' : listing.countryCode, model: `${listing.vehicle.year} ${listing.vehicle.make} ${listing.vehicle.model}`, budget: String(listing.vehicle.price), listing: listing.vehicle.sourceUrl || ''});
+      setDetails({country: knownCountry ? '' : listing.countryCode, model: `${listing.vehicle.year} ${listing.vehicle.make} ${listing.vehicle.model}`, budget: hasPublishedPrice(listing.vehicle) && Number.isInteger(listing.vehicle.price) ? String(listing.vehicle.price) : '', listing: listing.vehicle.sourceUrl || ''});
     }
     setEnquiry(null); setOpen(true);
   }

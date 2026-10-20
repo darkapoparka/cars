@@ -7,6 +7,7 @@ import {
 } from "./vehicle-listing.ts";
 import { dashboardOwnerInventory, dashboardWishlist } from "./dashboard.ts";
 import { referenceVehicles } from "./vehicles.ts";
+import { resolveInventoryVehicle } from "./vehicle-inventory.ts";
 import {
   referenceHeading,
   referenceSliderGallery,
@@ -48,14 +49,9 @@ export function selectedReferenceVehicle(
     ? catalog.find((card) => card.id === ids[0])
     : vehicleListings.gridFourColumns[0];
   if (!source) return null;
-  const supplied = inventory[source.title];
   return {
     id: source.id,
-    card: {
-      ...source,
-      ...supplied,
-      ...(supplied ? { detailImage: supplied.detailImage } : {}),
-    },
+    card: resolveInventoryVehicle(source, inventory),
   };
 }
 

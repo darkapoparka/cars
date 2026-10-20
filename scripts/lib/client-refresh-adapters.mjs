@@ -1,18 +1,23 @@
+import {withSourceMutationWriter,sourceMutationWrite} from './source-mutation-writer.mjs';
 import { ensureImportMenuKeys } from './import-menu-keys.mjs';
 import { repairAutoBestUkInventoryContract } from './client-refresh-uk-auto-best.mjs';
 import { UK_MODERN_CITY_PATHS, UK_IMPORT_PHONE_INPUT_PATHS, repairModernUkCityKeys, repairImportUkOptionalPhone } from './client-refresh-uk-native.mjs';
 import { UK_MODERN_PATHS, personalizeModernUk, modernUkTransmission, ukSourceMileage } from './client-refresh-uk-next.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
+import { createHash } from 'node:crypto';
 import { applyDealerLogoContract } from './client-logo-contract.mjs';
 import { dealerLocalizedCopy } from './dealer-localized-copy.mjs';
-import { applyCarwowSafeContent, applyImportSafeContent } from './client-refresh-safe-content.mjs';
+import {renderModernDealerInventoryCopy} from './modern-dealer-inventory-copy.mjs';
+import {personalizeModernDealerServices} from './modern-dealer-services.mjs';
+import {repairImportDealerInventoryCatalog} from './import-dealer-inventory-copy.mjs';
+import { applyCarwowSafeContent, applyImportSafeContent, applyModernSafeContent } from './client-refresh-safe-content.mjs';
 
 const exists = (file) => fs.existsSync(file);
 const read = (file) => fs.readFileSync(file, 'utf8').replace(/^\uFEFF/, '');
 const write = (file, value) => {
-  fs.mkdirSync(path.dirname(file), { recursive: true });
-  fs.writeFileSync(file, value.replace(/\r?\n/g, '\n'));
+  const bytes=Buffer.from(value.replace(/\r?\n/g, '\n'));
+  return sourceMutationWrite(file,bytes,()=>{fs.mkdirSync(path.dirname(file), { recursive: true });fs.writeFileSync(file,bytes);});
 };
 const q = (value) => JSON.stringify(String(value ?? ''));
 const textExtensions = new Set(['.js', '.mjs', '.cjs', '.ts', '.tsx', '.svelte', '.html', '.json']);
@@ -335,18 +340,32 @@ function autoBestEquipment(features) {
   return result;
 }
 
+function dealerCoordinates(business) {
+  const coordinates = business.coordinates;
+  return coordinates && Number.isFinite(coordinates.latitude) && Number.isFinite(coordinates.longitude) &&
+    Math.abs(coordinates.latitude) <= 90 && Math.abs(coordinates.longitude) <= 180 &&
+    (coordinates.latitude !== 0 || coordinates.longitude !== 0)
+    ? { latitude: coordinates.latitude, longitude: coordinates.longitude } : null;
+}
+
+function dealerMapDestination(business) {
+  const coordinates = dealerCoordinates(business);
+  if (coordinates) return `${coordinates.latitude},${coordinates.longitude}`;
+  const address = [business.address || business.addressLine, business.city].filter(Boolean).join(', ');
+  if (address) return address;
+  if (business.name) return business.name;
+  throw new Error('Auto Best map requires recorded coordinates, address, city or dealer name');
+}
+
 function autoBestBrand(profile, logo, logoDark) {
   const b = profile.business;
   const social = b.socialLinks || {};
-  const showroomCoordinates = b.coordinates &&
-    Number.isFinite(b.coordinates.latitude) && Number.isFinite(b.coordinates.longitude)
-    ? b.coordinates
-    : { latitude: 0, longitude: 0 };
+  const showroomCoordinates = dealerCoordinates(b);
   return `export type BrandConfig = {
   name: string;
   shortName: string;
   city: string;
-  showroomCoordinates: { latitude: number; longitude: number };
+  showroomCoordinates: { latitude: number; longitude: number } | null;
   addressLine: string;
   address: string;
   phone: string;
@@ -355,8 +374,8 @@ function autoBestBrand(profile, logo, logoDark) {
   logo: \`/\${string}\`;
   logoOnDark: \`/\${string}\`;
   youtubeUrl: \`https://\${string}\` | '';
-  instagramUrl: \`https://\${string}\`;
-  facebookUrl: \`https://\${string}\`;
+  instagramUrl: \`https://\${string}\` | '';
+  facebookUrl: \`https://\${string}\` | '';
 };
 
 const name = ${q(b.name)};
@@ -369,9 +388,9 @@ export const brand = {
   shortName,
   city,
   showroomCoordinates: ${JSON.stringify(showroomCoordinates)},
-  youtubeUrl: ${q(social.youtube || 'https://www.youtube.com/')},
-  instagramUrl: ${q(social.instagram || 'https://www.instagram.com/')},
-  facebookUrl: ${q(social.facebook || 'https://www.facebook.com/')},
+  youtubeUrl: ${q(social.youtube || '')},
+  instagramUrl: ${q(social.instagram || '')},
+  facebookUrl: ${q(social.facebook || '')},
   phone: ${q(b.phoneDisplay)},
   phoneHref: ${q(b.phoneHref || `tel:${b.phoneE164}`)},
   addressLine,
@@ -468,7 +487,53 @@ export const formatVehiclePrice = (
 `;
   const files = new Map([['src/lib/data/inventory.ts', source]]);
   repairAutoBestUkInventoryContract(files, profile);
-  return files.get('src/lib/data/inventory.ts');
+  return completeAutoBestInventoryPresentationContract(files.get('src/lib/data/inventory.ts'));
+}
+
+/** Preserve the selected Auto Best presentation ABI after the UK factual repair.
+ * Native inventory blob38f7dd8325a9f2555285d3e85638bc392b0c75f0, subtree827df14f.
+ * Only optional type members and the price-label formatter are completed.
+ */
+function completeAutoBestInventoryPresentationContract(source) {
+  const priceBoundary = [
+    'export const formatVehiclePrice = (',
+    '  amount: number,',
+    '  locale: Locale = localeContract.defaultLocale',
+    ") => amount > 0 ? formatPrice(amount, locale) : templateText(locale, 'Price on request');"
+  ].join('\n');
+  const nativeLabel = [
+    '',
+    "/** Allow a currency line break while preserving the locale's grouped digits. */",
+    'export const formatVehiclePriceLabel = (amount: number, locale: Locale = localeContract.defaultLocale) =>',
+    "  formatVehiclePrice(amount, locale).replace(/([A-Z]{3}|\\p{Sc})\\s+/u, '$1 ').replace(/\\s+([A-Z]{3}|\\p{Sc})$/u, ' $1');",
+    ''
+  ].join('\n');
+  const ukLabel = nativeLabel.replaceAll('|\\p{Sc}', '');
+  const plainIdentity = '  make: string;\n  title: string;';
+  const ukIdentity = [
+    '  make: string;',
+    '  /** Optional manufacturer sub-brand used by compact card identity. */',
+    '  cardBrand?: string;',
+    '  title: string;'
+  ].join('\n');
+  const nativeIdentity = ukIdentity.replace('  title: string;',[
+    '  /** Seller-supplied highlight by locale; import/condition claims require record-specific evidence. */',
+    '  cardNote?: Partial<Record<Locale, string>>;',
+    '  title: string;'
+  ].join('\n'));
+  const exports = [...source.matchAll(/^export (?:const|type) ([A-Za-z_$][\w$]*)/gm)].map(match=>match[1]);
+  const expected = ['vehicleTypes','VehicleType','VehicleCondition','VehicleEquipment','Vehicle','featuredVehicles','formatVehiclePrice'];
+  if (exports.at(-1) === 'formatVehiclePriceLabel') expected.push('formatVehiclePriceLabel');
+  const identities = [plainIdentity,ukIdentity,nativeIdentity].filter(value=>source.split(value).length===2);
+  const labels = [ukLabel,nativeLabel].filter(value=>source.endsWith(value));
+  if (JSON.stringify(exports)!==JSON.stringify(expected)||source.split(priceBoundary).length!==2||identities.length!==1||
+      (exports.includes('formatVehiclePriceLabel') ? labels.length!==1 : labels.length!==0)) {
+    throw new Error('Auto Best native price-label presentation boundary changed');
+  }
+  let output = labels.length ? source.slice(0,-labels[0].length) : source;
+  if (!output.endsWith(priceBoundary+'\n')) throw new Error('Auto Best native price-label footer changed');
+  output = output.replace(identities[0],nativeIdentity) + nativeLabel;
+  return output;
 }
 
 function autoBestCompany(profile) {
@@ -504,9 +569,7 @@ function autoBestCompany(profile) {
     topic('leasing', english ? 'Financing' : 'Лизинг', 'Finance demo'),
     topic('trade-in', english ? 'Trade-in' : 'Бартер', 'Trade-in enquiry demo')
   ];
-  const coordinates = b.coordinates && Number.isFinite(b.coordinates.latitude) &&
-    Number.isFinite(b.coordinates.longitude)
-    ? b.coordinates : { latitude: 0, longitude: 0 };
+  const coordinates = dealerCoordinates(b);
   return `import { brand } from '$config/brand';
 
 export type CompanyServiceIcon = 'inspection' | 'import' | 'leasing' | 'trade-in';
@@ -526,11 +589,12 @@ export function resolveImportUrl(value: string | null): string | null {
   }
 }
 
+export const companyServicesCopyOwner = 'dealer' as const;
 export const companyServices: CompanyService[] = ${JSON.stringify(services, null, 2)};
 export const contactTopics: ContactTopic[] = ${JSON.stringify(topics, null, 2)};
 export const resolveContactTopic = (value: string | null) =>
   contactTopics.find((topic) => topic.id === value) ?? contactTopics[0];
-export const showroomCoordinates = ${JSON.stringify(coordinates)} as const;
+export const showroomCoordinates = ${JSON.stringify(coordinates)}${coordinates ? ' as const' : ''};
 export const dealerAddress = brand.address;
 `;
 }
@@ -538,6 +602,13 @@ export const dealerAddress = brand.address;
 function patchAutoBestMap(candidate, profile) {
   const file = path.join(candidate, 'src/lib/components/company/ShowroomMap.svelte');
   let text = read(file);
+  const coordinateBinding = '  const coordinates = `${brand.showroomCoordinates.latitude},${brand.showroomCoordinates.longitude}`;';
+  const bindCurrentMap = (source, relative) => {
+    if (!source.includes('brand.showroomCoordinates')) return source;
+    if (source.split(coordinateBinding).length !== 2) throw new Error(`Auto Best map binding changed: ${relative}`);
+    return source.replace(coordinateBinding, `  const coordinates = ${q(dealerMapDestination(profile.business))};`);
+  };
+  text = bindCurrentMap(text, 'ShowroomMap.svelte');
   text = text.replace("  import { showroomCoordinates } from '$data/company';\n\n  const mapEmbedUrl = `https://maps.google.com/maps?q=${showroomCoordinates.latitude},${showroomCoordinates.longitude}&z=17&hl=bg&output=embed`;",
     `  const mapEmbedUrl = ${q(profile.business.mapsEmbedUrl)};`);
   text = text.replace('title={`Карта до ${brand.name}`}',
@@ -545,6 +616,16 @@ function patchAutoBestMap(candidate, profile) {
   text = text.replace('>Отворете в Google Maps</a>',
     `>${textFor(profile, 'Отворете в Google Maps', 'Open in Google Maps')}</a>`);
   write(file, text);
+  const files = ['src/lib/components/company/ShowroomMap.svelte (address adapter)'];
+  const desktop = path.join(candidate, 'src/lib/components/company/DesktopShowroom.svelte');
+  if (exists(desktop)) {
+    const before = read(desktop), after = bindCurrentMap(before, 'DesktopShowroom.svelte');
+    if (before !== after) {
+      write(desktop, after);
+      files.push('src/lib/components/company/DesktopShowroom.svelte (address adapter)');
+    }
+  }
+  return files;
 }
 
 function patchAutoBestHero(candidate) {
@@ -576,13 +657,16 @@ export function patchAutoBestLocale(candidate, profile) {
   const dealerTextFields = ['city', 'addressLine', 'address', 'appointment'];
   const dealerText = Object.fromEntries(['en', 'bg'].map((locale) => [
     locale,
-    Object.fromEntries(dealerTextFields.map((field) => [field, copy[locale][field]]))
+    { ...Object.fromEntries(dealerTextFields.map((field) => [field, copy[locale][field]])),
+      addressShort: copy[locale].addressLine, appointmentShort: copy[locale].appointment }
   ]));
   const catalogFile = updateDealerCatalog(candidate, {
     'dealer.city': { source: b.city, en: copy.en.city, bg: copy.bg.city, disposition: 'translate', notes: 'Dealer-owned city copy generated from the reviewed Cars dealer profile.' },
     'dealer.addressLine': { source: b.addressLine || b.address || b.city, en: copy.en.addressLine, bg: copy.bg.addressLine, disposition: 'translate', notes: b.addressLine || b.address ? 'Dealer-owned address line; physical location and destination remain unchanged.' : 'Reviewed city-only display; factual street-address fields and visit destinations remain unpublished.' },
     'dealer.address': { source: b.address || b.addressLine || b.city, en: copy.en.address, bg: copy.bg.address, disposition: 'translate', notes: b.address || b.addressLine ? 'Dealer-owned full address; physical location and destination remain unchanged.' : 'Reviewed city-only display; factual street-address fields and visit destinations remain unpublished.' },
-    'dealer.appointment': { source: b.hours, en: copy.en.appointment, bg: copy.bg.appointment, disposition: 'translate', notes: 'Dealer-owned appointment and opening-hours guidance.' }
+    'dealer.appointment': { source: b.hours, en: copy.en.appointment, bg: copy.bg.appointment, disposition: 'translate', notes: 'Dealer-owned appointment and opening-hours guidance.' },
+    'dealer.addressShort': { source: b.addressLine || b.address || b.city, en: copy.en.addressLine, bg: copy.bg.addressLine, disposition: 'translate', notes: 'Native short-address consumer uses the recorded dealer address line.' },
+    'dealer.appointmentShort': { source: b.hours, en: copy.en.appointment, bg: copy.bg.appointment, disposition: 'translate', notes: 'Native short-hours consumer uses the same factual appointment guidance.' }
   });
   const file = path.join(candidate, 'src/lib/config/locale.ts');
   const configured = patchNativeLocaleConfiguration(read(file), profile);
@@ -602,7 +686,7 @@ function patchAutoBest({ oldVariant, candidate, profile }) {
   write(path.join(candidate, 'src/lib/data/inventory.ts'), autoBestInventory(profile));
   write(path.join(candidate, 'src/lib/data/company.ts'), autoBestCompany(profile));
   write(path.join(candidate, 'src/lib/data/dealer-profile.json'), `${JSON.stringify(profile, null, 2)}\n`);
-  patchAutoBestMap(candidate, profile);
+  const mapFiles = patchAutoBestMap(candidate, profile);
   const localeFiles = patchAutoBestLocale(candidate, profile);
   const identityFile = patchAutoBestIdentity(candidate);
   const mileageFiles = patchSvelteMileage(candidate, 'auto-best', profile);
@@ -612,7 +696,7 @@ function patchAutoBest({ oldVariant, candidate, profile }) {
     'src/lib/data/inventory.ts',
     'src/lib/data/company.ts',
     'src/lib/data/dealer-profile.json',
-    'src/lib/components/company/ShowroomMap.svelte (address adapter)',
+    ...mapFiles,
     identityFile,
     ...mileageFiles
   ];
@@ -625,10 +709,21 @@ function modernListing(item, index, id, profile) {
   if (uk && (!original || !Number.isFinite(item.priceAmount) || item.priceAmount <= 0)) {
     throw new Error('Modern UK requires a published mileage and price; unsupported unknown values cannot become zero offers: ' + item.id);
   }
+  if (!uk) {
+    const missing = [];
+    if (item.priceOnRequest === true || item.raw?.priceOnRequest === true || !Number.isFinite(item.priceAmount) || item.priceAmount <= 0) missing.push('price');
+    if (!originalMileageFacts(item).mileageKnown) missing.push('mileage');
+    if (!['manual', 'automatic', 'semi_automatic'].includes(item.transmissionType)) missing.push('transmission');
+    if (missing.length) {
+      const error = new Error('Modern adaptation requires reviewed ' + missing.join(', ') + '; its selected source cannot display these unknown facts: ' + (item.sourceId || item.id));
+      error.code = 'MODERN_FACTS_REQUIRE_REVIEW';
+      error.fields = missing;
+      throw error;
+    }
+  }
   const fuel = ['gasoline', 'diesel', 'hybrid', 'plug_in_hybrid', 'electric', 'lpg', 'cng'].includes(item.fuelType)
     ? item.fuelType : 'other';
-  const transmission = uk ? modernUkTransmission(item) : item.transmissionType === 'manual' ? 'manual' :
-    item.transmissionType === 'automatic' ? 'automatic' : 'semi_automatic';
+  const transmission = uk ? modernUkTransmission(item) : item.transmissionType;
   const body = ['hatchback', 'sedan', 'wagon', 'suv', 'coupe', 'convertible', 'pickup', 'van', 'minibus', 'motorcycle', 'scooter', 'truck'].includes(item.bodyType)
     ? item.bodyType : 'other';
   const features = item.features.slice(0, 8).map((feature) => ({ bg: feature, en: feature }));
@@ -745,18 +840,39 @@ function replaceModernListings(file, profile) {
     )
   ].map((match) => match[2]));
   if (!ids.length) throw new Error('No stable modern listing IDs found in ' + file);
-  const listings = ids.map((id, index) =>
-    modernListing(profile.listings[index % profile.listings.length], index, id, profile));
+  if (!Array.isArray(profile.listings) || !profile.listings.length) throw new Error('Modern requires sourced or disclosed demo listings');
+  const claimedIds = new Set();
+  const listings = profile.listings.map((item, index) => {
+    const id = ids[index] || 'dealer-' + createHash('sha256')
+      .update(`${profile.slug || profile.business.slug}\0${item.id || item.slug || index + 1}`)
+      .digest('hex').slice(0, 24);
+    if (claimedIds.has(id)) throw new Error('Modern generated listing ID collision');
+    claimedIds.add(id);
+    return modernListing(item, index, id, profile);
+  });
   const newline = text.includes('\r\n') ? '\r\n' : '\n';
   const serialized = JSON.stringify(listings, null, 2).replaceAll('\n', newline);
   const replacement = 'export const mockListings: VehicleListing[] = ' + serialized;
   text = text.slice(0, start) + replacement + text.slice(arrayEnd + 1);
   write(file, text);
+  return listings;
 }
 
 function replaceLeadScalar(text, key, value) {
-  const rx = new RegExp(`(^\\s*${key}:\\s*)(?:"[^"]*"|'[^']*'|true|false)(,?)`, 'm');
-  return text.replace(rx, `$1${typeof value === 'boolean' ? String(value) : q(value)}$2`);
+  // S1 nested localizedCopy fields precede the actual two-space leadSite fields.
+  const begin = text.indexOf('// LEAD_SITE_CONFIG_START');
+  const end = text.indexOf('// LEAD_SITE_CONFIG_END', begin);
+  const start = begin >= 0 && end > begin ? begin : 0;
+  const stop = begin >= 0 && end > begin ? end : text.length;
+  const section = text.slice(start, stop);
+  const rx = /^( {2})([A-Za-z]\w*):([ \t\r\n]*)(?:"(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'|true|false)(,?)/gm;
+  let found = 0;
+  const replacement = section.replace(rx, (match, indent, name, spacing, comma) => {
+    if (name !== key) return match;
+    if (++found > 1) throw new Error('Ambiguous top-level leadSite field: '+key);
+    return indent + name + ':' + spacing + (typeof value === 'boolean' ? String(value) : q(value)) + comma;
+  });
+  return text.slice(0, start) + replacement + text.slice(stop);
 }
 
 function patchModernDealerText(candidate, profile) {
@@ -787,11 +903,62 @@ function patchModernDealerText(candidate, profile) {
     new Set(['node_modules', '.next', 'dist', 'build'])));
 }
 
-function patchModern({ oldVariant, candidate, profile }) {
+
+function patchModernAssignedDirectory(candidate, profile) {
+  const relative = 'packages/marketplace/mock-directory.ts';
+  const file = path.join(candidate, relative);
+  if (!exists(file)) return [];
+  const before = read(file);
+  for (const name of ['mockOrganizationDirectoryCoreEntries', 'createMockOrganizationDirectoryScaleEntries', 'mockOrganizationDirectoryEntries']) {
+    if ((before.match(new RegExp('export const ' + name + '\\b', 'g')) || []).length !== 1) throw new Error('Modern assigned directory export shape changed: ' + name);
+  }
+  if (!before.includes('organizationDirectoryEntriesSchema') || !before.includes('"./directory"') || !before.includes('"./mock-data"')) throw new Error('Modern assigned directory import shape changed');
+  const b = profile.business;
+  if (!b?.name?.trim() || !b.slug?.trim()) throw new Error('Modern assigned directory requires recorded dealer identity');
+  const rows = profile.listings;
+  if (!Array.isArray(rows) || !rows.length) throw new Error('Modern assigned directory requires inventory rows');
+  const illustrative = profile.stockKind === 'illustrative-not-dealer-stock' || rows.some(row => row.availability === 'illustrative-not-dealer-stock');
+  const historical = !illustrative && rows.every(row => {
+    const date = row.observedAt || '', stamp = Date.parse(date + 'T00:00:00.000Z');
+    return /^\d{4}-\d{2}-\d{2}$/.test(date) && Number.isFinite(stamp) && new Date(stamp).toISOString().slice(0, 10) === date && /^https?:\/\//.test(row.sourceUrl || '');
+  });
+  const contact = {};
+  for (const [key,value] of [['email',b.email],['phone',b.phoneDisplay || b.phoneE164],['websiteUrl',b.website]]) if (typeof value === 'string' && value.trim()) contact[key] = value;
+  const entry = {
+    brandCoverage: [], claimStatus: 'unclaimed', contact, dealerOrgId: 'dealer-' + b.slug,
+    description: b.inventoryNotice || b.previewNotice || (illustrative ? 'Illustrative listings; dealer availability is not confirmed.' : 'Dealer availability is not confirmed.'),
+    displayName: b.name, id: 'directory-' + b.slug,
+    inventory: {activeListingCount: 0, inTransitCount: 0, localCount: 0, orderableCount: 0, sourceStockCount: historical ? rows.length : 0},
+    orgType: 'dealer', representativeVehicles: [], slug: b.slug, tradeLanes: [],
+    verification: {businessVerified: false, inventoryCurrent: false, trustedSupplier: false}
+  };
+  if (typeof b.countryCode === 'string' && /^[A-Z]{2}$/.test(b.countryCode)) {
+    entry.headquarters = {countryCode: b.countryCode};
+    for (const key of ['city','region']) if (typeof b[key] === 'string' && b[key].trim()) entry.headquarters[key] = b[key];
+  }
+  const output = 'import { type OrganizationDirectoryEntry, organizationDirectoryEntriesSchema } from "./directory";\n'
+    + 'import { mockListings } from "./mock-data";\n\n'
+    + '// Assigned dealer snapshot. Directory scale does not authorize donor organizations or current-stock claims.\n'
+    + 'const assignedDealer: OrganizationDirectoryEntry = ' + JSON.stringify(entry, null, 2) + ';\n'
+    + (historical ? 'const representative = mockListings[0];\nif (!representative || !representative.images[0]) throw new Error("Missing recorded assigned-dealer representative listing");\n'
+      + 'assignedDealer.representativeVehicles = [{ availability: "source_stock", href: "/listing/" + representative.slug, id: representative.id, image: representative.images[0], price: representative.price, title: representative.title }];\n' : '')
+    + 'export const mockOrganizationDirectoryCoreEntries = organizationDirectoryEntriesSchema.parse([assignedDealer]);\n'
+    + 'export const createMockOrganizationDirectoryScaleEntries = (totalOrganizations = 1) => {\n'
+    + '  if (!Number.isSafeInteger(totalOrganizations) || totalOrganizations < 1) throw new Error("Invalid assigned-directory count");\n'
+    + '  return organizationDirectoryEntriesSchema.parse(mockOrganizationDirectoryCoreEntries);\n};\n'
+    + 'export const mockOrganizationDirectoryEntries = createMockOrganizationDirectoryScaleEntries();\n';
+  if (before === output) return [];
+  write(file, output);
+  return [relative];
+}
+
+function patchModern({ oldVariant, candidate, profile, reviewedModernCopy }) {
   const b = profile.business;
   const localized = dealerLocalizedCopy(profile);
   const listingFile = path.join(candidate, 'packages/marketplace-domain/testing/mock-data.ts');
-  replaceModernListings(listingFile, profile);
+  const listings = replaceModernListings(listingFile, profile);
+  write(path.join(candidate, 'packages/marketplace/content/inventory-copy.ts'),
+    renderModernDealerInventoryCopy(listings,{reviewedCopy:reviewedModernCopy??profile.business.raw?.modernInventoryCopy}));
   const file = path.join(candidate, 'packages/marketplace/lead-site.ts');
   let text = read(file);
   const logo = requireRasterLogo(pickLogo(oldVariant, 'modern', b, false), 'modern', 'primary surfaces');
@@ -815,7 +982,7 @@ function patchModern({ oldVariant, candidate, profile }) {
     shortName: b.shortName,
     slug: b.slug,
     staticDemoMode: true,
-    tagline: b.inventoryNotice
+    tagline: localized[localeLanguage(profile)].tagline
   };
   for (const [key, value] of Object.entries(values)) text = replaceLeadScalar(text, key, value);
   const localizedCopy = {
@@ -838,6 +1005,7 @@ function patchModern({ oldVariant, candidate, profile }) {
     `  district: { bg: ${q(localized.bg.region)}, en: ${q(localized.en.region)} },`);
   text = text.replace(/\s*socialLinks:\s*\{[\s\S]*?\n\s*\},\n\s*staticDemoMode:/m,
     `\n  socialLinks: ${JSON.stringify(Object.fromEntries(Object.entries(b.socialLinks || {}).filter(([, value]) => value)))},\n  staticDemoMode:`);
+  text = personalizeModernDealerServices(text, profile);
   write(file, text);
   write(path.join(candidate, 'packages/marketplace-domain/testing/dealer-profile.json'),
     `${JSON.stringify(profile, null, 2)}\n`);
@@ -857,11 +1025,14 @@ function patchModern({ oldVariant, candidate, profile }) {
       dealerTextFiles.push(name);
     }
   }
+  const directoryFiles = patchModernAssignedDirectory(candidate, profile);
+  const safeContent = applyModernSafeContent({ candidate, profile });
   return [
     'packages/marketplace-domain/testing/mock-data.ts',
+    'packages/marketplace/content/inventory-copy.ts',
     'packages/marketplace/lead-site.ts',
     'packages/marketplace-domain/testing/dealer-profile.json',
-    ...dealerTextFiles
+    ...dealerTextFiles, ...directoryFiles, ...safeContent.changed
   ];
 }
 
@@ -1142,8 +1313,36 @@ function patchCarwow({ oldVariant, candidate, profile }) {
 }
 
 
+// Import's native stock schema needs a real year/mileage and one dealer currency.
+// Check the original record before writing; normalized fallbacks are not evidence.
+function assertImportListingFacts(profile) {
+  const sourceYear = (value) => {
+    if (typeof value === 'number') return Number.isInteger(value) && value >= 1900 && value <= 2099 ? value : null;
+    if (typeof value !== 'string' || /unknown|not\s+(?:published|provided|available)|on\s+request|tbc|tba|n\/a/i.test(value)) return null;
+    const years = [...value.matchAll(/\b(?:19|20)\d{2}\b/g)].map(match => Number(match[0]));
+    return years.length === 1 ? years[0] : null;
+  };
+  for (const item of profile.listings) {
+    const raw = item.raw || {}, fields = [];
+    // A legacy scalar date may be a model year; a capture/advert timestamp is not.
+    const dateYear = /^(?:19|20)\d{2}$/.test(String(raw.date ?? '')) ? sourceYear(raw.date) : null;
+    const years = [sourceYear(raw.year), sourceYear(raw.production), dateYear];
+    const productionYear = sourceYear(raw.production || `${item.year} г.`);
+    if (!Number.isInteger(item.year) || !years.includes(item.year) || productionYear !== item.year) fields.push('year');
+    if (!originalMileageFacts(item).mileageKnown) fields.push('mileage');
+    if (!/^[A-Z]{3}$/.test(profile.business.currency || '') || item.currency !== profile.business.currency) fields.push('currency');
+    if (fields.length) {
+      const error = new Error('Import adaptation requires reviewed compatible ' + fields.join(', ') + '; its selected source cannot display these facts safely: ' + (item.sourceId || item.id));
+      error.code = 'IMPORT_FACTS_REQUIRE_REVIEW';
+      error.fields = fields;
+      throw error;
+    }
+  }
+}
+
 function importListingFeed(profile) {
   const b = profile.business;
+  const nativeMiles = b.countryCode === 'GB' && b.distanceUnit === 'mi';
   const spacing = (value) => new Intl.NumberFormat('fr-FR', { maximumFractionDigits: 0 })
     .format(Number(value || 0)).replace(/\u202f/g, ' ');
   const listings = profile.listings.map((item) => {
@@ -1164,9 +1363,9 @@ function importListingFeed(profile) {
       id: item.sourceId || item.id,
       image: item.image,
       location: item.location || b.city,
-      mileage: !originalMileageFacts(item).mileageKnown ? '' : item.mileageUnit === 'mi'
+      mileage: !originalMileageFacts(item).mileageKnown ? '' : nativeMiles && item.mileageUnit === 'mi'
         ? `${spacing(item.mileageValue)} mi`
-        : `${spacing(item.mileageValue)} км`,
+        : `${spacing(mileageKm(item))} км`,
       ...originalMileageFacts(item),
       photoCount: String(item.images.length),
       power: raw.power || (item.powerHp ? `${item.powerHp} к.с.` : ''),
@@ -1439,7 +1638,8 @@ function patchImportText(candidate, profile) {
     .map((file) => path.relative(candidate, file).replaceAll('\\', '/'));
 }
 
-function patchImport({ oldVariant, candidate, profile }) {
+function patchImport({ oldVariant, candidate, profile, reviewedModernCopy }) {
+  assertImportListingFacts(profile);
   const feedFile = path.join(candidate, 'src/lib/data/daynight-listings.json');
   write(feedFile, `${JSON.stringify(importListingFeed(profile), null, 2)}\n`);
   patchImportDayNight(candidate, oldVariant, profile);
@@ -1449,6 +1649,16 @@ function patchImport({ oldVariant, candidate, profile }) {
   patchImportAgents(candidate);
   const safeContent = applyImportSafeContent({ candidate, profile });
   const changed = patchImportText(candidate, profile);
+  const inventoryCopyFile = path.join(candidate, 'src/lib/content/inventory-localized.ts');
+  const inventoryCopy = repairImportDealerInventoryCatalog({
+    source: read(inventoryCopyFile), feed: JSON.parse(read(feedFile)),
+    listingSlugs: profile.listings.map((item, index) => item.slug || `${profile.business.slug}-${index + 1}`),
+    reviewedCopy: reviewedModernCopy ?? profile.business.raw?.modernInventoryCopy
+  });
+  if (inventoryCopy.added.length) {
+    write(inventoryCopyFile, inventoryCopy.source);
+    changed.push('src/lib/content/inventory-localized.ts');
+  }
   const heroBinding = patchImportHeroBindings(candidate);
   const menuHeader = path.join(candidate, 'src/lib/components/home/HomeFiveHeader.svelte');
   write(menuHeader, ensureImportMenuKeys(read(menuHeader)));
@@ -1482,21 +1692,31 @@ function patchImport({ oldVariant, candidate, profile }) {
 export function applyRefreshAdapter(options) {
   const adapter = { 'auto-best': patchAutoBest, modern: patchModern, carwow: patchCarwow, import: patchImport }[options.key];
   if (!adapter) throw new Error('No current refresh adapter for '+options.key);
-  return [...adapter(options), ...applyDealerLogoContract(options)];
+  return withSourceMutationWriter(options.mutationWriter,()=>[...adapter(options), ...applyDealerLogoContract(options)]);
 }
 
 export const refreshAdapterInternals = {
+  dealerCoordinates,
+  dealerMapDestination,
+  autoBestBrand,
+  autoBestCompany,
+  patchAutoBestMap,
   autoBestBody,
   autoBestEquipment,
   autoBestInventory,
+  completeAutoBestInventoryPresentationContract,
   originalMileageFacts,
   personalizeSvelteMileage,
   modernListing,
   carwowInventory,
+  assertImportListingFacts,
   importListingFeed,
   pickLogo,
   isRasterLogo,
   rasterLogoCandidates,
   requireRasterLogo,
-  replaceModernListings
+  replaceModernListings,
+  replaceLeadScalar,
+  patchModernAssignedDirectory,
+  patchModern
 };

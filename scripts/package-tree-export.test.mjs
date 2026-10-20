@@ -57,6 +57,31 @@ function fixture(t,{frozen=true}={}) {
   return {area,root,pkg,manifest,sourceCommit,tree,reseal};
 }
 
+test('a saved export can push borrowed asset objects from a fresh process environment',t=>{
+  const f=fixture(t),remote=path.join(f.area,'remote'),assets=path.join(f.area,'asset-objects');init(remote);init(assets);
+  put(remote,'README.md','Reviewed initialization.\n');const parent=commit(remote);
+  git(f.root,['config','url.'+remote.replaceAll('\\','/')+'.insteadOf','https://github.com/fixture/cars-demo.git']);
+  const borrowed=git(assets,['hash-object','-w','--stdin'],{input:fs.readFileSync(path.join(f.pkg,'assets/shared.bin'))});
+  const previous=process.env.GIT_ALTERNATE_OBJECT_DIRECTORIES;
+  let result;
+  try {
+    process.env.GIT_ALTERNATE_OBJECT_DIRECTORIES=path.join(assets,'.git/objects');
+    const packageTree=f.tree(),proposal=exportDealer({root:f.root,slug:'demo',packageTree,targetBranch:'codex/borrowed-assets'});
+    const reviewFile=path.join(f.area,'review.json');
+    writeJson(reviewFile,{remoteCommit:parent,candidateDigest:proposal.candidateDigest,changes:proposal.changes.map(name=>
+      ({path:name,resolution:'canonical-source',reason:'Review the exact fixture package.'}))});
+    result=exportDealer({root:f.root,slug:'demo',packageTree,targetBranch:'codex/borrowed-assets',reviewFile,write:true});
+    assert.equal(result.gitObjectAlternates,process.env.GIT_ALTERNATE_OBJECT_DIRECTORIES);
+  } finally {
+    if(previous===undefined)delete process.env.GIT_ALTERNATE_OBJECT_DIRECTORIES;
+    else process.env.GIT_ALTERNATE_OBJECT_DIRECTORIES=previous;
+  }
+  assert.equal(git(f.root,['cat-file','-e',borrowed],{env:{GIT_ALTERNATE_OBJECT_DIRECTORIES:''},allowFailure:true}),null);
+  pushExport({root:f.root,receiptFile:path.join(result.proposalDirectory,'export.json')});
+  assert.equal(git(remote,['rev-parse','refs/heads/codex/borrowed-assets']),result.commit);
+  assert.deepEqual(git(remote,['cat-file','blob',borrowed],{encoding:null}),fs.readFileSync(path.join(f.pkg,'assets/shared.bin')));
+});
+
 test('immutable tree verification equals directory verification without a package checkout, and deduplicates binary blobs',t=>{
   const f=fixture(t),expected=verifyPackage(f.pkg),tree=f.tree(),originalIndex=fs.readFileSync(path.join(f.root,'.git/index'));
   const transport=git(f.root,['commit-tree',tree,'-p',f.sourceCommit],{input:'Ephemeral package transport.\n'});

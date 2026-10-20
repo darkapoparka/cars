@@ -28,7 +28,8 @@ export const load: PageServerLoad = async ({ params, request, url }) => {
 };
 
 export const actions: Actions = {
-	default: async ({ params, request }) => {
+	default: async ({ params, request, url }) => {
+		requireDayNightPageSession(request, `admin/agents/${params.slug}`, url.searchParams);
 		const formData = await request.formData();
 		const agent = updateManagedAgent({
 			note: value(formData, 'note'),
