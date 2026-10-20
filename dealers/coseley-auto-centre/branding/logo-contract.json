@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "dealer": "coseley-auto-centre",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T23:08:02.272Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "aaef8d73ce1a9ca2a6663fbdfd0cdedc7295caa65dc475bf1f413d807f13f733",
+      "sourceSha256": "a24e1a50f3682f302ff16cd363ac68968738c9dc77832cf2ac34398b7cb0b5b6"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "3a2b2863a2bc621242a80227592cfddb674771c11f1d7a47e381c3f035293a6a",
+      "sourceSha256": "58265d583e56fe8fd17e5837ea56a9cca2a32741f5da60c6e40384dc31f1887d"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "3a2b2863a2bc621242a80227592cfddb674771c11f1d7a47e381c3f035293a6a",
+      "sourceSha256": "58265d583e56fe8fd17e5837ea56a9cca2a32741f5da60c6e40384dc31f1887d"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "a24e1a50f3682f302ff16cd363ac68968738c9dc77832cf2ac34398b7cb0b5b6",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-a1eaeb29-c802-49d9-8344-b693cc5c20e0",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "d38fec92366deeed310d7c1589e3304e1bcfa7a1b5f3d8a69fef879ce2d700ea",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-a1eaeb29-c802-49d9-8344-b693cc5c20e0",
+      "modelVersion": null
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "847f13cf7c82372497e65709dece029a522b7e9047625f8fd5e8d13a2aba965c"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "a24e1a50f3682f302ff16cd363ac68968738c9dc77832cf2ac34398b7cb0b5b6",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a1eaeb29-c802-49d9-8344-b693cc5c20e0",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/coseley-auto-centre/branding/generated-master-v1-20261021.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "58265d583e56fe8fd17e5837ea56a9cca2a32741f5da60c6e40384dc31f1887d",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-2be20419-1b5b-47a9-8de5-c8a75a269bba",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/coseley-auto-centre/branding/generated-inverse-v1-20261021.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "58265d583e56fe8fd17e5837ea56a9cca2a32741f5da60c6e40384dc31f1887d",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-2be20419-1b5b-47a9-8de5-c8a75a269bba",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/coseley-auto-centre/branding/generated-inverse-v1-20261021.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "d177d9af348d4d1ada424d9abfc6f9b86dae8d2cb015fea8be40c1303c2fe7b6",
+      "sha256": "a24e1a50f3682f302ff16cd363ac68968738c9dc77832cf2ac34398b7cb0b5b6",
+      "crop": {
+        "left": 20,
+        "top": 146,
+        "width": 2133,
+        "height": 436
+      },
+      "sourcePath": "branding/generated-master-v1-20261021.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "2e00f92c237653049f918ed400852abf25b1b87117bff3350c0fdb87205ce088",
+      "sha256": "58265d583e56fe8fd17e5837ea56a9cca2a32741f5da60c6e40384dc31f1887d",
+      "crop": {
+        "left": 18,
+        "top": 144,
+        "width": 2140,
+        "height": 441
+      },
+      "sourcePath": "branding/generated-inverse-v1-20261021.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "2e00f92c237653049f918ed400852abf25b1b87117bff3350c0fdb87205ce088",
+      "sha256": "58265d583e56fe8fd17e5837ea56a9cca2a32741f5da60c6e40384dc31f1887d",
+      "crop": {
+        "left": 18,
+        "top": 144,
+        "width": 2140,
+        "height": 441
+      },
+      "sourcePath": "branding/generated-inverse-v1-20261021.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "511809f8db042425f19bedd1d39a30b15de63444979160435a396f5bee3f82b7",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a1eaeb29-c802-49d9-8344-b693cc5c20e0",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/coseley-auto-centre/branding/generated-mark-light-v1-20261021.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "2a0a3502b403bb68b7961ade53e04f2ae0ff515378d6130e61c0f75e23dcdbdc",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-2be20419-1b5b-47a9-8de5-c8a75a269bba",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/coseley-auto-centre/branding/generated-mark-dark-v1-20261021.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "d38fec92366deeed310d7c1589e3304e1bcfa7a1b5f3d8a69fef879ce2d700ea",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a1eaeb29-c802-49d9-8344-b693cc5c20e0",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/coseley-auto-centre/branding/generated-mark-light-v1-20261021.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "847f13cf7c82372497e65709dece029a522b7e9047625f8fd5e8d13a2aba965c",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a1eaeb29-c802-49d9-8344-b693cc5c20e0",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/coseley-auto-centre/branding/generated-mark-light-v1-20261021.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-20T23:08:02.272Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "90b3ea21f84976c9c83f299c923997c2d7e7209c0b955407c563da3946ae693f",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-2be20419-1b5b-47a9-8de5-c8a75a269bba",
+      "modelVersion": null
+    }
+  }
+}

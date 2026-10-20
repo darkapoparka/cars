@@ -22,6 +22,8 @@ const clean=value=>String(value??'').normalize('NFKD').replace(/\p{M}/gu,'').toL
 const digits=value=>String(value??'').replace(/\D/g,'');
 const business=facts=>facts?.business??facts??{};
 const includesName=(text,name)=>clean(name).length>=3&&(' '+clean(text)+' ').includes(' '+clean(name)+' ');
+const visibleText=value=>String(value??'').replace(/\s+/g,' ').trim();
+const completeIdentityContext=(text,context)=>context?.schemaVersion===1&&context.status==='complete'&&Array.isArray(context.segments)&&context.segments.length>0&&context.segments.length<=4096&&context.segments.every(row=>typeof row.text==='string'&&typeof row.owner==='string'&&['body','vehicle-fact'].includes(row.channel))&&visibleText(context.segments.map(row=>row.text).join('\n'))===visibleText(text);
 const samePhone=(a,b)=>{a=digits(a);b=digits(b);return a.length>=7&&b.length>=7&&(a===b||a.length>=9&&b.length>=9&&a.slice(-9)===b.slice(-9));};
 const textPhones=text=>[...String(text??'').matchAll(/(?<!\d)(?:\+|00)?\d[\d \t()./-]{5,}\d(?!\d)/g)].map(match=>match[0]).filter(value=>digits(value).length>=7&&digits(value).length<=15);
 const noProviderEnv=env=>Object.fromEntries(Object.entries(env).filter(([key])=>!/^(?:GH_TOKEN|GITHUB_TOKEN|(?:CLOUDFLARE|CF)_(?:API|AUTH|TOKEN|ACCOUNT)|WRANGLER_(?:API_TOKEN|TOKEN))/.test(key)));
@@ -165,13 +167,23 @@ export function loadFleetIdentities(root,registry=json(path.join(root,'docs/DEPL
     note:'Registered and new-pack public business identities are scanned. Malformed neighboring facts are reported without stopping other packs; missing public phones are not invented.'}};
 }
 
-export function findForeignIdentity({text,phones=[],ownSlug,ownFacts,fleet}) {
+export function findForeignIdentity({text,phones=[],ownSlug,ownFacts,fleet,identityContext,additionalText=[]}) {
   const own=business(ownFacts),ownNames=[own.name,own.shortName].filter(Boolean),hits=[];
-  const visiblePhones=textPhones(text);
+  // Segmentation is evidence about semantic field boundaries, never permission
+  // to omit stock text. Missing or incomplete coverage keeps the strict scan.
+  const complete=completeIdentityContext(text,identityContext);
+  const segments=[...(complete?identityContext.segments:[{channel:'body',owner:'whole observed text (strict fallback)',text:String(text??'')}]),...additionalText.filter(row=>row&&typeof row.text==='string'&&typeof row.channel==='string'&&typeof row.owner==='string')];
+  const context=(segment,name)=>{
+    const words=clean(name).split(' ').map(word=>word==='and'?'(?:and|&)':word.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'));
+    const match=String(segment.text).match(new RegExp(words.join('[^\\p{L}\\p{N}]+'),'iu'));
+    const start=Math.max(0,(match?.index??0)-60),end=Math.min(segment.text.length,start+240);
+    return {channel:segment.channel,owner:segment.owner,matchedText:match?.[0]??name,text:segment.text.slice(start,end),...(end<segment.text.length||start?{truncated:true}:{})};
+  };
+  const visiblePhones=textPhones([text,...additionalText.map(row=>row?.text??'')].join('\n'));
   const observedPhones=[...phones,...visiblePhones];
   for(const record of fleet.records){
     if(record.slug===ownSlug)continue;
-    for(const name of record.names)if(!ownNames.some(value=>clean(value)===clean(name))&&includesName(text,name))hits.push({dealer:record.slug,type:'name',value:name});
+    for(const name of record.names)if(!ownNames.some(value=>clean(value)===clean(name))){const segment=segments.find(row=>includesName(row.text,name));if(segment)hits.push({dealer:record.slug,type:'name',value:name,context:context(segment,name)});}
     for(const phone of record.phones)if(!samePhone(phone,own.phone)&&observedPhones.some(value=>samePhone(value,phone)))hits.push({dealer:record.slug,type:'phone',value:phone});
   }
   return hits.filter((row,index)=>hits.findIndex(other=>other.dealer===row.dealer&&other.type===row.type&&other.value===row.value)===index);
@@ -218,7 +230,10 @@ export function assessPageSnapshot({snapshot,facts,manifest,variant,fleet,demoSt
   const admins=snapshot.adminLinks??[];
   if(admins.length!==1)findings.push('shared-admin-link');
   else{let url;try{url=new URL(admins[0].href,snapshot.url);}catch{}if(!url||url.origin!=='https://cars-admin-blue.vercel.app'||url.pathname!=='/'||url.username||url.password||admins[0].target!=='_blank'||!['noopener','noreferrer'].every(value=>admins[0].rel?.split(/\s+/).includes(value)))findings.push('shared-admin-link');}
-  const leaks=findForeignIdentity({text:[snapshot.text,snapshot.metadata].join('\n'),phones:snapshot.phones,ownSlug:manifest.slug,ownFacts:facts,fleet});
+  const additionalText=[{channel:'metadata',owner:'page title, descriptions and structured data',text:String(snapshot.metadata??'')},
+    ...(snapshot.identityLinks??[]),...pageImages.filter(image=>image.visible&&image.alt).map(image=>({channel:'image-alt',owner:'img '+String(image.src).slice(0,100),text:image.alt}))];
+  const leakText=completeIdentityContext(snapshot.text,snapshot.identityContext)?snapshot.text:[snapshot.text,snapshot.metadata].join('\n');
+  const leaks=findForeignIdentity({text:leakText,identityContext:snapshot.identityContext,additionalText,phones:snapshot.phones,ownSlug:manifest.slug,ownFacts:facts,fleet});
   if(leaks.length)findings.push('foreign-dealer-identity');
   if(placeholders.test([snapshot.text,snapshot.metadata].join('\n')))findings.push('placeholder-copy');
   if(invalidMileage.test(snapshot.text??''))findings.push('invalid-mileage-value');
@@ -496,7 +511,33 @@ export function readDealerPackDom() {
       consumer:inSwitcher?(element.closest('button.fab')?'fab':'switcher'):'page'};});
     const text=[document.body.innerText,...roots.slice(1).flatMap(root=>[...root.children].filter(visible).map(element=>element.innerText??''))].join('\n');
     const metadata=[document.title,...all('meta[name="description"],meta[property^="og:"]').map(element=>element.content),...all('script[type="application/ld+json"]').map(element=>element.textContent)].join('\n');
-    return {url:location.href,title:document.title,text,metadata,images,phones:[...new Set(all('a[href^="tel:"]').map(element=>element.getAttribute('href')))],
+    const owner=element=>[element.tagName?.toLowerCase(),element.id?'#'+element.id:'',typeof element.className==='string'?'.'+element.className.trim().split(/\s+/).slice(0,3).join('.'):''].join('').slice(0,160);
+    const identityLinks=all('a').filter(visible).flatMap(element=>['aria-label','title','href'].map(attribute=>({channel:'link-'+attribute,owner:owner(element),text:element.getAttribute(attribute)??''})).filter(row=>row.text));
+    let identityContext;
+    try{
+      const factSelector='[data-slot="vehicle-card-spec-pills"] > [data-slot="vehicle-card-spec"],.dn-vehicle-card__specs > .dn-vehicle-card__spec,.dn-vehicle-card__mobile-meta > .dn-vehicle-card__fact,.mobile-vehicle-card ul[aria-label] > li,.site-vehicle-card__metadata > ul > li,.daynight-card-specs > li';
+      const segments=[];let pending='';
+      const flush=()=>{if(pending.trim())segments.push({channel:'body',owner:'body outside native vehicle-fact fields',text:pending});pending='';};
+      const visit=node=>{
+        if(node.nodeType===3){pending+=node.nodeValue??'';return;}
+        if(node.nodeType!==1)return;
+        if(['SCRIPT','STYLE','TEMPLATE','NOSCRIPT'].includes(node.tagName))return;
+        const style=getComputedStyle(node);if(style.display==='none'||style.visibility==='hidden')return;
+        if(node.matches(factSelector)){
+          if(node.querySelector(factSelector)||node.querySelector('a,header,footer,nav,h1,h2,h3'))throw Error('Unexpected nested content in a native vehicle fact');
+          flush();segments.push({channel:'vehicle-fact',owner:owner(node),text:node.innerText});return;
+        }
+        const block=/^(?:block|flex|grid|list-item|table|table-row|table-cell|flow-root)$/.test(style.display);
+        if(block||node.tagName==='BR')pending+='\n';
+        for(const child of node.childNodes)visit(child);
+        if(block)pending+='\n';
+      };
+      visit(document.body);flush();
+      for(const shadow of roots.slice(1))for(const element of [...shadow.children].filter(visible)){visit(element);flush();}
+      const normalize=value=>String(value??'').replace(/\s+/g,' ').trim();
+      identityContext={schemaVersion:1,status:segments.length>0&&segments.length<=4096&&normalize(segments.map(row=>row.text).join('\n'))===normalize(text)?'complete':'incomplete',segments};
+    }catch(error){identityContext={schemaVersion:1,status:'unavailable',reason:String(error.message).slice(0,180)};}
+    return {url:location.href,title:document.title,text,metadata,images,identityContext,identityLinks,phones:[...new Set(all('a[href^="tel:"]').map(element=>element.getAttribute('href')))],
       visiblePhones:[...new Set(all('a[href^="tel:"]').filter(visible).map(element=>element.getAttribute('href')))],
       designChoices:all('a[data-design-key]:not([data-home-id])').map(element=>({key:element.getAttribute('data-design-key'),href:element.getAttribute('href')})),
       adminLinks:all('a[data-cars-admin]').map(element=>({href:element.getAttribute('href'),target:element.getAttribute('target'),rel:element.getAttribute('rel')})),

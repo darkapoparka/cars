@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "ra-motor-group-ltd",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T23:15:00.959Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "ra-motor-group-ltd",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-barking-ra-motor-group",
+    "position": 4
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "9f1c98b2c761043ab2f33cbd51699ae9b5fbd9cbb392b0f8b4d684e64d37d7f4"
+    },
+    {
+      "path": "branding/first-proposal-artwork-20261021.json",
+      "sha256": "bfbe0e0b8abd1499dfe4488320c0e0f0790ab1f0e4a2a133e8209f68243a66fa"
+    },
+    {
+      "path": "branding/generated-inverse-v1-20261021.png",
+      "sha256": "a1b0ee2a3c24d193e55d73e44f57d7dc417579fc40419504875f649410769c56"
+    },
+    {
+      "path": "branding/generated-mark-dark-v1-20261021.png",
+      "sha256": "5da80286b2019b0cfdbd1b94dc72b7c0c0ccf52e2b720a65ac65a34f8f39678a"
+    },
+    {
+      "path": "branding/generated-mark-light-v1-20261021.png",
+      "sha256": "1c2c06b6844e5a6d4ee8977d5516672a8541976e604c895232e84fffe734b4f7"
+    },
+    {
+      "path": "branding/generated-master-v1-20261021.png",
+      "sha256": "559539408a2aded4edb465b87d34ce3d16a26db836ffef02795a84ba4fff7259"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "5c17c4c7dfde8a59bf76c762d3448bae73c23c71f4e4b2ada372df53f5aff563"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "4242caa81b86854faa29596c9b2b8c3ad54e9e378cee6dc7a8c638b125f085fd"
+    },
+    {
+      "path": "branding/originals/ra-autotrader-original-20261021.jpg",
+      "sha256": "0406dc28a16279e9c79413754318807bed02ef8fd382f18075fc69ec2aafd246"
+    },
+    {
+      "path": "branding/source-before-first-artwork-20261021-ac50179d01beab7f.json",
+      "sha256": "ac50179d01beab7f67e733d12c023d14e6f3e8315c6e334dd3f1e1f86f8e9560"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "a10d196dcae405df4439f0fa69af8e50b29c821ae31509afe8452d56940de90e"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "60b637f68eadf2735507b44fdcb8df15ce649e054186ee8d4c304db2674f5469"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "920a820055c0dc1971efaaf21d2dfc609184b619b9311a92e910c97b86f494c4"
+    },
+    {
+      "path": "dealer-stock/template-demo-1.webp",
+      "sha256": "945e6864218ab3bd5fbd415336b212ecfde645685033f8506836f906885d447c"
+    },
+    {
+      "path": "dealer-stock/template-demo-2.webp",
+      "sha256": "17689ab880bf47de81ef467c34d639223f39f0c1ebe68c90d0aaf70e3dcc6333"
+    },
+    {
+      "path": "dealer-stock/template-demo-3.webp",
+      "sha256": "d644dec8e1ef280a702dccac267a2367f0ab823e40373e1299b156e7723b3b1f"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "5bf35c9d669fdfd0d3e2136ee6069132aff20faa142b0dddca02364c95dd84c9"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "30a6cff3ec75ebf9607b71e14427cd336a2bf2e2db6b4dfef65eb5ac8d46a619"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "61b1059ed8663d37c6274ee3c8e9d38688831c15503a3b489df136e673048f0e"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "981f5f82b1261cb9e7ba61fb0fb80f47b3a1e3e97fc558a149a496e35b0dbb04"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "24e3f11c2686352ff75843eecdd3e11da2d0569343ced83ca97113093e7d27d8"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "cd944d67a2abb9c2bf9d2a94376101b7d4b33a2eb8e4d0eb061f7903277cc0e4"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "654510a47ad81a2fa84339a26bb5d9c2dc2775cacb3f446753b3df0d42dcb080"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

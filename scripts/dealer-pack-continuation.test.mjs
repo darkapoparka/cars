@@ -64,9 +64,19 @@ test('authenticated run/source drift or missing source proof blocks a dispatch',
   for(const patch of [{head_sha:'c'.repeat(40)},{head_branch:'other'},{path:'.github/workflows/other.yml'},{run_attempt:2},{status:'completed',conclusion:'success'},{event:'push'},{head_repository:{full_name:'someone/fork'}}]){
     const f=fixture();Object.assign(f.run,patch);assert.equal((await continuePackQueue(f)).status,'skipped');assert.ok(!f.calls.some(row=>row.method==='DISPATCH'));
   }
-  const f=fixture(),read=f.readGithub;
-  f.readGithub=async operation=>operation.path.endsWith('/git/ref/heads/main')?{status:200,body:{ref:'refs/heads/main',object:{type:'commit',sha:'c'.repeat(40)}}}:read(operation);
-  assert.equal((await continuePackQueue(f)).status,'skipped');assert.ok(!f.calls.some(row=>row.method==='QUEUE_READ'));
+  for(const response of [{status:404},{status:200,body:{ref:'refs/heads/other',object:{type:'commit',sha}}},{status:200,body:{ref:'refs/heads/main',object:{type:'tag',sha}}},{status:200,body:{ref:'refs/heads/main',object:{type:'commit',sha:'main'}}}]){
+    const f=fixture(),read=f.readGithub;
+    f.readGithub=async operation=>operation.path.endsWith('/git/ref/heads/main')?response:read(operation);
+    assert.equal((await continuePackQueue(f)).status,'skipped');assert.ok(!f.calls.some(row=>row.method==='QUEUE_READ'));
+  }
+});
+
+test('accepted main advances hand off to its exact authenticated commit without changing parent proof',async()=>{
+  const f=fixture(),read=f.readGithub,target='c'.repeat(40);
+  f.readGithub=async operation=>operation.path.endsWith('/git/ref/heads/main')?{status:200,body:{ref:'refs/heads/main',object:{type:'commit',sha:target}}}:read(operation);
+  const report=await continuePackQueue(f);
+  assert.equal(report.status,'dispatched');assert.equal(report.sourceSha,sha);assert.equal(report.continuationSourceSha,target);
+  assert.equal(report.dispatches,1);assert.deepEqual(f.calls.at(-1),{method:'DISPATCH',sourceSha:target});
 });
 
 test('a fresh active or uncertain claim blocks continuation even after successful receipts',async()=>{

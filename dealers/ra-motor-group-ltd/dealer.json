@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "RA Motor Group Ltd",
     "publicOrigin": "https://ra-motor-group-ltd.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "4dcd78c8ac483c6ee6be6e9662f9b17a2db5e98deed52131e909dbf9f57179b4",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "b2cf87f0d3674fd47ff6a7f5ab4e7e2805fe9519d764ea15103ccfe7b225f3a8"
+    }
   }
 }

@@ -374,12 +374,12 @@
     "trade-car-centre-accrington-ghmc-419b403bea",
     "car-hunt-plus-limited"
   ],
-  "freshNativeStatus": "Awaiting publication and exact-source producer dispatch",
+  "freshNativeStatus": "Dispatched at the exact published combined revision",
   "previousCorrectedThreeProducer": {
     "runId": 39510514421,
     "sourceCommit": "ade81490674a64722a8f9059a61c78ce4d9d22a3",
     "ownContracts": "passed",
-    "nativeBuilds": "in-progress-at-checkpoint",
+    "nativeBuilds": "completed: Cars4U qualified; Lets Sell and Millions failed Import server TS compilation and remain excluded",
     "slugs": [
       "lets-sell-your-car",
       "millions-auto-cars",
@@ -387,5 +387,20 @@
     ]
   },
   "ownerAccepted": false,
-  "outreachApproved": false
+  "outreachApproved": false,
+  "freshNativeProducer": {
+    "runId": 39512592289,
+    "sourceCommit": "80bedaf7f214b2b3b50e1cd83079e606e09ac031",
+    "url": "https://github.com/darkapoparka/cars/actions/runs/39512592289",
+    "slugs": [
+      "j26-vans-trucks",
+      "al-sammarraie-used-cars",
+      "rebou-al-fakhama-used-cars",
+      "small-automatics",
+      "trade-car-centre-accrington-ghmc-419b403bea",
+      "car-hunt-plus-limited"
+    ],
+    "nativeApproval": false,
+    "hostedApproval": false
+  }
 }

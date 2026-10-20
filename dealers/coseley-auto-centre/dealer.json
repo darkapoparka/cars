@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Coseley Auto Centre",
     "publicOrigin": "https://coseley-auto-centre.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "a24e1a50f3682f302ff16cd363ac68968738c9dc77832cf2ac34398b7cb0b5b6",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "d38fec92366deeed310d7c1589e3304e1bcfa7a1b5f3d8a69fef879ce2d700ea"
+    }
   }
 }

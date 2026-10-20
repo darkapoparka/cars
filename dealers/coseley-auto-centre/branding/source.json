@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "dealer": "coseley-auto-centre",
-  "status": "research-required",
+  "status": "reviewed",
   "realLogoFirst": true,
   "publicSources": [
     {
@@ -18,7 +18,191 @@
     }
   ],
   "originals": [],
-  "creationMethod": null,
+  "creationMethod": "imagegen-proposal",
   "dealerApproved": false,
-  "generatedInputs": null
+  "generatedInputs": {
+    "reviewedAt": "2026-10-20T23:08:02.272Z",
+    "master": {
+      "path": "branding/generated-master-v1-20261021.png",
+      "sha256": "d177d9af348d4d1ada424d9abfc6f9b86dae8d2cb015fea8be40c1303c2fe7b6",
+      "nativeDimensions": {
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a1eaeb29-c802-49d9-8344-b693cc5c20e0",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light-v1-20261021.png",
+      "sha256": "a0736016b313511fa943c3ac1192f56160d9e6edcf967b576e5c211f82bb017a",
+      "nativeDimensions": {
+        "width": 788,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a1eaeb29-c802-49d9-8344-b693cc5c20e0",
+        "modelVersion": null
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark-v1-20261021.png",
+      "sha256": "1484f4166076af3d27d5d17621a43a31bdfdc581209aa8bdfcf8e9e2cc4cb035",
+      "nativeDimensions": {
+        "width": 789,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-2be20419-1b5b-47a9-8de5-c8a75a269bba",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-master-v1-20261021.png",
+        "sha256": "d177d9af348d4d1ada424d9abfc6f9b86dae8d2cb015fea8be40c1303c2fe7b6",
+        "nativeDimensions": {
+          "width": 2172,
+          "height": 724
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-a1eaeb29-c802-49d9-8344-b693cc5c20e0",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-inverse-v1-20261021.png",
+        "sha256": "2e00f92c237653049f918ed400852abf25b1b87117bff3350c0fdb87205ce088",
+        "nativeDimensions": {
+          "width": 2172,
+          "height": 724
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-2be20419-1b5b-47a9-8de5-c8a75a269bba",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-inverse-v1-20261021.png",
+        "sha256": "2e00f92c237653049f918ed400852abf25b1b87117bff3350c0fdb87205ce088",
+        "nativeDimensions": {
+          "width": 2172,
+          "height": 724
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-2be20419-1b5b-47a9-8de5-c8a75a269bba",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-20T23:08:02.272Z",
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "markWidths": [
+        32,
+        64
+      ],
+      "notes": "Agent inspected exact alpha-composited light/inverse wordmarks; final matched consumer sheet is separately retained. All five native dark/red backgrounds are unchanged. Proposal only, no human/dealer/native/hosted approval."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-20T23:08:02.272Z",
+      "widths": [
+        32,
+        64
+      ],
+      "notes": "Compact artwork is an exact pixel extraction of the isolated generated emblem, with a clear alpha gap to the wordmark; no recolour, filters or alpha cleanup."
+    }
+  },
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "researchConclusion": "The exact retained dealer page was checked; its linked artwork is a generic placeholder. No distinct original artwork was obtained in these bounded checks, which does not establish absence of a logo. Independent new proposal; retained facts unchanged.",
+  "publicSourceObservations": [
+    {
+      "observedAt": "2026-10-20T23:08:02.272Z",
+      "kind": "bounded-logo-first-page-review",
+      "observations": "Exact retained eBay page matches Coseley Auto Centre at525BirminghamNewRoad WV149PJ with retained business email and phone. Linked80px image is a generic photo placeholder; unrelated Coseley Car Centre not adopted."
+    }
+  ],
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "generationId": "exec-a1eaeb29-c802-49d9-8344-b693cc5c20e0",
+    "modelVersion": null,
+    "prompt": "Use case: logo-brand. Create one independent proposal for the exact UK dealer COSELEY AUTO CENTRE. Exact two-line text: COSELEY above AUTO CENTRE. Wide horizontal lockup with an original compact open CAC monogram at LEFT, generous transparent gap, bold readable two-line geometric wordmark at RIGHT. The emblem combines two clear angular C arcs framing a small open triangular A counter, simple substantial shapes readable at32/64px. Deep blue #17304c and deep muted burgundy #8b2941; flat opaque ink, open negative spaces and clean alpha. Main wording bold and legible at120/180px. Truly transparent background and large margins. No vehicle silhouette, shield, crown, backgroundplate, tagline, marketing claims, metallic effects, gradients, glow, shadows, white keyline, texture, speckles or extra wording. Independent proposed identity based on retained trading name, no dealer/official adoption implied."
+  },
+  "compactDerivation": {
+    "operation": "lossless-png-extract-isolated-emblem",
+    "parentPath": "branding/generated-master-v1-20261021.png",
+    "parentSha256": "d177d9af348d4d1ada424d9abfc6f9b86dae8d2cb015fea8be40c1303c2fe7b6",
+    "crop": {
+      "left": 0,
+      "top": 0,
+      "width": 788,
+      "height": 724
+    },
+    "emptyGap": {
+      "start": 748,
+      "end": 828,
+      "width": 80
+    },
+    "parentNativeDimensions": {
+      "width": 2172,
+      "height": 724
+    },
+    "artworkUnmodified": true,
+    "alphaUnmodified": true
+  },
+  "compactOnDarkDerivation": {
+    "operation": "lossless-png-extract-isolated-emblem",
+    "parentPath": "branding/generated-inverse-v1-20261021.png",
+    "parentSha256": "2e00f92c237653049f918ed400852abf25b1b87117bff3350c0fdb87205ce088",
+    "crop": {
+      "left": 0,
+      "top": 0,
+      "width": 789,
+      "height": 724
+    },
+    "emptyGap": {
+      "start": 751,
+      "end": 827,
+      "width": 76
+    },
+    "parentNativeDimensions": {
+      "width": 2172,
+      "height": 724
+    },
+    "artworkUnmodified": true,
+    "alphaUnmodified": true
+  },
+  "additionalGenerations": [
+    {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-2be20419-1b5b-47a9-8de5-c8a75a269bba",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand, faithful inverse surface edit. Preserve EXACT CAC angular C arcs/A emblem at left, COSELEY above AUTO CENTRE right, exact lettering, shape, gap, proportions, spacing and counters. Deep blue becomes solid opaque pale silver-grey #cbd2d8; deep burgundy becomes solid opaque pale muted rose #e4c3c5. Same colorpartition and motif. All gaps/counters and canvas genuinely transparent. Dedicated clean inverse for charcoal/navy/black/red surfaces. No pure white, shadow, glow, halo, gradients, texture, speckles, keylines, backgroundplate, extra words or redesign. Exact spelling COSELEY AUTO CENTRE. Independent proposed identity, no adoption claim.",
+      "referencePaths": [
+        "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-a1eaeb29-c802-49d9-8344-b693cc5c20e0.png"
+      ],
+      "path": "branding/generated-inverse-v1-20261021.png",
+      "sha256": "2e00f92c237653049f918ed400852abf25b1b87117bff3350c0fdb87205ce088"
+    }
+  ],
+  "sourceHistory": [
+    {
+      "reference": "branding/source-before-first-artwork-20261021-d2154baa6c224d90.json",
+      "sha256": "d2154baa6c224d908afecc5fcf45967de76d0ae7e55f435543b7b2d9bbffaf60",
+      "retainedAt": "2026-10-20T23:08:02.272Z",
+      "reason": "Exact maintained input-only draft provenance before first proposal artwork"
+    }
+  ]
 }

@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-first-missing-source-proposal-artwork",
+  "dealer": "hrs-cars-ltd",
+  "createdAt": "2026-10-20T23:07:53.172Z",
+  "inputRows": [
+    {
+      "role": "wordLight",
+      "path": "branding/generated-master-v1-20261021.png",
+      "sha256": "84ebe688559d695256fe4ebc582822034fef8e70d93ac3a1c047a3c4b6d1bfac",
+      "nativeDimensions": {
+        "width": 1774,
+        "height": 887
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-8c3519ad-60db-4155-bc4a-d0aaf8af4240",
+        "modelVersion": null
+      },
+      "artifact": "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-8c3519ad-60db-4155-bc4a-d0aaf8af4240.png",
+      "prompt": "Use case: logo-brand. Create one independent proposal for HRS CARS LTD, UK used-car dealer in Bathgate. Exact text: HRS above CARS LTD. Wide horizontal lockup with an original compact open HRS monogram isolated at LEFT, generous transparent gap, and bold geometric two-line wordmark on RIGHT. Monogram uses clean connected letter strokes and transparent road-like separation cuts, no pictorial car. Deep forest-green #154538 and deep charcoal #172b28 ink, flat opaque fills. Open counters, substantial readable strokes, crisp text at120/180px total logo width and compact at32/64px. Truly transparent canvas with generous padding. No badge plate, crown, shield, generic roof, gradients, glow, shadows, white keyline, texture, speckles, extra text or adoption claim. Balanced calm professional identity, proposal only; no official logo has been established.",
+      "referencePaths": []
+    },
+    {
+      "role": "markLight",
+      "path": "branding/generated-mark-light-v1-20261021.png",
+      "sha256": "26d600461e979fab955a6738cbc28942edbc31b8aaf688fcca58de51901c4d8e",
+      "nativeDimensions": {
+        "width": 878,
+        "height": 887
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-8c3519ad-60db-4155-bc4a-d0aaf8af4240",
+        "modelVersion": null
+      },
+      "artifact": "J:/.artifacts/cars-source-sync/next3-branding-inputs/hrs-cars-ltd/markLight.png",
+      "prompt": "Use case: logo-brand. Create one independent proposal for HRS CARS LTD, UK used-car dealer in Bathgate. Exact text: HRS above CARS LTD. Wide horizontal lockup with an original compact open HRS monogram isolated at LEFT, generous transparent gap, and bold geometric two-line wordmark on RIGHT. Monogram uses clean connected letter strokes and transparent road-like separation cuts, no pictorial car. Deep forest-green #154538 and deep charcoal #172b28 ink, flat opaque fills. Open counters, substantial readable strokes, crisp text at120/180px total logo width and compact at32/64px. Truly transparent canvas with generous padding. No badge plate, crown, shield, generic roof, gradients, glow, shadows, white keyline, texture, speckles, extra text or adoption claim. Balanced calm professional identity, proposal only; no official logo has been established.",
+      "referencePaths": [
+        "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-8c3519ad-60db-4155-bc4a-d0aaf8af4240.png"
+      ],
+      "derivation": {
+        "operation": "lossless-png-extract-isolated-emblem",
+        "parentPath": "branding/generated-master-v1-20261021.png",
+        "parentSha256": "84ebe688559d695256fe4ebc582822034fef8e70d93ac3a1c047a3c4b6d1bfac",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 878,
+          "height": 887
+        },
+        "emptyGap": {
+          "start": 848,
+          "end": 908,
+          "width": 60
+        },
+        "parentNativeDimensions": {
+          "width": 1774,
+          "height": 887
+        },
+        "artworkUnmodified": true,
+        "alphaUnmodified": true
+      }
+    },
+    {
+      "role": "wordDark",
+      "path": "branding/generated-inverse-v1-20261021.png",
+      "sha256": "3319e6198f3f287a2f0d263df15ca203749c1aeaa59ff2ab8ffbd626415c5dfd",
+      "nativeDimensions": {
+        "width": 1774,
+        "height": 887
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bdd7325a-1bf0-4cdd-91fa-0f074ea2033c",
+        "modelVersion": null
+      },
+      "artifact": "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-bdd7325a-1bf0-4cdd-91fa-0f074ea2033c.png",
+      "prompt": "Use case: logo-brand, faithful inverse surface edit. Preserve EXACT connected open HRS monogram left and HRS over CARS LTD right, shapes, cuts, typography, spacing, proportions and layout. Forest green ink becomes solid opaque pale sage #c7dacf, deep charcoal becomes solid opaque pale silver-grey #cbd2d8. Preserve all transparent counters and separation cuts. Dedicated clear variant for charcoal/navy/black/red backgrounds, truly transparent canvas with margins. Flat opaque artwork, no glow, shadow, gradient, halos, keylines, haze, texture, speckles, backgroundplate, new words or motif. Exact HRS CARS LTD; same independent unapproved proposal.",
+      "referencePaths": [
+        "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-8c3519ad-60db-4155-bc4a-d0aaf8af4240.png"
+      ]
+    },
+    {
+      "role": "markDark",
+      "path": "branding/generated-mark-dark-v1-20261021.png",
+      "sha256": "5746c4f8cc5cf01ca8746ad259f82e2e2d6aeab88bd3b8090afe32d4bed133f1",
+      "nativeDimensions": {
+        "width": 878,
+        "height": 887
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bdd7325a-1bf0-4cdd-91fa-0f074ea2033c",
+        "modelVersion": null
+      },
+      "artifact": "J:/.artifacts/cars-source-sync/next3-branding-inputs/hrs-cars-ltd/markDark.png",
+      "prompt": "Use case: logo-brand, faithful inverse surface edit. Preserve EXACT connected open HRS monogram left and HRS over CARS LTD right, shapes, cuts, typography, spacing, proportions and layout. Forest green ink becomes solid opaque pale sage #c7dacf, deep charcoal becomes solid opaque pale silver-grey #cbd2d8. Preserve all transparent counters and separation cuts. Dedicated clear variant for charcoal/navy/black/red backgrounds, truly transparent canvas with margins. Flat opaque artwork, no glow, shadow, gradient, halos, keylines, haze, texture, speckles, backgroundplate, new words or motif. Exact HRS CARS LTD; same independent unapproved proposal.",
+      "referencePaths": [
+        "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-bdd7325a-1bf0-4cdd-91fa-0f074ea2033c.png"
+      ],
+      "derivation": {
+        "operation": "lossless-png-extract-isolated-emblem",
+        "parentPath": "branding/generated-inverse-v1-20261021.png",
+        "parentSha256": "3319e6198f3f287a2f0d263df15ca203749c1aeaa59ff2ab8ffbd626415c5dfd",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 878,
+          "height": 887
+        },
+        "emptyGap": {
+          "start": 849,
+          "end": 908,
+          "width": 59
+        },
+        "parentNativeDimensions": {
+          "width": 1774,
+          "height": 887
+        },
+        "artworkUnmodified": true,
+        "alphaUnmodified": true
+      }
+    }
+  ],
+  "sourceFactNamePreserved": true,
+  "publicTradingText": "HRS Cars Ltd",
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "dealerApproval": false,
+  "humanReview": false,
+  "providerWrites": 0,
+  "filtersApplied": false,
+  "thresholdsChanged": false
+}

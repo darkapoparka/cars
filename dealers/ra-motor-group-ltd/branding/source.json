@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "dealer": "ra-motor-group-ltd",
-  "status": "research-required",
+  "status": "reviewed",
   "realLogoFirst": true,
   "publicSources": [
     {
@@ -13,8 +13,193 @@
       "observedAt": "2026-10-18"
     }
   ],
-  "originals": [],
-  "creationMethod": null,
+  "originals": [
+    {
+      "path": "branding/originals/ra-autotrader-original-20261021.jpg",
+      "sha256": "0406dc28a16279e9c79413754318807bed02ef8fd382f18075fc69ec2aafd246",
+      "bytes": 34142,
+      "nativeDimensions": {
+        "width": 768,
+        "height": 380
+      },
+      "url": "https://m.atcdn.co.uk/retailer/media/w768/b2f7d1ae-e377-4080-8607-1b73c8fdf3e8.jpg",
+      "observedAt": "2026-10-20T23:03:03.3478183Z",
+      "sourcePage": "https://www.autotrader.co.uk/dealers/essex/barking/ra-motor-group-ltd-10048952",
+      "kind": "retained-public-original-raster",
+      "dealerApproval": false
+    }
+  ],
+  "creationMethod": "imagegen-proposal",
   "dealerApproved": false,
-  "generatedInputs": null
+  "generatedInputs": {
+    "reviewedAt": "2026-10-20T23:14:40.221Z",
+    "master": {
+      "path": "branding/generated-master-v1-20261021.png",
+      "sha256": "559539408a2aded4edb465b87d34ce3d16a26db836ffef02795a84ba4fff7259",
+      "nativeDimensions": {
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-3e3d8eeb-1820-417e-836d-d82b7a7d5b50",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light-v1-20261021.png",
+      "sha256": "1c2c06b6844e5a6d4ee8977d5516672a8541976e604c895232e84fffe734b4f7",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-43e2105d-8ff1-4855-adc9-51cbb98adcd8",
+        "modelVersion": null
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark-v1-20261021.png",
+      "sha256": "5da80286b2019b0cfdbd1b94dc72b7c0c0ccf52e2b720a65ac65a34f8f39678a",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-25c60de5-6aba-4f1d-b321-2c201c41a30d",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-master-v1-20261021.png",
+        "sha256": "559539408a2aded4edb465b87d34ce3d16a26db836ffef02795a84ba4fff7259",
+        "nativeDimensions": {
+          "width": 2172,
+          "height": 724
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-3e3d8eeb-1820-417e-836d-d82b7a7d5b50",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-inverse-v1-20261021.png",
+        "sha256": "a1b0ee2a3c24d193e55d73e44f57d7dc417579fc40419504875f649410769c56",
+        "nativeDimensions": {
+          "width": 2172,
+          "height": 724
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-17e81fa4-726d-4ccd-a217-58b223ea8697",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-inverse-v1-20261021.png",
+        "sha256": "a1b0ee2a3c24d193e55d73e44f57d7dc417579fc40419504875f649410769c56",
+        "nativeDimensions": {
+          "width": 2172,
+          "height": 724
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-17e81fa4-726d-4ccd-a217-58b223ea8697",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-20T23:14:40.221Z",
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "markWidths": [
+        32,
+        64
+      ],
+      "notes": "Agent inspected exact alpha-composited light/inverse wordmarks; final matched consumer sheet is separately retained. All five native dark/red backgrounds are unchanged. Proposal only, no human/dealer/native/hosted approval."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-20T23:14:40.221Z",
+      "widths": [
+        32,
+        64
+      ],
+      "notes": "Dedicated compact light/inverse stacked-RA companion inputs are actual imagegen proposals using retained slanted initial style and black/gold palette. The full wordmark retains the sourced coupe. No manual stretch, recolour, filters or alpha cleanup."
+    }
+  },
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "researchConclusion": "A distinct original RA/coupe raster was obtained from the exact retained Barking Autotrader page and is retained byte-identical under branding/originals. Generated transparent light/inverse treatments preserve recognizable source motifs and black/gold family; all treatments remain proposals without adoption.",
+  "publicSourceObservations": [
+    {
+      "observedAt": "2026-10-20T23:14:40.221Z",
+      "kind": "bounded-logo-first-page-review",
+      "observations": "Exact retained Autotrader page matches RA Motor Group LTD, Unit1 Rippleside/RippleRoad Barking IG110RJ and linked a real RA/coupe identity. Unrelated RA namesakes ignored."
+    }
+  ],
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "generationId": "exec-3e3d8eeb-1820-417e-836d-d82b7a7d5b50",
+    "modelVersion": null,
+    "prompt": "Use case: logo-brand. Create a clean transparent light-surface proposal treatment based on this actual sourced RA MOTOR GROUP identity. Preserve recognizable slanted RA letter shapes, the simple low coupe outline and the black/gold/silver identity. Wide horizontal arrangement: an isolated compact RA monogram with simplified coupe roof silhouette above it at LEFT, then a generous transparent gap, at RIGHT exact text RA on top and MOTOR GROUP beneath in bold slanted geometric lettering. Make this a flat print-like small-screen treatment with deep charcoal #151b21 and deep bronze-gold #80601e, no metallic gradients; all large ink must contrast on white. Open counters and clean silhouette. No badge background plate or filled tile; car windows, gaps, RA counter and background genuinely transparent. No extra wording, no LTD, no manufacturer badge, no wheels/detail clutter. Strong strokes, legible at120/180px and isolated emblem at32/64px. Transparent margins. No glow, shadow, white keyline, halos, texture or speckles. A proposed treatment of the retained source logo, never claim dealer adoption."
+  },
+  "compactDerivation": {
+    "operation": "actual-imagegen-dedicated-compact",
+    "artworkUnmodifiedAfterGeneration": true,
+    "alphaUnmodified": true
+  },
+  "compactOnDarkDerivation": {
+    "operation": "actual-imagegen-dedicated-compact",
+    "artworkUnmodifiedAfterGeneration": true,
+    "alphaUnmodified": true
+  },
+  "additionalGenerations": [
+    {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-43e2105d-8ff1-4855-adc9-51cbb98adcd8",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand. Create ONE COMPACT SQUARE MONOGRAM of exactly TWO letters stacked vertically: R ABOVE A. R on upper half, A on lower half, aligned on same central axis; letters touch at one angular shared junction but remain individually readable. Visible design naturally approximately square, not a horizontal word. Bold slanted geometric letterforms with substantial strokes, open R bowl and open triangular A counter. Upper R solid deep charcoal #151b21, lower A solid deep bronze-gold #80601e. Flat opaque ink, truly transparent canvas and counters, generous transparent margin. No car, no vehicle roof, no surroundingplate/frame/shield/circle, no extra letters or wording. Crisp simple initials for RA Motor Group small favicon at32/64px. No gradients, glow, shadow, white keyline, bevel, metallic texture, speckles or fuzzy alpha. Independent compact companion proposal to retained RA branding, not an official/adopted logo.",
+      "referencePaths": [],
+      "path": "branding/generated-mark-light-v1-20261021.png",
+      "sha256": "1c2c06b6844e5a6d4ee8977d5516672a8541976e604c895232e84fffe734b4f7"
+    },
+    {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-17e81fa4-726d-4ccd-a217-58b223ea8697",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand, faithful inverse surface edit. Preserve EXACT reference composition, slanted RA forms, simplified coupe outline above left RA emblem, generous gap, right RA above MOTOR GROUP, relative positions, proportions, spacing and counters. Deep charcoal artwork becomes solid opaque pale silver-grey #cbd2d8; bronze/gold artwork becomes solid opaque light warm champagne #e2d4ae. Keep color partition and motif. All negative spaces/windows/counters and canvas truly transparent; no white/black backgroundtile. Dedicated legible variant for charcoal/navy/black/red. No shadow, glow, halos, gradients, metallic effect, texture, speckles or keylines. Exact text RA MOTOR GROUP only, same identity; retained original is separate, this treatment remains unapproved proposal.",
+      "referencePaths": [
+        "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-3e3d8eeb-1820-417e-836d-d82b7a7d5b50.png"
+      ],
+      "path": "branding/generated-inverse-v1-20261021.png",
+      "sha256": "a1b0ee2a3c24d193e55d73e44f57d7dc417579fc40419504875f649410769c56"
+    },
+    {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-25c60de5-6aba-4f1d-b321-2c201c41a30d",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand, exact inverse variant. Preserve this exact compact stacked R above A monogram, natural proportions, slanted letter shapes, central junction, open R bowl/A counter, spacing and position. R becomes solid opaque pale silver-grey #cbd2d8; A becomes solid opaque light champagne #e2d4ae. All negative space and canvas genuinely transparent, ample margins. Flat opaque ink clear on charcoal/navy/black/red at32/64px. No car, other text, frame, plate, glow, shadow, halo, gradient, metallic finish, texture, speckles or keyline. Same independent compact RA proposal, no official/adoption claim.",
+      "referencePaths": [
+        "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-43e2105d-8ff1-4855-adc9-51cbb98adcd8.png"
+      ],
+      "path": "branding/generated-mark-dark-v1-20261021.png",
+      "sha256": "5da80286b2019b0cfdbd1b94dc72b7c0c0ccf52e2b720a65ac65a34f8f39678a"
+    }
+  ],
+  "sourceHistory": [
+    {
+      "reference": "branding/source-before-first-artwork-20261021-ac50179d01beab7f.json",
+      "sha256": "ac50179d01beab7f67e733d12c023d14e6f3e8315c6e334dd3f1e1f86f8e9560",
+      "retainedAt": "2026-10-20T23:14:40.221Z",
+      "reason": "Exact maintained input-only draft provenance before first proposal artwork"
+    }
+  ]
 }

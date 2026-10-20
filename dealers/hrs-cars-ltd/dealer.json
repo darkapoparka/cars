@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "HRS Cars Ltd",
     "publicOrigin": "https://hrs-cars-ltd.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "8368fb036eb376f3d30d1d6c12a185cfb639a45601e58cbeefc758c67de6ab4b",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "e1410ab0691fafa3b428c1dc1cf8d7edc11dc835fc7c500269ee51e123c02da0"
+    }
   }
 }

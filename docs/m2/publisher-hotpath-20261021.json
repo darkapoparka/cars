@@ -1,0 +1,257 @@
+{
+  "schemaVersion": 1,
+  "type": "cars-publisher-hotpath-and-qualified-source-inputs",
+  "recordedAt": "2026-10-20T23:22:06.756Z",
+  "baseRevision": "80bedaf7f214b2b3b50e1cd83079e606e09ac031",
+  "measuredPriorPublisher": {
+    "source": "authenticated queue generation386 and retained source45 requests",
+    "ordinaryDeployments": 11,
+    "medianSeconds": {
+      "prewrite": 128,
+      "assets": 227,
+      "total": 481
+    },
+    "timingAfterOptimization": "not measured"
+  },
+  "transport": {
+    "files": [
+      {
+        "absolutePath": "L:/CODEX/cars/scripts/transport-dealer-pack-bundles.mjs",
+        "bytes": 22632,
+        "sha256": "97352c53bab197b0e91637728c7e17dceeac15c4ff6857936c4360753bf5afa5",
+        "path": "scripts/transport-dealer-pack-bundles.mjs"
+      },
+      {
+        "absolutePath": "L:/CODEX/cars/scripts/transport-dealer-pack-bundles.test.mjs",
+        "bytes": 22019,
+        "sha256": "ee581e2f8471b9f80d20d512e4d29737083b0f1ce0c32ffcf686008869745fc8",
+        "path": "scripts/transport-dealer-pack-bundles.test.mjs"
+      }
+    ],
+    "behavior": {
+      "manifestAndAllUniqueBlobsAuthenticated": true,
+      "unselectedBlobsAuthenticated": true,
+      "oneInputReadPerUniqueBlob": true,
+      "oneVerifiedBufferAtATime": true,
+      "selectedPathsWrittenOnce": true,
+      "destinationPresence": "lstat includes dangling links; every existing path is preserved",
+      "reservation": "exclusive atomic mkdir, including a raced-in empty directory; no replacing rename or second tree",
+      "publication": "Baseline visibility: this invocation-owned destination exists during reconstruction. Synchronous success is returned only after exact reconstructed paths, sealed bundle, build/QA and18 screenshot checks. Atomic whole-tree publication is not claimed.",
+      "onFailure": "Remove only a still-owned invocation-created output after physical-parent/device/inode checks. Existing, raced-in or replaced paths and external trees are retained; no other output/input is cleaned.",
+      "transportSourceChecksPreserved": true,
+      "providerUploadTimeHashChecksUnchanged": true,
+      "queueAndProviderBehaviorUnchanged": true,
+      "activeExecutorChanged": false,
+      "newCache": false,
+      "schemaChanged": false
+    },
+    "validation": {
+      "originalTransportCases": 8,
+      "newCases": 6,
+      "totalCovered": 14,
+      "passed": 14,
+      "failed": 0,
+      "run": "14/14 passed in5.85s after fallback fix",
+      "scope": "Tiny unit fixtures only; isolated child I/O observers never patch parent/product filesystem APIs.",
+      "cases": [
+        "each and EVERY unique input blob opens once, including unselected ones;18 duplicate selected screenshot paths reconstruct exactly",
+        "exact restored bytes/SHA256/manifestSha256/contentDigest/path inventories",
+        "late unselected corruption after output writes refuses and removes only its owned incomplete output",
+        "post-copy screenshot corruption/write failure refuses qualification and removes owned output",
+        "dangling final symlink preserved, missing symlink target remains absent; linked parent and existing output are retained",
+        "directory raced in after lstat but before exclusive mkdir is preserved even if empty; zero writes",
+        "replaced owned output is retained rather than deleting the external target"
+      ],
+      "whitespaceCheckPassed": true,
+      "nativeBuildRun": false,
+      "downloads": 0,
+      "providerWrites": 0,
+      "queueWrites": 0,
+      "benchmarksRun": false
+    },
+    "workReduction": {
+      "formulaBefore": "U unique manifest-blob reads/hashes + L selected logical-file reads/hashes",
+      "formulaAfter": "U unique manifest-blob reads/hashes; write all selected references from the currently verified Buffer",
+      "finalOutputInspectionUnchanged": true,
+      "outputWritesUnchanged": true,
+      "sourceRunId": 39484929757,
+      "sourceCommit": "f73c8e4b258653d1cee9c29d161e41774cfe6fb8",
+      "qualifiedDealers": 44,
+      "removedInputReadAndHashCalls": 238180,
+      "removedRehashedInputBytes": 41558211219,
+      "scope": "Exact structural operation counts from retained authenticated source44 transport bindings; not measured elapsed seconds. No old pack download or benchmark performed."
+    }
+  },
+  "identity": {
+    "files": [
+      {
+        "path": "scripts/verify-dealer-pack.mjs",
+        "bytes": 67533,
+        "sha256": "30cbf6f74c2cd8b2efb7d902b93835db254840d55c1f6e375141e48fc21ac84b",
+        "gitBlobSha1": "9d422586bf591938793f276907167fc9cbeddf1d"
+      },
+      {
+        "path": "scripts/verify-dealer-pack.test.mjs",
+        "bytes": 62414,
+        "sha256": "e8bb1bc2053bb74620f8d9069a95f57397c00c210f59c20ace04793bad961d9d",
+        "gitBlobSha1": "798423987021069417c5a537dfb5404a0fe13aac"
+      }
+    ],
+    "behavior": {
+      "knownFactBoundaries": [
+        "Modern vehicle-card-spec-pills > vehicle-card-spec",
+        "Auto Best .dn-vehicle-card__specs > .dn-vehicle-card__spec",
+        "Auto Best .dn-vehicle-card__mobile-meta > .dn-vehicle-card__fact",
+        "Import .mobile-vehicle-card specifications list items",
+        "Import .site-vehicle-card__metadata list items",
+        "Import .daynight-card-specs list items"
+      ],
+      "allFactTextScanned": true,
+      "allResidualBodyTextScanned": true,
+      "coverageInvariant": "Every observed body character preserved modulo whitespace; 1..4096 typed segments only",
+      "missingMalformedIncompleteContext": "Original combined whole body + metadata strict scan",
+      "metadataLinksAndVisibleImageAlts": "Retained as independently scanned channels",
+      "phones": "Raw body/metadata phone checks and every hidden or visible tel link remain enforced",
+      "findingEvidence": "Name hits retain matched raw text, a bounded 240-character excerpt, channel and owner; no full DOM logs",
+      "namesAllowlisted": [],
+      "stockTextDiscarded": false,
+      "actualPageDomMutated": false
+    },
+    "validation": {
+      "verifierTests": {
+        "passed": 42,
+        "failed": 0
+      },
+      "focusedFallbackPhoneTests": {
+        "passed": 7,
+        "failed": 0
+      },
+      "exactNativeComponentFixtures": 12,
+      "genuineIdentityPhoneControls": 10,
+      "missingContext": "strict combined whole-text fallback",
+      "rawBodyAndPhonesPreserved": true,
+      "factsStockTemplateUnchanged": true,
+      "nativeBuilds": 0
+    }
+  },
+  "continuation": {
+    "files": [
+      {
+        "path": ".github/workflows/dealer-pack-deploy.yml",
+        "sha256": "6dc47dce762015832ebbc847ba4e7f212ca127538963e7366de57d8e7a7e53ce"
+      },
+      {
+        "path": "scripts/continue-dealer-pack-queue.mjs",
+        "sha256": "1ff4a2bbb6bed459598d69527d146e7360d08fc9582d0acc7d616ca6adb8c680"
+      },
+      {
+        "path": "scripts/dealer-pack-continuation.test.mjs",
+        "sha256": "4b03af2c93ff9ad8b14bf2e809345c33b6ee119c8ce95224599a76f939ca9b2d"
+      }
+    ],
+    "behavior": "Authenticated original parent and its durable hosted receipts authorize one normal drain at the freshly authenticated current accepted main SHA. The child rejects a later source race before its executor checks/normal account CAS. Normal source publication does not stop the chain.",
+    "focusedTests": {
+      "passed": 12,
+      "failed": 0
+    },
+    "sourceUncertaintyBlocks": true,
+    "activeOrUncertainClaimBlocks": true,
+    "failedRowsRemainTerminal": true,
+    "liveHandoffVerified": false
+  },
+  "branding": [
+    {
+      "slug": "ra-motor-group-ltd",
+      "path": "dealers/ra-motor-group-ltd",
+      "packDigest": "3758b9a086756c4928fb61f14f9955c988f7c2e865eaa63ee1e16d6dabff9505",
+      "files": 25,
+      "bytes": 2527657,
+      "sourceReady": true,
+      "actualSourceRasters": 14,
+      "strictPublisher": {
+        "passed": true,
+        "actualExportedApplyLeadBranding": true,
+        "fixtureSourceSha256": "85d66559b60867d2ab30ff7c4cb0a9eb07f7d6b9e0fb8ef3c4ae5caeae594783",
+        "noBuild": true
+      },
+      "proposalOnly": true,
+      "sourceFactsAndMediaPreserved": true,
+      "humanReview": false,
+      "nativeApproval": false,
+      "hostedApproval": false,
+      "dealerApproval": false,
+      "provenance": "dealers/ra-motor-group-ltd/branding/first-proposal-artwork-20261021.json"
+    },
+    {
+      "slug": "hrs-cars-ltd",
+      "path": "dealers/hrs-cars-ltd",
+      "packDigest": "017f04069509a2ccd1ea50ee2bb233aeaa64ad1553a8fbf41f419f0135db0c9e",
+      "files": 24,
+      "bytes": 1987431,
+      "sourceReady": true,
+      "actualSourceRasters": 14,
+      "strictPublisher": {
+        "passed": true,
+        "actualExportedApplyLeadBranding": true,
+        "fixtureSourceSha256": "85d66559b60867d2ab30ff7c4cb0a9eb07f7d6b9e0fb8ef3c4ae5caeae594783",
+        "noBuild": true
+      },
+      "proposalOnly": true,
+      "sourceFactsAndMediaPreserved": true,
+      "humanReview": false,
+      "nativeApproval": false,
+      "hostedApproval": false,
+      "dealerApproval": false,
+      "provenance": "dealers/hrs-cars-ltd/branding/first-proposal-artwork-20261021.json"
+    },
+    {
+      "slug": "coseley-auto-centre",
+      "path": "dealers/coseley-auto-centre",
+      "packDigest": "df51b5cd341f890a4ca8fb0bca4cdf9f5c6534f283fecb67843282a5978ee1c8",
+      "files": 24,
+      "bytes": 2171574,
+      "sourceReady": true,
+      "actualSourceRasters": 14,
+      "strictPublisher": {
+        "passed": true,
+        "actualExportedApplyLeadBranding": true,
+        "fixtureSourceSha256": "85d66559b60867d2ab30ff7c4cb0a9eb07f7d6b9e0fb8ef3c4ae5caeae594783",
+        "noBuild": true
+      },
+      "proposalOnly": true,
+      "sourceFactsAndMediaPreserved": true,
+      "humanReview": false,
+      "nativeApproval": false,
+      "hostedApproval": false,
+      "dealerApproval": false,
+      "provenance": "dealers/coseley-auto-centre/branding/first-proposal-artwork-20261021.json"
+    }
+  ],
+  "freshNativeCandidates": [
+    "reliable-autos",
+    "mosaso",
+    "badar-used-cars",
+    "al-ishfaq-used-cars-llc",
+    "ra-motor-group-ltd",
+    "hrs-cars-ltd",
+    "coseley-auto-centre"
+  ],
+  "freshNativeStatus": "Awaiting this source checkpoint publication and producing run",
+  "previousThree": {
+    "runId": 39510514421,
+    "sourceCommit": "ade81490674a64722a8f9059a61c78ce4d9d22a3",
+    "ownContracts": "passed",
+    "qualified": [
+      "cars-4-u-wakefield"
+    ],
+    "failed": [
+      "lets-sell-your-car",
+      "millions-auto-cars"
+    ],
+    "failure": "Remaining Import server TypeScript identity literals are invalid for apostrophes; typed literal fix is in progress. No failed output was relabelled."
+  },
+  "concurrentPublisher": "Still one account request; a pure two-slot protocol prototype is being reviewed separately and is not wired or claimed live.",
+  "providerWritesFromLocalValidation": 0,
+  "queueWritesFromLocalValidation": 0,
+  "ownerAccepted": false
+}

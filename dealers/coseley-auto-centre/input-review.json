@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "coseley-auto-centre",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T23:10:27.477Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "coseley-auto-centre",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-bilston-coseley-auto-centre",
+    "position": 6
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "85f58ce8cfb1ff724f22c5e8bbf984cb6606a4c2000a963cc9a88bdece7203b4"
+    },
+    {
+      "path": "branding/first-proposal-artwork-20261021.json",
+      "sha256": "252ddb688584d0c254f49e75d625e0e5f3ba852b185451640a856983d8fa36ad"
+    },
+    {
+      "path": "branding/generated-inverse-v1-20261021.png",
+      "sha256": "2e00f92c237653049f918ed400852abf25b1b87117bff3350c0fdb87205ce088"
+    },
+    {
+      "path": "branding/generated-mark-dark-v1-20261021.png",
+      "sha256": "1484f4166076af3d27d5d17621a43a31bdfdc581209aa8bdfcf8e9e2cc4cb035"
+    },
+    {
+      "path": "branding/generated-mark-light-v1-20261021.png",
+      "sha256": "a0736016b313511fa943c3ac1192f56160d9e6edcf967b576e5c211f82bb017a"
+    },
+    {
+      "path": "branding/generated-master-v1-20261021.png",
+      "sha256": "d177d9af348d4d1ada424d9abfc6f9b86dae8d2cb015fea8be40c1303c2fe7b6"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "ee5f9480af1e50c5d4b9a0d367d9a99f53e2bc3c48f766b04779a9152ce97511"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "2906b74f4f0dec34e2ab9024e731b6737a9ddd5c2ba593ec500a804e2939bd64"
+    },
+    {
+      "path": "branding/source-before-first-artwork-20261021-d2154baa6c224d90.json",
+      "sha256": "d2154baa6c224d908afecc5fcf45967de76d0ae7e55f435543b7b2d9bbffaf60"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "2c38d7caef2b0333ef2f8d7addb0d0192055ed9d822004094c1d9528a5665c63"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "7ad23644d999fc53698f5d245ea3e9a89881fe0568111e6cea385b7f4ce619ee"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "87a80aa60f41f3656f696b28b4a6838293f2b1d0092b25581211e6a1468f5b77"
+    },
+    {
+      "path": "dealer-stock/template-demo-1.webp",
+      "sha256": "945e6864218ab3bd5fbd415336b212ecfde645685033f8506836f906885d447c"
+    },
+    {
+      "path": "dealer-stock/template-demo-2.webp",
+      "sha256": "17689ab880bf47de81ef467c34d639223f39f0c1ebe68c90d0aaf70e3dcc6333"
+    },
+    {
+      "path": "dealer-stock/template-demo-3.webp",
+      "sha256": "d644dec8e1ef280a702dccac267a2367f0ab823e40373e1299b156e7723b3b1f"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "389bc4e5cb392a6675637943644d21d23630baca41bb62863858022bee28e658"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "769ff6903328a9543053a8f763627a2fac71a0f8bf585ad25c9acef3e02f45e0"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "592667748b725e3380a9bd295ef24400d09b34e768c131d4fe21bd04c76f1f57"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "df12f0ba03ab38076b3d070e61aa7643efd3bafbf7de5283c32c1298400d8950"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "1e1f0e148fcc36fb214a4214bd31f6aebdd265c17b0da68eb25de352bc2c1a50"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "903418ec498f9a1e7c4639506f67fed36c78e10526042afb1ed7e07e5a9e2391"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "366df13ebaf851db7a6d50360868fc8e67ffd9aaafad872d9692b48458d0001d"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

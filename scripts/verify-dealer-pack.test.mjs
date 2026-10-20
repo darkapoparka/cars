@@ -150,6 +150,29 @@ test('foreign dealer names and formatted plain-text or tel phones are caught, wh
  assert.equal(findForeignIdentity({text:'A public page',phones:['tel:+359877733110'],ownSlug:'honest-motors',ownFacts:facts,fleet})[0].type,'phone');
 });
 
+test('complete native fact segmentation preserves all stock text without joining distinct fields into a dealer name',()=>{
+ const fleet={records:[{slug:'electricauto-varna',names:['Electric Auto'],phones:['+359877733110']}]},text='Honest Motors\nElectric\nAuto\nAutomatic';
+ const segments=[{channel:'body',owner:'body',text:'Honest Motors'},{channel:'vehicle-fact',owner:'li[data-fact="fuel"]',text:'Electric'},{channel:'vehicle-fact',owner:'li[data-fact="transmission"]',text:'Auto\nAutomatic'}];
+ const inspect=identityContext=>findForeignIdentity({text,identityContext,ownSlug:manifest.slug,ownFacts:facts,fleet});
+ assert.equal(inspect().length,1,'Missing DOM context retains the strict whole-text scan');
+ assert.deepEqual(inspect({schemaVersion:1,status:'complete',segments}),[]);
+ for(const identityContext of [{schemaVersion:1,status:'incomplete',segments},{schemaVersion:1,status:'complete',segments:segments.slice(0,2)},{schemaVersion:1,status:'complete',segments:[...segments,{channel:'unknown',owner:'li',text:''}]}])assert.equal(inspect(identityContext).length,1);
+ assert.equal(findForeignIdentity({text:text.replace('Motors','Motors!'),identityContext:{schemaVersion:1,status:'complete',segments},ownSlug:manifest.slug,ownFacts:facts,fleet}).length,1,'Coverage may normalize whitespace but cannot drop punctuation or other visible text');
+ const value='Honest Motors\nElectric Auto',single={schemaVersion:1,status:'complete',segments:[segments[0],{channel:'vehicle-fact',owner:'li[data-fact="fuel"]',text:'Electric Auto'}]};
+ const hit=findForeignIdentity({text:value,identityContext:single,ownSlug:manifest.slug,ownFacts:facts,fleet})[0];
+ assert.equal(hit.type,'name');assert.equal(hit.context.channel,'vehicle-fact');assert.equal(hit.context.matchedText,'Electric Auto');assert.match(hit.context.owner,/fuel/);
+ for(const update of [{phones:['tel:+359877733110']},{text:text+'\nCall +359 877 733 110'}])assert(findForeignIdentity({text,identityContext:{schemaVersion:1,status:'complete',segments},ownSlug:manifest.slug,ownFacts:facts,fleet,...update}).some(row=>row.type==='phone'));
+});
+
+test('segmented stock cannot hide a foreign name in page copy, metadata, links or a visible logo alt',()=>{
+ const fleet={records:[{slug:'electricauto-varna',names:['Electric Auto'],phones:[]}]};
+ for(const [channel,change]of [['body',page=>{page.text+='\nElectric Auto';}],['metadata',page=>{page.metadata='Electric Auto';}],['link-aria-label',page=>{page.identityLinks=[{channel:'link-aria-label',owner:'a.foreign-business',text:'Visit Electric Auto'}];}],['image-alt',page=>{page.images.push({src:'/foreign-logo.png',alt:'Electric Auto',visible:true,loaded:true});}]]){
+  const page=snapshot();change(page);page.identityContext={schemaVersion:1,status:'complete',segments:[{channel:'body',owner:'body',text:page.text}]};
+  const result=assessPageSnapshot({snapshot:page,facts,manifest,variant:variants[0],fleet});
+  assert(result.findings.includes('foreign-dealer-identity'),channel);assert.equal(result.leaks[0].context.channel,channel);assert.match(result.leaks[0].context.text,/Electric Auto/);
+ }
+});
+
 test('HTTP 200, an unrendered logo or a five-design FAB cannot masquerade as successful dealer QA',()=>{
  assert.equal(assess(snapshot()).status,'passed');
  for(const [update,failure] of [[page=>page.status=500,'route-response'],[page=>page.text='OK','route-response'],[page=>page.images[0].loaded=false,'dealer-logo'],[page=>page.images[0].dealerLogo=false,'dealer-logo'],[page=>page.phones=['tel:+359888123456'],'dealer-phone'],[page=>page.designChoices.pop(),'six-design-fab'],[page=>page.designChoices.push(page.designChoices[0]),'six-design-fab'],[page=>page.designChoices[1].href='https://foreign.example/','fab-destination'],[page=>page.adminLinks=[],'shared-admin-link']]){

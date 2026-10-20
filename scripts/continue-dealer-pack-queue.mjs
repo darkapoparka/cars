@@ -40,7 +40,12 @@ export async function continuePackQueue({drain,env=process.env,readGithub=github
   const run=current.body;
   if(current.status!==200||run?.id!==runId||run.run_attempt!==attempt||run.repository?.full_name!==PACK_QUEUE_REPOSITORY||run.head_repository?.full_name!==PACK_QUEUE_REPOSITORY||run.path!==workflow||run.head_branch!=='main'||run.head_sha!==sourceSha||run.event!==env.GITHUB_EVENT_NAME||run.status!=='in_progress'||run.conclusion!==null)return skip('Current authenticated executor identity is unavailable or differs');
   const main=await readGithub({method:'GET',path:api+'/git/ref/heads/main'});
-  if(main.status!==200||main.body?.ref!=='refs/heads/main'||main.body.object?.type!=='commit'||main.body.object.sha!==sourceSha)return skip('Published main advanced or could not be bound to this workflow source');
+  if(main.status!==200||main.body?.ref!=='refs/heads/main'||main.body.object?.type!=='commit'||!hex40(main.body.object.sha))return skip('Current published main could not be bound to an authenticated commit');
+  // Accepted main may advance while a ten-site batch is publishing. The child
+  // binds to that exact current commit, then runs its own executor contracts.
+  // Its pre-step SHA gate still rejects a second advance during dispatch.
+  const continuationSourceSha=main.body.object.sha;
+  report.continuationSourceSha=continuationSourceSha;
   // Read after the source check, rather than trusting the drain's old snapshot.
   // A claim acquired after this read is still protected by the child's usual CAS.
   const snapshot=await (store??githubPackQueueStore({request:readGithub})).read(),state=validatePackQueue(snapshot.state);
@@ -55,8 +60,8 @@ export async function continuePackQueue({drain,env=process.env,readGithub=github
   // Failed and rolled-back rows stay terminal; only the existing queued rows count.
   report.pending=state.order.filter(id=>state.requests[id].status==='queued').length;
   if(!report.pending)return skip('No eligible queued work remains');
-  const acknowledgement=await dispatch({sourceSha});
-  return {...report,status:'dispatched',dispatches:1,...(acknowledgement?.runId?{childRunId:acknowledgement.runId}:{}),reason:'One main drain requested with an exact-source gate; normal account CAS remains mandatory'};
+  const acknowledgement=await dispatch({sourceSha:continuationSourceSha});
+  return {...report,status:'dispatched',dispatches:1,...(acknowledgement?.runId?{childRunId:acknowledgement.runId}:{}),reason:'One drain requested at exact current accepted main; child executor contracts and account CAS remain mandatory'};
 }
 
 export async function runPackContinuationCli(argv=process.argv.slice(2),{root=ROOT,env=process.env,...dependencies}={}) {

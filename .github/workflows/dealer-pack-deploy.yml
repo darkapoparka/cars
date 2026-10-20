@@ -236,7 +236,7 @@ jobs:
             if(reports.length&&!complete){console.error('Runtime acceptance is incomplete or outside limits; repeat the read-only metrics check after ingestion. Existing deployment receipts remain retained.');process.exitCode=1;}
           }
           NODE
-      - name: Continue a successful nonempty normal drain on the same published source
+      - name: Continue a successful nonempty normal drain on exact current main
         if: ${{ success() && steps.drain.conclusion == 'success' && (github.event_name == 'schedule' || github.event_name == 'workflow_run' || (github.event_name == 'workflow_dispatch' && (inputs.action == 'enqueue-and-deploy' || inputs.action == 'drain'))) }}
         env:
           GITHUB_TOKEN: ${{ github.token }}

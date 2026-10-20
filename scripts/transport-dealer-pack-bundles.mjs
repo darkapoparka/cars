@@ -39,12 +39,18 @@ function readPhysical(root, name, {maximum = DEALER_PACK_TRANSPORT_SHARD_BYTES} 
   try {const value = fs.readFileSync(fd); assert(value.length === stat.size, 'file changed while reading: ' + name); return value;} finally {fs.closeSync(fd);}
 }
 const readJson = (root, name, maximum = MAX_MANIFEST_BYTES) => parseCatalogJson(new TextDecoder('utf-8', {fatal: true}).decode(readPhysical(root, name, {maximum})));
+function pathPresent(file) {
+  try {fs.lstatSync(file); return true;} catch (error) {if (error.code === 'ENOENT') return false; throw error;}
+}
 function freshDirectory(directory, forbidden) {
   const resolved = path.resolve(directory);
-  assert(!fs.existsSync(resolved), 'retain an existing destination; use a fresh output');
+  assert(!pathPresent(resolved), 'retain an existing destination; use a fresh output');
   assert(!relativeChild(forbidden, resolved) && !relativeChild(resolved, forbidden), 'input and output directories must be separate');
-  let parent = path.dirname(resolved); while (!fs.existsSync(parent)) parent = path.dirname(parent);
-  physicalDirectory(parent); fs.mkdirSync(path.dirname(resolved), {recursive: true}); physicalDirectory(path.dirname(resolved)); fs.mkdirSync(resolved);
+  let parent = path.dirname(resolved); while (!pathPresent(parent)) parent = path.dirname(parent);
+  physicalDirectory(parent); fs.mkdirSync(path.dirname(resolved), {recursive: true}); physicalDirectory(path.dirname(resolved));
+  // Exclusive mkdir is the no-replace commit: it also refuses a destination
+  // created after the lstat guard, including an empty directory or broken link.
+  fs.mkdirSync(resolved);
   return resolved;
 }
 function evidenceShape(qa, slug, receipt) {
@@ -143,16 +149,35 @@ export function restoreDealerPackTransport({input, out, manifestSha256, slugs} =
   assert(same(filesAt(input, {filter: () => true}), expected), 'transport has missing or undeclared blob files');
   const allowedDirectories = new Set(manifest.shards.flatMap(row => [row.path, row.path + '/blobs']));
   const walk = (directory, prefix = '') => {for (const entry of fs.readdirSync(directory, {withFileTypes: true})) if (entry.isDirectory()) {const relative = prefix + entry.name; assert(allowedDirectories.has(relative), 'undeclared transport directory'); walk(path.join(directory, entry.name), relative + '/');}}; walk(input);
-  for (const row of manifest.blobs) {const blob = readPhysical(input, 'shard-' + row.shard + '/blobs/' + row.sha256); assert(blob.length === row.bytes && sha256(blob) === row.sha256, 'transport blob bytes changed: ' + row.sha256);}
-  const output = freshDirectory(out, input);
-  for (const row of selectedFiles) {
-    const blob = readPhysical(input, 'shard-' + row.shard + '/blobs/' + row.sha256); assert(blob.length === row.bytes && sha256(blob) === row.sha256, 'blob changed during reconstruction');
-    const file = path.join(output, row.path); fs.mkdirSync(path.dirname(file), {recursive: true}); fs.writeFileSync(file, blob, {flag: 'wx'});
-  }
-  assert(same(filesAt(output, {filter: () => true}), selectedFiles.map(row => row.path).sort()), 'reconstructed paths differ');
-  for (const row of manifest.dealers.filter(row => selected.includes(row.slug))) {
-    const inspected = inspectDealerPackTransportSource({root: output, slug: row.slug}), {files, ...binding} = inspected;
-    assert(same(binding, row) && same(files, manifest.files.filter(file => file.path.startsWith(row.slug + '/')).map(({shard, ...file}) => file)), 'reconstructed sealed bundle or evidence differs: ' + row.slug);
+  const output = freshDirectory(out, input), parent = physicalDirectory(path.dirname(output));
+  const owned = fs.lstatSync(output); let complete = false;
+  const assertOwnedOutput = () => {
+    assert(path.isAbsolute(output) && path.dirname(output) === parent && physicalDirectory(parent) === parent, 'restoration escaped its exact output parent');
+    const current = fs.lstatSync(output);
+    assert(current.isDirectory() && !current.isSymbolicLink() && current.dev === owned.dev && current.ino === owned.ino && physicalDirectory(output) === output, 'restoration ownership changed; retain it for reconciliation');
+  };
+  try {
+    const destinations = new Map();
+    for (const row of selectedFiles) {if (!destinations.has(row.sha256)) destinations.set(row.sha256, []); destinations.get(row.sha256).push(row.path);}
+    // Authenticate EVERY unique blob, including unselected dealers, exactly once.
+    // Fan out this verified Buffer before releasing it; no cross-claim byte cache.
+    for (const row of manifest.blobs) {
+      const blob = readPhysical(input, 'shard-' + row.shard + '/blobs/' + row.sha256);
+      assert(blob.length === row.bytes && sha256(blob) === row.sha256, 'transport blob bytes changed: ' + row.sha256);
+      for (const name of destinations.get(row.sha256) ?? []) {
+        const file = path.join(output, name); fs.mkdirSync(path.dirname(file), {recursive: true}); fs.writeFileSync(file, blob, {flag: 'wx'});
+      }
+    }
+    assert(same(filesAt(output, {filter: () => true}), selectedFiles.map(row => row.path).sort()), 'reconstructed paths differ');
+    for (const row of manifest.dealers.filter(row => selected.includes(row.slug))) {
+      const inspected = inspectDealerPackTransportSource({root: output, slug: row.slug}), {files, ...binding} = inspected;
+      assert(same(binding, row) && same(files, manifest.files.filter(file => file.path.startsWith(row.slug + '/')).map(({shard, ...file}) => file)), 'reconstructed sealed bundle or evidence differs: ' + row.slug);
+    }
+    // As in the original restorer, the owned output exists during reconstruction;
+    // no caller receives a qualified candidate until every inspection succeeds.
+    assertOwnedOutput(); complete = true;
+  } finally {
+    if (!complete && pathPresent(output)) {assertOwnedOutput(); fs.rmSync(output, {recursive: true, force: false});}
   }
   return {schemaVersion: 1, kind: 'cars-dealer-pack-bundle-transport-restoration', status: manifest.status, output, slugs: selected, rejected: manifest.rejected,
     manifestSha256: sha256(bytes), contentDigest: manifest.contentDigest, restoredFiles: selectedFiles.length, restoredBytes: selectedFiles.reduce((sum, row) => sum + row.bytes, 0), uniqueBytes: manifest.uniqueBytes, providerWrites: 0};
