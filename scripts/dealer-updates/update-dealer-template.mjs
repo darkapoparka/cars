@@ -616,7 +616,7 @@ function writeDirectoryTreeChanges(root, before, after, assetPool) {
   }
 }
 
-export async function regenerateDealerCatalogs(candidateDirectory, carsRoot = defaultCarsRoot(), selectedKeys = ['auto-best','carwow'], {mutationWriter} = {}) {
+export async function regenerateDealerCatalogs(candidateDirectory, carsRoot = defaultCarsRoot(), selectedKeys = ['auto-best','carwow'], {mutationWriter,toolPackage} = {}) {
   for (const key of ['auto-best', 'carwow'].filter(key=>selectedKeys.includes(key))) {
     const directory = path.join(candidateDirectory, key);
     if (!fs.existsSync(directory)) continue;
@@ -627,7 +627,7 @@ export async function regenerateDealerCatalogs(candidateDirectory, carsRoot = de
     script = script.replace(rootStatement, `const root = ${JSON.stringify(directory)};`)
       .replace("from './locale-catalog.mjs'", `from ${JSON.stringify(pathToFileURL(path.join(directory, 'scripts/locale-catalog.mjs')).href)}`);
     if (script.includes("from 'prettier'")) {
-      const require = createRequire(path.join(carsRoot, 'templates', key, 'package.json'));
+      const require = createRequire(toolPackage ? path.resolve(toolPackage) : path.join(carsRoot, 'templates', key, 'package.json'));
       script = script.replace("from 'prettier'", `from ${JSON.stringify(pathToFileURL(require.resolve('prettier')).href)}`);
       // These generated files are TS object literals and JSON. UI plugins are
       // unnecessary and resolve their stylesheet relative to the caller cwd.

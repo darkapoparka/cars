@@ -1,5 +1,7 @@
 # Cars: automotive delivery
 
+New compact-input previews: [dealer-pack pipeline](docs/PIPELINE.md).
+
 ## Current owner direction: 11 October 2026
 
 Follow [the six-design fleet contract](docs/FLEET-ROLLOUT-2026-10-11.md) for current lead creation and migration. Each dealer offers Auto Best, Modern, Import, App, Mobile and Signature (`karento-best`) through exactly one Cloudflare Worker, including all six applications and assets. Preserve the existing Modern/Import slot at `/variant-2`; mount the other at `/variant-3`, Mobile at `/variant-5` and Signature at `/variant-6`. This supersedes older three/five-design and per-design-Worker guidance below.

@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "za-motors",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T18:53:05.087Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "za-motors",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-birmingham-za-motors",
+    "position": 20
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "67e1d538b43d112f9b3b2222b6bdee7498408d33f2f51fec2f0e33aaa52fdd94"
+    },
+    {
+      "path": "branding/generated-mark-on-dark.png",
+      "sha256": "4fffe43977e24dd9c485084e7de400dc92a406324ee7f68e34d165a783202354"
+    },
+    {
+      "path": "branding/generated-mark.png",
+      "sha256": "7a273061112ff08d1bedfac3f5ef22932666af97bce9287974f2687da141eeaa"
+    },
+    {
+      "path": "branding/generated-master.png",
+      "sha256": "2172ff3ba6d7259482ad21180c00b467348650405991b4a2b61bc62703fc0269"
+    },
+    {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "7767d9b1ee59987773a31ebea0c036c0248fcae0519b178d61b1af3b4d93a2ab"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "26e4303218121be83339df6f5377bc4a228f3601d18c38fbac09e3dc99be104e"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "d52b92a702d16a015ad523ee1a605e3454670fb5593721d03cd7c237ad010174"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "f2e2d3bd28bcfa5b0e9c99bddbb36a5a1a9774fc1a7c17d97e71a257ddfb6b8e"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "4a696a934a591dc97b0442c29f3c90639f976b1e57108ddc72ca72a17f24234a"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "af6d45e515681c1a14c940750be6f1c65ff99509473f7954eda02dfd4a6789a5"
+    },
+    {
+      "path": "dealer-stock/ford-b-max-2013.jpg",
+      "sha256": "2d433c9de69ecd2ec4b3c7421bdc9e073f04c1e769b9f45aefda264fdd91d882"
+    },
+    {
+      "path": "dealer-stock/honda-jazz-2007.jpg",
+      "sha256": "53382f6cc1ac373d5289fb8cd375c9d348c074e8021f57492bc4da6bee01e798"
+    },
+    {
+      "path": "dealer-stock/skoda-fabia-2013.jpg",
+      "sha256": "cc6c403a6f1b392af39c7c508f61b03ce5f25b24a22a513c21663d36b6a74511"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "0f5d03b0b8ab297931579aa3a984fac8a87bc12de95e54163e89912aaae62f03"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "25d4cf843d1c26d6f42be956a15d6e06f620afccb83b042fd5407fd552436fc8"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "be2532091e0ff1cb5c9ca548534ef4d228f130823eebe5c278e22b8efb5160e5"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "0dad4ce01667fb6d4cb619f390b95d4632434d47b3736b8b2edd4fd115d1e8d3"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "8d5ecceef9359dbb95a65d953d6f8f5eecae6ec01e7b989beaf3f8a47e7b1fdb"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "fbbef3bee4bd6331b4bf15ca53b52c98a57cceffe208d71ddd10449edb7da72e"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "ac9be6b5137ae0547257fa591b9fa4d7d029690106030553da59077db7597494"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

@@ -447,7 +447,7 @@ test('reserve-policy drift after an upload retains reconciliation evidence and f
  await assert.rejects(runFleetSingletonDeployment({...f.options,write:true,provider}),/earlier deployment/);assert.equal(uploads,1);
 });
 
-test('a deployment CLI invoked through a junction executes help and argument errors, while import stays silent',t=>{
+test('a deployment CLI invoked through a junction completes batch inspection, help and argument errors while import stays silent',t=>{
  const temp=fs.realpathSync(os.tmpdir()),area=fs.mkdtempSync(path.join(temp,'cars-deploy-entrypoint-')),alias=path.join(area,'scripts alias'),scripts=fs.realpathSync(import.meta.dirname);
  t.after(()=>{
   const resolved=fs.realpathSync(area),relative=path.relative(temp,resolved);
@@ -459,5 +459,13 @@ test('a deployment CLI invoked through a junction executes help and argument err
  const entry=path.join(alias,'deploy-dealer-single-worker.mjs'),run=args=>spawnSync(process.execPath,args,{encoding:'utf8',timeout:30000,windowsHide:true,env:{...process.env,GIT_NO_LAZY_FETCH:'1',GIT_TERMINAL_PROMPT:'0'}});
  const help=run([entry,'--help']);assert.ifError(help.error);assert.equal(help.status,0,help.stderr);assert.match(help.stdout,/Usage:/);assert.match(help.stdout,/500 requires fresh reviewed paid-plan evidence/);assert.equal(help.stderr,'');
  const invalid=run([entry,'--invalid-entrypoint-regression-argument']);assert.ifError(invalid.error);assert.equal(invalid.status,1);assert.equal(invalid.stdout,'');assert.match(invalid.stderr,/Use --input/);
+ const batchFile=path.join(area,'batch.json'),reportFile=path.join(area,'inspection.json');
+ fs.writeFileSync(batchFile,JSON.stringify(['missing-cli-regression-dealer']));
+ const batchArgs=[entry,'--batch',batchFile,'--bundle-root',area,'--plan','paid','--report',reportFile];
+ const inspected=run(batchArgs);assert.ifError(inspected.error);assert.equal(inspected.status,1,inspected.stderr);assert.equal(inspected.stderr,'');
+ const report=JSON.parse(inspected.stdout);assert.deepEqual(JSON.parse(fs.readFileSync(reportFile,'utf8')),report);
+ assert.equal(report.type,'cars-dealer-pack-batch-inspection');assert.equal(report.success,false);assert.equal(report.deployments,0);assert.equal(report.providerWrites,0);assert.equal(report.readyToDeploy,false);
+ assert.equal(report.results.length,1);assert.equal(report.results[0].slug,'missing-cli-regression-dealer');assert.equal(report.results[0].status,'failed');assert.match(report.results[0].reason,/Missing path:/);
+ const before=fs.readFileSync(reportFile),write=run([...batchArgs,'--write']);assert.ifError(write.error);assert.equal(write.status,1);assert.equal(write.stdout,'');assert.match(write.stderr,/batch --write is unavailable/);assert.deepEqual(fs.readFileSync(reportFile),before);
  const imported=run(['--input-type=module','--eval','await import('+JSON.stringify(pathToFileURL(entry).href)+');']);assert.ifError(imported.error);assert.equal(imported.status,0,imported.stderr);assert.equal(imported.stdout,'');assert.equal(imported.stderr,'');
 });

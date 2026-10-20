@@ -1,0 +1,247 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-source-delta-review",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T12:23:55Z",
+  "sourceCommit": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+  "approvedParentLockSha256": "3e5adccefdf04a97208bd1363f99a646a258eec96b80637100ddbdb15e60b3f1",
+  "changes": [
+    {
+      "key": "auto-best",
+      "previous": {
+        "repository": "darkapoparka/cars",
+        "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+        "path": "templates/auto-best",
+        "tree": "78fa1a82eca14816449f9588283260840ee94f52",
+        "digest": "2fc9c3cfc9cf1976dbe30c08592776362e5bcc6b09e8b06620e57c4406df58a5"
+      },
+      "selected": {
+        "repository": "darkapoparka/cars",
+        "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+        "path": "templates/auto-best",
+        "tree": "cbd21f5e0b794a0cbf52bf36fdf07b25fb0bb499",
+        "digest": "90760c4c73d46ebf976a06e923171f31fc716661f69d25d864342ea856002279"
+      },
+      "paths": [
+        "templates/auto-best/src/lib/components/company/AboutHero.svelte",
+        "templates/auto-best/src/lib/components/home/VideoSection.svelte"
+      ]
+    },
+    {
+      "key": "modern",
+      "previous": {
+        "repository": "darkapoparka/cars",
+        "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+        "path": "templates/modern",
+        "tree": "01eac7390fa6ba951d4b8d4c26159a9be150f6c8",
+        "digest": "30e1a99f857cc25e4d78c9459cfb4394a9f70c5b114196a5ca6325ff38823b4b"
+      },
+      "selected": {
+        "repository": "darkapoparka/cars",
+        "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+        "path": "templates/modern",
+        "tree": "e1285aeebcf21730a064db00779a679e64e9d3ca",
+        "digest": "965f1003f5292e99adc72afb738d676436bdc27e7da7ec0264d2872d149a23b5"
+      },
+      "paths": [
+        "templates/modern/README.md",
+        "templates/modern/apps/web/app/[locale]/collections/chinese-ev-hybrids/page.tsx",
+        "templates/modern/apps/web/app/[locale]/contact/actions/contact.tsx",
+        "templates/modern/apps/web/app/[locale]/contact/copy.ts",
+        "templates/modern/apps/web/app/[locale]/contact/page.tsx",
+        "templates/modern/apps/web/app/[locale]/layout.tsx",
+        "templates/modern/apps/web/app/[locale]/sell/page.tsx",
+        "templates/modern/apps/web/app/[locale]/services/page.tsx",
+        "templates/modern/apps/web/lib/modern-service-capabilities.test.tsx",
+        "templates/modern/apps/web/lib/public-marketplace-data.ts",
+        "templates/modern/apps/web/lib/public-marketplace-pagination.test.ts",
+        "templates/modern/docs/CARS-INTEGRATION.md",
+        "templates/modern/docs/LEAD-BUILD.md",
+        "templates/modern/docs/SITE-CONFIGURATION.md",
+        "templates/modern/packages/marketplace-ui/components/listing-detail-content.tsx",
+        "templates/modern/packages/marketplace-ui/components/seller-transaction-card.tsx"
+      ]
+    },
+    {
+      "key": "import",
+      "previous": {
+        "repository": "darkapoparka/cars",
+        "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+        "path": "templates/import",
+        "tree": "d841ddfe5bec918bf6b2c19fd6971fecd6b8e54d",
+        "digest": "c7d6c93214e859aa2747af8f5e068b6a0b8ca095d6328c807728a4d531d688f8"
+      },
+      "selected": {
+        "repository": "darkapoparka/cars",
+        "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+        "path": "templates/import",
+        "tree": "87950ec43fdb33fd85dbf6d6b6160e1a779777c6",
+        "digest": "3c1fe9e9adef074aa7ca2e774ef8a0d955c77e527b7939418ab408e87659e50d"
+      },
+      "paths": [
+        "templates/import/src/lib/auxero/about.spec.ts",
+        "templates/import/src/lib/auxero/about.ts",
+        "templates/import/src/lib/components/account/AccountPasswordForm.svelte",
+        "templates/import/src/lib/components/account/AccountProfileForm.svelte",
+        "templates/import/src/lib/components/layout/AuxeroRuntimeScripts.svelte",
+        "templates/import/src/lib/data/daynight.ts",
+        "templates/import/src/lib/server/account-actions-authorization.spec.ts",
+        "templates/import/src/lib/server/admin-actions-authorization.spec.ts",
+        "templates/import/src/lib/server/auxero-account-data.ts",
+        "templates/import/src/lib/server/auxero-runtime-lifecycle.spec.ts",
+        "templates/import/src/lib/server/auxero-template.spec.ts",
+        "templates/import/src/lib/server/auxero-template.ts",
+        "templates/import/src/routes/account/password/+page.server.ts",
+        "templates/import/src/routes/account/password/+page.svelte",
+        "templates/import/src/routes/account/profile/+page.server.ts",
+        "templates/import/src/routes/account/profile/+page.svelte",
+        "templates/import/src/routes/admin/agents/+page.server.ts",
+        "templates/import/src/routes/admin/agents/[slug]/+page.server.ts",
+        "templates/import/src/routes/admin/imports/+page.server.ts",
+        "templates/import/src/routes/admin/messages/+page.server.ts",
+        "templates/import/src/routes/admin/users/+page.server.ts"
+      ]
+    },
+    {
+      "key": "app",
+      "previous": {
+        "repository": "darkapoparka/cars",
+        "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+        "path": "templates/app",
+        "tree": "7f3d3ffa40546635377e6c5225194fe06fead291",
+        "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1"
+      },
+      "selected": {
+        "repository": "darkapoparka/cars",
+        "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+        "path": "templates/app",
+        "tree": "ad5b8acf793545b0082cfb33e37c7a97da63ec36",
+        "digest": "524f71647d6bafa4320173f73658fce39b48bf0508171480475b980dc3565b65"
+      },
+      "paths": [
+        "templates/app/README.md",
+        "templates/app/components/DealerEnquirySheet.tsx",
+        "templates/app/components/ImportCountryPicker.tsx",
+        "templates/app/components/InventoryClient.tsx",
+        "templates/app/lib/brand-logos.ts",
+        "templates/app/tests/domain.test.ts"
+      ]
+    },
+    {
+      "key": "mobile",
+      "previous": {
+        "repository": "darkapoparka/cars",
+        "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+        "path": "templates/mobile",
+        "tree": "792bfdd1d8eb22aabd90c7e3a0c0779a6c1c36f3",
+        "digest": "f5a3e541a7c648a4c2899ad3893e22a3806027a9f66d95fa4e8c74b2226635b6"
+      },
+      "selected": {
+        "repository": "darkapoparka/cars",
+        "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+        "path": "templates/mobile",
+        "tree": "9dadfcad37e2b8909cc39d7758db3fca1cd5cf61",
+        "digest": "c85e58c9e747e68d0911f6bd4827a643b8a538dc1ea5eb7d29a78c3252585ef1"
+      },
+      "paths": [
+        "templates/mobile/AGENTS.md",
+        "templates/mobile/TEMPLATE.md",
+        "templates/mobile/docs/FINALIZATION.md",
+        "templates/mobile/src/app/login/page.tsx",
+        "templates/mobile/src/components/AssistantScreen.tsx",
+        "templates/mobile/src/components/DealerInformation.tsx",
+        "templates/mobile/src/components/EnquiryEditor.tsx",
+        "templates/mobile/src/components/NativeChecklist.tsx",
+        "templates/mobile/src/components/NativeInboxes.tsx",
+        "templates/mobile/src/components/SellFlow.tsx",
+        "templates/mobile/src/components/SellScreen.tsx",
+        "templates/mobile/src/components/ShowroomImportExamples.tsx",
+        "templates/mobile/src/components/ShowroomPageLayout.tsx",
+        "templates/mobile/src/components/VehicleMessageScreen.tsx",
+        "templates/mobile/src/components/VehicleSections.tsx",
+        "templates/mobile/src/lib/messages.bg.ts",
+        "templates/mobile/src/lib/showroom-config.ts",
+        "templates/mobile/src/lib/showroom.ts",
+        "templates/mobile/src/lib/store.ts",
+        "templates/mobile/tests/native-demo-claims.test.mjs",
+        "templates/mobile/tests/template-config.test.mjs"
+      ]
+    },
+    {
+      "key": "karento-best",
+      "previous": {
+        "repository": "darkapoparka/cars",
+        "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+        "path": "templates/karento-best",
+        "tree": "8c5ac869c7fd15e19a80c660343fc64b20a2bad9",
+        "digest": "be17ef365e3272753df6e50826b139a45bfc32b8fef54ddcb86d977ad16280a9"
+      },
+      "selected": {
+        "repository": "darkapoparka/cars",
+        "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+        "path": "templates/karento-best",
+        "tree": "9c2ab0e1c84f2ffbb0f20dbba757dea36d88808f",
+        "digest": "1f32f03af52daee41861d53d66bafcf3147d001f5a0a9840afbe9b6fb128a8c9"
+      },
+      "paths": [
+        "templates/karento-best/AGENTS.md",
+        "templates/karento-best/provenance/graphite-bottom-nav-source-2026-10-14.png",
+        "templates/karento-best/provenance/signature-bottom-navigation-icons.json",
+        "templates/karento-best/provenance/signature-bottom-navigation-recovery-2026-10-18.json",
+        "templates/karento-best/src/lib/components/DemoForm.svelte",
+        "templates/karento-best/src/lib/components/Header.svelte",
+        "templates/karento-best/src/lib/components/MobileNavigation.svelte",
+        "templates/karento-best/src/lib/components/search/DealershipVehicleSearch.svelte",
+        "templates/karento-best/src/lib/components/search/VehicleSearch.svelte",
+        "templates/karento-best/src/lib/components/vehicle-detail/VehicleHeading.svelte",
+        "templates/karento-best/src/lib/components/vehicle-listing/CatalogHeroTypes.svelte",
+        "templates/karento-best/src/lib/components/vehicle-listing/DesktopCatalogFilters.svelte",
+        "templates/karento-best/src/lib/components/vehicle-listing/DesktopCatalogResults.svelte",
+        "templates/karento-best/src/lib/components/vehicle-listing/MobileCatalog.svelte",
+        "templates/karento-best/src/lib/components/vehicles/PopularVehicleFilters.svelte",
+        "templates/karento-best/src/lib/data/vehicle-detail-selection.ts",
+        "templates/karento-best/src/lib/data/vehicle-inventory.ts",
+        "templates/karento-best/src/lib/discovery/DiscoveryBrowse.svelte",
+        "templates/karento-best/src/lib/discovery/DiscoveryCard.svelte",
+        "templates/karento-best/src/lib/discovery/DiscoveryDetail.svelte",
+        "templates/karento-best/src/lib/discovery/DiscoveryHome.svelte",
+        "templates/karento-best/src/lib/discovery/DiscoveryNavigation.svelte",
+        "templates/karento-best/src/lib/discovery/DiscoverySearch.svelte",
+        "templates/karento-best/src/lib/discovery/discovery.ts",
+        "templates/karento-best/src/lib/pages/marketplace-home.svelte",
+        "templates/karento-best/src/lib/routes.ts",
+        "templates/karento-best/src/lib/sections/ContactEnquiry.svelte",
+        "templates/karento-best/src/routes/+page.server.ts",
+        "templates/karento-best/src/routes/+page.svelte",
+        "templates/karento-best/src/routes/2/+page.server.ts",
+        "templates/karento-best/src/routes/2/+page.svelte",
+        "templates/karento-best/src/routes/2/+server.ts",
+        "templates/karento-best/src/routes/2/DiscoveryBrowse.svelte",
+        "templates/karento-best/src/routes/2/DiscoveryCard.svelte",
+        "templates/karento-best/src/routes/2/DiscoveryDetail.svelte",
+        "templates/karento-best/src/routes/2/DiscoveryHome.svelte",
+        "templates/karento-best/src/routes/2/DiscoveryNavigation.svelte",
+        "templates/karento-best/src/routes/2/DiscoverySearch.svelte",
+        "templates/karento-best/src/routes/2/discovery.ts",
+        "templates/karento-best/static/assets/icons/lucide-LICENSE.txt",
+        "templates/karento-best/static/assets/icons/signature-graphite/home.png",
+        "templates/karento-best/static/assets/icons/signature-graphite/menu.png",
+        "templates/karento-best/static/assets/icons/signature-graphite/services.png",
+        "templates/karento-best/static/assets/icons/signature-graphite/shop.png",
+        "templates/karento-best/static/assets/icons/signature-graphite/vehicles.png",
+        "templates/karento-best/tests/discovery-routing.test.ts",
+        "templates/karento-best/tests/vehicle-presentation.test.ts"
+      ]
+    }
+  ],
+  "scope": "Immutable published source selection for local and CI qualification of new dealer packs.",
+  "findings": [
+    "The approved lock selects the October 15 sources; the selected October 19 subtrees include subsequent data, navigation and runtime fixes.",
+    "This candidate reuses the existing adapters and exact approved release evidence as ancestry.",
+    "Build, route, identity, logo and size checks are per-dealer CI evidence. Native and hosted template approval are not inferred from those checks."
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "globalReleaseApproval": false,
+  "existingDealerChanges": false
+}

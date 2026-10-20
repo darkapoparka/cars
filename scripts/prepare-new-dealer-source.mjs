@@ -116,10 +116,12 @@ export function newSourceReviewedCopy(profile,review){
  return out;
 }
 
-export function validateNewDealerFacts({dealer,facts,stock,locale,identityReview}){
+export function validateNewDealerFacts({dealer,facts,stock,locale,identityReview,factPolicy}){
+ const optionalPackFacts=factPolicy==='dealer-pack-optional-v1';
+ assert(factPolicy===undefined||(optionalPackFacts&&dealer?.sourceFormat==='dealer-pack'&&dealer.repository==='darkapoparka/cars'),'Optional fact policy requires an explicit Cars dealer-pack source');
  assert(identityReview?.schemaVersion===1&&identityReview.kind==='cars-new-dealer-identity-review'&&identityReview.reviewed===true&&date(identityReview.reviewedAt)&&identityReview.existingIdentityFound===false&&identityReview.sourceOwnership==='cars-canonical'&&identityReview.dealer===dealer.slug&&identityReview.dealerId===dealer.dealerId&&identityReview.repository===dealer.repository&&Array.isArray(identityReview.sources)&&identityReview.sources.length>0&&identityReview.sources.every(s=>http(s.url)&&date(s.observedAt)),'Explicit reviewed absence/ownership research required');
  assert(facts?.schemaVersion===1&&facts.slug===dealer.slug&&facts.dealerId===dealer.dealerId&&!Object.hasOwn(facts,'vehicles'),'Exact dealer facts required; stock must have one authoritative boundary');
- const business=facts.business;assert(business&&typeof business.name==='string'&&business.name.trim().length>0&&business.name.length<=180&&typeof business.city==='string'&&business.city.trim()&&typeof business.address==='string'&&business.address.trim()&&http(business.sourceUrl)&&date(business.observedAt),'Sourced dated business name/location required');
+ const business=facts.business;assert(business&&typeof business.name==='string'&&business.name.trim().length>0&&business.name.length<=180&&typeof business.city==='string'&&business.city.trim()&&typeof business.address==='string'&&(business.address.trim()||(optionalPackFacts&&business.address===''))&&http(business.sourceUrl)&&date(business.observedAt),'Sourced dated business name/location required');
  assert(typeof business.inventoryNotice==='string'&&business.inventoryNotice.trim()&&typeof business.previewNotice==='string'&&business.previewNotice.trim()&&business.inventoryNotice.length<=500&&business.previewNotice.length<=500,'Explicit truthful inventory/preview disclosures required');
  assert(business.logo==='/dealer-brand/logo-on-light.png'&&business.logoLight==='/dealer-brand/logo-on-light.png'&&business.logoDark==='/dealer-brand/logo-on-dark.png','Facts must bind the exact reviewed raster surface aliases');
  const localization=normalizeDealerLocale(locale,dealer.dealerId);assert(localization.enabledLocales.length===2&&business.countryCode===localization.dealerCountry&&business.currency===localization.inventoryCurrency&&['km','mi'].includes(business.distanceUnit)&&typeof business.locale==='string'&&business.locale.startsWith(localization.defaultLocale+'-'),'Facts and explicit en/bg country/currency/locale differ');
@@ -261,6 +263,11 @@ export const NEW_SOURCE_ORCHESTRATION_PATHS=Object.freeze([
   "scripts/lib/dealer-guidance.mjs",
   "scripts/lib/dealer-locale.mjs",
   "scripts/lib/dealer-localized-copy.mjs",
+  "scripts/lib/dealer-pack-artifacts.mjs",
+  "scripts/lib/dealer-pack-extended-facts.mjs",
+  "scripts/lib/dealer-pack-index.mjs",
+  "scripts/lib/dealer-pack-modern-facts.mjs",
+  "scripts/lib/dealer-pack-switcher-logo.mjs",
   "scripts/lib/dealer-source.mjs",
   "scripts/lib/derived-assets.mjs",
   "scripts/lib/five-design-release.mjs",

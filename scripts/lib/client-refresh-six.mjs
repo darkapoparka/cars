@@ -3,6 +3,7 @@ import { UK_MOBILE_PATHS, personalizeMobileUk, ukSourceMileage } from './client-
 import path from 'node:path';
 import { excluded, normalized, sha256, inside } from './workflow.mjs';
 import { signatureBusinessPreview, signaturePriceFacts, signatureMileageFacts, signatureNativeFactsContract } from './client-refresh-signature.mjs';
+import {optionalDealerPackFacts, mobilePackMileageSource, adaptMobilePackFacts, adaptSignaturePackDiscovery} from './dealer-pack-extended-facts.mjs';
 
 export const EXTENDED_VARIANT_RECEIPTS = Object.freeze({
   mobile: '.cars-mobile.json',
@@ -108,12 +109,13 @@ export function replaceExportInitializer(source, name, value) {
 
 function showroomVehicle(listing, profile) {
   const raw = listing.raw || {};
-  if (profile.business.countryCode === 'GB' && profile.business.distanceUnit === 'mi' &&
+  const optional = optionalDealerPackFacts(profile);
+  if (!optional && profile.business.countryCode === 'GB' && profile.business.distanceUnit === 'mi' &&
       (!ukSourceMileage(listing) || !Number.isFinite(listing.priceAmount) || listing.priceAmount <= 0)) {
     throw new Error('Mobile UK requires source mileage and a published price; unknown facts cannot become zero offers: ' + listing.id);
   }
   const price = listing.priceAmount;
-  if (!Number.isFinite(price) || price < 0) throw new Error(`Mobile cannot display an unpublished price as a numeric offer: ${listing.id}`);
+  if ((!optional || price !== null && price !== undefined) && (!Number.isFinite(price) || (optional ? price <= 0 : price < 0))) throw new Error(`Mobile cannot display an unpublished price as a numeric offer: ${listing.id}`);
   if (!Number.isFinite(listing.year) || !/\d{4}/.test(String(raw.year || raw.production || raw.date || ''))) throw new Error(`Mobile needs the source year for ${listing.id}`);
   const sourceMileage = ['mileageKm','mileageMiles','mileageValue','km','mileage'].some(key => raw[key] !== undefined && raw[key] !== null && raw[key] !== '');
   const canonicalMileage = Math.round(listing.mileageUnit === 'mi' ? listing.mileageValue * 1.609344 : listing.mileageValue);
@@ -128,9 +130,10 @@ function showroomVehicle(listing, profile) {
   };
   return {
     id: listing.id, make: listing.make, model: listing.model, variant: listing.trim,
-    price, sample: false, year: listing.year, registration: String(raw.registration || raw.production || listing.year),
+    price: optional && !Number.isFinite(price) ? null : price, ...(optional ? {priceKnown:Number.isFinite(price),priceOnRequest:!Number.isFinite(price)} : {}), sample: false, year: listing.year, registration: String(raw.registration || raw.production || listing.year),
     // The numeric sentinel satisfies the native shape; only mileageKnown establishes a mileage fact.
-    mileage: mileageKnown ? canonicalMileage : 0, mileageKnown, mileageOnRequest: !mileageKnown,
+    mileage: mileageKnown ? canonicalMileage : optional ? null : 0, mileageKnown, mileageOnRequest: !mileageKnown,
+    ...(optional && mileageKnown ? {mileageSourceValue:listing.mileageValue,mileageSourceUnit:listing.mileageUnit} : {}),
     power: listing.powerHp || 0, fuel: listing.fuel, transmission: listing.transmission, body: listing.body,
     color: listing.color, seats: Number(raw.seats) || 0, doors: Number(raw.doors) || 0,
     dealer: profile.business.name, location: listing.location || profile.business.city,
@@ -184,7 +187,7 @@ function guardMobileFacts(files,profile) {
 
 function guardMobileMileage(files, profile) {
   // The UK overlay already formats original mi/km facts and rejects unpublished mileage.
-  if (profile.business.countryCode === 'GB' && profile.business.distanceUnit === 'mi') return [];
+  if (!optionalDealerPackFacts(profile) && profile.business.countryCode === 'GB' && profile.business.distanceUnit === 'mi') return [];
   const prefix='mobile/src/',changed=[];
   const patch=(name,transform)=>{
     const file=prefix+name;if(!files.has(file))return;
@@ -210,7 +213,8 @@ export function compareMobileMileage(a: MileageStock, b: MileageStock, direction
 }
 `);
   changed.push(helper);
-  patch('lib/types.ts',source=>replaceOne(source,'  mileage: number;','  mileage: number;\n  mileageKnown?: boolean;\n  mileageOnRequest?: boolean;','Mobile mileage state'));
+  if(optionalDealerPackFacts(profile))put(files,helper,mobilePackMileageSource(profile));
+  patch('lib/types.ts',source=>replaceOne(source,'  mileage: number;','  mileage: number;\n  mileageKnown?: boolean;\n  mileageOnRequest?: boolean;' + (optionalDealerPackFacts(profile)?"\n  mileageSourceValue?: number;\n  mileageSourceUnit?: 'mi' | 'km';":''),'Mobile mileage state'));
   patch('lib/search.ts',source=>{
     source=replaceOne(source,'v.mileage >= Number(f.minMileage)','mobileMileageValue(v) >= Number(f.minMileage)','Mobile known minimum mileage');
     source=replaceOne(source,'v.mileage <= Number(f.maxMileage)','mobileMileageValue(v) <= Number(f.maxMileage)','Mobile known maximum mileage');
@@ -286,19 +290,20 @@ function patchMobile(files, profile, logos) {
   if (files.has(searchFile)) put(files,searchFile,text(files,searchFile).replace(/'€' \+ new Intl.NumberFormat\('en-GB', \{ maximumFractionDigits: 0 \}\).format\(amount\)/,
     `new Intl.NumberFormat('en-GB', { style: 'currency', currency: ${JSON.stringify(currency)}, maximumFractionDigits: 0 }).format(amount)`));
   const contentPaths = [file,catalog,dealerFile,prefix+'src/lib/dealer-inventory.json',...[localeFile,searchFile].filter(name=>files.has(name)),...guardMobileFacts(files,profile),...guardMobileMileage(files,profile)];
-  if (business.countryCode === 'GB' && business.distanceUnit === 'mi') {
+  if (!optionalDealerPackFacts(profile) && business.countryCode === 'GB' && business.distanceUnit === 'mi') {
     const generated = new Map(UK_MOBILE_PATHS.map(name => [name, text(files, prefix + name)]));
     for (const name of personalizeMobileUk(generated, profile)) {
       put(files, prefix + name, String(generated.get(name)));
       contentPaths.push(prefix + name);
     }
   }
+  contentPaths.push(...adaptMobilePackFacts(files,profile));
   return { contentPaths: [...new Set(contentPaths)], inventory };
 }
 
 function signatureCard(listing, profile, nativeFacts=false) {
   const business = profile.business;
-  const priceFacts=signaturePriceFacts(listing),mileageFacts=signatureMileageFacts(listing);
+  const priceFacts=signaturePriceFacts(listing),mileageFacts=optionalDealerPackFacts(profile) && listing.mileageOnRequest===true ? {} : signatureMileageFacts(listing);
   const knownFuel={diesel:'Diesel',gasoline:'Petrol',electric:'Electric',hybrid:'Hybrid',lpg:'LPG'};
   const knownTransmission={automatic:'Automatic',manual:'Manual'};
   const fuel=listing.fuel==='Not published'?'':nativeFacts?(knownFuel[listing.fuelType]||listing.fuel):listing.fuel;
@@ -565,9 +570,9 @@ function bindSignatureDiscoveryAt(files,profile,cards,prefix) {
     throw new Error('Signature discovery requires a reviewed factual data and text boundary');
   const currency=signatureBusinessPreview(profile).currency;
   if(inlineDiscovery) {
-    // The approved cc130 discovery view renders a mandatory price and year.
-    // Require those advertised facts rather than manufacturing display defaults.
-    if(!currency||profile.listings.some(listing=>!Number.isFinite(listing.priceAmount)||listing.priceAmount<0||
+    // Legacy discovery requires numeric prices. Pack-only consumers below
+    // explicitly preserve an omitted amount and exclude it from budget claims.
+    if(!currency||profile.listings.some(listing=>(!optionalDealerPackFacts(profile)||listing.priceAmount!==null&&listing.priceAmount!==undefined)&&(!Number.isFinite(listing.priceAmount)||(optionalDealerPackFacts(profile)?listing.priceAmount<=0:listing.priceAmount<0))||
       !Number.isInteger(listing.year)||listing.year<=0))
       throw new Error('Signature inline discovery requires published numeric price/year and one inventory currency');
     source=replaceOne(source,inlineContract,inlineContract.replace(
@@ -585,7 +590,8 @@ function bindSignatureDiscoveryAt(files,profile,cards,prefix) {
     source=replaceOne(source,/\ntype Sample = Pick<[\s\S]*?\nfunction sample\(input: Sample\): DiscoveryCar \{[\s\S]*?\n\}\n(?=\nexport const discoveryCars)/,'\n','Signature unused donor discovery builder');
     if(/:\s*Sample\b|\btype Sample\b|\bsample\(/.test(source))throw new Error('Signature discovery still consumes the removed donor builder');
   }
-  const collections=[{id:'newest',title:'all'},...(currency?[{id:'cheapest',title:'cheapest'}]:[]),
+  const priceCollections=currency&&(!optionalDealerPackFacts(profile)||records.some(car=>Number.isFinite(car.priceAmount)&&car.priceAmount>0));
+  const collections=[{id:'newest',title:'all'},...(priceCollections?[{id:'cheapest',title:'cheapest'}]:[]),
     ...(records.some(car=>car.make==='BMW')?[{id:'bmw',title:'bmw'}]:[]),
     ...(records.some(car=>['Audi','BMW','Mercedes-Benz','Volkswagen'].includes(car.make))?[{id:'german',title:'german'}]:[]),
     ...(records.some(car=>car.body==='suv')?[{id:'suvs',title:'suvs'}]:[])];
@@ -614,7 +620,7 @@ function bindSignatureDiscoveryAt(files,profile,cards,prefix) {
   put(files,file,source);
   const homeFile=prefix+'DiscoveryHome.svelte',home=text(files,homeFile);
   const pills=[{title:'all',section:'collections'},{title:'brandPill',section:'brand-search'},
-    ...(currency?[{title:'cheapest',section:'collection-cheapest'}]:[]),
+    ...(priceCollections?[{title:'cheapest',section:'collection-cheapest'}]:[]),
     ...(records.some(car=>car.body==='suv')?[{title:'suvPill',section:'collection-suvs'}]:[])];
   put(files,homeFile,replaceOne(home,/const pills = \[[\s\S]*?\] as const;/,`const pills = ${JSON.stringify(pills,null,2)} as const;`,'Signature factual discovery navigation'));
   const searchFile=prefix+'DiscoverySearch.svelte';
@@ -626,7 +632,7 @@ function bindSignatureDiscoveryAt(files,profile,cards,prefix) {
     put(files,file,source);
   }
   put(files,searchFile,search);
-  if(inlineDiscovery)return [file,homeFile,searchFile];
+  if(inlineDiscovery)return [file,homeFile,searchFile,...adaptSignaturePackDiscovery(files,profile,prefix,inlineDiscovery)];
   const catalogFile='karento-best/src/lib/i18n/catalogs/reference-discovery.ts';
   let catalog=text(files,catalogFile);
   catalog=catalog.replaceAll('"Maximum price (€)"',JSON.stringify(currency?'Maximum price ('+currency+')':'Maximum price'))

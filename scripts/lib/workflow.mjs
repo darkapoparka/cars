@@ -3,6 +3,7 @@ import path from 'node:path';
 import {createHash} from 'node:crypto';
 import {spawnSync} from 'node:child_process';
 import {assertSixDesignSelection} from './six-design-release.mjs';
+import {listDealerPacks} from './dealer-pack-index.mjs';
 
 export const ROOT=path.resolve(import.meta.dirname,'../..');
 export const POLICY='cars-source-v1';
@@ -72,11 +73,12 @@ export function exportCommit(repo,commit,destination,{prefix='',filter=relative=
  readGitBlobs(repo,files,(file,content)=>{const target=inside(destination,file.path);fs.mkdirSync(path.dirname(target),{recursive:true});fs.writeFileSync(target,content);if(file.mode==='100755'&&process.platform!=='win32')fs.chmodSync(target,0o755);});
  return fingerprint(destination,{filter});
 }
-export function validateManifest(m,{allowLegacyPublishingReference=false}={}){
+export function validateManifest(m,{allowLegacyPublishingReference=false,allowDealerPackSource=false}={}){
  if(m.schemaVersion!==1||!/^[a-z0-9][a-z0-9-]{0,63}$/.test(m.slug||''))throw new Error('Invalid dealer manifest identity.');
  // Inventory may represent an explicitly recorded legacy reference; publishing remains strict by default.
  const legacyReference=allowLegacyPublishingReference===true&&m.repository==='darkapoparka/cars'&&m.defaultBranch===`publish/${m.slug}`;
- if(!legacyReference&&!/^[\w.-]+\/(?:cars-[a-z0-9]+(?:-[a-z0-9]+)*|excellent-cars|day-and-night-[\w-]+)$/.test(m.repository||''))throw new Error('Record the exact owner/repository identity.');
+ const packSource=allowDealerPackSource===true&&m.repository==='darkapoparka/cars'&&m.sourceFormat==='dealer-pack'&&m.sourcePath===`dealers/${m.slug}`&&m.defaultBranch==='main';
+ if(!legacyReference&&!packSource&&!/^[\w.-]+\/(?:cars-[a-z0-9]+(?:-[a-z0-9]+)*|excellent-cars|day-and-night-[\w-]+)$/.test(m.repository||''))throw new Error('Record the exact owner/repository identity.');
  const keys=m.variants?.map(v=>v.key)||[],standard=['auto-best','modern','carwow'],imported=['auto-best','import','carwow'];
  const six=m.packaging?.version==='5';
  if(six)assertSixDesignSelection(m.variants);
@@ -94,7 +96,7 @@ export function resolveIdentity(root,slug,requestedId=null){
  const registryFile=path.join(root,'docs/DEPLOYMENT-INVENTORY.json'),registry=fs.existsSync(registryFile)?json(registryFile):{dealers:[],aliases:{}};
  const normalizedKey=value=>value.toLowerCase().replace(/[^a-z0-9]/g,'');
  const canonical=registry.aliases?.[slug]||slug;
- const existing=(registry.dealers||[]).find(d=>d.slug===canonical||d.aliases?.includes(slug)||normalizedKey(d.slug)===normalizedKey(slug)||(requestedId&&[d.id,d.dealerId,d.researchId].includes(requestedId)));
+ const existing=[...(registry.dealers||[]),...listDealerPacks(root)].find(d=>d.slug===canonical||d.aliases?.includes(slug)||normalizedKey(d.slug)===normalizedKey(slug)||(requestedId&&[d.id,d.dealerId,d.researchId].includes(requestedId)));
  const dirs=fs.existsSync(path.join(root,'clients'))?fs.readdirSync(path.join(root,'clients'),{withFileTypes:true}).filter(e=>e.isDirectory()).map(e=>e.name):[];
  const folder=dirs.find(s=>normalizedKey(s)===normalizedKey(canonical));
  return{slug:existing?.slug||folder||canonical,existing:existing||null,exists:Boolean(existing||folder||canonical!==slug)};

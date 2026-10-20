@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "dealer": "za-motors",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T12:05:15Z",
+  "disclosure": "Dated public listing samples observed on 19 October 2026. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "skoda-fabia-2013",
+      "title": "2013 Skoda Fabia 1.2 TSI 105 SE DSG",
+      "make": "Skoda",
+      "model": "Fabia 1.2 TSI 105 SE DSG",
+      "year": 2013,
+      "mileageValue": 103000,
+      "mileageUnit": "mi",
+      "bodyType": "Hatchback",
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "color": "Grey",
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/skoda-fabia-2013.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/137854767796",
+      "observedAt": "2026-10-19T12:05:15Z",
+      "availability": "Advertised in the observed public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "description": "Dated public listing samples observed on 19 October 2026. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "ford-b-max-2013",
+      "title": "2013 Ford B-MAX 1.6 Titanium Automatic",
+      "make": "Ford",
+      "model": "B-MAX 1.6 Titanium",
+      "year": 2013,
+      "mileageValue": 45000,
+      "mileageUnit": "mi",
+      "bodyType": "MPV",
+      "transmission": "Automatic",
+      "color": "Red",
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/ford-b-max-2013.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/137848442337",
+      "observedAt": "2026-10-19T12:05:15Z",
+      "availability": "Advertised in the observed public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "description": "Dated public listing samples observed on 19 October 2026. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "honda-jazz-2007",
+      "title": "2007 Honda Jazz 1.4 i-DSI SE",
+      "make": "Honda",
+      "model": "Jazz 1.4 i-DSI SE",
+      "year": 2007,
+      "mileageValue": 67000,
+      "mileageUnit": "mi",
+      "bodyType": "Hatchback",
+      "color": "Silver",
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/honda-jazz-2007.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/137848442287",
+      "observedAt": "2026-10-19T12:05:15Z",
+      "availability": "Advertised in the observed public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "description": "Dated public listing samples observed on 19 October 2026. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

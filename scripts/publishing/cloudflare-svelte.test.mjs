@@ -191,6 +191,34 @@ test('source-only prove keeps exact installed dependencies and does not certify 
   assert.throws(() => area.execute('prove'), /Installed Cloudflare dependency version differs/);
 });
 
+test('fast rebind authenticates the same installed release for a new generated dealer without certifying old output', t => {
+  const area = generatedBuildFixture(t);
+  const dealer = JSON.parse(fs.readFileSync(path.join(area.root, 'dealer.json'), 'utf8'));dealer.slug = 'second-dealer';
+  fs.writeFileSync(path.join(area.root, 'dealer.json'), JSON.stringify(dealer));
+  const receiptPath = path.join(area.root, '.cars-cloudflare-svelte.json'), receipt = JSON.parse(fs.readFileSync(receiptPath, 'utf8'));
+  receipt.dealer = dealer.slug;receipt.workerPrefix = 'cars-' + dealer.slug;receipt.services[0].workerName = 'cars-second-dealer-auto-best';
+  fs.writeFileSync(receiptPath, JSON.stringify(receipt));
+  area.write('wrangler.json', JSON.stringify(cloudflareSvelteConfiguration('auto-best', '', {workerPrefix: receipt.workerPrefix})));
+  area.write('src/routes/+page.server.ts', 'export const load = () => ({name: "Second Dealer", stock: ["second-car"]});');
+  assert.throws(() => area.execute('prove'), /dependency phase is missing or changed/);
+  const rebound = area.execute('rebind');
+  assert.equal(rebound.installed, false);assert.equal(rebound.buildVerified, false);assert.equal(rebound.hosted, false);
+  assert.notEqual(rebound.previousWranglerSha256, rebound.wranglerSha256);assert.equal(area.calls.length, 0);
+  assert.throws(() => area.execute('dry-run'), /matching artifact proof/);
+  const installed = path.join(area.root, 'auto-best/node_modules/wrangler/package.json');
+  fs.writeFileSync(installed, JSON.stringify({name: 'wrangler', version: '4.119.0'}));
+  assert.throws(() => area.execute('rebind'), /Installed Cloudflare dependency version differs/);
+});
+
+test('fast rebind rejects deployment-side resource edits and sealed packages', t => {
+  const area = generatedBuildFixture(t), config = JSON.parse(fs.readFileSync(path.join(area.root, 'auto-best/wrangler.json'), 'utf8'));
+  config.routes = ['occupied.example/*'];area.write('wrangler.json', JSON.stringify(config));
+  assert.throws(() => area.execute('rebind'), /configuration changed/);assert.equal(area.calls.length, 0);
+  const sealed = generatedBuildFixture(t, {sealed: true});
+  assert.throws(() => sealed.execute('rebind'), /limited to generated qualification workspaces/);
+  assert.equal(sealed.calls.length, 0);
+});
+
 test('sealed source changes and removal of its package seal cannot be refreshed by prove', t => {
   const area = generatedBuildFixture(t, { sealed: true });
   area.write('src/routes/+page.server.ts', 'export const load = () => ({ changed: true });');
@@ -338,4 +366,25 @@ test('npm cache environment wins over the approved Signature source .npmrc witho
   assert.equal(result.stdout.trim(), path.join(root, '.cars-build-assets', 'karento-best.npm-cache'));
   assert.equal(fs.readFileSync(config, 'utf8'), sourceConfig);
   assert.equal(fs.existsSync(path.join(service, '.runtime')), false);
+});
+
+test('an explicit shared npm cache stays outside the sealed package and wins over source .npmrc', t => {
+  const parent = ownedTemporaryRoot(t), root = path.join(parent, 'source'), service = path.join(root, 'karento-best');
+  fs.mkdirSync(service, {recursive: true});
+  const config = path.join(service, '.npmrc'), sourceConfig = 'cache=.runtime/npm-cache\n'; fs.writeFileSync(config, sourceConfig);
+  const cache = path.join(parent, 'downloads/npm');
+  fs.mkdirSync(path.join(cache, '_cacache'), {recursive: true}); fs.writeFileSync(path.join(cache, '_cacache/restored'), 'warm cache');
+  const environment = cloudflareSvelteBuildEnvironment(root, 'karento-best', '/variant-6', {...process.env, CARS_CLOUDFLARE_SVELTE_NPM_CACHE: cache});
+  const result = spawnSync(process.execPath, [resolveCloudflareNpmCli(process.execPath, fs, path), '--logs-max=0', 'config', 'get', 'cache'], {
+    cwd: service, env: environment, encoding: 'utf8', windowsHide: true
+  });
+  assert.equal(result.error, undefined); assert.equal(result.status, 0, result.stderr); assert.equal(result.stdout.trim(), cache);
+  assert.equal(fs.readFileSync(config, 'utf8'), sourceConfig); assert.equal(fs.existsSync(path.join(root, '.cars-build-assets')), false);
+  for (const invalid of ['relative-cache', root, service, parent]) {
+    assert.throws(() => cloudflareSvelteBuildEnvironment(root, 'karento-best', '/variant-6', {CARS_CLOUDFLARE_SVELTE_NPM_CACHE: invalid}), /absolute directory|outside generated source/);
+  }
+  if (process.platform !== 'win32') {
+    const linked = path.join(parent, 'linked-source'); fs.symlinkSync(root, linked, 'dir');
+    assert.throws(() => cloudflareSvelteBuildEnvironment(root, 'karento-best', '/variant-6', {CARS_CLOUDFLARE_SVELTE_NPM_CACHE: path.join(linked, 'cache')}), /reaches generated source/);
+  }
 });

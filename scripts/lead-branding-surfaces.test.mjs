@@ -115,7 +115,7 @@ test('explicit refresh rebinds every previous-pack consumer and preserves prior 
   state.files.set('mobile/public/manifest.webmanifest',json({icons:memberNames.map(name=>({src:'/variant-5'+first.publicBase+'/'+name}))}));
   state.files.set('import/static/manifest.json',json({icons:memberNames.map(name=>({src:'/variant-3'+first.publicBase+'/'+name}))}));
   state.files.set('import/static/index.html',text('<link rel="icon" href="/variant-3'+first.publicBase+'/favicon.ico">'));
-  const retained='mobile/.client/previous-logo.json',provenance='mobile/public/logo-provenance.json',history=json({previous:first.publicBase+'/logo-on-light.webp'});state.files.set(retained,history);state.files.set(provenance,history);
+  const retained='mobile/.client/previous-logo.json',provenance='mobile/public/logo-provenance.json',historicalDocument='import/docs/desktop-hero-content/after-matrix.json',history=json({previous:first.publicBase+'/logo-on-light.webp'});state.files.set(retained,history);state.files.set(provenance,history);state.files.set(historicalDocument,history);
   const refreshed=await inputs();
   if(metadataOnly){const png=await sharp(input.png).withMetadata({density:144}).png().toBuffer();refreshed.master={png,sha256:sha(png)};}
   else{const png=await artwork([190,20,110]);refreshed.master={png,sha256:sha(png)};refreshed.reviewedSurfaces.surfaces.onLight={...refreshed.reviewedSurfaces.surfaces.onLight,png,sha256:sha(png)};}
@@ -124,7 +124,7 @@ test('explicit refresh rebinds every previous-pack consumer and preserves prior 
   assert.notEqual(current.packId,first.packId);assertLeadBranding(state.files,state.manifest);
   for(const name of [mobile,importer,'modern/packages/marketplace/lead-site.ts','mobile/public/manifest.webmanifest','import/static/manifest.json','import/static/index.html']){const consumer=state.files.get(name).toString();assert(!consumer.includes(first.publicBase),name);assert(consumer.includes(current.publicBase),name);}
   for(const [name,base]of [['mobile/public/manifest.webmanifest','/variant-5'],['import/static/manifest.json','/variant-3']]){const urls=JSON.parse(state.files.get(name)).icons.map(row=>row.src);assert.deepEqual(urls,memberNames.map(member=>base+current.publicBase+'/'+member));assert(current.consumerReferences.some(row=>row.path===name&&row.urls.length===10));}
-  assert.deepEqual(state.files.get(retained),history);assert.deepEqual(state.files.get(provenance),history);
+  assert.deepEqual(state.files.get(retained),history);assert.deepEqual(state.files.get(provenance),history);assert.deepEqual(state.files.get(historicalDocument),history,'Historical reports retain their observed logo paths and do not become storefront consumers');
   for(const [name,bytes]of previous)assert.deepEqual(state.files.get(name),bytes,'Addressed historical pack changed: '+name);
   if(metadataOnly)for(const member of memberNames)assert.deepEqual(state.files.get(PUBLIC_ROOTS.mobile+first.publicBase.slice(1)+'/'+member),state.files.get(PUBLIC_ROOTS.mobile+current.publicBase.slice(1)+'/'+member));
   const unrecorded=new Map(state.files);unrecorded.set('mobile/src/stale-logo.ts',text('export const logo="'+first.publicBase+'/custom-logo.webp";'));

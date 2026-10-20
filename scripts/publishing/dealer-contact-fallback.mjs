@@ -27,7 +27,8 @@ export function applyOptionalContactFallback(files,manifest){
  const profilePath='auto-best/src/lib/data/dealer-profile.json',profileBytes=files.get(profilePath);
  if(!profileBytes)throw Error('Missing normalized Auto contact profile');
  const profile=JSON.parse(String(profileBytes)),draft=new Map(files);
- const autoBestOptionalContact=applyAutoBestOptionalContactFallback(draft,manifest,{profile});
+ const autoBestOptionalContact=applyAutoBestOptionalContactFallback(draft,manifest,{profile,
+  ...(manifest.sourceFormat==='dealer-pack'?{factPolicy:profile.factPolicy}:{})});
  const receipt=applyImportOptionalContactFallback(draft,manifest);
  for(const [name,bytes]of draft)if(bytes!==files.get(name))files.set(name,bytes);
  return {...receipt,autoBestOptionalContact};
@@ -154,10 +155,11 @@ export function guardModernUnavailablePhoneActions(source,{name,expected,typescr
  const parsed=t.createSourceFile(name,after,t.ScriptTarget.Latest,true,t.ScriptKind.TSX);if(parsed.parseDiagnostics.length)throw Error('Modern optional contact produced invalid TSX: '+name);
  return {source:after,elements,arrays};
 }
-/** An explicitly absent UK telephone remains absent. Only derived consumers are
- * adapted; no telephone, street, email, inventory, raster or dealer facts are invented. */
-export function applyModernOptionalContactFallback(files,manifest,{profile,typescript}={}){
- if(profile?.business?.countryCode!=='GB')return {schemaVersion:1,dealer:manifest.slug,applied:false,reason:'Other market source preserved'};
+/** An absent telephone remains absent for GB or an explicit dealer-pack policy.
+ * Only derived consumers are adapted; no telephone, street, email, inventory,
+ * raster or dealer facts are invented. Legacy other-market callers stay unchanged. */
+export function applyModernOptionalContactFallback(files,manifest,{profile,typescript,factPolicy}={}){
+ if(profile?.business?.countryCode!=='GB'&&factPolicy!=='dealer-pack-optional-v1')return {schemaVersion:1,dealer:manifest.slug,applied:false,reason:'Other market source preserved'};
  const b=profile.business,phone=[b.phoneDisplay,b.phoneHref,b.phoneE164];
  if(phone.some(x=>typeof x!=='string'))throw Error('Expected normalized Modern telephone facts');
  if(phone.some(Boolean)){if(!phone.every(Boolean)||!/^tel:\+[1-9]\d{6,14}$/.test(b.phoneHref))throw Error('Incomplete published Modern telephone facts');return {schemaVersion:1,dealer:manifest.slug,applied:false,reason:'Existing sourced telephone preserved'};}

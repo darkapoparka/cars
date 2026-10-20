@@ -22,6 +22,7 @@ import {SIX_PACKAGING_VERSION,assertExtendedVariantSources,applySixVariantMounts
 import {LEGACY_DETAIL_FILE,legacyDetailArtifact,legacyDetailRedirects} from './publishing/legacy-detail-routes.mjs';
 import {appendProposalIntroduction} from './publishing/proposal-introduction.mjs';
 import {appLocalePreferenceRedirects} from './lib/vercel-app-locale-preference.mjs';
+import {dealerPackSwitcherLogo} from './lib/dealer-pack-switcher-logo.mjs';
 
 export const PACKAGING_VERSION = '1';
 const ROOT = path.resolve(import.meta.dirname, '..');
@@ -205,7 +206,8 @@ export function switcherConfiguration(manifest, nativeMessages, sourceFiles) {
   if (!labels || !['design', 'choose', 'title'].every((key) => typeof labels[key] === 'string' && labels[key].length > 0)) throw new Error(`Provide switcher labels for language: ${language}`);
   const accent = manifest.switcher?.accent;
   if (accent !== undefined && !/^#[\da-f]{6}$/i.test(accent)) throw new Error('Switcher accent must be a six-digit hex color');
-  return { language, labels, ...(accent ? { accent } : {}), ...(manifest.packaging.version === SIX_PACKAGING_VERSION ? { localePresentation: 'compact-v1' } : {}), ...(native ? { localization: { defaultLocale: language, enabledLocales: manifest.localization.enabledLocales, messages: nativeMessages } } : {}), variants: manifest.variants.map(({ key, base, entry }) => ({
+  const dealerFabLogo = dealerPackSwitcherLogo(manifest, sourceFiles);
+  return { language, labels, ...(accent ? { accent } : {}), ...(dealerFabLogo ? {dealerFabLogo} : {}), ...(manifest.packaging.version === SIX_PACKAGING_VERSION ? { localePresentation: 'compact-v1' } : {}), ...(native ? { localization: { defaultLocale: language, enabledLocales: manifest.localization.enabledLocales, messages: nativeMessages } } : {}), variants: manifest.variants.map(({ key, base, entry }) => ({
     key, base, entry,
     // Only advertise alternate homes present in this package's actual source.
     // Older App releases lack /2 even when the dealer has six design families.
@@ -213,6 +215,44 @@ export function switcherConfiguration(manifest, nativeMessages, sourceFiles) {
       && sourceFiles?.has(key === 'app' ? 'app/app/[locale]/2/page.tsx' : 'karento-best/src/routes/2/+page.svelte')
       ? { homes: [{ id: '1', entry: `${base}/` }, { id: '2', entry: `${base}/2` }] } : {}),
   })) };
+}
+
+/** Shared native six-design preparation after the caller verifies its exact
+ * adoption or candidate qualification receipt, before provider compilation. */
+export async function prepareSixDesignProviderSource(inputFiles, manifest, {provider = 'vercel', shareOptions} = {}) {
+  if (manifest.packaging?.version !== SIX_PACKAGING_VERSION || !['vercel', 'cloudflare'].includes(provider)) throw new Error('Explicit six-design provider preparation required');
+  let files = new Map(inputFiles);
+  assertAppVariant(files, manifest);
+  assertExtendedVariantSources(files, manifest);
+  // Shared presentation is independent of the selected hosting provider.
+  // Opt-in keeps historical releases and separately owned branding policies intact.
+  if (manifest.presentation !== undefined) {
+    const {applyDealerPresentation, resolveDealerPresentationVersion} = await import('./publishing/dealer-presentation.mjs');
+    const {applyOptionalContactFallback} = await import('./publishing/dealer-contact-fallback.mjs');
+    manifest.presentation.version = resolveDealerPresentationVersion(manifest.presentation.version);
+    const contact = applyOptionalContactFallback(files, manifest);
+    applyDealerPresentation(files, manifest);
+    const {bindModernMobileWordmarkLogo} = await import('./lib/client-logo-contract.mjs');
+    const logoConsumer = 'modern/packages/marketplace-ui/components/dealer-mobile-brand-bar.tsx';
+    if (!files.has(logoConsumer)) throw new Error('Missing Modern mobile logo consumer');
+    files.set(logoConsumer, Buffer.from(bindModernMobileWordmarkLogo(files.get(logoConsumer).toString('utf8'))));
+    files.set('.cars-dealer-contact-fallback.json', Buffer.from(json(contact)));
+  }
+  const {completeSignatureFontAssets} = await import('./publishing/signature-font-assets.mjs');
+  completeSignatureFontAssets(files);
+  files = applySixVariantMounts(files, manifest, {provider});
+  const {applyDealerShare} = await import('./publishing/dealer-share.mjs');
+  await applyDealerShare(files, manifest, shareOptions);
+  return files;
+}
+
+export async function installDealerDesignSwitcher(files, manifest) {
+  const switcher = await fs.readFile(new URL('./publishing/preview-switcher.js', import.meta.url), 'utf8');
+  const nativeMessages = nativePackaging(manifest.packaging.version) ? JSON.parse(await fs.readFile(new URL('./publishing/switcher-messages.json', import.meta.url), 'utf8')) : undefined;
+  const selector = switcher.replace('__CARS_SWITCHER_CONFIG__', () => JSON.stringify(switcherConfiguration(manifest, nativeMessages, files)).replace(/</g, '\\u003c'));
+  files.set('auto-best/static/preview-switcher.js', Buffer.from(manifest.packaging.version === SIX_PACKAGING_VERSION
+    ? appendProposalIntroduction(selector, {dealerId:manifest.dealerId || manifest.slug, dealerName:manifest.shareIdentity?.name || manifest.slug})
+    : selector));
 }
 
 function fallbackGuidance(manifest, provider) {
@@ -254,26 +294,7 @@ async function prepare({ root = ROOT, source, manifest, sourceCommit, guidance, 
     else { assertNativeAdoption(files, baseNativeManifest(manifest),{root}); files = applyNativeMounts(files, baseNativeManifest(manifest)); assertNativeAdoption(files, baseNativeManifest(manifest),{root}); }
     assertAppVariant(files, manifest);
     if (manifest.packaging.version === SIX_PACKAGING_VERSION) {
-      assertExtendedVariantSources(files, manifest);
-      // Shared presentation is independent of the selected hosting provider.
-      // Opt-in keeps historical releases and separately owned branding policies intact.
-      if (manifest.presentation !== undefined) {
-        const {applyDealerPresentation, resolveDealerPresentationVersion} = await import('./publishing/dealer-presentation.mjs');
-        const {applyOptionalContactFallback} = await import('./publishing/dealer-contact-fallback.mjs');
-        manifest.presentation.version = resolveDealerPresentationVersion(manifest.presentation.version);
-        const contact = applyOptionalContactFallback(files, manifest);
-        applyDealerPresentation(files, manifest);
-        const {bindModernMobileWordmarkLogo} = await import('./lib/client-logo-contract.mjs');
-        const logoConsumer = 'modern/packages/marketplace-ui/components/dealer-mobile-brand-bar.tsx';
-        if (!files.has(logoConsumer)) throw new Error('Missing Modern mobile logo consumer');
-        files.set(logoConsumer, Buffer.from(bindModernMobileWordmarkLogo(files.get(logoConsumer).toString('utf8'))));
-        files.set('.cars-dealer-contact-fallback.json', Buffer.from(json(contact)));
-      }
-      const {completeSignatureFontAssets} = await import('./publishing/signature-font-assets.mjs');
-      completeSignatureFontAssets(files);
-      files = applySixVariantMounts(files, manifest, { provider });
-      const {applyDealerShare} = await import('./publishing/dealer-share.mjs');
-      await applyDealerShare(files, manifest);
+      files = await prepareSixDesignProviderSource(files, manifest, {provider});
     }
   } else {
     assertLegacyLocaleCompatible({ manifest, files });
@@ -291,12 +312,7 @@ async function prepare({ root = ROOT, source, manifest, sourceCommit, guidance, 
   if (native) files.set('scripts/build-native-service.mjs', await fs.readFile(new URL('./publishing/build-native-service.mjs', import.meta.url)));
   if (manifest.packaging.version === SIX_PACKAGING_VERSION) files.set('scripts/build-app-service.mjs', await fs.readFile(new URL('./publishing/build-app-service.mjs', import.meta.url)));
   }
-  const switcher = await fs.readFile(new URL('./publishing/preview-switcher.js', import.meta.url), 'utf8');
-  const nativeMessages = native ? JSON.parse(await fs.readFile(new URL('./publishing/switcher-messages.json', import.meta.url), 'utf8')) : undefined;
-  const selector = switcher.replace('__CARS_SWITCHER_CONFIG__', () => JSON.stringify(switcherConfiguration(manifest, nativeMessages, files)).replace(/</g, '\\u003c'));
-  files.set('auto-best/static/preview-switcher.js', Buffer.from(manifest.packaging.version === SIX_PACKAGING_VERSION
-    ? appendProposalIntroduction(selector, {dealerId:manifest.dealerId || manifest.slug, dealerName:manifest.shareIdentity?.name || manifest.slug})
-    : selector));
+  await installDealerDesignSwitcher(files, manifest);
   files.set('dealer.json', Buffer.from(json(manifest)));
   if (guidance !== undefined && (typeof guidance !== 'string' || !guidance.trim())) throw new Error('guidance must be nonempty portable Markdown');
   if (guidance !== undefined || !files.has('AGENTS.md')) files.set('AGENTS.md', Buffer.from(guidance ?? fallbackGuidance(manifest, provider)));

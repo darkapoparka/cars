@@ -1,0 +1,2790 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-m2-final-proof-visual-equivalence",
+  "status": "passed",
+  "recordedAt": "2026-10-19T23:43:37.952060Z",
+  "repository": "darkapoparka/cars",
+  "candidate": {
+    "sourceCommit": "599adb6c101219eecbe8b4117e62189f7f168f16",
+    "commitUrl": "https://github.com/darkapoparka/cars/commit/599adb6c101219eecbe8b4117e62189f7f168f16",
+    "runId": 39341160417,
+    "attempt": 1,
+    "url": "https://github.com/darkapoparka/cars/actions/runs/39341160417/attempts/1"
+  },
+  "baseline": {
+    "sourceCommit": "a999878a921fb61b37bf198c43275550814f88cc",
+    "commitUrl": "https://github.com/darkapoparka/cars/commit/a999878a921fb61b37bf198c43275550814f88cc",
+    "runId": 39284983471,
+    "attempt": 2,
+    "url": "https://github.com/darkapoparka/cars/actions/runs/39284983471/attempts/2"
+  },
+  "ci": {
+    "verifiedAt": "2026-10-19T23:41:48.078Z",
+    "candidateRuns": [
+      {
+        "id": 39341160444,
+        "name": "Lead branding policy",
+        "status": "completed",
+        "conclusion": "success",
+        "workflowId": 381083132,
+        "runNumber": 38,
+        "url": "https://github.com/darkapoparka/cars/actions/runs/39341160444"
+      },
+      {
+        "id": 39341160417,
+        "name": "Dealer pack pipeline",
+        "status": "completed",
+        "conclusion": "success",
+        "workflowId": 389425433,
+        "runNumber": 24,
+        "url": "https://github.com/darkapoparka/cars/actions/runs/39341160417"
+      }
+    ],
+    "candidateJobs": [
+      {
+        "id": 118362773053,
+        "name": "plan",
+        "status": "completed",
+        "conclusion": "success",
+        "runId": 39341160417,
+        "url": "https://github.com/darkapoparka/cars/actions/runs/39341160417/job/118362773053"
+      },
+      {
+        "id": 118362773250,
+        "name": "contracts",
+        "status": "completed",
+        "conclusion": "success",
+        "runId": 39341160417,
+        "url": "https://github.com/darkapoparka/cars/actions/runs/39341160417/job/118362773250"
+      },
+      {
+        "id": 118363265691,
+        "name": "lane (1, granada-auto-sales)",
+        "status": "completed",
+        "conclusion": "success",
+        "runId": 39341160417,
+        "url": "https://github.com/darkapoparka/cars/actions/runs/39341160417/job/118363265691"
+      },
+      {
+        "id": 118363265774,
+        "name": "lane (2, wadishee-used-cars)",
+        "status": "completed",
+        "conclusion": "success",
+        "runId": 39341160417,
+        "url": "https://github.com/darkapoparka/cars/actions/runs/39341160417/job/118363265774"
+      },
+      {
+        "id": 118363265845,
+        "name": "lane (3, za-motors)",
+        "status": "completed",
+        "conclusion": "success",
+        "runId": 39341160417,
+        "url": "https://github.com/darkapoparka/cars/actions/runs/39341160417/job/118363265845"
+      },
+      {
+        "id": 118368397410,
+        "name": "result",
+        "status": "completed",
+        "conclusion": "success",
+        "runId": 39341160417,
+        "url": "https://github.com/darkapoparka/cars/actions/runs/39341160417/job/118368397410"
+      }
+    ],
+    "baselineRuns": [
+      {
+        "id": 39284983312,
+        "name": "Lead branding policy",
+        "status": "completed",
+        "conclusion": "success",
+        "workflowId": 381083132,
+        "runNumber": 35,
+        "url": "https://github.com/darkapoparka/cars/actions/runs/39284983312"
+      },
+      {
+        "id": 39284983471,
+        "name": "Dealer pack pipeline",
+        "status": "completed",
+        "conclusion": "success",
+        "workflowId": 389425433,
+        "runNumber": 8,
+        "url": "https://github.com/darkapoparka/cars/actions/runs/39284983471"
+      }
+    ]
+  },
+  "method": {
+    "description": "Direct comparison of all 54 final M2 CI screenshots against the authenticated final M1 attempt-2 screenshots. Original PNGs and reports were freshly downloaded from the six identified GitHub artifact archives.",
+    "authentication": [
+      "GitHub workflow runs queried by exact source commit; final pipeline and branding conclusions read as success.",
+      "GitHub artifact metadata checked for run identity, exact source commit, archive byte count, SHA256 and expiry.",
+      "Archive paths checked for duplicates, symlinks and traversal before bounded evidence extraction.",
+      "Successful build and QA reports bind pack, release, output, composition and exact workflow execution; all retained PNG hashes were verified.",
+      "M1 build, QA and screenshot hashes match the committed final M1 visual corpus; immutable native template source releases match between both sides."
+    ],
+    "tools": {
+      "scripts/compare-dealer-pack-screenshots.mjs": {
+        "sha256": "dba886143328e065b36903b1d767b12b6913151b5f684f53932d0bd3ffa71078",
+        "url": "https://github.com/darkapoparka/cars/blob/599adb6c101219eecbe8b4117e62189f7f168f16/scripts/compare-dealer-pack-screenshots.mjs"
+      },
+      "scripts/compare-dealer-pack-screenshots.test.mjs": {
+        "sha256": "c6b6af077d18e0ad6b64751fc52ac69b7ba53ebda7048df383dbc6b4a03d8825",
+        "url": "https://github.com/darkapoparka/cars/blob/599adb6c101219eecbe8b4117e62189f7f168f16/scripts/compare-dealer-pack-screenshots.test.mjs"
+      },
+      "scripts/fixtures/dealer-pack-m1-visual-baseline.json": {
+        "sha256": "6ab5b273eb5272c56fc2d53f034c635639b71bbd93ad0cbb7967e8c1ba6af39d",
+        "url": "https://github.com/darkapoparka/cars/blob/599adb6c101219eecbe8b4117e62189f7f168f16/scripts/fixtures/dealer-pack-m1-visual-baseline.json"
+      }
+    },
+    "localComparatorNode": "v24.19.0",
+    "packages": {
+      "sharp": "0.35.5",
+      "playwright-core": "1.62.1"
+    },
+    "policy": {
+      "comparator": "playwright-core/1.62.1 pixelmatch",
+      "threshold": 0,
+      "maxDiffPixels": 0,
+      "includeAntialiasingInFailure": false,
+      "equalDimensionsRequired": true,
+      "resizing": false,
+      "allowedException": "explicit fleet-design-mark-v1 artwork only",
+      "callerDefinedMasks": false,
+      "diffColours": {
+        "unexpected": "#ff0000",
+        "antialiasing": "#ffff00",
+        "authorizedFabArtwork": "#00b7ff"
+      },
+      "fabCorrectionExplicitlyAllowed": true
+    },
+    "approvedException": {
+      "name": "fleet-design-mark-v1",
+      "description": "Previously approved M2 FAB artwork correction: replace the dealer mark inside the existing FAB with the active fleet design artwork. This continuation makes no visual or template changes.",
+      "authorizationScope": "Retained approved correction from the M2 branch state; no new exception introduced.",
+      "priorEvidence": "docs/m2/visual-equivalence-2026-10-19.json",
+      "bounds": "Exactly the recorded 46 by 34 CSS-pixel artwork bounds, with only the comparator-validated 0 or 15 pixel scrollbar gutter adjustment.",
+      "validation": "Baseline dealer artwork and candidate fleet artwork hashes, single loaded visible image and matching retained geometry are required. Button border, badge, shadow and all other page pixels are compared strictly; caller-defined masks are forbidden."
+    },
+    "commandTemplate": "CARS_QA_RESOLVE_FROM=\"$PWD/runtime/m2-visual-tools/package.json\" node scripts/compare-dealer-pack-screenshots.mjs --baseline runtime/m2-visual-final-599adb6/m1/<slug> --candidate runtime/m2-visual-final-599adb6/m2/<slug> --out runtime/m2-visual-final-599adb6/comparisons/<slug> --allow-fab-correction"
+  },
+  "immutableNativeTemplateSources": {
+    "auto-best": {
+      "repository": "darkapoparka/cars",
+      "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+      "path": "templates/auto-best",
+      "tree": "cbd21f5e0b794a0cbf52bf36fdf07b25fb0bb499",
+      "digest": "90760c4c73d46ebf976a06e923171f31fc716661f69d25d864342ea856002279"
+    },
+    "modern": {
+      "repository": "darkapoparka/cars",
+      "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+      "path": "templates/modern",
+      "tree": "e1285aeebcf21730a064db00779a679e64e9d3ca",
+      "digest": "965f1003f5292e99adc72afb738d676436bdc27e7da7ec0264d2872d149a23b5"
+    },
+    "import": {
+      "repository": "darkapoparka/cars",
+      "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+      "path": "templates/import",
+      "tree": "87950ec43fdb33fd85dbf6d6b6160e1a779777c6",
+      "digest": "3c1fe9e9adef074aa7ca2e774ef8a0d955c77e527b7939418ab408e87659e50d"
+    },
+    "app": {
+      "repository": "darkapoparka/cars",
+      "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+      "path": "templates/app",
+      "tree": "ad5b8acf793545b0082cfb33e37c7a97da63ec36",
+      "digest": "524f71647d6bafa4320173f73658fce39b48bf0508171480475b980dc3565b65"
+    },
+    "mobile": {
+      "repository": "darkapoparka/cars",
+      "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+      "path": "templates/mobile",
+      "tree": "9dadfcad37e2b8909cc39d7758db3fca1cd5cf61",
+      "digest": "c85e58c9e747e68d0911f6bd4827a643b8a538dc1ea5eb7d29a78c3252585ef1"
+    },
+    "karento-best": {
+      "repository": "darkapoparka/cars",
+      "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+      "path": "templates/karento-best",
+      "tree": "9c2ab0e1c84f2ffbb0f20dbba757dea36d88808f",
+      "digest": "1f32f03af52daee41861d53d66bafcf3147d001f5a0a9840afbe9b6fb128a8c9"
+    }
+  },
+  "summary": {
+    "dealers": 3,
+    "designsPerDealer": 6,
+    "viewportWidths": [
+      320,
+      390,
+      1280
+    ],
+    "comparedViews": 54,
+    "passedViews": 54,
+    "comparedPixelsPerSide": 81340510,
+    "equalDimensions": true,
+    "resizing": false,
+    "rawDifferentPixels": 29691,
+    "authorizedFabPixels": 29691,
+    "antialiasingPixels": 0,
+    "unexpectedPixels": 0,
+    "pixelIdentical": false,
+    "pixelIdenticalOutsideApprovedFabArtwork": true,
+    "viewsPixelIdenticalOutsideApprovedFabArtwork": 54
+  },
+  "comparisons": [
+    {
+      "slug": "za-motors",
+      "comparisonReportSha256": "d30a0914838b9d9cae1c5577fcde6d7ee095e14837d58ba83829cb2aa5005eda",
+      "startedAt": "2026-10-19T23:40:56.690Z",
+      "finishedAt": "2026-10-19T23:41:02.901Z",
+      "status": "passed",
+      "baseline": {
+        "slug": "za-motors",
+        "sourceCommit": "a999878a921fb61b37bf198c43275550814f88cc",
+        "packDigest": "a562c104179389cfc9fb98e88fb2d29dc47fad00f5c53234860afe3b222bb5e6",
+        "releaseDigest": "2920143c97546de03d5e7c7c9f572fb87cee2b088cf48fbba40d575c73cfc9c3",
+        "outputDigest": "8787916ddb0b9c47ec12cc486821ceb3b01b69edbacbfcaff622f4a3eef4ef50",
+        "execution": {
+          "kind": "github-actions",
+          "repository": "darkapoparka/cars",
+          "event": "pull_request",
+          "runId": "39284983471",
+          "attempt": "2",
+          "workflowRef": "darkapoparka/cars/.github/workflows/dealer-pack-pipeline.yml@refs/pull/16/merge"
+        },
+        "buildReportSha256": "a99f8f62d1427679eada09b42816d57547b8cef4e47c2aae93c1b6afd1c76b5a",
+        "qaReportSha256": "5303eafa95bff512e6de7a130f1480f954edee97ac8474307a3a62297d3ea75b"
+      },
+      "candidate": {
+        "slug": "za-motors",
+        "sourceCommit": "599adb6c101219eecbe8b4117e62189f7f168f16",
+        "packDigest": "36c557950afc1390b56f72e69f60f9eefcae579538054b6c2856b12533d8b872",
+        "releaseDigest": "2920143c97546de03d5e7c7c9f572fb87cee2b088cf48fbba40d575c73cfc9c3",
+        "outputDigest": "7b1b2b4e9a380b30f48b7ee91e860b1c2edc3eb58bfe4bb048047d380e43fcee",
+        "execution": {
+          "kind": "github-actions",
+          "repository": "darkapoparka/cars",
+          "event": "pull_request",
+          "runId": "39341160417",
+          "attempt": "1",
+          "workflowRef": "darkapoparka/cars/.github/workflows/dealer-pack-pipeline.yml@refs/pull/17/merge"
+        },
+        "buildReportSha256": "2c88d599bd483c9a49129532726af6b3230c3e3725539f7909480e62df82da6a",
+        "qaReportSha256": "c78f25f69e87184da67115790d6d2b10a701d0ca9ad29f23ad408f18a6105007"
+      },
+      "artifacts": {
+        "baseline": {
+          "artifactId": 12205034519,
+          "artifactName": "dealer-pack-evidence-za-motors-39284983471-2",
+          "archiveBytes": 10522004,
+          "archiveSha256": "6c653da876fb73ae0a83b5cd823f301d2d5489ef7c6625ffc5f985d5618cf0e7",
+          "url": "https://github.com/darkapoparka/cars/actions/runs/39284983471/artifacts/12205034519",
+          "metadataSourceCommit": "a999878a921fb61b37bf198c43275550814f88cc",
+          "unexpiredWhenRetrieved": true,
+          "archiveSizeAndSha256Verified": true,
+          "screenshotSha256Verified": 18
+        },
+        "candidate": {
+          "artifactId": 12228844232,
+          "artifactName": "dealer-pack-reports--lane-3--39341160417",
+          "archiveBytes": 10661778,
+          "archiveSha256": "8ec515de3a1f81a30b09ae1e66a6702e93e768ae686bbaade477c9c3d69bfe60",
+          "url": "https://github.com/darkapoparka/cars/actions/runs/39341160417/artifacts/12228844232",
+          "metadataSourceCommit": "599adb6c101219eecbe8b4117e62189f7f168f16",
+          "unexpiredWhenRetrieved": true,
+          "archiveSizeAndSha256Verified": true,
+          "screenshotSha256Verified": 18
+        }
+      },
+      "buildAndQa": {
+        "baseline": {
+          "status": "passed",
+          "packCompositionDigest": "05958e891a4bd08441ad54bde609773662b4c164ecd00cdf956b8c100ebe51c2",
+          "sourceReleasesEqual": true,
+          "workerName": "cars-za-motors",
+          "publicOrigin": "https://za-motors.webpreviews.site",
+          "providerWrites": false,
+          "hostedVerified": false,
+          "qaSuccess": true,
+          "qaChecks": [
+            {
+              "id": "bundle-integrity",
+              "status": "passed"
+            },
+            {
+              "id": "cloudflare-limits",
+              "status": "passed"
+            },
+            {
+              "id": "fleet-contact-coverage",
+              "status": "passed"
+            },
+            {
+              "id": "logo-assets",
+              "status": "passed"
+            },
+            {
+              "id": "fab-interaction:auto-best",
+              "status": "passed"
+            },
+            {
+              "id": "fab-interaction:modern",
+              "status": "passed"
+            },
+            {
+              "id": "fab-interaction:import",
+              "status": "passed"
+            },
+            {
+              "id": "fab-interaction:app",
+              "status": "passed"
+            },
+            {
+              "id": "fab-interaction:mobile",
+              "status": "passed"
+            },
+            {
+              "id": "fab-interaction:karento-best",
+              "status": "passed"
+            },
+            {
+              "id": "rendered-routes",
+              "status": "passed"
+            },
+            {
+              "id": "design-identities",
+              "status": "passed"
+            },
+            {
+              "id": "screenshots",
+              "status": "passed"
+            },
+            {
+              "id": "bundle-unchanged",
+              "status": "passed"
+            }
+          ],
+          "qaRouteCount": 42,
+          "qaRoutesPassed": 42,
+          "homeScreenshotCount": 18
+        },
+        "candidate": {
+          "status": "passed",
+          "packCompositionDigest": "4987da2b0bae8d3025c679e80b4bed8dcfe7d3326707d04be8f6412297dd8579",
+          "sourceReleasesEqual": true,
+          "workerName": "cars-za-motors",
+          "publicOrigin": "https://za-motors.webpreviews.site",
+          "providerWrites": false,
+          "hostedVerified": false,
+          "qaSuccess": true,
+          "qaChecks": [
+            {
+              "id": "bundle-integrity",
+              "status": "passed"
+            },
+            {
+              "id": "cloudflare-limits",
+              "status": "passed"
+            },
+            {
+              "id": "fleet-contact-coverage",
+              "status": "passed"
+            },
+            {
+              "id": "logo-assets",
+              "status": "passed"
+            },
+            {
+              "id": "fab-interaction:auto-best",
+              "status": "passed"
+            },
+            {
+              "id": "fab-interaction:modern",
+              "status": "passed"
+            },
+            {
+              "id": "fab-interaction:import",
+              "status": "passed"
+            },
+            {
+              "id": "fab-interaction:app",
+              "status": "passed"
+            },
+            {
+              "id": "fab-interaction:mobile",
+              "status": "passed"
+            },
+            {
+              "id": "fab-interaction:karento-best",
+              "status": "passed"
+            },
+            {
+              "id": "rendered-routes",
+              "status": "passed"
+            },
+            {
+              "id": "design-identities",
+              "status": "passed"
+            },
+            {
+              "id": "screenshots",
+              "status": "passed"
+            },
+            {
+              "id": "bundle-unchanged",
+              "status": "passed"
+            }
+          ],
+          "qaRouteCount": 42,
+          "qaRoutesPassed": 42,
+          "homeScreenshotCount": 18
+        }
+      },
+      "totals": {
+        "rawDifferentPixels": 9198,
+        "authorizedFabPixels": 9198,
+        "antialiasingPixels": 0,
+        "unexpectedPixels": 0
+      },
+      "pixelIdentical": false,
+      "unchangedOutsideAuthorizedFabArtwork": true,
+      "screenshots": [
+        {
+          "key": "auto-best",
+          "width": 320,
+          "route": "home",
+          "baselineSha256": "ca996651924f7459794a21ba1384c99852904b88800859dd82984fdf4baefa8c",
+          "candidateSha256": "f675dedd8d7f7a6c85178aea5174d83b3e2f605ba3aefff2184045e155e4cd2a",
+          "status": "fleet-fab-correction-only",
+          "findings": [],
+          "height": 2789,
+          "rawDifferentPixels": 469,
+          "authorizedFabPixels": 469,
+          "antialiasingPixels": 0,
+          "unexpectedPixels": 0,
+          "exception": {
+            "policy": "fleet-design-mark-v1",
+            "bounds": {
+              "x": 254,
+              "y": 782,
+              "width": 46,
+              "height": 34
+            },
+            "rectangle": {
+              "x": 254,
+              "y": 782,
+              "width": 46,
+              "height": 34
+            },
+            "scrollbarGutterPixels": 0,
+            "beforeSha256": "40619d1abe626bde53f5b34a96c3b41c6b2664cce2e3dc52058c009df364bb90",
+            "afterSha256": "0f2bbb154f81a232777f31faa21b0bd0eaffde4bb083b9447ffa8c0550b0b12a",
+            "checkedOutsideArtwork": "button border, badge, shadow and every other page pixel"
+          },
+          "diff": "diffs/auto-best-320-home.png",
+          "diffSha256": "5f2e4ac2866af73f4dc628a5fe35ab8ff728138bf1f48ba6b17d104aee8fab01"
+        },
+        {
+          "key": "auto-best",
+          "width": 390,
+          "route": "home",
+          "baselineSha256": "ea27702dd1f1766ddf3e02bf0e6e08446f7f1458a74b7234bb734e2687895a7c",
+          "candidateSha256": "54c2ca22b683d659f2e5266e8df4b8910129703a2c4baafff4497138c4b4726e",
+          "status": "fleet-fab-correction-only",
+          "findings": [],
+          "height": 2822,
+          "rawDifferentPixels": 469,
+          "authorizedFabPixels": 469,
+          "antialiasingPixels": 0,
+          "unexpectedPixels": 0,
+          "exception": {
+            "policy": "fleet-design-mark-v1",
+            "bounds": {
+              "x": 324,
+              "y": 782,
+              "width": 46,
+              "height": 34
+            },
+            "rectangle": {
+              "x": 324,
+              "y": 782,
+              "width": 46,
+              "height": 34
+            },
+            "scrollbarGutterPixels": 0,
+            "beforeSha256": "40619d1abe626bde53f5b34a96c3b41c6b2664cce2e3dc52058c009df364bb90",
+            "afterSha256": "0f2bbb154f81a232777f31faa21b0bd0eaffde4bb083b9447ffa8c0550b0b12a",
+            "checkedOutsideArtwork": "button border, badge, shadow and every other page pixel"
+          },
+          "diff": "diffs/auto-best-390-home.png",
+          "diffSha256": "f2d234656ba96c3eabfe4ecf9b473975b16e1591529ac6436eeffe8e5f4ed989"
+        },
+        {
+          "key": "auto-best",
+          "width": 1280,
+          "route": "home",
+          "baselineSha256": "6aba1e13623fd3742abe67b68db186811fb38a24851c59969f2234601c373d08",
+          "candidateSha256": "807cef200d2ee4b44062864ad0c020e7dec21e0379e7c69f7108fa4528452fa1",
+          "status": "fleet-fab-correction-only",
+          "findings": [],
+          "height": 3853,
+          "rawDifferentPixels": 469,
+          "authorizedFabPixels": 469,
+          "antialiasingPixels": 0,
+          "unexpectedPixels": 0,
+          "exception": {
+            "policy": "fleet-design-mark-v1",
+            "bounds": {
+              "x": 1189,
+              "y": 758,
+              "width": 46,
+              "height": 34
+            },
+            "rectangle": {
+              "x": 1189,
+              "y": 758,
+              "width": 46,
+              "height": 34
+            },
+            "scrollbarGutterPixels": 15,
+            "beforeSha256": "40619d1abe626bde53f5b34a96c3b41c6b2664cce2e3dc52058c009df364bb90",
+            "afterSha256": "0f2bbb154f81a232777f31faa21b0bd0eaffde4bb083b9447ffa8c0550b0b12a",
+            "checkedOutsideArtwork": "button border, badge, shadow and every other page pixel"
+          },
+          "diff": "diffs/auto-best-1280-home.png",
+          "diffSha256": "5a43cb4956b3a8f6398b1e61aa7ac474abd9104ed9cf9f03daa00538394a9edc"
+        },
+        {
+          "key": "modern",
+          "width": 320,
+          "route": "home",
+          "baselineSha256": "619be6757becf0e5342668adf6e5594c57fe8719c6ee6b5062ca3f9c3c4343d8",
+          "candidateSha256": "7edc7ea0911f8f278f0107ce5351a7888304c8cb388def6a77a2a000319b699e",
+          "status": "fleet-fab-correction-only",
+          "findings": [],
+          "height": 900,
+          "rawDifferentPixels": 459,
+          "authorizedFabPixels": 459,
+          "antialiasingPixels": 0,
+          "unexpectedPixels": 0,
+          "exception": {
+            "policy": "fleet-design-mark-v1",
+            "bounds": {
+              "x": 239,
+              "y": 789,
+              "width": 46,
+              "height": 34
+            },
+            "rectangle": {
+              "x": 239,
+              "y": 789,
+              "width": 46,
+              "height": 34
+            },
+            "scrollbarGutterPixels": 15,
+            "beforeSha256": "40619d1abe626bde53f5b34a96c3b41c6b2664cce2e3dc52058c009df364bb90",
+            "afterSha256": "3571f6f93e7ec0cdbc36536d41019d9a3cb3b110ba3775ac9b6eca270f61123b",
+            "checkedOutsideArtwork": "button border, badge, shadow and every other page pixel"
+          },
+          "diff": "diffs/modern-320-home.png",
+          "diffSha256": "8e636fa5bd369e4f2ecf31101e6450c3b24a74fbc8b2cb782f078d8f14fcfdf7"
+        },
+        {
+          "key": "modern",
+          "width": 390,
+          "route": "home",
+          "baselineSha256": "a0dab60a4a713da5acdfd82c5e6baa0517936eb6315f0065d5f5dfa83130389c",
+          "candidateSha256": "55efbf0594833d96d6d2fda0d4a9ccb40f334002837d5fe656ffad580f317471",
+          "status": "fleet-fab-correction-only",
+          "findings": [],
+          "height": 900,
+          "rawDifferentPixels": 459,
+          "authorizedFabPixels": 459,
+          "antialiasingPixels": 0,
+          "unexpectedPixels": 0,
+          "exception": {
+            "policy": "fleet-design-mark-v1",
+            "bounds": {
+              "x": 309,
+              "y": 789,
+              "width": 46,
+              "height": 34
+            },
+            "rectangle": {
+              "x": 309,
+              "y": 789,
+              "width": 46,
+              "height": 34
+            },
+            "scrollbarGutterPixels": 15,
+            "beforeSha256": "40619d1abe626bde53f5b34a96c3b41c6b2664cce2e3dc52058c009df364bb90",
+            "afterSha256": "3571f6f93e7ec0cdbc36536d41019d9a3cb3b110ba3775ac9b6eca270f61123b",
+            "checkedOutsideArtwork": "button border, badge, shadow and every other page pixel"
+          },
+          "diff": "diffs/modern-390-home.png",
+          "diffSha256": "0a6bb4887152bc62bda33149be2c752acf0ac93f7a3338d137713be657476e15"
+        },
+        {
+          "key": "modern",
+          "width": 1280,
+          "route": "home",
+          "baselineSha256": "1dec2874fbf61a3198959bdc572303d396f75e46ba9dea9e2c9365ab3eb9563e",
+          "candidateSha256": "2f31032272aa50479bd83c9fb3b61ccba6f7efae56f07e6402d23c032f9aff31",
+          "status": "fleet-fab-correction-only",
+          "findings": [],
+          "height": 1425,
+          "rawDifferentPixels": 459,
+          "authorizedFabPixels": 459,
+          "antialiasingPixels": 0,
+          "unexpectedPixels": 0,
+          "exception": {
+            "policy": "fleet-design-mark-v1",
+            "bounds": {
+              "x": 1189,
+              "y": 758,
+              "width": 46,
+              "height": 34
+            },
+            "rectangle": {
+              "x": 1189,
+              "y": 758,
+              "width": 46,
+              "height": 34
+            },
+            "scrollbarGutterPixels": 15,
+            "beforeSha256": "40619d1abe626bde53f5b34a96c3b41c6b2664cce2e3dc52058c009df364bb90",
+            "afterSha256": "3571f6f93e7ec0cdbc36536d41019d9a3cb3b110ba3775ac9b6eca270f61123b",
+            "checkedOutsideArtwork": "button border, badge, shadow and every other page pixel"
+          },
+          "diff": "diffs/modern-1280-home.png",
+          "diffSha256": "1b1bebb752a03ce1a9809072a1be33400e2b12a2018c62cc54bac0052232378b"
+        },
+        {
+          "key": "import",
+          "width": 320,
+          "route": "home",
+          "baselineSha256": "1cbf83a239597425724def2feeb32434fd15797ac71c2fa4f0393fc58162a096",
+          "candidateSha256": "659a7fc3e16bf5f0a7703276d993d8e775dd68e12afdeb4a0fa690dda00dc168",
+          "status": "fleet-fab-correction-only",
+          "findings": [],
+          "height": 3219,
+          "rawDifferentPixels": 545,
+          "authorizedFabPixels": 545,
+          "antialiasingPixels": 0,
+          "unexpectedPixels": 0,
+          "exception": {
+            "policy": "fleet-design-mark-v1",
+            "bounds": {
+              "x": 254,
+              "y": 790,
+              "width": 46,
+              "height": 34
+            },
+            "rectangle": {
+              "x": 254,
+              "y": 790,
+              "width": 46,
+              "height": 34
+            },
+            "scrollbarGutterPixels": 0,
+            "beforeSha256": "40619d1abe626bde53f5b34a96c3b41c6b2664cce2e3dc52058c009df364bb90",
+            "afterSha256": "bfe442422b720695a60fa435f3c5d02efa50b26dd904f1a6ab6e1de79dfa7295",
+            "checkedOutsideArtwork": "button border, badge, shadow and every other page pixel"
+          },
+          "diff": "diffs/import-320-home.png",
+          "diffSha256": "bf20b1dff8dcdb8acb3960cdbeefdc9478031b5b2971931b25cd8dbee6708650"
+        },
+        {
+          "key": "import",
+          "width": 390,
+          "route": "home",
+          "baselineSha256": "9290e6dbdf68d9faa7fda6082602503170505fa02bbc47c585abb333a653e6d3",
+          "candidateSha256": "d22fc99e84425ec89372d742e2e1bdc1a4c34da382007468663c735b36dc7df4",
+          "status": "fleet-fab-correction-only",
+          "findings": [],
+          "height": 3290,
+          "rawDifferentPixels": 545,
+          "authorizedFabPixels": 545,
+          "antialiasingPixels": 0,
+          "unexpectedPixels": 0,
+          "exception": {
+            "policy": "fleet-design-mark-v1",
+            "bounds": {
+              "x": 324,
+              "y": 790,
+              "width": 46,
+              "height": 34
+            },
+            "rectangle": {
+              "x": 324,
+              "y": 790,
+              "width": 46,
+              "height": 34
+            },
+            "scrollbarGutterPixels": 0,
+            "beforeSha256": "40619d1abe626bde53f5b34a96c3b41c6b2664cce2e3dc52058c009df364bb90",
+            "afterSha256": "bfe442422b720695a60fa435f3c5d02efa50b26dd904f1a6ab6e1de79dfa7295",
+            "checkedOutsideArtwork": "button border, badge, shadow and every other page pixel"
+          },
+          "diff": "diffs/import-390-home.png",
+          "diffSha256": "0a3037663fcbebf2d249d58db3f18c334f36fdf2eb4154cef6c96e570c5b6448"
+        },
+        {
+          "key": "import",
+          "width": 1280,
+          "route": "home",
+          "baselineSha256": "3e5ec424060c7ff43200ac4136a5c9f3536d94fab3aa6a79cf2bba9c1715cb08",
+          "candidateSha256": "f4a62f7dd552dcebc8aa5ce3ec4c733223af6a13e7c52b6f3068aae73a7a16a6",
+          "status": "fleet-fab-correction-only",
+          "findings": [],
+          "height": 3515,
+          "rawDifferentPixels": 545,
+          "authorizedFabPixels": 545,
+          "antialiasingPixels": 0,
+          "unexpectedPixels": 0,
+          "exception": {
+            "policy": "fleet-design-mark-v1",
+            "bounds": {
+              "x": 1189,
+              "y": 758,
+              "width": 46,
+              "height": 34
+            },
+            "rectangle": {
+              "x": 1189,
+              "y": 758,
+              "width": 46,
+              "height": 34
+            },
+            "scrollbarGutterPixels": 15,
+            "beforeSha256": "40619d1abe626bde53f5b34a96c3b41c6b2664cce2e3dc52058c009df364bb90",
+            "afterSha256": "bfe442422b720695a60fa435f3c5d02efa50b26dd904f1a6ab6e1de79dfa7295",
+            "checkedOutsideArtwork": "button border, badge, shadow and every other page pixel"
+          },
+          "diff": "diffs/import-1280-home.png",
+          "diffSha256": "7cdab7c40a359dacf79fc0a9adb7fdac15b13f7a61611fa0c6c040e4034174e8"
+        },
+        {
+          "key": "app",
+          "width": 320,
+          "route": "home",
+          "baselineSha256": "2ed7b16a802a63e8c5816614f5fc07b5cb215388d1c19462b187a59fb4623ea7",
+          "candidateSha256": "8cb24a466eda4ecc7ae50c84ec6ecea4f4a55986ebc76b08741b11576ec56c3d",
+          "status": "fleet-fab-correction-only",
+          "findings": [],
+          "height": 1119,
+          "rawDifferentPixels": 561,
+          "authorizedFabPixels": 561,
+          "antialiasingPixels": 0,
+          "unexpectedPixels": 0,
+          "exception": {
+            "policy": "fleet-design-mark-v1",
+            "bounds": {
+              "x": 254,
+              "y": 780,
+              "width": 46,
+              "height": 34
+            },
+            "rectangle": {
+              "x": 254,
+              "y": 780,
+              "width": 46,
+              "height": 34
+            },
+            "scrollbarGutterPixels": 0,
+            "beforeSha256": "40619d1abe626bde53f5b34a96c3b41c6b2664cce2e3dc52058c009df364bb90",
+            "afterSha256": "0cba074fa7da806c9e427b8c14aaf2d566470c69fc42fcb6f7774734e71296c4",
+            "checkedOutsideArtwork": "button border, badge, shadow and every other page pixel"
+          },
+          "diff": "diffs/app-320-home.png",
+          "diffSha256": "159d907ae10b6dc117596f02980adaf8244e4a6976711ebd9a4bf6cb2b4cff28"
+        },
+        {
+          "key": "app",
+          "width": 390,
+          "route": "home",
+          "baselineSha256": "009fc35f47279e60e4469b2794d5089e1f99163257e6f90e940d3b0cae3161b8",
+          "candidateSha256": "337ed7410159879b7b41e76af33261d0bac8d014e4c2dafe3cf27699b80deba3",
+          "status": "fleet-fab-correction-only",
+          "findings": [],
+          "height": 1119,
+          "rawDifferentPixels": 561,
+          "authorizedFabPixels": 561,
+          "antialiasingPixels": 0,
+          "unexpectedPixels": 0,
+          "exception": {
+            "policy": "fleet-design-mark-v1",
+            "bounds": {
+              "x": 324,
+              "y": 780,
+              "width": 46,
+              "height": 34
+            },
+            "rectangle": {
+              "x": 324,
+              "y": 780,
+              "width": 46,
+              "height": 34
+            },
+            "scrollbarGutterPixels": 0,
+            "beforeSha256": "40619d1abe626bde53f5b34a96c3b41c6b2664cce2e3dc52058c009df364bb90",
+            "afterSha256": "0cba074fa7da806c9e427b8c14aaf2d566470c69fc42fcb6f7774734e71296c4",
+            "checkedOutsideArtwork": "button border, badge, shadow and every other page pixel"
+          },
+          "diff": "diffs/app-390-home.png",
+          "diffSha256": "830dd571825587404bcbbb268ad2c657baa9e4720b145fdc8cf60c8171ecdb17"
+        },
+        {
+          "key": "app",
+          "width": 1280,
+          "route": "home",
+          "baselineSha256": "480cede2624aeeafcf23b9edf4b6596ad1555208b90065ab1637246c609dea09",
+          "candidateSha256": "715ed40d2184e1c3003c150c26ba6db965ea47747a97326d2e6fb4cf7a079bde",
+          "status": "fleet-fab-correction-only",
+          "findings": [],
+          "height": 1115,
+          "rawDifferentPixels": 561,
+          "authorizedFabPixels": 561,
+          "antialiasingPixels": 0,
+          "unexpectedPixels": 0,
+          "exception": {
+            "policy": "fleet-design-mark-v1",
+            "bounds": {
+              "x": 1189,
+              "y": 758,
+              "width": 46,
+              "height": 34
+            },
+            "rectangle": {
+              "x": 1189,
+              "y": 758,
+              "width": 46,
+              "height": 34
+            },
+            "scrollbarGutterPixels": 15,
+            "beforeSha256": "40619d1abe626bde53f5b34a96c3b41c6b2664cce2e3dc52058c009df364bb90",
+            "afterSha256": "0cba074fa7da806c9e427b8c14aaf2d566470c69fc42fcb6f7774734e71296c4",
+            "checkedOutsideArtwork": "button border, badge, shadow and every other page pixel"
+          },
+          "diff": "diffs/app-1280-home.png",
+          "diffSha256": "d9337bea06877ba35b5e9c248049015b6fe766694694f9a63cd26d1b03b9ba07"
+        },
+        {
+          "key": "mobile",
+          "width": 320,
+          "route": "home",
+          "baselineSha256": "dfdd3565356341b0364201b4e162b3ce2beff47adff224b9d6f69aaab21e9832",
+          "candidateSha256": "e6e37d14877ed14bdf5ce9f83a0e4f827a512420a2bb3eada28bd36c78cfc910",
+          "status": "fleet-fab-correction-only",
+          "findings": [],
+          "height": 1141,
+          "rawDifferentPixels": 535,
+          "authorizedFabPixels": 535,
+          "antialiasingPixels": 0,
+          "unexpectedPixels": 0,
+          "exception": {
+            "policy": "fleet-design-mark-v1",
+            "bounds": {
+              "x": 254,
+              "y": 784,
+              "width": 46,
+              "height": 34
+            },
+            "rectangle": {
+              "x": 254,
+              "y": 784,
+              "width": 46,
+              "height": 34
+            },
+            "scrollbarGutterPixels": 0,
+            "beforeSha256": "40619d1abe626bde53f5b34a96c3b41c6b2664cce2e3dc52058c009df364bb90",
+            "afterSha256": "d82d8279c296f823cededfb793b5d3fcfb38cf0fa7f90761aa6ecb562ba24e1d",
+            "checkedOutsideArtwork": "button border, badge, shadow and every other page pixel"
+          },
+          "diff": "diffs/mobile-320-home.png",
+          "diffSha256": "031176170ab25fc2d3e43b70dfe8bfbaa14f6febe9fae0e8af6a3e67d1402562"
+        },
+        {
+          "key": "mobile",
+          "width": 390,
+          "route": "home",
+          "baselineSha256": "aa0cfd8a77e4075aaaa33eb9cdcc6f7e07e1561f7dc473e2da8488dda215e6d5",
+          "candidateSha256": "fb23a571600c37f746afcaf0aa1d89a732e6419be2d25686a8680a905fb0c571",
+          "status": "fleet-fab-correction-only",
+          "findings": [],
+          "height": 1141,
+          "rawDifferentPixels": 535,
+          "authorizedFabPixels": 535,
+          "antialiasingPixels": 0,
+          "unexpectedPixels": 0,
+          "exception": {
+            "policy": "fleet-design-mark-v1",
+            "bounds": {
+              "x": 324,
+              "y": 784,
+              "width": 46,
+              "height": 34
+            },
+            "rectangle": {
+              "x": 324,
+              "y": 784,
+              "width": 46,
+              "height": 34
+            },
+            "scrollbarGutterPixels": 0,
+            "beforeSha256": "40619d1abe626bde53f5b34a96c3b41c6b2664cce2e3dc52058c009df364bb90",
+            "afterSha256": "d82d8279c296f823cededfb793b5d3fcfb38cf0fa7f90761aa6ecb562ba24e1d",
+            "checkedOutsideArtwork": "button border, badge, shadow and every other page pixel"
+          },
+          "diff": "diffs/mobile-390-home.png",
+          "diffSha256": "3789f7bc05ae267ccbf8c63239c74101cdafcfbb1ef9c76fdca9ad4b5b72a7ec"
+        },
+        {
+          "key": "mobile",
+          "width": 1280,
+          "route": "home",
+          "baselineSha256": "1fb2f95c28f213cad29d2075f5e7305d0010b3027eceddd5908dafac55d236f2",
+          "candidateSha256": "8a879fa24965aac434895959181955c7c1de90165c9d2c8d304a300cbed27ad4",
+          "status": "fleet-fab-correction-only",
+          "findings": [],
+          "height": 917,
+          "rawDifferentPixels": 535,
+          "authorizedFabPixels": 535,
+          "antialiasingPixels": 0,
+          "unexpectedPixels": 0,
+          "exception": {
+            "policy": "fleet-design-mark-v1",
+            "bounds": {
+              "x": 1189,
+              "y": 758,
+              "width": 46,
+              "height": 34
+            },
+            "rectangle": {
+              "x": 1189,
+              "y": 758,
+              "width": 46,
+              "height": 34
+            },
+            "scrollbarGutterPixels": 15,
+            "beforeSha256": "40619d1abe626bde53f5b34a96c3b41c6b2664cce2e3dc52058c009df364bb90",
+            "afterSha256": "d82d8279c296f823cededfb793b5d3fcfb38cf0fa7f90761aa6ecb562ba24e1d",
+            "checkedOutsideArtwork": "button border, badge, shadow and every other page pixel"
+          },
+          "diff": "diffs/mobile-1280-home.png",
+          "diffSha256": "cf4eefa2f1dd5816cdffaf93b329eb73841b8aa742467bc2602f1b2905d09b19"
+        },
+        {
+          "key": "karento-best",
+          "width": 320,
+          "route": "home",
+          "baselineSha256": "dfb420fde717b64fdced89d37a1aaa9756ce21d905b2d1a5c5376d82eb41e3bc",
+          "candidateSha256": "a576877023b038f0e7897aff488d58fc4d71c0496a87ff85b57709044f9ae2f5",
+          "status": "fleet-fab-correction-only",
+          "findings": [],
+          "height": 900,
+          "rawDifferentPixels": 497,
+          "authorizedFabPixels": 497,
+          "antialiasingPixels": 0,
+          "unexpectedPixels": 0,
+          "exception": {
+            "policy": "fleet-design-mark-v1",
+            "bounds": {
+              "x": 254,
+              "y": 789,
+              "width": 46,
+              "height": 34
+            },
+            "rectangle": {
+              "x": 254,
+              "y": 789,
+              "width": 46,
+              "height": 34
+            },
+            "scrollbarGutterPixels": 0,
+            "beforeSha256": "40619d1abe626bde53f5b34a96c3b41c6b2664cce2e3dc52058c009df364bb90",
+            "afterSha256": "cc87efaaf8587fdb432110805998c6ddd78c347b1697483bb0b2a9b038d6b5c2",
+            "checkedOutsideArtwork": "button border, badge, shadow and every other page pixel"
+          },
+          "diff": "diffs/karento-best-320-home.png",
+          "diffSha256": "2c2ed04f260aed6b9960811fc81a1419e6d4b1664b70d91ad42a0d4eb83ca5a1"
+        },
+        {
+          "key": "karento-best",
+          "width": 390,
+          "route": "home",
+          "baselineSha256": "ad64d608eba5060d6a3fb4f7fbe46c0c2c021253670fe22b8c6856d89382c8f8",
+          "candidateSha256": "78ba7ba1a9cab57a6a723b6218ea343bdc7b4beed7756446d221acb77af3e325",
+          "status": "fleet-fab-correction-only",
+          "findings": [],
+          "height": 900,
+          "rawDifferentPixels": 497,
+          "authorizedFabPixels": 497,
+          "antialiasingPixels": 0,
+          "unexpectedPixels": 0,
+          "exception": {
+            "policy": "fleet-design-mark-v1",
+            "bounds": {
+              "x": 324,
+              "y": 789,
+              "width": 46,
+              "height": 34
+            },
+            "rectangle": {
+              "x": 324,
+              "y": 789,
+              "width": 46,
+              "height": 34
+            },
+            "scrollbarGutterPixels": 0,
+            "beforeSha256": "40619d1abe626bde53f5b34a96c3b41c6b2664cce2e3dc52058c009df364bb90",
+            "afterSha256": "cc87efaaf8587fdb432110805998c6ddd78c347b1697483bb0b2a9b038d6b5c2",
+            "checkedOutsideArtwork": "button border, badge, shadow and every other page pixel"
+          },
+          "diff": "diffs/karento-best-390-home.png",
+          "diffSha256": "4bf58e544c1eacffd751a550b9cef258c86e36ba4189f14fe93d3f42ae93f96b"
+        },
+        {
+          "key": "karento-best",
+          "width": 1280,
+          "route": "home",
+          "baselineSha256": "02919f46ca20f76f194188f9094b443ca50c1e0b624a6396a9b8c4754bd22b9a",
+          "candidateSha256": "aa742287c17556d0fe7188c65e7b4624ad605aaa7361506822f4ae9fb507423d",
+          "status": "fleet-fab-correction-only",
+          "findings": [],
+          "height": 4756,
+          "rawDifferentPixels": 497,
+          "authorizedFabPixels": 497,
+          "antialiasingPixels": 0,
+          "unexpectedPixels": 0,
+          "exception": {
+            "policy": "fleet-design-mark-v1",
+            "bounds": {
+              "x": 1204,
+              "y": 758,
+              "width": 46,
+              "height": 34
+            },
+            "rectangle": {
+              "x": 1204,
+              "y": 758,
+              "width": 46,
+              "height": 34
+            },
+            "scrollbarGutterPixels": 0,
+            "beforeSha256": "40619d1abe626bde53f5b34a96c3b41c6b2664cce2e3dc52058c009df364bb90",
+            "afterSha256": "cc87efaaf8587fdb432110805998c6ddd78c347b1697483bb0b2a9b038d6b5c2",
+            "checkedOutsideArtwork": "button border, badge, shadow and every other page pixel"
+          },
+          "diff": "diffs/karento-best-1280-home.png",
+          "diffSha256": "1d69796861b04d2984ac3240d5436952205823b1c016d14684a460939f3fe0ab"
+        }
+      ]
+    },
+    {
+      "slug": "wadishee-used-cars",
+      "comparisonReportSha256": "8d41c5ac638d1a11c85f09011dd39bb80103c507fe1b57c41e5beab97229a133",
+      "startedAt": "2026-10-19T23:40:56.553Z",
+      "finishedAt": "2026-10-19T23:41:02.884Z",
+      "status": "passed",
+      "baseline": {
+        "slug": "wadishee-used-cars",
+        "sourceCommit": "a999878a921fb61b37bf198c43275550814f88cc",
+        "packDigest": "9e91431cc7968a2588687c8539a834fe79e84c4526ad9e3486c85158fca2ce86",
+        "releaseDigest": "2920143c97546de03d5e7c7c9f572fb87cee2b088cf48fbba40d575c73cfc9c3",
+        "outputDigest": "89889e1ba51b5735b0c8cb64438142537f1495b9c9357ac3617cfeb12fbd5a47",
+        "execution": {
+          "kind": "github-actions",
+          "repository": "darkapoparka/cars",
+          "event": "pull_request",
+          "runId": "39284983471",
+          "attempt": "2",
+          "workflowRef": "darkapoparka/cars/.github/workflows/dealer-pack-pipeline.yml@refs/pull/16/merge"
+        },
+        "buildReportSha256": "69b0380dbcf4b8daddd0152c38f9b8939675e8d5a787bcc8793f26be3894e514",
+        "qaReportSha256": "ba0b63e15282d0a439038da34a26ea65a471ef28ac86b1a60f217b539441528f"
+      },
+      "candidate": {
+        "slug": "wadishee-used-cars",
+        "sourceCommit": "599adb6c101219eecbe8b4117e62189f7f168f16",
+        "packDigest": "e60910c5d52a07a8facb7a51cfbaabddff29e2b434125baa3509a6b56f7a71ea",
+        "releaseDigest": "2920143c97546de03d5e7c7c9f572fb87cee2b088cf48fbba40d575c73cfc9c3",
+        "outputDigest": "8e50e38ee225e1b2ba32718f0f47b128e373538089ceb287f573302c82d9ffcd",
+        "execution": {
+          "kind": "github-actions",
+          "repository": "darkapoparka/cars",
+          "event": "pull_request",
+          "runId": "39341160417",
+          "attempt": "1",
+          "workflowRef": "darkapoparka/cars/.github/workflows/dealer-pack-pipeline.yml@refs/pull/17/merge"
+        },
+        "buildReportSha256": "c358d75c247d254bbdb07c6d22a6341ae1da6ffc79713b3e64a8293ff915e43a",
+        "qaReportSha256": "a6798e2388fd4e03f5146719eb87419d4530e1a020767d0160246bef41a5728a"
+      },
+      "artifacts": {
+        "baseline": {
+          "artifactId": 12204264695,
+          "artifactName": "dealer-pack-evidence-wadishee-used-cars-39284983471-2",
+          "archiveBytes": 10658031,
+          "archiveSha256": "8bdbbd45e0e965f3dab0c85fc8eb615dd7ec81682d5479e527bc0a66fa60bbe6",
+          "url": "https://github.com/darkapoparka/cars/actions/runs/39284983471/artifacts/12204264695",
+          "metadataSourceCommit": "a999878a921fb61b37bf198c43275550814f88cc",
+          "unexpiredWhenRetrieved": true,
+          "archiveSizeAndSha256Verified": true,
+          "screenshotSha256Verified": 18
+        },
+        "candidate": {
+          "artifactId": 12229612654,
+          "artifactName": "dealer-pack-reports--lane-2--39341160417",
+          "archiveBytes": 10797933,
+          "archiveSha256": "991ec709ba0b55e453b73048484d54e31bc6f97025d1b91b4f85bfcb346f02e2",
+          "url": "https://github.com/darkapoparka/cars/actions/runs/39341160417/artifacts/12229612654",
+          "metadataSourceCommit": "599adb6c101219eecbe8b4117e62189f7f168f16",
+          "unexpiredWhenRetrieved": true,
+          "archiveSizeAndSha256Verified": true,
+          "screenshotSha256Verified": 18
+        }
+      },
+      "buildAndQa": {
+        "baseline": {
+          "status": "passed",
+          "packCompositionDigest": "b21a86659c4164a41abc2ae7b2df68c2f0d0d66c8a7b5d35ec2392c11b51d535",
+          "sourceReleasesEqual": true,
+          "workerName": "cars-wadishee-used-cars",
+          "publicOrigin": "https://wadishee-used-cars.webpreviews.site",
+          "providerWrites": false,
+          "hostedVerified": false,
+          "qaSuccess": true,
+          "qaChecks": [
+            {
+              "id": "bundle-integrity",
+              "status": "passed"
+            },
+            {
+              "id": "cloudflare-limits",
+              "status": "passed"
+            },
+            {
+              "id": "fleet-contact-coverage",
+              "status": "passed"
+            },
+            {
+              "id": "logo-assets",
+              "status": "passed"
+            },
+            {
+              "id": "fab-interaction:auto-best",
+              "status": "passed"
+            },
+            {
+              "id": "fab-interaction:modern",
+              "status": "passed"
+            },
+            {
+              "id": "fab-interaction:import",
+              "status": "passed"
+            },
+            {
+              "id": "fab-interaction:app",
+              "status": "passed"
+            },
+            {
+              "id": "fab-interaction:mobile",
+              "status": "passed"
+            },
+            {
+              "id": "fab-interaction:karento-best",
+              "status": "passed"
+            },
+            {
+              "id": "rendered-routes",
+              "status": "passed"
+            },
+            {
+              "id": "design-identities",
+              "status": "passed"
+            },
+            {
+              "id": "screenshots",
+              "status": "passed"
+            },
+            {
+              "id": "bundle-unchanged",
+              "status": "passed"
+            }
+          ],
+          "qaRouteCount": 42,
+          "qaRoutesPassed": 42,
+          "homeScreenshotCount": 18
+        },
+        "candidate": {
+          "status": "passed",
+          "packCompositionDigest": "a2255425bfee73d542ab7a439ae3f7d6df4afe177ba7b4506642427f50df99a7",
+          "sourceReleasesEqual": true,
+          "workerName": "cars-wadishee-used-cars",
+          "publicOrigin": "https://wadishee-used-cars.webpreviews.site",
+          "providerWrites": false,
+          "hostedVerified": false,
+          "qaSuccess": true,
+          "qaChecks": [
+            {
+              "id": "bundle-integrity",
+              "status": "passed"
+            },
+            {
+              "id": "cloudflare-limits",
+              "status": "passed"
+            },
+            {
+              "id": "fleet-contact-coverage",
+              "status": "passed"
+            },
+            {
+              "id": "logo-assets",
+              "status": "passed"
+            },
+            {
+              "id": "fab-interaction:auto-best",
+              "status": "passed"
+            },
+            {
+              "id": "fab-interaction:modern",
+              "status": "passed"
+            },
+            {
+              "id": "fab-interaction:import",
+              "status": "passed"
+            },
+            {
+              "id": "fab-interaction:app",
+              "status": "passed"
+            },
+            {
+              "id": "fab-interaction:mobile",
+              "status": "passed"
+            },
+            {
+              "id": "fab-interaction:karento-best",
+              "status": "passed"
+            },
+            {
+              "id": "rendered-routes",
+              "status": "passed"
+            },
+            {
+              "id": "design-identities",
+              "status": "passed"
+            },
+            {
+              "id": "screenshots",
+              "status": "passed"
+            },
+            {
+              "id": "bundle-unchanged",
+              "status": "passed"
+            }
+          ],
+          "qaRouteCount": 42,
+          "qaRoutesPassed": 42,
+          "homeScreenshotCount": 18
+        }
+      },
+      "totals": {
+        "rawDifferentPixels": 9321,
+        "authorizedFabPixels": 9321,
+        "antialiasingPixels": 0,
+        "unexpectedPixels": 0
+      },
+      "pixelIdentical": false,
+      "unchangedOutsideAuthorizedFabArtwork": true,
+      "screenshots": [
+        {
+          "key": "auto-best",
+          "width": 320,
+          "route": "home",
+          "baselineSha256": "4df70709f562a81cf293c782c9bde5af4587137155f21ca6021d8696ab039986",
+          "candidateSha256": "11ec7c5ee533ba509f5ebf9dd708b5cc2571f0db1e5fecbb567c2f1b2a3b77c8",
+          "status": "fleet-fab-correction-only",
+          "findings": [],
+          "height": 2789,
+          "rawDifferentPixels": 468,
+          "authorizedFabPixels": 468,
+          "antialiasingPixels": 0,
+          "unexpectedPixels": 0,
+          "exception": {
+            "policy": "fleet-design-mark-v1",
+            "bounds": {
+              "x": 254,
+              "y": 782,
+              "width": 46,
+              "height": 34
+            },
+            "rectangle": {
+              "x": 254,
+              "y": 782,
+              "width": 46,
+              "height": 34
+            },
+            "scrollbarGutterPixels": 0,
+            "beforeSha256": "055c256f544b608723690a72fbae02330d543ce387da02b7c2f9c97247085c53",
+            "afterSha256": "0f2bbb154f81a232777f31faa21b0bd0eaffde4bb083b9447ffa8c0550b0b12a",
+            "checkedOutsideArtwork": "button border, badge, shadow and every other page pixel"
+          },
+          "diff": "diffs/auto-best-320-home.png",
+          "diffSha256": "7ebd1d1e771ab6e160dbd50e3de7727de069d507d178a7c478cd417fa14dd7fc"
+        },
+        {
+          "key": "auto-best",
+          "width": 390,
+          "route": "home",
+          "baselineSha256": "823593c16f0a40442a1251c8623626ee9ead0ac5cf2cb5652dec5061d8011a40",
+          "candidateSha256": "21fa6bf18dfd947a8378276f327dc6756ccf94673a18227f4d38c4af2b8c2b51",
+          "status": "fleet-fab-correction-only",
+          "findings": [],
+          "height": 2810,
+          "rawDifferentPixels": 468,
+          "authorizedFabPixels": 468,
+          "antialiasingPixels": 0,
+          "unexpectedPixels": 0,
+          "exception": {
+            "policy": "fleet-design-mark-v1",
+            "bounds": {
+              "x": 324,
+              "y": 782,
+              "width": 46,
+              "height": 34
+            },
+            "rectangle": {
+              "x": 324,
+              "y": 782,
+              "width": 46,
+              "height": 34
+            },
+            "scrollbarGutterPixels": 0,
+            "beforeSha256": "055c256f544b608723690a72fbae02330d543ce387da02b7c2f9c97247085c53",
+            "afterSha256": "0f2bbb154f81a232777f31faa21b0bd0eaffde4bb083b9447ffa8c0550b0b12a",
+            "checkedOutsideArtwork": "button border, badge, shadow and every other page pixel"
+          },
+          "diff": "diffs/auto-best-390-home.png",
+          "diffSha256": "5f1b7c1aefdacb05fb3cf13d4cab83df85feb836b7b6a2b7153a2522766025f5"
+        },
+        {
+          "key": "auto-best",
+          "width": 1280,
+          "route": "home",
+          "baselineSha256": "7a20f829e7ec7a26f05f010798e9d907694a2f3f6d741f981c943ebef4b2f165",
+          "candidateSha256": "288c4d3d06919d7bce7a0b1c99e08aa181ffe5033b7858e1463efd290cd72869",
+          "status": "fleet-fab-correction-only",
+          "findings": [],
+          "height": 3853,
+          "rawDifferentPixels": 468,
+          "authorizedFabPixels": 468,
+          "antialiasingPixels": 0,
+          "unexpectedPixels": 0,
+          "exception": {
+            "policy": "fleet-design-mark-v1",
+            "bounds": {
+              "x": 1189,
+              "y": 758,
+              "width": 46,
+              "height": 34
+            },
+            "rectangle": {
+              "x": 1189,
+              "y": 758,
+              "width": 46,
+              "height": 34
+            },
+            "scrollbarGutterPixels": 15,
+            "beforeSha256": "055c256f544b608723690a72fbae02330d543ce387da02b7c2f9c97247085c53",
+            "afterSha256": "0f2bbb154f81a232777f31faa21b0bd0eaffde4bb083b9447ffa8c0550b0b12a",
+            "checkedOutsideArtwork": "button border, badge, shadow and every other page pixel"
+          },
+          "diff": "diffs/auto-best-1280-home.png",
+          "diffSha256": "0a04d0bee36bb49896ae539069144e3aafa6896f75fc77d8a32dcd75ee50a0ad"
+        },
+        {
+          "key": "modern",
+          "width": 320,
+          "route": "home",
+          "baselineSha256": "199cfd9356f84657c8e4139d1b4f6d1a65db967eaa4d7837203e0490ac44961a",
+          "candidateSha256": "85a3570b76dc3b7dba3bd59cddeb21a1507b4bdf15baacd68ab9e97c1504c973",
+          "status": "fleet-fab-correction-only",
+          "findings": [],
+          "height": 900,
+          "rawDifferentPixels": 458,
+          "authorizedFabPixels": 458,
+          "antialiasingPixels": 0,
+          "unexpectedPixels": 0,
+          "exception": {
+            "policy": "fleet-design-mark-v1",
+            "bounds": {
+              "x": 239,
+              "y": 789,
+              "width": 46,
+              "height": 34
+            },
+            "rectangle": {
+              "x": 239,
+              "y": 789,
+              "width": 46,
+              "height": 34
+            },
+            "scrollbarGutterPixels": 15,
+            "beforeSha256": "055c256f544b608723690a72fbae02330d543ce387da02b7c2f9c97247085c53",
+            "afterSha256": "3571f6f93e7ec0cdbc36536d41019d9a3cb3b110ba3775ac9b6eca270f61123b",
+            "checkedOutsideArtwork": "button border, badge, shadow and every other page pixel"
+          },
+          "diff": "diffs/modern-320-home.png",
+          "diffSha256": "e00fb43204e60857f10738479d7942f40a8cce66ab6b5032f507935cb1897b0b"
+        },
+        {
+          "key": "modern",
+          "width": 390,
+          "route": "home",
+          "baselineSha256": "71ee8fc47299c2eb54ab0978f2fcb74a6eb4b73b65eacbccfd991f7a5b173006",
+          "candidateSha256": "039bebce071269cf595524b02d01d02e6e525e31426b78bc828dfe9ea33b2b7c",
+          "status": "fleet-fab-correction-only",
+          "findings": [],
+          "height": 900,
+          "rawDifferentPixels": 458,
+          "authorizedFabPixels": 458,
+          "antialiasingPixels": 0,
+          "unexpectedPixels": 0,
+          "exception": {
+            "policy": "fleet-design-mark-v1",
+            "bounds": {
+              "x": 309,
+              "y": 789,
+              "width": 46,
+              "height": 34
+            },
+            "rectangle": {
+              "x": 309,
+              "y": 789,
+              "width": 46,
+              "height": 34
+            },
+            "scrollbarGutterPixels": 15,
+            "beforeSha256": "055c256f544b608723690a72fbae02330d543ce387da02b7c2f9c97247085c53",
+            "afterSha256": "3571f6f93e7ec0cdbc36536d41019d9a3cb3b110ba3775ac9b6eca270f61123b",
+            "checkedOutsideArtwork": "button border, badge, shadow and every other page pixel"
+          },
+          "diff": "diffs/modern-390-home.png",
+          "diffSha256": "8a9c79f9e12162d514899cb4df8476f1a20f88794928662f6ea454367d270b6a"
+        },
+        {
+          "key": "modern",
+          "width": 1280,
+          "route": "home",
+          "baselineSha256": "3928f0fff3ce8bc7046a118076c63f477e7441ec751ec889be51a10ccd882d51",
+          "candidateSha256": "c2bc854012d6cd95754e6f459e3f50398929e4ce22d42eea7162ac9ebc12afc2",
+          "status": "fleet-fab-correction-only",
+          "findings": [],
+          "height": 1425,
+          "rawDifferentPixels": 458,
+          "authorizedFabPixels": 458,
+          "antialiasingPixels": 0,
+          "unexpectedPixels": 0,
+          "exception": {
+            "policy": "fleet-design-mark-v1",
+            "bounds": {
+              "x": 1189,
+              "y": 758,
+              "width": 46,
+              "height": 34
+            },
+            "rectangle": {
+              "x": 1189,
+              "y": 758,
+              "width": 46,
+              "height": 34
+            },
+            "scrollbarGutterPixels": 15,
+            "beforeSha256": "055c256f544b608723690a72fbae02330d543ce387da02b7c2f9c97247085c53",
+            "afterSha256": "3571f6f93e7ec0cdbc36536d41019d9a3cb3b110ba3775ac9b6eca270f61123b",
+            "checkedOutsideArtwork": "button border, badge, shadow and every other page pixel"
+          },
+          "diff": "diffs/modern-1280-home.png",
+          "diffSha256": "87ba5f1b51032f7a9bbba25be3bba83425dbd4ab823f76c63a3976f3aed32a96"
+        },
+        {
+          "key": "import",
+          "width": 320,
+          "route": "home",
+          "baselineSha256": "4e3cbfbaa48f5b7738f29db83226c991e0de2cab846b46981449670c8865d8ef",
+          "candidateSha256": "a5eefcc4ef5f558b83c22ac75025e4d881f409c2e51588d691a280364945572b",
+          "status": "fleet-fab-correction-only",
+          "findings": [],
+          "height": 3266,
+          "rawDifferentPixels": 551,
+          "authorizedFabPixels": 551,
+          "antialiasingPixels": 0,
+          "unexpectedPixels": 0,
+          "exception": {
+            "policy": "fleet-design-mark-v1",
+            "bounds": {
+              "x": 254,
+              "y": 790,
+              "width": 46,
+              "height": 34
+            },
+            "rectangle": {
+              "x": 254,
+              "y": 790,
+              "width": 46,
+              "height": 34
+            },
+            "scrollbarGutterPixels": 0,
+            "beforeSha256": "055c256f544b608723690a72fbae02330d543ce387da02b7c2f9c97247085c53",
+            "afterSha256": "bfe442422b720695a60fa435f3c5d02efa50b26dd904f1a6ab6e1de79dfa7295",
+            "checkedOutsideArtwork": "button border, badge, shadow and every other page pixel"
+          },
+          "diff": "diffs/import-320-home.png",
+          "diffSha256": "bfd465334d1c2418793392f95f89851b19a6e6d6cf185e0d25dd1c9c18e55089"
+        },
+        {
+          "key": "import",
+          "width": 390,
+          "route": "home",
+          "baselineSha256": "8c2da0452b6489e6b50712026f5f808383c422ea3cfa43a2e01b93b8eaffd62e",
+          "candidateSha256": "ad848f67d66d5cba3388eeb18cfa87b49c99ed8b6cd61b538a9369d66c2bb5ca",
+          "status": "fleet-fab-correction-only",
+          "findings": [],
+          "height": 3291,
+          "rawDifferentPixels": 551,
+          "authorizedFabPixels": 551,
+          "antialiasingPixels": 0,
+          "unexpectedPixels": 0,
+          "exception": {
+            "policy": "fleet-design-mark-v1",
+            "bounds": {
+              "x": 324,
+              "y": 790,
+              "width": 46,
+              "height": 34
+            },
+            "rectangle": {
+              "x": 324,
+              "y": 790,
+              "width": 46,
+              "height": 34
+            },
+            "scrollbarGutterPixels": 0,
+            "beforeSha256": "055c256f544b608723690a72fbae02330d543ce387da02b7c2f9c97247085c53",
+            "afterSha256": "bfe442422b720695a60fa435f3c5d02efa50b26dd904f1a6ab6e1de79dfa7295",
+            "checkedOutsideArtwork": "button border, badge, shadow and every other page pixel"
+          },
+          "diff": "diffs/import-390-home.png",
+          "diffSha256": "318b55721e5bcf65ef73067ba9adc6a6d75f58230dd43e83f28050a1632266eb"
+        },
+        {
+          "key": "import",
+          "width": 1280,
+          "route": "home",
+          "baselineSha256": "a000eb2a1e62819849e54f15b8ffdeaf7406d5ec2ece83ff041dccbe2ead86f8",
+          "candidateSha256": "fd2181d3b6347e996965fe923247cf14a940be103d76c95e35b84a862a884e75",
+          "status": "fleet-fab-correction-only",
+          "findings": [],
+          "height": 3515,
+          "rawDifferentPixels": 551,
+          "authorizedFabPixels": 551,
+          "antialiasingPixels": 0,
+          "unexpectedPixels": 0,
+          "exception": {
+            "policy": "fleet-design-mark-v1",
+            "bounds": {
+              "x": 1189,
+              "y": 758,
+              "width": 46,
+              "height": 34
+            },
+            "rectangle": {
+              "x": 1189,
+              "y": 758,
+              "width": 46,
+              "height": 34
+            },
+            "scrollbarGutterPixels": 15,
+            "beforeSha256": "055c256f544b608723690a72fbae02330d543ce387da02b7c2f9c97247085c53",
+            "afterSha256": "bfe442422b720695a60fa435f3c5d02efa50b26dd904f1a6ab6e1de79dfa7295",
+            "checkedOutsideArtwork": "button border, badge, shadow and every other page pixel"
+          },
+          "diff": "diffs/import-1280-home.png",
+          "diffSha256": "a8834664a2230259dcac8f69cafbf912fbc2bc2efb51aaaa5773862e5442f50a"
+        },
+        {
+          "key": "app",
+          "width": 320,
+          "route": "home",
+          "baselineSha256": "aeb7ada6e15ace36521890c53a5bc12df321ca48d9b901d9c174e8168b8e8363",
+          "candidateSha256": "72cf9945ab802cb7d0b308ce683b5c37b7c0f58695f61e932aeb2ef883363564",
+          "status": "fleet-fab-correction-only",
+          "findings": [],
+          "height": 1141,
+          "rawDifferentPixels": 565,
+          "authorizedFabPixels": 565,
+          "antialiasingPixels": 0,
+          "unexpectedPixels": 0,
+          "exception": {
+            "policy": "fleet-design-mark-v1",
+            "bounds": {
+              "x": 254,
+              "y": 780,
+              "width": 46,
+              "height": 34
+            },
+            "rectangle": {
+              "x": 254,
+              "y": 780,
+              "width": 46,
+              "height": 34
+            },
+            "scrollbarGutterPixels": 0,
+            "beforeSha256": "055c256f544b608723690a72fbae02330d543ce387da02b7c2f9c97247085c53",
+            "afterSha256": "0cba074fa7da806c9e427b8c14aaf2d566470c69fc42fcb6f7774734e71296c4",
+            "checkedOutsideArtwork": "button border, badge, shadow and every other page pixel"
+          },
+          "diff": "diffs/app-320-home.png",
+          "diffSha256": "3d12f29976264a07e08452d54d05d7f171244d0b6c84f149c35bb5a4137ef915"
+        },
+        {
+          "key": "app",
+          "width": 390,
+          "route": "home",
+          "baselineSha256": "1a1d85cde64a90570875cfd5b8d3d37f9eb8daeab2ce2b01f4fb18d6b43371b2",
+          "candidateSha256": "deffa760a7aef0bdbdd86cd7977a01165ba5b7b96c6ddffba8cc619ffc723549",
+          "status": "fleet-fab-correction-only",
+          "findings": [],
+          "height": 1141,
+          "rawDifferentPixels": 565,
+          "authorizedFabPixels": 565,
+          "antialiasingPixels": 0,
+          "unexpectedPixels": 0,
+          "exception": {
+            "policy": "fleet-design-mark-v1",
+            "bounds": {
+              "x": 324,
+              "y": 780,
+              "width": 46,
+              "height": 34
+            },
+            "rectangle": {
+              "x": 324,
+              "y": 780,
+              "width": 46,
+              "height": 34
+            },
+            "scrollbarGutterPixels": 0,
+            "beforeSha256": "055c256f544b608723690a72fbae02330d543ce387da02b7c2f9c97247085c53",
+            "afterSha256": "0cba074fa7da806c9e427b8c14aaf2d566470c69fc42fcb6f7774734e71296c4",
+            "checkedOutsideArtwork": "button border, badge, shadow and every other page pixel"
+          },
+          "diff": "diffs/app-390-home.png",
+          "diffSha256": "3ba26c06d92c615983f55b38e46cec61aa9afdf3e3c6efa6b7155a43a668db1a"
+        },
+        {
+          "key": "app",
+          "width": 1280,
+          "route": "home",
+          "baselineSha256": "d4fc5708d0810e7adb8c5da5dc3a5697b054ee5c69d877be4da6a3eab0e4e877",
+          "candidateSha256": "2580c9ad9f2ed3426a17919168c9b19424d9ceec1c757708a7f2075dd7168035",
+          "status": "fleet-fab-correction-only",
+          "findings": [],
+          "height": 1115,
+          "rawDifferentPixels": 565,
+          "authorizedFabPixels": 565,
+          "antialiasingPixels": 0,
+          "unexpectedPixels": 0,
+          "exception": {
+            "policy": "fleet-design-mark-v1",
+            "bounds": {
+              "x": 1189,
+              "y": 758,
+              "width": 46,
+              "height": 34
+            },
+            "rectangle": {
+              "x": 1189,
+              "y": 758,
+              "width": 46,
+              "height": 34
+            },
+            "scrollbarGutterPixels": 15,
+            "beforeSha256": "055c256f544b608723690a72fbae02330d543ce387da02b7c2f9c97247085c53",
+            "afterSha256": "0cba074fa7da806c9e427b8c14aaf2d566470c69fc42fcb6f7774734e71296c4",
+            "checkedOutsideArtwork": "button border, badge, shadow and every other page pixel"
+          },
+          "diff": "diffs/app-1280-home.png",
+          "diffSha256": "9bac08261c9153a366cdc10d428cd23cf17aee8d00612e8ec17d957c7bb8cca6"
+        },
+        {
+          "key": "mobile",
+          "width": 320,
+          "route": "home",
+          "baselineSha256": "92d941dfb1ba46853c8dd0162f84219ac04389dccbbcb352fbd3719386869641",
+          "candidateSha256": "fba9b3a138957efdace4afb797eba3bb869238fa7569dc0cbef16f5bbf946888",
+          "status": "fleet-fab-correction-only",
+          "findings": [],
+          "height": 1141,
+          "rawDifferentPixels": 563,
+          "authorizedFabPixels": 563,
+          "antialiasingPixels": 0,
+          "unexpectedPixels": 0,
+          "exception": {
+            "policy": "fleet-design-mark-v1",
+            "bounds": {
+              "x": 254,
+              "y": 784,
+              "width": 46,
+              "height": 34
+            },
+            "rectangle": {
+              "x": 254,
+              "y": 784,
+              "width": 46,
+              "height": 34
+            },
+            "scrollbarGutterPixels": 0,
+            "beforeSha256": "055c256f544b608723690a72fbae02330d543ce387da02b7c2f9c97247085c53",
+            "afterSha256": "d82d8279c296f823cededfb793b5d3fcfb38cf0fa7f90761aa6ecb562ba24e1d",
+            "checkedOutsideArtwork": "button border, badge, shadow and every other page pixel"
+          },
+          "diff": "diffs/mobile-320-home.png",
+          "diffSha256": "87aeefe6b8d8fe609ab4287ff7dae0b652d2cef08dc36d560ef82e61d35b0081"
+        },
+        {
+          "key": "mobile",
+          "width": 390,
+          "route": "home",
+          "baselineSha256": "3f86db041baa7d9467590a1ce5b90dc095d448f9c2547fe5f397f5c04c008659",
+          "candidateSha256": "a43e6bb2bfc7644916b73c47a2d03a8a0b97f2b3fb61fad79bdea2a98d3b77c5",
+          "status": "fleet-fab-correction-only",
+          "findings": [],
+          "height": 1141,
+          "rawDifferentPixels": 563,
+          "authorizedFabPixels": 563,
+          "antialiasingPixels": 0,
+          "unexpectedPixels": 0,
+          "exception": {
+            "policy": "fleet-design-mark-v1",
+            "bounds": {
+              "x": 324,
+              "y": 784,
+              "width": 46,
+              "height": 34
+            },
+            "rectangle": {
+              "x": 324,
+              "y": 784,
+              "width": 46,
+              "height": 34
+            },
+            "scrollbarGutterPixels": 0,
+            "beforeSha256": "055c256f544b608723690a72fbae02330d543ce387da02b7c2f9c97247085c53",
+            "afterSha256": "d82d8279c296f823cededfb793b5d3fcfb38cf0fa7f90761aa6ecb562ba24e1d",
+            "checkedOutsideArtwork": "button border, badge, shadow and every other page pixel"
+          },
+          "diff": "diffs/mobile-390-home.png",
+          "diffSha256": "9fceb872ac259891271467dfb7df93007dc6c86b0bdf3214566b9e106a4f323f"
+        },
+        {
+          "key": "mobile",
+          "width": 1280,
+          "route": "home",
+          "baselineSha256": "a483153fde9b6b3ce0a990076f1af73ad1ea5c63612902c203f499bc3a1977af",
+          "candidateSha256": "3a9251c0a05621b52176e43d00f7bc671390923d107865165e8ca267c1c0d97b",
+          "status": "fleet-fab-correction-only",
+          "findings": [],
+          "height": 917,
+          "rawDifferentPixels": 563,
+          "authorizedFabPixels": 563,
+          "antialiasingPixels": 0,
+          "unexpectedPixels": 0,
+          "exception": {
+            "policy": "fleet-design-mark-v1",
+            "bounds": {
+              "x": 1189,
+              "y": 758,
+              "width": 46,
+              "height": 34
+            },
+            "rectangle": {
+              "x": 1189,
+              "y": 758,
+              "width": 46,
+              "height": 34
+            },
+            "scrollbarGutterPixels": 15,
+            "beforeSha256": "055c256f544b608723690a72fbae02330d543ce387da02b7c2f9c97247085c53",
+            "afterSha256": "d82d8279c296f823cededfb793b5d3fcfb38cf0fa7f90761aa6ecb562ba24e1d",
+            "checkedOutsideArtwork": "button border, badge, shadow and every other page pixel"
+          },
+          "diff": "diffs/mobile-1280-home.png",
+          "diffSha256": "f5e9934a624b6a146518ff3d0547758f331d718aed10ec1bf2df85f259ab3529"
+        },
+        {
+          "key": "karento-best",
+          "width": 320,
+          "route": "home",
+          "baselineSha256": "58e975c8da995c47a210db96177895afac89b17939e8dbc49fea6dc97bd55725",
+          "candidateSha256": "e16ee8a5e08bcf6edc3616732140affcbca875006bdc4508bafe33028378f92f",
+          "status": "fleet-fab-correction-only",
+          "findings": [],
+          "height": 900,
+          "rawDifferentPixels": 502,
+          "authorizedFabPixels": 502,
+          "antialiasingPixels": 0,
+          "unexpectedPixels": 0,
+          "exception": {
+            "policy": "fleet-design-mark-v1",
+            "bounds": {
+              "x": 254,
+              "y": 789,
+              "width": 46,
+              "height": 34
+            },
+            "rectangle": {
+              "x": 254,
+              "y": 789,
+              "width": 46,
+              "height": 34
+            },
+            "scrollbarGutterPixels": 0,
+            "beforeSha256": "055c256f544b608723690a72fbae02330d543ce387da02b7c2f9c97247085c53",
+            "afterSha256": "cc87efaaf8587fdb432110805998c6ddd78c347b1697483bb0b2a9b038d6b5c2",
+            "checkedOutsideArtwork": "button border, badge, shadow and every other page pixel"
+          },
+          "diff": "diffs/karento-best-320-home.png",
+          "diffSha256": "7164bf660018bb8ca5a812272919a0e5727d35d58b821bb141d27be88093ad5a"
+        },
+        {
+          "key": "karento-best",
+          "width": 390,
+          "route": "home",
+          "baselineSha256": "19a189a6952d779a8a87d6f2ce718370f76f785f2b403dd1a49ed7f085fb51f6",
+          "candidateSha256": "4f0896071609e24d474c5505e954e716697ca43b3eaf37fb867a05badea9c47b",
+          "status": "fleet-fab-correction-only",
+          "findings": [],
+          "height": 900,
+          "rawDifferentPixels": 502,
+          "authorizedFabPixels": 502,
+          "antialiasingPixels": 0,
+          "unexpectedPixels": 0,
+          "exception": {
+            "policy": "fleet-design-mark-v1",
+            "bounds": {
+              "x": 324,
+              "y": 789,
+              "width": 46,
+              "height": 34
+            },
+            "rectangle": {
+              "x": 324,
+              "y": 789,
+              "width": 46,
+              "height": 34
+            },
+            "scrollbarGutterPixels": 0,
+            "beforeSha256": "055c256f544b608723690a72fbae02330d543ce387da02b7c2f9c97247085c53",
+            "afterSha256": "cc87efaaf8587fdb432110805998c6ddd78c347b1697483bb0b2a9b038d6b5c2",
+            "checkedOutsideArtwork": "button border, badge, shadow and every other page pixel"
+          },
+          "diff": "diffs/karento-best-390-home.png",
+          "diffSha256": "a66b2cc94b9a3279e1b7eb12c278c00b149fed91362caef28b733c35f90d3e97"
+        },
+        {
+          "key": "karento-best",
+          "width": 1280,
+          "route": "home",
+          "baselineSha256": "34a7cbf4d5b26941e4f6a62cef6127176c98e0097818cc1199d6b5f2e11ebfa5",
+          "candidateSha256": "2819a7dc823c3389c6ce00126847fb326f5e8640f59b36a7ecb5aa63b6a72732",
+          "status": "fleet-fab-correction-only",
+          "findings": [],
+          "height": 4757,
+          "rawDifferentPixels": 502,
+          "authorizedFabPixels": 502,
+          "antialiasingPixels": 0,
+          "unexpectedPixels": 0,
+          "exception": {
+            "policy": "fleet-design-mark-v1",
+            "bounds": {
+              "x": 1204,
+              "y": 758,
+              "width": 46,
+              "height": 34
+            },
+            "rectangle": {
+              "x": 1204,
+              "y": 758,
+              "width": 46,
+              "height": 34
+            },
+            "scrollbarGutterPixels": 0,
+            "beforeSha256": "055c256f544b608723690a72fbae02330d543ce387da02b7c2f9c97247085c53",
+            "afterSha256": "cc87efaaf8587fdb432110805998c6ddd78c347b1697483bb0b2a9b038d6b5c2",
+            "checkedOutsideArtwork": "button border, badge, shadow and every other page pixel"
+          },
+          "diff": "diffs/karento-best-1280-home.png",
+          "diffSha256": "36cd3585121d68b04c64a540c5ff499d18248637d239d8fee0a07375e65e2f1d"
+        }
+      ]
+    },
+    {
+      "slug": "granada-auto-sales",
+      "comparisonReportSha256": "0c3eb48fd1cddb941155930b6a890528ffeb1c7ddf2e06249a87b9abb4b75c26",
+      "startedAt": "2026-10-19T23:37:09.634Z",
+      "finishedAt": "2026-10-19T23:37:16.805Z",
+      "status": "passed",
+      "baseline": {
+        "slug": "granada-auto-sales",
+        "sourceCommit": "a999878a921fb61b37bf198c43275550814f88cc",
+        "packDigest": "4a9bf13cb6eff09b020e47e1a685528254b6e8b6bea5668b818189a538a83c78",
+        "releaseDigest": "2920143c97546de03d5e7c7c9f572fb87cee2b088cf48fbba40d575c73cfc9c3",
+        "outputDigest": "afa3dbfdf51a981f526a10a21b83921e3fe2dcea313462ebe94a87841e8283f5",
+        "execution": {
+          "kind": "github-actions",
+          "repository": "darkapoparka/cars",
+          "event": "pull_request",
+          "runId": "39284983471",
+          "attempt": "2",
+          "workflowRef": "darkapoparka/cars/.github/workflows/dealer-pack-pipeline.yml@refs/pull/16/merge"
+        },
+        "buildReportSha256": "7f1c9e0863aa5fe4938ab7dbae4ad6e0db7ca7e9ce16a8b8ffa7cf1cc384c07e",
+        "qaReportSha256": "82c14b45aefb4c45e8db1ba503edf76176e2e09a58e30b1c281e4102a4308e11"
+      },
+      "candidate": {
+        "slug": "granada-auto-sales",
+        "sourceCommit": "599adb6c101219eecbe8b4117e62189f7f168f16",
+        "packDigest": "4b209fc366894e172643f0a8600a0ff6d827b9622475333fde4319613c1420db",
+        "releaseDigest": "2920143c97546de03d5e7c7c9f572fb87cee2b088cf48fbba40d575c73cfc9c3",
+        "outputDigest": "730273a4fcd45ebca29424c50c888c1e629c8734544f6d3b8a457cd0f8c809a3",
+        "execution": {
+          "kind": "github-actions",
+          "repository": "darkapoparka/cars",
+          "event": "pull_request",
+          "runId": "39341160417",
+          "attempt": "1",
+          "workflowRef": "darkapoparka/cars/.github/workflows/dealer-pack-pipeline.yml@refs/pull/17/merge"
+        },
+        "buildReportSha256": "63f02f1895053ee58cee4827bc14d5b790f46170099ad673ccbb3ba8e110a531",
+        "qaReportSha256": "ddc45b40e1343c79a8e684fd8f16cb5fefc82194750986564d921b98c0736c91"
+      },
+      "artifacts": {
+        "baseline": {
+          "artifactId": 12205931095,
+          "artifactName": "dealer-pack-evidence-granada-auto-sales-39284983471-2",
+          "archiveBytes": 10359871,
+          "archiveSha256": "a2e03a81f7db007d90b937db54c1c7d1372e3016feb7cb1e251437e6656395f1",
+          "url": "https://github.com/darkapoparka/cars/actions/runs/39284983471/artifacts/12205931095",
+          "metadataSourceCommit": "a999878a921fb61b37bf198c43275550814f88cc",
+          "unexpiredWhenRetrieved": true,
+          "archiveSizeAndSha256Verified": true,
+          "screenshotSha256Verified": 18
+        },
+        "candidate": {
+          "artifactId": 12229482424,
+          "artifactName": "dealer-pack-reports--lane-1--39341160417",
+          "archiveBytes": 10495697,
+          "archiveSha256": "ec1dec6ff57c773ffe8b2b43d6e8c26779cfa1337124e36110238ff584a959bc",
+          "url": "https://github.com/darkapoparka/cars/actions/runs/39341160417/artifacts/12229482424",
+          "metadataSourceCommit": "599adb6c101219eecbe8b4117e62189f7f168f16",
+          "unexpiredWhenRetrieved": true,
+          "archiveSizeAndSha256Verified": true,
+          "screenshotSha256Verified": 18
+        }
+      },
+      "buildAndQa": {
+        "baseline": {
+          "status": "passed",
+          "packCompositionDigest": "a719efeb4765283bd03927205a63a56b78c0512b97f2733b1b10529e170954d1",
+          "sourceReleasesEqual": true,
+          "workerName": "cars-granada-auto-sales",
+          "publicOrigin": "https://granada-auto-sales.webpreviews.site",
+          "providerWrites": false,
+          "hostedVerified": false,
+          "qaSuccess": true,
+          "qaChecks": [
+            {
+              "id": "bundle-integrity",
+              "status": "passed"
+            },
+            {
+              "id": "cloudflare-limits",
+              "status": "passed"
+            },
+            {
+              "id": "fleet-contact-coverage",
+              "status": "passed"
+            },
+            {
+              "id": "logo-assets",
+              "status": "passed"
+            },
+            {
+              "id": "fab-interaction:auto-best",
+              "status": "passed"
+            },
+            {
+              "id": "fab-interaction:modern",
+              "status": "passed"
+            },
+            {
+              "id": "fab-interaction:import",
+              "status": "passed"
+            },
+            {
+              "id": "fab-interaction:app",
+              "status": "passed"
+            },
+            {
+              "id": "fab-interaction:mobile",
+              "status": "passed"
+            },
+            {
+              "id": "fab-interaction:karento-best",
+              "status": "passed"
+            },
+            {
+              "id": "rendered-routes",
+              "status": "passed"
+            },
+            {
+              "id": "design-identities",
+              "status": "passed"
+            },
+            {
+              "id": "screenshots",
+              "status": "passed"
+            },
+            {
+              "id": "bundle-unchanged",
+              "status": "passed"
+            }
+          ],
+          "qaRouteCount": 42,
+          "qaRoutesPassed": 42,
+          "homeScreenshotCount": 18
+        },
+        "candidate": {
+          "status": "passed",
+          "packCompositionDigest": "9f9f44743dbcd3c22383757163f3912fdefb2ec0b6de12b251a712f2ad95c765",
+          "sourceReleasesEqual": true,
+          "workerName": "cars-granada-auto-sales",
+          "publicOrigin": "https://granada-auto-sales.webpreviews.site",
+          "providerWrites": false,
+          "hostedVerified": false,
+          "qaSuccess": true,
+          "qaChecks": [
+            {
+              "id": "bundle-integrity",
+              "status": "passed"
+            },
+            {
+              "id": "cloudflare-limits",
+              "status": "passed"
+            },
+            {
+              "id": "fleet-contact-coverage",
+              "status": "passed"
+            },
+            {
+              "id": "logo-assets",
+              "status": "passed"
+            },
+            {
+              "id": "fab-interaction:auto-best",
+              "status": "passed"
+            },
+            {
+              "id": "fab-interaction:modern",
+              "status": "passed"
+            },
+            {
+              "id": "fab-interaction:import",
+              "status": "passed"
+            },
+            {
+              "id": "fab-interaction:app",
+              "status": "passed"
+            },
+            {
+              "id": "fab-interaction:mobile",
+              "status": "passed"
+            },
+            {
+              "id": "fab-interaction:karento-best",
+              "status": "passed"
+            },
+            {
+              "id": "rendered-routes",
+              "status": "passed"
+            },
+            {
+              "id": "design-identities",
+              "status": "passed"
+            },
+            {
+              "id": "screenshots",
+              "status": "passed"
+            },
+            {
+              "id": "bundle-unchanged",
+              "status": "passed"
+            }
+          ],
+          "qaRouteCount": 42,
+          "qaRoutesPassed": 42,
+          "homeScreenshotCount": 18
+        }
+      },
+      "totals": {
+        "rawDifferentPixels": 11172,
+        "authorizedFabPixels": 11172,
+        "antialiasingPixels": 0,
+        "unexpectedPixels": 0
+      },
+      "pixelIdentical": false,
+      "unchangedOutsideAuthorizedFabArtwork": true,
+      "screenshots": [
+        {
+          "key": "auto-best",
+          "width": 320,
+          "route": "home",
+          "baselineSha256": "d47eb1f45f6a419605896436c4652c97eccbdf3e3400d1595e1cd1f92b7638b7",
+          "candidateSha256": "0067360fc29699ba3347a33cac940d30336290285cc1a7f7d3b685a30030f564",
+          "status": "fleet-fab-correction-only",
+          "findings": [],
+          "height": 2797,
+          "rawDifferentPixels": 559,
+          "authorizedFabPixels": 559,
+          "antialiasingPixels": 0,
+          "unexpectedPixels": 0,
+          "exception": {
+            "policy": "fleet-design-mark-v1",
+            "bounds": {
+              "x": 254,
+              "y": 782,
+              "width": 46,
+              "height": 34
+            },
+            "rectangle": {
+              "x": 254,
+              "y": 782,
+              "width": 46,
+              "height": 34
+            },
+            "scrollbarGutterPixels": 0,
+            "beforeSha256": "23ef336c4cd1c788a2e63ac9b7966159994d70fb859cb5e0371b23cc209012de",
+            "afterSha256": "0f2bbb154f81a232777f31faa21b0bd0eaffde4bb083b9447ffa8c0550b0b12a",
+            "checkedOutsideArtwork": "button border, badge, shadow and every other page pixel"
+          },
+          "diff": "diffs/auto-best-320-home.png",
+          "diffSha256": "456c1083330e49a637352e9eb318ba5cf7ec818bdcfd8c018d8d34da4146c6ad"
+        },
+        {
+          "key": "auto-best",
+          "width": 390,
+          "route": "home",
+          "baselineSha256": "5005e4e613f7510aaaafa946a3ce18437f82af5e5d422ff1c8e291d001024c58",
+          "candidateSha256": "2c52d0c7dfbde4a296485ef482869b03f98eed869594f20f882d709092799b47",
+          "status": "fleet-fab-correction-only",
+          "findings": [],
+          "height": 2810,
+          "rawDifferentPixels": 559,
+          "authorizedFabPixels": 559,
+          "antialiasingPixels": 0,
+          "unexpectedPixels": 0,
+          "exception": {
+            "policy": "fleet-design-mark-v1",
+            "bounds": {
+              "x": 324,
+              "y": 782,
+              "width": 46,
+              "height": 34
+            },
+            "rectangle": {
+              "x": 324,
+              "y": 782,
+              "width": 46,
+              "height": 34
+            },
+            "scrollbarGutterPixels": 0,
+            "beforeSha256": "23ef336c4cd1c788a2e63ac9b7966159994d70fb859cb5e0371b23cc209012de",
+            "afterSha256": "0f2bbb154f81a232777f31faa21b0bd0eaffde4bb083b9447ffa8c0550b0b12a",
+            "checkedOutsideArtwork": "button border, badge, shadow and every other page pixel"
+          },
+          "diff": "diffs/auto-best-390-home.png",
+          "diffSha256": "a11dd5311204eeb2ee6f827ec0edb25adf53a67e8db0237c782dfde23e07dd03"
+        },
+        {
+          "key": "auto-best",
+          "width": 1280,
+          "route": "home",
+          "baselineSha256": "e577f6d39d04c6ac955d3ec2335ee024f48f29e770858d14ffe294fe78881758",
+          "candidateSha256": "f091b0e9fe001bf5534c37e7ce9cb43388353c3fdcab233a73adb36fda5cb6fe",
+          "status": "fleet-fab-correction-only",
+          "findings": [],
+          "height": 3802,
+          "rawDifferentPixels": 559,
+          "authorizedFabPixels": 559,
+          "antialiasingPixels": 0,
+          "unexpectedPixels": 0,
+          "exception": {
+            "policy": "fleet-design-mark-v1",
+            "bounds": {
+              "x": 1189,
+              "y": 758,
+              "width": 46,
+              "height": 34
+            },
+            "rectangle": {
+              "x": 1189,
+              "y": 758,
+              "width": 46,
+              "height": 34
+            },
+            "scrollbarGutterPixels": 15,
+            "beforeSha256": "23ef336c4cd1c788a2e63ac9b7966159994d70fb859cb5e0371b23cc209012de",
+            "afterSha256": "0f2bbb154f81a232777f31faa21b0bd0eaffde4bb083b9447ffa8c0550b0b12a",
+            "checkedOutsideArtwork": "button border, badge, shadow and every other page pixel"
+          },
+          "diff": "diffs/auto-best-1280-home.png",
+          "diffSha256": "0b1db33eaa4c0864347cb5be7d20085071eed5754c957a4d2880196d75db2165"
+        },
+        {
+          "key": "modern",
+          "width": 320,
+          "route": "home",
+          "baselineSha256": "8fb62c0d6692eb3882b2cbdb8a55c1eface6b08eb2b712f2b1bcfda833f08ea1",
+          "candidateSha256": "f86f4f98c609cada81ac0a13b85319c54029f9ac54b45a73df4a3458b4e5fc4b",
+          "status": "fleet-fab-correction-only",
+          "findings": [],
+          "height": 900,
+          "rawDifferentPixels": 538,
+          "authorizedFabPixels": 538,
+          "antialiasingPixels": 0,
+          "unexpectedPixels": 0,
+          "exception": {
+            "policy": "fleet-design-mark-v1",
+            "bounds": {
+              "x": 239,
+              "y": 789,
+              "width": 46,
+              "height": 34
+            },
+            "rectangle": {
+              "x": 239,
+              "y": 789,
+              "width": 46,
+              "height": 34
+            },
+            "scrollbarGutterPixels": 15,
+            "beforeSha256": "23ef336c4cd1c788a2e63ac9b7966159994d70fb859cb5e0371b23cc209012de",
+            "afterSha256": "3571f6f93e7ec0cdbc36536d41019d9a3cb3b110ba3775ac9b6eca270f61123b",
+            "checkedOutsideArtwork": "button border, badge, shadow and every other page pixel"
+          },
+          "diff": "diffs/modern-320-home.png",
+          "diffSha256": "40afe7304fa94e23e086423443f76e9a54ca31ac643060b7d0d7316de56eb26f"
+        },
+        {
+          "key": "modern",
+          "width": 390,
+          "route": "home",
+          "baselineSha256": "b2a79bfa2b42d0d4c415874032e164be29afc45a519fcb9e1b9d00416b65f6d9",
+          "candidateSha256": "d4c215fb900ada3182670588b0691b9f1faa8679826867932eb370ba4f6f0151",
+          "status": "fleet-fab-correction-only",
+          "findings": [],
+          "height": 900,
+          "rawDifferentPixels": 538,
+          "authorizedFabPixels": 538,
+          "antialiasingPixels": 0,
+          "unexpectedPixels": 0,
+          "exception": {
+            "policy": "fleet-design-mark-v1",
+            "bounds": {
+              "x": 309,
+              "y": 789,
+              "width": 46,
+              "height": 34
+            },
+            "rectangle": {
+              "x": 309,
+              "y": 789,
+              "width": 46,
+              "height": 34
+            },
+            "scrollbarGutterPixels": 15,
+            "beforeSha256": "23ef336c4cd1c788a2e63ac9b7966159994d70fb859cb5e0371b23cc209012de",
+            "afterSha256": "3571f6f93e7ec0cdbc36536d41019d9a3cb3b110ba3775ac9b6eca270f61123b",
+            "checkedOutsideArtwork": "button border, badge, shadow and every other page pixel"
+          },
+          "diff": "diffs/modern-390-home.png",
+          "diffSha256": "5a17ca93eb5439b25a11a1ea36ad6150f5184675a2dda67cb71102e0a08d99f7"
+        },
+        {
+          "key": "modern",
+          "width": 1280,
+          "route": "home",
+          "baselineSha256": "3566b9e8c4c462d1ba8de59efc88cc7a64316651e3b08206992e74192efd35b2",
+          "candidateSha256": "ba5a1525e5a7882c315049c77f916dc8a8a8481566f359b9cdc3e3babd1ebf64",
+          "status": "fleet-fab-correction-only",
+          "findings": [],
+          "height": 1425,
+          "rawDifferentPixels": 538,
+          "authorizedFabPixels": 538,
+          "antialiasingPixels": 0,
+          "unexpectedPixels": 0,
+          "exception": {
+            "policy": "fleet-design-mark-v1",
+            "bounds": {
+              "x": 1189,
+              "y": 758,
+              "width": 46,
+              "height": 34
+            },
+            "rectangle": {
+              "x": 1189,
+              "y": 758,
+              "width": 46,
+              "height": 34
+            },
+            "scrollbarGutterPixels": 15,
+            "beforeSha256": "23ef336c4cd1c788a2e63ac9b7966159994d70fb859cb5e0371b23cc209012de",
+            "afterSha256": "3571f6f93e7ec0cdbc36536d41019d9a3cb3b110ba3775ac9b6eca270f61123b",
+            "checkedOutsideArtwork": "button border, badge, shadow and every other page pixel"
+          },
+          "diff": "diffs/modern-1280-home.png",
+          "diffSha256": "13ed72ee165724caee18b422a51314cbc850760bc2caca5480ffea9787881d99"
+        },
+        {
+          "key": "import",
+          "width": 320,
+          "route": "home",
+          "baselineSha256": "7cf8bb7edf086c256778a8ef95e863170d50d101bda19a9a291ad51b1832baea",
+          "candidateSha256": "7b15dfc57feadfc6e569ec92aa71e9abdfb1b770f38e55727f338d7baf758d0d",
+          "status": "fleet-fab-correction-only",
+          "findings": [],
+          "height": 3245,
+          "rawDifferentPixels": 630,
+          "authorizedFabPixels": 630,
+          "antialiasingPixels": 0,
+          "unexpectedPixels": 0,
+          "exception": {
+            "policy": "fleet-design-mark-v1",
+            "bounds": {
+              "x": 254,
+              "y": 790,
+              "width": 46,
+              "height": 34
+            },
+            "rectangle": {
+              "x": 254,
+              "y": 790,
+              "width": 46,
+              "height": 34
+            },
+            "scrollbarGutterPixels": 0,
+            "beforeSha256": "23ef336c4cd1c788a2e63ac9b7966159994d70fb859cb5e0371b23cc209012de",
+            "afterSha256": "bfe442422b720695a60fa435f3c5d02efa50b26dd904f1a6ab6e1de79dfa7295",
+            "checkedOutsideArtwork": "button border, badge, shadow and every other page pixel"
+          },
+          "diff": "diffs/import-320-home.png",
+          "diffSha256": "e2af173f67c6820a85997cacee45523071805ed3f28b9e5dc8341b33a2c666f9"
+        },
+        {
+          "key": "import",
+          "width": 390,
+          "route": "home",
+          "baselineSha256": "5ec2d610cdea6b5293a53336cbcb1c4549b378a451377aabce5b0e198e3ef573",
+          "candidateSha256": "d52cf28f337c02d9695bc126f1ee12bee547607b60aa3bd1ebaf51d88d562414",
+          "status": "fleet-fab-correction-only",
+          "findings": [],
+          "height": 3271,
+          "rawDifferentPixels": 630,
+          "authorizedFabPixels": 630,
+          "antialiasingPixels": 0,
+          "unexpectedPixels": 0,
+          "exception": {
+            "policy": "fleet-design-mark-v1",
+            "bounds": {
+              "x": 324,
+              "y": 790,
+              "width": 46,
+              "height": 34
+            },
+            "rectangle": {
+              "x": 324,
+              "y": 790,
+              "width": 46,
+              "height": 34
+            },
+            "scrollbarGutterPixels": 0,
+            "beforeSha256": "23ef336c4cd1c788a2e63ac9b7966159994d70fb859cb5e0371b23cc209012de",
+            "afterSha256": "bfe442422b720695a60fa435f3c5d02efa50b26dd904f1a6ab6e1de79dfa7295",
+            "checkedOutsideArtwork": "button border, badge, shadow and every other page pixel"
+          },
+          "diff": "diffs/import-390-home.png",
+          "diffSha256": "84ba6b577040d59262622c72baa6e3a90864bf4bc8698708c24e9a0d2ee5b0bc"
+        },
+        {
+          "key": "import",
+          "width": 1280,
+          "route": "home",
+          "baselineSha256": "e80f55646f4d2ddf3e003671ef36986ba174112bf978b1e623c4cb1eea6cc6c1",
+          "candidateSha256": "0e1d42326b2ac67741900bc85598b1e345eaa356de63bd81441530cc8c9445d8",
+          "status": "fleet-fab-correction-only",
+          "findings": [],
+          "height": 3515,
+          "rawDifferentPixels": 630,
+          "authorizedFabPixels": 630,
+          "antialiasingPixels": 0,
+          "unexpectedPixels": 0,
+          "exception": {
+            "policy": "fleet-design-mark-v1",
+            "bounds": {
+              "x": 1189,
+              "y": 758,
+              "width": 46,
+              "height": 34
+            },
+            "rectangle": {
+              "x": 1189,
+              "y": 758,
+              "width": 46,
+              "height": 34
+            },
+            "scrollbarGutterPixels": 15,
+            "beforeSha256": "23ef336c4cd1c788a2e63ac9b7966159994d70fb859cb5e0371b23cc209012de",
+            "afterSha256": "bfe442422b720695a60fa435f3c5d02efa50b26dd904f1a6ab6e1de79dfa7295",
+            "checkedOutsideArtwork": "button border, badge, shadow and every other page pixel"
+          },
+          "diff": "diffs/import-1280-home.png",
+          "diffSha256": "fc17f88b8c49b1a7047a3a2583f73e2028ecb20cfc7b39f8b8db123a78d1bb7f"
+        },
+        {
+          "key": "app",
+          "width": 320,
+          "route": "home",
+          "baselineSha256": "2b461e15017317f52807b900383969316111cdef7a7fa273c53b7589a656726e",
+          "candidateSha256": "9905dae7540861981043571bee982f8520bf3b707dc8aab2ecaa93a267fac489",
+          "status": "fleet-fab-correction-only",
+          "findings": [],
+          "height": 1124,
+          "rawDifferentPixels": 703,
+          "authorizedFabPixels": 703,
+          "antialiasingPixels": 0,
+          "unexpectedPixels": 0,
+          "exception": {
+            "policy": "fleet-design-mark-v1",
+            "bounds": {
+              "x": 254,
+              "y": 780,
+              "width": 46,
+              "height": 34
+            },
+            "rectangle": {
+              "x": 254,
+              "y": 780,
+              "width": 46,
+              "height": 34
+            },
+            "scrollbarGutterPixels": 0,
+            "beforeSha256": "23ef336c4cd1c788a2e63ac9b7966159994d70fb859cb5e0371b23cc209012de",
+            "afterSha256": "0cba074fa7da806c9e427b8c14aaf2d566470c69fc42fcb6f7774734e71296c4",
+            "checkedOutsideArtwork": "button border, badge, shadow and every other page pixel"
+          },
+          "diff": "diffs/app-320-home.png",
+          "diffSha256": "56cdacc761858321a381629f6d172b1ac46e5dd8015df2b2bf8976cfe17897b6"
+        },
+        {
+          "key": "app",
+          "width": 390,
+          "route": "home",
+          "baselineSha256": "ca83680e94e71773c8b0f6f6741aa2391ade0a9593c74c8a867cd08f043fc54d",
+          "candidateSha256": "b79fbaab3af64175c39933d202f1c35736255ddcd1fcaa97aaa64bd6c82a0474",
+          "status": "fleet-fab-correction-only",
+          "findings": [],
+          "height": 1124,
+          "rawDifferentPixels": 703,
+          "authorizedFabPixels": 703,
+          "antialiasingPixels": 0,
+          "unexpectedPixels": 0,
+          "exception": {
+            "policy": "fleet-design-mark-v1",
+            "bounds": {
+              "x": 324,
+              "y": 780,
+              "width": 46,
+              "height": 34
+            },
+            "rectangle": {
+              "x": 324,
+              "y": 780,
+              "width": 46,
+              "height": 34
+            },
+            "scrollbarGutterPixels": 0,
+            "beforeSha256": "23ef336c4cd1c788a2e63ac9b7966159994d70fb859cb5e0371b23cc209012de",
+            "afterSha256": "0cba074fa7da806c9e427b8c14aaf2d566470c69fc42fcb6f7774734e71296c4",
+            "checkedOutsideArtwork": "button border, badge, shadow and every other page pixel"
+          },
+          "diff": "diffs/app-390-home.png",
+          "diffSha256": "eabeab1dcba31424193c2c865b4ea8e9844fcae6df8e897f4392d65cff03059a"
+        },
+        {
+          "key": "app",
+          "width": 1280,
+          "route": "home",
+          "baselineSha256": "38520d1ac73116033591061cb93260e0ce990c61a3e6021037f4673fec45dfe9",
+          "candidateSha256": "98288bebfd8a0733a54b18cdc51a12b1d00eaa68e71bbefd37b87928b2ddf372",
+          "status": "fleet-fab-correction-only",
+          "findings": [],
+          "height": 1115,
+          "rawDifferentPixels": 703,
+          "authorizedFabPixels": 703,
+          "antialiasingPixels": 0,
+          "unexpectedPixels": 0,
+          "exception": {
+            "policy": "fleet-design-mark-v1",
+            "bounds": {
+              "x": 1189,
+              "y": 758,
+              "width": 46,
+              "height": 34
+            },
+            "rectangle": {
+              "x": 1189,
+              "y": 758,
+              "width": 46,
+              "height": 34
+            },
+            "scrollbarGutterPixels": 15,
+            "beforeSha256": "23ef336c4cd1c788a2e63ac9b7966159994d70fb859cb5e0371b23cc209012de",
+            "afterSha256": "0cba074fa7da806c9e427b8c14aaf2d566470c69fc42fcb6f7774734e71296c4",
+            "checkedOutsideArtwork": "button border, badge, shadow and every other page pixel"
+          },
+          "diff": "diffs/app-1280-home.png",
+          "diffSha256": "d1266669554cc51e6c2b64eef4b1c17f55f24f653b35b0d0dfd3c04c9e8f0fcd"
+        },
+        {
+          "key": "mobile",
+          "width": 320,
+          "route": "home",
+          "baselineSha256": "0d6b0e29f77ec83b5b070df9469ebb95276f1ce3c11dab8e75f87e60fdf4f764",
+          "candidateSha256": "8dd2d8f6e58ecc2df4d020355ad038469c4b016f4035ca3282e7aceea6f793ca",
+          "status": "fleet-fab-correction-only",
+          "findings": [],
+          "height": 1141,
+          "rawDifferentPixels": 697,
+          "authorizedFabPixels": 697,
+          "antialiasingPixels": 0,
+          "unexpectedPixels": 0,
+          "exception": {
+            "policy": "fleet-design-mark-v1",
+            "bounds": {
+              "x": 254,
+              "y": 784,
+              "width": 46,
+              "height": 34
+            },
+            "rectangle": {
+              "x": 254,
+              "y": 784,
+              "width": 46,
+              "height": 34
+            },
+            "scrollbarGutterPixels": 0,
+            "beforeSha256": "23ef336c4cd1c788a2e63ac9b7966159994d70fb859cb5e0371b23cc209012de",
+            "afterSha256": "d82d8279c296f823cededfb793b5d3fcfb38cf0fa7f90761aa6ecb562ba24e1d",
+            "checkedOutsideArtwork": "button border, badge, shadow and every other page pixel"
+          },
+          "diff": "diffs/mobile-320-home.png",
+          "diffSha256": "34ea9f1a7abcba396f21f6948c22e5c6d2fa3dd111af16077ecec15f70cae4eb"
+        },
+        {
+          "key": "mobile",
+          "width": 390,
+          "route": "home",
+          "baselineSha256": "f4a2e312836a407ee2ef57f83ceb2ab4f84da5a1c7ead0153bd3d0262c8ab1c2",
+          "candidateSha256": "c71a630c3b0bb6f90851b93290f5d77bad960e826138e215106fe30f67e72f36",
+          "status": "fleet-fab-correction-only",
+          "findings": [],
+          "height": 1141,
+          "rawDifferentPixels": 697,
+          "authorizedFabPixels": 697,
+          "antialiasingPixels": 0,
+          "unexpectedPixels": 0,
+          "exception": {
+            "policy": "fleet-design-mark-v1",
+            "bounds": {
+              "x": 324,
+              "y": 784,
+              "width": 46,
+              "height": 34
+            },
+            "rectangle": {
+              "x": 324,
+              "y": 784,
+              "width": 46,
+              "height": 34
+            },
+            "scrollbarGutterPixels": 0,
+            "beforeSha256": "23ef336c4cd1c788a2e63ac9b7966159994d70fb859cb5e0371b23cc209012de",
+            "afterSha256": "d82d8279c296f823cededfb793b5d3fcfb38cf0fa7f90761aa6ecb562ba24e1d",
+            "checkedOutsideArtwork": "button border, badge, shadow and every other page pixel"
+          },
+          "diff": "diffs/mobile-390-home.png",
+          "diffSha256": "02c4e1e344585d60763f0f21db6df0f6d216de18c356998808fc43f74f379efe"
+        },
+        {
+          "key": "mobile",
+          "width": 1280,
+          "route": "home",
+          "baselineSha256": "373dbe14317c1df98ddf50aced54ac036c6c088f2de32cc316f003b4db586486",
+          "candidateSha256": "d84b2dd7b17619f9721724058d40b90df01a964f88049458ff866255877e737b",
+          "status": "fleet-fab-correction-only",
+          "findings": [],
+          "height": 917,
+          "rawDifferentPixels": 697,
+          "authorizedFabPixels": 697,
+          "antialiasingPixels": 0,
+          "unexpectedPixels": 0,
+          "exception": {
+            "policy": "fleet-design-mark-v1",
+            "bounds": {
+              "x": 1189,
+              "y": 758,
+              "width": 46,
+              "height": 34
+            },
+            "rectangle": {
+              "x": 1189,
+              "y": 758,
+              "width": 46,
+              "height": 34
+            },
+            "scrollbarGutterPixels": 15,
+            "beforeSha256": "23ef336c4cd1c788a2e63ac9b7966159994d70fb859cb5e0371b23cc209012de",
+            "afterSha256": "d82d8279c296f823cededfb793b5d3fcfb38cf0fa7f90761aa6ecb562ba24e1d",
+            "checkedOutsideArtwork": "button border, badge, shadow and every other page pixel"
+          },
+          "diff": "diffs/mobile-1280-home.png",
+          "diffSha256": "7e6f9538cd90380e02ec918c125c2391a9154d8dcd6e6e0fdc150435d605ec68"
+        },
+        {
+          "key": "karento-best",
+          "width": 320,
+          "route": "home",
+          "baselineSha256": "2ac0dae95544894f926dff1c75f581fbcc3ad98a454eeb7c0f100b0c2a4507a6",
+          "candidateSha256": "a2b7948fbd187e287dd134d77c9627dcd9488eccc91c6cd46d3a229e6a48033c",
+          "status": "fleet-fab-correction-only",
+          "findings": [],
+          "height": 900,
+          "rawDifferentPixels": 597,
+          "authorizedFabPixels": 597,
+          "antialiasingPixels": 0,
+          "unexpectedPixels": 0,
+          "exception": {
+            "policy": "fleet-design-mark-v1",
+            "bounds": {
+              "x": 254,
+              "y": 789,
+              "width": 46,
+              "height": 34
+            },
+            "rectangle": {
+              "x": 254,
+              "y": 789,
+              "width": 46,
+              "height": 34
+            },
+            "scrollbarGutterPixels": 0,
+            "beforeSha256": "23ef336c4cd1c788a2e63ac9b7966159994d70fb859cb5e0371b23cc209012de",
+            "afterSha256": "cc87efaaf8587fdb432110805998c6ddd78c347b1697483bb0b2a9b038d6b5c2",
+            "checkedOutsideArtwork": "button border, badge, shadow and every other page pixel"
+          },
+          "diff": "diffs/karento-best-320-home.png",
+          "diffSha256": "061ca45a28b64bfc0d9117708c18737c9c8c9c6b0698ccc1da51c4dbdc8dbb14"
+        },
+        {
+          "key": "karento-best",
+          "width": 390,
+          "route": "home",
+          "baselineSha256": "bd0f0a57c3430ccd5b734d41da985c96944684f2f083e6c1e61f55d77aba62aa",
+          "candidateSha256": "c172f8259689465969bcd46b94d096e713290d75a21ea2f4edc187025c1a4d4c",
+          "status": "fleet-fab-correction-only",
+          "findings": [],
+          "height": 900,
+          "rawDifferentPixels": 597,
+          "authorizedFabPixels": 597,
+          "antialiasingPixels": 0,
+          "unexpectedPixels": 0,
+          "exception": {
+            "policy": "fleet-design-mark-v1",
+            "bounds": {
+              "x": 324,
+              "y": 789,
+              "width": 46,
+              "height": 34
+            },
+            "rectangle": {
+              "x": 324,
+              "y": 789,
+              "width": 46,
+              "height": 34
+            },
+            "scrollbarGutterPixels": 0,
+            "beforeSha256": "23ef336c4cd1c788a2e63ac9b7966159994d70fb859cb5e0371b23cc209012de",
+            "afterSha256": "cc87efaaf8587fdb432110805998c6ddd78c347b1697483bb0b2a9b038d6b5c2",
+            "checkedOutsideArtwork": "button border, badge, shadow and every other page pixel"
+          },
+          "diff": "diffs/karento-best-390-home.png",
+          "diffSha256": "93aed6865858a182bd6bd479636bbf9dcc146e7b7bcc122623511055abc3ad24"
+        },
+        {
+          "key": "karento-best",
+          "width": 1280,
+          "route": "home",
+          "baselineSha256": "17ebf3386574bfba6b6b1384497f878101fd535898ce83a830d46bdd342715c8",
+          "candidateSha256": "7e51ff4bd7ee11e2768eecb8ace9787a7b7260b609a40ac659f969d86f2e96d3",
+          "status": "fleet-fab-correction-only",
+          "findings": [],
+          "height": 4739,
+          "rawDifferentPixels": 597,
+          "authorizedFabPixels": 597,
+          "antialiasingPixels": 0,
+          "unexpectedPixels": 0,
+          "exception": {
+            "policy": "fleet-design-mark-v1",
+            "bounds": {
+              "x": 1204,
+              "y": 758,
+              "width": 46,
+              "height": 34
+            },
+            "rectangle": {
+              "x": 1204,
+              "y": 758,
+              "width": 46,
+              "height": 34
+            },
+            "scrollbarGutterPixels": 0,
+            "beforeSha256": "23ef336c4cd1c788a2e63ac9b7966159994d70fb859cb5e0371b23cc209012de",
+            "afterSha256": "cc87efaaf8587fdb432110805998c6ddd78c347b1697483bb0b2a9b038d6b5c2",
+            "checkedOutsideArtwork": "button border, badge, shadow and every other page pixel"
+          },
+          "diff": "diffs/karento-best-1280-home.png",
+          "diffSha256": "ee86413b032938edba6c28b5538316ed18428cc8141a5f833582b9d6813f8bd7"
+        }
+      ]
+    }
+  ],
+  "scope": {
+    "providerWritesPerformedForThisComparison": 0,
+    "buildsPerformedForThisComparison": 0,
+    "browserRecapturesPerformedForThisComparison": 0,
+    "scopeNote": "This authenticates the existing successful source599 build outputs and local CI screenshot evidence. Hosted route, HEAD, identity, CPU and startup qualification requires separate deployment and hosted receipts.",
+    "sourceBinding": "Applies to the exact candidate source commit and output digests above. Later metadata, workflow or documentation changes do not extend this result to different pack-producing code or different outputs.",
+    "retainedArtifacts": "Only JSON evidence is committed. Original build reports, QA reports and PNGs remain in the identified GitHub artifacts; local generated diff PNG hashes are recorded for reproducibility."
+  }
+}

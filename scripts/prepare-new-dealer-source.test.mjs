@@ -39,6 +39,19 @@ test('exact inventory and lock pins cannot drift; a second dealer cannot collide
 test('existing aliases, manifest-less folders, branch sources, research candidates and independent identities reject',()=>{for(const occupied of [f=>f.inventories.registry.aliases['new-sourcedcars']='old',f=>f.inventories.occupiedSlugs=['new-sourcedcars'],f=>f.inventories.registry.dealers=[{slug:f.dealer.slug,branchSources:[{branch:'codex/old'}]}],f=>f.inventories.clientIndex.campaignCandidatesWithoutFolders=[{slug:f.dealer.slug}],f=>f.inventories.registry.dealers=[{slug:'other',sourceOwnership:'independent-repository',repository:f.dealer.repository}],f=>f.dealer.sourceOwnership='independent-repository']){const f=fixture();occupied(f);assert.throws(()=>validateNewSourceRequest(f.request,f.inventories));}});
 test('bounded media pins reject traversal, duplicate destinations, invalid byte counts and unreviewed fact/branding paths',()=>{for(const change of [f=>f.dealer.media[0].path=NEW_SOURCE_INPUT_ROOT+'/../secrets.png',f=>f.dealer.media[0].bytes=Infinity,f=>f.dealer.media[0].bytes=25*1024**2+1,f=>f.dealer.media.push({...f.dealer.media[0],path:f.dealer.media[0].path+'.copy'}),f=>f.dealer.inputs.branding.path='runtime/branding.json',f=>f.dealer.media[0].destination='auto-best/package.json']){const f=fixture();change(f);assert.throws(()=>validateNewSourceRequest(f.request,f.inventories));}});
 test('country, currency, identity, locale and source date remain explicit factual inputs',()=>{for(const change of [f=>f.facts.dealerId='wrong',f=>f.identityReview.existingIdentityFound=true,f=>f.identityReview.reviewed=false,f=>f.facts.business.currency='USD',f=>f.locale.dealerId='wrong',f=>f.locale.enabledLocales=['bg'],f=>f.facts.business.observedAt='unknown',f=>f.stock.records[0].year=undefined,f=>f.stock.records[0].currency='USD',f=>f.stock.records[0].sourceUrl='https://u:p@example.com',f=>f.stock.records[0].images=['https://example.com/unretained.jpg'],f=>f.facts.vehicles=[]]){const f=fixture();change(f);assert.throws(()=>validateNewDealerFacts(factsInput(f)));}});
+test('only an explicit Cars dealer-pack policy accepts an empty street without changing legacy or source requirements',()=>{
+ const f=fixture();f.facts.business.address='';f.facts.business.phone='';
+ assert.throws(()=>validateNewDealerFacts(factsInput(f)),/name\/location/);
+ assert.throws(()=>validateNewDealerFacts({...factsInput(f),factPolicy:'dealer-pack-optional-v1'}),/explicit Cars dealer-pack/);
+ Object.assign(f.dealer,{sourceFormat:'dealer-pack',repository:'darkapoparka/cars'});f.identityReview.repository=f.dealer.repository;
+ assert.throws(()=>validateNewDealerFacts(factsInput(f)),/name\/location/);
+ const before=JSON.stringify(f),input=()=>({...factsInput(f),factPolicy:'dealer-pack-optional-v1'});
+ assert.equal(validateNewDealerFacts(input()).records,1);assert.equal(JSON.stringify(f),before);
+ assert.throws(()=>validateNewDealerFacts({...input(),factPolicy:'optional'}),/explicit Cars dealer-pack/);
+ for(const address of [' ',null,undefined,123]){const broken=clone(f);broken.facts.business.address=address;assert.throws(()=>validateNewDealerFacts({...factsInput(broken),factPolicy:'dealer-pack-optional-v1'}),/name\/location/);}
+ for(const field of ['name','city','sourceUrl','observedAt']){const broken=clone(f);broken.facts.business[field]='';assert.throws(()=>validateNewDealerFacts({...factsInput(broken),factPolicy:'dealer-pack-optional-v1'}),/name\/location/);}
+ const unreviewed=clone(f);unreviewed.identityReview.reviewed=false;assert.throws(()=>validateNewDealerFacts({...factsInput(unreviewed),factPolicy:'dealer-pack-optional-v1'}),/reviewed absence/);
+});
 test('unknown prices/mileage stay unknown; alternate normalized facts never manufacture values',()=>{const f=fixture(),car=f.stock.records[0];delete car.priceAmount;car.priceOnRequest=true;delete car.mileageValue;delete car.mileageUnit;car.mileageOnRequest=true;assert.equal(validateNewDealerFacts(factsInput(f)).records,1);for(const field of ['priceUsd','sourcePrice','mileageKm','km','thumbnail']){const broken=clone(f);broken.stock.records[0][field]=1;assert.throws(()=>validateNewDealerFacts(factsInput(broken)));}});
 test('accepted unknown stock facts hold Modern adaptation before writing invented offers',t=>{
  const file=path.join(temp(t),'mock-data.ts'),source='export const mockListings: VehicleListing[] = [\n  {\n    id: "native-id"\n  }\n];\n';
@@ -199,6 +212,15 @@ test('resume CLI is explicit, production keeps maintained phases and code invent
  for(const name of ['scripts/new-client.mjs','scripts/lib/new-source-resume.mjs','scripts/lib/client-refresh-safe-content.mjs','scripts/lib/modern-dealer-inventory-copy.mjs','scripts/lib/import-dealer-inventory-copy.mjs','scripts/lib/source-input-raster.mjs','scripts/lib/cli-entrypoint.mjs','scripts/publishing/proposal-introduction.js','scripts/publishing/switcher-messages.json','scripts/publishing/assets/feature-vehicle.webp'])assert(NEW_SOURCE_ORCHESTRATION_PATHS.includes(name),name);assert(NEW_SOURCE_ORCHESTRATION_PATHS.length>40&&NEW_SOURCE_ORCHESTRATION_PATHS.length<=128);assert.equal(new Set(NEW_SOURCE_ORCHESTRATION_PATHS).size,NEW_SOURCE_ORCHESTRATION_PATHS.length);
  for(const options of [{resumeArea:'runtime/new-dealer-source/run/new-sourced-cars',write:true},{resumeOwner:'aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa',write:true},{resumeArea:'runtime/new-dealer-source/run/new-sourced-cars',resumeOwner:'aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa'}])await assert.rejects(prepareNewDealerSource({root:temp(t),dealer:'new-sourced-cars',...options}),/both --resume|--write/);
  const cli=fileURLToPath(new URL('./prepare-new-dealer-source.mjs',import.meta.url)),result=spawnSync(process.execPath,[cli,'--resume-area','one','--resume-area','two'],{encoding:'utf8',windowsHide:true});assert.notEqual(result.status,0);assert.match(result.stderr,/duplicate argument/);
+});
+
+test('transported orchestration boots using only its pinned files and detects an omitted publisher dependency',t=>{
+ const directory=temp(t),sourceRoot=fileURLToPath(new URL('..',import.meta.url));
+ for(const name of NEW_SOURCE_ORCHESTRATION_PATHS){const output=path.join(directory,name);fs.mkdirSync(path.dirname(output),{recursive:true});fs.copyFileSync(path.join(sourceRoot,name),output);}
+ const run=()=>spawnSync(process.execPath,[path.join(directory,'scripts/prepare-new-dealer-source.mjs'),'--help'],{cwd:directory,encoding:'utf8',windowsHide:true,timeout:30000});
+ const complete=run();assert.equal(complete.status,0,complete.stderr);assert.match(complete.stdout,/Default read-only/);assert.deepEqual(fs.readdirSync(directory),['scripts']);
+ fs.unlinkSync(path.join(directory,'scripts/lib/dealer-pack-switcher-logo.mjs'));
+ const incomplete=run();assert.notEqual(incomplete.status,0);assert.match(incomplete.stderr,/ERR_MODULE_NOT_FOUND/);assert.match(incomplete.stderr,/dealer-pack-switcher-logo\.mjs/);assert.deepEqual(fs.readdirSync(directory),['scripts']);
 });
 
 test('cheap Import preflight rejects original missing facts before any candidate is created',t=>{
