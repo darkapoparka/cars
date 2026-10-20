@@ -194,7 +194,9 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
         run: |
-          node scripts/dispatch-dealer-pack-queue.mjs drain --owner "github:${{ github.run_id }}" --write --max 400 --report runtime/dealer-pack-dispatch/drain.json
+          # Keep each 350-minute job bounded; later scheduled drains retain service
+          # for the remaining requests without expiring or replacing any claim.
+          node scripts/dispatch-dealer-pack-queue.mjs drain --owner "github:${{ github.run_id }}" --write --max 10 --report runtime/dealer-pack-dispatch/drain.json
       - name: Read startup, sampled CPU, memory and error evidence for this drain
         if: ${{ !cancelled() && steps.token.outputs.present == 'true' && (github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && (inputs.action == 'enqueue-and-deploy' || inputs.action == 'drain' || (inputs.action == 'recover-and-drain' && steps.reconcile.conclusion == 'success')))) }}
         env:
