@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "slug": "best-cars-exporter-dxb",
+  "dealerId": "ae-dubai-best-cars-exporter-dxb",
+  "business": {
+    "name": "Best Cars Exporter DXB",
+    "city": "Dubai",
+    "region": "Dubai",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "Ducamz , DUBAI",
+    "phone": "+971525289481",
+    "phoneDisplay": "+971525289481",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://www.dubicars.com/dealers/dubai-best-cars-exporter-dxb-2897",
+    "hours": "",
+    "sourceUrl": "https://www.dubicars.com/dealers/dubai-best-cars-exporter-dxb-2897",
+    "observedAt": "2026-10-19",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-best-cars-exporter-dxb-2897",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-best-cars-exporter-dxb-2897",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "business-name",
+        "business-address",
+        "dealer-attributed-business-phone",
+        "dated-stock-sample"
+      ]
+    }
+  ]
+}
