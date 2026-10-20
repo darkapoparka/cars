@@ -2671,6 +2671,186 @@
       "sourceRepository": "darkapoparka/cars",
       "sourceCommit": "f73c8e4b258653d1cee9c29d161e41774cfe6fb8",
       "sourcePath": "dealers/jr-auto-fzco"
+    },
+    {
+      "slug": "best-wheels-specialized-vehicles",
+      "name": "Best Wheels Specialized Vehicles",
+      "path": "dealers/best-wheels-specialized-vehicles",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "source-present",
+      "reviewState": "not-claimed",
+      "leadId": "ae-dubai-best-wheels-specialized-vehicles",
+      "sourceFormat": "dealer-pack",
+      "sourceRepository": "darkapoparka/cars",
+      "sourceCommit": "f73c8e4b258653d1cee9c29d161e41774cfe6fb8",
+      "sourcePath": "dealers/best-wheels-specialized-vehicles"
+    },
+    {
+      "slug": "golden-coast-auto",
+      "name": "Golden Coast Auto",
+      "path": "dealers/golden-coast-auto",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "source-present",
+      "reviewState": "not-claimed",
+      "leadId": "ae-dubai-golden-coast-auto",
+      "sourceFormat": "dealer-pack",
+      "sourceRepository": "darkapoparka/cars",
+      "sourceCommit": "f73c8e4b258653d1cee9c29d161e41774cfe6fb8",
+      "sourcePath": "dealers/golden-coast-auto"
+    },
+    {
+      "slug": "intercars",
+      "name": "InterCars",
+      "path": "dealers/intercars",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "source-present",
+      "reviewState": "not-claimed",
+      "leadId": "ae-dubai-intercars",
+      "sourceFormat": "dealer-pack",
+      "sourceRepository": "darkapoparka/cars",
+      "sourceCommit": "f73c8e4b258653d1cee9c29d161e41774cfe6fb8",
+      "sourcePath": "dealers/intercars"
+    },
+    {
+      "slug": "macan-luxury-cars",
+      "name": "Macan Luxury Cars",
+      "path": "dealers/macan-luxury-cars",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "source-present",
+      "reviewState": "not-claimed",
+      "leadId": "ae-dubai-macan-luxury-cars",
+      "sourceFormat": "dealer-pack",
+      "sourceRepository": "darkapoparka/cars",
+      "sourceCommit": "f73c8e4b258653d1cee9c29d161e41774cfe6fb8",
+      "sourcePath": "dealers/macan-luxury-cars"
+    },
+    {
+      "slug": "mangame-motors",
+      "name": "Mangame Motors",
+      "path": "dealers/mangame-motors",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "source-present",
+      "reviewState": "not-claimed",
+      "leadId": "ae-dubai-mangame-motors",
+      "sourceFormat": "dealer-pack",
+      "sourceRepository": "darkapoparka/cars",
+      "sourceCommit": "f73c8e4b258653d1cee9c29d161e41774cfe6fb8",
+      "sourcePath": "dealers/mangame-motors"
+    },
+    {
+      "slug": "mizdawy-motors",
+      "name": "Mizdawy Motors",
+      "path": "dealers/mizdawy-motors",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "source-present",
+      "reviewState": "not-claimed",
+      "leadId": "ae-dubai-mizdawy-motors",
+      "sourceFormat": "dealer-pack",
+      "sourceRepository": "darkapoparka/cars",
+      "sourceCommit": "f73c8e4b258653d1cee9c29d161e41774cfe6fb8",
+      "sourcePath": "dealers/mizdawy-motors"
+    },
+    {
+      "slug": "motorx-group",
+      "name": "MotorX Group",
+      "path": "dealers/motorx-group",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "source-present",
+      "reviewState": "not-claimed",
+      "leadId": "ae-dubai-motorx-group",
+      "sourceFormat": "dealer-pack",
+      "sourceRepository": "darkapoparka/cars",
+      "sourceCommit": "f73c8e4b258653d1cee9c29d161e41774cfe6fb8",
+      "sourcePath": "dealers/motorx-group"
+    },
+    {
+      "slug": "pegasus-automobile-fze",
+      "name": "Pegasus Automobile FZE",
+      "path": "dealers/pegasus-automobile-fze",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "source-present",
+      "reviewState": "not-claimed",
+      "leadId": "ae-dubai-pegasus-automobile-fze",
+      "sourceFormat": "dealer-pack",
+      "sourceRepository": "darkapoparka/cars",
+      "sourceCommit": "f73c8e4b258653d1cee9c29d161e41774cfe6fb8",
+      "sourcePath": "dealers/pegasus-automobile-fze"
+    },
+    {
+      "slug": "royal-diamond-motors",
+      "name": "Royal Diamond Motors",
+      "path": "dealers/royal-diamond-motors",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "source-present",
+      "reviewState": "not-claimed",
+      "leadId": "ae-dubai-royal-diamond-motors",
+      "sourceFormat": "dealer-pack",
+      "sourceRepository": "darkapoparka/cars",
+      "sourceCommit": "f73c8e4b258653d1cee9c29d161e41774cfe6fb8",
+      "sourcePath": "dealers/royal-diamond-motors"
     }
   ],
   "campaignCandidatesWithoutFolders": [

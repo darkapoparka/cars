@@ -1,0 +1,391 @@
+{
+  "schemaVersion": 1,
+  "type": "cars-native-preparation-checkpoint",
+  "recordedAt": "2026-10-20T23:03:11.649Z",
+  "baseRevision": "d172ccead43cb2f7f485aed9c735f78c78670b34",
+  "phone": {
+    "cause": "prepareSixDesignProviderSource invoked applyOptionalContactFallback only when manifest.presentation existed. Explicit dealer packs defer Auto phone guards to this provider stage but these two no-phone manifests omit presentation; the 17 controls and navigation row were never guarded.",
+    "change": "Apply the same existing wrapper for explicit sourceFormat=dealer-pack independently of presentation; retain presentation opt-in for legacy callers and leave QA/guard/adapters/components/facts unchanged.",
+    "files": [
+      {
+        "path": "scripts/package-dealer.mjs",
+        "bytes": 39095,
+        "sha256": "3e0a5c6d98d3620f89962df34d3aba37e57f4509d5986b9aa6e93c000cacdf67",
+        "gitBlobSha1": "0bb673df2027f86b381e708c9ae2e64e9270c74e"
+      },
+      {
+        "path": "scripts/dealer-pack-optional-phone-provider.test.mjs",
+        "bytes": 10851,
+        "sha256": "0a6d6d67cd35788102fa4be2ab3ab9de92a819eb6beea28ad9dd36645dcf4ced",
+        "gitBlobSha1": "e662048a034ed2c13d482067dff80fd4cb030155"
+      }
+    ],
+    "offendingHref": {
+      "value": "tel:",
+      "evidenceScope": "SSR fixture assembled from all 17 exact selected native anchor fragments, rendered by existing Svelte 5.57.2 with the actual native locale policy; unrelated provider stages stubbed",
+      "owner": "templates/auto-best/src/lib/components/layout/Footer.svelte",
+      "ownerContext": "a.dn-footer__call via phoneLinkAttributes.href=brand.phoneHref; shared footer can expose this on every route",
+      "localizedOwner": "templates/auto-best/src/lib/components/company/ContactIntent.svelte",
+      "localizedContext": "href={i18n.href(brand.phoneHref)}; actual native policy preserves tel: in both EN and BG",
+      "beforeRenderedTelephoneLinks": 17,
+      "afterRenderedTelephoneLinks": 0,
+      "navigationRowsHidden": 1
+    },
+    "validation": {
+      "focusedTests": [
+        {
+          "files": [
+            "scripts/dealer-pack-optional-phone-provider.test.mjs",
+            "scripts/auto-best-optional-contact.test.mjs"
+          ],
+          "passed": 8,
+          "failed": 0
+        },
+        {
+          "file": "scripts/dealer-contact-fallback.test.mjs",
+          "pattern": "missing email|sourced email|unknown consumer",
+          "passed": 4,
+          "failed": 0
+        }
+      ],
+      "providers": [
+        "cloudflare",
+        "vercel"
+      ],
+      "locales": [
+        "en",
+        "bg"
+      ],
+      "phonePresentOriginalSourceBytesPreserved": true,
+      "legacyNonPackNoPresentationBytesPreserved": true,
+      "cssBytesPreserved": true,
+      "formsPreserved": true,
+      "providerInputMapUnchanged": true,
+      "existingPresentationWrapperRunsOnce": true,
+      "unchangedImportFacts": true,
+      "absentEmailConsumer": "Existing same-origin contact route; no email invented",
+      "nativeBuilds": 0,
+      "liveRoutesClaimed": false
+    },
+    "qualification": "Source regression only; fresh native/hosted qualification remains required"
+  },
+  "demoStock": {
+    "sourceFailure": {
+      "sourceCommit": "a92135f6b5c3e0f510a0fdc95ca2a2740197805a",
+      "runId": "39503669219",
+      "jobId": "118907944320",
+      "artifactId": "12304160230",
+      "artifactSha256": "8c00cb943d06da76df95cb89f7abcd85fd8f4f906f6be4f4648094a102476ad2",
+      "retainedDiagnostics": "source41-six-failed-diagnostics.json",
+      "failedRoutes": [
+        [
+          "auto-best",
+          "detail"
+        ],
+        [
+          "modern",
+          "inventory"
+        ],
+        [
+          "import",
+          "inventory"
+        ],
+        [
+          "karento-best",
+          "inventory"
+        ],
+        [
+          "karento-best",
+          "detail"
+        ]
+      ],
+      "finding": "demo-stock-disclosure"
+    },
+    "behavior": {
+      "requiredStockKind": "illustrative-not-dealer-stock",
+      "copy": "exact business.inventoryNotice",
+      "datedStockUnchanged": true,
+      "qaWeakened": false,
+      "sharedTemplatesChanged": false,
+      "layoutBoundaries": "exactly once; absent/changed/duplicate refuses before adapter writes",
+      "placements": {
+        "auto-best": "inside SiteShell content before route child",
+        "modern": "after ThemeProvider content, clear of fixed mobile discovery header",
+        "import": "after rendered page branch, outside following conditional",
+        "karento-best": "after Header before route child"
+      },
+      "nativeLayoutComposition": "one full-width normal-flow paragraph, native inherited colors, useful padding; no fixed overlay"
+    },
+    "files": [
+      {
+        "path": "scripts/lib/client-refresh-safe-content.mjs",
+        "absolutePath": "L:/CODEX/cars/scripts/lib/client-refresh-safe-content.mjs",
+        "bytes": 40766,
+        "sha256": "746dfdab58a1eb91569c3493bbfa8e44f3ae0bc94e19677c136464752456a2d2"
+      },
+      {
+        "path": "scripts/lib/client-refresh-adapters.mjs",
+        "absolutePath": "L:/CODEX/cars/scripts/lib/client-refresh-adapters.mjs",
+        "bytes": 93345,
+        "sha256": "fa5c9bd5096428af34fa9b223e8761bbd1d599a969b46137672e3c8b03c5db4b"
+      },
+      {
+        "path": "scripts/lib/client-refresh-six.mjs",
+        "absolutePath": "L:/CODEX/cars/scripts/lib/client-refresh-six.mjs",
+        "bytes": 65847,
+        "sha256": "86dd78becd027c113959e610d097e1b28dd13bc439da4f932dcd7e14518af453"
+      },
+      {
+        "path": "scripts/dealer-pack-demo-disclosure.test.mjs",
+        "absolutePath": "L:/CODEX/cars/scripts/dealer-pack-demo-disclosure.test.mjs",
+        "bytes": 8490,
+        "sha256": "51d8877d444d21b6324b7914bf6e972cd3136c673e88f9fd303afe6a61ee6bc5"
+      },
+      {
+        "path": "scripts/six-variant-refresh.test.mjs",
+        "absolutePath": "L:/CODEX/cars/scripts/six-variant-refresh.test.mjs",
+        "bytes": 67982,
+        "sha256": "ece254b7006912a3b3e088d7cff1a2d5d5e61e5b73783111290b25de844d9fef"
+      }
+    ],
+    "validation": {
+      "newFocusedCases": {
+        "passed": 8,
+        "failed": 0
+      },
+      "existingSignatureMixedFeedDemoCase": {
+        "passed": 1,
+        "failed": 0
+      },
+      "existingStrictDisclosureQaCase": {
+        "passed": 1,
+        "failed": 0
+      },
+      "releasedLayoutRevision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+      "releasedLayoutCompiles": {
+        "svelte": 3,
+        "tsx": 1
+      },
+      "insertedNoticeSvelteSsr": true,
+      "fullNativeBuild": false,
+      "hostedVerified": false,
+      "compiler": "existing maintained Svelte/compiler and TypeScript; no dependency install; @sveltejs/mcp not installed locally"
+    }
+  },
+  "smallAutomatics": {
+    "slug": "small-automatics",
+    "packDigest": "e49d560f5695b5cb03d010084f6f549a1acb9ee04c7bb732fed4d57a18e23a91",
+    "summary": {
+      "candidateAssetChecks": 14,
+      "actualSourceAssetChecks": 14,
+      "actualMaintainedPublisherBeforeRejectedAfterPassed": true,
+      "finalActualSourceExportedApplyLeadBrandingPassed": true,
+      "actualSourceGuardPassed": true,
+      "preparedFullyTransparentFraction": 0.3101043701171875,
+      "files": 30,
+      "bytes": 6396460,
+      "modified": 8,
+      "added": 3,
+      "deleted": 0
+    },
+    "exactChangedPaths": [
+      {
+        "path": "dealers/small-automatics/branding/logo-contract.json",
+        "beforeSha256": "f60fb9aa2ff50b106cafa4e72a924ab460a5f4855daf37247516a1a70404dcab",
+        "afterSha256": "8af3036b32620f416a21e251bad2edb625b50b32656fa1e51832b995a347825d",
+        "operation": "modified"
+      },
+      {
+        "path": "dealers/small-automatics/branding/logo-recipe.json",
+        "beforeSha256": "544230e13ca022e9803e6752e2ba3ccdc0d39b709b893d17f185371c5e996737",
+        "afterSha256": "0a8dc3096ce6d4a94e627fe847f4b68f9005f1482c60653ff56dce2f134873ed",
+        "operation": "modified"
+      },
+      {
+        "path": "dealers/small-automatics/branding/source.json",
+        "beforeSha256": "7e1efcc2851eacc2ff2a9fd64ae7284a42a61287fb6809da3b40e7889a020ab6",
+        "afterSha256": "7e6fa62d79fa4d325ffe8aad0b5fa3f6c490b80694f0277070a7a5c678220b91",
+        "operation": "modified"
+      },
+      {
+        "path": "dealers/small-automatics/copy-review.json",
+        "beforeSha256": "9adfe4a05413e31b4c111e15db3d579281168c1f223088a28b8dbb32910e2313",
+        "afterSha256": "f3c5546b9b35df2f979b3f1b4d603ccf43a11f164404d4b550cf5df52c9bc491",
+        "operation": "modified"
+      },
+      {
+        "path": "dealers/small-automatics/dealer.json",
+        "beforeSha256": "a3fa7ef036c98c1de79b5b043ca20035e075a9cc4fb933942d12d81a5b4608da",
+        "afterSha256": "0c5da419eabce482f3ac48c078f503e6215a1ce97e3c4ad4df3a87adb8dfe50d",
+        "operation": "modified"
+      },
+      {
+        "path": "dealers/small-automatics/identity-review.json",
+        "beforeSha256": "efc43028567632a62f049970c70d9c75795058a973b62d5f2a7cc6d4858f1474",
+        "afterSha256": "b5d4eb0f628bc1b32196490eede020aaabe8c505af5720f63571f09e3bd8d69a",
+        "operation": "modified"
+      },
+      {
+        "path": "dealers/small-automatics/input-review.json",
+        "beforeSha256": "d121279e310faa77eb4522e6998e9bbb959e01890b7175fe5bd813fbbe9b0600",
+        "afterSha256": "3ac469f9633edf1d7bfb2bbe236a93bff6851b50d4c364b850d3a44c63fad5cc",
+        "operation": "modified"
+      },
+      {
+        "path": "dealers/small-automatics/qualification.json",
+        "beforeSha256": "d131a4f605aca4bcc90531463b51690bd71c0a31ecab35a7ae96fd858836756e",
+        "afterSha256": "deac53d3b5b55fa52e9687f05474e3c64cfd9f627692a90a7fa0bc2c11ff4f28",
+        "operation": "modified"
+      },
+      {
+        "path": "dealers/small-automatics/branding/light-mark-separator-repair-20261021.json",
+        "bytes": 4419,
+        "sha256": "a5a2b2c255cf82fe867ee76e8ec080f308c358446d62b02f5aa60af66c07b305",
+        "operation": "added"
+      },
+      {
+        "path": "dealers/small-automatics/branding/mark-on-light-open-separators-v3-20261021.png",
+        "bytes": 749911,
+        "sha256": "c3533615008153b8a647604b356c72e2fca55fd88b589cee886bb979667c9c3d",
+        "operation": "added"
+      },
+      {
+        "path": "dealers/small-automatics/branding/source-before-light-mark-separator-repair-20261021-7e1efcc2851eacc2.json",
+        "bytes": 15654,
+        "sha256": "7e1efcc2851eacc2ff2a9fd64ae7284a42a61287fb6809da3b40e7889a020ab6",
+        "operation": "added"
+      }
+    ],
+    "preservation": {
+      "allOriginalSourceFilesRetained": true,
+      "factsStockPhotosPreserved": true,
+      "wordmarksAndDarkCompactBytesPreserved": true,
+      "onlyNecessaryDerivedLightIconsChanged": true,
+      "sharedPublisherSha256Unchanged": "ed0862ad00132685bbc79025f0e23c6d1d483be186e3890d79b79cc16fabeab3"
+    },
+    "nativeApproval": false,
+    "hostedApproval": false
+  },
+  "receiptIntegration": {
+    "schemaVersion": 1,
+    "type": "cars-authenticated-receipt-integration",
+    "recordedAt": "2026-10-20T23:02:03.002Z",
+    "queue": {
+      "generation": 386,
+      "revision": "e4c030e44191fde7e8b35e181486d1afe8684ec9",
+      "queueSha256": "197651683bef3239a1a05ceb3232394b528267d5abc2558ab9bbe31ed3d87c41",
+      "observedAt": "2026-10-20T22:57:30.449Z"
+    },
+    "inventoryRows": 199,
+    "changes": [
+      {
+        "slug": "best-wheels-specialized-vehicles",
+        "action": "added",
+        "sourceCommit": "f73c8e4b258653d1cee9c29d161e41774cfe6fb8",
+        "receiptSha256": "0e35fa2970a44ca34c9c6c653d0b5f6f370343bd8ad592840adfbbef8064a01f",
+        "hostedVerified": true
+      },
+      {
+        "slug": "golden-coast-auto",
+        "action": "added",
+        "sourceCommit": "f73c8e4b258653d1cee9c29d161e41774cfe6fb8",
+        "receiptSha256": "9a48c52d87a9df64c06e44fa86e875dc338c155ba7406d833ed42d0414f2de3c",
+        "hostedVerified": true
+      },
+      {
+        "slug": "intercars",
+        "action": "added",
+        "sourceCommit": "f73c8e4b258653d1cee9c29d161e41774cfe6fb8",
+        "receiptSha256": "5e39f894b6e739e0df85435d457c1f2b830d2b6d65e03cf10d2f3a5f9b740f69",
+        "hostedVerified": true
+      },
+      {
+        "slug": "macan-luxury-cars",
+        "action": "added",
+        "sourceCommit": "f73c8e4b258653d1cee9c29d161e41774cfe6fb8",
+        "receiptSha256": "be8843ef5995ebbda6a8aa4b39aaa9deeb88052c191a8fd39b6684027a9cf1c4",
+        "hostedVerified": true
+      },
+      {
+        "slug": "mangame-motors",
+        "action": "added",
+        "sourceCommit": "f73c8e4b258653d1cee9c29d161e41774cfe6fb8",
+        "receiptSha256": "378e370208be5b48afa84faac8cdf3a1f2dcf2bec69064d422431042ed45c8ed",
+        "hostedVerified": true
+      },
+      {
+        "slug": "mizdawy-motors",
+        "action": "added",
+        "sourceCommit": "f73c8e4b258653d1cee9c29d161e41774cfe6fb8",
+        "receiptSha256": "9cd82ccc63f0b5212a675226b56c89c7cca8cd9367cc4dbca9a2851401b83a76",
+        "hostedVerified": true
+      },
+      {
+        "slug": "motorx-group",
+        "action": "added",
+        "sourceCommit": "f73c8e4b258653d1cee9c29d161e41774cfe6fb8",
+        "receiptSha256": "a17be7bcfdf2417a2295cc3acb5943e283559a9297f75e54e58107c178c72dfa",
+        "hostedVerified": true
+      },
+      {
+        "slug": "pegasus-automobile-fze",
+        "action": "added",
+        "sourceCommit": "f73c8e4b258653d1cee9c29d161e41774cfe6fb8",
+        "receiptSha256": "3117ea67fdb7d5ed444ac76a5e78e3d30140f6d6b424450f41ed7a59d771cafa",
+        "hostedVerified": true
+      },
+      {
+        "slug": "royal-diamond-motors",
+        "action": "added",
+        "sourceCommit": "f73c8e4b258653d1cee9c29d161e41774cfe6fb8",
+        "receiptSha256": "f09e119590ea773866860b5e4fb30e8d6db562b6b824ca572631b3308e3ee14b",
+        "hostedVerified": true
+      }
+    ],
+    "unchangedExistingRows": 190,
+    "filesWritten": [
+      "docs/DEPLOYMENT-INVENTORY.json",
+      "docs/DEPLOYMENTS.md",
+      "clients/README.md",
+      "clients/index.json"
+    ],
+    "providerWrites": 0,
+    "branchWrites": 0,
+    "fetches": 0,
+    "before": {
+      "docs/DEPLOYMENT-INVENTORY.json": "8b1321816c653eaacfe23bd6ad32ac1b92de5cf2a3dbcf56bdd9474224693e22",
+      "docs/DEPLOYMENTS.md": "7975b370dc58c332d7fa59d7abc82628483f4b95f83df1f53f35b983094e5859",
+      "clients/README.md": "e66a215ed317a6a658a96e2e42d84675b66a23a14a729d3c80f1475dd418e62c",
+      "clients/index.json": "eb019d757ef7107f0d98f625a1bbcb5c66297125216cfb7b0fb38ce82241dd39"
+    },
+    "after": {
+      "docs/DEPLOYMENT-INVENTORY.json": "41356a770187a592404b73c6db94183b7e49d5ebdf3126da166135fa2d1a446a",
+      "docs/DEPLOYMENTS.md": "1df238126a318992fff6333fb33303a42e33d5213f8523811323e233ed59f2e5",
+      "clients/README.md": "4a6db6d35e88090a99d4a0bdb4b4c364e495844c5478cd2155d51445bbc430bf",
+      "clients/index.json": "e1d22c9c050d57b4154f205ac00e2731bf00f87aaafabd8af8fcd03a2ab33c4d"
+    },
+    "scope": "Exact deployment-receipt sources only. Historical registry rows are not newly verified live sites."
+  },
+  "freshNativeCandidates": [
+    "j26-vans-trucks",
+    "al-sammarraie-used-cars",
+    "rebou-al-fakhama-used-cars",
+    "small-automatics",
+    "trade-car-centre-accrington-ghmc-419b403bea",
+    "car-hunt-plus-limited"
+  ],
+  "freshNativeStatus": "Awaiting publication and exact-source producer dispatch",
+  "previousCorrectedThreeProducer": {
+    "runId": 39510514421,
+    "sourceCommit": "ade81490674a64722a8f9059a61c78ce4d9d22a3",
+    "ownContracts": "passed",
+    "nativeBuilds": "in-progress-at-checkpoint",
+    "slugs": [
+      "lets-sell-your-car",
+      "millions-auto-cars",
+      "cars-4-u-wakefield"
+    ]
+  },
+  "ownerAccepted": false,
+  "outreachApproved": false
+}

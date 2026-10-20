@@ -224,19 +224,23 @@ export async function prepareSixDesignProviderSource(inputFiles, manifest, {prov
   let files = new Map(inputFiles);
   assertAppVariant(files, manifest);
   assertExtendedVariantSources(files, manifest);
+  // Compact packs opt into normalized optional facts independently of styling.
+  // Their Auto telephone consumers are deliberately deferred to this stage.
+  if (manifest.presentation !== undefined || manifest.sourceFormat === 'dealer-pack') {
+    const {applyOptionalContactFallback} = await import('./publishing/dealer-contact-fallback.mjs');
+    const contact = applyOptionalContactFallback(files, manifest);
+    files.set('.cars-dealer-contact-fallback.json', Buffer.from(json(contact)));
+  }
   // Shared presentation is independent of the selected hosting provider.
   // Opt-in keeps historical releases and separately owned branding policies intact.
   if (manifest.presentation !== undefined) {
     const {applyDealerPresentation, resolveDealerPresentationVersion} = await import('./publishing/dealer-presentation.mjs');
-    const {applyOptionalContactFallback} = await import('./publishing/dealer-contact-fallback.mjs');
     manifest.presentation.version = resolveDealerPresentationVersion(manifest.presentation.version);
-    const contact = applyOptionalContactFallback(files, manifest);
     applyDealerPresentation(files, manifest);
     const {bindModernMobileWordmarkLogo} = await import('./lib/client-logo-contract.mjs');
     const logoConsumer = 'modern/packages/marketplace-ui/components/dealer-mobile-brand-bar.tsx';
     if (!files.has(logoConsumer)) throw new Error('Missing Modern mobile logo consumer');
     files.set(logoConsumer, Buffer.from(bindModernMobileWordmarkLogo(files.get(logoConsumer).toString('utf8'))));
-    files.set('.cars-dealer-contact-fallback.json', Buffer.from(json(contact)));
   }
   const {completeSignatureFontAssets} = await import('./publishing/signature-font-assets.mjs');
   completeSignatureFontAssets(files);

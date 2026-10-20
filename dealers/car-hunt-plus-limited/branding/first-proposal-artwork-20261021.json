@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-first-missing-source-proposal-artwork",
+  "dealer": "car-hunt-plus-limited",
+  "createdAt": "2026-10-20T22:52:55.848Z",
+  "inputRows": [
+    {
+      "role": "wordLight",
+      "path": "branding/generated-master-v1-20261021.png",
+      "sha256": "46cd991bdd1b4f2a420b1e4f5778b3760335db65aea17ef866022c22e13f07f2",
+      "nativeDimensions": {
+        "width": 2048,
+        "height": 768
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4e50a4fa-4fc5-499f-8b5a-5c41a75f8bea",
+        "modelVersion": null
+      },
+      "artifact": "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-4e50a4fa-4fc5-499f-8b5a-5c41a75f8bea.png",
+      "prompt": "Use case: logo-brand. Create ONE independent proposal logo for \"CAR HUNT PLUS LIMITED\", a UK used-car dealer in Ashford. Exact text: CAR HUNT PLUS on upper line, LIMITED on lower line. Wide horizontal lockup with an original open CHP monogram emblem at left integrating a clear simple plus symbol, separated by generous transparent gap from strong geometric sans-serif wordmark at right. Main ink deep charcoal #17252f, restrained deep teal #00606a on plus element. Flat opaque fills, thick clean geometry and open counters, recognizable at32px, readable wording at120/180px total logo width. Truly transparent canvas, generous padding. No car silhouette, shield, magnifier, crown, badgeplate, white keyline, gradients, shadows, glow, texture, speckles or additional wording. Independent proposal, no official or adopted claims. Crisp production raster.",
+      "referencePaths": []
+    },
+    {
+      "role": "markLight",
+      "path": "branding/generated-mark-light-v1-20261021.png",
+      "sha256": "67aa283950b305590542fed1fb7985c748700fda1cca03e8757bdfb50c5e7d32",
+      "nativeDimensions": {
+        "width": 759,
+        "height": 768
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4e50a4fa-4fc5-499f-8b5a-5c41a75f8bea",
+        "modelVersion": null
+      },
+      "artifact": "J:/.artifacts/cars-source-sync/missing3-branding-inputs/car-hunt-plus-limited/markLight.png",
+      "prompt": "Use case: logo-brand. Create ONE independent proposal logo for \"CAR HUNT PLUS LIMITED\", a UK used-car dealer in Ashford. Exact text: CAR HUNT PLUS on upper line, LIMITED on lower line. Wide horizontal lockup with an original open CHP monogram emblem at left integrating a clear simple plus symbol, separated by generous transparent gap from strong geometric sans-serif wordmark at right. Main ink deep charcoal #17252f, restrained deep teal #00606a on plus element. Flat opaque fills, thick clean geometry and open counters, recognizable at32px, readable wording at120/180px total logo width. Truly transparent canvas, generous padding. No car silhouette, shield, magnifier, crown, badgeplate, white keyline, gradients, shadows, glow, texture, speckles or additional wording. Independent proposal, no official or adopted claims. Crisp production raster.",
+      "referencePaths": [
+        "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-4e50a4fa-4fc5-499f-8b5a-5c41a75f8bea.png"
+      ],
+      "derivation": {
+        "operation": "lossless-png-extract-isolated-emblem",
+        "parentPath": "branding/generated-master-v1-20261021.png",
+        "parentSha256": "46cd991bdd1b4f2a420b1e4f5778b3760335db65aea17ef866022c22e13f07f2",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 759,
+          "height": 768
+        },
+        "emptyGap": {
+          "start": 731,
+          "end": 787,
+          "width": 56
+        },
+        "parentNativeDimensions": {
+          "width": 2048,
+          "height": 768
+        },
+        "artworkUnmodified": true,
+        "alphaUnmodified": true
+      }
+    },
+    {
+      "role": "wordDark",
+      "path": "branding/generated-inverse-v1-20261021.png",
+      "sha256": "2be6b6bcd80000fdc3b89b0995071d5794fea70ecfc648db4452e9b84a55bb51",
+      "nativeDimensions": {
+        "width": 2048,
+        "height": 768
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-79cf16cf-749a-4d93-84a5-98a2fdcaaf65",
+        "modelVersion": null
+      },
+      "artifact": "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-79cf16cf-749a-4d93-84a5-98a2fdcaaf65.png",
+      "prompt": "Use case: logo-brand, faithful inverse-colour edit. Preserve EXACT reference CHP+ emblem at left, CAR HUNT PLUS above LIMITED at right, typography, proportions, spacing and negative-space openings. Make all letters and emblem strokes uniform solid opaque pale silver-grey #cbd2d8; the plus may be pale teal #b9d7d9, a tint of its existing teal. No deep charcoal or dark pixels remain. True transparent canvas and counters, generous padding. Designed for charcoal/navy/black/red surfaces. Absolutely no glow, gradients, shadows, texture, halos, speckles, keylines or backgroundplate. Exact text CAR HUNT PLUS LIMITED, no added wording, no changed motif. Independent proposal only.",
+      "referencePaths": [
+        "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-4e50a4fa-4fc5-499f-8b5a-5c41a75f8bea.png"
+      ]
+    },
+    {
+      "role": "markDark",
+      "path": "branding/generated-mark-dark-v1-20261021.png",
+      "sha256": "7c1c3fdfd8eeee6adc3b1a62fe0545dc56c7f96a41b0669092d215e19b4bfa6b",
+      "nativeDimensions": {
+        "width": 757,
+        "height": 768
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-79cf16cf-749a-4d93-84a5-98a2fdcaaf65",
+        "modelVersion": null
+      },
+      "artifact": "J:/.artifacts/cars-source-sync/missing3-branding-inputs/car-hunt-plus-limited/markDark.png",
+      "prompt": "Use case: logo-brand, faithful inverse-colour edit. Preserve EXACT reference CHP+ emblem at left, CAR HUNT PLUS above LIMITED at right, typography, proportions, spacing and negative-space openings. Make all letters and emblem strokes uniform solid opaque pale silver-grey #cbd2d8; the plus may be pale teal #b9d7d9, a tint of its existing teal. No deep charcoal or dark pixels remain. True transparent canvas and counters, generous padding. Designed for charcoal/navy/black/red surfaces. Absolutely no glow, gradients, shadows, texture, halos, speckles, keylines or backgroundplate. Exact text CAR HUNT PLUS LIMITED, no added wording, no changed motif. Independent proposal only.",
+      "referencePaths": [
+        "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-79cf16cf-749a-4d93-84a5-98a2fdcaaf65.png"
+      ],
+      "derivation": {
+        "operation": "lossless-png-extract-isolated-emblem",
+        "parentPath": "branding/generated-inverse-v1-20261021.png",
+        "parentSha256": "2be6b6bcd80000fdc3b89b0995071d5794fea70ecfc648db4452e9b84a55bb51",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 757,
+          "height": 768
+        },
+        "emptyGap": {
+          "start": 730,
+          "end": 785,
+          "width": 55
+        },
+        "parentNativeDimensions": {
+          "width": 2048,
+          "height": 768
+        },
+        "artworkUnmodified": true,
+        "alphaUnmodified": true
+      }
+    }
+  ],
+  "sourceFactNamePreserved": true,
+  "publicTradingText": "Car Hunt Plus Limited",
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "dealerApproval": false,
+  "humanReview": false,
+  "providerWrites": 0,
+  "filtersApplied": false,
+  "thresholdsChanged": false
+}

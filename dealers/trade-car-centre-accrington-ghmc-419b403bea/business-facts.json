@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "slug": "trade-car-centre-accrington-ghmc-419b403bea",
+  "dealerId": "gb-accrington-trade-car-centre",
+  "business": {
+    "name": "Trade Car Centre (Accrington / ghmcarsales seller path)",
+    "city": "Accrington",
+    "region": "Lancashire",
+    "countryCode": "GB",
+    "currency": "GBP",
+    "distanceUnit": "mi",
+    "locale": "en-GB",
+    "address": "Junction 7 Industrial Estate, Blackburn Road, Accrington, BB5 5JW",
+    "phone": "+441254786608",
+    "phoneDisplay": "+441254786608",
+    "email": "tradecarcentre1@gmail.com",
+    "website": "",
+    "stockUrl": "https://showroom.ebaymotorspro.co.uk/ghmcarsales?menu=1",
+    "hours": "",
+    "sourceUrl": "https://showroom.ebaymotorspro.co.uk/ghmcarsales?menu=1",
+    "observedAt": "2026-10-18",
+    "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/ghmcarsales?menu=1",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.cazoo.co.uk/dealers/trade-car-centre-84221/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ]
+}

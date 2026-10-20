@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "dealer": "small-automatics",
   "reviewed": true,
-  "reviewedAt": "2026-10-20T21:23:30.301Z",
+  "reviewedAt": "2026-10-20T22:59:19.049Z",
   "status": "independent-proposal-not-dealer-approved",
   "creationMethod": "imagegen-proposal",
   "assets": {
@@ -50,16 +50,16 @@
   },
   "mark": {
     "path": "branding/logo-mark.png",
-    "sha256": "fa5fd8fb39fabd1fd3de661b320e790c3001e9abb317c2438fce5dd6a4d6b624",
+    "sha256": "61196b1ebfbc5040d3395630605a1818a25b00d53dd765861660d551e24da57d",
     "generation": {
       "tool": "image_gen.imagegen",
-      "generationId": "exec-db18f98a-c14e-4b84-8876-690445d6ce57",
+      "generationId": "exec-9c66acc8-c6a4-4884-a0e3-2f15d7865293",
       "modelVersion": null
     }
   },
   "favicon": {
     "path": "dealer-brand/favicon.ico",
-    "sha256": "bb5229c4b2247cc3662e878b7f134c99008c0c9f9c8a4004696e4d6ddcc47835"
+    "sha256": "85ee3be3cbf41ace3d77d658a761d3df6680c5efe04ae8e9bce2ce2347a893c6"
   },
   "surfaces": {
     "onLight": {
@@ -137,13 +137,13 @@
   "supplemental": {
     "mark-on-light.webp": {
       "path": "dealer-brand/mark-on-light.webp",
-      "sha256": "97cd5b7775b1e9546d42abde4957268fbed74019376f03341cd8e8b5037dc6a1",
+      "sha256": "c7c4c2c072b8e73c064f54cd173585f0d4b46a3b508eab23a348549ecf9ac64d",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-db18f98a-c14e-4b84-8876-690445d6ce57",
+        "generationId": "exec-9c66acc8-c6a4-4884-a0e3-2f15d7865293",
         "modelVersion": null
       },
-      "sourceReference": "dealers/small-automatics/branding/generated-compact-on-light-v2-20261020-4c5035e863d34e20.png"
+      "sourceReference": "dealers/small-automatics/branding/mark-on-light-open-separators-v3-20261021.png"
     },
     "mark-on-dark.webp": {
       "path": "dealer-brand/mark-on-dark.webp",
@@ -157,30 +157,30 @@
     },
     "app-icon.png": {
       "path": "dealer-brand/app-icon.png",
-      "sha256": "fa5fd8fb39fabd1fd3de661b320e790c3001e9abb317c2438fce5dd6a4d6b624",
+      "sha256": "61196b1ebfbc5040d3395630605a1818a25b00d53dd765861660d551e24da57d",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-db18f98a-c14e-4b84-8876-690445d6ce57",
+        "generationId": "exec-9c66acc8-c6a4-4884-a0e3-2f15d7865293",
         "modelVersion": null
       },
-      "sourceReference": "dealers/small-automatics/branding/generated-compact-on-light-v2-20261020-4c5035e863d34e20.png"
+      "sourceReference": "dealers/small-automatics/branding/mark-on-light-open-separators-v3-20261021.png"
     },
     "favicon.ico": {
       "path": "dealer-brand/favicon.ico",
-      "sha256": "bb5229c4b2247cc3662e878b7f134c99008c0c9f9c8a4004696e4d6ddcc47835",
+      "sha256": "85ee3be3cbf41ace3d77d658a761d3df6680c5efe04ae8e9bce2ce2347a893c6",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-db18f98a-c14e-4b84-8876-690445d6ce57",
+        "generationId": "exec-9c66acc8-c6a4-4884-a0e3-2f15d7865293",
         "modelVersion": null
       },
-      "sourceReference": "dealers/small-automatics/branding/generated-compact-on-light-v2-20261020-4c5035e863d34e20.png"
+      "sourceReference": "dealers/small-automatics/branding/mark-on-light-open-separators-v3-20261021.png"
     }
   },
   "markOnDarkReady": true,
   "originalArtworkPreserved": true,
   "visualReview": {
     "reviewed": true,
-    "reviewedAt": "2026-10-20T21:23:30.301Z",
+    "reviewedAt": "2026-10-20T22:59:19.049Z",
     "source": "branding/source.json",
     "spelling": "agent-visual-review",
     "dealerApproval": false

@@ -13,7 +13,7 @@ import {personalizeModernDealerServices} from './modern-dealer-services.mjs';
 import { DEALER_PACK_MODERN_PATHS, dealerPackModernListing, isDealerPackOptionalFacts, personalizeDealerPackModernFacts } from './dealer-pack-modern-facts.mjs';
 import {repairImportDealerInventoryCatalog} from './import-dealer-inventory-copy.mjs';
 import {readCatalogLiteral} from './catalog-literal.mjs';
-import { applyCarwowSafeContent, applyImportSafeContent, applyModernSafeContent } from './client-refresh-safe-content.mjs';
+import { applyCarwowSafeContent, applyImportSafeContent, applyModernSafeContent, DEMO_STOCK_LAYOUT_PATHS, personalizeDemoStockDisclosure } from './client-refresh-safe-content.mjs';
 
 const exists = (file) => fs.existsSync(file);
 const read = (file) => fs.readFileSync(file, 'utf8').replace(/^\uFEFF/, '');
@@ -1763,7 +1763,18 @@ function patchImport({ oldVariant, candidate, profile, reviewedModernCopy }) {
 export function applyRefreshAdapter(options) {
   const adapter = { 'auto-best': patchAutoBest, modern: patchModern, carwow: patchCarwow, import: patchImport }[options.key];
   if (!adapter) throw new Error('No current refresh adapter for '+options.key);
-  return withSourceMutationWriter(options.mutationWriter,()=>[...adapter(options), ...applyDealerLogoContract(options)]);
+  return withSourceMutationWriter(options.mutationWriter,()=>{
+    const layout = DEMO_STOCK_LAYOUT_PATHS[options.key];
+    // Validate before any adapter writes, so a changed demo layout cannot partly apply.
+    const disclosure = layout && options.profile.stockKind === 'illustrative-not-dealer-stock'
+      ? personalizeDemoStockDisclosure(read(path.join(options.candidate, layout)), options.key, options.profile) : null;
+    const changed = [...adapter(options), ...applyDealerLogoContract(options)];
+    if (disclosure !== null) {
+      write(path.join(options.candidate, layout), personalizeDemoStockDisclosure(read(path.join(options.candidate, layout)), options.key, options.profile));
+      changed.push(layout);
+    }
+    return changed;
+  });
 }
 
 export const refreshAdapterInternals = {

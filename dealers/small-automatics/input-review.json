@@ -3,7 +3,7 @@
   "kind": "cars-dealer-pack-input-review",
   "dealer": "small-automatics",
   "reviewed": true,
-  "reviewedAt": "2026-10-20T21:24:55.197Z",
+  "reviewedAt": "2026-10-20T22:59:24.148Z",
   "review": {
     "kind": "automated",
     "humanReview": false,
@@ -70,20 +70,32 @@
       "sha256": "ae66e8a8d475b0b9f9f509f80eee9da09e73b5dcbf0c0e8d0075b72d82cb7500"
     },
     {
+      "path": "branding/light-mark-separator-repair-20261021.json",
+      "sha256": "a5a2b2c255cf82fe867ee76e8ec080f308c358446d62b02f5aa60af66c07b305"
+    },
+    {
       "path": "branding/logo-contract.json",
-      "sha256": "f60fb9aa2ff50b106cafa4e72a924ab460a5f4855daf37247516a1a70404dcab"
+      "sha256": "8af3036b32620f416a21e251bad2edb625b50b32656fa1e51832b995a347825d"
     },
     {
       "path": "branding/logo-recipe.json",
-      "sha256": "544230e13ca022e9803e6752e2ba3ccdc0d39b709b893d17f185371c5e996737"
+      "sha256": "0a8dc3096ce6d4a94e627fe847f4b68f9005f1482c60653ff56dce2f134873ed"
+    },
+    {
+      "path": "branding/mark-on-light-open-separators-v3-20261021.png",
+      "sha256": "c3533615008153b8a647604b356c72e2fca55fd88b589cee886bb979667c9c3d"
     },
     {
       "path": "branding/source-before-full-repair-20261020-e3386a27e81f8e72.json",
       "sha256": "e3386a27e81f8e72566ac6510723f77d010d3f0d2e192c3d0cf205dcabfd2811"
     },
     {
-      "path": "branding/source.json",
+      "path": "branding/source-before-light-mark-separator-repair-20261021-7e1efcc2851eacc2.json",
       "sha256": "7e1efcc2851eacc2ff2a9fd64ae7284a42a61287fb6809da3b40e7889a020ab6"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "7e6fa62d79fa4d325ffe8aad0b5fa3f6c490b80694f0277070a7a5c678220b91"
     },
     {
       "path": "business-facts.json",
@@ -91,7 +103,7 @@
     },
     {
       "path": "copy-review.json",
-      "sha256": "9adfe4a05413e31b4c111e15db3d579281168c1f223088a28b8dbb32910e2313"
+      "sha256": "f3c5546b9b35df2f979b3f1b4d603ccf43a11f164404d4b550cf5df52c9bc491"
     },
     {
       "path": "dealer-stock/public-1.jpg",
@@ -107,11 +119,11 @@
     },
     {
       "path": "dealer.json",
-      "sha256": "a3fa7ef036c98c1de79b5b043ca20035e075a9cc4fb933942d12d81a5b4608da"
+      "sha256": "0c5da419eabce482f3ac48c078f503e6215a1ce97e3c4ad4df3a87adb8dfe50d"
     },
     {
       "path": "identity-review.json",
-      "sha256": "efc43028567632a62f049970c70d9c75795058a973b62d5f2a7cc6d4858f1474"
+      "sha256": "b5d4eb0f628bc1b32196490eede020aaabe8c505af5720f63571f09e3bd8d69a"
     },
     {
       "path": "locale.json",
@@ -123,7 +135,7 @@
     },
     {
       "path": "qualification.json",
-      "sha256": "d131a4f605aca4bcc90531463b51690bd71c0a31ecab35a7ae96fd858836756e"
+      "sha256": "deac53d3b5b55fa52e9687f05474e3c64cfd9f627692a90a7fa0bc2c11ff4f28"
     },
     {
       "path": "source-evidence.json",

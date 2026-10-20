@@ -5,6 +5,7 @@ import path from 'node:path';
 import { excluded, normalized, sha256, inside } from './workflow.mjs';
 import { signatureBusinessPreview, signaturePriceFacts, signatureMileageFacts, signatureNativeFactsContract } from './client-refresh-signature.mjs';
 import {optionalDealerPackFacts, mobilePackMileageSource, adaptMobilePackFacts, adaptSignaturePackDiscovery} from './dealer-pack-extended-facts.mjs';
+import { DEMO_STOCK_LAYOUT_PATHS, personalizeDemoStockDisclosure } from './client-refresh-safe-content.mjs';
 
 export const EXTENDED_VARIANT_RECEIPTS = Object.freeze({
   mobile: '.cars-mobile.json',
@@ -683,11 +684,15 @@ function patchSignature(files, profile, logos) {
 /** Personalization operates on a derived pinned source map, never an editable master. */
 export function applyExtendedRefreshAdapter({ files, key, profile, client }) {
   if (!Object.hasOwn(EXTENDED_VARIANT_RECEIPTS,key)) throw new Error(`No extended dealer adapter for ${key}`);
+  const layout = key === 'karento-best' && profile.stockKind === 'illustrative-not-dealer-stock'
+    ? key + '/' + DEMO_STOCK_LAYOUT_PATHS[key] : null;
+  if (layout) personalizeDemoStockDisclosure(text(files, layout), key, profile);
   const assets = retainDealerVariantAssets(files,key,profile,client);
   const mapped = new Map(assets.mediaMappings.map(item => [item.sourcePath,item.publicPath]));
   const derivedProfile = {...profile,listings:profile.listings.map(listing => ({...listing,
     image:mapped.get(listing.image)||listing.image,images:listing.images.map(value=>mapped.get(value)||value)}))};
   const adaptation = key === 'mobile' ? patchMobile(files,derivedProfile,assets.logoPaths) : patchSignature(files,derivedProfile,assets.logoPaths);
+  if (layout) { put(files, layout, personalizeDemoStockDisclosure(text(files, layout), key, profile)); adaptation.contentPaths.push(layout); }
   return {...assets,...adaptation};
 }
 

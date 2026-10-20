@@ -13,6 +13,36 @@ const write = (file, value) => {
 const q = (value) => JSON.stringify(String(value ?? ''));
 const isEnglish = (profile) => profile.business.countryCode !== 'BG';
 
+export const DEMO_STOCK_LAYOUT_PATHS = Object.freeze({
+  'auto-best': 'src/routes/+layout.svelte',
+  modern: 'apps/web/app/[locale]/layout.tsx',
+  import: 'src/routes/+layout.svelte',
+  'karento-best': 'src/routes/+layout.svelte'
+});
+
+/** Demo provenance must remain visible outside tabs and desktop-only panels. */
+export function personalizeDemoStockDisclosure(source, key, profile) {
+  if (profile.stockKind !== 'illustrative-not-dealer-stock') return source;
+  const notice = profile.business.inventoryNotice;
+  if (typeof notice !== 'string' || !notice.trim()) throw Error('Demo stock requires its exact inventory disclosure');
+  const anchors = {
+    'auto-best': '<SiteShell {presentation}>',
+    modern: '</ThemeProvider>',
+    import: "{#if !nativeSite && routeParts(page.url.pathname).path.startsWith('/account')}",
+    'karento-best': '<Header />'
+  };
+  const anchor = anchors[key];
+  if (!anchor || source.split(anchor).length !== 2 || source.includes('data-dealer-stock-disclosure'))
+    throw Error(`${key}: demo stock requires exactly one reviewed public layout boundary`);
+  // Source literals preserve punctuation verbatim and never interpret dealer copy as markup.
+  const spacing = key === 'modern'
+    ? 'style={{ margin: 0, padding: "0.75rem 1rem", fontSize: "0.875rem", lineHeight: 1.5, width: "100%", boxSizing: "border-box", gridColumn: "1 / -1", flexBasis: "100%" }}'
+    : 'style="margin:0;padding:0.75rem 1rem;font-size:0.875rem;line-height:1.5;width:100%;box-sizing:border-box;grid-column:1 / -1;flex-basis:100%"';
+  const disclosure = `<p data-dealer-stock-disclosure ${spacing}>{${JSON.stringify(notice)}}</p>`;
+  // Import's route owns its header/footer; keep this outside its next conditional.
+  return source.replace(anchor, () => key === 'import' ? disclosure + '\n' + anchor : anchor + '\n' + disclosure);
+}
+
 /** Personalize only the selected Import offer's recorded copy and identity slots. */
 export function personalizeImportOfferCopy(source, profile) {
   if (!Array.isArray(profile.listings)) throw Error('Import offer requires the normalized listing pack');

@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "dealer": "trade-car-centre-accrington-ghmc-419b403bea",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T22:52:50.228Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "9dae327420efc4179d7dab4b7a7e462204de010a31c3b9c18eafc72fdf2ad635",
+      "sourceSha256": "18e143ebf7f1e4b4ccb2529a2c1d30cd34b710eb37474202fff69d879c865799"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "2021e5adb803dfd04658ce465f1c498799e8b095d1ba4eec55164c0e9b827025",
+      "sourceSha256": "7c3a0641c71c5a021f1789c9359f0c684cda97d56fbc6d19f410671d810c8caf"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "2021e5adb803dfd04658ce465f1c498799e8b095d1ba4eec55164c0e9b827025",
+      "sourceSha256": "7c3a0641c71c5a021f1789c9359f0c684cda97d56fbc6d19f410671d810c8caf"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "18e143ebf7f1e4b4ccb2529a2c1d30cd34b710eb37474202fff69d879c865799",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-5a7311c3-5861-4d46-b6b1-5d604a2f8dff",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "28d1928d2979ec358bc398070934ffc410bd8a534c91aaf5ac403ad9bec1e490",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-5a7311c3-5861-4d46-b6b1-5d604a2f8dff",
+      "modelVersion": null
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "2d8eab5c25f9c24c475aaf9e1e1edd5a0c80baa432397e33df7e7b07e8cafc79"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "18e143ebf7f1e4b4ccb2529a2c1d30cd34b710eb37474202fff69d879c865799",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5a7311c3-5861-4d46-b6b1-5d604a2f8dff",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/trade-car-centre-accrington-ghmc-419b403bea/branding/generated-master-v1-20261021.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "7c3a0641c71c5a021f1789c9359f0c684cda97d56fbc6d19f410671d810c8caf",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a87121f9-b518-47bd-a1e6-9f15074c47af",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/trade-car-centre-accrington-ghmc-419b403bea/branding/generated-inverse-v1-20261021.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "7c3a0641c71c5a021f1789c9359f0c684cda97d56fbc6d19f410671d810c8caf",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a87121f9-b518-47bd-a1e6-9f15074c47af",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/trade-car-centre-accrington-ghmc-419b403bea/branding/generated-inverse-v1-20261021.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "59977aeea5bece431134e7dfc5208d51f6390b3d72fb1d1de7c0892e3ca86ca1",
+      "sha256": "18e143ebf7f1e4b4ccb2529a2c1d30cd34b710eb37474202fff69d879c865799",
+      "crop": {
+        "left": 2,
+        "top": 184,
+        "width": 2040,
+        "height": 406
+      },
+      "sourcePath": "branding/generated-master-v1-20261021.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "dfe376b58322de2697cc719d22e3a2e3fae709df21cea7d41045df9c8c1b03b1",
+      "sha256": "7c3a0641c71c5a021f1789c9359f0c684cda97d56fbc6d19f410671d810c8caf",
+      "crop": {
+        "left": 3,
+        "top": 183,
+        "width": 2041,
+        "height": 407
+      },
+      "sourcePath": "branding/generated-inverse-v1-20261021.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "dfe376b58322de2697cc719d22e3a2e3fae709df21cea7d41045df9c8c1b03b1",
+      "sha256": "7c3a0641c71c5a021f1789c9359f0c684cda97d56fbc6d19f410671d810c8caf",
+      "crop": {
+        "left": 3,
+        "top": 183,
+        "width": 2041,
+        "height": 407
+      },
+      "sourcePath": "branding/generated-inverse-v1-20261021.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "797314ec5b9eb420b5e4c3e0a5952f572982f3a76aac1fb80fb3f79215effa6b",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5a7311c3-5861-4d46-b6b1-5d604a2f8dff",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/trade-car-centre-accrington-ghmc-419b403bea/branding/generated-mark-light-v1-20261021.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "2797a92b155f15664e87091db8e20eb511c6ffe4a8214a7e9c94b8fc7d31f3c5",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a87121f9-b518-47bd-a1e6-9f15074c47af",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/trade-car-centre-accrington-ghmc-419b403bea/branding/generated-mark-dark-v1-20261021.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "28d1928d2979ec358bc398070934ffc410bd8a534c91aaf5ac403ad9bec1e490",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5a7311c3-5861-4d46-b6b1-5d604a2f8dff",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/trade-car-centre-accrington-ghmc-419b403bea/branding/generated-mark-light-v1-20261021.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "2d8eab5c25f9c24c475aaf9e1e1edd5a0c80baa432397e33df7e7b07e8cafc79",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5a7311c3-5861-4d46-b6b1-5d604a2f8dff",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/trade-car-centre-accrington-ghmc-419b403bea/branding/generated-mark-light-v1-20261021.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-20T22:52:50.228Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "fa9b59a40f1a9883b9f3a015a8764afddfa93cfb4c5805b61c6a8c7c49891cad",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-a87121f9-b518-47bd-a1e6-9f15074c47af",
+      "modelVersion": null
+    }
+  }
+}

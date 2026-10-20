@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-20T21:31:21.611Z",
+  "updatedAt": "2026-10-20T23:00:30.686Z",
   "githubOwner": "darkapoparka",
   "vercelTeam": "tyj5",
   "model": "One canonical dealer folder and publishing repository; deployment provider and actual variants are declared per dealer.",
@@ -36609,6 +36609,1482 @@
         "receiptSha256": "4ba079dc54f72066cd26dc55cc603ae97e908dd5d9fc926a7a95589be7862d0a",
         "batch": 3,
         "recordedAt": "2026-10-20T21:31:21.611Z"
+      }
+    },
+    {
+      "slug": "best-wheels-specialized-vehicles",
+      "id": "ae-dubai-best-wheels-specialized-vehicles",
+      "name": "Best Wheels Specialized Vehicles",
+      "sourceFormat": "dealer-pack",
+      "sourceOwnership": "cars-repository",
+      "sourcePath": "dealers/best-wheels-specialized-vehicles",
+      "localPath": "dealers/best-wheels-specialized-vehicles",
+      "localPresent": true,
+      "repository": "darkapoparka/cars",
+      "canonicalSourceRepository": "darkapoparka/cars",
+      "canonicalSourceRef": "f73c8e4b258653d1cee9c29d161e41774cfe6fb8",
+      "canonicalSourceCommit": "f73c8e4b258653d1cee9c29d161e41774cfe6fb8",
+      "canonicalSourceTree": "c9be9f40f8db64bb36cce06188b77090e763b51b",
+      "packagingVersion": "5",
+      "variants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/",
+          "publicUrl": "https://best-wheels-specialized-vehicles.webpreviews.site/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/auto-best",
+            "tree": "cbd21f5e0b794a0cbf52bf36fdf07b25fb0bb499",
+            "digest": "90760c4c73d46ebf976a06e923171f31fc716661f69d25d864342ea856002279"
+          }
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars",
+          "publicUrl": "https://best-wheels-specialized-vehicles.webpreviews.site/variant-2/cars",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/modern",
+            "tree": "e1285aeebcf21730a064db00779a679e64e9d3ca",
+            "digest": "965f1003f5292e99adc72afb738d676436bdc27e7da7ec0264d2872d149a23b5"
+          }
+        },
+        {
+          "key": "import",
+          "base": "/variant-3",
+          "entry": "/variant-3/",
+          "publicUrl": "https://best-wheels-specialized-vehicles.webpreviews.site/variant-3/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/import",
+            "tree": "87950ec43fdb33fd85dbf6d6b6160e1a779777c6",
+            "digest": "3c1fe9e9adef074aa7ca2e774ef8a0d955c77e527b7939418ab408e87659e50d"
+          }
+        },
+        {
+          "key": "app",
+          "base": "/variant-4",
+          "entry": "/variant-4/",
+          "publicUrl": "https://best-wheels-specialized-vehicles.webpreviews.site/variant-4/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/app",
+            "tree": "ad5b8acf793545b0082cfb33e37c7a97da63ec36",
+            "digest": "524f71647d6bafa4320173f73658fce39b48bf0508171480475b980dc3565b65"
+          }
+        },
+        {
+          "key": "mobile",
+          "base": "/variant-5",
+          "entry": "/variant-5/",
+          "publicUrl": "https://best-wheels-specialized-vehicles.webpreviews.site/variant-5/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/mobile",
+            "tree": "9dadfcad37e2b8909cc39d7758db3fca1cd5cf61",
+            "digest": "c85e58c9e747e68d0911f6bd4827a643b8a538dc1ea5eb7d29a78c3252585ef1"
+          }
+        },
+        {
+          "key": "karento-best",
+          "base": "/variant-6",
+          "entry": "/variant-6/",
+          "publicUrl": "https://best-wheels-specialized-vehicles.webpreviews.site/variant-6/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/karento-best",
+            "tree": "9c2ab0e1c84f2ffbb0f20dbba757dea36d88808f",
+            "digest": "1f32f03af52daee41861d53d66bafcf3147d001f5a0a9840afbe9b6fb128a8c9"
+          }
+        }
+      ],
+      "delivery": {
+        "provider": "cloudflare",
+        "state": "live-verified",
+        "workerName": "cars-best-wheels-specialized-vehicles",
+        "workerId": "3112fb3a45a2455c90facb1819c9ac4c",
+        "versionId": "a8d9bbae-5688-4ce6-9056-ec9478658653",
+        "routeId": "2d87c9601fdb404d92d24c416d7daa69",
+        "configuredPublicOrigin": "https://best-wheels-specialized-vehicles.webpreviews.site",
+        "url": "https://best-wheels-specialized-vehicles.webpreviews.site/",
+        "checkedAt": "2026-10-20T22:23:24.150Z"
+      },
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "repository": "darkapoparka/cars",
+          "commit": "f73c8e4b258653d1cee9c29d161e41774cfe6fb8",
+          "path": "dealers/best-wheels-specialized-vehicles",
+          "tree": "c9be9f40f8db64bb36cce06188b77090e763b51b",
+          "inputFiles": 24,
+          "remoteVerified": true
+        },
+        "build": {
+          "state": "passed",
+          "outputDigest": "396bd837869c71ad0f2837f71d803810fde5f37d8a488589511eacd92a2648d6",
+          "packDigest": "176c653215724047359a8d3abb74c13251401a4eeda819e90b31e2ea5b03cbfc",
+          "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0"
+        },
+        "deployment": {
+          "state": "deployed",
+          "workerId": "3112fb3a45a2455c90facb1819c9ac4c",
+          "versionId": "a8d9bbae-5688-4ce6-9056-ec9478658653",
+          "receiptSha256": "0e35fa2970a44ca34c9c6c653d0b5f6f370343bd8ad592840adfbbef8064a01f"
+        },
+        "browser": {
+          "state": "passed",
+          "reportSha256": "b9ccb543ed6fee9bdd70499afa693547f082eb0e20a14de7b2b3a1191ad0bf03",
+          "widths": [
+            390
+          ],
+          "locales": [
+            "en"
+          ]
+        },
+        "ownerReview": {
+          "state": "not-claimed",
+          "note": "Owner authorized preview deployment; this receipt does not claim dealer identity or visual approval."
+        }
+      },
+      "newPackDeployment": {
+        "queueId": "10b70e3e-8623-49b4-bc1d-3a7468c0231a",
+        "queueBranch": "cars-deploy-queue",
+        "requestId": "c0517e6be4ffaad9070a9b65292f8efbbbe99eaebf5b9d9d3fac92ef941e57a3",
+        "receiptSha256": "0e35fa2970a44ca34c9c6c653d0b5f6f370343bd8ad592840adfbbef8064a01f",
+        "batch": 3,
+        "recordedAt": "2026-10-20T23:00:30.686Z"
+      }
+    },
+    {
+      "slug": "golden-coast-auto",
+      "id": "ae-dubai-golden-coast-auto",
+      "name": "Golden Coast Auto",
+      "sourceFormat": "dealer-pack",
+      "sourceOwnership": "cars-repository",
+      "sourcePath": "dealers/golden-coast-auto",
+      "localPath": "dealers/golden-coast-auto",
+      "localPresent": true,
+      "repository": "darkapoparka/cars",
+      "canonicalSourceRepository": "darkapoparka/cars",
+      "canonicalSourceRef": "f73c8e4b258653d1cee9c29d161e41774cfe6fb8",
+      "canonicalSourceCommit": "f73c8e4b258653d1cee9c29d161e41774cfe6fb8",
+      "canonicalSourceTree": "76ab3fdcd2de5bce770e47fc237c126494930eba",
+      "packagingVersion": "5",
+      "variants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/",
+          "publicUrl": "https://golden-coast-auto.webpreviews.site/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/auto-best",
+            "tree": "cbd21f5e0b794a0cbf52bf36fdf07b25fb0bb499",
+            "digest": "90760c4c73d46ebf976a06e923171f31fc716661f69d25d864342ea856002279"
+          }
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars",
+          "publicUrl": "https://golden-coast-auto.webpreviews.site/variant-2/cars",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/modern",
+            "tree": "e1285aeebcf21730a064db00779a679e64e9d3ca",
+            "digest": "965f1003f5292e99adc72afb738d676436bdc27e7da7ec0264d2872d149a23b5"
+          }
+        },
+        {
+          "key": "import",
+          "base": "/variant-3",
+          "entry": "/variant-3/",
+          "publicUrl": "https://golden-coast-auto.webpreviews.site/variant-3/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/import",
+            "tree": "87950ec43fdb33fd85dbf6d6b6160e1a779777c6",
+            "digest": "3c1fe9e9adef074aa7ca2e774ef8a0d955c77e527b7939418ab408e87659e50d"
+          }
+        },
+        {
+          "key": "app",
+          "base": "/variant-4",
+          "entry": "/variant-4/",
+          "publicUrl": "https://golden-coast-auto.webpreviews.site/variant-4/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/app",
+            "tree": "ad5b8acf793545b0082cfb33e37c7a97da63ec36",
+            "digest": "524f71647d6bafa4320173f73658fce39b48bf0508171480475b980dc3565b65"
+          }
+        },
+        {
+          "key": "mobile",
+          "base": "/variant-5",
+          "entry": "/variant-5/",
+          "publicUrl": "https://golden-coast-auto.webpreviews.site/variant-5/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/mobile",
+            "tree": "9dadfcad37e2b8909cc39d7758db3fca1cd5cf61",
+            "digest": "c85e58c9e747e68d0911f6bd4827a643b8a538dc1ea5eb7d29a78c3252585ef1"
+          }
+        },
+        {
+          "key": "karento-best",
+          "base": "/variant-6",
+          "entry": "/variant-6/",
+          "publicUrl": "https://golden-coast-auto.webpreviews.site/variant-6/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/karento-best",
+            "tree": "9c2ab0e1c84f2ffbb0f20dbba757dea36d88808f",
+            "digest": "1f32f03af52daee41861d53d66bafcf3147d001f5a0a9840afbe9b6fb128a8c9"
+          }
+        }
+      ],
+      "delivery": {
+        "provider": "cloudflare",
+        "state": "live-verified",
+        "workerName": "cars-golden-coast-auto",
+        "workerId": "fd2b7745f07d46fab9b14815e07e5ee1",
+        "versionId": "b7631a95-f70d-4d73-85ac-590d9bd5658f",
+        "routeId": "c419edd3d3d84b1d915b99791643d804",
+        "configuredPublicOrigin": "https://golden-coast-auto.webpreviews.site",
+        "url": "https://golden-coast-auto.webpreviews.site/",
+        "checkedAt": "2026-10-20T22:31:11.330Z"
+      },
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "repository": "darkapoparka/cars",
+          "commit": "f73c8e4b258653d1cee9c29d161e41774cfe6fb8",
+          "path": "dealers/golden-coast-auto",
+          "tree": "76ab3fdcd2de5bce770e47fc237c126494930eba",
+          "inputFiles": 25,
+          "remoteVerified": true
+        },
+        "build": {
+          "state": "passed",
+          "outputDigest": "bb4e45b36e171df65d7b28e387eef2cc5c8196990cfcefcbba1ed399dd59a285",
+          "packDigest": "3bd3bddf37bf5089f2d5ea23f04c8e6887874201fbfb58f8c47b29f8a0991a1e",
+          "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0"
+        },
+        "deployment": {
+          "state": "deployed",
+          "workerId": "fd2b7745f07d46fab9b14815e07e5ee1",
+          "versionId": "b7631a95-f70d-4d73-85ac-590d9bd5658f",
+          "receiptSha256": "9a48c52d87a9df64c06e44fa86e875dc338c155ba7406d833ed42d0414f2de3c"
+        },
+        "browser": {
+          "state": "passed",
+          "reportSha256": "e1bff95452ab487b5e922401b44fa9cf1e58ea351daba7505a4a395f45579459",
+          "widths": [
+            390
+          ],
+          "locales": [
+            "en"
+          ]
+        },
+        "ownerReview": {
+          "state": "not-claimed",
+          "note": "Owner authorized preview deployment; this receipt does not claim dealer identity or visual approval."
+        }
+      },
+      "newPackDeployment": {
+        "queueId": "10b70e3e-8623-49b4-bc1d-3a7468c0231a",
+        "queueBranch": "cars-deploy-queue",
+        "requestId": "dfcfde65ec87edaa4ed2706483a88108806a1c2534d842b4300116946a81db8a",
+        "receiptSha256": "9a48c52d87a9df64c06e44fa86e875dc338c155ba7406d833ed42d0414f2de3c",
+        "batch": 3,
+        "recordedAt": "2026-10-20T23:00:30.686Z"
+      }
+    },
+    {
+      "slug": "intercars",
+      "id": "ae-dubai-intercars",
+      "name": "InterCars",
+      "sourceFormat": "dealer-pack",
+      "sourceOwnership": "cars-repository",
+      "sourcePath": "dealers/intercars",
+      "localPath": "dealers/intercars",
+      "localPresent": true,
+      "repository": "darkapoparka/cars",
+      "canonicalSourceRepository": "darkapoparka/cars",
+      "canonicalSourceRef": "f73c8e4b258653d1cee9c29d161e41774cfe6fb8",
+      "canonicalSourceCommit": "f73c8e4b258653d1cee9c29d161e41774cfe6fb8",
+      "canonicalSourceTree": "09f151626bd0de21b8456c366a80b106cf4a132f",
+      "packagingVersion": "5",
+      "variants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/",
+          "publicUrl": "https://intercars.webpreviews.site/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/auto-best",
+            "tree": "cbd21f5e0b794a0cbf52bf36fdf07b25fb0bb499",
+            "digest": "90760c4c73d46ebf976a06e923171f31fc716661f69d25d864342ea856002279"
+          }
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars",
+          "publicUrl": "https://intercars.webpreviews.site/variant-2/cars",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/modern",
+            "tree": "e1285aeebcf21730a064db00779a679e64e9d3ca",
+            "digest": "965f1003f5292e99adc72afb738d676436bdc27e7da7ec0264d2872d149a23b5"
+          }
+        },
+        {
+          "key": "import",
+          "base": "/variant-3",
+          "entry": "/variant-3/",
+          "publicUrl": "https://intercars.webpreviews.site/variant-3/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/import",
+            "tree": "87950ec43fdb33fd85dbf6d6b6160e1a779777c6",
+            "digest": "3c1fe9e9adef074aa7ca2e774ef8a0d955c77e527b7939418ab408e87659e50d"
+          }
+        },
+        {
+          "key": "app",
+          "base": "/variant-4",
+          "entry": "/variant-4/",
+          "publicUrl": "https://intercars.webpreviews.site/variant-4/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/app",
+            "tree": "ad5b8acf793545b0082cfb33e37c7a97da63ec36",
+            "digest": "524f71647d6bafa4320173f73658fce39b48bf0508171480475b980dc3565b65"
+          }
+        },
+        {
+          "key": "mobile",
+          "base": "/variant-5",
+          "entry": "/variant-5/",
+          "publicUrl": "https://intercars.webpreviews.site/variant-5/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/mobile",
+            "tree": "9dadfcad37e2b8909cc39d7758db3fca1cd5cf61",
+            "digest": "c85e58c9e747e68d0911f6bd4827a643b8a538dc1ea5eb7d29a78c3252585ef1"
+          }
+        },
+        {
+          "key": "karento-best",
+          "base": "/variant-6",
+          "entry": "/variant-6/",
+          "publicUrl": "https://intercars.webpreviews.site/variant-6/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/karento-best",
+            "tree": "9c2ab0e1c84f2ffbb0f20dbba757dea36d88808f",
+            "digest": "1f32f03af52daee41861d53d66bafcf3147d001f5a0a9840afbe9b6fb128a8c9"
+          }
+        }
+      ],
+      "delivery": {
+        "provider": "cloudflare",
+        "state": "live-verified",
+        "workerName": "cars-intercars",
+        "workerId": "2fa91b0bed274c628aeec8c9486f7e99",
+        "versionId": "8c347917-910b-47e6-a513-7234b0abe947",
+        "routeId": "3d29aa7a61c9486680d30585b3b4dbbc",
+        "configuredPublicOrigin": "https://intercars.webpreviews.site",
+        "url": "https://intercars.webpreviews.site/",
+        "checkedAt": "2026-10-20T22:38:10.984Z"
+      },
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "repository": "darkapoparka/cars",
+          "commit": "f73c8e4b258653d1cee9c29d161e41774cfe6fb8",
+          "path": "dealers/intercars",
+          "tree": "09f151626bd0de21b8456c366a80b106cf4a132f",
+          "inputFiles": 25,
+          "remoteVerified": true
+        },
+        "build": {
+          "state": "passed",
+          "outputDigest": "6af73f4b8b9eb5a3015fec74b0080ea645830f91036666173ea2ccfecd2505a7",
+          "packDigest": "855f8043c2354bbf1fe50c078b72a50720fab168602761e00abddc51d34e1f1f",
+          "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0"
+        },
+        "deployment": {
+          "state": "deployed",
+          "workerId": "2fa91b0bed274c628aeec8c9486f7e99",
+          "versionId": "8c347917-910b-47e6-a513-7234b0abe947",
+          "receiptSha256": "5e39f894b6e739e0df85435d457c1f2b830d2b6d65e03cf10d2f3a5f9b740f69"
+        },
+        "browser": {
+          "state": "passed",
+          "reportSha256": "e5e4cdb40192dc81e9b6d11ead19b86fe7f4b6ee0e1860018b2a15ef6ea94613",
+          "widths": [
+            390
+          ],
+          "locales": [
+            "en"
+          ]
+        },
+        "ownerReview": {
+          "state": "not-claimed",
+          "note": "Owner authorized preview deployment; this receipt does not claim dealer identity or visual approval."
+        }
+      },
+      "newPackDeployment": {
+        "queueId": "10b70e3e-8623-49b4-bc1d-3a7468c0231a",
+        "queueBranch": "cars-deploy-queue",
+        "requestId": "cc8edb44deb7b1f82d9c09a05c390a1ef4b3940b0336503cb4dc99d90c866748",
+        "receiptSha256": "5e39f894b6e739e0df85435d457c1f2b830d2b6d65e03cf10d2f3a5f9b740f69",
+        "batch": 3,
+        "recordedAt": "2026-10-20T23:00:30.686Z"
+      }
+    },
+    {
+      "slug": "macan-luxury-cars",
+      "id": "ae-dubai-macan-luxury-cars",
+      "name": "Macan Luxury Cars",
+      "sourceFormat": "dealer-pack",
+      "sourceOwnership": "cars-repository",
+      "sourcePath": "dealers/macan-luxury-cars",
+      "localPath": "dealers/macan-luxury-cars",
+      "localPresent": true,
+      "repository": "darkapoparka/cars",
+      "canonicalSourceRepository": "darkapoparka/cars",
+      "canonicalSourceRef": "f73c8e4b258653d1cee9c29d161e41774cfe6fb8",
+      "canonicalSourceCommit": "f73c8e4b258653d1cee9c29d161e41774cfe6fb8",
+      "canonicalSourceTree": "f7e906d91c13ac7713b3d61d5accd860ffa4cb95",
+      "packagingVersion": "5",
+      "variants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/",
+          "publicUrl": "https://macan-luxury-cars.webpreviews.site/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/auto-best",
+            "tree": "cbd21f5e0b794a0cbf52bf36fdf07b25fb0bb499",
+            "digest": "90760c4c73d46ebf976a06e923171f31fc716661f69d25d864342ea856002279"
+          }
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars",
+          "publicUrl": "https://macan-luxury-cars.webpreviews.site/variant-2/cars",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/modern",
+            "tree": "e1285aeebcf21730a064db00779a679e64e9d3ca",
+            "digest": "965f1003f5292e99adc72afb738d676436bdc27e7da7ec0264d2872d149a23b5"
+          }
+        },
+        {
+          "key": "import",
+          "base": "/variant-3",
+          "entry": "/variant-3/",
+          "publicUrl": "https://macan-luxury-cars.webpreviews.site/variant-3/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/import",
+            "tree": "87950ec43fdb33fd85dbf6d6b6160e1a779777c6",
+            "digest": "3c1fe9e9adef074aa7ca2e774ef8a0d955c77e527b7939418ab408e87659e50d"
+          }
+        },
+        {
+          "key": "app",
+          "base": "/variant-4",
+          "entry": "/variant-4/",
+          "publicUrl": "https://macan-luxury-cars.webpreviews.site/variant-4/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/app",
+            "tree": "ad5b8acf793545b0082cfb33e37c7a97da63ec36",
+            "digest": "524f71647d6bafa4320173f73658fce39b48bf0508171480475b980dc3565b65"
+          }
+        },
+        {
+          "key": "mobile",
+          "base": "/variant-5",
+          "entry": "/variant-5/",
+          "publicUrl": "https://macan-luxury-cars.webpreviews.site/variant-5/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/mobile",
+            "tree": "9dadfcad37e2b8909cc39d7758db3fca1cd5cf61",
+            "digest": "c85e58c9e747e68d0911f6bd4827a643b8a538dc1ea5eb7d29a78c3252585ef1"
+          }
+        },
+        {
+          "key": "karento-best",
+          "base": "/variant-6",
+          "entry": "/variant-6/",
+          "publicUrl": "https://macan-luxury-cars.webpreviews.site/variant-6/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/karento-best",
+            "tree": "9c2ab0e1c84f2ffbb0f20dbba757dea36d88808f",
+            "digest": "1f32f03af52daee41861d53d66bafcf3147d001f5a0a9840afbe9b6fb128a8c9"
+          }
+        }
+      ],
+      "delivery": {
+        "provider": "cloudflare",
+        "state": "live-verified",
+        "workerName": "cars-macan-luxury-cars",
+        "workerId": "3e4db30461e24dc7adc532d3cc0b88ed",
+        "versionId": "92a212df-03f0-43c5-91cb-d15379fb6679",
+        "routeId": "6763987c611741039033966b1455c9ef",
+        "configuredPublicOrigin": "https://macan-luxury-cars.webpreviews.site",
+        "url": "https://macan-luxury-cars.webpreviews.site/",
+        "checkedAt": "2026-10-20T22:45:26.366Z"
+      },
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "repository": "darkapoparka/cars",
+          "commit": "f73c8e4b258653d1cee9c29d161e41774cfe6fb8",
+          "path": "dealers/macan-luxury-cars",
+          "tree": "f7e906d91c13ac7713b3d61d5accd860ffa4cb95",
+          "inputFiles": 25,
+          "remoteVerified": true
+        },
+        "build": {
+          "state": "passed",
+          "outputDigest": "543286907d2fb7808b942994702d9ee67de1e1bb641d879846aaa4b8e714fa8f",
+          "packDigest": "4b708065ceb6a8d330a15c753ad7c6c6bc2432a258476db39bb2ecd837dd56f1",
+          "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0"
+        },
+        "deployment": {
+          "state": "deployed",
+          "workerId": "3e4db30461e24dc7adc532d3cc0b88ed",
+          "versionId": "92a212df-03f0-43c5-91cb-d15379fb6679",
+          "receiptSha256": "be8843ef5995ebbda6a8aa4b39aaa9deeb88052c191a8fd39b6684027a9cf1c4"
+        },
+        "browser": {
+          "state": "passed",
+          "reportSha256": "f5dda47466c884ff77b0e0c647813c9e637faea6769f587eca86dfed4996d744",
+          "widths": [
+            390
+          ],
+          "locales": [
+            "en"
+          ]
+        },
+        "ownerReview": {
+          "state": "not-claimed",
+          "note": "Owner authorized preview deployment; this receipt does not claim dealer identity or visual approval."
+        }
+      },
+      "newPackDeployment": {
+        "queueId": "10b70e3e-8623-49b4-bc1d-3a7468c0231a",
+        "queueBranch": "cars-deploy-queue",
+        "requestId": "703a57bad8522d5c70211314a79ccae00ffbe8ad9a42a48952e0734df61be8c9",
+        "receiptSha256": "be8843ef5995ebbda6a8aa4b39aaa9deeb88052c191a8fd39b6684027a9cf1c4",
+        "batch": 3,
+        "recordedAt": "2026-10-20T23:00:30.686Z"
+      }
+    },
+    {
+      "slug": "mangame-motors",
+      "id": "ae-dubai-mangame-motors",
+      "name": "Mangame Motors",
+      "sourceFormat": "dealer-pack",
+      "sourceOwnership": "cars-repository",
+      "sourcePath": "dealers/mangame-motors",
+      "localPath": "dealers/mangame-motors",
+      "localPresent": true,
+      "repository": "darkapoparka/cars",
+      "canonicalSourceRepository": "darkapoparka/cars",
+      "canonicalSourceRef": "f73c8e4b258653d1cee9c29d161e41774cfe6fb8",
+      "canonicalSourceCommit": "f73c8e4b258653d1cee9c29d161e41774cfe6fb8",
+      "canonicalSourceTree": "9727ccaecc152c35ba95b3f187f31a381c8adfbe",
+      "packagingVersion": "5",
+      "variants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/",
+          "publicUrl": "https://mangame-motors.webpreviews.site/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/auto-best",
+            "tree": "cbd21f5e0b794a0cbf52bf36fdf07b25fb0bb499",
+            "digest": "90760c4c73d46ebf976a06e923171f31fc716661f69d25d864342ea856002279"
+          }
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars",
+          "publicUrl": "https://mangame-motors.webpreviews.site/variant-2/cars",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/modern",
+            "tree": "e1285aeebcf21730a064db00779a679e64e9d3ca",
+            "digest": "965f1003f5292e99adc72afb738d676436bdc27e7da7ec0264d2872d149a23b5"
+          }
+        },
+        {
+          "key": "import",
+          "base": "/variant-3",
+          "entry": "/variant-3/",
+          "publicUrl": "https://mangame-motors.webpreviews.site/variant-3/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/import",
+            "tree": "87950ec43fdb33fd85dbf6d6b6160e1a779777c6",
+            "digest": "3c1fe9e9adef074aa7ca2e774ef8a0d955c77e527b7939418ab408e87659e50d"
+          }
+        },
+        {
+          "key": "app",
+          "base": "/variant-4",
+          "entry": "/variant-4/",
+          "publicUrl": "https://mangame-motors.webpreviews.site/variant-4/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/app",
+            "tree": "ad5b8acf793545b0082cfb33e37c7a97da63ec36",
+            "digest": "524f71647d6bafa4320173f73658fce39b48bf0508171480475b980dc3565b65"
+          }
+        },
+        {
+          "key": "mobile",
+          "base": "/variant-5",
+          "entry": "/variant-5/",
+          "publicUrl": "https://mangame-motors.webpreviews.site/variant-5/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/mobile",
+            "tree": "9dadfcad37e2b8909cc39d7758db3fca1cd5cf61",
+            "digest": "c85e58c9e747e68d0911f6bd4827a643b8a538dc1ea5eb7d29a78c3252585ef1"
+          }
+        },
+        {
+          "key": "karento-best",
+          "base": "/variant-6",
+          "entry": "/variant-6/",
+          "publicUrl": "https://mangame-motors.webpreviews.site/variant-6/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/karento-best",
+            "tree": "9c2ab0e1c84f2ffbb0f20dbba757dea36d88808f",
+            "digest": "1f32f03af52daee41861d53d66bafcf3147d001f5a0a9840afbe9b6fb128a8c9"
+          }
+        }
+      ],
+      "delivery": {
+        "provider": "cloudflare",
+        "state": "live-verified",
+        "workerName": "cars-mangame-motors",
+        "workerId": "be1a2e3040d94eff92e01a006c4cbfca",
+        "versionId": "bce30bec-8b3e-4745-9fb1-9a425b94e7a5",
+        "routeId": "c7d38a73e8f047309cfda610e5114539",
+        "configuredPublicOrigin": "https://mangame-motors.webpreviews.site",
+        "url": "https://mangame-motors.webpreviews.site/",
+        "checkedAt": "2026-10-20T21:33:55.551Z"
+      },
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "repository": "darkapoparka/cars",
+          "commit": "f73c8e4b258653d1cee9c29d161e41774cfe6fb8",
+          "path": "dealers/mangame-motors",
+          "tree": "9727ccaecc152c35ba95b3f187f31a381c8adfbe",
+          "inputFiles": 25,
+          "remoteVerified": true
+        },
+        "build": {
+          "state": "passed",
+          "outputDigest": "5b2afae04a72768f55442e15ef769a1f5d36c3c898f9cfc2253478c868fa2f43",
+          "packDigest": "1c67ba0a366d10e3f05150f118b900366519e3bd79d1e3353564bac8887b16cf",
+          "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0"
+        },
+        "deployment": {
+          "state": "deployed",
+          "workerId": "be1a2e3040d94eff92e01a006c4cbfca",
+          "versionId": "bce30bec-8b3e-4745-9fb1-9a425b94e7a5",
+          "receiptSha256": "378e370208be5b48afa84faac8cdf3a1f2dcf2bec69064d422431042ed45c8ed"
+        },
+        "browser": {
+          "state": "passed",
+          "reportSha256": "91b586b88bc1b649426b9b0a8948f8e84828e546f229f38c75e7a07dacbb9d1b",
+          "widths": [
+            390
+          ],
+          "locales": [
+            "en"
+          ]
+        },
+        "ownerReview": {
+          "state": "not-claimed",
+          "note": "Owner authorized preview deployment; this receipt does not claim dealer identity or visual approval."
+        }
+      },
+      "newPackDeployment": {
+        "queueId": "10b70e3e-8623-49b4-bc1d-3a7468c0231a",
+        "queueBranch": "cars-deploy-queue",
+        "requestId": "f5d4d5c4a8fe202eda9166c4a4ec86b53d77d3abc01c76a9093e24acf874a05c",
+        "receiptSha256": "378e370208be5b48afa84faac8cdf3a1f2dcf2bec69064d422431042ed45c8ed",
+        "batch": 3,
+        "recordedAt": "2026-10-20T23:00:30.686Z"
+      }
+    },
+    {
+      "slug": "mizdawy-motors",
+      "id": "ae-dubai-mizdawy-motors",
+      "name": "Mizdawy Motors",
+      "sourceFormat": "dealer-pack",
+      "sourceOwnership": "cars-repository",
+      "sourcePath": "dealers/mizdawy-motors",
+      "localPath": "dealers/mizdawy-motors",
+      "localPresent": true,
+      "repository": "darkapoparka/cars",
+      "canonicalSourceRepository": "darkapoparka/cars",
+      "canonicalSourceRef": "f73c8e4b258653d1cee9c29d161e41774cfe6fb8",
+      "canonicalSourceCommit": "f73c8e4b258653d1cee9c29d161e41774cfe6fb8",
+      "canonicalSourceTree": "d9588722b87e844334feca084be62f3114b8a544",
+      "packagingVersion": "5",
+      "variants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/",
+          "publicUrl": "https://mizdawy-motors.webpreviews.site/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/auto-best",
+            "tree": "cbd21f5e0b794a0cbf52bf36fdf07b25fb0bb499",
+            "digest": "90760c4c73d46ebf976a06e923171f31fc716661f69d25d864342ea856002279"
+          }
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars",
+          "publicUrl": "https://mizdawy-motors.webpreviews.site/variant-2/cars",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/modern",
+            "tree": "e1285aeebcf21730a064db00779a679e64e9d3ca",
+            "digest": "965f1003f5292e99adc72afb738d676436bdc27e7da7ec0264d2872d149a23b5"
+          }
+        },
+        {
+          "key": "import",
+          "base": "/variant-3",
+          "entry": "/variant-3/",
+          "publicUrl": "https://mizdawy-motors.webpreviews.site/variant-3/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/import",
+            "tree": "87950ec43fdb33fd85dbf6d6b6160e1a779777c6",
+            "digest": "3c1fe9e9adef074aa7ca2e774ef8a0d955c77e527b7939418ab408e87659e50d"
+          }
+        },
+        {
+          "key": "app",
+          "base": "/variant-4",
+          "entry": "/variant-4/",
+          "publicUrl": "https://mizdawy-motors.webpreviews.site/variant-4/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/app",
+            "tree": "ad5b8acf793545b0082cfb33e37c7a97da63ec36",
+            "digest": "524f71647d6bafa4320173f73658fce39b48bf0508171480475b980dc3565b65"
+          }
+        },
+        {
+          "key": "mobile",
+          "base": "/variant-5",
+          "entry": "/variant-5/",
+          "publicUrl": "https://mizdawy-motors.webpreviews.site/variant-5/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/mobile",
+            "tree": "9dadfcad37e2b8909cc39d7758db3fca1cd5cf61",
+            "digest": "c85e58c9e747e68d0911f6bd4827a643b8a538dc1ea5eb7d29a78c3252585ef1"
+          }
+        },
+        {
+          "key": "karento-best",
+          "base": "/variant-6",
+          "entry": "/variant-6/",
+          "publicUrl": "https://mizdawy-motors.webpreviews.site/variant-6/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/karento-best",
+            "tree": "9c2ab0e1c84f2ffbb0f20dbba757dea36d88808f",
+            "digest": "1f32f03af52daee41861d53d66bafcf3147d001f5a0a9840afbe9b6fb128a8c9"
+          }
+        }
+      ],
+      "delivery": {
+        "provider": "cloudflare",
+        "state": "live-verified",
+        "workerName": "cars-mizdawy-motors",
+        "workerId": "c962b810ca6447d7849f8b155ecce09f",
+        "versionId": "af6e2868-5201-4f35-88bc-f5940e191ac5",
+        "routeId": "1d160650bb894661aa89ffb4683594bc",
+        "configuredPublicOrigin": "https://mizdawy-motors.webpreviews.site",
+        "url": "https://mizdawy-motors.webpreviews.site/",
+        "checkedAt": "2026-10-20T22:53:32.387Z"
+      },
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "repository": "darkapoparka/cars",
+          "commit": "f73c8e4b258653d1cee9c29d161e41774cfe6fb8",
+          "path": "dealers/mizdawy-motors",
+          "tree": "d9588722b87e844334feca084be62f3114b8a544",
+          "inputFiles": 23,
+          "remoteVerified": true
+        },
+        "build": {
+          "state": "passed",
+          "outputDigest": "efed1f61ddc3a6c8160511f77d19b43fb25773de5dd08dc915a0ada1e92a9372",
+          "packDigest": "ec63042e5dc0b3d1c1645d95fd14b9a7fa06a7706bc2756c65c2b76c217d8e7a",
+          "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0"
+        },
+        "deployment": {
+          "state": "deployed",
+          "workerId": "c962b810ca6447d7849f8b155ecce09f",
+          "versionId": "af6e2868-5201-4f35-88bc-f5940e191ac5",
+          "receiptSha256": "9cd82ccc63f0b5212a675226b56c89c7cca8cd9367cc4dbca9a2851401b83a76"
+        },
+        "browser": {
+          "state": "passed",
+          "reportSha256": "0e917dca3aab1edb6b572f9a86518528e700bc6b45156058fbd914743b834e54",
+          "widths": [
+            390
+          ],
+          "locales": [
+            "en"
+          ]
+        },
+        "ownerReview": {
+          "state": "not-claimed",
+          "note": "Owner authorized preview deployment; this receipt does not claim dealer identity or visual approval."
+        }
+      },
+      "newPackDeployment": {
+        "queueId": "10b70e3e-8623-49b4-bc1d-3a7468c0231a",
+        "queueBranch": "cars-deploy-queue",
+        "requestId": "7562ca0d465b183aa9a036a1f5d4de427b4cd3db9e2a5f461bb85c8d6ada5211",
+        "receiptSha256": "9cd82ccc63f0b5212a675226b56c89c7cca8cd9367cc4dbca9a2851401b83a76",
+        "batch": 3,
+        "recordedAt": "2026-10-20T23:00:30.686Z"
+      }
+    },
+    {
+      "slug": "motorx-group",
+      "id": "ae-dubai-motorx-group",
+      "name": "MotorX Group",
+      "sourceFormat": "dealer-pack",
+      "sourceOwnership": "cars-repository",
+      "sourcePath": "dealers/motorx-group",
+      "localPath": "dealers/motorx-group",
+      "localPresent": true,
+      "repository": "darkapoparka/cars",
+      "canonicalSourceRepository": "darkapoparka/cars",
+      "canonicalSourceRef": "f73c8e4b258653d1cee9c29d161e41774cfe6fb8",
+      "canonicalSourceCommit": "f73c8e4b258653d1cee9c29d161e41774cfe6fb8",
+      "canonicalSourceTree": "a95e00102982046575dd0dcbaf8f334d812a7609",
+      "packagingVersion": "5",
+      "variants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/",
+          "publicUrl": "https://motorx-group.webpreviews.site/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/auto-best",
+            "tree": "cbd21f5e0b794a0cbf52bf36fdf07b25fb0bb499",
+            "digest": "90760c4c73d46ebf976a06e923171f31fc716661f69d25d864342ea856002279"
+          }
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars",
+          "publicUrl": "https://motorx-group.webpreviews.site/variant-2/cars",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/modern",
+            "tree": "e1285aeebcf21730a064db00779a679e64e9d3ca",
+            "digest": "965f1003f5292e99adc72afb738d676436bdc27e7da7ec0264d2872d149a23b5"
+          }
+        },
+        {
+          "key": "import",
+          "base": "/variant-3",
+          "entry": "/variant-3/",
+          "publicUrl": "https://motorx-group.webpreviews.site/variant-3/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/import",
+            "tree": "87950ec43fdb33fd85dbf6d6b6160e1a779777c6",
+            "digest": "3c1fe9e9adef074aa7ca2e774ef8a0d955c77e527b7939418ab408e87659e50d"
+          }
+        },
+        {
+          "key": "app",
+          "base": "/variant-4",
+          "entry": "/variant-4/",
+          "publicUrl": "https://motorx-group.webpreviews.site/variant-4/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/app",
+            "tree": "ad5b8acf793545b0082cfb33e37c7a97da63ec36",
+            "digest": "524f71647d6bafa4320173f73658fce39b48bf0508171480475b980dc3565b65"
+          }
+        },
+        {
+          "key": "mobile",
+          "base": "/variant-5",
+          "entry": "/variant-5/",
+          "publicUrl": "https://motorx-group.webpreviews.site/variant-5/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/mobile",
+            "tree": "9dadfcad37e2b8909cc39d7758db3fca1cd5cf61",
+            "digest": "c85e58c9e747e68d0911f6bd4827a643b8a538dc1ea5eb7d29a78c3252585ef1"
+          }
+        },
+        {
+          "key": "karento-best",
+          "base": "/variant-6",
+          "entry": "/variant-6/",
+          "publicUrl": "https://motorx-group.webpreviews.site/variant-6/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/karento-best",
+            "tree": "9c2ab0e1c84f2ffbb0f20dbba757dea36d88808f",
+            "digest": "1f32f03af52daee41861d53d66bafcf3147d001f5a0a9840afbe9b6fb128a8c9"
+          }
+        }
+      ],
+      "delivery": {
+        "provider": "cloudflare",
+        "state": "live-verified",
+        "workerName": "cars-motorx-group",
+        "workerId": "a45809a8518740bbbcae8d4322544a3d",
+        "versionId": "09460aac-cf53-4857-b153-f26d0b6b21fe",
+        "routeId": "1ff3f09f64454792891f774950c6a1d6",
+        "configuredPublicOrigin": "https://motorx-group.webpreviews.site",
+        "url": "https://motorx-group.webpreviews.site/",
+        "checkedAt": "2026-10-20T21:41:00.982Z"
+      },
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "repository": "darkapoparka/cars",
+          "commit": "f73c8e4b258653d1cee9c29d161e41774cfe6fb8",
+          "path": "dealers/motorx-group",
+          "tree": "a95e00102982046575dd0dcbaf8f334d812a7609",
+          "inputFiles": 25,
+          "remoteVerified": true
+        },
+        "build": {
+          "state": "passed",
+          "outputDigest": "54afab62f286901304b7dbf42bb68774e02e9176235e3233b8e17c25603ab469",
+          "packDigest": "50e680733df0d043618baf71b6cb744ad0b188697690cc7cb7a75ec300a94656",
+          "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0"
+        },
+        "deployment": {
+          "state": "deployed",
+          "workerId": "a45809a8518740bbbcae8d4322544a3d",
+          "versionId": "09460aac-cf53-4857-b153-f26d0b6b21fe",
+          "receiptSha256": "a17be7bcfdf2417a2295cc3acb5943e283559a9297f75e54e58107c178c72dfa"
+        },
+        "browser": {
+          "state": "passed",
+          "reportSha256": "79c925f8eb3a7a05fac4b71c6afc75dd529b70f5cab5cc51c10d85d51813014b",
+          "widths": [
+            390
+          ],
+          "locales": [
+            "en"
+          ]
+        },
+        "ownerReview": {
+          "state": "not-claimed",
+          "note": "Owner authorized preview deployment; this receipt does not claim dealer identity or visual approval."
+        }
+      },
+      "newPackDeployment": {
+        "queueId": "10b70e3e-8623-49b4-bc1d-3a7468c0231a",
+        "queueBranch": "cars-deploy-queue",
+        "requestId": "40415923d5c097edbb6b1cf9c798d57d44de18d387e58d7dcdcf03c19ccaeed6",
+        "receiptSha256": "a17be7bcfdf2417a2295cc3acb5943e283559a9297f75e54e58107c178c72dfa",
+        "batch": 3,
+        "recordedAt": "2026-10-20T23:00:30.686Z"
+      }
+    },
+    {
+      "slug": "pegasus-automobile-fze",
+      "id": "ae-dubai-pegasus-automobile-fze",
+      "name": "Pegasus Automobile FZE",
+      "sourceFormat": "dealer-pack",
+      "sourceOwnership": "cars-repository",
+      "sourcePath": "dealers/pegasus-automobile-fze",
+      "localPath": "dealers/pegasus-automobile-fze",
+      "localPresent": true,
+      "repository": "darkapoparka/cars",
+      "canonicalSourceRepository": "darkapoparka/cars",
+      "canonicalSourceRef": "f73c8e4b258653d1cee9c29d161e41774cfe6fb8",
+      "canonicalSourceCommit": "f73c8e4b258653d1cee9c29d161e41774cfe6fb8",
+      "canonicalSourceTree": "5be009d3dec872f8b430b58aac6d9ca7c0f1f404",
+      "packagingVersion": "5",
+      "variants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/",
+          "publicUrl": "https://pegasus-automobile-fze.webpreviews.site/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/auto-best",
+            "tree": "cbd21f5e0b794a0cbf52bf36fdf07b25fb0bb499",
+            "digest": "90760c4c73d46ebf976a06e923171f31fc716661f69d25d864342ea856002279"
+          }
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars",
+          "publicUrl": "https://pegasus-automobile-fze.webpreviews.site/variant-2/cars",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/modern",
+            "tree": "e1285aeebcf21730a064db00779a679e64e9d3ca",
+            "digest": "965f1003f5292e99adc72afb738d676436bdc27e7da7ec0264d2872d149a23b5"
+          }
+        },
+        {
+          "key": "import",
+          "base": "/variant-3",
+          "entry": "/variant-3/",
+          "publicUrl": "https://pegasus-automobile-fze.webpreviews.site/variant-3/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/import",
+            "tree": "87950ec43fdb33fd85dbf6d6b6160e1a779777c6",
+            "digest": "3c1fe9e9adef074aa7ca2e774ef8a0d955c77e527b7939418ab408e87659e50d"
+          }
+        },
+        {
+          "key": "app",
+          "base": "/variant-4",
+          "entry": "/variant-4/",
+          "publicUrl": "https://pegasus-automobile-fze.webpreviews.site/variant-4/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/app",
+            "tree": "ad5b8acf793545b0082cfb33e37c7a97da63ec36",
+            "digest": "524f71647d6bafa4320173f73658fce39b48bf0508171480475b980dc3565b65"
+          }
+        },
+        {
+          "key": "mobile",
+          "base": "/variant-5",
+          "entry": "/variant-5/",
+          "publicUrl": "https://pegasus-automobile-fze.webpreviews.site/variant-5/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/mobile",
+            "tree": "9dadfcad37e2b8909cc39d7758db3fca1cd5cf61",
+            "digest": "c85e58c9e747e68d0911f6bd4827a643b8a538dc1ea5eb7d29a78c3252585ef1"
+          }
+        },
+        {
+          "key": "karento-best",
+          "base": "/variant-6",
+          "entry": "/variant-6/",
+          "publicUrl": "https://pegasus-automobile-fze.webpreviews.site/variant-6/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/karento-best",
+            "tree": "9c2ab0e1c84f2ffbb0f20dbba757dea36d88808f",
+            "digest": "1f32f03af52daee41861d53d66bafcf3147d001f5a0a9840afbe9b6fb128a8c9"
+          }
+        }
+      ],
+      "delivery": {
+        "provider": "cloudflare",
+        "state": "live-verified",
+        "workerName": "cars-pegasus-automobile-fze",
+        "workerId": "bc70eff4e37e4da7b27da811f712ddd3",
+        "versionId": "311d9334-8530-4a96-92ad-ef9b871b789e",
+        "routeId": "c9db9dddce49496abaa302b2e8358dad",
+        "configuredPublicOrigin": "https://pegasus-automobile-fze.webpreviews.site",
+        "url": "https://pegasus-automobile-fze.webpreviews.site/",
+        "checkedAt": "2026-10-20T21:49:25.743Z"
+      },
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "repository": "darkapoparka/cars",
+          "commit": "f73c8e4b258653d1cee9c29d161e41774cfe6fb8",
+          "path": "dealers/pegasus-automobile-fze",
+          "tree": "5be009d3dec872f8b430b58aac6d9ca7c0f1f404",
+          "inputFiles": 25,
+          "remoteVerified": true
+        },
+        "build": {
+          "state": "passed",
+          "outputDigest": "8dce2de0f444636c14f47300ed937f6f5362de00c736c068fab33349c1aed339",
+          "packDigest": "3d7547511a0844a69795398b1184eb9086bfccb0ecdbe33abfa02b3c4701505b",
+          "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0"
+        },
+        "deployment": {
+          "state": "deployed",
+          "workerId": "bc70eff4e37e4da7b27da811f712ddd3",
+          "versionId": "311d9334-8530-4a96-92ad-ef9b871b789e",
+          "receiptSha256": "3117ea67fdb7d5ed444ac76a5e78e3d30140f6d6b424450f41ed7a59d771cafa"
+        },
+        "browser": {
+          "state": "passed",
+          "reportSha256": "7edb8ffdbae686579e9ce9813abf66bb1f7cb0f4521d6312b5ff52f6e3e687c1",
+          "widths": [
+            390
+          ],
+          "locales": [
+            "en"
+          ]
+        },
+        "ownerReview": {
+          "state": "not-claimed",
+          "note": "Owner authorized preview deployment; this receipt does not claim dealer identity or visual approval."
+        }
+      },
+      "newPackDeployment": {
+        "queueId": "10b70e3e-8623-49b4-bc1d-3a7468c0231a",
+        "queueBranch": "cars-deploy-queue",
+        "requestId": "9bfd69f3b1fc76923fc87e7eacbe449bc737e5d025aa025274b054322f91d240",
+        "receiptSha256": "3117ea67fdb7d5ed444ac76a5e78e3d30140f6d6b424450f41ed7a59d771cafa",
+        "batch": 3,
+        "recordedAt": "2026-10-20T23:00:30.686Z"
+      }
+    },
+    {
+      "slug": "royal-diamond-motors",
+      "id": "ae-dubai-royal-diamond-motors",
+      "name": "Royal Diamond Motors",
+      "sourceFormat": "dealer-pack",
+      "sourceOwnership": "cars-repository",
+      "sourcePath": "dealers/royal-diamond-motors",
+      "localPath": "dealers/royal-diamond-motors",
+      "localPresent": true,
+      "repository": "darkapoparka/cars",
+      "canonicalSourceRepository": "darkapoparka/cars",
+      "canonicalSourceRef": "f73c8e4b258653d1cee9c29d161e41774cfe6fb8",
+      "canonicalSourceCommit": "f73c8e4b258653d1cee9c29d161e41774cfe6fb8",
+      "canonicalSourceTree": "c4069eee565363d6e9660f794390d5e3cba3f3ff",
+      "packagingVersion": "5",
+      "variants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/",
+          "publicUrl": "https://royal-diamond-motors.webpreviews.site/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/auto-best",
+            "tree": "cbd21f5e0b794a0cbf52bf36fdf07b25fb0bb499",
+            "digest": "90760c4c73d46ebf976a06e923171f31fc716661f69d25d864342ea856002279"
+          }
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars",
+          "publicUrl": "https://royal-diamond-motors.webpreviews.site/variant-2/cars",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/modern",
+            "tree": "e1285aeebcf21730a064db00779a679e64e9d3ca",
+            "digest": "965f1003f5292e99adc72afb738d676436bdc27e7da7ec0264d2872d149a23b5"
+          }
+        },
+        {
+          "key": "import",
+          "base": "/variant-3",
+          "entry": "/variant-3/",
+          "publicUrl": "https://royal-diamond-motors.webpreviews.site/variant-3/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/import",
+            "tree": "87950ec43fdb33fd85dbf6d6b6160e1a779777c6",
+            "digest": "3c1fe9e9adef074aa7ca2e774ef8a0d955c77e527b7939418ab408e87659e50d"
+          }
+        },
+        {
+          "key": "app",
+          "base": "/variant-4",
+          "entry": "/variant-4/",
+          "publicUrl": "https://royal-diamond-motors.webpreviews.site/variant-4/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/app",
+            "tree": "ad5b8acf793545b0082cfb33e37c7a97da63ec36",
+            "digest": "524f71647d6bafa4320173f73658fce39b48bf0508171480475b980dc3565b65"
+          }
+        },
+        {
+          "key": "mobile",
+          "base": "/variant-5",
+          "entry": "/variant-5/",
+          "publicUrl": "https://royal-diamond-motors.webpreviews.site/variant-5/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/mobile",
+            "tree": "9dadfcad37e2b8909cc39d7758db3fca1cd5cf61",
+            "digest": "c85e58c9e747e68d0911f6bd4827a643b8a538dc1ea5eb7d29a78c3252585ef1"
+          }
+        },
+        {
+          "key": "karento-best",
+          "base": "/variant-6",
+          "entry": "/variant-6/",
+          "publicUrl": "https://royal-diamond-motors.webpreviews.site/variant-6/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/karento-best",
+            "tree": "9c2ab0e1c84f2ffbb0f20dbba757dea36d88808f",
+            "digest": "1f32f03af52daee41861d53d66bafcf3147d001f5a0a9840afbe9b6fb128a8c9"
+          }
+        }
+      ],
+      "delivery": {
+        "provider": "cloudflare",
+        "state": "live-verified",
+        "workerName": "cars-royal-diamond-motors",
+        "workerId": "65ae622af4384f9db472a365ae4acdb4",
+        "versionId": "57f9cc6d-d916-498c-964b-fe7b52a8d363",
+        "routeId": "5ca6c60b5dc7470abc01c6e2da623c51",
+        "configuredPublicOrigin": "https://royal-diamond-motors.webpreviews.site",
+        "url": "https://royal-diamond-motors.webpreviews.site/",
+        "checkedAt": "2026-10-20T22:15:00.196Z"
+      },
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "repository": "darkapoparka/cars",
+          "commit": "f73c8e4b258653d1cee9c29d161e41774cfe6fb8",
+          "path": "dealers/royal-diamond-motors",
+          "tree": "c4069eee565363d6e9660f794390d5e3cba3f3ff",
+          "inputFiles": 25,
+          "remoteVerified": true
+        },
+        "build": {
+          "state": "passed",
+          "outputDigest": "a2aa1fbe27d475eb15bbb430092ce618dd9fe1d77c129ac80703f35f44c5d521",
+          "packDigest": "8193264ed5b2802005b2a0127aafe416ab3db6e6772e6eed5071341609050a80",
+          "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0"
+        },
+        "deployment": {
+          "state": "deployed",
+          "workerId": "65ae622af4384f9db472a365ae4acdb4",
+          "versionId": "57f9cc6d-d916-498c-964b-fe7b52a8d363",
+          "receiptSha256": "f09e119590ea773866860b5e4fb30e8d6db562b6b824ca572631b3308e3ee14b"
+        },
+        "browser": {
+          "state": "passed",
+          "reportSha256": "9d0c61de5d3d4aeac5c39c1cf2b240d0c999a99a3af0e05892836e434c5fb3d4",
+          "widths": [
+            390
+          ],
+          "locales": [
+            "en"
+          ]
+        },
+        "ownerReview": {
+          "state": "not-claimed",
+          "note": "Owner authorized preview deployment; this receipt does not claim dealer identity or visual approval."
+        }
+      },
+      "newPackDeployment": {
+        "queueId": "10b70e3e-8623-49b4-bc1d-3a7468c0231a",
+        "queueBranch": "cars-deploy-queue",
+        "requestId": "9e7a37cde31b115f7f291ae4228cb2d08df9b35db54d12748c2b49cf81d7d5c1",
+        "receiptSha256": "f09e119590ea773866860b5e4fb30e8d6db562b6b824ca572631b3308e3ee14b",
+        "batch": 3,
+        "recordedAt": "2026-10-20T23:00:30.686Z"
       }
     }
   ],

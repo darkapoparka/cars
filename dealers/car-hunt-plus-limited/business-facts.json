@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "slug": "car-hunt-plus-limited",
+  "dealerId": "gb-ashford-car-hunt-plus",
+  "business": {
+    "name": "Car Hunt Plus Limited",
+    "city": "Ashford",
+    "region": "Surrey",
+    "countryCode": "GB",
+    "currency": "GBP",
+    "distanceUnit": "mi",
+    "locale": "en-GB",
+    "address": "540-542 London Road, Ashford TW15 3AE",
+    "phone": "+447537122058",
+    "phoneDisplay": "07537122058",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://www.autotrader.co.uk/dealers/middlesex/ashford/car-hunt-plus-limited-10046497",
+    "hours": "",
+    "sourceUrl": "https://www.autotrader.co.uk/dealers/middlesex/ashford/car-hunt-plus-limited-10046497",
+    "observedAt": "2026-10-18",
+    "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/middlesex/ashford/car-hunt-plus-limited-10046497",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ]
+}

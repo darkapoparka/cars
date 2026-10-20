@@ -153,6 +153,7 @@ test('Signature discovery retains dated dealer IDs, media and currency without i
 
 test('Signature discovery removes currency comparisons for mixed feeds and discloses illustrative inventory',t=>{
   const x=discoveryFixture(t);x.profile.stockKind='illustrative-not-dealer-stock';
+  x.files.set('karento-best/src/routes/+layout.svelte',fs.readFileSync(path.resolve('templates/karento-best/src/routes/+layout.svelte')));
   x.profile.listings.push({...x.profile.listings[0],id:'eur-source',currency:'EUR'});
   applyExtendedRefreshAdapter({...x,key:'karento-best'});
   const source=x.files.get('karento-best/src/routes/2/discovery.ts').toString();
@@ -160,6 +161,8 @@ test('Signature discovery removes currency comparisons for mixed feeds and discl
   assert.match(source,/priceMax: ""/);
   const collectionSource=source.match(/export const collections[^=]*=([\s\S]*?);/)[1];assert.doesNotMatch(collectionSource,/cheapest/);
   assert.doesNotMatch(x.files.get('karento-best/src/routes/2/DiscoverySearch.svelte').toString(),/budget-section/);
+  assert.match(x.files.get('karento-best/src/routes/+layout.svelte').toString(), /data-dealer-stock-disclosure/);
+  assert.ok(x.files.get('karento-best/src/routes/+layout.svelte').toString().includes(JSON.stringify(x.profile.business.inventoryNotice)));
 });
 
 const legacyDiscoveryPrefix='karento-best/src/routes/2/';

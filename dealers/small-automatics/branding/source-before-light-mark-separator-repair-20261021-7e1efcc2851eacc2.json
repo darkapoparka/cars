@@ -1,0 +1,306 @@
+{
+  "schemaVersion": 1,
+  "dealer": "small-automatics",
+  "status": "reviewed",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Ulez-automatics?extendedFilter=1",
+      "observedAt": "2026-10-19T17:36:50.653721Z"
+    },
+    {
+      "source": "alternate-public-logo-page",
+      "retainedEvidence": "source URL in real-logo research",
+      "observation": "A dealer-image URL was observed, but the image host timed out; no inaccessible image is claimed as an obtained original."
+    }
+  ],
+  "originals": [],
+  "creationMethod": "imagegen-proposal",
+  "dealerApproved": false,
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "researchConclusion": "Bounded public checks did not yield usable distinct dealer artwork. Generic text banners or unavailable image-host URLs do not prove that the dealer has no logo. This artwork is clearly an independent proposal.",
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "generationId": "exec-27a3dd67-8fd7-4025-918c-2d6f0c6198c1",
+    "modelVersion": null,
+    "prompt": " Use case: logo-brand. Produce one professional dealer-logo asset on a truly transparent background. Wide horizontal lockup with a separate compact emblem at left, generous transparent gap, and the exact business name at right in bold custom geometric lettering. The emblem must stay clear at 32px, thick strokes and few shapes. Flat crisp vector-like artwork; no gradients, no shadows, no mockup, no photography, no extra text. Every dark element must have a fine white outer keyline and every white element a dark navy outline, so this identical master works on white, charcoal #111113 and dark red #c40101. Use a clean solid silhouette, not decorative outlines. This is an independent proposal, not dealer-approved artwork. Exact name: SMALL AUTOMATICS. Left emblem a compact S inside one rounded-corner open-square form, inspired by simple automatic gear selection but without tiny letters or gear teeth. Royal blue #255bba and white with dark navy. Exact two-line wordmark SMALL / AUTOMATICS; both lines bold legible, no tiny tagline."
+  },
+  "compactDerivation": {
+    "method": "lossless-isolated-emblem-crop",
+    "parentReference": "branding/generated-master.png",
+    "parentSha256": "2b1eb383daabeb5d42438dc5633c4fc020c4085f4d66f84100a7e772ecd2458b",
+    "crop": {
+      "left": 0,
+      "top": 0,
+      "width": 613,
+      "height": 724
+    },
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-27a3dd67-8fd7-4025-918c-2d6f0c6198c1",
+      "modelVersion": null
+    }
+  },
+  "generatedInputs": {
+    "reviewedAt": "2026-10-20T21:23:30.301Z",
+    "master": {
+      "path": "branding/generated-on-light-v2-20261020-ae66e8a8d475b0b9.png",
+      "sha256": "ae66e8a8d475b0b9f9f509f80eee9da09e73b5dcbf0c0e8d0075b72d82cb7500",
+      "nativeDimensions": {
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-6cf36625-9cac-4c22-bf9f-5ba4d4965150",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-compact-on-light-v2-20261020-4c5035e863d34e20.png",
+      "sha256": "4c5035e863d34e20a0c059b231ded034567b73fb1b4d6c0d35a41b49e574d95c",
+      "nativeDimensions": {
+        "width": 1154,
+        "height": 1363
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-db18f98a-c14e-4b84-8876-690445d6ce57",
+        "modelVersion": null
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-compact-on-dark-v2-20261020-f0b4292a2bb5a061.png",
+      "sha256": "f0b4292a2bb5a06121393161ca018aad4795ff9bd78fa82be6da51ff4a71ef30",
+      "nativeDimensions": {
+        "width": 1154,
+        "height": 1363
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7e2ea2fc-59eb-4db3-85ad-5a8f5cdc7d75",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light-v2-20261020-ae66e8a8d475b0b9.png",
+        "sha256": "ae66e8a8d475b0b9f9f509f80eee9da09e73b5dcbf0c0e8d0075b72d82cb7500",
+        "nativeDimensions": {
+          "width": 2172,
+          "height": 724
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-6cf36625-9cac-4c22-bf9f-5ba4d4965150",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark-v2-20261020-96efaacc4a374733.png",
+        "sha256": "96efaacc4a37473314886e159b56f632903cc1370366f38bfa16eb294966e28c",
+        "nativeDimensions": {
+          "width": 2172,
+          "height": 724
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-14fdcfd0-a10d-42d5-bbe4-3c7c0babb536",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark-v2-20261020-96efaacc4a374733.png",
+        "sha256": "96efaacc4a37473314886e159b56f632903cc1370366f38bfa16eb294966e28c",
+        "nativeDimensions": {
+          "width": 2172,
+          "height": 724
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-14fdcfd0-a10d-42d5-bbe4-3c7c0babb536",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113",
+          "#101820"
+        ],
+        "onAccent": [
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ]
+      },
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "markWidths": [
+        32,
+        64
+      ],
+      "method": "Same actual dual-contrast generated artwork on each surface; no generated colours are represented as a template palette change.",
+      "reviewedAt": "2026-10-20T21:23:30.301Z",
+      "review": "Visually reviewed exact cropTransparentPadding exports at120px and180px wordmark widths and32px/64px compact sizes on white, charcoal and red. Exact spelling retained, real alpha present, compact emblem clear. The source palette is part of the artwork only.",
+      "notes": "Agent viewed matched maintained exports at120/180px and32/64px on actual six surfaces. Dedicated strong light/dark inks preserve exact spelling and palette families. Original artwork retained; Rolf passing dark compact unchanged. Small derived favicons necessarily regenerate with the corrected light compact, as authorized. Independent preview proposals; no dealer/native/hosted approval."
+    },
+    "marks": {
+      "onLight": {
+        "path": "branding/generated-compact-on-light-v2-20261020-4c5035e863d34e20.png",
+        "sha256": "4c5035e863d34e20a0c059b231ded034567b73fb1b4d6c0d35a41b49e574d95c",
+        "nativeDimensions": {
+          "width": 1154,
+          "height": 1363
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-db18f98a-c14e-4b84-8876-690445d6ce57",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-compact-on-dark-v2-20261020-f0b4292a2bb5a061.png",
+        "sha256": "f0b4292a2bb5a06121393161ca018aad4795ff9bd78fa82be6da51ff4a71ef30",
+        "nativeDimensions": {
+          "width": 1154,
+          "height": 1363
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-7e2ea2fc-59eb-4db3-85ad-5a8f5cdc7d75",
+          "modelVersion": null
+        }
+      }
+    },
+    "compactMarkDescription": "S compact and SMALL AUTOMATICS in navy/blue and icy-blue/ivory variants",
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-20T21:23:30.301Z",
+      "widths": [
+        32,
+        64
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820",
+        "#09090b",
+        "#17191c",
+        "#c40101"
+      ],
+      "notes": "Compact variants and exact identity viewed at32/64px; Stanley/TJ dark compact use flat ivory redraws after unsuitable candidates were rejected. Rolf passing dark compact unchanged. Padding/contrast thresholds unchanged; no stretching or filters."
+    }
+  },
+  "additionalGenerations": [
+    {
+      "roles": [
+        "master",
+        "onLight"
+      ],
+      "path": "branding/generated-on-light-v2-20261020-ae66e8a8d475b0b9.png",
+      "sha256": "ae66e8a8d475b0b9f9f509f80eee9da09e73b5dcbf0c0e8d0075b72d82cb7500",
+      "nativeDimensions": {
+        "width": 2172,
+        "height": 724
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-6cf36625-9cac-4c22-bf9f-5ba4d4965150",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand. Input1 is EDIT TARGET. Create an actual dedicated WHITE-SURFACE deep-ink transparent variant. Preserve exact spelling, composition, typography, emblem geometry, natural proportions and all counters. At least90% of visible ink must contrast strongly with WHITE. Clean flat opaque ink, genuine alpha transparency. No backing tile, glow, halo, shadow, gradients, blur, bevel or alpha speckles. No added words or motifs. Clear at120/180px. Retain rounded angular S emblem LEFT, exact SMALL above AUTOMATICS RIGHT. Keep S interior pathway and geometric shapes. Dominant deep navy S lettering and AUTOMATICS, deep royal blue (#163f8a) outer emblem/SMALL, tiny fine light separator only. No large white interiors or bulky white outlines; retain blue/navy identity.",
+      "references": [
+        {
+          "path": "branding/generated-master.png",
+          "sha256": "2b1eb383daabeb5d42438dc5633c4fc020c4085f4d66f84100a7e772ecd2458b"
+        }
+      ],
+      "createdAt": "2026-10-20T21:22:00.313Z",
+      "derivation": "Actual built-in imagegen result copied byte-for-byte. Dedicated light/dark surface inks retain exact business spelling and existing identity/motifs. Stanley/TJ dark compact are single-ivory redraws. No stretch, filters, recolouring or alpha cleanup."
+    },
+    {
+      "roles": [
+        "onDark",
+        "onAccent"
+      ],
+      "path": "branding/generated-on-dark-v2-20261020-96efaacc4a374733.png",
+      "sha256": "96efaacc4a37473314886e159b56f632903cc1370366f38bfa16eb294966e28c",
+      "nativeDimensions": {
+        "width": 2172,
+        "height": 724
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-14fdcfd0-a10d-42d5-bbe4-3c7c0babb536",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand. Input1 is EDIT TARGET. Create a genuine light-ink inverse for DARK and RED surfaces, preserving exact spelling, full composition, typography, emblem geometry, counters and natural proportions. At least95% of visible ink must be LIGHT ivory/white (#e6ebf2 feel), remaining accents pale enough for #c40101. Pass backgrounds #111113,#101820,#09090b,#17191c,#c40101. No large dark/navy/black/orange/blue fills or heavy dark border. Fine dark internal separators at most. Flat crisp opaque fills, genuinely transparent alpha. No backing tile, glow, halo, shadows, gradients, metallic effect, blur, texture or alpha speckles. No added words/motifs. Clear at120/180px. Retain rounded angular S emblem LEFT, exact SMALL above AUTOMATICS RIGHT. S path/counters and geometric shapes unchanged. All letters dominantly light ivory; icy pale-blue edge fills may be used, tiny dark separators only. Keep small S readable with no heavy dark outer area.",
+      "references": [
+        {
+          "path": "branding/generated-master.png",
+          "sha256": "2b1eb383daabeb5d42438dc5633c4fc020c4085f4d66f84100a7e772ecd2458b"
+        }
+      ],
+      "createdAt": "2026-10-20T21:22:00.313Z",
+      "derivation": "Actual built-in imagegen result copied byte-for-byte. Dedicated light/dark surface inks retain exact business spelling and existing identity/motifs. Stanley/TJ dark compact are single-ivory redraws. No stretch, filters, recolouring or alpha cleanup."
+    },
+    {
+      "roles": [
+        "mark"
+      ],
+      "path": "branding/generated-compact-on-light-v2-20261020-4c5035e863d34e20.png",
+      "sha256": "4c5035e863d34e20a0c059b231ded034567b73fb1b4d6c0d35a41b49e574d95c",
+      "nativeDimensions": {
+        "width": 1154,
+        "height": 1363
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-db18f98a-c14e-4b84-8876-690445d6ce57",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand. Input1 edit target. Preserve exact compact silhouette, letters, counters, proportions and native compact placement. Genuine transparent alpha, crisp flat opaque artwork clear at32/64px. No badge/new text/symbol, stretching, glow, halo, shadow, blur, gradients or speckles. WHITE-SURFACE variant of rounded angular S emblem. Both large fields DARK: central flowing S fill solid deep navy #081a35, surrounding angular fields deep royal blue #163f8a. Preserve distinctive S pathway and separator cuts; a tiny thin light separator only if needed, under5% visible ink. Do NOT leave central S white. At least90% visible ink dark/navy/blue, strong white contrast. No thick white outline.",
+      "references": [
+        {
+          "path": "branding/generated-mark.png",
+          "sha256": "409eca61139f991c62104ed1f83eb83a2c3c8cd09855a73176af95982400df51"
+        }
+      ],
+      "createdAt": "2026-10-20T21:22:00.313Z",
+      "derivation": "Actual built-in imagegen result copied byte-for-byte. Dedicated light/dark surface inks retain exact business spelling and existing identity/motifs. Stanley/TJ dark compact are single-ivory redraws. No stretch, filters, recolouring or alpha cleanup."
+    },
+    {
+      "roles": [
+        "markOnDark"
+      ],
+      "path": "branding/generated-compact-on-dark-v2-20261020-f0b4292a2bb5a061.png",
+      "sha256": "f0b4292a2bb5a06121393161ca018aad4795ff9bd78fa82be6da51ff4a71ef30",
+      "nativeDimensions": {
+        "width": 1154,
+        "height": 1363
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-7e2ea2fc-59eb-4db3-85ad-5a8f5cdc7d75",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand. Input1 edit target. Preserve exact compact silhouette, letters, counters, proportions and native compact placement. Genuine transparent alpha, crisp flat opaque artwork clear at32/64px. No badge/new text/symbol, stretching, glow, halo, shadow, blur, gradients or speckles. DARK/RED inverse of rounded angular S emblem. Every major field including central flowing S and surrounding angular fields LIGHT: light ivory S, pale icy blue #d8e8ff outer. Tiny thin dark separator only to reveal S pathway, no heavy dark/navy outline. At least95% visible ink light, clear on #111113 and #c40101. Preserve S shape.",
+      "references": [
+        {
+          "path": "branding/generated-mark.png",
+          "sha256": "409eca61139f991c62104ed1f83eb83a2c3c8cd09855a73176af95982400df51"
+        }
+      ],
+      "createdAt": "2026-10-20T21:22:00.313Z",
+      "derivation": "Actual built-in imagegen result copied byte-for-byte. Dedicated light/dark surface inks retain exact business spelling and existing identity/motifs. Stanley/TJ dark compact are single-ivory redraws. No stretch, filters, recolouring or alpha cleanup."
+    }
+  ],
+  "sourceHistory": [
+    {
+      "reference": "branding/source-before-full-repair-20261020-e3386a27e81f8e72.json",
+      "sha256": "e3386a27e81f8e72566ac6510723f77d010d3f0d2e192c3d0cf205dcabfd2811",
+      "retainedAt": "2026-10-20T21:22:00.313Z",
+      "reason": "Exact source provenance before owned full surface contrast repair"
+    }
+  ]
+}

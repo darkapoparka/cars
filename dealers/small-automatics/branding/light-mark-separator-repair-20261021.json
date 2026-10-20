@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-light-compact-canvas-repair",
+  "dealer": "small-automatics",
+  "createdAt": "2026-10-20T22:59:19.049Z",
+  "previousPackDigest": "34507d9a05a8689b00f6a57a0166423b83261ec89dc60da7f60f45ffddc1f53c",
+  "previousSource": {
+    "path": "branding/source-before-light-mark-separator-repair-20261021-7e1efcc2851eacc2.json",
+    "sha256": "7e1efcc2851eacc2ff2a9fd64ae7284a42a61287fb6809da3b40e7889a020ab6"
+  },
+  "previousMark": {
+    "path": "branding/generated-compact-on-light-v2-20261020-4c5035e863d34e20.png",
+    "sha256": "4c5035e863d34e20a0c059b231ded034567b73fb1b4d6c0d35a41b49e574d95c",
+    "nativeDimensions": {
+      "width": 1154,
+      "height": 1363
+    },
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-db18f98a-c14e-4b84-8876-690445d6ce57",
+      "modelVersion": null
+    }
+  },
+  "previousDerivation": {
+    "method": "lossless-isolated-emblem-crop",
+    "parentReference": "branding/generated-master.png",
+    "parentSha256": "2b1eb383daabeb5d42438dc5633c4fc020c4085f4d66f84100a7e772ecd2458b",
+    "crop": {
+      "left": 0,
+      "top": 0,
+      "width": 613,
+      "height": 724
+    },
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-27a3dd67-8fd7-4025-918c-2d6f0c6198c1",
+      "modelVersion": null
+    }
+  },
+  "newInput": {
+    "path": "branding/mark-on-light-open-separators-v3-20261021.png",
+    "sha256": "c3533615008153b8a647604b356c72e2fca55fd88b589cee886bb979667c9c3d",
+    "nativeDimensions": {
+      "width": 1154,
+      "height": 1363
+    },
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-9c66acc8-c6a4-4884-a0e3-2f15d7865293",
+      "modelVersion": null
+    }
+  },
+  "actualImagegen": {
+    "slug": "small-automatics",
+    "refs": [
+      "L:/CODEX/cars/dealers/small-automatics/branding/generated-compact-on-light-v2-20261020-4c5035e863d34e20.png"
+    ],
+    "prompt": "Use case: logo-brand, precise light-surface compact identity edit. Preserve the exact reference SMALL AUTOMATICS emblem: flowing angular S inside a rounded-corner open-square made of two royal-blue angular fields, original proportions, outer silhouette and recognizable S pathway. Central S stays solid deep navy #081a35; outer fields stay deep royal blue #163f8a. Change only the fine white separator/keyline system: replace the existing white lines with clean genuinely transparent negative-space channels, very slightly wider where needed to stay open at32px. Remove the fine white outer keyline. Keep every major filled form, curve, corner and diagonal position; no redesign, no new motif, no extra letters or text. Canvas truly transparent with generous unpainted margin on all sides. No white pixels/contours, backgroundtile, glow, halo, shadow, gradients, texture, soft haze or speckles. Flat opaque ink with smooth standard antialias edges only. It must remain the same S/rounded-open-square identity on white, clearly legible at32/64px. Independent proposal only, no dealer approval.",
+    "path": "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-9c66acc8-c6a4-4884-a0e3-2f15d7865293.png",
+    "generationId": "exec-9c66acc8-c6a4-4884-a0e3-2f15d7865293",
+    "tool": "image_gen.imagegen",
+    "modelVersion": null,
+    "sourceFileCopiedByteIdentical": true
+  },
+  "agentVisualReview": {
+    "comparison": {
+      "path": "J:/.artifacts/cars-source-sync/small-automatics-light-mark-before-after.png",
+      "sha256": "f8c1e97de74e714b1fad38c17399ea6a4873c7d75f05b43b59dbef3d85d0f3c0",
+      "bytes": 43609,
+      "actualMarkWidth": 64,
+      "actualFaviconWidth": 32,
+      "wordmarkWidth": 180,
+      "background": "#ffffff"
+    },
+    "markWidth": 64,
+    "faviconWidth": 32,
+    "unchangedWordmarkWidth": 180,
+    "spellingAndMotif": "S/open-square geometry and royal-blue/deep-navy composition retained",
+    "humanReview": false,
+    "dealerApproval": false,
+    "ownerApproval": false,
+    "nativeApproval": false,
+    "hostedApproval": false
+  },
+  "necessaryDerivedChanges": [
+    "light compact PNG/WebP",
+    "app-icon",
+    "favicon32/64",
+    "dealer share-logo favicon hash"
+  ],
+  "preservedRoles": [
+    "master",
+    "onLight",
+    "onDark",
+    "onAccent",
+    "markOnDark"
+  ],
+  "guardThresholdUnchanged": true,
+  "pixelThresholdsUnchanged": true,
+  "filtersApplied": false,
+  "manualAlphaCleanup": false
+}

@@ -25,24 +25,8 @@
     "modelVersion": null,
     "prompt": " Use case: logo-brand. Produce one professional dealer-logo asset on a truly transparent background. Wide horizontal lockup with a separate compact emblem at left, generous transparent gap, and the exact business name at right in bold custom geometric lettering. The emblem must stay clear at 32px, thick strokes and few shapes. Flat crisp vector-like artwork; no gradients, no shadows, no mockup, no photography, no extra text. Every dark element must have a fine white outer keyline and every white element a dark navy outline, so this identical master works on white, charcoal #111113 and dark red #c40101. Use a clean solid silhouette, not decorative outlines. This is an independent proposal, not dealer-approved artwork. Exact name: SMALL AUTOMATICS. Left emblem a compact S inside one rounded-corner open-square form, inspired by simple automatic gear selection but without tiny letters or gear teeth. Royal blue #255bba and white with dark navy. Exact two-line wordmark SMALL / AUTOMATICS; both lines bold legible, no tiny tagline."
   },
-  "compactDerivation": {
-    "method": "lossless-isolated-emblem-crop",
-    "parentReference": "branding/generated-master.png",
-    "parentSha256": "2b1eb383daabeb5d42438dc5633c4fc020c4085f4d66f84100a7e772ecd2458b",
-    "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 613,
-      "height": 724
-    },
-    "generation": {
-      "tool": "image_gen.imagegen",
-      "generationId": "exec-27a3dd67-8fd7-4025-918c-2d6f0c6198c1",
-      "modelVersion": null
-    }
-  },
   "generatedInputs": {
-    "reviewedAt": "2026-10-20T21:23:30.301Z",
+    "reviewedAt": "2026-10-20T22:59:19.049Z",
     "master": {
       "path": "branding/generated-on-light-v2-20261020-ae66e8a8d475b0b9.png",
       "sha256": "ae66e8a8d475b0b9f9f509f80eee9da09e73b5dcbf0c0e8d0075b72d82cb7500",
@@ -57,15 +41,15 @@
       }
     },
     "mark": {
-      "path": "branding/generated-compact-on-light-v2-20261020-4c5035e863d34e20.png",
-      "sha256": "4c5035e863d34e20a0c059b231ded034567b73fb1b4d6c0d35a41b49e574d95c",
+      "path": "branding/mark-on-light-open-separators-v3-20261021.png",
+      "sha256": "c3533615008153b8a647604b356c72e2fca55fd88b589cee886bb979667c9c3d",
       "nativeDimensions": {
         "width": 1154,
         "height": 1363
       },
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-db18f98a-c14e-4b84-8876-690445d6ce57",
+        "generationId": "exec-9c66acc8-c6a4-4884-a0e3-2f15d7865293",
         "modelVersion": null
       }
     },
@@ -147,22 +131,22 @@
         32,
         64
       ],
-      "method": "Same actual dual-contrast generated artwork on each surface; no generated colours are represented as a template palette change.",
-      "reviewedAt": "2026-10-20T21:23:30.301Z",
-      "review": "Visually reviewed exact cropTransparentPadding exports at120px and180px wordmark widths and32px/64px compact sizes on white, charcoal and red. Exact spelling retained, real alpha present, compact emblem clear. The source palette is part of the artwork only.",
+      "method": "Agent viewed actual prepared64px mark and32px favicon before/after on white; all14unchanged pixel gates passed. Real ImageGen canvas variant retains S/open-square identity and royal-blue/deep-navy composition. Wordmarks and darkcompact unchanged byte-for-byte.",
+      "reviewedAt": "2026-10-20T22:59:19.049Z",
+      "review": "Only the light compact input and required derived icons change. Original isolated crop remains retained. No filters, alpha cleanup, threshold changes or dealer/native/hosted/owner approval.",
       "notes": "Agent viewed matched maintained exports at120/180px and32/64px on actual six surfaces. Dedicated strong light/dark inks preserve exact spelling and palette families. Original artwork retained; Rolf passing dark compact unchanged. Small derived favicons necessarily regenerate with the corrected light compact, as authorized. Independent preview proposals; no dealer/native/hosted approval."
     },
     "marks": {
       "onLight": {
-        "path": "branding/generated-compact-on-light-v2-20261020-4c5035e863d34e20.png",
-        "sha256": "4c5035e863d34e20a0c059b231ded034567b73fb1b4d6c0d35a41b49e574d95c",
+        "path": "branding/mark-on-light-open-separators-v3-20261021.png",
+        "sha256": "c3533615008153b8a647604b356c72e2fca55fd88b589cee886bb979667c9c3d",
         "nativeDimensions": {
           "width": 1154,
           "height": 1363
         },
         "generation": {
           "tool": "image_gen.imagegen",
-          "generationId": "exec-db18f98a-c14e-4b84-8876-690445d6ce57",
+          "generationId": "exec-9c66acc8-c6a4-4884-a0e3-2f15d7865293",
           "modelVersion": null
         }
       },
@@ -183,20 +167,16 @@
     "compactMarkDescription": "S compact and SMALL AUTOMATICS in navy/blue and icy-blue/ivory variants",
     "compactMarkReview": {
       "reviewed": true,
-      "reviewedAt": "2026-10-20T21:23:30.301Z",
+      "reviewedAt": "2026-10-20T22:59:19.049Z",
       "widths": [
         32,
         64
       ],
       "backgrounds": [
-        "#ffffff",
-        "#111113",
-        "#101820",
-        "#09090b",
-        "#17191c",
-        "#c40101"
+        "#ffffff"
       ],
-      "notes": "Compact variants and exact identity viewed at32/64px; Stanley/TJ dark compact use flat ivory redraws after unsuitable candidates were rejected. Rolf passing dark compact unchanged. Padding/contrast thresholds unchanged; no stretching or filters."
+      "generationId": "exec-9c66acc8-c6a4-4884-a0e3-2f15d7865293",
+      "method": "Exact actual prepared consumer rasters visually reviewed; real publisher accepted the prepared candidate after original source reproduced rejection."
     }
   },
   "additionalGenerations": [
@@ -293,6 +273,28 @@
       ],
       "createdAt": "2026-10-20T21:22:00.313Z",
       "derivation": "Actual built-in imagegen result copied byte-for-byte. Dedicated light/dark surface inks retain exact business spelling and existing identity/motifs. Stanley/TJ dark compact are single-ivory redraws. No stretch, filters, recolouring or alpha cleanup."
+    },
+    {
+      "roles": [
+        "mark"
+      ],
+      "path": "branding/mark-on-light-open-separators-v3-20261021.png",
+      "sha256": "c3533615008153b8a647604b356c72e2fca55fd88b589cee886bb979667c9c3d",
+      "nativeDimensions": {
+        "width": 1154,
+        "height": 1363
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9c66acc8-c6a4-4884-a0e3-2f15d7865293",
+        "modelVersion": null
+      },
+      "prompt": "Use case: logo-brand, precise light-surface compact identity edit. Preserve the exact reference SMALL AUTOMATICS emblem: flowing angular S inside a rounded-corner open-square made of two royal-blue angular fields, original proportions, outer silhouette and recognizable S pathway. Central S stays solid deep navy #081a35; outer fields stay deep royal blue #163f8a. Change only the fine white separator/keyline system: replace the existing white lines with clean genuinely transparent negative-space channels, very slightly wider where needed to stay open at32px. Remove the fine white outer keyline. Keep every major filled form, curve, corner and diagonal position; no redesign, no new motif, no extra letters or text. Canvas truly transparent with generous unpainted margin on all sides. No white pixels/contours, backgroundtile, glow, halo, shadow, gradients, texture, soft haze or speckles. Flat opaque ink with smooth standard antialias edges only. It must remain the same S/rounded-open-square identity on white, clearly legible at32/64px. Independent proposal only, no dealer approval.",
+      "referencePaths": [
+        "L:/CODEX/cars/dealers/small-automatics/branding/generated-compact-on-light-v2-20261020-4c5035e863d34e20.png"
+      ],
+      "createdAt": "2026-10-20T22:59:19.049Z",
+      "reason": "Actual imagegen edit converts fine white separator lines into genuinely transparent channels without changing major S/open-square forms. Originalraw untouched; no manual alpha/recolour filter used."
     }
   ],
   "sourceHistory": [
@@ -301,6 +303,48 @@
       "sha256": "e3386a27e81f8e72566ac6510723f77d010d3f0d2e192c3d0cf205dcabfd2811",
       "retainedAt": "2026-10-20T21:22:00.313Z",
       "reason": "Exact source provenance before owned full surface contrast repair"
+    },
+    {
+      "reference": "branding/source-before-light-mark-separator-repair-20261021-7e1efcc2851eacc2.json",
+      "sha256": "7e1efcc2851eacc2ff2a9fd64ae7284a42a61287fb6809da3b40e7889a020ab6",
+      "retainedAt": "2026-10-20T22:59:19.049Z",
+      "reason": "Exact source provenance before dedicated light compact separator repair"
     }
-  ]
+  ],
+  "lightMarkCanvasCorrection": {
+    "reviewedAt": "2026-10-20T22:59:19.049Z",
+    "provenance": "branding/light-mark-separator-repair-20261021.json",
+    "previousMark": {
+      "path": "branding/generated-compact-on-light-v2-20261020-4c5035e863d34e20.png",
+      "sha256": "4c5035e863d34e20a0c059b231ded034567b73fb1b4d6c0d35a41b49e574d95c",
+      "nativeDimensions": {
+        "width": 1154,
+        "height": 1363
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-db18f98a-c14e-4b84-8876-690445d6ce57",
+        "modelVersion": null
+      }
+    },
+    "previousDerivation": {
+      "method": "lossless-isolated-emblem-crop",
+      "parentReference": "branding/generated-master.png",
+      "parentSha256": "2b1eb383daabeb5d42438dc5633c4fc020c4085f4d66f84100a7e772ecd2458b",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 613,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-27a3dd67-8fd7-4025-918c-2d6f0c6198c1",
+        "modelVersion": null
+      }
+    },
+    "reason": "Oldpreparedmark had23.7293% exact transparency and failed unchanged publisher25%guard; real imagegen separator variant prepares with31.0104%.",
+    "originalArtworkPreserved": true,
+    "dealerApproved": false
+  }
 }

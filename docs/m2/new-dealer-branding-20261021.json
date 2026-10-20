@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "type": "cars-first-missing-input-branding",
+  "recordedAt": "2026-10-20T22:58:37.345Z",
+  "baseRevision": "d172ccead43cb2f7f485aed9c735f78c78670b34",
+  "packs": [
+    {
+      "slug": "trade-car-centre-accrington-ghmc-419b403bea",
+      "packDigest": "c5eb2da9b3f65dcfa520f8c0de6912fae36adbe0fabba3d63cdba8e1165d2010",
+      "files": 24,
+      "bytes": 3728943,
+      "sourceReviewPassed": true,
+      "strictUnchangedPublisherPassed": true,
+      "consumerRasterChecks": 14,
+      "factsStockPhotosPreserved": true,
+      "proposalOnly": true,
+      "nativeApproval": false,
+      "hostedApproval": false,
+      "humanReview": false,
+      "dealerApproval": false,
+      "ownerAccepted": false,
+      "reportSha256": "06e5f71d4a0cbd5153b0fd2e2d058fe29f0422319969e8f769333712f6c145ac",
+      "provenance": "dealers/trade-car-centre-accrington-ghmc-419b403bea/branding/first-proposal-artwork-20261021.json"
+    },
+    {
+      "slug": "car-hunt-plus-limited",
+      "packDigest": "aa4dbdc72aa36809bc9d86b1562c2909cdc7f3f4474b376af987ead9796a33f1",
+      "files": 24,
+      "bytes": 3450401,
+      "sourceReviewPassed": true,
+      "strictUnchangedPublisherPassed": true,
+      "consumerRasterChecks": 14,
+      "factsStockPhotosPreserved": true,
+      "proposalOnly": true,
+      "nativeApproval": false,
+      "hostedApproval": false,
+      "humanReview": false,
+      "dealerApproval": false,
+      "ownerAccepted": false,
+      "reportSha256": "34730c18ed7fd1caa27835c805cebbc4c493490c6861721106ad01e78ea7d4cb",
+      "provenance": "dealers/car-hunt-plus-limited/branding/first-proposal-artwork-20261021.json"
+    }
+  ],
+  "localOnlyHeld": {
+    "slug": "discount-car-sales",
+    "packDigest": "1afe72a7ab0f314e685854d5acf2d6d19c4825265a2947d4e17aafe33cab20e3",
+    "artworkChecks": 14,
+    "strictUnchangedPublisherPassed": true,
+    "sourceReady": false,
+    "reason": "Existing public-business contact evidence hold remains unchanged; whole pack excluded from source publication",
+    "reportSha256": "8acdc96e63fe0ea0f3a05e706904474070742d09d010a5efb9b1e8118ae3c2bb"
+  },
+  "newSourceBrandingPacks": 2,
+  "newDeployments": 0,
+  "nativeDependency": "Visible demo-stock disclosure correction must be included before these exact packs enter a fresh producer",
+  "outreachApproved": false
+}

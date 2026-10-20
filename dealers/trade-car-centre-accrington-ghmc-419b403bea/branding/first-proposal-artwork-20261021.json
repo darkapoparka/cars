@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-first-missing-source-proposal-artwork",
+  "dealer": "trade-car-centre-accrington-ghmc-419b403bea",
+  "createdAt": "2026-10-20T22:52:50.228Z",
+  "inputRows": [
+    {
+      "role": "wordLight",
+      "path": "branding/generated-master-v1-20261021.png",
+      "sha256": "59977aeea5bece431134e7dfc5208d51f6390b3d72fb1d1de7c0892e3ca86ca1",
+      "nativeDimensions": {
+        "width": 2048,
+        "height": 768
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5a7311c3-5861-4d46-b6b1-5d604a2f8dff",
+        "modelVersion": null
+      },
+      "artifact": "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-5a7311c3-5861-4d46-b6b1-5d604a2f8dff.png",
+      "prompt": "Use case: logo-brand. Create ONE independent proposal for the UK motor dealer trading as \"TRADE CAR CENTRE\" in Accrington. Exact text: TRADE CAR CENTRE. Wide clean horizontal lockup, compact original open angular TCC monogram emblem isolated at left, generous transparent gap, two-line bold readable wordmark at right with TRADE on first line and CAR CENTRE on second. No location or seller-path text. Deep navy #172635 ink with restrained deep burgundy #8a2638 accent; entirely flat opaque artwork. Make emblem strokes thick and counters open, simple distinctive geometry readable at32px; keep lettering substantial at120px total logo width. Truly transparent background, generous padding on every side. No white outlines, plates, box, car silhouette, shields, crowns, gradients, glow, shadow, texture, speckles or extra wording. Clean smooth alpha, no fringe. Proposal only; do not add official/adopted claims. Source name preserved separately; no imitation of unrelated Trade Centre brands.",
+      "referencePaths": []
+    },
+    {
+      "role": "markLight",
+      "path": "branding/generated-mark-light-v1-20261021.png",
+      "sha256": "ad79b7a75e52e5ef06d1b06c41a79bcf8cbf09afa64703b268cb870fb9f3749c",
+      "nativeDimensions": {
+        "width": 878,
+        "height": 768
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5a7311c3-5861-4d46-b6b1-5d604a2f8dff",
+        "modelVersion": null
+      },
+      "artifact": "J:/.artifacts/cars-source-sync/missing3-branding-inputs/trade-car-centre-accrington-ghmc-419b403bea/markLight.png",
+      "prompt": "Use case: logo-brand. Create ONE independent proposal for the UK motor dealer trading as \"TRADE CAR CENTRE\" in Accrington. Exact text: TRADE CAR CENTRE. Wide clean horizontal lockup, compact original open angular TCC monogram emblem isolated at left, generous transparent gap, two-line bold readable wordmark at right with TRADE on first line and CAR CENTRE on second. No location or seller-path text. Deep navy #172635 ink with restrained deep burgundy #8a2638 accent; entirely flat opaque artwork. Make emblem strokes thick and counters open, simple distinctive geometry readable at32px; keep lettering substantial at120px total logo width. Truly transparent background, generous padding on every side. No white outlines, plates, box, car silhouette, shields, crowns, gradients, glow, shadow, texture, speckles or extra wording. Clean smooth alpha, no fringe. Proposal only; do not add official/adopted claims. Source name preserved separately; no imitation of unrelated Trade Centre brands.",
+      "referencePaths": [
+        "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-5a7311c3-5861-4d46-b6b1-5d604a2f8dff.png"
+      ],
+      "derivation": {
+        "operation": "lossless-png-extract-isolated-emblem",
+        "parentPath": "branding/generated-master-v1-20261021.png",
+        "parentSha256": "59977aeea5bece431134e7dfc5208d51f6390b3d72fb1d1de7c0892e3ca86ca1",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 878,
+          "height": 768
+        },
+        "emptyGap": {
+          "start": 857,
+          "end": 900,
+          "width": 43
+        },
+        "parentNativeDimensions": {
+          "width": 2048,
+          "height": 768
+        },
+        "artworkUnmodified": true,
+        "alphaUnmodified": true
+      }
+    },
+    {
+      "role": "wordDark",
+      "path": "branding/generated-inverse-v1-20261021.png",
+      "sha256": "dfe376b58322de2697cc719d22e3a2e3fae709df21cea7d41045df9c8c1b03b1",
+      "nativeDimensions": {
+        "width": 2048,
+        "height": 768
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a87121f9-b518-47bd-a1e6-9f15074c47af",
+        "modelVersion": null
+      },
+      "artifact": "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-a87121f9-b518-47bd-a1e6-9f15074c47af.png",
+      "prompt": "Use case: logo-brand, faithful inverse-colour edit. Preserve EXACT reference artwork: TCC angular monogram at left, TRADE above CAR CENTRE at right, letter shapes, two-line layout, spacing, sizes and negative-space cuts. Make ALL visible artwork solid opaque pale silver-grey #cbd2d8, including the formerly burgundy pieces; no dark ink remains. Truly transparent background and transparent counters. This dedicated variant must read crisply on charcoal, navy, black and saturated red. No glow, shadow, gradients, halos, keylines, speckles, texture, residual background or fringe. Keep generous canvas padding. Exact text TRADE CAR CENTRE; no added wording or redesign. Independent proposal, not dealer approved.",
+      "referencePaths": [
+        "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-5a7311c3-5861-4d46-b6b1-5d604a2f8dff.png"
+      ]
+    },
+    {
+      "role": "markDark",
+      "path": "branding/generated-mark-dark-v1-20261021.png",
+      "sha256": "08f6b2646e916c0200d9bdf5cd1da7018fb82ffc3602c85932e4f3949ab94bfc",
+      "nativeDimensions": {
+        "width": 879,
+        "height": 768
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a87121f9-b518-47bd-a1e6-9f15074c47af",
+        "modelVersion": null
+      },
+      "artifact": "J:/.artifacts/cars-source-sync/missing3-branding-inputs/trade-car-centre-accrington-ghmc-419b403bea/markDark.png",
+      "prompt": "Use case: logo-brand, faithful inverse-colour edit. Preserve EXACT reference artwork: TCC angular monogram at left, TRADE above CAR CENTRE at right, letter shapes, two-line layout, spacing, sizes and negative-space cuts. Make ALL visible artwork solid opaque pale silver-grey #cbd2d8, including the formerly burgundy pieces; no dark ink remains. Truly transparent background and transparent counters. This dedicated variant must read crisply on charcoal, navy, black and saturated red. No glow, shadow, gradients, halos, keylines, speckles, texture, residual background or fringe. Keep generous canvas padding. Exact text TRADE CAR CENTRE; no added wording or redesign. Independent proposal, not dealer approved.",
+      "referencePaths": [
+        "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-a87121f9-b518-47bd-a1e6-9f15074c47af.png"
+      ],
+      "derivation": {
+        "operation": "lossless-png-extract-isolated-emblem",
+        "parentPath": "branding/generated-inverse-v1-20261021.png",
+        "parentSha256": "dfe376b58322de2697cc719d22e3a2e3fae709df21cea7d41045df9c8c1b03b1",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 879,
+          "height": 768
+        },
+        "emptyGap": {
+          "start": 857,
+          "end": 901,
+          "width": 44
+        },
+        "parentNativeDimensions": {
+          "width": 2048,
+          "height": 768
+        },
+        "artworkUnmodified": true,
+        "alphaUnmodified": true
+      }
+    }
+  ],
+  "sourceFactNamePreserved": true,
+  "publicTradingText": "Trade Car Centre",
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "dealerApproval": false,
+  "humanReview": false,
+  "providerWrites": 0,
+  "filtersApplied": false,
+  "thresholdsChanged": false
+}

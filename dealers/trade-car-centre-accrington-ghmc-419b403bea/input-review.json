@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "trade-car-centre-accrington-ghmc-419b403bea",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T22:53:52.730Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "trade-car-centre-accrington-ghmc-419b403bea",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-accrington-trade-car-centre",
+    "position": 1
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "43142f9fedec8e2f27863a4a0828bb91e15491fba9816a9ea5ab972548f6ed22"
+    },
+    {
+      "path": "branding/first-proposal-artwork-20261021.json",
+      "sha256": "7a9e09c996fef794bc992b85390d9d541d931da7506e757a8962d77924a7e05f"
+    },
+    {
+      "path": "branding/generated-inverse-v1-20261021.png",
+      "sha256": "dfe376b58322de2697cc719d22e3a2e3fae709df21cea7d41045df9c8c1b03b1"
+    },
+    {
+      "path": "branding/generated-mark-dark-v1-20261021.png",
+      "sha256": "08f6b2646e916c0200d9bdf5cd1da7018fb82ffc3602c85932e4f3949ab94bfc"
+    },
+    {
+      "path": "branding/generated-mark-light-v1-20261021.png",
+      "sha256": "ad79b7a75e52e5ef06d1b06c41a79bcf8cbf09afa64703b268cb870fb9f3749c"
+    },
+    {
+      "path": "branding/generated-master-v1-20261021.png",
+      "sha256": "59977aeea5bece431134e7dfc5208d51f6390b3d72fb1d1de7c0892e3ca86ca1"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "cf2f4d1933016813cc23d27055e358dd6723105afc82e8e9efec296472d367f2"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "d6bd8de17b4ebea269b1aa6c5de2659177a50a1d7986989be7cd93d9d2b5e101"
+    },
+    {
+      "path": "branding/source-before-first-artwork-20261021-08fcd4eaeeb09bdb.json",
+      "sha256": "08fcd4eaeeb09bdb7855b4d3c901c79c61e8e65d23ae4f0cd6b14c7bc61c093d"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "7c773309735f2ab19a53d1976d2ce789aa8c32d8fbc8b08844bd030a46e0e811"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "a7593f78ac8c56d0b5515d869ec4e445a971cb4fe5a6e14082a8acab18d9080a"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "48da58a652ae026050e582aa0b507ebc9f196a15270627b3947c1c5df65ac280"
+    },
+    {
+      "path": "dealer-stock/template-demo-1.webp",
+      "sha256": "945e6864218ab3bd5fbd415336b212ecfde645685033f8506836f906885d447c"
+    },
+    {
+      "path": "dealer-stock/template-demo-2.webp",
+      "sha256": "17689ab880bf47de81ef467c34d639223f39f0c1ebe68c90d0aaf70e3dcc6333"
+    },
+    {
+      "path": "dealer-stock/template-demo-3.webp",
+      "sha256": "d644dec8e1ef280a702dccac267a2367f0ab823e40373e1299b156e7723b3b1f"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "efd0cfcbb7f52ec155281874be4c454490ff712198de5304306d5346f6a7e244"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "41087937bd1f4778c101edf5ee1de3f2041ae2e3f6db103969583dd18d8f6feb"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "fc42fb2194a6815e08590e542fc91cdea5b3a0548c830e64ac563b85ef60342d"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "a751aae3910d5177115389fec13b68927c356343ab1b3a8e75af76e5a7a9e836"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "491c9575dbf50f7075807f71f67d1148b975e44b78be05b2414d39457b05ac39"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "080310c3e6025e75d72d15ccc73ca11d96274596e7d3d66fe827daa58b61f145"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "af1b01493d73bc578eabe1dc1578caa377416b3755b6dc3bbcb2e1bc76b31e21"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}
