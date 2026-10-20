@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "dealer": "elena-used-cars",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "elena-used-cars-stock-1",
+      "title": "2025 Toyota Hiace",
+      "make": "Toyota",
+      "model": "Hiace",
+      "year": 2025,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/stock-1.webp"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Toyota/Hiace/?id=877964",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Van",
+      "transmission": "Auto",
+      "fuel": "Petrol",
+      "mileageValue": 0,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "elena-used-cars-stock-2",
+      "title": "2025 Mercedes Benz GLA 200",
+      "make": "Mercedes Benz",
+      "model": "GLA 200",
+      "year": 2025,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/stock-2.webp"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Mercedes-Benz/GLA-200/?id=877965",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "SUV",
+      "transmission": "Auto",
+      "fuel": "Petrol",
+      "mileageValue": 10000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "elena-used-cars-stock-3",
+      "title": "2021 Mercedes Benz G63 AMG",
+      "make": "Mercedes Benz",
+      "model": "G63 AMG",
+      "year": 2021,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/stock-3.webp"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Mercedes-Benz/G63-AMG/?id=853628",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "transmission": "Auto",
+      "fuel": "Petrol",
+      "mileageValue": 28000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

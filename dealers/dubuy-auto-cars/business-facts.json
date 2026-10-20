@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "slug": "dubuy-auto-cars",
+  "dealerId": "ae-dubai-dubuy-auto-cars",
+  "business": {
+    "name": "Dubuy Auto Cars",
+    "city": "Dubai",
+    "region": "Dubai",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "Jebel Ali",
+    "phone": "+971509445070",
+    "phoneDisplay": "+971509445070",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://www.dubicars.com/dealers/dubai-dubuy-auto-cars-2965",
+    "hours": "Mo-Sa 09:00-18:00",
+    "sourceUrl": "https://www.dubicars.com/dealers/dubai-dubuy-auto-cars-2965",
+    "observedAt": "2026-10-19",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-dubuy-auto-cars-2965",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-dubuy-auto-cars-2965",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "business-name",
+        "public-dealer-contact",
+        "public-location-if-shown",
+        "dated-stock-sample"
+      ]
+    }
+  ]
+}

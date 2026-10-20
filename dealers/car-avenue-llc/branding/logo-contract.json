@@ -1,0 +1,233 @@
+{
+  "schemaVersion": 1,
+  "dealer": "car-avenue-llc",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T21:17:17.662Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-faithful-redraw",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "e302b183cddf9c0fffafab0ac1585ba854e20980316b5e807696f105d184427a",
+      "sourceSha256": "8a858aa55ff5745972797ec9267638a96ffb7122355b0297ccb521b16e0d3274"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "d7c5cb5c3fa89a048973a165bd5615d0a0d594d8122d28969c743a0463883e19",
+      "sourceSha256": "fe6bb6ab129dda1832ac64d5f8c7bbe3b763c80dbef58d1d0ea9fc4969283264"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "d7c5cb5c3fa89a048973a165bd5615d0a0d594d8122d28969c743a0463883e19",
+      "sourceSha256": "fe6bb6ab129dda1832ac64d5f8c7bbe3b763c80dbef58d1d0ea9fc4969283264"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "8a858aa55ff5745972797ec9267638a96ffb7122355b0297ccb521b16e0d3274",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-a5a88b78-18ab-42ba-b60e-ec7adcc373f6",
+      "generationIdKind": "exposed-tool-execution-output-identifier",
+      "modelVersion": null,
+      "outputReference": "branding/generated-sheet.png",
+      "outputSha256": "977e025d76780989dd3feac4bb52adbd151068f496272b65e36a166693e03961"
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "eb2efa677e22f573e4d700734265e14350bf3d0f7d3993a8742f8ca80f2ee376",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-a4a4e8a8-a956-4428-9878-3faabc3e98ad",
+      "generationIdKind": "exposed-tool-execution-output-identifier",
+      "modelVersion": null,
+      "outputReference": "branding/compact-generation.png",
+      "outputSha256": "65eaa053d3efc06d0a267b07d9d70a2d81f15b0acc531a7ad1bc293e618f9bd9",
+      "prompt": "Create ONLY two matching compact CA monogram assets for the attached CARS AVENUE dealer identity. This is an unapproved compact derivative of its existing condensed lettering. Preserve bold, condensed block letters C and A, strong deliberate geometry and the small underline motif. Make the monogram nearly square and unmistakable at 32px. LEFT asset dark black ink with a restrained deep golden-yellow underline, RIGHT asset every visible stroke pure white. Each C counter and A counter and all surrounding gaps must be genuinely empty transparent alpha. Use NO surrounding badge, NO enclosing border, NO rectangle, NO panel, NO black or white background. The letters themselves are separate bold strokes with large open space between and within them. Put the two monograms side by side on one WIDE transparent PNG sheet with very generous fully empty transparent gutters and margins. No full wordmark, no text beyond CA, no labels. Flat crisp vector-like ink, no shadows, glow, haze, blur or gradients. At least half of each tight bounding box must remain true fully transparent empty space, including spaces inside the C and A. Keep identity polished and legible."
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "1d6b08485fd5918c4abec7af65b1626055dc822e15e038719fd5f276b7b3b275"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "8a858aa55ff5745972797ec9267638a96ffb7122355b0297ccb521b16e0d3274",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a5a88b78-18ab-42ba-b60e-ec7adcc373f6",
+        "generationIdKind": "exposed-tool-execution-output-identifier",
+        "modelVersion": null,
+        "outputReference": "branding/generated-sheet.png",
+        "outputSha256": "977e025d76780989dd3feac4bb52adbd151068f496272b65e36a166693e03961"
+      },
+      "sourceReference": "dealers/car-avenue-llc/branding/reviewed-onLight.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "fe6bb6ab129dda1832ac64d5f8c7bbe3b763c80dbef58d1d0ea9fc4969283264",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a5a88b78-18ab-42ba-b60e-ec7adcc373f6",
+        "generationIdKind": "exposed-tool-execution-output-identifier",
+        "modelVersion": null,
+        "outputReference": "branding/generated-sheet.png",
+        "outputSha256": "977e025d76780989dd3feac4bb52adbd151068f496272b65e36a166693e03961"
+      },
+      "sourceReference": "dealers/car-avenue-llc/branding/reviewed-onDark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "fe6bb6ab129dda1832ac64d5f8c7bbe3b763c80dbef58d1d0ea9fc4969283264",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a5a88b78-18ab-42ba-b60e-ec7adcc373f6",
+        "generationIdKind": "exposed-tool-execution-output-identifier",
+        "modelVersion": null,
+        "outputReference": "branding/generated-sheet.png",
+        "outputSha256": "977e025d76780989dd3feac4bb52adbd151068f496272b65e36a166693e03961"
+      },
+      "sourceReference": "dealers/car-avenue-llc/branding/reviewed-onDark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "6f19018dd8dfbb0bf238d19a0376995a315e2672bcd9a20178d6f7169c7b457a",
+      "sha256": "8a858aa55ff5745972797ec9267638a96ffb7122355b0297ccb521b16e0d3274",
+      "crop": {
+        "left": 34,
+        "top": 363,
+        "width": 578,
+        "height": 168
+      },
+      "sourcePath": "branding/reviewed-onLight.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "3eafe6d57589a70594da54ef5e225325d07c4c71992dfc9ae3abe16d41985cd9",
+      "sha256": "fe6bb6ab129dda1832ac64d5f8c7bbe3b763c80dbef58d1d0ea9fc4969283264",
+      "crop": {
+        "left": 30,
+        "top": 362,
+        "width": 580,
+        "height": 169
+      },
+      "sourcePath": "branding/reviewed-onDark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "3eafe6d57589a70594da54ef5e225325d07c4c71992dfc9ae3abe16d41985cd9",
+      "sha256": "fe6bb6ab129dda1832ac64d5f8c7bbe3b763c80dbef58d1d0ea9fc4969283264",
+      "crop": {
+        "left": 30,
+        "top": 362,
+        "width": 580,
+        "height": 169
+      },
+      "sourcePath": "branding/reviewed-onDark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "c56a36fb7908c082698eb75672cc6a3a1fa7a94398c25eefd4a186da2000227b",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a4a4e8a8-a956-4428-9878-3faabc3e98ad",
+        "generationIdKind": "exposed-tool-execution-output-identifier",
+        "modelVersion": null,
+        "outputReference": "branding/compact-generation.png",
+        "outputSha256": "65eaa053d3efc06d0a267b07d9d70a2d81f15b0acc531a7ad1bc293e618f9bd9",
+        "prompt": "Create ONLY two matching compact CA monogram assets for the attached CARS AVENUE dealer identity. This is an unapproved compact derivative of its existing condensed lettering. Preserve bold, condensed block letters C and A, strong deliberate geometry and the small underline motif. Make the monogram nearly square and unmistakable at 32px. LEFT asset dark black ink with a restrained deep golden-yellow underline, RIGHT asset every visible stroke pure white. Each C counter and A counter and all surrounding gaps must be genuinely empty transparent alpha. Use NO surrounding badge, NO enclosing border, NO rectangle, NO panel, NO black or white background. The letters themselves are separate bold strokes with large open space between and within them. Put the two monograms side by side on one WIDE transparent PNG sheet with very generous fully empty transparent gutters and margins. No full wordmark, no text beyond CA, no labels. Flat crisp vector-like ink, no shadows, glow, haze, blur or gradients. At least half of each tight bounding box must remain true fully transparent empty space, including spaces inside the C and A. Keep identity polished and legible."
+      },
+      "sourceReference": "dealers/car-avenue-llc/branding/compact-reviewed-mark.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "8dcbb23cb92fcd01dcefab9bbea2d014fa14b6c3b2d22a8e53d61074ac547322",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a4a4e8a8-a956-4428-9878-3faabc3e98ad",
+        "generationIdKind": "exposed-tool-execution-output-identifier",
+        "modelVersion": null,
+        "outputReference": "branding/compact-generation.png",
+        "outputSha256": "65eaa053d3efc06d0a267b07d9d70a2d81f15b0acc531a7ad1bc293e618f9bd9",
+        "prompt": "Create ONLY two matching compact CA monogram assets for the attached CARS AVENUE dealer identity. This is an unapproved compact derivative of its existing condensed lettering. Preserve bold, condensed block letters C and A, strong deliberate geometry and the small underline motif. Make the monogram nearly square and unmistakable at 32px. LEFT asset dark black ink with a restrained deep golden-yellow underline, RIGHT asset every visible stroke pure white. Each C counter and A counter and all surrounding gaps must be genuinely empty transparent alpha. Use NO surrounding badge, NO enclosing border, NO rectangle, NO panel, NO black or white background. The letters themselves are separate bold strokes with large open space between and within them. Put the two monograms side by side on one WIDE transparent PNG sheet with very generous fully empty transparent gutters and margins. No full wordmark, no text beyond CA, no labels. Flat crisp vector-like ink, no shadows, glow, haze, blur or gradients. At least half of each tight bounding box must remain true fully transparent empty space, including spaces inside the C and A. Keep identity polished and legible."
+      },
+      "sourceReference": "dealers/car-avenue-llc/branding/compact-reviewed-markOnDark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "eb2efa677e22f573e4d700734265e14350bf3d0f7d3993a8742f8ca80f2ee376",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a4a4e8a8-a956-4428-9878-3faabc3e98ad",
+        "generationIdKind": "exposed-tool-execution-output-identifier",
+        "modelVersion": null,
+        "outputReference": "branding/compact-generation.png",
+        "outputSha256": "65eaa053d3efc06d0a267b07d9d70a2d81f15b0acc531a7ad1bc293e618f9bd9",
+        "prompt": "Create ONLY two matching compact CA monogram assets for the attached CARS AVENUE dealer identity. This is an unapproved compact derivative of its existing condensed lettering. Preserve bold, condensed block letters C and A, strong deliberate geometry and the small underline motif. Make the monogram nearly square and unmistakable at 32px. LEFT asset dark black ink with a restrained deep golden-yellow underline, RIGHT asset every visible stroke pure white. Each C counter and A counter and all surrounding gaps must be genuinely empty transparent alpha. Use NO surrounding badge, NO enclosing border, NO rectangle, NO panel, NO black or white background. The letters themselves are separate bold strokes with large open space between and within them. Put the two monograms side by side on one WIDE transparent PNG sheet with very generous fully empty transparent gutters and margins. No full wordmark, no text beyond CA, no labels. Flat crisp vector-like ink, no shadows, glow, haze, blur or gradients. At least half of each tight bounding box must remain true fully transparent empty space, including spaces inside the C and A. Keep identity polished and legible."
+      },
+      "sourceReference": "dealers/car-avenue-llc/branding/compact-reviewed-mark.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "1d6b08485fd5918c4abec7af65b1626055dc822e15e038719fd5f276b7b3b275",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a4a4e8a8-a956-4428-9878-3faabc3e98ad",
+        "generationIdKind": "exposed-tool-execution-output-identifier",
+        "modelVersion": null,
+        "outputReference": "branding/compact-generation.png",
+        "outputSha256": "65eaa053d3efc06d0a267b07d9d70a2d81f15b0acc531a7ad1bc293e618f9bd9",
+        "prompt": "Create ONLY two matching compact CA monogram assets for the attached CARS AVENUE dealer identity. This is an unapproved compact derivative of its existing condensed lettering. Preserve bold, condensed block letters C and A, strong deliberate geometry and the small underline motif. Make the monogram nearly square and unmistakable at 32px. LEFT asset dark black ink with a restrained deep golden-yellow underline, RIGHT asset every visible stroke pure white. Each C counter and A counter and all surrounding gaps must be genuinely empty transparent alpha. Use NO surrounding badge, NO enclosing border, NO rectangle, NO panel, NO black or white background. The letters themselves are separate bold strokes with large open space between and within them. Put the two monograms side by side on one WIDE transparent PNG sheet with very generous fully empty transparent gutters and margins. No full wordmark, no text beyond CA, no labels. Flat crisp vector-like ink, no shadows, glow, haze, blur or gradients. At least half of each tight bounding box must remain true fully transparent empty space, including spaces inside the C and A. Keep identity polished and legible."
+      },
+      "sourceReference": "dealers/car-avenue-llc/branding/compact-reviewed-mark.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T21:17:17.662Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "354261fd615373c0d54fc18f03ea60dc1e38f79d80bd6a6311a75da0ae58e211",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-a4a4e8a8-a956-4428-9878-3faabc3e98ad",
+      "generationIdKind": "exposed-tool-execution-output-identifier",
+      "modelVersion": null,
+      "outputReference": "branding/compact-generation.png",
+      "outputSha256": "65eaa053d3efc06d0a267b07d9d70a2d81f15b0acc531a7ad1bc293e618f9bd9",
+      "prompt": "Create ONLY two matching compact CA monogram assets for the attached CARS AVENUE dealer identity. This is an unapproved compact derivative of its existing condensed lettering. Preserve bold, condensed block letters C and A, strong deliberate geometry and the small underline motif. Make the monogram nearly square and unmistakable at 32px. LEFT asset dark black ink with a restrained deep golden-yellow underline, RIGHT asset every visible stroke pure white. Each C counter and A counter and all surrounding gaps must be genuinely empty transparent alpha. Use NO surrounding badge, NO enclosing border, NO rectangle, NO panel, NO black or white background. The letters themselves are separate bold strokes with large open space between and within them. Put the two monograms side by side on one WIDE transparent PNG sheet with very generous fully empty transparent gutters and margins. No full wordmark, no text beyond CA, no labels. Flat crisp vector-like ink, no shadows, glow, haze, blur or gradients. At least half of each tight bounding box must remain true fully transparent empty space, including spaces inside the C and A. Keep identity polished and legible."
+    }
+  }
+}

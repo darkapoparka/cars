@@ -1,0 +1,227 @@
+{
+  "schemaVersion": 1,
+  "dealer": "elena-used-cars",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T21:17:47.249Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-faithful-redraw",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "70fb99b696328c1c85dfd62d8dd57eb7733fd7640ecdbd8fe263ae800412341a",
+      "sourceSha256": "6103799cde28639873ef6345f57a5cf67d6051f821aa24f10ea8543a61d00b63"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "94f3c4fd884ba58faa960cb5770e017af00b931cca2786f1e352089f96b59d60",
+      "sourceSha256": "7515f64dedfe8f98498be4476f9068a6f81b11cd7d77dc605be715cd0d719080"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "94f3c4fd884ba58faa960cb5770e017af00b931cca2786f1e352089f96b59d60",
+      "sourceSha256": "7515f64dedfe8f98498be4476f9068a6f81b11cd7d77dc605be715cd0d719080"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "6103799cde28639873ef6345f57a5cf67d6051f821aa24f10ea8543a61d00b63",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-49ff2cb2-c67a-4489-9309-9abbdef179d9",
+      "generationIdKind": "exposed-tool-execution-output-identifier",
+      "modelVersion": null,
+      "outputReference": "branding/generated-sheet.png",
+      "outputSha256": "4314f5f80c1a378b6c089493007b303ad006603f41171d332dc060b48aa9c800"
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "de3b4c045aeb37c4988693cda275f5f54419db15dcc96575aca0e9e9c67f5bd5",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-49ff2cb2-c67a-4489-9309-9abbdef179d9",
+      "generationIdKind": "exposed-tool-execution-output-identifier",
+      "modelVersion": null,
+      "outputReference": "branding/generated-sheet.png",
+      "outputSha256": "4314f5f80c1a378b6c089493007b303ad006603f41171d332dc060b48aa9c800"
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "5cfd780a73815447ed4bda67f98f8eb8f07d9fce02b0b239d6f410b91d3e5bbc"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "6103799cde28639873ef6345f57a5cf67d6051f821aa24f10ea8543a61d00b63",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-49ff2cb2-c67a-4489-9309-9abbdef179d9",
+        "generationIdKind": "exposed-tool-execution-output-identifier",
+        "modelVersion": null,
+        "outputReference": "branding/generated-sheet.png",
+        "outputSha256": "4314f5f80c1a378b6c089493007b303ad006603f41171d332dc060b48aa9c800"
+      },
+      "sourceReference": "dealers/elena-used-cars/branding/reviewed-onLight.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "7515f64dedfe8f98498be4476f9068a6f81b11cd7d77dc605be715cd0d719080",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-49ff2cb2-c67a-4489-9309-9abbdef179d9",
+        "generationIdKind": "exposed-tool-execution-output-identifier",
+        "modelVersion": null,
+        "outputReference": "branding/generated-sheet.png",
+        "outputSha256": "4314f5f80c1a378b6c089493007b303ad006603f41171d332dc060b48aa9c800"
+      },
+      "sourceReference": "dealers/elena-used-cars/branding/reviewed-onDark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "7515f64dedfe8f98498be4476f9068a6f81b11cd7d77dc605be715cd0d719080",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-49ff2cb2-c67a-4489-9309-9abbdef179d9",
+        "generationIdKind": "exposed-tool-execution-output-identifier",
+        "modelVersion": null,
+        "outputReference": "branding/generated-sheet.png",
+        "outputSha256": "4314f5f80c1a378b6c089493007b303ad006603f41171d332dc060b48aa9c800"
+      },
+      "sourceReference": "dealers/elena-used-cars/branding/reviewed-onDark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "efef25913eb7214cfbd58472d7b4a016d9f666f8a31c7f3eb4e6bc3fefd5bb45",
+      "sha256": "6103799cde28639873ef6345f57a5cf67d6051f821aa24f10ea8543a61d00b63",
+      "crop": {
+        "left": 69,
+        "top": 159,
+        "width": 546,
+        "height": 567
+      },
+      "sourcePath": "branding/reviewed-onLight.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "fb568306136761263c4bbc14d52a94e4ee702c93d841de2421138f117530ea8c",
+      "sha256": "7515f64dedfe8f98498be4476f9068a6f81b11cd7d77dc605be715cd0d719080",
+      "crop": {
+        "left": 36,
+        "top": 159,
+        "width": 530,
+        "height": 568
+      },
+      "sourcePath": "branding/reviewed-onDark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "fb568306136761263c4bbc14d52a94e4ee702c93d841de2421138f117530ea8c",
+      "sha256": "7515f64dedfe8f98498be4476f9068a6f81b11cd7d77dc605be715cd0d719080",
+      "crop": {
+        "left": 36,
+        "top": 159,
+        "width": 530,
+        "height": 568
+      },
+      "sourcePath": "branding/reviewed-onDark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "530ed0322c9f349bfa465c70e8d17e47fa24d11f42c584c992e17863c16369a7",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-49ff2cb2-c67a-4489-9309-9abbdef179d9",
+        "generationIdKind": "exposed-tool-execution-output-identifier",
+        "modelVersion": null,
+        "outputReference": "branding/generated-sheet.png",
+        "outputSha256": "4314f5f80c1a378b6c089493007b303ad006603f41171d332dc060b48aa9c800"
+      },
+      "sourceReference": "dealers/elena-used-cars/branding/reviewed-mark.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "1d862dd1ea548d428283f5b37ec12bca60d6e1d60f7702ef0195a1e52bddf6e3",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-49ff2cb2-c67a-4489-9309-9abbdef179d9",
+        "generationIdKind": "exposed-tool-execution-output-identifier",
+        "modelVersion": null,
+        "outputReference": "branding/generated-sheet.png",
+        "outputSha256": "4314f5f80c1a378b6c089493007b303ad006603f41171d332dc060b48aa9c800"
+      },
+      "sourceReference": "dealers/elena-used-cars/branding/reviewed-markOnDark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "de3b4c045aeb37c4988693cda275f5f54419db15dcc96575aca0e9e9c67f5bd5",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-49ff2cb2-c67a-4489-9309-9abbdef179d9",
+        "generationIdKind": "exposed-tool-execution-output-identifier",
+        "modelVersion": null,
+        "outputReference": "branding/generated-sheet.png",
+        "outputSha256": "4314f5f80c1a378b6c089493007b303ad006603f41171d332dc060b48aa9c800"
+      },
+      "sourceReference": "dealers/elena-used-cars/branding/reviewed-mark.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "5cfd780a73815447ed4bda67f98f8eb8f07d9fce02b0b239d6f410b91d3e5bbc",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-49ff2cb2-c67a-4489-9309-9abbdef179d9",
+        "generationIdKind": "exposed-tool-execution-output-identifier",
+        "modelVersion": null,
+        "outputReference": "branding/generated-sheet.png",
+        "outputSha256": "4314f5f80c1a378b6c089493007b303ad006603f41171d332dc060b48aa9c800"
+      },
+      "sourceReference": "dealers/elena-used-cars/branding/reviewed-mark.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T21:17:47.249Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "232faa6990a2351658c634a581c55cb7799f15ef04b34052dec318da5033649c",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-49ff2cb2-c67a-4489-9309-9abbdef179d9",
+      "generationIdKind": "exposed-tool-execution-output-identifier",
+      "modelVersion": null,
+      "outputReference": "branding/generated-sheet.png",
+      "outputSha256": "4314f5f80c1a378b6c089493007b303ad006603f41171d332dc060b48aa9c800"
+    }
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-logo-recipe",
+  "dealer": "dubuy-auto-cars",
+  "transformVersion": "transparent-crop-v1",
+  "toolchain": {
+    "aom": "3.15.1",
+    "archive": "3.8.9",
+    "cairo": "1.18.6",
+    "cgif": "0.5.4",
+    "exif": "0.6.26",
+    "expat": "2.8.5",
+    "ffi": "3.8.0",
+    "fontconfig": "2.18.3",
+    "freetype": "2.14.3",
+    "fribidi": "1.0.17",
+    "glib": "2.90.0",
+    "harfbuzz": "14.5.0",
+    "heif": "1.23.5",
+    "highway": "1.4.0",
+    "imagequant": "2.4.1",
+    "lcms": "2.19.1",
+    "mozjpeg": "0826579",
+    "pango": "1.58.2",
+    "pixman": "0.46.4",
+    "png": "1.6.58",
+    "proxy-libintl": "0.5",
+    "rsvg": "2.63.2",
+    "tiff": "4.7.2",
+    "uhdr": "2.0.2",
+    "vips": "8.18.7",
+    "webp": "1.6.0",
+    "xml2": "2.15.4",
+    "zlib-ng": "2.3.3",
+    "sharp": "0.35.5"
+  },
+  "sourceSha256": "5c4df07627756947324d9dbb05f7efe7b5de2792e90648bd79540a3787884fb6",
+  "contractSha256": "a748c0056f8ca8c6184ccb772c3f2271f5a9d5d6d0e163d9048355814cb0b65f",
+  "outputs": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 90590,
+      "sha256": "a51ae914eee6dce9d1321df8e5f3f29eea9a34bca4adf1878b44fae2cdd839cc"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 91386,
+      "sha256": "e10bd3f439934343345b97174b0a084ecab733e8e120175d1e32930a96f2c4a3"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 90590,
+      "sha256": "a51ae914eee6dce9d1321df8e5f3f29eea9a34bca4adf1878b44fae2cdd839cc"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 185116,
+      "sha256": "521fb95f4b96fe3332977e74e271a9b660b461a57c19b5369900536b6439149e"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 239408,
+      "sha256": "101a56cc26103a8f0cdef50b4fc14e4be5a7019755d9a4735aaf7dfb204a6cc4"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 239408,
+      "sha256": "101a56cc26103a8f0cdef50b4fc14e4be5a7019755d9a4735aaf7dfb204a6cc4"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 185116,
+      "sha256": "521fb95f4b96fe3332977e74e271a9b660b461a57c19b5369900536b6439149e"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 90590,
+      "sha256": "a51ae914eee6dce9d1321df8e5f3f29eea9a34bca4adf1878b44fae2cdd839cc"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 7556,
+      "sha256": "4fd8d95ee99b409955af6a04f2b65552036dbd479bcbe37a1e129f0238086bb5"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 239408,
+      "sha256": "101a56cc26103a8f0cdef50b4fc14e4be5a7019755d9a4735aaf7dfb204a6cc4"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 163456,
+      "sha256": "7bc8ea850bc199e88b68b66da89418474d85426414e5fff61474cfef11aa6156"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 239408,
+      "sha256": "101a56cc26103a8f0cdef50b4fc14e4be5a7019755d9a4735aaf7dfb204a6cc4"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 163456,
+      "sha256": "7bc8ea850bc199e88b68b66da89418474d85426414e5fff61474cfef11aa6156"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 185116,
+      "sha256": "521fb95f4b96fe3332977e74e271a9b660b461a57c19b5369900536b6439149e"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 115686,
+      "sha256": "f4b2a19799c1f6ab07e9ee632c7100803bae67be43b4122e380a5971ab8face5"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 64538,
+      "sha256": "8f1578c11909c62485993fe93ae4914ace6af2c567e71141c2bf49159ad4d3b3"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 58188,
+      "sha256": "acf7492fa8efad609bd02d9d4b66e443eec49229ebec14b4c73a9b750316dbbe"
+    }
+  ]
+}

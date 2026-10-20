@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "dubuy-auto-cars",
+  "previousSlug": "dubuy-auto-cars",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T18:41:12.072Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 3,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-dubai-dubuy-auto-cars",
+    "position": 216
+  },
+  "before": {
+    "files": 39,
+    "bytes": 3525398
+  },
+  "afterBeforeReview": {
+    "files": 23,
+    "bytes": 1080179
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 90590,
+      "sha256": "a51ae914eee6dce9d1321df8e5f3f29eea9a34bca4adf1878b44fae2cdd839cc"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 91386,
+      "sha256": "e10bd3f439934343345b97174b0a084ecab733e8e120175d1e32930a96f2c4a3"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 90590,
+      "sha256": "a51ae914eee6dce9d1321df8e5f3f29eea9a34bca4adf1878b44fae2cdd839cc"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 185116,
+      "sha256": "521fb95f4b96fe3332977e74e271a9b660b461a57c19b5369900536b6439149e"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 239408,
+      "sha256": "101a56cc26103a8f0cdef50b4fc14e4be5a7019755d9a4735aaf7dfb204a6cc4"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 239408,
+      "sha256": "101a56cc26103a8f0cdef50b4fc14e4be5a7019755d9a4735aaf7dfb204a6cc4"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 185116,
+      "sha256": "521fb95f4b96fe3332977e74e271a9b660b461a57c19b5369900536b6439149e"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 90590,
+      "sha256": "a51ae914eee6dce9d1321df8e5f3f29eea9a34bca4adf1878b44fae2cdd839cc"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 7556,
+      "sha256": "4fd8d95ee99b409955af6a04f2b65552036dbd479bcbe37a1e129f0238086bb5"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 239408,
+      "sha256": "101a56cc26103a8f0cdef50b4fc14e4be5a7019755d9a4735aaf7dfb204a6cc4"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 163456,
+      "sha256": "7bc8ea850bc199e88b68b66da89418474d85426414e5fff61474cfef11aa6156"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 239408,
+      "sha256": "101a56cc26103a8f0cdef50b4fc14e4be5a7019755d9a4735aaf7dfb204a6cc4"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 163456,
+      "sha256": "7bc8ea850bc199e88b68b66da89418474d85426414e5fff61474cfef11aa6156"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 185116,
+      "sha256": "521fb95f4b96fe3332977e74e271a9b660b461a57c19b5369900536b6439149e"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 115686,
+      "sha256": "f4b2a19799c1f6ab07e9ee632c7100803bae67be43b4122e380a5971ab8face5"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 64538,
+      "sha256": "8f1578c11909c62485993fe93ae4914ace6af2c567e71141c2bf49159ad4d3b3"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 58188,
+      "sha256": "acf7492fa8efad609bd02d9d4b66e443eec49229ebec14b4c73a9b750316dbbe"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 13,
+    "bytes": 578542,
+    "inventorySha256": "87472ae15f3f01c28fa278c2d8a38560f5323e4ef5f77b40708d617d03fde54a",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "dubuy-auto-cars",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 25,
+    "report": "dealers/dubuy-auto-cars/input-review.json"
+  },
+  "after": {
+    "files": 25,
+    "bytes": 1089022
+  }
+}

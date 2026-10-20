@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "dealer": "express-motors",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/dubai/express-motors",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/company/dubai/express-motors",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "business-name",
+        "public-dealer-contact",
+        "public-location-if-shown",
+        "dated-stock-sample"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "researchedAt": "2026-10-19",
+  "catalogueResponseSha256": "de63de7c45b965411da97f274e00517e448997a0f71b1da2f6c12c805b77f670",
+  "stockSources": [
+    {
+      "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/BMW/M4-Convertible/?id=8515",
+      "catalogueUrl": "https://www.oneclickdrive.com/company/dubai/express-motors",
+      "imageUrl": "https://static.oneclickdrive.com/uploads/cars/BMW_M4_2023_8515_8515_5531251185-19_small.jpg",
+      "observedAt": "2026-10-19",
+      "imageSourceSha256": "341ebf7cb13f0fd45a3ec67079a0cfbefba0e4a747898b1fea5d3c96ad0199d0",
+      "retainedPath": "dealer-stock/stock-1.webp",
+      "retainedSha256": "3179849d282abda08eb192413143dbfced76f8776e3e63cb712d4b8b565a831e",
+      "originalDimensions": [
+        450,
+        395
+      ],
+      "retainedDimensions": [
+        450,
+        395
+      ],
+      "retainedBytes": 35512,
+      "transformation": "Proportional downscale only if needed to maximum 1280 pixels; WebP quality 80; no visual content edits."
+    },
+    {
+      "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Mercedes-Benz/AMG-A45/?id=8513",
+      "catalogueUrl": "https://www.oneclickdrive.com/company/dubai/express-motors",
+      "imageUrl": "https://static.oneclickdrive.com/uploads/cars/Mercedes-Benz_GLA_2021_8513_8513_5527366721-20_small.jpg",
+      "observedAt": "2026-10-19",
+      "imageSourceSha256": "a3fdde3cf69bbabc1c50fe93bab7c2c9f086ea1147bf41ccfcb73d80cf1dea5f",
+      "retainedPath": "dealer-stock/stock-2.webp",
+      "retainedSha256": "cb8761354e39255749e75a7969d4ffbd195a50592817ec266f703331e3445b9a",
+      "originalDimensions": [
+        450,
+        395
+      ],
+      "retainedDimensions": [
+        450,
+        395
+      ],
+      "retainedBytes": 39430,
+      "transformation": "Proportional downscale only if needed to maximum 1280 pixels; WebP quality 80; no visual content edits."
+    },
+    {
+      "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Mercedes-Benz/SL-63-AMG/?id=8524",
+      "catalogueUrl": "https://www.oneclickdrive.com/company/dubai/express-motors",
+      "imageUrl": "https://static.oneclickdrive.com/uploads/cars/Mercedes-Benz_SL-Class_2013_8524_8524_5548217253-20_small.jpg",
+      "observedAt": "2026-10-19",
+      "imageSourceSha256": "c6f4b408c2d447779b8befbc64caa21e2657ed350c9d45cd3838f3f4028a07b1",
+      "retainedPath": "dealer-stock/stock-3.webp",
+      "retainedSha256": "fa224ba32705b45290189836211f512748806a5f0282004c7d88944504be6ee2",
+      "originalDimensions": [
+        450,
+        395
+      ],
+      "retainedDimensions": [
+        450,
+        395
+      ],
+      "retainedBytes": 44938,
+      "transformation": "Proportional downscale only if needed to maximum 1280 pixels; WebP quality 80; no visual content edits."
+    }
+  ],
+  "omissions": [
+    "Personal-looking or unverified emails omitted; no private contact fields retained.",
+    "Unknown official website, exact address or hours left empty; marketplace-wide defaults not imported."
+  ]
+}

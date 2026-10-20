@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "slug": "chrome-used-cars",
+  "dealerId": "ae-dubai-chrome-used-cars",
+  "business": {
+    "name": "Chrome Used Cars",
+    "city": "Dubai",
+    "region": "Dubai",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "AL alweer auto market, ras al khor ,dubai, showroom no 68",
+    "phone": "+971558872265",
+    "phoneDisplay": "+971558872265",
+    "email": "chrome.cars@gmail.com",
+    "website": "",
+    "stockUrl": "https://www.carsooq.com/showroom/chrome-used-cars",
+    "hours": "",
+    "sourceUrl": "https://www.oneclickdrive.com/company/dubai/chrome-used-cars",
+    "observedAt": "2026-10-19",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/dubai/chrome-used-cars",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.carsooq.com/showroom/chrome-used-cars",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.carsooq.com/showroom/chrome-used-cars",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "business-name",
+        "public-dealer-contact",
+        "public-location-if-shown",
+        "dated-stock-sample",
+        "public-business-email"
+      ]
+    }
+  ]
+}

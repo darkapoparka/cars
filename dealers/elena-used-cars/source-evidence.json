@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "dealer": "elena-used-cars",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/dubai/elena-used-cars",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/company/dubai/elena-used-cars",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "business-name",
+        "public-dealer-contact",
+        "public-location-if-shown",
+        "dated-stock-sample"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "researchedAt": "2026-10-19",
+  "catalogueResponseSha256": "eda5a50d1c071eb92d77c069892701ec020ab9842b00b483c69fc37212b0f661",
+  "stockSources": [
+    {
+      "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Toyota/Hiace/?id=877964",
+      "catalogueUrl": "https://www.oneclickdrive.com/company/dubai/elena-used-cars",
+      "imageUrl": "https://static.oneclickdrive.com/uploads/cars/Toyota-Hiace-Other_877964_219216156150-1_small.jpg",
+      "observedAt": "2026-10-19",
+      "imageSourceSha256": "4b2b6f1398128497ce1fb4cbdf7d9fc50bf6dc4943783733929a5d9d97c611f2",
+      "retainedPath": "dealer-stock/stock-1.webp",
+      "retainedSha256": "179d93ac1988fd46255ff6720ac4db2c77e574f017385b9ddba1d8738b04d786",
+      "originalDimensions": [
+        450,
+        395
+      ],
+      "retainedDimensions": [
+        450,
+        395
+      ],
+      "retainedBytes": 17562,
+      "transformation": "Proportional downscale only if needed to maximum 1280 pixels; WebP quality 80; no visual content edits."
+    },
+    {
+      "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Mercedes-Benz/GLA-200/?id=877965",
+      "catalogueUrl": "https://www.oneclickdrive.com/company/dubai/elena-used-cars",
+      "imageUrl": "https://static.oneclickdrive.com/uploads/cars/Mercedes-Benz-GLA-Class-GLA-200_877965_219216348856-1_small.jpg",
+      "observedAt": "2026-10-19",
+      "imageSourceSha256": "a81a66d3539d8424ab5f6e86d49a63d34572917530277307080e954e11c4f96f",
+      "retainedPath": "dealer-stock/stock-2.webp",
+      "retainedSha256": "43fa03e4b9d3fcc2d26772ebb43f6b90086a30a1a854695b194e06da3413f767",
+      "originalDimensions": [
+        450,
+        395
+      ],
+      "retainedDimensions": [
+        450,
+        395
+      ],
+      "retainedBytes": 18784,
+      "transformation": "Proportional downscale only if needed to maximum 1280 pixels; WebP quality 80; no visual content edits."
+    },
+    {
+      "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Mercedes-Benz/G63-AMG/?id=853628",
+      "catalogueUrl": "https://www.oneclickdrive.com/company/dubai/elena-used-cars",
+      "imageUrl": "https://static.oneclickdrive.com/uploads/cars/Mercedes-Benz-G-Class-G-63-AMG_853628_2155509072385-1_small.jpg",
+      "observedAt": "2026-10-19",
+      "imageSourceSha256": "63b3053260b142c2c028771f6d4cd456186585b3d28dfa4de125c64c633e7b22",
+      "retainedPath": "dealer-stock/stock-3.webp",
+      "retainedSha256": "352024d6d0c0d7c8835ad61e0ecce4236063470844928dc581386edcf1eebe41",
+      "originalDimensions": [
+        450,
+        395
+      ],
+      "retainedDimensions": [
+        450,
+        395
+      ],
+      "retainedBytes": 18602,
+      "transformation": "Proportional downscale only if needed to maximum 1280 pixels; WebP quality 80; no visual content edits."
+    }
+  ],
+  "omissions": [
+    "Personal-looking or unverified emails omitted; no private contact fields retained.",
+    "Unknown official website, exact address or hours left empty; marketplace-wide defaults not imported."
+  ]
+}

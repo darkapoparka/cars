@@ -1,0 +1,312 @@
+{
+  "schemaVersion": 1,
+  "type": "cars-m2-pilot-runtime-evidence",
+  "recordedAt": "2026-10-20T18:35:15.266Z",
+  "sourceBuildRunId": 39341160417,
+  "deploymentRunId": 39471369430,
+  "deploymentRunUrl": "https://github.com/darkapoparka/cars/actions/runs/39471369430",
+  "executorCommit": "1704ef8f243c6c923330bb2c58b92044077e5d6e",
+  "queueCommit": "0f16e5bb206137bd09fca25da139ea5eeaf21bad",
+  "queueBlobId": "c497dcedb462fdf6d7b4464529c444f27e70475a",
+  "artifact": {
+    "id": 12289511320,
+    "sha256": "0915cc6535e5a22c8dc4e3b695e5d278280d75f314d99d9c1ccd997364f42686",
+    "member": "dealer-pack-dispatch/metrics.json",
+    "memberSha256": "e9a569529cd89ffb0a927e81ceb05157a31013937d59a95763f37f70aa9573f9"
+  },
+  "receipts": [
+    {
+      "slug": "wadishee-used-cars",
+      "receiptSha256": "cbace39b6db26fed16530c3979ecc229f987a9d871f7057ea0ece6e272e993e6",
+      "workerId": "0840986156c24e6a9f0494b7ac667c1f",
+      "versionId": "7e40958e-80a0-4dd1-a64e-b7841210af6f",
+      "publicOrigin": "https://wadishee-used-cars.webpreviews.site",
+      "sourceCommit": "599adb6c101219eecbe8b4117e62189f7f168f16",
+      "packDigest": "e60910c5d52a07a8facb7a51cfbaabddff29e2b434125baa3509a6b56f7a71ea",
+      "outputDigest": "8e50e38ee225e1b2ba32718f0f47b128e373538089ceb287f573302c82d9ffcd",
+      "hostedReportSha256": "658fd300acd14a91a87bd7b2e24b9e87c5dab08bf810708b70be59feeb7924cc",
+      "hostedVerified": true,
+      "hostedFinishedAt": "2026-10-20T18:09:37.443Z",
+      "ownerAccepted": false
+    },
+    {
+      "slug": "za-motors",
+      "receiptSha256": "d8b515a7b6c6e88d0fa023fff39c348944106ae986e9d10add68f3ebdbdc98d0",
+      "workerId": "825519de6c1e412e83b8860b34c148ea",
+      "versionId": "ce011e6f-516c-4886-a35d-d595415c1df1",
+      "publicOrigin": "https://za-motors.webpreviews.site",
+      "sourceCommit": "599adb6c101219eecbe8b4117e62189f7f168f16",
+      "packDigest": "36c557950afc1390b56f72e69f60f9eefcae579538054b6c2856b12533d8b872",
+      "outputDigest": "7b1b2b4e9a380b30f48b7ee91e860b1c2edc3eb58bfe4bb048047d380e43fcee",
+      "hostedReportSha256": "0f70d09aa842a7f0381e4298c4d99583665d8184613f97a2f49e7aa0826f87cd",
+      "hostedVerified": true,
+      "hostedFinishedAt": "2026-10-20T18:19:59.618Z",
+      "ownerAccepted": false
+    },
+    {
+      "slug": "granada-auto-sales",
+      "receiptSha256": "eec11f28ebd4fa43987926add8b0d5399f1baf72b90d3edbf5912feeb1e76243",
+      "workerId": "f60307e667c64b16abb2cb3c789fa471",
+      "versionId": "349d1073-96c6-4a40-871b-361eb589e3c9",
+      "publicOrigin": "https://granada-auto-sales.webpreviews.site",
+      "sourceCommit": "599adb6c101219eecbe8b4117e62189f7f168f16",
+      "packDigest": "4b209fc366894e172643f0a8600a0ff6d827b9622475333fde4319613c1420db",
+      "outputDigest": "730273a4fcd45ebca29424c50c888c1e629c8734544f6d3b8a457cd0f8c809a3",
+      "hostedReportSha256": "a604b69efe1b08efbd33c5fbe62a67bb2e0dd05f94ccca9e9d7c43f2a1852de2",
+      "hostedVerified": true,
+      "hostedFinishedAt": "2026-10-20T18:29:05.757Z",
+      "ownerAccepted": false
+    }
+  ],
+  "ciRuntime": {
+    "providerWrites": 0,
+    "reports": [
+      {
+        "schemaVersion": 1,
+        "type": "cars-dealer-pack-runtime-metrics",
+        "slug": "wadishee-used-cars",
+        "workerName": "cars-wadishee-used-cars",
+        "accountId": "cb0007f242077bd759331f096eb75531",
+        "window": {
+          "start": "2026-10-20T18:07:26.719Z",
+          "end": "2026-10-20T18:29:08.059Z"
+        },
+        "observedAt": "2026-10-20T18:29:09.142Z",
+        "providerWrites": 0,
+        "requests": 71,
+        "errors": 0,
+        "exceptionalStatuses": [],
+        "startupTimeMs": 79,
+        "cpuAvailable": true,
+        "memoryAvailable": true,
+        "maxP99CpuMs": 312.365,
+        "maxP99MemoryMiB": 108.9129867553711,
+        "rows": [
+          {
+            "status": "success",
+            "requests": 71,
+            "errors": 0,
+            "cpuMicroseconds": {
+              "cpuTimeP50": 39848,
+              "cpuTimeP90": 163005,
+              "cpuTimeP99": 312365,
+              "cpuTimeP999": 312365
+            },
+            "memoryBytes": {
+              "memoryUsageBytesP50": 79948190,
+              "memoryUsageBytesP90": 102458750,
+              "memoryUsageBytesP99": 114203544,
+              "memoryUsageBytesP999": 114203544
+            }
+          }
+        ],
+        "status": "observed-without-errors",
+        "cpuLimitMs": 30000,
+        "cpuLimitSource": "provider-active-version-readback",
+        "withinLimits": true,
+        "limitChecks": {
+          "startup": {
+            "withinLimit": true,
+            "observedMs": 79,
+            "limitMs": 1000
+          },
+          "cpu": {
+            "withinLimit": true,
+            "observedMaxGroupP99Ms": 312.365,
+            "limitMs": 30000
+          },
+          "memory": {
+            "withinLimit": true,
+            "observedMaxGroupP99MiB": 108.9129867553711,
+            "limitMiB": 128
+          }
+        },
+        "limitsReference": {
+          "source": "https://developers.cloudflare.com/workers/platform/limits/",
+          "verifiedAt": "2026-10-19"
+        },
+        "interpretation": "withinLimits compares measured upload startup and sampled maximum group P99 CPU/memory values against their stated limits, and requires observed invocations without errors. It is null when evidence is incomplete unless an observed failure already establishes false. These are not exact peaks, whole-window quantiles or a guarantee about every invocation. Memory is shared per V8 isolate; absent data is not zero usage. This pilot does not establish sustained production-load headroom."
+      },
+      {
+        "schemaVersion": 1,
+        "type": "cars-dealer-pack-runtime-metrics",
+        "slug": "za-motors",
+        "workerName": "cars-za-motors",
+        "accountId": "cb0007f242077bd759331f096eb75531",
+        "window": {
+          "start": "2026-10-20T18:18:11.646Z",
+          "end": "2026-10-20T18:29:09.142Z"
+        },
+        "observedAt": "2026-10-20T18:29:09.762Z",
+        "providerWrites": 0,
+        "requests": 66,
+        "errors": 0,
+        "exceptionalStatuses": [],
+        "startupTimeMs": 114,
+        "cpuAvailable": true,
+        "memoryAvailable": true,
+        "maxP99CpuMs": 392.491,
+        "maxP99MemoryMiB": 110.27613067626953,
+        "rows": [
+          {
+            "status": "success",
+            "requests": 66,
+            "errors": 0,
+            "cpuMicroseconds": {
+              "cpuTimeP50": 37710,
+              "cpuTimeP90": 169610,
+              "cpuTimeP99": 392491,
+              "cpuTimeP999": 392491
+            },
+            "memoryBytes": {
+              "memoryUsageBytesP50": 77550280,
+              "memoryUsageBytesP90": 104331070,
+              "memoryUsageBytesP99": 115632904,
+              "memoryUsageBytesP999": 115632904
+            }
+          }
+        ],
+        "status": "observed-without-errors",
+        "cpuLimitMs": 30000,
+        "cpuLimitSource": "provider-active-version-readback",
+        "withinLimits": true,
+        "limitChecks": {
+          "startup": {
+            "withinLimit": true,
+            "observedMs": 114,
+            "limitMs": 1000
+          },
+          "cpu": {
+            "withinLimit": true,
+            "observedMaxGroupP99Ms": 392.491,
+            "limitMs": 30000
+          },
+          "memory": {
+            "withinLimit": true,
+            "observedMaxGroupP99MiB": 110.27613067626953,
+            "limitMiB": 128
+          }
+        },
+        "limitsReference": {
+          "source": "https://developers.cloudflare.com/workers/platform/limits/",
+          "verifiedAt": "2026-10-19"
+        },
+        "interpretation": "withinLimits compares measured upload startup and sampled maximum group P99 CPU/memory values against their stated limits, and requires observed invocations without errors. It is null when evidence is incomplete unless an observed failure already establishes false. These are not exact peaks, whole-window quantiles or a guarantee about every invocation. Memory is shared per V8 isolate; absent data is not zero usage. This pilot does not establish sustained production-load headroom."
+      },
+      {
+        "schemaVersion": 1,
+        "type": "cars-dealer-pack-runtime-metrics",
+        "slug": "granada-auto-sales",
+        "workerName": "cars-granada-auto-sales",
+        "accountId": "cb0007f242077bd759331f096eb75531",
+        "window": {
+          "start": "2026-10-20T18:27:17.546Z",
+          "end": "2026-10-20T18:29:09.762Z"
+        },
+        "observedAt": "2026-10-20T18:29:10.110Z",
+        "providerWrites": 0,
+        "requests": 18,
+        "errors": 0,
+        "exceptionalStatuses": [],
+        "startupTimeMs": 84,
+        "cpuAvailable": true,
+        "memoryAvailable": true,
+        "maxP99CpuMs": 412.136,
+        "maxP99MemoryMiB": 101.47102355957031,
+        "rows": [
+          {
+            "status": "success",
+            "requests": 18,
+            "errors": 0,
+            "cpuMicroseconds": {
+              "cpuTimeP50": 67519,
+              "cpuTimeP90": 241158,
+              "cpuTimeP99": 412136,
+              "cpuTimeP999": 412136
+            },
+            "memoryBytes": {
+              "memoryUsageBytesP50": 88853740,
+              "memoryUsageBytesP90": 104787140,
+              "memoryUsageBytesP99": 106400080,
+              "memoryUsageBytesP999": 106400080
+            }
+          }
+        ],
+        "status": "observed-without-errors",
+        "cpuLimitMs": 30000,
+        "cpuLimitSource": "provider-active-version-readback",
+        "withinLimits": true,
+        "limitChecks": {
+          "startup": {
+            "withinLimit": true,
+            "observedMs": 84,
+            "limitMs": 1000
+          },
+          "cpu": {
+            "withinLimit": true,
+            "observedMaxGroupP99Ms": 412.136,
+            "limitMs": 30000
+          },
+          "memory": {
+            "withinLimit": true,
+            "observedMaxGroupP99MiB": 101.47102355957031,
+            "limitMiB": 128
+          }
+        },
+        "limitsReference": {
+          "source": "https://developers.cloudflare.com/workers/platform/limits/",
+          "verifiedAt": "2026-10-19"
+        },
+        "interpretation": "withinLimits compares measured upload startup and sampled maximum group P99 CPU/memory values against their stated limits, and requires observed invocations without errors. It is null when evidence is incomplete unless an observed failure already establishes false. These are not exact peaks, whole-window quantiles or a guarantee about every invocation. Memory is shared per V8 isolate; absent data is not zero usage. This pilot does not establish sustained production-load headroom."
+      }
+    ],
+    "complete": true
+  },
+  "readOnlyFollowupObservations": [
+    {
+      "slug": "wadishee-used-cars",
+      "window": {
+        "start": "2026-10-20T18:07:26.719Z",
+        "end": "2026-10-20T18:09:37.443Z"
+      },
+      "observedAt": "2026-10-20T18:20:34.580Z",
+      "requests": 64,
+      "errors": 0,
+      "maxP99CpuMs": 312.365,
+      "maxP99MemoryMiB": 108.9129867553711,
+      "withinLimits": true,
+      "providerWrites": 0
+    },
+    {
+      "slug": "za-motors",
+      "window": {
+        "start": "2026-10-20T18:18:11.646Z",
+        "end": "2026-10-20T18:19:59.618Z"
+      },
+      "observedAt": "2026-10-20T18:32:41.966Z",
+      "requests": 66,
+      "errors": 0,
+      "maxP99CpuMs": 392.491,
+      "maxP99MemoryMiB": 110.27613067626953,
+      "withinLimits": true,
+      "providerWrites": 0
+    },
+    {
+      "slug": "granada-auto-sales",
+      "window": {
+        "start": "2026-10-20T18:27:17.546Z",
+        "end": "2026-10-20T18:29:05.757Z"
+      },
+      "observedAt": "2026-10-20T18:32:41.968Z",
+      "requests": 66,
+      "errors": 0,
+      "maxP99CpuMs": 412.136,
+      "maxP99MemoryMiB": 112.63505935668945,
+      "withinLimits": true,
+      "providerWrites": 0
+    }
+  ],
+  "scope": "Runtime queries filter the exact Worker script and time window, without a version filter. Version provenance comes from each durable activation/hosted receipt. These sampled observations and upload startup are not sustained-load or exact-peak evidence.",
+  "ownerAccepted": false,
+  "outreachPerformed": false
+}

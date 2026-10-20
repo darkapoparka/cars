@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "car-avenue-llc",
+  "previousSlug": "car-avenue-llc",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T18:40:58.752Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 3,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-dubai-car-avenue-llc",
+    "position": 205
+  },
+  "before": {
+    "files": 42,
+    "bytes": 3843743
+  },
+  "afterBeforeReview": {
+    "files": 26,
+    "bytes": 1569271
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 141488,
+      "sha256": "eb2efa677e22f573e4d700734265e14350bf3d0f7d3993a8742f8ca80f2ee376"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 128935,
+      "sha256": "354261fd615373c0d54fc18f03ea60dc1e38f79d80bd6a6311a75da0ae58e211"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 141488,
+      "sha256": "eb2efa677e22f573e4d700734265e14350bf3d0f7d3993a8742f8ca80f2ee376"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 154413,
+      "sha256": "8a858aa55ff5745972797ec9267638a96ffb7122355b0297ccb521b16e0d3274"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 186842,
+      "sha256": "fe6bb6ab129dda1832ac64d5f8c7bbe3b763c80dbef58d1d0ea9fc4969283264"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 186842,
+      "sha256": "fe6bb6ab129dda1832ac64d5f8c7bbe3b763c80dbef58d1d0ea9fc4969283264"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 154413,
+      "sha256": "8a858aa55ff5745972797ec9267638a96ffb7122355b0297ccb521b16e0d3274"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 141488,
+      "sha256": "eb2efa677e22f573e4d700734265e14350bf3d0f7d3993a8742f8ca80f2ee376"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 9425,
+      "sha256": "1d6b08485fd5918c4abec7af65b1626055dc822e15e038719fd5f276b7b3b275"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 186842,
+      "sha256": "fe6bb6ab129dda1832ac64d5f8c7bbe3b763c80dbef58d1d0ea9fc4969283264"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 117986,
+      "sha256": "d7c5cb5c3fa89a048973a165bd5615d0a0d594d8122d28969c743a0463883e19"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 186842,
+      "sha256": "fe6bb6ab129dda1832ac64d5f8c7bbe3b763c80dbef58d1d0ea9fc4969283264"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 117986,
+      "sha256": "d7c5cb5c3fa89a048973a165bd5615d0a0d594d8122d28969c743a0463883e19"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 154413,
+      "sha256": "8a858aa55ff5745972797ec9267638a96ffb7122355b0297ccb521b16e0d3274"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 86010,
+      "sha256": "e302b183cddf9c0fffafab0ac1585ba854e20980316b5e807696f105d184427a"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 92360,
+      "sha256": "8dcbb23cb92fcd01dcefab9bbea2d014fa14b6c3b2d22a8e53d61074ac547322"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 90494,
+      "sha256": "c56a36fb7908c082698eb75672cc6a3a1fa7a94398c25eefd4a186da2000227b"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 13,
+    "bytes": 664424,
+    "inventorySha256": "04670cf0068f806b5395b4da613baba8a7b09b2c018a4836c0a693b5d85390c3",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "car-avenue-llc",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 28,
+    "report": "dealers/car-avenue-llc/input-review.json"
+  },
+  "after": {
+    "files": 28,
+    "bytes": 1578556
+  }
+}

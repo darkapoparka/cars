@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "express-motors",
+  "previousSlug": "express-motors",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T18:41:34.935Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 3,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-dubai-express-motors",
+    "position": 220
+  },
+  "before": {
+    "files": 39,
+    "bytes": 3153333
+  },
+  "afterBeforeReview": {
+    "files": 23,
+    "bytes": 1003614
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 78038,
+      "sha256": "21bd6aa23c2141566de7ff98ed39c911b1c279f56cf7ecf80c829e1084ad5029"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 79681,
+      "sha256": "3e9755ba03044875ce7a7873c4c6303ce0da53d98804b927633a00a2356e4b83"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 78038,
+      "sha256": "21bd6aa23c2141566de7ff98ed39c911b1c279f56cf7ecf80c829e1084ad5029"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 173769,
+      "sha256": "d64a3d355cf665e8e782ec75adc8933129822c7081b9bc4a241f8c739835aaf4"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 205489,
+      "sha256": "2cbdee2aed361e3b6b97cb485f2eb12e7fb8a6e204fad737bdc92a0a907bad12"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 205489,
+      "sha256": "2cbdee2aed361e3b6b97cb485f2eb12e7fb8a6e204fad737bdc92a0a907bad12"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 173769,
+      "sha256": "d64a3d355cf665e8e782ec75adc8933129822c7081b9bc4a241f8c739835aaf4"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 78038,
+      "sha256": "21bd6aa23c2141566de7ff98ed39c911b1c279f56cf7ecf80c829e1084ad5029"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 6649,
+      "sha256": "79ef0715465e70be4f82dc99e9f6715c5cf50c7ed5577124337140027fdd1b94"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 205489,
+      "sha256": "2cbdee2aed361e3b6b97cb485f2eb12e7fb8a6e204fad737bdc92a0a907bad12"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 142030,
+      "sha256": "0d356d6b1f9cb447f2df9e617739ac840761b26d52765278cfaa05ca471ebc58"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 205489,
+      "sha256": "2cbdee2aed361e3b6b97cb485f2eb12e7fb8a6e204fad737bdc92a0a907bad12"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 142030,
+      "sha256": "0d356d6b1f9cb447f2df9e617739ac840761b26d52765278cfaa05ca471ebc58"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 173769,
+      "sha256": "d64a3d355cf665e8e782ec75adc8933129822c7081b9bc4a241f8c739835aaf4"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 104522,
+      "sha256": "3a3c6f1d81c67d5578f9f315c1688c48de85c94842ceb0ab79ad3fd1765b8e36"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 54340,
+      "sha256": "e5f0cf8672f6462205c4d52beb5cfb49fb19a9b47f0eacc35677ff9144341cd7"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 46882,
+      "sha256": "0ded85139a6b70cdfea4da5559c8b746429cae4485215c30333f7503c57cc583"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 13,
+    "bytes": 515540,
+    "inventorySha256": "59f84329748c295f4f0c1d5d549aa06fa3ea89f7d878eb189ba1455c80f23f87",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "express-motors",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 25,
+    "report": "dealers/express-motors/input-review.json"
+  },
+  "after": {
+    "files": 25,
+    "bytes": 1012449
+  }
+}

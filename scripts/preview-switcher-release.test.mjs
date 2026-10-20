@@ -10,8 +10,10 @@ import {loadPreparedDealerPack} from './prepare-dealer-pack-logo.mjs';
 import {ROOT} from './lib/workflow.mjs';
 
 const preparedFabPacks=new Map();
+// These packs are artwork fixtures for the in-memory switcher harness. Their
+// live deployment rows are separate from the hosting-collision contract tests.
 for(const slug of ['za-motors','wadishee-used-cars','granada-auto-sales'])preparedFabPacks.set(slug,
-  await loadPreparedDealerPack(ROOT,slug,{toolPackage:process.env.CARS_QA_RESOLVE_FROM??ROOT+'/runtime/dealer-pack-tools/package.json'}));
+  await loadPreparedDealerPack(ROOT,slug,{registryOverride:[],toolPackage:process.env.CARS_QA_RESOLVE_FROM??ROOT+'/runtime/dealer-pack-tools/package.json'}));
 
 const source = readFileSync(new URL('./publishing/preview-switcher.js', import.meta.url), 'utf8');
 const variants = [

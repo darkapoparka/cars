@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "dealer": "durmaz-auto-export-and-trading-fzco",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/dubai/durmaz-auto-export-and-trading-fzco",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/company/dubai/durmaz-auto-export-and-trading-fzco",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "business-name",
+        "public-dealer-contact",
+        "public-location-if-shown",
+        "dated-stock-sample"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "researchedAt": "2026-10-19",
+  "catalogueResponseSha256": "0e5511f021cf841365fde22eda1b4f60b63118dbaef5e331bf1a0cbf077242c5",
+  "stockSources": [
+    {
+      "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Mercedes-Benz/G550/?id=150126",
+      "catalogueUrl": "https://www.oneclickdrive.com/company/dubai/durmaz-auto-export-and-trading-fzco",
+      "imageUrl": "https://static.oneclickdrive.com/uploads/cars/Mercedes-Benz_G550_2015_150126_150126_803224288221-8_small.jpg",
+      "observedAt": "2026-10-19",
+      "imageSourceSha256": "c9a4441fa0a23425c867dfe7c9d57e439ae3eae7c614011702ee22becff3b11e",
+      "retainedPath": "dealer-stock/stock-1.webp",
+      "retainedSha256": "494fb278c994814b2a15fda41a046039d0ac6611168aacbb25ad9652172204c0",
+      "originalDimensions": [
+        450,
+        395
+      ],
+      "retainedDimensions": [
+        450,
+        395
+      ],
+      "retainedBytes": 32690,
+      "transformation": "Proportional downscale only if needed to maximum 1280 pixels; WebP quality 80; no visual content edits."
+    },
+    {
+      "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Mercedes-Benz/G63-AMG/?id=150129",
+      "catalogueUrl": "https://www.oneclickdrive.com/company/dubai/durmaz-auto-export-and-trading-fzco",
+      "imageUrl": "https://static.oneclickdrive.com/uploads/cars/Mercedes-Benz_G63-AMG_2021_150129_150129_803229561342-5_small.jpg",
+      "observedAt": "2026-10-19",
+      "imageSourceSha256": "28b6762c24b192a36e55dd34815348ea4e14d9863e74e72ceaf084cd30464548",
+      "retainedPath": "dealer-stock/stock-2.webp",
+      "retainedSha256": "6db37141e29e94a8bc2e188ebea7c67e51b46db6d6c9b7dcabe1c67fc48ecf32",
+      "originalDimensions": [
+        450,
+        395
+      ],
+      "retainedDimensions": [
+        450,
+        395
+      ],
+      "retainedBytes": 27574,
+      "transformation": "Proportional downscale only if needed to maximum 1280 pixels; WebP quality 80; no visual content edits."
+    },
+    {
+      "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Mercedes-Benz/E450-4Matic/?id=150127",
+      "catalogueUrl": "https://www.oneclickdrive.com/company/dubai/durmaz-auto-export-and-trading-fzco",
+      "imageUrl": "https://static.oneclickdrive.com/uploads/cars/Mercedes-Benz_E450-4Matic_2021_150127_150127_803226291457-9_small.jpg",
+      "observedAt": "2026-10-19",
+      "imageSourceSha256": "3552b3ba9a4b1a523abc32541ff5ddf531b6d413a58a0e341be8d5da028c15d5",
+      "retainedPath": "dealer-stock/stock-3.webp",
+      "retainedSha256": "8cc8b53d1b3c0395c443338485768c6a7c9e7a3c3ff7017f481457cd9ac22dcb",
+      "originalDimensions": [
+        450,
+        395
+      ],
+      "retainedDimensions": [
+        450,
+        395
+      ],
+      "retainedBytes": 37368,
+      "transformation": "Proportional downscale only if needed to maximum 1280 pixels; WebP quality 80; no visual content edits."
+    }
+  ],
+  "omissions": [
+    "Personal-looking or unverified emails omitted; no private contact fields retained.",
+    "Unknown official website, exact address or hours left empty; marketplace-wide defaults not imported."
+  ]
+}

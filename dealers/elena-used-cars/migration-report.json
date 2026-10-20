@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "elena-used-cars",
+  "previousSlug": "elena-used-cars",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T18:41:26.209Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 3,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-dubai-elena-used-cars",
+    "position": 219
+  },
+  "before": {
+    "files": 39,
+    "bytes": 4689838
+  },
+  "afterBeforeReview": {
+    "files": 23,
+    "bytes": 981722
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 103949,
+      "sha256": "de3b4c045aeb37c4988693cda275f5f54419db15dcc96575aca0e9e9c67f5bd5"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 100971,
+      "sha256": "232faa6990a2351658c634a581c55cb7799f15ef04b34052dec318da5033649c"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 103949,
+      "sha256": "de3b4c045aeb37c4988693cda275f5f54419db15dcc96575aca0e9e9c67f5bd5"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 334702,
+      "sha256": "6103799cde28639873ef6345f57a5cf67d6051f821aa24f10ea8543a61d00b63"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 368853,
+      "sha256": "7515f64dedfe8f98498be4476f9068a6f81b11cd7d77dc605be715cd0d719080"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 368853,
+      "sha256": "7515f64dedfe8f98498be4476f9068a6f81b11cd7d77dc605be715cd0d719080"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 334702,
+      "sha256": "6103799cde28639873ef6345f57a5cf67d6051f821aa24f10ea8543a61d00b63"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 103949,
+      "sha256": "de3b4c045aeb37c4988693cda275f5f54419db15dcc96575aca0e9e9c67f5bd5"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 9873,
+      "sha256": "5cfd780a73815447ed4bda67f98f8eb8f07d9fce02b0b239d6f410b91d3e5bbc"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 368853,
+      "sha256": "7515f64dedfe8f98498be4476f9068a6f81b11cd7d77dc605be715cd0d719080"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 236830,
+      "sha256": "94f3c4fd884ba58faa960cb5770e017af00b931cca2786f1e352089f96b59d60"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 368853,
+      "sha256": "7515f64dedfe8f98498be4476f9068a6f81b11cd7d77dc605be715cd0d719080"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 236830,
+      "sha256": "94f3c4fd884ba58faa960cb5770e017af00b931cca2786f1e352089f96b59d60"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 334702,
+      "sha256": "6103799cde28639873ef6345f57a5cf67d6051f821aa24f10ea8543a61d00b63"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 203672,
+      "sha256": "70fb99b696328c1c85dfd62d8dd57eb7733fd7640ecdbd8fe263ae800412341a"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 69784,
+      "sha256": "1d862dd1ea548d428283f5b37ec12bca60d6e1d60f7702ef0195a1e52bddf6e3"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 62592,
+      "sha256": "530ed0322c9f349bfa465c70e8d17e47fa24d11f42c584c992e17863c16369a7"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 13,
+    "bytes": 472321,
+    "inventorySha256": "e5de032d8daaef0578a1250496bceb6675067b3eaeb441581bf9869256bac350",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "elena-used-cars",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 25,
+    "report": "dealers/elena-used-cars/input-review.json"
+  },
+  "after": {
+    "files": 25,
+    "bytes": 990567
+  }
+}
