@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "dealer": "jdm-direct-imports-coventry",
-  "status": "research-required",
+  "status": "reviewed",
   "realLogoFirst": true,
   "publicSources": [
     {
@@ -26,7 +26,177 @@
     }
   ],
   "originals": [],
-  "creationMethod": null,
+  "creationMethod": "imagegen-proposal",
   "dealerApproved": false,
-  "generatedInputs": null
+  "generatedInputs": {
+    "reviewedAt": "2026-10-20T23:49:22.984Z",
+    "master": {
+      "path": "branding/generated-master-v1-20261021.png",
+      "sha256": "6190dd7795d49414f5af7ce8ca828c7f4daa8af70c92d1f7edf92aec86040290",
+      "nativeDimensions": {
+        "width": 1942,
+        "height": 809
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f51d3859-31ff-4a3c-b32d-4f7eb42256fa",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light-v1-20261021.png",
+      "sha256": "ec347a77a93c98254a1d77911f15b5872321e65701106446a12e5b611ebb138d",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-ac45abec-ab2f-4baf-a720-8d05d456e873",
+        "modelVersion": null
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark-v1-20261021.png",
+      "sha256": "fd99bf4e8cce92abae73bcbf47bfb0a1ad5a99af1595e0a662b6b6f502622af8",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-0c5f4c58-ae3c-41a5-80e3-a6112ecd0bd4",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-master-v1-20261021.png",
+        "sha256": "6190dd7795d49414f5af7ce8ca828c7f4daa8af70c92d1f7edf92aec86040290",
+        "nativeDimensions": {
+          "width": 1942,
+          "height": 809
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-f51d3859-31ff-4a3c-b32d-4f7eb42256fa",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-inverse-v1-20261021.png",
+        "sha256": "3a26b546f54b977440a61a1eb20229bd572e7b899fdc0d3ce50303dac62786f7",
+        "nativeDimensions": {
+          "width": 1944,
+          "height": 809
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-db27ef19-5255-4596-8cfd-3f13f48b1d48",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-inverse-v1-20261021.png",
+        "sha256": "3a26b546f54b977440a61a1eb20229bd572e7b899fdc0d3ce50303dac62786f7",
+        "nativeDimensions": {
+          "width": 1944,
+          "height": 809
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-db27ef19-5255-4596-8cfd-3f13f48b1d48",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-20T23:49:22.984Z",
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "markWidths": [
+        32,
+        64
+      ],
+      "notes": "Agent inspected exact alpha-composited light/inverse wordmarks; final matched consumer sheet is separately retained. All five native dark/red backgrounds are unchanged. Proposal only, no human/dealer/native/hosted approval."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-20T23:49:22.984Z",
+      "widths": [
+        32,
+        64
+      ],
+      "notes": "Dedicated naturally square two-row J/DM light/inverse companion inputs are actual imagegen outputs with open letter counters. Full wordmark is retained separately. No manual stretch, recolour, filters or alpha cleanup."
+    }
+  },
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "researchConclusion": "The exact retained primary marketplace page was checked and confirms the trading text. Linked image is the same generic80px placeholder, not dealer artwork. No distinct original raster obtained in bounded checks, which does not establish absence of a logo. Independent new proposals, no history or adoption inferred.",
+  "publicSourceObservations": [
+    {
+      "observedAt": "2026-10-20T23:49:22.984Z",
+      "kind": "bounded-logo-first-page-review",
+      "observations": "Exact eBay Jdm-direct-imports primarypage matchesBaytonIndustrialEstate/BaytonRoad Coventry CV79EJ and retainedcontacts. Header is generic placeholder. No ownership/legal-operator/history association, stockownership or sale-or-return facts were newly asserted; retainedrecord unchanged."
+    }
+  ],
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "generationId": "exec-f51d3859-31ff-4a3c-b32d-4f7eb42256fa",
+    "modelVersion": null,
+    "prompt": "Use case: logo-brand. Create ONE independent proposal for exact trading name JDM DIRECT IMPORTS. Wide horizontal lockup: isolated original compact open JDM monogram at LEFT, generous transparent gap, bold exact text JDM above DIRECT IMPORTS at RIGHT. Compact has strong angled letterforms and a single open route-like cut through D, naturally balanced about1.8:1, recognizable at32/64px; all three initials JDM clear. Deep navy-charcoal #182936 with deep red #a92636 accents, flat opaque ink and strong white contrast. Exactwording legible at120/180px. Truly transparent background/counters, generous margins. No Coventry tag, JDM Dean wording, Japanese script/flag, manufacturer badges, car silhouette, shield/crown, history/stockownership claims, legal suffix, slogans, backgroundplate, gradients, glow, shadows, white keylines, texture or speckles. New independent unapproved identity for retained Coventry marketplace trader; no adoption inferred."
+  },
+  "compactDerivation": {
+    "operation": "actual-imagegen-dedicated-compact",
+    "artworkUnmodifiedAfterGeneration": true,
+    "alphaUnmodified": true
+  },
+  "compactOnDarkDerivation": {
+    "operation": "actual-imagegen-dedicated-compact",
+    "artworkUnmodifiedAfterGeneration": true,
+    "alphaUnmodified": true
+  },
+  "additionalGenerations": [
+    {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-ac45abec-ab2f-4baf-a720-8d05d456e873",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand. ONE COMPACT NEAR-SQUARE TWO-ROW INITIALS MONOGRAM: J on upper row, D M side-by-side below it. Read exactly JDM in reading order. Bold angular forward-slanted geometric lettering, chunky clean strokes, open D counter, obvious J hook and M valley. A compact companion for JDM Direct Imports, naturally balanced approximately1:1 shape; never a wide horizontal JDM word. J and M solid deep navy-charcoal #182936, D solid deep red #a92636. Flat opaque ink, true transparent square canvas and counters, generous margin, strong at32/64px. No circle/shield/frame/tile, flags/Japanese text, route arrows, car silhouette, other letters, extra text, gradient, glow, shadow, halo, keyline, texture or speckles. Independent new compact proposal, no adoption or official claim.",
+      "referencePaths": [],
+      "path": "branding/generated-mark-light-v1-20261021.png",
+      "sha256": "ec347a77a93c98254a1d77911f15b5872321e65701106446a12e5b611ebb138d"
+    },
+    {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-db27ef19-5255-4596-8cfd-3f13f48b1d48",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand, exact inverse edit. Preserve exact JDM angular monogram on left and JDM over DIRECT IMPORTS wording right, all initials, slants, spacing, proportions, cuts, counters and layout. Navy-charcoal becomes flat opaque pale silver-grey #cbd2d8; red becomes flat opaque pale muted rose #e3c1c8. Canvas and everycounter/gap truly transparent. Clear on charcoal/navy/black/red at120/180px. No glow, shadow, halo, gradients, texture, speckles, keyline, plate, extra words or new motifs. Exact JDM DIRECT IMPORTS, same independent unapproved proposal.",
+      "referencePaths": [
+        "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-f51d3859-31ff-4a3c-b32d-4f7eb42256fa.png"
+      ],
+      "path": "branding/generated-inverse-v1-20261021.png",
+      "sha256": "3a26b546f54b977440a61a1eb20229bd572e7b899fdc0d3ce50303dac62786f7"
+    },
+    {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-0c5f4c58-ae3c-41a5-80e3-a6112ecd0bd4",
+      "modelVersion": null,
+      "prompt": "Edit the attached transparent JDM compact logo into its matching inverse colour variant for dark charcoal and red backgrounds. Preserve the exact existing naturally square two-row geometry, letter outlines, spacing and legibility: J on the upper row, D and M side-by-side on the lower row. J and M use solid pale grey #cbd2d8; D uses solid pale rose #e3c1c8. Keep every opening and all negative spaces transparent. Flat crisp solid artwork only. No new text, extra shape, plate, border, glow, shadow, blur, gradient, texture or outline. No pure white. Transparent background. This is a proposal companion mark, not a claim of business adoption.",
+      "referencePaths": [
+        "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-ac45abec-ab2f-4baf-a720-8d05d456e873.png"
+      ],
+      "path": "branding/generated-mark-dark-v1-20261021.png",
+      "sha256": "fd99bf4e8cce92abae73bcbf47bfb0a1ad5a99af1595e0a662b6b6f502622af8"
+    }
+  ],
+  "sourceHistory": [
+    {
+      "reference": "branding/source-before-first-artwork-20261021-5aff68877b58fd53.json",
+      "sha256": "5aff68877b58fd53740bbeac0fb7e63ca76065a2fefdfa00b909751d75a81a54",
+      "retainedAt": "2026-10-20T23:49:22.984Z",
+      "reason": "Exact maintained input-only draft provenance before first proposal artwork"
+    }
+  ]
 }

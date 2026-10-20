@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Car Hub (CarInvest Limited trading as Car Hub)",
     "publicOrigin": "https://car-hub-carinvest-limited-tradin-85541efea8.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "5028bc99123e1ca3aeae4b95b98829cbfacccc977352599143b65d98801b51ad",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "9c8e74060e832eb9deaa174e0f41acebad17a9503ce0a12efd364edf18369145"
+    }
   }
 }

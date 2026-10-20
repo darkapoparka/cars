@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "JDM Direct Imports (Coventry)",
     "publicOrigin": "https://jdm-direct-imports-coventry.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "78cfa3ea924d5d6b4479be1f23b6d261bddb6d916e62aa439b75805aded6a069",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "13d07c2b782321d95ce34ada89049bbe398ebb72e14d470491c9e8915de24e88"
+    }
   }
 }

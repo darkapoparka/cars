@@ -1,0 +1,137 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-first-missing-source-proposal-artwork",
+  "dealer": "car-hub-carinvest-limited-tradin-85541efea8",
+  "createdAt": "2026-10-20T23:45:23.399Z",
+  "inputRows": [
+    {
+      "role": "wordLight",
+      "path": "branding/generated-master-v1-20261021.png",
+      "sha256": "fa4601f518c81c10f98d51e601a5deea33388cc20d4cd43220dc928895b3263b",
+      "nativeDimensions": {
+        "width": 2048,
+        "height": 768
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a51d7af1-e2b8-40af-840c-dfb0a0cec6f2",
+        "modelVersion": null
+      },
+      "artifact": "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-a51d7af1-e2b8-40af-840c-dfb0a0cec6f2.png",
+      "prompt": "Use case: logo-brand. Create a transparent WHITE-SURFACE proposal treatment based on this actual sourced CARHUB wordmark. Preserve recognizable geometric letterforms and the black/white/yellow color family, including the distinctive A crossbar. Wide horizontal lockup: an isolated original compact open CH companion monogram at LEFT occupying aboutonequarter visible width, clear transparent gap, exact main text CAR HUB at RIGHT in the source geometric typography, preferably one bold line. CAR ink deep charcoal #18232c; HUB deep ochre #826600 for strong white contrast. Compact C charcoal/H ochre, naturally balanced1.5:1, substantial open counters. Omit the tiny AT QUATRO HOUSE line from this small-consumer treatment; it remains in retained original/facts. No addedwords, legal claims, car silhouette, shield, crown, backgroundplate, gradient, glow, shadows, white keyline, texture or speckles. Flat opaque smooth ink, truly transparent canvas/counters and generous margins. Readable at120/180px and compact32/64px. New transparent treatment/compact companion proposal, no dealer adoption implied.",
+      "referencePaths": [
+        "J:/.artifacts/cars-source-sync/fifth3-public-branding-inputs/car-hub-public-original.jpg"
+      ]
+    },
+    {
+      "role": "markLight",
+      "path": "branding/generated-mark-light-v1-20261021.png",
+      "sha256": "459be3015e91d97148b4e900128f465014fdd8782adede4f4801bc93ae5a3c75",
+      "nativeDimensions": {
+        "width": 566,
+        "height": 768
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a51d7af1-e2b8-40af-840c-dfb0a0cec6f2",
+        "modelVersion": null
+      },
+      "artifact": "J:/.artifacts/cars-source-sync/fifth3-branding-inputs/car-hub-carinvest-limited-tradin-85541efea8/markLight.png",
+      "prompt": "Use case: logo-brand. Create a transparent WHITE-SURFACE proposal treatment based on this actual sourced CARHUB wordmark. Preserve recognizable geometric letterforms and the black/white/yellow color family, including the distinctive A crossbar. Wide horizontal lockup: an isolated original compact open CH companion monogram at LEFT occupying aboutonequarter visible width, clear transparent gap, exact main text CAR HUB at RIGHT in the source geometric typography, preferably one bold line. CAR ink deep charcoal #18232c; HUB deep ochre #826600 for strong white contrast. Compact C charcoal/H ochre, naturally balanced1.5:1, substantial open counters. Omit the tiny AT QUATRO HOUSE line from this small-consumer treatment; it remains in retained original/facts. No addedwords, legal claims, car silhouette, shield, crown, backgroundplate, gradient, glow, shadows, white keyline, texture or speckles. Flat opaque smooth ink, truly transparent canvas/counters and generous margins. Readable at120/180px and compact32/64px. New transparent treatment/compact companion proposal, no dealer adoption implied.",
+      "referencePaths": [
+        "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-a51d7af1-e2b8-40af-840c-dfb0a0cec6f2.png"
+      ],
+      "derivation": {
+        "operation": "lossless-png-extract-isolated-emblem",
+        "parentPath": "branding/generated-master-v1-20261021.png",
+        "parentSha256": "fa4601f518c81c10f98d51e601a5deea33388cc20d4cd43220dc928895b3263b",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 566,
+          "height": 768
+        },
+        "emptyGap": {
+          "start": 518,
+          "end": 614,
+          "width": 96
+        },
+        "parentNativeDimensions": {
+          "width": 2048,
+          "height": 768
+        },
+        "artworkUnmodified": true,
+        "alphaUnmodified": true
+      }
+    },
+    {
+      "role": "wordDark",
+      "path": "branding/generated-inverse-v1-20261021.png",
+      "sha256": "3c08a47fd9a4adf73eabfd862ac88e5b85dda62fc4a4200f99060af9a198d035",
+      "nativeDimensions": {
+        "width": 2048,
+        "height": 768
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9ad73363-0817-4f3f-b6d9-d6119dc47c17",
+        "modelVersion": null
+      },
+      "artifact": "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-9ad73363-0817-4f3f-b6d9-d6119dc47c17.png",
+      "prompt": "Use case: logo-brand, faithful inverse edit. Preserve exact CH companion monogram and CAR HUB wordmark, source-style letterforms including A crossbar, all geometry, proportions, spacing, colorpartition and counters. Charcoal becomes flat opaque pale silver-grey #cbd2d8; ochre/yellow becomes flat opaque pale champagne #e5d4a5. True transparent canvas/gaps/counters. Clear at120/180px wordmark and32/64px compact on charcoal/navy/black/red. No glow, shadows, halo, gradients, texture, speckles, keyline, backgroundplate, AT QUATRO HOUSE tagline, extra text or new motifs. Exact CAR HUB. Same sourced wordmark treatment/compact proposal, no adoption claim.",
+      "referencePaths": [
+        "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-a51d7af1-e2b8-40af-840c-dfb0a0cec6f2.png"
+      ]
+    },
+    {
+      "role": "markDark",
+      "path": "branding/generated-mark-dark-v1-20261021.png",
+      "sha256": "a920640883b31ebe18880a91fb80b3a4c3ef627a1640982e649b5d4517a0a4ed",
+      "nativeDimensions": {
+        "width": 567,
+        "height": 768
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9ad73363-0817-4f3f-b6d9-d6119dc47c17",
+        "modelVersion": null
+      },
+      "artifact": "J:/.artifacts/cars-source-sync/fifth3-branding-inputs/car-hub-carinvest-limited-tradin-85541efea8/markDark.png",
+      "prompt": "Use case: logo-brand, faithful inverse edit. Preserve exact CH companion monogram and CAR HUB wordmark, source-style letterforms including A crossbar, all geometry, proportions, spacing, colorpartition and counters. Charcoal becomes flat opaque pale silver-grey #cbd2d8; ochre/yellow becomes flat opaque pale champagne #e5d4a5. True transparent canvas/gaps/counters. Clear at120/180px wordmark and32/64px compact on charcoal/navy/black/red. No glow, shadows, halo, gradients, texture, speckles, keyline, backgroundplate, AT QUATRO HOUSE tagline, extra text or new motifs. Exact CAR HUB. Same sourced wordmark treatment/compact proposal, no adoption claim.",
+      "referencePaths": [
+        "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-9ad73363-0817-4f3f-b6d9-d6119dc47c17.png"
+      ],
+      "derivation": {
+        "operation": "lossless-png-extract-isolated-emblem",
+        "parentPath": "branding/generated-inverse-v1-20261021.png",
+        "parentSha256": "3c08a47fd9a4adf73eabfd862ac88e5b85dda62fc4a4200f99060af9a198d035",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 567,
+          "height": 768
+        },
+        "emptyGap": {
+          "start": 519,
+          "end": 616,
+          "width": 97
+        },
+        "parentNativeDimensions": {
+          "width": 2048,
+          "height": 768
+        },
+        "artworkUnmodified": true,
+        "alphaUnmodified": true
+      }
+    }
+  ],
+  "sourceFactNamePreserved": true,
+  "publicTradingText": "Car Hub",
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "dealerApproval": false,
+  "humanReview": false,
+  "providerWrites": 0,
+  "filtersApplied": false,
+  "thresholdsChanged": false
+}

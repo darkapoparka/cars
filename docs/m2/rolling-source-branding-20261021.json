@@ -297,6 +297,98 @@
       "nativeStatus": "Awaiting exact-source dispatch after this checkpoint",
       "nativeApproval": false,
       "hostedApproval": false
+    },
+    {
+      "group": "fifth3",
+      "recordedAt": "2026-10-20T23:51:20.285Z",
+      "reviewSealSha256": "b9da09d0824f1f5d9053810ff0a74cf799317dcead9bf4f5cc4fc66516bf0cae",
+      "totals": {
+        "packs": 3,
+        "artworkPassed": 3,
+        "sourceReviewCheckPassed": 3,
+        "existingContactHeld": 0,
+        "candidateRasterChecks": 42,
+        "actualSourceRasterChecks": 42,
+        "files": 73,
+        "bytes": 8302246,
+        "modifiedPaths": 15,
+        "addedPaths": 28,
+        "deleted": 0
+      },
+      "packs": [
+        {
+          "slug": "car-hub-carinvest-limited-tradin-85541efea8",
+          "path": "dealers/car-hub-carinvest-limited-tradin-85541efea8",
+          "packDigest": "7c53e7bab36d88ff7aeab990b6e14167cc2f4e128ae68a9f144c5339831cc339",
+          "files": 25,
+          "bytes": 3368861,
+          "sourceReady": true,
+          "proposalOnly": true,
+          "maintainerConsumerReview": true,
+          "actualSourceRasters": 14,
+          "strictPublisher": {
+            "passed": true,
+            "actualExportedApplyLeadBranding": true,
+            "fixtureSourceSha256": "85d66559b60867d2ab30ff7c4cb0a9eb07f7d6b9e0fb8ef3c4ae5caeae594783",
+            "noBuild": true
+          },
+          "sourceFactsStockPhotosResearchPreserved": true,
+          "humanReview": false,
+          "dealerApproval": false,
+          "nativeApproval": false,
+          "hostedApproval": false,
+          "provenance": "dealers/car-hub-carinvest-limited-tradin-85541efea8/branding/first-proposal-artwork-20261021.json"
+        },
+        {
+          "slug": "chilton-motoring",
+          "path": "dealers/chilton-motoring",
+          "packDigest": "49d885f13c107213403233257ea2376b159bd95982439ff5e7157677ceab29ce",
+          "files": 24,
+          "bytes": 2287395,
+          "sourceReady": true,
+          "proposalOnly": true,
+          "maintainerConsumerReview": true,
+          "actualSourceRasters": 14,
+          "strictPublisher": {
+            "passed": true,
+            "actualExportedApplyLeadBranding": true,
+            "fixtureSourceSha256": "85d66559b60867d2ab30ff7c4cb0a9eb07f7d6b9e0fb8ef3c4ae5caeae594783",
+            "noBuild": true
+          },
+          "sourceFactsStockPhotosResearchPreserved": true,
+          "humanReview": false,
+          "dealerApproval": false,
+          "nativeApproval": false,
+          "hostedApproval": false,
+          "provenance": "dealers/chilton-motoring/branding/first-proposal-artwork-20261021.json"
+        },
+        {
+          "slug": "jdm-direct-imports-coventry",
+          "path": "dealers/jdm-direct-imports-coventry",
+          "packDigest": "8867d3328607a25b020a3a14183a9955ddf121eefe7d7b2d0eeaae6b8f7d9fa3",
+          "files": 24,
+          "bytes": 2645990,
+          "sourceReady": true,
+          "proposalOnly": true,
+          "maintainerConsumerReview": true,
+          "actualSourceRasters": 14,
+          "strictPublisher": {
+            "passed": true,
+            "actualExportedApplyLeadBranding": true,
+            "fixtureSourceSha256": "85d66559b60867d2ab30ff7c4cb0a9eb07f7d6b9e0fb8ef3c4ae5caeae594783",
+            "noBuild": true
+          },
+          "sourceFactsStockPhotosResearchPreserved": true,
+          "humanReview": false,
+          "dealerApproval": false,
+          "nativeApproval": false,
+          "hostedApproval": false,
+          "provenance": "dealers/jdm-direct-imports-coventry/branding/first-proposal-artwork-20261021.json"
+        }
+      ],
+      "nativeStatus": "Awaiting exact-source dispatch after this checkpoint",
+      "nativeApproval": false,
+      "hostedApproval": false
     }
   ],
   "ownerAccepted": false,

@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "dealer": "jdm-direct-imports-coventry",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T23:49:22.984Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "50a5d7ce848dcde50f394081047fe69672d70db362b80948ff77dbd1aa0a84c1",
+      "sourceSha256": "78cfa3ea924d5d6b4479be1f23b6d261bddb6d916e62aa439b75805aded6a069"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "a02582c372c93af51a93e4f3bceb684c92e0af6a07789bab7f8c28efb4044790",
+      "sourceSha256": "e691c3aef38195f5f30520c388de061b86de4096542f27e43b766d48a3d4e472"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "a02582c372c93af51a93e4f3bceb684c92e0af6a07789bab7f8c28efb4044790",
+      "sourceSha256": "e691c3aef38195f5f30520c388de061b86de4096542f27e43b766d48a3d4e472"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "78cfa3ea924d5d6b4479be1f23b6d261bddb6d916e62aa439b75805aded6a069",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-f51d3859-31ff-4a3c-b32d-4f7eb42256fa",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "13d07c2b782321d95ce34ada89049bbe398ebb72e14d470491c9e8915de24e88",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-ac45abec-ab2f-4baf-a720-8d05d456e873",
+      "modelVersion": null
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "44061132ee5b6dbf4e771f6c0f1cad8b95744f19e30353fffe57fcaa70be94fa"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "78cfa3ea924d5d6b4479be1f23b6d261bddb6d916e62aa439b75805aded6a069",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f51d3859-31ff-4a3c-b32d-4f7eb42256fa",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/jdm-direct-imports-coventry/branding/generated-master-v1-20261021.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "e691c3aef38195f5f30520c388de061b86de4096542f27e43b766d48a3d4e472",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-db27ef19-5255-4596-8cfd-3f13f48b1d48",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/jdm-direct-imports-coventry/branding/generated-inverse-v1-20261021.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "e691c3aef38195f5f30520c388de061b86de4096542f27e43b766d48a3d4e472",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-db27ef19-5255-4596-8cfd-3f13f48b1d48",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/jdm-direct-imports-coventry/branding/generated-inverse-v1-20261021.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "6190dd7795d49414f5af7ce8ca828c7f4daa8af70c92d1f7edf92aec86040290",
+      "sha256": "78cfa3ea924d5d6b4479be1f23b6d261bddb6d916e62aa439b75805aded6a069",
+      "crop": {
+        "left": 0,
+        "top": 219,
+        "width": 1942,
+        "height": 369
+      },
+      "sourcePath": "branding/generated-master-v1-20261021.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "3a26b546f54b977440a61a1eb20229bd572e7b899fdc0d3ce50303dac62786f7",
+      "sha256": "e691c3aef38195f5f30520c388de061b86de4096542f27e43b766d48a3d4e472",
+      "crop": {
+        "left": 0,
+        "top": 218,
+        "width": 1944,
+        "height": 371
+      },
+      "sourcePath": "branding/generated-inverse-v1-20261021.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "3a26b546f54b977440a61a1eb20229bd572e7b899fdc0d3ce50303dac62786f7",
+      "sha256": "e691c3aef38195f5f30520c388de061b86de4096542f27e43b766d48a3d4e472",
+      "crop": {
+        "left": 0,
+        "top": 218,
+        "width": 1944,
+        "height": 371
+      },
+      "sourcePath": "branding/generated-inverse-v1-20261021.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "763658ef6628dd569fae889494f2c845146ab90f8c7058ffa41dbf08c66a8b3b",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-ac45abec-ab2f-4baf-a720-8d05d456e873",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/jdm-direct-imports-coventry/branding/generated-mark-light-v1-20261021.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "adf38ce78cabeb156c5a4aec37fd5946ab693b6fc4df0569d6ca3f3bc1dbfac1",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-0c5f4c58-ae3c-41a5-80e3-a6112ecd0bd4",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/jdm-direct-imports-coventry/branding/generated-mark-dark-v1-20261021.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "13d07c2b782321d95ce34ada89049bbe398ebb72e14d470491c9e8915de24e88",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-ac45abec-ab2f-4baf-a720-8d05d456e873",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/jdm-direct-imports-coventry/branding/generated-mark-light-v1-20261021.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "44061132ee5b6dbf4e771f6c0f1cad8b95744f19e30353fffe57fcaa70be94fa",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-ac45abec-ab2f-4baf-a720-8d05d456e873",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/jdm-direct-imports-coventry/branding/generated-mark-light-v1-20261021.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-20T23:49:22.984Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "19ad41ce5c74f41a21a3c9f24089bc74f7d4c25eb6a358ec0839128195a8a424",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-0c5f4c58-ae3c-41a5-80e3-a6112ecd0bd4",
+      "modelVersion": null
+    }
+  }
+}

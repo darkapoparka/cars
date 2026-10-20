@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-first-missing-source-proposal-artwork",
+  "dealer": "chilton-motoring",
+  "createdAt": "2026-10-20T23:45:30.653Z",
+  "inputRows": [
+    {
+      "role": "wordLight",
+      "path": "branding/generated-master-v1-20261021.png",
+      "sha256": "f365f9fc932dab933ff20a7ee2ef239553daa1daa0ddd2ec9e98c08af34d0bdd",
+      "nativeDimensions": {
+        "width": 1915,
+        "height": 821
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-522eede0-2db8-40a9-bbfa-79f55f833e44",
+        "modelVersion": null
+      },
+      "artifact": "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-522eede0-2db8-40a9-bbfa-79f55f833e44.png",
+      "prompt": "Use case: logo-brand. Create ONE independent identity proposal for exact dealer name CHILTON MOTORING. Wide horizontal lockup: original compact open CM monogram isolated on LEFT, generous transparent gap, exact bold geometric text CHILTON over MOTORING at RIGHT. Compact combines angular C arc with sturdy M peaks and clear negative-space separation, naturally about1.4:1 shape legible at32/64px. Deep evergreen #193f3c and deep bronze #765522, flat opaque ink with strong white-surface contrast. Lettering clearly readable at120/180px total logo width. True transparent canvas and counters, generous padding. No Chiltorn typo, no tagline, dates/history/awards, legal suffix, vehicle silhouette, shield/crown, backgroundplate, gradients, glow, shadow, white keylines, texture or speckles. Independent new proposal based on retained Chilton Motoring public name, not official/adopted artwork.",
+      "referencePaths": []
+    },
+    {
+      "role": "markLight",
+      "path": "branding/generated-mark-light-v1-20261021.png",
+      "sha256": "76d560ee66ef1bf5935d6afef98a99513cdcc6c56f25cdede5723d9e3d4640ff",
+      "nativeDimensions": {
+        "width": 668,
+        "height": 821
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-522eede0-2db8-40a9-bbfa-79f55f833e44",
+        "modelVersion": null
+      },
+      "artifact": "J:/.artifacts/cars-source-sync/fifth3-branding-inputs/chilton-motoring/markLight.png",
+      "prompt": "Use case: logo-brand. Create ONE independent identity proposal for exact dealer name CHILTON MOTORING. Wide horizontal lockup: original compact open CM monogram isolated on LEFT, generous transparent gap, exact bold geometric text CHILTON over MOTORING at RIGHT. Compact combines angular C arc with sturdy M peaks and clear negative-space separation, naturally about1.4:1 shape legible at32/64px. Deep evergreen #193f3c and deep bronze #765522, flat opaque ink with strong white-surface contrast. Lettering clearly readable at120/180px total logo width. True transparent canvas and counters, generous padding. No Chiltorn typo, no tagline, dates/history/awards, legal suffix, vehicle silhouette, shield/crown, backgroundplate, gradients, glow, shadow, white keylines, texture or speckles. Independent new proposal based on retained Chilton Motoring public name, not official/adopted artwork.",
+      "referencePaths": [
+        "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-522eede0-2db8-40a9-bbfa-79f55f833e44.png"
+      ],
+      "derivation": {
+        "operation": "lossless-png-extract-isolated-emblem",
+        "parentPath": "branding/generated-master-v1-20261021.png",
+        "parentSha256": "f365f9fc932dab933ff20a7ee2ef239553daa1daa0ddd2ec9e98c08af34d0bdd",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 668,
+          "height": 821
+        },
+        "emptyGap": {
+          "start": 636,
+          "end": 700,
+          "width": 64
+        },
+        "parentNativeDimensions": {
+          "width": 1915,
+          "height": 821
+        },
+        "artworkUnmodified": true,
+        "alphaUnmodified": true
+      }
+    },
+    {
+      "role": "wordDark",
+      "path": "branding/generated-inverse-v1-20261021.png",
+      "sha256": "25b7023fb9dbb9db18bc9fe178825e1183d51ac4bf84288e8faf581f8d879d7b",
+      "nativeDimensions": {
+        "width": 1916,
+        "height": 821
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-426b763c-3072-40f1-b693-5eb88cb4a7a3",
+        "modelVersion": null
+      },
+      "artifact": "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-426b763c-3072-40f1-b693-5eb88cb4a7a3.png",
+      "prompt": "Use case: logo-brand, exact inverse edit. Preserve exact angular CM monogram on left and CHILTON over MOTORING lettering right, all shapes, natural proportions, spacing, layout, counters and colorpartition. Evergreen becomes flat opaque pale sage #c7dacf; bronze becomes flat opaque pale champagne #e5d4a5. All negative spaces/canvas truly transparent. Clear at120/180px and32/64px on charcoal/navy/black/red. No shadow, glow, halos, gradients, keylines, texture, speckles, plate, extra text or redesign. Exact CHILTON MOTORING, same independent unapproved proposal.",
+      "referencePaths": [
+        "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-522eede0-2db8-40a9-bbfa-79f55f833e44.png"
+      ]
+    },
+    {
+      "role": "markDark",
+      "path": "branding/generated-mark-dark-v1-20261021.png",
+      "sha256": "2c565f27d60efaf2af7b011f1e87715046d38acad45f5b4c03575446f8c1de42",
+      "nativeDimensions": {
+        "width": 668,
+        "height": 821
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-426b763c-3072-40f1-b693-5eb88cb4a7a3",
+        "modelVersion": null
+      },
+      "artifact": "J:/.artifacts/cars-source-sync/fifth3-branding-inputs/chilton-motoring/markDark.png",
+      "prompt": "Use case: logo-brand, exact inverse edit. Preserve exact angular CM monogram on left and CHILTON over MOTORING lettering right, all shapes, natural proportions, spacing, layout, counters and colorpartition. Evergreen becomes flat opaque pale sage #c7dacf; bronze becomes flat opaque pale champagne #e5d4a5. All negative spaces/canvas truly transparent. Clear at120/180px and32/64px on charcoal/navy/black/red. No shadow, glow, halos, gradients, keylines, texture, speckles, plate, extra text or redesign. Exact CHILTON MOTORING, same independent unapproved proposal.",
+      "referencePaths": [
+        "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-426b763c-3072-40f1-b693-5eb88cb4a7a3.png"
+      ],
+      "derivation": {
+        "operation": "lossless-png-extract-isolated-emblem",
+        "parentPath": "branding/generated-inverse-v1-20261021.png",
+        "parentSha256": "25b7023fb9dbb9db18bc9fe178825e1183d51ac4bf84288e8faf581f8d879d7b",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 668,
+          "height": 821
+        },
+        "emptyGap": {
+          "start": 638,
+          "end": 698,
+          "width": 60
+        },
+        "parentNativeDimensions": {
+          "width": 1916,
+          "height": 821
+        },
+        "artworkUnmodified": true,
+        "alphaUnmodified": true
+      }
+    }
+  ],
+  "sourceFactNamePreserved": true,
+  "publicTradingText": "Chilton Motoring",
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "dealerApproval": false,
+  "humanReview": false,
+  "providerWrites": 0,
+  "filtersApplied": false,
+  "thresholdsChanged": false
+}
