@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": false,
+  "reviewedAt": null,
+  "dealer": "al-ihsan-motors",
+  "dealerId": "ae-ajman-al-ihsan-motors",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "review": {
+    "kind": "pending",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "method": "Draft identity only; run automated pack input review before building.",
+  "sources": [
+    {
+      "url": "https://ae.opensooq.com/en/shops/shop-65310230",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://ae.opensooq.com/en/search/288177114",
+      "observedAt": "2026-10-18"
+    }
+  ]
+}

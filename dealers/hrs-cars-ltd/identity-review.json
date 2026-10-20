@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": false,
+  "reviewedAt": null,
+  "dealer": "hrs-cars-ltd",
+  "dealerId": "gb-bathgate-hrs-cars",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "review": {
+    "kind": "pending",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "method": "Draft identity only; run automated pack input review before building.",
+  "sources": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/west-lothian/bathgate/hrs-cars-ltd-10046265",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.cazoo.co.uk/dealers/hrs-cars-ltd-17817/",
+      "observedAt": "2026-10-18"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": false,
+  "reviewedAt": null,
+  "dealer": "albert-s-auto-sales",
+  "dealerId": "us-pa-reading-alberts-auto-sales",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "review": {
+    "kind": "pending",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "method": "Draft identity only; run automated pack input review before building.",
+  "sources": [
+    {
+      "url": "https://www.cars.com/dealers/186079/alberts-auto-sales/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://mtpennborough.com/local-businesses",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.albertsautosalesreading.com/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://osegateas.com/albertsautosalesreading/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.facebook.com/profile.php?id=100063689658760",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.cars.com/dealers/186079/alberts-auto-sales/inventory/",
+      "observedAt": "2026-10-18"
+    }
+  ]
+}

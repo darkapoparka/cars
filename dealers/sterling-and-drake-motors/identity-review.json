@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": false,
+  "reviewedAt": null,
+  "dealer": "sterling-and-drake-motors",
+  "dealerId": "gb-west-bromwich-sterling-drake",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "review": {
+    "kind": "pending",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "method": "Draft identity only; run automated pack input review before building.",
+  "sources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Royal-motors",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.cazoo.co.uk/dealers/sterling-and-drake-motors-59830/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.cazoo.co.uk/dealers/royal-exchange-motors-59830/",
+      "observedAt": "2026-10-18"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": false,
+  "reviewedAt": null,
+  "dealer": "auto-gallery-dxb-auto-gallery-llc",
+  "dealerId": "ae-dubai-auto-gallery-dxb",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "review": {
+    "kind": "pending",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "method": "Draft identity only; run automated pack input review before building.",
+  "sources": [
+    {
+      "url": "https://www.autogallerydxb.com/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://auto.ae/ru/autogallerydxb/",
+      "observedAt": "2026-10-18"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "dealer": "alta-class-motors",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://auto.ae/altaclass/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.drivearabia.com/ar/cars-for-sale/uae/mercedes-benz/a-class/mercedesbenz-a200-2025-under-warranty-from-gargash-ee4700c09d904bad980ab7692f54f5ef/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ],
+  "liveFetchPerformed": false
+}

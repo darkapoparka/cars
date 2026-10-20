@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": false,
+  "reviewedAt": null,
+  "dealer": "al-nashama-motors",
+  "dealerId": "ae-ajman-al-nashama-motors",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "review": {
+    "kind": "pending",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "method": "Draft identity only; run automated pack input review before building.",
+  "sources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/al-nashama-motors",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/3011-mercedes-benz-e-class-e-350-7g-tronic-plus-272-hp-e-350",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://uae.yallamotor.com/auto-companies/al-nashama-motors-fze-9085",
+      "observedAt": "2026-10-18"
+    }
+  ]
+}

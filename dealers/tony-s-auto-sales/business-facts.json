@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "slug": "tony-s-auto-sales",
+  "dealerId": "us-ms-pascagoula-tonys-auto-sales",
+  "business": {
+    "name": "Tony's Auto Sales",
+    "city": "Pascagoula",
+    "region": "MS",
+    "countryCode": "US",
+    "currency": "USD",
+    "distanceUnit": "mi",
+    "locale": "en-US",
+    "address": "3422 Charlie Ave, Pascagoula, MS 39581",
+    "phone": "+12284715536",
+    "phoneDisplay": "+1 228-471-5536",
+    "email": "Tonysautosales001@gmail.com",
+    "website": "https://www.tonyautosales.com/",
+    "stockUrl": "https://www.tonyautosales.com/category/all-products",
+    "hours": "",
+    "sourceUrl": "https://www.tonyautosales.com/",
+    "observedAt": "2026-10-18",
+    "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.tonyautosales.com/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.tonyautosales.com/category/all-products",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.tonyautosales.com/blank",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.tonyautosales.com/book-online",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ]
+}

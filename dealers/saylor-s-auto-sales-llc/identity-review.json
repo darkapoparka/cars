@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": false,
+  "reviewedAt": null,
+  "dealer": "saylor-s-auto-sales-llc",
+  "dealerId": "us-ky-harlan-saylors-auto-sales",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "review": {
+    "kind": "pending",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "method": "Draft identity only; run automated pack input review before building.",
+  "sources": [
+    {
+      "url": "https://www.facebook.com/saylorsautosales/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.facebook.com/saylorsautosales/posts/pfbid02HewjtVc4Uz4s8jFDsgrek8tXD9zMPvxA8PVX41fgZKrmGJhfvYuRx3hPvS2CCTGtl",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.facebook.com/saylorsautosales/posts/pfbid02sNEzBpjtAxRQstKZbLY4fStSynFtnfjVBdTTLiJWMV8pLkCnDf1udPBUQ7nXGjRPl",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.facebook.com/saylorsautosales/posts/pfbid0Wu2A4KCGyhzBRRCbkc18a94fDXMvFwR9uCLrDvxC2yXUttCWoqeLm8PTKJSgaTvvl",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.autoyas.com/US/Harlan/1773065826347274/Saylor%27s-Auto-Sales-LLC",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.enigma.com/directory/ky/harlan/",
+      "observedAt": "2026-10-18"
+    }
+  ]
+}

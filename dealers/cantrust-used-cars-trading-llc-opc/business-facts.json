@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "slug": "cantrust-used-cars-trading-llc-opc",
+  "dealerId": "ae-ras-al-khaimah-cantrust-used-cars",
+  "business": {
+    "name": "Cantrust Used Cars Trading LLC OPC",
+    "city": "Ras al-Khaimah",
+    "region": "Ras al-Khaimah",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "Al Duhaisah, Ras Al Khaimah, UAE",
+    "phone": "+971521065582",
+    "phoneDisplay": "+971521065582",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://licenseplate.ae/ar/cars/dealer/cantrust-used-cars-trading-llc-opc",
+    "hours": "",
+    "sourceUrl": "https://licenseplate.ae/ar/cars/dealer/cantrust-used-cars-trading-llc-opc",
+    "observedAt": "2026-10-18",
+    "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://licenseplate.ae/ar/cars/dealer/cantrust-used-cars-trading-llc-opc",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/ar/cars/listing/13082-byd-seal-at-204-hp-design",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://rak.dubizzle.com/motors/used-cars/byd/seal/2026/10/16/2022-used-byd-seal-design-chinese-specs-fo-11-133---265fdfc1aced461fa5e1d2423d36d32a/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ]
+}

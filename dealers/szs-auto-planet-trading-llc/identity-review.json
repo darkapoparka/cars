@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": false,
+  "reviewedAt": null,
+  "dealer": "szs-auto-planet-trading-llc",
+  "dealerId": "ae-dubai-szs-auto-planet-trading-llc",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "review": {
+    "kind": "pending",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "method": "Draft identity only; run automated pack input review before building.",
+  "sources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/dubai/szs-auto-planet-trading-l.l.c",
+      "observedAt": "2026-10-18"
+    }
+  ]
+}

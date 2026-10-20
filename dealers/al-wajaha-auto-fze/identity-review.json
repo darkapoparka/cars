@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": false,
+  "reviewedAt": null,
+  "dealer": "al-wajaha-auto-fze",
+  "dealerId": "ae-ajman-al-wajaha-auto-fze",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "review": {
+    "kind": "pending",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "method": "Draft identity only; run automated pack input review before building.",
+  "sources": [
+    {
+      "url": "https://ayshei.com/v-shop/alwajahaautofze/inventory",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://ayshei.com/ads/detail/6672985373-2021-chevrolet-silverado-ltz-american-specs-premium-condition",
+      "observedAt": "2026-10-18"
+    }
+  ]
+}

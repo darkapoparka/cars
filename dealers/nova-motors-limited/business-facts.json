@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "slug": "nova-motors-limited",
+  "dealerId": "gb-west-drayton-nova-motors",
+  "business": {
+    "name": "Nova Motors Limited",
+    "city": "West Drayton",
+    "region": "Greater London",
+    "countryCode": "GB",
+    "currency": "GBP",
+    "distanceUnit": "mi",
+    "locale": "en-GB",
+    "address": "The Common, West Drayton UB7 7HQ",
+    "phone": "+447441946607",
+    "phoneDisplay": "07441946607",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://www.autotrader.co.uk/dealers/middlesex/west-drayton/nova-motors-limited-10043632",
+    "hours": "",
+    "sourceUrl": "https://www.autotrader.co.uk/dealers/middlesex/west-drayton/nova-motors-limited-10043632",
+    "observedAt": "2026-10-18",
+    "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/middlesex/west-drayton/nova-motors-limited-10043632",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://find-and-update.company-information.service.gov.uk/company/15736938/filing-history",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ]
+}

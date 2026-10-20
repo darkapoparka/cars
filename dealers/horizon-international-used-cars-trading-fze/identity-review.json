@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": false,
+  "reviewedAt": null,
+  "dealer": "horizon-international-used-cars-trading-fze",
+  "dealerId": "ae-ajman-horizon-international-used-cars",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "review": {
+    "kind": "pending",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "method": "Draft identity only; run automated pack input review before building.",
+  "sources": [
+    {
+      "url": "https://auto.ae/horizoninternational/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.arabwheels.ae/used-cars/dealers/horizon-international-used-cars-showroom-in-uae/",
+      "observedAt": "2026-10-18"
+    }
+  ]
+}

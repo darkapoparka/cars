@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "dealer": "tony-s-auto-sales",
+  "source": {
+    "path": "leads/expansion-2026-10-18/usa.json",
+    "sha256": "39080afaea1c0c74bd94afba119350c7e1aaf0330fb554ef162fe27fa9bae34b"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.tonyautosales.com/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.tonyautosales.com/category/all-products",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.tonyautosales.com/blank",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.tonyautosales.com/book-online",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ],
+  "liveFetchPerformed": false
+}

@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "slug": "alwan-international-car",
+  "dealerId": "ae-ajman-alwan-international-car",
+  "business": {
+    "name": "Alwan International Car",
+    "city": "Ajman",
+    "region": "Ajman",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "",
+    "phone": "+971504144944",
+    "phoneDisplay": "+971504144944",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://licenseplate.ae/cars/dealer/alwan-international-car",
+    "hours": "",
+    "sourceUrl": "https://licenseplate.ae/cars/dealer/alwan-international-car",
+    "observedAt": "2026-10-18",
+    "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/alwan-international-car",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/3332-volkswagen-jetta-15-at-158-hp-r-line",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.alwan-international.com/homear.aspx",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "dealer": "merly-motors-llc",
+  "status": "research-required",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://www.merlymotors.com/inventory",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.merlymotors.com/",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "originals": [],
+  "creationMethod": null,
+  "dealerApproved": false,
+  "generatedInputs": null
+}

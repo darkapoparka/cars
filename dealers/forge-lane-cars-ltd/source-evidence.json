@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "dealer": "forge-lane-cars-ltd",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uk.json",
+    "sha256": "6cd8d365586f9a5d5131fe4b1d50baede7de91ab384a135017c25367298b07c4"
+  },
+  "publicSources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/forge-lane-car",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.cazoo.co.uk/dealers/forge-lane-cars-21828/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://find-and-update.company-information.service.gov.uk/company/14684984",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.gumtree.com/p/citroen/2015-citroen-c4-cactus-1.6-bluehdi-flair-5dr-hatchback-diesel-manual/1803283669",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ],
+  "liveFetchPerformed": false
+}

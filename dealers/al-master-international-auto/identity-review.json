@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": false,
+  "reviewedAt": null,
+  "dealer": "al-master-international-auto",
+  "dealerId": "ae-abu-dhabi-al-master-international-auto",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "review": {
+    "kind": "pending",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "method": "Draft identity only; run automated pack input review before building.",
+  "sources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/al-master-international-auto",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/5395-toyota-land-cruiser-prado-40-at-4wd-249-hp-txl",
+      "observedAt": "2026-10-18"
+    }
+  ]
+}

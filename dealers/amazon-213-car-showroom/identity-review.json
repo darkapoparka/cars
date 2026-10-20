@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": false,
+  "reviewedAt": null,
+  "dealer": "amazon-213-car-showroom",
+  "dealerId": "ae-ajman-amazon-213-car-showroom",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "review": {
+    "kind": "pending",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "method": "Draft identity only; run automated pack input review before building.",
+  "sources": [
+    {
+      "url": "https://ae.opensooq.com/en/shops/shop-74997803",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://ae.opensooq.com/en/search/288825714",
+      "observedAt": "2026-10-18"
+    }
+  ]
+}

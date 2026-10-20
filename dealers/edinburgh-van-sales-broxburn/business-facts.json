@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "slug": "edinburgh-van-sales-broxburn",
+  "dealerId": "gb-broxburn-edinburgh-van-sales",
+  "business": {
+    "name": "Edinburgh Van Sales (Broxburn)",
+    "city": "Broxburn",
+    "region": "West Lothian, Scotland",
+    "countryCode": "GB",
+    "currency": "GBP",
+    "distanceUnit": "mi",
+    "locale": "en-GB",
+    "address": "Unit 13 Thistle Business Park, 155 Main Street, Broxburn, EH52 5AS",
+    "phone": "+441324464456",
+    "phoneDisplay": "+441324464456",
+    "email": "sales.edinburghvansales@gmail.com",
+    "website": "",
+    "stockUrl": "https://showroom.ebaymotorspro.co.uk/EdinburghVanSales?page=1",
+    "hours": "",
+    "sourceUrl": "https://showroom.ebaymotorspro.co.uk/EdinburghVanSales?page=1",
+    "observedAt": "2026-10-18",
+    "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/EdinburghVanSales?page=1",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.cazoo.co.uk/dealers/edinburgh-van-sales-14752/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.gumtree.com/p/vans/2022-peugeot-expert-1000-1.5-bluehdi-100-professional-premium-van-panel-van-diesel-manual/1803277448",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ]
+}

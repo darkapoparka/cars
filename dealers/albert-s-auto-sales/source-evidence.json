@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "dealer": "albert-s-auto-sales",
+  "source": {
+    "path": "leads/expansion-2026-10-18/usa-supplement.json",
+    "sha256": "9f61452a6f728d6eeab63a945aea441d6f8737b0f8b41f4eb4c6924e04a8ae0e"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.cars.com/dealers/186079/alberts-auto-sales/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://mtpennborough.com/local-businesses",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.albertsautosalesreading.com/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://osegateas.com/albertsautosalesreading/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/profile.php?id=100063689658760",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.cars.com/dealers/186079/alberts-auto-sales/inventory/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ],
+  "liveFetchPerformed": false
+}

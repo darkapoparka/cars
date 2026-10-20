@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": false,
+  "reviewedAt": null,
+  "dealer": "c-car-sales-ltd",
+  "dealerId": "gb-wolverhampton-c-car-sales",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "review": {
+    "kind": "pending",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "method": "Draft identity only; run automated pack input review before building.",
+  "sources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/ccarsales-ltd?extendedFilter=1&menu=1",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.cazoo.co.uk/dealers/c-car-sales-ltd-97867/",
+      "observedAt": "2026-10-18"
+    }
+  ]
+}

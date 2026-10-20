@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "slug": "jak-prestige",
+  "dealerId": "gb-huddersfield-jak-prestige",
+  "business": {
+    "name": "Jak Prestige",
+    "city": "Huddersfield",
+    "region": "West Yorkshire",
+    "countryCode": "GB",
+    "currency": "GBP",
+    "distanceUnit": "mi",
+    "locale": "en-GB",
+    "address": "Office A, Colne Valley Business Park, Linthwaite, Huddersfield HD7 5QG",
+    "phone": "+447418690252",
+    "phoneDisplay": "07418690252",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://www.autotrader.co.uk/dealers/yorkshire/huddersfield/jak-prestige-10045873?refresh=true",
+    "hours": "",
+    "sourceUrl": "https://www.autotrader.co.uk/dealers/yorkshire/huddersfield/jak-prestige-10045873?refresh=true",
+    "observedAt": "2026-10-18",
+    "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/yorkshire/huddersfield/jak-prestige-10045873?refresh=true",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ]
+}

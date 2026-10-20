@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "slug": "b23-motors",
+  "dealerId": "gb-birmingham-b23-motors",
+  "business": {
+    "name": "B23 Motors",
+    "city": "Birmingham",
+    "region": "West Midlands",
+    "countryCode": "GB",
+    "currency": "GBP",
+    "distanceUnit": "mi",
+    "locale": "en-GB",
+    "address": "177 GooseMoore Lane, Birmingham B23 5QG",
+    "phone": "+441217525891",
+    "phoneDisplay": "+441217525891",
+    "email": "carsales245@outlook.com",
+    "website": "",
+    "stockUrl": "https://showroom.ebaymotorspro.co.uk/BTS",
+    "hours": "",
+    "sourceUrl": "https://showroom.ebaymotorspro.co.uk/BTS",
+    "observedAt": "2026-10-18",
+    "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/BTS",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.cargurus.co.uk/Cars/dealers-Hockley-L1068848",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.cargurus.co.uk/Cars/m-HRM-Motors-sp527252",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://asmperformancecars.co.uk/dealerships/hrm-motors",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.hrmmotors.co.uk/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ]
+}

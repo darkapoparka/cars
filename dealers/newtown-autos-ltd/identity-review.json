@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": false,
+  "reviewedAt": null,
+  "dealer": "newtown-autos-ltd",
+  "dealerId": "gb-birmingham-newtown-autos",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "review": {
+    "kind": "pending",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "method": "Draft identity only; run automated pack input review before building.",
+  "sources": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/warwickshire/birmingham/newtown-autos-ltd-10042152",
+      "observedAt": "2026-10-18"
+    }
+  ]
+}

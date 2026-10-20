@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "slug": "saylor-s-auto-sales-llc",
+  "dealerId": "us-ky-harlan-saylors-auto-sales",
+  "business": {
+    "name": "Saylor's Auto Sales LLC",
+    "city": "Harlan",
+    "region": "KY",
+    "countryCode": "US",
+    "currency": "USD",
+    "distanceUnit": "mi",
+    "locale": "en-US",
+    "address": "119 North Cumberland Avenue, Harlan, KY 40831",
+    "phone": "+16062739885",
+    "phoneDisplay": "+1 606-273-9885",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://www.facebook.com/saylorsautosales/",
+    "hours": "",
+    "sourceUrl": "https://www.facebook.com/saylorsautosales/",
+    "observedAt": "2026-10-18",
+    "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.facebook.com/saylorsautosales/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/saylorsautosales/posts/pfbid02HewjtVc4Uz4s8jFDsgrek8tXD9zMPvxA8PVX41fgZKrmGJhfvYuRx3hPvS2CCTGtl",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/saylorsautosales/posts/pfbid02sNEzBpjtAxRQstKZbLY4fStSynFtnfjVBdTTLiJWMV8pLkCnDf1udPBUQ7nXGjRPl",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/saylorsautosales/posts/pfbid0Wu2A4KCGyhzBRRCbkc18a94fDXMvFwR9uCLrDvxC2yXUttCWoqeLm8PTKJSgaTvvl",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.autoyas.com/US/Harlan/1773065826347274/Saylor%27s-Auto-Sales-LLC",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.enigma.com/directory/ky/harlan/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ]
+}

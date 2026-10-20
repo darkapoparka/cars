@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "dealer": "first-choice-auto-sales",
+  "status": "research-required",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://www.1choiceautos.com/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.1choiceautos.com/search/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.1choiceautos.com/privacy/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.1choiceautos.com/listing/acura-rdx/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.1choiceautos.com/listing/subaru-outback/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.1choiceautos.com/listing/jeep-renegade-latitude/",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "originals": [],
+  "creationMethod": null,
+  "dealerApproved": false,
+  "generatedInputs": null
+}

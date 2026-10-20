@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "slug": "around-the-world-automobile-showroom-llc",
+  "dealerId": "ae-abu-dhabi-around-the-world-automobile",
+  "business": {
+    "name": "Around The World Automobile Showroom LLC",
+    "city": "Abu Dhabi",
+    "region": "Abu Dhabi",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "",
+    "phone": "+97125520044",
+    "phoneDisplay": "+97125520044",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://auto.ae/aroundtheworldautomobile/",
+    "hours": "",
+    "sourceUrl": "https://auto.ae/aroundtheworldautomobile/",
+    "observedAt": "2026-10-18",
+    "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://auto.ae/aroundtheworldautomobile/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://maps.yango.com/en-ae/org/95500240094/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ]
+}

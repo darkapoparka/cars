@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "slug": "texas-used-auto-trading",
+  "dealerId": "ae-ras-al-khaimah-texas-used-auto-trading",
+  "business": {
+    "name": "Texas Used Auto Trading",
+    "city": "Ras al-Khaimah",
+    "region": "Ras al-Khaimah",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "Airport Road / Al Digdaga, Ras al-Khaimah; exact current showroom and legal trading entity require confirmation",
+    "phone": "+971565628756",
+    "phoneDisplay": "+971565628756",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://www.instagram.com/texas__cars/",
+    "hours": "",
+    "sourceUrl": "https://www.instagram.com/texas__cars/",
+    "observedAt": "2026-10-18",
+    "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.instagram.com/texas__cars/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.instagram.com/texas__cars/p/DeJQ2VTiH5N/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.instagram.com/texas__cars/p/DeO-gjxiDPg/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.instagram.com/texas__cars/p/DeYjw7ZCM5Y/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.instagram.com/texas__cars/reel/DedrnzaIQC4/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.waze.com/live-map/directions/ae/ras-al-khaimah/ras-al-khaimah/tksas-ltjarh-alsyarat-almstamlh-texas-used-auto-trading?to=place.ChIJ7ZGIJ9XZ9T4RtfzsIJ4ShCo",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.arabwheels.ae/used-cars/dealers/texas-used-auto-trading-showroom-in-uae",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ]
+}

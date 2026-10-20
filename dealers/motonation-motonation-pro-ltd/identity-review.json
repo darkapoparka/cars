@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": false,
+  "reviewedAt": null,
+  "dealer": "motonation-motonation-pro-ltd",
+  "dealerId": "gb-coventry-motonation-pro",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "review": {
+    "kind": "pending",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "method": "Draft identity only; run automated pack input review before building.",
+  "sources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Motonation?menu=1",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://motonationltd.co.uk/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.theaa.com/used-cars/dealers/motonation-pro-ltd-coventry",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://find-and-update.company-information.service.gov.uk/company/16733417/filing-history",
+      "observedAt": "2026-10-18"
+    }
+  ]
+}

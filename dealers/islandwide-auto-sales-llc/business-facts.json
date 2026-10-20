@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "slug": "islandwide-auto-sales-llc",
+  "dealerId": "us-hi-maui-islandwide-auto-sales",
+  "business": {
+    "name": "Islandwide Auto Sales LLC",
+    "city": "Maui (exact sales premises not established)",
+    "region": "HI",
+    "countryCode": "US",
+    "currency": "USD",
+    "distanceUnit": "mi",
+    "locale": "en-US",
+    "address": "",
+    "phone": "+18082919604",
+    "phoneDisplay": "+1 808-291-9604",
+    "email": "sales@islandwideautosales.com",
+    "website": "https://www.islandwideautosales.com/",
+    "stockUrl": "https://www.islandwideautosales.com/inventory",
+    "hours": "",
+    "sourceUrl": "https://www.islandwideautosales.com/",
+    "observedAt": "2026-10-18",
+    "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.islandwideautosales.com/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.islandwideautosales.com/inventory",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.islandwideautosales.com/about",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.islandwideautosales.com/product-page/pre-owned-upfitted-2024-ford-f-550-4wd-9ft-flatbed-cab-chassis",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.islandwideautosales.com/product-page/2012-ford-f-450-diesel-4x4-utility-service-truck",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.islandwideautosales.com/product-page/sale-2016-ford-f-550-8ft-heavy-duty-stainless-steel-dump-bed",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ]
+}

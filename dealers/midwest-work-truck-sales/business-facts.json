@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "slug": "midwest-work-truck-sales",
+  "dealerId": "us-wi-kenosha-midwest-work-truck-sales",
+  "business": {
+    "name": "Midwest Work Truck Sales",
+    "city": "Kenosha",
+    "region": "WI",
+    "countryCode": "US",
+    "currency": "USD",
+    "distanceUnit": "mi",
+    "locale": "en-US",
+    "address": "",
+    "phone": "+12627702884",
+    "phoneDisplay": "+1 262-770-2884",
+    "email": "midwestworktrucksales@gmail.com",
+    "website": "https://www.mwworktrucks.com/",
+    "stockUrl": "https://www.mwworktrucks.com/category/all-products",
+    "hours": "",
+    "sourceUrl": "https://www.mwworktrucks.com/",
+    "observedAt": "2026-10-18",
+    "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.mwworktrucks.com/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.mwworktrucks.com/category/all-products",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.mwworktrucks.com/blank-4",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.mwworktrucks.com/product-page/2014-ram-4500-service-truck-6-7l-cummins-diesel",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.mwworktrucks.com/product-page/2020-ford-f-550-crew-cab-service-truck",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.mwworktrucks.com/product-page/2014-ram-5500-4x4-crew-cab-flatbed",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/profile.php?id=61576431203253",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ]
+}

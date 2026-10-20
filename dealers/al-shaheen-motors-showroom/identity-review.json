@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": false,
+  "reviewedAt": null,
+  "dealer": "al-shaheen-motors-showroom",
+  "dealerId": "ae-al-ain-al-shaheen-motors-showroom",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "review": {
+    "kind": "pending",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "method": "Draft identity only; run automated pack input review before building.",
+  "sources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/al-shaheen-motors-showroom",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/12976-toyota-land-cruiser-40-at-4wd-275-hp-exr",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://scr.ae/contact/",
+      "observedAt": "2026-10-18"
+    }
+  ]
+}

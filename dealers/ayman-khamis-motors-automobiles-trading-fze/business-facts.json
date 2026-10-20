@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "slug": "ayman-khamis-motors-automobiles-trading-fze",
+  "dealerId": "ae-dubai-ayman-khamis-motors-automobiles-trading-fze",
+  "business": {
+    "name": "Ayman Khamis Motors Automobiles Trading FZE",
+    "city": "Dubai",
+    "region": "Dubai",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "",
+    "phone": "",
+    "phoneDisplay": "",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://www.dubicars.com/dealers/dubai-ayman-khamis-motors-automobiles-trading-fze-3165",
+    "hours": "",
+    "sourceUrl": "https://www.dubicars.com/dealers/dubai-ayman-khamis-motors-automobiles-trading-fze-3165",
+    "observedAt": "2026-10-18",
+    "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-ayman-khamis-motors-automobiles-trading-fze-3165",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ]
+}

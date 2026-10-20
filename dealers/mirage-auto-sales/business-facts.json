@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "slug": "mirage-auto-sales",
+  "dealerId": "us-ca-sacramento-mirage-auto-sales",
+  "business": {
+    "name": "Mirage Auto Sales",
+    "city": "Sacramento",
+    "region": "CA",
+    "countryCode": "US",
+    "currency": "USD",
+    "distanceUnit": "mi",
+    "locale": "en-US",
+    "address": "2305 Fulton Ave Suite b, Sacramento, CA 95825",
+    "phone": "+19169799474",
+    "phoneDisplay": "+1 916-979-9474",
+    "email": "",
+    "website": "https://www.mirageauto.net/",
+    "stockUrl": "https://www.mirageauto.net/cars-for-sale",
+    "hours": "",
+    "sourceUrl": "https://www.mirageauto.net/",
+    "observedAt": "2026-10-18",
+    "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.mirageauto.net/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.mirageauto.net/cars-for-sale",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.cargurus.com/Cars/m-Mirage-Auto-Sales-sp280586",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ]
+}

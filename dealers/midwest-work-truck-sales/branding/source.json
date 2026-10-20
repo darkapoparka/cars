@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "dealer": "midwest-work-truck-sales",
+  "status": "research-required",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://www.mwworktrucks.com/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.mwworktrucks.com/category/all-products",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.mwworktrucks.com/blank-4",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.mwworktrucks.com/product-page/2014-ram-4500-service-truck-6-7l-cummins-diesel",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.mwworktrucks.com/product-page/2020-ford-f-550-crew-cab-service-truck",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.mwworktrucks.com/product-page/2014-ram-5500-4x4-crew-cab-flatbed",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.facebook.com/profile.php?id=61576431203253",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "originals": [],
+  "creationMethod": null,
+  "dealerApproved": false,
+  "generatedInputs": null
+}

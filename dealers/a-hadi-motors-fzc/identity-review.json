@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": false,
+  "reviewedAt": null,
+  "dealer": "a-hadi-motors-fzc",
+  "dealerId": "ae-ajman-a-hadi-motors-fzc",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "review": {
+    "kind": "pending",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "method": "Draft identity only; run automated pack input review before building.",
+  "sources": [
+    {
+      "url": "https://ayshei.com/v-shop/ahadi_motors_f_z_c/inventory",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://ayshei.com/ads/detail/1579249727-jaguar-xf-premium-luxury-2015-gcc-specs-pristine-condition",
+      "observedAt": "2026-10-18"
+    }
+  ]
+}

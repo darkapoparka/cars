@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "slug": "f8-motors-used-cars",
+  "dealerId": "ae-ajman-f8-motors-used-cars",
+  "business": {
+    "name": "F8 Motors Used Cars",
+    "city": "Ajman",
+    "region": "Ajman",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "",
+    "phone": "",
+    "phoneDisplay": "",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://www.oneclickdrive.com/company/ajman/f8-motors-used-cars",
+    "hours": "",
+    "sourceUrl": "https://www.oneclickdrive.com/company/ajman/f8-motors-used-cars",
+    "observedAt": "2026-10-18",
+    "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/ajman/f8-motors-used-cars",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ]
+}

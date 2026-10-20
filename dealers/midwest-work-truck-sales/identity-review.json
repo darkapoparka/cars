@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": false,
+  "reviewedAt": null,
+  "dealer": "midwest-work-truck-sales",
+  "dealerId": "us-wi-kenosha-midwest-work-truck-sales",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "review": {
+    "kind": "pending",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "method": "Draft identity only; run automated pack input review before building.",
+  "sources": [
+    {
+      "url": "https://www.mwworktrucks.com/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.mwworktrucks.com/category/all-products",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.mwworktrucks.com/blank-4",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.mwworktrucks.com/product-page/2014-ram-4500-service-truck-6-7l-cummins-diesel",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.mwworktrucks.com/product-page/2020-ford-f-550-crew-cab-service-truck",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.mwworktrucks.com/product-page/2014-ram-5500-4x4-crew-cab-flatbed",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.facebook.com/profile.php?id=61576431203253",
+      "observedAt": "2026-10-18"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "slug": "le10-motors-company-ltd",
+  "dealerId": "gb-hinckley-le10-motors",
+  "business": {
+    "name": "LE10 Motors Company Ltd",
+    "city": "Hinckley",
+    "region": "Leicestershire",
+    "countryCode": "GB",
+    "currency": "GBP",
+    "distanceUnit": "mi",
+    "locale": "en-GB",
+    "address": "Old Builders Yard, Hinckley, LE10 3ED",
+    "phone": "+441455245184",
+    "phoneDisplay": "+441455245184",
+    "email": "le10motors@hotmail.com",
+    "website": "",
+    "stockUrl": "https://showroom.ebaymotorspro.co.uk/le10motors?extendedFilter=1&menu=1",
+    "hours": "",
+    "sourceUrl": "https://showroom.ebaymotorspro.co.uk/le10motors?extendedFilter=1&menu=1",
+    "observedAt": "2026-10-18",
+    "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/le10motors?extendedFilter=1&menu=1",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.cazoo.co.uk/dealers/le10-motors-company-ltd-54376/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://find-and-update.company-information.service.gov.uk/company/12153799",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.regit.cars/car-dealers/le10-motors-company-ltd-bedworth-warwickshire",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ]
+}

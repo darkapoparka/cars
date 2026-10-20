@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "slug": "thornton-motors-cars-vans",
+  "dealerId": "gb-bradford-thornton-motors-cars-vans",
+  "business": {
+    "name": "Thornton Motors Cars & Vans",
+    "city": "Bradford",
+    "region": "West Yorkshire",
+    "countryCode": "GB",
+    "currency": "GBP",
+    "distanceUnit": "mi",
+    "locale": "en-GB",
+    "address": "581-583 Thornton Road, Bradford BD8 9RA",
+    "phone": "+447537165045",
+    "phoneDisplay": "07537165045",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://www.autotrader.co.uk/dealers/west-yorkshire/bradford/thornton-motors-cars-%26-vans-10050515",
+    "hours": "",
+    "sourceUrl": "https://www.autotrader.co.uk/dealers/west-yorkshire/bradford/thornton-motors-cars-%26-vans-10050515",
+    "observedAt": "2026-10-18",
+    "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/west-yorkshire/bradford/thornton-motors-cars-%26-vans-10050515",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.cargurus.co.uk/Cars/m-Car-Quest-sp528269",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ]
+}

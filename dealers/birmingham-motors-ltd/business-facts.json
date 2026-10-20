@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "slug": "birmingham-motors-ltd",
+  "dealerId": "gb-birmingham-birmingham-motors",
+  "business": {
+    "name": "Birmingham Motors Ltd",
+    "city": "Birmingham",
+    "region": "West Midlands",
+    "countryCode": "GB",
+    "currency": "GBP",
+    "distanceUnit": "mi",
+    "locale": "en-GB",
+    "address": "Meadway, Birmingham B33 0DZ (marketplace trading address)",
+    "phone": "+441215160582",
+    "phoneDisplay": "+441215160582",
+    "email": "birmingham.motors.ltd@outlook.com",
+    "website": "",
+    "stockUrl": "https://showroom.ebaymotorspro.co.uk/W-A-Vehicles?menu=1",
+    "hours": "",
+    "sourceUrl": "https://showroom.ebaymotorspro.co.uk/W-A-Vehicles?menu=1",
+    "observedAt": "2026-10-18",
+    "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/W-A-Vehicles?menu=1",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://find-and-update.company-information.service.gov.uk/company/15433752",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ]
+}

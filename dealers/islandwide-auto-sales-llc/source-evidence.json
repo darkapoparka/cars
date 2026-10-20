@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "dealer": "islandwide-auto-sales-llc",
+  "source": {
+    "path": "leads/expansion-2026-10-18/usa.json",
+    "sha256": "39080afaea1c0c74bd94afba119350c7e1aaf0330fb554ef162fe27fa9bae34b"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.islandwideautosales.com/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.islandwideautosales.com/inventory",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.islandwideautosales.com/about",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.islandwideautosales.com/product-page/pre-owned-upfitted-2024-ford-f-550-4wd-9ft-flatbed-cab-chassis",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.islandwideautosales.com/product-page/2012-ford-f-450-diesel-4x4-utility-service-truck",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.islandwideautosales.com/product-page/sale-2016-ford-f-550-8ft-heavy-duty-stainless-steel-dump-bed",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ],
+  "liveFetchPerformed": false
+}

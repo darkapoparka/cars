@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": false,
+  "reviewedAt": null,
+  "dealer": "mazaya-motors-fzc",
+  "dealerId": "ae-ajman-mazaya-motors-fzc",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "review": {
+    "kind": "pending",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "method": "Draft identity only; run automated pack input review before building.",
+  "sources": [
+    {
+      "url": "https://auto.ae/mazayamotors/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.dubicars.com/dealers/ajman-mazaya-motors-fzc-3373",
+      "observedAt": "2026-10-18"
+    }
+  ]
+}

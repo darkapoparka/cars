@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": false,
+  "reviewedAt": null,
+  "dealer": "vip-class-motors-llc-fz",
+  "dealerId": "ae-dubai-vip-class-motors-llc-fz",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "review": {
+    "kind": "pending",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "method": "Draft identity only; run automated pack input review before building.",
+  "sources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/dubai/vip-class-motors-llc-fz",
+      "observedAt": "2026-10-18"
+    }
+  ]
+}

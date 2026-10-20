@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": false,
+  "reviewedAt": null,
+  "dealer": "car-hub-carinvest-limited-tradin-85541efea8",
+  "dealerId": "gb-camberley-car-hub",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "review": {
+    "kind": "pending",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "method": "Draft identity only; run automated pack input review before building.",
+  "sources": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/surrey/camberley/car-hub-10038720",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.pistonheads.com/buy/dealer/984957",
+      "observedAt": "2026-10-18"
+    }
+  ]
+}

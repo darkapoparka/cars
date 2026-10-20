@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": false,
+  "reviewedAt": null,
+  "dealer": "style-motors",
+  "dealerId": "ae-dubai-style-motors",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "review": {
+    "kind": "pending",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "method": "Draft identity only; run automated pack input review before building.",
+  "sources": [
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-style-motors-2538",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://importkey.com/i/style-motors-fze",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://stylemotors.ae/",
+      "observedAt": "2026-10-18"
+    }
+  ]
+}

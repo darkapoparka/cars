@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "dealer": "mirage-auto-sales",
+  "status": "research-required",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://www.mirageauto.net/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.mirageauto.net/cars-for-sale",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.cargurus.com/Cars/m-Mirage-Auto-Sales-sp280586",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "originals": [],
+  "creationMethod": null,
+  "dealerApproved": false,
+  "generatedInputs": null
+}

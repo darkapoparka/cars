@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "slug": "alta-class-motors",
+  "dealerId": "ae-dubai-alta-class-motors",
+  "business": {
+    "name": "Alta Class Motors",
+    "city": "Dubai",
+    "region": "Dubai",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "",
+    "phone": "+971505008883",
+    "phoneDisplay": "+971505008883",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://auto.ae/altaclass/",
+    "hours": "",
+    "sourceUrl": "https://auto.ae/altaclass/",
+    "observedAt": "2026-10-18",
+    "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://auto.ae/altaclass/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.drivearabia.com/ar/cars-for-sale/uae/mercedes-benz/a-class/mercedesbenz-a200-2025-under-warranty-from-gargash-ee4700c09d904bad980ab7692f54f5ef/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ]
+}

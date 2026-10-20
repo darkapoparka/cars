@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "slug": "f111-lebnan-vehicle-trading",
+  "dealerId": "ae-abu-dhabi-f111-lebnan-vehicle-trading",
+  "business": {
+    "name": "F111 Lebnan Vehicle Trading",
+    "city": "Abu Dhabi",
+    "region": "Abu Dhabi",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "",
+    "phone": "+971554565658",
+    "phoneDisplay": "+971554565658",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://licenseplate.ae/cars/dealer/f111-lebnan-vehicle-trading-llc-spc",
+    "hours": "",
+    "sourceUrl": "https://licenseplate.ae/cars/dealer/f111-lebnan-vehicle-trading-llc-spc",
+    "observedAt": "2026-10-18",
+    "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/f111-lebnan-vehicle-trading-llc-spc",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/5267-nissan-patrol-56-at-428-hp-nismo",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://alfajr-news.net/uploads/posts/a2c9080b08a19b7b065b51d886703ccd.pdf",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ]
+}

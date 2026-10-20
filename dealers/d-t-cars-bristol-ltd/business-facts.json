@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "slug": "d-t-cars-bristol-ltd",
+  "dealerId": "gb-bristol-dt-cars",
+  "business": {
+    "name": "D. T. Cars (Bristol) Ltd",
+    "city": "Bristol",
+    "region": "Bristol",
+    "countryCode": "GB",
+    "currency": "GBP",
+    "distanceUnit": "mi",
+    "locale": "en-GB",
+    "address": "Unit 2, Bonville Road, Bristol BS4 5QU (primary seller spells road Bornville)",
+    "phone": "+441174400098",
+    "phoneDisplay": "+441174400098",
+    "email": "dtcarsbristol@outlook.com",
+    "website": "",
+    "stockUrl": "https://showroom.ebaymotorspro.co.uk/D-T-CARS-BRISTOL-LTD?extendedFilter=1",
+    "hours": "",
+    "sourceUrl": "https://showroom.ebaymotorspro.co.uk/D-T-CARS-BRISTOL-LTD?extendedFilter=1",
+    "observedAt": "2026-10-18",
+    "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/D-T-CARS-BRISTOL-LTD?extendedFilter=1",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.cazoo.co.uk/dealers/d-t-cars-bristol-ltd-87876/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://find-and-update.company-information.service.gov.uk/company/11305647",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ]
+}

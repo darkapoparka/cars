@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "dealer": "first-choice-auto-sales",
+  "missing": [
+    {
+      "field": "business.hours",
+      "required": false,
+      "reason": "No usable sourced value in the retained public business record."
+    },
+    {
+      "field": "prices",
+      "required": false,
+      "reason": "All listing prices are omitted under the public-repository scope."
+    }
+  ],
+  "blocking": []
+}

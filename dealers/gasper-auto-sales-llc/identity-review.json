@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": false,
+  "reviewedAt": null,
+  "dealer": "gasper-auto-sales-llc",
+  "dealerId": "us-mn-lakeland-gasper-auto-sales",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "review": {
+    "kind": "pending",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "method": "Draft identity only; run automated pack input review before building.",
+  "sources": [
+    {
+      "url": "https://www.facebook.com/profile.php?id=100057612182407",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.facebook.com/permalink.php?story_fbid=pfbid08yGXs1feGtrUBMQEXZboY3nNevo2TvQSCDo48K3zRBieKiu97itXvaZdtPx7r4kFl&id=100057612182407",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.autoyas.com/US/Lakeland/259372398095957/Gasper-Auto-Sales-LLC",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://ci.lakeland.mn.us/vertical/sites/%7BF87BEF79-D520-4F87-86D1-CB82984CEB20%7D/uploads/February_21_2023.pdf",
+      "observedAt": "2026-10-18"
+    }
+  ]
+}

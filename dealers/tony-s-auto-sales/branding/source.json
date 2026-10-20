@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "dealer": "tony-s-auto-sales",
+  "status": "research-required",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://www.tonyautosales.com/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.tonyautosales.com/category/all-products",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.tonyautosales.com/blank",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.tonyautosales.com/book-online",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "originals": [],
+  "creationMethod": null,
+  "dealerApproved": false,
+  "generatedInputs": null
+}

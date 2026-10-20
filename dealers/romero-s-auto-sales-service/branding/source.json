@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "dealer": "romero-s-auto-sales-service",
+  "status": "research-required",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://romerosautos.com/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://romerosautos.com/shop/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://romerosautos.com/refund_returns/",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "originals": [],
+  "creationMethod": null,
+  "dealerApproved": false,
+  "generatedInputs": null
+}

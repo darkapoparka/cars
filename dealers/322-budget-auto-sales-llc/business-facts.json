@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "slug": "322-budget-auto-sales-llc",
+  "dealerId": "us-pa-woodland-322-budget-auto-sales",
+  "business": {
+    "name": "322 Budget Auto Sales LLC",
+    "city": "Woodland",
+    "region": "PA",
+    "countryCode": "US",
+    "currency": "USD",
+    "distanceUnit": "mi",
+    "locale": "en-US",
+    "address": "1637 Woodland Bigler Highway, Woodland, PA 16881",
+    "phone": "+18148577770",
+    "phoneDisplay": "+1 814-857-7770",
+    "email": "",
+    "website": "https://www.budgetautosalesllc.com/",
+    "stockUrl": "https://www.budgetautosalesllc.com/general-1-2",
+    "hours": "",
+    "sourceUrl": "https://www.budgetautosalesllc.com/",
+    "observedAt": "2026-10-18",
+    "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.budgetautosalesllc.com/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.budgetautosalesllc.com/pre-owned",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.budgetautosalesllc.com/general-1-2",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ]
+}

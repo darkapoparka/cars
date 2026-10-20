@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "slug": "merly-motors-llc",
+  "dealerId": "us-ga-cartersville-merly-motors",
+  "business": {
+    "name": "Merly Motors LLC",
+    "city": "Cartersville",
+    "region": "GA",
+    "countryCode": "US",
+    "currency": "USD",
+    "distanceUnit": "mi",
+    "locale": "en-US",
+    "address": "1960 Joe Frank Harris Pkwy NW, Cartersville, GA 30120",
+    "phone": "+16787198466",
+    "phoneDisplay": "+1 678-719-8466",
+    "email": "",
+    "website": "https://www.merlymotors.com/",
+    "stockUrl": "https://www.merlymotors.com/inventory",
+    "hours": "",
+    "sourceUrl": "https://www.merlymotors.com/",
+    "observedAt": "2026-10-18",
+    "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.merlymotors.com/inventory",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.merlymotors.com/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ]
+}

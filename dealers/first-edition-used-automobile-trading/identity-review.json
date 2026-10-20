@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": false,
+  "reviewedAt": null,
+  "dealer": "first-edition-used-automobile-trading",
+  "dealerId": "ae-dubai-first-edition-used-automobile-trading",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "review": {
+    "kind": "pending",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "method": "Draft identity only; run automated pack input review before building.",
+  "sources": [
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-first-edition-used-automobile-trading-2139?page=1",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.linkedin.com/company/first-edition-motors/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "http://www.1-firstedition.com/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.drivearabia.com/ar/cars-for-sale/uae/chevrolet/corvette/2026-ll-chevrolet-corvette-ll-gcc-ll-warranty-and-b81ec172f5b647f8abf8e1ac48b5e2af/",
+      "observedAt": "2026-10-18"
+    }
+  ]
+}

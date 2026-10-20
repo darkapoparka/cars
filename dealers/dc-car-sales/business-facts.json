@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "slug": "dc-car-sales",
+  "dealerId": "gb-birmingham-dc-car-sales",
+  "business": {
+    "name": "DC Car Sales",
+    "city": "Birmingham",
+    "region": "West Midlands",
+    "countryCode": "GB",
+    "currency": "GBP",
+    "distanceUnit": "mi",
+    "locale": "en-GB",
+    "address": "Unit 2, 53 Humpage Road, Birmingham B9 5HW",
+    "phone": "+447537145565",
+    "phoneDisplay": "07537145565",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://www.autotrader.co.uk/dealers/warwickshire/birmingham/dc-car-sales-10033185",
+    "hours": "",
+    "sourceUrl": "https://www.autotrader.co.uk/dealers/warwickshire/birmingham/dc-car-sales-10033185",
+    "observedAt": "2026-10-18",
+    "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/warwickshire/birmingham/dc-car-sales-10033185",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ]
+}

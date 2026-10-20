@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "slug": "albert-s-auto-sales",
+  "dealerId": "us-pa-reading-alberts-auto-sales",
+  "business": {
+    "name": "Albert's Auto Sales",
+    "city": "Reading / Mt. Penn",
+    "region": "PA",
+    "countryCode": "US",
+    "currency": "USD",
+    "distanceUnit": "mi",
+    "locale": "en-US",
+    "address": "2200 Howard Blvd, Reading, PA 19606",
+    "phone": "+16107793244",
+    "phoneDisplay": "+1 610-779-3244",
+    "email": "",
+    "website": "https://www.albertsautosalesreading.com/",
+    "stockUrl": "https://www.cars.com/dealers/186079/alberts-auto-sales/",
+    "hours": "",
+    "sourceUrl": "https://www.albertsautosalesreading.com/",
+    "observedAt": "2026-10-18",
+    "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.cars.com/dealers/186079/alberts-auto-sales/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://mtpennborough.com/local-businesses",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.albertsautosalesreading.com/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://osegateas.com/albertsautosalesreading/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/profile.php?id=100063689658760",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.cars.com/dealers/186079/alberts-auto-sales/inventory/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ]
+}

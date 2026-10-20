@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "slug": "hrs-cars-ltd",
+  "dealerId": "gb-bathgate-hrs-cars",
+  "business": {
+    "name": "HRS Cars Ltd",
+    "city": "Bathgate",
+    "region": "West Lothian",
+    "countryCode": "GB",
+    "currency": "GBP",
+    "distanceUnit": "mi",
+    "locale": "en-GB",
+    "address": "23 Inchmuir Road, Whitehill Industrial Estate, Bathgate EH48 2EP",
+    "phone": "+447456415124",
+    "phoneDisplay": "07456415124",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://www.autotrader.co.uk/dealers/west-lothian/bathgate/hrs-cars-ltd-10046265",
+    "hours": "",
+    "sourceUrl": "https://www.autotrader.co.uk/dealers/west-lothian/bathgate/hrs-cars-ltd-10046265",
+    "observedAt": "2026-10-18",
+    "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/west-lothian/bathgate/hrs-cars-ltd-10046265",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.cazoo.co.uk/dealers/hrs-cars-ltd-17817/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ]
+}

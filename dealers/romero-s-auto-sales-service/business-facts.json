@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "slug": "romero-s-auto-sales-service",
+  "dealerId": "us-pa-allentown-romeros-auto-sales-service",
+  "business": {
+    "name": "Romero's Auto Sales & Service",
+    "city": "Allentown",
+    "region": "PA",
+    "countryCode": "US",
+    "currency": "USD",
+    "distanceUnit": "mi",
+    "locale": "en-US",
+    "address": "2010 Union Blvd, Allentown, PA 18109",
+    "phone": "+16104352100",
+    "phoneDisplay": "+1 610-435-2100",
+    "email": "info@romerosautos.com",
+    "website": "https://romerosautos.com/",
+    "stockUrl": "https://romerosautos.com/shop/",
+    "hours": "",
+    "sourceUrl": "https://romerosautos.com/",
+    "observedAt": "2026-10-18",
+    "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://romerosautos.com/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://romerosautos.com/shop/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://romerosautos.com/refund_returns/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": false,
+  "reviewedAt": null,
+  "dealer": "speedline-used-car-trading",
+  "dealerId": "ae-sharjah-speedline-used-car-trading",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "review": {
+    "kind": "pending",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "method": "Draft identity only; run automated pack input review before building.",
+  "sources": [
+    {
+      "url": "https://ayshei.com/v-shop/speedline_used_car_trading/inventory",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://ayshei.com/ads/detail/4648161046-mercedes-benz-c200-coupe-2022-gcc-specs-low-mileage-pristine-condition",
+      "observedAt": "2026-10-18"
+    }
+  ]
+}

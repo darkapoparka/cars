@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "slug": "al-lulu-cars-showroom",
+  "dealerId": "ae-abu-dhabi-al-lulu-cars-showroom",
+  "business": {
+    "name": "Al Lulu Cars Showroom",
+    "city": "Abu Dhabi",
+    "region": "Abu Dhabi",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "",
+    "phone": "+971506683744",
+    "phoneDisplay": "+971506683744",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://licenseplate.ae/cars/dealer/al-lulu-cars-showroom",
+    "hours": "",
+    "sourceUrl": "https://licenseplate.ae/cars/dealer/al-lulu-cars-showroom",
+    "observedAt": "2026-10-18",
+    "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/al-lulu-cars-showroom",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/5189-toyota-land-cruiser-35-at-4wd-415-hp-vxr",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ]
+}

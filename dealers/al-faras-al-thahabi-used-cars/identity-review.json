@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": false,
+  "reviewedAt": null,
+  "dealer": "al-faras-al-thahabi-used-cars",
+  "dealerId": "ae-sharjah-al-faras-al-thahabi-used-cars",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "review": {
+    "kind": "pending",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "method": "Draft identity only; run automated pack input review before building.",
+  "sources": [
+    {
+      "url": "https://auto.ae/alfarasalthahabiusedcars/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://dubai.dubizzle.com/motors/used-cars/mercedes-benz/glc-class/2026/02/21/mercedes-benz-glc-300-amg-2025-fully-loade-2-623---8765b57c9d8b4e49b4a4e758ceeb3f97/",
+      "observedAt": "2026-10-18"
+    }
+  ]
+}

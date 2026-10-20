@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": false,
+  "reviewedAt": null,
+  "dealer": "gary-bell-llc-auto-sales",
+  "dealerId": "us-ms-forest-gary-bell-auto-sales",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "review": {
+    "kind": "pending",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "method": "Draft identity only; run automated pack input review before building.",
+  "sources": [
+    {
+      "url": "https://www.facebook.com/garybellllc/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.facebook.com/garybellllc/posts/pfbid02LoDVnkFuvzKHJQntgtdu6XZ5zykLadGgeTa7LE2ybguXJc8bDjHd1SkYwG11xRWUl",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.autoyas.com/US/Forest/968049259915973/Gary-Bell%2CLLC-Auto-Sales",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://reviews.birdeye.com/gary-bell-llc-166695832851680",
+      "observedAt": "2026-10-18"
+    }
+  ]
+}

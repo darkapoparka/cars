@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": false,
+  "reviewedAt": null,
+  "dealer": "cantrust-used-cars-trading-llc-opc",
+  "dealerId": "ae-ras-al-khaimah-cantrust-used-cars",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "review": {
+    "kind": "pending",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "method": "Draft identity only; run automated pack input review before building.",
+  "sources": [
+    {
+      "url": "https://licenseplate.ae/ar/cars/dealer/cantrust-used-cars-trading-llc-opc",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://licenseplate.ae/ar/cars/listing/13082-byd-seal-at-204-hp-design",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://rak.dubizzle.com/motors/used-cars/byd/seal/2026/10/16/2022-used-byd-seal-design-chinese-specs-fo-11-133---265fdfc1aced461fa5e1d2423d36d32a/",
+      "observedAt": "2026-10-18"
+    }
+  ]
+}

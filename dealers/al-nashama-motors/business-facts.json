@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "slug": "al-nashama-motors",
+  "dealerId": "ae-ajman-al-nashama-motors",
+  "business": {
+    "name": "Al Nashama Motors",
+    "city": "Ajman",
+    "region": "Ajman",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "",
+    "phone": "+971561344553",
+    "phoneDisplay": "+971561344553",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://licenseplate.ae/cars/dealer/al-nashama-motors",
+    "hours": "",
+    "sourceUrl": "https://licenseplate.ae/cars/dealer/al-nashama-motors",
+    "observedAt": "2026-10-18",
+    "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/al-nashama-motors",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/3011-mercedes-benz-e-class-e-350-7g-tronic-plus-272-hp-e-350",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://uae.yallamotor.com/auto-companies/al-nashama-motors-fze-9085",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": false,
+  "reviewedAt": null,
+  "dealer": "ahmad-alnajem-used-cars",
+  "dealerId": "ae-sharjah-ahmad-alnajem-used-cars",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "review": {
+    "kind": "pending",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "method": "Draft identity only; run automated pack input review before building.",
+  "sources": [
+    {
+      "url": "https://ae.opensooq.com/en/shops/shop-10216703",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.oneclickdrive.com/company/sharjah/ahmad-alnajem-used-cars",
+      "observedAt": "2026-10-18"
+    }
+  ]
+}

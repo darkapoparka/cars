@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": false,
+  "reviewedAt": null,
+  "dealer": "h-m-cars",
+  "dealerId": "ae-ajman-h-m-cars",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "review": {
+    "kind": "pending",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "method": "Draft identity only; run automated pack input review before building.",
+  "sources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/h-m-cars",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/3199-toyota-rav4-20-cvt-196-hp-other",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://hm-cars.com/en/contact-us",
+      "observedAt": "2026-10-18"
+    }
+  ]
+}

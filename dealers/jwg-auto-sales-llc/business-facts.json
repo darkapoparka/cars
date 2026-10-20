@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "slug": "jwg-auto-sales-llc",
+  "dealerId": "us-co-fort-collins-jwg-auto-sales",
+  "business": {
+    "name": "JWG Auto Sales LLC",
+    "city": "Fort Collins",
+    "region": "CO",
+    "countryCode": "US",
+    "currency": "USD",
+    "distanceUnit": "mi",
+    "locale": "en-US",
+    "address": "200 Air Park Dr, Fort Collins, CO 80524",
+    "phone": "+19704436105",
+    "phoneDisplay": "+1 970-443-6105",
+    "email": "jwgautosales@gmail.com",
+    "website": "https://www.jwgautosales.com/",
+    "stockUrl": "https://www.jwgautosales.com/category/all-products",
+    "hours": "",
+    "sourceUrl": "https://www.jwgautosales.com/",
+    "observedAt": "2026-10-18",
+    "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.jwgautosales.com/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.jwgautosales.com/category/all-products",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.jwgautosales.com/product-page/2020-nissan-sentra-s",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ]
+}

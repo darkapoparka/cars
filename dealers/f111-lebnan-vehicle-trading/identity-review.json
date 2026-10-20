@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": false,
+  "reviewedAt": null,
+  "dealer": "f111-lebnan-vehicle-trading",
+  "dealerId": "ae-abu-dhabi-f111-lebnan-vehicle-trading",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "review": {
+    "kind": "pending",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "method": "Draft identity only; run automated pack input review before building.",
+  "sources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/f111-lebnan-vehicle-trading-llc-spc",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/5267-nissan-patrol-56-at-428-hp-nismo",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://alfajr-news.net/uploads/posts/a2c9080b08a19b7b065b51d886703ccd.pdf",
+      "observedAt": "2026-10-18"
+    }
+  ]
+}

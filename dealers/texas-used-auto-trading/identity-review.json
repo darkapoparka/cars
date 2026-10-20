@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": false,
+  "reviewedAt": null,
+  "dealer": "texas-used-auto-trading",
+  "dealerId": "ae-ras-al-khaimah-texas-used-auto-trading",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "review": {
+    "kind": "pending",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "method": "Draft identity only; run automated pack input review before building.",
+  "sources": [
+    {
+      "url": "https://www.instagram.com/texas__cars/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.instagram.com/texas__cars/p/DeJQ2VTiH5N/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.instagram.com/texas__cars/p/DeO-gjxiDPg/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.instagram.com/texas__cars/p/DeYjw7ZCM5Y/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.instagram.com/texas__cars/reel/DedrnzaIQC4/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.waze.com/live-map/directions/ae/ras-al-khaimah/ras-al-khaimah/tksas-ltjarh-alsyarat-almstamlh-texas-used-auto-trading?to=place.ChIJ7ZGIJ9XZ9T4RtfzsIJ4ShCo",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.arabwheels.ae/used-cars/dealers/texas-used-auto-trading-showroom-in-uae",
+      "observedAt": "2026-10-18"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "slug": "first-choice-auto-sales",
+  "dealerId": "us-tx-el-paso-first-choice-auto-sales",
+  "business": {
+    "name": "First Choice Auto Sales",
+    "city": "El Paso",
+    "region": "TX",
+    "countryCode": "US",
+    "currency": "USD",
+    "distanceUnit": "mi",
+    "locale": "en-US",
+    "address": "9641 Socorro Rd, El Paso, TX 79927",
+    "phone": "+19153308420",
+    "phoneDisplay": "+1 915-330-8420",
+    "email": "1choiceautos@gmail.com",
+    "website": "https://www.1choiceautos.com/",
+    "stockUrl": "https://www.1choiceautos.com/",
+    "hours": "",
+    "sourceUrl": "https://www.1choiceautos.com/",
+    "observedAt": "2026-10-18",
+    "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.1choiceautos.com/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.1choiceautos.com/search/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.1choiceautos.com/privacy/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.1choiceautos.com/listing/acura-rdx/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.1choiceautos.com/listing/subaru-outback/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.1choiceautos.com/listing/jeep-renegade-latitude/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ]
+}

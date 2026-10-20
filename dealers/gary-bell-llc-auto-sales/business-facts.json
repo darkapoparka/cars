@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "slug": "gary-bell-llc-auto-sales",
+  "dealerId": "us-ms-forest-gary-bell-auto-sales",
+  "business": {
+    "name": "Gary Bell LLC Auto Sales",
+    "city": "Forest",
+    "region": "MS",
+    "countryCode": "US",
+    "currency": "USD",
+    "distanceUnit": "mi",
+    "locale": "en-US",
+    "address": "380 Highway 21, Forest, MS 39074",
+    "phone": "+16014693628",
+    "phoneDisplay": "+1 601-469-3628",
+    "email": "garybellllc63@gmail.com",
+    "website": "",
+    "stockUrl": "https://www.facebook.com/garybellllc/",
+    "hours": "",
+    "sourceUrl": "https://www.facebook.com/garybellllc/",
+    "observedAt": "2026-10-18",
+    "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.facebook.com/garybellllc/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/garybellllc/posts/pfbid02LoDVnkFuvzKHJQntgtdu6XZ5zykLadGgeTa7LE2ybguXJc8bDjHd1SkYwG11xRWUl",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.autoyas.com/US/Forest/968049259915973/Gary-Bell%2CLLC-Auto-Sales",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://reviews.birdeye.com/gary-bell-llc-166695832851680",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ]
+}

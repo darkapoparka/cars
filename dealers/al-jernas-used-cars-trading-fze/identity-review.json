@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": false,
+  "reviewedAt": null,
+  "dealer": "al-jernas-used-cars-trading-fze",
+  "dealerId": "ae-ajman-al-jernas-used-cars",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "review": {
+    "kind": "pending",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "method": "Draft identity only; run automated pack input review before building.",
+  "sources": [
+    {
+      "url": "https://ae.opensooq.com/en/shops/shop-80568283",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://uae.yallamotor.com/auto-companies/al-jernas-used-cars-trading-fze-9539",
+      "observedAt": "2026-10-18"
+    }
+  ]
+}

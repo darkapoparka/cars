@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": false,
+  "reviewedAt": null,
+  "dealer": "sinolink-new-automobile-trading-dwc-llc",
+  "dealerId": "ae-dubai-sinolink-new-automobile-trading-dwc-llc",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "review": {
+    "kind": "pending",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "method": "Draft identity only; run automated pack input review before building.",
+  "sources": [
+    {
+      "url": "https://www.dubicars.com/ar/dealers/dubai-sinolink-new-automobile-trading-dwc-llc-3352",
+      "observedAt": "2026-10-18"
+    }
+  ]
+}

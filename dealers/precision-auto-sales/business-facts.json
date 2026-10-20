@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "slug": "precision-auto-sales",
+  "dealerId": "us-nm-albuquerque-precision-auto-sales",
+  "business": {
+    "name": "Precision Auto Sales",
+    "city": "Albuquerque",
+    "region": "NM",
+    "countryCode": "US",
+    "currency": "USD",
+    "distanceUnit": "mi",
+    "locale": "en-US",
+    "address": "10625 Central Ave NE, Albuquerque, NM 87123",
+    "phone": "+15054507771",
+    "phoneDisplay": "+1 505-450-7771",
+    "email": "precision.autosale.nm@gmail.com",
+    "website": "https://www.precisionautonm.com/",
+    "stockUrl": "https://www.precisionautonm.com/category/all-products",
+    "hours": "",
+    "sourceUrl": "https://www.precisionautonm.com/",
+    "observedAt": "2026-10-18",
+    "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.precisionautonm.com/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.precisionautonm.com/category/all-products",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ]
+}

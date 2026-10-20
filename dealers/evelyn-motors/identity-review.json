@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": false,
+  "reviewedAt": null,
+  "dealer": "evelyn-motors",
+  "dealerId": "gb-birmingham-evelyn-motors",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "review": {
+    "kind": "pending",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "method": "Draft identity only; run automated pack input review before building.",
+  "sources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Evelyn-car-sales",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.cazoo.co.uk/dealers/evelyn-motors-31844/",
+      "observedAt": "2026-10-18"
+    }
+  ]
+}

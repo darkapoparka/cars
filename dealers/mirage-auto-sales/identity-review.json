@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": false,
+  "reviewedAt": null,
+  "dealer": "mirage-auto-sales",
+  "dealerId": "us-ca-sacramento-mirage-auto-sales",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "review": {
+    "kind": "pending",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "method": "Draft identity only; run automated pack input review before building.",
+  "sources": [
+    {
+      "url": "https://www.mirageauto.net/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.mirageauto.net/cars-for-sale",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.cargurus.com/Cars/m-Mirage-Auto-Sales-sp280586",
+      "observedAt": "2026-10-18"
+    }
+  ]
+}

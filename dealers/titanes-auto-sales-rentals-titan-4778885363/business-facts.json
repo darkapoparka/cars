@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "slug": "titanes-auto-sales-rentals-titan-4778885363",
+  "dealerId": "us-fl-winter-haven-titanes-autos-solutions",
+  "business": {
+    "name": "Titanes Auto Sales & Rentals / Titanes Autos Solutions LLC",
+    "city": "Winter Haven",
+    "region": "FL",
+    "countryCode": "US",
+    "currency": "USD",
+    "distanceUnit": "mi",
+    "locale": "en-US",
+    "address": "3170 Lake Alfred Rd, Winter Haven, FL 33881",
+    "phone": "+13476842123",
+    "phoneDisplay": "+1 347-684-2123",
+    "email": "titanesautosolutions@hotmail.com",
+    "website": "https://www.titanesautosolutions.com/",
+    "stockUrl": "https://www.titanesautosolutions.com/category/all-products",
+    "hours": "",
+    "sourceUrl": "https://www.titanesautosolutions.com/",
+    "observedAt": "2026-10-18",
+    "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.titanesautosolutions.com/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.titanesautosolutions.com/category/all-products",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.titanesautosolutions.com/product-page/mitsubishi-outlander-sport-es",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.titanesautosolutions.com/product-page/buick-encore-2020",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.titanesautosolutions.com/product-page/infiniti-fx37-2013",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://search.sunbiz.org/Inquiry/CorporationSearch/GetDocument?aggregateId=flal-l20000163423-1c1c00d5-067e-4b50-be7f-ec0a44f8c982&formatType=PDF&transactionId=l20000163423-2c6126d1-8502-44b7-8019-3fc6f67140fc",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ]
+}

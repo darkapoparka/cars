@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "dealer": "titanes-auto-sales-rentals-titan-4778885363",
+  "missing": [
+    {
+      "field": "business.hours",
+      "required": false,
+      "reason": "No usable sourced value in the retained public business record."
+    },
+    {
+      "field": "prices",
+      "required": false,
+      "reason": "All listing prices are omitted under the public-repository scope."
+    }
+  ],
+  "blocking": []
+}

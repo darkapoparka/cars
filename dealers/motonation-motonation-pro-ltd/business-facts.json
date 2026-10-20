@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "slug": "motonation-motonation-pro-ltd",
+  "dealerId": "gb-coventry-motonation-pro",
+  "business": {
+    "name": "Motonation / Motonation Pro Ltd",
+    "city": "Coventry",
+    "region": "West Midlands",
+    "countryCode": "GB",
+    "currency": "GBP",
+    "distanceUnit": "mi",
+    "locale": "en-GB",
+    "address": "629 Stoney Stanton Road, Coventry CV6 5FT (AA listing); older eBay address 40 Red Lane CV6 5EE",
+    "phone": "+442476936594",
+    "phoneDisplay": "+442476936594",
+    "email": "motonationltd@gmail.com",
+    "website": "https://motonationltd.co.uk/",
+    "stockUrl": "https://showroom.ebaymotorspro.co.uk/Motonation?menu=1",
+    "hours": "",
+    "sourceUrl": "https://motonationltd.co.uk/",
+    "observedAt": "2026-10-18",
+    "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Motonation?menu=1",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://motonationltd.co.uk/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.theaa.com/used-cars/dealers/motonation-pro-ltd-coventry",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://find-and-update.company-information.service.gov.uk/company/16733417/filing-history",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ]
+}

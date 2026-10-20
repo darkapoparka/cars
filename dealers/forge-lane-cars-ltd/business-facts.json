@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "slug": "forge-lane-cars-ltd",
+  "dealerId": "gb-dewsbury-forge-lane-cars",
+  "business": {
+    "name": "Forge Lane Cars Ltd",
+    "city": "Dewsbury",
+    "region": "West Yorkshire",
+    "countryCode": "GB",
+    "currency": "GBP",
+    "distanceUnit": "mi",
+    "locale": "en-GB",
+    "address": "Unit 14 Forge Lane, Dewsbury WF12 9BU",
+    "phone": "+441924978969",
+    "phoneDisplay": "+441924978969",
+    "email": "forgeln14@gmail.com",
+    "website": "",
+    "stockUrl": "https://showroom.ebaymotorspro.co.uk/forge-lane-car",
+    "hours": "",
+    "sourceUrl": "https://showroom.ebaymotorspro.co.uk/forge-lane-car",
+    "observedAt": "2026-10-18",
+    "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/forge-lane-car",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.cazoo.co.uk/dealers/forge-lane-cars-21828/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://find-and-update.company-information.service.gov.uk/company/14684984",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.gumtree.com/p/citroen/2015-citroen-c4-cactus-1.6-bluehdi-flair-5dr-hatchback-diesel-manual/1803283669",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ]
+}

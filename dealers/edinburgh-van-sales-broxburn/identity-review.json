@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": false,
+  "reviewedAt": null,
+  "dealer": "edinburgh-van-sales-broxburn",
+  "dealerId": "gb-broxburn-edinburgh-van-sales",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "review": {
+    "kind": "pending",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "method": "Draft identity only; run automated pack input review before building.",
+  "sources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/EdinburghVanSales?page=1",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.cazoo.co.uk/dealers/edinburgh-van-sales-14752/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.gumtree.com/p/vans/2022-peugeot-expert-1000-1.5-bluehdi-100-professional-premium-van-panel-van-diesel-manual/1803277448",
+      "observedAt": "2026-10-18"
+    }
+  ]
+}

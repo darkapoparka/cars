@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "slug": "gasper-auto-sales-llc",
+  "dealerId": "us-mn-lakeland-gasper-auto-sales",
+  "business": {
+    "name": "Gasper Auto Sales LLC",
+    "city": "Lakeland",
+    "region": "MN",
+    "countryCode": "US",
+    "currency": "USD",
+    "distanceUnit": "mi",
+    "locale": "en-US",
+    "address": "404 St. Croix Trail North, Lakeland, MN 55043 (by appointment)",
+    "phone": "",
+    "phoneDisplay": "",
+    "email": "gasperautosales@gmail.com",
+    "website": "",
+    "stockUrl": "https://www.facebook.com/profile.php?id=100057612182407",
+    "hours": "",
+    "sourceUrl": "https://www.facebook.com/profile.php?id=100057612182407",
+    "observedAt": "2026-10-18",
+    "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.facebook.com/profile.php?id=100057612182407",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/permalink.php?story_fbid=pfbid08yGXs1feGtrUBMQEXZboY3nNevo2TvQSCDo48K3zRBieKiu97itXvaZdtPx7r4kFl&id=100057612182407",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.autoyas.com/US/Lakeland/259372398095957/Gasper-Auto-Sales-LLC",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://ci.lakeland.mn.us/vertical/sites/%7BF87BEF79-D520-4F87-86D1-CB82984CEB20%7D/uploads/February_21_2023.pdf",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ]
+}

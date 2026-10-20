@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "dealer": "saylor-s-auto-sales-llc",
+  "source": {
+    "path": "leads/expansion-2026-10-18/usa.json",
+    "sha256": "39080afaea1c0c74bd94afba119350c7e1aaf0330fb554ef162fe27fa9bae34b"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.facebook.com/saylorsautosales/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/saylorsautosales/posts/pfbid02HewjtVc4Uz4s8jFDsgrek8tXD9zMPvxA8PVX41fgZKrmGJhfvYuRx3hPvS2CCTGtl",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/saylorsautosales/posts/pfbid02sNEzBpjtAxRQstKZbLY4fStSynFtnfjVBdTTLiJWMV8pLkCnDf1udPBUQ7nXGjRPl",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/saylorsautosales/posts/pfbid0Wu2A4KCGyhzBRRCbkc18a94fDXMvFwR9uCLrDvxC2yXUttCWoqeLm8PTKJSgaTvvl",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.autoyas.com/US/Harlan/1773065826347274/Saylor%27s-Auto-Sales-LLC",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.enigma.com/directory/ky/harlan/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ],
+  "liveFetchPerformed": false
+}

@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "dealer": "texas-used-auto-trading",
+  "businessFacts": "business-facts.json",
+  "stock": "stock.json",
+  "inventoryKind": "illustrative-not-dealer-stock",
+  "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+  "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+  "sources": [
+    {
+      "url": "https://www.instagram.com/texas__cars/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.instagram.com/texas__cars/p/DeJQ2VTiH5N/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.instagram.com/texas__cars/p/DeO-gjxiDPg/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.instagram.com/texas__cars/p/DeYjw7ZCM5Y/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.instagram.com/texas__cars/reel/DedrnzaIQC4/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.waze.com/live-map/directions/ae/ras-al-khaimah/ras-al-khaimah/tksas-ltjarh-alsyarat-almstamlh-texas-used-auto-trading?to=place.ChIJ7ZGIJ9XZ9T4RtfzsIJ4ShCo",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.arabwheels.ae/used-cars/dealers/texas-used-auto-trading-showroom-in-uae",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "slug": "speed-car-motors",
+  "dealerId": "ae-abu-dhabi-speed-car-motors",
+  "business": {
+    "name": "Speed Car Motors",
+    "city": "Abu Dhabi",
+    "region": "Abu Dhabi",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "",
+    "phone": "+971566699908",
+    "phoneDisplay": "+971566699908",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://licenseplate.ae/cars/dealer/speed-car-motors",
+    "hours": "",
+    "sourceUrl": "https://licenseplate.ae/cars/dealer/speed-car-motors",
+    "observedAt": "2026-10-18",
+    "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/speed-car-motors",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/5292-mercedes-benz-g-class-g-63-amg-speedshift-plus-7g-tronic-571-hp-g-63-amg",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ]
+}

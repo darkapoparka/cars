@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "slug": "top1-motors",
+  "dealerId": "ae-ajman-top1-motors",
+  "business": {
+    "name": "Top1 Motors",
+    "city": "Ajman",
+    "region": "Ajman",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "",
+    "phone": "+971563184444",
+    "phoneDisplay": "+971563184444",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://licenseplate.ae/cars/dealer/top1-motors",
+    "hours": "",
+    "sourceUrl": "https://licenseplate.ae/cars/dealer/top1-motors",
+    "observedAt": "2026-10-18",
+    "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/top1-motors",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/3091-mercedes-benz-c-class-c-300-9g-tronic-249-hp-c300",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ]
+}

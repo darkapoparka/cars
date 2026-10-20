@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": false,
+  "reviewedAt": null,
+  "dealer": "alwan-international-car",
+  "dealerId": "ae-ajman-alwan-international-car",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "review": {
+    "kind": "pending",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "method": "Draft identity only; run automated pack input review before building.",
+  "sources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/alwan-international-car",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/3332-volkswagen-jetta-15-at-158-hp-r-line",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.alwan-international.com/homear.aspx",
+      "observedAt": "2026-10-18"
+    }
+  ]
+}

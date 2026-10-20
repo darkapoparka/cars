@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "slug": "drive-select-motors",
+  "dealerId": "gb-birmingham-drive-select-motors",
+  "business": {
+    "name": "Drive Select Motors",
+    "city": "Birmingham",
+    "region": "West Midlands",
+    "countryCode": "GB",
+    "currency": "GBP",
+    "distanceUnit": "mi",
+    "locale": "en-GB",
+    "address": "Hedgley Grove, Birmingham B33 9LR",
+    "phone": "+441217215908",
+    "phoneDisplay": "01217215908",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://www.autotrader.co.uk/dealers/worcestershire/birmingham/drive-select-motors-10049495",
+    "hours": "",
+    "sourceUrl": "https://www.autotrader.co.uk/dealers/worcestershire/birmingham/drive-select-motors-10049495",
+    "observedAt": "2026-10-18",
+    "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/worcestershire/birmingham/drive-select-motors-10049495",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.pistonheads.com/buy/dealer/1006407",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ]
+}

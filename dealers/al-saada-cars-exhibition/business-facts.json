@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "slug": "al-saada-cars-exhibition",
+  "dealerId": "ae-abu-dhabi-al-saada-cars-exhibition",
+  "business": {
+    "name": "Al Saada Cars Exhibition",
+    "city": "Abu Dhabi",
+    "region": "Abu Dhabi",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "",
+    "phone": "+971523080346",
+    "phoneDisplay": "+971523080346",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://licenseplate.ae/cars/dealer/al-saada-cars-exhibition",
+    "hours": "",
+    "sourceUrl": "https://licenseplate.ae/cars/dealer/al-saada-cars-exhibition",
+    "observedAt": "2026-10-18",
+    "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/al-saada-cars-exhibition",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/5123-lexus-rx-24-at-awd-249-hp-rx-350-f-sport",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ]
+}

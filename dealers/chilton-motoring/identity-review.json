@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": false,
+  "reviewedAt": null,
+  "dealer": "chilton-motoring",
+  "dealerId": "gb-chesham-chilton-motoring",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "review": {
+    "kind": "pending",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "method": "Draft identity only; run automated pack input review before building.",
+  "sources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Chiltorn-Motoring",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.carandclassic.com/user/ccts4857",
+      "observedAt": "2026-10-18"
+    }
+  ]
+}
