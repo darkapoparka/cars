@@ -1,0 +1,326 @@
+{
+  "schemaVersion": 1,
+  "type": "cars-fresh-native-cohort-dispatch",
+  "recordedAt": "2026-10-20T21:53:07.621Z",
+  "sourceCommit": "a92135f6b5c3e0f510a0fdc95ca2a2740197805a",
+  "cohortCount": 6,
+  "requestedPacks": 41,
+  "cohortSizes": [
+    7,
+    7,
+    7,
+    7,
+    7,
+    6
+  ],
+  "status": "dispatched-own-contracts-and-native-qualification-pending",
+  "handoff": "Each positively completed producing job needs its own passed source contracts, exact authenticated artifact bindings and maintained native QA before guarded automatic enqueue. Deployments reuse the existing single account claim and bounded scheduled drain.",
+  "queueObservation": {
+    "observedAt": "2026-10-20T21:52:25.092Z",
+    "queueRevision": "cc0c55d5440978ec942ed13f3732952646429d36",
+    "queueSha256": "27f9515b090165cca1c6d4241987d3e128659addb3029ac1afa67c9f5380c357",
+    "generation": 286,
+    "totalRequests": 114,
+    "activated": 18,
+    "hostedPassed": 16,
+    "statuses": {
+      "deployed": 16,
+      "failed": 2,
+      "active": 1,
+      "queued": 95
+    },
+    "active": {
+      "owner": "github:39496540692",
+      "slug": "royal-diamond-motors"
+    }
+  },
+  "countsExcludeNativeCandidatesFromDeployments": true,
+  "ownerAcceptanceClaimed": false,
+  "providerWritesByDispatch": 0,
+  "sourceFactsChanged": false,
+  "runs": [
+    {
+      "cohort": "priority-seven",
+      "runId": 39503657412,
+      "url": "https://github.com/darkapoparka/cars/actions/runs/39503657412",
+      "sourceCommit": "a92135f6b5c3e0f510a0fdc95ca2a2740197805a",
+      "dispatchedAt": "2026-10-20T21:51:02.291Z",
+      "slugs": [
+        "bury-fairfield-car-centre",
+        "coventry-cars-and-van",
+        "al-nukhba-al-malakyah-used-cars",
+        "mohd-rasheed-used-cars",
+        "lets-sell-your-car",
+        "resi-auto-sales",
+        "al-sammarraie-used-cars"
+      ],
+      "packDigests": [
+        {
+          "slug": "bury-fairfield-car-centre",
+          "packDigest": "ec48fb1060067aa86681bf35446cbd110081b57ae646d51ad2901bf7ead7973c"
+        },
+        {
+          "slug": "coventry-cars-and-van",
+          "packDigest": "6bf2900690da94d6c785cb6f67f9897e5e3ec6b41e5a902d74d04931f60a5558"
+        },
+        {
+          "slug": "al-nukhba-al-malakyah-used-cars",
+          "packDigest": "4d55c6d97c006f8d478025a6c41563e1838c54d08f45ce3cd4bd6b1718bf3863"
+        },
+        {
+          "slug": "mohd-rasheed-used-cars",
+          "packDigest": "ae774fa399deb2dec940e982a0aedb99efebe98e045be35312156df0ac1bb5d5"
+        },
+        {
+          "slug": "lets-sell-your-car",
+          "packDigest": "048aae46c8e63faf4df5f26d3a668b35dd0ded7f6dd228ec8c162b8577146e22"
+        },
+        {
+          "slug": "resi-auto-sales",
+          "packDigest": "05de7df08a42ea091bd8bf95d5adb1a2055e431b6d101708c1aada8f249af504"
+        },
+        {
+          "slug": "al-sammarraie-used-cars",
+          "packDigest": "6965e1014f7ef83d95ddf47b4d4f719d1b0dc9b412cc11a48052c67549bfbcb8"
+        }
+      ],
+      "nativeApproval": false,
+      "hostedApproval": false
+    },
+    {
+      "cohort": "following-1",
+      "runId": 39503669219,
+      "url": "https://github.com/darkapoparka/cars/actions/runs/39503669219",
+      "sourceCommit": "a92135f6b5c3e0f510a0fdc95ca2a2740197805a",
+      "dispatchedAt": "2026-10-20T21:51:07.087Z",
+      "slugs": [
+        "cars4you-bradford",
+        "raj-motors",
+        "rpm-shentonfield",
+        "hmz-cars-dealers",
+        "j26-vans-trucks",
+        "london-used-cars",
+        "supreme-cars-luton"
+      ],
+      "packDigests": [
+        {
+          "slug": "cars4you-bradford",
+          "packDigest": "7805b2d7fe4828688c62e3f8109526e0d6ad30c66bd994978d9531b0b11da0c9"
+        },
+        {
+          "slug": "raj-motors",
+          "packDigest": "ce1a4dcac0e3e430469534d4768bb60c937357a1231740116758a1cc9adaad7e"
+        },
+        {
+          "slug": "rpm-shentonfield",
+          "packDigest": "b3775fbcd4f70d2d5779eb754a273a72a533f8d94519d58ebbe6c0ac87d0a11a"
+        },
+        {
+          "slug": "hmz-cars-dealers",
+          "packDigest": "42643a4e74037a7f9ba0a3acb07268415ffb5badc3bf90b4f584fee00ad5f929"
+        },
+        {
+          "slug": "j26-vans-trucks",
+          "packDigest": "81ebe408a86e8ad3b67f89399063d0a3b95d2a1e63628a8e222a35414104ffb0"
+        },
+        {
+          "slug": "london-used-cars",
+          "packDigest": "8daae13c0142089eb8403cc26e82126a2a88d53d48769ca24bab76836aedd0ec"
+        },
+        {
+          "slug": "supreme-cars-luton",
+          "packDigest": "ef8a9e10b799bd9aa89589666b69723f1e27d2374ad9a28502d46a43d5e31b08"
+        }
+      ],
+      "nativeApproval": false,
+      "hostedApproval": false
+    },
+    {
+      "cohort": "following-2",
+      "runId": 39503680016,
+      "url": "https://github.com/darkapoparka/cars/actions/runs/39503680016",
+      "sourceCommit": "a92135f6b5c3e0f510a0fdc95ca2a2740197805a",
+      "dispatchedAt": "2026-10-20T21:51:12.109Z",
+      "slugs": [
+        "urbanshadow-motors",
+        "ep-cars-kirby-cross",
+        "cars-4-u-wakefield",
+        "driveline-cars",
+        "lifeline-cars",
+        "wortley-road-car-sales",
+        "leicester-motor-group"
+      ],
+      "packDigests": [
+        {
+          "slug": "urbanshadow-motors",
+          "packDigest": "567f8eb723d7595a697c9fe6841b4ff73ed2a2261d769ecb45eb7e351d921b61"
+        },
+        {
+          "slug": "ep-cars-kirby-cross",
+          "packDigest": "b35bbdb8d61424e093b47f2b2894b7620f29c58ff80133d3945bdee57e97cb81"
+        },
+        {
+          "slug": "cars-4-u-wakefield",
+          "packDigest": "85c79b3ddd183606985156cb2527fb4212578c4c6e1c169093dd1fbffcc89796"
+        },
+        {
+          "slug": "driveline-cars",
+          "packDigest": "454209a5b52378f970e53f382d051f77b6ca07cb74d17cced146a8ec5599e8cc"
+        },
+        {
+          "slug": "lifeline-cars",
+          "packDigest": "2c2f2ea88c2592874d9ee6555464713386da0f15101c3784e1da07c9234dc109"
+        },
+        {
+          "slug": "wortley-road-car-sales",
+          "packDigest": "634d2f7dbda9741f23951141e10aad0f0a751e87859bc2d026f0825807260f2e"
+        },
+        {
+          "slug": "leicester-motor-group",
+          "packDigest": "cd080ec62a7c2e8e7f4edce76c5e9e60091afd46fc1029e13e39c8ed7b525266"
+        }
+      ],
+      "nativeApproval": false,
+      "hostedApproval": false
+    },
+    {
+      "cohort": "following-3",
+      "runId": 39503687755,
+      "url": "https://github.com/darkapoparka/cars/actions/runs/39503687755",
+      "sourceCommit": "a92135f6b5c3e0f510a0fdc95ca2a2740197805a",
+      "dispatchedAt": "2026-10-20T21:51:16.323Z",
+      "slugs": [
+        "simply-motors-ilford",
+        "promise-cars",
+        "tecno-motors",
+        "dms-cars-peterborough",
+        "reliable-autos",
+        "king-street-motors-smethwick",
+        "millions-auto-cars"
+      ],
+      "packDigests": [
+        {
+          "slug": "simply-motors-ilford",
+          "packDigest": "4c77be9769abd737433a6572106bade6fc1cd99196492c9f2805a1f3d5261760"
+        },
+        {
+          "slug": "promise-cars",
+          "packDigest": "8498ee21ee666eed1e75eac5549055a76143ed9960bfa0954a5997bcb55db041"
+        },
+        {
+          "slug": "tecno-motors",
+          "packDigest": "c2a81772ae0deddc8b854c6bf7deebda46bba5cd97641b6a3d5fb55e04993fce"
+        },
+        {
+          "slug": "dms-cars-peterborough",
+          "packDigest": "7156cc804aa2602fec15d637254f36ef2e5b28ead3a9f7f8b78d10d997bb12a8"
+        },
+        {
+          "slug": "reliable-autos",
+          "packDigest": "45f993fe60942d3322bb278e53434b50f6df402aab12256645cc7395915ffc1f"
+        },
+        {
+          "slug": "king-street-motors-smethwick",
+          "packDigest": "32df6816378a1c870f6abd80dc97f228ea8035ca860cc5972e0f3fb48c830bb1"
+        },
+        {
+          "slug": "millions-auto-cars",
+          "packDigest": "9cc68f78e824f84ea8e9b6bb09bfd6d55a5fa859dbab60a8035b5426cacc7de7"
+        }
+      ],
+      "nativeApproval": false,
+      "hostedApproval": false
+    },
+    {
+      "cohort": "following-4",
+      "runId": 39503695390,
+      "url": "https://github.com/darkapoparka/cars/actions/runs/39503695390",
+      "sourceCommit": "a92135f6b5c3e0f510a0fdc95ca2a2740197805a",
+      "dispatchedAt": "2026-10-20T21:51:19.642Z",
+      "slugs": [
+        "mosaso",
+        "prime-lane-motors",
+        "cars-4-less-west-bromwich",
+        "rolf-street-car-sales",
+        "small-automatics",
+        "stanley-motor-group",
+        "tj-cars-slough"
+      ],
+      "packDigests": [
+        {
+          "slug": "mosaso",
+          "packDigest": "0c96cbffb7eb39b3418afdc77275f5ad6799266e4b09edd2050b016e49313870"
+        },
+        {
+          "slug": "prime-lane-motors",
+          "packDigest": "beb0426a87ba395294482032dcc42509c003b7bdda24f20526d6714aa1d50590"
+        },
+        {
+          "slug": "cars-4-less-west-bromwich",
+          "packDigest": "95bef8f3f715a8604d4be8f89c8d717cc42351228d3f9786eeec34b38808c871"
+        },
+        {
+          "slug": "rolf-street-car-sales",
+          "packDigest": "75937aaca5eb5a31768f4518af6507c0e11331b3520ddcdf0c8a5ec4be7e431a"
+        },
+        {
+          "slug": "small-automatics",
+          "packDigest": "34507d9a05a8689b00f6a57a0166423b83261ec89dc60da7f60f45ffddc1f53c"
+        },
+        {
+          "slug": "stanley-motor-group",
+          "packDigest": "478e75b62b8624f8396eca6ba42b0767aece686553aade7bca6370d8644f3e35"
+        },
+        {
+          "slug": "tj-cars-slough",
+          "packDigest": "6e4a768ee3d1cf7f573313a938c20d02552ebbb2ebb75aa9667d414ca2c76acd"
+        }
+      ],
+      "nativeApproval": false,
+      "hostedApproval": false
+    },
+    {
+      "cohort": "following-5",
+      "runId": 39503702282,
+      "url": "https://github.com/darkapoparka/cars/actions/runs/39503702282",
+      "sourceCommit": "a92135f6b5c3e0f510a0fdc95ca2a2740197805a",
+      "dispatchedAt": "2026-10-20T21:51:23.227Z",
+      "slugs": [
+        "chris-automotive",
+        "danny-trading",
+        "njh-car-sales",
+        "unique-motors-nottingham",
+        "al-saif-used-cars-trading",
+        "royal-motors-used-cars-trading"
+      ],
+      "packDigests": [
+        {
+          "slug": "chris-automotive",
+          "packDigest": "b1e61cfead3897da9d60fae8c990429f40437d4c6a56504f578be4ee94adeaf2"
+        },
+        {
+          "slug": "danny-trading",
+          "packDigest": "8cfeab98b0afbd2093970d474dec4f788127db79dcba28294ddbb709d1e13b78"
+        },
+        {
+          "slug": "njh-car-sales",
+          "packDigest": "9036957861fa7eed1c59a0057614005d2a39e386c8b940a080509553c33e72f2"
+        },
+        {
+          "slug": "unique-motors-nottingham",
+          "packDigest": "e81084febc0a9287ce73d7304348c58dfbd8a44342dd4e8512454cdd9b1b5fec"
+        },
+        {
+          "slug": "al-saif-used-cars-trading",
+          "packDigest": "aefe60b887cfe991cdbcb859f57c954225a7b2073632b5b1932ab537417de354"
+        },
+        {
+          "slug": "royal-motors-used-cars-trading",
+          "packDigest": "280ab19d75a4f79c826aeeb8bd196af0587b95b196ed35dc74ba5ce991399902"
+        }
+      ],
+      "nativeApproval": false,
+      "hostedApproval": false
+    }
+  ]
+}
