@@ -11,6 +11,64 @@ const area=t=>{const root=fs.mkdtempSync(path.join(os.tmpdir(),'cars-pack-orches
 const put=(root,name,value)=>{const file=path.join(root,name);fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,typeof value==='string'?value:JSON.stringify(value));};
 const head='1'.repeat(40);
 
+const workflow=fs.readFileSync(new URL('../.github/workflows/dealer-pack-pipeline.yml',import.meta.url),'utf8').replace(/\r\n/g,'\n');
+const workflowJob=name=>{
+  const value=workflow.split('\n  '+name+':\n')[1]?.split(/^  [a-z][a-z_-]*:\s*$/m)[0];
+  assert.ok(value,'Missing pipeline job: '+name);return value;
+};
+const workflowCondition=(name,{event='workflow_dispatch',contractsOnly,hasWork='true',message='',cancelled=false}={})=>{
+  const expression=workflowJob(name).match(/^    if: \$\{\{ (.+) \}\}$/m)?.[1];
+  assert.ok(expression,'Missing explicit pipeline job condition: '+name);
+  return Function('github','inputs','needs','contains','cancelled','return ('+expression+');')(
+    {event_name:event,event:{head_commit:{message}}},{contracts_only:contractsOnly},{plan:{outputs:{has_work:hasWork}}},
+    (value,needle)=>String(value).includes(needle),()=>cancelled);
+};
+
+test('pipeline contracts-only dispatch skips planning and native lanes while preserving normal triggers',()=>{
+  const input=workflow.match(/^      contracts_only:\n((?: {8}.+\n)+)/m)?.[1];
+  assert.ok(input,'Missing optional contracts_only workflow input');
+  assert.match(input,/^        default: false$/m);assert.match(input,/^        type: boolean$/m);
+  assert.doesNotMatch(input,/^        required: true$/m);
+  assert.equal(workflowCondition('plan',{contractsOnly:true}),false);
+  for(const contractsOnly of [false,undefined])for(const event of ['workflow_dispatch','pull_request'])
+    assert.equal(workflowCondition('plan',{contractsOnly,event}),true);
+  assert.equal(workflowCondition('plan',{event:'push'}),false);
+  assert.equal(workflowCondition('plan',{event:'push',message:'retained [benchmark25] proof'}),true);
+  assert.match(workflowJob('lane'),/^    needs: plan$/m);
+  assert.equal(workflowCondition('lane',{hasWork:''}),false,'A skipped planner has no native work output');
+  assert.equal(workflowCondition('lane',{hasWork:'false'}),false);
+  assert.equal(workflowCondition('lane'),true);
+  assert.equal(workflowCondition('lane',{cancelled:true}),false);
+});
+
+test('pipeline contracts-only result accepts skipped build jobs but never bypasses failed contracts',()=>{
+  const result=workflowJob('result'),script=result.match(/        node --input-type=module <<'NODE'\n([\s\S]+?)        NODE\n/)?.[1]
+    .replace(/^        /gm,'').replace(/^import fs from 'node:fs';\n/,'');
+  assert.ok(script,'Missing independent pipeline result script');
+  for(const name of ['contracts','plan','lane'])assert.match(result,new RegExp('^    - '+name+'$','m'));
+  assert.equal(workflowCondition('result'),true);assert.equal(workflowCondition('result',{cancelled:true}),false);
+  const evaluate=({contracts='success',plan='skipped',lanes='skipped',rejected='0'}={})=>{
+    const process={env:{CONTRACTS_RESULT:contracts,PLAN_RESULT:plan,LANE_RESULT:lanes,REJECTED:rejected,GITHUB_STEP_SUMMARY:'summary'}};
+    let summary;
+    Function('process','fs',script)(process,{appendFileSync:(file,value)=>{assert.equal(file,'summary');summary=JSON.parse(value);}});
+    assert.deepEqual(summary,{contracts,plan,lanes,rejected:Number(rejected)});
+    return process.exitCode??0;
+  };
+  for(const plan of ['success','skipped'])for(const lanes of ['success','skipped'])assert.equal(evaluate({plan,lanes}),0);
+  for(const status of ['failure','cancelled','skipped',''])assert.equal(evaluate({contracts:status}),1);
+  for(const status of ['failure','cancelled',''])for(const name of ['plan','lanes'])assert.equal(evaluate({[name]:status}),1);
+  assert.equal(evaluate({rejected:'1'}),1);
+});
+
+test('pipeline sparse checkouts retain the tracked task document required by workflow links',()=>{
+  assert.equal((workflow.match(/^        sparse-checkout: \|$/gm)||[]).length,3);
+  for(const name of ['contracts','plan','lane']){
+    const sparse=workflowJob(name).match(/^        sparse-checkout: \|\n((?: {10}.+\n)+)/m)?.[1];
+    assert.ok(sparse,'Missing sparse checkout: '+name);
+    assert.ok(sparse.trim().split('\n').map(row=>row.trim()).includes('/tasks.md'),name+' must include tracked /tasks.md');
+  }
+});
+
 test('the workflow always provides HEAD but explicit and benchmark dispatch still select exactly one planner mode',async t=>{
   const root=area(t);
   const benchmark=await planDealerPackCiEnvironment({root,env:{PACK_HEAD:head,PACK_BENCHMARK:'true'},validatePack:ready});
