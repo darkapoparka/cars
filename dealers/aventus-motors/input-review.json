@@ -3,7 +3,7 @@
   "kind": "cars-dealer-pack-input-review",
   "dealer": "aventus-motors",
   "reviewed": true,
-  "reviewedAt": "2026-10-20T19:12:59.231Z",
+  "reviewedAt": "2026-10-20T19:44:52.739Z",
   "review": {
     "kind": "automated",
     "humanReview": false,
@@ -42,6 +42,18 @@
       "sha256": "9b9206a487d0c804cb0e7082098697e93bbfc9fa761a0897350d367609c0b20f"
     },
     {
+      "path": "branding/contrast-mark-on-dark-v2.png",
+      "sha256": "c72b55cc6afef1bf1d43b71705e3c9ee7f81281feb5ddc541afa9b9dc1d0c884"
+    },
+    {
+      "path": "branding/contrast-mark-on-light-v2.png",
+      "sha256": "aaad17fe028a650ee6c19b546a7c04adf18aaeaf7d5bc43e4b8780686a884c6b"
+    },
+    {
+      "path": "branding/contrast-repair-20261020.json",
+      "sha256": "443b53c3267a09312d7b2ac50b0e32cccb1795e7cde39d11fa2f046e86f355ad"
+    },
+    {
       "path": "branding/generated-mark.png",
       "sha256": "25b68b382c7bbfcbe310f99b01015e18994b40502c51866caa741f62a4285fc5"
     },
@@ -55,15 +67,15 @@
     },
     {
       "path": "branding/logo-contract.json",
-      "sha256": "393312fb0156b1fb3b04e0226e1d76dbfb64620deb2486ee2ed9dbbb73e7ae99"
+      "sha256": "61790a43f36c078b8bef30efeecd831b91411890ad9ee93e6d5cbdc91876fc57"
     },
     {
       "path": "branding/logo-recipe.json",
-      "sha256": "80ae54667c02b6ad63516b493f9345b253205ba52bb2069e88903730b24b5869"
+      "sha256": "2e9b35128f6732bc79b3eff6a5eefd9aa815e02c0bc7d78abd26e2b6794edfb9"
     },
     {
       "path": "branding/source.json",
-      "sha256": "ec546c4624b50f3a01c33b1aba1814992944b5c70cbb317e307058b0a6674742"
+      "sha256": "390607c1611fe5b3371345cfbbbf3cbfedde95780663490c0a93c1e5d0f16fba"
     },
     {
       "path": "business-facts.json",
@@ -71,7 +83,7 @@
     },
     {
       "path": "copy-review.json",
-      "sha256": "1582b483300665bff522d4f2f036c6422c8c0cacc6ed3ba3dd4b97b8aa529c7f"
+      "sha256": "f7e3a1688cd4cf7bea79569394d03d11de2f4c32545673db31b84f43a8cf16e9"
     },
     {
       "path": "dealer-stock/public-1.jpg",
@@ -87,11 +99,11 @@
     },
     {
       "path": "dealer.json",
-      "sha256": "269c323036792138a5e8a4a031be848f13946ce89fc8bb5dffc47ed4f8b7a624"
+      "sha256": "a41415e8b96ecd9255550bade7474575ca15c6ac98a63cde47c694f2abae5175"
     },
     {
       "path": "identity-review.json",
-      "sha256": "467bb17de4695f6ad26b42c2884c999a7c26d3c1a0fecba9a2d21462be5347c5"
+      "sha256": "42a57c5fe86f4dcd23a2f41f36d4a6a4a2a51b3fcc4335afce54b90162206453"
     },
     {
       "path": "locale.json",
@@ -103,7 +115,7 @@
     },
     {
       "path": "qualification.json",
-      "sha256": "77cb0a89fa31a96a7ab7a0fd60136121a74c5518d4415e20557d7597ec0c52c5"
+      "sha256": "03b96b64ef9e76c9bf5916d97282af53867a26967aaaf9da156dd2a194198a32"
     },
     {
       "path": "source-evidence.json",

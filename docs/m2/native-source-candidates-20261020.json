@@ -1,0 +1,420 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-exact-native-source-candidate-checkpoint",
+  "recordedAt": "2026-10-20T19:56:40.245Z",
+  "previousPublishedSource": "f73c8e4b258653d1cee9c29d161e41774cfe6fb8",
+  "selection": "53 unchanged pixel passes plus seven reviewed artwork corrections and two evidence-repaired sources",
+  "packs": 62,
+  "files": 1490,
+  "bytes": 132648272,
+  "sourceMeaning": "The containing Git source commit and exact per-pack digests authenticate this selection; native and hosted checks remain separate.",
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "dealerApproval": false,
+  "ownerAcceptance": false,
+  "providerWrites": 0,
+  "newPacks": [
+    {
+      "slug": "bury-fairfield-car-centre",
+      "packDigest": "ec48fb1060067aa86681bf35446cbd110081b57ae646d51ad2901bf7ead7973c",
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "9de1d20a27fe20fc188a62b509357377eb7ae226",
+      "evidenceCorrection": {
+        "kind": "dated-public-business-contact-classification",
+        "proof": "bury-public-business-email-evidence-2026-10-20.json",
+        "factsUnchanged": true,
+        "dealerApproval": false
+      },
+      "originalFactsStockArtworkPhotosPreserved": true
+    },
+    {
+      "slug": "car-links-motor-trading",
+      "packDigest": "26f98978ca589e0aa65f9f4215824822f1123907e9ff97e4781f3b618ceddb8a",
+      "researchCommit": "f36b3cbc600a564aaef80f8d40f89658318b5457",
+      "researchSubtree": "96348b2274292f04d5adc17f38a2e8315977f26f",
+      "evidenceCorrection": {
+        "kind": "stale-copy-stock-seal-only",
+        "before": "267f84fb8efc6cbdc463af279de8a8f10505eddecc139255c152cf738c06701d",
+        "after": "59a65952294c2073d2175e6f6ad7c0463c193e0e364bcdd5a303d0992089fc59",
+        "sourceDescriptionsUnchanged": true,
+        "stockUnchanged": true,
+        "dealerApproval": false
+      },
+      "originalFactsStockArtworkPhotosPreserved": true
+    }
+  ],
+  "candidates": [
+    {
+      "slug": "admil-cars",
+      "packDigest": "1f8e4917e7c31a881f1b2e097818c204d68c108a9194ef8da186e9ee8002d83e",
+      "files": 26,
+      "bytes": 3848157
+    },
+    {
+      "slug": "allerton-trade-centre",
+      "packDigest": "838f8cb45f404528cc0532472565b33fdf007ac4632450d9775357943c087576",
+      "files": 24,
+      "bytes": 1716375
+    },
+    {
+      "slug": "amc-custom-motors",
+      "packDigest": "7a2992aa58b522c2c7c0e2a634bc340281cb40e728646b6b89ca09fb3b860842",
+      "files": 23,
+      "bytes": 1242670
+    },
+    {
+      "slug": "aventus-motors",
+      "packDigest": "412e8bc4c9ffab63256a87dfde353dadac9286273979bddcff61dde8714371c1",
+      "files": 25,
+      "bytes": 3535046
+    },
+    {
+      "slug": "aym-cars",
+      "packDigest": "6e76e64cbaf777e91f77fbbba485c898c75baa6a5626a7871a2a53079cfc7652",
+      "files": 29,
+      "bytes": 2595090
+    },
+    {
+      "slug": "bs-cars-thornton-heath",
+      "packDigest": "d6a18eed03c586450bdf1f43405b0a89a9b3e50039c8520c4a138c7bea25789b",
+      "files": 26,
+      "bytes": 4080157
+    },
+    {
+      "slug": "burton-trent-motor-shop",
+      "packDigest": "95ee5e12cc816133f97432336483bc460895b6d1ea3cb6da7df3e006e43482c2",
+      "files": 25,
+      "bytes": 2787131
+    },
+    {
+      "slug": "burton-yj-motors",
+      "packDigest": "1506e4937724fb0feb0627808f071e151e4a571e7c07490bdb60c44a2777cec3",
+      "files": 25,
+      "bytes": 3055767
+    },
+    {
+      "slug": "car-force",
+      "packDigest": "96759b62715f5f010bc79c7798543364f3c5ca9879bc8c6d486ad047536a90a1",
+      "files": 28,
+      "bytes": 2421115
+    },
+    {
+      "slug": "car-haven-manchester",
+      "packDigest": "3a69441609d855fede1f68d10259e6f69f1ff4c225c0b77b1d0941bdb9217762",
+      "files": 28,
+      "bytes": 2393025
+    },
+    {
+      "slug": "car-shop-swansea",
+      "packDigest": "8c6764ad15235fa69c6f74284806157323bee8545942d1f0b42530a3ac0da14f",
+      "files": 25,
+      "bytes": 4072368
+    },
+    {
+      "slug": "cardiff-fusion-autos",
+      "packDigest": "4d72a2c65bc0ec0496ec8b8972990903ec0254bc2d6941b74d43a2e5babfa814",
+      "files": 24,
+      "bytes": 2377713
+    },
+    {
+      "slug": "cars4you-bradford",
+      "packDigest": "7805b2d7fe4828688c62e3f8109526e0d6ad30c66bd994978d9531b0b11da0c9",
+      "files": 23,
+      "bytes": 1335267
+    },
+    {
+      "slug": "chessington-land-of-autoz",
+      "packDigest": "50b082c70993df3dcfa074fd08287fe41c89ac9ab3e459df1d285e113d2c466b",
+      "files": 24,
+      "bytes": 3049396
+    },
+    {
+      "slug": "coventry-cars-and-van",
+      "packDigest": "6bf2900690da94d6c785cb6f67f9897e5e3ec6b41e5a902d74d04931f60a5558",
+      "files": 24,
+      "bytes": 3344733
+    },
+    {
+      "slug": "dukinfield-r-racer",
+      "packDigest": "48b79e1d31ca2587309d02c74636cc4d5cd2af4f1ab7fd57c3f15615841191ad",
+      "files": 25,
+      "bytes": 2335998
+    },
+    {
+      "slug": "g1-autos",
+      "packDigest": "ee1f1e38ce30cb0ff3a369de61b978b5543e8fd65b56f459fd2b7e1c56ab35cf",
+      "files": 28,
+      "bytes": 2812288
+    },
+    {
+      "slug": "glasgow-craigton-cars",
+      "packDigest": "22b26dbd061183c48c70ec9b8c68581daf52591fadb271418464cdcf59a4845f",
+      "files": 24,
+      "bytes": 2749479
+    },
+    {
+      "slug": "glasgow-dalmarnock-car-sales",
+      "packDigest": "ecd15bb1d3753dc7ffeb0f3ef96a85b230eff63b50d8cc646af715315df6f361",
+      "files": 23,
+      "bytes": 2584052
+    },
+    {
+      "slug": "glasgow-fm-motors",
+      "packDigest": "e8eb6873edcc6db9983c18f217d5012747e5621c0d733381db5c8e2c404b3c70",
+      "files": 24,
+      "bytes": 2888091
+    },
+    {
+      "slug": "glasgow-matts-motors",
+      "packDigest": "4e68174b9d0bb01cf11d087ff69c1404d918609c2d15bae56ab7d60267157ab8",
+      "files": 24,
+      "bytes": 3116441
+    },
+    {
+      "slug": "hanli-motors",
+      "packDigest": "32f036f2c07e6ce06fe9190fca3b0c9c2f3c0b20c71ad7ae6a3db5da1da6ddcf",
+      "files": 23,
+      "bytes": 1045443
+    },
+    {
+      "slug": "plaistow-cars-birmingham",
+      "packDigest": "dbe06e76bd4a874906f9565926ce108fd7a4fd259346901d74fe807cb86c7212",
+      "files": 24,
+      "bytes": 1188667
+    },
+    {
+      "slug": "rajas-motors",
+      "packDigest": "a8ab416c83e3b3430b5a631ef1ba3f80e5526e622f057fdb4506298dfe96deb7",
+      "files": 23,
+      "bytes": 1405972
+    },
+    {
+      "slug": "rh-motors-services",
+      "packDigest": "8fdbb43e6b5406b3af893de9c0e04a36597868b81907a07b37a965d0f765f282",
+      "files": 26,
+      "bytes": 1973650
+    },
+    {
+      "slug": "tanby-cars",
+      "packDigest": "a1fff886d862db1c00b16eadee5b9b392e03788d7f71a2e98bc0b06552562f1a",
+      "files": 26,
+      "bytes": 1275437
+    },
+    {
+      "slug": "tomlinson-car-sales",
+      "packDigest": "67fc4f32814bfeb661e3c17a1d8420b4c108ba4cd8c3082a26176da42eb0e54e",
+      "files": 23,
+      "bytes": 1397238
+    },
+    {
+      "slug": "unlimited-motors-birmingham",
+      "packDigest": "6b6e1954ef6f4e3a7be455135d55dcd5e8e591768bdd1433f257f8fbfe933155",
+      "files": 24,
+      "bytes": 2978332
+    },
+    {
+      "slug": "al-hiba-used-cars",
+      "packDigest": "91283bcd1aa1bc3d453e17628a9a8e0388428f185d3ef1bdcb6b449d236baedc",
+      "files": 21,
+      "bytes": 967082
+    },
+    {
+      "slug": "al-ishfaq-used-cars-llc",
+      "packDigest": "de3ca6c3a40af16ed47fe54c011a0ddc6514d3219d6ec279f2e13021ddc33202",
+      "files": 23,
+      "bytes": 1508911
+    },
+    {
+      "slug": "al-luluah-al-baithaa-cars",
+      "packDigest": "0250fd874b953ef1b3b1dad6a03450fa6699a38aebd8ed833eb503b8f526a7d6",
+      "files": 23,
+      "bytes": 1904041
+    },
+    {
+      "slug": "al-markabah-al-mutamadah-used-cars",
+      "packDigest": "13969b579f2cc5081f5d7f01a17aed48ef470cff4a3010be656ee5049c8bd589",
+      "files": 23,
+      "bytes": 1320166
+    },
+    {
+      "slug": "al-meqat",
+      "packDigest": "d16495e775a30fb2f26f2504c49cc1999a8cd64803f966dae04e13587229492b",
+      "files": 21,
+      "bytes": 1372226
+    },
+    {
+      "slug": "al-muhtaref-used-cars",
+      "packDigest": "0f3c7cead143b9cbfe49d8a135e5ebcfa7b60b44a1ae9e6cdc841d0f6fa4ed0a",
+      "files": 25,
+      "bytes": 3477488
+    },
+    {
+      "slug": "al-nayrab-used-cars",
+      "packDigest": "27dc74615965f87a7443cb78bc6e7e9bb05b0be6fd83bc9c3c6c2b4c92c91a5f",
+      "files": 22,
+      "bytes": 1192335
+    },
+    {
+      "slug": "al-nukhba-al-malakyah-used-cars",
+      "packDigest": "4d55c6d97c006f8d478025a6c41563e1838c54d08f45ce3cd4bd6b1718bf3863",
+      "files": 24,
+      "bytes": 5015949
+    },
+    {
+      "slug": "al-saif-used-cars-trading",
+      "packDigest": "aefe60b887cfe991cdbcb859f57c954225a7b2073632b5b1932ab537417de354",
+      "files": 22,
+      "bytes": 1625578
+    },
+    {
+      "slug": "al-shamal-al-amreci-used-cars",
+      "packDigest": "7fc004f41865f46dbbc6b3b67ba7b4be37b2c3911894c1aadb66309a6091968a",
+      "files": 25,
+      "bytes": 2024450
+    },
+    {
+      "slug": "asal-al-haibah-used-cars",
+      "packDigest": "03a55d44233c6d5cbf09599b9a9bb194c63d9f487d4a48dd22a1274e7688de6c",
+      "files": 23,
+      "bytes": 1462011
+    },
+    {
+      "slug": "badar-used-cars",
+      "packDigest": "907018fcb3ceba8b5e4e11909931ccb35b2384bd5063addd584cd59feacfb253",
+      "files": 22,
+      "bytes": 2645267
+    },
+    {
+      "slug": "bdayt-al-khir-used-cars",
+      "packDigest": "a90c08e87104b48ac94c68943b7bd9b2d9ae74ffd7d21eabfac883348f0e17d7",
+      "files": 22,
+      "bytes": 1378369
+    },
+    {
+      "slug": "berlin-used-cars",
+      "packDigest": "358c05a1a46fb60a2736fd7670f511edd46c3ec868e4fdcc1bdc12d21176c778",
+      "files": 22,
+      "bytes": 2005866
+    },
+    {
+      "slug": "best-friend-used-cars",
+      "packDigest": "48299cd67e51ff8d99080ddb71d55029416f7048fa639f93112cc9aa35f911d4",
+      "files": 25,
+      "bytes": 1765558
+    },
+    {
+      "slug": "elmorshedi-used-cars-tr-llc",
+      "packDigest": "e6d6f41b2052d6c1edd7f4001315b0e53cf6c68507da73e445f56cb7d3df08c4",
+      "files": 25,
+      "bytes": 1783016
+    },
+    {
+      "slug": "mk-cars",
+      "packDigest": "ed10c13b387a7bdb8f1347f50c497a061f5845aac65f0121249a18478e20f8ca",
+      "files": 22,
+      "bytes": 1748512
+    },
+    {
+      "slug": "mohd-rasheed-used-cars",
+      "packDigest": "ae774fa399deb2dec940e982a0aedb99efebe98e045be35312156df0ac1bb5d5",
+      "files": 23,
+      "bytes": 1554247
+    },
+    {
+      "slug": "najem-al-tareeq-used-cars",
+      "packDigest": "930de7b53fb5f7602ed3567adde7ff3a76b7eaa3f54e612e3c7f9f3238d7015d",
+      "files": 23,
+      "bytes": 1572117
+    },
+    {
+      "slug": "nassem-al-sham-used-cars",
+      "packDigest": "239357ee8c2d24e358f3fef9b7861ff885281639dc0a7feca43fb745d8406c32",
+      "files": 25,
+      "bytes": 1063054
+    },
+    {
+      "slug": "noor-al-seyoh-used-car",
+      "packDigest": "8edb59ceaf88f8474044a72bb82e0fc80e561f74529e750e66429fdb37398f93",
+      "files": 22,
+      "bytes": 1150810
+    },
+    {
+      "slug": "pearl-used-cars",
+      "packDigest": "c8ee0586fa20dc6c01661e99a17265bb48b3be63843f1592bcbb67fb512118c4",
+      "files": 22,
+      "bytes": 1840454
+    },
+    {
+      "slug": "prestige-and-alma-used-cars",
+      "packDigest": "cfc04f5d5b0f5e4ff5ae2c209c0bb4ae5726be7e847a0d1d46df5d112b2d6c3d",
+      "files": 24,
+      "bytes": 1237186
+    },
+    {
+      "slug": "qasr-al-jazeera-used-cars",
+      "packDigest": "9fd962f5c4bca867d25736ae373109702da59292e909550a9532135a09f72e22",
+      "files": 24,
+      "bytes": 948006
+    },
+    {
+      "slug": "rebou-al-fakhama-used-cars",
+      "packDigest": "07cc592943e99c0ff36b24411bda9fbd5693db2174a85bacf2333223baff8d68",
+      "files": 23,
+      "bytes": 2275382
+    },
+    {
+      "slug": "rebou-najd-used-cars-trading",
+      "packDigest": "4ade3257432d214312d3e74ce05f116d5b70be5a04e594fe40188b286c90aa02",
+      "files": 26,
+      "bytes": 1880948
+    },
+    {
+      "slug": "royal-motors-used-cars-trading",
+      "packDigest": "280ab19d75a4f79c826aeeb8bd196af0587b95b196ed35dc74ba5ce991399902",
+      "files": 22,
+      "bytes": 1927167
+    },
+    {
+      "slug": "sama-alsaadah-used-cars",
+      "packDigest": "1be70a85fb0fa28c18427d2c323d8d9d04f93fb2205b834d8fe0aebb3c36777d",
+      "files": 25,
+      "bytes": 1721614
+    },
+    {
+      "slug": "sarmad-used-cars",
+      "packDigest": "bfa2e42671985b53a2256f155b1f2d87ec0646ad0646a105ceea2dd26efccc57",
+      "files": 25,
+      "bytes": 2358165
+    },
+    {
+      "slug": "shams-al-sabah-used-cars",
+      "packDigest": "78c4209f5b442994442e7c458348fabc6e6328edc3ac31977411840175243854",
+      "files": 24,
+      "bytes": 897740
+    },
+    {
+      "slug": "thahban-motors",
+      "packDigest": "5a82fc2928f3848984c9baf33eeb2f4c067182a4320478157fb047f17f82ef0e",
+      "files": 22,
+      "bytes": 1588065
+    },
+    {
+      "slug": "union-used-car-exhibition-llc",
+      "packDigest": "bbe54c20fccc8a0c2b5190c33767038fbca34d3c3e499eb505f1e010c6da5dbb",
+      "files": 24,
+      "bytes": 1984881
+    },
+    {
+      "slug": "bury-fairfield-car-centre",
+      "packDigest": "ec48fb1060067aa86681bf35446cbd110081b57ae646d51ad2901bf7ead7973c",
+      "files": 25,
+      "bytes": 2551115
+    },
+    {
+      "slug": "car-links-motor-trading",
+      "packDigest": "26f98978ca589e0aa65f9f4215824822f1123907e9ff97e4781f3b618ceddb8a",
+      "files": 25,
+      "bytes": 3295398
+    }
+  ]
+}

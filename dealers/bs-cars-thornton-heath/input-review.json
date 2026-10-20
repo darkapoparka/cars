@@ -3,7 +3,7 @@
   "kind": "cars-dealer-pack-input-review",
   "dealer": "bs-cars-thornton-heath",
   "reviewed": true,
-  "reviewedAt": "2026-10-20T19:13:37.334Z",
+  "reviewedAt": "2026-10-20T19:50:41.033Z",
   "review": {
     "kind": "automated",
     "humanReview": false,
@@ -42,6 +42,14 @@
       "sha256": "43a102c123f10bfa630ece0462e5d2e82072261f17e25a75e688a22db4023fce"
     },
     {
+      "path": "branding/contrast-repair-20261020.json",
+      "sha256": "ee1c4891001f53211bb25f6a81ff9fa5013892e8863345a1a3b99f3b51cd08c5"
+    },
+    {
+      "path": "branding/generated-mark-on-dark-v2-20261020.png",
+      "sha256": "c7c87e31419e38e6f13696fb7e457df3d3c2318dabaff32025407352e7f8ff3d"
+    },
+    {
       "path": "branding/generated-mark-on-dark.png",
       "sha256": "8ffdd9ee1c647e21bad60497786c4144aa1b6cf7e7d241cd8e7c1548927326a3"
     },
@@ -59,15 +67,19 @@
     },
     {
       "path": "branding/logo-contract.json",
-      "sha256": "70c91145b25fb9bebdb1b81154d9bbf2a3419b8499b6865daf2dab2afcdfa687"
+      "sha256": "750d870eaa85b2d3b404dbe5f21006450c5c1e721d087f37482fa98fa32bb7e2"
     },
     {
       "path": "branding/logo-recipe.json",
-      "sha256": "41e0856a1851381c0530ddf95dd265babe431355f6012167f274af5229775916"
+      "sha256": "c51769ad181dfbca8cebe9f3191af15281b4cda4b716f9fd67e088c520cdfe2d"
+    },
+    {
+      "path": "branding/source-before-contrast-repair-20261020-3d519c875fe0b182.json",
+      "sha256": "3d519c875fe0b1829349b311383b84d56787edf718265dfb10c9679b03a88901"
     },
     {
       "path": "branding/source.json",
-      "sha256": "3d519c875fe0b1829349b311383b84d56787edf718265dfb10c9679b03a88901"
+      "sha256": "7a68cb03700acf3d62c383c3a47e18e346191edf49fc8b1b1b374f3a912bd545"
     },
     {
       "path": "business-facts.json",
@@ -75,7 +87,7 @@
     },
     {
       "path": "copy-review.json",
-      "sha256": "2e1941f201ed021d64abecade911e8abfb7a1b4fa085f6c414741795f0a230a7"
+      "sha256": "c52531027fcca7ed80737b57a02d0a04c0bd719bce008a3751065cdce42435f6"
     },
     {
       "path": "dealer-stock/public-1.jpg",
@@ -95,7 +107,7 @@
     },
     {
       "path": "identity-review.json",
-      "sha256": "cd598e4a7241edd0280e21210069cc9d3f6a31b6555bda209c18f11007183112"
+      "sha256": "5cc272627c512f5f2b38a3b477f68ef3dfc66db87988391697a828eac7660bf2"
     },
     {
       "path": "locale.json",
@@ -107,7 +119,7 @@
     },
     {
       "path": "qualification.json",
-      "sha256": "67b38429ddf2da918c4b7dfb2056baa2bb4403de1c92266bb20bceef591b3b96"
+      "sha256": "ce82436ad01cdbd408a5478f5ecc0984d56b90e7b669a2f51c1fb840b5a82018"
     },
     {
       "path": "source-evidence.json",

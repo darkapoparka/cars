@@ -32,7 +32,7 @@
     }
   },
   "generatedInputs": {
-    "reviewedAt": "2026-10-19T18:56:50.060370Z",
+    "reviewedAt": "2026-10-20T19:48:59.266Z",
     "master": {
       "path": "branding/generated-master.png",
       "sha256": "c1f8c9a38b02fef4065a820a6fddc6feb2b70378fc91c57d0a055471e213530f",
@@ -52,11 +52,15 @@
       }
     },
     "markOnDark": {
-      "path": "branding/generated-mark.png",
-      "sha256": "b210925fc32ebfd7647666108176873909108af26cfc25aa4905bda2bf82dd7a",
+      "path": "branding/generated-mark-on-dark-v2-20261020.png",
+      "sha256": "eee185f68ce19cb78cef56b2accbce6202edbd11c6d2bafdc31f47588964d617",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-ac1aa597-b06f-4757-916d-237113151b1e",
+        "generationId": "exec-26262308-4025-4ec5-92d8-7fa88b37713e",
         "modelVersion": null
       }
     },
@@ -71,20 +75,28 @@
         }
       },
       "onDark": {
-        "path": "branding/generated-on-dark.png",
-        "sha256": "fbb4f625923e26a74341700cfba72217441dc6d292a721cbe79c6b56ca39cfb1",
+        "path": "branding/generated-on-dark-v2-20261020.png",
+        "sha256": "78a9c0a34a0fa085dd476f6acdb581c977e117608cb96ecbbef81e6dc389ae52",
+        "nativeDimensions": {
+          "width": 2022,
+          "height": 778
+        },
         "generation": {
           "tool": "image_gen.imagegen",
-          "generationId": "exec-c1a6b122-9071-4ce5-9eec-01ebc683c647",
+          "generationId": "exec-836a6b43-13a9-4ca0-9cf1-883cb10359dd",
           "modelVersion": null
         }
       },
       "onAccent": {
-        "path": "branding/generated-on-dark.png",
-        "sha256": "fbb4f625923e26a74341700cfba72217441dc6d292a721cbe79c6b56ca39cfb1",
+        "path": "branding/generated-on-dark-v2-20261020.png",
+        "sha256": "78a9c0a34a0fa085dd476f6acdb581c977e117608cb96ecbbef81e6dc389ae52",
+        "nativeDimensions": {
+          "width": 2022,
+          "height": 778
+        },
         "generation": {
           "tool": "image_gen.imagegen",
-          "generationId": "exec-c1a6b122-9071-4ce5-9eec-01ebc683c647",
+          "generationId": "exec-836a6b43-13a9-4ca0-9cf1-883cb10359dd",
           "modelVersion": null
         }
       }
@@ -113,9 +125,10 @@
         32,
         64
       ],
-      "method": "Exact pipeline alpha-padding crop and resize of actual generated surface artwork. Separate light-ink generated wordmark is used on dark and accent surfaces. Compact inputs are documented actual imagegen outputs or isolated lossless crops.",
-      "reviewedAt": "2026-10-19T18:56:50.060370Z",
-      "review": "Visually reviewed the exact pipeline cropTransparentPadding exports at 120 px and 180 px wordmark widths and 32 px and 64 px compact sizes against all six required background colours. Spelling and transparency checked. Filled light wordmarks improve contrast on dark surfaces; artwork colours do not change template palettes."
+      "method": "Agent inspected exact maintained cropTransparentPadding outputs on all six existing template surface colours at wordmark120/180 and compact32/64 widths. Existing inspectLogoPixels thresholds pass; palettes, geometry and factual source remain preserved.",
+      "reviewedAt": "2026-10-20T19:48:59.266Z",
+      "review": "Visually reviewed the exact pipeline cropTransparentPadding exports at 120 px and 180 px wordmark widths and 32 px and 64 px compact sizes against all six required background colours. Spelling and transparency checked. Filled light wordmarks improve contrast on dark surfaces; artwork colours do not change template palettes.",
+      "notes": "Actual light tints of this dealer identity use built-in imagegen surface variants. Original source/artwork retained. No dealer, native or hosted approval is inferred."
     }
   },
   "additionalGenerations": [
@@ -126,6 +139,51 @@
       "modelVersion": null,
       "reference": "branding/generated-master.png",
       "prompt": "Use case: logo-brand, exact surface variant. This is an existing approved composition being prepared for a dark website background. Preserve its exact business name, spelling, typography, emblem motif, layout, separation and proportions. Make a faithful LIGHT-INK version on a truly TRANSPARENT background: all wordmark text should be solid bright ivory-white, filled letters, not hollow outline letters. Preserve any restrained emblem accent colours if they have contrast, and use white for the emblem's dark strokes so the compact emblem also reads on charcoal. Preserve the existing dark contour where helpful. No change of shape or concept. No added content. Do not include the background; it must remain transparent. Clean perfectly smooth edges, no speckles, no distress, no glow, no shadow, no gradients. The result must be clearly legible at180px width on charcoal #111113 and dark red #c40101. Match the reference geometry; no business names or letters may be omitted or repeated."
+    },
+    {
+      "roles": [
+        "onDark",
+        "onAccent"
+      ],
+      "reference": "branding/generated-on-dark.png",
+      "path": "branding/generated-on-dark-v2-20261020.png",
+      "sha256": "78a9c0a34a0fa085dd476f6acdb581c977e117608cb96ecbbef81e6dc389ae52",
+      "nativeDimensions": {
+        "width": 2022,
+        "height": 778
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-836a6b43-13a9-4ca0-9cf1-883cb10359dd",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand. Preserve exactly this ADMIL CARS logo's A-emblem shape, diagonal stripe, two-line lettering ADMIL above CARS, typography, width and placement. Only repair dark-background colors. Entire logo must use opaque flat light rose ink: replace white and navy with dusty light pink #eeb9cd, and existing burgundy accents with light rose #e7aac1. This is the existing burgundy brand's pale surface variant. No white pixels or black outlines, no texture or gradients. Keep exact lettering A D M I L (one I only) and C A R S. Render clean solid shapes, smooth edges and open transparent counters on a fully transparent canvas; no background, halo, isolated dots or other content. Keep the silhouette and layout identical. This is an independent proposal, not dealer-approved.",
+      "createdAt": "2026-10-20T19:48:59.266Z",
+      "derivation": "Actual built-in imagegen edit; raw returned PNG copied byte-for-byte, no recolour/filter/alpha cleanup applied."
+    },
+    {
+      "roles": [
+        "markOnDark"
+      ],
+      "reference": "branding/generated-mark-on-dark.png",
+      "path": "branding/generated-mark-on-dark-v2-20261020.png",
+      "sha256": "eee185f68ce19cb78cef56b2accbce6202edbd11c6d2bafdc31f47588964d617",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-26262308-4025-4ec5-92d8-7fa88b37713e",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand. Exact recolour of supplied Admil Cars angular A compact emblem; preserve the original silhouette, diagonal stripe, inner triangular cutout and proportions. Create the dark/red-surface variant using only TWO very light rose-pink fills: main A body solid #f2cadd and diagonal stripe solid #ebbed1. Do not retain any dark navy, burgundy, white or black pixels/outlines. The stripe and body must BOTH be pale, filled and legible on red. Keep open negative spaces transparent. Clean simple smooth flat shapes on genuinely transparent background, generous square canvas padding, no words, no added shapes, background, texture, gradient, speckles, noise, glow or shadow. Independent proposal, not dealer approved.",
+      "createdAt": "2026-10-20T19:48:59.266Z",
+      "derivation": "Actual built-in imagegen edit; raw returned PNG copied byte-for-byte, no recolour/filter/alpha cleanup applied."
+    }
+  ],
+  "sourceHistory": [
+    {
+      "reference": "branding/source-before-contrast-repair-20261020-ff1aa89d5d0713ef.json",
+      "sha256": "ff1aa89d5d0713ef686bc06454695d259056ca87ca49b78d6c355148b59a1486",
+      "retainedAt": "2026-10-20T19:48:59.266Z",
+      "reason": "Exact source provenance before targeted contrast repair"
     }
   ]
 }

@@ -2451,6 +2451,46 @@
       "sourceRepository": "darkapoparka/cars",
       "sourceCommit": "10add42ed89b1dfdc08436a78b7fb83fbee46777",
       "sourcePath": "dealers/best-cars-exporter-dxb"
+    },
+    {
+      "slug": "billion-auto",
+      "name": "Billion Auto",
+      "path": "dealers/billion-auto",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "source-present",
+      "reviewState": "not-claimed",
+      "leadId": "ae-dubai-billion-auto",
+      "sourceFormat": "dealer-pack",
+      "sourceRepository": "darkapoparka/cars",
+      "sourceCommit": "27026835389c4c683a7245afb4bd415ced447ed4",
+      "sourcePath": "dealers/billion-auto"
+    },
+    {
+      "slug": "elena-used-cars",
+      "name": "Elena Used Cars",
+      "path": "dealers/elena-used-cars",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "source-present",
+      "reviewState": "not-claimed",
+      "leadId": "ae-dubai-elena-used-cars",
+      "sourceFormat": "dealer-pack",
+      "sourceRepository": "darkapoparka/cars",
+      "sourceCommit": "27026835389c4c683a7245afb4bd415ced447ed4",
+      "sourcePath": "dealers/elena-used-cars"
     }
   ],
   "campaignCandidatesWithoutFolders": [

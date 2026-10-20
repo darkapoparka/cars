@@ -1,0 +1,181 @@
+{
+  "schemaVersion": 1,
+  "dealer": "bury-fairfield-car-centre",
+  "dealerId": "gb-bury-fairfield-car-centre",
+  "status": "reviewed",
+  "realLogoFirst": true,
+  "creationMethod": "imagegen-proposal",
+  "logoKind": "proposal",
+  "dealerApproved": false,
+  "approvalStatus": "independent-proposal-not-dealer-approved",
+  "observedAt": "2026-10-19",
+  "sourceLogoUrl": null,
+  "researchConclusion": "No usable real logo was obtained in the bounded public profile, catalogue and available source checks. This is an independent proposal and is not presented as the dealer’s established identity.",
+  "checkedSources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/M-Kars?menu=1",
+      "observedAt": "2026-10-19",
+      "result": "Public dealer identity, current advertised vehicles and available brand artwork reviewed."
+    },
+    {
+      "url": "https://www.cazoo.co.uk/dealers/fairfield-car-centre-27803/",
+      "observedAt": "2026-10-19T17:39:44.861401Z",
+      "result": "Public profile or business source checked; unsupported claims and personal-looking contacts were excluded."
+    },
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/M-Kars?aboutUs=&expandOpeningHours=1&expandAboutUs=1",
+      "observedAt": "2026-10-19T17:39:46.911210Z",
+      "result": "Public profile or business source checked; unsupported claims and personal-looking contacts were excluded."
+    },
+    {
+      "url": "https://cdn.autoexposure.co.uk/motorscdn/motors/dealer-images/27803/motors-car-details-logo.jpg",
+      "observedAt": "2026-10-19",
+      "result": "The read operation timed out"
+    }
+  ],
+  "originals": [],
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "id": "exec-0d4a5278-55f4-45e2-8b9e-46f00a514010",
+    "modelVersion": null,
+    "prompt": "Create ONE finished transparent horizontal UK dealership logo proposal with exact text FAIRFIELD on the first line and CAR CENTRE. A bold original F monogram in a minimal arch outline, generous negative space; sophisticated sturdy sans FAIRFIELD with CAR CENTRE below. Isolated compact icon at FAR LEFT occupies about 25 percent width; wordmark to right occupies 65 percent; ample transparent gap separates icon and wordmark so icon can be cropped alone. Flat #233346 ink fills every letter and icon, surrounded by a crisp visible SOLID WHITE KEYLINE around every outside edge and letter counter. White keyline is a permanent part of this dual-contrast logo, making it readable on white, charcoal and red backgrounds. Deep ink with white border only, absolutely no background rectangle or plaque. Clean premium vector-style design, balanced professional spacing, strong legibility, no tagline, no city, no personal name other than the exact trading name. No gradient, texture, grunge, distress, glow, shadows, mockup or vehicles. Transparent alpha with ample empty margins on a 3:1 wide canvas. Only one design, not a sheet of options."
+  },
+  "generationReferences": [],
+  "workingLogoPath": "branding/generated-master.png",
+  "usageStatus": "public-preview-only",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T18:56:42.959980Z",
+    "master": {
+      "path": "branding/generated-master.png",
+      "sha256": "0d54622dbfc0b807b8c53eecd5ac0349aaae3a5feba89aa281e88aedef354c49",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-0d4a5278-55f4-45e2-8b9e-46f00a514010",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "8a6773ea7ccd6fa54e400f3d658621e2ed70dd0c8a21443abec19184d188e730",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-0d4a5278-55f4-45e2-8b9e-46f00a514010",
+        "modelVersion": null
+      },
+      "derivation": {
+        "operation": "rectangular-crop-without-recolouring",
+        "sourcePath": "branding/generated-master.png",
+        "sourceSha256": "0d54622dbfc0b807b8c53eecd5ac0349aaae3a5feba89aa281e88aedef354c49",
+        "bounds": {
+          "left": 0,
+          "top": 0,
+          "width": 673,
+          "height": 724
+        },
+        "reason": "Isolate the separately generated compact icon; all retained pixels come from the named master generation."
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-on-dark.png",
+      "sha256": "6d3751b7bb80a6da18f124e3a4394d86b02c9496c744cb4a03128abc4f1b48db",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-db6e8c2c-ccd5-4855-ae93-9088c599960b",
+        "modelVersion": null
+      },
+      "derivation": {
+        "operation": "rectangular-crop-without-recolouring",
+        "sourcePath": "branding/generated-on-dark.png",
+        "sourceSha256": "d09fb81fa0f2c51bec1f4d1b8d611caf7bf631cd476fe27a9901d6f03c951497",
+        "bounds": {
+          "left": 0,
+          "top": 0,
+          "width": 673,
+          "height": 724
+        },
+        "reason": "Isolate the separately generated compact icon; all retained pixels come from the named master generation."
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-master.png",
+        "sha256": "0d54622dbfc0b807b8c53eecd5ac0349aaae3a5feba89aa281e88aedef354c49",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-0d4a5278-55f4-45e2-8b9e-46f00a514010",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "d09fb81fa0f2c51bec1f4d1b8d611caf7bf631cd476fe27a9901d6f03c951497",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-db6e8c2c-ccd5-4855-ae93-9088c599960b",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "d09fb81fa0f2c51bec1f4d1b8d611caf7bf631cd476fe27a9901d6f03c951497",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-db6e8c2c-ccd5-4855-ae93-9088c599960b",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113",
+          "#101820"
+        ],
+        "onAccent": [
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ]
+      },
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "notes": "Visually reviewed at 120px and 180px wordmark widths on all six listed existing template backgrounds. Correct trading-name spelling, recognisable motif, sufficient contrast and transparent backgrounds verified. Genuine pale-silver generated variants preserve solid fills on dark/accent surfaces where needed. Template palettes and composition are unchanged. No dealer approval is claimed."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "widths": [
+        32,
+        64,
+        96
+      ],
+      "notes": "Visually reviewed at 32px, 64px and 96px on all six existing template backgrounds. The compact symbol remains recognisable without the full wordmark. Separately generated compact symbols replace overlapping text fragments for Thornton Motors, Yorkshire Car Company and Auto Club. No dealer approval is claimed."
+    },
+    "compactMarkStatus": "independent-proposal-not-dealer-approved"
+  },
+  "generationVariants": [
+    {
+      "role": "onDark-and-onAccent",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-db6e8c2c-ccd5-4855-ae93-9088c599960b",
+        "modelVersion": null
+      },
+      "prompt": "Edit this exact attached dealership logo into its strong DARK-BACKGROUND VARIANT. Preserve exact geometry, icon, letters, wordmark spelling, line arrangement, proportions and spacing. Change ONLY the dark/navy interior ink of letters and compact icon strokes to SOLID OPAQUE PALE SILVER #d9e2ec. Retain any lime-green colour accent unchanged. Keep a strong smooth DARK CHARCOAL outer contour around every silver-filled form and the existing thin white outer keyline. Solid silver-filled letters, NEVER just hollow thin outline letters. Every pale silver shape must be uninterrupted flat opaque ink, no holes except the correct transparent counters. Background and gaps remain completely transparent. No speckles, missing patches, distress, texture, gradient, 3D, metallic lighting, glow, shadows, rectangle, extra text or mockup. One exact original horizontal logo with clean solid pale silver inside dark outlines, clear at small sizes on charcoal and red.",
+      "reference": {
+        "path": "branding/generated-master.png",
+        "sha256": "0d54622dbfc0b807b8c53eecd5ac0349aaae3a5feba89aa281e88aedef354c49",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-0d4a5278-55f4-45e2-8b9e-46f00a514010",
+          "modelVersion": null
+        }
+      }
+    }
+  ]
+}

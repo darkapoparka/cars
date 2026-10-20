@@ -29,7 +29,7 @@
     "hostedApproval": false,
     "ownerAcceptance": false
   },
-  "note": "This record is source preparation only. Native qualification, durable deployment receipts, public checks and runtime observations are separate. The containing Git commit authenticates these source inputs.",
+  "note": "Historical source preparation at the exact recorded checkpoint. Later artwork/evidence corrections retain separate before/after bindings. Native qualification, durable deployment receipts, public checks and runtime observations remain separate.",
   "packs": [
     {
       "slug": "best-wheels-specialized-vehicles",
@@ -1309,5 +1309,6 @@
       "files": 24,
       "bytes": 1984881
     }
-  ]
+  ],
+  "sourceCheckpoint": "f73c8e4b258653d1cee9c29d161e41774cfe6fb8"
 }

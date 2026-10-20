@@ -22,7 +22,7 @@ Vercel deploys the dedicated repository. A local edit or folder move does not up
 
 ## Registered public dealer projects
 
-The registry contains 129 dealer public aliases below. These rows are generated from ../docs/DEPLOYMENT-INVENTORY.json; they are a source-location guide, not a fresh visual acceptance report.
+The registry contains 131 dealer public aliases below. These rows are generated from ../docs/DEPLOYMENT-INVENTORY.json; they are a source-location guide, not a fresh visual acceptance report.
 
 | Dealer / source folder | Source ownership | Published source | Hosting project / Worker | Public website |
 | --- | --- | --- | --- | --- |
@@ -50,6 +50,7 @@ The registry contains 129 dealer public aliases below. These rows are generated 
 | Not recorded — `bavaro-varna/` | Cars repository | [darkapoparka/cars-bavaro-varna](https://github.com/darkapoparka/cars-bavaro-varna) | `Not recorded` | [bavaro-varna.webpreviews.site](https://bavaro-varna.webpreviews.site/) |
 | Best Cars Exporter DXB — `dealers/best-cars-exporter-dxb/` | Cars dealer pack | [darkapoparka/cars @ 10add42ed89b](https://github.com/darkapoparka/cars/tree/10add42ed89b1dfdc08436a78b7fb83fbee46777/dealers/best-cars-exporter-dxb/) | `cars-best-cars-exporter-dxb` | [best-cars-exporter-dxb.webpreviews.site](https://best-cars-exporter-dxb.webpreviews.site/) |
 | Not recorded — `biemaauto-varna/` | Cars repository | [darkapoparka/cars-biemaauto-varna](https://github.com/darkapoparka/cars-biemaauto-varna) | `Not recorded` | [biemaauto-varna.webpreviews.site](https://biemaauto-varna.webpreviews.site/) |
+| Billion Auto — `dealers/billion-auto/` | Cars dealer pack | [darkapoparka/cars @ 27026835389c](https://github.com/darkapoparka/cars/tree/27026835389c4c683a7245afb4bd415ced447ed4/dealers/billion-auto/) | `cars-billion-auto` | [billion-auto.webpreviews.site](https://billion-auto.webpreviews.site/) |
 | Square One Motors — `birmingham-square-one-motors/` | Cars repository | [darkapoparka/cars-uk-birmingham-square-one-motors](https://github.com/darkapoparka/cars-uk-birmingham-square-one-motors) | `Not recorded` | [birmingham-square-one-motors.webpreviews.site](https://birmingham-square-one-motors.webpreviews.site/) |
 | Trade Car Sales — `birmingham-trade-car-sales-grasmere/` | Cars repository | [darkapoparka/cars-uk-birmingham-trade-car-sales-grasmere](https://github.com/darkapoparka/cars-uk-birmingham-trade-car-sales-grasmere) | `Not recorded` | [birmingham-trade-car-sales-grasmere.webpreviews.site](https://birmingham-trade-car-sales-grasmere.webpreviews.site/) |
 | Not recorded — `bora-car-varna/` | Cars repository | [darkapoparka/cars-bora-car-varna](https://github.com/darkapoparka/cars-bora-car-varna) | `Not recorded` | [bora-car-varna.webpreviews.site](https://bora-car-varna.webpreviews.site/) |
@@ -73,6 +74,7 @@ The registry contains 129 dealer public aliases below. These rows are generated 
 | Not recorded — `ecodrive-varna/` | Cars repository | [darkapoparka/cars-ecodrive-varna](https://github.com/darkapoparka/cars-ecodrive-varna) | `Not recorded` | [ecodrive-varna.webpreviews.site](https://ecodrive-varna.webpreviews.site/) |
 | Not recorded — `electricauto-varna/` | Cars repository | [darkapoparka/cars-electricauto-varna](https://github.com/darkapoparka/cars-electricauto-varna) | `Not recorded` | [electricauto-varna.webpreviews.site](https://electricauto-varna.webpreviews.site/) |
 | Not recorded — `elegantcar-varna/` | Cars repository | [darkapoparka/cars-elegantcar-varna](https://github.com/darkapoparka/cars-elegantcar-varna) | `Not recorded` | [elegantcar-varna.webpreviews.site](https://elegantcar-varna.webpreviews.site/) |
+| Elena Used Cars — `dealers/elena-used-cars/` | Cars dealer pack | [darkapoparka/cars @ 27026835389c](https://github.com/darkapoparka/cars/tree/27026835389c4c683a7245afb4bd415ced447ed4/dealers/elena-used-cars/) | `cars-elena-used-cars` | [elena-used-cars.webpreviews.site](https://elena-used-cars.webpreviews.site/) |
 | Not recorded — `elexiscars-varna/` | Cars repository | [darkapoparka/cars-elexiscars-varna](https://github.com/darkapoparka/cars-elexiscars-varna) | `Not recorded` | [elexiscars-varna.webpreviews.site](https://elexiscars-varna.webpreviews.site/) |
 | eliqauto — `eliqauto/` | Cars repository | [darkapoparka/cars-eliqauto](https://github.com/darkapoparka/cars-eliqauto) | `cars-eliqauto` | [cars-eliqauto.vercel.app](https://cars-eliqauto.vercel.app/) |
 | ELIT AUTO IMPORT EXPORT — `elit-auto-import/` | Cars repository | [darkapoparka/cars-elitautoimport](https://github.com/darkapoparka/cars-elitautoimport) | `cars-elitautoimport` | [cars-elitautoimport.vercel.app](https://cars-elitautoimport.vercel.app/) |

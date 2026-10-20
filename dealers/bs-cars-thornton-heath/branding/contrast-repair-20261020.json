@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-targeted-logo-contrast-repair",
+  "dealer": "bs-cars-thornton-heath",
+  "createdAt": "2026-10-20T19:50:32.161Z",
+  "previousPackDigest": "09369860c5f5b0ccf1354b1faccf1ea6ffa425a76a06d8c90e76b37bef35aaac",
+  "previousSource": {
+    "path": "branding/source-before-contrast-repair-20261020-3d519c875fe0b182.json",
+    "sha256": "3d519c875fe0b1829349b311383b84d56787edf718265dfb10c9679b03a88901"
+  },
+  "replacements": [
+    {
+      "roles": [
+        "markOnDark"
+      ],
+      "reference": "branding/generated-mark-on-dark.png",
+      "path": "branding/generated-mark-on-dark-v2-20261020.png",
+      "sha256": "c7c87e31419e38e6f13696fb7e457df3d3c2318dabaff32025407352e7f8ff3d",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-329cefd5-9c1a-4367-88f9-50fc4b531f86",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand. Faithful color surface edit of the supplied existing B S interlocked monogram. Preserve exact B and S letter geometry, overlap, rounded corners, counters and proportions. Make a clean compact variant for a charcoal background: B should be flat solid pale sage #c4e6d6 and S flat solid light mint #9ed6bc, both light tints of this dealer's existing forest green. No dark or white outlines; do not change the shapes. Keep true transparent background including the counters. Uniform opaque flat fills, clean antialiasing, no gradients, no texture, no paper grain, noise, speckles, shadows, glow, badge, background or extra text. Keep the whole mark centered with generous square canvas padding. This is an independent preview identity, not dealer approved.",
+      "createdAt": "2026-10-20T19:50:32.161Z",
+      "derivation": "Actual built-in imagegen edit; raw returned PNG copied byte-for-byte, no recolour/filter/alpha cleanup applied."
+    }
+  ],
+  "unchanged": "All original raw artwork, facts, stock, media, source evidence, master/onLight/mark/favicon inputs and template palettes are preserved.",
+  "visualReview": {
+    "wordmarkWidths": [
+      120,
+      180
+    ],
+    "compactWidths": [
+      32,
+      64
+    ],
+    "backgrounds": [
+      "#ffffff",
+      "#111113",
+      "#101820",
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ],
+    "identityAndSpelling": "agent-visual-review",
+    "dealerApproval": false,
+    "nativeApproval": false,
+    "hostedApproval": false
+  },
+  "toolPackage": "L:/CODEX/cars/templates/karento-best/package.json",
+  "filtersApplied": false,
+  "thresholdsChanged": false,
+  "providerWrites": 0
+}

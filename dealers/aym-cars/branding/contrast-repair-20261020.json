@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-targeted-logo-contrast-repair",
+  "dealer": "aym-cars",
+  "createdAt": "2026-10-20T19:50:21.905Z",
+  "previousPackDigest": "fc78061f9ba1505fb85c0e0d7491ec24069a3e9a3b4d8d33eb24aab1ee1e0496",
+  "previousSource": {
+    "path": "branding/source-before-contrast-repair-20261020-d96c61a0b7599c9a.json",
+    "sha256": "d96c61a0b7599c9a0688cb1b6dcd454f3cc07e5dc7b97e458ba79e4fd76bab51"
+  },
+  "replacements": [
+    {
+      "roles": [
+        "onDark",
+        "onAccent"
+      ],
+      "reference": "branding/generated-on-dark.png",
+      "path": "branding/generated-on-dark-v2-20261020.png",
+      "sha256": "ab68d687199ec00dd9e0454afcf67b1135a66f67918efdec2be0483b819476a8",
+      "nativeDimensions": {
+        "width": 2172,
+        "height": 724
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-670f676a-d771-46c7-946e-fa48bf9fedb2",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand. Faithful single-color surface variant of the supplied AYM CARS identity. Preserve exactly the connected angular AYM emblem on the left and the AYM CARS lettering on the right, their shape, spacing, scale and arrangement. Every existing black shape becomes one uniform opaque light powder blue #accbe6, a pale tint of the existing navy surface artwork. Do not draw any white pixels, navy borders, or background. Clean smooth flat solid shapes, no texture, grain, gradients, speckles, extra marks, shadow or glow. Preserve all transparent gaps/counters and exact typography. Truly transparent surrounding canvas. Exact business text: AYM CARS. Independent proposal, not dealer approved.",
+      "createdAt": "2026-10-20T19:50:21.905Z",
+      "derivation": "Actual built-in imagegen edit; raw returned PNG copied byte-for-byte, no recolour/filter/alpha cleanup applied."
+    },
+    {
+      "roles": [
+        "markOnDark"
+      ],
+      "reference": "branding/generated-mark-on-dark.png",
+      "path": "branding/generated-mark-on-dark-v2-20261020.png",
+      "sha256": "451363a63ee1d60f7f70a78ff9ecb408c62d23d1c92dec1a7f674b2420cc693a",
+      "nativeDimensions": {
+        "width": 1407,
+        "height": 1118
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-ab422523-1198-4bc6-bcdb-c98f44951493",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand. Edit the supplied connected AYM compact monogram, preserving its exact angular A Y M geometry, proportions, counters and spacing. Change all light and dark shape fills to a single uniform solid powder blue #accbe6, a light tint of this reference's navy. Remove the heavy dark/navy border entirely; no white border or white fill. Preserve the open transparent gaps between the diagonal strokes. Flat opaque clean smooth filled artwork, not hollow outlined text. Truly transparent background and generous square canvas padding. No wordmark or extra letters, no new shape, gradient, shading, noise, speckles, distress, glow or shadow. The same original AYM identity must be clearly readable at32px on charcoal.",
+      "createdAt": "2026-10-20T19:50:21.905Z",
+      "derivation": "Actual built-in imagegen edit; raw returned PNG copied byte-for-byte, no recolour/filter/alpha cleanup applied."
+    }
+  ],
+  "unchanged": "All original raw artwork, facts, stock, media, source evidence, master/onLight/mark/favicon inputs and template palettes are preserved.",
+  "visualReview": {
+    "wordmarkWidths": [
+      120,
+      180
+    ],
+    "compactWidths": [
+      32,
+      64
+    ],
+    "backgrounds": [
+      "#ffffff",
+      "#111113",
+      "#101820",
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ],
+    "identityAndSpelling": "agent-visual-review",
+    "dealerApproval": false,
+    "nativeApproval": false,
+    "hostedApproval": false
+  },
+  "toolPackage": "L:/CODEX/cars/templates/karento-best/package.json",
+  "filtersApplied": false,
+  "thresholdsChanged": false,
+  "providerWrites": 0
+}

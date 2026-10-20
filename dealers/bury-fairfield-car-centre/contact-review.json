@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-public-business-contact-review",
+  "dealer": "bury-fairfield-car-centre",
+  "checks": [
+    {
+      "field": "business.email",
+      "valueSha256": "4c40aeb84a21ed3ff4e582c94c4f9f9f0005c6a97dabe2ef324a26d7013cc7d9",
+      "classification": "public-business",
+      "reviewed": true,
+      "reviewKind": "source-evidence",
+      "sourceUrl": "https://showroom.ebaymotorspro.co.uk/M-Kars?menu=1",
+      "observedAt": "2026-10-20T19:34:37.991Z"
+    }
+  ]
+}

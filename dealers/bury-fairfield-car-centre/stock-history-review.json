@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "dealer": "bury-fairfield-car-centre",
+  "reviewedAt": "2026-10-19T20:10:55.129003Z",
+  "scope": "Complete public advert descriptions and available vehicle-history panels for the selected stock samples. No dealer contact or independent vehicle inspection.",
+  "records": [
+    {
+      "listingId": "vehicle-1",
+      "sourceUrl": "https://www.ebay.co.uk/itm/307227911147",
+      "observedAt": "2026-10-19T20:04:01.817725Z",
+      "httpStatus": 200,
+      "pageSha256": "0e09900cfa5516a873dea01817e70c2b7174414873d311a2dd3f93556e5b3731",
+      "descriptionUrl": "https://itm.ebaydesc.com/itmdesc/307227911147?t=1791835753000&category=18206&seller=mahhas-5386&excSoj=1&ver=1&excTrk=1&lsite=3&ittenable=false&domain=ebay.com&descgauge=1&cspheader=1&oneClk=2&secureDesc=1&lang=en",
+      "descriptionSha256": "138de36f389d98ed0ad939cf9b087e183999dafc797cb71b236ff870edd634b5",
+      "embeddedHistoryChecked": false,
+      "descriptionResult": "full-public-advert-reviewed",
+      "retained": true,
+      "finding": "No additional material condition or history disclosure identified in the reviewed public advert; this is not an independent vehicle inspection or history certificate."
+    },
+    {
+      "listingId": "vehicle-2",
+      "sourceUrl": "https://www.ebay.co.uk/itm/307216918410",
+      "observedAt": "2026-10-19T20:04:02.090088Z",
+      "httpStatus": 200,
+      "pageSha256": "20dcd3b2254d1dbe5671071a7b28b477aafb18daedca48b9d23d370200b4a22e",
+      "descriptionUrl": "https://itm.ebaydesc.com/itmdesc/307216918410?t=1791459728000&category=29748&seller=mahhas-5386&excSoj=1&ver=1&excTrk=1&lsite=3&ittenable=false&domain=ebay.com&descgauge=1&cspheader=1&oneClk=2&secureDesc=1&lang=en",
+      "descriptionSha256": "141b7cd341b8534a42a4e65ff8c297fd1d0d6add8f7f1fcd66fae95684d30100",
+      "embeddedHistoryChecked": false,
+      "descriptionResult": "full-public-advert-reviewed",
+      "retained": true,
+      "finding": "No additional material condition or history disclosure identified in the reviewed public advert; this is not an independent vehicle inspection or history certificate."
+    },
+    {
+      "listingId": "vehicle-3",
+      "sourceUrl": "https://www.ebay.co.uk/itm/307220727436",
+      "observedAt": "2026-10-19T20:04:02.178762Z",
+      "httpStatus": 200,
+      "pageSha256": "598c45ec22a34248673e2ad0d37141462e76ca8a9e3d664a518f1ca1f8e224bb",
+      "descriptionUrl": "https://itm.ebaydesc.com/itmdesc/307220727436?t=1791453690000&category=9855&seller=mahhas-5386&excSoj=1&ver=1&excTrk=1&lsite=3&ittenable=false&domain=ebay.com&descgauge=1&cspheader=1&oneClk=2&secureDesc=1&lang=en",
+      "descriptionSha256": "cf9fa093ffa61260c6cd51226274f8228b5a2a595470a400a8f3eec0bb1047d6",
+      "embeddedHistoryChecked": false,
+      "descriptionResult": "full-public-advert-reviewed",
+      "retained": true,
+      "finding": "No additional material condition or history disclosure identified in the reviewed public advert; this is not an independent vehicle inspection or history certificate."
+    }
+  ]
+}

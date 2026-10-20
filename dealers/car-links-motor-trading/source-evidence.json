@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "dealer": "car-links-motor-trading",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-car-links-motor-trading-3223",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-car-links-motor-trading-3223",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "business-name",
+        "public-dealer-contact",
+        "public-location-if-shown",
+        "dated-stock-sample"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "researchedAt": "2026-10-19",
+  "catalogueResponseSha256": "6b0ca95e583a76b5536fb08c895b873007a13901abf9917e5e54d9e2a0ed4da2",
+  "stockSources": [
+    {
+      "listingUrl": "https://www.dubicars.com/2026-byd-leopard-7-1014161.html",
+      "catalogueUrl": "https://www.dubicars.com/dealers/dubai-car-links-motor-trading-3223",
+      "imageUrl": "https://www.dubicars.com/images/5338e6/650x380/car-links-motor-trading/873b8ff9-262b-48f4-9a61-2121d336aee8.jpeg",
+      "observedAt": "2026-10-19",
+      "imageSourceSha256": "6d5c3b859ecd3a905980a6cffdd18b85a6c6f618708531700bb367fd879eb62b",
+      "retainedPath": "dealer-stock/stock-1.webp",
+      "retainedSha256": "455987dea90b9bb9fd8bc02b06a3c3b360cf2504c6e1ff61c67f286aa94101c1",
+      "originalDimensions": [
+        650,
+        488
+      ],
+      "retainedDimensions": [
+        650,
+        488
+      ],
+      "retainedBytes": 51942,
+      "transformation": "Proportional downscale only if needed to maximum 1280 pixels; WebP quality 80; no visual content edits."
+    },
+    {
+      "listingUrl": "https://www.dubicars.com/2025-byd-song-plus-981251.html",
+      "catalogueUrl": "https://www.dubicars.com/dealers/dubai-car-links-motor-trading-3223",
+      "imageUrl": "https://www.dubicars.com/images/9a8ac6/650x380/car-links-motor-trading/3a9bd640-10d9-4c99-923c-7755c019f8b2.jpeg",
+      "observedAt": "2026-10-19",
+      "imageSourceSha256": "65bc9a318a5b58750bd3eff963e0a9af5b7dbfc290332b083df0b9109a79ddf8",
+      "retainedPath": "dealer-stock/stock-2.webp",
+      "retainedSha256": "20562896d82aebe82b9918674229dc8ced381f30f660a8e42604af211ff956ae",
+      "originalDimensions": [
+        650,
+        317
+      ],
+      "retainedDimensions": [
+        650,
+        317
+      ],
+      "retainedBytes": 40582,
+      "transformation": "Proportional downscale only if needed to maximum 1280 pixels; WebP quality 80; no visual content edits."
+    },
+    {
+      "listingUrl": "https://www.dubicars.com/2026-kia-sportage-991249.html",
+      "catalogueUrl": "https://www.dubicars.com/dealers/dubai-car-links-motor-trading-3223",
+      "imageUrl": "https://www.dubicars.com/images/6a5907/650x380/car-links-motor-trading/b63edf7b-804e-4ca0-87a4-15d9eebf1015.jpeg",
+      "observedAt": "2026-10-19",
+      "imageSourceSha256": "7ee6364b2ba66c2cee85922dc7869f3889b4da3248de31ea94d40db2e94b0b28",
+      "retainedPath": "dealer-stock/stock-3.webp",
+      "retainedSha256": "ddcceac20f209c638aed8f98353db1c830bcd7e26559869d7e51e55ea0c4cfec",
+      "originalDimensions": [
+        650,
+        467
+      ],
+      "retainedDimensions": [
+        650,
+        467
+      ],
+      "retainedBytes": 36980,
+      "transformation": "Proportional downscale only if needed to maximum 1280 pixels; WebP quality 80; no visual content edits."
+    }
+  ],
+  "omissions": [
+    "Personal-looking or unverified emails omitted; no private contact fields retained.",
+    "Unknown official website, exact address or hours left empty; marketplace-wide defaults not imported.",
+    "BYD Leopard 7 model spelling follows the visible listing title; a trailing -1 in the catalogue schema identifier is not part of the model name."
+  ]
+}

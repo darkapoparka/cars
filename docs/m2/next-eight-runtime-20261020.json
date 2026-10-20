@@ -1,0 +1,149 @@
+{
+  "schemaVersion": 1,
+  "type": "cars-next-eight-runtime-evidence",
+  "recordedAt": "2026-10-20T19:50:55.512Z",
+  "expectedCohortSize": 8,
+  "recordCount": 2,
+  "cohortComplete": false,
+  "sourceRunId": 39477427789,
+  "sourceCommit": "27026835389c4c683a7245afb4bd415ced447ed4",
+  "executorRunId": 39482618268,
+  "executorCommit": "6b02415bef8e2c6a92e2dd8658655d5aa81f682d",
+  "actualOwner": "github:39482618268",
+  "queueSnapshot": {
+    "revision": "fba23d1d60d5aa05665b3c57fe59fad49f56c82a",
+    "blob": "fcfface7e3cf97fe1a6886c8d4e0e579531fde3d",
+    "sha256": "6a8dad7c2e11e8f64788bbcd550c53ed877a91c3e5ed957b1749cae447d462a2",
+    "generation": 113,
+    "bytes": 133356
+  },
+  "metricsSource": "Authenticated existing Cloudflare connector; unchanged maintained packMetricsRequest/readPackMetrics/assessPackMetrics",
+  "samplingScope": "Query filters exact Worker script and stated time window. It is not version-filtered; receipt Worker/version identifies deployment provenance. Values are sampled maximum group P99 CPU/memory, not exact peaks, whole-window quantiles or sustained-load qualification.",
+  "windowConvention": "Each receipt deployedAt minus 60 seconds through its exact hosted finishedAt; no broader after-deployment window substituted.",
+  "evidenceCollectionProviderWrites": 0,
+  "queueWrites": 0,
+  "reports": [
+    {
+      "slug": "elena-used-cars",
+      "publicOrigin": "https://elena-used-cars.webpreviews.site",
+      "requestId": "63e572ef57ebaa422bb87536393493a6b0ae3f50d8f1567e19f7d677029b6efa",
+      "receiptSha256": "b6f5972a94159e141f24131cdc4f485859f19c0516843a5695a82dc55ac39929",
+      "workerId": "6584bbe5483543ef97e0d8e4e4541e7d",
+      "versionId": "8923ee64-d9c0-4b3b-ae2d-d83732d7a279",
+      "sourceCommit": "27026835389c4c683a7245afb4bd415ced447ed4",
+      "packDigest": "2c1e5c57668310836f433bbe4d74f5365982806d09e25527b91576b6bab424de",
+      "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+      "releaseDigest": "2920143c97546de03d5e7c7c9f572fb87cee2b088cf48fbba40d575c73cfc9c3",
+      "outputDigest": "ed0f33c8625657876886d5fbf539465fbcf9acf484c2960aa233b9c2de8b69e6",
+      "deployedAt": "2026-10-20T19:30:46.825Z",
+      "hosted": {
+        "verified": true,
+        "finishedAt": "2026-10-20T19:31:52.896Z",
+        "fullReportSha256": "e469efed284eaf77505dd996c03de1137136346a48fdbe529a49e92521ff2147",
+        "summarySha256": "83fe0a9aa4a36111ccecc7966efd595921bd748518e6a17a40d5b17853ffb621",
+        "designsPassed": 6,
+        "getAndHead200": true,
+        "identityNameLogoPhonePassed": true,
+        "sixChoicesAndFabPassed": true,
+        "foreignIdentityCount": 0,
+        "width": 390,
+        "language": "en"
+      },
+      "runtime": {
+        "observedAt": "2026-10-20T19:33:25.267Z",
+        "window": {
+          "start": "2026-10-20T19:29:46.825Z",
+          "end": "2026-10-20T19:31:52.896Z"
+        },
+        "status": "observed-without-errors",
+        "withinLimits": true,
+        "requests": 73,
+        "errors": 0,
+        "startupTimeMs": 74,
+        "cpuLimitMs": 30000,
+        "cpuLimitSource": "provider-active-version-readback",
+        "maxP99CpuMs": 390.235,
+        "maxP99MemoryMiB": 109.89488983154297,
+        "limitChecks": {
+          "startup": {
+            "withinLimit": true,
+            "observedMs": 74,
+            "limitMs": 1000
+          },
+          "cpu": {
+            "withinLimit": true,
+            "observedMaxGroupP99Ms": 390.235,
+            "limitMs": 30000
+          },
+          "memory": {
+            "withinLimit": true,
+            "observedMaxGroupP99MiB": 109.89488983154297,
+            "limitMiB": 128
+          }
+        }
+      },
+      "ownerAccepted": false
+    },
+    {
+      "slug": "billion-auto",
+      "publicOrigin": "https://billion-auto.webpreviews.site",
+      "requestId": "e3308477f359ccce77b965a00f02b2197b5776ded41b55759a7ef450a0f46916",
+      "receiptSha256": "353b013aa1f995f1aae8de23e908d45889ef808be92df75d9c621958b79d508a",
+      "workerId": "c4822a0207a349c1bbd4188cc42d2cba",
+      "versionId": "624b93e5-0854-496c-955b-a52fd876f69c",
+      "sourceCommit": "27026835389c4c683a7245afb4bd415ced447ed4",
+      "packDigest": "693725fc1682c7880fa30dd2292c787ea58911a37165ddc3872058d9869becc7",
+      "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+      "releaseDigest": "2920143c97546de03d5e7c7c9f572fb87cee2b088cf48fbba40d575c73cfc9c3",
+      "outputDigest": "2faf22fc3a64b7121f59422b723557b201bfaa5dfede7790d3c469c836c301f1",
+      "deployedAt": "2026-10-20T19:39:52.454Z",
+      "hosted": {
+        "verified": true,
+        "finishedAt": "2026-10-20T19:40:42.376Z",
+        "fullReportSha256": "e2d62eac142880d7360294c4cd6f278a4a0fc1b85f73c89ce27490d2a56ac596",
+        "summarySha256": "22b8f15d4696718d8c8dfba9f193e9942ff7f43eb060d5de9ee1c3e2ad85bd5f",
+        "designsPassed": 6,
+        "getAndHead200": true,
+        "identityNameLogoPhonePassed": true,
+        "sixChoicesAndFabPassed": true,
+        "foreignIdentityCount": 0,
+        "width": 390,
+        "language": "en"
+      },
+      "runtime": {
+        "observedAt": "2026-10-20T19:42:04.509Z",
+        "window": {
+          "start": "2026-10-20T19:38:52.454Z",
+          "end": "2026-10-20T19:40:42.376Z"
+        },
+        "status": "observed-without-errors",
+        "withinLimits": true,
+        "requests": 65,
+        "errors": 0,
+        "startupTimeMs": 73,
+        "cpuLimitMs": 30000,
+        "cpuLimitSource": "provider-active-version-readback",
+        "maxP99CpuMs": 370.71,
+        "maxP99MemoryMiB": 111.47936248779297,
+        "limitChecks": {
+          "startup": {
+            "withinLimit": true,
+            "observedMs": 73,
+            "limitMs": 1000
+          },
+          "cpu": {
+            "withinLimit": true,
+            "observedMaxGroupP99Ms": 370.71,
+            "limitMs": 30000
+          },
+          "memory": {
+            "withinLimit": true,
+            "observedMaxGroupP99MiB": 111.47936248779297,
+            "limitMiB": 128
+          }
+        }
+      },
+      "ownerAccepted": false
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "dealer": "car-haven-manchester",
+  "mode": "built-in-imagegen",
+  "independentProposal": true,
+  "dealerApproved": false,
+  "originalPackDigest": "b2ab4669f23dd6e01f314b74edb851a539c000eb8226c08a0a303f24ebed9b0f",
+  "originalSourceSha256": "c97aa4c8ea28336335efaaacc933c909c2b49e600856ad47c96db13c9cb8903b",
+  "selected": [
+    {
+      "roles": [
+        "onDark",
+        "onAccent"
+      ],
+      "filename": "contrast-on-dark-v2.png",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-3be5cad6-55bd-40fe-a802-98701ca4fcd9",
+        "referenceKind": "actual-tool-output-filename",
+        "modelVersion": null
+      },
+      "prompt": "Precise surface edit of this existing CAR HAVEN MANCHESTER logo. Preserve the exact CH circular motif, exact spelling CAR HAVEN MANCHESTER, typography, relative scale, line breaks and horizontal composition. Make all positive monogram and letter shapes a single flat very light blue-grey #d8e2ee. Remove every black/dark outline and backing stroke entirely. Keep letter holes and negative spaces truly transparent. No pure white, white keyline, chrome gradient, texture, speckles, shadow, background plate or redesign. Solid smooth uninterrupted light silhouettes with crisp clean alpha. It must read on charcoal #111113 and red #c40101. Independent proposal variant, not adopted identity.",
+      "parentReference": "branding/generated-on-dark.png",
+      "sourcePath": "branding/contrast-on-dark-v2.png",
+      "sha256": "e9d56b9a523057801bab1626a7fc208d2e98435e41cea551f24795fd0f69b24e",
+      "bytes": 500946,
+      "outputFile": "exec-3be5cad6-55bd-40fe-a802-98701ca4fcd9.png"
+    }
+  ]
+}

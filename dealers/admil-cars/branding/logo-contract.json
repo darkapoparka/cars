@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "dealer": "admil-cars",
   "reviewed": true,
-  "reviewedAt": "2026-10-19T18:56:50.060370Z",
+  "reviewedAt": "2026-10-20T19:48:59.266Z",
   "status": "independent-proposal-not-dealer-approved",
   "creationMethod": "imagegen-proposal",
   "assets": {
@@ -15,14 +15,14 @@
     "onDark": {
       "sourcePath": "branding/logo-on-dark.png",
       "publicPath": "/dealer-brand/logo-on-dark.webp",
-      "sha256": "3bf893302775651672ef8707703969c448aa252f4e283d378f5a76359fb80b44",
-      "sourceSha256": "8760e7845ba958cbca4114eaeb6ad31ed704e9b72650b753904254697f096854"
+      "sha256": "b4c13f0909456f5ef125599951f18a885678842e5b253b4b9a58b08baa0f6651",
+      "sourceSha256": "584c89235b9f08bd9a4c7db12fe14a4241cde3ffc100b253c3c380c192676f95"
     },
     "onAccent": {
       "sourcePath": "branding/logo-on-accent.png",
       "publicPath": "/dealer-brand/logo-on-accent.webp",
-      "sha256": "3bf893302775651672ef8707703969c448aa252f4e283d378f5a76359fb80b44",
-      "sourceSha256": "8760e7845ba958cbca4114eaeb6ad31ed704e9b72650b753904254697f096854"
+      "sha256": "b4c13f0909456f5ef125599951f18a885678842e5b253b4b9a58b08baa0f6651",
+      "sourceSha256": "584c89235b9f08bd9a4c7db12fe14a4241cde3ffc100b253c3c380c192676f95"
     }
   },
   "surfaceBackgrounds": {
@@ -74,23 +74,23 @@
     },
     "onDark": {
       "path": "branding/logo-on-dark.png",
-      "sha256": "8760e7845ba958cbca4114eaeb6ad31ed704e9b72650b753904254697f096854",
+      "sha256": "584c89235b9f08bd9a4c7db12fe14a4241cde3ffc100b253c3c380c192676f95",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-c1a6b122-9071-4ce5-9eec-01ebc683c647",
+        "generationId": "exec-836a6b43-13a9-4ca0-9cf1-883cb10359dd",
         "modelVersion": null
       },
-      "sourceReference": "dealers/admil-cars/branding/generated-on-dark.png"
+      "sourceReference": "dealers/admil-cars/branding/generated-on-dark-v2-20261020.png"
     },
     "onAccent": {
       "path": "branding/logo-on-accent.png",
-      "sha256": "8760e7845ba958cbca4114eaeb6ad31ed704e9b72650b753904254697f096854",
+      "sha256": "584c89235b9f08bd9a4c7db12fe14a4241cde3ffc100b253c3c380c192676f95",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-c1a6b122-9071-4ce5-9eec-01ebc683c647",
+        "generationId": "exec-836a6b43-13a9-4ca0-9cf1-883cb10359dd",
         "modelVersion": null
       },
-      "sourceReference": "dealers/admil-cars/branding/generated-on-dark.png"
+      "sourceReference": "dealers/admil-cars/branding/generated-on-dark-v2-20261020.png"
     }
   },
   "transforms": {
@@ -109,28 +109,28 @@
     },
     "onDark": {
       "operation": "crop-transparent-padding-and-resize",
-      "sourceSha256": "fbb4f625923e26a74341700cfba72217441dc6d292a721cbe79c6b56ca39cfb1",
-      "sha256": "8760e7845ba958cbca4114eaeb6ad31ed704e9b72650b753904254697f096854",
+      "sourceSha256": "78a9c0a34a0fa085dd476f6acdb581c977e117608cb96ecbbef81e6dc389ae52",
+      "sha256": "584c89235b9f08bd9a4c7db12fe14a4241cde3ffc100b253c3c380c192676f95",
       "crop": {
         "left": 0,
-        "top": 58,
+        "top": 66,
         "width": 2022,
-        "height": 611
+        "height": 595
       },
-      "sourcePath": "branding/generated-on-dark.png",
+      "sourcePath": "branding/generated-on-dark-v2-20261020.png",
       "outputPath": "branding/logo-on-dark.png"
     },
     "onAccent": {
       "operation": "crop-transparent-padding-and-resize",
-      "sourceSha256": "fbb4f625923e26a74341700cfba72217441dc6d292a721cbe79c6b56ca39cfb1",
-      "sha256": "8760e7845ba958cbca4114eaeb6ad31ed704e9b72650b753904254697f096854",
+      "sourceSha256": "78a9c0a34a0fa085dd476f6acdb581c977e117608cb96ecbbef81e6dc389ae52",
+      "sha256": "584c89235b9f08bd9a4c7db12fe14a4241cde3ffc100b253c3c380c192676f95",
       "crop": {
         "left": 0,
-        "top": 58,
+        "top": 66,
         "width": 2022,
-        "height": 611
+        "height": 595
       },
-      "sourcePath": "branding/generated-on-dark.png",
+      "sourcePath": "branding/generated-on-dark-v2-20261020.png",
       "outputPath": "branding/logo-on-accent.png"
     }
   },
@@ -147,13 +147,13 @@
     },
     "mark-on-dark.webp": {
       "path": "dealer-brand/mark-on-dark.webp",
-      "sha256": "72c0b0c6caefeec7aee5e063200ed51464096cbd63bde4a528516defaede5e38",
+      "sha256": "c61ebd2a3c3680df7bcc1f4cc82a2ba30929c18e24a1ab4ef8bca3f2a2d0c086",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-ac1aa597-b06f-4757-916d-237113151b1e",
+        "generationId": "exec-26262308-4025-4ec5-92d8-7fa88b37713e",
         "modelVersion": null
       },
-      "sourceReference": "dealers/admil-cars/branding/generated-mark.png"
+      "sourceReference": "dealers/admil-cars/branding/generated-mark-on-dark-v2-20261020.png"
     },
     "app-icon.png": {
       "path": "dealer-brand/app-icon.png",
@@ -180,17 +180,17 @@
   "originalArtworkPreserved": true,
   "visualReview": {
     "reviewed": true,
-    "reviewedAt": "2026-10-19T18:56:50.060370Z",
+    "reviewedAt": "2026-10-20T19:48:59.266Z",
     "source": "branding/source.json",
     "spelling": "agent-visual-review",
     "dealerApproval": false
   },
   "markOnDark": {
     "path": "branding/logo-mark-on-dark.png",
-    "sha256": "06e78ee1533d0a988c897cf6405395bf0d98c76a3340d9b6ba0f8566b37ed3b1",
+    "sha256": "bd7c95b3a35bd96d33cf082ed9b7c67f749680aae44a30ebd2a856c8806664f8",
     "generation": {
       "tool": "image_gen.imagegen",
-      "generationId": "exec-ac1aa597-b06f-4757-916d-237113151b1e",
+      "generationId": "exec-26262308-4025-4ec5-92d8-7fa88b37713e",
       "modelVersion": null
     }
   }

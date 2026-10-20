@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "dealer": "bury-fairfield-car-centre",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uk.json",
+    "sha256": "6cd8d365586f9a5d5131fe4b1d50baede7de91ab384a135017c25367298b07c4"
+  },
+  "publicSources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/M-Kars?menu=1",
+      "observedAt": "2026-10-19T17:36:01.580200Z",
+      "supports": [
+        "business-name",
+        "public-business-contact",
+        "business-location",
+        "current-listing-snapshot"
+      ]
+    },
+    {
+      "url": "https://www.cargurus.co.uk/Cars/m-Fairfield-Car-Centre-sp522871",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "address-conflict"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "dealerId": "gb-bury-fairfield-car-centre",
+  "observedAt": "2026-10-19T17:36:01.580200Z",
+  "primaryFetch": {
+    "url": "https://showroom.ebaymotorspro.co.uk/M-Kars?menu=1",
+    "status": 200,
+    "observedAt": "2026-10-19T17:36:01.580200Z",
+    "htmlSha256": "a9f153cb2006bf87cba31b06ad04278ed405512eb6c6f5948100b159068f9743"
+  },
+  "stockPhotos": [
+    {
+      "recordId": "vehicle-1",
+      "catalogueUrl": "https://showroom.ebaymotorspro.co.uk/M-Kars?menu=1",
+      "listingUrl": "https://www.ebay.co.uk/itm/307227911147",
+      "observedAt": "2026-10-19T17:36:01.580200Z",
+      "originalImageUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/97gAAeSwVVVqz1AR/$_57.JPG",
+      "resolvedImageUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/97gAAeSwVVVqz1AR/$_57.JPG",
+      "originalSha256": "71c1a5965acec1eb4c5281cc62cdbdbe19755b234b9592c8225b54abb15526ba",
+      "originalDimensions": [
+        1600,
+        1200
+      ],
+      "retainedPath": "dealer-stock/vehicle-1.jpg",
+      "retainedSha256": "feae829b1a11fcbc096912548c0fe2d8494a8d059c952ec624ae25fd6ee44274",
+      "retainedDimensions": [
+        1280,
+        960
+      ],
+      "retainedBytes": 199897,
+      "processing": "EXIF orientation; resize only if over 1280 pixels; JPEG compression; metadata omitted. No content alterations."
+    },
+    {
+      "recordId": "vehicle-2",
+      "catalogueUrl": "https://showroom.ebaymotorspro.co.uk/M-Kars?menu=1",
+      "listingUrl": "https://www.ebay.co.uk/itm/307216918410",
+      "observedAt": "2026-10-19T17:36:01.580200Z",
+      "originalImageUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/l6gAAeSwbAdqyg3n/$_57.JPG",
+      "resolvedImageUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/l6gAAeSwbAdqyg3n/$_57.JPG",
+      "originalSha256": "258aa67ec2e4881fe2174e852df4996ec869784a1e1bc6f92a74822ae6bf3cc9",
+      "originalDimensions": [
+        1600,
+        1200
+      ],
+      "retainedPath": "dealer-stock/vehicle-2.jpg",
+      "retainedSha256": "beb1b2d88d1b32a4917353ccdfc27866c7dddb9836d89670cb77febff723b914",
+      "retainedDimensions": [
+        1280,
+        960
+      ],
+      "retainedBytes": 183517,
+      "processing": "EXIF orientation; resize only if over 1280 pixels; JPEG compression; metadata omitted. No content alterations."
+    },
+    {
+      "recordId": "vehicle-3",
+      "catalogueUrl": "https://showroom.ebaymotorspro.co.uk/M-Kars?menu=1",
+      "listingUrl": "https://www.ebay.co.uk/itm/307220727436",
+      "observedAt": "2026-10-19T17:36:01.580200Z",
+      "originalImageUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/wAMAAeSwgD9qzgAh/$_57.JPG",
+      "resolvedImageUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/wAMAAeSwgD9qzgAh/$_57.JPG",
+      "originalSha256": "6f63ecb0e1048df7f087b73fb81d9a6c0f622d6e3bf6980f9505147a696fccbd",
+      "originalDimensions": [
+        1600,
+        1200
+      ],
+      "retainedPath": "dealer-stock/vehicle-3.jpg",
+      "retainedSha256": "06e1752981ac21a2b19b1da07eaf4bb8bfcc43d5597a6a2940e08759cb99a3ff",
+      "retainedDimensions": [
+        1280,
+        960
+      ],
+      "retainedBytes": 179315,
+      "processing": "EXIF orientation; resize only if over 1280 pixels; JPEG compression; metadata omitted. No content alterations."
+    }
+  ],
+  "publicResearchSummary": [
+    "Public vehicle seller confirmed from the current dealer catalogue.",
+    "Existing registry and clients identities checked against the exact lead and normalized trading names; no live-fleet match found.",
+    "Listing availability is not confirmed; the dated stock disclosure and price omission are retained.",
+    "Public listings differ between 1 and 7 Peter Street. Street address omitted pending confirmation; city retained."
+  ],
+  "stockHistoryReview": "stock-history-review.json"
+}

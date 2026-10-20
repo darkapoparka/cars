@@ -37,7 +37,7 @@
     }
   },
   "generatedInputs": {
-    "reviewedAt": "2026-10-19T18:56:55.806518Z",
+    "reviewedAt": "2026-10-20T19:50:32.161Z",
     "master": {
       "path": "branding/generated-master.png",
       "sha256": "b769b82f5064e156233744817a3d53829fa4e085dedd540ba544339de9ceabc7",
@@ -57,11 +57,15 @@
       }
     },
     "markOnDark": {
-      "path": "branding/generated-mark-on-dark.png",
-      "sha256": "8ffdd9ee1c647e21bad60497786c4144aa1b6cf7e7d241cd8e7c1548927326a3",
+      "path": "branding/generated-mark-on-dark-v2-20261020.png",
+      "sha256": "c7c87e31419e38e6f13696fb7e457df3d3c2318dabaff32025407352e7f8ff3d",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-3b2e68cd-18ae-4417-8a84-3b8b9969be5b",
+        "generationId": "exec-329cefd5-9c1a-4367-88f9-50fc4b531f86",
         "modelVersion": null
       }
     },
@@ -118,9 +122,10 @@
         32,
         64
       ],
-      "method": "Exact pipeline alpha-padding crop and resize of actual generated surface artwork. Separate light-ink generated wordmark is used on dark and accent surfaces. Compact inputs are documented actual imagegen outputs or isolated lossless crops.",
-      "reviewedAt": "2026-10-19T18:56:55.806518Z",
-      "review": "Visually reviewed the exact pipeline cropTransparentPadding exports at 120 px and 180 px wordmark widths and 32 px and 64 px compact sizes against all six required background colours. Spelling and transparency checked. Filled light wordmarks improve contrast on dark surfaces; artwork colours do not change template palettes."
+      "method": "Agent inspected exact maintained cropTransparentPadding outputs on all six existing template surface colours at wordmark120/180 and compact32/64 widths. Existing inspectLogoPixels thresholds pass; palettes, geometry and factual source remain preserved.",
+      "reviewedAt": "2026-10-20T19:50:32.161Z",
+      "review": "Visually reviewed the exact pipeline cropTransparentPadding exports at 120 px and 180 px wordmark widths and 32 px and 64 px compact sizes against all six required background colours. Spelling and transparency checked. Filled light wordmarks improve contrast on dark surfaces; artwork colours do not change template palettes.",
+      "notes": "Actual light tints of this dealer identity use built-in imagegen surface variants. Original source/artwork retained. No dealer, native or hosted approval is inferred."
     }
   },
   "additionalGenerations": [
@@ -131,22 +136,32 @@
       "modelVersion": null,
       "reference": "branding/generated-master.png",
       "prompt": "Use case: logo-brand, mandatory colour correction to the provided B&S CARS identity. Preserve the exact B/S monogram, all letterforms, arrangement and business spelling. Change EVERY dark navy filled region in both emblem and wordmark to SOLID WHITE #ffffff. The exact right-hand text B&S and CARS must BOTH be filled white, not navy, not green, not outlines. Keep the dark forest-green S segment inside the left compact monogram only. A thin dark contour around the white letters is allowed. This asset is for a BLACK or RED background, but DO NOT draw any background: output real TRANSPARENCY. Entire right-hand typography must visibly be white in the output. No new shapes, no text changes, no new font, no shading, no gradients, no speckles, perfectly clean edges. The original navy artwork is rejected for this dark-surface role."
+    },
+    {
+      "roles": [
+        "markOnDark"
+      ],
+      "reference": "branding/generated-mark-on-dark.png",
+      "path": "branding/generated-mark-on-dark-v2-20261020.png",
+      "sha256": "c7c87e31419e38e6f13696fb7e457df3d3c2318dabaff32025407352e7f8ff3d",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-329cefd5-9c1a-4367-88f9-50fc4b531f86",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand. Faithful color surface edit of the supplied existing B S interlocked monogram. Preserve exact B and S letter geometry, overlap, rounded corners, counters and proportions. Make a clean compact variant for a charcoal background: B should be flat solid pale sage #c4e6d6 and S flat solid light mint #9ed6bc, both light tints of this dealer's existing forest green. No dark or white outlines; do not change the shapes. Keep true transparent background including the counters. Uniform opaque flat fills, clean antialiasing, no gradients, no texture, no paper grain, noise, speckles, shadows, glow, badge, background or extra text. Keep the whole mark centered with generous square canvas padding. This is an independent preview identity, not dealer approved.",
+      "createdAt": "2026-10-20T19:50:32.161Z",
+      "derivation": "Actual built-in imagegen edit; raw returned PNG copied byte-for-byte, no recolour/filter/alpha cleanup applied."
     }
   ],
-  "compactOnDarkDerivation": {
-    "method": "lossless-isolated-emblem-crop",
-    "parentReference": "branding/generated-on-dark.png",
-    "parentSha256": "9f790585b6bc62ba5563d7f63039dc227ff494d8d4b0a9003cec4fefc323ddf9",
-    "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 730,
-      "height": 809
-    },
-    "generation": {
-      "tool": "image_gen.imagegen",
-      "generationId": "exec-3b2e68cd-18ae-4417-8a84-3b8b9969be5b",
-      "modelVersion": null
+  "sourceHistory": [
+    {
+      "reference": "branding/source-before-contrast-repair-20261020-3d519c875fe0b182.json",
+      "sha256": "3d519c875fe0b1829349b311383b84d56787edf718265dfb10c9679b03a88901",
+      "retainedAt": "2026-10-20T19:50:32.161Z",
+      "reason": "Exact source provenance before targeted contrast repair"
     }
-  }
+  ]
 }

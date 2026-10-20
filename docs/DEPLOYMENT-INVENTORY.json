@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-20T18:46:52.982Z",
+  "updatedAt": "2026-10-20T19:53:57.820Z",
   "githubOwner": "darkapoparka",
   "vercelTeam": "tyj5",
   "model": "One canonical dealer folder and publishing repository; deployment provider and actual variants are declared per dealer.",
@@ -34805,6 +34805,334 @@
         "receiptSha256": "381f064fc280336f30494c10ac14972c9443558e1679e8f972c0cf0f18b5b6ee",
         "batch": 3,
         "recordedAt": "2026-10-20T18:46:52.982Z"
+      }
+    },
+    {
+      "slug": "billion-auto",
+      "id": "ae-dubai-billion-auto",
+      "name": "Billion Auto",
+      "sourceFormat": "dealer-pack",
+      "sourceOwnership": "cars-repository",
+      "sourcePath": "dealers/billion-auto",
+      "localPath": "dealers/billion-auto",
+      "localPresent": true,
+      "repository": "darkapoparka/cars",
+      "canonicalSourceRepository": "darkapoparka/cars",
+      "canonicalSourceRef": "27026835389c4c683a7245afb4bd415ced447ed4",
+      "canonicalSourceCommit": "27026835389c4c683a7245afb4bd415ced447ed4",
+      "canonicalSourceTree": "45e633afde89d94aa72d3267b2a9fbe39fc0a421",
+      "packagingVersion": "5",
+      "variants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/",
+          "publicUrl": "https://billion-auto.webpreviews.site/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/auto-best",
+            "tree": "cbd21f5e0b794a0cbf52bf36fdf07b25fb0bb499",
+            "digest": "90760c4c73d46ebf976a06e923171f31fc716661f69d25d864342ea856002279"
+          }
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars",
+          "publicUrl": "https://billion-auto.webpreviews.site/variant-2/cars",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/modern",
+            "tree": "e1285aeebcf21730a064db00779a679e64e9d3ca",
+            "digest": "965f1003f5292e99adc72afb738d676436bdc27e7da7ec0264d2872d149a23b5"
+          }
+        },
+        {
+          "key": "import",
+          "base": "/variant-3",
+          "entry": "/variant-3/",
+          "publicUrl": "https://billion-auto.webpreviews.site/variant-3/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/import",
+            "tree": "87950ec43fdb33fd85dbf6d6b6160e1a779777c6",
+            "digest": "3c1fe9e9adef074aa7ca2e774ef8a0d955c77e527b7939418ab408e87659e50d"
+          }
+        },
+        {
+          "key": "app",
+          "base": "/variant-4",
+          "entry": "/variant-4/",
+          "publicUrl": "https://billion-auto.webpreviews.site/variant-4/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/app",
+            "tree": "ad5b8acf793545b0082cfb33e37c7a97da63ec36",
+            "digest": "524f71647d6bafa4320173f73658fce39b48bf0508171480475b980dc3565b65"
+          }
+        },
+        {
+          "key": "mobile",
+          "base": "/variant-5",
+          "entry": "/variant-5/",
+          "publicUrl": "https://billion-auto.webpreviews.site/variant-5/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/mobile",
+            "tree": "9dadfcad37e2b8909cc39d7758db3fca1cd5cf61",
+            "digest": "c85e58c9e747e68d0911f6bd4827a643b8a538dc1ea5eb7d29a78c3252585ef1"
+          }
+        },
+        {
+          "key": "karento-best",
+          "base": "/variant-6",
+          "entry": "/variant-6/",
+          "publicUrl": "https://billion-auto.webpreviews.site/variant-6/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/karento-best",
+            "tree": "9c2ab0e1c84f2ffbb0f20dbba757dea36d88808f",
+            "digest": "1f32f03af52daee41861d53d66bafcf3147d001f5a0a9840afbe9b6fb128a8c9"
+          }
+        }
+      ],
+      "delivery": {
+        "provider": "cloudflare",
+        "state": "live-verified",
+        "workerName": "cars-billion-auto",
+        "workerId": "c4822a0207a349c1bbd4188cc42d2cba",
+        "versionId": "624b93e5-0854-496c-955b-a52fd876f69c",
+        "routeId": "f5cf1722470644f185cae999c84c4b8a",
+        "configuredPublicOrigin": "https://billion-auto.webpreviews.site",
+        "url": "https://billion-auto.webpreviews.site/",
+        "checkedAt": "2026-10-20T19:40:42.377Z"
+      },
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "repository": "darkapoparka/cars",
+          "commit": "27026835389c4c683a7245afb4bd415ced447ed4",
+          "path": "dealers/billion-auto",
+          "tree": "45e633afde89d94aa72d3267b2a9fbe39fc0a421",
+          "inputFiles": 25,
+          "remoteVerified": true
+        },
+        "build": {
+          "state": "passed",
+          "outputDigest": "2faf22fc3a64b7121f59422b723557b201bfaa5dfede7790d3c469c836c301f1",
+          "packDigest": "693725fc1682c7880fa30dd2292c787ea58911a37165ddc3872058d9869becc7",
+          "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0"
+        },
+        "deployment": {
+          "state": "deployed",
+          "workerId": "c4822a0207a349c1bbd4188cc42d2cba",
+          "versionId": "624b93e5-0854-496c-955b-a52fd876f69c",
+          "receiptSha256": "353b013aa1f995f1aae8de23e908d45889ef808be92df75d9c621958b79d508a"
+        },
+        "browser": {
+          "state": "passed",
+          "reportSha256": "e2d62eac142880d7360294c4cd6f278a4a0fc1b85f73c89ce27490d2a56ac596",
+          "widths": [
+            390
+          ],
+          "locales": [
+            "en"
+          ]
+        },
+        "ownerReview": {
+          "state": "not-claimed",
+          "note": "Owner authorized preview deployment; this receipt does not claim dealer identity or visual approval."
+        }
+      },
+      "newPackDeployment": {
+        "queueId": "10b70e3e-8623-49b4-bc1d-3a7468c0231a",
+        "queueBranch": "cars-deploy-queue",
+        "requestId": "e3308477f359ccce77b965a00f02b2197b5776ded41b55759a7ef450a0f46916",
+        "receiptSha256": "353b013aa1f995f1aae8de23e908d45889ef808be92df75d9c621958b79d508a",
+        "batch": 3,
+        "recordedAt": "2026-10-20T19:53:57.820Z"
+      }
+    },
+    {
+      "slug": "elena-used-cars",
+      "id": "ae-dubai-elena-used-cars",
+      "name": "Elena Used Cars",
+      "sourceFormat": "dealer-pack",
+      "sourceOwnership": "cars-repository",
+      "sourcePath": "dealers/elena-used-cars",
+      "localPath": "dealers/elena-used-cars",
+      "localPresent": true,
+      "repository": "darkapoparka/cars",
+      "canonicalSourceRepository": "darkapoparka/cars",
+      "canonicalSourceRef": "27026835389c4c683a7245afb4bd415ced447ed4",
+      "canonicalSourceCommit": "27026835389c4c683a7245afb4bd415ced447ed4",
+      "canonicalSourceTree": "d548f77f473df166c117af5e47273e9d85070f28",
+      "packagingVersion": "5",
+      "variants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/",
+          "publicUrl": "https://elena-used-cars.webpreviews.site/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/auto-best",
+            "tree": "cbd21f5e0b794a0cbf52bf36fdf07b25fb0bb499",
+            "digest": "90760c4c73d46ebf976a06e923171f31fc716661f69d25d864342ea856002279"
+          }
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars",
+          "publicUrl": "https://elena-used-cars.webpreviews.site/variant-2/cars",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/modern",
+            "tree": "e1285aeebcf21730a064db00779a679e64e9d3ca",
+            "digest": "965f1003f5292e99adc72afb738d676436bdc27e7da7ec0264d2872d149a23b5"
+          }
+        },
+        {
+          "key": "import",
+          "base": "/variant-3",
+          "entry": "/variant-3/",
+          "publicUrl": "https://elena-used-cars.webpreviews.site/variant-3/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/import",
+            "tree": "87950ec43fdb33fd85dbf6d6b6160e1a779777c6",
+            "digest": "3c1fe9e9adef074aa7ca2e774ef8a0d955c77e527b7939418ab408e87659e50d"
+          }
+        },
+        {
+          "key": "app",
+          "base": "/variant-4",
+          "entry": "/variant-4/",
+          "publicUrl": "https://elena-used-cars.webpreviews.site/variant-4/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/app",
+            "tree": "ad5b8acf793545b0082cfb33e37c7a97da63ec36",
+            "digest": "524f71647d6bafa4320173f73658fce39b48bf0508171480475b980dc3565b65"
+          }
+        },
+        {
+          "key": "mobile",
+          "base": "/variant-5",
+          "entry": "/variant-5/",
+          "publicUrl": "https://elena-used-cars.webpreviews.site/variant-5/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/mobile",
+            "tree": "9dadfcad37e2b8909cc39d7758db3fca1cd5cf61",
+            "digest": "c85e58c9e747e68d0911f6bd4827a643b8a538dc1ea5eb7d29a78c3252585ef1"
+          }
+        },
+        {
+          "key": "karento-best",
+          "base": "/variant-6",
+          "entry": "/variant-6/",
+          "publicUrl": "https://elena-used-cars.webpreviews.site/variant-6/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/karento-best",
+            "tree": "9c2ab0e1c84f2ffbb0f20dbba757dea36d88808f",
+            "digest": "1f32f03af52daee41861d53d66bafcf3147d001f5a0a9840afbe9b6fb128a8c9"
+          }
+        }
+      ],
+      "delivery": {
+        "provider": "cloudflare",
+        "state": "live-verified",
+        "workerName": "cars-elena-used-cars",
+        "workerId": "6584bbe5483543ef97e0d8e4e4541e7d",
+        "versionId": "8923ee64-d9c0-4b3b-ae2d-d83732d7a279",
+        "routeId": "b4d92d27efc248c29a697e976c417bb8",
+        "configuredPublicOrigin": "https://elena-used-cars.webpreviews.site",
+        "url": "https://elena-used-cars.webpreviews.site/",
+        "checkedAt": "2026-10-20T19:31:52.898Z"
+      },
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "repository": "darkapoparka/cars",
+          "commit": "27026835389c4c683a7245afb4bd415ced447ed4",
+          "path": "dealers/elena-used-cars",
+          "tree": "d548f77f473df166c117af5e47273e9d85070f28",
+          "inputFiles": 25,
+          "remoteVerified": true
+        },
+        "build": {
+          "state": "passed",
+          "outputDigest": "ed0f33c8625657876886d5fbf539465fbcf9acf484c2960aa233b9c2de8b69e6",
+          "packDigest": "2c1e5c57668310836f433bbe4d74f5365982806d09e25527b91576b6bab424de",
+          "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0"
+        },
+        "deployment": {
+          "state": "deployed",
+          "workerId": "6584bbe5483543ef97e0d8e4e4541e7d",
+          "versionId": "8923ee64-d9c0-4b3b-ae2d-d83732d7a279",
+          "receiptSha256": "b6f5972a94159e141f24131cdc4f485859f19c0516843a5695a82dc55ac39929"
+        },
+        "browser": {
+          "state": "passed",
+          "reportSha256": "e469efed284eaf77505dd996c03de1137136346a48fdbe529a49e92521ff2147",
+          "widths": [
+            390
+          ],
+          "locales": [
+            "en"
+          ]
+        },
+        "ownerReview": {
+          "state": "not-claimed",
+          "note": "Owner authorized preview deployment; this receipt does not claim dealer identity or visual approval."
+        }
+      },
+      "newPackDeployment": {
+        "queueId": "10b70e3e-8623-49b4-bc1d-3a7468c0231a",
+        "queueBranch": "cars-deploy-queue",
+        "requestId": "63e572ef57ebaa422bb87536393493a6b0ae3f50d8f1567e19f7d677029b6efa",
+        "receiptSha256": "b6f5972a94159e141f24131cdc4f485859f19c0516843a5695a82dc55ac39929",
+        "batch": 3,
+        "recordedAt": "2026-10-20T19:53:57.820Z"
       }
     }
   ],

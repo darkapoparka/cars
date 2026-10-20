@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "dealer": "aym-cars",
   "reviewed": true,
-  "reviewedAt": "2026-10-19T19:22:56.608725Z",
+  "reviewedAt": "2026-10-20T19:50:21.905Z",
   "status": "independent-proposal-not-dealer-approved",
   "creationMethod": "imagegen-proposal",
   "assets": {
@@ -15,14 +15,14 @@
     "onDark": {
       "sourcePath": "branding/logo-on-dark.png",
       "publicPath": "/dealer-brand/logo-on-dark.webp",
-      "sha256": "5d0560e2f3d22682a2099b7f1432f0d3adeafa932a1c3b07b55f3469b520c75d",
-      "sourceSha256": "ae436ddb804513813a5dc981c4260e94b030c317076b5fe9fbcf1b686f00cfc7"
+      "sha256": "c6b7bf8588dc8f607ebc25a5bd076396cfed661b527f2b03b6ca6ecca93a780f",
+      "sourceSha256": "91b98b2faf4ab0d5bcb538fafb635166f397647e1f44e1d1d2257498602d5ed6"
     },
     "onAccent": {
       "sourcePath": "branding/logo-on-accent.png",
       "publicPath": "/dealer-brand/logo-on-accent.webp",
-      "sha256": "5d0560e2f3d22682a2099b7f1432f0d3adeafa932a1c3b07b55f3469b520c75d",
-      "sourceSha256": "ae436ddb804513813a5dc981c4260e94b030c317076b5fe9fbcf1b686f00cfc7"
+      "sha256": "c6b7bf8588dc8f607ebc25a5bd076396cfed661b527f2b03b6ca6ecca93a780f",
+      "sourceSha256": "91b98b2faf4ab0d5bcb538fafb635166f397647e1f44e1d1d2257498602d5ed6"
     }
   },
   "surfaceBackgrounds": {
@@ -74,23 +74,23 @@
     },
     "onDark": {
       "path": "branding/logo-on-dark.png",
-      "sha256": "ae436ddb804513813a5dc981c4260e94b030c317076b5fe9fbcf1b686f00cfc7",
+      "sha256": "91b98b2faf4ab0d5bcb538fafb635166f397647e1f44e1d1d2257498602d5ed6",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-4bce4ea7-983d-4ffc-b772-ec3176e5156d",
+        "generationId": "exec-670f676a-d771-46c7-946e-fa48bf9fedb2",
         "modelVersion": null
       },
-      "sourceReference": "dealers/aym-cars/branding/generated-on-dark.png"
+      "sourceReference": "dealers/aym-cars/branding/generated-on-dark-v2-20261020.png"
     },
     "onAccent": {
       "path": "branding/logo-on-accent.png",
-      "sha256": "ae436ddb804513813a5dc981c4260e94b030c317076b5fe9fbcf1b686f00cfc7",
+      "sha256": "91b98b2faf4ab0d5bcb538fafb635166f397647e1f44e1d1d2257498602d5ed6",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-4bce4ea7-983d-4ffc-b772-ec3176e5156d",
+        "generationId": "exec-670f676a-d771-46c7-946e-fa48bf9fedb2",
         "modelVersion": null
       },
-      "sourceReference": "dealers/aym-cars/branding/generated-on-dark.png"
+      "sourceReference": "dealers/aym-cars/branding/generated-on-dark-v2-20261020.png"
     }
   },
   "transforms": {
@@ -109,28 +109,28 @@
     },
     "onDark": {
       "operation": "crop-transparent-padding-and-resize",
-      "sourceSha256": "5922b200c57841b9dc677bb4fca6d91bf94d87d3ae2029ebf40f10e8ea2074c7",
-      "sha256": "ae436ddb804513813a5dc981c4260e94b030c317076b5fe9fbcf1b686f00cfc7",
+      "sourceSha256": "ab68d687199ec00dd9e0454afcf67b1135a66f67918efdec2be0483b819476a8",
+      "sha256": "91b98b2faf4ab0d5bcb538fafb635166f397647e1f44e1d1d2257498602d5ed6",
       "crop": {
-        "left": 0,
-        "top": 124,
-        "width": 2172,
-        "height": 464
+        "left": 2,
+        "top": 150,
+        "width": 2169,
+        "height": 417
       },
-      "sourcePath": "branding/generated-on-dark.png",
+      "sourcePath": "branding/generated-on-dark-v2-20261020.png",
       "outputPath": "branding/logo-on-dark.png"
     },
     "onAccent": {
       "operation": "crop-transparent-padding-and-resize",
-      "sourceSha256": "5922b200c57841b9dc677bb4fca6d91bf94d87d3ae2029ebf40f10e8ea2074c7",
-      "sha256": "ae436ddb804513813a5dc981c4260e94b030c317076b5fe9fbcf1b686f00cfc7",
+      "sourceSha256": "ab68d687199ec00dd9e0454afcf67b1135a66f67918efdec2be0483b819476a8",
+      "sha256": "91b98b2faf4ab0d5bcb538fafb635166f397647e1f44e1d1d2257498602d5ed6",
       "crop": {
-        "left": 0,
-        "top": 124,
-        "width": 2172,
-        "height": 464
+        "left": 2,
+        "top": 150,
+        "width": 2169,
+        "height": 417
       },
-      "sourcePath": "branding/generated-on-dark.png",
+      "sourcePath": "branding/generated-on-dark-v2-20261020.png",
       "outputPath": "branding/logo-on-accent.png"
     }
   },
@@ -147,13 +147,13 @@
     },
     "mark-on-dark.webp": {
       "path": "dealer-brand/mark-on-dark.webp",
-      "sha256": "d03b0a2494b6edaf13bf3b8a3e0443476396b9eeb727466ca29807bc6da6877d",
+      "sha256": "066a58f722023ec683abb3134b488734174fc5bf9f58402895e108572d42f1ba",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-4bce4ea7-983d-4ffc-b772-ec3176e5156d",
+        "generationId": "exec-ab422523-1198-4bc6-bcdb-c98f44951493",
         "modelVersion": null
       },
-      "sourceReference": "dealers/aym-cars/branding/generated-mark-on-dark.png"
+      "sourceReference": "dealers/aym-cars/branding/generated-mark-on-dark-v2-20261020.png"
     },
     "app-icon.png": {
       "path": "dealer-brand/app-icon.png",
@@ -180,17 +180,17 @@
   "originalArtworkPreserved": true,
   "visualReview": {
     "reviewed": true,
-    "reviewedAt": "2026-10-19T19:22:56.608725Z",
+    "reviewedAt": "2026-10-20T19:50:21.905Z",
     "source": "branding/source.json",
     "spelling": "agent-visual-review",
     "dealerApproval": false
   },
   "markOnDark": {
     "path": "branding/logo-mark-on-dark.png",
-    "sha256": "d8a413c5267671969b85fcbce08b78605711dcb60b22d5145065aa17797c5314",
+    "sha256": "a66849c305092b37b278170c8cd4012a047f842cf28cce58406e4d56aa704d77",
     "generation": {
       "tool": "image_gen.imagegen",
-      "generationId": "exec-4bce4ea7-983d-4ffc-b772-ec3176e5156d",
+      "generationId": "exec-ab422523-1198-4bc6-bcdb-c98f44951493",
       "modelVersion": null
     }
   }

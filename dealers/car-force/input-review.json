@@ -3,7 +3,7 @@
   "kind": "cars-dealer-pack-input-review",
   "dealer": "car-force",
   "reviewed": true,
-  "reviewedAt": "2026-10-20T19:14:29.485Z",
+  "reviewedAt": "2026-10-20T19:45:13.972Z",
   "review": {
     "kind": "automated",
     "humanReview": false,
@@ -42,6 +42,18 @@
       "sha256": "85ea649a6b8ffeb25be8439764e283573ed83857fe4de32966c2d7ae0dd16b96"
     },
     {
+      "path": "branding/contrast-mark-on-light-v2.png",
+      "sha256": "3533e9c1b8417b94420b65564c2c24fe2dff73174fec73405a3e088a1f77bb5c"
+    },
+    {
+      "path": "branding/contrast-on-dark-v2.png",
+      "sha256": "1e6017a01d06f9bd816f4fc6fda819b109fc1f542bc4c2c1d7b54240d9b925b1"
+    },
+    {
+      "path": "branding/contrast-repair-20261020.json",
+      "sha256": "1790c277b232237e715805a0803389c8de1c32ef7d9cfbdb8fd4ce916ea2f7bf"
+    },
+    {
       "path": "branding/generated-mark.png",
       "sha256": "a94a2b69e81eaa7c1cc6831893a05b2e724b0941109292d1234ec607d2278978"
     },
@@ -59,15 +71,15 @@
     },
     {
       "path": "branding/logo-contract.json",
-      "sha256": "b09197ed81af63c6104346b9e764e0902fba2315cefcdcbe5e8bfcabc46a75b1"
+      "sha256": "fe0202d2e039b1f97e23a1a758115be103ff89f5f08e2c3b80986f4e07582fd2"
     },
     {
       "path": "branding/logo-recipe.json",
-      "sha256": "b1337e7f13aa7d513baef76d27997dfc1cf9b45659d3dc35982686fee854266b"
+      "sha256": "ebc6a08d1fab46a9c93bc549ba55c6cb5ea90b186cdf5abba111ad42afdf8d9c"
     },
     {
       "path": "branding/source.json",
-      "sha256": "e018a1c91f451ee1f825521f96206285afd13abacd2a4d62b6bc6c918859a370"
+      "sha256": "1d81c0007409c0e1e137836782f4a4a28201415b5c5b5727cc5b94d791b9854b"
     },
     {
       "path": "business-facts.json",
@@ -75,7 +87,7 @@
     },
     {
       "path": "copy-review.json",
-      "sha256": "2051e7266af4b66972ff5ae4ee82153549f5624e23880305b4893e864f73f9e0"
+      "sha256": "251bdce4629e447e1e79b0aa08d9872480576ec5ce3a22005adce5355f2f9ffd"
     },
     {
       "path": "dealer-stock/listing-1.jpg",
@@ -91,11 +103,11 @@
     },
     {
       "path": "dealer.json",
-      "sha256": "53685af9267b136be8e324b3e2f42af64e1ad7df1229f2b32eab5d26d38d4654"
+      "sha256": "f22415507d497b9ce60096025257d46bbedb8b7c5c3374527117c4bf88659c73"
     },
     {
       "path": "identity-review.json",
-      "sha256": "a20f07a8e07e743e94d27271905ab7980df2d64361fa54c0eb12763465f2ebfe"
+      "sha256": "dd25b9546ac58969ccae3ca03624c4455c148cacdc92564712e5b0414119429c"
     },
     {
       "path": "locale.json",
@@ -111,7 +123,7 @@
     },
     {
       "path": "qualification.json",
-      "sha256": "5be3b1648ba14e3026fdaca506550f74d286fa6753922bbe27f974ad6295cc85"
+      "sha256": "40dd0d063db2497fde69799d189264bb4ba4337b3662a7b63427be8ba8959a19"
     },
     {
       "path": "research-review.json",

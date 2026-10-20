@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "dealer": "aventus-motors",
+  "mode": "built-in-imagegen",
+  "independentProposal": true,
+  "dealerApproved": false,
+  "originalPackDigest": "9b0cfdb64fda274e659f00e47642dc565b0b1f5fc1c33769eb6847f084418d88",
+  "originalSourceSha256": "ec546c4624b50f3a01c33b1aba1814992944b5c70cbb317e307058b0a6674742",
+  "selected": [
+    {
+      "roles": [
+        "mark"
+      ],
+      "filename": "contrast-mark-on-light-v2.png",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9aa26a6e-1aef-4788-b615-9efb8edc23e0",
+        "referenceKind": "actual-tool-output-filename",
+        "modelVersion": null
+      },
+      "prompt": "Precise surface edit of this existing Aventus Motors compact A-and-wings emblem. Preserve the exact A/triangular geometry, wing shapes, spacing and transparent negative spaces. For a white-background favicon variant, make the A a solid deep navy #05234a and wings a solid dark teal #006979. Remove every white keyline, metallic gradient, light fill and residual speckle. No backing plate, no enclosing badge, no added lettering, no shape redesign. Flat opaque strokes, crisp real alpha and generous margins. The same existing identity, as an independent preview proposal, not an adopted logo.",
+      "parentReference": "branding/generated-mark.png",
+      "sourcePath": "branding/contrast-mark-on-light-v2.png",
+      "sha256": "aaad17fe028a650ee6c19b546a7c04adf18aaeaf7d5bc43e4b8780686a884c6b",
+      "bytes": 437885,
+      "outputFile": "exec-9aa26a6e-1aef-4788-b615-9efb8edc23e0.png"
+    },
+    {
+      "roles": [
+        "markOnDark"
+      ],
+      "filename": "contrast-mark-on-dark-v2.png",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-969004da-f4a1-4a4d-9aef-5ca0a6397ee7",
+        "referenceKind": "actual-tool-output-filename",
+        "modelVersion": null
+      },
+      "prompt": "Precise surface edit of this existing Aventus Motors compact A-and-wings emblem. Preserve the exact A/triangular geometry, wing shapes, spacing and transparent negative spaces. For a charcoal-background variant, make the A a solid very light icy blue #d8e6ff and wings a solid pale cyan #a4ebf3. Remove every dark navy fill/outline, white keyline, metallic gradient and residual speckle. Do not use pure white. No backing plate, enclosing badge, added lettering or shape redesign. Flat opaque uninterrupted fills, crisp real alpha and generous margins. Independent preview proposal, not adopted identity.",
+      "parentReference": "branding/generated-mark.png",
+      "sourcePath": "branding/contrast-mark-on-dark-v2.png",
+      "sha256": "c72b55cc6afef1bf1d43b71705e3c9ee7f81281feb5ddc541afa9b9dc1d0c884",
+      "bytes": 472359,
+      "outputFile": "exec-969004da-f4a1-4a4d-9aef-5ca0a6397ee7.png"
+    }
+  ]
+}

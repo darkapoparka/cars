@@ -3,7 +3,7 @@
   "kind": "cars-dealer-pack-input-review",
   "dealer": "car-shop-swansea",
   "reviewed": true,
-  "reviewedAt": "2026-10-20T19:14:58.257Z",
+  "reviewedAt": "2026-10-20T19:45:49.245Z",
   "review": {
     "kind": "automated",
     "humanReview": false,
@@ -42,6 +42,18 @@
       "sha256": "f1f78243ba3712db5f434d851af74d069b620598f029bdfe15869081eb1c29d4"
     },
     {
+      "path": "branding/contrast-mark-on-dark-v2.png",
+      "sha256": "9ab2b92a4cd58bd31577940bfbca382b29861662257f2b6c908352f6221b9e91"
+    },
+    {
+      "path": "branding/contrast-on-dark-v2.png",
+      "sha256": "42425b210b2208568ac5b4a344945f6afc886aa3187c2572bc6b86d17a1e567a"
+    },
+    {
+      "path": "branding/contrast-repair-20261020.json",
+      "sha256": "47f6bca8c2bf1280a71315ba11fa913c5a7babe3aa59a72e57a77d5ed664c1c0"
+    },
+    {
       "path": "branding/generated-mark.png",
       "sha256": "be16ef024ccf6179856ab415eef541e214efa097ecf1bf926ebee319e205704c"
     },
@@ -55,15 +67,15 @@
     },
     {
       "path": "branding/logo-contract.json",
-      "sha256": "48cce03de9be2c4d746ca67f1d77c026b3db581a980793a793d19422a1d073f3"
+      "sha256": "46a999101f2499176db608a72198a3bee945f0d6e9814c89a1e0c0a72e655ae9"
     },
     {
       "path": "branding/logo-recipe.json",
-      "sha256": "d2fb0e735eb9116d6d1a15751da8f5a85b759b5db263e4a1c41a9554901afbad"
+      "sha256": "e343a751ad7df78ca69f438535ada56bce75034d64bc7257cc47b3b47d70196c"
     },
     {
       "path": "branding/source.json",
-      "sha256": "7f2924b0350ac344b872fd75add2b0fd79c80c4393e5432c123d9ed179a6dd21"
+      "sha256": "fbcdef1970f9f0e1bd55e6c3068c61ce2a4b134027d1b273dfa473bde8d93900"
     },
     {
       "path": "business-facts.json",
@@ -71,7 +83,7 @@
     },
     {
       "path": "copy-review.json",
-      "sha256": "8f42d4de6ed4abaef9d165c0d7d9213ae57301174ef3c63f34403144bfa2b9d2"
+      "sha256": "1fb10b35ba92d8f12c7a5c1905bef0b2a6f47999cbb26f9d324e25ffb3862803"
     },
     {
       "path": "dealer-stock/public-1.jpg",
@@ -91,7 +103,7 @@
     },
     {
       "path": "identity-review.json",
-      "sha256": "e002a73b538dc8a6b0cab3279f4286ec52db16fc9118a285e8b1922b449c3521"
+      "sha256": "05e58b7f4ab458393af4054b3c2ab8b14764b73454801ed1d7545516abdb16ec"
     },
     {
       "path": "locale.json",
@@ -103,7 +115,7 @@
     },
     {
       "path": "qualification.json",
-      "sha256": "3e077beb88890279790547abc7b087febbadd20c8c639c7ad661be392f61d060"
+      "sha256": "15011403d94c49a094b35610c6afaf2cc1ffeb5e54e37ae973b099094a388144"
     },
     {
       "path": "source-evidence.json",

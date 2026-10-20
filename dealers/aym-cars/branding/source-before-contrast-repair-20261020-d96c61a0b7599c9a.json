@@ -1,0 +1,203 @@
+{
+  "schemaVersion": 1,
+  "dealer": "aym-cars",
+  "realLogoFirst": true,
+  "logoKind": "proposal",
+  "publishedBranding": "text-identity-observed",
+  "publicSources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Aymro-Mortors-ltd",
+      "observedAt": "2026-10-19"
+    }
+  ],
+  "originals": [],
+  "sourceLogoUrl": null,
+  "workingLogoPath": "branding/generated-master.png",
+  "creationMethod": "imagegen-proposal",
+  "dealerApproved": false,
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "usageStatus": "public-preview-only",
+  "observedAt": "2026-10-19",
+  "researchConclusion": "No usable original logo was obtained from bounded exact-business/locality searches and the matched public seller and directory sources. The dealer catalogue supplies a text identity and vehicle photographs; an unavailable or absent logo image does not prove that no original branding exists. This is an independent proposed identity, not an official dealer logo.",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T19:22:56.608725Z",
+    "master": {
+      "path": "branding/generated-master.png",
+      "sha256": "4d981970cc2038f2d6497b8a6f87c05364d8754953038ee407481303f2ffbea9",
+      "nativeDimensions": {
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-abe64008-2eb2-4296-a3c4-4a422f44be25",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "9022dc4b9dfaa34fba8dbdc4c9a1b48e0ee5fc3aacefaec7d32569925762c35c",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-abe64008-2eb2-4296-a3c4-4a422f44be25",
+        "modelVersion": null
+      },
+      "derivation": {
+        "operation": "pixel-exact rectangular extraction of the existing generated compact emblem; no recolouring or invented artwork",
+        "parentPath": "branding/generated-master.png",
+        "parentSha256": "4d981970cc2038f2d6497b8a6f87c05364d8754953038ee407481303f2ffbea9",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 921,
+          "height": 724
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-on-dark.png",
+      "sha256": "95ecbcae5428fd94e0e74327dfceb6a431d402889f07a3a3e0a3e5b44f86dbe4",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4bce4ea7-983d-4ffc-b772-ec3176e5156d",
+        "modelVersion": null
+      },
+      "derivation": {
+        "operation": "pixel-exact rectangular extraction of the existing generated compact emblem; no recolouring or invented artwork",
+        "parentPath": "branding/generated-on-dark.png",
+        "parentSha256": "5922b200c57841b9dc677bb4fca6d91bf94d87d3ae2029ebf40f10e8ea2074c7",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 910,
+          "height": 724
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-master.png",
+        "sha256": "4d981970cc2038f2d6497b8a6f87c05364d8754953038ee407481303f2ffbea9",
+        "nativeDimensions": {
+          "width": 2172,
+          "height": 724
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-abe64008-2eb2-4296-a3c4-4a422f44be25",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "5922b200c57841b9dc677bb4fca6d91bf94d87d3ae2029ebf40f10e8ea2074c7",
+        "nativeDimensions": {
+          "width": 2172,
+          "height": 724
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-4bce4ea7-983d-4ffc-b772-ec3176e5156d",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "5922b200c57841b9dc677bb4fca6d91bf94d87d3ae2029ebf40f10e8ea2074c7",
+        "nativeDimensions": {
+          "width": 2172,
+          "height": 724
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-4bce4ea7-983d-4ffc-b772-ec3176e5156d",
+          "modelVersion": null
+        }
+      }
+    },
+    "marks": {
+      "onLight": {
+        "path": "branding/generated-mark.png",
+        "sha256": "9022dc4b9dfaa34fba8dbdc4c9a1b48e0ee5fc3aacefaec7d32569925762c35c",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-abe64008-2eb2-4296-a3c4-4a422f44be25",
+          "modelVersion": null
+        },
+        "derivation": {
+          "operation": "pixel-exact rectangular extraction of the existing generated compact emblem; no recolouring or invented artwork",
+          "parentPath": "branding/generated-master.png",
+          "parentSha256": "4d981970cc2038f2d6497b8a6f87c05364d8754953038ee407481303f2ffbea9",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 921,
+            "height": 724
+          }
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-mark-on-dark.png",
+        "sha256": "95ecbcae5428fd94e0e74327dfceb6a431d402889f07a3a3e0a3e5b44f86dbe4",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-4bce4ea7-983d-4ffc-b772-ec3176e5156d",
+          "modelVersion": null
+        },
+        "derivation": {
+          "operation": "pixel-exact rectangular extraction of the existing generated compact emblem; no recolouring or invented artwork",
+          "parentPath": "branding/generated-on-dark.png",
+          "parentSha256": "5922b200c57841b9dc677bb4fca6d91bf94d87d3ae2029ebf40f10e8ea2074c7",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 910,
+            "height": 724
+          }
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113",
+          "#101820"
+        ],
+        "onAccent": [
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ]
+      },
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "reviewedAt": "2026-10-19T19:22:56.608725Z",
+      "notes": "Visually reviewed the actual deterministic transparent-padding exports at120px and180px on all six retained template surface colours. Exact name spelling, silhouette, alpha edges, spacing and clipping were checked. Light-ink variants are actual imagegen results, not deterministic recolours. Small secondary suffix text is subordinate to the principal name; compact identity is provided separately."
+    },
+    "compactMarkStatus": "independent-preview-not-dealer-approved",
+    "compactMarkDescription": "AYM monogram",
+    "compactMarkReview": {
+      "reviewed": true,
+      "widths": [
+        32,
+        64
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820",
+        "#09090b",
+        "#17191c",
+        "#c40101"
+      ],
+      "reviewedAt": "2026-10-19T19:22:56.608725Z",
+      "notes": "Visually inspected the actual compact exports at32px and64px on all six template backgrounds. Existing-emblem pixel crops have explicit parent hashes and exact rectangle provenance; independently generated compact marks retain their own actual generation IDs. Shape, spacing, clipping and transparent counters were checked. Dealer approval remains unknown."
+    }
+  }
+}

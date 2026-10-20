@@ -1,0 +1,140 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "bury-fairfield-car-centre",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:47:06.508Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "bury-fairfield-car-centre",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [
+      {
+        "field": "business.email",
+        "valueSha256": "4c40aeb84a21ed3ff4e582c94c4f9f9f0005c6a97dabe2ef324a26d7013cc7d9",
+        "code": "PERSONAL_CONTACT_REVIEW_REQUIRED",
+        "reason": "Mailbox resembles an individual or an unbranded personal-provider address; confirm its published business role or omit it.",
+        "resolvedByPublicBusinessEvidence": true
+      }
+    ],
+    "blocking": []
+  },
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-bury-fairfield-car-centre",
+    "position": 32
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "092c98b1c9acef9213134d0bde2511147db4c9f44bf39eafda1510e4d80a2c28"
+    },
+    {
+      "path": "branding/generated-mark-on-dark.png",
+      "sha256": "6d3751b7bb80a6da18f124e3a4394d86b02c9496c744cb4a03128abc4f1b48db"
+    },
+    {
+      "path": "branding/generated-mark.png",
+      "sha256": "8a6773ea7ccd6fa54e400f3d658621e2ed70dd0c8a21443abec19184d188e730"
+    },
+    {
+      "path": "branding/generated-master.png",
+      "sha256": "0d54622dbfc0b807b8c53eecd5ac0349aaae3a5feba89aa281e88aedef354c49"
+    },
+    {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "d09fb81fa0f2c51bec1f4d1b8d611caf7bf631cd476fe27a9901d6f03c951497"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "d090df1aa4562fb8a063cc9a18cb59d9c6683ff3b9d74324d348510c00a03318"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "4b472c966d6dfb06387d90687fe64366dee8b830e1b6b116f2b0d840b37599fd"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "79ca56e3242e978c5eed116969fff5a32acfb04ac5820be8191fddd1c7263008"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "b4f1b13c74a2f0877be2edc6a2b88dc97cb174c38e8b2411ba0a3faffbceaf05"
+    },
+    {
+      "path": "contact-review.json",
+      "sha256": "9a2e23949f2306df4c2022f658e626cab2e2ac434201bb7b04ad2bac03d5f605"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "dc980cd98e0f51d2dbf84485116edc14db1517773e0c039fa015b59c69ee02fd"
+    },
+    {
+      "path": "dealer-stock/vehicle-1.jpg",
+      "sha256": "feae829b1a11fcbc096912548c0fe2d8494a8d059c952ec624ae25fd6ee44274"
+    },
+    {
+      "path": "dealer-stock/vehicle-2.jpg",
+      "sha256": "beb1b2d88d1b32a4917353ccdfc27866c7dddb9836d89670cb77febff723b914"
+    },
+    {
+      "path": "dealer-stock/vehicle-3.jpg",
+      "sha256": "06e1752981ac21a2b19b1da07eaf4bb8bfcc43d5597a6a2940e08759cb99a3ff"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "c8a8911acac4c0fdbe632a2791c6c113ff6eaa487c8efa4f6fe09440cc7313cf"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "3154d15177dd7b8707290866c422608c38c32226ea486f05d8830bd62ecf3427"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "ae2efa446485e4cf20a5462d11009f274805de9b6a765c7608577f6e42256d96"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "4ff2dc7a29ec8ee0ae6e17922c058a13586d32f3467a8833d44cbbf132b12a93"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "6a6bc54a97fce728dd712bcb22ad9780f01f2420a795853950754fcc9d139b71"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "81e48c7bf8735c1e500b28095387a6aeaec7df1d9829400b4e09eb2d9c48b1aa"
+    },
+    {
+      "path": "stock-history-review.json",
+      "sha256": "8c4619c89f8a21928373386b1edfe42295b7c38185b5b64e73de761a931fc4db"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "c6db4bd238ed1fa20b7e1728e20de916eba769dbe1e1903ec13c32c504bcb07b"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

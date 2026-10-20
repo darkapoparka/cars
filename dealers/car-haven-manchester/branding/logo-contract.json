@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "dealer": "car-haven-manchester",
   "reviewed": true,
-  "reviewedAt": "2026-10-19T19:22:56.608725Z",
+  "reviewedAt": "2026-10-20T19:43:05.790Z",
   "status": "independent-proposal-not-dealer-approved",
   "creationMethod": "imagegen-proposal",
   "assets": {
@@ -15,14 +15,14 @@
     "onDark": {
       "sourcePath": "branding/logo-on-dark.png",
       "publicPath": "/dealer-brand/logo-on-dark.webp",
-      "sha256": "4234f7f539d6db2e54fe1e0a4b2e78d680036309723cf174f477c72489fb10aa",
-      "sourceSha256": "167bc93765a915ebebcfe3fef2d0b8d64b45a3754fc38ab013f9911052bc866f"
+      "sha256": "1648a14209444ba8ee3ca8cfb136e2963968f58f17d09f4a5c5f5847103aab9b",
+      "sourceSha256": "d24cadea7624b6ae4f5d3acd4a94646853fceb9a90f54ab7d26310145ea267d7"
     },
     "onAccent": {
       "sourcePath": "branding/logo-on-accent.png",
       "publicPath": "/dealer-brand/logo-on-accent.webp",
-      "sha256": "4234f7f539d6db2e54fe1e0a4b2e78d680036309723cf174f477c72489fb10aa",
-      "sourceSha256": "167bc93765a915ebebcfe3fef2d0b8d64b45a3754fc38ab013f9911052bc866f"
+      "sha256": "1648a14209444ba8ee3ca8cfb136e2963968f58f17d09f4a5c5f5847103aab9b",
+      "sourceSha256": "d24cadea7624b6ae4f5d3acd4a94646853fceb9a90f54ab7d26310145ea267d7"
     }
   },
   "surfaceBackgrounds": {
@@ -74,23 +74,25 @@
     },
     "onDark": {
       "path": "branding/logo-on-dark.png",
-      "sha256": "167bc93765a915ebebcfe3fef2d0b8d64b45a3754fc38ab013f9911052bc866f",
+      "sha256": "d24cadea7624b6ae4f5d3acd4a94646853fceb9a90f54ab7d26310145ea267d7",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-d2942518-47ea-4f06-85fa-aef222e6e854",
+        "generationId": "exec-3be5cad6-55bd-40fe-a802-98701ca4fcd9",
+        "referenceKind": "actual-tool-output-filename",
         "modelVersion": null
       },
-      "sourceReference": "dealers/car-haven-manchester/branding/generated-on-dark.png"
+      "sourceReference": "dealers/car-haven-manchester/branding/contrast-on-dark-v2.png"
     },
     "onAccent": {
       "path": "branding/logo-on-accent.png",
-      "sha256": "167bc93765a915ebebcfe3fef2d0b8d64b45a3754fc38ab013f9911052bc866f",
+      "sha256": "d24cadea7624b6ae4f5d3acd4a94646853fceb9a90f54ab7d26310145ea267d7",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-d2942518-47ea-4f06-85fa-aef222e6e854",
+        "generationId": "exec-3be5cad6-55bd-40fe-a802-98701ca4fcd9",
+        "referenceKind": "actual-tool-output-filename",
         "modelVersion": null
       },
-      "sourceReference": "dealers/car-haven-manchester/branding/generated-on-dark.png"
+      "sourceReference": "dealers/car-haven-manchester/branding/contrast-on-dark-v2.png"
     }
   },
   "transforms": {
@@ -109,28 +111,28 @@
     },
     "onDark": {
       "operation": "crop-transparent-padding-and-resize",
-      "sourceSha256": "a5b60609595afbea7af7d2396d0177a2529f3e54b37cba026f5eba4dcc98a3a2",
-      "sha256": "167bc93765a915ebebcfe3fef2d0b8d64b45a3754fc38ab013f9911052bc866f",
+      "sourceSha256": "e9d56b9a523057801bab1626a7fc208d2e98435e41cea551f24795fd0f69b24e",
+      "sha256": "d24cadea7624b6ae4f5d3acd4a94646853fceb9a90f54ab7d26310145ea267d7",
       "crop": {
-        "left": 0,
-        "top": 112,
-        "width": 1983,
-        "height": 507
+        "left": 2,
+        "top": 114,
+        "width": 1981,
+        "height": 496
       },
-      "sourcePath": "branding/generated-on-dark.png",
+      "sourcePath": "branding/contrast-on-dark-v2.png",
       "outputPath": "branding/logo-on-dark.png"
     },
     "onAccent": {
       "operation": "crop-transparent-padding-and-resize",
-      "sourceSha256": "a5b60609595afbea7af7d2396d0177a2529f3e54b37cba026f5eba4dcc98a3a2",
-      "sha256": "167bc93765a915ebebcfe3fef2d0b8d64b45a3754fc38ab013f9911052bc866f",
+      "sourceSha256": "e9d56b9a523057801bab1626a7fc208d2e98435e41cea551f24795fd0f69b24e",
+      "sha256": "d24cadea7624b6ae4f5d3acd4a94646853fceb9a90f54ab7d26310145ea267d7",
       "crop": {
-        "left": 0,
-        "top": 112,
-        "width": 1983,
-        "height": 507
+        "left": 2,
+        "top": 114,
+        "width": 1981,
+        "height": 496
       },
-      "sourcePath": "branding/generated-on-dark.png",
+      "sourcePath": "branding/contrast-on-dark-v2.png",
       "outputPath": "branding/logo-on-accent.png"
     }
   },
@@ -180,7 +182,7 @@
   "originalArtworkPreserved": true,
   "visualReview": {
     "reviewed": true,
-    "reviewedAt": "2026-10-19T19:22:56.608725Z",
+    "reviewedAt": "2026-10-20T19:43:05.790Z",
     "source": "branding/source.json",
     "spelling": "agent-visual-review",
     "dealerApproval": false

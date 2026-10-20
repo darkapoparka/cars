@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "dealer": "bs-cars-thornton-heath",
   "reviewed": true,
-  "reviewedAt": "2026-10-19T18:56:55.806518Z",
+  "reviewedAt": "2026-10-20T19:50:32.161Z",
   "status": "independent-proposal-not-dealer-approved",
   "creationMethod": "imagegen-proposal",
   "assets": {
@@ -147,13 +147,13 @@
     },
     "mark-on-dark.webp": {
       "path": "dealer-brand/mark-on-dark.webp",
-      "sha256": "55a571c0b49dcf51de5e12609cee855aef2cc43f2289e0eb3b8a2c682a7044ea",
+      "sha256": "ceb9737b33bfeb5756cef3a9174884af6b1af4f97effa30691151c5d39311829",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-3b2e68cd-18ae-4417-8a84-3b8b9969be5b",
+        "generationId": "exec-329cefd5-9c1a-4367-88f9-50fc4b531f86",
         "modelVersion": null
       },
-      "sourceReference": "dealers/bs-cars-thornton-heath/branding/generated-mark-on-dark.png"
+      "sourceReference": "dealers/bs-cars-thornton-heath/branding/generated-mark-on-dark-v2-20261020.png"
     },
     "app-icon.png": {
       "path": "dealer-brand/app-icon.png",
@@ -180,17 +180,17 @@
   "originalArtworkPreserved": true,
   "visualReview": {
     "reviewed": true,
-    "reviewedAt": "2026-10-19T18:56:55.806518Z",
+    "reviewedAt": "2026-10-20T19:50:32.161Z",
     "source": "branding/source.json",
     "spelling": "agent-visual-review",
     "dealerApproval": false
   },
   "markOnDark": {
     "path": "branding/logo-mark-on-dark.png",
-    "sha256": "0b99d55f5ac3c072a1413fb8e85fe04c63317de061bed548bd819c9a009c5624",
+    "sha256": "b99ac19a7431be5fc34ae0a2d28ec609c97e8c75f9e400d9c484bc07a0fe8190",
     "generation": {
       "tool": "image_gen.imagegen",
-      "generationId": "exec-3b2e68cd-18ae-4417-8a84-3b8b9969be5b",
+      "generationId": "exec-329cefd5-9c1a-4367-88f9-50fc4b531f86",
       "modelVersion": null
     }
   }

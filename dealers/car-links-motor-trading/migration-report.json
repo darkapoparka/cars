@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "car-links-motor-trading",
+  "previousSlug": "car-links-motor-trading",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:48:01.092Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 3,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-dubai-car-links-motor-trading",
+    "position": 206
+  },
+  "before": {
+    "files": 39,
+    "bytes": 5711591
+  },
+  "afterBeforeReview": {
+    "files": 23,
+    "bytes": 3286490
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 84185,
+      "sha256": "5a553e72109dd47472282e7c930ca301ca56f881fac696f1f458ef546aeeb6cb"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 75603,
+      "sha256": "08c2e2501f452578e2b809f259acf095f49cb6f29f515ef65a8048bd1b0a6d63"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 84185,
+      "sha256": "5a553e72109dd47472282e7c930ca301ca56f881fac696f1f458ef546aeeb6cb"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 238141,
+      "sha256": "35d98f146aa43d8e1d090c8ae7f2ead7c581738120a58f25def6551a96c687f7"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 211906,
+      "sha256": "c51cd1b5c1732b27572975d426880d56b2dbd30077f7828437fc86d3f2cb184f"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 211906,
+      "sha256": "c51cd1b5c1732b27572975d426880d56b2dbd30077f7828437fc86d3f2cb184f"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 238141,
+      "sha256": "35d98f146aa43d8e1d090c8ae7f2ead7c581738120a58f25def6551a96c687f7"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 84185,
+      "sha256": "5a553e72109dd47472282e7c930ca301ca56f881fac696f1f458ef546aeeb6cb"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 8177,
+      "sha256": "ecfb732529ab19aba362aa4cbc2a99ee4910bb75e583f9c6cf3ce2b628294de2"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 211906,
+      "sha256": "c51cd1b5c1732b27572975d426880d56b2dbd30077f7828437fc86d3f2cb184f"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 139494,
+      "sha256": "d65220eb3fed75182121d2f9bd068748f0868f1999ebd92c02c508bf7e490b62"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 211906,
+      "sha256": "c51cd1b5c1732b27572975d426880d56b2dbd30077f7828437fc86d3f2cb184f"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 139494,
+      "sha256": "d65220eb3fed75182121d2f9bd068748f0868f1999ebd92c02c508bf7e490b62"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 238141,
+      "sha256": "35d98f146aa43d8e1d090c8ae7f2ead7c581738120a58f25def6551a96c687f7"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 149484,
+      "sha256": "f4bb438ca4cd2417795681ded56b57672fa1f74eaa8487a86c6b0dac9c5c7cfe"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 46616,
+      "sha256": "ebaa1017023dffd79ec038b72a598e38d352491be8b42500519e39f4b57fa428"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 55468,
+      "sha256": "7a686e368ef1e42f2bd2c6109a50562efcdd7e516368f7444eeab5b901cac28b"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 13,
+    "bytes": 1947133,
+    "inventorySha256": "c7691363ba5560a82525cbf0eaf84108e6fe21719b404235dd6dc0dd914b1c2a",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "car-links-motor-trading",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 25,
+    "report": "dealers/car-links-motor-trading/input-review.json"
+  },
+  "after": {
+    "files": 25,
+    "bytes": 3295398
+  }
+}

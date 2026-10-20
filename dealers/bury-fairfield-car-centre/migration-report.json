@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "bury-fairfield-car-centre",
+  "previousSlug": "bury-fairfield-car-centre",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:47:02.635Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-bury-fairfield-car-centre",
+    "position": 32
+  },
+  "before": {
+    "files": 39,
+    "bytes": 5817443
+  },
+  "afterBeforeReview": {
+    "files": 23,
+    "bytes": 2541914
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 181907,
+      "sha256": "79db4fa53b6838ae1d65b9548eeb27c1194a3c01bd98891da0280d60692e916b"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 248441,
+      "sha256": "412890bf10e8c6229d24a795f35c519e362bf968e5345d14f5e3ee9520aa2321"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 181907,
+      "sha256": "79db4fa53b6838ae1d65b9548eeb27c1194a3c01bd98891da0280d60692e916b"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 219783,
+      "sha256": "d952ba62eee35839f6435d1ac8865a73b541c539ce203a18acc312383b4925bf"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 278558,
+      "sha256": "22b1848dacc06602321baab7e70228766e8c90d685ff25066038aead4c6a7f90"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 278558,
+      "sha256": "22b1848dacc06602321baab7e70228766e8c90d685ff25066038aead4c6a7f90"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 219783,
+      "sha256": "d952ba62eee35839f6435d1ac8865a73b541c539ce203a18acc312383b4925bf"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 181907,
+      "sha256": "79db4fa53b6838ae1d65b9548eeb27c1194a3c01bd98891da0280d60692e916b"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 13789,
+      "sha256": "900a8229e899f3e5de5d0e667c860ca7c60735e5c5ebd706cc141cdcbd00e3b8"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 278558,
+      "sha256": "22b1848dacc06602321baab7e70228766e8c90d685ff25066038aead4c6a7f90"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 155160,
+      "sha256": "6e85f817da27b8d183a3cdbda93dc13d50bbe308a0b941c5a56d18964593aa08"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 278558,
+      "sha256": "22b1848dacc06602321baab7e70228766e8c90d685ff25066038aead4c6a7f90"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 155160,
+      "sha256": "6e85f817da27b8d183a3cdbda93dc13d50bbe308a0b941c5a56d18964593aa08"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 219783,
+      "sha256": "d952ba62eee35839f6435d1ac8865a73b541c539ce203a18acc312383b4925bf"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 138008,
+      "sha256": "f7aba82be7ad287e8d1a6bbc04ed20c3974458928fdaf5ebd7dd8ba91e94b307"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 136836,
+      "sha256": "53513b9b8cc58701904152dfa1453ac1bec062b9b27d1f9696e65de99ddfcae0"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 112674,
+      "sha256": "84a5ff83e5afd1a1ecc7885c54b12c6358e813c55714584ebade373765532d92"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 12,
+    "bytes": 2515602,
+    "inventorySha256": "bba4f252b0acbbba6b65a226191debe274e5c437f777d9cc63ccacaf35deca12",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "bury-fairfield-car-centre",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 25,
+    "report": "dealers/bury-fairfield-car-centre/input-review.json"
+  },
+  "after": {
+    "files": 25,
+    "bytes": 2551115
+  }
+}

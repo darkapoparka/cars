@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "dealer": "car-shop-swansea",
+  "mode": "built-in-imagegen",
+  "independentProposal": true,
+  "dealerApproved": false,
+  "originalPackDigest": "2fc9a77ffe85bb6b2080be8a9528932a7efde082b03188b88aee1fd664c0d83f",
+  "originalSourceSha256": "7f2924b0350ac344b872fd75add2b0fd79c80c4393e5432c123d9ed179a6dd21",
+  "selected": [
+    {
+      "roles": [
+        "onDark",
+        "onAccent"
+      ],
+      "filename": "contrast-on-dark-v2.png",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-283017be-2d2b-43e5-90e4-a1b6be0e1a22",
+        "referenceKind": "actual-tool-output-filename",
+        "modelVersion": null
+      },
+      "prompt": "Precise surface edit of this existing THE CAR SHOP SWANSEA logo. Preserve the exact split-chevron emblem, exact spelling THE CAR SHOP SWANSEA, typography, line breaks, proportions and horizontal composition. Make every positive letter and emblem shape a single solid very light icy cyan #d2f5fc. Remove all navy/dark fills, outlines and connected backing shapes. Keep the intentional chevron split, letter holes and negative spaces truly transparent. No pure white, gradients, metallic texture, speckles, shadows, background plate or redesign. Smooth opaque light-cyan ink and crisp clean alpha, readable on charcoal #111113 and red #c40101. Independent preview proposal.",
+      "parentReference": "branding/generated-on-dark.png",
+      "sourcePath": "branding/contrast-on-dark-v2.png",
+      "sha256": "42425b210b2208568ac5b4a344945f6afc886aa3187c2572bc6b86d17a1e567a",
+      "bytes": 625948,
+      "outputFile": "exec-283017be-2d2b-43e5-90e4-a1b6be0e1a22.png"
+    },
+    {
+      "roles": [
+        "markOnDark"
+      ],
+      "filename": "contrast-mark-on-dark-v2.png",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4935afbf-bbdb-49f3-80ff-73657cc58739",
+        "referenceKind": "actual-tool-output-filename",
+        "modelVersion": null
+      },
+      "prompt": "Precise surface edit of this existing Car Shop Swansea split-chevron compact emblem. Preserve exactly the two chevron segments, geometry, relative proportions and split negative space. Make both positive segments a single solid very light icy cyan #d2f5fc. Remove all navy/dark fill, dark backing, white keylines and outlines. Keep the split and background genuinely transparent. No pure white, gradients, texture, speckles, shadows, enclosing badge, background plate, added letters or redesign. Smooth uninterrupted opaque light-cyan silhouettes with crisp alpha and generous margin, readable at32px on charcoal. Independent preview proposal.",
+      "parentReference": "branding/generated-mark.png",
+      "sourcePath": "branding/contrast-mark-on-dark-v2.png",
+      "sha256": "9ab2b92a4cd58bd31577940bfbca382b29861662257f2b6c908352f6221b9e91",
+      "bytes": 526682,
+      "outputFile": "exec-4935afbf-bbdb-49f3-80ff-73657cc58739.png"
+    }
+  ]
+}

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "dealer": "aventus-motors",
   "reviewed": true,
-  "reviewedAt": "2026-10-19T18:57:00.742407Z",
+  "reviewedAt": "2026-10-20T19:42:38.317Z",
   "status": "independent-proposal-not-dealer-approved",
   "creationMethod": "imagegen-proposal",
   "assets": {
@@ -50,16 +50,17 @@
   },
   "mark": {
     "path": "branding/logo-mark.png",
-    "sha256": "719a9d58b953386a7bf2561a0f5e489174bde23fa84813e3fbc0e4ee97ff5033",
+    "sha256": "36a5ccc71a736d7a6ffb39ad8fb2317382144875937fd836dbead483e1468b40",
     "generation": {
       "tool": "image_gen.imagegen",
-      "generationId": "exec-9606e8ed-4301-48b9-9884-1b2d4fa7b2cd",
+      "generationId": "exec-9aa26a6e-1aef-4788-b615-9efb8edc23e0",
+      "referenceKind": "actual-tool-output-filename",
       "modelVersion": null
     }
   },
   "favicon": {
     "path": "dealer-brand/favicon.ico",
-    "sha256": "de0dd127e07f6542506f2b86ac279086abe72758787f341f615b9287e6f80118"
+    "sha256": "f3cc48ac3f200f1f786941274f69490feb7829913f9229d01a0e9d7ec95b6697"
   },
   "surfaces": {
     "onLight": {
@@ -137,60 +138,65 @@
   "supplemental": {
     "mark-on-light.webp": {
       "path": "dealer-brand/mark-on-light.webp",
-      "sha256": "ad2206220e96e33712732985481fc4f348d2c16f5036f7fe2367fedc2be1f7d4",
+      "sha256": "fe6cda2af39f4e493fad588c1548c20dc46382dd8b11288c0ccc07ad4bd46d0f",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-9606e8ed-4301-48b9-9884-1b2d4fa7b2cd",
+        "generationId": "exec-9aa26a6e-1aef-4788-b615-9efb8edc23e0",
+        "referenceKind": "actual-tool-output-filename",
         "modelVersion": null
       },
-      "sourceReference": "dealers/aventus-motors/branding/generated-mark.png"
+      "sourceReference": "dealers/aventus-motors/branding/contrast-mark-on-light-v2.png"
     },
     "mark-on-dark.webp": {
       "path": "dealer-brand/mark-on-dark.webp",
-      "sha256": "ad2206220e96e33712732985481fc4f348d2c16f5036f7fe2367fedc2be1f7d4",
+      "sha256": "153e57d97322c68efd5960c9c68d19904b990312a7f82aca019f9a0d4d0e6fe1",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-9606e8ed-4301-48b9-9884-1b2d4fa7b2cd",
+        "generationId": "exec-969004da-f4a1-4a4d-9aef-5ca0a6397ee7",
+        "referenceKind": "actual-tool-output-filename",
         "modelVersion": null
       },
-      "sourceReference": "dealers/aventus-motors/branding/generated-mark.png"
+      "sourceReference": "dealers/aventus-motors/branding/contrast-mark-on-dark-v2.png"
     },
     "app-icon.png": {
       "path": "dealer-brand/app-icon.png",
-      "sha256": "719a9d58b953386a7bf2561a0f5e489174bde23fa84813e3fbc0e4ee97ff5033",
+      "sha256": "36a5ccc71a736d7a6ffb39ad8fb2317382144875937fd836dbead483e1468b40",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-9606e8ed-4301-48b9-9884-1b2d4fa7b2cd",
+        "generationId": "exec-9aa26a6e-1aef-4788-b615-9efb8edc23e0",
+        "referenceKind": "actual-tool-output-filename",
         "modelVersion": null
       },
-      "sourceReference": "dealers/aventus-motors/branding/generated-mark.png"
+      "sourceReference": "dealers/aventus-motors/branding/contrast-mark-on-light-v2.png"
     },
     "favicon.ico": {
       "path": "dealer-brand/favicon.ico",
-      "sha256": "de0dd127e07f6542506f2b86ac279086abe72758787f341f615b9287e6f80118",
+      "sha256": "f3cc48ac3f200f1f786941274f69490feb7829913f9229d01a0e9d7ec95b6697",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-9606e8ed-4301-48b9-9884-1b2d4fa7b2cd",
+        "generationId": "exec-9aa26a6e-1aef-4788-b615-9efb8edc23e0",
+        "referenceKind": "actual-tool-output-filename",
         "modelVersion": null
       },
-      "sourceReference": "dealers/aventus-motors/branding/generated-mark.png"
+      "sourceReference": "dealers/aventus-motors/branding/contrast-mark-on-light-v2.png"
     }
   },
   "markOnDarkReady": true,
   "originalArtworkPreserved": true,
   "visualReview": {
     "reviewed": true,
-    "reviewedAt": "2026-10-19T18:57:00.742407Z",
+    "reviewedAt": "2026-10-20T19:42:38.317Z",
     "source": "branding/source.json",
     "spelling": "agent-visual-review",
     "dealerApproval": false
   },
   "markOnDark": {
     "path": "branding/logo-mark-on-dark.png",
-    "sha256": "719a9d58b953386a7bf2561a0f5e489174bde23fa84813e3fbc0e4ee97ff5033",
+    "sha256": "b0caf300f642bc36fc59640ff7631e3e05b37244a4ade082603506438828d52b",
     "generation": {
       "tool": "image_gen.imagegen",
-      "generationId": "exec-9606e8ed-4301-48b9-9884-1b2d4fa7b2cd",
+      "generationId": "exec-969004da-f4a1-4a4d-9aef-5ca0a6397ee7",
+      "referenceKind": "actual-tool-output-filename",
       "modelVersion": null
     }
   }

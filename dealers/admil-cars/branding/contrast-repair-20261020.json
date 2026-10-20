@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-targeted-logo-contrast-repair",
+  "dealer": "admil-cars",
+  "createdAt": "2026-10-20T19:48:59.266Z",
+  "previousPackDigest": "0407bb003bb6d9fc6b5615fe5e338945d00da21b5ad471033bb8ad673787f395",
+  "previousSource": {
+    "path": "branding/source-before-contrast-repair-20261020-ff1aa89d5d0713ef.json",
+    "sha256": "ff1aa89d5d0713ef686bc06454695d259056ca87ca49b78d6c355148b59a1486"
+  },
+  "replacements": [
+    {
+      "roles": [
+        "onDark",
+        "onAccent"
+      ],
+      "reference": "branding/generated-on-dark.png",
+      "path": "branding/generated-on-dark-v2-20261020.png",
+      "sha256": "78a9c0a34a0fa085dd476f6acdb581c977e117608cb96ecbbef81e6dc389ae52",
+      "nativeDimensions": {
+        "width": 2022,
+        "height": 778
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-836a6b43-13a9-4ca0-9cf1-883cb10359dd",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand. Preserve exactly this ADMIL CARS logo's A-emblem shape, diagonal stripe, two-line lettering ADMIL above CARS, typography, width and placement. Only repair dark-background colors. Entire logo must use opaque flat light rose ink: replace white and navy with dusty light pink #eeb9cd, and existing burgundy accents with light rose #e7aac1. This is the existing burgundy brand's pale surface variant. No white pixels or black outlines, no texture or gradients. Keep exact lettering A D M I L (one I only) and C A R S. Render clean solid shapes, smooth edges and open transparent counters on a fully transparent canvas; no background, halo, isolated dots or other content. Keep the silhouette and layout identical. This is an independent proposal, not dealer-approved.",
+      "createdAt": "2026-10-20T19:48:59.266Z",
+      "derivation": "Actual built-in imagegen edit; raw returned PNG copied byte-for-byte, no recolour/filter/alpha cleanup applied."
+    },
+    {
+      "roles": [
+        "markOnDark"
+      ],
+      "reference": "branding/generated-mark-on-dark.png",
+      "path": "branding/generated-mark-on-dark-v2-20261020.png",
+      "sha256": "eee185f68ce19cb78cef56b2accbce6202edbd11c6d2bafdc31f47588964d617",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-26262308-4025-4ec5-92d8-7fa88b37713e",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand. Exact recolour of supplied Admil Cars angular A compact emblem; preserve the original silhouette, diagonal stripe, inner triangular cutout and proportions. Create the dark/red-surface variant using only TWO very light rose-pink fills: main A body solid #f2cadd and diagonal stripe solid #ebbed1. Do not retain any dark navy, burgundy, white or black pixels/outlines. The stripe and body must BOTH be pale, filled and legible on red. Keep open negative spaces transparent. Clean simple smooth flat shapes on genuinely transparent background, generous square canvas padding, no words, no added shapes, background, texture, gradient, speckles, noise, glow or shadow. Independent proposal, not dealer approved.",
+      "createdAt": "2026-10-20T19:48:59.266Z",
+      "derivation": "Actual built-in imagegen edit; raw returned PNG copied byte-for-byte, no recolour/filter/alpha cleanup applied."
+    }
+  ],
+  "unchanged": "All original raw artwork, facts, stock, media, source evidence, master/onLight/mark/favicon inputs and template palettes are preserved.",
+  "visualReview": {
+    "wordmarkWidths": [
+      120,
+      180
+    ],
+    "compactWidths": [
+      32,
+      64
+    ],
+    "backgrounds": [
+      "#ffffff",
+      "#111113",
+      "#101820",
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ],
+    "identityAndSpelling": "agent-visual-review",
+    "dealerApproval": false,
+    "nativeApproval": false,
+    "hostedApproval": false
+  },
+  "toolPackage": "L:/CODEX/cars/templates/karento-best/package.json",
+  "filtersApplied": false,
+  "thresholdsChanged": false,
+  "providerWrites": 0
+}
